@@ -87,7 +87,7 @@ Non è importante come rispondi alle domande d'installazione; a titolo di esempi
     author:
     license: (ISC)
     About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
-
+    
     {
       "name": "my-nft",
       "version": "1.0.0",
@@ -104,7 +104,7 @@ Approva il package.json, e siamo pronti!
 
 ## Fase 7: installa [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
-Hardhat è un ambiente di sviluppo per compilare, distribuire, testare ed effettuare il debug del tuo software di Ethereum. Aiuta gli sviluppatori durante la creazione dei contratti intelligenti e delle dapp localmente, prima di distribuirli alla catena.
+Hardhat è un ambiente di sviluppo per compilare, distribuire, testare ed effettuare il debug del tuo software di Ethereum. Aiuta gli sviluppatori nella costruzione di contratti intelligenti e dapp localmente, prima di distribuirli alla catena.
 
 Nel nostro progetto my-nft esegui:
 
@@ -155,10 +155,10 @@ Apri il progetto my-nft nel tuo editor preferito (a noi piace [VSCode](https://c
 
 1. Vai alla cartella `contracts` e crea un nuovo file chiamato MyNFT.sol
 
-2. Segue il codice del contratto intelligente del nostro NFT, che abbiamo basato sull'implementazione ERC-721 della libreria di [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc721). Copia e incolla i seguenti contenuti nel tuo file MyNFT.sol.
+2. Segue il codice del contratto intelligente del nostro NFT, che abbiamo basato sull'implementazione ERC-721 della libreria di [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc721).  Copia e incolla i seguenti contenuti nel tuo file MyNFT.sol.
 
    ```solidity
-   //Contratto basato su [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
+   //Contract based on [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
    // SPDX-License-Identifier: MIT
    pragma solidity ^0.8.0;
 

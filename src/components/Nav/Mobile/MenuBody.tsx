@@ -35,7 +35,12 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
         {SECTION_LABELS.map((key) => {
           const { label, items } = linkSections[key]
           return (
-            <AccordionItem key={label}>
+            <AccordionItem
+              key={label}
+              borderTop="1px"
+              borderColor="inherit"
+              _last={{ borderBottomWidth: "1px" }}
+            >
               {({ isExpanded }) => (
                 <>
                   <Heading
@@ -63,6 +68,7 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
                       justifyContent="start"
                       gap="2"
                       _hover={{ bg: "none" }}
+                      px="4"
                       py="4"
                     >
                       <ExpandIcon isOpen={isExpanded} />
@@ -78,7 +84,11 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
                     </AccordionButton>
                   </Heading>
 
-                  <AccordionPanel p="0" bg={menuColors.lvl[2].background}>
+                  <AccordionPanel
+                    p="0"
+                    mt="0"
+                    bg={menuColors.lvl[2].background}
+                  >
                     <LvlAccordion
                       lvl={2 as Level}
                       items={items}

@@ -6,34 +6,34 @@ lang: hu
 
 ## Mi az a proof-of-stake? {#what-is-proof-of-stake}
 
-A proof-of-stake (letéti igazolás) egy algoritmusfajta, ami biztonságot tud adni a blokkláncoknak azáltal, hogy a támadók elveszítik az értékeiket, amint rosszhiszeműen viselkednek. A proof-of-stake rendszereknél szükség van egy validátorszettre, amely eszközöket biztosít, s ezeket lehet megsemmisíteni, ha bizonyítottan rosszindulatúan cselekszenek. Az Ethereum proof-of-stake mechanizmust használ arra, hogy biztosítsa a blokkláncot.
+A proof-of-stake (letéti igazolás) egy algoritmusfajta, ami biztonságot tud adni a blokkláncoknak azáltal, hogy a támadók elveszítik az értékeiket, amint rosszhiszeműen viselkednek. A proof-of-stake rendszereknél szükség van egy validátorszettre, amely eszközöket biztosít, és ezeket lehet megsemmisíteni, ha bizonyítottan rosszindulatúan cselekszenek. Az Ethereum proof-of-stake mechanizmust használ arra, hogy biztosítsa a blokkláncot.
 
 ## Hogyan viszonyul a proof-of-stake a proof-of-work mechanizmushoz? {#comparison-to-proof-of-work}
 
 A proof-of-work (munkaigazolás) és a proof-of-stake (letéti igazolás) egyaránt olyan mechanizmus, mely elrettenti a rosszhiszemű szereplőket attól, hogy teleszemeteljék vagy becsapják a hálózatot. Mindkettőnél azok a csomópontok, melyek aktívan részt vesznek a konszenzusban, valamennyi eszközt „tesznek be a hálózatba”, melyet elveszítenek, ha nem viselkednek megfelelően.
 
-A proof-of-work esetében ez az eszköz az energia. A bányászként ismert csomópont egy olyan algoritmust futtat, melynek célja, hogy egy értéket gyorsabban számoljon ki, mint az összes többi csomópont. A leggyorsabb csomópont javasolhat blokkot a láncra. Ahhoz, hogy a lánc történetét megváltoztassa vagy dominálja a blokkelőterjesztést, a bányásznak olyan hatalmas számítási kapacitással kell bírnia, hogy minden megnyerje a versenyt. Ez olyan szinten drága és nehezen kivitelezhető, hogy ez megvédi a láncot a támadásoktól. A proof-of-work alapú bányászathoz szükséges energia egy valódi eszköz, amiért a bányászok fizetnek.
+A proof-of-work esetében ez az eszköz az energia. A bányászként ismert csomópont egy olyan algoritmust futtat, melynek célja, hogy egy értéket gyorsabban számoljon ki, mint az összes többi csomópont. A leggyorsabb csomópont javasolhat blokkot a láncra. Ahhoz, hogy a lánc történetét megváltoztassa vagy dominálja a blokkelőterjesztést, a bányásznak olyan hatalmas számítási kapacitással kell bírnia, hogy mindig megnyerje a versenyt. Ez olyan szinten drága és nehezen kivitelezhető, hogy ez megvédi a láncot a támadásoktól. A proof-of-work alapú bányászathoz szükséges energia egy valódi eszköz, amiért a bányászok fizetnek.
 
 A proof-of-stake-hez validátor szerepű csomópontokra van szükség, amelyek egyértelműen kriptoeszközt adnak át egy okosszerződésnek. Ha egy validátor nem megfelelően viselkedik, ezt a kriptót megsemmisíthetik, mivel ezt közvetlen módon letétbe helyezték a láncon, nem pedig közvetett módon, az energiakiadáson keresztül.
 
-A proof-of-work sokkal eneriaigényesebb, mert a bányászati folyamatban elektromosságot égetnek el. A proof-of-stake ezzel szemben csak nagyon kevés energiát igényel – az Ethereum validátorokat igen alacsony kapacitású eszközön is futtathatják, mint amilyen a Raspberry Pi. Az Ethereum proof-of-stake mechanizmusát sokkal biztonságosabbnak vélik, mint a proof-of-work metódust, mert a támadás költsége sokkal nagyobb, a támadót pedig sokkal súlyosabb következmények sújtják.
+A proof-of-work sokkal energiaigényesebb, mert a bányászati folyamatban elektromosságot égetnek el. A proof-of-stake ezzel szemben csak nagyon kevés energiát igényel – az Ethereum-validátorokat igen alacsony kapacitású eszközön is futtathatják, mint amilyen a Raspberry Pi. Az Ethereum proof-of-stake mechanizmusát sokkal biztonságosabbnak vélik, mint a proof-of-work metódust, mert a támadás költsége sokkal nagyobb, a támadót pedig sokkal súlyosabb következmények sújtják.
 
-A proof-of-work versus proof-of-stake egy állandó téma. [Vitalik Buterin blogja](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work), valamint a Justin Drake és Lyn Alden közötti vita remekül összefoglalja az érveket.
+A proof-of-work és proof-of-stake összehasonlítása állandó téma. [Vitalik Buterin blogja](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work), valamint a Justin Drake és Lyn Alden közötti vita jól összefoglalja az érveket.
 
 <YouTube id="1m12zgJ42dI" />
 
 ## Energiatakarékos a proof-of-stake? {#is-pos-energy-efficient}
 
-Igen. A proof-of-stake hálózat csomópontjai kis mennyiségű energiát használnak. Egy harmadik fél által készített tanulmány szerint az Ethereum teljes proof-of-stake hálózatának fogyasztása kb. 0,0026 TWh/év, ami nagyjából 13.000-szer kevesebb, mint a játék csak az Egyesült Államokban.
+Igen. A proof-of-stake hálózat csomópontjai kis mennyiségű energiát használnak. Egy harmadik fél által készített tanulmány szerint az Ethereum teljes proof-of-stake hálózatának fogyasztása kb. 0,0026 TWh/év, ami nagyjából 13 000-szer kevesebb, mint a játék csak az Egyesült Államokban.
 
 [Bővebben az Ethereum energiafelhasználásáról](/energy-consumption/).
 
 ## Biztonságos a proof-of-stake? {#is-pos-secure}
 
-Az Ethereum proof-of-stake mechanizmusa nagyon biztonságos. A mechanizmust nyolc éven át kutatták, fejlesztették és alaposan tesztelték, mielőtt életbe lépett volna. A biztonsági garanciák eltérnek a proof-of-work-alapú blokkláncoktól. A proof-of-stake-ben a rosszindulatú validátorokat aktívan meg lehet büntetni (slash) és ki lehet dobni a validátorok közül, ami nekik jelentős összegű ETH-be kerül. A proof-of-work esetében a támadó megismételheti a támadását, amíg elegendő hash-kapacitással rendelkezik. Az Ethereum proof-of-stake-nél egy ugyanolyan jellegű támadás költségesebb, mint proof-of-work esetén. A lánc elérhetőségének befolyásolásához a hálózaton lévő összes letétbe helyezett ether legalább 33%-ára van szükség (kivéve a nagyon kifinomult, rendkívül valószínűtlen sikerű támadások esetén). A jövőbeli blokkok tartalmának ellenőrzéséhez a teljes letétbe helyezett ETH legalább 51%-a szükséges, a historikus adatok átírásához pedig a teljes letét több mint 66%-a kell. Az Ethereum protokollja a 33%-os vagy 51%-os támadásoknál megsemmisítené ezeket az eszközöket, a 66%-os támadásnál pedig társadalmi konszenzussal oldaná meg.
+Az Ethereum proof-of-stake mechanizmusa nagyon biztonságos. A mechanizmust nyolc éven át kutatták, fejlesztették és alaposan tesztelték, mielőtt életbe lépett volna. A biztonsági garanciák eltérnek a proof-of-work alapú blokkláncoktól. A proof-of-stake esetén a rosszindulatú validátorokat aktívan meg lehet büntetni (slash) és ki lehet dobni a validátorok közül, ami nekik jelentős összegű ETH-be kerül. A proof-of-work esetében a támadó megismételheti a támadását, amíg elegendő hashkapacitással nem rendelkezik. Az Ethereum proof-of-stake-nél egy ugyanolyan jellegű támadás költségesebb, mint proof-of-work esetén. A lánc elérhetőségének befolyásolásához a hálózaton lévő összes letétbe helyezett ether legalább 33%-ára van szükség (kivéve a nagyon kifinomult, rendkívül valószínűtlen sikerű támadások esetén). A jövőbeli blokkok tartalmának ellenőrzéséhez a teljes letétbe helyezett ETH legalább 51%-a szükséges, az előzményadatok átírásához pedig a teljes letét több mint 66%-a kell. Az Ethereum protokollja a 33%-os vagy 51%-os támadásoknál megsemmisítené ezeket az eszközöket, a 66%-os támadásnál pedig társadalmi konszenzussal oldaná meg.
 
 - [Bővebben az Ethereum proof-of-stake támadás elleni védelméről](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
-- [Bővebben a proof-of-stake dizájnról](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
+- [Bővebben a proof-of-stake kialakításáról](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
 
 ## Olcsóbbá teszi az Ethereumot a proof-of-stake? {#does-pos-make-ethereum-cheaper}
 
@@ -43,7 +43,7 @@ Nem. A tranzakció elküldésének költségét (gázdíj) egy dinamikus díjpia
 
 ## Mik azok a csomópontok, kliensek és validátorok? {#what-are-nodes-clients-and-validators}
 
-A csomópontok az Ethereum-hálózathoz csatlakozó számítógépek. A kliensek az általuk futtatott szoftverek, amelyek a számítógépet csomóponttá alakítják. A klienseknek két típusa van: a végrehajtási és a konszenzuskliensek. Mindkettőre szükség van egy csomópont létrehozásához. A validátor a konszenzuskliens opcionális kiegészítője, amely lehetővé teszi a csomópont számára, hogy részt vegyen a proof-of-stake konszenzusban. Ez azt jelenti, hogy blokkokat hoz létre és javasol, amikor kiválasztják, és igazolja azokat a blokkokat, amelyekről a hálózaton hall. Egy validátor futtatásához a csomópont üzemeltetőjének 32 ETH-t kell befizetnie a letéti szerződésbe.
+A csomópontok az Ethereum-hálózathoz csatlakozó számítógépek. A kliensek az általuk futtatott szoftverek, amelyek a számítógépet csomóponttá alakítják. A klienseknek két típusa van: a végrehajtási és a konszenzuskliensek. Mindkettőre szükség van egy csomópont létrehozásához. A validátor a konszenzusos kliens opcionális kiegészítője, amely lehetővé teszi a csomópont számára, hogy részt vegyen a proof-of-stake konszenzusban. Ez azt jelenti, hogy blokkokat hoz létre és javasol, amikor kiválasztják, és igazolja azokat a blokkokat, amelyekről a hálózaton hall. Validátor futtatásához a csomópont üzemeltetőjének 32 ETH-t kell befizetnie a letéti szerződésbe.
 
 - [Bővebben a csomópontokról és kliensekről](/developers/docs/nodes-and-clients)
 - [Többet a letétbe helyezésről](/staking)
@@ -64,7 +64,7 @@ A Casper és az LMD_GHOST kombinációja Gasper néven ismert.
 
 ## Mi az a súlyos büntetés (slashing)? {#what-is-slashing}
 
-Súlyos büntetésnek nevezzük a validáló letétjének megsemmisítését és a validálónak a hálózatból való kizárását. A súlyos büntetés során elveszített ETH mennyisége a megbüntetett validátorok számával arányos – ez azt jelenti, hogy az összejátszó validátorok súlyosabb büntetést kapnak, mint az egyének.
+Súlyos büntetésnek nevezzük a validátor letétjének megsemmisítését és a validátornak a hálózatból való kizárását. A súlyos büntetés során elveszített ETH mennyisége a megbüntetett validátorok számával arányos – ez azt jelenti, hogy az összejátszó validátorok súlyosabb büntetést kapnak, mint az egyének.
 
 [Bővebben a súlyos büntetésről (slashing)](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties#slashing)
 
@@ -74,19 +74,19 @@ A validátoroknak ETH-t kell letétbe helyezniük, hogy legyen mit veszíteniük
 
 ## Hogyan választják ki a validátorokat? {#how-are-validators-selected}
 
-Egy adott validátor álvéletlenszerűen kerül kiválasztásra a RANDAO nevű algoritmus segítségével, hogy egy adott slotban blokkot javasoljon; ez a blokkotelőterjesztőtől származó hash-t keveri egy seed-del, amely minden blokkban frissül. Ezt az értéket használják, hogy kiválasszanak egy adott validátort a teljes szettből. A validátor kiválasztását négy korszakra előre elvégzik.
+Egy adott validátor álvéletlenszerűen kerül kiválasztásra a RANDAO nevű algoritmus segítségével, hogy egy adott slotban blokkot javasoljon; ez a blokkelőterjesztőtől származó hasht keveri egy seeddel, amely minden blokkban frissül. Ezt az értéket használják, hogy kiválasszanak egy adott validátort a teljes szettből. A validátor kiválasztását négy korszakra előre elvégzik.
 
 [Bővebben a validátorkiválasztásról](/developers/docs/consensus-mechanisms/pos/block-proposal)
 
-## Mi az a letét grinding? {#what-is-stake-grinding}
+## Mi az a letéti grinding? {#what-is-stake-grinding}
 
-A letét grinding egy proof-of-stake hálózat elleni támadás, ahol a támadó megpróbálja a validátor kiválasztási algoritmust a saját validátorai javára torzítani. A RANDAO letéti grinding támadásához a teljes lekötött ETH-mennyiség felére van szükség.
+A letéti grinding egy proof-of-stake hálózat elleni támadás, ahol a támadó megpróbálja a validátor kiválasztási algoritmust a saját validátorai javára torzítani. A RANDAO letéti grinding támadásához a teljes lekötött ETH-mennyiség felére van szükség.
 
 [Bővebben a letéti grindingről](https://eth2book.info/altair/part2/building_blocks/randomness/#randao-biasability)
 
 ## Mi az a közösségi slashing? {#what-is-social-slashing}
 
-A közösségi slashing a közösség azon lehetősége, hogy egy támadás esetén eldöntse a blokklánc elágazását. Ez lehetővé teszi a közösség számára, hogy helyreálljon egy helytelen láncot véglegesítő támadás esetén. A közösségi slashing a cenzoráló támadások ellen is használható.
+A közösségi slashing a közösség azon lehetősége, hogy egy támadás esetén eldöntse a blokklánc elágazását. Ez lehetővé teszi a közösség számára, hogy helyreálljon egy helytelen láncot véglegesítő támadás esetén. A közösségi slashing a cenzúrázó támadások ellen is használható.
 
 - [Bővebben a közösségi slashingről](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
 - [Vitalik Buterin a közösségi slashingről](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
@@ -99,15 +99,15 @@ Validátorként nehéz súlyos büntetést szerezni, hacsak nem valaki szándék
 
 ## Mit jelent a nincs kockázat probléma? {#what-is-nothing-at-stake-problem}
 
-A nincs kockázat probléma egy koncepcionális hiányosság néhány proof-of-stake mechanizmus esetén, ahol csak jutalmak vannak, s nincsenek büntetések. Ha nincs kockázat, tehát nem lehet a letétet elveszíteni, akkor a gyakorlatias validátor ugyanúgy tanúsítja bármelyik vagy akár több elágazását is a blokkláncnak, mert ebből több jutalmat kap. Az Ethereum ezt úgy kezeli, hogy véglegességi feltételeket szab és létezik súlyos büntetés, így biztosítható a kanonikus lánc.
+A nincs kockázat probléma egy koncepcionális hiányosság néhány proof-of-stake mechanizmus esetén, ahol csak jutalmak vannak, és nincsenek büntetések. Ha nincs kockázat, tehát nem lehet a letétet elveszíteni, akkor a gyakorlatias validátor ugyanúgy tanúsítja bármelyik vagy akár több elágazását is a blokkláncnak, mert ebből több jutalmat kap. Az Ethereum ezt úgy kezeli, hogy véglegességi feltételeket szab és létezik súlyos büntetés, így biztosítható a kanonikus lánc.
 
 [Bővebben a nincs kockázat problémáról](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
 
-## Mi az az elágazásválasztó-algoritmus? {#what-is-a-fork-choice-algorithm}
+## Mi az az elágazásválasztó algoritmus? {#what-is-a-fork-choice-algorithm}
 
-Az elágazásválasztó-algoritmus olyan szabályokat alkalmaz, amelyek meghatározzák, hogy melyik lánc a kanonikus. Optimális körülmények között nincs szükség elágazásválasztási szabályra, mivel slotonként csak egy blokkelőterjesztő van, és csak egy blokk jön létre. Alkalmanként lehetséges, hogy több blokk keletkezik ugyanarra a slotra vagy későn érkező információ miatt több lehetőség van a lánc fejéhez közeli blokkok szerveződésére. Ezekben az esetekben minden kliensnek azonos módon kell végrehajtania néhány szabályt, hogy biztosítsa, hogy a blokkok helyes sorrendjét válasszák. Az elágazásválasztó-algoritmus kódolja ezeket a szabályokat.
+Az elágazásválasztó algoritmus olyan szabályokat alkalmaz, amelyek meghatározzák, hogy melyik lánc a kanonikus. Optimális körülmények között nincs szükség elágazásválasztási szabályra, mivel slotonként csak egy blokkelőterjesztő van, és csak egy blokk jön létre. Alkalmanként lehetséges, hogy több blokk keletkezik ugyanarra a slotra vagy későn érkező információ miatt több lehetőség van a lánc fejéhez közeli blokkok szerveződésére. Ezekben az esetekben minden kliensnek azonos módon kell végrehajtania néhány szabályt, hogy biztosítsa, hogy a blokkok helyes sorrendjét válasszák. Az elágazásválasztó algoritmus kódolja ezeket a szabályokat.
 
-Az Ethereum elágazásválasztási-algoritmusának neve LMD-GHOST. Azt az elágazást választja, amelyiknek a legnagyobb a tanúsítási súlya, vagyis amelyikre a legtöbb letétbe helyezett ETH szavazott.
+Az Ethereum elágazásválasztási algoritmusának neve LMD-GHOST. Azt az elágazást választja, amelynek a legnagyobb a tanúsítási súlya, vagyis amelyikre a legtöbb letétbe helyezett ETH szavazott.
 
 [Bővebben az LMD-GHOST-ról](/developers/docs/consensus-mechanisms/pos/gasper/#fork-choice)
 
@@ -125,7 +125,7 @@ A gyenge szubjektivitás a proof-of-stake hálózatok egyik jellemzője, ahol a 
 
 ## Ellenáll a proof-of-stake a cenzúrának? {#is-pos-censorship-resistant}
 
-A cenzúrának való ellenállását jelenleg nehéz bizonyítani. A proof-of-work-től eltérően azonban a proof-of-stake lehetőséget ad a cenzúrázó validátorok megbüntetésére. A protokollban hamarosan szétválasztják a blokképítőket a blokkelőterjesztőktől, és bevezetik azon tranzakciók listáját, amelyeket a blokképítőknek bele kell foglalniuk a blokkba. Ez a javaslattevő-építő szétválasztás, mely segít megakadályozni, hogy a validátorok cenzúrázzák a tranzakciókat.
+A cenzúrának való ellenállását jelenleg nehéz bizonyítani. A proof-of-worktől eltérően azonban a proof-of-stake lehetőséget ad a cenzúrázó validátorok megbüntetésére. A protokollban hamarosan szétválasztják a blokképítőket a blokkelőterjesztőktől, és bevezetik azon tranzakciók listáját, amelyeket a blokképítőknek bele kell foglalniuk a blokkba. Ez a javaslattevő-építő szétválasztás, mely segít megakadályozni, hogy a validátorok cenzúrázzák a tranzakciókat.
 
 [Bővebben a javaslattevő-építő szétválasztásról (PBS)](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Original-basic-scheme)
 
@@ -137,7 +137,7 @@ Igen. A proof-of-stake rendszer ugyanúgy ki van téve az 51%-os támadásnak, m
 
 ## Mi a közösségi koordináció, és miért van rá szükség? {#what-is-social-coordination}
 
-A közösségi koordináció az Ethereum utolsó védelmi vonala, amely lehetővé teszi, hogy egy helyes láncot helyreállítsanak egy olyan támadásból, amely helytelen blokkokat véglegesített. Ebben az esetben az Ethereum közösségnek „sávon kívül” kellene koordinálnia és megállapodnia egy helyes kisebbségi elágazás használatában, és ezzel a támadó validálóit kizárni (slashing). Ehhez az alkalmazásokra és a tőzsdékre is szükség lenne, hogy felismerjék a helyes elágazást.
+A közösségi koordináció az Ethereum utolsó védelmi vonala, amely lehetővé teszi, hogy egy helyes láncot helyreállítsanak egy olyan támadásból, amely helytelen blokkokat véglegesített. Ebben az esetben az Ethereum közösségének „sávon kívül” kellene koordinálnia és megállapodnia egy helyes kisebbségi elágazás használatában, és ezzel a támadó validátorait kizárni (slashing). Ehhez az alkalmazásokra és a tőzsdékre is szükség lenne, hogy felismerjék a helyes elágazást.
 
 [Bővebben a közösségi koordinációról](/developers/docs/consensus-mechanisms/pos/attack-and-defense#people-the-last-line-of-defense)
 
@@ -159,9 +159,9 @@ Az ETH az Ethereum natív valutája. Elengedhetetlen, hogy minden letét egyetle
 
 Nem, több proof-of-stake blokklánc létezik. Egyik sem azonos az Ethereummal, mert annak proof-of-stake mechanizmusa egyedülálló.
 
-## Mi az a Merge? {#what-is-the-merge}
+## Mi az a Beolvadás? {#what-is-the-merge}
 
-A Merge volt az a pillanat, amikor az Ethereum kikapcsolta a proof-of-work alapú konszenzusmechanizmusát, és bekapcsolta a proof-of-stake alapút. A Merge 2022. szeptember 15-én történt.
+A Beolvadás volt az a pillanat, amikor az Ethereum kikapcsolta a proof-of-work alapú konszenzusmechanizmusát, és bekapcsolta a proof-of-stake alapút. A Beolvadás 2022. szeptember 15-én történt.
 
 [A beolvadásról bővebben](/roadmap/merge)
 

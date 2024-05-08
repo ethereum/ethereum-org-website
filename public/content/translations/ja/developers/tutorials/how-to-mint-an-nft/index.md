@@ -175,7 +175,7 @@ PUBLIC_KEY = "your-public-account-address"
    async function mintNFT(tokenURI) {
      const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, 'latest'); //get latest nonce
 
-   // トランザクション
+   //the transaction
      const tx = {
        'from': PUBLIC_KEY,
        'to': contractAddress,
@@ -208,7 +208,7 @@ const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 async function mintNFT(tokenURI) {
   const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, "latest") //get latest nonce
 
-  // トランザクション
+  //the transaction
   const tx = {
     from: PUBLIC_KEY,
     to: contractAddress,

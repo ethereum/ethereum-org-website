@@ -35,7 +35,7 @@ A programozási nyelvek, különösen a JavaScript vagy a Python korábbi ismere
 - [Solidity Nyelvportál](https://soliditylang.org/)
 - [Solidity példák alapján](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter csevegőszoba](https://gitter.im/ethereum/solidity/), amely átirányít a [Solidity Matrix csevegőszobába](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) összekötve a [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)-mal
 - [Puska](https://reference.auditless.com/cheatsheet)
 - [Solidity Blog](https://blog.soliditylang.org/)
 - [Solidity Twitter](https://twitter.com/solidity_lang)
@@ -108,7 +108,7 @@ További információkért [tekintse meg a Vyper magyarázatát](https://vyper.r
 - [Még több Vyper példák alapján](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
 - [A Vyper-közösség Discord-csevegése](https://discord.gg/SdvKC79cJk)
-- [Cheat Sheet](https://reference.auditless.com/cheatsheet)
+- [Puska](https://reference.auditless.com/cheatsheet)
 - [Okosszerződés-fejlesztési keretrendszerek és eszközök Vyperre](/developers/docs/programming-languages/python/)
 - [VyperPunk – tanulja meg a Vyper okosszerződéseket biztosítását és meghackelését](https://github.com/SupremacyTeam/VyperPunk)
 - [VyperExamples – Példák a Vyper sebezhetőségére](https://www.vyperexamples.com/reentrancy)
@@ -264,11 +264,11 @@ Ha már nagy tapasztalatra tett szert az okosszerződésekkel kapcsolatban, akko
 
 - [GitHub](https://github.com/ethereum/fe)
 - [Fe bejelentés](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
-- [Fe 2021-es útiterv](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
+- [Fe 2021-es ütemterv](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Fe Discord-csevegés](https://discord.com/invite/ywpkAXFjZH)
 - [Fe Twitter](https://twitter.com/official_fe)
 
-### Példa szerződés {#example-contract-3}
+### Példaszerződés {#example-contract-3}
 
 Ez a példa egy egyszerű szerződés Fe nyelven telepítve.
 
@@ -321,4 +321,4 @@ Az alapvető szintaxis, szerződés-életciklus, interfészek, operátorok, adat
 ## További olvasnivaló {#further-reading}
 
 - [Solidity szerződéskönyvtár az OpenZeppelintől](https://docs.openzeppelin.com/contracts)
-- [Solidity egy példa alapján](https://solidity-by-example.org)
+- [Solidity példák alapján](https://solidity-by-example.org)

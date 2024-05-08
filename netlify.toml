@@ -9,6 +9,9 @@
   # Default build command.
   command = "yarn build"
 
+[build.environment]
+  NEXT_FORCE_EDGE_IMAGES="true"
+
 [[headers]]
   for = "/*"
   [headers.values]
@@ -16,6 +19,24 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  [[plugins.inputs.audits]]
+    path = "en/"
+  [[plugins.inputs.audits]]
+    path = "en/wallets/find-wallet/"
+  [[plugins.inputs.audits]]
+    path = "en/staking/"
+  [[plugins.inputs.audits]]
+    path = "en/whitepaper/"
+  [[plugins.inputs.audits]]
+    path = "en/nft/"
+  [[plugins.inputs.audits]]
+    path = "en/developers/docs/intro-to-ethereum/"
+  [[plugins.inputs.audits]]
+    path = "en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
 
 [functions]
   included_files = [

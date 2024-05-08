@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "8.5.1",
+  "version": "8.5.2",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -20,6 +20,7 @@
     "crowdin-import": "ts-node src/scripts/crowdin-import.ts",
     "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts",
     "events-import": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/events-import.ts",
+    "crowdin-needs-review": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/reports/generateReviewReport.ts",
     "theme": "chakra-cli tokens ./src/@chakra-ui/theme.ts",
     "theme:watch": "chakra-cli tokens ./src/@chakra-ui/theme.ts --watch"
   },
@@ -69,6 +70,7 @@
     "@storybook/react": "7.6.6",
     "@storybook/testing-library": "0.2.2",
     "@svgr/webpack": "^8.1.0",
+    "@types/decompress": "^4.2.7",
     "@types/hast": "^3.0.0",
     "@types/node": "^20.4.2",
     "@types/react": "^18.2.15",
@@ -76,6 +78,7 @@
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@typescript-eslint/parser": "^6.19.0",
     "chromatic": "^10.5.0",
+    "decompress": "^4.2.1",
     "eslint": "^8.45.0",
     "eslint-config-next": "^13.0.0",
     "eslint-config-prettier": "^9.0.0",

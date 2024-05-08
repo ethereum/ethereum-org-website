@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
-import { MdExpandMore } from "react-icons/md"
+import { MdChevronRight } from "react-icons/md"
 import { Box, Center, HStack, Icon } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
@@ -108,11 +108,12 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
           <Box
             as={motion.div}
             cursor="pointer"
+            display="flex"
             onClick={() => setIsOpen(!isOpen)}
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <Icon as={MdExpandMore} boxSize={6} color="secondary" />
+            <Icon as={MdChevronRight} boxSize={6} color="secondary" />
           </Box>
         </LinkContainer>
         <Box
@@ -185,10 +186,11 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
         <Box
           as={motion.div}
           cursor="pointer"
+          display="flex"
           variants={dropdownIconContainerVariant}
           animate={isOpen ? "open" : "closed"}
         >
-          <Icon as={MdExpandMore} boxSize={6} color="secondary" />
+          <Icon as={MdChevronRight} boxSize={6} color="secondary" />
         </Box>
       </Center>
       <AnimatePresence>

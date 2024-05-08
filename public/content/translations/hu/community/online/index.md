@@ -27,7 +27,7 @@ Ethereum rajongók százezrei gyűlnek össze ezeken az online fórumokon, hogy 
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link> – közösségi vezetésű útmutatás, oktatás, támogatás és források a meglévő és lehetséges letéteseknek</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Ethereum.org website team</Link> – beszélgessen az ethereum.org web fejlesztésről és dizájnról a közösség tagjaival</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> – web3 alkotói közösség, ahol a fejlesztők, az iparági vezetők és az Ethereum rajongók találkoznak. Szenvedélyünk a web3 fejlesztés, a dizájn és a kultúra. Jöjjön és építsen velünk.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> – solidity fejlesztésről (Gitter) szóló csevegés</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> – solidity fejlesztésről (Gitter) szóló csevegés</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> – solidity fejlesztősről (Matrix) szóló csevegés</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *–kérdések és válaszok fóruma*</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *– decentralizált kérdések és válaszok fóruma*</SocialListItem>
@@ -41,7 +41,7 @@ Ethereum rajongók százezrei gyűlnek össze ezeken az online fórumokon, hogy 
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community-daos-callout-title" descriptionKey="page-community-daos-callout-description">
+<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
   <div>
     <ButtonLink to="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Tudjon meg többet a DAO-król

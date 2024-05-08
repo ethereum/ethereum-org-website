@@ -2,10 +2,12 @@ import fs from "fs"
 import path from "path"
 
 import matter from "gray-matter"
-import minimist from "minimist"
 
 import type { Lang } from "../lib/types"
-const argv = minimist(process.argv.slice(2))
+
+type Summary = Record<string, string[]>
+
+const argv = require("minimist")(process.argv.slice(2))
 
 const LANG_ARG: string | null = argv.lang || null
 const PATH_TO_INTL_MARKDOWN = "./public/content/translations/"
@@ -146,70 +148,97 @@ export async function getTranslatedMarkdownPaths() {
   return languages
 }
 
-function processFrontmatter(path: string, lang: string): void {
+function log(
+  message: string,
+  level: "warn" | "error" | "log",
+  summary: string[]
+) {
+  summary.push(message)
+  console[level](message)
+}
+
+function processFrontmatter(
+  path: string,
+  lang: string,
+  summary: string[]
+): string[] {
   const file = fs.readFileSync(path, "utf-8")
   const frontmatter = matter(file).data
 
   if (!frontmatter.title) {
-    console.warn(`Missing 'title' frontmatter at ${path}:`)
+    log(`Missing 'title' frontmatter at: ${path}`, "warn", summary)
   }
   // Description commented out as there are a lot of them missing :-)!
   // if (!frontmatter.description) {
-  //   console.warn(`Missing 'description' frontmatter at ${path}:`)
+  //   summary.push(`Missing 'description' frontmatter at: ${path}`)
   // }
   if (!frontmatter.lang) {
-    console.error(`Missing 'lang' frontmatter at ${path}: Expected: ${lang}:'`)
+    log(
+      `Missing 'lang' frontmatter at: ${path}, Expected: ${lang}'`,
+      "error",
+      summary
+    )
   } else if (!(frontmatter.lang === lang)) {
-    console.error(
-      `Invalid 'lang' frontmatter at ${path}: Expected: ${lang}'. Received: ${frontmatter.lang}.`
+    log(
+      `Invalid 'lang' frontmatter at ${path}: Expected: ${lang}'. Received: ${frontmatter.lang}.`,
+      "error",
+      summary
     )
   }
 
   if (frontmatter.emoji) {
     if (!/^:\S+:$/.test(frontmatter.emoji)) {
-      console.error(`Frontmatter for 'emoji' is invalid at ${path}`)
+      log(`Frontmatter for 'emoji' is invalid at ${path}`, "error", summary)
     }
   }
 
   if (frontmatter.sidebar) {
-    console.error(`Unexpected 'sidebar' frontmatter at ${path}`)
+    log(`Unexpected 'sidebar' frontmatter at ${path}`, "error", summary)
   }
 
   if (path.includes("/tutorials/")) {
     if (!frontmatter.published) {
-      console.warn(`Missing 'published' frontmatter at ${path}:`)
+      log(`Missing 'published' frontmatter at ${path}:`, "warn", summary)
     } else {
       try {
         const stringDate = frontmatter.published.toISOString().slice(0, 10)
         const dateIsFormattedCorrectly = TUTORIAL_DATE_REGEX.test(stringDate)
 
         if (!dateIsFormattedCorrectly) {
-          console.warn(
-            `Invalid 'published' frontmatter at ${path}: Expected: 'YYYY-MM-DD' Received: ${frontmatter.published}`
+          log(
+            `Invalid 'published' frontmatter at ${path}: Expected: 'YYYY-MM-DD' Received: ${frontmatter.published}`,
+            "warn",
+            summary
           )
         }
       } catch (e) {
-        console.warn(
-          `Invalid 'published' frontmatter at ${path}: Expected: 'YYYY-MM-DD' Received: ${frontmatter.published}`
+        log(
+          `Invalid 'published' frontmatter at ${path}: Expected: 'YYYY-MM-DD' Received: ${frontmatter.published}`,
+          "warn",
+          summary
         )
       }
     }
 
     if (!["beginner", "intermediate", "advanced"].includes(frontmatter.skill)) {
-      console.log(
-        `Skill frontmatter '${frontmatter.skill}' must be: beginner, intermediate, or advanced at: ${path}:`
+      log(
+        `Skill frontmatter '${frontmatter.skill}' must be: beginner, intermediate, or advanced at: ${path}:`,
+        "log",
+        summary
       )
     }
   }
+
+  return summary
 }
 
-function processMarkdown(path: string) {
+function processMarkdown(path: string, summary: string[]) {
   const markdownFile: string = fs.readFileSync(path, "utf-8")
   let brokenLinkMatch: RegExpExecArray | null
 
   while ((brokenLinkMatch = BROKEN_LINK_REGEX.exec(markdownFile))) {
     const lineNumber = getLineNumber(markdownFile, brokenLinkMatch.index)
-    console.warn(`Broken link found: ${path}:${lineNumber}`)
+    log(`Broken link found: ${path}:${lineNumber}`, "warn", summary)
 
     // if (!BROKEN_LINK_REGEX.global) break
   }
@@ -219,7 +248,7 @@ function processMarkdown(path: string) {
   // Check for invalid links
   while ((invalidLinkMatch = INVALID_LINK_REGEX.exec(markdownFile))) {
     const lineNumber = getLineNumber(markdownFile, invalidLinkMatch.index)
-    console.warn(`Invalid link found: ${path}:${lineNumber}`)
+    log(`Invalid link found: ${path}:${lineNumber}`, "warn", summary)
   }
 
   let linkTextMissingMatch: RegExpExecArray | null
@@ -227,7 +256,7 @@ function processMarkdown(path: string) {
   // Check for links missing text
   while ((linkTextMissingMatch = LINK_TEXT_MISSING_REGEX.exec(markdownFile))) {
     const lineNumber = getLineNumber(markdownFile, linkTextMissingMatch.index)
-    console.warn(`Link text missing: ${path}:${lineNumber}`)
+    log(`Link text missing: ${path}:${lineNumber}`, "warn", summary)
   }
 
   let incorrectImagePathMatch: RegExpExecArray | null
@@ -242,7 +271,7 @@ function processMarkdown(path: string) {
         markdownFile,
         incorrectImagePathMatch.index
       )
-      console.warn(`Incorrect image path: ${path}:${lineNumber}`)
+      log(`Incorrect image path: ${path}:${lineNumber}`, "warn", summary)
     }
   }
 
@@ -268,7 +297,11 @@ function processMarkdown(path: string) {
 
       while ((htmlTagMatch = htmlTagRegex.exec(markdownFile))) {
         const lineNumber = getLineNumber(markdownFile, htmlTagMatch.index)
-        console.warn(`Warning: ${tag} tag in markdown at ${path}:${lineNumber}`)
+        log(
+          `Warning: ${tag} tag in markdown at ${path}:${lineNumber}`,
+          "warn",
+          summary
+        )
 
         if (!htmlTagRegex.global) break
       }
@@ -285,10 +318,14 @@ function processMarkdown(path: string) {
       markdownFile,
       whiteSpaceInLinkTextMatch.index
     )
-    console.warn(`Warning: White space in link found: ${path}:${lineNumber}`)
+    log(
+      `Warning: White space in link found: ${path}:${lineNumber}`,
+      "warn",
+      summary
+    )
   }
 
-  checkMarkdownSpellingMistakes(path, markdownFile, SPELLING_MISTAKES)
+  checkMarkdownSpellingMistakes(path, markdownFile, SPELLING_MISTAKES, summary)
   // Turned this off for testing as there are lots of Github (instead of GitHub) and Metamask (instead of MetaMask).
   // checkMarkdownSpellingMistakes(path, markdownFile, CASE_SENSITIVE_SPELLING_MISTAKES, true)
 }
@@ -297,6 +334,7 @@ function checkMarkdownSpellingMistakes(
   path: string,
   file: string,
   spellingMistakes: Array<string>,
+  summary: string[],
   caseSensitive = false
 ): void {
   for (const mistake of spellingMistakes) {
@@ -307,8 +345,10 @@ function checkMarkdownSpellingMistakes(
 
     while ((spellingMistakeMatch = mistakeRegex.exec(file))) {
       const lineNumber = getLineNumber(file, spellingMistakeMatch.index)
-      console.warn(
-        `Spelling mistake "${mistake}" found at ${path}:${lineNumber}`
+      log(
+        `Spelling mistake "${mistake}" found at ${path}:${lineNumber}`,
+        "warn",
+        summary
       )
     }
 
@@ -326,17 +366,28 @@ function getLineNumber(file: string, index: number): string {
   return lineNumber
 }
 
-function checkMarkdown(): void {
+const writeSummary = (summary: Summary, summaryWritePath: string) => {
+  fs.writeFileSync(summaryWritePath, JSON.stringify(summary, null, 2))
+}
+
+export function checkMarkdown(summaryWritePath?: string) {
+  const summary = {} as Summary
   const markdownPaths: Array<string> = getAllMarkdownPaths(PATH_TO_ALL_CONTENT)
   const markdownPathsByLang: Languages =
     sortMarkdownPathsIntoLanguages(markdownPaths)
 
   for (const lang in markdownPathsByLang) {
+    summary[lang] = []
+
     for (const path of markdownPathsByLang[lang]) {
-      processFrontmatter(path, lang)
-      processMarkdown(path)
+      processFrontmatter(path, lang, summary[lang])
+      processMarkdown(path, summary[lang])
     }
+
+    if (!summary[lang].length) delete summary[lang]
   }
+
+  summaryWritePath && writeSummary(summary, summaryWritePath)
 }
 
 checkMarkdown()
