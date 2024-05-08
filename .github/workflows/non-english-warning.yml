@@ -1,0 +1,44 @@
+name: Check for non-English updates outside of Crowdin
+
+on:
+  pull_request:
+    paths:
+      - "public/content/translations/**"
+      - "src/intl/**/*.json"
+      - "!src/intl/en/**"
+
+jobs:
+  check_branch_name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exit early if branch name contains 'crowdin'
+        run: |
+          if [[ "${{ github.head_ref }}" == *crowdin* ]]; then
+            echo "Branch name contains 'crowdin', stopping workflow"
+            exit 1
+          fi
+
+  add_label_and_comment:
+    needs: check_branch_name
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add label and comment
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const prNumber = context.issue.number;
+            const repo = context.repo;
+            await github.rest.issues.addLabels({
+              ...repo,
+              issue_number: prNumber,
+              labels: ['blocked 🛑', 'non-crowdin translation updates']
+            });
+            await github.rest.issues.createComment({
+              ...repo,
+              issue_number: prNumber,
+              body: `Thank you for your contribution!
+              All updates to non-English content must be handled through Crowdin.
+              We value your suggestion and request that you learn more about how to [help us translate](https://ethereum.org/en/contributing/translation-program/#help-us-translate), and suggest these updates directly in [our Crowdin project](https://crowdin.com/project/ethereum-org) where they can be properly reviewed.
+              Please join [our Discord](https://ethereum.org/discord) if you have questions!`
+            });
