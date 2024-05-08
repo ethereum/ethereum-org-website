@@ -118,11 +118,11 @@ En el siguiente vídeo Austin le guiará por las funciones hash y los pares de c
 
 <YouTube id="9LtBDy67Tho" />
 
-## Para seguir leyendo {#further-reading}
+## Más información {#further-reading}
 
 - [Claves para entender las cuentas de Ethereum](https://info.etherscan.com/understanding-ethereum-accounts/)-etherscan
 
-_¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite la página y añádalo._
+_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
 
 ## Temas relacionados {#related-topics}
 

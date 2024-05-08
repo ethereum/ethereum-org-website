@@ -105,10 +105,10 @@ ABIを提供した、インスタンス化されたスマートコントラク�
 ```js
 daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
   if (err) {
-    console.log("エラーが発生しました。", err)
+    console.log("An error occurred", err)
     return
   }
-  console.log("残高は: ", res)
+  console.log("The balance is: ", res)
 })
 ```
 
@@ -123,10 +123,10 @@ daiToken.methods
   .transfer(receiverAddress, "100000000000000000000")
   .send({ from: senderAddress }, function (err, res) {
     if (err) {
-      console.log("エラーが発生しました。", err)
+      console.log("An error occurred", err)
       return
     }
-    console.log("トランザクションのハッシュ: " + res)
+    console.log("Hash of the transaction: " + res)
   })
 ```
 

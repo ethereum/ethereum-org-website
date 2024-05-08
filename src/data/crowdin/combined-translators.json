@@ -858,7 +858,7 @@
           {
             "id": 14643068,
             "username": "egelizo",
-            "totalCosts": 374.71,
+            "totalCosts": 337.34,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14643068/medium/f6f25b4f0e429a11e235ade8d866b314.jpeg"
           }
         ]
@@ -926,7 +926,7 @@
           {
             "id": 16325622,
             "username": "pautapia99",
-            "totalCosts": 273.71,
+            "totalCosts": 250.48,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16325622/medium/42c9988a8bccc80645910f4fcc8d0001.jpg"
           },
           {
@@ -1116,7 +1116,7 @@
           {
             "id": 14643068,
             "username": "egelizo",
-            "totalCosts": 1166.55,
+            "totalCosts": 796.89,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14643068/medium/f6f25b4f0e429a11e235ade8d866b314.jpeg"
           }
         ]
@@ -1175,16 +1175,16 @@
         "fileId": "5559",
         "contributors": [
           {
-            "id": 15086733,
-            "username": "hedwika",
-            "totalCosts": 318.15,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15086733/medium/e58bffb1edb2cd4a9e2bbe7046a0d1e8.jpeg"
-          },
-          {
             "id": 15188556,
             "username": "korinektomas",
             "totalCosts": 312.09,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15188556/medium/ede830d725802daea8fd2fa53e0ae952.png"
+          },
+          {
+            "id": 15086733,
+            "username": "hedwika",
+            "totalCosts": 294.92,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15086733/medium/e58bffb1edb2cd4a9e2bbe7046a0d1e8.jpeg"
           },
           {
             "id": 15843833,
@@ -1303,7 +1303,7 @@
           {
             "id": 15843833,
             "username": "FoltinV",
-            "totalCosts": 337.34,
+            "totalCosts": 320.17,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15843833/medium/d9afa5c66a59b8166143dd4e1cca0630.jpeg"
           },
           {
@@ -1320,7 +1320,7 @@
           {
             "id": 15086733,
             "username": "hedwika",
-            "totalCosts": 1092.82,
+            "totalCosts": 1071.61,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15086733/medium/e58bffb1edb2cd4a9e2bbe7046a0d1e8.jpeg"
           },
           {
@@ -1377,7 +1377,7 @@
           {
             "id": 15843833,
             "username": "FoltinV",
-            "totalCosts": 2288.66,
+            "totalCosts": 1702.86,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15843833/medium/d9afa5c66a59b8166143dd4e1cca0630.jpeg"
           },
           {
@@ -1402,6 +1402,12 @@
             "username": "hedwika",
             "totalCosts": 1582.67,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15086733/medium/e58bffb1edb2cd4a9e2bbe7046a0d1e8.jpeg"
+          },
+          {
+            "id": 15843833,
+            "username": "FoltinV",
+            "totalCosts": 55.55,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15843833/medium/d9afa5c66a59b8166143dd4e1cca0630.jpeg"
           }
         ]
       },
@@ -1761,20 +1767,20 @@
           {
             "id": 15181418,
             "username": "flockchain",
-            "totalCosts": 384.81,
+            "totalCosts": 259.57,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15181418/medium/f80cb1c08c29018a1e9dbd93fa5ff510.jpg"
-          },
-          {
-            "id": 15932515,
-            "username": "Astronaut828",
-            "totalCosts": 87.87,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15932515/medium/ff4f1f9efa429e626e53821ae26ecf21.png"
           },
           {
             "id": 15123193,
             "username": "Coram_Deo",
             "totalCosts": 86.86,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15123193/medium/b3211607cc43c707c0034f7502299d8d.jpeg"
+          },
+          {
+            "id": 15932515,
+            "username": "Astronaut828",
+            "totalCosts": 4.04,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15932515/medium/ff4f1f9efa429e626e53821ae26ecf21.png"
           }
         ]
       },
@@ -1819,9 +1825,9 @@
           },
           {
             "id": 15039555,
-            "username": "aggu",
+            "username": "maximierung",
             "totalCosts": 47.47,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15039555/medium/574205fdde5df5926c2052e94d7d9478.jpg"
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15039555/medium/743522e6085d7791a043fe9367ddd708.jpg"
           }
         ]
       },
@@ -2688,7 +2694,7 @@
           {
             "id": 15123193,
             "username": "Coram_Deo",
-            "totalCosts": 3907.69,
+            "totalCosts": 3891.53,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15123193/medium/b3211607cc43c707c0034f7502299d8d.jpeg"
           },
           {
@@ -3224,7 +3230,7 @@
           {
             "id": 14796574,
             "username": "EthBasti",
-            "totalCosts": 969.6,
+            "totalCosts": 956.47,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14796574/medium/ad4295a83fdac04093d8ea2d05ddfb35_default.png"
           },
           {
@@ -3241,7 +3247,7 @@
           {
             "id": 15932515,
             "username": "Astronaut828",
-            "totalCosts": 4749.02,
+            "totalCosts": 4736.9,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15932515/medium/ff4f1f9efa429e626e53821ae26ecf21.png"
           },
           {
@@ -3957,9 +3963,9 @@
           },
           {
             "id": 15039555,
-            "username": "aggu",
+            "username": "maximierung",
             "totalCosts": 119.18,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15039555/medium/574205fdde5df5926c2052e94d7d9478.jpg"
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15039555/medium/743522e6085d7791a043fe9367ddd708.jpg"
           },
           {
             "id": 14952363,
@@ -4296,13 +4302,13 @@
           {
             "id": 15123193,
             "username": "Coram_Deo",
-            "totalCosts": 269.67,
+            "totalCosts": 247.45,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15123193/medium/b3211607cc43c707c0034f7502299d8d.jpeg"
           },
           {
             "id": 14927031,
             "username": "thiesgrade",
-            "totalCosts": 86.86,
+            "totalCosts": 71.71,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14927031/medium/61dbd44991ed6142d8802bdb16440e1b.png"
           },
           {
@@ -4342,14 +4348,14 @@
           {
             "id": 15932515,
             "username": "Astronaut828",
-            "totalCosts": 176.75,
+            "totalCosts": 149.48,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15932515/medium/ff4f1f9efa429e626e53821ae26ecf21.png"
           },
           {
             "id": 15039555,
-            "username": "aggu",
+            "username": "maximierung",
             "totalCosts": 29.29,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15039555/medium/574205fdde5df5926c2052e94d7d9478.jpg"
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15039555/medium/743522e6085d7791a043fe9367ddd708.jpg"
           }
         ]
       },
@@ -5032,28 +5038,22 @@
         "fileId": "6187",
         "contributors": [
           {
-            "id": 15102795,
-            "username": "GreatWhiteOwl",
-            "totalCosts": 634.28,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15102795/medium/6a304953d1334287ce899623011e92cd_default.png"
-          },
-          {
             "id": 15047729,
             "username": "EricTheTurtle",
-            "totalCosts": 526.21,
+            "totalCosts": 415.11,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15047729/medium/705657a47d8515302fce11fdaf1e1081.png"
+          },
+          {
+            "id": 15102795,
+            "username": "GreatWhiteOwl",
+            "totalCosts": 375.72,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15102795/medium/6a304953d1334287ce899623011e92cd_default.png"
           },
           {
             "id": 15122537,
             "username": "joshvaxyz",
             "totalCosts": 32.32,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15122537/medium/8bb720cf25d5b0adbd778a826d4d57ee.jpg"
-          },
-          {
-            "id": 15549043,
-            "username": "Salvadale",
-            "totalCosts": 29.29,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15549043/medium/18ac2a6e3c2fd9b9bf323ffcac20725b_default.png"
           },
           {
             "id": 15123193,
@@ -5066,6 +5066,12 @@
             "username": "RubenSilva",
             "totalCosts": 6.06,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15947755/medium/cf9980cfafab6b7c43f6e16e1ca48324_default.png"
+          },
+          {
+            "id": 15549043,
+            "username": "Salvadale",
+            "totalCosts": 4.04,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15549043/medium/18ac2a6e3c2fd9b9bf323ffcac20725b_default.png"
           },
           {
             "id": 16266218,
@@ -5293,7 +5299,7 @@
           {
             "id": 15421538,
             "username": "johannt",
-            "totalCosts": 781.74,
+            "totalCosts": 777.7,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15421538/medium/7e1f5d90509951072c0de0d9684baa35.png"
           }
         ]
@@ -5332,7 +5338,7 @@
           {
             "id": 15421538,
             "username": "johannt",
-            "totalCosts": 2021.01,
+            "totalCosts": 2008.89,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15421538/medium/7e1f5d90509951072c0de0d9684baa35.png"
           },
           {
@@ -5444,7 +5450,7 @@
           {
             "id": 15810863,
             "username": "bitblondy",
-            "totalCosts": 636.3,
+            "totalCosts": 595.9,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15810863/medium/36dab07f1a377151348d57285a7955f7_default.png"
           }
         ]
@@ -5538,7 +5544,7 @@
           {
             "id": 15810863,
             "username": "bitblondy",
-            "totalCosts": 1050.4,
+            "totalCosts": 1049.39,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15810863/medium/36dab07f1a377151348d57285a7955f7_default.png"
           },
           {
@@ -5691,7 +5697,7 @@
           {
             "id": 14568334,
             "username": "mr_giorgos",
-            "totalCosts": 647.41,
+            "totalCosts": 665.59,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14568334/medium/245b5c69aab62ffabb575daf603b70b8.jpg"
           },
           {
@@ -5708,7 +5714,7 @@
           {
             "id": 14568334,
             "username": "mr_giorgos",
-            "totalCosts": 1804.87,
+            "totalCosts": 1826.08,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14568334/medium/245b5c69aab62ffabb575daf603b70b8.jpg"
           },
           {
@@ -5782,7 +5788,7 @@
           {
             "id": 14568334,
             "username": "mr_giorgos",
-            "totalCosts": 865.57,
+            "totalCosts": 866.58,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14568334/medium/245b5c69aab62ffabb575daf603b70b8.jpg"
           },
           {
@@ -5832,7 +5838,7 @@
           {
             "id": 14568334,
             "username": "mr_giorgos",
-            "totalCosts": 657.51,
+            "totalCosts": 571.66,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14568334/medium/245b5c69aab62ffabb575daf603b70b8.jpg"
           }
         ]
@@ -5999,7 +6005,7 @@
           {
             "id": 14970317,
             "username": "0xnats",
-            "totalCosts": 286.84,
+            "totalCosts": 271.69,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14970317/medium/3bf7365a2c248c83944a92590efecbdf.png"
           },
           {
@@ -6027,16 +6033,16 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15150468/medium/4d44fae782af9bd5e371ce94ffa585c9.jpeg"
           },
           {
-            "id": 15490162,
-            "username": "Mathewvizc7",
-            "totalCosts": 13.13,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15490162/medium/ee6f672ba75de903b8f7bffb3be4773d_default.png"
-          },
-          {
             "id": 14611076,
             "username": "davidperalta",
             "totalCosts": 8.08,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14611076/medium/7578c666212f5568ad24a449409d40d3_default.png"
+          },
+          {
+            "id": 15490162,
+            "username": "Mathewvizc7",
+            "totalCosts": 3.03,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15490162/medium/ee6f672ba75de903b8f7bffb3be4773d_default.png"
           },
           {
             "id": 15522923,
@@ -6354,26 +6360,26 @@
           {
             "id": 14559630,
             "username": "jorge.arveg",
-            "totalCosts": 396.93,
+            "totalCosts": 256.54,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14559630/medium/fe2910f8bbc5bd2e5c7a41ca4303943b.jpg"
           },
           {
             "id": 15714091,
             "username": "Karym_GG",
-            "totalCosts": 143.42,
+            "totalCosts": 75.75,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15714091/medium/69afa2fb791e1be17640c54018cb4e2e_default.png"
-          },
-          {
-            "id": 15194310,
-            "username": "MGETH",
-            "totalCosts": 17.17,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg"
           },
           {
             "id": 15212248,
             "username": "edoga.salinas",
             "totalCosts": 15.15,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15212248/medium/752344d4d4d83a3dc6115bb278dee2a0.png"
+          },
+          {
+            "id": 15194310,
+            "username": "MGETH",
+            "totalCosts": 9.09,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg"
           }
         ]
       },
@@ -6526,6 +6532,12 @@
             "username": "Karym_GG",
             "totalCosts": 68.68,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15714091/medium/69afa2fb791e1be17640c54018cb4e2e_default.png"
+          },
+          {
+            "id": 16346092,
+            "username": "JSM42",
+            "totalCosts": 59.59,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16346092/medium/eebed7a74c0d70539dbf02f89f3a6ecc_default.png"
           },
           {
             "id": 15515640,
@@ -6846,12 +6858,6 @@
             "username": "MGETH",
             "totalCosts": 25.25,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg"
-          },
-          {
-            "id": 15522923,
-            "username": "llucC",
-            "totalCosts": 23.23,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15522923/medium/539a9115b9d375bde4eb4bc0fc37995c.png"
           },
           {
             "id": 15616911,
@@ -7897,12 +7903,6 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16028920/medium/e3049f379e035388449ee79ea5b75888.jpeg"
           },
           {
-            "id": 15553253,
-            "username": "EmelyGarcia",
-            "totalCosts": 16.16,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15553253/medium/2077ec790711bf21dd6cad91f776f003.png"
-          },
-          {
             "id": 15967747,
             "username": "fernandostds9",
             "totalCosts": 4.04,
@@ -8553,7 +8553,7 @@
           {
             "id": 14838794,
             "username": "JuanB.Mont",
-            "totalCosts": 712.05,
+            "totalCosts": 698.92,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14838794/medium/176e92941e95cf3681b1a64622f1a7f3_default.png"
           },
           {
@@ -9712,6 +9712,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14631802/medium/49b31ee9ceace460558cf61dcaaa1e2f.jpeg"
           },
           {
+            "id": 16339140,
+            "username": "jesusheber29",
+            "totalCosts": 9.09,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16339140/medium/cda7a4b685d65536563c776f525d2a94.png"
+          },
+          {
             "id": 14564238,
             "username": "FreddyAndresParra",
             "totalCosts": 7.07,
@@ -9908,7 +9914,7 @@
           {
             "id": 15194310,
             "username": "MGETH",
-            "totalCosts": 439.35,
+            "totalCosts": 443.39,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg"
           },
           {
@@ -10239,16 +10245,16 @@
         "fileId": "6187",
         "contributors": [
           {
-            "id": 14581548,
-            "username": "danielpg2106",
-            "totalCosts": 588.83,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14581548/medium/15cfd2d3d8015efbcfbc20c47deeb5be.jpeg"
-          },
-          {
             "id": 15085311,
             "username": "bunturx",
-            "totalCosts": 489.85,
+            "totalCosts": 439.35,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15085311/medium/ead5dd5aa5070be2f8d446c286f27d7a.jpeg"
+          },
+          {
+            "id": 14581548,
+            "username": "danielpg2106",
+            "totalCosts": 325.22,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14581548/medium/15cfd2d3d8015efbcfbc20c47deeb5be.jpeg"
           },
           {
             "id": 16293112,
@@ -10257,22 +10263,16 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16293112/medium/3cc05399e6a1c894db05b1b9eb0ff61d.jpeg"
           },
           {
-            "id": 15104875,
-            "username": "3vera",
-            "totalCosts": 78.78,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15104875/medium/e90d23a37d5c4325b45195c090936d2f_default.png"
-          },
-          {
             "id": 15770841,
             "username": "Angelito_18",
             "totalCosts": 27.27,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15770841/medium/f82644a45b17eed3facb1815dcc83d13.jpeg"
           },
           {
-            "id": 15746557,
-            "username": "ing.horjales",
-            "totalCosts": 17.17,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15746557/medium/0a82a08e6d3a46031f7b22bcceff1754.png"
+            "id": 15104875,
+            "username": "3vera",
+            "totalCosts": 23.23,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15104875/medium/e90d23a37d5c4325b45195c090936d2f_default.png"
           },
           {
             "id": 15763783,
@@ -10317,6 +10317,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15490162/medium/ee6f672ba75de903b8f7bffb3be4773d_default.png"
           },
           {
+            "id": 15746557,
+            "username": "ing.horjales",
+            "totalCosts": 4.04,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15746557/medium/0a82a08e6d3a46031f7b22bcceff1754.png"
+          },
+          {
             "id": 15150468,
             "username": "estebandidonft",
             "totalCosts": 4.04,
@@ -10336,7 +10342,7 @@
           {
             "id": 16293112,
             "username": "AleCox1980",
-            "totalCosts": 337.34,
+            "totalCosts": 320.17,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16293112/medium/3cc05399e6a1c894db05b1b9eb0ff61d.jpeg"
           },
           {
@@ -10685,7 +10691,7 @@
           {
             "id": 15421106,
             "username": "rogerdaltry193",
-            "totalCosts": 1047.37,
+            "totalCosts": 1026.16,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15421106/medium/42065b2af539333bb83278e6ef5e2f29.png"
           },
           {
@@ -11736,7 +11742,7 @@
           {
             "id": 15194310,
             "username": "MGETH",
-            "totalCosts": 869.61,
+            "totalCosts": 824.16,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg"
           }
         ]
@@ -11758,7 +11764,7 @@
           {
             "id": 15194310,
             "username": "MGETH",
-            "totalCosts": 2272.5,
+            "totalCosts": 2263.41,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg"
           },
           {
@@ -11804,7 +11810,7 @@
           {
             "id": 15194310,
             "username": "MGETH",
-            "totalCosts": 970.61,
+            "totalCosts": 959.5,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg"
           }
         ]
@@ -11872,7 +11878,7 @@
           {
             "id": 15194310,
             "username": "MGETH",
-            "totalCosts": 1495.81,
+            "totalCosts": 1481.67,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg"
           },
           {
@@ -11936,7 +11942,7 @@
           {
             "id": 15194310,
             "username": "MGETH",
-            "totalCosts": 268.66,
+            "totalCosts": 242.4,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg"
           },
           {
@@ -12046,7 +12052,7 @@
           {
             "id": 15194310,
             "username": "MGETH",
-            "totalCosts": 81.81,
+            "totalCosts": 80.8,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg"
           },
           {
@@ -12198,7 +12204,7 @@
           {
             "id": 15194310,
             "username": "MGETH",
-            "totalCosts": 2718.92,
+            "totalCosts": 2706.8,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg"
           },
           {
@@ -12646,12 +12652,6 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14865328/medium/16e7617eadda7d8511b4bcc3c6e5ae57_default.png"
           },
           {
-            "id": 16028920,
-            "username": "paopastorelli",
-            "totalCosts": 13.13,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16028920/medium/e3049f379e035388449ee79ea5b75888.jpeg"
-          },
-          {
             "id": 14564238,
             "username": "FreddyAndresParra",
             "totalCosts": 12.12,
@@ -12682,7 +12682,7 @@
           {
             "id": 15194310,
             "username": "MGETH",
-            "totalCosts": 508.03,
+            "totalCosts": 491.87,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg"
           }
         ]
@@ -12827,6 +12827,12 @@
             "username": "tonior",
             "totalCosts": 12.12,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15801343/medium/47a6621fc47ecf631c19ee0fc5f812e7_default.png"
+          },
+          {
+            "id": 16346092,
+            "username": "JSM42",
+            "totalCosts": 9.09,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16346092/medium/eebed7a74c0d70539dbf02f89f3a6ecc_default.png"
           }
         ]
       },
@@ -12956,7 +12962,7 @@
           {
             "id": 15903171,
             "username": "SidWeb",
-            "totalCosts": 781.74,
+            "totalCosts": 777.7,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15903171/medium/16aea0b15b034302e6e656749a0a7b8e.jpg"
           },
           {
@@ -13031,7 +13037,7 @@
           {
             "id": 15194310,
             "username": "MGETH",
-            "totalCosts": 2021.01,
+            "totalCosts": 2008.89,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg"
           },
           {
@@ -13093,7 +13099,7 @@
           {
             "id": 15194310,
             "username": "MGETH",
-            "totalCosts": 1784.67,
+            "totalCosts": 1732.15,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg"
           },
           {
@@ -13173,7 +13179,7 @@
           {
             "id": 15194310,
             "username": "MGETH",
-            "totalCosts": 965.56,
+            "totalCosts": 816.08,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg"
           }
         ]
@@ -13243,16 +13249,16 @@
         "fileId": "7935",
         "contributors": [
           {
-            "id": 15770841,
-            "username": "Angelito_18",
-            "totalCosts": 307.04,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15770841/medium/f82644a45b17eed3facb1815dcc83d13.jpeg"
-          },
-          {
             "id": 15714091,
             "username": "Karym_GG",
             "totalCosts": 306.03,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15714091/medium/69afa2fb791e1be17640c54018cb4e2e_default.png"
+          },
+          {
+            "id": 15770841,
+            "username": "Angelito_18",
+            "totalCosts": 266.64,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15770841/medium/f82644a45b17eed3facb1815dcc83d13.jpeg"
           },
           {
             "id": 15946267,
@@ -14948,7 +14954,7 @@
           {
             "id": 15097099,
             "username": "nader.sedigh",
-            "totalCosts": 339.36,
+            "totalCosts": 324.21,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15097099/medium/4fca4ea357c99c5d605850315f21ae65.png"
           },
           {
@@ -14966,7 +14972,7 @@
           {
             "id": 15233666,
             "username": "Alifarhani",
-            "totalCosts": 33.33,
+            "totalCosts": 10.1,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15233666/medium/deec4866c37352c795ed3d0000236714.jpeg"
           }
         ]
@@ -15922,19 +15928,19 @@
           {
             "id": 15099529,
             "username": "Aria-Naraghi",
-            "totalCosts": 797.9,
+            "totalCosts": 571.66,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15099529/medium/77b12f03c6675c85ad45efc6f3e23be3_default.png"
           },
           {
             "id": 14733070,
             "username": "loopersosa",
-            "totalCosts": 329.26,
+            "totalCosts": 183.82,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14733070/medium/14f75ef000001434196357bca4f22490.jpg"
           },
           {
             "id": 14814690,
             "username": "khodaarahmi",
-            "totalCosts": 99.99,
+            "totalCosts": 44.44,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14814690/medium/22dbf1e43823e76cb094bff3fdcca212.jpeg"
           },
           {
@@ -16279,7 +16285,7 @@
           {
             "id": 15942179,
             "username": "erfan1366erfan",
-            "totalCosts": 1074.64,
+            "totalCosts": 1053.43,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15942179/medium/01f700e015f539a1262e058e281a8d9f.png"
           },
           {
@@ -16656,7 +16662,7 @@
           {
             "id": 15955625,
             "username": "Coiniran",
-            "totalCosts": 781.74,
+            "totalCosts": 777.7,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15955625/medium/cea2317824f592725aac52fcd2eedb26_default.png"
           }
         ]
@@ -16851,7 +16857,7 @@
           {
             "id": 15109017,
             "username": "mpoulin371",
-            "totalCosts": 329.26,
+            "totalCosts": 314.11,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15109017/medium/40931e6324a057568f57519eb7706fc9.png"
           },
           {
@@ -16863,7 +16869,7 @@
           {
             "id": 12844463,
             "username": "MATsxm",
-            "totalCosts": 67.67,
+            "totalCosts": 44.44,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/12844463/medium/6fae27edb4b41f363587f737ea2f96de.jpg"
           },
           {
@@ -16871,12 +16877,6 @@
             "username": "XofEE",
             "totalCosts": 18.18,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15954931/medium/7254d648c451b822632980e5bfcb61fa.png"
-          },
-          {
-            "id": 15415492,
-            "username": "sashasrs",
-            "totalCosts": 10.1,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15415492/medium/3fa311e4cb49b48849796356395333e8.jpg"
           },
           {
             "id": 13249257,
@@ -17170,7 +17170,7 @@
           {
             "id": 13249257,
             "username": "SuperDelphi",
-            "totalCosts": 259.57,
+            "totalCosts": 134.33,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13249257/medium/f566e07e86e26f5911df1ddf5fae796d.png"
           },
           {
@@ -17182,7 +17182,7 @@
           {
             "id": 15954931,
             "username": "XofEE",
-            "totalCosts": 94.94,
+            "totalCosts": 71.71,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15954931/medium/7254d648c451b822632980e5bfcb61fa.png"
           },
           {
@@ -17194,7 +17194,7 @@
           {
             "id": 12844463,
             "username": "MATsxm",
-            "totalCosts": 32.32,
+            "totalCosts": 24.24,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/12844463/medium/6fae27edb4b41f363587f737ea2f96de.jpg"
           },
           {
@@ -17421,6 +17421,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15318490/medium/673173431aeb53f29ca5516e9aa87bec_default.png"
           },
           {
+            "id": 16351376,
+            "username": "Varadiell",
+            "totalCosts": 12.12,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16351376/medium/1dedcace4f1f17b6713fb41b8b4db778.png"
+          },
+          {
             "id": 14675712,
             "username": "LEMIBANDDEXARI",
             "totalCosts": 10.1,
@@ -17592,12 +17598,6 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13473469/medium/4118d6e220ce9b45529503a39159dc48.jpg"
           },
           {
-            "id": 12844463,
-            "username": "MATsxm",
-            "totalCosts": 26.26,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/12844463/medium/6fae27edb4b41f363587f737ea2f96de.jpg"
-          },
-          {
             "id": 15318490,
             "username": "arthursw",
             "totalCosts": 19.19,
@@ -17620,6 +17620,12 @@
             "username": "breakthewall",
             "totalCosts": 4.04,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15158630/medium/b9a6bb842fd3c52dc0834af7a67522f5.jpeg"
+          },
+          {
+            "id": 12844463,
+            "username": "MATsxm",
+            "totalCosts": 3.03,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/12844463/medium/6fae27edb4b41f363587f737ea2f96de.jpg"
           },
           {
             "id": 14783598,
@@ -18036,7 +18042,7 @@
           {
             "id": 12844463,
             "username": "MATsxm",
-            "totalCosts": 2252.3,
+            "totalCosts": 2238.16,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/12844463/medium/6fae27edb4b41f363587f737ea2f96de.jpg"
           },
           {
@@ -18082,7 +18088,7 @@
           {
             "id": 12844463,
             "username": "MATsxm",
-            "totalCosts": 556.51,
+            "totalCosts": 530.25,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/12844463/medium/6fae27edb4b41f363587f737ea2f96de.jpg"
           }
         ]
@@ -18251,7 +18257,7 @@
           {
             "id": 15624473,
             "username": "CaverneCrypto",
-            "totalCosts": 590.85,
+            "totalCosts": 538.33,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15624473/medium/7790c08f2ef4a5ba028091b6393900be_default.png"
           },
           {
@@ -18292,19 +18298,19 @@
           {
             "id": 15624473,
             "username": "CaverneCrypto",
-            "totalCosts": 501.97,
+            "totalCosts": 452.48,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15624473/medium/7790c08f2ef4a5ba028091b6393900be_default.png"
           },
           {
             "id": 15396412,
             "username": "Ti0x-f",
-            "totalCosts": 295.93,
+            "totalCosts": 233.31,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15396412/medium/e3ea869880271105d1c5b63e8a4f3040.jpeg"
           },
           {
             "id": 14823260,
             "username": "omahs",
-            "totalCosts": 118.17,
+            "totalCosts": 80.8,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14823260/medium/2e90039ed53752ac5277c9cf4fce6fe7.jpeg"
           },
           {
@@ -18876,7 +18882,7 @@
           {
             "id": 15442454,
             "username": "Im-SpiETH",
-            "totalCosts": 4.04,
+            "totalCosts": 3.03,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15442454/medium/860696ab89262fe98a0b888882d2b2da_default.png"
           }
         ]
@@ -19082,7 +19088,7 @@
           {
             "id": 15954931,
             "username": "XofEE",
-            "totalCosts": 1046.36,
+            "totalCosts": 1030.2,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15954931/medium/7254d648c451b822632980e5bfcb61fa.png"
           },
           {
@@ -19929,7 +19935,7 @@
           {
             "id": 14737644,
             "username": "DylanCONIN",
-            "totalCosts": 962.53,
+            "totalCosts": 949.4,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14737644/medium/d981e7d9ae1b98b7e8a21245675fc0e0.jpg"
           },
           {
@@ -19952,7 +19958,7 @@
           {
             "id": 15136089,
             "username": "demaupeoucorentin",
-            "totalCosts": 2592.67,
+            "totalCosts": 2580.55,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15136089/medium/4ba75954f478f17b20559a3035f6adbd.png"
           },
           {
@@ -21702,7 +21708,7 @@
           {
             "id": 15954931,
             "username": "XofEE",
-            "totalCosts": 494.9,
+            "totalCosts": 390.87,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15954931/medium/7254d648c451b822632980e5bfcb61fa.png"
           },
           {
@@ -21903,6 +21909,12 @@
             "username": "Im-SpiETH",
             "totalCosts": 21.21,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15442454/medium/860696ab89262fe98a0b888882d2b2da_default.png"
+          },
+          {
+            "id": 16351376,
+            "username": "Varadiell",
+            "totalCosts": 21.21,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16351376/medium/1dedcace4f1f17b6713fb41b8b4db778.png"
           },
           {
             "id": 17361,
@@ -22149,26 +22161,20 @@
           {
             "id": 13249257,
             "username": "SuperDelphi",
-            "totalCosts": 675.69,
+            "totalCosts": 443.39,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13249257/medium/f566e07e86e26f5911df1ddf5fae796d.png"
           },
           {
             "id": 15117007,
             "username": "french_flamingo",
-            "totalCosts": 347.44,
+            "totalCosts": 229.27,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15117007/medium/b445a29386e65c8821126279fd2c81bf_default.png"
           },
           {
             "id": 14711854,
             "username": "Gamma-Software",
-            "totalCosts": 240.38,
+            "totalCosts": 161.6,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14711854/medium/0ae62f880c9fdec755310b2d551953ae.jpeg"
-          },
-          {
-            "id": 15954931,
-            "username": "XofEE",
-            "totalCosts": 65.65,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15954931/medium/7254d648c451b822632980e5bfcb61fa.png"
           },
           {
             "id": 14720694,
@@ -22193,6 +22199,12 @@
             "username": "Espilon",
             "totalCosts": 11.11,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15117761/medium/b4c2f709605db89308f6ce2f0bb05457.jpg"
+          },
+          {
+            "id": 15954931,
+            "username": "XofEE",
+            "totalCosts": 8.08,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15954931/medium/7254d648c451b822632980e5bfcb61fa.png"
           },
           {
             "id": 15689365,
@@ -22704,7 +22716,7 @@
           {
             "id": 15954931,
             "username": "XofEE",
-            "totalCosts": 96.96,
+            "totalCosts": 88.88,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15954931/medium/7254d648c451b822632980e5bfcb61fa.png"
           },
           {
@@ -22745,7 +22757,7 @@
           {
             "id": 14862460,
             "username": "vdusart",
-            "totalCosts": 990.81,
+            "totalCosts": 969.6,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14862460/medium/106cb769254652c20ddeab107317fd43_default.png"
           },
           {
@@ -23640,7 +23652,7 @@
           {
             "id": 15954931,
             "username": "XofEE",
-            "totalCosts": 654.48,
+            "totalCosts": 614.08,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15954931/medium/7254d648c451b822632980e5bfcb61fa.png"
           },
           {
@@ -23702,13 +23714,13 @@
           {
             "id": 15954931,
             "username": "XofEE",
-            "totalCosts": 281.79,
+            "totalCosts": 278.76,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15954931/medium/7254d648c451b822632980e5bfcb61fa.png"
           },
           {
             "id": 14823260,
             "username": "omahs",
-            "totalCosts": 209.07,
+            "totalCosts": 195.94,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14823260/medium/2e90039ed53752ac5277c9cf4fce6fe7.jpeg"
           },
           {
@@ -23810,7 +23822,7 @@
           {
             "id": 15442454,
             "username": "Im-SpiETH",
-            "totalCosts": 630.24,
+            "totalCosts": 584.79,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15442454/medium/860696ab89262fe98a0b888882d2b2da_default.png"
           },
           {
@@ -23856,7 +23868,7 @@
           {
             "id": 15954931,
             "username": "XofEE",
-            "totalCosts": 2115.95,
+            "totalCosts": 2106.86,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15954931/medium/7254d648c451b822632980e5bfcb61fa.png"
           },
           {
@@ -23906,16 +23918,16 @@
         "fileId": "7507",
         "contributors": [
           {
-            "id": 15954931,
-            "username": "XofEE",
-            "totalCosts": 486.82,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15954931/medium/7254d648c451b822632980e5bfcb61fa.png"
-          },
-          {
             "id": 15070111,
             "username": "Ceronny",
             "totalCosts": 483.79,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15070111/medium/4e75fc695a37495e5a0548d13f89cae0_default.png"
+          },
+          {
+            "id": 15954931,
+            "username": "XofEE",
+            "totalCosts": 475.71,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15954931/medium/7254d648c451b822632980e5bfcb61fa.png"
           }
         ]
       },
@@ -24441,19 +24453,19 @@
           {
             "id": 17361,
             "username": "plamarque",
-            "totalCosts": 509.04,
+            "totalCosts": 505,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/17361/medium/fecfafa7716ac9d6838b43c31f48f6b9.png"
           },
           {
             "id": 15914449,
             "username": "CoinHoodie",
-            "totalCosts": 474.7,
+            "totalCosts": 470.66,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15914449/medium/8d2590e4c534ca5125f1d70b6d9c71cc.jpeg"
           },
           {
             "id": 16063102,
             "username": "MelanieG",
-            "totalCosts": 408.04,
+            "totalCosts": 404,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16063102/medium/81ae816e9f881b1000a45d9c35fd5c9d.jpg"
           }
         ]
@@ -24498,7 +24510,7 @@
           {
             "id": 15961437,
             "username": "harpocryptes",
-            "totalCosts": 1892.74,
+            "totalCosts": 1880.62,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15961437/medium/d495096dfb14721b3d4848a1bc7cfdd5.jpeg"
           },
           {
@@ -24823,7 +24835,7 @@
           {
             "id": 15967369,
             "username": "Krishna2992",
-            "totalCosts": 1068.58,
+            "totalCosts": 1047.37,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15967369/medium/c6c620bf9be7a72e246c55971f82fbac_default.png"
           },
           {
@@ -24976,20 +24988,20 @@
           {
             "id": 15967369,
             "username": "Krishna2992",
-            "totalCosts": 1010,
+            "totalCosts": 847.39,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15967369/medium/c6c620bf9be7a72e246c55971f82fbac_default.png"
-          },
-          {
-            "id": 15950093,
-            "username": "WholesomeBruh",
-            "totalCosts": 648.42,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15950093/medium/0ca7566575ffb3df8169a24c985fc2f8_default.png"
           },
           {
             "id": 15363678,
             "username": "Dawyer",
-            "totalCosts": 621.15,
+            "totalCosts": 493.89,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15363678/medium/50e493deacc1ae7d512f2b38aab07d00.png"
+          },
+          {
+            "id": 15950093,
+            "username": "WholesomeBruh",
+            "totalCosts": 352.49,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15950093/medium/0ca7566575ffb3df8169a24c985fc2f8_default.png"
           }
         ]
       },
@@ -25245,16 +25257,16 @@
         "fileId": "2868",
         "contributors": [
           {
-            "id": 15965461,
-            "username": "Satglow",
-            "totalCosts": 217.15,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
-          },
-          {
             "id": 14357794,
             "username": "robertdosa",
             "totalCosts": 186.85,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14357794/medium/a28b741096516a710523b87d9ee07223.png"
+          },
+          {
+            "id": 15965461,
+            "username": "Satglow",
+            "totalCosts": 172.71,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           }
         ]
       },
@@ -25446,7 +25458,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 188.87,
+            "totalCosts": 182.81,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           }
         ]
@@ -25611,7 +25623,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 4213.72,
+            "totalCosts": 4197.56,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           },
           {
@@ -25849,7 +25861,7 @@
           {
             "id": 14357794,
             "username": "robertdosa",
-            "totalCosts": 972.63,
+            "totalCosts": 959.5,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14357794/medium/a28b741096516a710523b87d9ee07223.png"
           },
           {
@@ -26019,7 +26031,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 1400.87,
+            "totalCosts": 1199.88,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           },
           {
@@ -26238,7 +26250,7 @@
           {
             "id": 16211894,
             "username": "lorincze",
-            "totalCosts": 274.72,
+            "totalCosts": 251.49,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16211894/medium/7c5d58b22e6ffb1f49de6656f35ff162.png"
           },
           {
@@ -26267,7 +26279,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 1268.56,
+            "totalCosts": 1247.35,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           }
         ]
@@ -26289,7 +26301,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 903.95,
+            "totalCosts": 818.1,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           }
         ]
@@ -26518,14 +26530,8 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 2532.07,
+            "totalCosts": 1767.5,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
-          },
-          {
-            "id": 16211894,
-            "username": "lorincze",
-            "totalCosts": 19.19,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16211894/medium/7c5d58b22e6ffb1f49de6656f35ff162.png"
           }
         ]
       },
@@ -26546,7 +26552,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 965.56,
+            "totalCosts": 948.39,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           }
         ]
@@ -26630,7 +26636,7 @@
           {
             "id": 16211894,
             "username": "lorincze",
-            "totalCosts": 110.09,
+            "totalCosts": 102.01,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16211894/medium/7c5d58b22e6ffb1f49de6656f35ff162.png"
           }
         ]
@@ -26685,7 +26691,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 5789.32,
+            "totalCosts": 5770.13,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           }
         ]
@@ -26707,7 +26713,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 869.61,
+            "totalCosts": 824.16,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           }
         ]
@@ -26729,7 +26735,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 2349.26,
+            "totalCosts": 2340.17,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           }
         ]
@@ -26751,7 +26757,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 968.59,
+            "totalCosts": 957.48,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           }
         ]
@@ -26801,7 +26807,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 1836.18,
+            "totalCosts": 1822.04,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           }
         ]
@@ -26823,7 +26829,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 546.41,
+            "totalCosts": 520.15,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           }
         ]
@@ -26834,7 +26840,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 572.67,
+            "totalCosts": 499.95,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           },
           {
@@ -26918,7 +26924,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 4952.03,
+            "totalCosts": 4925.77,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           },
           {
@@ -27042,7 +27048,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 781.74,
+            "totalCosts": 777.7,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           }
         ]
@@ -27081,7 +27087,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 2055.35,
+            "totalCosts": 2043.23,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           }
         ]
@@ -27131,7 +27137,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 1816.99,
+            "totalCosts": 1764.47,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           }
         ]
@@ -27142,7 +27148,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 1016.06,
+            "totalCosts": 866.58,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           }
         ]
@@ -27230,7 +27236,7 @@
           {
             "id": 15965461,
             "username": "Satglow",
-            "totalCosts": 580.75,
+            "totalCosts": 564.59,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png"
           }
         ]
@@ -27476,13 +27482,13 @@
           {
             "id": 14866604,
             "username": "yeremiaryangunadi",
-            "totalCosts": 348.45,
+            "totalCosts": 333.3,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14866604/medium/285a89179a206f3621ba14bf04085b27.png"
           },
           {
             "id": 14861756,
             "username": "RahayuRafika_12",
-            "totalCosts": 186.85,
+            "totalCosts": 153.52,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14861756/medium/68ce2b760b107d1cf2a5a1508aa8ee96.jpeg"
           }
         ]
@@ -27689,7 +27695,7 @@
           {
             "id": 15934037,
             "username": "fuji.anggara10",
-            "totalCosts": 39.39,
+            "totalCosts": 16.16,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15934037/medium/e913f10d6d3550452e0b7c072e15aa40.jpeg"
           },
           {
@@ -28843,7 +28849,7 @@
           {
             "id": 14866604,
             "username": "yeremiaryangunadi",
-            "totalCosts": 987.78,
+            "totalCosts": 974.65,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14866604/medium/285a89179a206f3621ba14bf04085b27.png"
           },
           {
@@ -28866,7 +28872,7 @@
           {
             "id": 14861756,
             "username": "RahayuRafika_12",
-            "totalCosts": 1595.8,
+            "totalCosts": 1583.68,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14861756/medium/68ce2b760b107d1cf2a5a1508aa8ee96.jpeg"
           },
           {
@@ -30254,25 +30260,25 @@
           {
             "id": 14861756,
             "username": "RahayuRafika_12",
-            "totalCosts": 671.65,
+            "totalCosts": 604.99,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14861756/medium/68ce2b760b107d1cf2a5a1508aa8ee96.jpeg"
           },
           {
             "id": 15128863,
             "username": "samuel_noah",
-            "totalCosts": 450.46,
+            "totalCosts": 236.34,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15128863/medium/ef7bc05a7fc93f702826aa0642b376a3.jpeg"
           },
           {
             "id": 15126147,
             "username": "anggunh",
-            "totalCosts": 231.29,
+            "totalCosts": 142.41,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15126147/medium/f2fb49285f22070ebdc4fc55b7e5f64d_default.png"
           },
           {
             "id": 15148352,
             "username": "kelvinandriancom",
-            "totalCosts": 206.04,
+            "totalCosts": 127.26,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15148352/medium/39819e77427bb06eb4966d1500816b3a.jpeg"
           }
         ]
@@ -30811,7 +30817,7 @@
           {
             "id": 15934037,
             "username": "fuji.anggara10",
-            "totalCosts": 721.14,
+            "totalCosts": 717.1,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15934037/medium/e913f10d6d3550452e0b7c072e15aa40.jpeg"
           },
           {
@@ -30856,7 +30862,7 @@
           {
             "id": 15927303,
             "username": "roifnaufal21",
-            "totalCosts": 2021.01,
+            "totalCosts": 2008.89,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15927303/medium/e39f725004e850246a765bb86dddf780_default.png"
           }
         ]
@@ -30954,7 +30960,7 @@
           {
             "id": 14861756,
             "username": "RahayuRafika_12",
-            "totalCosts": 247.45,
+            "totalCosts": 226.24,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14861756/medium/68ce2b760b107d1cf2a5a1508aa8ee96.jpeg"
           },
           {
@@ -31105,13 +31111,13 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 1245.33,
+            "totalCosts": 1224.12,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
             "id": 14665128,
             "username": "Pierlu_be",
-            "totalCosts": 847.39,
+            "totalCosts": 826.18,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14665128/medium/5fdea361fcd2c73a52533056e2709694_default.png"
           },
           {
@@ -31145,13 +31151,13 @@
           {
             "id": 15103237,
             "username": "Nico-oh",
-            "totalCosts": 282.8,
+            "totalCosts": 267.65,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15103237/medium/d99e72d8e8f06f45d2b7c2067e8b2ba5_default.png"
           },
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 130.29,
+            "totalCosts": 120.19,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -31186,7 +31192,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 49.49,
+            "totalCosts": 44.44,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -31444,19 +31450,19 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 480.76,
+            "totalCosts": 341.38,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
             "id": 14657804,
             "username": "jhonnyvianello",
-            "totalCosts": 103.02,
+            "totalCosts": 33.33,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14657804/medium/005d9fa70fdc5a4fcd818f63cf61e1a0.jpg"
           },
           {
             "id": 16171038,
             "username": "bianc8",
-            "totalCosts": 17.17,
+            "totalCosts": 9.09,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16171038/medium/d0bf697b97124361ae9caa68aab37fa9.jpeg"
           },
           {
@@ -31584,7 +31590,7 @@
           {
             "id": 16301748,
             "username": "jaja_in_web3",
-            "totalCosts": 280.78,
+            "totalCosts": 257.55,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16301748/medium/b292dee2eb05d315fbc1664d08906a31_default.png"
           },
           {
@@ -31759,7 +31765,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 61.61,
+            "totalCosts": 38.38,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -31811,7 +31817,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 1712.96,
+            "totalCosts": 1905.87,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -31927,7 +31933,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 848.4,
+            "totalCosts": 802.95,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -31967,7 +31973,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 2325.02,
+            "totalCosts": 2315.93,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -32036,7 +32042,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 968.59,
+            "totalCosts": 957.48,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           }
         ]
@@ -32151,7 +32157,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 1743.26,
+            "totalCosts": 1729.12,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -32191,7 +32197,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 576.71,
+            "totalCosts": 550.45,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           }
         ]
@@ -32296,7 +32302,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 281.79,
+            "totalCosts": 222.2,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -32310,12 +32316,6 @@
             "username": "jhonnyvianello",
             "totalCosts": 29.29,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14657804/medium/005d9fa70fdc5a4fcd818f63cf61e1a0.jpg"
-          },
-          {
-            "id": 16111070,
-            "username": "m1rc00rs1",
-            "totalCosts": 13.13,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16111070/medium/517b13efb278dc1cfb945554ff342607.png"
           },
           {
             "id": 14633448,
@@ -32342,7 +32342,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 2103.83,
+            "totalCosts": 1944.25,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -32359,7 +32359,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 1115.04,
+            "totalCosts": 965.56,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           }
         ]
@@ -32444,7 +32444,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 420.16,
+            "totalCosts": 414.1,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -32785,7 +32785,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 1144.33,
+            "totalCosts": 1143.32,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -32923,7 +32923,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 1500.86,
+            "totalCosts": 1484.7,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -32946,7 +32946,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 246.44,
+            "totalCosts": 262.6,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           }
         ]
@@ -33439,7 +33439,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 1029.19,
+            "totalCosts": 1016.06,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -33456,7 +33456,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 3997.58,
+            "totalCosts": 3971.32,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -34632,7 +34632,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 1341.28,
+            "totalCosts": 1117.06,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -35204,7 +35204,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 781.74,
+            "totalCosts": 777.7,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           }
         ]
@@ -35237,7 +35237,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 2055.35,
+            "totalCosts": 2043.23,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           }
         ]
@@ -35270,13 +35270,13 @@
           {
             "id": 15101201,
             "username": "andreapiani.dev",
-            "totalCosts": 1060.5,
+            "totalCosts": 690.84,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15101201/medium/e83a56185107895cbc97cbd279ecf901.jpg"
           },
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 513.08,
+            "totalCosts": 222.2,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -35316,7 +35316,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 967.58,
+            "totalCosts": 950.41,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           }
         ]
@@ -35507,7 +35507,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 875.67,
+            "totalCosts": 867.59,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           },
           {
@@ -35752,7 +35752,7 @@
           {
             "id": 13461670,
             "username": "Herbie_23",
-            "totalCosts": 681.75,
+            "totalCosts": 641.35,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg"
           }
         ]
@@ -35966,7 +35966,7 @@
           {
             "id": 13754187,
             "username": "Carla78",
-            "totalCosts": 424.2,
+            "totalCosts": 408.04,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13754187/medium/37de2106b564cdd5431a9c1f7e091087.png"
           },
           {
@@ -36064,13 +36064,13 @@
           {
             "id": 15201594,
             "username": "akashi031",
-            "totalCosts": 934.25,
+            "totalCosts": 913.04,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15201594/medium/5e27758e217a387356f7c0502130479f_default.png"
           },
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 225.23,
+            "totalCosts": 265.63,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
@@ -36116,7 +36116,7 @@
           {
             "id": 15135089,
             "username": "indwm",
-            "totalCosts": 359.56,
+            "totalCosts": 322.19,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15135089/medium/ad0dde7b6943eb1bdc2b8c64223dd070.png"
           },
           {
@@ -36391,13 +36391,13 @@
           {
             "id": 15169660,
             "username": "kurotaky",
-            "totalCosts": 402.99,
+            "totalCosts": 259.57,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15169660/medium/05e3e729e62f12747a7d06b8f27d3cf5.jpeg"
           },
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 181.8,
+            "totalCosts": 104.03,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
@@ -36461,7 +36461,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 147.46,
+            "totalCosts": 146.45,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
@@ -36507,7 +36507,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 335.32,
+            "totalCosts": 353.5,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
@@ -36530,7 +36530,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 2058.38,
+            "totalCosts": 2079.59,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
@@ -36704,16 +36704,16 @@
         "fileId": "2868",
         "contributors": [
           {
-            "id": 15208868,
-            "username": "HiroyukiNaito",
-            "totalCosts": 192.91,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
-          },
-          {
             "id": 14701334,
             "username": "ozora-ogino",
             "totalCosts": 182.81,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14701334/medium/3b0ac84d5b08a7171e0157caba5e6ece.png"
+          },
+          {
+            "id": 15208868,
+            "username": "HiroyukiNaito",
+            "totalCosts": 169.68,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
             "id": 14880458,
@@ -36782,7 +36782,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 2613.88,
+            "totalCosts": 2594.69,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
@@ -37115,7 +37115,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 274.72,
+            "totalCosts": 275.73,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
@@ -37189,12 +37189,6 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15468240/medium/4b9fcd0986c6b9732488ab90181beb8b_default.png"
           },
           {
-            "id": 15208868,
-            "username": "HiroyukiNaito",
-            "totalCosts": 136.35,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
-          },
-          {
             "id": 14931651,
             "username": "sinsinpurin",
             "totalCosts": 124.23,
@@ -37205,6 +37199,12 @@
             "username": "sekisanchi",
             "totalCosts": 88.88,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14880458/medium/6b71180a926d6213e33b21e50df8e409_default.png"
+          },
+          {
+            "id": 15208868,
+            "username": "HiroyukiNaito",
+            "totalCosts": 76.76,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           }
         ]
       },
@@ -37242,7 +37242,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 1835.17,
+            "totalCosts": 1782.65,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           }
         ]
@@ -37253,7 +37253,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 1020.1,
+            "totalCosts": 870.62,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           }
         ]
@@ -37735,7 +37735,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 178.77,
+            "totalCosts": 177.76,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
@@ -37827,7 +37827,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 3537.02,
+            "totalCosts": 3540.05,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
@@ -38308,7 +38308,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 1247.35,
+            "totalCosts": 1259.47,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           }
         ]
@@ -38546,19 +38546,19 @@
           {
             "id": 14880458,
             "username": "sekisanchi",
-            "totalCosts": 895.87,
+            "totalCosts": 882.74,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14880458/medium/6b71180a926d6213e33b21e50df8e409_default.png"
           },
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 441.37,
+            "totalCosts": 428.24,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
             "id": 15333126,
             "username": "1056shigezane",
-            "totalCosts": 315.12,
+            "totalCosts": 301.99,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15333126/medium/8636a8bf1e089984f0b201f93b551fb2.png"
           }
         ]
@@ -38569,7 +38569,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 5105.55,
+            "totalCosts": 5079.29,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
@@ -39855,7 +39855,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 801.94,
+            "totalCosts": 804.97,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
@@ -39896,7 +39896,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 1393.8,
+            "totalCosts": 1192.81,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
@@ -40211,14 +40211,8 @@
           {
             "id": 14730036,
             "username": "shoyu",
-            "totalCosts": 1060.5,
+            "totalCosts": 690.84,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14730036/medium/3f53daf0320c8412a99de867a0ca6d2c_default.png"
-          },
-          {
-            "id": 15208868,
-            "username": "HiroyukiNaito",
-            "totalCosts": 244.42,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
             "id": 15135089,
@@ -40231,6 +40225,12 @@
             "username": "Buyabuya",
             "totalCosts": 82.82,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16274540/medium/fff14edb8869578304921016a436ab18.jpeg"
+          },
+          {
+            "id": 15208868,
+            "username": "HiroyukiNaito",
+            "totalCosts": 46.46,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           }
         ]
       },
@@ -40263,7 +40263,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 695.89,
+            "totalCosts": 696.9,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
@@ -40533,7 +40533,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 134.33,
+            "totalCosts": 126.25,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           }
         ]
@@ -40561,7 +40561,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 869.61,
+            "totalCosts": 824.16,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           }
         ]
@@ -40583,7 +40583,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 2388.65,
+            "totalCosts": 2379.56,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           }
         ]
@@ -40594,7 +40594,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 968.59,
+            "totalCosts": 957.48,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           }
         ]
@@ -40616,7 +40616,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 1671.55,
+            "totalCosts": 1657.41,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
@@ -40656,7 +40656,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 583.78,
+            "totalCosts": 557.52,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
@@ -40849,16 +40849,16 @@
         "fileId": "7597",
         "contributors": [
           {
+            "id": 15208868,
+            "username": "HiroyukiNaito",
+            "totalCosts": 174.73,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
+          },
+          {
             "id": 15680077,
             "username": "miyamo",
             "totalCosts": 117.16,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15680077/medium/a9db402339c4ac996a32133a844692ef_default.png"
-          },
-          {
-            "id": 15208868,
-            "username": "HiroyukiNaito",
-            "totalCosts": 69.69,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           }
         ]
       },
@@ -40868,7 +40868,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 547.42,
+            "totalCosts": 544.39,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           }
         ]
@@ -41221,7 +41221,7 @@
           {
             "id": 15430302,
             "username": "kwangtaekim",
-            "totalCosts": 1006.97,
+            "totalCosts": 985.76,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15430302/medium/705b3a29a93430236982b318c9131fcf.png"
           },
           {
@@ -41494,19 +41494,19 @@
           {
             "id": 15430302,
             "username": "kwangtaekim",
-            "totalCosts": 917.08,
+            "totalCosts": 649.43,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15430302/medium/705b3a29a93430236982b318c9131fcf.png"
           },
           {
             "id": 14261470,
             "username": "DHtheCreator",
-            "totalCosts": 234.32,
+            "totalCosts": 144.43,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14261470/medium/78d6d680bab6a88f1b8df92013bee804.jpg"
           },
           {
             "id": 14362948,
             "username": "jcxmt125",
-            "totalCosts": 66.66,
+            "totalCosts": 37.37,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14362948/medium/2580e7c7dde93c784b42531a1b28a048.gif"
           }
         ]
@@ -41879,7 +41879,7 @@
           {
             "id": 15084373,
             "username": "tarcanhursit",
-            "totalCosts": 432.28,
+            "totalCosts": 361.58,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15084373/medium/63831adb2cf079020b094666d47417fd.jpg"
           }
         ]
@@ -42087,7 +42087,7 @@
           {
             "id": 15084373,
             "username": "tarcanhursit",
-            "totalCosts": 1210.99,
+            "totalCosts": 841.33,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15084373/medium/63831adb2cf079020b094666d47417fd.jpg"
           }
         ]
@@ -42227,7 +42227,7 @@
           {
             "id": 15894449,
             "username": "wosek_",
-            "totalCosts": 440.36,
+            "totalCosts": 684.78,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15894449/medium/a1d92e3a822252a09f842a8a5451c403.jpg"
           },
           {
@@ -42384,7 +42384,7 @@
           {
             "id": 15894449,
             "username": "wosek_",
-            "totalCosts": 40.4,
+            "totalCosts": 17.17,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15894449/medium/a1d92e3a822252a09f842a8a5451c403.jpg"
           },
           {
@@ -43167,7 +43167,7 @@
           {
             "id": 14775946,
             "username": "Beas",
-            "totalCosts": 992.83,
+            "totalCosts": 979.7,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14775946/medium/22ad4db44fa2f657ec257775cddc899c.jpg"
           }
         ]
@@ -43928,7 +43928,7 @@
           {
             "id": 15894449,
             "username": "wosek_",
-            "totalCosts": 1008.99,
+            "totalCosts": 987.78,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15894449/medium/a1d92e3a822252a09f842a8a5451c403.jpg"
           },
           {
@@ -43973,13 +43973,13 @@
           {
             "id": 15894449,
             "username": "wosek_",
-            "totalCosts": 726.19,
+            "totalCosts": 655.49,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15894449/medium/a1d92e3a822252a09f842a8a5451c403.jpg"
           },
           {
             "id": 14933675,
             "username": "JuliannaMlynarska",
-            "totalCosts": 135.34,
+            "totalCosts": 120.19,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14933675/medium/0a154caf851ba66ad323ab1b30379663.jpg"
           },
           {
@@ -44228,13 +44228,13 @@
           {
             "id": 15894449,
             "username": "wosek_",
-            "totalCosts": 2146.25,
+            "totalCosts": 1596.81,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15894449/medium/a1d92e3a822252a09f842a8a5451c403.jpg"
           },
           {
             "id": 15891369,
             "username": "kacperm",
-            "totalCosts": 239.37,
+            "totalCosts": 105.04,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15891369/medium/8ab205674e1044c3621ab01c2d938cc2_default.png"
           },
           {
@@ -44421,7 +44421,7 @@
           {
             "id": 15363256,
             "username": "keyla88",
-            "totalCosts": 708.01,
+            "totalCosts": 686.8,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15363256/medium/ec0ae3c1332b4c006ba843c9969716f5.png"
           },
           {
@@ -44461,13 +44461,13 @@
           {
             "id": 14702518,
             "username": "Byrde",
-            "totalCosts": 338.35,
+            "totalCosts": 323.2,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14702518/medium/cc9b682031319fe073d73822ee71f11a_default.png"
           },
           {
             "id": 13986387,
             "username": "rafarocha",
-            "totalCosts": 138.37,
+            "totalCosts": 105.04,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13986387/medium/72bb87143f2a8d013cddac84c4e2afac.jpg"
           },
           {
@@ -44776,31 +44776,31 @@
           {
             "id": 13986387,
             "username": "rafarocha",
-            "totalCosts": 318.15,
+            "totalCosts": 242.4,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13986387/medium/72bb87143f2a8d013cddac84c4e2afac.jpg"
-          },
-          {
-            "id": 15165600,
-            "username": "Horberlan",
-            "totalCosts": 71.71,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15165600/medium/5ba9d519f33745fa64879cff2511ace4.png"
-          },
-          {
-            "id": 15431346,
-            "username": "BenedettiLucca",
-            "totalCosts": 38.38,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15431346/medium/d5bf45d5fbceebd23be3d23b2f8c8a1a_default.png"
           },
           {
             "id": 15121067,
             "username": "DiegoCabral",
-            "totalCosts": 20.2,
+            "totalCosts": 13.13,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15121067/medium/7622a32578aec0440b8e01743f23435f.png"
+          },
+          {
+            "id": 15431346,
+            "username": "BenedettiLucca",
+            "totalCosts": 10.1,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15431346/medium/d5bf45d5fbceebd23be3d23b2f8c8a1a_default.png"
+          },
+          {
+            "id": 15165600,
+            "username": "Horberlan",
+            "totalCosts": 6.06,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15165600/medium/5ba9d519f33745fa64879cff2511ace4.png"
           },
           {
             "id": 15422032,
             "username": "Fritzhoy",
-            "totalCosts": 12.12,
+            "totalCosts": 4.04,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15422032/medium/a2df65c9d9309dec39402a0175f3a57f.png"
           },
           {
@@ -44887,7 +44887,7 @@
           {
             "id": 13986387,
             "username": "rafarocha",
-            "totalCosts": 226.24,
+            "totalCosts": 198.97,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13986387/medium/72bb87143f2a8d013cddac84c4e2afac.jpg"
           },
           {
@@ -45164,12 +45164,6 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14875990/medium/6c42a855600f60124d4fbb49962d2226.jpeg"
           },
           {
-            "id": 15435992,
-            "username": "italosantana",
-            "totalCosts": 23.23,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15435992/medium/61afc2a3a2417f17a118fea970030cbf.jpeg"
-          },
-          {
             "id": 13986387,
             "username": "rafarocha",
             "totalCosts": 5.05,
@@ -45393,7 +45387,7 @@
           {
             "id": 15515516,
             "username": "MCreimer",
-            "totalCosts": 745.38,
+            "totalCosts": 699.93,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15515516/medium/cad56d6fa7c03af94b18ead23e791019.png"
           },
           {
@@ -45427,7 +45421,7 @@
           {
             "id": 13986387,
             "username": "rafarocha",
-            "totalCosts": 2021.01,
+            "totalCosts": 2011.92,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13986387/medium/72bb87143f2a8d013cddac84c4e2afac.jpg"
           },
           {
@@ -45544,7 +45538,7 @@
           {
             "id": 13986387,
             "username": "rafarocha",
-            "totalCosts": 194.93,
+            "totalCosts": 183.82,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13986387/medium/72bb87143f2a8d013cddac84c4e2afac.jpg"
           }
         ]
@@ -45671,7 +45665,7 @@
           {
             "id": 15515516,
             "username": "MCreimer",
-            "totalCosts": 1634.18,
+            "totalCosts": 1620.04,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15515516/medium/cad56d6fa7c03af94b18ead23e791019.png"
           },
           {
@@ -45711,7 +45705,7 @@
           {
             "id": 13986387,
             "username": "rafarocha",
-            "totalCosts": 533.28,
+            "totalCosts": 507.02,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13986387/medium/72bb87143f2a8d013cddac84c4e2afac.jpg"
           }
         ]
@@ -45867,7 +45861,7 @@
           {
             "id": 15515516,
             "username": "MCreimer",
-            "totalCosts": 1489.75,
+            "totalCosts": 1437.23,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15515516/medium/cad56d6fa7c03af94b18ead23e791019.png"
           },
           {
@@ -45884,7 +45878,7 @@
           {
             "id": 15515516,
             "username": "MCreimer",
-            "totalCosts": 947.38,
+            "totalCosts": 797.9,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15515516/medium/cad56d6fa7c03af94b18ead23e791019.png"
           },
           {
@@ -46350,7 +46344,7 @@
           {
             "id": 13986387,
             "username": "rafarocha",
-            "totalCosts": 1145.34,
+            "totalCosts": 1144.33,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13986387/medium/72bb87143f2a8d013cddac84c4e2afac.jpg"
           }
         ]
@@ -47098,7 +47092,7 @@
           {
             "id": 13986387,
             "username": "rafarocha",
-            "totalCosts": 3943.04,
+            "totalCosts": 3930.92,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13986387/medium/72bb87143f2a8d013cddac84c4e2afac.jpg"
           },
           {
@@ -48271,32 +48265,32 @@
           {
             "id": 13855929,
             "username": "gabriel.silva",
-            "totalCosts": 506.01,
+            "totalCosts": 417.13,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13855929/medium/51d997bd43d246da34052b5cab702f56.jpg"
-          },
-          {
-            "id": 15114963,
-            "username": "tiagoyonamine.eth",
-            "totalCosts": 203.01,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15114963/medium/b9c830466fee03c6d68be46beacfdd16_default.png"
           },
           {
             "id": 15121067,
             "username": "DiegoCabral",
-            "totalCosts": 185.84,
+            "totalCosts": 119.18,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15121067/medium/7622a32578aec0440b8e01743f23435f.png"
           },
           {
             "id": 15119565,
             "username": "leandroauzier",
-            "totalCosts": 184.83,
+            "totalCosts": 106.05,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15119565/medium/72e054dacc99c0b30a5fe95c85676915_default.png"
           },
           {
             "id": 15114593,
             "username": "RiquinPassaRodo",
-            "totalCosts": 111.1,
+            "totalCosts": 82.82,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15114593/medium/45a10f0be483ccb1556ea7f51d741677.jpeg"
+          },
+          {
+            "id": 15114963,
+            "username": "tiagoyonamine.eth",
+            "totalCosts": 80.8,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15114963/medium/b9c830466fee03c6d68be46beacfdd16_default.png"
           },
           {
             "id": 13986387,
@@ -48897,7 +48891,7 @@
           {
             "id": 13986387,
             "username": "rafarocha",
-            "totalCosts": 560.55,
+            "totalCosts": 556.51,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13986387/medium/72bb87143f2a8d013cddac84c4e2afac.jpg"
           },
           {
@@ -48942,7 +48936,7 @@
           {
             "id": 13986387,
             "username": "rafarocha",
-            "totalCosts": 1883.65,
+            "totalCosts": 1871.53,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13986387/medium/72bb87143f2a8d013cddac84c4e2afac.jpg"
           },
           {
@@ -49039,7 +49033,7 @@
           {
             "id": 13986387,
             "username": "rafarocha",
-            "totalCosts": 636.3,
+            "totalCosts": 595.9,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13986387/medium/72bb87143f2a8d013cddac84c4e2afac.jpg"
           }
         ]
@@ -50052,7 +50046,7 @@
           {
             "id": 14087195,
             "username": "nicklcanada",
-            "totalCosts": 335.32,
+            "totalCosts": 320.17,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14087195/medium/810aea3ef8ba145e88db17a73c95a4b8_default.png"
           }
         ]
@@ -50827,7 +50821,7 @@
           {
             "id": 14087195,
             "username": "nicklcanada",
-            "totalCosts": 994.85,
+            "totalCosts": 981.72,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14087195/medium/810aea3ef8ba145e88db17a73c95a4b8_default.png"
           },
           {
@@ -51588,7 +51582,7 @@
           {
             "id": 14087195,
             "username": "nicklcanada",
-            "totalCosts": 1153.42,
+            "totalCosts": 783.76,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14087195/medium/810aea3ef8ba145e88db17a73c95a4b8_default.png"
           }
         ]
@@ -51644,7 +51638,7 @@
           {
             "id": 14514124,
             "username": "ViktorOn",
-            "totalCosts": 305.02,
+            "totalCosts": 272.7,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14514124/medium/fa0297b182b72fbcf006daba457ef1a3.png"
           },
           {
@@ -51801,7 +51795,7 @@
           {
             "id": 15763855,
             "username": "dovbyshbgd",
-            "totalCosts": 293.91,
+            "totalCosts": 270.68,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15763855/medium/5b59dc54e26664f82eab09a76961eaf7.png"
           },
           {
@@ -53010,14 +53004,8 @@
           {
             "id": 14514124,
             "username": "ViktorOn",
-            "totalCosts": 1045.35,
+            "totalCosts": 691.85,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14514124/medium/fa0297b182b72fbcf006daba457ef1a3.png"
-          },
-          {
-            "id": 15763855,
-            "username": "dovbyshbgd",
-            "totalCosts": 310.07,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15763855/medium/5b59dc54e26664f82eab09a76961eaf7.png"
           },
           {
             "id": 15967233,
@@ -53028,8 +53016,14 @@
           {
             "id": 15111557,
             "username": "m3dynx",
-            "totalCosts": 139.38,
+            "totalCosts": 123.22,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15111557/medium/70dc16e7cea9f20309a29b504cbfd89e.jpeg"
+          },
+          {
+            "id": 15763855,
+            "username": "dovbyshbgd",
+            "totalCosts": 112.11,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15763855/medium/5b59dc54e26664f82eab09a76961eaf7.png"
           },
           {
             "id": 14843078,
@@ -53102,6 +53096,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15199956/medium/74aea56a748b12af52448b2ecf7ca2ac.png"
           },
           {
+            "id": 16350962,
+            "username": "artofey",
+            "totalCosts": 82.82,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16350962/medium/ebd734dd890143bd576143823023f1d2.png"
+          },
+          {
             "id": 15763855,
             "username": "dovbyshbgd",
             "totalCosts": 34.34,
@@ -53147,6 +53147,12 @@
             "username": "AlexanderSh",
             "totalCosts": 97.97,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15566151/medium/2044a8dd6ae21fc4f7d8a8dad0190230_default.png"
+          },
+          {
+            "id": 16345932,
+            "username": "natabum98",
+            "totalCosts": 65.65,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16345932/medium/e4a9338bd7200e954c86418fab5ebc48.png"
           },
           {
             "id": 15469152,
@@ -53202,6 +53208,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15619839/medium/99c14ce4e8161f6b077fa0849ac4c5b0.png"
           },
           {
+            "id": 16350962,
+            "username": "artofey",
+            "totalCosts": 33.33,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16350962/medium/ebd734dd890143bd576143823023f1d2.png"
+          },
+          {
             "id": 15826117,
             "username": "tamanecvl",
             "totalCosts": 20.2,
@@ -53235,6 +53247,12 @@
             "username": "dovbyshbgd",
             "totalCosts": 289.87,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15763855/medium/5b59dc54e26664f82eab09a76961eaf7.png"
+          },
+          {
+            "id": 16350962,
+            "username": "artofey",
+            "totalCosts": 69.69,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16350962/medium/ebd734dd890143bd576143823023f1d2.png"
           }
         ]
       },
@@ -53246,6 +53264,12 @@
             "username": "solomonton",
             "totalCosts": 393.9,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15766053/medium/0906a453f0998a2324711163ac2f587c.png"
+          },
+          {
+            "id": 16350962,
+            "username": "artofey",
+            "totalCosts": 106.05,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16350962/medium/ebd734dd890143bd576143823023f1d2.png"
           },
           {
             "id": 15763855,
@@ -53269,6 +53293,12 @@
             "username": "dovbyshbgd",
             "totalCosts": 263.61,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15763855/medium/5b59dc54e26664f82eab09a76961eaf7.png"
+          },
+          {
+            "id": 16350962,
+            "username": "artofey",
+            "totalCosts": 50.5,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16350962/medium/ebd734dd890143bd576143823023f1d2.png"
           },
           {
             "id": 15751909,
@@ -53341,7 +53371,7 @@
           {
             "id": 15763855,
             "username": "dovbyshbgd",
-            "totalCosts": 337.34,
+            "totalCosts": 320.17,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15763855/medium/5b59dc54e26664f82eab09a76961eaf7.png"
           },
           {
@@ -53408,16 +53438,16 @@
         "fileId": "7320",
         "contributors": [
           {
-            "id": 15967233,
-            "username": "jasminesprout",
-            "totalCosts": 492.88,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15967233/medium/b3515c2cf957fd413921b8fc9ccd6960.jpg"
-          },
-          {
             "id": 15619839,
             "username": "mediaquest",
             "totalCosts": 474.7,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15619839/medium/99c14ce4e8161f6b077fa0849ac4c5b0.png"
+          },
+          {
+            "id": 15967233,
+            "username": "jasminesprout",
+            "totalCosts": 471.67,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15967233/medium/b3515c2cf957fd413921b8fc9ccd6960.jpg"
           },
           {
             "id": 15763855,
@@ -53650,8 +53680,14 @@
           {
             "id": 15763855,
             "username": "dovbyshbgd",
-            "totalCosts": 2629.03,
+            "totalCosts": 2636.1,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15763855/medium/5b59dc54e26664f82eab09a76961eaf7.png"
+          },
+          {
+            "id": 16350962,
+            "username": "artofey",
+            "totalCosts": 102.01,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16350962/medium/ebd734dd890143bd576143823023f1d2.png"
           },
           {
             "id": 15619839,
@@ -53709,6 +53745,12 @@
             "username": "41rjordan",
             "totalCosts": 831.23,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15937895/medium/8143dc058a68dfcaae5de7dd8ba963bf.png"
+          },
+          {
+            "id": 16350962,
+            "username": "artofey",
+            "totalCosts": 102.01,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16350962/medium/ebd734dd890143bd576143823023f1d2.png"
           },
           {
             "id": 15966943,
@@ -53856,7 +53898,7 @@
           {
             "id": 15763855,
             "username": "dovbyshbgd",
-            "totalCosts": 514.09,
+            "totalCosts": 510.05,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15763855/medium/5b59dc54e26664f82eab09a76961eaf7.png"
           },
           {
@@ -53919,7 +53961,7 @@
           {
             "id": 15947515,
             "username": "blockson",
-            "totalCosts": 2021.01,
+            "totalCosts": 2008.89,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15947515/medium/52b0b3490fcf6940d9027ef2f32a424b.jpeg"
           },
           {
@@ -54292,7 +54334,7 @@
           {
             "id": 14957177,
             "username": "joeurassa",
-            "totalCosts": 406.02,
+            "totalCosts": 358.55,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14957177/medium/8323f79a3f73f2e723da72db082c0c22.jpg"
           }
         ]
@@ -54465,7 +54507,7 @@
           {
             "id": 14996861,
             "username": "kaanmetu",
-            "totalCosts": 310.07,
+            "totalCosts": 245.43,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14996861/medium/eb0c9870f3f6317e6bfdc4a838e4fd5f.jpg"
           },
           {
@@ -54483,7 +54525,7 @@
           {
             "id": 15396134,
             "username": "FDNTL",
-            "totalCosts": 13.13,
+            "totalCosts": 3.03,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15396134/medium/12f9c36dce596d73529770adb87db81e.png"
           }
         ]
@@ -54794,14 +54836,8 @@
           {
             "id": 14996861,
             "username": "kaanmetu",
-            "totalCosts": 312.09,
+            "totalCosts": 199.98,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14996861/medium/eb0c9870f3f6317e6bfdc4a838e4fd5f.jpg"
-          },
-          {
-            "id": 15966191,
-            "username": "0xokan",
-            "totalCosts": 76.76,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15966191/medium/a5d1d36d7404974d591cbcf59f089df9.jpg"
           },
           {
             "id": 15082707,
@@ -54810,22 +54846,22 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15082707/medium/1422c6237f35e4d0e31e08554a233472.jpeg"
           },
           {
-            "id": 15964741,
-            "username": "0xberil",
-            "totalCosts": 57.57,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15964741/medium/f8fb148047395cf62c924755cb300f17_default.png"
-          },
-          {
-            "id": 15076881,
-            "username": "yavuzarslan.atakan",
-            "totalCosts": 20.2,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15076881/medium/10e51ff77863c9559147fcb0546c119d.jpeg"
-          },
-          {
             "id": 14690454,
             "username": "sekoman01",
             "totalCosts": 15.15,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14690454/medium/595a121d4a7427f7a21b75b32017c247.jpg"
+          },
+          {
+            "id": 15076881,
+            "username": "yavuzarslan.atakan",
+            "totalCosts": 7.07,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15076881/medium/10e51ff77863c9559147fcb0546c119d.jpeg"
+          },
+          {
+            "id": 15966191,
+            "username": "0xokan",
+            "totalCosts": 4.04,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15966191/medium/a5d1d36d7404974d591cbcf59f089df9.jpg"
           }
         ]
       },
@@ -54876,7 +54912,7 @@
           {
             "id": 15908487,
             "username": "insidetrader",
-            "totalCosts": 326.23,
+            "totalCosts": 298.96,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15908487/medium/2dad4c49ee42d9df9633332d432e708e.jpg"
           },
           {
@@ -54884,12 +54920,6 @@
             "username": "zer0knowledge",
             "totalCosts": 29.29,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14966275/medium/dead80d7c0e54990ad4fee448e0aacaa.jpeg"
-          },
-          {
-            "id": 14996861,
-            "username": "kaanmetu",
-            "totalCosts": 0,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14996861/medium/eb0c9870f3f6317e6bfdc4a838e4fd5f.jpg"
           }
         ]
       },
@@ -55134,7 +55164,7 @@
           {
             "id": 15082707,
             "username": "selcuk45",
-            "totalCosts": 108.07,
+            "totalCosts": 84.84,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15082707/medium/1422c6237f35e4d0e31e08554a233472.jpeg"
           },
           {
@@ -56752,7 +56782,7 @@
           {
             "id": 15082707,
             "username": "selcuk45",
-            "totalCosts": 894.86,
+            "totalCosts": 881.73,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15082707/medium/1422c6237f35e4d0e31e08554a233472.jpeg"
           },
           {
@@ -56775,7 +56805,7 @@
           {
             "id": 15966271,
             "username": "zeydrm",
-            "totalCosts": 676.7,
+            "totalCosts": 664.58,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15966271/medium/bbeac0fbc387f8f821f861bc79c625fd.png"
           },
           {
@@ -58276,19 +58306,19 @@
           {
             "id": 14996861,
             "username": "kaanmetu",
-            "totalCosts": 893.85,
+            "totalCosts": 556.51,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14996861/medium/eb0c9870f3f6317e6bfdc4a838e4fd5f.jpg"
           },
           {
             "id": 15082707,
             "username": "selcuk45",
-            "totalCosts": 346.43,
+            "totalCosts": 284.82,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15082707/medium/1422c6237f35e4d0e31e08554a233472.jpeg"
           },
           {
             "id": 15076881,
             "username": "yavuzarslan.atakan",
-            "totalCosts": 83.83,
+            "totalCosts": 66.66,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15076881/medium/10e51ff77863c9559147fcb0546c119d.jpeg"
           },
           {
@@ -58610,7 +58640,7 @@
           {
             "id": 15396134,
             "username": "FDNTL",
-            "totalCosts": 416.12,
+            "totalCosts": 394.91,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15396134/medium/12f9c36dce596d73529770adb87db81e.png"
           },
           {
@@ -58756,7 +58786,7 @@
           {
             "id": 14996861,
             "username": "kaanmetu",
-            "totalCosts": 1688.72,
+            "totalCosts": 1674.58,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14996861/medium/eb0c9870f3f6317e6bfdc4a838e4fd5f.jpg"
           },
           {
@@ -58802,7 +58832,7 @@
           {
             "id": 15966669,
             "username": "0xSahbaz",
-            "totalCosts": 155.54,
+            "totalCosts": 129.28,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15966669/medium/e56294c61e4c32a43c8735040ea67364_default.png"
           }
         ]
@@ -59196,7 +59226,7 @@
           {
             "id": 15963921,
             "username": "bicebaris",
-            "totalCosts": 781.74,
+            "totalCosts": 777.7,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15963921/medium/5ed57dad6d6d747e47d9378a8006ede1.jpg"
           }
         ]
@@ -59241,7 +59271,7 @@
           {
             "id": 15963921,
             "username": "bicebaris",
-            "totalCosts": 1339.26,
+            "totalCosts": 1327.14,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15963921/medium/5ed57dad6d6d747e47d9378a8006ede1.jpg"
           },
           {
@@ -59478,7 +59508,7 @@
           {
             "id": 15964741,
             "username": "0xberil",
-            "totalCosts": 636.3,
+            "totalCosts": 595.9,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15964741/medium/f8fb148047395cf62c924755cb300f17_default.png"
           }
         ]
@@ -59644,7 +59674,7 @@
           {
             "id": 15082707,
             "username": "selcuk45",
-            "totalCosts": 740.33,
+            "totalCosts": 694.88,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15082707/medium/1422c6237f35e4d0e31e08554a233472.jpeg"
           },
           {
@@ -59678,7 +59708,7 @@
           {
             "id": 15966271,
             "username": "zeydrm",
-            "totalCosts": 1721.04,
+            "totalCosts": 1711.95,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15966271/medium/bbeac0fbc387f8f821f861bc79c625fd.png"
           },
           {
@@ -59724,7 +59754,7 @@
           {
             "id": 15966191,
             "username": "0xokan",
-            "totalCosts": 385.82,
+            "totalCosts": 374.71,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15966191/medium/a5d1d36d7404974d591cbcf59f089df9.jpg"
           },
           {
@@ -59856,13 +59886,13 @@
           {
             "id": 15966007,
             "username": "0xselimc",
-            "totalCosts": 923.14,
+            "totalCosts": 904.96,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15966007/medium/6008a158d741536a305a81bd295ab407.jpeg"
           },
           {
             "id": 14131653,
             "username": "Berke37",
-            "totalCosts": 617.11,
+            "totalCosts": 598.93,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14131653/medium/ff295534ec23d3428ba06f99e0fd50bb.jpg"
           },
           {
@@ -59874,7 +59904,7 @@
           {
             "id": 14996861,
             "username": "kaanmetu",
-            "totalCosts": 368.65,
+            "totalCosts": 249.47,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14996861/medium/eb0c9870f3f6317e6bfdc4a838e4fd5f.jpg"
           },
           {
@@ -59891,25 +59921,25 @@
           {
             "id": 14131653,
             "username": "Berke37",
-            "totalCosts": 922.13,
+            "totalCosts": 772.65,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14131653/medium/ff295534ec23d3428ba06f99e0fd50bb.jpg"
           },
           {
             "id": 15964741,
             "username": "0xberil",
-            "totalCosts": 413.09,
+            "totalCosts": 313.1,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15964741/medium/f8fb148047395cf62c924755cb300f17_default.png"
           },
           {
             "id": 15966271,
             "username": "zeydrm",
-            "totalCosts": 286.84,
+            "totalCosts": 274.72,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15966271/medium/bbeac0fbc387f8f821f861bc79c625fd.png"
           },
           {
             "id": 15966289,
             "username": "cinaryasemin",
-            "totalCosts": 128.27,
+            "totalCosts": 90.9,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15966289/medium/4db7c2566069e455f22d0027dcd3bb06_default.png"
           },
           {
@@ -59990,7 +60020,7 @@
           {
             "id": 15964741,
             "username": "0xberil",
-            "totalCosts": 372.69,
+            "totalCosts": 356.53,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15964741/medium/f8fb148047395cf62c924755cb300f17_default.png"
           },
           {
@@ -60110,7 +60140,7 @@
           {
             "id": 15082707,
             "username": "selcuk45",
-            "totalCosts": 846.38,
+            "totalCosts": 845.37,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15082707/medium/1422c6237f35e4d0e31e08554a233472.jpeg"
           },
           {
@@ -61068,13 +61098,13 @@
           {
             "id": 15138990,
             "username": "polinashorokhova",
-            "totalCosts": 374.71,
+            "totalCosts": 337.34,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15138990/medium/5f669759466df426ddbcbeade35e684c_default.png"
           },
           {
             "id": 14686790,
             "username": "Horus267",
-            "totalCosts": 130.29,
+            "totalCosts": 115.14,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14686790/medium/9695742f9165e3cf2585e31e74898270.png"
           },
           {
@@ -61090,22 +61120,16 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15141064/medium/337f7507816e470c381c870e8ef54acb_default.png"
           },
           {
-            "id": 14102529,
-            "username": "Nezila",
-            "totalCosts": 20.2,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14102529/medium/b68a69263d9c77b9078ffee899b05c02_default.png"
-          },
-          {
-            "id": 15585897,
-            "username": "rich_man",
-            "totalCosts": 17.17,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15585897/medium/fd7b02c0fe40afe5bb82dc812d16cf30_default.png"
-          },
-          {
             "id": 15473664,
             "username": "hotr1pak",
             "totalCosts": 15.15,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15473664/medium/3a3252bf9769d99be4ca6d1b94dbb91f.jpg"
+          },
+          {
+            "id": 14102529,
+            "username": "Nezila",
+            "totalCosts": 4.04,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14102529/medium/b68a69263d9c77b9078ffee899b05c02_default.png"
           }
         ]
       },
@@ -61231,13 +61255,13 @@
           {
             "id": 16344220,
             "username": "dmitriy.potikha.technolex",
-            "totalCosts": 305.02,
+            "totalCosts": 288.86,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16344220/medium/7a61df780dba3333cfd56efb01e4fa01.png"
           },
           {
             "id": 15824933,
             "username": "Daride",
-            "totalCosts": 293.91,
+            "totalCosts": 270.68,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15824933/medium/9537e45abd1b689484969991849572a9_default.png"
           },
           {
@@ -61680,22 +61704,16 @@
         "fileId": "6187",
         "contributors": [
           {
-            "id": 15143910,
-            "username": "vkulpinova6",
-            "totalCosts": 569.64,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15143910/medium/c51e6458948ee8d9c7deb546cbb114a6_default.png"
-          },
-          {
             "id": 15138988,
             "username": "zhenya_gidicheva_2000",
-            "totalCosts": 492.88,
+            "totalCosts": 383.8,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15138988/medium/4c6e8dff2e22e73eca01b7979759bc13_default.png"
           },
           {
-            "id": 15824933,
-            "username": "Daride",
-            "totalCosts": 280.78,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15824933/medium/9537e45abd1b689484969991849572a9_default.png"
+            "id": 15143910,
+            "username": "vkulpinova6",
+            "totalCosts": 364.61,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15143910/medium/c51e6458948ee8d9c7deb546cbb114a6_default.png"
           },
           {
             "id": 15300418,
@@ -61704,9 +61722,15 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15300418/medium/28c0af8820123db5d3a0cbf7bc72e713.jpeg"
           },
           {
+            "id": 15824933,
+            "username": "Daride",
+            "totalCosts": 82.82,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15824933/medium/9537e45abd1b689484969991849572a9_default.png"
+          },
+          {
             "id": 15113573,
             "username": "mary.seleznova",
-            "totalCosts": 78.78,
+            "totalCosts": 23.23,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15113573/medium/5e1b0034eb90064f3b313ddc6a977464.png"
           },
           {
@@ -61764,7 +61788,7 @@
           {
             "id": 15824933,
             "username": "Daride",
-            "totalCosts": 337.34,
+            "totalCosts": 320.17,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15824933/medium/9537e45abd1b689484969991849572a9_default.png"
           },
           {
@@ -62169,7 +62193,7 @@
           {
             "id": 14686790,
             "username": "Horus267",
-            "totalCosts": 992.83,
+            "totalCosts": 971.62,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14686790/medium/9695742f9165e3cf2585e31e74898270.png"
           },
           {
@@ -62240,7 +62264,7 @@
           {
             "id": 16325182,
             "username": "N1k",
-            "totalCosts": 110.09,
+            "totalCosts": 102.01,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16325182/medium/fe6dbf868fc1818b6bc64e2b0cf4367a_default.png"
           },
           {
@@ -62290,12 +62314,6 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317346/medium/50c63b1bded5a56c395752d0ce7ef343_default.png"
           },
           {
-            "id": 16317232,
-            "username": "lethanhtung",
-            "totalCosts": 62.62,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317232/medium/f081077da20f63484ac45eed21d9fab5.jpeg"
-          },
-          {
             "id": 16341870,
             "username": "siteiujuly17",
             "totalCosts": 59.59,
@@ -62312,6 +62330,12 @@
             "username": "RotRot512",
             "totalCosts": 47.47,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16340098/medium/f9a6aab90730b98f2be5cac13b083333.jpg"
+          },
+          {
+            "id": 16317232,
+            "username": "lethanhtung",
+            "totalCosts": 44.44,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317232/medium/f081077da20f63484ac45eed21d9fab5.jpeg"
           },
           {
             "id": 16317214,
@@ -62522,6 +62546,127 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14943437/medium/03d7b6c2f65c04c60b008a38a221cf5f.png"
           }
         ]
+      },
+      {
+        "fileId": "7919",
+        "contributors": [
+          {
+            "id": 16276914,
+            "username": "airwand",
+            "totalCosts": 863.55,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16276914/medium/7820e6b5685a42af4ea9d03b9e461a0b_default.png"
+          },
+          {
+            "id": 16037384,
+            "username": "khanhduong6b",
+            "totalCosts": 457.53,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16037384/medium/5d3a876a2e2f9b44761a013a2a01a622.jpeg"
+          },
+          {
+            "id": 16317218,
+            "username": "thaisonmcmv",
+            "totalCosts": 98.98,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317218/medium/25c81d0470a5a696c7b0fbdd8e767050.jpeg"
+          },
+          {
+            "id": 16317312,
+            "username": "thangchoduong1",
+            "totalCosts": 65.65,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317312/medium/fa770df8d8c7500ec749fbe0905558ef.png"
+          }
+        ]
+      },
+      {
+        "fileId": "6518",
+        "contributors": [
+          {
+            "id": 16276914,
+            "username": "airwand",
+            "totalCosts": 399.96,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16276914/medium/7820e6b5685a42af4ea9d03b9e461a0b_default.png"
+          },
+          {
+            "id": 14921757,
+            "username": "trungkien.nt92",
+            "totalCosts": 255.53,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14921757/medium/80e6fd8d3f0be1e5feab67dccc614d82.jpg"
+          },
+          {
+            "id": 15300210,
+            "username": "Kaigagi",
+            "totalCosts": 143.42,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15300210/medium/0b60285c916aa56253fa74ee206edf76.png"
+          },
+          {
+            "id": 15443874,
+            "username": "dtnwen",
+            "totalCosts": 27.27,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15443874/medium/58ac6c813779ace2fa01bc06f66a0e64.png"
+          }
+        ]
+      },
+      {
+        "fileId": "6524",
+        "contributors": [
+          {
+            "id": 14921757,
+            "username": "trungkien.nt92",
+            "totalCosts": 497.93,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14921757/medium/80e6fd8d3f0be1e5feab67dccc614d82.jpg"
+          },
+          {
+            "id": 16276914,
+            "username": "airwand",
+            "totalCosts": 460.56,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16276914/medium/7820e6b5685a42af4ea9d03b9e461a0b_default.png"
+          }
+        ]
+      },
+      {
+        "fileId": "6526",
+        "contributors": [
+          {
+            "id": 16276914,
+            "username": "airwand",
+            "totalCosts": 1880.62,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16276914/medium/7820e6b5685a42af4ea9d03b9e461a0b_default.png"
+          },
+          {
+            "id": 14921757,
+            "username": "trungkien.nt92",
+            "totalCosts": 190.89,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14921757/medium/80e6fd8d3f0be1e5feab67dccc614d82.jpg"
+          },
+          {
+            "id": 15993695,
+            "username": "imsohuy",
+            "totalCosts": 32.32,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15993695/medium/535448436d72e283ccfe8c100b189c41.jpeg"
+          },
+          {
+            "id": 16317302,
+            "username": "nguyethang253",
+            "totalCosts": 4.04,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317302/medium/22904753d1ebf2224daca64eda160e5a.png"
+          }
+        ]
+      },
+      {
+        "fileId": "7591",
+        "contributors": [
+          {
+            "id": 16276914,
+            "username": "airwand",
+            "totalCosts": 2027.07,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16276914/medium/7820e6b5685a42af4ea9d03b9e461a0b_default.png"
+          },
+          {
+            "id": 16317300,
+            "username": "congd",
+            "totalCosts": 84.84,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317300/medium/1dff895a023f32584eeb4d593b47e246.png"
+          }
+        ]
       }
     ]
   },
@@ -62605,7 +62750,7 @@
           {
             "id": 15314206,
             "username": "cuijia",
-            "totalCosts": 1095.85,
+            "totalCosts": 1074.64,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15314206/medium/97a1d7142aa4eba6ed8a0212ddada4a8.jpeg"
           },
           {
@@ -62651,7 +62796,7 @@
           {
             "id": 14829178,
             "username": "EffectChen",
-            "totalCosts": 339.36,
+            "totalCosts": 324.21,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14829178/medium/39ff70d1cbcdbad8e9056cb4aa4ee789.jpg"
           },
           {
@@ -62673,28 +62818,10 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15558917/medium/3140ea0253adc0e3f3c81b050f3b30b3.png"
           },
           {
-            "id": 15242372,
-            "username": "billwang",
-            "totalCosts": 23.23,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15242372/medium/23bf740e9d096ee0b3de7b9f5528c8c9.JPG"
-          },
-          {
             "id": 15809315,
             "username": "dtsukokotoi809",
             "totalCosts": 19.19,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15809315/medium/eb2e497890b6ff1c4bfc506136a6cfcc.png"
-          },
-          {
-            "id": 15424846,
-            "username": "Josevff03",
-            "totalCosts": 16.16,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15424846/medium/b0e1090bb446f82b25732b4278b09573_default.png"
-          },
-          {
-            "id": 15314206,
-            "username": "cuijia",
-            "totalCosts": 14.14,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15314206/medium/97a1d7142aa4eba6ed8a0212ddada4a8.jpeg"
           },
           {
             "id": 16013441,
@@ -62709,10 +62836,22 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15193608/medium/c3b5342b0fef9f5f51eff5b0c2b93c70.jpg"
           },
           {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 8.08,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
+          },
+          {
             "id": 15073799,
             "username": "GoForceX",
             "totalCosts": 7.07,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15073799/medium/a33ad8c1e01cf31890babace80908193.png"
+          },
+          {
+            "id": 15314206,
+            "username": "cuijia",
+            "totalCosts": 4.04,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15314206/medium/97a1d7142aa4eba6ed8a0212ddada4a8.jpeg"
           }
         ]
       },
@@ -62783,6 +62922,12 @@
             "username": "tonge.eth",
             "totalCosts": 30.3,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15150490/medium/889adda1c2e9c3fc07ab00660ad474dd_default.png"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 27.27,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15276928,
@@ -62859,6 +63004,18 @@
             "username": "yuping",
             "totalCosts": 45.45,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15193608/medium/c3b5342b0fef9f5f51eff5b0c2b93c70.jpg"
+          },
+          {
+            "id": 15381970,
+            "username": "tzbkk",
+            "totalCosts": 25.25,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15381970/medium/b43b331e365346453668db293656f269.jpeg"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 11.11,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15314206,
@@ -63140,46 +63297,28 @@
         "fileId": "6388",
         "contributors": [
           {
-            "id": 15193608,
-            "username": "yuping",
-            "totalCosts": 339.36,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15193608/medium/c3b5342b0fef9f5f51eff5b0c2b93c70.jpg"
-          },
-          {
             "id": 15086195,
             "username": "saintchen",
-            "totalCosts": 256.54,
+            "totalCosts": 238.36,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15086195/medium/cb67cfa9d14a4cb5d9cb8c9ad9fa18b9.jpg"
           },
           {
-            "id": 13830805,
-            "username": "kecrily",
-            "totalCosts": 127.26,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13830805/medium/d5b39b24969778b502182557fb61c4eb.jpg"
-          },
-          {
-            "id": 15911295,
-            "username": "Xin_Cheng",
-            "totalCosts": 86.86,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15911295/medium/8aae130b64f46cd1ea960d085950a560_default.png"
+            "id": 15193608,
+            "username": "yuping",
+            "totalCosts": 217.15,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15193608/medium/c3b5342b0fef9f5f51eff5b0c2b93c70.jpg"
           },
           {
             "id": 15236832,
             "username": "Andypsl8",
-            "totalCosts": 75.75,
+            "totalCosts": 85.85,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
-            "id": 15914021,
-            "username": "Ddoulia",
-            "totalCosts": 14.14,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15914021/medium/13855b7697a0cde0c03d933febee047d_default.png"
-          },
-          {
-            "id": 15197312,
-            "username": "Ariara",
-            "totalCosts": 14.14,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15197312/medium/7e720403b1cf3166b1e4e1bffc62f604.png"
+            "id": 13830805,
+            "username": "kecrily",
+            "totalCosts": 20.2,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13830805/medium/d5b39b24969778b502182557fb61c4eb.jpg"
           },
           {
             "id": 16016629,
@@ -63188,16 +63327,16 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16016629/medium/aaff09e3b204facc4da78652554ec80b.png"
           },
           {
-            "id": 15073799,
-            "username": "GoForceX",
-            "totalCosts": 12.12,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15073799/medium/a33ad8c1e01cf31890babace80908193.png"
-          },
-          {
             "id": 16201976,
             "username": "Tjmin",
             "totalCosts": 5.05,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16201976/medium/e4c92be84c0c0b1f08c76ad801087656_default.png"
+          },
+          {
+            "id": 15073799,
+            "username": "GoForceX",
+            "totalCosts": 4.04,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15073799/medium/a33ad8c1e01cf31890babace80908193.png"
           }
         ]
       },
@@ -63270,9 +63409,15 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15073799/medium/a33ad8c1e01cf31890babace80908193.png"
           },
           {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 6.06,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
+          },
+          {
             "id": 15145320,
             "username": "Unili",
-            "totalCosts": 3.03,
+            "totalCosts": 2.02,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15145320/medium/c0fc5adab930aa5467bcf04fcdcbf39f.jpg"
           },
           {
@@ -63456,6 +63601,12 @@
             "username": "Fengfeng0157",
             "totalCosts": 131.3,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15156816/medium/8ce4621e9192a27e8a0ec7e37d9e316e_default.png"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 96.96,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15086703,
@@ -63701,12 +63852,6 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15988145/medium/f630d0d88a1125dbfcb7a0709531db9e_default.png"
           },
           {
-            "id": 14829178,
-            "username": "EffectChen",
-            "totalCosts": 23.23,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14829178/medium/39ff70d1cbcdbad8e9056cb4aa4ee789.jpg"
-          },
-          {
             "id": 15657887,
             "username": "DreamInMorning",
             "totalCosts": 19.19,
@@ -63723,6 +63868,12 @@
             "username": "Hu-Wentao",
             "totalCosts": 10.1,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15722739/medium/316f09f87baa8a22fbb7fc449db7ed1e.png"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 8.08,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 14591708,
@@ -63995,6 +64146,12 @@
             "username": "liu-yuan",
             "totalCosts": 16.16,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15535025/medium/03f9f00ea9a0897fc885fe9cc74a8536.png"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 5.05,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           }
         ]
       },
@@ -64092,7 +64249,7 @@
           {
             "id": 15657887,
             "username": "DreamInMorning",
-            "totalCosts": 745.38,
+            "totalCosts": 699.93,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15657887/medium/9212535a0a5fb7ec22a9f8a8329dac3b.jpg"
           },
           {
@@ -64269,7 +64426,7 @@
           {
             "id": 15871701,
             "username": "maxwellcotto",
-            "totalCosts": 194.93,
+            "totalCosts": 183.82,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15871701/medium/211aaa985795803b88e9fa89069ed517.png"
           }
         ]
@@ -64288,6 +64445,12 @@
             "username": "Jimmy666",
             "totalCosts": 21.21,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15684231/medium/bb90eab4b3972397ca4e5efffe390855_default.png"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 17.17,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15680993,
@@ -64395,6 +64558,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14553216/medium/ff7357a18e524ec40facc964cb2d15bc.jpeg"
           },
           {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 26.26,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
+          },
+          {
             "id": 15643829,
             "username": "Microapples",
             "totalCosts": 26.26,
@@ -64432,7 +64601,7 @@
           {
             "id": 15350892,
             "username": "xiaomage",
-            "totalCosts": 1107.97,
+            "totalCosts": 1093.83,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15350892/medium/12f685a4bf7fab1e51d80ba3b7b0e55d_default.png"
           },
           {
@@ -64452,6 +64621,12 @@
             "username": "K.yuan",
             "totalCosts": 92.92,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15325888/medium/815772d9e3b38dca80896d12a44667fe_default.png"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 12.12,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           }
         ]
       },
@@ -64489,6 +64664,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14870630/medium/b36889c699124e54c6b781e3ba477726.png"
           },
           {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 9.09,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
+          },
+          {
             "id": 15073799,
             "username": "GoForceX",
             "totalCosts": 7.07,
@@ -64508,7 +64689,7 @@
           {
             "id": 15314206,
             "username": "cuijia",
-            "totalCosts": 300.98,
+            "totalCosts": 274.72,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15314206/medium/97a1d7142aa4eba6ed8a0212ddada4a8.jpeg"
           },
           {
@@ -64528,6 +64709,12 @@
             "username": "xiaomage",
             "totalCosts": 28.28,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15350892/medium/12f685a4bf7fab1e51d80ba3b7b0e55d_default.png"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 6.06,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           }
         ]
       },
@@ -64557,6 +64744,12 @@
             "username": "wuweibuzhiwang",
             "totalCosts": 35.35,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15065551/medium/38e0f7a4324e59640cd5e293f707311a.png"
+          },
+          {
+            "id": 15381970,
+            "username": "tzbkk",
+            "totalCosts": 27.27,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15381970/medium/b43b331e365346453668db293656f269.jpeg"
           },
           {
             "id": 14829178,
@@ -64610,6 +64803,12 @@
             "username": "rustle",
             "totalCosts": 119.18,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14748480/medium/fb9b53571ebea873ce17257508a8c128.jpg"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 15.15,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15906651,
@@ -64746,16 +64945,16 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15657887/medium/9212535a0a5fb7ec22a9f8a8329dac3b.jpg"
           },
           {
-            "id": 15314206,
-            "username": "cuijia",
-            "totalCosts": 542.37,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15314206/medium/97a1d7142aa4eba6ed8a0212ddada4a8.jpeg"
-          },
-          {
             "id": 15350892,
             "username": "xiaomage",
-            "totalCosts": 490.86,
+            "totalCosts": 472.68,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15350892/medium/12f685a4bf7fab1e51d80ba3b7b0e55d_default.png"
+          },
+          {
+            "id": 15314206,
+            "username": "cuijia",
+            "totalCosts": 400.97,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15314206/medium/97a1d7142aa4eba6ed8a0212ddada4a8.jpeg"
           },
           {
             "id": 15073799,
@@ -64819,7 +65018,7 @@
           {
             "id": 15314206,
             "username": "cuijia",
-            "totalCosts": 970.61,
+            "totalCosts": 821.13,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15314206/medium/97a1d7142aa4eba6ed8a0212ddada4a8.jpeg"
           },
           {
@@ -65028,6 +65227,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15112343/medium/87c5413d17c005198e47cecbef5fcbef.jpeg"
           },
           {
+            "id": 15381970,
+            "username": "tzbkk",
+            "totalCosts": 6.06,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15381970/medium/b43b331e365346453668db293656f269.jpeg"
+          },
+          {
             "id": 15911295,
             "username": "Xin_Cheng",
             "totalCosts": 6.06,
@@ -65106,7 +65311,7 @@
           {
             "id": 15236832,
             "username": "Andypsl8",
-            "totalCosts": 5.05,
+            "totalCosts": 9.09,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
@@ -65414,6 +65619,12 @@
             "username": "ShawnZeng",
             "totalCosts": 4.04,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15272926/medium/f024abfd326c405a000100d965139729_default.png"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 3.03,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           }
         ]
       },
@@ -65590,6 +65801,18 @@
             "username": "Xin_Cheng",
             "totalCosts": 62.62,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15911295/medium/8aae130b64f46cd1ea960d085950a560_default.png"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 10.1,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
+          },
+          {
+            "id": 15381970,
+            "username": "tzbkk",
+            "totalCosts": 1.01,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15381970/medium/b43b331e365346453668db293656f269.jpeg"
           }
         ]
       },
@@ -65680,16 +65903,16 @@
         "fileId": "2776",
         "contributors": [
           {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 138.37,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
+          },
+          {
             "id": 15779979,
             "username": "qiliuk",
             "totalCosts": 115.14,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15779979/medium/fa50e9730b7826a9077a8f3b0f1fa1d9_default.png"
-          },
-          {
-            "id": 15236832,
-            "username": "Andypsl8",
-            "totalCosts": 110.09,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15314206,
@@ -65799,6 +66022,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15314206/medium/97a1d7142aa4eba6ed8a0212ddada4a8.jpeg"
           },
           {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 79.79,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
+          },
+          {
             "id": 15101527,
             "username": "alexanderhawl",
             "totalCosts": 63.63,
@@ -65815,12 +66044,6 @@
             "username": "sunbeam.",
             "totalCosts": 41.41,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15097185/medium/ef91246c2b7ee8bc15d5b2834ce6fc70.jpg"
-          },
-          {
-            "id": 15236832,
-            "username": "Andypsl8",
-            "totalCosts": 38.38,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15911295,
@@ -65884,7 +66107,7 @@
           {
             "id": 15236832,
             "username": "Andypsl8",
-            "totalCosts": 373.7,
+            "totalCosts": 357.54,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
@@ -66038,6 +66261,12 @@
             "username": "rielychen",
             "totalCosts": 56.56,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14553216/medium/ff7357a18e524ec40facc964cb2d15bc.jpeg"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 13.13,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           }
         ]
       },
@@ -66150,6 +66379,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15112343/medium/87c5413d17c005198e47cecbef5fcbef.jpeg"
           },
           {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 19.19,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
+          },
+          {
             "id": 15779979,
             "username": "qiliuk",
             "totalCosts": 8.08,
@@ -66194,6 +66429,12 @@
             "username": "Xin_Cheng",
             "totalCosts": 6.06,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15911295/medium/8aae130b64f46cd1ea960d085950a560_default.png"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 4.04,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           }
         ]
       },
@@ -66311,6 +66552,12 @@
             "username": "fivenicerice",
             "totalCosts": 14.14,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14712154/medium/3730e404a7ef0a2e5f76426f84376d53.jpg"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 11.11,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15314206,
@@ -66434,6 +66681,12 @@
             "username": "tzbkk",
             "totalCosts": 88.88,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15381970/medium/b43b331e365346453668db293656f269.jpeg"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 42.42,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15531743,
@@ -66736,7 +66989,7 @@
           {
             "id": 14771472,
             "username": "Eason_Wang",
-            "totalCosts": 830.22,
+            "totalCosts": 817.09,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14771472/medium/af427b7ae2024d379e57f6324179e0ad.jpeg"
           },
           {
@@ -66777,7 +67030,7 @@
           {
             "id": 15314206,
             "username": "cuijia",
-            "totalCosts": 531.26,
+            "totalCosts": 519.14,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15314206/medium/97a1d7142aa4eba6ed8a0212ddada4a8.jpeg"
           },
           {
@@ -66864,6 +67117,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16105472/medium/e3c4ba4f35bd3c3e5bc13053976cd282.png"
           },
           {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 14.14,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
+          },
+          {
             "id": 15914021,
             "username": "Ddoulia",
             "totalCosts": 14.14,
@@ -66909,6 +67168,12 @@
             "username": "Xin_Cheng",
             "totalCosts": 22.22,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15911295/medium/8aae130b64f46cd1ea960d085950a560_default.png"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 9.09,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15126233,
@@ -67009,6 +67274,12 @@
             "username": "billwang",
             "totalCosts": 30.3,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15242372/medium/23bf740e9d096ee0b3de7b9f5528c8c9.JPG"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 12.12,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15911295,
@@ -67196,6 +67467,12 @@
             "username": "Vanfer",
             "totalCosts": 56.56,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15112343/medium/87c5413d17c005198e47cecbef5fcbef.jpeg"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 40.4,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15425018,
@@ -69265,6 +69542,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14792200/medium/651095028597144eac73720a0c320b3d.jpeg"
           },
           {
+            "id": 15498336,
+            "username": "aquariuslt",
+            "totalCosts": 232.3,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15498336/medium/33c5b16783e2cf00e5d32ae940e52c2d.jpeg"
+          },
+          {
             "id": 14125747,
             "username": "misakajwk",
             "totalCosts": 27.27,
@@ -69304,6 +69587,12 @@
             "username": "EffectChen",
             "totalCosts": 20.2,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14829178/medium/39ff70d1cbcdbad8e9056cb4aa4ee789.jpg"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 15.15,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 12523167,
@@ -69356,6 +69645,12 @@
             "username": "rustle",
             "totalCosts": 37.37,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14748480/medium/fb9b53571ebea873ce17257508a8c128.jpg"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 14.14,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15065551,
@@ -69467,6 +69762,12 @@
             "username": "Junel",
             "totalCosts": 190.89,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15729281/medium/0be4e0167eb236dea935c2ecf60ab99e_default.png"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 67.67,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15884671,
@@ -69609,10 +69910,22 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15911295/medium/8aae130b64f46cd1ea960d085950a560_default.png"
           },
           {
+            "id": 15498336,
+            "username": "aquariuslt",
+            "totalCosts": 292.9,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15498336/medium/33c5b16783e2cf00e5d32ae940e52c2d.jpeg"
+          },
+          {
             "id": 16324840,
             "username": "Nineeeee",
             "totalCosts": 165.64,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16324840/medium/3307a2ac7aec88f18ee0532661813556_default.png"
+          },
+          {
+            "id": 15381970,
+            "username": "tzbkk",
+            "totalCosts": 154.53,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15381970/medium/b43b331e365346453668db293656f269.jpeg"
           },
           {
             "id": 15314206,
@@ -69633,12 +69946,6 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14814538/medium/a758db833b50a769463ef35c5d5b99f1.gif"
           },
           {
-            "id": 15381970,
-            "username": "tzbkk",
-            "totalCosts": 36.36,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15381970/medium/b43b331e365346453668db293656f269.jpeg"
-          },
-          {
             "id": 16105472,
             "username": "Mindy00",
             "totalCosts": 34.34,
@@ -69655,6 +69962,12 @@
             "username": "harborchai",
             "totalCosts": 24.24,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15216626/medium/ede840b0367ddaba0a7bf05c7f3477d1_default.png"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 23.23,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15558917,
@@ -70062,7 +70375,7 @@
           {
             "id": 14829178,
             "username": "EffectChen",
-            "totalCosts": 1152.41,
+            "totalCosts": 782.75,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14829178/medium/39ff70d1cbcdbad8e9056cb4aa4ee789.jpg"
           },
           {
@@ -70072,16 +70385,16 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16290062/medium/0805624823601e88f8322df677b7270b_default.png"
           },
           {
-            "id": 14723580,
-            "username": "jasonren0403",
-            "totalCosts": 34.34,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14723580/medium/f31d9be50fe62e93dc477df9457d9d04.jpeg"
-          },
-          {
             "id": 14553216,
             "username": "rielychen",
             "totalCosts": 16.16,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14553216/medium/ff7357a18e524ec40facc964cb2d15bc.jpeg"
+          },
+          {
+            "id": 14723580,
+            "username": "jasonren0403",
+            "totalCosts": 14.14,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14723580/medium/f31d9be50fe62e93dc477df9457d9d04.jpeg"
           },
           {
             "id": 15236832,
@@ -70129,6 +70442,12 @@
             "username": "yuping",
             "totalCosts": 75.75,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15193608/medium/c3b5342b0fef9f5f51eff5b0c2b93c70.jpg"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 69.69,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15246632,
@@ -70497,6 +70816,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15246102/medium/16ba0a18555a5486ec1e324616a4f267.png"
           },
           {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 55.55,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
+          },
+          {
             "id": 15276928,
             "username": "betterme",
             "totalCosts": 22.22,
@@ -70652,6 +70977,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15293526/medium/9e1560b3c7f8e0915244339e340263ae_default.png"
           },
           {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 25.25,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
+          },
+          {
             "id": 15284354,
             "username": "hackerfollower",
             "totalCosts": 22.22,
@@ -70753,7 +71084,7 @@
           {
             "id": 14829178,
             "username": "EffectChen",
-            "totalCosts": 1990.71,
+            "totalCosts": 1981.62,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14829178/medium/39ff70d1cbcdbad8e9056cb4aa4ee789.jpg"
           },
           {
@@ -71084,6 +71415,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15889307/medium/d4da3df063e63fa135a05da6d555e5a0.png"
           },
           {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 80.8,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
+          },
+          {
             "id": 15900245,
             "username": "kairlv",
             "totalCosts": 52.52,
@@ -71237,14 +71574,20 @@
           {
             "id": 15889307,
             "username": "jujemuga2011",
-            "totalCosts": 781.74,
+            "totalCosts": 777.7,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15889307/medium/d4da3df063e63fa135a05da6d555e5a0.png"
           },
           {
             "id": 15871701,
             "username": "maxwellcotto",
-            "totalCosts": 667.61,
+            "totalCosts": 663.57,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15871701/medium/211aaa985795803b88e9fa89069ed517.png"
+          },
+          {
+            "id": 15381970,
+            "username": "tzbkk",
+            "totalCosts": 4.04,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15381970/medium/b43b331e365346453668db293656f269.jpeg"
           }
         ]
       },
@@ -71262,6 +71605,12 @@
             "username": "maxwellcotto",
             "totalCosts": 406.02,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15871701/medium/211aaa985795803b88e9fa89069ed517.png"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 258.56,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15893819,
@@ -71336,7 +71685,7 @@
           {
             "id": 15871701,
             "username": "maxwellcotto",
-            "totalCosts": 1048.38,
+            "totalCosts": 1036.26,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15871701/medium/211aaa985795803b88e9fa89069ed517.png"
           },
           {
@@ -71348,7 +71697,7 @@
           {
             "id": 15918181,
             "username": "QuinnHou",
-            "totalCosts": 525.2,
+            "totalCosts": 513.08,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15918181/medium/17e80957f6d7eef4f215c6cc41951dae_default.png"
           },
           {
@@ -71368,6 +71717,12 @@
             "username": "ATOPOS",
             "totalCosts": 33.33,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15942509/medium/5b108bd1877b23960ed577b37cc1687f_default.png"
+          },
+          {
+            "id": 15381970,
+            "username": "tzbkk",
+            "totalCosts": 12.12,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15381970/medium/b43b331e365346453668db293656f269.jpeg"
           }
         ]
       },
@@ -71379,6 +71734,12 @@
             "username": "tzbkk",
             "totalCosts": 371.68,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15381970/medium/b43b331e365346453668db293656f269.jpeg"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 114.13,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15843735,
@@ -71566,6 +71927,12 @@
             "username": "wky32768",
             "totalCosts": 34.34,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15810439/medium/bad663f0f7e2b1cec4a5da863ead6caa.jpeg"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 18.18,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           }
         ]
       },
@@ -71813,8 +72180,14 @@
           {
             "id": 15911295,
             "username": "Xin_Cheng",
-            "totalCosts": 623.17,
+            "totalCosts": 582.77,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15911295/medium/8aae130b64f46cd1ea960d085950a560_default.png"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 32.32,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15381970,
@@ -71916,13 +72289,13 @@
           {
             "id": 15073799,
             "username": "GoForceX",
-            "totalCosts": 220.18,
+            "totalCosts": 217.15,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15073799/medium/a33ad8c1e01cf31890babace80908193.png"
           },
           {
             "id": 15209850,
             "username": "iamlyl913",
-            "totalCosts": 136.35,
+            "totalCosts": 123.22,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15209850/medium/ffa13023a66cff49a460ae85f3dc1c53.jpeg"
           },
           {
@@ -71954,6 +72327,12 @@
             "username": "sang_shi",
             "totalCosts": 8.08,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16158452/medium/8544f339158effd95f9bda0987cb93aa_default.png"
+          },
+          {
+            "id": 15236832,
+            "username": "Andypsl8",
+            "totalCosts": 4.04,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg"
           },
           {
             "id": 15906651,
@@ -72102,7 +72481,7 @@
           {
             "id": 15399006,
             "username": "Xeift",
-            "totalCosts": 293.91,
+            "totalCosts": 312.09,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15399006/medium/4b4638642287027a89529ecb11074e44.png"
           },
           {
@@ -72149,7 +72528,7 @@
           {
             "id": 15399006,
             "username": "Xeift",
-            "totalCosts": 237.35,
+            "totalCosts": 258.56,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15399006/medium/4b4638642287027a89529ecb11074e44.png"
           },
           {
@@ -72195,7 +72574,7 @@
           {
             "id": 15399006,
             "username": "Xeift",
-            "totalCosts": 640.34,
+            "totalCosts": 863.55,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15399006/medium/4b4638642287027a89529ecb11074e44.png"
           },
           {
@@ -72832,13 +73211,13 @@
           {
             "id": 15201846,
             "username": "boyinlee",
-            "totalCosts": 1016.06,
+            "totalCosts": 994.85,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15201846/medium/3d9d29022427094faeb700ddbd5c078a.jpeg"
           },
           {
             "id": 15550507,
             "username": "Jimbo_L",
-            "totalCosts": 631.25,
+            "totalCosts": 610.04,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15550507/medium/2aaa6dc51fbb57d36b6b8106d06c85fe.jpeg"
           },
           {
@@ -72919,7 +73298,7 @@
           {
             "id": 15222542,
             "username": "Jcys",
-            "totalCosts": 240.38,
+            "totalCosts": 218.16,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15222542/medium/c4b538278714558f9a5430c0cef783de.JPG"
           },
           {
@@ -72927,12 +73306,6 @@
             "username": "Xeift",
             "totalCosts": 153.52,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15399006/medium/4b4638642287027a89529ecb11074e44.png"
-          },
-          {
-            "id": 15955263,
-            "username": "Heyhei",
-            "totalCosts": 145.44,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15955263/medium/51ba4f008f63f1b37ac900269bcaccc0_default.png"
           },
           {
             "id": 15174096,
@@ -72947,15 +73320,21 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14298362/medium/faa58e5522ded9b4f4fe7628c5352a59.png"
           },
           {
+            "id": 15955263,
+            "username": "Heyhei",
+            "totalCosts": 105.04,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15955263/medium/51ba4f008f63f1b37ac900269bcaccc0_default.png"
+          },
+          {
             "id": 15841839,
             "username": "ekc9399",
-            "totalCosts": 91.91,
+            "totalCosts": 76.76,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15841839/medium/0a25585c566bb1f7be4cba84b02e8561_default.png"
           },
           {
             "id": 15247752,
             "username": "18349693112mingdong",
-            "totalCosts": 85.85,
+            "totalCosts": 70.7,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15247752/medium/6040b92390942af3589d4671ae199975.png"
           },
           {
@@ -73620,13 +73999,13 @@
           {
             "id": 15399006,
             "username": "Xeift",
-            "totalCosts": 710.03,
+            "totalCosts": 714.07,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15399006/medium/4b4638642287027a89529ecb11074e44.png"
           },
           {
             "id": 15955263,
             "username": "Heyhei",
-            "totalCosts": 53.53,
+            "totalCosts": 49.49,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15955263/medium/51ba4f008f63f1b37ac900269bcaccc0_default.png"
           },
           {
@@ -73740,26 +74119,14 @@
           {
             "id": 15242372,
             "username": "billwang",
-            "totalCosts": 571.66,
+            "totalCosts": 476.72,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15242372/medium/23bf740e9d096ee0b3de7b9f5528c8c9.JPG"
-          },
-          {
-            "id": 15066445,
-            "username": "tanyeun",
-            "totalCosts": 322.19,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15066445/medium/20bd201d087c38f8a96c927fea208225.jpeg"
           },
           {
             "id": 15174096,
             "username": "13u22",
-            "totalCosts": 283.81,
+            "totalCosts": 210.08,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15174096/medium/2c7598abbcf6dc776b41f9443584bf8f.jpeg"
-          },
-          {
-            "id": 15224386,
-            "username": "telebee",
-            "totalCosts": 224.22,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15224386/medium/52b2ec0ff1b2d2f6893458a3a632a2eb_default.png"
           },
           {
             "id": 15399006,
@@ -73768,9 +74135,21 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15399006/medium/4b4638642287027a89529ecb11074e44.png"
           },
           {
+            "id": 15066445,
+            "username": "tanyeun",
+            "totalCosts": 121.2,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15066445/medium/20bd201d087c38f8a96c927fea208225.jpeg"
+          },
+          {
+            "id": 15224386,
+            "username": "telebee",
+            "totalCosts": 97.97,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15224386/medium/52b2ec0ff1b2d2f6893458a3a632a2eb_default.png"
+          },
+          {
             "id": 15218250,
             "username": "ganggang0508",
-            "totalCosts": 23.23,
+            "totalCosts": 6.06,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15218250/medium/ee8923c86477941fead04515451be35e_default.png"
           }
         ]
@@ -73936,7 +74315,7 @@
           {
             "id": 14779158,
             "username": "K0ue1",
-            "totalCosts": 992.83,
+            "totalCosts": 979.7,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14779158/medium/a0145bfd442c7c2b368c5aeae336f176.png"
           }
         ]
@@ -73947,7 +74326,7 @@
           {
             "id": 13132928,
             "username": "ntiunn",
-            "totalCosts": 4819.72,
+            "totalCosts": 4807.6,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13132928/medium/7279036c1c0338ff05bbdb649b9b6c56_default.png"
           },
           {
@@ -73998,7 +74377,7 @@
           {
             "id": 15399006,
             "username": "Xeift",
-            "totalCosts": 1185.74,
+            "totalCosts": 1184.73,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15399006/medium/4b4638642287027a89529ecb11074e44.png"
           },
           {
@@ -74355,7 +74734,7 @@
           {
             "id": 15837955,
             "username": "Magdalena_",
-            "totalCosts": 1090.8,
+            "totalCosts": 1069.59,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15837955/medium/8c0a833a266fd86e17f6e6ce9592278d.jpg"
           }
         ]
@@ -74466,7 +74845,7 @@
           {
             "id": 15837955,
             "username": "Magdalena_",
-            "totalCosts": 2262.4,
+            "totalCosts": 1676.6,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15837955/medium/8c0a833a266fd86e17f6e6ce9592278d.jpg"
           }
         ]

@@ -11,7 +11,7 @@ summaryPoint3: A Beolvadás az eredeti Ethereum-főhálózat összeolvadását j
 summaryPoint4: A Beolvadás nagyjából 99,95%-kal csökkentette az Ethereum energiafogyasztását.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
   A beolvadás 2022. szeptember 15-én ment végbe. Ezzel lezárult az Ethereum áttérése a proof-of-stake konszenzusra, így hivatalosan is elhagyta a proof-of-work mechanizmust, és nagyjából 99,95%-kal csökkentette az energiafogyasztását.
 </UpgradeStatus>
 

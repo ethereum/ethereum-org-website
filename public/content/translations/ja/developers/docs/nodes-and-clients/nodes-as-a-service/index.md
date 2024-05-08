@@ -76,6 +76,15 @@ sidebarDepth: 2
     - トレース/デバッグ名前空間が利用可能
     - 自動アップデート
     - 技術サポート
+- [**Amazon Managed Blockchain**](https://aws.amazon.com/managed-blockchain/)
+  - [ドキュメント](https://aws.amazon.com/managed-blockchain/resources/)
+  - 機能
+    - フルマネージド・イーサリアム・ノード
+    - 6つのリージョンで利用可能
+    - HTTP上のJSON-RPCおよび安全なWebSocket
+    - 3つのチェーンのサポート
+    - 年中無休のSLA、AWSサポート
+    - Go-ethereumおよびLighthouse
 - [**Ankr**](https://www.ankr.com/)
   - [ドキュメント](https://docs.ankr.com/)
   - 機能
@@ -86,7 +95,7 @@ sidebarDepth: 2
     - 従量課金制
     - 分析ツール
     - ダッシュボード
-    - RPC、HTTPSおよびWSSエンドポイント
+    - RPC、HTTPS、WSSエンドポイント
     - ダイレクトサポート
 - [**Blast**](https://blastapi.io/)
   - [ドキュメント](https://docs.blastapi.io/)
@@ -268,7 +277,7 @@ sidebarDepth: 2
     - ハンズオンデベロッパーサポート
     - [Pocket Portal](https://bit.ly/ETHorg_POKTportal)ダッシュボードと分析
 - [**QuickNode**](https://www.quicknode.com)
-  - [ドキュメンテーション](https://www.quicknode.com/docs/)
+  - [ドキュメント](https://www.quicknode.com/docs/)
   - 機能
     - 24時間年中無休の技術サポートとデベロッパーのDiscordコミュニティ
     - 地理的なバランスを考慮した、マルチクラウド/メタルの低遅延ネットワーク
@@ -281,19 +290,19 @@ sidebarDepth: 2
     - [SOC2認証](https://www.quicknode.com/security)
     - デベロッパーからエンタープライズまで幅広く対応
 - [**Rivet**](https://rivet.cloud/)
-  - [ドキュメンテーション](https://rivet.readthedocs.io/en/latest/)
+  - [ドキュメント](https://rivet.readthedocs.io/en/latest/)
   - 機能
     - 無料ティアオプション
     - 従量課金制
 - [**SenseiNode**](https://senseinode.com)
-  - [ドキュメンテーション](https://docs.senseinode.com/)
+  - [ドキュメント](https://docs.senseinode.com/)
   - 機能
     - 専用ノードと共有ノード
     - ダッシュボード
     - ラテンアメリカの様々な地域に拠点を置く複数のホスティングプロバイダーを利用して、AWS外部でホスティング
     - PrysmとLighthouseクライアント
 - [**SettleMint**](https://console.settlemint.com/)
-  - [ドキュメンテーション](https://docs.settlemint.com/)
+  - [ドキュメント](https://docs.settlemint.com/)
   - 機能
     - 無料トライアル
     - 従量課金制
@@ -306,7 +315,7 @@ sidebarDepth: 2
     - 時間課金制
     - ダイレクトサポート
 - [**Tenderly**](https://tenderly.co/web3-gateway)
-  - [ドキュメンテーション](https://docs.tenderly.co/web3-gateway/web3-gateway)
+  - [ドキュメント](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - 機能
     - 1か月あたり2,500万Tenderlyユニットを含む無料ティア
     - 履歴データへの無料アクセス

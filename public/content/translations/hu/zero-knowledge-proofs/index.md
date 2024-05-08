@@ -26,74 +26,6 @@ A nulla tudásalapú bizonyítások megoldják ezt a problémát azáltal, hogy 
 
 A korábbi példánál maradva a nemzetiséget egyedül a zero-knowledge bizonyítékkal kell igazolnia. Az ellenőrző csak azt nézi meg, hogy a bizonyíték bizonyos jellemzői igazak, hogy meggyőződjön az állítás igaz voltáról.
 
-## Hogyan működik a zero-knowledge bizonyíték? {#how-do-zero-knowledge-proofs-work}
-
-A zero-knowledge bizonyíték által úgy igazolódik egy állítás igazsága, hogy abból bármi kiderülne vagy abból a módból, ahogy az igazolva lett. Ehhez a zero-knowledge protokollok olyan algoritmusokat használnak, melyek adatokat dolgoznak fel és válaszként igaz vagy hamis eredményt adnak.
-
-A zero-knowledge protokollnak a következő kritériumoknak kell megfelelniük:
-
-1. **Teljesség**: ha az input érvényes, akkor a zero-knowledge protokoll válasza mindig az, hogy „igaz”. Tehát ha az állítás igaz, a bizonyító és az ellenőrző jóhiszeműen viselkedik, akkor a bizonyítékot el lehet fogadni.
-
-2. **Megbízhatóság**: ha az input érvénytelen, akkor elméletileg lehetetlen átverni a zero-knowledge protokollt, hogy azt „igaznak” vegye. Így a rosszhiszemű bizonyító nem tudja átverni a jóhiszemű ellenőrzőt, hogy elhiggye az érvénytelen állításról, hogy az érvényes (csak egy nagyon kicsi valószínűséggel).
-
-3. **Zero-knowledge**: Az ellenőrző semmit sem tud meg az állításról, csak azt, hogy érvényes vagy érvénytelen-e (nulla ismerete lesz az állításról). Ez megakadályozza, hogy az ellenőrző kinyerje az eredeti inputot (az állítás tartalmát) a bizonyítékból.
-
-Alapformájában a zero-knowledge bizonyíték három elemből áll: **tanú**, **kihívás** és **válasz**.
-
-- **Tanú**: A zero-knowledge bizonyítékkal a bizonyító valamilyen titkos információ ismeretét akarja bizonyítani. A titkos információ a bizonyíték „tanúja”, és az a tény, hogy a bizonyítónak feltételezett módon ismerete van erről a tanúról, egy sor kérdést generál, melyet csak az tud megválaszolni, aki ismeri az információt. A bizonyító a bizonyítási eljárást azzal kezdi, hogy véletlenszerűen választ egy kérdést, kikalkulálja a választ és elküldi az ellenőrzőnek.
-
-- **Kihívás**: Az ellenőrző véletlenszerűen választ egy kérdést a sorozatból, és megkéri a bizonyítót, hogy feleljen rá.
-
-- **Válasz**: A bizonyító elfogadja a kérdést, kikalkulálja a választ, és elküldi az ellenőrzőnek. A bizonyító válasza lehetővé teszi, hogy az ellenőrző meggyőződjön arról, az előbbi tényleg hozzáfér a tanúhoz. Ahhoz, hogy meggyőződjön arról, a bizonyító nem csak vakon tippel és véletlenül adta meg a jó választ, még több kérdést tesz fel. Ezt a folyamatot ismételve annak a valószínűsége, hogy a bizonyítónak nincs is ismerete a tanúról, szignifikánsan lecsökken, míg az ellenőrző elégedetté válik.
-
-A fenti egy interaktív zero-knowledge bizonyítékstruktúrát ír le. A korai zero-knowledge protokollok interaktív igazolást használtak, ami oda-vissza kommunikációt igényelt a bizonyító és az ellenőrző között.
-
-Ennek illusztrálására egy jó példa Jean-Jacques Quisquater híres [Ali Baba barlangtörténete](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave). A történetben Peggy (a bizonyító) bizonyítani akarja Victornak (az ellenőrzőnek), hogy tudja a titkos jelszót, ami kinyitja a varázsajtót, de nem akarja elárulni, mi az.
-
-### Nem interaktív zero-knowledge bizonyítékok {#non-interactive-zero-knowledge-proofs}
-
-Miközben forradalmi, az interaktív bizonyítás hasznossága behatárolt, mert a két félnek elérhetőnek kell lennie és többször kell kapcsolatba lépniük. Még akkor is, ha az ellenőrző meggyőződött a bizonyító őszinteségéről, a bizonyíték ekkor még nem lesz elérhető a független ellenőrzésre (egy új bizonyítékot kell küldeni, ami egy újabb üzenetváltás).
-
-Ennek megoldására Manuel Blum, Paul Feldman és Silvio Micali az első [nem interaktív zero-knowledge bizonyítékot](https://dl.acm.org/doi/10.1145/62212.62222) javasolta, ahol a bizonyító és az ellenőrző egy megosztott kulccsal rendelkezik. Ez lehetővé teszi a bizonyítónak, hogy az információ (a tanú) ismeretét úgy bizonyítsa, hogy nem adja ki azt.
-
-Az interaktívhoz képest itt csak egy kommunikáció történik a felek (bizonyító és ellenőrző) között. A bizonyító a titkos információt átadja egy speciális algoritmusnak, hogy az kikalkulálja a zero-knowledge bizonyítékot. Ezt elküldi az ellenőrzőnek, aki egy másik algoritmussal ellenőrzi azt, hogy a bizonyító tényleg ismeri a titkot.
-
-A nem interaktív bizonyítás lecsökkenti a szükséges kommunikációt, így a ZK-bizonyíték sokkal hatékonyabb. Sőt, a bizonyíték létrehozásával az mindenkinek elérhetővé válik (akinek van megosztott kulcsa és ellenőrző algoritmusa) ellenőrzésre.
-
-A nem interaktív bizonyítékok áttörést hoztak a ZK technológiának és a ma létező bizonyítórendszerek fejlesztését hozták el. Az alábbiakban áttekintjük ezeket a bizonyítéktípusokat:
-
-### A zero-knowledge bizonyítékok típusai {#types-of-zero-knowledge-proofs}
-
-#### ZK-SNARK-ok {#zk-snarks}
-
-ZK-SNARK a rövidítés a **zero-knowledge tömörített nem interaktív érv ismeretre (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge)**. A ZK-SNARK protokoll a következő jellemzőkkel bír:
-
-- **Zero-knowledge**: Az ellenőrző az állítás integritását úgy tudja ellenőrizni, hogy nem tud róla semmit. Csak arról van tudomása, hogy az állítás igaz vagy hamis.
-
-- **Tömörített**: A zero-knowledge bizonyíték kisebb a tanúnál és gyorsan ellenőrizhető.
-
-- **Nem interaktív**: A bizonyító és az ellenőrző csak egyszer kommunikál, miközben az interaktív bizonyítéknál több körben is egyeztetnek.
-
-- **Érv**: A bizonyíték kielégíti a megbízhatósági követelményt, így a csalás rendkívül valószínűtlen.
-
-- **Ismeret**: A bizonyíték nem rakható össze a titkos információ (tanú) ismerete nélkül. Nehéz vagy egyenesen lehetetlen egy bizonyító számára kikalkulálni egy érvényes ZK-bizonyítékot, ha nem ismeri a tanút.
-
-A korábban említett megosztott kulcs nyilvános paraméterekre hivatkozik, amelyekben a bizonyító és az ellenőrző megegyezik, hogy ezeket használja a bizonyíték létrehozásában és ellenőrzésében. A nyilvános paraméterek létrehozása (Common Reference String/CRS) egy kényes művelet, mivel a protokoll biztonsága múlik rajta. Ha a CRS-t létrehozó entrópia/véletlenszerűség egy rosszhiszemű bizonyító kezébe kerül, akkor hamis bizonyítékokat tud kalkulálni vele.
-
-[A többrésztvevős kalkuláció (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation) ezt a kockázatot csökkenti a nyilvános paraméterek létrehozása kapcsán. Több résztvevő van jelen egy [bizalmat igénylő összetételi ceremónián](https://zkproof.org/2021/06/30/setup-ceremonies/amp/), ahol mindenki hozzátesz véletlenszerű értékeket a CRS létrehozásához. Amíg egy jóhiszemű fél megsemmisíti az entrópia saját részét (így nem lehet teljesen összeállítani a sorozatot), addig a ZK-SNARK protokoll megőrzi a kalkulációs megbízhatóságát.
-
-A bizalmat igénylő összetétel esetén a felhasználónak bíznia kell a résztvevőkben, amikor azok létrehozzák a paramétereket. Ugyanakkor a ZK-STARK-ok kifejlesztése lehetővé tette a bizonyító protokolloknak, hogy bizalomigénytől mentes felállásban is működjenek.
-
-#### ZK-STARK-ok {#zk-starks}
-
-ZK-STARK a rövidítés a **zero-knowledge skálázható transzparens érv ismeretre (Zero-Knowledge Scalable Transparent Argument of Knowledge)**. A ZK-STARK-ok hasonlítanak a ZK-SNARK-okra, kivéve, hogy:
-
-- **Skálázható**: ZK-STARK gyorsabb, mint a ZK-SNARK a bizonyíték létrehozásában és ellenőrzésében, amikor a tanú nagyobb méretű. A STARK bizonyítékoknál a bizonyítás és az ellenőrzés ideje csak enyhén növekszik, ahogy a tanú mérete nő (míg a SNARK esetén a növekedés lineáris).
-
-- **Transzparens**: ZK-STARK nyilvánosan ellenőrizhető véletlenszerűségre támaszkodik, hogy létrehozza a nyilvános paramétereket a bizonyításhoz és az ellenőrzéshez, nem egy bizalmat igénylő összetételre. Ezért sokkal átláthatóbbak a ZK-SNARK-okhoz képest.
-
-ZK-STARK-ok nagyobb bizonyítékokat készítenek, mint a ZK-SNARK-ok, ezért magasabb az ellenőrzési költség. Ugyanakkor bizonyos esetekben (mint nagy adathalmazok bizonyítása) a ZK-STARK-ok mégis költséghatékonyabbak a ZK-SNARK-okhoz képest.
-
 ## A zero-knowledge bizonyítékok alkalmazási területei {#use-cases-for-zero-knowledge-proofs}
 
 ### Anonim fizetések {#anonymous-payments}
@@ -272,7 +204,6 @@ A ZK-STARK immunis a kvantumszámítógépek fenyegetésére, mert ütközésál
 
 ## További olvasnivaló {#further-reading}
 
-- [Az informatikus egy koncepciót 5 nehézségi szinten tár fel | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) – _Wired YouTube channel_
 - [A zero-knowledge bizonyítékok alkalmazási területeinek áttekintése](https://pse.dev/projects) — _Privacy and Scaling Explorations Team_
 - [A SNARK-ok, a STARK-ok és a rekurzív SNARK-ok összehasonlítása](https://www.alchemy.com/overviews/snarks-vs-starks) — _Alchemy Overviews_
 - [Zero-Knowledge bizonyíték: az adatbiztonság javítása a blokkláncon](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_

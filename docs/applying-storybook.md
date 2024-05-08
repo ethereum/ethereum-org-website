@@ -22,7 +22,7 @@ It's as easy as running `yarn storybook` to boot up a dedicated localhost to see
 
 A Storybook "story" is an instance of a component in a certain state or with certain parameters applied to show an alternative version of the component.
 
-Each component will only need one file containing all the stories.
+There may be some exceptions, but generally each component should have only on story file.
 
 The stories file will reside with each component. So the base folder structure in `src` will look like this:
 
@@ -40,22 +40,23 @@ The initial structure of each story file will look something like this (in types
 ```tsx
 import ComponentA from "."
 
-type ComponentAType = typeof ComponentA
-
 const meta {
   title: "ComponentA",
   component: ComponentA
-} satisfies Meta<ComponentAType>
+} satisfies Meta<typeof ComponentA>
 
 export default meta
+// Please use `typeof meta` for maximum type safety
 type Story = StoryObj<typeof meta>;
 
-export const Basic: Story = {
-  render: () => <ComponentA />
-}
+export const Basic: Story = {}
 ```
 
-**Note**: with the `title` option, we write this based on the groupings set by the Design System. Groupings are declared with forward slashes. (i.e. `Atoms / Form / Input`). See the Storybook docs for details on [Naming conventions](https://storybook.js.org/docs/7.0/react/writing-stories/naming-components-and-hierarchy)
+- With the `title` option, we write this based on the groupings set by the Design System. Groupings are declared with forward slashes. (i.e. `Atoms / Form / Input`). See the Storybook docs for details on [Naming conventions](https://storybook.js.org/docs/7.0/react/writing-stories/naming-components-and-hierarchy)
+- The `satisfies` TypeScript keyword is used with the `Meta` type for stricter type checking. This is particularly helpful to make sure required args are not missed. [Storybook Docs regarding `satisfies`](https://storybook.js.org/docs/writing-stories/typescript#using-satisfies-for-better-type-safety)
+- The use of `StoryObj` is to be able to typecheck the creation of a story as an object. This helps with prop inference.
+- We use `StoryObj<typeof meta>` in the event a required arg is provided in the `meta` object, to be applied to all stories in the file. This prevents type errors throwing at the story level for a required missing arg.
+- If the story does not need any args or any custom rendering, it should be left as an empty object. Otherwise, use the `render` option to explicitly write the rendering of the story: i.e. `render: () => <Component />`
 
 Also, please view the Figma file for the [proposed structure for the Design System](https://www.figma.com/file/Ne3iAassyfAcJ0AlgqioAP/DS-to-storybook-structure?type=design&node-id=42%3A50&mode=design&t=RGkyouvTilzF42y0-1) to provide the correct groupings.
 
@@ -71,7 +72,7 @@ import Button from "."
 type ButtonType = typeof Button
 
 const meta {
-  title: "Button",
+  title: "Atoms / Form / Button",
   component: Button
 } satisfies Meta<ButtonType>
 
@@ -98,12 +99,12 @@ export const Outline: Story = {
  * This can also be done for various sizes or other like alterations
  *
  * 🚨 If prop content is supplied directly to the component and the `args` prop is not used,
- * do not use the `StoryObj` type. This is especially important when a story rendering multiple versions
+ * use `StoryObj` without a prop type. This is especially important when a story renders multiple versions
  * of the component.
  */
 
 // Assuming `solid` is the default variant in the Chakra theme config
-export const Variants = {
+export const Variants: StoryObj = {
   render: () => (
     <VStack>
       <Button>A Solid Button</Button>
@@ -116,7 +117,7 @@ export const Variants = {
 
 ### Story file containing a single story
 
-If only one story is provided for a component, the name of the exported object should match the name in the `title` meta option. (If the title is `Atoms / Form / Button` then the object should be named `Button`) This will hoist the display name up to the parent level in the Storybook dashboard's sidebar. This will also mean you have to rename the import of the component. Call it `ButtonComponent`, say.
+If only one story is provided for a component, the name of the exported object should match the name in the `title` meta option. For example, if the title is `Atoms / Form / Button` then the story should be named `Button`. This will hoist the display name up to the parent level in the Storybook dashboard's sidebar. This will also mean you have to rename the import of the component. Call it `ButtonComponent`, say.
 
 ```tsx
 import ButtonComponent from "."
@@ -157,3 +158,75 @@ Outlined below are each area going from left to right in the selections.
 | 10. A11y Visualization Simulator         |
 | 11. Set layout direction (left or right) |
 | 12. Toggle color mode                    |
+
+## Chromatic
+
+Chromatic is a visual testing tool that scans every possible UI state across browsers to catch bugs in appearance and functionality. It enables you to assign reviewers and resolve discussions to streamline team sign-off. It is created by the same team that made Storybook. [Read more in the Chromatic docs](https://www.chromatic.com/docs/)
+
+When creating a story, Chromatic creates a "snapshot" of it and sets it as a baseline. This baseline is also approved or denied before merging into the project. Whenever there are changes that affect the component, Chromatic will create a new snapshot to analyze. If there are changes, Chromatic will provide them for a reviewer to accept or decline, and be able to provide any further comments.
+
+### Story Modes
+
+Depending on the component, we might look for more than just one snapshot per story. In some cases, we might want multiple snapshots showing the story rendered at various viewport widths or in different languages, a combination of both, etc. These are referred to as [Story Modes](https://www.chromatic.com/docs/modes/). Examples of applicable components include the `Footer` and the `HubHero`.
+
+You will currently find the setup of these modes in [the `./storybook/modes.ts` file](../.storybook/modes.ts)
+
+> Note: At this time we are only considering modes for viewport and languages. Color mode is not possible with the existing setup and is being investigated on making it available, should we want to use it.
+
+When using a mode at either the component level (all stories in a given file) or at the story level, they are supplied under the `chromatic` parameter.
+
+```tsx
+import { Meta, StoryObj } from "@storybook/react"
+
+import { langViewportModes } from "../../../../.storybook/modes"
+
+import ContentHeroComponent, { ContentHeroProps } from "."
+
+const meta = {
+  title: "Organisms / Layouts / Hero",
+  component: ContentHeroComponent,
+  parameters: {
+    chromatic: {
+      modes: {
+        ...langViewportModes,
+      },
+    },
+  },
+  // other options as needed
+} satisfies Meta<typeof ContentHeroComponent>
+```
+
+In this example, we are supplying all the combinations of the languages and viewports together in snapshots. These will only be viewed in chromatic and cannot be seen when viewing storybook locally.
+
+If needs to be only a couple of options, you can write them like this:
+
+```ts
+import { viewportModes, langViewportModes } from "../../../../.storybook/modes"
+
+// In the `meta` object
+parameters: {
+  chromatic: {
+    modes: {
+      base: viewportModes['base']
+      'ru-xl': langViewportModes['ru-xl']
+    }
+  }
+}
+```
+
+### Disabling Snapshots
+
+There may be instances where we would like to save a story for visual testing in local development, but do not want to capture snapshots for regressions. In these cases, enable the `disableSnapshot` option.
+
+This can be applied at any level (project, component, story)
+
+```ts
+// At any level
+parameters: {
+  chromatic: {
+    disableSnapshot: true
+  }
+}
+```
+
+> 🚨 NOTE: This will be notated ahead of time by the team which stories should not receive snapshots.

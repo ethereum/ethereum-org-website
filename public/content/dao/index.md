@@ -44,7 +44,7 @@ To help this make more sense, here's a few examples of how you could use a DAO:
 - **Collective ownership** – you could purchase physical or digital assets and members can vote on how to use them.
 - **Ventures and grants** – you could create a venture fund that pools investment capital and votes on ventures to back. Repaid money could later be redistributed amongst DAO-members.
 
-<iframe src="https://embed.ted.com/talks/lang/en/scott_fitsimones_could_a_dao_build_the_next_great_city" />
+<YouTube id="zTStDvUtQWc" />
 
 ## How do DAOs work? {#how-daos-work}
 

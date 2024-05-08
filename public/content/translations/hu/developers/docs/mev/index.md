@@ -6,7 +6,7 @@ lang: hu
 
 A maximális kinyerhető érték (MEV) arra utal, hogy a blokk létrehozásából kapható sztenderd blokkjutalmon és a gázdíjakon felül plusz értéket lehet szerezni a tranzakciók blokkba helyezésével, kizárásával és a sorrendek megváltoztatásával.
 
-## Bányászattal kivonható érték {#miner-extractable-value}
+## Maximálisan kinyerhető érték (MEV) {#maximal-extractable-value}
 
 A maximálisan kinyerhető értéket először a [proof-of-work (munkaigazolás)](/developers/docs/consensus-mechanisms/pow/) kontextusában alkalmazták, és ezért „bányászattal kivonható értékként” emlegették. Mivel a proof-of-work esetében a bányászok ellenőrzik a tranzakciók felvételét, kizárását és sorrendjét. [A Beolvadás](/roadmap/merge) során áttértek a proof-of-stake (letéti igazolás) mechanizmusára, és ezeket a szerepeket a validátorok látják el, a bányászat pedig nem része az Ethereum protokolljának. Értékkinyerési módszerek azonban továbbra is léteznek, ezért jelenleg a „maximálisan kinyerhető érték” kifejezést használjuk.
 

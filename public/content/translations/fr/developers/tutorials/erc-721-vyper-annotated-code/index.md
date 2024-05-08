@@ -20,9 +20,9 @@ Dans cet article, nous allons décortiquer le [contrat ERC-721 de Ryuya Nakamura
 ## Le contrat {#contract}
 
 ```python
-# @dev Implémentation de la norme de jeton non fongible ERC-721.
+# @dev Implementation of ERC-721 non-fungible token standard.
 # @author Ryuya Nakamura (@nrryuya)
-# Modifié à partir de : https://github.com/vyperlang/vyper/blob/de74722bf2d8718cca46902be165f9fe0e3641dd/examples/tokens/ERC721.vy
+# Modified from: https://github.com/vyperlang/vyper/blob/de74722bf2d8718cca46902be165f9fe0e3641dd/examples/tokens/ERC721.vy
 ```
 
 Tout comme avec Python, les commentaires Vyper commencent par une empreinte numérique (`#`) et continuent jusqu'au bout de la ligne. Les commentaires qui comportent `@<keyword>` sont compris par [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html) afin de produire une documentation compréhensible pour l'être humain.
@@ -40,7 +40,7 @@ La première ligne importe l'interface, et la deuxième spécifie que nous l'imp
 ### L'interface ERC721Receiver {#receiver-interface}
 
 ```python
-# Interface pour le contrat appelé par safeTransferFrom()
+# Interface for the contract called by safeTransferFrom()
 interface ERC721Receiver:
     def onERC721Received(
 ```

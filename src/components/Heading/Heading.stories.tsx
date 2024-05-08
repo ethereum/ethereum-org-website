@@ -2,8 +2,6 @@ import * as React from "react"
 import { Box, Flex, HeadingProps, Stack, VStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import Translation from "../Translation"
-
 import HeadingComponent from "."
 
 const meta = {
@@ -11,6 +9,16 @@ const meta = {
   component: HeadingComponent,
   parameters: {
     layout: null,
+    chromatic: {
+      modes: {
+        md: {
+          viewport: "md",
+        },
+        "2xl": {
+          viewport: "2xl",
+        },
+      },
+    },
   },
   decorators: [
     (Story) => (
@@ -31,7 +39,9 @@ const headingScale: Array<HeadingProps> = [
     size: "2xl",
   },
   {
-    // No props as the default is `h2` with size `xl
+    // Note that `h2` is the default render
+    as: "h2",
+    size: "xl",
   },
   {
     as: "h3",
@@ -52,16 +62,13 @@ const headingScale: Array<HeadingProps> = [
 ]
 
 export const Heading: Story = {
-  args: {
-    children: <Translation id="page-index:page-index-title" />,
-  },
-  render: (args) => (
+  render: () => (
     <VStack w="full">
       <Box>
         Adjust the viewport to below &quot;md&quot; to see the font size and
         line height change
       </Box>
-      <Stack>
+      <Stack width="full" maxW="4xl">
         {headingScale.map((obj, idx) => (
           <Flex key={idx} gap="6">
             <HeadingComponent
@@ -73,9 +80,8 @@ export const Heading: Story = {
             >
               {(obj.size as string) || "xl"}
             </HeadingComponent>
-            {/* The render does not have an explicit `size` passed to use the default instead */}
-            <HeadingComponent as={obj.as} flex="3">
-              {args.children}
+            <HeadingComponent flex="3" {...obj}>
+              {`${obj.as} base component`}
             </HeadingComponent>
           </Flex>
         ))}

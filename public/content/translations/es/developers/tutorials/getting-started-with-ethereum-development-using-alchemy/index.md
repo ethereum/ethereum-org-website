@@ -3,11 +3,11 @@ title: Claves para desarrolladores principiantes en Ethereum
 description: "Esta es una guía de ayuda a principiantes para comenzar a desarrollar en Ethereum. Te enseñaremos los fundamentos: desde montar una terminal de conexión API, a solicitar una línea de comando pasando por ensamblar tu primer script en Web3. ¡No se necesita experiencia en desarrollo de blockchain!"
 author: "Elan Halpern"
 tags:
-  - "JavaScript"
+  - "javascript"
   - "ethers.js"
   - "nodos"
-  - "consulta"
-  - "Alchemy"
+  - "consultar"
+  - "alchemy"
 skill: beginner
 lang: es
 published: 2020-10-30
@@ -98,7 +98,7 @@ Para interactuar con la infraestructura del nodo de Alchemy, ejecute en NodeJS o
 ```js
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(
-  "https://eth-mainnet.alchemyapi.io/v2/tu-clave-api"
+  "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
 
@@ -144,10 +144,10 @@ node index.js
 **5. ¡Ahora debería ver el último resultado de número de bloque en su consola!**
 
 ```
-El último número de bloque es el 11043912
+The latest block number is 11043912
 ```
 
-**¡Guau! ¡Enhorabuena! Acaba de escribir su primer script en Web3 utilizando Alchemy 🎉**
+**¡Guau! ¡Felicidades! Acaba de escribir su primer script en Web3 utilizando Alchemy 🎉**
 
 ¿No sabe por dónde seguir ahora? ¡Pruebe a implementar su primer contrato inteligente y entrar en materia con algo de programación de Solidity en nuestra [Guía sobre contratos inteligentes abierta a todos los públicos](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract) o pruebe su panel de conocimiento con la [aplicación de prueba del panel](https://docs.alchemyapi.io/tutorials/demo-app)!
 

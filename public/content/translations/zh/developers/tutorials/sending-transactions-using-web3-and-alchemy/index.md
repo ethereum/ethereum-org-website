@@ -186,7 +186,7 @@ main();
 返回到你的终端或命令行并运行：
 
 ```
-node index.js
+node sendTx.js
 ```
 
 ### 9. 在内存池中查看你的交易 {#see-your-transaction-in-the-mempool}

@@ -5,13 +5,13 @@ author: Trailofbits
 lang: es
 tags:
   - "solidity"
-  - "contratos Inteligentes"
-  - "seguridades"
+  - "contratos inteligentes"
+  - "seguridad"
   - "pruebas"
   - "análisis estático"
 skill: advanced
 published: 2020-06-09
-source: Desarrollando smart contracts
+source: Desarrollar contratos seguros
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
