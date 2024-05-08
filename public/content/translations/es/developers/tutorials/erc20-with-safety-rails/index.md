@@ -24,7 +24,7 @@ Si quieres ver el código fuente completo:
 
 ## Creando un contrato ERC-20 {#creating-an-erc-20-contract}
 
-Antes de agregar la funcionalidad del riel de seguridad, necesitamos un contrato ERC-20. En este artículo usaremos [el Asistente de Contratos de OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/wizard). Ábrelo en otra ventana del navegador y sigue estas instrucciones:
+Antes de agregar la funcionalidad del riel de seguridad, necesitamos un contrato ERC-20. En este artículo usaremos [el Asistente de Contratos de OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/wizard). Ábrelo en otra ventana del navegador y sigue estas instrucciones:
 
 1. Selecciona **ERC-20**.
 2. Ingresa estos ajustes:
@@ -33,7 +33,7 @@ Antes de agregar la funcionalidad del riel de seguridad, necesitamos un contrato
    | ----------------- | ---------------- |
    | Nombre            | SafetyRailsToken |
    | Símbolo           | SAFE             |
-   | Premint           | 1000             |
+   | Premint           | 1.000            |
    | Características   | Ninguno          |
    | Control de acceso | Ownable          |
    | Upgradability     | Ninguno          |
@@ -126,9 +126,9 @@ Algunas veces es útil tener un administrador que puede deshacer los errores. Pa
 1. Congelar y descongelar cuentas. Esto puede ser útil, por ejemplo, cuando una cuenta puede verse afectada.
 2. Limpieza de activos.
 
-Los fraudes algunas veces envían tókenes fraudulentos al contrato de un token real para obtener la legitimidad. Por ejemplo, [consulte aquí](https://optimistic.etherscan.io/token/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe?a=0x4200000000000000000000000000000000000042). El contrato ERC-20 legítimo es [0x4200....0042](https://optimistic.etherscan.io/address/0x4200000000000000000000000000000000000042). El fraude que pretende ser legítimo es [0x234....bbe](https://optimistic.etherscan.io/address/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe).
+   Los fraudes algunas veces envían tókenes fraudulentos al contrato de un token real para obtener la legitimidad. Por ejemplo, [consulte aquí](https://optimistic.etherscan.io/token/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe?a=0x4200000000000000000000000000000000000042). El contrato ERC-20 legítimo es [0x4200....0042](https://optimistic.etherscan.io/address/0x4200000000000000000000000000000000000042). El fraude que pretende ser legítimo es [0x234....bbe](https://optimistic.etherscan.io/address/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe).
 
-También puede que las personas envíen tókenes ERC-20 legítimos a nuestro contrato por error, lo cual es otra razón para querer tener una manera de eliminarlos.
+   También puede que las personas envíen tókenes ERC-20 legítimos a nuestro contrato por error, lo cual es otra razón para querer tener una manera de eliminarlos.
 
 OpenZeppelin proporciona dos mecanismos para activar el acceso administrativo:
 

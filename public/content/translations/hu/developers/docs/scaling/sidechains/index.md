@@ -70,4 +70,4 @@ Több projekt is kínál olyan melléklánc-implementációkat, amelyeket Ön is
 
 - [Ethereum dappok skálázása mellékláncokkal](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _2018. február 8. – Georgios Konstantopoulos_
 
-_Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt és add hozzá!_
+_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_

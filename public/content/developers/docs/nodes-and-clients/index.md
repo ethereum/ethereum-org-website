@@ -133,15 +133,14 @@ The Ethereum community maintains multiple open-source execution clients (previou
 
 This table summarizes the different clients. All of them pass [client tests](https://github.com/ethereum/tests) and are actively maintained to stay updated with network upgrades.
 
-| Client                                          | Language | Operating systems     | Networks                           | Sync strategies                    | State pruning   |
-| ----------------------------------------------- | -------- | --------------------- | ---------------------------------- | ---------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)              | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky           | Snap, Full                         | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap (without serving), Fast, Full | Archive, Pruned |
-| [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap, Fast, Full                   | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Full                               | Archive, Pruned |
-| [Reth](https://github.com/paradigmxyz/reth) _(beta)_     | Rust     | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Full                               | Archive, Pruned |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_     | TypeScript     | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap, Full, Light                               |  |
-
+| Client                                                                   | Language   | Operating systems     | Networks                  | Sync strategies                    | State pruning   |
+| ------------------------------------------------------------------------ | ---------- | --------------------- | ------------------------- | ---------------------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap, Full                         | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)                                      | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap (without serving), Fast, Full | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap, Fast, Full                   | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Full                               | Archive, Pruned |
+| [Reth](https://github.com/paradigmxyz/reth) _(beta)_                     | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Full                               | Archive, Pruned |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Holesky          | Full                               | Pruned          |
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -172,6 +171,16 @@ Nethermind is an Ethereum implementation created with the C# .NET tech stack, li
 - networking and rich features like Prometheus/Grafana dashboards, seq enterprise logging support, JSON RPC tracing, and analytics plugins.
 
 Nethermind also has [detailed documentation](https://docs.nethermind.io), strong dev support, an online community and 24/7 support available for premium users.
+
+### In development {#execution-in-development}
+
+This clients are still in earlier stages or development and are not yet recommended for production use.
+
+#### EthereumJS {#ethereumjs}
+
+The EthereumJS Execution Client (EthereumJS) is written in TypeScript and composed of a number of packages, including core Ethereum primitives represented by the the Block, Transaction, and Merkle-Patricia Trie classes and core client components including an implementation of the Ethereum Virtual Machine (EVM), a blockchain class, and the DevP2P networking stack.
+
+Learn more about it by reading its [documentation](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)
 
 ## Consensus clients {#consensus-clients}
 

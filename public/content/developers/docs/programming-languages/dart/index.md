@@ -17,7 +17,7 @@ incomplete: true
   if you already know the basics
 - If you prefer to learn by watching a video, you can watch [Build Your First Blockchain Flutter App](https://www.youtube.com/watch?v=3Eeh3pJ6PeA), which is about an hour long
 - If you are impatient, you might prefer [Building a Blockchain Decentralized-app with Flutter and Dart on Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s), which is only about twenty minutes
-- [Integrating MetaMask in Flutter application](https://youtu.be/8qzVDje3IWk) - this short video takes you through the steps of integrating MetaMask into your Flutter applications
+- [Integrating MetaMask in Flutter application with Web3Modal by WalletConnect](https://www.youtube.com/watch?v=v_M2buHCpc4) - this short video takes you through the steps of integrating MetaMask into your Flutter applications with [Web3Modal](https://pub.dev/packages/web3modal_flutter) library by WalletConnect
 - [Flutter Dapp Simple Wallet](https://youtu.be/JMfIBpuAhKA) and [First Flutter DApp - Solidity, Truffle, Ganache](https://youtu.be/bHw2gQZxJ_s) - these videos show how to make simple dapps in Flutter using Truffle and Ganache
 - [Mobile Blockchain Developer Bootcamp Course With Solidity & Flutter](https://youtube.com/playlist?list=PL4V4Unlk5luhQ26ERO6hWEbcUwHDSSmVH) - full stack mobile blockchain developer course playlist
 

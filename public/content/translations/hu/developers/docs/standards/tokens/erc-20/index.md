@@ -12,13 +12,12 @@ A tokenek gyakorlatilag bármit képviselhetnek az Ethereumon:
 
 - reputációs pontokat egy online platformon
 - egy karakter képességeit egy játékban
-- lottószelvényeket
 - pénzügyi eszközöket, mint például részesedést egy cégben
 - fiat valutát, mint az USD
 - egy uncia aranyat
 - és még sok mást...
 
-Egy ilyen erős Ethereum funkciót egy szintén erős szabványnak kell kezelnie, igaz? És pontosan itt jön képbe az ERC-20 szerepe! Ez a szabvány lehetővé teszi a fejlesztők számára, hogy olyan tokenalkalmazásokat fejlesszenek, amelyek együttműködnek más termékekkel és szolgáltatásokkal.
+Egy ilyen erős Ethereum funkciót egy szintén erős szabványnak kell kezelnie, igaz? És pontosan itt jön képbe az ERC-20 szerepe! Ez a szabvány lehetővé teszi a fejlesztők számára, hogy olyan tokenalkalmazásokat fejlesszenek, amelyek együttműködnek más termékekkel és szolgáltatásokkal. Az ERC-20 szabványt arra is használják, hogy további funkciókat biztosítsanak az [ether](/glossary/#ether) számára.
 
 **Mi az az ERC-20?**
 

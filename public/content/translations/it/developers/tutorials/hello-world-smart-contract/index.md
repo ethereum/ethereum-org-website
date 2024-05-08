@@ -16,11 +16,11 @@ published: 2021-03-31
 Se hai appena iniziato con lo sviluppo blockchain e non sai da dove cominciare, oppure se sei solo interessato a capire come distribuire e interagire con gli smart contract, questa è la guida che fa al caso tuo. Esamineremo la creazione e la distribuzione di un semplice contratto intelligente sulla rete di prova di Goerli, utilizzando un portafoglio virtuale di [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) e [Alchemy](https://alchemyapi.io/eth) (non preoccuparti se non capisci cosa significhi, lo spiegheremo).
 
 > **Attenzione**
->
+> 
 > 🚧 Avviso di obsolescenza
->
+> 
 > Per l'intera guida, la rete di test Goerli viene utilizzata per creare e distribuire un contratto intelligente. Tuttavia, tieni presente che la Ethereum Foundation ha annunciato che [Goerli sarà presto abbandonata](https://www.alchemy.com/blog/goerli-faucet-deprecation).
->
+> 
 > Ti consigliamo di utilizzare [Sepolia](https://sepoliafaucet.com/) e il [faucet di Sepolia](https://www.alchemy.com/overviews/sepolia-testnet) per questo tutorial.
 
 Nella [parte 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) di questo tutorial, esamineremo come possiamo interagire con il nostro contratto intelligente una volta distribuito e, nella [parte 3](https://docs.alchemy.com/docs/submitting-your-smart-contract-to-etherscan), copriremo come pubblicarlo su Etherscan.
@@ -66,7 +66,7 @@ Per ricontrollare che ci sia il saldo, facciamo una richiesta [eth_getBalance](h
 ```
 
 > **NOTA:** questo risultato è in wei non in ETH. Wei è usato come taglio più piccolo dell'ether. La conversione da wei a ETH è: 1 eth = 10<sup>18</sup> wei. Quindi se convertiamo 0x2B5E3AF16B1880000 in decimali, otteniamo 5\*10¹⁸, pari a 5 ETH.
->
+> 
 > Meno male! I nostri soldi finti ci sono tutti <Emoji text=":money_mouth_face:" size={1} />.
 
 ## Fase 6: inizializza il progetto {#step-6}
@@ -89,7 +89,7 @@ Non è rilevante come rispondi alle domande d'installazione, ecco le nostre risp
 ```
 package name: (hello-world)
 version: (1.0.0)
-description: contratto intelligente hello world
+description: hello world smart contract
 entry point: (index.js)
 test command:
 git repository:
@@ -101,10 +101,10 @@ About to write to /Users/.../.../.../hello-world/package.json:
 {
   "name": "hello-world",
   "version": "1.0.0",
-  "description": "contratto intelligente hello world",
+  "description": "hello world smart contract",
   "main": "index.js",
   "scripts": {
-     "test": "echo \\"Errore: nessun test specificato\\" && exit 1"
+     "test": "echo \\"Error: no test specified\\" && exit 1"
   },
   "author": "",
   "license": "ISC"
@@ -182,11 +182,11 @@ Apri il progetto hello-world nel tuo editor preferito (a noi piace [VSCode](http
 pragma solidity ^0.7.0;
 
 // Defines a contract named `HelloWorld`.
-// Un contratto è una raccolta di funzioni e dati (il suo stato). Una volta distribuito, un contratto risiede in un indirizzo specifico della blockchain Ethereum. Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Un contratto è una raccolta di funzioni e dati (il suo stato). Once deployed, a contract resides at a specific address on the Ethereum blockchain. Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
    // Declares a state variable `message` of type `string`.
-   // Le variabili di stato sono variabili con valori memorizzati in modo permanente nello spazio di archiviazione del contratto. The keyword `public` makes variables accessible from outside a contract and creates a function that other contracts or clients can call to access the value.
+   // Le variabili di stato sono variabili con valori memorizzati in modo permanente nello spazio di archiviazione (storage) del contratto. The keyword `public` makes variables accessible from outside a contract and creates a function that other contracts or clients can call to access the value.
    string public message;
 
    // Similar to many class-based object-oriented languages, a constructor is a special function that is only executed upon contract creation.
@@ -232,8 +232,8 @@ Copia l'URL dell'API di Alchemy
 Il tuo `.env` dovrebbe somigliare a questo:
 
 ```
-API_URL = "https://eth-goerli.alchemyapi.io/v2/tua-chiave-api"
-PRIVATE_KEY = "tua-chiave-privata-metamask"
+API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
+PRIVATE_KEY = "your-metamask-private-key"
 ```
 
 Per connetterli realmente al nostro codice, faremo riferimento a queste variabili nel nostro file `hardhat.config.js` nella fase 13.

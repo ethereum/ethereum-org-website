@@ -4,7 +4,7 @@ description:
 lang: hu
 ---
 
-Az gáz (Gas) nélkülözhetetlen az Ethereum hálózaton. Ez az üzemanyag, amitől működik, ahogyan az autóknak is szükségük van benzinre, hogy menjenek.
+Az gáz nélkülözhetetlen az Ethereum hálózaton. Ez az üzemanyag, amitől működik, ahogyan az autóknak is szükségük van benzinre, hogy menjenek.
 
 ## Előfeltételek {#prerequisites}
 
@@ -117,22 +117,6 @@ Az Ethereum [skálázhatósági fejlesztései](/roadmap/) meg fogják oldani a g
 
 A második blokkláncréteggel (L2) kialakított skálázás a fő kezdeményezés arra, hogy nagy mértékben javuljanak a gázköltségek, a felhasználói élmény és a skálázhatóság. [Bővebben az L2 skálázásról](/developers/docs/scaling/#layer-2-scaling).
 
-## Mi volt a London-frissítés (EIP-1559) lényege? {#what-was-the-london-upgrade-eip-1559}
-
-A London-frissítés előtt az Ethereum fix méretű blokkokkal működött. A magas hálózati kereslet idején ezek a blokkok teljes kapacitással működtek. Ennek eredményeképp a felhasználóknak sokszor várni kellett a kereslet csökkenésére, hogy bekerülhessenek egy blokkba, ami rontott a felhasználói élményen. A London-frissítés bevezette a változó méretű blokkokat az Ethereumon.
-
-A tranzakciós díjak számításának módja 2021. augusztusában megváltozott [a London-frissítéssel](/history/#london) az Ethereum hálózatán. A London Upgrade előtt a díjakat úgy kalkulálták, hogy elkülönítették az `alapdíjat` és az `elsőbbségi díjat`:
-
-Tegyük fel, hogy Alice-nek fizetnie kell Bobnak 1 ETH-t. A tranzakcióban a gázkorlátozás 21 000 egység, a gázdíj pedig 200 gwei.
-
-A teljes díj: `gáz mennyisége (határ) * egységenkénti gázdíj `, vagyis `21 000 * 200 = 4 200 000 gwei` vagy 0,0042 ETH
-
-Az [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) bevezetése a London-frissítés során bonyolultabbá tette a tranzakciós illetékek működését, de megjósolhatóbb lett a gázdíj, ami egy sokkal hatékonyabb tranzakciósilleték-piacot eredményezett. A felhasználók megadhatják a `maxFeePerGas` értékét, vagyis azt, hogy legfeljebb mennyit hajlandók fizetni a tranzakció végrehajtásáért, annak tudatában, hogy nem fognak többet fizetni érte, mint a gáz piaci ára (`baseFeePerGas`), és a borravalót leszámítva visszakapják a különbözetet.
-
-Az alábbi videó elmagyarázza az EIP-1559 lényegét és előnyeit:
-
-<YouTube id="MGemhK9t44Q" />
-
 ## A gázdíjak felügyelete {#moitoring-gas-fees}
 
 Ha Ön szeretné felügyelni a gázdíjakat azért, hogy kevesebbet kelljen fizetnie az ETH-tranzakciókért, akkor számos eszköz áll rendelkezésre:
@@ -152,4 +136,4 @@ Ha Ön szeretné felügyelni a gázdíjakat azért, hogy kevesebbet kelljen fize
 - [A proof-of-stake és a proof-of-work összehasonlítása](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Gázoptimalizáló stratégiák fejlesztők számára](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [EIP-1559-dokumentumok](https://eips.ethereum.org/EIPS/eip-1559).
-- [Tim Beiko EIP-1559 anyagai](https://hackmd.io/@timbeiko/1559-resources).
+- [Tim Beiko EIP-1559 forrásai](https://hackmd.io/@timbeiko/1559-resources).

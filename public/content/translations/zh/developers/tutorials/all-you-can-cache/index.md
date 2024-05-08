@@ -3,9 +3,9 @@ title: "一切皆可缓存"
 description: 学习如何创建和使用缓存合约，以便进行更实惠的卷叠交易
 author: Ori Pomerantz
 tags:
-  - "第二层"
+  - "二层网络"
   - "缓存"
-  - "存储"
+  - "storage"
 skill: intermediate
 published: 2022-09-15
 lang: zh
@@ -89,8 +89,8 @@ contract Cache {
 
 ```solidity
         // Since 0xFE is a special case, the largest key the cache can
-        // hold is 0x0D followed by 15 0xFF's. 如果缓存长度已经达到这个长度
-        // 那么操作失败
+        // hold is 0x0D followed by 15 0xFF's. If the cache length is already that
+        // large, fail.
         //                              1 2 3 4 5 6 7 8 9 A B C D E F
         require(key2val.length+1 < 0x0DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF,
             "cache overflow");

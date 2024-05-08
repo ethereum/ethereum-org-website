@@ -21,17 +21,17 @@ sourceUrl: https://paulapivat.com/post/query_ethereum/
 
 ### 交易 {#transactions}
 
-用户以太坊之旅的第一步是初始化具有以太币余额的用户控制帐户或实体。 账户类型分为两种 — 用户控制账户或智能合约（参阅 [ethereum.org](/developers/docs/accounts/)）。
+用户以太坊之旅的第一步是初始化具有以太币余额的用户控制帐户或实体。 帐户类型分为两种 — 用户控制帐户或智能合约（参阅 [ethereum.org](/developers/docs/accounts/)）。
 
-可以在诸如 [Etherscan](https://etherscan.io/) 等区块浏览器上查看任何账户。 区块浏览器是您访问以太坊数据的门户。 它们实时显示区块上的数据、交易、矿工、帐户和其他链上活动（参阅[此处](/developers/docs/data-and-analytics/block-explorers/)）。
+可以在诸如 [Etherscan](https://etherscan.io/) 等区块浏览器上查看任何帐户。 区块浏览器是你访问以太坊数据的门户。 它们实时显示区块上的数据、交易、矿工、帐户和其他链上活动（参阅[此处](/developers/docs/data-and-analytics/block-explorers/)）。
 
 然而，用户可能希望直接查询数据，以核对外部区块浏览器提供的信息。 [Dune Analytics](https://duneanalytics.com/) 为任何对 SQL 有一定了解的人提供了这种功能。
 
-作为参考，以太坊基金会 (EF) 的智能合约账户可以在 [Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) 上查看。
+作为参考，以太坊基金会 (EF) 的智能合约帐户可以在 [Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) 上查看。
 
-值得注意的是，包括以太坊基金会账户在内的所有账户都有一个公共地址，可用来发送和接收交易。
+值得注意的是，包括以太坊基金会帐户在内的所有帐户都有一个公共地址，可用来发送和接收交易。
 
-Etherscan 上的账户余额由常规交易和内部交易构成。 尽管使用了这一名称，但内部交易并不是改变链状态的*真正*交易。 它们是通过执行合约发起的价值转移（[原文](https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)）。 因为内部交易没有签名，它们**没有**包含在区块上，并且不能通过 Dune Analytics 查询。
+Etherscan 上的帐户余额由常规交易和内部交易构成。 尽管使用了这一名称，但内部交易并不是改变链状态的_真正_交易。 它们是通过执行合约发起的价值转移（[原文](https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)）。 因为内部交易没有签名，它们**没有**包含在区块上，并且不能通过 Dune Analytics 查询。
 
 因此，本教程将侧重于常规交易。 可以这样查询：
 
@@ -114,7 +114,7 @@ ORDER BY block_time DESC
 
 ![父_哈希值](./parent_hash.png)
 
-下面是 Dune Analytics 上的[查询](https://duneanalytics.com/queries/44856/88292)：
+下面是 Dune Analytics上的[查询](https://duneanalytics.com/queries/44856/88292)：
 
 ```sql
 SELECT
@@ -130,14 +130,14 @@ LIMIT 10
 
 我们可以通过查询时间、区块编号、难度、哈希值、父哈希值及随机数来检查一个区块。
 
-此查询唯一不包含的内容是*交易列表*，需要通过下面的单独查询和*状态根*来查看它。 完整或归档节点将存储所有交易和状态转换，允许客户端随时查询链的状态。 因为这需要非常大的存储空间，我们可以将链数据与状态数据分开：
+此查询唯一不包含的内容是_交易列表_，需要通过下面的单独查询和_状态根_来查看它。 完整或归档节点将存储所有交易和状态转换，允许客户端随时查询链的状态。 因为这需要非常大的存储空间，我们可以将链数据与状态数据分开：
 
 - 链数据（区块列表、交易）
 - 状态数据（每次交易状态转换的结果）
 
-状态根属于状态数据，是*隐式*数据（未存储在链上），而链数据是显式数据并存储在链上（[原文](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)）。
+状态根属于状态数据，是_隐式_数据（未存储在链上），而链数据是显式数据并存储在链上（[原文](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)）。
 
-在本教程中，我们将侧重于*可以*在 Dune Analytics 上使用 SQL 查询的链上数据。
+在本教程中，我们将侧重于_可以_在 Dune Analytics 上使用 SQL 查询的链上数据。
 
 如上所述，每个区块都包含一个交易列表，我们可以通过筛选一个特定区块来查询它。 我们将尝试最新的区块 12396854：
 

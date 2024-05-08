@@ -68,7 +68,7 @@ Este es el flujo más común, utilizado por los agentes:
 
 ### Añadir liquidez {#add-liquidity-flow}
 
-#### Llamar {#caller-2}
+#### Solicitante {#caller-2}
 
 1. Proporcione a las cuentas periféricas una cantidad adicional para añadirla a la reserva de liquidez.
 2. Active una de las funciones `addLiquidity` del contrato periférico.
@@ -83,11 +83,11 @@ Este es el flujo más común, utilizado por los agentes:
 #### En el contrato principal (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
 
 7. Acumule tókenes de liquidez y envíelos al solicitante.
-8. Llamar `_update` para actualizar la cantidad de reserva
+8. Active `_update` para actualizar la cantidad de reserva
 
 ### Suprimir la liquidez {#remove-liquidity-flow}
 
-#### Llamador {#caller-3}
+#### Solicitante {#caller-3}
 
 1. Proporcione a la cuenta periférica una cantidad de tókenes de liquidez para quemar a cambio de los tókenes subyacentes.
 2. Active una de las funciones `removeLiquidity` del contrato periférico.
@@ -100,7 +100,7 @@ Este es el flujo más común, utilizado por los agentes:
 
 4. Envíe a la dirección de destino los tókenes subyacentes proporcionales a los tókenes quemados. Por ejemplo, si hay 1.000 tókenes A en la reserva, 500 tókenes B y 90 tókenes de liquidez, y recibimos 9 tókenes para quemar, estamos quemando el 10 % de los tókenes de liquidez, por lo tanto, enviamos al usuario 100 tókenes A y 50 tókenes B.
 5. Queme los tókenes de liquidez.
-6. Llmar `_update` para actualizar el monto de reserva
+6. Active `_update` para actualizar la cantidad de reserva
 
 ## Los contratos principales {#core-contracts}
 
@@ -204,11 +204,11 @@ He aquí un ejemplo. Tenga en cuenta que, en aras de la simplicidad, la tabla so
 | Evento                                            |  reserve0 |  reserve1 | reserve0 \* reserve1 | Tipo de cambio medio (token1 / token0) |
 | ------------------------------------------------- | ---------:| ---------:| ----------------------:| -------------------------------------- |
 | Configuración inicial                             | 1.000,000 | 1.000,000 |              1.000,000 |                                        |
-| Agente A intercambia 50 token0 por 47,619 token1  | 1.050,000 |   952.381 |              1.000.000 | 0,952                                  |
-| Agente B intercambia 10 token0 por 8,984 token1   | 1.060,000 |   943,396 |              1.000.000 | 0,898                                  |
-| Agente C intercambia 40 token0 por 34,305 token1  | 1.100,000 |   909,090 |              1,000,000 | 0,858                                  |
-| Agente D intercambia 100 token1 por 109,01 token0 |   990,990 | 1.009,090 |              1.000.000 | 0,917                                  |
-| Agente E intercambia 10 token0 por 10,079 token1  | 1.000,990 |   999.010 |              1,000,000 | 1.008                                  |
+| Agente A intercambia 50 token0 por 47,619 token1  | 1.050,000 |   952.381 |              1.000,000 | 0,952                                  |
+| Agente B intercambia 10 token0 por 8,984 token1   | 1.060,000 |   943,396 |              1.000,000 | 0,898                                  |
+| Agente C intercambia 40 token0 por 34,305 token1  | 1.100,000 |   909,090 |              1.000,000 | 0,858                                  |
+| Agente D intercambia 100 token1 por 109,01 token0 |   990,990 | 1.009,090 |              1.000,000 | 0,917                                  |
+| Agente E intercambia 10 token0 por 10,079 token1  | 1.000,990 |   999.010 |              1.000,000 | 1.008                                  |
 
 Al proveer los agentes más token0, el valor relativo del token1 incrementa y vice versa, en función de la oferta y demanda.
 
@@ -279,7 +279,7 @@ Hay dos maneras en las que una tranferencia ERC-20 puede informar de un fallo:
 
 Si ocurre alguna de estas condiciones, reviértala.
 
-#### Eventos {#pair-events}
+#### Events {#pair-events}
 
 ```solidity
     event Mint(address indexed sender, uint amount0, uint amount1);
@@ -364,14 +364,14 @@ Si el tiempo transcurrido no es cero, significa que somos la primera transacció
 
 Cada acumulador de coste se actualiza con el último costo (reserva del otro token/reserva de este token) por el tiempo transcurrido en segundos. Para obtener el precio medio, se lee el precio acumulado en dos puntos en el tiempo y se divide entre la diferencia de tiempo entre ellos. Por ejemplo, asumir esta secuencia de eventos:
 
-| Evento                                                         |  reserva0 |  reserva1 | marca de tiempo | Tipo de cambio marginal (reserve1 / reserve0) |         price0CumulativeLast |
+| Evento                                                         |  reserve0 |  reserve1 | marca de tiempo | Tipo de cambio marginal (reserve1 / reserve0) |         price0CumulativeLast |
 | -------------------------------------------------------------- | ---------:| ---------:| --------------- | ---------------------------------------------:| ----------------------------:|
-| Configuración Inicial                                          | 1.000,000 | 1.000,000 | 5.000           |                                         1,000 |                            0 |
-| Agente A deposita 50 token0 y obtiene de vuelta 47,619 token 1 | 1.050,000 |   952,381 | 5.020           |                                         0,907 |                           20 |
+| Configuración inicial                                          | 1.000,000 | 1.000,000 | 5.000           |                                         1,000 |                            0 |
+| Agente A deposita 50 token0 y obtiene de vuelta 47,619 token 1 | 1.050,000 |   952.381 | 5.020           |                                         0,907 |                           20 |
 | Agente B deposita 10 token0 y obtiene de vuelta 8,984 token1   | 1.060,000 |   943,396 | 5.030           |                                         0,890 |       20+10\*0,907 = 29,07 |
 | Agente C deposita 40 token0 y obyiene de vuelta 34,305 token1  | 1.100,000 |   909,090 | 5.100           |                                         0,826 |    29,07+70\*0,890 = 91,37 |
 | Agente D deposita 100 token1 y obtiene de vuelta 109,01 token0 |   990,990 | 1.009,090 | 5.110           |                                         1,018 |    91,37+10\*0,826 = 99,63 |
-| Agente E deposita 10 token0 y obtiene de vuelta 10,079 token1  | 1.000,990 |   999,010 | 5.150           |                                         0,998 | 99,63+40\*1,1018 = 143,702 |
+| Agente E deposita 10 token0 y obtiene de vuelta 10,079 token1  | 1.000,990 |   999.010 | 5.150           |                                         0,998 | 99,63+40\*1,1018 = 143,702 |
 
 Pongamos que queremos calcular el precio medio de **Token0** entre entre la marca de tiempo 5.030 y 5.150. La diferencia en el valor de `price0Cumulative` es 143,702-29,07=114,632. Este es el promedio a o largo de dos minutos (120 segundos). Por lo tanto, el precio medio es de 114,632/120 = 0,955.
 
@@ -498,7 +498,7 @@ En el momento del primer depósito no conocemos el valor relativo de los dos tó
 
 Podemos confiar en esto, porque es de interés para el depositante proporcionar el mismo valor, para evitar perder valor debido a arbitrajes. Pongamos que el valor de nuestros dos tókenes es idéntico, pero nuestro depositante ha depositado 4 veces más del **Token1** que del **Token0**. Un agente puede usar el hecho de que el intercambio de pares piensa que el **Token0** es más valioso para extraer valor de él.
 
-| Evento                                                         | reserva0 | reserva1 | reserva0 \* reserva1 | Valor de la reserva (reserve0 + reserve1) |
+| Evento                                                         | reserve0 | reserve1 | reserve0 \* reserve1 | Valor de la reserva (reserve0 + reserve1) |
 | -------------------------------------------------------------- | --------:| --------:| ----------------------:| -----------------------------------------:|
 | Configuración inicial                                          |        8 |       32 |                    256 |                                        40 |
 | El agente depósita 8 tókenes **Token0**, obtiene 16 **Token1** |       16 |       16 |                    256 |                                        32 |
@@ -947,7 +947,7 @@ El constructor solo establece las variables de estado inmutables.
 
 Esta función se activa cuando canjeamos tókenes del contrato WETH en ETH. Sólo el contrato WETH que usamos está autorizado para hacer eso.
 
-#### Agregue liquidez {#add-liquidity}
+#### Añadir liquidez {#add-liquidity}
 
 Estas funciones agregan tókenes al intercambio de pares, que incrementa la reserva de liquidez.
 
@@ -1131,7 +1131,7 @@ Para depositar el ETH, el contrato primero lo envuelve en WETH y luego transfier
 
 El usuario ya nos ha enviado el ETH, por lo que si queda algo extra (porque el otro token es menos valioso de lo que el usuario pensaba), tenemos que emitir un reembolso.
 
-#### Remover la liquidez {#remove-liquidity}
+#### Suprimir la liquidez {#remove-liquidity}
 
 Estas funciones eliminarán la liquidez y lo devolverán al proveedor de liquidez.
 

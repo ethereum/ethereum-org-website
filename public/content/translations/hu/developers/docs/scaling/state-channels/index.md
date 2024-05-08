@@ -33,7 +33,7 @@ A főkönyv egyenlegének (azaz a fizetési csatorna státuszának) frissítés�
 
 A fizetési csatornák a legkorábbi skálázási megoldások közé tartoztak, amelyek célja az egyszerű felhasználói interakciók (pl. ETH átutalások, atomikus átváltások, mikrofizetések) költséges láncon belüli tevékenységének minimalizálása volt. A csatorna résztvevői korlátlan mennyiségű azonnali, illeték nélküli tranzakciót hajthatnak végre egymás között mindaddig, amíg az átutalások nettó összege nem haladja meg a letétbe helyezett tokeneket.
 
-## Állapot csatornák {#state-channels}
+## Státuszcsatornák {#state-channels}
 
 A láncon kívüli fizetések támogatásán kívül a fizetési csatornák nem bizonyultak hasznosnak az általános státuszváltozási logika kezelésére. A státuszcsatornákat azért hozták létre, hogy megoldják ezt a problémát, és azok támogassák az általános célú számítások skálázását.
 
@@ -251,11 +251,11 @@ Több projekt is kínál olyan státuszcsatorna-implementációkat, amelyeket Ö
 
 ## További olvasnivaló {#further-reading}
 
-**Állapot csatornák**
+**Státuszcsatornák**
 
 - [Az Ethereum L2-es skálázási megoldásainak értelmezése: státuszcsatornák, plazma és truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, 2018. február 12._
 - [Státuszcsatornák bemutatása](https://www.jeffcoleman.ca/state-channels/) _2015. november 6., Jeff Coleman_
 - [Státuszcsatornák alapjai](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 - [Blokklánc státuszcsatornák: a technika jelenlegi állása](https://ieeexplore.ieee.org/document/9627997)
 
-_Ismer olyan közösségi információforrást, amely a hasznára vált? Módosítsa az oldalt, és adja hozzá!_
+_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_

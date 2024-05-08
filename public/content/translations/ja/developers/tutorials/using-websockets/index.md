@@ -14,24 +14,24 @@ sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
 published: 2020-12-01
 ---
 
-このガイドでは、初級者向けに、WebSocket と Alchemy を使ってイーサリアムブロックチェーンにリクエストを送信する方法を学びます。
+このガイドでは、初級者向けに、WebSocketとAlchemyを使ってイーサリアムブロックチェーンにリクエストを送信する方法を学びます。
 
-## WebSocket と HTTP の比較 {#websockets-vs-http}
+## WebSocketとHTTPの比較 {#websockets-vs-http}
 
-HTTP とは異なり、WebSocket では特定の情報が必要な場合にリクエストを継続的に実行する必要はありません。 WebSocket では、正しく設定されていれば、ネットワーク接続が継続され、変更をリッスンすることができます。
+HTTPとは異なり、WebSocketでは特定の情報が必要な場合にリクエストを継続的に実行する必要はありません。 WebSocketでは、正しく設定されていれば、ネットワーク接続が継続され、変更をリッスンすることができます。
 
-どのネットワーク接続でも同様ですが、WebSocket が中断なしに永続的にオープンであると想定すべきではありませんが、手動で切断された接続に適切に対処し、再接続するのは手間がかかる場合があります。 WebSocket のもう一つの欠点は、応答にはエラーメッセージのみが含まれ、HTTP ステータスコードを取得できないという点です。
+どのネットワーク接続でも同様ですが、WebSocketが中断なしに永続的にオープンであると想定すべきではありませんが、手動で切断された接続に適切に対処し、再接続するのは手間がかかる場合があります。 WebSocketのもう一つの欠点は、応答にはエラーメッセージのみが含まれ、HTTPステータスコードを取得できないという点です。
 
-​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview)を利用することで、WebSocket の接続失敗に自動的に対応し、設定なしでリトライさせることができます。
+​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview)を利用することで、WebSocketの接続失敗に自動的に対応し、設定なしでリトライさせることができます。
 
 ## さっそく試してましょう {#try-it-out}
 
-WebSocket をテストする最も簡単な方法は、[wscat](https://github.com/websockets/wscat)などの WebSocket リクエストを行うためのコマンドラインツールをインストールすることです。 wscat を使って、次のようにリクエストを送ります：
+WebSocketをテストする最も簡単な方法は、[wscat](https://github.com/websockets/wscat)などのWebSocketリクエストを行うためのコマンドラインツールをインストールすることです。 wscatを使って、次のようにリクエストを送ります：
 
-_注意：Alchemy アカウントをお持ちの場合は、 `demo`をあなたの API キーに置き換えてください。 [こちら](https://auth.alchemyapi.io/signup)で、Alchemy の無料アカウントを作成できます。_
+_注意：Alchemyアカウントをお持ちの場合は、 `demo`をあなたのAPIキーに置き換えてください。 [こちら](https://auth.alchemyapi.io/signup)で、Alchemyの無料アカウントを作成できます。_
 
 ```
-$ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
+wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
@@ -39,17 +39,17 @@ $ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 ```
 
-## WebSocket の使用方法 {#how-to-use-websockets}
+## WebSocketの使用方法 {#how-to-use-websockets}
 
-まず、アプリに WebSocket の URL を入力して WebSocket を開きます。 アプリの WebSocket URL を確認するには、[ダッシュボード](https://dashboard.alchemyapi.io/)の App ページを開き、「View Key」をクリックしてください。 アプリの WebSocket 用 URL は HTTP リクエスト用の URL とは異なっており、両方とも「View Key」で確認できる点に注意してください。
+まず、アプリにWebSocketのURLを入力してWebSocketを開きます。 アプリのWebSocket URLを確認するには、[ダッシュボード](https://dashboard.alchemyapi.io/)のAppページを開き、「View Key」をクリックしてください。 アプリのWebSocket用URLはHTTPリクエスト用のURLとは異なっており、両方とも「View Key」で確認できる点に注意してください。
 
 ![AlchemyのダッシュボードでWebSocket URLを確認できる場所](./use-websockets.gif)
 
-[Alchemy API レファレンス](https://docs.alchemyapi.io/documentation/alchemy-api-reference/)に記載されている API は、いずれも WebSocket 経由で使用可能です。 これには、HTTP POST リクエストの本文として送信する場合と同じペイロードを使用しますが、このペイロードを WebSocket 経由で送信します。
+[Alchemy APIレファレンス](https://docs.alchemyapi.io/documentation/alchemy-api-reference/)に記載されているAPIは、いずれもWebSocket経由で使用可能です。 これには、HTTP POSTリクエストの本文として送信する場合と同じペイロードを使用しますが、このペイロードをWebSocket経由で送信します。
 
-## Web3 での WebSocket 使用方法 {#with-web3}
+## Web3でのWebSocket使用方法 {#with-web3}
 
-Web3 のようなクライアント向けライブラリを使用する場合、WebSocket への移行は簡単です。 Web3 クライアントのインスタンスを作成する際に、HTTP URL ではなく WebSocket URL を渡すだけでよいです。 以下の例をご覧ください：
+Web3のようなクライアント向けライブラリを使用する場合、WebSocketへの移行は簡単です。 Web3クライアントのインスタンスを作成する際に、HTTP URLではなくWebSocket URLを渡すだけでよいです。 以下の例をご覧ください：
 
 ```js
 const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
@@ -57,24 +57,24 @@ const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## API を講読する {#subscription-api}
+## APIを講読する {#subscription-api}
 
-WebSocket 経由で接続する場合、`eth_subscribe`および`eth_unsubscribe`という 2 つの追加メソッドを使用できます。 これらのメソッドを使用することで、特定のイベントをリッスンし、すぐに通知を受け取ることができるようになります。
+WebSocket経由で接続する場合、`eth_subscribe`および`eth_unsubscribe`という2つの追加メソッドを使用できます。 これらのメソッドを使用することで、特定のイベントをリッスンし、すぐに通知を受け取ることができるようになります。
 
 ### `eth_subscribe` {#eth-subscribe}
 
-特定のイベントを対象とする新規のサブスクリプションを作成しましょう。 `eth_subscribe`の詳細については、[こちら](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_subscribe)をご覧ください。
+特定のイベントを対象とする新規のサブスクリプションを作成しましょう。 `eth_subscribe`の詳細については、[こちら](https://docs.alchemy.com/reference/eth-subscribe)をご覧ください。
 
 #### パラメータ {#parameters}
 
 1. サブスクリプションの種類
 2. オプションのパラメータ
 
-最初の引数では、リッスンするイベントのタイプを指定します。 2 番目の引数では、最初の引数に依存したオプションを追加します。 以下では、説明タイプ、タイプ別のオプション、およびイベントのペイロードについて説明します。
+最初の引数では、リッスンするイベントのタイプを指定します。 2番目の引数では、最初の引数に依存したオプションを追加します。 以下では、説明タイプ、タイプ別のオプション、およびイベントのペイロードについて説明します。
 
 #### 戻り値 {#returns}
 
-サブスクリプション ID：この ID は、受信したすべてのイベントに付与されるもので、`eth_unsubscribe`を使用してサブスクリプションを取り消すする際にも使用します。
+サブスクリプションID：このIDは、受信したすべてのイベントに付与されるもので、`eth_unsubscribe`を使用してサブスクリプションを取り消すする際にも使用します。
 
 #### サブスクリプション関連のイベント {#subscription-events}
 
@@ -83,14 +83,14 @@ WebSocket 経由で接続する場合、`eth_subscribe`および`eth_unsubscribe
 - `jsonrpc`: 常に「2.0」です。
 - `method`: 常に「eth_subscription」です。
 - `params`：以下のフィールドを含むオブジェクトです：
-  - `subscription`：このサブスクリプションを作成した`eth_subscription`の呼び出しが返したサブスクリプション ID です。
+  - `subscription`：このサブスクリプションを作成した`eth_subscribe`の呼び出しが返したサブスクリプションIDです。
   - `result`：サブスクリプションのタイプによって内容が異なるオブジェクトです。
 
 #### サブスクリプションのタイプ {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
-保留状態に追加されたすべてのトランザクションにつき、トランザクション情報を返します。 このサブスクリプションタイプは保留中のトランザクションを講読するため、Web3 の標準的な呼び出しである`web3.eth.subscribe("pendingTransactions")`と似ていますが、トランザクションのハッシュだけでなく*トランザクションの完全な情報*を発行するという点が異なります。
+保留状態に追加されたすべてのトランザクションにつき、トランザクション情報を返します。 このサブスクリプションタイプは保留中のトランザクションを講読するため、Web3の標準的な呼び出しである`web3.eth.subscribe("pendingTransactions")`と似ていますが、トランザクションのハッシュだけでなく_トランザクションの完全な情報_を発行するという点が異なります。
 
 例：
 
@@ -178,10 +178,10 @@ WebSocket 経由で接続する場合、`eth_subscribe`および`eth_unsubscribe
 トピック仕様の例：
 
 - `[]`：すべてのトピックを許可します。
-- `[A]`：最初の位置が A である（その後の位置については条件なし）。
-- `[null, B]`：最初の位置は条件なしで、かつ 2 番目の位置が B である（その後の位置については条件なし）。
-- `[A, B]`：最初の位置が A であり、2 番目の位置が B (その後の位置については条件なし) 。
-- `[[A, B], [A, B]]`: 最初の位置が (A または B)、かつ 2 番目の位置が (A または B) (その後の位置については条件なし)
+- `[A]`：最初の位置がAである（その後の位置については条件なし）。
+- `[null, B]`：最初の位置は条件なしで、かつ2番目の位置がBである（その後の位置については条件なし）。
+- `[A, B]`：最初の位置がAであり、2番目の位置がB (その後の位置については条件なし) 。
+- `[[A, B], [A, B]]`: 最初の位置が (AまたはB)、かつ2番目の位置が (AまたはB) (その後の位置については条件なし)
 
 例：
 
@@ -215,11 +215,11 @@ WebSocket 経由で接続する場合、`eth_subscribe`および`eth_unsubscribe
 
 パラメータ
 
-1. 以前に`eth_subscribe`呼び出しで返されたサブスクリプションの ID です。
+1. 以前に`eth_subscribe`呼び出しで返されたサブスクリプションのIDです。
 
 戻り値
 
-サブスクリプションのキャンセルに成功した場合に`true`、または渡された ID のサブスクリプションが存在しない場合に`false`が返ります。
+サブスクリプションのキャンセルに成功した場合に`true`、または渡されたIDのサブスクリプションが存在しない場合に`false`が返ります。
 
 例：
 
@@ -246,4 +246,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-無料で[Alchemy に登録し](https://auth.alchemyapi.io/signup)、[ドキュメント](https://docs.alchemyapi.io/)を確認しましょう。また[Twitter](https://twitter.com/AlchemyPlatform)をフォローして最新のニュースをチェックしてください。
+無料で[Alchemyに登録し](https://auth.alchemyapi.io/signup)、[ドキュメント](https://docs.alchemyapi.io/)を確認しましょう。また[Twitter](https://twitter.com/AlchemyPlatform)をフォローして最新のニュースをチェックしてください。

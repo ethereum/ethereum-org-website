@@ -63,10 +63,9 @@ Raspberry Pi 4のイーサリアムイメージは、「プラグ・アンド・
 [Ethereum on Arm](https://ethereumonarm-my.sharepoint.com/:u:/p/dlosada/Ec_VmUvr80VFjf3RYSU-NzkBmj2JOteDECj8Bibde929Gw?download=1)からRaspberry Piイメージをダウンロードし、次のようにSHA256ハッシュを確認してください。
 
 ```sh
-# ダウンロードしたイメージがあるディレクトリで以下を実行します。
+# From directory containing the downloaded image
 shasum -a 256 ethonarm_22.04.00.img.zip
-# ハッシュは以下である必要があります。
-fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
+# Hash should output: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
 Rock 5BとOdroid M1ボードのイメージは、Ethereum-on-Armの[ダウンロードページ](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html)から入手可能です。
@@ -76,7 +75,7 @@ Rock 5BとOdroid M1ボードのイメージは、Ethereum-on-Armの[ダウンロ
 Raspberry Piで使用するマイクロSDカードは、まずデスクトップパソコンかノートパソコンに挿入して書き込む必要があります。 以下のターミナルコマンドで、ダウンロードしたイメージをSDカードに書き込みます。
 
 ```shell
-# マイクロSDカード名の確認
+# check the MicroSD card name
 sudo fdisk -l
 
 >> sdxxx
@@ -147,13 +146,13 @@ cd && deposit new-mnemonic --num_validators 1
 Raspberry Piに戻ると、バリデータが開始可能になります。 これには、バリデータキーのインポート、報酬を受け取るためのアドレスの設定、事前設定されたバリデータプロセスの開始が必要になります。 以下は、ライトハウス向けの例です。その他のコンセンサス クライアント向けの手順については、[Ethereum on Armのドキュメント](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)を参照してください。
 
 ```shell
-# バリデータキーのインポート
+# import the validator keys
 lighthouse account validator import --directory=/home/ethereum/validator_keys
 
-# 報酬受取アドレスの設定
+# set the reward address
 sudo sed -i 's/<ETH_ADDRESS>' /etc/ethereum/lighthouse-validator.conf
 
-# バリデータの開始
+# start the validator
 sudo systemctl start lighthouse-validator
 ```
 

@@ -557,5 +557,89 @@
     "lang": "en",
     "timeToRead": "10",
     "publishDate": "07/01/2023"
+  },
+  {
+    "url": "https://speedrunethereum.com/challenge/simple-nft-example",
+    "title": "Simple NFT Example",
+    "description": "Build, mint, and transfer your own ERC721",
+    "author": "Austin Griffith",
+    "authorGithub": "https://github.com/austintgriffith",
+    "tags": ["solidity", "smart contracts", "react", "nextjs", "wagmi", "nft", "javascript", "typescript", "openzeppelin"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "timeToRead": "10",
+    "publishDate": "04/24/2024"
+  },
+  {
+    "url": "https://speedrunethereum.com/challenge/decentralized-staking",
+    "title": "Decentralized Staking App",
+    "description": "Build, test, and deploy your own decentralized staking app",
+    "author": "Austin Griffith",
+    "authorGithub": "https://github.com/austintgriffith",
+    "tags": ["solidity", "smart contracts", "react", "nextjs", "wagmi", "javascript", "typescript", "frontend"],
+    "skillLevel": "beginner",
+    "timeToRead": "30",
+    "lang": "en",
+    "publishDate": "04/24/2024"
+  },
+  {
+    "url": "https://speedrunethereum.com/challenge/token-vendor",
+    "title": "Token Vendor",
+    "description": "Build a vending machine to buy and sell your own ERC20",
+    "author": "Austin Griffith",
+    "authorGithub": "https://github.com/austintgriffith",
+    "tags": ["solidity", "smart contracts", "react", "nextjs", "wagmi", "javascript", "typescript", "frontend","ERC-20", "openzeppelin"],
+    "skillLevel": "beginner",
+    "timeToRead": "30",
+    "lang": "en",
+    "publishDate": "04/24/2024"
+  },
+  {
+    "url": "https://speedrunethereum.com/challenge/dice-game",
+    "title": "Dice Game",
+    "description": "Deploy a contract to attack a DiceGame contract and predict the randomness so you only roll winners",
+    "author": "Austin Griffith",
+    "authorGithub": "https://github.com/austintgriffith",
+    "tags": ["solidity", "smart contracts", "react", "nextjs", "wagmi", "javascript", "typescript", "frontend", "openzeppelin"],
+    "skillLevel": "beginner",
+    "timeToRead": "25",
+    "lang": "en",
+    "publishDate": "04/24/2024"
+  },
+  {
+    "url": "https://speedrunethereum.com/challenge/minimum-viable-exchange",
+    "title": "Build a DEX",
+    "description": "Deploy a decentralized exchange to swap an ERC20 and ETH",
+    "author": "Austin Griffith",
+    "authorGithub": "https://github.com/austintgriffith",
+    "tags": ["solidity", "smart contracts", "react", "nextjs", "wagmi", "javascript", "typescript", "frontend", "ERC-20", "openzeppelin"],
+    "skillLevel": "intermediate",
+    "timeToRead": "60",
+    "lang": "en",
+    "publishDate": "04/24/2024"
+  },
+  {
+    "url": "https://speedrunethereum.com/challenge/state-channels",
+    "title": "State Channel Application",
+    "description": "Create an app to lock collateral onchain, transact offchain, then finalize onchain.",
+    "author": "Austin Griffith",
+    "authorGithub": "https://github.com/austintgriffith",
+    "tags": ["solidity", "smart contracts", "react", "nextjs", "wagmi", "javascript", "typescript", "frontend", "openzeppelin"],
+    "skillLevel": "intermediate",
+    "timeToRead": "60",
+    "lang": "en",
+    "publishDate": "04/24/2024"
+  },
+  {
+    "url": "https://github.com/scaffold-eth/se-2-challenges/tree/challenge-6-multisig",
+    "title": "Multisig wallet",
+    "description": "Deploy a multi-signature wallet where enough signatures are required to execute a transaction",
+    "author": "Austin Griffith",
+    "authorGithub": "https://github.com/austintgriffith",
+    "tags": ["solidity", "smart contracts", "react", "nextjs", "wagmi", "javascript", "typescript", "frontend", "openzeppelin", "signing"],
+    "skillLevel": "intermediate",
+    "timeToRead": "90",
+    "lang": "en",
+    "publishDate": "04/24/2024"
   }
 ]

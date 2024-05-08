@@ -4,7 +4,7 @@ description: Este tutorial describe como acuñar un NFT en la cadena de bloques 
 author: "Sumi Mudgil"
 tags:
   - "ERC-721"
-  - "Alchemy"
+  - "alchemy"
   - "solidity"
   - "contratos inteligentes"
 skill: beginner
@@ -314,9 +314,9 @@ mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 
 Ahora, ejecute `node scripts/mint-nft.js` para implementar su NFT. Después de un par de segundos, debería aparecer una respuesta como esta en su terminal:
 
-    El hash de tu transacción es: 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
+    The hash of your transaction is: 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
     
-    ¡Revisa el Mempool de Alchemy para ver el estado de tu transacción!
+    Check Alchemy's Mempool to view the status of your transaction!
 
 A continuación, visite su [zona de espera de Alchemy](https://dashboard.alchemyapi.io/mempool) para ver el estado de su transacción (ya sea que esté pendiente, haya sido minada o desechada por la red). Si su transacción se cuelga, también es útil comprobar [Sepolia Etherscan](https://sepolia.etherscan.io/) y buscar el hash de su transacción.
 
