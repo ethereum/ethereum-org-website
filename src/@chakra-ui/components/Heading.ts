@@ -2,14 +2,13 @@ import { defineStyleConfig } from "@chakra-ui/react"
 
 import { headingDefaultTheme } from "./components.utils"
 
-const HEADING_SIZES = ["3xl", "2xl", "xl", "lg", "md", "sm", "xs"] as const
+const HEADING_SIZES = ["2xl", "xl", "lg", "md", "sm", "xs"] as const
 
 type SCALE_VALUE = string | [string, null, null, string]
 
 type SIZE_SCALE = { [key in (typeof HEADING_SIZES)[number]]: SCALE_VALUE }
 
 const lineHeightScale: SIZE_SCALE = {
-  "3xl": ["6xs", null, null, "5xs"],
   "2xl": "4xs",
   xl: ["2xs", null, null, "4xs"],
   lg: "2xs",
@@ -19,7 +18,6 @@ const lineHeightScale: SIZE_SCALE = {
 }
 
 const fontSizeScale: SIZE_SCALE = {
-  "3xl": ["5xl", null, null, "6xl"],
   "2xl": ["4xl", null, null, "5xl"],
   xl: ["3xl", null, null, "4xl"],
   lg: ["2xl", null, null, "3xl"],
