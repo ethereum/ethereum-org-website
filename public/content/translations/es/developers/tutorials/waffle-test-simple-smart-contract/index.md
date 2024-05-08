@@ -4,7 +4,7 @@ description: Tutorial para principiantes
 author: Ewa Kowalska
 tags:
   - "contratos inteligentes"
-  - "Solidity"
+  - "solidity"
   - "Waffle"
   - "pruebas"
 skill: beginner
@@ -194,10 +194,10 @@ it("Reverts when Vei amount uneven", async () => {
 
 Si la prueba sale bien, nos garantizará que se ha revertido la transacción. Sin embargo, también debe haber una coincidencia exacta entre los mensajes que hemos enviado en la declaración `require` y el mensaje que esperamos en `revertedWith`. Si regresamos al código del contrato EtherSplitter, en la declaración `require` para la cantidad de wei, proporcionamos el mensaje: «no se permite una cantidad impar de wei». Esto coincide con el mensaje que esperamos en nuestra prueba. Si no coinciden, será que la prueba ha salido mal.
 
-# Enhorabuena! {#congratulations}
+# ¡Felicitaciones! {#congratulations}
 
 ¡Acabas de dar tu primer gran paso para probar los contratos inteligentes con Waffle! Puede que también te interesen otros tutoriales de Waffle:
 
 - [Probar ERC20 con Waffle](/developers/tutorials/testing-erc-20-tokens-with-waffle/)
 - [Waffle: Llamadas dinámicas de simulación y prueba de contratos](/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/#gatsby-focus-wrapper)
-- [Tutorial de Waffle "Hola, Mundo" con hardhat y ethers](/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/)
+- [Tutorial de Waffle "Hola, Mundo" con hardhat y ethers](/developers/tutorials/waffle-hello-world-with-buidler-tutorial/)

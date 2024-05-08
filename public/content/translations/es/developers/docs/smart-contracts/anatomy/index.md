@@ -282,19 +282,19 @@ contract Token {
         // `requiere` es una estructura de control utilizada para hacer cumplir ciertas condiciones.
         // Si una instrucción `require` evalúa a `falso`, se activa una excepción,
         // la cual revierte todos los cambios realizados en el estado durante la llamada actual.
-        // Más información: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // Sólo el propietario del contrato puede llamar a esta función
+        // Only the contract owner can call this function
         require(msg.sender == owner, "You are not the owner.");
 
-        // Impone una cantidad máxima de tokens
+        // Enforces a maximum amount of tokens
         require(amount < 1e60, "Maximum issuance exceeded");
 
-        // Aumenta el saldo del `receiver` en `amount`.
+        // Increases the balance of `receiver` by `amount`
         balances[receiver] += amount;
     }
 
-    // Envía una cantidad de tokens existentes de cualquier llamante a una dirección.
+    // Sends an amount of existing tokens from any caller to an address.
     function transfer(address receiver, uint amount) public {
         // El remitente debe tener suficientes tokens para enviar
         require(amount <= balances[msg.sender], "Insufficient balance.");
@@ -627,10 +627,10 @@ https://docs.openzeppelin.com/contracts/3. /api/math#SafeMath
         uint256 size;
         // Currently there is no better way to check if there is a contract in an address
         // than to check the size of the code at that address.
-        // En https://ethereum.stackexchange.com/a/14016/36603
-        // podrás consultar más detalles sobre cómo funciona esto.
-        // TODO Verifica esto de nuevo antes de el lanzamiento de Serenity, porque todas las direcciones serán
-        // contratos entonces.
+        // See https://ethereum.stackexchange.com/a/14016/36603
+        // for more details about how this works.
+        // TODO Check this again before the Serenity release, because all addresses will be
+        // contracts then.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)

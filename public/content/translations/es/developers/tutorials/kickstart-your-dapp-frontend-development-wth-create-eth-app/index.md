@@ -65,7 +65,7 @@ Una vez tenga un subgrafo, este le permitirá escribir una sencilla consulta en 
 
 ### Apollo {#apollo}
 
-Gracias a la integración con [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), puedes integrar fácilmente el grafo en tu dapp de React. Especialmente al usar [hooks de React y Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), obtener datos es tan sencillo como escribir una única consulta GraphQL en su componente:
+Gracias a la integración con [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), puedes integrar fácilmente el grafo en tu dapp de React. Especialmente al usar [ganchos de React y Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), obtener datos es tan sencillo como escribir una única consulta GraphQL en su componente:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

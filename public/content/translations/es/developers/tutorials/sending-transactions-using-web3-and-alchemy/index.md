@@ -13,7 +13,7 @@ source: Documentos de Alchemy
 sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 ---
 
-Esta es un guia apta para principiantes sobre cómo enviar transacciones de Ethereum usando la Web3. Existen tres pasos esenciales para enviar una transacción a la blockchain de Ethereum: crear, firmar y emitir. Explicaremos los tres pasos y esperamos responder a cualquier duda que puedas tener. En este tutorial, usaremos [Alchemy](https://www.alchemy.com/) para enviar nuestras transacciones a la red de Ethereum. Puede [crear una cuenta de Alchemy aquí](https://auth.alchemyapi.io/signup).
+Esta es un guia apta para principiantes sobre cómo enviar transacciones de Ethereum usando la Web3. Hay tres pasos esenciales para enviar una transacción a la cadena de bloques de Ethereum, que son: crear, firmar y emitir. Explicaremos los tres pasos y esperamos responder a cualquier duda que puedas tener. En este tutorial, usaremos [Alchemy](https://www.alchemy.com/) para enviar nuestras transacciones a la red de Ethereum. Puede [crear una cuenta de Alchemy aquí](https://auth.alchemyapi.io/signup).
 
 **NOTA:** Esta guía es para firmar sus transacciones en el _backend_ para su aplicación. Si quiere integrar la firma de sus transacciones en el frontend, consulte[Integrar Web3 con un proveedor de navegador](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider).
 
