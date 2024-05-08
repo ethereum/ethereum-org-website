@@ -58,11 +58,12 @@ Különféle szervezetek számtalan együttműködésen alapuló erőfeszítést
 
 ### Termékek és szolgáltatások {#products-and-services}
 
+- [4EVERLAND](https://www.4everland.org/) - _ API-okat, RPC szolgáltatásokat és eszközöket kínál decentralizált alkalmazások működtetésére és az Ethereumon való decentralizált tároláshoz_
 - [Alchemy](https://www.alchemy.com/) - _API-szolgáltatásokat és -eszközöket szolgáltat az Ethereum alkalmazások fejlesztéséhez és monitorozásához_
 - [Blast](https://blastapi.io/) - _egy API-platform, amely RPC/WSS API-okat biztosít az Ethereum archív főhálózathoz és a teszthálózatokhoz._
 - [Blockapps](https://blockapps.net/) - _a vállalati Ethereum-protokoll, az eszközkészlet és az API-ok implementációja, melyek a STRATO platformot alkotják_
 - [Chainstack](https://chainstack.com/) - _az Ethereum főhálózatára és teszthálózataira biztosít infrastruktúrát, amelyet nyilvános és elkülönített vevői felhőkben hosztol_
-- [ConsenSys](https://consensys.net/) - _számos terméket és eszközt kínál az Ethereum fejlesztésére, valamint tanácsadási és egyedi fejlesztési szolgáltatásokat nyújt_
+- [ConsenSys](https://consensys.io/) - _számos terméket és eszközt kínál az Ethereum fejlesztésére, valamint tanácsadási és egyedi fejlesztési szolgáltatásokat nyújt_
 - [Envision Blockchain](https://envisionblockchain.com/) - _az Ethereum főhálózatra szakosodott, vállalati fókuszú, tanácsadási és fejlesztési szolgáltatásokat nyújt_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) - _beszerzési munkafolyamatot biztosít, melynek során ajánlatbekéréseket (RFQ), szerződéseket, rendeléseket és számlákat bocsát ki az Ön megbízható üzleti partnereiből álló hálózatán keresztül_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _egy vállalati fókuszú, nyílt forráskódú Ethereum-kliens Apache 2.0 licensszel fejlesztve és Java nyelven írva_
@@ -110,27 +111,24 @@ Az alábbiakban néhány olyan vállalati alkalmazást talál, amelyeket a nyilv
 
 - A [Tinlake](https://tinlake.centrifuge.io/) _követelések finanszírozását végzi tokenizált valós eszközökön keresztül, mint például a számlák, jelzálogok vagy műsorszolgáltatási jogdíjak_
 - A [RealT](https://realt.co/) _révén a befektetők a világ minden részéről vásárolhatnak az amerikai ingatlanpiacon a szabályozásnak megfelelő, tokenizált résztulajdont._
-- Az [AgroToken](https://agrotoken.io/en/) _mezőgazdasági anyagokat tokenizál és kereskedik velük_
+- Az [AgroToken](https://agrotoken.io/en/home) _mezőgazdasági anyagokat tokenizál és kereskedik velük_
 - A [Fasset](https://www.fasset.com/) _egy platform a fenntartható infrastruktúráért_
 
 ### Adatok notarizációja {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _a véglegesített hitelek adatait hash-elik és a főhálózaton rögzítik_
-- [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _az adatok sértetlenségét úgy biztosítja, hogy az indexált adatok hash-eit rendszeresen a főhálózatra írja_
-- [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _Olaszország legnagyobb hírügynöksége, amely küzdelmet hirdetett az álhírek ellen, és lehetővé teszi az olvasók számára, hogy úgy ellenőrizzék a hírek eredetét, hogy a főhálózatra rögzíti azokat_
-- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _naplózza a sajtóközleményeket az Ethereumon a vállalati elszámoltathatóság és bizalom biztosítása érdekében_
+- [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _Olaszország legnagyobb hírügynöksége az álhírek ellen küzd, és lehetővé teszi az olvasók számára, hogy a hírek eredetét a főhálózaton történő rögzítéssel ellenőrizzék_
+- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _Naplózza a sajtóközleményeket az Ethereumon a vállalati elszámoltathatóság és bizalom biztosítása érdekében_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _az órák származását és javítási történetét rögzíti az Ethereumon_
 - [EthSign](https://ethsign.xyz/) _feljegyezi az Ethereum-blokkláncra az aláírt elektronikus dokumentumokat_
 
 ### Ellátási lánc {#supply-chain}
 
-- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _Fuvarlevél- és okmánytovábbítási szolgáltató_
 - A [Morpheus.network](https://morpheus.network/) _egy ellátásilánc-automatizálási platform, amely egy privát láncokból és a notarizált adatokat tartalmazó Ethereum főhálózatból álló hibridet vezetett be, és olyan cégek használják, mint a kanadai élelmiszer-, olaj- és gázelosztó Federated Co-op Ltd. vagy az argentin kisállateledel-gyártó Vitalcan_
 - [Minespider](https://www.minespider.com/) _ellátási lánc nyomon követése_
 - [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _egy beszerzési munkafolyamatot biztosít a cégek számára, melynek során ajánlatbekéréseket (RFQ), szerződéseket, rendeléseket és számlákat bocsát ki az Ön megbízható üzleti partnereiből álló hálózatán keresztül_
 - [Treum](https://treum.io/) _átláthatóságot, nyomonkövethetőséget és kereskedési lehetőséget biztosít ellátási láncoknak blokklánc-technológia használatával_
 - [TradeTrust](https://www.tradetrust.io/) _az elektronikus fuvarleveleket (eBLs) ellenőrzi a nemzetközi szállításban_
-- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _NFT-ket készít minden egyes új tétel sörhöz, ami nagyobb átláthatóságot és hatékonyságot tesz lehetővé az ellátási láncban_
 
 ### Biztosítás {#insurance}
 

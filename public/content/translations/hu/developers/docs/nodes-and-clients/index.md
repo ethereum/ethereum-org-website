@@ -1,222 +1,276 @@
 ---
 title: Csomópontok és kliensek
-description: Egy áttekintő az Ethereum csomópontokról és kliens szoftverekről, valamint egy csomópont felállításának menetéről és hogy miért is érdemes.
+description: Áttekintés az Ethereum csomópontokról (node) és kliens szoftverekről, valamint egy csomópont felállításának menetéről, és hogy miért érdemes sajátot működtetni.
 lang: hu
 sidebarDepth: 2
-isOutdated: true
 ---
 
-Ahhoz, hogy az Ethereum decentralziáltan tudjon működni, egy elosztott csomópontokból álló hálózatra van szüksége, mely blokkokat és tranzakciós adatokat tud érvényesíteni. Egy kliensnek nevezett alkalmazásra van szükséged az eszközödön, hogy egy csomópontot "futtass".
+Az Ethereum számítógépekből (ún. csomópontokból) álló elosztott hálózat, amelyen a számítógépek a blokkok és tranzakciós adatok hitelesítésére képes szoftvert futtatnak. A szoftver futtatása teszi a felhasználó számítógépét Ethereum-csomóponttá. A csomóponthoz két különálló szoftverre, vagyis kliensre van szükség.
 
 ## Előfeltételek {#prerequisites}
 
-Érdemes tisztában lenned a decentralizált hálózat fogalmával, mielőtt belemélyednél és futtatnád a saját Ethereum kliens példányodat. Nézd meg a [bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/) cikket.
+Mielőtt mélyebbre merülne, és megkezdené a saját Ethereum-kliensének működtetését, javasoljuk, hogy ismerje meg a közvetítőmentes (peer-to-peer) hálózatok koncepcióját és az[Ethereum Virtális Gép (EVM) alapjait](/developers/docs/evm/). Tekintse meg a [Bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/) című cikket.
+
+Ha Önnek újdonság a csomópontok témaköre, akkor azt javasoljuk, először tekintse meg az [Ethereum-csomópont futtatása](/run-a-node) című felhasználóbarát ismertetőnket.
 
 ## Mik azok a csomópontok és kliensek? {#what-are-nodes-and-clients}
 
-A "csomópont" egy szoftverre utal, melyet kliensnek hívunk. Egy kliens egy Ethereum implementáció, mely hitelesíti az összes tranzakciót az egyes blokkokban, így a hálózat biztonságos marad az adatok pedig pontosak.
+„Csomópont” minden olyan Ethereum-kliensszoftver-példány, amely más – szintén Ethereum-szoftvert futtató – számítógépek hálózatához kapcsolódik. A kliens az Ethereum egy implementációja, amely adatok hitelesítését végzi a protokollszabályok alapján, és fenntartja a hálózat biztonságát. A csomópontnak két klienst kell futtatnia: konszenzusos és végrehajtási kliens.
 
-Valós idejű látványt kaphatsz az Ethereum hálózatról, ha megnézed a [csomópontok térképét](https://etherscan.io/nodetracker).
+- A végrehajtási kliens (más néven végrehajtási motor, EL-kliens vagy korábbi nevén Eth1-kliens) a hálózatban terjesztett új tranzakciókat figyeli, végrehajtja őket az EVM-ben, és tárolja az összes aktuális Ethereum-adat legutolsó állapotát és adatbázisát.
+- A konszenzusos kliens (más néven Beacon-csomópont, CL-kliens vagy korábbi nevén Eth2-kliens) feladata a proof-of-stake konszenzusalgoritmus végrehajtása, amely lehetővé teszi, hogy a hálózat a végrehajtási kliens validált adatai alapján megegyezésre jusson. Létezik egy harmadik szoftver is, a validátor, amelyet a konszenzusok klienshez lehet hozzáadni, így az adott csomópont részt vehet a hálózat biztosításában.
 
-Valamennyi [Ethereum kliens implementáció](/developers/docs/nodes-and-clients/#execution-clients) létezik különböző nyelveken. Ami közös van ezekben az implementációkban, hogy mindegyikük egy formális specifikációt követ. Ez a specifikáció mondja ki, hogyan működik az Ethereum hálózat és a blokklánc.
+Ezek a kliensek együtt dolgoznak azon, hogy az Ethereum-hálózat legfrissebb állapotát kövessék, és lehetővé tegyék a felhasználók számára, hogy interakcióba lépjenek a hálózattal. Az egymással együttműködő szoftverrészekből álló moduláris felépítés neve [bennfoglalt komplexitás (encapsulated complexity)](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Ez a megközelítés lehetővé tette, hogy [az egyesítés (Merge)](/roadmap/merge) hibátlanul végbemehessen, a kliensszoftvereket könnyebb legyen karbantartani és fejleszteni, továbbá az egyéni klienseket újra lehet hasznosítani, például a [2. blokkláncrétegben](/layer-2/).
 
-![Eth1x kliens](./client-diagram.png) Az Ethereum kliens funkciók egyszerűsített diagramja.
+![Összekapcsolt végrehajtási és konszenzusos kliensek](./eth1eth2client.png) Az összekapcsolt végrehajtási és konszenzusos kliens egyszerűsített ábrája.
 
-## Csomópont típusok {#node-types}
+### Kliensdiverzitás {#client-diversity}
 
-Ha saját csomópontot akarsz futtatni, akkor fontos megértened, hogy vannak különböző típusú csomópontok, amelyek eltérően fogyasztják az adatokat. Valójában a kliensek 3 különböző típusú csomópontot futtathatnak - kis méretű (light), teljes (full) és archív. Különböző szinkronizálási stratégiák is rendelkezésre állnak, amelyek gyorsabb szinkronizálási időt tesznek lehetővé. A szinkronizálás arra utal, hogy milyen gyorsan tudja elérni a legfrissebb információkat az Ethereum állapotáról.
+A [ végrehajtási klienseket](/developers/docs/nodes-and-clients/#execution-clients) és a [ konszenzusos klienseket](/developers/docs/nodes-and-clients/#consensus-clients) számos különböző programnyelvben fejlesztették ki a különféle csapatok.
 
-### Teljes csomópont {#full-node}
+A többféle kliensimplementáció erősebbé teheti a hálózatot azáltal, hogy nem függ szorosan egyetlen programkódtól. A cél a sokszínűség elérése anélkül, hogy bármelyik kliens dominálná a hálózatot, így el lehet kerülni az egyetlen hibapont lehetőségét. A nyelvek változatossága szélesebb fejlesztői közösséget is vonz, és lehetővé teszi, hogy az általuk előnyben részesített nyelven integrációt hajtsanak végre.
 
-- A teljes blokklánc adatot tárolja.
-- Részt vesz a blokk validációban, hitelesíti az összes blokkot és állapotot.
-- Az összes állapot levezethető egy teljes csomópontból.
-- A hálózatot szolgálja ki, és kérésre adatot szolgáltat.
+Tudjon meg többet a [kliensdiverzitásról](/developers/docs/nodes-and-clients/client-diversity/).
 
-### Kis méretű csomópont {#light-node}
+Az implementációk közös vonása, hogy egyazon specifikációt követik. Ez a specifikáció diktálja, hogyan működik az Ethereum-hálózat és a blokklánc. Minden technikai részlet ki van dolgozva, a specifikációkat pedig itt találhatja:
 
-- A fejléc láncot tárolja, minden mást lekérdez.
-- Hitelesíteni tudja az adat érvényességét az állapot gyökérhez képest a blokk fejlécekben.
-- Hasznos alacsony kapacitású eszközök esetében, mint a beágyazott eszközök vagy mobil eszközök, amelyek nem tudnak több gigabájtnyi blokklánc adatot tárolni.
+- Eredetileg az [Ethereum Sárga Könyvében](https://ethereum.github.io/yellowpaper/paper.pdf), vagyis műszaki alaptanulmányában.
+- [Végrehajtási specifikációk](https://github.com/ethereum/execution-specs/)
+- [Konszenzusspecifikációk](https://github.com/ethereum/consensus-specs)
+- [EIP-ek](https://eips.ethereum.org/), amelyeket a különböző [ hálózatfrissítések](/history/) során vezettek be
+
+### Csomópontok követése a hálózatban {#network-overview}
+
+Az Ethereum-hálózat csomópontjairól számos trekker biztosít valós idejű adatokat. Megjegyzendő, hogy a decentralizált hálózatok jellege miatt ezek a letapogatók (crawler) csak korlátozott rálátást tudnak nyújtani a hálózatra, és eltérő eredményeket jelenthetnek.
+
+- [Csomóponttérkép](https://etherscan.io/nodetracker), készítette: Etherscan
+- [Ethercsomópontok](https://ethernodes.org/), készítette: Bitfly
+- [Ethereum-csomópont-letapogató](https://crawler.ethereum.org/)
+- [Nodewatch](https://www.nodewatch.io/), készítette: Chainsafe, konszenzuscsomópontok letapogatása
+
+## Csomóponttípusok {#node-types}
+
+Ha [ saját csomópontot akar futtatni](/developers/docs/nodes-and-clients/run-a-node/), akkor fontos megértenie, hogy különböző típusú csomópontok léteznek, amelyek adathasználata eltérő. A kliensek valójában három különböző típusú csomópontot futtathatnak: könnyű (light), teljes (full) és archív (archive). Különböző szinkronizálási stratégiák is elérhetők, amelyek rövidebb szinkronizálási időt tesznek lehetővé. A szinkronizálás arra utal, hogy milyen gyorsan tudja elérni a csomópont az Ethereum legfrissebb státuszát.
+
+### Teljes csomópont (full node) {#full-node}
+
+A teljes csomópontok a blokklánc egymást követő blokkjait validálják, melyhez letöltik és ellenőrzik a blokk tartalmát és az adat státuszát minden egyes blokkra. A teljes csomópontoknak több fajtája létezik, néhány a kezdetektől indul, a genezis blokktól, és a blokklánc teljes történetét validálja blokkonként. Mások az ellenőrzést egy későbbi blokktól indítják, melynek érvényességében megbíznak (pl. a Geth-féle, pillanatfelvételen alapuló szinkronizálás). Függetlenül az ellenőrzés kezdőpontjától, a teljes csomópontok csak a legutóbbi adatokat (általában az utolsó 128 blokkot) tárolják, az ennél régebbieket törlik, hogy ne foglaljon annyi helyet. A régebbi adatot újra elő lehet állítani, amikor szükséges.
+
+- A blokkláncadatokat teljeskörűen tárolja (habár ezt időről időre megrövidíti a rendszer, tehát a teljes csomópont sem tárolja az összes állapotadatot a genezisig visszamenőleg).
+- Részt vesz a blokkvalidációban, hitelesíti az összes blokkot és állapotot.
+- A teljes csomópont minden státuszt elő tud hívni a lokális tárhelyéről vagy újra tudja generálni a pillanatképekből.
+- Kiszolgálja a hálózatot, és kérésre adatszolgáltatást nyújt.
 
 ### Archív csomópont {#archive-node}
 
-- Tárolja mindazt, ami a teljes csomóponton van, és archívumot épít a történelmi állapotokról. Akkor van rá szükség, ha valami olyasmit szeretnél lekérdezni, mint egy számla egyenleg a #4,000,000.-dik blokkban.
-- Ezek az adatok terabájtnyi egységeket képviselnek, ami az archív csomópontokat kevésbé teszi vonzóvá az átlagos felhasználók számára, de hasznos lehet olyan szolgáltatások számára, mint a blokkfelfedezők, a pénztárca forgalmazói és a láncelemzések.
+Az archív csomópontok olyan teljes csomópontok, melyek minden blokkot ellenőriznek a genezis óta, és nem törölnek semmilyen letöltött adatot.
 
-A kliensek szinkronizálása az archívum kivételével bármilyen módban hiányos blokklánc adatokat eredményez. Ez azt jelenti, hogy a teljes történelmi állapotról nincs archívum, de a teljes csomópont igény szerint képes felépíteni őket.
+- Tárolja mindazt, ami a teljes csomóponton van, és archívumot épít a múltbeli állapotokból. Akkor van rá szükség, ha például valaki le akar kérni egy számlaegyenleget a 4 000 000. blokknál, vagy nyomon követést alkalmazva egyszerűen és gyorsan le akarja tesztelni a saját tranzakcióit anélkül, hogy kibányászná őket.
+- Ezek az adatok terabájtnyi egységeket képviselnek, emiatt az archív csomópontok kevésbé vonzók az átlagfelhasználók számára, de hasznos lehet az olyan szolgáltatóknak, mint a blokkfelfedezők, a tárcaforgalmazók és a blokkláncelemzők.
 
-## Miért kellene egy Ethereum csomópontot futtatnom? {#why-should-i-run-an-ethereum-node}
+A kliensek szinkronizálása az archív kivételével minden módban részleges blokkláncadatokat eredményez. Ez azt jelenti, hogy nincs egy összes múltbeli státusszal rendelkező archívum, de igény esetén a teljes csomópont képes felépíteni azt.
 
-A csomópont futtatása lehetővé teszi az Ethereum bizalom nélküli és privát használatát, miközben támogatod az ökoszisztémát.
+Tudjon meg többet az [archív csomópontokról](/developers/docs/nodes-and-clients/archive-nodes).
 
-### Az előnyök neked {#benefits-to-you}
+### Könnyű csomópont {#light-node}
 
-A saját csomópont futtatása lehetővé teszi az Ethereum valóban privát, önellátó és bizalom nélküli használatát. Nem kell megbíznod a hálózatban, mert az adatokat saját magad is ellenőrizheted a klienseddel. A "Ne bízz benne, hanem hitelesítsd" egy népszerű blokklánc mantra.
+A teljes blokkok letöltése helyett a könnyű csomópontok csak a blokkfejléceket töltik le. Ezek a fejlécek összegző információkat hordoznak a blokkok tartalmáról. A könnyű csomópont a szükséges egyéb információkat egy teljes csomóponttól kéri le. A könnyű csomópont ezután független módon hitelesítheti a kapott adatokat a blokkfejlécben található állapot-gyökérhash értékek alapján. A könnyű csomópontok segítségével a felhasználók a teljes csomópontok futtatásához elengedhetetlen erős hardver és nagy sávszélesség nélkül is részt vehetnek az Ethereum hálózatában. Végül a könnyű csomópontok mobiltelefonokon vagy beágyazott eszközökön is futtathatók lesznek. A könnyű csomópontok nem vesznek részt a konszenzusban (tehát nem lehetnek bányászok/validátorok), de ugyanolyan funkcionalitással és biztonsági garanciákkal férhetnek hozzá az Ethereum-blokklánchoz, mint egy teljes csomópont.
 
-- A csomópontod önállóan ellenőrzi az összes tranzakciót és blokkot, mely ellentmond a konszenzus szabályoknak. Ez azt jelenti, hogy nem kell semmilyen más csomópontra támaszkodnod a hálózatban vagy teljesen megbíznod bennük.
-- Nem kell a címeidet és az egyenlegeidet véletlenszerű csomópontokra szivárogtatnod. Minden ellenőrizhető a saját klienseddel.
-- A dappod biztonságosabb és privátabb lehet, ha saját csomópontot használsz. A [MetaMask](https://metamask.io), a [MyEtherWallet](https://myetherwallet.com) és néhány másik tárcát egyszerűen átirányíthatsz a helyi csomópontodra.
+A könnyű kliensek az Ethereum aktív fejlesztési területei közé tartoznak, és hamarosan új könnyű kliensek megjelenésére számítunk a konszenzusréteg és a végrehajtási réteg számára. A könnyűkliens-adatok nyújtásának további potenciális útvonala lehet a [ pletykahálózat (gossip network)](https://www.ethportal.net/). Ez előnyös, mivel a pletykahálózat képes támogatni a könnyű csomópontok hálózatát anélkül, hogy a teljes csomópontoknak kellene adatot szolgáltatniuk.
 
-![Hogyan férhetsz hozzá az Ethereumhoz az alkalmazásoddal és a csomópontoddal](./nodes.png)
+Az Ethereum még nem támogatja a könnyű csomópontok nagy tömegeit, de számítani lehet rá, hogy ezek támogatása a közeljövőben gyorsan fejlődik majd. Különösen a [Nimbus](https://nimbus.team/), a [Helios](https://github.com/a16z/helios) és a [LodeStar](https://lodestar.chainsafe.io/) kliensek fejlesztenek aktívan a könnyű csomópontok területén.
+
+## Miért futtassak Ethereum csomópontot? {#why-should-i-run-an-ethereum-node}
+
+Egy csomópont futtatása lehetővé teszi, hogy Ön közvetlenül, bizalomigény nélkül és privát módon használhassa az Ethereumot, miközben a hálózatot támogatva fokozza annak szilárdságát és decentralizációját.
+
+### Milyen előnyökkel jár ez Önnek? {#benefits-to-you}
+
+A saját csomópont futtatása lehetővé teszi az Ethereum valóban privát, önálló és bizalomigény nélküli használatát. Önnek nem kell bíznia a hálózatban, mivel az adatokat saját maga is ellenőrizheti a kliensén keresztül. A „Nem kell megbíznia senkiben. Csak ellenőrizni” egy népszerű blokkláncmantra.
+
+- A csomópontja önállóan hitelesíti az összes tranzakciót és blokkot a konszenzusszabályoknak megfelelően. Ez azt jelenti, hogy nem kell a hálózat egyetlen más csomópontjára sem támaszkodnia, sem teljesen megbíznia bennük.
+- Saját csomópontjához használhat egy Ethereum-tárcát. Biztonságosabban és diszkrétebben használhatja a dappokat, mivel nem kell kiadnia a címét és az egyenlegét közvetítőknek. Mindent ellenőrizhet a saját kliensével. A [MetaMask](https://metamask.io), a [Frame](https://frame.sh/)és [ számos egyéb tárca](/wallets/find-wallet/) kínál RPC-importálást, amely lehetővé teszi számukra az Ön csomópontjának használatát.
+- Más olyan szolgáltatásokat is futtathat vagy végezhet saját hatáskörben, amelyek az Ethereum adataira támaszkodnak. Ilyen lehet például egy Beaconlánc-validátor, egy második blokkláncréteg szoftvere, infrastruktúra, blokkfelfedezők, fizetésfeldolgozó alkalmazások stb.
+- Ön saját egyéni [RPC-végpontokat](/developers/docs/apis/json-rpc/) is kínálhat. Ezeket a végpontokat felajánlhatja nyilvánosan a közösségnek is, hogy ezzel is elkerüljék a nagy, centralizált szolgáltatókat.
+- A csomópontjához a **folyamaton belüli kommunikációk (IPC)** mechanizmusával csatlakozhat, vagy átírhatja a csomópontját, hogy a saját programját töltse be pluginként. Ez rövid késleltetést tesz lehetővé, ami nagyon fontos, ha például valaki web3 könyvtárak használatával dolgoz fel nagy mennyiségű adatot, vagy amikor a lehető leggyorsabban ki kell cserélnie tranzakcióit (például frontrunning esetén).
+- Közvetlenül letétbe helyezhet ETH-t, ezzel biztosítja a hálózatot és jutalmakat szerez. A kezdéshez tekintse meg az [önálló letétbe helyezésről](/staking/solo/) szóló oldalunkat.
+
+![Hogyan férhet hozzá az Ethereumhoz az alkalmazásával és a csomópontjával](./nodes.png)
 
 ### Hálózati előnyök {#network-benefits}
 
-A csomópontok sokfélesége fontos az Ethereum egészsége, biztonsága és működési rugalmassága szempontjából.
+A csomópontok sokfélesége fontos az Ethereum egészsége, biztonsága és működési ellenálló képessége szempontjából.
 
-- Kis méretű csomópontok számára szolgáltatnak blokklánc adatokat, melyek tőlük függnek. Magas használati csúcsok esetén elegendő teljes csomópontnak kell lennie a kis méretű csomópontok szinkronizálásához. A kis méretű csomópontok nem tárolják az egész blokkláncot, ehelyett az adatait hitelesítik a [blokk fejlécekben lévő állapot gyökereken](/developers/docs/blocks/#block-anatomy) keresztül. További információkat kérhetnek a blokkokról, ha szükségük van rá.
-- A teljes csomópontok betartatják a proof-of-work konszenzus szabályait, így nem lehet őket becsapni olyan blokkok elfogadására, amelyek nem követik őket. Ez extra biztonságot nyújt a hálózatnak, mert ha az összes csomópont kis méretű csomópont lenne, amelyek nem végeznek teljes ellenőrzést, a bányászok megtámadhatnák a hálózatot, és adott esetben magasabb jutalommal rendelkező blokkokat hozhatnának létre.
+- A teljes csomópontok betartatják a konszenzusszabályokat, így nem lehet őket becsapni és rávenni szabálytalan blokkok elfogadására. Ez extra biztonságot nyújt a hálózatnak, mert ha az összes csomópont könnyű csomópont lenne, amelyek nem végeznek teljes ellenőrzést, akkor a validátorok megtámadhatnák a hálózatot.
+- Ha egy támadás legyűri a [proof-of-stake](/developers/docs/consensus-mechanisms/pos/#what-is-pos) mechanizmus kriptogazdaság-védelmi rendszerét, akkor a teljes csomópontok a becsületes lánc követése mellett szavazva közösségi visszaállítást hajthatnak végre.
+- Ha több csomópont van a hálózatban, az sokszínűbb és szilárdabb hálózatot eredményez, ami a decentralizáció végső célja, és megteremti a cenzúrával szemben ellenálló és megbízható rendszer lehetőségét.
+- A teljes csomópontok hozzáférést biztosítanak a blokkláncadatokhoz a könnyű kliensek számára, melyek ettől függenek. A könnyű csomópontok nem tárolják az egész blokkláncot, ehelyett az adatokat a [blokkfejlécekben található státuszgyökerek](/developers/docs/blocks/#block-anatomy) alapján ellenőrzik. Szükség esetén további információkat is kérhetnek a blokkokról a teljes csomópontoktól.
 
-Ha teljes csomópontot futtatsz, az egész Ethereum hálózat profitál belőle.
+Ha valaki egy teljes csomópontot futtat, akkor az az egész Ethereum-hálózat számára előnyös, még ha nem is működtet azon validátort.
 
 ## Saját csomópont üzemeltetése {#running-your-own-node}
 
-### Projektek {#projects}
+Szeretne saját Ethereum-klienst futtatni?
 
-[**Válassz ki egy klienst, és kövesd az utasításokat**](#kliensek)
+A kezdők számára is könnyen érthető bevezetőért látogasson el a [Csomópont futtatása](/run-a-node) oldalunkra.
 
-**ethnode -** **_Üzemeltess egy Ethereum csomópontot (Geth vagy Parity) lokális fejlesztéshez._**
-
-- [GitHub](https://github.com/vrde/ethnode)
-
-**DAppNode -** **_Egy operációs rendszer web3 csomópontok futtatására egy dedikált gépen, beleértve az Ethereumot is._**
-
-- [dappnode.io](https://dappnode.io)
-
-### Erőforrások {#resources}
-
-- [Running Ethereum Full Nodes: A Complete Guide](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _Nov 7, 2019 - Justin Leroux_
-- [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoeden_
-- [How To Install & Run a Geth Node](https://www.quiknode.io/guides/infrastructure/how-to-install-and-run-a-geth-node) _Oct 4, 2020 - Sahil Sen_
-- [How To Install & Run a OpenEthereum (fka. Parity) Node](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _Sept 22, 2020 - Sahil Sen_
+Ha Ön jártas a technológiában, akkor további részleteket és lehetőségeket talál arra vonatkozóan, hogyan [pörgesse fel saját csomópontját](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Alternatívák {#alternatives}
 
-A saját csomópont futtatása nehéz lehet, és nem mindig kell saját példányt futtatnod. Ebben az esetben használhatod egy harmadik fél API szolgáltatását, mint az [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), vagy a [QuikNode](https://www.quiknode.io). Alternatívaként használhatod az [ArchiveNode-ot](https://archivenode.io/), ami egy közösség által finanszírozott archív csomópont, mely archív adatot fog szolgáltatni az Ethereum blokkláncról független fejlesztőknek, akik egyébként nem engedhetnék meg ezt maguknak.
+A saját csomópont felállítása idő- és erőforrásigényes lehet, de nem minden esetben szükséges saját példányt futtatnia. Ekkor használhat egy harmadik fél által biztosított API-t (alkalmazásprogramozási felület). Ezen szolgáltatások használatának áttekintéséhez nyissa meg a [Csomópontok mint szolgáltatás](/developers/docs/nodes-and-clients/nodes-as-a-service/) című bejegyzésünket.
 
-Ha valaki egy Ethereum csomópontot futtat egy nyilvános API-jal a közösségedben, akkor át tudod irányítani a könnyű tárcákat (mint a MetaMask) erre a közösségi csomópontra [egy egyedi RPC-n keresztül](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) és nagyobb fokú adatvédelemben részesülhetsz.
+Ha az Ön közösségében valaki nyilvános API-val futtat egy Ethereum-csomópontot, akkor egy egyedi RPC-n keresztül átirányíthatja a tárcáit erre a közösségi csomópontra, így nagyobb fokú adatvédelemben részesülhet, mintha egy véletlenszerűen kiválasztott, harmadik félben bízna meg.
 
-Másrészt, ha klienst futtatsz, megoszthatod azokat barátaiddal, akiknek szüksége lehet rá.
+Ugyanakkor, ha Ön klienst üzemeltet, akkor megoszthatja azokkal a barátaival, akiknek szüksége lehet rá.
 
-## Kliensek {#execution-clients}
+## Végrehajtási kliensek {#execution-clients}
 
-Az Ethereumot úgy tervezték, hogy különböző kliensekkel rendelkezzen, amelyeket különféle csapatok fejlesztettek ki különböző programozási nyelvek felhasználásával. Ez erősebbé és sokszínűbbé teszi a hálózatot. Az ideális cél a sokszínűség elérése anélkül, hogy egy kliens dominálna és a hiba lehetőséget a lehető legkisebbre szűkítsük.
+Az Ethereum-közösség több nyílt forráskódú végrehajtási klienst (korábbi nevén „Eth1-kliens”, vagy egyszerűen „Ethereum-kliens”) tart fent, amelyeket különböző csapatok különböző programnyelveken hoztak létre. Ez erősebbé és [sokszínűvé](/developers/docs/nodes-and-clients/client-diversity/) teszi a hálózatot. A cél a sokszínűség elérése anélkül, hogy bármelyik kliens dominálna, így el lehet kerülni az egyetlen hibapont lehetőségét.
 
-Ez a táblázat összegezi a különböző klienseket. Az összesen aktívan dolgoznak, karbantartják és mind átment a [kliens teszteken](https://github.com/ethereum/tests).
+Ez a táblázat összefoglalja a különböző klienseket. Ezek mindegyike megfelel a [klienstesztnek](https://github.com/ethereum/tests), és aktívan karbantartják őket, hogy naprakészek legyenek a hálózati frissítések tekintetében.
 
-| Kliens                                                       | Nyelv    | Operációs rendszerek  | Hálózatok                                     | Szinkronizációs stratégiák | Állapot elhagyás    |
-| ------------------------------------------------------------ | -------- | --------------------- | --------------------------------------------- | -------------------------- | ------------------- |
-| [Geth](https://geth.ethereum.org/)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten              | Gyors, teljes              | Archív, csökkentett |
-| [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten, és még több          | Warp, teljes               | Archív, csökkentett |
-| [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, és még több | Gyors, teljes              | Archív, csökkentett |
-| [Besu](https://besu.hyperledger.org/en/stable/)              | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, és Görli           | Gyors, teljes              | Archív, csökkentett |
-| [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS          | Mainnet, Görli, Ropsten, és még több          | Full, Beam, Fast/Header    | Archív              |
+| Kliens                                                                   | Nyelv      | Operációs rendszerek  | Hálózatok                 | Szinkronizációs stratégiák                | Állapot elhagyás    |
+| ------------------------------------------------------------------------ | ---------- | --------------------- | ------------------------- | ----------------------------------------- | ------------------- |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap, Full                                | Archív, megvágott   |
+| [Nethermind](http://nethermind.io/)                                      | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap (kiszolgálás nélkül), gyors, teljes  | Archív, csökkentett |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Pillanatfelvételen alapuló, gyors, teljes | Archív, csökkentett |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Teljes                                    | Archív, csökkentett |
+| [Reth](https://github.com/paradigmxyz/reth) _(béta)_                     | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Teljes                                    | Archív, megvágott   |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(béta)_ | TypeScript | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap, Full, Light                         |                     |
 
-További információkért a támogatott hálózatokról olvasd el az [Ethereum hálózatok](/developers/docs/networks/) cikket.
 
-### A különböző implementációk előnyei {#advantages-of-different-implementations}
+A támogatott hálózatokkal kapcsolatos további információkért olvassa el az [Ethereum-hálózatok](/developers/docs/networks/) című cikket.
 
-Minden kliens egyedi felhasználási esetekkel és előnyökkel rendelkezik, ezért a saját preferenciáid alapján válassz egyet. A sokféleség lehetővé teszi, hogy a megvalósítások különféle jellemzőkre és felhasználói közönségre összpontosuljanak. Előfordulhat, hogy a klienseket a szolgáltatások, a támogatás, a programozási nyelv vagy a licencek alapján választod ki.
+Minden kliens egyedi felhasználási esetekkel és előnyökkel rendelkezik, ezért a saját preferenciái alapján válasszon közülük. A sokféleség lehetővé teszi, hogy az implementációk különféle szolgáltatásokra és felhasználói közönségekre koncentráljanak. Előfordulhat, hogy a klienseket a szolgáltatások, a támogatás, a programozási nyelv vagy a licencek alapján választja ki.
 
-#### Go Ethereum {#geth}
+### Besu {#besu}
 
-A Go Ethereum (röviden Geth) az egyik eredeti Ethereum protokoll implementáció. Jelenleg ez a legelterjedtebb kliens a legnagyobb felhasználói bázissal és sokféle eszközzel a felhasználók és a fejlesztők számára. Go-ban van írva, teljesen nyílt forráskódú és a GNU LGPL v3 licensz alatt fut.
+íA Hyperledger Besu egy vállalati szintű Ethereum-kliens a nyilvános és engedélyhez kötött hálózatokhoz. Az Ethereum-főhálózat összes szolgáltatását támogatja, a nyomon követéstől a GraphQL-ig, kiterjedt felügyeleti funkciót kínál, és a ConsenSys támogatja, mind a nyílt közösségi csatornákon, mind a vállalkozások számára elérhető kereskedelmi SLA-k révén. Java nyelven íródott, és az Apache 2.0 licenc alatt fut.
 
-#### OpenEthereum {#openethereum}
+A Besu részletes [dokumentációja](https://besu.hyperledger.org/en/stable/) az összes funkció és beállítás tekintetében tájékoztatást nyújt.
 
-Az OpenEthereum egy gyors, funkcióban gazdag és fejlett CLI alapú Ethereum kliens. Úgy lett kialakítva, hogy biztosítsa a gyors és megbízható szolgáltatások alapvető infrastruktúráját, amelyek gyors szinkronizálást és maximális üzemidőt igényelnek. Az OpenEthereum célja, hogy a leggyorsabb, legkönnyebb és a legbiztonságosabb Ethereum klienssé váljon. Egy tiszta, moduláris kódbázist biztosít:
+### Erigon {#erigon}
 
-- egyszerű módosíthatóság.
-- könnyű integráció a szolgáltatásokba vagy termékekbe.
-- minimális memória és tárhely lábnyom.
+Az Erigon – korábbi nevén Turbo-Geth – a Go Ethereum elágazásaként indult el a sebességre és a hatékony tárhelyhasználatra fókuszálva. Az Erigon az Ethereum teljesen újraépített implementációja, mely jelenleg Go nyelven elérhető, de más programozási nyelven is lehet majd implementálni. Az Erigon célja egy gyorsabb, modulárisabb és optimalizáltabb Ethereum-implementáció megteremtése. Kevesebb mint 3 nap alatt képes egy 2 TB tárhelyet használó, teljes archív csomópont szinkronizációját elvégezni.
 
-Az OpenEthereumot a legmodernebb Rust programozási nyelv használatával fejlesztették ki, és a GPLv3 licenc alatt áll.
+### Go Ethereum {#geth}
 
-#### Nethermind {#nethermind}
+A Go Ethereum (röviden Geth) az Ethereum protokoll egyik eredeti implementációja. Jelenleg ez a legelterjedtebb kliens a legnagyobb felhasználói bázissal és sokféle eszközzel a felhasználók és a fejlesztők számára. Go nyelven van írva, teljesen nyílt forráskódú, és a GNU LGPL v3 licenc alatt fut.
 
-A Nethermind egy Ethereum implementáció, amelyet a C # .NET tech stackkel hoztak létre, és amely minden nagyobb platformon fut, beleértve az ARM-et is. Magas teljesítményt nyújt:
+További információkat a Geth [dokumentációjában](https://geth.ethereum.org/docs/) talál.
 
-- egy optimizált virtuális géppel
-- állapot eléréssel
-- hálózati és gazdag tulajdonságokkal, mint a Prometheus/Graphana dashboard-ok, seq vállalati logolási támogatás, JSON RPC nyomon követés, és analitikai plugin-ek.
+### Nethermind {#nethermind}
 
-Ezenkívül a Nethermind egy [részletes dokumentációval](https://docs.nethermind.io) rendelkezik, valamint erős fejlesztői támogatással és egy 24/7-es támogatással a prémium tagok részére.
+A Nethermind egy Ethereum-implementáció, amelyet a C# .NET tech stackkel hoztak létre az LGPL-3.0 licenc alatt, és minden nagyobb platformon fut, beleértve az ARM-et is. Nagyszerű teljesítményt nyújt:
 
-#### Besu {#besu}
+- egy optimizált virtuális géppel;
+- állapoteléréssel;
+- networkinggel és sokféle funkcióval, mint a Prometheus/Graphana irányítópultok, seq vállalati naplózási támogatás, JSON RPC nyomon követés és analitikai pluginek.
 
-A Hyperledger Besu egy vállalati szintű Ethereum kliens nyilvános és engedélyhez kötött hálózatokhoz. Az Ethereum főhálózat összes funkcióját támogatja, a nyomon követéstől a GraphQL-ig, átfogó felügyelettel rendelkezik, és a ConsenSys támogatja, mind a nyílt közösségi csatornákon, mind a vállalkozások számára elérhető kereskedelmi SLA-k révén. Java nyelven íródott és az Apache 2.0 licensz alatt fut.
+Ezenkívül a Nethermind [részletes dokumentációval](https://docs.nethermind.io), erős fejlesztői támogatással és online közösséggel is rendelkezik, valamint nonstop támogatással a prémium felhasználók részére.
 
-### Szinkronizációs módok {#sync-modes}
+## Konszenzusos kliensek {#consensus-clients}
 
-- Teljes - letölti az összes blokkot (beleértve a fejléceket, a tranzakciókat és a nyugtákat), és minden blokk végrehajtásával fokozatosan generálja a blokklánc állapotát.
-- Gyors (alapértelmezett) - letölti az összes blokkot (beleértve a fejléceket, a tranzakciókat és a nyugtákat is), ellenőrzi az összes fejlécet, letölti az állapotot és ellenőrzi a fejlécekhez képest.
-- Light - letölti az összes blokkfejlécet, blokk adatot, és véletlenszerűen ellenőriz néhányat.
-- Warp sync - 5000 blokkonként a csomópontok konszenzuskritikus snapshotot készítenek az adott blokk állapotáról. Bármely csomópont be tudja tölteni ezeket a snapshotokat a hálózaton keresztül, lehetővé téve a gyors szinkronizálást. [Többet a Warp-ról](https://openethereum.github.io/wiki/Warp-Sync-Snapshot-Format)
-- Beam sync - olyan szinkronizálási mód, amely lehetővé teszi a gyorsabb haladást. Nem igényel hosszú várakozást a szinkronizálásnál, ehelyett idővel visszatölti az adatokat. [Többet a Beam-ről](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
-- Header sync - megbízható ellenőrző ponttal kezdheted a szinkronizálást egy újabb fejlécből, majd egy háttér folyamat betölti idővel a hiányosságokat
+Többféle konszenzusos kliens (korábbi nevén „Eth2” kliens) is létezik, amely támogatja a [ konszenzusfrissítéseket](/roadmap/beacon-chain/). Ezek felelnek az összes konszenzushoz kapcsolódó logikáért, beleértve az elágazásalgoritmust, a tanúsítások feldolgozását, valamint a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) jutalmak és büntetések kezelését.
 
-Te határozod meg, hogy milyen módban szinkronizáljon, amikor felállítod:
+| Kliens                                                        | Nyelv      | Operációs rendszerek  | Hálózatok                                                    |
+| ------------------------------------------------------------- | ---------- | --------------------- | ------------------------------------------------------------ |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Pyrmont, Sepolia, Ropsten stb.         |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten stb.                  |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten stb.                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten stb. |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Sepolia, Ropsten stb.          |
 
-**Light szinkronizálás beállítása a [GETH-ben](https://geth.ethereum.org/)**
+### Lighthouse {#lighthouse}
 
-`geth --syncmode "light"`
+A Lighthouse egy konszenzusos kliens-implementáció, amelyet Rust nyelven írtak, és az Apache-2.0 licenc alatt adták ki. Fenntartója a Sigma Prime, és a Beacon lánc létrejötte óta stabil és szabadon használható. Különböző vállalkozások, letéti alapok és magánszemélyek támaszkodnak rá. Célja a biztonságos, nagy teljesítményű és interoperábilis működés számos különböző környezetben, az asztali számítógépektől egészen a kifinomult, automatizált rendszerekig.
 
-**Header sync beállítása Trinity-ben**
+A dokumentációt a [Lighthouse Book](https://lighthouse-book.sigmaprime.io/) tartalmazza
 
-`trinity --sync-from-checkpoint eth://block/byhash/0xa65877df954e1ff2012473efee8287252eee956c0d395a5791f1103a950a1e21?score=15,835,269,727,022,672,760,774`
+### Lodestar {#lodestar}
 
-## Hardver {#hardware}
+A Lodestar egy szabadon használható konszenzusoskliens-implementáció, amelyet TypeScript nyelven írtak, és az LGPL-3.0 licenc alatt adták ki. A fenntartója a ChainSafe Systems, és az önálló letétbe helyezőknek, fejlesztőknek és kutatóknak készült legújabb konszenzusos kliens. A Lodestar egy Beacon-csomópontból és egy validátorkliensből áll, amely az Ethereum-protokollok JavaScript implementációival működik. A Lodestar célja az Ethereum használhatóbbá tétele a könnyű kliensek felhasználói számára, a hozzáférés kiterjesztése egy szélesebb fejlesztői körre, és hogy hozzájáruljon az ökoszisztéma sokszínűségéhez.
 
-A hardverkövetelmények kliensenként eltérőek, de általánosságban nem magasak, mivel a csomópontoknak szinkronban kell lenniük. Nem összekeverendő a bányászattal, aminek sokkal magasabb számításteljesítmény-igénye van. Ámbár a szinkronizációs idő és teljesítmény erősebb hardverrel javul. Igénynek megfelelően, Ethereum futhat saját számítógépen, otthoni szerveren, virtuális privát szervereken, vagy akár a felhőben is.
+További információ a [Lodestar webhelyünkön](https://lodestar.chainsafe.io/) található
 
-Egy egyszerű módja a saját csomópont futtatásának például egy 'plug and play' doboz: [DAppNode](https://dappnode.io/). Ez egy hardvert biztosít hogy klienseket és alkalmazásokat futtassunk, ettől függően egy egyszerű kezelőfelülettel.
+### Nimbus {#nimbus}
 
-### Követelmények {#requirements}
+A Nimbus egy konszenzusos kliens-implementáció, amelyet Nim nyelven írtak, és az Apache-2.0 licenc alatt adták ki. Ez egy szabadon használható kliens, amelyet önálló letétbe helyezők és letéti alapok használnak. A Nimbust erőforráshatékony rendszernek tervezték, emiatt a korlátozott erőforrásokkal rendelkező eszközökön és a vállalati szintű infrastruktúrákon egyaránt könnyű futtatni anélkül, hogy a stabilitást vagy a jutalmat szerző teljesítményt veszélyeztetné. A kisebb erőforráslábnyom azt jelenti, hogy nagy hálózati terheltség mellett nagyobb a kliens biztonsági zónája.
 
-Mielőtt telepítenénk egy klienst, győződjünk meg róla, hogy a számítógépünk rendelkezik elegendő erőforrással. Minimális és ajánlott követelményeket lejjeb találjuk, azonban a tárhely kulcsfontosságú. Az Ethereum blokklánc szinkronizálása nagyon input/output igényes. A legjobb, ha SSD-vel (solid-state-drive) rendelkezünk. Az Ethereum kliens futtatásához merevlemezen (HDD), legalább 8GB RAM szükséges, mint gyorsítótár.
+További információ a [Nimbus-dokumentációban](https://nimbus.guide/) található
 
-#### Minimális követelmények {#recommended-specifications}
+### Prysm {#prysm}
 
-- Processzor 2+ maggal
-- Minimum 4GB RAM SSD esetén, egyébként 8GB+
-- 8MBit/s sávszélesség
+A Prysm egy teljes körű funkciókat kínáló, nyílt forráskódú konszenzusos kliens, amelyet Go nyelven írtak, és a GPL-3.0 licenc alatt adták ki. Opcionális webalkalmazási felhasználói felületet kínál, előtérbe helyezi a felhasználói élményt, a dokumentációt és a konfigurálhatóságot az otthoni letétbe helyezők és az intézményi felhasználók számára is.
 
-#### Ajánlott követelmények {#recommended-specifications}
+További információkért tekintse meg a [Prysm-dokumentációt](https://docs.prylabs.network/docs/getting-started/).
 
-- Gyors processzor 4+ maggal
-- 16GB+ RAM
-- Gyors SSD legalább 500GB tárhellyel
-- 25+ MBit/s sávszélesség
+### Teku {#teku}
 
-Attól függően hogy melyik szoftvert és szinkronizációs módot használjuk, több száz GB tárhelyre lesz szükség. Körülbelüli értékeket lásd lent.
+A Teku a Beacon lánc egyik eredeti geneziskliense. A szokásos célok (biztonság, szilárdság, stabilitás, használhatóság, teljesítmény) mellett a Teku külön célként tűzte ki, hogy teljes mértékben megfeleljen a különböző konszenzusoskliens-szabványoknak.
 
-| Kliens       | Tárhely (gyors szinkron) | Tárhely (teljes archívum) |
-| ------------ | ------------------------ | ------------------------- |
-| Geth         | 400GB+                   | 4.7TB+                    |
-| OpenEthereum | 280GB+                   | 4.6TB+                    |
-| Nethermind   | 200GB+                   | 3TB+                      |
-| Besu         | 750GB+                   | 4TB+                      |
+A Teku nagyon rugalmas alkalmazási opciókat kínál. A Beacon-csomópont és a validátorkliens egyetlen folyamatként együtt is futtatható, ami rendkívül kényelmes az önálló letétbe helyezők számára, illetve a csomópontok a kifinomult letéti műveletek érdekében külön is futtathatók. Emellett a Teku teljesen kompatibilis a [Web3Signer](https://github.com/ConsenSys/web3signer/) rendszerrel az aláírásikulcs-biztonság, valamint a súlyos és kizárással járó büntetés (slashing) elkerülése érdekében.
 
-A fenti értékek mutatják hogy mindig változik a tárhelykövetelmény. A lehető legfrissebb adatokat a Geth-ről és a Parityről lásd itt: [Teljes szinkronizációs adat](https://etherscan.io/chartsync/chaindefault) és [Archívált szinkronizációs adat](https://etherscan.io/chartsync/chainarchive).
+A Teku Java nyelven íródott és az Apache 2.0 licenc alatt fut. A ConsenSys Protocols csapata fejleszti, amely a Besu és a Web3Signer fejlesztője is. További információk a [Teku-dokumentációban](https://docs.teku.consensys.net/en/latest/) találhatók.
 
-### Ethereum egy egykártyás számítógépen {#ethereum-on-a-single-board-computer}
+## Szinkronizálási módok {#sync-modes}
 
-A lehető legkényelmesebb és legegyszerűbb módja egy Ethereum csomópont futtatásának ha egykártyás számítógépet használunk ARM architektúrával, mint mondjuk egy Raspberry Pi. [Ethereum ARM-en](https://twitter.com/EthereumOnARM) találunk képeket Geth Parity, Nethermind és Besu kliensekről. Egy egyszerű leírás arról, hogy [hogyan telepítsünk egy ARM klienst](/developers/tutorials/run-node-raspberry-pi/).
+Ahhoz, hogy az Ethereum-kliens az aktuális adatokat kövesse és hitelesítse a hálózaton, szinkronizálnia kell a legfrissebb hálózati státusszal. Ez úgy történik, hogy adatokat tölt le többi klienstől, kriptográfiailag ellenőrzi azok integritását, és felépít egy helyi blokkláncadatbázist.
 
-A kicsi, olcsó, és hatékony eszközök mint ezek ideálisak egy otthoni csomópont futtatására.
+A szinkronizálási módok ennek a folyamatnak a különböző megközelítéseit képviselik eltérő kompromisszumokkal. A kliensek a szinkronizálási algoritmusok végrehajtásában is különböznek. A végrehajtással kapcsolatos konkrétumokról mindig a választott kliens hivatalos dokumentációjából tájékozódjon.
 
-## Eth2 kliensek {#consensus-clients}
+### A végrehajtási réteg szinkronizálási módjai {#execution-layer-sync-modes}
 
-Az [Eth2 fejlesztéseket](/roadmap/beacon-chain/) új kliensek támogatják. A Beacon Chain-nen fognak futni és az új [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) konszenzus mechanizmust fogják támogatni.
+#### Teljes archívum szinkronizálása {#full-sync}
+
+A teljes szinkronizálás letölti az összes blokkot (beleértve a fejléceket, a tranzakciókat és a visszaigazolásokat is), és a genezistől kezdve a blokkok végrehajtásával lépésenként legenerálja a blokklánc státuszát.
+
+- Minimalizálja a bizalomigényt, és a tranzakciók hiánytalan ellenőrzésével a legmagasabb fokú biztonságot garantálja.
+- A tranzakciók növekvő száma miatt az összes tranzakció feldolgozása napokat vagy akár heteket is igénybe vehet.
+
+#### Teljes, pillanatfelvételen alapuló (snap) szinkronizálás {#snap-sync}
+
+A pillanatfelvételen alapuló szinkronizálás blokkonként végez ellenőrzést, ahogy egy teljes archív szinkronizálás is, de nem a genezisblokktól kezdi, hanem egy azt követő, megbízható ellenőrzési ponton, ami valóban része a blokkláncnak. A csomópont elmenti a periodikus ellenőrzési pontokat, miközben törli az adatokat, melyek egy bizonyos időpontnál régebbiek. Ezek a pillanatfelvételek kellenek az adatok újragenerálásához, amikor arra szükség van, így nem kell azokat örökre tárolni.
+
+- A leggyorsabb szinkronizálási stratégia, jelenleg az alapértelmezett mód az Ethereum-főhálózaton
+- A biztonság feláldozása nélkül takarít meg nagy lemezterületet és sávszélességet
+
+[A snap szinkronizálásról bővebben](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+
+#### Könnyű szinkronizálás (light sync) {#light-sync}
+
+A könnyű szinkronizálás letölti az összes blokkfejlécet és blokkadatot, és véletlenszerűen ellenőriz néhányat. Csak a lánc végét szinkronizálja a megbízható ellenőrző ponttól kezdve.
+
+- Csak a legutolsó állapotot hívja le, és megbízik a fejlesztőkben és a konszenzusmechanizmusban.
+- A kliens néhány percen belül készen áll arra, hogy az aktuális hálózati állapottal használják.
+
+**Megjegyzés**: A proof-of-stake Ethereum-hálózatán még nem működik a könnyű szinkronizálás, ennek új verziói nemsokára használhatóak lesznek!
+
+[Bővebben a könnyű kliensekről](/developers/docs/nodes-and-clients/light-clients/)
+
+### A konszenzusréteg szinkronizálási módjai {#consensus-layer-sync-modes}
+
+#### Optimista szinkronizálás {#optimistic-sync}
+
+Az optimista szinkronizálás egy Merge utáni szinkronizálási stratégia, amelynek célja az opt-in és a visszamenőleges kompatibilitás megvalósítása, lehetővé téve, hogy a végrehajtási pontok a már bejáratott módszerekkel végezhessék a szinkronizálást. A végrehajtási motor _ optimista módon_ képes a beacon blokkokat importálni azok teljes körű ellenőrzése nélkül, megtalálni a legújabb fejlécet, majd a fenti módszerekkel megkezdeni a lánc szinkronizálását. Majd miután a végrehajtási kliens behozta a lemaradást, értesíti a konszenzusos klienst a Beacon láncon található tranzakciók érvényességéről.
+
+[Az optimista szinkronizálásról bővebben](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+
+#### Ellenőrzésipont-alapú szinkronizálás {#checkpoint-sync}
+
+Az ellenőrzésipont-alapú vagy más néven „gyenge szubjektivitású” szinkronizálás első osztályú felhasználói élményt nyújt a Beacon-csomópont szinkronizálásához. A [gyenge szubjektivitás](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) feltevésein alapul, ami lehetővé teszi, hogy a kliens a Beacon láncot a genezis helyett egy közelmúltbeli, gyenge szubjektivitású ellenőrzési ponttól kezdve szinkronizálja. Ez jelentősen lerövidíti a kezdeti szinkronizálás idejét ahhoz hasonló bizalmi feltevések mellett, mintha a [genezistől](/glossary/#genesis-block) kezdve szinkronizálnánk.
+
+A gyakorlatban ez azt jelenti, hogy a csomópontunk egy távoli szolgáltatóhoz kapcsolódva a közelmúltban véglegesített állapotokat tölt le, majd attól a ponttól kezdve folytatja az adatok hitelesítését. Az adatokat szolgáltató harmadik fél bizalmat igényel, ezért körültekintően kell kiválasztani.
+
+Az [ ellenőrzésipont-alapú szinkronizálásról](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice) bővebben
 
 ## További olvasnivaló {#further-reading}
 
-Az interneten rengeteg utasítás és információ található az Ethereum kliensekről, itt van néhány ami hasznos lehet.
+Az interneten sok információ található az Ethereum-kliensekről. Következzen néhány forrás, amely hasznos lehet.
 
-- [Ethereum 101 - Part 2 - Understanding Nodes](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 2019 Február 13._
-- [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 2019 November 7._
-- [Analyzing the hardware requirements to be an Ethereum full validated node](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 2018 Szeptember 24._
-- [Running a Hyperledger Besu Node on the Ethereum Mainnet: Benefits, Requirements, and Setup](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 2020 Május 7._
+- [Ethereum-alapismeretek – 2. rész – A csomópontok megértése](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 2019. február 13._
+- [Teljes csomópontok futtatása az Ethereumon: Útmutató az alig motivált felhasználók számára](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 2019. november 7._
 
 ## Kapcsolódó témák {#related-topics}
 
@@ -225,4 +279,4 @@ Az interneten rengeteg utasítás és információ található az Ethereum klien
 
 ## Kapcsolódó útmutatók {#related-tutorials}
 
-- [Alakítsd át a Raspberry Pi 4-edet egy Eth 1.0 vagy egy Eth 2.0 csomóponttá csak a MicroSD kártya flashelésével - Telepítési útmutató](/developers/tutorials/run-node-raspberry-pi/) _– Flasheld a Raspberry Pi 4-et, csatlakoztass egy ethernet kábelt, csatlakoztasd az SSD-t, és kapcsold be az eszközt, hogy a Raspberry Pi 4 teljes Ethereum 1.0 vagy Ethereum 2.0 csomópontokká (beacon chain / validátor) váljon._
+- [Alakítsa át a Raspberry Pi 4-et validátor-csomóponttá pusztán a MicroSD kártya előkészítésével – Telepítési útmutató](/developers/tutorials/run-node-raspberry-pi/) _– Készítse fel a Raspberry Pi 4-et, csatlakoztasson egy Ethernet-kábelt, csatlakoztassa az SSD-t, és kapcsolja be az eszközt, hogy a Raspberry Pi 4 teljes Ethereum-csomóponttá váljon a végrehajtási rétegen (fő hálózat) és/vagy a konszenzusrétegen (Beacon lánc/validátor)._

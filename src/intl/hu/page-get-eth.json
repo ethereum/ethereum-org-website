@@ -11,7 +11,7 @@
   "page-get-eth-community-safety": "Közösségi posztok a biztonságról",
   "page-get-eth-description": "Az Ethereumot nem irányítja semmilyen szervezet – teljesen decentralizált.",
   "page-get-eth-dex": "Decentralizált tőzsdék (DEX-ek)",
-  "page-get-eth-dex-desc": "Ha nagyobb kontrollt szeretne, akkor vásároljon ETH-t okosszerződéssel. A DEX-ekkel úgy kereskedhet digitális eszközökkel, hogy nem adja át a kontrollt a vagyona felett egy centralizált vállalatnak.",
+  "page-get-eth-dex-desc": "Ha nagyobb kontrollt szeretne, akkor vásároljon ETH-t <a href=\"/glossary/#smart-contract\">okosszerződéssel</a>. A DEX-ekkel úgy kereskedhet digitális eszközökkel, hogy nem adja át a kontrollt a vagyona felett egy centralizált vállalatnak.",
   "page-get-eth-peers": "Kapjon ETH-t más személyektől",
   "page-get-eth-peers-desc": "Amint rendelkezik Ethereum számlával, csak meg kell adnia a címét ahhoz, hogy ETH-t (és más tokeneket) küldjön és fogadjon peer-to-peer módon.",
   "page-get-eth-staking": "A letétbe helyezésből eredő jutalmak",

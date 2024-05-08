@@ -143,7 +143,7 @@ A blokkhoz szükséges munka kiszámításához használt DAG-ek halmazának lé
 def get_prevhash(n):
     from pyethereum.blocks import GENESIS_PREVHASH
     from pyethereum import chain_manager
-    if num <= 0:
+    if n <= 0:
         return hash_to_int(GENESIS_PREVHASH)
     else:
         prevhash = chain_manager.index.get_block_by_number(n - 1)
@@ -186,7 +186,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
         shifted_A = hash_output_A >> i
         transaction = shifted_A % len(list_of_transactions)
         txid_mix ^= list_of_transactions[transaction] << i
-    return txid_max ^ (nonce << 192)
+    return txid_mix ^ (nonce << 192)
 ```
 
 Sajnálatos módon, miközben a Hashimoto nagy RAM-igényű, 256 bites aritmetikán alapszik, ami jelentős számítási többletköltséggel jár. Ugyanakkor a Dagger-Hashimoto csak a legkevésbé szignifikáns 64 bitet használja az adathalmaz indexálására, hogy ezt a problémát kezelje.
@@ -256,7 +256,7 @@ Emellett érdemes megjegyezni, hogy a Dagger-Hashimoto a blokkfejlécre egyéb k
 
 ## További olvasnivaló {#further-reading}
 
-_Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt és add hozzá!_
+_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
 
 ## Függelék {#appendix}
 
