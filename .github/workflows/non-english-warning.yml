@@ -29,6 +29,7 @@ jobs:
           script: |
             const prNumber = context.issue.number;
             const repo = context.repo;
+            const prAuthor = context.payload.pull_request.user.login;
             await github.rest.issues.addLabels({
               ...repo,
               issue_number: prNumber,
@@ -37,7 +38,7 @@ jobs:
             await github.rest.issues.createComment({
               ...repo,
               issue_number: prNumber,
-              body: `Thank you for your contribution!
+              body: `Thank you for your contribution, @${prAuthor}!
               All updates to non-English content must be handled through Crowdin.
               We value your suggestion and request that you learn more about how to [help us translate](https://ethereum.org/en/contributing/translation-program/#help-us-translate), and suggest these updates directly in [our Crowdin project](https://crowdin.com/project/ethereum-org) where they can be properly reviewed.
               Please join [our Discord](https://ethereum.org/discord) if you have questions!`
