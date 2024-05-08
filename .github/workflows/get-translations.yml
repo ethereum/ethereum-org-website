@@ -41,13 +41,31 @@ jobs:
         run: |
           echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
 
-      # Build and prepare translations
+      # Build translations
       - name: Build Crowdin project
-        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/triggerBuild.ts
+        id: build-crowdin
+        run: |
+          OUTPUT=$(npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/triggerBuild.ts)
+          echo "$OUTPUT"
+        shell: bash
 
       - name: Await latest build to finish
-        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/awaitLatestBuild.ts
+        env:
+          BUILD_ID: ${{ steps.build-crowdin.outputs.buildId}}
+        run: |
+          OUTPUT=$(npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/awaitLatestBuild.ts)
+          echo "$OUTPUT"
+        shell: bash
 
+      - name: Check build success
+        run: |
+          if [ "${{ steps.build-crowdin.outputs.buildSuccess }}" = "false" ]; then
+            echo "Build timed out, exiting"
+            exit 1
+          fi
+        shell: bash
+
+      # Prepare bucket ids
       - name: Get latest translation bucket directory ids
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/getBucketDirectoryIds.ts
 
