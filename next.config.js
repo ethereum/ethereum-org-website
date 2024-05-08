@@ -38,6 +38,7 @@ module.exports = (phase, { defaultConfig }) => {
     images: {
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
     },
+    compress: false,
   }
 
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
