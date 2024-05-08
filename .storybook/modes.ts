@@ -1,38 +1,27 @@
-export const viewportModes = {
-  base: {
-    viewport: "base",
-  },
-  sm: {
-    viewport: "sm",
-  },
-  md: {
-    viewport: "md",
-  },
-  lg: {
-    viewport: "lg",
-  },
-  xl: {
-    viewport: "xl",
-  },
-  "2xl": {
-    viewport: "2xl",
-  },
-}
+import { baseLocales } from "./i18next"
+import { chakraBreakpointArray } from "./preview"
 
-export const langModes = {
-  en: {
-    locale: "en",
-  },
-  zh: {
-    locale: "zh",
-  },
-  ru: {
-    locale: "ru",
-  },
-  uk: {
-    locale: "uk",
-  },
-}
+export const viewportModes = chakraBreakpointArray.reduce<{
+  [mode: string]: { viewport: string }
+}>((arr, [token]) => {
+  return {
+    ...arr,
+    [token]: {
+      viewport: token,
+    },
+  }
+}, {})
+
+export const langModes = Object.keys(baseLocales).reduce<{
+  [locale: string]: { locale: string }
+}>((arr, curr) => {
+  return {
+    ...arr,
+    [curr]: {
+      locale: curr,
+    },
+  }
+}, {})
 
 type LangViewModeObj = {
   [key: string]: { viewport: string; locale: string }
