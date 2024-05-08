@@ -52,9 +52,9 @@ Here are the addresses to see the blobs posted by some famous rollups.
 
 |Rollup | Mailbox address |
 | ----- | - |
-| [Optimism](https://www.optimism.io/) | [`0xFF00000000000000000000000000000000000010`](https://blobscan.com/address/0xFF00000000000000000000000000000000000010)
-| [Arbitrum](https://arbitrum.io/) | [`0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6`](https://blobscan.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6)
-| [Base](https://base.org/) | [`0xFF00000000000000000000000000000000008453`](https://blobscan.com/address/0xFF00000000000000000000000000000000008453)
+| [Optimism](https://www.optimism.io/) | [`0xFF00000000000000000000000000000000000010`](https://blobscan.com/address/0xFF00000000000000000000000000000000000010) |
+| [Arbitrum](https://arbitrum.io/) | [`0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6`](https://blobscan.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6) |
+| [Base](https://base.org/) | [`0xFF00000000000000000000000000000000008453`](https://blobscan.com/address/0xFF00000000000000000000000000000000008453) |
 
 ## Calldata {#calldata}
 
@@ -79,7 +79,7 @@ Depending on your security tradeoffs, it might be acceptable to put the informat
 
 1. Post a [hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) of the data on the blockchain, called an *input commitment*. This can be a single 32-byte word, so it is not expensive. As long as the input commitment is available, integrity is assured because it's not feasible to find any other data that would hash to the same value. So if incorrect data is provided, it can be detected.
 
-2. Have a mechanism that ensures availability. For example, in [Redstone](https://redstone.xyz/docs/what-is-redstone) any node can submit an availability challenge. If the sequencer does not respond onchain by the deadline, the input commitment is discarded so the information is considered never to have been posted.
+2. Have a mechanism that ensures availability. For example, in [Redstone](https://redstone.xyz/docs/what-is-redstone) any node can submit an availability challenge. If the sequencer does not respond onchain by the deadline, the input commitment is discarded, so the information is considered never to have been posted.
 
 This is acceptable for an optimistic rollup because we are already relying on having at least one honest verifier for the state root. Such an honest verifier will also make sure it has the data to process blocks, and issue an availability challenge if the information is not available offchain.
 
@@ -90,7 +90,7 @@ Information that only needs to be written once, never gets overwritten, and need
 
 Other than the cost of memory expansion, `EXTCODECOPY` costs 2600 gas for the first access to a contract (when it is "cold") and 100 gas for subsequent copies from the same contract plus 3 gas per 32 byte word. Compared with calldata, which costs 15.95 per byte, this is cheaper starting at about 200 bytes. Based on [the formula for memory expansion costs](https://www.evm.codes/about#memoryexpansion), at long as you don't need more than 4MB of memory, the memory expansion cost is smaller than the cost of adding calldata.
 
-Of course, this is just the cost to *read* the data. To create the contract costs approximately 32,000 gas + 200 gas/byte. This method is only economical when the same information needs to be read a large number of times in different transactions.
+Of course, this is just the cost to *read* the data. To create the contract costs approximately 32,000 gas + 200 gas/byte. This method is only economical when the same information needs to be read many times in different transactions.
 
 Contract code can be nonsensical, as long as it doesn't start with `0xEF`. Contracts that start with `0xEF` are interpreted as [ethereum object format](https://notes.ethereum.org/@ipsilon/evm-object-format-overview), which has much stricter requirements. 
 
