@@ -49,7 +49,7 @@ sidebarDepth: 3
 
 ## サイドチェーンの長所と短所 {#pros-and-cons-of-sidechains}
 
-| 長所                                                                        | 短所                                                                      |
+| メリット                                                                      | デメリット                                                                   |
 | ------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | サイドチェーンの基盤技術は十分に確立されており、広範なリサーチおよび設計上の改善を経ています。                           | サイドチェーンでは、スケーラビリティを実現するためのトレードオフとして、分散化およびトラストレス性がある程度犠牲になります。          |
 | サイドチェーンは、全般的な計算をサポートし、EVM互換性を提供します（イーサリアムネイティブのDappが実行可能）。                | サイドチェーンでは、別個のコンセンサスメカニズムが用いられるため、イーサリアムによるセキュリティ保証を活用できません。             |
@@ -62,7 +62,7 @@ sidebarDepth: 3
 
 - [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
 - [Skale](https://skale.network/)
-- [Gnosis Chain（旧 xDai](https://www.gnosischain.com/)
+- [Gnosis Chain（旧 xDai）](https://www.gnosischain.com/)
 - [Loom Network](https://loomx.io/)
 - [Metis Andromeda](https://www.metis.io/)
 
@@ -70,4 +70,4 @@ sidebarDepth: 3
 
 - [サイドチェーンを用いてイーサリアムのDappにおけるスケーラビリティを実現する](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _2018年2月8日、ジョルジオス・コンスタントプロス作成。_
 
-_役に立つコミュニティリソースをご存知の場合は、 ページを編集して追加してください。_
+_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_

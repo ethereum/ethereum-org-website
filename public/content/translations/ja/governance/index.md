@@ -2,6 +2,7 @@
 title: イーサリアムのガバナンス
 description: イーサリアムに関する決定がどのように行われるかについてのご紹介
 lang: ja
+postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # イーサリアムのガバナンスの概要 {#introduction}
@@ -120,7 +121,7 @@ _注: どの個人もこれらのグループの複数に参加できます(た�
 
 The DAOフォークは、周到に脆弱性を突いた[2016年のThe DAO攻撃](https://www.coindesk.com/understanding-dao-hack-journalists)で360万ETH以上の[分散型自律組織(DAO)](/glossary/#dao)コントラクトが流出した事件を受けたものです。 このフォークにより、欠陥をもったコントラクトから新しいコントラクトに資金が転送され、ハッキングでETHを失った人が回収できるようになりました。
 
-この行動指針はイーサリアムコミュニティの投票で行われました。 ETH保有者は、 [投票プラットフォーム](http://v1.carbonvote.com/)でトランザクションを通じて投票することができました。 フォークの実行は、投票の85%以上に支持されました。
+この行動指針はイーサリアムコミュニティの投票で行われました。 Any ETH holder was able to vote via a transaction on [a voting platform](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). フォークの実行は、投票の85%以上に支持されました。
 
 ここで重要なのは、プロトコルがハッキングを元に戻すためにフォークしたものの、フォークを決定する際の投票の重要性については、いくつかの理由から議論の余地があるということです。
 

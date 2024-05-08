@@ -10,7 +10,7 @@ lang: ja
 
 **前提条件:**
 
-- 以下のチュートリアルから暗号ウォレットを持つこと:[Ethereumのアカウントを「登録」する方法](/guides/how-to-create-an-ethereum-account/)
+- チュートリアルに従って、暗号ウォレットを手に入れる:[イーサリアムのアカウントを「登録」する方法](/guides/how-to-create-an-ethereum-account/)
 - ウォレットに資金を追加する
 
 ## 1. 使用したいレイヤー2ネットワークを決定する
@@ -53,7 +53,7 @@ lang: ja
 <br />
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div>詳細をご希望の場合は、</div>
+  <div>さらに詳しく知りたいですか？</div>
   <ButtonLink to="/guides/">
     他のガイドを参照する
   </ButtonLink>
