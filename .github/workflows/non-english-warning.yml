@@ -3,9 +3,9 @@ name: Check for non-English updates outside of Crowdin
 on:
   pull_request:
     paths:
-      - "public/content/translations/**"
+      - "public/content/translations/**/*.md"
       - "src/intl/**/*.json"
-      - "!src/intl/en/**"
+      - "!src/intl/en/**
 
 jobs:
   check_branch_name:
