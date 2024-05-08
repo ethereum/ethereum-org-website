@@ -17,7 +17,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 En Solidity, los contratos inteligentes pueden envíar [eventos](/developers/docs/smart-contracts/anatomy/#events-and-logs). Las DApps o cualquier aplicación conectada a la API JSON-RPC de Ethereum, puede escuchar estos eventos y obrar según corresponda. El evento también puede indexarse, para que el historial de eventos se pueda buscar más adelante.
 
-## Eventos {#events}
+## Events {#events}
 
 El evento más común en la cadena de bloques de Ethereum en el cierre de redacción de este artículo es el evento de transferencia que emiten los tókenes ERC20 cuando alguien transfiere tókenes.
 

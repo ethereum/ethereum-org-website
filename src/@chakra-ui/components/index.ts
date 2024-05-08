@@ -1,3 +1,4 @@
+import { Accordion } from "./Accordion"
 import { Alert } from "./Alert"
 import { Avatar } from "./Avatar"
 import { Badge } from "./Badge"
@@ -5,7 +6,6 @@ import { Breadcrumb } from "./Breadcrumb"
 import { Button } from "./Button"
 import { Checkbox } from "./Checkbox"
 import {
-  accordionDefaultTheme,
   closeButtonDefaultTheme,
   codeDefaultTheme,
   dividerDefaultTheme,
@@ -31,7 +31,7 @@ import { Text } from "./Text"
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  Accordion: accordionDefaultTheme,
+  Accordion,
   Alert,
   Avatar,
   Badge,

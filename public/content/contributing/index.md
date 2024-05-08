@@ -68,6 +68,8 @@ Before contributing, make sure you're familiar with:
 - our [style guide](/contributing/style-guide/)
 - our [code of conduct](/community/code-of-conduct)
 
+<ContributorsQuizBanner mt={16} mb={8} />
+
 ## How decisions about the site are made {#how-decisions-about-the-site-are-made}
 
 Decisions about individual PRs, design evolution and major upgrades are made by a team from across the Ethereum ecosystem. This team includes project managers, developers, designers, marketing and communications, and subject matter experts. Community input informs every decision: so please raise questions in issues, submit PRs, or contact the team:

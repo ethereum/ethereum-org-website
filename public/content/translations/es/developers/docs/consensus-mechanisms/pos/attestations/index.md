@@ -1,5 +1,5 @@
 ---
-title: Certificaciones
+title: Atestaciones
 description: Una descripción de las certificaciones sobre la prueba de participación de Ethereum.
 lang: es
 ---
@@ -50,9 +50,15 @@ El ciclo de vida de la certificación se describe en el siguiente esquema:
 
 ## Recompensas {#rewards}
 
-Se recompensa a los validadores por presentar certificaciones. La recompensa de certificación depende de dos variable: la `recompensa de base` y el `retraso de inclusión`. El mejor caso para el retraso de inclusión es que sea igual a 1.
+Se recompensa a los validadores por presentar certificaciones. La recompensa de la certificación depende de las banderas de participación (fuente, objetivo y cabeza), la recompensa base y la tasa de participación.
 
-`attestation reward = 7/8 x base reward x (1/inclusion delay)`
+Cada una de las banderas de participación puede ser verdadera o falsa, dependiendo de la certificación presentada y de su retraso en la inclusión.
+
+La mejor situación se produce cuando las tres banderas son ciertas, en cuyo caso un validador ganaría (por bandera correcta):
+
+`recompensa += recompensa base * peso de la bandera * tasa de atestación de la bandera / 64`
+
+La tasa de certificación de la bandera se mide utilizando la suma de los saldos efectivos de todos los validadores de certificación para la bandera dada, en comparación con el saldo efectivo del activo total.
 
 ### La recompensa de base {#base-reward}
 
@@ -78,9 +84,9 @@ Hay 16 agregadores por época en total. Además, los validadores aleatorios se s
 
 Tenga en cuenta que en algunos casos un agregador afortunado también puede convertirse en el proponente de bloques. Si la certificación no se incluyó porque el proponente del bloque ha desaparecido, el siguiente proponente del bloque elegiría la certificación añadida y la incluiría en el siguiente bloque. Sin embargo, el **retraso de la inclusión** aumentará un valor.
 
-## Más lecturas {#further-reading}
+## Más información {#further-reading}
 
 - [Certificaciones en la especificación de consenso anotada de Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
-- [Certificaciones en eth2book.info](https://eth2book.info/altair/part3/containers/dependencies#attestationdata)
+- [Certificaciones en eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
-_¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._
+_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._

@@ -273,7 +273,7 @@ Además, no siempre es posible que los verificadores de programas determinen si 
 - [GitHub](https://github.com/ConsenSys/mythril-classic)
 - [Documentación](https://mythril-classic.readthedocs.io/en/develop/)
 
-## Para mayor información {#further-reading}
+## Más información {#further-reading}
 
 - [Cómo funciona la verificación formal de los contratos inteligentes](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
 - [Cómo la verificación formal puede garantizar contratos inteligentes sin errores](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)

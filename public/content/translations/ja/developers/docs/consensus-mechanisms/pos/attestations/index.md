@@ -87,6 +87,6 @@ lang: ja
 ## 参考文献 {#further-reading}
 
 - [Vitalikのコンセンサス仕様（注釈付）におけるアテステーションの説明](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
-- [eth2book.infoにおけるアテステーションの説明](https://eth2book.info/altair/part3/containers/dependencies#attestationdata)
+- [eth2book.infoにおけるアテステーションの説明](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
-_役に立つコミュニティリソースをご存知の場合は、 このページを編集して追加してください。_
+_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_

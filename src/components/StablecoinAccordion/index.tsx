@@ -104,7 +104,7 @@ const StablecoinAccordion = () => {
   const DEFAULT_IMAGE_WIDTH = 24
 
   return (
-    <Accordion borderRadius="base" width="full" allowToggle reduceMotion>
+    <Accordion borderRadius="base" width="full" allowToggle>
       <AccordionCustomItem category="dapps">
         <LeftColumnPanel>
           <SectionTitle>

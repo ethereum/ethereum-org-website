@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  create_pr:
+  trigger_crowdin_project_build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code

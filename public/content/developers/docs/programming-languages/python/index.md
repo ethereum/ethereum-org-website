@@ -58,6 +58,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [pymaker](https://github.com/makerdao/pymaker) - _Python API for Maker contracts_
 - [siwe](https://github.com/spruceid/siwe-py) - _Sign in with Ethereum (siwe) for Python_
 - [Web3 DeFi for Ethereum integrations](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _A Python package with ready integrations for ERC-20, Uniswap and other popular projects_
+- [Wake](https://getwake.io) - _All-in-one Python framework for contracts testing, fuzzing, deployment, vulnerability scanning and code navigation (language server - [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 
 ### Archived / No longer maintained: {#archived--no-longer-maintained}
 

@@ -45,7 +45,7 @@ Hacer de validador significa adoptar un firme compromiso. Se espera que el valid
 
 La cantidad de ETH recortados dependerá del número de validadores que se vean afectados en ese preciso momento. Esto se conoce como [«penalización por correlación»](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty), que podrá ser inferior (~1% de reducción del fondo de garantía para un solo validador) o incluso puede resultar en la destrucción del 100 % de la garantía del validador (evento masivo de recortes). Se podrá imponer a mitad del proceso un período de salida forzosa con una penalización inmediata (de hasta 1 ETH) el primer día, la penalización por correlación el 18.º día y, por último, la expulsión de la red el 36.º día. Recibirán multas por certificaciones menores a diario al estar presentes en la red sin participar en las votaciones. Esto significaría que un ataque coordinado podría resultar muy costoso para el atacante.
 
-## Selección de bifurcación {#fork-choice}
+## Opción de bifurcación {#fork-choice}
 
 Cuando la red opera de manera óptima y honesta, solo habrá un nuevo bloque en la cabeza de la cadena y todos los validadores lo certifican. A pesar de ello, existe la posibilidad de que los validadores tengan diferentes puntos de vista en relación con la cabeza de la cadena debido a latencias en la red o ante la equivocación de un proponente de bloque. Por este motivo, se requiere de un algoritmo para que los clientes de consenso puedan decidir a cuál favorecer. El algoritmo empleado en la prueba de participación de Ethereum se llama [LMD-GHOST](https://arxiv.org/pdf/2003.03052.pdf), y opera identificando la bifurcación que tenga la mayor cantidad de certificaciones en su historial.
 
@@ -79,10 +79,10 @@ Ethereum no siempre ha sido una red de prueba de participación. Cuando Ethereum
 
 ## Más información {#further-reading}
 
-- [Preguntas frecuentes sobre la prueba de participación](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
+- [Prueba de participación PF](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [Qué es la prueba de participación](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [Qué es la prueba de participación y por qué es importante](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
-- [Por qué se realiza la prueba de participación (nov. 2020)](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _Vitalik Buterin_
+- [Por qué existe la prueba de participación (noviembre de 2020)](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _Vitalik Buterin_
 - [Prueba de participación: cómo aprendí a amar la subjetividad débil](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
 - [Ataque y defensa en la prueba de participación (PoS) de Ethereum](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [Filosofía de diseño de las pruebas de participación](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
