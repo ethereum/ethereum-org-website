@@ -13,12 +13,6 @@ export const chakraBreakpointArray = Object.entries(
   extendedTheme.breakpoints
 ) as [string, string][]
 
-// Set document direction based on language selected
-i18n.on("languageChanged", (locale) => {
-  const direction = i18n.dir(locale)
-  document.dir = direction
-})
-
 const preview: Preview = {
   globals: {
     locale: "en",

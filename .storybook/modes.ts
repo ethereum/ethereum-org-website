@@ -32,9 +32,6 @@ export const langModes = {
   uk: {
     locale: "uk",
   },
-  fa: {
-    locale: "fa",
-  },
 }
 
 type LangViewModeObj = {
