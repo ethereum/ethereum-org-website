@@ -47,7 +47,9 @@ const headingScale: Array<HeadingProps> = [
     size: "2xl",
   },
   {
-    // No props as the default is `h2` with size `xl
+    // Note that `h2` is the default render
+    as: "h2",
+    size: "xl",
   },
   {
     as: "h3",
