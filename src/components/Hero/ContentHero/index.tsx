@@ -26,7 +26,7 @@ const ContentHero = (props: ContentHeroProps) => {
             blurDataURL={blurDataURL}
             width={760}
             height={451}
-            sizes="100vw"
+            sizes="(max-width: 992px) 100vw, 50vw"
             boxSize="full"
             style={{ objectFit: "contain" }}
             flex={{ base: "1 1 100%", md: "none" }}
