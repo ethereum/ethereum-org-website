@@ -514,6 +514,8 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3 security firm offering security audits for blockchain systems through a team of experienced auditors and best-in-class tools._
 
+- **[Oxorio](https://oxor.io/)** - _Smart contract audits and blockchain security services with expertise in EVM, Solidity, ZK, Cross-chain tech for crypto firms and DeFi projects._
+
 ### Bug bounty platforms {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _Bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._
