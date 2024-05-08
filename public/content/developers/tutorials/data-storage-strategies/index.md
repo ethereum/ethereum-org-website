@@ -29,7 +29,7 @@ The choice of which method to use is based on several criteria:
 
 There are three attributes we'd like to have for data.
 
-- *Confidentiality*, unauthorized entities are not allowed to read the information. This is useful in many cases, but *there are no secrets on the blockchain*. Blockchains work because everybody is able to verify the state transitions, so it is impossible to use them to store secrets directly. There are ways to store confidential information on the blockchain, but they all rely on some offchain component to store at least a key.
+- *Confidentiality*, unauthorized entities are not allowed to read the information. This is useful in many cases, but *there are no secrets on the blockchain*. Blockchains work because everybody can verify the state transitions, so it is impossible to use them to store secrets directly. There are ways to store confidential information on the blockchain, but they all rely on some offchain component to store at least a key.
 
 - *Integrity*, the information is correct, it cannot be changed by unauthorized entities, or in unauthorized ways (for example, transferring [ERC-20 tokens](https://eips.ethereum.org/EIPS/eip-20#events) without a `Transfer` event). On the blockchain, every node verifies every state change, which ensures integrity.
 
@@ -44,7 +44,7 @@ The main use case for EIP-4844 blobs is for rollups to publish their transaction
 
 However, once the challenge period has passed and the state root is finalized, the remaining purpose for knowing these transactions is to replicate the chain's current state. This state is also available from chain nodes, with a lot less processing required. So transaction information should still be preserved in a few places, such as [block explorers](/developers/docs/data-and-analytics/block-explorers), but there is no need to pay for the level of censorship resistance Ethereum provides.
 
-[Zero-knowledge rollups](/developers/docs/scaling/zk-rollups/#data-availability) also post their transaction data to enable other nodes to replicate the existing state and verify validity proofs, but again that is a short term requirement.
+[Zero-knowledge rollups](/developers/docs/scaling/zk-rollups/#data-availability) also post their transaction data to enable other nodes to replicate the existing state and verify validity proofs, but again that is a short-term requirement.
 
 At writing posting on EIP-4844 costs one wei (10<sup>-18</sup> ETH) per byte, which is negligible compared to [the 21,000 execution gas that any transaction, including one that posts blobs, costs](https://eth.blockscout.com/tx/0xf6cfaf0431c73dd1d96369a5e6707d64f463ccf477a4131265397f1d81466929?tab=index). You can see the current EIP-4844 price on [blobscan.com](https://blobscan.com/blocks).
 
