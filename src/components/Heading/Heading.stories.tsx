@@ -80,7 +80,7 @@ export const Heading: Story = {
             >
               {(obj.size as string) || "xl"}
             </HeadingComponent>
-            <HeadingComponent flex="3" {...obj}>
+            <HeadingComponent flex="3" as={obj.as}>
               {`${obj.as} base component`}
             </HeadingComponent>
           </Flex>
