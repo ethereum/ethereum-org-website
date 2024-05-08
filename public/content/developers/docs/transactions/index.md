@@ -168,7 +168,7 @@ Any gas not used in a transaction is refunded to the user account.
 
 ### Smart contract interactions {#smart-contract-interactions}
 
-Gas is required for any transaction that alters the state of a smart contract.
+Gas is required for any transaction that involves a smart contract.
 
 Therefore, calling a [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) or [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) function from an EOA will not require any gas. The underlying RPC call for this scenario is [`eth_call`](/developers/docs/apis/json-rpc#eth_call)
 
