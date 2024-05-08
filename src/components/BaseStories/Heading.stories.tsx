@@ -44,10 +44,6 @@ type Story = StoryObj<typeof meta>
 const headingScale: Array<HeadingProps> = [
   {
     as: "h1",
-    size: "3xl",
-  },
-  {
-    as: "h1",
     size: "2xl",
   },
   {
