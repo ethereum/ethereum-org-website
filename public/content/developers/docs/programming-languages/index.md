@@ -4,8 +4,7 @@ description:
 lang: en
 ---
 
-A common misconception is that developers must write [smart contracts](/developers/docs/smart-contracts/) in order to build on Ethereum. This is false.
-One of the beauties of the Ethereum network and community is that you're able to [participate](/community/) in just about any programming language.
+You can [participate](/community/) in Ethereum (and write [smart contracts](/developers/docs/smart-contracts/)!) in most programming languages.
 
 Ethereum and its community embrace open source. You can find community projects - client implementations, APIs, development frameworks, testing tools - in a wide variety of languages.
 
