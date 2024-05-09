@@ -90,7 +90,7 @@ Birden fazla gösterge paneli yürütüm ve fikir birliği katmanları için ger
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/) **Yürütüm katmanı:**
 
-- [execution-diversity.info](https://execution-diversity.info/)
+- [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
 ## Daha fazla okuma {#further-reading}

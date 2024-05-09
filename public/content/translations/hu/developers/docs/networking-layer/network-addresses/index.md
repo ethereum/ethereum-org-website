@@ -17,13 +17,13 @@ Az eredeti Ethereum csomópontcím formátuma a multiaddr (a multi-addresses rö
 
 `/ip4/192.168.22.27/tcp/33000`
 
-Az Ethereum csomópont esetében a multiaddr tartalmazza a csomópont azonosítót (a nyilvános kulcs hash-e):
+Az Ethereum csomópont esetében a multiaddr tartalmazza a csomópont-azonosítót (a nyilvános kulcs hashe):
 
 `/ip4/192.168.22.27/tcp/33000/p2p/5t7Nv7dG2d6ffbvAiewVsEwWweU3LdebSqX2y1bPrW8br`
 
 ## Enode {#enode}
 
-Az enode az Ethereum-csomópontok azonosítására szolgál egy URL-címformátum segítségével. A hexadecimális csomópont-ID az URL felhasználónevet tartalmazó részében van kódolva, a hoszttól @ jellel elválasztva. A hosztnév csak IP-címként adható meg; DNS nevek nem engedélyezettek. A hosztnév szakaszban szereplő port a TCP figyelő port. Ha a TCP és UDP (felfedező) portok különböznek, az UDP portot a „discport” lekérdezési paraméterként kell megadni.
+Az enode az Ethereum-csomópontok azonosítására szolgál egy URL-címformátum segítségével. A hexadecimális csomópont-ID az URL felhasználónevet tartalmazó részében van kódolva, a hoszttól @ jellel elválasztva. A hosztnév csak IP-címként adható meg; DNS nevek nem engedélyezettek. A hosztnév szakaszban szereplő port a TCP figyelő port. Ha a TCP és UDP (felfedező) portok különböznek, az UDP portot a „discport” lekérdezési paraméterként kell megadni
 
 A következő példában a csomópont URL-címe egy olyan csomópontot ír le, amelynek IP-címe `10.3.58.6`, TCP-portja `30303` és UDP felfedezőportja `30301`.
 

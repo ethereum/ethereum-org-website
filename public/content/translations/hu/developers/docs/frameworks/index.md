@@ -52,7 +52,7 @@ Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezet
 
 **Scaffold-Eth -** **_Ethers.js + Hardhat + React komponensek és hook-ok web3-hoz: minden, amire szükség van, hogy el tudjon kezdeni okosszerződések által működtetett decentralizált alkalmazásokat fejleszteni._**
 
-- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
+- [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
 **Tenderly -** **_Web3 fejlesztői platform, amely lehetővé teszi a blokklánc-fejlesztőknek, hogy okosszerződéseket építsenek, teszteljenek, debuggoljanak, felügyeljenek és üzemeltessenek, illetve fejlesszék a dapp UX-t._**
 
@@ -68,7 +68,7 @@ Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezet
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.com/invite/A39JVCM)
+- [Discord](https://discord.com/invite/alchemyplatform)
 
 **NodeReal -** **_Ethereum fejlesztői platform._**
 
@@ -105,6 +105,12 @@ Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezet
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Közösségi Fórum](https://forum.openzeppelin.com/c/support/17)
 - **Az OpenZeppelin SDK fejlesztése befejeződött**
+
+**Catapulta -** **_Több láncos okosszerződések telepítési eszköze, automatizálja az ellenőrzéseket a blokkfelfedezőkben, nyomon követi a telepített okosszerződéseket és megosztja a telepítési jelentéseket, plug-n-play a Foundry és Hardhat projektekhez._**
+
+- [Honlap](https://catapulta.sh/)
+- [Dokumentáció](https://catapulta.sh/docs)
+- [Github](https://github.com/catapulta-sh)
 
 ## További olvasnivaló {#further-reading}
 

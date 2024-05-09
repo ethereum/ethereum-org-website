@@ -20,13 +20,13 @@ Sebbene gli approcci possano variare, gran parte dei metodi di test richiedono l
 
 ### Perché è importante testare i contratti intelligenti? {#importance-of-testing-smart-contracts}
 
-Poiché i contratti intelligenti gestiscono spesso risorse finanziarie dal valore elevato, gli errori minori di programmazione possono causare, e spesso causano, [enormi perdite per gli utenti](https://rekt.news/leaderboard/). Test rigorosi possono, però, aiutarti a scoprire precocemente i difetti nel codice di un contratto intelligente e a correggerli prima del lancio sulla Rete Principale.
+Poiché i contratti intelligenti gestiscono spesso risorse finanziarie dal valore elevato, gli errori minori di programmazione possono causare, e spesso causano, [enormi perdite per gli utenti](https://rekt.news/leaderboard/). Test rigorosi possono, tuttavia, aiutarti a scoprire i difetti e i problemi nel codice di un contratto intelligente in anticipo, e correggerli prima del lancio sulla Rete Principale.
 
 Sebbene sia possibile aggiornare un contratto se viene scoperto un bug, gli aggiornamenti sono complessi e possono [risultare in errori](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/) se gestiti impropriamente. L'aggiornamento di un contratto nega ulteriormente il principio di immutabilità, gravando sugli utenti con ulteriori ipotesi di fiducia. Viceversa, un piano completo per testare il tuo contratto mitiga i rischi di sicurezza del contratto intelligente, riducendo l'esigenza di eseguire complessi aggiornamenti alla logica dopo la distribuzione.
 
 ## Metodi per testare i contratti intelligenti {#methods-for-testing-smart-contracts}
 
-I metodi esistenti per testare i contratti intelligenti di Ethereum ricadono in due ampie categorie: **test automatizzati** e **test manuali**. I test automatizzati e manuali offrono vantaggi e compromessi unici, ma puoi combinarli per creare un piano robusto di analisi dei tuoi contratti.
+I metodi per testare i contratti intelligenti di Ethereum ricadono in due ampie categorie: **test automatizzati** e **test manuali**. I test automatizzati e manuali offrono vantaggi e compromessi unici, ma puoi combinarli per creare un piano robusto di analisi dei tuoi contratti.
 
 ### Test automatizzati {#automated-testing}
 
@@ -138,7 +138,6 @@ La qualità degli strumenti utilizzati nell'esecuzione dei test unitari per i tu
 
 I quadri di test unitari per i contratti intelligenti in Solidity esistono in diversi linguaggi (principalmente JavaScript, Python e Rust). Vedi alcune delle guide seguenti per informazioni su come iniziare a eseguire test unitari con diversi quadri di test:
 
-- **[Eseguire test unitari con Truffle](https://trufflesuite.com/docs/truffle/testing/testing-your-contracts/)**
 - **[Eseguire test unitari con Brownie](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)**
 - **[Eseguire test unitari con Foundry](https://book.getfoundry.sh/forge/writing-tests)**
 - **[Eseguire test unitari con Waffle](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)**
@@ -150,7 +149,7 @@ I quadri di test unitari per i contratti intelligenti in Solidity esistono in di
 
 Mentre i test unitari eseguono il debug delle funzioni del contratto in isolamento, i test d'integrazione valutano i componenti di un contratto intelligente nella sua interezza. I test d'integrazione possono rilevare i problemi che sorgono da chiamate tra contratti o da interazioni tra funzioni differenti nello stesso contratto intelligente. Ad esempio, i test d'integrazione possono aiutare a verificare se aspetti come l'[eredità](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) e l'iniezione di dipendenza funzionano correttamente.
 
-I test d'integrazione sono utili se il tuo contratto adotta un'architettura modulare o si interfaccia con altri contratti su catena durante l'esecuzione. Un modo per eseguire i test d'integrazione è [diramare la blockchain](/glossary/#fork) a un'altezza specifica (utilizzando uno strumento come [Ganache](https://trufflesuite.com/docs/ganache/) o [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks)) e simulare le interazioni tra il tuo contratto e i contratti distribuiti.
+I test d'integrazione sono utili se il tuo contratto adotta un'architettura modulare o si interfaccia con altri contratti su catena durante l'esecuzione. Un modo di eseguire i test d'integrazone è [biforcare la blockchain](/glossary/#fork) a un'altezza specifica (utilizzando uno strumento come [Forge](https://book.getfoundry.sh/forge/fork-testing) o [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks) e simulare le interazioni tra il tuo contratto e i contratti distribuiti.
 
 La blockchain diramata si comporterà in modo simile alla Rete Principale e avrà conti con stati e saldi associati. Ma agisce soltanto come un ambiente di sviluppo locale in modalità sandbox, a significare che non avrai bisogno di ETH reali per le transazioni, ad esempio, né le tue modifiche influenzeranno il protocollo reale di Ethereum.
 
@@ -239,7 +238,7 @@ Tuttavia, puoi aumentare maggiormente la possibilità di identificare le vulnera
 
 I controlli sono eseguiti da revisori esperti nel trovare i casi di falle di sicurezza e pratiche di sviluppo inadeguate nei contratti intelligenti. Un controllo, solitamente, includerà test (e verosimilmente una verifica formale), nonché una revisione manuale dell'intera base di codice.
 
-Viceversa, un programma di bug bounty comporta solitamente l'offerta di una ricompensa economica a una persona (comunemente descritto come [hacker whitehat](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>) che scopre una vulnerabilità in un contratto intelligente e la comunica agli sviluppatori. Le bug bounty sono simili ai controlli poiché comportano di chiedere ad altri di aiutare a trovare difetti nei contratti intelligenti.
+Viceversa, un programma di bug bounty comporta solitamente l'offerta di una ricompensa economica a una persona (comunemente descritto come [hacker whitehat](https://en.wikipedia.org/wiki/White_hat_(computer_security))) che scopre una vulnerabilità in un contratto intelligente e la comunica agli sviluppatori. Le bug bounty sono simili ai controlli poiché comportano di chiedere ad altri di aiutare a trovare difetti nei contratti intelligenti.
 
 La differenza principale è che i programmi di bug bounty sono aperti alla più ampia community di sviluppatori/hacker e attrae un'ampia classe di hacker etici e professionisti della sicurezza indipendenti dotati di competenze uniche ed esperienza. Questo potrebbe essere un vantaggio rispetto ai controlli del contratto intelligente che si affidano principalmente ai team che potrebbero possedere esperienza limitata o minima.
 
@@ -254,8 +253,6 @@ La differenza principale è che i programmi di bug bounty sono aperti alla più 
 - **[Remix Tests](https://github.com/ethereum/remix-project/tree/master/libs/remix-tests)** - _Strumento per testare contratti intelligenti in Solidity. Opera sotto il plugin "Solidity Unit Testing" di Remix IDE, usato per scrivere ed eseguire casi di prova per un contratto._
 
 - **[OpenZeppelin Test Helpers](https://github.com/OpenZeppelin/openzeppelin-test-helpers)** - _Libreria di asserzioni per i test di contratti intelligenti di Ethereum. Assicurati che i tuoi contratti si comportino come previsto!_
-
-- **[Truffle Tests](https://hardhat.org/hardhat-runner/docs/guides/test-contracts#testing-contracts)** - _Quadro di test automatizzati per rendere il test dei tuoi contratti un gioco da ragazzi._
 
 - **[Quadro di test unitari di Brownie](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Brownie utilizza Pytest, un quadro di test ricco di funzionalità che ti consente di scrivere piccoli test con codice minimale, si ridimensiona bene per i grandi progetti ed è altamente estendibile._
 
@@ -273,6 +270,8 @@ La differenza principale è che i programmi di bug bounty sono aperti alla più 
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter per l'applicazione delle migliori pratiche di stile e sicurezza per il linguaggio di programmazione dei contratti intelligenti Solidity_
 
+- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)**: _Analizzatore statico basato su Rust, progettato specificamente per la sicurezza e lo sviluppo di contratti intelligenti in Web3._
+
 #### Strumenti di analisi dinamica {#dynamic-analysis-tools}
 
 - **[Echidna](https://github.com/crytic/echidna/)** - _Veloce fuzzer di contratti per rilevare le vulnerabilità nei contratti intelligenti tramite i test basati sulle proprietà._
@@ -287,14 +286,12 @@ La differenza principale è che i programmi di bug bounty sono aperti alla più 
 
 ## Tutorial correlati {#related-tutorials}
 
-- [Come configurare Travis o l'Integrazione continua (CI) di Circle per il test di Truffle](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/)
 - [Panoramica e confronto dei diversi prodotti di test](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Come usare Echidna per testare gli smart contract](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [Come utilizzare Manticore per trovare bug nei contratti intelligenti](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Come usare Slither per trovare i bug dello Smart Contract](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Come simulare contratti in Solidity per i test](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [Come migrare dai test di Truffle all'ambiente di test di OpenZeppelin](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
-- [Come testare i contratti dopo che sono stati distribuiti su una rete](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
+- [Come eseguire i test unitari in Solidity, utilizzando Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 
 ## Letture consigliate {#further-reading}
 
