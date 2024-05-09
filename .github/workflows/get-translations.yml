@@ -55,7 +55,7 @@ jobs:
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/getBucketDirectoryIds.ts
 
       # Import approved translations 
-      - name: Get translations
+      - name: Import approved translations
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/getTranslations.ts
 
       # Post updates as language-specific PRs
