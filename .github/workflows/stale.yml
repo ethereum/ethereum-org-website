@@ -19,3 +19,4 @@ jobs:
           stale-pr-message: "This issue is stale because it has been open 30 days with no activity."
           days-before-stale: 30
           days-before-close: -1
+          operations-per-run: 100
