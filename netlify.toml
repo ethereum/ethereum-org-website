@@ -13,11 +13,6 @@
   NEXT_FORCE_EDGE_IMAGES="true"
   BUILD_LOCALES="en"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Encoding = "br"
-
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
