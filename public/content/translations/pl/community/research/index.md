@@ -35,7 +35,7 @@ Badania nad konsensusem są związane z [mechanizmem proof-of-stake Ethereum](/d
 - zwiększanie bezpieczeństwa lub wydajności implementacji klienta;
 - oraz rozwijanie lekkich klientów.
 
-Oprócz badań wybiegających w przyszłość, badane są niektóre fundamentalne przeprojektowania protokołu, takie jak nieodwołalność pojedynczego slotu, aby umożliwić znaczące ulepszenia Ethereum. Co więcej, wydajność, bezpieczeństwo i monitorowanie sieci peer-to-peer między klientami konsensusu są również ważnymi tematami badawczymi.
+Oprócz badań wybiegających w przyszłość, badane są niektóre fundamentalne przeprojektowania protokołu, takie jak finalizacja pojedynczego slotu, aby umożliwić znaczące ulepszenia Ethereum. Co więcej, wydajność, bezpieczeństwo i monitorowanie sieci peer-to-peer między klientami konsensusu są również ważnymi tematami badawczymi.
 
 #### Podstawowe informacje {#background-reading}
 
@@ -48,7 +48,7 @@ Oprócz badań wybiegających w przyszłość, badane są niektóre fundamentaln
 
 - [Konsensus ethresear.ch](https://ethresear.ch/c/consensus/29)
 - [Dylemat dostępności/nieodwołalności](https://arxiv.org/abs/2009.04987)
-- [Single slot finality](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
+- [Finalizacja pojedynczego slotu](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
 - [Separacja proponujący-budujący](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
 
 ### Wykonanie {#execution}
@@ -124,7 +124,7 @@ Jednym ze szczególnych obszarów warstwy 2, który wymaga dalszych badań i roz
 - [Wprowadzenie do mostów blockchain](/bridges/)
 - [Vitalik o mostach](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [Artykuł o mostach blockchain](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [Wartość zablokowana w mostach](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
+- [Wartość zablokowana w mostach](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
 
 #### Ostatnie badania {#recent-research-3}
 
@@ -216,7 +216,7 @@ Aby wprowadzić więcej osób do Ethereum, ekosystem musi poprawić UX/UI. Będz
 
 ### Ekonomia {#economics}
 
-Badania ekonomiczne w Ethereum zasadniczo opierają się na dwóch podejściach: walidacji bezpieczeństwa mechanizmów opartych na zachętach ekonomicznych („mikroekonomia”) i analizie przepływów wartości między protokołami, aplikacjami i użytkownikami („makroekonomia”). Istnieją złożone czynniki krypto-ekonomiczne związane z natywnym aktywem Ethereum (Ethereum) i tokenami zbudowanymi na nim (na przykład NFT i tokeny ERC20).
+Badania ekonomiczne w Ethereum zasadniczo opierają się na dwóch podejściach: walidacji bezpieczeństwa mechanizmów opartych na zachętach ekonomicznych („mikroekonomia”) i analizie przepływów wartości między protokołami, aplikacjami i użytkownikami („makroekonomia”). Istnieją złożone czynniki krypto-ekonomiczne związane z natywnym aktywem Ethereum (eter) i tokenami zbudowanymi na nim (na przykład NFT i tokeny ERC20).
 
 #### Podstawowe informacje {#background-reading-9}
 
@@ -346,7 +346,6 @@ Narzędzia dla deweloperów Ethereum szybko się poprawiają. W tym obszarze wym
 - [Frameworki dla deweloperów](/developers/docs/frameworks/)
 - [Lista narzędzi deweloperskich konsensusu](https://github.com/ConsenSys/ethereum-developer-tools-list)
 - [Standardy tokenów](/developers/docs/standards/tokens/)
-- [Biastek: narzędzia Ethereum](https://biastek.com/ethereum-tools/)
 - [CryptoDevHub: Narzędzia EVM](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
 #### Ostatnie badania {#recent-research-17}

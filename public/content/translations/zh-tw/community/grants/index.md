@@ -15,10 +15,8 @@ lang: zh-tw
 這些計劃通過向各種專案提供資助來支援開放的以太坊生態系統。 其中包括可擴展性、社群建設、安全性、隱私等方面的解決方案。 這些贈款並不專門針對任何一個以太坊平台，如果你不確定，可以從這裡開始。
 
 - [EF 生態系統支援計劃](https://esp.ethereum.foundation) - _資助有益於以太坊的開源專案，特別關注通用工具、基礎設施、研究和公共產品_
-- [MetaCartel](https://www.metacartel.org/grants/) - _開發去中心化應用程式、創建去中心化自治組織_
 - [Moloch DAO](https://www.molochdao.com/) - _隱私性、二層網路擴容、用戶端安全性等_
 - [去中心化自治組織資助計畫](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _有關資助機構的 Google 試算表_
-- [Crunchbase Web3 資助計劃](https://www.cryptoneur.xyz/web3-grants) - _按類別、使用案例、總金額等篩選及搜尋資助計劃。 幫助他人尋找適合的資助計劃。_
 - [學術資助](https://esp.ethereum.foundation/academic-grants) - _支援以太坊相關學術工作的資助計劃_
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks 彙編了關於所有資助計畫、提案徵集和漏洞懸賞計畫的詳盡清單。_
 
@@ -35,7 +33,6 @@ lang: zh-tw
 - [SKALE 網路資助計劃](https://skale.space/developers#grants) - _[SKALE 網路](https://skale.space/)生態系統_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) 生態系統_
 - [Uniswap 資助計畫](https://www.uniswapfoundation.org/apply-for-a-grant) - _[Uniswap](https://uniswap.org/) 社群_
-- [Web3 資助計劃](https://web3grants.net) - _與 Web3/加密貨幣相關的資助計劃詳盡列表_
 
 ## 二次融資 {#quadratic-funding}
 

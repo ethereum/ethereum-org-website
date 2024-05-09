@@ -1,17 +1,17 @@
 ---
-title: Ethereum események
+title: Az Ethereum eseményei
 description: Hogyan lehet bekapcsolódni az Ethereum közösségébe.
 lang: hu
 hideEditButton: true
 ---
 
-## Közelgő események {#events}
+# Közelgő események {#events}
 
 **Minden hónapban részt vehet Ethereum-eseményeken a világ bármely pontján.** Vegyen részt egy Önhöz közel eső eseményen, hogy találkozzon a közösség tagjaival, megismerje a munkalehetőségeket és új képességeket fejlesszen.
 
 <UpcomingEventsList/>
 
-A lista nem teljeskörű, a közösség tagjai frissítik. Tudomása van egy tervezett Ethereum-eseményről? [Kérjük, adja hozzá!](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)
+A lista nem teljeskörű, a közösség tagjai frissítik. Tudomása van egy tervezett Ethereum-eseményről? [Kérjük, adja hozzá a listához](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.ts)!
 
 ## Ethereum-találkozók {#meetups}
 

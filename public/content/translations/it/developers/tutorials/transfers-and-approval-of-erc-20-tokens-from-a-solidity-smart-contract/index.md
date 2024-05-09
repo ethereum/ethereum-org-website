@@ -162,23 +162,23 @@ Se l'acquisto va a buon fine, dovremmo vedere due eventi nella transazione: l'ev
 La funzione responsabile della vendita implica che l'utente abbia prima approvato l'importo chiamando la funzione approve. Per approvare il trasferimento occorre che il token ERC20Basic istanziato dal DEX sia chiamato dall'utente. È possibile farlo ottenere chiamando prima la funzione `token()` del contratto DEX per recuperare l'indirizzo in cui DEX ha distribuito il contratto ERC20Basic chiamato `token`. Creiamo quindi un'istanza di quel contratto nella nostra sessione e chiamiamo la sua funzione `approve`. Siamo quindi in grado di chiamare la funzione `sell` della DEX e scambiare nuovamente i nostri token con ether. Ad esempio, ecco come appare in una sessione interattiva di Brownie:
 
 ```python
-#### Python nella console interattiva di Brownie...
+#### Python in interactive brownie console...
 
-# distribuisci il DEX
+# deploy the DEX
 dex = DEX.deploy({'from':account1})
 
-# chiama la funzione buy per scambiare ether per token
-# 1e18 è 1 ether denominato in wei
+# call the buy function to swap ether for token
+# 1e18 is 1 ether denominated in wei
 dex.buy({'from': account2, 1e18})
 
-# ottieni l'indirizzo di distribuzione per il token ERC20
-# distribuito durante la creazione del contratto DEX
-# dex.token() restituisce l'indirizzo distribuito per il token
+# get the deployment address for the ERC20 token
+# that was deployed during DEX contract creation
+# dex.token() returns the deployed address for token
 token = ERC20Basic.at(dex.token())
 
-# chiama la funzione approve del token
-# approva l'indirizzo dex come spender
-# e quanti dei tuoi token gli è consentito di spendere
+# call the token's approve function
+# approve the dex address as spender
+# and how many of your tokens it is allowed to spend
 token.approve(dex.address, 3e18, {'from':account2})
 
 ```
@@ -187,9 +187,9 @@ Poi, quando viene chiamata la funzione sell, controlliamo se il trasferimento da
 
 ```solidity
 function sell(uint256 amount) public {
-    require(amount > 0, "Devi vendere almeno qualche token");
+    require(amount > 0, "You need to sell at least some tokens");
     uint256 allowance = token.allowance(msg.sender, address(this));
-    require(allowance >= amount, "Verifica l'indennità del token");
+    require(allowance >= amount, "Check the token allowance");
     token.transferFrom(msg.sender, address(this), amount);
     payable(msg.sender).transfer(amount);
     emit Sold(amount);
@@ -299,16 +299,16 @@ contract DEX {
     function buy() payable public {
         uint256 amountTobuy = msg.value;
         uint256 dexBalance = token.balanceOf(address(this));
-        require(amountTobuy > 0, "Devi inviare dell'ether");
-        require(amountTobuy <= dexBalance, "Non hai abbastanza token nella riserva");
+        require(amountTobuy > 0, "You need to send some ether");
+        require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
         token.transfer(msg.sender, amountTobuy);
         emit Bought(amountTobuy);
     }
 
     function sell(uint256 amount) public {
-        require(amount > 0, "Devi vendere almeno qualche token");
+        require(amount > 0, "You need to sell at least some tokens");
         uint256 allowance = token.allowance(msg.sender, address(this));
-        require(allowance >= amount, "Verifica l'indennità del token");
+        require(allowance >= amount, "Check the token allowance");
         token.transferFrom(msg.sender, address(this), amount);
         payable(msg.sender).transfer(amount);
         emit Sold(amount);

@@ -51,7 +51,7 @@ Différentes organisations sont à l'origine d'initiatives collaboratives afin d
 - [Blast](https://blastapi.io/) _plateforme API qui fournit des API RPC/WSS pour le réseau principal archiveur Ethereum et les réseaux de test._
 - [Blockapps](https://blockapps.net/)_ - Implémentation du protocole Ethereum pour les entreprises, outils et API constituant la plateforme STRATO_
 - [Chainstack](https://chainstack.com/) _- Infrastructure du réseau principal et du réseau de test Ethereum hébergée dans des clouds clients isolés & publics_
-- [ConsenSys](https://consensys.net/) _ fournit une gamme de produits et d'outils pour construire sur Ethereum, ainsi que des services de conseil et de développement personnalisé_
+- [ConsenSys](https://consensys.io/) _ fournit une gamme de produits et d'outils pour construire sur Ethereum, ainsi que des services de conseil et de développement personnalisé_
 - [Envision Blockchain](https://envisionblockchain.com/) _ fournit des services de conseil et de développement axés sur les entreprises, et spécialisés dans le réseau principal Ethereum_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager)_ fournit un workflow d'approvisionnement en émettant des demandes de devis (RFQ), des contrats, des bons de commande et des factures à travers votre réseau de partenaires commerciaux de confiance_
 - [- Hyperledger Besu](https://www.hyperledger.org/use/besu) _- Client Ethereum en open source axé sur les entreprises, développé sous la licence Apache 2.0 et rédigé en Java_
@@ -68,7 +68,7 @@ Différentes organisations sont à l'origine d'initiatives collaboratives afin d
 ### Outils et bibliothèques {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _- Plateforme d'analyse des données Ethereum_
-- [Sirato](https://www.web3labs.com/sirato) _- Plateforme de données et d'analyse, pour les réseaux publics et privés compatibles avec Ethereum (EVM) par Web3 Labs_
+- [Chainlens](https://www.chainlens.com/) _- Plateforme de données et d'analyse, pour les réseaux publics et privés compatibles avec Ethereum (EVM) par Web3 Labs_
 - [Ernst & Young Nightfall](https://github.com/EYBlockchain/nightfall) _- Boîte à outils pour les transactions privées_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _- Application de signature de transactions à utiliser avec un prestataire Web3_
 - [Tenderly](https://tenderly.co/) _ - Plateforme de données fournissant des analyses en temps réel, des alertes et une surveillance avec support pour les réseaux privés_
@@ -102,13 +102,12 @@ Voici quelques-unes des applications d'entreprise qui ont été construites sur 
 
 - [Tinlake](https://tinlake.centrifuge.io/) _ - Financement de créances via des actifs réels tokenisés comme des factures, des hypothèques ou des redevances de streaming_
 - [RealT](https://realt.co/) _- Les investisseurs du monde entier peuvent acheter sur le marché de l'immobilier américain par le biais d'une propriété entièrement conforme, fractionnée et tokenisée._
-- [AgroToken](https://agrotoken.io/en/) _- Tokenisation et négociation de produits agricoles_
+- [AgroToken](https://agrotoken.io/en/home) _- Tokenisation et négociation de produits agricoles_
 - [Fasset](https://www.fasset.com/) _ - Plateforme pour soutenir l'infrastructure durable_
 
 ### Authentification des données {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _ - Les détails des prêts finalisés sont hachés et enregistrés sur le réseau principal._
-- [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _ - L'intégrité des données peut être garantie en écrivant périodiquement des hachages de données indexées sur le réseau principal._
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _- La plus grande agence de presse d'Italie lutte contre les fake news et permet aux lecteurs de vérifier l'origine des nouvelles en les enregistrant sur le réseau principal._
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _ enregistre les communiqués de presse sur Ethereum en vue de garantir la responsabilité et la confiance des entreprises._
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _ enregistre la provenance et l'historique de réparation de montres sur Ethereum._
@@ -116,13 +115,11 @@ Voici quelques-unes des applications d'entreprise qui ont été construites sur 
 
 ### Chaîne logistique {#supply-chain}
 
-- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _- Prestataire de services de connaissement et de transfert de documents_
 - [Morpheus.network](https://morpheus.network/) _- Plateforme d'automatisation de la chaîne logistique qui implémente un hybride de chaînes privées et de données authentifiées sur le réseau principal Ethereum. Utilisée par des entreprises comme le distributeur canadien de produits alimentaires, de pétrole et de gaz Federated Co-op Ltd. et le fournisseur argentin d'aliments pour animaux Vitalcan._
 - [Minespion](https://www.minespider.com/) _- Suivi de la chaîne logistique_
 - [Gestionnaire de Contrats EY OpsChain](https://blockchain.ey.com/products/contract-manager) _- Permet aux entreprises de lancer un flux d'approvisionnement en émettant des demandes de devis (RFQ), des contrats, des bons de commande et des factures à travers leur réseau de partenaires commerciaux de confiance_
 - [Treum](https://treum.io/) _- Apporte transparence, traçabilité et négociabilité aux chaînes logistiques, en utilisant la technologie blockchain_
 - [TradeTrust](https://www.tradetrust.io/) _- Vérifie les connaissements électroniques (eBL) pour l'expédition à l'international_
-- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _frappe des jetons non fongibles (NFT) pour chaque nouveau lot de bière, offrant une plus grande visibilité et efficacité à travers sa chaîne logistique_
 
 ### Assurance {#insurance}
 

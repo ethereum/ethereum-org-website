@@ -4,7 +4,7 @@ description:
 lang: ja
 ---
 
-分散型アプリケーション(Dapp)とは、 [スマートコントラクト](/developers/docs/smart-contracts/) とフロントエンドのユーザーインターフェイスを組み合わせた、分散型ネットワーク上に構築されたアプリケーションのことです。 イーサリアムでは、スマートコントラクトはオープン API のようにアクセス可能で透明性があるため、他の人が書いたスマートコントラクトを含めることもできます。
+分散型アプリケーション(Dapp)とは、 [スマートコントラクト](/developers/docs/smart-contracts/) とフロントエンドのユーザーインターフェイスを組み合わせた、分散型ネットワーク上に構築されたアプリケーションのことです。 イーサリアムでは、スマートコントラクトはオープンAPIのようにアクセス可能で透明性があるため、他の人が書いたスマートコントラクトを含めることもできます。
 
 ## 前提知識 {#prerequisites}
 
@@ -39,7 +39,7 @@ lang: ja
 
 - **メンテナンス** - ブロックチェーンに公開されたコードやデータが修正されにくいため、メンテナンスが困難となる場合がある。 古いバージョンでバグやセキュリティ上のリスクが特定されている場合でも、デベロッパーがデプロイされた分散型アプリ(または分散型アプリが保存する基盤となるデータ)を更新することは困難。
 - **性能オーバーヘッド** - 膨大な性能オーバーヘッドがあり、スケーリングが非常に困難。 イーサリアムが目指すセキュリティ、完全性、透明性、信頼性のレベルを達成するために、すべてのノードが全トランザクションを実行および保存する。 これに加えて、プルーフ・オブ・ステークのコンセンサスにも時間がかかる。
-- **ネットワーク輻輳** - 1 つの分散型アプリ(Dapp)が多くの計算リソースを使用すると、ネットワーク全体が滞る。 現在、1 秒間に約 10 ～ 15 件のトランザクションのみ処理可能だが、それ以上のスピードでトランザクションが送られてくると、未確認のトランザクション数がすぐに膨らむ。
+- **ネットワーク輻輳** - 1つの分散型アプリ(Dapp)が多くの計算リソースを使用すると、ネットワーク全体が滞る。 現在、1秒間に約10～15件のトランザクションのみ処理可能だが、それ以上のスピードでトランザクションが送られてくると、未確認のトランザクション数がすぐに膨らむ。
 - **ユーザーエクスペリエンス** - 平均的なエンドユーザーにとっては、真に安全な方法でブロックチェーンと対話する必要なツールスタックをセットアップすることが困難であるため、ユーザーにとって使いやすいユーザーエクスペリエンスを作り込む事は困難な場合がある。
 - **中央集中化** - イーサリアムのベースレイヤーの上に構築されたユーザーとデベロッパーに使い勝手の良いソリューションは、最終的には集中型サービスのようになってしまう場合がある。 例えば、鍵やその他の機密情報をサーバ側に保存したり、集中管理されたサーバを使ってフロントエンドを提供したり、重要なビジネスロジックをブロックチェーンに書き込む前にサーバで実行することになるため、中央集権化されたアプリと類似してしまう場合がある。 中央集権では、従来のモデルに対するブロックチェーンのメリットの多くを失ってしまう。
 
@@ -49,26 +49,26 @@ lang: ja
 
 ## 分散型アプリ(Dapp)の作成ツール {#dapp-tools}
 
-**Scaffold-ETH _ - 自分のスマートコントラクトに適応するフロントエンドを使用して、Solidity を手軽に試す。_**
+**Scaffold-ETH _ - 自分のスマートコントラクトに適応するフロントエンドを使用して、Solidityを手軽に試す。_**
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 - [分散型アプリ(Dapp)の例](https://punkwallet.io/)
 
-**Create Eth App _-1 つのコマンドでイーサリアムアプリを作成_**
+**Create Eth App _-1つのコマンドでイーサリアムアプリを作成_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _- [ABI](/glossary/#abi)から分散型アプリ(Dapp)フロントエンドを生成する FOSS ツール_**
+**One Click Dapp _- [ABI](/glossary/#abi)から分散型アプリ(Dapp)フロントエンドを生成するFOSSツール_**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow _- イーサリアムデベロッパー向けの FOSS ツール。ノードをテストし、ブラウザから RPC 呼び出しの作成・デバッグするツール。_**
+**Etherflow _- イーサリアムデベロッパー向けのFOSSツール。ノードをテストし、ブラウザからRPC呼び出しの作成・デバッグするツール。_**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-**thirdweb _- Web3 開発用の各言語の SDK、スマートコントラクト、ツール、インフラストラクチャ。_**
+**thirdweb _- Web3開発用の各言語のSDK、スマートコントラクト、ツール、インフラストラクチャ。_**
 
 - [ホームページ](https://thirdweb.com/)
 - [ドキュメント](https://portal.thirdweb.com/)
@@ -77,10 +77,10 @@ lang: ja
 ## 参考文献 {#further-reading}
 
 - [dapps を探す](/dapps)
-- [Web 3.0 アプリケーションのアーキテクチャ](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
-- [分散型アプリケーションに関するガイド(2021 年)](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
+- [Web 3.0アプリケーションのアーキテクチャ](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
+- [分散型アプリケーションに関するガイド(2021年)](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
 - [分散型アプリとは](https://www.gemini.com/cryptopedia/decentralized-applications-defi-Dapps) - _Gemini_
-- [人気のある dApp](https://www.alchemy.com/dapps) - _Alchemy_
+- [人気のあるdApp](https://www.alchemy.com/dapps) - _Alchemy_
 
 _役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
 

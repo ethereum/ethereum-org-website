@@ -114,12 +114,12 @@ Indem wir diese Berechnung erweitern, können wir die Zeit abschätzen, die ben�
 <TableContainer>
 
 | Anzahl der Auszahlungen | Zeit bis zum Abschluss |
-| :---------------------: | :--------------------: |
-|         400,000         |        3,5 Tage        |
-|         500,000         |        4,3 Tage        |
-|         600,000         |        5,2 Tage        |
-|         700,000         |        6,1 Tage        |
-|         800,000         |        7,0 Tage        |
+| :-------------------:   | :--------------:       |
+|        400,000          |     3,5 Tage           |
+|        500,000          |     4,3 Tage           |
+|        600,000          |     5,2 Tage           |
+|        700,000          |     6,1 Tage           |
+|        800,000          |     7,0 Tage           |
 
 </TableContainer>
 
@@ -194,7 +194,7 @@ eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
 
-Es wird empfohlen, dass Validatoren die Seite <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> besuchen, auf der Sie weitere Details dazu finden, wie Sie Ihren Validator auf Auszahlungen vorbereiten können. Vorbereitung, Zeitpunkt der Ereignisse und weitere Details darüber, wie Auszahlungen funktionieren.
+Validator-Betreibern wird empfohlen, die Seite <a href="https://launchpad.ethereum.org/withdrawals/">Startplattform für Staking-Auszahlungen</a> zu besuchen. Dort können sie mehr Details darüber erfahren, wie Sie Ihren Validator auf Auszahlungen vorbereiten, sowie Informationen zum Zeitpunkt der Ereignisse und zur Funktionsweise von Auszahlungen erhalten.
 
 Um Ihre Einrichtung zunächst auf einem Testnetz auszuprobieren, können Sie mit dem <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a> beginnen.
 
@@ -214,5 +214,5 @@ Nein. Sobald ein Validator ausgetreten ist und sein gesamtes Guthaben abgehoben 
 - [EIP-4895: Beacon-Kette implementiert Abhebungen als Operationen](https://eips.ethereum.org/EIPS/eip-4895)
 - [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Auszahlung von gestaktem ETH (Testing) mit Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
-- [PEEPanEIP#68: EIP-4895: Beacon-Kette implementiert Abhebungen als Operationen mit Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
+- [PEEPanEIP#68: EIP-4895: Auszahlungen per Beacon Chain Push als Operationen mit Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Verständnis der effektiven Bilanz des Validators](https://www.attestant.io/posts/understanding-validator-effective-balance/)

@@ -755,7 +755,7 @@ This is the main function of the factory, to create a pair exchange between two 
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-We want the address of the new exchange to be deterministic, so it can be calculated in advance off chain (this can be useful for [layer 2 transactions](/developers/docs/layer-2-scaling/)).
+We want the address of the new exchange to be deterministic, so it can be calculated in advance off chain (this can be useful for [layer 2 transactions](/developers/docs/scaling/)).
 To do this we need to have a consistent order of the token addresses, regardless of the order in which we have received them, so we sort them here.
 
 ```solidity
@@ -925,7 +925,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-Most of these we either encountered before, or are fairly obvious. The one exception is `IWETH.sol`. Uniswap v2 allows exchanges for any pair of ERC-20 tokens, but ether (ETH) itself isn't an ERC-20 token. It predates the standard and is transferred by unique mechanisms. To enable the use of ETH in contracts that apply to ERC-20 tokens people came up with the [wrapped ether (WETH)](https://weth.io/) contract. You send this contract ETH, and it mints you an equivalent amount of WETH. Or you can burn WETH, and get ETH back.
+Most of these we either encountered before, or are fairly obvious. The one exception is `IWETH.sol`. Uniswap v2 allows exchanges for any pair of ERC-20 tokens, but ether (ETH) itself isn't an ERC-20 token. It predates the standard and is transferred by unique mechanisms. To enable the use of ETH in contracts that apply to ERC-20 tokens people came up with the [wrapped ether (WETH)](https://weth.tkn.eth.limo/) contract. You send this contract ETH, and it mints you an equivalent amount of WETH. Or you can burn WETH, and get ETH back.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {

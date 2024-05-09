@@ -4,15 +4,17 @@ description: An non-technical introduction to zero-knowledge proofs for beginner
 lang: en
 ---
 
-## What are zero-knowledge proofs? {#what-are-zk-proofs}
+# What are zero-knowledge proofs? {#what-are-zk-proofs}
 
 A zero-knowledge proof is a way of proving the validity of a statement without revealing the statement itself. The ‘prover’ is the party trying to prove a claim, while the ‘verifier’ is responsible for validating the claim.
 
 Zero-knowledge proofs first appeared in a 1985 paper, “[The knowledge complexity of interactive proof systems](http://people.csail.mit.edu/silvio/Selected%20Scientific%20Papers/Proof%20Systems/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)” which provides a definition of zero-knowledge proofs widely used today:
 
-> A zero-knowledge protocol is a method by which one party (the prover) can prove to another party (the verifier) that something is true, without revealing any information apart from the fact that this specific statement is true.
+> A zero-knowledge protocol is a method by which one party (the prover) **can prove** to another party (the verifier) **that something is true, without revealing any information** apart from the fact that this specific statement is true.
 
 Zero-knowledge proofs have improved over the years and they are now being used in several real-world applications.
+
+<YouTube id="fOGdb1CTu5c" />
 
 ## Why do we need zero-knowledge proofs? {#why-zero-knowledge-proofs-are-important}
 
@@ -20,9 +22,95 @@ Zero-knowledge proofs represented a breakthrough in applied cryptography, as the
 
 But there are problems with this approach, chiefly the lack of privacy. Personally Identifiable Information (PII) shared with third-party services is stored in central databases, which are vulnerable to hacks. With identity theft becoming a critical issue, there are calls for more privacy-protecting means of sharing sensitive information.
 
-Zero-knowledge proofs solve this problem by eliminating the need to reveal information to prove validity of claims. The zero-knowledge protocol uses the statement (called a ‘witness’) as input to generate a succinct proof of its validity. This proof provides strong guarantees that a statement is true without exposing the information used in creating it.
+Zero-knowledge proofs solve this problem by **eliminating the need to reveal information to prove validity of claims**. The zero-knowledge protocol uses the statement (called a ‘witness’) as input to generate a succinct proof of its validity. This proof provides strong guarantees that a statement is true without exposing the information used in creating it.
 
 Going back to our earlier example, the only evidence you need to prove your citizenship claim is a zero-knowledge proof. The verifier only has to check if certain properties of the proof hold true to be convinced that the underlying statement holds true as well.
+
+## Use-cases for zero-knowledge proofs {#use-cases-for-zero-knowledge-proofs}
+
+### Anonymous payments {#anonymous-payments}
+
+Credit card payments are often visible to multiple parties, including the payments provider, banks, and other interested parties (e.g., government authorities). While financial surveillance has benefits for identifying illegal activity, it also undermines the privacy of ordinary citizens.
+
+Cryptocurrencies were intended to provide a means for users to conduct private, peer-to-peer transactions. But most cryptocurrency transactions are openly visible on public blockchains. User identities are often pseudonymous and either wilfully linked to real-world identities (e.g. by including ETH addresses on Twitter or GitHub profiles) or can be associated with real-world identities using basic on and off-chain data analysis.
+
+There are specific “privacy coins” designed for completely anonymous transactions. Privacy-focused blockchains, such as Zcash and Monero, shield transaction details, including sender/receiver addresses, asset type, quantity, and the transaction timeline.
+
+By baking in zero-knowledge technology into the protocol, privacy-focused [blockchain](/glossary/#blockchain) networks allow [nodes](/glossary/#node) to validate transactions without needing to access transaction data.
+
+**Zero-knowledge proofs are also being applied to anonymizing transactions on public blockchains**. An example is Tornado Cash, a decentralized, non-custodial service that allows users to conduct private transactions on Ethereum. Tornado Cash uses zero-knowledge proofs to obfuscate transaction details and guarantee financial privacy. Unfortunately, because these are "opt-in" privacy tools they are associated with illicit activity. To overcome this, privacy has to eventually become the default on public blockchains.
+
+### Identity protection {#identity-protection}
+
+Current identity management systems put personal information at risk. Zero-knowledge proofs can help individuals validate identity whilst protecting sensitive details.
+
+Zero-knowledge proofs are particularly useful in the context of [decentralized identity](/decentralized-identity/). Decentralized identity (also described as ‘self-sovereign identity’) gives the individual the ability to control access to personal identifiers. Proving your citizenship without revealing your tax ID or passport details is a good example of how zero-knowledge technology enables decentralized identity.
+
+### Authentication {#authentication}
+
+Using online services requires proving your identity and right to access those platforms. This often requires providing personal information, like names, email addresses, birth dates, and so on. You may also need to memorize long passwords or risk losing access.
+
+Zero-knowledge proofs, however, can simplify authentication for both platforms and users. Once a ZK-proof has been generated using public inputs (e.g., data attesting to the user's membership of the platform) and private inputs (e.g., the user's details), the user can simply present it to authenticate their identity when they need to access the service. This improves the experience for users and frees organizations from the need to store huge amounts of user information.
+
+### Verifiable computation {#verifiable-computation}
+
+Verifiable computation is another application of zero-knowledge technology for improving blockchain designs. Verifiable computing allows us to outsource computation to another entity while maintaining verifiable results. The entity submits the result along with a proof verifying that the program was executed correctly.
+
+Verifiable computation is **critical to improving processing speeds on blockchains** without reducing security. Understanding this requires knowing the differences in proposed solutions for scaling Ethereum.
+
+[On-chain scaling solutions](/developers/docs/scaling/#on-chain-scaling), such as sharding, require extensive modification of the blockchain’s base layer. However, this approach is highly complex and errors in implementation can undermine Ethereum’s security model.
+
+[Off-chain scaling solutions](/developers/docs/scaling/#off-chain-scaling) don’t require redesigning the core Ethereum protocol. Instead they rely on an outsourced computation model to improve throughput on Ethereum’s base layer.
+
+Here’s how that works in practice:
+
+- Instead of processing every transaction, Ethereum offloads execution to a separate chain.
+
+- After processing transactions, the other chain returns the results to be applied to Ethereum’s state.
+
+The benefit here is that Ethereum doesn’t have to do any execution and only needs to apply results from outsourced computation to its state. This reduces network congestion and also improves transaction speeds (off-chain protocols optimize for faster execution).
+
+The chain needs a way to validate off-chain transactions without re-executing them, or else the value of off-chain execution is lost.
+
+This is where verifiable computation comes into play. When a node executes a transaction outside of Ethereum, it submits a zero-knowledge proof to prove the correctness of off-chain execution. This proof (called a [validity proof](/glossary/#validity-proof)) guarantees that a transaction is valid, allowing Ethereum to apply the result to its state—without waiting for anyone to dispute it.
+
+[Zero-knowledge rollups](/developers/docs/scaling/zk-rollups) and [validiums](/developers/docs/scaling/validium/) are two off-chain scaling solutions that use validity proofs to provide secure scalability. These protocols execute thousands of transactions off-chain and submit proofs for verification on Ethereum. Those results can be applied immediately once the proof is verified, allowing Ethereum to process more transactions without increasing computation on the base layer.
+
+### Reducing bribery and collusion in on-chain voting {#secure-blockchain-voting}
+
+Blockchain voting schemes have many favorable characteristics: they are fully auditable, secure against attacks, resistant to censorship, and free of geographical constraints. But even on-chain voting schemes aren't immune to the problem of **collusion**.
+
+Defined as “coordinating to limit open competition by deceiving, defrauding, and misleading others,” collusion may take the form of a malicious actor influencing voting by offering bribes. For example, Alice might receive a bribe from Bob to vote for `option B` on a ballot even if she prefers `option A`.
+
+Bribery and collusion limit the effectiveness of any process that uses voting as a signaling mechanism (especially where users can prove how they voted). This can have significant consequences, especially where the votes are responsible for allocating scarce resources.
+
+For example, [quadratic funding mechanisms](https://www.radicalxchange.org/concepts/plural-funding/) rely on donations to measure preference for certain options among different public good projects. Each donation counts as a "vote" for a specific project, with projects that receive more votes getting more funds from the matching pool.
+
+Using on-chain voting makes quadratic funding susceptible to collusion: blockchain transactions are public, so bribers can inspect a bribee’s on-chain activity to see how they “voted”. This way quadratic funding ceases to be an effective means for allocating funds based on the aggregated preferences of the community.
+
+Fortunately, newer solutions such as MACI (Minimum Anti-Collusion Infrastructure) are using zero-knowledge proofs to make on-chain voting (eg., quadratic funding mechanisms) resistant to bribery and collusion. MACI is a set of smart contracts and scripts that allow a central administrator (called a "coordinator") to aggregate votes and tally results _without_ revealing specifics on how each individual voted. Even so, it is still possible to verify that the votes were counted properly, or confirm that a particular individual participated in the voting round.
+
+#### How does MACI work with zero-knowledge proofs? {#how-maci-works-with-zk-proofs}
+
+At the start, the coordinator deploys the MACI contract on Ethereum, after which users can sign up for voting (by registering their public key in the smart contract). Users cast votes by sending messages encrypted with their public key to the smart contract (a valid vote must be signed with the most recent public key associated with the user's identity, among other criteria). Afterward, the coordinator processes all messages once the voting period ends, tallies the votes, and verifies the results on-chain.
+
+In MACI, zero-knowledge proofs are used to ensure correctness of computation by making it impossible for the coordinator to incorrectly process votes and tally results. This is achieved by requiring the coordinator to generate ZK-SNARK proofs verifying that a) all messages were processed correctly b) the final result corresponds to the sum of all _valid_ votes.
+
+Thus, even without sharing a breakdown of votes per user (as is usually the case), MACI guarantees the integrity of results calculated during the tallying process. This feature is useful in reducing the effectiveness of basic collusion schemes. We can explore this possibility by using the previous example of Bob bribing Alice to vote for an option:
+
+- Alice registers to vote by sending their public key to a smart contract.
+- Alice agrees to vote for `option B` in exchange for a bribe from Bob.
+- Alice votes for `option B`.
+- Alice secretly sends an encrypted transaction to change the public key associated with her identity.
+- Alice sends another (encrypted) message to the smart contract voting for `option A` using the new public key.
+- Alice shows Bob a transaction which shows she voted for `option B` (which is invalid since the public key is no longer associated with Alice's identity in the system)
+- While processing messages, the coordinator skips Alice's vote for `option B` and counts only the vote for `option A`. Hence, Bob's attempt to collude with Alice and manipulate the on-chain vote fails.
+
+Using MACI _does_ require trusting the coordinator not to collude with bribers or attempt to bribe voters themselves. The coordinator can decrypt user messages (necessary for creating the proof), so they can accurately verify how each person voted.
+
+But in cases where the coordinator remains honest, MACI represents a powerful tool for guaranteeing the sanctity of on-chain voting. This explains its popularity among quadratic funding applications (e.g., [clr.fund](https://clr.fund/#/about/maci)) that rely heavily on the integrity of each individual's voting choices.
+
+[Learn more about MACI](https://privacy-scaling-explorations.github.io/maci/).
 
 ## How do zero-knowledge proofs work? {#how-do-zero-knowledge-proofs-work}
 
@@ -92,92 +180,6 @@ ZK-STARK is an acronym for **Zero-Knowledge Scalable Transparent Argument of Kno
 
 ZK-STARKs produce larger proofs than ZK-SNARKs meaning they generally have higher verification overheads. However, there are cases (such as proving large datasets) where ZK-STARKs may be more cost-effective than ZK-SNARKs.
 
-## Use-cases for zero-knowledge proofs {#use-cases-for-zero-knowledge-proofs}
-
-### Anonymous payments {#anonymous-payments}
-
-Credit card payments are often visible to multiple parties, including the payments provider, banks, and other interested parties (e.g., government authorities). While financial surveillance has benefits for identifying illegal activity, it also undermines the privacy of ordinary citizens.
-
-Cryptocurrencies were intended to provide a means for users to conduct private, peer-to-peer transactions. But most cryptocurrency transactions are openly visible on public blockchains. User identities are often pseudonymous and either wilfully linked to real-world identities (e.g. by including ETH addresses on Twitter or GitHub profiles) or can be associated with real-world identities using basic on and off-chain data analysis.
-
-There are specific “privacy coins” designed for completely anonymous transactions. Privacy-focused blockchains, such as Zcash and Monero, shield transaction details, including sender/receiver addresses, asset type, quantity, and the transaction timeline.
-
-By baking in zero-knowledge technology into the protocol, privacy-focused blockchain networks allow nodes to validate transactions without needing to access transaction data.
-
-Zero-knowledge proofs are also being applied to anonymizing transactions on public blockchains. An example is Tornado Cash, a decentralized, non-custodial service that allows users to conduct private transactions on Ethereum. Tornado Cash uses zero-knowledge proofs to obfuscate transaction details and guarantee financial privacy. Unfortunately, because these are "opt-in" privacy tools they are associated with illicit activity. To overcome this, privacy has to eventually become the default on public blockchains.
-
-### Identity protection {#identity-protection}
-
-Current identity management systems put personal information at risk. Zero-knowledge proofs can help individuals validate identity whilst protecting sensitive details.
-
-Zero-knowledge proofs are particularly useful in the context of [decentralized identity](/decentralized-identity/). Decentralized identity (also described as ‘self-sovereign identity’) gives the individual the ability to control access to personal identifiers. Proving your citizenship without revealing your tax ID or passport details is a good example of how zero-knowledge technology enables decentralized identity.
-
-### Authentication {#authentication}
-
-Using online services requires proving your identity and right to access those platforms. This often requires providing personal information, like names, email addresses, birth dates, and so on. You may also need to memorize long passwords or risk losing access.
-
-Zero-knowledge proofs, however, can simplify authentication for both platforms and users. Once a ZK-proof has been generated using public inputs (e.g., data attesting to the user's membership of the platform) and private inputs (e.g., the user's details), the user can simply present it to authenticate their identity when they need to access the service. This improves the experience for users and frees organizations from the need to store huge amounts of user information.
-
-### Verifiable computation {#verifiable-computation}
-
-Verifiable computation is another application of zero-knowledge technology for improving blockchain designs. Verifiable computing allows us to outsource computation to another entity while maintaining verifiable results. The entity submits the result along with a proof verifying that the program was executed correctly.
-
-Verifiable computation is critical to improving processing speeds on blockchains without reducing security. Understanding this requires knowing the differences in proposed solutions for scaling Ethereum.
-
-[On-chain scaling solutions](/developers/docs/scaling/#on-chain-scaling), such as sharding, require extensive modification of the blockchain’s base layer. However, this approach is highly complex and errors in implementation can undermine Ethereum’s security model.
-
-[Off-chain scaling solutions](/developers/docs/scaling/#off-chain-scaling) don’t require redesigning the core Ethereum protocol. Instead they rely on an outsourced computation model to improve throughput on Ethereum’s base layer.
-
-Here’s how that works in practice:
-
-- Instead of processing every transaction, Ethereum offloads execution to a separate chain.
-
-- After processing transactions, the other chain returns the results to be applied to Ethereum’s state.
-
-The benefit here is that Ethereum doesn’t have to do any execution and only needs to apply results from outsourced computation to its state. This reduces network congestion and also improves transaction speeds (off-chain protocols optimize for faster execution).
-
-The chain needs a way to validate off-chain transactions without re-executing them, or else the value of off-chain execution is lost.
-
-This is where verifiable computation comes into play. When a node executes a transaction outside of Ethereum, it submits a zero-knowledge proof to prove the correctness of off-chain execution. This proof (called a [validity proof](/glossary/#validity-proof)) guarantees that a transaction is valid, allowing Ethereum to apply the result to its state—without waiting for anyone to dispute it.
-
-[Zero-knowledge rollups](/developers/docs/scaling/zk-rollups) and [validiums](/developers/docs/scaling/validium/) are two off-chain scaling solutions that use validity proofs to provide secure scalability. These protocols execute thousands of transactions off-chain and submit proofs for verification on Ethereum. Those results can be applied immediately once the proof is verified, allowing Ethereum to process more transactions without increasing computation on the base layer.
-
-### Reducing bribery and collusion in on-chain voting {#secure-blockchain-voting}
-
-Blockchain voting schemes have many favorable characteristics: they are fully auditable, secure against attacks, resistant to censorship, and free of geographical constraints. But even on-chain voting schemes aren't immune to the problem of **collusion**.
-
-Defined as “coordinating to limit open competition by deceiving, defrauding, and misleading others,” collusion may take the form of a malicious actor influencing voting by offering bribes. For example, Alice might receive a bribe from Bob to vote for `option B` on a ballot even if she prefers `option A`.
-
-Bribery and collusion limit the effectiveness of any process that uses voting as a signaling mechanism (especially where users can prove how they voted). This can have significant consequences, especially where the votes are responsible for allocating scarce resources.
-
-For example, [quadratic funding mechanisms](https://www.radicalxchange.org/concepts/plural-funding/) rely on donations to measure preference for certain options among different public good projects. Each donation counts as a "vote" for a specific project, with projects that receive more votes getting more funds from the matching pool.
-
-Using on-chain voting makes quadratic funding susceptible to collusion: blockchain transactions are public, so bribers can inspect a bribee’s on-chain activity to see how they “voted”. This way quadratic funding ceases to be an effective means for allocating funds based on the aggregated preferences of the community.
-
-Fortunately, newer solutions such as MACI (Minimum Anti-Collusion Infrastructure) are using zero-knowledge proofs to make on-chain voting (eg., quadratic funding mechanisms) resistant to bribery and collusion. MACI is a set of smart contracts and scripts that allow a central administrator (called a "coordinator") to aggregate votes and tally results _without_ revealing specifics on how each individual voted. Even so, it is still possible to verify that the votes were counted properly, or confirm that a particular individual participated in the voting round.
-
-#### How does MACI work with zero-knowledge proofs? {#how-maci-works-with-zk-proofs}
-
-At the start, the coordinator deploys the MACI contract on Ethereum, after which users can sign up for voting (by registering their public key in the smart contract). Users cast votes by sending messages encrypted with their public key to the smart contract (a valid vote must be signed with the most recent public key associated with the user's identity, among other criteria). Afterward, the coordinator processes all messages once the voting period ends, tallies the votes, and verifies the results on-chain.
-
-In MACI, zero-knowledge proofs are used to ensure correctness of computation by making it impossible for the coordinator to incorrectly process votes and tally results. This is achieved by requiring the coordinator to generate ZK-SNARK proofs verifying that a) all messages were processed correctly b) the final result corresponds to the sum of all _valid_ votes.
-
-Thus, even without sharing a breakdown of votes per user (as is usually the case), MACI guarantees the integrity of results calculated during the tallying process. This feature is useful in reducing the effectiveness of basic collusion schemes. We can explore this possibility by using the previous example of Bob bribing Alice to vote for an option:
-
-- Alice registers to vote by sending their public key to a smart contract.
-- Alice agrees to vote for `option B` in exchange for a bribe from Bob.
-- Alice votes for `option B`.
-- Alice secretly sends an encrypted transaction to change the public key associated with her identity.
-- Alice sends another (encrypted) message to the smart contract voting for `option A` using the new public key.
-- Alice shows Bob a transaction which shows she voted for `option B` (which is invalid since the public key is no longer associated with Alice's identity in the system)
-- While processing messages, the coordinator skips Alice's vote for `option B` and counts only the vote for `option A`. Hence, Bob's attempt to collude with Alice and manipulate the on-chain vote fails.
-
-Using MACI _does_ require trusting the coordinator not to collude with bribers or attempt to bribe voters themselves. The coordinator can decrypt user messages (necessary for creating the proof), so they can accurately verify how each person voted.
-
-But in cases where the coordinator remains honest, MACI represents a powerful tool for guaranteeing the sanctity of on-chain voting. This explains its popularity among quadratic funding applications (e.g., [clr.fund](https://clr.fund/#/about/maci)) that rely heavily on the integrity of each individual's voting choices.
-
-[Learn more about MACI](https://privacy-scaling-explorations.github.io/maci/).
-
 ## Drawbacks of using zero-knowledge proofs {#drawbacks-of-using-zero-knowledge-proofs}
 
 ### Hardware costs {#hardware-costs}
@@ -196,17 +198,15 @@ But there’s really no way for users to assess the honesty of participants and 
 
 ### Quantum computing threats {#quantum-computing-threats}
 
-ZK-SNARK uses elliptic curve cryptography ([ECDSA](/glossary/#ecdsa)) for encryption. While the ECDSA algorithm is secure for now, the development of quantum computers could break its security model in the future.
+ZK-SNARK uses elliptic curve cryptography for encryption. While the elliptic curve discrete logarithm problem is assumed to be intractable for now, the development of quantum computers could break this security model in the future.
 
-ZK-STARK is considered immune to the threat of quantum computing, as it uses collision-resistant hashes for encryption. Unlike public-private key pairings used in elliptic curve cryptography, collision-resistant hashing is more difficult for quantum computing algorithms to break.
+ZK-STARK is considered immune to the threat of quantum computing, as it only relies on collision-resistant hash functions for its security. Unlike public-private key pairings used in elliptic curve cryptography, collision-resistant hashing is more difficult for quantum computing algorithms to break.
 
 ## Further reading {#further-reading}
 
-- [Computer Scientist Explains One Concept in 5 Levels of Difficulty | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Wired YouTube channel_
 - [Overview of use cases for zero-knowledge proofs](https://pse.dev/projects) — _Privacy and Scaling Explorations Team_
 - [SNARKs vs. STARKS vs. Recursive SNARKs](https://www.alchemy.com/overviews/snarks-vs-starks) — _Alchemy Overviews_
 - [A Zero-Knowledge Proof: Improving Privacy on a Blockchain](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARKs — A Realistic Zero-Knowledge Example and Deep Dive](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARKs — Create Verifiable Trust, even against Quantum Computers](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [An approximate introduction to how zk-SNARKs are possible](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
-- [What is Zero-Knowledge Proof and Its Role in Blockchain?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_

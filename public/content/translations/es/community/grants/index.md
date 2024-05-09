@@ -15,10 +15,8 @@ Esta lista ha sido creada por nuestra comunidad. Si falta algo o encuentra infor
 Estos programas apoyan al ecosistema Ethereum ofreciendo subvenciones para una amplia gama de proyectos. Incluyen soluciones de escalabilidad, construcción de comunidad, seguridad y privacidad, entre otras cosas. Las subvenciones no son específicas de ninguna plataforma Ethereum en particular y sirven de acertado punto de partida en caso de duda.
 
 - [Programa de apoyo al ecosistema EF](https://esp.ethereum.foundation): _ financia proyectos de código abierto que beneficien a Ethereum, con enfoque particular en herramientas universales, infraestructura, investigación y bienes públicos_
-- [MetaCartel](https://www.metacartel.org/grants/): _desarrollo de DApp, creación de DAO_
 - [Moloch DAO](https://www.molochdao.com/): _privacidad, escalabilidad en capa 2, seguridad del cliente y más_.
 - [Subvenciones DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0): _hoja de cálculo de Google de organizaciones que ofrecen subvenciones_
-- [Crunchbase para subvenciones Web3](https://www.cryptoneur.xyz/web3-grants): _filtrar y buscar subvenciones por categoría, caso de uso y cantidad, entre otras opciones. Contribuya para que otros puedan encontrar la subvención correcta._
 - [Becas académicas](https://esp.ethereum.foundation/academic-grants): _becas para apoyar el trabajo académico relacionado con Ethereum_
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks ha elaborado un directorio exhaustivo de todas las subvenciones, solicitudes de propuestas (o RFP) y recompensas por detección de errores_
 
@@ -35,7 +33,6 @@ Estos proyectos han creado sus propias subvenciones para proyectos con fines de 
 - [Programa de subvenciones para la red SKALE](https://skale.space/developers#grants): _[ecosistema](https://skale.space/) de la red SKALE_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm): _[ecosistema The Graph](https://thegraph.com/)_
 - [Programa de subvenciones Uniswap](https://www.uniswapfoundation.org/apply-for-a-grant): _[Comunidad](https://uniswap.org/)Uniswap_
-- [Subvenciones Web3](https://web3grants.net): _una exhaustiva lista de programas de subvenciones relacionados con la Web3/crypto_
 
 ## Financiamiento cuadrático {#quadratic-funding}
 

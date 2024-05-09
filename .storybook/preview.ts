@@ -5,9 +5,14 @@ import theme from "../src/@chakra-ui/theme"
 
 import i18n, { baseLocales } from "./i18next"
 
+import "../src/styles/global.css"
+
 const extendedTheme = extendBaseTheme(theme)
 
-const chakraBreakpointArray = Object.entries(extendedTheme.breakpoints)
+const chakraBreakpointArray = Object.entries(extendedTheme.breakpoints) as [
+  string,
+  string
+][]
 
 const preview: Preview = {
   globals: {
@@ -26,6 +31,11 @@ const preview: Preview = {
     backgrounds: {
       disable: true,
     },
+    options: {
+      storySort: {
+        order: ["Atoms", "Molecules", "Organisms", "Templates", "Pages"],
+      },
+    },
     chakra: {
       theme: extendedTheme,
     },
@@ -34,6 +44,9 @@ const preview: Preview = {
     viewport: {
       viewports: chakraBreakpointArray.reduce((prevVal, currVal) => {
         const [token, key] = currVal
+
+        // `key` value is in em. Need to convert to px for Chromatic Story mode snapshots
+        const emToPx = (Number(key.replace("em", "")) * 16).toString() + "px"
 
         // Replace base value
         if (token === "base")
@@ -53,7 +66,7 @@ const preview: Preview = {
           [token]: {
             name: token,
             styles: {
-              width: key,
+              width: emToPx,
               height: "600px",
             },
           },

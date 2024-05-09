@@ -66,7 +66,7 @@ Sem estado fraco envolve alterações na maneira como os nós Ethereum verificam
 
 **Em sem estado fraco, propor blocos exige acesso a dados de estado completos, mas verificar blocos não exige dados do estado**
 
-Para que isso aconteça, [Verkle Trees](/roadmap/verkle-trees) já devem ter sido implementadas nos clientes Ethereum. As Verkle Trees são uma estrutura de dados de substituição para armazenar dados de estado do Ethereum que permitem que "testemunhas" pequenas e de tamanho fixo dos dados sejam transmitidas entre pares e utilizadas para verificar blocos, em vez de verificar blocos com relação aos bancos de dados locais. A [separação entre proponente e construtor](/roadmap/pbs/) também é necessária, porque isso permite que os construtores de blocos sejam nós especializados com hardware mais poderoso, e esses são os que exigem acesso aos dados de estado completos.
+Para que isso aconteça, [Verkle Trees](/roadmap/verkle-trees/) já devem ter sido implementadas nos clientes Ethereum. As Verkle Trees são uma estrutura de dados de substituição para armazenar dados de estado do Ethereum que permitem que "testemunhas" pequenas e de tamanho fixo dos dados sejam transmitidas entre pares e utilizadas para verificar blocos, em vez de verificar blocos com relação aos bancos de dados locais. A [separação entre proponente e construtor](/roadmap/pbs/) também é necessária, porque isso permite que os construtores de blocos sejam nós especializados com hardware mais poderoso, e esses são os que exigem acesso aos dados de estado completos.
 
 <ExpandableCard title="Por que é adequado depender de menos proponentes de blocos?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
@@ -81,7 +81,7 @@ O conceito "sem estado fraco" está em um estado avançado de pesquisa, mas depe
 
 ### Sem estado forte {#strong-statelessness}
 
-O conceito "sem estado forte" remove a necessidade de armazenamento de dados do estado por qualquer bloco. Em vez disso, as transações são enviadas com testemunhas que podem ser agregadas pelos produtores de blocos. Portanto, os produtores de blocos serão responsáveis por armazenar apenas o estado necessário para gerar testemunhas para as contas relevantes. A responsabilidade pelo estado é quase totalmente transferida para os usuários, pois eles enviam testemunhas e "listas de acesso" para declarar com quais contas e chaves de armazenamento estão interagindo.
+O conceito "sem estado forte" remove a necessidade de armazenamento de dados do estado por qualquer bloco. Em vez disso, as transações são enviadas com testemunhas que podem ser agregadas pelos produtores de blocos. Portanto, os produtores de blocos serão responsáveis por armazenar apenas o estado necessário para gerar testemunhas para as contas relevantes. A responsabilidade pelo estado é quase totalmente transferida para os usuários, pois eles enviam testemunhas e "listas de acesso" para declarar com quais contas e chaves de armazenamento estão interagindo. Embora isso permitiria nódulos altamente leves, seria mais difícil realizar trtansações conm contratos inteligentes.
 
 O conceito "sem estado forte" foi investigado por pesquisadores, mas atualmente não se espera que faça parte do planejamento do Ethereum. É mais provável que o sem estado fraco seja suficiente para as necessidades de escalabilidade do Ethereum.
 

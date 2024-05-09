@@ -32,7 +32,7 @@ description: ethereum.orgデベロッパー向けツールへの掲載基準
 
 **広く使われているツールであるか**
 
-- GitHub のスター数、ダウンロード数、知名度の高い企業やプロジェクトで使用された実績などの指標を検討
+- GitHubのスター数、ダウンロード数、知名度の高い企業やプロジェクトで使用された実績などの指標を検討
 
 **ツールの信頼性は十分か**
 
@@ -54,8 +54,8 @@ description: ethereum.orgデベロッパー向けツールへの掲載基準
 
 ## 追加方法 {#how-decisions-about-the-site-are-made}
 
-本基準を満たしたツールの ethereum.org への掲載をご希望の場合は、GitHub で問題を作成してください。
+本基準を満たしたツールのethereum.orgへの掲載をご希望の場合は、GitHubで問題を作成してください。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dev_tool.md&title=">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
   問題の作成
 </ButtonLink>

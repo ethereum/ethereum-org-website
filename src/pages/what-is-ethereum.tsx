@@ -60,8 +60,8 @@ import {
 } from "@/lib/utils/translations"
 
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
-import developers from "@/public/developers-eth-blocks.png"
-import community from "@/public/enterprise.png"
+import dogeComputerImg from "@/public/doge-computer.png"
+import ethImg from "@/public/eth.png"
 import diffEthAndBtc from "@/public/eth.png"
 import criminalActivity from "@/public/finance_transparent.png"
 import ethCoin from "@/public/impact_transparent.png"
@@ -195,7 +195,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   const requiredNamespaces = getRequiredNamespacesForPage("/what-is-ethereum")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const data = await cachedFetchTxCount()
 
@@ -217,14 +217,23 @@ const WhatIsEthereumPage = ({
   const { locale } = useRouter()
   const localeForNumberFormat = getLocaleForNumberFormat(locale! as Lang)
 
-  const formatNumber = (value: number) =>
+  const formatNumber = (
+    value: number,
+    minSignificantDigits: number,
+    maxSignificantDigits: number,
+    style?: string,
+    currency?: string
+  ) =>
     new Intl.NumberFormat(localeForNumberFormat, {
       notation: "compact",
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
+      minimumSignificantDigits: minSignificantDigits,
+      maximumSignificantDigits: maxSignificantDigits,
+      style: style,
+      currency: currency,
+      currencyDisplay: "narrowSymbol",
     }).format(value)
 
-  const txStat = "error" in data ? "" : formatNumber(data.value)
+  const txStat = "error" in data ? "" : formatNumber(data.value, 3, 4)
 
   const cards = [
     {
@@ -275,10 +284,14 @@ const WhatIsEthereumPage = ({
       eventName: "Cryptocurrency tab",
       content: (
         <>
-          <Text>{t("page-what-is-ethereum-cryptocurrency-tab-content-1")}</Text>
-          <Text>{t("page-what-is-ethereum-cryptocurrency-tab-content-2")}</Text>
+          <Text>
+            <Translation id="page-what-is-ethereum:page-what-is-ethereum-cryptocurrency-tab-content-1" />
+          </Text>
+          <Text>
+            <Translation id="page-what-is-ethereum:page-what-is-ethereum-cryptocurrency-tab-content-2" />
+          </Text>
           <Text mb="0">
-            {t("page-what-is-ethereum-cryptocurrency-tab-content-3")}
+            <Translation id="page-what-is-ethereum:page-what-is-ethereum-cryptocurrency-tab-content-3" />
           </Text>
         </>
       ),
@@ -295,7 +308,7 @@ const WhatIsEthereumPage = ({
   const tooltipContent = ({ apiUrl, apiProvider, ariaLabel }) => (
     <div>
       {t("common:data-provided-by")}{" "}
-      <InlineLink to={apiUrl} aria-label={ariaLabel}>
+      <InlineLink href={apiUrl} aria-label={ariaLabel}>
         {apiProvider}
       </InlineLink>
     </div>
@@ -370,7 +383,7 @@ const WhatIsEthereumPage = ({
           <br />
           <br />
 
-          <Section>
+          <Box>
             <H2>{t("page-what-is-ethereum-what-can-eth-do-title")}</H2>
             <CardContainer>
               {cards.map((card, idx) => (
@@ -386,7 +399,7 @@ const WhatIsEthereumPage = ({
                 />
               ))}
             </CardContainer>
-          </Section>
+          </Box>
 
           <TwoColumnContent>
             <Width60>
@@ -466,11 +479,11 @@ const WhatIsEthereumPage = ({
               <H2>{t("page-what-is-ethereum-ethereum-in-numbers-title")}</H2>
               <BannerGrid>
                 <BannerGridCell>
-                  <StatPrimary>4k+</StatPrimary>
+                  <StatPrimary>{formatNumber(4000, 1, 1)}+</StatPrimary>
                   <StatDescription>
-                    Projects built on{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-1-desc")}
                     <NoWrapText>
-                      Ethereum{" "}
+                      &nbsp;
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
@@ -479,17 +492,19 @@ const WhatIsEthereumPage = ({
                           ariaLabel: "Read more about Ethereum projects stats",
                         })}
                       >
-                        <Icon as={MdInfoOutline} fontSize="md" />
+                        <Box as="span">
+                          <Icon as={MdInfoOutline} verticalAlign="middle" />
+                        </Box>
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>96M+</StatPrimary>
+                  <StatPrimary>{formatNumber(96_000_000, 2, 2)}+</StatPrimary>
                   <StatDescription>
-                    Accounts (wallets) with an ETH{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-2-desc")}
                     <NoWrapText>
-                      balance{" "}
+                      &nbsp;
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
@@ -498,17 +513,19 @@ const WhatIsEthereumPage = ({
                           ariaLabel: "Read more about wallets stats",
                         })}
                       >
-                        <Icon as={MdInfoOutline} fontSize="md" />
+                        <Box as="span">
+                          <Icon as={MdInfoOutline} verticalAlign="middle" />
+                        </Box>
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>53.3M+</StatPrimary>
+                  <StatPrimary>{formatNumber(53_300_000, 3, 3)}+</StatPrimary>
                   <StatDescription>
-                    Smart contracts on{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-3-desc")}
                     <NoWrapText>
-                      Ethereum{" "}
+                      &nbsp;
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
@@ -517,17 +534,21 @@ const WhatIsEthereumPage = ({
                           ariaLabel: "Read more about smart contracts stats",
                         })}
                       >
-                        <Icon as={MdInfoOutline} fontSize="md" />
+                        <Box as="span">
+                          <Icon as={MdInfoOutline} verticalAlign="middle" />
+                        </Box>
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>$410B</StatPrimary>
+                  <StatPrimary>
+                    {formatNumber(410_000_000_000, 3, 3, "currency", "USD")}
+                  </StatPrimary>
                   <StatDescription>
-                    Value secured on{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-4-desc")}
                     <NoWrapText>
-                      Ethereum{" "}
+                      &nbsp;
                       <Tooltip
                         content={tooltipContent({
                           apiUrl: "https://ultrasound.money/#tvs",
@@ -535,17 +556,21 @@ const WhatIsEthereumPage = ({
                           ariaLabel: "Read more about about Ethereum as money",
                         })}
                       >
-                        <Icon as={MdInfoOutline} fontSize="md" />
+                        <Box as="span">
+                          <Icon as={MdInfoOutline} verticalAlign="middle" />
+                        </Box>
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>$3.5B</StatPrimary>
+                  <StatPrimary>
+                    {formatNumber(3_500_000_000, 2, 2, "currency", "USD")}
+                  </StatPrimary>
                   <StatDescription>
-                    Creator earnings on Ethereum in{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-5-desc")}
                     <NoWrapText>
-                      2021{" "}
+                      &nbsp;
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
@@ -555,20 +580,22 @@ const WhatIsEthereumPage = ({
                             "Read more about 2021 Ethereum earnings stats",
                         })}
                       >
-                        <Icon as={MdInfoOutline} fontSize="md" />
+                        <Box as="span">
+                          <Icon as={MdInfoOutline} verticalAlign="middle" />
+                        </Box>
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
                   <StatPrimary>
-                    {txStat || <StatErrorMessage fontSize="1rem" />}
+                    {txStat || <StatErrorMessage fontSize="md" />}
                   </StatPrimary>
                   {/* TODO: Extract strings for translation */}
                   <StatDescription>
-                    Number of transactions{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-6-desc")}
                     <NoWrapText>
-                      today{" "}
+                      &nbsp;
                       <Tooltip
                         content={tooltipContent({
                           apiUrl: "https://etherscan.io/",
@@ -577,7 +604,9 @@ const WhatIsEthereumPage = ({
                             "Read more about number of transactions stats",
                         })}
                       >
-                        <Icon as={MdInfoOutline} fontSize="md" />
+                        <Box as="span">
+                          <Icon as={MdInfoOutline} verticalAlign="middle" />
+                        </Box>
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
@@ -597,10 +626,14 @@ const WhatIsEthereumPage = ({
             </Width40>
             <Width60>
               <H2>{t("page-what-is-ethereum-who-runs-ethereum-title")}</H2>
-              <Text>{t("page-what-is-ethereum-who-runs-ethereum-desc-1")}</Text>
-              <Text>{t("page-what-is-ethereum-who-runs-ethereum-desc-2")}</Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-who-runs-ethereum-desc-1" />
+              </Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-who-runs-ethereum-desc-2" />
+              </Text>
               <ButtonRow>
-                <ButtonLink to="/run-a-node/">
+                <ButtonLink href="/run-a-node/">
                   {t("page-what-is-ethereum-run-a-node")}
                 </ButtonLink>
               </ButtonRow>
@@ -618,13 +651,17 @@ const WhatIsEthereumPage = ({
               <Text>
                 <Translation id="page-what-is-ethereum:page-what-is-ethereum-smart-contract-desc-1" />
               </Text>
-              <Text>{t("page-what-is-ethereum-smart-contract-desc-2")}</Text>
-              <Text>{t("page-what-is-ethereum-smart-contract-desc-3")}</Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-smart-contract-desc-2" />
+              </Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-smart-contract-desc-3" />
+              </Text>
               <ButtonRow>
-                <ButtonLink to="/smart-contracts/">
+                <ButtonLink href="/smart-contracts/">
                   {t("page-what-is-ethereum-more-on-smart-contracts")}
                 </ButtonLink>
-                <ButtonLink to="/dapps/" variant="outline">
+                <ButtonLink href="/dapps/" variant="outline" isSecondary>
                   {t("page-what-is-ethereum-explore-dapps")}
                 </ButtonLink>
               </ButtonRow>
@@ -642,10 +679,10 @@ const WhatIsEthereumPage = ({
               <Text>{t("page-what-is-ethereum-meet-ether-desc-1")}</Text>
               <Text>{t("page-what-is-ethereum-meet-ether-desc-2")}</Text>
               <ButtonRow>
-                <ButtonLink to="/eth/">
+                <ButtonLink href="/eth/">
                   {t("page-what-is-ethereum-what-is-ether")}
                 </ButtonLink>
-                <ButtonLink to="/get-eth/" variant="outline">
+                <ButtonLink href="/get-eth/" variant="outline" isSecondary>
                   {t("page-what-is-ethereum-get-eth")}
                 </ButtonLink>
               </ButtonRow>
@@ -660,15 +697,21 @@ const WhatIsEthereumPage = ({
             </Width40>
             <Width60>
               <H2>{t("page-what-is-ethereum-energy-title")}</H2>
-              <Text>{t("page-what-is-ethereum-energy-desc-1")}</Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-energy-desc-1" />
+              </Text>
               <Text>
                 <Translation id="page-what-is-ethereum:page-what-is-ethereum-energy-desc-2" />
               </Text>
               <ButtonRow>
-                <ButtonLink to="/energy-consumption/">
+                <ButtonLink href="/energy-consumption/">
                   {t("page-what-is-ethereum-more-on-energy-consumption")}
                 </ButtonLink>
-                <ButtonLink to="/roadmap/merge/" variant="outline">
+                <ButtonLink
+                  href="/roadmap/merge/"
+                  variant="outline"
+                  isSecondary
+                >
                   {t("page-what-is-ethereum-the-merge-update")}
                 </ButtonLink>
               </ButtonRow>
@@ -692,17 +735,11 @@ const WhatIsEthereumPage = ({
               </Text>
               <UnorderedList>
                 <ListItem>
-                  <InlineLink to="https://www.europol.europa.eu/publications-events/publications/cryptocurrencies-tracing-evolution-of-criminal-finances#downloads">
+                  <InlineLink href="https://www.europol.europa.eu/publications-events/publications/cryptocurrencies-tracing-evolution-of-criminal-finances#downloads">
                     Europol Spotlight - Cryptocurrencies - Tracing the evolution
                     of criminal finances.pdf
                   </InlineLink>{" "}
                   EN (1.4 MB)
-                </ListItem>
-                <ListItem>
-                  <InlineLink to="https://go.chainalysis.com/2021-CryptoCrime-Report.html">
-                    Chainalysis (2021), The 2021 Crypto Crime report
-                  </InlineLink>{" "}
-                  EN
                 </ListItem>
               </UnorderedList>
             </Width60>
@@ -730,20 +767,20 @@ const WhatIsEthereumPage = ({
       <Content>
         <H2>{t("page-what-is-ethereum-additional-reading")}</H2>
         <Text>
-          <InlineLink to="https://weekinethereumnews.com/">
+          <InlineLink href="https://weekinethereumnews.com/">
             {t("page-what-is-ethereum-week-in-ethereum")}
           </InlineLink>{" "}
           {t("page-what-is-ethereum-week-in-ethereum-desc")}
         </Text>
         <Text>
-          <InlineLink to="https://stark.mirror.xyz/n2UpRqwdf7yjuiPKVICPpGoUNeDhlWxGqjulrlpyYi0">
+          <InlineLink href="https://stark.mirror.xyz/n2UpRqwdf7yjuiPKVICPpGoUNeDhlWxGqjulrlpyYi0">
             {t("page-what-is-ethereum-atoms-institutions-blockchains")}
           </InlineLink>{" "}
           {t("page-what-is-ethereum-atoms-institutions-blockchains-desc")}
         </Text>
 
         <Text>
-          <InlineLink to="https://www.kernel.community/en/learn/module-1/dreamers">
+          <InlineLink href="https://www.kernel.community/en/learn/module-1/dreamers">
             {t("page-what-is-ethereum-kernel-dreamers")}
           </InlineLink>{" "}
           {t("page-what-is-ethereum-kernel-dreamers-desc")}
@@ -758,28 +795,28 @@ const WhatIsEthereumPage = ({
           <Callout
             flex="1 1 416px"
             minH="full"
-            image={developers}
-            titleKey="page-what-is-ethereum:page-what-is-ethereum-build"
-            alt={t("page-what-is-ethereum-alt-img-lego")}
-            descriptionKey="page-what-is-ethereum:page-what-is-ethereum-build-desc"
+            image={ethImg}
+            titleKey="page-what-is-ethereum:page-what-is-ethereum-get-eth-title"
+            alt={t("page-what-is-ethereum-get-eth-alt")}
+            descriptionKey="page-what-is-ethereum:page-what-is-ethereum-get-eth-description"
           >
             <Box>
-              <ButtonLink to="/developers/">
-                {t("page-what-is-ethereum-start-building-btn")}
+              <ButtonLink href="/get-eth/">
+                {t("page-what-is-ethereum-get-eth")}
               </ButtonLink>
             </Box>
           </Callout>
           <Callout
             flex="1 1 416px"
             minH="full"
-            image={community}
-            titleKey="page-what-is-ethereum:page-what-is-ethereum-community"
-            alt={t("page-what-is-ethereum-alt-img-comm")}
-            descriptionKey="page-what-is-ethereum:page-what-is-ethereum-comm-desc"
+            image={dogeComputerImg}
+            titleKey="page-what-is-ethereum:page-what-is-ethereum-explore-dapps-title"
+            alt={t("page-what-is-ethereum-explore-dapps-alt")}
+            descriptionKey="page-what-is-ethereum:page-what-is-ethereum-explore-dapps-description"
           >
             <Box>
-              <ButtonLink to="/community/">
-                {t("page-what-is-ethereum-meet-comm")}
+              <ButtonLink href="/dapps/">
+                {t("page-what-is-ethereum-explore-dapps")}
               </ButtonLink>
             </Box>
           </Callout>

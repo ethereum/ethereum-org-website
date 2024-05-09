@@ -202,13 +202,13 @@ Il modo in cui lo scambio in pari decide sul tasso di cambio tra token0 e token1
 Ecco un semplice esempio. Nota che, per semplicità, la tabella contiene solo tre cifre dopo il punto decimale e ignoriamo la commissione di trading dello 0,3%, quindi i numeri non sono esatti.
 
 | Evento                                        |  reserve0 |  reserve1 | reserve0 \* reserve1 | Tasso di cambio medio (token1/token0) |
-| --------------------------------------------- | --------: | --------: | -------------------: | ------------------------------------- |
-| Configurazione iniziale                       | 1.000,000 | 1.000,000 |            1.000.000 |                                       |
-| Trader A scambia 50 token0 per 47,619 token1  | 1.050,000 |   952,381 |            1.000.000 | 0,952                                 |
-| Trader B scambia 10 token0 per 8,984 token1   | 1.060,000 |   943,396 |            1.000.000 | 0,898                                 |
-| Trader C scambia 40 token0 per 34,305 token1  | 1.100,000 |   909,090 |            1.000.000 | 0,858                                 |
-| Trader D scambia 100 token1 per 109,01 token0 |   990,990 | 1.009,090 |            1.000.000 | 0,917                                 |
-| Trader E scambia 10 token0 per 10,079 token1  | 1.000,990 |   999,010 |            1.000.000 | 1,008                                 |
+| --------------------------------------------- | ---------:| ---------:| ----------------------:| ------------------------------------- |
+| Configurazione iniziale                       | 1.000,000 | 1.000,000 |              1.000.000 |                                       |
+| Trader A scambia 50 token0 per 47,619 token1  | 1.050,000 |   952,381 |              1.000.000 | 0,952                                 |
+| Trader B scambia 10 token0 per 8,984 token1   | 1.060,000 |   943,396 |              1.000.000 | 0,898                                 |
+| Trader C scambia 40 token0 per 34,305 token1  | 1.100,000 |   909,090 |              1.000.000 | 0,858                                 |
+| Trader D scambia 100 token1 per 109,01 token0 |   990,990 | 1.009,090 |              1.000.000 | 0,917                                 |
+| Trader E scambia 10 token0 per 10,079 token1  | 1.000,990 |   999,010 |              1.000.000 | 1,008                                 |
 
 Man mano che i trader forniscono più token0, il valore relativo di token1 aumenta, e viceversa, in basel all'offerta e alla domanda.
 
@@ -362,12 +362,12 @@ Se il tempo trascorso è diverso da zero, significa che la nostra è la prima tr
         }
 ```
 
-Ogni accumulatore di costo è aggiornato con l'ultimo costo (riserva dell'altro token/riserva di questo token), moltiplicato per il tempo passato in secondi. Per ottenere un prezzo medio, leggi il prezzo cumulativo che è due punti nel tempo e dividi per la differenza temporale tra essi. Ad esempio, supponiamo questa sequenza di eventi:
+Ogni accumulatore di costo è aggiornato con l'ultimo costo (riserva dell'altro token/riserva di questo token), moltiplicato per il tempo passato in secondi. Per avere un prezzo medio, si prende il prezzo cumulativo in due punti nel tempo e si divide per la differenza di tempo tra questi. Ad esempio, supponiamo questa sequenza di eventi:
 
-| Evento                                               |  reserve0 |  reserve1 | marca oraria | Tasso di cambio marginale (reserve1/reserve0) |       price0CumulativeLast |
-| ---------------------------------------------------- | --------: | --------: | ------------ | --------------------------------------------: | -------------------------: |
-| Configurazione iniziale                              | 1.000,000 | 1.000,000 | 5.000        |                                         1,000 |                          0 |
-| Trader A deposita 50 token0 e ottiene 47,619 token1  | 1.050,000 |   952,381 | 5.020        |                                         0,907 |                         20 |
+| Evento                                               |  reserve0 |  reserve1 | marca oraria | Tasso di cambio marginale (reserve1/reserve0) |         price0CumulativeLast |
+| ---------------------------------------------------- | ---------:| ---------:| ------------ | ---------------------------------------------:| ----------------------------:|
+| Configurazione iniziale                              | 1.000,000 | 1.000,000 | 5.000        |                                         1,000 |                            0 |
+| Trader A deposita 50 token0 e ottiene 47,619 token1  | 1.050,000 |   952,381 | 5.020        |                                         0,907 |                           20 |
 | Trader B deposita 10 token0 e ottiene 8,984 token1   | 1.060,000 |   943,396 | 5.030        |                                         0,890 |       20+10\*0,907 = 29,07 |
 | Trader C deposita 40 token0 e ottiene 34,305 token1  | 1.100,000 |   909,090 | 5.100        |                                         0,826 |    29,07+70\*0,890 = 91,37 |
 | Trader D deposita 100 token0 e ottiene 109,01 token1 |   990,990 | 1.009,090 | 5.110        |                                         1,018 |    91,37+10\*0,826 = 99,63 |
@@ -499,9 +499,9 @@ Al momento del primo deposito non conosciamo il valore relativo dei due token, q
 Possiamo fidarci perché è nell'interesse del depositante fornire un valore pari, così da evitare di perdere valore all'arbitraggio. Diciamo che il valore dei due token è identico, ma il nostro depositante ha depositato una quantità di **Token1** quattro volte superiore rispetto a quella di **Token0**. Un trader può avvalersi del fatto che lo scambio in pari pensi che **Token0** sia più prezioso per ricavarne valore.
 
 | Evento                                                        | reserve0 | reserve1 | reserve0 \* reserve1 | Valore del pool (reserve0 + reserve1) |
-| ------------------------------------------------------------- | -------: | -------: | -------------------: | ------------------------------------: |
-| Configurazione iniziale                                       |        8 |       32 |                  256 |                                    40 |
-| Il trader deposita 8 token **Token0** e ottiene 16 **Token1** |       16 |       16 |                  256 |                                    32 |
+| ------------------------------------------------------------- | --------:| --------:| ----------------------:| -------------------------------------:|
+| Configurazione iniziale                                       |        8 |       32 |                    256 |                                    40 |
+| Il trader deposita 8 token **Token0** e ottiene 16 **Token1** |       16 |       16 |                    256 |                                    32 |
 
 Come puoi vedere, il trader ha guadagnato 8 token extra, che provengono da una riduzione nel valore del pool, danneggiando il depositante che li possiede.
 
@@ -515,12 +515,12 @@ A ogni deposito successivo, conosciamo già il tasso di cambio tra le due risors
 Sia nel deposito iniziale sia in uno successivo, il numero di token di liquidità che forniamo è pari alla radice quadrata del cambio in `reserve0*reserve1` e il valore del token di liquidità non cambia (a meno che non otteniamo un deposito che non ha valori pari di entrambi i tipi, nel qual caso viene distribuita la "multa"). Ecco un altro esempio con due token aventi lo stesso valore, con tre depositi validi e uno non valido (deposito di solo un tipo di token, quindi non produce alcun token di liquidità).
 
 | Evento                      | reserve0 | reserve1 | reserve0 \* reserve1 | Valore del pool (reserve0 + reserve1) | Token di liquidità coniati per questo deposito | Token di liquidità totali | Valore di ciascun token di liquidità |
-| --------------------------- | -------: | -------: | -------------------: | ------------------------------------: | ---------------------------------------------: | ------------------------: | -----------------------------------: |
-| Configurazione iniziale     |    8,000 |    8,000 |                   64 |                                16,000 |                                              8 |                         8 |                                2,000 |
-| Deposita quattro per tipo   |   12,000 |   12,000 |                  144 |                                24,000 |                                              4 |                        12 |                                2,000 |
-| Deposita due per tipo       |   14,000 |   14,000 |                  196 |                                28,000 |                                              2 |                        14 |                                2,000 |
-| Deposito di valore non pari |   18,000 |   14,000 |                  252 |                                32,000 |                                              0 |                        14 |                               ~2,286 |
-| Dopo l'arbitraggio          |  ~15,874 |  ~15,874 |                  252 |                               ~31,748 |                                              0 |                        14 |                               ~2,267 |
+| --------------------------- | --------:| --------:| ----------------------:| -------------------------------------:| ----------------------------------------------:| -------------------------:| ------------------------------------:|
+| Configurazione iniziale     |    8,000 |    8,000 |                     64 |                                16,000 |                                              8 |                         8 |                                2,000 |
+| Deposita quattro per tipo   |   12,000 |   12,000 |                    144 |                                24,000 |                                              4 |                        12 |                                2,000 |
+| Deposita due per tipo       |   14,000 |   14,000 |                    196 |                                28,000 |                                              2 |                        14 |                                2,000 |
+| Deposito di valore non pari |   18,000 |   14,000 |                    252 |                                32,000 |                                              0 |                        14 |                               ~2,286 |
+| Dopo l'arbitraggio          |  ~15,874 |  ~15,874 |                    252 |                               ~31,748 |                                              0 |                        14 |                               ~2,267 |
 
 ```solidity
         }
@@ -985,7 +985,7 @@ I fornitori di liquidità specificano un minimo, solitamente perché vogliono li
 Ad esempio, immagina un caso in cui il tasso di cambio è uno a uno e il fornitore di liquidità specifica questi valori:
 
 | Parametro      | Valore |
-| -------------- | -----: |
+| -------------- | ------:|
 | amountADesired |   1000 |
 | amountBDesired |   1000 |
 | amountAMin     |    900 |
@@ -1152,7 +1152,7 @@ Il caso più semplice di rimozione di liquidità. Esiste un importo minimo di og
 
 ```solidity
         address pair = UniswapV2Library.pairFor(factory, tokenA, tokenB);
-        IUniswapV2Pair(pair).transferFrom(msg.sender, pair, liquidity); // invia liquidità al paro
+        IUniswapV2Pair(pair).transferFrom(msg.sender, pair, liquidity); // send liquidity to pair
         (uint amount0, uint amount1) = IUniswapV2Pair(pair).burn(to);
 ```
 
@@ -1295,8 +1295,8 @@ La funzione finale combina le commissioni di archiviazione con le meta-transazio
 #### Scambio {#trade}
 
 ```solidity
-    // **** SCAMBIO ****
-    // richiede l'importo iniziale già inviato alla prima coppia
+    // **** SWAP ****
+    // requires the initial amount to have already been sent to the first pair
     function _swap(uint[] memory amounts, address[] memory path, address _to) internal virtual {
 ```
 
@@ -1496,8 +1496,8 @@ In entrambi i casi, il trader deve dare innanzi tutto a questo contratto perifer
 Queste quattro varianti comportano tutte lo scambio tra ETH e token. La sola differenza è che riceviamo ETH dal trader e li usiamo per coniare WETH, o riceviamo WETH dall'ultimo scambio nel percorso e li bruciamo, reinviando al trader gli ETH risultanti.
 
 ```solidity
-    // **** SCAMBIO (supporta i token della commissione al trasferimento) ****
-    // richiede che l'importo iniziale sia già stato inviato alla prima coppia
+    // **** SWAP (supporting fee-on-transfer tokens) ****
+    // requires the initial amount to have already been sent to the first pair
     function _swapSupportingFeeOnTransferTokens(address[] memory path, address _to) internal virtual {
 ```
 
@@ -1672,7 +1672,7 @@ library Math {
         z = x < y ? x : y;
     }
 
-    // metodo babilonese (https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
+    // babylonian method (https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
     function sqrt(uint y) internal pure returns (uint z) {
         if (y > 3) {
             z = y;
@@ -1722,16 +1722,16 @@ library UQ112x112 {
 `Q112` è la codifica per uno.
 
 ```solidity
-    // codifica un uint112 come un UQ112x112
+    // encode a uint112 as a UQ112x112
     function encode(uint112 y) internal pure returns (uint224 z) {
-        z = uint224(y) * Q112; // mai in eccesso
+        z = uint224(y) * Q112; // never overflows
     }
 ```
 
 Poiché y è `uint112`, il suo valore massimo può essere 2^112-1. Quel numero è ancora codificabile come un `UQ112x112`.
 
 ```solidity
-    // divide un UQ112x112 per un uint112, restituendo un UQ112x112
+    // divide a UQ112x112 by a uint112, returning a UQ112x112
     function uqdiv(uint224 x, uint112 y) internal pure returns (uint224 z) {
         z = x / uint224(y);
     }
@@ -1802,7 +1802,7 @@ Questa funzione restituisce le riserve dei due token dello scambio in pari. Nota
 Questa funzione ti da l'importo di token B che riceverai in cambio del token A se non vengono applicate commissioni. Questo calcolo tiene conto che il trasferimento modifica il tasso di cambio.
 
 ```solidity
-    // dato un importo in entrata di una risorsa e riserve della coppia, restituisce l'importo risultante massimo dell'altra risorsa
+    // given an input amount of an asset and pair reserves, returns the maximum output amount of the other asset
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
 ```
 

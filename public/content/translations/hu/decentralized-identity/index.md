@@ -1,5 +1,5 @@
 ---
-title: Nem központilag kibocsájtott identitás
+title: Decentralizált identitás
 description: Mi az a nem központilag kibocsátott identitás, és miért fontos?
 lang: hu
 template: use-cases
@@ -8,18 +8,20 @@ sidebarDepth: 2
 image: /eth-gif-cat.png
 summaryPoint1: A hagyományos identitásrendszerek központosították az azonosítók kiadását, karbantartását és ellenőrzését.
 summaryPoint2: A decentralizált identitás megszünteti a centralizált harmadik felektől való függőséget.
-summaryPoint3: A kriptonak köszönhetően, a felhasználóknak újra van eszközük, hogy tárolják és kezeljék a saját azonosítójukat és tanúsítványaikat.
+summaryPoint3: A kriptónak köszönhetően, a felhasználóknak újra van eszközük, hogy tárolják és kezeljék a saját azonosítójukat és tanúsítványaikat.
 ---
 
 A virtuális identitás az életünk minden részét meghatározza napjainkban. Online szolgáltatások használata, bankszámla nyitás, szavazás a választásokon, ingatlan vásárlása, munkavállalás – mindegyikhez az identitás igazolása szükséges.
 
-Azonban a hagyományos azonosításkezelési rendszerek hosszú ideje központosított szereplőkre támaszkodtak, akik kibocsátják, tárolják és kezelik az azonosítóinkat és [tanúsítványainkat](#what-are-attestations). Ez azt jelenti, hogy nem tudjuk irányítani az azonosítással kapcsolatos információinkat, és nem dönthetünk arról, hogy ki férhet hozzá a személyazonosító információinkhoz (PII), valamint hogy ezek a felek milyen mértékű hozzáférést kapnak.
+Azonban a hagyományos azonosításkezelési rendszerek hosszú ideje központosított szereplőkre támaszkodtak, akik kibocsátják, tárolják és kezelik az azonosítóinkat és [tanúsítványainkat](/glossary/#attestation). Ez azt jelenti, hogy nem tudjuk irányítani az azonosítással kapcsolatos információinkat, és nem dönthetünk arról, hogy ki férhet hozzá a személyazonosító információinkhoz (PII), valamint hogy ezek a felek milyen mértékű hozzáférést kapnak.
 
 Ezen problémák megoldására decentralizált azonosítási rendszerek állnak rendelkezésre, amelyeket nyilvános blokkláncokon, például az Ethereumon, építettek. A decentralizált azonosítás lehetővé teszi az egyének számára, hogy kezeljék az azonosítással kapcsolatos információikat. A decentralizált azonosítási megoldásokkal _Ön is_ létrehozhat azonosítókat, illetve anélkül igényelhet és tárolhat tanúsítványokat, hogy központi hatóságokra, mint például szolgáltatók vagy kormányok, támaszkodna.
 
 ## Mi az az identitás? {#what-is-identity}
 
 Az identitás az egyén önmagához való viszonyának értelmezése, egyedi jellemzők által meghatározva. Az identitás az _egyént_ jelenti, azaz egy különálló emberi entitást. Jelenthet még nem emberi entitást is, mint például egy szervezetet vagy hatóságot is.
+
+<YouTube id="Ew-_F-OtDFI" />
 
 ## Mik az azonosítók? {#what-are-identifiers}
 
@@ -33,6 +35,46 @@ Az azonosító egy olyan információ, mely sajátos identitásra vagy identitá
 
 Ezeket a hagyományos azonosítókat központi hatóságok bocsátják ki, tárolják és kontrollálják. Engedélyre van szükség a kormánytól ahhoz, hogy valaki megváltoztassa a nevét, vagy a közösségi média platformtól arra, hogy megváltoztassa a profilját.
 
+## A decentralizált identitás előnyei {#benefits-of-decentralized-identity}
+
+1. A decentralizált identitás növeli az egyénnek a saját azonosítói feletti kontrollját. A decentralizált azonosítók és tanúsítások anélkül igazolhatók, hogy egy központi hatóságra vagy egy harmadik fél által nyújtott szolgáltatásra kellene támaszkodni.
+
+2. A decentralizáltidentitás-megoldások úgy képesek igazolni és kezelni egy felhasználó identitását, hogy nem kell megbízni egy másik félben, zökkenőmentes és védi a magán jellegű információkat.
+
+3. A decentralizált identitás a blokklánc-technológiát felhasználva teremt bizalmat a különböző felek között és a tanúsítások érvényességét igazolva nyújt kriptográfiai garanciát.
+
+4. A decentralizált identitás átvihetővé, hordozhatóvá teszi a identitáshoz kapcsolódó adatokat. A felhasználók a mobil tárcájukban tárolják a tanúsításokat és azonosítókat, és eldönthetik, hogy kivel osztják meg azokat. A decentralizált azonosítók és tanúsítások nem az azokat kibocsátó szervezet adatbázisába vannak zárva.
+
+5. A decentralizált identitás jól illeszkedik a most kialakuló [nulla tudású (zero-knowledge)](/glossary/#zk-proof) technológiákhoz, mellyel az egyének anélkül tudják igazolni tulajdonukat vagy eredményeiket, hogy feltárnák, mi is az pontosan. Ez egy hatásos módja annak, hogy a bizalmat és a magán jelleget kombinálják olyan felhasználási módoknál, mint amilyen például a szavazás.
+
+6. A decentralizált identitás lehetővé teszi az [anti-Sybil](/glossary/#anti-sybil) mechanizmust, feltárva azt, amikor egyetlen ember több személynek adja ki magát egy adott játékban vagy azért, hogy teleszemetelje (spam) a rendszert.
+
+## A decentralizált identitás alkalmazásai {#decentralized-identity-use-cases}
+
+A decentralizált identitás számtalan esetben alkalmazható:
+
+### 1. Univerzális bejelentkezés (login) {#universal-dapp-logins}
+
+A decentralizált identitás segíthet, hogy a jelszóalapú bejelentkezésk helyett decentralizált hitelesítés legyen. A szolgáltatók tanúsításokat bocsáthatnak ki a felhasználóknak, amelyet az Ethereum-tárcájukban tárolnak. Például egy olyan tanúsítvány, ami egy [NFT](/glossary/#nft), és hozzáférést biztosít egy online közösséghez.
+
+Az [Ethereumba való bejelentkezés](https://login.xyz/) funkció ekkor lehető tenné a szervereknek, hogy megerősítsék a felhasználó Ethereum-számláját és lekérdezzék az ehhez szükséges tanúsításokat a számlacímükről. Ezáltal a felhasználónak nem kell hosszú jelszavakat megjegyeznie ahhoz, hogy különböző platformokat és weboldalakat érjen el, és így jobb felhasználói élményben lehet része.
+
+### 2. Ügyfél-azonosítás (KYC) {#kyc-authentication}
+
+Az online szolgáltatások használatakor a felhasználóknak tanúsításokat és hitelesítő adatokat kell megadniuk, mint például vezetői engedély vagy útlevél. Ez azonban aggodalomra adhat okot, mivel a magánjellegű információkkal visszaélhetnek, a szolgáltatók pedig nem tudják ellenőrizni a tanúsítások hitelességét.
+
+A decentralizált identitás révén a cégek elhagyhatják a hagyományos [ügyfél-azonosítást (KYC)](https://en.wikipedia.org/wiki/Know_your_customer), és ehelyett az ügyfelek identitását az igazolható bizonyítványok (VC) révén ellenőrizhetik. Ez csökkenti az azonosítások kezelésének költségét, és kivédi a hamis iratok használatát is.
+
+### 3. Szavazás és online közösségek {#voting-and-online-communities}
+
+Az online szavazás és a közösségi média két új alkalmazási területe a decentralizált identitásnak. Az online szavazások ki vannak téve a manipulációnak, főleg ha a rosszindulatú szereplők hamis identitásokat hoznak létre, hogy azokkal szavazzanak. A szavazás folyamatának integritását nagy mértékben növelné, ha az egyének a láncon belüli tanúsításokkal igazolnák magukat.
+
+A decentralizált identitás segít olyan online közösségek létrehozásában, melyek mentesek a hamis profiloktól. Például minden felhasználónak igazolnia kell a kilétét egy láncon belüli azonosítási rendszerrel, mint amilyen az Ethereum Névszolgáltatás (ENS), és így kizárhatók a nem emberi résztvevők (bot).
+
+### 4. Anti-Sybil védelem {#sybil-protection}
+
+A Sybil-támadás azt jelenti, hogy bizonyos egyének kijátsszák a rendszert, hogy az több embernek vegye őket, és így nagyobb befolyást tudjanak gyakorolni. A támogatást adó alkalmazások, melyek [kvadratikus szavazást](/glossary/#quadratic-voting) használnak, sebezhetők ezekkel a Sybil-támadásokkal szemben, mert a támogatás összege növekszik, ha több szavazat érkezik rá. Ez pedig arra ösztönzi a résztvevőket, hogy több identitással vegyenek részt a folyamatban. A decentralizált identitás megakadályozza ezt, mivel a résztvevők könnyedén igazolhatják, hogy valódi emberek, és nem kell hozzá specifikus, magán jellegű információkat feltárniuk magukról.
+
 ## Mi az a tanúsítás? {#what-are-attestations}
 
 A tanúsítás egy olyan állítás, melyet az egyik entitás ad a másikról. Az Amerikai Egyesült Államokban a vezetői engedélyt a Gépjárművekkel foglalkozó hivatal (egyik entitás) bocsátja ki, mellyel tanúsítja, hogy az illető személy (másik entitás) autót vezethet.
@@ -43,17 +85,17 @@ A tanúsítás nem azonos az azonosítókkal. A tanúsításhoz _szükség van_ 
 
 A hagyományos azonosítók, mint a hivatalos név vagy e-mail-cím, harmadik személyen múlnak – a kormányokon és az e-mail-szolgáltatókon. A decentralizált azonosítók (DID) különböznek ezektől – ezeket nem egy központi hatóság állítja ki, kezeli vagy kontrollálja.
 
-A decentralizált azonosítókat az egyének állítják ki, kezelik és kontrollálják. Az [Ethereum-számla](/developers/docs/accounts/) is egy decentralizált azonosító. A felhasználó annyi számlát hozhat létre, amennyit csak akar, anélkül hogy bárki engedélyére szükség lenne vagy egy központ nyilvántartásban kellene tárolni azokat.
+A decentralizált azonosítókat az egyének állítják ki, kezelik és kontrollálják. Az [Ethereum-számla](/glossary/#account) is egy decentralizált azonosító. A felhasználó annyi számlát hozhat létre, amennyit csak akar, anélkül hogy bárki engedélyére szükség lenne vagy egy központ nyilvántartásban kellene tárolni azokat.
 
-A decentralizált azonosítókat elosztott főkönyveken (blokklánc) vagy peer-to-peer hálózatokon tárolják. Ennek okán a DID-ekre az jellemző, hogy [globálisan egyediek, sokrétűen felhasználhatók és kriptográfiával ellenőrizhetők](https://w3c-ccg.github.io/did-primer/). A decentralizált azonosító különféle entitásokhoz kapcsolódhat, mint emberek, szervezetek vagy kormányzati szervek.
+A decentralizált azonosítókat elosztott főkönyveken ([blokklánc](/glossary/#blockchain)) vagy [peer-to-peer hálózatokon](/glossary/#peer-to-peer-network) tárolják. Ennek okán a DID-ekre az jellemző, hogy [globálisan egyediek, sokrétűen felhasználhatók és kriptográfiával ellenőrizhetők](https://w3c-ccg.github.io/did-primer/). A decentralizált azonosító különféle entitásokhoz kapcsolódhat, mint emberek, szervezetek vagy kormányzati szervek.
 
 ## Mi teszi lehetővé a decentralizált azonosítók használatát? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Nyilvánoskulcs-infrastruktúra (PKI) {#public-key-infrastructure}
+### 1. Nyilvánoskulcs-kriptográfia {#public-key-cryptography}
 
-A nyilvánoskulcs-infrastruktúra (PKI) egy olyan információbiztonsági lépés, amely az entitás számára egy [nyilvános kulcsot](/glossary/#public-key) és egy [privát kulcsot](/glossary/#private-key) hoz létre. A nyilvános kulcson alapuló kriptográfiát a blokklánchálózatok arra használják, hogy igazolják a felhasználók identitását és a digitális eszközök tulajdonjogát.
+A nyilvánoskulcs-kriptográfia egy olyan információbiztonsági lépés, amely az entitás számára egy [nyilvános kulcsot](/glossary/#public-key) és egy [privát kulcsot](/glossary/#private-key) hoz létre. A nyilvános kulcson alapuló [kriptográfiát](/glossary/#cryptography) a blokklánchálózatok arra használják, hogy igazolják a felhasználók identitását és a digitális eszközök tulajdonjogát.
 
-Néhány decentralizált azonosító, mint amilyen az Ethereum-számla, egyaránt rendelkezik nyilvános és privát kulccsal. A nyilvános kulcs meghatározza a számla birtokosát, miközben a privát kulcs aláírhatja az adott számlához tartozó üzeneteket, illetve feloldhatja azok titkosítását. A PKI igazolja az entitások identitását, megakadályozza, hogy valaki más felöltse azt vagy hamisat használjon – mindezt a [kriptográfiai aláírás](https://andersbrownworth.com/blockchain/public-private-keys/) révén, amely minden állítást igazol.
+Néhány decentralizált azonosító, mint amilyen az Ethereum-számla, egyaránt rendelkezik nyilvános és privát kulccsal. A nyilvános kulcs meghatározza a számla birtokosát, miközben a privát kulcs aláírhatja az adott számlához tartozó üzeneteket, illetve feloldhatja azok titkosítását. A nyilvánoskulcs-kriptográfia igazolja az entitások identitását, megakadályozza, hogy valaki más felöltse azt vagy hamisat használjon – mindezt a [kriptográfiai aláírás](https://andersbrownworth.com/blockchain/public-private-keys/) révén, amely minden állítást igazol.
 
 ### 2. Decentralizált adattárolók {#decentralized-datastores}
 
@@ -97,7 +139,7 @@ Ez a megközelítés lehetővé teszi, hogy a tanúsítások állandóan elérhe
 
 ### Blokkláncon belüli tanúsítások {#onchain-attestations}
 
-A blokkláncon belüli tanúsítások [okosszerződésekben](/developers/docs/smart-contracts/) vannak tárolva az Ethereum-blokkláncon. Az okosszerződés (ami nyilvántartásként működik) hozzáköti a tanúsítást egy kapcsolódó, láncon belüli decentralizált azonosítóhoz (egy nyilvános kulcshoz).
+A blokkláncon belüli tanúsítások [okosszerződésekben](/glossary/#smart-contract) vannak tárolva az Ethereum-blokkláncon. Az okosszerződés (ami nyilvántartásként működik) hozzáköti a tanúsítást egy kapcsolódó, láncon belüli decentralizált azonosítóhoz (egy nyilvános kulcshoz).
 
 A következő példa bemutatja, hogyan működik a láncon belüli tanúsítás a gyakorlatban:
 
@@ -109,47 +151,7 @@ A következő példa bemutatja, hogyan működik a láncon belüli tanúsítás 
 
 ### Egyénhez kötött tokenek és identitás {#soulbound}
 
-Az [egyénhez kötött tokeneket](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (nem átadható NFT-k) arra lehet használni, hogy egy adott tárcához tartozó egyedi információkat gyűjtsenek. Ez gyakorlatilag létrehoz egy egyedi, láncon belüli identitást, amely egy adott Ethereum-címhez kötődik, és eredményeket (mint egy online tanfolyam elvégzése vagy egy játékban elért szint) vagy közösségi részvételt jelentő tokeneket foglal magába.
-
-## A decentralizált identitás előnyei {#benefits-of-decentralized-identity}
-
-1. A decentralizált identitás növeli az egyénnek a saját azonosítói feletti kontrollját. A decentralizált azonosítók és tanúsítások anélkül igazolhatók, hogy egy központi hatóságra vagy egy harmadik fél által nyújtott szolgáltatásra kellene támaszkodni.
-
-2. A decentralizáltidentitás-megoldások úgy képesek igazolni és kezelni egy felhasználó identitását, hogy nem kell megbízni egy másik félben, zökkenőmentes és védi a magán jellegű információkat.
-
-3. A decentralizált identitás a blokklánc-technológiát felhasználva teremt bizalmat a különböző felek között és a tanúsítások érvényességét igazolva nyújt kriptográfiai garanciát.
-
-4. A decentralizált identitás átvihetővé, hordozhatóvá teszi a identitáshoz kapcsolódó adatokat. A felhasználók a mobil tárcájukban tárolják a tanúsításokat és azonosítókat, és eldönthetik, hogy kivel osztják meg azokat. A decentralizált azonosítók és tanúsítások nem az azokat kibocsátó szervezet adatbázisába vannak zárva.
-
-5. A decentralizált identitás jól illeszkedik a most kialakuló nulla tudású (zero-knowledge) technológiákhoz, mellyel az egyének anélkül tudják igazolni tulajdonukat vagy eredményeiket, hogy feltárnák, mi is az pontosan. Ez egy hatásos módja annak, hogy a bizalmat és a magán jelleget kombinálják olyan felhasználási módoknál, mint amilyen például a szavazás.
-
-6. A decentralizált identitás lehetővé teszi az anti-Sybil mechanizmust, feltárva azt, amikor egyetlen ember több személynek adja ki magát egy adott játékban vagy azért, hogy teleszemetelje (spam) a rendszert.
-
-## A decentralizált identitás alkalmazásai {#decentralized-identity-use-cases}
-
-A decentralizált identitás számtalan esetben alkalmazható:
-
-### 1. Univerzális bejelentkezés (login) {#universal-dapp-logins}
-
-A decentralizált identitás segít abban, hogy a jelszóalapú bejelentkezések helyett [decentralizált azonosítás](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/) legyen használható. A szolgáltatók tanúsításokat bocsáthatnak ki a felhasználóknak, amelyet az Ethereum-tárcájukban tárolnak. Például egy olyan tanúsítvány, ami egy [NFT](/nft/), és hozzáférést biztosít egy online közösséghez.
-
-Az [Ethereumba való bejelentkezés](https://login.xyz/) funkció ekkor lehető tenné a szervereknek, hogy megerősítsék a felhasználó Ethereum-számláját és lekérdezzék az ehhez szükséges tanúsításokat a számlacímükről. Ezáltal a felhasználónak nem kell hosszú jelszavakat megjegyeznie ahhoz, hogy különböző platformokat és weboldalakat érjen el, és így jobb felhasználói élményben lehet része.
-
-### 2. Ügyfél-azonosítás (KYC) {#kyc-authentication}
-
-Az online szolgáltatások használatakor a felhasználóknak tanúsításokat és hitelesítő adatokat kell megadniuk, mint például vezetői engedély vagy útlevél. Ez azonban aggodalomra adhat okot, mivel a magánjellegű információkkal visszaélhetnek, a szolgáltatók pedig nem tudják ellenőrizni a tanúsítások hitelességét.
-
-A decentralizált identitás révén a cégek elhagyhatják a hagyományos [ügyfél-azonosítást (KYC)](https://en.wikipedia.org/wiki/Know_your_customer), és ehelyett az ügyfelek identitását az igazolható bizonyítványok (VC) révén ellenőrizhetik. Ez csökkenti az azonosítások kezelésének költségét, és kivédi a hamis iratok használatát is.
-
-### 3. Szavazás és online közösségek {#voting-and-online-communities}
-
-Az online szavazás és a közösségi média két új alkalmazási területe a decentralizált identitásnak. Az online szavazások ki vannak téve a manipulációnak, főleg ha a rosszindulatú szereplők hamis identitásokat hoznak létre, hogy azokkal szavazzanak. A szavazás folyamatának integritását nagy mértékben növelné, ha az egyének a láncon belüli tanúsításokkal igazolnák magukat.
-
-A decentralizált identitás segít olyan online közösségek létrehozásában, melyek mentesek a hamis profiloktól. Például minden felhasználónak igazolnia kell a kilétét egy láncon belüli azonosítási rendszerrel, mint amilyen az Ethereum Névszolgáltatás (ENS), és így kizárhatók a nem emberi résztvevők (bot).
-
-### 4. Anti-Sybil védelem {#sybil-protection}
-
-A Sybil-támadás azt jelenti, hogy bizonyos egyének kijátsszák a rendszert, hogy az több embernek vegye őket, és így nagyobb befolyást tudjanak gyakorolni. A [támogatást adó alkalmazások](https://gitcoin.co/grants/), melyek [kvadratikus szavazást](https://www.radicalxchange.org/concepts/plural-voting/) használnak, sebezhetők ezekkel a Sybil-támadásokkal szemben, mert a támogatás összege növekszik, ha több szavazat érkezik rá. Ez pedig arra ösztönzi a résztvevőket, hogy több identitással vegyenek részt a folyamatban. A decentralizált identitás megakadályozza ezt, mivel a résztvevők könnyedén igazolhatják, hogy valódi emberek, és nem kell hozzá specifikus, magán jellegű információkat feltárniuk magukról.
+Az [egyénhez kötött tokeneket](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([nem átadható NFT-k](/glossary/#nft)) arra lehet használni, hogy egy adott tárcához tartozó egyedi információkat gyűjtsenek. Ez gyakorlatilag létrehoz egy egyedi, láncon belüli identitást, amely egy adott Ethereum-címhez kötődik, és eredményeket (mint egy online tanfolyam elvégzése vagy egy játékban elért szint) vagy közösségi részvételt jelentő tokeneket foglal magába.
 
 ## Használjon decentralizált identitást {#use-decentralized-identity}
 
@@ -160,7 +162,6 @@ Számtalan ambiciózus projekt használja az Ethereumot a decentralizált identi
 - **[Ethereum tanúsítási szolgáltatás (EAS)](https://attest.sh/)** – _Egy decentralizált főkönyv/protokoll láncon belüli vagy láncon kívüli tanúsítások készítésére._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** – _Az emberség igazolása (PoH) egy közösségi identitás igazolására készült rendszer, mely az Ethereumra épül._
 - **[BrightID](https://www.brightid.org/)** – _Egy decentralizált, nyílt forráskódú, közösségi identitási hálózat, amely új módot keres az azonosításra egy közösségi gráf megalkotásával és elemzésével._
-- **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** - _Egy decentralizált, digitális identitásgyűjtemény._
 - **[walt.id](https://walt.id)** – _Nyílt forráskódú, decentralizált identitás- és tárcainfrastruktúra, amely lehetővé teszi a fejlesztőknek és szervezeteknek, hogy kihasználják a szuverén identitást, valamint az NFT-ket/SBT-ket._
 
 ## További olvasnivaló {#further-reading}

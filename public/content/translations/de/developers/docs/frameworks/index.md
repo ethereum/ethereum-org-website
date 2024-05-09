@@ -61,7 +61,7 @@ Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit de
 
 **Scaffold-Eth -** **_Ethers.js + Hardhat + React-Komponenten und Hooks für web3: alles, was Sie brauchen, um mit der Entwicklung dezentraler Anwendungen auf Basis von Smart Contracts zu beginnen._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **Tenderly -** **_Web3-Entwicklungsplattform, die es Blockchain-Entwicklern ermöglicht, Smart Contracts zu erstellen, zu testen, zu debuggen, zu überwachen und zu betreiben bzw. die dApp-Nutzererfahrung zu verbessern._**
 

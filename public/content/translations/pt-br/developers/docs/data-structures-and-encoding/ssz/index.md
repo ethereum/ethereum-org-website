@@ -109,7 +109,7 @@ Esse objeto serializado SSZ pode então ser merkleizado, o seja, transformado em
 
 Há também casos em que as folhas da árvore não se distribuem naturalmente, de maneira uniforme, como o fazem no exemplo acima. Por exemplo, a folha 4 pode ser um contêiner com vários elementos que exige "profundidade" adicional para serem adicionados à árvore Merkle, criando uma árvore desnivelada.
 
-Em vez de nos referirmos a esses elementos da árvore como folha X, nó X etc., podemos dar a eles índices generalizados, começando com raiz = 1 e contando da esquerda para a direita ao longo de cada nível. Este é o índice generalizado explicado acima. Cada elemento na lista serializada tem um índice generalizado igual a `2**depth + idx` onde idx é sua posição indexada em zero no objeto serializado e a profundidade é o número de níveis na árvore Merkle, que pode ser determinado como a raiz quadrada do número de elementos (folhas).
+Em vez de nos referirmos a esses elementos da árvore como folha X, nó X etc., podemos dar a eles índices generalizados, começando com raiz = 1 e contando da esquerda para a direita ao longo de cada nível. Este é o índice generalizado explicado acima. Cada elemento na lista serializada tem um índice genérico igual a `2**profundidade + idx`, onde o idx é a sua posição indexada por zero no objeto serializado e a profundidade é o número de níveis na árvore Merkle, que pode ser determinado como o logaritmo de base dois do número de elementos (folhas).
 
 ## Índices generalizados {#generalized-indices}
 

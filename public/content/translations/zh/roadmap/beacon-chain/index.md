@@ -4,9 +4,10 @@ description: 了解信标链 - 引入权益证明的以太坊升级。
 lang: zh
 template: upgrade
 image: /upgrades/core.png
-summaryPoint1: 信标链为以太坊生态系统引入了权益证明。
+alt:
+summaryPoint1: 信标链为以太坊生态系统引入了权益证明机制。
 summaryPoint2: 信标链于 2022 年 9 月与原有的以太坊工作量证明链合并。
-summaryPoint3: 信标链引入的共识逻辑和区块广播协议目前保护着以太坊。
+summaryPoint3: 信标链引入了共识逻辑和区块广播协议，为当前的以太坊保驾护航。
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -27,7 +28,7 @@ summaryPoint3: 信标链引入的共识逻辑和区块广播协议目前保护�
 
 信标链将[权益证明机制](/developers/docs/consensus-mechanisms/pos/)引入以太坊。 这保证了以太坊的安全，并在此过程中让验证者获得更多以太币。 在实际操作中，质押将需要质押以太币，以激活验证者软件。 作为质押人，你运行该软件并在链中创建和验证新区块。
 
-质押的作用与曾经的[挖矿](/developers/docs/mining/)类似，但有许多不同之处。 挖矿的前期支出庞大，需要投入强大的硬件和消耗大量能源，从而产生规模经济并促进集中化。 挖矿也没有提出任何将资产锁定作为抵押品的要求，这限制了被攻击后协议惩罚不良行为者的能力。
+质押的作用与曾经的[挖矿](/developers/docs/consensus-mechanisms/pow/mining/)类似，但有许多不同之处。 挖矿的前期支出庞大，需要投入强大的硬件和消耗大量能源，从而产生规模经济并促进集中化。 挖矿也没有提出任何将资产锁定作为抵押品的要求，这限制了被攻击后协议惩罚不良行为者的能力。
 
 和工作量证明相比，过渡到权益证明让以太坊的安全性与去中心化得到显著提升。 参与该网络的人越多，网络去中心化程度越高，面临攻击时也越安全。
 

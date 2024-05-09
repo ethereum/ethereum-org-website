@@ -21,27 +21,25 @@ Você deveria ter um bom entendimento de todos os tópicos fundamentais. Impleme
 
 ## Dimensionamento on-chain {#on-chain-scaling}
 
-Este método de dimensionamento requer alterações no protocolo Ethereum ([rede principal](/glossary/#mainnet) da camada 1). A fragmentação é atualmente o principal objetivo deste método de dimensionamento.
+A escalabilidade em cadeia requer mudanças no protocolo do Ethereum ([Mainnet](/glossary/#mainnet) de camada 1). A solução de fragmentação da blockchain era aguardada há muito tempo para escalar o Ethereum. Isso implicava dividir a blockchain em partes discretas (fragmentos), que seriam verificadas por subconjuntos de validadores. No entanto, a técnica de escalabilidade principal adotada foi a de escalar por rollups de camada 2. Ela é suportada pela adição de uma nova forma mais barata de dados anexados aos blocos Ethereum, que foi especialmente criada para tornar os rollups baratos para os usuários.
 
 ### Fragmentação {#sharding}
 
-A fragmentação é o processo de dividir um banco de dados horizontalmente para repartir a carga de trabalho. No contexto do Ethereum, a fragmentação reduzirá o congestionamento da rede e aumentará o número de transações por segundo graças à geração de novas cadeias conhecidas como "fragmentos". Isso também irá aliviar a carga para cada validador, que não precisará mais processar a totalidade de todas as transações da rede.
-
-Saiba mais sobre [fragmentação](/roadmap/danksharding/).
+Fragmentação é o processo de dividir um banco de dados. Subconjuntos de validadores seriam responsáveis por seus próprios fragmentos, em vez de manter o controle de todo o Ethereum. A fragmentação esteve no [planejamento](/roadmap/) do Ethereum por muito tempo, com a intenção de ser enviada para prova de participação antes do The Merge (A Fusão). No entanto, o rápido desenvolvimento de [rollups de camada 2](#layer-2-scaling) e a invenção do [Danksharding](/roadmap/danksharding) (adicionando blobs de dados do rollup para blocos do Ethereum que podem ser verificados eficientemente pelos validadores) têm levado a comunidade Ethereum a preferir o dimensionamento centrado por rollup em vez do dimensionamento por fragmentação. Isso também ajudará a manter a lógica de consenso do Ethereum mais simples.
 
 ## Dimensionamento off-chain {#off-chain-scaling}
 
-As soluções off-chain são implementadas separadamente da rede principal da camada 1. Ou seja, elas não requerem alterações no protocolo Ethereum Ethereum existente. Algumas soluções, conhecidas como soluções de "camada 2", derivam sua segurança diretamente do consenso da camada 1 do Ethereum, por exemplo, os [optimistic rollups](/developers/docs/scaling/layer-2-rollups/), os [rollups de conhecimento zero](/developers/docs/scaling/zk-rollups/) ou os [canais de estado](/developers/docs/scaling/state-channels/). Outras soluções envolvem a criação de novas cadeias em várias formas que derivam sua segurança separadamente da rede principal, como [sidechains](#sidechains), [validiums](#validium) ou [cadeias Plasma](#plasma). Essas soluções se comunicam com a rede principal, mas derivam sua segurança de forma diferente para obter uma variedade de objetivos.
+As soluções off-chain são implementadas separadamente da rede principal da camada 1. Ou seja, elas não requerem alterações no protocolo Ethereum existente. Algumas soluções, conhecidas como soluções de “camada 2”, obtêm sua segurança diretamente do consenso da camada 1 do Ethereum, por exemplo, os [rollups otimistas](/developers/docs/scaling/layer-2-rollups/), os [rollups de conhecimento zero](/developers/docs/scaling/zk-rollups/) ou os [canais de estado](/developers/docs/scaling/state-channels/). Outras soluções envolvem a criação de novas cadeias em várias formas, que obtêm sua segurança separadamente da Mainnet (Rede principal), como [cadeias laterais](#sidechains), [validiums](#validium) ou [cadeias Plasma](#plasma). Essas soluções se comunicam com a Mainnet (Rede principal), mas obtêm sua segurança de forma diferente para alcançar uma variedade de objetivos.
 
 ### Dimensionamento da camada 2 {#layer-2-scaling}
 
-Esta categoria de soluções off-chain deriva a sua segurança da rede principal do Ethereum.
+Esta categoria de soluções off-chain obtém sua segurança da Mainnet (Rede principal) do Ethereum.
 
-A camada 2 é um termo coletivo para soluções projetadas para ajudar a dimensionar os aplicativos, manipulando para isso as transações fora da rede principal (camada 1) de Ethereum, tirando proveito do robusto modelo de segurança descentralizada fornecido pela rede principal. A velocidade das transações sofre quando a rede está ocupada, o que pode tornar a experiência do usuário ruim para certos tipos de dapps. E à medida que a rede fica mais movimentada, os preços do gás tendem a aumentar devido a que os remetentes das transações tendem a oferecer mais para processar sua transação antes que as dos outros. E essa conjuntura pode tornar o uso do Ethereum bem mais caro.
+A camada 2 é um termo coletivo de soluções projetadas para ajudar a dimensionar os aplicativos, gerenciando transações fora da rede principal (camada 1) do Ethereum, aproveitando o robusto modelo de segurança descentralizada da Mainnet (Rede principal). A velocidade das transações é reduzida quando a rede está ocupada, o que pode tornar a experiência do usuário ruim para certos tipos de dapps. À medida que a rede fica mais movimentada, os preços do gás aumentam, pois os remetentes de transações tendem a oferecer mais para processar sua transação antes das dos outros. Isso pode tornar o uso do Ethereum bem mais caro.
 
-A maioria das soluções de camada 2 orbitam ao redor de um servidor, ou cluster de servidores, cada um dos quais pode ser referenciado como um nó, como um validador, como um operador, como um sequenciador de transações, como um produtor de blocos ou como algo semelhante. Dependendo da implementação, esses nós da camada 2 podem ser executados pelos indivíduos, pelas empresas ou pelas entidades que os usam, ou por um operador de terceiros, ou ainda por um grande grupo de indivíduos (da maneira similar à rede principal). Em geral, ao invés de serem enviadas diretamente para a camada 1 (rede principal), as transações são submetidas a esses nós da camada 2. Para algumas soluções, a camada 2 instancia as transações e as agrupa antes de ancorá-las à camada 1. Depois disso, elas são protegidas pela própria camada 1 e não podem ser mais alteradas. Os pormenores de como isso é feito variam significativamente entre diferentes tecnologias de camada 2 e suas diferentes implementações.
+A maioria das soluções de camada 2 são centralizadas em torno de um servidor ou cluster de servidores, cada um dos quais pode ser referenciado como um nó, validador, operador, sequenciador, produtor de bloco, ou um termo semelhante. Dependendo da implementação, esses nós da camada 2 podem ser executados pelos indivíduos, empresas ou entidades que os usam, por um operador de terceiros ou por um grande grupo de indivíduos (semelhante à Mainnet). Em geral, as transações são submetidas a esses nós de camada 2, em vez de serem enviadas diretamente para a camada 1 (Mainnet). Para algumas soluções, a instância da camada 2 agrupa-os em grupos antes de ancorá-los na camada 1, na qual ficam protegidos e não podem ser alterados. Os pormenores de como isso é feito variam significativamente entre diferentes tecnologias de camada 2 e implementações.
 
-Uma instância específica da camada 2 pode ser aberta e compartilhada por muitos aplicativos, ou pode ser implantada por um projeto e dedicada especificamente a apoiar apenas seu aplicativos.
+Uma instância específica da camada 2 pode ser aberta e compartilhada por muitos aplicativos, ou pode ser implantada por um projeto e dedicada a dar suporte apenas ao seu aplicativo.
 
 #### Por que a camada 2 é necessária? {#why-is-layer-2-needed}
 
@@ -54,36 +52,36 @@ Uma instância específica da camada 2 pode ser aberta e compartilhada por muito
 
 #### Rollups {#rollups}
 
-Os rollups levam a execução das transações para fora da camada 1 e, posteriormente, tais dados são reportados para a camada 1, onde o consenso é alcançado. Como os dados de transação estão incluídos nos blocos da camada 1, isso permite que os rollups sejam protegidos pela segurança nativa do Ethereum.
+Os rollups executam a transação fora da camada 1 e, em seguida, os dados são publicados na camada 1, na qual o consenso é alcançado. Como os dados de transação estão incluídos nos blocos da camada 1, isso permite que os rollups fiquem protegidos pela segurança nativa da Ethereum.
 
-Existem dois tipos de rolllups com diferentes modelos de segurança:
+Existem dois tipos de rollups com diferentes modelos de segurança:
 
 - **Optimistic rollups**: assumem que as transações são válidas por padrão e só executam computação através de uma [**prova de fraude**](/glossary/#fraud-proof), caso alguém levante alguma objeção. [Mais sobre optimistic-rollups](/developers/docs/scaling/optimistic-rollups/).
 - **Rollups de conhecimento zero**: executam a computação off-chain e enviam uma [**prova de validade**](/glossary/#validity-proof) para a cadeia. [Mais sobre rollups de conhecimento zero](/developers/docs/scaling/zk-rollups/).
 
 #### Canais de Estado {#channels}
 
-Os canais de estado utilizam contratos multisig para permitir que os participantes façam transações de forma rápida e livre off-chain, e em seguida, liquidam a finalidade com a rede principal. Isto minimiza o congestionamento, as taxas e os atrasos na rede. Neste momento, existem dois tipos de canais: canais de estado e canais de pagamento.
+Os canais de estado utilizam contratos multisig para permitir que os participantes realizem transações de forma rápida e livre off-chain para, em seguida, liquidar a finalidade com a Mainnet. Isso minimiza o congestionamento, as taxas e os atrasos na rede. Atualmente, existem dois tipos de canais: canais de estado e canais de pagamento.
 
-Saiba mais sobre [canais de estado](/developers/docs/scaling/state-channels/).
+Aprenda mais sobre [canais de estado](/developers/docs/scaling/state-channels/).
 
 ### Correntes paralelas {#sidechains}
 
-Uma sidechain é uma blockchain independente e compatível com EVM que se executa em paralelo com a rede principal. Essas são compatíveis com Ethereum através de pontes de dois sentidos e são executadas de acordo com as regras de consenso escolhidas e com os parâmetros do bloco.
+Uma sidechain (cadeia paralela) é uma blockchain independente e compatível com EVM que roda em paralelo à Mainnet (Rede principal). As sidechains são compatíveis com o Ethereum através de pontes bidirecionais e são executadas conforme as regras de consenso escolhidas e os parâmetros do bloco.
 
 Saiba mais sobre [Sidechains](/developers/docs/scaling/sidechains/).
 
 ### Plasma {#plasma}
 
-A cadeia Plasma é uma blockchain separada que é ancorada à cadeia principal do Ethereum, e usa provas de fraude (como as [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) para arbitrar disputas.
+A cadeia plasma é uma blockchain separada que é ancorada à cadeia principal do Ethereum e usa provas de fraude (como os [rollups otimistas](/developers/docs/scaling/optimistic-rollups/)) para arbitrar litígios.
 
-Saiba mais sobre [Plasma](/developers/docs/scaling/plasma/).
+Aprenda mais sobre o [Plasma](/developers/docs/scaling/plasma/).
 
 ### Validium {#validium}
 
 Uma cadeia Validium usa provas de validade como rollups de conhecimento zero, mas os dados não são armazenados na cadeia Ethereum da camada 1 principal. Isso pode levar a 10 mil transações por segundo por cadeia Validium, e várias cadeias podem ser executadas em paralelo.
 
-Saiba mais sobre [fragmentação](/developers/docs/scaling/validium/).
+Saiba mais sobre o [Validium](/developers/docs/scaling/validium/).
 
 ## Por que tantas soluções de dimensionamento são necessárias? {#why-do-we-need-these}
 
@@ -96,7 +94,7 @@ Saiba mais sobre [fragmentação](/developers/docs/scaling/validium/).
 
 <YouTube id="BgCgauWVTs0" />
 
-_Note que a explicação no vídeo usa o termo "Camada 2" para se referir a todas as soluções de escalonamento off-chain enquanto diferenciamos a "Camada 2" como uma solução off-chain que deriva sua segurança através do consenso principal da camada 1._
+_Observe que a explicação no vídeo usa o termo “Camada 2" para se referir a todas as soluções de escalabilidade off-chain, enquanto nós diferenciamos a “Camada 2" como uma solução off-chain que deriva sua segurança a partir do consenso da Mainnet (Rede principal) de camada 1._
 
 <YouTube id="7pWxCklcNsU" />
 
@@ -112,4 +110,4 @@ _Note que a explicação no vídeo usa o termo "Camada 2" para se referir a toda
 - [Por que os rollups, junto com as fragmentações dos dados, são a única solução sustentável para atingir alto dimensionamento](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [Que tipo de camada 3 faz sentido?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
 
-_Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione!_
+_Conhece um recurso da comunidade que te ajudou? Edite essa página e adicione!_

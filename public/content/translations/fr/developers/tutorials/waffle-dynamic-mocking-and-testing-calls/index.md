@@ -295,4 +295,4 @@ Le code source de ce tutoriel est disponible [ici](https://github.com/EthWorks/W
 
 Voici d'autres tutoriels qui pourraient vous intéresser :
 
-- [Tester des contrats intelligents avec Waffle](/developers/tutorials/testing-smart-contract-with-waffle/)
+- [Tester des contrats intelligents avec Waffle](/developers/tutorials/waffle-test-simple-smart-contract/)

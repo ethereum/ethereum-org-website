@@ -14,7 +14,7 @@ lang: zh
 
 ERC-721 为 NFT 引入了一个标准，换言之，这种类型的代币是独一无二的，并且可能与来自同一智能合约的另一代币有不同的价值，也许是因为它的年份、稀有性、甚至是它的观感。 稍等，看起来怎么样呢？
 
-是的。 所有 NFTs 都有一个 `uint256` 变量，名为 `tokenId`，所以对于任何 ERC-721 合约，这对值`contract address, tokenId` 必须是全局唯一的。 也就是说，去中心化应用程序可以有一个“转换器”， 使用 `tokenId` 作为输入并输出一些很酷的事物图像，例如僵尸、武器、技能或神奇的小猫咪！
+是的。 所有 NFTs 都有一个 `uint256` 变量，名为 `tokenId`，所以对于任何 ERC-721 合约，这对值` contract address, tokenId ` 必须是全局唯一的。 也就是说，去中心化应用程序可以有一个“转换器”， 使用 `tokenId` 作为输入并输出一些很酷的事物图像，例如僵尸、武器、技能或神奇的小猫咪！
 
 ## 前提条件 {#prerequisites}
 
@@ -60,7 +60,7 @@ ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter S
 
 #### Web3.py 示例 {#web3py-example}
 
-首先，请确保您已安装 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python 库：
+首先，请确保你已安装 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python 库：
 
 ```
 pip install web3
@@ -127,7 +127,7 @@ ck_extra_abi = [
     }
 ]
 
-ck_contract = w3.eth.contract(address=w3.toChecksumAddress(ck_token_addr), abi=simplified_abi+ck_extra_abi)
+ck_contract = w3.eth.contract(address=w3.to_checksum_address(ck_token_addr), abi=simplified_abi+ck_extra_abi)
 name = ck_contract.functions.name().call()
 symbol = ck_contract.functions.symbol().call()
 kitties_auctions = ck_contract.functions.balanceOf(acc_address).call()
@@ -148,25 +148,25 @@ tx_event_abi = {
 }
 
 # We need the event's signature to filter the logs
-event_signature = w3.sha3(text="Transfer(address,address,uint256)").hex()
+event_signature = w3.keccak(text="Transfer(address,address,uint256)").hex()
 
-logs = w3.eth.getLogs({
-    "fromBlock": w3.eth.blockNumber - 120,
-    "address": w3.toChecksumAddress(ck_token_addr),
+logs = w3.eth.get_logs({
+    "fromBlock": w3.eth.block_number - 120,
+    "address": w3.to_checksum_address(ck_token_addr),
     "topics": [event_signature]
 })
 
 # Notes:
-#   - 120 blocks is the max range for CloudFlare Provider
+#   - Increase the number of blocks up from 120 if no Transfer event is returned.
 #   - If you didn't find any Transfer event you can also try to get a tokenId at:
 #       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
 #       Click to expand the event's logs and copy its "tokenId" argument
-
 recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
 
-kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above
-is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
-print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
+if recent_tx:
+    kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above
+    is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
+    print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
 
 除了标准事件之外，CryptoKitties 合约还有其它一些有趣的事件。
@@ -200,15 +200,15 @@ ck_extra_events_abi = [
 
 # We need the event's signature to filter the logs
 ck_event_signatures = [
-    w3.sha3(text="Pregnant(address,uint256,uint256,uint256)").hex(),
-    w3.sha3(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
+    w3.keccak(text="Pregnant(address,uint256,uint256,uint256)").hex(),
+    w3.keccak(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
 ]
 
 # Here is a Pregnant Event:
 # - https://etherscan.io/tx/0xc97eb514a41004acc447ac9d0d6a27ea6da305ac8b877dff37e49db42e1f8cef#eventlog
-pregnant_logs = w3.eth.getLogs({
-    "fromBlock": w3.eth.blockNumber - 120,
-    "address": w3.toChecksumAddress(ck_token_addr),
+pregnant_logs = w3.eth.get_logs({
+    "fromBlock": w3.eth.block_number - 120,
+    "address": w3.to_checksum_address(ck_token_addr),
     "topics": [ck_event_signatures[0]]
 })
 
@@ -216,9 +216,9 @@ recent_pregnants = [get_event_data(w3.codec, ck_extra_events_abi[0], log)["args"
 
 # Here is a Birth Event:
 # - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
-birth_logs = w3.eth.getLogs({
-    "fromBlock": w3.eth.blockNumber - 120,
-    "address": w3.toChecksumAddress(ck_token_addr),
+birth_logs = w3.eth.get_logs({
+    "fromBlock": w3.eth.block_number - 120,
+    "address": w3.to_checksum_address(ck_token_addr),
     "topics": [ck_event_signatures[1]]
 })
 
@@ -229,7 +229,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 
 - [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) 列出了以太坊上交易量最大的 NFT。
 - [CryptoKitties](https://www.cryptokitties.co/) 是一个围绕着我们称之为加密猫的可繁殖、可收藏和可爱的生物游戏。
-- [Sorare](https://sorare.com/) 是一场全球迷幻足球赛，您可以在这里收集有限版本的收藏品，管理您的球队，参加比赛以获得奖品。
+- [Sorare](https://sorare.com/) 是一场全球迷幻足球赛，你可以在这里收集有限版本的收藏品，管理你的球队，参加比赛以获得奖品。
 - [以太坊域名服务 (ENS)](https://ens.domains/) 提供了一种安全和去中心化的方式，用人类可读的名字来处理链上和链下的资源。
 - [POAP](https://poap.xyz) 向参加事件或完成特定行动的人免费提供非同质化代币。 POAP 的创建和分发是免费的。
 - [Unstoppable Domains](https://unstoppabledomains.com/) 总部设在旧金山，是一家在区块链上创建域的公司。 区块链域将加密货币地址替换为人类可读的名称，并且可用于支持抗审查的网站。

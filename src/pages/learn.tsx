@@ -131,7 +131,7 @@ const H3 = ({ children, ...props }: HeadingProps) => (
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/learn")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 
@@ -198,7 +198,6 @@ const LearnPage = () => {
           eventAction: "click",
           eventName: "lets get started",
         },
-        variant: "solid",
       },
     ],
   }
@@ -213,6 +212,7 @@ const LearnPage = () => {
       <PageMetadata
         title={t("common:learn-hub")}
         description={t("hero-subtitle")}
+        image="/heroes/learn-hub-hero.png"
       />
 
       <HubHero {...heroContent} />
