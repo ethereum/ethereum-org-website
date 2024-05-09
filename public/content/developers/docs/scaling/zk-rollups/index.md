@@ -244,7 +244,7 @@ Projects working on zkEVMs include:
 
 - **[Starknet](https://starkware.co/starknet/)** - _StarkNet is an EVM-compatible layer 2 scaling solution built by StarkWare._
 
-- **[Morphism](https://www.morphism.xyz)** - _Morphism is a hybrid rollup scaling solution that utilizes zk-proof to address the Layer 2 state challenge issue._
+- **[Morph](https://www.morphl2.io/)** - _Morph is a hybrid rollup scaling solution that utilizes zk-proof to address the Layer 2 state challenge issue._
 
 ## Further reading on ZK-rollups reading {#further-reading-on-zk-rollups}
 
