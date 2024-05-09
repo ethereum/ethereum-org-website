@@ -3,7 +3,7 @@ import { join } from "path"
 
 import i18Config from "../../../../i18n.config.json"
 import { INTL_JSON_DIR, TRANSLATIONS_DIR } from "../../../lib/constants"
-import { DOT_CROWDIN } from "../translations/constants"
+import { CROWDIN_WD } from "../translations/constants"
 
 import { BucketsList, SelectionItem, SummaryItem, TrackerObject } from "./types"
 
@@ -45,9 +45,7 @@ export const scrapeDirectory = (
       copyFileSync(source, jsonDestinationPath)
       // Update .json tracker
       trackers.langs[repoLangCode].jsonCopyCount++
-    } else if (
-      item.endsWith(".md")
-    ) {
+    } else if (item.endsWith(".md")) {
       const mdDestDirPath: string = join(
         TRANSLATIONS_DIR,
         repoLangCode,
@@ -104,7 +102,7 @@ export const processBucket = (
   langLs.forEach((bucketName: string) => {
     bucketDirName += bucketName.startsWith(paddedBucket) ? bucketName : ""
   })
-  const bucketDirectoryPath: string = `${DOT_CROWDIN}/${crowdinLangCode}/${bucketDirName}`
+  const bucketDirectoryPath: string = `${CROWDIN_WD}/${crowdinLangCode}/${bucketDirName}`
   // Initial scrapeDirectory function call
   scrapeDirectory(bucketDirectoryPath, ".", repoLangCode, trackers)
   // Update tracker
@@ -123,7 +121,7 @@ export const processLanguage = (
     error: "",
   }
   // Initialize working directory and check for existence
-  const path: string = join(DOT_CROWDIN, crowdinLangCode)
+  const path: string = join(CROWDIN_WD, crowdinLangCode)
   if (!existsSync(path)) {
     trackers.langs[
       repoLangCode

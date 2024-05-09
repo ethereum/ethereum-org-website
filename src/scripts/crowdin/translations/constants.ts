@@ -1,6 +1,6 @@
 import { resolve } from "path"
 
-export const DOT_CROWDIN = ".crowdin"
+export const CROWDIN_WD = "crowdin"
 
 export const CROWDIN_DATA_DIR = "src/data/crowdin"
 export const SAVE_FILE = "download.zip"

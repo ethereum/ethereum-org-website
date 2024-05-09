@@ -41,35 +41,20 @@ jobs:
         run: |
           echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
 
-      # Build translations
+      # Build and download translations to ./crowdin
       - name: Build Crowdin project
-        id: build-crowdin
-        run: |
-          OUTPUT=$(npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/triggerBuild.ts)
-          echo "$OUTPUT"
-        shell: bash
-
-      - name: Await latest build to finish
-        env:
-          BUILD_ID: ${{ steps.build-crowdin.outputs.buildId}}
-        run: |
-          OUTPUT=$(npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/awaitLatestBuild.ts)
-          echo "$OUTPUT"
-        shell: bash
-
-      - name: Check build success
-        run: |
-          if [ "${{ steps.build-crowdin.outputs.buildSuccess }}" = "false" ]; then
-            echo "Build timed out, exiting"
-            exit 1
-          fi
-        shell: bash
+        uses: crowdin/github-actions@v1
+        with:
+          download_translations: true
+          skip_untranslated_strings: true
+          skip_untranslated_files: true
+          export_only_approved: true
 
       # Prepare bucket ids
       - name: Get latest translation bucket directory ids
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/getBucketDirectoryIds.ts
 
-      # Import approved translations
+      # Import approved translations 
       - name: Get translations
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/getTranslations.ts
 

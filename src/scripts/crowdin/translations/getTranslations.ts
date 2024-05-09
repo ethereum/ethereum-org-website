@@ -5,7 +5,7 @@ import crowdin from "../api-client/crowdinClient"
 import crowdinImport from "../import/main"
 import type { BucketsList } from "../import/types"
 
-import { BUCKETS_PATH, DOT_CROWDIN, FILE_PATH, SUMMARY_PATH } from "./constants"
+import { BUCKETS_PATH, CROWDIN_WD, FILE_PATH, SUMMARY_PATH } from "./constants"
 import getApprovedBuckets from "./getApprovedBuckets"
 import { decompressFile, downloadFile } from "./utils"
 
@@ -31,7 +31,7 @@ async function main() {
     await downloadFile(url, FILE_PATH)
 
     // Unzip file to .crowdin/
-    await decompressFile(FILE_PATH, DOT_CROWDIN)
+    await decompressFile(FILE_PATH, CROWDIN_WD)
 
     // Delete .zip file once decompressed
     fs.rmSync(FILE_PATH)
