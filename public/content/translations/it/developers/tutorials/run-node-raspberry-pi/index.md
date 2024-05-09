@@ -75,8 +75,8 @@ Nota che le immagini per le schede Rock 5B e Odroid M1 sono disponibili alla [pa
 La scheda MicroSD che sarà usata per il Raspberry Pi dovrebbe innanzitutto essere inserita in un computer desktop o portatile, così da eseguirne la copia. Poi, i seguenti comandi del terminale eseguiranno la copia dell'immagine scaricata sulla scheda SD:
 
 ```shell
-# verifica il nome della scheda MicroSD
-sudo fdisk -I
+# check the MicroSD card name
+sudo fdisk -l
 
 >> sdxxx
 ```
@@ -146,13 +146,13 @@ Una volta che il file dei dati di deposito è disponibile sul computer che esegu
 Tornando al Raspberry Pi, può essere avviato un validatore. Ciò richiede l'importazione delle chiavi del validatore, l'impostazione dell'indirizzo per incassare le ricompense e successivamente l'avvio del processo pre-configurato del validatore. Gli esempi seguenti sono per Lighthouse, le istruzioni per gli altri client di consenso sono disponibili nella [documentazione di Ethereum su Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/):
 
 ```shell
-# importa le chiavi del validatore
-lighthouse-kl account validator import --lighthouse account validator import --directory=/home/ethereum/validator_keys
+# import the validator keys
+lighthouse account validator import --directory=/home/ethereum/validator_keys
 
-# imposta l'indirizzo di ricompensa
+# set the reward address
 sudo sed -i 's/<ETH_ADDRESS>' /etc/ethereum/lighthouse-validator.conf
 
-# avvia il validatore
+# start the validator
 sudo systemctl start lighthouse-validator
 ```
 

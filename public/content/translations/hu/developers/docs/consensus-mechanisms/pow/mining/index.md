@@ -62,7 +62,7 @@ A proof-of-work mechanizmusban végzett blokkbányászat valószínűségen alap
 
 Az „ommer” kifejezés a szülőblokk testvérblokkjának semleges formája, de néha nagybácsi/uncle formában is hivatkoznak rá. **Mióta az Ethereum átállt a proof-of-stake mechanizmusra, többé nincsenek ommer blokkok**, mivel csak egy előterjesztő van minden slotban. Ezt a változást megtekintheti a kibányászott ommer blokkok [előzményábráján](https://ycharts.com/indicators/ethereum_uncle_rate) is.
 
-## Egy vizuális bemutató {#a-visual-demo}
+## Vizuális bemutató {#a-visual-demo}
 
 Tekintse meg, ahogy Austin elmagyarázza a bányászatot és a proof-of-work blokkláncot.
 
@@ -70,7 +70,7 @@ Tekintse meg, ahogy Austin elmagyarázza a bányászatot és a proof-of-work blo
 
 ## A bányászati algoritmus {#mining-algorithm}
 
-Az Ethereum főhálózat csak egy bányászati algoritmust használt: [Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/). Az Ethash volt az utódja az eredeti kutatási-fejlesztési algoritmusnak, melyet [Dagger-Hashimoto-nak](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/) neveztek.
+Az Ethereum főhálózat csak egy bányászati algoritmust használt, az [Ethash-t](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/). Az Ethash a [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/) néven ismert R&D algoritmus utódja volt.
 
 [Bővebben a bányászati algoritmusokról](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/).
 

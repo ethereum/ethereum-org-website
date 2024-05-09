@@ -6,13 +6,13 @@ lang: hu
 
 # Hogyan lehet átváltani a tokeneket
 
-Elege van abból, hogy olyan tőzsdét keres, amely kedvenc tokenjeivel kereskedik? A decentralizált tőzsdéken (DEX) a legtöbb tokent át lehet váltani.
+Elege van abból, hogy olyan tőzsdét keres, amely kedvenc tokenjeivel kereskedik? A legtöbb token felcserélhető [decentralizált cserékkel](/glossary/#dex).
 
-A tokenváltás két különböző eszköz cseréje, melyek az Ethereum hálózatán léteznek, például ETH váltása DAI-ra (ERC-20 token). Ez egy gyors és olcsó tranzakció. Szüksége lesz egy kriptotárcára a tokenek váltásához.
+A tokencsere az Ethereum hálózaton található két különböző eszköz cseréjét foglalja magában, például az ETH cseréjét DAI-ra (egy [ERC-20](/glossary/#erc-20) token). Ez egy gyors és olcsó tranzakció. Szüksége lesz egy kriptotárcára a tokenek váltásához.
 
 **Feltételek:**
 
-- rendelkeznie kell egy kriptotárcával – ehhez kövesse a következő útmutatót: [Hogyan lehet létrehozni Ethereum-számlát](/guides/how-to-create-an-ethereum-account/)
+- Ha van [kriptopénztárcája](/glossary/#wallet), kövesse ezt az oktatóanyagot: [Hogyan: "Regisztráljon" egy Ethereum-fiókot](/guides/how-to-create-an-ethereum-account/)
 - lennie kell pénzeszközöknek a tárcájában
 
 ## 1. Kapcsolja a tárcáját egy kiválasztott decentralizált tőzsdéhez (DEX)
@@ -24,7 +24,7 @@ Néhány ismert példa:
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://curve.fi/#/ethereum/swap)
 
-Ha szeretne többet tudni a decentralizált pénzügyekről (DeFi), illetve az új tőzsdék működéséről, akkor pillantson bele a [Kernel Library-ba](https://library.kernel.community/Topic+-+DeFi/Topic+-+DeFi).
+Érdekesnek találja? Tudjon meg többet arról, hogy mi a [decentralizált pénzügy (DeFi)](/defi/) és hogyan működnek ezek az újfajta tőzsdék.
 
 ## 2. Válassza ki a két token, amelyeket át szeretne váltani
 

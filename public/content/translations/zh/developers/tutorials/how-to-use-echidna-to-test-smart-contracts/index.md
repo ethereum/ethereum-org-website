@@ -5,11 +5,11 @@ author: "Trailofbits"
 lang: zh
 tags:
   - "solidity"
-  - "智能合同"
+  - "智能合约"
   - "安全性"
   - "测试"
   - "模糊测试"
-skill: intermediate
+skill: advanced
 published: 2020-04-10
 source: 构建安全的合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
@@ -26,7 +26,7 @@ docker pull trailofbits/eth-security-toolbox
 docker run -it -v "$PWD":/home/training trailofbits/eth-security-toolbox
 ```
 
-_最后一个命令在有权访问当前目录的 docker 中运行 eth-security-toolbox。 您可以从主机更改文件，并在 docker 中对文件运行工具_
+_最后一个命令在有权访问当前目录的 docker 中运行 eth-security-toolbox。 你可以从主机更改文件，并在 docker 中对文件运行工具_
 
 在 docker 中，运行：
 
@@ -45,13 +45,13 @@ Echidna 是一个模糊测试工具，我们在之前的博客中描述过（[1]
 
 ### 模糊测试 {#fuzzing}
 
-[模糊测试](https://wikipedia.org/wiki/Fuzzing)是一项在安全技术领域广为人知的技术。 它依靠生成或多或少数量的随机输入值来测试程序中的错误。 传统软件中的模糊测试工具（例如 [AFL](http://lcamtuf.coredump.cx/afl/) 或 [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)）是发现错误的有效工具。
+[模糊测试](https://wikipedia.org/wiki/Fuzzing)是一项在安全技术领域广为人知的技术。 它包括生成或多或少随机的算法输入，以查找程序中的漏洞。 传统软件中的模糊测试工具（例如 [AFL](http://lcamtuf.coredump.cx/afl/) 或 [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)）是发现错误的有效工具。
 
 除了完全随机生成输入值外，还有很多其他的技巧和策略来生成足够好的输入，包括：
 
 - 从每次执行中获取反馈，并使用反馈来指导输入的生成。 例如，如果新生成的输入导致发现一条新的路径，那么，生成接近该路径的新输入是有意义的。
-- 根据结构限制生成输入。 例如，如果您的输入包含一个带有校验和的报文头，则让模糊测试工具生成能够验证校验和的输入将会是很有意义的。
-- 使用已知输入生成新输入：如果您有权访问一个有效输入的大型数据集， 则模糊测试工具可以从中生成新的输入，而不是从头开始生成。 这些通常称为 _种子_。
+- 根据结构限制生成输入。 例如，如果你的输入包含一个带有校验和的报文头，则让模糊测试工具生成能够验证校验和的输入将会是很有意义的。
+- 使用已知输入生成新输入：如果你有权访问一个有效输入的大型数据集， 则模糊测试工具可以从中生成新的输入，而不是从头开始生成。 这些通常称为 _种子_。
 
 ### 基于属性的模糊测试 {#property-based-fuzzing}
 
@@ -124,7 +124,7 @@ contract TestToken is Token{
 
 ### 初始化合约 {#initiate-a-contract}
 
-Echidna 需要一个无参 [构造函数](/developers/docs/smart-contracts/anatomy/#constructor-functions)。 如果您的合约需要特定的初始化，则需要相应地改变构造函数。
+Echidna 需要一个无参 [构造函数](/developers/docs/smart-contracts/anatomy/#constructor-functions)。 如果你的合约需要特定的初始化，则需要相应地改变构造函数。
 
 Echidna 中有一些特定的地址：
 
@@ -141,7 +141,7 @@ Echidna 中有一些特定的地址：
 echidna-test contract.sol
 ```
 
-如果 contract.sol 包含多个合约，您可以指定目标合约：
+如果 contract.sol 包含多个合约，你可以指定目标合约：
 
 ```bash
 echidna-test contract.sol --contract MyContract
@@ -255,7 +255,7 @@ filterFunctions: ["f", "g", "h", "i"]
 ```
 
 - 默认情况下，`filterBlacklist` 为 `true`。
-- 只能通过名字进行过滤（不带参数）。 如果您有 `f()` 和 `f(uint256)` 两个函数，则过滤器 `"f"` 会匹配出这两个函数。
+- 只能通过名字进行过滤（不带参数）。 如果你有 `f()` 和 `f(uint256)` 两个函数，则过滤器 `"f"` 会匹配出这两个函数。
 
 ### 运行 Echidna {#run-echidna-1}
 
@@ -346,7 +346,7 @@ assertion in inc: failed!💥
 Seed: 1806480648350826486
 ```
 
-正如您所见，Echidna 在 `inc` 函数中报告了一些断言失败。 每个函数可以添加多个断言，但 Echidna 无法判断哪个断言失败了。
+正如你所见，Echidna 在 `inc` 函数中报告了一些断言失败。 每个函数可以添加多个断言，但 Echidna 无法判断哪个断言失败了。
 
 ### 使用断言的时机和方式 {#when-and-how-use-assertions}
 
@@ -544,7 +544,7 @@ Seed: -7293830866560616537
 
 这一次，它立即发现与该属性发生了冲突。
 
-## 查找消耗大量 gas 的交易 {#finding-transactions-with-high-gas-consumption}
+## 查找消耗大量燃料的交易 {#finding-transactions-with-high-gas-consumption}
 
 我们来看看如何使用 Echidna 查找燃料消耗大的交易。 目标是以下智能合约：
 
@@ -583,7 +583,7 @@ echidna_test: passed! 🎉
 Seed: 2320549945714142710
 ```
 
-### 测量 gas 消耗 {#measuring-gas-consumption}
+### 测量燃料消耗 {#measuring-gas-consumption}
 
 要使用 Echidna 测量燃料消耗，请创建配置文件 `config.yaml`：
 
@@ -598,7 +598,7 @@ seqLen: 2
 estimateGas: true
 ```
 
-### Run Echidna {#run-echidna-3}
+### 运行 Echidna {#run-echidna-3}
 
 创建好配置文件之后，我们就可以这样运行 Echidna：
 
@@ -617,12 +617,12 @@ Seed: -325611019680165325
 
 ```
 
-- 显示的 gas 是由 [HEVM](https://github.com/dapphub/dapptools/tree/master/src/hevm#hevm-) 提供的估值。
+- 显示的燃料是由 [HEVM](https://github.com/dapphub/dapptools/tree/master/src/hevm#hevm-) 提供的估值。
 
-### 过滤掉 gas 消耗减少的调用 {#filtering-out-gas-reducing-calls}
+### 过滤掉燃料消耗减少的调用 {#filtering-out-gas-reducing-calls}
 
 以上关于**在模糊测试活动期间过滤要调用的函数**的教程展示了如何从测试中删除一些函数。  
-这对于获得准确的 gas 消耗至关重要。 请考虑下面的示例：
+这对于获得准确的燃料消耗至关重要。 请考虑下面的示例：
 
 ```solidity
 contract C {
@@ -648,7 +648,7 @@ contract C {
 }
 ```
 
-如果 Echidna 可以调用所有函数，它将无法轻松找到消耗大量 gas 的交易：
+如果 Echidna 可以调用所有函数，它将无法轻松找到消耗大量燃料的交易：
 
 ```
 echidna-test pushpop.sol --config config.yaml
@@ -677,9 +677,9 @@ push used a maximum of 40839 gas
 check used a maximum of 1484472 gas
 ```
 
-### 总结：查找消耗大量 gas 的交易 {#summary-finding-transactions-with-high-gas-consumption}
+### 总结：查找消耗大量燃料的交易 {#summary-finding-transactions-with-high-gas-consumption}
 
-Echidna 可以使用 `estimateGas` 配置选项找到消耗大量 gas 的交易：
+Echidna 可以使用 `estimateGas` 配置选项找到消耗大量燃料的交易：
 
 ```yaml
 estimateGas: true
@@ -690,4 +690,4 @@ echidna-test contract.sol --config config.yaml
 ...
 ```
 
-模糊测试结束后，Echidna 将报告每个函数中消耗 gas 最多的交易。
+模糊测试结束后，Echidna 将报告每个函数中消耗燃料最多的交易。

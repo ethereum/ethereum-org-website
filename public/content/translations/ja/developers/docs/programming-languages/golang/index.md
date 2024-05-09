@@ -65,6 +65,7 @@ incomplete: true
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _多くの種類のイーサリアムネットワークをサポート_
 - [Gethライトクライアント](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _ライトイーサリアムサブプロトコルのGeth実装_
 - [イーサリアムGolang SDK](https://github.com/everFinance/goether) - _Golangでのシンプルなイーサリアムウォレットの実装とユーティリティ_
+- [Covalent Golang SDK](https://github.com/covalenthq/covalent-api-sdk-go) - _Go SDKを通して200以上のブロックチェーンでブロックチェーンデータへ効率的にアクセス_
 
 もっとリソースをお探しですか？ [ethereum.org/developers](/developers/)をご確認ください。
 

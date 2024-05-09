@@ -65,12 +65,11 @@ Ahelyett, hogy egyéni hitelesítési rendszert építene vagy központi szolgá
 
 ## Kapcsolódó útmutatók {#related-tutorials}
 
-- [Szerződésösszeilleszthetőség: Az Ethereum okosszerződések fejlesztésének építőkövei](https://www.decentlabs.io/blog/contract-composability-the-building-blocks-of-ethereum-smart-contract-development)
 - [Indítsa el a dapp frontend fejlesztését a create-eth-app segítségével](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– Egy áttekintés arról, hogyan használja a create-eth-appot a népszerű okosszerződésekkel rendelkező alkalmazások készítéséhez._
 
 ## További olvasnivaló {#further-reading}
 
-_Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt és add hozzá!_
+_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
 
 - [Az összeilleszthetőség az innováció](https://future.a16z.com/how-composability-unlocks-crypto-and-everything-else/)
 - [Miért fontos az összeilleszthetőség a web3-nak](https://hackernoon.com/why-composability-matters-for-web3)

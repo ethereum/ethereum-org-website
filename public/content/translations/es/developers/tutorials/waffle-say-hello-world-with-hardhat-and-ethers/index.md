@@ -16,7 +16,7 @@ published: 2020-10-16
 
 En este tutorial de [Waffle](https://ethereum-waffle.readthedocs.io), aprenderemos cómo configurar un proyecto de contrato inteligente simple "Hola, Mundo" usando [hardhat](https://hardhat.org/) y [ethers](https://docs.ethers.io/v5/). Luego aprenderemos cómo añadir una nueva funcionalidad a nuestro contrato inteligente y cómo hacer pruebas con Waffle.
 
-Empecemos con la creación de un nuevo proyecto:
+Empecemos por la creación de un nuevo proyecto:
 
 ```bash
 yarn init
@@ -52,12 +52,12 @@ El siguiente paso es crear un proyecto de hardhat de muestra ejecutando `npx har
 888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
 888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
 
-👷 Bienvenido a Hardhat v2.0.3 👷‍
+👷 Welcome to Hardhat v2.0.3 👷‍
 
-? ¿Qué es lo que quieres hacer? …
-❯ Cree un proyecto de muestra
-Cree un hardhat.config.js vacío
-Renunciar
+? What do you want to do? …
+❯ Create a sample project
+Create an empty hardhat.config.js
+Quit
 ```
 
 Seleccione `Create a sample project`.
@@ -73,7 +73,7 @@ MyWaffleProject
 │   └── sample-script.js
 ├── test
 │   └── sample-test.js
-├── .gitattributs
+├── .gitattributes
 ├── .gitignore
 ├── hardhat.config.js
 └── package.json
@@ -193,7 +193,7 @@ Vamos a ejecutar pruebas de nuevo:
 2 passing (2s)
 ```
 
-¡Enhorabuena! Lo logró :)
+¡Felicidades! Lo logró :)
 
 ### Conclusión {#conclusion}
 

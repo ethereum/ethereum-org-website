@@ -44,7 +44,12 @@ const LvlAccordion = ({
         const isActivePage = isLink && cleanPath(asPath) === action.href
         if (isLink)
           return (
-            <AccordionItem key={label}>
+            <AccordionItem
+              key={label}
+              borderTop="1px"
+              borderColor="inherit"
+              _last={{ borderBottomWidth: "1px" }}
+            >
               <Button
                 as={BaseLink}
                 w="full"
@@ -92,7 +97,12 @@ const LvlAccordion = ({
             </AccordionItem>
           )
         return (
-          <AccordionItem key={label}>
+          <AccordionItem
+            key={label}
+            borderTop="1px"
+            borderColor="inherit"
+            _last={{ borderBottomWidth: "1px" }}
+          >
             {({ isExpanded }) => (
               <>
                 <Heading
@@ -137,7 +147,11 @@ const LvlAccordion = ({
                   </AccordionButton>
                 </Heading>
 
-                <AccordionPanel p="0" bg={menuColors.lvl[lvl + 1].background}>
+                <AccordionPanel
+                  p="0"
+                  mt="0"
+                  bg={menuColors.lvl[lvl + 1].background}
+                >
                   <LvlAccordion
                     lvl={(lvl + 1) as Level}
                     items={action.items}

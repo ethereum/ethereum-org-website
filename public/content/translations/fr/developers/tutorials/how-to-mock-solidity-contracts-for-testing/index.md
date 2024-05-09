@@ -6,8 +6,8 @@ lang: fr
 tags:
   - "solidity"
   - "contrats intelligents"
-  - "tests"
-  - "simulation"
+  - "test"
+  - "bouchonnage"
 skill: intermediate
 published: 2020-05-02
 source: soliditydeveloper.com

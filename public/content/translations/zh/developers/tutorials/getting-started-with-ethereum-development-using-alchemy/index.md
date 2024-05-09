@@ -6,12 +6,12 @@ tags:
   - "javascript"
   - "ethers.js"
   - "节点"
-  - "查询"
-  - "Alchemy"
+  - "querying"
+  - "alchemy"
 skill: beginner
 lang: zh
 published: 2020-10-30
-source: 中
+source: Medium
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 
@@ -72,29 +72,36 @@ _**注意：**将 [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainne
 ```
 
 ## 4. 设置Web3客户端 {#set-up-your-web3-client}
+
 **如果你已有客户端，** 将你当前的节点提供商的 URL 更改为你的 API 密钥的 Alchemy URL： `“https://eth-mainnet.alchemyapi.io/v2/your-api-key”`
 
-**_注意：_**下面的脚本需要在一个**节点环境**中运行或**保存到一个文件运行**，而不是通过命令行运行。 如果你尚未安装节点或npm ，请查看此适用于mac的快速设置指南
-
-。
+**_注意：_**下面的脚本需要在一个**节点环境**中运行或**保存到一个文件运行**，而不是通过命令行运行。 如果你尚未安装节点或npm ，请查看此适用于mac的快速设置指南。
 
 许多 [Web3 库](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)都可以和 Alchemy 集成。但是，我们建议使用 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview)，它是 web3.js 的替代插件，可与 Alchemy 无缝协作。 这个库有很多优点，例如自动重试和可靠的WebSocket支持。
 
 要安装 AlchemyWeb3.js，请**导航到项目目录**并运行：
 
-**使用 yarn：**
+**使用yarn：**
+
+
 
 ```
 yarn add @alch/alchemy-web3
 ```
 
-**使用 NPM：**
+
+**使用NPM：**
+
+
 
 ```
 npm install @alch/alchemy-web3
 ```
 
+
 要与Alchemy的节点基础设施交互，请在NodeJS中运行或将其添加到JavaScript文件：
+
+
 
 ```js
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
@@ -103,26 +110,39 @@ const web3 = createAlchemyWeb3(
 )
 ```
 
+
+
+
 ## 5. 编写你的第一个Web3脚本！ {#write-your-first-web3-script}
 
 现在用一个小的web3编程来练习，我们将编写一个简单的脚本，用于打印出以太坊主网中最新的区块高度。
 
 **1. 在终端中创建一个新的项目目录并通过 cd 命令进入该目录（如果尚未这样做）：**
 
+
+
 ```
 mkdir web3-example
 cd web3-example
 ```
 
+
 **2. 在项目中安装 Alchemy Web3（或任何 Web3）依赖项（如果尚未这样做）：**
+
+
 
 ```
 npm install @alch/alchemy-web3
 ```
 
+
 **3. 创建一个名为 `index.js` 的文件并添加以下内容：**
 
+
+
 > 最终应将`demo`替换为你的Alchemy HTTP API密钥 。
+
+
 
 ```js
 async function main() {
@@ -134,19 +154,26 @@ async function main() {
 main()
 ```
 
+
 不熟悉 async 函数？ 来看看这篇 [Medium 文章](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c)。
 
 **4. 使用节点在终端中运行该脚本**
+
+
 
 ```
 node index.js
 ```
 
+
 **5. 现在应该会在控制台中看到最新的区块编号输出结果！**
+
+
 
 ```
 The latest block number is 11043912
 ```
+
 
 **哇！ 恭喜！ 你刚刚使用 Alchemy 编写了你的第一个 Web3 脚本🎉**
 

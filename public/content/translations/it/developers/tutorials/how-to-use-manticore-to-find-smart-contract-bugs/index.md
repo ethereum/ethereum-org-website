@@ -4,8 +4,8 @@ description: Come usare Manticore per trovare automaticamente bug negli Smart Co
 author: Trailofbits
 lang: it
 tags:
-  - "Solidity"
-  - "Smart Contract"
+  - "solidity"
+  - "contratti intelligenti"
   - "sicurezza"
   - "test"
   - "verifica formale"
@@ -177,7 +177,7 @@ Manticore restituirà le informazioni un una directory `mcore_*`. In questa dire
 Qui Manticore trova 7 test case che corrispondono a (l'ordine dei nomi dei file potrebbe variare):
 
 |                      |      Transazione 0      |    Transazione 1     | Transazione 2        | Risultato |
-| :------------------: | :---------------------: | :------------------: | -------------------- | :-------: |
+|:--------------------:|:-----------------------:|:--------------------:| -------------------- |:---------:|
 | **test_00000000.tx** | Creazione del contratto |       f(!=65)        | f(!=65)              |   STOP    |
 | **test_00000001.tx** | Creazione del contratto | funzione di fallback |                      |  REVERT   |
 | **test_00000002.tx** | Creazione del contratto |                      |                      |  RETURN   |

@@ -32,6 +32,7 @@ import { mdxTableComponents } from "@/components/Table"
 import TooltipLink from "@/components/TooltipLink"
 import YouTube from "@/components/YouTube"
 
+import ContributorsQuizBanner from "./Banners/ContributorsQuizBanner"
 import GlossaryTooltip from "./Glossary/GlossaryTooltip"
 import { StandaloneQuizWidget } from "./Quiz/QuizWidget"
 import Card from "./Card"
@@ -269,6 +270,7 @@ export const reactComponents = {
   Card,
   ContentContainer,
   Contributors,
+  ContributorsQuizBanner,
   Divider,
   DocLink,
   Emoji,
