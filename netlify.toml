@@ -12,11 +12,6 @@
 [build.environment]
   NEXT_FORCE_EDGE_IMAGES="true"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Access-Control-Allow-Origin = "https://esp.ethereum.foundation"
-
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
