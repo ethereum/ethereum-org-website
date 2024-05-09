@@ -46,9 +46,6 @@ jobs:
         uses: crowdin/github-actions@v1
         with:
           download_translations: true
-          skip_untranslated_strings: true
-          skip_untranslated_files: true
-          export_only_approved: true
 
       # Prepare bucket ids
       - name: Get latest translation bucket directory ids
@@ -56,7 +53,7 @@ jobs:
 
       # Import approved translations 
       - name: Import approved translations
-        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/getTranslations.ts
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/importApprovedTranslations.ts
 
       # Post updates as language-specific PRs
       - name: Process commits and post PRs by language
