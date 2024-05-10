@@ -38,7 +38,13 @@ async function fetchWithRateLimit(
       continue
     }
 
-    return await response.json()
+    if (!response.ok) throw new Error(response.statusText)
+    const json = await response.json()
+    if (!Array.isArray(json)) {
+      console.warn("Unexpected response from GitHub API", json)
+      return []
+    }
+    return json
   }
 }
 
@@ -59,6 +65,7 @@ export const fetchAndSaveGitHistory = async (mdDir: string) => {
     (await fetchWithRateLimit(
       filepath.replace(CONTENT_DIR, OLD_CONTENT_DIR)
     )) || []
+
   // Transform commitHistory
   const contributors = [...history, ...legacyHistory]
     .filter(({ author }) => !!author)
