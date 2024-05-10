@@ -3,9 +3,10 @@
   "version": "8.5.2",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "yarn clean-commit-history && next dev",
     "postinstall": "yarn theme",
-    "build": "next build",
+    "build": "yarn clean-commit-history && next build",
+    "clean-commit-history": "touch ./src/data/commit-history.json && rm ./src/data/commit-history.json",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",

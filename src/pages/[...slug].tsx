@@ -55,6 +55,7 @@ import {
   UseCasesLayout,
 } from "@/layouts"
 import { fetchGFIs } from "@/lib/api/fetchGFIs"
+import { fetchAndSaveGitHistory } from "@/lib/api/fetchGitHistory"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import remarkInferToc from "@/lib/rehype/remarkInferToc"
@@ -180,6 +181,8 @@ export const getStaticProps = (async (context) => {
 
   const gfissues = await gfIssuesDataFetch()
 
+  const contributors = await fetchAndSaveGitHistory(mdDir)
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
@@ -194,13 +197,14 @@ export const getStaticProps = (async (context) => {
       tocItems,
       crowdinContributors,
       gfissues,
+      contributors,
     },
   }
 }) satisfies GetStaticProps<Props, Params>
 
 const ContentPage: NextPageWithLayout<
   InferGetStaticPropsType<typeof getStaticProps>
-> = ({ mdxSource, layout, gfissues }) => {
+> = ({ mdxSource, layout, gfissues, contributorHistory }) => {
   // TODO: Address component typing error here (flip `FC` types to prop object types)
   // @ts-expect-error
   const components: Record<string, React.ReactNode> = {
@@ -229,6 +233,7 @@ ContentPage.getLayout = (page) => {
     tocItems,
     crowdinContributors,
     contentNotTranslated,
+    contributors,
   } = page.props
 
   const layoutProps = {
@@ -239,6 +244,7 @@ ContentPage.getLayout = (page) => {
     tocItems,
     crowdinContributors,
     contentNotTranslated,
+    contributors,
   }
   const Layout = layoutMapping[layout]
 

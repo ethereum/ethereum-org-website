@@ -55,3 +55,5 @@ robots.txt
 
 # Crowdin report output
 src/data/crowdin/bucketsAwaitingReviewReport.csv
+
+src/data/commit-history.json
