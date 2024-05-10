@@ -32,7 +32,7 @@ There may be a situation where small forks occur, the difficulty of a block depe
 
 ### Malicious signers {#malicious-signers}
 
-It may happen that a malicious user gets added to the list of signers, or that a signing key/machine is compromised. In such a scenario the protocol needs to be able to defend itself against reorganizations and spamming. The proposed solution is that given a list of N authorized signers, any signer may only mint 1 block out of every K. This ensures that damage is limited, and the remainder of the miners can vote out the malicious user.
+A malicious user could be added to the list of signers, or a signing key/machine might be compromised. In such a scenario the protocol needs to be able to defend itself against reorganizations and spamming. The proposed solution is that given a list of N authorized signers, any signer may only mint 1 block out of every K. This ensures that damage is limited, and the remainder of the miners can vote out the malicious user.
 
 ### Censorship {#censorship-attack}
 
@@ -40,7 +40,7 @@ Another interesting attack vector is if a signer (or group of signers) attempts 
 
 ### Spam {#spam-attack}
 
-Another small attack vector is malicious signers injecting new vote proposals inside every block they mint. Since nodes need to tally up all votes to create the actual list of authorized signers, they need to track all votes through time. Without placing a limit on the vote window, this could grow slowly, yet unbounded. The solution is to place a _moving_ window of W blocks after which votes are considered stale. _A reasonable window might be 1-2 epochs._
+Another small attack vector is malicious signers injecting new vote proposals inside every block they mint. Since nodes need to tally up all votes to create the actual list of authorized signers, they must record all votes over time. Without placing a limit on the vote window, this could grow slowly, yet unbounded. The solution is to place a _moving_ window of W blocks after which votes are considered stale. _A reasonable window might be 1-2 epochs._
 
 ### Concurrent blocks {#concurrent-blocks}
 
@@ -73,7 +73,7 @@ Watch a visual explanation of proof-of-authority:
 
 <YouTube id="Mj10HSEM5_8" />
 
-## Related Topics {#related-topics}
+## Related topics {#related-topics}
 
 - [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 - [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
