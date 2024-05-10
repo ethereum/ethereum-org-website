@@ -2,8 +2,8 @@ import type { StaticImageData } from "next/image"
 
 import type {
   CrowdinContributor,
-  Frontmatter,
   FileContributor,
+  Frontmatter,
   Lang,
   Layout,
   ToCItem,
