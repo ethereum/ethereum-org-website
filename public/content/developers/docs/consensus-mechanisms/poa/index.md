@@ -56,7 +56,7 @@ If for example there are 10 authorized signers and each signer is allowed to cre
 | PoA blockchains are incredibly cheap to run and maintain                                                                                                  | Becoming an authorized signer is typically out of reach for an ordinary person, because the blockchain requires entities with established reputation. |
 | The transactions are confirmed very quick as it could reach less than 1 second because only limited number of signers are required to validate new blocks | Malicious signers could reorg, double spend, censor transactions in the network, those attacks are mitigated but still possible                       |
 
-## Further Reading {#further-reading}
+## Further reading {#further-reading}
 
 - [EIP-225](https://eips.ethereum.org/EIPS/eip-225) _Clique standard_
 - [Proof of Authority study](https://github.com/cryptoeconomics-study/website/blob/master/docs/sync/2.4-lecture.md) _Cryptoeconomics_
