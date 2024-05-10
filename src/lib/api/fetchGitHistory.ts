@@ -53,9 +53,19 @@ export const fetchAndCacheGitContributors = async (mdDir: string) => {
   const filepath = join("/", mdDir, "index.md")
 
   // Load cache
-  const commitHistory = fs.existsSync(GIT_CONTRIBUTOR_CACHE_JSON)
-    ? JSON.parse(fs.readFileSync(GIT_CONTRIBUTOR_CACHE_JSON, "utf8"))
-    : {}
+  let commitHistory = {}
+  if (fs.existsSync(GIT_CONTRIBUTOR_CACHE_JSON)) {
+    try {
+      commitHistory = JSON.parse(
+        fs.readFileSync(GIT_CONTRIBUTOR_CACHE_JSON, "utf8")
+      )
+    } catch (error) {
+      console.error(
+        `Error reading commit history cache for filepath ${filepath}`,
+        error
+      )
+    }
+  }
 
   // First, check cache for existing commit history for English version (despite locale)
   if (commitHistory[filepath]) return commitHistory[filepath]
