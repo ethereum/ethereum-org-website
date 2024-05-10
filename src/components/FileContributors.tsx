@@ -9,7 +9,6 @@ import {
   ModalBody,
   ModalHeader,
   UnorderedList,
-  useBreakpointValue,
   VStack,
 } from "@chakra-ui/react"
 
@@ -60,8 +59,6 @@ const FileContributors = ({
   const [isModalOpen, setModalOpen] = useState(false)
   const { locale } = useRouter()
 
-  const isDesktop = useBreakpointValue({ base: false, md: true })
-
   const lastContributor: FileContributor = contributors.length
     ? contributors[0]
     : ({
@@ -99,28 +96,22 @@ const FileContributors = ({
         p={{ base: 0, md: 2 }}
         {...props}
       >
-        <Flex me={4} alignItems="center" flex="1">
-          {isDesktop && (
-            <>
-              <Avatar
-                height="40px"
-                width="40px"
-                src={lastContributor.avatar_url}
-                name={lastContributor.login}
-                me={2}
-              />
+        <Flex me={4} alignItems="center" flex="1" hideBelow="md">
+          <Avatar
+            height="40px"
+            width="40px"
+            src={lastContributor.avatar_url}
+            name={lastContributor.login}
+            me={2}
+          />
 
-              <Text m={0} color="text200">
-                <Translation id="last-edit" />:{" "}
-                <InlineLink
-                  href={"https://github.com/" + lastContributor.login}
-                >
-                  @{lastContributor.login}
-                </InlineLink>
-                , {getLocaleTimestamp(locale as Lang, lastEdit)}
-              </Text>
-            </>
-          )}
+          <Text m={0} color="text200">
+            <Translation id="last-edit" />:{" "}
+            <InlineLink href={"https://github.com/" + lastContributor.login}>
+              @{lastContributor.login}
+            </InlineLink>
+            , {getLocaleTimestamp(locale as Lang, lastEdit)}
+          </Text>
         </Flex>
 
         <VStack align="stretch" justifyContent="space-between" spacing={2}>
