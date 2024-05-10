@@ -55,7 +55,7 @@ import {
   UseCasesLayout,
 } from "@/layouts"
 import { fetchGFIs } from "@/lib/api/fetchGFIs"
-import { fetchAndSaveGitHistory } from "@/lib/api/fetchGitHistory"
+import { fetchAndCacheGitContributors } from "@/lib/api/fetchGitHistory"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import remarkInferToc from "@/lib/rehype/remarkInferToc"
@@ -181,7 +181,7 @@ export const getStaticProps = (async (context) => {
 
   const gfissues = await gfIssuesDataFetch()
 
-  const contributors = await fetchAndSaveGitHistory(mdDir)
+  const gitContributors = await fetchAndCacheGitContributors(mdDir)
 
   return {
     props: {
@@ -197,7 +197,7 @@ export const getStaticProps = (async (context) => {
       tocItems,
       crowdinContributors,
       gfissues,
-      contributors,
+      contributors: gitContributors,
     },
   }
 }) satisfies GetStaticProps<Props, Params>

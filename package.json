@@ -6,7 +6,7 @@
     "dev": "yarn clean-commit-history && next dev",
     "postinstall": "yarn theme",
     "build": "yarn clean-commit-history && next build",
-    "clean-commit-history": "touch ./src/data/commit-history.json && rm ./src/data/commit-history.json",
+    "clean-commit-history": "touch ./src/data/git-contributor-cache.json && rm ./src/data/git-contributor-cache.json",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",

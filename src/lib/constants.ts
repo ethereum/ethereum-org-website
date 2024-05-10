@@ -150,4 +150,4 @@ export const HAMBURGER_BUTTON_ID = "mobile-menu-button"
 export const MOBILE_LANGUAGE_BUTTON_NAME = "mobile-language-button"
 export const DESKTOP_LANGUAGE_BUTTON_NAME = "desktop-language-button"
 
-export const COMMIT_HISTORY_JSON = "src/data/commit-history.json"
+export const GIT_CONTRIBUTOR_CACHE_JSON = "src/data/git-contributor-cache.json"
