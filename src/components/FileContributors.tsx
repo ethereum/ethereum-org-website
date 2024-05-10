@@ -13,7 +13,7 @@ import {
   VStack,
 } from "@chakra-ui/react"
 
-import type { GitHubContributor, Lang } from "@/lib/types"
+import type { FileContributor, Lang } from "@/lib/types"
 
 import { Button } from "@/components/Buttons"
 import InlineLink from "@/components/Link"
@@ -30,7 +30,7 @@ const ContributorList = ({ children }: { children: React.ReactNode }) => (
   </UnorderedList>
 )
 
-type ContributorProps = { contributor: GitHubContributor }
+type ContributorProps = { contributor: FileContributor }
 const Contributor = ({ contributor }: ContributorProps) => (
   <ListItem p={2} display="flex" alignItems="center">
     <Avatar
@@ -48,7 +48,7 @@ const Contributor = ({ contributor }: ContributorProps) => (
 
 export type FileContributorsProps = FlexProps & {
   editPath?: string
-  contributors: GitHubContributor[]
+  contributors: FileContributor[]
   lastEdit: string
 }
 
@@ -62,14 +62,14 @@ const FileContributors = ({
 
   const isDesktop = useBreakpointValue({ base: false, md: true })
 
-  const lastContributor: GitHubContributor = contributors.length
+  const lastContributor: FileContributor = contributors.length
     ? contributors[0]
     : ({
         avatar_url: "",
         login: "",
         html_url: "",
         date: Date.now().toString(),
-      } as GitHubContributor)
+      } as FileContributor)
 
   return (
     <>

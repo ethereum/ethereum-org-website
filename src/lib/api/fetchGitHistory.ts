@@ -1,7 +1,7 @@
 import fs from "fs"
 import { join } from "path"
 
-import type { GitHubContributor } from "@/lib/types"
+import type { FileContributor } from "@/lib/types"
 
 import {
   COMMIT_HISTORY_JSON,
@@ -66,7 +66,7 @@ export const fetchAndSaveGitHistory = async (mdDir: string) => {
       const { login, avatar_url, html_url } = contribution.author
       const { date } = contribution.commit.author
       return { login, avatar_url, html_url, date }
-    }) as GitHubContributor[]
+    }) as FileContributor[]
 
   // Remove duplicates from same login
   const uniqueContributors = contributors.filter(

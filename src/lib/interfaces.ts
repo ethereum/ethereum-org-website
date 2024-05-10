@@ -3,7 +3,7 @@ import type { StaticImageData } from "next/image"
 import type {
   CrowdinContributor,
   Frontmatter,
-  GitHubContributor,
+  FileContributor,
   Lang,
   Layout,
   ToCItem,
@@ -108,7 +108,7 @@ export interface MdPageContent {
   lastUpdatedDate?: string
   contentNotTranslated: boolean
   crowdinContributors: CrowdinContributor[]
-  contributors: GitHubContributor[]
+  contributors: FileContributor[]
 }
 
 // Local environment framework

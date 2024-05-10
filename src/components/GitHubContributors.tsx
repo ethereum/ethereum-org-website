@@ -1,13 +1,13 @@
 import type { FlexProps } from "@chakra-ui/react"
 
-import type { GitHubContributor } from "@/lib/types"
+import type { FileContributor } from "@/lib/types"
 
 import FileContributors from "@/components/FileContributors"
 
 export type GitHubContributors = FlexProps & {
   editPath?: string
   lastUpdatedDate: string
-  contributors: GitHubContributor[]
+  contributors: FileContributor[]
 }
 
 const GitHubContributors = ({

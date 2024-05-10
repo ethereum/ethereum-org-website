@@ -370,7 +370,7 @@ export type Author = {
   }
 }
 
-export type GitHubContributor = {
+export type FileContributor = {
   login: string
   avatar_url: string
   html_url: string
