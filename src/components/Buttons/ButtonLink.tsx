@@ -8,23 +8,8 @@ export type ButtonLinkProps = LinkProps &
     customEventOptions?: MatomoEventOptions
   }
 
-const ButtonLink = ({
-  customEventOptions,
-  onClick,
-  ...props
-}: ButtonLinkProps) => {
-  const handleClick = () => {
-    customEventOptions && trackCustomEvent(customEventOptions)
-  }
-
-  return (
-    <Button
-      as={BaseLink}
-      activeStyle={{}}
-      {...props}
-      onClick={onClick ? onClick : handleClick}
-    />
-  )
+const ButtonLink = ({ ...props }: ButtonLinkProps) => {
+  return <Button as={BaseLink} activeStyle={{}} {...props} />
 }
 
 export default ButtonLink
