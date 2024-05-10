@@ -196,30 +196,6 @@
     "path": "/glossary/index.md"
   },
   {
-    "id": 3002,
-    "path": "/developers/tutorials/calling-a-smart-contract-from-javascript/index.md"
-  },
-  {
-    "id": 3006,
-    "path": "/developers/tutorials/understand-the-erc-20-token-smart-contract/index.md"
-  },
-  {
-    "id": 6221,
-    "path": "/developers/tutorials/how-to-write-and-deploy-an-nft/index.md"
-  },
-  {
-    "id": 6223,
-    "path": "/developers/tutorials/how-to-mint-an-nft/index.md"
-  },
-  {
-    "id": 6225,
-    "path": "/developers/tutorials/how-to-view-nft-in-metamask/index.md"
-  },
-  {
-    "id": 6239,
-    "path": "/developers/tutorials/uniswap-v2-annotated-code/index.md"
-  },
-  {
     "id": 5557,
     "path": "/community/grants/index.md"
   },
@@ -264,156 +240,24 @@
     "path": "/roadmap/merge/issuance/index.md"
   },
   {
-    "id": 7713,
-    "path": "/roadmap/account-abstraction/index.md"
-  },
-  {
-    "id": 7717,
-    "path": "/roadmap/danksharding/index.md"
-  },
-  {
     "id": 7721,
     "path": "/roadmap/future-proofing/index.md"
-  },
-  {
-    "id": 7725,
-    "path": "/roadmap/pbs/index.md"
   },
   {
     "id": 7729,
     "path": "/roadmap/scaling/index.md"
   },
   {
-    "id": 7733,
-    "path": "/roadmap/secret-leader-election/index.md"
-  },
-  {
     "id": 7737,
     "path": "/roadmap/security/index.md"
-  },
-  {
-    "id": 7741,
-    "path": "/roadmap/single-slot-finality/index.md"
-  },
-  {
-    "id": 7745,
-    "path": "/roadmap/statelessness/index.md"
   },
   {
     "id": 7749,
     "path": "/roadmap/user-experience/index.md"
   },
   {
-    "id": 7753,
-    "path": "/roadmap/verkle-trees/index.md"
-  },
-  {
     "id": 7803,
     "path": "/roadmap/index.md"
-  },
-  {
-    "id": 3018,
-    "path": "/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md"
-  },
-  {
-    "id": 3036,
-    "path": "/developers/tutorials/the-graph-fixing-web3-data-querying/index.md"
-  },
-  {
-    "id": 3082,
-    "path": "/developers/tutorials/run-node-raspberry-pi/index.md"
-  },
-  {
-    "id": 3088,
-    "path": "/developers/tutorials/interact-with-other-contracts-from-solidity/index.md"
-  },
-  {
-    "id": 3124,
-    "path": "/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md"
-  },
-  {
-    "id": 3128,
-    "path": "/developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md"
-  },
-  {
-    "id": 6227,
-    "path": "/developers/tutorials/hello-world-smart-contract/index.md"
-  },
-  {
-    "id": 6247,
-    "path": "/developers/tutorials/send-token-etherjs/index.md"
-  },
-  {
-    "id": 6432,
-    "path": "/developers/tutorials/nft-minter/index.md"
-  },
-  {
-    "id": 7308,
-    "path": "/developers/tutorials/reverse-engineering-a-contract/index.md"
-  },
-  {
-    "id": 8003,
-    "path": "/developers/tutorials/yellow-paper-evm/index.md"
-  },
-  {
-    "id": 2980,
-    "path": "/developers/tutorials/logging-events-smart-contracts/index.md"
-  },
-  {
-    "id": 3100,
-    "path": "/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md"
-  },
-  {
-    "id": 3110,
-    "path": "/developers/tutorials/waffle-test-simple-smart-contract/index.md"
-  },
-  {
-    "id": 3116,
-    "path": "/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/index.md"
-  },
-  {
-    "id": 3120,
-    "path": "/developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md"
-  },
-  {
-    "id": 3138,
-    "path": "/developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md"
-  },
-  {
-    "id": 3144,
-    "path": "/developers/tutorials/secure-development-workflow/index.md"
-  },
-  {
-    "id": 3160,
-    "path": "/developers/tutorials/guide-to-smart-contract-security-tools/index.md"
-  },
-  {
-    "id": 6243,
-    "path": "/developers/tutorials/erc20-annotated-code/index.md"
-  },
-  {
-    "id": 6245,
-    "path": "/developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md"
-  },
-  {
-    "id": 6267,
-    "path": "/developers/tutorials/erc-721-vyper-annotated-code/index.md"
-  },
-  {
-    "id": 7627,
-    "path": "/developers/tutorials/erc20-with-safety-rails/index.md"
-  },
-  {
-    "id": 7631,
-    "path": "/developers/tutorials/all-you-can-cache/index.md"
-  },
-  {
-    "id": 7995,
-    "path": "/developers/tutorials/eip-1271-smart-contract-signatures/index.md"
-  },
-  {
-    "id": 7999,
-    "path": "/developers/tutorials/hello-world-smart-contract-fullstack/index.md"
   },
   {
     "id": 5553,
@@ -432,44 +276,8 @@
     "path": "/contributing/design-principles/index.md"
   },
   {
-    "id": 6398,
-    "path": "/contributing/adding-developer-tools/index.md"
-  },
-  {
-    "id": 6400,
-    "path": "/contributing/adding-exchanges/index.md"
-  },
-  {
-    "id": 6404,
-    "path": "/contributing/adding-glossary-terms/index.md"
-  },
-  {
-    "id": 6408,
-    "path": "/contributing/adding-products/index.md"
-  },
-  {
     "id": 6412,
     "path": "/contributing/translation-program/translators-guide/index.md"
-  },
-  {
-    "id": 6416,
-    "path": "/contributing/content-resources/index.md"
-  },
-  {
-    "id": 6446,
-    "path": "/contributing/adding-layer-2s/index.md"
-  },
-  {
-    "id": 6448,
-    "path": "/contributing/adding-staking-products/index.md"
-  },
-  {
-    "id": 7565,
-    "path": "/contributing/adding-wallets/index.md"
-  },
-  {
-    "id": 7569,
-    "path": "/contributing/adding-desci-projects/index.md"
   },
   {
     "id": 7581,
@@ -486,14 +294,6 @@
   {
     "id": 7935,
     "path": "/contributing/design/index.md"
-  },
-  {
-    "id": 7939,
-    "path": "/contributing/design/adding-design-resources/index.md"
-  },
-  {
-    "id": 8007,
-    "path": "/contributing/quizzes/index.md"
   },
   {
     "id": 6568,
@@ -560,10 +360,6 @@
     "path": "/security/index.md"
   },
   {
-    "id": 6428,
-    "path": "/web3/index.md"
-  },
-  {
     "id": 7320,
     "path": "/bridges/index.md"
   },
@@ -576,24 +372,12 @@
     "path": "/defi/index.md"
   },
   {
+    "id": 6428,
+    "path": "/web3/index.md"
+  },
+  {
     "id": 6440,
     "path": "/smart-contracts/index.md"
-  },
-  {
-    "id": 7314,
-    "path": "/social-networks/index.md"
-  },
-  {
-    "id": 7316,
-    "path": "/decentralized-identity/index.md"
-  },
-  {
-    "id": 7461,
-    "path": "/desci/index.md"
-  },
-  {
-    "id": 8035,
-    "path": "/refi/index.md"
   },
   {
     "id": 7521,
@@ -812,79 +596,91 @@
     "path": "/about/index.md"
   },
   {
-    "id": 2986,
-    "path": "/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md"
+    "id": 7314,
+    "path": "/social-networks/index.md"
   },
   {
-    "id": 2994,
-    "path": "/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md"
+    "id": 7316,
+    "path": "/decentralized-identity/index.md"
   },
   {
-    "id": 2998,
-    "path": "/developers/tutorials/smart-contract-security-guidelines/index.md"
+    "id": 7461,
+    "path": "/desci/index.md"
   },
   {
-    "id": 3010,
-    "path": "/developers/tutorials/token-integration-checklist/index.md"
+    "id": 8035,
+    "path": "/refi/index.md"
   },
   {
-    "id": 3024,
-    "path": "/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/index.md"
+    "id": 7713,
+    "path": "/roadmap/account-abstraction/index.md"
   },
   {
-    "id": 3056,
-    "path": "/developers/tutorials/deploying-your-first-smart-contract/index.md"
+    "id": 7717,
+    "path": "/roadmap/danksharding/index.md"
   },
   {
-    "id": 3070,
-    "path": "/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/index.md"
+    "id": 7725,
+    "path": "/roadmap/pbs/index.md"
   },
   {
-    "id": 3074,
-    "path": "/developers/tutorials/how-to-implement-an-erc721-market/index.md"
+    "id": 7733,
+    "path": "/roadmap/secret-leader-election/index.md"
   },
   {
-    "id": 3092,
-    "path": "/developers/tutorials/using-websockets/index.md"
+    "id": 7741,
+    "path": "/roadmap/single-slot-finality/index.md"
   },
   {
-    "id": 3148,
-    "path": "/developers/tutorials/solidity-and-truffle-continuous-integration-setup/index.md"
+    "id": 7745,
+    "path": "/roadmap/statelessness/index.md"
   },
   {
-    "id": 3156,
-    "path": "/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md"
+    "id": 7753,
+    "path": "/roadmap/verkle-trees/index.md"
   },
   {
-    "id": 3164,
-    "path": "/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md"
+    "id": 6398,
+    "path": "/adding-developer-tools/index.md"
   },
   {
-    "id": 6241,
-    "path": "/developers/tutorials/create-and-deploy-a-defi-app/index.md"
+    "id": 6400,
+    "path": "/adding-exchanges/index.md"
   },
   {
-    "id": 6259,
-    "path": "/developers/tutorials/how-to-use-tellor-as-your-oracle/index.md"
+    "id": 6404,
+    "path": "/adding-glossary-terms/index.md"
   },
   {
-    "id": 6261,
-    "path": "/developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md"
+    "id": 6408,
+    "path": "/adding-products/index.md"
   },
   {
-    "id": 6263,
-    "path": "/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md"
+    "id": 6416,
+    "path": "/content-resources/index.md"
   },
   {
-    "id": 6265,
-    "path": "/developers/tutorials/testing-erc-20-tokens-with-waffle/index.md"
+    "id": 6446,
+    "path": "/adding-layer-2s/index.md"
   },
   {
-    "id": 6436,
-    "path": "/developers/tutorials/optimism-std-bridge-annotated-code/index.md"
+    "id": 6448,
+    "path": "/adding-staking-products/index.md"
   },
   {
-    "id": 7304,
-    "path": "/developers/tutorials/short-abi/index.md"
+    "id": 7565,
+    "path": "/adding-wallets/index.md"
+  },
+  {
+    "id": 7569,
+    "path": "/adding-desci-projects/index.md"
+  },
+  {
+    "id": 7939,
+    "path": "/design/adding-design-resources/index.md"
+  },
+  {
+    "id": 8007,
+    "path": "/quizzes/index.md"
   }
 ]

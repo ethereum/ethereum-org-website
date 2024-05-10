@@ -11490,7 +11490,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/72754835?v=4",
       "profile": "https://github.com/0xemrekaya",
       "contributions": [
-        "tutorial"
+        "tutorial",
+        "doc"
       ]
     },
     {
@@ -11736,7 +11737,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/61613931?v=4",
       "profile": "https://dharmik79.github.io/portfolio.github.io/",
       "contributions": [
-        "bug"
+        "bug",
+        "code"
       ]
     },
     {
@@ -11958,6 +11960,51 @@
       "profile": "https://olorunsogo-portfolio-sand.vercel.app/",
       "contributions": [
         "maintenance"
+      ]
+    },
+    {
+      "login": "liuye20240304",
+      "name": "liuye20240304",
+      "avatar_url": "https://avatars.githubusercontent.com/u/162123251?v=4",
+      "profile": "https://github.com/liuye20240304",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "zk-Lumi",
+      "name": "Daniel Lumi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/149794418?v=4",
+      "profile": "https://zksync.io",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "ZakGriffith",
+      "name": "Zak G",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12072395?v=4",
+      "profile": "https://github.com/ZakGriffith",
+      "contributions": [
+        "tutorial"
+      ]
+    },
+    {
+      "login": "barskhianfannie",
+      "name": "Fannie Barskhian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42990794?v=4",
+      "profile": "http://fanniebarskhian.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "ksdumont",
+      "name": "Keith Dumont",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51958351?v=4",
+      "profile": "https://github.com/ksdumont",
+      "contributions": [
+        "content"
       ]
     }
   ],

@@ -526,7 +526,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                   </Text>
                   <Flex direction="column">
                     <Box>
-                      <ButtonLink mb={4} me={4} to="https://1inch.exchange">
+                      <ButtonLink mb={4} me={4} href="https://matcha.xyz/tokens/ethereum/0x6b175474e89094c44da98b954eedeac495271d0f?sellChain=1&sellAddress=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee">
                         {t("page-stablecoins-dai-banner-swap-button")}
                       </ButtonLink>
                     </Box>
@@ -576,7 +576,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <ButtonLink
                       mb={4}
                       me={4}
-                      to="https://matcha.xyz/tokens/ethereum/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+                      href="https://matcha.xyz/tokens/ethereum/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48?sellChain=1&sellAddress=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
                     >
                       {t("page-stablecoins-usdc-banner-swap-button")}
                     </ButtonLink>

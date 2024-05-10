@@ -51,7 +51,7 @@ lang: ja
 
 **Scaffold-ETH _ - 自分のスマートコントラクトに適応するフロントエンドを使用して、Solidityを手軽に試す。_**
 
-- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
+- [GitHub](https://github.com/austintgriffith/scaffold-eth)
 - [分散型アプリ(Dapp)の例](https://punkwallet.io/)
 
 **Create Eth App _-1つのコマンドでイーサリアムアプリを作成_**

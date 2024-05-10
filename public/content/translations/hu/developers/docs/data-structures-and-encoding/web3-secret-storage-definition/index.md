@@ -46,7 +46,7 @@ A PBKDF2-höz a kdfparams tartalmazza:
 - `salt`: a PBKDF-nek átadott salt;
 - `dklen`: a létrehozott kulcs hossza. Muszáj, hogy >= 32 legyen.
 
-Miután a fájl kulcsát létrehoztuk, azt a MAC származtatásával kell ellenőrizni. A MAC-et a származtatott kulcs bal szélső második 16 bájtjának és a `ciphertext` kulcs tartalmának összekapcsolásából képzett bájttömb SHA3 (keccak-256) hash-eként kell kiszámítani:
+Miután a fájl kulcsát létrehoztuk, azt a MAC származtatásával kell ellenőrizni. A MAC-et a származtatott kulcs bal szélső második 16 bájtjának és a `ciphertext` kulcs tartalmának összekapcsolásából képzett bájttömb SHA3 (keccak-256) hasheként kell kiszámítani:
 
 ```js
 KECCAK(DK[16..31] ++ <ciphertext>)
@@ -68,7 +68,7 @@ Ez a titkosító a következő paramétereket veszi fel, amelyeket a cipherparam
 
 A titkosítás kulcsa a származtatott kulcs bal szélső 16 bájtja, azaz `DK[0..15]`
 
-A titkos kulcs létrehozása vagy titkosítása lényegében ezen utasítások fordítottja. Győződjön meg róla, hogy a `uuid`, `salt` és `iv` valóban véletlenszerű.
+A titkos kulcs létrehozása vagy titkosítása lényegében ezen utasítások fordítottja. Győződjön meg arról, hogy a `uuid`, `salt` és `iv` valóban véletlenszerű.
 
 A `version` mezőn kívül, amelynek a verzió „kemény” azonosítójaként kell működnie, a megvalósítások használhatják a `minorversion` mezőt is a formátum kisebb, nem megszakított változásainak követésére.
 

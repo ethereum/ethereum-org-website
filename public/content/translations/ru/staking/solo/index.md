@@ -83,7 +83,7 @@ summaryPoints:
 
 При желании вы можете выйти из роли валидатора, что устраняет требование быть онлайн и останавливает все дальнейшие вознаграждения. Оставшийся баланс будет выведен на адрес вывода, указанный вами во время установки.
 
-[More on staking withdrawals](/staking/withdrawals/)
+[Подробнее о выводе средств из стейкинга](/staking/withdrawals/)
 
 ## Начните с панели запуска стейкинга {#get-started-on-the-staking-launchpad}
 
@@ -101,7 +101,7 @@ summaryPoints:
 
 ## Изучите инструменты для настройки узлов и клиентов {#node-and-client-tools}
 
-Есть множество опций, которые помогут вам с установкой. Используйте индикаторы описанные выше, в этом руководстве, с помощью инструментов, которые находятся ниже.
+Есть множество вариантов, которые помогут вам с установкой. Используйте индикаторы выше как руководство по инструментам, приведенным ниже.
 
 <ProductDisclaimer />
 
@@ -190,14 +190,17 @@ summaryPoints:
 
 Чтобы разблокировать и получить весь баланс обратно, вы также должны завершить процесс выхода вашего валидатора.
 
-<ButtonLink to="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
+<ButtonLink to="/staking/withdrawals/">Подробнее о выводе средств из стейкинга</ButtonLink>
 </ExpandableCard>
 
-## Дополнительные ресурсы {#further-reading}
+## Дополнительная литература {#further-reading}
 
+- [Каталог стейкинга Ethereum](https://www.staking.directory/) — _Eridian и Spacesider_
 - [Проблема разнообразия клиентов Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) — _@emmanuelawosika, 2022 г._
 - [Помощь с разнообразием клиентов](https://www.attestant.io/posts/helping-client-diversity/) — _Джим Макдональд, 2022 г._
 - [Разнообразие клиентов на консенсусном уровне Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) — _jmcook.eth, 2022 г._
 - [Как покупать оборудование для валидатора Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) — _EthStaker, 2022 г._
 - [Шаг за шагом: как присоединиться к тестовой сети Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) — _Butta_
 - [Советы по предотвращению сокращения Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) — _Рауль Джордан, 2020 г._
+
+<QuizWidget quizKey="solo-staking" />

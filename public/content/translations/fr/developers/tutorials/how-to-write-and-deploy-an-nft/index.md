@@ -4,8 +4,8 @@ description: Ce tutoriel est la première partie de la série sur les NFT et vou
 author: "Sumi Mudgil"
 tags:
   - "ERC-721"
-  - "alchemy"
-  - "solidity"
+  - "Alchemy"
+  - "Solidity"
   - "contrats intelligents"
 skill: beginner
 lang: fr
@@ -87,7 +87,7 @@ La manière dont vous répondez à ces questions d'installation a peu d'importan
     author:
     license: (ISC)
     About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
-
+    
     {
       "name": "my-nft",
       "version": "1.0.0",
@@ -118,7 +118,7 @@ Dans notre dossier de projet, exécutez :
 
     npx hardhat
 
-Vous devriez maintenant voir un message de bienvenue ainsi qu'une option pour sélectionner ce que vous voulez faire. Sélectionnez : « create an empty hardhat.config.js » :
+Vous devriez maintenant voir un message de bienvenue ainsi qu'une option pour séléctionner ce que vous voulez faire. Sélectionnez : « create an empty hardhat.config.js » :
 
     888    888                      888 888               888
     888    888                      888 888               888
@@ -128,7 +128,7 @@ Vous devriez maintenant voir un message de bienvenue ainsi qu'une option pour s�
     888    888 .d888888 888    888  888 888  888 .d888888 888
     888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
     888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
-    👷 Bienvenue dans Hardhat v2.0.11 👷‍
+    👷 Welcome to Hardhat v2.0.11 👷‍
     ? Que voulez vous faire ? …
     Create a sample project
     ❯ Create an empty hardhat.config.js
@@ -138,7 +138,7 @@ Cela va générer un fichier 'hardhar.config.js' dans lequel nous allons spécif
 
 ## Étape 9 : Ajouter les dossiers du projet {#add-project-folders}
 
-Pour garder notre projet organisé, nous allons créer deux nouveaux dossiers. Naviguez vers le répertoire racine de votre projet dans votre invite de commande en ligne et tapez :
+Pour garder notre projet organisé, nous allons créer deux nouveaux dossiers. Naviguez vers le répertoire racine de votre projet dans votre ligne de commande et tapez :
 
     mkdir contracts
     mkdir scripts
