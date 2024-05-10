@@ -370,6 +370,13 @@ export type Author = {
   }
 }
 
+export type GitHubContributor = {
+  login: string
+  avatar_url: string
+  html_url: string
+  date: string
+}
+
 /**
  * Table of contents
  */
