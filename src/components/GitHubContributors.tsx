@@ -5,7 +5,6 @@ import type { FileContributor } from "@/lib/types"
 import FileContributors from "@/components/FileContributors"
 
 export type GitHubContributors = FlexProps & {
-  editPath?: string
   lastUpdatedDate: string
   contributors: FileContributor[]
 }
