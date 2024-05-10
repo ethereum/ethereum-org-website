@@ -415,7 +415,6 @@ export const walletsData: WalletData[] = [
     image: CoinWalletImage,
     brand_color: "#68c481",
     url: "https://coin.space/",
-    wallet_live_date: "July 2015",
     active_development_team: true,
     languages_supported: [
       "id",
