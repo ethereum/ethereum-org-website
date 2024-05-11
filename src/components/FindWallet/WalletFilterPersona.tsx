@@ -22,6 +22,7 @@ type WalletFilterPersonaProps = {
   selectedPersona: number[]
   setSelectedPersona: React.Dispatch<React.SetStateAction<number[]>>
   showMobileSidebar: boolean
+  resetWalletFilter: React.MutableRefObject<() => void>
 }
 
 const computeFilters = (
@@ -52,6 +53,7 @@ const WalletFilterPersona = ({
   selectedPersona,
   setSelectedPersona,
   showMobileSidebar,
+  resetWalletFilter,
 }: WalletFilterPersonaProps) => {
   const personas = useWalletPersonas()
   const handleSelectPersona = (idx: number, persona: WalletPersonas) => {
@@ -63,6 +65,21 @@ const WalletFilterPersona = ({
         eventAction: `${persona.title}`,
         eventName: `${persona.title} false`,
       })
+      setSelectedPersona(newSelectedPersonas)
+      if (newSelectedPersonas.length < 1) {
+        resetFilters()
+        resetWalletFilter.current()
+      } else {
+        const newFilters = computeFilters(newSelectedPersonas, personas)
+        setFilters((prevFilters) => {
+          const combinedFilters = Object.fromEntries(
+            Object.entries(prevFilters).map(([key, value]) => {
+              return [key, newFilters[key]]
+            })
+          )
+          return combinedFilters as WalletFilter
+        })
+      }
     } else {
       newSelectedPersonas = [...selectedPersona, idx]
       trackCustomEvent({
@@ -70,17 +87,17 @@ const WalletFilterPersona = ({
         eventAction: `${persona.title}`,
         eventName: `${persona.title} true`,
       })
+      setSelectedPersona(newSelectedPersonas)
+      const newFilters = computeFilters(newSelectedPersonas, personas)
+      setFilters((prevFilters) => {
+        const combinedFilters = Object.fromEntries(
+          Object.entries(prevFilters).map(([key, value]) => {
+            return [key, value || newFilters[key]]
+          })
+        )
+        return combinedFilters as WalletFilter
+      })
     }
-    setSelectedPersona(newSelectedPersonas)
-    const newFilters = computeFilters(newSelectedPersonas, personas)
-    setFilters((prevFilters) => {
-      const combinedFilters = Object.fromEntries(
-        Object.entries(prevFilters).map(([key, value]) => {
-          return [key, value || newFilters[key]]
-        })
-      )
-      return combinedFilters as WalletFilter
-    })
   }
 
   return (

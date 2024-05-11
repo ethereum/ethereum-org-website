@@ -194,6 +194,7 @@ const FindWalletPage = () => {
           selectedPersona={selectedPersona}
           setSelectedPersona={setSelectedPersona}
           showMobileSidebar={showMobileSidebar}
+          resetWalletFilter={resetWalletFilter}
         />
       </Box>
 
