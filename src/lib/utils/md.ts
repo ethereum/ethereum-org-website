@@ -334,7 +334,7 @@ export const getContentBySlug = (slug: string) => {
   const frontmatter = data as Frontmatter
   const items: Omit<
     MdPageContent,
-    "tocItems" | "crowdinContributors" | "contributors"
+    "tocItems" | "crowdinContributors" | "gitContributors"
   > = {
     slug,
     content,

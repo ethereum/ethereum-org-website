@@ -197,7 +197,7 @@ export const getStaticProps = (async (context) => {
       tocItems,
       crowdinContributors,
       gfissues,
-      contributors: gitContributors,
+      gitContributors,
     },
   }
 }) satisfies GetStaticProps<Props, Params>
@@ -233,7 +233,7 @@ ContentPage.getLayout = (page) => {
     tocItems,
     crowdinContributors,
     contentNotTranslated,
-    contributors,
+    gitContributors,
   } = page.props
 
   const layoutProps = {
@@ -244,7 +244,7 @@ ContentPage.getLayout = (page) => {
     tocItems,
     crowdinContributors,
     contentNotTranslated,
-    contributors,
+    gitContributors,
   }
   const Layout = layoutMapping[layout]
 

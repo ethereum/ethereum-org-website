@@ -204,7 +204,7 @@ type DocsLayoutProps = Pick<
   | "lastUpdatedDate"
   | "crowdinContributors"
   | "contentNotTranslated"
-  | "contributors"
+  | "gitContributors"
 > &
   Required<Pick<MdPageContent, "lastUpdatedDate">> &
   ChildOnlyProp & {
@@ -219,13 +219,13 @@ export const DocsLayout = ({
   lastUpdatedDate,
   crowdinContributors,
   contentNotTranslated,
-  contributors,
+  gitContributors,
 }: DocsLayoutProps) => {
   const isPageIncomplete = !!frontmatter.incomplete
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = getEditPath(relativePath)
 
-  const gitHubLastEdit = contributors[0]?.date
+  const gitHubLastEdit = gitContributors[0]?.date
   const intlLastEdit = gitHubLastEdit || lastUpdatedDate
 
   const useGitHubContributors =
@@ -246,7 +246,7 @@ export const DocsLayout = ({
           {useGitHubContributors ? (
             <GitHubContributors
               lastUpdatedDate={lastUpdatedDate}
-              contributors={contributors}
+              contributors={gitContributors}
             />
           ) : (
             <CrowdinContributors

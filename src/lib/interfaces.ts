@@ -108,7 +108,7 @@ export interface MdPageContent {
   lastUpdatedDate?: string
   contentNotTranslated: boolean
   crowdinContributors: CrowdinContributor[]
-  contributors: FileContributor[]
+  gitContributors: FileContributor[]
 }
 
 // Local environment framework

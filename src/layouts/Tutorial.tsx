@@ -159,7 +159,10 @@ export const tutorialsComponents = {
 type TutorialLayoutProps = ChildOnlyProp &
   Pick<
     MdPageContent,
-    "tocItems" | "crowdinContributors" | "contentNotTranslated" | "contributors"
+    | "tocItems"
+    | "crowdinContributors"
+    | "contentNotTranslated"
+    | "gitContributors"
   > &
   Required<Pick<MdPageContent, "lastUpdatedDate">> & {
     frontmatter: TutorialFrontmatter
@@ -174,13 +177,13 @@ export const TutorialLayout = ({
   lastUpdatedDate,
   crowdinContributors,
   contentNotTranslated,
-  contributors,
+  gitContributors,
 }: TutorialLayoutProps) => {
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = getEditPath(relativePath)
 
   const borderColor = useToken("colors", "border")
-  const gitHubLastEdit = contributors[0]?.date
+  const gitHubLastEdit = gitContributors[0]?.date
   const intlLastEdit = gitHubLastEdit || lastUpdatedDate
 
   const useGitHubContributors =
@@ -208,7 +211,7 @@ export const TutorialLayout = ({
           {children}
           {useGitHubContributors ? (
             <GitHubContributors
-              contributors={contributors}
+              contributors={gitContributors}
               lastUpdatedDate={lastUpdatedDate}
             />
           ) : (
