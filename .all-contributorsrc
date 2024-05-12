@@ -11490,7 +11490,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/72754835?v=4",
       "profile": "https://github.com/0xemrekaya",
       "contributions": [
-        "tutorial"
+        "tutorial",
+        "doc"
       ]
     },
     {
@@ -11736,7 +11737,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/61613931?v=4",
       "profile": "https://dharmik79.github.io/portfolio.github.io/",
       "contributions": [
-        "bug"
+        "bug",
+        "code"
       ]
     },
     {
@@ -11774,7 +11776,8 @@
       "profile": "https://github.com/HayattiQ",
       "contributions": [
         "content",
-        "bug"
+        "bug",
+        "maintenance"
       ]
     },
     {
@@ -11828,7 +11831,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/8257719?v=4",
       "profile": "http://rashidma.com",
       "contributions": [
-        "bug"
+        "bug",
+        "doc"
       ]
     },
     {
@@ -11893,6 +11897,114 @@
       "contributions": [
         "content",
         "bug"
+      ]
+    },
+    {
+      "login": "rohit-710",
+      "name": "Rohit Ramesh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70317502?v=4",
+      "profile": "https://bento.me/rohitramesh",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "gsalzer",
+      "name": "Gernot Salzer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13353518?v=4",
+      "profile": "https://github.com/gsalzer",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "lightclient",
+      "name": "lightclient",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14004106?v=4",
+      "profile": "https://github.com/lightclient",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "GarenWoo",
+      "name": "Garen Woo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/126687110?v=4",
+      "profile": "https://github.com/GarenWoo",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "AbiPrescott",
+      "name": "Abi Prescott",
+      "avatar_url": "https://avatars.githubusercontent.com/u/140613896?v=4",
+      "profile": "https://github.com/AbiPrescott",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "skyminelabs",
+      "name": "skyminelabs",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57817726?v=4",
+      "profile": "https://github.com/skyminelabs",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "sogobanwo",
+      "name": "sogobanwo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99739569?v=4",
+      "profile": "https://olorunsogo-portfolio-sand.vercel.app/",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "liuye20240304",
+      "name": "liuye20240304",
+      "avatar_url": "https://avatars.githubusercontent.com/u/162123251?v=4",
+      "profile": "https://github.com/liuye20240304",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "zk-Lumi",
+      "name": "Daniel Lumi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/149794418?v=4",
+      "profile": "https://zksync.io",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "ZakGriffith",
+      "name": "Zak G",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12072395?v=4",
+      "profile": "https://github.com/ZakGriffith",
+      "contributions": [
+        "tutorial"
+      ]
+    },
+    {
+      "login": "barskhianfannie",
+      "name": "Fannie Barskhian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42990794?v=4",
+      "profile": "http://fanniebarskhian.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "ksdumont",
+      "name": "Keith Dumont",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51958351?v=4",
+      "profile": "https://github.com/ksdumont",
+      "contributions": [
+        "content"
       ]
     }
   ],

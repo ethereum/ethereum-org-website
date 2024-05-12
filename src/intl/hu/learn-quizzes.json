@@ -440,7 +440,6 @@
   "l001-d-label": "Teljes munkaidőben a blokklánc infrastruktúrában kell dolgozni",
   "l001-d-explanation": "A szoftvereszközök az idők során folyamatosan fejlődtek, így a csomópontok otthoni futtatása kezdőként sokkal könnyebbé vált. A blokklánc-infrastruktúrában való főállású munka semmiképpen sem követelmény a részvételhez.",
   "l002-prompt": "Mennyi ETH-t kell letétbe helyezni egy csomópont működtetéséhez?",
-  "l002-a-label": "0",
   "l002-a-explanation": "Egy Ethereum csomópont működtetéséhez nincs szükség ETH-re. A csomópont beállításának részeként működhet egy letétbe helyező validátor, de kliensszoftvert bárki szabadon futtathat és szinkronizálhatja a blokklánc saját szuverén példányát – ehhez nincs szükség ETH-re.",
   "l002-b-label": "8",
   "l002-d-explanation": "Egy Ethereum csomópont működtetéséhez nincs szükség ETH-re. A hálózati konszenzusban közvetlenül részt vevő, letétbe helyező validátor aktiválásához 32 ETH kell, de kliensszoftvert bárki szabadon futtathat és szinkronizálhatja a blokklánc saját szuverén példányát – ehhez nincs szükség ETH-re.",

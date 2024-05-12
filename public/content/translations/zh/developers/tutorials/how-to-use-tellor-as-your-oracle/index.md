@@ -1,11 +1,11 @@
 ---
-title: 如何将 Tellor 设置为您的预言机
+title: 如何将 Tellor 设置为你的预言机
 description: 将 Tellor 预言机集成到协议中的指南
 author: "Tellor"
 lang: zh
 tags:
   - "solidity"
-  - "智能合同"
+  - "智能合约"
   - "预言机"
 skill: beginner
 published: 2021-06-29
@@ -13,19 +13,19 @@ source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 
-小测验：您的协议即将完成，但它需要一个预言机来访问链下数据......您该怎么做？
+小测验：你的协议即将完成，但它需要一个预言机来访问链下数据......你该怎么做？
 
 ## （软）前提条件 {#soft-prerequisites}
 
-这篇文章旨在解释如何让访问预言机数据馈送变得简单易行。 这就是说，我们假定您具备一定的编码技能水平，下文侧重于讲述预言机方面。
+这篇文章旨在解释如何让访问预言机数据馈送变得简单易行。 这就是说，我们假定你具备一定的编码技能水平，下文侧重于讲述预言机方面。
 
 本文假定：
 
-- 您能够使用终端
-- 您安装了 npm
-- 您知道如何使用 npm 管理依赖项
+- 你能够使用终端
+- 你安装了 npm
+- 你知道如何使用 npm 管理依赖项
 
-Tellor 是一种可供直接实现的开源预言机。 本初学者教程旨在展示如何轻松地运行 Tellor，为您的项目提供一个完全去中心化的、抗审查的预言机。
+Tellor 是一种可供直接实现的开源预言机。 本初学者教程旨在展示如何轻松地运行 Tellor，为你的项目提供一个完全去中心化的、抗审查的预言机。
 
 ## 概述 {#overview}
 
@@ -33,7 +33,7 @@ Tellor 是一种预言机系统，参与者可以在该系统中请求链下数�
 
 在本教程中，我们将介绍：
 
-- 设置您需要运行的初始工具包。
+- 设置你需要运行的初始工具包。
 - 讲解一个简单示例。
 - 列出目前可以测试 Tellor 的网络的测试网地址。
 
@@ -43,9 +43,9 @@ Tellor 是一种预言机系统，参与者可以在该系统中请求链下数�
 
 `npm install usingtellor`
 
-安装完成后，将允许您的合约继承“UsingTellor”合约的函数。
+安装完成后，将允许你的合约继承“UsingTellor”合约的函数。
 
-很好！ 既然您已经准备好工具了，我们来完成一个简单的练习来获取比特币价格：
+很好！ 既然你已经准备好工具了，我们来完成一个简单的练习来获取比特币价格：
 
 ### BTC/USD 示例 {#btcusd-example}
 
@@ -65,7 +65,7 @@ constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {
 
 function setBtcPrice() public {
     bytes memory _b = abi.encode("SpotPrice",abi.encode("btc","usd"));
-    bytes32 _queryID = keccak256(_b);
+    bytes32 _queryId = keccak256(_b);
 
     uint256 _timestamp;
     bytes _value;

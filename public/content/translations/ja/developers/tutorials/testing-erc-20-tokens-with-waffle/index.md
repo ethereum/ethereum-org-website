@@ -15,8 +15,8 @@ published: 2020-10-16
 
 このチュートリアルでは、以下について学びます：
 
-- Waffle を使って、スマートコントラクトをテストする方法
-- Waffle 上で、一般的なマッチャーを使ってスマートコントラクトをテストする方法
+- Waffleを使って、スマートコントラクトをテストする方法
+- Waffle上で、一般的なマッチャーを使ってスマートコントラクトをテストする方法
 
 前提知識：
 
@@ -24,17 +24,17 @@ published: 2020-10-16
 - 新規の`JavaScript`プロジェクトを作成できる。
 - 数行の`Solidity`コードを書いたことがある。
 - いくつかのテストを`JavaScript`で作成したことがある。
-- `yarn`あるいは、JavaScripts のパッケージインストーラである`npm`を使用したことがある。
+- `yarn`あるいは、JavaScriptsのパッケージインストーラである`npm`を使用したことがある。
 
 上記に該当しない場合や、以下のコードを実際に作成するつもりがない方でも、容易に理解できる内容です。
 
-## Waffle の簡単な紹介 {#a-few-words-about-waffle}
+## Waffleの簡単な紹介 {#a-few-words-about-waffle}
 
 [Waffle](https://getwaffle.io)は、スマートコントラクトの作成とテストのための最も先進的なライブラリです。
 
-[JavaScript API](/developers/docs/apis/javascript/)である ethers-js と連携して動作します。
+[JavaScript API](/developers/docs/apis/javascript/)であるethers-jsと連携して動作します。
 
-詳細については、[Waffle のドキュメンテーション](https://ethereum-waffle.readthedocs.io/en/latest/#waffle-documentation)をご覧ください！
+詳細については、[Waffleのドキュメンテーション](https://ethereum-waffle.readthedocs.io/en/latest/#waffle-documentation)をご覧ください！
 
 ## クイックチュートリアル {#the-quick-tutorial}
 
@@ -641,7 +641,7 @@ published: 2020-10-16
 
 </details>
 
-## ステップ 1：あなたのプロジェクトに、Waffle をインストールする（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation)）。 {#step-1-install-waffle-in-your-project}
+## ステップ1：あなたのプロジェクトに、Waffleをインストールする（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation)）。 {#step-1-install-waffle-in-your-project}
 
 まずはじめに、`ethereum-waffle`をインストールします。 このチュートリアルでは、次のように `yarn`を使用しますので、以下を実行すると`ethereum-waffle`がインストールされます：
 
@@ -649,7 +649,7 @@ published: 2020-10-16
  yarn add --dev ethereum-waffle
 ```
 
-## ステップ 2：スマートコントラクトを作成する（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-a-contract)） {#step-2-write-a-smart-contract}
+## ステップ2：スマートコントラクトを作成する（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-a-contract)） {#step-2-write-a-smart-contract}
 
 このチュートリアルでは、[OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/ded2b0a55c9c13731963ab7b85a70c8e73504bab/contracts/token/ERC20/ERC20.sol)の[ERC-20](https://openzeppelin.com)トークンを使用します。
 
@@ -675,7 +675,7 @@ contract BasicToken is ERC20 {
 
 ```
 
-## ステップ 3：スマートコントラクトをコンパイルします（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract)） {#step-3-compile-your-smart-contract}
+## ステップ3：スマートコントラクトをコンパイルします（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract)） {#step-3-compile-your-smart-contract}
 
 スマートコントラクトをコンパイルするには、プロジェクトの`package.json`に以下のエントリを追加します：
 
@@ -700,11 +700,11 @@ contract BasicToken is ERC20 {
 }
 ```
 
-Waffle の設定については、[こちら](https://ethereum-waffle.readthedocs.io/en/latest/configuration.html#configuration)をご覧ください。
+Waffleの設定については、[こちら](https://ethereum-waffle.readthedocs.io/en/latest/configuration.html#configuration)をご覧ください。
 
 次に、`yarn build`を実行してスマートコントラクトをコンパイルします。
 
-Waffle がコントラクトをコンパイルし、JSON の出力結果を`build`ディレクトリ内に配置したことがわかります。
+Waffleがコントラクトをコンパイルし、JSONの出力結果を`build`ディレクトリ内に配置したことがわかります。
 
 <details>
 <summary>BasicToken.json</summary>
@@ -1007,7 +1007,7 @@ Waffle がコントラクトをコンパイルし、JSON の出力結果を`buil
 
 </details>
 
-## ステップ 4：スマートコントラクトをテストする（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)） {#step-4-test-your-smart-contract}
+## ステップ4：スマートコントラクトをテストする（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)） {#step-4-test-your-smart-contract}
 
 ### ステップ 4.1：必要な依存関係をインストールします（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)） {#step-4-1}
 
@@ -1021,7 +1021,7 @@ Waffle がコントラクトをコンパイルし、JSON の出力結果を`buil
  yarn add --dev mocha chai
 ```
 
-### ステップ 4.2：テストファイルを作成する（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)） {#step-4-2}
+### ステップ4.2：テストファイルを作成する（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)） {#step-4-2}
 
 テストを作成するには、テストディレクトリに`BasicToken.test.ts`ファイルを作成する必要があります。
 
@@ -1043,13 +1043,13 @@ describe("BasicToken", () => {
 })
 ```
 
-トークンのデプロイには、`Waffle`の`deployContract`メソッドを使用します。 引数としては、作成したコントラクトとデフォルト残高をコンパイルした json ファイルである`wallet`を引き渡す必要があります。
+トークンのデプロイには、`Waffle`の`deployContract`メソッドを使用します。 引数としては、作成したコントラクトとデフォルト残高をコンパイルしたjsonファイルである`wallet`を引き渡す必要があります。
 
 `Waffle`では`wallet`を作成することもできるため、コントラクトをとても簡単にデプロイできます。
 
 `wallet`の詳細については、 [こちら](https://ethereum-waffle.readthedocs.io/en/latest/basic-testing.html?highlight=wallet#getting-wallets)をご覧ください。デプロイ機能に関しては、[こちら](https://ethereum-waffle.readthedocs.io/en/latest/basic-testing.html?highlight=wallet#deploying-contracts)をご覧ください。
 
-それでは、ウォレット残高を確認する簡単なテストを作成してみましょう。 コントラクトのデプロイ時に 1000 の値を送信したため、ウォレット残高が 1000 トークンになっているはずですが、最初のテストではこれを確認します。
+それでは、ウォレット残高を確認する簡単なテストを作成してみましょう。 コントラクトのデプロイ時に1000の値を送信したため、ウォレット残高が1000トークンになっているはずですが、最初のテストではこれを確認します。
 
 ```ts
 it("Assigns initial balance", async () => {
@@ -1059,7 +1059,7 @@ it("Assigns initial balance", async () => {
 
 テストを実行するには、 `yarn test`を使用します。
 
-### ステップ 4.3：イベントを出力する（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#emitting-events)） {#step-4-3}
+### ステップ4.3：イベントを出力する（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#emitting-events)） {#step-4-3}
 
 このチュートリアルでは、`Waffle`の中で最も便利なマッチャーを紹介したいと思いますので、一番便利なものから始めましょう。
 
@@ -1081,7 +1081,7 @@ it("Transfer emits event", async () => {
 
 これにより、関数が正しく呼び出されたことを確認できます！
 
-### ステップ 4.4：メッセージと共に元に戻す（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#revert-with-message)） {#step-4-4}
+### ステップ4.4：メッセージと共に元に戻す（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#revert-with-message)） {#step-4-4}
 
 `Waffle`では、トランザクションを元に戻す際に添付されたメッセージもテストできます。
 
@@ -1097,7 +1097,7 @@ it("Can not transfer above the amount", async () => {
 })
 ```
 
-### ステップ 4.5：トークン残高を変更する（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#change-balance)） {#step-4-5}
+### ステップ4.5：トークン残高を変更する（[ドキュメントのリンク](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#change-balance)） {#step-4-5}
 
 `Waffle`では、ウォレット残高の変化も確認できます！
 
@@ -1115,7 +1115,7 @@ it("Send transaction changes receiver balance", async () => {
 })
 ```
 
-これは、1 つのウォレットを対象とするテストです。
+これは、1つのウォレットを対象とするテストです。
 
 以下は、複数のウォレットを対象とする場合です：
 
@@ -1131,7 +1131,7 @@ it("Send transaction changes sender and receiver balances", async () => {
 
 ## お疲れ様でした！ {#congratulations}
 
-**おめでとうございます！ チュートリアルは、これで終了です。 Waffle でスマートコントラクトをテストするための最初の大きな一歩を踏み出すことができました。**
+**おめでとうございます！ チュートリアルは、これで終了です。 Waffleでスマートコントラクトをテストするための最初の大きな一歩を踏み出すことができました。**
 
 **このチュートリアルのコードについては、[こちら](https://github.com/VladStarostenko/tutorial-for-ethereum-org-website)でアクセスできます。**
 

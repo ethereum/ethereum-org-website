@@ -78,7 +78,7 @@ En abril de 2023, se habilitó la retirada de participaciones en la actualizaci�
 
 Los validadores también pueden salir como validadores, lo que desbloqueará su saldo restante en ETH para retirarlo. Las cuentas que hayan proporcionado una dirección de retirada de ejecución y hayan completado el proceso de salida recibirán su saldo completo a la dirección de retirada proporcionada durante el próximo barrido del validador.
 
-<ButtonLink to="/staking/withdrawals/">Más sobre los retiros de Staking</ButtonLink>
+<ButtonLink to="/staking/withdrawals/">Más sobre retiradas de participaciones</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="¿Qué sucede si recibo una penalización?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

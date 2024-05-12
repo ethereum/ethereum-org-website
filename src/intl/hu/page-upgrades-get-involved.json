@@ -29,7 +29,7 @@
   "page-upgrades-get-involved-run-clients-consensus": "Konszenzusréteg-kliensek",
   "page-upgrades-get-involved-run-clients-consensus-desc": "Ezeket a klienseket korábban „Eth2” klienseknek nevezték, ám ezt a kifejezést kiszorította a „konszenzusréteg-kliens” elnevezés.",
   "page-upgrades-get-involved-stake": "Helyezze letétbe a rendelkezésére álló ETH-t",
-  "page-upgrades-get-involved-stake-desc": "Mostantól az ETH-ja letétbe helyezésével hozzájárulhat a beacon lánc biztonságához.",
+  "page-upgrades-get-involved-stake-desc": "Mostantól az ETH letétbe helyezésével hozzájárulhat a Beacon lánc biztonságához.",
   "page-upgrades-get-involved-stake-eth": "ETH letétbe helyezése",
   "page-upgrades-get-involved-subtitle": "Itt megtalál mindent, amivel az Ethereumot és a jövőbeni frissítésekhez kapcsolódó erőfeszítéseket segítheti.",
   "page-upgrades-get-involved-title-1": "Futtasson egy klienst",

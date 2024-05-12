@@ -74,6 +74,7 @@ Az [Ethereum végrehajtási kliensek](/developers/docs/nodes-and-clients/#execut
 - [Ethereum Virtuális Gép Opcode-ok](https://www.ethervm.io/)
 - [Ethereum Virtuális Gép operációskódjainak interaktív referenciája](https://www.evm.codes/)
 - [Rövid bevezetés a Solidity dokumentációjába](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
+- [Az Ethereum elsajátítása - az Ethereum virtuális gép](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc))
 
 ## Kapcsolódó témák {#related-topics}
 

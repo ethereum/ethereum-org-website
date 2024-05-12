@@ -8,7 +8,7 @@ Ahhoz, hogy egy szoftver alkalmazás interakcióba lépjen az Ethereum blokklán
 
 Erre a célra minden Ethereum-kliens implementálja a [JSON-RPC](/developers/docs/apis/json-rpc/) specifikációt, így egységes [módszerek](/developers/docs/apis/json-rpc/#json-rpc-methods) állnak rendelkezésre, amelyekre az alkalmazások támaszkodhatnak.
 
-Ha egy bizonyos programnyelvet szeretnél használni, hogy csatlakozz egy Ethereum csomóponttal, akkor fejleszd ki a saját megoldásodat, de ugyanakkor számos kényelmes könyvtár létezik az ökoszisztémán belül, melyek megkönnyítik ezt. Ezekkel a könyvtárakkal a fejlesztők intuitív, egysoros metódusokat írhatnak, hogy kezdeményezzenek egy JSON RPC kérést (a háttérben), mely interakcióba lép az Ethereummal.
+Ha egy bizonyos programnyelvet szeretne használni, hogy kapcsolódjon egy Ethereum csomóponttal, akkor számos könyvtár létezik az ökoszisztémán belül, melyek megkönnyítik ezt. Ezekkel a könyvtárakkal a fejlesztők intuitív, egysoros metódusokat írhatnak, hogy kezdeményezzenek egy JSON RPC kérést (a háttérben), mely interakcióba lép az Ethereummal.
 
 ## Előfeltételek {#prerequisites}
 
@@ -25,7 +25,7 @@ Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóp
 - [alchemy.com](https://www.alchemy.com/)
 - [Dokumentáció](https://docs.alchemyapi.io/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.com/invite/A39JVCM)
+- [Discord](https://discord.com/invite/alchemyplatform)
 
 **BlockCypher -** **_Ethereum Web API-k._**
 
@@ -36,7 +36,7 @@ Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóp
 
 - [blastapi.io](https://blastapi.io/)
 - [Dokumentáció](https://docs.blastapi.io)
-- [Discord](https://discord.com/invite/VPkWESgtvV)
+- [Discord](https://discord.gg/bwarelabs)
 
 **Infura -** **_Az Ethereum API, mint szolgáltatás._**
 
@@ -70,7 +70,7 @@ Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóp
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [Dokumentáció](https://nodesmith.io/docs/#/ethereum/apiRef)
 
-**Ethercluster -** **_Futtasson saját, ETH-et és ETC-t is támogató Ethereum API szolgáltatásokat._**
+**Ethercluster -** **_Futtasson saját ETH-t és ETC-t is támogató Ethereum API szolgáltatásokat._**
 
 - [ethercluster.com](https://www.ethercluster.com/)
 
@@ -84,7 +84,7 @@ Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóp
 
 - [quicknode.com](https://quicknode.com)
 - [Dokumentáció](https://www.quicknode.com/docs)
-- [Discord](https://discord.gg/NaR7TtpvJq)
+- [Discord](https://discord.gg/quicknode)
 
 **Python Tooling -** **_Különféle Ethereum-könyvtárak Python-nal való interakciókhoz_**
 
@@ -135,12 +135,17 @@ Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóp
 - [NOWNodes.io](https://nownodes.io/)
 - [Dokumentáció](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
+**Node RPC – _Költséghatékony EVM JSON RPC-szolgáltató_**
+
+- [noderpc.xyz](https://www.noderpc.xyz/)
+- [Dokumentáció](https://docs.noderpc.xyz/)
+
 **Moralis -** **_Vállalati szintű EVM API-szolgáltató._**
 
 - [moralis.io](http://moralis.io)
 - [Dokumentáció](https://docs.moralis.io/)
 - [GitHub](https://github.com/MoralisWeb3)
-- [Discord](https://discord.com/invite/KYswaxwEtg)
+- [Discord](https://moralis.io/joindiscord/)
 - [Fórum](https://forum.moralis.io/)
 
 **Chainbase -** **_Teljes web3-adatinfrastruktúra az Ethereumra._**

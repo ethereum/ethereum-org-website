@@ -270,6 +270,8 @@ La diferencia principal es que los programas de recompensas por errores están a
 
 - **[Ethlint:](https://ethlint.readthedocs.io/en/latest/)** _Linter para hacer cumplir las mejores prácticas de estilo y seguridad para el lenguaje de programación de contratos inteligentes Solidity._
 
+- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)**: _Analizador estático basado en Rust, diseñado especificamente para la seguridad y el desarrollo de contratos inteligentes Web3._
+
 #### Herramientas de análisis dinámico {#dynamic-analysis-tools}
 
 - **[Echidna:](https://github.com/crytic/echidna/)** _Fuzzer rápido de contratos para detectar vulnerabilidades en contratos inteligentes a través de pruebas basadas en propiedades._

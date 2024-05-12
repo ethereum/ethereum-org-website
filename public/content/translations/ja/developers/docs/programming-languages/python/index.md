@@ -51,13 +51,10 @@ incomplete: true
 - [Web3.py](https://github.com/ethereum/web3.py) - _イーサリアムとやり取りするためのPythonライブラリ_
 - [Vyper](https://github.com/ethereum/vyper/) - _EVMのためのPythonライクなスマートコントラクト言語_
 - [Ape](https://github.com/ApeWorX/ape) - _パイソニスタ、データサイエンティスト、セキュリティプロフェッショナル向けのスマートコントラクト開発ツール_
-- [Brownie](https://github.com/eth-brownie/brownie) - _イーサリアムスマートコントラクトのデプロイ、テスト、やり取りを行うためのPythonフレームワーク_
 - [py-evm](https://github.com/ethereum/py-evm) - _イーサリアム仮想マシンの実装_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _イーサリアムベースのアプリケーションをテストするためのツール_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _イーサリアム関連のコードベースを操作するためのユーティリティ関数_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _solc SolidityコンパイラのPythonラッパー (Solidity 0.5xをサポート)_
-- [py-wasm](https://github.com/ethereum/py-wasm) - _WebAssemblyインタプリタのPython実装_
-- [pydevp2p](https://github.com/ethereum/pydevp2p) - _イーサリアムのP2Pスタックの実装_
 - [pymaker](https://github.com/makerdao/pymaker) - _MakerコントラクトのためのPython API_
 - [siwe](https://github.com/spruceid/siwe-py) - _Pythonのためのイーサリアムによるサインイン (siwe)_
 - [イーサリアムの統合のためのWeb3 DeFi](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _ERC-20、Uniswap、その他の一般的なプロジェクトのための、すぐに統合を行えるPythonパッケージ_
@@ -66,6 +63,9 @@ incomplete: true
 
 - [Trinity](https://github.com/ethereum/trinity) - _イーサリアムPythonクライアント_
 - [Mamba](https://github.com/arjunaskykok/mamba) - _Vyper言語で記述された、スマートコントラクトの記述、コンパイル、デプロイのためのフレームワーク_
+- [Brownie](https://github.com/eth-brownie/brownie) - _イーサリアムスマートコントラクトのデプロイ、テスト、やり取りを行うためのPythonフレームワーク_
+- [pydevp2p](https://github.com/ethereum/pydevp2p) - _イーサリアムのP2Pスタックの実装_
+- [py-wasm](https://github.com/ethereum/py-wasm) - _WebAssemblyインタプリタのPython実装_
 
 もっとリソースをお探しですか？ [ethereum.org/developers](/developers/)をご確認ください。
 
@@ -82,8 +82,8 @@ incomplete: true
 ## Pythonコミュニティディスカッション {#python-community-contributors}
 
 - [イーサリアムPythonコミュニティのDiscord](https://discord.gg/9zk7snTfWe) Web3.pyやその他のPythonフレームワークについてのディスカッションを行う場所
-- [Vyper Discord](https://discord.gg/SdvKC79cJk) Vyperスマートコントラクトのプログラミングについてのディスカッションを行う場所
+- [Vyper Discord](https://discord.gg/SdvKC79cJk) Vyperスマートコントラクトのプログラミングのディスカッション
 
 ## その他のリスト {#other-aggregated-lists}
 
-Vyper wikiには、[Vyperのための充実したリソースのリスト](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)があります。
+Vyper wikiには、 [Vyperに関する豊富なリソースがあります。](https://github.com/vyperlang/vyper/wiki/Vyper-tools-and-resources)

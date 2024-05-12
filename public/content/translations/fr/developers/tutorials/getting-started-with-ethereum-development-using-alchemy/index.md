@@ -98,7 +98,7 @@ Pour interagir avec l'infrastructure de nœuds d'Alchemy, exécutez en NodeJS ou
 ```js
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(
-  "https://eth-mainnet.alchemyapi.io/v2/votre-clé-api"
+  "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 )
 ```
 

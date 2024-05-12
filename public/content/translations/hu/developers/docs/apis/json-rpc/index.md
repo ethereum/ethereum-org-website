@@ -560,7 +560,7 @@ Az adott cím számlaegyenlegét adja vissza.
 **Parameters**
 
 1. `DATA`, 20 bájt – cím, melynek az egyenlegét ellenőrizzük.
-2. `QUANTITY|TAG` – a blokk száma egész számként, vagy a `"latest"`, `"earliest"` vagy `"pending"` sztringek – nézze meg az [alapértelmezett blokkparamétereket](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` – a blokk száma egész számként, vagy a `„latest”`, `„earliest”`, `„pending”`, `„safe”` vagy `„finalized”` sztringek – nézze meg az [alapértelmezett blokkparamétereket](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
@@ -591,7 +591,7 @@ Egy adott címen lévő tárhely pozícióját adja vissza.
 
 1. `DATA`, 20 bájt – a tárhely címe.
 2. `QUANTITY` – a tárhelyben lévő pozíció egész számként.
-3. `QUANTITY|TAG` – a blokk száma egész számként, vagy a `"latest"`, `"earliest"` vagy `"pending"` sztringek – nézze meg az [alapértelmezett blokkparamétereket](/developers/docs/apis/json-rpc/#default-block)
+3. `QUANTITY|TAG` – a blokk száma egész számként, vagy a `„latest”`, `„earliest”`, `„pending”`, `„safe”` vagy `„finalized”` sztringek – nézze meg az [alapértelmezett blokkparamétereket](/developers/docs/apis/json-rpc/#default-block)
 
 **Returns**
 
@@ -657,7 +657,7 @@ Visszaadja a tranzakciók számát, amelyeket egy adott címről _küldtek_.
 **Parameters**
 
 1. `DATA`, 20 bájt – cím.
-2. `QUANTITY|TAG` – a blokk száma egész számként, vagy a `"latest"`, `"earliest"` vagy `"pending"` sztringek – nézze meg az [alapértelmezett blokkparamétereket](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` – a blokk száma egész számként, vagy a `„latest”`, `„earliest”`, `„pending”`, `„safe”` vagy `„finalized”` sztringek – nézze meg az [alapértelmezett blokkparamétereket](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -718,7 +718,7 @@ Visszaadja a tranzakciók számát egy blokkban, amely az adott blokkszámnak fe
 
 **Parameters**
 
-1. `QUANTITY|TAG` – a blokkszáma egész számként, vagy a `"earliest"`, `"latest"` vagy `"pending"` sztringek, az [alapértelmezett blokkparaméterek](/developers/docs/apis/json-rpc/#default-block) szerint.
+1. `QUANTITY|TAG` – a blokk száma egész számként, vagy a `„latest”`, `„earliest”`, `„pending”`, `„safe”` vagy `„finalized”` sztringek az [alapértelmezett blokkparaméterek](/developers/docs/apis/json-rpc/#default-block) szerint.
 
 ```js
 params: [
@@ -778,7 +778,7 @@ Visszaadja az uncle-blokkok számát egy olyan blokkból, ami egy adott blokksz�
 
 **Parameters**
 
-1. `QUANTITY|TAG` – a blokkszáma egész számként, vagy a "latest", "earliest" vagy "pending" sztringek, nézze meg az [alapértelmezett blokkparamétereket](/developers/docs/apis/json-rpc/#default-block)
+1. `QUANTITY|TAG` – a blokk száma egész számként, vagy a `„latest”`, `„earliest”`, `„pending”`, `„safe”` vagy `„finalized”` sztringek – nézze meg az [alapértelmezett blokkparamétereket](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -810,7 +810,7 @@ Visszaadja az adott címen lévő kódot.
 **Parameters**
 
 1. `DATA`, 20 bájt – cím
-2. `QUANTITY|TAG` – a blokk száma egész számként, vagy a `"latest"`, `"earliest"` vagy `"pending"` sztringek – nézze meg az [alapértelmezett blokkparamétereket](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` – a blokk száma egész számként, vagy a `„latest”`, `„earliest”`, `„pending”`, `„safe”` vagy `„finalized”` sztringek – nézze meg az [alapértelmezett blokkparamétereket](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -997,7 +997,7 @@ Azonnal végrehajt egy új üzenethívást anélkül, hogy létrehozna egy tranz
 - `value`: `QUANTITY` – (opcionális) a tranzakcióban küldött érték egész számként
 - `input`: `DATA` – (opcionális) a metódus aláírásának és kódolt paramétereinek a hashe. A részletekért tekintse meg az [Ethereum-szerződés ABI-ját a Solidity dokumentációban](https://docs.soliditylang.org/en/latest/abi-spec.html).
 
-2. `QUANTITY|TAG` – a blokk száma egész számként, vagy a `"latest"`, `"earliest"` vagy `"pending"` sztringek – nézze meg az [alapértelmezett blokkparamétereket](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` – a blokk száma egész számként, vagy a `„latest”`, `„earliest”`, `„pending”`, `„safe”` vagy `„finalized”` sztringek – nézze meg az [alapértelmezett blokkparamétereket](/developers/docs/apis/json-rpc/#default-block)
 
 **Returns**
 
@@ -1124,7 +1124,7 @@ Egy blokkról ad információt a blokkszám alapján.
 
 **Parameters**
 
-1. `QUANTITY|TAG` – a blokkszáma egész számként, vagy a `"earliest"`, `"latest"` vagy `"pending"` sztringek, az [alapértelmezett blokkparaméterek](/developers/docs/apis/json-rpc/#default-block) szerint.
+1. `QUANTITY|TAG` – a blokk száma egész számként, vagy a `„latest”`, `„earliest”`, `„pending”`, `„safe”` vagy `„finalized”` sztringek az [alapértelmezett blokkparaméterek](/developers/docs/apis/json-rpc/#default-block) szerint.
 2. `Boolean` – Ha `true`, akkor visszaadja a teljes tranzakcióobjektumot, ha `false`, akkor csak a tranzakciók hashét.
 
 ```js
@@ -1237,7 +1237,7 @@ Egy tranzakcióról ad információt a blokkszám és a tranzakcióindex pozíci
 
 **Parameters**
 
-1. `QUANTITY|TAG` – a blokkszáma, vagy a `"earliest"`, `"latest"` vagy `"pending"` sztringek, az [alapértelmezett blokkparaméterek](/developers/docs/apis/json-rpc/#default-block) szerint.
+1. `QUANTITY|TAG` – a blokk száma egész számként, vagy a `„latest”`, `„earliest”`, `„pending”`, `„safe”` vagy `„finalized”` sztringek az [alapértelmezett blokkparaméterek](/developers/docs/apis/json-rpc/#default-block) szerint.
 2. `QUANTITY` – a tranzakcióindex pozíciója.
 
 ```js
@@ -1360,7 +1360,7 @@ Egy blokk uncle-blokkjáról ad információt a blokkszám és az uncle-index po
 
 **Parameters**
 
-1. `QUANTITY|TAG` – a blokkszáma, vagy a `"earliest"`, `"latest"` vagy `"pending"` sztringek, az [alapértelmezett blokkparaméterek](/developers/docs/apis/json-rpc/#default-block) szerint.
+1. `QUANTITY|TAG` – a blokk száma egész számként, vagy a `„latest”`, `„earliest”`, `„pending”`, `„safe”` vagy `„finalized”` sztringek az [alapértelmezett blokkparaméterek](/developers/docs/apis/json-rpc/#default-block) szerint.
 2. `QUANTITY` – az uncle-index pozíciója.
 
 ```js
@@ -1398,8 +1398,8 @@ Egy szűrőobjektumot hoz létre a szűrőopciók alapján, hogy értesítsen, a
 
 1. `Object` – A szűrőopciók:
 
-- `fromBlock`: `QUANTITY|TAG` – (opcionális, alapértelmezett: `"latest"`) blokkszám egész számként, vagy `"latest"` az utolsó kibányászott blokkra vagy `"pending"`, `"earliest"` a még ki nem bányászott tranzakciókra.
-- `toBlock`: `QUANTITY|TAG` – (opcionális, alapértelmezett: `"latest"`) blokkszám egész számként, vagy `"latest"` az utolsó kibányászott blokkra vagy `"pending"`, `"earliest"` a még ki nem bányászott tranzakciókra.
+- `fromBlock`: `QUANTITY|TAG` – (opcionális, alapértelmezett: `„latest”`) blokkszám egész számként, vagy `„latest”` az utolsó kibányászott blokkra,`„safe”` az utolsó biztosított blokkra, `„finalized”` az utolsó véglegesített blokkra, vagy `„pending”`, `„earliest”` a még ki nem bányászott tranzakciókra.
+- `toBlock`: `QUANTITY|TAG` – (opcionális, alapértelmezett: `„latest”`) blokkszám egész számként, vagy `„latest”` az utolsó kibányászott blokkra,`„safe”` az utolsó biztosított blokkra, `„finalized”` az utolsó véglegesített blokkra, vagy `„pending”`, `„earliest”` a még ki nem bányászott tranzakciókra.
 - `address`: `DATA|Array`, 20 bájt – (opcionális) A szerződéscím vagy címek listája, amelyekről a naplók származnak.
 - `topics`: `Array of DATA`, – (opcionális) a `DATA` témák (topics) 32 bájtos tömbje. A témák sorrendfüggők. Minden téma egy DATA tömb lehet „vagy” opciókkal.
 
@@ -1592,8 +1592,8 @@ Visszaadja az adott szűrőobjektumnak megfelelő összes naplótömböt.
 
 1. `Object` – A szűrőopciók:
 
-- `fromBlock`: `QUANTITY|TAG` – (opcionális, alapértelmezett: `"latest"`) blokkszám egész számként, vagy `"latest"` az utolsó kibányászott blokkra vagy `"pending"`, `"earliest"` a még ki nem bányászott tranzakciókra.
-- `toBlock`: `QUANTITY|TAG` – (opcionális, alapértelmezett: `"latest"`) blokkszám egész számként, vagy `"latest"` az utolsó kibányászott blokkra vagy `"pending"`, `"earliest"` a még ki nem bányászott tranzakciókra.
+- `fromBlock`: `QUANTITY|TAG` – (opcionális, alapértelmezett: `„latest”`) blokkszám egész számként, vagy `„latest”` az utolsó kibányászott blokkra,`„safe”` az utolsó biztosított blokkra, `„finalized”` az utolsó véglegesített blokkra, vagy `„pending”`, `„earliest”` a még ki nem bányászott tranzakciókra.
+- `toBlock`: `QUANTITY|TAG` – (opcionális, alapértelmezett: `„latest”`) blokkszám egész számként, vagy `„latest”` az utolsó kibányászott blokkra,`„safe”` az utolsó biztosított blokkra, `„finalized”` az utolsó véglegesített blokkra, vagy `„pending”`, `„earliest”` a még ki nem bányászott tranzakciókra.
 - `address`: `DATA|Array`, 20 bájt – (opcionális) A szerződéscím vagy címek listája, amelyekről a naplók származnak.
 - `topics`: `Array of DATA`, – (opcionális) a `DATA` témák (topics) 32 bájtos tömbje. A témák sorrendfüggők. Minden téma egy DATA tömb lehet „vagy” opciókkal.
 - `blockhash`: `DATA`, 32 bájt – (opcionális, **jövő**) Az EIP-234 bevezetésével a `blockHash` egy új szűrőopció lesz, amely egyetlen blokkra redukálja a visszakapott naplókat egy 32-bájtos hashsel rendelkező `blockHash` segítségével. A `blockHash` használata azonos a `fromBlock` = `toBlock` = blokkszám hashsel (`blockHash`). Ha a `blockHash` benne van a szűrőkritériumban, akkor nem engedélyezett se a `fromBlock`, se a `toBlock`.

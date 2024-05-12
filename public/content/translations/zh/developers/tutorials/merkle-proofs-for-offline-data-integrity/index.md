@@ -3,9 +3,7 @@ title: 离线数据完整性的默克尔证明
 description: 在链上确保链下数据的完整性
 author: Ori Pomerantz
 tags:
-  - "默克尔"
-  - "完整性"
-  - "存储"
+  - "storage"
 skill: advanced
 lang: zh
 published: 2021-12-30
@@ -17,7 +15,7 @@ published: 2021-12-30
 
 为了解决这个问题，以太坊生态系统开发了[许多以去中心化方式存储数据的 代替方法](/developers/docs/storage/)。 通常情况下， 需要在可用性与价格之间进行取舍。 然而，完整性通常可以得到保证。
 
-本篇文章中，您将学习**如何**在以下情况下确保数据的完整性：不将数据存储在区块链上，而是使用 [Merkle 证明](https://computersciencewiki.org/index.php/Merkle_proof)。
+本篇文章中，你将学习**如何**在以下情况下确保数据的完整性：不将数据存储在区块链上，而是使用 [Merkle 证明](https://computersciencewiki.org/index.php/Merkle_proof)。
 
 ## 工作原理 {#how-does-it-work}
 
@@ -27,7 +25,7 @@ published: 2021-12-30
 
 ![默克尔树](tree.png)
 
-根哈希是唯一需要存储在链上的部分。 为了证明一个特定值，您需要提供所有与之合并才能获取根的哈希值。 例如，要证明 `C`，您需要提供 `D`、`H(A-B)` 和 `H(E-H)`。
+根哈希是唯一需要存储在链上的部分。 为了证明一个特定值，你需要提供所有与之合并才能获取根的哈希值。 例如，要证明 `C`，你需要提供 `D`、`H(A-B)` 和 `H(E-H)`。
 
 ![C 值证明](proof-c.png)
 
@@ -59,7 +57,7 @@ const dataArray = [
 ]
 ```
 
-例如，将每条数据编码为单个 256 位整数，并以非 JSON 的格式存储。 然而，这意味着在提取合约中的数据时，可以大大减少处理工作，从而显著降低了燃料成本。 [您可以在链上读取 JSON 格式的数据](https://github.com/chrisdotn/jsmnSol)，但请尽量避免这么做。
+例如，将每条数据编码为单个 256 位整数，并以非 JSON 的格式存储。 然而，这意味着在提取合约中的数据时，可以大大减少处理工作，从而显著降低了燃料成本。 [你可以在链上读取 JSON 格式的数据](https://github.com/chrisdotn/jsmnSol)，但请尽量避免这么做。
 
 ```javascript
 // The array of hash values, as BigInts
@@ -78,7 +76,7 @@ const hash = (x) =>
 以太币哈希函数的预期结果是一个带十六进制数字的 JavaScript 字符串，如 `0x60A7`，并用另一个相同结构的字符串响应。 然而，对于代码的其他部分，使用 `BigInt` 类型更为容易，所以我们将转换为一个十六进制字符串，然后再转回 BigInt。
 
 ```javascript
-// Symetrical hash of a pair so we won't care if the order is reversed.
+// Symmetrical hash of a pair so we won't care if the order is reversed.
 const pairHash = (a, b) => hash(hash(a) ^ hash(b))
 ```
 
@@ -137,19 +135,19 @@ const getMerkleRoot = (inputArray) => {
 // hash with. Because we use a symmetrical hash function, we don't
 // need the item's location to verify the proof, only to create it
 const getMerkleProof = (inputArray, n) => {
-    var result = [], currentLayer = [...inputArray], currentN = n
+    var result = [], currentLayer = [...inputArray], currentN = n
 
-    // Until we reach the top
-    while (currentLayer.length > 1) {
-        // No odd length layers
-        if (currentLayer.length % 2)
-            currentLayer.push(empty)
+    // Until we reach the top
+    while (currentLayer.length > 1) {
+        // No odd length layers
+        if (currentLayer.length % 2)
+            currentLayer.push(empty)
 
-        result.push(currentN % 2
-               // If currentN is odd, add with the value before it to the proof
-            ? currentLayer[currentN-1]
-               // If it is even, add the value after it
-            : currentLayer[currentN+1])
+        result.push(currentN % 2
+               // If currentN is odd, add with the value before it to the proof
+            ? currentLayer[currentN-1]
+               // If it is even, add the value after it
+            : currentLayer[currentN+1])
 
 ```
 
@@ -157,12 +155,12 @@ const getMerkleProof = (inputArray, n) => {
 
 ```javascript
         // Move to the next layer up
-        currentN = Math.floor(currentN/2)
-        currentLayer = oneLevelUp(currentLayer)
-    }   // while currentLayer.length > 1
+        currentN = Math.floor(currentN/2)
+        currentLayer = oneLevelUp(currentLayer)
+    }   // while currentLayer.length > 1
 
-    return result
-}   // getMerkleProof
+    return result
+}   // getMerkleProof
 ```
 
 ### 链上代码 {#on-chain-code}
@@ -181,54 +179,54 @@ import "hardhat/console.sol";
 ```solidity
 
 contract MerkleProof {
-    uint merkleRoot;
+    uint merkleRoot;
 
-    function getRoot() public view returns (uint) {
-      return merkleRoot;
-    }
+    function getRoot() public view returns (uint) {
+      return merkleRoot;
+    }
 
-    // Extremely insecure, in production code access to
-    // this function MUST BE strictly limited, probably to an
-    // owner
-    function setRoot(uint _merkleRoot) external {
-      merkleRoot = _merkleRoot;
-    }   // setRoot
+    // Extremely insecure, in production code access to
+    // this function MUST BE strictly limited, probably to an
+    // owner
+    function setRoot(uint _merkleRoot) external {
+      merkleRoot = _merkleRoot;
+    }   // setRoot
 ```
 
-为默克尔根设置和获取函数。 在生产系统中，让每个人都更新默克尔根是一个*非常糟糕的主意*。 这里这样做是为了简化示例代码。 **不要在数据完整性非常重要的系统上执行**。
+为默克尔根设置和获取函数。 在生产系统中，让每个人都更新默克尔根是一个_非常糟糕的主意_。 这里这样做是为了简化示例代码。 **不要在数据完整性非常重要的系统上执行**。
 
 ```solidity
     function hash(uint _a) internal pure returns(uint) {
-      return uint(keccak256(abi.encode(_a)));
-    }
+      return uint(keccak256(abi.encode(_a)));
+    }
 
-    function pairHash(uint _a, uint _b) internal pure returns(uint) {
-      return hash(hash(_a) ^ hash(_b));
-    }
+    function pairHash(uint _a, uint _b) internal pure returns(uint) {
+      return hash(hash(_a) ^ hash(_b));
+    }
 ```
 
-此函数生成一个配对哈希值。 它只是将 `hash` 和 `pairHash` 函数的 JavaScript 代码变成 Solidity。
+此函数生成一个配对哈希值。 它只是将 `hash` 和 `pairHash` 函数的 JavaScript 代码转变为 Solidity。
 
 **注意：**这是又一次对可读性的优化。 根据[函数定义](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm)，也许可以将数据存储为 [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) 类型值并避免转换。
 
 ```solidity
     // Verify a Merkle proof
-    function verifyProof(uint _value, uint[] calldata _proof)
-        public view returns (bool) {
-      uint temp = _value;
-      uint i;
+    function verifyProof(uint _value, uint[] calldata _proof)
+        public view returns (bool) {
+      uint temp = _value;
+      uint i;
 
-      for(i=0; i<_proof.length; i++) {
-        temp = pairHash(temp, _proof[i]);
-      }
+      for(i=0; i<_proof.length; i++) {
+        temp = pairHash(temp, _proof[i]);
+      }
 
-      return temp == merkleRoot;
-    }
+      return temp == merkleRoot;
+    }
 
-}  // MarkleProof
+}  // MarkleProof
 ```
 
-用数学符号表示，默克尔证明的验证看起来像这样：`H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`。 此代码实现了默克尔证明。
+用数学符号表示，默克尔证明的验证看起来像这样：`H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`. 此代码实现了默克尔证明。
 
 ## 默克尔证明和卷叠很难混淆 {#merkle-proofs-and-rollups}
 
@@ -240,4 +238,4 @@ contract MerkleProof {
 
 在现实中，你可能永远不会独立实现默克尔树。 有很多广为人知并经过审核的程序库可供使用，一般来说，最好不要自己独立实现加密基元。 但我希望你们现在能够更好地理解默克尔证明，并能够决定何时值得使用。
 
-请注意，虽然默克尔证明能维持*完整性*，但并不维持*可用性*。 如果数据存储方决定禁止访问，而且你不能构建默克尔树来访问你的资产，那么知道没有人可以拿走你的资产也只能作为一种小小的慰藉而已。 所以默克尔树最好和某种去中心化存储一起使用，例如星际文件系统。
+请注意，虽然默克尔证明能维持_完整性_，但并不维持_可用性_。 如果数据存储方决定禁止访问，而且你不能构建默克尔树来访问你的资产，那么知道没有人可以拿走你的资产也只能作为一种小小的慰藉而已。 所以默克尔树最好和某种去中心化存储一起使用，例如星际文件系统。

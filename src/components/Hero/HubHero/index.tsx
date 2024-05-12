@@ -50,15 +50,15 @@ const HubHero = ({
         wordBreak="break-word"
       >
         {title ? (
-          <Heading
+          <Text
             as="h1"
-            size="sm"
+            size="md"
             color="body.medium"
             fontWeight="normal"
             textTransform="uppercase"
           >
             {title}
-          </Heading>
+          </Text>
         ) : null}
         <Stack
           alignSelf="center"

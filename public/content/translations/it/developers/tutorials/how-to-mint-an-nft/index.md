@@ -4,8 +4,8 @@ description: Questo tutorial descrive come coniare un NFT sulla Blockchain di Et
 author: "Sumi Mudgil"
 tags:
   - "ERC-721"
-  - "fornisce servizi e strumenti Api per la creazione e il monitoraggio di applicazioni su Ethereum. \nFile: glossario"
-  - "Solidity"
+  - "alchemy"
+  - "solidity"
   - "contratti intelligenti"
 skill: beginner
 lang: it
@@ -89,15 +89,15 @@ Nella tua cartella di root, crea un nuovo file chiamato `nft-metadata.json` e ag
 {
   "attributes": [
     {
-      "trait_type": "Razza",
+      "trait_type": "Breed",
       "value": "Maltipoo"
     },
     {
-      "trait_type": "Colore occhio",
+      "trait_type": "Eye color",
       "value": "Mocha"
     }
   ],
-  "description": "Il cucciolo più adorabile e sensibile al mondo.",
+  "description": "The world's most adorable and sensitive pup.",
   "image": "ipfs://QmWmvTJmJU3pozR9ZHFmQC2DNDwi2XJtf3QGyYiiagFSWb",
   "name": "Ramses"
 }
@@ -173,9 +173,9 @@ Il tuo file `mint-nft.js` dovrebbe somigliare a questo ora:
    const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
 
    async function mintNFT(tokenURI) {
-     const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, 'latest'); //ottieni ultimo nonce
+     const nonce = await web3.eth.getTransactionCount(PUBLIC_KEY, 'latest'); //get latest nonce
 
-   //la transazione
+   //the transaction
      const tx = {
        'from': PUBLIC_KEY,
        'to': contractAddress,
@@ -225,9 +225,9 @@ async function mintNFT(tokenURI) {
         function (err, hash) {
           if (!err) {
             console.log(
-              "L'hash della tua transazione è: ",
+              "The hash of your transaction is: ",
               hash,
-              "\nConsulta il Mempool di Alchemy per visualizzare lo stato della tua transazione!"
+              "\nCheck Alchemy's Mempool to view the status of your transaction!"
             )
           } else {
             console.log(
@@ -291,13 +291,13 @@ async function mintNFT(tokenURI) {
         function (err, hash) {
           if (!err) {
             console.log(
-              "L'hash della tua transazione è: ",
+              "The hash of your transaction is: ",
               hash,
-              "\nConsulta il Mempool di Alchemy per visualizzare lo stato della tua transazione!"
+              "\nCheck Alchemy's Mempool to view the status of your transaction!"
             )
           } else {
             console.log(
-              "Qualcosa è andato storto inviando la tua transazione:",
+              "Something went wrong when submitting your transaction:",
               err
             )
           }
@@ -305,7 +305,7 @@ async function mintNFT(tokenURI) {
       )
     })
     .catch((err) => {
-      console.log("Promessa fallita:", err)
+      console.log("Promise failed:", err)
     })
 }
 
@@ -316,7 +316,7 @@ Ora, esegui `scripts/mint-nft.js` per distribuire il tuo NFT. Dopo qualche secon
 
     L'hash della tua transazione è:
     0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
-
+    
     Consulta il Mempool di Alchemy per visualizzare lo stato della tua transazione!
 
 Vai quindi alla tua [mempool di Alchemy](https://dashboard.alchemyapi.io/mempool) per vedere lo stato della transazione (se è sospesa, minata o eliminata dalla rete). Se la tua transazione è stata eliminata, è utile dare un'occhiata anche su [Sepolia Etherscan](https://sepolia.etherscan.io/) e cercare l'hash della tua transazione.

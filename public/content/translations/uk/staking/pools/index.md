@@ -26,7 +26,7 @@ summaryPoints:
 <CardGrid>
   <Card title="Низький бар’єр входу" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
   <Card title="Стейкінг сьогодні" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="токени стейкінгу" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
+  <Card title="Стейкінг токенів" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -53,14 +53,14 @@ summaryPoints:
 
 <StakingProductsCardGrid category="pools" />
 
-Зверніть увагу на важливість вибору служби, яка серйозно ставиться до [різноманітності клієнтів](/developers/docs/nodes-and-clients/client-diversity/), оскільки це покращує безпеку мережі й обмежує ваш ризик. Послуги, які мають докази обмеження використання мажоритарними клієнтами, мають позначку <em style={{ textTransform: "uppercase" }}>«виконання різноманітності клієнтів»</em> і <em style={{ textTransform: "uppercase" }}>«консенсус різноманітності клієнтів»</em>.
+Зверніть увагу на важливість вибору служби, яка серйозно ставиться до [різноманітності клієнтів](/developers/docs/nodes-and-clients/client-diversity/), оскільки це покращує безпеку мережі й обмежує ваш ризик. Послуги, які мають докази обмежень використання мажоритарними клієнтами, мають позначку <em style={{ textTransform: "uppercase" }}>«різноманіття клієнтів-виконавців»</em> і <em style={{ textTransform: "uppercase" }}>«різноманіття консенсусу клієнтів»</em>.
 
 Маєте пропозицію щодо інструменту стейкінгу, який ми пропустили? Ознайомтеся з нашою [політикою щодо переліку продуктів](/contributing/adding-staking-products/), щоб дізнатися, чи підійде він, і надіслати його на розгляд.
 
-## Поширені запитання {#faq}
+## Часті питання {#faq}
 
 <ExpandableCard title="Як я можу отримати винагороду?">
-Зазвичай токени стейкінгу ERC-20 видаються стейкерам і представляють вартість їхніх вкладених ETH і винагород. Майте на увазі, що різні пули розподілятимуть винагороди за ставки своїм користувачам дещо різними методами, але це загальна тема.
+Зазвичай стейкінгові токени ERC-20 випускаються для стейкхолдерів і представляють вартість їхніх стейків ETH плюс винагорода. Майте на увазі, що різні пули розподілятимуть винагороди за ставки своїм користувачам дещо різними методами, але це загальна тема.
 </ExpandableCard>
 
 <ExpandableCard title="Коли я можу вивести свою частку?">
@@ -81,5 +81,6 @@ summaryPoints:
 
 ## Довідкові джерела {#further-reading}
 
+- [Довідник стейкінгу Ethereum](https://www.staking.directory/) – _Eridian і Spacesider_
 - [Стейкінг за допомогою Rocket Pool: огляд стейкінгу](https://docs.rocketpool.net/guides/staking/overview.html) — _Документи RocketPool_
 - [Стейкінг Ethereum за допомогою Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) — _Довідкова документація Lido_

@@ -4,13 +4,14 @@ description: További információ a beolvadásról – amikor az Ethereum fő h
 lang: hu
 template: upgrade
 image: /upgrades/merge.png
+alt:
 summaryPoint1: Az Ethereum fő hálózata proof-of-stake konszenzust használ, ám ez nem mindig volt így.
 summaryPoint2: Az áttérés az eredeti proof-of-work mechanizmusról a proof-of-stake mechanizmusa a beolvadás nevet kapta.
-summaryPoint3: A beolvadás az eredeti Ethereum-főhálózat összeolvadását jelenti a Beacon lánc nevű különálló proof-of-stake blokklánccal, amelyek most már egy láncként léteznek.
-summaryPoint4: A beolvadás nagyjából 99,95%-kal csökkentette az Ethereum energiafogyasztását.
+summaryPoint3: A Beolvadás az eredeti Ethereum-főhálózat összeolvadását jelenti a Beacon lánc nevű különálló proof-of-stake blokklánccal, amelyek most már egy láncként léteznek.
+summaryPoint4: A Beolvadás nagyjából 99,95%-kal csökkentette az Ethereum energiafogyasztását.
 ---
 
-<UpgradeStatus dateKey="page-upgrades-beacon-date">
+<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
   A beolvadás 2022. szeptember 15-én ment végbe. Ezzel lezárult az Ethereum áttérése a proof-of-stake konszenzusra, így hivatalosan is elhagyta a proof-of-work mechanizmust, és nagyjából 99,95%-kal csökkentette az energiafogyasztását.
 </UpgradeStatus>
 
@@ -187,7 +188,7 @@ A zavar elkerülése érdekében a közösség frissítette az alábbi kifejezé
 - Az „Eth1” helyett a „végrehajtási réteg” kifejezést használjuk. Ez a réteg kezeli a tranzakciókat és a végrehajtást.
 - Az „Eth2” helyett a „konszenzusréteg” kifejezést használjuk. Ez a réteg kezeli a proof-of-stake konszenzust.
 
-Ezek a terminológiai módosítások csak az elnevezési szabályokat változtatják meg; ez nem változtat az Ethereum céljain vagy útitervén.
+Ezek a terminológiai módosítások csak az elnevezési szabályokat változtatják meg; ez nem változtatnak az Ethereum céljain vagy ütemtervén.
 
 [Tudjon meg többet az „Eth2” átnevezéséről](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
@@ -202,7 +203,7 @@ A beolvadás a Beacon lánc hivatalos átvételét jelenti az eredeti fő háló
 Ehelyett a blokkokra azok a validáló csomópontok tesznek javaslatot, amelyek ETH-t helyeztek letétbe a konszenzusban való részvétel jogáért. Ezek a frissítések készítik elő a terepet a jövőbeni méretezhetőségi frissítésekhez, többek között a szilánkoláshoz.
 
 <ButtonLink to="/roadmap/beacon-chain/">
-  A Beacon Chain
+  A Beacon lánc
 </ButtonLink>
 
 ### A beolvadás és a Shanghai frissítés {#merge-and-shanghai}

@@ -30,7 +30,7 @@ incomplete: true
 
 _役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
 
-## 関連トピック {#related-tutorials}
+## 関連チュートリアル {#related-tutorials}
 
 - [トークンの統合作業に関するチェックリスト](/developers/tutorials/token-integration-checklist/) _– トークンのやりとりを統合する際に検討すべき事項が列挙されています。_
 - [ERC20トークンを利用するスマートコントラクトを理解する](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- イーサリアムのテストネットワーク上ではじめてスマートコントラクトをデプロイする初心者向けの入門ガイドです。_

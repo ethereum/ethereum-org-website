@@ -4,12 +4,12 @@ description: Un flujo de trabajo recomendado para escribir contratos inteligente
 author: "Trailofbits"
 tags:
   - "contratos inteligentes"
-  - "seguridades"
+  - "seguridad"
   - "solidity"
 skill: intermediate
 lang: es
 published: 2020-09-07
-source: Desarrollando smart contracts
+source: Desarrollar contratos seguros
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 
