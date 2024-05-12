@@ -1,6 +1,6 @@
 import * as React from "react"
 import { RiInformationLine } from "react-icons/ri"
-import { Box } from "@chakra-ui/react"
+import { Box, Center } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 import { expect, userEvent, waitFor, within } from "@storybook/test"
 
@@ -49,9 +49,9 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <div>
+      <Center boxSize="md">
         <Story />
-      </div>
+      </Center>
     ),
   ],
 } satisfies Meta<TooltipType>
@@ -64,16 +64,7 @@ export const Basic: Story = {}
 
 // for chromatic story snapshot showing the rendered popover
 export const OnOpen: Story = {
-  play: async ({ canvasElement }) => {
-    // Add delay for snapshot capture of the popover
-    const canvas = within(canvasElement)
-    const canvasParent = within(canvasElement.parentElement!)
-
-    const tooltipIcon = canvas.getByTestId("tooltip-icon")
-
-    await waitFor(async () => {
-      await userEvent.hover(tooltipIcon)
-      await expect(canvasParent.getByTestId("tooltip-popover")).toBeVisible()
-    })
+  args: {
+    isOpen: true,
   },
 }
