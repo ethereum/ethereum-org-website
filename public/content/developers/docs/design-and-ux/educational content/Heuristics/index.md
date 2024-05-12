@@ -31,8 +31,10 @@ Users decide on their next steps based on the outcome of their previous steps. T
 Example:
 Showing each step involved in a transaction helps users know where they are in the process. Appropriate icons let the user know the status of their actions.
 
-2. Security and Trust are Baked in
-Security should be prioritised, and this should be emphasised for the user. 
+<h2>2. Security and Trust are Baked in</h2>
+
+<strong>Security should be prioritised, and this should be emphasised for the user.</strong>
+
 People care deeply about anything financial. Safety is often a primary concern for users, so it should be considered at all levels of the design. You should always be seeking to earn the trust of your users, but the way you do this can mean different things on different apps. It should not be an afterthought, but should be designed consciously throughout. Build trust throughout the user experience, including social channels and documentation, as well as the final UI.
 Tips:
 List your audits proudly
