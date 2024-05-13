@@ -108,7 +108,7 @@ export const GridItem = ({ metric }: GridItemProps) => {
       const ctx = context.chart.ctx
       const gradient = ctx.createLinearGradient(0, 0, 0, 220)
       // gradient.addColorStop(offset, color)
-      gradient.addColorStop(0, "#8884d8ff")
+      gradient.addColorStop(0, "#8884d84d")
       gradient.addColorStop(0.85, "#ffffff00")
 
       return gradient
