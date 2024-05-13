@@ -87,8 +87,8 @@ export const WalletMoreInfoCategory = ({
               >
                 <ListIcon as={FeatureIcon}></ListIcon>
 
-                <Text as="span" whiteSpace="nowrap" px={1} lineHeight={1}>
-                  {feature.label}
+                <Text px={1} lineHeight={1}>
+                  {feature.label}&nbsp;
                   <Tooltip
                     content={
                       <Text color="body.base !important">
