@@ -66,7 +66,7 @@ const EnergyConsumptionChart = () => {
     hover: { mode: null } as any, // casted to avoid TS issue
     backgroundColor: ENERGY_CONSUMPTION_CHART_COLORS as any, // casted to avoid TS issue
     plugins: {
-      // required for labels on top
+      // required plugin to display labels on top
       datalabels: {
         // https://chartjs-plugin-datalabels.netlify.app/guide/positioning.html#alignment-and-offset
         anchor: "end" as any, // position of the labels (start, end, center), casted to avoid TS issue
@@ -77,9 +77,14 @@ const EnergyConsumptionChart = () => {
         } as any, // casted to avoid TS issue,
         color: useColorModeValue("#333333", "#F2F2F2"),
       },
-      // hide legend
+      // bottom legend styles
       legend: {
         display: true,
+        title: {
+          // hacky solution to create an invisible title that pushes the legend a bit down
+          display: true,
+          padding: 0,
+        },
         position: "bottom" as any, // casted to avoid TS issue
         align: "center" as any, // casted to avoid TS issue
         labels: {
@@ -92,9 +97,8 @@ const EnergyConsumptionChart = () => {
         },
         rtl: isRtl,
       },
-      // hide chart title
       title: {
-        display: false,
+        display: false, // hide chart title
       },
     },
     // axis styles
@@ -118,6 +122,9 @@ const EnergyConsumptionChart = () => {
           font: {
             size: 10,
           },
+          autoSkip: false, // avoid long labels to be hidden
+          padding: 0, // removes default padding betwen x-labels and chart
+          maxRotation: 0, // turns off rotation
         },
       },
     },
