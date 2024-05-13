@@ -36,7 +36,7 @@ const QuizzesModal = ({
       contentProps={{ bg: getStatusColor() }}
       {...props}
     >
-      <Center m={0} bg={getStatusColor()} py="16">
+      <Center m={0} bg={getStatusColor()}>
         {children}
       </Center>
     </Modal>

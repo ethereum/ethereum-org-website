@@ -18,7 +18,7 @@ export const Modal = defineMultiStyleConfig({
       dialog: {
         bg: "background.base",
         gap: "4",
-        padding: "8",
+        padding: { base: "4", sm: "8", md: "16" },
         borderRadius: "base",
         boxShadow: "none",
       },
@@ -32,6 +32,7 @@ export const Modal = defineMultiStyleConfig({
       closeButton: {
         position: "static",
         color: "body.base",
+        bg: "background.base",
       },
       body: {
         padding: "0",
@@ -50,15 +51,13 @@ export const Modal = defineMultiStyleConfig({
     ...defaultSizes,
     full: {
       dialog: {
-        h: "full",
-        minH: "unset",
-        maxH: {
+        minH: {
           base: "calc(100vh - 1rem)",
-          md: "min(calc(100vh - 2rem), 792px)",
+          md: "min(calc(100vh - 1rem), 792px)",
         },
         maxW: {
           base: "calc(100vw - 1rem)",
-          md: "min(calc(100vw - 2rem), 1000px)",
+          md: "min(calc(100vw - 1rem), 1000px)",
         },
       },
     },

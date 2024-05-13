@@ -27,7 +27,7 @@ export const SimulatorModal = ({
       onClose={onClose}
       isCentered
       size="full"
-      scrollBehavior="inside"
+      scrollBehavior="outside"
       contentProps={restProps}
     >
       {children}

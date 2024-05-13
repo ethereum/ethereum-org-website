@@ -103,7 +103,7 @@ const QuizWidget = ({
 
   const getMainContainerBg = (): StackProps["bg"] => {
     if (!answerStatus) {
-      return "background.base"
+      return isStandaloneQuiz ? "background.highlight" : "background.base"
     }
 
     if (answerStatus === "correct") {
