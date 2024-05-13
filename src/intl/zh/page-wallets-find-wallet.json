@@ -1,9 +1,9 @@
 {
   "page-find-wallet-clear": "重置过滤器",
-  "page-find-wallet-desc-2": "根据您的需求选择适合您的钱包。",
-  "page-find-wallet-description": "钱包包含大量您可能会喜欢的可选特性。",
+  "page-find-wallet-desc-2": "根据你的需求选择适合你的钱包。",
+  "page-find-wallet-description": "钱包包含大量你可能会喜欢的可选特性。",
   "page-find-wallet-last-updated": "最近更新",
-  "page-find-wallet-meta-description": "按照您要的功能查找并比较这些以太坊钱包。",
+  "page-find-wallet-meta-description": "按照你要的功能查找并比较这些以太坊钱包。",
   "page-find-wallet-meta-title": "找到一个以太坊钱包",
   "page-find-wallet-title": "获取一个钱包",
   "page-find-wallet-try-removing": "尝试删除一两个特性",
@@ -33,7 +33,7 @@
   "page-find-wallet-gas-fee-customization": "燃料费定制",
   "page-find-wallet-gas-fee-customization-desc": "定制燃料量（基础费、优先费和最高费用）",
   "page-find-wallet-ens-support": "支持以太坊域名服务",
-  "page-find-wallet-ens-support-desc": "支持以太坊名称服务 (ENS) 的钱包",
+  "page-find-wallet-ens-support-desc": "支持以太坊域名服务 (ENS) 的钱包",
   "page-find-wallet-token-importing": "导入代币",
   "page-find-wallet-token-importing-desc": "导入任何 ERC-20 代币，以便在钱包中使用",
   "page-find-wallet-fee-optimization": "费用优化",
@@ -53,7 +53,7 @@
   "page-find-wallet-check-out": "参阅",
   "page-find-wallet-info-updated-on": "信息更新于",
   "page-find-wallet-showing-all-wallets": "显示所有钱包",
-  "page-find-wallet-showing": "显示中 ",
+  "page-find-wallet-showing": "显示中",
   "page-find-wallet-wallets": "钱包",
   "page-find-wallet-iOS": "iOS",
   "page-find-wallet-android": "Android",
@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "功能筛选",
   "page-find-wallet-footnote-1": "本页所列钱包并非官方认可，仅供参考。",
   "page-find-wallet-footnote-2": "钱包描述由钱包项目自行提供。",
-  "page-find-wallet-footnote-3": "我们根据我们<a href=\"/contributing/adding-products/\">上架政策</a>中的标准将产品添加到本页面。如果你想要添加钱包，<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">请在 GitHub 中提出问题</a>。",
+  "page-find-wallet-footnote-3": "我们根据我们<a href=\"/contributing/adding-wallets/\">上架政策</a>中的标准将产品添加到本页面。如果你希望我们添加钱包，<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">请在 GitHub 中提出问题</a>。",
   "page-find-wallet-mobile": "移动版",
   "page-find-wallet-mobile-desc": "带有移动应用程序的钱包",
   "page-find-wallet-desktop": "桌面",
@@ -90,5 +90,6 @@
   "page-find-wallet-browser-desc": "带有浏览器扩展程序的钱包",
   "page-find-wallet-device": "设备",
   "page-find-choose-to-compare": "选择要比较的钱包",
-  "page-find-wallet-choose-features": "选择功能"
+  "page-find-wallet-choose-features": "选择功能",
+  "page-find-wallet-reset-filters": "重置筛选器"
 }

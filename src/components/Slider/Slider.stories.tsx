@@ -1,3 +1,4 @@
+import React from "react"
 import {
   Heading,
   HeadingProps,
@@ -5,22 +6,22 @@ import {
   StackProps,
   Text,
 } from "@chakra-ui/react"
-import { Meta, StoryFn } from "@storybook/react"
-import React from "react"
-import Slider, { EmblaSlide } from "."
+import { Meta, StoryObj } from "@storybook/react"
 
-const Component = Slider
+import SliderComponent, { EmblaSlide } from "."
 
-export default {
-  component: Component,
-  subcomponents: { EmblaSlide },
+const meta = {
+  title: "Slider",
+  component: SliderComponent,
   parameters: {
     // https://storybook.js.org/docs/react/essentials/actions#action-event-handlers
     actions: {
       handles: ["click"],
     },
   },
-} as Meta<typeof Component>
+} satisfies Meta<typeof SliderComponent>
+
+export default meta
 
 const H3 = (props: HeadingProps) => <Heading as="h3" size="lg" {...props} />
 
@@ -101,8 +102,8 @@ const ComponentSlides = () => (
   </>
 )
 
-export const Basic: StoryFn<typeof Component> = (args) => (
-  <Component {...args}>
-    <ComponentSlides />
-  </Component>
-)
+export const Slider: StoryObj<typeof meta> = {
+  args: {
+    children: <ComponentSlides />,
+  },
+}

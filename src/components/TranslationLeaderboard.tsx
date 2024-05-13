@@ -1,6 +1,7 @@
-// Libraries
 import React, { useState } from "react"
-import { reverse, sortBy } from "lodash"
+import reverse from "lodash/reverse"
+import sortBy from "lodash/sortBy"
+import { useTranslation } from "next-i18next"
 import {
   Box,
   Button as ChakraButton,
@@ -11,16 +12,10 @@ import {
   useRadioGroup,
 } from "@chakra-ui/react"
 
-// Components
-import Emoji from "./Emoji"
-import Translation from "./Translation"
-import Text from "./OldText"
+import type { CostLeaderboardData } from "@/lib/types"
 
-export interface IProps {
-  monthData: any
-  quarterData: any
-  allTimeData: any
-}
+import Emoji from "./Emoji"
+import Text from "./OldText"
 
 const Button = (props) => {
   return (
@@ -40,8 +35,7 @@ const Button = (props) => {
       bg="transparent"
       w={{ base: "full", lg: "initial" }}
       justifyContent="center"
-      ml={{ base: "0", lg: "2" }}
-      mr={{ base: "0", lg: "2" }}
+      mx={{ base: "0", lg: "2" }}
       _hover={{
         color: "primary.base",
         borderColor: "primary.base",
@@ -84,25 +78,32 @@ const RadioCard = (props) => {
   )
 }
 
-const TranslationLeaderboard: React.FC<IProps> = ({
+const sortAndFilterData = (data: CostLeaderboardData[]) =>
+  reverse(sortBy(data, ({ totalCosts }) => totalCosts))
+
+type TranslationLeaderboardProps = {
+  allTimeData: CostLeaderboardData[]
+  monthData: CostLeaderboardData[]
+  quarterData: CostLeaderboardData[]
+}
+
+const TranslationLeaderboard = ({
   monthData,
   quarterData,
   allTimeData,
-}) => {
+}: TranslationLeaderboardProps) => {
   const tableBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
   const tableItemBoxShadow = useColorModeValue(
     "tableItemBox.light",
     "tableItemBox.dark"
   )
+
   const leaderboardData = {
-    monthData: reverse(sortBy(monthData.data, ({ user }) => user.totalCosts)),
-    quarterData: reverse(
-      sortBy(quarterData.data, ({ user }) => user.totalCosts)
-    ),
-    allTimeData: reverse(
-      sortBy(allTimeData.data, ({ user }) => user.totalCosts)
-    ),
+    monthData: sortAndFilterData(monthData),
+    quarterData: sortAndFilterData(quarterData),
+    allTimeData: sortAndFilterData(allTimeData),
   }
+
   const [filterAmount, updateFilterAmount] = useState(10)
   const [dateRangeType, updateDateRangeType] = useState("monthData")
 
@@ -120,6 +121,10 @@ const TranslationLeaderboard: React.FC<IProps> = ({
     onChange: updateDateRangeType,
   })
 
+  const { t } = useTranslation(
+    "page-contributing-translation-program-acknowledgements"
+  )
+
   return (
     <Box>
       <Flex
@@ -131,19 +136,25 @@ const TranslationLeaderboard: React.FC<IProps> = ({
         w="full"
       >
         <RadioCard key="monthData" {...getRadioProps({ value: "monthData" })}>
-          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view" />
+          {t(
+            "page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view"
+          )}
         </RadioCard>
         <RadioCard
           key="quarterData"
           {...getRadioProps({ value: "quarterData" })}
         >
-          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view" />
+          {t(
+            "page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view"
+          )}
         </RadioCard>
         <RadioCard
           key="allTimeData"
           {...getRadioProps({ value: "allTimeData" })}
         >
-          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view" />
+          {t(
+            "page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view"
+          )}
         </RadioCard>
       </Flex>
       <Box bg="background.base" boxShadow={tableBoxShadow} w="full" mb={8}>
@@ -164,37 +175,24 @@ const TranslationLeaderboard: React.FC<IProps> = ({
             <Flex
               flexDirection="row"
               alignItems="center"
-              mr={8}
+              me={8}
               overflowWrap="anywhere"
             >
-              <Translation id="page-contributing-translation-program-acknowledgements-translator" />
+              {t(
+                "page-contributing-translation-program-acknowledgements-translator"
+              )}
             </Flex>
           </Flex>
-          <Flex minW="20%" flexDirection="row" alignItems="left">
-            <Translation id="page-contributing-translation-program-acknowledgements-total-words" />
+          <Flex minW="20%" flexDirection="row" alignItems="start">
+            {t(
+              "page-contributing-translation-program-acknowledgements-total-words"
+            )}
           </Flex>
         </Flex>
-        {/* // TODO: Remove specific user checks once Acolad has updated their usernames */}
         {leaderboardData[dateRangeType]
-          .filter(
-            (item) =>
-              item.user.username !== "ethdotorg" &&
-              !item.user.username.includes("LQS_") &&
-              !item.user.username.includes("REMOVED_USER") &&
-              !item.user.username.includes("Aco_") &&
-              !item.user.fullName.includes("Aco_") &&
-              !item.user.username.includes("Acc_") &&
-              !item.user.fullName.includes("Acc_") &&
-              item.user.username !== "Finnish_Sandberg" &&
-              item.user.username !== "Norwegian_Sandberg" &&
-              item.user.username !== "Swedish_Sandberg"
-          )
-          .filter((item, idx) => idx < filterAmount)
-          .map((item, idx) => {
-            const { user, languages } = item
-            const sortedLanguages = reverse(
-              sortBy(languages, ({ language }) => language.totalCosts)
-            )
+          .slice(0, filterAmount)
+          .map((item: CostLeaderboardData, idx: number) => {
+            const { username, avatarUrl, totalCosts, langs } = item
 
             let emoji: string | null = null
             if (idx === 0) {
@@ -225,7 +223,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                 <Flex>
                   {emoji ? (
                     <Box w={10}>
-                      <Emoji mr={4} fontSize="2rem" text={emoji} />
+                      <Emoji me={4} fontSize="2rem" text={emoji} />
                     </Box>
                   ) : (
                     <Box w={10} opacity="0.4">
@@ -235,33 +233,33 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                   <Flex
                     flexDirection="row"
                     alignItems="center"
-                    mr={8}
+                    me={8}
                     overflowWrap="anywhere"
                   >
                     <Img
-                      mr={4}
+                      me={4}
                       h={{ base: "30px", sm: 10 }}
                       w={{ base: "30px", sm: 10 }}
                       borderRadius="50%"
                       display={{ base: "none", s: "block" }}
-                      src={user.avatarUrl}
+                      src={avatarUrl}
                     />
                     <Box maxW={{ base: "100px", sm: "none" }}>
-                      {user.username}
+                      {username}
                       <Text m={0} display="block" fontSize="sm" opacity="0.6">
-                        {sortedLanguages[0].language.name}
+                        {langs[0]}
                       </Text>
                     </Box>
                   </Flex>
                 </Flex>
-                <Flex minW="20%" flexDirection="row" alignItems="left">
+                <Flex minW="20%" flexDirection="row" alignItems="start">
                   <Emoji
                     display={{ base: "none", sm: "block" }}
-                    mr={2}
+                    me={2}
                     fontSize="2xl"
                     text={":writing:"}
                   />
-                  {user.totalCosts}
+                  {totalCosts}
                 </Flex>
               </Flex>
             )
@@ -283,13 +281,11 @@ const TranslationLeaderboard: React.FC<IProps> = ({
             textAlign="center"
             fontWeight={{ base: "semibold", md: "normal" }}
           >
-            <Translation
-              id={
-                filterAmount === 10
-                  ? "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more"
-                  : "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less"
-              }
-            />
+            {t(
+              filterAmount === 10
+                ? "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more"
+                : "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less"
+            )}
           </Text>
         </Button>
       </Flex>

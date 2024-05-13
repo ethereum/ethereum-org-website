@@ -24,5 +24,6 @@
   "page-tutorial-intermediate": "中級",
   "page-tutorial-advanced": "上級",
   "page-find-wallet-try-removing": "機能を１つまたは２つ削除してみてください",
-  "page-find-wallet-clear": "フィルタをクリア"
+  "page-find-wallet-clear": "フィルタをクリア",
+  "page-tutorials-env-banner": "<code>.env</code> をコミットしないでください！<code>.env</code>ファイルを他人と共有したり公開したりすると、シークレットの情報が漏洩することになるので、決して共有したり公開したりしないようにしてください。バージョン管理を使用している場合は、<code>.env</code> を <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>ファイルに追加してください。"
 }
