@@ -79,7 +79,6 @@ const preview: Preview = {
           },
         }
       }, {}),
-      defaultViewport: "2xl",
     },
   },
 }
