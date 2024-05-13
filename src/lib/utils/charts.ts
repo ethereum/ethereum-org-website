@@ -1,18 +1,18 @@
-// Splits charts labels with multiple words in multiple words
+// Splits longer labels in multiple lines, using the longest word as a max width
 // See: https://chartjs-plugin-datalabels.netlify.app/guide/formatting.html#multiline-labels
-// Uses Intl.Segmenter API instead of .split(), to format translations properly
-// See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter#basic_usage_and_difference_from_string.prototype.split
-export const splitLongLabels = (labels) => {
-  return labels.map((w) => {
-    if (w.length > 5) {
-      const segmenter = new Intl.Segmenter([], { granularity: "word" })
-      const segmentedText = segmenter.segment(w)
-
-      return [...segmentedText]
-        .filter((s) => s.isWordLike)
-        .map((s) => s.segment)
+// Based on https://stackoverflow.com/a/76433452
+const wrapLabel = (str: string) => {
+  const result = str.split(" ").reduce((res, word, idx) => {
+    if (!idx || word.length > res) {
+      res = word.length
     }
 
-    return w
-  })
+    return res
+  }, 0)
+  const regex = new RegExp(
+    "(?=\\S).{0," + (result - 1) + "}\\S(?!\\S)|\\S{" + result + "}",
+    "gm"
+  )
+
+  return Array.from(str.matchAll(regex), (m) => m[0])
 }

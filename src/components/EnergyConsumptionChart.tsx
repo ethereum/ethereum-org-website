@@ -13,14 +13,12 @@ import { Bar } from "react-chartjs-2"
 import {
   Box,
   Center,
-  chakra,
   useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react"
 
 import type { Lang } from "@/lib/types"
 
-import { splitLongLabels } from "@/lib/utils/charts"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import {
@@ -131,7 +129,7 @@ const EnergyConsumptionChart = () => {
   }
 
   const chartData = {
-    labels: splitLongLabels(labels),
+    labels: labels.map((l) => wrapLabel(l)),
     datasets: [
       {
         label: t("page-what-is-ethereum-energy-consumption-chart-legend"),
