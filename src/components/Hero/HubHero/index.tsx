@@ -50,15 +50,15 @@ const HubHero = ({
         wordBreak="break-word"
       >
         {title ? (
-          <Heading
+          <Text
             as="h1"
-            size="sm"
+            size="md"
             color="body.medium"
             fontWeight="normal"
             textTransform="uppercase"
           >
             {title}
-          </Heading>
+          </Text>
         ) : null}
         <Stack
           alignSelf="center"
@@ -71,9 +71,9 @@ const HubHero = ({
           <Text size="lg">{description}</Text>
         </Stack>
         <HStack justify={{ md: "center", xl: "start" }} spacing="4">
-          {(buttons || []).map((button, idx) => {
+          {buttons?.map((button, idx) => {
             if (!button) return
-            return <CallToAction key={idx} {...button} />
+            return <CallToAction key={idx} index={idx} {...button} />
           })}
         </HStack>
       </Stack>

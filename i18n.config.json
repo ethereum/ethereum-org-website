@@ -344,17 +344,17 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
-    "code": "pt",
-    "crowdinCode": "pt-PT",
-    "name": "Portuguese",
+    "code": "pt-br",
+    "crowdinCode": "pt-BR",
+    "name": "Portuguese (Brazilian)",
     "localName": "Português",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },
   {
-    "code": "pt-br",
-    "crowdinCode": "pt-BR",
-    "name": "Portuguese (Brazilian)",
+    "code": "pt",
+    "crowdinCode": "pt-PT",
+    "name": "Portuguese",
     "localName": "Português",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
@@ -488,18 +488,18 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
-    "code": "zh",
-    "crowdinCode": "zh-CN",
-    "name": "Chinese Simplified",
-    "localName": "简体中文",
-    "langDir": "ltr",
-    "dateFormat": "YYYY-MM-DD"
-  },
-  {
     "code": "zh-tw",
     "crowdinCode": "zh-TW",
     "name": "Chinese Traditional",
     "localName": "繁體中文",
+    "langDir": "ltr",
+    "dateFormat": "YYYY-MM-DD"
+  },
+  {
+    "code": "zh",
+    "crowdinCode": "zh-CN",
+    "name": "Chinese Simplified",
+    "localName": "简体中文",
     "langDir": "ltr",
     "dateFormat": "YYYY-MM-DD"
   }

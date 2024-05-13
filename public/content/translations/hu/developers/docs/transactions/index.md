@@ -12,7 +12,7 @@ Ennek az oldalnak a jobb megértése érdekében javasoljuk, hogy először a [S
 
 ## Mi az a tranzakció? {#whats-a-transaction}
 
-Az Ethereum-tranzakció egy külső tulajdonú számla által kezdeményezett tevékenységre utal, más szóval egy számla, amelyet egy ember, nem pedig egy szerződés kezel. Például, ha Bob elküld Alice-nek 1 ETH-et, akkor Bob számláját terhelni kell, Alice számlájára pedig jóvá kell írni az összeget. Ez az állapotot megváltoztató művelet egy tranzakción belül történik.
+Az Ethereum-tranzakció egy külső tulajdonú számla által kezdeményezett tevékenységre utal, más szóval egy számla, amelyet egy ember, nem pedig egy szerződés kezel. Például, ha Bob elküld Alice-nek 1 ETH-t, akkor Bob számláját terhelni kell, Alice számlájára pedig jóvá kell írni az összeget. Ez az állapotot megváltoztató művelet egy tranzakción belül történik.
 
 ![Diagram, amely egy állapotot módosító tranzakciót ábrázol](./tx.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
 
@@ -23,7 +23,7 @@ A tranzakciókért fizetni kell, és be kell kerüljenek egy validált blokkba. 
 Az elküldött tranzakció a következő információkat tartalmazza:
 
 - `from` – a küldő címe, aki aláírja a tranzakciót. Ez egy külső tulajdonú számla, mivel a szerződéses számlák nem küldenek tranzakciót.
-- `recipient` – a fogadó címe (ha egy külső tulajdonú számla, akkor a tranzakció értéket továbbít. Ha egy szerződéses számla, akkor a tranzakció szerződéskódot fog végrehajtani)
+- `to` – a fogadó címe (ha egy külső tulajdonú számla, akkor a tranzakció értéket továbbít. Ha egy szerződéses számla, akkor a tranzakció szerződéskódot fog végrehajtani)
 - `signature` – a küldő azonosítója. Ez akkor jön létre, amikor a feladó privát kulcsa aláírja a tranzakciót, és megerősíti, hogy a küldő engedélyezte ezt a tranzakciót
 - `nonce` – egy növekvő számláló, amely a számláról küldött tranzakciók számát mutatja
 - `value` – az átküldendő ETH mennyisége a küldőtől a címzettnek (WEI-ben, ahol 1 ETH 1e+18 wei-nek felel meg)
@@ -195,10 +195,10 @@ Ahol a mezők jelentése:
 
 - [EIP-2718: Tranzakciógöngyöleg](https://eips.ethereum.org/EIPS/eip-2718)
 
-_Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt és add hozzá!_
+_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
 
 ## Kapcsolódó témák {#related-topics}
 
 - [Számlák](/developers/docs/accounts/)
 - [Ethereum virtuális gép (EVM)](/developers/docs/evm/)
-- [Üzemanyag](/developers/docs/gas/)
+- [Gáz](/developers/docs/gas/)

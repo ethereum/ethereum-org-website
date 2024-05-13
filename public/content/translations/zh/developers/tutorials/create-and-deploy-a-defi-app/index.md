@@ -12,7 +12,7 @@ tags:
 skill: intermediate
 lang: zh
 published: 2020-12-31
-source: www.github.com
+source: github.com
 sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
 ---
 
@@ -20,7 +20,7 @@ sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
 
 ## 安装 Truffle 和 Ganache {#install-truffle-and-ganache}
 
-如果这是您第一次编写智能合约，您需要搭建您的环境。 我们将使用两个工具：[Truffle](https://www.trufflesuite.com/) 和 [Ganache](https://www.trufflesuite.com/ganache)。
+如果这是你第一次编写智能合约，你需要搭建你的环境。 我们将使用两个工具：[Truffle](https://www.trufflesuite.com/) 和 [Ganache](https://www.trufflesuite.com/ganache)。
 
 Truffle 是用于开发以太坊智能合约的开发环境和测试框架。 使用 Truffle 可以很容易地在区块链中创建和部署智能合约。 Ganache 可以帮助我们创建一个本地以太坊区块链，用以测试智能合约。 它模拟真实的网络功能，前 10 个帐户存入了 100 个测试以太币，如此可以随意部署和测试智能合约。 Ganache 可提供桌面应用程序和命令行工具。 在本文中，我们将使用有图形界面的桌面应用程序。
 
@@ -44,7 +44,7 @@ truffle init
 
 - `truffle-config.js`：Truffle 配置文件
 
-## 创建 ERC20 代币 {#create-the-erc20-token}
+## 创建ERC20 代币 {#create-the-erc20-token}
 
 首先，我们需要创建 ERC20 代币，用于在智能合约上质押。 要创建同质化代币，我们首先需要安装 OpenZeppelin 库。 该库包含 ERC20 和 ERC721 等标准的实现。 如需安装，请运行以下命令：
 
@@ -74,7 +74,7 @@ contract MyToken is ERC20 {
 
 - 第 6 行：我们要调用 ERC20.sol 构造函数，并将名称和符号参数分别设为 `"MyToken"` 和 `"MTKN"`。
 
-- 第 7 行：我们为正在部署智能合约的账户铸造和转移 100 万代币（我们默认为 ERC20 代币使用 18 位小数）。这意味着，如果我们想要铸造 1 个代币，则需将其表示为 1000000000000000000，即 1 和 18 个零）。
+- 第 7 行：我们为正在部署智能合约的帐户铸造和转移 100 万代币（我们默认为 ERC20 代币使用 18 位小数）。这意味着，如果我们想要铸造 1 个代币，则需将其表示为 1000000000000000000，即 1 和 18 个零）。
 
 我们可以看到，ERC20.sol 构造函数实现下方，`_decimals` 字段设置为 18：
 
@@ -163,7 +163,7 @@ truffle console
 
 - 获取智能合约：`myToken = await MyToken.depolyed()`
 
-- 从 Ganache 获取账户组：`accounts = await web3.eth.getAccounts()`
+- 从 Ganache 获取帐户组：`accounts = await web3.eth.getAccounts()`
 
 - 获取第一个帐户的余额：`balance = await myToken.balance Of(accounts[0])`
 
@@ -210,7 +210,7 @@ contract FarmToken is ERC20 {
     }
 ```
 
-- 第 3-6 行：我们要从 openzepelin 导入下列合约：IERC20.sol、Address.sol、SafeERC20.sol 和 ERC20.sol。
+- 第 3-6 行：我们要从 openzepelin 导入下列合约：IERC20.sol、Address.sol、SafeERC20.sol 和ERC20.sol。
 
 - 第 8 行：FarmToken 将继承 ERC20 合约。
 
@@ -293,7 +293,7 @@ module.exports = async function (callback) {
 truffle exec .\scripts\getMyTokenBalance.js
 ```
 
-我们将得到预期结果 0。 如果您收到尚未部署 FarmToken 的错误，则表明 truffle 网络尚未收到最新版本的合约代码。 只需关闭 ganache，然后再快速启动，并确保运行 `truffle migrate`。
+我们将得到预期结果 0。 如果你收到尚未部署 FarmToken 的错误，则表明 truffle 网络尚未收到最新版本的合约代码。 只需关闭 ganache，然后再快速启动，并确保运行 `truffle migrate`。
 
 现在，让我们把 MyToken 押在智能合约上。 由于 `deposit(uint256 _amount)` 函数调用了来自 ERC20 的 `safeTransferFrom` 函数，用户必须首先批准智能合约，才能以用户的名义转账 MyToken。 因此，在下面的脚本中，我们将首先批准此步骤，然后调用函数：
 
@@ -385,7 +385,7 @@ module.exports = async function (callback) {
 }
 ```
 
-要运行此脚本：`truffle exec .\script\transferMyTokenToFarmToken.js`。 您将在控制台上看到如下输出：
+要运行此脚本：`truffle exec .\script\transferMyTokenToFarmToken.js`。 你将在控制台上看到如下输出：
 
 ![transferMyTokenToFarmToken.js 的输出](https://cdn-images-1.medium.com/max/2000/1*MoekE2QCw7vB98u5dl7ang.png)
 

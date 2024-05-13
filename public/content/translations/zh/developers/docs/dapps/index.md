@@ -51,7 +51,7 @@ dapp 可以用任何语言编写（就像是一个 app）。它有前端代码�
 
 **Scaffold-ETH _ - 使用能自适应智能合约的前端，快速尝试 Solidity。_**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [示例 dapp](https://punkwallet.io/)
 
 **创建以太坊应用程序 _- 使用一个命令创建以太坊驱动的应用程序。_**

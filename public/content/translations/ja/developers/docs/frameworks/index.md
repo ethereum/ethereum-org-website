@@ -68,7 +68,7 @@ lang: ja
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.com/invite/A39JVCM)
+- [Discord](https://discord.com/invite/alchemyplatform)
 
 **NodeReal -** **_イーサリアム開発プラットフォーム。_**
 
@@ -105,6 +105,12 @@ lang: ja
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [コミュニティフォーラム](https://forum.openzeppelin.com/c/support/17)
 - **OpenZeppelin SDK開発の終了**
+
+**Catapulta -** **_マルチチェーン・スマートコントラクト・デプロイメントツール、ブロックエクスプローラでの自動検証、デプロイしたスマートコントラクトの追跡、デプロイメントレポートの共有、FoundryやHardhatのプラグ・アンド・プレイ。_**
+
+- [ウェブサイト](https://catapulta.sh/)
+- [ドキュメント](https://catapulta.sh/docs)
+- [GitHub](https://github.com/catapulta-sh)
 
 ## 参考文献 {#further-reading}
 

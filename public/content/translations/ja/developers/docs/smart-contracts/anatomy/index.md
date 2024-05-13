@@ -626,10 +626,10 @@ contract CryptoPizza is IERC721, ERC165 {
         uint256 size;
         // Currently there is no better way to check if there is a contract in an address
         // than to check the size of the code at that address.
-        // どのように動くかの詳細は、
-        // https://ethereum.stackexchange.com/a/14016/36603 を確認する。
-        // TODO すべてのアドレスが縮小されるので、
-        // セレニティリリースの前に、ここをもう一度確認する。
+        // See https://ethereum.stackexchange.com/a/14016/36603
+        // for more details about how this works.
+        // TODO Check this again before the Serenity release, because all addresses will be
+        // contracts then.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)

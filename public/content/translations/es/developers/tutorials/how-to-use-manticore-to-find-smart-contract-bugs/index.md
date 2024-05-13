@@ -5,13 +5,13 @@ author: Trailofbits
 lang: es
 tags:
   - "solidity"
-  - "contratos Inteligentes"
-  - "seguridades"
+  - "contratos inteligentes"
+  - "seguridad"
   - "pruebas"
   - "verificación formal"
 skill: advanced
 published: 2020-01-13
-source: Desarrollando smart contracts
+source: Desarrollar contratos seguros
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 
@@ -28,9 +28,9 @@ docker pull trailofbits/eth-security-toolbox
 docker run -it -v "$PWD":/home/training trailofbits/eth-security-toolbox
 ```
 
-_El comando de arriba ejecuta eth-security-toolbox en un docker que tiene acceso a tu directorio actual. Puedes cambiar los archivos desde tu host y correr las herramientas dentro de los archivos desde docker_
+_El comando de arriba ejecuta eth-security-toolbox en un docker que tiene acceso a su directorio actual. Puede cambiar los archivos desde su host y correr las herramientas dentro de los archivos desde el docker._
 
-Al estar en el docker, ejecute:
+Dentro del docker, ejecute:
 
 ```bash
 solc-select 0.5.11
@@ -45,9 +45,9 @@ pip3 install --user manticore
 
 Se recomienda solc 0.5.11.
 
-### Ejecutando un script {#running-a-script}
+### Ejecución de un script {#running-a-script}
 
-Ejecutando un script python con python 3:
+Para ejecutar un script de python con python 3:
 
 ```bash
 python3 script.py
@@ -93,7 +93,7 @@ Considere el siguiente ejemplo:
 
 ```solidity
 function unsafe_add(uint a, uint b) returns(uint c){
-  c = a + b; // sin protección de desbordamiento
+  c = a + b; // no overflow protection
   return c;
 }
 ```
@@ -125,11 +125,11 @@ La fórmula asociada con la comprobación de desbordamiento sería:
 
 Esta fórmula no se puede resolver; en otro estadio esto es una **prueba** de que en `safe_add`, `c` siempre aumentará.
 
-DSE es una potente herramienta que puede verificar restricciones arbitrarias en el código.
+DSE es por consiguiente una potente herramienta que puede verificar restricciones arbitrarias en el código.
 
-## Ejecutando bajo Mantícora {#running-under-manticore}
+## Ejecutar con Manticore {#running-under-manticore}
 
-Veamos cómo explorar un contrato inteligente con la API Manticore. El objetivo es el siguiente smart contract [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
+Veamos cómo explorar un contrato inteligente con la API de Manticore. El objetivo es el siguiente contrato inteligente [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
 ```solidity
 pragma solidity >=0.4.24 <0.6.0;
@@ -143,15 +143,15 @@ contract Simple {
 }
 ```
 
-### Ejecute una exploración independiente {#run-a-standalone-exploration}
+### Ejecutar una exploración independiente {#run-a-standalone-exploration}
 
-Ejecute Manticore directamente en el contrato inteligente con el siguiente comando (`project` que puede ser un Solidity File o un roject directory):
+Puede ejecutar Manticore directamente en el contrato inteligente con el siguiente comando (`project` puede ser un Solidity File o un directorio de proyecto):
 
 ```bash
 $ manticore project
 ```
 
-Obtendrá una salida de casos de prueba como esta (el orden puede cambiar):
+Obtendrá la salida o resultado de casos de prueba como este (el orden puede cambiar):
 
 ```
 ...
@@ -162,42 +162,43 @@ Obtendrá una salida de casos de prueba como esta (el orden puede cambiar):
 ... m.c.manticore:INFO: Generated testcase No. 4 - STOP
 ... m.c.manticore:INFO: Generated testcase No. 5 - REVERT
 ... m.c.manticore:INFO: Generated testcase No. 6 - REVERT
-... m.c.manticore:INFO: Results in /home/ethsec/workshops/Automated Smart Contracts Audit - TruffleCon 2018/manticore/examples/mcore_t6vi6ij3...
+... m.c.manticore:INFO: Results in /home/ethsec/workshops/Automated Smart Contracts Audit - TruffleCon 2018/manticore/examples/mcore_t6vi6ij3
+...
 ```
 
-Sin información adicional, Manticore va a explorar el contrato con nuevas transacciones simbólicas hasta que no haya nuevas rutas en el contrato. Manticore no ejecutará nuevas transacciones después de una fallida (por ejemplo: después de una reversión).
+Sin información adicional, Manticore explorará el contrato con nuevas transacciones simbólicas hasta que no explore nuevas rutas en el contrato. Manticore no ejecuta nuevas transacciones después de una fallida (por ejemplo: después de una reversión).
 
-Manticore mostrará la información en un directorio `mcore_*`. Entre otros, encontrará en este directorio:
+Manticore mostrará la información en un directorio `mcore_*`. Entre otras cosas, encontrará en este directorio:
 
 - `global.summary`: cobertura y advertencias del compilador
-- `test_XXXX.summary`: cobertura, última instrucción, balance de cuenta por caso de prueba
+- `test_XXXX.summary`: cobertura, última instrucción, saldos de cuenta por caso de prueba
 - `test_XXXX.tx`: lista detallada de transacciones por caso de prueba
 
-Aquí Manticore encuentra 7 casos de prueba que corresponden (el orden de nombres de archivo puede cambiar):
+Aquí Manticore encontró 7 casos de prueba que corresponden a (el orden de nombres de archivo puede cambiar):
 
-|                      |    Transacción 0     |   Transacción 1    | Transacción 2      | Resultado |
-|:--------------------:|:--------------------:|:------------------:| ------------------ |:---------:|
-| **test_00000000.tx** | Creación de contrato |      f(!=65)       | f(!=65)            |  DETENER  |
-| **test_00000001.tx** | Creación de contrato | función de reserva |                    | REVERTIR  |
-| **test_00000002.tx** | Creación de contrato |                    |                    | REGRESAR  |
-| **test_00000003.tx** | Creación de contrato |       f(65)        |                    | REVERTIR  |
-| **test_00000004.tx** | Creación de contrato |      f(!=65)       |                    |  DETENER  |
-| **test_00000005.tx** | Creación de contrato |      f(!=65)       | f(65)              | REVERTIR  |
-| **test_00000006.tx** | Creación de contrato |      f(!=65)       | función de reserva | REVERTIR  |
+|                      |    Transacción 0     |  Transacción 1   | Transacción 2    | Resultado |
+|:--------------------:|:--------------------:|:----------------:| ---------------- |:---------:|
+| **test_00000000.tx** | Creación de contrato |     f(!=65)      | f(!=65)          |  DETENER  |
+| **test_00000001.tx** | Creación de contrato | función fallback |                  |  REVERT   |
+| **test_00000002.tx** | Creación de contrato |                  |                  |  RETURN   |
+| **test_00000003.tx** | Creación de contrato |      f(65)       |                  |  REVERT   |
+| **test_00000004.tx** | Creación de contrato |     f(!=65)      |                  |  DETENER  |
+| **test_00000005.tx** | Creación de contrato |     f(!=65)      | f(65)            |  REVERT   |
+| **test_00000006.tx** | Creación de contrato |     f(!=65)      | función fallback |  REVERT   |
 
-_Resumen de exploración f(!=65) muestra f llamada con cualquier valor diferente a 65._
+_Resumen de exploración f(!=65) muestra que f llamó con cualquier valor diferente a 65._
 
 Como se ve, Manticore genera un caso de prueba único para cada transacción exitosa o revertida.
 
-Use la marca `--quick-mode` si desea una exploración rápida de código (deshabilita los detectores de errores, el cálculo de gas, ...)
+Use la marca `--quick-mode` si desea una exploración rápida de código (deshabilita los detectores de errores, el cálculo de gas, etc.).
 
 ### Manipular un contrato inteligente a través de la API {#manipulate-a-smart-contract-through-the-api}
 
-Esta sección describe los detalles para manipular un contrato inteligente a través de la API de Manticore Python. Se puede crear un nuevo archivo con la extensión python `*.py` y escribir el código necesario agregando los comandos API (los básicos que se describen a continuación) en este archivo y luego ejecutarlo con el comando `$ python3 *.py`. También puede ejecutar los siguientes comandos directamente en la consola python, ejecutando el comando `$ python3`.
+Esta sección describe los detalles para manipular un contrato inteligente a través de la API de Python de Manticore. Puede crear un nuevo archivo con la extensión de python `*.py` y escribir el código necesario agregando los comandos de la API (los aspectos básicos se describen a continuación) en este archivo y luego ejecutarlo con el comando `$ python3 *.py`. También puede ejecutar los siguientes comandos directamente en la consola de python; para ejecutar la consola use el comando `$ python3`.
 
 ### Creación de cuentas {#creating-accounts}
 
-Lo primero es iniciar un nuevo blockchain con los siguientes comandos:
+Lo primero que debe hacer es iniciar una nueva cadena de bloques con los siguientes comandos:
 
 ```python
 from manticore.ethereum import ManticoreEVM
@@ -211,7 +212,7 @@ Se crea una cuenta sin contrato con [m.create_account](https://manticore.readthe
 user_account = m.create_account(balance=1000)
 ```
 
-Se despliega un Solidity contract usando [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract):
+Se puede implementar un contrato de Solidity usando [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract):
 
 ```solidity
 source_code = '''
@@ -230,7 +231,7 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
 #### Resumen {#summary}
 
-- Puedes crear cuentas de usuario y contratos con [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) y [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract).
+- Puede crear cuentas de usuario y contratos con [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) y [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract).
 
 ### Ejecución de transacciones {#executing-transactions}
 
@@ -388,18 +389,18 @@ m = ManticoreEVM()
 with open('example.sol') as f:
     source_code = f.read()
 
-user_account = m. reate_account(balance=1000)
+user_account = m.create_account(balance=1000)
 contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
 symbolic_var = m.make_symbolic_value()
-contract_account. (symbolic_var)
+contract_account.f(symbolic_var)
 
-## Comprobar si una ejecución termina con un REVERT o un INVALID
-para el estado en m. erminated_states:
-    last_tx = state.platform. ransactions[-1]
+## Check if an execution ends with a REVERT or INVALID
+for state in m.terminated_states:
+    last_tx = state.platform.transactions[-1]
     if last_tx.result in ['REVERT', 'INVALID']:
         print('Throw found {}'.format(m.workspace))
-        m.generate_testcase (estate, 'ThrowFound')
+        m.generate_testcase(state, 'ThrowFound')
 ```
 
 Todo el código anterior que puede encontrar en el [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)
@@ -408,7 +409,7 @@ _Note que podríamos haber generado un script mucho más simple, ya que todos lo
 
 ## Adición de restricciones {#adding-constraints}
 
-Veremos cómo restringir la exploración. Supondremos que la documentación de `f()` indica que la función nunca es llamada con `a == 65`, así que cualquier error con `a == 65` no es un error real. El objetivo sigue siendo este contrato inteligente [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
+Veremos cómo restringir la exploración. Supondremos que la documentación de `f()` indica que la función nunca es llamada con `a == 65`, así que cualquier error con `a == 65` no es un error real. El objetivo sigue siendo el contrato inteligente [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
 ```solidity
 pragma solidity >=0.4.24 <0.6.0;
@@ -435,13 +436,13 @@ El módulo sobre [Operadores](https://github.com/trailofbits/manticore/blob/mast
 Para importar el módulo, use:
 
 ```python
-operadores de importación desde manticore.core.smtlib
+from manticore.core.smtlib import Operators
 ```
 
 `Operators.CONCAT` se usa para concatenar un array a un valor. Por ejemplo, el return_data de una transacción necesita cambiarse a un valor para ser comprobado contra otro valor:
 
 ```python
-last_return = Operadors.CONCAT(256, *last_return)
+last_return = Operators.CONCAT(256, *last_return)
 ```
 
 ### Restricciones {#state-constraint}
@@ -454,7 +455,7 @@ Use `m.constran(constraint)` para agregar una restricción global. Por ejemplo, 
 
 ```python
 symbolic_address = m.make_symbolic_value()
-m.restricint(Operators.OR(simbólico == 0x41, symbolic_address == 0x42))
+m.constraint(Operators.OR(symbolic == 0x41, symbolic_address == 0x42))
 m.transaction(caller=user_account,
               address=contract_account,
               data=m.make_symbolic_buffer(320),
@@ -471,8 +472,8 @@ Use `solver.check(state.restricints)` para saber si una restricción todavía es
 
 ```python
 state.constrain(symbolic_var != 65)
-if solver.check(state.restricints):
-    # el estado es factible
+if solver.check(state.constraints):
+    # state is feasible
 ```
 
 ### Resumen: adición de restricciones {#summary-adding-constraints}
@@ -483,33 +484,33 @@ Al añadir restricción al código anterior, se obtiene:
 from manticore.ethereum import ManticoreEVM
 from manticore.core.smtlib.solver import Z3Solver
 
-solver = Z3Solver. nstance()
+solver = Z3Solver.instance()
 
 m = ManticoreEVM()
 
-con open("example.sol") as f:
+with open("example.sol") as f:
     source_code = f.read()
 
-user_account = m. reate_account(balance=1000)
+user_account = m.create_account(balance=1000)
 contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
-symbolic_var = m. ake_symbolic_value()
+symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var)
 
 no_bug_found = True
 
-## Comprueba si una ejecución termina con un REVERT o un INVALID
-para el estado en m. erminated_states:
+## Check if an execution ends with a REVERT or INVALID
+for state in m.terminated_states:
     last_tx = state.platform.transactions[-1]
-    if last_tx. esult en ['REVERT', 'INVALID']:
-        # no consideramos que la ruta sea un == 65
-        condición = symbolic_var ! 65
-        si m. enerate_testcase(state, name="BugFound", only_if=condition):
-            print(f'error encontrado, los resultados están en {m.workspace}')
+    if last_tx.result in ['REVERT', 'INVALID']:
+        # we do not consider the path were a == 65
+        condition = symbolic_var != 65
+        if m.generate_testcase(state, name="BugFound", only_if=condition):
+            print(f'Bug found, results are in {m.workspace}')
             no_bug_found = False
 
 if no_bug_found:
-    print(f'No se encontró error')
+    print(f'No bug found')
 ```
 
-Todo el código anterior que se puede encontrar en [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)
+Todo el código anterior que puede encontrar en el [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)

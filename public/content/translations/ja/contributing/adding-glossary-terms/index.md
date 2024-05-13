@@ -23,4 +23,4 @@ description: ethereum.org用語集に新しい用語を追加する基準
 
 ## 用語の追加 {#how-decisions-about-the-site-are-made}
 
-上記の基準を満たす用語の追加をご希望の場合は、 [GitHub で問題を作成](https://github.com/ethereum/ethereum-org-website/issues/new?template=suggest_glossary_term.md)してください
+上記の基準を満たす用語の追加をご希望の場合は、 [GitHubで問題を作成](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml)してください

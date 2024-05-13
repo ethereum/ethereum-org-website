@@ -16,7 +16,6 @@ lang: uk
 
 - [Програма підтримки EF Ecosystem](https://esp.ethereum.foundation) — _фінансування проєктів із відкритим вихідним кодом, що сприяють Ethereum, з особливим наголосом на універсальні інструменти, інфраструктуру, дослідження й суспільні блага_
 - [Запити пропозицій (RFP) від Ethereum](https://github.com/ethereum/requests-for-proposals) — _запити пропозицій Фондом Ethereum для роботи та проєктів в екосистемі Ethereum_
-- [MetaCartel](https://www.metacartel.org/grants/) - _Dapp development, DAO створення_
 - [DAO Moloch](https://www.molochdao.com/) — _конфіденційність, масштабування рівня 2, безпека клієнта й багато іншого_
 - [Відкриті гранти](https://opengrants.com/explore)
 - [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Електронна таблиця Google з організацій, які пропонують гранти_

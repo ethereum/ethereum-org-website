@@ -22,6 +22,18 @@ const meta = {
   parameters: {
     layout: "none",
   },
+  argTypes: {
+    children: {
+      table: {
+        disable: true,
+      },
+    },
+    fontWeight: {
+      table: {
+        disable: true,
+      },
+    },
+  },
   decorators: [
     (Story) => (
       <Center minH="100vh">
@@ -145,6 +157,18 @@ export const Link: StoryObj<typeof ChakraLink> = {
 }
 
 export const BodyCopy: Story = {
+  parameters: {
+    chromatic: {
+      modes: {
+        md: {
+          viewport: "md",
+        },
+        "2xl": {
+          viewport: "2xl",
+        },
+      },
+    },
+  },
   render: () => (
     <Box maxW="prose" px="4">
       <Text>

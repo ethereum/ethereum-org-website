@@ -297,6 +297,8 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _スマートコントラクトのプログラミング言語であるSolidityのスタイルとセキュリティのベストプラクティスを適用するためのリンター_。
 
+- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Rustベースの静的解析ツールで、特にWeb3スマートコントラクトのセキュリティと開発のために設計されています。_
+
 
 
 #### 動的解析ツール {#dynamic-analysis-tools}

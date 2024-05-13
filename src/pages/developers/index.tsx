@@ -6,7 +6,9 @@ import {
   Box,
   chakra,
   Flex,
+  Heading,
   SimpleGrid,
+  Stack,
   TextProps,
   useColorModeValue,
 } from "@chakra-ui/react"
@@ -30,6 +32,7 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import SpeedRunEthereumImage from "@/public/dev-tools/speed-run-ethereum-banner.png"
 import DevelopersImage from "@/public/developers-eth-blocks.png"
 import DogeImage from "@/public/doge-computer.png"
 import HeroImage from "@/public/heroes/developers-hub-hero.jpg"
@@ -135,6 +138,42 @@ const StyledCallout = chakra(Callout, {
     flex: { base: "auto", md: "1 1 416px" },
   },
 })
+
+const SpeedRunEthereumBanner = ({
+  title,
+  linkLabel,
+}: {
+  title: string
+  linkLabel: string
+}) => (
+  <Box position="relative" mb={{ xl: 12 }}>
+    <Image
+      src={SpeedRunEthereumImage}
+      alt="SpeedRunEthereum banner"
+      sizes="100vw"
+      style={{ width: "100vw", objectFit: "cover", objectPosition: "20%" }}
+      h={{
+        base: "450px",
+        xl: "auto",
+      }}
+    />
+    <Stack
+      spacing={{ base: "3", md: "4" }}
+      p={{ base: "6", lg: "8" }}
+      position="absolute"
+      insetInlineStart={{ md: "8" }}
+      maxW={{ base: "lg", xl: "xl" }}
+      top={{ base: "0", md: "50" }}
+      wordBreak="break-word"
+      alignItems="flex-start"
+    >
+      <Heading>
+        {title}
+      </Heading>
+      <ButtonLink href="https://speedrunethereum.com/">{linkLabel}</ButtonLink>
+    </Stack>
+  </Box>
+)
 
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/developers")
@@ -242,6 +281,14 @@ const DevelopersPage = () => {
             </StyledCard>
           ))}
         </StyledCardContainer>
+        <SpeedRunEthereumBanner
+          title={t(
+            "page-developers-index:page-developers-speedrunethereum-title"
+          )}
+          linkLabel={t(
+            "page-developers-index:page-developers-speedrunethereum-link"
+          )}
+        />
         <TwoColumnContent>
           <IntroColumn>
             <OldHeading>

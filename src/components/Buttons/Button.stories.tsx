@@ -1,9 +1,9 @@
 import * as React from "react"
 import { MdChevronRight, MdExpandMore, MdNightlight } from "react-icons/md"
 import { HStack, Text, ThemingProps, VStack } from "@chakra-ui/react"
-import { getThemingArgTypes } from "@chakra-ui/storybook-addon"
 import { Meta, StoryObj } from "@storybook/react"
 
+import { getThemingArgTypes } from "../../../.storybook/types"
 import theme from "../../@chakra-ui/theme"
 import Translation from "../Translation"
 

@@ -117,22 +117,6 @@ Las [mejoras de escalabilidad](/roadmap/) de Ethereum deberían abordar algunos 
 
 La escalabilidad de la capa 2 es una iniciativa primordial para mejorar de manera considerable los costes del gas, la experiencia de usuario y la escalabilidad. [Más información sobre la escalabilidad de la capa 2](/developers/docs/scaling/#layer-2-scaling).
 
-## ¿Qué fue la actualización London/EIP-1559? {#what-was-the-london-upgrade-eip-1559}
-
-Antes de la actualización London, Ethereum tenía bloques de tamaño fijo. En momentos de alta demanda de la red, estos bloques operaban a capacidad total. Como consecuencia, los usuarios a menudo tenían que esperar que la alta demanda disminuyera para ser incluidos en un bloque, lo cual se traducía en una deficiente experiencia de usuario. La actualización London introdujo los bloques de tamaño variable en Ethereum.
-
-La forma en la que se calcularon las comisiones de transacción de la red de Ethereum cambió con [la actualización de Londres](/history/#london) en agosto del 2021. Antes de la actualización London, las comisiones se calculaban sin separar la tarifa `base` de la tarifa `prioritaria`, por ejemplo:
-
-Supongamos que Alice tiene que pagar 1 ETH a Bob. En la transacción, el límite de gas es de 21.000 unidades y el precio del gas es de 200 gwei.
-
-La tarifa total vendría a ser ` unidades de gas (límite) * Precio unitario del gas` eso es: `21.000 * 200 = 4.200.000 gwei` o 0,0042 ETH
-
-La implementación de [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) en la actualización London hizo que el mecanismo de la tarifa de transacción fuera más complejo, aunque más predecible la tarifa de gas, dando como resultado un mercado más eficiente en términos de tarifas de transacción. Los usuarios pueden enviar transacciones con una `maxFeePerGas` correspondiente a la cantidad que están dispuestos a pagar por transacción para que esta se ejecute, sabiendo que no pagarán más que el precio de mercado por el gas (`baseFeePerGas`), y que se les reembolsará la cantidad adicional menos su propina.
-
-Este vídeo explica el EIP-1559 y los beneficios que conlleva:
-
-<YouTube id="MGemhK9t44Q" />
-
 ## Vigilar las tarifas de gas {#moitoring-gas-fees}
 
 Si desea supervisar las tarifas de gas, para poder enviar sus ETH por menos, puede usar diferentes herramientas, como:
@@ -152,4 +136,4 @@ Si desea supervisar las tarifas de gas, para poder enviar sus ETH por menos, pue
 - [Prueba de participación frente a prueba de trabajo](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Estrategias de optimización de gas para desarrolladores](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [Documentacion sobre EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
-- [ Recursos de Time Beiko sobre EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
+- [Recursos Tim Beiko's EIP-1559](https://hackmd.io/@timbeiko/1559-resources).

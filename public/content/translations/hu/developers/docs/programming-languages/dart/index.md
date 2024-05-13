@@ -17,8 +17,10 @@ incomplete: true
 - Ha videók segítségével jobban szeret tanulni, akkor nézze meg az [Építse meg első blokkláncos Flutter alkalmazását](https://www.youtube.com/watch?v=3Eeh3pJ6PeA) videót, amely nagyjából egy óra hosszú
 - Ha ennél kevesebb ideje van, akkor talán tetszeni fog az [Egy blokklánc decentralizált alkalmazás építése a Flutterrel és a Darttal az Ethereumon](https://www.youtube.com/watch?v=jaMFEOCq_1s) videó, amely csak húsz percet veszi igénybe
 - [A MetaMask integrációja a Flutter alkalmazásban](https://youtu.be/8qzVDje3IWk) – ez a rövid videó bemutatja, hogyan kell a MetaMaskot beintegrálni a Flutter alkalmazásokba
+- [Flutter Dapp egyszerű tárca](https://youtu.be/JMfIBpuAhKA) és [Az első Flutter DApp – Solidity, Truffle, Ganache](https://youtu.be/bHw2gQZxJ_s) – ezek a videók megmutatják, hogyan lehet egyszerű dappokat készíteni Flutterben a Truffle és Ganache segítségével
+- [Mobil blokkláncfejlesztői képzés Solidity-val és Flutterrel](https://youtube.com/playlist?list=PL4V4Unlk5luhQ26ERO6hWEbcUwHDSSmVH) – mobil blokkláncfejlesztői tanfolyam a teljes stack-kel (lejátszási lista)
 
-## Munka Ethereum kliensekkel {#working-with-ethereum-clients}
+## Az Ethereum-kliensek használata {#working-with-ethereum-clients}
 
 Az Ethereumot decentralizált alkalmazások (dappok) fejlesztésére használhatja, amelyek a kriptovaluták és a blokklánc-technológia nyújtotta összes előnyét kiélvezhetik. A Darthoz legalább két könyvtárat tartanak karban, hogy a [JSON RPC API-t](/developers/docs/apis/json-rpc/) használja az Ethereumra.
 

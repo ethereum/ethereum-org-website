@@ -10,10 +10,9 @@ We want to make sure we show a variety of wallets covering the feature-rich land
 
 Anyone is free to suggest adding a wallet on ethereum.org. If there's a wallet that we have missed, please suggest it!
 
-Anyone is free to suggest a new wallet. Wallets are currently listed on:
+Wallets are currently listed on:
 
 - [ethereum.org/wallets/find-wallet/](/wallets/find-wallet/)
-- [ethereum.org/wallets/](/wallets/)
 
 Wallets are rapidly changing in Ethereum. We've tried to create a fair framework for consideration on ethereum.org but the listing criteria will change and evolve over time.
 
@@ -26,6 +25,12 @@ Wallets are rapidly changing in Ethereum. We've tried to create a fair framework
 - **Worked on by an active team** - this helps to ensure quality and that a user will get support for their queries.
 - **Honest and accurate listing information** - it is expected that any suggested listings from projects come with honest and accurate information. Products that falsify listing information, such as declaring your product is “open source” when it is not, will be removed.
 - **Point of contact** - A point of contact for the wallet will greatly help us get accurate information when changes are made. This will keep updating ethereum.org manageable when gathering future information.
+- **EIP-1559 (type 2) transactions** - your wallet must support EIP-1559 (type 2) transactions.
+- **Good user experience** - While UX is subjective, if several core team members test the product and find it difficult to use, we reserve the right to reject the wallet and will instead provide useful suggestions to improve. This is done to protect our user base that is mostly comprised of beginners. 
+
+### Product removals {#product-removals}
+
+- **Updated information** - Wallet providers are responsible for resubmitting their wallet information every 6 months to ensure validity and relevance of provided information (even if there are no changes to their product). If the product team fails to do so, ethereum.org may remove the project from the page. 
 
 ### Other criteria: the nice-to-haves {#the-nice-to-haves}
 
@@ -45,7 +50,6 @@ Wallets are rapidly changing in Ethereum. We've tried to create a fair framework
 - **Customize gas fees** - your wallet allows users to customize their transaction gas fees (base fee, priority fee, max fee).
 - **ENS support** - your wallet allows users to send transactions to ENS names.
 - **ERC-20 support** - your wallet allows users to import ERC-20 token contracts, or automatically queries and displays ERC-20 tokens.
-- **EIP-1559 (type 2) transactions** - your wallet supports EIP-1559 (type 2) transactions.
 - **Buy crypto** - your wallet supports users directly purchasing and onboarding to crypto.
 - **Sell for fiat** - your wallet supports users selling and withdrawing to fiat directly to card or a bank account.
 - **Multisig** - your wallet supports multiple signatures to sign a transaction.
@@ -68,7 +72,8 @@ As is the fluid nature of Ethereum, teams and products come and go and innovatio
 - ensure that all wallets and dapps listed still fulfil our criteria
 - verify there aren't products that have been suggested that meet more of our criteria than the ones currently listed
 
-Ethereum.org is maintained by the open source community & we rely on the community to help keep this up to date. If you notice any information about listed wallets that needs to be updated, please [open an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) or [pull request](https://github.com/ethereum/ethereum-org-website/pulls)!
+ethereum.org is maintained by the open source community & we rely on the community to help keep this up to date. If you notice any information about listed wallets that needs to be updated, please [open an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) or [pull request](https://github.com/ethereum/ethereum-org-website/pulls)!
+
 
 ## Terms of use {#terms-of-use}
 

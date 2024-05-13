@@ -83,6 +83,7 @@ lang: ja
 - [Ethereum.orgデザインシステム](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity、Polygonによるデザインシステム](https://www.figma.com/community/file/1073921725197233598/finity-design-system) (Figma)
 - [Klerosデザインシステム](https://www.figma.com/community/file/999852250110186964/kleros-design-system) (Figma)
+- [Safeデザインシステム](https://www.figma.com/community/file/1337417127407098506/safe-design-system) (Figma)
 - [ENSデザインシステム](https://thorin.ens.domains/)
 - [Mirrorデザインシステム](https://degen-xyz.vercel.app/)
 

@@ -10,17 +10,17 @@ lang: zh
 published: 2021-01-13
 ---
 
-本教程将帮助您设置 Geth 节点的监测方法，以便更好地了解其性能并发现潜在问题。
+本教程将帮助你设置 Geth 节点的监测方法，以便更好地了解其性能并发现潜在问题。
 
 ## 前提条件 {#prerequisites}
 
-- 您应该已经运行一个 Geth 实例。
+- 你应该已经运行一个 Geth 实例。
 - 大部分步骤和示例都针对 linux 环境，基础的终端知识会有所帮助。
 - 请观看这段关于 Geth 指标集的概览视频：[监测以太坊基础设施（作者 Péter Szilágyi）](https://www.youtube.com/watch?v=cOBab8IJMYI)
 
 ## 监测堆栈 {#monitoring-stack}
 
-以太坊客户端收集大量数据，可以通过时序数据库读取这些数据。 为了便于监测，您可以将数据输入数据可视化软件。 下面提供了多种选项供您选择：
+以太坊客户端收集大量数据，可以通过时序数据库读取这些数据。 为了便于监测，你可以将数据输入数据可视化软件。 下面提供了多种选项供你选择：
 
 - [Prometheus](https://prometheus.io/)（拉取模式）
 - [InfluxDB](https://www.influxdata.com/get-influxdb/)（推送模式）
@@ -29,13 +29,13 @@ published: 2021-01-13
 - [Datadog](https://www.datadoghq.com/)
 - [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 
-还可以选择 [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter)，它是一个用 InfluxDB 和 Grafana 预先配置的选项。 您可以使用 docker 和适用于树莓派 4 的 [Ethbian 操作系统](https://ethbian.org/index.html) 轻松设置它。
+还可以选择 [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter)，它是一个用 InfluxDB 和 Grafana 预先配置的选项。 你可以使用 docker 和适用于树莓派 4 的 [Ethbian 操作系统](https://ethbian.org/index.html) 轻松设置它。
 
-在本教程中，我们将设置您的 Geth 客户端，将数据推送到 InfluxDB 以创建数据库，并设置 Grafana 来对数据进行图形可视化。 手动操作将帮助您更好地理解这一过程，您可以加以改动，并在不同的环境中部署。
+在本教程中，我们将设置你的 Geth 客户端，将数据推送到 InfluxDB 以创建数据库，并设置 Grafana 来对数据进行图形可视化。 手动操作将帮助你更好地理解这一过程，你可以加以改动，并在不同的环境中部署。
 
 ## 设置 InfluxDB {#setting-up-influxdb}
 
-首先，下载并安装 InfluxDB。 [Influxdata 下载页面](https://portal.influxdata.com/downloads/)提供了多种下载选项。 选择适合您安装环境的下载选项。 您还可以通过[资源库](https://repos.influxdata.com/)安装它。 例如，在基于 Debian 的发行版中：
+首先，下载并安装 InfluxDB。 [Influxdata 下载页面](https://portal.influxdata.com/downloads/)提供了多种下载选项。 选择适合你安装环境的下载选项。 你还可以通过[资源库](https://repos.influxdata.com/)安装它。 例如，在基于 Debian 的发行版中：
 
 ```
 curl -tlsv1.3 --proto =https -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add
@@ -48,19 +48,19 @@ sudo systemctl start influxdb
 sudo apt install influxdb-client
 ```
 
-在成功安装 InfluxDB 后，确保它在后台运行。 默认情况下，可以通过 `localhost:8086` 访问它。 在使用 `influx` 客户端前，您必须创建具有管理员权限的新用户。 该用户将进行高级管理，创建数据库和用户。
+在成功安装 InfluxDB 后，确保它在后台运行。 默认情况下，可以通过 `localhost:8086` 访问它。 在使用 `influx` 客户端前，你必须创建具有管理员权限的新用户。 该用户将进行高级管理，创建数据库和用户。
 
 ```
 curl -XPOST "http://localhost:8086/query" --data-urlencode "q=CREATE USER username WITH PASSWORD 'password' WITH ALL PRIVILEGES"
 ```
 
-现在，您可以用此用户的身份通过 influx 客户端进入 [InfluxDB 命令行](https://docs.influxdata.com/influxdb/v1.8/tools/shell/)。
+现在，你可以用此用户的身份通过 influx 客户端进入 [InfluxDB 命令行](https://docs.influxdata.com/influxdb/v1.8/tools/shell/)。
 
 ```
 influx -username 'username' -password 'password'
 ```
 
-您可以通过其命令行直接与 InfluxDB 通信，为 geth 指标创建数据库和用户。
+你可以通过其命令行直接与 InfluxDB 通信，为 geth 指标创建数据库和用户。
 
 ```
 create database geth
@@ -92,7 +92,7 @@ geth --metrics --metrics.influxdb --metrics.influxdb.endpoint "http://0.0.0.0:80
 
 此标记可以附加到启动客户端的命令或保存到配置文件中。
 
-您可以通过在数据库中列出指标来验证 Geth 是否成功推送了数据。 在 InfluxDB 命令行中:
+你可以通过在数据库中列出指标来验证 Geth 是否成功推送了数据。 在 InfluxDB 命令行中:
 
 ```
 use geth
@@ -101,7 +101,7 @@ show measurements
 
 ## 设置 Grafana {#setting-up-grafana}
 
-下一步是安装 Grafana，后者通过图形解释数据。 按照 Grafana 文档中针对您安装环境的安装过程操作。 如果不想安装其他版本，确保安装 OSS 版本。 下面是通过资源库安装 发行版本的示例安装步骤：
+下一步是安装 Grafana，后者通过图形解释数据。 按照 Grafana 文档中针对你安装环境的安装过程操作。 如果不想安装其他版本，确保安装 OSS 版本。 下面是通过资源库安装 发行版本的示例安装步骤：
 
 ```
 curl -tlsv1.3 --proto =https -sL https://packages.grafana.com/gpg.key | sudo apt-key add -
@@ -112,11 +112,11 @@ sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 ```
 
-在 Grafana 开始运行后，应该能够在 `localhost:3000` 访问它。 使用您喜欢的浏览器访问此路径，然后用默认凭据登录（用户：`admin` 和密码：`admin`）。 当提示时，更改默认密码并保存。
+在 Grafana 开始运行后，应该能够在 `localhost:3000` 访问它。 使用你喜欢的浏览器访问此路径，然后用默认凭据登录（用户：`admin` 和密码：`admin`）。 当提示时，更改默认密码并保存。
 
 ![](./grafana1.png)
 
-您将被重定向到 Grafana 主页。 首先，设置您的源数据。 点击左边栏中的配置图标并选择“Data sources”。
+你将被重定向到 Grafana 主页。 首先，设置你的源数据。 点击左边栏中的配置图标并选择“Data sources”。
 
 ![](./grafana2.png)
 
@@ -128,7 +128,7 @@ sudo systemctl start grafana-server
 
 ![](./grafana4.png)
 
-如果您在同台一机器上运行工具，数据源配置就相当简单。 您需要设置 InfluxDB 地址和详细信息，以便访问数据库。 请参考下图。
+如果你在同台一机器上运行工具，数据源配置就相当简单。 你需要设置 InfluxDB 地址和详细信息，以便访问数据库。 请参考下图。
 
 ![](./grafana5.png)
 
@@ -136,7 +136,7 @@ sudo systemctl start grafana-server
 
 ![](./grafana6.png)
 
-现在 Grafana 设置为读取 InfluxDB 中的数据。 此时，您需要创建一个解释和显示数据的仪表板。 仪表板属性是在 JSON 文件中编码的，可让任何人创建并轻松导入。 在左侧栏上，点击“Create and Import”。
+现在 Grafana 设置为读取 InfluxDB 中的数据。 此时，你需要创建一个解释和显示数据的仪表板。 仪表板属性是在 JSON 文件中编码的，可让任何人创建并轻松导入。 在左侧栏上，点击“Create and Import”。
 
 ![](./grafana7.png)
 
@@ -144,4 +144,4 @@ sudo systemctl start grafana-server
 
 ![](./grafana8.png)
 
-您可以修改您的仪表板。 每个面板都可以编辑、移动、删除或添加。 您可以更改您的配置。 一切由您决定！ 要了解有关仪表板工作原理的更多信息，请参阅 [Grafana 文档](https://grafana.com/docs/grafana/latest/dashboards/)。 您也可能对[警报](https://grafana.com/docs/grafana/latest/alerting/)感兴趣。 这可以让您设置在指标达到特定值时的提醒通知。 支持各种交流渠道。
+你可以修改你的仪表板。 每个面板都可以编辑、移动、删除或添加。 你可以更改你的配置。 一切由你决定！ 要了解有关仪表板工作原理的更多信息，请参阅 [Grafana 文档](https://grafana.com/docs/grafana/latest/dashboards/)。 你也可能对[警报](https://grafana.com/docs/grafana/latest/alerting/)感兴趣。 这可以让你设置在指标达到特定值时的提醒通知。 支持各种交流渠道。
