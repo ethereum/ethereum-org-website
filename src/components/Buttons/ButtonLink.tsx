@@ -4,7 +4,7 @@ import { BaseLink, type LinkProps } from "@/components/Link"
 import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
 export type ButtonLinkProps = LinkProps &
-  Omit<ButtonProps, "toId" | "onClick"> & {
+  Omit<ButtonProps, "toId"> & {
     customEventOptions?: MatomoEventOptions
   }
 
