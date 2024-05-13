@@ -22,25 +22,11 @@ import type { Lang } from "@/lib/types"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-// const RechartText = chakra(Text, {
-//   shouldForwardProp: (prop) => {
-//     const isValidRechartProp = [
-//       "width",
-//       "children",
-//       "x",
-//       "y",
-//       "dy",
-//       "angle",
-//       "scaleToFit",
-//       "textAnchor",
-//       "verticalAnchor",
-//       "breakAll",
-//       "maxLines",
-//     ].includes(prop)
-
-//     return isValidRechartProp
-//   },
-// })
+import {
+  ENERGY_CONSUMPTION_CHART_COLORS,
+  ENERGY_CONSUMPTION_CHART_DATA,
+} from "@/lib/constants"
+import { splitLongLabels } from "@/lib/utils/charts"
 
 // ChartDataLabels required to display y-labels on top of bars
 ChartJS.register(
@@ -50,41 +36,6 @@ ChartJS.register(
   BarElement,
   ChartDataLabels
 )
-
-// TODO: move to constants
-const ENERGY_CONSUMPTION_CHART_COLORS = [
-  "#FF0000",
-  "#D7B14A",
-  "#D7B14A",
-  "#71BB8A",
-  "#C1B6F5",
-  "#E50914",
-  "#E50914",
-  "#C1B6F5",
-  "#E50914",
-  "#C1B6F5",
-]
-
-// TODO: move to utils/charts
-const splitLongLabels = (label) => {
-  const labelLength = label.length
-  const splittedLabel: any[] = label
-
-  for (let i = 0; i < labelLength; i++) {
-    const word = label[i].trim().split(" ")
-
-    if (word.length > 1) {
-      splittedLabel[i] = word
-    }
-  }
-
-  return splittedLabel
-}
-
-// TODO: move to constants
-const ENERGY_CONSUMPTION_CHART_DATA = [
-  190, 149, 131, 34, 21, 19, 0.457, 0.26, 0.02, 0.0026,
-]
 
 const EnergyConsumptionChart = () => {
   const { t } = useTranslation("page-what-is-ethereum")
@@ -170,6 +121,7 @@ const EnergyConsumptionChart = () => {
   }
 
   const chartData = {
+    // TODO: fix fn not triggering for translations
     labels: splitLongLabels(labels),
     datasets: [
       {

@@ -149,3 +149,21 @@ export const DEFAULT_GLOSSARY_NS = "glossary"
 export const HAMBURGER_BUTTON_ID = "mobile-menu-button"
 export const MOBILE_LANGUAGE_BUTTON_NAME = "mobile-language-button"
 export const DESKTOP_LANGUAGE_BUTTON_NAME = "desktop-language-button"
+
+// Charts
+export const ENERGY_CONSUMPTION_CHART_DATA = [
+  190, 149, 131, 34, 21, 19, 0.457, 0.26, 0.02, 0.0026,
+]
+
+export const ENERGY_CONSUMPTION_CHART_COLORS = [
+  "#FF0000",
+  "#D7B14A",
+  "#D7B14A",
+  "#71BB8A",
+  "#C1B6F5",
+  "#E50914",
+  "#E50914",
+  "#C1B6F5",
+  "#E50914",
+  "#C1B6F5",
+]

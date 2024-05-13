@@ -104,7 +104,6 @@ export const GridItem = ({ metric }: GridItemProps) => {
     borderWidth: 1,
     tension: 0.3,
     fill: true,
-    // TODO: move to utils
     backgroundColor: (context: ScriptableContext<"line">) => {
       const ctx = context.chart.ctx
       const gradient = ctx.createLinearGradient(0, 0, 0, 220)
