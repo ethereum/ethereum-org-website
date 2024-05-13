@@ -1,11 +1,11 @@
 ---
-title: "Configuración de Solidity y Truffle de integración continua"
-description: Cómo configurar Travis o Circle CI para pruebas de Truffle junto con conplementos útiles
+title: "Configuración de integración continua de Solidity y Truffle"
+description: Cómo configurar Travis o Circle CI para pruebas de Truffle junto con complementos útiles
 author: Markus Waas
 lang: es
 tags:
   - "solidity"
-  - "contratos Inteligentes"
+  - "contratos inteligentes"
   - "pruebas"
   - "truffle"
   - "ganache"
@@ -37,11 +37,11 @@ script:
   - npm test
 ```
 
-Lo estamos manteniendo simple por ahora y sólo estamos ejecutando el script de prueba que ejecuta las pruebas individuales de Truffle. Pero tenemos un problema, no habrá una blockchain disponible en la máquina Travis CI. Una solución simple para esto es `npm install ganache-cli` y simplemente ejecutarlo antes de la prueba. Puedes hacer esto al agregar un guión basj con la línea npx `ganache-cli > 7dev/null` y antes de `llamada de prueba truffle npx`. El [ejemplo completo de bash script](https://github.com/gorgos/Truffle-CI-Example/blob/master/scripts/run_tests.sh).
+Lo haremos simple por ahora y solo ejecutaremos el script de prueba que ejecuta las pruebas unitarias o individuales de Truffle. Pero tenemos un problema, no habrá una cadena de bloques disponible en la máquina de Travis CI. Una solución simple para esto es `npm install ganache-cli` y simplemente ejecutarlo antes de la prueba. Puede hacer esto agregando un bash script con la línea npx `ganache-cli > 7dev/null` y antes de la llamada `npx truffle test`. El [bash script de ejemplo completo](https://github.com/gorgos/Truffle-CI-Example/blob/master/scripts/run_tests.sh).
 
-## Configurando Circle CI {#setting-up-circle-ci}
+## Configurar Circle CI {#setting-up-circle-ci}
 
-[CircleCI](https://circleci.com/) requiere un archivo config más grande. El comando adicional [`npm ci`](https://docs.npmjs.com/cli/ci.html) es automáticante hecho en Travis. Instala las dependencias más rápido y más seguras que `npm install` lo hace. Otra vez usamos el mismo guión de la versión Travis para ejecutar ganache-cli antes de las pruebas.
+[CircleCI](https://circleci.com/) requiere un archivo de configuración más grande. El comando adicional [`npm ci`](https://docs.npmjs.com/cli/ci.html) se hace automáticante en Travis. Instala las dependencias más rápido y de forma más segura que `npm install`. Otra vez usamos el mismo script de la versión de Travis para ejecutar ganache-cli antes de las pruebas.
 
 ```yml
 version: 2
@@ -97,18 +97,18 @@ workflows:
             - dependencies
 ```
 
-## Añadiendo el plugin de eth-gas-reporter {#adding-the-eth-gas-reporter-plugin}
+## Añadir el complemento eth-gas-reporter {#adding-the-eth-gas-reporter-plugin}
 
-El puglin de eth-gas-reporter es muy útil para llevar el rastro de los costos de las funciones de gas de tu contrato inteligente. Tenerlo en tu CI seguirá siendo útil para mostrar diferencias cuando se agreguen la solicitud de pull.
+El complemento eth-gas-reporter es muy útil para llevar un seguimiento de los costos de gas de las funciones de su contrato inteligente. Tenerlo en su CI será útil además para mostrar diferencias cuando se agreguen solicitudes de pull.
 
-### Paso 1: Instalar el plugin de eth-gas-reporter y comprobantes de código {#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
+### Paso 1: Instalar el complemento eth-gas-reporter y comprobaciones de código {#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
 
 ```bash
 npm install --save-dev eth-gas-reporter
 npm install --save-dev @codechecks/client
 ```
 
-### Paso 2: Agrega el plugin a la configuración de moca adentro de tu truffle-config.js {#step-2-add-the-plugin-to-the-mocha-settings-inside-your-truffle-configjs}
+### Paso 2: Agrega el complemento a la configuración de moca dentro de su truffle-config.js {#step-2-add-the-plugin-to-the-mocha-settings-inside-your-truffle-configjs}
 
 [Ver opciones](https://github.com/cgewecke/eth-gas-reporter#options)
 
@@ -124,42 +124,42 @@ module.exports = {
 };
 ```
 
-### Paso 3: Agrega comprobantes de código.yml para el directorio de raíz de tu proyecto {#step-3-add-a-codechecksyml-to-your-projects-root-directory}
+### Paso 3: Agregar un codechecks.yml al directorio raíz de su proyecto {#step-3-add-a-codechecksyml-to-your-projects-root-directory}
 
 ```yml
 checks:
   - name: eth-gas-reporter/codechecks
 ```
 
-### Paso 4: Ejecuta el comprobante de código después del comando de prueba {#step-4-run-codechecks-after-the-test-command}
+### Paso 4: Ejecutar comprobaciones de código después del comando de prueba {#step-4-run-codechecks-after-the-test-command}
 
 ```bash
 - npm test
 - npx codechecks
 ```
 
-### Paso 5: Crear una cuenta de comprobación de código {#step-5-create-a-codechecks-account}
+### Paso 5: Crear una cuenta de Codechecks {#step-5-create-a-codechecks-account}
 
-- Crea una cuenta con [Codechecks](http://codechecks.io/).
-- Agrega el repositorio de GitHub.
-- Copia el secreto y agrega el `CC_SECRET=COPIED SECRET` a tu CI (vea aquí para [Travis](https://docs.travis-ci.com/user/environment-variables/), aquí para [CircleCi](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project)).
-- Ahora adelante y crea una solicitud de pull.
+- Cree una cuenta con [Codechecks](http://codechecks.io/).
+- Agregue el repositorio de GitHub a ella.
+- Copie el secreto y agregue el `CC_SECRET=COPIED SECRET` a su CI (vea aquí para [Travis](https://docs.travis-ci.com/user/environment-variables/), aquí para [CircleCi](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project)).
+- Ahora cree una solicitud de pull.
 
-Eso es todo. Ahora tú encontrarás un buen reporte acerca de los cambios en los costos del gas de tú solicitud de pull.
+Eso es todo. Ahora encontrará un buen reporte acerca de los cambios en los costos del gas de sus solicitud de pull.
 
-![Ejemplo de los reportes de gas](./gas-reports.png)
+![Reportes de gas de ejemplo](./gas-reports.png)
 
-## Agregando el plugin solidity-coverage {#adding-the-solidity-coverage-plugin}
+## Agregar el complemento solidity-coverage {#adding-the-solidity-coverage-plugin}
 
-Con el plugin solidity-coverage puedes chequear cuanto de tu rutas de código están cubiertas por tús pruebas. Agregar esto a tu CI lo hace muy conveniente para usar una vez que se coloca.
+Con el complemento solidity-coverage puede chequear cuánto de sus rutas de código están cubiertas por sus pruebas. Agregar esto a su CI es muy conveniente una vez hecha la configuración.
 
-### Paso 1: Crea un proyecto de metacoin e instala herramientas de cobertura {#step-1-create-a-metacoin-project-and-install-coverage-tools}
+### Paso 1: Crear un proyecto de metacoin e instalar herramientas de cobertura {#step-1-create-a-metacoin-project-and-install-coverage-tools}
 
 ```bash
 npm install --save-dev truffle coveralls solidity-coverage
 ```
 
-### Paso 2: Agregar solidity-coverage a la matriz de plugins en truffle-config.js {#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}
+### Paso 2: Agregar solidity-coverage a la matriz de complementos en truffle-config.js {#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}
 
 ```js
 module.exports = {
@@ -168,27 +168,27 @@ module.exports = {
 }
 ```
 
-### Paso 3: Agrega los comandos de cobertura al .travis.yml o Circle CI config.yml {#step-3-add-the-coverage-commands-to-the-travisyml-or-circle-ci-configyml}
+### Paso 3: Agregar los comandos de cobertura al .travis.yml o Circle CI config.yml {#step-3-add-the-coverage-commands-to-the-travisyml-or-circle-ci-configyml}
 
 ```bash
 - npx truffle run coverage
 - cat coverage/lcov.info | npx coveralls
 ```
 
-Cobertura de solidity comienza su propio ganache-cli, así que no tenemos que preocuparnos de esto. Sin embargo, no remplaces el comando de prueba normal, la cobertura de ganache-cli funciona diferente y es por lo tanto no reemplazable para ejecutar pruebas unitarias regulares.
+La cobertura de Solidity inicia su propio ganache-cli, así que no tenemos que preocuparnos de esto. Sin embargo, no remplace el comando de prueba normal, la cobertura de ganache-cli funciona diferente y es por lo tanto no reemplazable para ejecutar pruebas unitarias regulares.
 
-### Step 4: Agrega el repositorio a los coveralls {#step-4-add-repository-to-coveralls}
+### Step 4: Agregar repositorio a Coveralls {#step-4-add-repository-to-coveralls}
 
-- Crea una cuenta con [Coveralls](https://coveralls.io/).
-- Agrega el repositorio de GitHub.
-- Ahora adelante y crea una solicitud de pull.
+- Cree una cuenta con [Coveralls](https://coveralls.io/).
+- Agregue el repositorio de GitHub a ella.
+- Ahora cree una solicitud de pull.
 
 ![Ejemplo de coverall](./coverall.png)
 
 ## Otras ideas {#further-ideas}
 
-- [MythX](https://mythx.io/): Con MythX puedes automáticamente analizar la seguridad de tu contrato inteligente. Entonces tiene mucho sentido [agregar esto a tu CI](https://blog.mythx.io/howto/mythx-and-continuous-integration-part-1-circleci/).
-- [Linting](https://wikipedia.org/wiki/Lint_%28software%29): Un buen código puede ser aplicado hasta cierto grado con herramientas de linting. [Eslint](https://eslint.org/) trabaja genial para JavaScript, es [fácil de configurar](https://eslint.org/docs/user-guide/getting-started), mientras que [Solhint](https://protofire.github.io/solhint/) puede ser usadao por solidity.
-- Pruebas largas: Algunas veces es posible que desees agregar pruebas extremas, ej., pruebas a contratos con cientos de usuarios. Esto toma mucho tiempo. En lugar de ejecutar esos en cada ejecución de prueba, agregalos al CI.
+- [MythX](https://mythx.io/): Con MythX puede analizar automáticamente la seguridad de su contrato inteligente. Así que tiene mucho sentido [agregar esto a su CI](https://blog.mythx.io/howto/mythx-and-continuous-integration-part-1-circleci/).
+- [Linting](https://wikipedia.org/wiki/Lint_%28software%29): Un buen código puede ser aplicado hasta cierto grado con herramientas de linting. [Eslint](https://eslint.org/) funciona bien para JavaScript, es [fácil de configurar](https://eslint.org/docs/user-guide/getting-started), mientras que [Solhint](https://protofire.github.io/solhint/) se puede usar para Solidity.
+- Pruebas largas: Algunas veces es posible que desee agregar pruebas extremas, p. ej., probar contratos con cientos de usuarios. Esto toma mucho tiempo. En lugar de ejecutarlos en cada ejecución de prueba, agréguelos a la CI.
 
-Ahí lo tienes. Integración continua es una estrategía muy útil para su desarrollo. Puedes chequear un ejemplo completo en [Truffle-CI-Example](https://github.com/gorgos/Truffle-CI-Example). Solo asegurate de remover Circle-CI o Travis, ¡uno es suficiente!
+Ahí lo tiene. La integración continua es una estrategía muy útil para sus desarrollos. Puede ver un ejemplo completo en [Truffle-CI-Example](https://github.com/gorgos/Truffle-CI-Example). Solo asegúrese de eliminar Circle-CI o Travis, ¡con uno es suficiente!

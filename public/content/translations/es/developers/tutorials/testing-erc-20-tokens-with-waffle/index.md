@@ -1,5 +1,5 @@
 ---
-title: Prueba de tokens ERC-20 con Waffle
+title: Probar tokens ERC-20 con Waffle
 description: Aprende cómo probar smart contracts en Solidity y utiliza comparadores de smart contracts con Waffle.
 author: Vladislav Starostenko
 tags:
@@ -643,7 +643,7 @@ Algo como esto:
 
 ## Paso #1: Instala Waffle en tu proyecto [Link](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation) {#step-1-install-waffle-in-your-project}
 
-Para comenzar, instala `ethereum-waffle`. En este tutorial usaré `yarn`, para instalar `ethereum-waffle`:
+Para comenzar, instale `ethereum-waffle`. En este tutorial usaré `yarn`; para instalar `ethereum-waffle`, ejecute:
 
 ```bash
  yarn add --dev ethereum-waffle
@@ -651,7 +651,7 @@ Para comenzar, instala `ethereum-waffle`. En este tutorial usaré `yarn`, para i
 
 ## Paso #2: Escribe un contrato inteligente [Link](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-a-contract) {#step-2-write-a-smart-contract}
 
-En este tutorial, usaré [ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/ded2b0a55c9c13731963ab7b85a70c8e73504bab/contracts/token/ERC20/ERC20.sol) de [OpenZeppelin](https://openzeppelin.com).
+En este tutorial, usaré el token [ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/ded2b0a55c9c13731963ab7b85a70c8e73504bab/contracts/token/ERC20/ERC20.sol) de [OpenZeppelin](https://openzeppelin.com).
 
 Por lo tanto, añade `OpenZeppelin` instalándolo con `yarn`:
 
@@ -659,7 +659,7 @@ Por lo tanto, añade `OpenZeppelin` instalándolo con `yarn`:
  yarn add @openzeppelin/contracts -D
 ```
 
-Luego crea el contrato `BasicToken.sol` en el directorio `src`:
+Luego cree el contrato `BasicToken.sol` en el directorio `src`:
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -677,7 +677,7 @@ contract BasicToken is ERC20 {
 
 ## Paso #3: Compila tu contrato inteligente [Link](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract) {#step-3-compile-your-smart-contract}
 
-Para compilar tu contrato inteligente, agrega la siguiente entrada en el `package.json` de tu proyecto:
+Para compilar su contrato inteligente, agregue la siguiente entrada en el `package.json` de su proyecto:
 
 ```json
 {
@@ -687,7 +687,7 @@ Para compilar tu contrato inteligente, agrega la siguiente entrada en el `packag
 }
 ```
 
-También, agrega el archivo `waffle.json` en el directorio principal de tu proyecto.
+También, agregue el archivo `waffle.json` en el directorio principal de su proyecto.
 
 Un ejemplo de la configuración de `waffle.json`:
 
@@ -700,11 +700,11 @@ Un ejemplo de la configuración de `waffle.json`:
 }
 ```
 
-Puedes leer más acerca de la configuración de Waffle [here](https://ethereum-waffle.readthedocs.io/en/latest/configuration.html#configuration).
+Puede leer más acerca de la configuración de Waffle [aquí](https://ethereum-waffle.readthedocs.io/en/latest/configuration.html#configuration).
 
-Luego ejecuta `yarn build` para compilar tu contrato inteligente.
+Luego ejecute simplemente `yarn build` para compilar su contrato inteligente.
 
-Deberías ver que Waffle ha compilado tu contrato y ha ubicado la salida JSON resultante dentro del directorio `build`.
+Debería ver que Waffle ha compilado el contrato y ha ubicado la salida JSON resultante dentro del directorio `build`.
 
 <details>
 <summary>BasicToken.json</summary>
@@ -1045,7 +1045,7 @@ describe("BasicToken", () => {
 
 Por lo tanto, utilizamos el método `deployContract` de `Waffle`para desplegar nuestro token. Como argumentos, debemos pasar `wallet`, el archivo json compilado de nuestro contrato y el balance por defecto.
 
-`Waffle` también nos permite crear una `wallet`, lo que hace muy sencillo desplegar un contrato.
+`Waffle` también nos permite crear un `wallet`, lo que hace muy sencillo implementar un contrato.
 
 Puede leer más sobre `monedero` [aquí](https://ethereum-waffle.readthedocs.io/en/latest/basic-testing.html?highlight=wallet#getting-wallets) y puede leer más sobre la función de despliegue [aquí](https://ethereum-waffle.readthedocs.io/en/latest/basic-testing.html?highlight=wallet#deploying-contracts).
 
@@ -1129,9 +1129,9 @@ it("Send transaction changes sender and receiver balances", async () => {
 
 Se espera que la transacción se pase como callback (necesitamos comprobar el saldo antes de la llamada) o como una respuesta de la transacción.
 
-## Felicidades {#congratulations}
+## Felicitaciones {#congratulations}
 
-**¡Felicidades! Lo has conseguido a través de mi tutorial. Has dado tu primer gran paso para probar contratos inteligentes con Waffle.**
+**¡Felicitaciones! Lo has conseguido a través de mi tutorial. Has dado tu primer gran paso para probar contratos inteligentes con Waffle.**
 
 **Código de este tutorial que puedes encontrar [aquí](https://github.com/VladStarostenko/tutorial-for-ethereum-org-website).**
 

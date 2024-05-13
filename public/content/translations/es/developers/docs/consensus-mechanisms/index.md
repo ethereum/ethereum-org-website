@@ -82,7 +82,7 @@ Ethereum utiliza un mecanismo de consenso conocido como [Gasper](/developers/doc
 - [Sobre la seguridad y el rendimiento de las cadenas de bloques de prueba de trabajo](https://eprint.iacr.org/2016/555.pdf)
 - [Fallo bizantino](https://en.wikipedia.org/wiki/Byzantine_fault)
 
-_¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite la página y añádalo._
+_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
 
 ## Temas relacionados {#related-topics}
 

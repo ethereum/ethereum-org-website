@@ -175,11 +175,11 @@ def withdraw():
 
 # Finalizar la subasta y enviar la oferta más alta
 # al beneficiario.
-@externo
+@external
 def endAuction():
-    # Es una buena guía para estructurar funciones que interactúan
-    # con otros contratos (es decir, ellos llaman funciones o envían ether)
-    # en tres frases:
+    # It is a good guideline to structure functions that interact
+    # with other contracts (i.e. they call functions or send ether)
+    # into three phases:
     # 1. condiciones de comprobación
     # 2. realizar acciones (condiciones potencialmente cambiantes)
     # 3. interactuando con otros contratos
@@ -275,19 +275,19 @@ El siguiente es un contrato simple implementado en Fe.
 ```
 type BookMsg = bytes[100]
 
-contrato GuestBook:
+contract GuestBook:
     pub guest_book: map<address, BookMsg>
 
     event Signed:
         book_msg: BookMsg
 
     pub def sign(book_msg: BookMsg):
-        self. uest_book[msg.sender] = book_msg
+        self.guest_book[msg.sender] = book_msg
 
         emit Signed(book_msg=book_msg)
 
     pub def get_msg(addr: address) -> BookMsg:
-        return self. uest_book[addr].to_mem()
+        return self.guest_book[addr].to_mem()
 
 ```
 
