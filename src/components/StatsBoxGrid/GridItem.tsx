@@ -2,12 +2,10 @@ import {
   CategoryScale,
   Chart as ChartJS,
   Filler,
-  Legend,
   LinearScale,
   LineElement,
   PointElement,
   ScriptableContext,
-  Title,
 } from "chart.js"
 import { Line } from "react-chartjs-2"
 import { MdInfoOutline } from "react-icons/md"
@@ -96,9 +94,7 @@ export const GridItem = ({ metric }: GridItemProps) => {
     LinearScale,
     PointElement,
     LineElement,
-    Title,
-    Filler,
-    Legend
+    Filler
   )
 
   // ChartJS options
