@@ -1,14 +1,5 @@
 import React, { useState, useEffect, ReactNode } from "react"
-import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
-  Box,
-  HStack,
-  Icon,
-} from "@chakra-ui/react"
+import { Accordion, AccordionItem, Box, HStack, Icon } from "@chakra-ui/react"
 
 import { motion } from "framer-motion"
 import { MdExpandMore } from "react-icons/md"
