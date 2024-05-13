@@ -4,13 +4,11 @@ description: An non-technical introduction to zero-knowledge proofs for beginner
 lang: en
 ---
 
-# What are zero-knowledge proofs? {#what-are-zk-proofs}
+## What are zero-knowledge proofs? {#what-are-zk-proofs}
 
 A zero-knowledge proof is "a method by which one party (the prover) can prove to another party (the verifier) that something is true, without revealing any information apart from the fact that this specific statement is true" ([Goldwasser, Micali, and Rackoff (1995)](http://people.csail.mit.edu/silvio/Selected%20Scientific%20Papers/Proof%20Systems/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)).  
 
 Zero-knowledge proofs have grown in poularity over time and are now used in several cryptocurrency applications.
-
-<YouTube id="fOGdb1CTu5c" />
 
 ## Why do we need zero-knowledge proofs? {#why-zero-knowledge-proofs-are-important}
 
@@ -183,13 +181,14 @@ But there’s really no way for users to assess the honesty of participants and 
 
 ### Quantum computing threats {#quantum-computing-threats}
 
-ZK-SNARK uses elliptic curve cryptography for encryption. While the elliptic curve discrete logarithm problem is assumed to be intractable for now, the development of quantum computers could break this security model in the future.
+ZK-SNARK uses elliptic curve cryptography ([ECDSA](/glossary/#ecdsa)) for encryption. While the ECDSA algorithm is secure for now, the development of quantum computers could break its security model in the future.
 
-ZK-STARK is considered immune to the threat of quantum computing, as it only relies on collision-resistant hash functions for its security. Unlike public-private key pairings used in elliptic curve cryptography, collision-resistant hashing is more difficult for quantum computing algorithms to break.
+ZK-STARK is considered immune to the threat of quantum computing, as it uses collision-resistant hashes for encryption. Unlike public-private key pairings used in elliptic curve cryptography, collision-resistant hashing is more difficult for quantum computing algorithms to break.
 
 ## Further reading {#further-reading}
 
-- [Overview of use cases for zero-knowledge proofs](https://pse.dev/projects) — _Privacy and Scaling Explorations Team_
+- [Computer Scientist Explains One Concept in 5 Levels of Difficulty | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Wired YouTube channel_
+- [Overview of use cases for zero-knowledge proofs](https://appliedzkp.org/#Projects) — _Privacy and Scaling Explorations Team_
 - [SNARKs vs. STARKS vs. Recursive SNARKs](https://www.alchemy.com/overviews/snarks-vs-starks) — _Alchemy Overviews_
 - [A Zero-Knowledge Proof: Improving Privacy on a Blockchain](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARKs — A Realistic Zero-Knowledge Example and Deep Dive](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
