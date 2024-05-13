@@ -1,16 +1,15 @@
 import React from "react"
+import {
+  BarElement,
+  CategoryScale,
+  Chart as ChartJS,
+  Legend,
+  LinearScale,
+} from "chart.js"
+import ChartDataLabels from "chartjs-plugin-datalabels"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import {
-  Bar,
-  BarChart,
-  Cell,
-  LabelList,
-  Legend,
-  ResponsiveContainer,
-  Text,
-  XAxis,
-} from "recharts"
+import { Bar } from "react-chartjs-2"
 import {
   Box,
   Center,
@@ -23,56 +22,69 @@ import type { Lang } from "@/lib/types"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-type CustomTickProps = {
-  x: number
-  y: number
-  payload: { value: number | string }
+// const RechartText = chakra(Text, {
+//   shouldForwardProp: (prop) => {
+//     const isValidRechartProp = [
+//       "width",
+//       "children",
+//       "x",
+//       "y",
+//       "dy",
+//       "angle",
+//       "scaleToFit",
+//       "textAnchor",
+//       "verticalAnchor",
+//       "breakAll",
+//       "maxLines",
+//     ].includes(prop)
+
+//     return isValidRechartProp
+//   },
+// })
+
+// ChartDataLabels required to display y-labels on top of bars
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  Legend,
+  BarElement,
+  ChartDataLabels
+)
+
+// TODO: move to constants
+const ENERGY_CONSUMPTION_CHART_COLORS = [
+  "#FF0000",
+  "#D7B14A",
+  "#D7B14A",
+  "#71BB8A",
+  "#C1B6F5",
+  "#E50914",
+  "#E50914",
+  "#C1B6F5",
+  "#E50914",
+  "#C1B6F5",
+]
+
+// TODO: move to utils/charts
+const splitLongLabels = (label) => {
+  const labelLength = label.length
+  const splittedLabel: any[] = label
+
+  for (let i = 0; i < labelLength; i++) {
+    const word = label[i].trim().split(" ")
+
+    if (word.length > 1) {
+      splittedLabel[i] = word
+    }
+  }
+
+  return splittedLabel
 }
 
-type Data = Array<{
-  name: string
-  amount: number
-  color: string
-}>
-
-const RechartText = chakra(Text, {
-  shouldForwardProp: (prop) => {
-    const isValidRechartProp = [
-      "width",
-      "children",
-      "x",
-      "y",
-      "dy",
-      "angle",
-      "scaleToFit",
-      "textAnchor",
-      "verticalAnchor",
-      "breakAll",
-      "maxLines",
-    ].includes(prop)
-
-    return isValidRechartProp
-  },
-})
-
-const CustomTick = ({ x, y, payload }: CustomTickProps) => {
-  return (
-    <g transform={`translate(${x},${y})`}>
-      <RechartText
-        x={0}
-        y={0}
-        dy={15}
-        fill="text"
-        width={50}
-        textAnchor="middle"
-        verticalAnchor="middle"
-        fontSize="2xs"
-      >
-        {payload.value}
-      </RechartText>
-    </g>
-  )
-}
+// TODO: move to constants
+const ENERGY_CONSUMPTION_CHART_DATA = [
+  190, 149, 131, 34, 21, 19, 0.457, 0.26, 0.02, 0.0026,
+]
 
 const EnergyConsumptionChart = () => {
   const { t } = useTranslation("page-what-is-ethereum")
@@ -80,124 +92,212 @@ const EnergyConsumptionChart = () => {
   const { locale } = useRouter()
   const isRtl = isLangRightToLeft(locale as Lang)
 
-  const data = useBreakpointValue<Data>({
-    base: [
-      {
-        name: t("energy-consumption-chart-global-data-centers-label"),
-        amount: 190,
-        color: "#FF0000",
+  // TODO: fix
+  const labels = [
+    t("energy-consumption-chart-global-data-centers-label"),
+    t("energy-consumption-chart-btc-pow-label"),
+    t("energy-consumption-gold-mining-cbeci-label"),
+    t("energy-consumption-chart-gaming-us-label"),
+    t("energy-consumption-chart-eth-pow-label"),
+    "Google",
+    t("energy-consumption-chart-netflix-label"),
+    t("energy-consumption-chart-paypal-label"),
+    t("energy-consumption-chart-airbnb-label"),
+    t("energy-consumption-chart-eth-pos-label"),
+  ]
+
+  const chartOptions = {
+    // chart styles
+    type: "bar",
+    aspectRatio: 1.1,
+    maintainAspectRatio: true,
+    barThickness: 38,
+    borderRadius: 4,
+    minBarLength: 1,
+    tooltips: { enabled: false },
+    hover: { mode: null },
+    backgroundColor: ENERGY_CONSUMPTION_CHART_COLORS,
+    plugins: {
+      // required for labels on top
+      datalabels: {
+        // https://chartjs-plugin-datalabels.netlify.app/guide/positioning.html#alignment-and-offset
+        anchor: "end", // position of the labels (start, end, center)
+        align: "end", // alignment of the labels (start, end, center)
+        offset: -0.5, // distance (in pixels) to pull the label away from the anchor point
+        font: {
+          size: "14px",
+        },
       },
-      {
-        name: t("energy-consumption-chart-btc-pow-label"),
-        amount: 149,
-        color: "#F2A900",
+      // hide legend
+      legend: {
+        display: true,
+        position: "bottom",
+        align: "center",
+        labels: {
+          font: {
+            weight: "bold",
+            size: "16px",
+          },
+          color: "text", // TODO: fix theme colors on dark mode
+          boxWidth: 0,
+        },
+        rtl: isRtl,
       },
-      {
-        name: t("energy-consumption-chart-gaming-us-label"),
-        amount: 34,
-        color: "#71BB8A",
+      // hide chart title
+      title: {
+        display: false,
       },
-      {
-        name: t("energy-consumption-chart-eth-pow-label"),
-        amount: 21,
-        color: "#C1B6F5",
+    },
+    // axis styles
+    scales: {
+      y: {
+        display: false,
+        grid: {
+          display: false,
+        },
       },
-      {
-        name: t("energy-consumption-chart-eth-pos-label"),
-        amount: 0.0026,
-        color: "#C1B6F5",
+      x: {
+        display: true,
+        border: {
+          display: false,
+        },
+        grid: {
+          display: false,
+        },
       },
-    ],
-    sm: [
+    },
+  }
+
+  const chartData = {
+    labels: splitLongLabels(labels),
+    datasets: [
       {
-        name: t("energy-consumption-chart-global-data-centers-label"),
-        amount: 190,
-        color: "#FF0000",
-      },
-      {
-        name: t("energy-consumption-chart-btc-pow-label"),
-        amount: 149,
-        color: "#D7B14A",
-      },
-      {
-        name: t("energy-consumption-gold-mining-cbeci-label"),
-        amount: 131,
-        color: "#F2A900",
-      },
-      {
-        name: t("energy-consumption-chart-eth-pow-label"),
-        amount: 21,
-        color: "#C1B6F5",
-      },
-      {
-        name: t("energy-consumption-chart-netflix-label"),
-        amount: 0.457,
-        color: "#E50914",
-      },
-      {
-        name: t("energy-consumption-chart-eth-pos-label"),
-        amount: 0.0026,
-        color: "#C1B6F5",
-      },
-    ],
-    md: [
-      {
-        name: t("energy-consumption-chart-global-data-centers-label"),
-        amount: 190,
-        color: "#FF0000",
-      },
-      {
-        name: t("energy-consumption-chart-btc-pow-label"),
-        amount: 149,
-        color: "#D7B14A",
-      },
-      {
-        name: t("energy-consumption-gold-mining-cbeci-label"),
-        amount: 131,
-        color: "#D7B14A",
-      },
-      {
-        name: t("energy-consumption-chart-gaming-us-label"),
-        amount: 34,
-        color: "#71BB8A",
-      },
-      {
-        name: t("energy-consumption-chart-eth-pow-label"),
-        amount: 21,
-        color: "#C1B6F5",
-      },
-      {
-        name: "Google",
-        amount: 19,
-        color: "#E50914",
-      },
-      {
-        name: t("energy-consumption-chart-netflix-label"),
-        amount: 0.457,
-        color: "#E50914",
-      },
-      {
-        name: t("energy-consumption-chart-paypal-label"),
-        amount: 0.26,
-        color: "#C1B6F5",
-      },
-      {
-        name: t("energy-consumption-chart-airbnb-label"),
-        amount: 0.02,
-        color: "#E50914",
-      },
-      {
-        name: t("energy-consumption-chart-eth-pos-label"),
-        amount: 0.0026,
-        color: "#C1B6F5",
+        label: t("page-what-is-ethereum-energy-consumption-chart-legend"),
+        data: ENERGY_CONSUMPTION_CHART_DATA,
+        // barPercentage: 1.0,
+        // categoryPercentage: 1.0,
       },
     ],
-  })
+  }
+
+  // const data = useBreakpointValue<Data>({
+  //   base: [
+  //     {
+  //       name: t("energy-consumption-chart-global-data-centers-label"),
+  //       amount: 190,
+  //       color: "#FF0000",
+  //     },
+  //     {
+  //       name: t("energy-consumption-chart-btc-pow-label"),
+  //       amount: 149,
+  //       color: "#F2A900",
+  //     },
+  //     {
+  //       name: t("energy-consumption-chart-gaming-us-label"),
+  //       amount: 34,
+  //       color: "#71BB8A",
+  //     },
+  //     {
+  //       name: t("energy-consumption-chart-eth-pow-label"),
+  //       amount: 21,
+  //       color: "#C1B6F5",
+  //     },
+  //     {
+  //       name: t("energy-consumption-chart-eth-pos-label"),
+  //       amount: 0.0026,
+  //       color: "#C1B6F5",
+  //     },
+  //   ],
+  //   sm: [
+  //     {
+  //       name: t("energy-consumption-chart-global-data-centers-label"),
+  //       amount: 190,
+  //       color: "#FF0000",
+  //     },
+  //     {
+  //       name: t("energy-consumption-chart-btc-pow-label"),
+  //       amount: 149,
+  //       color: "#D7B14A",
+  //     },
+  //     {
+  //       name: t("energy-consumption-gold-mining-cbeci-label"),
+  //       amount: 131,
+  //       color: "#F2A900",
+  //     },
+  //     {
+  //       name: t("energy-consumption-chart-eth-pow-label"),
+  //       amount: 21,
+  //       color: "#C1B6F5",
+  //     },
+  //     {
+  //       name: t("energy-consumption-chart-netflix-label"),
+  //       amount: 0.457,
+  //       color: "#E50914",
+  //     },
+  //     {
+  //       name: t("energy-consumption-chart-eth-pos-label"),
+  //       amount: 0.0026,
+  //       color: "#C1B6F5",
+  //     },
+  //   ],
+  //   md: [
+  //     {
+  //       name: t("energy-consumption-chart-global-data-centers-label"),
+  //       amount: 190,
+  //       color: "#FF0000",
+  //     },
+  //     {
+  //       name: t("energy-consumption-chart-btc-pow-label"),
+  //       amount: 149,
+  //       color: "#D7B14A",
+  //     },
+  //     {
+  //       name: t("energy-consumption-gold-mining-cbeci-label"),
+  //       amount: 131,
+  //       color: "#D7B14A",
+  //     },
+  //     {
+  //       name: t("energy-consumption-chart-gaming-us-label"),
+  //       amount: 34,
+  //       color: "#71BB8A",
+  //     },
+  //     {
+  //       name: t("energy-consumption-chart-eth-pow-label"),
+  //       amount: 21,
+  //       color: "#C1B6F5",
+  //     },
+  //     {
+  //       name: "Google",
+  //       amount: 19,
+  //       color: "#E50914",
+  //     },
+  //     {
+  //       name: t("energy-consumption-chart-netflix-label"),
+  //       amount: 0.457,
+  //       color: "#E50914",
+  //     },
+  //     {
+  //       name: t("energy-consumption-chart-paypal-label"),
+  //       amount: 0.26,
+  //       color: "#C1B6F5",
+  //     },
+  //     {
+  //       name: t("energy-consumption-chart-airbnb-label"),
+  //       amount: 0.02,
+  //       color: "#E50914",
+  //     },
+  //     {
+  //       name: t("energy-consumption-chart-eth-pos-label"),
+  //       amount: 0.0026,
+  //       color: "#C1B6F5",
+  //     },
+  //   ],
+  // })
 
   return (
     <Center w="full">
       <Box maxW="500px" w="full">
-        <ResponsiveContainer height={500}>
+        {/* <ResponsiveContainer height={500}>
           <BarChart
             margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
             barGap={15}
@@ -235,7 +335,9 @@ const EnergyConsumptionChart = () => {
               ))}
             </Bar>
           </BarChart>
-        </ResponsiveContainer>
+        </ResponsiveContainer> */}
+        {/* TODO: isRtl ? data?.reverse() : data */}
+        <Bar options={chartOptions} data={chartData} />
       </Box>
     </Center>
   )
