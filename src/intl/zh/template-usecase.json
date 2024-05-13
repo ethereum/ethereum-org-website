@@ -4,8 +4,10 @@
   "template-usecase-dropdown-dao": "去中心化自治组织 (DAO)",
   "template-usecase-dropdown-social-networks": "去中心化社交网络",
   "template-usecase-dropdown-identity": "去中心化身份",
+  "template-usecase-dropdown-desci": "去中心化科学 (DeSci)",
+  "template-usecase-dropdown-refi": "再生金融（ReFi）",
   "template-usecase-dropdown": "以太坊使用案例",
-  "template-usecase-banner": "以太坊的用法不断开发和演进。添加任何您认为会使事情变得更清晰或更及时的信息。",
+  "template-usecase-banner": "以太坊的用法不断开发和演进。添加任何你认为会使事情变得更清晰或更及时的信息。",
   "template-usecase-edit-link": "编辑页面",
   "template-usecase-dropdown-aria": "使用案例下拉菜单"
 }

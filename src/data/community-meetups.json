@@ -1,10 +1,53 @@
 [
+    {
+    "title": "DC Onchain",
+    "emoji": ":us:",
+    "location": "Arlington, Virginia",
+    "link": "https://dc-onchain.com/"
+  },
+  {
+    "title": "Web3 Family",
+    "emoji": ":es:",
+    "location": "Barcelona",
+    "link": "https://www.meetup.com/web3family/"
+  },
+  {
+    "title": "CryptoCanal",
+    "emoji": ":nl:",
+    "location": "Amsterdam",
+    "link": "https://www.cryptocanal.org/agenda"
+  },
+  {
+    "title": "CryptoCanal",
+    "emoji": ":ch:",
+    "location": "Zurich",
+    "link": "https://www.cryptocanal.org/agenda"
+  },
+  {
+    "title": "Web3.NE",
+    "emoji": ":us:",
+    "location": "Omaha",
+    "link": "https://www.meetup.com/web3-ne/"
+  },
+  {
+    "title": "ETH Belgrade Community",
+    "emoji": "🇷🇸",
+    "location": "Belgrade",
+    "link": "https://ethbelgrade.rs/community"
+  },
+  {
+    "title": "ETHTbilisi",
+    "emoji": ":ge:",
+    "location": "Georgia",
+    "link": "https://lu.ma/ETHTbilisi"
+  },
   {
     "title": "ETH Nanjing",
     "emoji": ":cn:",
     "location": "Nanjing",
     "link": "https://lu.ma/ETHNanJing"
-  },{
+  },
+  {
     "title": "852dev.xyz",
     "emoji": ":hong_kong:",
     "location": "Hong Kong",
@@ -27,6 +70,36 @@
     "emoji": ":co:",
     "location": "Colombia",
     "link": "https://www.meetup.com/ethereum-bogota"
+  },
+    {
+    "title": "Ethereum Eje Cafetero",
+    "emoji": ":co:",
+    "location": "Colombia",
+    "link": "https://www.meetup.com/ethereum-eje-cafetero"
+  },
+    {
+    "title": "Ethereum Medellin",
+    "emoji": ":co:",
+    "location": "Colombia",
+    "link": "https://www.meetup.com/ethereum-medellin"
+  },
+    {
+    "title": "Ethereum Caribe",
+    "emoji": ":co:",
+    "location": "Colombia",
+    "link": "https://www.meetup.com/ethereum-caribe"
+  },
+    {
+    "title": "Ethereum Cali",
+    "emoji": ":co:",
+    "location": "Colombia",
+    "link": "https://www.meetup.com/ethereumcali"
+  },
+    {
+    "title": "Ethereum Arauca",
+    "emoji": ":co:",
+    "location": "Colombia",
+    "link": "https://www.meetup.com/ethereum-arauca"
   },
   {
     "title": "Bokky's Ethereum Workshop",
@@ -405,5 +478,17 @@
     "emoji": ":belgium:",
     "location": "Brussels",
     "link": "https://dao.brussels/"
-  }
+  },
+  {
+    "title": "Ethereum Edmonton Meetup",
+    "emoji": ":canada:",
+    "location": "Edmonton",
+    "link": "https://www.meetup.com/ethereum-edmonton-meetup/"
+  },
+  {
+    "title": "BeerFi Prague - Web3 on-chain dev Meetup",
+    "emoji": ":czech_republic:",
+    "location": "Prague",
+    "link": "https://www.meetup.com/web3-on-chain-dev-meetup-group/"
+  }    
 ]

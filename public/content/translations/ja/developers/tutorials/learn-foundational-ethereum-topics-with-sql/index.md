@@ -1,0 +1,272 @@
+---
+title: SQLでイーサリアムの基礎的なトピックについて学ぶ
+description: このチュートリアルは、SQL（Structured Query Language）を使用してブロックチェーン上のデータに対するクエリを実行することで、トランザクション、ブロック、ガスといったイーサリアムの基本的な概念についての理解を深めるものです。
+author: "Paul Apivat"
+tags:
+  - "SQL"
+  - "クエリ"
+  - "トランザクション"
+skill: beginner
+lang: ja
+published: 2021-05-11
+source: paulapivat.com
+sourceUrl: https://paulapivat.com/post/query_ethereum/
+---
+
+イーサリアムに関するチュートリアルの多くはデベロッパ向けのものですが、データアナリストや、クライアント／ノードを実行することなくオンチェーンのデータを確認したい人々を対象とする学習リソースは多くありません。
+
+このチュートリアルは、[Dune Analytics](https://dune.xyz/home)が提供するインターフェースを用いて、オンチェーンのデータに対してSQL（Structured Query Language）のクエリを実行することで、トランザクション、ブロック、ガスといったイーサリアムの基本的なコンセプトについての理解を深めるものです。
+
+オンチェーンのデータは、イーサリアムやイーサリアム・ネットワークに関する理解を深めるのに役立つだけでなく、コンピュータ処理能力の経済学といった現在のイーサリアムが直面している課題（例：ガス代の上昇）や、より重要性が高いスケーリング・ソリューションに関する議論について、基本的な事項を理解する土台となるものです。
+
+### トランザクション {#transactions}
+
+イーサリアムの新規ユーザーはまず、ETH残高を持つエンティティであるユーザー管理アカウントを初期化する必要があります。 イーサリアムのアカウントには、ユーザー管理アカウントとスマートコントラクトの2種類があります（[ethereum.org](/developers/docs/accounts/)を参照)してください）。
+
+すべてのアカウントは、[Etherscan](https://etherscan.io/)のようなブロックエクスプローラーで表示できます。 ブロックエクスプローラーは、イーサリアム上のデータポータルです。 このポータルから、ブロックのデータ、トランザクション、マイナー、アカウント、および他のオンチェーンのアクティビティをリアルタイムで確認できます（[こちら](/developers/docs/data-and-analytics/block-explorers/)をご覧ください）。
+
+しかし、外部のブロックエスプローラーが提供する情報と直接照合したい場合は、オンチェーンのデータに対するクエリを実行したいと思うかもしれません。 [Dune Analytics](https://duneanalytics.com/)は、SQLに関する一定の知識を前提として、あらゆるユーザーにこのクエリ機能を提供します。
+
+参考までに、イーサリアム・ファウンデーション (EF) のスマートコントラクトアカウントは[Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae)で表示することができます。
+
+EFのアカウントを含むすべてのアカウントは、トランザクションの送受信に使用できる公開アドレスを持つ点に留意してください。
+
+Etherscanのアカウント残高は、通常のトランザクションと内部トランザクションで構成されています。 内部トランザクションは誤解を招きやすい名前ですが、チェーンの状態を変更する _実際の_トランザクションではありません。 内部トランザクションとは、コントラクト（[ソース](https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)）を実行することで開始される「値の移転」を意味します。 内部トランザクションは署名を持たないためブロックチェーンには **含まれず**、Dune Analyticsでクエリを実行することができません。
+
+従って、このチュートリアルでは通常のトランザクションのみを取り上げます。 通常のトランザクションに対しては、以下のようにクエリを実行します：
+
+```sql
+WITH temp_table AS (
+SELECT
+    hash,
+    block_number,
+    block_time,
+    "from",
+    "to",
+    value / 1e18 AS ether,
+    gas_used,
+    gas_price / 1e9 AS gas_price_gwei
+FROM ethereum."transactions"
+WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
+ORDER BY block_time DESC
+)
+SELECT
+    hash,
+    block_number,
+    block_time,
+    "from",
+    "to",
+    ether,
+    (gas_used * gas_price_gwei) / 1e9 AS txn_fee
+FROM temp_table
+```
+
+これにより、Etherscanのトランザクションページで提供されるのと同一の情報が返されます。 これら2つのソースを比較してみましょう：
+
+#### Etherscan {#etherscan}
+
+![](./etherscan_view.png)
+
+[Etherscan上のEFのコントラクトのページ](https://etherscan.io/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
+
+#### Dune Analytics {#dune-analytics}
+
+![](./dune_view.png)
+
+ダッシュボードは、[こちら](https://duneanalytics.com/paulapivat/Learn-Ethereum)からアクセスしてください。 テーブルをクリックすると、クエリを確認できます（上記も参照してください）。
+
+### トランザクションの内容を見る {#breaking_down_transactions}
+
+送信されたトランザクションには、（[ソース](/developers/docs/transactions/)）を含むいくつかの情報が含まれています。
+
+- **Recipient**：受信者のアドレス（「to」のクエリに該当したアドレス）。
+- **Signature**：トランザクションに署名するのは送信者の秘密鍵ですが、SQLでクエリできるのは送信者の公開アドレス（「from」）です。
+- **Value**：送信されたETHの量 （`ether`列を参照してください）。
+- **Data**：ハッシュ化した任意のデータ（`data`列を参照してください）。
+- **gasLimit**：トランザクションで消費できるガスユニットの上限。 ガスユニットは、計算ステップを示します。
+- **maxPriorityFeePerGas**：マイナーへのチップとして提供できるガス量の上限。
+- **maxFeePerGas**：トランザクションに対して支払い可能であるガス代の上限（baseFeePerGasとmaxPriorityFeePerGasを含む） 。
+
+イーサリアムファウンデーションのパブリックアドレスへのトランザクションにつき、これらの具体的な情報をクエリしたい場合は以下を実行します：
+
+```sql
+SELECT
+    "to",
+    "from",
+    value / 1e18 AS ether,
+    data,
+    gas_limit,
+    gas_price / 1e9 AS gas_price_gwei,
+    gas_used,
+    ROUND(((gas_used / gas_limit) * 100),2) AS gas_used_pct
+FROM ethereum."transactions"
+WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
+ORDER BY block_time DESC
+```
+
+### ブロック {#blocks}
+
+各トランザクションは、イーサリアム仮想マシン（[EVM](/developers/docs/evm/)）の状態を変更します（[ソース](/developers/docs/transactions/)）。 トランザクションは、ネットワークにブロードキャストされ、検証を経てブロックに追加されます。 トランザクションごとに、ブロック番号が割り振られます。 データを見るには、特定のブロック番号でクエリすることができます。ブロック番号: 12396854は、執筆時点である2021年11月5日のイーサリアム・ファウンデーション内のトランザクションで最も最新のブロックです。
+
+さらに、次の2つのブロックに対してクエリを実行すると、各ブロックが1つ前のブロックのハッシュ（親ハッシュ）を含んでいることが確認でき、ブロックチェーンがどのように形成されるかを理解できます。
+
+各ブロックには、親ブロックに対する参照情報が含まれています。 これは、`hash`列と`parent_hash`列の間に表示されます（[ソース](/developers/docs/blocks/)）。
+
+![parent_hash](./parent_hash.png)
+
+Dune Analyticsでは、[クエリ](https://duneanalytics.com/queries/44856/88292)は以下のように表示されます：
+
+```sql
+SELECT
+   time,
+   number,
+   hash,
+   parent_hash,
+   nonce
+FROM ethereum."blocks"
+WHERE "number" = 12396854 OR "number" = 12396855 OR "number" = 12396856
+LIMIT 10
+```
+
+ブロックを調べるには、時間、ブロック番号、難易度、ハッシュ、親ハッシュ、およびノンスに対してクエリを実行します。
+
+このクエリでは、_トランザクションのリスト_だけは調べることができません。このためトランザクションのリストについては、_state root_を使って後述する別のクエリを実行します。 フルノードまたはアーカイブノードは、すべてのトランザクションと状態遷移を保存しますので、クライアントはいつでもチェーンの状態をクエリすることができます。 これには大容量のストレージが必要になりますので、チェーンデータと状態データを分離することができます：
+
+- チェーンデータ（ブロックおよびトランザクションのリスト）
+- 状態データ（各トランザクションによる状態遷移の結果）
+
+状態ルートは後者（状態データ）であり、_暗黙的な_データである（オンチェーンで保存されない）のに対し、チェーンデータは明示的なデータであり、チェーン自体に保存されます（[ソース](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)）。
+
+このチュートリアルでは、Dune Analyticsを使ってSQLで_クエリ可能_であるオンチェーンのデータを取り上げます。
+
+すでに述べたように、各ブロックにはトランザクションのリストが含まれているので、特定のブロックに絞り込んでクエリを実行できます。 さっそく、最新ブロック「12396854」を試してみましょう。
+
+```sql
+SELECT * FROM ethereum."transactions"
+WHERE block_number = 12396854
+ORDER BY block_time DESC`
+```
+
+Duneでは、このようなSQL出力が得られます：
+
+![](./list_of_txn.png)
+
+ブロックチェーンにこの1つのブロックが追加されると、イーサリアム仮想マシン （[EVM](/developers/docs/evm/)）の状態が変化します。 ブロックチェーンでは、一度に数十、時には数百ものトランザクションが検証されます。 このブロックの場合、222件のトランザクションが含まれていました。
+
+実際にトランザクションが成功した件数を調べるには、成功したトランザクションのみを絞り込むフィルターを追加します：
+
+```sql
+WITH temp_table AS (
+    SELECT * FROM ethereum."transactions"
+    WHERE block_number = 12396854 AND success = true
+    ORDER BY block_time DESC
+)
+SELECT
+    COUNT(success) AS num_successful_txn
+FROM temp_table
+```
+
+ブロック12396854では、計222件のトランザクションのうち、204件が正常に検証されました：
+
+![](./successful_txn.png)
+
+トランザクションリクエストは、毎秒あたり数十回発生しますが、ブロックがコミットされるのはおよそ15秒に1回です（[ソース](/developers/docs/blocks/)）。
+
+約15秒ごとに1つのブロックが生成されることを確認するには、1日に含まれる合計の秒数（86,400秒）を15で割ることで、1日に生成される平均ブロック数（およそ5,760）が分かります。
+
+2016年から現在までに、イーサリアムで生成された1日あたりのブロック数については、この表を参照してください：
+
+![](./daily_blocks.png)
+
+この期間に毎日生成されたブロックの平均数は、約5,874 です。
+
+![](./avg_daily_blocks.png)
+
+クエリは、次のように行います：
+
+```sql
+# query to visualize number of blocks produced daily since 2016
+
+SELECT
+    DATE_TRUNC('day', time) AS dt,
+    COUNT(*) AS block_count
+FROM ethereum."blocks"
+GROUP BY dt
+OFFSET 1
+
+# average number of blocks produced per day
+
+WITH temp_table AS (
+SELECT
+    DATE_TRUNC('day', time) AS dt,
+    COUNT(*) AS block_count
+FROM ethereum."blocks"
+GROUP BY dt
+OFFSET 1
+)
+SELECT
+    AVG(block_count) AS avg_block_count
+FROM temp_table
+```
+
+2016年から現在までに1日に生成されたブロック数の平均は、5,874をわずかに上回っています。 反対に、86,400秒を平均ブロック数である5,874で割ると14.7となるため、およそ15秒に1回の頻度でブロックが生成されたことが分かります。
+
+### ガス {#gas}
+
+ブロックのサイズは、制限されています。 ブロックの最大サイズは、ネットワーク需要に応じて12,500,000ユニットから25,000,000ユニットの間で動的に変化します。 ブロックのサイズを制限する理由は、フルノードに対してディスク容量や処理速度の要件（[ソース](/developers/docs/blocks/)）が過剰な負担となるのを防ぐために、無駄に大きなサイズのブロックが発生することを防ぐためです。
+
+ブロックに対するガス上限という概念を理解するには、トランザクションをバッチ処理するために利用できるブロックのスペースをどれだけ**供給**できるか、と考えるとよいでしょう。 ブロックのガス上限に対してもクエリを実行できるので、2016年から現在までのグラフは以下のようになります：
+
+![](./avg_gas_limit.png)
+
+```sql
+SELECT
+    DATE_TRUNC('day', time) AS dt,
+    AVG(gas_limit) AS avg_block_gas_limit
+FROM ethereum."blocks"
+GROUP BY dt
+OFFSET 1
+```
+
+さらに、イーサリアム・ブロックチェーン上で実行された処理（トランザクションの送信、スマートコントラクトの呼び出し、NFTのミント）のために実際に支払われた1日あたりのガスを調べることもできます。 これは、利用可能なイーサリアムのブロックスペースに対する**需要**を示します：
+
+![](./daily_gas_used.png)
+
+```sql
+SELECT
+    DATE_TRUNC('day', time) AS dt,
+    AVG(gas_used) AS avg_block_gas_used
+FROM ethereum."blocks"
+GROUP BY dt
+OFFSET 1
+```
+
+これら2つのグラフを比較することで、 **需要と供給**の関係を確認することができます：
+
+![gas_demand_supply](./gas_demand_supply.png)
+
+ここから、ブロックスペースが十分に供給されている場合、ガス価格はブロックスペースへの需要に応じて上下することが分かります。
+
+最後に、イーサリアムチェーンにおける1日のガス価格の平均値を調べたい場合、クエリ時間が非常に長くなるため、イーサリアム・ファウンデーションがトランザクション1件あたりに支払ったガス代の平均値を調べるようにクエリを絞り込みます。
+
+![](./ef_daily_gas.png)
+
+2016年から現在までに、イーサリアム・ファウンデーションのアドレスに対して実行されたすべてのトランザクションにおいて支払われたガス価格を確認することができます。 クエリは、以下のように実行します：
+
+```sql
+SELECT
+    block_time,
+    gas_price / 1e9 AS gas_price_gwei,
+    value / 1e18 AS eth_sent
+FROM ethereum."transactions"
+WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
+ORDER BY block_time DESC
+```
+
+### まとめ {#summary}
+
+このチュートリアルでは、クエリを実行し、オンチェーンのデータを確認することで、イーサリアムの基本的な概念やイーサリアム・ブロックチェーンの仕組みについて学びました。
+
+このチュートリアルで使用したすべてのコードをまとめたダッシュボードは、[こちら](https://duneanalytics.com/paulapivat/Learn-Ethereum)からアクセスしてください。
+
+データを通じてWeb3の知識をさらに深めたい方は、[私をTwitterでフォローしてください](https://twitter.com/paulapivat)。

@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "Основанная на Python платформа для разработки и тестирования смарт-контрактов, нацеленных на Ethereum Virtual Machine.",
   "page-local-environment-brownie-logo-alt": "Логотип Brownie",
+  "page-local-environment-kurtosis-desc": "Инструментарий на основе контейнера для простой настройки и запуска тестовой сети Ethereum с большим количеством клиентов, в которой можно быстро разрабатывать локальные децентрализованные приложения, прототипировать и тестировать их.",
+  "page-local-environment-kurtosis-logo-alt": "Логотип Kurtosis",
   "page-local-environment-epirus-desc": "Платформа для разработки, развертывания и мониторинга блокчейн-приложений на виртуальной машине Java.",
   "page-local-environment-epirus-logo-alt": "Логотип Epirus",
   "page-local-environment-eth-app-desc": "Создавайте приложения на базе Ethereum одной командой. Сопровождается широким выбором фреймворков пользовательского интерфейса и шаблонов DeFi.",

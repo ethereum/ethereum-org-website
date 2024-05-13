@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "Oparta na języku Python platforma programistyczna i testowa dla inteligentnych kontraktów ukierunkowana na maszynę wirtualną Ethereum.",
   "page-local-environment-brownie-logo-alt": "Logo Brownie",
+  "page-local-environment-kurtosis-desc": "Zestaw narzędzi opartych na kontenerach, które ułatwiają konfigurację i aktywację sieci testowej Ethereum z wieloma klientami w celu szybkiego lokalnego rozwoju, tworzenia prototypów i testowania zdecentralizowanych aplikacji.",
+  "page-local-environment-kurtosis-logo-alt": "Logo Kurtosis",
   "page-local-environment-epirus-desc": "Platforma do tworzenia, wdrażania i monitorowania aplikacji blockchain w maszynie wirtualnej Java.",
   "page-local-environment-epirus-logo-alt": "Logo Epirus",
   "page-local-environment-eth-app-desc": "Twórz za pomocą jednego polecenia aplikacje działające w oparciu o Ethereum. Zawiera szeroką ofertę platform UI i szablonów DeFi do wyboru.",

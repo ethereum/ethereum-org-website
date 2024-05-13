@@ -1,34 +1,27 @@
-import React, { useContext } from "react"
-
+import { useTranslation } from "next-i18next"
+import { FaGithub } from "react-icons/fa"
 import {
   Box,
   BoxProps,
   calc,
-  Flex,
-  FormControl,
-  FormLabel,
   Icon,
   List,
   ListItem,
-  Show,
-  Switch,
   useToken,
 } from "@chakra-ui/react"
-import { FaGithub } from "react-icons/fa"
-import { useActiveHash } from "../../hooks/useActiveHash"
-import { ZenModeContext } from "../../contexts/ZenModeContext"
-import ButtonLink from "../ButtonLink"
-import Translation from "../Translation"
 
-import Mobile from "./TableOfContentsMobile"
-import ItemsList from "./ItemsList"
-import { getCustomId, Item, outerListProps } from "./utils"
-import { trackCustomEvent } from "../../utils/matomo"
+import type { ToCItem } from "@/lib/types"
 
-export { Item }
+import { ButtonLink } from "@/components/Buttons"
+import ItemsList from "@/components/TableOfContents/ItemsList"
+import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
 
-export interface IProps extends BoxProps {
-  items: Array<Item>
+import { outerListProps } from "@/lib/utils/toc"
+
+import { useActiveHash } from "@/hooks/useActiveHash"
+
+export type TableOfContentsProps = BoxProps & {
+  items: Array<ToCItem>
   maxDepth?: number
   slug?: string
   editPath?: string
@@ -36,7 +29,7 @@ export interface IProps extends BoxProps {
   isMobile?: boolean
 }
 
-const TableOfContents: React.FC<IProps> = ({
+const TableOfContents = ({
   items,
   maxDepth = 1,
   slug,
@@ -44,24 +37,20 @@ const TableOfContents: React.FC<IProps> = ({
   hideEditButton = false,
   isMobile = false,
   ...rest
-}) => {
-  const { isZenMode, handleZenModeChange } = useContext(ZenModeContext)
+}: TableOfContentsProps) => {
+  const { t } = useTranslation("common")
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
 
   const titleIds: Array<string> = []
 
   if (!isMobile) {
-    const getTitleIds = (items: Array<Item>, depth: number): void => {
-      if (depth > (maxDepth ? maxDepth : 1)) return
-
-      items?.forEach((item) => {
-        if (item.items && Array.isArray(item.items)) {
-          if (item.title) titleIds.push(getCustomId(item.title))
-          getTitleIds(item.items, depth + 1)
-        } else {
-          titleIds.push(getCustomId(item.title))
-        }
+    const getTitleIds = (items: Array<ToCItem>, depth: number): void => {
+      // Return early if maxDepth hit
+      if (depth > maxDepth) return
+      items?.forEach(({ url, items }) => {
+        titleIds.push(url)
+        items && getTitleIds(items, depth + 1)
       })
     }
 
@@ -70,10 +59,6 @@ const TableOfContents: React.FC<IProps> = ({
 
   const activeHash = useActiveHash(titleIds)
 
-  // Exclude <h1> from TOC
-  if (items?.length === 1) {
-    items = items[0].items!
-  }
   if (!items) {
     return null
   }
@@ -81,78 +66,47 @@ const TableOfContents: React.FC<IProps> = ({
     return <Mobile items={items} maxDepth={maxDepth} />
   }
 
-  const shouldShowZenModeToggle = slug?.includes("/docs/")
-
   return (
-    // TODO: Switch to `above="lg"` after completion of Chakra Migration
-    <Show above={lgBp}>
-      <Box
-        as="aside"
-        position="sticky"
-        top="7.25rem" // Account for navbar
-        p={4}
-        pe={0}
-        maxW="25%"
-        minW={48}
-        height={calc.subtract("100vh", "80px")}
-        overflowY="auto"
-        {...rest}
-      >
-        <List {...outerListProps}>
-          {!hideEditButton && (
-            <ListItem mb={2}>
-              <ButtonLink to={editPath} variant="outline" hideArrow mt={0}>
-                <Flex alignItems="center">
-                  <Icon as={FaGithub} color="text" boxSize={6} me={2} />
-                  <Translation id="edit-page" />
-                </Flex>
-              </ButtonLink>
-            </ListItem>
-          )}
-          {shouldShowZenModeToggle && (
-            <Flex
-              as={ListItem}
-              alignItems="center"
-              mb={2}
-              py="2px"
-              opacity={0.8}
-              fontSize="sm"
+    <Box
+      hideBelow={lgBp}
+      as="aside"
+      position="sticky"
+      top="19" // Account for navbar
+      p={4}
+      pe={0}
+      maxW="25%"
+      minW={48}
+      height={calc.subtract("100vh", "80px")}
+      overflowY="auto"
+      {...rest}
+    >
+      <List {...outerListProps}>
+        {!hideEditButton && editPath && (
+          <ListItem mb={2}>
+            <ButtonLink
+              leftIcon={<Icon as={FaGithub} />}
+              href={editPath}
+              variant="outline"
             >
-              <FormControl as={Flex} alignItems="center">
-                <FormLabel htmlFor="zen-mode" mb={0} me={2} fontSize="sm">
-                  <Translation id="zen-mode" />
-                </FormLabel>
-                <Switch
-                  id="zen-mode"
-                  isChecked={isZenMode}
-                  onChange={() => {
-                    handleZenModeChange()
-                    trackCustomEvent({
-                      eventCategory: "zen mode",
-                      eventAction: "click",
-                      eventName: isZenMode ? "activate" : "deactivate",
-                    })
-                  }}
-                />
-              </FormControl>
-            </Flex>
-          )}
-          <ListItem>
-            <Box mb={2} textTransform="uppercase">
-              <Translation id="on-this-page" />
-            </Box>
-            <List m={0}>
-              <ItemsList
-                items={items}
-                depth={0}
-                maxDepth={maxDepth ? maxDepth : 1}
-                activeHash={activeHash}
-              />
-            </List>
+              {t("edit-page")}
+            </ButtonLink>
           </ListItem>
-        </List>
-      </Box>
-    </Show>
+        )}
+        <ListItem>
+          <Box mb={2} textTransform="uppercase">
+            {t("on-this-page")}
+          </Box>
+          <List m={0}>
+            <ItemsList
+              items={items}
+              depth={0}
+              maxDepth={maxDepth ? maxDepth : 1}
+              activeHash={activeHash}
+            />
+          </List>
+        </ListItem>
+      </List>
+    </Box>
   )
 }
 

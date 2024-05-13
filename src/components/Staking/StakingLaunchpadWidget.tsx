@@ -1,34 +1,32 @@
-import React, { useState } from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Box, chakra, Flex, Text } from "@chakra-ui/react"
-
-import { StyledSelect as Select } from "../SharedStyledComponents"
-import ButtonLink from "../ButtonLink"
-import Translation from "../Translation"
-
-import { trackCustomEvent } from "../../utils/matomo"
+import { useState } from "react"
+import { useTranslation } from "next-i18next"
 import { FaTools } from "react-icons/fa"
+import { Box, Flex } from "@chakra-ui/react"
 
-const StyledSelect = chakra(Select, {
-  baseStyle: {
-    maxW: { base: "full", md: "50%" },
-  },
-})
+import { ButtonLink } from "@/components/Buttons"
+import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
 
-export interface IProps {}
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
-const StakingLaunchpadWidget: React.FC<IProps> = () => {
-  const { t } = useTranslation()
+import Select, { type SelectOnChange } from "../Select"
+
+type StakingDataOption = { label: string; value: string }
+
+const StakingLaunchpadWidget = () => {
+  const { t } = useTranslation("page-staking")
   const [selection, setSelection] = useState("testnet")
 
-  const handleChange = (e) => {
+  const handleChange: SelectOnChange<StakingDataOption> = (data) => {
+    if (!data) return
+
     trackCustomEvent({
       eventCategory: `Selected testnet vs mainnet for Launchpad link`,
       eventAction: `Clicked`,
-      eventName: `${e.label} bridge selected`,
-      eventValue: `${e.value}`,
+      eventName: `${data.label} bridge selected`,
+      eventValue: `${data.value}`,
     })
-    setSelection(e.value)
+    setSelection(data.value)
   }
 
   const data = {
@@ -42,7 +40,7 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
     },
   }
 
-  const selectOptions = Object.keys(data).map((key) => ({
+  const selectOptions = Object.keys(data).map<StakingDataOption>((key) => ({
     label: data[key].label,
     value: key,
   }))
@@ -55,22 +53,22 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
       p={{ base: 6, md: 8 }}
     >
       <Text as="span" color="text200">
-        <Translation id="page-staking-launchpad-widget-span" />
+        <Translation id="page-staking:page-staking-launchpad-widget-span" />
       </Text>
-      <Box my={4}>
-        <StyledSelect
-          className="react-select-container"
-          classNamePrefix="react-select"
+      <Box my={4} maxW={{ md: "50%" }}>
+        <Select
+          instanceId="staking-launchpad-select"
           options={selectOptions}
           onChange={handleChange}
           defaultValue={selectOptions[0]}
+          variant="outline"
         />
       </Box>
       <Text>
-        <Translation id="page-staking-launchpad-widget-p1" />
+        <Translation id="page-staking:page-staking-launchpad-widget-p1" />
       </Text>
       <Text>
-        <Translation id="page-staking-launchpad-widget-p2" />
+        <Translation id="page-staking:page-staking-launchpad-widget-p2" />
       </Text>
       <Box mb={4}>
         <ButtonLink
@@ -78,12 +76,12 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
           width={{ base: "full", md: "auto" }}
         >
           {selection === "mainnet"
-            ? t("page-staking-launchpad-widget-mainnet-start")
-            : t("page-staking-launchpad-widget-testnet-start")}
+            ? t("page-staking:page-staking-launchpad-widget-mainnet-start")
+            : t("page-staking:page-staking-launchpad-widget-testnet-start")}
         </ButtonLink>
       </Box>
       <Text>
-        <Translation id="page-staking-launchpad-widget-p3" />
+        <Translation id="page-staking:page-staking-launchpad-widget-p3" />
       </Text>
       <Box>
         <ButtonLink
@@ -92,7 +90,7 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
           width={{ base: "full", md: "auto" }}
           leftIcon={<FaTools />}
         >
-          <Translation id="page-staking-launchpad-widget-link" />
+          <Translation id="page-staking:page-staking-launchpad-widget-link" />
         </ButtonLink>
       </Box>
     </Flex>

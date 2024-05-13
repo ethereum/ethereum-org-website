@@ -1,31 +1,37 @@
-import React from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-import { TOptions } from "i18next"
-import htmr from "htmr"
+import htmr, { type HtmrOptions } from "htmr"
+import type { TOptions } from "i18next"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 
-import Link from "./Link"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-interface Props {
+import TooltipLink from "./TooltipLink"
+
+type TranslationProps = {
   id: string
   options?: TOptions
+  transform?: HtmrOptions["transform"]
 }
 
 // Custom components mapping to be used by `htmr` when parsing the translation
 // text
-const transform = {
-  a: Link,
+const defaultTransform = {
+  a: TooltipLink,
 }
 
 // Renders the translation string for the given translation key `id`. It
 // fallback to English if it doesn't find the given key in the current language
-const Translation = ({ id, options }: Props) => {
-  const { t } = useTranslation()
+const Translation = ({ id, options, transform = {} }: TranslationProps) => {
+  const { asPath } = useRouter()
+  const requiredNamespaces = getRequiredNamespacesForPage(asPath)
 
+  const { t } = useTranslation(requiredNamespaces)
   const translatedText = t(id, options)
 
   // Use `htmr` to parse html content in the translation text
-  // @ts-ignore
-  return <>{htmr(translatedText, { transform })}</>
+  return htmr(translatedText, {
+    transform: { ...defaultTransform, ...transform },
+  })
 }
 
 export default Translation
