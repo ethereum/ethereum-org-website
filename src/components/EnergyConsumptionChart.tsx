@@ -6,7 +6,6 @@ import {
   Legend,
   LinearScale,
 } from "chart.js"
-import { ChartOptions } from "chart.js"
 import ChartDataLabels from "chartjs-plugin-datalabels"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -61,8 +60,8 @@ const EnergyConsumptionChart = () => {
     // chart styles
     barThickness: 38,
     borderRadius: 4,
-    minBarLength: 1,
     aspectRatio: 1.1,
+    responsive: true,
     maintainAspectRatio: true,
     hover: { mode: null } as any, // casted to avoid TS issue
     backgroundColor: ENERGY_CONSUMPTION_CHART_COLORS as any, // casted to avoid TS issue
@@ -75,8 +74,6 @@ const EnergyConsumptionChart = () => {
         offset: -0.5, // distance (in pixels) to pull the label away from the anchor point
         font: {
           size: "14px",
-          labelWrap: true,
-          labelMaxWidth: 50,
         } as any, // casted to avoid TS issue,
         color: useColorModeValue("#333333", "#F2F2F2"),
       },
@@ -116,14 +113,18 @@ const EnergyConsumptionChart = () => {
         grid: {
           display: false,
         },
-        ticks: { color: useColorModeValue("#333333", "#F2F2F2") },
+        ticks: {
+          color: useColorModeValue("#333333", "#F2F2F2"),
+          font: {
+            size: 10,
+          },
+        },
       },
     },
   }
 
   const chartData = {
-    // TODO: fix fn not triggering for translations
-    labels: labels,
+    labels: splitLongLabels(labels),
     datasets: [
       {
         label: t("page-what-is-ethereum-energy-consumption-chart-legend"),
@@ -132,7 +133,7 @@ const EnergyConsumptionChart = () => {
     ],
   }
 
-  // TODO: add breakpoints
+  // TODO: add mobile breakpoints
   // const data = useBreakpointValue<Data>({
   //   base: [
   //     {
