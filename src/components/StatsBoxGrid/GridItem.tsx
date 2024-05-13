@@ -104,12 +104,13 @@ export const GridItem = ({ metric }: GridItemProps) => {
     borderWidth: 1,
     tension: 0.3,
     fill: true,
+    // TODO: move to utils
     backgroundColor: (context: ScriptableContext<"line">) => {
       const ctx = context.chart.ctx
-      const gradient = ctx.createLinearGradient(0, 0, 0, 180)
+      const gradient = ctx.createLinearGradient(0, 0, 0, 220)
       // gradient.addColorStop(offset, color)
-      gradient.addColorStop(0, "#8884d8")
-      gradient.addColorStop(0.9, "#ffffff")
+      gradient.addColorStop(0, "#8884d8ff")
+      gradient.addColorStop(0.85, "#ffffff00")
 
       return gradient
     },
@@ -148,15 +149,6 @@ export const GridItem = ({ metric }: GridItemProps) => {
     datasets: [
       {
         data: hasData ? state.data.map((item) => item.value) : [],
-        backgroundColor: (context: ScriptableContext<"line">) => {
-          const ctx = context.chart.ctx
-          const gradient = ctx.createLinearGradient(0, 0, 0, 180)
-          // gradient.addColorStop(offset, color)
-          gradient.addColorStop(0, "#8884d8")
-          gradient.addColorStop(0.9, "#ffffff")
-
-          return gradient
-        },
       },
     ],
   }

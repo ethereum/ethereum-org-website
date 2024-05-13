@@ -16,7 +16,6 @@ import {
   chakra,
   useBreakpointValue,
   useColorModeValue,
-  useToken,
 } from "@chakra-ui/react"
 
 import type { Lang } from "@/lib/types"
@@ -89,16 +88,10 @@ const ENERGY_CONSUMPTION_CHART_DATA = [
 
 const EnergyConsumptionChart = () => {
   const { t } = useTranslation("page-what-is-ethereum")
-  const textColor = useToken("colors", "text")
   const { locale } = useRouter()
   const isRtl = isLangRightToLeft(locale as Lang)
 
-  // useColorModeValue("blackAlpha.700", "whiteAlpha.800")
-  // const { colorMode } = useColorMode()
-  // const isDark = colorMode === "dark"
-  // isDark ? "#FBF9A5" : "#95935B"
-
-  // TODO: fix
+  // chart labels
   const labels = [
     t("energy-consumption-chart-global-data-centers-label"),
     t("energy-consumption-chart-btc-pow-label"),
