@@ -59,6 +59,9 @@ const EnergyConsumptionChart = () => {
 
   const chartOptions = {
     // chart styles
+    barThickness: 38,
+    borderRadius: 4,
+    minBarLength: 1,
     aspectRatio: 1.1,
     maintainAspectRatio: true,
     hover: { mode: null } as any, // casted to avoid TS issue
@@ -123,10 +126,6 @@ const EnergyConsumptionChart = () => {
       {
         label: t("page-what-is-ethereum-energy-consumption-chart-legend"),
         data: ENERGY_CONSUMPTION_CHART_DATA,
-        // for some reason TS don't like the following props inside `chartOptions` object
-        barThickness: 38,
-        borderRadius: 4,
-        minBarLength: 1,
       },
     ],
   }
