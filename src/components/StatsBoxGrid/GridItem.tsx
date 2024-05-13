@@ -1,6 +1,16 @@
-import kebabCase from "lodash/kebabCase"
+import {
+  CategoryScale,
+  Chart as ChartJS,
+  Filler,
+  Legend,
+  LinearScale,
+  LineElement,
+  PointElement,
+  ScriptableContext,
+  Title,
+} from "chart.js"
+import { Line } from "react-chartjs-2"
 import { MdInfoOutline } from "react-icons/md"
-import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
 import { Box, Flex, Icon, Text } from "@chakra-ui/react"
 
 import type { StatsBoxMetric } from "@/lib/types"
@@ -61,6 +71,7 @@ export const GridItem = ({ metric }: GridItemProps) => {
   const filteredData = (data: Array<{ timestamp: number }>) => {
     if (!data) return
     if (range === RANGES[1]) return [...data]
+
     return data.filter(({ timestamp }) => {
       const millisecondRange = 1000 * 60 * 60 * 24 * 30
       const now = new Date().getTime()
@@ -79,47 +90,80 @@ export const GridItem = ({ metric }: GridItemProps) => {
     ? state.data.reduce((prev, { value }) => (prev > value ? prev : value), 0)
     : 0
 
-  const chart: React.ReactNode = (
-    <ResponsiveContainer width="100%" height="100%">
-      <AreaChart
-        data={hasData ? filteredData(state.data) : []}
-        margin={{ left: -5, right: -5 }}
-      >
-        <defs>
-          <linearGradient
-            id={`colorUv-${kebabCase(title)}`}
-            x1="0"
-            y1="0"
-            x2="0"
-            y2="1"
-          >
-            <stop offset="5%" stopColor="#8884d8" stopOpacity={1} />
-            <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-          </linearGradient>
-          <linearGradient
-            id={`colorPv-${kebabCase(title)}`}
-            x1="0"
-            y1="0"
-            x2="0"
-            y2="1"
-          >
-            <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-            <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
-          </linearGradient>
-        </defs>
-        <Area
-          type="monotone"
-          dataKey="value"
-          stroke="#8884d8"
-          fillOpacity={0.3}
-          fill={`url(#colorUv-${kebabCase(title)})`}
-          connectNulls
-        />
-        <YAxis type="number" domain={[minValue, maxValue]} width={0} />
-        <XAxis dataKey="timestamp" axisLine={false} tick={false} />
-      </AreaChart>
-    </ResponsiveContainer>
+  // ChartJS config
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Filler,
+    Legend
   )
+
+  // ChartJS options
+  const chartOptions = {
+    // chart styles
+    borderColor: "#8884db",
+    borderWidth: 1,
+    tension: 0.3,
+    fill: true,
+    backgroundColor: (context: ScriptableContext<"line">) => {
+      const ctx = context.chart.ctx
+      const gradient = ctx.createLinearGradient(0, 0, 0, 180)
+      // gradient.addColorStop(offset, color)
+      gradient.addColorStop(0, "#8884d8")
+      gradient.addColorStop(0.9, "#ffffff")
+
+      return gradient
+    },
+    pointRadius: 0,
+    maintainAspectRatio: false,
+    // chart legend/title config
+    plugins: {
+      legend: {
+        display: false, // hide chart legend
+      },
+      title: {
+        display: false, // hide titles
+      },
+    },
+    // chart labels config
+    scales: {
+      y: {
+        display: false, // hide Y axis labels
+        grid: {
+          display: false,
+        },
+        min: minValue,
+        max: maxValue,
+      },
+      x: {
+        display: false, // hide X axis labels
+        grid: {
+          display: false,
+        },
+      },
+    },
+  }
+
+  const chartData = {
+    labels: hasData ? filteredData(state.data) : [],
+    datasets: [
+      {
+        data: hasData ? state.data.map((item) => item.value) : [],
+        backgroundColor: (context: ScriptableContext<"line">) => {
+          const ctx = context.chart.ctx
+          const gradient = ctx.createLinearGradient(0, 0, 0, 180)
+          // gradient.addColorStop(offset, color)
+          gradient.addColorStop(0, "#8884d8")
+          gradient.addColorStop(0.9, "#ffffff")
+
+          return gradient
+        },
+      },
+    ],
+  }
 
   return (
     <Flex
@@ -152,8 +196,8 @@ export const GridItem = ({ metric }: GridItemProps) => {
         <OldText>{description}</OldText>
       </Box>
       {hasData && (
-        <Box position="absolute" insetInline="0" bottom={0} height="65%">
-          {chart}
+        <Box position="absolute" insetInline="0" bottom={7} height="60%">
+          <Line options={chartOptions} data={chartData} />
         </Box>
       )}
       <Flex
