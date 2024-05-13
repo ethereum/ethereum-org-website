@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react"
-import { Accordion, AccordionItem, Box, HStack, Icon } from "@chakra-ui/react"
+import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
 import { MdChevronRight } from "react-icons/md"
+import { Accordion, AccordionItem, Box, HStack, Icon } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
