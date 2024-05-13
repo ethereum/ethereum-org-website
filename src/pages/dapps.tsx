@@ -1550,18 +1550,16 @@ const DappsPage = () => {
                 />
               </RightColumn>
             </TwoColumnContent>
-            <Content>
-              <Text m={0}>{t("page-dapps:page-dapps-explore-title")}</Text>
+            <Box py={4} w="full">
+              <Text m={0} fontWeight="bold">
+                {t("page-dapps:page-dapps-explore-title")}
+              </Text>
               <Text m={0}>
                 <InlineLink href="https://www.ethereum-ecosystem.com/apps">
-                  {t("page-dapps:page-dapps-explore-1")}
+                  {t("page-dapps:page-dapps-explore")}
                 </InlineLink>
               </Text>
-              <Text m={0}>
-                <Emoji text=":warning:" fontSize="1xl" me={2} flexShrink={0} />
-                {t("page-dapps:page-dapps-explore-2")}
-              </Text>
-            </Content>
+            </Box>
             <CalloutBanner
               mt={32}
               mx={0}
@@ -1780,15 +1778,13 @@ const DappsPage = () => {
         )}
         {selectedCategory !== CategoryType.FINANCE && (
           <Content>
-            <Text m={0}>{t("page-dapps:page-dapps-explore-title")}</Text>
-            <Text m={0}>
-              <InlineLink href="https://www.ethereum-ecosystem.com/apps">
-                {t("page-dapps:page-dapps-explore-1")}
-              </InlineLink>
+            <Text m={0} fontWeight="bold">
+              {t("page-dapps:page-dapps-explore-title")}
             </Text>
             <Text m={0}>
-              <Emoji text=":warning:" fontSize="1xl" me={2} flexShrink={0} />
-              {t("page-dapps:page-dapps-explore-2")}
+              <InlineLink href="https://www.ethereum-ecosystem.com/apps">
+                {t("page-dapps:page-dapps-explore")}
+              </InlineLink>
             </Text>
           </Content>
         )}
