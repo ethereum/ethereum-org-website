@@ -1,6 +1,6 @@
-import { Box, Center, StackDivider, VStack } from "@chakra-ui/react"
-import { Meta, StoryObj } from "@storybook/react"
 import * as React from "react"
+import { Center, Flex, SimpleGrid } from "@chakra-ui/react"
+
 import { EthHomeIcon } from "./EthHomeIcon"
 import { FeedbackGlyphIcon } from "./FeedbackGlyphIcon"
 import { FeedbackThumbsUpIcon } from "./FeedbackThumbsUpIcon"
@@ -14,8 +14,8 @@ import {
 } from "./quiz"
 import {
   DappnodeIcon,
-  DecentralizationGlyphIcon,
   DecentralizationEthGlyphIcon,
+  DecentralizationGlyphIcon,
   DownloadGlyphIcon,
   EarthGlyphIcon,
   HardwareGlyphIcon,
@@ -26,6 +26,7 @@ import {
 } from "./run-a-node"
 import {
   AbyssGlyphIcon,
+  AllnodesGlyphIcon,
   AnkrGlyphIcon,
   AuditedIcon,
   AvadoGlyphIcon,
@@ -33,23 +34,26 @@ import {
   BloxstakingGlyphIcon,
   BugBountyIcon,
   CautionProductGlyphIcon,
-  StakingDappnodeGlyphIcon,
   DefaultOpenSourceGlyphIcon,
   DockerGlyphIcon,
   EconomicalIcon,
   EthpoolGlyphIcon,
+  FigmentGlyphIcon,
   GreenCheckProductGlyphIcon,
   KilnGlyphIcon,
   LidoGlyphIcon,
   LiquidityTokenIcon,
   MultiClientIcon,
   OpenSourceStakingIcon,
+  P2PGlyphIcon,
   PermissionlessIcon,
   RocketPoolGlyphIcon,
+  RockXGlyphIcon,
   SelfCustodyIcon,
   StafiGlyphIcon,
   StakefishGlyphIcon,
   StakewiseGlyphIcon,
+  StakingDappnodeGlyphIcon,
   StakingGlyphCentralizedIcon,
   StakingGlyphCloudIcon,
   StakingGlyphCPUIcon,
@@ -60,18 +64,15 @@ import {
   UnknownProductGlyphIcon,
   WagyuGlyphIcon,
   WarningProductGlyphIcon,
-  AllnodesGlyphIcon,
 } from "./staking"
 import {
   BrowserIcon,
   BuyCryptoIcon,
   ConnectDappsIcon,
   DesktopIcon,
-  EIP1559Icon,
   ENSSupportIcon,
   ERC20SupportIcon,
   FilterBurgerIcon,
-  FrameIcon,
   GasFeeCustomizationIcon,
   HardwareIcon,
   HardwareSupportIcon,
@@ -85,13 +86,12 @@ import {
   SocialRecoverIcon,
   StakingIcon,
   SwapIcon,
-  WalletConnectIcon,
   WithdrawCryptoIcon,
 } from "./wallets"
 
 export default {
-  component: VStack,
-} as Meta<typeof VStack>
+  title: "Atoms / Media & Icons / Icons",
+}
 
 const iconsDefinitions = [
   CorrectIcon,
@@ -122,7 +122,9 @@ const iconsDefinitions = [
   DockerGlyphIcon,
   EconomicalIcon,
   EthpoolGlyphIcon,
+  FigmentGlyphIcon,
   GreenCheckProductGlyphIcon,
+  P2PGlyphIcon,
   KilnGlyphIcon,
   LidoGlyphIcon,
   LiquidityTokenIcon,
@@ -130,6 +132,7 @@ const iconsDefinitions = [
   OpenSourceStakingIcon,
   PermissionlessIcon,
   RocketPoolGlyphIcon,
+  RockXGlyphIcon,
   SelfCustodyIcon,
   StafiGlyphIcon,
   StakefishGlyphIcon,
@@ -148,11 +151,9 @@ const iconsDefinitions = [
   BuyCryptoIcon,
   ConnectDappsIcon,
   DesktopIcon,
-  EIP1559Icon,
   ENSSupportIcon,
   ERC20SupportIcon,
   FilterBurgerIcon,
-  FrameIcon,
   GasFeeCustomizationIcon,
   HardwareIcon,
   HardwareSupportIcon,
@@ -166,7 +167,6 @@ const iconsDefinitions = [
   SocialRecoverIcon,
   StakingIcon,
   SwapIcon,
-  WalletConnectIcon,
   WithdrawCryptoIcon,
   EthHomeIcon,
   FeedbackGlyphIcon,
@@ -179,30 +179,24 @@ iconsDefinitions.sort((a, b) =>
   (a?.displayName || "") > (b?.displayName || "") ? 1 : -1
 )
 const items = iconsDefinitions.map((IconDef) => (
-  <Box
+  <Flex
     key={IconDef.displayName}
+    direction="column"
+    gap={4}
+    p={4}
     border="1px"
     borderStyle="solid"
-    borderColor="border"
-    p={1}
+    borderColor="background.highlight"
   >
     <Center>
-      <IconDef />
+      <IconDef w="50px" h="50px" />
     </Center>
     <Center>{IconDef.displayName}</Center>
-  </Box>
+  </Flex>
 ))
 
-export const IconsList: StoryObj<typeof VStack> = {
+export const Icons = {
   render: () => {
-    return (
-      <VStack
-        divider={<StackDivider borderColor="gray.200" />}
-        spacing={4}
-        align="stretch"
-      >
-        {items}
-      </VStack>
-    )
+    return <SimpleGrid columns={[2, 2, 3, 5]}>{items}</SimpleGrid>
   },
 }

@@ -1,79 +1,29 @@
-import React, { useState } from "react"
-
-import { useI18next } from "gatsby-plugin-react-i18next"
-import { gql } from "@apollo/client"
-
+import { useState } from "react"
+import { useRouter } from "next/router"
 import {
   Avatar,
   Flex,
   FlexProps,
   Heading,
-  Icon,
   ListItem,
   ModalBody,
   ModalHeader,
-  Skeleton as ChakraSkeleton,
-  SkeletonCircle as ChakraSkeletonCircle,
-  Text,
+  SkeletonText,
   UnorderedList,
+  useBreakpointValue,
   VStack,
 } from "@chakra-ui/react"
-import { FaGithub } from "react-icons/fa"
 
-import { getLocaleTimestamp } from "../utils/time"
-import { trackCustomEvent } from "../utils/matomo"
-import { Lang } from "../utils/languages"
+import type { Author, Lang } from "@/lib/types"
 
-import ButtonLink from "./ButtonLink"
-import InlineLink from "./Link"
-import Modal from "./Modal"
-import Translation from "./Translation"
-import Button from "./Button"
+import { Button } from "@/components/Buttons"
+import InlineLink from "@/components/Link"
+import Modal from "@/components/Modal"
+import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
 
-export interface Author {
-  name: string
-  email: string
-  avatarUrl: string
-  user: {
-    login: string
-    url: string
-  }
-}
-
-export interface Commit {
-  author: Author
-  committedDate: string
-}
-
-const COMMIT_HISTORY = gql`
-  query CommitHistory($relativePath: String) {
-    repository(name: "ethereum-org-website", owner: "ethereum") {
-      ref(qualifiedName: "master") {
-        target {
-          ... on Commit {
-            id
-            history(path: $relativePath) {
-              edges {
-                node {
-                  author {
-                    name
-                    email
-                    avatarUrl(size: 100)
-                    user {
-                      login
-                      url
-                    }
-                  }
-                  committedDate
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 
 // TODO: skeletons are not part of the DS, so these should be replaced once we
 // implement the new designs. Thats the reason we haven't define these styles in
@@ -83,13 +33,7 @@ const skeletonColorProps = {
   endColor: "searchBackgroundEmpty",
 }
 
-const Skeleton = (props) => (
-  <ChakraSkeleton {...skeletonColorProps} borderRadius="md" {...props} />
-)
-
-const SkeletonCircle = (props) => (
-  <ChakraSkeletonCircle {...skeletonColorProps} {...props} />
-)
+const Skeleton = (props) => <SkeletonText {...skeletonColorProps} {...props} />
 
 const ContributorList = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -107,10 +51,10 @@ const Contributor = ({ contributor }: { contributor: Author }) => {
         width="40px"
         src={contributor.avatarUrl}
         name={contributor.name}
-        mr={2}
+        me={2}
       />
       {contributor.user && (
-        <InlineLink to={contributor.user.url}>
+        <InlineLink href={contributor.user.url}>
           @{contributor.user.login}
         </InlineLink>
       )}
@@ -119,30 +63,38 @@ const Contributor = ({ contributor }: { contributor: Author }) => {
   )
 }
 
-export interface IProps extends FlexProps {
-  relativePath: string
+export type FileContributorsProps = FlexProps & {
   editPath?: string
-  contributors: Array<Author>
-  lastContributor: any
-  loading: Boolean
-  error: any
+  contributors: Author[]
+  loading: boolean
+  error?: boolean
   lastEdit: string
 }
 
-const FileContributors: React.FC<IProps> = ({
-  relativePath,
-  editPath,
+const FileContributors = ({
   contributors,
-  lastContributor,
   loading,
   error,
   lastEdit,
   ...props
-}) => {
+}: FileContributorsProps) => {
   const [isModalOpen, setModalOpen] = useState(false)
-  const { language } = useI18next()
+  const { locale } = useRouter()
+
+  const isDesktop = useBreakpointValue({ base: false, md: true })
 
   if (error) return null
+  const lastContributor: Author = contributors.length
+    ? contributors[0]
+    : {
+        name: "",
+        email: "",
+        avatarUrl: "",
+        user: {
+          login: "",
+          url: "",
+        },
+      }
 
   return (
     <>
@@ -155,16 +107,18 @@ const FileContributors: React.FC<IProps> = ({
 
         <ModalBody>
           <Translation id="contributors-thanks" />
-          {contributors ? (
-            <ContributorList>
-              {contributors.map((contributor) => (
-                <Contributor
-                  contributor={contributor}
-                  key={contributor.email}
-                />
-              ))}
-            </ContributorList>
-          ) : null}
+          <Skeleton noOfLines="4" mt="4" isLoaded={!loading}>
+            {contributors ? (
+              <ContributorList>
+                {contributors.map((contributor) => (
+                  <Contributor
+                    contributor={contributor}
+                    key={contributor.email}
+                  />
+                ))}
+              </ContributorList>
+            ) : null}
+          </Skeleton>
         </ModalBody>
       </Modal>
 
@@ -176,70 +130,49 @@ const FileContributors: React.FC<IProps> = ({
         p={{ base: 0, md: 2 }}
         {...props}
       >
-        <Flex mr={4} alignItems="center" flex="1">
-          <SkeletonCircle size="10" mr={2} isLoaded={!loading}>
-            <Avatar
-              height="40px"
-              width="40px"
-              src={lastContributor.avatarUrl}
-              name={lastContributor.name}
-              mr={2}
-            />
-          </SkeletonCircle>
+        <Flex me={4} alignItems="center" flex="1">
+          {isDesktop && (
+            <>
+              <Avatar
+                height="40px"
+                width="40px"
+                src={lastContributor.avatarUrl}
+                name={lastContributor.name}
+                me={2}
+              />
 
-          <Skeleton isLoaded={!loading}>
-            <Text m={0} color="text200">
-              <Translation id="last-edit" />:{" "}
-              {lastContributor.user && (
-                <InlineLink to={lastContributor.user.url}>
-                  @{lastContributor.user.login}
-                </InlineLink>
-              )}
-              {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
-              {getLocaleTimestamp(language as Lang, lastEdit)}
-            </Text>
-          </Skeleton>
+              <Text m={0} color="text200">
+                <Translation id="last-edit" />:{" "}
+                {lastContributor.user?.url && (
+                  <InlineLink href={lastContributor.user.url}>
+                    @{lastContributor.user.login}
+                  </InlineLink>
+                )}
+                {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
+                {getLocaleTimestamp(locale as Lang, lastEdit)}
+              </Text>
+            </>
+          )}
         </Flex>
 
         <VStack align="stretch" justifyContent="space-between" spacing={2}>
-          <Skeleton isLoaded={!loading} mt={{ base: 4, md: 0 }}>
-            <Button
-              variant="outline"
-              bg="background.base"
-              border={0}
-              onClick={() => {
-                setModalOpen(true)
-                trackCustomEvent({
-                  eventCategory: "see contributors",
-                  eventAction: "click",
-                  eventName: "click",
-                })
-              }}
-              w={{ base: "full", md: "inherit" }}
-            >
-              <Translation id="see-contributors" />
-            </Button>
-          </Skeleton>
-          {editPath && (
-            <ButtonLink
-              to={editPath}
-              hideArrow
-              variant="outline"
-              hideBelow="lg"
-            >
-              <Flex
-                h="100%"
-                alignItems="center"
-                justifyContent="center"
-                gap={2}
-              >
-                <Icon as={FaGithub} fontSize="2xl" />
-                <span>
-                  <Translation id="edit-page" />
-                </span>
-              </Flex>
-            </ButtonLink>
-          )}
+          <Button
+            variant="outline"
+            bg="background.base"
+            border={0}
+            mb={{ base: 4, md: 0 }}
+            onClick={() => {
+              setModalOpen(true)
+              trackCustomEvent({
+                eventCategory: "see contributors",
+                eventAction: "click",
+                eventName: "click",
+              })
+            }}
+            w={{ base: "full", md: "inherit" }}
+          >
+            <Translation id="see-contributors" />
+          </Button>
         </VStack>
       </Flex>
     </>
