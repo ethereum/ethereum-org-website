@@ -19,6 +19,7 @@ import {
 
 import type { Lang } from "@/lib/types"
 
+import { wrapLabel } from "@/lib/utils/charts"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import {
