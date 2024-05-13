@@ -28,7 +28,7 @@ const Modal = ({
   ...restProps
 }: ModalProps) => {
   return (
-    <ChakraModal isCentered scrollBehavior="inside" {...restProps}>
+    <ChakraModal isCentered scrollBehavior="outside" {...restProps}>
       <ModalOverlay />
 
       <ModalContent {...contentProps}>
