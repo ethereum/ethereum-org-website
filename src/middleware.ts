@@ -29,7 +29,7 @@ export async function middleware(req: NextRequest) {
     req.nextUrl.pathname.includes("/api/") ||
     PUBLIC_FILE.test(req.nextUrl.pathname)
   ) {
-    return
+    return NextResponse.next()
   }
 
   if (req.nextUrl.locale === FAKE_LOCALE) {
