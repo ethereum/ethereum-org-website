@@ -89,7 +89,7 @@ lang: zh
 
 ## 产品经理 <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
 
-- 以太坊生态系统需要有才之士！ 许多公司正在招聘产品经理。 如果你想从为开源项目做贡献开始，请联系 [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) 或 [MetaCartel](https://www.metacartel.org/)
+- 以太坊生态系统需要有才之士！ 许多公司正在招聘产品经理。 如果你想从为开源项目做贡献开始，请联系 [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) 或 [RaidGuild](https://www.raidguild.org/)
 
 ## 市场营销 <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 
@@ -122,16 +122,13 @@ lang: zh
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _在非技术领域推广去中心化自治组织这一概念，帮助人们通过去中心化自治组织创造价值_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _由相信互联网为集体所有的构建者组成的社区_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _以去中心化自治组织形式运行的自由职业者 Web3 开发团队_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _去中心化应用程序和协议的去中心化开发与治理_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhaus 社区治理_
-- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _社区拥有的超级英雄特许权_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _法律工程_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _法律工程_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _艺术社区_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _去中心化自治组织培养基地_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _为种子阶段前的加密项目提供风险投资_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _面向现实世界的 MMORPG 游戏机制_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _数字化实体服装品牌_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _女性主导的项目_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _专注于资助以太坊发展的社区_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _由 Web3 构建者组成的团队_
 

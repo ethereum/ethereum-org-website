@@ -22,7 +22,7 @@ summaryPoints:
 Το πρωτόκολλο του Ethereum δεν υποστηρίζει εγγενώς την ανάθεση της αποθήκευσης, επομένως έχουν δημιουργηθεί υπηρεσίες ώστε να καλύψουν αυτό το αίτημα. Εάν διαθέτετε για αποθήκευση 32 ETH, αλλά δεν αισθάνεστε άνετα με τις απαιτήσεις σε υλικό, οι υπηρεσίες SaaS σας επιτρέπουν να αναθέσετε το δύσκολο μέρος της τεχνικής υλοποίησης, ενώ κερδίζετε τις ανταμοιβές του μπλοκ.
 
 <CardGrid>
-  <Card title="Ο επαληθευτής σας" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
+  <Card title="Ο επαληθευτής σας" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
   <Card title="Εύκολη έναρξη" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
   <Card title="Περιορίστε τον κίνδυνο" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
@@ -49,7 +49,7 @@ summaryPoints:
 
 Παρακαλούμε λάβετε υπόψιν σας τη σημασία σε υποστήριξη των [διαφορετικών λογισμικών πελάτη](/developers/docs/nodes-and-clients/client-diversity/), καθώς βελτιώνει την ασφάλεια του δικτύου και περιορίζει τους κινδύνους σας. Οι υπηρεσίες που έχουν αποδεικτικά στοιχεία περιορισμού της πλειοψηφικής χρήσης πελατών υποδεικνύονται με <em style={{ textTransform: "uppercase" }}>"ποικιλομορφια πελατη εκτελεσης"</em> και τη <em style={{ textTransform: "uppercase" }}>"συναινετικη ποικιλομορφια πελατων."</em>
 
-## Γεννήτριες κλειδιών
+### Γεννήτρια κλειδιών
 
 <StakingProductsCardGrid category="keyGen" />
 

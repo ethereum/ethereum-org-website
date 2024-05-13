@@ -1,5 +1,5 @@
 ---
-title: Seguridad en contratos inteligentes
+title: Seguridad de los contratos inteligentes
 description: Resumen de lineamientos para crear contratos inteligentes seguros en Ethereum
 lang: es
 ---
@@ -78,7 +78,7 @@ El método habitual es escribir pruebas de unidades pequeñas utilizando datos s
 
 Desafortunadamente, las pruebas unitarias son poco efectivas para mejorar la seguridad de los contratos inteligentes cuando se utilizan de forma aislada. Una prueba unitaria puede demostrar que una función se ejecuta correctamente para datos simulados, pero son tan eficaces como las pruebas que se escriben. Esto dificulta la detección de casos límite y vulnerabilidades que podrían romper la seguridad de su contrato inteligente.
 
-Una mejor estrategia es combinar las pruebas unitarias con pruebas basadas en propiedades realizadas mediante [análisis estáticos y dinámicos](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). El análisis estático se basa en representaciones de bajo nivel, como [gráficos de flujo de control](https://en.wikipedia.org/wiki/Control-flow_graph) y [árboles sintácticos abstractos](https://deepsource.io/glossary/ast/) para analizar los estados alcanzables de un programa y las rutas de ejecución. Por su parte, las técnicas de análisis dinámico, como el fuzzing, ejecutan el código del contrato con valores de entrada aleatorios para detectar operaciones que violen las propiedades de seguridad.
+Una mejor estrategia es combinar las pruebas unitarias con pruebas basadas en propiedades realizadas mediante [análisis estáticos y dinámicos](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). El análisis estático se basa en representaciones de bajo nivel, como [gráficos de flujo de control](https://en.wikipedia.org/wiki/Control-flow_graph) y [árboles sintácticos abstractos](https://deepsource.io/glossary/ast/) para analizar los estados alcanzables de un programa y las rutas de ejecución. Mientras tanto, técnicas de análisis dinámicos, como las [auditorías de seguridad (fuzzing) de contratos inteligentes](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), ejecutan un código de contrato con valores de introducción aleatorios que infringen las propiedades de seguridad.
 
 La [verificación formal](/developers/docs/smart-contracts/formal-verification) es otra técnica para verificar las propiedades de seguridad en los contratos inteligentes. A diferencia de las pruebas habituales, la verificación formal puede demostrar de forma concluyente la ausencia de errores en un contrato inteligente. Esto se consigue creando una especificación formal que capture las propiedades de seguridad deseadas y demostrando que un modelo formal de los contratos se adhiera a esta especificación.
 
@@ -112,7 +112,7 @@ La existencia de auditorías y recompensas por errores no lo exime de la respons
 
 - Utilizar un [entorno de desarrollo](/developers/docs/frameworks/) para probar, compilar e implementar contratos inteligentes
 
-- Ejecutar su código por medio de herramientas básicas de análisis de código, como Mythril y Slither. En principio, debería hacer esto antes de combinar cada pull request y comparar las diferencias en el resultado
+- Ejecute su código mediante herramientas básicas de análisis de código, como [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril y Slither. En principio, debería hacer esto antes de combinar cada pull request y comparar las diferencias en el resultado
 
 - Asegurarse de que el código se compile sin errores y que el compilador de Solidity no emita advertencias
 
@@ -126,7 +126,7 @@ El diseño de controles de acceso seguros, la implementación de modificadores d
 
 Si bien los contratos inteligentes de Ethereum son inmutables de forma predeterminada, es posible lograr cierto grado de mutabilidad usando patrones de actualización. La actualización de contratos es necesaria en los casos en que una falla crítica haga inutilizable su viejo contrato e implementar nueva lógica sea la opción más viable.
 
-Los mecanismos de actualización de contratos funcionan de forma diferente, pero el “patrón de proxy” es una de las formas más populares. Los patrones proxy dividen el estado y la lógica de una aplicación entre _dos_ contratos. El primer contrato (llamado “contrato proxy”) almacena variables de estado (p. ej., los balances de los usuarios), mientras que el segundo contrato (llamado “contrato de lógica”) contiene el código para la ejecución de las funciones del contrato.
+Los mecanismos de actualización de contratos funcionan de forma diferente, pero el “patrón de proxy” es una de las formas más populares. Los [patrones de proxy](https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern) dividen el estado de una aplicación y la lógica entre _dos_ contratos. El primer contrato (llamado “contrato proxy”) almacena variables de estado (p. ej., los balances de los usuarios), mientras que el segundo contrato (llamado “contrato de lógica”) contiene el código para la ejecución de las funciones del contrato.
 
 Las cuentas interactúan con el contrato proxy, que envía todas las llamadas de función al contrato de lógica usando la llamada de bajo nivel [`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries). A diferencia de una llamada de mensaje normal, `delegatecall()` asegura que el código que se ejecuta en la dirección del contrato de lógica sea ejecutado en el contexto del contrato de llamada. Esto significa que el contrato de lógica siempre escribirá en el almacenamiento del proxy (en lugar de su propio almacenamiento) y que los valores originales de `msg. ender` y `msg.value` serán preservados.
 
@@ -448,7 +448,7 @@ Por ejemplo, un atacante podría inflar artificialmente el precio al contado de 
 
 ##### Cómo prevenir la manipulación de los oráculos
 
-El requisito mínimo para evitar la manipulación de un oráculo es utilizar una red descentralizada de oráculos que consulte información de múltiples fuentes para evitar puntos únicos de falla. En la mayoría de los casos, los oráculos descentralizados tienen incentivos criptoeconómicos incorporados para alentar a los nodos de oráculos a que pasen información correcta, lo que los hace más seguros que los oráculos centralizados.
+El requisito mínimo para [evitar la manipulación del oráculo](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) consiste en utilizar una red de oráculo descentralizada que obtiene información de múltiples fuentes para evitar un único punto de error. En la mayoría de los casos, los oráculos descentralizados tienen incentivos criptoeconómicos incorporados para alentar a los nodos de oráculos a que pasen información correcta, lo que los hace más seguros que los oráculos centralizados.
 
 Si planea consultar a un oráculo en cadena precios de activos, considere el uso de uno que implemente un mecanismo de precio promedio ponderado en el tiempo (TWAP). Un [Oráculo TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) consulta el precio de un activo en dos puntos diferentes en el tiempo (que puede modificar) y calcula el precio al contado en función del promedio obtenido. La elección de períodos de tiempo más largos protege su protocolo contra la manipulación de precios, ya que los pedidos grandes ejecutados recientemente no pueden afectar a los precios de los activos.
 
@@ -506,6 +506,12 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 - **[Code4rena:](https://code4rena.com/)** _Plataforma de auditoría competitiva que incentiva a los expertos en seguridad de contratos inteligentes a encontrar vulnerabilidades y ayudar a que la Web3 sea más segura._
 
+- **[CodeHawks](https://codehawks.com/)**: _plataforma de auditorías competitivas que aloja licitaciones de auditorías de contratos inteligentes para investigadores de seguridad._
+
+- **[Cyfrin](https://www.cyfrin.io/)**: _empresa de formación sobre seguridad de cadenas de bloques y Web3 centrada en protocolos basados en la EVM y Vyper._
+
+- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)**: _empresa de seguridad en Web3 que ofrece auditorías de seguridad para sistemas de cadena de bloque mediante un equipo de auditores expertos y las mejores herramientas existentes._
+
 ### Plataformas de recompensas por errores {#bug-bounty-platforms}
 
 - **[Immunefi:](https://immunefi.com/)** _Plataforma de recompensas de errores para contratos inteligentes y proyectos DeFi donde los investigadores de seguridad revisan el código, revelan vulnerabilidades, obtienen incentivos económicos y hacen que las criptomonedas sean más seguras. _
@@ -546,10 +552,12 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 - [Cómo escribir contratos inteligentes seguros](/developers/tutorials/secure-development-workflow/)
 
-- [¿Cómo usar Slither para encontrar errores inteligentes](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [Cómo usar Slither para encontrar errores en contratos inteligentes](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 - [Cómo utilizar Manticore para encontrar errores en contratos inteligentes](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 
 - [Directrices de seguridad de contratos inteligentes](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [Cómo integrar de forma segura su contrato de tokens con tokens arbitrarios](/developers/tutorials/token-integration-checklist/)
+
+- [Cyfrin Updraft: curso completo sobre seguridad de contratos inteligentes y auditoría](https://updraft.cyfrin.io/courses/security)

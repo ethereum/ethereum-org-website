@@ -50,9 +50,15 @@ Il ciclo di vita dell'attestazione è delineato nel seguente schema:
 
 ## Ricompense {#rewards}
 
-I validatori sono ricompensati per l'invio delle attestazioni. La ricompensa dell'attestazione dipende da due variabili, la `base reward` (ricompensa di base) e l'`inclusion delay` (ritardo d'inclusione). Il miglior caso per il ritardo d'inclusione è che sia pari a 1.
+I validatori sono ricompensati per l'invio delle attestazioni. La ricompensa d'attestazione dipende dai flag di partecipazione (sorgente, destinazione e testa), dalla ricompensa di base e dal tasso di partecipazione.
 
-`ricompensa d'attestazione = 7/8 x ricompensa di base x (1/ritardo d'inclusione)`
+Ogni flag di partecipazione può essere vero o falso, a seconda dell'attestazione inviata e del suo ritardo di inclusione.
+
+Lo scenario migliore si verifica quando i tre flag sono tutti veri, nel qual caso un validatore guadagnerà (per flag corretto):
+
+`ricompensa += ricompensa di base * peso del flag * tasso di attestazione del flag / 64`
+
+Il tasso di attestazione del flag si misura utilizzando la somma dei saldi effettivi di tutti i validatori attestanti per il dato flag confrontato al saldo effettivo attivo totale.
 
 ### Ricompensa di base {#base-reward}
 
@@ -78,9 +84,9 @@ Per ogni epoca ci sono in totale 16 Aggregatori. Inoltre, alcuni validatori casu
 
 Si noti che in alcuni casi un aggregatore fortunato potrebbe anche diventare il propositore di blocchi. Se l'attestazione non è stata inclusa perché il propositore di blocchi è mancante, sarebbe il propositore successivo a selezionare l'attestazione aggregata e includerla nel blocco successivo. Tuttavia, il **ritardo d'inclusione** aumenterebbe di uno.
 
-## Lettura consigliate {#further-reading}
+## Letture consigliate {#further-reading}
 
 - [Le attestazioni nelle specifiche del consenso annotate da Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
-- [Le attestazioni su eth2book.info](https://eth2book.info/altair/part3/containers/dependencies#attestationdata)
+- [Le attestazioni su eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
-_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_

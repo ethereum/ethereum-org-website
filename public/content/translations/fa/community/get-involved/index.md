@@ -89,7 +89,7 @@ lang: fa
 
 ## مدیران محصول <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
 
-- اکوسیستم اتریوم به استعدادهای شما نیاز دارد! بسیاری از شرکت‌ها در حال استخدام برای سمت مدیر محصول هستند. اگر می‌خواهید با مشارکت در یک پروژه‌ی متن‌باز شروع کنید، با [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) یا [MetaCartel](https://www.metacartel.org/) در تماس باشید
+- اکوسیستم اتریوم به استعدادهای شما نیاز دارد! بسیاری از شرکت‌ها در حال استخدام برای سمت مدیر محصول هستند. اگر می‌خواهید با مشارکت در یک پروژه‌ی متن‌باز شروع کنید، با [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) یا [RaidGuild](https://www.raidguild.org/) در تماس باشید
 
 ## بازاریابی <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 
@@ -121,16 +121,13 @@ lang: fa
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _مفهوم DAO را در زمینه غیر فناوری ترویج می‌کند و به مردم کمک در ایجاد ارزش از طریق DAO کمک می‌کند_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _جامعه‌ی سازندگانی که به مالکیت جمعی اینترنت اعتقاد دارند_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - *شرکت جمعی توسعه‌ی Web3 Freelancer که به‌عنوان DAO کار می‌کند*
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _توسعه‌ی غیرمتمرکز و حاکمیت dAppها و پروتکل‌ها_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - *حاکمیت اجتماعی DAOhaus*
-- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _فرانچایز ابرقهرمانی متعلق به انجمن_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - *مهندسی حقوقی*
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - *مهندسی حقوقی*
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - *جامعه‌ی هنری*
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - *مرکز پرورش DAO*
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - *سرمایه گذاری برای پروژه های کریپتو پیش از آغاز به کار*
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - *مکانیزم‌های بازی‌های MMORPG در زمان حال*
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - *برندهای پوشاک دیجیتالی*
-- [ΜΓΔ](https://metagammadelta.com/) (متا گاما دلتا) [@metagammadelta](https://twitter.com/metagammadelta) - _پروژه‌های تحت هدایت زنان_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - *جامعه‌ای با تمرکز بر تأمین مالی توسعه‌ی اتریوم*
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - *مجموعه‌ی سازندگان Web3*
 

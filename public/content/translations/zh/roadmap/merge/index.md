@@ -11,7 +11,7 @@ summaryPoint3: 合并是指原有的以太坊主网与单独的权益证明区�
 summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   合并于 2022 年 9 月 15 日执行， 它完成了以太坊向权益证明共识的过渡，以太坊正式弃用了工作量证明并将能源消耗减少了约 99.95%。
 </UpgradeStatus>
 

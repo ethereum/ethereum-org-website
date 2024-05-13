@@ -77,7 +77,7 @@ Het Ethereum-ecosysteem is op een missie om publieke goederen en waardevolle pro
 
 ## Productbeheerders <Emoji text=":fountain_pen:" size={1} /> ½ {#product-managers}
 
-- Het Ethereum-ecosysteem heeft uw talenten nodig! Veel bedrijven huren productmanagers in. Als u wilt beginnen met bij te dragen aan een open-source project, neem dan contact op met de [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) of met [MetaCartel](https://www.metacartel.org/)
+- Het Ethereum-ecosysteem heeft uw talenten nodig! Veel bedrijven huren productmanagers in. Als u wilt beginnen met bij te dragen aan een open-source project, neem dan contact op met de [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) of met [RaidGuild](https://www.raidguild.org/)
 
 ## Marketing <Emoji text=":megaphone:" size={1} />≤ {#marketing}
 
@@ -109,15 +109,12 @@ Het Ethereum-ecosysteem is op een missie om publieke goederen en waardevolle pro
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Bevorder het DAO-concept op niet-technologisch gebied en help mensen waarde creëren via DAO._
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Gemeenschap van builders die geloven in collectief eigendom van het internet_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Freelancer Web3-ontwikkelingscollectief dat werkt als een DAO_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Gedecentraliseerde ontwikkeling & bestuur van dapps & protocols_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Gemeenschapsbestuur van DAOhaus_
-- [Held DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Superheldenfranchise in gemeenschapsbezit_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Juridische engineering_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Juridische engineering_
 - [Machi X](https://machix.com) [@MachiXOfficiële](https://twitter.com/MachiXOfficial) - _Kunstgemeenschap_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _DAO-incubator_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Onderneming voor pre-seed cryptoprojecten_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _MMORPG-spelmechanismen voor het echte leven_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Digiphysical-kledingmerken_
-- [amanca,](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Door vrouwen geleide projecten_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Gemeenschap gericht op het financieren van Ethereum-ontwikkeling_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collectief Web3-builders_

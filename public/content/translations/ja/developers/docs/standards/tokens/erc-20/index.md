@@ -12,13 +12,12 @@ lang: ja
 
 - オンラインプラットフォームにおける評価ポイント。
 - ゲーム内のキャラクターにおけるスキル。
-- 宝くじの券。
 - 企業の株式などの金融資産。
 - 米ドルをはじめとする法定通貨。
 - 金（ゴールド）1オンス。
 - 等々。
 
-イーサリアムにおいてこれほどの威力を持つ機能に対しては、必然的に堅牢な規格が必要です。 これこそ、ERC-20規格が果たすべき役割なのです！ この規格を用いることで、イーサリアム外の製品やサービスと相互運用できるトークンアプリを構築することが可能になります。
+イーサリアムにおいてこれほどの威力を持つ機能に対しては、必然的に堅牢な規格が必要です。 これこそ、ERC-20規格が果たすべき役割なのです！ この規格を用いることで、イーサリアム外の製品やサービスと相互運用できるトークンアプリを構築することが可能になります。 ERC-20規格は、[Ether](/glossary/#ether)へ追加機能を提供するのにも使われています。
 
 **ERC-20とは何か？**
 
@@ -89,7 +88,7 @@ weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Wrapped ethe
 
 acc_address = "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11"        # Uniswap V2: DAI 2
 
-# これはERC-20トークンのコントラクトのアプリケーション・バイナリ・インターフェース（ABI）を簡略化したものです。
+# This is a simplified Contract Application Binary Interface (ABI) of an ERC-20 Token Contract.
 # It will expose only the methods: balanceOf(address), decimals(), symbol() and totalSupply()
 simplified_abi = [
     {

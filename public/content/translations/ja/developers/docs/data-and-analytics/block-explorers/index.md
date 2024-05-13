@@ -14,17 +14,19 @@ sidebarDepth: 3
 ## サービス {#services}
 
 - [Etherscan](https://etherscan.io/) –_中国語、韓国語、ロシア語、日本語でも利用できます_
+- [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
 - [blockchair](https://blockchair.com/ethereum) –_スペイン語、フランス語、イタリア語、オランダ語、ポルトガル語、ロシア語、中国語、ペルシア語でも利用できます_
-- [Blockscout](https://blockscout.com/)
+- [Blockscout](https://eth.blockscout.com/)
+- [Chainlens](https://www.chainlens.com/)
+- [DexGuruブロックエクスプローラー](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
+- [Ethernow](https://www.ethernow.xyz/)
 - [Ethplorer](https://ethplorer.io/) –_中国語、スペイン語、フランス語、トルコ語、ロシア語、韓国語、ベトナム語でも利用できます_
+- [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Otterscan](https://otterscan.io/)
 - [Rantom](https://rantom.app/)
-- [Sirato](https://www.web3labs.com/sirato)
-- [EthVM](https://www.ethvm.com/)
-- [DexGuruブロックエクスプローラー](https://ethereum.dex.guru/)
 
 ## データ {#data}
 
@@ -232,11 +234,13 @@ sidebarDepth: 3
 ## ブロックエクスプローラー {#block-explorers}
 
 - [Etherscan](https://etherscan.io/) - イーサリアムメインネット、Goerliテストネットのデータを取得するために使用できるブロックエクスプローラー
+- [3xpl](https://3xpl.com/ethereum) - 広告無しのオープンソース・イーサリアム・エクスプローラでデータセットのダウンロードが可能
 - [Beaconcha.in](https://beaconcha.in/) - イーサリアムメインネットとGoerliテストネットのオープンソースブロックエクスプローラー
 - [Blockchair](https://blockchair.com/ethereum) - 最もプライベートなイーサリアムエクスプローラー。 データのソートやフィルタリング(メンプール)も可能
 - [Etherchain](https://www.etherchain.org/) - イーサリアムメインネットのブロックエクスプローラー
 - [Ethplorer](https://ethplorer.io/) - イーサリアムメインネットとKovanテストネットのトークンを中心としたブロックエクスプローラー
 - [Rantom](https://rantom.app/) - ユーザーフレンドリーで、DeFi&NFTトランザクションを詳細に把握できるオープンソースのビューア
+- [Ethernow](https://www.ethernow.xyz/) - リアルタイムのトランザクションエクスプローラーで、イーサリアムメインネットのプリチェーンレイヤーを確認可能
 
 ## 参考文献 {#further-reading}
 

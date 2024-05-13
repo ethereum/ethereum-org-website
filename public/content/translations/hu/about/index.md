@@ -6,7 +6,7 @@ lang: hu
 
 # Az ethereum.org-ról {#about-ethereumorg}
 
-Az ethereum.org egy nyilvános, nyílt forráskódú információs forrás az Ethereum közösségnek, amelyhez bárki hozzájárulhat. Egy kicsi központi csapat dedikáltan dolgozik az oldal fenntartásán és fejlesztésén, s ebben több ezer közösségi tag segíti őket a világ minden tájáról.
+Az ethereum.org egy nyilvános, nyílt forráskódú információs forrás az Ethereum közösségnek, amelyhez bárki hozzájárulhat. Egy kicsi központi csapat elhivatottan dolgozik az oldal fenntartásán és fejlesztésén, és ebben több ezer közösségi tag segíti őket a világ minden tájáról.
 
 ## Megjegyzés a nevekkel kapcsolatban {#a-note-on-names}
 
@@ -14,7 +14,7 @@ Az ethereum.org egy nyilvános, nyílt forráskódú információs forrás az Et
 
 ### Ethereum {#ethereum}
 
-Az Ethereum egy nyilvános hálózat, egy blokklánc és egy nyílt forráskódú protokoll, melyet működtet, irányít, kezel és birtokol egy globális közösség sok tízezernyi tagja, amely fejlesztőkből, csomópontüzemeltetőkből, ETH-szel rendelkezőkből és felhasználókból áll.
+Az Ethereum egy nyilvános hálózat, egy blokklánc és egy nyílt forráskódú protokoll, melyet egy globális közösség sok tízezernyi tagja működtet, irányít, kezel és birtokol, és amely közösség fejlesztőkből, csomópont-üzemeltetőkből, ETH-szel rendelkezőkből és felhasználókból áll.
 
 [Bővebben az Ethereumról](/what-is-ethereum/)
 
@@ -30,13 +30,13 @@ Az Ether (melyet ETH-ként is láthat) a natív valuta, mellyel az Ethereumon tr
 
 ### Ethereum Alapítvány {#ethereum-foundation}
 
-Egy non-profit szervezet, melyet eredetileg az ETH tömeges eladásával alapítottak meg, s az Ethereum hálózat és ökoszisztéma dedikált támogatója.
+Egy non-profit szervezet, melyet eredetileg az ETH tömeges eladásával alapítottak meg, és az Ethereum hálózat és ökoszisztéma dedikált támogatója.
 
 [Bővebben az Ethereum Alapítványról](/foundation/)
 
 ### ethereum.org {#ethereum-org}
 
-Egy nyilvános, nyílt forráskódú weboldal és tudásbázis az Ethereum közösség számára. Az ethereum.org oldalt egy kicsi központi csapat vezeti, melyet az Ethereum Alapítvány hozott létre, s több ezer közösségi tag közreműködik benne a világ minden tájáról.
+Egy nyilvános, nyílt forráskódú weboldal és tudásbázis az Ethereum közössége számára. Az ethereum.org oldalt egy kicsi központi csapat vezeti, melyet az Ethereum Alapítvány hozott létre, és több ezer közösségi tag közreműködik benne a világ minden tájáról.
 
 Ez a cikk további információkat tartalmaz az ethereum.org-ról.
 
@@ -53,12 +53,12 @@ Arra törekszünk, hogy egy könnyen érthető tudástárat építsünk minden E
 - bemutatni a közösség által készített anyagokat
 - lehetővé tenni az Ethereum oktatást annyi nyelven, amennyin csak lehetséges
 
-E küldetés elérése érdekében a csapat két elsődleges célra koncentrál az ethereum.org-on:
+E küldetést elérni, ezért a csapatunk a következő két elsődleges célra koncentrál az ethereum.org-on:
 
-### 1. Javítsa az ethereum.org látogatók felhasználó élményét {#visitors}
+### 1. Az ethereum.org látogatók felhasználó élményének javítása {#visitors}
 
 - A tartalom kiterjesztése új témákra, fejlesztése és frissítése
-- A használhatóség és az elérhetőség fejlesztése a lokalizáció és a webfejlesztés bevált gyakorlatai által
+- A használhatóság és az elérhetőség fejlesztése a lokalizáció és a webfejlesztés bevált gyakorlatai által
 - A felhasználói elköteleződés növelése olyan funkciókkal, mint a kérdőívek, kvízek és web3 integrációk
 - A honlapot megőrizzék könnyűsúlyú és hatékonyan működő állapotában
 
@@ -74,23 +74,23 @@ E küldetés elérése érdekében a csapat két elsődleges célra koncentrál 
 
 A következő fő elvek segítenek nekünk teljesíteni a küldetést.
 
-### 1. Az ethereum.org egy portál az Ethereumra 🌏 {#core-principles-1}
+### 1. Az ethereum.org egy portál az Ethereumra  {#core-principles-1}
 
 Szeretnénk felkelteni a felhasználók érdeklődését és megválaszolni a kérdéseiket. Tehát portálunk egyszerre szolgáltat információkat, „varázslatos pillanatokat” és hozzáférést a közösség által létrehozott kiváló anyagokhoz. A honlap tartalma nem helyettesíti a már meglévő, kiterjedt forrásokat, hanem bevezeti a felhasználókat a témákba és elérhetővé teszi ezeket az anyagokat. Szeretnénk támogatni és integrálni a közösség által felépített tudásbázist, hogy azok láthatóbbak és felfedezhetőbbek legyenek. [Az Ethereum közösség](/community/) ennek a középpontjában áll: nemcsak a közösséget szolgáljuk, hanem együttműködünk a tagjaival és felhasználjuk a visszajelzéseiket. A weboldal nem csak a mostani közösségnek szól, hanem annak is, amelyhez reményeink szerint felfejlődhetünk. Emlékeznünk kell arra, hogy közösségünk globális, és sok nyelvből, régióból és kultúrából származó embereket tartalmaz.
 
-### 2. Az ethereum.org folyamatosan fejlődik 🛠 {#core-principles-2}
+### 2. Az ethereum.org folyamatosan fejlődik  {#core-principles-2}
 
-Az Ethereum és a közösség folyamatosan fejlődik, így az ethereum.org is fejlődni fog. Emiatt van az oldalnak egyszerű dizájnrendszere & moduláris struktúrája. Iteratív változtatásokat hajtunk végre az alapján, hogy az emberek hogyan használják a webhelyet, és mit akar tőle a közösség. Nyílt forráskódúak vagyunk, s a közreműködők közösségével dolgozunk, így Ön is tehet javaslatot változtatásokra vagy segíthet is nekünk a különféle feladatokban. [Bővebben a közreműködésről](/contributing/)
+Az Ethereum és a közösség folyamatosan fejlődik, így az ethereum.org is fejlődni fog. Emiatt van az oldalnak egyszerű dizájnrendszere és moduláris struktúrája. Iteratív változtatásokat hajtunk végre az alapján, hogy az emberek hogyan használják a webhelyet, és mit akar tőle a közösség. Nyílt forráskóddal működünk, és a közreműködők közösségével dolgozunk, így Ön is tehet javaslatot változtatásokra vagy segíthet is nekünk a különféle feladatokban. [Bővebben a közreműködésről](/contributing/)
 
-### 3. Az ethereum.org nem egy tipikus termékről szóló weboldal 🦄 {#core-principles-3}
+### 3. Az ethereum.org nem egy tipikus termékről szóló weboldal  {#core-principles-3}
 
-Az Ethereum egy nagy dolog: magában foglal egy közösséget, egy technológiát, egy sor elképzelést és ideológiát, és még sok mást. Ez azt jelenti, hogy a weboldalnak sok különböző felhasználói utat kell lefednie a „fejlesztőtől kezdve, aki egy bizonyos eszközt szeretne” egészen a „újoncig, aki vett valamennyi ETH-t és nem tudja mi az a tárca”. „Mi a legjobb honlap egy blokkláncplatformnak?” – egyelőre megválaszolatlan marad, mert mi is úttörők vagyunk e területen. Egy ilyen felépítéséhez kísérletezés szükséges.
+Az Ethereum egy nagy dolog: magában foglal egy közösséget, egy technológiát, egy sor elképzelést és ideológiát, és még sok mást. Ez azt jelenti, hogy a weboldalnak sok különböző felhasználói utat le kell fednie a „fejlesztőtől, aki egy bizonyos eszközt szeretne kifejleszteni” egészen az „újoncig, aki vett valamennyi ETH-et és még nem tudja, mi az a tárca”. „Melyik a legjobb blokklánc platform weboldal?” marad az örökérvényű kérdés – mi úttörők vagyunk. Egy ilyen felépítéséhez kísérletezés szükséges.
 
 ## Az ethereum.org ütemterve {#roadmap}
 
 Az ethereum.org csapat negyedéves ütemtervet publikál az aktuális célokról, hogy a tevékenységét elérhetőbbé tegye és elősegítse a közösségi közreműködéseket.
 
-[Tekintse meg a 2023 Q1 (első negyedévi) ütemtervünket](https://github.com/ethereum/ethereum-org-website/issues/9090)
+[Tekintse meg a 2024. 1. negyedévére vonatkozó ütemtervünket](https://github.com/ethereum/ethereum-org-website/issues/12005)
 
 **Hogy hangzik?** Nagyra értékeljük, ha visszajelzést ad az ütemtervükkel kapcsolatban! Ha bármivel kapcsolatban úgy véli, hogy foglalkoznunk kellene vele, tudassa velünk! Szívesen fogadjuk a közösség bármelyik tagjától az ötleteket és a beadott kérvényeket (PR, mint pull request).
 
@@ -104,20 +104,20 @@ A honlappal kapcsolatos tartalmi és dizájn jellegű megbeszéléseket a [dizá
 
 Egy [dizájnrendszert](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) hoztunk létre és tettünk közzé, hogy az új jellemzőket gyorsabban be tudjuk vezetni, illetve a közösség tagjai is részt tudjanak venni az ethereum.org nyilvános dizájnjában.
 
-Szeretne Ön is részt venni? [Kövesse a témát a Figmában](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), a [GitHub issue-knál](https://github.com/ethereum/ethereum-org-website/issues/6284) és csatlakozzon a [#design Discord csatornán](https://discord.gg/ethereum-org) folyó beszélgetésekhez.
+Szeretne Ön is részt venni?[Kövesse a témát a Figmában](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), a [GitHub issue-knál](https://github.com/ethereum/ethereum-org-website/issues/6284) és csatlakozzon a [#design Discord csatornán](https://discord.gg/ethereum-org) folyó beszélgetésekhez.
 
 ## Stílusútmutató {#style-guide}
 
-Elérhető egy [stílusútmutató](/contributing/style-guide/), hogy a tartalomírás bizonyos aspektusait összehangolja, s így a hozzájárulás folyamata is egyszerűbb lesz.
+Elérhető egy [stílusútmutató](/contributing/style-guide/), hogy a tartalomírás bizonyos aspektusait összehangolja, és így a hozzájárulás folyamata is egyszerűbb lesz.
 
 Kérjük, hogy tekintse át az [elveinket](/contributing/design-principles/) és a [stílusútmutatót](/contributing/style-guide/), ha szeretne [hozzájárulni a honlaphoz](/contributing/).
 
-Ha bármi észrevétele van a dizájnelvekkel, dizájnrendszerrel és a stílusútmutatóval kapcsolatban, azt jelezze felénk! Ne feleddje, az ethereum.org a közösségért van a közösség által.
+Ha bármi észrevétele van a dizájnelvekkel, dizájnrendszerrel és a stílusútmutatóval kapcsolatban, azt jelezze felénk. Ne feledje, az ethereum.org a közösségért van a közösség által.
 
 ## Álláslehetőségek {#open-jobs}
 
-Habár ez a honlap nyílt forráskódú és bárki dolgozhat rajta, van egy dedikált csapat az ethereum.org-hoz és más Ethereum Alapítvány webprojektekhez.
+Habár ez a honlap nyílt forráskódú és bárki dolgozhat rajta, egy dedikált csapat dolgozik az ethereum.org és más Ethereum Alapítványi webprojektek jobbá tételén.
 
-Itt megtalálhatja az aktuális álláslehetőségeket. Ha nem lát Önhöz illeszkedő pozíciót, akkor nézzen át a [Discord szerverünkre](https://discord.gg/ethereum-org) és mondja el nekünk, hogyan szerene velünk dolgozni!
+Itt megtalálhatja az aktuális álláslehetőségeket. Ha nem lát Önhöz illeszkedő pozíciót, akkor nézzen át a [Discord szerverünkre](https://discord.gg/ethereum-org) és mondja el nekünk, hogyan szeretne velünk dolgozni!
 
 Az ethereum.org csapaton túli lehetőségek is érdeklik? [Nézze meg az Ethereumhoz kapcsolódó további álláslehetőségeket](/community/get-involved/#ethereum-jobs/).

@@ -17,7 +17,6 @@ Aceste programe sprijină ecosistemul Ethereum extins oferind granturi pentru o 
 - [EF Ecosystem Support Program](https://esp.ethereum.foundation) - _Finanțarea proiectelor open source de care beneficiază Ethereum, vizând în special instrumentele universale, infrastructura, cercetarea și bunurile publice_
   - [Academic Grants Round](https://esp.ethereum.foundation/academic-grants) - _The Ethereum Foundation is sponsoring a wave of grants to support academic work related to Ethereum_
 - [Ethereum RFPs](https://github.com/ethereum/requests-for-proposals) - _Cereri de propuneri ale Fundației Ethereum pentru lucrări și proiecte în ecosistemul Ethereum_
-- [MetaCartel](https://www.metacartel.org/grants/) - _Dezvoltarea de aplicații dapp, crearea de organizații DAO_  
   Subvenții între 1.000 - 8.000 USD.
 - [Moloch DAO](https://www.molochdao.com/) - _Confidențialitate, scalare de nivelul 2, securitate pentru clienți și multe altele_
 - [Granturi deschise](https://opengrants.com/explore)

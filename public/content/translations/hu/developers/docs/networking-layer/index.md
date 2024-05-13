@@ -7,9 +7,9 @@ sidebarDepth: 2
 
 Az Ethereum egy peer-to-peer hálózat több ezer csomóponttal, amelyeknek szabványosított protokollokkal kommunikálnak egymással. A hálózati réteg azon protokollok halmaza, amelyek lehetővé teszik, hogy ezek a csomópontok megtalálják egymást és információt cseréljenek. Ez magában foglalja az információk pletykálását (egy a sokhoz kommunikáció) a hálózaton keresztül, valamint a kérések és válaszok cseréjét bizonyos csomópontok között (egy az egyhez kommunikáció). Minden csomópontnak be kell tartania bizonyos hálózati szabályokat, hogy biztosítsa a megfelelő információk küldését és fogadását.
 
-A kliensszoftver két részből áll (végrehajtási és konszenzuskliensek), mindegyiknek különálló hálózati stackje van. A többi Ethereum-csomóponttal való kommunikáció mellett a végrehajtási és konszenzusklienseknek egymással is kommunikálniuk kell. Ez az oldal magyarázatot ad a kommunikációs protokollokról.
+A kliensszoftver két részből áll (végrehajtási és konszenzusos kliensek), mindegyiknek különálló hálózati stackje van. A többi Ethereum-csomóponttal való kommunikáció mellett a végrehajtási és konszenzusos klienseknek egymással is kommunikálniuk kell. Ez az oldal magyarázatot ad a kommunikációs protokollokról.
 
-A végrehajtási kliensek tranzakciókat pletykálnak a végrehajtási réteg peer-to-peer hálózatán. Ehhez titkosított kommunikáció szükséges a hitelesített társak között. Amikor egy validátort kiválasztanak blokkelőterjesztésre, a csomópont helyi tranzakciógyűjtőjéből tranzakciókat ad át a konszenzuskliensnek egy helyi RPC kapcsolaton, melyeket Beacon blokkokba csomagol. A konszenzuskliensek ezután pletykálnak a Beacon blokkokról a saját p2p hálózatukon. Ehhez két elkülönített p2p hálózat kell: az egyik összeköti a végrehajtási klienseket a tranzakciópletykával, a másik a konszenzusklienseket a blokkpletykával.
+A végrehajtási kliensek tranzakciókat pletykálnak a végrehajtási réteg peer-to-peer hálózatán. Ehhez titkosított kommunikáció szükséges a hitelesített társak között. Amikor egy validátort kiválasztanak blokkelőterjesztésre, a csomópont helyi tranzakciógyűjtőjéből tranzakciókat ad át a konszenzusos kliensnek egy helyi RPC kapcsolaton, melyeket Beacon blokkokba csomagol. A konszenzusos kliensek ezután pletykálnak a Beacon blokkokról a saját p2p hálózatukon. Ehhez két elkülönített p2p hálózat kell: az egyik összeköti a végrehajtási klienseket a tranzakciópletykával, a másik a konszenzusos klienseket a blokkpletykával.
 
 ## Előfeltételek {#prerequisites}
 
@@ -31,7 +31,7 @@ A felfedezés a hálózatban lévő más csomópontok megtalálásának folyamat
 
 A betöltőcsomópont-csomópont interakció protokollja a [Kademlia](https://medium.com/coinmonks/a-brief-overview-of-kademlia-and-its-use-in-various-decentralized-platforms-da08a7f72b8f) egy módosított formája, amely egy [elosztott hash táblát](https://en.wikipedia.org/wiki/Distributed_hash_table) használ a csomópontlista megosztására. Minden csomópont rendelkezik ezzel a táblával, hogy a szükséges információk birtokában legyen, amikor a legközelebbi társaihoz csatlakozik. A közelség nem földrajzi, hanem a csomópont azonosítójának hasonlósága határozza meg. A csomópontoknál lévő táblázat biztonsági okokból rendszeresen frissül. Például a [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5) felfedezőprotokoll csomópontjai képesek „hirdetéseket” is küldeni, amelyek megjelenítik a kliens által támogatott alprotokollokat, lehetővé téve a társak számára, hogy tárgyaljanak a protokollokról, amelyeken keresztül mindketten kommunikálni tudnak.
 
-A felfedezés egy ping-pong-játékkal kezdődik. Egy sikeres ping-pong „köti” az új csomópontot egy betöltő csomóponthoz. A kezdeti üzenet, amely a betöltő csomópontot figyelmezteti a hálózatba belépő új csomópont létezésére, egy `PING`. Ez a `PING` hashelt információkat tartalmaz az új csomópontra, a betöltő csomópontra és a lejárati időre vonatkozóan. A betöltő csomópont fogadja a `PING`-et, és visszaküld egy `PONG`-ot, amely tartalmazza a `PING` hash-t. Ha a `PING` és `PONG` hashek egyeznek, akkor az új csomópont és a betöltő csomópont közötti kapcsolat le van ellenőrizve, és „összekapcsolódtak”.
+A felfedezés egy ping-pong-játékkal kezdődik. A sikeres ping-pong egy betöltő csomóponthoz „köti” az új csomópontot. A kezdeti üzenet, amely a betöltő csomópontot figyelmezteti a hálózatba belépő új csomópont létezésére, egy `PING`. Ez a `PING` hashelt információkat tartalmaz az új csomópontra, a betöltő csomópontra és a lejárati időre vonatkozóan. A betöltő csomópont fogadja a `PING`-et, és visszaküld egy `PONG`-ot, amely tartalmazza a `PING` hasht. Ha a `PING` és `PONG` hashek egyeznek, akkor az új csomópont és a betöltő csomópont közötti kapcsolat le van ellenőrizve, és „összekapcsolódtak”.
 
 Miután összekapcsolódott, az új csomópont küldhet egy `FIND-NEIGHBOURS` kérést a betöltő csomópontnak. A betöltő csomópont által visszaküldött adatok tartalmazzák azoknak a partnereknek a listáját, amelyekhez az új csomópont csatlakozhat. Ha a csomópontok nincsenek összekötve, a `FIND-NEIGHBOURS` kérés sikertelen lesz, így az új csomópont nem tud belépni a hálózatba.
 
@@ -45,7 +45,7 @@ A végrehajtási kliensek jelenleg a [Discv4](https://github.com/ethereum/devp2p
 
 #### ENR: Ethereum csomópontfeljegyzés {#enr}
 
-A [Ethereum csomópontfeljegyzés (ENR)](/developers/docs/networking-layer/network-addresses/) egy objektum, amely három alapvető elemet tartalmaz: egy aláírást (a rekord tartalmának egy elfogadott azonosítási séma szerinti hash-e), egy sorszámot, amely a rekord változását követi, és kulcs-érték párok tetszőleges listáját. Ez egy jövőbiztos formátum, amellyel az azonosító információk könnyebben cserélhetők az új társak között, és ez az Ethereum-csomópontok preferált [hálózati cím](/developers/docs/networking-layer/network-addresses) formátuma.
+A [Ethereum csomópontrekord (ENR)](/developers/docs/networking-layer/network-addresses/) egy objektum, amely három alapvető elemet tartalmaz: egy aláírást (a rekord tartalmának egy elfogadott azonosítási séma szerinti hashe), egy sorszámot, amely a rekord változását követi, és kulcs-érték párok tetszőleges listáját. Ez egy jövőbiztos formátum, amellyel az azonosító adatok könnyebben cserélhetők az új társak között, valamint ez az Ethereum-csomópontok preferált [hálózati cím](/developers/docs/networking-layer/network-addresses) formátuma.
 
 #### Miért épül a felfedezés az UDP-re? {#why-udp}
 
@@ -55,14 +55,14 @@ Az UDP nem támogatja a hibaellenőrzést, a sikertelen csomagok újraküldésé
 
 A DevP2P a protokollok egész halmaza, amelyet az Ethereum a peer-to-peer hálózat létrehozásához és fenntartásához implementál. Miután az új csomópontok belépnek a hálózatba, interakcióikat a [DevP2P](https://github.com/ethereum/devp2p) stack protokolljai szabályozzák. Ezek mind a TCP-re épülnek, és magukban foglalják az RLPx transzport protokollt, a vezetékes protokollt és számos alprotokollt. [RLPx](https://github.com/ethereum/devp2p/blob/master/rlpx.md) a csomópontok közötti munkamenetek kezdeményezését, hitelesítését és fenntartását szabályozó protokoll. Az RLPx az RLP (Rekurzív hosszúságú prefixum) segítségével kódolja az üzeneteket, ami egy helytakarékos módszer az adatok minimális struktúrába történő kódolására, hogy azokat a csomópontok közötti küldhessék.
 
-A két csomópont közötti RLPx kapcsolódás egy kezdeti kriptográfiai kézfogással kezdődik. Ennek során a csomópont hitelesítő üzenetet küld, amelyet a társ ellenőriz. Sikeres ellenőrzés esetén a társ egy hitelesítést igazoló üzenetet generál, amelyet visszaküld a kezdeményezőnek. Ez egy kulcscsere-folyamat, amely lehetővé teszi a csomópontok számára a privát és biztonságos kommunikációt. A sikeres kriptográfiai kézfogás után mindkét csomópont „hello” üzenetet küld egymásnak „a vezetéken”. A vezetékes protokollt a hello üzenetek sikeres cseréje indítja el.
+A két csomópont közötti RLPx kapcsolódás egy kezdeti kriptográfiai kézfogással kezdődik. Ennek során a csomópont hitelesítő üzenetet küld, amelyet a társ ellenőriz. Sikeres ellenőrzés esetén a társ egy hitelesítést igazoló üzenetet generál, amelyet visszaküld a kezdeményezőnek. Ez egy kulcscserélési folyamat, amely lehetővé teszi a csomópontok számára a privát és biztonságos kommunikációt. A sikeres kriptográfiai kézfogás után mindkét csomópont „hello” üzenetet küld egymásnak „a vezetéken”. A vezetékes protokollt a hello üzenetek sikeres cseréje indítja el.
 
 A helló üzenetek a következőt tartalmazzák:
 
 - protokoll verziója
-- kliens ID
+- kliensazonosító
 - port
-- csomópont ID
+- csomópont-azonosító
 - a támogatott alprotokollok listája
 
 Ez a sikeres interakcióhoz szükséges információ, mivel meghatározza, hogy a két csomópont milyen képességeket oszt meg egymással, és konfigurálja a kommunikációt. Létezik egy alprotokoll-tárgyalási folyamat, amelynek során az egyes csomópontok által támogatott alprotokollok listáját összehasonlítják, és a két csomópont számára közös alprotokollok használhatók a kapcsolódásban.
@@ -93,15 +93,15 @@ A Whisper egy olyan protokoll, amelynek célja a biztonságos üzenetváltás bi
 
 ## A konszenzusréteg {#consensus-layer}
 
-A konszenzuskliensek egy különálló, eltérő specifikációjú peer-to-peer hálózatban vesznek részt. A konszenzuskliensek részt kell venniük a blokkpletykában, hogy új blokkokat kaphassanak a társaiktól, és továbbíthassák azokat, amikor rájuk kerül a sor, hogy blokkot javasoljanak. A végrehajtási réteghez hasonlóan ehhez is először egy felfedező protokollra van szükség, hogy a csomópont megtalálja a társait, és biztonságos kapcsolódásokat hozzon létre a blokkok, igazolások stb. cseréjéhez.
+A konszenzusos kliensek egy különálló, eltérő specifikációjú peer-to-peer hálózatban vesznek részt. A konszenzusos kliensek részt kell venniük a blokkpletykában, hogy új blokkokat kaphassanak a társaiktól, és továbbíthassák azokat, amikor rájuk kerül a sor, hogy blokkot javasoljanak. A végrehajtási réteghez hasonlóan ehhez is először egy felfedező protokollra van szükség, hogy a csomópont megtalálja a társait, és biztonságos kapcsolódásokat hozzon létre a blokkok, igazolások stb. cseréjéhez.
 
 ### Felfedezés {#consensus-discovery}
 
-A végrehajtási kliensekhez hasonlóan a konszenzuskliensek is [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5)-öt használnak UDP-n keresztül a társak megkereséséhez. A discv5 konszenzusréteg implementációja csak annyiban különbözik a végrehajtási kliensekétől, hogy tartalmaz egy illesztőt, amely a discv5-öt egy [libP2P](https://libp2p.io/) stackbe kapcsolja, elavulttá téve ezzel a DevP2P-t. A végrehajtási réteg RLPx kapcsolódásait elhagyták a libP2P zajmentes csatornáján való kézfogásért.
+A végrehajtási kliensekhez hasonlóan a konszenzusos kliensek is [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5)-öt használnak UDP-n keresztül a társak megkereséséhez. A discv5 konszenzusréteg implementációja csak annyiban különbözik a végrehajtási kliensekétől, hogy tartalmaz egy illesztőt, amely a discv5-öt egy [libP2P](https://libp2p.io/) stackbe kapcsolja, elavulttá téve ezzel a DevP2P-t. A végrehajtási réteg RLPx kapcsolódásait elhagyták a libP2P zajmentes csatornáján való kézfogásért.
 
 ### ENR-ek {#consensus-enr}
 
-A konszenzus csomópontok ENR-je tartalmazza a csomópont nyilvános kulcsát, IP-címét, UDP- és TCP-portjait, valamint két konszenzusspecifikus mezőt: a tanúsítást végező alhálózat bitmezőjét és az `eth2` kulcsot. Az előbbi megkönnyíti a csomópontok számára, hogy megtalálják az adott tanúsítási pletyka alhálózatokban részt vevő társaikat. Az `eth2` kulcs információt tartalmaz arról, hogy a csomópont melyik Ethereum elágazási (fork) verziót használja, így biztosítva, hogy a társak a megfelelő Ethereumhoz kapcsolódjanak.
+A konszenzus csomópontok ENR-je tartalmazza a csomópont nyilvános kulcsát, IP-címét, UDP- és TCP-portjait, valamint két konszenzusspecifikus mezőt: a tanúsítást végző alhálózat bitmezőjét és az `eth2` kulcsot. Az előbbi megkönnyíti a csomópontok számára, hogy megtalálják az adott tanúsítási pletyka alhálózatokban részt vevő társaikat. Az `eth2` kulcs információt tartalmaz arról, hogy a csomópont melyik Ethereum elágazási (fork) verziót használja, így biztosítva, hogy a társak a megfelelő Ethereumhoz kapcsolódjanak.
 
 ### libP2P {#libp2p}
 
@@ -113,38 +113,38 @@ A pletyka domainbe tartozik minden információ, amelynek gyorsan kell terjednie
 
 ### Kérés-válasz {#request-response}
 
-A kérés-válasz domain olyan protokollokat tartalmaz, amelyekkel a kliensek konkrét információkat kérhetnek a társaiktól. Például bizonyos Beacon blokkok lekérése, melyek bizonyos gyökér-hash-eknek megfelelnek vagy egy slot-tartományba esnek. A válaszok mindig snappy-tömörített SSZ-kódolt bájtként érkeznek vissza.
+A kérés-válasz domain olyan protokollokat tartalmaz, amelyekkel a kliensek konkrét információkat kérhetnek a társaiktól. Például bizonyos Beacon blokkok lekérése, melyek bizonyos gyökérhasheknek megfelelnek vagy egy slottartományba esnek. A válaszok mindig snappy-tömörített SSZ-kódolt bájtként érkeznek vissza.
 
-## Miért részesíti előnyben a konszenzuskliens az SSZ-t az RLP-vel szemben? {#ssz-vs-rlp}
+## Miért részesíti előnyben a konszenzusos kliens az SSZ-t az RLP-vel szemben? {#ssz-vs-rlp}
 
-Az SSZ jelentése egyszerű sorosítás. Fix offseteket használ, amelyek megkönnyítik a kódolt üzenet egyes részeinek dekódolását anélkül, hogy a teljes struktúrát dekódolni kellene, ami hasznos a konszenzuskliens számára, mivel hatékonyan ki tudja venni a kódolt üzenetekből az információrészeket. Kifejezetten a Merkle protokollokkal való integrációra is tervezték, ami a Merkle-szerűsítés hatékonyságának növelésével jár. Mivel a konszenzusrétegben minden hash Merkle-gyök, ez jelentős javulást jelent. Az SSZ garantálja az értékek egyedi ábrázolását is.
+Az SSZ jelentése egyszerű sorosítás. Fix offszeteket használ, amelyek megkönnyítik a kódolt üzenet egyes részeinek dekódolását anélkül, hogy a teljes struktúrát dekódolni kellene, ami hasznos a konszenzusos kliens számára, mivel hatékonyan ki tudja venni a kódolt üzenetekből az információrészeket. Kifejezetten a Merkle protokollokkal való integrációra is tervezték, ami a Merkle-szerűsítés hatékonyságának növelésével jár. Mivel a konszenzusrétegben minden hash Merkle-gyök, ez jelentős javulást jelent. Az SSZ garantálja az értékek egyedi ábrázolását is.
 
-## A végrehajtási és konszenzuskliensek kapcsolódása {#connecting-clients}
+## A végrehajtási és konszenzusos kliensek kapcsolódása {#connecting-clients}
 
-A konszenzus- és végrehajtási kliensek párhuzamosan futnak. Össze kell kapcsolódniuk, hogy a konszenzuskliens utasításokat adhasson a végrehajtási kliensnek, a végrehajtási kliens pedig tranzakciókötegeket adhasson át a konszenzus kliensnek, hogy azok bekerülhessenek a Beacon blokkokba. A két kliens közötti kommunikáció helyi RPC-kapcsolat segítségével valósítható meg. Egy [Engine-API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) néven ismert API határozza meg a két kliens között küldött utasításokat. Mivel mindkét kliens egyetlen hálózati identitás mögött helyezkedik el, megosztanak egy ENR-t (Ethereum csomópontfeljegyzés), amely mindkét kliens számára külön kulcsot tartalmaz (eth1 és eth2 kulcs).
+A konszenzusos és végrehajtási kliensek párhuzamosan futnak. Össze kell kapcsolódniuk, hogy a konszenzusos kliens utasításokat adhasson a végrehajtási kliensnek, a végrehajtási kliens pedig tranzakciókötegeket adhasson át a konszenzusos kliensnek, hogy azok bekerülhessenek a Beacon blokkokba. A két kliens közötti kommunikáció helyi RPC-kapcsolat segítségével valósítható meg. Egy [Engine-API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) néven ismert API határozza meg a két kliens között küldött utasításokat. Mivel mindkét kliens egyetlen hálózati identitás mögött helyezkedik el, megosztanak egy ENR-t (Ethereum csomópontfeljegyzés), amely mindkét kliens számára külön kulcsot tartalmaz (eth1 és eth2 kulcs).
 
 A kontrollfolyamat összefoglalása az alábbiakban látható, zárójelben a vonatkozó hálózati stackkel.
 
-### Amikor a konszenzuskliens nem terjeszt elő blokkot:
+### Amikor a konszenzusos kliens nem terjeszt elő blokkot: {#when-consensus-client-is-not-block-producer}
 
-- A konszenzuskliens blokkot kap a blokkpletyka-protokollon keresztül (konszenzus p2p)
-- A konszenzuskliens előzetesen validálja a blokkot, azaz biztosítja, hogy az érvényes feladótól érkezett, helyes metaadatokkal
+- A konszenzusos kliens blokkot kap a blokkpletyka-protokollon keresztül (konszenzus p2p)
+- A konszenzusos kliens előzetesen validálja a blokkot, azaz biztosítja, hogy az érvényes feladótól érkezett, helyes metaadatokkal
 - A blokkban lévő tranzakciókat a végrehajtási rétegnek küldik el végrehajtási csomagként (helyi RPC-kapcsolat)
-- A végrehajtási réteg végrehajtja a tranzakciókat és ellenőrzi a blokkfejlécben lévő státuszt (azaz a hash-ek egyezését)
+- A végrehajtási réteg végrehajtja a tranzakciókat és ellenőrzi a blokkfejlécben lévő státuszt (azaz a hashek egyezését)
 - A végrehajtási réteg visszaadja a validációs adatokat a konszenzus rétegnek, a blokk validáltnak tekinthető (helyi RPC kapcsolat)
 - A konszenzus réteg hozzáadja a blokkot a saját blokkláncának fejéhez és tanúsítja azt, a tanúsítást a hálózaton keresztül küldi szét (konszenzus p2p)
 
-### Amikor a konszenzuskliens blokkot terjeszt elő:
+### Amikor a konszenzusos kliens blokkot terjeszt elő: {#when-consensus-client-is-block-producer}
 
-- A konszenzuskliens értesítést kap arról, hogy ő a következő blokkelőterjesztő (konszenzus p2p)
+- A konszenzusos kliens értesítést kap arról, hogy ő a következő blokkelőterjesztő (konszenzus p2p)
 - A konszenzusréteg meghívja a `blokk létrehozása` metódust a végrehajtási kliensben (helyi RPC)
-- A végrehajtási réteg hozzáfér a tranzakciógyűjtőhöz (mempool), amelyet a tranzakciós pletykaprotokoll töltött fel (végrehajtási p2p)
-- A végrehajtási kliens a tranzakciókat egy blokkba foglalja, végrehajtja a tranzakciókat és létrehoz egy blokk hash-t
-- A konszenzuskliens átveszi a tranzakciókat és a blokk hash-t a végrehajtási klienstől, és hozzáadja azokat a Beacon-blokkhoz (helyi RPC)
-- A konszenzuskliens a blokkot a blokkpletyka-protokollon keresztül továbbítja (konszenzus p2p)
+- A végrehajtási réteg hozzáfér a tranzakciós memóriakészlethez, amelyet a tranzakciós pletykaprotokoll töltött fel (végrehajtási p2p)
+- A végrehajtási kliens a tranzakciókat egy blokkba foglalja, végrehajtja a tranzakciókat és létrehoz egy blokk hasht
+- A konszenzusos kliens átveszi a tranzakciókat és a blokk hasht a végrehajtási klienstől, és hozzáadja azokat a Beacon-blokkhoz (helyi RPC)
+- A konszenzusos kliens a blokkot a blokkpletyka-protokollon keresztül továbbítja (konszenzus p2p)
 - A többi kliens megkapja a javasolt blokkot a blokkpletyka-protokollon keresztül, és a fent leírtak szerint validálja (konszenzus p2p)
 
-Amint a blokkot elegendő validátor tanusította, a lánc fejéhez adják, igazolják és végül véglegesítik.
+Amint a blokkot elegendő validátor tanúsította, a lánc fejéhez adják, igazolják és végül véglegesítik.
 
 ![](cons_client_net_layer.png) ![](exe_client_net_layer.png)
 
@@ -152,4 +152,4 @@ A hálózati réteg sémája a konszenzus- és végrehajtási kliensek számára
 
 ## További olvasnivaló {#further-reading}
 
-[DevP2P](https://github.com/ethereum/devp2p) [LibP2p](https://github.com/libp2p/specs) [Konszenzusréteg hálózati specifikáció](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) [Kademlia to discv5](https://vac.dev/kademlia-to-discv5) [Kademlia leírás](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) [Bevezetés az Ethereum p2p-be](https://p2p.paris/en/talks/intro-ethereum-networking/) [Eth1 és eth2 kapcsolata](http://ethresear.ch/t/eth1-eth2-client-relationship/7248) [Merge és eth2 kliensrészletekről szóló videó](https://www.youtube.com/watch?v=zNIrIninMgg)
+[DevP2P](https://github.com/ethereum/devp2p) [LibP2p](https://github.com/libp2p/specs) [Konszenzusréteg hálózati specifikáció](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) [Kademlia to discv5](https://vac.dev/kademlia-to-discv5) [Kademlia leírás](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) [Bevezetés az Ethereum p2p-be](https://p2p.paris/en/talks/intro-ethereum-networking/) [Eth1 és eth2 kapcsolata](http://ethresear.ch/t/eth1-eth2-client-relationship/7248) [A Beolvadásról és eth2 kliensrészletekről szóló videó](https://www.youtube.com/watch?v=zNIrIninMgg)

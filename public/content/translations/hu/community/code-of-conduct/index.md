@@ -4,7 +4,7 @@ description: Alapvető szabályok az ethereum.org oldalain.
 lang: hu
 ---
 
-# Magatartási szabályok {#conduct-intro}
+# Magatartási szabályok {#code-of-conduct}
 
 ## Misszió {#mission}
 

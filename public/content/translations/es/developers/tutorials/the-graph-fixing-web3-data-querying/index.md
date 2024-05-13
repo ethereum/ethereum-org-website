@@ -5,7 +5,7 @@ author: Markus Waas
 lang: es
 tags:
   - "solidity"
-  - "contratos Inteligentes"
+  - "contratos inteligentes"
   - "consultar"
   - "The Graph"
   - "crear-eth-app"
@@ -297,7 +297,7 @@ La forma más fácil es utilizar el servicio alojado. Siga las instrucciones que
 
 ![The Graph Explorer](./thegraph-explorer.png)
 
-### Correr tu propio nodo {#running-your-own-node}
+### Ejecución de tu propio nodo {#running-your-own-node}
 
 Alternativemente, puede ejecutar su propio nodo. Consulte la documentación [aquí](https://github.com/graphprotocol/graph-node#quick-start). Una razón para hacer esto podría ser usar una red no admitida por el servicio alojado. Las redes actualmente admitidas se [pueden encontrar aquí](https://thegraph.com/docs/en/developing/supported-networks/).
 

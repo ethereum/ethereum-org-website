@@ -121,16 +121,13 @@ lang: zh-tw
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _在科技界以外推廣去中心化自治組織的概念，並幫助大家透過此等組織創造價值_
 - [開發者去中心化自治組織](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _一個認為網際網路為集體所有的開發者社群_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _由一些協助開發 Web3 的自由工作者所組成的去中心化自治組織_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _去中心化發展，以及去中心化應用程式和技術協議的管理體系_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhaus 的社群管理體系_
-- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _社群所擁有的超級英雄系列_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _法律建設_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _法律建設_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _藝術群體_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _去中心化自治組織孵化器_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _投資 pre-seed 輪加密貨幣專案的風投基金_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _現實生活的 MMORPG 遊戲機制_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _數字物理衣物品牌_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _女性主導專案_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _一個致力於為以太坊發展提供資金的社群_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Web3 建造者集中地_
 
