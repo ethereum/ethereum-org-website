@@ -15,6 +15,7 @@ import {
   Center,
   chakra,
   useBreakpointValue,
+  useColorModeValue,
   useToken,
 } from "@chakra-ui/react"
 
@@ -92,6 +93,11 @@ const EnergyConsumptionChart = () => {
   const { locale } = useRouter()
   const isRtl = isLangRightToLeft(locale as Lang)
 
+  // useColorModeValue("blackAlpha.700", "whiteAlpha.800")
+  // const { colorMode } = useColorMode()
+  // const isDark = colorMode === "dark"
+  // isDark ? "#FBF9A5" : "#95935B"
+
   // TODO: fix
   const labels = [
     t("energy-consumption-chart-global-data-centers-label"),
@@ -127,6 +133,7 @@ const EnergyConsumptionChart = () => {
         font: {
           size: "14px",
         },
+        color: useColorModeValue("#333333", "#F2F2F2"),
       },
       // hide legend
       legend: {
@@ -138,7 +145,7 @@ const EnergyConsumptionChart = () => {
             weight: "bold",
             size: "16px",
           },
-          color: "text", // TODO: fix theme colors on dark mode
+          color: useColorModeValue("#333333", "#F2F2F2"),
           boxWidth: 0,
         },
         rtl: isRtl,
@@ -164,6 +171,7 @@ const EnergyConsumptionChart = () => {
         grid: {
           display: false,
         },
+        ticks: { color: useColorModeValue("#333333", "#F2F2F2") },
       },
     },
   }
