@@ -75,6 +75,8 @@ const EnergyConsumptionChart = () => {
         offset: -0.5, // distance (in pixels) to pull the label away from the anchor point
         font: {
           size: "14px",
+          labelWrap: true,
+          labelMaxWidth: 50,
         } as any, // casted to avoid TS issue,
         color: useColorModeValue("#333333", "#F2F2F2"),
       },
@@ -121,7 +123,7 @@ const EnergyConsumptionChart = () => {
 
   const chartData = {
     // TODO: fix fn not triggering for translations
-    labels: splitLongLabels(labels),
+    labels: labels,
     datasets: [
       {
         label: t("page-what-is-ethereum-energy-consumption-chart-legend"),
@@ -130,6 +132,7 @@ const EnergyConsumptionChart = () => {
     ],
   }
 
+  // TODO: add breakpoints
   // const data = useBreakpointValue<Data>({
   //   base: [
   //     {
@@ -247,45 +250,6 @@ const EnergyConsumptionChart = () => {
   return (
     <Center w="full">
       <Box maxW="500px" w="full">
-        {/* <ResponsiveContainer height={500}>
-          <BarChart
-            margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
-            barGap={15}
-            barSize={38}
-            data={isRtl ? data?.reverse() : data}
-          >
-            <XAxis
-              dataKey="name"
-              tickLine={false}
-              axisLine={false}
-              tick={(props) => <CustomTick {...props} />}
-              interval={0}
-            />
-            <Legend
-              content={
-                <Box textAlign="center" color="text" fontWeight="600" mt={8}>
-                  {t("page-what-is-ethereum-energy-consumption-chart-legend")}
-                </Box>
-              }
-            />
-            <Bar
-              dataKey="amount"
-              radius={[4, 4, 0, 0]}
-              // Disable animation ~ issue w/ LabelList. Ref: https://github.com/recharts/recharts/issues/1135
-              isAnimationActive={false}
-            >
-              <LabelList
-                position="top"
-                fill={textColor}
-                fontSize={14}
-                offset={10}
-              />
-              {(data || []).map((cell, index) => (
-                <Cell key={`cell-${index}`} fill={cell.color} />
-              ))}
-            </Bar>
-          </BarChart>
-        </ResponsiveContainer> */}
         {/* TODO: isRtl ? data?.reverse() : data */}
         <Bar options={chartOptions} data={chartData} />
       </Box>
