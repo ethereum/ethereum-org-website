@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "イーサリアム仮想マシンをターゲットとしたスマートコントラクトのためのPythonベースの開発とテストフレームワーク。",
   "page-local-environment-brownie-logo-alt": "Brownie ロゴ",
+  "page-local-environment-kurtosis-desc": "ローカルdAppの開発、プロトタイピング、テストを迅速に行うための、マルチクライアント型イーサリアムテストネットの構成とスピンアップを簡素化するコンテナベースのツールキット。",
+  "page-local-environment-kurtosis-logo-alt": "Kurtosisロゴ",
   "page-local-environment-epirus-desc": "Java仮想マシン上でブロックチェーンアプリケーションを開発、デプロイ、監視するためのプラットフォーム。",
   "page-local-environment-epirus-logo-alt": "Epirus ロゴ",
   "page-local-environment-eth-app-desc": "1つのコマンドでEthereumを搭載したアプリを作成します。UIフレームワークとDeFiテンプレートから選択できます。",

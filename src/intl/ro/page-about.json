@@ -9,11 +9,11 @@
   "page-about-li-4": "implementat",
   "page-about-link-1": "Codul sursă al acestui depozit este licențiat sub licența MIT",
   "page-about-link-2": "GitHub",
-  "page-about-link-3": "Vezi lista completă a sarcinilor în desfășurare pe Github",
+  "page-about-link-3": "Vezi lista completă a sarcinilor în desfășurare pe GitHub",
   "page-about-link-4": "Alătură-te serverului nostru Discord",
   "page-about-link-5": "Contactează-ne pe Twitter",
-  "page-about-link-6": "Vezi lista completă a sarcinilor implementate pe Github",
-  "page-about-link-7": "Creează o problemă pe Github",
+  "page-about-link-6": "Vezi lista completă a sarcinilor implementate pe GitHub",
+  "page-about-link-7": "Creează o problemă pe GitHub",
   "page-about-p-1": "Încă de la lansarea ethereum.org, ne străduim să fim transparenți cu privire la modul în care operăm. Aceasta este una dintre valorile noastre de bază, deoarece credem că transparența este crucială pentru succesul Ethereum.",
   "page-about-p-2": "Folosim",
   "page-about-p-3": "ca instrument principal de gestionare a proiectelor noastre. Ne organizăm sarcinile în 3 categorii:",
@@ -21,6 +21,5 @@
   "page-about-p-5": "Sarcini pe care le implementăm.",
   "page-about-p-6": "Sarcini puse în coadă pentru a le implementa în continuare.",
   "page-about-p-7": "Sarcini finalizate recent.",
-  "page-about-p-8": "Ai o idee despre cum să îmbunătățești ethereum.org? Ne-ar plăcea să colaborăm cu tine!",
-  "page-upgrades-post-merge-banner-governance-ood": "O parte din conținutul acestei pagini nu este actualizat după fuziune. Creează un PR dacă dorești să contribui."
+  "page-about-p-8": "Ai o idee despre cum să îmbunătățești ethereum.org? Ne-ar plăcea să colaborăm cu tine!"
 }

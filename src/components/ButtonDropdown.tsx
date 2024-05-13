@@ -1,5 +1,5 @@
-// Libraries
-import React, { MouseEvent } from "react"
+import React, { MouseEvent, useState } from "react"
+import { useTranslation } from "next-i18next"
 import { MdMenu } from "react-icons/md"
 import {
   Button,
@@ -10,12 +10,11 @@ import {
   MenuList,
 } from "@chakra-ui/react"
 
-// Components
-import Link, { BaseLink } from "./Link"
-import Translation from "./Translation"
-
 // Utils
-import { trackCustomEvent } from "../utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+// Components
+import { BaseLink } from "./Link"
 
 export interface ListItem {
   text: string
@@ -34,11 +33,13 @@ export interface List {
   items: Array<ListItem>
 }
 
-export interface IProps extends ButtonProps {
+export type ButtonDropdownProps = ButtonProps & {
   list: List
 }
 
-const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
+const ButtonDropdown = ({ list, ...rest }: ButtonDropdownProps) => {
+  const { t } = useTranslation("common")
+  const [selectedItem, setSelectedItem] = useState(list.text)
   const handleClick = (
     e: MouseEvent<HTMLElement>,
     item: ListItem,
@@ -54,7 +55,9 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
       e.preventDefault()
       callback(idx)
     }
+    setSelectedItem(item.text)
   }
+
   return (
     <Menu matchWidth>
       <MenuButton
@@ -64,7 +67,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
         _active={{ bg: "transparent" }}
         {...rest}
       >
-        <Translation id={list.text} />
+        {t(selectedItem)}
       </MenuButton>
       <MenuList
         py={2}
@@ -72,7 +75,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
         border="1px"
         borderColor="text"
         bg="dropdownBackground"
-        zIndex={2}
+        zIndex="popover"
       >
         {list.items.map((item, idx) => {
           const { text, to } = item
@@ -104,12 +107,12 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
                   bg: "dropdownBackgroundHover",
                 }}
               >
-                <Translation id={text} />
+                {t(text)}
               </MenuItem>
             </BaseLink>
           ) : (
             <MenuItem key={idx} onClick={(e) => handleClick(e, item, idx)}>
-              <Translation id={text} />
+              {t(text)}
             </MenuItem>
           )
         })}
