@@ -21,14 +21,23 @@ function detectLocale(acceptLanguage: string | null) {
   return locale
 }
 
+export const config = {
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+    "/((?!api|_next/static|_next/image|favicon.ico).*)",
+  ],
+}
+
 // Middleware required to always display the locale prefix in the URL. It
 // redirects to the default locale if the locale is not present in the URL
 export async function middleware(req: NextRequest) {
-  if (
-    req.nextUrl.pathname.startsWith("/_next") ||
-    req.nextUrl.pathname.includes("/api/") ||
-    PUBLIC_FILE.test(req.nextUrl.pathname)
-  ) {
+  if (PUBLIC_FILE.test(req.nextUrl.pathname)) {
     return NextResponse.next()
   }
 
