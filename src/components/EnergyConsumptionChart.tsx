@@ -6,6 +6,7 @@ import {
   Legend,
   LinearScale,
 } from "chart.js"
+import { ChartOptions } from "chart.js"
 import ChartDataLabels from "chartjs-plugin-datalabels"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -20,13 +21,13 @@ import {
 
 import type { Lang } from "@/lib/types"
 
+import { splitLongLabels } from "@/lib/utils/charts"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import {
   ENERGY_CONSUMPTION_CHART_COLORS,
   ENERGY_CONSUMPTION_CHART_DATA,
 } from "@/lib/constants"
-import { splitLongLabels } from "@/lib/utils/charts"
 
 // ChartDataLabels required to display y-labels on top of bars
 ChartJS.register(
@@ -58,37 +59,32 @@ const EnergyConsumptionChart = () => {
 
   const chartOptions = {
     // chart styles
-    type: "bar",
     aspectRatio: 1.1,
     maintainAspectRatio: true,
-    barThickness: 38,
-    borderRadius: 4,
-    minBarLength: 1,
-    tooltips: { enabled: false },
-    hover: { mode: null },
-    backgroundColor: ENERGY_CONSUMPTION_CHART_COLORS,
+    hover: { mode: null } as any, // casted to avoid TS issue
+    backgroundColor: ENERGY_CONSUMPTION_CHART_COLORS as any, // casted to avoid TS issue
     plugins: {
       // required for labels on top
       datalabels: {
         // https://chartjs-plugin-datalabels.netlify.app/guide/positioning.html#alignment-and-offset
-        anchor: "end", // position of the labels (start, end, center)
-        align: "end", // alignment of the labels (start, end, center)
+        anchor: "end" as any, // position of the labels (start, end, center), casted to avoid TS issue
+        align: "end" as any, // alignment of the labels (start, end, center), casted to avoid TS issue
         offset: -0.5, // distance (in pixels) to pull the label away from the anchor point
         font: {
           size: "14px",
-        },
+        } as any, // casted to avoid TS issue,
         color: useColorModeValue("#333333", "#F2F2F2"),
       },
       // hide legend
       legend: {
         display: true,
-        position: "bottom",
-        align: "center",
+        position: "bottom" as any, // casted to avoid TS issue
+        align: "center" as any, // casted to avoid TS issue
         labels: {
           font: {
             weight: "bold",
             size: "16px",
-          },
+          } as any, // casted to avoid TS issue
           color: useColorModeValue("#333333", "#F2F2F2"),
           boxWidth: 0,
         },
@@ -127,8 +123,10 @@ const EnergyConsumptionChart = () => {
       {
         label: t("page-what-is-ethereum-energy-consumption-chart-legend"),
         data: ENERGY_CONSUMPTION_CHART_DATA,
-        // barPercentage: 1.0,
-        // categoryPercentage: 1.0,
+        // for some reason TS don't like the following props inside `chartOptions` object
+        barThickness: 38,
+        borderRadius: 4,
+        minBarLength: 1,
       },
     ],
   }
