@@ -509,8 +509,6 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[HashEx](https://hashex.org/)** - _HashEx focuses on blockchain and smart contract auditing to ensure the security of cryptocurrencies, providing services such as smart contract development, penetration testing, blockchain consulting._
 
-- **[Inference](https://inference.ag/)** - _Security auditing company, specialized in smart contract auditing for EVM-based blockchains. Thanks to its expert auditors they identify potential issues and suggest actionable solutions to fix them before deployment._
-
 - **[Code4rena](https://code4rena.com/)** - _Competitive audit platform that incentivizes smart contract security experts to find vulnerabilities and help make web3 more secure._
 
 - **[CodeHawks](https://codehawks.com/)** - _Competitive audits platform hosting smart contracts auditing competitions for security researchers._
@@ -518,6 +516,8 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 - **[Cyfrin](https://cyfrin.io)** - _Web3 security powerhouse, incubating crypto security through products and smart contract auditing services._
 
 - **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3 security firm offering security audits for blockchain systems through a team of experienced auditors and best-in-class tools._
+
+- **[Inference](https://inference.ag/)** - _Security auditing company, specialized in smart contract auditing for EVM-based blockchains. Thanks to its expert auditors they identify potential issues and suggest actionable solutions to fix them before deployment._
 
 ### Bug bounty platforms {#bug-bounty-platforms}
 
@@ -527,7 +527,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[HackenProof](https://hackenproof.com/)** - _Expert bug bounty platform for crypto projects (DeFi, Smart Contracts, Wallets, CEX and more), where security professionals provide triage services and researchers get paid for relevant, verified bug reports._
   
--  **[Sherlock](https://www.sherlock.xyz/)** - _The best performing underwriter in Web3 for smart contract security, with payouts for auditors managed via smart contracts to secure that relevant bugs are paid fairly._
+-  **[Sherlock](https://www.sherlock.xyz/)** - _Underwriter in Web3 for smart contract security, with payouts for auditors managed via smart contracts to secure that relevant bugs are paid fairly._
   
 -  **[CodeHawks](https://www.codehawks.com/)** - _Competitive bug bounty platform where auditors take part in security contests and challenges, and (soon) in their own private audits._
 
