@@ -16,8 +16,6 @@ import { toPosixPath } from "@/lib/utils/relativePath"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-import { lightTheme as oldTheme } from "../theme"
-
 export const BaseLayout = ({
   children,
   contentIsOutdated,
@@ -47,26 +45,35 @@ export const BaseLayout = ({
   const originalPagePath = toPosixPath(join(DEFAULT_LOCALE, asPath))
 
   return (
-    <Container mx="auto" maxW={oldTheme.variables.maxPageWidth}>
+    <>
+      {/**
+       * The Skip Link is positioned above the container to ensure it is not affecting the
+       * layout on initial load.
+       */}
       <SkipLink />
+      <Container maxW="1536px">
+        <Nav />
 
-      <Nav />
+        <TranslationBanner
+          shouldShow={shouldShowTranslationBanner}
+          isPageContentEnglish={contentNotTranslated}
+          originalPagePath={originalPagePath}
+        />
 
-      <TranslationBanner
-        shouldShow={shouldShowTranslationBanner}
-        isPageContentEnglish={contentNotTranslated}
-        originalPagePath={originalPagePath}
-      />
+        <TranslationBannerLegal
+          shouldShow={shouldShowLegalTranslationBanner}
+          originalPagePath={originalPagePath}
+        />
 
-      <TranslationBannerLegal
-        shouldShow={shouldShowLegalTranslationBanner}
-        originalPagePath={originalPagePath}
-      />
+        {children}
 
-      {children}
-
-      <Footer lastDeployDate={lastDeployDate} />
+        <Footer lastDeployDate={lastDeployDate} />
+      </Container>
+      {/**
+       * The Feedback Widget is positioned below the container to ensure it is not affecting the
+       * layout on initial load.
+       */}
       <FeedbackWidget />
-    </Container>
+    </>
   )
 }
