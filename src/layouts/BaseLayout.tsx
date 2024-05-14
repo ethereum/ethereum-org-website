@@ -18,7 +18,7 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { lightTheme as oldTheme } from "../theme"
 
-export const RootLayout = ({
+export const BaseLayout = ({
   children,
   contentIsOutdated,
   contentNotTranslated,
