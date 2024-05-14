@@ -39,9 +39,21 @@
     path = "en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
 
 [functions]
-  included_files = [
-    "./src/intl/**/*",
-    "!./public/**/*",
-    "!./node_modules/@swc/core-linux-x64-musl/**/*",
-    "!./node_modules/@swc/core-linux-x64-gnu/**/*",
-  ]
+
+  [functions.___netlify-odb-handler]
+    included_files = [
+      "./src/intl/**/*",
+      "!./public/**/*",
+      "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/router-context*",
+      "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/amp-context*",
+      "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/head-manager-context*",
+    ]
+
+  [functions.___netlify-handler]
+    included_files = [
+      "./src/intl/**/*",
+      "!./public/**/*",
+      "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/router-context*",
+      "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/amp-context*",
+      "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/head-manager-context*",
+    ]
