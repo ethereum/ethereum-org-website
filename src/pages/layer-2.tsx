@@ -51,6 +51,7 @@ import DogeImage from "@/public/doge-computer.png"
 import EthHomeImage from "@/public/eth-home-icon.png"
 import HeroImage from "@/public/heroes/layer-2-hub-hero.jpg"
 import DebankImage from "@/public/layer-2/debank.png"
+import ethereumecosystemImage from "@/public/layer-2/ethereumecosystem.png"
 import growthepieImage from "@/public/layer-2/growthepie.png"
 import L2BEATImage from "@/public/layer-2/l2beat.jpg"
 import OptimisticRollupImage from "@/public/layer-2/optimistic_rollup.png"
@@ -198,6 +199,13 @@ const Layer2Page = () => {
         link: "https://l2beat.com",
         image: L2BEATImage,
         alt: "L2BEAT",
+      },
+      {
+        title: "Ethereum Ecosystem",
+        description: t("layer-2-tools-ethereumecosystem-description"),
+        link: "https://www.ethereum-ecosystem.com/",
+        image: ethereumecosystemImage,
+        alt: "Ethereum Ecosystem",
       },
       {
         title: "growthepie",

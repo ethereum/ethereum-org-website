@@ -4,12 +4,12 @@ description: Guía de uso de WebSocets y Alchemy para hacer solicitudes JSON-RPC
 author: "Elan Halpern"
 lang: es
 tags:
-  - "Alchemy"
+  - "alchemy"
   - "websockets"
-  - "consulta"
-  - "JavaScript"
+  - "consultar"
+  - "javascript"
 skill: beginner
-source: Documentos de Alquimia
+source: Documentos de Alchemy
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
 published: 2020-12-01
 ---
@@ -49,7 +49,7 @@ Puede usar cualquiera de las API listadas en la [Referencia de API de Alchemy](h
 
 ## Con Web3 {#with-web3}
 
-Traspasar a WebSockts mientras se usa una biblioteca cliente como Web3 es simple. Simplemente pase la URL de WebSocket en lugar de la URL HTTP cuando instancie a su cliente Web3. Por ejemplo:
+Hacer la transición a WebSockts mientras se usa una biblioteca de clientes como Web3 es simple. Simplemente pase la URL de WebSocket en lugar de la URL HTTP cuando instancie su cliente Web3. Por ejemplo:
 
 ```js
 const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
@@ -57,40 +57,40 @@ const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## Subscripción API {#subscription-api}
+## API de suscripción {#subscription-api}
 
-Cuando se conecta a través de un WebSocket, puede utilizar dos métodos adicionales: `eth_subscribe` y `eth_unsubscribe`. Estos métodos le permitirán escuchar eventos particulares y será notificado inmediatamente.
+Cuando se conecta a través de un WebSocket, puede utilizar dos métodos adicionales: `eth_subscribe` y `eth_unsubscribe`. Estos métodos le permitirán escuchar eventos particulares y ser notificado inmediatamente.
 
 ### `eth_subscribe` {#eth-subscribe}
 
-Crea una nueva subscripción para eventos específicos. [ Más información acerca de `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
+Crea una nueva subscripción para eventos específicos. [Más información acerca de `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
 
 #### Parámetros {#parameters}
 
-1. Tipos de subscripción
+1. Tipos de suscripción
 2. Parámetros opcionales
 
-El primer argumento específica el tipo de evento el cuál se escucha. El segundo argumento contiene opciones adicionales las cuales dependen del primer argumento. Las diferentes de tipos de descripciones, sus opciones y sus cargas útiles se describen a continuación.
+El primer argumento específica el tipo de evento para el que se escuchará. El segundo argumento contiene opciones adicionales que dependen del primer argumento. Los diferentes tipos de descripciones, sus opciones y sus cargas útiles de eventos se describen a continuación.
 
-#### Regresa {#returns}
+#### Retornos {#returns}
 
-El ID de subscripción: Este ID se adjuntará a cualquier evento, y también será usado para cancelar la subscripción usando `eth_unsubscribe`.
+El ID de suscripción: Este ID se adjuntará a cualquier evento recibido y también puede usarse para cancelar la suscripción usando `eth_unsubscribe`.
 
 #### Eventos de suscripción {#subscription-events}
 
-Mientras la subscripción este activa, recibirá eventos los cuales son objetos en los siguientes campos:
+Mientras la suscripción esté activa, recibirá eventos que son objetos con los siguientes campos:
 
-- `jsonrpc`: Always "2.0"
-- `method`: Always "eth_subscription"
-- `parámetro`: Un objeto con los siguientes campos:
-  - `subscription`: El ID de suscripción devuelto por la llamada `eth_subscription` que creó esta suscripción.
-  - `result`: Un objeto el cuál varia dependiendo del tipo de subscripción.
+- `jsonrpc`: Siempre "2.0"
+- `method`: Siempre "eth_subscription"
+- `params`: Un objeto con los siguientes campos:
+  - `suscripción`: la ID de suscripción que devuelve la llamada `eth_subscribe` que creó esta suscripción.
+  - `result`: Un objeto cuyo contenido varía dependiendo del tipo de suscripción.
 
-#### Tipos de subceipciones {#subscription-types}
+#### Tipos de suscripción {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
-Devuelve la información de transacción para todas las transacciones que se agregan al estado pendiente. Este tipo de suscripción se suscribe a transacciones pendientes, similares a la llamada web 3 estándar `web3.eth. ubscribe("pendingTransactions")`, pero difiere en que emite _información completa de la transacción_ en lugar de solo el hash de la transacción.
+Devuelve la información de transacción para todas las transacciones que se agregan al estado pendiente. Este tipo de suscripción se suscribe a transacciones pendientes, similar a la llamada Web3 estándar `web3.eth. ubscribe("pendingTransactions")`, pero difiere en que emite _información de la transacción completa_ en lugar de solo hashes de la transacción.
 
 Ejemplo:
 
@@ -123,11 +123,11 @@ Ejemplo:
 
 ```
 
-2. `nuevas Cabezas`
+2. `newHeads`
 
-Emite un evento en cualquier momento en que se añade un nuevo encabezado a la cadena, incluyendo durante una reorganización en cadena.
+Emite un evento cada vez que se añada un nuevo encabezado a la cadena, incluyendo durante una reorganización de la cadena.
 
-Cuando se produce una reorganización en cadena, esta suscripción emitirá un evento que contiene todas las nuevas cabeceras de la nueva cadena. En particular, esto significa que puede ver múltiples cabeceras emitidas con la misma altura, y cuando esto suceda, la cabecera posterior debe ser tomada como la correcta después de una reorganización.
+Cuando se produce una reorganización de la cadena, esta suscripción emitirá un evento que contiene todos los nuevos encabezados de la nueva cadena. En particular, esto significa que podría ver múltiples encabezados emitidos con la misma altura, y, cuando esto suceda, el encabezado último debe tomarse como el correcto después de una reorganización.
 
 Ejemplo:
 
@@ -160,20 +160,20 @@ Ejemplo:
 
 ```
 
-3. `registros`
+3. `logs`
 
-Emite registros los cuales son parte de bloques recién agregados que coinciden con los filtros de criterio.
+Emite registros que son parte de bloques recién agregados que coinciden con criterios de filtros específicos.
 
-Cuando se produce una reorganización en cadena, los registros que son parte de los bloques de la cadena antigua se emitirán de nuevo con la propiedad `eliminada` establecida en `verdadero`. Además, se emiten registros que son parte de los bloques de la nueva cadena, lo que significa que es posible ver registros para la misma transacción varias veces en el caso de una reorganización.
+Cuando se produce una reorganización de la cadena, los registros que son parte de los bloques de la cadena antigua se emitirán de nuevo con la propiedad `removed` establecida en `true`. Además, se emiten registros que forman parte de los bloques de la nueva cadena, lo que significa que es posible ver registros de la misma transacción varias veces en el caso de una reorganización.
 
 Parámetros
 
 1. Un objeto con los siguientes campos:
-   - `dirección` (opcional): una cadena que representa una dirección o una formación de dichas cadenas.
-     - Sólo se emitirán registros creados a partir de una de estas direcciones.
-   - `topics`: una formación de especificadores de temas.
-     - Cada especificador de tema es `null`, una cadena que representa un tema, o una formación de cadenas.
-     - Cada posición en la formación que no es `null` restringe los registros emitidos a solo aquellos que tienen uno de los temas dados en esa posición.
+   - `address` (opcional): una cadena que representa una dirección o un array de dichas cadenas.
+     - Solo se emitirán registros creados a partir de una de estas direcciones.
+   - `topics`: un array de especificadores de temas.
+     - Cada especificador de tema es `null`, una cadena que representa un tema o un array de cadenas.
+     - Cada posición en el array que no sea `null` restringe los registros emitidos a solo aquellos que tengan uno de los temas dados en esa posición.
 
 Algunos ejemplos de especificaciones de temas:
 
@@ -181,7 +181,7 @@ Algunos ejemplos de especificaciones de temas:
 - `[A]`: A en una primera posición (y cualquier cosa después).
 - `[null, B]`: Cualquier cosa en la primera posición y B en la segunda posición (y cualquier cosa después).
 - `[A, B]`: A en la primera posición y B en segunda posición (y cualquier cosa después).
-- `[[A, B], [A, B]]`: (A o B) en primer posición y (A o B) en segunda posición ( y cualquier cosa después).
+- `[[A, B], [A, B]]`: (A o B) en primera posición y (A o B) en segunda posición (y cualquier cosa después).
 
 Ejemplo:
 
@@ -215,11 +215,11 @@ Cancela una suscripción existente para que no se envíen más eventos.
 
 Parámetros
 
-1. ID de suscripción, como se devuelve previamente desde una llamada a `eth_subscribe`.
+1. Subscription ID, como se devuelve previamente desde una llamada a `eth_subscribe`.
 
-Regresa
+Retornos
 
-`verdadero` si una suscripción fue cancelada con éxito, o `falso` si no existe ninguna suscripción con el ID dado.
+`true` si una suscripción fue cancelada con éxito o `false` si no existe ninguna suscripción con el ID dado.
 
 Ejemplo:
 

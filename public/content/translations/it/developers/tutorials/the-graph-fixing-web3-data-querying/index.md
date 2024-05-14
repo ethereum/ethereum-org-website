@@ -4,8 +4,8 @@ description: La blockchain è come un database ma senza SQL. Contiene tutti i da
 author: Markus Waas
 lang: it
 tags:
-  - "Solidity"
-  - "contratto intelligente"
+  - "solidity"
+  - "contratti intelligenti"
   - "query"
   - "the graph"
   - "create-eth-app"

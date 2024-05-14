@@ -8,7 +8,7 @@ Ahhoz, hogy egy web alkalmazás interakcióba lépjen az Ethereum blokklánccal 
 
 Erre a célra minden Ethereum-kliens implementálja a [JSON-RPC](/developers/docs/apis/json-rpc/) specifikációt, így egységes [módszerek](/developers/docs/apis/json-rpc/#json-rpc-methods) állnak rendelkezésre, amelyekre az alkalmazások támaszkodhatnak.
 
-Ha JavaScript programnyelvet szeretnél használni, hogy csatlakozz egy Ethereum csomóponttal, lehetőséged van vanilla JavaScriptet használni, de ugyanakkor számos kényelmes könyvtár létezik az ökoszisztémán belül, melyek megkönnyítik ezt. Ezekkel a könyvtárakkal a fejlesztők intuitív, egysoros metódusokat írhatnak, hogy kezdeményezzenek egy JSON RPC kérést (a háttérben), mely interakcióba lép az Ethereummal.
+Ha JavaScript programnyelvet szeretne használni, hogy kapcsolódjon egy Ethereum csomóponthoz, lehetősége van vanilla JavaScriptet használni, de számos könyvtár létezik az ökoszisztémán belül, melyek megkönnyítik ezt. Ezekkel a könyvtárakkal a fejlesztők intuitív, egysoros metódusokat írhatnak, hogy kezdeményezzenek egy JSON RPC kérést (a háttérben), mely interakcióba lép az Ethereummal.
 
 Az [egyesítés (Merge)](/roadmap/merge/) után, az Ethereum szoftver két kapcsolódó darabja – egy végrehajtó kliens és egy konszenzus kliens – kell a csomópont futtatásához. Gondoskodjon arról, hogy a csomópont mindkét kliens benne legyen. Ha a csomópont nem a helyi gépen van (pl. egy AWS-en fut), akkor az IP-címet frissíteni kell az útmutatóban. Bővebb információért érdemes felkeresni a [csomópont futtatása](/developers/docs/nodes-and-clients/run-a-node/) oldalt.
 
@@ -18,7 +18,7 @@ A JavaScript megértése mellett lehet érdemes lehet előbb alaposan megismerni
 
 ## Miért használj könyvtárat? {#why-use-a-library}
 
-Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóponthoz történő közvetlen csatlakozással jár. Ezen kívül használati függvényeket is szolgáltatnak (pl.: ETH konvertálása Gwei-be), így fejlesztőként kevesebb időt kell az Ethereum kliensek bonyodalmaival foglalkoznod és több időd jut egyedi funkcionalitást kialakítani az alkalmazásodnak.
+Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóponthoz történő közvetlen csatlakozással jár. Ezenkívül használati függvényeket is szolgáltatnak (pl.: ETH konvertálása Gwei-be), így fejlesztőként kevesebb időt kell az Ethereum kliensek bonyodalmaival foglalkoznod és több időd jut egyedi funkcionalitást kialakítani az alkalmazásodnak.
 
 ## Könyvtár tulajdonságok {#library-features}
 

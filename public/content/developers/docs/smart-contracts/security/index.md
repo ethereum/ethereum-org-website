@@ -90,7 +90,10 @@ After testing your contract, it is good to ask others to check the source code f
 
 Commissioning a smart contract audit is one way of conducting an independent code review. Auditors play an important role in ensuring that smart contracts are secure and free from quality defects and design errors.
 
-That said, you should avoid treating audits as a silver bullet. Smart contract audits won't catch every bug and are mostly designed to provide an additional round of reviews, which can help detect issues missed by developers during initial development and testing. You should also follow [best practices for working with auditors](https://twitter.com/tinchoabbate/status/1400170232904400897), such as documenting code properly and adding inline comments, to maximize the benefit of a smart contract audit.
+That said, you should avoid treating audits as a silver bullet. Smart contract audits won't catch every bug and are mostly designed to provide an additional round of reviews, which can help detect issues missed by developers during initial development and testing. You should also follow best practices for working with auditors, such as documenting code properly and adding inline comments, to maximize the benefit of a smart contract audit.
+
+- [Smart contract auditing tips & tricks](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [Make the most out of your audit](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
 #### Bug bounties {#bug-bounties}
 
@@ -514,6 +517,8 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3 security firm offering security audits for blockchain systems through a team of experienced auditors and best-in-class tools._
 
+- **[Inference](https://inference.ag/)** - _Security auditing company, specialized in smart contract auditing for EVM-based blockchains. Thanks to its expert auditors they identify potential issues and suggest actionable solutions to fix them before deployment._
+
 ### Bug bounty platforms {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _Bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._
@@ -521,6 +526,10 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 - **[HackerOne](https://www.hackerone.com/)** - _Vulnerability coordination and bug bounty platform that connects businesses with penetration testers and cybersecurity researchers._
 
 - **[HackenProof](https://hackenproof.com/)** - _Expert bug bounty platform for crypto projects (DeFi, Smart Contracts, Wallets, CEX and more), where security professionals provide triage services and researchers get paid for relevant, verified bug reports._
+  
+-  **[Sherlock](https://www.sherlock.xyz/)** - _Underwriter in Web3 for smart contract security, with payouts for auditors managed via smart contracts to secure that relevant bugs are paid fairly._
+  
+-  **[CodeHawks](https://www.codehawks.com/)** - _Competitive bug bounty platform where auditors take part in security contests and challenges, and (soon) in their own private audits._
 
 ### Publications of known smart contract vulnerabilities and exploits {#common-smart-contract-vulnerabilities-and-exploits}
 
@@ -537,6 +546,8 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 - **[Damn Vulnerable DeFi](https://www.damnvulnerabledefi.xyz/)** - _Wargame to learn offensive security of DeFi smart contracts and build skills in bug-hunting and security auditing._
 
 - **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _Web3/Solidity-based wargame where each level is a smart contract that needs to be 'hacked'._
+
+- **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** - _Smart contract hacking challenge, set in a fantasy adventure. Successful completion of the challenge also gives access to a private bug bounty program._
 
 ### Best practices for securing smart contracts {#smart-contract-security-best-practices}
 

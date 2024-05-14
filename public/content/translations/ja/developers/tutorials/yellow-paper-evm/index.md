@@ -96,7 +96,7 @@ EVMには、システム状態の一部として保持される独自の不揮�
 | _I<sub>a</sub>_ | [`ADDRESS`](https://www.evm.codes/#30)                                                          | `address(this)`                      |
 | _I<sub>o</sub>_ | [`ORIGIN`](https://www.evm.codes/#32)                                                           | `tx.origin`                          |
 | _I<sub>p</sub>_ | [`GASPRICE`](https://www.evm.codes/#3a)                                                         | `tx.gasprice`                        |
-| _I<sub>d</sub>_ | [`CALLDATALOAD`](https://www.evm.codes/#35)など                                                   | `msg.data`                           |
+| _I<sub>d</sub>_ | [`CALLDATALOAD`](https://www.evm.codes/#35), etc.                                               | `msg.data`                           |
 | _I<sub>s</sub>_ | [`CALLER`](https://www.evm.codes/#33)                                                           | `msg.sender`                         |
 | _I<sub>v</sub>_ | [`CALLVALUE`](https://www.evm.codes/#34)                                                        | `msg.value`                          |
 | _I<sub>b</sub>_ | [`CODECOPY`](https://www.evm.codes/#39)                                                         | `address(this).code`                 |

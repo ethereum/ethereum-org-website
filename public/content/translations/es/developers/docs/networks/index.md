@@ -60,7 +60,7 @@ Las dos redes públicas de prueba que los desarrolladores de clientes están man
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Faucet Infura Sepolia](https://www.infura.io/faucet)
 - [Faucet Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
-- [Faucet de red de prueba | Sepolia](https://testnet-faucet.com/sepolia/)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 #### Goerli _(soporte a largo plazo)_ {#goerli}
 
@@ -88,6 +88,7 @@ Goerli es una red de prueba para probar la validación y la participación. La r
 - [Faucet All That Node Goerli](https://www.allthatnode.com/faucet/ethereum.dsrv)
 - [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Faucet Chainstack Goerli](https://faucet.chainstack.com/goerli-faucet)
+- [Blockscout](https://eth-goerli.blockscout.com/)
 
 Para iniciar un validador en la red de prueba de Goerli, utilice la plataforma de lanzamiento de [«cheap goerli validator»](https://goerli.launchpad.ethstaker.cc/en/) de ethstaker.
 

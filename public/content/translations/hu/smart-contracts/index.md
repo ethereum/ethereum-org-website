@@ -66,10 +66,10 @@ Az okosszerződések lényegében mindent végre tudnak hajtani, amit egy szám�
 
 Többek között képesek számításokat végezni, valutát létrehozni, adatot tárolni, [NFT-ket](/glossary/#nft) kreálni (minting), üzeneteket küldeni és még ábrát vagy grafikont is tudnak készíteni. Következzen néhány népszerű példa a való életből:
 
-- [Stablecoin-ok](/stablecoins/)
+- [Stabil érmék](/stablecoins/)
 - [Egyedi digitális eszközök létrehozása és szétosztása](/nft/)
 - [Automatikus, nyílt valutaátváltás](/get-eth/#dex)
-- [Decentralizált játékok](/dapps/?category=gaming)
+- [Decentralizált játékok](/dapps/?category=gaming#explore)
 - [Biztosítási szerződés, mely automatikus kifizetést alkalmaz](https://etherisc.com/)
 - [Szabvány, melyet alapul véve az emberek egyéni, interoperábilis valutákat hoznak létre](/developers/docs/standards/tokens/)
 

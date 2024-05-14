@@ -97,6 +97,8 @@
               to: /developers/docs/consensus-mechanisms/pos/block-proposal/
             - id: docs-nav-pos-faqs
               to: /developers/docs/consensus-mechanisms/pos/faqs/
+        - id: docs-nav-proof-of-authority
+          to: /developers/docs/consensus-mechanisms/poa/
 - id: docs-nav-ethereum-stack
   path: /developers/docs/
   items:

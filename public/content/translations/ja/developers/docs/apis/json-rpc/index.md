@@ -560,7 +560,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 **パラメータ**
 
 1. `DATA`、20バイト - 残高を確認するアドレス
-2. `QUANTITY|TAG` - ブロック番号 (整数)、もしくは文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
+2. `QUANTITY|TAG` - ブロックの番号(整数)、または文字列`"latest"`、`"earliest"`、`"pending"`、`"safe"`、`"finalized"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
@@ -591,7 +591,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 
 1. `DATA`、20バイト - ストレージのアドレス
 2. `QUANTITY` - ストレージの位置(整数)
-3. `QUANTITY|TAG` - ブロック番号 (整数)、もしくは文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
+3. `QUANTITY|TAG` - ブロックの番号(整数)、または文字列`"latest"`、`"earliest"`、`"pending"`、`"safe"`、`"finalized"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 
 **戻り値**
 
@@ -620,7 +620,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 ただし、マップの要素の取得は、より複雑になります。 マップの要素の位置は、次のように計算されます。
 
 ```js
-keccack(LeftPad32(key, 0), LeftPad32(map position, 0))
+keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
 つまり、pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"]のストレージを取得するためには、次のように位置を計算する必要があります。
@@ -657,7 +657,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 **パラメータ**
 
 1. `DATA`、20バイト - アドレス
-2. `QUANTITY|TAG` - ブロック番号 (整数)、もしくは文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
+2. `QUANTITY|TAG` - ブロックの番号(整数)、または文字列`"latest"`、`"earliest"`、`"pending"`、`"safe"`、`"finalized"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 
 ```js
 params: [
@@ -718,7 +718,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 
 **パラメータ**
 
-1. `QUANTITY|TAG` - ブロックの番号(整数)、または文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
+1. `QUANTITY|TAG` - ブロックの番号(整数)、または文字列`"latest"`、`"earliest"`、`"pending"`、`"safe"`、`"finalized"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 
 ```js
 params: [
@@ -778,7 +778,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 
 **パラメータ**
 
-1. `QUANTITY|TAG` - ブロックの番号(整数)、または文字列"latest"、"earliest" 、"pending"のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
+1. `QUANTITY|TAG` - ブロックの番号(整数)、または文字列`"latest"`、`"earliest"`、`"pending"`、`"safe"`、`"finalized"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 
 ```js
 params: [
@@ -810,7 +810,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 **パラメータ**
 
 1. `DATA`、20バイト - アドレス
-2. `QUANTITY|TAG` - ブロック番号 (整数)、もしくは文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
+2. `QUANTITY|TAG` - ブロックの番号(整数)、または文字列`"latest"`、`"earliest"`、`"pending"`、`"safe"`、`"finalized"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 
 ```js
 params: [
@@ -997,7 +997,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 - `value`: `QUANTITY` - (オプション)このトランザクションで送信された値(整数)
 - `input`: `DATA` - (オプション)メソッド署名とエンコードされたパラメータのハッシュ。 詳細については、[SolidityのドキュメントのイーサリアムコントラクトABI](https://docs.soliditylang.org/en/latest/abi-spec.html)を参照してください。
 
-2. `QUANTITY|TAG` - ブロック番号 (整数)、もしくは文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
+2. `QUANTITY|TAG` - ブロックの番号(整数)、または文字列`"latest"`、`"earliest"`、`"pending"`、`"safe"`、`"finalized"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 
 **戻り値**
 
@@ -1124,7 +1124,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 
 **パラメータ**
 
-1. `QUANTITY|TAG` - ブロックの番号(整数)、または文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
+1. `QUANTITY|TAG` - ブロックの番号(整数)、または文字列`"latest"`、`"earliest"`、`"pending"`、`"safe"`、`"finalized"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 2. `Boolean` - `true`の場合は、完全なトランザクションオブジェクトを返します。 `false`の場合は、トランザクションのハッシュのみを返します
 
 ```js
@@ -1237,13 +1237,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAnd
 
 **パラメータ**
 
-1. `QUANTITY|TAG` - ブロックの番号、または文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
+1. `QUANTITY|TAG` - ブロックの番号、または文字列`"latest"`、`"earliest"`、`"pending"`、`"safe"`、`"finalized"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 2. `QUANTITY` - トランザクションのインデックスの位置
 
 ```js
 params: [
-  "0x29c", // 668
-  "0x0", // 0
+  "0x9c47cf", // 10241999
+  "0x24", // 36
 ]
 ```
 
@@ -1253,7 +1253,7 @@ params: [
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
 結果については、[eth_getTransactionByHash](#eth_gettransactionbyhash)を参照してください。
@@ -1360,7 +1360,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex"
 
 **パラメータ**
 
-1. `QUANTITY|TAG` - ブロックの番号、または文字列`"latest"`、`"earliest"`、`"pending"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
+1. `QUANTITY|TAG` - ブロックの番号、または文字列`"latest"`、`"earliest"`、`"pending"`、`"safe"`、`"finalized"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
 2. `QUANTITY` - アンクルのインデックスの位置
 
 ```js
@@ -1398,8 +1398,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndInde
 
 1. `Object` - フィルターオプション
 
-- `fromBlock`: `QUANTITY|TAG` - (オプション、デフォルトは`"latest"`)ブロック番号(整数)、または`"latest"`(最後にマイニングされたブロック)、`"pending"`、`"earliest"`(まだマイニングされていないトランザクション)のいずれか
-- `toBlock`: `QUANTITY|TAG` - (オプション、デフォルト: `"latest"`)ブロック番号(整数) 。 `"latest"`(最後にマイニングされたブロック)。`"pending"`、`"earliest"`(まだマイニングされていないトランザクション)のいずれか
+- `fromBlock`: `QUANTITY|TAG` - (オプション、デフォルトは`"latest"`)ブロック番号(整数)、または`"latest"`(最後にマイニングされたブロック)、`"safe"`(最新のセーフブロック)、`"finalized"`(最新の確定されたブロック)、`"pending"`、`"earliest"`(まだマイニングされていないトランザクション)のいずれか
+- `toBlock`: `QUANTITY|TAG` - (オプション、デフォルトは`"latest"`)ブロック番号(整数)、または`"latest"`(最後にマイニングされたブロック)、`"safe"`(最新のセーフブロック)、`"finalized"`(最新の確定されたブロック)、`"pending"`、`"earliest"`(まだマイニングされていないトランザクション)のいずれか
 - `address`: `DATA|Array`、20バイト - (オプション)ログの生成元となるコントラクトアドレス、またはアドレスのリスト
 - `topics`: `Array of DATA`、- (オプション)32バイトの`DATA`トピックの配列。 トピックは順序に依存します。 各トピックは「or」オプションのDATA配列にすることも可能
 
@@ -1592,8 +1592,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x
 
 1. `Object` - フィルターオプション
 
-- `fromBlock`: `QUANTITY|TAG` - (オプション、デフォルトは`"latest"`)ブロック番号(整数)、または`"latest"`(最後にマイニングされたブロック)、`"pending"`、`"earliest"`(まだマイニングされていないトランザクション)のいずれか
-- `toBlock`: `QUANTITY|TAG` - (オプション、デフォルト: `"latest"`)ブロック番号(整数) 。 `"latest"`(最後にマイニングされたブロック)。`"pending"`、`"earliest"`(まだマイニングされていないトランザクション)のいずれか
+- `fromBlock`: `QUANTITY|TAG` - (オプション、デフォルトは`"latest"`)ブロック番号(整数)、または`"latest"`(最後にマイニングされたブロック)、`"safe"`(最新のセーフブロック)、`"finalized"`(最新の確定されたブロック)、`"pending"`、`"earliest"`(まだマイニングされていないトランザクション)のいずれか
+- `toBlock`: `QUANTITY|TAG` - (オプション、デフォルトは`"latest"`)ブロック番号(整数)、または`"latest"`(最後にマイニングされたブロック)、`"safe"`(最新のセーフブロック)、`"finalized"`(最新の確定されたブロック)、`"pending"`、`"earliest"`(まだマイニングされていないトランザクション)のいずれか
 - `address`: `DATA|Array`、20バイト - (オプション)ログの生成元となるコントラクトアドレス、またはアドレスのリスト
 - `topics`: `Array of DATA`、- (オプション)32バイトの`DATA`トピックの配列。 トピックは順序に依存します。 各トピックは「or」オプションのDATA配列にすることも可能
 - `blockhash`: `DATA`、32バイト - (オプション、**実装予定**) EIP-234が追加されたことにより、`blockHash`が新たなフィルターオプションになります。これは、返されるログを32バイトのハッシュ`blockHash`を持つ単一のブロックに制限します。 `blockHash`を使用することは、`fromBlock`と`toBlock`に`blockHash`のハッシュのブロック番号を指定することと同等です。 `blockHash`がフィルター条件にある場合、`fromBlock`と`toBlock`は使用できません。

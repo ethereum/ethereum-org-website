@@ -258,7 +258,6 @@ Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz birden çok İyimser to
 ## İyimser toplamalara dair daha fazlası
 
 - [İyimser toplamalar nasıl çalışır? (Tam klavuz)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [İyimser Toplama hakkında bilmeniz gereken her şey](https://research.paradigm.xyz/rollups)
 - [Temel Arbitrum Rehberi](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Optimism'in Toplaması aslında nasıl çalışıyor?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

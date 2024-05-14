@@ -7,7 +7,7 @@ tags:
   - "hardhat"
   - "alchemy"
   - "智能合约"
-  - "部署"
+  - "deploying"
   - "区块链浏览器"
   - "前端"
   - "交易"
@@ -48,7 +48,7 @@ _注：请确保选择 **Goerli**，否则本教程将不适用。_
 
 你需要一个以太坊帐户来发送和接受交易。 我们将会使用 MetaMask，这是一个浏览器中的虚拟钱包，可供用户管理他们的以太坊帐户地址。
 
-你可以[在这里](https://metamask.io/download.html)免费下载并创建一个 MetaMask 帐户。 当你正在创建一个帐户，或者如果你已经有了一个帐户，请确保切换到右上角的“Goerli Test Network”(这样我们就不会使用主网代币进行交易)。
+你可以[在这里](https://metamask.io/download.html)免费下载并创建一个 MetaMask 帐户。 When you are creating an account, or if you already have an account, make sure to switch over to the “Goerli Test Network” in the upper right (so that we’re not dealing with real money).
 
 ### 步骤 4：从水龙头添加以太币 {#step-4-add-ether-from-a-faucet}
 
@@ -66,9 +66,9 @@ _注：由于网络拥塞，这可能需要一些时间。_
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
 ```
 
-> _注：此结果以 wei 为单位，而非 ETH。 Wei 是以太币的最小计量单位。_
+> _注：此结果以 wei 为单位，而非 ETH。 Wei is used as the smallest denomination of ether._
 
-哦！ 这里显示了我们所有的虚拟货币。
+Phew! 这里显示了我们所有的虚拟货币。
 
 ### 步骤 6：初始化我们的项目 {#step-6-initialize-our-project}
 
@@ -1130,9 +1130,9 @@ useEffect(async () => {
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
 ```
 
-**注意：**结果以 wei 为单位，而非 ETH。 Wei 是以太币的最小计量单位。 从 wei 到 eth 的转换是：1 eth = 10¹⁸ wei。 因此，如果我们将 0xde0b6b3a7640000 转换为十进制，我们会得到 1\*10¹⁸，它等于 1 eth。
+**注意：**结果以 wei 为单位，而非 ETH。 Wei is used as the smallest denomination of ether. 从 wei 到 eth 的转换是：1 eth = 10¹⁸ wei。 因此，如果我们将 0xde0b6b3a7640000 转换为十进制，我们会得到 1\*10¹⁸，它等于 1 eth。
 
-哦！ 我们的虚拟以太币都在那里了！ 🤑
+Phew! 我们的虚拟以太币都在那里了！ 🤑
 
 ### 第五步：将 MetaMask 连接到你的用户界面 {#step-5-connect-metamask-to-your-UI}
 
