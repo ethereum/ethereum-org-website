@@ -55,3 +55,6 @@ robots.txt
 
 # Crowdin report output
 src/data/crowdin/bucketsAwaitingReviewReport.csv
+
+# Storybook
+build-storybook.log

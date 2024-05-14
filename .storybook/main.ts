@@ -22,6 +22,7 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "storybook-react-i18next",
+    "@chromatic-com/storybook"
   ],
   staticDirs: ["../public"],
   framework: {
@@ -68,6 +69,8 @@ const config: StorybookConfig = {
         return !(isStyledSystemProp || isHTMLElementProp)
       },
     },
+
+    reactDocgen: "react-docgen-typescript"
   },
 }
 export default config
