@@ -1,9 +1,9 @@
-import { extendBaseTheme, usePrefersReducedMotion } from "@chakra-ui/react"
 import type { Preview } from "@storybook/react"
 import isChromatic from "chromatic/isChromatic"
 
 import theme from "../src/@chakra-ui/theme"
 
+import { ChakraDecorator } from "./ChakraDecorator"
 import i18n, { baseLocales } from "./i18next"
 
 import "../src/styles/global.css"
@@ -11,9 +11,7 @@ import { MotionGlobalConfig } from "framer-motion"
 
 MotionGlobalConfig.skipAnimations = isChromatic()
 
-const extendedTheme = extendBaseTheme(theme)
-
-const chakraBreakpointArray = Object.entries(extendedTheme.breakpoints) as [
+const chakraBreakpointArray = Object.entries(theme.breakpoints) as [
   string,
   string
 ][]
@@ -23,6 +21,20 @@ const preview: Preview = {
     locale: "en",
     locales: baseLocales,
   },
+  globalTypes: {
+    colorMode: {
+      name: "Color Mode",
+      description: "Change the color mode",
+      toolbar: {
+        icon: "circlehollow",
+        items: [
+          { value: "light", icon: "circlehollow", title: "Light Mode" },
+          { value: "dark", icon: "circle", title: "Dark Mode" },
+        ],
+      },
+    },
+  },
+  decorators: [ChakraDecorator],
   parameters: {
     i18n,
     actions: { argTypesRegex: "^on[A-Z].*" },
@@ -42,9 +54,6 @@ const preview: Preview = {
       storySort: {
         order: ["Atoms", "Molecules", "Organisms", "Templates", "Pages"],
       },
-    },
-    chakra: {
-      theme: extendedTheme,
     },
     layout: "centered",
     // Modify viewport selection to match Chakra breakpoints (or custom breakpoints)
