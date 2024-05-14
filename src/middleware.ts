@@ -36,6 +36,13 @@ export const config = {
 // Middleware required to always display the locale prefix in the URL. It
 // redirects to the default locale if the locale is not present in the URL
 export async function middleware(req: NextRequest) {
+  if (
+    req.nextUrl.pathname.startsWith("/_next") ||
+    req.nextUrl.pathname.includes("/api/")
+  ) {
+    return NextResponse.next()
+  }
+
   if (req.nextUrl.locale === FAKE_LOCALE) {
     // Apparently, the built-in `localeDetection`from Next does not work when
     // using the faked locale hack. So, we need to detect the locale manually
