@@ -51,4 +51,6 @@ export async function middleware(req: NextRequest) {
 
     return NextResponse.redirect(redirectUrl, { status: 301 })
   }
+
+  return NextResponse.next()
 }
