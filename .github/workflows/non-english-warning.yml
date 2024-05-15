@@ -30,7 +30,7 @@ jobs:
         id: check
         run: |
           git fetch origin ${{ github.base_ref }}
-          DIFF=$(git diff --no-ext-diff --unified=0 origin/${{ github.base_ref }}..${{ github.head_ref }} -- 'public/content/translations/**/*.md' 'src/intl/**/*.json' '!src/intl/en/**' | egrep -v '^[-+]href=')
+          DIFF=$(git diff --no-ext-diff --unified=0 origin/${{ github.base_ref }}..${{ github.head_ref }} -- 'public/content/translations/**/*.md' 'src/intl/**/*.json' '!src/intl/en/**' | grep -E -v '^[-+]href=')
           if [[ -z "$DIFF" ]]; then
             echo "ALL_CHANGES_INCLUDE_HREF=true" >> $GITHUB_ENV
           else
@@ -57,14 +57,19 @@ jobs:
               issue_number: prNumber,
               labels: [status, 'non-crowdin translation updates']
             });
-            const commentWithoutHrefs = `This pull request contains changes to non-English content, which must be handled through the Crowdin platform instead of GitHub.`
-            const commentWithHrefs = `This pull request contains changes to non-English content files, which may need to be handled through the Crowdin platform instead of GitHub.
+            const commentWithoutHrefs = `This pull request contains changes to non-English content, which must also be handled through the Crowdin platform instead of only on GitHub.`
+            const commentWithHrefs = `This pull request contains changes to non-English content files, which may also need to be handled through the Crowdin platform instead of only on GitHub.
             If these changes include _only_ changes to link `href` values (or other non-translated string segments), please disregard this message.`
             await github.rest.issues.createComment({
               ...repo,
               issue_number: prNumber,
-              body: `Thank you for your contribution, @${prAuthor}!
+              body: `
+              Thank you for your contribution, @${prAuthor}!
+              
               ${allChangesIncludeHref ? commentWithHrefs : commentWithoutHrefs}
+              
               We value your suggestion, and for any non-English content updates we request that you check out [how to help us translate](https://ethereum.org/en/contributing/translation-program/#help-us-translate), and suggest these updates directly in [our Crowdin project](https://crowdin.com/project/ethereum-org) if possible, where they can be properly reviewed.
-              Please post here or join [our Discord](https://ethereum.org/discord) if you have questions!`
+              
+              Please post here or join [our Discord](https://ethereum.org/discord) if you have questions!
+              `
             });
