@@ -12,7 +12,7 @@ import {
   VStack,
 } from "@chakra-ui/react"
 
-import type { FileContributor, Lang } from "@/lib/types"
+import type { ChildOnlyProp, FileContributor, Lang } from "@/lib/types"
 
 import { Button } from "@/components/Buttons"
 import InlineLink from "@/components/Link"
@@ -23,7 +23,7 @@ import Translation from "@/components/Translation"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
-const ContributorList = ({ children }: { children: React.ReactNode }) => (
+const ContributorList = ({ children }: Required<ChildOnlyProp>) => (
   <UnorderedList maxH="2xs" m={0} mt={6} overflowY="scroll">
     {children}
   </UnorderedList>
