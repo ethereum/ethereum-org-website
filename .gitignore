@@ -55,5 +55,3 @@ robots.txt
 
 # Crowdin report output
 src/data/crowdin/bucketsAwaitingReviewReport.csv
-
-src/data/git-contributor-cache.json

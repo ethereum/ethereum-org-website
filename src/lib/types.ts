@@ -377,6 +377,9 @@ export type FileContributor = {
   date?: string
 }
 
+type FilePath = string
+export type CommitHistory = Record<FilePath, FileContributor[]>
+
 /**
  * Table of contents
  */

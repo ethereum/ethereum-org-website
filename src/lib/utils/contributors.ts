@@ -1,4 +1,6 @@
-import type { FileContributor, Lang, Layout } from "@/lib/types"
+import { join } from "path"
+
+import type { CommitHistory, FileContributor, Lang, Layout } from "@/lib/types"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
@@ -16,9 +18,13 @@ export const getFileContributorInfo = async (
   slug: string,
   locale: string,
   fileLang: string,
-  layout: Layout
+  layout: Layout,
+  cache: CommitHistory
 ) => {
-  const gitContributors = await fetchAndCacheGitContributors(mdDir)
+  const gitContributors = await fetchAndCacheGitContributors(
+    join("/", mdDir, "index.md"),
+    cache
+  )
 
   const latestCommitDate = getLastModifiedDate(slug, locale!)
   const gitHubLastEdit = gitContributors[0]?.date

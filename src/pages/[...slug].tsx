@@ -16,7 +16,7 @@ import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
 import type {
-  Lang,
+  CommitHistory,
   Layout,
   LayoutMappingType,
   NextPageWithLayout,
@@ -113,6 +113,8 @@ const gfIssuesDataFetch = runOnlyOnce(async () => {
   return await fetchGFIs()
 })
 
+const commitHistoryCache: CommitHistory = {}
+
 export const getStaticProps = (async (context) => {
   const params = context.params!
   const { locale } = context
@@ -178,7 +180,8 @@ export const getStaticProps = (async (context) => {
     slug,
     locale!,
     frontmatter.lang,
-    layout
+    layout,
+    commitHistoryCache
   )
 
   const gfissues = await gfIssuesDataFetch()
