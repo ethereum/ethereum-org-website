@@ -16,6 +16,7 @@ import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
 import type {
+  CommitHistory,
   Lang,
   Layout,
   LayoutMappingType,
@@ -115,6 +116,8 @@ const gfIssuesDataFetch = runOnlyOnce(async () => {
   return await fetchGFIs()
 })
 
+const commitHistoryCache: CommitHistory = {}
+
 export const getStaticProps = (async (context) => {
   const params = context.params!
   const { locale } = context
@@ -181,7 +184,10 @@ export const getStaticProps = (async (context) => {
 
   const gfissues = await gfIssuesDataFetch()
 
-  const gitContributors = await fetchAndCacheGitContributors(mdDir)
+  const gitContributors = await fetchAndCacheGitContributors(
+    join("/", mdDir, "index.md"),
+    commitHistoryCache
+  )
 
   return {
     props: {

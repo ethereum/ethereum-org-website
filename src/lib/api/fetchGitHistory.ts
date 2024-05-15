@@ -1,11 +1,7 @@
-import fs from "fs"
-import { join } from "path"
-
-import type { FileContributor } from "@/lib/types"
+import type { CommitHistory, FileContributor } from "@/lib/types"
 
 import {
   CONTENT_DIR,
-  GIT_CONTRIBUTOR_CACHE_JSON,
   GITHUB_COMMITS_URL,
   OLD_CONTENT_DIR,
 } from "@/lib/constants"
@@ -49,26 +45,12 @@ async function fetchWithRateLimit(
 }
 
 // Fetch commit history and save it to a JSON file
-export const fetchAndCacheGitContributors = async (mdDir: string) => {
-  const filepath = join("/", mdDir, "index.md")
-
-  // Load cache
-  let commitHistory = {}
-  if (fs.existsSync(GIT_CONTRIBUTOR_CACHE_JSON)) {
-    try {
-      commitHistory = JSON.parse(
-        fs.readFileSync(GIT_CONTRIBUTOR_CACHE_JSON, "utf8")
-      )
-    } catch (error) {
-      console.error(
-        `Error reading commit history cache for filepath ${filepath}`,
-        error
-      )
-    }
-  }
-
+export const fetchAndCacheGitContributors = async (
+  filepath: string,
+  cache: CommitHistory
+) => {
   // First, check cache for existing commit history for English version (despite locale)
-  if (commitHistory[filepath]) return commitHistory[filepath]
+  if (cache[filepath]) return cache[filepath]
 
   // Fetch and save commit history for file
   const history = (await fetchWithRateLimit(filepath)) || []
@@ -92,12 +74,8 @@ export const fetchAndCacheGitContributors = async (mdDir: string) => {
       index === self.findIndex((t) => t.login === contributor.login)
   )
 
-  // Amend to commitHistory log and save
-  commitHistory[filepath] = uniqueContributors
-  fs.writeFileSync(
-    GIT_CONTRIBUTOR_CACHE_JSON,
-    JSON.stringify(commitHistory, null, 2)
-  )
+  // Amend to cache
+  cache[filepath] = uniqueContributors
 
   return uniqueContributors
 }
