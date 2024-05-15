@@ -49,7 +49,9 @@ async function fetchWithRateLimit(
 }
 
 // Fetch commit history and save it to a JSON file
-export const fetchAndCacheGitContributors = async (mdDir: string) => {
+export const fetchAndCacheGitContributors = async (
+  mdDir: string
+): Promise<FileContributor[]> => {
   const filepath = join("/", mdDir, "index.md")
 
   // Load cache
