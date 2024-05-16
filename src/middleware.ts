@@ -28,7 +28,7 @@ export const config = {
      * - api (API routes)
      * - _next/static (static files)
      */
-    "/((?!api|_next/static).*)",
+    "/((?!api|_next/static|_next/data).*)",
   ],
 }
 
