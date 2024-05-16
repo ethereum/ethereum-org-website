@@ -151,13 +151,17 @@ const EnergyConsumptionChart = () => {
     ],
   })
 
+  const aspectRatioValue = useBreakpointValue({
+    base: 0.55,
+    sm: 0.75,
+    md: 1.1,
+  })
+
   const chartOptions = {
     // chart styles
     barThickness: 38,
     borderRadius: 4,
-    aspectRatio: 1.1,
-    // responsive: true,
-    // maintainAspectRatio: true,
+    aspectRatio: aspectRatioValue,
     hover: { mode: null } as any, // casted to avoid TS issue
     backgroundColor: rawData?.map((item) => item.color) as any, // casted to avoid TS issue
     plugins: {
@@ -175,11 +179,6 @@ const EnergyConsumptionChart = () => {
       // bottom legend styles
       legend: {
         display: true,
-        title: {
-          // hacky solution to create an invisible title that pushes the legend a bit down
-          display: true,
-          padding: 0,
-        },
         position: "bottom" as any, // casted to avoid TS issue
         align: "center" as any, // casted to avoid TS issue
         labels: {
@@ -189,8 +188,10 @@ const EnergyConsumptionChart = () => {
           } as any, // casted to avoid TS issue
           color: useColorModeValue("#333333", "#F2F2F2"),
           boxWidth: 0,
+          boxHeight: 40,
         },
         rtl: isRtl,
+        onClick: () => null, // disable onClick data visibility
       },
       title: {
         display: false, // hide chart title
@@ -235,13 +236,12 @@ const EnergyConsumptionChart = () => {
     ],
   }
 
-  // FIX: height on mobile
+  // FIX: wrap legend label on mobile
   // FIX: cramped bars on resizing
 
   return (
     <Center w="full">
-      {/* height:40vh; width:80vw" */}
-      <Box maxW="500px" w="full">
+      <Box maxW="500px" w="full" mb={{ base: 4, md: 8 }}>
         {/* TODO: isRtl ? data?.reverse() : data */}
         <Bar options={chartOptions} data={chartData} />
       </Box>
