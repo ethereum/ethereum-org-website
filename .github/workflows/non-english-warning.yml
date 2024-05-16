@@ -59,7 +59,6 @@ jobs:
             });
             const commentWithoutHrefs = `This pull request contains changes to non-English content, which must also be handled through the Crowdin platform instead of only on GitHub.`
             const commentWithHrefs = `This pull request contains changes to non-English content files, which may also need to be handled through the Crowdin platform instead of only on GitHub.
-            If these changes include _only_ changes to link `href` values (or other non-translated string segments), please disregard this message.`
             await github.rest.issues.createComment({
               ...repo,
               issue_number: prNumber,
