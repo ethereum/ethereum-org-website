@@ -1,15 +1,11 @@
 import * as React from "react"
-import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
-
-import { CommonHeroProps } from "@/lib/types"
 
 import HubHeroComponent from "./"
 
 import learnHubHeroImg from "@/public/heroes/learn-hub-hero.png"
-
-type HubHeroType = typeof HubHeroComponent
+import { getTranslation } from "@/storybook-utils"
 
 const meta = {
   title: "Organisms / Layouts / Hero",
@@ -24,50 +20,36 @@ const meta = {
       </Box>
     ),
   ],
-} satisfies Meta<HubHeroType>
+} satisfies Meta<typeof HubHeroComponent>
 
 export default meta
 
-export const HubHero: StoryObj<typeof meta> = {
-  args: {
-    title: "common:learn-hub",
-    header: "page-learn:hero-header",
-    description: "page-learn:hero-subtitle",
-    heroImg: learnHubHeroImg,
-  },
-
-  render: ({ title, header, description, ...props }) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { t } = useTranslation()
-
-    const buttons: CommonHeroProps["buttons"] = [
-      {
-        content: t("page-learn:hero-button-lets-get-started"),
-        toId: "what-is-crypto-ethereum",
-        matomo: {
-          eventCategory: "learn hub hero buttons",
-          eventAction: "click",
-          eventName: "lets get started",
+export const HubHero: StoryObj = {
+  render: () => (
+    <HubHeroComponent
+      title={getTranslation("learn-hub", "common")}
+      header={getTranslation("hero-header", "page-learn")}
+      description={getTranslation("hero-subtitle", "page-learn")}
+      heroImg={learnHubHeroImg}
+      buttons={[
+        {
+          content: getTranslation("hero-button-lets-get-started", "page-learn"),
+          toId: "what-is-crypto-ethereum",
+          matomo: {
+            eventCategory: "learn hub hero buttons",
+            eventAction: "click",
+            eventName: "lets get started",
+          },
         },
-      },
-      {
-        content: "Button",
-        matomo: {
-          eventCategory: "learn hub hero buttons",
-          eventAction: "click",
-          eventName: "lets get started",
+        {
+          content: "Button",
+          matomo: {
+            eventCategory: "learn hub hero buttons",
+            eventAction: "click",
+            eventName: "lets get started",
+          },
         },
-      },
-    ]
-
-    return (
-      <HubHeroComponent
-        title={t(title)}
-        header={t(header)}
-        description={t(description)}
-        buttons={buttons}
-        {...props}
-      />
-    )
-  },
+      ]}
+    />
+  ),
 }

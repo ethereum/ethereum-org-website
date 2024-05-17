@@ -4,13 +4,12 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import FeedbackWidgetComponent from "./"
 
-type FeedbackWidgetType = typeof FeedbackWidgetComponent
-
 const meta = {
   title: "FeedbackWidget",
   parameters: {
     layout: "fullscreen",
   },
+  component: FeedbackWidgetComponent,
   decorators: [
     (Story) => (
       <Stack minH="100vh" position="relative">
@@ -19,10 +18,8 @@ const meta = {
       </Stack>
     ),
   ],
-} satisfies Meta<FeedbackWidgetType>
+} satisfies Meta<typeof FeedbackWidgetComponent>
 
 export default meta
 
-export const FeedbackWidget: StoryObj<FeedbackWidgetType> = {
-  render: () => <FeedbackWidgetComponent />,
-}
+export const FeedbackWidget: StoryObj<typeof meta> = {}

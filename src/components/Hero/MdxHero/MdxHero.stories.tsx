@@ -3,10 +3,9 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import MdxHeroComponent from "./"
 
-type MdxHeroType = typeof MdxHeroComponent
-
 const meta = {
   title: "Organisms / Layouts / Hero",
+  component: MdxHeroComponent,
   parameters: {
     layout: "none",
   },
@@ -17,14 +16,13 @@ const meta = {
       </HStack>
     ),
   ],
-} satisfies Meta<MdxHeroType>
+} satisfies Meta<typeof MdxHeroComponent>
 
 export default meta
 
-export const MdxHero: StoryObj<MdxHeroType> = {
+export const MdxHero: StoryObj<typeof meta> = {
   args: {
     breadcrumbs: { slug: "/en/staking/solo/" },
     title: "Solo stake your Eth",
   },
-  render: (args) => <MdxHeroComponent {...args} />,
 }

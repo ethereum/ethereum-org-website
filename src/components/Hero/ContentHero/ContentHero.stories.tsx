@@ -1,11 +1,9 @@
-import { useTranslation } from "next-i18next"
 import { Meta, StoryObj } from "@storybook/react"
 
-import ContentHeroComponent, { ContentHeroProps } from "."
+import ContentHeroComponent from "."
 
 import contentHeroImg from "@/public/mainnet.png"
-
-type ContentHeroType = typeof ContentHeroComponent
+import { getTranslation } from "@/storybook-utils"
 
 const meta = {
   title: "Organisms / Layouts / Hero",
@@ -20,42 +18,38 @@ const meta = {
       },
     },
   },
-} satisfies Meta<ContentHeroType>
+} satisfies Meta<typeof ContentHeroComponent>
 
 export default meta
 
-export const ContentHero: StoryObj = {
-  render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { t } = useTranslation("page-learn")
+const LEARN_NS = "page-learn"
 
-    const buttons: ContentHeroProps["buttons"] = [
-      {
-        content: t("hero-button-lets-get-started"),
-        toId: "what-is-crypto-ethereum",
-        matomo: {
-          eventCategory: "learn hub hero buttons",
-          eventAction: "click",
-          eventName: "lets get started",
+export const ContentHero: StoryObj = {
+  render: () => (
+    <ContentHeroComponent
+      breadcrumbs={{ slug: "/en/run-a-node/" }}
+      heroImg={contentHeroImg}
+      title={getTranslation("hero-header", LEARN_NS)}
+      description={getTranslation("hero-subtitle", LEARN_NS)}
+      buttons={[
+        {
+          content: getTranslation("hero-button-lets-get-started", LEARN_NS),
+          toId: "what-is-crypto-ethereum",
+          matomo: {
+            eventCategory: "learn hub hero buttons",
+            eventAction: "click",
+            eventName: "lets get started",
+          },
         },
-      },
-      {
-        content: "Button",
-        matomo: {
-          eventCategory: "learn hub hero buttons",
-          eventAction: "click",
-          eventName: "lets get started",
+        {
+          content: "Button",
+          matomo: {
+            eventCategory: "learn hub hero buttons",
+            eventAction: "click",
+            eventName: "lets get started",
+          },
         },
-      },
-    ]
-    return (
-      <ContentHeroComponent
-        breadcrumbs={{ slug: "/en/run-a-node/" }}
-        heroImg={contentHeroImg}
-        title={t("hero-header")}
-        description={t("hero-subtitle")}
-        buttons={buttons}
-      />
-    )
-  },
+      ]}
+    />
+  ),
 }

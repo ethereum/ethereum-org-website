@@ -9,8 +9,6 @@ import Translation from "../Translation"
 // TODO: remove `index` when we delete the old tooltip
 import TooltipComponent from "./index"
 
-type TooltipType = typeof TooltipComponent
-
 const TooltipContent = () => (
   <div>
     <Translation id="data-provided-by" />{" "}
@@ -29,7 +27,7 @@ const meta = {
       </Box>
     ),
   },
-} satisfies Meta<TooltipType>
+} satisfies Meta<typeof TooltipComponent>
 
 export default meta
 

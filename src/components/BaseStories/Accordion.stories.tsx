@@ -8,9 +8,7 @@ import {
 } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-type AccordionType = typeof Accordion
-
-const meta: Meta<AccordionType> = {
+const meta = {
   title: "Molecules / Disclosure Content / Accordions",
   component: Accordion,
   decorators: [
@@ -20,11 +18,11 @@ const meta: Meta<AccordionType> = {
       </Box>
     ),
   ],
-} satisfies Meta<AccordionType>
+} satisfies Meta<typeof Accordion>
 
 export default meta
 
-type Story = StoryObj<AccordionType>
+type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
   render: () => (

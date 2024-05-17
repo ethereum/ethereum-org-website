@@ -11,6 +11,7 @@ export default create({
   appBorderRadius: 4,
 
   brandTitle: "Ethereum.org",
+  // @ts-ignore
   brandImage,
   brandUrl: "https://www.ethereum.org",
 
