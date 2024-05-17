@@ -1090,9 +1090,9 @@ Useremo l'abbinatore `revertedWith` nel nostro test per controllarlo.
 Possiamo scrivere un test in cui eseguiremo un trasferimento per un importo maggiore di quanto abbiamo nel nostro portafoglio. E poi controlleremo se la transazione è tornata con il messaggio esatto!
 
 ```ts
-it("Impossibile trasferire oltre l'importo", async () => {
+it("Can not transfer above the amount", async () => {
   await expect(token.transfer(walletTo.address, 1007)).to.be.revertedWith(
-    "Eccezione VM elaborando la transazione: ripristina ERC20: importo del trasferimento eccede il saldo"
+    "VM Exception while processing transaction: revert ERC20: transfer amount exceeds balance"
   )
 })
 ```
@@ -1108,7 +1108,7 @@ L'abbinatore può accettare `numbers`, `strings` e `BigNumbers` come cambiamento
 Scriviamo il prossimo test:
 
 ```ts
-it("Invia cambiamenti della transazione del saldo del destinatario", async () => {
+it("Send transaction changes receiver balance", async () => {
   await expect(() =>
     wallet.sendTransaction({ to: walletTo.address, gasPrice: 0, value: 200 })
   ).to.changeBalance(walletTo, 200)
@@ -1120,7 +1120,7 @@ Quanto sopra è un test per un singolo portafoglio.
 E il successivo per più portafogli:
 
 ```ts
-it("Invia cambiamenti della transazione saldi mittente e destinatario", async () => {
+it("Send transaction changes sender and receiver balances", async () => {
   await expect(() =>
     wallet.sendTransaction({ to: walletTo.address, gasPrice: 0, value: 200 })
   ).to.changeBalances([wallet, walletTo], [-200, 200])

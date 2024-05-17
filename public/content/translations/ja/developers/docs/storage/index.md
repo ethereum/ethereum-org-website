@@ -61,6 +61,7 @@ IPFSは、ファイル、ウェブサイト、アプリケーション、デー�
 - [IPFS Scan](https://ipfs-scan.io) _(IPFSピンニングエクスプローラー)_
 - [4EVERLAND](https://www.4everland.org/)_(IPFSピンニングサービス)_
 - [Filebase](https://filebase.com)_(IPFSピンニングサービス)_
+- [Spheron Network](https://spheron.network/) _(IPFS/Filecoinピンニングサービス)_
 
 SWARMは、ストレージインセンティブシステムとストレージレンタル価格オラクルを備えた分散型データストレージおよび分配テクノロジーです。
 
@@ -198,12 +199,18 @@ KYCなしの分散型ツール
 - [ドキュメント](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
 
+**Spheron Network - _Spheronは、プラットフォーム・アズ・ア・サービス(Paas)で、アプリケーションを最高のパフォーマンスを持つ分散型インフラでリリースすることを期待するdApp向けに設計されています。 革新的な、計算環境、分散型ストレージ、CDN、ウェブホスティングを提供しています。_**
+
+- [spheron.network](https://spheron.network/)
+- [ドキュメント](https://docs.spheron.network/)
+- [GitHub](https://github.com/spheronFdn)
+
 ## 参考文献 {#further-reading}
 
 - [分散型ストレージとは](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [分散型ストレージに関する5つの一般的な通念を覆す](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
-_役に立つコミュニティリソースをご存知の場合は、 ページを編集して追加してください。_
+_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
 
 ## 関連トピック {#related-topics}
 

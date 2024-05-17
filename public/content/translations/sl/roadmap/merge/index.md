@@ -11,7 +11,7 @@ summaryPoint3: Spojitev je ime dogodka, ko se je Ethereumovo glavno omrežje spo
 summaryPoint4: Spojitev je Ethereumovo porabo energijo zmanjšala za približno 99,95 %.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Spojitev je bila izvedena 15. septembra 2022. Zaključila je Ethereumov prehod na mehanizem za doseganje soglasja z dokazom o deležu. Ta je uradno zamenjal mehanizem dokaza o delu in porabo energije zmanjšal za približno 99,95 %.
 </UpgradeStatus>
 

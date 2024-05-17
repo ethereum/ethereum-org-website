@@ -35,11 +35,11 @@ pragma solidity 0.8.7;
 
 contract VendingMachine {
 
-    // A szerződés állapotváltozóinak deklarálása
+    // Declare state variables of the contract
     address public owner;
     mapping (address => uint) public cupcakeBalances;
 
-    // Amikor a 'VendingMachine' szerződést telepítik:
+    // When 'VendingMachine' contract is deployed:
     // 1. beállítja a telepítő címet a szerződés tulajdonosaként
     // 2. set the deployed smart contract's cupcake balance to 100
     constructor() {

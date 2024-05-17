@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  create_pr:
+  get_data_and_create_pr:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code

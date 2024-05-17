@@ -44,6 +44,8 @@ Az [összevont tranzakciók](/layer-2) már most is gondoskodnak az Ethereum mé
 
 ## Jelenlegi helyzet {#current-progress}
 
-A Proto-Danksharding az első az ütemtervben szereplő elemek közül, amelyet a Deneb + Cancun hálózatfejlesztés részeként 2024 márciusában hajtanak végre. A teljes Danksharding valószínűleg több év múlva fog megvalósulni, mivel az ütemtervből több más elem kifejlesztése is szükséges hozzá. Az összevont tranzakciók infrastruktúrájának decentralizálása egy fokozatos folyamat lesz – több különböző összevont tranzakció létezik, amelyek kicsit más felállásban működnek, és más rátán fogják tudni elvégezni a decentralizálást.
+A Proto-Danksharding az első ilyen ütemterv, amelyet a Cancun-Deneb („Dencun”) hálózatfrissítés részeként hajtanak végre 2024 márciusában. **A teljes Danksharding valószínűleg több év múlva lesz elérhető**, mivel számos egyéb ütemtervelemtől függ először. Az összevont tranzakciók infrastruktúrájának decentralizálása egy fokozatos folyamat lesz – több különböző összevont tranzakció létezik, amelyek kicsit más felállásban működnek, és más rátán fogják tudni elvégezni a decentralizálást.
+
+[További információ a Dencun hálózatfrissítésről](/roadmap/dencun/)
 
 <QuizWidget quizKey="scaling" />

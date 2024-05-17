@@ -1,0 +1,34 @@
+name: Generate Crowdin translation review report
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate_report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Install ts-node
+        run: yarn global add ts-node
+
+      - name: Run script
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/reports/generateReviewReport.ts
+        env:
+          CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+
+      - name: Upload output as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: output
+          path: ./src/data/crowdin/bucketsAwaitingReviewReport.csv

@@ -3,7 +3,7 @@ title: 离线数据完整性的默克尔证明
 description: 在链上确保链下数据的完整性
 author: Ori Pomerantz
 tags:
-  - "存储"
+  - "storage"
 skill: advanced
 lang: zh
 published: 2021-12-30
@@ -135,19 +135,19 @@ const getMerkleRoot = (inputArray) => {
 // hash with. Because we use a symmetrical hash function, we don't
 // need the item's location to verify the proof, only to create it
 const getMerkleProof = (inputArray, n) => {
-    var result = [], currentLayer = [...inputArray], currentN = n
+    var result = [], currentLayer = [...inputArray], currentN = n
 
-    // Until we reach the top
-    while (currentLayer.length > 1) {
-        // No odd length layers
-        if (currentLayer.length % 2)
-            currentLayer.push(empty)
+    // Until we reach the top
+    while (currentLayer.length > 1) {
+        // No odd length layers
+        if (currentLayer.length % 2)
+            currentLayer.push(empty)
 
-        result.push(currentN % 2
-               // If currentN is odd, add with the value before it to the proof
-            ? currentLayer[currentN-1]
-               // If it is even, add the value after it
-            : currentLayer[currentN+1])
+        result.push(currentN % 2
+               // If currentN is odd, add with the value before it to the proof
+            ? currentLayer[currentN-1]
+               // If it is even, add the value after it
+            : currentLayer[currentN+1])
 
 ```
 
@@ -155,12 +155,12 @@ const getMerkleProof = (inputArray, n) => {
 
 ```javascript
         // Move to the next layer up
-        currentN = Math.floor(currentN/2)
-        currentLayer = oneLevelUp(currentLayer)
-    }   // while currentLayer.length > 1
+        currentN = Math.floor(currentN/2)
+        currentLayer = oneLevelUp(currentLayer)
+    }   // while currentLayer.length > 1
 
-    return result
-}   // getMerkleProof
+    return result
+}   // getMerkleProof
 ```
 
 ### 链上代码 {#on-chain-code}
@@ -179,30 +179,30 @@ import "hardhat/console.sol";
 ```solidity
 
 contract MerkleProof {
-    uint merkleRoot;
+    uint merkleRoot;
 
-    function getRoot() public view returns (uint) {
-      return merkleRoot;
-    }
+    function getRoot() public view returns (uint) {
+      return merkleRoot;
+    }
 
-    // Extremely insecure, in production code access to
-    // this function MUST BE strictly limited, probably to an
-    // owner
-    function setRoot(uint _merkleRoot) external {
-      merkleRoot = _merkleRoot;
-    }   // setRoot
+    // Extremely insecure, in production code access to
+    // this function MUST BE strictly limited, probably to an
+    // owner
+    function setRoot(uint _merkleRoot) external {
+      merkleRoot = _merkleRoot;
+    }   // setRoot
 ```
 
 为默克尔根设置和获取函数。 在生产系统中，让每个人都更新默克尔根是一个_非常糟糕的主意_。 这里这样做是为了简化示例代码。 **不要在数据完整性非常重要的系统上执行**。
 
 ```solidity
     function hash(uint _a) internal pure returns(uint) {
-      return uint(keccak256(abi.encode(_a)));
-    }
+      return uint(keccak256(abi.encode(_a)));
+    }
 
-    function pairHash(uint _a, uint _b) internal pure returns(uint) {
-      return hash(hash(_a) ^ hash(_b));
-    }
+    function pairHash(uint _a, uint _b) internal pure returns(uint) {
+      return hash(hash(_a) ^ hash(_b));
+    }
 ```
 
 此函数生成一个配对哈希值。 它只是将 `hash` 和 `pairHash` 函数的 JavaScript 代码转变为 Solidity。
@@ -211,22 +211,22 @@ contract MerkleProof {
 
 ```solidity
     // Verify a Merkle proof
-    function verifyProof(uint _value, uint[] calldata _proof)
-        public view returns (bool) {
-      uint temp = _value;
-      uint i;
+    function verifyProof(uint _value, uint[] calldata _proof)
+        public view returns (bool) {
+      uint temp = _value;
+      uint i;
 
-      for(i=0; i<_proof.length; i++) {
-        temp = pairHash(temp, _proof[i]);
-      }
+      for(i=0; i<_proof.length; i++) {
+        temp = pairHash(temp, _proof[i]);
+      }
 
-      return temp == merkleRoot;
-    }
+      return temp == merkleRoot;
+    }
 
-}  // MarkleProof
+}  // MarkleProof
 ```
 
-用数学符号表示，默克尔证明的验证看起来像这样：`H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`。 此代码实现了默克尔证明。
+用数学符号表示，默克尔证明的验证看起来像这样：`H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`. 此代码实现了默克尔证明。
 
 ## 默克尔证明和卷叠很难混淆 {#merkle-proofs-and-rollups}
 

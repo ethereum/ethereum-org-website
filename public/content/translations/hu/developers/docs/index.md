@@ -20,6 +20,6 @@ Ha most először fejleszt az Ethereumon, akkor azt javasoljuk, hogy kezdje a le
 
 <DeveloperDocsLinks headerId="ethereum-stack" />
 
-### Speciális {#advanced}
+### Haladó {#advanced}
 
 <DeveloperDocsLinks headerId="advanced" />

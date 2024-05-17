@@ -3,9 +3,9 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import ContentHeroComponent, { ContentHeroProps } from "."
 
-type ContentHeroType = typeof ContentHeroComponent
+import contentHeroImg from "@/public/mainnet.png"
 
-import contentHeroImg from "../../../../public/mainnet.png"
+type ContentHeroType = typeof ContentHeroComponent
 
 const meta = {
   title: "Organisms / Layouts / Hero",

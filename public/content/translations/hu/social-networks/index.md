@@ -1,5 +1,5 @@
 ---
-title: Nem központosított közösségi hálózatok
+title: Decentralizált közösségi hálózatok
 description: A decentralizált közösségi hálózatok áttekintése az Ethereumon
 lang: hu
 template: use-cases

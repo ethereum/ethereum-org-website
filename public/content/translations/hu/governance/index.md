@@ -2,6 +2,7 @@
 title: Az Ethereum irányítása
 description: Annak bemutatása, hogy az Ethereummal kapcsolatos döntések hogyan születnek meg.
 lang: hu
+postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Bevezetés az Ethereum irányításába {#introduction}
@@ -18,7 +19,7 @@ Az irányítás az a rendszer, amely lehetővé teszi a döntéshozást. Egy tip
 
 Az Ethereum protokollt nem birtokolja vagy kontrollálja senki, ugyanakkor a változásokról dönteni kell, hogy a hálózat hosszú életét és prosperitását a leginkább biztosítsák. A tulajdonlás hiánya miatt a hagyományos szervezeti irányítás nem működő megoldás.
 
-## Ethereum-felügyelet {#ethereum-governance}
+## Az Ethereum irányítása {#ethereum-governance}
 
 Az Ethereum irányítása (governance) az a folyamat, amely által a protokoll megváltoztatható. Fontos kiemelni, hogy ez nem kapcsolódik ahhoz, hogy az emberek és az alkalmazások hogyan használják a protokollt, mert az Ethereum egy engedélymentes hálózat. A világon bárki bárhonnan részt vehet a láncon zajló tevékenységekben. Nincsenek olyan szabályok, hogy ki csinálhat vagy nem csinálhat alkalmazást vagy indíthat tranzakciókat. Ugyanakkor van egy folyamat, mellyel változásokat lehet kezdeményezni a protokollban, amelyre a decentralizált alkalmazások épülnek. Mivel sok ember függ az Ethereum stabilitásától, ezért a kulcsváltozások koordinációs küszöbe nagyon magas, beleértve a közösségi és technikai folyamatokét is, hogy az Ethereum módosítása biztonságos és a közösség által széles körben támogatott legyen.
 
