@@ -2,9 +2,10 @@ import { useTranslation } from "next-i18next"
 import { Meta, StoryObj } from "@storybook/react"
 
 import { langViewportModes } from "../../../../.storybook/modes"
-import contentHeroImg from "../../../../public/mainnet.png"
 
 import ContentHeroComponent, { ContentHeroProps } from "."
+
+import contentHeroImg from "@/public/mainnet.png"
 
 type ContentHeroType = typeof ContentHeroComponent
 
