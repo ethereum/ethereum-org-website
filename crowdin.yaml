@@ -2,7 +2,7 @@
 "api_token_env": "CROWDIN_API_KEY"
 files: [
   {
-    "source": "/dev/null",
+    "source": "**/*.txt",
     "translation": "/github/workspace/crowdin/%locale%/%original_file_name%"
   }
 ]
