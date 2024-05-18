@@ -3,6 +3,6 @@
 files: [
   {
     "source": "/dev/null",
-    "translation": "./crowdin/%locale%/%original_file_name%"
+    "translation": "/github/workspace/crowdin/%locale%/%original_file_name%"
   }
 ]
