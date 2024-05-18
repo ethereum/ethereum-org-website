@@ -1,0 +1,5 @@
+files: [
+  {
+    "translation": "./crowdin/%locale%/%original_file_name%"
+  }
+]
