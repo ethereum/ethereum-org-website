@@ -46,7 +46,7 @@ jobs:
 
       # Build and download translations to ./crowdin
       - name: Build Crowdin project
-        uses: crowdin/github-actions@v1
+        uses: crowdin/github-action@v1
         with:
           download_translations: true
 
