@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "20 4 1 * *" # Runs at 4:20 AM on the first day of every month
   workflow_dispatch: # Can be dispatched manually
+  push: # For testing purposes only; remove for production
+    branches:
+      - crowdin-ci-test
 
 jobs:
   create_approved_language_bucket_prs:
