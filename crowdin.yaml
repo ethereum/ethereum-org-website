@@ -1,5 +1,8 @@
+"api_token": "${CROWDIN_API_KEY}"
+"project_id": "${CROWDIN_PROJECT_ID}"
 files: [
   {
+    "source": "/dev/null",
     "translation": "./crowdin/%locale%/%original_file_name%"
   }
 ]
