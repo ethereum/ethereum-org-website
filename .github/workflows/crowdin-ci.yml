@@ -41,10 +41,6 @@ jobs:
       - name: Fetch latest dev
         run: git fetch origin dev
 
-      - name: Authenticate GitHub CLI
-        run: |
-          echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
-
       # Build translations
       - name: Build Crowdin project
         id: build-crowdin
