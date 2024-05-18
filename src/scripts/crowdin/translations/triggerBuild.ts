@@ -1,4 +1,9 @@
+import { writeFileSync } from "fs"
+import { join } from "path"
+
 import crowdin from "../api-client/crowdinClient"
+
+const OUTPUT_PATH = join(process.env["GITHUB_WORKSPACE"] || "", "output.env")
 
 async function triggerBuild() {
   const projectId = Number(process.env.CROWDIN_PROJECT_ID) || 363359
@@ -11,7 +16,7 @@ async function triggerBuild() {
       `Build ${isAlreadyFinished ? "already finished" : "triggered"} id:`,
       id
     )
-    console.log(`::set-output name=buildId::${id}`)
+    writeFileSync(OUTPUT_PATH, `buildId=${id}\n`, { flag: "a" })
   } catch (error: unknown) {
     console.error((error as Error).message)
   }

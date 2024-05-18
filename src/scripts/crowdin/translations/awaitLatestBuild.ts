@@ -1,8 +1,13 @@
+import { writeFileSync } from "fs"
+import { join } from "path"
+
 import crowdin from "../api-client/crowdinClient"
 
 const FINISHED = "finished"
 const TIMEOUT = 2 * 60 * 60 * 1000 // Timeout after 2 hours
 const INTERVAL = 10 * 1000 // 10 seconds between checks
+
+const OUTPUT_PATH = join(process.env["GITHUB_WORKSPACE"] || "", "output.env")
 
 async function awaitLatestBuild() {
   const projectId = Number(process.env.CROWDIN_PROJECT_ID) || 363359
@@ -37,14 +42,14 @@ async function awaitLatestBuild() {
   }
 
   if (data.status !== FINISHED) {
-    console.error(`::set-output name=buildSuccess::false`)
+    writeFileSync(OUTPUT_PATH, `BUILD_SUCCESS=false\n`, { flag: "a" })
     throw new Error(
       `Timeout: Build did not finish in ${TIMEOUT / 1000 / 60} minutes`
     )
   }
 
   console.log("Latest build data:", data)
-  console.error(`::set-output name=buildSuccess::true`)
+  writeFileSync(OUTPUT_PATH, `BUILD_SUCCESS=true\n`, { flag: "a" })
 }
 
 awaitLatestBuild()

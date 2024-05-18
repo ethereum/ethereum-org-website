@@ -44,22 +44,17 @@ jobs:
       # Build translations
       - name: Build Crowdin project
         id: build-crowdin
-        run: |
-          OUTPUT=$(npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/triggerBuild.ts)
-          echo "$OUTPUT"
-        shell: bash
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/triggerBuild.ts
+
+      - name: Load buildId
+        run: echo "BUILD_ID=$(cat output.env | grep buildId | cut -d'=' -f2)" >> $GITHUB_ENV
 
       - name: Await latest build to finish
-        env:
-          BUILD_ID: ${{ steps.build-crowdin.outputs.buildId}}
-        run: |
-          OUTPUT=$(npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/awaitLatestBuild.ts)
-          echo "$OUTPUT"
-        shell: bash
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/awaitLatestBuild.ts
 
       - name: Check build success
         run: |
-          if [ "${{ steps.build-crowdin.outputs.buildSuccess }}" = "false" ]; then
+          if [ "$(grep BUILD_SUCCESS output.env | cut -d'=' -f2)" = "false" ]; then
             echo "Build timed out, exiting"
             exit 1
           fi
