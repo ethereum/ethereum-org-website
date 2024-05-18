@@ -44,10 +44,10 @@ jobs:
       - name: Build Crowdin project
         uses: crowdin/github-action@v1
         with:
+          config: "crowdin.yaml"
           download_translations: true
-        env:
-          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
-          CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
+          project_id: ${{ secrets.CROWDIN_PROJECT_ID }}
+          api_token: ${{ secrets.CROWDIN_API_KEY }}
 
       # Prepare bucket ids
       - name: Get latest translation bucket directory ids
