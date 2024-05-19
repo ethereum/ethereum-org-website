@@ -16,7 +16,7 @@ async function triggerBuild() {
       `Build ${isAlreadyFinished ? "already finished" : "triggered"} id:`,
       id
     )
-    writeFileSync(OUTPUT_PATH, `buildId=${id}\n`, { flag: "a" })
+    writeFileSync(OUTPUT_PATH, `BUILD_ID=${id}\n`, { flag: "a" })
   } catch (error: unknown) {
     console.error((error as Error).message)
   }
