@@ -162,6 +162,7 @@ const EnergyConsumptionChart = () => {
     barThickness: 38,
     borderRadius: 4,
     aspectRatio: aspectRatioValue,
+    maintainAspectRatio: true,
     hover: { mode: null } as any, // casted to avoid TS issue
     backgroundColor: rawData?.map((item) => item.color) as any, // casted to avoid TS issue
     plugins: {
@@ -182,6 +183,7 @@ const EnergyConsumptionChart = () => {
         position: "bottom" as any, // casted to avoid TS issue
         align: "center" as any, // casted to avoid TS issue
         labels: {
+          textAlign: "center" as any, // casted to avoid TS issue
           font: {
             weight: "bold",
             size: "16px",
@@ -221,6 +223,7 @@ const EnergyConsumptionChart = () => {
           autoSkip: false, // avoid long labels to be hidden
           padding: 0, // removes default padding betwen x-labels and chart
           maxRotation: 0, // turns off rotation
+          beginAtZero: true,
         },
       },
     },
@@ -230,20 +233,20 @@ const EnergyConsumptionChart = () => {
     labels: rawData?.map((item) => wrapLabel(item.name)),
     datasets: [
       {
-        label: t("page-what-is-ethereum-energy-consumption-chart-legend"),
+        label: wrapLabel(
+          t("page-what-is-ethereum-energy-consumption-chart-legend"),
+          { width: 30 }
+        ) as any, // casted to avoid TS issue
         data: rawData?.map((item) => item.amount),
       },
     ],
   }
 
-  // FIX: wrap legend label on mobile
-  // FIX: cramped bars on resizing
-
   return (
     <Center w="full">
-      <Box maxW="500px" w="full" mb={{ base: 4, md: 8 }}>
+      <Box maxW="500px" m="auto" w="80vw" mb={{ base: 4, lg: 4 }}>
         {/* TODO: isRtl ? data?.reverse() : data */}
-        <Bar options={chartOptions} data={chartData} />
+        <Bar options={chartOptions} data={chartData} updateMode="none" redraw />
       </Box>
     </Center>
   )

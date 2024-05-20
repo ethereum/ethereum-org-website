@@ -184,7 +184,7 @@ export const GridItem = ({ metric }: GridItemProps) => {
       </Box>
       {hasData && (
         <Box position="absolute" insetInline="0" bottom={7} height="60%">
-          <Line options={chartOptions} data={chartData} />
+          <Line options={chartOptions} data={chartData} updateMode="none" />
         </Box>
       )}
       <Flex
