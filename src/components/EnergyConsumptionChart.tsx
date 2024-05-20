@@ -257,7 +257,7 @@ const EnergyConsumptionChart = () => {
     <Center w="full">
       <Box maxW="500px" m="auto" w="80vw" mb={{ base: 4, lg: 4 }}>
         {/* TODO: isRtl ? data?.reverse() : data */}
-        <Bar options={chartOptions} data={chartData} updateMode="none" redraw />
+        <Bar options={chartOptions} data={chartData} updateMode="none" />
       </Box>
     </Center>
   )

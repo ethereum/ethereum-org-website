@@ -15,7 +15,5 @@ export const wrapLabel = (str: string, maxWidth?: { width: number }) => {
     "gm"
   )
 
-  console.log(Array.from(str.matchAll(regex), (m) => m[0]))
-
   return Array.from(str.matchAll(regex), (m) => m[0])
 }
