@@ -49,18 +49,23 @@ export const Modal = defineMultiStyleConfig({
   ),
   sizes: {
     ...defaultSizes,
-    full: {
+    full: definePartsStyle((props) => ({
+      dialogContainer: {
+        alignItems: { base: "flex-start", md: "center" },
+      },
       dialog: {
+        my: { base: "4", md: props.isCentered ? "auto" : "4" },
+        mx: "4",
         minH: {
-          base: "calc(100vh - 1rem)",
-          md: "min(calc(100vh - 1rem), 792px)",
+          base: "100vh",
+          md: "min(100vh, 792px)",
         },
         maxW: {
-          base: "calc(100vw - 1rem)",
-          md: "min(calc(100vw - 1rem), 1000px)",
+          base: "100vw",
+          md: "min(100vw, 1000px)",
         },
       },
-    },
+    })),
   },
 
   defaultProps: {
