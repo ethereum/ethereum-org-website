@@ -20,6 +20,7 @@ import {
 import type { Lang } from "@/lib/types"
 
 import { wrapLabel } from "@/lib/utils/charts"
+import { isMobile } from "@/lib/utils/isMobile"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 // ChartDataLabels required to display y-labels on top of bars
@@ -151,12 +152,14 @@ const EnergyConsumptionChart = () => {
     ],
   })
 
+  // chart aspect ratio (for mobile & desktop responsiveness)
   const aspectRatioValue = useBreakpointValue({
     base: 0.55,
     sm: 0.75,
     md: 1.1,
   })
 
+  // chart options config
   const chartOptions = {
     // chart styles
     barThickness: 38,
@@ -229,14 +232,22 @@ const EnergyConsumptionChart = () => {
     },
   }
 
+  // chart custom legend
+  const chartLegend = wrapLabel(
+    t("page-what-is-ethereum-energy-consumption-chart-legend"),
+    isMobile()
+      ? { width: 30 }
+      : {
+          width: t("page-what-is-ethereum-energy-consumption-chart-legend")
+            .length,
+        }
+  )
+
   const chartData = {
     labels: rawData?.map((item) => wrapLabel(item.name)),
     datasets: [
       {
-        label: wrapLabel(
-          t("page-what-is-ethereum-energy-consumption-chart-legend"),
-          { width: 30 }
-        ) as any, // casted to avoid TS issue
+        label: chartLegend as any, // casted to avoid TS issue
         data: rawData?.map((item) => item.amount),
       },
     ],
