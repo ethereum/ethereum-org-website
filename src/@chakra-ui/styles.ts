@@ -12,7 +12,7 @@ const styles = {
     body: {
       bg: "background.base",
       lineHeight: "base",
-      fontSize: "md",
+      fontSize: ["sm", null, null, "md"],
     },
     a: {
       color: "primary.base",

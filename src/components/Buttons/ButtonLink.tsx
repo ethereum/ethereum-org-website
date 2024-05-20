@@ -12,6 +12,7 @@ const ButtonLink = ({ customEventOptions, ...props }: ButtonLinkProps) => {
   const handleClick = () => {
     customEventOptions && trackCustomEvent(customEventOptions)
   }
+
   return (
     <Button as={BaseLink} activeStyle={{}} {...props} onClick={handleClick} />
   )

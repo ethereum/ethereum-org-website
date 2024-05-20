@@ -24,8 +24,8 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 ドキュメンテーションは様々な水準で作成でき、コントラクトの実装時に内容を修正する必要があります。
 
 - **平易な英語で書かれたシステムの説明**では、コントラクトが実行する内容を説明し、コードベースの前提条件を記述します。
-- **スキーマとアーキテクチャのダイアグラム**では、コントラクトで実行されるやりとりや、システムの状態マシンについて記述します。 [Slither のプリンター機能](https://github.com/crytic/slither/wiki/Printer-documentation)は、スキーマを生成する上で有益です。
-- **コード内容を徹底的に文書化する。** Solidity の場合、[Natspec フォーマット](https://solidity.readthedocs.io/en/develop/natspec-format.html)を使用できます。
+- **スキーマとアーキテクチャのダイアグラム**では、コントラクトで実行されるやりとりや、システムの状態マシンについて記述します。 [Slitherのプリンター機能](https://github.com/crytic/slither/wiki/Printer-documentation)は、スキーマを生成する上で有益です。
+- **コード内容を徹底的に文書化する。** Solidityの場合、[Natspecフォーマット](https://solidity.readthedocs.io/en/develop/natspec-format.html)を使用できます。
 
 ### オンチェーン処理とオフチェーン処理の比較 {#on-chain-vs-off-chain-computation}
 
@@ -35,8 +35,8 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 アップグレードに関する様々なソリューションについては、[こちらのブログ投稿](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/)で検討しています。 コード開発を開始する事前に、アップグレードに対応するか否かをはっきり決定してください。 この決定により、どのような構造のコードを開発するべきかが変わってきます。 一般論として、以下を推奨します：
 
-- **アップグレード可能性よりも、[コントラクトのマイグレーション](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/)を優先すること**。システムのマイグレーションは、アップグレード可能性が提供する利点の多くを、その欠点なしに実現するものです。
-- **委任呼び出しプロキシのパターンよりも、データ分離のパターンを使用すること**。あなたのプロジェクトに明確な抽象化による分離が含まれる場合、データ分離をわずかに修正するだけでアップグレードが可能になります。 委任呼び出しのプロキシ は、EVM の知識が必要であり、エラー発生の頻度が高まります。
+- **アップグレード可能性よりも、[コントラクトのマイグレーション](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/)を優先すること**。システムのマイグレーションは、アップグレード可能性が提供する利点の多くを有し、アップグレード可能性の欠点がありません。
+- **委任呼び出しプロキシのパターンよりも、データ分離のパターンを使用すること**。あなたのプロジェクトに明確な抽象化による分離が含まれる場合、データ分離をわずかに修正するだけでアップグレードが可能になります。 委任呼び出しのプロキシ は、EVMの知識が必要であり、エラー発生の頻度が高まります。
 - **デプロイする前に、マイグレーション／アップグレードの手順を文書化すること**。ガイドラインが設定されていない場合、ストレスを受けながら作業する必要があるため、ミスを犯しやすくなります。 遵守すべき手順を前もって策定しておきましょう。 具体的には、以下を定めます：
   - 新たなコントラクトを開始する呼び出し。
   - キーの保存場所と、アクセス方法。
@@ -56,7 +56,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 ### 継承 {#inheritance}
 
 - **継承を管理可能な水準に抑える**。ロジックを分割するために継承を活用すべきですが、プロジェクト全体における継承ツリーの深さと広さをなるべく小さくするように努めてください。
-- **Slither の[継承プリンター](https://github.com/crytic/slither/wiki/Printer-documentation#inheritance-graph)でコントラクトの階層を確認する**。継承プリンターは、階層の規模を確認する上で役立ちます。
+- **Slitherの[継承プリンター](https://github.com/crytic/slither/wiki/Printer-documentation#inheritance-graph)でコントラクトの階層を確認する**。継承プリンターは、階層の規模を確認する上で役立ちます。
 
 ### イベント {#events}
 
@@ -65,24 +65,24 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 ### 既知の落とし穴を回避する {#avoid-known-pitfalls}
 
 - **最も一般的なセキュリティの問題に注意します**。よくある問題点については、[Ethernaut CTF](https://ethernaut.openzeppelin.com/)、[Capture the Ether](https://capturetheether.com/)、[Not so smart contracts](https://github.com/crytic/not-so-smart-contracts/)などの様々なオンラインリソースを活用してください。
-- **[Solidity ドキュメント](https://solidity.readthedocs.io/en/latest/)の警告セクションに注意する**。警告セクションを通じて、言語における把握しにくい振る舞いを把握することができます。
+- **[Solidityドキュメント](https://solidity.readthedocs.io/en/latest/)の警告セクションに注意する**。警告セクションを通じて、言語における把握しにくい振る舞いを把握することができます。
 
 ### 依存関係 {#dependencies}
 
-- **実証済みのライブラリを使用する**。実証済みのライブラリからコードをインポートすることで、バグが多いコードを書く可能性が低くなります。 ERC-20 コントラクトを作成する場合は、 [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)を使用してください。
+- **実証済みのライブラリを使用する**。実証済みのライブラリからコードをインポートすることで、バグが多いコードを書く可能性が低くなります。 ERC-20コントラクトを作成する場合は、 [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)を使用してください。
 - **依存性マネージャーを使用し、コードのコピーアンドペーストを避ける**。外部ソースに依存する場合は、元ソースに基づき最新状態を保つ必要があります。
 
 ### テストと検証 {#testing-and-verification}
 
 - **完全な単体テストを作成する**。質の高いソフトウェアを開発するには、包括的なテスト一式が不可欠です。
 - **[Slither](https://github.com/crytic/slither)、[Echidna](https://github.com/crytic/echidna)、および[Manticore](https://github.com/trailofbits/manticore)用のカスタムチェックとプロパティを作成する**。自動化ツールを通じて、コントラクトのセキュリティを高めることができます。 効率的なチェックおよびプロパティを作成するには、本ガイドの該当記事を参照してください。
-- **[crytic.io](https://crytic.io/)を使用する**。Crytic は、GitHub と統合されており、Slither のプライベート検出器にアクセスできる他、Echidna からカスタムのプロパティチェックを実行することができます。
+- **[crytic.io](https://crytic.io/)を使用する**。Cryticは、GitHubと統合されており、Slitherのプライベート検出器にアクセスできる他、Echidnaからカスタムのプロパティチェックを実行することができます。
 
 ### Solidity {#solidity}
 
-- **Solidity のバージョンは、0.4 や 0.6 ではなく 0.5 を使用する**。現在のところ、Solidity 0.5 が最もセキュアなバージョンであり、0.4 よりもビルトインプラクティスが優れています。 一方、0.6 は現時点において本番環境の使用に耐えうる安定性を持たず、さらなるアップデートが必要な状態です。
-- **安定したバージョンでコンパイルし、最新リリースで警告をチェックする。**最新バージョンのコンパイラを使って、コードの問題が報告されないことを確認してください。 ただし、Solidity はリリース間隔が短く、過去においてもコンパイラにバグが含まれていた場合が多いため、デプロイに最新バージョンを用いることは推奨しません（Slither の[推奨 solc バージョン](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33)を参照）。
-- **インラインアセンブラを使用しない**。アセンブラを使用するには、EVM の専門知識が必要です。 イエローペーパーを*マスターしていない場合*、EVM コードを書かないでください。
+- **Solidityのバージョンは、0.4や0.6ではなく0.5を使用する**。現在のところ、Solidity 0.5が最もセキュアなバージョンであり、0.4よりもビルトインプラクティスが優れています。 一方、0.6は現時点において本番環境の使用に耐えうる安定性を持たず、さらなるアップデートが必要な状態です。
+- **安定したバージョンでコンパイルし、最新リリースで警告をチェックする。**最新バージョンのコンパイラを使って、コードの問題が報告されないことを確認してください。 ただし、Solidityはリリース間隔が短く、過去においてもコンパイラにバグが含まれていた場合が多いため、デプロイに最新バージョンを用いることは推奨しません（Slitherの[推奨solcバージョン](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33)を参照）。
+- **インラインアセンブラを使用しない**。アセンブラを使用するには、EVMの専門知識が必要です。 イエローペーパーを_マスターしていない場合_、EVMコードを書かないでください。
 
 ## デプロイに関するガイドライン {#deployment-guidelines}
 

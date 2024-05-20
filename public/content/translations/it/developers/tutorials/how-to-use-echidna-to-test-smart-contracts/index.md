@@ -4,8 +4,8 @@ description: Come usare Echidna per testare automaticamente gli smart contract
 author: "Trailofbits"
 lang: it
 tags:
-  - "Solidity"
-  - "contratto intelligente"
+  - "solidity"
+  - "contratti intelligenti"
   - "sicurezza"
   - "test"
   - "fuzzing"
@@ -45,7 +45,7 @@ Echidna è un fuzzer basato sulla proprietà, che abbiamo descritto nei nostri p
 
 ### Fuzzing {#fuzzing}
 
-Il [fuzzing](https://wikipedia.org/wiki/Fuzzing) è una ben nota tecnica nella community della sicurezza. Consiste nel generare input più o meno casualmente per trovare i bug nel programma. I fuzzer per il software tradizionale (come [AFL](http://lcamtuf.coredump.cx/afl/) o [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) sono noti per essere strumenti efficienti per trovare i bug.
+Il [fuzzing](https://wikipedia.org/wiki/Fuzzing) è una ben nota tecnica nella community della sicurezza. Consiste nella generazione di input più o meno randomici, per trovare i bug nel programma. I fuzzer per il software tradizionale (come [AFL](http://lcamtuf.coredump.cx/afl/) o [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) sono noti per essere strumenti efficienti per trovare i bug.
 
 Oltre alla generazione di input puramente casuale, esistono molte tecniche e strategie per generare input validi, tra cui:
 
@@ -598,7 +598,7 @@ seqLen: 2
 estimateGas: true
 ```
 
-### Esegui Echidna {#run-echidna-3}
+### Eseguire Echidna {#run-echidna-3}
 
 Una volta creato il file di configurazione, possiamo eseguire Echidna come segue:
 

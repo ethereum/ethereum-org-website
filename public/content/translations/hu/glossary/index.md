@@ -20,7 +20,11 @@ lang: hu
 
 <GlossaryDefinition term="abi" />
 
+<GlossaryDefinition term="anti-sybil" />
+
 <GlossaryDefinition term="api" />
+
+<GlossaryDefinition term="apr" />
 
 <GlossaryDefinition term="asic" />
 
@@ -60,6 +64,8 @@ lang: hu
 
 <GlossaryDefinition term="bootnode" />
 
+<GlossaryDefinition term="bridge" />
+
 <GlossaryDefinition term="bytecode" />
 
 <GlossaryDefinition term="byzantium-fork" />
@@ -91,6 +97,8 @@ lang: hu
 <GlossaryDefinition term="contract-account" />
 
 <GlossaryDefinition term="contract-creation-transaction" />
+
+<GlossaryDefinition term="cryptography" />
 
 <GlossaryDefinition term="cryptoeconomics" />
 
@@ -158,6 +166,12 @@ lang: hu
 
 <GlossaryDefinition term="erc" />
 
+<GlossaryDefinition term="erc-20" />
+
+<GlossaryDefinition term="erc-721" />
+
+<GlossaryDefinition term="erc-1155" />
+
 <GlossaryDefinition term="ethash" />
 
 <GlossaryDefinition term="ether" />
@@ -214,6 +228,8 @@ lang: hu
 
 <GlossaryDefinition term="hash-rate" />
 
+<GlossaryDefinition term="holographic-consensus" />
+
 <GlossaryDefinition term="homestead" />
 
 <Divider />
@@ -226,7 +242,7 @@ lang: hu
 
 <GlossaryDefinition term="immutable-deployed-code-problem" />
 
-<GlossaryDefinition term="internal-transactions" />
+<GlossaryDefinition term="internal-transaction" />
 
 <GlossaryDefinition term="issuance" />
 
@@ -236,6 +252,8 @@ lang: hu
 
 <GlossaryDefinition term="kdf" />
 
+<GlossaryDefinition term="key" />
+
 <GlossaryDefinition term="keystore" />
 
 <GlossaryDefinition term="keccak-256" />
@@ -244,11 +262,17 @@ lang: hu
 
 ## L {#section-l}
 
+<GlossaryDefinition term="layer-1" />
+
 <GlossaryDefinition term="layer-2" />
 
 <GlossaryDefinition term="library" />
 
 <GlossaryDefinition term="light-client" />
+
+<GlossaryDefinition term="liquidity" />
+
+<GlossaryDefinition term="liquidity-tokens" />
 
 <GlossaryDefinition term="lmd-ghost" />
 
@@ -258,7 +282,11 @@ lang: hu
 
 <GlossaryDefinition term="mainnet" />
 
+<GlossaryDefinition term="max-fee-per-gas" />
+
 <GlossaryDefinition term="merkle-patricia-tree" />
+
+<GlossaryDefinition term="merkle-root" />
 
 <GlossaryDefinition term="message" />
 
@@ -269,6 +297,8 @@ lang: hu
 <GlossaryDefinition term="miner" />
 
 <GlossaryDefinition term="mint" />
+
+<GlossaryDefinition term="multisig" />
 
 <Divider />
 
@@ -288,7 +318,11 @@ lang: hu
 
 ## O {#section-o}
 
+<GlossaryDefinition term="off-chain" />
+
 <GlossaryDefinition term="ommer" />
+
+<GlossaryDefinition term="on-chain" />
 
 <GlossaryDefinition term="optimistic-rollup" />
 
@@ -302,15 +336,23 @@ lang: hu
 
 <GlossaryDefinition term="peer-to-peer-network" />
 
+<GlossaryDefinition term="permissionless" />
+
 <GlossaryDefinition term="plasma" />
 
 <GlossaryDefinition term="private-key" />
 
 <GlossaryDefinition term="private-chain" />
 
+<GlossaryDefinition term="poap" />
+
 <GlossaryDefinition term="pos" />
 
 <GlossaryDefinition term="pow" />
+
+<GlossaryDefinition term="proto-danksharding" />
+
+<GlossaryDefinition term="public-goods" />
 
 <GlossaryDefinition term="public-key" />
 
@@ -335,6 +377,10 @@ lang: hu
 ## S {#section-s}
 
 <GlossaryDefinition term="sha" />
+
+<GlossaryDefinition term="recovery-phrase" />
+
+<GlossaryDefinition term="sequencer" />
 
 <GlossaryDefinition term="serialization" />
 
@@ -394,6 +440,8 @@ lang: hu
 
 <GlossaryDefinition term="transaction-fee" />
 
+<GlossaryDefinition term="trust-assumptions" />
+
 <GlossaryDefinition term="trustlessness" />
 
 <GlossaryDefinition term="turing-complete" />
@@ -436,7 +484,7 @@ lang: hu
 
 ## Források {#sources}
 
-_Részben a [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook)alapján [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) által a CC-BY-SA alapján_
+_Részben [Andreas M. Antonopoulos és Gavin Wood](https://ethereumbook.info) [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) műve alapján lett létrehozva, a CC-BY-SA licence keretében_
 
 <Divider />
 
@@ -444,4 +492,4 @@ _Részben a [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook)al
 
 Kihagytunk valamit? Valami nem helyes? Segítsen nekünk jobbá tenni úgy, hogy közreműködik a szójegyzék fejlesztésében a GitHubon!
 
-[Tudj meg többet a közreműködésről](/contributing/adding-glossary-terms)
+[Tudjon meg többet a közreműködésről](/contributing/adding-glossary-terms)

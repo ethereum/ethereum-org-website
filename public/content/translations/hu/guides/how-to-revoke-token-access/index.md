@@ -6,11 +6,11 @@ lang: hu
 
 # Hogyan vonható vissza, hogy az okosszerződés hozzáférjen a kriptoeszközeihez
 
-Ez az útmutató feltárja, hogyan nézze meg az okosszerződések listáját, melyek hozzáférnek a pénzeszközeihez, és hogyan törölje a hozzáférést.
+Ez az útmutató megtanítja Önnek, hogyan tekintheti meg az összes [intelligens szerződés](/glossary/#smart-contract) listáját, amelyhez hozzáférést biztosított, és hogyan mondhatja fel azokat.
 
-Néha a rosszhiszemű fejlesztők olyan kiskapukat építenek az okosszerződésekbe, melyek hozzáférést biztosítanak a gyanútlan felhasználók eszközeihez, akik azzal a szerződéssel interakcióba lépnek. Gyakran ezek az oldalak engedélyt kérnek a felhasználótól, hogy **korlátlan számú tokent** költhessenek, hogy megspóroljanak a jövőben egy kis összegű tranzakciós díjat/gázt, ez azonban nagy kockázattal jár.
+Néha a rosszhiszemű fejlesztők olyan kiskapukat építenek az okosszerződésekbe, melyek hozzáférést biztosítanak a gyanútlan felhasználók eszközeihez, akik azzal a szerződéssel interakcióba lépnek. Gyakran előfordul, hogy az ilyen platformok engedélyt kérnek a felhasználótól **korlátlan számú token** elköltésére, hogy a jövőben kis mennyiségű [gázt](/glossary/#gas) spóroljanak meg, de ez az megnövekedett kockázat.
 
-Ha egy oldal korlátlanul hozzáfér a tárca tokenjeihez, akkor elköltheti azokat, még ha Ön vissza is vonja a pénzeszközöket a platformról a saját tárcájába. A rosszindulatú szereplők még így is hozzáférhetnek az Ön pénzéhez, amit a saját tárcájukba lehívnak, és Ön ezt már nem fogja tudni visszaszerezni.
+Miután egy platform korlátlan hozzáférési jogokkal rendelkezik egy tokenhez a [pénztárcájában](/glossary/#wallet), akkor is elköltheti ezeket a tokeneket, még akkor is, ha Ön kivette a pénzt a platformjáról a pénztárcájába. A rosszindulatú szereplők még így is hozzáférhetnek az Ön pénzéhez, amit a saját tárcájukba lehívnak, és Ön ezt már nem fogja tudni visszaszerezni.
 
 Ezt úgy tudja elkerülni, hogy tartózkodik a nem tesztelt új projektek használatától, csak azt hagyja jóvá, amire valóban szüksége van és rendszeresen visszavonja a hozzáféréseket. Tehát hogyan is kell ezt csinálni?
 
@@ -58,7 +58,7 @@ Javasoljuk, hogy néhány perc múlva frissítse a visszavonási eszközt, és n
 
 ### A tokenekhez való hozzáférés leállítása a letétbe helyezést, letéti alapokat, kölcsönzést stb. is felfüggeszti?
 
-Nem, nincs hatással semmilyen decentralizált pénzügyekhez (DeFi) kapcsolódó stratégiához. A helyzete változatlan marad, és tovább kapja a jutalmakat stb.
+Nem, ez nem befolyásolja egyik [DeFi](/glossary/#defi) stratégiáját sem. A helyzete változatlan marad, és tovább kapja a jutalmakat stb.
 
 ### A projektről leválasztani a tárcát ugyanazzal az eredménnyel jár, mintha visszavonnám az engedélyt, hogy hozzáférjen az eszközeimhez?
 

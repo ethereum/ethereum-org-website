@@ -81,11 +81,11 @@ export const RoadmapLayout = ({
   const lgBp = useToken("breakpoints", "lg")
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "Roadmap Options" as TranslationKey,
-    ariaLabel: "Roadmap options dropdown menu",
+    text: "nav-roadmap-options",
+    ariaLabel: "nav-roadmap-options-alt",
     items: [
       {
-        text: "Roadmap home" as TranslationKey,
+        text: "nav-roadmap-home",
         to: "/roadmap/",
         matomo: {
           eventCategory: `Roadmap dropdown`,
@@ -94,7 +94,7 @@ export const RoadmapLayout = ({
         },
       },
       {
-        text: "Better security" as TranslationKey,
+        text: "nav-roadmap-security",
         to: "/roadmap/security",
         matomo: {
           eventCategory: `Roadmap security dropdown`,
@@ -103,7 +103,7 @@ export const RoadmapLayout = ({
         },
       },
       {
-        text: "Scaling" as TranslationKey,
+        text: "nav-roadmap-scaling",
         to: "/roadmap/scaling",
         matomo: {
           eventCategory: `Roadmap scaling dropdown`,
@@ -112,7 +112,7 @@ export const RoadmapLayout = ({
         },
       },
       {
-        text: "Better user experience" as TranslationKey,
+        text: "nav-roadmap-user-experience",
         to: "/roadmap/user-experience/",
         matomo: {
           eventCategory: `Roadmap user experience dropdown`,
@@ -121,7 +121,7 @@ export const RoadmapLayout = ({
         },
       },
       {
-        text: "Future-proofing" as TranslationKey,
+        text: "nav-roadmap-future-proofing",
         to: "/roadmap/future-proofing",
         matomo: {
           eventCategory: `Roadmap future-proofing dropdown`,

@@ -18,7 +18,7 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 [2016年11月22日](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)、Spurious Dragonのハードフォークで[EIP-170](https://eips.ethereum.org/EIPS/eip-170)が導入され、24.576 KBのスマートコントラクトのサイズ制限が追加されました。 Solidityデベロッパーにとって、これはコントラクトに機能をどんどん追加していくうちに、ある時点でサイズ制限に達し、デプロイした際に以下のエラーが表示されてしまうということを意味します。
 
-`Warning: Contract code size exceeds 24576 bytes ( Spurious Dragonで追加された制限). This contract may not be deployable on Mainnet. オプティマイザを有効にすることを検討してください （効率的に実行されます！）、文字列の取り消しをオフにするか、ライブラリを使用します。`
+`Warning: Contract code size exceeds 24576 bytes (a limit introduced in Spurious Dragon). This contract may not be deployable on Mainnet. Consider enabling the optimizer (with a low "runs" value!), turning off revert strings, or using libraries.`
 
 この制限は、サービス拒否(DOS)攻撃を防ぐために導入されました。 コントラクトの呼び出しは、ガスの観点では比較的安価です。 しかし、イーサリアムノードのコントラクト呼び出しの影響は、(ディスクからのコードの読み込み、コードの前処理、マークルプルーフへのデータの追加の対象となる)呼び出されたコントラクトコードのサイズによっては、過度に増加することになります。 攻撃者がリソースをほとんど必要とせずに、他のノードでの大量の処理を生じさせるそうした状況では、DOS攻撃を受ける可能性が常に存在します。
 

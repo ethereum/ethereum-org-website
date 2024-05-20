@@ -18,7 +18,7 @@ Az Ethereum közösség sok szabványt vezetett be, hogy a projektek (mint az [E
 - [Bevezetés az Ethereum irányításába](/governance/)
 - [Az Ethereum irányításának áttekintése](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _2019. március 31., Boris Mann_
 - [Ethereum protokollfejlesztés-irányítás és hálózatfrissítés-koordináció](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _2020. március 23., Hudson Jameson_
-- [Az Ethereum főfejlesztői megbeszéléseinek listája](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(YouTube lejátszási lista)_
+- [Lejátszási lista az Ethereum protokollfejlesztőinek megbeszéléseiről](https://www.youtube.com/@EthereumProtocol) _(YouTube lejátszási lista)_
 
 ## Szabványtípusok {#types-of-standards}
 
@@ -55,4 +55,4 @@ Tudjon meg többet a [tokenszabványokról](/developers/docs/standards/tokens/).
 
 - [Ethereum Fejlesztési Javaslatok (EIP-k)](/eips/)
 
-_Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_
+_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_

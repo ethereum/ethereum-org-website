@@ -4,8 +4,8 @@ description: Come usare Slither per trovare automaticamente bug negli Smart Cont
 author: Trailofbits
 lang: it
 tags:
-  - "Solidity"
-  - "Smart Contract"
+  - "solidity"
+  - "contratti intelligenti"
   - "sicurezza"
   - "test"
   - "analisi statica"

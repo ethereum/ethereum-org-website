@@ -11,7 +11,7 @@ skill: beginner
 lang: es
 published: 2020-04-19
 source: EthereumDev
-sourceUrl: https://ethereumdev.io/ejecutar-un-smart-contract-desde-javascript/
+sourceUrl: https://ethereumdev.io/calling-a-smart-contract-from-javascript/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
@@ -20,7 +20,7 @@ En este tutorial veremos cómo llamar a una función de un [contrato inteligente
 Para estos ejemplos jugaremos con el token DAI. Para las pruebas haremos una copia de la cadena de bloques usando ganache-cli y desbloquearemos una dirección que tiene muchos DAI:
 
 ```bash
-ganache-cli -f https://mainnet.infura.io/v3/[TU CLAVE INFURA] -d -i 66 1 --unlock 0x4d10ae710Bd8D1C31bd7465c8CBC3add6F279E81
+ganache-cli -f https://mainnet.infura.io/v3/[YOUR INFURA KEY] -d -i 66 1 --unlock 0x4d10ae710Bd8D1C31bd7465c8CBC3add6F279E81
 ```
 
 Para interactuar con un contrato inteligente necesitaremos su dirección y una interfaz ABI:
@@ -105,10 +105,10 @@ Puede acceder a los métodos de un contrato inteligente mediante la interfaz ABI
 ```js
 daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
   if (err) {
-    console.log("Ha ocurrido un error", err)
+    console.log("An error occurred", err)
     return
   }
-  console.log("El balance es: ", res)
+  console.log("The balance is: ", res)
 })
 ```
 
@@ -123,7 +123,7 @@ daiToken.methods
   .transfer(receiverAddress, "100000000000000000000")
   .send({ from: senderAddress }, function (err, res) {
     if (err) {
-      console.log("An error occured", err)
+      console.log("An error occurred", err)
       return
     }
     console.log("Hash of the transaction: " + res)
