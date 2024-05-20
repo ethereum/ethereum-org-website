@@ -330,14 +330,6 @@ const WalletTable = ({
               })
           }
 
-          const handleWalletWebsiteClick = (walletName: string) => {
-            trackCustomEvent({
-              eventCategory: "WalletExternalLinkList",
-              eventAction: "Tap main button",
-              eventName: `${walletName}`,
-            })
-          }
-
           return (
             <WalletContainer
               key={wallet.key}
@@ -350,10 +342,7 @@ const WalletTable = ({
                 }}
                 onClick={(e) => {
                   // Prevent expanding the wallet more info section when clicking on the "Visit website" button
-                  if (
-                    (e.target as HTMLElement).matches("a, a svg")
-                  )
-                    return
+                  if ((e.target as HTMLElement).matches("a, a svg")) return
                   showMoreInfo(wallet)
                 }}
               >
@@ -393,7 +382,11 @@ const WalletTable = ({
                           {hasPersonasLabels && (
                             <Flex gap={1.5} wrap="wrap">
                               {walletPersonas.map((persona) => (
-                                <Tag key={persona} label={t(persona)} variant="highContrast" />
+                                <Tag
+                                  key={persona}
+                                  label={t(persona)}
+                                  variant="highContrast"
+                                />
                               ))}
                             </Flex>
                           )}
@@ -445,9 +438,11 @@ const WalletTable = ({
                               w="auto"
                               isExternal
                               size="sm"
-                              onClick={() =>
-                                handleWalletWebsiteClick(wallet.name)
-                              }
+                              customEventOptions={{
+                                eventCategory: "WalletExternalLinkList",
+                                eventAction: "Tap main button",
+                                eventName: `${wallet.name}`,
+                              }}
                             >
                               {t("page-find-wallet-visit-website")}
                             </ButtonLink>
@@ -474,7 +469,11 @@ const WalletTable = ({
                       w="100%"
                       isExternal
                       size="sm"
-                      onClick={() => handleWalletWebsiteClick(wallet.name)}
+                      customEventOptions={{
+                        eventCategory: "WalletExternalLinkList",
+                        eventAction: "Tap main button",
+                        eventName: `${wallet.name}`,
+                      }}
                     >
                       {t("page-find-wallet-visit-website")}
                     </ButtonLink>
