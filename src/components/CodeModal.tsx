@@ -33,7 +33,7 @@ const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
         marginBottom="0"
         maxHeight="50%"
         borderRadius="0"
-        p="0"
+        p={{ base: "0", md: "0" }}
         gap="0"
       >
         <ModalHeader
