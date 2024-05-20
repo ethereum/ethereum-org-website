@@ -260,20 +260,16 @@ const TutorialPage = ({
         <Text>
           <Translation id="page-developers-tutorials:page-tutorial-submit-tutorial" />
         </Text>
-        <Flex flexDirection={{ base: "column", md: "initial" }}>
+        <Flex flexDirection={{ base: "column", md: "row" }} gap="2">
           <Flex
+            flex="1"
             borderWidth="1px"
             borderStyle="solid"
             borderColor="border"
             borderRadius="base"
             p={4}
             flexDirection="column"
-            w={{ base: "full", md: "50%" }}
             justifyContent="space-between"
-            mt={2}
-            mb={{ base: 2, md: 6 }}
-            ms={0}
-            me={{ base: 0, md: 2 }}
           >
             <Text as="b">
               <Translation id="page-developers-tutorials:page-tutorial-new-github" />
@@ -290,18 +286,14 @@ const TutorialPage = ({
             </ButtonLink>
           </Flex>
           <Flex
+            flex="1"
             borderWidth="1px"
             borderStyle="solid"
             borderColor="border"
             borderRadius="base"
             p={4}
             flexDirection="column"
-            w={{ base: "full", md: "50%" }}
             justifyContent="space-between"
-            mt={2}
-            mb={{ base: 2, md: 6 }}
-            ms={0}
-            me={{ base: 0, md: 2 }}
           >
             <Text as="b">
               <Translation id="page-developers-tutorials:page-tutorial-pull-request" />
