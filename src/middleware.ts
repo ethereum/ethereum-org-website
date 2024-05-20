@@ -40,7 +40,7 @@ export const config = {
 export async function middleware(req: NextRequest) {
   const { pathname, locale } = req.nextUrl
 
-  if (PUBLIC_FILE.test(pathname)) {
+  if (pathname.startsWith("/_next") || PUBLIC_FILE.test(pathname)) {
     return NextResponse.next()
   }
 
