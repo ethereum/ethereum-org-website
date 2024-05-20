@@ -2,7 +2,7 @@
 title: Объединенный стейкинг
 description: 'Как начать совместный стейкинг ETH: краткий обзор'
 lang: ru
-template: staking
+template: ставки
 emoji: ":money_with_wings:"
 image: /staking/leslie-pool.png
 alt: Носорог Лесли плавает в бассейне.
@@ -79,7 +79,7 @@ summaryPoints:
 Некоторые пулы более децентрализованы по сравнению с другими, когда речь идет об узлах, которые поддерживают их. Для укрепления здоровья и децентрализации сети вкладчиков всегда поощряют выбирать пул, обеспечивающий децентрализованный набор операторов узлов и не требующий разрешений.
 </ExpandableCard>
 
-## Дополнительная литература {#further-reading}
+## Дополнительные ресурсы {#further-reading}
 
 - [Каталог стейкинга Ethereum](https://www.staking.directory/) — _Eridian и Spacesider_
 - [Стейкинг с помощью Rocket Pool: обзор стейкинга](https://docs.rocketpool.net/guides/staking/overview.html) — _документы RocketPool_
