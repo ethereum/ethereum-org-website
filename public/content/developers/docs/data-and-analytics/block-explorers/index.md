@@ -28,6 +28,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [Rantom](https://rantom.app/)
 
 ## Open source tools {#open-source-tools}
+
 - [Otterscan](https://otterscan.io/)
 - [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 
