@@ -90,6 +90,7 @@
     "storybook": "7.6.6",
     "storybook-react-i18next": "^2.0.9",
     "ts-node": "^10.9.1",
+    "tsconfig-paths-webpack-plugin": "4.1.0",
     "typescript": "^5.4.2",
     "unified": "^10.0.0",
     "unist-util-visit": "^5.0.0"
