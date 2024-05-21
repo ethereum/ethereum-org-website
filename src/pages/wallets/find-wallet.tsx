@@ -10,7 +10,6 @@ import {
   Flex,
   Text,
   useDisclosure,
-  useTheme,
 } from "@chakra-ui/react"
 
 import { BasePageProps, ChildOnlyProp, WalletData } from "@/lib/types"
@@ -74,12 +73,13 @@ export const getStaticProps = (async ({ locale }) => {
   }
 }) satisfies GetStaticProps<BasePageProps>
 
+const DEFAULT = {...WALLETS_FILTERS_DEFAULT}
+
 const FindWalletPage = () => {
-  const { pathname, locale } = useRouter()
-  const theme = useTheme()
+  const { pathname, locale, query, replace } = useRouter()
   const { t } = useTranslation("page-wallets-find-wallet")
 
-  const resetWalletFilter = useRef(() => {})
+  const resetWalletFilter = useRef(() => { })
 
   const [filters, setFilters] = useState(WALLETS_FILTERS_DEFAULT)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
@@ -92,6 +92,18 @@ const FindWalletPage = () => {
   const [randomizedWalletData, setRandomizedWalletData] = useState<
     WalletData[]
   >(supportedLocaleWallets.concat(noSupportedLocaleWallets))
+
+  useEffect(() => {
+    setSelectedPersona(Number(query.activePersonaIndex))
+    const updatedFilters = {...DEFAULT}
+    if (query.activeFilters) {
+      const activeFilters = (Array.isArray(query.activeFilters) ? query.activeFilters.join(",") : query.activeFilters).split(",")
+      for (let filter of activeFilters) {
+        updatedFilters[filter] = true
+      }
+    }
+    setFilters(updatedFilters)
+  }, [query])
 
   // If any wallet supports user's locale, show them (shuffled) at the top and then the remaining ones
   useEffect(() => {
@@ -108,7 +120,10 @@ const FindWalletPage = () => {
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
     updatedFilters[key] = !updatedFilters[key]
-    setFilters(updatedFilters)
+    replace({
+      pathname: pathname,
+      query: Object.keys(updatedFilters).filter(key => updatedFilters[key]).length ? { activeFilters: Object.keys(updatedFilters).filter(key => updatedFilters[key]).join(',') } : {},
+    }, undefined, { shallow: true })
   }
 
   const updateFilterOptions = (keys, value) => {
@@ -116,12 +131,17 @@ const FindWalletPage = () => {
     for (let key of keys) {
       updatedFilters[key] = value
     }
-    setFilters(updatedFilters)
+    replace({
+      pathname: pathname,
+      query: Object.keys(updatedFilters).filter(key => updatedFilters[key]).length ? { activeFilters: Object.keys(updatedFilters).filter(key => updatedFilters[key]).join(',') } : {},
+    }, undefined, { shallow: true })
   }
 
   const resetFilters = () => {
-    setSelectedPersona(NaN)
-    setFilters(WALLETS_FILTERS_DEFAULT)
+    replace({
+      pathname: pathname,
+      query: {},
+    }, undefined, { shallow: true })
     setSupportedLanguage(DEFAULT_LOCALE)
   }
 
@@ -190,9 +210,7 @@ const FindWalletPage = () => {
 
         <WalletFilterPersona
           resetFilters={resetFilters}
-          setFilters={setFilters}
           selectedPersona={selectedPersona}
-          setSelectedPersona={setSelectedPersona}
           showMobileSidebar={showMobileSidebar}
         />
       </Box>
@@ -210,8 +228,6 @@ const FindWalletPage = () => {
             updateFilterOptions={updateFilterOptions}
             resetFilters={resetFilters}
             selectedPersona={selectedPersona}
-            setFilters={setFilters}
-            setSelectedPersona={setSelectedPersona}
             showMobileSidebar={showMobileSidebar}
             onOpen={onOpen}
             onClose={onClose}
@@ -231,8 +247,6 @@ const FindWalletPage = () => {
                 updateFilterOptions,
                 resetFilters,
                 selectedPersona,
-                setFilters,
-                setSelectedPersona,
               }}
             />
 

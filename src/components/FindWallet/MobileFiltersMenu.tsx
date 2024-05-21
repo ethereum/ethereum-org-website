@@ -38,8 +38,6 @@ export const MobileFiltersMenu = ({
   updateFilterOption,
   updateFilterOptions,
   selectedPersona,
-  setFilters,
-  setSelectedPersona,
   showMobileSidebar,
   onOpen,
   onClose,
@@ -83,9 +81,7 @@ export const MobileFiltersMenu = ({
 
               <WalletFilterPersona
                 resetFilters={resetFilters}
-                setFilters={setFilters}
                 selectedPersona={selectedPersona}
-                setSelectedPersona={setSelectedPersona}
                 showMobileSidebar={showMobileSidebar}
               />
             </Box>
@@ -99,8 +95,6 @@ export const MobileFiltersMenu = ({
                 updateFilterOptions,
                 resetFilters,
                 selectedPersona,
-                setFilters,
-                setSelectedPersona,
                 showMobileSidebar,
               }}
             />

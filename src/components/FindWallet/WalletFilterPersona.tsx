@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import { MdCircle } from "react-icons/md"
 import {
   Box,
@@ -18,19 +19,16 @@ import { useWalletPersonas } from "../../hooks/useWalletPersonas"
 
 type WalletFilterPersonaProps = {
   resetFilters: () => void
-  setFilters: React.Dispatch<React.SetStateAction<WalletFilter>>
   selectedPersona: number
-  setSelectedPersona: React.Dispatch<React.SetStateAction<number>>
   showMobileSidebar: boolean
 }
 
 const WalletFilterPersona = ({
   resetFilters,
-  setFilters,
   selectedPersona,
-  setSelectedPersona,
   showMobileSidebar,
 }: WalletFilterPersonaProps) => {
+  const router = useRouter();
   const personas = useWalletPersonas()
   const handleSelectPersona = (idx: number, persona: WalletPersonas) => {
     if (idx === selectedPersona) {
@@ -42,8 +40,12 @@ const WalletFilterPersona = ({
         eventName: `${persona.title} false`,
       })
     } else {
-      setSelectedPersona(idx)
-      setFilters(persona.presetFilters)
+      router.replace({
+        pathname: router.pathname,
+        query: {
+          activePersonaIndex: idx,
+          activeFilters: Object.keys(persona.presetFilters).filter(key => persona.presetFilters[key]).join(',') },
+    }, undefined, { shallow: true });
 
       trackCustomEvent({
         eventCategory: "UserPersona",
