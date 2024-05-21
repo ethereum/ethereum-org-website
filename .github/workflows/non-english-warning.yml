@@ -1,0 +1,74 @@
+name: Check for non-English updates outside of Crowdin
+
+on:
+  pull_request:
+    paths:
+      - "public/content/translations/**/*.md"
+      - "src/intl/**/*.json"
+      - "!src/intl/en/**
+
+jobs:
+  check_branch_name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exit early if branch name contains 'crowdin'
+        run: |
+          if [[ "${{ github.head_ref }}" == *crowdin* ]]; then
+            echo "Branch name contains 'crowdin', stopping workflow"
+            exit 1
+          fi
+
+  check_changes:
+    needs: check_branch_name
+    runs-on: ubuntu-latest
+    outputs:
+      all_changes_include_href: ${{ steps.check.outputs.all_changes_include_href }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Check changes
+        id: check
+        run: |
+          git fetch origin ${{ github.base_ref }}
+          DIFF=$(git diff --no-ext-diff --unified=0 origin/${{ github.base_ref }}..${{ github.head_ref }} -- 'public/content/translations/**/*.md' 'src/intl/**/*.json' '!src/intl/en/**' | grep -E -v '^[-+]href=')
+          if [[ -z "$DIFF" ]]; then
+            echo "ALL_CHANGES_INCLUDE_HREF=true" >> $GITHUB_ENV
+          else
+            echo "ALL_CHANGES_INCLUDE_HREF=false" >> $GITHUB_ENV
+          fi
+          echo "::set-output name=all_changes_include_href::$ALL_CHANGES_INCLUDE_HREF"
+
+  add_label_and_comment:
+    needs: check_changes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add label and comment
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const prNumber = context.issue.number;
+            const repo = context.repo;
+            const prAuthor = context.payload.pull_request.user.login;
+            const allChangesIncludeHref = '${{ needs.check_changes.outputs.all_changes_include_href }}' === 'true';
+            const status = allChangesIncludeHref ? 'question ❓' : 'blocked 🛑';
+            await github.rest.issues.addLabels({
+              ...repo,
+              issue_number: prNumber,
+              labels: [status, 'non-crowdin translation updates']
+            });
+            const commentWithoutHrefs = `This pull request contains changes to non-English content, which must also be handled through the Crowdin platform instead of only on GitHub.`
+            const commentWithHrefs = `This pull request contains changes to non-English content files, which may also need to be handled through the Crowdin platform instead of only on GitHub.
+            await github.rest.issues.createComment({
+              ...repo,
+              issue_number: prNumber,
+              body: `
+              Thank you for your contribution, @${prAuthor}!
+              
+              ${allChangesIncludeHref ? commentWithHrefs : commentWithoutHrefs}
+              
+              We value your suggestion, and for any non-English content updates we request that you check out [how to help us translate](https://ethereum.org/en/contributing/translation-program/#help-us-translate), and suggest these updates directly in [our Crowdin project](https://crowdin.com/project/ethereum-org) if possible, where they can be properly reviewed.
+              
+              Please post here or join [our Discord](https://ethereum.org/discord) if you have questions!
+              `
+            });

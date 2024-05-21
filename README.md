@@ -1840,6 +1840,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ksdumont"><img src="https://avatars.githubusercontent.com/u/51958351?v=4?s=100" width="100px;" alt="Keith Dumont"/><br /><sub><b>Keith Dumont</b></sub></a><br /><a href="#content-ksdumont" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ecabras"><img src="https://avatars.githubusercontent.com/u/126670074?v=4?s=100" width="100px;" alt="ecabras"/><br /><sub><b>ecabras</b></sub></a><br /><a href="#content-ecabras" title="Content">🖋</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/raxhvl"><img src="https://avatars.githubusercontent.com/u/10168946?v=4?s=100" width="100px;" alt="rahul"/><br /><sub><b>rahul</b></sub></a><br /><a href="#content-raxhvl" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://abhayporwals.live/"><img src="https://avatars.githubusercontent.com/u/76243309?v=4?s=100" width="100px;" alt="Abhay Gupta "/><br /><sub><b>Abhay Gupta </b></sub></a><br /><a href="#content-professorabhay" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/somethingstup"><img src="https://avatars.githubusercontent.com/u/166286712?v=4?s=100" width="100px;" alt="somethingstup"/><br /><sub><b>somethingstup</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=somethingstup" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
 </table>
 
