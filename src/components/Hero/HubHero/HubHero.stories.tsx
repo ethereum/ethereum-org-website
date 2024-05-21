@@ -5,6 +5,8 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import HubHeroComponent, { type HubHeroProps } from "./"
 
+import learnHubHeroImg from "@/public/heroes/learn-hub-hero.png"
+
 type HubHeroType = typeof HubHeroComponent
 
 const meta = {
@@ -23,8 +25,6 @@ const meta = {
 } satisfies Meta<HubHeroType>
 
 export default meta
-
-import learnHubHeroImg from "../../../../public/heroes/learn-hub-hero.png"
 
 export const HubHero: StoryObj<typeof meta> = {
   args: {
