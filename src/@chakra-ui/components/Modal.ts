@@ -57,11 +57,11 @@ export const Modal = defineMultiStyleConfig({
         my: { base: "4", md: props.isCentered ? "auto" : "4" },
         mx: "4",
         minH: {
-          base: "100vh",
+          base: "calc(100vh - 2rem)",
           md: "min(100vh, 792px)",
         },
         maxW: {
-          base: "100vw",
+          base: "calc(100vw - 2rem)",
           md: "min(100vw, 1000px)",
         },
       },
