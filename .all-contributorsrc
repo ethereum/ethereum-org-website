@@ -12033,6 +12033,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "somethingstup",
+      "name": "somethingstup",
+      "avatar_url": "https://avatars.githubusercontent.com/u/166286712?v=4",
+      "profile": "https://github.com/somethingstup",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
