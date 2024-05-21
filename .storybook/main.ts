@@ -1,7 +1,7 @@
-import path from "path"
-
 import type { StorybookConfig } from "@storybook/nextjs"
 import { propNames } from "@chakra-ui/react"
+
+import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin"
 
 /**
  * Note regarding package.json settings related to Storybook:
@@ -36,11 +36,15 @@ const config: StorybookConfig = {
       disable: true,
     },
   },
-  webpackFinal: async (config: any) => {
-    // Add path aliases
-    config.resolve.alias["@"] = path.resolve(__dirname, "../src")
-    config.resolve.alias["@/public"] = path.resolve(__dirname, "../public")
-
+  webpackFinal: async (config) => {
+    if (config.resolve) {
+      config.resolve.plugins = [
+        ...(config.resolve.plugins || []),
+        new TsconfigPathsPlugin({
+          extensions: config.resolve.extensions,
+        }),
+      ]
+    }
     return config
   },
   typescript: {

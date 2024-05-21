@@ -293,7 +293,7 @@ body:
     id: wallet_eip_1559_support
     attributes:
       label: Does the wallet support EIP-1559 (type 2) transactions?
-      description: Please provide information on the type of transactions this wallet supports.
+      description: Does your wallet support EIP-1559 (type 2) transactions for Ethereum Mainnet. Please provide information on the type of transactions this wallet supports. If this is not applicable, please explain. 
     validations:
       required: true
   - type: textarea

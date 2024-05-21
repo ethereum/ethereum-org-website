@@ -1,12 +1,11 @@
+import { getI18n } from "react-i18next"
 import { Meta, StoryObj } from "@storybook/react"
 
 import ContentHeroComponent, { ContentHeroProps } from "."
 
+import contentHeroImg from "@/public/mainnet.png"
+
 type ContentHeroType = typeof ContentHeroComponent
-
-import { getI18n } from "react-i18next"
-
-import contentHeroImg from "../../../../public/mainnet.png"
 
 const meta = {
   title: "Organisms / Layouts / Hero",
