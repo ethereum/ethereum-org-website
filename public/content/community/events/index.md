@@ -11,7 +11,7 @@ hideEditButton: true
 
 <UpcomingEventsList/>
 
-This is a non-exhaustive list maintained by our community. Know of an upcoming Ethereum event to add to this list? [Please add it](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.ts)!
+This is a non-exhaustive list maintained by our community. Know of an upcoming Ethereum event to add to this list? [Please add it](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
 
 ## Ethereum meetups {#meetups}
 

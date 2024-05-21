@@ -3,7 +3,11 @@ import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
+import { CommonHeroProps } from "@/lib/types"
+
 import HubHeroComponent from "./"
+
+import learnHubHeroImg from "@/public/heroes/learn-hub-hero.png"
 
 type HubHeroType = typeof HubHeroComponent
 
@@ -23,10 +27,6 @@ const meta = {
 } satisfies Meta<HubHeroType>
 
 export default meta
-
-import { CommonHeroProps } from "@/lib/types"
-
-import learnHubHeroImg from "../../../../public/heroes/learn-hub-hero.png"
 
 export const HubHero: StoryObj<typeof meta> = {
   args: {

@@ -73,7 +73,7 @@ export const createLocaleTranslationPR = (
     .toLowerCase()
   const timestamp = new Date().toISOString().replace(/[^0-9]/g, "")
 
-  const branchName = `${month}-${locale}-${timestamp}`
+  const branchName = `crowdin-${month}-${locale}-${timestamp}`
   const message = `chore: import translations for ${locale}`
   const startingBranch = execSync("git branch --show-current", {
     encoding: "utf-8",
