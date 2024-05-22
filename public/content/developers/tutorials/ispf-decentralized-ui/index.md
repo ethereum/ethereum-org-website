@@ -8,8 +8,6 @@ lang: en
 published: 2024-06-30
 ---
 
-## Introduction {#introduction}
-
 You wrote an incredible new dapp. You've even written a [user interface](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) for it. But now you're afraid that somebody will attempt to censor it by bringing down your user interface, which is just one server off in the cloud. In this tutorial you learn how to avoid censorship by putting your user interface up on **[interplanetary file system (IPFS)](https://ipfs.tech/developers/)** so anybody interested will be able to pin it on a server for future access.
 
 You could use a third-party service such as [Fleek](https://docs.fleek.xyz/docs) to do all the work. This tutorial is for people who want to do enough to understand what they are doing even if it is more work.
@@ -40,7 +38,7 @@ There are multiple [third-party IPFS providers](https://docs.ipfs.tech/how-to/wo
 
 So now you can use IPFS to serve files locally, which is not very exciting. The next step is to make them available for the world when you're offline.
 
-There are a number of well known [pinning services](https://docs.ipfs.tech/concepts/persistence/#pinning-services). Choose one of them. Whichever service you use, you need to create an account and provide it with the CID (content identifier) in your IPFS desktop.
+There are a number of well known [pinning services](https://docs.ipfs.tech/concepts/persistence/#pinning-services). Choose one of them. Whichever service you use, you need to create an account and provide it with the **content identifier (CID)** in your IPFS desktop.
 
 Personally, I found [4EVERLAND](https://docs.4everland.org/storage/4ever-pin/guides) to be the easiest to use. Here are the directions for it:
 
@@ -48,7 +46,7 @@ Personally, I found [4EVERLAND](https://docs.4everland.org/storage/4ever-pin/gui
 
 2. In the left sidebar click **Storage > 4EVER Pin**.
 
-3. Click **Upload > Selected CID**. Give your content a name and provide the CID from IPFS desktop.
+3. Click **Upload > Selected CID**. Give your content a name and provide the CID from IPFS desktop. At present a CID is a string that starts with `Qm` followed by 44 letters and digits that represent a [base-58 encoded](https://medium.com/bootdotdev/base64-vs-base58-encoding-c25553ff4524) hash, such as `QmaCuQ7yN6iyBjLmLGe8YiFuCwnePoKfVu6ue8vLBsLJQJ`, but [that is likely to change](https://docs.ipfs.tech/concepts/content-addressing/#version-1-v1).
 
 4. The initial status is **Queued**. Reload until it changes to **Pinned**.
 
