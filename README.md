@@ -1838,6 +1838,14 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ZakGriffith"><img src="https://avatars.githubusercontent.com/u/12072395?v=4?s=100" width="100px;" alt="Zak G"/><br /><sub><b>Zak G</b></sub></a><br /><a href="#tutorial-ZakGriffith" title="Tutorials">✅</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://fanniebarskhian.com"><img src="https://avatars.githubusercontent.com/u/42990794?v=4?s=100" width="100px;" alt="Fannie Barskhian"/><br /><sub><b>Fannie Barskhian</b></sub></a><br /><a href="#maintenance-barskhianfannie" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ksdumont"><img src="https://avatars.githubusercontent.com/u/51958351?v=4?s=100" width="100px;" alt="Keith Dumont"/><br /><sub><b>Keith Dumont</b></sub></a><br /><a href="#content-ksdumont" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ecabras"><img src="https://avatars.githubusercontent.com/u/126670074?v=4?s=100" width="100px;" alt="ecabras"/><br /><sub><b>ecabras</b></sub></a><br /><a href="#content-ecabras" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/raxhvl"><img src="https://avatars.githubusercontent.com/u/10168946?v=4?s=100" width="100px;" alt="rahul"/><br /><sub><b>rahul</b></sub></a><br /><a href="#content-raxhvl" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://abhayporwals.live/"><img src="https://avatars.githubusercontent.com/u/76243309?v=4?s=100" width="100px;" alt="Abhay Gupta "/><br /><sub><b>Abhay Gupta </b></sub></a><br /><a href="#content-professorabhay" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/somethingstup"><img src="https://avatars.githubusercontent.com/u/166286712?v=4?s=100" width="100px;" alt="somethingstup"/><br /><sub><b>somethingstup</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=somethingstup" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/woxjro"><img src="https://avatars.githubusercontent.com/u/63214188?v=4?s=100" width="100px;" alt="woxjro"/><br /><sub><b>woxjro</b></sub></a><br /><a href="#tool-woxjro" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/SeanXLChen"><img src="https://avatars.githubusercontent.com/u/78134555?v=4?s=100" width="100px;" alt="bambooskySean"/><br /><sub><b>bambooskySean</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=SeanXLChen" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

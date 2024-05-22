@@ -32,6 +32,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - Brazilian version of Cointelegraph, a major cryptocurrency news outlet
 - [Livecoins](http://www.livecoins.com.br/ethereum) - cryptocurrency news and tools
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - cryptocurrency news and reports
+- [Modular Crypto](https://modularcrypto.xyz/) - cryptocurrency news and educational articles
 
 **Education**
 

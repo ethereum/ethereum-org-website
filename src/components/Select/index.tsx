@@ -1,20 +1,8 @@
 import ReactSelect, { ActionMeta, GroupBase, Props } from "react-select"
-import {
-  createStylesContext,
-  type SystemStyleObject,
-  ThemingProps,
-  useMultiStyleConfig,
-} from "@chakra-ui/react"
+import { ThemingProps, useMultiStyleConfig } from "@chakra-ui/react"
 
-import { components, reactSelectAnatomyKeys } from "./innerComponents"
-
-const [ReactSelectStylesProvider, useReactSelectStyles] =
-  createStylesContext("ReactSelect")
-
-export const useSelectStyles = useReactSelectStyles as () => Record<
-  (typeof reactSelectAnatomyKeys)[number],
-  SystemStyleObject
->
+import { SelectStylesProvider } from "./context"
+import { components } from "./innerComponents"
 
 /**
  * Type for onChange handler in the `Select` component
@@ -60,7 +48,7 @@ const Select = <
     variant,
   })
   return (
-    <ReactSelectStylesProvider value={styles}>
+    <SelectStylesProvider value={styles}>
       <ReactSelect
         components={components}
         styles={{
@@ -75,7 +63,7 @@ const Select = <
         unstyled
         menuPlacement="bottom"
       />
-    </ReactSelectStylesProvider>
+    </SelectStylesProvider>
   )
 }
 
