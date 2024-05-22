@@ -1,4 +1,4 @@
-import type { Author, CrowdinContributor } from "@/lib/types"
+import type { CrowdinContributor, FileContributor } from "@/lib/types"
 
 import FileContributors from "@/components/FileContributors"
 
@@ -11,22 +11,17 @@ const CrowdinContributors = ({
   lastUpdatedDate,
   contributors,
 }: CrowdinContributorsProps) => {
-  const mappedContributors: Author[] = contributors.map(
-    ({ id, username, avatarUrl }) => ({
-      name: username,
-      email: id.toString(),
-      avatarUrl: avatarUrl,
-      user: {
-        login: username,
-        url: `https://crowdin.com/profile/${username}`,
-      },
+  const mappedContributors: FileContributor[] = contributors.map(
+    ({ username, avatarUrl }) => ({
+      login: username,
+      avatar_url: avatarUrl,
+      html_url: `https://crowdin.com/profile/${username}`,
+      date: lastUpdatedDate,
     })
   )
 
   return (
     <FileContributors
-      error={mappedContributors.length === 0} // TODO: Confirm GH error handling
-      loading={!mappedContributors.length}
       contributors={mappedContributors}
       lastEdit={lastUpdatedDate}
     />
