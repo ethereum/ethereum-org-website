@@ -18,7 +18,7 @@ export const Modal = defineMultiStyleConfig({
       dialog: {
         bg: "background.base",
         gap: "4",
-        padding: { base: "4", sm: "8", md: "16" },
+        padding: { base: "4", sm: "8" },
         borderRadius: "base",
         boxShadow: "none",
       },
@@ -54,6 +54,7 @@ export const Modal = defineMultiStyleConfig({
         alignItems: { base: "flex-start", md: "center" },
       },
       dialog: {
+        padding: { base: "4", sm: "8", md: "16" },
         my: { base: "4", md: props.isCentered ? "auto" : "4" },
         mx: "4",
         minH: {
