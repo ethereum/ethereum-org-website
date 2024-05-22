@@ -10,14 +10,13 @@ published: 2024-06-30
 
 ## Introduction {#introduction}
 
-You wrote an incredible new dapp. You've even written a [user interface](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) for it. But now you're afraid that somebody will attempt to censor it by bringing down your user interface, which is just one server off in the cloud. In this tutorial you learn how to avoid this by putting your user interface up on [IPFS](https://ipfs.tech/developers/) so anybody interested will be able to [pin](https://docs.ipfs.tech/concepts/persistence/#pinning-services) it on a server for future access.
+You wrote an incredible new dapp. You've even written a [user interface](/developers/tutorials/creating-a-wagmi-ui-for-your-contract/) for it. But now you're afraid that somebody will attempt to censor it by bringing down your user interface, which is just one server off in the cloud. In this tutorial you learn how to avoid censorship by putting your user interface up on **[interplanetary file system (IPFS)](https://ipfs.tech/developers/)** so anybody interested will be able to pin it on a server for future access.
 
 You could use a third-party service such as [Fleek](https://docs.fleek.xyz/docs) to do all the work. This tutorial is for people who want to do enough to understand what they are doing even if it is more work.
 
-
 ## Getting started locally {#getting-started-locally}
 
-There are multiple [third-party ISPFS providers](https://docs.ipfs.tech/how-to/work-with-pinning-services/#use-a-third-party-pinning-service), but it is best to start with running IPFS locally for testing.
+There are multiple [third-party IPFS providers](https://docs.ipfs.tech/how-to/work-with-pinning-services/#use-a-third-party-pinning-service), but it is best to start with running IPFS locally for testing.
 
 1. Install the [IPFS user interface](https://docs.ipfs.tech/install/ipfs-desktop/#install-instructions).
 
@@ -45,7 +44,7 @@ There are a number of well known [pinning services](https://docs.ipfs.tech/conce
 
 Personally, I found [4EVERLAND](https://docs.4everland.org/storage/4ever-pin/guides) to be the easiest to use. Here are the directions for it:
 
-1. Browse to [the dashboard](https://dashboard.4everland.org/overview) and log on with your wallet.
+1. Browse to [the dashboard](https://dashboard.4everland.org/overview) and login with your wallet.
 
 2. In the left sidebar click **Storage > 4EVER Pin**.
 
@@ -59,7 +58,7 @@ Personally, I found [4EVERLAND](https://docs.4everland.org/storage/4ever-pin/gui
 
 ## Using from IPFS {#using-from-ipfs}
 
-At this point you have a link to a centralized gateway that serves your IPFS content. In short, your user interface may be a bit safer but it's stil not censorship resistant. For real censorship resistance you need to use IPFS [directly from the browser](https://docs.ipfs.tech/install/ipfs-companion/#prerequisites).
+At this point you have a link to a centralized gateway that serves your IPFS content. In short, your user interface may be a bit safer but it's still not censorship resistant. For real censorship resistance, users need to use IPFS [directly from a browser](https://docs.ipfs.tech/install/ipfs-companion/#prerequisites).
 
 Once you have that installed (and the desktop IPFS working), you can go to [/ipfs/<CID>](https://any.site/ipfs/bafybeifqka2odrne5b6l5guthqvbxu4pujko2i6rx2zslvr3qxs6u5o7im) on any site and you'll get that content, served in a decentralized manner.
 
