@@ -11,15 +11,24 @@ jobs:
   check_branch_name:
     runs-on: ubuntu-latest
     steps:
-      - name: Exit early if branch name contains 'crowdin'
+      - name: Exit early if branch name contains 'crowdin' or is 'dev', 'staging', or 'master'
+        id: check
         run: |
-          if [[ "${{ github.head_ref }}" == *crowdin* ]]; then
-            echo "Branch name contains 'crowdin', stopping workflow"
-            exit 1
+          if [[ "${{ github.head_ref }}" == *crowdin* ]] || 
+             [[ "${{ github.ref }}" == 'refs/heads/dev' ]] || 
+             [[ "${{ github.ref }}" == 'refs/heads/staging' ]] || 
+             [[ "${{ github.ref }}" == 'refs/heads/master' ]]
+          then
+            echo "Branch name contains 'crowdin' or is 'dev', 'staging', or 'master', stopping workflow"
+            echo "::set-output name=skip::true"
+            exit 0
+          else
+            echo "::set-output name=skip::false"
           fi
 
   check_changes:
     needs: check_branch_name
+    if: needs.check_branch_name.outputs.skip == 'false'
     runs-on: ubuntu-latest
     outputs:
       all_changes_include_href: ${{ steps.check.outputs.all_changes_include_href }}
