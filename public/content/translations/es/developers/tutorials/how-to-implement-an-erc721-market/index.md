@@ -18,33 +18,33 @@ En este articulo, les mostraré cómo codificar Craiglist para la cadena de bloq
 
 Antes de Gumtree, Ebay y Craigslist, los tableros de clasificados estaban hechos principalmente de corcho o papel. Había carteles de anuncios clasificados en los pasillos de las escuelas, periódicos, farolas, escaparates.
 
-Todo eso cambió con Internet. El número de personas que podían ver un tablero, fue multiplicado por muchas órdenes de magnitud. Con eso, el mercado que representa se hizo mucho mas eficiente y escalable globalmente. Ebay es un negocio masivo que tiene sus orígenes en estos tableros de anuncios clasificados físicos.
+Todo eso cambió con Internet. El número de personas que pueden ver un tablero de clasificados se multiplicó por varios órdenes de magnitud. Con eso, los mercados que representan se hicieron mucho mas eficientes y a escalaron a un tamaño global. Ebay es un enorme negocio que tiene sus orígenes en estos tableros de anuncios clasificados físicos.
 
-Con la cadena de bloques, estos mercados están listos para cambiar de nuevo, permíteme mostrarte cómo.
+Con la cadena de bloques, estos mercados están listos para cambiar de nuevo, permítame mostrarle cómo.
 
 ## Monetización {#monetization}
 
-El modelo de negocio de una junta pública de clasificaciones de blockchain tendrá que ser diferente del de Ebay y de la empresa.
+El modelo de negocio de un tablero de clasificados de cadena de bloques público tendrá que ser diferente del de Ebay y compañía.
 
-Primero, esta [el ángulo de descentralización](/developers/docs/web2-vs-web3/). Las plataformas existentes necesitan mantener sus propios servidores. Una plataforma descentralizada es mantenida por sus usuarios, por lo que el costo de correr la plataforma central cae a cero para el propietario de la plataforma.
+Primero, esta [la cuestión de la descentralización](/developers/docs/web2-vs-web3/). Las plataformas existentes necesitan mantener sus propios servidores. Una plataforma descentralizada es mantenida por sus usuarios, por lo que el costo de correr la plataforma central cae a cero para el propietario de la plataforma.
 
-Luego está el front-end, el sitio web o interfaz que da acceso a la plataforma. Aquí hay muchas opciones. Los dueños de la plataforma pueden restringir el acceso y obligar a todos a utilizar su interfaz, cobrando una cuota. También pueden decidir abrir el acceso (Poder a la gente!) y dejar que cualquiera construya interfaces a la plataforma. O los dueños pueden decidir cualquier enfoque en medio de esos dos extremos.
+Luego está el front-end, el sitio web o la interfaz que da acceso a la plataforma. Aquí hay muchas opciones. Los propietarios de la plataforma pueden restringir el acceso y obligar a todos a utilizar su interfaz, cobrando una tarifa. También pueden decidir abrir el acceso (Poder a la gente) y dejar que cualquiera construya interfaces para la plataforma. O pueden decidir cualquier enfoque en medio de esos dos extremos.
 
-_Los líderes empresariales con mayor visión a la mía, sabrán como monetizar esto. Todo lo que veo es que esto es diferente del status quo y probablemente rentable._
+_Los líderes empresariales con mayor visión que la mía sabrán cómo monetizar esto. Todo lo que veo es que esto es diferente del statu quo y probablemente rentable._
 
-Además, existe el ángulo de automatización y pagos. Algunas cosas pueden ser muy [efectivamente tokenizadas](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) e intercambiadas en un tablero de clasificaciones. Los activos tokenizados se transfieren fácilmente en una cadena de bloques. Los métodos de pago altamente complejos se pueden implementar fácilmente en una cadena de bloques.
+Además, existe la cuestión de la automatización y los pagos. Algunas cosas pueden ser muy [efectivamente tokenizadas](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com) e intercambiadas/comercializadas en un tablero de clasificados. Los activos tokenizados se transfieren fácilmente en una cadena de bloques. Los métodos de pago altamente complejos se pueden implementar fácilmente en una cadena de bloques.
 
-Sólo estoy aprovechando una oportunidad de negocio aquí. Una tabla clasificada sin gastos de funcionamiento puede ser implementada fácilmente, con complejas rutas de pago incluidas en cada transacción. Estoy seguro de que alguien saldrá con una idea sobre para que usar esto.
+Estoy olfateando una oportunidad de negocio aquí. Un tablero de clasificados sin gastos de funcionamiento puede implementarse fácilmente, con complejas rutas de pago incluidas en cada transacción. Estoy seguro de que a alguien se le ocurrirá una idea sobre para qué usar esto.
 
-Estoy feliz contruyendolo. Echemos un vistazo al código.
+Estoy feliz de crearlo. Echemos un vistazo al código.
 
 ## Implementación {#implementation}
 
-Hace algún tiempo iniciamos un [repositorio de código abierto](https://github.com/HQ20/contracts?ref=hackernoon.com) con implementaciones de ejemplos de casos de negocio y otras cosas, por favor, eche un vistazo.
+Hace algún tiempo iniciamos un [repositorio de código abierto](https://github.com/HQ20/contracts?ref=hackernoon.com) con implementaciones de ejemplos de casos de negocio y otras cosas; le sugiero que eche un vistazo.
 
-El código de este [Tablón de Clasificados de Ethereum](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) está ahí, por favor úsalo y abusa de él. Solo hay que tener en cuenta que el código no ha sido auditado y hay que hacer la debida comprobación antes de dejar que el dinero entre en él.
+El código de este [Tablero de Clasificados de Ethereum](https://github.com/HQ20/contracts/tree/master/contracts/classifieds?ref=hackernoon.com) está ahí; úselo y abuse de él. Solo hay que tener en cuenta que el código no ha sido auditado y deberá hacer su propia diligencia debida antes de dejar que se ponga dinero en juego.
 
-Los fundamentos del tablero no son complejos. Todos los anuncios en el tablero serán sólo una estructura con unos pocos datos:
+Los fundamentos del tablero no son complejos. Todos los anuncios del tablero serán solo una estructura con unos pocos campos:
 
 ```solidity
 struct Trade {
@@ -55,7 +55,7 @@ struct Trade {
 }
 ```
 
-Así que hay alguien que publica el anuncio. Un artículo a la venta. Un precio para el artículo. El estado de la operación, que puede ser abierta, ejecutada o cancelada.
+Así que hay alguien que publica el anuncio. Un artículo a la venta. Un precio para el artículo. El estado de la operación, que puede ser abierto, ejecutado o cancelado.
 
 Todas estas operaciones se guardarán en un mapeo. Porque todo en Solidity parece ser un mapeo. También porque es conveniente.
 
@@ -63,13 +63,13 @@ Todas estas operaciones se guardarán en un mapeo. Porque todo en Solidity parec
 mapping(uint256 => Trade) public trades;
 ```
 
-El uso de un mapeo sólo significa que tenemos que llegar a una identificación para cada anuncio antes de publicarlo, y necesitaremos saber la identificación de un anuncio antes de poder operar en él. Hay múltiples maneras de tratar esto, ya sea en el contrato inteligente o en el front-end. Por favor, pregunte si necesita algunos datos.
+El uso de un mapeo solo significa que tenemos que tener una identificación para cada anuncio antes de publicarlo, y necesitaremos saber la identificación de un anuncio antes de poder operar en él. Hay múltiples maneras de abordar esto en el contrato inteligente o en el front-end. Le pido que pregunte si necesita punteros.
 
-A continuación se plantea la cuestión de cuáles son esos artículos con los que tratamos, y cuál es esa moneda que se utiliza para pagar la transacción.
+A continuación se plantea la cuestión de cuáles son esos artículos con los que tratamos, y cuál es la moneda que se utiliza para pagar la transacción.
 
-Para los artículos, sólo vamos a pedir que implementen la interfaz [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com), que realmente es sólo una forma de representar artículos del mundo real en una blockchain, aunque [funciona mejor con activos digitales](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). Vamos a especificar nuestro propio contrato ERC721 en el constructor, lo que significa que cualquier activo en nuestro tablón de anuncios necesita haber sido tokenizado de forma anticipada.
+Para los artículos, solo vamos a pedir que implementen la interfaz [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com), que realmente es solo una forma de representar artículos del mundo real en una cadena de bloques, aunque [funciona mejor con activos digitales](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). Vamos a especificar nuestro propio contrato ERC721 en el constructor, lo que significa que cualquier activo en nuestro tablero de anuncios necesita haber sido tokenizado de antemano.
 
-Para los pagos, vamos a hacer algo parecido. La mayoría de los proyectos de blockchain definen su propia criptomoneda [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com). Otros prefieren utilizar uno convencional como el DAI. En este tablón de anuncios, sólo tienes que decidir en la construcción cuál será tu moneda. Fácil.
+Para los pagos, vamos a hacer algo parecido. La mayoría de los proyectos de cadena de bloques definen su propia criptomoneda [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com). Otros prefieren utilizar una convencional como DAI. En este tablero de anuncios, solo tiene que decidir en la construcción cuál será su moneda. Fácil.
 
 ```solidity
 constructor (
@@ -108,11 +108,11 @@ function executeTrade(uint256 _trade)
   public
 {
   Trade memory trade = trades[_trade];
-  require(trade.status == "Abierto", "El comercio no está abierto.");
+  require(trade.status == "Open", "Trade is not Open.");
   currencyToken.transferFrom(msg.sender, trade.poster, trade.price);
   itemToken.transferFrom(address(this), msg.sender, trade.item);
-  trades[_trade].status = "Ejecutado";
-  emit TradeStatusChange(_trade, "Ejecutado");
+  trades[_trade].status = "Executed";
+  emit TradeStatusChange(_trade, "Executed");
 }
 ```
 

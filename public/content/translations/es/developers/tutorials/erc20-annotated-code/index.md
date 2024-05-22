@@ -12,7 +12,7 @@ published: 2021-03-09
 
 ## Introducción {#introduction}
 
-Uno de los usos más comunes para Ethereum es que un grupo cree un token intercambiable, en cierto sentido su propia moneda. Estos tókenes normalmente siguen un estándar, el [ERC-20](/developers/docs/standards/tokens/erc-20/). Este estándar permite escribir herramientas, como reservas de liquidez y carteras, que funcionan con todos los tókenes ERC-20. En este artículo analizaremos la implementación de [OpenZeppelin Solidity ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), así como la [definición de interfaz](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
+Uno de los usos más comunes para Ethereum es que un grupo cree un token intercambiable, en cierto sentido su propia moneda. Estos tókenes normalmente siguen un estándar, el [ERC-20](/developers/docs/standards/tokens/erc-20/). Este estándar permite escribir herramientas, como reservas de liquidez y carteras, que funcionan con todos los tókenes ERC-20. En este artículo analizaremos la implementación de [OpenZeppelin Solidity ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), así como la [ definición de interfaz](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
 Este es un código fuente anotado. Si quiere implementar ERC-20, [lea este tutorial](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
 
@@ -46,7 +46,7 @@ El lenguaje de Solidity sigue evolucionando rápidamente, y las nuevas versiones
 
 ```solidity
 /**
- * @dev Interfaz del estándar ERC20 como se define en el EIP.
+ * @dev Interface of the ERC20 standard as defined in the EIP.
  */
 ```
 
@@ -64,7 +64,7 @@ Por convención, los nombres de interfaz comienzan por `I`.
 
 ```solidity
     /**
-     * @dev Devuelve la cantidad de tokens en existencia.
+     * @dev Returns the amount of tokens in existence.
      */
     function totalSupply() external view returns (uint256);
 ```
@@ -77,7 +77,7 @@ Esta función es `external`, lo que significa [que sólo puede ser activada desd
 
 ```solidity
     /**
-     * @dev Devuelve la cantidad de tokens tenidos por `cuenta`.
+     * @dev Returns the amount of tokens owned by `account`.
      */
     function balanceOf(address account) external view returns (uint256);
 ```
@@ -88,11 +88,11 @@ Como indica su nombre, `saldoDe` devuelve el saldo de una cuenta. Las cuentas de
 
 ```solidity
     /**
-     * @dev Mueve `monto` de tokens de la cuenta del cliente a `beneficiario`.
+     * @dev Moves `amount` tokens from the caller's account to `recipient`.
      *
-     * Devuelve un valor boolean indicando si la operación fue exitosa o no.
+     * Returns a boolean value indicating whether the operation succeeded.
      *
-     * Emite un evento {Transfer}.
+     * Emits a {Transfer} event.
      */
     function transfer(address recipient, uint256 amount) external returns (bool);
 ```
@@ -112,11 +112,11 @@ Las licencias permiten que una cuenta utilice algunos tókenes que pertenecen a 
 
 ```solidity
     /**
-     * @dev Devuelve el número restante de tokens que `spender` será
-     * permitido gastar en nombre de `owner` a través de {transferFrom}. Esto es
-     * cero por defecto.
+     * @dev Returns the remaining number of tokens that `spender` will be
+     * allowed to spend on behalf of `owner` through {transferFrom}. This is
+     * zero by default.
      *
-     * Este valor cambia cuando {approve} o {transferFrom} son llamados.
+     * This value changes when {approve} or {transferFrom} are called.
      */
     function allowance(address owner, address spender) external view returns (uint256);
 ```
@@ -127,18 +127,18 @@ La función `allowance` permite a cualquiera consultar cuál es la asignación q
 
 ```solidity
     /**
-     * @dev Establece `amount` como la autorización de `spender` sobre los tokens del que llama.
+     * @dev Sets `amount` as the allowance of `spender` over the caller's tokens.
      *
-     * Devuelve un valor booleano indicando si la operación fue exitosa o no.
+     * Returns a boolean value indicating whether the operation succeeded.
      *
-     * IMPORTANTE: Ten en cuenta que cambiar una asignación con este método conlleva el riesgo
-     * que alguien puede usar tanto el antiguo como el nuevo permiso por desgracia
-     * orden de transacción. Una posible solución para mitigar esta carrera
-     * la condición es reducir primero la autorización del gasto a 0 y establecer el 
-     * valor deseado después:
-     * https://github. om/ethereum/EIPs/issues/20#issuecomment-263524729
+     * IMPORTANT: Beware that changing an allowance with this method brings the risk
+     * that someone may use both the old and the new allowance by unfortunate
+     * transaction ordering. One possible solution to mitigate this race
+     * condition is to first reduce the spender's allowance to 0 and set the
+     * desired value afterwards:
+     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
      *
-     * Emite un evento {Approval}.
+     * Emits an {Approval} event.
      */
     function approve(address spender, uint256 amount) external returns (bool);
 ```
@@ -149,13 +149,13 @@ La función `approve` crea una asignación. Asegúrate de leer el mensaje sobre 
 
 ```solidity
     /**
-     * @dev mueve `amount` tokens desde`sender` a `recipient` usando el
-     * mecanismo de autorización. `amount` es entonces deducido de la autorización
-     * del llamante.
+     * @dev Moves `amount` tokens from `sender` to `recipient` using the
+     * allowance mechanism. `amount` is then deducted from the caller's
+     * allowance.
      *
-     * Devuelve un valor booleano indicando si la operación fue exitosa o no.
+     * Returns a boolean value indicating whether the operation succeeded.
      *
-     * Emite un evento {Transfer}.
+     * Emits a {Transfer} event.
      */
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 ```
@@ -167,16 +167,16 @@ Por último, `transferirDesde` lo utiliza el gastador para utilizar realmente la
 ```solidity
 
     /**
-     * @dev Emitido cuando `value` tokens son movidos de una cuenta (`from`) a
-     * otro (`to`).
+     * @dev Emitted when `value` tokens are moved from one account (`from`) to
+     * another (`to`).
      *
-     * Ten en cuenta que `valor` puede ser cero.
+     * Note that `value` may be zero.
      */
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     /**
      * @dev Emitted when the allowance of a `spender` for an `owner` is set by
-     * a call to {approve}. `valor` es el nuevo permiso.
+     * a call to {approve}. `value` is the new allowance.
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
@@ -215,27 +215,28 @@ Este comentario explica la finalidad del contrato.
 
 ```solidity
 /**
- * @dev Implementación de la interfaz {IERC20}.
+ * @dev Implementation of the {IERC20} interface.
  *
- * Esta implementación es agnótica a la forma en que se crean los tokens. Esto significa que
- * tiene que añadirse un mecanismo de suministro en un contrato derivado usando {_mint}.
- * Para un mecanismo genérico ver {ERC20PresetMinterPauser}.
+ * This implementation is agnostic to the way tokens are created. This means
+ * that a supply mechanism has to be added in a derived contract using {_mint}.
+ * For a generic mechanism see {ERC20PresetMinterPauser}.
  *
- * TIP: Para una escritura detallada vea nuestra guía
+ * TIP: For a detailed writeup see our guide
  * https://forum.zeppelin.solutions/t/how-to-implement-erc20-supply-mechanisms/226[How
  * to implement supply mechanisms].
  *
- * Hemos seguido las pautas generales de OpenZeppelin: las funciones se revierten en su lugar
- * de devolver `falso` en caso de fallo. Este comportamiento es sin embargo convencional
- * y no entra en conflicto con las expectativas de las aplicaciones ERC20.
+ * We have followed general OpenZeppelin guidelines: functions revert instead
+ * of returning `false` on failure. This behavior is nonetheless conventional
+ * and does not conflict with the expectations of ERC20 applications.
  *
- * Adicionalmente, se emite un evento de {Approval} en llamadas a {transferFrom}.
- * Esto permite a las aplicaciones reconstruir el permiso para todas las cuentas solo
- * escuchando dichos eventos. Otras implementaciones del EIP no pueden emitir
- * estos eventos, ya que no son requeridos por la especificación.
+ * Additionally, an {Approval} event is emitted on calls to {transferFrom}.
+ * This allows applications to reconstruct the allowance for all accounts just
+ * by listening to said events. Other implementations of the EIP may not emit
+ * these events, as it isn't required by the specification.
  *
- * Finalmente, las funciones no estandarizadas {decreaseAllowance} y {increaseAllowance}
- * han sido añadidas para mitigar los ya conocidos problemas relacionados sobre configurar asignaciones. Ver {IERC20-approve}.
+ * Finally, the non-standard {decreaseAllowance} and {increaseAllowance}
+ * functions have been added to mitigate the well-known issues around setting
+ * allowances. See {IERC20-approve}.
  */
 
 ```
@@ -273,7 +274,7 @@ El primer mapeo, `_balances`, son direcciones y sus respectivos balances de este
 &nbsp;
 
 ```solidity
-    mapping (dirección => mapping (dirección => uint256)) private _allowances;
+    mapping (address => mapping (address => uint256)) private _allowances;
 ```
 
 Esta variable, `_allowances`, almacena las asignaciones explicadas anteriormente. El primer índice es el propietario de los tókenes, y el segundo es el contrato con la asignación. Para acceder a la dirección A puede gastar desde la dirección B de la cuenta, utilice `_allowances[B][A]`.
@@ -306,13 +307,13 @@ Las aplicaciones necesitan saber cómo mostrar el saldo de tókenes. Si un usuar
 
 ```solidity
     /**
-     * @dev Establece los valores para {name} y {symbol}, inicializa {decimals} con
-     * un valor predeterminado de 18.
+     * @dev Sets the values for {name} and {symbol}, initializes {decimals} with
+     * a default value of 18.
      *
-     * Para seleccionar un valor diferente para {decimals}, use {_setupDecimals}.
+     * To select a different value for {decimals}, use {_setupDecimals}.
      *
-     * Los tres de estos valores son inmutables: sólo pueden establecerse una vez durante
-     * construcción.
+     * All three of these values are immutable: they can only be set once during
+     * construction.
      */
     constructor (string memory name_, string memory symbol_) public {
         _name = name_;
@@ -327,7 +328,7 @@ Se le llama constructor cuando se crea el contrato por primera vez. Convencional
 
 ```solidity
     /**
-     * @dev Devuelve el nombre del token.
+     * @dev Returns the name of the token.
      */
     function name() public view returns (string memory) {
         return _name;
@@ -343,16 +344,16 @@ Se le llama constructor cuando se crea el contrato por primera vez. Convencional
 
     /**
      * @dev Returns the number of decimals used to get its user representation.
-     * Por ejemplo, si `decimales` es igual a `2`, un saldo de tokens `505` debe
-     * ser mostrado a un usuario como `5,05` (`505 / 10 ** 2`).
+     * For example, if `decimals` equals `2`, a balance of `505` tokens should
+     * be displayed to a user as `5,05` (`505 / 10 ** 2`).
      *
-     * Los tokens generalmente optan por un valor de 18, imitando la relación entre
-     * ether y wei. Este es el valor que usa {ERC20}, a menos que {_setupDecimals} sea llamado
-*.
+     * Tokens usually opt for a value of 18, imitating the relationship between
+     * ether and wei. This is the value {ERC20} uses, unless {_setupDecimals} is
+     * called.
      *
-     * NOTA: Esta información sólo se utiliza para fines de _visualización_: en
-     * ninguna manera afecta a la aritmética del contrato, incluyendo
-     * {IERC20-balanceOf} y {IERC20-transfer}.
+     * NOTE: This information is only used for _display_ purposes: it in
+     * no way affects any of the arithmetic of the contract, including
+     * {IERC20-balanceOf} and {IERC20-transfer}.
      */
     function decimals() public view returns (uint8) {
         return _decimals;
@@ -366,7 +367,7 @@ El tipo de retorno es `memoria de cadena`, lo que significa que devuelve una cad
 |                | Tiempo de vida            | Acceso al contrato | Coste del gas                                                                   |
 | -------------- | ------------------------- | ------------------ | ------------------------------------------------------------------------------- |
 | Memoria        | Activación de una función | Leer/Escribir      | Decenas o centenas (más altas para ubicaciones más altas)                       |
-| Calldata       | Llamada a función         | Sólo lectura       | No se puede utilizar como tipo de retorno, solo un tipo de parámetro de función |
+| Calldata       | Activación de una función | Sólo lectura       | No se puede utilizar como tipo de retorno, solo un tipo de parámetro de función |
 | Almacenamiento | Hasta que cambie          | Leer/Escribir      | Alta (800 para leer, 20.000 para escribir)                                      |
 
 En este caso, `memory` es la mejor opción.
@@ -405,10 +406,10 @@ Leer el saldo de una cuenta. Ten en cuenta que cualquiera puede obtener el saldo
     /**
      * @dev See {IERC20-transfer}.
      *
-     * Requisitos:
+     * Requirements:
      *
-     * - `destinatario` no puede ser la dirección cero.
-     * - el llamante debe tener un saldo de al menos `amount`.
+     * - `recipient` cannot be the zero address.
+     * - the caller must have a balance of at least `amount`.
      */
     function transfer(address recipient, uint256 amount) public virtual override returns (bool) {
 ```

@@ -38,6 +38,7 @@ Do you have a background in mathematics, cryptography, or economics? You might b
 - [Ethresear.ch](https://ethresear.ch) - Ethereum’s primary forum for research, and the world’s most influential forum for cryptoeconomics
 - [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - An ongoing Q&A series with researchers. As each next part opens, anyone can post questions.
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - research areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
+- [AllWalletDevs](allwallet.dev) - a forum for Ethereum developers, designers, and interested users to come together regularly and discuss wallets
 
 [Explore more active areas of research](/community/research/).
 

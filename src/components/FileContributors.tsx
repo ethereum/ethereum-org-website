@@ -8,13 +8,11 @@ import {
   ListItem,
   ModalBody,
   ModalHeader,
-  SkeletonText,
   UnorderedList,
-  useBreakpointValue,
   VStack,
 } from "@chakra-ui/react"
 
-import type { Author, Lang } from "@/lib/types"
+import type { ChildOnlyProp, FileContributor, Lang } from "@/lib/types"
 
 import { Button } from "@/components/Buttons"
 import InlineLink from "@/components/Link"
@@ -25,76 +23,50 @@ import Translation from "@/components/Translation"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
-// TODO: skeletons are not part of the DS, so these should be replaced once we
-// implement the new designs. Thats the reason we haven't define these styles in
-// the theme config file
-const skeletonColorProps = {
-  startColor: "lightBorder",
-  endColor: "searchBackgroundEmpty",
-}
+const ContributorList = ({ children }: Required<ChildOnlyProp>) => (
+  <UnorderedList maxH="2xs" m={0} mt={6} overflowY="scroll">
+    {children}
+  </UnorderedList>
+)
 
-const Skeleton = (props) => <SkeletonText {...skeletonColorProps} {...props} />
-
-const ContributorList = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <UnorderedList maxH="2xs" m={0} mt={6} overflowY="scroll">
-      {children}
-    </UnorderedList>
-  )
-}
-
-const Contributor = ({ contributor }: { contributor: Author }) => {
-  return (
-    <ListItem p={2} display="flex" alignItems="center">
-      <Avatar
-        height="40px"
-        width="40px"
-        src={contributor.avatarUrl}
-        name={contributor.name}
-        me={2}
-      />
-      {contributor.user && (
-        <InlineLink href={contributor.user.url}>
-          @{contributor.user.login}
-        </InlineLink>
-      )}
-      {!contributor.user && <span>{contributor.name}</span>}
-    </ListItem>
-  )
-}
+type ContributorProps = { contributor: FileContributor }
+const Contributor = ({ contributor }: ContributorProps) => (
+  <ListItem p={2} display="flex" alignItems="center">
+    <Avatar
+      height="40px"
+      width="40px"
+      src={contributor.avatar_url}
+      name={contributor.login}
+      me={2}
+    />
+    <InlineLink href={"https://github.com/" + contributor.login}>
+      @{contributor.login}
+    </InlineLink>
+  </ListItem>
+)
 
 export type FileContributorsProps = FlexProps & {
   editPath?: string
-  contributors: Author[]
-  loading: boolean
-  error?: boolean
+  contributors: FileContributor[]
   lastEdit: string
 }
 
 const FileContributors = ({
   contributors,
-  loading,
-  error,
   lastEdit,
   ...props
 }: FileContributorsProps) => {
   const [isModalOpen, setModalOpen] = useState(false)
   const { locale } = useRouter()
 
-  const isDesktop = useBreakpointValue({ base: false, md: true })
-
-  if (error) return null
-  const lastContributor: Author = contributors.length
+  const lastContributor: FileContributor = contributors.length
     ? contributors[0]
-    : {
-        name: "",
-        email: "",
-        avatarUrl: "",
-        user: {
-          login: "",
-          url: "",
-        },
-      }
+    : ({
+        avatar_url: "",
+        login: "",
+        html_url: "",
+        date: Date.now().toString(),
+      } as FileContributor)
 
   return (
     <>
@@ -107,18 +79,12 @@ const FileContributors = ({
 
         <ModalBody>
           <Translation id="contributors-thanks" />
-          <Skeleton noOfLines="4" mt="4" isLoaded={!loading}>
-            {contributors ? (
-              <ContributorList>
-                {contributors.map((contributor) => (
-                  <Contributor
-                    contributor={contributor}
-                    key={contributor.email}
-                  />
-                ))}
-              </ContributorList>
-            ) : null}
-          </Skeleton>
+
+          <ContributorList>
+            {contributors.map((contributor) => (
+              <Contributor contributor={contributor} key={contributor.login} />
+            ))}
+          </ContributorList>
         </ModalBody>
       </Modal>
 
@@ -130,29 +96,22 @@ const FileContributors = ({
         p={{ base: 0, md: 2 }}
         {...props}
       >
-        <Flex me={4} alignItems="center" flex="1">
-          {isDesktop && (
-            <>
-              <Avatar
-                height="40px"
-                width="40px"
-                src={lastContributor.avatarUrl}
-                name={lastContributor.name}
-                me={2}
-              />
+        <Flex me={4} alignItems="center" flex="1" hideBelow="md">
+          <Avatar
+            height="40px"
+            width="40px"
+            src={lastContributor.avatar_url}
+            name={lastContributor.login}
+            me={2}
+          />
 
-              <Text m={0} color="text200">
-                <Translation id="last-edit" />:{" "}
-                {lastContributor.user?.url && (
-                  <InlineLink href={lastContributor.user.url}>
-                    @{lastContributor.user.login}
-                  </InlineLink>
-                )}
-                {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
-                {getLocaleTimestamp(locale as Lang, lastEdit)}
-              </Text>
-            </>
-          )}
+          <Text m={0} color="text200">
+            <Translation id="last-edit" />:{" "}
+            <InlineLink href={"https://github.com/" + lastContributor.login}>
+              @{lastContributor.login}
+            </InlineLink>
+            , {getLocaleTimestamp(locale as Lang, lastEdit)}
+          </Text>
         </Flex>
 
         <VStack align="stretch" justifyContent="space-between" spacing={2}>

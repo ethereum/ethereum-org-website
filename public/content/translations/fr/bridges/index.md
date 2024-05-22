@@ -53,7 +53,7 @@ Si vous utilisez Aave sur le réseau principal Ethereum pour prêter des USDT ma
 
 ### Explorer les écosystèmes blockchain {#explore-ecosystems}
 
-Si vous avez des ETH sur le réseau principal Ethereum et que vous voulez explorer un L1 alternatif pour essayer leurs dapps natives. Vous pouvez utilisez un pont pour transférer vos ETH du réseau principal Ethereum vers le L1.
+Si vous avez des ETH sur le réseau principal Ethereum et que vous voulez explorer un L1 alternatif pour essayer leurs dapps natives. Vous pouvez utiliser un pont pour transférer vos ETH du réseau principal Ethereum vers le L1.
 
 ### Posséder des actifs crypto natifs {#own-native}
 

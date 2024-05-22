@@ -43,8 +43,6 @@ import { getEditPath } from "@/lib/utils/editPath"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
-
 type ContentContainerProps = Pick<BoxProps, "children" | "dir">
 
 const ContentContainer = (props: ContentContainerProps) => {
@@ -161,7 +159,10 @@ export const tutorialsComponents = {
 type TutorialLayoutProps = ChildOnlyProp &
   Pick<
     MdPageContent,
-    "tocItems" | "crowdinContributors" | "contentNotTranslated"
+    | "tocItems"
+    | "crowdinContributors"
+    | "contentNotTranslated"
+    | "gitContributors"
   > &
   Required<Pick<MdPageContent, "lastUpdatedDate">> & {
     frontmatter: TutorialFrontmatter
@@ -176,14 +177,15 @@ export const TutorialLayout = ({
   lastUpdatedDate,
   crowdinContributors,
   contentNotTranslated,
+  gitContributors,
 }: TutorialLayoutProps) => {
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = getEditPath(relativePath)
 
   const borderColor = useToken("colors", "border")
-  const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
-  const intlLastEdit =
-    "data" in gitHubLastEdit ? gitHubLastEdit.data! : lastUpdatedDate
+  const gitHubLastEdit = gitContributors[0]?.date
+  const intlLastEdit = gitHubLastEdit || lastUpdatedDate
+
   const useGitHubContributors =
     frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
@@ -209,7 +211,7 @@ export const TutorialLayout = ({
           {children}
           {useGitHubContributors ? (
             <GitHubContributors
-              relativePath={relativePath}
+              contributors={gitContributors}
               lastUpdatedDate={lastUpdatedDate}
             />
           ) : (
