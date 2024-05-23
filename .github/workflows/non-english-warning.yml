@@ -60,7 +60,7 @@ jobs:
             const repo = context.repo;
             const prAuthor = context.payload.pull_request.user.login;
             const allChangesIncludeHref = '${{ needs.check_changes.outputs.all_changes_include_href }}' === 'true';
-            const status = allChangesIncludeHref ? 'question ❓' : 'blocked 🛑';
+            const status = allChangesIncludeHref ? 'question ❓' : 'Status: Blocked 🛑';
             await github.rest.issues.addLabels({
               ...repo,
               issue_number: prNumber,
