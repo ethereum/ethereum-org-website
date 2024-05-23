@@ -208,29 +208,6 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   )
 }
 
-export const InfoColumn = (props: ChildOnlyProp) => (
-  <Flex
-    as="aside"
-    flexDirection="column"
-    flex="0 1 400px"
-    ms={8}
-    me={16}
-    position="sticky"
-    top="6.25rem"
-    height={calc("100vh").subtract("80px").toString()}
-    {...props}
-  />
-)
-
-export const InfoTitle = (props: ChildOnlyProp) => (
-  <Heading2
-    fontSize={{ base: "2.5rem", lg: "5xl" }}
-    textAlign={{ base: "start", lg: "end" }}
-    mt={0}
-    {...props}
-  />
-)
-
 export const MobileButton = (props: ChildOnlyProp) => {
   const borderColor = useToken("colors", "border")
   return (
@@ -278,8 +255,6 @@ export const reactComponents = {
   FeaturedText,
   GlossaryTooltip,
   InfoBanner,
-  InfoColumn,
-  InfoTitle,
   MobileButton,
   MobileButtonDropdown,
   Page,

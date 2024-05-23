@@ -145,11 +145,11 @@ Para simplificar las cosas, intercambiamos un token por un Wei.
 ```solidity
 function buy() payable public {
     uint256 amountTobuy = msg.value;
-    uint256 dexBalance = token. alanceOf(address(this));
-    require(amountTobuy > 0, "Usted necesita enviar algún ether");
-    require(amountTobuy <= dexBalance, "No hay suficientes fichas en la reserva");
-    ficha. ransfer(msg.sender, amountTobuy);
-    emitir Bought(amountTobuy);
+    uint256 dexBalance = token.balanceOf(address(this));
+    require(amountTobuy > 0, "You need to send some ether");
+    require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
+    token.transfer(msg.sender, amountTobuy);
+    emit Bought(amountTobuy);
 }
 ```
 

@@ -5,8 +5,8 @@ author: "Trailofbits"
 lang: es
 tags:
   - "solidity"
-  - "contratos Inteligentes"
-  - "seguridades"
+  - "contratos inteligentes"
+  - "seguridad"
 skill: intermediate
 published: 2020-09-07
 source: Desarrollar contratos seguros
@@ -19,15 +19,15 @@ Vamos a usar tres técnicas distintas para el análisis de pruebas y programas:
 - **Fuzzing (auditorías de seguridad) con [Echidna](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/).** El código se ejecuta con una generación pseudoaleatoria de transacciones. El fuzzer tratará de encontrar una secuencia de transacciones para infringir una propiedad determinada.
 - **Ejecución simbólica con [Manticore](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/).** Una técnica de verificación formal, que traduce cada ruta de ejecución a una fórmula matemática, en la que se pueden comprobar las restricciones superiores.
 
-Cada técnica tiene ventajas y obstáculos que serán útiles en <a href="#determining-security-properties">casos específicos</a>:
+Cada técnica tiene ventajas y obstáculos que serán útiles en [casos específicos](#determining-security-properties):
 
-| Técnica                          | Herramienta | Uso                               | Velocidad | Errores perdidos | Falsas alarmas |
-| -------------------------------- | ----------- | --------------------------------- | --------- | ---------------- | -------------- |
-| Análisis estáticos               | Slither     | CLI & scripts                     | segundos  | moderado         | bajo           |
-| Fuzzing (auditoría de seguridad) | Echidna     | Propiedades de Solidity           | minutos   | bajo             | ninguno        |
-| Ejecución simbólica              | Manticore   | Propiedades de Solidity & scripts | horas     | ninguno      | ninguno        |
+| Técnica             | Herramienta | Uso                               | Velocidad | Errores perdidos | Falsas alarmas |
+| ------------------- | ----------- | --------------------------------- | --------- | ---------------- | -------------- |
+| Análisis estáticos  | Slither     | CLI & scripts                     | segundos  | moderado         | bajo           |
+| Fuzzing             | Echidna     | Propiedades de Solidity           | minutos   | bajo             | ninguno        |
+| Ejecución simbólica | Manticore   | Propiedades de Solidity & scripts | horas     | ninguno      | ninguno        |
 
-si todas las rutas son exploradas sin tiempo de espera
+- si todas las rutas son exploradas sin tiempo de espera
 
 **Slither** analiza los contratos en segundos, sin embargo, el análisis estático puede conducir a falsas alarmas y será menos adecuado para comprobaciones complejas (ej., controles aritméticos). Ejecute Slither a través de la API para acceder a los detectores incorporados o a través de la API para comprobaciones definidas por el usuario.
 

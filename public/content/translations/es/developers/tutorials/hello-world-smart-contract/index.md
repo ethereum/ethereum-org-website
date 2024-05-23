@@ -3,8 +3,8 @@ title: Contrato inteligente Hello World para principiantes
 description: Tutorial introductorio para redactar e implementar un contrato inteligente sencillo en Ethereum.
 author: "elanh"
 tags:
-  - "solidez"
-  - "Hardhat"
+  - "solidity"
+  - "hardhat"
   - "alchemy"
   - "contratos inteligentes"
   - "implementación"
@@ -147,7 +147,7 @@ Debería aparecer un mensaje de bienvenida y la opción de seleccionar lo que de
 
 👷 Welcome to Hardhat v2.0.11 👷‍?
 
-¿Qué es lo que quieres hacer? …
+What do you want to do? …
 Create a sample project
 ❯ Create an empty hardhat.config.js
 Quit
@@ -182,7 +182,7 @@ Abra el proyecto Hola, mundo en su editor favorito (nosotros preferimos [VSCode]
 pragma solidity ^0.7.0;
 
 // Defines a contract named `HelloWorld`.
-// Un contrato es una colección de funciones y datos (su estado). Una vez desplegado, un contrato reside en una dirección específica en la blockchain de Ethereum. Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Un contrato es una colección de funciones y datos (su estado). Once deployed, a contract resides at a specific address on the Ethereum blockchain. Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
    // Declares a state variable `message` of type `string`.
@@ -233,7 +233,7 @@ Su `.env` debería verse así:
 
 ```
 API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
-PRIVATE_KEY = "tu-clave privada-metamask"
+PRIVATE_KEY = "your-metamask-private-key"
 ```
 
 Para conectarlos efectivamente a nuestro código, vincularemos estas variables en nuestro `hardhat.config.js` en el paso 13.
@@ -337,7 +337,7 @@ Ejecutar `deploy()` en una `ContractFactory` iniciará el despliegue, y obtendr�
 ¡Por fin estamos listos para desplegar nuestro contrato inteligente! Desde la linea de comandos, ejecute:
 
 ```
-hardhat npx ejecuta scripts/deploy.js --network goerli
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
 Debería mostrarse algo parecido a esto:

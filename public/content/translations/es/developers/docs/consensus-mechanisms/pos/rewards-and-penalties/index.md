@@ -50,7 +50,7 @@ PROPOSER_WEIGHT uint64(8)
 
 Estos pesos suman 64. La recompensa se calcula como la suma de los pesos aplicables divididos entre 64. Un validador que haya hecho votos oportunos de fuente, destino y cabeza, propuesto un bloqueo y participado en un comité de sincronización podría recibir `64/64 * base_reward == base_reward`. Sin embargo, un validador no suele ser un proponente de bloques, por lo que su recompensa máxima es `64-8 /64 * base_reward == 7/8 * base_reward`. Los validadores que no son proponentes de bloques ni están en un comité de sincronización pueden recibir `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
 
-Se añade una recompensa adicional para incentivar las certificaciones rápidas. Es el `inclusion_delay_reward`. Tiene un valor igual al `base_reward` multiplicado por `1/retraso` donde `retraso` es el número de ranuras que separan la propuesta de bloque y la certificación. Por ejemplo, si la certificación se presenta dentro de una ranura de la propuesta de bloque, el certificador recibe `base_reward * 1/1 == base_reward`. Si la certificación llega en la siguiente ranura, el certificador recibe `base_reward * 1/2` y así sucesivamente.
+Se añade una recompensa adicional para incentivar las certificaciones rápidas. Es el `inclusion_delay_reward`. Tiene un valor igual al `base_reward` multiplicado por `1/retraso` donde `retraso` es el número de ranuras que separan la propuesta de bloque y la certificación. Por ejemplo, si la certificación se presenta dentro de una ranura de la propuesta de bloque, el certificador recibe `base_reward * 1/1 == base_reward`. Si la certificación llega en la siguiente ranura, el certificador recibe`base_reward * 1/2`y así sucesivamente.
 
 Los proponentes de bloques reciben `8 / 64 * base_reward` por **cada certificación válida** incluida en el bloque, por lo que el valor real de la recompensa se escala con el número de validadores de certificación. Los proponentes de bloques también pueden aumentar su recompensa al incluir evidencia de mal comportamiento por parte de otros validadores en su bloque propuesto. Estas recompensas son los alicientes que fomentan la honestidad del validador. Un proponente de bloques que incluya la reducción será recompensado con `slashed_validators_effective_balance / 512`.
 
@@ -78,7 +78,7 @@ Si la capa de consenso ha pasado más de cuatro épocas sin finalizar, se activa
 
 El diseño de recompensa, penalización y recorte del mecanismo de consenso anima a los validadores individuales a comportarse correctamente. No obstante, de estas opciones de diseño surge un sistema que incentiva poderosamente la distribución equitativa de validadores entre múltiples clientes, y debería desincentivar con ahínco el dominio de un solo cliente.
 
-## Leer más {#further-reading}
+## Más información {#further-reading}
 
 - [Actualización de Ethereum: la capa de incentivos](https://eth2book.info/altair/part2/incentives)
 - [Incentivos en el protocolo híbrido Casper de Ethereum](https://arxiv.org/pdf/1903.04205.pdf)

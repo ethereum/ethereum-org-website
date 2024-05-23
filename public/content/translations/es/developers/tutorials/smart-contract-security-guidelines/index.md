@@ -9,7 +9,7 @@ tags:
 skill: intermediate
 lang: es
 published: 2020-09-06
-source: Desarrollando smart contracts
+source: Desarrollar contratos seguros
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 
@@ -33,9 +33,9 @@ La documentación se puede escribir en diferentes niveles y debe actualizarse al
 
 ### Capacidad de mejora {#upgradeability}
 
-Analizamos diferentes soluciones de mejora en [nuestra entrada de blog](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/). Tome una decisión deliberada de si admitir la capacidad de mejora o no antes de escribir cualquier código. La decisión influirá en cómo estructurar el código. En general, se recomienda:
+Analizamos diferentes soluciones de mejora en [nuestra entrada de blog](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/). Tome una decisión deliberada de si admitir la capacidad de mejora o no antes de escribir cualquier código. La decisión influirá en la forma en que estructura su código. En general, se recomienda:
 
-- **Favorecer la [migración de contratos](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/) sobre la mejora o actualización.** El sistema de migración tiene muchas de las mismas ventajas que el sistema actualizable, sin sus desventajas o inconvenientes.
+- **Favoreciendo la [migración de contratos](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/) sobre la capacidad de actualización. ** Los sistemas de migración tienen muchas de las mismas ventajas que los que se pueden actualizar, sin sus inconvenientes.
 - **Utilizar el patrón de separación de datos por sobre delegatecallproxy.** Si el proyecto tiene una clara separación de abstracción, la mejora mediante la separación de datos requerirá solo de unos pocos ajustes. delegatecallproxy requiere conocimientos sobre la EVM y es altamente propenso a errores.
 - **Documentar el procedimiento de migración/actualización antes de la implementación.** Si tiene que reaccionar bajo presión sin ninguna directriz, cometerá errores. Escriba el procedimiento a seguir con antelación. Debe incluir:
   - Las llamadas que inician los nuevos contratos
@@ -58,7 +58,7 @@ La arquitectura del código base debería hacer que el código sea fácil de rev
 - **Mantenga la herencia manejable.** La herencia debe utilizarse para dividir la lógica; sin embargo, el proyecto debe apuntar a minimizar la profundidad y el ancho del árbol de herencia.
 - **Use la [impresora de herencia](https://github.com/crytic/slither/wiki/Printer-documentation#inheritance-graph) de Slither para comprobar la jerarquía de los contratos.** La impresora de herencia ayudará a revisar el tamaño de la jerarquía.
 
-### Eventos {#events}
+### Events {#events}
 
 - **Registre todas las operaciones cruciales.** Los eventos ayudarán a depurar el contrato durante el desarrollo y monitorearlo después de la implementación.
 
@@ -78,7 +78,7 @@ La arquitectura del código base debería hacer que el código sea fácil de rev
 - **Escriba verificaciones y propiedades de [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) y [Manticore](https://github.com/trailofbits/manticore) personalizadas.** Las herramientas automatizadas ayudarán a garantizar la seguridad del contrato. Revise el resto de esta guía para aprender a escribir verificaciones y propiedades eficientes.
 - **Use [crytic.io](https://crytic.io/).** Crytic se integra con Github y proporciona acceso a detectores privados de Slither, además de ejecutar comprobaciones de propiedades personalizadas desde Echidna.
 
-### Solidez {#solidity}
+### Solidity {#solidity}
 
 - **Inclínese por Solidity 0.5 por sobre las versiones 0.4 y 0.6.** Solidity 0.5 es más seguro y tiene mejores prácticas incorporadas que la versión 0.4. Solidity 0.6 ha demostrado ser demasiado inestable para la producción y necesita tiempo para madurar.
 - **Use una versión estable para compilar; use la última versión para comprobar si hay advertencias.** Compruebe que el código no tenga problemas reportados con la última versión del compilador. Sin embargo, Solidity tiene un ciclo de liberación rápido y un historial de errores del compilador, así que no se recomienda la última versión para la implementación (ver [recomendación de versión de solc](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) de Slither).

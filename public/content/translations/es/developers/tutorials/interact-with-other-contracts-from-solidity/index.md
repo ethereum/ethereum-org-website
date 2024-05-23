@@ -4,7 +4,7 @@ description: Cómo implementar un contrato inteligente desde un contrato existen
 author: "jdourlens"
 tags:
   - "contratos inteligentes"
-  - "Solidity"
+  - "solidity"
   - "remix"
   - "implementación"
   - "capacidad de composición"
