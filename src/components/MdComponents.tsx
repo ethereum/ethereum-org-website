@@ -152,22 +152,22 @@ export const HR = () => (
 
 // All base html element components
 export const htmlElements = {
-  a: TooltipLink,
-  div: Box,
-  h1: Heading1,
-  h2: Heading2,
-  h3: Heading3,
-  h4: Heading4,
-  hr: HR,
-  img: MarkdownImage,
-  li: ListItem,
-  ol: OrderedList,
-  p: Paragraph,
-  pre: Pre,
-  time: LocaleDateTime,
-  ul: UnorderedList,
-  iframe: VideoIframe,
-  ...mdxTableComponents,
+  // a: TooltipLink,
+  // div: Box,
+  // h1: Heading1,
+  // h2: Heading2,
+  // h3: Heading3,
+  // h4: Heading4,
+  // hr: HR,
+  // img: MarkdownImage,
+  // li: ListItem,
+  // ol: OrderedList,
+  // p: Paragraph,
+  // pre: Pre,
+  // time: LocaleDateTime,
+  // ul: UnorderedList,
+  // iframe: VideoIframe,
+  // ...mdxTableComponents,
 }
 
 /**
