@@ -216,6 +216,7 @@ export const UseCasesLayout = ({
           width={1200}
           height={610}
           style={{ objectFit: "cover" }}
+          sizes="(max-width: 992px) 100vw, 50vw"
           priority
           alignSelf={{
             base: "center",
