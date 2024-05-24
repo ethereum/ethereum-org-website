@@ -23,7 +23,6 @@ function detectLocale(acceptLanguage: string | null) {
 
 export const config = {
   matcher: [
-    "/", // explicit matcher for root route
     /*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
