@@ -11,7 +11,7 @@ published: 2022-04-01
 
 ## 引言 {#introduction}
 
-在本文中，你将了解[乐观卷叠](/developers/docs/scaling/optimistic-rollups)、乐观卷叠上的交易成本，以及不同的成本结构如何要求我们针对不同于以太坊主网上的因素进行优化。 您还将学习如何实现这种优化。
+在本文中，你将了解[乐观卷叠](/developers/docs/scaling/optimistic-rollups)、乐观卷叠上的交易成本，以及不同的成本结构如何要求我们针对不同于以太坊主网上的因素进行优化。 你还将学习如何实现这种优化。
 
 ### 充分披露 {#full-disclosure}
 
@@ -32,7 +32,7 @@ published: 2022-04-01
 1. 二层网络处理费用，通常非常便宜
 2. 一层网络存储费用，与主网燃料费用相关
 
-撰写本文时，在乐观卷叠上，二层网络燃料费用是 0.001 [Gwei](/developers/docs/gas/#pre-london)。 另一方面，一层网络的燃料费用约为 40 gwei。 [点击此处可以查看当前价格](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)。
+撰写本文时，在 Optimism 上，二层网络燃料费用是 0.001 [Gwei](/developers/docs/gas/#pre-london)。 另一方面，一层网络的燃料费用约为 40 gwei。 [点击此处可以查看当前价格](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)。
 
 calldata 一个字节的费用为 4 个燃料单位（如果值为零）或 16 个燃料单位（如果值是任何其他值）。 以太坊虚拟机上最昂贵的操作之一是写入存储。 将 32 字节的字写入二层网络存储的最高费用为 22100 个燃料单位。 目前，该费用是 22.1 gwei。 因此，如果我们可以仅保存 calldata 零字节，就能够将大约 200 个字节写入存储，并且仍然可以获利。
 
@@ -42,13 +42,13 @@ calldata 一个字节的费用为 4 个燃料单位（如果值为零）或 16 �
 
 但是，应用程序二进制接口是为一层网络设计的，在一层网络上，calldata 一个字节的费用大约与四次算术运算相同，而在二层网络上，calldata 一个字节的费用超过一千次算术运算的费用。 例如，[此处提供一个 ERC-20 转账交易](https://kovan-optimistic.etherscan.io/tx/0x7ce4c144ebfce157b4de99d8ad53a352ae91b57b3fa06d8a1c79439df6bfa998)。 calldata 包括以下部分：
 
-| 部分       | 长度 |  字节 | 浪费的字节 | 浪费的燃料 | 所需字节 | 所需燃料 |
-| ---------- | ---: | ----: | ---------: | ---------: | -------: | -------: |
-| 函数选择器 |    4 |   0-3 |          3 |         48 |        1 |       16 |
-| 零值       |   12 |  4-15 |         12 |         48 |        0 |        0 |
-| 目标地址   |   20 | 16-35 |          0 |          0 |       20 |      320 |
-| 金额       |   32 | 36-67 |         17 |         64 |       15 |      240 |
-| 总计       |   68 |       |            |        160 |          |      576 |
+| 部分    | 长度 |    字节 | 浪费的字节 | 浪费的燃料 | 所需字节 | 所需燃料 |
+| ----- | --:| -----:| -----:| -----:| ----:| ----:|
+| 函数选择器 |  4 |   0-3 |     3 |    48 |    1 |   16 |
+| 零值    | 12 |  4-15 |    12 |    48 |    0 |    0 |
+| 目标地址  | 20 | 16-35 |     0 |     0 |   20 |  320 |
+| 金额    | 32 | 36-67 |    17 |    64 |   15 |  240 |
+| 总计    | 68 |       |       |   160 |      |  576 |
 
 注释：
 
@@ -116,7 +116,7 @@ contract CalldataInterpreter {
 
 ```solidity
     function calldataVal(uint startByte, uint length)
-        private please return (uint)
+        private pure returns (uint) {
 ```
 
 从 calldata 中读取一个值。
@@ -159,7 +159,7 @@ contract CalldataInterpreter {
     fallback() external {
 ```
 
-当对 Solidity 合约的调用不匹配任何函数签名时，它会调用 [`fallback()` 函数](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function)（假设有此函数）。 在 `CalldataInterpreter` 的情况下，*任何*调用都会调用该函数，因为没有其他 `external` 或 `public` 函数。
+当对 Solidity 合约的调用不匹配任何函数签名时，它会调用 [`fallback()` 函数](https://docs.soliditylang.org/en/v0.8.12/contracts.html#fallback-function)（假设有此函数）。 在 `CalldataInterpreter` 的情况下，_任何_调用都会调用该函数，因为没有其他 `external` 或 `public` 函数。
 
 ```solidity
         uint _func;
@@ -227,11 +227,11 @@ contract CalldataInterpreter {
 
 总的来说，一次转账需要使用 calldata 的 35 个字节：
 
-| 部分       | 长度 |  字节 |
-| ---------- | ---: | ----: |
-| 函数选择器 |    1 |     0 |
-| 目标地址   |   32 |  1-32 |
-| 金额       |    2 | 33-34 |
+| 部分    | 长度 |    字节 |
+| ----- | --:| -----:|
+| 函数选择器 |  1 |     0 |
+| 目标地址  | 32 |  1-32 |
+| 金额    |  2 | 33-34 |
 
 ```solidity
     }   // fallback

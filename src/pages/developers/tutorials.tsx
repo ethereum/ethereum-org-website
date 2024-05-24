@@ -33,7 +33,7 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getTutorialsData } from "@/lib/utils/md"
-import { getLocaleTimestamp, INVALID_DATETIME } from "@/lib/utils/time"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
   filterTutorialsByLang,
@@ -84,7 +84,7 @@ export const getStaticProps = (async ({ locale }) => {
     "/developers/tutorials"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 
@@ -126,15 +126,17 @@ export interface ITutorial {
 
 const published = (locale: string, published: string) => {
   const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
-  return localeTimestamp !== INVALID_DATETIME ? (
+  return localeTimestamp !== "Invalid Date" ? (
     <span>
-      <Emoji text=":calendar:" fontSize="sm" ms={2} me={2} /> {localeTimestamp}
+      <Emoji text=":calendar:" fontSize="sm" ms={2} me={2} />
+      {localeTimestamp}
     </span>
   ) : null
 }
 
 const TutorialPage = ({
   internalTutorials,
+  contentNotTranslated,
 }: InferGetServerSidePropsType<typeof getStaticProps>) => {
   const { locale } = useRouter()
   const { flipForRtl } = useRtlFlip()
@@ -197,6 +199,7 @@ const TutorialPage = ({
     setSelectedTags([...tempSelectedTags])
   }
 
+  const dir = contentNotTranslated ? "ltr" : "unset"
   return (
     <Flex
       as={MainArticle}
@@ -206,6 +209,7 @@ const TutorialPage = ({
       my={0}
       mx="auto"
       mt={16}
+      dir={dir}
     >
       <PageMetadata
         title={t("page-developers-tutorials:page-tutorials-meta-title")}
@@ -214,6 +218,7 @@ const TutorialPage = ({
         )}
       />
       <Heading
+        as="h1"
         fontStyle="normal"
         fontWeight="semibold"
         fontFamily="monospace"
@@ -237,13 +242,13 @@ const TutorialPage = ({
         <Translation id="page-developers-tutorials:page-tutorial-subtitle" />
       </Text>
 
-      <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
+      <Modal isOpen={isModalOpen} setIsOpen={setModalOpen} dir={dir}>
         <Heading fontSize="2rem" lineHeight="1.4" mb={4}>
           <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
         </Heading>
         <Text>
           <Translation id="page-developers-tutorials:page-tutorial-listing-policy-intro" />{" "}
-          <InlineLink to="/contributing/content-resources/">
+          <InlineLink href="/contributing/content-resources/">
             <Translation id="page-developers-tutorials:page-tutorial-listing-policy" />
           </InlineLink>
         </Text>
@@ -469,8 +474,10 @@ const TutorialPage = ({
               </Flex>
               <Text color="text200" fontSize="sm" textTransform="uppercase">
                 <Emoji text=":writing_hand:" fontSize="sm" me={2} />
-                {tutorial.author} •
-                {published(locale!, tutorial.published ?? "")}
+                {tutorial.author}
+                {tutorial.published ? (
+                  <> •{published(locale!, tutorial.published!)}</>
+                ) : null}
                 {tutorial.timeToRead && (
                   <>
                     {" "}

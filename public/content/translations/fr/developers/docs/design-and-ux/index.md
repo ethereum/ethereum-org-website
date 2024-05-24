@@ -12,7 +12,7 @@ Vous avez d'abord besoin d'une compréhension plus élémentaire du web3 ? Consu
 
 Un design efficace va au-delà de la création d'interfaces utilisateur visuellement attrayantes. Il s'agit d'acquérir une compréhension approfondie des besoins, des objectifs et des facteurs déterminants de l'utilisateur. C'est pourquoi nous recommandons vivement à tous les designers d'adopter un processus de design, tel que le [**processus du double diamant**](<https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)>), afin de s'assurer que leur travail est délibéré et intentionnel.
 
-- [Le web3 a besoin de plus de chercheurs et de designers UX](https://akasha.org/blog/2022/10/11/akasha-conversation-09-web3-ux-researchers-and-designers) - Un aperçu de la maturité actuelle du design
+- [Le web3 a besoin de plus de chercheurs et de designers UX](https://blog.akasha.org/akasha-conversations-9-web3-needs-more-ux-researchers-and-designers) - Un aperçu de la maturité actuelle du design
 - [Un guide simple sur la recherche sur l'UX dans le web3](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1) - Guide sur comment faire de la recherche
 - [Comment aborder les décisions d'UX dans le Web3](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - Un aperçu rapide de la recherche quantitative et qualitative et des différences entre les deux (vidéo, 6 min)
 - [Être un chercheur UX dans le Web3](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) - Un point de vue personnel sur ce que c'est que d'être un chercheur UX dans le Web3
@@ -75,7 +75,7 @@ Participez à des organisations professionnelles communautaires ou rejoignez des
 
 ## Concevoir des systèmes {#design-systems}
 
-- [Conception d'Optimism](https://www.figma.com/@oplabs) (Figma)
+- [Conception d'Optimism](https://www.figma.com/@optimism) (Figma)
 - [Ethereum.org Conception de system](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity, un système de design pour Web3 par Polygon](https://finity.polygon.technology/) (Figma)
 - [Architecture du système ENS](https://thorin.ens.domains/)

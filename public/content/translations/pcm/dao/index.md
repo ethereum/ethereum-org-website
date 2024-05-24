@@ -156,7 +156,7 @@ _Dem dey use am for decentralized development and governance of protocols and da
 - [ Hau yu fit start DAO-powered Digital Komunity](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) - [DAOhaus](https://daohaus.club/)
 - [ Wetin be DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) - [Coinmarketcap](https://coinmarketcap.com)
 - [Wetin be Holographic Consensus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [ DAOstack](https://daostack.io/)
-- [DAOs no be corporations: where decentralization in autonomous organizations matter by vitalik](https://vitalik.ca/general/2022/09/20/daos.html)
+- [DAOs no be corporations: where decentralization in autonomous organizations matter by vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAOs, DACs, DAs and More: terminology guide wey no complete](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [ Ethereum Blog](https://blog.ethereum.org)
 
 ### Videos {#videos}

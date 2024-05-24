@@ -8,14 +8,14 @@ import type { SimulatorNav } from "../interfaces"
 import { SendReceiveButton } from "./SendRecieveButton"
 import type { SendReceiveEnabled } from "./types"
 
-interface SendReceiveButtonsProps {
+type SendReceiveButtonsProps = {
   nav?: SimulatorNav
   isEnabled?: SendReceiveEnabled
 }
-export const SendReceiveButtons: React.FC<SendReceiveButtonsProps> = ({
+export const SendReceiveButtons = ({
   nav,
   isEnabled = [false, false],
-}) => {
+}: SendReceiveButtonsProps) => {
   const [isSendEnabled, isReceiveEnabled] = isEnabled
   if (nav && isSendEnabled && isReceiveEnabled)
     throw new Error(

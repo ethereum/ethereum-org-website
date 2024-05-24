@@ -16,7 +16,9 @@ lang: fa
 
 ## منابع Ethereum.org {#ethereum-org}
 
-Ethereum.org به بیش از 40 زبان بومی ترجمه شده است که می‌توانید در [صفحه‌ی زبان‌ها](/languages)ی ما آن‌ها را بیابید.
+Ethereum.org به بیش از 40 زبان بومی ترجمه شده است که می‌توانید در صفحه‌ی زبان‌های ما آن‌ها را بیابید.
+
+![Language selector menu](./language-selector-menu.png)
 
 اگر دوزبانه هستید و می‌خواهید به ما کمک کنید تا افراد بیشتری را جذب کنیم، می‌توانید در [برنامه‌ی ترجمه ethereum.org](/contributing/translation-program/#translation-program) نیز مشارکت داشته باشید و به ما کمک کنید تا وب‌سایت را ترجمه کنیم.
 
@@ -72,7 +74,7 @@ Ethereum.org به بیش از 40 زبان بومی ترجمه شده است که
 - [Gwei.cz](https://gwei.cz) - جامعه‌ی محلی با محوریت Web3 که محتوای آموزشی تولید می‌کند و رویدادهای آنلاین و حضوری را سامان‌دهی می‌کند
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) - راهنمای اتریوم برای مبتدیان
 - [DAO Příručka](https://dao.gwei.cz/) - راهنمای DAOها برای مبتدیان
-- [تبحر در اتریوم](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - یادگیری زیروبم اتریوم به زبان چک
+- [تبحر در اتریوم](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - یادگیری زیروبم اتریوم به زبان چک
 
 ### فرانسوی {#fr}
 

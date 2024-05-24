@@ -9,9 +9,12 @@ import {
   Heading,
   Icon,
   SimpleGrid,
+  Text,
   useToken,
   VStack,
 } from "@chakra-ui/react"
+
+import { ChildOnlyProp } from "@/lib/types"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -25,18 +28,15 @@ import {
 } from "../icons/staking"
 import Translation from "../Translation"
 
-type ChildOnlyType = {
-  children: ReactNode
+type SectionGridProps = ChildOnlyProp & {
+  number: number
 }
 
 const $colorVar = cssVar("color")
 const $nextColorVar = cssVar("next-color")
 const $fillColorVar = cssVar("fill-color")
 
-const SectionGrid: React.FC<{ number: number; children: ReactNode }> = ({
-  number,
-  children,
-}) => {
+const SectionGrid = ({ number, children }: SectionGridProps) => {
   const colorValue = () => {
     switch (number) {
       case 1:
@@ -117,7 +117,7 @@ const SectionGrid: React.FC<{ number: number; children: ReactNode }> = ({
   )
 }
 
-const StyledEtherSvg: React.FC<{ size: string }> = ({ size }) => (
+const StyledEtherSvg = ({ size }: { size: string }) => (
   <Center gridArea="ether" zIndex={2} maxW={20} width="full" mx="auto">
     <StakingGlyphEtherCircleIcon
       boxSize={size}
@@ -157,7 +157,7 @@ const Line = () => {
   )
 }
 
-const Header = ({ children }: ChildOnlyType) => (
+const Header = ({ children }: ChildOnlyProp) => (
   <Flex
     gridArea="header"
     flexDirection="column"
@@ -169,7 +169,7 @@ const Header = ({ children }: ChildOnlyType) => (
   </Flex>
 )
 
-const HeadingEl = ({ children }: ChildOnlyType) => (
+const HeadingEl = ({ children }: ChildOnlyProp) => (
   <Heading
     color={$colorVar.reference}
     fontSize="2rem"
@@ -181,7 +181,7 @@ const HeadingEl = ({ children }: ChildOnlyType) => (
   </Heading>
 )
 
-const Pills = ({ children }: ChildOnlyType) => (
+const Pills = ({ children }: ChildOnlyProp) => (
   <Flex
     flexWrap="wrap"
     gap={1}
@@ -223,8 +223,9 @@ const Glyph = ({ glyphIcon }: GlyphProps) => (
   </Center>
 )
 
-const Content = ({ children }: ChildOnlyType) => (
-  <Box
+const Content = ({ children }: ChildOnlyProp) => (
+  <Flex
+    flexDirection="column"
     gridArea="content"
     mt={{ md: 4 }}
     mb={{ md: 12 }}
@@ -235,9 +236,10 @@ const Content = ({ children }: ChildOnlyType) => (
         fontWeight: 600,
       },
     }}
+    gap={4}
   >
     {children}
-  </Box>
+  </Flex>
 )
 
 const StakingHierarchy = () => {
@@ -265,33 +267,35 @@ const StakingHierarchy = () => {
         <Header>
           <HeadingEl>{t("page-staking-hierarchy-solo-h2")}</HeadingEl>
           <Pills>
-            <p>
+            <Text>
               <em>{t("page-staking-hierarchy-solo-pill-1")}</em>
-            </p>
-            <p>{t("page-staking-hierarchy-solo-pill-2")}</p>
-            <p>{t("page-staking-hierarchy-solo-pill-3")}</p>
-            <p>{t("page-staking-hierarchy-solo-pill-4")}</p>
+            </Text>
+            <Text>{t("page-staking-hierarchy-solo-pill-2")}</Text>
+            <Text>{t("page-staking-hierarchy-solo-pill-3")}</Text>
+            <Text>{t("page-staking-hierarchy-solo-pill-4")}</Text>
           </Pills>
         </Header>
         <Glyph glyphIcon={StakingGlyphCPUIcon} />
         <Content>
-          <p>
+          <Text>
             <Translation id="page-staking:page-staking-hierarchy-solo-p1" />
-          </p>
-          <p>{t("page-staking-hierarchy-solo-p2")}</p>
-          <ButtonLink
-            to="/staking/solo/"
-            onClick={() => {
-              trackCustomEvent({
-                eventCategory: `StakingHierarchy`,
-                eventAction: `Clicked`,
-                eventName: "clicked solo staking",
-              })
-            }}
-            width={{ base: "100%", md: "auto" }}
-          >
-            {t("page-staking-more-on-solo")}
-          </ButtonLink>
+          </Text>
+          <Text>{t("page-staking-hierarchy-solo-p2")}</Text>
+          <Box>
+            <ButtonLink
+              to="/staking/solo/"
+              onClick={() => {
+                trackCustomEvent({
+                  eventCategory: `StakingHierarchy`,
+                  eventAction: `Clicked`,
+                  eventName: "clicked solo staking",
+                })
+              }}
+              width={{ base: "100%", md: "auto" }}
+            >
+              {t("page-staking-more-on-solo")}
+            </ButtonLink>
+          </Box>
         </Content>
       </SectionGrid>
       <SectionGrid number={2}>
@@ -300,29 +304,31 @@ const StakingHierarchy = () => {
         <Header>
           <HeadingEl>{t("page-staking-dropdown-saas")}</HeadingEl>
           <Pills>
-            <p>{t("page-staking-hierarchy-saas-pill-1")}</p>
-            <p>{t("page-staking-hierarchy-saas-pill-2")}</p>
-            <p>{t("page-staking-hierarchy-saas-pill-3")}</p>
+            <Text>{t("page-staking-hierarchy-saas-pill-1")}</Text>
+            <Text>{t("page-staking-hierarchy-saas-pill-2")}</Text>
+            <Text>{t("page-staking-hierarchy-saas-pill-3")}</Text>
           </Pills>
         </Header>
         <Glyph glyphIcon={StakingGlyphCloudIcon} />
         <Content>
-          <p>{t("page-staking-hierarchy-saas-p1")}</p>
-          <p>{t("page-staking-hierarchy-saas-p2")}</p>
-          <p>{t("page-staking-hierarchy-saas-p3")}</p>
-          <ButtonLink
-            to="/staking/saas/"
-            onClick={() => {
-              trackCustomEvent({
-                eventCategory: `StakingHierarchy`,
-                eventAction: `Clicked`,
-                eventName: "clicked staking as a service",
-              })
-            }}
-            width={{ base: "100%", md: "auto" }}
-          >
-            {t("page-staking-more-on-saas")}
-          </ButtonLink>
+          <Text>{t("page-staking-hierarchy-saas-p1")}</Text>
+          <Text>{t("page-staking-hierarchy-saas-p2")}</Text>
+          <Text>{t("page-staking-hierarchy-saas-p3")}</Text>
+          <Box>
+            <ButtonLink
+              to="/staking/saas/"
+              onClick={() => {
+                trackCustomEvent({
+                  eventCategory: `StakingHierarchy`,
+                  eventAction: `Clicked`,
+                  eventName: "clicked staking as a service",
+                })
+              }}
+              width={{ base: "100%", md: "auto" }}
+            >
+              {t("page-staking-more-on-saas")}
+            </ButtonLink>
+          </Box>
         </Content>
       </SectionGrid>
       <SectionGrid number={3}>
@@ -331,33 +337,43 @@ const StakingHierarchy = () => {
         <Header>
           <HeadingEl>{t("page-staking-dropdown-pools")}</HeadingEl>
           <Pills>
-            <p>{t("page-staking-hierarchy-pools-pill-1")}</p>
-            <p>{t("page-staking-hierarchy-pools-pill-2")}</p>
-            <p>{t("page-staking-hierarchy-pools-pill-3")}</p>
-            <p>
+            <Text>{t("page-staking-hierarchy-pools-pill-1")}</Text>
+            <Text>{t("page-staking-hierarchy-pools-pill-2")}</Text>
+            <Text>{t("page-staking-hierarchy-pools-pill-3")}</Text>
+            <Text>
               <em>{t("page-staking-hierarchy-pools-pill-4")}</em>
-            </p>
+            </Text>
           </Pills>
         </Header>
         <Glyph glyphIcon={StakingGlyphTokenWalletIcon} />
         <Content>
-          <p>{t("page-staking-hierarchy-pools-p1")}</p>
-          <p>{t("page-staking-hierarchy-pools-p2")}</p>
-          <p>{t("page-staking-hierarchy-pools-p3")}</p>
-          <p>{t("page-staking-hierarchy-pools-p4")}</p>
-          <ButtonLink
-            to="/staking/pools/"
-            onClick={() => {
-              trackCustomEvent({
-                eventCategory: `StakingHierarchy`,
-                eventAction: `Clicked`,
-                eventName: "clicked pooled staking",
-              })
-            }}
-            width={{ base: "100%", md: "auto" }}
-          >
-            {t("page-staking-more-on-pools")}
-          </ButtonLink>
+          <Text>
+            <Translation id="page-staking:page-staking-hierarchy-pools-p1" />
+          </Text>
+          <Text>
+            <Translation id="page-staking:page-staking-hierarchy-pools-p2" />
+          </Text>
+          <Text>
+            <Translation id="page-staking:page-staking-hierarchy-pools-p3" />
+          </Text>
+          <Text>
+            <Translation id="page-staking:page-staking-hierarchy-pools-p4" />
+          </Text>
+          <Box>
+            <ButtonLink
+              to="/staking/pools/"
+              onClick={() => {
+                trackCustomEvent({
+                  eventCategory: `StakingHierarchy`,
+                  eventAction: `Clicked`,
+                  eventName: "clicked pooled staking",
+                })
+              }}
+              width={{ base: "100%", md: "auto" }}
+            >
+              {t("page-staking-more-on-pools")}
+            </ButtonLink>
+          </Box>
         </Content>
       </SectionGrid>
       <SectionGrid number={4}>
@@ -366,19 +382,19 @@ const StakingHierarchy = () => {
         <Header>
           <HeadingEl>{t("page-staking-hierarchy-cex-h2")}</HeadingEl>
           <Pills>
-            <p>
+            <Text>
               <em>{t("page-staking-hierarchy-cex-pill-1")}</em>
-            </p>
-            <p>{t("page-staking-hierarchy-cex-pill-2")}</p>
+            </Text>
+            <Text>{t("page-staking-hierarchy-cex-pill-2")}</Text>
           </Pills>
         </Header>
         <Glyph glyphIcon={StakingGlyphCentralizedIcon} />
         <Content>
-          <p>{t("page-staking-hierarchy-cex-p1")}</p>
-          <p>{t("page-staking-hierarchy-cex-p2")}</p>
-          <p>
+          <Text>{t("page-staking-hierarchy-cex-p1")}</Text>
+          <Text>{t("page-staking-hierarchy-cex-p2")}</Text>
+          <Text>
             <Translation id="page-staking:page-staking-hierarchy-cex-p3" />
-          </p>
+          </Text>
         </Content>
       </SectionGrid>
     </VStack>

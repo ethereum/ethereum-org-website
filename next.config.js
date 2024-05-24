@@ -2,7 +2,7 @@ const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 
 const { i18n } = require("./next-i18next.config")
 
-const LIMIT_CPUS = Number(process.env.LIMIT_CPUS || 2)
+const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
 
 const experimental = LIMIT_CPUS
   ? {
@@ -34,6 +34,7 @@ module.exports = (phase, { defaultConfig }) => {
       return config
     },
     i18n,
+    trailingSlash: true,
     images: {
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
     },

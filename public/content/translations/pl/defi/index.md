@@ -277,7 +277,7 @@ Zdecentralizowane ubezpieczenia mają na celu obniżenie kosztów ubezpieczenia,
 Produkty Ethereum, podobnie jak każde oprogramowanie, mogą zawierać błędy i są narażone na oprogramowanie wykorzystujące luki. Dlatego obecnie wiele dostępnych produktów ubezpieczeniowych koncentruje się na ochronie użytkowników przed utratą środków. Jednak pojawiają się projekty, które zaczynają obejmować swoim zasięgiem wszystko, czym może nas zaskoczyć życie. Dobrym tego przykładem jest program Crop firmy Etherisc, którego celem jest [ochrona drobnych rolników w Kenii przed suszami i powodziami](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Zdecentralizowane ubezpieczenie może zapewnić tańszą ochronę ubezpieczeniową dla rolników, którzy często nie są uwzględniani przez tradycyjnych ubezpieczycieli.
 
 <ButtonLink to="/dapps/?category=finance">
-  Zobacz d-aplikacje ubezpieczeniowe
+  Zobacz zdecentralizowane aplikacje ubezpieczeniowe
 </ButtonLink>
 
 <Divider />

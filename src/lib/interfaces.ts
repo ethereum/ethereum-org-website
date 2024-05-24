@@ -1,58 +1,14 @@
-import { StaticImageData } from "next/image"
-import type { ReactNode } from "react"
+import type { StaticImageData } from "next/image"
 
 import type {
   CrowdinContributor,
+  FileContributor,
   Frontmatter,
   Lang,
   Layout,
   ToCItem,
   TranslationKey,
 } from "@/lib/types"
-
-/**
- * Quiz data interfaces
- */
-export interface AnswerChoice {
-  answerId: string
-  isCorrect: boolean
-}
-
-export interface Answer {
-  id: string
-  label: TranslationKey
-  explanation: TranslationKey
-  moreInfoLabel?: string
-  moreInfoUrl?: string
-}
-
-export interface RawQuestion {
-  prompt: TranslationKey
-  answers: Answer[]
-  correctAnswerId: string
-}
-
-export interface Question extends RawQuestion {
-  id: string
-}
-
-export interface QuestionBank {
-  [key: string]: RawQuestion
-}
-
-export interface RawQuiz {
-  title: TranslationKey
-  questions: string[] // TODO: Force to be an array of questionID's
-}
-
-export interface Quiz {
-  title: string
-  questions: Question[]
-}
-
-export interface RawQuizzes {
-  [key: string]: RawQuiz
-}
 
 export interface DeveloperDocsLink {
   id: TranslationKey
@@ -75,7 +31,6 @@ export interface SharedFrontmatter {
 }
 
 export interface StaticFrontmatter extends SharedFrontmatter {
-  postMergeBannerTranslation?: string
   hideEditButton?: boolean
 }
 
@@ -142,9 +97,7 @@ export interface TutorialFrontmatter extends SharedFrontmatter {
   skill: string
   published: string
   address?: string
-  postMergeBannerTranslation?: string
   hideEditButton?: boolean
-  showPostMergeBanner?: boolean
 }
 
 export interface MdPageContent {
@@ -155,6 +108,7 @@ export interface MdPageContent {
   lastUpdatedDate?: string
   contentNotTranslated: boolean
   crowdinContributors: CrowdinContributor[]
+  gitContributors: FileContributor[]
 }
 
 // Local environment framework
@@ -184,7 +138,6 @@ export interface CommunityEvent {
   date: string
   title: string
   calendarLink: string
-  pastEventLink?: string
 }
 
 export interface ReqCommunityEvent {

@@ -26,7 +26,7 @@ Además de las ventajas que hemos descrito en nuestra [introducción a las parti
 <CardGrid>
   <Card title="Barrera baja de entrada" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
   <Card title="Participe hoy" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="tókenes de participación" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
+  <Card title="Tókenes de participación" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -53,14 +53,14 @@ Existe una gran variedad de opciones disponibles para ayudarle con su configurac
 
 <StakingProductsCardGrid category="pools" />
 
-Es importante elegir un servicio que se tome en serio la [diversidad de clientes](/developers/docs/nodes-and-clients/client-diversity/), ya que mejora la seguridad de la red y limita el riesgo. Los servicios que tienen constatación de limitar el uso de cliente mayoritario están señalados con <em style={{ textTransform: "uppercase" }}>"diversidad de cliente de ejecución"</em> y <em style={{ textTransform: "uppercase" }}>"diversidad de cliente de consenso".</em>
+Es importante elegir un servicio que se tome en serio la [diversidad de clientes](/developers/docs/nodes-and-clients/client-diversity/), ya que mejora la seguridad de la red y limita el riesgo. Los servicios que tienen constatación de limitar el uso de cliente mayoritario están señalados como <em style={{ textTransform: "uppercase" }}>"diversidad de cliente de ejecución"</em> y <em style={{ textTransform: "uppercase" }}>"diversidad de cliente de consenso".</em>
 
 ¿Tiene alguna sugerencia para una herramienta de participación no cubierta? Eche un vistazo a nuestra [política de listado de productos](/contributing/adding-staking-products/) para ver si le parece una opción aceptable y enviarla para su revisión.
 
 ## Preguntas más frecuentes {#faq}
 
 <ExpandableCard title="¿Cómo puedo ganar recompensas?">
-Normalmente los tókenes de participación ERC-20 se emiten a los participantes y representan el valor de sus ETH apostados más las recompensas. Tenga en cuenta que las diferentes agrupaciones repartirán las recompensas de las participaciones entre sus usuarios a través de métodos ligeramente diferentes, pero siempre se reparten.
+Por lo general, los tókenes de participación ERC-20 se emiten a los participantes y representan el valor de sus ETH apostados y las recompensas. Tenga en cuenta que las diferentes agrupaciones repartirán las recompensas de las participaciones entre sus usuarios a través de métodos ligeramente diferentes, pero siempre se reparten.
 </ExpandableCard>
 
 <ExpandableCard title="¿Cuándo puedo retirar mi participación?">
@@ -81,5 +81,6 @@ Algunas opciones de agrupamiento están más descentralizadas que otras cuando s
 
 ## Para profundizar sobre el tema {#further-reading}
 
+- [El directorio de participación de Ethereum](https://www.staking.directory/), _Eridian y Spacesider_
 - [Participaciones con RocketPool: visión general de las participaciones](https://docs.rocketpool.net/guides/staking/overview.html) - _Documentos de RocketPool_
 - [Participaciones Ethereum con Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Documentos de ayuda de Lido_

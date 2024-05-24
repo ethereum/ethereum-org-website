@@ -4,7 +4,7 @@ description: Tutorial per principianti
 author: Ewa Kowalska
 tags:
   - "contratti intelligenti"
-  - "Solidity"
+  - "solidity"
   - "Waffle"
   - "test"
 skill: beginner

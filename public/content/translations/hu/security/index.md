@@ -10,105 +10,11 @@ A kriptovaluták iránt nő az érdeklődés, ezért elengedhetetlen megtanulni 
 
 <Divider />
 
-## Webbiztonság 101 {#web-security}
-
-### Használjon erős jelszavakat {#use-strong-passwords}
-
-[A számlatámadások 80%-a a gyenge vagy ellopott jelszavakból ered](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Egy hosszú, betűkből, számokból és szimbólumokból álló sorozat a legjobb ahhoz, hogy a számlája biztonságban legyen.
-
-A legtipikusabb hiba az, ha két-három hétköznapi, kapcsolódó szót használnak. Ezek a jelszavak nem biztonságosak, mert lehetővé tesznek egy egyszerű hackelési technikát, az úgynevezett [szótáralapú támadást](https://wikipedia.org/wiki/Dictionary_attack).
-
-```md
-Gyenge jelszó például: AranyosBolyhosCicák!
-
-Erős jelszó például: ymv\*azu.EAC8eyp8umf
-```
-
-A másik általános hiba az, amikor a [közösségi médiából visszafejthető](<https://wikipedia.org/wiki/Social_engineering_(security)>) jelszót találnak ki. Beleértve az édesanyja leánykori nevét, a gyerekek vagy háziállatok neveit, születési időpontokat használva nem lesz a jelszó biztonságos, és lehetőséget ad a támadásra.
-
-#### A jó jelszóhoz: {#good-password-practices}
-
-- Olyan hosszú jelszót válasszon, amit jelszógenerátor készít vagy megenged az adott rendszer
-- Használjon nagybetűt, kisbetűt, számokat és jeleket
-- Ne használjon személyes adatokat, mint családi nevek
-- Ne használjon hétköznapi szavakat, melyeket a szótár is tartalmaz
-
-[Bővebben az erős jelszó létrehozásáról](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
-
-### Használjon egyedi jelszót mindenre {#use-unique-passwords}
-
-Az erős jelszó sem véd meg akkor, ha kiszivárog egy adatvédelmi incidens során. A [Have I Been Pwned](https://haveibeenpwned.com) weblap megmutatja, hogy a számláját érintette-e bármilyen adatvédelmi incidens. Ha igen, akkor **azonnal cserélje le a jelszavait**. Az egyedi jelszavak használata csökkenti annak kockázatát, hogy a támadó mindenhez hozzáfér, amikor egy jelszót feltör.
-
-### Használjon jelszókezelőt {#use-password-manager}
-
-<InfoBanner emoji=":bulb:">
-  <div>
-    A jelszókezelő erős, egyedi jelszavakat hoz létre és meg is jegyzi azokat! <strong>Erősen</strong> ajánljuk, hogy használjon ilyet, és a legtöbb ingyen van!
-  </div>
-</InfoBanner>
-
-Az erős, egyedi jelszavakat nem túl ideális megjegyezni az összes számlához. A jelszókezelő egy biztonságos, titkosított tárhelyet biztosít az összes jelszónak, amit egy erős mesterjelszóval tud elérni. Az új szolgáltatásokra való bejelentkezéseknél is erős jelszavakat ajánl, így Önnek nem kell kitalálnia azt. Számos jelszókezelő azt is megmondja, hogy Ön érintett-e adatszivárgásban, így lecserélheti a jelszavait, mielőtt támadás érné.
-
-![Példa a jelszókezelő használatára](./passwordManager.png)
-
-#### Próbáljon ki egy jelszókezelőt: {#try-password-manager}
-
-- [Bitwarden](https://bitwarden.com/)
-- [KeePass](https://keepass.info/)
-- [1Password](https://1password.com/)
-- Emellett más [javasolt jelszókezelőket](https://www.privacytools.io/secure-password-manager) is megtekinthet
-
-### Használjon kéttényezős azonosítást {#two-factor-authentication}
-
-Különböző egyedi bizonyítékok bemutatásával igazolhatja, hogy Ön valóban az, akinek mondja magát. Ezek a **tényezők**, melyekből a három legfontosabb:
-
-- Valami, amit tud (mint egy jelszó vagy biztonsági kérdés)
-- Valami, ami Öntől származik (mint egy ujjlenyomat vagy írisz-/arcszkenner)
-- Valami, ami az Ön birtokában van (biztonsági kulcs vagy azonosítási alkalmazás a telefonján)
-
-A **kéttényezős azonosítás (2FA)** egy plusz _biztonsági tényezőt_ ad az online számlákhoz, így a jelszó (amit Ön tud) önmagában nem elég annak eléréséhez. Általában a második tényező egy véletlenszerű hatjegyű kód, ami egy **időzített egyszeri jelszó (TOTP)**, amit egy azonosítási alkalmazással ér el, mint a Google Authenticator vagy Authy. Ez az a tényező, ami az Ön birtokában van, mert a kódot adó mag az Ön eszközén található.
-
-<InfoBanner emoji=":lock:">
-  <div>
-    Megjegyzés: az SMS-alapú 2FA azonosítás ki van téve a 
-    <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
-      SIM jacking
-    </a>
-    támadásnak, ezért nem biztonságos. A legmagasabb fokú biztonság érdekében használjon olyan szolgáltatást, mint a {" "}
-    <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
-      Google Authenticator
-    </a>
-     vagy az <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
-
-#### Biztonsági kulcsok {#security-keys}
-
-Akik a 2FA következő szintjére akarnak lépni, azoknak a biztonsági kulcs használata ajánlott. A biztonsági kulcsok fizikai, hardveralapú hitelesítési eszközök, melyek az azonosítási alkalmazásokhoz hasonlóan működnek. A biztonsági kulcs használata a legbiztonságosabb mód a 2FA eléréséhez. A kulcsok nagyrésze a FIDO egyetemes második tényező (U2F) szabványt használja. [Ismerje meg a FIDO U2F-t](https://www.yubico.com/authentication-standards/fido-u2f/).
-
-Tudjon meg többet a 2FA-ról:
-
-<YouTube id="m8jlnZuV1i4" start="3479" />
-
-### Böngészőbővítmények eltávolítása {#uninstall-browser-extensions}
-
-A böngészőbővítmények (mint a Chrome-bővítmények vagy Firefox kiegészítő modulok) hasznos funkciókkal egészítik ki a böngészőket és jobb felhasználói élményt nyújtanak, de ugyanakkor kockázattal is járnak. A legtöbb ilyen bővítmény kéri, hogy beolvashassa és megváltoztathassa az adatokat, így bármit meg tudnak tenni az eszközön. A Chrome bővítményei automatikusan frissülnek, ezért a korábban ártalmatlan kód később talán rosszindulatú részeket is tartalmazhat. A legtöbb böngészőbővítmény nem próbál meg adatot lopni, de attól még képes rá.
-
-#### Maradjon biztonságban: {#browser-extension-safety}
-
-- Csak megbízható forrásból telepítsen bővítményeket
-- Szedje le azokat, amelyeket nem használja
-- Telepítse a bővítményt lokálisan, így nem fog magától frissülni
-
-[Bővebben a böngészőbővítmények kockázatáról](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
-
-<Divider />
-
 ## Kriptobiztonság 101 {#crypto-security}
 
 ### Növelje tudását {#level-up-your-knowledge}
 
-A legtipikusabb ok, amiért a kripto világában az emberek csalók áldozatai lesznek, az az ismeret és a működés megértésének hiánya. Például ha valaki nem érti, hogy az Ethereum-hálózat decentralizált és nincs senkinek sem a birtokában, akkor könnyedén elhiheti egy ügyfélszolgálati munkatársat megszemélyesítő csalónak, hogy visszaszerzi az elvesztett ETH a privát kulcsaiért cserébe. Az Ethereum működésének megértése megéri a befektetést.
+A legtipikusabb ok, amiért a kripto világában az emberek csalók áldozatai lesznek, az az ismeret és a működés megértésének hiánya. Például ha valaki nem érti, hogy az Ethereum-hálózat decentralizált és nincs senkinek sem a birtokában, akkor könnyedén elhiheti egy ügyfélszolgálati munkatársat megszemélyesítő csalónak, hogy visszaszerzi az elvesztett ETH a [privát kulcsaiért](/glossary/#private-key) cserébe. Az Ethereum működésének megértése megéri a befektetést.
 
 <DocLink to="/what-is-ethereum/">
   Mi az Ethereum?
@@ -121,19 +27,19 @@ A legtipikusabb ok, amiért a kripto világában az emberek csalók áldozatai l
 
 ## Tárcabiztonság {#wallet-security}
 
-### Sose ossza meg privát kulcsait {#protect-private-keys}
+### Ne adja ki senkinek a visszaállításhoz szükséges kulcsot {#protect-recovery-phrase}
 
-**Soha, semmilyen okból se ossza meg a privát kulcsait!**
+**Soha, semmilyen okból se ossza meg a visszaállításhoz szükséges kulcsát!**
 
-A tárca privát kulcsa az Ethereum-tárca jelszava. Ez az egyetlen dolog, aminek a hiányában valaki nem viszi el az összes eszközt a tárcájából, ha ismeri annak a címét!
+A tárca visszaállítási kulcsa vagy mondata jelszóként működik az Ethereum-tárcához. Ez az egyetlen dolog, aminek a hiányában valaki nem viszi el az összes eszközt a tárcájából, ha ismeri annak a címét!
 
 <DocLink to="/wallets/">
   Mi az az Ethereum tárca?
 </DocLink>
 
-#### Sose készítsen képernyőképet a kulcsmondatról/privát kulcsokról {#screenshot-private-keys}
+#### Ne készítsen képet a visszaállításhoz szükséges mondatáról {#screenshot-recovery-phrase}
 
-A képernyőkép készítésével azt kockáztatja, hogy az szinkronizálódik a felhőbe és elérhetővé válik a támadók számára. A privát kulcsok megszerzése a felhőből egy tipikus támadási forma.
+A képernyőkép készítésével azt kockáztatja, hogy az szinkronizálódik a felhőbe és elérhetővé válik a támadók számára. A visszaállításhoz szükséges kulcs vagy mondat megszerzése a felhőből egy tipikus támadási forma.
 
 ### Használjon hardveres tárcát {#use-hardware-wallet}
 
@@ -150,7 +56,7 @@ A privát kulcsok offline tartása komoly szinten csökkenti a támadás kockáz
 
 A rossz tárcába küldött kripto egy tipikus hiba. **Az Ethereumon küldött tranzakció visszafordíthatatlan.** Hacsak nem ismeri a cím tulajdonosát és nem tudja meggyőzni arról, hogy visszaküldje, nincs igazán esélye visszaszerezni azt.
 
-Mindig győződjön meg arról, hogy cím pontosan egyezik a kívánt címmel, mielőtt elküldi a tranzakciót. Az okosszerződésekkel való interakciónál is mindig olvassa el a tranzakcióüzenetet, mielőtt aláírja azt.
+Mindig győződjön meg arról, hogy cím pontosan egyezik a kívánt címmel, mielőtt elküldi a tranzakciót. Az [okosszerződésekkel](/glossary/#smart-contract) való interakciónál is mindig olvassa el a tranzakcióüzenetet, mielőtt aláírja azt.
 
 ### Állítson be költségkeretet az okosszerződéshez {#spend-limits}
 
@@ -170,19 +76,29 @@ A csalók folyamatosan keresik a lehetőséget, hogy elvegyék az Ön eszközeit
 - senki sem ad Önnek ETH-t ingyen vagy olcsón
 - senkinek se adja meg a privát kulcsait vagy a személyes információit
 
+### Twitter-hirdetéses adathalászat {#ad-phishing}
+
+![Twitter-hivatkozásos adathalászat](./twitterPhishingScam.png)
+
+Van egy módszer a Twitter (vagyis X) hivatkozás előnézeti funkciójának (kibontása) meghamisítására, amellyel potenciálisan megtéveszthetik a felhasználókat, hogy azt higgyék, egy legitim webhelyet látogatnak meg. Ez a technika a Twitter mechanizmusát használja ki a tweetekben megosztott URL-ek előnézetének létrehozására, és például azt mutathatja, hogy az az _ethereum.org_-tól származik (ahogy a fenti képen), miközben egy rosszindulatú webhelyre irányítja át.
+
+Mindig ellenőrizze, hogy a megfelelő oldalon van-e, különösen egy hivatkozásra kattintás után.
+
+[További információk itt](https://harrydenley.com/faking-twitter-unfurling).
+
 ### Ajándékozási csalás {#giveaway}
 
 Az egyik legtipikusabb csalás a kriptovalutákkal az ajándékozás. Számos formában előfordulhat, de a lényege az, hogy ha Ön ETH-t küld a megadott tárcacímre, akkor duplán kapja vissza az ETH-t. *Emiatt 2-t 1-ért csalásnak is nevezik.*
 
 Ez az ajánlat csak limitált időre szól, hogy ne gondolja túl a döntéshozást és a sürgetés érzését keltse.
 
-#### Közösségimédia-csalások {#social-media-hacks}
+### Közösségimédia-csalások {#social-media-hacks}
 
 Ennek nagy horderejű esete például 2020. júliusában volt, amikor híres emberek és szervezetek Twitterjét támadták meg. A támadó bitcoin-ajándékozást hirdetett ezeken a számlákon. Habár a megtévesztő üzeneteket gyorsan észrevették és törölték, a támadók még így is szereztek 11 bitcoint (ami 500 000 USD-nek felel meg a 2021. szeptemberi árfolyamon).
 
 ![Csalás a Twitteren](./appleTwitterScam.png)
 
-#### Hírességek ajándékoznak {#celebrity-giveaway}
+### Hírességek ajándékoznak {#celebrity-giveaway}
 
 A hírességek által kommunikált ajándékozás is tipikus. A csalók egy videóinterjút vagy konferenciabeszélgetést úgy tesznek fel a YouTube-ra, mintha élőben menne, és ennek részeként a híresség egy kriptovaluta-ajándékozást hirdet meg.
 
@@ -214,7 +130,7 @@ Az interakciók többsége Discordon történik. A támogatást színlelő csal�
 
 ### „ETH2” hamis token {#eth2-token-scam}
 
-[Az egyesítés (The Merge)](/roadmap/merge/) közeledtével a csalók kihasználták a zavart az „ETH2” kifejezés körül és próbálták rávenni a felhasználókat, hogy váltsák át az ETH-t „ETH2”-re. Nem létezik ETH2, és a Merge sem vezetett be semmilyen tokent. A Merge előtt és után pontosan ugyanaz az ETH létezik. **Az ETH-val kapcsolatban semmit se kellett tenni a felhasználóknak, amikor a rendszer proof-of-work helyett proof-of-stake mechanizmusra állt át**.
+[Az egyesítés (The Merge)](/roadmap/merge/) közeledtével a csalók kihasználták a zavart az „ETH2” kifejezés körül és próbálták rávenni a felhasználókat, hogy váltsák át az ETH-t „ETH2”-re. Nem létezik ETH2, és a Merge sem vezetett be semmilyen tokent. A Merge előtt és után pontosan ugyanaz az ETH létezik. **Az ETH-szel kapcsolatban semmit se kellett tenni a felhasználóknak, amikor a rendszer [proof-of-work](/glossary/#pow) helyett [proof-of-stake](/glossary/#pos) mechanizmusra állt át**.
 
 A csalók ügyfélszolgálatosként jelennek meg, hogy rávegyék Önt, adja át az ETH-t és „ETH2”-t kap helyette. Nincs [hivatalos Ethereum-ügyfélszolgálat](/community/support/), és nincs új token. Sose ossza meg a tárcához kapcsolódó kulcsmondatot senkivel.
 
@@ -260,9 +176,103 @@ Ne feledje:
 
 ### Tokenkiosztási (airdrop) csalások {#airdrop-scams}
 
-A tokenkiosztási (airdrop) csalások során egy hamis projekt eszközt (NFT, token) dob az Ön tárcájába és egy hamis weboldalra küldi, hogy kérvényezze azokat. Így be kell jelentkeznie az Ethereum-tárcájába és jóváhagynia a tranzakciót. Ez a tranzakció veszélybe sodorja a számláját, mivel a nyilvános és privát kulcsait átadja a csalónak. Az is lehet, hogy egy olyan tranzakciót ír alá, ami a csalónak küldi az Ön pénzeszközeit.
+A tokenkiosztási (airdrop) csalások során egy hamis projekt eszközt ([NFT](/glossary/#nft), token) dob az Ön tárcájába és egy hamis weboldalra küldi, hogy kérvényezze azokat. Így be kell jelentkeznie az Ethereum-tárcájába és jóváhagynia a tranzakciót. Ez a tranzakció veszélybe sodorja a számláját, mivel a nyilvános és privát kulcsait átadja a csalónak. Az is lehet, hogy egy olyan tranzakciót ír alá, ami a csalónak küldi az Ön pénzeszközeit.
 
 [Bővebben a tokenkiosztási (airdrop) csalásokról](https://www.youtube.com/watch?v=LLL_nQp1lGk)
+
+<Divider />
+
+## Webbiztonság 101 {#web-security}
+
+### Használjon erős jelszavakat {#use-strong-passwords}
+
+[A számlatámadások 80%-a a gyenge vagy ellopott jelszavakból ered](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Egy hosszú, betűkből, számokból és szimbólumokból álló sorozat a legjobb ahhoz, hogy a számlája biztonságban legyen.
+
+A legtipikusabb hiba az, ha két-három hétköznapi, kapcsolódó szót használnak. Az ehhez hasonló jelszavak nem biztonságosak, mert hajlamosak egy egyszerű hackelési technikára, amelyet szótári támadásként ismerünk.
+
+```md
+Gyenge jelszó például: AranyosBolyhosCicák!
+
+Erős jelszó például: ymv\*azu.EAC8eyp8umf
+```
+
+A másik általános hiba az, amikor a [közösségi médiából visszafejthető](https://wikipedia.org/wiki/Social_engineering_(security)) jelszót találnak ki. Beleértve az édesanyja leánykori nevét, a gyerekek vagy háziállatok neveit, születési időpontokat használva nem lesz a jelszó biztonságos, és lehetőséget ad a támadásra.
+
+#### A jó jelszóhoz: {#good-password-practices}
+
+- Olyan hosszú jelszót válasszon, amit jelszógenerátor készít vagy megenged az adott rendszer
+- Használjon nagybetűt, kisbetűt, számokat és jeleket
+- Ne használjon személyes adatokat, mint családi nevek
+- Ne használjon hétköznapi szavakat, melyeket a szótár is tartalmaz
+
+[Bővebben az erős jelszó létrehozásáról](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
+
+### Használjon egyedi jelszót mindenre {#use-unique-passwords}
+
+Az erős jelszó sem véd meg akkor, ha kiszivárog egy adatvédelmi incidens során. A [Have I Been Pwned](https://haveibeenpwned.com) weblap megmutatja, hogy a számláját érintette-e bármilyen adatvédelmi incidens. Ha igen, akkor **azonnal cserélje le a jelszavait**. Az egyedi jelszavak használata csökkenti annak kockázatát, hogy a támadó mindenhez hozzáfér, amikor egy jelszót feltör.
+
+### Használjon jelszókezelőt {#use-password-manager}
+
+<InfoBanner emoji=":bulb:">
+  <div>
+    A jelszókezelő erős, egyedi jelszavakat hoz létre és meg is jegyzi azokat! <strong>Erősen</strong> ajánljuk, hogy használjon ilyet, és a legtöbb ingyen van!
+  </div>
+</InfoBanner>
+
+Az erős, egyedi jelszavakat nem túl ideális megjegyezni az összes számlához. A jelszókezelő egy biztonságos, titkosított tárhelyet biztosít az összes jelszónak, amit egy erős mesterjelszóval tud elérni. Az új szolgáltatásokra való bejelentkezéseknél is erős jelszavakat ajánl, így Önnek nem kell kitalálnia azt. Számos jelszókezelő azt is megmondja, hogy Ön érintett-e adatszivárgásban, így lecserélheti a jelszavait, mielőtt támadás érné.
+
+![Példa a jelszókezelő használatára](./passwordManager.png)
+
+#### Próbáljon ki egy jelszókezelőt: {#try-password-manager}
+
+- [Bitwarden](https://bitwarden.com/)
+- [KeePass](https://keepass.info/)
+- [1Password](https://1password.com/)
+- Emellett más [javasolt jelszókezelőket](https://www.privacytools.io/secure-password-manager) is megtekinthet
+
+### Használjon kéttényezős azonosítást {#two-factor-authentication}
+
+Különböző egyedi bizonyítékok bemutatásával igazolhatja, hogy Ön valóban az, akinek mondja magát. Ezek a **tényezők**, melyekből a három legfontosabb:
+
+- Valami, amit tud (mint egy jelszó vagy biztonsági kérdés)
+- Valami, ami Öntől származik (mint egy ujjlenyomat vagy írisz-/arcszkenner)
+- Valami, ami az Ön birtokában van (biztonsági kulcs vagy azonosítási alkalmazás a telefonján)
+
+A **kéttényezős azonosítás (2FA)** egy plusz *biztonsági tényezőt* ad az online számlákhoz, így a jelszó (amit Ön tud) önmagában nem elég annak eléréséhez. Általában a második tényező egy véletlenszerű hatjegyű kód, ami egy **időzített egyszeri jelszó (TOTP)**, amit egy azonosítási alkalmazással ér el, mint a Google Authenticator vagy Authy. Ez az a tényező, ami az Ön birtokában van, mert a kódot adó mag az Ön eszközén található.
+
+<InfoBanner emoji=":lock:">
+  <div>
+    Megjegyzés: az SMS-alapú 2FA azonosítás ki van téve a 
+    <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
+      SIM jacking
+    </a>
+    támadásnak, ezért nem biztonságos. A legmagasabb fokú biztonság érdekében használjon olyan szolgáltatást, mint a {" "}
+    <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
+      Google Authenticator
+    </a>
+     vagy az <a href="https://authy.com/">Authy</a>.
+  </div>
+</InfoBanner>
+
+#### Biztonsági kulcsok {#security-keys}
+
+Akik a 2FA következő szintjére akarnak lépni, azoknak a biztonsági kulcs használata ajánlott. A biztonsági kulcsok fizikai, hardveralapú hitelesítési eszközök, melyek az azonosítási alkalmazásokhoz hasonlóan működnek. A biztonsági kulcs használata a legbiztonságosabb mód a 2FA eléréséhez. A kulcsok nagyrésze a FIDO egyetemes második tényező (U2F) szabványt használja. [Ismerje meg a FIDO U2F-t](https://www.yubico.com/authentication-standards/fido-u2f/).
+
+Tudjon meg többet a 2FA-ról:
+
+<YouTube id="m8jlnZuV1i4" start="3479" />
+
+### Böngészőbővítmények eltávolítása {#uninstall-browser-extensions}
+
+A böngészőbővítmények (mint a Chrome-bővítmények vagy Firefox kiegészítő modulok) hasznos funkciókkal egészítik ki a böngészőket és jobb felhasználói élményt nyújtanak, de ugyanakkor kockázattal is járnak. A legtöbb ilyen bővítmény kéri, hogy beolvashassa és megváltoztathassa az adatokat, így bármit meg tudnak tenni az eszközön. A Chrome bővítményei automatikusan frissülnek, ezért a korábban ártalmatlan kód később talán rosszindulatú részeket is tartalmazhat. A legtöbb böngészőbővítmény nem próbál meg adatot lopni, de attól még képes rá.
+
+#### Maradjon biztonságban: {#browser-extension-safety}
+
+- Csak megbízható forrásból telepítsen bővítményeket
+- Szedje le azokat, amelyeket nem használja
+- Telepítse a bővítményt lokálisan, így nem fog magától frissülni
+
+[Bővebben a böngészőbővítmények kockázatáról](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 <Divider />
 
@@ -270,15 +280,14 @@ A tokenkiosztási (airdrop) csalások során egy hamis projekt eszközt (NFT, to
 
 ### Webbiztonság {#reading-web-security}
 
-- [Ezért ne SMS-t használjon a kéttényezős azonosításhoz](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) – _The Verge_
 - [3 millió eszközt érintenek a rosszindulatú Chrome- és Edge-bővítmények](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) – _Dan Goodin_
-- [Hogyan hozzon létre erős jelszót — amit nem felejt el](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) – _AVG_
+- [Hogyan hozzon létre erős jelszót – amit nem felejt el](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) – _AVG_
 - [Mi az a biztonsági kulcs?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) – _Coinbase_
 
 ### Kriptobiztonság {#reading-crypto-security}
 
 - [Védje magát és a pénzeszközeit](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) – _MyCrypto_
-- [4 mód, hogy biztonságban maradjon a kripto világában](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) – _CoinDesk_
+- [Biztonsági problémák az általános kriptokommunikációs szoftverben](https://docs.salusec.io/untitled/web3-penetration-test/risks-in-social-media) – _Salus_
 - [Biztonsági útmutató kezdőknek és haladóknak](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) – _MyCrypto_
 - [Kriptobiztonság: jelszavak és azonosítás](https://www.youtube.com/watch?v=m8jlnZuV1i4) – _Andreas M. Antonopoulos_
 

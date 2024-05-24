@@ -1,10 +1,9 @@
-import { ReactNode } from "react"
 import { useTranslation } from "next-i18next"
-import { chakra, HTMLChakraProps } from "@chakra-ui/react"
+import { chakra, forwardRef, HTMLChakraProps } from "@chakra-ui/react"
 
 import { HandleClickParam } from "./useTrilemma"
 
-export interface IProps {
+export type TriangleSVGProps = {
   handleClick: (selection: HandleClickParam) => void
   isDecentralizedAndSecure: boolean
   isScalableAndSecure: boolean
@@ -15,7 +14,7 @@ export interface IProps {
   isScalable: boolean
 }
 
-export const TriangleSVG: React.FC<IProps> = ({
+export const TriangleSVG = ({
   handleClick,
   isDecentralizedAndSecure,
   isScalableAndSecure,
@@ -24,7 +23,7 @@ export const TriangleSVG: React.FC<IProps> = ({
   isDecentralized,
   isSecure,
   isScalable,
-}) => {
+}: TriangleSVGProps) => {
   const { t } = useTranslation("page-roadmap-vision")
 
   const Path = () => (
@@ -35,19 +34,18 @@ export const TriangleSVG: React.FC<IProps> = ({
     />
   )
 
-  const CircleSelect = ({ children, onClick }) => (
+  const CircleSelect = forwardRef((props, ref) => (
     <chakra.g
+      ref={ref}
       cursor="pointer"
       sx={{
         "circle:first-of-type": {
           fill: "white",
         },
       }}
-      onClick={onClick}
-    >
-      {children}
-    </chakra.g>
-  )
+      {...props}
+    />
+  ))
 
   const FillCircle = ({ isEthereum = false, isActive, ...rest }) => {
     return (
@@ -66,9 +64,8 @@ export const TriangleSVG: React.FC<IProps> = ({
 
   const Text = ({
     isActive,
-    children,
     ...rest
-  }: { isActive: boolean; children: ReactNode } & HTMLChakraProps<"text">) => (
+  }: { isActive: boolean } & HTMLChakraProps<"text">) => (
     <chakra.text
       fill={isActive ? "primary400" : "text200"}
       fontWeight={isActive ? 700 : 500}
@@ -77,9 +74,7 @@ export const TriangleSVG: React.FC<IProps> = ({
       textTransform="uppercase"
       transform={{ base: "translate(-80px, 0px)", sm: "none" }}
       {...rest}
-    >
-      {children}
-    </chakra.text>
+    />
   )
 
   const commonCircleStyles = {
@@ -117,7 +112,6 @@ export const TriangleSVG: React.FC<IProps> = ({
       viewBox="-100 100 850 915"
       fill="background.base"
       width={{ base: "full", lg: "auto" }}
-      my={{ base: -28, sm: -16, lg: 0 }}
       mt={{ lg: 32 }}
       me={{ lg: 32 }}
     >

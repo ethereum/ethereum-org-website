@@ -17,7 +17,7 @@ Anda harus memahami konsep dasar Ethereum agar Anda dapat memahami data yang dib
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer](https://ethplorer.io/) –_Juga tersedia dalam bahasa Mandarin, Spanyol, Prancis, Turki, Rusia, Korea, dan Vietnam_
 - [Blockchair](https://blockchair.com/ethereum) –_Juga tersedia dalam bahasa Spanyol, Prancis, Italia, Belanda, Portugis, Rusia, Mandarin, dan Persia_
-- [Blockscout](https://blockscout.com/)
+- [Blockscout](https://eth.blockscout.com/)
 - [OKLink](https://www.oklink.com/eth)
 
 ## Data {#data}
@@ -245,7 +245,7 @@ Data tingkat atas lapisan konsensus mencakup berikut ini:
 ## Penjelajah blok {#block-explorers}
 
 - [Etherscan](https://etherscan.io/) – penjelajah blok yang bisa Anda gunakan mengambil data untuk Jaringan Utama Ethereum, Testnet Ropsten, Testnet Kovan, Testnet Rinkeby, dan Testnet Goerli.
-- [Blockscout](https://blockscout.com/) – berfokus pada jaringan berikut:
+- [Blockscout](https://eth.blockscout.com/) – berfokus pada jaringan berikut:
   - xDai – kombinasi pintar dari stablecoin DAI MakerDAO dan sidechain POA serta teknologi tokenbridge.
   - POA – Sidechain dan jaringan otonom yang diamankan oleh satu grup validator terpercaya. Semua validator pada jaringan adalah notaris Amerika Serikat, dan informasi mereka tersedia secara publik.
   - Testnet Sokol POA.

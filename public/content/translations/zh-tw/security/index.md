@@ -24,7 +24,7 @@ lang: zh-tw
 強式密碼範例：ymv\*azu.EAC8eyp8umf
 ```
 
-另一個常見的錯誤是使用容易透過[社交工程](<https://wikipedia.org/wiki/Social_engineering_(security)>)猜中或發現的密碼。 在密碼中使用母親娘家姓、子女或寵物的名字或出生日期，都是不安全的做法，會增加密碼遭駭的風險。
+另一個常見的錯誤是使用容易透過[社交工程](https://wikipedia.org/wiki/Social_engineering_(security))猜中或發現的密碼。 在密碼中使用母親娘家姓、子女或寵物的名字或出生日期，都是不安全的做法，會增加密碼遭駭的風險。
 
 #### 良好密碼實務： {#good-password-practices}
 
@@ -170,19 +170,29 @@ Chrome 擴充功能或 Firefox 附加元件等瀏覽器擴充功能，能增強�
 - 沒有人會給你免費或打折的以太幣
 - 沒有人需要獲取你的私密金鑰或個人資訊
 
+### 推特廣告釣魚 {#ad-phishing}
+
+![推特連結釣魚](./twitterPhishingScam.png)
+
+有種方法可以騙過推特（現在叫 X）的連結預覽功能，潛在地欺騙使用者，讓他們誤以為存取的是正版官網。 此技術利用推特的機制來產生推文中的預覽超連結，並顯示_來自 ethereum.org_（如上例所示），但該連結事實上會重新導向到惡意網站。
+
+請一律檢查網域是否正確，特別是點擊連結之後。
+
+[點此查看更多資訊](https://harrydenley.com/faking-twitter-unfurling)。
+
 ### 贈獎詐騙 {#giveaway}
 
 加密貨幣中最常見的騙局之一是贈獎詐騙。 贈獎詐騙有多種形式，但一般前提是，如果你將以太幣發送到所提供的錢包地址，你將會收到雙倍的以太幣。 *因此，它也稱為買一送一詐騙。*
 
 這些騙局通常規定了領取贈獎的有限時間，促使人作出錯誤的決策並製造一種虛假的緊迫感。
 
-#### 社交媒體駭客攻擊 {#social-media-hacks}
+### 社交媒體駭客攻擊 {#social-media-hacks}
 
 最出名的一次發生在 2020 年 7 月，當時很多知名人士和組織的 Twitter 帳戶被破解。 駭客同一時間使用被盜的帳戶發布了比特幣贈送活動。 雖然這些欺騙性推文很快被察覺並且刪除，但駭客仍僥倖逃脫，取走 11 個比特幣（或截至 2021 年 9 月的 500,000 美元）。
 
 ![Twitter 上的一個詐騙案例](./appleTwitterScam.png)
 
-#### 名人贈獎活動 {#celebrity-giveaway}
+### 名人贈獎活動 {#celebrity-giveaway}
 
 名人贈獎活動是贈獎詐騙的另一種常見形式。 詐騙者會錄製名人的採訪影片或會議演講，並在 YouTube 上進行直播 — 看起來好像名人正在接受直播採訪影片，支援加密貨幣贈送活動。
 
@@ -270,7 +280,6 @@ _注意：有些衍生的代幣/行情指示器可能代表被質押的以太幣
 
 ### 網路安全 {#reading-web-security}
 
-- [不該以簡訊進行雙因素驗證的原因](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
 - [高達 3 百萬台裝置被含有惡意軟體的 Chrome 與 Edge 附加元件所感染](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
 - [如何建立一個永遠記得住的強式密碼](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
 - [什麼是安全金鑰？](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
@@ -278,7 +287,7 @@ _注意：有些衍生的代幣/行情指示器可能代表被質押的以太幣
 ### 加密貨幣安全 {#reading-crypto-security}
 
 - [保護自己，保護資金](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
-- [維持加密貨幣安全性的 4 種方式](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
+- [幣圈通訊軟體之共同資安問題](https://docs.salusec.io/untitled/web3-penetration-test/risks-in-social-media) - _Salus_
 - [全民必修安全指南](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [加密貨幣安全性：密碼與驗證](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 

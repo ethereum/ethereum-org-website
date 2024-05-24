@@ -11,17 +11,18 @@ import {
   Text,
 } from "@chakra-ui/react"
 
+import type { ChildOnlyProp } from "@/lib/types"
+
 import Emoji from "../Emoji"
 import Pill from "../Pill"
 
 import { accordionButtonContent, CategoryNameType } from "./utils"
-import { ChildOnlyType } from "."
 
-export const LeftColumnPanel = (props: ChildOnlyType & Partial<BoxProps>) => (
+export const LeftColumnPanel = (props: ChildOnlyProp & Partial<BoxProps>) => (
   <Box flex="0 0 50%" maxW={{ lg: "75%" }} me={{ lg: 16 }} {...props} />
 )
 
-export const RightColumnPanel = (props: ChildOnlyType) => (
+export const RightColumnPanel = (props: ChildOnlyProp) => (
   <LeftColumnPanel me={0} flex="0 1 50%" mt={{ base: 12, lg: 0 }} {...props} />
 )
 
@@ -58,7 +59,9 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
           <AccordionButton
             justifyContent="space-between"
             alignItems="center"
-            p={0}
+            px="0"
+            py="0"
+            _expanded={{ background: "transparent" }}
             _hover={{ background: "ednBackground" }}
           >
             <Flex
@@ -102,7 +105,9 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
             borderColor="border"
             mb="-1px"
             mx="-1px"
-            p={0}
+            mt="0"
+            p="0"
+            fontSize="md"
           >
             <Flex
               p={8}

@@ -151,7 +151,7 @@ He aquí las páginas de publicación de los clientes donde puede encontrar sus 
 ##### Clientes de ejecución
 
 - [Besu](https://github.com/hyperledger/besu/releases)
-- [Erigon](https://github.com/ledgerwatch/erigon#usage) (no proporciona un binario precompilado, se tiene que compilar)
+- [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
 
@@ -165,7 +165,7 @@ También vale la pena señalar que la diversidad del cliente es un [problema en 
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
 
-[La diversidad del cliente](/developers/docs/nodes-and-clients/client-diversity/) es crítica para los nodos de consenso en ejecución de validadores. Si la mayoría de los validadores está ejecutando una implementación de un solo cliente, la seguridad de la red está en riesgo. Por lo tanto, se recomienda considerar la elección de un cliente minoritario.
+[La diversidad del cliente](/developers/docs/nodes-and-clients/client-diversity/) es crítica para los nodos de consenso en ejecución de validadores. Si la mayoría de los validadores están ejecutando una implementación de un solo cliente, la seguridad de la red está en riesgo. Por lo tanto, se recomienda considerar la elección de un cliente minoritario.
 
 [Vea el último uso de cliente de red](https://clientdiversity.org/) y descubra más cosas sobre la[diversidad de clientes](/developers/docs/nodes-and-clients/client-diversity).
 

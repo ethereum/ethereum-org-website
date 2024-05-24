@@ -2,18 +2,16 @@ import React, { ReactNode } from "react"
 import { FaGithub } from "react-icons/fa"
 import { Flex, FlexProps, Icon, useToken } from "@chakra-ui/react"
 
+import { ChildOnlyProp } from "@/lib/types"
+
 import { ButtonLink } from "./Buttons"
 import InlineLink from "./Link"
 import OldHeading from "./OldHeading"
 import Text from "./OldText"
 import Translation from "./Translation"
 
-export interface IProps {
+export type CallToContributeProps = {
   editPath: string
-}
-
-export type ChildOnlyType = {
-  children: ReactNode
 }
 
 const ContentColumn = (props: {
@@ -32,13 +30,13 @@ const ContentColumn = (props: {
   />
 )
 
-const DescriptionParagraph = ({ children }: ChildOnlyType) => (
+const DescriptionParagraph = ({ children }: ChildOnlyProp) => (
   <Text lineHeight="140%" color="text" fontFamily="monospace">
     {children}
   </Text>
 )
 
-const CallToContribute: React.FC<IProps> = ({ editPath }) => {
+const CallToContribute = ({ editPath }: CallToContributeProps) => {
   /**
    * TODO: After completion of the UI migration,
    * Remove this and pass the token value directly
@@ -57,27 +55,15 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => {
       borderRadius="base"
       boxShadow="inset 0 -2px 0 0 var(--eth-colors-primary400)"
     >
-      <ContentColumn hideBelow={largeBp}>
-        ░░░░░░░░░▄░░░░░░░░░░░░░░▄░░░░ ░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌░░░
-        ░░░░░░░░▌▒▒█░░░░░░░░▄▀▒▒▒▐░░░ ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐░░░
-        ░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐░░░ ░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌░░░
-        ░░▐▒▒▒▄▄▒▒▒▒░░░▒▒▒▒▒▒▒▀▄▒▒▌░░ ░░▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐░░
-        ░▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄▌░ ░▌░▒▄██▄▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒▌░
-        ▀▒▀▐▄█▄█▌▄░▀▒▒░░░░░░░░░░▒▒▒▐░ ▐▒▒▐▀▐▀▒░▄▄▒▄▒▒▒▒▒▒░▒░▒░▒▒▒▒▌
-        ▐▒▒▒▀▀▄▄▒▒▒▄▒▒▒▒▒▒▒▒░▒░▒░▒▒▐░ ░▌▒▒▒▒▒▒▀▀▀▒▒▒▒▒▒░▒░▒░▒░▒▒▒▌░
-        ░▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▄▒▒▐░░ ░░▀▄▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▄▒▒▒▒▌░░
-        ░░░░▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀░░░ ░░░░░░▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀░░░░░
-        ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░
-      </ContentColumn>
       <ContentColumn>
         <OldHeading
           as="h2"
           fontFamily="monospace"
           textTransform="uppercase"
-          bg="border"
           p={1}
           fontSize="2rem"
           lineHeight={1.4}
+          mt={0}
         >
           <Translation id="page-developers-docs:page-calltocontribute-title" />
         </OldHeading>

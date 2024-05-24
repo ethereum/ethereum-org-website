@@ -2,20 +2,19 @@ import { useRouter } from "next/router"
 import {
   Badge,
   Box,
-  chakra,
+  type BoxProps,
   Divider,
   Flex,
-  HeadingProps,
+  type HeadingProps,
   Kbd,
   Text,
-  TextProps,
+  type TextProps,
   useToken,
 } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
-import PostMergeBanner from "@/components/Banners/PostMergeBanner"
 import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
@@ -34,9 +33,9 @@ import {
   Heading3 as MdHeading3,
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
-import MdLink from "@/components/MdLink"
 import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
+import TooltipLink from "@/components/TooltipLink"
 import TutorialMetadata from "@/components/TutorialMetadata"
 import YouTube from "@/components/YouTube"
 
@@ -44,9 +43,9 @@ import { getEditPath } from "@/lib/utils/editPath"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
+type ContentContainerProps = Pick<BoxProps, "children" | "dir">
 
-const ContentContainer = (props: ChildOnlyProp) => {
+const ContentContainer = (props: ContentContainerProps) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
 
   return (
@@ -122,10 +121,6 @@ const Paragraph = (props: TextProps) => (
   <Text as="p" mt={8} mb={4} mx={0} color="text300" fontSize="md" {...props} />
 )
 
-const ListItem = (props) => {
-  return <chakra.li color="text300" {...props} />
-}
-
 const KBD = (props) => {
   const borderColor = useToken("colors", "primary.base")
 
@@ -141,14 +136,13 @@ const KBD = (props) => {
 }
 
 export const tutorialsComponents = {
-  a: MdLink,
+  a: TooltipLink,
   h1: Heading1,
   h2: Heading2,
   h3: Heading3,
   h4: Heading4,
   p: Paragraph,
   kbd: KBD,
-  li: ListItem,
   pre: Codeblock,
   ...mdxTableComponents,
   Badge,
@@ -162,15 +156,18 @@ export const tutorialsComponents = {
   StyledDivider,
   YouTube,
 }
-interface TutorialLayoutProps
-  extends ChildOnlyProp,
-    Pick<
-      MdPageContent,
-      "tocItems" | "lastUpdatedDate" | "crowdinContributors"
-    > {
-  frontmatter: TutorialFrontmatter
-  timeToRead: number
-}
+type TutorialLayoutProps = ChildOnlyProp &
+  Pick<
+    MdPageContent,
+    | "tocItems"
+    | "crowdinContributors"
+    | "contentNotTranslated"
+    | "gitContributors"
+  > &
+  Required<Pick<MdPageContent, "lastUpdatedDate">> & {
+    frontmatter: TutorialFrontmatter
+    timeToRead: number
+  }
 
 export const TutorialLayout = ({
   children,
@@ -179,25 +176,21 @@ export const TutorialLayout = ({
   timeToRead,
   lastUpdatedDate,
   crowdinContributors,
+  contentNotTranslated,
+  gitContributors,
 }: TutorialLayoutProps) => {
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = getEditPath(relativePath)
 
   const borderColor = useToken("colors", "border")
-  const postMergeBannerTranslationString =
-    frontmatter.postMergeBannerTranslation as TranslationKey | null
-  const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
-  const intlLastEdit = "data" in gitHubLastEdit ? gitHubLastEdit.data! : ""
+  const gitHubLastEdit = gitContributors[0]?.date
+  const intlLastEdit = gitHubLastEdit || lastUpdatedDate
+
   const useGitHubContributors =
     frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
   return (
     <>
-      {!!frontmatter.showPostMergeBanner && (
-        <PostMergeBanner
-          translationString={postMergeBannerTranslationString!}
-        />
-      )}
       <Flex
         w="100%"
         borderBottom={`1px solid ${borderColor}`}
@@ -205,7 +198,7 @@ export const TutorialLayout = ({
         p={{ base: "0", lg: "0 2rem 0 0" }}
         background={{ base: "background.base", lg: "ednBackground" }}
       >
-        <ContentContainer>
+        <ContentContainer dir={contentNotTranslated ? "ltr" : "unset"}>
           <Heading1>{frontmatter.title}</Heading1>
           <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
           <TableOfContents
@@ -218,8 +211,8 @@ export const TutorialLayout = ({
           {children}
           {useGitHubContributors ? (
             <GitHubContributors
-              relativePath={relativePath}
-              lastUpdatedDate={lastUpdatedDate!}
+              contributors={gitContributors}
+              lastUpdatedDate={lastUpdatedDate}
             />
           ) : (
             <CrowdinContributors

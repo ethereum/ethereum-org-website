@@ -1,20 +1,24 @@
 import React from "react"
 import { Flex, FlexProps } from "@chakra-ui/react"
 
-export interface IProps extends FlexProps {
+export type PillProps = FlexProps & {
   children?: React.ReactNode
   className?: string
   isSecondary?: boolean
   color?: string
 }
 
-const Pill: React.FC<IProps> = ({
+/**
+ * @deprecated To be removed in favor of Tag or Badge component
+ *
+ */
+const Pill = ({
   children,
   className,
   isSecondary,
   background,
   ...rest
-}) => {
+}: PillProps) => {
   return isSecondary ? (
     <Flex
       border="1px"

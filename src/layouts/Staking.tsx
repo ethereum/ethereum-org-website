@@ -180,18 +180,18 @@ export const stakingComponents = {
   WithdrawalsTabComparison,
 }
 
-interface IProps
-  extends ChildOnlyProp,
-    Pick<MdPageContent, "slug" | "tocItems"> {
-  frontmatter: StakingFrontmatter
-}
+type StakingLayoutProps = ChildOnlyProp &
+  Pick<MdPageContent, "slug" | "tocItems" | "contentNotTranslated"> & {
+    frontmatter: StakingFrontmatter
+  }
 
-export const StakingLayout: React.FC<IProps> = ({
+export const StakingLayout = ({
   children,
   frontmatter,
   slug,
   tocItems,
-}) => {
+  contentNotTranslated,
+}: StakingLayoutProps) => {
   const { t } = useTranslation("page-staking")
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
@@ -251,7 +251,11 @@ export const StakingLayout: React.FC<IProps> = ({
   }
 
   return (
-    <Box position="relative" width="full">
+    <Box
+      position="relative"
+      width="full"
+      dir={contentNotTranslated ? "ltr" : "unset"}
+    >
       <HeroContainer>
         <Flex direction="column" justify="flex-start" w="full" p={8}>
           <Breadcrumbs slug={slug} mb="8" />

@@ -32,7 +32,7 @@ Lanțul Beacon a fost o componentă fundamentală pentru [securitatea, respectul
 
 Lanțul Beacon a introdus [dovada mizei](/developers/docs/consensus-mechanisms/pos/) în Ethereum. Aceasta asigură securitatea Ethereum și generează mai mult ETH pentru validatori în cadrul procesului. În practică, mizarea implică mizarea ETH pentru activarea software-ului validatorului. În calitate de staker, rulați software-ul care creează și validează noile blocuri din lanț.
 
-Mizarea joacă același rol avut înainte de [minare](/developers/docs/mining/), dar diferă în multe moduri. Minarea necesita cheltuieli inițiale mari, sub forma unor echipamente hardware puternice și a unui consum mare de energie, ceea ce duce la economii de scalare și promovarea centralizării. De asemenea, minarea nu implica cerințe pentru blocarea activelor drept garanție, limitând capacitatea protocolului de a pedepsi actorii răi după un atac.
+Mizarea joacă același rol avut înainte de [minare](/developers/docs/consensus-mechanisms/pow/mining/), dar diferă în multe moduri. Minarea necesita cheltuieli inițiale mari, sub forma unor echipamente hardware puternice și a unui consum mare de energie, ceea ce duce la economii de scalare și promovarea centralizării. De asemenea, minarea nu implica cerințe pentru blocarea activelor drept garanție, limitând capacitatea protocolului de a pedepsi actorii răi după un atac.
 
 Tranziția la dovada mizei a făcut ca Ethereum să fie mult mai sigur și mai descentralizat în comparație cu dovada muncii. Cu cât numărul de oameni din rețea este mai mare, cu atât mai descentralizată și mai sigură în caz de atacuri devine aceasta.
 

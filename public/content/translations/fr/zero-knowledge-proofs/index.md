@@ -1,10 +1,10 @@
 ---
 title: La preuve à divulgation nulle de connaissance
-description: Une introduction non technique aux preuves à divulgation nulle de connaissance pour les débutants.
+description: Une introduction non technique aux preuves à divulgation nulle pour les débutants.
 lang: fr
 ---
 
-## Que sont les preuves à divulgation nulle de connaissance ? {#what-are-zk-proofs}
+## En quoi consistent les preuves à divulgation nulle de connaissance ? {#what-are-zk-proofs}
 
 Une preuve à divulgation nulle est un moyen de prouver la validité d'une information sans révéler l'information elle-même. Le « prouveur » est la partie qui tente de prouver une affirmation, tandis que le « vérificateur » est responsable de la validation de l'affirmation.
 
@@ -88,7 +88,7 @@ ZK-STARK est un acronyme pour **Zero-Knowledge Scalable Transparent Argument of 
 
 - **Évolutifs** : ZK-STARK est plus rapide que ZK-SNARK pour générer et vérifier des preuves avec un témoin de taille plus importante. Avec les preuves STARK, les temps de preuve et de vérification n'augmentent que légèrement lorsque le témoin (witness) augmente (tandis que pour les SNARK ils augmentent linéairement selon la taille du témoin).
 
-- **Transparents**: Contrairement à ZK-SNARK (qui se base sur une configuration de confiance), ZK-STARK repose sur un aléa publiquement vérifiable pour générer les paramètres publics de preuve et de vérification. Ainsi, ils sont plus transparents que les ZK-SNARKs.
+- **Transparents**: Contrairement à ZK-SNARK (qui se base sur une configuration de confiance), ZK-STARK repose sur un aléa publiquement vérifiable pour générer les paramètres publics de preuve et de vérification.  Ainsi, ils sont plus transparents que les ZK-SNARKs.
 
 Les ZK-STARKs produisent des preuves plus volumineuses que les ZK-SNARKs, engendrant des frais de vérification généralement plus élevés. Cependant, il y a des cas (comme la preuve de grands ensembles de données) où les ZK-STARKs peuvent être plus intéressants que les ZK-SNARKs.
 
@@ -176,7 +176,7 @@ L'utilisation de MACI _nécessite_ de faire confiance au coordinateur pour ne pa
 
 Mais dans les cas où le coordinateur reste honnête, MACI représente un outil puissant pour garantir le caractère inviolable du vote en chaîne. Ceci explique sa popularité parmi les demandes de financement quadratiques (par exemple, [clr.fund](https://clr.fund/#/about/maci)) qui dépendent fortement de l'intégrité des choix de vote de chaque individu.
 
-[En savoir plus sur MACI](https://github.com/privacy-scaling-explorations/maci/blob/master/specs/01_introduction.md).
+[En savoir plus sur MACI](https://privacy-scaling-explorations.github.io/maci/).
 
 ## Inconvénients à utiliser des preuves à divulgation nulle {#drawbacks-of-using-zero-knowledge-proofs}
 
@@ -203,10 +203,10 @@ Le ZK-STARK est considéré comme immunisé contre la menace de l'informatique q
 ## En savoir plus {#further-reading}
 
 - [L'informaticien explique un concept en 5 niveaux de difficulté | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Chaîne YouTube de Wired_
-- [Vue d'ensemble des cas d'utilisation des preuves à divulgation nulle](https://appliedzkp.org/#Projects) — _L'équipe de confidentialité et de mise à l'échelle des explorations_
+- [Vue d'ensemble des cas d'utilisation des preuves à connaissance nulle](https://pse.dev/projects) - _Privacy and Scaling Explorations Team_
 - [SNARKs vs. STARKS vs SNARKs vs. Récursive SNARKs](https://www.alchemy.com/overviews/snarks-vs-starks) — _Aperçu d’Alchemy_
 - [Une preuve à divulgation nulle : Améliorer la confidentialité sur une Blockchain](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARKs — Un exemple de preuve à divulgation nulle réaliste et une plongée en profondeur](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARKs – Créez une confiance vérifiable, même contre Quantum Computers](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [Une introduction approximative à la possibilité des zk-SNARKs](https://vitalik.ca/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [Une brève introduction à la façon dont les zk-SNARK sont possibles](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Qu'est-ce que la preuve à divulgation nulle de connaissance et quel est son rôle dans la Blockchain ?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_

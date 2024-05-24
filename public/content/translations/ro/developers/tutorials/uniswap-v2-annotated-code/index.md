@@ -743,7 +743,7 @@ Aceasta este funcția principală a fabricii, să creeze un schimb în pereche �
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Vrem ca adresa noului schimb să fie deterministă, încât să poată fi calculată în avans off-chain (acest lucrul poate fi util pentru [tranzacțiile de nivel 2](/developers/docs/layer-2-scaling/)). Pentru a face aceasta, avem nevoie de o ordine consecventă a adreselor tokenurilor, indiferent de ordinea în care le-am primit, de aceea le sortăm aici.
+Vrem ca adresa noului schimb să fie deterministă, încât să poată fi calculată în avans off-chain (acest lucrul poate fi util pentru [tranzacțiile de nivel 2](/developers/docs/scaling/)). Pentru a face aceasta, avem nevoie de o ordine consecventă a adreselor tokenurilor, indiferent de ordinea în care le-am primit, de aceea le sortăm aici.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
@@ -909,7 +909,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-Cele mai multe dintre acestea fie le-am mai întâlnit, fie sunt destul de evidente. Singura excepție este `IWETH.sol`. Uniswap v2 permite schimburi pentru orice pereche de tokenuri ERC-20, dar ether -ul (ETH) propriu-zis nu este un token ERC-20. El precedă standardul și este transferat prin mecanisme unice. Pentru a permite folosirea de ETH în contractele care se aplică la tokenurile ERC-20, a fost creat contractul de [wrapped ether (WETH)](https://weth.io/) (ether înfășurat). Trimiteți ETH acestui contract, iar acesta vă emite o sumă echivalentă în WETH. Sau puteți arde WETH și primiți înapoi ETH-ul.
+Cele mai multe dintre acestea fie le-am mai întâlnit, fie sunt destul de evidente. Singura excepție este `IWETH.sol`. Uniswap v2 permite schimburi pentru orice pereche de tokenuri ERC-20, dar ether -ul (ETH) propriu-zis nu este un token ERC-20. El precedă standardul și este transferat prin mecanisme unice. Pentru a permite folosirea de ETH în contractele care se aplică la tokenurile ERC-20, a fost creat contractul de [wrapped ether (WETH)](https://weth.tkn.eth.limo/) (ether înfășurat). Trimiteți ETH acestui contract, iar acesta vă emite o sumă echivalentă în WETH. Sau puteți arde WETH și primiți înapoi ETH-ul.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {

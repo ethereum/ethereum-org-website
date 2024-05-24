@@ -24,19 +24,19 @@ lang: zh-tw
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">以太牧貓人組織</Link> - 提供專案管理以支援以太坊的社群</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">以太坊駭客</Link> - 由全球以太坊駭客線上社群 ETHGlobal 所管理的 Discord 聊天室</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - 專注於以太坊開發的 Discord 社群</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> - 給現有及潛在質押者的社群營運指導、教育、支援及資源。</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link> - 給現有及潛在質押者的社群營運指導、教育、支援及資源。</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Ethereum.org 網站團隊</Link> - 訪問並和團隊及社群大眾聊聊 Ethereum.org 網站開發及設計</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - 建造者、產業領袖，及以太坊愛好者出沒的 web3 創作者社群。 我們熱愛 web3 開發、設計及文化。 與我們一起建立。</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - 討論 solidity 的開發 (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - 討論 solidity 的開發 (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - 討論 solidity 的開發 (Matrix)</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">以太坊技術堆棧交易所</Link> _- 問答論壇_</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- 去中心化問答論壇_</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">以太坊技術堆棧交易所</Link> *- 問答論壇*</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *- 去中心化問答論壇*</SocialListItem>
 
-## 油管和推特 {#youtube-and-twitter}
+## YouTube 和 Twitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">以太坊基金會</Link> - 掌握以太坊基金會最新的資訊</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - 以太坊基金會的官方帳戶</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> - 以太坊的門戶網站，為我們成長中的全球社群而建</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> - 以太坊的入口網站，為我們成長中的全球社群而建</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/ethereum?page=1">具影響力的以太坊推特帳戶清單</Link></SocialListItem>
 
 <Divider />

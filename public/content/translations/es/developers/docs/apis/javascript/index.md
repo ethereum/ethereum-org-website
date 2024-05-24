@@ -55,9 +55,7 @@ web3.setProvider(new Web3.providers.WebsocketProvider("ws://localhost:8546"))
 var net = require("net")
 var web3 = new Web3("/Users/myuser/Library/Ethereum/geth.ipc", net) // ruta para macOS
 // o
-var web3 = new Web3(
-  new Web3.providers.IpcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net)
-)
+var web3 = new Web3(new Web3.providers.IpcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net)) 
 // ruta para macOS
 // en Windows, la ruta es: "\\\\.\\pipe\\geth.ipc"
 // en Linux, la ruta es: "/users/myuser/.ethereum/geth.ipc"

@@ -12,11 +12,11 @@ Per capire meglio questa pagina ti consigliamo di leggere i [meccanismi di conse
 
 ## Cos'è la proof-of-stake (PoS)? {#what-is-pos}
 
-Proof-of-stake è un modo per dimostrare che i validatori hanno messo qualcosa di valore nella rete che può essere distrutto se agiscono in maniera disonesta. Nel proof-of-stake di Ethereum, i validatori mettono esplicitamente in stakaing il capitale sotto forma di ETH, in un contratto intelligente su Ethereum. Il validatore è poi responsabile di verificare che i nuovi blocchi propagati sulla rete siano validi e, occasionalmente, di creare e propagare nuovi blocchi. Se prova a frodare la rete (ad esempio proponendo blocchi multipli quando dovrebbe inviarne uno o inviando attestazioni conflittuali) alcuni o tutti i suoi ETH in staking possono venire distrutti.
+Proof-of-stake è un modo per dimostrare che i validatori hanno messo qualcosa di valore nella rete che può essere distrutto se agiscono in maniera disonesta. Nel proof-of-stake di Ethereum, i validatori mettono esplicitamente in stakaing il capitale sotto  forma di ETH, in un contratto intelligente su Ethereum. Il validatore è poi responsabile di verificare che i nuovi blocchi propagati sulla rete siano validi e, occasionalmente, di creare e propagare nuovi blocchi. Se prova a frodare la rete (ad esempio proponendo blocchi multipli quando dovrebbe inviarne uno o inviando attestazioni conflittuali) alcuni o tutti i suoi ETH in staking possono venire distrutti.
 
 ## Validatori {#validators}
 
-Per partecipare come validatore, un utente deve depositare 32 ETH nel contratto di deposito ed eseguire tre software distinti: un client di esecuzione, uno di consenso e un validatore. Depositando i propri ETH, l'utente si unisce alla coda di attivazione che limita la frequenza di partecipazione alla rete dei nuovi validatori. Una volta attivati, i validatori ricevono nuovi blocchi dai pari sulla rete di Ethereum. Le transazioni inviate nel blocco sono eseguite nuovamente per controllare che i cambiamenti dello stato di Ethereum proposti siano validi e che la firma del blocco sia controllata. Il validatore invia poi nella rete un voto (detto attestazione) a favore di quel blocco.
+Per partecipare come validatore, un utente deve depositare 32 ETH nel contratto di deposito ed eseguire tre software separati: un client di esecuzione, un client di consenso e un client del validatore. Depositando i propri ETH, l'utente si unisce alla coda di attivazione che limita la frequenza di partecipazione alla rete dei nuovi validatori. Una volta attivati, i validatori ricevono nuovi blocchi dai pari sulla rete di Ethereum. Le transazioni inviate nel blocco sono eseguite nuovamente per controllare che i cambiamenti dello stato di Ethereum proposti siano validi e che la firma del blocco sia controllata. Il validatore invia poi nella rete un voto (detto attestazione) a favore di quel blocco.
 
 Se con il proof-of-work la tempistica dei blocchi è determinata dalla difficoltà di mining, nel proof-of-stake il ritmo invece è fisso. Il tempo in Ethereum di proof-of-stake è diviso in slot (12 secondi) ed epoche (32 slot). In ogni slot viene selezionato casualmente un validatore come propositore di blocchi. Questo validatore è responsabile della creazione di un nuovo blocco e del suo invio ad altri nodi sulla rete. Inoltre, in ogni slot, è scelto casualmente un comitato di validatori, i cui voti sono usati per determinare la validità del blocco proposto. Dividere le impostazioni del validatore in comitati è importante per mantenere gestibile il carico della rete. I comitati suddividono la serie di validatori affinché ogni validatore attivo attesti in ogni epoca ma non in ogni slot.
 
@@ -79,10 +79,10 @@ Ethereum non è sempre stata una rete di proof-of-stake. All'inizio Ethereum uti
 
 ## Letture consigliate {#further-reading}
 
-- [FAQ Proof of Stake](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
+- [Domande Frequenti sul Proof-of-Stake](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [Cos'è il Proof of Stake](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [Cos'è il Proof of Stake e perché è importante](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
-- [Perché il Proof of Stake (Nov 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
+- [Perché il Proof of Stake (Nov 2020)](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _Vitalik Buterin_
 - [Proof of Stake: come ho imparato ad amare la soggettività debole](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
 - [Attacco e difesa del proof-of-stake di Ethereum](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [Una filosofia di progettazione di Proof of Stake](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_

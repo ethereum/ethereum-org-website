@@ -21,17 +21,18 @@ import {
 import type { ChildOnlyProp } from "@/lib/types"
 
 import ButtonDropdown, {
-  type IProps as ButtonDropdownProps,
+  type ButtonDropdownProps,
 } from "@/components/ButtonDropdown"
 import { ButtonLink } from "@/components/Buttons"
 import Contributors from "@/components/Contributors"
 import Link from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
-import MdLink from "@/components/MdLink"
 import OldHeading from "@/components/OldHeading"
 import { mdxTableComponents } from "@/components/Table"
+import TooltipLink from "@/components/TooltipLink"
 import YouTube from "@/components/YouTube"
 
+import ContributorsQuizBanner from "./Banners/ContributorsQuizBanner"
 import GlossaryTooltip from "./Glossary/GlossaryTooltip"
 import { StandaloneQuizWidget } from "./Quiz/QuizWidget"
 import Card from "./Card"
@@ -40,7 +41,10 @@ import Emoji from "./Emoji"
 import ExpandableCard from "./ExpandableCard"
 import FeaturedText from "./FeaturedText"
 import InfoBanner from "./InfoBanner"
+import IssuesList from "./IssuesList"
+import LocaleDateTime from "./LocaleDateTime"
 import MainArticle from "./MainArticle"
+import VideoIframe from "./VideoIframe"
 
 /**
  * Base HTML elements
@@ -61,7 +65,7 @@ export const commonHeadingProps = (id?: string): HeadingProps => ({
   ...headingPropsForAnchor(id),
 })
 
-const IdAnchor: React.FC<{ id?: string }> = ({ id }) => {
+const IdAnchor = ({ id }: { id?: string }) => {
   if (!id) return null
   return (
     <Link
@@ -133,7 +137,7 @@ export const Pre = (props: ChildOnlyProp) => (
 )
 
 export const Paragraph = (props: ChildOnlyProp) => (
-  <Text color="text300" mt={8} mb={4} {...props} />
+  <Text mt={8} mb={4} {...props} />
 )
 
 export const HR = () => (
@@ -148,7 +152,7 @@ export const HR = () => (
 
 // All base html element components
 export const htmlElements = {
-  a: MdLink,
+  a: TooltipLink,
   div: Box,
   h1: Heading1,
   h2: Heading2,
@@ -160,7 +164,9 @@ export const htmlElements = {
   ol: OrderedList,
   p: Paragraph,
   pre: Pre,
+  time: LocaleDateTime,
   ul: UnorderedList,
+  iframe: VideoIframe,
   ...mdxTableComponents,
 }
 
@@ -202,29 +208,6 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   )
 }
 
-export const InfoColumn = (props: ChildOnlyProp) => (
-  <Flex
-    as="aside"
-    flexDirection="column"
-    flex="0 1 400px"
-    ms={8}
-    me={16}
-    position="sticky"
-    top="6.25rem"
-    height={calc("100vh").subtract("80px").toString()}
-    {...props}
-  />
-)
-
-export const InfoTitle = (props: ChildOnlyProp) => (
-  <Heading2
-    fontSize={{ base: "2.5rem", lg: "5xl" }}
-    textAlign={{ base: "start", lg: "end" }}
-    mt={0}
-    {...props}
-  />
-)
-
 export const MobileButton = (props: ChildOnlyProp) => {
   const borderColor = useToken("colors", "border")
   return (
@@ -264,6 +247,7 @@ export const reactComponents = {
   Card,
   ContentContainer,
   Contributors,
+  ContributorsQuizBanner,
   Divider,
   DocLink,
   Emoji,
@@ -271,13 +255,12 @@ export const reactComponents = {
   FeaturedText,
   GlossaryTooltip,
   InfoBanner,
-  InfoColumn,
-  InfoTitle,
   MobileButton,
   MobileButtonDropdown,
   Page,
   QuizWidget: StandaloneQuizWidget,
   StyledButtonDropdown,
+  IssuesList,
   Title,
   YouTube,
 }

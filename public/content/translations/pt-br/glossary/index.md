@@ -378,7 +378,7 @@ Uma etiqueta dada a alguns [EIPs](#eip) que tentam definir um padrão específic
 
 Um algoritmo de [prova de trabalho](#pow) que foi usado no Ethereum antes de ele ter mudado para [prova de participação](#pos).
 
-[Leia mais](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash)
+[Leia mais](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)
 
 ### ether {#ether}
 

@@ -11,7 +11,7 @@ Program Terjemahan adalah sebuah usaha kolaboratif untuk menerjemahkan ethereum.
 Kemajuan kami sejauh ini:
 
 - [**2.500+** penerjemah](/contributing/translation-program/acknowledgements/)
-- [**40** bahasa ada di situs](/languages/)
+- **40** bahasa ada di situs
 - [**2,9 juta** kata telah diterjemahkan di 2021](/contributing/translation-program/acknowledgements/)
 
 Jika Anda ingin terlibat dan membantu kami mengembangkan komunitas Ethereum global dengan menerjemahkan situs web ke dalam bahasa Anda, ikuti langkah-langkah di bawah ini!
@@ -46,7 +46,7 @@ Program Terjemahan ethereum.org bertujuan untuk membuat Ethereum dapat diakses o
 
 <InfoBanner shouldCenter emoji=":light_bulb:">
   Kami menyarankan Anda untuk melihat Panduan Gaya Penerjemahan ethereum.org. Ini berisi beberapa panduan, instruksi, dan tips yang paling penting bagi para penerjemah dan bisa menjadi rujukan saat melokalkan situs web.
-  {" "}<Link to="/en/contributing/translation-program/translators-guide/">Lihat Panduan Gaya Penerjemahan</Link>
+  {" "}<Link to="/contributing/translation-program/translators-guide/">Lihat Panduan Gaya Penerjemahan</Link>
 </InfoBanner>
 
 1. **[Bergabung dengan projek kami di Crowdin](https://crowdin.com/project/ethereum-org/)**  
@@ -107,7 +107,7 @@ Terima kasih atas partisipasi Anda dalam Program Terjemahan ethereum.org!
 
 **Jam kerja untuk para penerjemah**
 
-Ada jam kerja bagi para penerjemah pada hari Rabu kedua setiap bulannya. Ini diadakan di kanal suara #office-hours di [Discord ethereum.org](https://discord.gg/geKhWjtF), tempat Anda juga dapat menemukan waktu yang tepat dan detail tambahannya.
+Ada jam kerja bagi para penerjemah pada hari Rabu kedua setiap bulannya. Ini diadakan di kanal suara #office-hours di [Discord ethereum.org](/discord/), tempat Anda juga dapat menemukan waktu yang tepat dan detail tambahannya.
 
 Tujuan dari jam kerja adalah untuk memungkinkan para penerjemah kami menanyakan pertanyaan tentang proses penerjemahan, memberikan umpan balik tentang program, membagikan ide-ide mereka, atau hanya sekadar mengobrol dengan kami. Para peserta juga dapat belajar lebih banyak tentang program penerjemahan dan mendapatkan beberapa informasi tentang menjadi penerjemah ethereum.org. Terakhir, kami ingin menggunakan panggilan ini untuk mengomunikasikan pengembangan terkini tentang program penerjemahan dan membagikan tips serta instruksi kunci dengan para kontributor kami.
 
@@ -115,7 +115,7 @@ Jika Anda adalah seorang penerjemah ethereum.org atau ingin menjadi salah satuny
 
 <InfoBanner shouldCenter emoji=":information_source:">
   Jika Anda membantu kami dengan terjemahan, Anda mungkin menemukan beberapa informasi yang berguna dalam Pertanyaan yang Sering Diajukan tentang terjemahan kami.
-  {" "}<Link to="/en/contributing/translation-program/faq/">Pertanyaan yang Sering Diajukan tentang menerjemahkan ethereum.org</Link>
+  {" "}<Link to="/contributing/translation-program/faq/">Pertanyaan yang Sering Diajukan tentang menerjemahkan ethereum.org</Link>
 </InfoBanner>
 
 ## Sumber Daya {#resources}

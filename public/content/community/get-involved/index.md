@@ -13,13 +13,12 @@ Start by reading about the ethereum.org mission and values in our [code of condu
 ## Developers <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Learn about and try Ethereum at [ethereum.org/developers/](/developers/)
-- [Find a bounty on Gitcoin](https://gitcoin.co/), work on a small or large technical issue, earn crypto!
 - Attend an [ETHGlobal](http://ethglobal.co/) hackathon near you!
 - Check out [projects related to your area of expertise or programming language of choice](/developers/docs/programming-languages/)
-- Watch or participate in the [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- Watch or participate in the [Core Dev calls](https://www.youtube.com/@EthereumProtocol)
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 - [Web3Bridge](https://www.web3bridge.com/) - join the aspiring web3 community in their initiative to identify, train, and support hundreds of developers and community members throughout Africa
-- Join the [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)
+- Join the [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
 
 ## Researchers & Academics <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
@@ -33,12 +32,13 @@ Do you have a background in mathematics, cryptography, or economics? You might b
   - Learn how to become an [EIP Editor](https://eips.ethereum.org/EIPS/eip-5069)
     - You can peer-review EIPs right now! See [open PRs with the `e-review` tag](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Provide technical feedback on the `discussion-to` link.
   - Participate in [EIP Governance](https://github.com/ethereum-cat-herders/EIPIP)
-    - Join the [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)
+    - Join the [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
   - [More on EIPs](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - a series of high-value research bounties, where you can earn >$100,000 USD
 - [Ethresear.ch](https://ethresear.ch) - Ethereum’s primary forum for research, and the world’s most influential forum for cryptoeconomics
 - [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - An ongoing Q&A series with researchers. As each next part opens, anyone can post questions.
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - research areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
+- [AllWalletDevs](allwallet.dev) - a forum for Ethereum developers, designers, and interested users to come together regularly and discuss wallets
 
 [Explore more active areas of research](/community/research/).
 
@@ -90,7 +90,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 
 ## Product Managers <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
 
-- The Ethereum ecosystem needs your talents! Many companies are hiring for product manager roles. If you want to start by contributing to an open source project, get in touch with the [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) or [MetaCartel](https://www.metacartel.org/)
+- The Ethereum ecosystem needs your talents! Many companies are hiring for product manager roles. If you want to start by contributing to an open source project, get in touch with the [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) or [RaidGuild](https://www.raidguild.org/)
 
 ## Marketing <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 
@@ -103,12 +103,11 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [ethereum.org jobs](/about/#open-jobs)
 - [Ethereum Foundation job board (Lever)](https://jobs.lever.co/ethereumfoundation)
 - [Ethereum Foundation job board (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [JobStash](https://jobstash.xyz)
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
-- [Crypto.jobs](https://crypto.jobs/)
 - [Careers at ConsenSys](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
 - [Bankless jobs board](https://pallet.xyz/list/bankless/jobs)
-- [useWeb3 Jobs](https://www.useweb3.xyz/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)
@@ -119,19 +118,15 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 
 "DAOs" are decentralized autonomous organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community. [More on DAOs](/dao/)
 
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promote the DAO concept in non-tech field and help people create value through DAO_
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) - _Promote the DAO concept in non-tech field and help people create value through DAO_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Community of builders who believe in collective ownership of the internet_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Freelancer Web3 development collective working as a DAO_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Decentralized development & governance of dapps & protocols_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Community governance of DAOhaus_
-- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Community owned superhero franchise_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Art community_
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _DAO incubator_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Venture for pre-seed crypto projects_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _MMORPG Game Mechanics for Real Life_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Digiphysical Apparel Brands_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Women-led projects_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Community focused on funding Ethereum development_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collective of Web3 builders_
 

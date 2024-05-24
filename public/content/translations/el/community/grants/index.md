@@ -18,7 +18,6 @@ lang: el
 - [MetaCartel](https://www.metacartel.org/grants/) - _Ανάπτυξη Dapp, δημιουργία DAO_
 - [Moloch DAO](https://www.molochdao.com/) - _Απόρρητο, αναβάθμιση επιπέδου 2, ασφάλεια πελάτη και πολλά άλλα_
 - [Χορηγίες DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Υπολογιστικό φύλλο Google για οργανισμούς που προσφέρουν επιχορηγήσεις_
-- [Crunchbase για επιχορηγήσεις Web3](https://www.cryptoneur.xyz/web3-grants) - _Φιλτράρισμα και αναζήτηση επιχορηγήσεων ανά κατηγορία, περίπτωση χρήσης, ποσό και πολλά άλλα. Συνεισφέρετε για να βοηθήσετε και άλλους να βρουν τη σωστή επιχορήγηση._
 - [Ακαδημαϊκές υποτροφίες](https://esp.ethereum.foundation/academic-grants) - _Χορηγίες για την υποστήριξη ακαδημαϊκής εργασίας που σχετίζεται με το Ethereum_
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Η Blockworks έχει συντάξει έναν ολοκληρωμένο κατάλογο με όλες τις επιχορηγήσεις, τα RFP και τις αμοιβές εύρεσης σφαλμάτων._
 
@@ -27,15 +26,15 @@ lang: el
 Αυτά τα έργα έχουν δημιουργήσει τις δικές τους επιχορηγήσεις για τα έργα που στοχεύουν στην ανάπτυξη και τον πειραματισμό με τη δική τους τεχνολογία.
 
 - [Πρόγραμμα Επιχορηγήσεων Aave](https://aavegrants.org/) – _[Aave](https://aave.com/) επιχορήγηση DAO_
-- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) – _[Balancer](https://balancer.fi/) ecosystem fund_
+- [Balancer](https://grants.balancer.community/) – _[Balancer](https://balancer.fi/) χρηματοδότηση οικοσυστήματος_
 - [Πρόγραμμα Επιχορηγήσεων Chainlink](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) κοινοτικές επιχορηγήσεις_
 - [Πρόγραμμα Επιχορηγήσεων Decentraland](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) DAO Metaverse_
 - [Lido Ecosystem Grants Organization (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/) χρηματοοικονομικό οικοσύστημα_
 - [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) employee-led grants DAO_
 - [Πρόγραμμα επιχορήγησης δικτύου SKALE](https://skale.space/developers#grants) - _[SKALE](https://skale.space/)δίκτυο οικοσυστήματος_
-- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) οικοσύστημα _
-- [Πρόγραμμα επιχορήγησης Uniswap](https://www.uniswapfoundation.org/apply-for-a-grant) - _[Κοινότητα Uniswap](https://uniswap.org/)_
-- [Χορηγίες Web3](https://web3grants.net) - _Μια εκτενής λίστα προγραμμάτων επιχορήγησης που σχετίζονται με το web3/crypto_
+- [Ίδρυμα Swarm πρόγραμμα χρηματοδοτήσεων](https://my.ethswarm.org/grants) - _Οικοσύστημα [Ιδρύματος Swarm](https://www.ethswarm.org/)_
+- [The Graph](https://thegraph.com/ecosystem/grants/) – _Οικοσύστημα [The Graph](https://thegraph.com/)_
+- [Πρόγραμμα χρηματοδοτήσεων Uniswap](https://www.uniswapfoundation.org/grants) – _Κοινότητα [Uniswap](https://uniswap.org/)_
 
 ## Τετραγωνική χρηματοδότηση {#quadratic-funding}
 

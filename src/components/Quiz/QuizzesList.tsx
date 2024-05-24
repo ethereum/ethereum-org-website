@@ -1,7 +1,7 @@
 import React from "react"
 import { Heading, OrderedList, Stack, Text } from "@chakra-ui/react"
 
-import type { QuizzesSection, UserStats } from "@/lib/types"
+import type { QuizKey, QuizzesSection, UserStats } from "@/lib/types"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -11,12 +11,12 @@ import Translation from "../Translation"
 
 import QuizItem from "./QuizItem"
 
-export interface QuizzesListProps {
+type QuizzesListProps = {
   userStats: UserStats
-  content: Array<QuizzesSection>
+  content: QuizzesSection[]
   headingId: string
   descriptionId: string
-  quizHandler: (id: string) => void
+  quizHandler: (id: QuizKey) => void
   modalHandler: (isModalOpen: boolean) => void
 }
 

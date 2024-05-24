@@ -32,7 +32,7 @@ Le site ethereum.org, comme Ethereum plus largement, est un projet open source. 
 - [Quizz](/contributing/quizzes/) _- Ajoutez, mettez à jour et supprimez des banques de questions de quiz pour une page pertinente_
 - [Suggérer une ressource de design](/contributing/design/adding-design-resources/) _- Ajoutez, mettez à jour et supprimez des ressources de design utiles_
 
-_Une question ?_ 🤔 Rejoignez-nous sur notre [serveur Discord](https://discord.gg/ethereum-org)
+_Des questions ? _ 🤔 Contactez nous sur notre [serveur Discord](https://discord.gg/ethereum-org).
 
 ## Comment travailler sur ethereum.org {#how-to-update-content}
 
@@ -43,7 +43,7 @@ Toutes les mises à jour sont faites sur GitHub via le processus de demande d'ex
 Vous n'avez pas besoin d'autorisation pour travailler sur quoi que ce soit, mais il est toujours préférable de nous faire savoir ce que vous prévoyez de faire. Pour ce faire, vous pouvez :
 
 - commenter un ticket ou une PR sur [GitHub](https://github.com/ethereum/ethereum-org-website) ; ou
-- nous envoyer un message sur notre [serveur Discord](https://discord.gg/ethereum-org).
+- Laissez un message sur notre [serveur Discord](https://discord.gg/ethereum-org)
 
 Avant de contribuer, assurez-vous que vous connaissez bien :
 
@@ -77,7 +77,7 @@ Si votre contribution est fusionnée au contenu d'ethereum.org, nous vous remett
 ### Comment l'obtenir {#how-to-claim}
 
 1. Rejoignez notre [serveur Discord](https://discord.gg/ethereum-org).
-2. Collez un lien vers votre contribution dans le `# 🥇poaps`[canal](https://discord.com/channels/714888181740339261/804005643211898911).
+2. Collez un lien vers votre contribution dans le `# |proof-of-contribution`[canal](https://discord.com/channels/714888181740339261/1212737737916948530).
 3. Attendez qu'un membre de notre équipe vous envoie un lien vers votre POAP.
 4. Récupérez votre POAP !
 

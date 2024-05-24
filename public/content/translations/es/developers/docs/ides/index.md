@@ -41,7 +41,7 @@ La mayoría de los IDE establecidos han desarrollado complementos para mejorar l
 - [Muestras de código](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Atom\*\***_: Un editor de texto hackeable para el siglo XXI_\*\*
+**Atom****_: Un editor de texto hackeable para el siglo XXI_**
 
 - [Atom](https://atom.io/)
 - [GitHub](https://github.com/atom)

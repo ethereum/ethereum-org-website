@@ -42,7 +42,7 @@ Pour aider votre compréhension, voici quelques exemples de la façon dont vous 
 
 - Un organisme caritatif – vous pouvez accepter les dons de n'importe qui dans le monde entier et voter pour les causes à financer.
 - Propriété collective – vous pouvez acheter des actifs physiques ou numériques et les membres peuvent voter sur la façon de les utiliser.
-- Ventures et subventions – vous pourriez créer un fonds de risque qui regroupe le capital d’investissement et qui votera pour savoir quelles les entreprises garder. L'argent perçu pourra plus tard être redistribué entre les membres de la DAO.
+- Ventures et subventions – vous pourriez créer un fonds de risque qui regroupe le capital d’investissement et qui votera pour savoir quelles entreprises garder. L'argent perçu pourra plus tard être redistribué entre les membres de la DAO.
 
 ## Comment fonctionnent les DAO ? {#how-daos-work}
 
@@ -156,7 +156,7 @@ _Habituellement utilisée pour le développement décentralisé et la gouvernanc
 - [Comment démarrer une communauté numérique DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [Qu'est-ce qu'une DAO ?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [Qu'est-ce que le Consensus holographique ?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [Les DAO ne sont pas des entreprises : là où la décentralisation dans les organisations autonomes compte, par Vitalik](https://vitalik.ca/general/2022/09/20/daos.html)
+- [Les DAO ne sont pas des entreprises : là où la décentralisation dans les organisations autonomes compte, par Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO, DAC, DA et plus : un guide terminologique incomplet](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Blog Ethereum](https://blog.ethereum.org)
 
 ### Vidéos {#videos}

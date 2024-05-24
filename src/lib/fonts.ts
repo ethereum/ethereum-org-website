@@ -1,13 +1,10 @@
-import { Inter } from "next/font/google"
-import { IBM_Plex_Mono } from "next/font/google"
+import localFont from "next/font/local"
 
-export const inter = Inter({
-  subsets: ["latin"],
-  fallback: ["sans-serif"],
-})
-
-export const mono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400"],
+// downloaded from https://fonts.google.com/specimen/IBM+Plex+Mono
+export const mono = localFont({
+  src: "../fonts/IBMPlexMono-Regular.ttf",
+  display: "swap",
+  weight: "400",
   fallback: ["Courier", "monospace"],
+  preload: false,
 })

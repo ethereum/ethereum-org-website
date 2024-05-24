@@ -49,7 +49,7 @@ summaryPoint3: 암호화폐 덕분에 사용자는 다시 한 번 자신의 식�
 
 ## 분산 식별자는 어떻게 가능한가요? {#what-makes-decentralized-identifiers-possible}
 
-### 1. 공개 키 기반 구조(PKI) {#public-key-infrastructure}
+### 1. 공개 키 기반 구조(PKI) {#public-key-cryptography}
 
 공개 키 기반 구조(PKI)는 특정 주체를 위해 [공개 키](/glossary/#public-key) 와 [개인 키](/glossary/#private-key)를 생성하는 정보 보안 장치입니다. 공개 키 암호화 기법은 블록체인 네트워크에서 사용자의 신원을 인증하고 디지털 자산의 소유권을 증명하는 용도로 사용됩니다.
 
@@ -109,7 +109,7 @@ DID는 블록체인에 저장되기 때문에 누구든지 이더리움에서 �
 
 ### 소울바운드 토큰과 신원 증명 {#soulbound}
 
-[소울바운드 토큰](https://vitalik.ca/general/2022/01/26/soulbound.html)(양도 불가한 NFT)은 특정 지갑에 국한된 고유한 정보를 수집하는 데 사용될 수 있습니다. 이는 개인적인 성취(특정 온라인 강의 완료 또는 게임에서 높은 점수 획득 등)나 특정 커뮤니티에 참여 등을 증명하기 위한 토큰과 같은 온체인 신원 증명이 특정 이더리움 주소에만 고유하게 소속될 수 있게 만듭니다.
+[소울바운드 토큰](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)(양도 불가한 NFT)은 특정 지갑에 국한된 고유한 정보를 수집하는 데 사용될 수 있습니다. 이는 개인적인 성취(특정 온라인 강의 완료 또는 게임에서 높은 점수 획득 등)나 특정 커뮤니티에 참여 등을 증명하기 위한 토큰과 같은 온체인 신원 증명이 특정 이더리움 주소에만 고유하게 소속될 수 있게 만듭니다.
 
 ## 분산형 신원 증명의 장점 {#benefits-of-decentralized-identity}
 

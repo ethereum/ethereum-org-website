@@ -24,10 +24,10 @@ lang: ru
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> — сообщество, нацеленное на помощь с управлением проектами при разработке Ethereum</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> — чат Discord, управляемый ETHGlobal: онлайн-сообщество для хакеров Ethereum со всего мира</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> — сообщество Discord, сконцентрированное на разработке Ethereum</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">Сообщество EthStaker на Discord</Link> — сообщество для образования, наставничества, поддержки и предоставления ресурсов для существующих и потенциальных стейкеров</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">Сообщество EthStaker на Discord</Link> — сообщество для образования, наставничества, поддержки и предоставления ресурсов для существующих и потенциальных стейкеров</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Команда сайта Ethereum.org</Link> — возможность решить проблемы и поговорить о разработке и дизайне ethereum.org с командой и членами сообщества</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> — сообщество создателей Web3, где собираются разработчики, видные представители отрасли и энтузиасты Ethereum. Мы заинтересованы в разработке, дизайне и культуре Web3. Создавайте вместе с нами.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> — чат для разработки Solidity (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> — чат для разработки Solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> — чат для разработки Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *— форум вопросов и ответов*</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *— децентрализованный форум вопросов и ответов*</SocialListItem>

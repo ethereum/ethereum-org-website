@@ -252,7 +252,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
   - Características
     - Protocolo RPC descentralizado y mercado
     - 1 millón de solicitudes por día en la categoría gratuita (por terminal, máx. 2)
-    - [Terminales públicas](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - [Terminales públicas](https://docs.pokt.network/developers/public-endpoints)
     - Programa Pre-Stake+ (si necesita más de 1 millón de solicitudes por día)
     - Compatibilidad con más de 15 cadenas de bloques
     - Más de 6.400 nodos que generan Pocket Network (POKT) por alojar aplicaciones

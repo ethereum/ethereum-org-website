@@ -156,7 +156,7 @@ _Typischerweise für die dezentrale Entwicklung und Steuerung von Protokollen un
 - [Wie man eine DAO-basierte digitale Community gründet](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [Was ist eine DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [Was ist holografischer Konsens?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) – [DAOstack](https://daostack.io/)
-- [DAOs sind keine Unternehmen: Wo die Dezentralisierung in autonomen Organisationen wichtig ist von Vitalik](https://vitalik.ca/general/2022/09/20/daos.html)
+- [DAOs sind keine Unternehmen: Wo die Dezentralisierung in autonomen Organisationen wichtig ist von Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAOs, DACs, DAs und mehr: Ein unvollständiger Terminologie-Guide](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.ethereum.org)
 
 ### Videos {#videos}

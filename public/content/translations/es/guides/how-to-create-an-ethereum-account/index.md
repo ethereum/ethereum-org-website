@@ -20,7 +20,7 @@ Una cartera es una aplicación que te ayuda a gestionar tu cuenta de Ethereum. U
 
 Si es nuevo, puede seleccionar el filtro «Nuevo en cripto» en la página «encontrar una cartera» para identificar las carteras que deben incluir todas las características necesarias adecuadas para principiantes.
 
-![selección de filtros en la página «encontrar una cartera»](./wallet-box.png)
+![Selección de filtros en la página «encontrar una cartera»](./wallet-box.png)
 
 También hay otros filtros de perfil para satisfacer sus necesidades. Estos son ejemplos de carteras de uso común: debería de hacer su propia investigación antes de confiar en cualquier software.
 

@@ -3,10 +3,10 @@ import { Box, Text } from "@chakra-ui/react"
 
 import { WordList } from "./WordList"
 
-interface IProps {
+type InitialWordDisplayProps = {
   words: Array<string>
 }
-export const InitialWordDisplay: React.FC<IProps> = ({ words }) => (
+export const InitialWordDisplay = ({ words }: InitialWordDisplayProps) => (
   <Box bg="background.highlight">
     <Box py={8}>
       <Text

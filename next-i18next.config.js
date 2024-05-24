@@ -9,9 +9,12 @@ const locales = BUILD_LOCALES
 /** @type {import('next-i18next').UserConfig} */
 module.exports = {
   i18n: {
-    defaultLocale: "en",
+    // "default" locale is a hack to always display the locale prefix in the
+    // url. Ref: https://nextjs.org/docs/pages/building-your-application/routing/internationalization#prefixing-the-default-locale
+    defaultLocale: "default",
     // supported locales defined in `i18n.config.json`
-    locales,
+    locales: ["default", ...locales],
+    localeDetection: false,
   },
   // define custom location for intl files, otherwise default to public/locales (https://github.com/i18next/next-i18next#2-translation-content)
   localePath: "./src/intl",

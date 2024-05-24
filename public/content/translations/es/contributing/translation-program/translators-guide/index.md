@@ -116,7 +116,7 @@ La mejor manera de conservar los enlaces intactos es copiarlos directamente desd
 
 ![Ejemplo de link.png](./example-of-link.png)
 
-Los enlaces también aparecen en el texto original en forma de etiquetas (es decir, <0> </0>). Si pasa el cursor sobre la etiqueta, el editor mostrará su contenido completo (a veces estas etiquetas representan enlaces).
+Los enlaces también aparecen en el texto de origen en forma de etiquetas (es decir, <0> </0>). Si pasa el cursor sobre la etiqueta, el editor mostrará su contenido completo (a veces estas etiquetas representan enlaces).
 
 Es muy importante copiar los enlaces del texto original y no cambiar su orden.
 

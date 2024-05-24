@@ -33,7 +33,7 @@ Multe companii și consorții au implementat blockchain-uri private autorizate p
 
 Întreprinderile experimentează tehnologia blockchain încă din 2016, când au fost lansate proiectele Hyperledger, Quorum și Corda. S-au axat în mare parte pe blockchain-urile întreprinderilor private autorizate, dar începând din 2019 a avut loc o schimbare de concept în privinţa blockchain-urilor publice faţă de cele private pentru aplicațiile de afaceri. Un [sondaj](https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/blockchain/ey-public-blockchain-opportunity-snapshot.pdf) realizat de Forrester a dezvăluit că „Respondenții la sondaj ... îşi dau seama de acest potențial, 75% afirmând că probabil vor valorifica blockchain-urile publice în viitor, iar aproape o treime declarând că acest lucru este foarte probabil”. Paul Brody de la EY a [vorbit](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668) despre avantajele construirii pe blockchain-ul public, care (în funcție de aplicație) pot include o mai mare securitate/imuabilitate şi transparență, costuri totale de proprietate mai mici și capacitatea de a interopera cu toate celelalte aplicații ce se află tot pe Mainnet (efecte de rețea). Partajarea unui cadru comun de referință între companii evită crearea inutilă a numeroase silozuri izolate care nu pot comunica și partaja sau sincroniza informații între ele.
 
-O altă evoluţie prin care atenţia se mută asupra blockchain-ului public este [Nivelul 2](/developers/docs/scaling/layer-2). Nivelul 2 este în primul rând o categorie de tehnologie de scalabilitate care face posibile aplicații cu randament ridicat pe lanțurile publice. Dar soluțiile de Nivelul 2 pot de asemenea [aborda unele dintre celelalte provocări care au determinat dezvoltatorii pentru înteprinderi să aleagă lanțuri private în trecut](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
+O altă evoluţie prin care atenţia se mută asupra blockchain-ului public este [Nivelul 2](/layer-2/). Nivelul 2 este în primul rând o categorie de tehnologie de scalabilitate care face posibile aplicații cu randament ridicat pe lanțurile publice. Dar soluțiile de Nivelul 2 pot de asemenea [aborda unele dintre celelalte provocări care au determinat dezvoltatorii pentru înteprinderi să aleagă lanțuri private în trecut](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
 
 Protocolul Baseline este un proiect-cheie care definește un protocol ce permite colaborarea confidențială și complexă între întreprinderi fără a lăsa date sensibile pe lanț. A câștigat un [avânt](https://www.oasis-open.org/2020/08/26/baseline-protocol-achieves-key-milestone-with-release-of-v0-1-implementation-for-enterprise/) semnificativ pe cursul anului 2020.
 
@@ -52,7 +52,7 @@ Diverse organizații au depus eforturi comune pentru a creşte uşurinţa de uti
 - [Alchemy](https://www.alchemy.com/) _furnizează servicii API și instrumente pentru construirea și monitorizarea aplicațiilor pe Ethereum_
 - [Blockapps](https://blockapps.net/) _implementarea protocolului Ethereum pentru întreprinderi, a instrumentelor și a altor API-uri care formează platforma STRATO_
 - [Chainstack](https://chainstack.com/) _infrastructura de mainnet şi testnet Ethereum găzduită în & cloud-uri publice izolate ale clienților_
-- [ConsenSys](https://consensys.net/) _oferă o gamă de produse și instrumente pentru construirea pe Ethereum, precum și servicii de consultanță și dezvoltare personalizate_
+- [ConsenSys](https://consensys.io/) _oferă o gamă de produse și instrumente pentru construirea pe Ethereum, precum și servicii de consultanță și dezvoltare personalizate_
 - [Bloackchain-ul Envision](https://envisionblockchain.com/) _oferă servicii de consultanță și dezvoltare axate pe întreprinderi, specializate pe Mainnet-ul Ethereum_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _oferă un flux de lucru pentru achiziții prin emiterea de cereri de ofertă, contracte, ordine de cumpărare și facturi în rețeaua partenerilor dvs. de afaceri de încredere_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _un client Ethereum open-source axat pe întreprinderi, dezvoltat sub licența Apache 2.0 și scris în Java_
@@ -71,7 +71,7 @@ Diverse organizații au depus eforturi comune pentru a creşte uşurinţa de uti
 
 ### Soluții de scalabilitate {#scalability-solutions}
 
-[Nivelul 2](/developers/docs/scaling/#layer-2-scaling) este un set de tehnologii sau sisteme care rulează peste Ethereum (Nivelul 1), moștenesc proprietăți de securitate din Nivelul 1 și oferă o capacitate mai mare de procesare a tranzacțiilor (transfer), taxe de tranzacție mai mici (cost de operare) și confirmări mai rapide ale tranzacțiilor decât Nivelul 1. Soluțiile de scalare de Nivelul 2 sunt securizate de Nivelul 1, dar permit aplicațiilor blockchain să gestioneze mai mulți utilizatori sau acțiuni sau date decât ar putea găzdui Nivelul 1. Multe dintre acestea valorifică progresele recente în criptografie și dovezile de zero-knowledge (ZK) pentru a maximiza performanța și securitatea.
+[Nivelul 2](/layer-2/) este un set de tehnologii sau sisteme care rulează peste Ethereum (Nivelul 1), moștenesc proprietăți de securitate din Nivelul 1 și oferă o capacitate mai mare de procesare a tranzacțiilor (transfer), taxe de tranzacție mai mici (cost de operare) și confirmări mai rapide ale tranzacțiilor decât Nivelul 1. Soluțiile de scalare de Nivelul 2 sunt securizate de Nivelul 1, dar permit aplicațiilor blockchain să gestioneze mai mulți utilizatori sau acțiuni sau date decât ar putea găzdui Nivelul 1. Multe dintre acestea valorifică progresele recente în criptografie și dovezile de zero-knowledge (ZK) pentru a maximiza performanța și securitatea.
 
 Construirea aplicației dvs. pe o soluție de scalabilitate de Nivelul 2 poate ajuta la [soluționarea multor preocupări care anterior au determinat companiile să construiască pe blockchain-uri private](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), dar păstrează avantajele construirii pe Mainnet.
 
@@ -130,7 +130,6 @@ Iată câteva dintre aplicațiile pentru întreprinderi care au fost implementat
 ### Legalizarea datelor {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _detaliile împrumuturilor finalizate sunt codificate prin funcții hash și înregistrate pe Mainnet_
-- [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _integritatea datelor poate fi asigurată prin scrierea periodică a hash-urilor de date indexate pe Mainnet_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _cea mai mare agenție de știri din Italia combate știrile false și le permite cititorilor să verifice originea știrilor înregistrându-le pe Mainnet_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _înregistrează comunicate de presă pe Ethereum pentru a asigura responsabilizarea corporativă și încrederea_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _înregistrează proveniența și istoricul reparațiilor ceasurilor pe Ethereum_
@@ -138,7 +137,6 @@ Iată câteva dintre aplicațiile pentru întreprinderi care au fost implementat
 
 ### Lanțul de aprovizionare {#supply-chain}
 
-- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _furnizează conosamente și documente de transfer_
 - [Morpheus.network](https://morpheus.network/) _platformă de automatizare a lanțului de aprovizionare, care implementează un hibrid de lanțuri private cu date legalizate pe Mainnet-ul Ethereum și este utilizată de companii precum distribuitorul canadian de produse alimentare, petrol & și gaze Federated Co-op Ltd. și furnizorul argentinian de hrană pentru animale de companie Vitalcan_
 - [Minespider](https://www.minespider.com/) _urmărirea lanțului de aprovizionare_
 - [ShipChain](https://shipchain.io) _lanț paralel public al lui Ethereum și sistem de întreprinderi pentru vizibilitatea și încrederea lanțului de aprovizionare, în special pentru logistica multi-modală_
@@ -146,7 +144,6 @@ Iată câteva dintre aplicațiile pentru întreprinderi care au fost implementat
 - [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _permite companiilor să se angajeze într-un flux de lucru de achiziții publice prin emiterea de cereri de ofertă, contracte, ordine de cumpărare și facturi în rețeaua partenerilor dvs. de afaceri de încredere_
 - [Treum](https://treum.io/) _aduce transparență, trasabilitate și capacitate de comercializare în lanțurile de aprovizionare utilizând tehnologia blockchain_
 - [TradeTrust](https://www.tradetrust.io/) _verifies electronic Bills of Lading (eBLs) for international shipping_
-- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _mints NFTs for each new batch of beer, enabling greater visibility and efficiency across its supply chain_
 
 ### Acreditări și certificări {#credentials}
 

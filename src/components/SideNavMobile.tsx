@@ -1,10 +1,10 @@
-import React, { ReactNode, useState } from "react"
+import React, { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
-import { MdExpandMore } from "react-icons/md"
+import { MdChevronRight } from "react-icons/md"
 import { Box, Center, HStack, Icon } from "@chakra-ui/react"
 
-import type { TranslationKey } from "@/lib/types"
+import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
 
 import { BaseLink, LinkProps } from "@/components/Link"
@@ -13,7 +13,7 @@ import docLinks from "@/data/developer-docs-links.yaml"
 
 import {
   dropdownIconContainerVariant,
-  IPropsNavLink as INavLinkProps,
+  type NavLinkProps as SideNavLinkProps,
 } from "./SideNav"
 
 // Traverse all links to find page id
@@ -46,7 +46,7 @@ const innerLinksVariants = {
   },
 }
 
-const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
+const LinkContainer = ({ children }: ChildOnlyProp) => {
   return (
     <HStack
       w="full"
@@ -83,11 +83,11 @@ const SideNavLink = ({ children, ...props }: LinkProps) => {
   )
 }
 
-export interface IPropsNavLink extends INavLinkProps {
+export type NavLinkProps = SideNavLinkProps & {
   toggle: () => void
 }
 
-const NavLink: React.FC<IPropsNavLink> = ({ item, path, toggle }) => {
+const NavLink = ({ item, path, toggle }: NavLinkProps) => {
   const { t } = useTranslation("page-developers-docs")
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
@@ -108,11 +108,12 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path, toggle }) => {
           <Box
             as={motion.div}
             cursor="pointer"
+            display="flex"
             onClick={() => setIsOpen(!isOpen)}
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <Icon as={MdExpandMore} boxSize={6} color="secondary" />
+            <Icon as={MdChevronRight} boxSize={6} color="secondary" />
           </Box>
         </LinkContainer>
         <Box
@@ -144,12 +145,12 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path, toggle }) => {
   )
 }
 
-export interface IProps {
+export type SideNavMobileProps = {
   path: string
 }
 
 // TODO consolidate into SideNav
-const SideNavMobile: React.FC<IProps> = ({ path }) => {
+const SideNavMobile = ({ path }: SideNavMobileProps) => {
   const { t } = useTranslation("page-developers-docs")
 
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -166,7 +167,7 @@ const SideNavMobile: React.FC<IProps> = ({ path }) => {
       bgColor="ednBackground"
       height="auto"
       w="full"
-      display={{ base: "block", lg: "none" }}
+      hideFrom="lg"
     >
       <Center
         as={motion.div}
@@ -185,10 +186,11 @@ const SideNavMobile: React.FC<IProps> = ({ path }) => {
         <Box
           as={motion.div}
           cursor="pointer"
+          display="flex"
           variants={dropdownIconContainerVariant}
           animate={isOpen ? "open" : "closed"}
         >
-          <Icon as={MdExpandMore} boxSize={6} color="secondary" />
+          <Icon as={MdChevronRight} boxSize={6} color="secondary" />
         </Box>
       </Center>
       <AnimatePresence>

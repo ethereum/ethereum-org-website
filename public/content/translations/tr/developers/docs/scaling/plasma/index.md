@@ -171,7 +171,7 @@ Birden çok proje, merkeziyetsiz uygulamalarınıza entegre edebileceğiniz Plaz
 
 - [Plazma'yı öğrenin](https://www.learnplasma.org/en/)
 - ["Paylaşılan güvenliğin" ne anlama geldiğine ve neden bu kadar önemli olduğuna dair kısa bir hatırlatma](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
-- [Yan Zincirler - Plazma - Parçalama](https://vitalik.ca/general/2019/06/12/plasma_vs_sharding.html)
+- [Yan Zincirler - Plazma - Parçalama](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Plazma'yı Anlamak, Bölüm 1: Temeller](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [Plazma'nın Yaşamı ve Ölümü](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 

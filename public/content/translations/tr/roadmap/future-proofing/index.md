@@ -35,4 +35,4 @@ Ethereum gelecek ispatı için gereken bir çok yükseltme hâlâ araştırma a�
 
 - [Gaz](/developers/docs/gas)
 - [EVM](/developers/docs/evm)
-- [Veri Yapıları](/developers/docs/data-structures-and-encoding)
+- [Veri yapıları](/developers/docs/data-structures-and-encoding)

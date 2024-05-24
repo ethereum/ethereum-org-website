@@ -26,7 +26,7 @@ Le dépôt [GitHub des EIP](https://github.com/ethereum/EIPs) a été créé en 
 
 Les éditeurs d'EIP ont pour tâche de passer en revue les EIP pour en vérifier la solidité technique, les problèmes de formatage et corriger l'orthographe, la grammaire et le style de code. Martin Becze, Vitalik Buterin, Gavin Wood et quelques autres ont été les éditeurs d'origine des EIP de 2015 à fin 2016.
 
-Les éditeurs d'EIP actuels sont
+Les éditeurs d'EIP actuels sont 
 
 - Alex Beregszaszi (@axic)
 - Gavin John (@Pandapip1)
@@ -46,7 +46,7 @@ Les éditeurs Emeritus EIP sont
 
 Si vous souhaitez devenir un éditeur EIP, veuillez consulter [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069).
 
-Les éditeurs d'EIP décident du moment où une proposition peut devenir une EIP, et aident les auteurs d'EIP à faire avancer leurs propositions. [Les Ethereum Cat Herders](https://ethereumcatherders.com/) aident à organiser des réunions entre les éditeurs d'EIP et la communauté (voir [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)).
+Les éditeurs d'EIP décident du moment où une proposition peut devenir une EIP, et aident les auteurs d'EIP à faire avancer leurs propositions. [Les Ethereum Cat Herders](https://www.ethereumcatherders.com/) aident à organiser des réunions entre les éditeurs d'EIP et la communauté (voir [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)).
 
 Le processus complet de normalisation ainsi que la charte sont détaillés dans le document [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 

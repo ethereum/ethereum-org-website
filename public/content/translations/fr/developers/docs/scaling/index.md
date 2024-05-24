@@ -103,11 +103,11 @@ _Notez que l’explication dans la vidéo utilise le terme « Couche 2 » pour
 - [Une feuille de route Ethereum centrée sur le rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
 - [Analytiques à jour sur les solutions de mise à l'échelle de la couche 2 pour Ethereum](https://www.l2beat.com/)
 - [Évaluation des solutions de mise à l'échelle de la couche 2 d'Ethereum : Un cadre de comparaison](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
-- [Un guide incomplet pour les rollups](https://vitalik.ca/general/2021/01/05/rollup.html)
+- [Un guide incomplet pour les rollups](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Rollups ZK alimentés par Ethereum : Wolrd Beaters](https://hackmd.io/@canti/rkUT0BD8K)
 - [Rollups optimisés vs Rollups ZK](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [Évolutivité de la blockchain ZK](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Pourquoi les rollups + les data shards sont les seules solutions durables pour une grande évolutivité](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
-- [Quels types de couches 3 ont un sens ?](https://vitalik.ca/general/2022/09/17/layer_3.html)
+- [Quels types de couches 3 ont un sens ?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_

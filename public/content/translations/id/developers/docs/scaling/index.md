@@ -85,7 +85,7 @@ _Perhatikan penjelasan dalam video ini menggunakan istilah "Lapisan 2" untuk mer
 - [Roadmap Ethereum rollup-centric](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
 - [Analitik terbaru tentang solusi penskalaan Lapisan 2 untuk Ethereum](https://www.l2beat.com/)
 - [Mengevaluasi Solusi Penskalaan lapisan 2 Ethereum: Kerangka Kerja Perbandingan](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
-- [Panduan Tidak Lengkap tentang Rollup](https://vitalik.ca/general/2021/01/05/rollup.html)
+- [Panduan Tidak Lengkap tentang Rollup](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Rollup ZK yang digerakkan Ethereum: Yang Terbaik di Kelasnya](https://hackmd.io/@canti/rkUT0BD8K)
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

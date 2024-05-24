@@ -208,7 +208,7 @@ Comme expliqué, les rollups optimistes publient des données de transaction com
 
 La chaîne principale d'Ethereum impose des limites à la quantité de données que les blocs peuvent contenir, libellées en unités de gaz (la [taille moyenne des blocs](/developers/docs/blocks/#block-size) est de 15 millions de gaz). Bien que cela limite la quantité de gaz que chaque transaction peut utiliser, cela signifie également que nous pouvons augmenter les transactions traitées par bloc en réduisant les données liées aux transactions, ce qui améliore directement l'évolutivité.
 
-Les rollups optimistes utilisent plusieurs techniques pour réaliser la compression des données de transaction et améliorer les taux de TPS. Par exemple, cet [article](https://vitalik.ca/general/2021/01/05/rollup.html) compare les données qu'une transaction utilisateur de base (envoi d'éther) génère sur le réseau principal par rapport à la quantité de données que la même transaction génère sur un rollup :
+Les rollups optimistes utilisent plusieurs techniques pour réaliser la compression des données de transaction et améliorer les taux de TPS. Par exemple, cet [article](https://vitalik.eth.limo/general/2021/01/05/rollup.html) compare les données qu'une transaction utilisateur de base (envoi d'éther) génère sur le réseau principal par rapport à la quantité de données que la même transaction génère sur un rollup :
 
 | Paramètre   | Ethereum (L1)       | Rollup (L2)    |
 | ----------- | ------------------- | -------------- |
@@ -258,7 +258,7 @@ Plusieurs implémentations de rollups optimistes existent, que vous pouvez inté
 ## Autres lectures sur les rollups optimistes
 
 - [Comment fonctionnent les rollups optimistes (Le guide complet)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Tout ce que vous devez savoir sur les rollups optimisés](https://research.paradigm.xyz/rollups)
+- [Qu'est-ce qu'un Rollup? Une introduction technique](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [Le guide essentiel pour Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Comment fonctionne réellement le rollup d'Optimism ?](https://research.paradigm.xyz/optimism)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

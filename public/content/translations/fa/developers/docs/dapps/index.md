@@ -51,15 +51,15 @@ lang: fa
 
 **Scaffold-ETH _- به‌سرعت Solidity را با استفاده از یک فرانت‌اند که با قرارداد هوشمندتان سازگار است آزمایش کنید._**
 
-- [گیت‌هاب](https://github.com/austintgriffith/scaffold-eth)
+- [گیت‌هاب](https://github.com/scaffold-eth/scaffold-eth-2)
 - [dapp نمونه](https://punkwallet.io/)
 
 **برنامه‌ی اتریومی بسازید _- با یک فرمان برنامه‌های بر پایه‌ی اتریوم بسازید._**
 
 - [گیت‌هاب](https://github.com/paulrberg/create-eth-app)
 
-\*\*One Click Dapp \_- ابزار FOSS برای تولید صفحات فرانت dapp از
-‏ABI‏</a‏>.
+**One Click Dapp _- ابزار FOSS برای تولید صفحات فرانت dapp از
+ABI._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [گیت هاب](https://github.com/oneclickdapp/oneclickdapp-v1)
@@ -75,6 +75,8 @@ lang: fa
 - [اسناد](https://portal.thirdweb.com/)
 - [گیت هاب](https://github.com/thirdweb-dev/)
 
+
+
 ## بیشتر بخوانید {#further-reading}
 
 - [کاوش در صرافی‌های غیرمتمرکز](/dapps)
@@ -84,6 +86,8 @@ lang: fa
 - [اپلیکیشن‌های غیرمتمرکز پرطرفدار](https://www.alchemy.com/dapps) - _Alchemy_
 
 _آیا می‌خواهید در مورد منابع جامعه که به شما کمک کرده بدانید؟ این صفحه را ویرایش و اضافه کنید!_
+
+
 
 ## موضوعات مرتبط {#related-topics}
 

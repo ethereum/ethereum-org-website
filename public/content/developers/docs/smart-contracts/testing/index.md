@@ -144,6 +144,7 @@ Unit testing frameworks for Solidity smart contracts come in different languages
 - **[Running unit tests with Remix](https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests)**
 - **[Running unit tests with Ape](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
 - **[Running unit tests with Hardhat](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
+- **[Running unit tests with Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
 ### Integration testing {#integration-testing-for-smart-contracts}
 
@@ -188,9 +189,11 @@ Running property-based testing typically starts with defining a property (e.g., 
 Once configured properly, the property testing tool will execute your smart contracts functions with randomly generated inputs. If there are any assertion violations, you should get a report with concrete input data that violates the property under evaluation. See some of the guides below to get started with running property-based testing with different tools:
 
 - **[Static analysis of smart contracts with Slither](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither#slither)**
+- **[Static analysis of smart contracts with Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**
 - **[Property-based testing with Brownie](https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html)**
 - **[Fuzzing contracts with Foundry](https://book.getfoundry.sh/forge/fuzz-testing)**
 - **[Fuzzing contracts with Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
+- **[Fuzzing contracts with Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Symbolic execution of smart contracts with Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[Symbolic execution of smart contracts with Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
@@ -238,7 +241,7 @@ Still, you can further increase the possibility of catching contract vulnerabili
 
 Audits are performed by auditors experienced at finding cases of security flaws and poor development practices in smart contracts. An audit will usually include testing (and possibly formal verification) as well as a manual review of the entire codebase.
 
-Conversely, a bug bounty program usually involves involves offering a financial reward to an individual (commonly described as [whitehat hackers](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>)) that discovers a vulnerability in a smart contract and discloses it to developers. Bug bounties are similar to audits since it involves asking others to help find defects in smart contracts.
+Conversely, a bug bounty program usually involves offering a financial reward to an individual (commonly described as [whitehat hackers](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>)) that discovers a vulnerability in a smart contract and discloses it to developers. Bug bounties are similar to audits since it involves asking others to help find defects in smart contracts.
 
 The major difference is that bug bounty programs are open to the wider developer/hacker community and attract a broad class of ethical hackers and independent security professionals with unique skills and experience. This may be an advantage over smart contract audits that mainly rely on teams who may possess limited or narrow expertise.
 
@@ -262,6 +265,8 @@ The major difference is that bug bounty programs are open to the wider developer
 
 - **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _Python-based development and testing framework for smart contracts targeting the Ethereum Virtual Machine._
 
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _Python-based framework for unit testing and fuzzing with strong debugging capabilities and cross-chain testing support, utilizing pytest and Anvil for best user experience and performance._
+
 ### Property-based testing tools {#property-based-testing-tools}
 
 #### Static analysis tools {#static-analysis-tools}
@@ -269,6 +274,10 @@ The major difference is that bug bounty programs are open to the wider developer
 - **[Slither](https://github.com/crytic/slither)** - _Python-based Solidity static analysis framework for finding vulnerabilities, enhancing code comprehension, and writing custom analyses for smart contracts._
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter for enforcing style and security best practices for the Solidity smart contract programming language._
+
+- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Rust-based static analyzer specifically designed for Web3 smart contract security and development._
+
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Python-based static analysis framework with vulnerability and code quality detectors, printers for extracting useful information from code and support for writing custom submodules._
 
 #### Dynamic analysis tools {#dynamic-analysis-tools}
 

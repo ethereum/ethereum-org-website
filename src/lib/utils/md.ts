@@ -18,10 +18,13 @@ import { toPosixPath } from "./relativePath"
 
 import { ITutorial } from "@/pages/developers/tutorials"
 
-const CURRENT_CONTENT_DIR = join(process.cwd(), CONTENT_DIR)
+function getCurrentDir() {
+  return join(process.cwd(), CONTENT_DIR)
+}
 
 const getPostSlugs = (dir: string, files: string[] = []) => {
-  const contentDir = join(CURRENT_CONTENT_DIR, dir)
+  const currentDir = getCurrentDir()
+  const contentDir = join(currentDir, dir)
   // Temporal list of content pages allowed to be compiled
   // When a content page is migrated (and he components being used), should be added to this list
   const temporalAllowedPages = [
@@ -56,6 +59,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/blocks",
     "/developers/docs/bridges",
     "/developers/docs/consensus-mechanisms",
+    "/developers/docs/consensus-mechanisms/poa",
     "/developers/docs/consensus-mechanisms/pos",
     "/developers/docs/consensus-mechanisms/pos/attack-and-defense",
     "/developers/docs/consensus-mechanisms/pos/attestations",
@@ -68,9 +72,9 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/consensus-mechanisms/pos/weak-subjectivity",
     "/developers/docs/consensus-mechanisms/pow/",
     "/developers/docs/consensus-mechanisms/pow/mining",
-    "/developers/docs/consensus-mechanisms/pow/mining-algorithms",
-    "/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto",
-    "/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash",
+    "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms",
+    "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto",
+    "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash",
     "/developers/docs/dapps",
     "/developers/docs/data-and-analytics",
     "/developers/docs/data-and-analytics/block-explorers",
@@ -197,6 +201,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers",
     "/developers/tutorials/waffle-test-simple-smart-contract",
     "/developers/tutorials/yellow-paper-evm",
+    "/developers/tutorials/creating-a-wagmi-ui-for-your-contract",
     // Static (68/68) ✅
     "/about",
     "/bridges",
@@ -234,7 +239,6 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/contributing/translation-program/translatathon",
     "/contributing/translation-program/translators-guide",
     "/cookie-policy",
-    "/deprecated-software",
     "/eips",
     "/energy-consumption",
     "/enterprise",
@@ -253,6 +257,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/privacy-policy",
     "/roadmap/account-abstraction",
     "/roadmap/danksharding",
+    "/roadmap/dencun",
     "/roadmap/merge/issuance",
     "/roadmap/pbs",
     "/roadmap/secret-leader-election",
@@ -265,6 +270,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/terms-of-use",
     "/web3",
     "/whitepaper",
+    "/wrapped-eth",
     "/zero-knowledge-proofs",
   ]
 
@@ -288,14 +294,12 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
       if (fileExtension === ".md") {
         // If it is a .md file (allowed content page), push the path to the files array
         for (const page of temporalAllowedPages) {
-          const fullPagePath = join(CURRENT_CONTENT_DIR, page)
+          const fullPagePath = join(currentDir, page)
 
           if (name.includes(fullPagePath)) {
             files.push(
               toPosixPath(
-                fullPagePath
-                  .replace(CURRENT_CONTENT_DIR, "")
-                  .replace("/index.md", "")
+                fullPagePath.replace(currentDir, "").replace("/index.md", "")
               )
             )
           }
@@ -318,7 +322,8 @@ export const getContentBySlug = (slug: string) => {
     }
   }
 
-  let fullPath = toPosixPath(join(CURRENT_CONTENT_DIR, realSlug))
+  const currentDir = getCurrentDir()
+  let fullPath = toPosixPath(join(currentDir, realSlug))
   let contentNotTranslated = false
 
   // If content is not translated, use english content fallback
@@ -330,7 +335,10 @@ export const getContentBySlug = (slug: string) => {
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data, content } = matter(fileContents)
   const frontmatter = data as Frontmatter
-  const items: Omit<MdPageContent, "tocItems" | "crowdinContributors"> = {
+  const items: Omit<
+    MdPageContent,
+    "tocItems" | "crowdinContributors" | "gitContributors"
+  > = {
     slug,
     content,
     frontmatter,
@@ -348,8 +356,9 @@ export const getContent = (dir: string) => {
 }
 
 export const getTutorialsData = (locale: string): ITutorial[] => {
+  const currentDir = getCurrentDir()
   const fullPath = join(
-    CURRENT_CONTENT_DIR,
+    currentDir,
     locale !== "en" ? `translations/${locale!}` : "",
     "developers/tutorials"
   )
@@ -360,7 +369,7 @@ export const getTutorialsData = (locale: string): ITutorial[] => {
 
     tutorialData = languageTutorialFiles.map((dir) => {
       const filePath = join(
-        CURRENT_CONTENT_DIR,
+        currentDir,
         locale !== "en" ? `translations/${locale!}` : "",
         "developers/tutorials",
         dir,

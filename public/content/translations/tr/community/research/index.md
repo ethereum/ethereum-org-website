@@ -39,7 +39,7 @@ Mutabakat araştırması [Ethereum'un hisse ispatı mekanizması](/developers/do
 
 #### Arkaplan okuması {#background-reading}
 
-- [Hisse İspatı'na Giriş](/developers/docs/consensus-mechanisms/pos/)
+- [Hisse ispatı'na giriş](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG belgesi](https://arxiv.org/abs/1710.09437)
 - [Casper-FFG açıklayıcısı](https://arxiv.org/abs/1710.09437)
 - [Gasper belgesi](https://arxiv.org/abs/2003.03052)
@@ -71,12 +71,12 @@ Yürütüm katmanı, işlemlerin yürütülmesi, [Ethereum sanal makinesinin (EV
 - [Durum sonlanmasına giden yollar](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Verkel ve durum sonlanması teklifleri](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [Geçmiş yönetimi](https://eips.ethereum.org/EIPS/eip-4444)
-- [Verkle Ağaçları](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Verkle Ağaçları](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Veri kullanılabilirlik örneklendirmesi](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## İstemci Geliştirme {#client-development}
 
-Ethereum istemcileri Ethereum protokolünün uygulamalarıdır. İstemci geliştirme süreci protokol araştırmalarını istemciler içine inşa ederek gerçeğe dönüştürüyor. İstemci geliştirme, spesifik uygulamaları inşa etmekle birlikte istemci özelleştirmelerini de kapsıyor.
+Ethereum istemcileri Ethereum protokolünün uygulamalarıdır. İstemci geliştirme süreci protokol araştırmalarını istemciler içine inşa ederek gerçeğe dönüştürüyor. İstemci geliştirme, spesifik uygulamaları inşa etmekle birlikte istemci özelliklerini de kapsıyor.
 
 Bir Ethereum düğümü 2 parça yazılım olarak çalışmak zorunda:
 
@@ -93,7 +93,7 @@ Düğümler ve istemciler hakkında daha detaylı bilgi ve güncel istemcilerin 
 ### Fikir Birliği İstemcileri {#consensus-clients}
 
 - [Fikir birliği istemcisi özellikleri](https://github.com/ethereum/consensus-specs)
-- [İşaret API özellikleri](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
+- [İşaret API'sı özellikleri](https://ethereum.github.io/beacon-APIs/#/Beacon/getStateRoot)
 
 ## Ölçeklendirme ve performans {#scaling-and-performance}
 
@@ -121,10 +121,10 @@ Katman 2'nin daha çok araştırma ve geliştirme gerektiren spesifik alanların
 
 #### Arkaplan okuması {#background-reading-3}
 
-- [Blok zincir köprülerine giriş](/bridges/)
+- [Blokzincir köprülerine giriş](/bridges/)
 - [Köprüler üzerine, Vitalik](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [Blok zincir köprüleri makalesi](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [Köprülerde kilitli değer](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
+- [Köprülerde kilitli değer](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
 
 #### Güncel araştırma {#recent-research-3}
 
@@ -152,11 +152,11 @@ Ortalama bir donanımda [düğüm çalıştırmak](/developers/docs/nodes-and-cl
 
 #### Arkaplan okuması {#background-reading-5}
 
-- [KOL üzerinde Ethereum](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
+- [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
 
 #### Güncel araştırma {#recent-research-5}
 
-- [FGPA'lar üzerine, ecdsa](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
+- [FPGA'lar üzerine ecdsa](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
 
 ## Güvenlik {#security}
 
@@ -272,7 +272,7 @@ Likit hisseleme 32 ETH'den azına sahip olan kullanıcıların DeFi'da kullanıl
 
 #### Güncel araştırma {#recent-research-12}
 
-- [Lido'dan çekimleri halletmek](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
+- [Lido'dan para çekme işlemlerini yapmak](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
 - [Para çekme kimlik bilgileri](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
 - [Likit Hisseleme Türevlerinin riskleri](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
 
@@ -280,7 +280,7 @@ Likit hisseleme 32 ETH'den azına sahip olan kullanıcıların DeFi'da kullanıl
 
 ### Resmî doğrulama {#formal-verification}
 
-Resmi doğrulama Ethereum'un mutabakat özelliklerinin doğru ve hatasız olduğunu doğrulamak için kod yazmaktır. Bu şartnamenin yönetim ve geliştirme gerektiren çalıştırılabilir bir sürümü Phytonda yazılmıştır. Bununla ilgili daha fazla araştırma bu şartnamenin Phyton üzerinde çalıştırılmasına yardımcı olabilir, doğruluğu daha güçlü bir şekilde doğrulayabilir ve sorunları tanımlayabilir.
+Resmi doğrulama Ethereum'un mutabakat özelliklerinin doğru ve hatasız olduğunu doğrulamak için kod yazmaktır. Bu özelliklerin yönetim ve geliştirme gerektiren çalıştırılabilir bir sürümü Phytonda yazılmıştır. Bununla ilgili daha fazla araştırma bu özelliklerin Phyton üzerinde çalıştırılmasına yardımcı olabilir, doğruluğu daha güçlü bir şekilde doğrulayabilir ve sorunları tanımlayabilir.
 
 #### Arkaplan okuması {#background-reading-13}
 
@@ -290,7 +290,7 @@ Resmi doğrulama Ethereum'un mutabakat özelliklerinin doğru ve hatasız olduğ
 #### Güncel araştırma {#recent-research-13}
 
 - [Depozito Sözleşmesinin resmi doğrulaması](https://github.com/runtimeverification/deposit-contract-verification)
-- [İşaret Zinciri şartnamesinin resmi doğrulaması](https://github.com/runtimeverification/deposit-contract-verification)
+- [İşaret Zinciri özelliklerinin resmi doğrulaması](https://github.com/runtimeverification/deposit-contract-verification)
 
 ## Veri bilimi ve analizler {#data-science-and-analytics}
 

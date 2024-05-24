@@ -6,11 +6,11 @@ lang: en
 
 # How to revoke smart contract access to your crypto funds
 
-This guide will teach you how to view a list of all smart contracts you have allowed access to your funds and how to cancel them.
+This guide will teach you how to view a list of all [smart contracts](/glossary/#smart-contract) you have allowed access to your funds and how to cancel them.
 
-Sometimes malicious developers build backdoors into smart contracts that allow access to the funds of unaware users who interact with the smart contract. What often happens is that such platforms ask the user for permission to spend an **unlimited number of tokens** in an attempt to save small amounts of gas in the future, but this comes with increased risk.
+Sometimes malicious developers build backdoors into smart contracts that allow access to the funds of unaware users who interact with the smart contract. What often happens is that such platforms ask the user for permission to spend an **unlimited number of tokens** in an attempt to save small amounts of [gas](/glossary/#gas) in the future, but this comes with increased risk.
 
-Once a platform has unlimited access rights to a token on your wallet, they can spend all those tokens even if you have withdrawn your funds from their platform into your wallet. Malicious actors can still access your funds and withdraw them into their wallets with no recovery option left for you.
+Once a platform has unlimited access rights to a token on your [wallet](/glossary/#wallet), they can spend all those tokens even if you have withdrawn your funds from their platform into your wallet. Malicious actors can still access your funds and withdraw them into their wallets with no recovery option left for you.
 
 The only protections are to refrain from using untested new projects, only approve what you need, or regularly revoke access. So, how do you do that?
 
@@ -58,7 +58,7 @@ We advise you to refresh the revoking tool after a few minutes and connect your 
 
 ### Does revoking token access also terminate staking, pooling, lending etc?
 
-No, it will not affect any of your DeFi strategies. You will remain in your positions and keep getting rewards etc.
+No, it will not affect any of your [DeFi](/glossary/#defi) strategies. You will remain in your positions and keep getting rewards etc.
 
 ### Is disconnecting a wallet from a project the same as removing permission to use my funds?
 

@@ -1,6 +1,6 @@
 ---
-title: Staking, mint szolgáltatás
-description: Egy áttekintő a pooled ETH staking elkezdéséről
+title: Letétbe helyezés mint szolgáltatás
+description: Áttekintés a letéti alapok használatáról
 lang: hu
 template: staking
 emoji: ":money_with_wings:"
@@ -22,7 +22,7 @@ A letétbe helyezés, mint szolgáltatás (SaaS) egy olyan lehetőség, amikor a
 Az Ethereum-protokoll eredendően nem támogatja a letétbe helyezés delegálását, így ezek a szolgáltatások képesek ellátni ezt az igényt. Ha Ön letétbe helyezne 32 ETH-t, de nem szeretne a hardveres részével foglalkozni, az SaaS lehetővé teszi, hogy ezt a részét átadja másnak, miközben részesül a blokkjutalmakból.
 
 <CardGrid>
-  <Card title="Saját validátor" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
+  <Card title="Saját validátor" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
   <Card title="Könnyű kezdés" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
   <Card title="Behatárolt kockázat" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
@@ -47,7 +47,7 @@ Néhány elérhető SaaS-szolgáltatót soroltunk fel alább. A fenti jellemzők
 
 <StakingProductsCardGrid category="saas" />
 
-Olyan szolgáltatót válasszon, aki támogatja a [kisebbségi klienseket](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok a szolgáltatók, akik korlátozzák a többségi klienseket használatát, a következő jellemzők alapján szűrhetők ki: <em style={{ textTransform: "uppercase" }}>sokrétű végrehajtás</em> és <em style={{ textTransform: "uppercase" }}>sokrétű konszenzus</em>
+Olyan szolgáltatót válasszon, aki támogatja a [kisebbségi klienseket](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok a szolgáltatók, akik korlátozzák a többségi klienseket használatát, a következő jellemzők alapján szűrhetők ki: <em style={{ textTransform: "uppercase" }}>végrehajtási kliens sokrétűsége</em> és <em style={{ textTransform: "uppercase" }}>konszenzusos kliens sokrétűgése</em>
 
 ### Kulcsgenerátorok
 
@@ -91,4 +91,5 @@ Kérdezze meg az SaaS-szolgáltatóját a lehetséges garanciákról vagy biztos
 
 ## További olvasnivaló {#further-reading}
 
+- [Ethereum letétbe helyezési jegyzék](https://www.staking.directory/) – _Eridian és Spacesider_
 - [A letétbe helyezési szolgáltatások értékelése](https://www.attestant.io/posts/evaluating-staking-services/) – _Jim McDonald 2020._

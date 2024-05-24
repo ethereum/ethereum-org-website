@@ -174,9 +174,9 @@ Quan la cadena de balisa es fusioni amb la capa d'execució d'Ethereum, el proc�
 
 La governança a Ethereum no està definida de manera rígida. Diversos participants de la comunitat tenen diferents perspectives al respecte. Aquí en teniu uns quants:
 
-- [Notes sobre la governança de la cadena de blocs](https://vitalik.ca/general/2017/12/17/voting.html) – _Vitalik Buterin_
+- [Notes sobre la governança de la cadena de blocs](https://vitalik.eth.limo/general/2017/12/17/voting.html) – _Vitalik Buterin_
 - [Com funciona la governança d'Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Com funciona la governança d'Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Què és un desenvolupador de nucli d'Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_
-- [Governança, 2a part: la plutocràcia també és dolenta](https://vitalik.ca/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
-- [Més enllà de la governança per votació amb monedes](https://vitalik.ca/general/2021/08/16/voting3.html) – _Vitalik Buterin_
+- [Governança, 2a part: la plutocràcia també és dolenta](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
+- [Més enllà de la governança per votació amb monedes](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_

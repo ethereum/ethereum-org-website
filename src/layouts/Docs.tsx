@@ -2,13 +2,12 @@ import { useRouter } from "next/router"
 import {
   Badge,
   Box,
+  type BoxProps,
   Divider as ChakraDivider,
   Flex,
-  FlexProps,
-  HeadingProps,
-  ListItem as ChakraListItem,
-  ListItemProps,
-  ListProps,
+  type FlexProps,
+  type HeadingProps,
+  type ListProps,
   OrderedList as ChakraOrderedList,
   UnorderedList as ChakraUnorderedList,
   useToken,
@@ -52,8 +51,6 @@ import { getEditPath } from "@/lib/utils/editPath"
 // Utils
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
-
 const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
   <Flex
     direction="column"
@@ -73,7 +70,9 @@ const Divider = () => (
   />
 )
 
-const ContentContainer = (props: ChildOnlyProp) => (
+type ContentContainerProps = Pick<BoxProps, "children" | "dir">
+
+const ContentContainer = (props: ContentContainerProps) => (
   <Flex
     justify={"space-between"}
     w="full"
@@ -97,7 +96,7 @@ const H1 = (props: HeadingProps) => (
     {...baseHeadingStyle}
     fontSize={{ base: "2rem", md: "2.5rem" }}
     mt={{ base: 0, md: 8 }}
-    mb={{ base: 4, md: 8 }}
+    mb="8"
     {...props}
   />
 )
@@ -135,10 +134,6 @@ const OrderedList = (props: ListProps) => (
   <ChakraOrderedList ms="1.45rem" {...props} />
 )
 
-const ListItem = (props: ListItemProps) => (
-  <ChakraListItem color="text300" {...props} />
-)
-
 // Apply styles for classes within markdown here
 const Content = (props: ChildOnlyProp) => {
   const mdBreakpoint = useToken("breakpoints", "md")
@@ -147,8 +142,8 @@ const Content = (props: ChildOnlyProp) => {
     <Box
       as={MainArticle}
       flex={`1 1 ${mdBreakpoint}`}
-      maxW={{ base: "full", lg: mdBreakpoint }}
-      pt={{ base: 32, md: 12 }}
+      w={{ base: "full", lg: "0" }}
+      pt={{ base: 8, md: 12 }}
       pb={{ base: 8, md: 16 }}
       px={{ base: 8, md: 16 }}
       m="0 auto"
@@ -187,7 +182,6 @@ export const docsComponents = {
   p: Paragraph,
   ul: UnorderedList,
   ol: OrderedList,
-  li: ListItem,
   pre: Codeblock,
   ...mdxTableComponents,
   Badge,
@@ -203,14 +197,19 @@ export const docsComponents = {
   YouTube,
 }
 
-interface DocsLayoutProps
-  extends Pick<
-      MdPageContent,
-      "slug" | "tocItems" | "lastUpdatedDate" | "crowdinContributors"
-    >,
-    ChildOnlyProp {
-  frontmatter: DocsFrontmatter
-}
+type DocsLayoutProps = Pick<
+  MdPageContent,
+  | "slug"
+  | "tocItems"
+  | "lastUpdatedDate"
+  | "crowdinContributors"
+  | "contentNotTranslated"
+  | "gitContributors"
+> &
+  Required<Pick<MdPageContent, "lastUpdatedDate">> &
+  ChildOnlyProp & {
+    frontmatter: DocsFrontmatter
+  }
 
 export const DocsLayout = ({
   children,
@@ -219,13 +218,16 @@ export const DocsLayout = ({
   tocItems,
   lastUpdatedDate,
   crowdinContributors,
+  contentNotTranslated,
+  gitContributors,
 }: DocsLayoutProps) => {
   const isPageIncomplete = !!frontmatter.incomplete
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = getEditPath(relativePath)
 
-  const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
-  const intlLastEdit = "data" in gitHubLastEdit ? gitHubLastEdit.data! : ""
+  const gitHubLastEdit = gitContributors[0]?.date
+  const intlLastEdit = gitHubLastEdit || lastUpdatedDate
+
   const useGitHubContributors =
     frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
@@ -237,14 +239,14 @@ export const DocsLayout = ({
           <Translation id="page-developers-docs:banner-page-incomplete" />
         </BannerNotification>
       )}
-      <ContentContainer>
+      <ContentContainer dir={contentNotTranslated ? "ltr" : "unset"}>
         <SideNav path={relativePath} />
         <Content>
           <H1 id="top">{frontmatter.title}</H1>
           {useGitHubContributors ? (
             <GitHubContributors
-              relativePath={relativePath}
-              lastUpdatedDate={lastUpdatedDate!}
+              lastUpdatedDate={lastUpdatedDate}
+              contributors={gitContributors}
             />
           ) : (
             <CrowdinContributors
@@ -265,7 +267,7 @@ export const DocsLayout = ({
           {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
           <BackToTop />
           <FeedbackCard isArticle />
-          <DocsNav relativePath={relativePath} />
+          <DocsNav contentNotTranslated={contentNotTranslated} />
         </Content>
         {tocItems && (
           <TableOfContents

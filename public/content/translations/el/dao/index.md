@@ -156,7 +156,7 @@ _Συνήθως χρησιμοποιείται για την αποκεντρω�
 - [Πώς να ξεκινήσετε έναν DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [Τι είναι ένας DAO;](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [Τι είναι η ολογραφική συναίνεση;](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [Οι DAO δεν είναι εταιρείες: όπου η αποκέντρωση σε αυτόνομους οργανισμούς έχει σημασία, από τον Vitalik](https://vitalik.ca/general/2022/09/20/daos.html)
+- [Οι DAO δεν είναι εταιρείες: όπου η αποκέντρωση σε αυτόνομους οργανισμούς έχει σημασία, από τον Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [Οι DAO, DAC, DA και άλλοι: Ένας ατελής οδηγός ορολογίας](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ιστολόγιο Ethereum](https://blog.ethereum.org)
 
 ### Βίντεο {#videos}

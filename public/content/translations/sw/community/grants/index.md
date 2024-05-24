@@ -16,7 +16,6 @@ Programu hizi zinasaidia ikolojia ya Ethereum kwa kutoa fedha kwa miradi mingi. 
 
 - [Programu ya Usaidizi wa Ekolojia ya EF](https://esp.ethereum.foundation) - _Kufadhili miradi ya chanzo wazi ambayo inanufaisha Ethereum, kwa kuzingatia zana za ulimwengu , miundombinu, utafiti na bidhaa za umma_
 - [RFPs za Ethereum](https://github.com/ethereum/requests-for-proposals) - _Maombi ya Mapendekezo na Ethereum Foundation ya kazi na miradi katika ikolojia ya Ethereum_
-- [MetaCartel](https://www.metacartel.org/grants/) - _Uendelezaji wa Dapp, uundaji wa DAO_
 - [Moloch DAO](https://www.molochdao.com/) - _Faragha, ukuaji wa safu ya 2, usalama wa mteja, na zaidi_
 - [Ruzuku zilizo wazi](https://opengrants.com/explore)
 - [Ruzuku za DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Ukurasa wa google wa mashirika yanayotoa Ruzuku._

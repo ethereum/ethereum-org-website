@@ -208,7 +208,7 @@ Come spiegato, i rollup ottimistici pubblicano i dati delle transazioni compress
 
 La catena principale di Ethereum pone limiti su quanti dati possono esser contenuti dai blocchi, denominati in unità di gas (la [dimensione media del blocco](/developers/docs/blocks/#block-size) è di 15 milioni di gas). Mentre ciò limita quanto gas è utilizzabile da ogni transazione, significa anche che possiamo aumentare le transazioni elaborate per blocco, riducendo i dati relativi alla transazione e migliorando direttamente la scalabilità.
 
-I rollup ottimistici usano diverse tecniche per ottenere la compressione dei dati di transazione e migliorare i tassi TPS. Ad esempio, questo [articolo](https://vitalik.ca/general/2021/01/05/rollup.html) confronta i dati generati da una transazione utente di base (invio di ether) alla Rete principale, rispetto a quanti dati sono generati dalla stessa transazione su un rollup:
+I rollup ottimistici usano diverse tecniche per ottenere la compressione dei dati di transazione e migliorare i tassi TPS. Ad esempio, questo [articolo](https://vitalik.eth.limo/general/2021/01/05/rollup.html) confronta i dati generati da una transazione utente di base (invio di ether) alla Rete principale, rispetto a quanti dati sono generati dalla stessa transazione su un rollup:
 
 | Parametro  | Ethereum (L1)         | Rollup (L2)  |
 | ---------- | --------------------- | ------------ |
@@ -258,7 +258,6 @@ Esistono molteplici implementazioni dei rollup ottimistici, che puoi integrare n
 ## Ulteriori letture sui rollup ottimistici
 
 - [Come funzionano gli Optimistic Rollup (La guida completa)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Everything you need to know about Optimistic Rollup](https://research.paradigm.xyz/rollups)
 - [Guida essenziale ad Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Come funziona davvero il rollup di Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
 - [Approfondimento su OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

@@ -2,6 +2,7 @@ import {
   Box,
   Center,
   Flex,
+  type FlexProps,
   SimpleGrid,
   useToken,
   Wrap,
@@ -37,7 +38,9 @@ const CardGrid = (props: ChildOnlyProp) => (
   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
 )
 
-const HeroContainer = (props: ChildOnlyProp) => (
+type HeroContainerProps = Pick<FlexProps, "children" | "dir">
+
+const HeroContainer = (props: HeroContainerProps) => (
   <Flex
     flexDirection={{ base: "column", lg: "row" }}
     align="center"
@@ -63,26 +66,26 @@ export const roadmapComponents = {
   RoadmapImageContent,
 }
 
-interface IProps
-  extends ChildOnlyProp,
-    Pick<MdPageContent, "slug" | "tocItems"> {
-  frontmatter: RoadmapFrontmatter
-}
-export const RoadmapLayout: React.FC<IProps> = ({
+type RoadmapLayoutProps = ChildOnlyProp &
+  Pick<MdPageContent, "slug" | "tocItems" | "contentNotTranslated"> & {
+    frontmatter: RoadmapFrontmatter
+  }
+export const RoadmapLayout = ({
   children,
   frontmatter,
   slug,
   tocItems,
-}) => {
+  contentNotTranslated,
+}: RoadmapLayoutProps) => {
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "Roadmap Options" as TranslationKey,
-    ariaLabel: "Roadmap options dropdown menu",
+    text: "nav-roadmap-options",
+    ariaLabel: "nav-roadmap-options-alt",
     items: [
       {
-        text: "Roadmap home" as TranslationKey,
+        text: "nav-roadmap-home",
         to: "/roadmap/",
         matomo: {
           eventCategory: `Roadmap dropdown`,
@@ -91,7 +94,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "Better security" as TranslationKey,
+        text: "nav-roadmap-security",
         to: "/roadmap/security",
         matomo: {
           eventCategory: `Roadmap security dropdown`,
@@ -100,7 +103,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "Scaling" as TranslationKey,
+        text: "nav-roadmap-scaling",
         to: "/roadmap/scaling",
         matomo: {
           eventCategory: `Roadmap scaling dropdown`,
@@ -109,7 +112,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "Better user experience" as TranslationKey,
+        text: "nav-roadmap-user-experience",
         to: "/roadmap/user-experience/",
         matomo: {
           eventCategory: `Roadmap user experience dropdown`,
@@ -118,7 +121,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "Future-proofing" as TranslationKey,
+        text: "nav-roadmap-future-proofing",
         to: "/roadmap/future-proofing",
         matomo: {
           eventCategory: `Roadmap future-proofing dropdown`,
@@ -130,7 +133,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
   }
 
   return (
-    <Box position="relative">
+    <Box position="relative" dir={contentNotTranslated ? "ltr" : "unset"}>
       {slug === "/roadmap/" ? (
         <HubHero
           heroImg={RoadmapHubHeroImage}

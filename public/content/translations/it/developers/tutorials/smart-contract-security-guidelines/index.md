@@ -33,9 +33,9 @@ La documentazione può essere scritta su diversi livelli e deve essere aggiornat
 
 ### Aggiornabilità {#upgradeability}
 
-Abbiamo discusso le diverse soluzioni di aggiornabilità nel [nostro post di blog](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/). Fai una scelta deliberata per supportare l'aggiornabilità o non prima di scrivere codice. La decisione influenzerà la struttura del codice. In generale, consigliamo:
+Abbiamo discusso le diverse soluzioni di aggiornabilità nel [nostro post di blog](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/). Fai una scelta deliberata per supportare l'aggiornabilità o non prima di scrivere codice. La decisione influirà su come strutturi il tuo codice. In generale, consigliamo:
 
-- **Favorire la [migrazione del contratto](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/) rispetto all'aggiornabilità.** Il sistema di migrazione ha molti dei vantaggi dell'aggiornabilità, senza gli svantaggi.
+- **Prediligere la [migrazione del contratto](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/) rispetto all'aggiornabilità.** I sistemi di migrazione presentano molti vantaggi identici a quelli aggiornabili, senza i loro svantaggi.
 - **Usare lo schema di separazione dei dati rispetto a quello delegatecallproxy.** Se il progetto ha una chiara separazione dell'astrazione, l'aggiornabilità che usa la separazione dei dati necessiterà solo di poche modifiche. delegatecallproxy richiede esperienza con l'EVM ed è altamente incline a errori.
 - **Documentare la procedura di migrazione/aggiornamento prima della distribuzione.** Se dovrai reagire sotto pressione senza linee guida, commetterai degli errori. Scrivi in anticipo la procedura da seguire. Deve includere:
   - Le chiamate che inizializzano i nuovi contratti

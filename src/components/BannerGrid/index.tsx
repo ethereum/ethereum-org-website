@@ -1,11 +1,9 @@
 import React from "react"
 import { Box, Flex, Grid, useToken } from "@chakra-ui/react"
 
-export type Props = {
-  children: React.ReactNode
-}
+import { ChildOnlyProp } from "@/lib/types"
 
-export const Banner: React.FC<Props> = ({ children }) => {
+export const Banner = ({ children }: ChildOnlyProp) => {
   return (
     <Flex
       w="full"
@@ -26,7 +24,7 @@ export const Banner: React.FC<Props> = ({ children }) => {
   )
 }
 
-export const BannerBody: React.FC<Props> = ({ children }) => {
+export const BannerBody = ({ children }: ChildOnlyProp) => {
   return (
     <Box flex={4} p={10}>
       {children}
@@ -34,7 +32,7 @@ export const BannerBody: React.FC<Props> = ({ children }) => {
   )
 }
 
-export const BannerImage: React.FC<Props> = ({ children }) => {
+export const BannerImage = ({ children }: ChildOnlyProp) => {
   return (
     <Flex justifyContent="end" flex={2} alignSelf="end">
       {children}
@@ -42,7 +40,7 @@ export const BannerImage: React.FC<Props> = ({ children }) => {
   )
 }
 
-export const BannerGrid: React.FC<Props> = ({ children }) => {
+export const BannerGrid = ({ children }: ChildOnlyProp) => {
   return (
     <Grid
       templateColumns={{
@@ -62,7 +60,7 @@ export const BannerGrid: React.FC<Props> = ({ children }) => {
   )
 }
 
-export const BannerGridCell: React.FC<Props> = ({ children }) => {
+export const BannerGridCell = ({ children }: ChildOnlyProp) => {
   const [medBp, lgBp] = useToken("breakpoints", ["md", "lg"])
 
   return (

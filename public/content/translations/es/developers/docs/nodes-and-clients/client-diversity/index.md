@@ -90,7 +90,7 @@ Hay varios paneles que ofrecen estadísticas en tiempo real sobre la diversidad 
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/) **/Capa de ejecución:**
 
-- [execution-diversity.info](https://execution-diversity.info/)
+- [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
 ## Más información {#further-reading}

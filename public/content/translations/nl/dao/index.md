@@ -156,7 +156,7 @@ _Meestal gebruikt voor gedecentraliseerde ontwikkeling en governance van protoco
 - [Hoe een door een DAO mogelijk gemaakte digitale gemeenschap te starten](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) - [DAOhaus](https://daohaus.club/)
 - [Wat is een DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [Wat is holografische consensus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [DAOs are not corporations: where decentralization in autonomous organizations matters, van Vitalik](https://vitalik.ca/general/2022/09/20/daos.html)
+- [DAOs are not corporations: where decentralization in autonomous organizations matters, van Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO's, DAC's, DA's en meer: een onvolledige terminologiegids](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.ethereum.org)
 
 ### Video's {#videos}

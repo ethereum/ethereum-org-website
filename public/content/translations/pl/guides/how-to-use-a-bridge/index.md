@@ -10,7 +10,7 @@ Jeśli ruch na Ethereum jest duży, może stać się drogi. Jednym z rozwiązań
 
 **Wymaganie wstępne:**
 
-- posiadanie portfela kryptowalutowego, możesz postępować zgodnie z tym samouczkiem: [Jak „zarejestrować” konto Ethereum](/guides/how-to-register-an-ethereum-account/)
+- posiadanie portfela kryptowalutowego, możesz postępować zgodnie z tym samouczkiem: [Jak „zarejestrować” konto Ethereum](/guides/how-to-create-an-ethereum-account/)
 - dodanie środków do portfela
 
 ## 1. Określ jaką sieć warstwy 2 chcesz używać

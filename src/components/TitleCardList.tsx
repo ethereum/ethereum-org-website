@@ -26,7 +26,7 @@ export interface ITitleCardItem {
   id?: number
 }
 
-export interface IProps {
+export type TitleCardListProps = {
   content: Array<ITitleCardItem>
   className?: string
   clickHandler: (idx: number) => void
@@ -34,13 +34,13 @@ export interface IProps {
   isCode: boolean
 }
 
-const TitleCardList: React.FC<IProps> = ({
+const TitleCardList = ({
   content,
   className,
   clickHandler,
   headerKey,
   isCode,
-}) => {
+}: TitleCardListProps) => {
   // This will be accessible with color contrast
   const descriptionCaptionColor = useColorModeValue(
     "blackAlpha.700",

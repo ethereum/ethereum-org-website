@@ -27,7 +27,7 @@ published: 2021-02-26
 
 # Premiers pas {#getting-started}
 
-Le tutoriel décrit l'installation et l'exécution du test en utilisant yarn, mais il n'y a pas de problème si vous préférez npm - je fournirai les références appropriées à la [documentation officielle de Waffle](https://ethereum-waffle.readthedocs.io/en/latest/index.html).
+Le tutoriel décrit l'installation et l'exécution du test en utilisant yarn, mais il n'y a pas de problème si vous préférez npm - je fournirai les références appropriées à la documentation officielle de Waffle.[](https://ethereum-waffle.readthedocs.io/en/latest/index.html)
 
 ## Installer les dépendances {#install-dependencies}
 
@@ -39,7 +39,7 @@ yarn add --dev ethereum-waffle ts-node typescript @types/jest
 
 ## Exemple de contrat intelligent {#example-smart-contract}
 
-Au cours du tutoriel, nous allons travailler sur un exemple de contrat intelligent simple - EtherSplitter. Il ne fait pas grand-chose à part permettre à quelqu'un d'envoyer des wei et de les répartir équitablement entre deux destinataires prédéfinis. La fonction de séparation nécessite que le nombre de wei soit pair, sinon elle s'inverse. Pour les deux destinataires, il effectue un transfert wei suivi de l'émission de l'événement Transfert.
+Au cours du tutoriel, nous allons travailler sur un exemple de contrat intelligent simple - EtherSplitter. Il ne fait pas grand-chose à part permettre à quelqu'un d'envoyer des wei et de les répartir équitablement entre deux destinataires prédéfinis. La fonction de séparation nécessite que le nombre de wei soit pair, sinon elle s'inverse. Pour les deux destinataires, il effectue un transfert de wei suivi de l'émission de l'événement Transfert.
 
 Placez le fragment de code EtherSplitter dans `src/EtherSplitter.sol`.
 
@@ -92,7 +92,7 @@ Exécutez `yarn build`. Cela fera apparaître le dossier `build` avec le contrat
 
 ## Configuration du test {#test-setup}
 
-Tester avec Waffle nécessite d'utiliser des correspondances Chai et Mocha, vous devez donc [les ajouter](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) à votre projet. Lancez la mise à jour de votre paquet package.json, et ajoutez le `texte`d'entrée, dans la partie modèle :
+Tester avec Waffle nécessite d'utiliser des correspondances Chai et Mocha, vous devez donc [les ajouter](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) à votre projet. Lancez la mise à jour de votre paquet package.json, et ajoutez le `texte`d'entrée, dans la partie modèle:
 
 ```json
 "scripts": {
@@ -178,7 +178,7 @@ it("Emits event on the transfer to the second receiver", async () => {
 })
 ```
 
-La correspondance `emit` nous permet de vérifier si un contrat a émis un événement en appelant une méthode. En tant que paramètres pour le `emit` correspondant, nous fournissons le contrat fictif que nous prévoyons pour émettre l'événement, ainsi que le nom de cet événement. Dans notre cas, le contrat fictif est `splitter` et le nom de l'événement `Transfer`. Nous pouvons également vérifier les valeurs précises des arguments avec lesquels l'événement a été émis - nous transmettons autant d'arguments au `withArgs` correspondant, comme le prévoit notre déclaration d'événement. Dans le cas du contrat EtherSpliter, nous passons les adresses de l'expéditeur et du destinataire avec le montant en wei transféré.
+La correspondance `emit` nous permet de vérifier si un contrat a émis un événement en appelant une méthode. En tant que paramètres pour la corrrespondance `emit`, nous fournissons le contrat fictif que nous prévoyons pour émettre l'événement, ainsi que le nom de cet événement. Dans notre cas, le contrat fictif est `splitter` et le nom de l'événement `Transfer`. Nous pouvons également vérifier les valeurs précises des arguments avec lesquels l'événement a été émis - nous transmettons autant d'arguments au `withArgs` correspondant, comme le prévoit notre déclaration d'événement. Dans le cas du contrat EtherSpliter, nous passons les adresses de l'expéditeur et du destinataire avec le montant en wei transféré.
 
 ## revertedWith {#revertedwith}
 
@@ -199,5 +199,5 @@ Le test, s'il est accepté, nous assurera que la transaction a bien été annul�
 Vous avez fait votre premier (grand) pas vers les tests des contrats intelligents avec Waffle ! Vous pourriez être intéressé par d'autres tutoriels Waffle :
 
 - [Tester ERC20 avec Waffle](/developers/tutorials/testing-erc-20-tokens-with-waffle/)
-- [Waffle : Bouchonnage dynamique et tests de contrats](/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/#gatsby-focus-wrapper)
+- [Waffle: Bouchonnage dynamique et tests de contrats](/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/#gatsby-focus-wrapper)
 - [Tutoriel pour "dire bonjour au monde" avec hardhat et ethers](/developers/tutorials/waffle-hello-world-with-buidler-tutorial/)

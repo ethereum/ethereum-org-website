@@ -1,26 +1,33 @@
 import { useEffect, useState } from "react"
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Box, CloseButton, Flex, Heading, useToken } from "@chakra-ui/react"
+
+import type { Lang } from "@/lib/types"
+
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import { DEFAULT_LOCALE } from "../lib/constants"
 
 import { ButtonLink } from "./Buttons"
 import Emoji from "./Emoji"
 
-export interface IProps {
+export type TranslationBannerProps = {
   shouldShow: boolean
   originalPagePath: string
   isPageContentEnglish: boolean
 }
 
-const TranslationBanner: React.FC<IProps> = ({
+const TranslationBanner = ({
   shouldShow,
   originalPagePath,
   isPageContentEnglish,
-}) => {
+}: TranslationBannerProps) => {
   const [isOpen, setIsOpen] = useState(shouldShow)
   const [textColor] = useToken("colors", ["text"])
   const { t } = useTranslation("common")
+  const { locale } = useRouter()
+  const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
   useEffect(() => {
     setIsOpen(shouldShow)
@@ -41,7 +48,8 @@ const TranslationBanner: React.FC<IProps> = ({
       bottom={{ base: 0, md: 8 }}
       insetInlineEnd={{ base: 0, md: 8 }}
       position="fixed"
-      zIndex="99"
+      zIndex="banner"
+      dir={dir}
     >
       <Flex
         p="1rem"
@@ -88,7 +96,9 @@ const TranslationBanner: React.FC<IProps> = ({
                 {t("translation-banner-button-translate-page")}
               </ButtonLink>
             </Box>
-            {!isPageContentEnglish && (
+            {/* Todo: Reimplement once fixed */}
+            {/* Issue: https://github.com/ethereum/ethereum-org-website/issues/12292 */}
+            {/* {!isPageContentEnglish && (
               <Box>
                 <ButtonLink
                   to={originalPagePath}
@@ -102,7 +112,7 @@ const TranslationBanner: React.FC<IProps> = ({
                   {t("translation-banner-button-see-english")}
                 </ButtonLink>
               </Box>
-            )}
+            )} */}
           </Flex>
         </Flex>
         <CloseButton

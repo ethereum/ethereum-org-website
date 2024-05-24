@@ -10,7 +10,7 @@ lang: tr
 
 [Ethereum İyileştirme Önerileri (EIP'ler)](https://eips.ethereum.org/), Ethereum için potansiyel yeni özellikleri veya süreçleri belirleyen standartlardır. EIP'ler, önerilen değişiklikler için teknik özellikler içerir ve topluluk için "gerçeğin kaynağı" görevi görür. Ethereum için ağ yükseltmeleri ve uygulama standartları, EIP süreci aracılığıyla tartışılır ve geliştirilir.
 
-Ethereum topluluğu içindeki herkes bir EIP oluşturma kabiliyetine sahiptir. EIP'leri yazma yönergeleri, [EIP 1](https://eips.ethereum.org/EIPS/eip-1) içerisinde yer almaktadır. Bir EIP öncelikle az bir motivasyonla birlikte kısa bir şekilde teknik ayrıntıları aktarmalıdır. EIP yazarı, topluluk içinde konsensüs oluşturmaktan ve alternatif görüşleri belgelemekten sorumludur. İyi biçimlendirilmiş bir EIP göndermek için gerekli yüksek teknik beceri göz önüne alındığında, tarihsel olarak çoğu EIP yazarı uygulama veya protokol geliştiricileri olmuştur.
+Ethereum topluluğu içindeki herkes bir EIP oluşturma kabiliyetine sahiptir. EIP'leri yazma yönergeleri, [EIP 1](https://eips.ethereum.org/EIPS/eip-1) içerisinde yer almaktadır. Bir EIP öncelikle az bir motivasyonla birlikte kısa bir şekilde teknik özellikleri aktarmalıdır. EIP yazarı, topluluk içinde konsensüs oluşturmaktan ve alternatif görüşleri belgelemekten sorumludur. İyi biçimlendirilmiş bir EIP göndermek için gerekli yüksek teknik beceri göz önüne alındığında, tarihsel olarak çoğu EIP yazarı uygulama veya protokol geliştiricileri olmuştur.
 
 ## EIP'ler neden önemlidir? {#why-do-eips-matter}
 
@@ -22,7 +22,7 @@ Değişiklikler için teknik bir şartname sağlamanın yanı sıra EIP'ler, Eth
 
 ## EIP'lerin Tarihçesi {#history-of-eips}
 
-[Ethereum İyileştirme Önerileri (EIP'ler) GitHub deposu](https://github.com/ethereum/EIPs) Ekim 2015'te oluşturuldu. EIP işlemi, [Bitcoin İyileştirme Önerileri (BIP'ler)](https://github.com/bitcoin/bips) sürecini; bu süreç de [Python Geliştirme Önerileri (PEP'ler)](https://www.python.org/dev/peps/) sürecini temel alır.
+[Ethereum İyileştirme Önerileri (EIP'ler) Github deposu](https://github.com/ethereum/EIPs) Ekim 2015'te oluşturuldu. EIP işlemi, [Bitcoin İyileştirme Önerileri (BIP'ler)](https://github.com/bitcoin/bips) sürecini; bu süreç de [Python Geliştirme Önerileri (PEP'ler)](https://www.python.org/dev/peps/) sürecini temel alır.
 
 EIP editörleri; teknik sağlamlık, yazım/dil bilgisi kontrolü, format ve de kod stili için EIP'leri gözden geçirmekle görevlidir. Martin Becze, Vitalik Buterin, Gavin Wood ve diğerleri, 2015'ten 2016'nın sonlarına kadar ilk EIP editörleriydi.
 

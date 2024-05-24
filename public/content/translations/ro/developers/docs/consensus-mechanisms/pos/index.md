@@ -84,11 +84,11 @@ Penalizările mizei, ejecțiile, și alte sancțiuni, coordonate de lanțul beac
 
 ## Referințe suplimentare {#further-reading}
 
-- [Întrebări frecvente despre Dovada-mizei](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
+- [Întrebări frecvente despre Dovada-mizei](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [Ce este Dovada-mizei](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [Ce este Dovada-mizei și de ce este importantă](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
 - [Explicatorul lanțului Beacon Ethereum 2.0 pe care trebuie să îl citiți mai întâi](https://ethos.dev/beacon-chain/) _Ethos.dev_
-- [De ce Dovada-mizei (Nov 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _VitaIik Buterin_
+- [De ce Dovada-mizei (Nov 2020)](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _VitaIik Buterin_
 - [Dovada-mizei: Cum am învățat să ador subiectivitatea slabă](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
 - [Filosofia conceperii Dovezii-mizei](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 

@@ -26,10 +26,10 @@ export const RootLayout = ({
 }: Root) => {
   const { locale, asPath } = useRouter()
 
-  const CONTRIBUTING = "/contributing"
+  const CONTRIBUTING = "/contributing/"
   const isUntranslatedContributingPage =
     asPath.includes(CONTRIBUTING) &&
-    !(asPath.endsWith(CONTRIBUTING) || asPath.includes("/translation-program"))
+    !(asPath.endsWith(CONTRIBUTING) || asPath.includes("/translation-program/"))
 
   const isLegal =
     isUntranslatedContributingPage ||
@@ -50,9 +50,10 @@ export const RootLayout = ({
     <Container mx="auto" maxW={oldTheme.variables.maxPageWidth}>
       <SkipLink />
 
-      <Nav path={asPath} />
+      <Nav />
 
-      <TranslationBanner
+      {/* TODO: FIX TRANSLATION BANNER LOGIC FOR https://github.com/ethereum/ethereum-org-website/issues/11305 */}
+      {/* <TranslationBanner
         shouldShow={shouldShowTranslationBanner}
         isPageContentEnglish={contentNotTranslated}
         originalPagePath={originalPagePath}
@@ -61,7 +62,7 @@ export const RootLayout = ({
       <TranslationBannerLegal
         shouldShow={shouldShowLegalTranslationBanner}
         originalPagePath={originalPagePath}
-      />
+      /> */}
 
       {children}
 
