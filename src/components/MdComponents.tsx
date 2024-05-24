@@ -1,16 +1,13 @@
 import { ComponentProps } from "react"
-import { CiLink } from "react-icons/ci"
 import {
   Badge,
   Box,
   type BoxProps,
-  calc,
   chakra,
   Divider as ChakraDivider,
   Flex,
   type FlexProps,
   type HeadingProps,
-  Icon,
   ListItem,
   OrderedList,
   Text,
@@ -25,7 +22,6 @@ import ButtonDropdown, {
 } from "@/components/ButtonDropdown"
 import { ButtonLink } from "@/components/Buttons"
 import Contributors from "@/components/Contributors"
-import Link from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
 import OldHeading from "@/components/OldHeading"
 import { mdxTableComponents } from "@/components/Table"
@@ -40,6 +36,7 @@ import DocLink from "./DocLink"
 import Emoji from "./Emoji"
 import ExpandableCard from "./ExpandableCard"
 import FeaturedText from "./FeaturedText"
+import IdAnchor from "./IdAnchor"
 import InfoBanner from "./InfoBanner"
 import IssuesList from "./IssuesList"
 import LocaleDateTime from "./LocaleDateTime"
@@ -64,24 +61,6 @@ export const commonHeadingProps = (id?: string): HeadingProps => ({
   lineHeight: 1.4,
   ...headingPropsForAnchor(id),
 })
-
-const IdAnchor = ({ id }: { id?: string }) => {
-  if (!id) return null
-  return (
-    <Link
-      href={"#" + id}
-      position="absolute"
-      insetInlineEnd="100%"
-      aria-label={id.replaceAll("-", " ") + " permalink"}
-      opacity={0}
-      _groupHover={{ opacity: 1 }}
-      _focus={{ opacity: 1 }}
-      transition="opacity 0.1s ease-in-out"
-    >
-      <Icon as={CiLink} fontSize="xl" me="1" />
-    </Link>
-  )
-}
 
 export const Heading1 = ({ children, ...rest }: HeadingProps) => (
   <OldHeading as="h1" {...commonHeadingProps()} fontSize="2.5rem" {...rest}>
