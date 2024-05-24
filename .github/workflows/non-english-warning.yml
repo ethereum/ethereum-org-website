@@ -8,11 +8,11 @@ on:
       - "!src/intl/en/**"
 
 jobs:
-  check_branch_name:
+  check_and_label:
     runs-on: ubuntu-latest
     steps:
       - name: Exit early if branch name contains 'crowdin' or is 'dev', 'staging', or 'master'
-        id: check
+        id: check_branch
         run: |
           if [[ "${{ github.head_ref }}" == *crowdin* ]] || 
              [[ "${{ github.ref }}" == 'refs/heads/dev' ]] || 
@@ -26,17 +26,13 @@ jobs:
             echo "::set-output name=skip::false"
           fi
 
-  check_changes:
-    needs: check_branch_name
-    if: needs.check_branch_name.outputs.skip == 'false'
-    runs-on: ubuntu-latest
-    outputs:
-      all_changes_include_href: ${{ steps.check.outputs.all_changes_include_href }}
-    steps:
       - name: Checkout code
+        if: steps.check_branch.outputs.skip == 'false'
         uses: actions/checkout@v2
+
       - name: Check changes
-        id: check
+        if: steps.check_branch.outputs.skip == 'false'
+        id: check_changes
         run: |
           git fetch origin ${{ github.base_ref }}
           DIFF=$(git diff --no-ext-diff --unified=0 origin/${{ github.base_ref }}..${{ github.head_ref }} -- 'public/content/translations/**/*.md' 'src/intl/**/*.json' '!src/intl/en/**' | grep -E -v '^[-+]href=')
@@ -47,11 +43,8 @@ jobs:
           fi
           echo "::set-output name=all_changes_include_href::$ALL_CHANGES_INCLUDE_HREF"
 
-  add_label_and_comment:
-    needs: check_changes
-    runs-on: ubuntu-latest
-    steps:
       - name: Add label and comment
+        if: steps.check_branch.outputs.skip == 'false'
         uses: actions/github-script@v5
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
@@ -59,7 +52,7 @@ jobs:
             const prNumber = context.issue.number;
             const repo = context.repo;
             const prAuthor = context.payload.pull_request.user.login;
-            const allChangesIncludeHref = '${{ needs.check_changes.outputs.all_changes_include_href }}' === 'true';
+            const allChangesIncludeHref = '${{ steps.check_changes.outputs.all_changes_include_href }}' === 'true';
             const status = allChangesIncludeHref ? 'question ❓' : 'Status: Blocked 🛑';
             await github.rest.issues.addLabels({
               ...repo,
@@ -67,7 +60,7 @@ jobs:
               labels: [status, 'non-crowdin translation updates']
             });
             const commentWithoutHrefs = `This pull request contains changes to non-English content, which must also be handled through the Crowdin platform instead of only on GitHub.`
-            const commentWithHrefs = `This pull request contains changes to non-English content files, which may also need to be handled through the Crowdin platform instead of only on GitHub.
+            const commentWithHrefs = `This pull request contains changes to non-English content files, which may also need to be handled through the Crowdin platform instead of only on GitHub.`
             await github.rest.issues.createComment({
               ...repo,
               issue_number: prNumber,
