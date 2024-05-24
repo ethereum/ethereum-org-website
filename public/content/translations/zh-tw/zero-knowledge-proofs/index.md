@@ -200,13 +200,13 @@ ZK-STARK 是** Zero-Knowledge Scalable Transparent Argument of Knowledge（零�
 
 零知識可擴容透明知識論證使用抗碰撞的雜湊值進行加密，因此被視為能防禦量子運算的威脅。 比起橢圓曲線密碼學中使用的公私金鑰配對，抗碰撞雜湊值更難被量子計算演算法破解。
 
-## 延伸閱讀 {#further-reading}
+## 了解更多 {#further-reading}
 
 - [電腦科學家以 5 個難度等級來解釋一個概念 | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Wired YouTube 頻道_
-- [零知識證明使用案例的概觀](https://appliedzkp.org/#Projects) — _隱私和擴容探索團隊_
+- [零知識證明使用案例概述](https://pse.dev/projects) - _隱私與擴容探索團隊_
 - [零知識簡潔非交互式知識論證、零知識可擴容透明知識論證與遞迴零知識簡潔非交互式知識論證三者對比](https://www.alchemy.com/overviews/snarks-vs-starks) — _Alchemy 概述_
 - [零知識證明：改善區塊鏈的隱私](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [零知識簡潔非交互式知識論證 — 零知識現實範例與深入探討](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [零知識可擴容透明知識論證 — 建立可驗證的信任，哪怕面對量子電腦](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [如何使零知識簡潔非交互式知識論證成真之相關簡介](https://vitalik.ca/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [關於 sk-SNARKS 為何可行的概述](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [零知識證明是什麼？在區塊鏈中的角色為何？](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/)— _LeewayHertz_

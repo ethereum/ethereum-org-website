@@ -51,7 +51,7 @@ Un contract inteligent este un cod care locuieşte pe blockchain-ul Ethereum și
 
 **Scaffold-ETH _- experimentați rapid cu Solidity folosind un frontend care se adaptează la contractul dvs. inteligent._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Exemplu de aplicaţie dapp](https://punkwallet.io/)
 
 **Create Eth App _- creați aplicații acţionate de Ethereum cu o singură comandă._**

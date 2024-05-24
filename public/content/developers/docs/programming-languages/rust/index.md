@@ -51,6 +51,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [SewUp](https://github.com/second-state/SewUp) - _A library to help you build your Ethereum webassembly contract with Rust and just like develop in a common backend_
 - [Substreams](https://github.com/streamingfast/substreams) - _Parallelized blockchain data indexing technology_
 - [Reth](https://github.com/paradigmxyz/reth) Reth (short for Rust Ethereum, pronunciation) is a new Ethereum full-node implementation
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _A curated collection of projects in the Ethereum ecosystem written in Rust_
 
 Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 

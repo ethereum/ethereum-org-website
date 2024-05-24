@@ -11,7 +11,7 @@ summaryPoint3: La Fusione si riferisce alla fusione della Rete Principale origin
 summaryPoint4: La Fusione ha ridotto il consumo energetico di Ethereum di circa il 99,95%.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   La Fusione è avvenuta il 15 settembre 2022. Ciò ha portato a termine la transizione di Ethereum al consenso di proof-of-stake, deprecando ufficialmente il proof-of-work e riducendo il consumo energetico di circa il 99,95%.
 </UpgradeStatus>
 

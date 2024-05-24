@@ -20,7 +20,7 @@ sidebarDepth: 2
 - 実行クライアント(ELクライアントや実行エンジンとも呼ばれ、過去の名称はEth1クライアント)は、ネットワークでブロードキャストされた新たなトランザクションを受け取り、EVM(イーサリアム仮想マシン)でトランザクションを実行し、すべての現在のイーサリアムデータの最新の状態とデータベースを保持します。
 - コンセンサスクライアント(ビーコンノードやCLクライアントとも呼ばれ、過去の名称はETh2クライアント)は、プルーフ・オブ・ステークのコンセンサスアルゴリズムを実行し、実行クライアントからの検証されたデータに基づき、ネットワークの合意を形成します。 「バリデータ」と呼ばれる3つ目のソフトウェアもあります。バリデータをコンセンサスクライアントに追加することで、ネットワークのセキュリティの確保にノードを参加させることができます。
 
-これらのクライアントは、連携してイーサリアムチェーンのヘッドを追跡し、ユーザーがイーサリアムネットワークとやり取りできるようにします。 複数のソフトウェアを組み合わせたモジュラー型設計は、[カプセル化された複雑性](https://vitalik.ca/general/2022/02/28/complexity.html)と呼ばれます。 このアプローチにより、[マージ](/roadmap/merge)をシームレスに実行できるようになりました。また、クライアントソフトウェアの保守や開発が容易になり、[レイヤー2エコシステム](/layer-2/)などの各クライアントを再利用できるようになりました。
+これらのクライアントは、連携してイーサリアムチェーンのヘッドを追跡し、ユーザーがイーサリアムネットワークとやり取りできるようにします。 複数のソフトウェアを組み合わせたモジュラー型設計は、[カプセル化された複雑性](https://vitalik.eth.limo/general/2022/02/28/complexity.html)と呼ばれます。 このアプローチにより、[マージ](/roadmap/merge)をシームレスに実行できるようになりました。また、クライアントソフトウェアの保守や開発が容易になり、[レイヤー2エコシステム](/layer-2/)などの各クライアントを再利用できるようになりました。
 
 ![実行クライアントとコンセンサスクライアントの連結](./eth1eth2client.png) 実行クライアントとコンセンサスクライアントの統合の簡略図
 
@@ -130,13 +130,15 @@ sidebarDepth: 2
 
 この表は、いくつかのクライアントの情報をまとめたものです。 これらのクライアントはすべて、[クライアントテスト](https://github.com/ethereum/tests)に合格しており、ネットワークのアップグレードによって最新の状態に維持されています。
 
-| クライアント                                          | 言語      | オペレーティングシステム        | ネットワーク                  | 同期戦略              | 状態剪定       |
-| ----------------------------------------------- | ------- | ------------------- | ----------------------- | ----------------- | ---------- |
-| [Geth](https://geth.ethereum.org/)              | Go      | Linux、Windows、macOS | メインネット、Sepolia、Goerli   | スナップ、フル           | アーカイブ、プルーン |
-| [Nethermind](http://nethermind.io/)             | C#、.NET | Linux、Windows、macOS | メインネット、Sepolia、Goerliなど | スナップ(配信なし) 、高速、フル | アーカイブ、プルーン |
-| [Besu](https://besu.hyperledger.org/en/stable/) | Java    | Linux、Windows、macOS | メインネット、Sepolia、Goerliなど | スナップ、高速、フル        | アーカイブ、プルーン |
-| [Erigon](https://github.com/ledgerwatch/erigon) | Go      | Linux、Windows、macOS | メインネット、Sepolia、Goerliなど | フル                | アーカイブ、プルーン |
-| [Reth](https://github.com/paradigmxyz/reth)     | Rust    | Linux、Windows、macOS | メインネット、Sepolia、Goerliなど | フル                | アーカイブ、プルーン |
+| クライアント                                                                  | 言語         | オペレーティングシステム        | ネットワーク                    | 同期戦略              | 状態剪定       |
+| ----------------------------------------------------------------------- | ---------- | ------------------- | ------------------------- | ----------------- | ---------- |
+| [Geth](https://geth.ethereum.org/)                                      | Go         | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | スナップ、フル           | アーカイブ、プルーン |
+| [Nethermind](http://nethermind.io/)                                     | C#、.NET    | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | スナップ(配信なし) 、高速、フル | アーカイブ、プルーン |
+| [Besu](https://besu.hyperledger.org/en/stable/)                         | Java       | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | スナップ、高速、フル        | アーカイブ、プルーン |
+| [Erigon](https://github.com/ledgerwatch/erigon)                         | Go         | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | フル                | アーカイブ、プルーン |
+| [Reth](https://github.com/paradigmxyz/reth) _(ベータ)_                     | Rust       | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | フル                | アーカイブ、プルーン |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(ベータ)_ | TypeScript | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | スナップ、フル、ライト       |            |
+
 
 サポートされているネットワークの詳細については、[イーサリアムネットワーク](/developers/docs/networks/)をご覧ください。
 

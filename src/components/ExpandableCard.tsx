@@ -65,18 +65,21 @@ const ExpandableCard = ({
       _hover={{
         backgroundColor: "ednBackground",
       }}
-      borderBottomWidth="0"
       index={isVisible ? [0] : []}
     >
       <AccordionItem borderTopWidth="0" flex="1">
         <Heading as="h3" m={0}>
           <AccordionButton
             width="100%"
-            p={6}
+            px="6"
+            py="6"
             flex="1"
             onClick={onClick}
             _hover={{
               backgroundColor: "ednBackground",
+            }}
+            _expanded={{
+              backgroundColor: "transparent",
             }}
           >
             <Box
@@ -122,6 +125,8 @@ const ExpandableCard = ({
           </AccordionButton>
         </Heading>
         <AccordionPanel
+          p="0"
+          mt="0"
           paddingX="6"
           paddingBottom="6"
           paddingTop="0"

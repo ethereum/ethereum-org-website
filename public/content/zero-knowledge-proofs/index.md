@@ -198,9 +198,9 @@ But there’s really no way for users to assess the honesty of participants and 
 
 ### Quantum computing threats {#quantum-computing-threats}
 
-ZK-SNARK uses elliptic curve cryptography ([ECDSA](/glossary/#ecdsa)) for encryption. While the ECDSA algorithm is secure for now, the development of quantum computers could break its security model in the future.
+ZK-SNARK uses elliptic curve cryptography for encryption. While the elliptic curve discrete logarithm problem is assumed to be intractable for now, the development of quantum computers could break this security model in the future.
 
-ZK-STARK is considered immune to the threat of quantum computing, as it uses collision-resistant hashes for encryption. Unlike public-private key pairings used in elliptic curve cryptography, collision-resistant hashing is more difficult for quantum computing algorithms to break.
+ZK-STARK is considered immune to the threat of quantum computing, as it only relies on collision-resistant hash functions for its security. Unlike public-private key pairings used in elliptic curve cryptography, collision-resistant hashing is more difficult for quantum computing algorithms to break.
 
 ## Further reading {#further-reading}
 

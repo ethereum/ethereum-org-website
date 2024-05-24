@@ -249,14 +249,14 @@ const TranslatorAcknowledgements = () => {
         </Flex>
       </Content>
 
-      <Content id="poap">
+      <Content id="oats">
         <ContentHeading
           as="h2"
           fontSize={{ base: "2xl", md: "2rem" }}
           fontWeight={600}
         >
           {t(
-            "page-contributing-translation-program-acknowledgements-poaps-title"
+            "page-contributing-translation-program-acknowledgements-oats-title"
           )}
         </ContentHeading>
         <Text>

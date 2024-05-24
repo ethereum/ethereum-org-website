@@ -4,12 +4,13 @@ description: ビーコンチェーン - プルーフ・オブ・ステークの�
 lang: ja
 template: upgrade
 image: /upgrades/core.png
+alt:
 summaryPoint1: イーサリアムエコシステムにプルーフ・オブ・ステークの導入を可能にしたのが、ビーコンチェーンです。
 summaryPoint2: 2022年9月にプルーフ・オブ・ワーク・チェーンのイーサリアムとマージ(統合)されました。
 summaryPoint3: ビーコンチェーンは、コンセンサスロジックとブロックゴシッププロトコルを導入し、現在はイーサリアムの安全性を保護しています。
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   ビーコンチェーンは、2020年12月にリリースされ、2022年9月15日のマージアップグレードでイーサリアムの合意メカニズムに、プルーフ・オブ・ステークとして正式に導入されました。
 </UpgradeStatus>
 
@@ -19,7 +20,7 @@ summaryPoint3: ビーコンチェーンは、コンセンサスロジックと�
 
 ## ビーコンチェーンとは {#what-does-the-beacon-chain-do}
 
-ビーコンチェーンは、イーサリアム [ステーカー](/staking/)のネットワークを実行、調整していたアカウントのレジャーに与えられた名前です。後に、このイーサリアム[ステーカー](/staking/)が実際のイーサリアムブロックの検証を開始しました。 ただし、ビーコンチェーンでは、トランザクションの処理やスマートコントラクトとのやりとりは行いません。代わりに、実行レイヤーがこれらの処理を行います ビーコンチェーンでは、ブロックとアテステーションの処理、フォーク選択アルゴリズムの実行、報酬とペナルティの管理などを行います。 詳細は、[ノードアーキテクチャのページ](/developers/docs/nodes-and-clients/node-architecture/#node-comparison)をご覧ください。
+ビーコンチェーンは、イーサリアム [ステーカー](/staking/)のネットワークを実行、調整していたアカウントのレジャーに与えられた名前です。後に、このイーサリアム[ステーカー](/saking/)が実際のイーサリアムブロックの検証を開始しました。 ただし、ビーコンチェーンでは、トランザクションの処理やスマートコントラクトとのやりとりは行いません。代わりに、実行レイヤーがこれらの処理を行います ビーコンチェーンでは、ブロックとアテステーションの処理、フォーク選択アルゴリズムの実行、報酬とペナルティの管理などを行います。 詳細は、[ノードアーキテクチャのページ](/developers/docs/nodes-and-clients/node-architecture/#node-comparison)をご覧ください。
 
 ## ビーコンチェーンの影響 {#beacon-chain-features}
 

@@ -27,7 +27,7 @@ Des centaines de milliers de passionnés d'Ethereum se rassemblent sur ces forum
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">Le serveur Discord d'EthStaker</Link> - orientation par la communauté, éducation, soutien et ressources pour les stakeurs et stakeurs potentiels.</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Équipe du site web Ethereum.org</Link> - consultez et discutez du développement et du design du site web ethereum.org avec l'équipe et les membres de la communauté</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Discord Matos</Link> - Communauté de créateurs Web3 où les bâtisseurs, les chefs de file industriels et les passionnés d'Ethereum se rencontrent. Nous sommes passionnés par le développement du Web3, sa conception et sa culture. Venez le bâtir avec nous.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - forum de discussion pour le développement Solidity (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - forum de discussion pour le développement Solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - forum de discussion pour le développement Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *- forum de questions-réponses*</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *- forum de questions-réponses décentralisé*</SocialListItem>
@@ -41,7 +41,7 @@ Des centaines de milliers de passionnés d'Ethereum se rassemblent sur ces forum
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community-daos-callout-title" descriptionKey="page-community-daos-callout-description">
+<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
   <div>
     <ButtonLink to="/community/get-involved/#decentralized-autonomous-organizations-daos">
       En savoir plus sur les DAOs

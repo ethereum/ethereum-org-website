@@ -8,13 +8,11 @@ import {
   ListItem,
   ModalBody,
   ModalHeader,
-  Skeleton as ChakraSkeleton,
-  SkeletonCircle as ChakraSkeletonCircle,
   UnorderedList,
   VStack,
 } from "@chakra-ui/react"
 
-import type { Author, Lang } from "@/lib/types"
+import type { ChildOnlyProp, FileContributor, Lang } from "@/lib/types"
 
 import { Button } from "@/components/Buttons"
 import InlineLink from "@/components/Link"
@@ -25,80 +23,50 @@ import Translation from "@/components/Translation"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
-// TODO: skeletons are not part of the DS, so these should be replaced once we
-// implement the new designs. Thats the reason we haven't define these styles in
-// the theme config file
-const skeletonColorProps = {
-  startColor: "lightBorder",
-  endColor: "searchBackgroundEmpty",
-}
-
-const Skeleton = (props) => (
-  <ChakraSkeleton {...skeletonColorProps} borderRadius="md" {...props} />
+const ContributorList = ({ children }: Required<ChildOnlyProp>) => (
+  <UnorderedList maxH="2xs" m={0} mt={6} overflowY="scroll">
+    {children}
+  </UnorderedList>
 )
 
-const SkeletonCircle = (props) => (
-  <ChakraSkeletonCircle {...skeletonColorProps} {...props} />
+type ContributorProps = { contributor: FileContributor }
+const Contributor = ({ contributor }: ContributorProps) => (
+  <ListItem p={2} display="flex" alignItems="center">
+    <Avatar
+      height="40px"
+      width="40px"
+      src={contributor.avatar_url}
+      name={contributor.login}
+      me={2}
+    />
+    <InlineLink href={"https://github.com/" + contributor.login}>
+      @{contributor.login}
+    </InlineLink>
+  </ListItem>
 )
-
-const ContributorList = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <UnorderedList maxH="2xs" m={0} mt={6} overflowY="scroll">
-      {children}
-    </UnorderedList>
-  )
-}
-
-const Contributor = ({ contributor }: { contributor: Author }) => {
-  return (
-    <ListItem p={2} display="flex" alignItems="center">
-      <Avatar
-        height="40px"
-        width="40px"
-        src={contributor.avatarUrl}
-        name={contributor.name}
-        me={2}
-      />
-      {contributor.user && (
-        <InlineLink href={contributor.user.url}>
-          @{contributor.user.login}
-        </InlineLink>
-      )}
-      {!contributor.user && <span>{contributor.name}</span>}
-    </ListItem>
-  )
-}
 
 export type FileContributorsProps = FlexProps & {
   editPath?: string
-  contributors: Author[]
-  loading: boolean
-  error?: boolean
+  contributors: FileContributor[]
   lastEdit: string
 }
 
 const FileContributors = ({
   contributors,
-  loading,
-  error,
   lastEdit,
   ...props
 }: FileContributorsProps) => {
   const [isModalOpen, setModalOpen] = useState(false)
   const { locale } = useRouter()
 
-  if (error) return null
-  const lastContributor: Author = contributors.length
+  const lastContributor: FileContributor = contributors.length
     ? contributors[0]
-    : {
-        name: "",
-        email: "",
-        avatarUrl: "",
-        user: {
-          login: "",
-          url: "",
-        },
-      }
+    : ({
+        avatar_url: "",
+        login: "",
+        html_url: "",
+        date: Date.now().toString(),
+      } as FileContributor)
 
   return (
     <>
@@ -111,16 +79,12 @@ const FileContributors = ({
 
         <ModalBody>
           <Translation id="contributors-thanks" />
-          {contributors ? (
-            <ContributorList>
-              {contributors.map((contributor) => (
-                <Contributor
-                  contributor={contributor}
-                  key={contributor.email}
-                />
-              ))}
-            </ContributorList>
-          ) : null}
+
+          <ContributorList>
+            {contributors.map((contributor) => (
+              <Contributor contributor={contributor} key={contributor.login} />
+            ))}
+          </ContributorList>
         </ModalBody>
       </Modal>
 
@@ -132,50 +96,42 @@ const FileContributors = ({
         p={{ base: 0, md: 2 }}
         {...props}
       >
-        <Flex me={4} alignItems="center" flex="1">
-          <SkeletonCircle size="10" me={4} isLoaded={!loading}>
-            <Avatar
-              height="40px"
-              width="40px"
-              src={lastContributor.avatarUrl}
-              name={lastContributor.name}
-              me={2}
-            />
-          </SkeletonCircle>
+        <Flex me={4} alignItems="center" flex="1" hideBelow="md">
+          <Avatar
+            height="40px"
+            width="40px"
+            src={lastContributor.avatar_url}
+            name={lastContributor.login}
+            me={2}
+          />
 
-          <Skeleton isLoaded={!loading}>
-            <Text m={0} color="text200">
-              <Translation id="last-edit" />:{" "}
-              {lastContributor.user?.url && (
-                <InlineLink href={lastContributor.user.url}>
-                  @{lastContributor.user.login}
-                </InlineLink>
-              )}
-              {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
-              {getLocaleTimestamp(locale as Lang, lastEdit)}
-            </Text>
-          </Skeleton>
+          <Text m={0} color="text200">
+            <Translation id="last-edit" />:{" "}
+            <InlineLink href={"https://github.com/" + lastContributor.login}>
+              @{lastContributor.login}
+            </InlineLink>
+            , {getLocaleTimestamp(locale as Lang, lastEdit)}
+          </Text>
         </Flex>
 
         <VStack align="stretch" justifyContent="space-between" spacing={2}>
-          <Skeleton isLoaded={!loading} mt={{ base: 4, md: 0 }}>
-            <Button
-              variant="outline"
-              bg="background.base"
-              border={0}
-              onClick={() => {
-                setModalOpen(true)
-                trackCustomEvent({
-                  eventCategory: "see contributors",
-                  eventAction: "click",
-                  eventName: "click",
-                })
-              }}
-              w={{ base: "full", md: "inherit" }}
-            >
-              <Translation id="see-contributors" />
-            </Button>
-          </Skeleton>
+          <Button
+            variant="outline"
+            bg="background.base"
+            border={0}
+            mb={{ base: 4, md: 0 }}
+            onClick={() => {
+              setModalOpen(true)
+              trackCustomEvent({
+                eventCategory: "see contributors",
+                eventAction: "click",
+                eventName: "click",
+              })
+            }}
+            w={{ base: "full", md: "inherit" }}
+          >
+            <Translation id="see-contributors" />
+          </Button>
         </VStack>
       </Flex>
     </>

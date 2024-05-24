@@ -17,7 +17,7 @@ const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
   const { asPath } = useRouter()
 
   return (
-    <Box display="inline-block">
+    <Box as="span" display="inline-block">
       <Tooltip
         content={
           <GlossaryDefinition

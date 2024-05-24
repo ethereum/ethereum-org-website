@@ -90,7 +90,7 @@ Diversi pannelli di controllo forniscono statistiche sulla diversità dei client
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/) **Livello di esecuzione:**
 
-- [execution-diversity.info](https://execution-diversity.info/)
+- [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
 ## Letture consigliate {#further-reading}

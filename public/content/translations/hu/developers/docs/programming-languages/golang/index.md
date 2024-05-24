@@ -5,7 +5,7 @@ lang: hu
 incomplete: true
 ---
 
-<div class="featured">Tanulj meg Ethereumra fejleszteni Go-alapú projektek és eszközök használatával</div>
+<FeaturedText>Tanuljon meg Ethereumra fejleszteni Go-alapú projektek és eszközök használatával</FeaturedText>
 
 Használja az Ethereumot decentralizált alkalmazások (dappok) fejlesztésére. Ezek a dappok megbízhatóak, ami azt jelenti, hogyha egyszer telepítették az Ethereumba, akkor mindig úgy fognak futni, ahogy programozták őket. Decentralizáltak, ami azt jelenti, hogy egy peer-to-peer hálózaton futnak és nincs lehetőség egyetlen hiba miatti leállásra (single point of failure). Nincs olyan entitás vagy személy, ami irányítaná őket és szinte lehetetlen őket cenzúrázni. Digitális eszközöket irányíthatnak, lehetőséget teremtve ezzel újfajta alkalmazások létrejöveteléhez.
 
@@ -13,7 +13,7 @@ Használja az Ethereumot decentralizált alkalmazások (dappok) fejlesztésére.
 
 **Tegye meg az első lépést, hogy integrálja a Go-t az Ethereummal**
 
-Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [ethereum.org/learn](/learn/) oldalt vagy az [ethereum.org/developers](/developers/) oldalt.
+Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintse meg az [ethereum.org/learn](/learn/) vagy az [ethereum.org/developers](/developers/) oldalt.
 
 - [Blokklánc ismertetése](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Okosszerződések értelmezése](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -65,6 +65,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _Az Ethereum hálózatok több fajtáját támogatja_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Light Ethereum Subprotocol Geth implementációja_
 - [Ethereum Golang SDK](https://github.com/everFinance/goether) – _Egy egyszerű Ethereum-tárcaimplementáció és eszközök Golangban_
+- [Covalent Golang SDK](https://github.com/covalenthq/covalent-api-sdk-go) - _hatékony blokklánc-adatelérés Go SDK-n keresztül 200+ blokklánchoz_
 
 Még több anyagot keresel? Tekintse meg az [ethereum.org/developers](/developers/) oldalt
 

@@ -37,7 +37,7 @@ Ces exemples traditionnels d’identifiants sont publiés, détenus et contrôl�
 
 Une attestation est une déclaration faite par une entité sur une autre entité. Si vous vivez aux États-Unis, le permis de conduire qui vous a été délivré par le Department of Motor Vehicles (ministère des véhicules à moteur) (une entité) atteste que vous (une autre entité) êtes légalement autorisé à conduire une voiture.
 
-Les attestations sont différentes des identifiants. Une attestation \_contient_des identifiants pour référencer une identité particulière et émet une revendication à propos d'un attribut lié à cette identité. Ainsi, votre permis de conduire a des identifiants (nom, date de naissance, adresse) mais est aussi l'attestation de votre droit légal de conduire.
+Les attestations sont différentes des identifiants. Une attestation _contient_ des identifiants pour référencer une identité particulière et émet une revendication à propos d'un attribut lié à cette identité. Ainsi, votre permis de conduire à des identifiants (nom, date de naissance, adresse) mais est aussi l'attestation de votre droit légal de conduire.
 
 ### Que sont les identifiants décentralisés ? {#what-are-decentralized-identifiers}
 
@@ -49,7 +49,7 @@ Les identifiants décentralisés sont stockés sur des registres distribués (bl
 
 ## Qu'est-ce qui rend possible les identifiants décentralisés ? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infrastructure à clé publique (ICP) {#public-key-cryptography}
+### 1. Infrastructure à clé publique (ICP) {#public-key-infrastructure}
 
 L'infrastructure à clé publique (ICP) est une mesure de sécurité de l'information qui génère une [clé publique](/glossary/#public-key) et une [clé privée](/glossary/#private-key) pour une entité. La cryptographie à clé publique est utilisée dans les réseaux blockchain pour authentifier l'identité des utilisateurs et prouver la propriété des actifs numériques.
 
@@ -161,6 +161,9 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - **[Preuve d'humanité](https://www.proofofhumanity.id)** - _Preuve d'humanité (ou PoH) est un système de vérification d'identité sociale construit sur Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _Un réseau d'identité sociale décentralisé et open-source qui cherche à réformer la vérification d'identité par la création et l'analyse d'un graphe social._
 - **[Passeport de preuve d'identité ](https://proofofpersonhood.com/)** - _Un agrégateur d'identité numérique décentralisé._
+- **walt.id** — _Infrastructure décentralisée et open source d'identité et de portefeuille qui permet aux développeurs et aux organisations de tirer parti de l'identité souveraine et des NFT/SBT._ 
+  
+  
 
 ## Complément d'information {#further-reading}
 
@@ -169,7 +172,7 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - [Cas d'utilisation de la Blockchain : Blockchain en identité numérique](https://consensys.net/blockchain-use-cases/digital-identity/) — _ConsensusSys_
 - [Qu'est-ce qu'Ethereum ERC725 ? Gestion des identités autonomes sur la Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
 - [Comment la Blockchain pourrait-elle résoudre le problème de l'identité numérique](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
-- [Qu'est-ce que l'identité décentralisée et pourquoi devriez-vous vous en préocupper ?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+- [Qu'est-ce que l'identité décentralisée et pourquoi devriez-vous vous en préoccuper ?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
 - [Introduction à l'Identité Décentralisée](https://walt.id/white-paper/digital-identity)— _Dominik Beron_
 
 ### Vidéos {#videos}

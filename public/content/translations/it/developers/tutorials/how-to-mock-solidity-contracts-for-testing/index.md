@@ -4,8 +4,8 @@ description: Perché è importante prendersi gioco dei propri contratti in fase 
 author: Markus Waas
 lang: it
 tags:
-  - "Solidity"
-  - "contratto intelligente"
+  - "solidity"
+  - "contratti intelligenti"
   - "test"
   - "simulazione"
 skill: intermediate
@@ -51,7 +51,7 @@ contract PrivateERC20 is ERC20, Ownable {
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual override {
         super._beforeTokenTransfer(from, to, amount);
 
-        require(_validRecipient(to), "PrivateERC20: destinatario non valido");
+        require(_validRecipient(to), "PrivateERC20: invalid recipient");
     }
 
     function _validRecipient(address to) private view returns (bool) {
@@ -87,8 +87,8 @@ contract PrivateERC20Mock is PrivateERC20 {
 
 Otterrai uno dei seguenti messaggi d'errore:
 
-- `PrivateERC20Mock.sol: TypeError: La funzione di sovrascrizione manca dello specificatore "ovverride".`
-- `PrivateERC20.sol: TypeError: Tentativo di sovrascrizione della funzione non virtuale. Hai dimenticato di aggiungere "virtual"?`
+- `PrivateERC20Mock.sol: TypeError: Overriding function is missing "override" specifier.`
+- `PrivateERC20.sol: TypeError: Trying to override non-virtual function. Did you forget to add "virtual"?.`
 
 Poiché stiamo usando la nuova versione di Solidity 0.6, dobbiamo aggiungere la parola chiave `virtual` per le funzioni sovrascrivibili e `override` per la funzione di sovrascrizione. Quindi, aggiungiamoli a entrambe le funzioni `isPublic`.
 

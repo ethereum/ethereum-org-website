@@ -20,7 +20,7 @@ sidebarDepth: 2
 - 执行客户端（也称为执行引擎、EL 客户端或旧称“以太坊 1”客户端）侦听网络中广播的新交易，并在以太坊虚拟机中执行它们，并保存所有当前以太坊数据的最新状态和数据库。
 - 共识客户端（也称为信标节点、CL 客户端或旧称“以太坊 2”客户端）实现权益证明共识算法，使网络能够根据来自执行客户端的经验证数据达成一致。 此外还有名为“验证者”的第三种软件，它们可被添加到共识客户端中，使节点能参与保护网络安全。
 
-这些客户端软件相互协作，以追踪以太坊的链头，并允许用户与以太坊网络进行交互。 这种模块化设计被称作[封装复杂性](https://vitalik.eth.limo/general/2022/02/28/complexity.html)，它包含多个协同运作的软件。 此方法让无缝实施[合并](/roadmap/merge)变得更简单，客户端软件更易于维护和开发，并且还能重复利用各个客户端（例如在[二层网络生态系统](/layer-2/)当中）。
+这些客户端软件相互协作，以追踪以太坊的链头，并允许用户与以太坊网络进行交互。 这种模块化设计称为[封装复杂性](https://vitalik.eth.limo/general/2022/02/28/complexity.html)，包含多个协同运作的软件。 此方法让无缝实施[合并](/roadmap/merge)变得更简单，客户端软件更易于维护和开发，并且还能重复利用各个客户端（例如在[二层网络生态系统](/layer-2/)当中）。
 
 ![关联执行和共识客户端](./eth1eth2client.png) 关联执行与共识客户端的简化图。
 
@@ -130,13 +130,13 @@ sidebarDepth: 2
 
 下表汇总了不同的客户端。 这些客户端均通过[客户端测试](https://github.com/ethereum/tests)并得到积极维护，以保持与网络升级同步。
 
-| 客户端                                          | 语言      | 操作系统：            | 网络                               | 同步策略                       | 状态缓冲        |
-| ----------------------------------------------- | --------- | --------------------- | ---------------------------------- | ------------------------------ | --------------- |
-| [Geth](https://geth.ethereum.org/)              | Go        | Linux、Windows、macOS | 主网、Sepolia、Goerli              | 快照、完全                     | Archive、Pruned |
-| [Nethermind](http://nethermind.io/)             | C#、.NET  | Linux、Windows、macOS | 主网、Sepolia、Goerli 及其他       | 快照（不提供服务）、快速、完全 | Archive、Pruned |
-| [Besu](https://besu.hyperledger.org/en/stable/) | Java      | Linux、Windows、macOS | Mainnet, Sepolia, Goerli, 以及更多 | 快照、快速、完全               | Archive、Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon) | Go        | Linux、Windows、macOS | Mainnet, Sepolia, Goerli, 以及更多 | 完全                           | Archive、Pruned |
-| [Reth](https://github.com/paradigmxyz/reth)     | Rust 语言 | Linux、Windows、macOS | 主网、Sepolia、Goerli 及其他       | 完全                           | Archive、Pruned |
+| 客户端                                             | 语言      | 操作系统：               | 网络                             | 同步策略            | 状态缓冲           |
+| ----------------------------------------------- | ------- | ------------------- | ------------------------------ | --------------- | -------------- |
+| [Geth](https://geth.ethereum.org/)              | Go      | Linux、Windows、macOS | 主网、Sepolia、Goerli              | 快照、完全           | Archive、Pruned |
+| [Nethermind](http://nethermind.io/)             | C#、.NET | Linux、Windows、macOS | 主网、Sepolia、Goerli 及其他          | 快照（不提供服务）、快速、完全 | Archive、Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/) | Java    | Linux、Windows、macOS | Mainnet, Sepolia, Goerli, 以及更多 | 快照、快速、完全        | Archive、Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon) | Go      | Linux、Windows、macOS | Mainnet, Sepolia, Goerli, 以及更多 | 完全              | Archive、Pruned |
+| [Reth](https://github.com/paradigmxyz/reth)     | Rust语言  | Linux、Windows、macOS | 主网、Sepolia、Goerli 及其他          | 完全              | Archive、Pruned |
 
 有关受支持网络的更多信息，请仔细阅读[以太坊网络](/developers/docs/networks/)。
 
@@ -172,13 +172,13 @@ Nethermind 也有[详细的相关文档](https://docs.nethermind.io)、强大的
 
 有多种共识客户端（以前称为“以太坊 2 客户端”）支持[共识升级](/roadmap/beacon-chain/)。 它们负责所有共识相关的逻辑，包括分叉选择算法、处理认证与管理[权益证明](/developers/docs/consensus-mechanisms/pos)奖励及惩罚。
 
-| 客户端                                                        | 语言       | 操作系统：            | 网络                                                 |
-| ------------------------------------------------------------- | ---------- | --------------------- | ---------------------------------------------------- |
-| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux、Windows、macOS | 信标链、Goerli、Pyrmont、Sepolia、Ropsten 等         |
-| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux、Windows、macOS | 信标链、Goerli、Sepolia、Ropsten 等                  |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux、Windows、macOS | 信标链、Goerli、Sepolia、Ropsten 等                  |
+| 客户端                                                           | 语言         | 操作系统：               | 网络                                          |
+| ------------------------------------------------------------- | ---------- | ------------------- | ------------------------------------------- |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux、Windows、macOS | 信标链、Goerli、Pyrmont、Sepolia、Ropsten 等        |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux、Windows、macOS | 信标链、Goerli、Sepolia、Ropsten 等                |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux、Windows、macOS | 信标链、Goerli、Sepolia、Ropsten 等                |
 | [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux、Windows、macOS | 信标链、Gnosis、Goerli、Pyrmont、Sepolia、Ropsten 等 |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS | 信标链、Gnosis、Goerli、Sepolia、Ropsten 等          |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS | 信标链、Gnosis、Goerli、Sepolia、Ropsten 等         |
 
 ### Lighthouse {#lighthouse}
 
@@ -251,7 +251,7 @@ Teku 用 Java 语言编写，并依照 Apache 2.0 获得许可。 它由 ConsenS
 
 #### 乐观同步 {#optimistic-sync}
 
-乐观同步是一种合并后同步策略，专为选择加入和向后兼容而设计，允许执行节点通过已确立的方法进行同步。 执行引擎可以在不进行完全验证的情况下*乐观地*导入信标区块，找到最新区块头，然后使用上述方法开始同步链。 接着，在执行客户端更新之后，它将通知共识客户端信标链中交易的有效性。
+乐观同步是一种合并后同步策略，专为选择加入和向后兼容而设计，允许执行节点通过已确立的方法进行同步。 执行引擎可以在不进行完全验证的情况下_乐观地_导入信标区块，找到最新区块头，然后使用上述方法开始同步链。 接着，在执行客户端更新之后，它将通知共识客户端信标链中交易的有效性。
 
 [关于乐观同步的更多信息](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
 

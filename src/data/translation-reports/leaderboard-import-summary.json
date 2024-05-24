@@ -1,0 +1,20 @@
+{
+  "month": {
+    "reportId": "d4f07690-d028-451e-9d24-f0961157200c",
+    "from": "2024-03-01T00:00:00.000Z",
+    "to": "2024-04-01T00:00:00.000Z",
+    "filePath": "src/data/translation-reports/month/month-data.json"
+  },
+  "quarter": {
+    "reportId": "7ba42e96-5c0f-49f1-8cae-c3b0c400c61c",
+    "from": "2024-01-01T00:00:00.000Z",
+    "to": "2024-04-01T00:00:00.000Z",
+    "filePath": "src/data/translation-reports/quarter/quarter-data.json"
+  },
+  "allTime": {
+    "reportId": "d9bc052b-816c-4303-825a-251608ec9556",
+    "from": "2019-06-27T00:00:00Z",
+    "to": "2024-04-05T05:32:59.302Z",
+    "filePath": "src/data/translation-reports/alltime/alltime-data.json"
+  }
+}

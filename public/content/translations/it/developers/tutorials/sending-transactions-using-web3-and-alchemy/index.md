@@ -134,25 +134,25 @@ async function main() {
     const { API_URL, PRIVATE_KEY } = process.env;
     const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
     const web3 = createAlchemyWeb3(API_URL);
-    const myAddress = '0x610Ae88399fc1687FA7530Aac28eC2539c7d6d63' //TODO: sostituisci questo indirizzo con il tuo indirizzo pubblico
+    const myAddress = '0x610Ae88399fc1687FA7530Aac28eC2539c7d6d63' //TODO: replace this address with your own public address
 
-    const nonce = await web3.eth.getTransactionCount(myAddress, 'latest'); // nonce inizia a contare da 0
+    const nonce = await web3.eth.getTransactionCount(myAddress, 'latest'); // nonce starts counting from 0
 
     const transaction = {
-     'to': '0x31B98D14007bDEe637298086988A0bBd31184523', // indirizzo del faucet per restituire eth
+     'to': '0x31B98D14007bDEe637298086988A0bBd31184523', // faucet address to return eth
      'value': 1000000000000000000, // 1 ETH
      'gas': 30000,
      'nonce': nonce,
-     // campo dei dati facoltativo per inviare il messaggio o eseguire il contratto intelligente
+     // optional data field to send message or execute smart contract
     };
 
     const signedTx = await web3.eth.accounts.signTransaction(transaction, PRIVATE_KEY);
 
     web3.eth.sendSignedTransaction(signedTx.rawTransaction, function(error, hash) {
     if (!error) {
-      console.log("🎉 L'hash della tua transazione è: ", hash, "\n Controlla la Mempool di Alchemy per visualizzare lo stato della tua transazione!");
+      console.log("🎉 The hash of your transaction is: ", hash, "\n Check Alchemy's Mempool to view the status of your transaction!");
     } else {
-      console.log("❗Qualcosa è andato storto inviando la tua transazione", error)
+      console.log("❗Something went wrong while submitting your transaction:", error)
     }
    });
 }

@@ -6,7 +6,7 @@ lang: de
 
 # Blockchain-Brücken {#prerequisites}
 
-_Web3 hat sich zu einem Ökosystem von L1 Blockchains und L2 Skalierungslösungen entwickelt, die jeweils mit einzigartigen Fähigkeiten und Gegenleistungen entwickelt wurden. Mit dem Anstieg der Anzahl der Blockchain-Protokolle erhöht sich auch [das Bedürfnis, Vermögenswerte über Blockchains hinweg verschieben zu können](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). Um diesem Bedürfnis gerecht zu werden, brauchen wir Brücken._
+_Web3 hat sich zu einem Ökosystem von L1 Blockchains und L2 Skalierungslösungen entwickelt, die jeweils mit einzigartigen Fähigkeiten und Gegenleistungen entwickelt wurden. Mit dem Anstieg der Anzahl der Blockchain-Protokolle erhöht sich auch [das Bedürfnis, Vermögenswerte über Blockchains hinweg verschieben zu können](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)). Um diesem Bedürfnis gerecht zu werden, brauchen wir Brücken._
 
 <Divider />
 
@@ -28,9 +28,9 @@ Allerdings entwickeln sich alle Blockchains in isolierten Umgebungen und haben u
 
 Brücken existieren, um Blockchains miteinander zu verbinden. Sie erlauben den Transfer von Informationen und Token zwischen den Blockchains.
 
-Brücken ermöglichen Folgendes:
+Folgendes wird durch Brücken ermöglicht:
 
-- den Transfer von Vermögenswerten und Informationen zwischen Blockchains
+- der Chain-übergreifende Transfer von Assets und Informationen.
 - dApps können auf die Stärken verschiedener Blockchains zugreifen und so ihre Fähigkeiten erweitern (da die Protokolle nun mehr Gestaltungsmöglichkeiten für Innovationen haben).
 - Benutzer können auf neue Plattformen zugreifen, und die Vorteile verschiedener Blockchains zu nutzen.
 - Entwickler aus verschiedenen Blockchain-Ökosystemen können zusammenarbeiten, um neue Plattformen für die Benutzer zu erschaffen.

@@ -105,7 +105,7 @@ Es gibt eine Vielzahl von Optionen, die Ihnen bei der Einrichtung helfen. Verwen
 
 <ProductDisclaimer />
 
-### Node-Tools
+### Node-Werkzeuge
 
 <StakingProductsCardGrid category="nodeTools" />
 
@@ -196,9 +196,11 @@ Um Ihr gesamtes Guthaben zu entsperren und zu erhalten, müssen Sie auch den Pro
 ## Weiterführende Informationen {#further-reading}
 
 - [Das Ethereum-Staking-Verzeichnis](https://www.staking.directory/) - _Eridian und Spacesider_
-- [Ethereums Client-Diversitätsproblem](https://hackernoon.com/Ethereums-Client-Diversitätsproblem) – _@emmanuelawosika 2022_
+- [Ethereums Client-Diversitätsproblem](https://hackernoon.com/ethereums-client-diversity-problem) – _@emmanuelawosika 2022_
 - [Client-Diversität fördern](https://www.attestant.io/Posts/Client-Diversität-fördern/) – _Jim McDonald 2022_
 - [Client-Diversität auf der Konsensebene von Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) – _jmcook.eth 2022_
 - [Anleitung: Ethereum-Validator-Hardware kaufen](https://www.youtube.com/watch?v=C2wwu1IlhDc) – _EthStaker 2022_
 - [Schritt für Schritt: Wie man dem Ethereum 2.0 Testnetz beitritt](https://kb.beaconcha.in/Guides/Tutorium-eth2-Multi-Client) - _ Butta_
 - [Eth2-Slashing-Präventionstipps](https://medium.com/prysmatic-labs/eth2-Slashing-Präventionstipps-f6faa5025f50) – _Raul Jordan 2020 _
+
+<QuizWidget quizKey="solo-staking" />

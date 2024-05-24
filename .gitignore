@@ -52,3 +52,6 @@ robots.txt
 
 # vscode workplace configuration
 .vscode
+
+# Crowdin report output
+src/data/crowdin/bucketsAwaitingReviewReport.csv

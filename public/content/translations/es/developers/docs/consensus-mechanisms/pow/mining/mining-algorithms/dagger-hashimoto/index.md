@@ -4,7 +4,7 @@ description: Un examen detallado del algoritmo Dagger-Hashimoto.
 lang: es
 ---
 
-Dagger Hashimoto fue la implementación y especificación de investigación original para el algoritmo de minería de Ethereum. Dagger Hashimoto fue reemplazado por [Ethash](#ethash). La minería se apagó por completo en [La fusión](/roadmap/merge/) el 15 de septiembre de 2022. Desde entonces, Ethereum se ha asegurado a través de un mecanismo [de prueba de participación](/developers/docs/consensus-mechanisms/pos) en su lugar. Esta página es de interés histórico: la información que contiene ya no es relevante para Ethereum después de La fusión.
+Dagger Hashimoto fue la implementación y especificación de investigación original para el algoritmo de minería de Ethereum. Dagger Hashimoto fue reemplazado por [Ethash](#ethash). La minería se apagó por completo en [La Fusión](/updates/merge) el 15 de septiembre de 2022. Desde entonces, Ethereum se ha asegurado a través de un mecanismo [de prueba de participación](/developers/docs/consensus-mechanisms/pos) en su lugar. Esta página es de interés histórico: la información que contiene ya no es relevante para Ethereum después de La Fusión.
 
 ## Pre-requisitos: {#prerequisites}
 
@@ -143,7 +143,7 @@ El algoritmo utilizado para generar el conjunto de DAG usado para calcular el tr
 def get_prevhash(n):
     from pyethereum.blocks import GENESIS_PREVHASH
     from pyethereum import chain_manager
-    if num <= 0:
+    if n <= 0:
         return hash_to_int(GENESIS_PREVHASH)
     else:
         prevhash = chain_manager.index.get_block_by_number(n - 1)
@@ -186,7 +186,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
         shifted_A = hash_output_A >> i
         transaction = shifted_A % len(list_of_transactions)
         txid_mix ^= list_of_transactions[transaction] << i
-    return txid_max ^ (nonce << 192)
+    return txid_mix ^ (nonce << 192)
 ```
 
 Desafortunadamente, aunque Hashimoto se considera de RAM difícil, se basa en la aritmética de 256 bits, que tiene una sobrecarga computacional considerable. Sin embargo, Dagger-Hashimoto solo utiliza los 64 bits menos significativos al indexar su conjunto de datos para abordar este problema.
@@ -285,50 +285,50 @@ A partir de la proposición anterior, podemos reconocer que la iteración de `(p
 
 Cuando asignamos la primera celda del DAG (la variable etiquetada `init`), calculamos `pow(sha3(seed) + 2, 3, P)`. A primera vista, esto no garantiza que el resultado no sea ni `1` ni `P-1`. Sin embargo, dado que `P-1` es un primo seguro, tenemos la siguiente garantía adicional, que es una consecuencia de la Observación 1:
 
-> Observación n.º 2 Deje que `x` sea miembro del grupo multiplidor `ℤ/Pℤ` para un número primo seguro `P`, y deje que `w` sea un número natural. Si `x mod P ≠ 1 mod P` y `x mod P ≠ P-1 mod P`, así como `w mod P ≠ P-1 mod P` y `w mod P ≠ 0 mod P`, entonces `xw mod<`
+> Observación n.º 2 Deje que `x` sea miembro del grupo multiplidor `ℤ/Pℤ` para un número primo seguro `P`, y deje que `w` sea un número natural. Si `x mod P ≠ 1 mod P` y `x mod P ≠ P-1 mod P`, así como `w mod P ≠ P-1 mod P` y `w mod P ≠ 0 mod P`, entonces `xw mod`
 
-## La exponenciación modular como función hash
+### La exponenciación modular como función hash {#modular-exponentiation}
 
 Para ciertos valores de `P` y `w`, la función `pow (x, w, P)` puede tener muchas colisiones. Por ejemplo, `pow (x,9,19)` solo toma valores `{1,18}`.
 
-> Dado que `P` es primo, entonces se puede elegir un `w apropiado` para una función de hashing de exponenciación modular usando el siguiente resultado:
->
-> > Observación n.º 3 Deje que `P` sea primo; `w` y `P-1` son relativamente primos si y solo si para ambos `a` y `b` en `ℤ/Pℤ`:
-> >
-> > <center>
-> >   `aw mod P ≡ bw mod P` si y solo si `a mod P ≡ b mod P`
-> > </center>
->
-> Por lo tanto, dado que `P` es primo y `w` es relativamente primo a `P-1`, tenemos que `|{pow (x, w, P) : x ∈ ℤ}| = P`, lo que implica que la función de hashing tiene la tasa de colisión mínima posible.
->
-> En el caso especial de que `P` sea un primo seguro como hemos seleccionado, entonces `P-1` solo tiene los factores 1, 2, `(P-1)/2` y `P-1`. Dado que `P` > 7, sabemos que 3 es relativamente primo para `P-1`, por lo que `w=3` satisface la propuesta anterior.
->
-> ## Algoritmo de evaluación basado en caché más eficiente {#cache-based-evaluation}
->
-> ```python
-> def quick_calc(params, seed, p):
->     cache = produce_dag(params, seed, params["cache_size"])
->     return quick_calc_cached(cache, params, p)
->
-> def quick_calc_cached(cache, params, p):
->     P = params["P"]
->     if p < len(cache):
->         return cache[p]
->     else:
->         x = pow(cache[0], p + 1, P)
->         for _ in range(params["k"]):
->             x ^= quick_calc_cached(cache, params, x % p)
->         return pow(x, params["w"], P)
->
-> def quick_hashimoto(seed, dagsize, params, header, nonce):
->     cache = produce_dag(params, seed, params["cache_size"])
->     return quick_hashimoto_cached(cache, dagsize, params, header, nonce)
->
-> def quick_hashimoto_cached(cache, dagsize, params, header, nonce):
->     m = dagsize // 2
->     mask = 2**64 - 1
->     mix = sha3(encode_int(nonce) + header)
->     for _ in range(params["accesses"]):
->         mix ^= quick_calc_cached(cache, params, m + (mix & mask) % m)
->     return dbl_sha3(mix)
-> ```
+Dado que `P` es primo, entonces se puede elegir un `w apropiado` para una función de hashing de exponenciación modular usando el siguiente resultado:
+
+> Observación n.º 3 Deje que `P` sea primo; `w` y `P-1` son relativamente primos si y solo si para ambos `a` y `b` en `ℤ/Pℤ`:
+> 
+> <center>
+>   `aw mod P ≡ bw mod P` si y solo si `a mod P ≡ b mod P`
+> </center>
+
+Por lo tanto, dado que `P` es primo y `w` es relativamente primo a `P-1`, tenemos que `|{pow (x, w, P) : x ∈ ℤ}| = P`, lo que implica que la función de hashing tiene la tasa de colisión mínima posible.
+
+En el caso especial de que `P` sea un primo seguro como hemos seleccionado, entonces `P-1` solo tiene los factores 1, 2, `(P-1)/2` y `P-1`. Dado que `P` > 7, sabemos que 3 es relativamente primo para `P-1`, por lo que `w=3` satisface la propuesta anterior.
+
+## Algoritmo de evaluación basado en caché más eficiente {#cache-based-evaluation}
+
+```python
+def quick_calc(params, seed, p):
+    cache = produce_dag(params, seed, params["cache_size"])
+    return quick_calc_cached(cache, params, p)
+
+def quick_calc_cached(cache, params, p):
+    P = params["P"]
+    if p < len(cache):
+        return cache[p]
+    else:
+        x = pow(cache[0], p + 1, P)
+        for _ in range(params["k"]):
+            x ^= quick_calc_cached(cache, params, x % p)
+        return pow(x, params["w"], P)
+
+def quick_hashimoto(seed, dagsize, params, header, nonce):
+    cache = produce_dag(params, seed, params["cache_size"])
+    return quick_hashimoto_cached(cache, dagsize, params, header, nonce)
+
+def quick_hashimoto_cached(cache, dagsize, params, header, nonce):
+    m = dagsize // 2
+    mask = 2**64 - 1
+    mix = sha3(encode_int(nonce) + header)
+    for _ in range(params["accesses"]):
+        mix ^= quick_calc_cached(cache, params, m + (mix & mask) % m)
+    return dbl_sha3(mix)
+```

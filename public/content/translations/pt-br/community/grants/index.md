@@ -15,7 +15,6 @@ Esta página é administrada por nossa comunidade. Se houver algo faltando ou er
 Esses programas abrangem um amplo ecossistema Ethereum ao oferecer recompensas a um grande escopo de projetos. Eles incluem soluções de dimensionamento, formação de comunidades, segurança, privacidade e muito mais. Essas recompensas não são específicas de nenhuma plataforma Ethereum e são um bom lugar para começar se você não tiver certeza.
 
 - [ Programa de suporte ao ecossistema EF](https://esp.ethereum.foundation)-_ Financiar projetos de código aberto que beneficiam o Ethereum, com foco particular em ferramentas universais, infraestrutura, pesquisa e bens públicos _
-- [MetaCartel](https://www.metacartel.org/grants/) – _Desenvolvimento de Dapp, criação de DAO_
 - [Moloch DAO](https://www.molochdao.com/) – _Privacidade, dimensionamento da camada 2, segurança do cliente e mais_
 - [Concessões DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) – _Planilha Google de organizações que oferecem concessões_
 - [Bolsas acadêmicas](https://esp.ethereum.foundation/academic-grants) – _Bolsas para apoiar o trabalho acadêmico relacionado com o Ethereum_

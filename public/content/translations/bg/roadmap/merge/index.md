@@ -11,7 +11,7 @@ summaryPoint3: Терминът „Сливането“ се отнася до 
 summaryPoint4: Сливането намали потреблението на енергия на Етереум с приблизително 99,95%.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Сливането се осъществи на 15 септември 2022 г. Така завърши преходът на Етереум към консенсус с доказателство-за-залог, отхвърляйки официално механизма доказателство-за-работа и намалявайки разхода на енергия с приблизително 99,95%.
 </UpgradeStatus>
 

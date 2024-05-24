@@ -32,6 +32,7 @@ import { mdxTableComponents } from "@/components/Table"
 import TooltipLink from "@/components/TooltipLink"
 import YouTube from "@/components/YouTube"
 
+import ContributorsQuizBanner from "./Banners/ContributorsQuizBanner"
 import GlossaryTooltip from "./Glossary/GlossaryTooltip"
 import { StandaloneQuizWidget } from "./Quiz/QuizWidget"
 import Card from "./Card"
@@ -40,6 +41,7 @@ import Emoji from "./Emoji"
 import ExpandableCard from "./ExpandableCard"
 import FeaturedText from "./FeaturedText"
 import InfoBanner from "./InfoBanner"
+import IssuesList from "./IssuesList"
 import LocaleDateTime from "./LocaleDateTime"
 import MainArticle from "./MainArticle"
 import VideoIframe from "./VideoIframe"
@@ -206,29 +208,6 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   )
 }
 
-export const InfoColumn = (props: ChildOnlyProp) => (
-  <Flex
-    as="aside"
-    flexDirection="column"
-    flex="0 1 400px"
-    ms={8}
-    me={16}
-    position="sticky"
-    top="6.25rem"
-    height={calc("100vh").subtract("80px").toString()}
-    {...props}
-  />
-)
-
-export const InfoTitle = (props: ChildOnlyProp) => (
-  <Heading2
-    fontSize={{ base: "2.5rem", lg: "5xl" }}
-    textAlign={{ base: "start", lg: "end" }}
-    mt={0}
-    {...props}
-  />
-)
-
 export const MobileButton = (props: ChildOnlyProp) => {
   const borderColor = useToken("colors", "border")
   return (
@@ -268,6 +247,7 @@ export const reactComponents = {
   Card,
   ContentContainer,
   Contributors,
+  ContributorsQuizBanner,
   Divider,
   DocLink,
   Emoji,
@@ -275,13 +255,12 @@ export const reactComponents = {
   FeaturedText,
   GlossaryTooltip,
   InfoBanner,
-  InfoColumn,
-  InfoTitle,
   MobileButton,
   MobileButtonDropdown,
   Page,
   QuizWidget: StandaloneQuizWidget,
   StyledButtonDropdown,
+  IssuesList,
   Title,
   YouTube,
 }
