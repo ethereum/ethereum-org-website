@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server"
 
 import { DEFAULT_LOCALE, FAKE_LOCALE, LOCALES_CODES } from "./lib/constants"
 
-// const PUBLIC_FILE = /\.(.*)$/
+const PUBLIC_FILE = /\.(.*)$/
 
 // function detectLocale(acceptLanguage: string | null) {
 //   if (!acceptLanguage) {
@@ -21,16 +21,21 @@ import { DEFAULT_LOCALE, FAKE_LOCALE, LOCALES_CODES } from "./lib/constants"
 //   return locale
 // }
 
+export const config = {
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     */
+    "/((?!api|_next/static|learn).*)",
+  ],
+}
+
 // Middleware required to always display the locale prefix in the URL. It
 // redirects to the default locale if the locale is not present in the URL
 export async function middleware(req: NextRequest) {
-  // if (
-  //   req.nextUrl.pathname.startsWith("/_next") ||
-  //   req.nextUrl.pathname.includes("/api/") ||
-  //   PUBLIC_FILE.test(req.nextUrl.pathname)
-  // ) {
-  //   return
-  // }
+  console.log(req.nextUrl.pathname)
 
   // if (req.nextUrl.locale === FAKE_LOCALE) {
   //   // Apparently, the built-in `localeDetection`from Next does not work when
