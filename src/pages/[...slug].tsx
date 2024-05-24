@@ -16,6 +16,7 @@ import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
 import type {
+  CommitHistory,
   Lang,
   Layout,
   LayoutMappingType,
@@ -55,6 +56,7 @@ import {
   UseCasesLayout,
 } from "@/layouts"
 import { fetchGFIs } from "@/lib/api/fetchGFIs"
+import { fetchAndCacheGitContributors } from "@/lib/api/fetchGitHistory"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import remarkInferToc from "@/lib/rehype/remarkInferToc"
@@ -113,6 +115,8 @@ type Props = Omit<Parameters<LayoutMappingType[Layout]>[0], "children"> &
 const gfIssuesDataFetch = runOnlyOnce(async () => {
   return await fetchGFIs()
 })
+
+const commitHistoryCache: CommitHistory = {}
 
 export const getStaticProps = (async (context) => {
   const params = context.params!
@@ -180,6 +184,11 @@ export const getStaticProps = (async (context) => {
 
   const gfissues = await gfIssuesDataFetch()
 
+  const gitContributors = await fetchAndCacheGitContributors(
+    join("/", mdDir, "index.md"),
+    commitHistoryCache
+  )
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
@@ -194,6 +203,7 @@ export const getStaticProps = (async (context) => {
       tocItems,
       crowdinContributors,
       gfissues,
+      gitContributors,
     },
   }
 }) satisfies GetStaticProps<Props, Params>
@@ -229,6 +239,7 @@ ContentPage.getLayout = (page) => {
     tocItems,
     crowdinContributors,
     contentNotTranslated,
+    gitContributors,
   } = page.props
 
   const layoutProps = {
@@ -239,6 +250,7 @@ ContentPage.getLayout = (page) => {
     tocItems,
     crowdinContributors,
     contentNotTranslated,
+    gitContributors,
   }
   const Layout = layoutMapping[layout]
 

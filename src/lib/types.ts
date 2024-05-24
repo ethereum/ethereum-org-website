@@ -370,6 +370,16 @@ export type Author = {
   }
 }
 
+export type FileContributor = {
+  login: string
+  avatar_url: string
+  html_url: string
+  date: string
+}
+
+type FilePath = string
+export type CommitHistory = Record<FilePath, FileContributor[]>
+
 /**
  * Table of contents
  */

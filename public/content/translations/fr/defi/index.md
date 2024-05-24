@@ -16,7 +16,7 @@ La DeFi est un système financier ouvert et mondial conçu pour l'ère de l'inte
 
 ## Qu'est-ce que la DeFi ? {#what-is-defi}
 
-DeFi est un terme collectif pour les produits et services financiers qui sont accessibles à toute personne qui peut utiliser Ethereum – toute personne disposant d'une connexion Internet. Avec la DeFi, les marchés sont toujours ouverts et il n'y a aucune autorités centralisée qui peut bloquer les paiements ou vous refuser l'accès à quoi que ce soit. Les services qui étaient auparavant lents et à risque d'erreurs humaines sont automatiques et plus sûrs maintenant qu'ils sont gérés par code que n'importe qui peut inspecter et contrôler.
+DeFi est un terme collectif pour les produits et services financiers qui sont accessibles à toute personne qui peut utiliser Ethereum – toute personne disposant d'une connexion Internet. Avec la DeFi, les marchés sont toujours ouverts et il n'y a aucune autorité centralisée qui peut bloquer les paiements ou vous refuser l'accès à quoi que ce soit. Les services qui étaient auparavant lents et à risque d'erreurs humaines sont automatiques et plus sûrs maintenant qu'ils sont gérés par code que n'importe qui peut inspecter et contrôler.
 
 Il y a une économie de cryptomonnaies en plein essor où vous pouvez prêter, emprunter, long/court, gagner des intérêts, et plus. Les Argentins possédant des crypto-monnaies ont utilisé la DeFi pour échapper à l'inflation de leur pays. Les entreprises ont commencé à verser les salaires de leurs employés en temps réel. Certaines personnes ont même souscrit et remboursé des prêts d'une valeur de millions de dollars sans qu'il soit nécessaire de les identifier.
 
@@ -90,7 +90,7 @@ Il existe une alternative décentralisée à la plupart des services financiers.
 
 ### Envoyer de l'argent partout dans le monde rapidement {#send-money}
 
-En tant que blockchain, Ethereum est conçu pour envoyer des transactions de manière sécurisée et globale. Tout comme Bitcoin, Ethereum vous permet d'envoyer de l'argent dans le monde entier aussi facilement qu'un un email. Entrez simplement le nom [ENS de votre destinataire](/nft/#nft-domains) (comme bob. th) ou l'adresse de leur compte à partir de votre portefeuille et votre paiement leur ira directement, en quelques minutes (habituellement). Pour envoyer ou recevoir des paiements, vous aurez besoin d'un [portefeuille](/wallets/).
+En tant que blockchain, Ethereum est conçu pour envoyer des transactions de manière sécurisée et globale. Tout comme Bitcoin, Ethereum vous permet d'envoyer de l'argent dans le monde entier aussi facilement qu'un email. Entrez simplement le nom [ENS de votre destinataire](/nft/#nft-domains) (comme bob. th) ou l'adresse de leur compte à partir de votre portefeuille et votre paiement leur ira directement, en quelques minutes (habituellement). Pour envoyer ou recevoir des paiements, vous aurez besoin d'un [portefeuille](/wallets/).
 
 <ButtonLink to="/dapps/?category=finance">
   Voir les applications de paiement
@@ -108,7 +108,7 @@ Et si vous ne voulez pas envoyer ou diffuser des [ETH](/eth/) en raison de sa vo
 
 La volatilité des cryptomonnaies est un problème pour de nombreux produits financiers et les dépenses en générales. La communauté de la DeFi a résolu cela avec des stablecoins. Leur valeur reste indexée sur un autre actif, généralement une devise populaire comme le dollar par exemple.
 
-Les pièces comme Dai ou USDC ont une valeur qui reste stable à quelques centimes de dollars près. Cela les rend parfaits pour gagner ou revendre vos jetons. De nombreuses personnes en Amérique latine ont utilisés des pièces stables comme moyen de protéger leurs économies en cette période de grande incertitude avec leurs monnaies émises par le gouvernement.
+Les pièces comme Dai ou USDC ont une valeur qui reste stable à quelques centimes de dollars près. Cela les rend parfaits pour gagner ou revendre vos jetons. De nombreuses personnes en Amérique latine ont utilisé des pièces stables comme moyen de protéger leurs économies en cette période de grande incertitude avec leurs monnaies émises par le gouvernement.
 
 <ButtonLink to="/stablecoins/">
   En savoir plus sur les stablecoins
@@ -143,7 +143,7 @@ Lorsque vous utilisez un prêteur décentralisé, vous avez accès aux fonds dé
 
 #### Efficacité fiscale {#tax-efficiencies}
 
-L’emprunt peut vous donner accès aux fonds dont vous avez besoin sans devoir vendre votre ETH (un événement imposable). Au lieu de cela, vous pouvez utiliser ETH comme garantie pour un prêt stablecoin. Cela vous donne le flux de trésorerie dont vous avez besoin et vous permet de garder votre ETH. Les Stablecoins sont des jetons qui sont beaucoup plus intéressant quand vous avez besoin d'argent car ils ne fluctuent pas en valeur comme ETH. [Plus d'infos sur les stablecoins](#stablecoins)
+L’emprunt peut vous donner accès aux fonds dont vous avez besoin sans devoir vendre votre ETH (un événement imposable). Au lieu de cela, vous pouvez utiliser ETH comme garantie pour un prêt stablecoin. Cela vous donne le flux de trésorerie dont vous avez besoin et vous permet de garder votre ETH. Les Stablecoins sont des jetons qui sont beaucoup plus intéressants quand vous avez besoin d'argent car ils ne fluctuent pas en valeur comme ETH. [Plus d'infos sur les stablecoins](#stablecoins)
 
 #### Prêts Flash {#flash-loans}
 
@@ -207,9 +207,9 @@ La cagnotte équivaut aux intérêts générés par les prêts effectués grâce
 
 ### Échanger des jetons {#swaps}
 
-Il existe des milliers de jetons sur Ethereum. Les échanges décentralisés (DEXs) vous permettent d'échanger des jetons quand vous le souhaitez. Vous gardez toujours le contrôle de vos actifs. C'est comme échanger des devises lorsque vous visitez un autre pays. Mais la version de la DeFi ne ferme jamais. Les marchés sont ouverts 24 heures sur 24, 365 jours par an, la technologie garantie qu'il y aura toujours quelqu'un pour accepter un échange.
+Il existe des milliers de jetons sur Ethereum. Les échanges décentralisés (DEXs) vous permettent d'échanger des jetons quand vous le souhaitez. Vous gardez toujours le contrôle de vos actifs. C'est comme échanger des devises lorsque vous visitez un autre pays. Mais la version de la DeFi ne ferme jamais. Les marchés sont ouverts 24 heures sur 24, 365 jours par an, la technologie garantit qu'il y aura toujours quelqu'un pour accepter un échange.
 
-Par exemple, si vous voulez vous lancer dans une loterie sans risque (décrite au dessus), vous aurez besoin de jeton comme les Dai ou USDC. Les DEXs vous permettent d'échanger vos ETH avec des tokens, et de les reconvertir en ETH lorsque vous avez terminé.
+Par exemple, si vous voulez vous lancer dans une loterie sans risque (décrite au dessus), vous aurez besoin de jetons comme les Dai ou USDC. Les DEXs vous permettent d'échanger vos ETH avec des tokens, et de les reconvertir en ETH lorsque vous avez terminé.
 
 <ButtonLink to="/dapps/?category=finance">
   Voir échanger des jetons
@@ -221,7 +221,7 @@ Par exemple, si vous voulez vous lancer dans une loterie sans risque (décrite a
 
 Pour les traders qui aiment le contrôle, il existe des options avancées. Les ordres à cours limités, échanges perpétuels, le trading sur marge sont tous possibles. Avec le trading décentralisé, vous avez accès à des liquidités dans le monde entier, le marché est toujours ouvert et vous gardez à tout moment le contrôle sur vos actifs.
 
-Avec le trading centralisé, vous devez déposer vos actifs avant les échanges et faire confiance à un tier pour en prendre soin. Lorsqu'ils sont déposés, vos actifs courent un risque par ce que les centres d'échange sont des cibles très attractives pour les hackers.
+Avec le trading centralisé, vous devez déposer vos actifs avant les échanges et faire confiance à un tiers pour en prendre soin. Lorsqu'ils sont déposés, vos actifs courent un risque parce que les centres d'échange sont des cibles très attractives pour les hackers.
 
 <ButtonLink to="/dapps/?category=finance">
   Voir Applications décentralisées (dapps)
@@ -255,7 +255,7 @@ Ethereum est une plateforme idéale pour le crowdfunding:
 
 #### Financements quadratiques {#quadratic-funding}
 
-Ethereum est un logiciel open source, une grand partie du travail à été financée par la communauté. Cela a conduit à la croissance d'un nouveau modèle de collecte de fond : le financement quadratique. Ce modèle a le potentiel d'améliorer la façon dont nous finançons tous les types de biens publics à l'avenir.
+Ethereum est un logiciel open source, une grande partie du travail à été financée par la communauté. Cela a conduit à la croissance d'un nouveau modèle de collecte de fonds : le financement quadratique. Ce modèle a le potentiel d'améliorer la façon dont nous finançons tous les types de biens publics à l'avenir.
 
 Le financement quadratique veille à ce que les projets qui reçoivent le plus de financement soient ceux dont la demande est la plus unique. En d'autres termes, des projets qui visent à améliorer la vie du plus grand nombre de personnes. Voici comment ça marche :
 

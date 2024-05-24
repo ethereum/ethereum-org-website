@@ -22,7 +22,7 @@ Il Programma di Traduzione di ethereum.org è aperto e tutti possono contribuire
 
 _Unisciti a [Discord di ethereum.org](/discord/) per collaborare alle traduzioni, fare domande, condividere feedback e idee, o unirsi a un gruppo di traduzione._
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
+<ButtonLink to="https://crowdin.com/project/ethereum-org/">
   Inizia a tradurre
 </ButtonLink>
 

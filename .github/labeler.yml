@@ -1,22 +1,19 @@
-"needs review 👀":
-  - src/**/*
-  - public/*
-
 "documentation 📖":
   - README.md
+  - docs/**/*
 
 "tooling 🔧":
   - .github/**/*
-  - src/scripts/*
-  - src/lib/*
-  - src/hooks/*
+  - src/scripts/**/*
+  - src/lib/**/*
+  - src/hooks/**/*
+  - .storybook/**/*
 
 "dependencies 📦":
   - package.json
   - yarn.lock
 
-"internal 🏠":
-  - .all-contributorsrc
+"config ⚙️":
   - i18n.config.json
   - next.config.js
   - next-i18next.config,js
@@ -30,13 +27,14 @@
   - netlify.toml
 
 "translation 🌍":
-  - src/content/translations/**/*
+  - public/content/translations/**/*
   - src/intl/**/*
-  - src/lib/utils/translations.ts
+  - !src/intl/en/**
 
 "content 🖋️":
-  - src/pages/*
+  - src/intl/en/**
   - public/content/**/*
+  - !public/content/translations/**/*
 
 "event 📅":
   - src/data/community-events.json
