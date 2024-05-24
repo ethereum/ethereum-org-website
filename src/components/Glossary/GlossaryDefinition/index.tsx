@@ -1,8 +1,8 @@
 import { ComponentProps } from "react"
 import { Box, type HeadingProps, Text } from "@chakra-ui/react"
 
+import IdAnchor from "@/components/IdAnchor"
 import InlineLink from "@/components/Link"
-import { IdAnchor } from "@/components/MdComponents"
 import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
 
