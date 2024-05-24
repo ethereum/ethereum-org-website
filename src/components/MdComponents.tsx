@@ -65,7 +65,7 @@ export const commonHeadingProps = (id?: string): HeadingProps => ({
   ...headingPropsForAnchor(id),
 })
 
-const IdAnchor = ({ id }: { id?: string }) => {
+export const IdAnchor = ({ id }: { id?: string }) => {
   if (!id) return null
   return (
     <Link
