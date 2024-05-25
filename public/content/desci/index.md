@@ -109,6 +109,7 @@ Explore projects and join the DeSci community.
 - [IdeaMarkets: enabling decentralized scientific credibility](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
 - [ValleyDAO: an open, global community offering funding and translational support for synthetic biology research](https://www.valleydao.bio)
+- [CryoDAO: funding moonshot research in the field of cryopreservation](https://www.cryodao.org)
 
 We welcome suggestions for new projects to list - please look at our [listing policy](/contributing/adding-desci-projects/) to get started!
 
