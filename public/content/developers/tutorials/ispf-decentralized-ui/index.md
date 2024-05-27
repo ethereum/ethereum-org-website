@@ -64,6 +64,8 @@ Once you have that installed (and the desktop IPFS working), you can go to [/ipf
 
 You cannot reliably delete IPFS files, so as long as you're modifying your user interface, it is probably best to either leave it centralized, or use [interplanetary name system (IPNS)](https://docs.ipfs.tech/concepts/ipns/#mutability-in-ipfs), a system that provides mutability on top of IPFS. Of course, anything that is mutable can be censored, in the case of IPNS by pressuing the person with the private key to which it corresponds.
 
+Additionally, some packages have a problem with IPFS, so if your web site is very complicated that may not be a good solution. And of course, anything that relies on server integration cannot be decentralized just by having the client side on IPFS.
+
 ## Conclusion {#conclusion}
 
 Just as Ethereum lets you decentralize the database and business logic aspects of your dapp, IPFS lets you decentralize the user interface. This lets you shut off one more attack vector against your dapp.
