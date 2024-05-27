@@ -16,6 +16,8 @@ import {
   useEventListener,
 } from "@chakra-ui/react"
 
+import { LocaleDisplayInfo } from "@/lib/types"
+
 import { Button } from "@/components/Buttons"
 import { BaseLink } from "@/components/Link"
 
@@ -61,22 +63,38 @@ const LanguagePicker = ({
     inputRef.current?.focus()
   })
 
-  const MobileCloseBar = () => {
-    return (
-      <Flex
-        justifyContent="end"
-        hideFrom="md"
-        position="sticky"
-        zIndex="sticky"
-        top="0"
-        bg="background.base"
+  // onClick handlers
+  const handleMobileCloseBarClick = () => onClose()
+  const handleMenuItemClose = (displayInfo: LocaleDisplayInfo) =>
+    onClose({
+      eventAction: "Locale chosen",
+      eventName: displayInfo.localeOption,
+    })
+  const handleBaseLinkClose = () =>
+    onClose({
+      eventAction: "Translation program link (menu footer)",
+      eventName: "/contributing/translation-program",
+    })
+
+  const MobileCloseBar = () => (
+    <Flex
+      justifyContent="end"
+      hideFrom="md"
+      position="sticky"
+      zIndex="sticky"
+      top="0"
+      bg="background.base"
+    >
+      <Button
+        p="4"
+        variant="ghost"
+        alignSelf="end"
+        onClick={handleMobileCloseBarClick}
       >
-        <Button p="4" variant="ghost" alignSelf="end" onClick={() => onClose()}>
-          {t("common:close")}
-        </Button>
-      </Flex>
-    )
-  }
+        {t("common:close")}
+      </Button>
+    </Flex>
+  )
 
   return (
     <Menu isLazy placement={placement} autoSelect={false} {...disclosure}>
@@ -178,12 +196,7 @@ const LanguagePicker = ({
                   e.preventDefault()
                   inputRef.current?.focus()
                 }}
-                onClick={() =>
-                  onClose({
-                    eventAction: "Locale chosen",
-                    eventName: displayInfo.localeOption,
-                  })
-                }
+                onClick={() => handleMenuItemClose(displayInfo)}
               />
             ))}
 
@@ -216,12 +229,7 @@ const LanguagePicker = ({
             <BaseLink
               ref={footerRef}
               href="/contributing/translation-program"
-              onClick={() =>
-                onClose({
-                  eventAction: "Translation program link (menu footer)",
-                  eventName: "/contributing/translation-program",
-                })
-              }
+              onClick={handleBaseLinkClose}
             >
               {t("common:learn-more")}
             </BaseLink>
