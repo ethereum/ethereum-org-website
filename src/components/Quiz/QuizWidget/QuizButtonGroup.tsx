@@ -166,7 +166,12 @@ export const QuizButtonGroup = () => {
               <Translation id="learn-quizzes:try-again" />
             </Button>
           )}
-          <Button onClick={handleContinue}>
+          <Button
+            onClick={handleContinue}
+            data-testid={
+              finishedQuiz ? "see-results-button" : "next-question-button"
+            }
+          >
             <Translation
               id={
                 finishedQuiz
@@ -183,6 +188,7 @@ export const QuizButtonGroup = () => {
       <Button
         onClick={handleSubmitAnswer}
         isDisabled={!currentQuestionAnswerChoice}
+        data-testid="check-answer-button"
       >
         <Translation id="learn-quizzes:submit-answer" />
       </Button>
