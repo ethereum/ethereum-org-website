@@ -21,12 +21,11 @@ import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
-import CrowdinContributors from "@/components/CrowdinContributors"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
-import GitHubContributors from "@/components/GitHubContributors"
+import FileContributors from "@/components/FileContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
@@ -47,9 +46,6 @@ import Translation from "@/components/Translation"
 import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"
-
-// Utils
-import { DEFAULT_LOCALE } from "@/lib/constants"
 
 const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
   <Flex
@@ -202,9 +198,8 @@ type DocsLayoutProps = Pick<
   | "slug"
   | "tocItems"
   | "lastUpdatedDate"
-  | "crowdinContributors"
+  | "contributors"
   | "contentNotTranslated"
-  | "gitContributors"
 > &
   Required<Pick<MdPageContent, "lastUpdatedDate">> &
   ChildOnlyProp & {
@@ -217,19 +212,12 @@ export const DocsLayout = ({
   slug,
   tocItems,
   lastUpdatedDate,
-  crowdinContributors,
+  contributors,
   contentNotTranslated,
-  gitContributors,
 }: DocsLayoutProps) => {
   const isPageIncomplete = !!frontmatter.incomplete
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = getEditPath(relativePath)
-
-  const gitHubLastEdit = gitContributors[0]?.date
-  const intlLastEdit = gitHubLastEdit || lastUpdatedDate
-
-  const useGitHubContributors =
-    frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
   return (
     <Page>
@@ -243,18 +231,10 @@ export const DocsLayout = ({
         <SideNav path={relativePath} />
         <Content>
           <H1 id="top">{frontmatter.title}</H1>
-          {useGitHubContributors ? (
-            <GitHubContributors
-              lastUpdatedDate={lastUpdatedDate}
-              contributors={gitContributors}
-            />
-          ) : (
-            <CrowdinContributors
-              relativePath={relativePath}
-              lastUpdatedDate={intlLastEdit}
-              contributors={crowdinContributors}
-            />
-          )}
+          <FileContributors
+            contributors={contributors}
+            lastEdit={lastUpdatedDate}
+          />
           <TableOfContents
             slug={slug}
             editPath={absoluteEditPath}

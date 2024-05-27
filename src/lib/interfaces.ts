@@ -107,8 +107,7 @@ export interface MdPageContent {
   tocItems: ToCItem[]
   lastUpdatedDate?: string
   contentNotTranslated: boolean
-  crowdinContributors: CrowdinContributor[]
-  gitContributors: FileContributor[]
+  contributors: FileContributor[]
 }
 
 // Local environment framework
