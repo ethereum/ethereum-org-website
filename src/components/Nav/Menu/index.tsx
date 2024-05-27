@@ -4,6 +4,8 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 
 import { Button } from "@/components/Buttons"
 
+import { isMobile } from "@/lib/utils/isMobile"
+
 import { MAIN_NAV_ID, NAV_PY, SECTION_LABELS } from "@/lib/constants"
 
 import type { NavSections } from "../types"
@@ -25,6 +27,8 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
     menuColors,
     onClose,
   } = useNavMenu(sections)
+
+  const isDesktop = !isMobile()
 
   return (
     <Box {...props}>
@@ -78,32 +82,37 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                       </Text>
                     </Button>
                   </NavigationMenu.Trigger>
-                  <NavigationMenu.Content asChild>
-                    {/**
-                     * This is the CONTAINER for all three menu levels
-                     * This renders inside the NavigationMenu.Viewport component
-                     */}
-                    <Box
-                      as={motion.div}
-                      variants={containerVariants}
-                      initial={false}
-                      animate={isOpen ? "open" : "closed"}
-                      position="absolute"
-                      top="19"
-                      insetInline="0"
-                      shadow="md"
-                      border="1px"
-                      borderColor={menuColors.stroke}
-                      bg={menuColors.lvl[1].background}
-                    >
-                      <SubMenu
-                        lvl={1}
-                        items={items}
-                        activeSection={activeSection}
-                        onClose={onClose}
-                      />
-                    </Box>
-                  </NavigationMenu.Content>
+
+                  {/* avoid rendering desktop menu on mobile */}
+                  {/* Desktop Menu content */}
+                  {isDesktop && (
+                    <NavigationMenu.Content asChild>
+                      {/**
+                       * This is the CONTAINER for all three menu levels
+                       * This renders inside the NavigationMenu.Viewport component
+                       */}
+                      <Box
+                        as={motion.div}
+                        variants={containerVariants}
+                        initial={false}
+                        animate={isOpen ? "open" : "closed"}
+                        position="absolute"
+                        top="19"
+                        insetInline="0"
+                        shadow="md"
+                        border="1px"
+                        borderColor={menuColors.stroke}
+                        bg={menuColors.lvl[1].background}
+                      >
+                        <SubMenu
+                          lvl={1}
+                          items={items}
+                          activeSection={activeSection}
+                          onClose={onClose}
+                        />
+                      </Box>
+                    </NavigationMenu.Content>
+                  )}
                 </NavigationMenu.Item>
               )
             })}
