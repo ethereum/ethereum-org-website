@@ -19,6 +19,8 @@ import {
 import { Button } from "@/components/Buttons"
 import { BaseLink } from "@/components/Link"
 
+import { isMobile } from "@/lib/utils/isMobile"
+
 import MenuItem from "./MenuItem"
 import NoResultsCallout from "./NoResultsCallout"
 import { useLanguagePicker } from "./useLanguagePicker"
@@ -59,6 +61,23 @@ const LanguagePicker = ({
     inputRef.current?.focus()
   })
 
+  const MobileCloseBar = () => {
+    return (
+      <Flex
+        justifyContent="end"
+        hideFrom="md"
+        position="sticky"
+        zIndex="sticky"
+        top="0"
+        bg="background.base"
+      >
+        <Button p="4" variant="ghost" alignSelf="end" onClick={() => onClose()}>
+          {t("common:close")}
+        </Button>
+      </Flex>
+    )
+  }
+
   return (
     <Menu isLazy placement={placement} autoSelect={false} {...disclosure}>
       {children}
@@ -76,23 +95,8 @@ const LanguagePicker = ({
         {...props}
       >
         {/* Mobile Close bar */}
-        <Flex
-          justifyContent="end"
-          hideFrom="md"
-          position="sticky"
-          zIndex="sticky"
-          top="0"
-          bg="background.base"
-        >
-          <Button
-            p="4"
-            variant="ghost"
-            alignSelf="end"
-            onClick={() => onClose()}
-          >
-            {t("common:close")}
-          </Button>
-        </Flex>
+        {/* avoid rendering mobile only feature on desktop */}
+        {isMobile() && <MobileCloseBar />}
 
         {/* Main Language selection menu */}
         <Box
@@ -146,10 +150,7 @@ const LanguagePicker = ({
                 }}
                 onFocus={handleInputFocus}
               />
-              <InputRightElement
-                hideBelow="md"
-                cursor="text"
-              >
+              <InputRightElement hideBelow="md" cursor="text">
                 <Kbd
                   fontSize="sm"
                   lineHeight="none"
