@@ -51,8 +51,6 @@ import { getEditPath } from "@/lib/utils/editPath"
 // Utils
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
-
 const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
   <Flex
     direction="column"
@@ -206,6 +204,7 @@ type DocsLayoutProps = Pick<
   | "lastUpdatedDate"
   | "crowdinContributors"
   | "contentNotTranslated"
+  | "gitContributors"
 > &
   Required<Pick<MdPageContent, "lastUpdatedDate">> &
   ChildOnlyProp & {
@@ -220,14 +219,15 @@ export const DocsLayout = ({
   lastUpdatedDate,
   crowdinContributors,
   contentNotTranslated,
+  gitContributors,
 }: DocsLayoutProps) => {
   const isPageIncomplete = !!frontmatter.incomplete
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = getEditPath(relativePath)
 
-  const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
-  const intlLastEdit =
-    "data" in gitHubLastEdit ? gitHubLastEdit.data : lastUpdatedDate
+  const gitHubLastEdit = gitContributors[0]?.date
+  const intlLastEdit = gitHubLastEdit || lastUpdatedDate
+
   const useGitHubContributors =
     frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
@@ -245,8 +245,8 @@ export const DocsLayout = ({
           <H1 id="top">{frontmatter.title}</H1>
           {useGitHubContributors ? (
             <GitHubContributors
-              relativePath={relativePath}
               lastUpdatedDate={lastUpdatedDate}
+              contributors={gitContributors}
             />
           ) : (
             <CrowdinContributors

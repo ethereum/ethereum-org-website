@@ -52,7 +52,8 @@ export const RootLayout = ({
 
       <Nav />
 
-      <TranslationBanner
+      {/* TODO: FIX TRANSLATION BANNER LOGIC FOR https://github.com/ethereum/ethereum-org-website/issues/11305 */}
+      {/* <TranslationBanner
         shouldShow={shouldShowTranslationBanner}
         isPageContentEnglish={contentNotTranslated}
         originalPagePath={originalPagePath}
@@ -61,7 +62,7 @@ export const RootLayout = ({
       <TranslationBannerLegal
         shouldShow={shouldShowLegalTranslationBanner}
         originalPagePath={originalPagePath}
-      />
+      /> */}
 
       {children}
 

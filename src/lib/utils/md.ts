@@ -335,7 +335,10 @@ export const getContentBySlug = (slug: string) => {
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data, content } = matter(fileContents)
   const frontmatter = data as Frontmatter
-  const items: Omit<MdPageContent, "tocItems" | "crowdinContributors"> = {
+  const items: Omit<
+    MdPageContent,
+    "tocItems" | "crowdinContributors" | "gitContributors"
+  > = {
     slug,
     content,
     frontmatter,

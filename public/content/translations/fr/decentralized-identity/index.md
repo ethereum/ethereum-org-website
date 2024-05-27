@@ -37,7 +37,7 @@ Ces exemples traditionnels d’identifiants sont publiés, détenus et contrôl�
 
 Une attestation est une déclaration faite par une entité sur une autre entité. Si vous vivez aux États-Unis, le permis de conduire qui vous a été délivré par le Department of Motor Vehicles (ministère des véhicules à moteur) (une entité) atteste que vous (une autre entité) êtes légalement autorisé à conduire une voiture.
 
-Les attestations sont différentes des identifiants. Une attestation _contient_ des identifiants pour référencer une identité particulière et émet une revendication à propos d'un attribut lié à cette identité. Ainsi, votre permis de conduire a des identifiants (nom, date de naissance, adresse) mais est aussi l'attestation de votre droit légal de conduire.
+Les attestations sont différentes des identifiants. Une attestation _contient_ des identifiants pour référencer une identité particulière et émet une revendication à propos d'un attribut lié à cette identité. Ainsi, votre permis de conduire à des identifiants (nom, date de naissance, adresse) mais est aussi l'attestation de votre droit légal de conduire.
 
 ### Que sont les identifiants décentralisés ? {#what-are-decentralized-identifiers}
 
@@ -172,7 +172,7 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - [Cas d'utilisation de la Blockchain : Blockchain en identité numérique](https://consensys.net/blockchain-use-cases/digital-identity/) — _ConsensusSys_
 - [Qu'est-ce qu'Ethereum ERC725 ? Gestion des identités autonomes sur la Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
 - [Comment la Blockchain pourrait-elle résoudre le problème de l'identité numérique](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
-- [Qu'est-ce que l'identité décentralisée et pourquoi devriez-vous vous en préocupper ?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+- [Qu'est-ce que l'identité décentralisée et pourquoi devriez-vous vous en préoccuper ?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
 - [Introduction à l'Identité Décentralisée](https://walt.id/white-paper/digital-identity)— _Dominik Beron_
 
 ### Vidéos {#videos}
