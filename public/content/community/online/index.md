@@ -31,6 +31,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - chat for solidity development (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- question and answer forum</i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> <i>- decentralized question and answer forum</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://world3.ai/spaces/ethroom">WORLD3 Ethereum Social Room</Link> - Explore the Ethereum Exhibition Hall in WORLD3, an autonomous world offering browser-based, immersive 3D multiplayer experiences.</SocialListItem>
 
 ## YouTube and Twitter {#youtube-and-twitter}
 
