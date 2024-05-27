@@ -60,6 +60,10 @@ At this point you have a link to a centralized gateway that serves your IPFS con
 
 Once you have that installed (and the desktop IPFS working), you can go to [/ipfs/<CID>](https://any.site/ipfs/bafybeifqka2odrne5b6l5guthqvbxu4pujko2i6rx2zslvr3qxs6u5o7im) on any site and you'll get that content, served in a decentralized manner.
 
+## Drawbacks {#drawbacks}
+
+You cannot reliably delete IPFS files, so as long as you're modifying your user interface, it is probably best to either leave it centralized, or use [interplanetary name system (IPNS)](https://docs.ipfs.tech/concepts/ipns/#mutability-in-ipfs), a system that provides mutability on top of IPFS. Of course, anything that is mutable can be censored, in the case of IPNS by pressuing the person with the private key to which it corresponds.
+
 ## Conclusion {#conclusion}
 
-You cannot reliably delete IPFS files, so as long as you're modifying your user interface, it is probably best to leave it centralized. However, once you've stabilized it, it seems like it would be an excellent idea to release it on IPFS so that portion of your dapp can also be decentralized and censorship resistant.
+Just as Ethereum lets you decentralize the database and business logic aspects of your dapp, IPFS lets you decentralize the user interface. This lets you shut off one more attack vector against your dapp.
