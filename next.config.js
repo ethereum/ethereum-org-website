@@ -67,6 +67,8 @@ module.exports = (phase, { defaultConfig }) => {
             "node_modules/@swc/core-linux-x64-musl",
             "node_modules/@esbuild/linux-x64",
             "node_modules/sharp/vendor",
+            "public/**/*.png",
+            "src/data",
           ],
         },
       },
