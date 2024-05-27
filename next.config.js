@@ -38,10 +38,55 @@ module.exports = (phase, { defaultConfig }) => {
     images: {
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
     },
+    async redirects() {
+      /**
+       * Redirect /default to /en.
+       *
+       * This allows us to always have a default locale prefix for all URLs.
+       *
+       * @see https://github.com/vercel/next.js/discussions/18419#discussioncomment-327128
+       */
+      return [
+        {
+          source: "/default",
+          destination: "/en",
+          locale: false,
+          permanent: false,
+        },
+        {
+          source: "/default/:slug*",
+          destination: "/en/:slug*",
+          locale: false,
+          permanent: false,
+        },
+      ]
+    },
   }
 
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
-    nextConfig = { ...nextConfig, experimental }
+    nextConfig = {
+      ...nextConfig,
+      experimental: {
+        ...experimental,
+        outputFileTracingExcludes: {
+          "*": [
+            /**
+             * Exclude these paths from the trace output to avoid bloating the
+             * Netlify functions bundle.
+             *
+             * @see https://github.com/orgs/vercel/discussions/103#discussioncomment-5427097
+             * @see https://nextjs.org/docs/app/api-reference/next-config-js/output#automatically-copying-traced-files
+             */
+            "node_modules/@swc/core-linux-x64-gnu",
+            "node_modules/@swc/core-linux-x64-musl",
+            "node_modules/@esbuild/linux-x64",
+            "public/**/*.png",
+            "public/**/*.gif",
+            "src/data",
+          ],
+        },
+      },
+    }
   }
 
   return nextConfig
