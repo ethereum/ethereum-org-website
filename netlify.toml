@@ -40,6 +40,10 @@
     path = "en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
 
 [functions]
+  included_files = [
+    "./src/intl/**/*",
+    "!./public/**/*",
+  ]
 
   [functions.___netlify-odb-handler]
     external_node_modules = ["sharp"]
