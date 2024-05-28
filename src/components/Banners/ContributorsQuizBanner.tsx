@@ -5,7 +5,6 @@ import CalloutBanner from "../CalloutBanner"
 
 import PeopleLearning from "@/public/people-learning.png"
 
-// TODO: refactor to use CalloutBanner component
 function ContributorsQuizBanner(props: FlexProps) {
   return (
     <CalloutBanner
