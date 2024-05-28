@@ -12078,6 +12078,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "mingoing",
+      "name": "Mingo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/344175?v=4",
+      "profile": "https://github.com/mingoing",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
