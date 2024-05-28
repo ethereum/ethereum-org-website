@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/react"
+import isChromatic from "chromatic/isChromatic"
 
 import theme from "../src/@chakra-ui/theme"
 
@@ -6,6 +7,9 @@ import { ChakraDecorator } from "./ChakraDecorator"
 import i18n, { baseLocales } from "./i18next"
 
 import "../src/styles/global.css"
+import { MotionGlobalConfig } from "framer-motion"
+
+MotionGlobalConfig.skipAnimations = isChromatic()
 
 const chakraBreakpointArray = Object.entries(theme.breakpoints) as [
   string,
@@ -42,6 +46,9 @@ const preview: Preview = {
     },
     backgrounds: {
       disable: true,
+    },
+    chromatic: {
+      prefersReducedMotion: "reduce",
     },
     options: {
       storySort: {

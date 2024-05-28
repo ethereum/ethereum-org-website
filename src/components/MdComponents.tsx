@@ -41,7 +41,6 @@ import InfoBanner from "./InfoBanner"
 import IssuesList from "./IssuesList"
 import LocaleDateTime from "./LocaleDateTime"
 import MainArticle from "./MainArticle"
-import VideoIframe from "./VideoIframe"
 
 /**
  * Base HTML elements
@@ -145,7 +144,6 @@ export const htmlElements = {
   pre: Pre,
   time: LocaleDateTime,
   ul: UnorderedList,
-  iframe: VideoIframe,
   ...mdxTableComponents,
 }
 

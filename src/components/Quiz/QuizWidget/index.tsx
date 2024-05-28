@@ -114,7 +114,7 @@ const QuizWidget = ({
   }
 
   return (
-    <VStack spacing="12" width="full" maxW="600px">
+    <VStack data-testid="quiz-widget" spacing="12" width="full" maxW="600px">
       <Stack
         w="full"
         gap="8"
