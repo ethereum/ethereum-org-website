@@ -1,10 +1,8 @@
 import * as React from "react"
-import { Box, Stack } from "@chakra-ui/react"
+import { Stack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import SideNav from "./"
-
-type SideNavType = typeof SideNav
 
 const docsLinks = [
   {
@@ -62,19 +60,18 @@ const docsLinks = [
 ]
 
 const meta = {
-  title: "SideNav",
+  title: "Molecules / Navigation / SideNav",
   parameters: {
     layout: "fullscreen",
   },
   decorators: [
     (Story) => (
       <Stack minH="100vh" position="relative">
-        <Box flex="1" />
         <Story />
       </Stack>
     ),
   ],
-} satisfies Meta<SideNavType>
+} satisfies Meta<typeof SideNav>
 
 export default meta
 

@@ -67,12 +67,13 @@ const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
         <AccordionItem>
           <h2>
             <AccordionButton
-              _hover={{
-                bg: "primary.lowContrast",
-                color: "primary.highContrast",
-              }}
               _expanded={{
                 bg: "none",
+                color: "primary.highContrast",
+                svg: { transform: "rotate(180deg)" },
+              }}
+              _hover={{
+                bg: "primary.lowContrast",
                 color: "primary.highContrast",
               }}
             >
@@ -87,7 +88,7 @@ const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <AccordionPanel p={0} ps={8} pb={isTopLevel ? 4 : 0} fontSize="md">
+          <AccordionPanel fontSize="md" p={0} ps={8}>
             {item.items.map((childItem, idx) => (
               <NavLink item={childItem} path={path} key={idx} />
             ))}
