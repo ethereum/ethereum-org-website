@@ -19,6 +19,7 @@ const ns = [
   "page-learn",
   "page-upgrades",
   "page-developers-index",
+  "page-developers-docs",
 ]
 const supportedLngs = Object.keys(baseLocales)
 
