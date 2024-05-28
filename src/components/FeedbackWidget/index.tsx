@@ -57,7 +57,7 @@ const FeedbackWidget = () => {
             padding={0}
           >
             <Box
-              w="min(350px, calc(100% - 1rem))"
+              w="min(320px, calc(100% - 1rem))"
               mx="2"
               bg="background.base"
               borderRadius="base"
