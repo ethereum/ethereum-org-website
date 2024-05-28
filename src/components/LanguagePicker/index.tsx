@@ -18,12 +18,12 @@ import {
 
 import { LocaleDisplayInfo } from "@/lib/types"
 
-import { Button } from "@/components/Buttons"
 import { BaseLink } from "@/components/Link"
 
 import { isMobile } from "@/lib/utils/isMobile"
 
 import MenuItem from "./MenuItem"
+import { MobileCloseBar } from "./MobileCloseBar"
 import NoResultsCallout from "./NoResultsCallout"
 import { useLanguagePicker } from "./useLanguagePicker"
 
@@ -76,26 +76,6 @@ const LanguagePicker = ({
       eventName: "/contributing/translation-program",
     })
 
-  const MobileCloseBar = () => (
-    <Flex
-      justifyContent="end"
-      hideFrom="md"
-      position="sticky"
-      zIndex="sticky"
-      top="0"
-      bg="background.base"
-    >
-      <Button
-        p="4"
-        variant="ghost"
-        alignSelf="end"
-        onClick={handleMobileCloseBarClick}
-      >
-        {t("common:close")}
-      </Button>
-    </Flex>
-  )
-
   return (
     <Menu isLazy placement={placement} autoSelect={false} {...disclosure}>
       {children}
@@ -114,7 +94,9 @@ const LanguagePicker = ({
       >
         {/* Mobile Close bar */}
         {/* avoid rendering mobile only feature on desktop */}
-        {isMobile() && <MobileCloseBar />}
+        {isMobile() && (
+          <MobileCloseBar handleClick={handleMobileCloseBarClick} />
+        )}
 
         {/* Main Language selection menu */}
         <Box
