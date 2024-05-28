@@ -1,6 +1,7 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
+import { IoChevronUpSharp } from "react-icons/io5"
 import {
   Box,
   Flex,
@@ -17,10 +18,10 @@ import type { FooterLink, FooterLinkSection, Lang } from "@/lib/types"
 import { BaseLink } from "@/components/Link"
 import Translation from "@/components/Translation"
 
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import { Button } from "./Buttons"
-import { IoChevronUpSharp } from "react-icons/io5"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
+import { getLocaleTimestamp } from "@/lib/utils/time"
+
+import { Button } from "./Buttons"
 
 const socialLinks = [
   {
@@ -403,7 +404,6 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
               hideArrow
               color="body.base"
               aria-label={ariaLabel}
-              // ms="4"
               _focus={{ color: "primary.base" }}
             >
               <Icon
