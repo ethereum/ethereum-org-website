@@ -147,7 +147,7 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
-## Known issues and flaws {#issues-and-flaws}
+## Known issues {#erc20-issues}
 
 ### ERC-20 token reception issue {#reception-issue}
 
