@@ -38,7 +38,7 @@ Los pasos específicos involucrados dependerán del marco de desarrollo en cuest
 **Tenderly: _plataforma de desarrollo web3 que proporciona bloques de desarrollo de depuración, observabilidad y infraestructura para desarrollar, probar, monitorear y operar contratos inteligentes_.**
 
 - [tenderly.co](https://tenderly.co/)
-- [Documentación](https://docs.tenderly.co/)
+- [Documentos](https://docs.tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 

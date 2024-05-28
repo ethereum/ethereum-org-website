@@ -50,8 +50,6 @@ These are few current tasks that you could help us solve and take responsibility
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">See all tasks</ButtonLink>
 
-<ContributorsQuizBanner mt={16} mb={8} />
-
 ## How to work on ethereum.org {#how-to-update-content}
 
 If you wish to contribute in the [Translation Program](/contributing/translation-program/), we ask you to create an account on [Crowdin](https://crowdin.com/project/ethereum-org). For everything else – adding or editing content or visuals to the website, fixing bugs, working on open tasks – you will need a [GitHub](https://github.com/) account.
@@ -69,6 +67,8 @@ Before contributing, make sure you're familiar with:
 - our [design principles](/contributing/design-principles/)
 - our [style guide](/contributing/style-guide/)
 - our [code of conduct](/community/code-of-conduct)
+
+<ContributorsQuizBanner mt={16} mb={8} />
 
 ## How decisions about the site are made {#how-decisions-about-the-site-are-made}
 

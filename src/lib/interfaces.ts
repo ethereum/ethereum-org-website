@@ -1,7 +1,8 @@
-import { StaticImageData } from "next/image"
+import type { StaticImageData } from "next/image"
 
 import type {
   CrowdinContributor,
+  FileContributor,
   Frontmatter,
   Lang,
   Layout,
@@ -106,7 +107,7 @@ export interface MdPageContent {
   tocItems: ToCItem[]
   lastUpdatedDate?: string
   contentNotTranslated: boolean
-  crowdinContributors: CrowdinContributor[]
+  contributors: FileContributor[]
 }
 
 // Local environment framework

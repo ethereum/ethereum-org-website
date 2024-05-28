@@ -19,7 +19,7 @@ Az Ethereum két számlatípust kínál:
 
 Mindkét számlatípus képes:
 
-- ETH-et és más tokeneket fogadni, tartani és küldeni
+- ETH és más tokenek fogadása, tartása és küldése
 - Interakcióba lépni a telepített okosszerződésekkel
 
 ### Legfontosabb különbségek {#key-differences}
@@ -51,15 +51,15 @@ Az Ethereum számláknak négy mezőjük van:
 
 ## Külső tulajdonú számlák és kulcspárok {#externally-owned-accounts-and-key-pairs}
 
-Egy számla egy kriptográfiai kulcspárból áll: egy publikusból és egy privátból. Segítenek bizonyítani, hogy a tranzakciót valóban a küldő írta alá és megelőzik a hamisítást. A privát kulcsod az, amivel aláírod a tranzakciókat, így felügyeletet biztosít számodra a számládhoz tartozó pénz felett. Valójában sosem birtokolsz kriptovalutát, privát kulcsokat birtokolsz - a tőke mindvégig az Ethereum főkönyvében van.
+Egy számla egy kriptográfiai kulcspárból áll: egy publikusból és egy privátból. Segítenek bizonyítani, hogy a tranzakciót valóban a küldő írta alá és megelőzik a hamisítást. A privát kulcs az, amellyel aláírja a tranzakciókat, így felügyeletet biztosít a számlához tartozó pénz felett. Valójában sosem birtokolsz kriptovalutát, privát kulcsokat birtokolsz - a tőke mindvégig az Ethereum főkönyvében van.
 
 Ez biztosítja azt, hogy rosszindulatú szereplők ne indíthassanak hamis tranzakciókat, mivel mindig azonosítani tudod a tranzakció küldőjének kilétét.
 
-Ha Alice ethert szeretne küldeni a számlájáról Bob számlájára, akkor Alice-nek egy tranzakció kérelmet kell készítenie és elküldeni a hálózatra hitelesítésre. Az Ethereum publikus kulcs kriptográfiája biztosítja, hogy Alice be tudja bizonyítani, hogy ő volt aki elindította a tranzakciós kérelmet. Kriptográfiai mechanizmusok nélkül egy kártékony ellenség, Eve, egyszerűen elküldhetne egy kérelmet, mely úgy néz ki, mint "küldj 5 ETH-et Alice számlájáról Eve számlájára" és senki sem tudná bebizonyítani, hogy nem Alice-től származik.
+Ha Alice ethert szeretne küldeni a számlájáról Bob számlájára, akkor Alice-nek egy tranzakció kérelmet kell készítenie és elküldeni a hálózatra hitelesítésre. Az Ethereum publikus kulcs kriptográfiája biztosítja, hogy Alice be tudja bizonyítani, hogy ő volt aki elindította a tranzakciós kérelmet. Kriptográfiai mechanizmusok nélkül egy kártékony ellenség, Eve, egyszerűen elküldhetne egy kérelmet, mely úgy néz ki, mint „küldj 5 ETH-t Alice számlájáról Eve számlájára” és senki sem tudná bebizonyítani, hogy ez nem Alice-től származik.
 
 ## Számla létrehozása {#account-creation}
 
-Amikor szeretnél létrehozni egy számlát, akkor a legtöbb könyvtár generál neked egy random privát kulcsot.
+Amikor szeretne létrehozni egy számlát, akkor a legtöbb könyvtár generál egy véletlenszerű privát kulcsot.
 
 Egy privát kulcs 64 hexadecimális karakterből áll, és jelszóval lehet titkosítani.
 
@@ -110,7 +110,7 @@ Az Ethereumon létezik egy másik típusú kulcs is, amelyet a proof-of-work-ala
 
 A számla nem egyenlő a tárcával. A számla az a kulcspár, amely a felhasználó Ethereum számlájához tartozik. A tárca egy olyan interfész vagy alkalmazás, amely lehetővé teszi az Ethereum számlával való interakciót.
 
-## Egy vizuális bemutató {#a-visual-demo}
+## Vizuális bemutató {#a-visual-demo}
 
 Nézze meg, ahogy Austin elmagyarázza a hash funkciót és a kulcspárokat.
 
@@ -122,7 +122,7 @@ Nézze meg, ahogy Austin elmagyarázza a hash funkciót és a kulcspárokat.
 
 - [Az Ethereum-számlák megértése](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
 
-_Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_
+_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
 
 ## Kapcsolódó témák {#related-topics}
 

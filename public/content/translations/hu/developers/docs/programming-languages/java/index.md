@@ -5,7 +5,7 @@ lang: hu
 incomplete: true
 ---
 
-<div class="featured">Tanulj meg Ethereumon fejleszteni Java alapú projektek és eszközök használatával</div>
+<FeaturedText>Tanuljon meg Ethereumon fejleszteni Java alapú projektek és eszközök használatával</FeaturedText>
 
 Használjon Ethereumot decentralizált alkalmazások (dappok) fejlesztésére, melyek kihasználják a kriptovaluta és a blokklánc technológia nyújtotta előnyöket. Ezek a dappok megbízhatóak, ami azt jelenti, hogyha egyszer telepítették az Ethereumba, akkor mindig úgy fognak futni, ahogy programozták őket. Digitális vagyontárgyakat irányíthatnak, lehetőséget teremtve ezzel újfajta pénzügyi alkalmazások létrejöveteléhez. Decentralizáltak lehetnek, mely azt jelenti, hogy semmilyen entitás vagy személy nem irányítja őket és közel lehetetlen őket cenzúrázni.
 
@@ -50,7 +50,7 @@ Tanulja meg a [Web3J](https://github.com/web3j/web3j) és a Hyperledger Besu, a 
 - [Eventeum (Event Listener)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (IPFS Fejlesztői Eszközök)](https://github.com/ConsenSys/mahuta)
 
-Több anyagra lenne szüksége? Tekintsd meg az [ethereum.org/developers](/developers/) oldalt
+Több anyagra lenne szüksége? Tekintse meg az [ethereum.org/developers](/developers/) oldalt.
 
 ## Java közösségi hozzájárulók {#java-community-contributors}
 

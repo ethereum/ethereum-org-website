@@ -490,5 +490,11 @@
     "emoji": ":czech_republic:",
     "location": "Prague",
     "link": "https://www.meetup.com/web3-on-chain-dev-meetup-group/"
+  },
+  {
+    "title": "NapulETH Meetup",
+    "emoji": ":it:",
+    "location": "Naples",
+    "link": "https://www.eventbrite.it/e/863744451907/"
   }    
 ]

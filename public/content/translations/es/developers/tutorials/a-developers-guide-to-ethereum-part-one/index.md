@@ -55,9 +55,7 @@ La única forma en que la cadena de bloques puede verificar que el dinero se ha 
 
 Este nuevo conjunto de tecnologías descentralizadas ha generado nuevas herramientas para desarrolladores. Estas herramientas existen en muchos lenguajes de programación, pero las veremos a través de la lente de Python. Repito: aunque no use Python, no debería ser un problema seguirlo.
 
-Los desarrolladores de Python que quieran interactuar con Ethereum seguramente quieran usar [Web3.py](https://web3py.readthedocs.io/). Web3.py es una biblioteca que simplifica la forma en la que puede conectarse a un nodo de Ethereum para luego enviar y recibir datos de él.
-
-<FeaturedText>Nota: «nodo de Ethereum» y «cliente de Ethereum» se usan de forma indistinta. En cualquier caso, se refiere al software que ejecuta un participante de la red Ethereum. Este software puede leer datos de bloques, recibir actualizaciones cuando se agregan nuevos bloques a la cadena, transmitir nuevas transacciones y más. Técnicamente, el cliente es el software y el nodo es la computadora que ejecuta el software.</FeaturedText>
+Los desarrolladores de Python que quieran interactuar con Ethereum seguramente quieran usar [Web3.py](https://web3py.readthedocs.io/). Web3.py es una biblioteca que simplifica la forma en la que puede conectarse a un nodo de Ethereum para luego enviar y recibir datos de él.<FeaturedText>Nota: «nodo de Ethereum» y «cliente de Ethereum» se usan de forma indistinta. En cualquier caso, se refiere al software que ejecuta un participante de la red Ethereum. Este software puede leer datos de bloques, recibir actualizaciones cuando se agregan nuevos bloques a la cadena, transmitir nuevas transacciones y más. Técnicamente, el cliente es el software y el nodo es la computadora que ejecuta el software.</FeaturedText>
 
 Los [clientes de Ethereum](/developers/docs/nodes-and-clients/) pueden configurarse para que sean accesibles por [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP o Websockets, por lo que Web3.py necesitará reflejar esta configuración. Web3.py se refiere a estas opciones de conexión como **proveedores**. Tendrá que elegir uno de los tres proveedores para vincular la instancia de Web3.py a su nodo.
 
@@ -77,9 +75,7 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 ## Instalación {#installation}
 
-En este tutorial, trabajaremos solo con el intérprete de Python. No crearemos ningún directorio, archivo, clases o funciones.
-
-<FeaturedText>Nota: en los ejemplos de abajo, los comandos que empiezan con `$` están destinados a ser ejecutados en la terminal. (No escriba el símbolo `$`, ya que sólo significa el inicio de la línea).</FeaturedText>
+En este tutorial, trabajaremos solo con el intérprete de Python. No crearemos ningún directorio, archivo, clases o funciones.<FeaturedText>Nota: en los ejemplos de abajo, los comandos que empiezan con `$` están destinados a ser ejecutados en la terminal. (No escriba el símbolo `$`, ya que sólo significa el inicio de la línea)</FeaturedText>
 
 Primero, instale [IPython](https://ipython.org/) para tener un entorno fácil de usar para explorar. IPython ofrece el autocompletado mediante la tecla de tabulación —entre otras características—, haciendo mucho más fácil ver qué es posible con Web3.py.
 
@@ -130,13 +126,13 @@ Además de ser una puerta de enlace a Ethereum, el módulo [Web3](https://web3py
 En una aplicación que interactúe con Ethereum, normalmente necesitará convertir las denominaciones de las monedas. El modulo Web3 proporciona un par de métodos de ayuda solo para esto [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) y [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
 <FeaturedText>
-Nota: los ordenadores son especialmente poco precisos en el cálculo de decimales. Para solucionarlo, los desarrolladores suelen almacenar cantidades de dólares en centavos. Por ejemplo, un artículo con un precio de 5,99 $ puede almacenarse en la base de datos como 599.
+Nota: los ordenadores no son nada precisos en el manejo de números decimales. Para solucionarlo, los desarrolladores suelen almacenar valores de dólares en centavos. Por ejemplo, un artículo con un precio de 5,99 $ suele almacenarse en la base de datos como 599.
 
-Se usa un patrón similar cuando se manejan transacciones en <b>ether</b>. No obstante, en vez de dos puntos decimales, ¡ether tiene 18! La denominación más pequeña de ether se llama <b>wei</b>: ese es el valor especificado cuando se envían transacciones.
+Se usa un patrón similar cuando se escriben transacciones en <b>ether</b>. Sin embargo, en vez de dos puntos decimales, ¡ether tiene 18! La denominación más pequeña de ether se llama <b>wei</b>: ese es el valor especificado cuando se envían transacciones.
 
-1 ether = 1000000000000000000 wei
+1 ether = 1.000.000.000.000.000.000 wei
 
-1 wei = 0.000000000000000001 ether
+1 wei = 0,000000000000000001 ether
 
 </FeaturedText>
 
@@ -279,19 +275,18 @@ Aquí encontrará algunos detalles que le resultarán familiares: los campos `fr
 También podemos verificar fácilmente el éxito de esta transacción revisando los saldos o balances de las dos cuentas implicadas. Deben haber pasado tres ether de una cuenta a otra.
 
 ```python
-Entrada[12]: w3.eth.get_balance(w3.eth.accounts[0])
-Salida[12]: 999996999979000000000000
+In [12]: w3.eth.get_balance(w3.eth.accounts[0])
+Out[12]: 999996999979000000000000
 
-Entrada[13]: w3.eth.get_balance(w3.eth.accounts[1])
-Salida[13]: 10000030000000000000000
+In [13]: w3.eth.get_balance(w3.eth.accounts[1])
+Out[13]: 1000003000000000000000000
 ```
 
 ¡El último parece ser correcto! El saldo ha pasado de 1.000.000 a 1.000.003 ether. Pero, ¿qué pasó con la primera cuenta? Parece que perdió algo más de tres ether. Desafortunadamente, nada en esta vida es gratis; hacer uso de la red pública de Ethereum requiere compensar a las personas que cumplen con su rol de apoyo. Se dedujo una pequeña comisión de transacción de la cuenta que envió la transacción: esta comisión es la cantidad de gas quemado (21.000 unidades de gas para una transferencia de ETH) multiplicada por una tarifa base que varía según la actividad de la red más una propina que va al validador que incluye la transacción en un bloque.
 
 Más información sobre el [gas](/developers/docs/gas/#post-london)
 
-<FeaturedText>Nota: en la red pública, el precio de las comisiones por transacción se basa en la demanda de la red y en la rapidez con la que se desee procesar una transacción. Si quiere saber cómo se calculan las comisiones, lea mi artículo anterior, en donde describo <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">cómo se incluyen las transacciones en un bloque</a>.</FeaturedText>
-
+<FeaturedText>Nota: en la red pública, el coste de las comisiones por transacción es variable, este se basa en la demanda de la red y en la rapidez con la que se desee procesar una transacción. Si quiere saber cómo se calculan las comisiones, lea mi artículo anterior, en donde describo <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">cómo se incluyen las transacciones en un bloque</a>.</FeaturedText>
 
 ## Tómese un respiro {#and-breathe}
 

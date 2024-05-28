@@ -16,7 +16,7 @@ lang: ja
 - [Gitcoin](https://gitcoin.co/) - 大小規模の技術問題に取り組み、暗号通貨の報酬を獲得
 - [ETHGlobal](http://ethglobal.co/) - お近くのETHGlobalハッカソンへの参加
 - [自分の専門分野や好きなプログラミング言語に関連するプロジェクト](/developers/docs/programming-languages/)の確認
-- [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) - 動画の視聴および参加
+- [コアデベロッパーコール](https://www.youtube.com/@EthereumProtocol)の視聴または参加
 - [エコシステム・サポート・プログラムのウィッシュリスト](https://esp.ethereum.foundation/wishlist/) - イーサリアムのエコシステム・サポート・プログラムが助成金の申請を募集しているツール、ドキュメント、インフラストラクチャ分野
 - [Web3Bridge](https://www.web3bridge.com/) - アフリカ全土の何百人ものデベロッパーやコミュニティメンバーを特定し、トレーニングし、サポートする、意欲的なWeb3コミュニティの取り組み
 - [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)に加わりましょう。
@@ -120,9 +120,9 @@ ETHをステーキングすると、イーサリアムネットワークの保�
 
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _非技術分野で分散型自律組織(DAO)の概念をプロモーションし、価値の創造を支援_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _インターネットは共同所有されるべきという信念を共有するデベロッパーコミュニティ_
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _分散型自律組織(DAO)として機能しているフリーランスの Web3 開発共同体_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhaus のコミュニティガバナンス_
-- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _リーガル・エンジニアリング_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _分散型自律組織(DAO)として機能しているフリーランスのWeb3開発共同体_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhausのコミュニティガバナンス_
+- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _リーガル・エンジニアリング_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _アート・コミュニティ_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _分散型自律組織(DAO)インキュベータ_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _プレシード暗号プロジェクトのベンチャー_
