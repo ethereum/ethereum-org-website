@@ -9,9 +9,10 @@ function ContributorsQuizBanner(props: FlexProps) {
   return (
     <CalloutBanner
       image={PeopleLearning}
-      alt=""
+      alt="People learning about Ethereum"
       title="Unsure where to start?"
       description="Take a quick quiz and find out how you can contribute on ethereum.org."
+      justifyImage={{ base: "center", md: "end" }}
       {...props}
     >
       <ButtonLink href="https://ethdotorg.typeform.com/contributor">

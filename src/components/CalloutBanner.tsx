@@ -9,6 +9,7 @@ export type CalloutBannerProps = FlexProps & {
   title: string
   description: string
   alt: string
+  justifyImage?: FlexProps["justify"]
 }
 
 const CalloutBanner = ({
@@ -18,6 +19,7 @@ const CalloutBanner = ({
   description,
   alt,
   children,
+  justifyImage = "center",
   ...props
 }: CalloutBannerProps) => {
   return (
@@ -32,7 +34,7 @@ const CalloutBanner = ({
         <Flex
           flex="1 1 50%"
           position="relative"
-          justify={{ base: "center", md: "end" }}
+          justify={justifyImage}
           align="end"
           minH={{ base: 200, md: "auto" }}
           px={{ base: 8, md: 0 }}
@@ -40,7 +42,7 @@ const CalloutBanner = ({
           <Image
             src={image}
             width={imageWidth}
-            alt="People learning about Ethereum"
+            alt={alt}
             position="absolute"
             w="full"
             maxH="150%"
