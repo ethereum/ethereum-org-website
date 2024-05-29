@@ -1849,6 +1849,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/VikVM"><img src="https://avatars.githubusercontent.com/u/60881781?v=4?s=100" width="100px;" alt="VikVM"/><br /><sub><b>VikVM</b></sub></a><br /><a href="#content-VikVM" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/checkomkar"><img src="https://avatars.githubusercontent.com/u/8987373?v=4?s=100" width="100px;" alt="Omkar Kamale"/><br /><sub><b>Omkar Kamale</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=checkomkar" title="Code">💻</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mingoing"><img src="https://avatars.githubusercontent.com/u/344175?v=4?s=100" width="100px;" alt="Mingo"/><br /><sub><b>Mingo</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mingoing" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/zkVlad"><img src="https://avatars.githubusercontent.com/u/125317045?v=4?s=100" width="100px;" alt="zkVlad"/><br /><sub><b>zkVlad</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=zkVlad" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
 </table>
 
