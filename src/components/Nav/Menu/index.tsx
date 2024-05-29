@@ -78,9 +78,6 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                       </Text>
                     </Button>
                   </NavigationMenu.Trigger>
-
-                  {/* avoid rendering desktop menu on mobile */}
-                  {/* Desktop Menu content */}
                   <NavigationMenu.Content asChild>
                     {/**
                      * This is the CONTAINER for all three menu levels
