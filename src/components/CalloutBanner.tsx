@@ -9,7 +9,7 @@ export type CalloutBannerProps = FlexProps & {
   title: string
   description: string
   alt: string
-  justifyImage?: FlexProps["justify"]
+  alignImage?: FlexProps["alignItems"]
 }
 
 const CalloutBanner = ({
@@ -19,7 +19,7 @@ const CalloutBanner = ({
   description,
   alt,
   children,
-  justifyImage = "center",
+  alignImage = "center",
   ...props
 }: CalloutBannerProps) => {
   return (
@@ -34,8 +34,8 @@ const CalloutBanner = ({
         <Flex
           flex="1 1 50%"
           position="relative"
-          justify={justifyImage}
-          align="end"
+          justify="center"
+          align={alignImage}
           minH={{ base: 200, md: "auto" }}
           px={{ base: 8, md: 0 }}
         >

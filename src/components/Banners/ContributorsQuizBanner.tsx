@@ -12,7 +12,7 @@ function ContributorsQuizBanner(props: FlexProps) {
       alt="People learning about Ethereum"
       title="Unsure where to start?"
       description="Take a quick quiz and find out how you can contribute on ethereum.org."
-      justifyImage={{ base: "center", md: "end" }}
+      alignImage="end"
       {...props}
     >
       <ButtonLink href="https://ethdotorg.typeform.com/contributor">
