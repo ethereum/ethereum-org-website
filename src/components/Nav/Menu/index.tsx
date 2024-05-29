@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import dynamic from "next/dynamic"
 import { Box, type BoxProps, Text, UnorderedList } from "@chakra-ui/react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 
@@ -8,7 +9,6 @@ import { MAIN_NAV_ID, NAV_PY, SECTION_LABELS } from "@/lib/constants"
 
 import type { NavSections } from "../types"
 
-import SubMenu from "./SubMenu"
 import { useNavMenu } from "./useNavMenu"
 
 type NavMenuProps = BoxProps & {
@@ -16,15 +16,10 @@ type NavMenuProps = BoxProps & {
 }
 
 const Menu = ({ sections, ...props }: NavMenuProps) => {
-  const {
-    activeSection,
-    containerVariants,
-    direction,
-    handleSectionChange,
-    isOpen,
-    menuColors,
-    onClose,
-  } = useNavMenu(sections)
+  const { activeSection, direction, handleSectionChange, isOpen } =
+    useNavMenu(sections)
+
+  const MenuContent = dynamic(() => import("./MenuContent"))
 
   return (
     <Box {...props}>
@@ -44,6 +39,7 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
             {SECTION_LABELS.map((sectionKey) => {
               const { label, items } = sections[sectionKey]
               const isActive = activeSection === sectionKey
+
               return (
                 <NavigationMenu.Item key={sectionKey} value={label}>
                   <NavigationMenu.Trigger asChild>
@@ -78,35 +74,13 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                       </Text>
                     </Button>
                   </NavigationMenu.Trigger>
-
                   {/* avoid rendering desktop menu on mobile */}
                   {/* Desktop Menu content */}
-                  <NavigationMenu.Content asChild>
-                    {/**
-                     * This is the CONTAINER for all three menu levels
-                     * This renders inside the NavigationMenu.Viewport component
-                     */}
-                    <Box
-                      as={motion.div}
-                      variants={containerVariants}
-                      initial={false}
-                      animate={isOpen ? "open" : "closed"}
-                      position="absolute"
-                      top="19"
-                      insetInline="0"
-                      shadow="md"
-                      border="1px"
-                      borderColor={menuColors.stroke}
-                      bg={menuColors.lvl[1].background}
-                    >
-                      <SubMenu
-                        lvl={1}
-                        items={items}
-                        activeSection={activeSection}
-                        onClose={onClose}
-                      />
-                    </Box>
-                  </NavigationMenu.Content>
+                  <MenuContent
+                    items={items}
+                    isOpen={isOpen}
+                    sections={sections}
+                  />
                 </NavigationMenu.Item>
               )
             })}
