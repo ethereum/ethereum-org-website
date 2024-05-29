@@ -46,7 +46,6 @@ const Contributor = ({ contributor }: ContributorProps) => (
 )
 
 export type FileContributorsProps = FlexProps & {
-  editPath?: string
   contributors: FileContributor[]
   lastEdit: string
 }

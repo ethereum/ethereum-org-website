@@ -1,7 +1,13 @@
 import { motion } from "framer-motion"
 import dynamic from "next/dynamic"
 import { Box, type BoxProps, Text, UnorderedList } from "@chakra-ui/react"
-import * as NavigationMenu from "@radix-ui/react-navigation-menu"
+import {
+  Item,
+  List,
+  Root,
+  Trigger,
+  Viewport,
+} from "@radix-ui/react-navigation-menu"
 
 import { Button } from "@/components/Buttons"
 
@@ -23,13 +29,13 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
 
   return (
     <Box {...props}>
-      <NavigationMenu.Root
+      <Root
         dir={direction}
         orientation="horizontal"
         onValueChange={handleSectionChange}
         delayDuration={0}
       >
-        <NavigationMenu.List asChild>
+        <List asChild>
           <UnorderedList
             id={MAIN_NAV_ID}
             display="flex"
@@ -41,8 +47,8 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
               const isActive = activeSection === sectionKey
 
               return (
-                <NavigationMenu.Item key={sectionKey} value={label}>
-                  <NavigationMenu.Trigger asChild>
+                <Item key={sectionKey} value={label}>
+                  <Trigger asChild>
                     <Button
                       py="2"
                       px={{ base: "3", lg: "4" }}
@@ -73,22 +79,21 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                         {label}
                       </Text>
                     </Button>
-                  </NavigationMenu.Trigger>
-                  {/* avoid rendering desktop menu on mobile */}
+                  </Trigger>
                   {/* Desktop Menu content */}
                   <MenuContent
                     items={items}
                     isOpen={isOpen}
                     sections={sections}
                   />
-                </NavigationMenu.Item>
+                </Item>
               )
             })}
           </UnorderedList>
-        </NavigationMenu.List>
+        </List>
 
-        <NavigationMenu.Viewport />
-      </NavigationMenu.Root>
+        <Viewport />
+      </Root>
     </Box>
   )
 }

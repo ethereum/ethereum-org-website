@@ -12,6 +12,7 @@ const FixedDot = ({ bottomOffset, isExpanded, ...props }: FixedDotProps) => {
   const size = "12"
   return (
     <Button
+      data-testid="feedback-widget-button"
       h={size}
       w={{ base: size, lg: isExpanded ? "15rem" : size }}
       borderRadius="full"
