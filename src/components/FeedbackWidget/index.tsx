@@ -9,6 +9,7 @@ import {
   AlertDialogOverlay,
   Box,
   Button,
+  HStack,
 } from "@chakra-ui/react"
 
 import FixedDot from "./FixedDot"
@@ -50,33 +51,26 @@ const FeedbackWidget = () => {
             m="auto"
             alignItems="flex-end"
             backgroundColor="transparent"
-            boxShadow="tableItemBox"
             me={24}
             bottom={{ base: `${bottomOffset + 5}rem`, lg: 20 }}
             data-testid="feedback-widget-modal"
+            padding={0}
           >
             <Box
-              w="min(300px, calc(100% - 1rem))"
+              w="min(320px, calc(100% - 1rem))"
               mx="2"
-              bgColor="ednBackground"
-              border="1px"
-              borderColor="background.base"
+              bg="background.base"
               borderRadius="base"
-              py="4"
-              px="2"
+              padding={{ base: "4", sm: "8" }}
             >
-              <AlertDialogCloseButton />
-
-              <AlertDialogHeader
-                fontSize="xl"
-                fontWeight="bold"
-                lineHeight="6"
-                textAlign="center"
-              >
-                {feedbackSubmitted
-                  ? t("feedback-widget-thank-you-title")
-                  : t("feedback-widget-prompt")}
-              </AlertDialogHeader>
+              <HStack>
+                <AlertDialogHeader fontSize="xl" fontWeight="bold" me="0">
+                  {feedbackSubmitted
+                    ? t("feedback-widget-thank-you-title")
+                    : t("feedback-widget-prompt")}
+                </AlertDialogHeader>
+                <AlertDialogCloseButton alignSelf="start" />
+              </HStack>
 
               {/* Body: */}
               {feedbackSubmitted && (
