@@ -13,12 +13,8 @@ import {
   SimpleGrid,
   SimpleGridProps,
   Stack,
-  Table,
   TableProps,
-  Td,
   Text,
-  Th,
-  Tr,
 } from "@chakra-ui/react"
 
 import { ChildOnlyProp, WalletData, WalletFilter } from "@/lib/types"
@@ -50,7 +46,7 @@ import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLangua
 import { useWalletTable } from "@/hooks/useWalletTable"
 
 const Container = (props: TableProps) => (
-  <Table
+  <Box
     w="full"
     sx={{
       th: {
@@ -75,7 +71,6 @@ const WalletContainer = (props: ChildOnlyProp & ContainerProps) => (
 
 const Grid = forwardRef<SimpleGridProps, "tr">((props, ref) => (
   <SimpleGrid
-    as={Tr}
     ref={ref}
     templateColumns={{
       base: "60% auto 0% 0% 5%",
@@ -243,7 +238,7 @@ const WalletTable = ({
   return (
     <Container>
       <WalletContentHeader>
-        <Th sx={{ textAlign: "start !important" }}>
+        <Box sx={{ textAlign: "start !important" }}>
           <Flex justifyContent="space-between" px={{ base: 2.5, md: 0 }}>
             {/* Displayed on mobile only */}
             <Text
@@ -277,7 +272,7 @@ const WalletTable = ({
               </Text>
             )}
           </Flex>
-        </Th>
+        </Box>
       </WalletContentHeader>
       {filteredWallets.length === 0 && (
         <WalletEmptyState
@@ -346,7 +341,7 @@ const WalletTable = ({
                   showMoreInfo(wallet)
                 }}
               >
-                <Td lineHeight="revert">
+                <Box lineHeight="revert">
                   <Flex
                     justifyContent="space-between"
                     alignItems="center"
@@ -478,7 +473,7 @@ const WalletTable = ({
                       {t("page-find-wallet-visit-website")}
                     </ButtonLink>
                   </Box>
-                </Td>
+                </Box>
               </Wallet>
 
               {wallet.moreInfo && (
