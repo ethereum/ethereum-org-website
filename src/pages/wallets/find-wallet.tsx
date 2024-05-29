@@ -1,19 +1,11 @@
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  calc,
-  Center,
-  Flex,
-  Text,
-  useDisclosure,
-  useTheme,
-} from "@chakra-ui/react"
+import { Box, calc, Center, Flex, Text, useDisclosure } from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp, WalletData } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, Wallet } from "@/lib/types"
 
 import BannerNotification from "@/components/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -32,6 +24,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
   getNonSupportedLocaleWallets,
+  getSupportedLanguages,
   getSupportedLocaleWallets,
 } from "@/lib/utils/wallets"
 
@@ -57,7 +50,7 @@ const Subtitle = ({ children }: ChildOnlyProp) => (
 )
 
 type Props = BasePageProps & {
-  wallets: WalletData[]
+  wallets: Wallet[]
 }
 
 export const getStaticProps = (async ({ locale }) => {
@@ -71,7 +64,15 @@ export const getStaticProps = (async ({ locale }) => {
 
   const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
   const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
-  const wallets = supportedLocaleWallets.concat(noSupportedLocaleWallets)
+  const walletsData = supportedLocaleWallets.concat(noSupportedLocaleWallets)
+
+  const wallets = walletsData.map((wallet) => ({
+    ...wallet,
+    supportedLanguages: getSupportedLanguages(
+      wallet.languages_supported,
+      locale!
+    ),
+  }))
 
   return {
     props: {
@@ -196,6 +197,7 @@ const FindWalletPage = ({
         {/* Mobile filters menu */}
         <Box hideFrom="lg">
           <MobileFiltersMenu
+            walletData={wallets}
             filters={filters}
             resetWalletFilter={resetWalletFilter}
             updateFilterOption={updateFilterOption}
