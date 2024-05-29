@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { GetStaticProps } from "next"
+import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -56,6 +56,10 @@ const Subtitle = ({ children }: ChildOnlyProp) => (
   </Text>
 )
 
+type Props = BasePageProps & {
+  wallets: WalletData[]
+}
+
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
 
@@ -65,18 +69,24 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
+  const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
+  const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
+  const wallets = supportedLocaleWallets.concat(noSupportedLocaleWallets)
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       lastDeployDate,
+      wallets,
     },
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<Props>
 
-const FindWalletPage = () => {
-  const { pathname, locale } = useRouter()
-  const theme = useTheme()
+const FindWalletPage = ({
+  wallets,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const { pathname } = useRouter()
   const { t } = useTranslation("page-wallets-find-wallet")
 
   const resetWalletFilter = useRef(() => {})
@@ -86,24 +96,6 @@ const FindWalletPage = () => {
   const [supportedLanguage, setSupportedLanguage] = useState(DEFAULT_LOCALE)
 
   const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
-
-  const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
-  const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
-  const [randomizedWalletData, setRandomizedWalletData] = useState<
-    WalletData[]
-  >(supportedLocaleWallets.concat(noSupportedLocaleWallets))
-
-  // If any wallet supports user's locale, show them (shuffled) at the top and then the remaining ones
-  useEffect(() => {
-    const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
-
-    const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
-
-    setRandomizedWalletData(
-      supportedLocaleWallets.concat(noSupportedLocaleWallets)
-    )
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [locale])
 
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
@@ -242,7 +234,7 @@ const FindWalletPage = () => {
                 filters={filters}
                 resetFilters={resetFilters}
                 resetWalletFilter={resetWalletFilter}
-                walletData={randomizedWalletData}
+                walletData={wallets}
                 onOpen={onOpen}
               />
             </Box>
