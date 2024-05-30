@@ -12105,6 +12105,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "alex1092",
+      "name": "Alex",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59183749?v=4",
+      "profile": "https://github.com/alex1092",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
