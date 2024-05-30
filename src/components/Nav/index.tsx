@@ -1,4 +1,5 @@
 import { useRef } from "react"
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
@@ -27,8 +28,14 @@ import { isMobile } from "@/lib/utils/isMobile"
 import { DESKTOP_LANGUAGE_BUTTON_NAME, NAV_PY } from "@/lib/constants"
 
 import Menu from "./Menu"
-import MobileNavMenu from "./Mobile"
 import { useNav } from "./useNav"
+
+const MobileNavMenu = dynamic(() => import("./Mobile"), {
+  ssr: false,
+  loading: () => (
+    <Button variant="outline" border="none" ps={0} boxSize="30px" />
+  ),
+})
 
 // TODO display page title on mobile
 const Nav = () => {
@@ -102,83 +109,91 @@ const Nav = () => {
             {isDesktop && <Menu hideBelow="md" sections={linkSections} />}
 
             <Flex alignItems="center" /*  justifyContent="space-between" */>
-              <Search {...searchModalDisclosure} />
               {/* Desktop */}
               {/* avoid rendering desktop LanguagePicker version on mobile */}
               {isDesktop && (
-                <HStack hideBelow="md" gap="0">
-                  <IconButton
-                    transition="transform 0.5s, color 0.2s"
-                    icon={ThemeIcon}
-                    aria-label={themeIconAriaLabel}
-                    variant="ghost"
-                    isSecondary
-                    px={{ base: "2", xl: "3" }}
-                    _hover={{
-                      transform: "rotate(10deg)",
-                      color: "primary.hover",
-                    }}
-                    onClick={toggleColorMode}
-                  />
+                <>
+                  {/* <Search {...searchModalDisclosure} /> */}
 
-                  {/* Locale-picker menu */}
-                  <LanguagePicker
-                    placement="bottom-end"
-                    minH="unset"
-                    maxH="75vh"
-                    w="xs"
-                    inset="unset"
-                    top="unset"
-                    menuState={languagePickerState}
-                  >
-                    <MenuButton
-                      as={Button}
-                      name={DESKTOP_LANGUAGE_BUTTON_NAME}
-                      ref={languagePickerRef}
+                  <HStack hideBelow="md" gap="0">
+                    <IconButton
+                      transition="transform 0.5s, color 0.2s"
+                      icon={ThemeIcon}
+                      aria-label={themeIconAriaLabel}
                       variant="ghost"
-                      color="body.base"
-                      transition="color 0.2s"
+                      isSecondary
                       px={{ base: "2", xl: "3" }}
                       _hover={{
+                        transform: "rotate(10deg)",
                         color: "primary.hover",
-                        "& svg": {
-                          transform: "rotate(10deg)",
-                          transition: "transform 0.5s",
-                        },
                       }}
-                      _active={{
-                        color: "primary.hover",
-                        bg: "primary.lowContrast",
-                      }}
-                      sx={{
-                        "& svg": {
-                          transform: "rotate(0deg)",
-                          transition: "transform 0.5s",
-                        },
-                      }}
+                      onClick={toggleColorMode}
+                    />
+
+                    {/* Locale-picker menu */}
+                    <LanguagePicker
+                      placement="bottom-end"
+                      minH="unset"
+                      maxH="75vh"
+                      w="xs"
+                      inset="unset"
+                      top="unset"
+                      menuState={languagePickerState}
                     >
-                      <Icon
-                        as={BsTranslate}
-                        fontSize="2xl"
-                        verticalAlign="middle"
-                        me={2}
-                      />
-                      <Text hideBelow="lg" as="span">
-                        {t("common:languages")}&nbsp;
-                      </Text>
-                      {locale!.toUpperCase()}
-                    </MenuButton>
-                  </LanguagePicker>
-                </HStack>
+                      <MenuButton
+                        as={Button}
+                        name={DESKTOP_LANGUAGE_BUTTON_NAME}
+                        ref={languagePickerRef}
+                        variant="ghost"
+                        color="body.base"
+                        transition="color 0.2s"
+                        px={{ base: "2", xl: "3" }}
+                        _hover={{
+                          color: "primary.hover",
+                          "& svg": {
+                            transform: "rotate(10deg)",
+                            transition: "transform 0.5s",
+                          },
+                        }}
+                        _active={{
+                          color: "primary.hover",
+                          bg: "primary.lowContrast",
+                        }}
+                        sx={{
+                          "& svg": {
+                            transform: "rotate(0deg)",
+                            transition: "transform 0.5s",
+                          },
+                        }}
+                      >
+                        <Icon
+                          as={BsTranslate}
+                          fontSize="2xl"
+                          verticalAlign="middle"
+                          me={2}
+                        />
+                        <Text hideBelow="lg" as="span">
+                          {t("common:languages")}&nbsp;
+                        </Text>
+                        {locale!.toUpperCase()}
+                      </MenuButton>
+                    </LanguagePicker>
+                  </HStack>
+                </>
               )}
 
-              <MobileNavMenu
-                {...mobileNavProps}
-                linkSections={linkSections}
-                hideFrom="md"
-                toggleSearch={searchModalDisclosure.onOpen}
-                drawerContainerRef={navWrapperRef}
-              />
+              {!isDesktop && (
+                <>
+                  <Search {...searchModalDisclosure} />
+
+                  <MobileNavMenu
+                    {...mobileNavProps}
+                    linkSections={linkSections}
+                    toggleSearch={searchModalDisclosure.onOpen}
+                    drawerContainerRef={navWrapperRef}
+                  />
+                </>
+              )}
             </Flex>
           </Flex>
         </Flex>
