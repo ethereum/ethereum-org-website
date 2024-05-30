@@ -170,7 +170,7 @@ When ERC-20 tokens are sent to a smart contract that is not designed to handle E
 - [Alchemy - Guide to Solidity ERC20 Tokens](https://www.alchemy.com/overviews/erc20-solidity)
 
 
-## Other fungible token standards
+## Other fungible token standards {#fungible-token-standards}
 
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Tokenized vaults](/developers/docs/standards/tokens/erc-4626)

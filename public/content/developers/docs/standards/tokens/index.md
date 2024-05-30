@@ -20,7 +20,8 @@ Here are some of the most popular token standards on Ethereum:
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - A standard interface for fungible (interchangeable) tokens, like voting tokens, staking tokens or virtual currencies.
 
-### NFT standards
+### NFT standards {#nft-standards}
+
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - A standard interface for non-fungible tokens, like a deed for artwork or a song.
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - ERC-1155 allows for more efficient trades and bundling of transactions – thus saving costs. This token standard allows for creating both utility tokens (such as $BNB or $BAT) and Non-Fungible Tokens like CryptoPunks.
 
