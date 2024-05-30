@@ -11,7 +11,7 @@ import type {
 } from "react-select"
 import { Box, Center, HStack, Icon } from "@chakra-ui/react"
 
-import { useSelectStyles } from "."
+import { useSelectStyles } from "./context"
 
 export const reactSelectAnatomyKeys = [
   "container",

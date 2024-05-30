@@ -4,7 +4,7 @@ description: Prezentarea mașinii virtuale Ethereum și a modului în care aceas
 lang: ro
 ---
 
-Reprezentarea fizică a unei EVM nu poate fi descrisă în același mod ca şi un un nor sau un val pe ocean, dar „EVM” _există_ ca o entitate unică întreținută de mii de computere conectate între ele care rulează un client Ethereum.
+Reprezentarea fizică a unei EVM nu poate fi descrisă în același mod ca şi un nor sau un val pe ocean, dar „EVM” _există_ ca o entitate unică întreținută de mii de computere conectate între ele care rulează un client Ethereum.
 
 Protocolul Ethereum în sine există exclusiv în scopul menținerii funcționării continue, neîntrerupte și imuabile a acestei mașini speciale de stare; este mediul în care se află toate conturile Ethereum și contractele inteligente. În orice bloc din lanț, Ethereum are o stare „canonică” şi numai una, iar EVM este definește regulile pentru calculul unei noi stări valide de la un bloc la altul.
 

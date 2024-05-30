@@ -84,7 +84,11 @@ const QuizzesHubPage: NextPage<
         header={t("test-your-knowledge")}
         heroImg={HeroImage}
       />
-      <QuizzesModal isOpen={isOpen} onClose={onClose} quizStatus={quizStatus}>
+      <QuizzesModal
+        isQuizModalOpen={isOpen}
+        onQuizModalClose={onClose}
+        quizStatus={quizStatus}
+      >
         <QuizWidget
           quizKey={currentQuiz}
           currentHandler={setCurrentQuiz}
