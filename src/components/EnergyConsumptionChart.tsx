@@ -248,7 +248,7 @@ const EnergyConsumptionChart = () => {
     datasets: [
       {
         label: chartLegend as any, // casted to avoid TS issue
-        data: rawData?.map((item) => item.amount),
+        data: rawData?.map((item) => item.amount) || [],
       },
     ],
   } satisfies ChartData
