@@ -1,4 +1,4 @@
-import { copyFileSync, existsSync, mkdirSync, readdirSync } from "fs"
+import { copyFileSync, existsSync, mkdirSync, readdirSync, statSync } from "fs"
 import { join } from "path"
 
 import i18Config from "../../../../i18n.config.json"
@@ -45,9 +45,7 @@ export const scrapeDirectory = (
       copyFileSync(source, jsonDestinationPath)
       // Update .json tracker
       trackers.langs[repoLangCode].jsonCopyCount++
-    } else if (
-      item.endsWith(".md")
-    ) {
+    } else if (item.endsWith(".md")) {
       const mdDestDirPath: string = join(
         TRANSLATIONS_DIR,
         repoLangCode,
@@ -60,6 +58,7 @@ export const scrapeDirectory = (
       // Update .md tracker
       trackers.langs[repoLangCode].mdCopyCount++
     } else {
+      if (!statSync(source).isDirectory()) return
       // If another directory, recursively call `scrapeDirectory`
       scrapeDirectory(
         `${path}/${item}`,
