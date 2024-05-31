@@ -251,7 +251,7 @@ const EnergyConsumptionChart = () => {
         data: rawData?.map((item) => item.amount),
       },
     ],
-  }
+  } satisfies ChartData
 
   return (
     <Center w="full">
