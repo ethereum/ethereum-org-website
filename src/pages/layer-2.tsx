@@ -15,17 +15,14 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-import type {
-  BasePageProps,
-  CommonHeroProps,
-  TranslationKey,
-} from "@/lib/types"
+import type { BasePageProps, TranslationKey } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
+import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import Layer2ProductCard from "@/components/Layer2ProductCard"
@@ -129,7 +126,7 @@ const Layer2Page = () => {
   const { t } = useTranslation("page-layer-2")
   const layer2DataCombined = [...layer2Data.optimistic, ...layer2Data.zk]
 
-  const heroContent: CommonHeroProps = {
+  const heroContent: HubHeroProps = {
     title: t("layer-2-hero-title"),
     header: t("layer-2-hero-header"),
     description: t("layer-2-hero-subtitle"),

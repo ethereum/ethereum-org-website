@@ -10,7 +10,7 @@ import {
   useTheme,
 } from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp, CommonHeroProps } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp } from "@/lib/types"
 import { ICard, IGetInvolvedCard } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
@@ -19,6 +19,7 @@ import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
+import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
@@ -214,7 +215,7 @@ const CommunityPage = () => {
     },
   ]
 
-  const heroContent: CommonHeroProps = {
+  const heroContent: HubHeroProps = {
     title: t("page-community-hero-title"),
     header: t("page-community-hero-header"),
     description: t("page-community-hero-subtitle"),

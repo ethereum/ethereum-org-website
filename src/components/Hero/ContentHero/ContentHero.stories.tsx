@@ -3,8 +3,6 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import ContentHeroComponent, { ContentHeroProps } from "."
 
-import contentHeroImg from "@/public/mainnet.png"
-
 type ContentHeroType = typeof ContentHeroComponent
 
 const meta = {
@@ -51,7 +49,9 @@ export const ContentHero: StoryObj = {
     return (
       <ContentHeroComponent
         breadcrumbs={{ slug: "/en/run-a-node/" }}
-        heroImg={contentHeroImg}
+        heroImg="/upgrades/merge.png"
+        // Can not properly hardcode this URL. So it's left blank
+        blurDataURL=""
         title={t("hero-header")}
         description={t("hero-subtitle")}
         buttons={buttons}
