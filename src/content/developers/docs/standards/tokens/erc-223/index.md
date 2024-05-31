@@ -6,17 +6,17 @@ lang: en
 
 ## Introduction {#introduction}
 
-**What is ERC-223?**
+### What is ERC-223? {#what-is-erc223}
 
-The ERC-223 is another standard for fungible tokens, like the ERC-20. The key difference is that ERC-223 defines not only the token API, but also the logic of how tokens should be transferred from sender to recipient and introduces a communication model that allows token transfers to be handled on the recipients side.
+The ERC-223 is a standard for fungible tokens, similar to the ERC-20 standard. The key difference is that ERC-223 defines not only the token API but also the logic for transferring tokens from sender to recipient. It introduces a communication model that allows token transfers to be handled on the recipient's side.
 
-**How is it different from ERC-20 and why we need another token standard?**
+### Differences from ERC-20 {#erc20-differences}
 
-ERC-223 addresses some limitations of ERC-20 and introduces a new method of interactions between token contract and a contract that may receive the tokens. There are few things that are possible with ERC-223 but not with ERC-20:
+ERC-223 addresses some limitations of ERC-20 and introduces a new method of interaction between the token contract and a contract that may receive the tokens. There are few things that are possible with ERC-223 but not with ERC-20:
 
-- Token transfer handling on the recipient's side. Recipient can detect that an ERC-223 token is being deposited.
-- Rejection of improperly sent tokens. If a user sent ERC-223 tokens to a contract that is not supposed to receive tokens then the contract can reject the transaction and the tokens will not be lost.
-- The transfer of ERC-223 tokens may contain metadata, which allows arbitrary information to be attached to the token transactions.
+- Token transfer handling on the recipient's side: Recipients can detect that an ERC-223 token is being deposited.
+- Rejection of improperly sent tokens: If a user sends ERC-223 tokens to a contract not supposed to receive tokens, the contract can reject the transaction, preventing token loss.
+- Metadata in transfers: ERC-223 tokens can include metadata, allowing arbitrary information to be attached to token transactions.
 
 ## Prerequisites {#prerequisites}
 
@@ -27,8 +27,7 @@ ERC-223 addresses some limitations of ERC-20 and introduces a new method of inte
 
 ## Body {#body}
 
-The ERC-223 (Ethereum Request for Comments 223), proposed by Dexaran in March 2017, is a token standard that
-implements an API for tokens within smart contracts and declares API for a contract that is supposed to receive ERC-223 tokens. Any contract that does not support ERC-223 Receiver API can not receive ERC-223 tokens which prevents the most common user mistakes.
+ERC-223 is a token standard that implements an API for tokens within smart contracts. It also declares an API for contracts that are supposed to receive ERC-223 tokens. Contracts that do not support the ERC-223 Receiver API cannot receive ERC-223 tokens, preventing user error.
 
 If a smart contract implements the following methods and events it can be called an ERC-223 compatible token contract. Once deployed, it
 will be responsible to keep track of the created tokens on Ethereum.
@@ -71,9 +70,7 @@ The API of ERC-223 token is similar to that of ERC-20, so from UI development po
 
 ### Solidity examples {#solidity-example}
 
-The purpose of this example is to illustrate how a contract must work with ERC-223 tokens.
-
-Assume that we have a very basic ERC-223 token:
+The following example illustrates how a basic ERC-223 token contract operates:
 
 ```solidity
 pragma solidity ^0.8.19;
@@ -146,15 +143,15 @@ contract RecipientContract is IERC223Recipient {
 
 ### What will happen if we send some tokenB to the contract? {#sending-tokens}
 
-The transaction will fail and the transfer of tokens will simply not happen. The tokens will be returned to the sender's address.
+The transaction will fail, and the transfer of tokens will not happen. The tokens will be returned to the sender's address.
 
 ### How can we make a deposit to this contract? {#contract-deposits}
 
-We can simply call the `transfer(address,uint256)` or `transfer(address,uint256,bytes)` function of the ERC-223 token and tell it to transfer some tokens to the address of the `RecipientContract`. That's it.
+Call the `transfer(address,uint256)` or `transfer(address,uint256,bytes)` function of the ERC-223 token, specifying the address of the `RecipientContract`.
 
 ### What will happen if we transfer an ERC-20 token to this contract? {#erc-20-transfers}
 
-The ERC-20 standard supports two methods of transferring tokens: `transfer` function and `approve + transferFrom` pattern. This is not possible to make a deposit with `transferFrom` function as the `RecipientContract` does not have any functions that subsequently call `transferFrom`. If an ERC-20 token is sent with `transfer` function to the address of the `RecipientContract` then unfortunately the tokens will be transferred from the sender's address to the address of the `RecipientContract` but the transfer will not be recognized i.e. `Deposit()` event will not be fired and `deposits` value will not change. There is also no way to filter or prevent unwanted ERC-20 deposits that are made with the `transfer` function.
+If an ERC-20 token is sent to the `RecipientContract`, the tokens will be transferred, but the transfer will not be recognized (no `Deposit()` event will be fired, and the deposits value will not change). Unwanted ERC-20 deposits cannot be filtered or prevented.
 
 ### What if we want to execute some function after the token deposit is completed? {#function-execution}
 
@@ -186,6 +183,14 @@ When the `RecipientContract` will receive a ERC-223 token the contract will exec
 In the above example an ERC-223 token must be transferred to the address of the `RecipientContract` with the `transfer(address,uin256,bytes calldata _data)` function. If the data parameter will be `0xc2985578` (the signature of a `foo()` function) then the function foo() will be invoked after the token deposit is received and the event Foo() will be fired.
 
 Parameters can be encoded in the `data` of the token transfer as well, for example we can call the bar() function with 12345 value for `_someNumber`. In this case the `data` must be `0x0423a13200000000000000000000000000000000000000000000000000000000000004d2` where `0x0423a132` is the signature of the `bar(uint256)` function and `00000000000000000000000000000000000000000000000000000000000004d2` is 12345 as uint256.
+
+## Limitations {#limitations}
+
+While ERC-223 addresses several issues found in the ERC-20 standard, it is not without its own limitations:
+
+- Adoption and Compatibility: ERC-223 is not yet widely adopted, which may limit its compatibility with existing tools and platforms.
+- Backward Compatibility: ERC-223 is not backward compatible with ERC-20, meaning that existing ERC-20 contracts and tools will not work with ERC-223 tokens without modifications.
+- Gas Costs: The additional checks and functionalities in ERC-223 transfers may result in higher gas costs compared to ERC-20 transactions.
 
 ## Further reading {#further-reading}
 
