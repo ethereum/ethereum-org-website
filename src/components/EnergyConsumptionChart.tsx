@@ -230,7 +230,7 @@ const EnergyConsumptionChart = () => {
         },
       },
     },
-  }
+  } satisfies ChartOptions
 
   // chart custom legend
   const chartLegend = wrapLabel(
