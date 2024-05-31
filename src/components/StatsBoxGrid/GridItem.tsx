@@ -32,6 +32,9 @@ type GridItemProps = {
   metric: StatsBoxMetric
 }
 
+// ChartJS config
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Filler)
+
 export const GridItem = ({ metric }: GridItemProps) => {
   const { title, description, state, buttonContainer, range } = metric
   const hasError = "error" in state
@@ -87,15 +90,6 @@ export const GridItem = ({ metric }: GridItemProps) => {
   const maxValue = hasData
     ? state.data.reduce((prev, { value }) => (prev > value ? prev : value), 0)
     : 0
-
-  // ChartJS config
-  ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Filler
-  )
 
   // ChartJS options
   const chartOptions = {
