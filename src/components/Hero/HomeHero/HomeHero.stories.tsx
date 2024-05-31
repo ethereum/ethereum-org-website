@@ -1,6 +1,8 @@
 import * as React from "react"
 import { Meta, StoryObj } from "@storybook/react"
 
+import { langViewportModes } from "../../../../.storybook/modes"
+
 import HomeHeroComponent from "."
 
 type HomeHeroType = typeof HomeHeroComponent
@@ -10,6 +12,11 @@ const meta = {
   component: HomeHeroComponent,
   parameters: {
     layout: "none",
+    chromatic: {
+      modes: {
+        ...langViewportModes,
+      },
+    },
   },
   argTypes: {
     heroImg: {

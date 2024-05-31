@@ -1,6 +1,8 @@
 import { HStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
+import { langViewportModes } from "../../../../.storybook/modes"
+
 import MdxHeroComponent from "./"
 
 type MdxHeroType = typeof MdxHeroComponent
@@ -9,6 +11,11 @@ const meta = {
   title: "Organisms / Layouts / Hero",
   parameters: {
     layout: "none",
+    chromatic: {
+      modes: {
+        ...langViewportModes,
+      },
+    },
   },
   decorators: [
     (Story) => (

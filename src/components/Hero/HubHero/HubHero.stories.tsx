@@ -3,6 +3,8 @@ import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
+import { langViewportModes } from "../../../../.storybook/modes"
+
 import HubHeroComponent, { type HubHeroProps } from "./"
 
 import learnHubHeroImg from "@/public/heroes/learn-hub-hero.png"
@@ -14,6 +16,11 @@ const meta = {
   component: HubHeroComponent,
   parameters: {
     layout: "none",
+    chromatic: {
+      modes: {
+        ...langViewportModes,
+      },
+    },
   },
   decorators: [
     (Story) => (
