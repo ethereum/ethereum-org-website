@@ -242,10 +242,15 @@ const TutorialPage = ({
         <Translation id="page-developers-tutorials:page-tutorial-subtitle" />
       </Text>
 
-      <Modal isOpen={isModalOpen} setIsOpen={setModalOpen} dir={dir}>
-        <Heading fontSize="2rem" lineHeight="1.4" mb={4}>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setModalOpen(false)}
+        size={{ base: "full", md: "xl" }}
+        contentProps={{ dir }}
+        title={
           <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
-        </Heading>
+        }
+      >
         <Text>
           <Translation id="page-developers-tutorials:page-tutorial-listing-policy-intro" />{" "}
           <InlineLink href="/contributing/content-resources/">
@@ -255,24 +260,16 @@ const TutorialPage = ({
         <Text>
           <Translation id="page-developers-tutorials:page-tutorial-submit-tutorial" />
         </Text>
-        <Flex
-          flexDirection={{ base: "column", md: "initial" }}
-          maxH={{ base: 64, md: "initial" }}
-          overflowY={{ base: "scroll", md: "initial" }}
-        >
+        <Flex flexDirection={{ base: "column", md: "row" }} gap="2">
           <Flex
+            flex="1"
             borderWidth="1px"
             borderStyle="solid"
             borderColor="border"
             borderRadius="base"
             p={4}
             flexDirection="column"
-            w={{ base: "full", md: "50%" }}
             justifyContent="space-between"
-            mt={2}
-            mb={{ base: 2, md: 6 }}
-            ms={0}
-            me={{ base: 0, md: 2 }}
           >
             <Text as="b">
               <Translation id="page-developers-tutorials:page-tutorial-new-github" />
@@ -289,18 +286,14 @@ const TutorialPage = ({
             </ButtonLink>
           </Flex>
           <Flex
+            flex="1"
             borderWidth="1px"
             borderStyle="solid"
             borderColor="border"
             borderRadius="base"
             p={4}
             flexDirection="column"
-            w={{ base: "full", md: "50%" }}
             justifyContent="space-between"
-            mt={2}
-            mb={{ base: 2, md: 6 }}
-            ms={0}
-            me={{ base: 0, md: 2 }}
           >
             <Text as="b">
               <Translation id="page-developers-tutorials:page-tutorial-pull-request" />

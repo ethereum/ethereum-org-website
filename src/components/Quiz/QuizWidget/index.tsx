@@ -103,7 +103,7 @@ const QuizWidget = ({
 
   const getMainContainerBg = (): StackProps["bg"] => {
     if (!answerStatus) {
-      return "neutral"
+      return isStandaloneQuiz ? "background.highlight" : "background.base"
     }
 
     if (answerStatus === "correct") {
@@ -114,11 +114,11 @@ const QuizWidget = ({
   }
 
   return (
-    <VStack spacing="12" width="full" maxW="600px">
+    <VStack data-testid="quiz-widget" spacing="12" width="full" maxW="600px">
       <Stack
         w="full"
         gap="8"
-        px={{ base: "8", md: "12", lg: "16" }}
+        px={isStandaloneQuiz ? "4" : "0"}
         // Reduce padding when showing Spinner
         pt={!quizData ? "10" : { base: "5", md: "12" }}
         pb={!quizData ? "5" : { base: "4", md: "8" }}
