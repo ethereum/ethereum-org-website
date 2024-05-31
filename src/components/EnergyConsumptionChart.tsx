@@ -152,20 +152,14 @@ const EnergyConsumptionChart = () => {
     ],
   })
 
-  // chart aspect ratio (for mobile & desktop responsiveness)
-  const aspectRatioValue = useBreakpointValue({
-    base: 0.55,
-    sm: 0.75,
-    md: 1.1,
-  })
-
   // chart options config
   const chartOptions = {
     // chart styles
     barThickness: 38,
     borderRadius: 4,
-    aspectRatio: aspectRatioValue,
-    maintainAspectRatio: true,
+    responsive: true,
+    aspectRatio: 1,
+    maintainAspectRatio: false,
     hover: { mode: null } as any, // casted to avoid TS issue
     backgroundColor: rawData?.map((item) => item.color) as any, // casted to avoid TS issue
     plugins: {
@@ -255,7 +249,14 @@ const EnergyConsumptionChart = () => {
 
   return (
     <Center w="full">
-      <Box maxW="500px" m="auto" w="80vw" mb={{ base: 4, lg: 4 }}>
+      <Box
+        position="relative"
+        maxW="500px"
+        m="auto"
+        w="80vw"
+        h="500px"
+        mb={{ base: 4, md: 0 }}
+      >
         {/* TODO: isRtl ? data?.reverse() : data */}
         <Bar options={chartOptions} data={chartData} updateMode="none" />
       </Box>
