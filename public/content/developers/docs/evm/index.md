@@ -4,9 +4,7 @@ description: An introduction to the Ethereum virtual machine and how it relates 
 lang: en
 ---
 
-The EVM’s physical instantiation can’t be described in the same way that one might point to a cloud or an ocean wave, but it does _exist_ as one single entity maintained by thousands of connected computers running an Ethereum client.
-
-The Ethereum protocol itself exists solely for the purpose of keeping the continuous, uninterrupted, and immutable operation of this special state machine. It's the environment in which all Ethereum accounts and smart contracts live. At any given block in the chain, Ethereum has one and only one 'canonical' state, and the EVM is what defines the rules for computing a new valid state from block to block.
+The Ethereum Virtual Machine (EVM) is a decentralized virtual environment that executes code consistently and securely across all Ethereum nodes. Nodes run the EVM to execute smart contracts, using "[gas](/gas/)" to measure the computational effort required for [operations](/developers/docs/evm/opcodes/), ensuring efficient resource allocation and network security.
 
 ## Prerequisites {#prerequisites}
 

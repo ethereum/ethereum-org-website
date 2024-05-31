@@ -105,6 +105,10 @@ Security issues relating to NFTs are most often related to phishing scams, smart
 - [ERC-1155 token standard](/developers/docs/standards/tokens/erc-1155/)
 - [Popular NFT Apps and Tools](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
 
+## Other resources {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
+
 <Divider />
 
 <QuizWidget quizKey="nfts" />

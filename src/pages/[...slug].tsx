@@ -16,7 +16,7 @@ import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
 import type {
-  Lang,
+  CommitHistory,
   Layout,
   LayoutMappingType,
   NextPageWithLayout,
@@ -26,10 +26,9 @@ import type {
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
 
-import { getCrowdinContributors } from "@/lib/utils/crowdin"
+import { getFileContributorInfo } from "@/lib/utils/contributors"
 import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { remapTableOfContents } from "@/lib/utils/toc"
@@ -114,6 +113,8 @@ const gfIssuesDataFetch = runOnlyOnce(async () => {
   return await fetchGFIs()
 })
 
+const commitHistoryCache: CommitHistory = {}
+
 export const getStaticProps = (async (context) => {
   const params = context.params!
   const { locale } = context
@@ -153,7 +154,6 @@ export const getStaticProps = (async (context) => {
   const timeToRead = readingTime(markdown.content)
   const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
   const slug = `/${params.slug.join("/")}/`
-  const lastUpdatedDate = getLastModifiedDate(slug, locale!)
   const lastDeployDate = getLastDeployDate()
 
   // Get corresponding layout
@@ -172,11 +172,17 @@ export const getStaticProps = (async (context) => {
     }
   }
 
-  const crowdinContributors = ["docs", "tutorial"].includes(layout)
-    ? getCrowdinContributors(mdPath, locale as Lang)
-    : []
-
   const requiredNamespaces = getRequiredNamespacesForPage(slug, layout)
+
+  const { contributors, lastUpdatedDate } = await getFileContributorInfo(
+    mdDir,
+    mdPath,
+    slug,
+    locale!,
+    frontmatter.lang,
+    layout,
+    commitHistoryCache
+  )
 
   const gfissues = await gfIssuesDataFetch()
 
@@ -192,7 +198,7 @@ export const getStaticProps = (async (context) => {
       layout,
       timeToRead: Math.round(timeToRead.minutes),
       tocItems,
-      crowdinContributors,
+      contributors,
       gfissues,
     },
   }
@@ -227,7 +233,7 @@ ContentPage.getLayout = (page) => {
     layout,
     timeToRead,
     tocItems,
-    crowdinContributors,
+    contributors,
     contentNotTranslated,
   } = page.props
 
@@ -237,7 +243,7 @@ ContentPage.getLayout = (page) => {
     lastUpdatedDate,
     timeToRead,
     tocItems,
-    crowdinContributors,
+    contributors,
     contentNotTranslated,
   }
   const Layout = layoutMapping[layout]

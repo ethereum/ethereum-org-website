@@ -69,7 +69,7 @@ const Tooltip = ({
     >
       <PopoverTrigger>{children}</PopoverTrigger>
       <Portal>
-        <PopoverContent>
+        <PopoverContent data-testid="tooltip-popover">
           <PopoverArrow />
           <PopoverBody>{content}</PopoverBody>
         </PopoverContent>
