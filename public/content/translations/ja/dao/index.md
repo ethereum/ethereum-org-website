@@ -14,11 +14,11 @@ summaryPoint3: 特定の目的に資金を委ねるのに安全な場所
 
 ## 自律分散組織(DAO)とは {#what-are-daos}
 
-分散型自律組織(DAO)とは、共通の目的のために集団が共同で所有し、ブロックチェーンで管理された組織です。
+DAOは、共通の目的のために行動する、集団所有された組織のことです。
 
 分散型自律組織(DAO)は資金や運営の管理において、誰かを信用することなく、世界中の同じ志を持つ人々と共に働くことを可能します。 気まぐれに資金を使い込むCEOはいませんし、帳簿を操作できるCFOもいません。 誰かを依存・信用するのではなく、ブロックチェーンベースのルールがコード化され、組織の運営や資金の使われ方を定義しています。
 
-グループの承認なしには誰もアクセスできない資金が組み込まれています。 意思決定は、提案と投票によって行われ、組織内の誰もが発言権を持つことが保障されています。また、何事においてもオンチェーン上で行われるため透明性が確保されています。
+グループの承認なしには誰もアクセスできない資金が組み込まれています。 意思決定は、提案と投票によって行われ、組織内の誰しもが発言権を持つことが保障されています。また、全て[オンチェーン](/glossary/#on-chain)で行われるため、透明性も確保されています。
 
 ## 分散型自律組織(DAO)が必要な理由 {#why-dao}
 
@@ -40,126 +40,265 @@ summaryPoint3: 特定の目的に資金を委ねるのに安全な場所
 
 もう少し理解を深められるように、分散型自律組織(DAO)の使用方法についていくつか例をご紹介します。
 
-- 慈善事業 – 世界中の誰からでも寄付を受け付け、資金の使い道を投票にて決定可能。
-- 共同所有 – 物理的またはデジタル資産を購入し、メンバーは資産の活用方法について投票できる。
-- ベンチャーキャピタルと助成 - 投資資金をプールし、投票により支援先ベンチャーを選択、ベンチャーファンドを作成可能。 返済金は後に分散型自律組織(DAO)のメンバー間で再配分できる。
+- **慈善事業** – 世界中の誰からでも寄付を受け付け、資金の使い道を投票にて決定可能。
+- **共同所有**– 物理的またはデジタル資産を購入し、メンバーは資産の活用方法について投票できる。
+- **ベンチャーキャピタルと助成金** - 投資資金をプールし、投票により支援先ベンチャーを選択する、ベンチャーファンドを作成可能。 返済金は後に分散型自律組織(DAO)のメンバー間で再配分できる。
 
-## 分散型自律組織(DAO)の仕組み {#how-daos-work}
+<iframe src="https://embed.ted.com/talks/lang/en/scott_fitsimones_could_a_dao_build_the_next_great_city" ></p>
 
-組織のルールが定義され、グループの資産を保有するスマートコントラクトが、分散型自律組織(DAO)のバックボーンです。 このスマートコントラクトがイーサリアム上で稼働し始めると、投票以外では誰もルールを変更できません。 もし誰かがコードのルールやロジックでカバーされていないことを試みても失敗に終わります。 また、資産はスマートコントラクトによって定義されているため、グループの承認なしには誰も組織の資金を使うことができません。 つまり、分散型自律組織(DAO)は中央集権を必要とせず、 グループが集合的に決定を下し、投票が可決されると支払いが自動的に承認されます。
+<h2 id="how-daos-work" spaces-before="0">
+  分散型自律組織(DAO)の仕組み
+</h2>
 
-これが可能なのは、スマートコントラクトがイーサリアム上で稼働すると、改ざんができないためです。 すべてが公開されているので、コード(分散型自律組織のルール)を誰にも気づかれずに、変更することはできません。
+<p spaces-before="0">
+  組織のルールを定義し、その組織の資産を保持している<a href="/glossary/#smart-contract">スマートコントラクト</a>が、分散型自律組織(DAO) のバックボーンです。 このスマートコントラクトがイーサリアム上で稼働し始めると、投票以外では誰もルールを変更できません。 もし誰かがコードのルールやロジックでカバーされていないことを試みても失敗に終わります。 また、資産はスマートコントラクトによって定義されているため、グループの承認なしには誰も組織の資金を使うことができません。 つまり、分散型自律組織(DAO)は中央集権を必要とせず、 グループが集合的に決定を下し、投票が可決されると支払いが自動的に承認されます。
+</p>
 
-<DocLink to="/smart-contracts/">
-  スマートコントラクトの詳細
-</DocLink>
+<p spaces-before="0">
+  これが可能なのは、スマートコントラクトがイーサリアム上で稼働すると、改ざんができないためです。 すべてが公開されているので、コード(分散型自律組織のルール)を誰にも気づかれずに、変更することはできません。
+</p>
 
-## イーサリアムと分散型自律組織(DAO) {#ethereum-and-daos}
+<h2 id="ethereum-and-daos" spaces-before="0">
+  イーサリアムと分散型自律組織(DAO)
+</h2>
 
-イーサリアムは、次の理由から分散型自律組織(DAO)の完璧な基盤となります。
+<p spaces-before="0">
+  イーサリアムは、次の理由から分散型自律組織(DAO)の完璧な基盤となります。
+</p>
 
-- イーサリアム独自のコンセンサス形成は分散化されており、イーサリアムネットワークは組織が信頼できるまでに確立されている。
-- スマートコントラクトのコードは、一度実行されると所有者であっても修正できないため、 分散型自律組織(DAO)はプログラムされたルールで稼働する。
-- スマートコントラクトは、資金の送受信が可能。 これができないと、グループ資金を管理する信頼できる仲介者が必要となる。
-- イーサリアムのコミュニティは、競争的なものではなく、むしろ協調的であることが証明されており、最善の方法やサポートシステムが迅速に生みだされている。
+<ul>
+  <li>
+    イーサリアム独自のコンセンサス形成は十分に分散・確立されていて、組織はネットワークを信頼することができる。
+  </li>
+  <li>
+    スマートコントラクトのコードは、一度実行されると所有者であっても修正できないため、 分散型自律組織(DAO)はプログラムされたルールで稼働する。
+  </li>
+  <li>
+    スマートコントラクトは、資金の送受信が可能。 これができないと、グループ資金を管理する信頼できる仲介者が必要となる。
+  </li>
+  <li>
+    イーサリアムのコミュニティは、競争的なものではなく、むしろ協調的であることが証明されており、最善の方法やサポートシステムが迅速に生みだされている。
+  </li>
+</ul>
 
-## 分散型自律組織(DAO)ガバナンス {#dao-governance}
+<h2 id="dao-governance" spaces-before="0">
+  分散型自律組織(DAO)ガバナンス
+</h2>
 
-分散型自律組織(DAO)のガバナンスには、投票や提案の仕組みなど様々な考慮事項があります。
+<p spaces-before="0">
+  分散型自律組織(DAO)のガバナンスには、投票や提案の仕組みなど様々な考慮事項があります。
+</p>
 
-### デリゲーション(委任) {#governance-delegation}
+<h3 id="governance-delegation" spaces-before="0">
+  デリゲーション(委任)
+</h3>
 
-デリゲーション(委任)とは、分散型自律組織版の議会制民主主義のようなものです。 トークン保有者は、プロトコルを管理し、最新情報を入手することをコミットする立候補者に投票権を委任します。
+<p spaces-before="0">
+  デリゲーション(委任)とは、分散型自律組織版の議会制民主主義のようなものです。 トークン保有者は、プロトコルを管理し、最新情報を入手することにコミットする立候補者に投票権を委任します。
+</p>
 
-#### 有名な事例 {#governance-example}
+<h4 id="governance-example" spaces-before="0">
+  有名な事例
+</h4>
 
-[ENS](https://claim.ens.domains/delegate-ranking) – ENS保有者は、自分たちの代表として、コミュニティメンバーに投票を委任できます。
+<p spaces-before="0">
+  <a href="https://claim.ens.domains/delegate-ranking">ENS</a> – ENS保有者は、自分たちの代表として、コミュニティメンバーに投票を委任できます。
+</p>
 
-### 自動トランザクションガバナンス {#governance-example}
+<h3 id="governance-example" spaces-before="0">
+  自動トランザクションガバナンス
+</h3>
 
-多くの分散型自律組織(DAO)では、メンバーの賛成票が定足数を満たせば自動的にトランザクションが実行されます。
+<p spaces-before="0">
+  多くの分散型自律組織(DAO)では、メンバーの賛成票が定足数を満たせば自動的にトランザクションが実行されます。
+</p>
 
-#### 有名な事例 {#governance-example}
+<h4 id="governance-example" spaces-before="0">
+  有名な事例
+</h4>
 
-[Nouns](https://nouns.wtf) – Nouns DAOでは、定足数を満たし、過半数が賛成票であれば、創設者が拒否権を行使しない限り、トランザクションは自動的に実行されます。
+<p spaces-before="0">
+  <a href="https://nouns.wtf">Nouns</a> – Nouns DAOでは、定足数を満たし、過半数が賛成票であれば、創設者が拒否権を行使しない限り、トランザクションは自動的に実行されます。
+</p>
 
-### マルチシグガバナンス {#governance-example}
+<h3 id="governance-example" spaces-before="0">
+  マルチシグガバナンス
+</h3>
 
-何千人もの投票権のあるメンバーが分散型自律組織(DAO)に在籍する一方、資金は5～20人のアクティブなメンバーが共有するウォレットに保有されている場合があります。これらのメンバーは信用されており、通常は個人情報が公開されています(コミュニティに公的な身元が公開)。 投票の結果をもって、マルチシグの署名者はコミュニティの意思を実施します。
+<p spaces-before="0">
+  分散型自律組織(DAO)には投票権のあるメンバーが何千人も在籍するかもしれませんが、資金は5～20人のアクティブなメンバーが共有する<a href="/glossary/#wallet">ウォレット</a>に保有されている場合があります。これらのメンバーは信用されており、通常は個人情報が公開されています(コミュニティに公的な身元が公開)。 投票の結果をもって、<a href="/glossary/#multisig">マルチシグ</a>の署名者はコミュニティの意思を実施します。
+</p>
 
-## 分散型自律組織(DAO)法 {#dao-laws}
+<h2 id="dao-laws" spaces-before="0">
+  分散型自律組織(DAO)法
+</h2>
 
-1977年にワイオミング州は、起業家を保護し、責任を有限にする合同会社(LLC)を制定しました。 近年では、ワイオミング州は分散型自律組織(DAO)の法的地位を確立する法律を制定し、パイオニアとなっています。 現在、ワイオミング州、バーモント州、ヴァージン諸島が、何らかの形の分散型自律組織(DAO)法があります。
+<p spaces-before="0">
+  1977年にワイオミング州は、起業家を保護し、責任を有限にする合同会社(LLC)を制定しました。 近年では、ワイオミング州は分散型自律組織(DAO)の法的地位を確立する法律を制定し、パイオニアとなっています。 現在、ワイオミング州、バーモント州、ヴァージン諸島に、何らかの形の分散型自律組織(DAO)法があります。
+</p>
 
-### 有名な事例 {#law-example}
+<h3 id="law-example" spaces-before="0">
+  有名な事例
+</h3>
 
-[CityDAO](https://citydao.io) – CityDAOは、ワイオミング州の分散型自律組織(DAO)法を利用して、イエローストーン国立公園近くの40エーカーの土地を購入しました。
+<p spaces-before="0">
+  <a href="https://citydao.io">CityDAO</a> – CityDAOは、ワイオミング州の分散型自律組織(DAO)法を利用して、イエローストーン国立公園近くの40エーカーの土地を購入しました。
+</p>
 
-## 分散型自律組織(DAO)のメンバーシップ {#dao-membership}
+<h2 id="dao-membership" spaces-before="0">
+  分散型自律組織(DAO)のメンバーシップ
+</h2>
 
-分散型自律組織(DAO)のメンバーシップにはいくつかのモデルがあります。 メンバーシップにより、投票の仕組みや分散型自律組織の他の重要な部分を決定します。
+<p spaces-before="0">
+  分散型自律組織(DAO)のメンバーシップにはいくつかのモデルがあります。 メンバーシップにより、投票の仕組みやDAOの他の重要な部分を決定することができます。
+</p>
 
-### トークンベースのメンバーシップ {#token-based-membership}
+<h3 id="token-based-membership" spaces-before="0">
+  トークンベースのメンバーシップ
+</h3>
 
-使用されるトークンにもよりますが、通常は完全にパーミッションレス型です。 ほとんどの場合、これらのガバナンストークンは、分散型取引所でパーミッションレスで取引できます。 それ以外のトークンは、流動性もしくはその他の「プルーフ・オブ・ワーク」を提供することで獲得する必要があります。 いずれにせよ、トークンの保持により投票権が付与されます。
+<p spaces-before="0">
+  使用されるトークンにもよりますが、通常は完全に<a href="/glossary/#permissionless">パーミッションレス</a>です。 ほとんどの場合、これらのガバナンストークンは、<a href="/glossary/#dex">分散型取引所</a>でパーミッションレスで取引できます。 それ以外のトークンは、流動性もしくはその他の「プルーフ・オブ・ワーク」を提供することで獲得する必要があります。 いずれにせよ、トークンの保持により投票権が付与されます。
+</p>
 
-_一般的には、広範な分散型プロトコルやトークン自体を管理するために使用されます。_
+<p spaces-before="0">
+  <em x-id="4">一般的には、広範な分散型プロトコルやトークン自体を管理するために使用されます。</em>
+</p>
 
-#### 有名な事例 {#token-example}
+<h4 id="token-example" spaces-before="0">
+  有名な事例
+</h4>
 
-[MakerDAO](https://makerdao.com) – MakerDAOのトークンであるMKRは、分散型取引所で入手可能で、誰でもMakerプロトコルの将来についての投票権を購入により得ることができます。
+<p spaces-before="0">
+  <a href="https://makerdao.com">MakerDAO</a> – MakerDAOのトークンであるMKRは分散型取引所で広く入手可能で、購入することにより、誰でもMakerプロトコルの将来についての投票権を得ることができます。
+</p>
 
-### シェアベースのメンバーシップ {#share-based-membership}
+<h3 id="share-based-membership" spaces-before="0">
+  シェアベースのメンバーシップ
+</h3>
 
-シェアベースの分散型自律組織(DAO)は、よりパーミッション型ではありますが、かなりオープンです。 分散型自律組織(DAO)への参加希望者は、トークンや作品といった何らかの価値のある物を提供することで、自分自身の参加を提案します。 シェアは、直接投票権と所有権を表します。 メンバーはいつでも、自分の保有する資産の持分を持って退会できます。
+<p spaces-before="0">
+  シェアベースの分散型自律組織(DAO)は、よりパーミッション型ではありますが、かなりオープンです。 分散型自律組織(DAO)への参加希望者は、トークンや作品といった何らかの価値のある物を提供することで、自分自身の参加を提案します。 シェアは、直接投票権と所有権を表します。 メンバーはいつでも、自分の保有する資産の持分を持って退会できます。
+</p>
 
-_一般的には、慈善団体やワーカーズ・コレクティブ、投資クラブなど、より密接な関係を持つ人間が中心となる組織に使われています。 また、プロトコルやトークンも管理できます。_
+<p spaces-before="0">
+  <em x-id="4">一般的には、慈善団体やワーカーズ・コレクティブ、投資クラブなど、より密接な関係を持つ人間が中心となる組織に使われています。 また、プロトコルやトークンも管理できます。</em>
+</p>
 
-#### 有名な事例 {#share-example}
+<h4 id="share-example" spaces-before="0">
+  有名な事例
+</h4>
 
-[MolochDAO](http://molochdao.com/) - MolochDAOは主にイーサリアムプロジェクトの資金調達を行っています。 メンバーになるには、提案が必要となります。この提案によって、あなたが助成先候補に関して、十分な情報に基づいて判断できるだけの必要な専門知識と資本を持っているかどうかが評価されます。 オープン市場で権利を購入して、この分散型自律組織(DAO)に参加することはできません。
+<p spaces-before="0">
+  <a href="http://molochdao.com/">MolochDAO</a> - MolochDAOは主にイーサリアムプロジェクトの資金調達を行っています。 メンバーになるには、提案が必要となります。この提案によって、あなたが助成先候補に関して、十分な情報に基づいて判断できるだけの必要な専門知識と資本を持っているかどうかが評価されます。 オープン市場で権利を購入するだけでは、この分散型自律組織(DAO)に参加することはできません。
+</p>
 
-### レピュテーション(評価・評判)ベースのメンバーシップ {#reputation-based-membership}
+<h3 id="reputation-based-membership" spaces-before="0">
+  レピュテーション(評価・評判)ベースのメンバーシップ
+</h3>
 
-レピュテーション(評価・評判)とは、分散型自律組織(DAO)における参加証明と投票権の付与を表します。 トークンやシェアベースのメンバーシップとは異なり、レピュテーションベースの分散型自律組織(DAO)は所有権をコントリビューターに譲渡しません。 レピュテーションは購入、移管、または委任できず、分散型自律組織メンバーは参加を通じてレピュテーションを構築する必要があります。 オンチェーン投票はパーミッションレスで、メンバー候補は分散型自律組織(DAO)への参加を自由に提案でき、貢献の対価としてレピュテーションやトークンを受け取ることを要求することができます。
+<p spaces-before="0">
+  レピュテーション(評価・評判)とは、分散型自律組織(DAO)における参加証明と投票権の付与を表します。 トークンやシェアベースのメンバーシップとは異なり、レピュテーションベースの分散型自律組織(DAO)は所有権をコントリビューターに譲渡しません。 レピュテーションは購入、移管、または委任できず、分散型自律組織メンバーは参加を通じてレピュテーションを構築する必要があります。 オンチェーン投票はパーミッションレスで、メンバー候補は分散型自律組織(DAO)への参加を自由に提案でき、貢献の対価としてレピュテーションやトークンを受け取ることを要求することができます。
+</p>
 
-_主にプロトコルや分散型アプリ(Dapp)の分散型開発や分散型ガバナンスに利用されていますが、慈善団体、ワーカーズ・コレクティブ、投資クラブなど、多様な組織にも向いています。_
+<p spaces-before="0">
+  <em x-id="4">主にプロトコルや<a href="/glossary/#dapp">分散型アプリ(Dapp)</a>の分散型開発や分散型ガバナンスに利用されていますが、慈善団体、ワーカーズ・コレクティブ、投資クラブなど、多様な組織にも向いています。</em>
+</p>
 
-#### 有名な事例 {#reputation-example}
+<h4 id="reputation-example" spaces-before="0">
+  有名な事例
+</h4>
 
-[DXdao](https://DXdao.eth.link) - DXdaoは、2019年から分散型プロトコルやアプリケーションを構築し統治するグローバル・ソブリン団体です。 レピュテーションに基づくガバナンスとホログラフィック・コンセンサスを活用して資金を調整・管理しています。つまり、誰かが金銭的な手段を使って、DXdaoの今後に影響をおよぼすことができません。
+<p spaces-before="0">
+  <a href="https://DXdao.eth.limo">DXdao</a> - DXdaoは、2019年から分散型プロトコルやアプリケーションを構築し統治するグローバル・ソブリン団体でした。 レピュテーションに基づくガバナンスと<a href="/glossary/#holographic-consensus">ホログラフィック・コンセンサス</a>を活用して資金を調整・管理することで、誰かが金銭的な手段を使って、DXdaoの今後に影響をおよぼしたり、支配したりすることはできませんでした。
+</p>
 
-## DAOに参加する/DAOを立ち上げる {#join-start-a-dao}
+<h2 id="join-start-a-dao" spaces-before="0">
+  DAOに参加する/DAOを立ち上げる
+</h2>
 
-### 分散型自律組織(DAO)への参加 {#join-a-dao}
+<h3 id="join-a-dao" spaces-before="0">
+  分散型自律組織(DAO)への参加
+</h3>
 
-- [イーサリアムコミュニティ分散型自律組織(DAO)](/community/get-involved/#decentralized-autonomous-organizations-daos)
-- [DAOHausの分散型自律組織(DAO)リスト](https://app.daohaus.club/explore)
-- [Tally.xyzの分散型自律組織(DAO)リスト](https://www.tally.xyz)
+<ul>
+  <li>
+    <a href="/community/get-involved/#decentralized-autonomous-organizations-daos">イーサリアムコミュニティ分散型自律組織(DAO)</a>
+  </li>
+  <li>
+    <a href="https://app.daohaus.club/explore">DAOHausの分散型自律組織(DAO)リスト</a>
+  </li>
+  <li>
+    <a href="https://www.tally.xyz">Tally.xyzの分散型自律組織(DAO)リスト</a>
+  </li>
+</ul>
 
-### 分散型自律組織(DAO)を始める {#start-a-dao}
+<h3 id="start-a-dao" spaces-before="0">
+  分散型自律組織(DAO)を始める
+</h3>
 
-- [DAOHausで分散型自律組織(DAO)を招集](https://app.daohaus.club/summon)
-- [TallyでGovernor DAOを始める](https://www.tally.xyz/add-a-dao)
-- [Aragonによる分散型自律組織(DAO)を作成](https://aragon.org/product)
-- [コロニーを始める](https://colony.io/)
-- [DAOstackのホログラフィック・コンセンサスでDAOを作成](https://alchemy.daostack.io/daos/create)
+<ul>
+  <li>
+    <a href="https://app.daohaus.club/summon">DAOHausで分散型自律組織(DAO)を招集</a>
+  </li>
+  <li>
+    <a href="https://www.tally.xyz/add-a-dao">TallyでGovernor DAOを始める</a>
+  </li>
+  <li>
+    <a href="https://aragon.org/product">Aragonによる分散型自律組織(DAO)を作成</a>
+  </li>
+  <li>
+    <a href="https://colony.io/">コロニーを始める</a>
+  </li>
+  <li>
+    <a href="https://alchemy.daostack.io/daos/create">DAOstackのホログラフィック・コンセンサスでDAOを作成</a>
+  </li>
+</ul>
 
-## 参考文献 {#further-reading}
+<h2 id="further-reading" spaces-before="0">
+  参考文献
+</h2>
 
-### 分散型自律組織(DAO)の関連記事 {#dao-articles}
+<h3 id="dao-articles" spaces-before="0">
+  分散型自律組織(DAO)の関連記事
+</h3>
 
-- [分散型自律組織(DAO)とは](https://aragon.org/dao) – [Aragon](https://aragon.org/)
-- [DAOハンドブック](https://daohandbook.xyz)
-- [分散型自律組織(DAO)](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
-- [分散型自律組織(DAO)とは、およびその目的](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
-- [分散型自律組織(DAO)のデジタルコミュニティの作成方法](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
-- [分散型自律組織(DAO)とは](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
-- [ホログラフィック・コンセンサスとは](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [分散型自律組織(DAO)とは企業ではなく、分散型の自律組織 – Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
-- [分散型自律組織(DAO)、分散型自律企業(DAC)、分散型アプリケーション(DA)など: 不完全な用語集](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [イーサリアムブログ](https://blog.ethereum.org)
+<ul>
+  <li>
+    <a href="https://aragon.org/dao">分散型自律組織(DAO)とは</a> – <a href="https://aragon.org/">Aragon</a>
+  </li>
+  <li>
+    <a href="https://wiki.metagame.wtf/docs/great-houses/house-of-daos">分散型自律組織(DAO)</a> – <a href="https://wiki.metagame.wtf/">Metagame</a>
+  </li>
+  <li>
+    <a href="https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for">分散型自律組織(DAO)とは、およびその目的</a> – <a href="https://daohaus.club/">DAOhaus</a>
+  </li>
+  <li>
+    <a href="https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a">分散型自律組織(DAO)のデジタルコミュニティの作成方法</a> – <a href="https://daohaus.club/">DAOhaus</a>
+  </li>
+  <li>
+    <a href="https://coinmarketcap.com/alexandria/article/what-is-a-dao">分散型自律組織(DAO)とは</a> – <a href="https://coinmarketcap.com">Coinmarketcap</a>
+  </li>
+  <li>
+    <a href="https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c">ホログラフィック・コンセンサスとは</a> - <a href="https://daostack.io/">DAOstack</a>
+  </li>
+  <li>
+    <a href="https://vitalik.eth.limo/general/2022/09/20/daos.html">分散型自律組織(DAO)とは企業ではなく、分散型の自律組織 – Vitalik</a>
+  </li>
+  <li>
+    <a href="https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide">分散型自律組織(DAO)、分散型自律企業(DAC)、分散型アプリケーション(DA)など: 不完全な用語集</a> - <a href="https://blog.ethereum.org">イーサリアムブログ</a>
+  </li>
+</ul>
 
-### ビデオ {#videos}
+<h3 id="videos" spaces-before="0">
+  ビデオ
+</h3>
 
-- [仮想通貨における分散型自律組織(DAO)とは](https://youtu.be/KHm0uUPqmVE)
-- [分散型自律組織(DAO)で街はつくれるのか?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
+<ul>
+  <li>
+    <a href="https://youtu.be/KHm0uUPqmVE">仮想通貨における分散型自律組織(DAO)とは</a>
+  </li>
+  <li>
+    <a href="https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city">分散型自律組織(DAO)で街はつくれるのか?</a> – <a href="https://www.ted.com/">TED</a>
+  </li>
+</ul>
