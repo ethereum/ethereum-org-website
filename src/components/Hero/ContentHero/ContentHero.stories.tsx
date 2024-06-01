@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react"
 
+import { getTranslation } from "@/storybook-utils"
+
 import { langViewportModes } from "../../../../.storybook/modes"
 
 import ContentHeroComponent, { ContentHeroProps } from "."
-
-import { getTranslation } from "@/storybook-utils"
 
 const meta = {
   title: "Organisms / Layouts / Hero",

@@ -3,9 +3,9 @@ import { Meta, type StoryObj } from "@storybook/react"
 
 import { Button } from "@/components/Buttons"
 
-import CardComponent, { CardProps } from "."
-
 import { getTranslation } from "@/storybook-utils"
+
+import CardComponent, { CardProps } from "."
 
 const meta = {
   component: CardComponent,

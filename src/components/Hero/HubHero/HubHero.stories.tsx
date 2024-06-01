@@ -2,12 +2,13 @@ import * as React from "react"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
+import { getTranslation } from "@/storybook-utils"
+
 import { langViewportModes } from "../../../../.storybook/modes"
 
 import HubHeroComponent, { type HubHeroProps } from "./"
 
 import learnHubHeroImg from "@/public/heroes/learn-hub-hero.png"
-import { getTranslation } from "@/storybook-utils"
 
 const meta = {
   title: "Organisms / Layouts / Hero",
