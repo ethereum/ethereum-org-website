@@ -37,7 +37,7 @@ const HomeHero = ({ heroImg }: HomeHeroProps) => {
             <Heading as="h1" size="2xl">
               {t("page-index:page-index-title")}
             </Heading>
-            <Text>{t("page-index:page-index-description")}</Text>
+            <Text size="lg">{t("page-index:page-index-description")}</Text>
             <ButtonLink href="/learn/">
               {t("page-index:page-index-title-button")}
             </ButtonLink>
