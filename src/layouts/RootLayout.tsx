@@ -9,8 +9,6 @@ import FeedbackWidget from "@/components/FeedbackWidget"
 import Footer from "@/components/Footer"
 import Nav from "@/components/Nav"
 import { SkipLink } from "@/components/SkipLink"
-import TranslationBanner from "@/components/TranslationBanner"
-import TranslationBannerLegal from "@/components/TranslationBannerLegal"
 
 import { toPosixPath } from "@/lib/utils/relativePath"
 

@@ -2,7 +2,6 @@ import * as React from "react"
 import { RiInformationLine } from "react-icons/ri"
 import { Box, Center } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
-import { expect, userEvent, waitFor, within } from "@storybook/test"
 
 import InlineLink from "../Link"
 import Translation from "../Translation"

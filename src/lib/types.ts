@@ -350,11 +350,13 @@ export type CostLeaderboardData = Pick<
   }
 
 // GitHub contributors
+
 export type Commit = {
   commit: {
     author: {
       name: string
       email: string
+      date: string
     }
   }
   author: {
