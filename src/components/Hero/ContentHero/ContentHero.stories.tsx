@@ -1,8 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react"
 
-import ContentHeroComponent from "."
+import { langViewportModes } from "../../../../.storybook/modes"
 
-import contentHeroImg from "@/public/mainnet.png"
+import ContentHeroComponent, { ContentHeroProps } from "."
+
 import { getTranslation } from "@/storybook-utils"
 
 const meta = {
@@ -10,11 +11,9 @@ const meta = {
   component: ContentHeroComponent,
   parameters: {
     layout: "none",
-  },
-  argTypes: {
-    heroImg: {
-      table: {
-        disable: true,
+    chromatic: {
+      modes: {
+        ...langViewportModes,
       },
     },
   },
@@ -22,34 +21,38 @@ const meta = {
 
 export default meta
 
-const LEARN_NS = "page-learn"
-
 export const ContentHero: StoryObj = {
-  render: () => (
-    <ContentHeroComponent
-      breadcrumbs={{ slug: "/en/run-a-node/" }}
-      heroImg={contentHeroImg}
-      title={getTranslation("hero-header", LEARN_NS)}
-      description={getTranslation("hero-subtitle", LEARN_NS)}
-      buttons={[
-        {
-          content: getTranslation("hero-button-lets-get-started", LEARN_NS),
-          toId: "what-is-crypto-ethereum",
-          matomo: {
-            eventCategory: "learn hub hero buttons",
-            eventAction: "click",
-            eventName: "lets get started",
-          },
+  render: () => {
+    const PAGE_LEARN_NS = "page-learn"
+    const buttons: ContentHeroProps["buttons"] = [
+      {
+        content: getTranslation("hero-button-lets-get-started", PAGE_LEARN_NS),
+        toId: "what-is-crypto-ethereum",
+        matomo: {
+          eventCategory: "learn hub hero buttons",
+          eventAction: "click",
+          eventName: "lets get started",
         },
-        {
-          content: "Button",
-          matomo: {
-            eventCategory: "learn hub hero buttons",
-            eventAction: "click",
-            eventName: "lets get started",
-          },
+      },
+      {
+        content: "Button",
+        matomo: {
+          eventCategory: "learn hub hero buttons",
+          eventAction: "click",
+          eventName: "lets get started",
         },
-      ]}
-    />
-  ),
+      },
+    ]
+    return (
+      <ContentHeroComponent
+        breadcrumbs={{ slug: "/en/run-a-node/" }}
+        heroImg="/upgrades/merge.png"
+        // Can not properly hardcode this URL. So it's left blank
+        blurDataURL=""
+        title={getTranslation("hero-header", PAGE_LEARN_NS)}
+        description={getTranslation("hero-subtitle", PAGE_LEARN_NS)}
+        buttons={buttons}
+      />
+    )
+  },
 }

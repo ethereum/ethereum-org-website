@@ -9,6 +9,5 @@ addons.setConfig({
 // In order to override the default favicon, and inject a data hash link to the png
 const link = document.createElement("link")
 link.setAttribute("rel", "shortcut icon")
-// @ts-ignore
-link.setAttribute("href", favicon)
+link.setAttribute("href", favicon.src)
 document.head.appendChild(link)

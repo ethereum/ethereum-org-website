@@ -1,6 +1,8 @@
 import { HStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
+import { langViewportModes } from "../../../../.storybook/modes"
+
 import MdxHeroComponent from "./"
 
 const meta = {
@@ -8,6 +10,11 @@ const meta = {
   component: MdxHeroComponent,
   parameters: {
     layout: "none",
+    chromatic: {
+      modes: {
+        ...langViewportModes,
+      },
+    },
   },
   decorators: [
     (Story) => (
