@@ -19,11 +19,10 @@ import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
-import CrowdinContributors from "@/components/CrowdinContributors"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FeedbackCard from "@/components/FeedbackCard"
-import GitHubContributors from "@/components/GitHubContributors"
+import FileContributors from "@/components/FileContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
@@ -40,10 +39,6 @@ import TutorialMetadata from "@/components/TutorialMetadata"
 import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"
-
-import { DEFAULT_LOCALE } from "@/lib/constants"
-
-import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
 type ContentContainerProps = Pick<BoxProps, "children" | "dir">
 
@@ -159,10 +154,7 @@ export const tutorialsComponents = {
   YouTube,
 }
 type TutorialLayoutProps = ChildOnlyProp &
-  Pick<
-    MdPageContent,
-    "tocItems" | "crowdinContributors" | "contentNotTranslated"
-  > &
+  Pick<MdPageContent, "tocItems" | "contributors" | "contentNotTranslated"> &
   Required<Pick<MdPageContent, "lastUpdatedDate">> & {
     frontmatter: TutorialFrontmatter
     timeToRead: number
@@ -174,18 +166,13 @@ export const TutorialLayout = ({
   tocItems,
   timeToRead,
   lastUpdatedDate,
-  crowdinContributors,
+  contributors,
   contentNotTranslated,
 }: TutorialLayoutProps) => {
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = getEditPath(relativePath)
 
   const borderColor = useToken("colors", "border")
-  const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
-  const intlLastEdit =
-    "data" in gitHubLastEdit ? gitHubLastEdit.data! : lastUpdatedDate
-  const useGitHubContributors =
-    frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
   return (
     <>
@@ -207,18 +194,10 @@ export const TutorialLayout = ({
             pt={8}
           />
           {children}
-          {useGitHubContributors ? (
-            <GitHubContributors
-              relativePath={relativePath}
-              lastUpdatedDate={lastUpdatedDate}
-            />
-          ) : (
-            <CrowdinContributors
-              relativePath={relativePath}
-              lastUpdatedDate={intlLastEdit}
-              contributors={crowdinContributors}
-            />
-          )}
+          <FileContributors
+            contributors={contributors}
+            lastEdit={lastUpdatedDate}
+          />
           <FeedbackCard />
         </ContentContainer>
         {tocItems && (

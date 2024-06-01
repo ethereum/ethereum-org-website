@@ -15,6 +15,8 @@ import {
 
 import { DEFAULT_LOCALE, PLACEHOLDER_IMAGE_DIR } from "@/lib/constants"
 
+import { toPosixPath } from "../utils/relativePath"
+
 interface Options {
   dir: string
   srcPath: string
@@ -77,7 +79,9 @@ const setImagePlaceholders = async (
   srcPath: string
 ): Promise<void> => {
   // Generate kebab-case filename from srcPath, ie: /content/nft => content-nft-data.json
-  const FILENAME = path.join(srcPath, "data.json").replaceAll("/", "-").slice(1)
+  const FILENAME = toPosixPath(path.join(srcPath, "data.json"))
+    .replaceAll("/", "-")
+    .slice(1)
 
   // Make directory for current page if none exists
   if (!fs.existsSync(PLACEHOLDER_IMAGE_DIR))

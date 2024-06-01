@@ -16,6 +16,7 @@ import type {
   UseCasesFrontmatter,
 } from "@/lib/interfaces"
 
+import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import { SimulatorNav } from "@/components/Simulator/interfaces"
 
@@ -373,6 +374,16 @@ export type Author = {
   }
 }
 
+export type FileContributor = {
+  login: string
+  avatar_url: string
+  html_url: string
+  date?: string
+}
+
+type FilePath = string
+export type CommitHistory = Record<FilePath, FileContributor[]>
+
 /**
  * Table of contents
  */
@@ -402,12 +413,52 @@ export type IRemarkTocOptions = {
 
 type HeroButtonProps = Omit<CallToActionProps, "index">
 
-export type CommonHeroProps = {
-  heroImg: StaticImageData
-  header: string
-  title: string
-  description: string
+/**
+ * General props to be picked or omitted for any of the hero components
+ *
+ * The generic prop type `HeroImg` is assigned to the `heroImg` prop
+ * to be able to declare either defining the prop as a static image object
+ * or a string. (defaults to `StaticImageData`)
+ */
+export type CommonHeroProps<
+  HeroImg extends StaticImageData | string = StaticImageData
+> = {
+  /**
+   * Decorative image displayed as the full background or an aside to
+   * the text content
+   *
+   * Note: It is either required as a static image data object or the
+   * relative path of the image file, depending on the setup of the image component
+   * for the given hero component.
+   */
+  heroImg: HeroImg
+  /**
+   * File path for the image to show on prerender.
+   */
+  blurDataURL: string
+  /**
+   * Object of props to render the `Breadcrumbs` component.
+   */
+  breadcrumbs: BreadcrumbsProps
+  /**
+   * An array of content to render call-to-action buttons that leads the user to a section or sections of the
+   * given page from the hero.
+   *
+   * The hero can render no buttons or up to and no more than two.
+   */
   buttons?: [HeroButtonProps, HeroButtonProps?]
+  /**
+   * The primary title of the page
+   */
+  title: string
+  /**
+   * A tag name for the page
+   */
+  header: string
+  /**
+   * Preface text about the content in the given page
+   */
+  description: ReactNode
 }
 
 // Learning Tools

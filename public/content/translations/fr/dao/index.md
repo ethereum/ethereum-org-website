@@ -42,7 +42,7 @@ Pour aider votre compréhension, voici quelques exemples de la façon dont vous 
 
 - Un organisme caritatif – vous pouvez accepter les dons de n'importe qui dans le monde entier et voter pour les causes à financer.
 - Propriété collective – vous pouvez acheter des actifs physiques ou numériques et les membres peuvent voter sur la façon de les utiliser.
-- Ventures et subventions – vous pourriez créer un fonds de risque qui regroupe le capital d’investissement et qui votera pour savoir quelles les entreprises garder. L'argent perçu pourra plus tard être redistribué entre les membres de la DAO.
+- Ventures et subventions – vous pourriez créer un fonds de risque qui regroupe le capital d’investissement et qui votera pour savoir quelles entreprises garder. L'argent perçu pourra plus tard être redistribué entre les membres de la DAO.
 
 ## Comment fonctionnent les DAO ? {#how-daos-work}
 

@@ -8,6 +8,10 @@ export type PillProps = FlexProps & {
   color?: string
 }
 
+/**
+ * @deprecated To be removed in favor of Tag or Badge component
+ *
+ */
 const Pill = ({
   children,
   className,

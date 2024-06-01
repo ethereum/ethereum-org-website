@@ -1,7 +1,5 @@
 import { create } from "@storybook/theming"
 
-import brandImage from "./preview-logo.svg"
-
 export default create({
   base: "dark",
 
@@ -10,8 +8,7 @@ export default create({
   appBorderRadius: 4,
 
   brandTitle: "Ethereum.org",
-  // @ts-expect-error - image typed as object from NextJS, but is fine here (expecting string)
-  brandImage,
+  brandImage: "./preview-logo.svg",
   brandUrl: "https://www.ethereum.org",
 
   barSelectedColor: "#ff7324",

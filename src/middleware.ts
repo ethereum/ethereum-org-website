@@ -23,13 +23,11 @@ function detectLocale(acceptLanguage: string | null) {
 
 export const config = {
   matcher: [
+    "/", // explicit matcher for root route
     /*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
      * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     * - .well-known (security files)
      */
     "/((?!api|_next/static).*)",
   ],

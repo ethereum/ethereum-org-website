@@ -25,8 +25,12 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [Ethplorer](https://ethplorer.io/) -_Also available in Chinese, Spanish, French, Turkish, Russian, Korean and Vietnamese_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Otterscan](https://otterscan.io/)
 - [Rantom](https://rantom.app/)
+
+## Open source tools {#open-source-tools}
+
+- [Otterscan](https://otterscan.io/)
+- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 
 ## Data {#data}
 
