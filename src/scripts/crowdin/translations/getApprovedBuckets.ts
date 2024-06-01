@@ -7,11 +7,11 @@ import type { BucketsList } from "../import/types"
 import { APPROVAL_THRESHOLD } from "./constants"
 
 async function getApprovedBuckets(): Promise<BucketsList> {
+  console.log("⏳ Getting approved buckets...")
   const projectId = Number(process.env.CROWDIN_PROJECT_ID) || 363359
 
   const bucketsList: BucketsList = {}
 
-  // TODO: Consider regenerating bucketDirs list on each run for fidelity
   for (const bucketDir of bucketDirs) {
     const directoryProgress =
       await crowdin.translationStatusApi.getDirectoryProgress(

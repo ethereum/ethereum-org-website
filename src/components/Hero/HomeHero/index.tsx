@@ -17,7 +17,8 @@ const HomeHero = ({ heroImg }: HomeHeroProps) => {
         <Image
           src={heroImg}
           alt={t("page-index:page-index-hero-image-alt")}
-          sizes="100vw"
+          // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+          sizes="(max-width: 1504px) 100vw, 1504px"
           w="full"
           h="full"
           priority
