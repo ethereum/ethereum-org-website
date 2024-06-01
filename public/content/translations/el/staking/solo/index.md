@@ -2,7 +2,7 @@
 title: Αποθηκεύστε τα ETH σας μόνοι σας
 description: Μια επισκόπηση πώς να ξεκινήσετε μόνοι σας την αποθήκευση των ETH σας
 lang: el
-template: staking
+template: staking (αποθήκευση)
 emoji: ":money_with_wings:"
 image: /staking/leslie-solo.png
 alt: Η Leslie ο ρινόκερος στο δικό της υπολογιστή.
