@@ -1,7 +1,7 @@
 name: Suggest a dapp
 description: Suggest a new dapp to list on ethereum.org
 title: Suggest a dapp
-labels: ["feature :sparkles:", "content :fountain_pen:"]
+labels: ["product 🧰"]
 body:
   - type: markdown
     attributes:
