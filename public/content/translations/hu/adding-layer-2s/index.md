@@ -8,7 +8,7 @@ lang: hu
 
 Biztosítani szeretnénk, hogy a lehető legjobb erőforrásokat soroljuk fel, hogy a felhasználók biztonságosan és magabiztosan navigálhassanak a 2. rétegű területen.
 
-Bárki szabadon javasolhatja egy 2. réteg hozzáadását az ethereum.org webhelyen. Ha van egy 2. réteg, amelyet kihagytunk, **[kérjük, javasolja](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels =feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
+Bárki szabadon javasolhatja egy 2. réteg hozzáadását az ethereum.org webhelyen. Ha van egy 2. réteg, amelyet kihagytunk, **[kérjük, javasolja](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
 We currently list L2s on the following pages:
 

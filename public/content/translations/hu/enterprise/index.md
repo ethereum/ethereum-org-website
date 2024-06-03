@@ -102,7 +102,7 @@ Amennyiben Ön az alkalmazását egy L2 skálázási megoldásra építi, az [me
 - [hCaptcha](https://www.hcaptcha.com/) _Botkizáró CAPTCHA rendszer, amely fizet a weboldal működtetőinek a felhasználók által végzett munkáért, akik a gépi tanulás számára jelölik az adatokat. Már telepítve van a Cloudflare-en is._
 - [Opera MiniPay](https://www.opera.com/products/minipay) _megkönnyíti és biztonságosabbá teszi a mobilfizetést az afrikaiaknak, akiknek egy saját felügyeletű tárcával, és a telefonszámokkal egyszerűbbé teszi a tranzakciókat_
 -
-- [SAP Digital Currency Hub](https://community.sap.com/t5/technology-blogs-by-sap/cross-border-payments-made-easy-with-digital-money-experience-the-future/ba-p /13560384) _határokon átnyúló fizetések stabil érmékkel_
+- [SAP Digital Currency Hub](https://community.sap.com/t5/technology-blogs-by-sap/cross-border-payments-made-easy-with-digital-money-experience-the-future/ba-p/13560384) _határokon átnyúló fizetések stabil érmékkel_
 - [Toku](https://www.toku.com/) _payroll, token grant administration, tax compliance, local employment, benefits & distributed HR solutions_
 - [Xerof](https://www.xerof.com/) _facilitates fast and inexpensive international (cross-border) B2B payments_
 

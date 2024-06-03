@@ -16,7 +16,7 @@ Ezen az oldalon a felhasználó megadhatja, hol él, és megnézheti, milyen cse
 
 Emiatt a kontextus miatt szükségünk van néhány konkrét információra, amikor cserét javasol.
 
-**MEGJEGYZÉS:** Ha decentralizált tőzsdét szeretne listázni, tekintse meg [pénztárcák és dapps listára vonatkozó irányelveinket ](/contributing/adding-products/).
+**MEGJEGYZÉS:** Ha decentralizált tőzsdét szeretne listázni, tekintse meg [pénztárcák és dapps listára vonatkozó irányelveinket](/contributing/adding-products/).
 
 ## Amire szükségünk van {#what-we-need}
 

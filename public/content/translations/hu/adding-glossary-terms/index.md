@@ -23,4 +23,4 @@ Az új szószedeti kifejezéseket a következő kritériumok alapján értékelj
 
 ## Adja hozzá a kifejezést {#how-decisions-about-the-site-are-made}
 
-Ha egy szószedetet szeretne hozzáadni az ethereum.org webhelyhez, és az megfelel a feltételeknek, [probléma létrehozása a GitHubon](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+ %3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).
+Ha egy szószedetet szeretne hozzáadni az ethereum.org webhelyhez, és az megfelel a feltételeknek, [probléma létrehozása a GitHubon](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).
