@@ -3,6 +3,7 @@ import {
   BarElement,
   CategoryScale,
   Chart as ChartJS,
+  ChartData,
   Legend,
   LinearScale,
 } from "chart.js"
@@ -224,7 +225,7 @@ const EnergyConsumptionChart = () => {
         },
       },
     },
-  } satisfies ChartOptions
+  }
 
   // chart custom legend
   const chartLegend = wrapLabel(
