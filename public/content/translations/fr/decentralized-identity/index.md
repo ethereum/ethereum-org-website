@@ -162,16 +162,10 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _Un registre/protocole décentralisé pour faire des attestations en chaîne ou hors chaîne sur quoi que ce soit._
 - **[Preuve d'humanité](https://www.proofofhumanity.id)** - _Preuve d'humanité (ou PoH) est un système de vérification d'identité sociale construit sur Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _Un réseau d'identité sociale décentralisé et open-source qui cherche à réformer la vérification d'identité par la création et l'analyse d'un graphe social._
-- **
-walt.id</strong> — _Infrastructure décentralisée et open source d'identité et de portefeuille qui permet aux développeurs et aux organisations de tirer parti de l'identité souveraine et des NFT/SBT._</li> 
-  
-  - **[Masca](https://masca.io/)** - _Portefeuille open source d'identité décentralisée implémenté en tant que Snap MetaMask qui permet aux utilisateurs et aux développeurs de tirer parti des identifiants décentralisés (DID) et des identifiants vérifiables (VC)._</ul> 
-
-
+- **[walt.id](https://walt.id)** — _Infrastructure décentralisée et open source d'identité et de portefeuille qui permet aux développeurs et aux organisations de tirer parti de l'identité souveraine et des NFT/SBT._  
+- **[Masca](https://masca.io/)** - _Portefeuille open source d'identité décentralisée implémenté en tant que Snap MetaMask qui permet aux utilisateurs et aux développeurs de tirer parti des identifiants décentralisés (DID) et des identifiants vérifiables (VC)._
 
 ## Complément d'information {#further-reading}
-
-
 
 ### Articles {#articles}
 
