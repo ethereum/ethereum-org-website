@@ -64,6 +64,7 @@ Különféle szervezetek számtalan együttműködésen alapuló erőfeszítést
 - [Blockapps](https://blockapps.net/) - _a vállalati Ethereum-protokoll, az eszközkészlet és az API-ok implementációja, melyek a STRATO platformot alkotják_
 - [Chainstack](https://chainstack.com/) - _az Ethereum főhálózatára és teszthálózataira biztosít infrastruktúrát, amelyet nyilvános és elkülönített vevői felhőkben hosztol_
 - [ConsenSys](https://consensys.io/) - _számos terméket és eszközt kínál az Ethereum fejlesztésére, valamint tanácsadási és egyedi fejlesztési szolgáltatásokat nyújt_
+- [Crossmint](http://crossmint.com/) – _Vállalati szintű web3 fejlesztési platform okosszerződések telepítéséhez, hitelkártyás és láncok közötti fizetések lehetővé tételéhez, valamint API-ok használatára NFT-k létrehozása, terjesztése, értékesítése, tárolása és szerkesztése érdekében._
 - [Envision Blockchain](https://envisionblockchain.com/) - _az Ethereum főhálózatra szakosodott, vállalati fókuszú, tanácsadási és fejlesztési szolgáltatásokat nyújt_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) - _beszerzési munkafolyamatot biztosít, melynek során ajánlatbekéréseket (RFQ), szerződéseket, rendeléseket és számlákat bocsát ki az Ön megbízható üzleti partnereiből álló hálózatán keresztül_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _egy vállalati fókuszú, nyílt forráskódú Ethereum-kliens Apache 2.0 licensszel fejlesztve és Java nyelven írva_
@@ -91,60 +92,91 @@ Amennyiben Ön az alkalmazását egy L2 skálázási megoldásra építi, az [me
 
 ## Vállalati alkalmazások a főhálózaton {#enterprise-live-on-mainnet}
 
-Az alábbiakban néhány olyan vállalati alkalmazást talál, amelyeket a nyilvános Ethereum főhálózatra telepítettek
+Íme néhány olyan vállalati alkalmazás, amelyet hagyományos, nem blokklánc alapú vállalatok építettek a nyilvános Ethereum főhálózatra és L2-re.
 
 ### Fizetések {#payments}
 
 - A [Brave Browser](https://basicattentiontoken.org/) _a felhasználóknak fizet, hogy hirdetéseket nézzenek, a felhasználók pedig fizetéssel támogathatják a kiadókat a Basic Attention Token segítségével._
-- [hCaptcha](https://www.hcaptcha.com/) _Botkizáró CAPTCHA rendszer, amely fizet a weboldal működtetőinek a felhasználók által végzett munkáért, akik a gépi tanulás számára jelölik az adatokat. Már telepítve van a Cloudflare-en is._
+- [Lugano városa Svájcban](https://bitcoinsuisse.com/news/city-of-lugano-accepts-crypto-payments) _adófizetés és egyéb önkormányzati szolgáltatások_
 - Az [EthereumAds](https://ethereumads.com/) _lehetővé teszi a weboldal működtetőinek, hogy reklámhelyeket értékesítsenek és az Ethereum keresztül kapjanak érte pénzt_
+- [hCaptcha](https://www.hcaptcha.com/) _Botkizáró CAPTCHA rendszer, amely fizet a weboldal működtetőinek a felhasználók által végzett munkáért, akik a gépi tanulás számára jelölik az adatokat. Már telepítve van a Cloudflare-en is._
+- [Opera MiniPay](https://www.opera.com/products/minipay) _megkönnyíti és biztonságosabbá teszi a mobilfizetést az afrikaiaknak, akiknek egy saját felügyeletű tárcával, és a telefonszámokkal egyszerűbbé teszi a tranzakciókat_
+-
+- [SAP Digital Currency Hub](https://community.sap.com/t5/technology-blogs-by-sap/cross-border-payments-made-easy-with-digital-money-experience-the-future/ba-p /13560384) _határokon átnyúló fizetések stabil érmékkel_
+- [Toku](https://www.toku.com/) _payroll, token grant administration, tax compliance, local employment, benefits & distributed HR solutions_
+- [Xerof](https://www.xerof.com/) _facilitates fast and inexpensive international (cross-border) B2B payments_
 
 ### Pénzügy {#finance}
 
-- [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _kötvénykibocsátás és elszámolás_
-- [Societe Generale](https://www.generali-investments.com/it/en/institutional/article/generali-investments-and-generali-iard-carry-out-first-market-transaction-based-on-blockchain-infrastructure) _kötványkibocsátás_
-- [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _kötvényajánlat és FAT Brand-ek tokenizálása_
+- [ABN AMRO](https://tokeny.com/tokeny-fuels-abn-amro-bank-in-tokenizing-green-bonds-on-polygon/) _with Tokeny, tokenized green bonds_
+- [Mata Capital](https://consensys.io/blockchain-use-cases/finance/mata-capital) _real estate investment tokenization_
+- [Siemens](https://press.siemens.com/global/en/pressrelease/siemens-issues-first-digital-bond-blockchain) _bond issuance_
 - [Sila](https://silamoney.com/) _bankolásra és ACH-fizetésre szolgáló infrastruktúra mint szolgáltatás egy stabil érmét használva_
+- [Societe Generale FORGE](https://www.sgforge.com/product/bonds/) _bond issuance_
 - [Taurus](https://www.taurushq.com/) _tokenizált részvények kibocsátása_
 
 ### Eszköztokenizálás {#tokenization}
 
-- A [Tinlake](https://tinlake.centrifuge.io/) _követelések finanszírozását végzi tokenizált valós eszközökön keresztül, mint például a számlák, jelzálogok vagy műsorszolgáltatási jogdíjak_
-- A [RealT](https://realt.co/) _révén a befektetők a világ minden részéről vásárolhatnak az amerikai ingatlanpiacon a szabályozásnak megfelelő, tokenizált résztulajdont._
-- Az [AgroToken](https://agrotoken.io/en/home) _mezőgazdasági anyagokat tokenizál és kereskedik velük_
+- Az [AgroToken](https://agrotoken.io/en/) _mezőgazdasági anyagokat tokenizál és kereskedik velük_
+- [Bitbond](https://www.bitbond.com/) _improves the issuance, settlement and custody of financial assets with tokenization_
+- [Blocksquare](https://blocksquare.io/) _tokenization infrastructure for real estate_
+- [Centrifuge](https://centrifuge.io/) _tokenized receivables financing, debt, and assets_
+- [Clearmatics](https://www.clearmatics.com) _builds decentralised network platforms for the p2p exchange of tokenised value_
+- [dClimate](https://www.dclimate.net/) _decentralized climate information ecosystem_
+- [Fabrica](https://www.fabrica.land/) _a platform for digitizing real estate assets, enabling DeFi borrowing and property trading
 - A [Fasset](https://www.fasset.com/) _egy platform a fenntartható infrastruktúráért_
+- [Nori](https://nori.com/) _open source market infrastructure to allow for carbon removal projects to measure and monetize their activity_
+- [Propy](https://propy.com/) _a platform to automate residential real estate transactions with smart contracts_
+- [RealT](https://realt.co/) _investors around the globe can buy into the US real estate market through fully-compliant, fractional, tokenized ownership_
+- [Rubey](https://www.rubey.be/) _a platform that tokenizes high-end art to make it accessible to retail investors_
+- [Swarm](https://swarm.com/) _a platform focused on the digitization and trading of real-world assets in a regulatory compliant manner_
+- [Thallo](https://www.thallo.io/) _a platform to integrate digital carbon credits into business transactions_
+- [Tokenchampions](https://tokenchampions.com/) _tokenizes European football players' image rights_
 
 ### Adatok notarizációja {#notarization-of-data}
 
-- [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _a véglegesített hitelek adatait hash-elik és a főhálózaton rögzítik_
-- [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _Olaszország legnagyobb hírügynöksége az álhírek ellen küzd, és lehetővé teszi az olvasók számára, hogy a hírek eredetét a főhálózaton történő rögzítéssel ellenőrizzék_
-- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _Naplózza a sajtóközleményeket az Ethereumon a vállalati elszámoltathatóság és bizalom biztosítása érdekében_
+- [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html) _Italian news agency fights fake news and enables readers to verify the origin of news stories by recording them on Mainnet_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _az órák származását és javítási történetét rögzíti az Ethereumon_
+- [BRØK](https://www.xn--brk-1na.no/) _a cap tables platform for unlisted companies on the public, provided by The Norwegian Government_
+- [Certifaction](https://certifaction.com/) _legally valid eSignatures with by privacy-by-design_
 - [EthSign](https://ethsign.xyz/) _feljegyezi az Ethereum-blokkláncra az aláírt elektronikus dokumentumokat_
+- [Stacktical](https://stacktical.com/) _enables the software development, digital issuance and digital signature of Service Level Agreements (SLA) with native escrowing capabilities_
+- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _Naplózza a sajtóközleményeket az Ethereumon a vállalati elszámoltathatóság és bizalom biztosítása érdekében_
+- [WolfTown](https://www.mef.net/edge-view-blog/automated-secure-timely-sla-reporting-is-finally-a-reality/) _by MEF and Sage Management automates Service Level Agreement reporting between telecom carriers_
 
 ### Ellátási lánc {#supply-chain}
 
-- A [Morpheus.network](https://morpheus.network/) _egy ellátásilánc-automatizálási platform, amely egy privát láncokból és a notarizált adatokat tartalmazó Ethereum főhálózatból álló hibridet vezetett be, és olyan cégek használják, mint a kanadai élelmiszer-, olaj- és gázelosztó Federated Co-op Ltd. vagy az argentin kisállateledel-gyártó Vitalcan_
-- [Minespider](https://www.minespider.com/) _ellátási lánc nyomon követése_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _egy beszerzési munkafolyamatot biztosít a cégek számára, melynek során ajánlatbekéréseket (RFQ), szerződéseket, rendeléseket és számlákat bocsát ki az Ön megbízható üzleti partnereiből álló hálózatán keresztül_
-- [Treum](https://treum.io/) _átláthatóságot, nyomonkövethetőséget és kereskedési lehetőséget biztosít ellátási láncoknak blokklánc-technológia használatával_
+- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _NFT-ket készít minden egyes új tétel sörhöz, ami nagyobb átláthatóságot és hatékonyságot tesz lehetővé az ellátási láncban_
+- [CargoX](https://cargox.io/) _electroinc bill of lading and document transfer provider for shipping_
+- [Circularize](https://www.circularise.com/) _an end-to-end traceability solution for raw materials made into products_
+- [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager) _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across a network of business partners_
+- [Minespider](https://www.minespider.com/) _supply chain tracking and provenance, and CO2 emissions tracking_
+- [Morpheus.network](https://morpheus.network/) _supply chain automation platform_
+- [StaTwig](https://statwig.com/) _supply chain operations_
 - [TradeTrust](https://www.tradetrust.io/) _az elektronikus fuvarleveleket (eBLs) ellenőrzi a nemzetközi szállításban_
+- [Transmute](https://transmute.industries/) _data exchange platform for global trade; supports Transactions with Decentralized Identity on Ethereum_
 
 ### Biztosítás {#insurance}
 
 - [Arbol](https://www.arbolmarket.com/) _egy parametrikus biztosítás az időjárásból eredő kockázatok fedezésére_
 - [Etherisc](https://etherisc.com/) _decentralizált biztosítás különféle kockázatokra_
+- [Nayms](https://www.nayms.com/) _a digital space for the creation of insurance programs, the raising and trading of capital, the writing of risk, and the payment rails for premium and claim transactions, built with AON_
 
-### Hitelesítő adatok és tanúsítványok {#credentials}
+### Identity, credentials and certifications {#credentials}
 
-- [Két olasz középiskola](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _az Ethereum főhálozaton kiállított digitális diplomákat használ_
-- [Szt. Galleni Egyetem](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _Kísérleti projekt a svájci egyetemek diplomáinak ellenőrzésére_
+- [BCdiploma](https://www.bcdiploma.com/) _digitizes and verifies diplomas, certificates, and micro-credentials_
 - [Hyland Credentials](https://www.hylandcredentials.com) _digitális diplomákat és más oktatási igazolványokat, engedélyeket és bizonyítványokat bocsát ki_
-- [OpenCerts](https://opencerts.io/faq) _blokkláncoktatási bizonyítványokat ad ki Szingapúrban_
-- [BlockCerts](https://www.blockcerts.org/) _egy nyílt szabványt fejlesztett a blokklánc-hitelesítőknek _
+- [Palau Digital Residency Program](https://rns.id/) _offers global citizens the ability to have a legal Palau government-issued ID_
+- [Spherity](https://www.spherity.com/) _offers digital identity management solutions to establish digital trust in ecosystems, focusing on decentralized identities and verifiable credentials_
+- [Zug Digital ID](https://ezug.ch/en/) _is a blockchain-based identity system in Switzerland, offering residents digital access to government services and supporting functionalities like e-bike borrowing and municipal voting_
 
-### Eszközök {#utilities}
+### Entertainment, NFTs, and Loyalty
 
-- [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _Áramdíjfizetés_
+- [Adidas Virtual Gear](https://www.adidas.com/metaverse) _a virtual gear NFT collection_
+- [The British Museum's Sandbox](https://decrypt.co/150405/british-museum-enter-metaverse-via-sandbox) _an NFT collection_
+- [Fruitlab](https://fruitlab.com/) _a platform for gamers to earn from watching, sharing and playing online games_
+- [Nike Swoosh](https://www.swoosh.nike/) _an NFT platform_
+- [Sothbebys Metaverse](https://metaverse.sothebys.com/) _a digital art NFT marketplace by Sothebys_
+- [Starbucks Odyssey](https://odyssey.starbucks.com/) _a loylaty program with NFTs_
 
 Ha szeretne valamit hozzáadni a listához, akkor tekintse át a [közreműködésre vonatkozó instrukciókat](/contributing/).

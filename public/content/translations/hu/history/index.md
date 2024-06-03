@@ -304,8 +304,8 @@ Ez a videó elmagyarázza az EIP-1559-et és annak előnyeit: [EIP-1559 magyará
 
 A Berlin frissítés optimalizálta a gázköltséget bizonyos EVM műveleteknél, és több támogatást adott a többszörös tranzakció típusokra.
 
-- [Olvassa el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
-- [Olvassa el az Ethereum Cat Herder magyarázatát](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
+- [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
+- [Olvasd el az Ethereum Cat Herder magyarázatát](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
 <ExpandableCard title="Berlin EIP-ek" contentPreview="Official improvements included in this upgrade.">
 
@@ -333,7 +333,7 @@ A [Beacon lánc](/roadmap/beacon-chain/) biztonságos elindításához 16384 dar
 [Olvassa el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
 <DocLink to="/roadmap/beacon-chain/">
-  A Beacon lánc
+  A Beacon Chain
 </DocLink>
 
 ---
@@ -362,8 +362,8 @@ A letétbe helyezési szerződés vezette be a [letétbe helyezés](/glossary/#s
 
 A Muir Glacier nevű elágazás késleltetést vezetett be a [nehézségi bombához](/glossary/#difficulty-bomb). A blokknehézség növelése a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) konszenzusmechanizmusában azzal fenyegetett, hogy az Ethereum használhatósága csökkenni fog, mert a tranzakciók küldése és a dappok használata több időt fog igénybe venni.
 
-- [Olvassa el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
-- [Olvassa el az Ethereum Cat Herder magyarázatát](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
+- [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
+- [Olvasd el az Ethereum Cat Herder magyarázatát](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
 <ExpandableCard title="Muir Glacier EIP-ek" contentPreview="Official improvements included in this fork.">
 
@@ -391,7 +391,7 @@ Az Istanbul elágazás:
 - Az Ethereum és a Zcash közötti együttműködés bevezetése.
 - Az okosszerződésekben kreatívabb függvényeket tett lehetővé.
 
-[Olvassa el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
+[Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
 <ExpandableCard title="Istanbul EIP-ek" contentPreview="Official improvements included in this fork.">
 
@@ -421,7 +421,7 @@ A Constantinople elágazás:
 - Bizonyos műveletek [gázdíjának](/glossary/#gas) optimalizálása az [EVM-ben](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Lehetőség olyan címekkel történő interakcióra, melyek még nem jöttek létre.
 
-[Olvassa el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
+[Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
 <ExpandableCard title="Constantinople EIP-ek" contentPreview="Official improvements included in this fork.">
 
@@ -485,7 +485,7 @@ A Spurious Dragon elágazás volt a második válasz a szolgáltatásmegtagadás
 - a blokkláncállapot „leeresztésének” lehetővé tétele.
 - visszajátszásos támadás elleni védelem hozzáadása.
 
-[Olvassa el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
+[Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
 <ExpandableCard title="Spurious Dragon EIP-ek" contentPreview="Official improvements included in this fork.">
 
@@ -510,7 +510,7 @@ A Tangerine Whistle elágazás volt a első válasz a szolgáltatásmegtagadáso
 
 - az alulárazott opkódokkal kapcsolatos sürgős hálózati kérdések kezelése.
 
-[Olvassa el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
+[Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
 <ExpandableCard title="Tangerine Whistle EIP-ek" contentPreview="Official improvements included in this fork.">
 
@@ -531,11 +531,11 @@ A Tangerine Whistle elágazás volt a első válasz a szolgáltatásmegtagadáso
 
 A DAO elágazás volt a válasz a [2016-os DAO-támadásra](https://www.coindesk.com/learn/understanding-the-dao-attack/), amikor egy sérülékeny [DAO](/glossary/#dao) szerződésből 3,6 millió ETH-t ürítettek le a támadás során. Az elágazás átmozgatta a pénzt a hibás szerződésből egy [új szerződésbe](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754), amelynek csak kiutalási funkciója volt. Bárki, aki veszteséget szenvedett el, kivehetett 1 ETH-t a tárcájában lévő minden 100 DAO tokenre.
 
-Ennek az akciónak a kezelését megszavazták az Ethereum közösségen belül. Bármely ETH tulajdonos szavazhatott egy tranzakción keresztül [egy szavazási platformon](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Az elágazás mellett több mint a szavazók 85%-a voksolt.
+Ennek az akciónak a menetét megszavazták az Ethereum közösségen belül. Bármely ETH tulajdonos szavazhatott egy tranzakción keresztül [egy szavazási platformon](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). A fork mellett több mint a szavazók 85%-a voksolt.
 
 Némely bányász nem támogatta az elágazást, mivel a DAO incidens nem a protokollból származó hibából eredt. Ők ezután létrehozták az [Ethereum Classicot](https://ethereumclassic.org/).
 
-[Olvassa el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
+[Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
 
 ---
 
@@ -547,7 +547,7 @@ Némely bányász nem támogatta az elágazást, mivel a DAO incidens nem a prot
 
 A Homestead elágazás a jövőbe tekintett. Számos protokollváltoztatást és egy hálózati módosítást tartalmazott, mely lehetővé tette az Ethereum számára a további hálózati változtatásokat.
 
-[Olvassa el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2016/02/29/homestead-release/)
+[Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
 <ExpandableCard title="Homestead EIP-ek" contentPreview="Official improvements included in this fork.">
 
@@ -571,7 +571,7 @@ A Homestead elágazás a jövőbe tekintett. Számos protokollváltoztatást és
 
 A Frontier thawing elágazás megemelte az 5000-es [gázhatárt](/glossary/#gas) [blokkonként](/glossary/#block) és beállította az alapértelmezett gázárat 51 [gweire](/glossary/#gwei). Ez lehetővé tette a tranzakciók létrejöttét, mivel azokhoz 21 000 gázra van szükség. Bevezették a [nehézségi bombát](/glossary/#difficulty-bomb), hogy lehetőség legyen egy jövőbeli végleges elágazásra (hard fork) a [proof-of-stake](/glossary/#pos) mechanizmusra való áttérésnél.
 
-- [Olvassa el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
+- [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 - [Tekintse meg az Ethereum 1. protokollfrissítéséről szóló cikket](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
 
 ---
@@ -584,7 +584,7 @@ A Frontier thawing elágazás megemelte az 5000-es [gázhatárt](/glossary/#gas)
 
 A Frontier egy működő, de teljesen leegyszerűsített implementációja volt az Ethereum projektnek. A sikeres Olympic tesztelési fázist követte. A műszaki felhasználóknak, kimondottan a fejlesztőknek készült. A [blokkoknak](/glossary/#block) 5000-es [gázhatár](/glossary/#gas) volt beállítva. Ez a „kiolvasztási” időszak lehetővé tette a bányászok számára, hogy elindítsák a tevékenységüket, és a korai felhasználóknak, hogy telepítsék a klienseiket anélkül, hogy sietniük kellene.
 
-[Olvassa el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
+[Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
 <Divider />
 
@@ -596,7 +596,7 @@ A Frontier egy működő, de teljesen leegyszerűsített implementációja volt 
 
 Az Ether értékesítése hivatalosan 42 napig tartott. BTC-vel lehetett érte fizetni.
 
-[Olvassa el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
+[Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
 
 ---
 

@@ -108,7 +108,7 @@ További információkért [tekintse meg a Vyper magyarázatát](https://vyper.r
 - [Még több Vyper példák alapján](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
 - [A Vyper-közösség Discord-csevegése](https://discord.gg/SdvKC79cJk)
-- [Puska](https://reference.auditless.com/cheatsheet)
+- [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Okosszerződés-fejlesztési keretrendszerek és eszközök Vyperre](/developers/docs/programming-languages/python/)
 - [VyperPunk – tanulja meg a Vyper okosszerződéseket biztosítását és meghackelését](https://github.com/SupremacyTeam/VyperPunk)
 - [VyperExamples – Példák a Vyper sebezhetőségére](https://www.vyperexamples.com/reentrancy)
@@ -268,7 +268,7 @@ Ha már nagy tapasztalatra tett szert az okosszerződésekkel kapcsolatban, akko
 - [Fe Discord-csevegés](https://discord.com/invite/ywpkAXFjZH)
 - [Fe Twitter](https://twitter.com/official_fe)
 
-### Példaszerződés {#example-contract-3}
+### Példa szerződés {#example-contract-3}
 
 Ez a példa egy egyszerű szerződés Fe nyelven telepítve.
 
@@ -321,4 +321,4 @@ Az alapvető szintaxis, szerződés-életciklus, interfészek, operátorok, adat
 ## További olvasnivaló {#further-reading}
 
 - [Solidity szerződéskönyvtár az OpenZeppelintől](https://docs.openzeppelin.com/contracts)
-- [Solidity példák alapján](https://solidity-by-example.org)
+- [Solidity egy példa alapján](https://solidity-by-example.org)
