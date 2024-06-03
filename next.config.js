@@ -21,7 +21,7 @@ module.exports = (phase, { defaultConfig }) => {
   let nextConfig = {
     ...defaultConfig,
     reactStrictMode: true,
-    webpack: (config) => {
+    webpack: (config, { isServer }) => {
       config.module.rules.push({
         test: /\.ya?ml$/,
         use: "yaml-loader",
@@ -30,6 +30,19 @@ module.exports = (phase, { defaultConfig }) => {
         test: /\.svg$/,
         use: "@svgr/webpack",
       })
+
+      if (!isServer) {
+        config.optimization.splitChunks.cacheGroups = {
+          ...config.optimization.splitChunks.cacheGroups,
+          // Extract all chakra-related from the app into a single bundle
+          ui: {
+            test: /[\\/]node_modules[\\/](@chakra-ui|@emotion|framer-motion)/,
+            name: "ui",
+            chunks: "all",
+            priority: 10,
+          },
+        }
+      }
 
       return config
     },
