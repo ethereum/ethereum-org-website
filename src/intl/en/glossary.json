@@ -266,7 +266,7 @@
   "optimistic-rollup-term": "Optimistic rollup",
   "optimistic-rollup-definition": "Optimistic Rollup is a Layer 2 solution that speeds up transactions on Ethereum, assuming they're valid by default unless challenged. <a href=\"/developers/docs/scaling/optimistic-rollups/\">More on Optimistic rollups</a>.",
   "oracle-term": "Oracle",
-  "oracle-definition": "An oracle is a bridge between the <a href=\"/glossary/#blockchain\">blockchain</a> and the real world. They act as on-chain <a href=\"/glossary/#api\">APIs</a> that can be queried for information and used in <a href=\"/glossary/#smart-contract\">smart contracts</a>. <a href=\"/developers/docs/oracles/\">More on oracles</a.",
+  "oracle-definition": "An oracle is a bridge between the <a href=\"/glossary/#blockchain\">blockchain</a> and the real world. They act as on-chain <a href=\"/glossary/#api\">APIs</a> that can be queried for information and used in <a href=\"/glossary/#smart-contract\">smart contracts</a>. <a href=\"/developers/docs/oracles/\">More on oracles</a>.",
   "peer-term": "Peer",
   "peer-definition": "Connected computers running Ethereum client software that have identical copies of the <a href=\"/glossary/#blockchain\">blockchain</a>.",
   "peer-to-peer-network-term": "Peer-to-peer network",
@@ -394,5 +394,5 @@
   "zk-proof-term": "Zero-knowledge proof",
   "zk-proof-definition": "A zero-knowledge proof is a cryptographic method that allows an individual to prove that a statement is true without conveying any additional information. <a href=\"/developers/docs/scaling/zk-rollups/\">More on zero-knowledge rollups</a>.",
   "zk-rollup-term": "Zero-knowledge rollup",
-  "zk-rollup-definition": "A <a href=\"/glossary/#rollups\">rollup of transactions that use <a href=\"/glossary/#validity-proof\">validity proofs</a> to offer increased <a href=\"/glossary/#layer-2\">layer 2</a> transaction throughput while using the security provided by Mainnet (layer 1). Although they can't handle complex transaction types, like <a href=\"/glossary/#optimistic-rollup\">optimistic rollups</a>, they don't have latency issues because transactions are provably valid when submitted. <a href=\"/developers/docs/scaling/zk-rollups/\">More on zero-knowledge rollups</a>."
+  "zk-rollup-definition": "A <a href=\"/glossary/#rollups\">rollup</a> of transactions that use <a href=\"/glossary/#validity-proof\">validity proofs</a> to offer increased <a href=\"/glossary/#layer-2\">layer 2</a> transaction throughput while using the security provided by Mainnet (layer 1). Although they can't handle complex transaction types, like <a href=\"/glossary/#optimistic-rollup\">optimistic rollups</a>, they don't have latency issues because transactions are provably valid when submitted. <a href=\"/developers/docs/scaling/zk-rollups/\">More on zero-knowledge rollups</a>."
 }

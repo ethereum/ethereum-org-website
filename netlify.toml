@@ -41,12 +41,14 @@
 [functions]
 
   [functions.___netlify-odb-handler]
+    external_node_modules = ["sharp"]
     included_files = [
       "./src/intl/**/*",
       "!./public/**/*",
       "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/router-context*",
       "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/amp-context*",
       "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/head-manager-context*",
+      "node_modules/sharp/**/*",
     ]
 
   [functions.___netlify-handler]

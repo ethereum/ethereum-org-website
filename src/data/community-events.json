@@ -409,6 +409,16 @@
     "endDate": "2024-9-22",
     "imageUrl": "https://ethglobal.com/og.png"
   },
+   {
+    "title": "ETHMilan",
+    "to": "https://ethmilan.xyz/",
+    "location": "Milan, Italy",
+    "description": "ETMilan returns for its second edition – join us for two days of networking, Ethereum talks & workshops, and an exciting Creative Hackathon!",
+    "startDate": "2024-9-26",
+    "endDate": "2024-9-27",
+    "imageUrl": "https://assets-global.website-files.com/65b77a0b9370aa6cf9f28462/65d329fd71a77f03daa10342_RectangleBannerWebsite_ETHMilan24_def.jpg"
+
+  },
   {
     "title": "Pragma San Francisco",
     "to": "https://ethglobal.com/events/pragma-sanfrancisco",
