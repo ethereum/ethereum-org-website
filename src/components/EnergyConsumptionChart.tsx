@@ -22,7 +22,6 @@ import {
 import type { Lang } from "@/lib/types"
 
 import { wrapLabel } from "@/lib/utils/charts"
-import { isMobile } from "@/lib/utils/isMobile"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 // ChartDataLabels required to display y-labels on top of bars
@@ -176,23 +175,9 @@ const EnergyConsumptionChart = () => {
         } as any, // casted to avoid TS issue,
         color: useColorModeValue("#333333", "#F2F2F2"),
       },
-      // bottom legend styles
+      // legend styles
       legend: {
-        display: false,
-        position: "bottom" as any, // casted to avoid TS issue
-        align: "center" as any, // casted to avoid TS issue
-        labels: {
-          textAlign: "center" as any, // casted to avoid TS issue
-          font: {
-            weight: "bold",
-            size: "16px",
-          } as any, // casted to avoid TS issue
-          color: useColorModeValue("#333333", "#F2F2F2"),
-          boxWidth: 0,
-          boxHeight: 40,
-        },
-        rtl: isRtl,
-        onClick: () => null, // disable onClick data visibility
+        display: false, // hide chart top legend
       },
       title: {
         display: false, // hide chart title
@@ -228,22 +213,11 @@ const EnergyConsumptionChart = () => {
     },
   }
 
-  // chart custom legend
-  const chartLegend = wrapLabel(
-    t("page-what-is-ethereum-energy-consumption-chart-legend"),
-    isMobile()
-      ? { width: 30 }
-      : {
-          width: t("page-what-is-ethereum-energy-consumption-chart-legend")
-            .length,
-        }
-  )
-
   const chartData = {
     labels: rawData?.map((item) => wrapLabel(item.name)),
     datasets: [
       {
-        label: chartLegend as any, // casted to avoid TS issue
+        label: undefined, // don't remove, needs some value provided to render properly
         data: rawData?.map((item) => item.amount) || [],
       },
     ],
