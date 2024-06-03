@@ -30,6 +30,7 @@ import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import Modal from "@/components/Modal"
 import PageMetadata from "@/components/PageMetadata"
 import StatsBoxGrid from "@/components/StatsBoxGrid"
 import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
@@ -120,8 +121,6 @@ const StyledActionCard = chakra(ActionCard, {
     margin: 0,
   },
 })
-
-const StyledCodeModal = chakra(CodeModal)
 
 const StyledTitleCardList = chakra(TitleCardList)
 
@@ -535,29 +534,10 @@ const HomePage = ({
               </ButtonLink>
             </ButtonLinkRow>
           </FeatureContent>
-          <StyledCodeModal
+          <CodeModal
             isOpen={isModalOpen}
             setIsOpen={setModalOpen}
             title={codeExamples[activeCode].title}
-            sx={{
-              ".modal-component-container": {
-                padding: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                top: "50%",
-              },
-              ".modal-component": {
-                maxWidth: "100%",
-                maxHeight: "50%",
-                padding: 0,
-              },
-              ".modal-component-content": {
-                marginTop: "3rem",
-                width: "100%",
-                overflow: "auto",
-              },
-            }}
           >
             <Codeblock
               codeLanguage={codeExamples[activeCode].codeLanguage}
@@ -566,7 +546,7 @@ const HomePage = ({
             >
               {codeExamples[activeCode].code}
             </Codeblock>
-          </StyledCodeModal>
+          </CodeModal>
         </Row>
       </MainSectionContainer>
       {/* Eth Today Section */}
