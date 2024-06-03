@@ -14,6 +14,7 @@ import { Bar } from "react-chartjs-2"
 import {
   Box,
   Center,
+  Text,
   useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react"
@@ -177,7 +178,7 @@ const EnergyConsumptionChart = () => {
       },
       // bottom legend styles
       legend: {
-        display: true,
+        display: false,
         position: "bottom" as any, // casted to avoid TS issue
         align: "center" as any, // casted to avoid TS issue
         labels: {
@@ -249,19 +250,25 @@ const EnergyConsumptionChart = () => {
   } satisfies ChartData
 
   return (
-    <Center w="full">
-      <Box
-        position="relative"
-        maxW="500px"
-        m="auto"
-        w="80vw"
-        h="500px"
-        mb={{ base: 4, md: 0 }}
-      >
-        {/* TODO: isRtl ? data?.reverse() : data */}
-        <Bar options={chartOptions} data={chartData} updateMode="none" />
-      </Box>
-    </Center>
+    <Box mb={16}>
+      <Center w="full" mb={{ base: 4, md: 6 }}>
+        <Box
+          position="relative"
+          maxW="500px"
+          m="auto"
+          w="80vw"
+          h="500px"
+          mb={{ base: 4, md: 0 }}
+        >
+          {/* TODO: isRtl ? data?.reverse() : data */}
+          <Bar options={chartOptions} data={chartData} updateMode="none" />
+        </Box>
+      </Center>
+
+      <Text fontWeight="semibold" textAlign="center">
+        {t("page-what-is-ethereum-energy-consumption-chart-legend")}
+      </Text>
+    </Box>
   )
 }
 
