@@ -76,6 +76,7 @@ export const GridItem = ({ metric }: GridItemProps) => {
     return data.filter(({ timestamp }) => {
       const millisecondRange = 1000 * 60 * 60 * 24 * 30
       const now = new Date().getTime()
+
       return timestamp >= now - millisecondRange
     })
   }
@@ -137,11 +138,14 @@ export const GridItem = ({ metric }: GridItemProps) => {
     },
   }
 
+  const filteredRange = hasData ? filteredData(state.data) : [] // timestamp values
+  const dataValues = hasData ? state.data.map((item) => item.value) : [] // data values
+
   const chartData = {
-    labels: hasData ? filteredData(state.data) : [],
+    labels: filteredRange,
     datasets: [
       {
-        data: hasData ? state.data.map((item) => item.value) : [],
+        data: dataValues.slice(dataValues.length - filteredRange!.length),
       },
     ],
   }
