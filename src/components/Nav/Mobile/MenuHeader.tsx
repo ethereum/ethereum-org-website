@@ -1,12 +1,12 @@
 import { useTranslation } from "next-i18next"
-import { DrawerCloseButton, DrawerHeader, Flex } from "@chakra-ui/react"
+import { Box, DrawerCloseButton, DrawerHeader, Flex } from "@chakra-ui/react"
 
 const MenuHeader = () => {
   const { t } = useTranslation("common")
 
   return (
     <Flex p="6" alignItems="center" justify="space-between">
-      <DrawerHeader
+      <Box
         fontWeight="regular"
         fontSize="md"
         color="body.medium"
@@ -14,10 +14,13 @@ const MenuHeader = () => {
         p="0"
       >
         {t("site-title")}
-      </DrawerHeader>
-      <DrawerCloseButton fontSize="md" w="fit-content" p="2" mt="3" me="2">
+      </Box>
+      <label htmlFor="css-drawer-toggle" className="drawer-toggle-label">
         {t("close")}
-      </DrawerCloseButton>
+      </label>
+      {/* <Box fontSize="md" w="fit-content" p="2" mt="3" me="2">
+        {t("close")}
+      </Box> */}
     </Flex>
   )
 }

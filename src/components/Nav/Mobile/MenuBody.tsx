@@ -30,7 +30,7 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
   const menuColors = useNavMenuColors()
 
   return (
-    <DrawerBody as="nav" p="0">
+    <Box as="nav" p="0" flex="1 1 0%" overflow="auto">
       <Accordion allowToggle>
         {SECTION_LABELS.map((key) => {
           const { label, items } = linkSections[key]
@@ -102,7 +102,7 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
           )
         })}
       </Accordion>
-    </DrawerBody>
+    </Box>
   )
 }
 

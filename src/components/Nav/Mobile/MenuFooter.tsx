@@ -2,7 +2,9 @@ import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdSearch, MdWbSunny } from "react-icons/md"
 import {
+  Box,
   DrawerFooter,
+  Flex,
   Grid,
   MenuButton,
   useColorModeValue,
@@ -31,11 +33,11 @@ const MenuFooter = ({
   const themeLabelKey = useColorModeValue("dark-mode", "light-mode")
 
   return (
-    <DrawerFooter
+    <Flex
       bg="background.base"
       borderTop="1px"
       borderColor="primary.lowContrast"
-      justifyContent="space-between"
+      align="center"
       height="108px"
       px={4}
       py={0}
@@ -79,7 +81,7 @@ const MenuFooter = ({
           </MenuButton>
         </LanguagePicker>
       </Grid>
-    </DrawerFooter>
+    </Flex>
   )
 }
 
