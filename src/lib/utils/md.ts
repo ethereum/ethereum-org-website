@@ -85,6 +85,8 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/data-structures-and-encoding/ssz",
     "/developers/docs/data-structures-and-encoding/web3-secret-storage",
     "/developers/docs/design-and-ux",
+    "/developers/docs/design-and-ux/heuristics-for-web3",
+    "/developers/docs/design-and-ux/dex-design-best-practice",
     "/developers/docs/development-networks",
     "/developers/docs/ethereum-stack",
     "/developers/docs/evm",
