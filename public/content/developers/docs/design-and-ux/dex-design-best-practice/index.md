@@ -24,7 +24,8 @@ All of the example wireframes were made specifically for this article, although 
 
 The Figma kit is also included at the bottom - feel free to use it and speed up your own wireframes!
 
-# Basic Anatomy of a DEX {DEX anatomy}
+## Basic Anatomy of a DEX {DEX anatomy}
+
 The UI generally contains three elements:
 1. Main form
 2. Button
@@ -34,6 +35,7 @@ The UI generally contains three elements:
 
 
 ## Variations
+
 This will be a common theme in this article, but there are various different ways these elements can be organised. The “details panel” can be:
 - Above the button
 - Below the button
@@ -42,7 +44,7 @@ This will be a common theme in this article, but there are various different way
   
 N.B. A “preview” modal is optional, but if you are showing very few details on the main UI, it becomes essential.
 
-# Structure of the Main Form {Form structure}
+## Structure of the Main Form {Form structure}
 
 This is the box where you actually choose which token you want to swap. The component consists of an input field and a small button in a row.
 
@@ -51,6 +53,7 @@ DEXes typically display additional details in one row above and one row below, a
 ![Input row, with a details row above and below](./2.png)
 
 ## Variations
+
 Two UI variations are shown here; one without any borders, creating a very open design, and one where the input row has a border, creating a focus on that element.
 
 ![Two UI variations of the main form](./3.png)
@@ -59,7 +62,8 @@ This basic structure allows **four key pieces of info** to be shown in the desig
 
 During the evolution of DeFi, lots of different things have been included here.
 
-# Key Info to Include {key info}
+## Key Info to Include {key info}
+
 - Balance in wallet
 - Max button
 - USD equivalent
@@ -77,7 +81,8 @@ Extra details can be shown below the main form. As this type of info is mostly f
 
 ![Details shown in the corners of that main form](./4.png)
 
-# Extra Info to Include {extra info}
+## Extra Info to Include {extra info}
+
 - Token price
 - Slippage
 - Minimum received
@@ -185,17 +190,19 @@ The button can do double duty as an alert!
 This is actually a fairly unusual design pattern outside of Web3, but has become standard within it. This is a good innovation as it saves space, and keeps attention focused.
 
 If the main action - SWAP - is unavailable due to an error, the reason why can be explained with the button, e.g.:
+
 - switch network
 - connect wallet
 - various errors
-- 
+
 The button can also be **mapped to the action** that needs to be performed. For example, if the user cannot swap because they are on the wrong network, the button should say “switch to Ethereum”, and when the user clicks on the button, it should switch the network to Ethereum. This speeds up the user flow significantly.
 
 ![Key ctions being initated from the main CTA](./16.png)
 
 ![Error message shown within the main CTA](./17.png)
 
-# Build Your Own with this Fifma File {Figma file}
+## Build Your Own with this Fifma File {Figma file}
+
 Thanks to the hard work of multiple protocols, DEX design has improved a lot. We know what info the user needs, how we should show it, and how to make the flow as smooth as possible.
 Hopefully this article provides a solid overview of the UX principles. 
 
@@ -204,5 +211,3 @@ If you want to experiment, please feel free to use the Figma wireframe kit. It i
 DeFi will continue to evolve, and there is always room for improvement. 
 
 Good luck!
-
-
