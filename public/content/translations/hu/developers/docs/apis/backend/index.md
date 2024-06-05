@@ -88,7 +88,7 @@ Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóp
 
 ### Fejlesztőeszközök {#development-tools}
 
-<strong x-id=„1”>ethers-kt –</strong> **_Async, nagy teljesítményű Kotlin/Java/Android könyvtár EVM-alapú blokkláncokhoz._**
+**ethers-kt –** **_Async, nagy teljesítményű Kotlin/Java/Android könyvtár EVM-alapú blokkláncokhoz._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Példák](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
