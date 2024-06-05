@@ -114,12 +114,12 @@ Espandendo tale calcolo, possiamo stimare il tempo necessario a elaborare un dat
 <TableContainer>
 
 | Numero di prelievi | Tempo di completamento |
-| :----------------: | :--------------------: |
-|      400.000       |       3,5 giorni       |
-|      500.000       |       4,3 giorni       |
-|      600.000       |       5,2 giorni       |
-|      700.000       |       6,1 giorni       |
-|      800.000       |       7,0 giorni       |
+| :-------------------: | :--------------: |
+|        400.000        |     3,5 giorni     |
+|        500.000        |     4,3 giorni     |
+|        600.000        |     5,2 giorni     |
+|        700.000        |     6,1 giorni     |
+|        800.000        |     7,0 giorni     |
 
 </TableContainer>
 
