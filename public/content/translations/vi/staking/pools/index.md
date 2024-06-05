@@ -2,7 +2,7 @@
 title: Đặt cọc theo nhóm
 description: Tổng quan về cách đặt cọc ETH theo nhóm
 lang: vi
-template: cổ phần
+template: staking
 emoji: ":money_with_wings:"
 image: /staking/leslie-pool.png
 alt: Chú tê giác Leslie đang bơi trong bể.
