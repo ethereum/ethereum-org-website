@@ -107,6 +107,7 @@ Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型
 - [CureDAO：社群所有的精準健康平台](https://docs.curedao.org/)
 - [IdeaMarkets：實現去中心化的科學可信度](https://ideamarket.io/)
 - [去中心化科研實驗室](https://www.desci.com/)
+- [ValleyDAO：開放的全球社群，爲合成生物學研究的資金和轉化提供支援。](https://www.valleydao.bio)
 
 歡迎補充新計畫 - 請先查看我們的[列表政策](/contributing/adding-desci-projects/)！
 

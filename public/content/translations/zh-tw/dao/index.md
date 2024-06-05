@@ -46,72 +46,76 @@ summaryPoint3: 一個將資產投入特定事業的安全場所。
 
 <YouTube id="zTStDvUtQWc" />
 
-## How DAOs Work {#how-daos-work}
+## 去中心化自治組織如何運作？ {#how-daos-work}
 
-DAOs are based on smart contracts that define the rules and govern the organization's treasury. Once deployed on Ethereum, the rules cannot be modified unless approved by a vote. Any behavior that doesn't comply with the code rules and logic is invalid. The treasury, also defined by a smart contract, cannot be accessed without the approval of the community. This means that DAOs don't require centralized management. Instead, decisions are made collectively, and payments are authorized automatically after a vote.
+去中心化自治組織的基礎為其[智慧型合約](/glossary/#smart-contract)，該合約定義組織的規則，並對該團體的資金庫進行規範。 一旦在以太坊上部署合約，除非投票通過，否則不能修改規則。 任何不符合程式碼規則和邏輯的行為都會失效。 由於資金庫也是以智慧型合約定義，因此任何人都無法不經團體核准而挪用資金。 這意味著去中心化自治組織不需要中心化管理機構。 相反地，團體會共同做出決定，而付款會在投票通過之後自動獲得授權。
 
-The immutability of smart contracts once deployed on Ethereum ensures that any modifications to the code (the rules of the DAO) are transparent and traceable.
+之所以能夠做到這一點，是因為智慧型合約一旦部署於以太坊，就無法被篡改。 一切都是公開的，只要有人修改程式碼（去中心化自治組織的規則）就會被發現。
 
-## Ethereum and DAOs {#ethereum-and-daos}
+## 以太坊與去中心化自治組織 {#ethereum-and-daos}
 
-Ethereum provides an excellent foundation for DAOs due to the following reasons:
+以太坊為去中心化自治組織提供了極佳的基礎，原因如下：
 
-- Ethereum's consensus is decentralized and well-established, making the network trustworthy.
-- Smart contracts, once deployed, cannot be modified, even by their creators. This allows DAOs to operate according to the programmed rules.
-- Smart contracts can send and receive funds, eliminating the need for trusted intermediaries to manage the organization's treasury.
-- The Ethereum community tends to collaborate rather than compete, fostering the development of best practices and support systems.
+- 以太坊本身的共識足夠去中心化，同時建立已久，足以讓組織信任其網路。
+- 智慧型合約程式碼部署後便無法修改，即使是所有人亦然。 這使得去中心化自治組織可以完全按照程式設定的規則運作。
+- 智慧型合約可以發送/接收資金。 如果少了這點，你就需要可信的中間人來管理團體的資金。
+- 事實證明，比起競爭，以太坊社群更趨向合作，使得最佳做法和支援系統得以快速發展。
 
-## DAO Governance {#dao-governance}
+## 去中心化自治組織的治理 {#dao-governance}
 
-Governance of DAOs involves various considerations, such as how voting and proposal processes work.
+治理去中心化自治組織時有許多考量，例如投票及提案該如何運作。
 
-### Delegation {#governance-delegation}
+### 授權 {#governance-delegation}
 
-Delegation is a form of representative democracy in DAOs. Token holders can delegate their voting power to users who self-nominate and commit to managing the protocol and staying informed.
+委託類似去中心化自治組織版本的代議民主。 代幣持有者向自我提名、並承諾管理協定且掌握最新消息的使用者委託選票。
 
-#### Example {#governance-example}
+#### 知名案例 {#governance-example}
 
-[ENS](https://claim.ens.domains/delegate-ranking) - ENS token holders can delegate their votes to community members who actively participate in the ecosystem.
+[以太坊名稱服務](https://claim.ens.domains/delegate-ranking) – 以太坊名稱服務持有者可將其選票委託給參與活動的社群成員，以代表他們。
 
-### Automatic Transaction Execution {#governance-example}
+### 自動交易治理 {#governance-example}
 
-In many DAOs, transactions are automatically executed if they receive a certain number of votes and a majority vote in favor, unless vetoed by the creator.
+在許多去中心化自治組織中，如達法定人數的成員投票同意，交易將自動執行。
 
-#### Example {#governance-example}
+#### 知名案例 {#governance-example}
 
-[Nouns](https://nouns.wtf) - In the Nouns DAO, transactions are automatically executed if they receive the required number of votes and a majority vote in favor, unless vetoed by the creator.
+[Nouns](https://nouns.wtf) – 在去中心化組織 Nouns 中，如票數達法定數量且大多數票投票同意，只要不被創辦人所否決，交易就會自動執行。
 
-### Multisig Governance {#governance-example}
+### 多簽治理 {#governance-example}
 
-While DAOs can have thousands of voting members, funds can be stored in a wallet controlled by a smaller group of trusted and publicly known (within the community) active members, typically ranging from 5 to 20. After a vote, the multisig signers execute the will of the community.
+雖然去中心化自治組織可有成千上萬的投票成員，資金可存放在一個由 5-20 名受信任且通常資訊公開（有社群所知的公開身份）的活躍社群成員共管的[錢包](/glossary/#wallet)中。 投票後，[多簽](/glossary/#multisig)簽署人會執行社群的意願。
 
-## DAO Laws {#dao-laws}
+## 去中心化自治組織相關法律 {#dao-laws}
 
-In 1977, Wyoming created the Limited Liability Company (LLC) structure to protect entrepreneurs and limit their liability. More recently, Wyoming pioneered DAO-related legislation, granting DAOs legal status. Currently, Wyoming, Vermont, and the British Virgin Islands have some form of DAO-related laws.
+1977 年，懷俄明州創造了有限責任公司制度，以保護企業家並限定其責任。 更近期，懷俄明州首創去中心化自治組織相關法律，給予去中心化自治組織法律地位。 目前，懷俄明州、佛蒙特州以及維京群島皆建立某種形式的去中心化自治組織相關法律。
 
-### Example {#law-example}
+### 知名案例 {#law-example}
 
-[CityDAO](https://citydao.io) - CityDAO used Wyoming's DAO-related legislation to purchase 40 acres of land near Yellowstone National Park.
+[CityDAO](https://citydao.io) – CityDAO 透過懷俄明州去中心化自治組織的相關法律購買了黃石國家公園附近 40 英畝的地。
 
-## DAO Membership {#dao-membership}
+## 去中心化自治組織成員 {#dao-membership}
 
-DAOs have various membership models, where members decide on voting mechanisms and other important aspects of the DAO.
+去中心化自治組織的成員有多種模式。 成員可以決定投票方式和去中心化自治組織的其他重要事務。
 
-### Token-based Membership {#token-based-membership}
+### 代幣型成員 {#token-based-membership}
 
-Token-based membership is typically fully permissionless, depending on the tokens used. Governance tokens of this kind are often freely tradable on decentralized exchanges without permission. Some may require earning them through providing liquidity or other forms of "work." Holding the tokens grants voting rights.
+通常完全[無需許可](/glossary/#permissionless)，視所用的代幣而定。 這類治理代幣大部分都能在[去中心化交易所](/glossary/#dex)自由交易，無需許可。 其他少部分則必須透過提供流動性或其他某些「工作量證明」來賺取。 無論是哪一種方式，只要持有代幣就能獲得投票權。
 
-#### Example {#token-example}
+_通常用於治理廣泛的去中心化協定及/或代幣本身。_
 
-[MakerDAO](https://makerdao.com) - MakerDAO's MKR token is widely available on decentralized exchanges, allowing anyone to acquire voting rights to decide the future of the Maker protocol.
+#### 知名案例 {#token-example}
 
-### Share-based Membership {#share-based-membership}
+[MakerDAO](https://makerdao.com) – MakerDAO 的代幣 MKR 在去中心化交易所廣泛提供，且任何人皆可買進投票權來決定 Maker 協定的未來。
 
-Share-based DAOs have a higher level of permission but are still relatively open. Potential members can apply to join the DAO, usually by providing valuable contributions in the form of tokens or work. Shares represent direct voting and ownership rights. Members can exit with their share of the treasury at any time.
+### 股份型成員 {#share-based-membership}
 
-#### Example {#share-example}
+股份型去中心化自治組織擁的許可制程度更高，但仍然相當公開。 任何潛在的成員都可以申請加入去中心化自治組織，通常以代幣或工作的形式提供有價值的貢獻。 股份代表直接投票權及所有權。 成員可以隨時帶著自己所佔的資金庫股份退出。
 
-[MolochDAO](http://molochdao.com/) - MolochDAO funds Ethereum projects. To become a member, you must apply and be evaluated by the community for the necessary expertise and capital to make informed decisions about potential grantees. You cannot directly purchase membership in the DAO on the open market.
+_通常用於關係較為緊密、以人為中心的組織，例如慈善機構、勞工團體、投資俱樂部等， 也可以治理協定及代幣。_
+
+#### 知名案例 {#share-example}
+
+[MolochDAO](http://molochdao.com/) – MolochDAO 致力於資助以太坊專案。 想加入為成員必須提出申請，以便團體評估你是否具備必要的專業知識和資本來對潛在的受資助者作出明智判斷。 你無法直接在公開市場購買加入該去中心化自治組織的資格。
 
 ### 信譽型成員 {#reputation-based-membership}
 
@@ -123,15 +127,15 @@ _通常用於協定和[去中心化應用程式](/glossary/#dapp)的去中心化
 
 [DXdao](https://DXdao.eth.limo) – DXdao 是一個全球主權聯合組織，自 2019 年以來一直致力於建構與治理去中心化協定和應用程式。 它利用信譽型治理和[全局共識](/glossary/#holographic-consensus)來協調和管理資金，這意味著沒有人可以透過金錢來影響其未來或治理決策。
 
-## 參與/建立去中心化自治組織
+## 參與/建立去中心化自治組織 {#join-start-a-dao}
 
-### 加入去中心化自治組織 (DAO)
+### 加入去中心化自治組織 (DAO) {#join-a-dao}
 
 - [以太坊社群去中心化自治組織](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [DAOHaus 的去中心化自治組織清單](https://app.daohaus.club/explore)
 - [Tally.xyz 的去中心化自治組織清單](https://www.tally.xyz)
 
-### 建立去中心化自治組織
+### 建立去中心化自治組織 {#start-a-dao}
 
 - [使用 DAOHaus 建立去中心化自治組織](https://app.daohaus.club/summon)
 - [使用 Tally 建立一個治理者型去中心化自治組織](https://www.tally.xyz/add-a-dao)
@@ -139,9 +143,9 @@ _通常用於協定和[去中心化應用程式](/glossary/#dapp)的去中心化
 - [建立 colony](https://colony.io/)
 - [使用 DAOstack 全局共識建立去中心化自治組織](https://alchemy.daostack.io/daos/create)
 
-## 延伸閱讀
+## 延伸閱讀 {#further-reading}
 
-### 去中心化自治組織相關文章
+### 去中心化自治組織相關文章 {#dao-articles}
 
 - [什麼是去中心化自治組織？](https://aragon.org/dao)– [Aragon](https://aragon.org/)
 - [去中心化自治組織之家](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
@@ -152,7 +156,7 @@ _通常用於協定和[去中心化應用程式](/glossary/#dapp)的去中心化
 - [Vitalik，《去中心化自治組織並非法人團體：去中心化在自治組織裡的重要之處》](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [去中心化自治組織、去中心化自治公司、去中心化應用程式等：不完整術語指引](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [以太坊部落格](https://blog.ethereum.org)
 
-### 影片
+### 影片 {#videos}
 
 - [什麼是加密貨幣世界的去中心化自治組織？](https://youtu.be/KHm0uUPqmVE)
 - [一個去中心化自治組織是否能建立一座城市？](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city)– [TED](https://www.ted.com/)
