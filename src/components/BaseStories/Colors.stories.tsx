@@ -6,6 +6,8 @@ import type { Meta, StoryObj } from "@storybook/react"
 import colors from "@/@chakra-ui/foundations/colors"
 import semanticTokens from "@/@chakra-ui/semanticTokens"
 
+const semanticTokenColors = semanticTokens["colors"]
+
 import Heading from "../Heading"
 
 const meta = {
@@ -100,11 +102,23 @@ export const SemanticScheme: StoryObj = {
     },
   },
   render: () => {
-    const tokenNames = ["primary", "body", "background"] as const
-    const deprecatedTokens = {
+    const tokenNames = [
+      "primary",
+      "body",
+      "background",
+      "disabled",
+      "success",
+      "attention",
+      "error",
+    ] as const
+    const deprecatedTokens: Record<(typeof tokenNames)[number], string[]> = {
       primary: ["light", "dark", "pressed"],
       body: ["inverted"],
       background: [],
+      disabled: [],
+      success: ["neutral", "outline"],
+      attention: ["neutral", "outline"],
+      error: ["neutral", "outline"],
     }
     return (
       <Flex direction="column" gap="16">
@@ -113,26 +127,35 @@ export const SemanticScheme: StoryObj = {
             tokenName
           ] as string[]
 
+          const tokenObj = semanticTokenColors[tokenName]
+
+          const filteredTokenObj =
+            "base" in tokenObj
+              ? Object.keys(semanticTokens["colors"][tokenName]).filter(
+                  (key) => !currentDeprecatedTokens.includes(key)
+                )
+              : undefined
+
           return (
             <Flex key={tokenName} direction="column" gap="4">
               <Heading>{capitalize(tokenName)}</Heading>
               <HStack gap="8">
-                {Object.keys(semanticTokens["colors"][tokenName])
-                  .filter((key) => !currentDeprecatedTokens.includes(key))
-                  .map((key) => (
-                    <Flex key={key} direction="column" gap="2">
-                      <Square
-                        border={
-                          tokenName === "background" && key === "base"
-                            ? "1px solid"
-                            : undefined
-                        }
-                        size="20"
-                        bg={`${tokenName}.${key}`}
-                      ></Square>
-                      <Text>{key}</Text>
-                    </Flex>
-                  ))}
+                {!filteredTokenObj ? (
+                  <SemanticColorBlock
+                    nestedKey={tokenName}
+                    tokenName={tokenName}
+                  />
+                ) : (
+                  <>
+                    {filteredTokenObj.map((nestedKey) => (
+                      <SemanticColorBlock
+                        key={nestedKey}
+                        nestedKey={nestedKey}
+                        tokenName={tokenName}
+                      />
+                    ))}
+                  </>
+                )}
               </HStack>
             </Flex>
           )
@@ -141,3 +164,21 @@ export const SemanticScheme: StoryObj = {
     )
   },
 }
+
+const SemanticColorBlock = ({
+  nestedKey,
+  tokenName,
+}: Record<"nestedKey" | "tokenName", string>) => (
+  <Flex key={nestedKey} direction="column" gap="2">
+    <Square
+      border={
+        tokenName === "background" && nestedKey === "base"
+          ? "1px solid"
+          : undefined
+      }
+      size="20"
+      bg={tokenName === nestedKey ? tokenName : `${tokenName}.${nestedKey}`}
+    ></Square>
+    <Text>{nestedKey}</Text>
+  </Flex>
+)
