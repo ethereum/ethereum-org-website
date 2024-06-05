@@ -2,7 +2,7 @@
 title: Önálló letétbe helyezés
 description: Az önálló letétbe helyezés áttekintése
 lang: hu
-template: staking (letétbe helyezés)
+template: staking
 emoji: ":money_with_wings:"
 image: /staking/leslie-solo.png
 alt: Leslie, a rinocérosz a saját számítógépes chipjén.
