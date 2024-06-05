@@ -10,6 +10,10 @@ import Heading from "../Heading"
 
 const meta = {
   title: "Design System/Colors",
+  parameters: {
+    // Do not create snapshots for any stories in the file.
+    chromatic: { disableSnapshot: true },
+  },
 } satisfies Meta
 
 export default meta
