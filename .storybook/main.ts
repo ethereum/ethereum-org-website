@@ -18,7 +18,7 @@ import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin"
 const config: StorybookConfig = {
   stories: [
     "../src/components/**/*.stories.tsx",
-    "../src/layouts/layoutStories/*.stories.tsx",
+    "../src/layouts/stories/*.stories.tsx",
   ],
   addons: [
     "@storybook/addon-links",
