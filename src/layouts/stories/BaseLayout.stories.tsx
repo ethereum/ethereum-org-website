@@ -8,6 +8,7 @@ const meta = {
   title: "Templates/BaseLayout",
   component: BaseLayoutComponent,
   parameters: {
+    layout: "fullscreen",
     chromatic: {
       modes: {
         ...langViewportModes,
