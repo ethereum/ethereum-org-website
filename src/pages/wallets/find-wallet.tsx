@@ -35,6 +35,7 @@ import {
 } from "@/lib/constants"
 
 import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
+import { useWalletTable } from "@/hooks/useWalletTable"
 import HeroImage from "@/public/wallets/wallet-hero.png"
 
 const Subtitle = ({ children }: ChildOnlyProp) => (
@@ -97,6 +98,13 @@ const FindWalletPage = ({
   const [supportedLanguage, setSupportedLanguage] = useState(DEFAULT_LOCALE)
 
   const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
+
+  const {
+    featureDropdownItems,
+    filteredWallets,
+    updateMoreInfo,
+    walletCardData,
+  } = useWalletTable({ filters, t, walletData: wallets })
 
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
@@ -197,7 +205,7 @@ const FindWalletPage = ({
         {/* Mobile filters menu */}
         <Box hideFrom="lg">
           <MobileFiltersMenu
-            walletData={wallets}
+            totalWallets={filteredWallets.length}
             filters={filters}
             resetWalletFilter={resetWalletFilter}
             updateFilterOption={updateFilterOption}
@@ -236,7 +244,10 @@ const FindWalletPage = ({
                 filters={filters}
                 resetFilters={resetFilters}
                 resetWalletFilter={resetWalletFilter}
-                walletData={wallets}
+                filteredWallets={filteredWallets}
+                totalWallets={walletCardData.length}
+                updateMoreInfo={updateMoreInfo}
+                featureDropdownItems={featureDropdownItems}
                 onOpen={onOpen}
               />
             </Box>
