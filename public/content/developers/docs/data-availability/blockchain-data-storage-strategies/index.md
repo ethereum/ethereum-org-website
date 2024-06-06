@@ -1,11 +1,7 @@
 ---
 title: Blockchain Data Storage Strategies
 description: There are several ways to store data using the blockchain. This article will compare the different strategies, their costs and tradeoffs, as well as the requirements to use it safely.
-author: "Ori Pomerantz"
-tags: ["storage", "data availability"]
-skill: intermediate
 lang: en
-published: 2024-05-15
 ---
 
 There are several ways to store information on the blockchain:
