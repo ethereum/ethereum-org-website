@@ -1,5 +1,6 @@
 import * as React from "react"
-import { Center, Flex, SimpleGrid } from "@chakra-ui/react"
+import { Center, Flex, Icon, SimpleGrid } from "@chakra-ui/react"
+import type { Meta, StoryObj } from "@storybook/react"
 
 import { EthHomeIcon } from "./EthHomeIcon"
 import { FeedbackGlyphIcon } from "./FeedbackGlyphIcon"
@@ -89,9 +90,12 @@ import {
   WithdrawCryptoIcon,
 } from "./wallets"
 
-export default {
+const meta = {
+  component: Icon,
   title: "Atoms / Media & Icons / Icons",
-}
+} satisfies Meta<typeof Icon>
+
+export default meta
 
 const iconsDefinitions = [
   CorrectIcon,
@@ -195,7 +199,7 @@ const items = iconsDefinitions.map((IconDef) => (
   </Flex>
 ))
 
-export const Icons = {
+export const Icons: StoryObj<typeof meta> = {
   render: () => {
     return <SimpleGrid columns={[2, 2, 3, 5]}>{items}</SimpleGrid>
   },

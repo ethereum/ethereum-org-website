@@ -5,20 +5,20 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import Input from "."
 
-type InputType = typeof Input
-
 const meta = {
   title: "Atoms / Form / Input",
   component: Input,
-} satisfies Meta<InputType>
+  args: {
+    rightIcon: <BsSlashSquare />,
+  },
+} satisfies Meta<typeof Input>
 
 export default meta
 
-type Story = StoryObj<InputType>
+type Story = StoryObj<typeof meta>
 
 export const Sizes: Story = {
   args: {
-    rightIcon: <BsSlashSquare />,
     placeholder: "Search",
   },
   render: (args) => (
@@ -35,9 +35,9 @@ export const ElementVariations: Story = {
   },
   render: (args) => (
     <VStack width="258px" spacing={4}>
+      <Input {...args} rightIcon={undefined} />
       <Input {...args} />
-      <Input {...args} rightIcon={<BsSlashSquare />} />
-      <Input {...args} rightIcon={<BsSlashSquare />} isDisabled />
+      <Input {...args} isDisabled />
     </VStack>
   ),
 }

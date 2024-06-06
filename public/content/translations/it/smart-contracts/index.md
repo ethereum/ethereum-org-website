@@ -6,11 +6,15 @@ lang: it
 
 # Introduzione ai contratti intelligenti {#introduction-to-smart-contracts}
 
-I contratti intelligenti sono gli elementi fondamentali che costituiscono il livello di applicazione di Ethereum. Si tratta di programmi informatici memorizzati sulla blockchain che seguono la logica "se questo, allora quello" ed è garantito che vengano eseguiti secondo le regole definite dal loro codice, che non può essere modificato una volta creato.
+I contratti intelligenti sono gli elementi fondamentali che costituiscono il livello di applicazione di Ethereum. Si tratta di programmi informatici memorizzati sulla [blockchain](/glossary/#blockchain) che seguono la logica "se questo, allora quello", ed è garantito che siano eseguiti secondo le regole definite dal loro codice, che non è modificabile una volta creato.
 
 Nick Szabo ha coniato il termine "smart contract" (contratto intelligente). Nel 1994 ha scritto [un'introduzione al concetto](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) e, nel 1996, [un'esplorazione di ciò che i contratti intelligenti potrebbero fare](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Szabo immaginava un marketplace digitale in cui processi automatici e crittograficamente sicuri consentissero di effettuare transazioni e funzioni commerciali senza intermediari fidati. I contratti intelligenti su Ethereum hanno messo in pratica questa visione.
+Szabo immaginava un marketplace digitale in cui processi automatici e [crittograficamente sicuri](/glossary/#cryptography) consentissero di effettuare transazioni e funzioni commerciali senza intermediari fidati. I contratti intelligenti su Ethereum hanno messo in pratica questa visione.
+
+Guarda la spiegazione di Finematics sui contratti intelligenti:
+
+<YouTube id="pWGLtjG-F5c" />
 
 ## La fiducia nei contratti tradizionali {#trust-and-contracts}
 
@@ -52,7 +56,7 @@ I contratti intelligenti sono utili per le verifiche e il monitoraggio. Poiché 
 
 I contratti intelligenti, inoltre, proteggono la tua privacy. Poiché Ethereum è una rete pseudonima (le tue transazioni sono pubblicamente legate a un indirizzo crittografico univoco, non alla tua identità), puoi proteggere la tua privacy dagli osservatori.
 
-## Termini visibili {#visible-terms}
+## Condizioni visibili {#visible-terms}
 
 Infine, come per i contratti tradizionali, è possibile verificare il contenuto di un contratto intelligente prima di firmarlo (o d'interagire con esso in altro modo). La trasparenza di un contratto intelligente garantisce che chiunque possa esaminarlo.
 
@@ -60,7 +64,7 @@ Infine, come per i contratti tradizionali, è possibile verificare il contenuto 
 
 I contratti intelligenti possono fare essenzialmente tutto ciò che possono fare i programmi informatici.
 
-Possono eseguire calcoli, creare valuta, memorizzare dati, coniare NFT, inviare comunicazioni e persino generare immagini. Ecco alcuni esempi popolari dal mondo reale:
+Possono eseguire calcoli, creare valuta, memorizzare dati, coniare [NFT](/glossary/#nft), inviare comunicazioni e persino generare grafiche. Ecco alcuni esempi popolari dal mondo reale:
 
 - [Stablecoin](/stablecoins/)
 - [Creare e distribuire risorse digitali uniche](/nft/)
@@ -68,12 +72,6 @@ Possono eseguire calcoli, creare valuta, memorizzare dati, coniare NFT, inviare 
 - [Giochi decentralizzati](/dapps/?category=gaming#explore)
 - [Una polizza assicurativa che paga automaticamente](https://etherisc.com/)
 - [Uno standard che consente la creazione di valute personalizzate e interoperabili](/developers/docs/standards/tokens/)
-
-## Preferisci un approccio visivo all'apprendimento? {#visual-learner}
-
-Guarda la spiegazione di Finematics sui contratti intelligenti:
-
-<YouTube id="pWGLtjG-F5c" />
 
 ## Letture consigliate {#further-reading}
 
