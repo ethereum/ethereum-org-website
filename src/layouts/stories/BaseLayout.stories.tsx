@@ -1,11 +1,19 @@
 import { Center } from "@chakra-ui/react"
 import type { Meta, StoryObj } from "@storybook/react"
 
+import { langViewportModes } from "../../../.storybook/modes"
 import { BaseLayout as BaseLayoutComponent } from "../BaseLayout"
 
 const meta = {
   title: "Templates/BaseLayout",
   component: BaseLayoutComponent,
+  parameters: {
+    chromatic: {
+      modes: {
+        ...langViewportModes,
+      },
+    },
+  },
   argTypes: {
     children: {
       table: {
