@@ -396,7 +396,8 @@ const EthPage = () => {
           <Hero>
             <Image
               src={eth}
-              width={800}
+              // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+              sizes="(max-width: 768px) 100vw, 800px"
               alt={t("page-eth-whats-eth-hero-alt")}
               priority
             />
