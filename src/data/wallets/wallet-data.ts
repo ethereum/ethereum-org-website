@@ -1879,8 +1879,8 @@ export const walletsData: WalletData[] = [
     repo_url: "https://github.com/shapeshift/",
     non_custodial: true,
     security_audit: [
-      "Audit by DeFiSafety: https://www.defisafety.com/app/pqrs/108",
-      "Responsible Disclosure Program: https://hackenproof.com/shape-shift/shapeshift",
+      "https://www.defisafety.com/app/pqrs/108",
+      "https://hackenproof.com/shape-shift/shapeshift",
     ],
     scam_protection: false,
     hardware_support: false,
