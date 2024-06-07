@@ -45,7 +45,7 @@ A blokkban rengeteg információ van. A legmagasabb szinten a következő mezők
 | `proposer_index` | a validátor azonosítója, aki a blokkot javasolta                              |
 | `parent_root`    | az előző blokk hash-e                                                         |
 | `state_root`     | a státusz objektum gyökér hash-e                                              |
-| `törzs`          | egy olyan objektum, amely számos mezőt tartalmaz, ahogy azt alább definiáljuk |
+| `body`           | egy olyan objektum, amely számos mezőt tartalmaz, ahogy azt alább definiáljuk |
 
 A blokk `body` számos mezőt tartalmaz:
 
