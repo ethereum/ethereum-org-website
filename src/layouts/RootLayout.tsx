@@ -1,11 +1,11 @@
 import { join } from "path"
 
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { Container } from "@chakra-ui/react"
 
 import type { Root } from "@/lib/types"
 
-import FeedbackWidget from "@/components/FeedbackWidget"
 import Footer from "@/components/Footer"
 import Nav from "@/components/Nav"
 import { SkipLink } from "@/components/SkipLink"
@@ -45,6 +45,10 @@ export const RootLayout = ({
     !isLegal
   const shouldShowLegalTranslationBanner = isLegal && !isPageLanguageEnglish
   const originalPagePath = toPosixPath(join(DEFAULT_LOCALE, asPath))
+
+  const FeedbackWidget = dynamic(() => import("@/components/FeedbackWidget"), {
+    ssr: false,
+  })
 
   return (
     <Container mx="auto" maxW={oldTheme.variables.maxPageWidth}>
