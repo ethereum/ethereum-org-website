@@ -12114,6 +12114,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "kyndrawynne",
+      "name": "kyndrawynne",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108100622?v=4",
+      "profile": "https://github.com/kyndrawynne",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
