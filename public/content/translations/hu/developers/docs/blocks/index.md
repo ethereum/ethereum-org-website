@@ -56,8 +56,8 @@ A blokk `body` számos mezőt tartalmaz:
 | `graffiti`           | tetszőleges adat a blokkok taggelésére                              |
 | `proposer_slashings` | a validátorok listája, akiket slashelni kell                        |
 | `attester_slashings` | a tanusítók listája, akiket slashelni kell                          |
-| `tanúsítások`        | a tanúsítók listája, akik ezt a blokkot támogatják                  |
-| `behelyezés`         | az új letétek listája a letéti szerződésbe                          |
+| `attestations`        | a tanúsítók listája, akik ezt a blokkot támogatják                  |
+| `deposits`         | az új letétek listája a letéti szerződésbe                          |
 | `voluntary_exits`    | a validátorok listája, akik kilépnek a hálózatból                   |
 | `sync_aggregate`     | a validátorok egy csoportja, akik a könnyű klienseket szolgálják ki |
 | `execution_payload`  | a végrehajtási klienstől jövő tranzakciók                           |
@@ -67,8 +67,8 @@ A `attestations` (tanúsítások) mező tartalmazza a blokkban lévő az összes
 | Mező               | Leírás                                                       |
 |:------------------ |:------------------------------------------------------------ |
 | `aggregation_bits` | a validátorok listája, akik részt vettek a tanúsításban      |
-| `adat`             | konténer számos almezővel                                    |
-| `aláírás`          | az összes tanúsítást végző validátor aláírásának aggregátuma |
+| `data`             | konténer számos almezővel                                    |
+| `signature`          | az összes tanúsítást végző validátor aláírásának aggregátuma |
 
 A `data` mező a `tanúsítás` részen belül tartalmazza:
 
@@ -95,7 +95,7 @@ Az `execution_payload_header` a következő mezőket tartalmazza:
 | `block_number`      | a jelenlegi blokk száma                                                  |
 | `gas_limit`         | a jelenlegi blokkban megengedett maximális gáz                           |
 | `gas_used`          | a jelenlegi blokkban elhasznált gáz aktuális összege                     |
-| `időbélyeg`         | a blokk ideje                                                            |
+| `timestamp`         | a blokk ideje                                                            |
 | `extra_data`        | tetszőleges hozzáadott adat, mint nyers bájt                             |
 | `base_fee_per_gas`  | az alapdíj értéke                                                        |
 | `block_hash`        | a végrehajtó blokk hash-e                                                |
@@ -115,12 +115,12 @@ Az `execution_payload` maga a következőket tartalmazza (ami azonos a fejlécce
 | `block_number`     | a jelenlegi blokk száma                                                  |
 | `gas_limit`        | a jelenlegi blokkban megengedett maximális gáz                           |
 | `gas_used`         | a jelenlegi blokkban elhasznált gáz aktuális összege                     |
-| `időbélyeg`        | a blokk ideje                                                            |
+| `timestamp`        | a blokk ideje                                                            |
 | `extra_data`       | tetszőleges hozzáadott adat, mint nyers bájt                             |
 | `base_fee_per_gas` | az alapdíj értéke                                                        |
 | `block_hash`       | a végrehajtó blokk hash-e                                                |
 | `tranzakciók`      | a tranzakciók listája, amit végre kell hajtani                           |
-| `kivételek`        | a visszavonásra kerülő objektumok listája                                |
+| `withdrawals`        | a visszavonásra kerülő objektumok listája                                |
 
 A `withdrawals` (visszavonások) listája tartalmazza a `withdrawal` (visszavonási) objektumokat, amelyek a következőképpen vannak strukturálva:
 
