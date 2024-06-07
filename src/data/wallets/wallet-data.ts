@@ -28,6 +28,7 @@ import PillarImage from "@/public/wallets/pillar.png"
 import RabbyWalletImage from "@/public/wallets/rabbywallet.png"
 import RainbowImage from "@/public/wallets/rainbow.png"
 import SafeImage from "@/public/wallets/safe.png"
+import ShapeShiftImage from "@/public/wallets/shapeshift.png"
 import TahoImage from "@/public/wallets/taho.png"
 import TokenPocketImage from "@/public/wallets/tokenpocket.png"
 import TorusImage from "@/public/wallets/torus.png"
@@ -1842,6 +1843,64 @@ export const walletsData: WalletData[] = [
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
     documentation:
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
+  },
+  {
+    last_updated: "2024-06-07",
+    name: "ShapeShift Mobile",
+    image: ShapeShiftImage,
+    brand_color: "#386FF9",
+    url: "https://shapeshift.com/",
+    active_development_team: true,
+    languages_supported: [
+      "en",
+      "es",
+      "de",
+      "fr",
+      "zh",
+      "ja",
+      "pt",
+      "ru",
+      "tr",
+      "uk",
+    ],
+    twitter: "https://twitter.com/shapeshift",
+    discord: "https://discord.gg/shapeshift",
+    reddit: "",
+    telegram: "https://t.me/shapeshiftofficial",
+    ios: true,
+    android: true,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: false,
+    chromium: false,
+    hardware: false,
+    open_source: true,
+    repo_url: "https://github.com/shapeshift/",
+    non_custodial: true,
+    security_audit: [
+      "Audit by DeFiSafety: https://www.defisafety.com/app/pqrs/108",
+      "Responsible Disclosure Program: https://hackenproof.com/shape-shift/shapeshift",
+    ],
+    scam_protection: false,
+    hardware_support: false,
+    rpc_importing: false,
+    nft_support: true,
+    connect_to_dapps: true,
+    staking: true,
+    swaps: true,
+    multichain: true,
+    layer_2: true,
+    gas_fee_customization: true,
+    ens_support: true,
+    erc_20_support: false,
+    buy_crypto: true,
+    withdraw_crypto: true,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation: "https://docs.shapeshift.com/",
+    documentation: "https://docs.shapeshift.com/",
+    new_to_crypto: true,
   },
 ]
 
