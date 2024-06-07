@@ -540,19 +540,22 @@ const HomePage = ({
               </ButtonLink>
             </ButtonLinkRow>
           </FeatureContent>
-          <CodeModal
-            isOpen={isModalOpen}
-            setIsOpen={setModalOpen}
-            title={codeExamples[activeCode].title}
-          >
-            <Codeblock
-              codeLanguage={codeExamples[activeCode].codeLanguage}
-              allowCollapse={false}
-              fromHomepage
+          {/* Render CodeModal & Codeblock conditionally */}
+          {isModalOpen && (
+            <CodeModal
+              isOpen={isModalOpen}
+              setIsOpen={setModalOpen}
+              title={codeExamples[activeCode].title}
             >
-              {codeExamples[activeCode].code}
-            </Codeblock>
-          </CodeModal>
+              <Codeblock
+                codeLanguage={codeExamples[activeCode].codeLanguage}
+                allowCollapse={false}
+                fromHomepage
+              >
+                {codeExamples[activeCode].code}
+              </Codeblock>
+            </CodeModal>
+          )}
         </Row>
       </MainSectionContainer>
       {/* Eth Today Section */}
