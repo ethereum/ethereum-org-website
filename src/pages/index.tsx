@@ -25,7 +25,6 @@ import type { CommunityEventsReturnType } from "@/lib/interfaces"
 import ActionCard from "@/components/ActionCard"
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
-import Codeblock from "@/components/Codeblock"
 import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
@@ -332,7 +331,10 @@ const HomePage = ({
 
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
 
-  // Lazy-load CodeModal component
+  // Lazy-load these components on initial load
+  const Codeblock = dynamic(() => import("@/components/Codeblock"), {
+    ssr: false,
+  })
   const CodeModal = dynamic(() => import("@/components/CodeModal"), {
     ssr: false,
   })
