@@ -610,43 +610,6 @@
       }
     },
     {
-      "name": "BloxStaking",
-      "imageName": "Bloxstaking",
-      "hue": 341,
-      "launchDate": "2020-12-08",
-      "url": "https://www.bloxstaking.com/",
-      "audits": [
-        {
-          "name": "CoinFabrik",
-          "url": "https://github.com/bloxapp/ssv-network/blob/main/docs/SSV_Token_Dex%26Vesting_audit.pdf"
-        }
-      ],
-      "minEth": 32,
-      "additionalStake": null,
-      "additionalStakeUnit": null,
-      "monthlyFee": null,
-      "monthlyFeeUnit": null,
-      "isFoss": true,
-      "hasBugBounty": false,
-      "isTrustless": false,
-      "isPermissionless": false,
-      "pctMajorityExecutionClient": null,
-      "pctMajorityConsensusClient": 43.8,
-      "isSelfCustody": true,
-      "platforms": ["Linux", "macOS", "Windows"],
-      "ui": ["GUI"],
-      "socials": {
-        "discord": "https://discord.gg/AbYHBfjkDY",
-        "twitter": "https://twitter.com/ssv_network",
-        "github": "https://github.com/bloxapp/blox-live"
-      },
-      "matomo": {
-        "eventCategory": "StakingProductCard",
-        "eventAction": "Clicked",
-        "eventName": "Clicked BloxStaking go to link"
-      }
-    },
-    {
       "name": "Abyss Finance",
       "imageName": "Abyss",
       "hue": 237,
