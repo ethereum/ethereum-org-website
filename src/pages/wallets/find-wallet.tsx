@@ -3,7 +3,15 @@ import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box, calc, Center, Flex, Text, useDisclosure } from "@chakra-ui/react"
+import {
+  Box,
+  calc,
+  Center,
+  Flex,
+  Show,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Wallet } from "@/lib/types"
 
@@ -223,20 +231,22 @@ const FindWalletPage = ({
         <Box px={{ md: 4, "2xl": 0 }}>
           <Flex pt={4} pb={6} gap={6}>
             {/* Filters sidebar */}
-            <WalletFilterSidebar
-              hideBelow="lg"
-              top={calc(NAV_BAR_PX_HEIGHT).subtract("2px").toString()}
-              {...{
-                filters,
-                resetWalletFilter,
-                updateFilterOption,
-                updateFilterOptions,
-                resetFilters,
-                selectedPersona,
-                setFilters,
-                setSelectedPersona,
-              }}
-            />
+            {/* Use `Show` instead of `hideBelow` prop to avoid rendering the sidebar on mobile */}
+            <Show above="lg">
+              <WalletFilterSidebar
+                top={calc(NAV_BAR_PX_HEIGHT).subtract("2px").toString()}
+                {...{
+                  filters,
+                  resetWalletFilter,
+                  updateFilterOption,
+                  updateFilterOptions,
+                  resetFilters,
+                  selectedPersona,
+                  setFilters,
+                  setSelectedPersona,
+                }}
+              />
+            </Show>
 
             {/* Wallets table */}
             <Box mt={0.5} w="full">
