@@ -77,7 +77,7 @@ Depending on your security tradeoffs, it might be acceptable to put the informat
 
 2. Have a mechanism that ensures availability. For example, in [Redstone](https://redstone.xyz/docs/what-is-redstone) any node can submit an availability challenge. If the sequencer does not respond onchain by the deadline, the input commitment is discarded, so the information is considered never to have been posted.
 
-This is acceptable for an optimistic rollup because we are already relying on having at least one honest verifier for the state root. Such an honest verifier will also make sure it has the data to process blocks, and issue an availability challenge if the information is not available offchain.
+This is acceptable for an optimistic rollup because we are already relying on having at least one honest verifier for the state root. Such an honest verifier will also make sure it has the data to process blocks, and issue an availability challenge if the information is not available offchain. This type of optimistic rollup is called [plasma](/developers/docs/scaling/plasma/).
 
 
 ## Contract code {#contract-code}
