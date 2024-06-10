@@ -219,6 +219,14 @@ export const getStaticProps = (async ({ locale }) => {
   }
 }) satisfies GetStaticProps<Props>
 
+// Lazy-load these components on initial load
+const Codeblock = dynamic(() => import("@/components/Codeblock"), {
+  ssr: false,
+})
+const CodeModal = dynamic(() => import("@/components/CodeModal"), {
+  ssr: false,
+})
+
 const HomePage = ({
   communityEvents,
   metricResults,
@@ -330,14 +338,6 @@ const HomePage = ({
   ]
 
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
-
-  // Lazy-load these components on initial load
-  const Codeblock = dynamic(() => import("@/components/Codeblock"), {
-    ssr: false,
-  })
-  const CodeModal = dynamic(() => import("@/components/CodeModal"), {
-    ssr: false,
-  })
 
   return (
     <Flex
