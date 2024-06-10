@@ -38,29 +38,6 @@ module.exports = (phase, { defaultConfig }) => {
     images: {
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
     },
-    async redirects() {
-      /**
-       * Redirect /default to /en.
-       *
-       * This allows us to always have a default locale prefix for all URLs.
-       *
-       * @see https://github.com/vercel/next.js/discussions/18419#discussioncomment-327128
-       */
-      return [
-        {
-          source: "/default",
-          destination: "/en",
-          locale: false,
-          permanent: false,
-        },
-        {
-          source: "/default/:slug*",
-          destination: "/en/:slug*",
-          locale: false,
-          permanent: false,
-        },
-      ]
-    },
   }
 
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
