@@ -72,7 +72,7 @@ Overall, proof-of-stake, as it is implemented on Ethereum, has been demonstrated
 
 ### Comparison to proof-of-work {#comparison-to-proof-of-work}
 
-Ethereum originally used proof-of-work algorithm but switched to proof-of-stake in September 2022. PoS offers several advantages over PoW, such as:
+Ethereum originally used proof-of-work but switched to proof-of-stake in September 2022. PoS offers several advantages over PoW, such as:
 
 - better energy efficiency – there is no need to use lots of energy on proof-of-work computations
 - lower barriers to entry, reduced hardware requirements – there is no need for elite hardware to stand a chance of creating new blocks
