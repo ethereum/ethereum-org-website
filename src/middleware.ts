@@ -21,6 +21,17 @@ function detectLocale(acceptLanguage: string | null) {
   return locale
 }
 
+export const config = {
+  matcher: [
+    "/", // explicit matcher for root route
+    /*
+     * Match all request paths except for the ones starting with:
+     * - _next/static (static files)
+     */
+    "/((?!_next/static).*)",
+  ],
+}
+
 // Middleware required to always display the locale prefix in the URL. It
 // redirects to the default locale if the locale is not present in the URL
 export async function middleware(req: NextRequest) {
