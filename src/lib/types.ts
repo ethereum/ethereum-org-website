@@ -622,6 +622,10 @@ export interface WalletData {
   new_to_crypto?: boolean
 }
 
+export type Wallet = WalletData & {
+  supportedLanguages: string[]
+}
+
 export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
 
 export interface WalletFilterData {
