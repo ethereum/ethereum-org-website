@@ -38,10 +38,41 @@ module.exports = (phase, { defaultConfig }) => {
     images: {
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
     },
+    async redirects() {
+      return [
+        {
+          source: "/default",
+          destination: "/en",
+          locale: false,
+          permanent: false,
+        },
+        {
+          source: "/default/:slug*",
+          destination: "/en/:slug*",
+          locale: false,
+          permanent: false,
+        },
+      ]
+    },
   }
 
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
-    nextConfig = { ...nextConfig, experimental }
+    nextConfig = {
+      ...nextConfig,
+      experimental: {
+        ...experimental,
+        outputFileTracingExcludes: {
+          "*": [
+            "node_modules/@swc/core-linux-x64-gnu",
+            "node_modules/@swc/core-linux-x64-musl",
+            "node_modules/@esbuild/linux-x64",
+            "public/**/*.png",
+            "public/**/*.gif",
+            "src/data",
+          ],
+        },
+      },
+    }
   }
 
   return nextConfig
