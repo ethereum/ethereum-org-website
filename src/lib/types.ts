@@ -581,7 +581,7 @@ export interface WalletData {
   new_to_crypto?: boolean
 }
 
-export interface Wallet extends WalletData {
+export type Wallet = WalletData & {
   supportedLanguages: string[]
 }
 
