@@ -16,6 +16,10 @@ import { SkipLink } from "@/components/SkipLink"
 // import { DEFAULT_LOCALE } from "@/lib/constants"
 import { lightTheme as oldTheme } from "../theme"
 
+const FeedbackWidget = dynamic(() => import("@/components/FeedbackWidget"), {
+  ssr: false,
+})
+
 export const RootLayout = ({
   children,
   // contentIsOutdated,
@@ -43,10 +47,6 @@ export const RootLayout = ({
   //   !isLegal
   // const shouldShowLegalTranslationBanner = isLegal && !isPageLanguageEnglish
   // const originalPagePath = toPosixPath(join(DEFAULT_LOCALE, asPath))
-
-  const FeedbackWidget = dynamic(() => import("@/components/FeedbackWidget"), {
-    ssr: false,
-  })
 
   return (
     <Container mx="auto" maxW={oldTheme.variables.maxPageWidth}>
