@@ -109,7 +109,7 @@
   "b004-d-explanation": "Ethereum transactions cannot be censored, ETH is required to make any transaction on Ethereum, and it is crucial to the stability of the DeFi ecosystem.",
   "c001-prompt": "Web3 allows users to own digital assets through:",
   "c001-a-label": "Tokens",
-  "c001-a-explanation": "Tokens provide a way to represent assets with the same properties as an Ethereum-based asset. Tokens are not unique. While they represent ownership, there are more ways to own digital assets on Ethereum.",
+  "c001-a-explanation": "Tokens provide a way to represent units of value that are interchangeable with one another, owned by an Ethereum account. While they represent ownership, there are more ways to own digital assets on Ethereum.",
   "c001-b-label": "NFTs",
   "c001-b-explanation": "NFTs (Non-fungible tokens) provide a way to represent anything unique as an Ethereum-based asset. While they represent ownership, there are more ways to own digital assets on Ethereum.",
   "c001-c-label": "ENS",
