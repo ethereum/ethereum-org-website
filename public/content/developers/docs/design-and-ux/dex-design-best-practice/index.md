@@ -3,7 +3,7 @@ title: Decentralised Exchange (DEX) Design Best Practice
 description: A guide explaining UX/UI decisions for swapping tokens.
 lang: en
 ---
-# Introduction to Decentralised Exchanges {introduction}
+# Introduction to Decentralised Exchanges
 
 Since the launch of Uniswap in 2018, there have been hundreds of Decentralised Exchanges launched across dozens of different chains.
 Many of these have introduced new elements or added their own twist, but the structure has remained generally the same.
@@ -24,7 +24,7 @@ All of the example wireframes were made specifically for this article, although 
 
 The Figma kit is also included at the bottom - feel free to use it and speed up your own wireframes!
 
-## Basic Anatomy of a DEX {DEX anatomy}
+## Basic Anatomy of a DEX
 
 The UI generally contains three elements:
 1. Main form
@@ -44,7 +44,7 @@ This will be a common theme in this article, but there are various different way
   
 N.B. A “preview” modal is optional, but if you are showing very few details on the main UI, it becomes essential.
 
-## Structure of the Main Form {Form structure}
+## Structure of the Main Form
 
 This is the box where you actually choose which token you want to swap. The component consists of an input field and a small button in a row.
 
@@ -62,7 +62,7 @@ This basic structure allows **four key pieces of info** to be shown in the desig
 
 During the evolution of DeFi, lots of different things have been included here.
 
-## Key Info to Include {key info}
+## Key Info to Include
 
 - Balance in wallet
 - Max button
@@ -81,7 +81,7 @@ Extra details can be shown below the main form. As this type of info is mostly f
 
 ![Details shown in the corners of that main form](./4.png)
 
-## Extra Info to Include {extra info}
+## Extra Info to Include
 
 - Token price
 - Slippage
@@ -117,7 +117,7 @@ Entering numbers in Main Form → Scanning Details → Clicking to Preview Scree
 Should the details panel be visible at all times, or does the user need to click it to expand?
 Should you create friction by adding a preview screen? This forces the user to slow down and consider their trade, which can be useful. But do they want to see all the same info again? What is most useful to them at this point?
 
-# Design Options {design options}
+## Design Options
 As mentioned, a lot of this comes down to your personal style
 Who is your user?
 What is your brand?
@@ -175,7 +175,7 @@ The law of proximity states that items that are close together are perceived as 
 
 Ultimately, there are pluses and minuses for both options, but it is interesting how the trend appears to be towards token on the right.
 
-# Button Behaviour {button behaviour}
+# Button Behaviour
 
 Don’t have a separate button for Approve. Also don’t have a separate click for Approve. The user wants to Swap, so just say “swap” on the button and initiate the approval as the first step. A modal can show progress with a stepper, or a simple “tx 1 of 2 - approving” notification.
 
@@ -201,7 +201,7 @@ The button can also be **mapped to the action** that needs to be performed. For 
 
 ![Error message shown within the main CTA](./17.png)
 
-## Build Your Own with this Fifma File {Figma file}
+## Build Your Own with this Figma File
 
 Thanks to the hard work of multiple protocols, DEX design has improved a lot. We know what info the user needs, how we should show it, and how to make the flow as smooth as possible.
 Hopefully this article provides a solid overview of the UX principles. 
