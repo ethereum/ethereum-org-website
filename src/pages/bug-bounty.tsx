@@ -45,6 +45,7 @@ import lighthouseDark from "@/public/upgrades/lighthouse-dark.png"
 import lighthouseLight from "@/public/upgrades/lighthouse-light.png"
 import lodestar from "@/public/upgrades/lodestar.png"
 import nethermind from "@/public/upgrades/nethermind.png"
+import reth from "@/public/upgrades/reth.png"
 import nimbus from "@/public/upgrades/nimbus-cloud.png"
 import prysm from "@/public/upgrades/prysm.png"
 import tekuDark from "@/public/upgrades/teku-dark.png"
@@ -422,6 +423,11 @@ const BugBountiesPage = () => {
       image: prysm,
     },
     {
+      title: "Reth",
+      link: "https://reth.rs/",
+      image: reth,
+    },
+    {
       title: "Teku",
       link: "https://pegasys.tech/teku",
       image: useColorModeValue(tekuDark, tekuLight),
@@ -499,6 +505,9 @@ const BugBountiesPage = () => {
         </Client>
         <Client>
           <Image src={nethermind} alt="" {...iconImageProps} />
+        </Client>
+        <Client>
+          <Image src={reth} alt="" {...iconImageProps} />
         </Client>
       </ClientRow>
       <ClientRow>
