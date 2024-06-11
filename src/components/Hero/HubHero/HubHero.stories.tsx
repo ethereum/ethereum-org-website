@@ -1,17 +1,25 @@
 import * as React from "react"
-import { Meta, StoryObj } from "@storybook/react"
-import HubHeroComponent, { HubHeroProps } from "./"
 import { Box } from "@chakra-ui/react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
-import { useTranslation } from "react-i18next"
+import { Meta, StoryObj } from "@storybook/react"
 
-type HubHeroType = typeof HubHeroComponent
+import { getTranslation } from "@/storybook-utils"
+
+import { langViewportModes } from "../../../../.storybook/modes"
+
+import HubHeroComponent, { type HubHeroProps } from "./"
+
+import learnHubHeroImg from "@/public/heroes/learn-hub-hero.png"
 
 const meta = {
   title: "Organisms / Layouts / Hero",
   component: HubHeroComponent,
   parameters: {
     layout: "none",
+    chromatic: {
+      modes: {
+        ...langViewportModes,
+      },
+    },
   },
   decorators: [
     (Story) => (
@@ -20,43 +28,15 @@ const meta = {
       </Box>
     ),
   ],
-} satisfies Meta<HubHeroType>
+} satisfies Meta<typeof HubHeroComponent>
 
 export default meta
 
-const mockGatsbyImgData: IGatsbyImageData = {
-  layout: "fullWidth",
-  images: {
-    fallback: {
-      src: "/heroes/learn-hub-hero.png",
-      sizes: "100vw",
-    },
-    sources: [
-      {
-        srcSet: "/heroes/learn-hub-hero.png",
-        type: "image/webp",
-        sizes: "100vw",
-      },
-    ],
-  },
-  width: 1,
-  height: 1,
-}
-
-export const HubHero: StoryObj<typeof meta> = {
-  args: {
-    title: "learn-hub",
-    header: "hero-header",
-    description: "hero-subtitle",
-    heroImgSrc: mockGatsbyImgData,
-  },
-  render: (args) => {
-    const { t } = useTranslation()
-    const { title, header, description, ...rest } = args
-
+export const HubHero: StoryObj = {
+  render: () => {
     const buttons: HubHeroProps["buttons"] = [
       {
-        content: t("hero-button-lets-get-started"),
+        content: getTranslation("hero-button-lets-get-started", "page-learn"),
         toId: "what-is-crypto-ethereum",
         matomo: {
           eventCategory: "learn hub hero buttons",
@@ -76,11 +56,11 @@ export const HubHero: StoryObj<typeof meta> = {
 
     return (
       <HubHeroComponent
-        title={t(title)}
-        header={t(header)}
-        description={t(description)}
+        title={getTranslation("learn-hub", "common")}
+        header={getTranslation("hero-header", "page-learn")}
+        description={getTranslation("hero-subtitle", "page-learn")}
+        heroImg={learnHubHeroImg}
         buttons={buttons}
-        {...rest}
       />
     )
   },

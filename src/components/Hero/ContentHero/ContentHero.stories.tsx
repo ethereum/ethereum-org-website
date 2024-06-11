@@ -1,55 +1,32 @@
-import * as React from "react"
 import { Meta, StoryObj } from "@storybook/react"
-import ContentHeroComponent, { ContentHeroProps } from "."
-import { IGatsbyImageData } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 
-type ContentHeroType = typeof ContentHeroComponent
+import { getTranslation } from "@/storybook-utils"
+
+import { langViewportModes } from "../../../../.storybook/modes"
+
+import ContentHeroComponent, { ContentHeroProps } from "."
 
 const meta = {
   title: "Organisms / Layouts / Hero",
   component: ContentHeroComponent,
   parameters: {
     layout: "none",
-  },
-  argTypes: {
-    heroImgSrc: {
-      table: {
-        disable: true,
+    chromatic: {
+      modes: {
+        ...langViewportModes,
       },
     },
   },
-} satisfies Meta<ContentHeroType>
+} satisfies Meta<typeof ContentHeroComponent>
 
 export default meta
 
-// Comes from the original compiled querying
-const mockGatsbyImgData: IGatsbyImageData = {
-  layout: "constrained",
-  images: {
-    fallback: {
-      src: "/mainnet.png",
-      sizes: "100vw",
-    },
-    sources: [
-      {
-        srcSet: "/mainnet.png",
-        type: "image/webp",
-        sizes: "100vw",
-      },
-    ],
-  },
-  width: 1,
-  height: 1,
-}
-
 export const ContentHero: StoryObj = {
   render: () => {
-    const { t } = useTranslation()
-
+    const PAGE_LEARN_NS = "page-learn"
     const buttons: ContentHeroProps["buttons"] = [
       {
-        content: t("hero-button-lets-get-started"),
+        content: getTranslation("hero-button-lets-get-started", PAGE_LEARN_NS),
         toId: "what-is-crypto-ethereum",
         matomo: {
           eventCategory: "learn hub hero buttons",
@@ -69,9 +46,11 @@ export const ContentHero: StoryObj = {
     return (
       <ContentHeroComponent
         breadcrumbs={{ slug: "/en/run-a-node/" }}
-        heroImgSrc={mockGatsbyImgData}
-        title={t("hero-header")}
-        description={t("hero-subtitle")}
+        heroImg="/upgrades/merge.png"
+        // Can not properly hardcode this URL. So it's left blank
+        blurDataURL=""
+        title={getTranslation("hero-header", PAGE_LEARN_NS)}
+        description={getTranslation("hero-subtitle", PAGE_LEARN_NS)}
         buttons={buttons}
       />
     )

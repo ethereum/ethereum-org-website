@@ -1,16 +1,18 @@
+import React, { type Dispatch, type SetStateAction } from "react"
 import { Flex } from "@chakra-ui/react"
-import React, { type Dispatch, type SetStateAction, useState } from "react"
-import { SendReceiveButtons } from "./SendReceiveButtons"
-import { TokenBalanceList } from "./TokenBalanceList"
-import { CategoryTabs } from "./CategoryTabs"
-import { WalletBalance } from "./WalletBalance"
-import { NFT, TokenBalance } from "./interfaces"
+
 import { defaultTokenBalances } from "../constants"
 import type { SimulatorNav } from "../interfaces"
-import type { SendReceiveEnabled } from "./types"
-import { NFTList } from "./NFTList"
 
-interface IProps {
+import { CategoryTabs } from "./CategoryTabs"
+import { NFT, TokenBalance } from "./interfaces"
+import { NFTList } from "./NFTList"
+import { SendReceiveButtons } from "./SendReceiveButtons"
+import { TokenBalanceList } from "./TokenBalanceList"
+import type { SendReceiveEnabled } from "./types"
+import { WalletBalance } from "./WalletBalance"
+
+type WalletHomeProps = {
   nav?: SimulatorNav
   isEnabled?: SendReceiveEnabled
   tokenBalances?: Array<TokenBalance>
@@ -19,14 +21,14 @@ interface IProps {
   categoryTabState?: [number, Dispatch<SetStateAction<number>>]
   nfts?: Array<NFT>
 }
-export const WalletHome: React.FC<IProps> = ({
+export const WalletHome = ({
   nav,
   isEnabled,
   tokenBalances,
   activeTabIndex = 0,
   setActiveTabIndex,
   nfts = [],
-}) => {
+}: WalletHomeProps) => {
   const data: Array<TokenBalance> = tokenBalances ?? defaultTokenBalances
   const totalAmounts = data.reduce(
     (acc, { amount, usdConversion }) => acc + amount * usdConversion,

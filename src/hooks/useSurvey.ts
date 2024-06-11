@@ -1,14 +1,17 @@
+import path from "path"
+
 import { useMemo } from "react"
+import { useRouter } from "next/router"
 
-const location = typeof window !== "undefined" ? window.location.href : ""
+import type { Lang } from "@/lib/types"
 
-export type Survey = {
-  url: string
-  prompt: string
-}
+import { SITE_URL } from "@/lib/constants"
 
-export const useSurvey = (feedbackSubmitted: boolean) =>
-  useMemo((): string | null => {
+export const useSurvey = (feedbackSubmitted: boolean) => {
+  const { asPath, locale } = useRouter()
+  const { href: url } = new URL(path.join(locale! as Lang, asPath), SITE_URL)
+  return useMemo((): string | null => {
     if (!feedbackSubmitted) return null
-    return `https://iwokuhuz.paperform.co//?url=${location}`
-  }, [feedbackSubmitted, location])
+    return `https://iwokuhuz.paperform.co//?url=${url}`
+  }, [feedbackSubmitted, url])
+}

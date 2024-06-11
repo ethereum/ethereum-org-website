@@ -1,29 +1,36 @@
-import * as React from "react"
 import { Box, Heading, HStack, SimpleGrid, Stack, Text } from "@chakra-ui/react"
-import Breadcrumbs, { IProps as BreadcrumbsProps } from "../../Breadcrumbs"
-import GatsbyImage from "../../GatsbyImage"
-import { CallToAction } from "../CallToAction"
-import { CommonHeroProps } from "../utils"
 
-export interface ContentHeroProps extends Omit<CommonHeroProps, "header"> {
-  breadcrumbs: BreadcrumbsProps
-}
+import type { CommonHeroProps } from "@/lib/types"
+
+import Breadcrumbs from "@/components/Breadcrumbs"
+import { Image } from "@/components/Image"
+
+import { CallToAction } from "../CallToAction"
+
+export type ContentHeroProps = Omit<CommonHeroProps<string>, "header">
 
 const ContentHero = (props: ContentHeroProps) => {
-  const { breadcrumbs, heroImgSrc, buttons, title, description } = props
+  const { breadcrumbs, heroImg, buttons, title, description, blurDataURL } =
+    props
   return (
     <Box bgImg="bgMainGradient">
-      <SimpleGrid columns={{ base: 1, lg: 2 }} maxW="1536px" mx="auto" gap="4">
+      <SimpleGrid columns={{ base: 1, lg: 2 }} maxW="1536px" mx="auto">
         <Box
-          height={{ base: "300px", md: "400px", lg: "full" }}
           order={{ lg: 1 }}
+          height={{ base: "300px", md: "400px", lg: "full" }}
         >
-          <GatsbyImage
+          <Image
+            src={heroImg}
             alt=""
-            image={heroImgSrc}
-            loading="eager"
-            objectFit="contain"
+            priority
+            blurDataURL={blurDataURL}
+            width={760}
+            height={451}
+            // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+            sizes="(max-width: 992px) 100vw, 760px"
             boxSize="full"
+            style={{ objectFit: "contain" }}
+            flex={{ base: "1 1 100%", md: "none" }}
           />
         </Box>
         <Stack p={{ base: "8", lg: "16" }} spacing="9" justify="center">
@@ -32,16 +39,19 @@ const ContentHero = (props: ContentHeroProps) => {
             <Heading as="h1" size="2xl">
               {title}
             </Heading>
-            <Text fontSize="lg">{description}</Text>
-            <HStack spacing="4">
-              {buttons
-                ? buttons.map((button, idx) => {
-                    if (!button) return
-
-                    return <CallToAction key={idx} index={idx} {...button} />
-                  })
-                : null}
-            </HStack>
+            {typeof description === "string" ? (
+              <Text fontSize="lg">{description}</Text>
+            ) : (
+              description
+            )}
+            {buttons && (
+              <HStack spacing="4">
+                {buttons.map((button, idx) => {
+                  if (!button) return
+                  return <CallToAction key={idx} index={idx} {...button} />
+                })}
+              </HStack>
+            )}
           </Stack>
           {/* TODO:
            * Add conditional Big Stat box here

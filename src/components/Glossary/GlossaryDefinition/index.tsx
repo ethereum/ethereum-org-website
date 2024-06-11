@@ -1,29 +1,74 @@
-import React from "react"
-import { Box, Text } from "@chakra-ui/react"
+import { ComponentProps } from "react"
+import { Box, type HeadingProps, Text } from "@chakra-ui/react"
 
-import Translation from "../../Translation"
-import OldHeading from "../../OldHeading"
+import IdAnchor from "@/components/IdAnchor"
+import InlineLink from "@/components/Link"
+import OldHeading from "@/components/OldHeading"
+import Translation from "@/components/Translation"
 
-interface IProps {
+import { DEFAULT_GLOSSARY_NS } from "@/lib/constants"
+
+interface GlossaryDefinitionProps {
   term: string
   size?: "md" | "sm"
+  options?: ComponentProps<typeof Translation>["options"]
 }
 
-const GlossaryDefinition: React.FC<IProps> = ({ term, size = "md" }) => {
-  const headingStyles =
-    size === "sm"
-      ? { fontSize: "md", mt: 0, mb: 2 }
-      : { fontSize: { base: "xl", md: "2xl" } }
+// Override the default `a` mapping to prevent displaying the glossary tooltip
+// in the glossary definition
+const components = {
+  a: InlineLink,
+}
 
+const GlossaryDefinition = ({
+  term,
+  size = "md",
+  options = { ns: DEFAULT_GLOSSARY_NS },
+}: GlossaryDefinitionProps) => {
   const textStyles = size === "sm" ? { mb: 0 } : {}
 
+  const headingPropsForAnchor = (id?: string): HeadingProps => {
+    if (!id) return {}
+    return {
+      scrollMarginTop: 28,
+      id,
+      "data-group": true,
+      position: "relative",
+    } as HeadingProps
+  }
+  const commonHeadingProps = (id?: string): HeadingProps => ({
+    fontWeight: 700,
+    lineHeight: 1.4,
+    ...headingPropsForAnchor(id),
+  })
+  const Heading3 = ({ id, children, ...rest }: HeadingProps) => (
+    <OldHeading as="h3" {...commonHeadingProps(id)} fontSize="2xl" {...rest}>
+      <IdAnchor id={id} />
+      {children}
+    </OldHeading>
+  )
+
   return (
-    <Box>
-      <OldHeading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
-        <Translation id={`${term}-term`} />
-      </OldHeading>
-      <Text {...textStyles}>
-        <Translation id={`${term}-definition`} />
+    <Box textAlign="start">
+      <Heading3 id={term}>
+        <Translation
+          id={term + "-term"}
+          options={options}
+          transform={components}
+        />
+      </Heading3>
+      {/**
+       * `as="span"` prevents hydration warnings for strings that contain
+       * elements that cannot be nested inside `p` tags, like `ul` tags
+       * (found in some Glossary definition).
+       * TODO: Develop a better solution to handle this case.
+       */}
+      <Text as="span" {...textStyles}>
+        <Translation
+          id={term + "-definition"}
+          options={options}
+          transform={components}
+        />
       </Text>
     </Box>
   )

@@ -1,29 +1,26 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "lib": ["dom", "esnext", "dom.iterable"],
-    "jsx": "react",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "target": "ES6",
+    "lib": ["dom", "dom.iterable", "esnext", "ES2021.String"],
+    "allowJs": true,
+    "skipLibCheck": true,
     "strict": true,
     "noImplicitAny": false,
-    "skipLibCheck": true,
-    "resolveJsonModule": true
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/public/*": ["./public/*"],
+      "@/storybook-utils": ["./.storybook/utils.ts"]
+    }
   },
-  "include": [
-    "./src/**/*",
-    "./plugins/**/*",
-    "./gatsby-node.ts",
-    "./gatsby-config.ts",
-    "./overrides.d.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "./src/content",
-    "./src/intl",
-    "./src/data",
-    "./src/assets"
-  ]
+  "include": ["./src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".storybook/**/*"],
+  "exclude": ["node_modules", "./public", "./src/intl"]
 }

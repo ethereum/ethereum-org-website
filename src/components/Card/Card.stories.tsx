@@ -1,14 +1,14 @@
-import React from "react"
 import { Box } from "@chakra-ui/react"
-import { Meta, StoryFn } from "@storybook/react"
-import { useTranslation } from "react-i18next"
-import Card, { IProps } from "."
-import { Button } from "../Buttons"
+import { Meta, type StoryObj } from "@storybook/react"
 
-const Component = Card
+import { Button } from "@/components/Buttons"
 
-export default {
-  component: Card,
+import { getTranslation } from "@/storybook-utils"
+
+import CardComponent, { CardProps } from "."
+
+const meta = {
+  component: CardComponent,
   decorators: [
     (Story) => (
       <Box maxW="342px" margin="0 auto">
@@ -16,20 +16,29 @@ export default {
       </Box>
     ),
   ],
-} as Meta<typeof Component>
+} satisfies Meta<typeof CardComponent>
 
-export const Default: StoryFn<typeof Component> = (args) => {
-  const { t } = useTranslation()
+export default meta
 
-  const defaultProps: IProps = {
-    emoji: ":woman_student:",
-    title: t("page-developers-learn"),
-    description: t("page-developers-learn-desc"),
-  }
+const DEVELOPS_INDEX_NS = "page-developers-index"
 
-  return (
-    <Component {...defaultProps} {...args}>
-      <Button>{t("page-developers-read-docs")}</Button>
-    </Component>
-  )
+export const Card: StoryObj<typeof meta> = {
+  render: (args) => {
+    const defaultProps: CardProps = {
+      emoji: ":woman_student:",
+      title: getTranslation("page-developers-learn", DEVELOPS_INDEX_NS),
+      description: getTranslation(
+        "page-developers-learn-desc",
+        DEVELOPS_INDEX_NS
+      ),
+    }
+
+    return (
+      <CardComponent {...defaultProps} {...args}>
+        <Button>
+          {getTranslation("page-developers-read-docs", DEVELOPS_INDEX_NS)}
+        </Button>
+      </CardComponent>
+    )
+  },
 }
