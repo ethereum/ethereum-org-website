@@ -240,7 +240,7 @@ Les projets fonctionnant sur les zkEVM comprennent :
 
 - **[Taiko](https://taiko.xyz)** - _Taiko est un rollup ZK décentralisé, équivalent à Ethereum (une [EVM ZK de type 1](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
 
-- **[ZKsync](https://docs.zksync.io/zkevm/)** - _ZKsync 2.0 est un rollup ZK compatible avec l'EVM développé par Matter Labs, propulsé par son propre zkEVM._
+- **[ZKsync](https://docs.zksync.io/)** - _ZKsync 2.0 est un rollup ZK compatible avec l'EVM développé par Matter Labs, propulsé par son propre zkEVM._
 
 ## Lecture supplémentaire sur les rollups ZK {#further-reading-on-zk-rollups}
 
