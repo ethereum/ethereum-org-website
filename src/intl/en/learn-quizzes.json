@@ -169,7 +169,7 @@
   "d002-c-label": "In a text message to a trusted family member",
   "d002-c-explanation": "You should never text your seed phrase to anyone. The message could be intercepted by a third party, and even if you trust this person absolutely, you do not know who may be able to access their phone.",
   "d002-d-label": "None of the above",
-  "d002-d-explanation": "You seed phrase should be stored in a secure manner, ideally offline. Writing it down on paper is often recommended for this reason, but secure password managers are a good alternative.",
+  "d002-d-explanation": "Your seed phrase should be stored in a secure manner, ideally offline. Writing it down on paper is often recommended for this reason, but secure password managers are a good alternative.",
   "d003-prompt": "Who should you give your seed phrase / private keys to?",
   "d003-a-label": "Someone you’re paying",
   "d003-a-explanation": "You should never give your seed phrase or private keys to anyone. Instead, send tokens to their wallet address via a transaction.",
