@@ -1,6 +1,6 @@
 {
   "page-stablecoins-accordion-borrow-crypto-collateral": "وثیقه رمز ارزی",
-  "page-stablecoins-accordion-borrow-crypto-collateral-copy": "با استفاده از اتریوم، شما می‌توانید به‌طور مستقیم و بدون واگذار کردن اتر خود، از کاربران دیگر اتر دریافت کنید. این می‌تواند به شما اهرم دهد – برخی این کار را می‌کنند تا اتر بیشتری جمع کنند.",
+  "page-stablecoins-accordion-borrow-crypto-collateral-copy": "با استفاده از اتریوم شما می‌توانید به طور مستقیم و بدون معامله، اتر دریافت کند. این به شما اهرم می‌دهد - بعضی ها به این صورت اتر انباشت می‌‌کنند.",
   "page-stablecoins-accordion-borrow-crypto-collateral-copy-p2": "چون قیمت اتر پرنوسان است، شما باید وثیقه‌ای مازاد بر ارزش وام بگذارید. این بدان معناست که اگر شما قصد وام گرفتن 100 استیبل کوین دارید، احتمالاً حداقل به اتری معادل 150 دلار نیاز خواهید داشت. این امر سیستم و وام‌دهندگان را ایمن می‌سازد.",
   "page-stablecoins-accordion-borrow-crypto-collateral-link": "اطلاعات بیشتر در مورد استیبل کوین بر پایه رمزارز",
   "page-stablecoins-accordion-borrow-pill": "پیشرفته",
@@ -39,7 +39,7 @@
   "page-stablecoins-accordion-less": "کمتر",
   "page-stablecoins-accordion-more": "بیشتر",
   "page-stablecoins-accordion-requirements": "آنچه نیاز خواهید داشت",
-  "page-stablecoins-accordion-swap-dapp-intro": "اگر هم‌اکنون اتر و یک کیف پول دارید، می‌توانید از این برنامه‌های غیرمتمرکز برای تبادل استیبل کوین‌ها استفاده کنید.",
+  "page-stablecoins-accordion-swap-dapp-intro": "اگر هم‌اکنون اتر و یک <a href=\"/glossary/#wallet\">کیف پول</a> دارید، می‌توانید از این برنامه‌های غیرمتمرکز برای تبادل استیبل کوین‌ها استفاده کنید.",
   "page-stablecoins-accordion-swap-dapp-link": "اطلاعات بیشتر درباره صرافی‌های غیرمتمرکز",
   "page-stablecoins-accordion-swap-dapp-title": "برنامه‌های غیرمتمرکز برای تبادل توکن‌ها",
   "page-stablecoins-accordion-swap-editors-tip": "راهنمای ویراستارها",
@@ -118,10 +118,10 @@
   "page-stablecoins-stablecoins-dapp-description-2": "استیبل کوین‌ قرض دهید و سود و $COMP، که توکن شخصی کامپوند است، کسب کنید.",
   "page-stablecoins-stablecoins-dapp-description-3": "پلتفرمی مبادلاتی که می‌توانید روی Dai و USDC خود سود کسب کنید.",
   "page-stablecoins-stablecoins-dapp-description-4": "برنامه‌ای طراحی‌شده برای پس‌انداز Dai.",
-  "page-stablecoins-stablecoins-feature-1": "استیبل کوین‌ها جهانی‌اند و می‌توانند از طریق اینترنت فرستاده شوند. با داشتن یک حساب اتریومی، دریافت و ارسال آن‌ها آسان است.",
+  "page-stablecoins-stablecoins-feature-1": "استیبل کوین‌ها جهانی‌اند و می‌توانند از طریق اینترنت فرستاده شوند. با داشتن یک <a href=\"/glossary/#account\">حساب اتریومی</a>، دریافت و ارسال آن‌ها آسان است.",
   "page-stablecoins-stablecoins-feature-2": "تقاضا برای استیبل کوین‌ها زیاد است، در نتیجه شما می‌توانید با وام دادن مال خودتان، سود کسب کنید. پیش از وام دادن، از خطرات آگاه شوید.",
-  "page-stablecoins-stablecoins-feature-3": "استیبل کوین‌ها در ازای اتر و سایر توکن‌های اتریوم قابل مبادله‌اند. بسیاری از برنامه‌های غیرمتمرکز به استیبل کوین‌ها وابسته‌اند.",
-  "page-stablecoins-stablecoins-feature-4": "استیبل کوین‌ها با رمزنگاری ایمن شده‌اند. هیچ‌کس نمی‌تواند از طرف شما تراکنش جعل کند.",
+  "page-stablecoins-stablecoins-feature-3": "استیبل کوین‌ها در ازای اتر و سایر توکن‌های اتریوم قابل مبادله‌اند. بسیاری از <a href=\"/glossary/#dapp\">برنامه‌های غیرمتمرکز</a> به استیبل کوین‌ها وابسته‌اند.",
+  "page-stablecoins-stablecoins-feature-4": "استیبل کوین‌ها با <a href=\"/glossary/#cryptography\">رمزنگاری</a> ایمن شده‌اند. هیچ‌کس نمی‌تواند از طرف شما تراکنش جعل کند.",
   "page-stablecoins-stablecoins-meta-description": "مقدمه‌ای بر استیبل کوین‌های اتریوم: استیبل کوین‌ چیست، نحوه دریافت آن و علت اهمیت آن چیست.",
   "page-stablecoins-stablecoins-table-header-column-1": "ارز",
   "page-stablecoins-stablecoins-table-header-column-2": "حجم سرمایه بازار",
@@ -162,6 +162,6 @@
   "loopring-logo": "لوگوی Loopring",
   "makerdao-logo": "لوگوی MakerDao",
   "matcha-logo": "لوگوی Matcha",
-  "summerfi-logo": "لوگو Summer.fi",
+  "summerfi-logo": "لوگوی Summer.fi",
   "uniswap-logo": "لوگوی Uniswap"
 }

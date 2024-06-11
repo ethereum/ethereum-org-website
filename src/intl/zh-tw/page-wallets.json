@@ -36,6 +36,7 @@
   "page-wallets-seed-phrase": "寫下你的<a href=\"/glossary/#recovery-phrase\">助記詞</a>",
   "page-wallets-seed-phrase-desc": "錢包經常提供種子助記詞，你必須寫下並安全保存。該種子助記詞為回復錢包唯一管道。",
   "page-wallets-seed-phrase-example": "以下為一範例：",
+  "page-wallets-seed-phrase-snippet": "there aeroplane curve vent formation doge possible product distinct under spirit lamp",
   "page-wallets-seed-phrase-write-down": "請勿儲存在電腦上。寫下種子助記詞並安全保存。",
   "page-wallets-slogan": "掌握數位未來的鑰匙",
   "page-wallets-stay-safe": "如何保持安全",

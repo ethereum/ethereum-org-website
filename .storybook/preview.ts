@@ -11,7 +11,7 @@ import { MotionGlobalConfig } from "framer-motion"
 
 MotionGlobalConfig.skipAnimations = isChromatic()
 
-const chakraBreakpointArray = Object.entries(theme.breakpoints) as [
+export const chakraBreakpointArray = Object.entries(theme.breakpoints) as [
   string,
   string
 ][]

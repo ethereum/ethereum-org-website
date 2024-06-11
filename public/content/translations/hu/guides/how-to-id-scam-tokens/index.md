@@ -6,7 +6,7 @@ lang: hu
 
 # Hogyan lehet felismerni a valótlan tokeneket {#identify-scam-tokens}
 
-One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. Ezek a tokenek jellemzően a [ERC-20](/developers/docs/standards/tokens/erc-20/)-szabványt követik. Ahol legitim alkalmazási területek vannak, melyek értéket teremtenek, mindig megjelennek a csalók is, hogy ezt az értéket megszerezzék maguknak.
+Az Ethereum egyik leggyakoribb felhasználási módja, hogy egy csoport létrehoz egy kereskedhető tokent, bizonyos értelemben saját valutát. Ezek a tokenek jellemzően a [ERC-20](/developers/docs/standards/tokens/erc-20/)-szabványt követik. Ahol legitim alkalmazási területek vannak, melyek értéket teremtenek, mindig megjelennek a csalók is, hogy ezt az értéket megszerezzék maguknak.
 
 Kétféle módon próbálhatják Önt megtéveszteni:
 
