@@ -347,6 +347,8 @@ const WhatIsEthereumPage = ({
             <Image
               src={hero}
               alt={t("page-what-is-ethereum-alt-img-bazaar")}
+              // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+              sizes="(max-width: 992px) 100vw, 750px"
               priority
             />
           </Hero>

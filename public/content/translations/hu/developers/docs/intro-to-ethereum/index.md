@@ -74,7 +74,7 @@ Az Ethereum Virtuális Gép egy globális számítógép, amelynek állapota fel
 
 A valódi gépek, amelyek az EVM állapotot tárolják. A csomópontok kommunikálnak egymással, hogy információkat terjesszenek az EVM állapotáról és az új állapotváltozásokról. Bármely felhasználó kérheti a kód végrehajtását azáltal is, hogy kód végrehajtási kérelmet közvetít egy csomópontból. Az Ethereum hálózat az összes Ethereum csomópont és a kommunikációjuk összessége.
 
-[A csomópontokról bővebben](/developers/docs/nodes-and-clients/)
+[Többet a csomópontokról](/developers/docs/nodes-and-clients/)
 
 ### Számlák {#accounts}
 
@@ -90,7 +90,7 @@ A tranzakciós kérelem egy formális kifejezés a kód végrehajtási kérelemr
 - Publikáljon egy okosszerződéses kódot az EVM státuszba.
 - Hajtsd végre az okosszerződés kódot az X címen az EVM-ben Y paraméterekkel.
 
-[Bővebben a tranzakciókról](/developers/docs/transactions/)
+[Többet a tranzakciókról](/developers/docs/transactions/)
 
 ### Blokkok {#blocks}
 
@@ -102,14 +102,14 @@ A tranzakciók száma nagyon magas, így a tranzakciókat adagokban vagy blokkok
 
 Egy újra felhasználható kódrészlet (egy program), amelyet egy fejlesztő publikál az EVM státuszba. Bárki kérheti az okosszerződéses kód végrehajtását egy tranzakciós kérelemmel. Mivel a fejlesztők tetszőlegesen végrehajtható alkalmazásokat írhatnak az EVM-be (játékokat, piactereket, pénzügyi eszközöket stb.) okosszerződések publikálásával, ezért gyakran hívjuk ezeket [dappoknak, vagy decentralizált alkalmazásoknak](/developers/docs/dapps/).
 
-[Többet az okosszerződésekről](/developers/docs/smart-contracts/)
+[Többet az okos szerződésekről](/developers/docs/smart-contracts/)
 
 ## További olvasnivaló {#further-reading}
 
 - [Ethereum fehérkönyv](/whitepaper/)
 - [Amúgy hogyan működik az Ethereum?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**Megjegyzés:** bár ez a forrás még mindig értékes, de a [Beolvadás](/roadmap/merge) előtti, és ezért az említett proof-of-work mechanizmus helyett az Ethereum már [proof-of-stake](/developers/docs/consensus-mechanisms/pos)-et használ)
 
-_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
+_Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_
 
 ## Kapcsolódó útmutatók {#related-tutorials}
 

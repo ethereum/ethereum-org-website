@@ -174,7 +174,8 @@ const FindWalletPage = ({
         <Center w={{ base: "full", sm: "50%" }}>
           <Image
             src={HeroImage}
-            width={500}
+            // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+            sizes="(max-width: 480px) 100vw, 500px"
             alt=""
             priority
             style={{

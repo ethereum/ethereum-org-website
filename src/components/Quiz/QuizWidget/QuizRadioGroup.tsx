@@ -66,7 +66,7 @@ export const QuizRadioGroup = () => {
     <Box as="fieldset" w="full" {...getRootProps()}>
       <Text
         as="legend"
-        textAlign={{ base: "center", md: "start" }}
+        textAlign="center"
         fontWeight="700"
         size="2xl"
         w="full"
@@ -78,32 +78,38 @@ export const QuizRadioGroup = () => {
         {t(prompt)}
       </Text>
 
-      <Stack spacing="4" data-testid="question-group" id={questionId}>
-        {answers.map(({ id, label }, idx) => {
-          const display =
-            !answerStatus || id === selectedAnswer ? "inline-flex" : "none"
+      <Box
+        px={{ base: "0", md: "12", lg: "16" }}
+        data-testid="question-group"
+        id={questionId}
+      >
+        <Stack spacing="4">
+          {answers.map(({ id, label }, idx) => {
+            const display =
+              !answerStatus || id === selectedAnswer ? "inline-flex" : "none"
 
-          return (
-            <Box key={id} display={display}>
-              <CustomRadio
-                label={t(label)}
-                isAnswerVisible={!!answerStatus}
-                isSelectedCorrect={isSelectedCorrect}
-                index={idx}
-                {...getRadioProps({ value: id })}
-              />
-            </Box>
-          )
-        })}
-      </Stack>
-
-      {!!answerStatus && (
-        <Stack spacing="2" mt="6">
-          <Text fontWeight="bold">{t("explanation")}</Text>
-
-          <Text m={0}>{t(explanation)}</Text>
+            return (
+              <Box key={id} display={display}>
+                <CustomRadio
+                  label={t(label)}
+                  isAnswerVisible={!!answerStatus}
+                  isSelectedCorrect={isSelectedCorrect}
+                  index={idx}
+                  {...getRadioProps({ value: id })}
+                />
+              </Box>
+            )
+          })}
         </Stack>
-      )}
+
+        {!!answerStatus && (
+          <Stack spacing="2" mt="6">
+            <Text fontWeight="bold">{t("explanation")}</Text>
+
+            <Text m={0}>{t(explanation)}</Text>
+          </Stack>
+        )}
+      </Box>
     </Box>
   )
 }
@@ -129,7 +135,7 @@ const CustomRadio = ({
   })
 
   const buttonBg = useMemo<string>(() => {
-    if (!state.isChecked) return "body.inverted"
+    if (!state.isChecked) return "background.highlight"
     if (!isAnswerVisible) return "primary.base"
     if (!isSelectedCorrect) return "error.base"
     return "success.base"
