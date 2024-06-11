@@ -6,8 +6,8 @@ import {
   FormLabel,
   Input,
   InputGroup,
-  InputRightElement,
   InputLeftElement,
+  InputRightElement,
   Kbd,
   Menu,
   MenuList,
@@ -18,7 +18,7 @@ import {
   useEventListener,
 } from "@chakra-ui/react"
 
-import { LocaleDisplayInfo, Lang } from "@/lib/types"
+import { Lang,LocaleDisplayInfo } from "@/lib/types"
 
 import { BaseLink } from "@/components/Link"
 
