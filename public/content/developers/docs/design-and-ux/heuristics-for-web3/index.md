@@ -39,7 +39,7 @@ Showing each step involved in a transaction helps users know where they are in t
 
 ![Informing the user about each step when swapping tokens](./Image1.png)
 
-## 2. Security and Trust are Baked in
+### 2. Security and Trust are Baked in
 
 Security should be prioritised, and this should be emphasised for the user. 
 People care deeply about anything financial. Safety is often a primary concern for users, so it should be considered at all levels of the design. You should always be seeking to earn the trust of your users, but the way you do this can mean different things on different apps. It should not be an afterthought, but should be designed consciously throughout. Build trust throughout the user experience, including social channels and documentation, as well as the final UI. Things like the level of decentralisation, the treasury multi-sig status, and whether the team is doxxed, all affect users' trust
@@ -57,7 +57,7 @@ Include your audits in the footer, at a prominent size.
 
 ![Audits refernced in the website footer](./Image2.png)
 
-## 3. The Most Important Info is Obvious
+### 3. The Most Important Info is Obvious
 
 For complex systems, show only the most relevant data. Determine what is most important, and prioritise its display. 
 Too much information is overwhelming and users typically anchor on one piece of information when making decisions. In DeFi, this will probably be APR on yield apps and LTV on lending apps.
@@ -71,7 +71,7 @@ Too much information is overwhelming and users typically anchor on one piece of 
 
 ![The token and APR are easy to find](./Image3.png)
 
-## 4. Clear Terminology
+### 4. Clear Terminology
 
 Terminology should be understandable and appropriate.
 Technical jargon can be a huge blocker, because it requires the construction of a completely new mental model. Users are unable to relate the design to words, phrases and concepts they already know. Everything seems confusing and unfamiliar, and there is a steep learning curve before they can even attempt to use it. A users might approach DeFi wanting to save some money, and what they find is: Mining, farming, staking, emissions, bribes, vaults, lockers, veTokens, vesting, epochs, decentralised algorithms, protocol-owned liquidity…
@@ -89,7 +89,7 @@ Try to use simple terms that will be understood by the broadest group of people.
 
 ![Token rewards, displayed in U.S. dollars](./Image4.png)
 
-## 5. Actions are as Short as Possible
+### 5. Actions are as Short as Possible
 
 Speed up the user’s interactions by accelerating and grouping sub actions. 
 This may be done on the smart contract level, as well as the UI. The user should not have to move from one part of the system to another – or leave the system entirely – to complete a common action. 
@@ -104,7 +104,7 @@ This may be done on the smart contract level, as well as the UI. The user should
 
 ![Modal showing a switch to combine the deposit and stake actions](./Image5.png)
 
-## 6. Network Connections are Visible and Flexible
+### 6. Network Connections are Visible and Flexible
 
 Inform the user about what network they are connected to, and provide clear shortcuts to change network. 
 This is especially important on multichain apps. The main functions of the app should still be visible while disconnected or connected to a non-supported network.
@@ -120,7 +120,7 @@ This is especially important on multichain apps. The main functions of the app s
 
 ![Dropdown button showing the connected network](./Image6.png)
 
-## 7. Control from the App, not the Wallet
+### 7. Control from the App, not the Wallet
 
 The UI should tell the user everything they need to know and give them control over everything they need to do. 
 In Web3, there are actions you take in the UI, and actions you take in the wallet. Generally, you initiate an action in the UI, and then confirm it in the wallet. Users can feel uncomfortable if these two strands are not integrated carefully.
