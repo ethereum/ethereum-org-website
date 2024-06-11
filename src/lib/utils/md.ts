@@ -140,6 +140,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/standards",
     "/developers/docs/standards/tokens",
     "/developers/docs/standards/tokens/erc-20",
+    "/developers/docs/standards/tokens/erc-223",
     "/developers/docs/standards/tokens/erc-721",
     "/developers/docs/standards/tokens/erc-777",
     "/developers/docs/standards/tokens/erc-1155",

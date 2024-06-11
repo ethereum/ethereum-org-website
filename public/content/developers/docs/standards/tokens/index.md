@@ -19,6 +19,7 @@ Many Ethereum development standards focus on token interfaces. These standards h
 Here are some of the most popular token standards on Ethereum:
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - A standard interface for fungible (interchangeable) tokens, like voting tokens, staking tokens or virtual currencies.
+- [ERC-223](/developers/docs/standards/tokens/erc-223/) - A fungible token standard with "transaction handling" model that makes token behave identical to ether.
 
 ### NFT standards {#nft-standards}
 
