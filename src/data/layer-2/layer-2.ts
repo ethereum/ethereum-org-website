@@ -119,7 +119,7 @@ export const layer2Data: Rollups = {
       background: "white",
     },
     {
-      name: "zkSync",
+      name: "ZKsync",
       website: "https://zksync.io/",
       developerDocs: "https://docs.zksync.io/",
       l2beat: "https://l2beat.com/projects/zksync/",
@@ -138,7 +138,7 @@ export const layer2Data: Rollups = {
         "Coinbase Wallet",
       ],
       blockExplorer: "https://explorer.zksync.io/",
-      ecosystemPortal: "",
+      ecosystemPortal: "https://zksync.io/ecosystem",
       tokenLists: 
         "https://explorer.zksync.io/tokens",
       noteKey: "",
