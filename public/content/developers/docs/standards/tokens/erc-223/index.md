@@ -8,7 +8,7 @@ lang: en
 
 ### What is ERC-223? {#what-is-erc223}
 
-The ERC-223 is a standard for fungible tokens, similar to the ERC-20 standard. The key difference is that ERC-223 defines not only the token API but also the logic for transferring tokens from sender to recipient. It introduces a communication model that allows token transfers to be handled on the recipient's side.
+ERC-223 is a standard for fungible tokens, similar to the ERC-20 standard. The key difference is that ERC-223 defines not only the token API but also the logic for transferring tokens from sender to recipient. It introduces a communication model that allows token transfers to be handled on the recipient's side.
 
 ### Differences from ERC-20 {#erc20-differences}
 
@@ -36,7 +36,7 @@ The contract is not obligated to have only these functions and a developer can a
 
 From [EIP-223](https://eips.ethereum.org/EIPS/eip-223):
 
-#### Methods {#methods}
+### Methods {#methods}
 
 ERC-223 token must implement the following methods:
 
@@ -58,7 +58,7 @@ function tokenReceived(address _from, uint _value, bytes calldata _data)
 
 If ERC-223 tokens are sent to a contract that doesn't implement the `tokenReceived(..)` function then the transfer must fail and the tokens must not be moved from the sender's balance.
 
-#### Events {#events}
+### Events {#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes calldata _data)
@@ -68,7 +68,7 @@ event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes
 
 The API of ERC-223 token is similar to that of ERC-20, so from UI development point of view there is no difference. The only exception here is that ERC-223 tokens may not have `approve` + `transferFrom` functions as these are optional for this standard.
 
-### Solidity examples {#solidity-example}
+#### Solidity examples {#solidity-example}
 
 The following example illustrates how a basic ERC-223 token contract operates:
 
