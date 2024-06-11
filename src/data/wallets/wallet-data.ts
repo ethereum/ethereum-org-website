@@ -21,13 +21,13 @@ import LedgerImage from "@/public/wallets/ledger.png"
 import LoopringImage from "@/public/wallets/loopring.png"
 import MetaMaskImage from "@/public/wallets/metamask.png"
 import MewImage from "@/public/wallets/mew.png"
-import MyEtherWalletImage from "@/public/wallets/myetherwallet.png"
 import OneKeyImage from "@/public/wallets/onekey.png"
 import PhantomImage from "@/public/wallets/phantom.png"
 import PillarImage from "@/public/wallets/pillar.png"
 import RabbyWalletImage from "@/public/wallets/rabbywallet.png"
 import RainbowImage from "@/public/wallets/rainbow.png"
 import SafeImage from "@/public/wallets/safe.png"
+import ShapeShiftImage from "@/public/wallets/shapeshift.png"
 import TahoImage from "@/public/wallets/taho.png"
 import TokenPocketImage from "@/public/wallets/tokenpocket.png"
 import TorusImage from "@/public/wallets/torus.png"
@@ -734,49 +734,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "",
     documentation: "https://unstoppable.money/faq",
   },
-  {
-    last_updated: "2022-06-24",
-    name: "MyEtherWallet",
-    image: MyEtherWalletImage,
-    brand_color: "#ffffff",
-    url: "https://www.myetherwallet.com/",
-    active_development_team: true,
-    languages_supported: ["en"],
-    twitter: "https://twitter.com/myetherwallet",
-    discord: "",
-    reddit: "https://www.reddit.com/r/MyEtherWallet/",
-    telegram: "",
-    ios: false,
-    android: false,
-    linux: false,
-    windows: false,
-    macOS: false,
-    firefox: false,
-    chromium: false,
-    hardware: false,
-    open_source: true,
-    repo_url: "https://github.com/MyEtherWallet/MyEtherWallet/",
-    non_custodial: true,
-    security_audit: [""],
-    scam_protection: false,
-    hardware_support: true,
-    rpc_importing: false,
-    nft_support: true,
-    connect_to_dapps: true,
-    staking: true,
-    swaps: true,
-    multichain: false,
-    layer_2: true,
-    gas_fee_customization: true,
-    ens_support: true,
-    erc_20_support: true,
-    buy_crypto: true,
-    withdraw_crypto: true,
-    multisig: false,
-    social_recovery: false,
-    onboard_documentation: "https://www.mewtopia.com",
-    documentation: "https://help.myetherwallet.com/en/",
-  },
+
   {
     last_updated: "2022-06-24",
     name: "AlphaWallet",
@@ -1842,6 +1800,64 @@ export const walletsData: WalletData[] = [
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
     documentation:
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
+  },
+  {
+    last_updated: "2024-06-07",
+    name: "ShapeShift Mobile",
+    image: ShapeShiftImage,
+    brand_color: "#386FF9",
+    url: "https://shapeshift.com/",
+    active_development_team: true,
+    languages_supported: [
+      "en",
+      "es",
+      "de",
+      "fr",
+      "zh",
+      "ja",
+      "pt",
+      "ru",
+      "tr",
+      "uk",
+    ],
+    twitter: "https://twitter.com/shapeshift",
+    discord: "https://discord.gg/shapeshift",
+    reddit: "",
+    telegram: "https://t.me/shapeshiftofficial",
+    ios: true,
+    android: true,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: false,
+    chromium: false,
+    hardware: false,
+    open_source: true,
+    repo_url: "https://github.com/shapeshift/",
+    non_custodial: true,
+    security_audit: [
+      "https://www.defisafety.com/app/pqrs/108",
+      "https://hackenproof.com/shape-shift/shapeshift",
+    ],
+    scam_protection: false,
+    hardware_support: false,
+    rpc_importing: false,
+    nft_support: true,
+    connect_to_dapps: true,
+    staking: true,
+    swaps: true,
+    multichain: true,
+    layer_2: true,
+    gas_fee_customization: true,
+    ens_support: true,
+    erc_20_support: false,
+    buy_crypto: true,
+    withdraw_crypto: true,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation: "https://docs.shapeshift.com/",
+    documentation: "https://docs.shapeshift.com/",
+    new_to_crypto: true,
   },
 ]
 

@@ -4,10 +4,7 @@ import {
   Avatar,
   Flex,
   FlexProps,
-  Heading,
   ListItem,
-  ModalBody,
-  ModalHeader,
   UnorderedList,
   VStack,
 } from "@chakra-ui/react"
@@ -46,7 +43,6 @@ const Contributor = ({ contributor }: ContributorProps) => (
 )
 
 export type FileContributorsProps = FlexProps & {
-  editPath?: string
   contributors: FileContributor[]
   lastEdit: string
 }
@@ -70,22 +66,18 @@ const FileContributors = ({
 
   return (
     <>
-      <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
-        <ModalHeader py={0}>
-          <Heading m={0}>
-            <Translation id="contributors" />
-          </Heading>
-        </ModalHeader>
-
-        <ModalBody>
-          <Translation id="contributors-thanks" />
-
-          <ContributorList>
-            {contributors.map((contributor) => (
-              <Contributor contributor={contributor} key={contributor.login} />
-            ))}
-          </ContributorList>
-        </ModalBody>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setModalOpen(false)}
+        size={{ base: "full", md: "xl" }}
+        title={<Translation id="contributors" />}
+      >
+        <Translation id="contributors-thanks" />
+        <ContributorList>
+          {contributors.map((contributor) => (
+            <Contributor contributor={contributor} key={contributor.login} />
+          ))}
+        </ContributorList>
       </Modal>
 
       <Flex

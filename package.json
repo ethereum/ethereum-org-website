@@ -67,7 +67,7 @@
     "@storybook/addon-links": "7.6.6",
     "@storybook/nextjs": "7.6.6",
     "@storybook/react": "7.6.6",
-    "@storybook/testing-library": "0.2.2",
+    "@storybook/test": "8.0.0",
     "@svgr/webpack": "^8.1.0",
     "@types/decompress": "^4.2.7",
     "@types/hast": "^3.0.0",

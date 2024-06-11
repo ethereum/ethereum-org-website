@@ -1,5 +1,5 @@
 ---
-title: Letéti alapba helyezés
+title: Pooled staking
 description: Áttekintés a letéti alapok használatáról
 lang: hu
 template: staking

@@ -89,7 +89,7 @@ Ugyanakkor számos Web3-közösséget is DAO-ként definiálnak. Ezek a közöss
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tudjon meg többet a DAO-król</div>
   <ButtonLink to="/dao/">
-    Bővebben a DAO-król
+    További információk a DAO-król
   </ButtonLink>
 </InfoBanner>
 
@@ -140,7 +140,7 @@ Ez még csak a kezdete annak, hogy az internet jobbá váljon a Web3-mal, és ah
 - [Tárca szerzése](/wallets/)
 - [Találjon egy közösséget](/community/)
 - [Fedezze fel a Web3-alkalmazásokat](/dapps/)
-- [Csatlakozzon egy DAO-hoz](/dao/)
+- [DAO-hoz csatlakozás](/dao/)
 - [Építsen a Web3-ra](/developers/)
 
 ## További olvasnivaló {#further-reading}

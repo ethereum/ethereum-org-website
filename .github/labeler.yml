@@ -29,12 +29,10 @@
 "translation 🌍":
   - public/content/translations/**/*
   - src/intl/**/*
-  - !src/intl/en/**
 
 "content 🖋️":
   - src/intl/en/**
   - public/content/**/*
-  - !public/content/translations/**/*
 
 "event 📅":
   - src/data/community-events.json

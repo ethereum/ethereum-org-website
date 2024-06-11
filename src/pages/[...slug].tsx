@@ -17,7 +17,6 @@ import remarkGfm from "remark-gfm"
 
 import type {
   CommitHistory,
-  Lang,
   Layout,
   LayoutMappingType,
   NextPageWithLayout,
@@ -27,10 +26,9 @@ import type {
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
 
-import { getCrowdinContributors } from "@/lib/utils/crowdin"
+import { getFileContributorInfo } from "@/lib/utils/contributors"
 import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { remapTableOfContents } from "@/lib/utils/toc"
@@ -56,7 +54,6 @@ import {
   UseCasesLayout,
 } from "@/layouts"
 import { fetchGFIs } from "@/lib/api/fetchGFIs"
-import { fetchAndCacheGitContributors } from "@/lib/api/fetchGitHistory"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import remarkInferToc from "@/lib/rehype/remarkInferToc"
@@ -157,7 +154,6 @@ export const getStaticProps = (async (context) => {
   const timeToRead = readingTime(markdown.content)
   const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
   const slug = `/${params.slug.join("/")}/`
-  const lastUpdatedDate = getLastModifiedDate(slug, locale!)
   const lastDeployDate = getLastDeployDate()
 
   // Get corresponding layout
@@ -176,18 +172,19 @@ export const getStaticProps = (async (context) => {
     }
   }
 
-  const crowdinContributors = ["docs", "tutorial"].includes(layout)
-    ? getCrowdinContributors(mdPath, locale as Lang)
-    : []
-
   const requiredNamespaces = getRequiredNamespacesForPage(slug, layout)
 
-  const gfissues = await gfIssuesDataFetch()
-
-  const gitContributors = await fetchAndCacheGitContributors(
-    join("/", mdDir, "index.md"),
+  const { contributors, lastUpdatedDate } = await getFileContributorInfo(
+    mdDir,
+    mdPath,
+    slug,
+    locale!,
+    frontmatter.lang,
+    layout,
     commitHistoryCache
   )
+
+  const gfissues = await gfIssuesDataFetch()
 
   return {
     props: {
@@ -201,9 +198,8 @@ export const getStaticProps = (async (context) => {
       layout,
       timeToRead: Math.round(timeToRead.minutes),
       tocItems,
-      crowdinContributors,
+      contributors,
       gfissues,
-      gitContributors,
     },
   }
 }) satisfies GetStaticProps<Props, Params>
@@ -237,9 +233,8 @@ ContentPage.getLayout = (page) => {
     layout,
     timeToRead,
     tocItems,
-    crowdinContributors,
+    contributors,
     contentNotTranslated,
-    gitContributors,
   } = page.props
 
   const layoutProps = {
@@ -248,9 +243,8 @@ ContentPage.getLayout = (page) => {
     lastUpdatedDate,
     timeToRead,
     tocItems,
-    crowdinContributors,
+    contributors,
     contentNotTranslated,
-    gitContributors,
   }
   const Layout = layoutMapping[layout]
 
