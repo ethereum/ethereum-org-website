@@ -29,6 +29,7 @@ import {
 } from "@/lib/utils/wallets"
 
 import {
+  BASE_TIME_UNIT,
   DEFAULT_LOCALE,
   NAV_BAR_PX_HEIGHT,
   WALLETS_FILTERS_DEFAULT,
@@ -81,6 +82,8 @@ export const getStaticProps = (async ({ locale }) => {
       lastDeployDate,
       wallets,
     },
+    // Updated once a day
+    revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
