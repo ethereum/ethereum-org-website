@@ -17,6 +17,7 @@ import remarkGfm from "remark-gfm"
 
 import type {
   CommitHistory,
+  Lang,
   Layout,
   LayoutMappingType,
   NextPageWithLayout,
@@ -31,6 +32,7 @@ import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { remapTableOfContents } from "@/lib/utils/toc"
 import {
   filterRealLocales,
@@ -194,6 +196,14 @@ export const getStaticProps = (async (context) => {
       frontmatter,
       lastUpdatedDate,
       lastDeployDate,
+      lastEditLocaleTimestamp: getLocaleTimestamp(
+        locale as Lang,
+        lastUpdatedDate
+      ),
+      lastDeployLocaleTimestamp: getLocaleTimestamp(
+        locale as Lang,
+        lastDeployDate
+      ),
       contentNotTranslated,
       layout,
       timeToRead: Math.round(timeToRead.minutes),
@@ -230,6 +240,8 @@ ContentPage.getLayout = (page) => {
     slug,
     frontmatter,
     lastUpdatedDate,
+    lastEditLocaleTimestamp,
+    lastDeployLocaleTimestamp,
     layout,
     timeToRead,
     tocItems,
@@ -241,6 +253,8 @@ ContentPage.getLayout = (page) => {
     slug,
     frontmatter,
     lastUpdatedDate,
+    lastEditLocaleTimestamp,
+    lastDeployLocaleTimestamp,
     timeToRead,
     tocItems,
     contributors,
