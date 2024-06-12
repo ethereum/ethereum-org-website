@@ -246,7 +246,7 @@ Aquí copiamos todos los datos de retorno al búfer de memoria a partir de 0x80.
 |     BC | JUMPI               | (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address                              |
 |     BD | DUP2                | RETURNDATASIZE (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address               |
 |     BE | DUP5                | 0x80 RETURNDATASIZE (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address          |
-|     BF | REGRESAR            |                                                                                                                              |
+|     BF | RETURN              |                                                                                                                              |
 
 Así que después de la llamada copiamos los datos de retorno en el búfer 0x80 - 0x80+RETURNDATASIZE, y si la llamada tiene éxito, entonces devolvemos (`RETURN`) con exactamente ese búfer.
 
@@ -259,7 +259,7 @@ Si llegamos aquí, a 0xC0, significa que el contrato al que llamamos se revirti�
 |     C0 | JUMPDEST            | (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address                     |
 |     C1 | DUP2                | RETURNDATASIZE (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address      |
 |     C2 | DUP5                | 0x80 RETURNDATASIZE (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address |
-|     C3 | REVERTIR            |                                                                                                                     |
+|     C3 | REVERT              |                                                                                                                     |
 
 Así que hacemos `REVERT` con el mismo búfer que usamos para `RETURN` antes: 0x80 - 0x80+RETURNDATASIZE
 
@@ -312,7 +312,7 @@ Si no se encuentra ninguna coincidencia, el código salta al [controlador de pro
 |    10A | JUMPI               | CALLVALUE                     |
 |    10B | PUSH1 0x00          | 0x00 CALLVALUE                |
 |    10D | DUP1                | 0x00 0x00 CALLVALUE           |
-|    10E | REVERTIR            |                               |
+|    10E | REVERT              |                               |
 
 Lo primero que hace esta función es comprobar que la llamada no haya enviado ETH. Esta función no es [`pagable`](https://solidity-by-example.org/payable/). Si alguien nos envió ETH, debe ser un error, y queremos revertir (`REVERT`) para evitar tener ETH que no puedan recuperar.
 
@@ -353,7 +353,7 @@ Esta es la primera vez que vemos estas líneas, pero se comparten con otros mét
 |     E9 | SWAP2               | X 0x80 0x80 |
 |     EA | SUB                 | X-0x80 0x80 |
 |     EB | SWAP1               | 0x80 X-0x80 |
-|     EC | REGRESAR            |             |
+|     EC | RETURN              |             |
 
 Por lo tanto, este código recibe un puntero de memoria en la pila (X) y hace que el contrato haga `RETURN` con un búfer que es 0x80 - X.
 
@@ -442,7 +442,7 @@ Parece que esta función toma al menos 32 bytes (una palabra) de datos de llamad
 | ------:| ------------------- | -------------------------------------------- |
 |    19D | DUP1                | 0x00 0x00 0x04 CALLDATASIZE 0x0153 0xDA      |
 |    19E | DUP2                | 0x00 0x00 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
-|    19F | REVERTIR            |                                              |
+|    19F | REVERT              |                                              |
 
 Si no recibe los datos de la llamada, la transacción se revierte sin ningún dato de devolución.
 
@@ -481,7 +481,7 @@ Si la primera palabra no es inferior a Storage[4], la función falla. Se reviert
 | ------:| ------------------- | ------------- |
 |    17A | PUSH1 0x00          | 0x00 ...      |
 |    17C | DUP1                | 0x00 0x00 ... |
-|    17D | REVERTIR            |               |
+|    17D | REVERT              |               |
 
 Si calldataload(4) es menor que Storage[4], obtenemos este código:
 
@@ -546,7 +546,7 @@ Ya sabemos lo que hace el [código en offset 0xDA](#the-da-code): devuelve el va
 
 Pero sabemos que cualquier otra funcionalidad es proporcionada por el contrato en Storage[3]. Tal vez si supiéramos cuál es ese contrato, nos daría una pista. Afortunadamente, esta es la cadena de bloques y todo se sabe, al menos en teoría. No vimos ningún método que estableciera Storage[3], por lo que debe haber sido establecido por el constructor.
 
-## El Constructor {#the-constructor}
+## El constructor {#the-constructor}
 
 Cuando [analizamos un contrato](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f), también podemos ver la transacción que lo creó.
 

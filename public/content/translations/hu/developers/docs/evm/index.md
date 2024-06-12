@@ -4,9 +4,7 @@ description: Bevezetés az Ethereum virtuális gépbe és arról, hogy hogyan ka
 lang: hu
 ---
 
-Az EVM fizikai megtestesülését nem lehet úgy leírni, mint ahogy azt egy felhő vagy egy óceáni hullám esetében tennénk, de attól még _létezik_ egy egyedüli entitásként több ezer összekapcsolt számítógép által, melyek egy Ethereum klienst futtatnak.
-
-Az Ethereum protokoll maga egyedül azért létezik, hogy fenntartsa a folyamatos, zavartalan és változatlan működését ennek a speciális státuszú gépnek. Ez egy olyan környezet, amelyben az összes Ethereum számla és okosszerződés él. A lánc bármely adott blokkján az Ethereumnak egy és csak egy „kanonikus” állapota van, és az EVM határozza meg a szabályokat egy új érvényes állapot létrehozására blokkról blokkra.
+Az Ethereum Virtual Machine (EVM) egy decentralizált virtuális környezet, amely következetesen és biztonságosan hajtja végre a kódot az összes Ethereum csomóponton. A csomópontok az EVM-et futtatják az intelligens szerződések végrehajtására, a „[gáz](/gas/)” használatával mérik a [műveletekhez](/developers/docs/evm/opcodes/) szükséges számítási erőfeszítést, biztosítva az erőforrások hatékony elosztását és a hálózat biztonságát.
 
 ## Előfeltételek {#prerequisites}
 
@@ -74,6 +72,7 @@ Az [Ethereum végrehajtási kliensek](/developers/docs/nodes-and-clients/#execut
 - [Ethereum Virtuális Gép Opcode-ok](https://www.ethervm.io/)
 - [Ethereum Virtuális Gép operációskódjainak interaktív referenciája](https://www.evm.codes/)
 - [Rövid bevezetés a Solidity dokumentációjába](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
+- [Az Ethereum elsajátítása - az Ethereum virtuális gép](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
 
 ## Kapcsolódó témák {#related-topics}
 

@@ -51,7 +51,7 @@ A smart contract is code that lives on the Ethereum blockchain and runs exactly 
 
 **Scaffold-ETH _- Quickly experiment with Solidity using a frontend that adapts to your smart contract._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Example dapp](https://punkwallet.io/)
 
 **Create Eth App _- Create Ethereum-powered apps with one command._**
@@ -73,6 +73,12 @@ A smart contract is code that lives on the Ethereum blockchain and runs exactly 
 - [Homepage](https://thirdweb.com/)
 - [Documentation](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
+
+**Crossmint _- Enterprise-grade web3 development platform to deploy smart contracts, enable credit-card and cross chain payments, and use APIs to create, distribute, sell, store, and edit NFTs._**
+
+- [crossmint.com](https://www.crossmint.com)
+- [Documentation](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
 
 ## Further reading {#further-reading}
 

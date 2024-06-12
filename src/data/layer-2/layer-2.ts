@@ -139,12 +139,13 @@ export const layer2Data: Rollups = {
       ],
       blockExplorer: "https://explorer.zksync.io/",
       ecosystemPortal: "",
-      tokenLists: "",
+      tokenLists: 
+        "https://explorer.zksync.io/tokens",
       noteKey: "",
-      purpose: ["tokens", "nft"],
+      purpose: ["universal"],
       descriptionKey: "zksync-description",
       image: zkSyncImage,
-      background: "#11142b",
+      background: "black",
     },
     {
       name: "ZKSpace",

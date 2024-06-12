@@ -13,13 +13,15 @@ summaryPoint3: Grâce à la crypto, les utilisateurs ont maintenant les outils p
 
 L'identité sous-tend pratiquement tous les aspects de votre vie aujourd'hui. Utiliser les services en ligne, ouvrir un compte bancaire, voter aux élections, acheter des biens, en assurant l’emploi, tout cela nécessite de prouver votre identité.
 
-Cependant, les systèmes traditionnels de gestion d'identité reposent depuis longtemps sur des intermédiaires centralisés qui émettent, conservent et contrôlent vos identifiants et vos [attestations](#what-are-attestations). Cela signifie que vous ne pouvez pas contrôler les renseignements relatifs à votre identité ou décider qui a accès à des renseignements personnels identifiables (PII) et quel est le niveau d'accès de ces parties.
+Cependant, les systèmes traditionnels de gestion d'identité reposent depuis longtemps sur des intermédiaires centralisés qui émettent, conservent et contrôlent vos identifiants et vos [attestations](/glossary/#attestation). Cela signifie que vous ne pouvez pas contrôler les renseignements relatifs à votre identité ou décider qui a accès à des renseignements personnels identifiables (PII) et quel est le niveau d'accès de ces parties.
 
 Pour résoudre ces problèmes, nous avons des systèmes d'identité décentralisés construits sur des blockchains publiques comme Ethereum. L'identité décentralisée permet aux individus de gérer les informations relatives à leur identité. Avec des solutions d’identité décentralisées, _vous_ pouvez créer des identifiants et réclamer et détenir vos attestations sans compter sur les autorités centrales, comme les fournisseurs de services ou les gouvernements.
 
 ## Qu'est-ce qu'une identité? {#what-is-identity}
 
 L'identité signifie le sentiment de soi d'un individu, défini par des caractéristiques uniques. L'identité désigne le fait d'être un _individu_, c'est-à-dire une entité humaine distincte. L'identité pourrait également se référer à d'autres entités non humaines, comme une organisation ou une autorité.
+
+<YouTube id="Ew-_F-OtDFI" />
 
 ## Que sont les identifiants ? {#what-are-identifiers}
 
@@ -31,29 +33,69 @@ Un identificateur est une information qui sert de pointeur vers une identité pa
 - Date et lieu de naissance
 - Identifiants numérique, par exemple les adresses e-mail, les noms d'utilisateur, les avatars
 
-Ces exemples traditionnels d’identifiants sont publiés, détenus et contrôlés par des entités centrales. Vous avez besoin de la permission de votre gouvernement pour changer votre nom ou de celle d'une plateforme de médias sociaux pour changer de poignée.
+Ces exemples traditionnels d’identifiants sont publiés, détenus et contrôlés par des entités centrales. Vous avez besoin de la permission de votre gouvernement pour changer votre nom ou de celle d'une plateforme de médias sociaux pour changer de pseudo.
+
+## Avantages d'une identité décentralisée {#benefits-of-decentralized-identity}
+
+1. L'identité décentralisée accroît votre contrôle sur vos informations personnelles d'identification. Les identifiants et attestations décentralisés peuvent être vérifiés sans dépendre des autorités centralisées et des services tiers.
+
+2. Les solutions d'identité décentralisées facilitent la vérification et la gestion de l'identité des utilisateurs de manière fiable, transparente et protègent la vie privée.
+
+3. L'identité décentralisée exploite la technologie blockchain, qui crée la confiance entre les différentes parties et fournit des garanties cryptographiques pour prouver la validité des attestations.
+
+4. L'identité décentralisée rend les données d'identité transférables. Les utilisateurs stockent des attestations et des identificateurs dans un portefeuille numérique et peuvent les partager avec n'importe quelle partie de leur choix. Les identifiants et attestations décentralisés ne sont pas verrouillés dans la base de données de l'organisme émetteur.
+
+5. L'identité décentralisée devrait bien fonctionner avec les technologies émergentes de [connaissance zéro](/glossary/#zk-proof) qui permettront aux individus de prouver qu'ils possèdent ou ont fait quelque chose sans révéler ce que c'est. Cela pourrait devenir un moyen puissant de combiner confiance et confidentialité pour des applications telles que le vote.
+
+6. L'identité décentralisée permet aux mécanismes [anti-Sybil](/glossary/#anti-sybil) de détecter lorsqu'un individu se fait passer pour plusieurs autres afin de jouer ou de spammer un système.
+
+## Cas d'utilisation de l'identité décentralisée {#decentralized-identity-use-cases}
+
+L'identité décentralisée propose de nombreux cas d'utilisation potentiels :
+
+### 1. Connexions universelles {#universal-dapp-logins}
+
+L'identité décentralisée peut aider à remplacer les connexions par mot de passe par une authentification décentralisée. Les fournisseurs de services peuvent délivrer des attestations aux utilisateurs, qui peuvent être stockées dans un portefeuille Ethereum. Un exemple d'attestation serait un [NFT](/glossary/#nft) accordant au titulaire l'accès à une communauté en ligne.
+
+Une fonction de [connexion avec Ethereum](https://login.xyz/) permettrait alors aux serveurs de confirmer le compte Ethereum de l'utilisateur et de récupérer l'attestation requise à partir de l'adresse de son compte. Cela signifie que les utilisateurs peuvent accéder aux plateformes et aux sites web sans avoir à mémoriser de longs mots de passe et améliore l'expérience en ligne des utilisateurs.
+
+### 2. Authentification KYC {#kyc-authentication}
+
+L'utilisation de nombreux services en ligne exige des personnes qu'elles fournissent des attestations et des justificatifs, tels qu'un permis de conduire ou un passeport national. Mais cette approche est problématique, car les informations privées des utilisateurs peuvent être compromises et les fournisseurs de services ne peuvent pas vérifier l'authenticité de l'attestation.
+
+L'identité décentralisée permet aux entreprises de se passer des processus classiques de [connaissance du client (Know-Your-Customer KYC)](https://en.wikipedia.org/wiki/Know_your_customer) et d'authentifier l'identité des utilisateurs au moyen d'identifiants vérifiables. Cela réduit le coût de la gestion de l'identité et empêche l'utilisation de faux documents.
+
+### 3. Votes et communautés en ligne {#voting-and-online-communities}
+
+Le vote en ligne et les médias sociaux sont deux nouvelles applications de l'identité décentralisée. Les systèmes de vote en ligne sont susceptibles d'être manipulés, notamment si des acteurs malveillants créent de fausses identités pour voter. Demander aux personnes de présenter des attestations sur la chaîne peut améliorer l'intégrité des processus de vote en ligne.
+
+L'identité décentralisée peut contribuer à créer des communautés en ligne exemptes de faux comptes. Par exemple, chaque utilisateur pourrait devoir authentifier son identité à l'aide d'un système d'identité sur la chaîne, comme le service de nom Ethereum, ce qui réduirait les possibilités de bots.
+
+### 4. Protection anti-sybil {#sybil-protection}
+
+Les attaques de type Sybil consistent à faire croire à un système que l'on est plusieurs personnes afin d'augmenter son influence. Les applications d'attribution de subvention qui utilisent le [vote quadratique](/glossary/#quadratic-voting) sont vulnérables à ces attaques Sybil car la valeur d'une subvention augmente quand davantage de personnes votent pour elle, incitant les utilisateurs à répartir leurs contributions entre plusieurs identités. Les identités décentralisées permettent d'éviter cela en faisant peser sur chaque participant la charge de prouver qu'il est réellement humain, mais souvent sans avoir à révéler des informations privées spécifiques.
 
 ## Que sont les attestations ? {#what-are-attestations}
 
 Une attestation est une déclaration faite par une entité sur une autre entité. Si vous vivez aux États-Unis, le permis de conduire qui vous a été délivré par le Department of Motor Vehicles (ministère des véhicules à moteur) (une entité) atteste que vous (une autre entité) êtes légalement autorisé à conduire une voiture.
 
-Les attestations sont différentes des identifiants. Une attestation _contient_ des identifiants pour référencer une identité particulière et émet une revendication à propos d'un attribut lié à cette identité. Ainsi, votre permis de conduire a des identifiants (nom, date de naissance, adresse) mais est aussi l'attestation de votre droit légal de conduire.
+Les attestations sont différentes des identifiants. Une attestation _contient_des identifiants pour référencer une identité particulière et émet une revendication à propos d'un attribut lié à cette identité. Ainsi, votre permis de conduire a des identifiants (nom, date de naissance, adresse) mais est aussi l'attestation de votre droit légal de conduire.
 
 ### Que sont les identifiants décentralisés ? {#what-are-decentralized-identifiers}
 
 Les identificateurs traditionnels comme votre nom légal ou votre adresse de courriel dépendent de tierces parties – gouvernements et fournisseurs de courriel. Les identifiants décentralisés (DID) sont différents : ils ne sont pas délivrés, gérés ou contrôlés par une quelconque entité centrale.
 
-Des identifiants décentralisés sont émis, conservés et contrôlés par des individus. Un compte [Ethereum](/developers/docs/accounts/) est un exemple d'identifiant décentralisé. Vous pouvez créer autant de comptes que vous le souhaitez sans permission de personne et sans avoir à les stocker dans un registre central.
+Des identifiants décentralisés sont émis, conservés et contrôlés par des individus. Un [compte Ethereum](/glossary/#account) est un exemple d'identifiant décentralisé. Vous pouvez créer autant de comptes que vous le souhaitez sans permission de personne et sans avoir à les stocker dans un registre central.
 
-Les identifiants décentralisés sont stockés sur des registres distribués (blockchains) ou sur des réseaux de pair-à-pair. Cela rend les DID [mondialement uniques, solubles avec une haute disponibilité, et vérifiables cryptographiquement](https://w3c-ccg.github.io/did-primer/). Un identifiant décentralisé peut être associé à différentes entités, y compris les personnes, les organisations ou les institutions gouvernementales.
+Les identifiants décentralisés sont stockés sur des registres distribués ([blockchains](/glossary/#blockchain)) ou sur des réseaux [pair-à-pair](/glossary/#peer-to-peer-network). Cela rend les DID [mondialement uniques, solubles avec une haute disponibilité, et vérifiables cryptographiquement](https://w3c-ccg.github.io/did-primer/). Un identifiant décentralisé peut être associé à différentes entités, y compris les personnes, les organisations ou les institutions gouvernementales.
 
 ## Qu'est-ce qui rend possible les identifiants décentralisés ? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infrastructure à clé publique (ICP) {#public-key-infrastructure}
+### 1. Cryptographie à clé publique {#public-key-cryptography}
 
-L'infrastructure à clé publique (ICP) est une mesure de sécurité de l'information qui génère une [clé publique](/glossary/#public-key) et une [clé privée](/glossary/#private-key) pour une entité. La cryptographie à clé publique est utilisée dans les réseaux blockchain pour authentifier l'identité des utilisateurs et prouver la propriété des actifs numériques.
+La cryptographie à clé publique est une mesure de sécurité de l'information qui génère une [clé publique](/glossary/#public-key) et une [clé privée](/glossary/#private-key) pour une entité. La [cryptographie](/glossary/#cryptography) à clé publique est utilisée dans les réseaux blockchain pour authentifier l'identité des utilisateurs et prouver la propriété des actifs numériques.
 
-Certains identifiants décentralisés, tels qu'un compte Ethereum, possèdent des clés publiques et privées. La clé publique identifie le contrôleur du compte, tandis que les clés privées peuvent signer et déchiffrer les messages pour ce compte. L'ICP fournit les preuves nécessaires pour authentifier les entités et empêcher l'usurpation d'identité et l'utilisation de fausses identités, en utilisant [des signatures cryptographiques](https://andersbrownworth.com/blockchain/public-private-keys/) pour vérifier toutes les demandes.
+Certains identifiants décentralisés, tels qu'un compte Ethereum, possèdent des clés publiques et privées. La clé publique identifie le contrôleur du compte, tandis que les clés privées peuvent signer et déchiffrer les messages pour ce compte. La cryptographie à clé publique fournit les preuves nécessaires pour authentifier les entités et empêcher l'usurpation d'identité et l'utilisation de fausses identités, en utilisant [des signatures cryptographiques](https://andersbrownworth.com/blockchain/public-private-keys/) pour vérifier toutes les demandes.
 
 ### 2. Stockage de données décentralisé {#decentralized-datastores}
 
@@ -97,7 +139,7 @@ Cette approche permet aux attestations d'obtenir une persistance basée sur la b
 
 ### Attestations sur la chaîne {#onchain-attestations}
 
-Les attestations sur la chaîne sont détenues dans des [contrats intelligents](/developers/docs/smart-contracts/) sur la blockchain Ethereum. Le contrat intelligent (agissant comme un registre) associera une attestation à un identifiant décentralisé correspondant sur la chaîne (une clé publique).
+Les attestations sur la chaîne sont détenues dans des [contrats intelligents](/glossary/#smart-contract) sur la blockchain Ethereum. Le contrat intelligent (agissant comme un registre) associera une attestation à un identifiant décentralisé correspondant sur la chaîne (une clé publique).
 
 Voici un exemple pour montrer comment les attestations sur la chaîne pourraient fonctionner dans la pratique :
 
@@ -109,47 +151,7 @@ Voici un exemple pour montrer comment les attestations sur la chaîne pourraient
 
 ### Jetons d'âme et identité {#soulbound}
 
-[Les jetons d'âme](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (NFT non transférables) pourraient être utilisés pour collecter des informations propres à un portefeuille spécifique. Cela crée effectivement une identité unique sur la chaîne, liée à une adresse Ethereum particulière, qui peut inclure des jetons représentant des réalisations (par exemple, terminer un cours en ligne spécifique ou atteindre un score seuil dans un jeu) ou la participation à une communauté.
-
-## Avantages d'une identité décentralisée {#benefits-of-decentralized-identity}
-
-1. L'identité décentralisée accroît votre contrôle sur vos informations personnelles d'identification. Les identifiants et attestations décentralisés peuvent être vérifiés sans dépendre des autorités centralisées et des services tiers.
-
-2. Les solutions d'identité décentralisées facilitent la vérification et la gestion de l'identité des utilisateurs de manière fiable, transparente et protègent la vie privée.
-
-3. L'identité décentralisée exploite la technologie blockchain, qui crée la confiance entre les différentes parties et fournit des garanties cryptographiques pour prouver la validité des attestations.
-
-4. L'identité décentralisée rend les données d'identité transférables. Les utilisateurs stockent des attestations et des identificateurs dans un portefeuille numérique et peuvent les partager avec n'importe quelle partie de leur choix. Les identifiants et attestations décentralisés ne sont pas verrouillés dans la base de données de l'organisme émetteur.
-
-5. L'identité décentralisée devrait bien fonctionner avec les technologies émergentes de connaissance zéro qui permettront aux individus de prouver qu'ils possèdent ou ont fait quelque chose sans révéler ce que c'est. Cela pourrait devenir un moyen puissant de combiner confiance et confidentialité pour des applications telles que le vote.
-
-6. L'identité décentralisée permet aux mécanismes anti-Sybil de détecter lorsqu'un individu se fait passer pour plusieurs autres afin de jouer ou de spammer un système.
-
-## Cas d'utilisation de l'identité décentralisée {#decentralized-identity-use-cases}
-
-L'identité décentralisée propose de nombreux cas d'utilisation potentiels :
-
-### 1. Connexions universelles {#universal-dapp-logins}
-
-L'identité décentralisée peut aider à remplacer les connexions par mot de passe par une [authentification décentralisée](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/). Les fournisseurs de services peuvent délivrer des attestations aux utilisateurs, qui peuvent être stockées dans un portefeuille Ethereum. Un exemple d'attestation serait un [NFT](/nft/) accordant au titulaire l'accès à une communauté en ligne.
-
-Une fonction de [connexion avec Ethereum](https://login.xyz/) permettrait alors aux serveurs de confirmer le compte Ethereum de l'utilisateur et de récupérer l'attestation requise à partir de l'adresse de son compte. Cela signifie que les utilisateurs peuvent accéder aux plateformes et aux sites web sans avoir à mémoriser de longs mots de passe et améliore l'expérience en ligne des utilisateurs.
-
-### 2. Authentification KYC {#kyc-authentication}
-
-L'utilisation de nombreux services en ligne exige des personnes qu'elles fournissent des attestations et des justificatifs, tels qu'un permis de conduire ou un passeport national. Mais cette approche est problématique, car les informations privées des utilisateurs peuvent être compromises et les fournisseurs de services ne peuvent pas vérifier l'authenticité de l'attestation.
-
-L'identité décentralisée permet aux entreprises de se passer des processus classiques de [connaissance du client (Know-Your-Customer KYC)](https://en.wikipedia.org/wiki/Know_your_customer) et d'authentifier l'identité des utilisateurs au moyen d'identifiants vérifiables. Cela réduit le coût de la gestion de l'identité et empêche l'utilisation de faux documents.
-
-### 3. Votes et communautés en ligne {#voting-and-online-communities}
-
-Le vote en ligne et les médias sociaux sont deux nouvelles applications de l'identité décentralisée. Les systèmes de vote en ligne sont susceptibles d'être manipulés, notamment si des acteurs malveillants créent de fausses identités pour voter. Demander aux personnes de présenter des attestations sur la chaîne peut améliorer l'intégrité des processus de vote en ligne.
-
-L'identité décentralisée peut contribuer à créer des communautés en ligne exemptes de faux comptes. Par exemple, chaque utilisateur pourrait devoir authentifier son identité à l'aide d'un système d'identité sur la chaîne, comme le service de nom Ethereum, ce qui réduirait les possibilités de bots.
-
-### 4. Protection anti-sybil {#sybil-protection}
-
-Les attaques de type Sybil consistent à faire croire à un système que l'on est plusieurs personnes afin d'augmenter son influence. [Les applications d'octroi de subventions](https://gitcoin.co/grants/) qui utilisent [le vote quadratique](https://www.radicalxchange.org/concepts/plural-voting/) sont vulnérables à ces attaques de type « Sybil », car la valeur d'une subvention augmente lorsque davantage de personnes votent pour elle, ce qui incite les utilisateurs à répartir leurs contributions entre plusieurs identités. Les identités décentralisées permettent d'éviter cela en faisant peser sur chaque participant la charge de prouver qu'il est réellement humain, mais souvent sans avoir à révéler des informations privées spécifiques.
+Les [jetons d'âmes](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([NFT non transférables](/glossary/#nft)) pourraient être utilisés pour collecter des informations propres à un portefeuille spécifique. Cela crée effectivement une identité unique sur la chaîne, liée à une adresse Ethereum particulière, qui peut inclure des jetons représentant des réalisations (par exemple, terminer un cours en ligne spécifique ou atteindre un score seuil dans un jeu) ou la participation à une communauté.
 
 ## Utiliser une identité décentralisée {#use-decentralized-identity}
 
@@ -160,10 +162,8 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _Un registre/protocole décentralisé pour faire des attestations en chaîne ou hors chaîne sur quoi que ce soit._
 - **[Preuve d'humanité](https://www.proofofhumanity.id)** - _Preuve d'humanité (ou PoH) est un système de vérification d'identité sociale construit sur Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _Un réseau d'identité sociale décentralisé et open-source qui cherche à réformer la vérification d'identité par la création et l'analyse d'un graphe social._
-- **[Passeport de preuve d'identité ](https://proofofpersonhood.com/)** - _Un agrégateur d'identité numérique décentralisé._
-- **walt.id** — _Infrastructure décentralisée et open source d'identité et de portefeuille qui permet aux développeurs et aux organisations de tirer parti de l'identité souveraine et des NFT/SBT._ 
-  
-  
+- **[walt.id](https://walt.id)** — _Infrastructure décentralisée et open source d'identité et de portefeuille qui permet aux développeurs et aux organisations de tirer parti de l'identité souveraine et des NFT/SBT._  
+- **[Masca](https://masca.io/)** - _Portefeuille open source d'identité décentralisée implémenté en tant que Snap MetaMask qui permet aux utilisateurs et aux développeurs de tirer parti des identifiants décentralisés (DID) et des identifiants vérifiables (VC)._
 
 ## Complément d'information {#further-reading}
 
@@ -175,6 +175,8 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - [Qu'est-ce que l'identité décentralisée et pourquoi devriez-vous vous en préocupper ?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
 - [Introduction à l'Identité Décentralisée](https://walt.id/white-paper/digital-identity)— _Dominik Beron_
 
+
+
 ### Vidéos {#videos}
 
 - [Identité décentralisée (Bonus Session Livestream)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Une formidable vidéo explicative sur l'identité décentralisée par Andreas Antonopolous_
@@ -182,6 +184,8 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - [BrightID - Identité décentralisée sur Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Épisode de podcast non bancaire parlant de BrightID, une solution d'identité décentralisée pour Ethereum_
 - [The Off Chain Internet : Identités décentralisées & Références vérifiables](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Présentation EthDenver 2022 par Evin McMullen
 - [Explication des Justificatifs Vérifiables](https://www.youtube.com/watch?v=ce1IdSr-Kig) - Vidéo explicative sur YouTube avec démonstration par Tamino Baumann
+
+
 
 ### Communautés {#communities}
 

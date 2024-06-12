@@ -91,7 +91,8 @@ export const LanguageSupportFilter = () => {
               color="inherit"
               fontWeight="inherit"
               fontSize="inherit"
-              p={0}
+              px={0}
+              py={0}
               textAlign="initial"
               _hover={{ background: "transparent" }}
             >
@@ -103,6 +104,7 @@ export const LanguageSupportFilter = () => {
                 color="primary.base"
                 boxSize={9}
                 _hover={{ color: "primary.hover" }}
+                transform="rotate(0deg)"
               />
             </AccordionButton>
           </Heading>

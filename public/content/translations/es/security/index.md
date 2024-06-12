@@ -260,7 +260,7 @@ He aquí un compendio de puntos para recordar:
 
 ### Estafas de distribución de criptomonedas (airdropping) {#airdrop-scams}
 
-Las estafas de distribución de criptomonedas, o airdropping, implican una tentativa de estafa en el que un proyecto falso distribuye un activo (NFT, token) en su billetera para lo cual deben enviarlo a un un sitio web fraudulento a fin de reclamar el activo. Se le pedirá que inicie sesión con su billetera de Ethereum y que "apruebe" una transacción al intentar reclamar el activo. Esta transacción compromete su cuenta enviando sus claves públicas y privadas al estafador. Otra forma de esta estafa consiste en pedirle que confirme una transacción en la que se envían fondos a la cuenta del estafador.
+Las estafas de distribución de criptomonedas, o airdropping, implican una tentativa de estafa en el que un proyecto falso distribuye un activo (NFT, token) en su billetera para lo cual deben enviarlo a un sitio web fraudulento a fin de reclamar el activo. Se le pedirá que inicie sesión con su billetera de Ethereum y que "apruebe" una transacción al intentar reclamar el activo. Esta transacción compromete su cuenta enviando sus claves públicas y privadas al estafador. Otra forma de esta estafa consiste en pedirle que confirme una transacción en la que se envían fondos a la cuenta del estafador.
 
 [Más información sobre las estafas de airdropping](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 

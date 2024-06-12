@@ -12,7 +12,7 @@ lang: zh
 published: 2021-02-26
 ---
 
-## 在本教程中，您将学习如何： {#in-this-tutorial-youll-learn-how-to}
+## 在本教程中，你将学习如何： {#in-this-tutorial-youll-learn-how-to}
 
 - 测试钱包余额的变化
 - 利用指定参数测试事件的触发
@@ -20,18 +20,18 @@ published: 2021-02-26
 
 ## 前提条件 {#assumptions}
 
-- 您能够创建一个新的 JavaScript 或 TypeScript 项目
-- 您有一定的使用 JavaScript 来进行测试的基本经验
-- 您使用过一些包管理器，如 yarn 或 npm
-- 您拥有关于智能合约和 Solidity 的非常基础的知识
+- 你能够创建一个新的 JavaScript 或 TypeScript 项目
+- 你有一定的使用 JavaScript 来进行测试的基本经验
+- 你使用过一些包管理器，如 yarn 或 npm
+- 你拥有关于智能合约和 Solidity 的非常基础的知识
 
 # 入门指南 {#getting-started}
 
-该教程演示了如何使用 yarn 进行测试设置和运行，但如果您更喜欢使用 npm 也没有问题——我将为您提供官方 Waffle [文档](https://ethereum-waffle.readthedocs.io/en/latest/index.html)的参考链接。
+该教程演示了如何使用 yarn 进行测试设置和运行，但如果你更喜欢使用 npm 也没有问题——我将为你提供官方 Waffle [文档](https://ethereum-waffle.readthedocs.io/en/latest/index.html)的参考链接。
 
 ## 安装依赖项 {#install-dependencies}
 
-将 ethereum-waffle 和 typescript 依赖项[添加](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation)到您的项目的开发依赖项中。
+将 ethereum-waffle 和 typescript 依赖项[添加](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation)到你的项目的开发依赖项中。
 
 ```bash
 yarn add --dev ethereum-waffle ts-node typescript @types/jest
@@ -92,7 +92,7 @@ contract EtherSplitter {
 
 ## 测试设置 {#test-setup}
 
-使用 Waffle 进行测试需要使用 Chai 匹配器和 Mocha，因此您需要将它们[添加](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)到您的项目中。 请更新您的 package.json 文件，在 scripts 部分添加 `test` 条目：
+使用 Waffle 进行测试需要使用 Chai 匹配器和 Mocha，因此你需要将它们[添加](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)到你的项目中。 请更新你的 package.json 文件，在 scripts 部分添加 `test` 条目：
 
 ```json
 "scripts": {
@@ -101,7 +101,7 @@ contract EtherSplitter {
   }
 ```
 
-如果您想要[执行](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#running-tests)您的测试，只需要运行 `yarn test`。
+如果你想要[执行](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#running-tests)你的测试，只需要运行 `yarn test`。
 
 # 测试 {#testing}
 
@@ -194,10 +194,10 @@ it("Reverts when Vei amount uneven", async () => {
 
 如果测试通过，这将确保该交易确实已被回滚。 然而，在 `require` 语句中传递的消息和我们在 `revertedWith` 中期望的消息之间也必须完全匹配。 如果我们回到 EtherSplitter 合约的代码中，在关于 wei 数量的 `require` 语句中，我们提供了这样的信息：“Uneven wei amount not allowed”（不允许 wei 数量不均匀）。 这与我们在测试中期望的消息相匹配。 如果它们不相等，则测试将失败。
 
-# 恭喜您！ {#congratulations}
+# 恭喜你！ {#congratulations}
 
-您已经迈出了使用 Waffle 测试智能合约的第一步！ 您可能对其它的 Waffle 教程感兴趣：
+你已经迈出了使用 Waffle 测试智能合约的第一步！ 你可能对其它的 Waffle 教程感兴趣：
 
 - [使用 Waffle 测试 ERC20](/developers/tutorials/testing-erc-20-tokens-with-waffle/)
 - [Waffle：动态模拟和测试合约调用](/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/#gatsby-focus-wrapper)
-- [Waffle 使用 hardhat 和 ethers 设置 hello world 的教程](/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/)
+- [Waffle使用hardhat和ethers设置hello world的教程](/developers/tutorials/waffle-hello-world-with-buidler-tutorial/)

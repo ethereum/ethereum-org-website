@@ -112,10 +112,26 @@ const variantOutline = definePartsStyle((props) => {
   }
 })
 
+const variantHighContrast = definePartsStyle((props) => {
+  const { status = "normal" } = props
+  const defaultStyles = tagTheme.variants?.outline(props)
+  const statusStyles = getStatusStyles(status, "highContrast")
+  return {
+    container: {
+      ...defaultStyles?.container,
+      boxShadow: "none",
+
+      // Remove default dark mode styles
+      _dark: {},
+      ...statusStyles.container,
+    },
+  }
+})
 const variants = {
   subtle: variantSubtle,
   solid: variantSolid,
   outline: variantOutline,
+  highContrast: variantHighContrast,
 }
 
 export const Tag = defineMultiStyleConfig({

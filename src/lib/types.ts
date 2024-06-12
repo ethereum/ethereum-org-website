@@ -16,6 +16,7 @@ import type {
   UseCasesFrontmatter,
 } from "@/lib/interfaces"
 
+import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import { SimulatorNav } from "@/components/Simulator/interfaces"
 
@@ -278,47 +279,72 @@ type TranslatedStats = {
   total: number
 }
 
-export type AllTimeData = {
+/**
+ * Translation cost report
+ */
+type DateRange = { from: string; to: string }
+type Total = { total: number }
+type Cost = {
+  tmMatch: { "100": number; perfect: number }
+  mtMatch: { "100": string }
+  suggestionMatch: { "100": number }
+  total: number
+  default: { noMatch: number }
+}
+
+type CrowdinUser = {
+  id: number
+  username: string
+  fullName: string
+  avatarUrl: string
+  roleTitle: string
+}
+
+type CostItem = {
+  approvalCosts: Total
+  preTranslated: Cost
+  savings: Omit<Cost, "default">
+  totalCosts: number
+  translationCosts: Cost
+}
+
+type ReportLanguageItem = {
+  id: string
+  name: string
+  roleTitle: string
+}
+
+type ReportLanguage = CostItem & {
+  approvalRate: number
+  approved: Total
+  language: ReportLanguageItem
+  targetTranslated: Cost
+  translated: Cost
+  translatedByMt: Cost
+  translationRates: Omit<Cost, "total">
+}
+
+type DataItem = CostItem & {
+  user: CrowdinUser
+  languages: ReportLanguage[]
+}
+
+export type TranslationCostReport = CostItem & {
   name: string
   url: string
   unit: string
-  dateRange: {
-    from: string
-    to: string
-  }
+  dateRange: DateRange
   currency: string
-  mode: string
-  totalCosts: number
-  totalTMSavings: number
-  totalPreTranslated: number
-  data: Array<{
-    user: {
-      id: number
-      username: string
-      fullName: string
-      userRole: string
-      avatarUrl: string
-      preTranslated: number
-      totalCosts: number
-    }
-    languages: Array<{
-      language: {
-        id: string
-        name: string
-        userRole: string
-        tmSavings: number
-        preTranslate: number
-        totalCosts: number
-      }
-      translated: TranslatedStats
-      targetTranslated: TranslatedStats
-      translatedByMt: TranslatedStats
-      approved: TranslatedStats
-      translationCosts: TranslatedStats
-      approvalCosts: TranslatedStats
-    }>
-  }>
+  data: DataItem[]
 }
+
+export type CostLeaderboardData = Pick<
+  CrowdinUser,
+  "username" | "fullName" | "avatarUrl"
+> &
+  Pick<CostItem, "totalCosts"> & {
+    langs: string[]
+  }
 
 // GitHub contributors
 export type Commit = {
@@ -344,6 +370,16 @@ export type Author = {
     url: string
   }
 }
+
+export type FileContributor = {
+  login: string
+  avatar_url: string
+  html_url: string
+  date?: string
+}
+
+type FilePath = string
+export type CommitHistory = Record<FilePath, FileContributor[]>
 
 /**
  * Table of contents
@@ -372,12 +408,54 @@ export type IRemarkTocOptions = {
   callback: (toc: TocNodeType) => void
 }
 
-export type CommonHeroProps = {
-  heroImg: StaticImageData
-  header: string
+type HeroButtonProps = Omit<CallToActionProps, "index">
+
+/**
+ * General props to be picked or omitted for any of the hero components
+ *
+ * The generic prop type `HeroImg` is assigned to the `heroImg` prop
+ * to be able to declare either defining the prop as a static image object
+ * or a string. (defaults to `StaticImageData`)
+ */
+export type CommonHeroProps<
+  HeroImg extends StaticImageData | string = StaticImageData
+> = {
+  /**
+   * Decorative image displayed as the full background or an aside to
+   * the text content
+   *
+   * Note: It is either required as a static image data object or the
+   * relative path of the image file, depending on the setup of the image component
+   * for the given hero component.
+   */
+  heroImg: HeroImg
+  /**
+   * File path for the image to show on prerender.
+   */
+  blurDataURL: string
+  /**
+   * Object of props to render the `Breadcrumbs` component.
+   */
+  breadcrumbs: BreadcrumbsProps
+  /**
+   * An array of content to render call-to-action buttons that leads the user to a section or sections of the
+   * given page from the hero.
+   *
+   * The hero can render no buttons or up to and no more than two.
+   */
+  buttons?: [HeroButtonProps, HeroButtonProps?]
+  /**
+   * The primary title of the page
+   */
   title: string
-  description: string
-  buttons?: [CallToActionProps, CallToActionProps?]
+  /**
+   * A tag name for the page
+   */
+  header: string
+  /**
+   * Preface text about the content in the given page
+   */
+  description: ReactNode
 }
 
 // Learning Tools
@@ -544,6 +622,10 @@ export interface WalletData {
   new_to_crypto?: boolean
 }
 
+export type Wallet = WalletData & {
+  supportedLanguages: string[]
+}
+
 export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
 
 export interface WalletFilterData {
@@ -646,4 +728,23 @@ export type FooterLink = {
 export type FooterLinkSection = {
   title: TranslationKey
   links: FooterLink[]
+}
+
+// GitHub API
+export type GHIssue = {
+  title: string
+  html_url: string
+  created_at: string
+  user: {
+    login: string
+    html_url: string
+    avatar_url: string
+  }
+  labels: GHLabel[]
+}
+
+export type GHLabel = {
+  id: number
+  name: string
+  color: string
 }

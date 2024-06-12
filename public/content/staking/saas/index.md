@@ -39,7 +39,7 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 
 ## Explore staking service providers {#saas-providers}
 
-Below are some available SaaS provider. Use the above indicators to help guide you through these services
+Below are some available SaaS providers. Use the above indicators to help guide you through these services
 
 <ProductDisclaimer />
 

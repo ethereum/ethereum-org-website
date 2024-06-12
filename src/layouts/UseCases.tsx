@@ -197,7 +197,7 @@ export const UseCasesLayout = ({
           <Box>
             <UnorderedList ms="1.45rem">
               {summaryPoints.map((point, idx) => (
-                <ListItem key={idx} color="text300" mb={0}>
+                <ListItem key={idx} mb={0}>
                   {point}
                 </ListItem>
               ))}
@@ -216,6 +216,8 @@ export const UseCasesLayout = ({
           width={1200}
           height={610}
           style={{ objectFit: "cover" }}
+          // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+          sizes="(max-width: 992px) 100vw, 750px"
           priority
           alignSelf={{
             base: "center",

@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { Box, chakra, Flex, type HeadingProps, Icon } from "@chakra-ui/react"
+import { Box, Flex, type HeadingProps, Icon } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
@@ -51,17 +51,12 @@ const Heading4 = (props: HeadingProps) => (
   <MdHeading4 fontSize={{ base: "md", md: "xl" }} {...props} />
 )
 
-const ListItem = (props: ChildOnlyProp) => (
-  <chakra.li color="text300" {...props} />
-)
-
 // Static layout components
 export const staticComponents = {
   h1: Heading1,
   h2: Heading2,
   h3: Heading3,
   h4: Heading4,
-  li: ListItem,
   Callout,
   Contributors,
   EnergyConsumptionChart,

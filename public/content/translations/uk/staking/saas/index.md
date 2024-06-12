@@ -47,7 +47,7 @@ summaryPoints:
 
 <StakingProductsCardGrid category="saas" />
 
-Зверніть увагу на важливість підтримки [різноманітності клієнтів](/developers/docs/nodes-and-clients/client-diversity/), оскільки це покращує безпеку мережі й обмежує ваш ризик. Послуги, які мають докази обмеження використання мажоритарними клієнтами, мають позначку <em style={{ textTransform: "uppercase" }}>«виконання різноманітності клієнтів»</em> і <em style={{ textTransform: "uppercase" }}>«консенсус різноманітності клієнтів»</em>.
+Зверніть увагу на важливість підтримки [різноманітності клієнтів](/developers/docs/nodes-and-clients/client-diversity/), оскільки це покращує безпеку мережі й обмежує ваш ризик. Послуги, які мають докази обмежень використання мажоритарними клієнтами, мають позначку <em style={{ textTransform: "uppercase" }}>«різноманіття клієнтів-виконавців»</em> і <em style={{ textTransform: "uppercase" }}>«різноманіття консенсусу клієнтів»</em>.
 
 ### Генератори ключів
 
@@ -91,4 +91,5 @@ summaryPoints:
 
 ## Довідкові джерела {#further-reading}
 
+- [Довідник стейкінгу Ethereum](https://www.staking.directory/) – _Eridian і Spacesider_
 - [Оцінювання послуг стейкінгу](https://www.attestant.io/posts/evaluating-staking-services/) — _Джим Макдональд, 2020_

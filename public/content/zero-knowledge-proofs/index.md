@@ -198,9 +198,9 @@ But there’s really no way for users to assess the honesty of participants and 
 
 ### Quantum computing threats {#quantum-computing-threats}
 
-ZK-SNARK uses elliptic curve cryptography ([ECDSA](/glossary/#ecdsa)) for encryption. While the ECDSA algorithm is secure for now, the development of quantum computers could break its security model in the future.
+ZK-SNARK uses elliptic curve cryptography for encryption. While the elliptic curve discrete logarithm problem is assumed to be intractable for now, the development of quantum computers could break this security model in the future.
 
-ZK-STARK is considered immune to the threat of quantum computing, as it uses collision-resistant hashes for encryption. Unlike public-private key pairings used in elliptic curve cryptography, collision-resistant hashing is more difficult for quantum computing algorithms to break.
+ZK-STARK is considered immune to the threat of quantum computing, as it only relies on collision-resistant hash functions for its security. Unlike public-private key pairings used in elliptic curve cryptography, collision-resistant hashing is more difficult for quantum computing algorithms to break.
 
 ## Further reading {#further-reading}
 
@@ -210,3 +210,5 @@ ZK-STARK is considered immune to the threat of quantum computing, as it uses col
 - [zk-SNARKs — A Realistic Zero-Knowledge Example and Deep Dive](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARKs — Create Verifiable Trust, even against Quantum Computers](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [An approximate introduction to how zk-SNARKs are possible](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [Why Zero Knowledge Proofs (ZKPs) is a Game Changer for Self-Sovereign Identity](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
+

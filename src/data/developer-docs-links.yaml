@@ -97,6 +97,8 @@
               to: /developers/docs/consensus-mechanisms/pos/block-proposal/
             - id: docs-nav-pos-faqs
               to: /developers/docs/consensus-mechanisms/pos/faqs/
+        - id: docs-nav-proof-of-authority
+          to: /developers/docs/consensus-mechanisms/poa/
 - id: docs-nav-ethereum-stack
   path: /developers/docs/
   items:
@@ -195,14 +197,12 @@
           items:
             - id: docs-nav-erc-20
               to: /developers/docs/standards/tokens/erc-20/
+            - id: docs-nav-erc-223
+              to: /developers/docs/standards/tokens/erc-223/
             - id: docs-nav-erc-721
               to: /developers/docs/standards/tokens/erc-721/
-            - id: docs-nav-erc-777
-              to: /developers/docs/standards/tokens/erc-777/
             - id: docs-nav-erc-1155
               to: /developers/docs/standards/tokens/erc-1155/
-            - id: docs-nav-erc-4626
-              to: /developers/docs/standards/tokens/erc-4626/
     - id: docs-nav-mev
       to: /developers/docs/mev/
       description: docs-nav-mev-description

@@ -72,7 +72,7 @@ function previewDeposit(uint256 assets) public view returns (uint256)
 
 Ez a függvény lehetővé teszi a felhasználók számára, hogy szimulálják a betétük hatásait az aktuális blokkban.
 
-#### letét {#deposit}
+#### deposit {#deposit}
 
 ```solidity
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
@@ -96,7 +96,7 @@ function previewMint(uint256 shares) public view returns (uint256)
 
 Ez a függvény lehetővé teszi a felhasználók számára, hogy szimulálják a mintelés hatásait az aktuális blokkban.
 
-#### kibocsátás (mint) {#mint}
+#### mint {#mint}
 
 ```solidity
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
@@ -195,7 +195,7 @@ event Withdraw(
     address indexed receiver,
     address indexed owner,
     uint256 assets,
-    uint256 share
+    uint256 shares
 )
 ```
 
@@ -204,4 +204,4 @@ Ahol a küldő (`sender`) az a felhasználó, aki a kivonást kezdeményezte és
 ## További olvasnivaló {#further-reading}
 
 - [ERC-4626: Tokenizált értékmegőrzőre vonatkozó szabvány](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: GitHub mappa](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)
+- [ERC-4626: GitHub mappa](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

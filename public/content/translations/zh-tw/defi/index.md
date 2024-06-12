@@ -47,7 +47,7 @@ summaryPoint3: 基於所有人都可以編寫的開放原始碼技術。
 | 市場永遠開放。                         | 員工需要休息，因此市場會關閉。                       |
 | 奠基於透明的系統──所有人都能查看產品資料及檢查系統運作狀況。 | 金融機構完全是黑箱作業：你不能要求查看他們的放貸記錄、資產管理記錄等資訊。 |
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink href="/dapps/?category=finance#explore">
   探索去中心化金融應用程式
 </ButtonLink>
 
@@ -55,7 +55,7 @@ summaryPoint3: 基於所有人都可以編寫的開放原始碼技術。
 
 從許多方面來說，比特幣是第一款去中心化金融應用程式。 比特幣能讓你真正擁有及掌控價值，並傳送到世界上任何一個角落。 它提供了一種方式，讓眾多互不信任的人同意使用一套帳戶帳本，而無需透過可信賴的中間機構。 比特幣對所有人開放，而且沒有人有權改變其規則。 比特幣的規則，例如其稀有度及開放性，是這項技術與生俱來的特色。 在傳統金融中，政府可以印鈔讓你的存款貶值，企業也可以關閉市場，而比特幣與傳統金融截然不同。
 
-以太坊便是以此概念為基礎。 和比特幣一樣，以太坊的規則不能任意更改，而且所有人都能使用。 但它進一步使用[智慧型合約](/glossary#smart-contract)讓這種數位貨幣可程式化，使其功能不侷限於存放及傳送價值。
+以太坊便是以此概念為基礎。 和比特幣一樣，以太坊的規則不能任意更改，而且所有人都能使用。 但它進一步使用[智慧型合約](/glossary/#smart-contract)讓這種數位貨幣可程式化，使其功能不侷限於存放及傳送價值。
 
 <YouTube id="qFBYB4W2tqU" />
 
@@ -65,7 +65,7 @@ summaryPoint3: 基於所有人都可以編寫的開放原始碼技術。
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>如果你是剛開始使用以太坊，請嘗試我們推薦的去中心化金融應用程式。</div>
-  <ButtonLink to="/dapps/?category=finance#explore">
+  <ButtonLink href="/dapps/?category=finance#explore">
     探索去中心化金融應用程式
   </ButtonLink>
 </InfoBanner>
@@ -90,9 +90,9 @@ summaryPoint3: 基於所有人都可以編寫的開放原始碼技術。
 
 ### 快速匯款到世界各地 {#send-money}
 
-作為一種區塊鏈，以太坊的核心功能是安全地在全球傳送交易。 和比特幣一樣，以太坊可以讓跨境匯款像傳送電子郵件一樣簡單。 只需從錢包輸入收款人的[以太坊名稱服務名稱](/nft/#nft-domains)（例如 bob.eth）或帳戶地址，你的款項就會在幾分鐘內直接到達對方的帳戶（通常情況下）。 要收發款項，你需要一個[錢包](/wallets/)。
+作為一種區塊鏈，以太坊的核心功能是安全地在全球傳送交易。 和比特幣一樣，以太坊可以讓跨境匯款像傳送電子郵件一樣簡單。 只需從錢包輸入收款人的[以太坊名稱服務名稱](/glossary/#ens)（例如 bob.eth）或其帳戶地址，你的款項就會在幾分鐘內直接到達對方的帳戶（通常情況下）。 要收發款項，你需要一個[錢包](/wallets/)。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看支付去中心化應用程式
 </ButtonLink>
 
@@ -100,7 +100,7 @@ summaryPoint3: 基於所有人都可以編寫的開放原始碼技術。
 
 你可以運用以太坊流通資金。 以太坊可以讓你在幾秒之內支付某人的薪資，供對方隨時取用； 或快速租用物品，如置物櫃或電動滑板車。
 
-如果你因為[以太幣](/eth/)的價值可能大幅波動而不想發送或流通以太幣，那麼以太坊上還有其他貨幣選項：穩定幣。
+如果你因為價值波動而不想傳送或串流[以太幣](/glossary/#ether)，以太坊上也有替代貨幣：[穩定幣](/glossary/#stablecoin)。
 
 <Divider />
 
@@ -110,7 +110,7 @@ summaryPoint3: 基於所有人都可以編寫的開放原始碼技術。
 
 Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內， 使穩定幣非常適合用於收入或零售。 在南美洲，因為政府發行的貨幣有極大的不確定性，許多人已經在使用穩定幣保護自己的儲蓄。
 
-<ButtonLink to="/stablecoins/">
+<ButtonLink href="/stablecoins/">
   深入了解穩定幣
 </ButtonLink>
 
@@ -123,7 +123,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 - 點對點，即借款者直接向特定貸款者借款。
 - 資金池，即貸款者將資金（流動性）注入資金池，而借款者從資金池借款。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看借款去中心化應用程式
 </ButtonLink>
 
@@ -133,7 +133,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 今天，資金的借與貸都是圍繞著相關個人進行。 銀行在放款前，需要知道你是不是真的有能力償還貸款。
 
-去中心化借貸則不需任何一方表明身分即可運作。 然而，借款者必須提供抵押品，如果無法償還，抵押品就會自動歸貸款者所有。 有些貸款者甚至接受以非同質化代幣作為抵押品。 非同質化代幣為獨特資產（如繪畫）的契據。 [更多非同質化代幣相關資訊](/nft/)
+去中心化借貸則不需任何一方表明身分即可運作。 然而，借款者必須提供抵押品，如果無法償還，抵押品就會自動歸貸款者所有。 有些貸款人甚至接受以[非同質化代幣](/glossary/#nft)作為抵押品。 非同質化代幣為獨特資產（如繪畫）的契據。 [更多非同質化代幣相關資訊](/nft/)
 
 透過這種方式，不必接受徵信調查或提供私人資訊也能借款。
 
@@ -168,7 +168,9 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 要在傳統金融體系內完成以上操作，你需要鉅額資金。 這種財產創造策略只有已經擁有財富的人才能操作。 閃電貸的例子告訴我們，未來「有錢」不見得是「賺錢」的先決條件。
 
-[深入了解閃電貸](https://aave.com/flash-loans/)
+<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+  深入了解閃電貸
+</ButtonLink>
 
 <Divider />
 
@@ -180,10 +182,10 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 - 你借出 100 Dai（一種[穩定幣](/stablecoins/)）給某個類似 Aave 的產品。
 - 你會收到 100 Aave Dai (aDai)，此代幣代表著你借出的 Dai。
-- 你的 aDai 會按利率增加，你可以看到錢包裡的餘額在增長。 視年利率而定，幾天或甚至幾小時後，你的錢包餘額可能會變成 100.1234！
+- 你的 aDai 會按利率增加，你可以看到錢包裡的餘額在增長。 視[年利率](/glossary/#apr)而定，你的錢包餘額可能會在幾天，甚至幾小時後變成 100.1234！
 - 你可以隨時提取和你的 aDai 餘額等額的一般 Dai。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看借貸去中心化應用程式
 </ButtonLink>
 
@@ -199,7 +201,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 和上述放貸案例一樣，獎金池的資金來自於放貸樂透存款產生的所有利息。
 
-<ButtonLink isSecondary to="https://pooltogether.com">
+<ButtonLink isSecondary href="https://pooltogether.com">
   嘗試 PoolTogether
 </ButtonLink>
 
@@ -211,7 +213,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 例如，如果你想使用無損樂透 PoolTogether（參閱前文），你需要 Dai 或 USDC 這類代幣。 這些去中心化交易所可讓你將以太幣兌換成這些代幣，完成交易後再兌換回來。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看代幣交易所
 </ButtonLink>
 
@@ -223,7 +225,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 使用中央化交易所時，你必須在交易前先存入資產，並相信交易所會妥善看管你的資產。 資產存入交易所后就要承擔風險，因為中央化交易所往往是駭客鎖定的目標。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看交易去中心化應用程式
 </ButtonLink>
 
@@ -233,9 +235,9 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 以太坊上有一些資金管理產品可以根據你選擇的策略來擴展你的投資組合。 這是自動化作業，對所有人開放，而且不需要管理人員來分一杯羹。
 
-[DeFi Pulse 指數基金 (DPI)](https://defipulse.com/blog/defi-pulse-index/) 就是個很好的例子。 此基金會自動再平衡，確保你的投資組合永遠包含[市值最高的去中心化金融代幣](https://www.coingecko.com/en/defi)。 你無需親力親為處理任何細節，而且可以隨時提取資金。
+[DeFi Pulse 指數基金 (DPI)](https://defipulse.com/blog/defi-pulse-index/) 就是個很好的例子。 此基金會自動再平衡，確保你的投資組合永遠包含市值最高的去中心化金融代幣。 你無需親力親為處理任何細節，而且可以隨時提取資金。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看投資去中心化應用程式
 </ButtonLink>
 
@@ -249,7 +251,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 - 過程完全透明，因此籌資者可以證明已經募集了多少資金。 你甚至可以在經過一段時間後追蹤資金的運用情況。
 - 募資者可以設定自動退款條件，例如在特定截止期限前未達到最低金額時。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看群眾募資去中心化應用程式
 </ButtonLink>
 
@@ -266,7 +268,9 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 也就是說，假設計畫案 A 獲得了 100 筆 $1 的捐贈，計畫案 B 獲得了一筆 $10,000 的捐贈，則最終計畫案 A 獲得的資金會多於計畫案 B（具體取決於配比池的規模）。
 
-[深入了解平方募資法](https://wtfisqf.com)
+<ButtonLink href="https://wtfisqf.com">
+  深入了解平方募資法
+</ButtonLink>
 
 <Divider />
 
@@ -276,7 +280,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 和其他軟體一樣，以太坊產品也可能受到錯誤或入侵的威脅， 因此目前這個領域有許多保險產品將重點放在保護使用者不會損失資金上。 然而，若干專案開始涵蓋生活中可能遇到的各種大小意外保障。 Etherisc 的農作物保險就是個很好的例子，這項產品的目標在於[保護肯亞小農對抗乾旱及洪災](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc)。 去中心化保險可以為買不起傳統保險的農民提供更實惠的保障。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看保險去中心化應用程式
 </ButtonLink>
 
@@ -286,7 +290,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 有了這麼多服務，你需要找個方法來追蹤所有投資、貸款和交易。 目前有許多產品可以幫助你集中協調所有去中心化金融活動。 這就是去中心化金融開放架構的魅力所在。 團隊可以建立介面供你檢視各產品的餘額並使用其功能。 深入探索去中心化金融之際，你會發現這種工具極為實用。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看投資組合去中心化應用程式
 </ButtonLink>
 
@@ -320,11 +324,13 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 3. 協定：提供功能的[智慧型合約](/glossary/#smart-contract)，例如實現去中心化資產借貸的服務。
 4. [應用程式](/dapps/)：我們用以管理及存取協定的產品。
 
+注意：很多去中心化金融使用 [ERC-20 標準](/glossary/#erc-20)。 去中心化金融應用程式會使用一種稱為包裝以太幣(WETH) 的以太幣包裝程式。 [了解更多關於包裝以太幣的資訊](/wrapped-eth)。
+
 ## 建構去中心化金融 {#build-defi}
 
 去中心化金融是一場開放原始碼運動。 去中心化金融協議和應用程式都是開放的，你可以自由檢視、分叉並進行各種創新。 因為採用分層堆疊結構（共享相同的基礎區塊鏈及資產），你可以結合和配對不同協定，開啟獨特的機會組合。
 
-<ButtonLink to="/developers/docs/dapps/">
+<ButtonLink href="/developers/docs/dapps/">
   關於建構去中心化應用程式
 </ButtonLink>
 
@@ -334,7 +340,6 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
-- [DeFi Rate](https://defirate.com/)
 
 ### 去中心化金融文章 {#defi-articles}
 
@@ -348,5 +353,5 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 ### 社群 {#communities}
 
-- [DeFi Llama Discord 伺服器](https://discord.gg/buPFYXzDDd)
+- [DeFi Llama Discord 伺服器](https://discord.defillama.com/)
 - [DeFi Pulse Discord 伺服器](https://discord.gg/Gx4TCTk)

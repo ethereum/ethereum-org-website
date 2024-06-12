@@ -14,9 +14,9 @@ lang: ja
 published: 2020-10-16
 ---
 
-この[Waffle](https://ethereum-waffle.readthedocs.io)チュートリアルでは、[Hardhat](https://hardhat.org/)と[ethers.js](https://docs.ethers.io/v5/)を使用して、「Hello world」と表示するシンプルなスマートコントラクトのプロジェクトを作成する方法を学びます。 さらに、Waffle 上で作成したスマートコントラクトに新たな機能を追加し、テストする方法を学びます。
+この[Waffle](https://ethereum-waffle.readthedocs.io)チュートリアルでは、[Hardhat](https://hardhat.org/)と[ethers.js](https://docs.ethers.io/v5/)を使用して、「Hello world」と表示するシンプルなスマートコントラクトのプロジェクトを作成する方法を学びます。 さらに、Waffle上で作成したスマートコントラクトに新たな機能を追加し、テストする方法を学びます。
 
-まずはじめに、以下のように新しいプロジェクトを作成します：
+まずはじめに新しいプロジェクトを作成しましょう。
 
 ```bash
 yarn init
@@ -40,7 +40,7 @@ yarn add -D hardhat @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle e
 npm install -D hardhat @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
 ```
 
-次に、`npx hardhat`を実行して、サンプルの Hardhat プロジェクトを作成します。
+次に、`npx hardhat`を実行して、サンプルのHardhatプロジェクトを作成します。
 
 ```bash
 888    888                      888 888               888
@@ -73,7 +73,7 @@ MyWaffleProject
 │   └── sample-script.js
 ├── test
 │   └── sample-test.js
-├── .gitattributs
+├── .gitattributes
 ├── .gitignore
 ├── hardhat.config.js
 └── package.json
@@ -81,7 +81,7 @@ MyWaffleProject
 
 ### 次に、これらのファイルのいくつかを説明します。 {#now-lets-talk}
 
-- Greeter.sol は、このチュートリアルで使用する Solidity で書かれたスマートコントラクトです。
+- Greeter.solは、このチュートリアルで使用するSolidityで書かれたスマートコントラクトです。
 
 ```solidity
 contract Greeter {
@@ -103,11 +103,11 @@ greeting = _greeting;
 }
 ```
 
-このスマートコントラクトは、以下の 3 つの要素に分解できます：
+このスマートコントラクトは、以下の3つの要素に分解できます：
 
 1. コンストラクタ：`greeting`という名前の文字列型の変数を宣言する場所です。
-2. greet 関数：`greeting`を返す関数です。
-3. setGreeting 関数：`greeting`の値を変更する関数です。
+2. greet関数：`greeting`を返す関数です。
+3. setGreeting関数：`greeting`の値を変更する関数です。
 
 - sample-test.js：テストを実行するファイルです。
 
@@ -128,7 +128,7 @@ describe("Greeter", function () {
 
 ### 次に、コントラクトをコンパイルし、テストを実行します。 {#compiling-and-testing}
 
-Waffle では、Mocha（テスト用フレームワーク）および Chai（アサーションライブラリ）を使ってテストを実行します。 `npx hardhat test`を実行して、以下のメッセージが表示されるまで待つだけです。
+Waffleでは、Mocha（テスト用フレームワーク）およびChai（アサーションライブラリ）を使ってテストを実行します。 `npx hardhat test`を実行して、以下のメッセージが表示されるまで待つだけです。
 
 ```bash
 ✓ Should return the new greeting once it's changed
@@ -139,7 +139,7 @@ Waffle では、Mocha（テスト用フレームワーク）および Chai（ア
 他のユーザーが、挨拶の代わりに空の文字列を追加したと想定してみましょう。 無言の挨拶は嬉しくありませんね！  
 ですから、このようなことが起こらないようにします：
 
-空の文字列が渡された場合に、Solidity の`revert`機能を利用できるようにします。 この機能は、Waffle の chai マッチャーである`to.be.revertedWith()`で簡単にテストできます。
+空の文字列が渡された場合に、Solidityの`revert`機能を利用できるようにします。 この機能は、Waffleのchaiマッチャーである`to.be.revertedWith()`で簡単にテストできます。
 
 ```js
 it("Should revert when passing an empty string", async () => {
@@ -174,7 +174,7 @@ Changing greeting from 'Hello, world!' to ''
 require(bytes(_greeting).length > 0, "Greeting should not be empty");
 ```
 
-これにより、setGreeting 関数は以下のようになっているはずです：
+これにより、setGreeting関数は以下のようになっているはずです：
 
 ```solidity
 function setGreeting(string memory _greeting) public {
@@ -197,6 +197,6 @@ greeting = _greeting;
 
 ### まとめ {#conclusion}
 
-Waffle、Hardhat、および ethers.js を使った簡単なプロジェクトを作成しました。 このチュートリアルでは、プロジェクトを開始し、テストを追加し、さらに新たな機能を実装する方法について学びました。
+Waffle、Hardhat、およびethers.jsを使った簡単なプロジェクトを作成しました。 このチュートリアルでは、プロジェクトを開始し、テストを追加し、さらに新たな機能を実装する方法について学びました。
 
-スマートコントラクトのテストに大活躍する Chai マッチャーについてさらに知りたい場合は、[Waffle の公式文書](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html)を参照してください。
+スマートコントラクトのテストに大活躍するChaiマッチャーについてさらに知りたい場合は、[Waffleの公式文書](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html)を参照してください。

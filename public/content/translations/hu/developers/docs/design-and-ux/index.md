@@ -83,6 +83,7 @@ Vegyen részt a szakmai közösség által irányított szervezetekben, vagy csa
 - [Ethereum.org tervezési rendszer](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity – a Polygon tervezési rendszere](https://www.figma.com/community/file/1073921725197233598/finity-design-system) (Figma)
 - [Kleros tervezési rendszer](https://www.figma.com/community/file/999852250110186964/kleros-design-system) (Figma)
+- [Safe Design System](https://www.figma.com/community/file/1337417127407098506/safe-design-system) (Figma)
 - [ENS tervezési rendszer](https://thorin.ens.domains/)
 - [Mirror tervezési rendszer](https://degen-xyz.vercel.app/)
 
