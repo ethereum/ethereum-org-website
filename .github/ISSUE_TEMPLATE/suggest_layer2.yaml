@@ -1,7 +1,7 @@
 name: Suggest a Layer 2
 description: Suggest a Layer 2 to list on ethereum.org
 title: Suggest a Layer 2
-labels: ["feature :sparkles:", "content :fountain_pen:"]
+labels: ["product 🧰"]
 body:
   - type: markdown
     attributes:
