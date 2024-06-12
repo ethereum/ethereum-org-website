@@ -24,6 +24,13 @@ body:
       description: Please provide the official name of the dapp
     validations:
       required: true
+  - type: input
+    id: dapp_url
+    attributes:
+      label: Dapp URL
+      description: Please provide a URL to the dapp
+    validations:
+      required: true
   - type: textarea
     id: dapp_description
     attributes:
