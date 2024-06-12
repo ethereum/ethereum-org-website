@@ -117,11 +117,10 @@ export const UpgradeLayout = ({
                 ))}
               </List>
             </Box>
-            {lastEditLocaleTimestamp && (
-              <LastUpdated>
-                {t("common:page-last-updated")}: {lastEditLocaleTimestamp}
-              </LastUpdated>
-            )}
+
+            <LastUpdated>
+              {t("common:page-last-updated")}: {lastEditLocaleTimestamp}
+            </LastUpdated>
           </>
         }
         heroImg={frontmatter.image}

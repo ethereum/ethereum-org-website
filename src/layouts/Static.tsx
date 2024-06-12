@@ -114,15 +114,14 @@ export const StaticLayout = ({
           ) : (
             <>
               <Breadcrumbs slug={slug} mb="8" />
-              {lastEditLocaleTimestamp && (
-                <Text
-                  color="text200"
-                  dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
-                >
-                  <Translation id="page-last-updated" />:{" "}
-                  {lastEditLocaleTimestamp}
-                </Text>
-              )}
+
+              <Text
+                color="text200"
+                dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
+              >
+                <Translation id="page-last-updated" />:{" "}
+                {lastEditLocaleTimestamp}
+              </Text>
             </>
           )}
 
