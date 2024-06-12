@@ -5,7 +5,7 @@ import { Flex } from "@chakra-ui/react"
 import { QrCodeIcon } from "../icons"
 import type { SimulatorNav } from "../interfaces"
 
-import { SendReceiveButton } from "./SendRecieveButton"
+import { SendReceiveButton } from "./SendReceiveButton"
 import type { SendReceiveEnabled } from "./types"
 
 type SendReceiveButtonsProps = {
