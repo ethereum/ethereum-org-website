@@ -197,11 +197,11 @@ type DocsLayoutProps = Pick<
   MdPageContent,
   | "slug"
   | "tocItems"
-  | "lastUpdatedDate"
+  | "lastEditLocaleTimestamp"
   | "contributors"
   | "contentNotTranslated"
 > &
-  Required<Pick<MdPageContent, "lastUpdatedDate">> &
+  MdPageContent &
   ChildOnlyProp & {
     frontmatter: DocsFrontmatter
   }
@@ -211,7 +211,7 @@ export const DocsLayout = ({
   frontmatter,
   slug,
   tocItems,
-  lastUpdatedDate,
+  lastEditLocaleTimestamp,
   contributors,
   contentNotTranslated,
 }: DocsLayoutProps) => {
@@ -233,7 +233,7 @@ export const DocsLayout = ({
           <H1 id="top">{frontmatter.title}</H1>
           <FileContributors
             contributors={contributors}
-            lastEdit={lastUpdatedDate}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
           />
           <TableOfContents
             slug={slug}
