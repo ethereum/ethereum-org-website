@@ -342,12 +342,9 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
         borderTop={"1px solid"}
         borderColor={"body.light"}
       >
-        {lastDeployLocaleTimestamp && (
-          <Text fontSize={"sm"} fontStyle={"italic"} color={"body.medium"}>
-            <Translation id="website-last-updated" />:{" "}
-            {lastDeployLocaleTimestamp}
-          </Text>
-        )}
+        <Text fontSize={"sm"} fontStyle={"italic"} color={"body.medium"}>
+          <Translation id="website-last-updated" />: {lastDeployLocaleTimestamp}
+        </Text>
 
         <Button
           leftIcon={<IoChevronUpSharp />}
