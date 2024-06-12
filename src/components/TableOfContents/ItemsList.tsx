@@ -15,10 +15,13 @@ const ItemsList = ({
   items,
   depth,
   maxDepth,
-  activeHash,
+  // activeHash,
   ...rest
 }: ItemsListProps) => {
   if (depth > maxDepth) return null
+
+  // FIXME: TEST
+  const activeHash = "#web3"
 
   return (
     <>
@@ -28,15 +31,7 @@ const ItemsList = ({
           <ListItem key={index} m={0} {...rest}>
             <ToCLink depth={depth} item={item} activeHash={activeHash} />
             {items && (
-              <List
-                key={title}
-                fontSize="sm"
-                lineHeight={1.6}
-                fontWeight={400}
-                ps={4}
-                pe={1}
-                m={0}
-              >
+              <List key={title} fontSize="sm" ps={2} m={0} mt="2" spacing="2">
                 <ItemsList
                   items={items}
                   depth={depth + 1}

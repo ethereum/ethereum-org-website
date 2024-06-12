@@ -29,16 +29,20 @@ const Link = ({
   const $dotBg = cssVar("dot-bg")
 
   const hoverOrActiveStyle: SystemStyleObject = {
-    color: "primary.base",
+    color: $dotBg.reference,
     _after: {
       content: `""`,
-      background: $dotBg.reference,
+      backgroundColor: "background.base",
       border: "1px",
-      borderColor: "primary.base",
+      borderColor: $dotBg.reference,
       borderRadius: "50%",
       boxSize: 2,
       position: "absolute",
-      insetInlineStart: "-1.29rem",
+      // 16px is the initial list padding
+      // 8px is the padding for each nested list
+      // 4px is half of the width of the dot
+      // 1px for the border
+      insetInlineStart: `calc(-16px - 8px * ${depth} - 4px - 1px)`,
       top: "50%",
       mt: -1,
     },
@@ -51,34 +55,16 @@ const Link = ({
       textDecoration="none"
       display="inline-block"
       position="relative"
-      color="textTableOfContents"
-      fontWeight="normal"
-      mb="0.5rem !important"
+      color="body.medium"
       width={{ base: "100%", lg: "auto" }}
       _hover={{
         ...hoverOrActiveStyle,
       }}
       sx={{
-        [$dotBg.variable]: "colors.background",
+        [$dotBg.variable]: "var(--eth-colors-primary-hover)",
         "&.active": {
-          [$dotBg.variable]: "colors.primary",
+          [$dotBg.variable]: "var(--eth-colors-primary-visited)",
           ...hoverOrActiveStyle,
-        },
-        "&.nested": {
-          _before: {
-            content: `"⌞"`,
-            opacity: 0.5,
-            display: "inline-flex",
-            position: "absolute",
-            insetInlineStart: -3.5,
-            top: -1,
-            transform: flipForRtl,
-          },
-          "&.active, &:hover": {
-            _after: {
-              insetInlineStart: "-2.29rem",
-            },
-          },
         },
       }}
     >

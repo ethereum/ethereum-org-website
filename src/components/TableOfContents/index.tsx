@@ -96,7 +96,7 @@ const TableOfContents = ({
           <Box mb={2} textTransform="uppercase">
             {t("on-this-page")}
           </Box>
-          <List m={0}>
+          <List m={0} spacing="2">
             <ItemsList
               items={items}
               depth={0}
