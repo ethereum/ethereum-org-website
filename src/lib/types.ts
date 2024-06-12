@@ -44,7 +44,7 @@ export type Root = {
   children: ReactNode
   contentIsOutdated: boolean
   contentNotTranslated: boolean
-  lastDeployLocaleTimestamp?: string
+  lastDeployLocaleTimestamp: string
 }
 
 export type BasePageProps = SSRConfig &
