@@ -6,7 +6,7 @@ lang: en
 
 There are several ways to store information on the blockchain:
 
-- EIP 4844 blobs
+- EIP-4844 blobs
 - Calldata
 - Offchain with L1 mechanisms
 - Contract "code"
@@ -32,9 +32,9 @@ There are three attributes we'd like to have for data.
 - *Availability*, the information is available to any authorized entity. On the blockchain, this is usually achieved by having the information available on every [full node](https://ethereum.org/developers/docs/nodes-and-clients#full-node).
 
 
-## EIP 4844 blobs {#eip-4844-blobs}
+## EIP-4844 blobs {#eip-4844-blobs}
 
-Starting with [the Dencun hardfork](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md) the Ethereum blockchain includes [EIP 4844](https://eips.ethereum.org/EIPS/eip-4844), which adds to Ethereum data blobs with a limited lifetime (initially about [18 days](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)). These blobs are priced separately from the [execution gas](/developers/docs/gas), although using a similar mechanism. They are a cheap way to post temporary data.
+Starting with [the Dencun hardfork](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/beacon-chain.md) the Ethereum blockchain includes [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), which adds to Ethereum data blobs with a limited lifetime (initially about [18 days](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration)). These blobs are priced separately from the [execution gas](/developers/docs/gas), although using a similar mechanism. They are a cheap way to post temporary data.
 
 The main use case for EIP-4844 blobs is for rollups to publish their transactions. [Optimistic rollups](/developers/docs/scaling/optimistic-rollups) need to publish the transactions on their blockchains. Those transactions have to be available to anybody during the [challenge period](https://docs.optimism.io/connect/resources/glossary#challenge-period) to enable [validators](https://docs.optimism.io/connect/resources/glossary#validator) to fix the mistake if the rollup's [sequencer](https://docs.optimism.io/connect/resources/glossary#sequencer) posts an incorrect state root.
 
@@ -111,7 +111,7 @@ This table summarizes the difference options, their advantages and disadvantages
 
 | Storage type | Source of data | Availability guarantee | Onchain availability | Additional limitations
 | - | - | - | - | - |
-| EIP 4844 blobs | Offchain | Ethereum guarantee for [~18 days](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration) | Only hash is available |  |
+| EIP-4844 blobs | Offchain | Ethereum guarantee for [~18 days](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration) | Only hash is available |  |
 | Calldata | Offchain | Ethereum guarantee forever (part of the blockchain) | Only available if written to a contract, and at that transaction |
 | Offchain with L1 mechanisms | Offchain | "One honest verifier" guarantee during the challenge period | Hash only | Guaranteed by the challenge mechanism, only during the challenge period
 | Contract code | Onchain or offchain | Ethereum guarantee forever (part of the blockchain) | Yes | Written to a "random" address, cannot start with `0xEF`
