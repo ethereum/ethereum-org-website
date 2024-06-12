@@ -29,7 +29,6 @@ import PageMetadata from "@/components/PageMetadata"
 
 import { getFileContributorInfo } from "@/lib/utils/contributors"
 import { dateToString } from "@/lib/utils/date"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -156,7 +155,6 @@ export const getStaticProps = (async (context) => {
   const timeToRead = readingTime(markdown.content)
   const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
   const slug = `/${params.slug.join("/")}/`
-  const lastDeployDate = getLastDeployDate()
 
   // Get corresponding layout
   let layout = (frontmatter.template as Layout) ?? "static"
@@ -198,10 +196,6 @@ export const getStaticProps = (async (context) => {
         locale as Lang,
         lastUpdatedDate
       ),
-      lastDeployLocaleTimestamp: getLocaleTimestamp(
-        locale as Lang,
-        lastDeployDate
-      ),
       contentNotTranslated,
       layout,
       timeToRead: Math.round(timeToRead.minutes),
@@ -238,7 +232,6 @@ ContentPage.getLayout = (page) => {
     slug,
     frontmatter,
     lastEditLocaleTimestamp,
-    lastDeployLocaleTimestamp,
     layout,
     timeToRead,
     tocItems,
@@ -250,7 +243,6 @@ ContentPage.getLayout = (page) => {
     slug,
     frontmatter,
     lastEditLocaleTimestamp,
-    lastDeployLocaleTimestamp,
     timeToRead,
     tocItems,
     contributors,
