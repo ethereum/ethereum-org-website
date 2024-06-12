@@ -33,7 +33,6 @@ import TranslationChartImage from "@/components/TranslationChartImage"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 
 import { getEditPath } from "@/lib/utils/editPath"
-import { getLocaleTimestamp } from "@/lib/utils/time"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import GuideHeroImage from "@/public/heroes/guides-hub-hero.jpg"
@@ -76,7 +75,7 @@ export const staticComponents = {
 type StaticLayoutProps = ChildOnlyProp &
   Pick<
     MdPageContent,
-    "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
+    "slug" | "tocItems" | "lastEditLocaleTimestamp" | "contentNotTranslated"
   > & {
     frontmatter: StaticFrontmatter
   }
@@ -85,7 +84,7 @@ export const StaticLayout = ({
   frontmatter,
   slug,
   tocItems,
-  lastUpdatedDate,
+  lastEditLocaleTimestamp,
   contentNotTranslated,
 }: StaticLayoutProps) => {
   const { locale, asPath } = useRouter()
@@ -115,13 +114,13 @@ export const StaticLayout = ({
           ) : (
             <>
               <Breadcrumbs slug={slug} mb="8" />
-              {lastUpdatedDate && (
+              {lastEditLocaleTimestamp && (
                 <Text
                   color="text200"
                   dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
                 >
                   <Translation id="page-last-updated" />:{" "}
-                  {getLocaleTimestamp(locale as Lang, lastUpdatedDate)}
+                  {lastEditLocaleTimestamp}
                 </Text>
               )}
             </>
