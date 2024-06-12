@@ -34,8 +34,6 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
 
   const theme = merge(customTheme, { direction })
 
-  console.log({ pageProps })
-
   return (
     <>
       <style jsx global>
