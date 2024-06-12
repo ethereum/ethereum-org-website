@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { useRouter } from "next/router"
 import {
   Avatar,
   Flex,
@@ -9,7 +8,7 @@ import {
   VStack,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, FileContributor, Lang } from "@/lib/types"
+import type { ChildOnlyProp, FileContributor } from "@/lib/types"
 
 import { Button } from "@/components/Buttons"
 import InlineLink from "@/components/Link"
@@ -18,7 +17,6 @@ import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { getLocaleTimestamp } from "@/lib/utils/time"
 
 const ContributorList = ({ children }: Required<ChildOnlyProp>) => (
   <UnorderedList maxH="2xs" m={0} mt={6} overflowY="scroll">
@@ -44,16 +42,15 @@ const Contributor = ({ contributor }: ContributorProps) => (
 
 export type FileContributorsProps = FlexProps & {
   contributors: FileContributor[]
-  lastEdit: string
+  lastEditLocaleTimestamp: string
 }
 
 const FileContributors = ({
   contributors,
-  lastEdit,
+  lastEditLocaleTimestamp,
   ...props
 }: FileContributorsProps) => {
   const [isModalOpen, setModalOpen] = useState(false)
-  const { locale } = useRouter()
 
   const lastContributor: FileContributor = contributors.length
     ? contributors[0]
@@ -102,7 +99,7 @@ const FileContributors = ({
             <InlineLink href={"https://github.com/" + lastContributor.login}>
               @{lastContributor.login}
             </InlineLink>
-            , {getLocaleTimestamp(locale as Lang, lastEdit)}
+            , {lastEditLocaleTimestamp}
           </Text>
         </Flex>
 
