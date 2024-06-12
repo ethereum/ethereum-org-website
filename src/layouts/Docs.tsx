@@ -233,7 +233,7 @@ export const DocsLayout = ({
           <H1 id="top">{frontmatter.title}</H1>
           <FileContributors
             contributors={contributors}
-            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp!}
           />
           <TableOfContents
             slug={slug}

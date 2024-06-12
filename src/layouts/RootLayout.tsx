@@ -68,7 +68,7 @@ export const RootLayout = ({
 
       {children}
 
-      <Footer lastDeployLocaleTimestamp={lastDeployLocaleTimestamp} />
+      <Footer lastDeployLocaleTimestamp={lastDeployLocaleTimestamp!} />
       <FeedbackWidget />
     </Container>
   )

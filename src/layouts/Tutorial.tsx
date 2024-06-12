@@ -155,7 +155,7 @@ export const tutorialsComponents = {
 }
 type TutorialLayoutProps = ChildOnlyProp &
   Pick<MdPageContent, "tocItems" | "contributors" | "contentNotTranslated"> &
-  Required<Pick<MdPageContent, "lastUpdatedDate">> & {
+  Required<Pick<MdPageContent, "lastEditLocaleTimestamp">> & {
     frontmatter: TutorialFrontmatter
     timeToRead: number
   }
@@ -165,7 +165,7 @@ export const TutorialLayout = ({
   frontmatter,
   tocItems,
   timeToRead,
-  lastUpdatedDate,
+  lastEditLocaleTimestamp,
   contributors,
   contentNotTranslated,
 }: TutorialLayoutProps) => {
@@ -196,7 +196,7 @@ export const TutorialLayout = ({
           {children}
           <FileContributors
             contributors={contributors}
-            lastEdit={lastUpdatedDate}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
           />
           <FeedbackCard />
         </ContentContainer>
