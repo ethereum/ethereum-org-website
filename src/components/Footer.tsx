@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 import { IoChevronUpSharp } from "react-icons/io5"
@@ -13,13 +12,12 @@ import {
   Text,
 } from "@chakra-ui/react"
 
-import type { FooterLink, FooterLinkSection, Lang } from "@/lib/types"
+import type { FooterLink, FooterLinkSection } from "@/lib/types"
 
 import { BaseLink } from "@/components/Link"
 import Translation from "@/components/Translation"
 
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
-import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { Button } from "./Buttons"
 
@@ -42,11 +40,10 @@ const socialLinks = [
 ]
 
 type FooterProps = {
-  lastDeployDate: string
+  lastDeployLocaleTimestamp: string
 }
 
-const Footer = ({ lastDeployDate }: FooterProps) => {
-  const { locale } = useRouter()
+const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
   const { t } = useTranslation("common")
 
   const linkSections: FooterLinkSection[] = [
@@ -319,6 +316,7 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
       fill: "primary.base",
     },
   }
+
   const linkProps = {
     isPartiallyActive: false,
     textDecor: "none",
@@ -335,7 +333,7 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
   return (
     <Box as="footer" py="4" px="8">
       <Flex
-        justify={{ base: "center", md: 'space-between'}}
+        justify={{ base: "center", md: "space-between" }}
         alignItems="center"
         flexWrap="wrap"
         gap={8}
@@ -344,10 +342,10 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
         borderTop={"1px solid"}
         borderColor={"body.light"}
       >
-        {lastDeployDate && (
+        {lastDeployLocaleTimestamp && (
           <Text fontSize={"sm"} fontStyle={"italic"} color={"body.medium"}>
             <Translation id="website-last-updated" />:{" "}
-            {getLocaleTimestamp(locale as Lang, lastDeployDate)}
+            {lastDeployLocaleTimestamp}
           </Text>
         )}
 
@@ -428,11 +426,7 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           m={0}
         >
           {dipperLinks.map(({ to, text }) => (
-            <ListItem
-              key={text}
-              textAlign="center"
-              px="2"
-            >
+            <ListItem key={text} textAlign="center" px="2">
               <BaseLink href={to} w={["100%", null]} {...linkProps}>
                 {text}
               </BaseLink>
