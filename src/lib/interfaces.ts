@@ -106,7 +106,7 @@ export interface MdPageContent {
   frontmatter: Frontmatter
   tocItems: ToCItem[]
   lastEditLocaleTimestamp?: string
-  lastDeployLocaleTimestamp?: string
+  lastDeployLocaleTimestamp: string
   contentNotTranslated: boolean
   contributors: FileContributor[]
 }
