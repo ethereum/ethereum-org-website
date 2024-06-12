@@ -194,8 +194,6 @@ export const getStaticProps = (async (context) => {
       mdxSource,
       slug,
       frontmatter,
-      // lastUpdatedDate,
-      // lastDeployDate,
       lastEditLocaleTimestamp: getLocaleTimestamp(
         locale as Lang,
         lastUpdatedDate
@@ -239,7 +237,6 @@ ContentPage.getLayout = (page) => {
   const {
     slug,
     frontmatter,
-    // lastUpdatedDate,
     lastEditLocaleTimestamp,
     lastDeployLocaleTimestamp,
     layout,
@@ -252,7 +249,6 @@ ContentPage.getLayout = (page) => {
   const layoutProps = {
     slug,
     frontmatter,
-    // lastUpdatedDate,
     lastEditLocaleTimestamp,
     lastDeployLocaleTimestamp,
     timeToRead,
