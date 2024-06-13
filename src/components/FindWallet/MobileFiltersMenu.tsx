@@ -10,9 +10,9 @@ import {
   Flex,
 } from "@chakra-ui/react"
 
-import { Button } from "@/components/Buttons"
+import type { Wallet } from "@/lib/types"
 
-import walletData from "@/data/wallets/wallet-data"
+import { Button } from "@/components/Buttons"
 
 import OldHeading from "../OldHeading"
 
@@ -26,12 +26,14 @@ import WalletFilterSidebar, {
 import { useWalletTable } from "@/hooks/useWalletTable"
 
 type MobileFiltersMenuProps = WalletFilterSidebarProps & {
+  walletData: Wallet[]
   showMobileSidebar: boolean
   onOpen: () => void
   onClose: () => void
 }
 
 export const MobileFiltersMenu = ({
+  walletData,
   filters,
   resetWalletFilter,
   resetFilters,
