@@ -12,7 +12,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { BasePageProps, ChildOnlyProp, ToCItem } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, Lang, ToCItem } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import OriginalCard, {
@@ -33,6 +33,7 @@ import PageMetadata from "@/components/PageMetadata"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import developersEthBlocks from "@/public/images/developers-eth-blocks.png"
@@ -130,12 +131,16 @@ export const getStaticProps = (async ({ locale }) => {
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>

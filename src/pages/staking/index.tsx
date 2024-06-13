@@ -9,6 +9,7 @@ import type {
   ChildOnlyProp,
   EpochResponse,
   EthStoreResponse,
+  Lang,
   StakingStatsData,
 } from "@/lib/types"
 
@@ -37,6 +38,7 @@ import Translation from "@/components/Translation"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
@@ -209,6 +211,10 @@ type Props = BasePageProps & {
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   const requiredNamespaces = getRequiredNamespacesForPage("/staking")
 
@@ -221,7 +227,7 @@ export const getStaticProps = (async ({ locale }) => {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       data,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
     // Updated once a day
     revalidate: BASE_TIME_UNIT * 24,
