@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import { useTranslation } from "next-i18next"
 import {
   Accordion,
@@ -62,9 +63,22 @@ export type NavLinkProps = {
 const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
   const { t } = useTranslation("page-developers-docs")
 
+  const isLinkInPath = path.includes(item.to) || path.includes(item.path)
+  const [isOpen, setIsOpen] = useState(isTopLevel || isLinkInPath)
+
+  useEffect(() => {
+    if (isLinkInPath) {
+      setIsOpen(true)
+    }
+  }, [isLinkInPath])
+
   if (item.items) {
     return (
-      <Accordion allowToggle defaultIndex={isTopLevel ? [0] : []}>
+      <Accordion
+        allowToggle
+        index={isOpen ? [0] : []}
+        onChange={() => setIsOpen(!isOpen)}
+      >
         <AccordionItem>
           <h2>
             <AccordionButton
