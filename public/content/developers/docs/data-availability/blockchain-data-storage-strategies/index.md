@@ -20,6 +20,9 @@ The choice of which method to use is based on several criteria:
 - How much hassle is acceptable? Computers that run a full-scale node can perform more processing than a light client in an application running in a browser.
 - Is it necessary to facilitate easy access to the information from every node?
 
+## Prerequisites {#prerequisites}
+
+You should have a good understanding of [blockchain fundamentals](/developers/docs/intro-to-ethereum/). This page also assumes the reader is familiar with [blocks](/developers/docs/blocks/), [transactions](/developers/docs/transactions/), and other relevant topics.
 
 ## The C.I.A. of information security {#cia-info-security}
 
