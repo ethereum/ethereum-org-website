@@ -25,6 +25,7 @@ import type { CommunityEventsReturnType } from "@/lib/interfaces"
 import ActionCard from "@/components/ActionCard"
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
+import CodeModal from "@/components/CodeModal"
 import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
@@ -221,9 +222,6 @@ export const getStaticProps = (async ({ locale }) => {
 
 // Lazy-load these components on initial load
 const Codeblock = dynamic(() => import("@/components/Codeblock"), {
-  ssr: false,
-})
-const CodeModal = dynamic(() => import("@/components/CodeModal"), {
   ssr: false,
 })
 
