@@ -3,7 +3,7 @@ title: سلسلة المنارة
 description: تعرّف على سلسلة المنارة - الترقية التي جعلت إثيريوم جزءًا من إثبات الحصة.
 lang: ar
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
 alt: 
 summaryPoint1: قدمت سلسلة المنارة إثبات الحصة في منظومة إثيريوم.
 summaryPoint2: تم الدمج مع سلسلة إثبات الحصة الأصلية لإثيريوم في سبتمبر من عام 2022.

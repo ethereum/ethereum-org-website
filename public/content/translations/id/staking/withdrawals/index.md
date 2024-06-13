@@ -3,7 +3,7 @@ title: Penarikan penaruhan
 description: Halaman yang merangkum tentang penarikan tekan penaruhan, bagaimana cara kerjanya, dan apa yang harus dilakukan oleh staker untuk mendapatkan imbalan mereka
 lang: id
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Leslie si badak dengan imbalan penaruhannya
 sidebarDepth: 2
 summaryPoints:

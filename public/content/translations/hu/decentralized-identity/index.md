@@ -5,7 +5,7 @@ lang: hu
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: A hagyományos identitásrendszerek központosították az azonosítók kiadását, karbantartását és ellenőrzését.
 summaryPoint2: A decentralizált identitás megszünteti a centralizált harmadik felektől való függőséget.
 summaryPoint3: A kriptónak köszönhetően, a felhasználóknak újra van eszközük, hogy tárolják és kezeljék a saját azonosítójukat és tanúsítványaikat.

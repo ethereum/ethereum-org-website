@@ -4,7 +4,7 @@ description: इथेरियम पर DeFi का अवलोकन
 lang: hi
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: lego ब्रिक्स से बना Eth लोगो।
 sidebarDepth: 2
 summaryPoint1: मौजूदा वित्तीय प्रणाली का एक वैश्विक, खुला विकल्प।

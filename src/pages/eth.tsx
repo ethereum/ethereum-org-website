@@ -37,10 +37,10 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import eth from "@/public/eth.png"
-import ethCat from "@/public/eth-gif-cat.png"
-import defi from "@/public/finance_transparent.png"
-import ethereum from "@/public/what-is-ethereum.png"
+import eth from "@/public/images/eth.png"
+import ethCat from "@/public/images/eth-gif-cat.png"
+import defi from "@/public/images/finance_transparent.png"
+import ethereum from "@/public/images/what-is-ethereum.png"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
@@ -379,7 +379,7 @@ const EthPage = () => {
       <PageMetadata
         title={t("page-eth-whats-eth-meta-title")}
         description={t("page-eth-whats-eth-meta-desc")}
-        image="/eth.png"
+        image="/images/eth.png"
       />
       <Content>
         <HeroContainer>

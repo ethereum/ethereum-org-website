@@ -41,7 +41,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
-import rhino from "@/public/upgrades/upgrade_rhino.png"
+import rhino from "@/public/images/upgrades/upgrade_rhino.png"
 
 type BenefitsType = {
   title: string
@@ -369,7 +369,7 @@ const StakingPage = ({
       <PageMetadata
         title={t("page-staking-meta-title")}
         description={t("page-staking-meta-description")}
-        image="/upgrades/upgrade_rhino.png"
+        image="/images/upgrades/upgrade_rhino.png"
       />
       <HeroStatsWrapper>
         <PageHero content={heroContent} />

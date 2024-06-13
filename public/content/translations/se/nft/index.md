@@ -5,7 +5,7 @@ lang: se
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: En Eth-logotyp visas via hologram.
 summaryPoint1: Ett sätt att representera något unikt, som en Ethereum-baserad tillgång.
 summaryPoint2: NFT:er ger mer kraft till innehållsskapare än någonsin tidigare.

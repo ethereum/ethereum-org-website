@@ -3,7 +3,7 @@ title: Ενσωμάτωση του κεντρικού δικτύου με το E
 description: Μάθετε για την ενσωμάτωση - όταν το κεντρικό δίκτυο του Ethereum θα συνδεθεί με το Beacon Chain, το συντονισμένο σύστημα proof-of-stake.
 lang: el
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Τελικά το τρέχον κεντρικό δίκτυο του Ethereum θα "ενσωματωθεί" με τις υπόλοιπες αναβαθμίσεις του Eth2.
 summaryPoint2: Η ενσωμάτωση αυτή θα συγχωνεύσει το κεντρικό δίκτυο του "Eth1" με το beacon chain του Eth2 και το σύστημα διαλογής (sharding system).

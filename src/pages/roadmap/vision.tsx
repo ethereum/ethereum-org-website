@@ -37,7 +37,7 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import oldship from "@/public/upgrades/oldship.png"
+import oldship from "@/public/images/upgrades/oldship.png"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex

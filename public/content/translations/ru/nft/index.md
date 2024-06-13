@@ -5,7 +5,7 @@ lang: ru
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Логотип ETH отображается в виде голограммы.
 summaryPoint1: Способ представить что-либо уникальное как актив на основе Ethereum.
 summaryPoint2: С NFT у создателей контента появляется больше возможностей, чем когда-либо прежде.

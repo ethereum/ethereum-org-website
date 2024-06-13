@@ -33,10 +33,10 @@ import allTimeData from "../../../data/translation-reports/alltime/alltime-data.
 import monthData from "../../../data/translation-reports/month/month-data.json"
 import quarterData from "../../../data/translation-reports/quarter/quarter-data.json"
 
-import darkThemeCertificateImg from "@/public/certificates/dark-certificate.png"
-import lightThemeCertificateImg from "@/public/certificates/light-certificate.png"
-import dogeComputerImg from "@/public/doge-computer.png"
-import whatIsEthereumImg from "@/public/what-is-ethereum.png"
+import darkThemeCertificateImg from "@/public/images/certificates/dark-certificate.png"
+import lightThemeCertificateImg from "@/public/images/certificates/light-certificate.png"
+import dogeComputerImg from "@/public/images/doge-computer.png"
+import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
 
 const Content = (props: BoxProps) => (
   <Box as={MainArticle} py={4} px={10} w="full" {...props} />

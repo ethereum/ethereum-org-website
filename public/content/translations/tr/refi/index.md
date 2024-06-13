@@ -5,7 +5,7 @@ lang: tr
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Yenileyici ilkeler üzerine inşa edilmiş alternatif bir ekonomik sistem
 summaryPoint2: İklim değişikliği gibi küresel düzeydeki koordinasyon krizlerini çözmek için Ethereum'dan yararlanma girişimi

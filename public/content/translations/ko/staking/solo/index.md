@@ -4,7 +4,7 @@ description: ETH 솔로 스테이킹을 시작하는 방법에 대한 개요
 lang: ko
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: 컴퓨터 칩 위의 코뿔쏘 레슬리
 summaryPoints:
   - 검증자가 온라인에서 올바르게 작동하도록 유지하여 프로토콜에서 직접 최대 보상을 받으세요.

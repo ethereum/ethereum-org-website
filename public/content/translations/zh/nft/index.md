@@ -5,7 +5,7 @@ lang: zh
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: 通过全息图显示的以太币徽标。
 summaryPoint1: 一种用以太坊资产表示任何独特事物的方法。
 summaryPoint2: 非同质化代币正在前所未有地向内容创作人赋予更多权利。

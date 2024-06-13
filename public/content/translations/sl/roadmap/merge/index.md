@@ -3,7 +3,7 @@ title: Spojitev
 description: Več informacij o spojitvi – trenutku, ko je Ethereumovo glavno omrežje začelo uporabljati dokaz o deležu.
 lang: sl
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Ethereumovo glavno omrežje uporablja dokaz o deležu, vendar ni bilo vedno tako.
 summaryPoint2: Nadgradnja z izvirnega mehanizma dokaza o delu na dokaz o deležu se je imenovala spojitev.

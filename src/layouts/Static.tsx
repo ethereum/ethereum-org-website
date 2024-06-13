@@ -36,7 +36,7 @@ import { getEditPath } from "@/lib/utils/editPath"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import GuideHeroImage from "@/public/heroes/guides-hub-hero.jpg"
+import GuideHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />

@@ -3,7 +3,7 @@ title: Mga pag-withdraw ng stake
 description: Page na nagbubuod sa kung ano ang mga pag-push withdraw sa staking, paano ito gumagana, at kung ano ang dapat gawin ng mga staker para makuha ang mga reward nila
 lang: fil
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Ang rhino na si Leslie kasama ng mga natanggap niyang reward mula sa staking
 sidebarDepth: 2
 summaryPoints:

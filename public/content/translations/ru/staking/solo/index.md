@@ -4,7 +4,7 @@ description: Обзор того, как начать одиночный сте�
 lang: ru
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Носорог Лесли на собственном компьютерном чипе.
 sidebarDepth: 2
 summaryPoints:

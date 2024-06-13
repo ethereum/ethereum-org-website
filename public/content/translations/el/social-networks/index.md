@@ -5,7 +5,7 @@ lang: el
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: Πλατφόρμες βασισμένες στο Blockchain για κοινωνική αλληλεπίδραση, δημιουργία και διανομή περιεχομένου.
 summaryPoint2: Τα αποκεντρωμένα κοινωνικά δίκτυα μέσων ενημέρωσης, προστατεύουν την ιδιωτικότητα των χρηστών και ενισχύουν την ασφάλεια των δεδομένων.
 summaryPoint3: Τα κρυπτονομίσματα και τα NFT δημιουργούν νέους τρόπους δημιουργίας κέρδους από περιεχόμενο.

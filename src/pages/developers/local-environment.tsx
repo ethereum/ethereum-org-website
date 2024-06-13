@@ -27,7 +27,7 @@ import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { getLocalEnvironmentFrameworkData } from "@/lib/api/ghRepoData"
-import EthBlocksImage from "@/public/developers-eth-blocks.png"
+import EthBlocksImage from "@/public/images/developers-eth-blocks.png"
 
 const Content = ({ children }: ChildOnlyProp) => {
   return (
