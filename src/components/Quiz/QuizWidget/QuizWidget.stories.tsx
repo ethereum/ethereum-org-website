@@ -1,4 +1,4 @@
-import { getI18n, useTranslation } from "react-i18next"
+import { getI18n } from "react-i18next"
 import type { Meta, StoryObj } from "@storybook/react"
 import { expect, userEvent, waitFor, within } from "@storybook/test"
 
