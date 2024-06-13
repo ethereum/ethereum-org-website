@@ -88,7 +88,14 @@ const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <AccordionPanel fontSize="md" p={0} ps={8}>
+          <AccordionPanel
+            as={Flex}
+            direction="column"
+            gap="2"
+            fontSize="md"
+            p="0"
+            ps="2"
+          >
             {item.items.map((childItem, idx) => (
               <NavLink item={childItem} path={path} key={idx} />
             ))}
@@ -123,8 +130,8 @@ const SideNav = ({ path, docLinks }: SideNavProps) => {
       flexDir="column"
       position="sticky"
       top="19"
-      pt={8}
-      pb={16}
+      pt="8"
+      pb="16"
       h="calc(100vh - 80px)" // TODO take footer into account for height?
       w="calc((100% - 1448px) / 2 + 256px)"
       minW="256px"
@@ -136,7 +143,7 @@ const SideNav = ({ path, docLinks }: SideNavProps) => {
       // TODO: do this on the parent container
       // display={{ base: "none", lg: "block" }}
       aria-label={t("common:nav-developers-docs")}
-      gap={2}
+      gap="4"
     >
       {docLinks.map((item, idx) => (
         <NavLink item={item} path={path} key={idx} isTopLevel />
