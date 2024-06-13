@@ -5,7 +5,7 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, calc, Center, Flex, Text, useDisclosure } from "@chakra-ui/react"
 
-import type { BasePageProps, ChildOnlyProp, Wallet } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, Lang, Wallet } from "@/lib/types"
 
 import BannerNotification from "@/components/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -21,6 +21,7 @@ import PageMetadata from "@/components/PageMetadata"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
   getNonSupportedLocaleWallets,
@@ -56,6 +57,10 @@ type Props = BasePageProps & {
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/wallets/find-wallet"
@@ -79,7 +84,7 @@ export const getStaticProps = (async ({ locale }) => {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
       wallets,
     },
     // Updated once a day

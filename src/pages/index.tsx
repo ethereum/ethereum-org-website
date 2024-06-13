@@ -30,7 +30,6 @@ import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import Modal from "@/components/Modal"
 import PageMetadata from "@/components/PageMetadata"
 import StatsBoxGrid from "@/components/StatsBoxGrid"
 import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
@@ -39,6 +38,7 @@ import Translation from "@/components/Translation"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import {
   getRequiredNamespacesForPage,
   isLangRightToLeft,
@@ -208,13 +208,17 @@ export const getStaticProps = (async ({ locale }) => {
 
   // load last deploy date to pass to Footer in RootLayout
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       communityEvents,
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
       metricResults,
     },
     revalidate: BASE_TIME_UNIT * 24,
