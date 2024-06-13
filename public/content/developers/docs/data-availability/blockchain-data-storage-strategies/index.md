@@ -4,7 +4,7 @@ description: There are several ways to store data using the blockchain. This art
 lang: en
 ---
 
-There are several ways to store information on the blockchain:
+There are multiple ways to store information either directly on the blockchain, or in a manner that is secured by the blockchain:
 
 - EIP-4844 blobs
 - Calldata
