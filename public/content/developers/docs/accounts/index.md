@@ -109,7 +109,7 @@ There is also another type of key in Ethereum, introduced when Ethereum switched
 
 ## A note on wallets {#a-note-on-wallets}
 
-An account is not a wallet. An account is the keypair for a user-owned Ethereum account. A wallet is an interface or application that lets you interact with your Ethereum account.
+An account is not a wallet. A wallet is an interface or application that lets you interact with your Ethereum account, either an externally-owned account or a contract account.
 
 ## A visual demo {#a-visual-demo}
 
