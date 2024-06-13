@@ -681,6 +681,29 @@ const BugBountiesPage = () => {
                 </InlineLink>
               </Box>
             </StyledCard>
+            <StyledCard
+              emoji=":bug:"
+              title={t("page-upgrades-bug-bounty-dependency-bugs")}
+              description={t("page-upgrades-bug-bounty-dependency-bugs-desc")}
+            >
+              <Box>
+                <OldHeading
+                  as="h4"
+                  fontWeight="medium"
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
+                  {t("page-upgrades-bug-bounty-help-links")}
+                </OldHeading>
+                <InlineLink href="https://github.com/ethereum/c-kzg-4844">
+                  C-KZG-4844
+                </InlineLink>
+                <br />
+                <InlineLink href="https://github.com/crate-crypto/go-kzg-4844">
+                  Go-KZG-4844
+                </InlineLink>
+              </Box>
+            </StyledCard>
           </StyledCardContainer>
           <H2>{t("page-upgrades-bug-bounty-not-included")}</H2>
           <Text>{t("page-upgrades-bug-bounty-not-included-desc")}</Text>
