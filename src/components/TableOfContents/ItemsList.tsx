@@ -28,7 +28,7 @@ const ItemsList = ({
           <ListItem key={index} m={0} {...rest}>
             <ToCLink depth={depth} item={item} activeHash={activeHash} />
             {items && (
-              <List key={title} fontSize="sm" ps={2} m={0} mt="2" spacing="2">
+              <List key={title} fontSize="sm" ps="2" m="0" mt="2" spacing="2">
                 <ItemsList
                   items={items}
                   depth={depth + 1}

@@ -57,8 +57,8 @@ const Link = ({
       _hover={{
         ...hoverOrActiveStyle,
       }}
-      p={2}
-      ps={0}
+      p="2"
+      ps="0"
       sx={{
         [$dotBg.variable]: "var(--eth-colors-primary-hover)",
         "&.active": {
