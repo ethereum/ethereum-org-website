@@ -15,13 +15,10 @@ const ItemsList = ({
   items,
   depth,
   maxDepth,
-  // activeHash,
+  activeHash,
   ...rest
 }: ItemsListProps) => {
   if (depth > maxDepth) return null
-
-  // FIXME: TEST
-  const activeHash = "#web3"
 
   return (
     <>
