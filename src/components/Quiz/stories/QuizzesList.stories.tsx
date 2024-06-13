@@ -33,8 +33,8 @@ export default meta
 export const QuizzesList: StoryObj<typeof meta> = {
   args: {
     content: ethereumBasicsQuizzes,
-    headingId: getTranslation("basics", "learn-quizzes"),
-    descriptionId: getTranslation("basics-description", "learn-quizzes"),
+    headingId: "basics",
+    descriptionId: "basics-description",
     userStats: {
       score: 0,
       average: [],
@@ -43,4 +43,12 @@ export const QuizzesList: StoryObj<typeof meta> = {
     quizHandler: fn(),
     modalHandler: fn(),
   },
+
+  render: ({ headingId, descriptionId, ...args }) => (
+    <QuizzesListComponent
+      {...args}
+      headingId={getTranslation(headingId, "learn-quizzes")}
+      descriptionId={getTranslation(descriptionId, "learn-quizzes")}
+    />
+  ),
 }
