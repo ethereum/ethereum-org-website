@@ -4,9 +4,9 @@ import {
   Box,
   BoxProps,
   calc,
+  Flex,
   Icon,
   List,
-  ListItem,
   useToken,
 } from "@chakra-ui/react"
 
@@ -67,7 +67,10 @@ const TableOfContents = ({
   }
 
   return (
-    <Box
+    <Flex
+      direction="column"
+      align="start"
+      gap={4}
       hideBelow={lgBp}
       as="aside"
       position="sticky"
@@ -80,33 +83,25 @@ const TableOfContents = ({
       overflowY="auto"
       {...rest}
     >
-      <List {...outerListProps}>
-        {!hideEditButton && editPath && (
-          <ListItem mb={2}>
-            <ButtonLink
-              leftIcon={<Icon as={FaGithub} />}
-              href={editPath}
-              variant="outline"
-            >
-              {t("edit-page")}
-            </ButtonLink>
-          </ListItem>
-        )}
-        <ListItem>
-          <Box mb={2} textTransform="uppercase">
-            {t("on-this-page")}
-          </Box>
-          <List m={0} spacing="2">
-            <ItemsList
-              items={items}
-              depth={0}
-              maxDepth={maxDepth ? maxDepth : 1}
-              activeHash={activeHash}
-            />
-          </List>
-        </ListItem>
+      {!hideEditButton && editPath && (
+        <ButtonLink
+          leftIcon={<Icon as={FaGithub} />}
+          href={editPath}
+          variant="outline"
+        >
+          {t("edit-page")}
+        </ButtonLink>
+      )}
+      <Box textTransform="uppercase">{t("on-this-page")}</Box>
+      <List m={0} spacing="2" {...outerListProps}>
+        <ItemsList
+          items={items}
+          depth={0}
+          maxDepth={maxDepth ? maxDepth : 1}
+          activeHash={activeHash}
+        />
       </List>
-    </Box>
+    </Flex>
   )
 }
 
