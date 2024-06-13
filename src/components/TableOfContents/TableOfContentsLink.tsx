@@ -4,8 +4,6 @@ import type { ToCItem } from "@/lib/types"
 
 import { BaseLink } from "@/components/Link"
 
-import { useRtlFlip } from "@/hooks/useRtlFlip"
-
 export type TableOfContentsLinkProps = {
   depth: number
   item: ToCItem
@@ -17,7 +15,6 @@ const Link = ({
   item: { title, url },
   activeHash,
 }: TableOfContentsLinkProps) => {
-  const { flipForRtl } = useRtlFlip()
   const isActive = activeHash === url
   const isNested = depth === 2
 
