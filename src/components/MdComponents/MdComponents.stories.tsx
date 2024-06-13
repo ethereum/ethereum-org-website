@@ -6,7 +6,10 @@ import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 
 import { langViewportModes } from "../../../.storybook/modes"
 
-import MdComponentsObj from "./index"
+import {
+  MobileButton,
+  MobileButtonDropdown as MobileButtonDropdownComponent,
+} from "./index"
 
 const meta = {
   title: "MdComponents",
@@ -78,7 +81,7 @@ const dropdownLinks: ButtonDropdownList = {
 }
 
 export const MobileButtonDropdown: StoryObj<
-  typeof MdComponentsObj.MobileButtonDropdown
+  typeof MobileButtonDropdownComponent
 > = {
   parameters: {
     layout: "centered",
@@ -97,9 +100,9 @@ export const MobileButtonDropdown: StoryObj<
         <Box hideBelow="lg">
           `MobileButtonDropdown` is hidden at the `lg` breakpoint and higher
         </Box>
-        <MdComponentsObj.MobileButton>
-          <MdComponentsObj.MobileButtonDropdown {...args} />
-        </MdComponentsObj.MobileButton>
+        <MobileButton>
+          <MobileButtonDropdownComponent {...args} />
+        </MobileButton>
       </>
     )
   },
