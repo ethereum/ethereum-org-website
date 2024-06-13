@@ -4,7 +4,7 @@ import { expect, userEvent, waitFor, within } from "@storybook/test"
 
 import questionBank from "@/data/quizzes/questionBank"
 
-import { StandaloneQuizWidget } from "./"
+import { StandaloneQuizWidget } from "../QuizWidget"
 
 const layer2QuestionBank = Object.entries(questionBank).reduce<
   { id: string; correctAnswer: string }[]
