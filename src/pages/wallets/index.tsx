@@ -117,7 +117,12 @@ const ChecklistItem = (props: HorizontalCardProps) => (
   <HorizontalCard
     border={0}
     display="flex"
-    alignItems="flex-start"
+    sx={{
+      "& > span": {
+        marginTop: "6.20px !important",
+        display: "initial",
+      },
+    }}
     mb={4}
     {...props}
   />
@@ -347,6 +352,7 @@ const WalletsPage = () => {
                 emoji={type.emoji}
                 description={type.description}
                 emojiSize={2.5}
+                alignItems="center"
               />
             ))}
           </Box>
