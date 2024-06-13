@@ -7,6 +7,7 @@ import {
   AccordionPanel,
   Box,
   Flex,
+  FlexProps,
 } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
@@ -113,7 +114,7 @@ const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
   )
 }
 
-export interface SideNavProps {
+export type SideNavProps = FlexProps & {
   path: string
   docLinks: DeveloperDocsLink[]
 }
@@ -121,7 +122,7 @@ export interface SideNavProps {
 // TODO set tree state based on if current path is a child
 // of the given parent. Currently all `path` items default to open
 // and they only collapse when clicked on.
-const SideNav = ({ path, docLinks }: SideNavProps) => {
+const SideNav = ({ path, docLinks, ...props }: SideNavProps) => {
   const { t } = useTranslation("page-developers-docs")
 
   return (
@@ -130,20 +131,12 @@ const SideNav = ({ path, docLinks }: SideNavProps) => {
       flexDir="column"
       position="sticky"
       top="19"
+      gap="4"
       pt="8"
       pb="16"
-      h="calc(100vh - 80px)" // TODO take footer into account for height?
-      w="calc((100% - 1448px) / 2 + 256px)"
-      minW="256px"
       overflowY="auto"
-      bgColor="background.base"
-      boxShadow="1px 0px 0px rgba(0, 0, 0, 0.1)"
-      borderInlineEnd="1px solid"
-      borderInlineEndColor="border"
-      // TODO: do this on the parent container
-      // display={{ base: "none", lg: "block" }}
       aria-label={t("common:nav-developers-docs")}
-      gap="4"
+      {...props}
     >
       {docLinks.map((item, idx) => (
         <NavLink item={item} path={path} key={idx} isTopLevel />

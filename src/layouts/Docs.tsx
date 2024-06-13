@@ -230,7 +230,13 @@ export const DocsLayout = ({
         </BannerNotification>
       )}
       <ContentContainer dir={contentNotTranslated ? "ltr" : "unset"}>
-        <SideNav path={relativePath} docLinks={docLinks} />
+        <SideNav
+          path={relativePath}
+          docLinks={docLinks}
+          display={{ base: "none", lg: "block" }}
+          h="calc(100vh - 80px)" // TODO take footer into account for height?
+          w="256px"
+        />
         <Content>
           <H1 id="top">{frontmatter.title}</H1>
           <FileContributors

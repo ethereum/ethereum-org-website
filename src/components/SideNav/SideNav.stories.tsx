@@ -66,7 +66,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <Stack minH="100vh" position="relative">
+      <Stack minH="100vh" w="256px" position="relative">
         <Story />
       </Stack>
     ),
