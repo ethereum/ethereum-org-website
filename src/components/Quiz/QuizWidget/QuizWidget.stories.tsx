@@ -23,7 +23,7 @@ const layer2QuestionBank = Object.entries(questionBank).reduce<
 type QuizWidgetType = typeof StandaloneQuizWidget
 
 const meta = {
-  title: "QuizWidget",
+  title: "Molecules / Display Content / Quiz / QuizWidget",
   component: StandaloneQuizWidget,
   argTypes: {
     quizKey: {
