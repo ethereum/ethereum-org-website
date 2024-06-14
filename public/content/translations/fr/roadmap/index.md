@@ -105,7 +105,7 @@ Nous avons décidé de ne pas utiliser cette terminologie parce que nous voulion
 
 ## Qu'en est-il de la fragmentation ? {#what-about-sharding}
 
-La fragmentation consiste à découper la blockchain Ethereum afin que des sous-ensembles de validateurs soient seulement responsables d'une fraction des données complètes. C'était originellement de cette manière qu'Ethereum devait passer à l'échelle. Néanmoins, les rollups (couche 2) se sont développés bien plus rapidement que prévu et ont fournit une grande capacité à monter en charge, et en fourniront encore plus après que le Proto-Danksharding sera mis en œuvre. Cela signifie que les « chaînes de fragments » ne sont plus nécessaires et ont été supprimées de la feuille de route.
+La fragmentation consiste à découper la blockchain Ethereum afin que des sous-ensembles de validateurs soient seulement responsables d'une fraction des données complètes. C'était originellement de cette manière qu'Ethereum devait passer à l'échelle. Néanmoins, les rollups (couche 2) se sont développés bien plus rapidement que prévu et ont fourni une grande capacité à monter en charge, et en fourniront encore plus après que le Proto-Danksharding sera mis en œuvre. Cela signifie que les « chaînes de fragments » ne sont plus nécessaires et ont été supprimées de la feuille de route.
 
 ## Vous recherchez des mises à niveau techniques spécifiques ? {#looking-for-specific-technical-upgrades}
 
