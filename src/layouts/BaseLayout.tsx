@@ -51,7 +51,7 @@ export const BaseLayout = ({
        * layout on initial load.
        */}
       <SkipLink />
-      <Container maxW="1536px" marginInline="auto">
+      <Container maxW="container.2xl" marginInline="auto">
         <Nav />
 
         {/* TODO: FIX TRANSLATION BANNER LOGIC FOR https://github.com/ethereum/ethereum-org-website/issues/11305 */}
