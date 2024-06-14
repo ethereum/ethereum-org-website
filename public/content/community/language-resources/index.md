@@ -102,6 +102,8 @@ If you are bilingual and want to help us reach more people, you can also get inv
 ### Russian {#ru}
 
 - [Cyber Academy](https://cyberacademy.dev) - educational space for web3 builders
+- [Forklog](https://forklog.com) - news and educational articles about crypto in general, existing technologies and future upgrades of different blockchains
+- [BeInCrypto](https://ru.beincrypto.com) - news, crypto price analysis and non-technical articles with simple explanations about everything in crypto
 
 ### Spanish {#es}
 
