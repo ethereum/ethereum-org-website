@@ -58,7 +58,6 @@
     "reading-time": "^1.5.0",
     "recharts": "^2.7.3",
     "remark-gfm": "^3.0.1",
-    "sharp": "^0.33.4",
     "yaml-loader": "^0.8.0"
   },
   "devDependencies": {
@@ -99,6 +98,7 @@
     "unist-util-visit": "^5.0.0"
   },
   "resolutions": {
-    "jackspeak": "2.1.1"
+    "jackspeak": "2.1.1",
+    "sharp": "0.32.6"
   }
 }
