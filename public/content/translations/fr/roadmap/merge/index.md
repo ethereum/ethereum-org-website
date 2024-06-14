@@ -200,7 +200,7 @@ Les mises à niveau Ethereum sont plus ou moins interdépendantes. Alors résumo
 
 La Fusion représente l'adoption formelle de la Chaîne phare comme nouvelle couche de consensus pour la couche d'exécution sur le réseau principal d'origine. Depuis La Fusion, les validateurs sont affectés au réseau principal sécurisé d'Ethereum et le minage par [preuve de travail](/developers/docs/consensus-mechanisms/pow/) n'est plus un moyen valide de production de blocs.
 
-Les blocs sont dès lors proposés par validation des nœuds qui ont misés l'ETH en échange du droit de participer au consensus. Ces mises à niveau permettent de préparer le terrain pour de futures améliorations d'évolutivité, y compris la fragmentation.
+Les blocs sont dès lors proposés par validation des nœuds qui ont misé l'ETH en échange du droit de participer au consensus. Ces mises à niveau permettent de préparer le terrain pour de futures améliorations d'évolutivité, y compris la fragmentation.
 
 <ButtonLink to="/roadmap/beacon-chain/">
   La Chaîne phare
