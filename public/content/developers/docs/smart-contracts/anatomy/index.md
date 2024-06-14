@@ -203,7 +203,7 @@ A complete contract might look something like this. Here the `constructor` funct
 
 ## Events and logs {#events-and-logs}
 
-Events let you communicate with your smart contract from your frontend or other subscribing applications. When a transaction is mined, smart contracts can emit events and write logs to the blockchain that the frontend can then process.
+Events let you communicate with your smart contract from your frontend or other subscribing applications. When a transaction is validated and included in the block, smart contracts can emit events and write logs to the blockchain that the frontend can then process.
 
 ## Annotated examples {#annotated-examples}
 
