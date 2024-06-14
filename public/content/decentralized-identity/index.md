@@ -73,7 +73,7 @@ Decentralized identity can help create online communities that are free of fake 
 
 ### 4. Anti-Sybil protection {#sybil-protection}
 
-Grant-giving applications that use [quadratic voting](/glossary/#quadratic-voting) are vulnerable to [sybil attacks](/glossary/#sybil-attack) because the value of a grant is increased when more individuals vote for it, incentivizing users to split their contributions across many identities. Decentralized identities help to prevent this by raising the burden on each participant to prove that they are really human, although often without having to reveal specific private information.
+Grant-giving applications that use [quadratic voting](/glossary/#quadratic-voting) are vulnerable to [Sybil attacks](/glossary/#sybil-attack) because the value of a grant is increased when more individuals vote for it, incentivizing users to split their contributions across many identities. Decentralized identities help to prevent this by raising the burden on each participant to prove that they are really human, although often without having to reveal specific private information.
 
 ## What are attestations? {#what-are-attestations}
 

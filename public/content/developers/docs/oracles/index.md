@@ -274,7 +274,7 @@ Some decentralized oracle networks require participants to vote or stake on the 
 
 Nodes whose answers deviate from the majority answer are penalized by having their tokens distributed to others who provide more correct values. Forcing nodes to provide a bond before providing data incentivizes honest responses since they are assumed to be rational economic actors intent on maximizing returns.
 
-Staking/voting also protects decentralized oracles from [sybil attacks](/glossary/#sybil-attack) where malicious actors create multiple identities to game the consensus system. However, staking cannot prevent “freeloading” (oracle nodes copying information from others) and “lazy validation” (oracle nodes following the majority without verifying the information themselves).
+Staking/voting also protects decentralized oracles from [Sybil attacks](/glossary/#sybil-attack) where malicious actors create multiple identities to game the consensus system. However, staking cannot prevent “freeloading” (oracle nodes copying information from others) and “lazy validation” (oracle nodes following the majority without verifying the information themselves).
 
 ##### Schelling point mechanisms
 
