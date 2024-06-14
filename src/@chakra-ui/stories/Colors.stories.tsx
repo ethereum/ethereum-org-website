@@ -8,7 +8,7 @@ import semanticTokens from "@/@chakra-ui/semanticTokens"
 
 const semanticTokenColors = semanticTokens["colors"]
 
-import Heading from "../Heading"
+import Heading from "@/components/Heading"
 
 const meta = {
   title: "Design System/Colors",
@@ -178,7 +178,7 @@ const SemanticColorBlock = ({
       }
       size="20"
       bg={tokenName === nestedKey ? tokenName : `${tokenName}.${nestedKey}`}
-    ></Square>
+    />
     <Text>{nestedKey}</Text>
   </Flex>
 )
