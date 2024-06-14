@@ -81,7 +81,7 @@ A gyenge státusztalanság a kutatás előrehaladott állapotában tart, de a be
 
 ### Erős státusztalanság {#strong-statelessness}
 
-Az erős státusztalanság megszűnteti azt, hogy bármelyik csomópontnak tárolnia kelljen a státuszadatot. Ehelyett a tranzakciókat a tanúkkal együtt küldik, amelyet a blokképítők aggregálnak. Így a blokképítők felelősek azért, hogy a szükséges státuszokat tárolják, hogy abból elkészítsék a tanúkat a releváns számlákra. A státuszhoz kapcsolódó felelősség szinte teljesen a felhasználókhoz kerül, mivel tanúkat és hozzáférési listákat küldenek arról, hogy milyen számlákkal és tárhelykulcsokkal kapcsolódnak. Ennek következtében rendkívül könnyű csomópontok működhetnek, viszont az okosszerződésekkel nehezebb lesz az interakciójuk.
+Az erős státusztalanság megszünteti azt, hogy bármelyik csomópontnak tárolnia kelljen a státuszadatot. Ehelyett a tranzakciókat a tanúkkal együtt küldik, amelyet a blokképítők aggregálnak. Így a blokképítők felelősek azért, hogy a szükséges státuszokat tárolják, hogy abból elkészítsék a tanúkat a releváns számlákra. A státuszhoz kapcsolódó felelősség szinte teljesen a felhasználókhoz kerül, mivel tanúkat és hozzáférési listákat küldenek arról, hogy milyen számlákkal és tárhelykulcsokkal kapcsolódnak. Ennek következtében rendkívül könnyű csomópontok működhetnek, viszont az okosszerződésekkel nehezebb lesz az interakciójuk.
 
 Az erős státusztalanságot vizsgálják a kutatók, de jelenleg nem valószínű, hogy része lesz az Ethereum ütemtervének – sokkal valószínűbb, hogy a gyenge státusztalanság elegendő az Ethereum skálázási igényekhez.
 

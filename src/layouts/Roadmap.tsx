@@ -9,7 +9,7 @@ import {
   WrapItem,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
+import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -185,6 +185,8 @@ export const RoadmapLayout = ({
               style={{ objectFit: "contain" }}
               width={1504}
               height={336}
+              // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+              sizes="(max-width: 992px) 100vw, 720px"
               priority
             />
           </Center>

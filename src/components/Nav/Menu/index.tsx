@@ -1,6 +1,13 @@
 import { motion } from "framer-motion"
+import dynamic from "next/dynamic"
 import { Box, type BoxProps, Text, UnorderedList } from "@chakra-ui/react"
-import * as NavigationMenu from "@radix-ui/react-navigation-menu"
+import {
+  Item,
+  List,
+  Root,
+  Trigger,
+  Viewport,
+} from "@radix-ui/react-navigation-menu"
 
 import { Button } from "@/components/Buttons"
 
@@ -8,7 +15,6 @@ import { MAIN_NAV_ID, NAV_PY, SECTION_LABELS } from "@/lib/constants"
 
 import type { NavSections } from "../types"
 
-import SubMenu from "./SubMenu"
 import { useNavMenu } from "./useNavMenu"
 
 type NavMenuProps = BoxProps & {
@@ -16,25 +22,20 @@ type NavMenuProps = BoxProps & {
 }
 
 const Menu = ({ sections, ...props }: NavMenuProps) => {
-  const {
-    activeSection,
-    containerVariants,
-    direction,
-    handleSectionChange,
-    isOpen,
-    menuColors,
-    onClose,
-  } = useNavMenu(sections)
+  const { activeSection, direction, handleSectionChange, isOpen } =
+    useNavMenu(sections)
+
+  const MenuContent = dynamic(() => import("./MenuContent"))
 
   return (
     <Box {...props}>
-      <NavigationMenu.Root
+      <Root
         dir={direction}
         orientation="horizontal"
         onValueChange={handleSectionChange}
         delayDuration={0}
       >
-        <NavigationMenu.List asChild>
+        <List asChild>
           <UnorderedList
             id={MAIN_NAV_ID}
             display="flex"
@@ -44,9 +45,10 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
             {SECTION_LABELS.map((sectionKey) => {
               const { label, items } = sections[sectionKey]
               const isActive = activeSection === sectionKey
+
               return (
-                <NavigationMenu.Item key={sectionKey} value={label}>
-                  <NavigationMenu.Trigger asChild>
+                <Item key={sectionKey} value={label}>
+                  <Trigger asChild>
                     <Button
                       py="2"
                       px={{ base: "3", lg: "4" }}
@@ -77,41 +79,21 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                         {label}
                       </Text>
                     </Button>
-                  </NavigationMenu.Trigger>
-                  <NavigationMenu.Content asChild>
-                    {/**
-                     * This is the CONTAINER for all three menu levels
-                     * This renders inside the NavigationMenu.Viewport component
-                     */}
-                    <Box
-                      as={motion.div}
-                      variants={containerVariants}
-                      initial={false}
-                      animate={isOpen ? "open" : "closed"}
-                      position="absolute"
-                      top="19"
-                      insetInline="0"
-                      shadow="md"
-                      border="1px"
-                      borderColor={menuColors.stroke}
-                      bg={menuColors.lvl[1].background}
-                    >
-                      <SubMenu
-                        lvl={1}
-                        items={items}
-                        activeSection={activeSection}
-                        onClose={onClose}
-                      />
-                    </Box>
-                  </NavigationMenu.Content>
-                </NavigationMenu.Item>
+                  </Trigger>
+                  {/* Desktop Menu content */}
+                  <MenuContent
+                    items={items}
+                    isOpen={isOpen}
+                    sections={sections}
+                  />
+                </Item>
               )
             })}
           </UnorderedList>
-        </NavigationMenu.List>
+        </List>
 
-        <NavigationMenu.Viewport />
-      </NavigationMenu.Root>
+        <Viewport />
+      </Root>
     </Box>
   )
 }

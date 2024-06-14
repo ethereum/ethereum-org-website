@@ -15,17 +15,14 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-import type {
-  BasePageProps,
-  CommonHeroProps,
-  TranslationKey,
-} from "@/lib/types"
+import type { BasePageProps, Lang, TranslationKey } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
+import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import Layer2ProductCard from "@/components/Layer2ProductCard"
@@ -40,6 +37,7 @@ import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { layer2Data } from "@/data/layer-2/layer-2"
@@ -111,6 +109,10 @@ const Layer2CardGrid = (props) => (
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2")
 
@@ -120,7 +122,7 @@ export const getStaticProps = (async ({ locale }) => {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
@@ -129,7 +131,7 @@ const Layer2Page = () => {
   const { t } = useTranslation("page-layer-2")
   const layer2DataCombined = [...layer2Data.optimistic, ...layer2Data.zk]
 
-  const heroContent: CommonHeroProps = {
+  const heroContent: HubHeroProps = {
     title: t("layer-2-hero-title"),
     header: t("layer-2-hero-header"),
     description: t("layer-2-hero-subtitle"),

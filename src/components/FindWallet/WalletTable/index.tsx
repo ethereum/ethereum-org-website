@@ -1,5 +1,4 @@
 import { ReactNode, useContext } from "react"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import {
@@ -13,15 +12,11 @@ import {
   SimpleGrid,
   SimpleGridProps,
   Stack,
-  Table,
   TableProps,
-  Td,
   Text,
-  Th,
-  Tr,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp, WalletData, WalletFilter } from "@/lib/types"
+import type { ChildOnlyProp, Wallet, WalletFilter } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import { WalletMoreInfo } from "@/components/FindWallet/WalletTable/WalletMoreInfo"
@@ -31,8 +26,7 @@ import Tag from "@/components/Tag"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import {
-  formatSupportedLanguages,
-  getSupportedLanguages,
+  formatStringList,
   getWalletPersonas,
   walletsListingCount,
 } from "@/lib/utils/wallets"
@@ -50,7 +44,7 @@ import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLangua
 import { useWalletTable } from "@/hooks/useWalletTable"
 
 const Container = (props: TableProps) => (
-  <Table
+  <Box
     w="full"
     sx={{
       th: {
@@ -75,7 +69,6 @@ const WalletContainer = (props: ChildOnlyProp & ContainerProps) => (
 
 const Grid = forwardRef<SimpleGridProps, "tr">((props, ref) => (
   <SimpleGrid
-    as={Tr}
     ref={ref}
     templateColumns={{
       base: "60% auto 0% 0% 5%",
@@ -123,7 +116,7 @@ const WalletContentHeader = (props: ChildOnlyProp) => (
   />
 )
 
-const Wallet = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
+const WalletRow = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
   <Grid
     tabIndex={0}
     ref={ref}
@@ -207,7 +200,7 @@ export type WalletTableProps = {
   filters: WalletFilter
   resetFilters: () => void
   resetWalletFilter: React.MutableRefObject<() => void>
-  walletData: WalletData[]
+  walletData: Wallet[]
   onOpen: () => void
 }
 
@@ -219,7 +212,6 @@ const WalletTable = ({
   onOpen,
 }: WalletTableProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
-  const { locale } = useRouter()
   const {
     featureDropdownItems,
     filteredWallets,
@@ -243,7 +235,7 @@ const WalletTable = ({
   return (
     <Container>
       <WalletContentHeader>
-        <Th sx={{ textAlign: "start !important" }}>
+        <Box sx={{ textAlign: "start !important" }}>
           <Flex justifyContent="space-between" px={{ base: 2.5, md: 0 }}>
             {/* Displayed on mobile only */}
             <Text
@@ -277,7 +269,7 @@ const WalletTable = ({
               </Text>
             )}
           </Flex>
-        </Th>
+        </Box>
       </WalletContentHeader>
       {filteredWallets.length === 0 && (
         <WalletEmptyState
@@ -304,21 +296,6 @@ const WalletTable = ({
           const hasDeviceLabels = deviceLabels.length > 0
           const hasAllLabels = hasPersonasLabels && hasDeviceLabels
 
-          // Supported languages
-          const supportedLanguages = getSupportedLanguages(
-            wallet.languages_supported,
-            locale!
-          )
-          const numberOfSupportedLanguages = supportedLanguages.length
-          const sliceSize = NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN
-          const rest = numberOfSupportedLanguages - sliceSize
-          const restText = `${rest > 0 ? "+" : ""} ${rest > 0 ? rest : ""}`
-
-          const formattedSupportedLanguages = formatSupportedLanguages(
-            supportedLanguages,
-            sliceSize
-          )
-
           const showMoreInfo = (wallet) => {
             updateMoreInfo(wallet.key)
             // Log "more info" event only on expanding
@@ -335,7 +312,7 @@ const WalletTable = ({
               key={wallet.key}
               bg={wallet.moreInfo ? "background.highlight" : "transparent"}
             >
-              <Wallet
+              <WalletRow
                 // Make wallets more info section open on 'Enter'
                 onKeyUp={(e) => {
                   if (e.key === "Enter") showMoreInfo(wallet)
@@ -346,7 +323,7 @@ const WalletTable = ({
                   showMoreInfo(wallet)
                 }}
               >
-                <Td lineHeight="revert">
+                <Box lineHeight="revert">
                   <Flex
                     justifyContent="space-between"
                     alignItems="center"
@@ -419,13 +396,13 @@ const WalletTable = ({
                                 fontWeight="normal !important"
                               >
                                 {/* Show up to 5 supported languages and use a tooltip for the rest */}
-                                {`${formattedSupportedLanguages}`}{" "}
-                                {rest > 0 && (
-                                  <SupportedLanguagesTooltip
-                                    supportedLanguages={supportedLanguages}
-                                    restText={restText}
-                                  />
-                                )}
+                                {`${formatStringList(
+                                  wallet.supportedLanguages,
+                                  NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN
+                                )}`}{" "}
+                                <SupportedLanguagesTooltip
+                                  supportedLanguages={wallet.supportedLanguages}
+                                />
                               </Text>
                             </Flex>
                           </Stack>
@@ -478,8 +455,8 @@ const WalletTable = ({
                       {t("page-find-wallet-visit-website")}
                     </ButtonLink>
                   </Box>
-                </Td>
-              </Wallet>
+                </Box>
+              </WalletRow>
 
               {wallet.moreInfo && (
                 <WalletMoreInfo

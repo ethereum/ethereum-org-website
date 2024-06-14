@@ -10,7 +10,7 @@ import {
   useTheme,
 } from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp, CommonHeroProps } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 import { ICard, IGetInvolvedCard } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
@@ -19,6 +19,7 @@ import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
+import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
@@ -26,6 +27,7 @@ import PageMetadata from "@/components/PageMetadata"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 // Static assets
@@ -47,12 +49,16 @@ export const getStaticProps = (async ({ locale }) => {
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
@@ -214,7 +220,7 @@ const CommunityPage = () => {
     },
   ]
 
-  const heroContent: CommonHeroProps = {
+  const heroContent: HubHeroProps = {
     title: t("page-community-hero-title"),
     header: t("page-community-hero-header"),
     description: t("page-community-hero-subtitle"),
