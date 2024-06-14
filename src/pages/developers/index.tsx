@@ -265,7 +265,7 @@ const DevelopersPage = () => {
         header={`${t("page-developers-index:page-developers-title-1")} ${t(
           "page-developers-index:page-developers-title-2"
         )} ${t("page-developers-index:page-developers-title-3")}`}
-        title={t("developers")}
+        title={t("common:developers")}
         description={t("page-developers-index:page-developers-subtitle")}
       />
       <Content>
