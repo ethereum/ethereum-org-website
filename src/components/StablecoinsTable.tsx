@@ -9,7 +9,6 @@ import {
   Th,
   Thead,
   Tr,
-  useToken,
 } from "@chakra-ui/react"
 
 import { ButtonLink } from "./Buttons"
@@ -35,7 +34,6 @@ const StablecoinsTable = ({
   content,
   hasError,
 }: StablecoinsTableProps) => {
-  const [textColor] = useToken("colors", ["text"])
   const { flipForRtl } = useRtlFlip()
   const { t } = useTranslation("page-stablecoins")
 

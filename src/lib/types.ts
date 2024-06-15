@@ -276,12 +276,6 @@ export type LocaleDisplayInfo = {
   isBrowserDefault?: boolean
 }
 
-type TranslatedStats = {
-  tmMatch: number
-  default: number
-  total: number
-}
-
 /**
  * Translation cost report
  */

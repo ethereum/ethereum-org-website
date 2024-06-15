@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Box, Flex, SimpleGrid } from "@chakra-ui/react"
 
@@ -25,7 +24,6 @@ export const WalletMoreInfo = ({
   hasAllLabels,
 }: WalletMoreInfoProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
-  const { locale } = useRouter()
   const walletHasFilter = (filterKey) => {
     return wallet[filterKey] === true
   }

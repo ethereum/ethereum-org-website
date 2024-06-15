@@ -68,7 +68,7 @@ const SPELLING_MISTAKES: Array<string> = [
 ]
 
 // ! Current usage of this const is commented out
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line unused-imports/no-unused-vars
 const CASE_SENSITIVE_SPELLING_MISTAKES = ["Thereum", "Metamask", "Github"]
 // Ideas:
 // Regex for explicit lang path (e.g. /en/) && for glossary links (trailing slash breaks links e.g. /glossary/#pos/ doesn't work)
