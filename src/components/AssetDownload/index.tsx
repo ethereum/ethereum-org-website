@@ -18,6 +18,7 @@ type AssetDownloadProps = {
   artistName?: string
   artistUrl?: string
   image: ImageProps["src"]
+  svgUrl?: string
 } & FlexProps
 
 const AssetDownload = ({

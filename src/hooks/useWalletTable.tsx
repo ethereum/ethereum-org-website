@@ -1,15 +1,10 @@
 import { useContext, useEffect, useState } from "react"
 
-import type {
-  DropdownOption,
-  Wallet,
-  WalletData,
-  WalletFilter,
-} from "@/lib/types"
+import type { DropdownOption, Wallet, WalletFilter } from "@/lib/types"
 
 import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
 
-export type WalletMoreInfoData = WalletData & { moreInfo: boolean; key: string }
+export type WalletMoreInfoData = Wallet & { moreInfo: boolean; key: string }
 
 type UseWalletTableProps = {
   walletData: Wallet[]
