@@ -12114,6 +12114,24 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "kyndrawynne",
+      "name": "kyndrawynne",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108100622?v=4",
+      "profile": "https://github.com/kyndrawynne",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "stolab",
+      "name": "stolab",
+      "avatar_url": "https://avatars.githubusercontent.com/u/144235139?v=4",
+      "profile": "https://github.com/stolab",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

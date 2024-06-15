@@ -9,7 +9,9 @@ const meta = {
 
 export default meta
 
-export const Stat: StoryObj<typeof meta> = {
+type Story = StoryObj<typeof meta>
+
+export const Stat: Story = {
   args: {
     tooltipProps: {
       content: "Tooltip content",
@@ -27,7 +29,7 @@ export const Stat: StoryObj<typeof meta> = {
   },
 }
 
-export const StatError: StoryObj<typeof meta> = {
+export const StatError: Story = {
   args: {
     ...Stat.args,
     isError: true,

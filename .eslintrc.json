@@ -53,9 +53,9 @@
             "^@/data"
           ],
           // From the `constants` directory.
-          [
-            "^@/lib/constants"
-          ],
+          ["^@/lib/constants"],
+          // From the `.storybook/utils` file
+          ["^@/storybook-utils"],
           // Parent imports. Put `..` last.
           [
             "^\\.\\.(?!/?$)",

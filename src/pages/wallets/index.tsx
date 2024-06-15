@@ -11,7 +11,7 @@ import {
   Text as ChakraText,
 } from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
@@ -34,6 +34,7 @@ import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { walletOnboardingSimData } from "@/data/WalletSimulatorData"
@@ -132,6 +133,10 @@ const CalloutCardContainer = (props: ChildOnlyProp) => (
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   const requiredNamespaces = getRequiredNamespacesForPage("/wallets")
 
@@ -141,7 +146,7 @@ export const getStaticProps = (async ({ locale }) => {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>

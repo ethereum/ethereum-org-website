@@ -1,11 +1,10 @@
-import { useTranslation } from "next-i18next"
 import { Meta, StoryObj } from "@storybook/react"
+
+import { getTranslation } from "@/storybook-utils"
 
 import { langViewportModes } from "../../../../.storybook/modes"
 
 import ContentHeroComponent, { ContentHeroProps } from "."
-
-type ContentHeroType = typeof ContentHeroComponent
 
 const meta = {
   title: "Organisms / Layouts / Hero",
@@ -18,25 +17,16 @@ const meta = {
       },
     },
   },
-  argTypes: {
-    heroImg: {
-      table: {
-        disable: true,
-      },
-    },
-  },
-} satisfies Meta<ContentHeroType>
+} satisfies Meta<typeof ContentHeroComponent>
 
 export default meta
 
 export const ContentHero: StoryObj = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { t } = useTranslation("page-learn")
-
+    const PAGE_LEARN_NS = "page-learn"
     const buttons: ContentHeroProps["buttons"] = [
       {
-        content: t("hero-button-lets-get-started"),
+        content: getTranslation("hero-button-lets-get-started", PAGE_LEARN_NS),
         toId: "what-is-crypto-ethereum",
         matomo: {
           eventCategory: "learn hub hero buttons",
@@ -59,8 +49,8 @@ export const ContentHero: StoryObj = {
         heroImg="/upgrades/merge.png"
         // Can not properly hardcode this URL. So it's left blank
         blurDataURL=""
-        title={t("hero-header")}
-        description={t("hero-subtitle")}
+        title={getTranslation("hero-header", PAGE_LEARN_NS)}
+        description={getTranslation("hero-subtitle", PAGE_LEARN_NS)}
         buttons={buttons}
       />
     )

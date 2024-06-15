@@ -15,7 +15,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-import type { BasePageProps, TranslationKey } from "@/lib/types"
+import type { BasePageProps, Lang, TranslationKey } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import Card from "@/components/Card"
@@ -37,6 +37,7 @@ import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { layer2Data } from "@/data/layer-2/layer-2"
@@ -108,6 +109,10 @@ const Layer2CardGrid = (props) => (
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2")
 
@@ -117,7 +122,7 @@ export const getStaticProps = (async ({ locale }) => {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>

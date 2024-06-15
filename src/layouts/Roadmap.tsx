@@ -185,6 +185,8 @@ export const RoadmapLayout = ({
               style={{ objectFit: "contain" }}
               width={1504}
               height={336}
+              // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+              sizes="(max-width: 992px) 100vw, 720px"
               priority
             />
           </Center>

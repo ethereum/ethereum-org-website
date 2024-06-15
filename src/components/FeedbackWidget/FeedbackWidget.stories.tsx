@@ -5,13 +5,12 @@ import { expect, fireEvent, waitFor, within } from "@storybook/test"
 
 import FeedbackWidget from "./"
 
-type FeedbackWidgetType = typeof FeedbackWidget
-
 const meta = {
   title: "FeedbackWidget",
   parameters: {
     layout: "fullscreen",
   },
+  component: FeedbackWidget,
   decorators: [
     (Story) => (
       <Stack minH="100vh" position="relative">
@@ -20,7 +19,7 @@ const meta = {
       </Stack>
     ),
   ],
-} satisfies Meta<FeedbackWidgetType>
+} satisfies Meta<typeof FeedbackWidget>
 
 export default meta
 

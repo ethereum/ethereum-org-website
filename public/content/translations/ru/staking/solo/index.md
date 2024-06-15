@@ -83,7 +83,7 @@ summaryPoints:
 
 При желании вы можете выйти из роли валидатора, что устраняет требование быть онлайн и останавливает все дальнейшие вознаграждения. Оставшийся баланс будет выведен на адрес вывода, указанный вами во время установки.
 
-[Подробнее о выводе средств из стейкинга](/staking/withdrawals/)
+[More on staking withdrawals](/staking/withdrawals/)
 
 ## Начните с панели запуска стейкинга {#get-started-on-the-staking-launchpad}
 
@@ -101,7 +101,7 @@ summaryPoints:
 
 ## Изучите инструменты для настройки узлов и клиентов {#node-and-client-tools}
 
-Есть множество вариантов, которые помогут вам с установкой. Используйте индикаторы выше как руководство по инструментам, приведенным ниже.
+Есть множество опций, которые помогут вам с установкой. Используйте индикаторы описанные выше, в этом руководстве, с помощью инструментов, которые находятся ниже.
 
 <ProductDisclaimer />
 
@@ -190,10 +190,10 @@ summaryPoints:
 
 Чтобы разблокировать и получить весь баланс обратно, вы также должны завершить процесс выхода вашего валидатора.
 
-<ButtonLink to="/staking/withdrawals/">Подробнее о выводе средств из стейкинга</ButtonLink>
+<ButtonLink to="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
 </ExpandableCard>
 
-## Дополнительная литература {#further-reading}
+## Дополнительные ресурсы {#further-reading}
 
 - [Каталог стейкинга Ethereum](https://www.staking.directory/) — _Eridian и Spacesider_
 - [Проблема разнообразия клиентов Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) — _@emmanuelawosika, 2022 г._

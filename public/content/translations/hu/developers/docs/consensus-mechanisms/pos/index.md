@@ -91,3 +91,4 @@ Az Ethereum korábban nem proof-of-stake alapú hálózat volt. Kezdetben proof-
 ## Kapcsolódó témák {#related-topics}
 
 - [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
+- [Proof-of-authority (jogosultsági igazolás)](/developers/docs/consensus-mechanisms/poa/)

@@ -1,4 +1,3 @@
-import * as React from "react"
 import { RiInformationLine } from "react-icons/ri"
 import { Box, Center } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
@@ -8,8 +7,6 @@ import Translation from "../Translation"
 
 // TODO: remove `index` when we delete the old tooltip
 import TooltipComponent from "./index"
-
-type TooltipType = typeof TooltipComponent
 
 const TooltipContent = () => (
   <div>
@@ -53,7 +50,7 @@ const meta = {
       </Center>
     ),
   ],
-} satisfies Meta<TooltipType>
+} satisfies Meta<typeof TooltipComponent>
 
 export default meta
 

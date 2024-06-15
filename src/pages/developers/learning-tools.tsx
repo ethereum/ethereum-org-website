@@ -4,7 +4,7 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, Flex, HeadingProps } from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp, LearningTool } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, Lang, LearningTool } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
@@ -19,6 +19,7 @@ import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import AlchemyUniversityImage from "@/public/dev-tools/alchemyuniversity.png"
@@ -125,12 +126,16 @@ export const getStaticProps = (async ({ locale }) => {
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>

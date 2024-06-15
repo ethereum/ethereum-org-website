@@ -38,6 +38,7 @@ import Translation from "@/components/Translation"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import {
   getRequiredNamespacesForPage,
   isLangRightToLeft,
@@ -207,13 +208,17 @@ export const getStaticProps = (async ({ locale }) => {
 
   // load last deploy date to pass to Footer in RootLayout
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       communityEvents,
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
       metricResults,
     },
     revalidate: BASE_TIME_UNIT * 24,
