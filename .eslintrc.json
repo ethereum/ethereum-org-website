@@ -87,6 +87,15 @@
         "fixToUnknown": true
       }
     ],
+    "unused-imports/no-unused-vars": [
+      "error",
+        {
+        "args": "all",
+        "argsIgnorePattern": "^_$",
+        "varsIgnorePattern": "^_$"
+      }
+    ],
     "unused-imports/no-unused-imports-ts": "warn"
   }
 }
+
