@@ -1,10 +1,28 @@
-import { getI18n } from "react-i18next"
 import type { Meta, StoryObj } from "@storybook/react"
 import { expect, userEvent, waitFor, within } from "@storybook/test"
 
 import questionBank from "@/data/quizzes/questionBank"
 
+import { getTranslation } from "@/storybook-utils"
+
 import { StandaloneQuizWidget } from "../QuizWidget"
+
+const commonArgs = {
+  quizKey: "layer-2",
+} as const
+
+const meta = {
+  title: "Molecules / Display Content / Quiz / QuizWidget",
+  argTypes: {
+    quizKey: {
+      table: {
+        disable: true,
+      },
+    },
+  },
+} satisfies Meta<typeof commonArgs>
+
+export default meta
 
 const layer2QuestionBank = Object.entries(questionBank).reduce<
   { id: string; correctAnswer: string }[]
@@ -20,33 +38,21 @@ const layer2QuestionBank = Object.entries(questionBank).reduce<
   ]
 }, [])
 
-type QuizWidgetType = typeof StandaloneQuizWidget
+type QuizWidgetStory = StoryObj<{ component: typeof StandaloneQuizWidget }>
 
-const meta = {
-  title: "Molecules / Display Content / Quiz / QuizWidget",
-  component: StandaloneQuizWidget,
-  argTypes: {
-    quizKey: {
-      table: {
-        disable: true,
-      },
-    },
-  },
-} satisfies Meta<QuizWidgetType>
-
-export default meta
-
-export const QuizWidgetAllCorrect: StoryObj<typeof meta> = {
+const QuizWidget: QuizWidgetStory = {
   args: {
-    quizKey: "layer-2",
+    ...commonArgs,
   },
   render: (args) => <StandaloneQuizWidget {...args} />,
+}
+
+export const AllCorrectQuestions: QuizWidgetStory = {
+  ...QuizWidget,
 
   play: async ({ canvasElement, step, args }) => {
-    const { t } = getI18n()
-
-    const translatedQuizKey = t(args.quizKey, { ns: "common" })
-    const translatedPassedQuiz = t("passed", { ns: "learn-quizzes" })
+    const translatedQuizKey = getTranslation(args.quizKey, "common")
+    const translatedPassedQuiz = getTranslation("passed", "learn-quizzes")
 
     const canvas = within(canvasElement)
 
@@ -95,11 +101,8 @@ export const QuizWidgetAllCorrect: StoryObj<typeof meta> = {
   },
 }
 
-export const QuizWidgetAllIncorrect: StoryObj<typeof meta> = {
-  args: {
-    quizKey: "layer-2",
-  },
-  render: (args) => <StandaloneQuizWidget {...args} />,
+export const AllIncorrectQuestions: QuizWidgetStory = {
+  ...QuizWidget,
 
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
