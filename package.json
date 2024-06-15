@@ -94,7 +94,7 @@
     "polished": "^4.2.2",
     "raw-loader": "^4.0.2",
     "storybook": "7.6.6",
-    "storybook-react-i18next": "^2.0.9",
+    "storybook-react-i18next": "2.0.10",
     "ts-node": "^10.9.1",
     "tsconfig-paths-webpack-plugin": "4.1.0",
     "typescript": "^5.4.2",
