@@ -1,14 +1,16 @@
-import { useCallback } from "react"
+import { type ReactNode, useCallback } from "react"
 import { Text, type TextProps, VStack } from "@chakra-ui/react"
 
-import { ChildOnlyProp } from "@/lib/types"
+import type { AnswerStatus } from "./useQuizWidget"
 
-import { useQuizWidgetContext } from "./context"
+type QuizContentProps = {
+  answerStatus: AnswerStatus
+  title: string
+  children: ReactNode
+}
 
-type QuizContentProps = ChildOnlyProp
-
-export const QuizContent = ({ children }: QuizContentProps) => {
-  const { answerStatus, title } = useQuizWidgetContext()
+export const QuizContent = (props: QuizContentProps) => {
+  const { answerStatus, title, children } = props
 
   const getTitleContent = useCallback((): string => {
     if (!answerStatus) return title

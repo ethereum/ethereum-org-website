@@ -7,9 +7,11 @@ import { getTranslation } from "@/storybook-utils"
 
 import { StandaloneQuizWidget } from "../QuizWidget"
 
+const LAYER_2_QUIZ_KEY = "layer-2" as const
+
 const commonArgs = {
-  quizKey: "layer-2",
-} as const
+  quizKey: LAYER_2_QUIZ_KEY,
+}
 
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizWidget",
