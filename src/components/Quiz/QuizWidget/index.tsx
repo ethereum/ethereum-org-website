@@ -169,7 +169,14 @@ const QuizWidget = ({
                       questions={quizData.questions}
                       userQuizProgress={userQuizProgress}
                     />
-                    <QuizRadioGroup />
+                    <QuizRadioGroup
+                      answerStatus={answerStatus}
+                      currentQuestionIndex={currentQuestionIndex}
+                      questions={quizData.questions}
+                      setCurrentQuestionAnswerChoice={
+                        setCurrentQuestionAnswerChoice
+                      }
+                    />
                   </>
                 ) : (
                   <QuizSummary

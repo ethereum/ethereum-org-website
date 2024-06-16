@@ -15,17 +15,29 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react"
 
-import type { AnswerKey, TranslationKey } from "@/lib/types"
+import type {
+  AnswerChoice,
+  AnswerKey,
+  Question,
+  TranslationKey,
+} from "@/lib/types"
 
-import { useQuizWidgetContext } from "./context"
+import type { AnswerStatus } from "./useQuizWidget"
 
-export const QuizRadioGroup = () => {
+type QuizRadioGroupProps = {
+  questions: Question[]
+  currentQuestionIndex: number
+  answerStatus: AnswerStatus
+  setCurrentQuestionAnswerChoice: (answer: AnswerChoice | null) => void
+}
+
+export const QuizRadioGroup = (props: QuizRadioGroupProps) => {
   const {
     questions,
     currentQuestionIndex,
     answerStatus,
     setCurrentQuestionAnswerChoice,
-  } = useQuizWidgetContext()
+  } = props
   const { t } = useTranslation("learn-quizzes")
 
   const handleSelection = (answerId: AnswerKey) => {
