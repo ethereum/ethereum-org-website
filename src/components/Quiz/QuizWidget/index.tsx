@@ -172,7 +172,12 @@ const QuizWidget = ({
                     <QuizRadioGroup />
                   </>
                 ) : (
-                  <QuizSummary />
+                  <QuizSummary
+                    questionsLength={quizData.questions.length}
+                    isPassingScore={isPassingScore}
+                    numberOfCorrectAnswers={numberOfCorrectAnswers}
+                    ratioCorrect={ratioCorrect}
+                  />
                 )}
               </QuizContent>
               <QuizButtonGroup />
