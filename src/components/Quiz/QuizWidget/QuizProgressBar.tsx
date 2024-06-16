@@ -20,7 +20,6 @@ export const QuizProgressBar = (props: QuizProgressBarProps) => {
 
   const progressBarBackground = useCallback(
     (index: number): ChakraProps["bg"] => {
-      console.log("🚀 ~ QuizProgressBar ~ index:", index)
       if (
         (answerStatus &&
           index === currentQuestionIndex &&
