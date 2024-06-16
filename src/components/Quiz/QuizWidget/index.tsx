@@ -139,7 +139,11 @@ const QuizWidget = ({
         >
           <AnswerIcon answerStatus={answerStatus} />
         </Center>
-        <Stack spacing="8" justifyContent="space-between">
+        <Stack
+          spacing="8"
+          justifyContent="space-between"
+          mt={{ base: 8, sm: 0 }}
+        >
           {!!quizData ? (
             <QuizWidgetProvider
               value={{
