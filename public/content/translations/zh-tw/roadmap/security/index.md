@@ -2,7 +2,7 @@
 title: 一個更安全的以太坊
 description: 以太坊是現有最安全、去中心化程度最高的智慧型合約平台。 然而，我們還可以繼續對其進行改進，以便未來能夠保持韌性來對抗任意級別的攻擊。
 lang: zh-tw
-image: /roadmap/roadmap-security.png
+image: /images/roadmap/roadmap-security.png
 alt: "以太坊開發藍圖"
 template: roadmap
 ---

@@ -5,7 +5,7 @@ lang: fa
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: یک سیستم اقتصادی جایگزین ساخته شده بر پایه اصول بازتولیدکننده
 summaryPoint2: تلاشی برای استفاده از اتریوم برای حل چالش های هماهنگی در سراسر جهان مثل تغییرات آب و هوایی

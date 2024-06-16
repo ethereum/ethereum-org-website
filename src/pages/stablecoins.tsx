@@ -48,16 +48,16 @@ import {
   fetchEthereumEcosystemData,
   fetchEthereumStablecoinsData,
 } from "@/lib/api/stablecoinsData"
-import summerfiImg from "@/public/dapps/summerfi.png"
-import dogeComputerImg from "@/public/doge-computer.png"
+import summerfiImg from "@/public/images/dapps/summerfi.png"
+import dogeComputerImg from "@/public/images/doge-computer.png"
 // -- daps
-import aaveImg from "@/public/stablecoins/aave.png"
-import compoundImg from "@/public/stablecoins/compound.png"
+import aaveImg from "@/public/images/stablecoins/aave.png"
+import compoundImg from "@/public/images/stablecoins/compound.png"
 // Static assets
-import daiLargeImg from "@/public/stablecoins/dai-large.png"
-import heroImg from "@/public/stablecoins/hero.png"
-import stablecoinsWtfImg from "@/public/stablecoins/tools/stablecoinswtf.png"
-import usdcLargeImg from "@/public/stablecoins/usdc-large.png"
+import daiLargeImg from "@/public/images/stablecoins/dai-large.png"
+import heroImg from "@/public/images/stablecoins/hero.png"
+import stablecoinsWtfImg from "@/public/images/stablecoins/tools/stablecoinswtf.png"
+import usdcLargeImg from "@/public/images/stablecoins/usdc-large.png"
 
 type EthereumDataResponse = Array<{
   id: string
@@ -419,7 +419,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       <PageMetadata
         title={t("page-stablecoins-title")}
         description={t("page-stablecoins-meta-description")}
-        image="/stablecoins/hero.png"
+        image="/images/stablecoins/hero.png"
       />
       <PageHero isReverse content={heroContent} />
       <Divider />

@@ -2,7 +2,7 @@
 title: 面向未來的以太坊
 description: 不論未來如何發展，這些升級可鞏固以太坊作為有韌性的去中心化基礎層的地位。
 lang: zh-tw
-image: /roadmap/roadmap-future.png
+image: /images/roadmap/roadmap-future.png
 alt: "以太坊開發藍圖"
 template: roadmap
 ---

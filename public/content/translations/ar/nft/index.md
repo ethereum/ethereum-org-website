@@ -5,7 +5,7 @@ lang: ar
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: يتم عرض شعار إثير عبر صورة مجسَّمة.
 summaryPoint1: طريقة لتمثيل أي شيء فريد كأصل مستند إلى إثيريوم.
 summaryPoint2: بفضل الرموز المميزة غير القابلة للاستبدال، سيتمتع منشئو المحتوى بقوة غير مسبوقة.

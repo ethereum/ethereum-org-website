@@ -5,7 +5,7 @@ lang: en
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: A representation of a DAO voting on a proposal.
 summaryPoint1: Member-owned communities without centralized leadership.
 summaryPoint2: A safe way to collaborate with internet strangers.

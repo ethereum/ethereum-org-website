@@ -3,7 +3,7 @@ title: मर्ज
 description: मर्ज के बारे में जानें - कब मेननेट एथेरियम ने हिस्सेदारी का सबूत अपनाया।
 lang: hi
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: एथेरियम मेननेट हिस्सेदारी के सबूत का उपयोग करता है, लेकिन ऐसा हमेशा नहीं था।
 summaryPoint2: ओरिजिनल काम के सबूत मैकेनिज़्म से हिस्सेदारी के सबूत में अपग्रेड को मर्ज कहा जाता था।

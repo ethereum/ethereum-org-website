@@ -3,7 +3,7 @@ title: План розвитку Ethereum
 description: Шлях до максимальної масштабованості, безпеки та екологічності Ethereum.
 lang: uk
 template: roadmap
-image: /heroes/roadmap-hub-hero.jpg
+image: /images/heroes/roadmap-hub-hero.jpg
 alt: "План розвитку Ethereum"
 summaryPoints:
 buttons:

@@ -3,7 +3,7 @@ title: Hisseden ödeme alma
 description: Hisseleme para çekimlerinin ne olduğu, nasıl çalıştıkları ve ödüllerini almak içn paydaşların ne yapmaları gerektiğini özetleyen sayfa
 lang: tr
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Hisseleme ödülleri ile gergedan Leslie
 sidebarDepth: 2
 summaryPoints:

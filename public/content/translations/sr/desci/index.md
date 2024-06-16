@@ -5,7 +5,7 @@ lang: sr
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Globalna, otvorena alternativa trenutnom naučnom sistemu.
 summaryPoint2: Tehnologija koja omogućava naučnicima da dobiju sredstva, eksperimentišu, dele podatke i uvide i još mnogo toga.

@@ -3,7 +3,7 @@ title: স্টেকিং উইথড্রয়াল
 description: স্টেকিং পুশ উত্তোলন কি, সেগুলি কীভাবে কাজ করে এবং সেগুলোর জন্য পুরষ্কার পেতে স্টেকদের কী করতে হবে তার সংক্ষিপ্ত বিবরণীর পেজ
 lang: bn
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Leslie the rhino তার স্টেকিং পুরষ্কার সহ
 sidebarDepth: 2
 summaryPoints:

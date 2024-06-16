@@ -3,7 +3,7 @@ title: Mnyororo Kioleza
 description: Jifunze juu ya Mnyororo Kioleza - Kisasisho kilichoanzishwa na Ethereum ya uthibitisho-wa-hisa.
 lang: sw
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
 alt: 
 summaryPoint1: Mnyororo Kioleza haitabadili kitu chochote katika Ethereum ya leo.
 summaryPoint2: Itaratibu mtandao, na kutumikia kama safu ya makubaliano.

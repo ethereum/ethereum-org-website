@@ -2,7 +2,7 @@
 title: Un Ethereum più sicuro
 description: Ethereum è la piattaforma di contratti intelligenti più sicura e decentralizzata che esista. Tuttavia, restano ancora da implementare alcuni miglioramenti in modo che Ethereum resti resiliente a qualsiasi livello di attacco anche in un futuro lontano.
 lang: it
-image: /roadmap/roadmap-security.png
+image: /images/roadmap/roadmap-security.png
 alt: "Roadmap di Ethereum"
 template: roadmap
 ---

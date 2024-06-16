@@ -3,7 +3,7 @@ title: نقشه‌ راه اتریوم
 description: مسیری به سمت مقیاس‌پذیری، امنیت و پایداری بیشتر اتریوم.
 lang: fa
 template: roadmap
-image: /heroes/roadmap-hub-hero.jpg
+image: /images/heroes/roadmap-hub-hero.jpg
 alt: "نقشه‌ راه اتریوم"
 summaryPoints:
 buttons:

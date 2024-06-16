@@ -37,7 +37,7 @@ import {
 } from "@/lib/constants"
 
 import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
-import HeroImage from "@/public/wallets/wallet-hero.png"
+import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
 const Subtitle = ({ children }: ChildOnlyProp) => (
   <Text
@@ -131,7 +131,7 @@ const FindWalletPage = ({
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
-        image="/wallets/wallet-hero.png"
+        image="/images/wallets/wallet-hero.png"
       />
 
       <BannerNotification shouldShow={true}>

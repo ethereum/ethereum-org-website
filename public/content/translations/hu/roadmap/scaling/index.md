@@ -2,7 +2,7 @@
 title: Az Ethereum skálázása
 description: A összevont tranzakciók összekötegelik a tranzakciókat a láncon kívül, ezzel csökkentve a felhasználó költségét. Az összesítések jelenlegi adatfelhasználásának módja azonban túl drága, ami korlátozza a tranzakciók olcsóságát. Erre a Proto-Danksharding nyújt megoldást.
 lang: hu
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "Ethereum-ütemterv"
 template: roadmap
 ---

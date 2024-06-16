@@ -5,7 +5,7 @@ lang: zh-tw
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: 建立在再生原則上的替代性經濟體系
 summaryPoint2: 嘗試使用以太坊解決全球協調危機，如氣候變遷

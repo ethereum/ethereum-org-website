@@ -5,7 +5,7 @@ lang: es
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Una alternativa global y abierta al sistema científico actual.
 summaryPoint2: Tecnología que permite a científicos recaudar fondos, realizar experimentos, compartir información y distribuir ideas, entre otras cosas.
