@@ -1,15 +1,11 @@
 import pickBy from "lodash/pickBy"
 import type { Meta, StoryObj } from "@storybook/react"
 
-import allQuizzesData from "@/data/quizzes"
-
-import { getTranslation } from "@/storybook-utils"
-
 import { langViewportModes } from "../../../../.storybook/modes"
 import { QuizContent } from "../QuizWidget/QuizContent"
 import { QuizSummary } from "../QuizWidget/QuizSummary"
 
-import { LAYER_2_QUIZ_KEY, layer2Questions } from "./utils"
+import { LAYER_2_QUIZ_TITLE, layer2Questions } from "./utils"
 
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizWidget / Summary",
@@ -26,10 +22,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <QuizContent
-        title={getTranslation(allQuizzesData[LAYER_2_QUIZ_KEY].title)}
-        answerStatus={null}
-      >
+      <QuizContent title={LAYER_2_QUIZ_TITLE} answerStatus={null}>
         <Story />
       </QuizContent>
     ),

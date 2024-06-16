@@ -1,24 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import { expect, fireEvent, fn, within } from "@storybook/test"
 
-import allQuizzesData from "@/data/quizzes"
-
-import { getTranslation } from "@/storybook-utils"
-
 import { QuizContent } from "../QuizWidget/QuizContent"
 import { QuizRadioGroup } from "../QuizWidget/QuizRadioGroup"
 
-import { LAYER_2_QUIZ_KEY, layer2Questions } from "./utils"
+import { LAYER_2_QUIZ_TITLE, layer2Questions } from "./utils"
 
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizWidget / RadioGroup",
   component: QuizRadioGroup,
   decorators: [
     (Story, { args }) => (
-      <QuizContent
-        title={getTranslation(allQuizzesData[LAYER_2_QUIZ_KEY].title)}
-        answerStatus={args.answerStatus}
-      >
+      <QuizContent title={LAYER_2_QUIZ_TITLE} answerStatus={args.answerStatus}>
         <Story />
       </QuizContent>
     ),

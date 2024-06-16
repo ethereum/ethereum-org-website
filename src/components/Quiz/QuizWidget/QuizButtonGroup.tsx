@@ -1,18 +1,43 @@
-import { useMemo } from "react"
+import { type Dispatch, type SetStateAction, useMemo } from "react"
 import { FaTwitter } from "react-icons/fa"
 import { Center, Icon } from "@chakra-ui/react"
+
+import type { AnswerChoice, Question, QuizKey, QuizStatus } from "@/lib/types"
 
 import { Button } from "@/components/Buttons"
 import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { useQuizWidgetContext } from "./context"
+import type { AnswerStatus } from "./useQuizWidget"
 
-export const QuizButtonGroup = () => {
+type QuizButtonGroupProps = {
+  showResults: boolean
+  handleReset: () => void
+  currentQuestionAnswerChoice: AnswerChoice | null
+  title: string
+  questions: Question[]
+  currentQuestionIndex: number
+  quizPageProps:
+    | {
+        currentHandler: (nextKey: QuizKey) => void
+        statusHandler: (status: QuizStatus) => void
+        nextQuiz: QuizKey | undefined
+      }
+    | false
+  answerStatus: AnswerStatus
+  numberOfCorrectAnswers: number
+  userQuizProgress: AnswerChoice[]
+  quizScore: number
+  setCurrentQuestionAnswerChoice: (answer: AnswerChoice | null) => void
+  setUserQuizProgress: Dispatch<SetStateAction<AnswerChoice[]>>
+  setShowAnswer: (prev: boolean) => void
+}
+
+export const QuizButtonGroup = (props: QuizButtonGroupProps) => {
   const {
     showResults,
-    initialize: handleReset,
+    handleReset,
     currentQuestionAnswerChoice,
     title,
     questions,
@@ -25,7 +50,7 @@ export const QuizButtonGroup = () => {
     setCurrentQuestionAnswerChoice,
     setUserQuizProgress,
     setShowAnswer,
-  } = useQuizWidgetContext()
+  } = props
 
   const finishedQuiz = useMemo(
     () => userQuizProgress.length === questions.length! - 1,
