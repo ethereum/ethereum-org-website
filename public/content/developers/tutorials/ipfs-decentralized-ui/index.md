@@ -58,7 +58,7 @@ Personally, I found [4EVERLAND](https://docs.4everland.org/storage/4ever-pin/gui
 
 At this point you have a link to a centralized gateway that serves your IPFS content. In short, your user interface may be a bit safer but it's still not censorship resistant. For real censorship resistance, users need to use IPFS [directly from a browser](https://docs.ipfs.tech/install/ipfs-companion/#prerequisites).
 
-Once you have that installed (and the desktop IPFS working), you can go to [/ipfs/<CID>](https://any.site/ipfs/bafybeifqka2odrne5b6l5guthqvbxu4pujko2i6rx2zslvr3qxs6u5o7im) on any site and you'll get that content, served in a decentralized manner.
+Once you have that installed (and the desktop IPFS working), you can go to [/ipfs/`<CID>`](https://any.site/ipfs/bafybeifqka2odrne5b6l5guthqvbxu4pujko2i6rx2zslvr3qxs6u5o7im) on any site and you'll get that content, served in a decentralized manner.
 
 ## Drawbacks {#drawbacks}
 
