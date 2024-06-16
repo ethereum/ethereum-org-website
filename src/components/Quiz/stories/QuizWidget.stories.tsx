@@ -7,12 +7,12 @@ import { StandaloneQuizWidget } from "../QuizWidget"
 
 import { LAYER_2_QUIZ_KEY, layer2Questions } from "./utils"
 
-const commonArgs = {
-  quizKey: LAYER_2_QUIZ_KEY,
-}
-
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizWidget",
+  component: StandaloneQuizWidget,
+  args: {
+    quizKey: LAYER_2_QUIZ_KEY,
+  },
   argTypes: {
     quizKey: {
       table: {
@@ -20,22 +20,13 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof commonArgs>
+} satisfies Meta<typeof StandaloneQuizWidget>
 
 export default meta
 
-type QuizWidgetStory = StoryObj<{ component: typeof StandaloneQuizWidget }>
+type Story = StoryObj<typeof meta>
 
-const QuizWidget: QuizWidgetStory = {
-  args: {
-    ...commonArgs,
-  },
-  render: (args) => <StandaloneQuizWidget {...args} />,
-}
-
-export const AllCorrectQuestions: QuizWidgetStory = {
-  ...QuizWidget,
-
+export const AllCorrectQuestions: Story = {
   play: async ({ canvasElement, step, args }) => {
     const translatedQuizKey = getTranslation(args.quizKey, "common")
     const translatedPassedQuiz = getTranslation("passed", "learn-quizzes")
@@ -87,9 +78,7 @@ export const AllCorrectQuestions: QuizWidgetStory = {
   },
 }
 
-export const AllIncorrectQuestions: QuizWidgetStory = {
-  ...QuizWidget,
-
+export const AllIncorrectQuestions: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
