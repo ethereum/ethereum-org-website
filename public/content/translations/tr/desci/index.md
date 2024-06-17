@@ -5,7 +5,7 @@ lang: tr
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Mevcut bilimsel sisteme küresel, açık bir alternatif.
 summaryPoint2: Bilim insanlarının finansman sağlamasına, deneyler yürütmesine, veri paylaşmasına, görüşlerini dağıtmasına ve daha fazlasını yapmalarına olanak tanıyan teknoloji.

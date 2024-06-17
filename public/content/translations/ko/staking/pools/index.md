@@ -4,7 +4,7 @@ description: 풀 ETH 스테이킹을 시작하는 방법에 대한 개요
 lang: ko
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: 수영장에서 수영하는 코뿔소 레슬리.
 summaryPoints:
   - 다른 사용자와 함께 ETH의 양과 관계없이 스테이킹하고 보상을 받으세요.

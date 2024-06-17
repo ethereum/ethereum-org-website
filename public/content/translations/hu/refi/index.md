@@ -5,7 +5,7 @@ lang: hu
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Egy alternatív gazdasági rendszer, mely regeneratív elvekre épül
 summaryPoint2: Az Ethereum kiaknázása a globális koordinációs krízisek megoldására, mint amilyen a klímaváltozás is

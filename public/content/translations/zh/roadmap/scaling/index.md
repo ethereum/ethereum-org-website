@@ -2,7 +2,7 @@
 title: 以太坊扩容
 description: 卷叠链下批量处理交易，从而降低用户的成本。 然而，当前卷叠在数据使用上存在高昂的成本，限制了交易费用的降低。 Proto-Danksharding 解决了这个问题。
 lang: zh
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "以太坊路线图"
 template: roadmap
 ---

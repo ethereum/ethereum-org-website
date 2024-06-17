@@ -5,7 +5,7 @@ lang: uk
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Представлення голосувань DAO за пропозицію.
 summaryPoint1: Спільноти, що належать учасникам, без централізованого керування.
 summaryPoint2: Безпечний спосіб співпраці з незнайомцями в Інтернеті.

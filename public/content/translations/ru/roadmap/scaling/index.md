@@ -2,7 +2,7 @@
 title: Масштабирования Ethereum
 description: Свертки объединяют транзакции вместе вне цепи, уменьшая расходы пользователя. Тем не менее сейчас свертки используют данные слишком дорогим способом, ограничивая удешевление транзакций. Прото-данкшардинг исправляет это.
 lang: ru
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "Дорожная карта Ethereum"
 template: roadmap
 ---

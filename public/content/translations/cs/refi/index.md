@@ -5,7 +5,7 @@ lang: cs
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Alternativní ekonomický systém postavený na regenerativních principech
 summaryPoint2: Snaha využít Ethereum k řešení koordinačních krizí na globální úrovni, jako je změna klimatu
@@ -14,7 +14,7 @@ summaryPoint3: Nástroj k významnému zvýšení škálování ekologických v�
 
 ## Co je to ReFi? {#what-is-refi}
 
-Pod pojmem **Regenerativní finance (ReFi)** rozumíme sadu nástrojů a nápadů na blockchainech, jejichž cílem je vytvářet ekonomiky, které jsou regenerativní, spíše než vykořisťovatelské nebo zaměřené na vytěžení surovin. Systémy zaměřené na vytěžení surovin časem spotřebují dostupné zdroje a zhroutí se; bez regenerativních mechanismů jim chybí odolnost. ReFi předpokládá, že vytváření monetární hodnoty je třeba oddělit od neudržitelného vytěžování zdrojů z naší planety a komunit.
+Pod pojmem **Regenerativní finance (ReFi)** rozumíme sadu nástrojů a nápadů na [blockchainech](/glossary/#blockchain), jejichž cílem je vytvářet ekonomiky, které jsou regenerativní, spíše než vykořisťovatelské nebo zaměřené na vytěžení surovin. Systémy zaměřené na vytěžení surovin časem spotřebují dostupné zdroje a zhroutí se; bez regenerativních mechanismů jim chybí odolnost. ReFi předpokládá, že vytváření monetární hodnoty je třeba oddělit od neudržitelného vytěžování zdrojů z naší planety a komunit.
 
 Namísto toho se ReFi snaží řešit environmentální, komunitní nebo sociální problémy vytvářením regenerativních cyklů. Tyto systémy vytvářejí hodnotu pro účastníky a současně jsou prospěšné pro ekosystémy a komunity.
 
@@ -22,9 +22,11 @@ Jedním ze základů ReFi je koncept regenerativní ekonomie, jehož průkopník
 
 ![Osm vzájemně propojených principů](refi-regenerative-economy-diagram.png)
 
-ReFi projekty realizují tyto principy pomocí [smart kontraktů](/developers/docs/smart-contracts/) a aplikací [decentralizovaných financí (DeFi)](/defi/), které motivují regenerativní chování, například obnovu degradovaných ekosystémů, a usnadňují širokou spolupráci v globálních otázkách, jako je změna klimatu a ztráta biodiverzity.
+Projekty ReFi tyto principy realizují pomocí [chytrých kontraktů](/glossary/#smart-contract) a aplikací [decentralizovaných financí (DeFi)](/glossary/#defi), které motivují k regenerativnímu chování, např. k obnově degradovaných ekosystémů, a usnadňují rozsáhlou spolupráci při řešení globálních problémů, jako je globální oteplování a ztráta biologické rozmanitosti.
 
 ReFi se také částěčně překrývá s hnutím [decentralizované vědy (DeSci)](/desci/), které využívá platformu Ethereum k financování, vytváření, recenzování, oceňování, ukládání a šíření vědeckých znalostí. Nástroje DeSci by mohly být užitečné pro vývoj ověřitelných standardů a postupů pro implementaci a monitorování regenerativních aktivit, jako je výsadba stromů, odstraňování plastů z oceánu nebo obnova degradovaného ekosystému.
+
+<YouTube id="La52dDzBt2k" />
 
 ## Tokenizace emisních povolenek {#tokenization-of-carbon-credits}
 
@@ -47,7 +49,7 @@ Projekty ReFi využívají technologii blockchainu k řešení množství probl�
 - **Likvidita je soustředěna v malém počtu likvidních poolů**, které může kdokoliv volně obchodovat. Velké organizace, stejně jako jednotliví uživatelé, mohou tyto pooly využívat bez manuálního vyhledávání prodejců/kupců, bez účastnických poplatků nebo registrace.
 - **Všechny transakce se zaznamenávají na veřejné blockchainy**. Od okamžiku, kdy je kredit k dispozici v DCM, je cesta, kterou každá emisní povolenka absolvuje v důsledku obchodní aktivity, navždy sledovatelná.
 - **Transakce jsou zpracovány téměř okamžitě**. Obstarání velkého množství emisních povolenek prostřednictvím tradičních trhů může trvat dny nebo týdny, ale na DCM toho lze dosáhnout během několika sekund.
-- **Obchodování probíhá bez zprostředkovatelů**, kteří si účtují vysoké poplatky. Podle dat jisté analytické společnosti představují digitální emisní povolenky [62% zlepšení nákladů ve srovnání se srovnatelnými tradičními povolenkami](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne).
+- **Obchodování probíhá bez zprostředkovatelů**, kteří si účtují vysoké poplatky. Digitální emisní povolenky představují významný pokles nákladů ve srovnání s tradičními povolenkami.
 - **DCM je škálovatelný** a může uspokojit potřeby jednotlivců i nadnárodních společností.
 
 ### Klíčové složky DCM {#key-components-dcm}

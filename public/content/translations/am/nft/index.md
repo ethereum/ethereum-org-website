@@ -5,7 +5,7 @@ lang: am
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: በሆሎግራም አማካኝነት የሚታየው የETH አርማ.
 summaryPoint1: ማንኛውንም ልዩ የሆነ ነገር የሚወከልበት መንገድ እንደ ኢቴሪየም-ተኮር ንብረት።
 summaryPoint2: NFTዎች ከበፊቱ በበለጠ ለይዘት ፈጣሪዎች የበለጠ ኃይል እየሰጡ ነው።

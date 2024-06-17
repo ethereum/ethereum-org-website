@@ -5,7 +5,7 @@ lang: az
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Holoqram ilə görüntülənən bir Eth loqosu.
 summaryPoint1: Ethereum əsaslı aktiv kimi bənzərsiz hər şeyi təsvir etmək üçün bir yol.
 summaryPoint2: NFT-lər məzmun yaradıcılarına əvvəlkindən daha çox güc verir.

@@ -410,6 +410,15 @@
     "imageUrl": "https://ethglobal.com/og.png"
   },
   {
+    "title": "ETHMilan",
+    "to": "https://ethmilan.xyz/",
+    "location": "Milan, Italy",
+    "description": "ETMilan returns for its second edition – join us for two days of networking, Ethereum talks & workshops, and an exciting Creative Hackathon!",
+    "startDate": "2024-9-26",
+    "endDate": "2024-9-27",
+    "imageUrl": "https://assets-global.website-files.com/65b77a0b9370aa6cf9f28462/65d329fd71a77f03daa10342_RectangleBannerWebsite_ETHMilan24_def.jpg"
+  },
+  {
     "title": "Pragma San Francisco",
     "to": "https://ethglobal.com/events/pragma-sanfrancisco",
     "location": "San Francisco, California",
@@ -569,5 +578,13 @@
     "location": "Montevideo, Uruguay",
     "description": "Building together for a decentralized future.",
     "imageUrl": "https://uploads-ssl.webflow.com/6463b2b2401a64107c84634f/6463f95db5abb4d10aeabfb5_eth-uy-logo-3.png"
+  },
+  {
+    "title": "TUM Blockchain Conference",
+    "startDate": "2024-09-12",
+    "endDate": "2024-09-13",
+    "to": "https://conference.tum-blockchain.com/",
+    "location": "Munich, Germany",
+    "description": "Join us at Germany's leading student-run conference in order to explore the frontiers of blockchain technology during the Octoberfest!"
   }
 ]

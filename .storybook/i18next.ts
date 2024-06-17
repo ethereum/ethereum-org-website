@@ -10,7 +10,7 @@ export const baseLocales = {
 }
 
 // Only i18n files named in this array are being exposed to Storybook. Add filenames as necessary.
-const ns = [
+export const ns = [
   "common",
   "glossary",
   "learn-quizzes",
@@ -20,7 +20,7 @@ const ns = [
   "page-upgrades",
   "page-developers-index",
   "page-developers-docs",
-]
+] as const
 const supportedLngs = Object.keys(baseLocales)
 
 /**

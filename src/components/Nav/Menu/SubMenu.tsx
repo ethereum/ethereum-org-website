@@ -8,7 +8,15 @@ import {
   ListItem,
   UnorderedList,
 } from "@chakra-ui/react"
-import * as NavigationMenu from "@radix-ui/react-navigation-menu"
+import {
+  Content,
+  Item,
+  Link as NavigationMenuLink,
+  List,
+  Sub,
+  Trigger,
+  Viewport,
+} from "@radix-ui/react-navigation-menu"
 
 import { ButtonProps } from "@/components/Buttons"
 import Link from "@/components/Link"
@@ -46,7 +54,7 @@ const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
   const templateColumns = `repeat(${4 - lvl}, 1fr)`
 
   return (
-    <NavigationMenu.Sub orientation="vertical" asChild>
+    <Sub orientation="vertical" asChild>
       <AnimatePresence>
         <Grid
           as={motion.div}
@@ -58,7 +66,7 @@ const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
           h="full"
           gridTemplateColumns={templateColumns}
         >
-          <NavigationMenu.List asChild>
+          <List asChild>
             <UnorderedList listStyleType="none" p={PADDING / 2} m="0">
               {items.map((item) => {
                 const { label, description, icon, ...action } = item
@@ -91,7 +99,7 @@ const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
                   variant: "ghost",
                 }
                 return (
-                  <NavigationMenu.Item key={label} asChild>
+                  <Item key={label} asChild>
                     <ListItem
                       mb={PADDING / 2}
                       _last={{ mb: 0 }}
@@ -107,7 +115,7 @@ const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
                     >
                       {isLink ? (
                         <NextLink href={action.href!} passHref legacyBehavior>
-                          <NavigationMenu.Link asChild>
+                          <NavigationMenuLink asChild>
                             <Button
                               as={Link}
                               onClick={() => {
@@ -122,16 +130,16 @@ const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
                             >
                               <ItemContent item={item} lvl={lvl} />
                             </Button>
-                          </NavigationMenu.Link>
+                          </NavigationMenuLink>
                         </NextLink>
                       ) : (
                         <>
-                          <NavigationMenu.Trigger asChild>
+                          <Trigger asChild>
                             <Button {...buttonProps}>
                               <ItemContent item={item} lvl={lvl} />
                             </Button>
-                          </NavigationMenu.Trigger>
-                          <NavigationMenu.Content asChild>
+                          </Trigger>
+                          <Content asChild>
                             <Box
                               bg={menuColors.lvl[lvl + 1].background}
                               h="full"
@@ -143,19 +151,19 @@ const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
                                 onClose={onClose}
                               />
                             </Box>
-                          </NavigationMenu.Content>
+                          </Content>
                         </>
                       )}
                     </ListItem>
-                  </NavigationMenu.Item>
+                  </Item>
                 )
               })}
             </UnorderedList>
-          </NavigationMenu.List>
-          <NavigationMenu.Viewport style={{ gridColumn: "2/4" }} />
+          </List>
+          <Viewport style={{ gridColumn: "2/4" }} />
         </Grid>
       </AnimatePresence>
-    </NavigationMenu.Sub>
+    </Sub>
   )
 }
 

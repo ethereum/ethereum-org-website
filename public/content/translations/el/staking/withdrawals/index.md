@@ -3,7 +3,7 @@ title: Αναλήψεις από αποθηκευμένο κεφάλαιο
 description: Η σελίδα συνοψίζει τι είναι οι αναλήψεις αποθηκευμένου κεφαλαίου, πώς λειτουργούν και τι πρέπει να κάνουν οι χρήστες για να λάβουν τις ανταμοιβές τους
 lang: el
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Η Leslie ο ρινόκερος με τις ανταμοιβές από το αποθηκευμένο κεφάλαιό της
 sidebarDepth: 2
 summaryPoints:

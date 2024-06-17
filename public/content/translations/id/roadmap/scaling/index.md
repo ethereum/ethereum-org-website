@@ -2,7 +2,7 @@
 title: Penskalaan Ethereum
 description: Melakukan rollup transaksi batch secara bersamaan di luar rantai, sehingga mengurangi biaya bagi pengguna. Namun, cara rollup saat ini menggunakan data saat ini terlalu mahal, sehingga membatasi seberapa murah transaksi yang bisa dilakukan. Proto-Danksharding memperbaiki hal ini.
 lang: id
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "Peta Perjalanan Ethereum"
 template: roadmap
 ---

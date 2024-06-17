@@ -5,7 +5,7 @@ lang: hu
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Egy Eth logó, amely hologram segítségével jelenik meg.
 summaryPoint1: Egy módszer arra, hogy egyedi dolgokat Ethereum alapú javakként jelenítsünk meg.
 summaryPoint2: Az NFT-k minden korábbinál nagyobb hatalmat adnak a tartalomgyártók kezébe.

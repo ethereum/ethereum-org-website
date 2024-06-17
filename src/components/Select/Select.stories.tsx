@@ -3,8 +3,6 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import Select from "."
 
-type SelectType = typeof Select
-
 const meta = {
   title: "Atoms / Form / Dropdown",
   component: Select,
@@ -15,7 +13,7 @@ const meta = {
       </Box>
     ),
   ],
-} satisfies Meta<SelectType>
+} satisfies Meta<typeof Select>
 
 export default meta
 

@@ -5,7 +5,7 @@ lang: ko
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: 기존의 신원 증명 시스템은 식별자의 발급, 점검, 제어를 한 곳으로 집중시켰습니다.
 summaryPoint2: 분산 신원 증명을 사용하면 더 이상 중앙화된 제3자에 의존할 필요가 없어집니다.
 summaryPoint3: 암호화폐 덕분에 사용자는 다시 한 번 자신의 식별자와 증명 정보를 발급, 소유, 제어할 도구를 갖게 되었습니다.
