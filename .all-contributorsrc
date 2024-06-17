@@ -12132,6 +12132,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "jacobjelen",
+      "name": "jacobjelen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6750124?v=4",
+      "profile": "http://www.jacobjelen.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
