@@ -22,7 +22,7 @@ Effective design goes beyond creating visually appealing user interfaces. It inv
 This is a curated list of user research done in web3 that may help with design and product decisions or work as an inspiration to conduct own study.
 
 | Area of focus                                           | Name                                                                                                                                                                               |
-| :------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |                                         |
+| :------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |                                         
 | <Badge colorScheme="green">Crypto onboarding</Badge>    | [CRADL: UX in Cryptocurrency](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                                                |
 | <Badge colorScheme="green">Crypto onboarding</Badge>    | [CRADL: Onboarding to Cryptocurrency](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                        |
 | <Badge colorScheme="green">Crypto onboarding</Badge>    | [Bitcoin UX report](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                                          |
