@@ -370,7 +370,7 @@
   "i005-c-label": "Reputation-based membership",
   "i005-c-explanation": "Unlike token or share-based membership, reputation-based DAOs don't transfer ownership to contributors. DAO members must earn reputation through participation.",
   "i005-d-label": "Executive board and off-chain treasury management",
-  "i005-d-explanation": "This approach uses highly centralized and opaque mechanisms of governing. On the contrary, DAOs use verifiable voting mechanisms and on-chain treasury management to ensure transparency and accountability."
+  "i005-d-explanation": "This approach uses highly centralized and opaque mechanisms of governing. On the contrary, DAOs use verifiable voting mechanisms and on-chain treasury management to ensure transparency and accountability.",
   "j001-prompt": "Which is true about slashing?",
   "j001-a-label": "Penalty for being offline, rewards resume when back online",
   "j001-a-explanation": "Being offline does NOT result in slashing. Small penalties are incurred for being offline, and rewards resume when the validator returns online and resumes attestations.",
