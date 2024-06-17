@@ -39,10 +39,10 @@ This is a curated list of user research done in web3 that may help with design a
 | <Badge colorScheme="blue">Ethereum.org UX stats</Badge> | [Usability and user satisfaction survey dashboard - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)                                  |
 
 ## Design for web3 {#design-for-web3}
-
+Web3 UX Design Handbook
+- [Web3 UX Design Handbook](https://web3ux.design/) - Practical guide to designing Web3 apps
 - [Web3 Design Principles](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1) - A framework of UX rules for blockchain based dapps
 - [Blockchain Design Principles](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e) - Lessons learned by the blockchain design team at IBM
-- [Dimensions of web3 UX](https://uxdesign.cc/the-levels-of-web3-user-experience-4f2ad113e37d) - An analysis of different layers of web3 UX and its challenges
 - [Web3 Design Patterns](https://www.web3designpatterns.io/)- A curated library of design patterns from real Web3 products
 - [W3design.io](https://w3design.io/) - A curated library of UI flows of different projects in the ecosystem
 - [Neueux.com](https://neueux.com/apps) - UI library of user flows with diverse filtering options
@@ -50,8 +50,6 @@ This is a curated list of user research done in web3 that may help with design a
 
 ## Web3 Design Case Studies {#design-case-studies}
 
-- [How to write better web3 error messages](https://medium.com/@JonCrabb/how-to-design-better-web3-error-messages-bd96e12fa582)
-- [Defi design tips](https://medium.com/@JonCrabb/defi-design-tips-vol-12-8600f4374714)
 - [Deep Work Studio](https://deepwork.studio/case-studies/)
 - [Crypto UX Handbook](https://www.cryptouxhandbook.com/)
 - [Selling an NFT on OpenSea](https://builtformars.com/case-studies/opensea)
