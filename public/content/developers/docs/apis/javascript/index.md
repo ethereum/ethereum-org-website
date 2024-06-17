@@ -279,13 +279,6 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-**Covalent -** **_TypeScript SDK for fetching 200+ blockchain data, including token balances, nft metadata, transactions data and more._**
-
-- [covalenthq.com](https://www.covalenthq.com/)
-- [Documentation](https://www.npmjs.com/package/@covalenthq/client-sdk)
-- [GitHub](https://github.com/covalenthq)
-- [Discord](https://www.covalenthq.com/discord/)
-
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
