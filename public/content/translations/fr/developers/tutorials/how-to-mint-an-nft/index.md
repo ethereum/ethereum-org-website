@@ -315,7 +315,7 @@ mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 Maintenant, exécutez `node scripts/mint-nft.js` pour déployer votre NFT. Après quelques secondes, vous devriez voir une réponse comme celle-ci dans votre terminal :
 
     Le hachage de votre transaction est : 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8e8
-
+    
     Vérifiez le Mempool d'Alchemy pour voir l'état de votre transaction !
 
 Ensuite, consultez votre [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) pour voir l'état de votre transaction (en attente, minée ou rejetée par le réseau). Si votre transaction a été rejetée, il est également utile de vérifier [Sepolia Etherscan](https://sepolia.etherscan.io/) et rechercher votre hachage de transaction.
@@ -324,6 +324,6 @@ Ensuite, consultez votre [Alchemy mempool](https://dashboard.alchemyapi.io/mempo
 
 Et voilà ! Vous avez maintenant déployé ET frappé un NFT sur la blockchain Ethereum. <Emoji text=":money_mouth_face:" size={1} />
 
-En utilisant `mint-nft.js` vous pouvez frapper autant de NFT que vous (ou votre portefeuille) désirez ! Assurez-vous juste de passer une nouvelle URI de jeton décrivant les métadonnées du NFT (sinon, vous ne réaliserez qu'une multitude de métadonnées identiques avec différents identifiants).
+En utilisant `mint-nft.js` vous pouvez frapper autant de NFT que vous (ou votre wallet crypto) désirez ! Assurez-vous juste de passer une nouvelle URI de jeton décrivant les métadonnées du NFT (sinon, vous ne réaliserez qu'une multitude de métadonnées identiques avec différents identifiants).
 
 Sans doute, vous souhaiteriez pouvoir afficher votre NFT dans votre portefeuille — alors n’oubliez pas de consulter la [Partie 3 : Comment voir votre NFT dans votre portefeuille](/developers/tutorials/how-to-view-nft-in-metamask/) !

@@ -5,7 +5,7 @@ lang: ro
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Sigla Eth-ului afișată printr-o hologramă.
 summaryPoint1: O manieră de reprezenta ceva unic ca un activ bazat pe Ethereum.
 summaryPoint2: NTF-urile oferă putere mai multă creatorilor de conținut decât oricând.

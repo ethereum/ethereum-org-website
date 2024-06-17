@@ -12,57 +12,63 @@ const {
   defaultProps,
 } = modalDefaultTheme
 
-const variantCode = definePartsStyle((props) => ({
-  overlay: {
-    bg: "rgba(0, 0, 0, 0.7)",
-  },
-  dialog: {
-    maxW: "100vw",
-    marginTop: "auto",
-    marginBottom: 0,
-    maxHeight: "50%",
-    borderRadius: 0,
-  },
-  header: {
-    bg: props.colorMode === "dark" ? "rgb(25, 25, 25)" : "rgb(247, 247, 247)",
-    borderColor:
-      props.colorMode == "dark" ? "rgb(242, 242, 242)" : "rgb(51, 51, 51)",
-    borderTop: "1px solid",
-    borderBottom: "1px solid",
-    textTransform: "uppercase",
-    fontWeight: "normal",
-    fontSize: "md",
-    fontFamily: "monospace",
-  },
-  closeButton: {
-    padding: 0,
-    width: "24px",
-    height: "24px",
-    borderRadius: 0,
-    color: "rgb(178, 178, 178)",
-    fontSize: "sm",
-    margin: 0,
-    top: 4,
-    insetInlineEnd: 4,
-    bottom: 4,
-  },
-  body: {
-    padding: 0,
-  },
-}))
-
 export const Modal = defineMultiStyleConfig({
   baseStyle: definePartsStyle((props) =>
     defineMergeStyles(defaultBaseStyle?.(props), {
       dialog: {
-        my: 0,
+        bg: "background.base",
+        gap: "4",
+        padding: { base: "4", sm: "8" },
+        borderRadius: "base",
+        boxShadow: "none",
+      },
+      header: {
+        flex: "1",
+        padding: "0",
+        fontWeight: "bold",
+        fontSize: "2xl",
+        me: "8",
+      },
+      closeButton: {
+        position: "static",
+        color: "body.base",
+        bg: "background.base",
+      },
+      body: {
+        padding: "0",
+        fontWeight: "normal",
+        fontSize: "md",
+      },
+      footer: {
+        gap: "2",
+        px: "0",
+        pt: "8",
+        pb: "0",
       },
     })
   ),
-  sizes: defaultSizes,
-  variants: {
-    code: variantCode,
+  sizes: {
+    ...defaultSizes,
+    full: definePartsStyle((props) => ({
+      dialogContainer: {
+        alignItems: { base: "flex-start", md: "center" },
+      },
+      dialog: {
+        padding: { base: "4", sm: "8", md: "16" },
+        my: { base: "4", md: props.isCentered ? "auto" : "4" },
+        mx: "4",
+        minH: {
+          base: "calc(100vh - 2rem)",
+          md: "min(100vh, 792px)",
+        },
+        maxW: {
+          base: "calc(100vw - 2rem)",
+          md: "min(100vw, 1000px)",
+        },
+      },
+    })),
   },
+
   defaultProps: {
     ...defaultProps,
     variant: undefined,

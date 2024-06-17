@@ -74,6 +74,7 @@ Durante los nueve años de historia de Ethereum, la EVM ha pasado varias revisio
 - [Códigos de operación de la máquina virtual de Ethereum](https://www.ethervm.io/)
 - [Referencia interactiva de códigos de operación de máquina virtual Ethereum](https://www.evm.codes/)
 - [Una breve introducción a la documentación de Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
+- [Dominar Ethereum - La máquina virtual de Ethereum](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc))
 
 ## Temas relacionados {#related-topics}
 

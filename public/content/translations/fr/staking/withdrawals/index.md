@@ -3,7 +3,7 @@ title: Retraits de la mise en jeu
 description: Page résumant ce que sont les retraits de staking, comment ils fonctionnent et ce que les stakers doivent faire pour obtenir leurs récompenses
 lang: fr
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Leslie le rhinocéros avec ses récompenses de staking
 sidebarDepth: 2
 summaryPoints:

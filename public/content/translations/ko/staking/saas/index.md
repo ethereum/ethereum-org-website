@@ -4,7 +4,7 @@ description: 풀링된 ETH 스테이킹을 시작하는 방법에 대한 개요
 lang: ko
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: 구름 위에 떠 있는 코뿔소 레슬리
 summaryPoints:
   - 제3자 노드 운영자가 검증자 클라이언트의 운영을 처리함

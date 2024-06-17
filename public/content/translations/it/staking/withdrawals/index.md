@@ -3,7 +3,7 @@ title: Prelievi di staking
 description: Pagina di riepilogo su cosa sono i prelievi push di staking, come funzionano e cosa devono fare gli staker per ottenere le proprie ricompense
 lang: it
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Leslie il rinoceronte con le sue ricompense di staking
 sidebarDepth: 2
 summaryPoints:
@@ -114,12 +114,12 @@ Espandendo tale calcolo, possiamo stimare il tempo necessario a elaborare un dat
 <TableContainer>
 
 | Numero di prelievi | Tempo di completamento |
-| :----------------: | :--------------------: |
-|      400.000       |       3,5 giorni       |
-|      500.000       |       4,3 giorni       |
-|      600.000       |       5,2 giorni       |
-|      700.000       |       6,1 giorni       |
-|      800.000       |       7,0 giorni       |
+| :-------------------: | :--------------: |
+|        400.000        |     3,5 giorni     |
+|        500.000        |     4,3 giorni     |
+|        600.000        |     5,2 giorni     |
+|        700.000        |     6,1 giorni     |
+|        800.000        |     7,0 giorni     |
 
 </TableContainer>
 

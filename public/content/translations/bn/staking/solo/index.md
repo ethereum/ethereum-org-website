@@ -4,7 +4,7 @@ description: আপনার স্বতন্ত্র ETH স্টেকি�
 lang: bn
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Leslie the rhino তার নিজের কম্পিউটার চিপে।
 sidebarDepth: 2
 summaryPoints:

@@ -4,8 +4,8 @@ description: Cosa puoi fare per impedire che i tuoi smart contract diventino tro
 author: Markus Waas
 lang: it
 tags:
-  - "Solidity"
-  - "contratto intelligente"
+  - "solidity"
+  - "contratti intelligenti"
   - "archiviazione"
   - "truffle"
 skill: intermediate
@@ -18,7 +18,7 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 Il [22 Novembre 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/), la diramazione permanente Spurious Dragon ha introdotto [EIP-170](https://eips.ethereum.org/EIPS/eip-170), che ha aggiunto un limite di dimensioni per gli smart contract di 24.576 kb. Per gli sviluppatori in Solidity, significa che quando si aggiungono più funzionalità al contratto, a un certo punto si raggiunge il limite e, in fase di implementazione, si vedrà l'errore:
 
-`Attenzione: La dimensione del codice del contratto eccede i 24576 byte (un limite introdotto in Spurious Dragon). Questo contratto potrebbe non esser distribuibile sulla Mainnet. Considera di abilitare l'ottimizzatore (con un valore di "esecuzioni" basso!), disattivare le stringhe di ripristino o usare le librerie.`
+`Attenzione: La dimensione del codice del contratto eccede i 24576 byte (un limite introdotto in Spurious Dragon). This contract may not be deployable on Mainnet. Considera di abilitare l'ottimizzatore (con un valore di "esecuzioni" basso!), disattivare le stringhe di ripristino o usare le librerie.`
 
 Questo limite è stato introdotto per prevenire gli attacchi DOS (denial-of-service). Qualsiasi chiamata a un contratto è relativamente economica in termini di gas. Tuttavia, l'impatto della chiamata di un contratto per i nodi di Ethereum aumenta sproporzionatamente in base alla dimensione del codice del contratto chiamato (lettura del codice dal disco, pre-elaborazione del codice, aggiunta di dati alla prova di Merkle). Ogni volta che ti trovi in una situazione in cui il malintenzionato richiede poche risorse per causare molto lavoro per altri, esiste il potenziale di attacchi DOS.
 

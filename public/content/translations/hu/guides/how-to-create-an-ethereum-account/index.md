@@ -6,7 +6,7 @@ lang: hu
 
 # Hogyan lehet Ethereum számlát létrehozni
 
-Bárki nyithat Ethereum számlát, bármikor és ingyenesen. Több módon lehetséges, de a legegyszerűbb és legelterjedtebb egy olyan alkalmazás használata, amit tárcának nevezünk. A tárcák hozzák létre és biztosítják azokat a kulcsokat, amelyek az Ethereum használatához szükségesek. A tárcát használhatja arra, hogy tranzakciókat indítson, ellenőrizze tokenegyenlegeit, illetve az Ethereumon található olyan alkalmazásokhoz kapcsolódjon, mint a tokentőzsdék, játékok, NFT-piacterek és sok más. Néhány web2-alkalmazás esetében már Ethereummal is be lehet lépni.
+Bárki nyithat Ethereum számlát, bármikor és ingyenesen. Több módon lehetséges, de a legegyszerűbb és legelterjedtebb egy olyan alkalmazás használata, amit tárcának nevezünk. A Wallet létrehozza és biztonságossá teszi azokat a [kulcsokat](/glossary/#key), amelyek lehetővé teszik az Ethereum használatát. Pénztárcáját használhatja tranzakciók küldésére, tokenegyenlegének ellenőrzésére, valamint az Ethereumra épített alkalmazásokhoz, például tokencserékre, játékokhoz, [NFT](/glossary/#nft) piacterekhez és egyebekhez való csatlakozáshoz. Néhány web2-alkalmazás esetében már Ethereummal is be lehet lépni.
 
 A hagyományos számlanyitáshoz képest az Ethereum-számlát szabadon, privát módon és engedélymentesen lehet létrehozni. A számlákat kulcsok kontrollálják, amelyeket a tárcaszoftver segít létrehozni, nem egy harmadik fél adja azokat, így nem is egy központi nyilvántartásban tárolja őket a rendszer.
 
@@ -28,7 +28,7 @@ Egyéb profilszűrők is elérhetők, hogy saját igényeire szabhassa a keresé
 
 Miután kiválasztotta a tárcát, a hivatalos webhelyéről vagy az alkalmazás-áruházból töltse le és telepítse azt. Mindegyiknek ingyenesnek kell lennie.
 
-## 3. lépés: Az alkalmazás megnyitása és Ethereum-számla létrehozása vagy importálása
+## 3. lépés: Nyissa meg az alkalmazást, és hozza létre Ethereum-fiókját
 
 A tárca első megnyitásakor a rendszer megkérdezheti, hogy egy új számlát kíván létrehozni vagy egy meglévőt szeretne importálni. Válassza az új számla létrehozása lehetőséget.
 
@@ -61,7 +61,7 @@ Nem, ez nem lehetséges. A Bitcoin és az ether két teljesen elkülönült hál
 
 ### Ha rendelkezek ETH-címmel, akkor ugyanazt a címet más blokkláncokon is használhatom?
 
-Azokon a blokkláncokon használhatja ugyanazt a címet, melyek működési szoftvere az Ethereumhoz hasonló (tehát EVM-kompatibilis). Ez a [lista](https://chainlist.org/) megmutatja, hogy melyik blokkláncokon működik ugyanaz a cím. Néhány blokklánc, mint a Bitcoin, teljesen más hálózati szabályok alapján üzemel, ezért ott egy másik címre van szükség, amely más formátummal is bír. Ha okosszerződéses tárcával rendelkezik, akkor a terméktájékoztatóból kiderül, hogy melyik blokkláncokat támogatja.
+Ugyanazt a [címet](/glossary/#address) használhatja minden olyan blokkláncon, amely az Ethereumhoz hasonló mögöttes szoftvert használ („EVM-kompatibilis”). Ez a [lista](https://chainlist.org/) megmutatja, hogy melyik blokkláncokon működik ugyanaz a cím. Néhány blokklánc, mint a Bitcoin, teljesen más hálózati szabályok alapján üzemel, ezért ott egy másik címre van szükség, amely más formátummal is bír. Ha okosszerződéses tárcával rendelkezik, akkor a terméktájékoztatóból kiderül, hogy melyik blokkláncokat támogatja.
 
 ### A tárcám biztonságosabb, mint a pénzeszközeimet a tőzsdén tartani?
 

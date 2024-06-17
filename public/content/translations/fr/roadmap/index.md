@@ -3,7 +3,7 @@ title: Feuille de route d'Ethereum
 description: La voie vers davantage d'évolutivité, de sécurité et de durabilité pour Ethereum.
 lang: fr
 template: roadmap
-image: /heroes/roadmap-hub-hero.jpg
+image: /images/heroes/roadmap-hub-hero.jpg
 alt: "Feuille de route d'Ethereum"
 summaryPoints:
 buttons:

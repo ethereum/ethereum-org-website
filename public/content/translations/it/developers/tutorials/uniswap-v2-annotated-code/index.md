@@ -743,7 +743,7 @@ Questa è la funzione principale della factory, per creare uno scambio in pari t
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Vogliamo che l'indirizzo del nuovo scambio sia deterministico, quindi calcolabile in anticipo al di fuori della catena (questo può essere utile per le [transazioni di livello 2](/developers/docs/scaling/)). Per farlo, dobbiamo avere un ordine coerente degli indirizzi del token, indipendentemente dall'ordine in cui li abbiamo ricevuti, quindi li ordiniamo qui.
+Vogliamo che l'indirizzo del nuovo scambio sia deterministico, quindi calcolabile in anticipo al di fuori della catena (questo può essere utile per le [transazioni di livello 2](/developers/docs/layer-2-scaling/)). Per farlo, dobbiamo avere un ordine coerente degli indirizzi del token, indipendentemente dall'ordine in cui li abbiamo ricevuti, quindi li ordiniamo qui.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
@@ -909,7 +909,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-Gran parte di questi li abbiamo incontrati precedentemente oppure sono piuttosto ovvi. L'unica eccezione è `IWETH.sol`. Uniswap v2 consente scambi per ogni coppia di token ERC-20, ma l'ether (ETH) stesso non è un token ERC-20. Precede lo standard ed è trasferito da meccanismi univoci. Per consentire l'uso di ETH nei contratti che si applicano ai token ERC-20, è stato ideato il contratto [wrapped ether (WETH)](https://weth.tkn.eth.limo/). Inviando ETH a questo contratto e viene coniato un importo equivalente di WETH. Oppure è possibile bruciare WETH per riottenere ETH.
+Gran parte di questi li abbiamo incontrati precedentemente oppure sono piuttosto ovvi. L'unica eccezione è `IWETH.sol`. Uniswap v2 consente scambi per ogni coppia di token ERC-20, ma l'ether (ETH) stesso non è un token ERC-20. Precede lo standard ed è trasferito da meccanismi univoci. Per consentire l'uso di ETH nei contratti che si applicano ai token ERC-20, è stato ideato il contratto [wrapped ether (WETH)](https://weth.io/). Inviando ETH a questo contratto e viene coniato un importo equivalente di WETH. Oppure è possibile bruciare WETH per riottenere ETH.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {
@@ -1152,7 +1152,7 @@ Il caso più semplice di rimozione di liquidità. Esiste un importo minimo di og
 
 ```solidity
         address pair = UniswapV2Library.pairFor(factory, tokenA, tokenB);
-        IUniswapV2Pair(pair).transferFrom(msg.sender, pair, liquidity); // invia liquidità al paro
+        IUniswapV2Pair(pair).transferFrom(msg.sender, pair, liquidity); // send liquidity to pair
         (uint amount0, uint amount1) = IUniswapV2Pair(pair).burn(to);
 ```
 
@@ -1295,8 +1295,8 @@ La funzione finale combina le commissioni di archiviazione con le meta-transazio
 #### Scambio {#trade}
 
 ```solidity
-    // **** SCAMBIO ****
-    // richiede l'importo iniziale già inviato alla prima coppia
+    // **** SWAP ****
+    // requires the initial amount to have already been sent to the first pair
     function _swap(uint[] memory amounts, address[] memory path, address _to) internal virtual {
 ```
 
@@ -1496,8 +1496,8 @@ In entrambi i casi, il trader deve dare innanzi tutto a questo contratto perifer
 Queste quattro varianti comportano tutte lo scambio tra ETH e token. La sola differenza è che riceviamo ETH dal trader e li usiamo per coniare WETH, o riceviamo WETH dall'ultimo scambio nel percorso e li bruciamo, reinviando al trader gli ETH risultanti.
 
 ```solidity
-    // **** SCAMBIO (supporta i token della commissione al trasferimento) ****
-    // richiede che l'importo iniziale sia già stato inviato alla prima coppia
+    // **** SWAP (supporting fee-on-transfer tokens) ****
+    // requires the initial amount to have already been sent to the first pair
     function _swapSupportingFeeOnTransferTokens(address[] memory path, address _to) internal virtual {
 ```
 
@@ -1672,7 +1672,7 @@ library Math {
         z = x < y ? x : y;
     }
 
-    // metodo babilonese (https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
+    // babylonian method (https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method)
     function sqrt(uint y) internal pure returns (uint z) {
         if (y > 3) {
             z = y;
@@ -1722,16 +1722,16 @@ library UQ112x112 {
 `Q112` è la codifica per uno.
 
 ```solidity
-    // codifica un uint112 come un UQ112x112
+    // encode a uint112 as a UQ112x112
     function encode(uint112 y) internal pure returns (uint224 z) {
-        z = uint224(y) * Q112; // mai in eccesso
+        z = uint224(y) * Q112; // never overflows
     }
 ```
 
 Poiché y è `uint112`, il suo valore massimo può essere 2^112-1. Quel numero è ancora codificabile come un `UQ112x112`.
 
 ```solidity
-    // divide un UQ112x112 per un uint112, restituendo un UQ112x112
+    // divide a UQ112x112 by a uint112, returning a UQ112x112
     function uqdiv(uint224 x, uint112 y) internal pure returns (uint224 z) {
         z = x / uint224(y);
     }
@@ -1802,7 +1802,7 @@ Questa funzione restituisce le riserve dei due token dello scambio in pari. Nota
 Questa funzione ti da l'importo di token B che riceverai in cambio del token A se non vengono applicate commissioni. Questo calcolo tiene conto che il trasferimento modifica il tasso di cambio.
 
 ```solidity
-    // dato un importo in entrata di una risorsa e riserve della coppia, restituisce l'importo risultante massimo dell'altra risorsa
+    // given an input amount of an asset and pair reserves, returns the maximum output amount of the other asset
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
 ```
 

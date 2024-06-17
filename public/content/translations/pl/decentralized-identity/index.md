@@ -5,7 +5,7 @@ lang: pl
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: W tradycyjnych systemach tożsamości wydawanie, utrzymywanie i kontrola Twoich identyfikatorów są scentralizowane.
 summaryPoint2: Tożsamość zdecentralizowana usuwa zależność od scentralizowanych podmiotów trzecich.
 summaryPoint3: Dzięki technologii kryptograficznej użytkownicy mają ponownie narzędzia do wydawania, przechowywania i kontrolowania własnych identyfikatorów i poświadczeń.
@@ -49,7 +49,7 @@ Zdecentralizowane identyfikatory są przechowywane w rozproszonych księgach (ł
 
 ## Co sprawia, że zdecentralizowane identyfikatory są możliwe? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infrastruktura klucza publicznego (PKI) {#public-key-cryptography}
+### 1. Infrastruktura klucza publicznego (PKI) {#public-key-infrastructure}
 
 Infrastruktura klucza publicznego (PKI) to środek bezpieczeństwa informacji, który generuje dla podmiotu [klucz publiczny](/glossary/#public-key) i [klucz prywatny](/glossary/#private-key). Kryptografia klucza publicznego jest wykorzystywana w sieciach łańcuchów bloków do uwierzytelniania tożsamości użytkowników i udawadniania własności zasobów cyfrowych.
 

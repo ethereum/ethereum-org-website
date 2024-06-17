@@ -12,7 +12,7 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react"
 
-import { BasePageProps } from "@/lib/types"
+import { BasePageProps, Lang } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
@@ -39,6 +39,7 @@ import Translation from "@/components/Translation"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
@@ -47,16 +48,16 @@ import {
   fetchEthereumEcosystemData,
   fetchEthereumStablecoinsData,
 } from "@/lib/api/stablecoinsData"
-import summerfiImg from "@/public/dapps/summerfi.png"
-import dogeComputerImg from "@/public/doge-computer.png"
+import summerfiImg from "@/public/images/dapps/summerfi.png"
+import dogeComputerImg from "@/public/images/doge-computer.png"
 // -- daps
-import aaveImg from "@/public/stablecoins/aave.png"
-import compoundImg from "@/public/stablecoins/compound.png"
+import aaveImg from "@/public/images/stablecoins/aave.png"
+import compoundImg from "@/public/images/stablecoins/compound.png"
 // Static assets
-import daiLargeImg from "@/public/stablecoins/dai-large.png"
-import heroImg from "@/public/stablecoins/hero.png"
-import stablecoinsWtfImg from "@/public/stablecoins/tools/stablecoinswtf.png"
-import usdcLargeImg from "@/public/stablecoins/usdc-large.png"
+import daiLargeImg from "@/public/images/stablecoins/dai-large.png"
+import heroImg from "@/public/images/stablecoins/hero.png"
+import stablecoinsWtfImg from "@/public/images/stablecoins/tools/stablecoinswtf.png"
+import usdcLargeImg from "@/public/images/stablecoins/usdc-large.png"
 
 type EthereumDataResponse = Array<{
   id: string
@@ -93,6 +94,10 @@ const ethereumStablecoinsDataFetch = runOnlyOnce(fetchEthereumStablecoinsData)
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
 
@@ -177,7 +182,7 @@ export const getStaticProps = (async ({ locale }) => {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
       markets,
       marketsHasError,
     },
@@ -414,7 +419,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       <PageMetadata
         title={t("page-stablecoins-title")}
         description={t("page-stablecoins-meta-description")}
-        image="/stablecoins/hero.png"
+        image="/images/stablecoins/hero.png"
       />
       <PageHero isReverse content={heroContent} />
       <Divider />
@@ -526,7 +531,11 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                   </Text>
                   <Flex direction="column">
                     <Box>
-                      <ButtonLink mb={4} me={4} to="https://1inch.exchange">
+                      <ButtonLink
+                        mb={4}
+                        me={4}
+                        href="https://matcha.xyz/tokens/ethereum/0x6b175474e89094c44da98b954eedeac495271d0f?sellChain=1&sellAddress=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                      >
                         {t("page-stablecoins-dai-banner-swap-button")}
                       </ButtonLink>
                     </Box>
@@ -576,7 +585,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <ButtonLink
                       mb={4}
                       me={4}
-                      to="https://matcha.xyz/tokens/ethereum/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+                      href="https://matcha.xyz/tokens/ethereum/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48?sellChain=1&sellAddress=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
                     >
                       {t("page-stablecoins-usdc-banner-swap-button")}
                     </ButtonLink>

@@ -2,7 +2,7 @@
 title: 打造面向未来的以太坊
 description: 无论未来会发生什么，这些升级都可以增强以太坊，使其成为可以适应未来需求的有韧性、去中心化的基础层。
 lang: zh
-image: /roadmap/roadmap-future.png
+image: /images/roadmap/roadmap-future.png
 alt: "以太坊路线图"
 template: roadmap
 ---

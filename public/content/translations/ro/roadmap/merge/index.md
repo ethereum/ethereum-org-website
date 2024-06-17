@@ -3,7 +3,7 @@ title: Fuziunea
 description: Aflați mai multe despre Fuziune, când Rețeaua principală Ethereum a adoptat dovada mizei.
 lang: ro
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Rețeaua principală Ethereum folosește dovada mizei, dar nu a fost întotdeauna așa.
 summaryPoint2: Modernizarea de la mecanismul original al dovezii muncii la dovada mizei a purtat numele de Fuziune.
@@ -11,7 +11,7 @@ summaryPoint3: Fuziunea se referă la fuziunea dintre Rețeaua principală Ether
 summaryPoint4: Fuziunea a redus consumul de energie al Ethereum cu aproximativ 99,95%.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Fuziunea a avut loc în 15 septembrie 2022. Aceasta a finalizat tranziția Ethereum la consensul cu dovada mizei, scoțând din uz oficial dovada muncii și reducând consumul de energie cu aproximativ 99,95%.
 </UpgradeStatus>
 

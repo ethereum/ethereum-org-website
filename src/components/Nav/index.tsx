@@ -22,6 +22,8 @@ import LanguagePicker from "@/components/LanguagePicker"
 import { BaseLink } from "@/components/Link"
 import Search from "@/components/Search"
 
+import { isMobile } from "@/lib/utils/isMobile"
+
 import { DESKTOP_LANGUAGE_BUTTON_NAME, NAV_PY } from "@/lib/constants"
 
 import Menu from "./Menu"
@@ -33,6 +35,7 @@ const Nav = () => {
   const { toggleColorMode, linkSections, mobileNavProps } = useNav()
   const { locale } = useRouter()
   const { t } = useTranslation("common")
+  const isDesktop = !isMobile()
   const searchModalDisclosure = useDisclosure()
   const navWrapperRef = useRef(null)
   const languagePickerState = useDisclosure()
@@ -95,75 +98,80 @@ const Nav = () => {
             justifyContent={{ base: "flex-end", md: "space-between" }}
             ms={{ base: 3, xl: 8 }}
           >
-            <Menu hideBelow="md" sections={linkSections} />
+            {/* avoid rendering desktop Menu version on mobile */}
+            {isDesktop && <Menu hideBelow="md" sections={linkSections} />}
+
             <Flex alignItems="center" /*  justifyContent="space-between" */>
               <Search {...searchModalDisclosure} />
               {/* Desktop */}
-              <HStack hideBelow="md" gap="0">
-                <IconButton
-                  transition="transform 0.5s, color 0.2s"
-                  icon={ThemeIcon}
-                  aria-label={themeIconAriaLabel}
-                  variant="ghost"
-                  isSecondary
-                  px={{ base: "2", xl: "3" }}
-                  _hover={{
-                    transform: "rotate(10deg)",
-                    color: "primary.hover",
-                  }}
-                  onClick={toggleColorMode}
-                />
-
-                {/* Locale-picker menu */}
-                <LanguagePicker
-                  placement="bottom-end"
-                  minH="unset"
-                  maxH="75vh"
-                  w="xs"
-                  inset="unset"
-                  top="unset"
-                  menuState={languagePickerState}
-                >
-                  <MenuButton
-                    as={Button}
-                    name={DESKTOP_LANGUAGE_BUTTON_NAME}
-                    ref={languagePickerRef}
+              {/* avoid rendering desktop LanguagePicker version on mobile */}
+              {isDesktop && (
+                <HStack hideBelow="md" gap="0">
+                  <IconButton
+                    transition="transform 0.5s, color 0.2s"
+                    icon={ThemeIcon}
+                    aria-label={themeIconAriaLabel}
                     variant="ghost"
-                    color="body.base"
-                    transition="color 0.2s"
+                    isSecondary
                     px={{ base: "2", xl: "3" }}
                     _hover={{
+                      transform: "rotate(10deg)",
                       color: "primary.hover",
-                      "& svg": {
-                        transform: "rotate(10deg)",
-                        transition: "transform 0.5s",
-                      },
                     }}
-                    _active={{
-                      color: "primary.hover",
-                      bg: "primary.lowContrast",
-                    }}
-                    sx={{
-                      "& svg": {
-                        transform: "rotate(0deg)",
-                        transition: "transform 0.5s",
-                      },
-                    }}
+                    onClick={toggleColorMode}
+                  />
+
+                  {/* Locale-picker menu */}
+                  <LanguagePicker
+                    placement="bottom-end"
+                    minH="unset"
+                    maxH="75vh"
+                    w="xs"
+                    inset="unset"
+                    top="unset"
+                    menuState={languagePickerState}
                   >
-                    <Icon
-                      as={BsTranslate}
-                      fontSize="2xl"
-                      verticalAlign="middle"
-                      me={2}
-                    />
-                    <Text hideBelow="lg" as="span">
-                      {t("common:languages")}&nbsp;
-                    </Text>
-                    {locale!.toUpperCase()}
-                  </MenuButton>
-                </LanguagePicker>
-              </HStack>
-              {/* Mobile */}
+                    <MenuButton
+                      as={Button}
+                      name={DESKTOP_LANGUAGE_BUTTON_NAME}
+                      ref={languagePickerRef}
+                      variant="ghost"
+                      color="body.base"
+                      transition="color 0.2s"
+                      px={{ base: "2", xl: "3" }}
+                      _hover={{
+                        color: "primary.hover",
+                        "& svg": {
+                          transform: "rotate(10deg)",
+                          transition: "transform 0.5s",
+                        },
+                      }}
+                      _active={{
+                        color: "primary.hover",
+                        bg: "primary.lowContrast",
+                      }}
+                      sx={{
+                        "& svg": {
+                          transform: "rotate(0deg)",
+                          transition: "transform 0.5s",
+                        },
+                      }}
+                    >
+                      <Icon
+                        as={BsTranslate}
+                        fontSize="2xl"
+                        verticalAlign="middle"
+                        me={2}
+                      />
+                      <Text hideBelow="lg" as="span">
+                        {t("common:languages")}&nbsp;
+                      </Text>
+                      {locale!.toUpperCase()}
+                    </MenuButton>
+                  </LanguagePicker>
+                </HStack>
+              )}
+
               <MobileNavMenu
                 {...mobileNavProps}
                 linkSections={linkSections}

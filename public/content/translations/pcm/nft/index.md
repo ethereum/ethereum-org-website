@@ -5,7 +5,7 @@ lang: pcm
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Eth logo wey wi dey yus hologram show.
 summaryPoint1: Na one way wey yu fit reprisent anytin wey dey unik as Ethereum-based asset.
 summaryPoint2: NFTs dey give more pawa to kontent kreators pass any taim bifor.

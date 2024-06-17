@@ -3,7 +3,6 @@ import {
   Badge,
   Box,
   type BoxProps,
-  chakra,
   Divider,
   Flex,
   type HeadingProps,
@@ -13,18 +12,17 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
+import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
 import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
-import CrowdinContributors from "@/components/CrowdinContributors"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FeedbackCard from "@/components/FeedbackCard"
-import GitHubContributors from "@/components/GitHubContributors"
+import FileContributors from "@/components/FileContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
@@ -41,10 +39,6 @@ import TutorialMetadata from "@/components/TutorialMetadata"
 import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"
-
-import { DEFAULT_LOCALE } from "@/lib/constants"
-
-import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
 type ContentContainerProps = Pick<BoxProps, "children" | "dir">
 
@@ -124,10 +118,6 @@ const Paragraph = (props: TextProps) => (
   <Text as="p" mt={8} mb={4} mx={0} color="text300" fontSize="md" {...props} />
 )
 
-const ListItem = (props) => {
-  return <chakra.li color="text300" {...props} />
-}
-
 const KBD = (props) => {
   const borderColor = useToken("colors", "primary.base")
 
@@ -150,7 +140,6 @@ export const tutorialsComponents = {
   h4: Heading4,
   p: Paragraph,
   kbd: KBD,
-  li: ListItem,
   pre: Codeblock,
   ...mdxTableComponents,
   Badge,
@@ -165,11 +154,8 @@ export const tutorialsComponents = {
   YouTube,
 }
 type TutorialLayoutProps = ChildOnlyProp &
-  Pick<
-    MdPageContent,
-    "tocItems" | "crowdinContributors" | "contentNotTranslated"
-  > &
-  Required<Pick<MdPageContent, "lastUpdatedDate">> & {
+  Pick<MdPageContent, "tocItems" | "contributors" | "contentNotTranslated"> &
+  Required<Pick<MdPageContent, "lastEditLocaleTimestamp">> & {
     frontmatter: TutorialFrontmatter
     timeToRead: number
   }
@@ -179,19 +165,14 @@ export const TutorialLayout = ({
   frontmatter,
   tocItems,
   timeToRead,
-  lastUpdatedDate,
-  crowdinContributors,
+  lastEditLocaleTimestamp,
+  contributors,
   contentNotTranslated,
 }: TutorialLayoutProps) => {
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = getEditPath(relativePath)
 
   const borderColor = useToken("colors", "border")
-  const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
-  const intlLastEdit =
-    "data" in gitHubLastEdit ? gitHubLastEdit.data! : lastUpdatedDate
-  const useGitHubContributors =
-    frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
   return (
     <>
@@ -213,18 +194,10 @@ export const TutorialLayout = ({
             pt={8}
           />
           {children}
-          {useGitHubContributors ? (
-            <GitHubContributors
-              relativePath={relativePath}
-              lastUpdatedDate={lastUpdatedDate}
-            />
-          ) : (
-            <CrowdinContributors
-              relativePath={relativePath}
-              lastUpdatedDate={intlLastEdit}
-              contributors={crowdinContributors}
-            />
-          )}
+          <FileContributors
+            contributors={contributors}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          />
           <FeedbackCard />
         </ContentContainer>
         {tocItems && (

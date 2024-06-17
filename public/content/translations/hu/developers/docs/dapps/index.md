@@ -74,6 +74,12 @@ Az okosszerződés olyan kód, mely az Ethereum blokkláncon fut és pontosan ú
 - [Dokumentáció](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
+**Crossmint _– Vállalati szintű web3 fejlesztési platform okosszerződések telepítéséhez, hitelkártyás és láncok közötti fizetések lehetővé tételéhez, valamint API-ok használatára NFT-k létrehozása, terjesztése, értékesítése, tárolása és szerkesztése érdekében._**
+
+- [crossmint.com](https://www.crossmint.com)
+- [Dokumentáció](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+
 ## További olvasnivaló {#further-reading}
 
 - [Fedezze fel a dappokat](/dapps)

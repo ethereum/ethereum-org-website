@@ -5,7 +5,7 @@ lang: nl
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: Traditionele identiteitssystemen hebben de uitgifte, het onderhoud en de controle van uw identificatiemiddelen gecentraliseerd.
 summaryPoint2: Gedecentraliseerde identiteit verwijdert vertrouwen op gecentraliseerde derden.
 summaryPoint3: Dankzij crypto hebben gebruikers nu de tools om hun eigen identificaties en attestaties uit te geven, bij te houden en te beheren.

@@ -2,15 +2,15 @@ import { StaticImageData } from "next/image"
 
 import type { TranslationKey } from "@/lib/types"
 
-import ArbitrumImage from "@/public/layer-2/arbitrum.png"
-import AztecImage from "@/public/layer-2/aztec.png"
-import BaseImage from "@/public/layer-2/base.png"
-import BobaImage from "@/public/layer-2/boba.png"
-import LoopringImage from "@/public/layer-2/loopring.png"
-import OptimismImage from "@/public/layer-2/optimism.png"
-import StarknetImage from "@/public/layer-2/starknet.png"
-import ZKSpaceImage from "@/public/layer-2/zkspace.png"
-import zkSyncImage from "@/public/layer-2/zksync.png"
+import ArbitrumImage from "@/public/images/layer-2/arbitrum.png"
+import AztecImage from "@/public/images/layer-2/aztec.png"
+import BaseImage from "@/public/images/layer-2/base.png"
+import BobaImage from "@/public/images/layer-2/boba.png"
+import LoopringImage from "@/public/images/layer-2/loopring.png"
+import OptimismImage from "@/public/images/layer-2/optimism.png"
+import StarknetImage from "@/public/images/layer-2/starknet.png"
+import ZKSpaceImage from "@/public/images/layer-2/zkspace.png"
+import zkSyncImage from "@/public/images/layer-2/zksync.png"
 
 export type RollupType = "optimistic" | "zk"
 
@@ -139,12 +139,13 @@ export const layer2Data: Rollups = {
       ],
       blockExplorer: "https://explorer.zksync.io/",
       ecosystemPortal: "",
-      tokenLists: "",
+      tokenLists: 
+        "https://explorer.zksync.io/tokens",
       noteKey: "",
-      purpose: ["tokens", "nft"],
+      purpose: ["universal"],
       descriptionKey: "zksync-description",
       image: zkSyncImage,
-      background: "#11142b",
+      background: "black",
     },
     {
       name: "ZKSpace",

@@ -26,7 +26,7 @@ Az okosszerződéseket specifikus [programozási nyelveken](/developers/docs/sma
 
 Az okosszerződések nem csak nyílt forráskódú könyvtáraknak felelnek meg, hanem lényegében nyílt API szolgáltatásokként működnek, melyek 24/7-ben futnak és nem lehet őket leállítani. Az okosszerződések nyilvános függvényeket szolgáltatnak, amelyeket a felhasználók és az alkalmazások ([dappok](/developers/docs/dapps/)) engedély nélkül meghívhatnak. Bármelyik alkalmazás összekapcsolható a működő okosszerződésekkel, hogy valamilyen funkcionalitást alkosson, mint például [adatok használata](/developers/docs/oracles/), illetve támogassa a tokenek átváltását. Bárki telepíthet új okosszerződéseket az Ethereumra, hogy tetszőleges funkcionalitást adjon, mely egyezik az alkalmazás szükségleteivel.
 
-Dapp fejlesztőként csak akkor kell okosszerződéseket írnod, ha szeretnél egyedi funkciókat hozzáadni az Ethereum blokklánchoz. Hamar rájöhetsz, hogy a projekted legtöbb célját elérheted csupán a létező okosszerződések integrálásával, például ha szeretnéd használni a stablecoin fizetéseket vagy lehetővé tenni a tokenek decentralizált cseréjét.
+Dapp fejlesztőként csak akkor kell okosszerződéseket írnia, ha szeretne egyedi funkciókat hozzáadni az Ethereum blokklánchoz. Hamar rájöhetsz, hogy a projekted legtöbb célját elérheted csupán a létező okosszerződések integrálásával, például ha szeretnéd használni a stablecoin fizetéseket vagy lehetővé tenni a tokenek decentralizált cseréjét.
 
 ## Harmadik szint: Ethereum csomópontok {#ethereum-nodes}
 
@@ -50,9 +50,9 @@ A stack tetején a felhasználó oldali alkalmazások állnak. Ezek a standard a
 
 Ahogy ezeket a felhasználói felületeket fejleszted lényegében nem változott. Gyakran a felhasználóknak nem kell tudniuk arról, hogy az alkalmazás amit használnak, egy blokkláncot használ.
 
-## Készen állsz kiválasztani a stack-edet? {#ready-to-choose-your-stack}
+## Készen áll kiválasztani a stacket? {#ready-to-choose-your-stack}
 
-Nézd meg az útmutatónkat, hogy[felállítsd egy helyi fejlesztői környezetet](/developers/local-environment/) az Ethereum alkalmazásodnak.
+Nézze meg az útmutatónkat, hogy[felállítson egy helyi fejlesztői környezetet](/developers/local-environment/) az Ethereum alkalmazásának.
 
 ## További olvasnivaló {#further-reading}
 

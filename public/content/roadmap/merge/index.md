@@ -3,7 +3,7 @@ title: The Merge
 description: Learn about The Merge - when Mainnet Ethereum adopted proof-of-stake.
 lang: en
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Ethereum Mainnet uses proof-of-stake, but this wasn't always the case.
 summaryPoint2: The upgrade from the original proof-of-work mechanism to proof-of-stake was called The Merge.
@@ -11,7 +11,7 @@ summaryPoint3: The Merge refers to the original Ethereum Mainnet merging with a 
 summaryPoint4: The Merge reduced Ethereum's energy consumption by ~99.95%.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   The Merge was executed on September 15, 2022. This completed Ethereum's transition to proof-of-stake consensus, officially deprecating proof-of-work and reducing energy consumption by ~99.95%.
 </UpgradeStatus>
 

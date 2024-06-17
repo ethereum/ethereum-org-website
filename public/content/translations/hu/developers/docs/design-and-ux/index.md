@@ -12,7 +12,7 @@ Először a web3 alaposabb megértésére van szüksége? Tekintse meg a [**Tanu
 
 A hatékony tervezés túlmutat a vizuálisan vonzó felhasználói felületek létrehozásán. Magában foglalja a felhasználó igényeinek, céljainak és mozgatórugóinak mélyreható megértését. Ezért erősen ajánljuk, hogy minden tervező alkalmazzon egy tervezési folyamatot, mint például a [**dupla gyémánt folyamat**](https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)), hogy biztosítsa, munkája tudatos és szándékos.
 
-- [A web3-nak több UX kutatóra és tervezőre van szüksége](https://blog.akasha.org/akasha-conversations-9-web3-needs-more-ux-researchers-and-designers) – A jelenlegi tervezési érettség áttekintése
+- [A web3-nak több UX kutatóra és tervezőre van szüksége](https://akasha.org/blog/2022/10/11/akasha-conversation-09-web3-ux-researchers-and-designers) – A jelenlegi tervezési érettség áttekintése
 - [Egyszerű útmutató az UX kutatáshoz a web3-ban](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1) – Egyszerű útmutató a kutatáshoz
 - [Hogyan közelítsük meg az UX-döntéseket a web3-ban](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) – A kvantitatív és kvalitatív kutatás rövid áttekintése, és a kettő közötti különbségek (videó, 6 perc)
 - [UX-kutatónak lenni a web3-ban](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) – Személyes vélemény arról, milyen UX-kutatónak lenni a web3-ban
@@ -79,10 +79,11 @@ Vegyen részt a szakmai közösség által irányított szervezetekben, vagy csa
 
 ## Tervezési rendszerek {#design-systems}
 
-- [Optimism Design](https://www.figma.com/@optimism) (Figma)
+- [Optimism Design](https://www.figma.com/@oplabs) (Figma)
 - [Ethereum.org tervezési rendszer](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity – a Polygon tervezési rendszere](https://www.figma.com/community/file/1073921725197233598/finity-design-system) (Figma)
 - [Kleros tervezési rendszer](https://www.figma.com/community/file/999852250110186964/kleros-design-system) (Figma)
+- [Safe Design System](https://www.figma.com/community/file/1337417127407098506/safe-design-system) (Figma)
 - [ENS tervezési rendszer](https://thorin.ens.domains/)
 - [Mirror tervezési rendszer](https://degen-xyz.vercel.app/)
 

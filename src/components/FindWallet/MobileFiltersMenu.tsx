@@ -12,8 +12,6 @@ import {
 
 import { Button } from "@/components/Buttons"
 
-import walletData from "@/data/wallets/wallet-data"
-
 import OldHeading from "../OldHeading"
 
 import { MobileFiltersButton } from "./MobileFiltersButton"
@@ -23,15 +21,15 @@ import WalletFilterSidebar, {
   WalletFilterSidebarProps,
 } from "./WalletFilterSidebar"
 
-import { useWalletTable } from "@/hooks/useWalletTable"
-
 type MobileFiltersMenuProps = WalletFilterSidebarProps & {
   showMobileSidebar: boolean
   onOpen: () => void
   onClose: () => void
+  totalWallets: number
 }
 
 export const MobileFiltersMenu = ({
+  totalWallets,
   filters,
   resetWalletFilter,
   resetFilters,
@@ -45,7 +43,6 @@ export const MobileFiltersMenu = ({
   onClose,
 }: MobileFiltersMenuProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
-  const { filteredWallets } = useWalletTable({ filters, t, walletData })
 
   return (
     <>
@@ -126,8 +123,7 @@ export const MobileFiltersMenu = ({
               </Box>
 
               <Button w="100%" flex={1} onClick={onClose}>
-                {t("page-find-wallet-see-wallets")}{" "}
-                {`(${filteredWallets.length})`}
+                {t("page-find-wallet-see-wallets")} {`(${totalWallets})`}
               </Button>
             </Flex>
           </DrawerBody>

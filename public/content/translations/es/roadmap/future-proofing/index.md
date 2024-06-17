@@ -2,7 +2,7 @@
 title: Ethereum garantía futura
 description: Estas actualizaciones consolidan a Ethereum como el fundamento descentralizado y resiliente del futuro, en todas sus formas.
 lang: es
-image: /roadmap/roadmap-future.png
+image: /images/roadmap/roadmap-future.png
 alt: "Hoja de ruta de Ethereum"
 template: roadmap
 ---

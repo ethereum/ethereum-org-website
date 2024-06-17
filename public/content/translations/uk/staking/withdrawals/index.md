@@ -3,7 +3,7 @@ title: Виведення ставок
 description: На сторінці наведено стислий опис виведення коштів під час стейкінгу, принципу роботи цієї функції, а також порядку дій стейкерів, які бажають отримати свої винагороди.
 lang: uk
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Носоріг Леслі з її винагородами за стейкінг
 sidebarDepth: 2
 summaryPoints:
@@ -113,12 +113,12 @@ summaryPoints:
 <TableContainer>
 
 | Кількість виведень коштів | Час до завершення |
-| :-----------------------: | :---------------: |
-|          400,00           |      3,5 дня      |
-|          500,00           |      4,3 дня      |
-|          600,00           |      5,2 дня      |
-|          700,00           |      6,1 дня      |
-|          800,00           |      7,0 дня      |
+| :-------------------: | :--------------: |
+|     400,00        |   3,5 дня   |
+|     500,00        |   4,3 дня   |
+|     600,00        |   5,2 дня   |
+|     700,00        |   6,1 дня   |
+|     800,00        |   7,0 дня   |
 
 </TableContainer>
 
@@ -193,7 +193,7 @@ eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
 
-Операторам валідаторів рекомендується відвідати сторінку <a href="https://launchpad.ethereum.org/withdrawals/">Виведення на стартовій платформі стейкінгу</a>, на якій ви знайдете докладніші відомості про те, як підготувати свій валідатор до виведення коштів. підготовку, часові рамки подій і докладнішу інформацію про те, як працює процес виведення коштів.
+Рекомендуємо операторам валідаторів відвідати сторінку <a href="https://launchpad.ethereum.org/withdrawals/">Виведення коштів зі стартової платформи</a>, де можна знайти докладну інформацію про те, як підготувати свій валідатор до виведення коштів, розклад подій, а також більше інформації про те, як функціонує виведення коштів.
 
 Щоб спробувати налаштування спочатку на тестовій мережі, почніть роботу на <a href="https://goerli.launchpad.ethereum.org">стартовій платформі стейкінгу в тестовій мережі Goerli</a>.
 
@@ -213,5 +213,5 @@ eventName="read more">
 - [EIP-4895: Протокол ланцюжка Beacon здійснює виведення як операції](https://eips.ethereum.org/EIPS/eip-4895)
 - [Ethereum Cat Herders — Шанхай](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Виведення ETH під час стейкінгу (тестування) із Potuz і Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
-- [PEEPanEIP#68: EIP-4895: Ланцюжок Beacon виконує виведення як операції, Алекс Стокс](https://www.youtube.com/watch?v=CcL9RJBljUs)
+- [PEEPanEIP#68: EIP-4895: зняття коштів за допомогою маякового ланцюжка як операції з Алексом Стоуксом](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Розуміння ефективного балансу валідатора](https://www.attestant.io/posts/understanding-validator-effective-balance/)

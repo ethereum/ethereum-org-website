@@ -6,7 +6,7 @@ lang: ja
 
 # イーサリアム取引所の追加 {#adding-ethereum-exchanges}
 
-誰でも新たな取引所の ethereum.org への掲載を提案することができます。
+誰でも新たな取引所のethereum.orgへの掲載を提案することができます。
 
 現在、取引所は以下に掲載されています。
 
@@ -20,21 +20,21 @@ lang: ja
 
 ## 必要な情報: {#what-we-need}
 
-- 取引所に適用される地理的な制限
-- ETH の購入に使用できる通貨
+- 取引所に適用される地理的な制限. 取引所に関する地理的制限は、取引所のウェブサイトの専用ページまたはセクションに詳しく記述されているはずです。
+- ETHの購入に使用できる通貨
 - 取引所が合法な取引会社であることの証拠
 - その他の追加情報(会社に関する営業年数、財政基盤などの)
 
 これらは[ユーザが利用できる取引所を正しく見つけられるようにするため](/get-eth/#country-picker)に必要な情報です。
 
-また、取引所が合法かつ安全であることを ethereum.org が確認するためでもあります。
+また、取引所が合法かつ安全であることをethereum.orgが確認するためでもあります。
 
 ---
 
 ## 取引所の追加 {#add-exchange}
 
-ethereum.org に取引所を追加掲載するには、GitHub で問題を作成してください。
+ethereum.orgに取引所を追加掲載するには、GitHubで問題を作成してください。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
   問題の作成
 </ButtonLink>

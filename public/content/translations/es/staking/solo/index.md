@@ -4,7 +4,7 @@ description: Una visión general de cómo empezar a postar su ETH individualment
 lang: es
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Leslie, el rinoceronte, en su propio chip.
 sidebarDepth: 2
 summaryPoints:
@@ -17,9 +17,9 @@ summaryPoints:
 
 Participación individual es el acto de [ ejecutar un nodo Ethereum](/run-a-node/) conectado a Internet y depositar 32 ETH para activar un [validador](#faq), abriendo la posibilidad de participar directamente en el consenso de la red.
 
-**La participación en solitario aumenta la descentralización de la red Ethereum**, haciendo que Ethereum sea más resistente a la censura y robusto contra ataques. Puede que otros métodos de participación no ayuden a la red de la misma manera. La participación en solitario es la mejor opción de participación para asegurar Ethereum.
+**El staking individual aumenta la descentralización de la red Ethereum**, haciendo que sea más resistente a la censura y robusta contra ataques. Puede que otros métodos de participación no ayuden a la red de la misma manera. La participación en solitario es la mejor opción de participación para asegurar Ethereum.
 
-Un nodo Ethereum consiste tanto en un cliente de capa de ejecución (EL), como en un cliente de capa de consenso (CL). Estos clientes son software que funcionan estrechamente entre sí, y adicionalmente con un par de claves de firma válidas, para verificar transacciones y bloques, certificar la cabeza correcta de la cadena, resumir verificaciones, y proponer bloques.
+Un nodo Ethereum consiste tanto en un cliente de capa de ejecución (EL), como en un cliente de capa de consenso (CL). Estos clientes son programas que funcionan estrechamente entre sí, en conjunto con un par de claves de validación, para verificar transacciones y bloques, certificar el encabezado corecto de la cadena, resumir verificaciones, y proponer bloques.
 
 Los participantes individuales conlleva la responsabilidad de operar el hardware necesario para ejecutar dichos clientes. Es muy recomendable utilizar una máquina específicamente dedicada a esto, que usted opere desde su hogar, algo que es extremadamente beneficioso para la salud de la red.
 

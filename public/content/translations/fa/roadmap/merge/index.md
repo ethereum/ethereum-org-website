@@ -3,14 +3,14 @@ title: ادغام
 description: توضیحاتی درباره ادغام (The Merge) - وقتی شبکه اصلی اتریوم مکانیزم اثبات سهام را اتخاذ کرد.
 lang: fa
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 summaryPoint1: '«شبکه اصلی اتریوم» از مکانیزم اثبات سهام استفاده می‌کند، اما همیشه اینگونه نبوده است.'
 summaryPoint2: به ارتقایی که مکانیزم اصلی اثبات کار را به اثبات سهام تغییر داد ادغام گفته می‌شود.
 summaryPoint3: رویداد «ادغام» به ادغام شدن شبکه اصلی اتریوم و یک زنجیره بلوکی جداگانه اثبات سهام به اسم زنجیره بیکن (Beacon Chain) اشاره دارد که اکنون به صورت یک زنجیره واحد وجود دارند.
 summaryPoint4: میزان مصرف انرژی اتریوم بعد از ادغام درحدود 99/95% کاهش پیدا کرد.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   ادغام در تاریخ 15 سپتامبر 2022 اجرایی شد. این ارتقا فرایند گذار اتریوم به مکانیزم اجماع اثبات سهام را کامل کرد و باعث شد مصرف انرژی تا 99/95% کاهش یابد.
 </UpgradeStatus>
 
