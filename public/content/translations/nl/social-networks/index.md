@@ -5,7 +5,7 @@ lang: nl
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: Blockchain-gebaseerde platformen voor sociale interactie en het creëren en verspreiden van content.
 summaryPoint2: Gedecentraliseerde sociale medianetwerken beschermen de privacy van gebruikers en verbeteren de gegevensbeveiliging.
 summaryPoint3: Tokens en NFT's creëren nieuwe manieren om content te monetariseren.

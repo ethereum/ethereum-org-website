@@ -5,7 +5,7 @@ lang: id
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: Sistem Identitas konvensional memiliki penerbitan, pemeliharaan, dan kontrol yang tersentralisasi dari seluruh tanda pengenal Anda.
 summaryPoint2: Identitas yang terdesentralisasi menghilangkan ketergantungan pada pihak ketiga yang tersentralisasi.
 summaryPoint3: Berkat crypto, para pengguna sekarang memiliki perangkat untuk mengeluarkan, menahan, dan mengontrol pengenal dan pengesahan mereka sendiri sekali lagi.

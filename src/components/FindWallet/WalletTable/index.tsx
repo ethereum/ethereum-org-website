@@ -16,7 +16,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, Wallet, WalletFilter } from "@/lib/types"
+import type { ChildOnlyProp, WalletFilter } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import { WalletMoreInfo } from "@/components/FindWallet/WalletTable/WalletMoreInfo"
@@ -196,11 +196,16 @@ const FlexInfoCenter = (props: { children: ReactNode; className?: string }) => (
   />
 )
 
+type UseWalletTable = ReturnType<typeof useWalletTable>
+
 export type WalletTableProps = {
   filters: WalletFilter
   resetFilters: () => void
   resetWalletFilter: React.MutableRefObject<() => void>
-  walletData: Wallet[]
+  filteredWallets: UseWalletTable["filteredWallets"]
+  totalWallets: number
+  updateMoreInfo: (key: string) => void
+  featureDropdownItems: UseWalletTable["featureDropdownItems"]
   onOpen: () => void
 }
 
@@ -208,16 +213,13 @@ const WalletTable = ({
   filters,
   resetFilters,
   resetWalletFilter,
-  walletData,
+  filteredWallets,
+  totalWallets,
+  updateMoreInfo,
+  featureDropdownItems,
   onOpen,
 }: WalletTableProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
-  const {
-    featureDropdownItems,
-    filteredWallets,
-    updateMoreInfo,
-    walletCardData,
-  } = useWalletTable({ filters, t, walletData })
 
   // Context API
   const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
@@ -230,6 +232,17 @@ const WalletTable = ({
       eventAction: "Tap MobileFilterToggle - sticky",
       eventName: "show mobile filters true",
     })
+  }
+
+  const showMoreInfo = (wallet) => {
+    updateMoreInfo(wallet.key)
+    // Log "more info" event only on expanding
+    wallet.moreInfo &&
+      trackCustomEvent({
+        eventCategory: "WalletMoreInfo",
+        eventAction: `More info wallet`,
+        eventName: `More info ${wallet.name}`,
+      })
   }
 
   return (
@@ -254,16 +267,16 @@ const WalletTable = ({
               })`}
             </Text>
 
-            {filteredWallets.length === walletCardData.length ? (
+            {filteredWallets.length === totalWallets ? (
               <Text ps={{ base: 2, md: 0 }} as="span">
                 {t("page-find-wallet-showing-all-wallets")} (
-                <strong>{walletCardData.length}</strong>)
+                <strong>{totalWallets}</strong>)
               </Text>
             ) : (
               <Text ps={{ base: 2, md: 0 }} as="span">
                 {t("page-find-wallet-showing")}{" "}
                 <strong>
-                  {filteredWallets.length} / {walletCardData.length}
+                  {filteredWallets.length} / {totalWallets}
                 </strong>{" "}
                 {t("page-find-wallet-wallets")}
               </Text>
@@ -295,17 +308,6 @@ const WalletTable = ({
           const hasPersonasLabels = walletPersonas.length > 0
           const hasDeviceLabels = deviceLabels.length > 0
           const hasAllLabels = hasPersonasLabels && hasDeviceLabels
-
-          const showMoreInfo = (wallet) => {
-            updateMoreInfo(wallet.key)
-            // Log "more info" event only on expanding
-            wallet.moreInfo &&
-              trackCustomEvent({
-                eventCategory: "WalletMoreInfo",
-                eventAction: `More info wallet`,
-                eventName: `More info ${wallet.name}`,
-              })
-          }
 
           return (
             <WalletContainer

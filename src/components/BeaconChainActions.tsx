@@ -9,8 +9,8 @@ import CardList, { type CardListItem } from "@/components/CardList"
 import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
 
-import beaconchain from "@/public/upgrades/beaconchainemoji.png"
-import beaconscan from "@/public/upgrades/etherscan.png"
+import beaconchain from "@/public/images/upgrades/beaconchainemoji.png"
+import beaconscan from "@/public/images/upgrades/etherscan.png"
 
 const H3 = ({ children }: ChildOnlyProp) => (
   <OldHeading

@@ -5,7 +5,7 @@ lang: fa
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: پلتفرم های مبتنی بر بلاک چین، برای تعامل اجتماعی و ایجاد و توزیع محتوا.
 summaryPoint2: شبکه های رسانه اجتماعی غیرمتمرکز، از حریم خصوصی کاربران محافظت می کنند و امنیت داده ها را افزایش می دهند.
 summaryPoint3: توکن ها و نیفتی ها راه های جدیدی برای کسب درآمد از محتوا ایجاد می کنند.

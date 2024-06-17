@@ -4,7 +4,7 @@ description: Un aperçu de la DeFi sur Ethereum
 lang: fr
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: Un logo Eth fait en briques lego.
 sidebarDepth: 2
 summaryPoint1: Une alternative mondiale ouverte au système financier actuel.

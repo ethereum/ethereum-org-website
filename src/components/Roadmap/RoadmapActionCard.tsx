@@ -10,10 +10,10 @@ import {
 import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
 
-import futureProofing from "@/public/roadmap/roadmap-future.png"
-import security from "@/public/roadmap/roadmap-security.png"
-import scaling from "@/public/roadmap/roadmap-transactions.png"
-import userExperience from "@/public/roadmap/roadmap-ux.png"
+import futureProofing from "@/public/images/roadmap/roadmap-future.png"
+import security from "@/public/images/roadmap/roadmap-security.png"
+import scaling from "@/public/images/roadmap/roadmap-transactions.png"
+import userExperience from "@/public/images/roadmap/roadmap-ux.png"
 
 type RoadmapActionCardProps = {
   to: string

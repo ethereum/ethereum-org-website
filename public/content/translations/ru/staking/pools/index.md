@@ -4,7 +4,7 @@ description: 'Как начать совместный стейкинг ETH: к�
 lang: ru
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: Носорог Лесли плавает в бассейне.
 sidebarDepth: 2
 summaryPoints:

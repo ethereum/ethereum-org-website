@@ -5,7 +5,7 @@ lang: az
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Regenerativ prinsiplər üzərində qurulmuş alternativ iqtisadi sistem
 summaryPoint2: İqlim dəyişikliyi kimi qlobal səviyyəli koordinasiya böhranlarını həll etmək üçün Ethereum-dan istifadə etmək cəhdi

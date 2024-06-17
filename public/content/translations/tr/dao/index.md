@@ -5,7 +5,7 @@ lang: tr
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Bir teklif üzerinde oy kullanan bir DAO'nun temsili.
 summaryPoint1: Merkezi liderliği olmayan üyelere ait topluluklar.
 summaryPoint2: İnternette tanımadığnız kişilerle iş birliği yapmanın güvenli bir yolu.

@@ -4,7 +4,7 @@ description: Pangkalahatang-ideya tungkol sa kung paano simulang i-solo stake an
 lang: fil
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Ang rhino na si Leslie na nasa sarili niyang computer chip.
 sidebarDepth: 2
 summaryPoints:

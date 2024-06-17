@@ -1,7 +1,7 @@
 name: Suggest an exchange
 description: Suggest a new exchange to list on ethereum.org
 title: Suggest an exchange
-labels: ["content :fountain_pen:"]
+labels: ["product 🧰"]
 body:
   - type: markdown
     attributes:

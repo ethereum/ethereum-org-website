@@ -5,7 +5,7 @@ lang: uk
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Глобальна, відкрита альтернатива сучасній науковій системі.
 summaryPoint2: Технологія, яка дає вченим змогу отримувати фінансування, проводити експерименти, ділитися даними, поширювати аналітику тощо.

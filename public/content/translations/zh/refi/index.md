@@ -5,7 +5,7 @@ lang: zh
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: 一种构建于再生原则之上的替代经济体系
 summaryPoint2: 一次利用以太坊解决全球协作危机（如气候变化）的尝试

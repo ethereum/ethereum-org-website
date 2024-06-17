@@ -5,7 +5,7 @@ lang: fa
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: تصویری از یک DAO در حال رأی دادن به یک پیشنهاد.
 summaryPoint1: جوامع عضومحور بدون رهبری متمرکز.
 summaryPoint2: راهی ایمن برای برقراری ارتباط با غریبه‌های اینترنتی.
