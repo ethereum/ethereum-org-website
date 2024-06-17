@@ -5,7 +5,7 @@ lang: fil
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Isang pandaigdigan at bukas na alternatibo sa kasalukuyang sistemang siyentipiko.
 summaryPoint2: Isang teknolohiyang nagbibigay-daan sa mga siyentipiko na lumikom ng pondo, magsagawa ng mga eksperimento, magbahagi ng data, magbahagi ng mga kaalaman, at iba pa.

@@ -5,7 +5,7 @@ lang: mr
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: सामाजिक संवाद आणि सामग्री निर्मिती आणि वितरणासाठी ब्लॉकचेन-आधारित प्लॅटफॉर्म.
 summaryPoint2: विकेंद्रित सोशल मीडिया नेटवर्क वापरकर्त्याच्या गोपनीयतेचे संरक्षण करतात आणि डेटा सुरक्षितता वाढवतात.
 summaryPoint3: टोकन आणि NFT सामग्रीची कमाई करण्याचे नवीन मार्ग तयार करतात.

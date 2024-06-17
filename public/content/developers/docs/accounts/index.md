@@ -52,7 +52,7 @@ _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/d
 
 ## Externally-owned accounts and key pairs {#externally-owned-accounts-and-key-pairs}
 
-An account is made up of a cryptographic pair of keys: public and private. They help prove that a transaction was actually signed by the sender and prevent forgeries. Your private key is what you use to sign transactions, so it grants you custody over the funds associated with your account. You never really hold cryptocurrency, you hold private keys – the funds are always on Ethereum's ledger.
+An account is made up of a pair of cryptographic keys: public and private. They help prove that a transaction was actually signed by the sender and prevent forgeries. Your private key is what you use to sign transactions, so it grants you custody over the funds associated with your account. You never really hold cryptocurrency, you hold private keys – the funds are always on Ethereum's ledger.
 
 This prevents malicious actors from broadcasting fake transactions because you can always verify the sender of a transaction.
 
@@ -87,7 +87,7 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 [Geth documentation](https://geth.ethereum.org/docs)
 
-It is possible to derive new public keys from your private key but you cannot derive a private key from public keys. This means it's vital to keep a private key safe and, as the name suggests, **PRIVATE**.
+It is possible to derive new public keys from your private key, but you cannot derive a private key from public keys. It is vital to keep your private keys safe and, as the name suggests, **PRIVATE**.
 
 You need a private key to sign messages and transactions which output a signature. Others can then take the signature to derive your public key, proving the author of the message. In your application, you can use a javascript library to send transactions to the network.
 
@@ -109,7 +109,7 @@ There is also another type of key in Ethereum, introduced when Ethereum switched
 
 ## A note on wallets {#a-note-on-wallets}
 
-An account is not a wallet. An account is the keypair for a user-owned Ethereum account. A wallet is an interface or application that lets you interact with your Ethereum account.
+An account is not a wallet. A wallet is an interface or application that lets you interact with your Ethereum account, either an externally-owned account or a contract account.
 
 ## A visual demo {#a-visual-demo}
 

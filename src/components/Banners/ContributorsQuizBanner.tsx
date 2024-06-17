@@ -4,7 +4,7 @@ import { Image } from "@/components/Image"
 
 import { ButtonLink } from "../Buttons"
 
-import PeopleLearning from "@/public/people-learning.png"
+import PeopleLearning from "@/public/images/people-learning.png"
 
 // TODO: refactor to use CalloutBanner component
 function ContributorsQuizBanner(props: FlexProps) {

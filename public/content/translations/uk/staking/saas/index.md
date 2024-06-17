@@ -4,7 +4,7 @@ description: Огляд того, як почати роботу з об’єд�
 lang: uk
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: Носоріг Леслі плаває в хмарах.
 sidebarDepth: 2
 summaryPoints:

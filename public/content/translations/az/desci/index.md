@@ -5,7 +5,7 @@ lang: az
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Mövcud elmi sistemə qlobal, açıq alternativ.
 summaryPoint2: Alimlər üçün maliyyə vəsaiti toplamağa, təcrübələr aparmağa, məlumatları paylaşmağa, yaymağa və s. imkan verən texnologiya.

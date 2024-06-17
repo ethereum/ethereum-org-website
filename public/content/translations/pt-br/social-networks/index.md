@@ -5,7 +5,7 @@ lang: pt-br
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: Plataformas baseadas em blockchain para interação social, criação e distribuição de conteúdo.
 summaryPoint2: As redes de mídia social descentralizadas protegem a privacidade do usuário e aumentam a segurança dos dados.
 summaryPoint3: Tokens e NFTs criam formas de monetizar conteúdo.

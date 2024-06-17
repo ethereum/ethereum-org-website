@@ -4,7 +4,7 @@ description: Pangkalahatang-ideya tungkol sa kung paano magsimula sa pooled stak
 lang: fil
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: Lumalangoy sa pool ang rhino na si Leslie.
 sidebarDepth: 2
 summaryPoints:

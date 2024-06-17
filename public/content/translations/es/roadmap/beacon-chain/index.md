@@ -3,7 +3,7 @@ title: La cadena de baliza
 description: 'Descubra todo lo relacionado con la cadena de baliza: la actualización que introdujo la prueba de participación en Ethereum.'
 lang: es
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
 alt: 
 summaryPoint1: La cadena de baliza ha introducido la prueba de participación en el ecosistema de Ethereum.
 summaryPoint2: Se fusionó con la cadena de prueba de trabajo original de Ethereum en septiembre de 2022.

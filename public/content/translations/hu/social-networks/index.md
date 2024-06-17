@@ -5,7 +5,7 @@ lang: hu
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: Blokkláncalapú platformok a közösségi kapcsolódás, tartalom-létrehozás és -terjesztés céljából.
 summaryPoint2: A decentralizált közösségimédia-hálózatok megvédik a felhasználók privát adatait és növelik az adatbiztonságot.
 summaryPoint3: A tokenek és NFT-k új lehetősége adnak a tartalom fizetőeszközzé alakításához.

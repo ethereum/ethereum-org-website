@@ -197,8 +197,6 @@
           items:
             - id: docs-nav-erc-20
               to: /developers/docs/standards/tokens/erc-20/
-            - id: docs-nav-erc-223
-              to: /developers/docs/standards/tokens/erc-223/
             - id: docs-nav-erc-721
               to: /developers/docs/standards/tokens/erc-721/
             - id: docs-nav-erc-1155
