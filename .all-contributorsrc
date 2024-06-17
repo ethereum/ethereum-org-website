@@ -12141,6 +12141,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "Dennayz",
+      "name": "Dennis Zhang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58843979?v=4",
+      "profile": "https://github.com/Dennayz",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
