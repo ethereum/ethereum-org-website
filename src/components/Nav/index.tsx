@@ -72,7 +72,7 @@ const Nav = () => {
 
               <Show below="md">
                 {/* Mobile */}
-                {/* use Suspense to display the Search & the Meny at the same time */}
+                {/* use Suspense to display the Search & the Menu at the same time */}
                 <Suspense>
                   <Search {...searchModalDisclosure} />
                   <MobileNavMenu
