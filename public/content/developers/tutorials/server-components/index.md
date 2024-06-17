@@ -10,6 +10,18 @@ published: 2024-07-15
 
 ## Introduction {#introduction}
 
+In most cases, a decentralized app uses a server to distribute the software, but all the actual interaction happens between the client (typically, web browser) and the blockchain.
+
+![Normal interaction between web server, client, and blockchain](./fig-1.svg)
+
+However, there are some cases where an application would benefit from having a server component that runs independently. Such a server would be able to respond to events, and to requests that come from other sources, such as an API, by issuing transactions.
+
+![The interaction with the addition of a server](./fig-2.svg)
+
+There are several possible tasks for such a server could fulfill.
+
+- Secret state. In gaming it is often useful not to have all the information that the game knows available to the players. However, *there are no secrets on the blockchain*, any information that is in the blockchain is easy for anybody to figure out. Therefore, if part of the game state is to be kept secret, it has to be stored elsewhere (and possibly have the effects of that state verified using [zero-knowledge proofs](/zero-knowledge-proofs)).
+
 ## Getting started {#getting-started}
 
 ## Listening to events {#listen-events}
