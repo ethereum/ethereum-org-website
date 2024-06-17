@@ -5,7 +5,7 @@ lang: it
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: I sistemi di identità tradizionali hanno centralizzato l'emissione, manutenzione e controllo dei tuoi identificativi.
 summaryPoint2: L'identità decentralizzata rimuove la dipendenza da terze parti centralizzate.
 summaryPoint3: Grazie alle cripto, gli utenti, ora, hanno nuovamente gli strumenti per emettere, detenere e controllare i propri identificativi e attestazioni.

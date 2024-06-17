@@ -1,7 +1,7 @@
 name: Suggest a staking product or service
 description: Suggest a staking product or service to list on ethereum.org
 title: Suggest a staking product or service
-labels: ["feature :sparkles:", "content :fountain_pen:"]
+labels: ["product 🧰"]
 body:
   - type: markdown
     attributes:

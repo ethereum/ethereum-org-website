@@ -4,7 +4,7 @@ description: 以太坊生態系之去中心化金融概要
 lang: zh-tw
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: 以樂高積木製作的以太幣標誌。
 sidebarDepth: 2
 summaryPoint1: 現行金融系統的全球開放性替代方案。

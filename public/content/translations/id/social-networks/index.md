@@ -5,7 +5,7 @@ lang: id
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: Platform berbasis rantai blok untuk interaksi sosial, pembuatan konten, dan penyebaran konten.
 summaryPoint2: Jaringan media sosial yang terdesentralisasi bisa melindungi privasi pengguna dan meningkatkan keamanan data.
 summaryPoint3: Token dan NFT menciptakan cara baru dalam memonetisasi konten.

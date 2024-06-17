@@ -4,7 +4,7 @@ description: Tổng quan về cách bắt đầu với đặt cược ETH nhóm
 lang: vi
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: Tê giác Leslie lơ lửng giữa những đám mây.
 sidebarDepth: 2
 summaryPoints:

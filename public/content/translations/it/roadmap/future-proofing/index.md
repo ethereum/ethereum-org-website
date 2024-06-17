@@ -2,7 +2,7 @@
 title: Rendere Ethereum a prova di futuro
 description: Questi aggiornamenti cementano Ethereum come lo strato fondamentale, resiliente e decentralizzato per il futuro, indipendentemente da ciò che conterrà.
 lang: it
-image: /roadmap/roadmap-future.png
+image: /images/roadmap/roadmap-future.png
 alt: "Roadmap di Ethereum"
 template: roadmap
 ---

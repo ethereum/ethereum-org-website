@@ -4,7 +4,7 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, Flex, HeadingProps } from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp, LearningTool } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, Lang, LearningTool } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
@@ -19,28 +19,29 @@ import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import AlchemyUniversityImage from "@/public/dev-tools/alchemyuniversity.png"
-import BloomTechImage from "@/public/dev-tools/bloomtech.png"
-import BuildSpaceImage from "@/public/dev-tools/buildspace.png"
-import CaptureTheEtherImage from "@/public/dev-tools/capturetheether.png"
-import ChainIDEImage from "@/public/dev-tools/chainIDE.png"
-import ChainShotImage from "@/public/dev-tools/chainshot.png"
-import ConsensysImage from "@/public/dev-tools/consensys.png"
-import CryptoZombieImage from "@/public/dev-tools/crypto-zombie.png"
-import EthDotBuildImage from "@/public/dev-tools/eth-dot-build.png"
-import MetaschoolImage from "@/public/dev-tools/metaschool.png"
-import NFTSchoolImage from "@/public/dev-tools/nftschool.png"
-import EthernautImage from "@/public/dev-tools/oz.png"
-import PlatziImage from "@/public/dev-tools/platzi.png"
-import PointerImage from "@/public/dev-tools/pointer.png"
-import QuestbookImage from "@/public/dev-tools/questbook.png"
-import RemixImage from "@/public/dev-tools/remix.png"
-import ReplitImage from "@/public/dev-tools/replit.png"
-import SpeedRunEthereumImage from "@/public/dev-tools/speed-run-ethereum.png"
-import TenderlyImage from "@/public/dev-tools/tenderly.png"
-import EnterpriseEth from "@/public/enterprise-eth.png"
+import AlchemyUniversityImage from "@/public/images/dev-tools/alchemyuniversity.png"
+import BloomTechImage from "@/public/images/dev-tools/bloomtech.png"
+import BuildSpaceImage from "@/public/images/dev-tools/buildspace.png"
+import CaptureTheEtherImage from "@/public/images/dev-tools/capturetheether.png"
+import ChainIDEImage from "@/public/images/dev-tools/chainIDE.png"
+import ChainShotImage from "@/public/images/dev-tools/chainshot.png"
+import ConsensysImage from "@/public/images/dev-tools/consensys.png"
+import CryptoZombieImage from "@/public/images/dev-tools/crypto-zombie.png"
+import EthDotBuildImage from "@/public/images/dev-tools/eth-dot-build.png"
+import MetaschoolImage from "@/public/images/dev-tools/metaschool.png"
+import NFTSchoolImage from "@/public/images/dev-tools/nftschool.png"
+import EthernautImage from "@/public/images/dev-tools/oz.png"
+import PlatziImage from "@/public/images/dev-tools/platzi.png"
+import PointerImage from "@/public/images/dev-tools/pointer.png"
+import QuestbookImage from "@/public/images/dev-tools/questbook.png"
+import RemixImage from "@/public/images/dev-tools/remix.png"
+import ReplitImage from "@/public/images/dev-tools/replit.png"
+import SpeedRunEthereumImage from "@/public/images/dev-tools/speed-run-ethereum.png"
+import TenderlyImage from "@/public/images/dev-tools/tenderly.png"
+import EnterpriseEth from "@/public/images/enterprise-eth.png"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
@@ -125,12 +126,16 @@ export const getStaticProps = (async ({ locale }) => {
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>

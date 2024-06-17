@@ -5,7 +5,7 @@ lang: nl
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Een wereldwijd, open alternatief voor het huidige wetenschappelijke systeem.
 summaryPoint2: Technologie die wetenschappers in staat stelt om financiering te verwerven, experimenten uit te voeren, gegevens te delen, inzichten te verdelen en meer.

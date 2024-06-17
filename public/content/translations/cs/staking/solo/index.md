@@ -4,7 +4,7 @@ description: Přehled toho, jak začít samostatně vkládat ETH
 lang: cs
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Nosorožec Leslie na svém vlastním počítačovém čipu.
 sidebarDepth: 2
 summaryPoints:
