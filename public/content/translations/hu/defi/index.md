@@ -4,7 +4,7 @@ description: Az Ethereumon működő decentralizált pénzügyek (DeFi) áttekin
 lang: hu
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: Egy LEGO építőkockákból készült Ethereum-logó.
 sidebarDepth: 2
 summaryPoint1: Egy globális és nyitott alternatívája a jelenlegi pénzügyi rendszernek.

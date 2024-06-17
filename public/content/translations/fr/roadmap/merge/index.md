@@ -3,7 +3,7 @@ title: La Fusion
 description: En savoir plus sur La Fusion - quand le réseau principal Ethereum adopte la preuve d'enjeu.
 lang: fr
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt:
 summaryPoint1: Le réseau principal Ethereum utilise la preuve d'enjeu, mais cela n'a pas toujours été le cas.
 summaryPoint2: La mise à niveau du mécanisme original de preuve de travail à celui de la preuve d'enjeu a été appelé La Fusion.

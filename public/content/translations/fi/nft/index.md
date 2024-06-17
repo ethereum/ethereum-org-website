@@ -5,7 +5,7 @@ lang: fi
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Eth-logo hologrammina heijastettuna.
 summaryPoint1: Tapa esittää mitä tahansa ainutlaatuista digitaalisena Ethereum-omaisuuseränä.
 summaryPoint2: NFT:t antavat valtaa sisällöntuottajille ennen näkemättömällä tavalla.

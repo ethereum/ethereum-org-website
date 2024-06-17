@@ -2,7 +2,7 @@
 title: Ethereum zu skalieren
 description: Rollups fassen Transaktionen off-chain zusammen und senken so die Kosten für den Nutzer. Die Art und Weise, wie Rollups derzeit Daten verwenden, ist jedoch zu teuer und schränkt ein, wie günstig Transaktionen sein können. Proto-Danksharding behebt das.
 lang: de
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "Ethereum-Roadmap"
 template: roadmap
 ---

@@ -5,7 +5,7 @@ lang: sl
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Predstavitev DAO, ki glasuje o predlogu.
 summaryPoint1: Skupnosti v lasti članov brez centraliziranega vodstva
 summaryPoint2: Varen način za sodelovanje s tujci prek spleta.

@@ -3,7 +3,7 @@ title: Виведення ставок
 description: На сторінці наведено стислий опис виведення коштів під час стейкінгу, принципу роботи цієї функції, а також порядку дій стейкерів, які бажають отримати свої винагороди.
 lang: uk
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Носоріг Леслі з її винагородами за стейкінг
 sidebarDepth: 2
 summaryPoints:

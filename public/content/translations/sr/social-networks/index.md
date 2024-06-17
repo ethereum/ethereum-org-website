@@ -5,7 +5,7 @@ lang: sr
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: Platforme bazirane na blokčejnu za društvenu interakciju i kreiranje i distribuciju sadržaja.
 summaryPoint2: Decentralizovane društvene mreže štite privatnost korisnika i pospešuju bezbednost podataka.
 summaryPoint3: Tokeni i NFT-ijevi kreiraju nove načine kako monetizovati sadržaj.

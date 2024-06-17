@@ -4,7 +4,7 @@ description: مروری بر نحوه‌ی آغاز سهام‌گذاری به�
 lang: fa
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: لسلی اسب آبی روی تراشه رایانه‌ای خودش.
 sidebarDepth: 2
 summaryPoints:

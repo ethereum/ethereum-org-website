@@ -5,7 +5,7 @@ lang: hu
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Egy globális és nyitott alternatívája a jelenlegi tudományos rendszernek.
 summaryPoint2: Olyan technológia, mely lehetővé teszi a tudósok számára, hogy finanszírozási alapot gyűjtsenek, kísérleteket végezzenek, megosszák az adatokat, kommunikálják elképzeléseiket stb.

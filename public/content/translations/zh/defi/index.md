@@ -4,7 +4,7 @@ description: 以太坊上的去中心化金融简介
 lang: zh
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: 由乐高积木拼成的以太坊徽标。
 sidebarDepth: 2
 summaryPoint1: 当前金融体系的全球性、开放性替代方案。

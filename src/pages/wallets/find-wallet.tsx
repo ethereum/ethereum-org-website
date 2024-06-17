@@ -13,7 +13,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react"
 
-import type { BasePageProps, ChildOnlyProp, Wallet } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, Lang, Wallet } from "@/lib/types"
 
 import BannerNotification from "@/components/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -29,6 +29,7 @@ import PageMetadata from "@/components/PageMetadata"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
   getNonSupportedLocaleWallets,
@@ -37,6 +38,7 @@ import {
 } from "@/lib/utils/wallets"
 
 import {
+  BASE_TIME_UNIT,
   DEFAULT_LOCALE,
   NAV_BAR_PX_HEIGHT,
   WALLETS_FILTERS_DEFAULT,
@@ -44,7 +46,7 @@ import {
 
 import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
 import { useWalletTable } from "@/hooks/useWalletTable"
-import HeroImage from "@/public/wallets/wallet-hero.png"
+import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
 const Subtitle = ({ children }: ChildOnlyProp) => (
   <Text
@@ -64,6 +66,10 @@ type Props = BasePageProps & {
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/wallets/find-wallet"
@@ -87,9 +93,11 @@ export const getStaticProps = (async ({ locale }) => {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
       wallets,
     },
+    // Updated once a day
+    revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
@@ -139,7 +147,7 @@ const FindWalletPage = ({
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
-        image="/wallets/wallet-hero.png"
+        image="/images/wallets/wallet-hero.png"
       />
 
       <BannerNotification shouldShow={true}>
