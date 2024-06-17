@@ -28,12 +28,11 @@ You should have a good understanding of [blockchain fundamentals](/developers/do
 
 There are three attributes we'd like to have for data.
 
-- *Confidentiality*, unauthorized entities are not allowed to read the information. This is useful in many cases, but *there are no secrets on the blockchain*. Blockchains work because everybody can verify the state transitions, so it is impossible to use them to store secrets directly. There are ways to store confidential information on the blockchain, but they all rely on some offchain component to store at least a key.
+- _Confidentiality_, unauthorized entities are not allowed to read the information. This is useful in many cases, but _there are no secrets on the blockchain_. Blockchains work because everybody can verify the state transitions, so it is impossible to use them to store secrets directly. There are ways to store confidential information on the blockchain, but they all rely on some offchain component to store at least a key.
 
-- *Integrity*, the information is correct, it cannot be changed by unauthorized entities, or in unauthorized ways (for example, transferring [ERC-20 tokens](https://eips.ethereum.org/EIPS/eip-20#events) without a `Transfer` event). On the blockchain, every node verifies every state change, which ensures integrity.
+- _Integrity_, the information is correct, it cannot be changed by unauthorized entities, or in unauthorized ways (for example, transferring [ERC-20 tokens](https://eips.ethereum.org/EIPS/eip-20#events) without a `Transfer` event). On the blockchain, every node verifies every state change, which ensures integrity.
 
-- *Availability*, the information is available to any authorized entity. On the blockchain, this is usually achieved by having the information available on every [full node](https://ethereum.org/developers/docs/nodes-and-clients#full-node).
-
+- _Availability_, the information is available to any authorized entity. On the blockchain, this is usually achieved by having the information available on every [full node](https://ethereum.org/developers/docs/nodes-and-clients#full-node).
 
 ## EIP-4844 blobs {#eip-4844-blobs}
 
@@ -49,11 +48,11 @@ At writing posting on EIP-4844 costs one wei (10<sup>-18</sup> ETH) per byte, wh
 
 Here are the addresses to see the blobs posted by some famous rollups.
 
-|Rollup | Mailbox address |
-| ----- | - |
+| Rollup                               | Mailbox address                                                                                                         |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
 | [Optimism](https://www.optimism.io/) | [`0xFF00000000000000000000000000000000000010`](https://blobscan.com/address/0xFF00000000000000000000000000000000000010) |
-| [Arbitrum](https://arbitrum.io/) | [`0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6`](https://blobscan.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6) |
-| [Base](https://base.org/) | [`0xFF00000000000000000000000000000000008453`](https://blobscan.com/address/0xFF00000000000000000000000000000000008453) |
+| [Arbitrum](https://arbitrum.io/)     | [`0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6`](https://blobscan.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6) |
+| [Base](https://base.org/)            | [`0xFF00000000000000000000000000000000008453`](https://blobscan.com/address/0xFF00000000000000000000000000000000008453) |
 
 ## Calldata {#calldata}
 
@@ -65,40 +64,36 @@ At writing the prices are 12 gwei/gas and 2300 $/ETH, which means the cost is ap
 
 Here are the addresses to see the transactions posted by some famous rollups.
 
-|Rollup | Mailbox address |
-| ----- | - |
-| [Optimism](https://www.optimism.io/) | [`0xFF00000000000000000000000000000000000010`](https://eth.blockscout.com/address/0xFF00000000000000000000000000000000000010)
-| [Arbitrum](https://arbitrum.io/) | [`0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6`](https://eth.blockscout.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6)
-| [Base](https://base.org/) | [`0xFF00000000000000000000000000000000008453`](https://eth.blockscout.com/address/0xFF00000000000000000000000000000000008453)
-
+| Rollup                               | Mailbox address                                                                                                               |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| [Optimism](https://www.optimism.io/) | [`0xFF00000000000000000000000000000000000010`](https://eth.blockscout.com/address/0xFF00000000000000000000000000000000000010) |
+| [Arbitrum](https://arbitrum.io/)     | [`0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6`](https://eth.blockscout.com/address/0x1c479675ad559DC151F6Ec7ed3FbF8ceE79582B6) |
+| [Base](https://base.org/)            | [`0xFF00000000000000000000000000000000008453`](https://eth.blockscout.com/address/0xFF00000000000000000000000000000000008453) |
 
 ## Offchain with L1 mechanisms {#offchain-with-l1-mechs}
 
 Depending on your security tradeoffs, it might be acceptable to put the information elsewhere and use a mechanism that ensures the data is available when needed. There are two requirements for this to work:
 
-1. Post a [hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) of the data on the blockchain, called an *input commitment*. This can be a single 32-byte word, so it is not expensive. As long as the input commitment is available, integrity is assured because it's not feasible to find any other data that would hash to the same value. So if incorrect data is provided, it can be detected.
+1. Post a [hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) of the data on the blockchain, called an _input commitment_. This can be a single 32-byte word, so it is not expensive. As long as the input commitment is available, integrity is assured because it's not feasible to find any other data that would hash to the same value. So if incorrect data is provided, it can be detected.
 
 2. Have a mechanism that ensures availability. For example, in [Redstone](https://redstone.xyz/docs/what-is-redstone) any node can submit an availability challenge. If the sequencer does not respond onchain by the deadline, the input commitment is discarded, so the information is considered never to have been posted.
 
 This is acceptable for an optimistic rollup because we are already relying on having at least one honest verifier for the state root. Such an honest verifier will also make sure it has the data to process blocks, and issue an availability challenge if the information is not available offchain. This type of optimistic rollup is called [plasma](/developers/docs/scaling/plasma/).
 
-
 ## Contract code {#contract-code}
 
-Information that only needs to be written once, never gets overwritten, and needs to be available onchain can be stored as contract code. This means that we create a "smart contract" with the data and then use [`EXTCODECOPY`](https://www.evm.codes/#3c?fork=shanghai) to read the information. The advantage is that copying code is relatively cheap. 
+Information that only needs to be written once, never gets overwritten, and needs to be available onchain can be stored as contract code. This means that we create a "smart contract" with the data and then use [`EXTCODECOPY`](https://www.evm.codes/#3c?fork=shanghai) to read the information. The advantage is that copying code is relatively cheap.
 
 Other than the cost of memory expansion, `EXTCODECOPY` costs 2600 gas for the first access to a contract (when it is "cold") and 100 gas for subsequent copies from the same contract plus 3 gas per 32 byte word. Compared with calldata, which costs 15.95 per byte, this is cheaper starting at about 200 bytes. Based on [the formula for memory expansion costs](https://www.evm.codes/about#memoryexpansion), at long as you don't need more than 4MB of memory, the memory expansion cost is smaller than the cost of adding calldata.
 
-Of course, this is just the cost to *read* the data. To create the contract costs approximately 32,000 gas + 200 gas/byte. This method is only economical when the same information needs to be read many times in different transactions.
+Of course, this is just the cost to _read_ the data. To create the contract costs approximately 32,000 gas + 200 gas/byte. This method is only economical when the same information needs to be read many times in different transactions.
 
-Contract code can be nonsensical, as long as it doesn't start with `0xEF`. Contracts that start with `0xEF` are interpreted as [ethereum object format](https://notes.ethereum.org/@ipsilon/evm-object-format-overview), which has much stricter requirements. 
-
+Contract code can be nonsensical, as long as it doesn't start with `0xEF`. Contracts that start with `0xEF` are interpreted as [ethereum object format](https://notes.ethereum.org/@ipsilon/evm-object-format-overview), which has much stricter requirements.
 
 ## Events {#events}
 
 [Events](https://docs.alchemy.com/docs/solidity-events) are emitted by smart contracts, and read by offchain software.
 Their advantage is that offchain code can listen for events. The cost is [gas](https://www.evm.codes/#a0?fork=cancun), 375 plus 8 gas per byte of data. At 12 gwei/gas and 2300 $/ETH, this translates to one cent plus 22 cents per kilobyte.
-
 
 ## Storage {#storage}
 
@@ -106,17 +101,15 @@ Smart contracts have access to [persistent storage](https://docs.alchemy.com/doc
 
 This is the most expensive form of storage in Ethereum.
 
-
-
 ## Summary {#summary}
 
 This table summarizes the difference options, their advantages and disadvantages.
 
-| Storage type | Source of data | Availability guarantee | Onchain availability | Additional limitations
-| - | - | - | - | - |
-| EIP-4844 blobs | Offchain | Ethereum guarantee for [~18 days](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration) | Only hash is available |  |
-| Calldata | Offchain | Ethereum guarantee forever (part of the blockchain) | Only available if written to a contract, and at that transaction |
-| Offchain with L1 mechanisms | Offchain | "One honest verifier" guarantee during the challenge period | Hash only | Guaranteed by the challenge mechanism, only during the challenge period
-| Contract code | Onchain or offchain | Ethereum guarantee forever (part of the blockchain) | Yes | Written to a "random" address, cannot start with `0xEF`
-| Events | Onchain | Ethereum guarantee forever (part of the blockchain) | No |
-| Storage | Onchain | Ethereum guarantee forever (part of the blockchain and the present state until overwritten) | Yes |
+| Storage type                | Source of data      | Availability guarantee                                                                                                             | Onchain availability                                             | Additional limitations                                                  |
+| --------------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| EIP-4844 blobs              | Offchain            | Ethereum guarantee for [~18 days](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/p2p-interface.md#configuration) | Only hash is available                                           |                                                                         |
+| Calldata                    | Offchain            | Ethereum guarantee forever (part of the blockchain)                                                                                | Only available if written to a contract, and at that transaction |
+| Offchain with L1 mechanisms | Offchain            | "One honest verifier" guarantee during the challenge period                                                                        | Hash only                                                        | Guaranteed by the challenge mechanism, only during the challenge period |
+| Contract code               | Onchain or offchain | Ethereum guarantee forever (part of the blockchain)                                                                                | Yes                                                              | Written to a "random" address, cannot start with `0xEF`                 |
+| Events                      | Onchain             | Ethereum guarantee forever (part of the blockchain)                                                                                | No                                                               |
+| Storage                     | Onchain             | Ethereum guarantee forever (part of the blockchain and the present state until overwritten)                                        | Yes                                                              |
