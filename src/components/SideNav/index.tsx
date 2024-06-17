@@ -16,6 +16,8 @@ import { DeveloperDocsLink } from "@/lib/interfaces"
 
 import { BaseLink, LinkProps } from "@/components/Link"
 
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
 export const dropdownIconContainerVariant = {
   open: {
     rotate: 90,
@@ -62,6 +64,7 @@ export type NavLinkProps = {
 
 const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
   const { t } = useTranslation("page-developers-docs")
+  const { isRtl } = useRtlFlip()
 
   const isLinkInPath = path.includes(item.to) || path.includes(item.path)
   const [isOpen, setIsOpen] = useState(isTopLevel || isLinkInPath)
@@ -82,17 +85,24 @@ const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
         <AccordionItem>
           <h2>
             <AccordionButton
+              sx={{
+                svg: {
+                  transform: isRtl ? "rotate(90deg)" : "rotate(270deg)",
+                },
+              }}
               _expanded={{
                 bg: "none",
                 color: "primary.highContrast",
-                svg: { transform: "rotate(180deg)" },
+                svg: {
+                  transform: "rotate(180deg)",
+                },
               }}
               _hover={{
                 bg: "primary.lowContrast",
                 color: "primary.highContrast",
               }}
             >
-              <Box as="span" flex="1" textAlign="left">
+              <Box as="span" flex="1" textAlign={isRtl ? "right" : "left"}>
                 {item.to && (
                   <SideNavLink href={item.to} isPartiallyActive={false}>
                     {t(item.id)}
