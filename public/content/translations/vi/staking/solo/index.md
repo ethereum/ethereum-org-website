@@ -4,7 +4,7 @@ description: Tổng quan về cách bắt đầu đặt cọc ETH một mình
 lang: vi
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Tê giác Leslie trên chip máy tính riêng.
 sidebarDepth: 2
 summaryPoints:

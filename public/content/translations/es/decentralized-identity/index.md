@@ -5,7 +5,7 @@ lang: es
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: Los sistemas tradicionales de identidad han centralizado la emisión, mantenimiento y control de sus identificadores.
 summaryPoint2: La identidad descentralizada elimina la dependencia de terceras partes centralizadas.
 summaryPoint3: Gracias a la criptografía, los usuarios tienen ahora las herramientas para emitir, retener y controlar sus propios identificadores y certificaciones.

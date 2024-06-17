@@ -4,7 +4,7 @@ description: पूल किए गए ETH स्टेकिंग के स�
 lang: hi
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: लेस्ली राइनो पूल में तैर रहा है।
 sidebarDepth: 2
 summaryPoints:

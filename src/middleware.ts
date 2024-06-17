@@ -26,20 +26,23 @@ export const config = {
     "/", // explicit matcher for root route
     /*
      * Match all request paths except for the ones starting with:
-     * - api (API routes)
      * - _next/static (static files)
      */
-    "/((?!api|_next/static).*)",
+    "/((?!_next/static).*)",
   ],
 }
 
 // Middleware required to always display the locale prefix in the URL. It
 // redirects to the default locale if the locale is not present in the URL
 export async function middleware(req: NextRequest) {
-  const { pathname, locale } = req.nextUrl
+  const { pathname, locale, search } = req.nextUrl
 
-  if (pathname.startsWith("/_next") || PUBLIC_FILE.test(pathname)) {
-    return NextResponse.next()
+  if (
+    pathname.startsWith("/_next") ||
+    pathname.includes("/api/") ||
+    PUBLIC_FILE.test(pathname)
+  ) {
+    return
   }
 
   if (locale === FAKE_LOCALE) {
@@ -48,7 +51,7 @@ export async function middleware(req: NextRequest) {
     const localeDetected = detectLocale(req.headers.get("accept-language"))
     const locale = localeDetected || DEFAULT_LOCALE
 
-    const redirectUrl = new URL(`/${locale}${pathname}`, req.url)
+    const redirectUrl = new URL(`/${locale}${pathname}${search}`, req.url)
 
     // Add trailing slash if it's not present
     if (!redirectUrl.pathname.endsWith("/")) {
@@ -57,6 +60,4 @@ export async function middleware(req: NextRequest) {
 
     return NextResponse.redirect(redirectUrl, { status: 301 })
   }
-
-  return NextResponse.next()
 }

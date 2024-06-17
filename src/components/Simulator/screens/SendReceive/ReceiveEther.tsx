@@ -8,8 +8,8 @@ import { Image } from "@/components/Image"
 import { FAKE_DEMO_ADDRESS } from "../../constants"
 import { NotificationPopover } from "../../NotificationPopover"
 
-import QRDark from "@/public/qr-code-ethereum-org-dark.png"
-import QRLight from "@/public/qr-code-ethereum-org-light.png"
+import QRDark from "@/public/images/qr-code-ethereum-org-dark.png"
+import QRLight from "@/public/images/qr-code-ethereum-org-light.png"
 
 const MotionBox = motion(Box)
 

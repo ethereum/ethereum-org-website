@@ -5,7 +5,7 @@ lang: kn
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: ಸಾಮಾಜಿಕ ಸಂವಹನ ಮತ್ತು ವಿಷಯ ರಚನೆ ಮತ್ತು ವಿತರಣೆಗಾಗಿ ಬ್ಲಾಕ್‍ಚೈನ್ ಆಧಾರಿತ ವೇದಿಕೆಗಳು.
 summaryPoint2: ವಿಕೇಂದ್ರೀಕೃತ ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮ ನೆಟ್‍ವರ್ಕ್‍ಗಳು ಬಳಕೆದಾರರ ಗೌಪ್ಯತೆಯನ್ನು ರಕ್ಷಿಸುತ್ತವೆ ಮತ್ತು ಡೇಟಾ ಭದ್ರತೆಯನ್ನು ಹೆಚ್ಚಿಸುತ್ತವೆ.
 summaryPoint3: ಟೋಕನ್‍ಗಳು ಮತ್ತು NFTಗಳು ವಿಷಯವನ್ನು ಹಣಗಳಿಸಲು ಹೊಸ ಮಾರ್ಗಗಳನ್ನು ರಚಿಸುತ್ತವೆ.

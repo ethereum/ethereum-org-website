@@ -26,7 +26,7 @@ const meta = {
 
 export default meta
 
-import homeHeroImg from "@/public/home/hero.png"
+import homeHeroImg from "@/public/images/home/hero.png"
 
 export const HomeHero: StoryObj<typeof meta> = {
   args: {

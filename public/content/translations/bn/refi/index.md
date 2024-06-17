@@ -5,7 +5,7 @@ lang: bn
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: পুনঃউৎপাদনমূলক নীতির উপর নির্মিত একটি বিকল্প অর্থনৈতিক ব্যবস্থা
 summaryPoint2: জলবায়ু পরিবর্তনের মতো বিশ্ব-স্তরের সমন্বয় সংকট সমাধানের জন্য ইথেরিয়ামকে কাজে লাগানোর একটি প্রচেষ্টা

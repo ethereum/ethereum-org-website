@@ -87,13 +87,17 @@ export const getStaticProps = (async ({ locale }) => {
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       internalTutorials: getTutorialsData(locale!),
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<Props>
@@ -126,6 +130,7 @@ export interface ITutorial {
 
 const published = (locale: string, published: string) => {
   const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
+
   return localeTimestamp !== "Invalid Date" ? (
     <span>
       <Emoji text=":calendar:" fontSize="sm" ms={2} me={2} />

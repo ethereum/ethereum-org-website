@@ -2,7 +2,7 @@
 title: Масштабування Ethereum
 description: Зведення об’єднують транзакції офчейн, зменшуючи витрати для користувача. Проте спосіб використання даних у зведеннях зараз задорогий, що обмежує можливість здешевлення транзакцій. Прото-данкшардинг виправляє це.
 lang: uk
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "План розвитку Ethereum"
 template: roadmap
 ---

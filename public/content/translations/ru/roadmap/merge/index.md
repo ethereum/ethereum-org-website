@@ -3,7 +3,7 @@ title: Слияние
 description: Узнайте о слиянии — переходе основной сети Ethereum на доказательство владения.
 lang: ru
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Основная сеть Ethereum использует доказательство владения, но так было не всегда.
 summaryPoint2: Переход от изначального механизма доказательства работы на доказательство владения был назван слиянием.

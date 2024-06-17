@@ -4,7 +4,7 @@ description: Przegląd tego, jak rozpocząć korzystanie ze stakowania ETH w pul
 lang: pl
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: Nosorożec Leslie pływający w basenie.
 sidebarDepth: 2
 summaryPoints:

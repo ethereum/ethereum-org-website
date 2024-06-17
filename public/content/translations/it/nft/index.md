@@ -5,7 +5,7 @@ lang: it
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 3
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Un logo Eth visualizzato tramite ologramma.
 summaryPoint1: Un modo pe rappresentare qualsiasi cosa sia univoca, come una risorsa basata su Ethereum.
 summaryPoint2: I NFT stanno dando ai creatori di contenuti più potere che mai.

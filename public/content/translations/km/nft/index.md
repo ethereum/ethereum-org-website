@@ -5,7 +5,7 @@ lang: km
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: និមិត្តសញ្ញា Eth ត្រូវបានបង្ហាញតាមរយៈ hologram ។
 summaryPoint1: មធ្យោបាយដើម្បីតំណាងឱ្យអ្វីដែលប្លែកខុសគេជាទ្រព្យសកម្មដែលមានមូលដ្ឋានលើ Ethereum
 summaryPoint2: NFTs នឹងផ្តល់អំណាចកាន់តែច្រើនដល់អ្នកបង្កើតមាតិកាជាងពេលមុនៗ

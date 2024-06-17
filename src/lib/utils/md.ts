@@ -140,6 +140,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/standards",
     "/developers/docs/standards/tokens",
     "/developers/docs/standards/tokens/erc-20",
+    "/developers/docs/standards/tokens/erc-223",
     "/developers/docs/standards/tokens/erc-721",
     "/developers/docs/standards/tokens/erc-777",
     "/developers/docs/standards/tokens/erc-1155",
@@ -335,7 +336,13 @@ export const getContentBySlug = (slug: string) => {
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data, content } = matter(fileContents)
   const frontmatter = data as Frontmatter
-  const items: Omit<MdPageContent, "tocItems" | "contributors"> = {
+  const items: Omit<
+    MdPageContent,
+    | "tocItems"
+    | "contributors"
+    | "lastEditLocaleTimestamp"
+    | "lastDeployLocaleTimestamp"
+  > = {
     slug,
     content,
     frontmatter,

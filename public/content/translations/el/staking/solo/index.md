@@ -4,7 +4,7 @@ description: Μια επισκόπηση πώς να ξεκινήσετε μόν
 lang: el
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Η Leslie ο ρινόκερος στο δικό της υπολογιστή.
 sidebarDepth: 2
 summaryPoints:
