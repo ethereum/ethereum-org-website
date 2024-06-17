@@ -57,7 +57,7 @@ To run it:
    npm start
    ```
 
-5. Go to [https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract], and using a different address than the one that has the private key modify the greeting. See that the greeting is automatically modified back.
+5. Go to [a block explorer](https://eth-holesky.blockscout.com/address/0xB8f6460Dc30c44401Be26B0d6eD250873d8a50A6?tab=write_contract), and using a different address than the one that has the private key modify the greeting. See that the greeting is automatically modified back.
 
 ## The tools {#the-tools}
 
