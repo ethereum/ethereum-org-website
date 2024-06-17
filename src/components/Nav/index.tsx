@@ -1,5 +1,4 @@
-import { useRef } from "react"
-import dynamic from "next/dynamic"
+import { lazy, Suspense, useRef } from "react"
 import { useTranslation } from "next-i18next"
 import { Box, Flex, Show, useDisclosure } from "@chakra-ui/react"
 
@@ -15,9 +14,7 @@ import DesktopNavMenu from "./Desktop"
 import Menu from "./Menu"
 import { useNav } from "./useNav"
 
-const MobileNavMenu = dynamic(() => import("./Mobile"), {
-  ssr: false,
-})
+const MobileNavMenu = lazy(() => import("./Mobile"))
 
 // TODO display page title on mobile
 const Nav = () => {
@@ -74,13 +71,17 @@ const Nav = () => {
               </Show>
 
               <Show below="md">
-                <Search {...searchModalDisclosure} />
-                <MobileNavMenu
-                  {...mobileNavProps}
-                  linkSections={linkSections}
-                  toggleSearch={searchModalDisclosure.onOpen}
-                  drawerContainerRef={navWrapperRef}
-                />
+                {/* Mobile */}
+                {/* use Suspense to display the Search & the Meny at the same time */}
+                <Suspense>
+                  <Search {...searchModalDisclosure} />
+                  <MobileNavMenu
+                    {...mobileNavProps}
+                    linkSections={linkSections}
+                    toggleSearch={searchModalDisclosure.onOpen}
+                    drawerContainerRef={navWrapperRef}
+                  />
+                </Suspense>
               </Show>
             </Flex>
           </Flex>
