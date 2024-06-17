@@ -148,7 +148,7 @@
   "page-staking-how-solo-works-item-4": "Generate your keys and load them into your validator client",
   "page-staking-how-solo-works-item-5": "Monitor and maintain your node",
   "page-staking-launchpad-widget-testnet-label": "Goerli testnet",
-  "page-staking-launchpad-widget-testnet-start": "Start staking on Goerli testnet",
+  "page-staking-launchpad-widget-testnet-start": "Start staking on Holesky testnet",
   "page-staking-launchpad-widget-mainnet-label": "Mainnet",
   "page-staking-launchpad-widget-mainnet-start": "Start staking on Mainnet",
   "page-staking-launchpad-widget-span": "Choose network",
