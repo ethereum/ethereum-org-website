@@ -43,7 +43,7 @@ La stragrande maggioranza delle transazioni, accede a un contratto da un conto p
 Tuttavia, l'ABI è stata progettata per il L1, dove un byte di calldata costa approssimativamente quanto quattro operazioni aritmetiche, non per il L2 dove un byte di calldata costa più di un migliaio di operazioni aritmetiche. Ad esempio, [ecco una transazione di trasferimento ERC-20](https://kovan-optimistic.etherscan.io/tx/0x7ce4c144ebfce157b4de99d8ad53a352ae91b57b3fa06d8a1c79439df6bfa998). I calldata sono divisi come segue:
 
 | Sezione                   | Lunghezza |  Byte | Byte sprecati | Gas sprecato | Byte necessari | Gas necessario |
-| ------------------------- | --------: | ----: | ------------: | -----------: | -------------: | -------------: |
+| ------------------------- | ---------:| -----:| -------------:| ------------:| --------------:| --------------:|
 | Selettore della funzione  |         4 |   0-3 |             3 |           48 |              1 |             16 |
 | Zeri                      |        12 |  4-15 |            12 |           48 |              0 |              0 |
 | Indirizzo di destinazione |        20 | 16-35 |             0 |            0 |             20 |            320 |
@@ -68,7 +68,7 @@ Supponendo di non avere il controllo sul contratto di destinazione, puoi comunqu
 
 ```solidity
     /**
-     * @dev Dà al chiamante 1000 token da usare
+     * @dev Gives the caller 1000 tokens to play with
      */
     function faucet() external {
         _mint(msg.sender, 1000);
@@ -102,8 +102,8 @@ L'indirizzo del token per cui siamo un proxy.
 ```solidity
 
     /**
-     * @dev Specifica l'indirizzo del token
-     * @param tokenAddr_ Indirizzo del contratto ERC-20
+     * @dev Specify the token address
+     * @param tokenAddr_ ERC-20 contract address
      */
     constructor(
         address tokenAddr_
@@ -125,10 +125,10 @@ Leggi un valore dai calldata.
         uint _retVal;
 
         require(length < 0x21,
-            "calldataVal il limite di lunghezza è 32 byte");
+            "calldataVal length limit is 32 bytes");
 
         require(length + startByte <= msg.data.length,
-            "calldataVal sta provando a leggere oltre calldatasize");
+            "calldataVal trying to read beyond calldatasize");
 ```
 
 Caricheremo in memoria un'unica parola da 32 byte (256 bit) e rimuoveremo i byte che non fanno parte del campo che vogliamo. Questo algoritmo non funziona per valori più lunghi di 32 byte e, ovviamente, non possiamo leggere oltre il termine dei calldata. Sul L1, potrebbe esser necessario saltare questi test per risparmiare sul gas, ma sul L2, il gas è estremamente economico, consentendo qualsiasi controllo d'integrità immaginabile.
@@ -176,8 +176,8 @@ Sfortunatamente, [guardando alle specifiche dell'ERC-20](https://eips.ethereum.o
 
 ```solidity
 
-        // Chiama i metodi di modifica dello stato del token usando
-        // informazioni dal calldata
+        // Call the state changing methods of token using
+        // information from the calldata
 
         // faucet
         if (_func == 1) {
@@ -195,7 +195,7 @@ Una chiamata a `faucet()`, priva di parametri.
 Dopo aver chiamato `token.faucet()` otteniamo i token. Tuttavia, come contratto proxy, non **necessitiamo** di token. L'EOA (conto posseduto esternamente) o il contratto che ci ha chiamati, sì. Quindi trasferiamo tutti i nostri token a chiunque ci abbia chiamati.
 
 ```solidity
-        // transfer (suppone un'identità per esso)
+        // transfer (assume we have an allowance for it)
         if (_func == 2) {
 ```
 
@@ -228,7 +228,7 @@ Per questo contratto specifico supponiamo che il numero massimo di token che chi
 In generale, un trasferimento richiede 35 byte di calldata:
 
 | Sezione                   | Lunghezza |  Byte |
-| ------------------------- | --------: | ----: |
+| ------------------------- | ---------:| -----:|
 | Selettore della funzione  |         1 |     0 |
 | Indirizzo di destinazione |        32 |  1-32 |
 | Importo                   |         2 | 33-34 |
@@ -264,7 +264,7 @@ describe("CalldataInterpreter", function () {
 Iniziamo distribuendo entrambi i contratti.
 
 ```javascript
-    // Ottiene token da usare
+    // Get tokens to play with
     const faucetTx = {
 ```
 
@@ -289,14 +289,14 @@ Ci sono due parametri che dobbiamo fornire per la transazione:
 Chiamiamo [il metodo `sendTransaction` del firmatario](https://docs.ethers.io/v5/api/signer/#Signer-sendTransaction) perché abbiamo già specificato la destinazione (`faucetTx.to`) e ci serve che la transazione sia firmata.
 
 ```javascript
-// Controlla che il faucet fornisca correttamente i token
+// Check the faucet provides the tokens correctly
 expect(await token.balanceOf(signer.address)).to.equal(1000)
 ```
 
 Qui verifichiamo il saldo. Non serve risparmiare gas sulle funzioni `view`, quindi le eseguiamo normalmente.
 
 ```javascript
-// Dà un'indennità al CDI (impossibile proxare le approvazioni)
+// Give the CDI an allowance (approvals cannot be proxied)
 const approveTX = await token.approve(cdi.address, 10000)
 await approveTX.wait()
 expect(await token.allowance(signer.address, cdi.address)).to.equal(10000)
@@ -305,7 +305,7 @@ expect(await token.allowance(signer.address, cdi.address)).to.equal(10000)
 Dà all'interprete dei calldata un'indennità per poter effettuare trasferimenti.
 
 ```javascript
-// Trasferisce i token
+// Transfer tokens
 const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
 const transferTx = {
   to: cdi.address,
@@ -318,10 +318,10 @@ Crea una transazione di trasferimento. Il primo byte è "0x02", seguito dall'ind
 ```javascript
     await (await signer.sendTransaction(transferTx)).wait()
 
-    // Verifichiamo che abbiamo 256 token in meno
+    // Check that we have 256 tokens less
     expect (await token.balanceOf(signer.address)).to.equal(1000-256)
 
-    // E che la nostra destinazione li ha ricevuti
+    // And that our destination got them
     expect (await token.balanceOf(destAddr)).to.equal(256)
   })    // it
 })      // describe
@@ -348,10 +348,10 @@ Se il contratto rispondesse solo alle transazioni esterne, potremmo riuscirsi co
 In questo esempio, possiamo modificare `Token.sol`. Questo ci permette di avere un numero di funzioni che solo il proxy può chiamare. Ecco le nuove parti:
 
 ```solidity
-    // Il solo indirizzo che può specificare l'indirizzo di CalldataInterpreter
+    // The only address allowed to specify the CalldataInterpreter address
     address owner;
 
-    // L'indirizzo di CalldataInterpreter
+    // The CalldataInterpreter address
     address proxy = address(0);
 ```
 
@@ -359,7 +359,7 @@ Il contratto ERC-20 deve conoscere l'identità del proxy autorizzato. Tuttavia, 
 
 ```solidity
     /**
-     * @dev Chiama il costruttore dell'ERC-20.
+     * @dev Calls the ERC20 constructor.
      */
     constructor(
     ) ERC20("Oris useless token-2", "OUT-2") {
@@ -371,12 +371,12 @@ L'indirizzo del creatore (chiamato `owner`) è memorizzato qui perché è l'unic
 
 ```solidity
     /**
-     * @dev imposta l'indirizzo per il proxy (il CalldataInterpreter).
-     * Può esser chiamata solo dal proprietario
+     * @dev set the address for the proxy (the CalldataInterpreter).
+     * Can only be called once by the owner
      */
     function setProxy(address _proxy) external {
-        require(msg.sender == owner, "Può esser chiamata solo dal proprietario");
-        require(proxy == address(0), "Proxy già impostato");
+        require(msg.sender == owner, "Can only be called by owner");
+        require(proxy == address(0), "Proxy is already set");
 
         proxy = _proxy;
     }    // function setProxy
@@ -386,7 +386,7 @@ Il proxy ha accesso privilegiato, perché può bypassare i controlli di sicurezz
 
 ```solidity
     /**
-     * @dev Alcune funzioni possono esser chiamate solo dal proxy.
+     * @dev Some functions may only be called by the proxy.
      */
     modifier onlyProxy {
 ```
@@ -407,7 +407,7 @@ In primo luogo, verifica che siamo stati chiamati dal proxy e da nessun altro. A
 Se è così, esegui la funzione che modifichiamo.
 
 ```solidity
-   /* Funzioni che consentono al proxy di fare effettivamente il proxy per i conti */
+   /* Functions that allow the proxy to actually proxy for accounts */
 
     function transferProxy(address from, address to, uint256 amount)
         public virtual onlyProxy() returns (bool)
@@ -446,7 +446,7 @@ Queste sono tre operazioni che normalmente richiedono che il messaggio provenga 
 L'interprete dei dati della chiamata è praticamente identico a quello precedente, tranne che le funzioni in proxy ricevono un parametro `msg.sender` e non è necessaria un'indennità per `transfer`.
 
 ```solidity
-        // transfer (indennità non necessaria)
+        // transfer (no need for allowance)
         if (_func == 2) {
             token.transferProxy(
                 msg.sender,
@@ -491,7 +491,7 @@ Dobbiamo dire al contratto ERC-20 di quale proxy fidarsi
 ```js
 console.log("CalldataInterpreter addr:", cdi.address)
 
-// Servono due firmatari per verificare le indennità
+// Need two signers to verify allowances
 const signers = await ethers.getSigners()
 const signer = signers[0]
 const poorSigner = signers[1]
@@ -500,7 +500,7 @@ const poorSigner = signers[1]
 Per verificare `approve()` e `transferFrom()`, ci serve un secondo firmatario. Lo chiamiamo `poorSigner` perché non riceve nessuno dei nostri token (deve avere degli ETH, ovviamente).
 
 ```js
-// Trasferisci i token
+// Transfer tokens
 const destAddr = "0xf5a6ead936fb47f342bb63e676479bddf26ebe1d"
 const transferTx = {
   to: cdi.address,
@@ -512,7 +512,7 @@ await (await signer.sendTransaction(transferTx)).wait()
 Poiché il contratto ERC-20 si fida del proxy (`cdi`), non ci serve un'indennità per inoltrare i trasferimenti.
 
 ```js
-// approvazione e transferFrom
+// approval and transferFrom
 const approveTx = {
   to: cdi.address,
   data: "0x03" + poorSigner.address.slice(2, 42) + "00FF",
@@ -527,7 +527,7 @@ const transferFromTx = {
 }
 await (await poorSigner.sendTransaction(transferFromTx)).wait()
 
-// Controlla che la combo approva / transferFrom sia stata eseguita correttamente
+// Check the approve / transferFrom combo was done correctly
 expect(await token.balanceOf(destAddr2)).to.equal(255)
 ```
 

@@ -3,14 +3,14 @@ title: Die Zusammenführung
 description: Erfahren Sie mehr über die Zusammenführung, als Mainnet Ethereum Proof-of-Stake einführte.
 lang: de
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 summaryPoint1: Ethereum Mainnet verwendet Proof-of-Stake, aber das war nicht immer der Fall.
 summaryPoint2: Der Wechsel vom ursprünglichen Proof-of-Work Mechanismus zu Proof-of-Stake wurde Zusammenführung genannt.
 summaryPoint3: Die Zusammenführung bezieht sich auf das ursprüngliche Ethereum Mainnet, welches mit einer separaten Proof-of-Stake-Blockchain namens Beacon Chain vereinigt wurde, und somit nun beide als eine Blockchain existieren.
 summaryPoint4: Die Zusammenführung reduzierte Ethereums Energieverbrauch um ca. 99,95 %.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Die Zusammenführung wurde am 15. September 2022 durchgeführt. Dies vervollständigte Ethereums Übergang zu Proof-of-Stake, was Proof-of-Work offiziell abschaffte und den Energieverbrauch um ~99,95 % verringert hat.
 </UpgradeStatus>
 

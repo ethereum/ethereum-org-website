@@ -90,7 +90,7 @@ Ogni ramo è separato da uno `/`, quindi `m/2` significa iniziare con la chiave 
 
 ![logica della chiave del validatore](multiple-keys.png)
 
-## Lettura consigliate {#further-reading}
+## Letture consigliate {#further-reading}
 
 - [Post del blog della Ethereum Foundation di Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [Generazione delle chiavi BLS12-381 dell'EIP-2333](https://eips.ethereum.org/EIPS/eip-2333)

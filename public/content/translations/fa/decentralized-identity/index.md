@@ -5,7 +5,7 @@ lang: fa
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: سیستم های هویت صنعتی صدور، نگهداری و کنترل شناسه های شما را متمرکز کرده اند.
 summaryPoint2: هویت نامتمرکز اتکا، اشخاص ثالث متمرکز را از بین می برد.
 summaryPoint3: به لطف رمزنگاری، کاربران اکنون ابزارهایی برای صدور، نگهداری و کنترل مجدد شناسه ها و گواهی های خود دارند.

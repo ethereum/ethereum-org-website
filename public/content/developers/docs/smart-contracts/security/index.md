@@ -90,7 +90,10 @@ After testing your contract, it is good to ask others to check the source code f
 
 Commissioning a smart contract audit is one way of conducting an independent code review. Auditors play an important role in ensuring that smart contracts are secure and free from quality defects and design errors.
 
-That said, you should avoid treating audits as a silver bullet. Smart contract audits won't catch every bug and are mostly designed to provide an additional round of reviews, which can help detect issues missed by developers during initial development and testing. You should also follow [best practices for working with auditors](https://twitter.com/tinchoabbate/status/1400170232904400897), such as documenting code properly and adding inline comments, to maximize the benefit of a smart contract audit.
+That said, you should avoid treating audits as a silver bullet. Smart contract audits won't catch every bug and are mostly designed to provide an additional round of reviews, which can help detect issues missed by developers during initial development and testing. You should also follow best practices for working with auditors, such as documenting code properly and adding inline comments, to maximize the benefit of a smart contract audit.
+
+- [Smart contract auditing tips & tricks](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [Make the most out of your audit](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
 #### Bug bounties {#bug-bounties}
 
@@ -214,7 +217,7 @@ Decentralized governance can be beneficial, especially because it aligns the int
 
 One way of preventing problems related to on-chain governance is to [use a timelock](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). A timelock prevents a smart contract from executing certain actions until a specific amount of time passes. Other strategies include assigning a “voting weight” to each token based on how long it has been locked up for, or measuring the voting power of an address at a historical period (for example, 2-3 blocks in the past) instead of the current block. Both methods reduce the possibility of quickly amassing voting power to swing on-chain votes.
 
-More on [designing secure governance systems](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/) and [different voting mechanisms in DAOs](https://hackernoon.com/governance-is-the-holy-grail-for-daos).
+More on [designing secure governance systems](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), [different voting mechanisms in DAOs](https://hackernoon.com/governance-is-the-holy-grail-for-daos), and [the common DAO attack vectors leveraging DeFi](https://dacian.me/dao-governance-defi-attacks) in the shared links.
 
 ### 8. Reduce complexity in code to a minimum {#reduce-code-complexity}
 
@@ -468,6 +471,8 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[ABI Encoder](https://abi.hashex.org/)** - _A free online service for encoding your Solidity contract functions and constructor arguments._
 
+- **[Aderyn](https://github.com/Cyfrin/aderyn)** - _Solidity Static Analyzer, traversing the Abstract Syntax Trees (AST) to pinpoint suspected vulnerabilities and printing out issues in an easy-to-consume markdown format._
+
 ### Tools for monitoring smart contracts {#smart-contract-monitoring-tools}
 
 - **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _A tool for automatically monitoring and responding to events, functions, and transaction parameters on your smart contracts._
@@ -508,9 +513,13 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[CodeHawks](https://codehawks.com/)** - _Competitive audits platform hosting smart contracts auditing competitions for security researchers._
 
-- **[Cyfrin](https://www.cyfrin.io/)** - _Blockchain security and web3 education firm focused on EVM and Vyper based protocols._
+- **[Cyfrin](https://cyfrin.io)** - _Web3 security powerhouse, incubating crypto security through products and smart contract auditing services._
 
 - **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3 security firm offering security audits for blockchain systems through a team of experienced auditors and best-in-class tools._
+
+- **[Oxorio](https://oxor.io/)** - _Smart contract audits and blockchain security services with expertise in EVM, Solidity, ZK, Cross-chain tech for crypto firms and DeFi projects._
+
+- **[Inference](https://inference.ag/)** - _Security auditing company, specialized in smart contract auditing for EVM-based blockchains. Thanks to its expert auditors they identify potential issues and suggest actionable solutions to fix them before deployment._
 
 ### Bug bounty platforms {#bug-bounty-platforms}
 
@@ -519,6 +528,10 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 - **[HackerOne](https://www.hackerone.com/)** - _Vulnerability coordination and bug bounty platform that connects businesses with penetration testers and cybersecurity researchers._
 
 - **[HackenProof](https://hackenproof.com/)** - _Expert bug bounty platform for crypto projects (DeFi, Smart Contracts, Wallets, CEX and more), where security professionals provide triage services and researchers get paid for relevant, verified bug reports._
+  
+-  **[Sherlock](https://www.sherlock.xyz/)** - _Underwriter in Web3 for smart contract security, with payouts for auditors managed via smart contracts to secure that relevant bugs are paid fairly._
+  
+-  **[CodeHawks](https://www.codehawks.com/)** - _Competitive bug bounty platform where auditors take part in security contests and challenges, and (soon) in their own private audits._
 
 ### Publications of known smart contract vulnerabilities and exploits {#common-smart-contract-vulnerabilities-and-exploits}
 
@@ -536,6 +549,8 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _Web3/Solidity-based wargame where each level is a smart contract that needs to be 'hacked'._
 
+- **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** - _Smart contract hacking challenge, set in a fantasy adventure. Successful completion of the challenge also gives access to a private bug bounty program._
+
 ### Best practices for securing smart contracts {#smart-contract-security-best-practices}
 
 - **[ConsenSys: Ethereum Smart Contract Security Best Practices](https://consensys.github.io/smart-contract-best-practices/)** - _Comprehensive list of guidelines for securing Ethereum smart contracts._
@@ -547,6 +562,8 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 - **[Solidity Docs: Security Considerations](https://docs.soliditylang.org/en/v0.8.16/security-considerations.html)** - _Guidelines for writing secure smart contracts with Solidity._
 
 - **[Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)** - _Fourteen-part checklist created to standardize the security of smart contracts for developers, architects, security reviewers and vendors._
+
+- **[Learn Smart Contract Security and Auditing](https://updraft.cyfrin.io/courses/security) - _Ultimate smart contract security and auditing course, created for smart contract developers looking to level up their security best practices and become security researchers._
 
 ### Tutorials on smart contract security {#tutorials-on-smart-contract-security}
 

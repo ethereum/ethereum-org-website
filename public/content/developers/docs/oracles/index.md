@@ -4,7 +4,7 @@ description: Oracles provide Ethereum smart contracts with access to real-world 
 lang: en
 ---
 
-Oracles are data feeds that make off-chain data sources available to the blockchain for smart contracts. This is necessary because Ethereum-based smart contracts cannot, by default, access information stored outside the blockchain network.
+Oracles are applications that produce data feeds that make off-chain data sources available to the blockchain for smart contracts. This is necessary because Ethereum-based smart contracts cannot, by default, access information stored outside the blockchain network.
 
 Giving smart contracts the ability to execute using off-chain data extends the utility and value of decentralized applications. For instance, on-chain prediction markets rely on oracles to provide information about outcomes that they use to validate user predictions. Suppose Alice bets 20 ETH on who will become the next U.S. President. In that case, the prediction-market dapp needs an oracle to confirm election results and determine if Alice is eligible for a payout.
 
@@ -401,6 +401,8 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 **[Pyth Network](https://pyth.network/)** - _The Pyth network is a first-party financial oracle network designed to publish continuous real-world data on-chain in a tamper-resistant, decentralized, and self-sustainable environment._
 
 **[API3 DAO](https://www.api3.org/)** - _API3 DAO is delivering first-party oracle solutions that deliver greater source transparency, security and scalability in a decentralized solution for smart contracts_
+
+**[Supra](https://supra.com/)** - A vertically integrated toolkit of cross-chain solutions that interlink all blockchains, public (L1s and L2s) or private (enterprises), providing decentralized oracle price feeds that can be used for on-chain and off-chain use-cases. 
 
 ## Further reading {#further-reading}
 

@@ -4,7 +4,7 @@ description: نظرة عامة على كيفية بدء مع تجميع ETH
 lang: ar
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: يطوف ليزلي فرس النهر في السحاب.
 sidebarDepth: 2
 summaryPoints:

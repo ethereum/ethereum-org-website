@@ -5,7 +5,7 @@ lang: de
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Eine Repräsentation eines Abstimmungsvorschlags in einer DAO.
 summaryPoint1: Communitys im Besitz ihrer Mitglieder ohne zentrale Führung.
 summaryPoint2: Ein sicherer Weg, um mit Fremden im Internet zusammenzuarbeiten.

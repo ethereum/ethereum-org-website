@@ -6,11 +6,15 @@ lang: zh
 
 # 智能合约简介 {#introduction-to-smart-contracts}
 
-智能合约是以太坊应用程序层的基石。 它们是存储在区块链上的计算机程序，遵循“如果...那么...”(IFTTT) 逻辑，并且保证按照其代码定义的规则执行，智能合约一旦创建就无法更改。
+智能合约是以太坊应用程序层的基石。 它们是存储在[区块链](/glossary/#blockchain)上的计算机程序，遵循“如果...那么...”(IFTTT) 逻辑，并且保证按照其代码定义的规则执行，智能合约一旦创建就无法更改。
 
 Nick Szabo 创造了“智能合约”这一术语。 1994 年，他撰写了[智能合约简介](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)；1996 年，他撰写了[对智能合约潜在功能的探索](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html)。
 
-Szabo 构想了一个数字市场，在这个市场中，自动化的、通过加密学保证安全的流程使得交易和商业功能可在不需要可信中介的情况下进行。 以太坊上的智能合约将这一设想付诸实践。
+Szabo 构想了一个数字市场，在这个市场中，交易和商业功能可在不需要受信任中介的情况下通过[加密学保证安全](/glossary/#cryptography)的自动化流程进行。 以太坊上的智能合约将这一设想付诸实践。
+
+观看 Finematics 解释智能合约：
+
+<YouTube id="pWGLtjG-F5c" />
 
 ## 传统合约中的信任问题 {#trust-and-contracts}
 
@@ -60,20 +64,14 @@ Alice 和 Bob 要进行一场自行车比赛。 假设 Alice 和 Bob 打赌 $10 
 
 其他计算机程序可以做的事情，智能合约基本上都可以做。
 
-它们可以执行计算、创建货币、存储数据、铸造非同质化代币、发送通信甚至生成图形。 以下是一些常见的真实示例：
+它们可以执行计算、创建货币、存储数据、铸造[非同质化代币](/glossary/#nft)、发送通信甚至生成图形。 以下是一些常见的真实示例：
 
 - [稳定币](/stablecoins/)
 - [创建和分发独特的数字资产](/nft/)
 - [自动、开放的货币交易所](/get-eth/#dex)
-- [去中心化游戏](/dapps/?category=gaming)
+- [去中心化游戏](/dapps/?category=gaming#explore)
 - [自动赔付的保单](https://etherisc.com/)
 - [允许创建定制、可互操作货币的标准](/developers/docs/standards/tokens/)
-
-## 更愿意通过视频学习？ {#visual-learner}
-
-观看 Finematics 解释智能合约：
-
-<YouTube id="pWGLtjG-F5c" />
 
 ## 延伸阅读 {#further-reading}
 

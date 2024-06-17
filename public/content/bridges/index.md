@@ -87,7 +87,7 @@ Imagine you’re at the airport security checkpoint. There are two types of chec
 1. Manual Checkpoints — operated by officials who manually check all the details of your ticket and identity before handing over the boarding pass.
 2. Self Check-In — operated by a machine where you put in your flight details and receive the boarding pass if everything checks out.
 
-Manual checkpoints are similar to a trusted model as it depends upon a third party, i.e., the officials, for its operations. As a user, you trust the officials to make the right decisions and use your private information correctly.
+A manual checkpoint is similar to a trusted model as it depends upon a third party, i.e., the officials, for its operations. As a user, you trust the officials to make the right decisions and use your private information correctly.
 
 Self check-in is similar to a trustless model as it removes the operator's role and uses technology for its operations. Users always remain in control of their data and don’t have to trust a third party with their private information.
 

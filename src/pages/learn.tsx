@@ -12,12 +12,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type {
-  BasePageProps,
-  ChildOnlyProp,
-  CommonHeroProps,
-  ToCItem,
-} from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, Lang, ToCItem } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import OriginalCard, {
@@ -26,6 +21,7 @@ import OriginalCard, {
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
+import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image, type ImageProps } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
 import InlineLink from "@/components/Link"
@@ -37,26 +33,27 @@ import PageMetadata from "@/components/PageMetadata"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import developersEthBlocks from "@/public/developers-eth-blocks.png"
-import dogeComputer from "@/public/doge-computer.png"
-import enterprise from "@/public/enterprise-eth.png"
-import eth from "@/public/eth.png"
-import financeTransparent from "@/public/finance_transparent.png"
-import futureTransparent from "@/public/future_transparent.png"
-import hackathon from "@/public/hackathon_transparent.png"
-import heroImage from "@/public/heroes/learn-hub-hero.png"
-import impact from "@/public/impact_transparent.png"
-import infrastructureTransparent from "@/public/infrastructure_transparent.png"
-import ethereumInside from "@/public/run-a-node/ethereum-inside.png"
-import stablecoins from "@/public/stablecoins/hero.png"
-import merge from "@/public/upgrades/merge.png"
-import newRings from "@/public/upgrades/newrings.png"
-import rhino from "@/public/upgrades/upgrade_rhino.png"
-import dao from "@/public/use-cases/dao-2.png"
-import wallet from "@/public/wallet.png"
-import whatIsEth from "@/public/what-is-ethereum.png"
+import developersEthBlocks from "@/public/images/developers-eth-blocks.png"
+import dogeComputer from "@/public/images/doge-computer.png"
+import enterprise from "@/public/images/enterprise-eth.png"
+import eth from "@/public/images/eth.png"
+import financeTransparent from "@/public/images/finance_transparent.png"
+import futureTransparent from "@/public/images/future_transparent.png"
+import hackathon from "@/public/images/hackathon_transparent.png"
+import heroImage from "@/public/images/heroes/learn-hub-hero.png"
+import impact from "@/public/images/impact_transparent.png"
+import infrastructureTransparent from "@/public/images/infrastructure_transparent.png"
+import ethereumInside from "@/public/images/run-a-node/ethereum-inside.png"
+import stablecoins from "@/public/images/stablecoins/hero.png"
+import merge from "@/public/images/upgrades/merge.png"
+import newRings from "@/public/images/upgrades/newrings.png"
+import rhino from "@/public/images/upgrades/upgrade_rhino.png"
+import dao from "@/public/images/use-cases/dao-2.png"
+import wallet from "@/public/images/wallet.png"
+import whatIsEth from "@/public/images/what-is-ethereum.png"
 
 const Card = ({ children, ...props }: OriginalCardProps) => (
   <OriginalCard
@@ -134,12 +131,16 @@ export const getStaticProps = (async ({ locale }) => {
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
@@ -184,7 +185,7 @@ const LearnPage = () => {
     url: "#" + id,
   }))
 
-  const heroContent: CommonHeroProps = {
+  const heroContent: HubHeroProps = {
     title: t("common:learn-hub"),
     header: t("hero-header"),
     description: t("hero-subtitle"),
@@ -198,7 +199,6 @@ const LearnPage = () => {
           eventAction: "click",
           eventName: "lets get started",
         },
-        variant: "solid",
       },
     ],
   }
@@ -213,7 +213,7 @@ const LearnPage = () => {
       <PageMetadata
         title={t("common:learn-hub")}
         description={t("hero-subtitle")}
-        image="/heroes/learn-hub-hero.png"
+        image="/images/heroes/learn-hub-hero.png"
       />
 
       <HubHero {...heroContent} />

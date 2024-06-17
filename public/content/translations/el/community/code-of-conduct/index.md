@@ -4,7 +4,7 @@ description: Τα βασικά πρότυπα που επιδιώκουμε σε
 lang: el
 ---
 
-# Κώδικας Δεοντολογίας {#conduct-intro}
+# Κώδικας Δεοντολογίας {#code-of-conduct}
 
 ## Αποστολή {#mission}
 

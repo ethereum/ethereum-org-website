@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { Box, chakra, Flex, type HeadingProps, Icon } from "@chakra-ui/react"
+import { Box, Flex, type HeadingProps, Icon } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
@@ -33,10 +33,9 @@ import TranslationChartImage from "@/components/TranslationChartImage"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 
 import { getEditPath } from "@/lib/utils/editPath"
-import { getLocaleTimestamp } from "@/lib/utils/time"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import GuideHeroImage from "@/public/heroes/guides-hub-hero.jpg"
+import GuideHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />
@@ -51,17 +50,12 @@ const Heading4 = (props: HeadingProps) => (
   <MdHeading4 fontSize={{ base: "md", md: "xl" }} {...props} />
 )
 
-const ListItem = (props: ChildOnlyProp) => (
-  <chakra.li color="text300" {...props} />
-)
-
 // Static layout components
 export const staticComponents = {
   h1: Heading1,
   h2: Heading2,
   h3: Heading3,
   h4: Heading4,
-  li: ListItem,
   Callout,
   Contributors,
   EnergyConsumptionChart,
@@ -81,7 +75,7 @@ export const staticComponents = {
 type StaticLayoutProps = ChildOnlyProp &
   Pick<
     MdPageContent,
-    "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
+    "slug" | "tocItems" | "lastEditLocaleTimestamp" | "contentNotTranslated"
   > & {
     frontmatter: StaticFrontmatter
   }
@@ -90,7 +84,7 @@ export const StaticLayout = ({
   frontmatter,
   slug,
   tocItems,
-  lastUpdatedDate,
+  lastEditLocaleTimestamp,
   contentNotTranslated,
 }: StaticLayoutProps) => {
   const { locale, asPath } = useRouter()
@@ -120,15 +114,14 @@ export const StaticLayout = ({
           ) : (
             <>
               <Breadcrumbs slug={slug} mb="8" />
-              {lastUpdatedDate && (
-                <Text
-                  color="text200"
-                  dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
-                >
-                  <Translation id="page-last-updated" />:{" "}
-                  {getLocaleTimestamp(locale as Lang, lastUpdatedDate)}
-                </Text>
-              )}
+
+              <Text
+                color="text200"
+                dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
+              >
+                <Translation id="page-last-updated" />:{" "}
+                {lastEditLocaleTimestamp}
+              </Text>
             </>
           )}
 

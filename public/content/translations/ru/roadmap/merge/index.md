@@ -3,7 +3,7 @@ title: Слияние
 description: Узнайте о слиянии — переходе основной сети Ethereum на доказательство владения.
 lang: ru
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Основная сеть Ethereum использует доказательство владения, но так было не всегда.
 summaryPoint2: Переход от изначального механизма доказательства работы на доказательство владения был назван слиянием.
@@ -11,7 +11,7 @@ summaryPoint3: Под слиянием понимается объединени
 summaryPoint4: Слияние уменьшило потребление энергии Ethereum на ~99,95 %.
 ---
 
-<UpgradeStatus dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Слияние было выполнено 15 сентября 2022 года. Это завершило переход Ethereum к консенсусу на основе доказательства владения с официальным отказом от доказательства работы и сокращением энергопотребления на ~99,95 %.
 </UpgradeStatus>
 

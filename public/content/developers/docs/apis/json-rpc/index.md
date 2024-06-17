@@ -53,7 +53,7 @@ When encoding unformatted data (byte arrays, account addresses, hashes, bytecode
 Here are some examples:
 
 - 0x41 (size 1, "A")
-- 0x004200 (size 3, "\0B\0")
+- 0x004200 (size 3, "0B0")
 - 0x (size 0, "")
 - WRONG: 0xf0f0f (must be even number of digits)
 - WRONG: 004200 (must be prefixed 0x)

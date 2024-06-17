@@ -3,13 +3,14 @@ title: A Beacon Chain
 description: Tudjon meg többet Beacon a láncról – arról a frissítésről, amely behozta a proof-of-stake mechanizmust az Ethereum hálózatára.
 lang: hu
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
+alt:
 summaryPoint1: A Beacon lánc vezette be a proof-of-stake konszenzust az Ethereum-ökoszisztémába.
 summaryPoint2: Az eredeti proof-of-work Ethereum-lánccal 2022 szeptemberében egyesült.
 summaryPoint3: A Beacon lánc vezette be az Ethereumot ma biztosító konszenzuslogikát és block gossip (blokkpletyka) protokollt.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   A Beacon lánc 2020. december 1-jén jelent meg, és 2022 szeptember 15-én a beolvadás frissítéssel hivatalosan is az Ethereum konszenzusmechanizmusává tette a proof-of-stake módszert.
 </UpgradeStatus>
 

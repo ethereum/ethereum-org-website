@@ -11,6 +11,8 @@ export const TRANSLATED_IMAGES_DIR = "/content/translations"
 export const PLACEHOLDER_IMAGE_DIR = "src/data/placeholders"
 export const INTL_JSON_DIR = "src/intl"
 
+export const NULL_VALUE = "—"
+
 // i18n
 export const DEFAULT_LOCALE = "en"
 export const FAKE_LOCALE = "default"
@@ -26,7 +28,7 @@ export const DISCORD_PATH = "/discord/"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
 export const MAIN_CONTENT_ID = "main-content"
 export const WEBSITE_EMAIL = "website@ethereum.org"
-export const DEFAULT_OG_IMAGE = "/home/hero.png"
+export const DEFAULT_OG_IMAGE = "/images/home/hero.png"
 
 // Config
 export const CONTENT_IMAGES_MAX_WIDTH = 800

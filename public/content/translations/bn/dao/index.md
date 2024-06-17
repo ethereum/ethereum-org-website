@@ -5,7 +5,7 @@ lang: bn
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: একটি DAO-এর একটি রিপ্রেজেন্টেশন একটি প্রস্তাবে ভোট দিচ্ছে।
 summaryPoint1: কেন্দ্রীভূত নেতৃত্ব ছাড়া সদস্য-মালিকানাধীন কমিউনিটি।
 summaryPoint2: ইন্টারনেট অপরিচিতদের সাথে সহযোগিতা করার একটি নিরাপদ উপায়।

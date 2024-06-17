@@ -1,10 +1,10 @@
 ---
 title: Індивідуальний стейкінг ваших ETH
-description: "Огляд: як почати самостійний стейкінг своїх ефірів (ETH)"
+description: 'Огляд: як почати самостійний стейкінг своїх ефірів (ETH)'
 lang: uk
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Носоріг Леслі на власному комп’ютерному чіпі.
 sidebarDepth: 2
 summaryPoints:
@@ -195,9 +195,12 @@ Staking Launchpad (Стартова платформа стейкінгу) — �
 
 ## Довідкові джерела {#further-reading}
 
+- [Довідник стейкінгу Ethereum](https://www.staking.directory/) – _Eridian і Spacesider_
 - [Проблема різноманітності клієнтів Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) — _@emmanuelawosika, 2022_
 - [Допомога у різноманітності клієнтів](https://www.attestant.io/posts/helping-client-diversity/) — _Джим Макдональд, 2022_
 - [Різноманітність клієнтів на консенсусному рівні Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) — _jmcook.eth 2022_
 - [Як: придбати обладнання для валідатора Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) — _EthStaker 2022_
 - [Крок за кроком: як приєднатися до тестової мережі Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) — _Butta_
-- [Поради щодо запобігання скороченням Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) — _Рауль Джордан, 2020_
+- [Поради щодо запобігання скороченням Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) — _Рауль Джордан, 2020 р. _
+
+<QuizWidget quizKey="solo-staking" />

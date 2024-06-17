@@ -4,7 +4,7 @@ description: Обзор того, как начать одиночный сте�
 lang: ru
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Носорог Лесли на собственном компьютерном чипе.
 sidebarDepth: 2
 summaryPoints:
@@ -195,9 +195,12 @@ summaryPoints:
 
 ## Дополнительные ресурсы {#further-reading}
 
+- [Каталог стейкинга Ethereum](https://www.staking.directory/) — _Eridian и Spacesider_
 - [Проблема разнообразия клиентов Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) — _@emmanuelawosika, 2022 г._
 - [Помощь с разнообразием клиентов](https://www.attestant.io/posts/helping-client-diversity/) — _Джим Макдональд, 2022 г._
 - [Разнообразие клиентов на консенсусном уровне Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) — _jmcook.eth, 2022 г._
 - [Как покупать оборудование для валидатора Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) — _EthStaker, 2022 г._
 - [Шаг за шагом: как присоединиться к тестовой сети Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) — _Butta_
 - [Советы по предотвращению сокращения Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) — _Рауль Джордан, 2020 г._
+
+<QuizWidget quizKey="solo-staking" />

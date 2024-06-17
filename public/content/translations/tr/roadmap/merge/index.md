@@ -3,7 +3,7 @@ title: Birleştirme
 description: 'Birleşim: Ana Ağ Ethereum''un hisse ispatını kullanmaya başlama zamanı hakkında bilgi edinin.'
 lang: tr
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Ethereum Ana Ağı hisse ispatı kullanır, ancak bu her zaman geçerli olan durum değildi.
 summaryPoint2: Özgün iş ispatı mekanizmasının hisse ispatına yükseltilmesi Birleşim olarak adlandırılır.
@@ -11,7 +11,7 @@ summaryPoint3: Birleşim, esas Ethereum Ana Ağı'nın İşaret Zinciri olarak a
 summaryPoint4: Birleşim, Ethereum'un enerji tüketimini ~%99,95 oranında azalttı.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Birleşim 15 Eylül 2022 de gerçekleştirildi. Bu, iş ispatını resmi olarak kullanım dışı bırakarak ve enerji tüketimini yaklaşık %99,95 azaltarak Ethereum'un iş ispatı mutabakatına geçişini tamamladı.
 </UpgradeStatus>
 

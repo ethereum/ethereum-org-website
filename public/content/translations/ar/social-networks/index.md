@@ -5,7 +5,7 @@ lang: ar
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: منصات قائمة على سلسلة الكتل للتفاعل الاجتماعي وإنشاء المحتوى وتوزيعه.
 summaryPoint2: إن شبكات التواصل الاجتماعي اللامركزية تحمي خصوصية المستخدمين وتعزز أمن البيانات.
 summaryPoint3: الرموز المميزة و NFTs تنشئ أساليب جديدة لتحويل المحتوى إلى أموال.

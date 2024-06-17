@@ -8,7 +8,7 @@ lang: hu
 
 A blokkláncot legjobban úgy lehet leírni, mint egy nyilvános adatbázist, melyet frissítenek és megosztanak egy számítógépes hálózaton.
 
-A "blokk" arra utal, hogy az adat és az állapot szekvenciális adagokban vagy "blokkokban" van tárolva. Ha ETH-et küldesz valaki másnak, akkor a tranzakciós adatot hozzá kell adni egy blokkhoz, hogy sikeres legyen.
+A "blokk" arra utal, hogy az adat és az állapot szekvenciális adagokban vagy "blokkokban" van tárolva. Ha ETH-t küld valakinek, akkor a tranzakciós adatot hozzá kell adni egy blokkhoz, hogy végrehajtásra kerüljön.
 
 A "lánc" arra a tényre utal, hogy minden egyes blokk kriptográfiailag hozzá van rendelve a szülő blokkjához. Tehát a blokkok össze vannak kötve. Egy blokk adatát nem lehet megváltoztatni anélkül, hogy megváltoztatnánk az összes későbbi blokkot, amely a teljes hálózat konszenzusát igényelné.
 

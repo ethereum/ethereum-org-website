@@ -3,14 +3,14 @@ title: Beacon Chain
 description: Узнайте о сети Beacon — обновлении, которое ввело Ethereum с доказательством владения.
 lang: ru
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
 alt: 
 summaryPoint1: Сеть Beacon ввела в экосистему Ethereum доказательство владения.
 summaryPoint2: Она была объединена с первоначальной сетью Ethereum, основанной на доказательстве работы, в сентябре 2022 года.
 summaryPoint3: Сеть Beacon ввела логику консенсуса и сплетенный протокол блоков, который теперь защищает Ethereum.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Сеть Beacon была введена 1 декабря 2020 года и формализовала доказательство владения в качестве консенсусного механизма Ethereum с обновлением «Слияние» 15 сентября 2022 года.
 </UpgradeStatus>
 

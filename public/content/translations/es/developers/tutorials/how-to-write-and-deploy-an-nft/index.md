@@ -4,7 +4,7 @@ description: Este tutorial es la parte 1 de una serie sobre NFT que le indicará
 author: "Sumi Mudgil"
 tags:
   - "ERC-721"
-  - "Alquimia"
+  - "Alchemy"
   - "Solidity"
   - "contratos inteligentes"
 skill: beginner
@@ -66,7 +66,7 @@ Para comprobar que nuestro balance está ahí, hagamos una solicitud de [eth_get
 
 ## Paso 6: Iniciar su proyecto {#initialize-project}
 
-Primero, necesitaremos crear un a carpeta para nuestro proyecto. Vaya a su línea de comando y teclee:
+Primero, necesitaremos crear una carpeta para nuestro proyecto. Vaya a su línea de comando y escriba:
 
     mkdir my-nft
     cd my-nft
@@ -104,13 +104,13 @@ Apruebe package.json y ¡ya puede comenzar!
 
 ## Paso 7: Instalar [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
-Hardhat es un entorno de desarrollo para compilar, desplegar, probar y depurar su software Ethereum. Esto ayuda a los desarrolladores cuando construyen contratos inteligentes y dApps localmente antes de desplegarse en la cadena en vivo.
+Hardhat es un entorno de desarrollo para compilar, implementar, probar y depurar su software de Ethereum. Ayuda a los desarrolladores cuando crean contratos inteligentes y dApps localmente antes de la implementación en la cadena real.
 
 Dentro de nuestro proyecto my-nft, ejecute:
 
     npm install --save-dev hardhat
 
-Revise esta página para más información acerca de las [intrucciones de instalación](https://hardhat.org/getting-started/#overview).
+Revise esta página para obtener más información acerca de las [intrucciones de instalación](https://hardhat.org/getting-started/#overview).
 
 ## Paso 8: Crear proyecto Hardhat {#create-hardhat-project}
 
@@ -118,7 +118,7 @@ Dentro de la carpeta de nuestro proyecto, ejecute:
 
     npx hardhat
 
-Entonces debería aparecer un mensaje de bienvenida y la opción de seleccionar lo que desea hacer. Seleccione «create an empty hardhat.config.js» (crear un hardhat.config.js vacío):
+Debería aparecer un mensaje de bienvenida y la opción de seleccionar lo que desee hacer. Seleccione «create an empty hardhat.config.js»:
 
     888    888                      888 888               888
     888    888                      888 888               888
@@ -128,8 +128,8 @@ Entonces debería aparecer un mensaje de bienvenida y la opción de seleccionar 
     888    888 .d888888 888    888  888 888  888 .d888888 888
     888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
     888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
-    👷 Bienvenido a Hardhat v2.0.11 👷‍
-    ? ¿Qué es lo que quieres hacer? …
+    👷 Welcome to Hardhat v2.0.11 👷‍
+    ? What do you want to do? …
     Create a sample project
     ❯ Create an empty hardhat.config.js
     Quit
@@ -138,7 +138,7 @@ Esta acción nos creará un archivo hardhat.config.js, que es donde especificare
 
 ## Paso 9: Añadir carpetas de proyecto {#add-project-folders}
 
-Para mantener nuestro proyecto organizado, crearemos dos nuevas carpetas. Navegue al directorio raíz de su proyecto en su línea de comandos y teclee:
+Para mantener nuestro proyecto organizado, crearemos dos nuevas carpetas. Navegue al directorio raíz de su proyecto en su línea de comandos y escriba:
 
     mkdir contracts
     mkdir scripts
@@ -224,7 +224,7 @@ Primero, instale el paquete dotenv en su directorio de proyecto:
 
     npm install dotenv --save
 
-Seguidamente, cree un archivo `.env` en el directorio raíz de nuestro proyecto y añádale nuestra clave privada MetaMask y HTTP Alchemy API URL.
+Después, cree un archivo `.env` en el directorio raíz de nuestro proyecto, y añádale la llave inteligente de Metamask y la API URL de HTTP Alchemy.
 
 - Siga [estas instrucciones](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) para exportar tu clave privada desde MetaMask
 

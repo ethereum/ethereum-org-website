@@ -15,16 +15,16 @@ published: 2020-11-14
 
 ## 本教程是关于什么的？ {#what-is-this-tutorial-about}
 
-在本教程中，您将学习如何：
+在本教程中，你将学习如何：
 
 - 使用动态模拟
 - 测试智能合约之间的交互
 
 本文假定：
 
-- 您已经知道如何在`Solidity`中编写一个简单的智能合约
-- 您熟悉`JavaScript`和`TypeScript`
-- 您已经完成其他`Waffle`教程或对其略知一二。
+- 你已经知道如何在`Solidity`中编写一个简单的智能合约
+- 你熟悉`JavaScript`和`TypeScript`
+- 你已经完成其他`Waffle`教程或对其略知一二。
 
 ## 动态模拟 {#dynamic-mocking}
 
@@ -32,7 +32,7 @@ published: 2020-11-14
 
 ### **1. 项目** {#1-project}
 
-在开始之前，我们需要准备一个简单的 node.js 项目：
+在开始之前，我们需要准备一个简单的node.js项目：
 
 ```bash
 mkdir dynamic-mocking
@@ -60,7 +60,7 @@ yarn add --dev ethereum-waffle ethers
 npm install ethereum-waffle ethers --save-dev
 ```
 
-您的项目结构现在应该如下所示：
+你的项目结构现在应该如下所示：
 
 ```
 .
@@ -71,9 +71,9 @@ npm install ethereum-waffle ethers --save-dev
 
 ### **2. 智能合约** {#2-smart-contract}
 
-要开始动态模拟，我们需要一个包含依赖项的智能合约。 别担心，我会掩护您的！
+要开始动态模拟，我们需要一个包含依赖项的智能合约。 别担心，我会掩护你的！
 
-这是一个用`Solidity`编写的简单智能合约，其唯一目的是检查我们是否富有。 它使用 ERC20 通证来检查我们是否有足够的通证。 将其放在`./contracts/AmIRichAlready.sol`中。
+这是一个用`Solidity`编写的简单智能合约，其唯一目的是检查我们是否富有。 它使用ERC20通证来检查我们是否有足够的通证。 将其放在`./contracts/AmIRichAlready.sol`中。
 
 ```solidity
 pragma solidity ^0.6.2;
@@ -97,7 +97,7 @@ contract AmIRichAlready {
 }
 ```
 
-因为我们想使用动态模拟，所以我们不需要整个 ERC20，这就是为什么我们使用只有一个函数的 IERC20 接口的原因。
+因为我们想使用动态模拟，所以我们不需要整个ERC20，这就是为什么我们使用只有一个函数的IERC20接口的原因。
 
 现在是构建这个合约的时候了！ 为此，我们将使用`Waffle`。 首先，我们将创建一个简单的`waffle.json`配置文件，它指定了编译选项。
 
@@ -110,7 +110,7 @@ contract AmIRichAlready {
 }
 ```
 
-现在我们已经准备好使用 Waffer 构建合约：
+现在我们已经准备好使用Waffer构建合约：
 
 ```bash
 npx waffle
@@ -133,20 +133,20 @@ import {
 } from "ethereum-waffle"
 ```
 
-除了 JS 依赖项，我们需要导入我们创建的合约和接口。
+除了JS依赖项，我们需要导入我们创建的合约和接口。
 
 ```typescript
 import IERC20 from "../build/IERC20.json"
 import AmIRichAlready from "../build/AmIRichAlready.json"
 ```
 
-Waffle 使用`chai`进行测试。 然而，在我们使用它之前，我们必须将 Waffle 的匹配器注入到 chai 本身：
+Waffle使用`chai`进行测试。 然而，在我们使用它之前，我们必须将Waffle的匹配器注入到chai本身：
 
 ```typescript
 use(solidity)
 ```
 
-我们需要实现`beforeEach()`函数，它将在每次测试前重置合约的状态。 让我们先想想我们在那里需要什么。 为了部署一个合约，我们需要两样东西：一个钱包和一个已部署的 ERC20 合约，以便将其作为`AmIRichAlready`合约的参数传递。
+我们需要实现`beforeEach()`函数，它将在每次测试前重置合约的状态。 让我们先想想我们在那里需要什么。 为了部署一个合约，我们需要两样东西：一个钱包和一个已部署的ERC20合约，以便将其作为`AmIRichAlready`合约的参数传递。
 
 首先，我们创建一个钱包：
 
@@ -154,13 +154,13 @@ use(solidity)
 const [wallet] = new MockProvider().getWallets()
 ```
 
-然后我们需要部署一个 ERC20 合约。 这里是棘手的部分 -- 我们只有一个接口。 这就是 Waffle 来拯救我们的部分。 Waffle 有一个神奇的`deployMockContract()`函数，它只使用接口的*abi*来创建合约。
+然后我们需要部署一个ERC20合约。 这里是棘手的部分 -- 我们只有一个接口。 这就是Waffle来拯救我们的部分。 Waffle有一个神奇的`deployMockContract()`函数，它只使用接口的_abi_来创建合约。
 
 ```typescript
 const mockERC20 = await deployMockContract(wallet, IERC20.abi)
 ```
 
-现在有了钱包和部署的 ERC20，我们可以继续部署`AmIRichAlready`合约。
+现在有了钱包和部署的ERC20，我们可以继续部署`AmIRichAlready`合约。
 
 ```typescript
 const contract = await deployContract(wallet, AmIRichAlready, [
@@ -168,7 +168,7 @@ const contract = await deployContract(wallet, AmIRichAlready, [
 ])
 ```
 
-做完这些，我们的`beforeEach()`函数就完成了。 到目前为止，您的`AmIRichAlready.test.ts`文件看起来应如下所示：
+做完这些，我们的`beforeEach()`函数就完成了。 到目前为止，你的`AmIRichAlready.test.ts`文件看起来应如下所示：
 
 ```typescript
 import { expect, use } from "chai"
@@ -198,9 +198,9 @@ describe("Am I Rich Already", () => {
 })
 ```
 
-让我们为`AmIRichAlready`合约编写第一个测试。 您认为我们的测试应该是关于什么的？ 没错，您是对的！ 我们应该检查我们是否有很多钱：）
+让我们为 `AmIRichAlready` 合约编写第一个测试。 你认为我们的测试应该是关于什么的？ 没错，你是对的！ 我们应该检查我们是否有很多钱：）
 
-但是等一下。 我们的模拟合约怎么知道要返回什么值呢？ 我们还没有实现`balanceOf()`函数的任何逻辑。 同样，Waffle 在这里可以提供帮助。 我们的模拟合约现在有了一些新花招。
+但是等一下。 我们的模拟合约怎么知道要返回什么值呢？ 我们还没有实现`balanceOf()`函数的任何逻辑。 同样，Waffle在这里可以提供帮助。 我们的模拟合约现在有了一些新花招。
 
 ```typescript
 await mockERC20.mock.<nameOfMethod>.returns(<value>)
@@ -218,14 +218,14 @@ it("returns false if the wallet has less than 1000000 tokens", async () => {
 
 让我们把这个测试分解成几个部分：
 
-1. 将我们的模拟 ERC20 合约设置为始终返回 99999 个通证的余额。
+1. 将我们的模拟ERC20合约设置为始终返回99999个通证的余额。
 2. 检查`contract.check()`方法是否返回`false`。
 
 我们已经准备好启动这个野兽了：
 
 ![一次测试通过](./test-one.png)
 
-所以这个测试是有效的，但是......还是有一些改进的余地。 `balanceOf()`函数将始终返回 99999。 我们可以通过指定一个钱包来改进它，该函数应该为它返回一些东西 -- 就像一个真正的合约。
+所以这个测试是有效的，但是......还是有一些改进的余地。 `balanceOf()`函数将始终返回99999。 我们可以通过指定一个钱包来改进它，该函数应该为它返回一些东西 -- 就像一个真正的合约。
 
 ```typescript
 it("returns false if the wallet has less than 1000001 tokens", async () => {
@@ -247,15 +247,15 @@ it("returns true if the wallet has at least 1000001 tokens", async () => {
 })
 ```
 
-您运行测试...
+你运行测试...
 
 ![两次测试通过](test-two.png)
 
-...您已经到这儿啦！ 我们的合约似乎按计划进行 :)
+...你已经到这儿啦！ 我们的合约似乎按计划进行 :)
 
 ## 测试合约调用 {#testing-contract-calls}
 
-让我们总结一下到目前为止所做的事情。 我们已经测试了我们的`AmIRichAlready`合约的功能，它似乎正常工作。 这意味着我们已经完成了，对吧？ 并非如此！ Waffle 允许我们进一步测试合约。 但是具体怎么做呢？ 那么，在 Waffle 的武器库中，有一个`calledOnContract()`和`calledOnContractWith()`匹配器。 他们允许我们检查，我们的合约是否调用了 ERC20 模拟合约。 下面是对其中一个匹配器的基本测试：
+让我们总结一下到目前为止所做的事情。 我们已经测试了我们的`AmIRichAlready`合约的功能，它似乎正常工作。 这意味着我们已经完成了，对吧？ 并非如此！ Waffle允许我们进一步测试合约。 但是具体怎么做呢？ 那么，在Waffle的武器库中，有一个`calledOnContract()`和`calledOnContractWith()`匹配器。 他们允许我们检查，我们的合约是否调用了ERC20模拟合约。 下面是对其中一个匹配器的基本测试：
 
 ```typescript
 it("checks if contract called balanceOf on the ERC20 token", async () => {
@@ -265,7 +265,7 @@ it("checks if contract called balanceOf on the ERC20 token", async () => {
 })
 ```
 
-我们可以更进一步，用我告诉您的另一个匹配器改进这个测试：
+我们可以更进一步，用我告诉你的另一个匹配器改进这个测试：
 
 ```typescript
 it("checks if contract called balanceOf with certain wallet on the ERC20 token", async () => {
@@ -283,16 +283,16 @@ it("checks if contract called balanceOf with certain wallet on the ERC20 token",
 
 太好了，所有测试都通过了。
 
-用 Waffle 测试智能合约调用非常容易。 而这是最精彩的部分。 这些匹配器对正常合约和模拟合约都有效！ 这是因为 Waffle 记录和过滤 EVM 调用，而不是像其他技术的流行测试库那样注入代码。
+用Waffle测试智能合约调用非常容易。 而这是最精彩的部分。 这些匹配器对正常合约和模拟合约都有效！ 这是因为Waffle记录和过滤EVM调用，而不是像其他技术的流行测试库那样注入代码。
 
 ## 最后 {#the-finish-line}
 
-恭喜！ 现在您知道如何使用 Waffle 来测试合约调用和动态模拟智能合约了。 还有更多有趣的功能等着我们去发现。 我建议您深入研究 Waffle 文档。
+恭喜！ 现在你知道如何使用Waffle来测试合约调用和动态模拟智能合约了。 还有更多有趣的功能等着我们去发现。 我建议你深入研究Waffle文档。
 
-Waffle 的文档可在[此处](https://ethereum-waffle.readthedocs.io/)获得。
+Waffle的文档可在[此处](https://ethereum-waffle.readthedocs.io/)获得。
 
 本教程的源代码可以在[此处](https://github.com/EthWorks/Waffle/tree/master/examples/dynamic-mocking-and-testing-calls)找到。
 
-您可能还感兴趣的教程：
+你可能还感兴趣的教程：
 
-- [使用 Waffle 测试智能合约](/developers/tutorials/waffle-test-simple-smart-contract/)
+- [使用Waffle测试智能合约](/developers/tutorials/testing-smart-contract-with-waffle/)

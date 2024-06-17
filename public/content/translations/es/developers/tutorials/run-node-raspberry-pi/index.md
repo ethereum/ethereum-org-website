@@ -63,9 +63,9 @@ La imagen de Raspberry Pi 4 Ethereum es una imagen "plug and play" que instala y
 Descargar la imagen de Raspberry Pi de [Ethereum on Arm](https://ethereumonarm-my.sharepoint.com/:u:/p/dlosada/Ec_VmUvr80VFjf3RYSU-NzkBmj2JOteDECj8Bibde929Gw?download=1) y verificar el hash SHA256:
 
 ```sh
-# Del directorio que contiene la imagen descargada
+# From directory containing the downloaded image
 shasum -a 256 ethonarm_22.04.00.img.zip
-# Hash debe salir: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
+# Hash should output: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
 Tenga en cuenta que las imágenes de las placas Rock 5B y Odroid M1 están disponibles en la [página de descargas](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html) de Ethereum on Arm.
