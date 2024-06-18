@@ -145,7 +145,9 @@ export const GridItem = ({ metric }: GridItemProps) => {
     labels: filteredRange,
     datasets: [
       {
-        data: dataValues.slice(dataValues.length - filteredRange!.length),
+        data: hasData
+          ? dataValues.slice(dataValues.length - filteredRange!.length)
+          : [],
       },
     ],
   }
