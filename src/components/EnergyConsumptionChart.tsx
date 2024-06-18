@@ -1,4 +1,5 @@
 import React from "react"
+import { useEffect, useState } from "react"
 import {
   BarElement,
   CategoryScale,
@@ -37,6 +38,16 @@ const EnergyConsumptionChart = () => {
   const { t } = useTranslation("page-what-is-ethereum")
   const { locale } = useRouter()
   const isRtl = isLangRightToLeft(locale as Lang)
+
+  const useIsClient = () => {
+    const [isClient, setClient] = useState(false)
+
+    useEffect(() => {
+      setClient(true)
+    }, [])
+
+    return isClient
+  }
 
   // chart rawData, according to different breakpoints
   const rawData = useBreakpointValue({
@@ -240,7 +251,9 @@ const EnergyConsumptionChart = () => {
           mb={{ base: 4, md: 0 }}
         >
           {/* TODO: isRtl ? data?.reverse() : data */}
-          <Bar options={chartOptions} data={chartData} updateMode="none" />
+          {useIsClient() && (
+            <Bar options={chartOptions} data={chartData} updateMode="none" />
+          )}
         </Box>
       </Center>
 
