@@ -230,7 +230,7 @@ const EnergyConsumptionChart = () => {
   } satisfies ChartData
 
   return (
-    <Box mb={16}>
+    <Box my={16}>
       <Center w="full" mb={{ base: 4, md: 6 }}>
         <Box
           position="relative"
@@ -240,7 +240,7 @@ const EnergyConsumptionChart = () => {
           mb={{ base: 4, md: 0 }}
         >
           {/* TODO: isRtl ? data?.reverse() : data */}
-          <Bar options={chartOptions} data={chartData} />
+          <Bar options={chartOptions} data={chartData} updateMode="none" />
         </Box>
       </Center>
 
