@@ -237,8 +237,6 @@ const EnergyConsumptionChart = () => {
           maxW="500px"
           m="auto"
           w="80vw"
-          // TODO: remove
-          // h="500px"
           mb={{ base: 4, md: 0 }}
         >
           {/* TODO: isRtl ? data?.reverse() : data */}
