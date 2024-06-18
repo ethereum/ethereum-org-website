@@ -3,7 +3,7 @@ title: Staking withdrawals
 description: Page summarizing what staking push withdrawals are, how they work, and what stakers need to do to get their rewards
 lang: en
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Leslie the rhino with her staking rewards
 sidebarDepth: 2
 summaryPoints:

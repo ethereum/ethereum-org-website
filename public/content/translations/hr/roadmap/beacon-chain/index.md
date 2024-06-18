@@ -3,7 +3,7 @@ title: Beacon Chain
 description: Saznajte vieše o nadogradnji Beacon Chain kojom je implementiran dokaz uloga u Ethereumu.
 lang: hr
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
 alt: 
 summaryPoint1: Nadogradnja Beacon Chain implementirala je dokaz uloga u ekosustav Ethereuma.
 summaryPoint2: Nadogradnja je objedinjena s izvornim lancem dokaza rada Ethereuma u rujnu 2022.

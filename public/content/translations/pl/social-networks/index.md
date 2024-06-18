@@ -5,7 +5,7 @@ lang: pl
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: Oparte na łańcuchu bloków platformy umożliwiające interakcje społeczne oraz tworzenie i rozpowszechnianie treści.
 summaryPoint2: Zdecentralizowane sieci mediów społecznościowych zapewniają ochronę prywatności użytkowników i większe bezpieczeństwo danych.
 summaryPoint3: Tokeny i NFT otwierają nowe możliwości monetyzacji treści.

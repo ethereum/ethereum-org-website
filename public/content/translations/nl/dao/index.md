@@ -5,7 +5,7 @@ lang: nl
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Een vertegenwoordiging van een DAO die over een voorstel stemt.
 summaryPoint1: Gemeenschappen waarvan de leden eigenaar zijn en zonder gecentraliseerd leiderschap.
 summaryPoint2: Een veilige manier om samen te werken met vreemdelingen op het internet.

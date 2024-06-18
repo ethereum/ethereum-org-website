@@ -4,7 +4,7 @@ description: Havuzlanmış ETH faiz getirisi elde etmeye nasıl başlanacağına
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: Gergedan Leslie bulutlarda dalgalanıyor.
 sidebarDepth: 2
 summaryPoints:

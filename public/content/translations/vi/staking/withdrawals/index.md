@@ -3,7 +3,7 @@ title: Rút tài sản đặt cược
 description: Trang tóm tắt về rút tiền đẩy đặt cược là gì, cách chúng hoạt động và những gì người góp cổ phần cần làm để nhận được phần thưởng
 lang: vi
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Tê giác Leslie và phần thưởng đặt cọc
 sidebarDepth: 2
 summaryPoints:

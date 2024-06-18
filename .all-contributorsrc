@@ -12123,6 +12123,42 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "stolab",
+      "name": "stolab",
+      "avatar_url": "https://avatars.githubusercontent.com/u/144235139?v=4",
+      "profile": "https://github.com/stolab",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "jacobjelen",
+      "name": "jacobjelen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6750124?v=4",
+      "profile": "http://www.jacobjelen.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Dennayz",
+      "name": "Dennis Zhang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58843979?v=4",
+      "profile": "https://github.com/Dennayz",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "JanetMo",
+      "name": "Marlene Marz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42071757?v=4",
+      "profile": "https://github.com/JanetMo",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

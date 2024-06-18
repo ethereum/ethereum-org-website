@@ -4,7 +4,7 @@ description: An overview of how to get started with pooled ETH staking
 lang: en
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: Leslie the rhino floating in the clouds.
 sidebarDepth: 2
 summaryPoints:

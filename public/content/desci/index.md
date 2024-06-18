@@ -5,7 +5,7 @@ lang: en
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: A global, open alternative to the current scientific system.
 summaryPoint2: Technology that enables scientists to raise funding, run experiments, share data, distribute insights, and more.

@@ -3,7 +3,7 @@ title: The Merge
 description: Дізнайтеся про злиття — коли головна мережа Ethereum прийняла модель доказу частки.
 lang: uk
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt:
 summaryPoint1: Головна мережа Ethereum використовує доказ частки володіння, але це не завжди було так.
 summaryPoint2: Терміном "злиття" назвали перехід від оригінального механізму доказу виконання роботи до доказу частки володіння.

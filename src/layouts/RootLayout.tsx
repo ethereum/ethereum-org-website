@@ -24,7 +24,7 @@ export const RootLayout = ({
   children,
   // contentIsOutdated,
   // contentNotTranslated,
-  lastDeployDate,
+  lastDeployLocaleTimestamp,
 }: Root) => {
   // const { locale, asPath } = useRouter()
 
@@ -68,7 +68,7 @@ export const RootLayout = ({
 
       {children}
 
-      <Footer lastDeployDate={lastDeployDate} />
+      <Footer lastDeployLocaleTimestamp={lastDeployLocaleTimestamp} />
       <FeedbackWidget />
     </Container>
   )

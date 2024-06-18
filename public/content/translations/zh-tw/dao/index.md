@@ -5,7 +5,7 @@ lang: zh-tw
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: 在對提案投票的去中心化自治組織代表。
 summaryPoint1: 沒有中心化領導的成員共有社群。
 summaryPoint2: 一個與網路上陌生人合作的安全方式。

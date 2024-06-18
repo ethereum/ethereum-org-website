@@ -2,7 +2,7 @@
 title: Ridimensionare Ethereum
 description: I rollup raggruppano le transazioni al di fuori della catena, riducendo i costi per l'utente. Tuttavia, il modo in cui i rollup utilizzano i dati al momento è troppo costoso, il che limita l'economicità delle transazioni. Il Proto-Danksharding lo corregge.
 lang: it
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "Roadmap di Ethereum"
 template: roadmap
 ---

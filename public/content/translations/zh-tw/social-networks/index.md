@@ -5,7 +5,7 @@ lang: zh-tw
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: 基於區塊鏈的平台，用於社交互動、内容建立和分發。
 summaryPoint2: 去中心化社交媒體網路可保護用戶隱私和增強資料安全性。
 summaryPoint3: 代幣和非同質化代幣創造了將內容貨幣化的新方法。

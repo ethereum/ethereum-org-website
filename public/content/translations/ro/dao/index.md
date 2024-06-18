@@ -5,7 +5,7 @@ lang: ro
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: O reprezentare a votului unui DAO în favoarea unei propuneri.
 summaryPoint1: Comunități deținute de membri, fără o conducere centralizată.
 summaryPoint2: Un mod sigur de a colabora cu persoane necunoscute pe internet.
