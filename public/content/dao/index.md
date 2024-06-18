@@ -160,3 +160,7 @@ _Typically used for decentralized development and governance of protocols and [d
 
 - [What is a DAO in crypto?](https://youtu.be/KHm0uUPqmVE)
 - [Can a DAO Build a City?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
+
+<Divider />
+
+<QuizWidget quizKey="daos" />
