@@ -236,11 +236,11 @@ Synchronization modes represent different approaches to this process with variou
 
 #### Full node syncs
 
-You may run a full node with:
+You may run a full node with a:
 
-- [a full sync](#full-sync)
-- a [fast sync](#fast-sync)
-- a [snap sync](#snap-sync)
+- [full sync](#full-sync)
+- [fast sync](#fast-sync)
+- [snap sync](#snap-sync)
 
 ##### Full sync {#full-sync}
 
