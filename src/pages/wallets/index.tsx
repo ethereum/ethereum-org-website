@@ -117,12 +117,8 @@ const ChecklistItem = (props: HorizontalCardProps) => (
   <HorizontalCard
     border={0}
     display="flex"
-    sx={{
-      "& > span": {
-        marginTop: "6.20px !important",
-        display: "initial",
-      },
-    }}
+    emojiSize={1.5}
+    alignItems="flex-start"
     mb={4}
     {...props}
   />
