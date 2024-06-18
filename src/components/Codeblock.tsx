@@ -14,7 +14,8 @@ import Emoji from "@/components/Emoji"
 ;(typeof global !== "undefined" ? global : window).Prism = Prism
 require("prismjs/components/prism-solidity")
 
-const LINES_BEFORE_COLLAPSABLE = 8
+// todo: move to constants
+export const LINES_BEFORE_COLLAPSABLE = 8
 
 const TopBarItem = (props: BoxProps) => {
   const bgColor = useColorModeValue("#f7f7f7", "#363641")
