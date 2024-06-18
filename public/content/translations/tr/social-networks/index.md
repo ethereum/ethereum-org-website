@@ -5,7 +5,7 @@ lang: tr
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: Sosyal etkileşim, içerik oluşturma ve dağıtım için blok zincir tabanlı platformlar.
 summaryPoint2: Merkeziyetsiz sosyal medya ağları, kullanıcı gizliliğini korur ve veri güvenliğini artırır.
 summaryPoint3: Token'lar ve NFT'ler, içerikten para kazanmanın yeni yollarını oluşturur.

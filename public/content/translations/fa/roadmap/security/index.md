@@ -2,7 +2,7 @@
 title: یک اتریوم ایمن‌تر
 description: اتریوم ایمن‌ترین و غیرمتمرکزترین پلتفورم قرارداد هوشمند موجود است. با این حال، همچنان می‌توان آن را بهبود بخشید تا اتریوم بتواند در آینده در برابر هر سطحی از حملات مقاوم باشد.
 lang: fa
-image: /roadmap/roadmap-security.png
+image: /images/roadmap/roadmap-security.png
 alt: "نقشه‌ راه اتریوم"
 template: roadmap
 ---

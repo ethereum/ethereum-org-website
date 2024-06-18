@@ -5,7 +5,7 @@ lang: fi
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Kuvitus, jossa hajautettu yhteisö äänestää ehdotuksesta.
 summaryPoint1: Jäsenten omistamat yhteisöt ilman keskitettyä johtajuutta.
 summaryPoint2: Turvallinen tapa tehdä yhteistyötä nettituttujen kanssa.

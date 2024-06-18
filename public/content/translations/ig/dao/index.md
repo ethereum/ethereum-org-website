@@ -4,7 +4,7 @@ description: Nkọwa ihe mere eme nke DAO na Ethereum
 lang: ig
 template: use-cases
 emoji: ":handshake:"
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Nnọchite anya nke DAO na atụ vootu na amụma.
 summaryPoint1: Ndị otu nwere obodo na-enweghị onye ndu etiti.
 summaryPoint2: Ụzọ dị mma iji imekọ ihe ọnụ na ndị na-amabughị n'ịntanetị.

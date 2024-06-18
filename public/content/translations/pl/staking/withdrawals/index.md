@@ -3,7 +3,7 @@ title: Wypłaty ze stakingu
 description: Strona podsumowująca, czym są wypłaty ze stakingu i jak działają, a także co muszą zrobić stakerzy, aby otrzymać nagrody
 lang: pl
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Nosorożec Leslie z nagrodami ze stakingu
 sidebarDepth: 2
 summaryPoints:

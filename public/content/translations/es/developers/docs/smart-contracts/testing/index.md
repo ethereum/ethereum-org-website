@@ -289,7 +289,7 @@ La diferencia principal es que los programas de recompensas por errores están a
 - [Visión general y comparación de productos de pruebas](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Cómo utilizar Echidna para probar contratos inteligentes](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [Cómo utilizar Manticore para encontrar errores en contratos inteligentes](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-- [Cómo usar Slither para encontrar errores en contratos inteligentes](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [¿Cómo usar Slither para encontrar errores inteligentes](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Cómo simular contratos de Solidity para pruebas](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Cómo ejecutar pruebas unitarias en Solidity usando Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 

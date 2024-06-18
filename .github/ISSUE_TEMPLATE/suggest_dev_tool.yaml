@@ -1,7 +1,7 @@
 name: Suggest a developer tool
 description: Anything a developer can use when building with Ethereum
 title: Suggest a developer tool
-labels: ["feature :sparkles:", "content :fountain_pen:"]
+labels: ["product 🧰"]
 body:
   - type: markdown
     attributes:

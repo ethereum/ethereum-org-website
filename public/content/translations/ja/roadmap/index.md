@@ -3,7 +3,7 @@ title: イーサリアムロードマップ
 description: イーサリアムのスケーラビリティ、セキュリティ、サステナビリティを改善する工程
 lang: ja
 template: roadmap
-image: /heroes/roadmap-hub-hero.jpg
+image: /images/heroes/roadmap-hub-hero.jpg
 alt: "イーサリアムロードマップ"
 summaryPoints:
 buttons:

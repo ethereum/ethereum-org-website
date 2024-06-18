@@ -5,7 +5,7 @@ lang: fil
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: Ang mga tradisyonal na identity system ay nakasentro sa pagbibigay, pagpapanatili at pagkontrol ng iyong mga identifier.
 summaryPoint2: Inaalis ng decentralized identity ang pagdepende sa mga centralized na third party.
 summaryPoint3: Dahil sa crypto, mayroon na ulit ang mga user ng mga tool para ibigay, pangasiwaan at kontrolin ang sarili nilang mga identifier at attestation.

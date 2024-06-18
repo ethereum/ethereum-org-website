@@ -17,7 +17,8 @@
     "incremental": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@/public/*": ["./public/*"]
+      "@/public/*": ["./public/*"],
+      "@/storybook-utils": ["./.storybook/utils.ts"]
     }
   },
   "include": ["./src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".storybook/**/*"],

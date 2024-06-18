@@ -4,7 +4,7 @@ description: نظرة عامة إلى كيفية بدء المراهنة الف�
 lang: ar
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: ليزلي فرس النهر على شريحة الحاسوب الخاصة بها.
 sidebarDepth: 2
 summaryPoints:

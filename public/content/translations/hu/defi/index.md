@@ -1,10 +1,10 @@
 ---
-title: Decentralizált pénzügyi rendszer (DeFi)
+title: Decentralizált pénzügy (DeFi)
 description: Az Ethereumon működő decentralizált pénzügyek (DeFi) áttekintése
 lang: hu
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: Egy LEGO építőkockákból készült Ethereum-logó.
 sidebarDepth: 2
 summaryPoint1: Egy globális és nyitott alternatívája a jelenlegi pénzügyi rendszernek.
@@ -178,7 +178,7 @@ Ha a hagyományos pénzügyi világban szeretne ugyanilyen ügyletet végrehajta
 
 #### Kölcsönadás {#lending}
 
-A rendelkezésére álló kriptovaluta kölcsönadásával kamatot kaphat, így pénzeszközei folyamatosan növekednek. Jelenleg a kamatráták sokkal magasabbak, mint a helyi bankokban (ha egyáltalán van elérhető bank a közelében). Például:
+A rendelkezésére álló kriptovaluta kölcsönadásával kamatot kaphat, így pénzeszközei folyamatosan növekednek. Jelenleg a kamatráták sokkal magasabbak, mint a helyi bankokban (ha egyáltalán van elérhető bank a közelében). Itt egy példa:
 
 - Kölcsönadja a rendelkezésére álló 100 Dai-t, ami egy [stabil érme](/stablecoins/), egy olyan termékért, mint az Aave.
 - Kap 100 Aave Dai-t (aDai), mely egy token, és a kölcsönadott Dai-t reprezentálja.
@@ -274,7 +274,7 @@ Eszerint az A projekt, mely 100 adományt kapott, egyenként 1 $ értékben, tö
 
 <Divider />
 
-### Biztosítás {#insurance}
+### Biztosítások {#insurance}
 
 A decentralizált biztosítások célja, hogy azok olcsóbbak, sokkal átláthatóbbak legyenek, és gyorsabb legyen a kifizetés. Az automatizálásnak köszönhetően a biztosítás általi lefedettség megfizethetőbb, a kifizetések pedig gyorsabbak. Az igénybejelentéshez használt adatok teljesen transzparensek.
 
