@@ -5,7 +5,7 @@ lang: ja
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: 提案に対する分散型自律組織(DAO)投票
 summaryPoint1: 中央集権的な制御がない、メンバー所有のコミュニティ
 summaryPoint2: インターネットの見知らぬ人と協力する安全な方法

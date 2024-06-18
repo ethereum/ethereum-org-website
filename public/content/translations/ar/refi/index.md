@@ -5,7 +5,7 @@ lang: ar
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: اقتصاد بديل قائم على أُسُس متجددة
 summaryPoint2: محاولة لتسخير الإيثريوم في سبيل حل الأزمات التي تتطلب تنسيق عالمي مثل التغيرات المناخية

@@ -4,7 +4,7 @@ description: Gambaran umum mengenai bagaimana cara memulai penaruhan untuk ETH d
 lang: id
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: Leslie si Badak sedang berenang di kolam.
 sidebarDepth: 2
 summaryPoints:

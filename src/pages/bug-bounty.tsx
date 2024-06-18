@@ -38,17 +38,18 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import consensusData from "@/data/consensus-bounty-hunters.json"
 import executionData from "@/data/execution-bounty-hunters.json"
 
-import besu from "@/public/upgrades/besu.png"
-import erigon from "@/public/upgrades/erigon.png"
-import geth from "@/public/upgrades/geth.png"
-import lighthouseDark from "@/public/upgrades/lighthouse-dark.png"
-import lighthouseLight from "@/public/upgrades/lighthouse-light.png"
-import lodestar from "@/public/upgrades/lodestar.png"
-import nethermind from "@/public/upgrades/nethermind.png"
-import nimbus from "@/public/upgrades/nimbus-cloud.png"
-import prysm from "@/public/upgrades/prysm.png"
-import tekuDark from "@/public/upgrades/teku-dark.png"
-import tekuLight from "@/public/upgrades/teku-light.png"
+import besu from "@/public/images/upgrades/besu.png"
+import erigon from "@/public/images/upgrades/erigon.png"
+import geth from "@/public/images/upgrades/geth.png"
+import lighthouseDark from "@/public/images/upgrades/lighthouse-dark.png"
+import lighthouseLight from "@/public/images/upgrades/lighthouse-light.png"
+import lodestar from "@/public/images/upgrades/lodestar.png"
+import nethermind from "@/public/images/upgrades/nethermind.png"
+import nimbus from "@/public/images/upgrades/nimbus-cloud.png"
+import prysm from "@/public/images/upgrades/prysm.png"
+import reth from "@/public/images/upgrades/reth.png"
+import tekuDark from "@/public/images/upgrades/teku-dark.png"
+import tekuLight from "@/public/images/upgrades/teku-light.png"
 
 const Page = (props: ChildOnlyProp) => (
   <Box
@@ -426,6 +427,11 @@ const BugBountiesPage = () => {
       image: prysm,
     },
     {
+      title: "Reth",
+      link: "https://reth.rs/",
+      image: reth,
+    },
+    {
       title: "Teku",
       link: "https://pegasys.tech/teku",
       image: useColorModeValue(tekuDark, tekuLight),
@@ -503,6 +509,9 @@ const BugBountiesPage = () => {
         </Client>
         <Client>
           <Image src={nethermind} alt="" {...iconImageProps} />
+        </Client>
+        <Client>
+          <Image src={reth} alt="" {...iconImageProps} />
         </Client>
       </ClientRow>
       <ClientRow>
@@ -678,6 +687,29 @@ const BugBountiesPage = () => {
                 <br />
                 <InlineLink href="https://github.com/ethereum/consensus-specs/blob/dev/solidity_deposit_contract/deposit_contract.sol">
                   Deposit Contract Source Code
+                </InlineLink>
+              </Box>
+            </StyledCard>
+            <StyledCard
+              emoji=":bug:"
+              title={t("page-upgrades-bug-bounty-dependency-bugs")}
+              description={t("page-upgrades-bug-bounty-dependency-bugs-desc")}
+            >
+              <Box>
+                <OldHeading
+                  as="h4"
+                  fontWeight="medium"
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
+                  {t("page-upgrades-bug-bounty-help-links")}
+                </OldHeading>
+                <InlineLink href="https://github.com/ethereum/c-kzg-4844">
+                  C-KZG-4844
+                </InlineLink>
+                <br />
+                <InlineLink href="https://github.com/crate-crypto/go-kzg-4844">
+                  Go-KZG-4844
                 </InlineLink>
               </Box>
             </StyledCard>

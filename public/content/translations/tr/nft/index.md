@@ -5,7 +5,7 @@ lang: tr
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Hologram ile gösterilen bir Eth logosu.
 summaryPoint1: Benzersiz bir şeyi Ethereum tabanlı bir varlık olarak göstermenin yolu.
 summaryPoint2: NFT'ler içerik oluşturuculara her zamankinden daha fazla güç veriyor.

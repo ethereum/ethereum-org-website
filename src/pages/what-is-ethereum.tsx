@@ -61,15 +61,15 @@ import {
 } from "@/lib/utils/translations"
 
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
-import dogeComputerImg from "@/public/doge-computer.png"
-import ethImg from "@/public/eth.png"
-import diffEthAndBtc from "@/public/eth.png"
-import criminalActivity from "@/public/finance_transparent.png"
-import ethCoin from "@/public/impact_transparent.png"
-import whatAreSmartContracts from "@/public/infrastructure_transparent.png"
-import whoRunsEthereum from "@/public/run-a-node/ethereum-inside.png"
-import stats from "@/public/upgrades/newrings.png"
-import hero from "@/public/what-is-ethereum.png"
+import dogeComputerImg from "@/public/images/doge-computer.png"
+import ethImg from "@/public/images/eth.png"
+import diffEthAndBtc from "@/public/images/eth.png"
+import criminalActivity from "@/public/images/finance_transparent.png"
+import ethCoin from "@/public/images/impact_transparent.png"
+import whatAreSmartContracts from "@/public/images/infrastructure_transparent.png"
+import whoRunsEthereum from "@/public/images/run-a-node/ethereum-inside.png"
+import stats from "@/public/images/upgrades/newrings.png"
+import hero from "@/public/images/what-is-ethereum.png"
 
 const Slogan = (props: ChildOnlyProp) => (
   <Text
@@ -330,7 +330,7 @@ const WhatIsEthereumPage = ({
       <PageMetadata
         title={t("page-what-is-ethereum-meta-title")}
         description={t("page-what-is-ethereum-meta-description")}
-        image="what-is-ethereum.png"
+        image="/images/what-is-ethereum.png"
       />
       <Content>
         <Flex

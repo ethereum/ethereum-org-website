@@ -5,7 +5,7 @@ lang: ar
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: تمثيل لمنظمة مستقلة لامركزية تصوّت على مقترح.
 summaryPoint1: المجتمعات التي يملكها الأعضاء دون قيادة مركزية.
 summaryPoint2: طريقة آمنة للتعاون مع الغرباء على الإنترنت.

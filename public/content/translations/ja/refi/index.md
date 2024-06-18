@@ -5,7 +5,7 @@ lang: ja
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: 再生原理に基づく代替経済システム
 summaryPoint2: イーサリアムを利用して、気候変動など世界レベルの協調的危機を解決しようとする試み

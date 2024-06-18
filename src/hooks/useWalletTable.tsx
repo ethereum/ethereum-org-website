@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext, useState } from "react"
 
 import type { DropdownOption, Wallet, WalletFilter } from "@/lib/types"
 
@@ -120,19 +120,11 @@ export const useWalletTable = ({
     },
   ]
 
-  const [walletCardData, setWalletData] = useState(
+  const [walletCardData, setWalletData] = useState(() =>
     walletData.map((wallet) => {
       return { ...wallet, moreInfo: false, key: wallet.name }
     })
   )
-
-  useEffect(() => {
-    setWalletData(
-      walletData.map((wallet) => {
-        return { ...wallet, moreInfo: false, key: wallet.name }
-      })
-    )
-  }, [walletData])
 
   // Context API for language filter
   const { supportedLanguage } = useContext(WalletSupportedLanguageContext)

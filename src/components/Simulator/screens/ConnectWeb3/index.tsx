@@ -28,7 +28,7 @@ import { EXAMPLE_APP_URL } from "./constants"
 import { Slider } from "./Slider"
 import { Web3App } from "./Web3App"
 
-import NFTImage from "@/public/deep-panic.png"
+import NFTImage from "@/public/images/deep-panic.png"
 
 export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
   const { progressStepper, step } = nav

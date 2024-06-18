@@ -26,7 +26,7 @@ const baseStyle = defineMergeStyles(
       borderBottom: "1px",
       borderColor: "body.base",
       color: "body.base",
-      textTransform: "capitalize",
+      textTransform: "none",
       verticalAlign: "bottom",
       ...cellPadding,
     },

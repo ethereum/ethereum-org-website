@@ -4,7 +4,7 @@ description: イーサリアムにおける分散型金融(DeFi)の概要
 lang: ja
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: レゴブロックで作られたETHのロゴ
 sidebarDepth: 2
 summaryPoint1: 現在の金融システムに変わる、グローバルで開かれた分散型金融。

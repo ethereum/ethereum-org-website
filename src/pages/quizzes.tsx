@@ -28,7 +28,7 @@ import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "@/data/quizzes"
 
 import { INITIAL_QUIZ } from "@/lib/constants"
 
-import HeroImage from "@/public/heroes/quizzes-hub-hero.png"
+import HeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
 
 const handleGHAdd = () =>
   trackCustomEvent({
@@ -81,7 +81,7 @@ const QuizzesHubPage: NextPage<
       <PageMetadata
         title={t("common:quizzes-title")}
         description={t("quizzes-subtitle")}
-        image="/heroes/quizzes-hub-hero.png"
+        image="/images/heroes/quizzes-hub-hero.png"
       />
       <HubHero
         title={t("common:quizzes-title")}

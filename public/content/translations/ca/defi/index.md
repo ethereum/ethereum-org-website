@@ -4,7 +4,7 @@ description: Una visió general de les DeFi a Ethereum
 lang: ca
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: Un logotip d'Ethereum fet de peces de lego.
 sidebarDepth: 2
 summaryPoint1: Una alternativa global i oberta al sistema financer actual.
