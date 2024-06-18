@@ -1,6 +1,6 @@
 import { lazy, Suspense, useRef } from "react"
 import { useTranslation } from "next-i18next"
-import { Box, Flex, Show, useDisclosure } from "@chakra-ui/react"
+import { Box, Flex, Hide, Show, useDisclosure } from "@chakra-ui/react"
 
 import { EthHomeIcon } from "@/components/icons"
 import { BaseLink } from "@/components/Link"
@@ -70,7 +70,7 @@ const Nav = () => {
                 <DesktopNavMenu toggleColorMode={toggleColorMode} />
               </Show>
 
-              <Show below="md">
+              <Hide above="md">
                 {/* Mobile */}
                 {/* use Suspense to display the Search & the Menu at the same time */}
                 <Suspense>
@@ -82,7 +82,7 @@ const Nav = () => {
                     drawerContainerRef={navWrapperRef}
                   />
                 </Suspense>
-              </Show>
+              </Hide>
             </Flex>
           </Flex>
         </Flex>
