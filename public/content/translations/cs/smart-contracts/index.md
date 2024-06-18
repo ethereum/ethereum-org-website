@@ -6,11 +6,15 @@ lang: cs
 
 # Úvod do chytrých kontraktů {#introduction-to-smart-contracts}
 
-Chytré kontrakty jsou základními stavebními kameny aplikační vrstvy Etherea. Jsou to počítačové programy uložené na blockchainu, které se řídí logikou „jestli tohle, tak tamto“ a je zaručeno, že se spouštějí podle pravidel definovaných svým kódem, který po vytvoření nelze změnit.
+Chytré kontrakty jsou základními stavebními kameny aplikační vrstvy Etherea. Jsou to počítačové programy uložené na [blockchainu](/glossary/#blockchain), které se řídí logikou „jestli tohle, tak tamto“ a je zaručeno, že se spouštějí podle pravidel definovaných svým kódem, který po vytvoření nelze měnit.
 
 Nick Szabo zavedl termín „chytrý kontrakt“. V roce 1994 napsal [úvod do tohoto konceptu](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) a v roce 1996 napsal [výzkum činností, které by chytré kontrakty mohly dělat](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Szabo si představoval digitální tržiště, kde automatické, kryptograficky bezpečné procesy umožňují provádění transakcí a obchodních funkcí bez důvěryhodných zprostředkovatelů. Chytré kontrakty na Ethereu tuto vizi uvedly do praxe.
+Szabo popsal digitální tržiště, kde automatické, [kryptografií zabezpečené](/glossary/#cryptography), procesy umožňují provádění transakcí a obchodních funkcí bez důvěryhodných zprostředkovatelů. Chytré kontrakty na Ethereu tuto vizi uvedly do praxe.
+
+Koukněte se, jak vysvětlují chytré kontrakty na Finematics:
+
+<YouTube id="pWGLtjG-F5c" />
 
 ## Důvěra v konvenční kontrakty {#trust-and-contracts}
 
@@ -60,20 +64,14 @@ A konečně, stejně jako v případě tradičních kontraktů, můžete prozkou
 
 Chytré kontrakty umí v podstatě cokoli, co umí počítačové programy.
 
-Mohou provádět výpočty, vytvářet měnu, ukládat data, těžit NFT, odesílat komunikaci a dokonce generovat grafiku. Zde jsou některé reálné populární příklady:
+Mohou provádět výpočty, vytvářet měnu, ukládat data, těžit [NFT](/glossary/#nft), odesílat komunikaci a dokonce generovat grafiku. Zde jsou některé reálné populární příklady:
 
 - [Stablecoiny](/stablecoins/)
 - [Vytváření a distribuce jedinečných digitálních majetků](/nft/)
 - [Automatická otevřená směnárna](/get-eth/#dex)
-- [Decentralizované počítačové hry](/dapps/?category=gaming)
+- [Decentralizované počítačové hry](/dapps/?category=gaming#explore)
 - [Pojistná smlouva, která automaticky vyplatí plnění](https://etherisc.com/)
 - [Standard, který umožňuje vytvářet interoperabilní měny dle konkrétních požadavků](/developers/docs/standards/tokens/)
-
-## More of a visual learner? {#visual-learner}
-
-Koukněte se, jak vysvětlují chytré kontrakty na Finematics:
-
-<YouTube id="pWGLtjG-F5c" />
 
 ## Další informace {#further-reading}
 

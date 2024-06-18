@@ -59,7 +59,7 @@ Ačkoliv klíčové rysy Web3 nejsou izolované a nedají se zařadit do pevnýc
 
 Web3 vám umožňuje vlastnit vaše digitální aktiva dosud nevídaným způsobem. Představte si například, že hrajete hru na Web2. Pokud si v této hře zakoupíte nějaký předmět, je přímo spojen s vaším účtem. V případě, že tvůrci hry smažou váš účet, o všechny zakoupené předměty přijdete. Nebo pokud tuto hru přestanete hrát, přijdete o veškeré prostředky, které jste do herních předmětů vložili.
 
-Web3 umožňuje přímé vlastnictví prostřednictvím [nezaměnitelných tokenů (NFT)](/nft/). Nikdo, ani tvůrci hry, nemají moc vás vlastnictví zbavit. A pokud přestanete hrát, můžete své herní předměty prodat nebo vyměnit na veřejně přístupných tržištíích a získat tak zpět prostředky, které jste vynaložili na jejich pořízení.
+Web3 umožňuje přímé vlastnictví prostřednictvím [nezaměnitelných tokenů (NFT)](/glossary/#nft). Nikdo, ani tvůrci hry, nemají moc vás vlastnictví zbavit. A pokud přestanete hrát, můžete své herní předměty prodat nebo vyměnit na veřejně přístupných tržištíích a získat tak zpět prostředky, které jste vynaložili na jejich pořízení.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Další informace o NFT</div>
@@ -82,7 +82,7 @@ Web 2.0 vyžaduje, aby se tvůrci obsahu spoléhali na to, že se pravidla nezm�
 
 Kromě vlastnictví dat ve Web3 můžete vlastnit jako kolektiv i celou platformu a to díky použití tokenů, které fungují jako akcie ve společnosti. DAO vám umožňují spravovat decentralizované vlastnictví platformy a rozhodovat o její budoucnosti.
 
-DAO jsou technicky definovány jako smart kontrakty, které automatizují decentralizované rozhodování o zdrojích (tokenech). Uživatelé s tokeny hlasují o způsobu utracení těchto společných zdrojů, a kód automaticky provede výsledek hlasování.
+DAO jsou technicky definovány jako [chytré kontrakty](/glossary/#smart-contract), které automatizují decentralizované rozhodování o zdrojích (tokenech). Uživatelé s tokeny hlasují o způsobu utracení těchto společných zdrojů, a kód automaticky provede výsledek hlasování.
 
 Lidé definují spoustu Web3 komunit jako DAO. Všechny tyto komunity mají různé úrovně decentralizace a automatizace v závislosti na kódu. V současné době jsme ve fázi výzkumu, co DAO jsou a jak by se mohly v budoucnu vyvíjet.
 
@@ -97,15 +97,11 @@ Lidé definují spoustu Web3 komunit jako DAO. Všechny tyto komunity mají růz
 
 Běžně byste si vytvořili účet pro každou platformu, kterou používáte. Můžete mít například účet na Twitteru, na YouTube a na Redditu. Chcete změnit své jméno nebo profilovou fotku? Musíte to udělat v každém účtu zvlášť. V některých případech můžete použít přihlášení pomocí sociální sítě, ale to představuje známý problém – cenzuru. Jediným kliknutím vám tyto platformy mohou zamknout celý váš online život. Ještě horší je, že mnoho platforem vyžaduje, abyste jim poskytli informace, pomocí kterých vás mohou identifikovat jako osobu, abyste si mohli vůbec založit účet.
 
-Web3 řeší tyto problémy tím, že vám umožňuje ovládat vaši digitální identitu pomocí ethereovské adresy a ENS profilu. Použití ethereovské adresy umožňuje jednotné přihlášení napříč platformami, které je bezpečné, odolné proti cenzuře a anonymní.
-
-<ButtonLink to="https://login.xyz/">
-  Přihlaste se pomocí Etherea
-</ButtonLink>
+Web3 řeší tyto problémy tím, že vám umožňuje ovládat vaši digitální identitu pomocí Ethereum adresy a [Ethereum Name Service (ENS)](/glossary/#ens) profilu. Použití ethereovské adresy umožňuje jednotné přihlášení napříč platformami, které je bezpečné, odolné proti cenzuře a anonymní.
 
 ### Nativní platby {#native-payments}
 
-Platební infrastruktura Web2 spoléhá na banky a další subjekty, přičemž lidé bez bankovních účtů nebo ti, kteří nežijí ve "správné" zemi, nemohou platit vůbec. Web3 používá tokeny jako [ETH](/eth/) k odesílání peněz přímo v prohlížeči a nevyžaduje žádnou třetí stranu, které byste museli důvěřovat.
+Platební infrastruktura Web2 spoléhá na banky a další subjekty, přičemž lidé bez bankovních účtů nebo ti, kteří nežijí ve "správné" zemi, nemohou platit vůbec. Web3 používá tokeny jako [ETH](/glossary/#ether) k odesílání peněz přímo v prohlížeči a nevyžaduje žádnou třetí stranu, které byste museli důvěřovat.
 
 <ButtonLink to="/eth/">
   Více na ETH
@@ -117,7 +113,7 @@ Navzdory četným výhodám Web3 sxistuje v jeho současné podobě stále mnoho
 
 ### Přístupnost {#accessibility}
 
-Důležité funkce Web3, jako je přihlášení pomocí ethereovské adresy, jsou již k dispozici pro kohokoli a bez nákladů. Relativní náklady na transakce jsou však pro mnohé uživatele stále příliš vysoké. Kvůli vysokým transakčním poplatkům bude Web3 méně pravděpodobně využíván v méně bohatých nebo rozvojových zemích. Ethereum tyto výzvy řeší ve svém [plánu vývoje](/roadmap/) a [pomocí 2. vrstev](/developers/docs/scaling/). Technologicky jsme připraveni, ale potřebujeme vyšší zapojení uživatelů na 2. vrstvě, aby byl Web3 přístupný všem.
+Důležité funkce Web3, jako je přihlášení pomocí ethereovské adresy, jsou již k dispozici pro kohokoli a bez nákladů. Relativní náklady na transakce jsou však pro mnohé uživatele stále příliš vysoké. Kvůli vysokým transakčním poplatkům bude Web3 méně pravděpodobně využíván v méně bohatých nebo rozvojových zemích. Na Ethereu se tyto problémy řeší prostřednictvím [plánu postupu](/roadmap/) a [řešení škálování na vrstvě 2](/glossary/#layer-2). Technologicky jsme připraveni, ale potřebujeme vyšší zapojení uživatelů na 2. vrstvě, aby byl Web3 přístupný všem.
 
 ### Uživatelská zkušenost {#user-experience}
 

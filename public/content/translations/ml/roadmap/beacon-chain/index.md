@@ -3,7 +3,7 @@ title: ബീക്കൺ ചെയിൻ
 description: പ്രൂഫ് ഓഫ് സ്റ്റേക്ക് Ethereum അവതരിപ്പിച്ചിട്ടുള്ള അപ്‌ഗ്രേഡായ ബീക്കൺ ചെയിൻ സംബന്ധിച്ച് കൂടുതലറിയുക.
 lang: ml
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
 alt: 
 summaryPoint1: ബീക്കൺ ചെയിൻ, Ethereum ഇക്കോസിസ്റ്റത്തിലേക്ക് പ്രൂഫ് ഓഫ് സ്റ്റേക്ക് അവതരിപ്പിച്ചു.
 summaryPoint2: ഇത് ഒറിജിനൽ Ethereum പ്രൂഫ് ഓഫ് വർക്ക് ശൃംഖലയുമായി 2022 സെപ്റ്റംബറിൽ ലയിപ്പിച്ചു.

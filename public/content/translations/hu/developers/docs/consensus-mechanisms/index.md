@@ -82,10 +82,11 @@ Az Ethereum a [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/) nevű 
 - [A proof-of-work blokkláncok biztonságáról és teljesítményéről](https://eprint.iacr.org/2016/555.pdf)
 - [Bizánci hiba](https://en.wikipedia.org/wiki/Byzantine_fault)
 
-_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
+_Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_
 
 ## Kapcsolódó témák {#related-topics}
 
 - [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 - [Bányászat](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
+- [Proof-of-authority (jogosultsági igazolás)](/developers/docs/consensus-mechanisms/poa/)

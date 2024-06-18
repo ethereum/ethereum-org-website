@@ -5,7 +5,7 @@ lang: kn
 template: use-cases
 emoji: ":ಮರುಬಳಕೆ:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: ಪುನರುತ್ಪಾದಕ ತತ್ವಗಳ ಮೇಲೆ ನಿರ್ಮಿಸಲಾದ ಪರ್ಯಾಯ ಆರ್ಥಿಕ ವ್ಯವಸ್ಥೆ
 summaryPoint2: ಹವಾಮಾನ ಬದಲಾವಣೆಯಂತಹ ಜಾಗತಿಕ ಮಟ್ಟದ ಸಮನ್ವಯ ಬಿಕ್ಕಟ್ಟುಗಳನ್ನು ಪರಿಹರಿಸಲು ಇಥಿರಿಯಮ್ಅನ್ನು ಬಳಸಿಕೊಳ್ಳುವ ಪ್ರಯತ್ನ

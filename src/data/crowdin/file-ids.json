@@ -504,6 +504,10 @@
     "path": "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md"
   },
   {
+    "id": 11826,
+    "path": "/developers/docs/consensus-mechanisms/poa/index.md"
+  },
+  {
     "id": 2808,
     "path": "/developers/docs/smart-contracts/languages/index.md"
   },
@@ -641,46 +645,46 @@
   },
   {
     "id": 6398,
-    "path": "/adding-developer-tools/index.md"
+    "path": "/contributing/adding-developer-tools/index.md"
   },
   {
     "id": 6400,
-    "path": "/adding-exchanges/index.md"
+    "path": "/contributing/adding-exchanges/index.md"
   },
   {
     "id": 6404,
-    "path": "/adding-glossary-terms/index.md"
+    "path": "/contributing/adding-glossary-terms/index.md"
   },
   {
     "id": 6408,
-    "path": "/adding-products/index.md"
+    "path": "/contributing/adding-products/index.md"
   },
   {
     "id": 6416,
-    "path": "/content-resources/index.md"
+    "path": "/contributing/content-resources/index.md"
   },
   {
     "id": 6446,
-    "path": "/adding-layer-2s/index.md"
+    "path": "/contributing/adding-layer-2s/index.md"
   },
   {
     "id": 6448,
-    "path": "/adding-staking-products/index.md"
+    "path": "/contributing/adding-staking-products/index.md"
   },
   {
     "id": 7565,
-    "path": "/adding-wallets/index.md"
+    "path": "/contributing/adding-wallets/index.md"
   },
   {
     "id": 7569,
-    "path": "/adding-desci-projects/index.md"
+    "path": "/contributing/adding-desci-projects/index.md"
   },
   {
     "id": 7939,
-    "path": "/design/adding-design-resources/index.md"
+    "path": "/contributing/design/adding-design-resources/index.md"
   },
   {
     "id": 8007,
-    "path": "/quizzes/index.md"
+    "path": "/contributing/quizzes/index.md"
   }
 ]

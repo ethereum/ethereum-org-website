@@ -4,7 +4,7 @@ description: Uma visão geral de como começar com os pools de staking de ETH
 lang: pt-br
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: Leslie, o rinoceronte, flutuando nas nuvens
 sidebarDepth: 2
 summaryPoints:

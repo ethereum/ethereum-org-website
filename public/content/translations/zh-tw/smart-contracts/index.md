@@ -6,11 +6,15 @@ lang: zh-tw
 
 # 智慧型合約簡介 {#introduction-to-smart-contracts}
 
-智慧型合約是以太坊應用程式層的基本構成要素。 這些合約是儲存在區塊鏈上的電腦程式，其跟從「條件式」的設計邏輯，且保證依程式碼所定義的規則來執行，程式碼一經建立即無法變更。
+智慧型合約是以太坊應用程式層的基本構成要素。 它們是一種儲存在[區塊鏈](/glossary/#blockchain)上的電腦程式，會遵守「如果某事發生，則執行某程式」的邏輯，且保證會依照程式碼定義好的規則執行，智慧型合約一經建立則無法變更。
 
 Nick Szabo 率先提出「智慧型合約」一詞。 他在 1994 年撰寫了[這個概念](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)，並在 1996 年撰寫了[《探索智慧型合約可以做什麼》](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html)。
 
-Szabo 設想了一種數位市場，無需透過可信的中介，即能以自動化、透過加密方法保障安全的流程實現交易和業務功能。 以太坊上的智慧型合約讓此一願景付諸實踐。
+Szabo 設想了一種數位市場，無需可信的中介，即能透過自動化、[加密安全](/glossary/#cryptography)的流程實現交易和業務功能。 以太坊上的智慧型合約讓此一願景付諸實踐。
+
+觀看 Finematics 講解智慧型合約：
+
+<YouTube id="pWGLtjG-F5c" />
 
 ## 傳統合約內的信任 {#trust-and-contracts}
 
@@ -60,20 +64,14 @@ Alice 和 Bob 進行一場自行車比賽。 Alice 和 Bob 打賭 10 美金，�
 
 基本上，智慧型合約可以做到所有電腦程式都能做到的事。
 
-它們可以執行計算、創建貨幣、儲存資料、鑄造非同質化代幣、傳送通訊內容，甚至產生圖形。 以下是一些真實世界流行的範例：
+它們可以執行計算、建立貨幣、儲存資料、鑄造[非同質化代幣](/glossary/#nft)、傳送通訊內容，甚至產生圖形。 以下是一些真實世界流行的範例：
 
 - [穩定幣](/stablecoins/)
 - [建立和分發唯一的數位資產](/nft/)
 - [自動、開放的貨幣交易所](/get-eth/#dex)
-- [去中心化遊戲](/dapps/?category=gaming)
+- [去中心化遊戲](/dapps/?category=gaming#explore)
 - [自動理賠的保單](https://etherisc.com/)
 - [讓人們建立自訂、可互相流通的貨幣的標準](/developers/docs/standards/tokens/)
-
-## 想透過視覺方式學習？ {#visual-learner}
-
-觀看 Finematics 講解智慧型合約：
-
-<YouTube id="pWGLtjG-F5c" />
 
 ## 了解更多 {#further-reading}
 

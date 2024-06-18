@@ -46,7 +46,7 @@ export const ContentHero: StoryObj = {
     return (
       <ContentHeroComponent
         breadcrumbs={{ slug: "/en/run-a-node/" }}
-        heroImg="/upgrades/merge.png"
+        heroImg="/images/upgrades/merge.png"
         // Can not properly hardcode this URL. So it's left blank
         blurDataURL=""
         title={getTranslation("hero-header", PAGE_LEARN_NS)}

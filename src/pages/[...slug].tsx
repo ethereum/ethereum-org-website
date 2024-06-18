@@ -17,6 +17,7 @@ import remarkGfm from "remark-gfm"
 
 import type {
   CommitHistory,
+  Lang,
   Layout,
   LayoutMappingType,
   NextPageWithLayout,
@@ -31,6 +32,7 @@ import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { remapTableOfContents } from "@/lib/utils/toc"
 import {
   filterRealLocales,
@@ -154,7 +156,6 @@ export const getStaticProps = (async (context) => {
   const timeToRead = readingTime(markdown.content)
   const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
   const slug = `/${params.slug.join("/")}/`
-  const lastDeployDate = getLastDeployDate()
 
   // Get corresponding layout
   let layout = (frontmatter.template as Layout) ?? "static"
@@ -184,6 +185,16 @@ export const getStaticProps = (async (context) => {
     commitHistoryCache
   )
 
+  const lastDeployDate = getLastDeployDate()
+  const lastEditLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastUpdatedDate
+  )
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
+
   const gfissues = await gfIssuesDataFetch()
 
   return {
@@ -192,8 +203,8 @@ export const getStaticProps = (async (context) => {
       mdxSource,
       slug,
       frontmatter,
-      lastUpdatedDate,
-      lastDeployDate,
+      lastEditLocaleTimestamp,
+      lastDeployLocaleTimestamp,
       contentNotTranslated,
       layout,
       timeToRead: Math.round(timeToRead.minutes),
@@ -229,7 +240,8 @@ ContentPage.getLayout = (page) => {
   const {
     slug,
     frontmatter,
-    lastUpdatedDate,
+    lastEditLocaleTimestamp,
+    lastDeployLocaleTimestamp,
     layout,
     timeToRead,
     tocItems,
@@ -240,7 +252,8 @@ ContentPage.getLayout = (page) => {
   const layoutProps = {
     slug,
     frontmatter,
-    lastUpdatedDate,
+    lastEditLocaleTimestamp,
+    lastDeployLocaleTimestamp,
     timeToRead,
     tocItems,
     contributors,

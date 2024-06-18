@@ -5,7 +5,7 @@ lang: fil
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Isang alternatibong sistema ng ekonomiya na ibinatay sa mga prinsipyong regenerative
 summaryPoint2: Isang pagsubok na gamitin ang Ethereum upang malutas ang mga pandaigdigang problema sa koordinasyon tulad ng pagbabago ng klima

@@ -3,7 +3,7 @@ title: الدمج
 description: تعرّف على الدمج - عندما تبنت الشبكة الرئيسية إثيريوم إثبات الحصة.
 lang: ar
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: تستخدم الشبكة الرئيسية لإثيريوم إثبات الحصة، بيد أن ذلك ليس الوضع دائمًا.
 summaryPoint2: كان يُطلق على عملية التطوير من آلية إثبات العمل الأصلية إلى إثبات الحصة اسم الدمج.
