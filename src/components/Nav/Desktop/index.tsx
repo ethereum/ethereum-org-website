@@ -19,7 +19,11 @@ import LanguagePicker from "@/components/LanguagePicker"
 
 import { DESKTOP_LANGUAGE_BUTTON_NAME, NAV_PY } from "@/lib/constants"
 
-function DesktopNavMenu({ toggleColorMode }: { toggleColorMode: () => void }) {
+type DesktopNavMenuProps = {
+  toggleColorMode: () => void
+}
+
+const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
   const { t } = useTranslation("common")
   const { locale } = useRouter()
   const languagePickerState = useDisclosure()
