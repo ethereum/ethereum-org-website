@@ -15,24 +15,27 @@ There are multiple ways to store information either directly on the blockchain, 
 
 The choice of which method to use is based on several criteria:
 
-- The source of the information. Information in calldata cannot come from the blockchain itself.
-- The destination of the information. Calldata is available only in the transaction it initiates. Events are not accessible onchain.
+- The source of the information. Information in calldata cannot come directly from the blockchain itself.
+- The destination of the information. Calldata is available only in the transaction it initiates. Events are not accessible onchain at all.
 - How much hassle is acceptable? Computers that run a full-scale node can perform more processing than a light client in an application running in a browser.
 - Is it necessary to facilitate easy access to the information from every node?
+- The security requirements.
 
-## Prerequisites {#prerequisites}
+## The security requirements {#security-requirements}
 
-You should have a good understanding of [blockchain fundamentals](/developers/docs/intro-to-ethereum/). This page also assumes the reader is familiar with [blocks](/developers/docs/blocks/), [transactions](/developers/docs/transactions/), and other relevant topics.
+In general, information security consists of three attributes:
 
-## The C.I.A. of information security {#cia-info-security}
-
-There are three attributes we'd like to have for data.
-
-- _Confidentiality_, unauthorized entities are not allowed to read the information. This is useful in many cases, but _there are no secrets on the blockchain_. Blockchains work because everybody can verify the state transitions, so it is impossible to use them to store secrets directly. There are ways to store confidential information on the blockchain, but they all rely on some offchain component to store at least a key.
+- _Confidentiality_, unauthorized entities are not allowed to read the information. This is important in many cases, but not here. _There are no secrets on the blockchain_. Blockchains work because anybody can verify the state transitions, so it is impossible to use them to store secrets directly. There are ways to store confidential information on the blockchain, but they all rely on some offchain component to store at least a key.
 
 - _Integrity_, the information is correct, it cannot be changed by unauthorized entities, or in unauthorized ways (for example, transferring [ERC-20 tokens](https://eips.ethereum.org/EIPS/eip-20#events) without a `Transfer` event). On the blockchain, every node verifies every state change, which ensures integrity.
 
 - _Availability_, the information is available to any authorized entity. On the blockchain, this is usually achieved by having the information available on every [full node](https://ethereum.org/developers/docs/nodes-and-clients#full-node).
+
+The different solutions here all have excellent integrity, because hashes are posted on L1. However, they do have different availability guarantees.
+
+## Prerequisites {#prerequisites}
+
+You should have a good understanding of [blockchain fundamentals](/developers/docs/intro-to-ethereum/). This page also assumes the reader is familiar with [blocks](/developers/docs/blocks/), [transactions](/developers/docs/transactions/), and other relevant topics.
 
 ## EIP-4844 blobs {#eip-4844-blobs}
 
