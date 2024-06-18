@@ -15,7 +15,6 @@ import {
   HeadingProps,
   Icon,
   SimpleGridProps,
-  Skeleton,
   SkeletonText,
   Stack,
   useToken,
@@ -71,7 +70,6 @@ import infrastructurefixed from "@/public/infrastructure_transparent.png"
 import merge from "@/public/upgrades/merge.png"
 import robotfixed from "@/public/wallet-cropped.png"
 import ethereum from "@/public/what-is-ethereum.png"
-import { LINES_BEFORE_COLLAPSABLE } from "@/components/Codeblock"
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
@@ -228,14 +226,16 @@ export const getStaticProps = (async ({ locale }) => {
   }
 }) satisfies GetStaticProps<Props>
 
-// Lazy-load these components on initial load
+// Lazy-load Codeblock on initial load
+const CodeblockSkeleton = () => (
+  <Stack px={6} pt="2.75rem" h="50vh">
+    <SkeletonText mt="4" noOfLines={12} startColor="body.base" />
+  </Stack>
+)
+
 const Codeblock = dynamic(() => import("@/components/Codeblock"), {
   ssr: false,
-  loading: () => (
-    <Skeleton height={"100%"} startColor="body.base">
-      Loading...
-    </Skeleton>
-  ),
+  loading: () => <CodeblockSkeleton />,
 })
 
 const HomePage = ({
@@ -559,50 +559,13 @@ const HomePage = ({
               setIsOpen={setModalOpen}
               title={codeExamples[activeCode].title}
             >
-              <>
-                {/* <Stack
-                  px={6}
-                  py={8}
-                  maxH={`calc((1.2rem * ${LINES_BEFORE_COLLAPSABLE}) + 4.185rem)`}
-                  pt={hasTopBar ? "2.75rem" : 6}
-                  ps={4}
-                >
-                  <SkeletonText
-                    mt="4"
-                    noOfLines={12}
-                    spacing="4"
-                    skeletonHeight="2"
-                    startColor="body.base"
-                  />
-                </Stack> */}
-
-                <SkeletonText
-                  // noOfLines={13}
-                  // spacing="4"
-                  // skeletonHeight="2"
-                  px={6}
-                  py={12}
-                  overflow="hidden"
-                  startColor="body.base"
-                  h="50%"
-                >
-                  <Codeblock
-                    codeLanguage={codeExamples[activeCode].codeLanguage}
-                    allowCollapse={false}
-                    fromHomepage
-                  >
-                    {codeExamples[activeCode].code}
-                  </Codeblock>
-                </SkeletonText>
-
-                {/* <Codeblock
-                  codeLanguage={codeExamples[activeCode].codeLanguage}
-                  allowCollapse={false}
-                  fromHomepage
-                >
-                  {codeExamples[activeCode].code}
-                </Codeblock> */}
-              </>
+              <Codeblock
+                codeLanguage={codeExamples[activeCode].codeLanguage}
+                allowCollapse={false}
+                fromHomepage
+              >
+                {codeExamples[activeCode].code}
+              </Codeblock>
             </CodeModal>
           )}
         </Row>
