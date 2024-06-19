@@ -117,6 +117,12 @@ export const GridItem = ({ metric }: GridItemProps) => {
       title: {
         display: false, // hide titles
       },
+      // force disabling chart labels because when the user do an internal
+      // navigation, labels are displayed incorrectly (probably a bug in
+      // chart.js or the react wrapper)
+      datalabels: {
+        display: false,
+      },
     },
     // chart labels config
     scales: {
