@@ -16,7 +16,7 @@
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "Этот валидатор в тестовой сети Holesky необходимо обновить.",
   "comp-withdrawal-credentials-not-upgraded-2": "Инструкции по обновлению можно найти на <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">панели запуска стейкинга</a>",
   "comp-withdrawal-credentials-verify-mainnet": "Проверить в основной сети",
-  "comp-withdrawal-credentials-verify-Holesky": "Проверить в Holesky",
+  "comp-withdrawal-credentials-verify-holesky": "Проверить в Holesky",
   "page-staking-withdrawals-when": "Отправлено!",
   "page-staking-image-alt": "Изображение талисмана-носорога для панели запуска стейкинга.",
   "page-staking-benefits-1-title": "Зарабатывайте вознаграждения",

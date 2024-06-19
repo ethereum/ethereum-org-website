@@ -16,7 +16,7 @@
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "এই Holesky টেস্টনেট যাচাইকারীকে আপগ্রেড করতে হবে।",
   "comp-withdrawal-credentials-not-upgraded-2": "কিভাবে আপগ্রেড করতে হয় তার নির্দেশাবলী বর্তমানে <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">স্টেকিং লঞ্চপ্যাড</a>-এ পাওয়া যাবে",
   "comp-withdrawal-credentials-verify-mainnet": "Mainnet এ যাচাই করুন",
-  "comp-withdrawal-credentials-verify-Holesky": "Holesky এ যাচাই করুন",
+  "comp-withdrawal-credentials-verify-holesky": "Holesky এ যাচাই করুন",
   "page-staking-withdrawals-when": "Shipped!",
   "page-staking-image-alt": "স্টেকিং লঞ্চপ্যাডের জন্য রাইনো মাসকটের ছবি।",
   "page-staking-benefits-1-title": "পুরষ্কার অর্জন করুন",

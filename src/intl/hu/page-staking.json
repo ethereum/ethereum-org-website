@@ -16,7 +16,7 @@
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "Ezt a Holesky-teszthálózat-validátort frissíteni kell.",
   "comp-withdrawal-credentials-not-upgraded-2": "A frissítésről szóló útmutatót megtalálja a <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a> oldalon",
   "comp-withdrawal-credentials-verify-mainnet": "Ellenőrzés a főhálózaton",
-  "comp-withdrawal-credentials-verify-Holesky": "Ellenőrzés a Holesky teszthálózaton",
+  "comp-withdrawal-credentials-verify-holesky": "Ellenőrzés a Holesky teszthálózaton",
   "page-staking-withdrawals-when": "Megvalósítva!",
   "page-staking-image-alt": "A képen a letétbe helyezés indítóállásának kabala rinocérosza látható.",
   "page-staking-benefits-1-title": "Jutalmak szerzése",

@@ -16,7 +16,7 @@
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "Bu Holesky test ağı doğrulayıcısı yükseltilmelidir.",
   "comp-withdrawal-credentials-not-upgraded-2": "Nasıl yükseltileceği üzerine talimatlar mevcut olarak <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Hisseleme Başlama Noktası</a>'nda bulunabilir",
   "comp-withdrawal-credentials-verify-mainnet": "Ana ağda doğrula",
-  "comp-withdrawal-credentials-verify-Holesky": "Holesky'de doğrula",
+  "comp-withdrawal-credentials-verify-holesky": "Holesky'de doğrula",
   "page-staking-withdrawals-when": "Sevk edildi!",
   "page-staking-image-alt": "Stake başlama noktası için Gergedan maskotun resmi.",
   "page-staking-benefits-1-title": "Ödüller kazanın",

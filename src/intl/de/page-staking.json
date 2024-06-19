@@ -16,7 +16,7 @@
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "Dieser Holesky-Testnetz-Validator muss aktualisiert werden.",
   "comp-withdrawal-credentials-not-upgraded-2": "Anweisungen zur Aktualisierung finden Sie derzeit unter <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a>",
   "comp-withdrawal-credentials-verify-mainnet": "Überprüfen im Mainnet",
-  "comp-withdrawal-credentials-verify-Holesky": "Überprüfen im Holesky-Testnetz",
+  "comp-withdrawal-credentials-verify-holesky": "Überprüfen im Holesky-Testnetz",
   "page-staking-withdrawals-when": "Versendet!",
   "page-staking-image-alt": "Bild des Nashorn-Maskottchens für das Staking-Launchpad.",
   "page-staking-benefits-1-title": "Verdienen Sie Belohnungen",

@@ -16,7 +16,7 @@
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "برنامج المدقق لشبكة تجريب Holesky هذا بحاجة إلى ترقية.",
   "comp-withdrawal-credentials-not-upgraded-2": "يمكن العثور على التعليمات حول كيفية الترقية حاليًّا في <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">منصة تشغيل المراهنة</a>",
   "comp-withdrawal-credentials-verify-mainnet": "التحقق على Mainnet",
-  "comp-withdrawal-credentials-verify-Holesky": "التحقق على Holesky",
+  "comp-withdrawal-credentials-verify-holesky": "التحقق على Holesky",
   "page-staking-withdrawals-when": "أصبح متاحًا!",
   "page-staking-image-alt": "صورة جالب حظ وحيد القرن لمنصة تشغيل المراهنة.",
   "page-staking-benefits-1-title": "كسب المكافآت",

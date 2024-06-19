@@ -16,7 +16,7 @@
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "इस Holesky टेस्टनेट वैलिडेटर को अपग्रेड करने की आवश्यकता है।",
   "comp-withdrawal-credentials-not-upgraded-2": "अपग्रेड करने के तरीके के निर्देश वर्तमान में <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">स्टेकिंग लॉन्चपैड</a> पर पाए जा सकते हैं",
   "comp-withdrawal-credentials-verify-mainnet": "मेननेट पर सत्यापित करें",
-  "comp-withdrawal-credentials-verify-Holesky": "Holesky पर सत्यापित करें",
+  "comp-withdrawal-credentials-verify-holesky": "Holesky पर सत्यापित करें",
   "page-staking-withdrawals-when": "शिप कर दिया गया!",
   "page-staking-image-alt": "स्टेकिंग लॉन्चपैड के लिए राइनो मास्कोट की तस्वीर।",
   "page-staking-benefits-1-title": "पुरस्कार कमाएं",

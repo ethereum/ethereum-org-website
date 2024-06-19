@@ -16,7 +16,7 @@
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "Ο επικυρωτής του δικτύου δοκιμών Holesky χρειάζεται αναβάθμιση.",
   "comp-withdrawal-credentials-not-upgraded-2": "Οδηγίες σχετικά με τον τρόπο αναβάθμισης μπορείτε να βρείτε στην <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Πλατφόρμα έναρξης αποθήκευσης κεφαλαίου</a>",
   "comp-withdrawal-credentials-verify-mainnet": "Επαλήθευση στο Κεντρικό δίκτυο",
-  "comp-withdrawal-credentials-verify-Holesky": "Επαλήθευση στο Holesky",
+  "comp-withdrawal-credentials-verify-holesky": "Επαλήθευση στο Holesky",
   "page-staking-withdrawals-when": "Δημοσιεύθηκε!",
   "page-staking-image-alt": "Εικόνα της μασκότ Rhino για την πλατφόρμα αποθήκευσης.",
   "page-staking-benefits-1-title": "Κερδίστε ανταμοιβές",

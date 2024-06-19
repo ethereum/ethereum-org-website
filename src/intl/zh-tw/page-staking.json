@@ -16,7 +16,7 @@
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "我們需要升級此 Holesky 測試網驗證者。",
   "comp-withdrawal-credentials-not-upgraded-2": "程式升級說明現已發佈於<a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">質押啟動面板</a>",
   "comp-withdrawal-credentials-verify-mainnet": "主網中驗證",
-  "comp-withdrawal-credentials-verify-Holesky": "Holesky 中驗證",
+  "comp-withdrawal-credentials-verify-holesky": "Holesky 中驗證",
   "page-staking-withdrawals-when": "已上線！",
   "page-staking-image-alt": "質押啟動面板的 Rhino 吉祥物圖像。",
   "page-staking-benefits-1-title": "賺取酬勞",

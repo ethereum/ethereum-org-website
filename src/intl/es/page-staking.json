@@ -16,7 +16,7 @@
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "Este validador de red de prueba Holesky necesita una actualización.",
   "comp-withdrawal-credentials-not-upgraded-2": "Las últimas instrucciones sobre cómo actualizar se pueden encontrar en <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a>",
   "comp-withdrawal-credentials-verify-mainnet": "Comprobar en la red principal",
-  "comp-withdrawal-credentials-verify-Holesky": "Comprobar en Holesky",
+  "comp-withdrawal-credentials-verify-holesky": "Comprobar en Holesky",
   "page-staking-withdrawals-when": "¡Enviado!",
   "page-staking-image-alt": "Imagen de la mascota Rhino para la plataforma de lanzamiento de apuestas.",
   "page-staking-benefits-1-title": "Gane recompensas",

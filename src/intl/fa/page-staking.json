@@ -16,7 +16,7 @@
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "این اعتبارسنج شبکه آزمایشی Holesky باید ارتقا یابد.",
   "comp-withdrawal-credentials-not-upgraded-2": "دستورالعمل‌های نحوه ارتقا را می‌توانید در <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a> پیدا کنید",
   "comp-withdrawal-credentials-verify-mainnet": "در شبکه اصلی تأیید کنید",
-  "comp-withdrawal-credentials-verify-Holesky": "در شبکه Holesky تایید کنید",
+  "comp-withdrawal-credentials-verify-holesky": "در شبکه Holesky تایید کنید",
   "page-staking-withdrawals-when": "ارسال شد!",
   "page-staking-image-alt": "تصویری از نشان کرگدن برای سکوی پرتاب سهام‌گذاری.",
   "page-staking-benefits-1-title": "کسب پاداش",

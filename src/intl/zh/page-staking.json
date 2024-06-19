@@ -16,7 +16,7 @@
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "此 Holesky 测试网验证者需要升级。",
   "comp-withdrawal-credentials-not-upgraded-2": "如何升级的说明目前可以在<a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">质押启动板</a>上找到。",
   "comp-withdrawal-credentials-verify-mainnet": "在主网上进行验证",
-  "comp-withdrawal-credentials-verify-Holesky": "在 Holesky 上进行验证",
+  "comp-withdrawal-credentials-verify-holesky": "在 Holesky 上进行验证",
   "page-staking-withdrawals-when": "已上线！",
   "page-staking-image-alt": "插图：Rhino Mascot 的质押启动板。",
   "page-staking-benefits-1-title": "赚取奖励",
