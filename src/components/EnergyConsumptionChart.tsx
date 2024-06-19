@@ -1,5 +1,4 @@
 import React from "react"
-import { useEffect, useState } from "react"
 import {
   BarElement,
   CategoryScale,
@@ -25,6 +24,8 @@ import type { Lang } from "@/lib/types"
 import { wrapLabel } from "@/lib/utils/charts"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
+import { useIsClient } from "@/hooks/useIsClient"
+
 // ChartDataLabels required to display y-labels on top of bars
 ChartJS.register(
   CategoryScale,
@@ -37,17 +38,8 @@ ChartJS.register(
 const EnergyConsumptionChart = () => {
   const { t } = useTranslation("page-what-is-ethereum")
   const { locale } = useRouter()
+  const isClient = useIsClient()
   const isRtl = isLangRightToLeft(locale as Lang)
-
-  const useIsClient = () => {
-    const [isClient, setClient] = useState(false)
-
-    useEffect(() => {
-      setClient(true)
-    }, [])
-
-    return isClient
-  }
 
   // chart rawData, according to different breakpoints
   const rawData = useBreakpointValue({
@@ -251,7 +243,7 @@ const EnergyConsumptionChart = () => {
           mb={{ base: 4, md: 0 }}
         >
           {/* TODO: isRtl ? data?.reverse() : data */}
-          {useIsClient() && (
+          {isClient && (
             <Bar options={chartOptions} data={chartData} updateMode="none" />
           )}
         </Box>
