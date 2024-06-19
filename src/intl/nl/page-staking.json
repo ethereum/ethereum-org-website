@@ -150,7 +150,7 @@
   "page-staking-section-comparison-requirements-title": "Vereisten",
   "page-staking-section-comparison-solo-requirements-li1": "U moet 32 ETH storten",
   "page-staking-section-comparison-solo-requirements-li2": "Onderhoud hardware die zowel een uitvoering-client als consensus-client van Ethereum draait, terwijl u verbonden bent met internet",
-  "page-staking-section-comparison-solo-requirements-li3": "Het <a href=\"https://Holesky.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> zal u het proces en de hardwarevereisten laten doorlopen",
+  "page-staking-section-comparison-solo-requirements-li3": "Het <a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> zal u het proces en de hardwarevereisten laten doorlopen",
   "page-staking-section-comparison-saas-requirements-li1": "Stort 32 ETH en genereer uw sleutels met hulp",
   "page-staking-section-comparison-saas-requirements-li2": "Sla uw sleutels veilig op",
   "page-staking-section-comparison-saas-requirements-li3": "Wij zorgen voor de rest, maar specifieke services kunnen variëren",

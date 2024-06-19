@@ -187,7 +187,7 @@
   "page-staking-section-comparison-requirements-title": "Mga Kahingian",
   "page-staking-section-comparison-solo-requirements-li1": "Dapat kang magdeposito ng 32 ETH",
   "page-staking-section-comparison-solo-requirements-li2": "Pangalagaan ang hardware na nagpapatakbo ng Ethereum execution client at consensus client habang nakakonekta sa internet",
-  "page-staking-section-comparison-solo-requirements-li3": "Gagabayan ka ng <a href=\"https://Holesky.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> sa buong proseso at sa mga kahingian sa hardware",
+  "page-staking-section-comparison-solo-requirements-li3": "Gagabayan ka ng <a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> sa buong proseso at sa mga kahingian sa hardware",
   "page-staking-section-comparison-saas-requirements-li1": "Magdeposito ng 32 ETH at gawin ang iyong mga key nang may tulong",
   "page-staking-section-comparison-saas-requirements-li2": "I-store nang maayos ang iyong mga key",
   "page-staking-section-comparison-saas-requirements-li3": "Hindi mo na kailangang problemahin ang iba pa, bagama't mag-iiba-iba ang mga partikular na serbisyo",

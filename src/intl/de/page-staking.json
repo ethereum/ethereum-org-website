@@ -187,7 +187,7 @@
   "page-staking-section-comparison-requirements-title": "Anforderungen",
   "page-staking-section-comparison-solo-requirements-li1": "Sie müssen 32 ETH einzahlen",
   "page-staking-section-comparison-solo-requirements-li2": "Betreiben Sie Hardware, die sowohl einen Ethereum Ausführungs-Client, als auch einen Konsens-Client nutzt, während eine Verbindung zum Internet besteht",
-  "page-staking-section-comparison-solo-requirements-li3": "Das <a href=\"https://Holesky.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> erklärt Ihnen den Prozess sowie die Hardware-Anforderungen",
+  "page-staking-section-comparison-solo-requirements-li3": "Das <a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> erklärt Ihnen den Prozess sowie die Hardware-Anforderungen",
   "page-staking-section-comparison-saas-requirements-li1": "Zahlen Sie 32 ETH ein und generieren Sie Ihre Schlüssel mit Unterstützung",
   "page-staking-section-comparison-saas-requirements-li2": "Verwahren Sie Ihre Schlüssel sicher",
   "page-staking-section-comparison-saas-requirements-li3": "Für den Rest ist gesorgt, allerdings variieren dabei spezifische Dienste",
