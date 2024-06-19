@@ -39,7 +39,7 @@ const Link = ({
       // 8px is the padding for each nested list
       // 4px is half of the width of the dot
       // 1px for the border
-      insetInlineStart: `calc(-16px - 8px * ${depth} - 4px - 1px)`,
+      "inset-inline-start": `calc(-16px - 8px * ${depth} - 4px - 1px)`,
       top: "50%",
       mt: -1,
     },
