@@ -21,7 +21,7 @@ import {
 } from "@chakra-ui/react"
 
 import { AllMetricData, BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
-import type { CommunityEventsReturnType } from "@/lib/interfaces"
+import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
 import ButtonLink from "@/components/Buttons/ButtonLink"
@@ -33,7 +33,7 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import StatsBoxGrid from "@/components/StatsBoxGrid"
-import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
+import TitleCardList from "@/components/TitleCardList"
 import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -307,12 +307,6 @@ const HomePage = ({
       to: "/community/",
     },
   ]
-
-  // todo: move to interfaces
-  interface CodeExample extends ITitleCardItem {
-    codeLanguage: string
-    code: string
-  }
 
   const codeExamples: Array<CodeExample> = [
     {
