@@ -32,7 +32,7 @@ Végül a valdátor aláírja a tanúsítást és elküldi azt a hálózaton.
 
 Az adat elterjesztése a hálózaton minden validátor esetében jelentős költséggel jár. Ezért az egyéni validátorok tanúsításait aggregálják az alhálózatokon belül, mielőtt szélesebb körben szétküldenék azt. Ennek része az aláírások aggregálása, így a kiküldött tanúsítás tartalmazza a konszenzus `data` mezőit és egyetlen aláírást, melyet azon validátorok aláírásából készítenek, akik egyetértettek a `data` tartalmával. Ezt le lehet ellenőrizni az `aggregation_bits` mezővel, mert ez adja meg a bizottságban lévő validátorok indexeit (akiknek az ID-ja a `data` mezőben látható), amellyel le lehet kérdezni az egyéni aláírásokat.
 
-Minden korszakban minden alhálóban egy validátort kiválasztanak, hogy `aggregator` legyen. Az aggregátor összegyűjti az összes tanúsítást, amelyről hall a pletykahálózaton, és amelyeknek ugyanolyan `data` áll rendelkezésre, mint neki. Minden egyező tanúsítás küldője feljegyzésre kerül az `aggregation_bits` mezőben. Ezután az aggregátor szétküldi az aggregált tanúsítást a szélesebb hálózaton.
+Minden korszakban minden alhálóban 16 validátort kiválasztanak, hogy `aggregátor` legyen. Az aggregátorok összegyűjtik az összes tanúsítást, amelyről hallanak a pletykahálózaton, és amelyeknek ugyanolyan `data` áll rendelkezésre, mint nekik. Minden egyező tanúsítás küldője feljegyzésre kerül az `aggregation_bits` mezőben. Ezután az aggregátorok szétküldik az aggregált tanúsítást a szélesebb hálózaton.
 
 Amikor egy validátort választanak blokkelőterjesztőnek, akkor az új blokkba beteszi az aggregált tanúsításokat az alhálózatoktól egészen az utolsó slotig.
 
@@ -89,4 +89,4 @@ Néhány esetben a szerencsés aggregátor blokkelőterjesztővé válhat. Ha a 
 - [Tanúsítások Vitalik által kommentált konszenzusspecifikációban](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
 - [Tanúsítások az eth2book.info oldalon](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
-_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
+_Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_

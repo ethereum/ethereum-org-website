@@ -9,6 +9,9 @@ import Tag, { EthTagProps } from "."
 const meta = {
   title: "Molecules / Display Content / Tags",
   component: Tag,
+  args: {
+    label: "Tag Name",
+  },
 } satisfies Meta<typeof Tag>
 
 export default meta
@@ -39,46 +42,44 @@ const StyleVariantList = (args: EthTagProps) => (
   </HStack>
 )
 
-export const StyleVariantsBasic = {
-  render: () => (
+export const StyleVariantsBasic: Story = {
+  args: {
+    isCloseable: true,
+  },
+  render: (args) => (
     <VStack spacing={8}>
       <Box textAlign="center">
         Click anywhere in the whitespace and then tab to see the button styling
         on `:focus-visible`
       </Box>
-      <StyleVariantList label="Tag Name" isCloseable />
+      <StyleVariantList {...args} />
     </VStack>
   ),
 }
 
-export const StyleVariantsAsLinks = {
-  render: () => (
+export const StyleVariantsAsLinks: Story = {
+  render: (args) => (
     <VStack spacing={8}>
       <Box textAlign="center">
         They are all rendered as links to hover, click, and focus
       </Box>
-      <StyleVariantList as={Link} label="Tag Name" />
+      <StyleVariantList as={Link} {...args} />
     </VStack>
   ),
 }
 
 export const ElementVariants: Story = {
   args: {
-    label: "",
     status: "tag",
   },
   render: (args) => (
     <HStack>
-      <Tag {...args} label="Tag name" />
+      <Tag {...args} />
       <Tag {...args} label="Tag name too big" />
-      <Tag
-        {...args}
-        label="Tag name"
-        rightIcon={TbSquareRoundedNumber8Filled}
-      />
-      <Tag {...args} label="Tag name" isCloseable />
-      <Tag {...args} label="Tag name" leftIcon={MdLanguage} />
-      <Tag {...args} label="Tag name" rightIcon={MdInfoOutline} />
+      <Tag {...args} rightIcon={TbSquareRoundedNumber8Filled} />
+      <Tag {...args} isCloseable />
+      <Tag {...args} leftIcon={MdLanguage} />
+      <Tag {...args} rightIcon={MdInfoOutline} />
       <Tag {...args} label="Tag name too big" maxW="100px" />
     </HStack>
   ),

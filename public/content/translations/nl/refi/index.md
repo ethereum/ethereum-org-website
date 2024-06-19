@@ -5,7 +5,7 @@ lang: nl
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Een alternatief economisch systeem gebouwd op regeneratieve principes
 summaryPoint2: Een poging om Ethereum te benutten voor het oplossen van wereldwijde coördinatiecrisissen zoals de klimaatverandering

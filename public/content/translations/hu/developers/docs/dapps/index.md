@@ -51,7 +51,7 @@ Az okosszerződés olyan kód, mely az Ethereum blokkláncon fut és pontosan ú
 
 **Scaffold-ETH _– Próbálja ki a Solidity megoldást olyan frontenddel, amely illeszkedik az Ön okosszerződéséhez._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Példa egy dappra](https://punkwallet.io/)
 
 **Create Eth App _– Hozzon létre Ethereum-alapú alkalmazásokat egy paranccsal._**
@@ -73,6 +73,12 @@ Az okosszerződés olyan kód, mely az Ethereum blokkláncon fut és pontosan ú
 - [Honlap](https://thirdweb.com/)
 - [Dokumentáció](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
+
+**Crossmint _– Vállalati szintű web3 fejlesztési platform okosszerződések telepítéséhez, hitelkártyás és láncok közötti fizetések lehetővé tételéhez, valamint API-ok használatára NFT-k létrehozása, terjesztése, értékesítése, tárolása és szerkesztése érdekében._**
+
+- [crossmint.com](https://www.crossmint.com)
+- [Dokumentáció](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
 
 ## További olvasnivaló {#further-reading}
 

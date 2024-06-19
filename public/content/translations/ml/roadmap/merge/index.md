@@ -3,7 +3,7 @@ title: ലയനം
 description: മെയിൻനെറ്റ് Ethereum പ്രൂഫ് ഓഫ് സ്റ്റേക്ക് സ്വീകരിച്ചപ്പോഴുള്ള ലയനം സംബന്ധിച്ച് അറിയുക.
 lang: ml
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Ethereum മെയിൻനെറ്റ് പ്രൂഫ് ഓഫ് സ്റ്റേക്ക് ഉപയോഗിക്കുന്നു, എന്നാൽ ഇത് എല്ലായ്പ്പോഴും അങ്ങനെയായിരുന്നില്ല.
 summaryPoint2: ഒറിജിനൽ പ്രൂഫ് ഓഫ് വർക്ക് രീതിയിൽ നിന്ന് പ്രൂഫ് ഓഫ് സ്റ്റേക്കിലേക്കുള്ള അപ്‌ഗ്രേഡിനെ ലയനം എന്ന് വിളിക്കപ്പെടുന്നു.

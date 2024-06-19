@@ -4,7 +4,7 @@ description: Una visión general de cómo empezar con la participación agrupada
 lang: es
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: Leslie, el rinoceronte, nadando en la piscina.
 sidebarDepth: 2
 summaryPoints:

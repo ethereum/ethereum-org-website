@@ -165,7 +165,7 @@ A „tranzakció” kifejezést az Ethereumban egy aláírt adatcsomagra haszná
 - Az üzenet címzettje
 - A küldőt azonosító aláírás
 - Az ether összeg, amit a küldő át akar utalni a címzettnek
-- Egy opcionális adatmező
+- Egy opcionális adat mező
 - A `STARTGAS` érték, ami a tranzakció-végrehajtás számítási lépéseinek maximális számát jelenti
 - A `GASPRICE` érték, ami a számítás lépésenkénti díját jelenti, amit a feladó fizet
 
@@ -242,7 +242,7 @@ Az Ethereum blokklánc sok szempontból hasonló a Bitcoin blokklánchoz, bár v
 2. Ellenőrzi, hogy a blokk időbélyege nagyobb-e, mint az előző blokké és kevesebb mint 15 perc telt el azóta
 3. Ellenőrzi, hogy a blokk száma, a nehézség, a tranzakciógyökér, az uncle-gyökér és a gázkorlátozás (különféle alacsony szintű, Ethereum-specifikus fogalmak) érvényesek-e.
 4. Ellenőrzi, hogy a blokk proof-of-workje érvényes-e.
-5. Legyen `S[0]` az előző blokk után lévő státusz.
+5. Legyen `S[0]` az előző blokk után lévő állapot.
 6. Legyen `TX` a blokk tranzakciólistája `n` tranzakcióval. A `0...n-1` összes `i`-je esetében állítsa be a következőt: `S[i+1] = APPLY(S[i],TX[i])`. Ha valamelyik alkalmazás hibát ad vissza, vagy a blokkban az eddig a pontig elfogyasztott gáz összmennyisége túllépi a `GASLIMIT` értéket, hibát ad vissza.
 7. Legyen az `S_FINAL` `S[n]`, de hozzáadva a bányásznak fizetett blokkjutalmat.
 8. Ellenőrzi, hogy az `S_FINAL` állapot Merkle-fagyökere azonos-e a blokkfejlécben megadott végleges státusszal. Ha igen, a blokk érvényes; ellenkező esetben nem az.
@@ -514,4 +514,4 @@ Az Ethereum-protokollban implementált tetszőleges státuszváltozási függvé
 
 _A fehérkönyv történetét tekintse meg ezen [a wiki](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md) oldalon._
 
-_Az Ethereum, hasonlóan sok más közösség által vezetett, nyílt forráskódú szoftverprojekthez, a kezdeti elindulás óta sokat fejlődött. Ha többet szeretne megtudni az Ethereum legutóbbi fejlesztéseiről és az általunk elvégzett protokollváltoztatásokról, akkor ezt az [útmutatót](/learn/) ajánljuk._
+_Az Ethereum, hasonlóan sok más közösség által vezetett, nyílt forráskódú szoftverprojekthez, a kezdeti elindulás óta sokat fejlődött. Ha többet szeretnél megtudni az Ethereum legutóbbi fejlesztéseiről és az általunk elvégzett protokollváltoztatásokról, akkor ezt az [útmutatót](/learn/) ajánljuk._

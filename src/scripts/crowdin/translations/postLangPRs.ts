@@ -1,7 +1,7 @@
 import fs from "fs"
 
 import { LOCALES_CODES } from "../../../lib/constants"
-import { BucketsList } from "../import/types"
+import type { BucketsList } from "../import/types"
 
 import { BUCKETS_PATH } from "./constants"
 import { createLocaleTranslationPR } from "./utils"

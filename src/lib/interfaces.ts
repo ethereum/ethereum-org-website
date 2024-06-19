@@ -105,10 +105,10 @@ export interface MdPageContent {
   content: string
   frontmatter: Frontmatter
   tocItems: ToCItem[]
-  lastUpdatedDate?: string
+  lastEditLocaleTimestamp: string
+  lastDeployLocaleTimestamp: string
   contentNotTranslated: boolean
-  crowdinContributors: CrowdinContributor[]
-  gitContributors: FileContributor[]
+  contributors: FileContributor[]
 }
 
 // Local environment framework

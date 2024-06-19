@@ -368,6 +368,7 @@ const writeSummary = (summary: Summary, summaryWritePath: string) => {
 }
 
 export function checkMarkdown(summaryWritePath?: string) {
+  console.log("Checking markdown for common issues...")
   const summary = {} as Summary
   const markdownPaths: Array<string> = getAllMarkdownPaths(PATH_TO_ALL_CONTENT)
   const markdownPathsByLang: Languages =
@@ -383,8 +384,10 @@ export function checkMarkdown(summaryWritePath?: string) {
 
     if (!summary[lang].length) delete summary[lang]
   }
+  if (!summaryWritePath) return
 
-  summaryWritePath && writeSummary(summary, summaryWritePath)
+  writeSummary(summary, summaryWritePath)
+  console.log("Writing markdown checker summary to:", summaryWritePath)
 }
 
 checkMarkdown()
