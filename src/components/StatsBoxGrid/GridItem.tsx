@@ -11,7 +11,7 @@ import { Line } from "react-chartjs-2"
 import { MdInfoOutline } from "react-icons/md"
 import { Box, Flex, Icon, Text } from "@chakra-ui/react"
 
-import type { StatsBoxMetric } from "@/lib/types"
+import type { StatsBoxMetric, TimestampedData } from "@/lib/types"
 
 import { RANGES } from "@/lib/constants"
 
@@ -69,8 +69,7 @@ export const GridItem = ({ metric }: GridItemProps) => {
   )
 
   // Returns either 90 or 30-day data range depending on `range` selection
-  const filteredData = (data: Array<{ timestamp: number }>) => {
-    if (!data) return
+  const filteredData = (data: TimestampedData<number>[]) => {
     if (range === RANGES[1]) return [...data]
 
     return data.filter(({ timestamp }) => {
@@ -138,16 +137,13 @@ export const GridItem = ({ metric }: GridItemProps) => {
     },
   }
 
-  const filteredRange = hasData ? filteredData(state.data) : [] // timestamp values
-  const dataValues = hasData ? state.data.map((item) => item.value) : [] // data values
+  const filteredRange = filteredData(hasData ? state.data : [])
 
   const chartData = {
     labels: filteredRange,
     datasets: [
       {
-        data: hasData
-          ? dataValues.slice(dataValues.length - filteredRange!.length)
-          : [],
+        data: filteredRange.map((item) => item.value),
       },
     ],
   }
