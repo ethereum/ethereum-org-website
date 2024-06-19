@@ -1,7 +1,6 @@
 import type { StaticImageData } from "next/image"
 
 import type {
-  CrowdinContributor,
   FileContributor,
   Frontmatter,
   Lang,
@@ -163,4 +162,27 @@ export interface IGetInvolvedCard {
   emoji: string
   title: string
   description: string
+}
+
+/**
+ * TitleCardList
+ */
+
+export interface ITitleCardItem {
+  title: string
+  description: string
+  caption?: string
+  link?: string
+  image?: string
+  alt?: string
+  id?: number
+}
+
+/**
+ * Codeblock
+ */
+
+export interface CodeExample extends ITitleCardItem {
+  codeLanguage: string
+  code: string
 }
