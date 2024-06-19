@@ -5,7 +5,7 @@ lang: ja
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: 身元を証明するIDは中央集権的に発行、更新、管理されてきた従来のアイデンティティ制度
 summaryPoint2: 分散型アイデンティティにより、中央集権的なサードパーティへの依存から脱却
 summaryPoint3: 暗号技術により、今や再び自分自身のIDとアテステーションを発行、保持、管理することが可能

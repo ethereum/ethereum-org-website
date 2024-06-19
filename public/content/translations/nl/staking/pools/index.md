@@ -4,7 +4,7 @@ description: Een overzicht van hoe u aan de slag kunt met gepoolde ETH-staking
 lang: nl
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: Leslie de neushoorn die in het zwembad zwemt.
 sidebarDepth: 2
 summaryPoints:

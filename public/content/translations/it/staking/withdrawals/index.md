@@ -3,7 +3,7 @@ title: Prelievi di staking
 description: Pagina di riepilogo su cosa sono i prelievi push di staking, come funzionano e cosa devono fare gli staker per ottenere le proprie ricompense
 lang: it
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Leslie il rinoceronte con le sue ricompense di staking
 sidebarDepth: 2
 summaryPoints:

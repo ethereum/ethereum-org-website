@@ -4,7 +4,7 @@ description: Обзор того, как разместить ETH в пуле
 lang: ru
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: Носорог Лесли плавает в облаках.
 sidebarDepth: 2
 summaryPoints:

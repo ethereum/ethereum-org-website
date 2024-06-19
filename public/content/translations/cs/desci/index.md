@@ -5,7 +5,7 @@ lang: cs
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Globální, otevřená alternativa ke stávajícímu vědeckému systému.
 summaryPoint2: Technologie, která vědcům umožňuje získávat financování, provádět experimenty, sdílet data, šířit poznatky a další.

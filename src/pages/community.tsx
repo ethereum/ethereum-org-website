@@ -31,17 +31,17 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 // Static assets
-import developersEthBlockImg from "@/public/developers-eth-blocks.png"
-import dogeComputerImg from "@/public/doge-computer.png"
-import ethImg from "@/public/eth.png"
-import financeTransparentImg from "@/public/finance_transparent.png"
-import futureTransparentImg from "@/public/future_transparent.png"
-import hackathonTransparentImg from "@/public/hackathon_transparent.png"
+import developersEthBlockImg from "@/public/images/developers-eth-blocks.png"
+import dogeComputerImg from "@/public/images/doge-computer.png"
+import ethImg from "@/public/images/eth.png"
+import financeTransparentImg from "@/public/images/finance_transparent.png"
+import futureTransparentImg from "@/public/images/future_transparent.png"
+import hackathonTransparentImg from "@/public/images/hackathon_transparent.png"
 // -- Hero
-import communityHeroImg from "@/public/heroes/community-hero.png"
+import communityHeroImg from "@/public/images/heroes/community-hero.png"
 // -- Cards
-import upgradesCoreImg from "@/public/upgrades/core.png"
-import whatIsEthereumImg from "@/public/what-is-ethereum.png"
+import upgradesCoreImg from "@/public/images/upgrades/core.png"
+import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
 
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/community")

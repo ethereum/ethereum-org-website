@@ -4,7 +4,7 @@ description: Pregled decentralizovanih finansija na mreži Ethereum
 lang: sr
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: Logo Eth-a napravljen od lego kocki.
 sidebarDepth: 2
 summaryPoint1: Globalna, otvorena alternativa u odnosu na trenutni finansijski sistem.

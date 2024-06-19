@@ -4,7 +4,7 @@ description: Een overzicht van hoe u moet beginnen met solo staking van uw ETH
 lang: nl
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Leslie de neushoorn op haar eigen computerchip.
 sidebarDepth: 2
 summaryPoints:
