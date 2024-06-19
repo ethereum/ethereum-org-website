@@ -18,7 +18,7 @@ If you're new to the topic of nodes, we recommend first checking out our user-fr
 A "node" is any instance of Ethereum client software that is connected to other computers also running Ethereum software, forming a network. A client is an implementation of Ethereum that verifies data against the protocol rules and keeps the network secure. A node has to run two clients: a consensus client and an execution client.
 
 - The execution client (also known as the Execution Engine, EL client or formerly the Eth1 client) listens to new transactions broadcasted in the network, executes them in EVM, and holds the latest state and database of all current Ethereum data.
-- The consensus client (also known as the Beacon Node, CL client or formerly the Eth2 client) implements the proof-of-stake consensus algorithm, which enables the network to achieve agreement based on validated data from the execution client. There is also a third piece of software, known as a 'validator' that can be added to the consensus client, allowing a node to participate in securing the network.
+- The consensus client (also known as the Beacon Node, CL client or formerly the Eth2 client) implements the Proof of Stake (PoS) consensus algorithm, which enables the network to achieve agreement based on validated data from the execution client. There is also a third piece of software, known as a 'validator' that can be added to the consensus client, allowing a node to participate in securing the network.
 
 These clients work together to keep track of the head of the Ethereum chain and allow users to interact with the Ethereum network. The modular design with multiple pieces of software working together is called [encapsulated complexity](https://vitalik.eth.limo/general/2022/02/28/complexity.html). This approach made it easier to execute [The Merge](/roadmap/merge) seamlessly, makes client software easier to maintain and develop, and enables the reuse of individual clients, for example, in the [layer 2 ecosystem](/layer-2/).
 
@@ -105,7 +105,7 @@ Running your own node enables you to use Ethereum in a private, self-sufficient 
 A diverse set of nodes is important for Ethereum’s health, security and operational resiliency.
 
 - Full nodes enforce the consensus rules so they can’t be tricked into accepting blocks that don't follow them. This provides extra security in the network because if all the nodes were light nodes, which don't do full verification, validators could attack the network.
-- In case of an attack which overcomes the crypto-economic defenses of [proof-of-stake](/developers/docs/consensus-mechanisms/pos/#what-is-pos), a social recovery can be performed by full nodes choosing to follow the honest chain.
+- In case of an attack which overcomes the crypto-economic defenses of [PoS](/developers/docs/consensus-mechanisms/pos/#what-is-pos), a social recovery can be performed by full nodes choosing to follow the honest chain.
 - More nodes in the network result in a more diverse and robust network, the ultimate goal of decentralization, which enables a censorship-resistant and reliable system.
 - Full nodes provide access to blockchain data for lightweight clients that depend on it. Light nodes don't store the whole blockchain, instead they verify data via the [state roots in block headers](/developers/docs/blocks/#block-anatomy). They can request more information from full nodes if they need it.
 
@@ -135,12 +135,12 @@ This table summarizes the different clients. All of them pass [client tests](htt
 
 | Client                                                                   | Language   | Operating systems     | Networks                  | Sync strategies                    | State pruning   |
 | ------------------------------------------------------------------------ | ---------- | --------------------- | ------------------------- | ---------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap, Full                         | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)                                      | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap (without serving), Fast, Full | Archive, Pruned |
-| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap, Fast, Full                   | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Full                               | Archive, Pruned |
-| [Reth](https://github.com/paradigmxyz/reth) _(beta)_                     | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Full                               | Archive, Pruned |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Holesky          | Full                               | Pruned          |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync), [Full](#full-sync)                         | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)                                      | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync) (without serving), Fast, [Full](#full-sync) | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync)                  | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Full](#full-sync)                               | Archive, Pruned |
+| [Reth](https://github.com/paradigmxyz/reth) _(beta)_                     | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Full](#full-sync)                               | Archive, Pruned |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Holesky          | [Full](#full-sync)                               | Pruned          |
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -184,7 +184,7 @@ Learn more about it by reading its [documentation](https://github.com/ethereumjs
 
 ## Consensus clients {#consensus-clients}
 
-There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/roadmap/beacon-chain/). They are responsible for all consensus-related logic including the fork-choice algorithm, processing attestations and managing [proof-of-stake](/developers/docs/consensus-mechanisms/pos) rewards and penalties.
+There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/roadmap/beacon-chain/). They are responsible for all consensus-related logic including the fork-choice algorithm, processing attestations and managing [PoS](/developers/docs/consensus-mechanisms/pos) rewards and penalties.
 
 | Client                                                        | Language   | Operating systems     | Networks                                                          |
 | ------------------------------------------------------------- | ---------- | --------------------- | ----------------------------------------------------------------- |
@@ -234,19 +234,36 @@ Synchronization modes represent different approaches to this process with variou
 
 ### Execution layer sync modes {#execution-layer-sync-modes}
 
-#### Full archive sync {#full-sync}
+#### Full node syncs
 
-Full sync downloads all blocks (including headers, transactions, and receipts) and generates the state of the blockchain incrementally by executing every block from genesis.
+You may run a full node with a:
+
+- [full sync](#full-sync)
+- [fast sync](#fast-sync)
+- [snap sync](#snap-sync)
+
+##### Full sync {#full-sync}
+
+A full sync downloads all blocks (including headers and block bodies) and regenerates the state of the blockchain incrementally by executing every block from genesis. 
 
 - Minimizes trust and offers the highest security by verifying every transaction.
 - With an increasing number of transactions, it can take days to weeks to process all transactions.
 
-#### Full snap sync {#snap-sync}
+[Archive nodes](#archive-node) perform a full sync to build (and retain) a complete history of the state changes made by every transaction in every block.
 
-Snap sync verifies the chain block-by-block, just like a full archive sync; however, instead of starting at the genesis block, it starts at a more recent 'trusted' checkpoint that is known to be part of the true blockchain. The node saves periodic checkpoints while deleting data older than a certain age. Those snapshots are used to regenerate state data when it is needed, rather than having to store it all forever.
+##### Fast sync {#fast-sync}
 
-- Fastest sync strategy, currently default in Ethereum mainnet
-- Saves a lot of disk usage and network bandwidth without sacrificing security
+Like a full sync, a fast sync downloads all blocks (including headers, transactions, and receipts). However, instead of re-processing the historical transactions, a fast sync relies on the receipts until it reaches a recent head, when it switches to importing and processing blocks to provide a full node. 
+
+- Fast sync strategy.
+- Reduces processing demand in favour of bandwith usage.
+
+##### Snap sync {#snap-sync}
+
+Snap syncs also verify the chain block-by-block. However, instead of starting at the genesis block, a snap sync starts at a more recent 'trusted' checkpoint that is known to be part of the true blockchain. The node saves periodic checkpoints while deleting data older than a certain age. These snapshots are used to regenerate state data as needed, rather than storing it forever.
+
+- Fastest sync strategy, currently default in Ethereum Mainnet.
+- Saves a lot of disk usage and network bandwidth without sacrificing security.
 
 [More on snap sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
@@ -257,7 +274,7 @@ Light client mode downloads all block headers, block data, and verifies some ran
 - Gets only the latest state while relying on trust in developers and consensus mechanism.
 - Client ready to use with current network state in a few minutes.
 
-**NB** Light sync does not yet work with proof-of-stake Ethereum - new versions of light sync should ship soon!
+**NB** Light sync does not yet work with PoS Ethereum - new versions of light sync should ship soon!
 
 [More on light clients](/developers/docs/nodes-and-clients/light-clients/)
 
@@ -279,7 +296,7 @@ More on [checkpoint sync](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice
 
 ## Further reading {#further-reading}
 
-There is a lot of information about Ethereum clients on the internet. Here are few resources that might be helpful.
+There is a lot of information about Ethereum clients on the internet, consider:
 
 - [Ethereum 101 - Part 2 - Understanding Nodes](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 February 2019_
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
