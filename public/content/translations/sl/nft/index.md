@@ -5,7 +5,7 @@ lang: sl
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Logotip Eth prikazan prek holograma.
 summaryPoint1: Način predstavitve česarkoli edinstvenega kot sredstva, ki temelji na Ethereumu.
 summaryPoint2: NFT-ji dajejo ustvarjalcem vsebin več moči, kot so jo imeli kadarkoli prej.

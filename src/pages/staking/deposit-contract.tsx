@@ -17,7 +17,12 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { BasePageProps, ChildOnlyProp, TranslationKey } from "@/lib/types"
+import type {
+  BasePageProps,
+  ChildOnlyProp,
+  Lang,
+  TranslationKey,
+} from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import ButtonLink, {
@@ -37,13 +42,14 @@ import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
 
-import consensys from "@/public/projects/consensys.png"
-import etherscan from "@/public/projects/etherscan-logo-circle.png"
-import ef from "@/public/staking/ef-blog-logo.png"
+import consensys from "@/public/images/projects/consensys.png"
+import etherscan from "@/public/images/projects/etherscan-logo-circle.png"
+import ef from "@/public/images/staking/ef-blog-logo.png"
 
 const FlexBox = (props: ChildOnlyProp) => (
   <Flex
@@ -219,12 +225,16 @@ export const getStaticProps = (async ({ locale }) => {
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>

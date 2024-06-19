@@ -5,7 +5,7 @@ lang: sr
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: Tradicionalni sistem identiteta je centralizovao izdavanje, održavanje i kontrolu vaših identifikatora.
 summaryPoint2: Decentralizovani identitet eliminiše zavisnost od centralizovanih trećih strana.
 summaryPoint3: Zahvaljujući kriptu, korisnici sada imaju alate da ponovo izdaju, drže i kontrolišu svoje vlastite identifikatore i potvrde.

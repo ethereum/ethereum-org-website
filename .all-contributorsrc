@@ -12078,6 +12078,96 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "mingoing",
+      "name": "Mingo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/344175?v=4",
+      "profile": "https://github.com/mingoing",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "zkVlad",
+      "name": "zkVlad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/125317045?v=4",
+      "profile": "https://github.com/zkVlad",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "yunseonna",
+      "name": "yunseon na",
+      "avatar_url": "https://avatars.githubusercontent.com/u/148749864?v=4",
+      "profile": "https://github.com/yunseonna",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "alex1092",
+      "name": "Alex",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59183749?v=4",
+      "profile": "https://github.com/alex1092",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "kyndrawynne",
+      "name": "kyndrawynne",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108100622?v=4",
+      "profile": "https://github.com/kyndrawynne",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "stolab",
+      "name": "stolab",
+      "avatar_url": "https://avatars.githubusercontent.com/u/144235139?v=4",
+      "profile": "https://github.com/stolab",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "jacobjelen",
+      "name": "jacobjelen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6750124?v=4",
+      "profile": "http://www.jacobjelen.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Dennayz",
+      "name": "Dennis Zhang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58843979?v=4",
+      "profile": "https://github.com/Dennayz",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "JanetMo",
+      "name": "Marlene Marz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42071757?v=4",
+      "profile": "https://github.com/JanetMo",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "mahnunchik",
+      "name": "Evgeny",
+      "avatar_url": "https://avatars.githubusercontent.com/u/780935?v=4",
+      "profile": "https://github.com/mahnunchik",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,

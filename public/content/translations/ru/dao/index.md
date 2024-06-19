@@ -5,7 +5,7 @@ lang: ru
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Представление голосований DAO по предложению.
 summaryPoint1: Сообщества, принадлежащие его членам, без централизованного аппарата управления.
 summaryPoint2: Безопасный способ сотрудничества с незнакомцами в Интернете.

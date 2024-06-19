@@ -3,7 +3,7 @@ title: Ethereum-ütemterv
 description: Az út, amely az Ethereum jobb skálázhatóságához, biztonságához és fenntarthatóságához vezet.
 lang: hu
 template: roadmap
-image: /heroes/roadmap-hub-hero.jpg
+image: /images/heroes/roadmap-hub-hero.jpg
 alt: "Ethereum-ütemterv"
 summaryPoints:
 buttons:

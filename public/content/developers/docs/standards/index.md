@@ -40,6 +40,7 @@ More detailed information on these different types and categories can be found i
 ### Token standards {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - A standard interface for fungible (interchangeable) tokens, like voting tokens, staking tokens or virtual currencies.
+  - [ERC-223](/developers/docs/standards/tokens/erc-223/) - A fungible tokens standard that makes tokens behave identical to ether and supports token transfers handling on the recipients side.
   - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - Defines a token interface for ERC-20 tokens that supports executing recipient code after transfer or transferFrom, or spender code after approve.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - A standard interface for non-fungible tokens, like a deed for artwork or a song.
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - A standardized event emitted when creating/transferring one, or many non-fungible tokens using consecutive token identifiers.

@@ -23,7 +23,12 @@ export const QuizContent = ({ children }: QuizContentProps) => {
 
   return (
     <VStack spacing="4">
-      <Text fontWeight="bold" textAlign="center" color={getTitleTextColor()}>
+      <Text
+        fontWeight="bold"
+        textAlign="center"
+        data-testid={`answer-status-${answerStatus}`}
+        color={getTitleTextColor()}
+      >
         {getTitleContent()}
       </Text>
       {children}

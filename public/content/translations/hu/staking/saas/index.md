@@ -1,10 +1,10 @@
 ---
-title: Letétbe helyezés mint szolgáltatás
-description: Áttekintés a letéti alapok használatáról
+title: Staking, mint szolgáltatás
+description: Egy áttekintő a pooled ETH staking elkezdéséről
 lang: hu
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: Leslie, a rinocérosz a felhőkön lebeg.
 sidebarDepth: 2
 summaryPoints:

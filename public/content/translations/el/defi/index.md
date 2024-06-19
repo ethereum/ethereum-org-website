@@ -4,7 +4,7 @@ description: Μια επισκόπηση της DeFi στο Ethereum
 lang: el
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: Το λογότυπο Eth κατασκευασμένο από τούβλα lego.
 sidebarDepth: 2
 summaryPoint1: Μια παγκόσμια, ανοικτή εναλλακτική λύση στο τρέχον χρηματοπιστωτικό σύστημα.

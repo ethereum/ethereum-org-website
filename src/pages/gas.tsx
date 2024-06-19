@@ -20,7 +20,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-import { BasePageProps } from "@/lib/types"
+import { BasePageProps, Lang } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import Callout from "@/components/Callout"
@@ -43,14 +43,15 @@ import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 // Static assets
-import dogeComputerImg from "@/public/doge-computer.png"
-import ethImg from "@/public/eth.png"
-import infrastructureTransparentImg from "@/public/infrastructure_transparent.png"
-import walletImg from "@/public/wallet.png"
-import whatIsEthereumImg from "@/public/what-is-ethereum.png"
+import dogeComputerImg from "@/public/images/doge-computer.png"
+import ethImg from "@/public/images/eth.png"
+import infrastructureTransparentImg from "@/public/images/infrastructure_transparent.png"
+import walletImg from "@/public/images/wallet.png"
+import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
 
@@ -103,12 +104,16 @@ export const getStaticProps = (async ({ locale }) => {
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>

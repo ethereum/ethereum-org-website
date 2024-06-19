@@ -5,7 +5,7 @@ lang: hu
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Egy javaslatra történő DAO-szavazat ábrázolása.
 summaryPoint1: Tagtulajdonú közösségek központi vezetők nélkül.
 summaryPoint2: Biztonságos módja az interneten történő, ismeretlenekkel való együttműködésnek.

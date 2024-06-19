@@ -5,7 +5,7 @@ lang: cs
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Logo Eth zobrazené prostřednictvím hologramu.
 summaryPoint1: Způsob, jak reprezentovat cokoliv unikátního jako majetek založený na Ethereu.
 summaryPoint2: NFT dávají tvůrcům obsahu větší moc než kdykoliv předtím.

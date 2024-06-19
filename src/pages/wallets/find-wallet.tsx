@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react"
-import { GetStaticProps } from "next"
+import { useRef, useState } from "react"
+import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -8,12 +8,12 @@ import {
   calc,
   Center,
   Flex,
+  Show,
   Text,
   useDisclosure,
-  useTheme,
 } from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp, WalletData } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, Lang, Wallet } from "@/lib/types"
 
 import BannerNotification from "@/components/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -29,20 +29,24 @@ import PageMetadata from "@/components/PageMetadata"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
   getNonSupportedLocaleWallets,
+  getSupportedLanguages,
   getSupportedLocaleWallets,
 } from "@/lib/utils/wallets"
 
 import {
+  BASE_TIME_UNIT,
   DEFAULT_LOCALE,
   NAV_BAR_PX_HEIGHT,
   WALLETS_FILTERS_DEFAULT,
 } from "@/lib/constants"
 
 import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
-import HeroImage from "@/public/wallets/wallet-hero.png"
+import { useWalletTable } from "@/hooks/useWalletTable"
+import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
 const Subtitle = ({ children }: ChildOnlyProp) => (
   <Text
@@ -56,8 +60,16 @@ const Subtitle = ({ children }: ChildOnlyProp) => (
   </Text>
 )
 
+type Props = BasePageProps & {
+  wallets: Wallet[]
+}
+
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/wallets/find-wallet"
@@ -65,18 +77,34 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
+  const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
+  const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
+  const walletsData = supportedLocaleWallets.concat(noSupportedLocaleWallets)
+
+  const wallets = walletsData.map((wallet) => ({
+    ...wallet,
+    supportedLanguages: getSupportedLanguages(
+      wallet.languages_supported,
+      locale!
+    ),
+  }))
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
+      wallets,
     },
+    // Updated once a day
+    revalidate: BASE_TIME_UNIT * 24,
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<Props>
 
-const FindWalletPage = () => {
-  const { pathname, locale } = useRouter()
-  const theme = useTheme()
+const FindWalletPage = ({
+  wallets,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const { pathname } = useRouter()
   const { t } = useTranslation("page-wallets-find-wallet")
 
   const resetWalletFilter = useRef(() => {})
@@ -87,23 +115,12 @@ const FindWalletPage = () => {
 
   const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
 
-  const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
-  const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
-  const [randomizedWalletData, setRandomizedWalletData] = useState<
-    WalletData[]
-  >(supportedLocaleWallets.concat(noSupportedLocaleWallets))
-
-  // If any wallet supports user's locale, show them (shuffled) at the top and then the remaining ones
-  useEffect(() => {
-    const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
-
-    const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
-
-    setRandomizedWalletData(
-      supportedLocaleWallets.concat(noSupportedLocaleWallets)
-    )
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [locale])
+  const {
+    featureDropdownItems,
+    filteredWallets,
+    updateMoreInfo,
+    walletCardData,
+  } = useWalletTable({ filters, t, walletData: wallets })
 
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
@@ -130,7 +147,7 @@ const FindWalletPage = () => {
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
-        image="/wallets/wallet-hero.png"
+        image="/images/wallets/wallet-hero.png"
       />
 
       <BannerNotification shouldShow={true}>
@@ -165,7 +182,8 @@ const FindWalletPage = () => {
         <Center w={{ base: "full", sm: "50%" }}>
           <Image
             src={HeroImage}
-            width={500}
+            // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+            sizes="(max-width: 480px) 100vw, 500px"
             alt=""
             priority
             style={{
@@ -204,6 +222,7 @@ const FindWalletPage = () => {
         {/* Mobile filters menu */}
         <Box hideFrom="lg">
           <MobileFiltersMenu
+            totalWallets={filteredWallets.length}
             filters={filters}
             resetWalletFilter={resetWalletFilter}
             updateFilterOption={updateFilterOption}
@@ -221,20 +240,22 @@ const FindWalletPage = () => {
         <Box px={{ md: 4, "2xl": 0 }}>
           <Flex pt={4} pb={6} gap={6}>
             {/* Filters sidebar */}
-            <WalletFilterSidebar
-              hideBelow="lg"
-              top={calc(NAV_BAR_PX_HEIGHT).subtract("2px").toString()}
-              {...{
-                filters,
-                resetWalletFilter,
-                updateFilterOption,
-                updateFilterOptions,
-                resetFilters,
-                selectedPersona,
-                setFilters,
-                setSelectedPersona,
-              }}
-            />
+            {/* Use `Show` instead of `hideBelow` prop to avoid rendering the sidebar on mobile */}
+            <Show above="lg">
+              <WalletFilterSidebar
+                top={calc(NAV_BAR_PX_HEIGHT).subtract("2px").toString()}
+                {...{
+                  filters,
+                  resetWalletFilter,
+                  updateFilterOption,
+                  updateFilterOptions,
+                  resetFilters,
+                  selectedPersona,
+                  setFilters,
+                  setSelectedPersona,
+                }}
+              />
+            </Show>
 
             {/* Wallets table */}
             <Box mt={0.5} w="full">
@@ -242,7 +263,10 @@ const FindWalletPage = () => {
                 filters={filters}
                 resetFilters={resetFilters}
                 resetWalletFilter={resetWalletFilter}
-                walletData={randomizedWalletData}
+                filteredWallets={filteredWallets}
+                totalWallets={walletCardData.length}
+                updateMoreInfo={updateMoreInfo}
+                featureDropdownItems={featureDropdownItems}
                 onOpen={onOpen}
               />
             </Box>

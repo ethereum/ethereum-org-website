@@ -38,6 +38,7 @@ import Translation from "@/components/Translation"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import {
   getRequiredNamespacesForPage,
   isLangRightToLeft,
@@ -54,20 +55,20 @@ import { fetchNodes } from "@/lib/api/fetchNodes"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
-import devfixed from "@/public/developers-eth-blocks.png"
-import dogefixed from "@/public/doge-computer.png"
-import enterprise from "@/public/enterprise-eth.png"
-import ethfixed from "@/public/eth.png"
-import finance from "@/public/finance_transparent.png"
-import future from "@/public/future_transparent.png"
-import hackathon from "@/public/hackathon_transparent.png"
-import hero from "@/public/home/hero.png"
-import impact from "@/public/impact_transparent.png"
-import infrastructure from "@/public/infrastructure_transparent.png"
-import infrastructurefixed from "@/public/infrastructure_transparent.png"
-import merge from "@/public/upgrades/merge.png"
-import robotfixed from "@/public/wallet-cropped.png"
-import ethereum from "@/public/what-is-ethereum.png"
+import devfixed from "@/public/images/developers-eth-blocks.png"
+import dogefixed from "@/public/images/doge-computer.png"
+import enterprise from "@/public/images/enterprise-eth.png"
+import ethfixed from "@/public/images/eth.png"
+import finance from "@/public/images/finance_transparent.png"
+import future from "@/public/images/future_transparent.png"
+import hackathon from "@/public/images/hackathon_transparent.png"
+import hero from "@/public/images/home/hero.png"
+import impact from "@/public/images/impact_transparent.png"
+import infrastructure from "@/public/images/infrastructure_transparent.png"
+import infrastructurefixed from "@/public/images/infrastructure_transparent.png"
+import merge from "@/public/images/upgrades/merge.png"
+import robotfixed from "@/public/images/wallet-cropped.png"
+import ethereum from "@/public/images/what-is-ethereum.png"
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
@@ -120,8 +121,6 @@ const StyledActionCard = chakra(ActionCard, {
     margin: 0,
   },
 })
-
-const StyledCodeModal = chakra(CodeModal)
 
 const StyledTitleCardList = chakra(TitleCardList)
 
@@ -209,13 +208,17 @@ export const getStaticProps = (async ({ locale }) => {
 
   // load last deploy date to pass to Footer in RootLayout
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       communityEvents,
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
       metricResults,
     },
     revalidate: BASE_TIME_UNIT * 24,
@@ -535,29 +538,10 @@ const HomePage = ({
               </ButtonLink>
             </ButtonLinkRow>
           </FeatureContent>
-          <StyledCodeModal
+          <CodeModal
             isOpen={isModalOpen}
             setIsOpen={setModalOpen}
             title={codeExamples[activeCode].title}
-            sx={{
-              ".modal-component-container": {
-                padding: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                top: "50%",
-              },
-              ".modal-component": {
-                maxWidth: "100%",
-                maxHeight: "50%",
-                padding: 0,
-              },
-              ".modal-component-content": {
-                marginTop: "3rem",
-                width: "100%",
-                overflow: "auto",
-              },
-            }}
           >
             <Codeblock
               codeLanguage={codeExamples[activeCode].codeLanguage}
@@ -566,7 +550,7 @@ const HomePage = ({
             >
               {codeExamples[activeCode].code}
             </Codeblock>
-          </StyledCodeModal>
+          </CodeModal>
         </Row>
       </MainSectionContainer>
       {/* Eth Today Section */}
