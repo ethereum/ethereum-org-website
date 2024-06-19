@@ -12159,6 +12159,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "mahnunchik",
+      "name": "Evgeny",
+      "avatar_url": "https://avatars.githubusercontent.com/u/780935?v=4",
+      "profile": "https://github.com/mahnunchik",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,

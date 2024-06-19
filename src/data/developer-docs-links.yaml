@@ -226,6 +226,9 @@
     - id: docs-nav-data-availability
       to: /developers/docs/data-availability/
       description: docs-nav-data-availability-description
+      items:
+        - id: docs-nav-data-availability-storage-strategies
+          to: /developers/docs/data-availability/blockchain-data-storage-strategies/
     - id: docs-nav-networking-layer
       to: /developers/docs/networking-layer/
       description: docs-nav-networking-layer-description
