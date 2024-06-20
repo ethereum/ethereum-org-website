@@ -1861,6 +1861,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Dennayz"><img src="https://avatars.githubusercontent.com/u/58843979?v=4?s=100" width="100px;" alt="Dennis Zhang"/><br /><sub><b>Dennis Zhang</b></sub></a><br /><a href="#tool-Dennayz" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/JanetMo"><img src="https://avatars.githubusercontent.com/u/42071757?v=4?s=100" width="100px;" alt="Marlene Marz"/><br /><sub><b>Marlene Marz</b></sub></a><br /><a href="#content-JanetMo" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mahnunchik"><img src="https://avatars.githubusercontent.com/u/780935?v=4?s=100" width="100px;" alt="Evgeny"/><br /><sub><b>Evgeny</b></sub></a><br /><a href="#tool-mahnunchik" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>
