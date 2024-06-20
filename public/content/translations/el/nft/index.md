@@ -5,7 +5,7 @@ lang: el
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Ένα λογότυπο Eth που προβάλλεται μέσω ολογράμματος.
 summaryPoint1: Ένας τρόπος για να αντιπροσωπεύσετε οτιδήποτε μοναδικό ως περιουσιακό στοιχείο με βάση το Ethereum.
 summaryPoint2: Τα NFT δίνουν περισσότερη δύναμη στους δημιουργούς περιεχομένου από ποτέ.

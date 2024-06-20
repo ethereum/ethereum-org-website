@@ -1,0 +1,68 @@
+name: Crowdin CI
+
+on:
+  schedule:
+    - cron: "20 4 1 * *" # Runs at 4:20 AM on the first day of every month
+  workflow_dispatch: # Can be dispatched manually
+
+jobs:
+  create_approved_language_bucket_prs:
+    runs-on: ubuntu-latest
+    env:
+      CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
+      CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      # Set up environment
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Install ts-node
+        run: yarn global add ts-node
+
+      - name: Set up git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Action"
+
+      - name: Fetch latest dev
+        run: git fetch origin dev
+
+      # Build translations
+      - name: Build Crowdin project
+        id: build-crowdin
+        run: |
+          npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/triggerBuild.ts;
+          grep BUILD_ID output.env >> $GITHUB_ENV;
+
+      - name: Await latest build to finish
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/awaitLatestBuild.ts
+
+      - name: Check build success
+        run: |
+          if [ $(grep BUILD_SUCCESS output.env | cut -d'=' -f2) = false ]; then
+            echo "Build timed out, exiting"
+            exit 1
+          fi
+        shell: bash
+
+      # Prepare bucket ids
+      - name: Get latest translation bucket directory ids
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/getBucketDirectoryIds.ts
+
+      # Import approved translations
+      - name: Get translations
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/getTranslations.ts
+
+      # Post updates as language-specific PRs
+      - name: Process commits and post PRs by language
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/postLangPRs.ts

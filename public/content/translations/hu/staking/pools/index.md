@@ -1,10 +1,10 @@
 ---
-title: Letéti alapba helyezés
+title: Pooled staking
 description: Áttekintés a letéti alapok használatáról
 lang: hu
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: Leslie, a rinocérosz a medencében fürdik.
 sidebarDepth: 2
 summaryPoints:

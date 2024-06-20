@@ -2,7 +2,7 @@
 title: آینده‌نگری در اتریوم
 description: این ارتقاها اتریوم را به عنوان لایه پایه مقاوم و غیرمتمرکز برای هرآنچه در آینده پیش آید تقویت می‌کند.
 lang: fa
-image: /roadmap/roadmap-future.png
+image: /images/roadmap/roadmap-future.png
 alt: "نقشه‌ راه اتریوم"
 template: roadmap
 ---

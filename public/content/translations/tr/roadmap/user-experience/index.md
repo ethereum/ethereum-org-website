@@ -2,7 +2,7 @@
 title: Kullanıcı deneyimini iyileştirme
 description: Ethereum'u kullanmak çoğu kişi için hâlâ oldukça karmaşık. Kitlesel kullanımı teşvik etmek için Ethereum, giriş engellerini büyük ölçüde azaltmalıdır - kullanıcılar, Ethereum'a merkeziyetsiz, izinsiz ve sansüre dirençli erişimin avantajlarından yararlanmalıdır; ancak bu, geleneksel bir web2 uygulamasını kullanmak kadar sorunsuz olmalıdır.
 lang: tr
-image: /roadmap/roadmap-ux.png
+image: /images/roadmap/roadmap-ux.png
 alt: "Ethereum yol haritası"
 template: roadmap
 ---

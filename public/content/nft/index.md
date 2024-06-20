@@ -5,7 +5,7 @@ lang: en
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: An Eth logo being displayed via hologram.
 summaryPoint1: A way to represent anything unique as an Ethereum-based asset.
 summaryPoint2: NFTs are giving more power to content creators than ever before.
@@ -104,6 +104,10 @@ Security issues relating to NFTs are most often related to phishing scams, smart
 - [ERC-721 token standard](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 token standard](/developers/docs/standards/tokens/erc-1155/)
 - [Popular NFT Apps and Tools](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Other resources {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

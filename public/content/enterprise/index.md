@@ -150,7 +150,7 @@ Here are some of the enterprise applications that have been built on top of the 
 ### Supply chain {#supply-chain}
 
 - [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _mints NFTs for each new batch of beer, enabling greater visibility and efficiency across its supply chain_
-- [CargoX](https://cargox.io/) - _electroinc bill of lading and document transfer provider for shipping_
+- [CargoX](https://cargox.io/) - _electronic bill of lading and document transfer provider for shipping_
 - [Circularize](https://www.circularise.com/) - _an end-to-end traceability solution for raw materials made into products_
 - [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager) - _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across a network of business partners_
 - [Minespider](https://www.minespider.com/) - _supply chain tracking and provenance, and CO2 emissions tracking_

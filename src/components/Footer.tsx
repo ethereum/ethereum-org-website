@@ -1,6 +1,6 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
+import { IoChevronUpSharp } from "react-icons/io5"
 import {
   Box,
   Flex,
@@ -12,12 +12,14 @@ import {
   Text,
 } from "@chakra-ui/react"
 
-import type { FooterLink, FooterLinkSection, Lang } from "@/lib/types"
+import type { FooterLink, FooterLinkSection } from "@/lib/types"
 
 import { BaseLink } from "@/components/Link"
 import Translation from "@/components/Translation"
 
-import { getLocaleTimestamp } from "@/lib/utils/time"
+import { scrollIntoView } from "@/lib/utils/scrollIntoView"
+
+import { Button } from "./Buttons"
 
 const socialLinks = [
   {
@@ -38,11 +40,10 @@ const socialLinks = [
 ]
 
 type FooterProps = {
-  lastDeployDate: string
+  lastDeployLocaleTimestamp: string
 }
 
-const Footer = ({ lastDeployDate }: FooterProps) => {
-  const { locale } = useRouter()
+const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
   const { t } = useTranslation("common")
 
   const linkSections: FooterLinkSection[] = [
@@ -315,6 +316,7 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
       fill: "primary.base",
     },
   }
+
   const linkProps = {
     isPartiallyActive: false,
     textDecor: "none",
@@ -331,40 +333,29 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
   return (
     <Box as="footer" py="4" px="8">
       <Flex
-        fontSize="md"
-        justify="space-between"
+        justify={{ base: "center", md: "space-between" }}
         alignItems="center"
         flexWrap="wrap"
+        gap={8}
+        pt={4}
+        pb={4}
+        borderTop={"1px solid"}
+        borderColor={"body.light"}
       >
-        {lastDeployDate && (
-          <Text>
-            <Translation id="website-last-updated" />:{" "}
-            {getLocaleTimestamp(locale as Lang, lastDeployDate)}
-          </Text>
-        )}
-        <Box my={4}>
-          {socialLinks.map(({ to, ariaLabel, icon }) => (
-            <BaseLink
-              key={to}
-              href={to}
-              hideArrow
-              color="body.base"
-              aria-label={ariaLabel}
-              ms="4"
-              _focus={{ color: "primary.base" }}
-            >
-              <Icon
-                as={icon}
-                _hover={{
-                  transition:
-                    "color 0.2s ease-in-out, transform 0.2s ease-in-out",
-                }}
-                fontSize="4xl"
-              />
-            </BaseLink>
-          ))}
-        </Box>
+        <Text fontSize={"sm"} fontStyle={"italic"} color={"body.medium"}>
+          <Translation id="website-last-updated" />: {lastDeployLocaleTimestamp}
+        </Text>
+
+        <Button
+          leftIcon={<IoChevronUpSharp />}
+          variant="outline"
+          isSecondary
+          onClick={() => scrollIntoView("__next")}
+        >
+          Go to top
+        </Button>
       </Flex>
+
       <SimpleGrid
         gap={4}
         justifyContent="space-between"
@@ -392,27 +383,54 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           </Box>
         ))}
       </SimpleGrid>
-      <List
-        display="flex"
-        flexWrap="wrap"
+      <Flex
+        p={6}
+        flexDir="column"
+        alignItems="center"
         justifyContent="center"
-        my="6"
-        mx="0"
-        py="8"
-        px="2"
-        lineHeight="base"
-        fontWeight="normal"
         fontSize="sm"
         bg="background.highlight"
       >
-        {dipperLinks.map(({ to, text }) => (
-          <ListItem key={text} p="2" m="0">
-            <BaseLink href={to} {...linkProps}>
-              {text}
+        <Box display="flex" gap={4}>
+          {socialLinks.map(({ to, ariaLabel, icon }) => (
+            <BaseLink
+              key={to}
+              href={to}
+              hideArrow
+              color="body.base"
+              aria-label={ariaLabel}
+              _focus={{ color: "primary.base" }}
+            >
+              <Icon
+                as={icon}
+                _hover={{
+                  transition:
+                    "color 0.2s ease-in-out, transform 0.2s ease-in-out",
+                }}
+                fontSize="4xl"
+              />
             </BaseLink>
-          </ListItem>
-        ))}
-      </List>
+          ))}
+        </Box>
+        <List
+          display="flex"
+          flexDir={{ base: "column", sm: "row" }}
+          flexWrap="wrap"
+          justifyContent={{ base: "center", sm: "space-between", md: "center" }}
+          fontWeight="normal"
+          fontSize="sm"
+          p={5}
+          m={0}
+        >
+          {dipperLinks.map(({ to, text }) => (
+            <ListItem key={text} textAlign="center" px="2">
+              <BaseLink href={to} w={["100%", null]} {...linkProps}>
+                {text}
+              </BaseLink>
+            </ListItem>
+          ))}
+        </List>
+      </Flex>
     </Box>
   )
 }

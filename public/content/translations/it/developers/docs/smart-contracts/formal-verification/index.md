@@ -229,7 +229,7 @@ Inoltre, non sempre per i verificatori di programmi è possibile determinare se 
 
 **Certora Prover** - _Certora Prover è uno strumento automatico di verifica formale per verificare la correttezza del codice nei contratti intelligenti. Le specifiche sono scritte in CVL (Certora Verification Language), con le violazioni di proprietà rilevate utilizzando una combinazione di analisi statica e risoluzione del vincolo._
 
-- [Sito Web](https://www.certora.com/)
+- [Sito web](https://www.certora.com/)
 - [Documentazione](https://docs.certora.com/en/latest/index.html)
 
 **SMTChecker di Solidity** - _*SMTChecker di Solidity è un revisore del modello integrato basato sulle SMT (Satisfiability Modulo Theories) e la risoluzione di Horn. Conferma se il codice sorgente di un contratto corrisponde alle specifiche durante la compilazione e controlla staticamente le violazioni delle proprietà di sicurezza.**
@@ -273,7 +273,7 @@ Inoltre, non sempre per i verificatori di programmi è possibile determinare se 
 - [GitHub](https://github.com/ConsenSys/mythril-classic)
 - [Documentazione](https://mythril-classic.readthedocs.io/en/develop/)
 
-## Letture consigliate {#further-reading}
+## Ulteriori letture {#further-reading}
 
 - [Come funziona la verifica formale dei contratti intelligenti](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
 - [Come la verifica formale può assicurare contratti intelligenti impeccabili](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)

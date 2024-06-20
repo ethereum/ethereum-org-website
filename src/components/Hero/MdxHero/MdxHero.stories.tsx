@@ -1,14 +1,20 @@
 import { HStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import MdxHeroComponent from "./"
+import { langViewportModes } from "../../../../.storybook/modes"
 
-type MdxHeroType = typeof MdxHeroComponent
+import MdxHeroComponent from "./"
 
 const meta = {
   title: "Organisms / Layouts / Hero",
+  component: MdxHeroComponent,
   parameters: {
     layout: "none",
+    chromatic: {
+      modes: {
+        ...langViewportModes,
+      },
+    },
   },
   decorators: [
     (Story) => (
@@ -17,14 +23,13 @@ const meta = {
       </HStack>
     ),
   ],
-} satisfies Meta<MdxHeroType>
+} satisfies Meta<typeof MdxHeroComponent>
 
 export default meta
 
-export const MdxHero: StoryObj<MdxHeroType> = {
+export const MdxHero: StoryObj<typeof meta> = {
   args: {
     breadcrumbs: { slug: "/en/staking/solo/" },
     title: "Solo stake your Eth",
   },
-  render: (args) => <MdxHeroComponent {...args} />,
 }

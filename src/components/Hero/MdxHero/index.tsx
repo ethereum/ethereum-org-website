@@ -1,12 +1,10 @@
 import { Heading, Stack } from "@chakra-ui/react"
 
-import { CommonHeroProps } from "@/lib/types"
+import type { CommonHeroProps } from "@/lib/types"
 
-import Breadcrumbs, { type BreadcrumbsProps } from "@/components/Breadcrumbs"
+import Breadcrumbs from "@/components/Breadcrumbs"
 
-export type MdxHeroProps = Pick<CommonHeroProps, "title"> & {
-  breadcrumbs: BreadcrumbsProps
-}
+export type MdxHeroProps = Pick<CommonHeroProps, "breadcrumbs" | "title">
 
 const MdxHero = ({ breadcrumbs, title }: MdxHeroProps) => (
   <Stack py="8" px="6" spacing="6" w="full">

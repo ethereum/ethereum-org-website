@@ -5,7 +5,7 @@ lang: id
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Sebuah alternatif global dan terbuka untuk sistem ilmiah saat ini.
 summaryPoint2: Teknologi yang memperbolehkan ilmuwan untuk mengalangkan pendanaan, menjalankan eksperimen, membagikan data, mendistribusikan wawasan, dan lain-lain.

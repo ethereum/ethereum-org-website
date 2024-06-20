@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "8.6.0",
+  "version": "8.7.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -61,13 +61,13 @@
   },
   "devDependencies": {
     "@chakra-ui/cli": "^2.4.1",
-    "@netlify/plugin-nextjs": "^4.41.3",
+    "@netlify/plugin-nextjs": "^5.0.0",
     "@storybook/addon-essentials": "7.6.6",
     "@storybook/addon-interactions": "7.6.6",
     "@storybook/addon-links": "7.6.6",
     "@storybook/nextjs": "7.6.6",
     "@storybook/react": "7.6.6",
-    "@storybook/testing-library": "0.2.2",
+    "@storybook/test": "8.0.0",
     "@svgr/webpack": "^8.1.0",
     "@types/decompress": "^4.2.7",
     "@types/hast": "^3.0.0",

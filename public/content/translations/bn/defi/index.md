@@ -4,7 +4,7 @@ description: ইথেরিয়াম এর উপর DeFi এর একটি 
 lang: bn
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: Lego ব্রিকস দিয়ে তৈরি একটি Eth লোগো।
 sidebarDepth: 2
 summaryPoint1: বর্তমান আর্থিক ব্যবস্থার জন্য বিশ্বব্যাপী একটি উন্মুক্ত বিকল্প ব্যবস্থাপনা।

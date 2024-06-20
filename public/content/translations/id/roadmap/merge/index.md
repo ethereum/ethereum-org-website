@@ -3,7 +3,7 @@ title: Penggabungan
 description: Pelajari tentang Penggabungan - ketika Jaringan Utama Ethereum mengadopsi bukti taruhan.
 lang: id
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt:
 summaryPoint1: Jaringan Utama Ethereum menggunakan bukti taruhan, tetapi tidak selalu demikian.
 summaryPoint2: Peningkatan dari mekanisme bukti kerja yang asli menjadi bukti taruhan disebut Penggabungan.

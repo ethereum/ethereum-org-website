@@ -3,7 +3,7 @@ title: स्टेकिंग निकालना
 description: पेज संक्षेप में बताता है कि पुश निकासी क्या हैं, वे कैसे काम करते हैं, और हितधारकों को अपने पुरस्कार प्राप्त करने के लिए क्या करने की आवश्यकता है
 lang: hi
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: लेस्ली राइनो अपने स्टेकिंग पुरस्कारों के साथ
 sidebarDepth: 2
 summaryPoints:

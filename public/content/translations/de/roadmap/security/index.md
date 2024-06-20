@@ -2,7 +2,7 @@
 title: Ein sichereres Ethereum Netzwerk
 description: Ethereum ist die sicherste und dezentralisierte Smart-Contract-Plattform, die es gibt. Es gibt jedoch immer noch Verbesserungen, die vorgenommen werden können, um Ethereum bis weit in die Zukunft hinein gegen jegliche Art von Angriffen zu wappnen.
 lang: de
-image: /roadmap/roadmap-security.png
+image: /images/roadmap/roadmap-security.png
 alt: "Ethereum-Roadmap"
 template: roadmap
 ---

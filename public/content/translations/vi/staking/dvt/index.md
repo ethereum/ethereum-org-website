@@ -26,7 +26,7 @@ Khi chia một nút xác thực cho nhiều nhà điều hành và nhiều máy,
 
 Nếu một trong các thành phần của một máy trong một cụm gặp sự cố (ví dụ: nếu có bốn nhà điều hành trong một cụm kiểm duyệt và một trong số họ sử dụng một máy khách cụ thể có lỗi), các thành phần còn lại đảm bảo rằng nút xác thực vẫn tiếp tục hoạt động.
 
-### Decentralization {#decentralization}
+### Phi tập trung {#decentralization}
 
 Tình huống lý tưởng cho Ethereum là có càng nhiều nút xác thực được điều hành độc lập càng tốt. Tuy nhiên, một số nhà cung cấp dịch vụ đặt cọc đã trở nên rất phổ biến và chiếm một phần đáng kể của tổng lượng ETH được đặt cọc trên mạng. DVT có thể cho phép những nhà điều hành này tồn tại mài vẫn duy trì tính phi tập trung của cổ phần. Điều này là do khóa của từng nút xác thực được phân tán trên nhiều máy khác nhau. Do đó, cần phải có sự thông đồng với quy mô lớn hơn rất nhiều để một nút xác thực có thể trở nên độc hại.
 
@@ -84,7 +84,7 @@ Một lợi ích khác khi giảm mức độ tin tưởng vào một nhà đi�
 - **Chi phí vận hành** - vì DVT phân tán nút xác thực giữa nhiều bên nên cần phải có nhiều nút hơn để hoạt động thay vì chỉ một nút duy nhất, dẫn đến gia tăng chi phí vận hành.
 - **Độ trễ khả dĩ** - vì DVT áp dụng giao thức đồng thuận để đạt được đồng thuận giữa các nút khác nhau điều hành nút xác thực, nên công nghệ này có thể làm tăng độ trễ.
 
-## Further Reading {#further-reading}
+## Đọc thêm {#further-reading}
 
 - [Thông số kỹ thuật nút xác thực phân tán Ethereum (cấp cao)](https://github.com/ethereum/distributed-validator-specs)
 - [Thông số kỹ thuật nút xác thực phân tán Ethereum](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)
