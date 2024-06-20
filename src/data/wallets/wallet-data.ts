@@ -13,7 +13,7 @@ import EnkryptImage from "@/public/wallets/enkrypt.png"
 import ExodusImage from "@/public/wallets/exodus.png"
 import FoxWalletImage from "@/public/wallets/foxwallet.png"
 import FrameImage from "@/public/wallets/frame.png"
-import GemWalletImage from "@public/wallets/gemwallet.png"
+import GemWalletImage from "@/public/wallets/gemwallet.png"
 import GridPlusImage from "@/public/wallets/gridplus.png"
 import imTokenImage from "@/public/wallets/imtoken.png"
 import InfinityWalletImage from "@/public/wallets/infinity_wallet.png"
@@ -1861,7 +1861,7 @@ export const walletsData: WalletData[] = [
     new_to_crypto: true,
   },
   {
-    last_updated: "2024-06-11",
+    last_updated: "2024-06-20",
     name: "Gem Wallet",
     image: GemWalletImage,
     brand_color: "#2D5BE6",
@@ -1886,13 +1886,13 @@ export const walletsData: WalletData[] = [
     ],
     twitter: "https://twitter.com/GemWalletApp",
     discord: "https://discord.gg/4jpxtwT8r6",
-    reddit: "https://www.reddit.com/r/gemwalletapp",
-    telegram: "https://t.me/gemwallet_en",
+    reddit: "",
+    telegram: "https://t.me/gemwallet",
     ios: true,
     android: true,
     linux: false,
     windows: false,
-    macOS: false,
+    macOS: true,
     firefox: false,
     chromium: false,
     hardware: false,
@@ -1905,7 +1905,7 @@ export const walletsData: WalletData[] = [
     rpc_importing: false,
     nft_support: false,
     connect_to_dapps: true,
-    staking: false,
+    staking: true,
     swaps: true,
     multichain: true,
     layer_2: true,
