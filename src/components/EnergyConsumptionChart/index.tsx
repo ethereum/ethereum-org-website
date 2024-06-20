@@ -4,6 +4,7 @@ import {
   CategoryScale,
   Chart as ChartJS,
   ChartData,
+  ChartOptions,
   Legend,
   LinearScale,
 } from "chart.js"
@@ -42,7 +43,7 @@ const EnergyConsumptionChart = () => {
   const isRtl = isLangRightToLeft(locale as Lang)
 
   // chart rawData, according to different breakpoints
-  const rawData = useBreakpointValue({
+  let rawData = useBreakpointValue({
     base: [
       {
         name: t("energy-consumption-chart-global-data-centers-label"),
@@ -156,33 +157,34 @@ const EnergyConsumptionChart = () => {
     ],
   })
 
-  const aspectRatioValue = useBreakpointValue({
-    base: 0.55,
-    sm: 0.75,
-    md: 1.1,
-  })
+  // reverse data if RTL
+  if (isRtl) {
+    rawData = rawData?.reverse()
+  }
 
   // chart options config
   const chartOptions = {
     // chart styles
-    barThickness: 38,
-    borderRadius: 4,
     responsive: true,
-    aspectRatio: aspectRatioValue,
-    maintainAspectRatio: true,
-    hover: { mode: null } as any, // casted to avoid TS issue
-    backgroundColor: rawData?.map((item) => item.color) as any, // casted to avoid TS issue
+    maintainAspectRatio: false,
+    layout: {
+      padding: {
+        top: 10,
+      },
+    },
+    hover: { mode: undefined },
     plugins: {
       // required plugin to display labels on top
       datalabels: {
         // https://chartjs-plugin-datalabels.netlify.app/guide/positioning.html#alignment-and-offset
-        anchor: "end" as any, // position of the labels (start, end, center), casted to avoid TS issue
-        align: "end" as any, // alignment of the labels (start, end, center), casted to avoid TS issue
-        offset: -0.5, // distance (in pixels) to pull the label away from the anchor point
+        anchor: "end", // position of the labels (start, end, center)
+        align: "end", // alignment of the labels (start, end, center)
+        offset: 0, // distance (in pixels) to pull the label away from the anchor point
         font: {
-          size: "14px",
-        } as any, // casted to avoid TS issue,
+          size: 14,
+        },
         color: useColorModeValue("#333333", "#F2F2F2"),
+        textAlign: "center",
       },
       // legend styles
       legend: {
@@ -216,11 +218,10 @@ const EnergyConsumptionChart = () => {
           autoSkip: false, // avoid long labels to be hidden
           padding: 0, // removes default padding betwen x-labels and chart
           maxRotation: 0, // turns off rotation
-          beginAtZero: true,
         },
       },
     },
-  }
+  } satisfies ChartOptions
 
   const chartData = {
     labels: rawData?.map((item) => wrapLabel(item.name)),
@@ -228,6 +229,9 @@ const EnergyConsumptionChart = () => {
       {
         label: undefined, // don't remove, needs some value provided to render properly
         data: rawData?.map((item) => item.amount) || [],
+        barThickness: 38,
+        borderRadius: 4,
+        backgroundColor: rawData?.map((item) => item.color),
       },
     ],
   } satisfies ChartData
@@ -240,9 +244,9 @@ const EnergyConsumptionChart = () => {
           maxW="500px"
           m="auto"
           w="80vw"
+          h={{ base: "300px", md: "400px" }}
           mb={{ base: 4, md: 0 }}
         >
-          {/* TODO: isRtl ? data?.reverse() : data */}
           {isClient && (
             <Bar options={chartOptions} data={chartData} updateMode="none" />
           )}
