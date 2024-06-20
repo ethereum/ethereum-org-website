@@ -35,13 +35,10 @@ export interface Meetup {
 const filterMeetups = (query: string): Array<Meetup> => {
   if (!query) return sortedMeetups
 
-  const lowercaseQuery = query.toLowerCase()
-
   return sortedMeetups.filter((meetup) => {
-    return (
-      meetup.title.toLowerCase().includes(lowercaseQuery) ||
-      meetup.location.toLowerCase().includes(lowercaseQuery)
-    )
+    const flag = meetup.emoji.replace(/[:_]/g, " ")
+    const searchable = [meetup.title, meetup.location, flag].join(" ")
+    return searchable.toLowerCase().includes(query.toLowerCase())
   })
 }
 
