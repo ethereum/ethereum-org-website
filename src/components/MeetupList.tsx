@@ -152,9 +152,9 @@ const MeetupList = () => {
       <Box aria-live="assertive" aria-atomic>
         {!filteredMeetups.length && (
           <InfoBanner emoji=":information_source:">
-            <Translation id="page-community-meetuplist-no-meetups" />{" "}
+            <Translation id="page-community:page-community-meetuplist-no-meetups" />{" "}
             <InlineLink href="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
-              <Translation id="page-community-please-add-to-page" />
+              <Translation id="page-community:page-community-please-add-to-page" />
             </InlineLink>
           </InfoBanner>
         )}
