@@ -1,8 +1,9 @@
 import React from "react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import BugBountyBanner from "../Banners/BugBountyBanner"
-import DismissableBanner from "../Banners/DismissableBanner"
+import DismissableBanner from "../DismissableBanner"
+
+import BugBountyBanner from "."
 
 const meta = {
   component: BugBountyBanner,
