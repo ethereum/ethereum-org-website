@@ -26,7 +26,7 @@ export const Basic: Story = {
 
 export const WithLongText: Story = {
   args: {
-    storageKey: "dismissable-banner-5",
+    storageKey: "dismissable-banner-2",
     children: (
       <Center>
         <Text>
@@ -42,7 +42,7 @@ export const WithLongText: Story = {
 
 export const WithIcon: Story = {
   args: {
-    storageKey: "dismissable-banner-6",
+    storageKey: "dismissable-banner-3",
     children: (
       <Center>
         <Icon as={FaInfoCircle} mr={2} />
