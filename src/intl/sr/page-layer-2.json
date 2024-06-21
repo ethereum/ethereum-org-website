@@ -120,7 +120,7 @@
   "optimism-description": "Optimism je brz, jednostavan i siguran optimistički rollup ekvivalentan EVM-u (Ethereum virtualnoj mašini). Skalira tehnologiju Ethereuma i istovremeno skalira njegove vrednosti putem retroaktivnog finansiranja javnih dobara.",
   "boba-description": "Boba je optimistički rolap koji je prvobitno forkovan iz Optimisma i koji je rešenje za skaliranje koje ima za cilj smanjenje naknada za gas, poboljšanje protoka transakcija i proširenje mogućnosti pametnih ugovora.",
   "loopring-description": "Loopringovo zkRollup nivo 2 rešenje ima za cilj da ponudi iste sigurnosne garancije kao Ethereum glavna mreža, uz veliki skok u skalabilnosti: protok povećan za 1000 puta, a troškovi smanjeni na samo 0,1% od nivoa 1.",
-  "zksync-description": "zkSync je platforma za korisnike zasnovana na rolapu nultog znanja od strane Matter Labs kompanije. To je rešenje za skaliranje za Ethereum, koje je već aktivno na Ethereum glavnoj mreži. Podržava plaćanja, zamene tokena i izradu NFT-ijeva.",
+  "zksync-description": "ZKsync je platforma za korisnike zasnovana na rolapu nultog znanja od strane Matter Labs kompanije. To je rešenje za skaliranje za Ethereum, koje je već aktivno na Ethereum glavnoj mreži. Podržava plaćanja, zamene tokena i izradu NFT-ijeva.",
   "zkspace-description": "Platforma ZKSpace se sastoji iz tri glavna dela: AMM DEX nivoa 2 koji koristi tehnologiju rolapa nultog znanja pod nazivom ZKSwap, uslugu plaćanja nazvanu ZKSquare i tržište NFT-ova pod nazivom ZKSea.",
   "aztec-description": "Aztec Network je prvi privatni rolap nultog znanja na Ethereumu, omogućujući decentralizovanim aplikacijama pristup privatnosti i skaliranju.",
   "layer-2-note": "Napomena:",
