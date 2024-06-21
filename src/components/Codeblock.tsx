@@ -236,8 +236,8 @@ const Codeblock = ({
     className = codeLanguage || ""
   }
 
-  const matches = className?.match(/language-(?<lang>.*)/)
-  const language = matches?.groups?.lang || ""
+  const matches = className?.match(/language-(.*)/)
+  const language = matches?.[1] || ""
 
   const shouldShowCopyWidget = ["js", "json", "python", "solidity"].includes(
     language
