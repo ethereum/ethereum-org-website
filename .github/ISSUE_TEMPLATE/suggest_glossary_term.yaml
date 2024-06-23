@@ -1,7 +1,7 @@
 name: Suggest a glossary term
 description: Suggest a new ethereum.org glossary term
 title: Suggest a glossary term
-labels: ["feature :sparkles:", "content :fountain_pen:"]
+labels: ["feature ✨", "content 🖋️"]
 body:
   - type: checkboxes
     id: glossary_checklist

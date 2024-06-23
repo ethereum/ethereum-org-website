@@ -4,7 +4,7 @@ description: 如何開始單獨質押你的以太幣概覽
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: 萊斯利犀牛在她自己的電腦晶片上。
 sidebarDepth: 2
 summaryPoints:
@@ -30,9 +30,9 @@ summaryPoints:
 單獨質押需要承擔更多責任，但可以實現對資金和質押設置的最大控制。
 
 <CardGrid>
-  <Card title="賺取以太幣" emoji="💸" description="你的驗證程式在線上時，可以直接從協定獲得以太幣酬勞，沒有中間人從中抽成。" />
-  <Card title="完全控制" emoji="🎛️" description="自行保管金鑰， 自行選擇用戶端和硬體的組合，讓你能夠最大程度地降低風險，並為網路的健康和安全做出最大貢獻。 第三方質押服務會為你做出這些決定，但它們不一定能做出最安全的選擇。" />
-  <Card title="網路安全" emoji="🔐" description="單獨質押是最有影響力的質押方式。 以你自己的家用硬體執行驗證程式，可以強化以太坊協定的穩定性、分散性和安全性。" />
+  <Card title="賺取以太幣" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
+  <Card title="完全控制" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
+  <Card title="網路安全" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
 ## 單獨質押前的注意事項 {#considerations-before-staking-solo}

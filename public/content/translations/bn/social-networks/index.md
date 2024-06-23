@@ -5,7 +5,7 @@ lang: bn
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: সামাজিক মিথস্ক্রিয়া এবং কন্টেন্ট তৈরি এবং বিতরণের জন্য ব্লকচেইন-ভিত্তিক প্ল্যাটফর্ম।
 summaryPoint2: বিকেন্দ্রীভূত সামাজিক মিডিয়া নেটওয়ার্কগুলি ব্যবহারকারীর গোপনীয়তা রক্ষা করে এবং ডেটা সুরক্ষা বাড়ায়।
 summaryPoint3: টোকেন এবং NFT কনটেন্ট নগদীকরণের নতুন উপায় তৈরি করে।

@@ -2,7 +2,7 @@
 title: Ethereum'u geleceğe dirençli hale getirmek
 description: Bu yükseltmeler, ileride ne olursa olsun Ethereum'u gelecek için esnek, merkeziyetsiz temel katman olarak sağlamlaştırıyor.
 lang: tr
-image: /roadmap/roadmap-future.png
+image: /images/roadmap/roadmap-future.png
 alt: "Ethereum yol haritası"
 template: roadmap
 ---

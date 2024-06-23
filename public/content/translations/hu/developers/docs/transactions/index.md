@@ -195,10 +195,10 @@ Ahol a mezők jelentése:
 
 - [EIP-2718: Tranzakciógöngyöleg](https://eips.ethereum.org/EIPS/eip-2718)
 
-_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
+_Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt és add hozzá!_
 
 ## Kapcsolódó témák {#related-topics}
 
 - [Számlák](/developers/docs/accounts/)
 - [Ethereum virtuális gép (EVM)](/developers/docs/evm/)
-- [Gáz](/developers/docs/gas/)
+- [Üzemanyag](/developers/docs/gas/)

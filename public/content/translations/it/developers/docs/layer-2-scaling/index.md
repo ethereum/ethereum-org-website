@@ -75,7 +75,7 @@ La sidechain dove si verificano gli ZK rollup può essere ottimizzata per ridurr
 
 - [Loopring](https://loopring.org/#/)
 - [Starkware](https://starkware.co/)
-- [Matter Labs zkSync](https://matter-labs.io/)
+- [Matter Labs ZKsync](https://matter-labs.io/)
 - [Aztec 2.0](https://aztec.network/)
 
 ### Optimistic rollups {#optimistic-rollups}

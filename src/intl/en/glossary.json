@@ -349,6 +349,8 @@
   "state-channels-definition": "A <a href=\"/glossary/#layer-2\">layer 2</a> solution where a channel is set up between participants, where they can transact freely and cheaply. Only a <a href=\"/glossary/#transaction\">transaction</a> to set up the channel and close the channel is sent to <a href=\"/glossary/#mainnet\">Mainnet</a>. This allows for very high transaction throughput, but does rely on knowing number of participants up front and locking up of funds. <a href=\"/developers/docs/scaling/state-channels/#state-channels\">More on state channels</a>.",
   "supermajority-term": "Supermajority",
   "supermajority-definition": "Supermajority is the term given for an amount exceeding 2/3 (66%) of the total staked ether securing Ethereum. A supermajority vote is required for blocks to be <a href=\"/glossary/#finality\">finalized</a> on the Beacon Chain.",
+  "sybil-attack-term": "Sybil attack",
+  "sybil-attack-definition": "Sybil attacks refer to individual humans tricking a system into thinking they are multiple people to increase their influence.",
   "syncing-term": "Syncing",
   "syncing-definition": "The process of downloading the entire latest version of a blockchain to a node.",
   "sync-committee-term": "Sync committee",

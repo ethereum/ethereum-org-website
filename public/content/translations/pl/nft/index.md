@@ -5,7 +5,7 @@ lang: pl
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Logo Ethereum wyświetlane jako hologram.
 summaryPoint1: Sposób reprezentowania czegoś wyjątkowego jako aktywu na blockchainie Ethereum.
 summaryPoint2: NFT dają ich twórcom możliwości, których nigdy wcześniej nie mieli.

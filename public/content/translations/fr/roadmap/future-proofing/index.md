@@ -2,7 +2,7 @@
 title: Ethereum à l’épreuve du temps
 description: Ces mises à niveau consolident Ethereum en tant que couche de base résiliente et décentralisée pour l’avenir, quoi qu’elle réserve.
 lang: fr
-image: /roadmap/roadmap-future.png
+image: /images/roadmap/roadmap-future.png
 alt: "Feuille de route d'Ethereum"
 template: roadmap
 ---

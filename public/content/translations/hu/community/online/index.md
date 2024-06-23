@@ -22,7 +22,7 @@ Ethereum rajongók százezrei gyűlnek össze ezeken az online fórumokon, hogy 
 ## Csevegőszobák {#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> – projektmanagement-támogatás az Ethereum-fejlesztésekhez</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> – az ETHGlobal által üzemeltetett Discord chat: online közösség az Ethereum hackereknek világszinten</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://ethglobal.com/discord">Ethereum Hackers</Link> – az ETHGlobal által üzemeltetett Discord chat: online közösség az Ethereum hackereknek világszinten</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> – Ethereum-fejlesztésre fókuszáló Discord-közösség</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link> – közösségi vezetésű útmutatás, oktatás, támogatás és források a meglévő és lehetséges letéteseknek</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Ethereum.org website team</Link> – beszélgessen az ethereum.org web fejlesztésről és dizájnról a közösség tagjaival</SocialListItem>

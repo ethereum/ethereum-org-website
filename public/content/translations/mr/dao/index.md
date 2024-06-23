@@ -5,7 +5,7 @@ lang: mr
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: प्रस्तावावर मतदान करणाऱ्या DAO चे प्रतिनिधित्व.
 summaryPoint1: केंद्रीकृत नेतृत्वाशिवाय सदस्यांच्या मालकीचे समुदाय.
 summaryPoint2: इंटरनेट अनोळखी लोकांसह सहयोग करण्याचा एक सुरक्षित मार्ग.

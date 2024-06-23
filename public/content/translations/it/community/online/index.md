@@ -22,7 +22,7 @@ Centinaia di migliaia di appassionati di Ethereum si riuniscono in questi forum 
 ## Stanze di chat {#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - community orientata all'offerta di assistenza per la gestione dei progetti per lo sviluppo di Ethereum</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> - Chat Discord gestita da ETHGlobal: una community online per gli hacker di Ethereum in tutto il mondo</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://ethglobal.com/discord">Ethereum Hackers</Link> - Chat Discord gestita da ETHGlobal: una community online per gli hacker di Ethereum in tutto il mondo</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - Community Discord focalizzata sullo sviluppo di Ethereum</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link>: guida, istruzione, assistenza e risorse gestite dalla comunità per gli staker esistenti e potenziali</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Ethereum.org website team</Link> - date un'occhiata e chattate sullo sviluppo e la progettazione di ethereum.org con il team e le persone della community</SocialListItem>

@@ -5,7 +5,7 @@ lang: cs
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Vyobrazení decentralizované autonomní organizace hlasující o návrhu.
 summaryPoint1: Členské komunity bez centralizovaného vedení.
 summaryPoint2: Bezpečný způsob, jak spolupracovat s lidmi na internetu.

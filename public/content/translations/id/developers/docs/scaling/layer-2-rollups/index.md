@@ -114,7 +114,7 @@ Ada berbagai implementasi rollup ZK yang dapat Anda integrasikan ke dalam dapps 
 
 - [Loopring](https://loopring.org/#/)
 - [Starkware](https://starkware.co/)
-- [Matter Labs zkSync](https://zksync.io/)
+- [Matter Labs ZKsync](https://zksync.io/)
 - [Aztec 2.0](https://aztec.network/)
 - [Polygon Hermez](https://hermez.io/)
 - [zkTube](https://zktube.io/)

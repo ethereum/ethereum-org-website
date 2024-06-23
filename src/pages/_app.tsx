@@ -48,7 +48,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
         <BaseLayout
           contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
           contentNotTranslated={pageProps.contentNotTranslated}
-          lastDeployDate={pageProps.lastDeployDate}
+          lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
         >
           {getLayout(<Component {...pageProps} />)}
         </BaseLayout>
