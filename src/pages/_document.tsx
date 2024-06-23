@@ -26,7 +26,7 @@ class Document extends NextDocument {
       <Html dir={dir} lang={locale}>
         <Head>
           {/* favicon */}
-          <link rel="icon" type="image/x-icon" href="/favicon.png" />
+          <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
           {/* manifest */}
           <link rel="manifest" href="/manifest.json" />
           {/* preload inter static web fonts */}

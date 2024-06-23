@@ -3,7 +3,7 @@ title: La Fusión
 description: Conozca más sobre La Fusión y sobre cuándo la red principal de Ethereum implementará la prueba de participación.
 lang: es
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: La red principal de Ethereum usa prueba de participación, pero esto no fue siempre el caso.
 summaryPoint2: La actualización del mecanismo original de prueba de trabajo a prueba de participación se denominó «La fusión».

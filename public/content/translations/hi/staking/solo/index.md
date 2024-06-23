@@ -4,7 +4,7 @@ description: अपने ETH को अकेले दांव पर लग�
 lang: hi
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: लेस्ली राइनो अपने कंप्यूटर चिप पर।
 sidebarDepth: 2
 summaryPoints:

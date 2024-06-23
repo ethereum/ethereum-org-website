@@ -5,7 +5,7 @@ lang: az
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: Sosial qarşılıqlı əlaqə və məzmunun yaradılması və yayılması üçün blokçeyn əsaslı platformalar.
 summaryPoint2: Mərkəzləşdirilməmiş sosial media şəbəkələri istifadəçi məxfiliyini qoruyur və məlumatların təhlükəsizliyini artırır.
 summaryPoint3: Tokenlər və NFTlər məzmundan pul qazanmağın yeni yollarını yaradır.

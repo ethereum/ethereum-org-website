@@ -2,7 +2,7 @@ import { Center, Flex, Heading, Stack } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
 
-import wallet from "@/public/wallet.png"
+import wallet from "@/public/images/wallet.png"
 
 export type RoadmapImageContentProps = {
   children: React.ReactNode

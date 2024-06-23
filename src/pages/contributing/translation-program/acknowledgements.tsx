@@ -12,7 +12,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import { BasePageProps } from "@/lib/types"
+import { BasePageProps, Lang } from "@/lib/types"
 
 import ActionCard from "@/components/ActionCard"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -27,16 +27,17 @@ import TranslationLeaderboard from "@/components/TranslationLeaderboard"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import allTimeData from "../../../data/translation-reports/alltime/alltime-data.json"
 import monthData from "../../../data/translation-reports/month/month-data.json"
 import quarterData from "../../../data/translation-reports/quarter/quarter-data.json"
 
-import darkThemeCertificateImg from "@/public/certificates/dark-certificate.png"
-import lightThemeCertificateImg from "@/public/certificates/light-certificate.png"
-import dogeComputerImg from "@/public/doge-computer.png"
-import whatIsEthereumImg from "@/public/what-is-ethereum.png"
+import darkThemeCertificateImg from "@/public/images/certificates/dark-certificate.png"
+import lightThemeCertificateImg from "@/public/images/certificates/light-certificate.png"
+import dogeComputerImg from "@/public/images/doge-computer.png"
+import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
 
 const Content = (props: BoxProps) => (
   <Box as={MainArticle} py={4} px={10} w="full" {...props} />
@@ -48,6 +49,10 @@ const ContentHeading = (props: HeadingProps) => (
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/contributing/translation-program/acknowledgements"
@@ -59,7 +64,7 @@ export const getStaticProps = (async ({ locale }) => {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>

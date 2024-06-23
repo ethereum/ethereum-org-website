@@ -120,7 +120,7 @@
   "optimism-description": "Optimism ialah gulungan optimistik setara EVM yang cepat, ringkas dan selamat. Ia menskala teknologi Ethereum sambil menskala nilainya melalui pembiayaan barangan awam retroaktif.",
   "boba-description": "Boba ialah Gulungan Optimistik yang pada asalnya bercabang daripada Optimism, iaitu penyelesaian penskalaan yang bertujuan untuk mengurangkan fi gas, meningkatkan daya pemprosesan transaksi dan memperluaskan keupayaan kontrak pintar.",
   "loopring-description": "Penyelesaian L2 zkRollup Loopring bertujuan untuk menawarkan jaminan keselamatan yang sama seperti rangkaian utama Ethereum, dengan peningkatan kebolehskalaan besar: daya pemprosesan ditingkatkan sebanyak 1000x, dan kos dikurangkan kepada hanya 0.1% daripada L1.",
-  "zksync-description": "zkSync ialah platform gulungan zk berpusatkan pengguna daripada Matter Labs. Ia merupakan penyelesaian penskalaan untuk Ethereum, yang sudah aktif di rangkaian utama Ethereum. Ia menyokong pembayaran, pertukaran token dan penempaan NFT.",
+  "zksync-description": "ZKsync ialah platform gulungan zk berpusatkan pengguna daripada Matter Labs. Ia merupakan penyelesaian penskalaan untuk Ethereum, yang sudah aktif di rangkaian utama Ethereum. Ia menyokong pembayaran, pertukaran token dan penempaan NFT.",
   "zkspace-description": "Platform ZKSpace terdiri daripada tiga bahagian utama: lapisan 2 AMM DEX menggunakan teknologi Gulungan ZK yang dikenali sebagai ZKSwap, perkhidmatan pembayaran yang dikenali sebagai ZKSquare, dan pasaran NFT dikenali sebagai ZKSea.",
   "aztec-description": "Aztec Network ialah gulungan zk persendirian pertama di Ethereum, membolehkan aplikasi ternyahpusat untuk mengakses privasi dan skala.",
   "layer-2-note": "Nota:",

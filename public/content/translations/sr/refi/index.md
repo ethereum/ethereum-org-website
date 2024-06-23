@@ -5,7 +5,7 @@ lang: sr
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Alternativa ekonomskom sistemu izgrađena na regenerativnim principima
 summaryPoint2: Pokušaj upotrebe Ethereuma za rešavanje globalnih koordinacionih kriza kao što su klimatske promene

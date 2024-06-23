@@ -4,7 +4,7 @@ description: نظرة عامة حول التمويل اللامركزي على �
 lang: ar
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: شعار إثيريوم مصنوع من قطع الليجو.
 sidebarDepth: 2
 summaryPoint1: "• بديل عالمي مفتوح عن النظام المالي الحالي."

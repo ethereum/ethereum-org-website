@@ -74,7 +74,7 @@ A validátoroknak ETH-t kell letétbe helyezniük, hogy legyen mit veszíteniük
 
 ## Hogyan választják ki a validátorokat? {#how-are-validators-selected}
 
-Egy adott validátor álvéletlenszerűen kerül kiválasztásra a RANDAO nevű algoritmus segítségével, hogy egy adott slotban blokkot javasoljon; ez a blokkelőterjesztőtől származó hasht keveri egy seeddel, amely minden blokkban frissül. Ezt az értéket használják, hogy kiválasszanak egy adott validátort a teljes szettből. A validátor kiválasztását négy korszakra előre elvégzik.
+Egy adott validátor álvéletlenszerűen kerül kiválasztásra a RANDAO nevű algoritmus segítségével, hogy egy adott slotban blokkot javasoljon; ez a blokkelőterjesztőtől származó hasht keveri egy seeddel, amely minden blokkban frissül. Ezt az értéket használják, hogy kiválasszanak egy adott validátort a teljes szettből. A validátor kiválasztását két korszakra előre elvégzik.
 
 [Bővebben a validátorkiválasztásról](/developers/docs/consensus-mechanisms/pos/block-proposal)
 

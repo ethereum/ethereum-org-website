@@ -44,11 +44,11 @@ export type Root = {
   children: ReactNode
   contentIsOutdated: boolean
   contentNotTranslated: boolean
-  lastDeployDate: string
+  lastDeployLocaleTimestamp: string
 }
 
 export type BasePageProps = SSRConfig &
-  Pick<Root, "contentNotTranslated" | "lastDeployDate">
+  Pick<Root, "contentNotTranslated" | "lastDeployLocaleTimestamp">
 
 export type Frontmatter = RoadmapFrontmatter &
   UpgradeFrontmatter &
@@ -620,6 +620,10 @@ export interface WalletData {
   documentation: string
   mpc?: boolean
   new_to_crypto?: boolean
+}
+
+export type Wallet = WalletData & {
+  supportedLanguages: string[]
 }
 
 export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT

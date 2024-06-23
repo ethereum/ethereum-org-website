@@ -409,7 +409,7 @@
     "endDate": "2024-9-22",
     "imageUrl": "https://ethglobal.com/og.png"
   },
-   {
+  {
     "title": "ETHMilan",
     "to": "https://ethmilan.xyz/",
     "location": "Milan, Italy",
@@ -417,7 +417,14 @@
     "startDate": "2024-9-26",
     "endDate": "2024-9-27",
     "imageUrl": "https://assets-global.website-files.com/65b77a0b9370aa6cf9f28462/65d329fd71a77f03daa10342_RectangleBannerWebsite_ETHMilan24_def.jpg"
-
+  },
+  {
+    "title": "ETHKL2024",
+    "startDate": "2024-10-04",
+    "endDate": "2024-10-06",
+    "to": "https://www.2024.ethkl.org/",
+    "location": "Kuala Lumpur, Malaysia",
+    "description": "Returning bigger from last year success, this time at Malaysia's most iconic landmark KLCC. ETHKL24 is a 3 days Conference & Hackathon event to promote the growth and adoption of Ethereum and related technology, and gathering industry experts to explore the latest advancements in Ethereum."
   },
   {
     "title": "Pragma San Francisco",
@@ -579,5 +586,13 @@
     "location": "Montevideo, Uruguay",
     "description": "Building together for a decentralized future.",
     "imageUrl": "https://uploads-ssl.webflow.com/6463b2b2401a64107c84634f/6463f95db5abb4d10aeabfb5_eth-uy-logo-3.png"
+  },
+  {
+    "title": "TUM Blockchain Conference",
+    "startDate": "2024-09-12",
+    "endDate": "2024-09-13",
+    "to": "https://conference.tum-blockchain.com/",
+    "location": "Munich, Germany",
+    "description": "Join us at Germany's leading student-run conference in order to explore the frontiers of blockchain technology during the Octoberfest!"
   }
 ]

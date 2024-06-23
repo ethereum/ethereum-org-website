@@ -26,7 +26,8 @@ const HubHero = ({
         src={heroImg}
         alt=""
         priority
-        sizes="100vw"
+        // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+        sizes="(max-width: 1504px) 100vw, 1504px"
         style={{ width: "100vw", objectFit: "cover" }}
         h={{
           base: "192px",

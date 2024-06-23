@@ -62,6 +62,7 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
 - [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
+- [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli _(long-term support)_ {#goerli}
 

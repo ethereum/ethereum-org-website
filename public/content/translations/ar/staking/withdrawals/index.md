@@ -3,7 +3,7 @@ title: عمليات سحب تجميد العملات
 description: ملخص الصفحة عن ماهية دفع عمليات سحب المراهنة، آلية عملها، والإجراءات التي يحتاج المراهنون إلى اتخاذها للحصول على مكافأتهم
 lang: ar
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: ليزلي فرس النهر مع مكافأتها من المراهنة
 sidebarDepth: 2
 summaryPoints:

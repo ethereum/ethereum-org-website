@@ -4,7 +4,7 @@ description: Een overzicht van DeFi op Ethereum
 lang: nl
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: Een Eth-logo gemaakt van legostenen.
 sidebarDepth: 2
 summaryPoint1: Een wereldwijd, open alternatief voor ons huidige financiële systeem.

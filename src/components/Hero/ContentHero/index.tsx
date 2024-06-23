@@ -26,7 +26,8 @@ const ContentHero = (props: ContentHeroProps) => {
             blurDataURL={blurDataURL}
             width={760}
             height={451}
-            sizes="(max-width: 992px) 100vw, 50vw"
+            // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+            sizes="(max-width: 992px) 100vw, 760px"
             boxSize="full"
             style={{ objectFit: "contain" }}
             flex={{ base: "1 1 100%", md: "none" }}

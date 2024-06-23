@@ -6,11 +6,15 @@ lang: ja
 
 # スマートコントラクト入門 {#introduction-to-smart-contracts}
 
-スマートコントラクトはイーサリアムのアプリケーション層における基本的な構成要素です。 これはブロックチェーン上に保存されたコンピュータプログラムであり、「もし条件がこのような場合、こうする」というロジックにより、一度作成されると変更できないコードによって定義されたルールに従い実行されることが保証されています。
+スマートコントラクトはイーサリアムのアプリケーション層における基本的な構成要素です。 これは[ブロックチェーン](/glossary/#blockchain)上に保存されたコンピュータプログラムであり、「もし条件がこのような場合、こうする」というロジックにより、一度作成されると変更できないコードによって定義されたルールに従い実行されることが保証されています。
 
 Nick Szaboは「スマートコントラクト」という用語を作りました。 1994年、彼は[概念について紹介](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)し、1996年には[スマートコントラクトの可能性について探求](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html)しました。
 
-Szaboは、自動化および暗号化されたプロセスによって、仲介者不要の信頼できる取引やビジネスを可能にするデジタルマーケットプレイスを構想しました。 イーサリアムのスマートコントラクトは、このビジョンを実現したものです。
+Szaboは、自動化および[暗号技術的に安全な](/glossary/#cryptography)プロセスによって、仲介者不要の信頼できる取引やビジネスを可能にするデジタルマーケットプレイスを構想しました。 イーサリアムのスマートコントラクトは、このビジョンを実現したものです。
+
+Finematicsによるスマートコントラクトの説明:
+
+<YouTube id="pWGLtjG-F5c" />
 
 ## 従来の契約に対する信頼 {#trust-and-contracts}
 
@@ -60,20 +64,14 @@ Szaboは、自動化および暗号化されたプロセスによって、仲介
 
 スマートコントラクトは、基本的にコンピューター・プログラムができることであれば、何でもできます。
 
-計算を実行し、通貨を作成し、データを保存し、NFTをミントし、通信を送信し、画像を生成することさえできます。 以下に、よく使われているスマートコントラクトの実例を示します。
+計算を実行し、通貨を作成し、データを保存し、[NFT](/glossary/#nft)をミントし、通信を送信し、画像を生成することさえできます。 以下に、よく使われているスマートコントラクトの実例を示します。
 
 - [ステーブルコイン](/stablecoins/)
 - [唯一無二なデジタルアセットの作成と配布](/nft/)
 - [自動で開かれた為替](/get-eth/#dex)
-- [分散型ゲーム](/dapps/?category=gaming)
+- [分散型ゲーム](/dapps/?category=gaming#explore)
 - [自動的に支払いを行う保険契約](https://etherisc.com/)
 - [カスタマイズされ、相互運用可能な通貨を作成するための標準](/developers/docs/standards/tokens/)
-
-## 映像で学びたい場合 {#visual-learner}
-
-Finematicsによるスマートコントラクトの説明:
-
-<YouTube id="pWGLtjG-F5c" />
 
 ## 参考文献 {#further-reading}
 

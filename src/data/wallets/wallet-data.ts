@@ -1,41 +1,42 @@
 import { WalletData } from "@/lib/types"
 
-import OneInchWalletImage from "@/public/wallets/1inch.png"
-import AlphaWalletImage from "@/public/wallets/alpha.png"
-import AmbireImage from "@/public/wallets/ambire.png"
-import ArgentImage from "@/public/wallets/argent.png"
-import AuroxImage from "@/public/wallets/aurox.png"
-import BitkeepImage from "@/public/wallets/bitkeep.png"
-import BlockWalletImage from "@/public/wallets/blockwallet.png"
-import BridgeWalletImage from "@/public/wallets/bridge.png"
-import CoinbaseImage from "@/public/wallets/coinbase.png"
-import EnkryptImage from "@/public/wallets/enkrypt.png"
-import ExodusImage from "@/public/wallets/exodus.png"
-import FoxWalletImage from "@/public/wallets/foxwallet.png"
-import FrameImage from "@/public/wallets/frame.png"
-import GridPlusImage from "@/public/wallets/gridplus.png"
-import imTokenImage from "@/public/wallets/imtoken.png"
-import InfinityWalletImage from "@/public/wallets/infinity_wallet.png"
-import KeystoneImage from "@/public/wallets/keystone.png"
-import LedgerImage from "@/public/wallets/ledger.png"
-import LoopringImage from "@/public/wallets/loopring.png"
-import MetaMaskImage from "@/public/wallets/metamask.png"
-import MewImage from "@/public/wallets/mew.png"
-import MyEtherWalletImage from "@/public/wallets/myetherwallet.png"
-import OneKeyImage from "@/public/wallets/onekey.png"
-import PhantomImage from "@/public/wallets/phantom.png"
-import PillarImage from "@/public/wallets/pillar.png"
-import RabbyWalletImage from "@/public/wallets/rabbywallet.png"
-import RainbowImage from "@/public/wallets/rainbow.png"
-import SafeImage from "@/public/wallets/safe.png"
-import TahoImage from "@/public/wallets/taho.png"
-import TokenPocketImage from "@/public/wallets/tokenpocket.png"
-import TorusImage from "@/public/wallets/torus.png"
-import TrezorImage from "@/public/wallets/trezor.png"
-import TrustWalletImage from "@/public/wallets/trustwallet.png"
-import UnstoppableWalletImage from "@/public/wallets/unstoppable.png"
-import XDEFIImage from "@/public/wallets/xdefi.png"
-import ZerionImage from "@/public/wallets/zerion.png"
+import OneInchWalletImage from "@/public/images/wallets/1inch.png"
+import AlphaWalletImage from "@/public/images/wallets/alpha.png"
+import AmbireImage from "@/public/images/wallets/ambire.png"
+import ArgentImage from "@/public/images/wallets/argent.png"
+import AuroxImage from "@/public/images/wallets/aurox.png"
+import BitkeepImage from "@/public/images/wallets/bitkeep.png"
+import BlockWalletImage from "@/public/images/wallets/blockwallet.png"
+import BridgeWalletImage from "@/public/images/wallets/bridge.png"
+import CoinbaseImage from "@/public/images/wallets/coinbase.png"
+import CoinWalletImage from "@/public/images/wallets/coinwallet.png"
+import EnkryptImage from "@/public/images/wallets/enkrypt.png"
+import ExodusImage from "@/public/images/wallets/exodus.png"
+import FoxWalletImage from "@/public/images/wallets/foxwallet.png"
+import FrameImage from "@/public/images/wallets/frame.png"
+import GridPlusImage from "@/public/images/wallets/gridplus.png"
+import imTokenImage from "@/public/images/wallets/imtoken.png"
+import InfinityWalletImage from "@/public/images/wallets/infinity_wallet.png"
+import KeystoneImage from "@/public/images/wallets/keystone.png"
+import LedgerImage from "@/public/images/wallets/ledger.png"
+import LoopringImage from "@/public/images/wallets/loopring.png"
+import MetaMaskImage from "@/public/images/wallets/metamask.png"
+import MewImage from "@/public/images/wallets/mew.png"
+import OneKeyImage from "@/public/images/wallets/onekey.png"
+import PhantomImage from "@/public/images/wallets/phantom.png"
+import PillarImage from "@/public/images/wallets/pillar.png"
+import RabbyWalletImage from "@/public/images/wallets/rabbywallet.png"
+import RainbowImage from "@/public/images/wallets/rainbow.png"
+import SafeImage from "@/public/images/wallets/safe.png"
+import ShapeShiftImage from "@/public/images/wallets/shapeshift.png"
+import TahoImage from "@/public/images/wallets/taho.png"
+import TokenPocketImage from "@/public/images/wallets/tokenpocket.png"
+import TorusImage from "@/public/images/wallets/torus.png"
+import TrezorImage from "@/public/images/wallets/trezor.png"
+import TrustWalletImage from "@/public/images/wallets/trustwallet.png"
+import UnstoppableWalletImage from "@/public/images/wallets/unstoppable.png"
+import XDEFIImage from "@/public/images/wallets/xdefi.png"
+import ZerionImage from "@/public/images/wallets/zerion.png"
 
 export const walletsData: WalletData[] = [
   {
@@ -409,6 +410,76 @@ export const walletsData: WalletData[] = [
     documentation: "https://docs.safe.global/",
   },
   {
+    last_updated: "May 10, 2024",
+    name: "Coin Wallet",
+    image: CoinWalletImage,
+    brand_color: "#68c481",
+    url: "https://coin.space/",
+    active_development_team: true,
+    languages_supported: [
+      "id",
+      "bs",
+      "cs",
+      "de",
+      "en",
+      "es",
+      "fil",
+      "fr",
+      "hr",
+      "it",
+      "hu",
+      "nl",
+      "nb",
+      "pl",
+      "pt-br",
+      "ro",
+      "sr",
+      "sv",
+      "vi",
+      "tr",
+      "ru",
+      "uk",
+      "th",
+      "km",
+      "ko",
+      "ja",
+      "zh-cn"
+    ],
+    twitter: "https://twitter.com/CoinAppWallet",
+    discord: "",
+    reddit: "",
+    telegram: "",
+    ios: true,
+    android: true,
+    linux: true,
+    windows: true,
+    macOS: true,
+    firefox: false,
+    chromium: false,
+    hardware: false,
+    open_source: true,
+    repo_url: "https://github.com/CoinSpace/CoinSpace",
+    non_custodial: true,
+    security_audit: [""],
+    scam_protection: false,
+    hardware_support: true,
+    rpc_importing: false,
+    nft_support: false,
+    connect_to_dapps: false,
+    staking: false,
+    swaps: true,
+    layer_2: false,
+    gas_fee_customization: true,
+    ens_support: true,
+    erc_20_support: true,
+    buy_crypto: true,
+    withdraw_crypto: true,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation: "https://coin.space/ethereum-wallet/",
+    documentation: "https://support.coin.space/hc/en-us",
+  },
+  {
     last_updated: "2023-08-23",
     name: "Ambire",
     image: AmbireImage,
@@ -417,7 +488,7 @@ export const walletsData: WalletData[] = [
     active_development_team: true,
     languages_supported: ["en"],
     twitter: "https://twitter.com/AmbireWallet",
-    discord: "https://discord.com/invite/QQb4xc4ksJ",
+    discord: "https://discord.com/invite/ambire",
     reddit: "",
     telegram: "",
     ios: true,
@@ -441,10 +512,10 @@ export const walletsData: WalletData[] = [
     swaps: true,
     layer_2: true,
     gas_fee_customization: true,
-    ens_support: false,
+    ens_support: true,
     erc_20_support: true,
     buy_crypto: true,
-    withdraw_crypto: false,
+    withdraw_crypto: true,
     multisig: true,
     social_recovery: true,
     onboard_documentation:
@@ -734,49 +805,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "",
     documentation: "https://unstoppable.money/faq",
   },
-  {
-    last_updated: "2022-06-24",
-    name: "MyEtherWallet",
-    image: MyEtherWalletImage,
-    brand_color: "#ffffff",
-    url: "https://www.myetherwallet.com/",
-    active_development_team: true,
-    languages_supported: ["en"],
-    twitter: "https://twitter.com/myetherwallet",
-    discord: "",
-    reddit: "https://www.reddit.com/r/MyEtherWallet/",
-    telegram: "",
-    ios: false,
-    android: false,
-    linux: false,
-    windows: false,
-    macOS: false,
-    firefox: false,
-    chromium: false,
-    hardware: false,
-    open_source: true,
-    repo_url: "https://github.com/MyEtherWallet/MyEtherWallet/",
-    non_custodial: true,
-    security_audit: [""],
-    scam_protection: false,
-    hardware_support: true,
-    rpc_importing: false,
-    nft_support: true,
-    connect_to_dapps: true,
-    staking: true,
-    swaps: true,
-    multichain: false,
-    layer_2: true,
-    gas_fee_customization: true,
-    ens_support: true,
-    erc_20_support: true,
-    buy_crypto: true,
-    withdraw_crypto: true,
-    multisig: false,
-    social_recovery: false,
-    onboard_documentation: "https://www.mewtopia.com",
-    documentation: "https://help.myetherwallet.com/en/",
-  },
+
   {
     last_updated: "2022-06-24",
     name: "AlphaWallet",
@@ -1842,6 +1871,64 @@ export const walletsData: WalletData[] = [
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
     documentation:
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
+  },
+  {
+    last_updated: "2024-06-07",
+    name: "ShapeShift Mobile",
+    image: ShapeShiftImage,
+    brand_color: "#386FF9",
+    url: "https://shapeshift.com/",
+    active_development_team: true,
+    languages_supported: [
+      "en",
+      "es",
+      "de",
+      "fr",
+      "zh",
+      "ja",
+      "pt",
+      "ru",
+      "tr",
+      "uk",
+    ],
+    twitter: "https://twitter.com/shapeshift",
+    discord: "https://discord.gg/shapeshift",
+    reddit: "",
+    telegram: "https://t.me/shapeshiftofficial",
+    ios: true,
+    android: true,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: false,
+    chromium: false,
+    hardware: false,
+    open_source: true,
+    repo_url: "https://github.com/shapeshift/",
+    non_custodial: true,
+    security_audit: [
+      "https://www.defisafety.com/app/pqrs/108",
+      "https://hackenproof.com/shape-shift/shapeshift",
+    ],
+    scam_protection: false,
+    hardware_support: false,
+    rpc_importing: false,
+    nft_support: true,
+    connect_to_dapps: true,
+    staking: true,
+    swaps: true,
+    multichain: true,
+    layer_2: true,
+    gas_fee_customization: true,
+    ens_support: true,
+    erc_20_support: false,
+    buy_crypto: true,
+    withdraw_crypto: true,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation: "https://docs.shapeshift.com/",
+    documentation: "https://docs.shapeshift.com/",
+    new_to_crypto: true,
   },
 ]
 

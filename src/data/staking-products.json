@@ -1013,7 +1013,7 @@
       "isFoss": true,
       "hasBugBounty": true,
       "isTrustless": true,
-      "hasPermissionlessNodes": false,
+      "hasPermissionlessNodes": true,
       "pctMajorityExecutionClient": null,
       "pctMajorityConsensusClient": 43.1,
       "platforms": ["Browser"],

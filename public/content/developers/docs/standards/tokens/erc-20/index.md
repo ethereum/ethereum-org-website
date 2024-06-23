@@ -162,6 +162,8 @@ When ERC-20 tokens are sent to a smart contract that is not designed to handle E
 3.	No built-in handling
 	-	The ERC-20 standard does not include a mandatory function for receiving contracts to implement, leading to a situation where many contracts are unable to manage incoming tokens properly
 
+Some alternative standards have come out of this issue such as [ERC-223](/developers/docs/standards/tokens/erc-223)
+
 ## Further reading {#further-reading}
 
 - [EIP-20: ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
@@ -172,5 +174,6 @@ When ERC-20 tokens are sent to a smart contract that is not designed to handle E
 
 ## Other fungible token standards {#fungible-token-standards}
 
+- [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Tokenized vaults](/developers/docs/standards/tokens/erc-4626)
