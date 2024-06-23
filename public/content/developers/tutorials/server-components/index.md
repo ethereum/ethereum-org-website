@@ -1,6 +1,7 @@
 ---
 title: "Server components and agents for web3 apps"
-description: After this tutorial, you will be able to write TypeScript servers that listen to events on a blockchain and respond accordingly with their own transactions. This will enable you to write applications that are centralized (because the server is a point of failure), but can interact with web3 entities. The same techniques can also be used to write an agent that responds to on-chain events without a human in the loop.
+description: After this tutorial, you will be able to write TypeScript servers that listen to events on a blockchain and respond accordingly with their own transactions. This will enable you to write centralized applications (because the server is a point of failure), but can interact with web3 entities. The same techniques can also be used to write an agent that responds to on-chain events without a human in the loop.
+
 author: Ori Pomerantz
 lang: en
 tags: ["agent", "server", "offchain", "centralized"]
