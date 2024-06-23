@@ -75,7 +75,7 @@ La cadena lateral donde ocurren los ZK-Rollups se puede optimizar para reducir a
 
 - [Loopring](https://loopring.org/#/)
 - [Starkware](https://starkware.co/)
-- [Matter Labs zkSync](https://matter-labs.io/)
+- [Matter Labs ZKsync](https://matter-labs.io/)
 - [Aztec 2.0](https://aztec.network/)
 
 ### Optimistic Rollups {#optimistic-rollups}

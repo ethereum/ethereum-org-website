@@ -60,7 +60,7 @@ export const StyleVariants: Story = {
   },
   argTypes: {
     status: {
-      options: STATUSES,
+      options: [...STATUSES],
       control: {
         type: "radio",
       },
