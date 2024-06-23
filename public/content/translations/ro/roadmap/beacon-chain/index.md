@@ -3,7 +3,7 @@ title: Lanțul Beacon
 description: Aflați despre Lanțul Beacon - actualizarea care a introdus în Ethereum dovada-mizei.
 lang: ro
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
 alt: 
 summaryPoint1: Lanțul Beacon a introdus dovada mizei în ecosistemul Ethereum.
 summaryPoint2: Acesta a fost fuzionat cu lanțul dovadă a muncii Ethereum original în septembrie 2022.

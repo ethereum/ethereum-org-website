@@ -5,7 +5,7 @@ lang: kn
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: ಪ್ರಸ್ತಾವನೆಯ ಮೇಲೆ DAO ಗಳ ಮತದಾನದ ಪ್ರಾತಿನಿಧ್ಯ.
 summaryPoint1: ಕೇಂದ್ರೀಕೃತ ನಾಯಕತ್ವವಿಲ್ಲದ ಸದಸ್ಯ-ಮಾಲೀಕತ್ವದ ಸಮುದಾಯಗಳು.
 summaryPoint2: ಇಂಟರ್ನೆಟ್ ಅಪರಿಚಿತರೊಂದಿಗೆ ಸಹಕರಿಸಲು ಸುರಕ್ಷಿತ ಮಾರ್ಗ.

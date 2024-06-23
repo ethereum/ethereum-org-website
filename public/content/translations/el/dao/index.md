@@ -5,7 +5,7 @@ lang: el
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Αναπαράσταση ενός DAO που ψηφίζει για μια πρόταση.
 summaryPoint1: Κοινότητες αποτελούμενες από μέλη χωρίς κεντρική εξουσία.
 summaryPoint2: Ένας ασφαλής τρόπος συνεργασίας μεταξύ αγνώστων στο διαδίκτυο.

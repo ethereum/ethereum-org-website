@@ -3,7 +3,15 @@ import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box, calc, Center, Flex, Text, useDisclosure } from "@chakra-ui/react"
+import {
+  Box,
+  calc,
+  Center,
+  Flex,
+  Show,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang, Wallet } from "@/lib/types"
 
@@ -37,7 +45,8 @@ import {
 } from "@/lib/constants"
 
 import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
-import HeroImage from "@/public/wallets/wallet-hero.png"
+import { useWalletTable } from "@/hooks/useWalletTable"
+import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
 const Subtitle = ({ children }: ChildOnlyProp) => (
   <Text
@@ -106,6 +115,13 @@ const FindWalletPage = ({
 
   const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
 
+  const {
+    featureDropdownItems,
+    filteredWallets,
+    updateMoreInfo,
+    walletCardData,
+  } = useWalletTable({ filters, t, walletData: wallets })
+
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
     updatedFilters[key] = !updatedFilters[key]
@@ -131,7 +147,7 @@ const FindWalletPage = ({
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
-        image="/wallets/wallet-hero.png"
+        image="/images/wallets/wallet-hero.png"
       />
 
       <BannerNotification shouldShow={true}>
@@ -206,7 +222,7 @@ const FindWalletPage = ({
         {/* Mobile filters menu */}
         <Box hideFrom="lg">
           <MobileFiltersMenu
-            walletData={wallets}
+            totalWallets={filteredWallets.length}
             filters={filters}
             resetWalletFilter={resetWalletFilter}
             updateFilterOption={updateFilterOption}
@@ -224,20 +240,22 @@ const FindWalletPage = ({
         <Box px={{ md: 4, "2xl": 0 }}>
           <Flex pt={4} pb={6} gap={6}>
             {/* Filters sidebar */}
-            <WalletFilterSidebar
-              hideBelow="lg"
-              top={calc(NAV_BAR_PX_HEIGHT).subtract("2px").toString()}
-              {...{
-                filters,
-                resetWalletFilter,
-                updateFilterOption,
-                updateFilterOptions,
-                resetFilters,
-                selectedPersona,
-                setFilters,
-                setSelectedPersona,
-              }}
-            />
+            {/* Use `Show` instead of `hideBelow` prop to avoid rendering the sidebar on mobile */}
+            <Show above="lg">
+              <WalletFilterSidebar
+                top={calc(NAV_BAR_PX_HEIGHT).subtract("2px").toString()}
+                {...{
+                  filters,
+                  resetWalletFilter,
+                  updateFilterOption,
+                  updateFilterOptions,
+                  resetFilters,
+                  selectedPersona,
+                  setFilters,
+                  setSelectedPersona,
+                }}
+              />
+            </Show>
 
             {/* Wallets table */}
             <Box mt={0.5} w="full">
@@ -245,7 +263,10 @@ const FindWalletPage = ({
                 filters={filters}
                 resetFilters={resetFilters}
                 resetWalletFilter={resetWalletFilter}
-                walletData={wallets}
+                filteredWallets={filteredWallets}
+                totalWallets={walletCardData.length}
+                updateMoreInfo={updateMoreInfo}
+                featureDropdownItems={featureDropdownItems}
                 onOpen={onOpen}
               />
             </Box>

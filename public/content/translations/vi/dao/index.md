@@ -5,7 +5,7 @@ lang: vi
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Đại diện cho biểu quyết của tổ chức tự trị phi tập trung (DAO) đối với một đề xuất.
 summaryPoint1: Các cộng đồng được sở hữu bởi thành viên mà không cần sự lãnh đạo tập trung.
 summaryPoint2: Một cách an toàn để hợp tác với những người lạ trên Internet.

@@ -33,10 +33,10 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import SpeedRunEthereumImage from "@/public/dev-tools/speed-run-ethereum-banner.png"
-import DevelopersImage from "@/public/developers-eth-blocks.png"
-import DogeImage from "@/public/doge-computer.png"
-import HeroImage from "@/public/heroes/developers-hub-hero.jpg"
+import SpeedRunEthereumImage from "@/public/images/dev-tools/speed-run-ethereum-banner.png"
+import DevelopersImage from "@/public/images/developers-eth-blocks.png"
+import DogeImage from "@/public/images/doge-computer.png"
+import HeroImage from "@/public/images/heroes/developers-hub-hero.jpg"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex

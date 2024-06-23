@@ -5,7 +5,7 @@ lang: az
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: Ənənəvi kimlik sistemləri məlumatlarınızın verilməsi, saxlanması və onlara nəzarəti mərkəzləşdirib.
 summaryPoint2: Mərkəzləşdirilməmiş kimlik mərkəzləşdirilmiş üçüncü tərəflərdən asılılığı aradan qaldırır.
 summaryPoint3: Kriptovalyuta sayəsində istifadəçilər artıq öz məlumatlarını və sertifikatlarını vermək, saxlamaq və nəzarət etmək üçün alətlərə sahibdirlər.

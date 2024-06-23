@@ -48,9 +48,9 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
 
-import consensys from "@/public/projects/consensys.png"
-import etherscan from "@/public/projects/etherscan-logo-circle.png"
-import ef from "@/public/staking/ef-blog-logo.png"
+import consensys from "@/public/images/projects/consensys.png"
+import etherscan from "@/public/images/projects/etherscan-logo-circle.png"
+import ef from "@/public/images/staking/ef-blog-logo.png"
 
 const FlexBox = (props: ChildOnlyProp) => (
   <Flex

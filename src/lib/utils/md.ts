@@ -79,6 +79,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/data-and-analytics",
     "/developers/docs/data-and-analytics/block-explorers",
     "/developers/docs/data-availability",
+    "/developers/docs/data-availability/blockchain-data-storage-strategies",
     "/developers/docs/data-structures-and-encoding",
     "/developers/docs/data-structures-and-encoding/patricia-merkle-trie",
     "/developers/docs/data-structures-and-encoding/rlp",

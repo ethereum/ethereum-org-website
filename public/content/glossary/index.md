@@ -420,6 +420,8 @@ lang: en
 
 <GlossaryDefinition term="supermajority" />
 
+<GlossaryDefinition term="sybil-attack" />
+
 <GlossaryDefinition term="syncing" />
 
 <GlossaryDefinition term="sync-committee" />

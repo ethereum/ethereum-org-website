@@ -240,7 +240,7 @@ Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz birden çok ZK toplamal
 
 - **[Taiko](https://taiko.xyz)** - _Taiko; merkeziyetsiz, Ethereum eşdeğeri bir ZK-toplamasıdır (bir [Tip 1 ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
 
-- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0, Matter Labs tarafından geliştirilen ve kendi zkEVM'si desteklenen EVM uyumlu bir ZK Toplamasıdır._
+- **[ZKsync](https://docs.zksync.io/)** - _ZKsync 2.0, Matter Labs tarafından geliştirilen ve kendi zkEVM'si desteklenen EVM uyumlu bir ZK Toplamasıdır._
 
 ## ZK-toplamaları üzerine daha fazla kaynak {#further-reading-on-zk-rollups}
 

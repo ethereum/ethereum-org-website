@@ -5,7 +5,7 @@ lang: en
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: A global, open alternative to the current scientific system.
 summaryPoint2: Technology that enables scientists to raise funding, run experiments, share data, distribute insights, and more.
@@ -105,10 +105,10 @@ Explore projects and join the DeSci community.
 - [Bio.xyz: get funded for your biotech DAO or desci project](https://www.bio.xyz/)
 - [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
-- [CureDAO: Community-Owned Precision Health Platform](https://docs.curedao.org/)
 - [IdeaMarkets: enabling decentralized scientific credibility](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
 - [ValleyDAO: an open, global community offering funding and translational support for synthetic biology research](https://www.valleydao.bio)
+- [Cerebrum DAO: sourcing and nurturing solutions to advance brain health and prevent neurodegeneration](https://www.cerebrumdao.com/)
 - [CryoDAO: funding moonshot research in the field of cryopreservation](https://www.cryodao.org)
 
 We welcome suggestions for new projects to list - please look at our [listing policy](/contributing/adding-desci-projects/) to get started!

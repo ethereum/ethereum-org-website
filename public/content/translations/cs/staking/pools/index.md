@@ -4,7 +4,7 @@ description: Přehled, jak začít se zapojením do sdruženého vkládání ETH
 lang: cs
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: Nosorožec Leslie plave v bazénu.
 sidebarDepth: 2
 summaryPoints:

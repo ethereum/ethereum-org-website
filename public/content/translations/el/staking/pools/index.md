@@ -4,7 +4,7 @@ description: Μια επισκόπηση πώς να ξεκινήσετε με �
 lang: el
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: Η Leslie ο ρινόκερος κολυμπά στην πισίνα.
 sidebarDepth: 2
 summaryPoints:

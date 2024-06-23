@@ -5,7 +5,7 @@ lang: hi
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: पुनर्योजी सिद्धांतों पर निर्मित एक वैकल्पिक आर्थिक प्रणाली
 summaryPoint2: इथेरियम का उपयोग करके जलवायु परिवर्तन जैसे वैश्विक स्तर के समन्वय संकटों को हल करने का प्रयास
