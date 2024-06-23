@@ -18,7 +18,7 @@ import {
   useEventListener,
 } from "@chakra-ui/react"
 
-import { Lang,LocaleDisplayInfo } from "@/lib/types"
+import { Lang, LocaleDisplayInfo } from "@/lib/types"
 
 import { BaseLink } from "@/components/Link"
 
@@ -138,6 +138,7 @@ const LanguagePicker = ({
                 mb="2"
                 bg="background.base"
                 color="body.base"
+                sx={isRtl ? { pl: 10, pr: 2 } : {}}
                 onKeyDown={(e) => {
                   // Navigate to first result on enter
                   if (e.key === "Enter") {
@@ -161,7 +162,7 @@ const LanguagePicker = ({
                   <Kbd
                     fontSize="sm"
                     lineHeight="none"
-                    ms="-2"
+                    ms="4"
                     p="1"
                     py="0.5"
                     me="auto"
@@ -170,7 +171,7 @@ const LanguagePicker = ({
                     color="disabled"
                     rounded="base"
                   >
-                    \
+                    /
                   </Kbd>
                 </InputLeftElement>
               ) : (
