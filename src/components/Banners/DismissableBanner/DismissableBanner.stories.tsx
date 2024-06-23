@@ -1,16 +1,23 @@
 import React from "react"
 import { FaInfoCircle } from "react-icons/fa"
-import { Button, Center, Icon, Text } from "@chakra-ui/react"
+import { Center, Container, Icon, Text } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import DismissableBanner from "."
 
 const meta = {
-  title: "DismissableBanner",
+  title: "Molecules / Navigation",
   component: DismissableBanner,
   parameters: {
-    chromatic: { disableSnapshot: false },
+    layout: "fullscreen",
   },
+  decorators: [
+    (Story) => (
+      <Container mx="auto" maxW="1504px">
+        <Story />
+      </Container>
+    ),
+  ],
 } satisfies Meta<typeof DismissableBanner>
 
 export default meta
@@ -19,25 +26,21 @@ type Story = StoryObj<typeof meta>
 export const Basic: Story = {
   args: {
     storageKey: "dismissable-banner-1",
-    children: <Center>This is a dismissable banner notification.</Center>,
+    children: <Text>This is a dismissable banner notification.</Text>,
   },
-  render: (args) => <DismissableBanner {...args} />,
 }
 
 export const WithLongText: Story = {
   args: {
     storageKey: "dismissable-banner-2",
     children: (
-      <Center>
-        <Text>
-          This is a dismissable banner with a very long text content to see how
-          it handles overflow and wrapping. It should be able to manage the text
-          properly without breaking the layout.
-        </Text>
-      </Center>
+      <Text>
+        This is a dismissable banner with a very long text content to see how it
+        handles overflow and wrapping. It should be able to manage the text
+        properly without breaking the layout.
+      </Text>
     ),
   },
-  render: (args) => <DismissableBanner {...args} />,
 }
 
 export const WithIcon: Story = {
@@ -50,5 +53,4 @@ export const WithIcon: Story = {
       </Center>
     ),
   },
-  render: (args) => <DismissableBanner {...args} />,
 }
