@@ -196,7 +196,7 @@ eventName="read more">
 
 Inirerekomenda sa mga operator ng validator na bisitahin ang page na <a href="https://launchpad.ethereum.org/withdrawals/">Mga Pag-withdraw sa Staking sa Launchpad</a> kung saan ka makakakita ng iba pang detalye tungkol sa kung paano ihanda ang iyong validator para sa mga withdrawal. pagiging handa, timing ng mga event, at iba pang detalye tungkol sa kung paano gumagana ang mga withdrawal.
 
-Upang subukan muna ang iyong setup sa isang testnet, bisitahin ang <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a> para magsimula.
+Upang subukan muna ang iyong setup sa isang testnet, bisitahin ang <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> para magsimula.
 
 </ExpandableCard>
 

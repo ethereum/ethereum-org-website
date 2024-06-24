@@ -196,7 +196,7 @@ eventName="read more">
 
 Operatorom walidatorów zaleca się odwiedzenie strony <a href="https://launchpad.ethereum.org/withdrawals/">wypłaty Staking Launchpad</a>, gdzie można znaleźć więcej szczegółów na temat przygotowania walidatora do wypłat, czasu wydarzeń i więcej szczegółów na temat działania wypłat.
 
-Aby najpierw wypróbować swoją konfigurację w sieci testowej, odwiedź <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a>, aby rozpocząć.
+Aby najpierw wypróbować swoją konfigurację w sieci testowej, odwiedź <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a>, aby rozpocząć.
 
 </ExpandableCard>
 

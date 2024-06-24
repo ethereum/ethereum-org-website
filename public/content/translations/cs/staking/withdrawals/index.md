@@ -196,7 +196,7 @@ eventName="read more">
 
 Provozovatelům validátorů doporučujeme navštívit stránku <a href="https://launchpad.ethereum.org/withdrawals/">Výběry z vkladového spouštěcího panelu</a>, kde najdete další podrobnosti o přípravě validátoru na výběry, načasování událostí a další podrobnosti o fungování výběrů.
 
-Chcete-li své nastavení nejprve vyzkoušet na testovací síti, navštivte <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a> a začněte.
+Chcete-li své nastavení nejprve vyzkoušet na testovací síti, navštivte <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> a začněte.
 
 </ExpandableCard>
 
