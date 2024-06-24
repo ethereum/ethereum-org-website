@@ -12177,6 +12177,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "wrexgem",
+      "name": "wrexgem",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134736543?v=4",
+      "profile": "https://github.com/wrexgem",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
