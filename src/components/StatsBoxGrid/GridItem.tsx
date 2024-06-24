@@ -7,11 +7,12 @@ import {
   PointElement,
   ScriptableContext,
 } from "chart.js"
+import ChartDataLabels from "chartjs-plugin-datalabels"
 import { Line } from "react-chartjs-2"
 import { MdInfoOutline } from "react-icons/md"
 import { Box, Flex, Icon, Text } from "@chakra-ui/react"
 
-import type { StatsBoxMetric } from "@/lib/types"
+import type { StatsBoxMetric, TimestampedData } from "@/lib/types"
 
 import { RANGES } from "@/lib/constants"
 
@@ -33,7 +34,16 @@ type GridItemProps = {
 }
 
 // ChartJS config
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Filler)
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  // to avoid a production error, we must include this plugin even if we do
+  // not use it (we are using it on the energy consumption chart)
+  ChartDataLabels
+)
 
 export const GridItem = ({ metric }: GridItemProps) => {
   const { title, description, state, buttonContainer, range } = metric
@@ -69,8 +79,7 @@ export const GridItem = ({ metric }: GridItemProps) => {
   )
 
   // Returns either 90 or 30-day data range depending on `range` selection
-  const filteredData = (data: Array<{ timestamp: number }>) => {
-    if (!data) return
+  const filteredData = (data: TimestampedData<number>[]) => {
     if (range === RANGES[1]) return [...data]
 
     return data.filter(({ timestamp }) => {
@@ -118,6 +127,12 @@ export const GridItem = ({ metric }: GridItemProps) => {
       title: {
         display: false, // hide titles
       },
+      // force disabling chart labels because when the user do an internal
+      // navigation, labels are displayed incorrectly (probably a bug in
+      // chart.js or the react wrapper)
+      datalabels: {
+        display: false,
+      },
     },
     // chart labels config
     scales: {
@@ -138,16 +153,13 @@ export const GridItem = ({ metric }: GridItemProps) => {
     },
   }
 
-  const filteredRange = hasData ? filteredData(state.data) : [] // timestamp values
-  const dataValues = hasData ? state.data.map((item) => item.value) : [] // data values
+  const filteredRange = filteredData(hasData ? state.data : [])
 
   const chartData = {
     labels: filteredRange,
     datasets: [
       {
-        data: hasData
-          ? dataValues.slice(dataValues.length - filteredRange!.length)
-          : [],
+        data: filteredRange.map((item) => item.value),
       },
     ],
   }
@@ -184,7 +196,7 @@ export const GridItem = ({ metric }: GridItemProps) => {
       </Box>
       {hasData && (
         <Box position="absolute" insetInline="0" bottom={7} height="60%">
-          <Line options={chartOptions} data={chartData} updateMode="none" />
+          <Line options={chartOptions} data={chartData} />
         </Box>
       )}
       <Flex
