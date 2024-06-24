@@ -18,6 +18,7 @@ export const ns = [
   "page-index",
   "page-learn",
   "page-upgrades",
+  "page-developers-docs",
   "page-developers-index",
 ] as const
 const supportedLngs = Object.keys(baseLocales)
