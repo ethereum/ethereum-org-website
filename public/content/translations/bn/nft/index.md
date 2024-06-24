@@ -5,7 +5,7 @@ lang: bn
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: হলোগ্রামের মাধ্যমে একটি Eth লোগো ডিসপ্লে করা হচ্ছে।.
 summaryPoint1: একটি ইথেরিয়াম-ভিত্তিক সম্পদ হিসেবে অনন্য কিছু উপস্থাপন করার একটি উপায়।
 summaryPoint2: NFT কন্টেন্ট নির্মাতাদের আগের চেয়ে আরও ক্ষমতা দিচ্ছে।

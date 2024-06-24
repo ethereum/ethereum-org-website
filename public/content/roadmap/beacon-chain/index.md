@@ -3,7 +3,7 @@ title: The Beacon Chain
 description: Learn about the Beacon Chain - the upgrade that introduced proof-of-stake Ethereum.
 lang: en
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
 alt: 
 summaryPoint1: The Beacon Chain introduced proof-of-stake to the Ethereum ecosystem.
 summaryPoint2: It was merged with the original Ethereum proof-of-work chain in September 2022.

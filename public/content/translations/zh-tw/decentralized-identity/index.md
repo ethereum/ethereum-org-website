@@ -5,7 +5,7 @@ lang: zh-tw
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: 傳統身分系統對你的身分識別進行中心化發行、維護和控制。
 summaryPoint2: 去中心化身分消除了對中心化第三方的依賴。
 summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、持有和控制自身身分識別和證明的工具。

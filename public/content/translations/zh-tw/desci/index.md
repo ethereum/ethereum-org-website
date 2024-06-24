@@ -5,7 +5,7 @@ lang: zh-tw
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: 當前科學系統的全球開放性替代方案。
 summaryPoint2: 使科學家得以進行募資、試驗研究、資料分享、發表見解等活動的技術。

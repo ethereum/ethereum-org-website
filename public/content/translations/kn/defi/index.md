@@ -4,7 +4,7 @@ description: ಇಥಿರಿಯಮ್‍ನಲ್ಲಿ DeFi ಯ ಅವಲೋಕ
 lang: kn
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: ಲೆಗೊ ಇಟ್ಟಿಗೆಗಳಿಂದ ಮಾಡಿದ Eth ಲೋಗೋ.
 sidebarDepth: 2
 summaryPoint1: ಪ್ರಸ್ತುತ ಹಣಕಾಸು ವ್ಯವಸ್ಥೆಗೆ ಜಾಗತಿಕ, ಮುಕ್ತ ಪರ್ಯಾಯ.

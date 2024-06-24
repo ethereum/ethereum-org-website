@@ -5,7 +5,7 @@ lang: fa
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: لوگوی اتر که با هولوگرام نمایش داده شده‌ است.
 summaryPoint1: راهی برای نمایش دادن هر چیز بی‌همتا به‌عنوان یک دارایی مبتنی بر اتریوم.
 summaryPoint2: NFTها بیش از هر زمان دیگر به تولیدکنندگان محتوا قدرت می‌دهند.

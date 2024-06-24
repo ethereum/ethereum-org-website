@@ -4,7 +4,7 @@ description: ETHステーキングプールの始め方の概要
 lang: ja
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: 雲に浮かぶサイのレスリー
 sidebarDepth: 2
 summaryPoints:

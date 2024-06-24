@@ -4,7 +4,7 @@ description: Prezentare generală a DeFi de pe Ethereum
 lang: ro
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: Sigla Eth alcătuită din piese lego.
 sidebarDepth: 2
 summaryPoint1: O alternativă la actualul sistem financiar, mondială și deschisă.

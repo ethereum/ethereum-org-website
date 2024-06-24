@@ -3,7 +3,7 @@ title: عمليات سحب تجميد العملات
 description: ملخص الصفحة عن ماهية دفع عمليات سحب المراهنة، آلية عملها، والإجراءات التي يحتاج المراهنون إلى اتخاذها للحصول على مكافأتهم
 lang: ar
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: ليزلي فرس النهر مع مكافأتها من المراهنة
 sidebarDepth: 2
 summaryPoints:
@@ -195,7 +195,7 @@ eventName="read more">
 
 يُنصح مشغلو برامج المدقق بزيارة صفحة <a href="https://launchpad.ethereum.org/withdrawals/">منصة تشغيل عمليات سحب المراهنة</a> حيث ستعثر على مزيد من التفاصيل حول إعداد المدقق لعمليات السحب. الاستعدادات، توقيت الأحداث، والمزيد من التفاصيل حول آلية عمل وظيفة عمليات السحب.
 
-لتجربة إعدادك على شبكة تجريب أولًا، تفضّل بزيارة <a href="https://goerli.launchpad.ethereum.org">منصة تشغيل المراهنة على شبكة جورلي التجريبية</a> للبدء.
+لتجربة إعدادك على شبكة تجريب أولًا، تفضّل بزيارة <a href="https://holesky.launchpad.ethereum.org">منصة تشغيل المراهنة على شبكة جورلي التجريبية</a> للبدء.
 
 </ExpandableCard>
 

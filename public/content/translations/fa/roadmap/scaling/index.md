@@ -2,7 +2,7 @@
 title: مقیاس‌پذیری اتریوم
 description: رول‌آپ‌ها تراکنش‌ها را خارج از زنجیره گردآوری می‌کنند و هزینه را برای کاربر کاهش می‌دهند. با این حال، روش فعلی رول‌آپ‌‌ها در استفاده از اطلاعات بسیار گران است و میزان ارزان شدن تراکنش‌ها را محدود می‌کند. Proto-Danksharding مشکل را برطرف خواهد کرد.
 lang: fa
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "نقشه‌ راه اتریوم"
 template: roadmap
 ---

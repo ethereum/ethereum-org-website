@@ -2,7 +2,7 @@
 title: 改善使用者體驗
 description: 對大部分人而言，使用以太坊仍然是非常複雜的一件事。 為了推動普及化，以太坊必須大幅降低使用門檻 — 使用者必須獲得去中心化、無需許可、抗審查存取以太坊的優勢，同時體驗必須與使用傳統 web2 應用程式一樣順暢。
 lang: zh-tw
-image: /roadmap/roadmap-ux.png
+image: /images/roadmap/roadmap-ux.png
 alt: "以太坊開發藍圖"
 template: roadmap
 ---

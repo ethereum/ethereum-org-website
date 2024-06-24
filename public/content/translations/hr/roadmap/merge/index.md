@@ -3,7 +3,7 @@ title: Spajanje
 description: Saznajte više o spajanju – kada je glavna mreža Ethereuma usvojila dokaz uloga.
 lang: hr
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Glavna mreža Ethereuma upotrebljava dokaz uloga, međutim, to nije uvijek bilo tako.
 summaryPoint2: Nadogradnja izvornog mehanizma dokaza rada na dokaz uloga nazvana je The Merge (Spajanje).

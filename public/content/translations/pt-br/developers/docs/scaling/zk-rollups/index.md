@@ -240,7 +240,7 @@ Os projetos que trabalham em zkEVMs incluem:
 
 - **[Taiko](https://taiko.xyz)** - _Taiko é um ZK-rollup descentralizado, equivalente ao Ethereum (um [ZK-EVM do Tipo 1](https://vitalik.ca/general/2022/08/04/zkevm.html))._
 
-- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync Era is an EVM-compatible ZK Rollup built by Matter Labs, powered by its own zkEVM._
+- **[ZKsync](https://docs.zksync.io/)** - _ZKsync Era is an EVM-compatible ZK Rollup built by Matter Labs, powered by its own zkEVM._
 
 - **[Starknet](https://starkware.co/starknet/)** - _StarkNet is an EVM-compatible layer 2 scaling solution built by StarkWare._
 

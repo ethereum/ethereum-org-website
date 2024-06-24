@@ -4,7 +4,7 @@ description: Nlebaanya na NFT n'Ethereum
 lang: ig
 template: use-cases
 emoji: ":frame_with_picture:"
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: A na-egosipụta akara Eth site na hologram.
 summaryPoint1: Ụzọ e ji egosipụta ihe ọbụla pụrụ iche dị ka akụ Ethereum.
 summaryPoint2: NFT na-enye ndị na-ekepụta ihe ikike karịa ka ọ dị na mbụ.

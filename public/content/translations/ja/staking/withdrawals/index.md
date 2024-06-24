@@ -3,7 +3,7 @@ title: ステーキングの引き出し
 description: ステーキングの引き出しとその仕組み、そしてステーカーが報酬を獲得するためにすべきことをまとめたページ
 lang: ja
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: サイのレズリーとそのステーキング報酬
 sidebarDepth: 2
 summaryPoints:
@@ -196,7 +196,7 @@ eventName="read more">
 
 バリデータのオペレータは、「<a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a>」のページにアクセスすることをお勧めします。このページでは、引き出しのためにバリデータが準備することについて詳細、イベントのタイミング、引き出しの機能に関する詳細が記載されています。
 
-最初にテストネットでのセットアップを試すには、<a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a>を見て始めましょう。
+最初にテストネットでのセットアップを試すには、<a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a>を見て始めましょう。
 
 </ExpandableCard>
 

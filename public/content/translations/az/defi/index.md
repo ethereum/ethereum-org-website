@@ -4,7 +4,7 @@ description: Ethereum-da DeFi-a ümumi baxış
 lang: az
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: Leqo kərpiclərindən hazırlanan Eth loqosu.
 sidebarDepth: 2
 summaryPoint1: Mövcud maliyyə sisteminə qlobal və açıq alternativ.

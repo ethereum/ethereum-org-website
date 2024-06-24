@@ -3,37 +3,37 @@
 name-template: v$NEXT_PATCH_VERSION
 tag-template: v$NEXT_PATCH_VERSION
 categories:
-  - title: ":rocket: Enhancement"
-    label: "feature :sparkles:"
+  - title: "🚀 Enhancement"
+    label: "feature ✨"
 
-  - title: ":globe_with_meridians: Translations"
-    label: "translation :earth_africa:"
+  - title: "🌐 Translations"
+    label: "translation 🌍"
 
-  - title: ":bug: Bug Fix"
-    label: "bug :bug:"
+  - title: "🐛 Bug Fix"
+    label: "bug 🐛"
 
-  - title: ":memo: Documentation"
-    label: "documentation :book:"
+  - title: "📝 Documentation"
+    label: "documentation 📖"
 
-  - title: ":nail_care: Refactor"
-    label: "refactor :recycle:"
+  - title: "💅 Refactor"
+    label: "refactor ♻️"
 
-  - title: ":house: Internal"
-    label: "internal :house:"
+  - title: "🏠 Internal"
+    label: "internal 🏠"
 
-  - title: ":wrench: Tooling"
-    label: "tooling :wrench:"
+  - title: "🔧 Tooling"
+    label: "tooling 🔧"
 
-  - title: ":package: Dependencies"
-    label: "dependencies :package:"
+  - title: "📦 Dependencies"
+    label: "dependencies 📦"
 
 change-template: "- $TITLE (#$NUMBER) @$AUTHOR"
 no-changes-template: "- No changes"
 template: |
   ***
-  ### :zap: Changes
+  ### ⚡️ Changes
   $CHANGES
   ***
-  ### :unicorn: Contributors
-  Thank you $CONTRIBUTORS for the contributions! :trophy:
+  ### 🦄 Contributors
+  Thank you $CONTRIBUTORS for the contributions! 🏆
   ***

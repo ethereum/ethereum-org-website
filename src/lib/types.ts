@@ -44,11 +44,11 @@ export type Root = {
   children: ReactNode
   contentIsOutdated: boolean
   contentNotTranslated: boolean
-  lastDeployDate: string
+  lastDeployLocaleTimestamp: string
 }
 
 export type BasePageProps = SSRConfig &
-  Pick<Root, "contentNotTranslated" | "lastDeployDate">
+  Pick<Root, "contentNotTranslated" | "lastDeployLocaleTimestamp">
 
 export type Frontmatter = RoadmapFrontmatter &
   UpgradeFrontmatter &

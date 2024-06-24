@@ -5,7 +5,7 @@ lang: ru
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: Платформы на основе блокчейна для социального взаимодействия, создания и распространения контента.
 summaryPoint2: Децентрализованные социальные сети защищают конфиденциальность пользователей и повышают безопасность данных.
 summaryPoint3: Токены и NFT создают новые способы монетизации контента.

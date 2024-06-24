@@ -3,7 +3,7 @@ title: İşaret Zinciri
 description: Hisse ispatını Ethereum'a tanıtan yükseltme olan İşaret Zinciri hakkında bilgi edinin.
 lang: tr
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
 alt: 
 summaryPoint1: İşaret Zincirinin Ethereum ekosistemine hisse ispatı olarak eklenmesi.
 summaryPoint2: Original Ethereum Hisse İspatı zinciri ile eylül 2022de birleştirilmiştir.
