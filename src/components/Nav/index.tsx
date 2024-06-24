@@ -108,15 +108,17 @@ const Nav = () => {
               {isDesktop && (
                 <HStack hideBelow="md" gap="0">
                   <IconButton
-                    transition="transform 0.5s, color 0.2s"
                     icon={ThemeIcon}
                     aria-label={themeIconAriaLabel}
                     variant="ghost"
                     isSecondary
                     px={{ base: "2", xl: "3" }}
                     _hover={{
-                      transform: "rotate(10deg)",
-                      color: "primary.hover",
+                      '& > svg': {
+                        transform: "rotate(10deg)",
+                        color: "primary.hover",
+                        transition: "transform 0.5s, color 0.2s"
+                      }
                     }}
                     onClick={toggleColorMode}
                   />
