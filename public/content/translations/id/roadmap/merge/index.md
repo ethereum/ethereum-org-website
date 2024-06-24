@@ -3,7 +3,7 @@ title: Penggabungan
 description: Pelajari tentang Penggabungan - ketika Jaringan Utama Ethereum mengadopsi bukti taruhan.
 lang: id
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt:
 summaryPoint1: Jaringan Utama Ethereum menggunakan bukti taruhan, tetapi tidak selalu demikian.
 summaryPoint2: Peningkatan dari mekanisme bukti kerja yang asli menjadi bukti taruhan disebut Penggabungan.
@@ -11,7 +11,7 @@ summaryPoint3: Penggabungan mengacu pada penggabungan Jaringan Utama Ethereum as
 summaryPoint4: Penggabungan ini mengurangi konsumsi energi Ethereum sebesar ~99,95%.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Penggabungan telah dilaksanakan pada tanggal 15 September 2022. Hal ini menyelesaikan transisi Ethereum ke konsensus bukti taruhan, yang secara resmi tidak lagi menggunakan bukti kerja dan mengurangi konsumsi energi sebesar ~99,95%.
 </UpgradeStatus>
 

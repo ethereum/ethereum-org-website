@@ -101,6 +101,12 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
+**Crossmint -** **_Enterprise-grade web3 development platform, that allows you to build NFT applications on all major chains EVM Chains(and others)._**
+
+- [Website](https://www.crossmint.com)
+- [Documentation](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+
 **Brownie -** **_Python-based development environment and testing framework._**
 
 - [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
@@ -125,6 +131,20 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Website](https://catapulta.sh/)
 - [Documentation](https://catapulta.sh/docs)
 - [Github](https://github.com/catapulta-sh)
+
+**Covalent -** **_Enriched blockchain APIs for 200+ Chains._**
+
+- [covalenthq.com](https://www.covalenthq.com/)
+- [Documentation](https://www.covalenthq.com/docs/api/)
+- [GitHub](https://github.com/covalenthq)
+- [Discord](https://www.covalenthq.com/discord/)
+
+**Wake -** **_All-in-one Python framework for contracts testing, fuzzing, deployment, vulnerability scanning and code navigation._**
+
+- [Homepage](https://getwake.io/)
+- [Documentation](https://ackeeblockchain.com/wake/docs/latest/)
+- [GitHub](https://github.com/Ackee-Blockchain/wake)
+- [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
 ## Further reading {#further-reading}
 

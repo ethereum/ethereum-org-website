@@ -3,7 +3,7 @@ title: 合并
 description: 了解合并 - 以太坊主网何时采用权益证明机制。
 lang: zh
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt:
 summaryPoint1: 以太坊主网采用权益证明机制，但情况并非一直如此。
 summaryPoint2: 从原有的工作量证明机制过渡到权益证明机制的升级称为合并。
@@ -11,7 +11,7 @@ summaryPoint3: 合并是指原有的以太坊主网与单独的权益证明区�
 summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   合并于 2022 年 9 月 15 日执行， 它完成了以太坊向权益证明共识的过渡，以太坊正式弃用了工作量证明并将能源消耗减少了约 99.95%。
 </UpgradeStatus>
 

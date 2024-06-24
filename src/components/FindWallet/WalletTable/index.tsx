@@ -1,5 +1,4 @@
 import { ReactNode, useContext } from "react"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import {
@@ -13,15 +12,11 @@ import {
   SimpleGrid,
   SimpleGridProps,
   Stack,
-  Table,
   TableProps,
-  Td,
   Text,
-  Th,
-  Tr,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp, WalletData, WalletFilter } from "@/lib/types"
+import type { ChildOnlyProp, WalletFilter } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import { WalletMoreInfo } from "@/components/FindWallet/WalletTable/WalletMoreInfo"
@@ -31,8 +26,7 @@ import Tag from "@/components/Tag"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import {
-  formatSupportedLanguages,
-  getSupportedLanguages,
+  formatStringList,
   getWalletPersonas,
   walletsListingCount,
 } from "@/lib/utils/wallets"
@@ -50,7 +44,7 @@ import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLangua
 import { useWalletTable } from "@/hooks/useWalletTable"
 
 const Container = (props: TableProps) => (
-  <Table
+  <Box
     w="full"
     sx={{
       th: {
@@ -75,7 +69,6 @@ const WalletContainer = (props: ChildOnlyProp & ContainerProps) => (
 
 const Grid = forwardRef<SimpleGridProps, "tr">((props, ref) => (
   <SimpleGrid
-    as={Tr}
     ref={ref}
     templateColumns={{
       base: "60% auto 0% 0% 5%",
@@ -123,7 +116,7 @@ const WalletContentHeader = (props: ChildOnlyProp) => (
   />
 )
 
-const Wallet = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
+const WalletRow = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
   <Grid
     tabIndex={0}
     ref={ref}
@@ -203,11 +196,16 @@ const FlexInfoCenter = (props: { children: ReactNode; className?: string }) => (
   />
 )
 
+type UseWalletTable = ReturnType<typeof useWalletTable>
+
 export type WalletTableProps = {
   filters: WalletFilter
   resetFilters: () => void
   resetWalletFilter: React.MutableRefObject<() => void>
-  walletData: WalletData[]
+  filteredWallets: UseWalletTable["filteredWallets"]
+  totalWallets: number
+  updateMoreInfo: (key: string) => void
+  featureDropdownItems: UseWalletTable["featureDropdownItems"]
   onOpen: () => void
 }
 
@@ -215,17 +213,13 @@ const WalletTable = ({
   filters,
   resetFilters,
   resetWalletFilter,
-  walletData,
+  filteredWallets,
+  totalWallets,
+  updateMoreInfo,
+  featureDropdownItems,
   onOpen,
 }: WalletTableProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
-  const { locale } = useRouter()
-  const {
-    featureDropdownItems,
-    filteredWallets,
-    updateMoreInfo,
-    walletCardData,
-  } = useWalletTable({ filters, t, walletData })
 
   // Context API
   const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
@@ -240,10 +234,21 @@ const WalletTable = ({
     })
   }
 
+  const showMoreInfo = (wallet) => {
+    updateMoreInfo(wallet.key)
+    // Log "more info" event only on expanding
+    wallet.moreInfo &&
+      trackCustomEvent({
+        eventCategory: "WalletMoreInfo",
+        eventAction: `More info wallet`,
+        eventName: `More info ${wallet.name}`,
+      })
+  }
+
   return (
     <Container>
       <WalletContentHeader>
-        <Th sx={{ textAlign: "start !important" }}>
+        <Box sx={{ textAlign: "start !important" }}>
           <Flex justifyContent="space-between" px={{ base: 2.5, md: 0 }}>
             {/* Displayed on mobile only */}
             <Text
@@ -262,22 +267,22 @@ const WalletTable = ({
               })`}
             </Text>
 
-            {filteredWallets.length === walletCardData.length ? (
+            {filteredWallets.length === totalWallets ? (
               <Text ps={{ base: 2, md: 0 }} as="span">
                 {t("page-find-wallet-showing-all-wallets")} (
-                <strong>{walletCardData.length}</strong>)
+                <strong>{totalWallets}</strong>)
               </Text>
             ) : (
               <Text ps={{ base: 2, md: 0 }} as="span">
                 {t("page-find-wallet-showing")}{" "}
                 <strong>
-                  {filteredWallets.length} / {walletCardData.length}
+                  {filteredWallets.length} / {totalWallets}
                 </strong>{" "}
                 {t("page-find-wallet-wallets")}
               </Text>
             )}
           </Flex>
-        </Th>
+        </Box>
       </WalletContentHeader>
       {filteredWallets.length === 0 && (
         <WalletEmptyState
@@ -304,60 +309,23 @@ const WalletTable = ({
           const hasDeviceLabels = deviceLabels.length > 0
           const hasAllLabels = hasPersonasLabels && hasDeviceLabels
 
-          // Supported languages
-          const supportedLanguages = getSupportedLanguages(
-            wallet.languages_supported,
-            locale!
-          )
-          const numberOfSupportedLanguages = supportedLanguages.length
-          const sliceSize = NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN
-          const rest = numberOfSupportedLanguages - sliceSize
-          const restText = `${rest > 0 ? "+" : ""} ${rest > 0 ? rest : ""}`
-
-          const formattedSupportedLanguages = formatSupportedLanguages(
-            supportedLanguages,
-            sliceSize
-          )
-
-          const showMoreInfo = (wallet) => {
-            updateMoreInfo(wallet.key)
-            // Log "more info" event only on expanding
-            wallet.moreInfo &&
-              trackCustomEvent({
-                eventCategory: "WalletMoreInfo",
-                eventAction: `More info wallet`,
-                eventName: `More info ${wallet.name}`,
-              })
-          }
-
-          const handleWalletWebsiteClick = (walletName: string) => {
-            trackCustomEvent({
-              eventCategory: "WalletExternalLinkList",
-              eventAction: "Tap main button",
-              eventName: `${walletName}`,
-            })
-          }
-
           return (
             <WalletContainer
               key={wallet.key}
               bg={wallet.moreInfo ? "background.highlight" : "transparent"}
             >
-              <Wallet
+              <WalletRow
                 // Make wallets more info section open on 'Enter'
                 onKeyUp={(e) => {
                   if (e.key === "Enter") showMoreInfo(wallet)
                 }}
                 onClick={(e) => {
                   // Prevent expanding the wallet more info section when clicking on the "Visit website" button
-                  if (
-                    (e.target as HTMLElement).matches("a, a svg")
-                  )
-                    return
+                  if ((e.target as HTMLElement).matches("a, a svg")) return
                   showMoreInfo(wallet)
                 }}
               >
-                <Td lineHeight="revert">
+                <Box lineHeight="revert">
                   <Flex
                     justifyContent="space-between"
                     alignItems="center"
@@ -393,7 +361,11 @@ const WalletTable = ({
                           {hasPersonasLabels && (
                             <Flex gap={1.5} wrap="wrap">
                               {walletPersonas.map((persona) => (
-                                <Tag key={persona} label={t(persona)} />
+                                <Tag
+                                  key={persona}
+                                  label={t(persona)}
+                                  variant="highContrast"
+                                />
                               ))}
                             </Flex>
                           )}
@@ -426,13 +398,13 @@ const WalletTable = ({
                                 fontWeight="normal !important"
                               >
                                 {/* Show up to 5 supported languages and use a tooltip for the rest */}
-                                {`${formattedSupportedLanguages}`}{" "}
-                                {rest > 0 && (
-                                  <SupportedLanguagesTooltip
-                                    supportedLanguages={supportedLanguages}
-                                    restText={restText}
-                                  />
-                                )}
+                                {`${formatStringList(
+                                  wallet.supportedLanguages,
+                                  NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN
+                                )}`}{" "}
+                                <SupportedLanguagesTooltip
+                                  supportedLanguages={wallet.supportedLanguages}
+                                />
                               </Text>
                             </Flex>
                           </Stack>
@@ -445,9 +417,11 @@ const WalletTable = ({
                               w="auto"
                               isExternal
                               size="sm"
-                              onClick={() =>
-                                handleWalletWebsiteClick(wallet.name)
-                              }
+                              customEventOptions={{
+                                eventCategory: "WalletExternalLinkList",
+                                eventAction: "Tap main button",
+                                eventName: `${wallet.name}`,
+                              }}
                             >
                               {t("page-find-wallet-visit-website")}
                             </ButtonLink>
@@ -474,13 +448,17 @@ const WalletTable = ({
                       w="100%"
                       isExternal
                       size="sm"
-                      onClick={() => handleWalletWebsiteClick(wallet.name)}
+                      customEventOptions={{
+                        eventCategory: "WalletExternalLinkList",
+                        eventAction: "Tap main button",
+                        eventName: `${wallet.name}`,
+                      }}
                     >
                       {t("page-find-wallet-visit-website")}
                     </ButtonLink>
                   </Box>
-                </Td>
-              </Wallet>
+                </Box>
+              </WalletRow>
 
               {wallet.moreInfo && (
                 <WalletMoreInfo

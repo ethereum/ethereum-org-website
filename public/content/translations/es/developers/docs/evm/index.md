@@ -63,7 +63,6 @@ Durante los nueve años de historia de Ethereum, la EVM ha pasado varias revisio
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_.
 - [evmone](https://github.com/ethereum/evmone) - _C++_.
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_.
-- [eEVM](https://github.com/microsoft/eevm) - _C++_.
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## Más información {#further-reading}
@@ -74,6 +73,7 @@ Durante los nueve años de historia de Ethereum, la EVM ha pasado varias revisio
 - [Códigos de operación de la máquina virtual de Ethereum](https://www.ethervm.io/)
 - [Referencia interactiva de códigos de operación de máquina virtual Ethereum](https://www.evm.codes/)
 - [Una breve introducción a la documentación de Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
+- [Dominar Ethereum - La máquina virtual de Ethereum](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc))
 
 ## Temas relacionados {#related-topics}
 

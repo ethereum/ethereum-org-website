@@ -3,7 +3,7 @@ title: Spajanje
 description: Saznajte više o spajanju – kada je glavna mreža Ethereuma usvojila dokaz uloga.
 lang: hr
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Glavna mreža Ethereuma upotrebljava dokaz uloga, međutim, to nije uvijek bilo tako.
 summaryPoint2: Nadogradnja izvornog mehanizma dokaza rada na dokaz uloga nazvana je The Merge (Spajanje).
@@ -11,7 +11,7 @@ summaryPoint3: Spajanjem je spojena izvorna glavna mreža Ethereumu sa zasebnim 
 summaryPoint4: Spajanjem je potrošnja energije Ethereuma smanjena za približno 99,95 %.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Spajanje je provedeno 15. rujna 2022. Dovršeni prijelaz Ethereuma na konsenzus dokaza uloga službeno je zamijenio dokaz rada i smanjio potrošnju energije za približno 99,95 %.
 </UpgradeStatus>
 

@@ -64,6 +64,7 @@ type BucketsList = { [key: string]: Array<number> }
 const USER_OVERRIDE: BucketsList = {
   // FORMAT: lang_code: [bucket_number, bucket_number, ...],
   // EXAMPLE: es: [1, 10, 12, 14],
+  hu: [3, 6, 7, 10, 11, 12, 13, 16, 21],
 }
 
 /******************************
@@ -289,11 +290,7 @@ const scrapeDirectory = (
       copyFileSync(source, jsonDestinationPath)
       // Update .json tracker
       trackers.langs[repoLangCode].jsonCopyCount++
-    } else if (
-      item.endsWith(".md") ||
-      item.endsWith(".svg") ||
-      item.endsWith(".xlsx")
-    ) {
+    } else if (item.endsWith(".md")) {
       const mdDestDirPath: string = join(
         repoRoot,
         "public",

@@ -5,7 +5,7 @@ lang: ko
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: 재생 원칙 위에 기반한 대안 경제 시스템
 summaryPoint2: 이더리움을 활용하여 기후 변화와 같은 범세계적인 공동 위기를 해결하기 위한 시도

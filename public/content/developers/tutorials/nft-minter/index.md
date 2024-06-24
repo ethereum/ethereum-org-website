@@ -46,7 +46,7 @@ Cool, now that we understand how making an NFT works, let's clone our starter fi
 
 ## Clone the starter files {#clone-the-starter-files}
 
-First, go to the [nft-minter-tutorial GitHub repository](https://github.com/alchemyplatform/nft-minter-tutorial) to get the starter files for this project. Clone this repository into your local environment.=
+First, go to the [nft-minter-tutorial GitHub repository](https://github.com/alchemyplatform/nft-minter-tutorial) to get the starter files for this project. Clone this repository into your local environment.
 
 When you open this cloned `nft-minter-tutorial` repository, you'll notice that it contains two folders: `minter-starter-files` and `nft-minter`.
 
@@ -278,7 +278,7 @@ If `window.ethereum` _is not_ present, then that means MetaMask is not installed
 
 Now if `window.ethereum` _is_ present, then that's when things get interesting.
 
-Using a try/catch loop, we'll try to connect to MetaMask by calling`[window.ethereum.request({ method: "eth_requestAccounts" });](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts)`. Calling this function will open up MetaMask in the browser, whereby the user will be prompted to connect their wallet to your dapp.
+Using a try/catch loop, we'll try to connect to MetaMask by calling [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). Calling this function will open up MetaMask in the browser, whereby the user will be prompted to connect their wallet to your dapp.
 
 - If the user chooses to connect, `method: "eth_requestAccounts"` will return an array that contains all of the user's account addresses that are connected to the dapp. Altogether, our `connectWallet` function will return a JSON object that contains the _first_ `address` in this array \(see line 9\) and a `status` message that prompts the user to write a message to the smart contract.
 - If the user rejects the connection, then the JSON object will contain an empty string for the `address` returned and a `status` message that reflects that the user rejected the connection.

@@ -1,9 +1,9 @@
 import { useEffect } from "react"
+import { merge } from "lodash"
 import { appWithTranslation } from "next-i18next"
 // ChakraProvider import updated as recommended on https://github.com/chakra-ui/chakra-ui/issues/4975#issuecomment-1174234230
 // to reduce bundle size. Should be reverted to "@chakra-ui/react" in case on theme issues
 import { ChakraProvider } from "@chakra-ui/provider"
-import { extendBaseTheme } from "@chakra-ui/react"
 import { init } from "@socialgouv/matomo-next"
 
 import customTheme from "@/@chakra-ui/theme"
@@ -32,7 +32,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
 
   const direction = useLocaleDirection()
 
-  const theme = extendBaseTheme({ direction, ...customTheme })
+  const theme = merge(customTheme, { direction })
 
   return (
     <>
@@ -48,7 +48,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
         <RootLayout
           contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
           contentNotTranslated={pageProps.contentNotTranslated}
-          lastDeployDate={pageProps.lastDeployDate}
+          lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
         >
           {getLayout(<Component {...pageProps} />)}
         </RootLayout>

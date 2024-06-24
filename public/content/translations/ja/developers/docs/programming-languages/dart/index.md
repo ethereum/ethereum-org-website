@@ -17,6 +17,8 @@ incomplete: true
 - ビデオでの学習をご希望の場合は、[初めてのブロックチェーンFlutterアプリの構築](https://www.youtube.com/watch?v=3Eeh3pJ6PeA)をご覧いただけます。このビデオは約1時間です。
 - 時間がない場合は、[イーサリアムでのFlutterとDartを使用したブロックチェーンの分散型アプリの構築](https://www.youtube.com/watch?v=jaMFEOCq_1s)をご覧ください。このビデオはわずか20分です。
 - [FlutterアプリケーションへのMetaMaskの統合](https://youtu.be/8qzVDje3IWk) - この短いビデオでは、FlutterアプリケーションにMetaMaskを統合する手順を段階的に説明しています。
+- [Flutter Dappシンプルウォレット](https://youtu.be/JMfIBpuAhKA)と[はじめてのFlutter DApp - Solidity、Truffle、Ganache](https://youtu.be/bHw2gQZxJ_s) - これらのビデオは、TruffleとGanacheを使ってFlutterで簡単なDappsを作成する方法を案内します。
+- [SolidityとFlutterによるモバイル・ブロックチェーン・デベロッパー・ブートキャンプ・コース](https://youtube.com/playlist?list=PL4V4Unlk5luhQ26ERO6hWEbcUwHDSSmVH) - フルスタック・モバイル・ブロックチェーン・デベロッパー・コースのプレイリスト
 
 ## イーサリアムクライアントの操作 {#working-with-ethereum-clients}
 

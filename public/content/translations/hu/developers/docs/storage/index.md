@@ -61,6 +61,7 @@ Az IPFS (InterPlanetary File System) egy elosztott rendszer fájlok, honlapok, a
 - [IPFS Scan](https://ipfs-scan.io) _(IPFS pinning explorer)_
 - [4EVERLAND](https://www.4everland.org/)_（IPFS pinning service）_
 - [Filebase](https://filebase.com) _(IPFS Pinning Service)_
+- [Spheron Network](https://spheron.network/) _(IPFS/Filecoin pinning szolgáltatás)_
 
 A SWARM egy decentralizáld adattárhely és elosztási technológia, mely tárolási ösztönzőrendszerrel és egy tárhelybérleti-költséges orákulummal működik.
 
@@ -198,12 +199,18 @@ Proof-of-stake-alapú:
 - [Dokumentáció](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
 
+**Spheron Network - _A Spheron egy platform mint szolgáltatás (PaaS), amelyet olyan dappok számára terveztek, amelyek jó teljesítményű decentralizált infrastruktúrán szeretnék elindítani alkalmazásaikat. Számítási kapacitást, decentralizált tárolást, CDN & web hosting szolgáltatás kínál._**
+
+- [spheron.network](https://spheron.network/)
+- [Dokumentáció](https://docs.spheron.network/)
+- [GitHub](https://github.com/spheronFdn)
+
 ## További olvasnivaló {#further-reading}
 
 - [Mi az a decentralizált tárhely?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) – _CoinMarketCap_
 - [Öt gyakori mítosz lerombolása a decentralizált tárhelyről](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) – _Storj_
 
-_Ismer olyan közösségi információforrást, amely a hasznára vált? Módosítsa az oldalt, és adja hozzá!_
+_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
 
 ## Kapcsolódó témák {#related-topics}
 

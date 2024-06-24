@@ -72,7 +72,7 @@ function previewDeposit(uint256 assets) public view returns (uint256)
 
 この関数は、入金が現在のブロックに対してどのような影響をもたらすかをシミュレーションします。
 
-#### 入金 {#deposit}
+#### deposit {#deposit}
 
 ```solidity
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
@@ -86,7 +86,7 @@ function deposit(uint256 assets, address receiver) public returns (uint256 share
 function maxMint(address receiver) public view returns (uint256)
 ```
 
-この関数は、`receiverによる1回の`の呼び出しにより、ミント可能なシェア数の上限を返します。
+この関数は、`receiver` による1回の [`mint`](#mint) の呼び出しにより、ミント可能なシェア数の上限を返します。
 
 #### previewMint {#previewmint}
 
@@ -96,7 +96,7 @@ function previewMint(uint256 shares) public view returns (uint256)
 
 この関数は、現在のブロックにおける当該ミントの影響をシミュレーションします。
 
-#### mint(ミント) {#mint}
+#### mint {#mint}
 
 ```solidity
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
@@ -120,7 +120,7 @@ function previewWithdraw(uint256 assets) public view returns (uint256)
 
 この関数は、当該引き出しが現在のブロックに与える影響をシミュレーションします。
 
-#### 引き出し {#withdraw}
+#### withdraw {#withdraw}
 
 ```solidity
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
@@ -195,7 +195,7 @@ event Withdraw(
     address indexed receiver,
     address indexed owner,
     uint256 assets,
-    uint256 share
+    uint256 shares
 )
 ```
 
@@ -204,4 +204,4 @@ event Withdraw(
 ## 参考文献 {#further-reading}
 
 - [EIP-4626: トークン化ボールト規格](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: GitHubリポジトリ](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)
+- [ERC-4626: GitHubリポジトリ](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

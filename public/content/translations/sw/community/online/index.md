@@ -22,7 +22,7 @@ Mamia ya maelfu ya wapenzi wa Ethereum hukusanyika kwenye majukwaa haya ya mtand
 ## Vyumba vya gumzo {#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - jamii iliyozama kutoa usaidizi wa usimamizi wa miradi kwa maboresho ya </SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Wadukuzi wa Ethereum</Link> - gumzo la Discord linaloendeshwa na ETHGlobal: jamii ya mtandaoni ya wadukuzi wa Ethereum kote duniani</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://ethglobal.com/discord">Wadukuzi wa Ethereum</Link> - gumzo la Discord linaloendeshwa na ETHGlobal: jamii ya mtandaoni ya wadukuzi wa Ethereum kote duniani</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - Maboresho ya Ethereum yanalenga jamii ya Discord</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link> - jamii iliyozama kutoa usaidizi wa usimamizi wa miradi kwa maboresho ya </SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Timu ya tovuti ya Ethereum.org</Link> - tembelea na upige gumzo kwenye maboresho ya wavuti wa ethereum.org na uunde na timu na watu kutoka katika jamii</SocialListItem>

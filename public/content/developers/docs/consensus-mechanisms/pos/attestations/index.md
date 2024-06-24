@@ -32,7 +32,7 @@ Finally, the validator signs the attestation and broadcasts it to the network.
 
 There is a substantial overhead associated with passing this data around the network for every validator. Therefore, the attestations from individual validators are aggregated within subnets before being broadcast more widely. This includes aggregating signatures together so that an attestation that gets broadcast includes the consensus `data` and a single signature formed by combining the signatures of all the validators that agree with that `data`. This can be checked using `aggregation_bits` because this provides the index of each validator in their committee (whose ID is provided in `data`) which can be used to query individual signatures.
 
-In each epoch a validator in each subnet is selected to be the `aggregator`. The aggregator collects all the attestations it hears about over the gossip network that have equivalent `data` to its own. The sender of each matching attestation is recorded in the `aggregation_bits`. The aggregator then broadcasts the attestation aggregate to the wider network.
+In each epoch 16 validators in each subnet are selected to be the `aggregators`. The aggregators collect all the attestations they hear about over the gossip network that have equivalent `data` to their own. The sender of each matching attestation is recorded in the `aggregation_bits`. The aggregators then broadcast the attestation aggregate to the wider network.
 
 When a validator is selected to be a block proposer they package aggregate attestations from the subnets up to the latest slot in the new block.
 

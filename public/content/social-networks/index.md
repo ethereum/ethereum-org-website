@@ -5,7 +5,7 @@ lang: en
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: Blockchain-based platforms for social interaction and content creation and distribution.
 summaryPoint2: Decentralized social media networks protect user privacy and enhance data security.
 summaryPoint3: Tokens and NFTs create new ways to monetize content.
@@ -25,7 +25,7 @@ Many decentralized social networks exist as alternatives to established social m
 
 Decentralized social networks are a class of [decentralized applications (dapps)](/dapps/)—applications powered by [smart contracts](/glossary/#smart-contract) deployed on the blockchain. The contract code serves as the backend for these apps and defines their business logic.
 
-Traditional social media platforms rely on databases to store user information, program code, and other forms of data. But this creates single points-of-failure and introduces significant risk. For instance, Facebook's servers infamously [went offline for hours](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) last year, cutting off users from the platform.
+Traditional social media platforms rely on databases to store user information, program code, and other forms of data. But this creates single points-of-failure and introduces significant risk. For instance, Facebook's servers infamously [went offline for hours](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) in October 2021, cutting off users from the platform.
 
 Decentralized social networks exist on a [peer-to-peer network](/glossary/#peer-to-peer-network) comprising thousands of nodes around the globe. Even if some nodes fail, the network will run uninterrupted, making applications resistant to failures and outages.
 

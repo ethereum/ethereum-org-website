@@ -2,7 +2,6 @@
 title: Tata Kelola Ethereum
 description: Pengantar cara mengambil keputusan tentang Ethereum.
 lang: id
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Pengantar tentang tata kelola Ethereum {#introduction}

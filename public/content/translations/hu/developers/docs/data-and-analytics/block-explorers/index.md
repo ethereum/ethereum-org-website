@@ -14,12 +14,14 @@ Először meg kellene értened az Ethereum alapvető fogalmait ahhoz, hogy érte
 ## Szolgáltatások {#services}
 
 - [Etherscan](https://etherscan.io/) –_ elérhető kínai, koreai, orosz és japán nyelven is_
+- [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) –_ Spanyol, francia, olasz, holland, portugál, orosz, kínai és fárszi nyelven is elérhető_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
+- [Ethernow](https://www.ethernow.xyz/)
 - [Ethplorer](https://ethplorer.io/) –_Kínai, spanyol, francia, török, orosz, koreai és vietnámi nyelven is elérhető_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
@@ -232,11 +234,13 @@ A konszenzusréteg felső szintű adatai a következők:
 ## Blokk felfedezők {#block-explorers}
 
 - [Etherscan](https://etherscan.io/) – egy blokkfelfedező, amelyben adatokat kérhet le az Ethereum-főhálózatról és a Goerli tesztelőhálózatról.
+- [3xpl](https://3xpl.com/ethereum) - reklámmentes nyílt forráskódú Ethereum felfedező, melyből le lehet tölteni az adatokat
 - [Beaconcha.in](https://beaconcha.in/) – egy nyílt forráskódú blokkfelfedező az Ethereum főhálózatra és a Goerli teszthálózatra
 - [Blockchair](https://blockchair.com/ethereum) – a legdiszkrétebb Ethereum-felfedező. Alkalmas (memóriakészlet) adatok szűrésére és válogatására is
 - [Etherchain](https://www.etherchain.org/) – egy Ethereum-főhálózati blokkfelfedező
 - [Ethplorer](https://ethplorer.io/) – egy blokkfelfedező, amely az Ethereum-főhálózaton és a Kovan tesztelőhálózaton található tokenekre fókuszál
 - [Rantom](https://rantom.app/) – egy felhasználóbarát, nyílt forráskódú DeFi- és NFT-tranzakciómegtekintő a részletesebb betekintéshez
+- [Ethernow](https://www.ethernow.xyz/) – egy valós idejű tranzakciókereső, amely lehetővé teszi az Ethereum főhálózat lánc előtti rétegének megtekintését
 
 ## További olvasnivaló {#further-reading}
 

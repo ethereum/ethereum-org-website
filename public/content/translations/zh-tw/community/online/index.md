@@ -22,7 +22,7 @@ lang: zh-tw
 ## 聊天室 {#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">以太牧貓人組織</Link> - 提供專案管理以支援以太坊的社群</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">以太坊駭客</Link> - 由全球以太坊駭客線上社群 ETHGlobal 所管理的 Discord 聊天室</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://ethglobal.com/discord">以太坊駭客</Link> - 由全球以太坊駭客線上社群 ETHGlobal 所管理的 Discord 聊天室</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - 專注於以太坊開發的 Discord 社群</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link> - 給現有及潛在質押者的社群營運指導、教育、支援及資源。</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Ethereum.org 網站團隊</Link> - 訪問並和團隊及社群大眾聊聊 Ethereum.org 網站開發及設計</SocialListItem>

@@ -153,7 +153,7 @@ Vários projetos fornecem implementações de validium e volitions que você pod
 
 **Matter Labs zkPorter**: _zkPorter é um protocolo de dimensionamento de camada 2 que aborda a disponibilidade de dados com uma abordagem híbrida que combina os conceitos de zkRollup e sharding. Pode suportar arbitrariamente muitos shards, cada um com sua própria política de disponibilidade de dados._
 
-- [Documentação](https://docs.zksync.io/zk-stack/concepts/hyperchains-hyperscaling.html#logical-state-partitions-in-zk-porters)
+- [Documentação](https://docs.zksync.io/zk-stack/concepts/data-availability)
 - [Website](https://zksync.io/)
 
 ## Leitura adicional {#further-reading}

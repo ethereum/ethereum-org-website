@@ -63,7 +63,6 @@ EVMのすべての実装は、イーサリアムイエローペーパーに記�
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
-- [eEVM](https://github.com/microsoft/eevm) - _C++_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## 参考文献 {#further-reading}
@@ -74,6 +73,7 @@ EVMのすべての実装は、イーサリアムイエローペーパーに記�
 - [イーサリアム仮想マシンのオペコード](https://www.ethervm.io/)
 - [イーサリアム仮想マシンオペコードのインタラクティブリファレンス](https://www.evm.codes/)
 - [Solidityドキュメントの簡単な紹介](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
+- [マスタリング・イーサリアム - イーサリアム仮想マシン](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
 
 ## 関連トピック {#related-topics}
 

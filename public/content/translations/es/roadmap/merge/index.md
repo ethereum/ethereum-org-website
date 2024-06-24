@@ -3,7 +3,7 @@ title: La Fusión
 description: Conozca más sobre La Fusión y sobre cuándo la red principal de Ethereum implementará la prueba de participación.
 lang: es
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: La red principal de Ethereum usa prueba de participación, pero esto no fue siempre el caso.
 summaryPoint2: La actualización del mecanismo original de prueba de trabajo a prueba de participación se denominó «La fusión».
@@ -11,7 +11,7 @@ summaryPoint3: La Fusión se refiere a la fusión original de la red principal d
 summaryPoint4: La Fusión reduce el consumo de energía de Ethereum en un ~99.95%.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   La Fusión se ejecutó el 15 de septiembre de 2022. Esto completó la transición de Ethereum al consenso de prueba de participación, dejando de lado oficialmente la prueba de trabajo y reduciendo el consumo de energía en un ~99,95%.
 </UpgradeStatus>
 

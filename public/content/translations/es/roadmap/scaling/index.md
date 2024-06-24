@@ -2,7 +2,7 @@
 title: Escalar en Ethereum
 description: Las acumulaciones agrupan transacciones en lotes y lo hacen fuera de la cadena, reduciendo costes para el usuario. Sin embargo, la forma en que las acumulaciones gestionan los datos es muy cara en estos momentos, limitando con ello la posibilidad de tener transacciones baratas. Proto-anksharing se encarga de solucionarlo.
 lang: es
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "Hoja de ruta de Ethereum"
 template: roadmap
 ---

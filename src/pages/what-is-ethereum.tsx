@@ -54,21 +54,22 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import {
   getLocaleForNumberFormat,
   getRequiredNamespacesForPage,
 } from "@/lib/utils/translations"
 
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
-import dogeComputerImg from "@/public/doge-computer.png"
-import ethImg from "@/public/eth.png"
-import diffEthAndBtc from "@/public/eth.png"
-import criminalActivity from "@/public/finance_transparent.png"
-import ethCoin from "@/public/impact_transparent.png"
-import whatAreSmartContracts from "@/public/infrastructure_transparent.png"
-import whoRunsEthereum from "@/public/run-a-node/ethereum-inside.png"
-import stats from "@/public/upgrades/newrings.png"
-import hero from "@/public/what-is-ethereum.png"
+import dogeComputerImg from "@/public/images/doge-computer.png"
+import ethImg from "@/public/images/eth.png"
+import diffEthAndBtc from "@/public/images/eth.png"
+import criminalActivity from "@/public/images/finance_transparent.png"
+import ethCoin from "@/public/images/impact_transparent.png"
+import whatAreSmartContracts from "@/public/images/infrastructure_transparent.png"
+import whoRunsEthereum from "@/public/images/run-a-node/ethereum-inside.png"
+import stats from "@/public/images/upgrades/newrings.png"
+import hero from "@/public/images/what-is-ethereum.png"
 
 const Slogan = (props: ChildOnlyProp) => (
   <Text
@@ -192,6 +193,10 @@ type Props = BasePageProps & {
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   const requiredNamespaces = getRequiredNamespacesForPage("/what-is-ethereum")
 
@@ -203,7 +208,7 @@ export const getStaticProps = (async ({ locale }) => {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
       data,
     },
   }
@@ -217,14 +222,23 @@ const WhatIsEthereumPage = ({
   const { locale } = useRouter()
   const localeForNumberFormat = getLocaleForNumberFormat(locale! as Lang)
 
-  const formatNumber = (value: number) =>
+  const formatNumber = (
+    value: number,
+    minSignificantDigits: number,
+    maxSignificantDigits: number,
+    style?: Intl.NumberFormatOptions["style"],
+    currency?: string
+  ) =>
     new Intl.NumberFormat(localeForNumberFormat, {
       notation: "compact",
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
+      minimumSignificantDigits: minSignificantDigits,
+      maximumSignificantDigits: maxSignificantDigits,
+      style: style,
+      currency: currency,
+      currencyDisplay: "narrowSymbol",
     }).format(value)
 
-  const txStat = "error" in data ? "" : formatNumber(data.value)
+  const txStat = "error" in data ? "" : formatNumber(data.value, 3, 4)
 
   const cards = [
     {
@@ -316,7 +330,7 @@ const WhatIsEthereumPage = ({
       <PageMetadata
         title={t("page-what-is-ethereum-meta-title")}
         description={t("page-what-is-ethereum-meta-description")}
-        image="what-is-ethereum.png"
+        image="/images/what-is-ethereum.png"
       />
       <Content>
         <Flex
@@ -338,6 +352,8 @@ const WhatIsEthereumPage = ({
             <Image
               src={hero}
               alt={t("page-what-is-ethereum-alt-img-bazaar")}
+              // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+              sizes="(max-width: 992px) 100vw, 750px"
               priority
             />
           </Hero>
@@ -470,11 +486,11 @@ const WhatIsEthereumPage = ({
               <H2>{t("page-what-is-ethereum-ethereum-in-numbers-title")}</H2>
               <BannerGrid>
                 <BannerGridCell>
-                  <StatPrimary>4k+</StatPrimary>
+                  <StatPrimary>{formatNumber(4000, 1, 1)}+</StatPrimary>
                   <StatDescription>
-                    Projects built on{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-1-desc")}
                     <NoWrapText>
-                      Ethereum{" "}
+                      &nbsp;
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
@@ -491,11 +507,11 @@ const WhatIsEthereumPage = ({
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>96M+</StatPrimary>
+                  <StatPrimary>{formatNumber(96_000_000, 2, 2)}+</StatPrimary>
                   <StatDescription>
-                    Accounts (wallets) with an ETH{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-2-desc")}
                     <NoWrapText>
-                      balance{" "}
+                      &nbsp;
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
@@ -512,11 +528,11 @@ const WhatIsEthereumPage = ({
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>53.3M+</StatPrimary>
+                  <StatPrimary>{formatNumber(53_300_000, 3, 3)}+</StatPrimary>
                   <StatDescription>
-                    Smart contracts on{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-3-desc")}
                     <NoWrapText>
-                      Ethereum{" "}
+                      &nbsp;
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
@@ -533,11 +549,13 @@ const WhatIsEthereumPage = ({
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>$410B</StatPrimary>
+                  <StatPrimary>
+                    {formatNumber(410_000_000_000, 3, 3, "currency", "USD")}
+                  </StatPrimary>
                   <StatDescription>
-                    Value secured on{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-4-desc")}
                     <NoWrapText>
-                      Ethereum{" "}
+                      &nbsp;
                       <Tooltip
                         content={tooltipContent({
                           apiUrl: "https://ultrasound.money/#tvs",
@@ -553,11 +571,13 @@ const WhatIsEthereumPage = ({
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>$3.5B</StatPrimary>
+                  <StatPrimary>
+                    {formatNumber(3_500_000_000, 2, 2, "currency", "USD")}
+                  </StatPrimary>
                   <StatDescription>
-                    Creator earnings on Ethereum in{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-5-desc")}
                     <NoWrapText>
-                      2021{" "}
+                      &nbsp;
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
@@ -580,9 +600,9 @@ const WhatIsEthereumPage = ({
                   </StatPrimary>
                   {/* TODO: Extract strings for translation */}
                   <StatDescription>
-                    Number of transactions{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-6-desc")}
                     <NoWrapText>
-                      today{" "}
+                      &nbsp;
                       <Tooltip
                         content={tooltipContent({
                           apiUrl: "https://etherscan.io/",

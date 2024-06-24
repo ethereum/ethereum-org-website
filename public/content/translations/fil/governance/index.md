@@ -2,7 +2,6 @@
 title: Pamamahala ng Ethereum
 description: Isang panimula sa kung paano nagpapasya tungkol sa Ethereum.
 lang: fil
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Panimula sa pamamahala ng Ethereum {#introduction}

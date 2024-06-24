@@ -1,7 +1,7 @@
 name: Suggest quiz
 description: Add, update, delete questions for a quiz on ethereum.osg
 title: Add/Update/Delete quiz question
-labels: ["feature :sparkles", "quiz :books:"]
+labels: ["feature ✨", "quiz 📚"]
 body:
   - type: markdown
     attributes:
