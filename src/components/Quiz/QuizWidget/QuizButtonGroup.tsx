@@ -34,24 +34,22 @@ type QuizButtonGroupProps = {
   setShowAnswer: (prev: boolean) => void
 }
 
-export const QuizButtonGroup = (props: QuizButtonGroupProps) => {
-  const {
-    showResults,
-    handleReset,
-    currentQuestionAnswerChoice,
-    title,
-    questions,
-    currentQuestionIndex,
-    quizPageProps,
-    answerStatus,
-    numberOfCorrectAnswers,
-    userQuizProgress,
-    quizScore,
-    setCurrentQuestionAnswerChoice,
-    setUserQuizProgress,
-    setShowAnswer,
-  } = props
-
+export const QuizButtonGroup = ({
+  showResults,
+  handleReset,
+  currentQuestionAnswerChoice,
+  title,
+  questions,
+  currentQuestionIndex,
+  quizPageProps,
+  answerStatus,
+  numberOfCorrectAnswers,
+  userQuizProgress,
+  quizScore,
+  setCurrentQuestionAnswerChoice,
+  setUserQuizProgress,
+  setShowAnswer,
+}: QuizButtonGroupProps) => {
   const finishedQuiz = useMemo(
     () => userQuizProgress.length === questions.length! - 1,
     [questions.length, userQuizProgress.length]

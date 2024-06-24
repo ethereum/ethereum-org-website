@@ -9,9 +9,11 @@ type QuizContentProps = {
   children: ReactNode
 }
 
-export const QuizContent = (props: QuizContentProps) => {
-  const { answerStatus, title, children } = props
-
+export const QuizContent = ({
+  answerStatus,
+  title,
+  children,
+}: QuizContentProps) => {
   const getTitleContent = useCallback((): string => {
     if (!answerStatus) return title
 

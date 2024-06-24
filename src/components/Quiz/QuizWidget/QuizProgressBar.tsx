@@ -14,10 +14,12 @@ type QuizProgressBarProps = {
   userQuizProgress: AnswerChoice[]
 }
 
-export const QuizProgressBar = (props: QuizProgressBarProps) => {
-  const { questions, answerStatus, currentQuestionIndex, userQuizProgress } =
-    props
-
+export const QuizProgressBar = ({
+  questions,
+  answerStatus,
+  currentQuestionIndex,
+  userQuizProgress,
+}: QuizProgressBarProps) => {
   const progressBarBackground = useCallback(
     (index: number): ChakraProps["bg"] => {
       if (

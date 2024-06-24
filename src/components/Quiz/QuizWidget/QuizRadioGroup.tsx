@@ -31,13 +31,12 @@ type QuizRadioGroupProps = {
   setCurrentQuestionAnswerChoice: (answer: AnswerChoice | null) => void
 }
 
-export const QuizRadioGroup = (props: QuizRadioGroupProps) => {
-  const {
-    questions,
-    currentQuestionIndex,
-    answerStatus,
-    setCurrentQuestionAnswerChoice,
-  } = props
+export const QuizRadioGroup = ({
+  questions,
+  currentQuestionIndex,
+  answerStatus,
+  setCurrentQuestionAnswerChoice,
+}: QuizRadioGroupProps) => {
   const { t } = useTranslation("learn-quizzes")
 
   const handleSelection = (answerId: AnswerKey) => {

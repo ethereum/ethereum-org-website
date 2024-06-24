@@ -21,14 +21,12 @@ type QuizSummaryProps = {
   isPassingScore: boolean
 }
 
-export const QuizSummary = (props: QuizSummaryProps) => {
-  const {
-    numberOfCorrectAnswers,
-    questionsLength,
-    ratioCorrect,
-    isPassingScore,
-  } = props
-
+export const QuizSummary = ({
+  numberOfCorrectAnswers,
+  questionsLength,
+  ratioCorrect,
+  isPassingScore,
+}: QuizSummaryProps) => {
   const { locale } = useRouter()
   const { t } = useTranslation("learn-quizzes")
 
