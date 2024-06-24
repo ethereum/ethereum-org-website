@@ -154,7 +154,7 @@ Több projekt is kínál olyan validium- és volitionimplementációkat, amelyek
 **Matter Labs zkPorter** – _A zkPorter egy L2 skálázási protokoll, amely a zkRollup és a sharding ötleteit ötvöző hibrid megközelítéssel kezeli az adatelérhetőséget. Tetszőlegesen sok shardot támogathat, mindegyik saját adatelérhetőségi szabályzattal._
 
 - [Blog](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
-- [Dokumentáció](https://docs.zksync.io/zk-stack/concepts/hyperchains-hyperscaling.html#logical-state-partitions-in-zk-porters)
+- [Dokumentáció](https://docs.zksync.io/zk-stack/concepts/data-availability)
 - [Honlap](https://zksync.io/)
 
 ## További olvasnivaló {#further-reading}

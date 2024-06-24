@@ -153,7 +153,7 @@ Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz Validium ve istemlere i
 
 **Matter Labs zkPorter** - _zkPorter, zkRollup ve parçalama fikirlerini birleştirerek veri kullanılabilirliğini hibrit bir yaklaşımla ele alan bir Katman 2 ölçeklendirme protokolüdür. Her biri kendi veri kullanılabilirliği politikasına sahip, keyfi çok sayıda parçayı destekleyebilir._
 
-- [Belgeler](https://docs.zksync.io/zk-stack/concepts/hyperchains-hyperscaling.html#logical-state-partitions-in-zk-porters)
+- [Belgeler](https://docs.zksync.io/zk-stack/concepts/data-availability)
 - [Web sitesi](https://zksync.io/)
 
 ## Daha fazla okuma {#further-reading}

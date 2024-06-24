@@ -226,7 +226,7 @@ const WhatIsEthereumPage = ({
     value: number,
     minSignificantDigits: number,
     maxSignificantDigits: number,
-    style?: string,
+    style?: Intl.NumberFormatOptions["style"],
     currency?: string
   ) =>
     new Intl.NumberFormat(localeForNumberFormat, {
