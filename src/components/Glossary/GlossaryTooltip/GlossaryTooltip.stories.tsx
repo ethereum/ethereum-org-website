@@ -7,8 +7,8 @@ const meta = {
   title: "Molecules / Overlay Content / Glossary Tooltip",
   component: GlossaryTooltipComponent,
   args: {
-    termKey: "big-endian",
-    children: "big-endian",
+    termKey: "bridge",
+    children: "bridge",
   },
   decorators: [
     (Story) => (
