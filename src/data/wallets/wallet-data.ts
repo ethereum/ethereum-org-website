@@ -1918,7 +1918,6 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://docs.gemwallet.com/",
     documentation: "https://docs.gemwallet.com/",
-    new_to_crypto: true,
   },
 ]
 
