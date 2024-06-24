@@ -39,7 +39,6 @@ This is a curated list of user research done in web3 that may help with design a
 | <Badge colorScheme="blue">Ethereum.org UX stats</Badge> | [Usability and user satisfaction survey dashboard - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)                                  |
 
 ## Design for web3 {#design-for-web3}
-Web3 UX Design Handbook
 - [Web3 UX Design Handbook](https://web3ux.design/) - Practical guide to designing Web3 apps
 - [Web3 Design Principles](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1) - A framework of UX rules for blockchain based dapps
 - [Blockchain Design Principles](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e) - Lessons learned by the blockchain design team at IBM
