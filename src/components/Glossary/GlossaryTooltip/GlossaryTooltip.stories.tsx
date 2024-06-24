@@ -1,3 +1,4 @@
+import { Center } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import GlossaryTooltipComponent from "."
@@ -9,6 +10,13 @@ const meta = {
     termKey: "big-endian",
     children: "big-endian",
   },
+  decorators: [
+    (Story) => (
+      <Center boxSize="md">
+        <Story />
+      </Center>
+    ),
+  ],
 } satisfies Meta<typeof GlossaryTooltipComponent>
 
 export default meta
