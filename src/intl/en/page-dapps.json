@@ -285,5 +285,7 @@
   "page-dapps-dapp-description-dodo": "DODO is a on-chain liquidity provider, which leverages the Proactive Market Maker algorithm (PMM)",
   "page-dapps-dodo-image-alt": "DODO logo",
   "page-dapps-dapp-description-artblocks": "Art Blocks is dedicated to bringing compelling works of contemporary generative art to life",
-  "page-dapps-artblocks-image-alt": "Art Blocks logo"
+  "page-dapps-artblocks-image-alt": "Art Blocks logo",
+  "page-dapps-explore-title": "Want to browse more apps?",
+  "page-dapps-explore": "Check out hundreds of dapps"
 }
