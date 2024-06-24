@@ -1903,7 +1903,7 @@ export const walletsData: WalletData[] = [
     scam_protection: false,
     hardware_support: false,
     rpc_importing: false,
-    nft_support: false,
+    nft_support: true,
     connect_to_dapps: true,
     staking: true,
     swaps: true,
