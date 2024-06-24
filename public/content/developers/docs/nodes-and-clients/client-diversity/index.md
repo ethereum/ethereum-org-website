@@ -13,7 +13,7 @@ If you don't already understand what nodes and clients are, check out [nodes and
 
 ## Why are there multiple clients? {#why-multiple-clients}
 
-Multiple, independently developed and maintained clients exist because client diversity makes the network more resilient to attacks and bugs. Multiple clients is a strength unique to Ethereum - other blockchains rely on the infallibility of a single client. However, it is not enough simply to have multiple, clients available, they have to be adopted by the community and the total active nodes distributed relatively evenly across them.
+Multiple, independently developed and maintained clients exist because client diversity makes the network more resilient to attacks and bugs. Multiple clients is a strength unique to Ethereum - other blockchains rely on the infallibility of a single client. However, it is not enough simply to have multiple clients available, they have to be adopted by the community and the total active nodes distributed relatively evenly across them.
 
 ## Why is client diversity important? {#client-diversity-importance}
 

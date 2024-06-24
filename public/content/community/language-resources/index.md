@@ -32,6 +32,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - Brazilian version of Cointelegraph, a major cryptocurrency news outlet
 - [Livecoins](http://www.livecoins.com.br/ethereum) - cryptocurrency news and tools
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - cryptocurrency news and reports
+- [Modular Crypto](https://modularcrypto.xyz/) - cryptocurrency news and educational articles
 
 **Education**
 
@@ -98,9 +99,19 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Microsoft Learn (Smart contracts)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - learn about writing smart contracts using Solidity
 - [Microsoft Learn (dapps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - create a user interface with decentralized applications
 
+### Japanese {#ja}
+
+- [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
+- [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
+- [Get started with blockchain development - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - This learning path introduces you to blockchain and development on the Ethereum platform
+- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Mastering Ethereum in Japanese
+- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Hands-On Smart Contract Development with Solidity and Ethereum in Japanese
+
 ### Russian {#ru}
 
 - [Cyber Academy](https://cyberacademy.dev) - educational space for web3 builders
+- [Forklog](https://forklog.com) - news and educational articles about crypto in general, existing technologies and future upgrades of different blockchains
+- [BeInCrypto](https://ru.beincrypto.com) - news, crypto price analysis and non-technical articles with simple explanations about everything in crypto
 
 ### Spanish {#es}
 
@@ -122,11 +133,3 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - overview of Ethereum, dapps, wallets and FAQs
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - web platform with subpages for Ethereum news and education
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - cryptocurrency portal with Ethereum news and educational content
-
-### Japanese {#ja}
-
-- [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
-- [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
-- [Get started with blockchain development - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - This learning path introduces you to blockchain and development on the Ethereum platform
-- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Mastering Ethereum in Japanese
-- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Hands-On Smart Contract Development with Solidity and Ethereum in Japanese

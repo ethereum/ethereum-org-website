@@ -9,6 +9,7 @@ import type {
   ChildOnlyProp,
   EpochResponse,
   EthStoreResponse,
+  Lang,
   StakingStatsData,
 } from "@/lib/types"
 
@@ -37,11 +38,12 @@ import Translation from "@/components/Translation"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
-import rhino from "@/public/upgrades/upgrade_rhino.png"
+import rhino from "@/public/images/upgrades/upgrade_rhino.png"
 
 type BenefitsType = {
   title: string
@@ -209,6 +211,10 @@ type Props = BasePageProps & {
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   const requiredNamespaces = getRequiredNamespacesForPage("/staking")
 
@@ -221,7 +227,7 @@ export const getStaticProps = (async ({ locale }) => {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       data,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
     // Updated once a day
     revalidate: BASE_TIME_UNIT * 24,
@@ -369,7 +375,7 @@ const StakingPage = ({
       <PageMetadata
         title={t("page-staking-meta-title")}
         description={t("page-staking-meta-description")}
-        image="/upgrades/upgrade_rhino.png"
+        image="/images/upgrades/upgrade_rhino.png"
       />
       <HeroStatsWrapper>
         <PageHero content={heroContent} />

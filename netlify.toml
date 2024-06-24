@@ -37,23 +37,3 @@
     path = "en/developers/docs/intro-to-ethereum/"
   [[plugins.inputs.audits]]
     path = "en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
-
-[functions]
-
-  [functions.___netlify-odb-handler]
-    included_files = [
-      "./src/intl/**/*",
-      "!./public/**/*",
-      "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/router-context*",
-      "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/amp-context*",
-      "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/head-manager-context*",
-    ]
-
-  [functions.___netlify-handler]
-    included_files = [
-      "./src/intl/**/*",
-      "!./public/**/*",
-      "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/router-context*",
-      "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/amp-context*",
-      "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/head-manager-context*",
-    ]

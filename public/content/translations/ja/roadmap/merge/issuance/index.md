@@ -127,7 +127,7 @@ ETHの発行とは逆に、イーサリアムではETHがバーンされるレ�
 
 したがって、例えば`X`(一日のETH発行量)がステークされた合計ETH量をもととして1800ETHになったとすると、`f(X)`(すべての発行量を相殺するために必要なgwei) は、`17gwei`となります(有効数字2桁の場合) 。
 
-## 参考文献 {#further-reading}
+## さらに学びたい方へ {#further-reading}
 
 - [マージ](/roadmap/merge/)
 - [Ultrasound.money](https://ultrasound.money/) - _ETHの発行とバーンをリアルタイムで可視化したダッシュボードが利用可能_

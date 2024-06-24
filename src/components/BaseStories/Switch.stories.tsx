@@ -1,6 +1,6 @@
 import * as React from "react"
 import { SimpleGrid, Switch as SwitchComponent } from "@chakra-ui/react"
-import { Meta } from "@storybook/react"
+import { Meta, type StoryObj } from "@storybook/react"
 
 const meta = {
   title: "Atoms / Form / Switch",
@@ -15,7 +15,7 @@ const meta = {
 
 export default meta
 
-export const Switch = {
+export const Switch: StoryObj = {
   render: () => (
     <SimpleGrid columns={{ base: 2, lg: 4 }} columnGap={1} alignItems="center">
       <span>isChecked:</span>

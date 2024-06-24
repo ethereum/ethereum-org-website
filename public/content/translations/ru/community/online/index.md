@@ -22,7 +22,7 @@ lang: ru
 ## Комнаты чата {#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> — сообщество, нацеленное на помощь с управлением проектами при разработке Ethereum</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> — чат Discord, управляемый ETHGlobal: онлайн-сообщество для хакеров Ethereum со всего мира</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://ethglobal.com/discord">Ethereum Hackers</Link> — чат Discord, управляемый ETHGlobal: онлайн-сообщество для хакеров Ethereum со всего мира</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> — сообщество Discord, сконцентрированное на разработке Ethereum</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">Сообщество EthStaker на Discord</Link> — сообщество для образования, наставничества, поддержки и предоставления ресурсов для существующих и потенциальных стейкеров</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Команда сайта Ethereum.org</Link> — возможность решить проблемы и поговорить о разработке и дизайне ethereum.org с командой и членами сообщества</SocialListItem>

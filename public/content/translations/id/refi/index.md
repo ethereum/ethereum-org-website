@@ -5,7 +5,7 @@ lang: id
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Sistem ekonomi alternatif yang didasarkan pada prinsip regeneratif
 summaryPoint2: Upaya untuk memanfaatkan Ethereum untuk memecahkan krisis-krisis koordinasi tingkat global seperti perubahan iklim

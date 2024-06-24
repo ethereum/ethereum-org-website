@@ -2,7 +2,7 @@
 title: Zukunftssicherung von Ethereum
 description: Diese Verbesserungen festigen Ethereum als widerstandsfähige und dezentrale Grundlage für die ungewisse Zukunft.
 lang: de
-image: /roadmap/roadmap-future.png
+image: /images/roadmap/roadmap-future.png
 alt: "Ethereum-Roadmap"
 template: roadmap
 ---
