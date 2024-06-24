@@ -12186,6 +12186,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "cd-sigma",
+      "name": "ciphernova",
+      "avatar_url": "https://avatars.githubusercontent.com/u/119534349?v=4",
+      "profile": "https://github.com/cd-sigma",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
