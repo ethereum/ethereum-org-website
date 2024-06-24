@@ -75,7 +75,7 @@ Sidechain-ul în care se întâmplă rollup-urile ZK poate fi optimizat pentru a
 
 - [Loopring](https://loopring.org/#/)
 - [Starkware](https://starkware.co/)
-- [Matter Labs zkSync](https://matter-labs.io/)
+- [Matter Labs ZKsync](https://matter-labs.io/)
 - [Aztec 2.0](https://aztec.network/)
 
 ### Rollup-uri Optimistic {#optimistic-rollups}

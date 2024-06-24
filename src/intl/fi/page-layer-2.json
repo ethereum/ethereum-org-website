@@ -121,7 +121,7 @@
   "optimism-description": "Optimismi on nopea, yksinkertainen ja turvallinen EVM-toiminen optimistinen niputtaja. Se skaalaa Ethereumin tekniikkaa samalla, kun se mukauttaa arvojaan taannehtivalla julkishyödykkeiden rahoituksella.",
   "boba-description": "Boba on optimisten niputtaja, joka on alunperin haarukoitu optimisista, joka on siis skaalausratkaisu vähentämään kaasukustannuksia, tehostamaan transaktioiden suorittamisen kyvykkyyttä ja laajentamaan älysopimusten ominaisuuksia.",
   "loopring-description": "Loopringin zkRollup L2 -ratkaisu pyrkii tarjoamaan samat turvatakuut kuin Ethereumissa, minkä lisäksi tarjotaan suuri skaalautuvuus: määrä kasvoi 1000x, ja kustannukset alennetaan vain 0,1 prosenttiin tason 1 kustannuksista.",
-  "zksync-description": "ZkSync on Matter Labsin käyttäjäkeskeinen zk rollup -alusta. Se on skaalausratkaisu Ethereumiin, jossa se jo toimii. ZkSync tukee maksuja, rahakkeiden vaihtoa ja NFT-julkaisuja.",
+  "zksync-description": "ZKsync on Matter Labsin käyttäjäkeskeinen zk rollup -alusta. Se on skaalausratkaisu Ethereumiin, jossa se jo toimii. ZKsync tukee maksuja, rahakkeiden vaihtoa ja NFT-julkaisuja.",
   "zkspace-description": "ZKSpace -alusta koostuu kolmesta pääosasta: Layer 2 AMM DEX, joka hyödyntää ZK-Rollups-tekniikkaa nimeltä ZKSwap, maksupalvelu nimeltä ZKSquare ja NFT-markkinapaikka nimeltään ZKSea.",
   "aztec-description": "Aztec Network on ensimmäinen yksityinen zk-Niputtaja Ethereumissa, ja sen avulla hajautetut sovellukset voivat hyödyntää Ethereumin yksityisyyttä ja koko skaalaa.",
   "layer-2-note": "Huomaa:",

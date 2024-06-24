@@ -1,5 +1,19 @@
 [
   {
+    "url": "https://medium.com/@kaishinaw/issuing-and-verifying-ethereum-dids-with-metamask-a42070c0a04d",
+    "title": "Issuing And Verifying Ethereum DIDs with Metamask",
+    "description": "An initial explainer on how decentralized identity works",
+    "author": "Aw Kai Shin",
+    "authorGithub": "https://github.com/0xKai27",
+    "tags": [
+      "identity"
+    ],
+    "skillLevel": "intermediate",
+    "timeToRead": "9",
+    "lang": "en",
+    "publishDate": "11/10/2022"
+  },
+  {
     "url": "https://www.cyfrin.io/blog/what-is-eip-4844-proto-danksharding-and-blob-transactions",
     "title": "What is EIP-4844? Proto-Danksharding and blob transactions explained",
     "description": "What is the EIP-4844? Learn what proto-danksharding and blobs are, how they work, and how to send your first blob transaction using the new Ethereum improvement proposal",
