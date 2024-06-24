@@ -121,7 +121,7 @@ const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <Icon as={MdChevronRight} boxSize={6} color="secondary" />
+            <Icon as={MdChevronRight} boxSize={6} color="body.base" />
           </Flex>
         </AccordionButton>
 
