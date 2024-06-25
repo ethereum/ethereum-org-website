@@ -176,7 +176,7 @@ const WalletFilterFeature = ({
                                     eventAction: `${filterOption.title}`,
                                     eventName: `Toggle ${
                                       item.title
-                                    } ${!item.showOptions}`,
+                                    } to ${item.showOptions}`,
                                   })
                                 }
                           }
