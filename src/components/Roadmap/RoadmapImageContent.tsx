@@ -6,7 +6,7 @@ import wallet from "@/public/images/wallet.png"
 
 export type RoadmapImageContentProps = {
   children: React.ReactNode
-  title: String
+  title: string
 }
 
 const RoadmapImageContent = ({ children, title }: RoadmapImageContentProps) => (

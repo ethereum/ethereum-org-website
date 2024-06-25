@@ -107,7 +107,7 @@ Uno snippet di codice riutilizzabile (programma) che uno sviluppatore pubblica n
 ## Letture consigliate {#further-reading}
 
 - [Ethereum Whitepaper](/whitepaper/)
-- [How does Ethereum work, anyway?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**NB** questa risorsa è ancora preziosa ma tieni presente che è antecedente a [ La Fusione](/roadmap/merge) e quindi si riferisce ancora al meccanismo proof-of-work di Ethereum: attualmente Ethereum è protetta da un meccanismo [proof-of-stake](/developers/docs/consensus-mechanisms/pos))
+- [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**NB** questa risorsa è ancora preziosa ma tieni presente che è antecedente a [ La Fusione](/roadmap/merge) e quindi si riferisce ancora al meccanismo proof-of-work di Ethereum: attualmente Ethereum è protetta da un meccanismo [proof-of-stake](/developers/docs/consensus-mechanisms/pos))
 
 _Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
 

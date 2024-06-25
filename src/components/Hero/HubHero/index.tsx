@@ -38,7 +38,7 @@ const HubHero = ({
         }}
       />
       <Stack
-        spacing={{ base: "3", md: "4" }}
+        spacing="4"
         p={{ base: "4", lg: "8" }}
         textAlign={{ base: "center", xl: "start" }}
         borderRadius={{ xl: "base" }}
@@ -73,12 +73,16 @@ const HubHero = ({
           </Heading>
           <Text size="lg">{description}</Text>
         </Stack>
-        <HStack justify={{ md: "center", xl: "start" }} spacing="4">
+        <Stack
+          direction={{ base: "column", md: "row" }}
+          justify={{ md: "center", xl: "start" }}
+          spacing="4"
+        >
           {buttons?.map((button, idx) => {
             if (!button) return
             return <CallToAction key={idx} index={idx} {...button} />
           })}
-        </HStack>
+        </Stack>
       </Stack>
     </Box>
   )

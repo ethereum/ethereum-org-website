@@ -22,7 +22,7 @@ lang: ja
 ## チャットルーム {#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - イーサリアム開発プロジェクトの管理支援に関するコミュニティ</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> - ETHGlobalが運営するDiscordチャット: 世界中のイーサリアムハッカーのオンラインコミュニティ</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://ethglobal.com/discord">Ethereum Hackers</Link> - ETHGlobalが運営するDiscordチャット: 世界中のイーサリアムハッカーのオンラインコミュニティ</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - イーサリアム開発に関するDiscordコミュニティ</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link> - コミュニティが運営するステーカーおよびステーカーになるこを考えている人向けのガイダンス、教育、サポート、リソース</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">ethereum.orgウェブサイトチーム</Link> - ethereum.orgウェブ開発とデザインのコミュニティチャット</SocialListItem>

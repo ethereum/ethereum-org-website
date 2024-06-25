@@ -20,7 +20,6 @@ type MobileNavMenuProps = ButtonProps & {
   toggleColorMode: () => void
   toggleSearch: () => void
   linkSections: NavSections
-  fromPageParameter: string
   drawerContainerRef: RefObject<HTMLElement | null>
 }
 
@@ -30,7 +29,6 @@ const MobileNavMenu = ({
   toggleColorMode,
   toggleSearch,
   linkSections,
-  fromPageParameter,
   drawerContainerRef,
   ...props
 }: MobileNavMenuProps) => {

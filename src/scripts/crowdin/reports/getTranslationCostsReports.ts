@@ -4,7 +4,7 @@ import { getCrowdinCode } from "../utils"
 import { fetchTranslationCostsReport } from "./reportsHelpers"
 
 async function getTranslationCostsReports(translatedMarkdownPaths) {
-  for (let lang in translatedMarkdownPaths) {
+  for (const lang in translatedMarkdownPaths) {
     const fileIds = await findFileIdsByPaths(
       translatedMarkdownPaths[lang],
       lang

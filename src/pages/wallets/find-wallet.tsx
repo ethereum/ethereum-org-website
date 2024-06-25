@@ -130,7 +130,7 @@ const FindWalletPage = ({
 
   const updateFilterOptions = (keys, value) => {
     const updatedFilters = { ...filters }
-    for (let key of keys) {
+    for (const key of keys) {
       updatedFilters[key] = value
     }
     setFilters(updatedFilters)

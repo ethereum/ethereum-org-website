@@ -13,7 +13,7 @@ type ItemProps = {
 }
 
 const ItemContent = ({ item, lvl }: ItemProps) => {
-  const { label, description, icon, ...action } = item
+  const { label, description, ...action } = item
   const { asPath } = useRouter()
   const menuColors = useNavMenuColors()
 
