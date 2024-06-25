@@ -175,6 +175,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/tutorials/how-to-view-nft-in-metamask",
     "/developers/tutorials/how-to-write-and-deploy-an-nft",
     "/developers/tutorials/interact-with-other-contracts-from-solidity",
+    "/developers/tutorials/ipfs-decentralized-ui",
     "/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app",
     "/developers/tutorials/learn-foundational-ethereum-topics-with-sql",
     "/developers/tutorials/logging-events-smart-contracts",
