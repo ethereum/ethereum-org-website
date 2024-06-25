@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import ChartComponent from "."
 
 const meta = {
-  title: "Charts / Energy Consumption Chart",
+  title: "Molecules / Display Content / Charts / Energy Consumption",
   component: ChartComponent,
 } satisfies Meta<typeof ChartComponent>
 
