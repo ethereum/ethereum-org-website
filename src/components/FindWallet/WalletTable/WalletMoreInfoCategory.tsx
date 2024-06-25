@@ -20,8 +20,10 @@ import Tooltip from "@/components/Tooltip"
 
 import walletFilterData from "@/data/wallets/wallet-filters"
 
+import type { WalletMoreInfoData } from "@/hooks/useWalletTable"
+
 type WalletMoreInfoCategoryProps = {
-  wallet: any
+  wallet: WalletMoreInfoData
   orderedFeatureDropdownItems: DropdownOption[]
   headingLabel: string
   sectionName: string

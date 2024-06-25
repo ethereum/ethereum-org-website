@@ -1,4 +1,5 @@
 import { getI18n } from "react-i18next"
+
 import { ns as exposedNs } from "./i18next"
 
 /**

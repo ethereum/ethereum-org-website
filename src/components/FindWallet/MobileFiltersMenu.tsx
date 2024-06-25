@@ -10,6 +10,8 @@ import {
   Flex,
 } from "@chakra-ui/react"
 
+import type { WalletFilter } from "@/lib/types"
+
 import { Button } from "@/components/Buttons"
 
 import OldHeading from "../OldHeading"
@@ -23,6 +25,9 @@ import WalletFilterSidebar, {
 
 type MobileFiltersMenuProps = WalletFilterSidebarProps & {
   showMobileSidebar: boolean
+  setFilters: React.Dispatch<React.SetStateAction<WalletFilter>>
+  selectedPersona: number
+  setSelectedPersona: React.Dispatch<React.SetStateAction<number>>
   onOpen: () => void
   onClose: () => void
   totalWallets: number

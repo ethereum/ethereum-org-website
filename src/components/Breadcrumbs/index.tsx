@@ -55,7 +55,6 @@ const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
           },
         ]
       : []),
-    ,
     ...sliced.map((path, idx) => ({
       fullPath: slugChunk.slice(0, idx + 2).join("/") + "/",
       text: t(path),

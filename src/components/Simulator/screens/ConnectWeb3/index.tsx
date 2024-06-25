@@ -77,7 +77,7 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
 
   return (
     <>
-      {[0].includes(step) && <Browser progressStepper={progressStepper} />}
+      {[0].includes(step) && <Browser />}
       {[1, 2, 3].includes(step) && (
         <Web3App displayUrl={EXAMPLE_APP_URL}>
           <Flex
