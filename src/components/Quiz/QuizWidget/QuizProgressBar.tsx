@@ -1,14 +1,25 @@
 import { useCallback } from "react"
 import { Center, ChakraProps, Container } from "@chakra-ui/react"
 
+import type { AnswerChoice, Question } from "@/lib/types"
+
 import { PROGRESS_BAR_GAP } from "@/lib/constants"
 
-import { useQuizWidgetContext } from "./context"
+import type { AnswerStatus } from "./useQuizWidget"
 
-export const QuizProgressBar = () => {
-  const { questions, answerStatus, currentQuestionIndex, userQuizProgress } =
-    useQuizWidgetContext()
+type QuizProgressBarProps = {
+  questions: Question[]
+  answerStatus: AnswerStatus
+  currentQuestionIndex: number
+  userQuizProgress: AnswerChoice[]
+}
 
+export const QuizProgressBar = ({
+  questions,
+  answerStatus,
+  currentQuestionIndex,
+  userQuizProgress,
+}: QuizProgressBarProps) => {
   const progressBarBackground = useCallback(
     (index: number): ChakraProps["bg"] => {
       if (
