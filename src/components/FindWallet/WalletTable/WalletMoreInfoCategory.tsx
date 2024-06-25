@@ -66,7 +66,6 @@ export const WalletMoreInfoCategory = ({
                 listStyleType="none"
                 display="flex"
                 mb={2}
-                alignItems="center"
                 width={{ base: "auto", xl: "full" }}
                 sx={{
                   p: {
