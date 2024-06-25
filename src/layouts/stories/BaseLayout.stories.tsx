@@ -21,7 +21,7 @@ const meta = {
         disable: true,
       },
     },
-    lastDeployDate: {
+    lastDeployLocaleTimestamp: {
       table: {
         disable: true,
       },
@@ -40,6 +40,6 @@ export const BaseLayout: StoryObj<typeof meta> = {
     ),
     contentIsOutdated: false,
     contentNotTranslated: false,
-    lastDeployDate: "May 14, 2021",
+    lastDeployLocaleTimestamp: "May 14, 2021",
   },
 }
