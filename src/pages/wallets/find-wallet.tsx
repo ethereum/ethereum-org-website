@@ -110,7 +110,7 @@ const FindWalletPage = ({
   const resetWalletFilter = useRef(() => {})
 
   const [filters, setFilters] = useState(WALLETS_FILTERS_DEFAULT)
-  const [selectedPersona, setSelectedPersona] = useState(NaN)
+  const [selectedPersona, setSelectedPersona] = useState<number[]>([])
   const [supportedLanguage, setSupportedLanguage] = useState(DEFAULT_LOCALE)
 
   const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
@@ -137,7 +137,7 @@ const FindWalletPage = ({
   }
 
   const resetFilters = () => {
-    setSelectedPersona(NaN)
+    setSelectedPersona([])
     setFilters(WALLETS_FILTERS_DEFAULT)
     setSupportedLanguage(DEFAULT_LOCALE)
   }
@@ -212,6 +212,7 @@ const FindWalletPage = ({
           selectedPersona={selectedPersona}
           setSelectedPersona={setSelectedPersona}
           showMobileSidebar={showMobileSidebar}
+          resetWalletFilter={resetWalletFilter}
         />
       </Box>
 

@@ -84,6 +84,7 @@ export const MobileFiltersMenu = ({
                 selectedPersona={selectedPersona}
                 setSelectedPersona={setSelectedPersona}
                 showMobileSidebar={showMobileSidebar}
+                resetWalletFilter={resetWalletFilter}
               />
             </Box>
 
