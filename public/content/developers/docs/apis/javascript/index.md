@@ -29,7 +29,7 @@ Using providers, these libraries allow you to connect to Ethereum and read its d
 **Ethers example**
 
 ```js
-// A Web3Provider wraps a standard Web3 provider, which is
+// A BrowserProvider wraps a standard Web3 provider, which is
 // what MetaMask injects as window.ethereum into each page
 const provider = new ethers.BrowserProvider(window.ethereum)
 
