@@ -6,7 +6,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import DismissableBanner from "."
 
 const meta = {
-  title: "Molecules / Navigation",
+  title: "Molecules / Navigation / DismissableBanner",
   component: DismissableBanner,
   parameters: {
     layout: "fullscreen",
