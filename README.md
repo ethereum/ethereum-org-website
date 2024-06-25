@@ -1869,6 +1869,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Khemmie-Ray"><img src="https://avatars.githubusercontent.com/u/89976006?v=4?s=100" width="100px;" alt="Atoyebi Oluwakemi"/><br /><sub><b>Atoyebi Oluwakemi</b></sub></a><br /><a href="#maintenance-Khemmie-Ray" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/pglekshmi"><img src="https://avatars.githubusercontent.com/u/107828565?v=4?s=100" width="100px;" alt="pglekshmi"/><br /><sub><b>pglekshmi</b></sub></a><br /><a href="#maintenance-pglekshmi" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
