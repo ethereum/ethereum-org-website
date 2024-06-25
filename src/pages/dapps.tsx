@@ -832,7 +832,7 @@ const DappsPage = () => {
       title: "Meeds",
       description: t("page-dapps-dapp-description-meeds"),
       link: "https://meeds.io",
-      image: sablier,
+      image: meeds,
       alt: t("page-dapps-meeds-logo-alt"),
     },    
   ]
