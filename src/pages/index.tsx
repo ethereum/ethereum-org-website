@@ -192,10 +192,10 @@ type Props = BasePageProps & {
 
 export const getStaticProps = (async ({ locale }) => {
   const metricResults: AllMetricData = {
-    totalEthStaked: await cachedFetchTotalEthStaked(),
-    nodeCount: await cachedFetchNodes(),
-    totalValueLocked: await cachedFetchTotalValueLocked(),
-    txCount: await cachedFetchTxCount(),
+    totalEthStaked: { data: [], value: 0 },
+    nodeCount: { data: [], value: 0 },
+    totalValueLocked: { data: [], value: 0 },
+    txCount: { data: [], value: 0 },
   }
 
   const communityEvents = await cachedFetchCommunityEvents()
