@@ -18,7 +18,7 @@ If you're new to the topic of nodes, we recommend first checking out our user-fr
 A "node" is any instance of Ethereum client software that is connected to other computers also running Ethereum software, forming a network. A client is an implementation of Ethereum that verifies data against the protocol rules and keeps the network secure. A node has to run two clients: a consensus client and an execution client.
 
 - The execution client (also known as the Execution Engine, EL client or formerly the Eth1 client) listens to new transactions broadcasted in the network, executes them in EVM, and holds the latest state and database of all current Ethereum data.
-- The consensus client (also known as the Beacon Node, CL client or formerly the Eth2 client) implements the Proof of Stake (PoS) consensus algorithm, which enables the network to achieve agreement based on validated data from the execution client. There is also a third piece of software, known as a 'validator' that can be added to the consensus client, allowing a node to participate in securing the network.
+- The consensus client (also known as the Beacon Node, CL client or formerly the Eth2 client) implements the proof-of-stake consensus algorithm, which enables the network to achieve agreement based on validated data from the execution client. There is also a third piece of software, known as a 'validator' that can be added to the consensus client, allowing a node to participate in securing the network.
 
 These clients work together to keep track of the head of the Ethereum chain and allow users to interact with the Ethereum network. The modular design with multiple pieces of software working together is called [encapsulated complexity](https://vitalik.eth.limo/general/2022/02/28/complexity.html). This approach made it easier to execute [The Merge](/roadmap/merge) seamlessly, makes client software easier to maintain and develop, and enables the reuse of individual clients, for example, in the [layer 2 ecosystem](/layer-2/).
 
@@ -105,7 +105,7 @@ Running your own node enables you to use Ethereum in a private, self-sufficient 
 A diverse set of nodes is important for Ethereum’s health, security and operational resiliency.
 
 - Full nodes enforce the consensus rules so they can’t be tricked into accepting blocks that don't follow them. This provides extra security in the network because if all the nodes were light nodes, which don't do full verification, validators could attack the network.
-- In case of an attack which overcomes the crypto-economic defenses of [PoS](/developers/docs/consensus-mechanisms/pos/#what-is-pos), a social recovery can be performed by full nodes choosing to follow the honest chain.
+- In case of an attack which overcomes the crypto-economic defenses of [proof-of-stake](/developers/docs/consensus-mechanisms/pos/#what-is-pos), a social recovery can be performed by full nodes choosing to follow the honest chain.
 - More nodes in the network result in a more diverse and robust network, the ultimate goal of decentralization, which enables a censorship-resistant and reliable system.
 - Full nodes provide access to blockchain data for lightweight clients that depend on it. Light nodes don't store the whole blockchain, instead they verify data via the [state roots in block headers](/developers/docs/blocks/#block-anatomy). They can request more information from full nodes if they need it.
 
@@ -184,7 +184,7 @@ Learn more about it by reading its [documentation](https://github.com/ethereumjs
 
 ## Consensus clients {#consensus-clients}
 
-There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/roadmap/beacon-chain/). They are responsible for all consensus-related logic including the fork-choice algorithm, processing attestations and managing [PoS](/developers/docs/consensus-mechanisms/pos) rewards and penalties.
+There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/roadmap/beacon-chain/). They are responsible for all consensus-related logic including the fork-choice algorithm, processing attestations and managing [proof-of-stake](/developers/docs/consensus-mechanisms/pos) rewards and penalties.
 
 | Client                                                        | Language   | Operating systems     | Networks                                                          |
 | ------------------------------------------------------------- | ---------- | --------------------- | ----------------------------------------------------------------- |
@@ -274,7 +274,7 @@ Light client mode downloads all block headers, block data, and verifies some ran
 - Gets only the latest state while relying on trust in developers and consensus mechanism.
 - Client ready to use with current network state in a few minutes.
 
-**NB** Light sync does not yet work with PoS Ethereum - new versions of light sync should ship soon!
+**NB** Light sync does not yet work with proof-of-stake Ethereum - new versions of light sync should ship soon!
 
 [More on light clients](/developers/docs/nodes-and-clients/light-clients/).
 
