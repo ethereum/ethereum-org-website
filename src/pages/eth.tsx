@@ -19,7 +19,6 @@ import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
 import Card from "@/components/Card"
 import CardList from "@/components/CardList"
-import EthPriceCard from "@/components/EthPriceCard"
 import EthVideo from "@/components/EthVideo"
 import FeedbackCard from "@/components/FeedbackCard"
 import HorizontalCard from "@/components/HorizontalCard"
@@ -393,7 +392,7 @@ const EthPage = () => {
             <Slogan>{t("page-eth-currency-for-future")}</Slogan>
             <Subtitle>{t("page-eth-is-money")}</Subtitle>
             <SubtitleTwo>{t("page-eth-currency-for-apps")}</SubtitleTwo>
-            <EthPriceCard isLeftAlign={false} mb={8} />
+            {/* <EthPriceCard isLeftAlign={false} mb={8} /> */}
             <ButtonLink to="/get-eth/">
               {t("page-eth-button-buy-eth")}
             </ButtonLink>

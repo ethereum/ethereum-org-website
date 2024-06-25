@@ -18,7 +18,6 @@ import Card from "@/components/Card"
 import type { CardListItem } from "@/components/CardList"
 import CardList from "@/components/CardList"
 import CentralizedExchanges from "@/components/CentralizedExchanges"
-import EthPriceCard from "@/components/EthPriceCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
@@ -239,7 +238,7 @@ const GetEthPage = ({
             {t("page-get-eth-where-to-buy-desc")}
           </Text>
           <br />
-          <Box as={EthPriceCard} mb={8} />
+          {/* <Box as={EthPriceCard} mb={8} /> */}
           <ButtonLink
             href="#country-picker"
             onClick={() =>
