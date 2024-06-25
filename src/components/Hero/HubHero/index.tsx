@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react"
+import { Box, Heading, Stack, Text } from "@chakra-ui/react"
 
 import type { CommonHeroProps } from "@/lib/types"
 

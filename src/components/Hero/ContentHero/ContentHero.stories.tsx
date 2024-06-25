@@ -1,4 +1,3 @@
-import { getI18n } from "react-i18next"
 import { Meta, StoryObj } from "@storybook/react"
 
 import { getTranslation } from "@/storybook-utils"

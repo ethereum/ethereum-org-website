@@ -11,6 +11,7 @@ type StatsBoxGridProps = {
 
 const StatsBoxGrid = ({ data }: StatsBoxGridProps) => {
   const metrics = useStatsBoxGrid(data)
+
   return (
     <SimpleGrid
       columns={{ base: 1, lg: 2 }}
