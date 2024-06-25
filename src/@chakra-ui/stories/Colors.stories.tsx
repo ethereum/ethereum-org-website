@@ -120,6 +120,7 @@ export const SemanticScheme: StoryObj = {
       attention: ["neutral", "outline"],
       error: ["neutral", "outline"],
     }
+
     return (
       <Flex direction="column" gap="16">
         {tokenNames.map((tokenName) => {
@@ -130,12 +131,12 @@ export const SemanticScheme: StoryObj = {
           const tokenObj = semanticTokenColors[tokenName]
 
           const filteredTokenObj =
-            "base" in tokenObj
-              ? Object.keys(semanticTokens["colors"][tokenName]).filter(
-                  (key) => !currentDeprecatedTokens.includes(key)
-                )
+          "base" in tokenObj
+          ? Object.keys(semanticTokens["colors"][tokenName]).filter(
+            (key) => !currentDeprecatedTokens.includes(key)
+          )
               : undefined
-
+          
           return (
             <Flex key={tokenName} direction="column" gap="4">
               <Heading>{capitalize(tokenName)}</Heading>
@@ -179,6 +180,6 @@ const SemanticColorBlock = ({
       size="20"
       bg={tokenName === nestedKey ? tokenName : `${tokenName}.${nestedKey}`}
     />
-    <Text>{nestedKey}</Text>
+    <Text>{tokenName}.{nestedKey}</Text>
   </Flex>
 )
