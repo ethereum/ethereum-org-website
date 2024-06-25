@@ -1865,6 +1865,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/SnehalSrivastava27"><img src="https://avatars.githubusercontent.com/u/118104081?v=4?s=100" width="100px;" alt="SnehalSrivastava27"/><br /><sub><b>SnehalSrivastava27</b></sub></a><br /><a href="#maintenance-SnehalSrivastava27" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/wrexgem"><img src="https://avatars.githubusercontent.com/u/134736543?v=4?s=100" width="100px;" alt="wrexgem"/><br /><sub><b>wrexgem</b></sub></a><br /><a href="#tool-wrexgem" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/cd-sigma"><img src="https://avatars.githubusercontent.com/u/119534349?v=4?s=100" width="100px;" alt="ciphernova"/><br /><sub><b>ciphernova</b></sub></a><br /><a href="#content-cd-sigma" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/CodeMongerrr"><img src="https://avatars.githubusercontent.com/u/99281767?v=4?s=100" width="100px;" alt="Aditya Joshi"/><br /><sub><b>Aditya Joshi</b></sub></a><br /><a href="#ideas-CodeMongerrr" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
 </table>
