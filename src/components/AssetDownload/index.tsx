@@ -27,7 +27,6 @@ const AssetDownload = ({
   artistUrl,
   image,
   title,
-  svgUrl,
   ...props
 }: AssetDownloadProps) => {
   const { t } = useTranslation(["page-assets"])

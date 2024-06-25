@@ -22,7 +22,7 @@ export const useFeedbackWidget = () => {
     setFeedbackSubmitted(false)
     setIsExpanded(false)
 
-    let expandTimeout = setTimeout(() => setIsExpanded(true), 30_000)
+    const expandTimeout = setTimeout(() => setIsExpanded(true), 30_000)
 
     return () => clearTimeout(expandTimeout)
   }, [asPath, onClose])

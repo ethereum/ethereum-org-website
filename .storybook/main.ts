@@ -1,7 +1,6 @@
-import type { StorybookConfig } from "@storybook/nextjs"
-import { propNames } from "@chakra-ui/react"
-
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin"
+import { propNames } from "@chakra-ui/react"
+import type { StorybookConfig } from "@storybook/nextjs"
 
 /**
  * Note regarding package.json settings related to Storybook:

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 // Library requires
 const i18Config = require("../../i18n.config.json")
 const {
@@ -167,7 +168,7 @@ const trackers: TrackerObject = {
  * @param message Any arbitrary message
  * @param optionalParams Any additional arbitrary messages
  */
-const log = (message: any, ...optionalParams: any): void => {
+const log = (message: unknown, ...optionalParams: unknown[]): void => {
   VERBOSE && console.log(message, ...optionalParams)
 }
 

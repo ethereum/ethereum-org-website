@@ -66,7 +66,7 @@ export const REGULAR_RATES: ReportsModel.RegularRate[] = [
   },
 ]
 
-export const languagePathRootRegExp = /^.+\/content\/translations\/[a-z\-]*\//
+export const languagePathRootRegExp = /^.+\/content\/translations\/[a-z-]*\//
 
 // Metrics
 export const DAYS_TO_FETCH = 90

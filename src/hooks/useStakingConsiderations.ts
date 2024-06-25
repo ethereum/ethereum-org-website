@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { ElementType, useState } from "react"
 import { useTranslation } from "next-i18next"
 import { chakra } from "@chakra-ui/react"
 
@@ -27,7 +27,7 @@ type DataType = {
   valid: string
   caution: string
   warning: string
-  Svg: any
+  Svg: ElementType
   matomo: MatomoEventOptions
 }
 
@@ -403,7 +403,7 @@ export const useStakingConsiderations = ({
   }
 
   const indicatorSvgStyle = { width: 20, height: "auto" }
-  const StyledSvg = !!Svg
+  const StyledSvg = Svg
     ? chakra(Svg, {
         baseStyle: {
           path: {
