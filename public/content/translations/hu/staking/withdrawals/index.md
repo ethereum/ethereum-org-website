@@ -196,7 +196,7 @@ eventName="read more">
 
 Javasoljuk, hogy a validátorműködtetők látogassanak el a <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> oldalra, ahol további információkat találhatnak a letét kivonásához kapcsolódó felkészülésről, az események időzítéséről és arról, hogyan működik ez a kivonási funkció.
 
-Próbálja ki először a beállításait egy teszthálózaton, látogasson el a <a href="https://goerli.launchpad.ethereum.org">Goerli-teszthálózat Staking Launchpad</a> oldalára.
+Próbálja ki először a beállításait egy teszthálózaton, látogasson el a <a href="https://holesky.launchpad.ethereum.org">Holesky-teszthálózat Staking Launchpad</a> oldalára.
 
 </ExpandableCard>
 

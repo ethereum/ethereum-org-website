@@ -1554,6 +1554,16 @@ const DappsPage = () => {
                 />
               </RightColumn>
             </TwoColumnContent>
+            <Box py={4} w="full">
+              <Text m={0} fontWeight="bold">
+                {t("page-dapps:page-dapps-explore-title")}
+              </Text>
+              <Text m={0}>
+                <InlineLink href="https://www.ethereum-ecosystem.com/apps">
+                  {t("page-dapps:page-dapps-explore")}
+                </InlineLink>
+              </Text>
+            </Box>
             <CalloutBanner
               mt={32}
               mx={0}
@@ -1768,6 +1778,18 @@ const DappsPage = () => {
                 />
               </RightColumn>
             </TwoColumnContent>
+          </Content>
+        )}
+        {selectedCategory !== CategoryType.FINANCE && (
+          <Content>
+            <Text m={0} fontWeight="bold">
+              {t("page-dapps:page-dapps-explore-title")}
+            </Text>
+            <Text m={0}>
+              <InlineLink href="https://www.ethereum-ecosystem.com/apps">
+                {t("page-dapps:page-dapps-explore")}
+              </InlineLink>
+            </Text>
           </Content>
         )}
         {/* General content for all categories */}

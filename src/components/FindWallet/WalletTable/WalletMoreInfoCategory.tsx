@@ -20,8 +20,10 @@ import Tooltip from "@/components/Tooltip"
 
 import walletFilterData from "@/data/wallets/wallet-filters"
 
+import type { WalletMoreInfoData } from "@/hooks/useWalletTable"
+
 type WalletMoreInfoCategoryProps = {
-  wallet: any
+  wallet: WalletMoreInfoData
   orderedFeatureDropdownItems: DropdownOption[]
   headingLabel: string
   sectionName: string
@@ -88,19 +90,19 @@ export const WalletMoreInfoCategory = ({
 
                 <Text px={1} lineHeight={1}>
                   {feature.label}
+                  <Tooltip
+                    content={
+                      <Text color="body.base !important">
+                        {t(walletFilterData[feature.filterKey].description)}
+                      </Text>
+                    }
+                  >
+                    <Box as="span" whiteSpace="nowrap">
+                      &nbsp;
+                      <Icon as={MdInfoOutline} color={featureColor} />
+                    </Box>
+                  </Tooltip>
                 </Text>
-
-                <Tooltip
-                  content={
-                    <Text color="body.base !important">
-                      {t(walletFilterData[feature.filterKey].description)}
-                    </Text>
-                  }
-                >
-                  <Box as="span">
-                    <Icon as={MdInfoOutline} color={featureColor} />
-                  </Box>
-                </Tooltip>
               </ListItem>
             )
         })}

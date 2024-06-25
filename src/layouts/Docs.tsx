@@ -209,7 +209,6 @@ type DocsLayoutProps = Pick<
 export const DocsLayout = ({
   children,
   frontmatter,
-  slug,
   tocItems,
   lastEditLocaleTimestamp,
   contributors,
@@ -236,7 +235,6 @@ export const DocsLayout = ({
             lastEditLocaleTimestamp={lastEditLocaleTimestamp}
           />
           <TableOfContents
-            slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
             isMobile
@@ -251,7 +249,6 @@ export const DocsLayout = ({
         </Content>
         {tocItems && (
           <TableOfContents
-            slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
             maxDepth={frontmatter.sidebarDepth!}

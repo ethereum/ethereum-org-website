@@ -18,11 +18,8 @@ export type WalletFilterSidebarProps = Omit<BoxProps, "children"> & {
   filters: WalletFilter
   resetWalletFilter: React.MutableRefObject<() => void>
   resetFilters: () => void
-  setFilters: React.Dispatch<React.SetStateAction<WalletFilter>>
-  selectedPersona: number
-  setSelectedPersona: React.Dispatch<React.SetStateAction<number>>
-  updateFilterOption: (key: any) => void
-  updateFilterOptions: (keys: any, value: any) => void
+  updateFilterOption: (key: unknown) => void
+  updateFilterOptions: (keys: unknown, value: unknown) => void
   showMobileSidebar?: boolean
 }
 
@@ -30,9 +27,6 @@ const WalletFilterSidebar = ({
   filters,
   resetWalletFilter,
   resetFilters,
-  setFilters,
-  selectedPersona,
-  setSelectedPersona,
   updateFilterOption,
   updateFilterOptions,
   top,

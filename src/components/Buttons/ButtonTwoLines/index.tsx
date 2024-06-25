@@ -70,7 +70,7 @@ const ButtonTwoLines = (props: ButtonTwoLinesProps) => {
 
   return (
     // TODO: fix type error
-    // @ts-ignore
+    // @ts-expect-error incompatible prop type shapes
     <Component
       {...buttonStyles}
       size={size}

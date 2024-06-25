@@ -10,7 +10,6 @@ import {
   type PopoverBodyProps,
   PopoverCloseButton,
   PopoverContent,
-  PopoverHeader,
   PopoverTrigger,
 } from "@chakra-ui/react"
 

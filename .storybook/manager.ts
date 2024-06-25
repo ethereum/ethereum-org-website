@@ -1,6 +1,8 @@
 import { addons } from "@storybook/manager-api"
-import theme from "./theme"
+
 import favicon from "../public/images/favicon.png"
+
+import theme from "./theme"
 
 addons.setConfig({
   theme,
