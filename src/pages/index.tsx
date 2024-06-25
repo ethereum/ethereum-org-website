@@ -226,10 +226,15 @@ export const getStaticProps = (async ({ locale }) => {
   }
 }) satisfies GetStaticProps<Props>
 
-// Lazy-load Codeblock on initial load
 const CodeblockSkeleton = () => (
   <Stack px={6} pt="2.75rem" h="50vh">
-    <SkeletonText mt="4" noOfLines={12} startColor="body.base" />
+    <SkeletonText
+      mt="4"
+      noOfLines={10}
+      spacing={3}
+      skeletonHeight="1rem"
+      startColor="body.base"
+    />
   </Stack>
 )
 
