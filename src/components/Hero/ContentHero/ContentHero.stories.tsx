@@ -1,3 +1,4 @@
+import { getI18n } from "react-i18next"
 import { Meta, StoryObj } from "@storybook/react"
 
 import { getTranslation } from "@/storybook-utils"
@@ -22,6 +23,15 @@ const meta = {
 export default meta
 
 export const ContentHero: StoryObj = {
+  parameters: {
+    // Set asPath in mock router so the Breadcrums component can render
+    // the "home" text with correct translation
+    nextjs: {
+      router: {
+        asPath: "/en",
+      },
+    },
+  },
   render: () => {
     const PAGE_LEARN_NS = "page-learn"
     const buttons: ContentHeroProps["buttons"] = [
@@ -45,7 +55,7 @@ export const ContentHero: StoryObj = {
     ]
     return (
       <ContentHeroComponent
-        breadcrumbs={{ slug: "/en/run-a-node/" }}
+        breadcrumbs={{ slug: "/run-a-node/" }}
         heroImg="/images/upgrades/merge.png"
         // Can not properly hardcode this URL. So it's left blank
         blurDataURL=""
