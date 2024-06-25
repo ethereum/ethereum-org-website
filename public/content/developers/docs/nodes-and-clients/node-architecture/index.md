@@ -10,7 +10,7 @@ When Ethereum was using [Proof of Work](/developers/docs/consensus-mechanisms/po
 
 The diagram below shows the relationship between the two Ethereum clients. The two clients connect to their own respective peer-to-peer (P2P) networks. Separate P2P networks are needed as the execution clients gossip transactions over their P2P network, enabling them to manage their local transaction pool, whilst the consensus clients gossip blocks over their P2P network, enabling consensus and chain growth.
 
-![](node-architecture.png)
+![](node-architecture2.png)
 
 _This image is borrowed from geth.ethereum.org and uses the Geth logo to represent execution clients - there are other options for the execution client including Erigon, Nethermind, and Besu_.
 
