@@ -1,33 +1,9 @@
-import { StaticImageData } from "next/image"
+import Image, { StaticImageData } from "next/image"
 import type { ReactNode } from "react"
-import {
-  Box,
-  type BoxProps,
-  Flex,
-  Heading,
-  LinkBox,
-  type LinkBoxProps,
-  LinkOverlay,
-  useColorModeValue,
-} from "@chakra-ui/react"
 
-import { Image } from "@/components/Image"
-import { BaseLink } from "@/components/Link"
-import Text from "@/components/OldText"
+import Link from "next/link"
 
-const linkBoxFocusStyles: BoxProps = {
-  borderRadius: "base",
-  boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
-  bg: "tableBackgroundHover",
-  transition: "transform 0.1s",
-  transform: "scale(1.02)",
-}
-
-const linkFocusStyles: BoxProps = {
-  textDecoration: "none",
-}
-
-export type ActionCardProps = Omit<LinkBoxProps, "title"> & {
+export type ActionCardProps = {
   children?: ReactNode
   to: string
   alt?: string
@@ -53,65 +29,47 @@ const ActionCard = ({
   isBottom = true,
   ...props
 }: ActionCardProps) => {
-  const descriptionColor = useColorModeValue("blackAlpha.700", "whiteAlpha.800")
-
   return (
-    <LinkBox
-      boxShadow="
-	  0px 14px 66px rgba(0, 0, 0, 0.07),
-    0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05)"
-      color="text"
-      flex="1 1 372px"
-      _hover={linkBoxFocusStyles}
-      _focus={linkBoxFocusStyles}
-      className={className}
-      m={4}
+    <div
+      className={`flex-1 m-4 ${className}`}
+      style={{
+        boxShadow:
+          "0px 14px 66px rgba(0, 0, 0, 0.07), 0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05)",
+        color: "var(--color-text)",
+      }}
       {...props}
     >
-      <Flex
-        h="260px"
-        bg="cardGradient"
-        direction="row"
-        justify={isRight ? "flex-end" : "center"}
-        align={isBottom ? "flex-end" : "center"}
-        className="action-card-image-wrapper"
-        boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
+      <div
+        className={`flex h-[260px] bg-cardGradient justify-${
+          isRight ? "flex-end" : "center"
+        } items-${isBottom ? "flex-end" : "center"} action-card-image-wrapper`}
+        style={{ boxShadow: "inset 0px -1px 0px rgba(0, 0, 0, 0.1)" }}
       >
         <Image
           src={image}
           width={imageWidth}
-          maxH="full"
+          className="h-full"
           alt={alt || ""}
           style={{ objectFit: "cover" }}
         />
-      </Flex>
-      <Box p={6} className="action-card-content">
-        <Heading
-          as="h3"
-          fontSize="2xl"
-          mt={2}
-          mb={4}
-          fontWeight={600}
-          lineHeight={1.4}
-        >
-          <LinkOverlay
-            as={BaseLink}
-            color="text"
-            hideArrow
-            textDecoration="none"
-            to={to}
-            _hover={linkFocusStyles}
-            _focus={linkFocusStyles}
+      </div>
+      <div className="p-6 action-card-content">
+        <h3 className="text-2xl font-semibold mt-2 mb-4 leading-[1.4]">
+          <Link
+            href={to}
+            className="no-underline text-current"
+            style={{
+              color: "var(--color-text)",
+              textDecoration: "none",
+            }}
           >
             {title}
-          </LinkOverlay>
-        </Heading>
-        <Text mb={0} color={descriptionColor}>
-          {description}
-        </Text>
-        {children && <Box mt={8}>{children}</Box>}
-      </Box>
-    </LinkBox>
+          </Link>
+        </h3>
+        <p className={`mb-0 bg-slate-200`}>{description}</p>
+        {children && <div className="mt-8">{children}</div>}
+      </div>
+    </div>
   )
 }
 

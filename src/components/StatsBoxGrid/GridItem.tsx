@@ -10,22 +10,20 @@ import {
 import ChartDataLabels from "chartjs-plugin-datalabels"
 import { Line } from "react-chartjs-2"
 import { MdInfoOutline } from "react-icons/md"
-import { Box, Flex, Icon, Text } from "@chakra-ui/react"
 
 import type { StatsBoxMetric, TimestampedData } from "@/lib/types"
 
 import { RANGES } from "@/lib/constants"
 
-import InlineLink from "../Link"
-import OldText from "../OldText"
 import StatErrorMessage from "../StatErrorMessage"
-import Tooltip from "../Tooltip"
+// import Tooltip from "../Tooltip"
 import Translation from "../Translation"
+import Link from "next/link"
 
 const tooltipContent = (metric: StatsBoxMetric) => (
   <div>
     <Translation id="data-provided-by" />{" "}
-    <InlineLink href={metric.apiUrl}>{metric.apiProvider}</InlineLink>
+    <Link href={metric.apiUrl}>{metric.apiProvider}</Link>
   </div>
 )
 
@@ -53,29 +51,16 @@ export const GridItem = ({ metric }: GridItemProps) => {
   const value = hasError ? (
     <StatErrorMessage />
   ) : (
-    <Box display="inline">
-      <Box
-        fontSize={{ base: "max(8.8vw, 48px)", lg: "min(4.4vw, 4rem)" }}
-        display="inline"
-        lineHeight="100%"
-      >
+    <div className="inline">
+      <div className="inline text-[max(8.8vw,48px)] lg:text-[min(4.4vw,4rem)] leading-[100%]">
         {state.value}{" "}
-      </Box>
-      <Box display="inline">
-        <Tooltip content={tooltipContent(metric)}>
-          <Box as="span" display="inline-block">
-            <Icon
-              as={MdInfoOutline}
-              boxSize={6}
-              fill="text"
-              _hover={{ fill: "primary.base" }}
-              _active={{ fill: "primary.base" }}
-              _focus={{ fill: "primary.base" }}
-            />
-          </Box>
-        </Tooltip>
-      </Box>
-    </Box>
+      </div>
+      <div className="inline">
+        <span className="inline-block">
+          <MdInfoOutline className="box-content w-6 h-6 fill-current text-current hover:fill-primary-base active:fill-primary-base focus:fill-primary-base" />
+        </span>
+      </div>
+    </div>
   )
 
   // Returns either 90 or 30-day data range depending on `range` selection
@@ -165,59 +150,27 @@ export const GridItem = ({ metric }: GridItemProps) => {
   }
 
   return (
-    <Flex
-      position="relative"
-      color="text"
-      height={80}
-      flexDirection="column"
-      justifyContent="space-between"
-      borderX={{
-        base: "0px solid #000000",
-        lg: "1px solid",
-      }}
-      borderY="1px solid"
-      marginTop={{
-        base: "-1px",
-        lg: "0",
-      }}
-      padding={{ base: "2rem 1rem 1rem", lg: "1.5rem" }}
+    <div
+      className="relative text-current h-20 flex flex-col justify-between border-y border lg:border-x lg:border-y-0 mt-[-1px] lg:mt-0 p-8 lg:p-6"
+      style={{ borderColor: "#000000" }}
     >
-      <Box>
-        <Text
-          fontSize="xl"
-          mb={2}
-          color="text"
-          textTransform="uppercase"
-          fontFamily="monospace"
-        >
-          {title}
-        </Text>
-        <OldText>{description}</OldText>
-      </Box>
+      <div>
+        <p className="text-xl mb-2 text-current uppercase font-mono">{title}</p>
+        <p>{description}</p>
+      </div>
       {hasData && (
-        <Box position="absolute" insetInline="0" bottom={7} height="60%">
+        <div className="absolute inset-x-0 bottom-7 h-[60%]">
           <Line options={chartOptions} data={chartData} />
-        </Box>
+        </div>
       )}
-      <Flex
-        justifyContent="space-between"
-        position="relative"
-        alignItems="flex-end"
-      >
-        <Box
-          fontWeight={600}
-          color="text"
-          flexWrap="wrap"
-          textOverflow="ellipsis"
-        >
+      <div className="relative flex justify-between items-end">
+        <div className="font-semibold text-current flex-wrap text-ellipsis">
           {value}
-        </Box>
+        </div>
         {hasData && (
-          <Box fontFamily="monospace" me="-1" mb="-1">
-            {buttonContainer}
-          </Box>
+          <div className="font-mono me-[-1] mb-[-1]">{buttonContainer}</div>
         )}
-      </Flex>
-    </Flex>
+      </div>
+    </div>
   )
 }

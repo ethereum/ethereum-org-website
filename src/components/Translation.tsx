@@ -1,11 +1,11 @@
 import htmr, { type HtmrOptions } from "htmr"
 import type { TOptions } from "i18next"
+// import TooltipLink from "./TooltipLink"
+import Link from "next/link"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import TooltipLink from "./TooltipLink"
 
 type TranslationProps = {
   id: string
@@ -16,7 +16,7 @@ type TranslationProps = {
 // Custom components mapping to be used by `htmr` when parsing the translation
 // text
 const defaultTransform = {
-  a: TooltipLink,
+  a: (props) => <Link {...props} />,
 }
 
 // Renders the translation string for the given translation key `id`. It

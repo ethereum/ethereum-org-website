@@ -14,9 +14,9 @@ import { Lang } from "@/lib/types"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 class Document extends NextDocument {
-  static async getInitialProps(ctx: DocumentContext) {
-    return await NextDocument.getInitialProps(ctx)
-  }
+  // static async getInitialProps(ctx: DocumentContext) {
+  //   return await NextDocument.getInitialProps(ctx)
+  // }
 
   render() {
     const { locale } = this.props.__NEXT_DATA__

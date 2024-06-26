@@ -1,25 +1,12 @@
+import Link from "next/link"
 import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
-import { IoChevronUpSharp } from "react-icons/io5"
-import {
-  Box,
-  Flex,
-  Heading,
-  Icon,
-  List,
-  ListItem,
-  SimpleGrid,
-  Text,
-} from "@chakra-ui/react"
 
 import type { FooterLink, FooterLinkSection } from "@/lib/types"
 
-import { BaseLink } from "@/components/Link"
 import Translation from "@/components/Translation"
 
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
-
-import { Button } from "./Buttons"
 
 const socialLinks = [
   {
@@ -331,107 +318,52 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
   }
 
   return (
-    <Box as="footer" py="4" px="8">
-      <Flex
-        justify={{ base: "center", md: "space-between" }}
-        alignItems="center"
-        flexWrap="wrap"
-        gap={8}
-        pt={4}
-        pb={4}
-        borderTop={"1px solid"}
-        borderColor={"body.light"}
-      >
-        <Text fontSize={"sm"} fontStyle={"italic"} color={"body.medium"}>
+    <footer className="py-4 px-8">
+      <div className="flex justify-center md:justify-between items-center flex-wrap gap-8 pt-4 pb-4 border-t border-body-light">
+        <p className="text-sm italic text-body-medium">
           <Translation id="website-last-updated" />: {lastDeployLocaleTimestamp}
-        </Text>
+        </p>
 
-        <Button
-          leftIcon={<IoChevronUpSharp />}
-          variant="outline"
-          isSecondary
-          onClick={() => scrollIntoView("__next")}
-        >
-          Go to top
-        </Button>
-      </Flex>
+        <button onClick={() => scrollIntoView("__next")}>Go to top</button>
+      </div>
 
-      <SimpleGrid
-        gap={4}
-        justifyContent="space-between"
-        templateColumns={{
-          base: "auto",
-          sm: "repeat(2, auto)",
-          md: "repeat(3, auto)",
-          xl: "repeat(6, auto)",
-        }}
-      >
+      <div className="grid gap-4 justify-between grid-cols-auto sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
         {linkSections.map((section: FooterLinkSection, idx) => (
-          <Box key={idx}>
-            <Heading as="h3" fontSize="sm" lineHeight="base" my="1.14em">
+          <div key={idx}>
+            <h3 className="text-sm leading-base my-[1.14em]">
               <Translation id={section.title} />
-            </Heading>
-            <List fontSize="sm" lineHeight="base" fontWeight="normal" m="0">
+            </h3>
+            <ul className="text-sm leading-base font-normal m-0">
               {section.links.map((link, linkIdx) => (
-                <ListItem key={linkIdx} mb={4}>
-                  <BaseLink href={link.to} {...linkProps}>
+                <li className="mb-4" key={linkIdx}>
+                  <Link href={link.to} {...linkProps}>
                     {link.text}
-                  </BaseLink>
-                </ListItem>
+                  </Link>
+                </li>
               ))}
-            </List>
-          </Box>
+            </ul>
+          </div>
         ))}
-      </SimpleGrid>
-      <Flex
-        p={6}
-        flexDir="column"
-        alignItems="center"
-        justifyContent="center"
-        fontSize="sm"
-        bg="background.highlight"
-      >
-        <Box display="flex" gap={4}>
-          {socialLinks.map(({ to, ariaLabel, icon }) => (
-            <BaseLink
-              key={to}
-              href={to}
-              hideArrow
-              color="body.base"
-              aria-label={ariaLabel}
-              _focus={{ color: "primary.base" }}
-            >
-              <Icon
-                as={icon}
-                _hover={{
-                  transition:
-                    "color 0.2s ease-in-out, transform 0.2s ease-in-out",
-                }}
-                fontSize="4xl"
-              />
-            </BaseLink>
+      </div>
+      <div className="flex p-6 flex-col items-center justify-center text-sm bg-background-highlight">
+        <div className="flex gap-4">
+          {socialLinks.map(({ to, ariaLabel, icon: Icon }) => (
+            <Link key={to} href={to} aria-label={ariaLabel}>
+              <Icon />
+            </Link>
           ))}
-        </Box>
-        <List
-          display="flex"
-          flexDir={{ base: "column", sm: "row" }}
-          flexWrap="wrap"
-          justifyContent={{ base: "center", sm: "space-between", md: "center" }}
-          fontWeight="normal"
-          fontSize="sm"
-          p={5}
-          m={0}
-        >
+        </div>
+        <ul className="flex flex-col sm:flex-row flex-wrap justify-center sm:justify-between md:justify-center font-normal text-sm p-5 m-0">
           {dipperLinks.map(({ to, text }) => (
-            <ListItem key={text} textAlign="center" px="2">
-              <BaseLink href={to} w={["100%", null]} {...linkProps}>
+            <li key={text} className="text-center px-2">
+              <Link href={to} {...linkProps}>
                 {text}
-              </BaseLink>
-            </ListItem>
+              </Link>
+            </li>
           ))}
-        </List>
-      </Flex>
-    </Box>
+        </ul>
+      </div>
+    </footer>
   )
 }
 

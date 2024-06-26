@@ -1,20 +1,11 @@
 import React from "react"
 import { IoCodeOutline } from "react-icons/io5"
-import {
-  Box,
-  Flex,
-  Hide,
-  Icon,
-  LinkBox,
-  LinkOverlay,
-  useColorModeValue,
-} from "@chakra-ui/react"
 
 import { TranslationKey } from "@/lib/types"
 
-import { Image } from "@/components/Image"
-import { BaseLink } from "@/components/Link"
 import Translation from "@/components/Translation"
+import Image from "next/image"
+import Link from "next/link"
 
 export interface ITitleCardItem {
   title: string
@@ -41,178 +32,80 @@ const TitleCardList = ({
   headerKey,
   isCode,
 }: TitleCardListProps) => {
-  // This will be accessible with color contrast
-  const descriptionCaptionColor = useColorModeValue(
-    "blackAlpha.700",
-    "whiteAlpha.700"
-  )
   return (
-    <Box
-      bg="background.base"
-      boxShadow="tableBox"
-      width="100%"
-      border-radius="sm"
-      className={className}
+    <div
+      className={`w-full rounded-sm bg-background-base shadow-tableBox ${className}`}
     >
-      <Flex
-        bg="ednBackground"
-        align="center"
-        justifyContent="space-between"
-        padding={4}
-        flexDirection="row-reverse"
-        fontWeight="600"
-        borderBottom={0.25}
-        borderBottomStyle="solid"
-        borderBottomColor="text"
-      >
-        <Icon as={IoCodeOutline} />
+      <div className="flex items-center justify-between p-4 bg-ednBackground font-semibold border-b border-text">
+        <IoCodeOutline />
         <Translation id={headerKey} />
         {isCode && (
-          <Hide below="s">
-            <Flex>
-              <Box
-                width="12px"
-                height="12px"
-                bg="fail300"
-                me={2}
-                borderRadius="full"
-              />
-              <Box
-                width="12px"
-                height="12px"
-                bg="gridYellow"
-                me={2}
-                borderRadius="full"
-              />
-              <Box
-                width="12px"
-                height="12px"
-                bg="success300"
-                me={2}
-                borderRadius="full"
-              />
-            </Flex>
-          </Hide>
+          <div>
+            <div className="flex">
+              <div className="w-3 h-3 bg-fail300 mr-2 rounded-full" />
+              <div className="w-3 h-3 bg-gridYellow mr-2 rounded-full" />
+              <div className="w-3 h-3 bg-success300 mr-2 rounded-full" />
+            </div>
+          </div>
         )}
-      </Flex>
+      </div>
       {content.map((listItem, idx) => {
         const { title, description, caption, link, image, alt, id } = listItem
         const isLink = !!link
 
         return isLink ? (
-          <LinkBox
+          <div
             key={id || idx}
-            display="flex"
-            textDecoration="none"
-            justifyContent="space-between"
-            color="text"
-            marginBottom="1px"
-            padding={4}
-            width="100%"
-            boxShadow="0px 1px 1px var(--eth-colors-tableItemBoxShadow)"
-            _hover={{
+            className="flex justify-between p-4 mb-1 w-full shadow-[0px_1px_1px_var(--eth-colors-tableItemBoxShadow)] text-current"
+            style={{
               textDecoration: "none",
-              boxShadow: "0 0 1px var(--eth-colors-primary-base)",
-              bg: "primary100",
-              color: "black",
             }}
           >
             {image && (
               <Image
                 src={image}
                 alt={alt || ""}
-                marginTop={1}
-                me={4}
-                minWidth={5}
+                className="mt-1 mr-4 min-w-[20px]"
               />
             )}
-            <Flex flex="1 1 75%" flexDirection="column" me={8}>
-              <LinkOverlay
-                as={BaseLink}
-                href={link}
-                hideArrow
-                color="inherit"
-                textDecoration="none"
-                _hover={{
-                  textDecoration: "none",
-                }}
-              >
+            <div className="flex flex-1 flex-col mr-8">
+              <Link href={link} className="text-inherit no-underline">
                 {title}
-              </LinkOverlay>
-
-              <Box
-                fontSize="sm"
-                marginBottom="0"
-                color={descriptionCaptionColor}
-              >
-                {description}
-              </Box>
-            </Flex>
+              </Link>
+              <div className="text-sm mb-0 bg-slate-200">{description}</div>
+            </div>
             {caption && (
-              <Flex flex="1 0 25%" alignItems="center" flexWrap="wrap" me={4}>
-                <Box
-                  fontSize="sm"
-                  marginBottom="0"
-                  color={descriptionCaptionColor}
-                >
-                  {caption}
-                </Box>
-              </Flex>
+              <div className="flex flex-1 items-center flex-wrap mr-4">
+                <div className="text-sm mb-0 bg-slate-200">{caption}</div>
+              </div>
             )}
-          </LinkBox>
+          </div>
         ) : (
-          <Flex
+          <div
             key={idx}
+            className="flex justify-between p-4 mb-1 w-full shadow-[0px_1px_1px_var(--eth-colors-tableItemBoxShadow)] text-current cursor-pointer"
             onClick={() => clickHandler(idx)}
-            width="100%"
-            marginBottom="1px"
-            padding={4}
-            textDecoration="none"
-            color="text"
-            justifyContent="space-between"
-            cursor="pointer"
-            boxShadow="0px 1px 1px var(--eth-colors-tableItemBoxShadow)"
-            _hover={{
-              boxShadow: "0 0 1px var(--eth-colors-primary-base)",
-              bg: "primary100",
-              "*": { color: "black" },
-            }}
           >
             {image && (
               <Image
                 src={image}
                 alt={alt || ""}
-                marginTop={1}
-                me={4}
-                minWidth={5}
+                className="mt-1 mr-4 min-w-[20px]"
               />
             )}
-            <Flex flex="1 1 75%" flexDirection="column" me={8}>
-              <Box>{title}</Box>
-
-              <Box
-                fontSize="sm"
-                marginBottom="0"
-                color={descriptionCaptionColor}
-              >
-                {description}
-              </Box>
-            </Flex>
+            <div className="flex flex-1 flex-col mr-8">
+              <div>{title}</div>
+              <div className="text-sm mb-0 bg-slate-200">{description}</div>
+            </div>
             {caption && (
-              <Flex flex="1 0 25%" alignItems="center" flexWrap="wrap" me={4}>
-                <Box
-                  fontSize="sm"
-                  marginBottom="0"
-                  color={descriptionCaptionColor}
-                >
-                  {caption}
-                </Box>
-              </Flex>
+              <div className="flex flex-1 items-center flex-wrap mr-4">
+                <div className="text-sm mb-0 bg-slate-200">{caption}</div>
+              </div>
             )}
-          </Flex>
+          </div>
         )
       })}
-    </Box>
+    </div>
   )
 }
 

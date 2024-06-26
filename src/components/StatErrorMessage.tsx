@@ -1,12 +1,9 @@
-import type { TextProps } from "@chakra-ui/react"
-
-import Text from "./OldText"
 import Translation from "./Translation"
 
-const StatErrorMessage = (props: TextProps) => (
-  <Text as="span" fontSize="2rem" {...props}>
+const StatErrorMessage = (props) => (
+  <span className="text-2xl" {...props}>
     <Translation id="loading-error-refresh" />
-  </Text>
+  </span>
 )
 
 export default StatErrorMessage

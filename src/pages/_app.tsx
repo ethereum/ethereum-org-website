@@ -5,6 +5,7 @@ import { init } from "@socialgouv/matomo-next"
 import { AppPropsWithLayout } from "@/lib/types"
 
 import "../styles/global.css"
+import "@/styles/globals.css"
 
 import { RootLayout } from "@/layouts/RootLayout"
 import { mono } from "@/lib/fonts"

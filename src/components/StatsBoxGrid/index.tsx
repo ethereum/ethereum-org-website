@@ -1,5 +1,3 @@
-import { SimpleGrid } from "@chakra-ui/react"
-
 import type { AllMetricData } from "@/lib/types"
 
 import { GridItem } from "./GridItem"
@@ -13,19 +11,11 @@ const StatsBoxGrid = ({ data }: StatsBoxGridProps) => {
   const metrics = useStatsBoxGrid(data)
 
   return (
-    <SimpleGrid
-      columns={{ base: 1, lg: 2 }}
-      margin={{
-        base: "0",
-        sm: "2rem 0 0",
-        lg: "2rem 2rem 0",
-      }}
-      borderRadius="sm"
-    >
+    <div className="grid grid-cols-1 lg:grid-cols-2 rounded-sm m-0 sm:mt-8 lg:mt-8 lg:mx-8">
       {metrics.map((metric, idx) => (
         <GridItem key={idx} metric={metric} />
       ))}
-    </SimpleGrid>
+    </div>
   )
 }
 

@@ -1,27 +1,15 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaDiscord } from "react-icons/fa"
-import {
-  Box,
-  Center,
-  Divider,
-  Flex,
-  Grid,
-  GridItem,
-  Icon,
-} from "@chakra-ui/react"
 
 import type { Lang } from "@/lib/types"
 import type { CommunityEvent } from "@/lib/interfaces"
 
-import { ButtonLink } from "@/components/Buttons"
-import InlineLink from "@/components/Link"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
+import Link from "next/link"
 
 const matomoEvent = (buttonType: string) => {
   trackCustomEvent({
@@ -46,18 +34,18 @@ const Event = ({ event, type }: EventProps) => {
   }
 
   return (
-    <Grid gap={6} templateColumns="auto 1fr" mb={4}>
-      <GridItem>
-        <Text color="body.medium" m={0}>
+    <div className="grid gap-6 grid-cols-[auto_1fr] mb-4">
+      <div>
+        <p className="text-body-medium m-0">
           {getLocaleTimestamp(locale! as Lang, date, options)}
-        </Text>
-      </GridItem>
-      <GridItem>
-        <InlineLink href={calendarLink} onClick={() => matomoEvent(type)}>
+        </p>
+      </div>
+      <div>
+        <Link href={calendarLink} onClick={() => matomoEvent(type)}>
           {title}
-        </InlineLink>
-      </GridItem>
-    </Grid>
+        </Link>
+      </div>
+    </div>
   )
 }
 
@@ -77,45 +65,25 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
   const reversedPastEventData = pastEventData.slice().reverse()
 
   return (
-    <Flex
-      w="full"
-      flexDirection={{ base: "column", lg: "row" }}
-      p={{
-        base: "0",
-        sm: "2rem 0 0",
-        lg: "2rem 2rem 0",
-      }}
-    >
-      <Center w={{ base: "100%", lg: "40%" }}>
-        <Box pe={8} ps={{ base: 8, lg: 0 }}>
-          <OldHeading>
-            {t("page-index:community-events-content-heading")}
-          </OldHeading>
-          <Text>
+    <div className="w-full flex flex-col lg:flex-row p-0 sm:pt-8 lg:pt-8 lg:px-8">
+      <div className="w-full lg:w-2/5 flex justify-center">
+        <div className="pe-8 ps-8 lg:ps-0">
+          <h2>{t("page-index:community-events-content-heading")}</h2>
+          <p>
             <Translation id="page-index:community-events-content-1" />
-          </Text>
-          <Text>{t("page-index:community-events-content-2")}</Text>
-        </Box>
-      </Center>
-      <Flex
-        w={{ base: "100%", lg: "60%" }}
-        flexDirection={{ base: "column", lg: "row" }}
-      >
-        <Flex
-          w={{ base: "100%", lg: "50%" }}
-          bg="layer2Gradient"
-          px={8}
-          py={16}
-          textAlign="center"
-          flexDir="column"
-        >
-          <Flex direction="column" h="full" gap={8}>
+          </p>
+          <p>{t("page-index:community-events-content-2")}</p>
+        </div>
+      </div>
+      <div className="w-full lg:w-3/5 flex flex-col lg:flex-row">
+        <div className="w-full lg:w-1/2 bg-layer2Gradient px-8 py-16 text-center flex flex-col">
+          <div className="flex flex-col h-full gap-8">
             {reversedUpcomingEventData.length ? (
-              <Box flex={1}>
-                <Text fontSize="3xl" fontWeight="bold" lineHeight={1.4}>
+              <div className="flex-1">
+                <p className="text-3xl font-bold leading-[1.4]">
                   {reversedUpcomingEventData[0].title}
-                </Text>
-                <Text m={0} fontSize="xl">
+                </p>
+                <p className="m-0 text-xl">
                   {getLocaleTimestamp(
                     locale! as Lang,
                     reversedUpcomingEventData[0].date,
@@ -128,72 +96,69 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
                       minute: "numeric",
                     }
                   )}
-                </Text>
-                <Text color="body.medium" fontSize="md">
+                </p>
+                <p className="text-body-medium text-md">
                   ({Intl.DateTimeFormat().resolvedOptions().timeZone})
-                </Text>
-              </Box>
+                </p>
+              </div>
             ) : (
-              <Text fontSize="3xl" fontWeight="bold" mb={8}>
+              <p className="text-3xl font-bold mb-8">
                 {t("page-index:community-events-no-events-planned")}
-              </Text>
+              </p>
             )}
-            <Flex flexDirection="column" gap={2}>
-              <ButtonLink
-                to="/discord/"
-                gap={2}
+            <div className="flex flex-col gap-2">
+              <Link
+                href="/discord/"
+                className="gap-2"
                 onClick={() => matomoEvent("discord")}
               >
-                <Icon as={FaDiscord} fontSize={25} />
+                <FaDiscord className="text-2xl" />
                 Join Discord
-              </ButtonLink>
+              </Link>
               {reversedUpcomingEventData[0] && (
-                <InlineLink
-                  to={reversedUpcomingEventData[0].calendarLink}
+                <Link
+                  href={reversedUpcomingEventData[0].calendarLink}
                   onClick={() => matomoEvent("Add to calendar")}
-                  fontWeight={700}
+                  className="font-bold"
                 >
                   {t("community-events-add-to-calendar")}
-                </InlineLink>
+                </Link>
               )}
-            </Flex>
-          </Flex>
-        </Flex>
-        <Flex
-          w={{ base: "100%", lg: "50%" }}
-          bg="background.highlight"
-          p={8}
-          flexDir="column"
-        >
-          <Text fontSize="lg" fontWeight="bold" mb={2}>
+            </div>
+          </div>
+        </div>
+        <div className="w-full lg:w-1/2 bg-background-highlight p-8 flex flex-col">
+          <p className="text-lg font-bold mb-2">
             {t("page-index:community-events-upcoming-calls")}
-          </Text>
-          <Divider mb={4} />
+          </p>
+          <hr className="mb-4" />
           {reversedUpcomingEventData.slice(1).length ? (
-            reversedUpcomingEventData.slice(1).map((item, idx) => {
-              return <Event key={idx} event={item} type="upcoming" />
-            })
+            reversedUpcomingEventData
+              .slice(1)
+              .map((item, idx) => (
+                <Event key={idx} event={item} type="upcoming" />
+              ))
           ) : (
-            <Text mx="auto">
+            <p className="mx-auto">
               {t("page-index:community-events-no-upcoming-calls")}
-            </Text>
+            </p>
           )}
-          <Text fontSize="lg" fontWeight="bold" mb={2} mt={4}>
+          <p className="text-lg font-bold mb-2 mt-4">
             {t("page-index:community-events-previous-calls")}
-          </Text>
-          <Divider mb={4} />
+          </p>
+          <hr className="mb-4" />
           {reversedPastEventData.length ? (
-            reversedPastEventData.map((item, idx) => {
-              return <Event key={idx} event={item} type="past" />
-            })
+            reversedPastEventData.map((item, idx) => (
+              <Event key={idx} event={item} type="past" />
+            ))
           ) : (
-            <Text mx="auto">
+            <p className="mx-auto">
               {t("page-index:community-events-there-are-no-past-calls")}
-            </Text>
+            </p>
           )}
-        </Flex>
-      </Flex>
-    </Flex>
+        </div>
+      </div>
+    </div>
   )
 }
 

@@ -1,12 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES6",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext",
-      "ES2021.String"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext", "ES2021.String"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -21,15 +16,9 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/public/*": [
-        "./public/*"
-      ],
-      "@/storybook-utils": [
-        "./.storybook/utils.ts"
-      ]
+      "@/*": ["./src/*"],
+      "@/public/*": ["./public/*"],
+      "@/storybook-utils": ["./.storybook/utils.ts"]
     },
     "plugins": [
       {
@@ -45,9 +34,5 @@
     ".storybook/**/*",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "./public",
-    "./src/intl"
-  ]
+  "exclude": ["node_modules", "./public", "./src/intl"]
 }

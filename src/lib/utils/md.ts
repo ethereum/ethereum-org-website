@@ -16,8 +16,6 @@ import { CONTENT_DIR, DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { toPosixPath } from "./relativePath"
 
-import { ITutorial } from "@/pages/developers/tutorials"
-
 function getCurrentDir() {
   return join(process.cwd(), CONTENT_DIR)
 }
@@ -361,14 +359,15 @@ export const getContent = (dir: string) => {
   return content
 }
 
-export const getTutorialsData = (locale: string): ITutorial[] => {
+export const getTutorialsData = (locale: string) => {
   const currentDir = getCurrentDir()
   const fullPath = join(
     currentDir,
     locale !== "en" ? `translations/${locale!}` : "",
     "developers/tutorials"
   )
-  let tutorialData: ITutorial[] = []
+  // @ts-ignore
+  let tutorialData = [] as any[]
 
   if (fs.existsSync(fullPath)) {
     const languageTutorialFiles = fs.readdirSync(fullPath)

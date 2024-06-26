@@ -32,16 +32,14 @@ const MobileNavMenu = ({
   drawerContainerRef,
   ...props
 }: MobileNavMenuProps) => {
-  const isMenuOpen = useBreakpointValue({ base: isOpen, md: false }) as boolean
-
   return (
     <>
-      <HamburgerButton isMenuOpen={isMenuOpen} onToggle={onToggle} {...props} />
+      <HamburgerButton isMenuOpen={isOpen} onToggle={onToggle} {...props} />
 
       {/* DRAWER MENU */}
       <Drawer
         portalProps={{ containerRef: drawerContainerRef }}
-        isOpen={isMenuOpen}
+        isOpen={isOpen}
         onClose={onToggle}
         placement="start"
         size="md"

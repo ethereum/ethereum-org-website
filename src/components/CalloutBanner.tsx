@@ -1,15 +1,12 @@
 import { useTranslation } from "next-i18next"
-import { Flex, type FlexProps } from "@chakra-ui/react"
 
 import type { TranslationKey } from "@/lib/types"
 
-import { Image, type ImageProps } from "@/components/Image"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
+import Image from "next/image"
 
-export type CalloutBannerProps = FlexProps & {
+export type CalloutBannerProps = {
   children?: React.ReactNode
-  image: ImageProps["src"]
+  image: any
   imageWidth?: number
   titleKey: TranslationKey
   descriptionKey: TranslationKey
@@ -28,52 +25,33 @@ const CalloutBanner = ({
   const { t } = useTranslation("page-staking")
 
   return (
-    <Flex
-      as="aside"
-      direction={{ base: "column", lg: "row-reverse" }}
-      bg="layer2Gradient"
-      p={{ base: 8, sm: 12 }}
-      borderRadius="base"
+    <div
+      className="flex flex-col lg:flex-row-reverse bg-layer2Gradient p-8 sm:p-12 rounded-base"
       {...props}
     >
       {image && (
-        <Flex>
+        <div className="flex">
           <Image
             src={image}
             alt={alt}
             width={imageWidth}
+            className="mx-auto mt-[-6rem] lg:mt-0 lg:mb-[-6rem]"
             style={{
               objectFit: "contain",
             }}
-            mx="auto"
-            mt={-24}
-            mb={{ base: 0, lg: -24 }}
           />
-        </Flex>
+        </div>
       )}
-      <Flex
-        flexGrow={1}
-        flexShrink={0}
-        flexBasis="50%"
-        direction="column"
-        justifyContent="center"
-        ps={{ base: 0, sm: 4, lg: 8 }}
-        w={{ base: "full", lg: "inherit" }}
-      >
-        <OldHeading
-          as="h2"
-          mt={0}
-          fontSize={{ base: "2xl", sm: "2rem" }}
-          lineHeight="1.4"
-        >
+      <div className="flex-grow flex-shrink-0 basis-1/2 flex flex-col justify-center ps-0 sm:ps-4 lg:ps-8 w-full lg:w-auto">
+        <h2 className="text-2xl sm:text-[2rem] mt-0 leading-[1.4]">
           {t(titleKey)}
-        </OldHeading>
-        <Text fontSize="xl" w="90%" lineHeight="140%" mb={8} color="text200">
+        </h2>
+        <p className="text-xl w-9/10 leading-[140%] mb-8 text-text200">
           {t(descriptionKey)}
-        </Text>
+        </p>
         {children}
-      </Flex>
-    </Flex>
+      </div>
+    </div>
   )
 }
 
