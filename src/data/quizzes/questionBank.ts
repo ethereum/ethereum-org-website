@@ -421,7 +421,7 @@ const questionBank = {
         explanation: "d002-d-explanation",
       },
     ],
-    correctAnswerId: "d002-c",
+    correctAnswerId: "d002-d",
   },
   d003: {
     prompt: "d003-prompt",
