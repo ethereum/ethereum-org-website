@@ -12213,6 +12213,24 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "pglekshmi",
+      "name": "pglekshmi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/107828565?v=4",
+      "profile": "https://github.com/pglekshmi",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "abonnaudet-ledger",
+      "name": "abonnaudet-ledger",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71646516?v=4",
+      "profile": "https://github.com/abonnaudet-ledger",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

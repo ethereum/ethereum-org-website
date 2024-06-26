@@ -29,9 +29,9 @@ Using providers, these libraries allow you to connect to Ethereum and read its d
 **Ethers example**
 
 ```js
-// A Web3Provider wraps a standard Web3 provider, which is
+// A BrowserProvider wraps a standard Web3 provider, which is
 // what MetaMask injects as window.ethereum into each page
-const provider = new ethers.providers.Web3Provider(window.ethereum)
+const provider = new ethers.BrowserProvider(window.ethereum)
 
 // The MetaMask plugin also allows signing transactions to
 // send ether and pay to change state within the blockchain.
@@ -80,7 +80,7 @@ Here's an examples from Ethers
 // Create a wallet instance from a mnemonic...
 mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
-walletMnemonic = Wallet.fromMnemonic(mnemonic)
+walletMnemonic = Wallet.fromPhrase(mnemonic)
 
 // ...or from a private key
 walletPrivateKey = new Wallet(walletMnemonic.privateKey)
