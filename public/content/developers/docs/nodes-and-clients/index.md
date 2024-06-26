@@ -234,15 +234,9 @@ Synchronization modes represent different approaches to this process with variou
 
 ### Execution layer sync modes {#execution-layer-sync-modes}
 
-#### Full node syncs {#full-node-syncs}
+The execution layer may be run in different modes to suit different use cases, from re-executing the blockchain's world state to only syncing with the tip of the chain from a trusted checkpoint.
 
-You may run a full node with a:
-
-- [full sync](#full-sync)
-- [fast sync](#fast-sync)
-- [snap sync](#snap-sync)
-
-##### Full sync {#full-sync}
+#### Full sync {#full-sync}
 
 A full sync downloads all blocks (including headers and block bodies) and regenerates the state of the blockchain incrementally by executing every block from genesis. 
 
@@ -251,14 +245,14 @@ A full sync downloads all blocks (including headers and block bodies) and regene
 
 [Archive nodes](#archive-node) perform a full sync to build (and retain) a complete history of the state changes made by every transaction in every block.
 
-##### Fast sync {#fast-sync}
+#### Fast sync {#fast-sync}
 
 Like a full sync, a fast sync downloads all blocks (including headers, transactions, and receipts). However, instead of re-processing the historical transactions, a fast sync relies on the receipts until it reaches a recent head, when it switches to importing and processing blocks to provide a full node. 
 
 - Fast sync strategy.
 - Reduces processing demand in favor of bandwidth usage.
 
-##### Snap sync {#snap-sync}
+#### Snap sync {#snap-sync}
 
 Snap syncs also verify the chain block-by-block. However, instead of starting at the genesis block, a snap sync starts at a more recent 'trusted' checkpoint that is known to be part of the true blockchain. The node saves periodic checkpoints while deleting data older than a certain age. These snapshots are used to regenerate state data as needed, rather than storing it forever.
 
