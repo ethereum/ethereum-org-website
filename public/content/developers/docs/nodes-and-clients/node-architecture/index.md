@@ -20,7 +20,7 @@ The execution client executes the transactions locally to validate that the tran
 
 ## What does the execution client do? {#execution-client}
 
-The execution client is responsible for transaction validation, handling, and gossip; state management; and supporting the Ethereum Virtual Machine ([EVM](/developers/docs/evm/)). It is **not** responsible for block building, block gossiping or handling consensus logic. These are in the remit of the consensus client.
+The execution client is responsible for transaction validation, handling, and gossip, along with state management and supporting the Ethereum Virtual Machine ([EVM](/developers/docs/evm/)). It is **not** responsible for block building, block gossiping or handling consensus logic. These are in the remit of the consensus client.
 
 The execution client creates execution payloads - the list of transactions, updated state trie, and other execution-related data. Consensus clients include the execution payload in every block. The execution client is also responsible for re-executing transactions in new blocks to ensure they are valid. Executing transactions is done on the execution client's embedded computer, known as the [Ethereum Virtual Machine (EVM)](/developers/docs/evm).
 
