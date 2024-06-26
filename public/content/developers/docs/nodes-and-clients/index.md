@@ -256,7 +256,7 @@ A full sync downloads all blocks (including headers and block bodies) and regene
 Like a full sync, a fast sync downloads all blocks (including headers, transactions, and receipts). However, instead of re-processing the historical transactions, a fast sync relies on the receipts until it reaches a recent head, when it switches to importing and processing blocks to provide a full node. 
 
 - Fast sync strategy.
-- Reduces processing demand in favour of bandwith usage.
+- Reduces processing demand in favor of bandwidth usage.
 
 ##### Snap sync {#snap-sync}
 
