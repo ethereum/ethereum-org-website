@@ -828,13 +828,6 @@ const DappsPage = () => {
       image: sablier,
       alt: t("page-dapps-sablier-logo-alt"),
     },
-    {
-      title: "Meeds",
-      description: t("page-dapps-dapp-description-meeds"),
-      link: "https://meeds.io",
-      image: meeds,
-      alt: t("page-dapps-meeds-logo-alt"),
-    },    
   ]
 
   const investments = [
@@ -1174,6 +1167,16 @@ const DappsPage = () => {
       alt: t("page-dapps-spruce-logo-alt"),
     },
   ]
+
+  const community = [
+    {
+      title: "Meeds",
+      description: t("page-dapps-dapp-description-meeds"),
+      link: "https://meeds.io",
+      image: meeds,
+      alt: t("page-dapps-meeds-logo-alt"),
+    },
+  ]  
 
   const demandAggregator = [
     {
@@ -1770,6 +1773,10 @@ const DappsPage = () => {
                   category={t("page-dapps-category-content")}
                   content={content}
                 />
+                <ProductList
+                  category={t("page-dapps-category-community")}
+                  content={community}
+                />                
               </RightColumn>
             </TwoColumnContent>
             <TwoColumnContent>
