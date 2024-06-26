@@ -234,7 +234,7 @@ Synchronization modes represent different approaches to this process with variou
 
 ### Execution layer sync modes {#execution-layer-sync-modes}
 
-#### Full node syncs
+#### Full node syncs {#full-node-syncs}
 
 You may run a full node with a:
 
