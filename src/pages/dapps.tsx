@@ -1773,10 +1773,6 @@ const DappsPage = () => {
                   category={t("page-dapps-category-content")}
                   content={content}
                 />
-                <ProductList
-                  category={t("page-dapps-category-community")}
-                  content={community}
-                />                
               </RightColumn>
             </TwoColumnContent>
             <TwoColumnContent>
@@ -1792,6 +1788,15 @@ const DappsPage = () => {
                   content={identity}
                 />
               </RightColumn>
+            </TwoColumnContent>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList
+                  category={t("page-dapps-category-community")}
+                  content={community}
+                />                
+              </LeftColumn>
+              <RightColumn />
             </TwoColumnContent>
           </Content>
         )}
