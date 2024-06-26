@@ -276,7 +276,7 @@ Light client mode downloads all block headers, block data, and verifies some ran
 
 **NB** Light sync does not yet work with proof-of-stake Ethereum - new versions of light sync should ship soon!
 
-[More on light clients](/developers/docs/nodes-and-clients/light-clients/).
+[More on light clients](/developers/docs/nodes-and-clients/light-clients/)
 
 ### Consensus layer sync modes {#consensus-layer-sync-modes}
 
