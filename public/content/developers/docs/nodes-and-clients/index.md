@@ -286,7 +286,7 @@ A checkpoint sync, also known as weak subjectivity sync, creates a superior user
 
 In practice, this means your node connects to a remote service to download recent finalized states and continues verifying data from that point. The third party providing the data is trusted and should be picked carefully.
 
-More on [checkpoint syncs](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice).
+More on [checkpoint sync](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
 
 ## Further reading {#further-reading}
 
