@@ -13,6 +13,7 @@ export const baseLocales = {
 export const ns = [
   "common",
   "glossary",
+  "glossary-tooltip",
   "learn-quizzes",
   "page-about",
   "page-index",

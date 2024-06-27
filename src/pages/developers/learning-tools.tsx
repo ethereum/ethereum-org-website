@@ -23,6 +23,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import AlchemyUniversityImage from "@/public/images/dev-tools/alchemyuniversity.png"
+import AtlasImage from "@/public/images/dev-tools/atlas.png"
 import BloomTechImage from "@/public/images/dev-tools/bloomtech.png"
 import BuildSpaceImage from "@/public/images/dev-tools/buildspace.png"
 import CaptureTheEtherImage from "@/public/images/dev-tools/capturetheether.png"
@@ -209,6 +210,19 @@ const LearningToolsPage = () => {
       ),
       background: "#0f1524",
       subjects: ["Solidity", "Vyper", "web3"],
+    },
+    {
+      name: "Atlas",
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-atlas-description"
+      ),
+      url: "https://www.atlaszk.com",
+      image: AtlasImage,
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-atlas-logo-alt"
+      ),
+      background: "#000000",
+      subjects: ["Solidity"],
     },
     {
       name: 'DApp World',
