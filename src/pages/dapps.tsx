@@ -91,6 +91,7 @@ import lido from "@/public/images/dapps/lido.png"
 import loopring from "@/public/images/dapps/loopring.png"
 import marble from "@/public/images/dapps/marble.png"
 import matcha from "@/public/images/dapps/matcha.png"
+import meeds from "@/public/images/dapps/meeds.png"
 import mirror from "@/public/images/dapps/mirror.png"
 import nexus from "@/public/images/dapps/nexus.png"
 import nifty from "@/public/images/dapps/nifty.png"
@@ -1167,6 +1168,16 @@ const DappsPage = () => {
     },
   ]
 
+  const community = [
+    {
+      title: "Meeds",
+      description: t("page-dapps-dapp-description-meeds"),
+      link: "https://meeds.io",
+      image: meeds,
+      alt: t("page-dapps-meeds-logo-alt"),
+    },
+  ]  
+
   const demandAggregator = [
     {
       title: "KyberSwap",
@@ -1777,6 +1788,15 @@ const DappsPage = () => {
                   content={identity}
                 />
               </RightColumn>
+            </TwoColumnContent>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList
+                  category={t("page-dapps-category-community")}
+                  content={community}
+                />                
+              </LeftColumn>
+              <RightColumn />
             </TwoColumnContent>
           </Content>
         )}
