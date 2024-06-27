@@ -6,7 +6,7 @@ import { EthHomeIcon } from "@/components/icons"
 import { BaseLink } from "@/components/Link"
 import Search from "@/components/Search"
 
-import { isMobile } from "@/lib/utils/isMobile"
+import { isDesktop } from "@/lib/utils/isDesktop"
 
 import { NAV_PY } from "@/lib/constants"
 
@@ -14,15 +14,18 @@ import DesktopNavMenu from "./Desktop"
 import Menu from "./Menu"
 import { useNav } from "./useNav"
 
+import { useIsClient } from "@/hooks/useIsClient"
+
 const MobileNavMenu = lazy(() => import("./Mobile"))
 
 // TODO display page title on mobile
 const Nav = () => {
   const { toggleColorMode, linkSections, mobileNavProps } = useNav()
   const { t } = useTranslation("common")
-  const isDesktop = !isMobile()
   const searchModalDisclosure = useDisclosure()
   const navWrapperRef = useRef(null)
+  const isClient = useIsClient()
+  const isDesktopFlag = isDesktop()
 
   return (
     <Box position="sticky" top={0} zIndex="sticky" width="full">
@@ -60,7 +63,12 @@ const Nav = () => {
             ms={{ base: 3, xl: 8 }}
           >
             {/* avoid rendering desktop Menu version on mobile */}
-            {isDesktop && <Menu hideBelow="md" sections={linkSections} />}
+
+            {isClient && isDesktopFlag ? (
+              <Menu hideBelow="md" sections={linkSections} />
+            ) : (
+              <Box />
+            )}
 
             <Flex alignItems="center" /*  justifyContent="space-between" */>
               {/* Desktop */}
