@@ -14,7 +14,7 @@ The diagram below shows the relationship between the two Ethereum clients. The t
 
 _This image is borrowed from besu.hyperledger.org. There are several options for the execution client including Erigon, Nethermind, and Besu_.
 
-For this two-client structure to work, consensus clients must pass bundles of transactions to the execution client. The execution client executes the transactions locally to validate that the transactions do not violate any Ethereum rules and that the proposed update to Ethereum’s state is correct. When a node is selected to be a block producer its consensus client instance requests bundles of transactions from the execution client to include in the new block and execute them to update the global state.The consensus client drives the execution client via a local RPC connection using the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). 
+For this two-client structure to work, consensus clients must pass bundles of transactions to the execution client. The execution client executes the transactions locally to validate that the transactions do not violate any Ethereum rules and that the proposed update to Ethereum’s state is correct. When a node is selected to be a block producer its consensus client instance requests bundles of transactions from the execution client to include in the new block and execute them to update the global state. The consensus client drives the execution client via a local RPC connection using the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). 
 
 ## What does the execution client do? {#execution-client}
 
