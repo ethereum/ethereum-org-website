@@ -63,6 +63,14 @@ const Nav = () => {
     "Switch to Light Theme"
   )
 
+  const desktopHoverFocusStyles = {
+    '& > svg': {
+      transform: "rotate(10deg)",
+      color: "primary.hover",
+      transition: "transform 0.5s, color 0.2s"
+    }
+  }
+
   return (
     <Box position="sticky" top={0} zIndex="sticky" width="full">
       <Flex
@@ -113,13 +121,8 @@ const Nav = () => {
                     variant="ghost"
                     isSecondary
                     px={{ base: "2", xl: "3" }}
-                    _hover={{
-                      '& > svg': {
-                        transform: "rotate(10deg)",
-                        color: "primary.hover",
-                        transition: "transform 0.5s, color 0.2s"
-                      }
-                    }}
+                    _hover={desktopHoverFocusStyles}
+                    _focus={desktopHoverFocusStyles}
                     onClick={toggleColorMode}
                   />
 
