@@ -69,7 +69,7 @@ const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
           <List asChild>
             <UnorderedList listStyleType="none" p={PADDING / 2} m="0">
               {items.map((item) => {
-                const { label, description, icon, ...action } = item
+                const { label, icon, ...action } = item
                 const subItems = action.items || []
                 const isLink = "href" in action
                 const isActivePage = isLink && cleanPath(asPath) === action.href

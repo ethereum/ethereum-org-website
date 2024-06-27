@@ -17,7 +17,7 @@ import {
 import { IconButton } from "@/components/Buttons"
 import LanguagePicker from "@/components/LanguagePicker"
 
-import { DESKTOP_LANGUAGE_BUTTON_NAME, NAV_PY } from "@/lib/constants"
+import { DESKTOP_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
 
 type DesktopNavMenuProps = {
   toggleColorMode: () => void

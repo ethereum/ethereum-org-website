@@ -27,7 +27,7 @@ const WithdrawalCredentials: FC = () => {
   const [validator, setValidator] = useState<Validator | null>(null)
 
   const checkWithdrawalCredentials = async (isTestnet: boolean = false) => {
-    const network = isTestnet ? "Goerli" : "Mainnet"
+    const network = isTestnet ? "Holesky" : "Mainnet"
     const networkLowercase = network.toLowerCase()
     trackCustomEvent({
       eventCategory: `Validator index`,
@@ -160,7 +160,7 @@ const WithdrawalCredentials: FC = () => {
             variant="outline"
             isLoading={isLoading.testnet}
           >
-            {t("comp-withdrawal-credentials-verify-goerli")}
+            {t("comp-withdrawal-credentials-verify-holesky")}
           </Button>
         </Flex>
       </Flex>

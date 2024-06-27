@@ -158,7 +158,7 @@ const setImageSize: Plugin<[Options], Root> = (options) => {
   const srcPath = opts.srcPath
   const locale = opts.locale
 
-  return async (tree, _file) => {
+  return async (tree) => {
     // Instantiate an empty array for image nodes
     const images: ImageNode[] = []
 
