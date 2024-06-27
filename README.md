@@ -1872,6 +1872,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/pglekshmi"><img src="https://avatars.githubusercontent.com/u/107828565?v=4?s=100" width="100px;" alt="pglekshmi"/><br /><sub><b>pglekshmi</b></sub></a><br /><a href="#maintenance-pglekshmi" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/abonnaudet-ledger"><img src="https://avatars.githubusercontent.com/u/71646516?v=4?s=100" width="100px;" alt="abonnaudet-ledger"/><br /><sub><b>abonnaudet-ledger</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aabonnaudet-ledger" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/JacobSharples"><img src="https://avatars.githubusercontent.com/u/45126111?v=4?s=100" width="100px;" alt="Jacob Sharples"/><br /><sub><b>Jacob Sharples</b></sub></a><br /><a href="#content-JacobSharples" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/omahs"><img src="https://avatars.githubusercontent.com/u/73983677?v=4?s=100" width="100px;" alt="omahs"/><br /><sub><b>omahs</b></sub></a><br /><a href="#translation-omahs" title="Translation">🌍</a></td>
     </tr>
   </tbody>
 </table>
