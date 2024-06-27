@@ -57,7 +57,12 @@ const AssetDownload = ({
         )}
       </Box>
       <Flex gap={5} mt={4}>
-        <ButtonLink href={imgSrc} onClick={matomoHandler} target="_blank">
+        <ButtonLink
+          href={imgSrc}
+          onClick={matomoHandler}
+          target="_blank"
+          locale={false}
+        >
           {t("page-assets-download-download")} (
           {extname(imgSrc).slice(1).toUpperCase()})
         </ButtonLink>

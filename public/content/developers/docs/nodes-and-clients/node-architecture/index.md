@@ -10,13 +10,11 @@ When Ethereum was using [proof-of-work](/developers/docs/consensus-mechanisms/po
 
 The diagram below shows the relationship between the two Ethereum clients. The two clients connect to their own respective peer-to-peer (P2P) networks. Separate P2P networks are needed as the execution clients gossip transactions over their P2P network, enabling them to manage their local transaction pool, whilst the consensus clients gossip blocks over their P2P network, enabling consensus and chain growth.
 
-![](node-architecture2.png)
+![](node-architecture.png)
 
-_This image is borrowed from geth.ethereum.org and uses the Geth logo to represent execution clients - there are other options for the execution client including Erigon, Nethermind, and Besu_.
+_This image is borrowed from besu.hyperledger.org. There are several options for the execution client including Besu, Erigon, Nethermind, and Besu_.
 
-For this two-client structure to work, consensus clients must pass bundles of transactions to the execution client.
-
-The execution client executes the transactions locally to validate that the transactions do not violate any Ethereum rules and that the proposed update to Ethereum’s state is correct. When a node is selected to be a block producer its consensus client instance requests bundles of transactions from the execution client to include in the new block and execute them to update the global state.The consensus client drives the execution client via a local RPC connection using the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). 
+For this two-client structure to work, consensus clients must pass bundles of transactions to the execution client. The execution client executes the transactions locally to validate that the transactions do not violate any Ethereum rules and that the proposed update to Ethereum’s state is correct. When a node is selected to be a block producer its consensus client instance requests bundles of transactions from the execution client to include in the new block and execute them to update the global state.The consensus client drives the execution client via a local RPC connection using the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). 
 
 ## What does the execution client do? {#execution-client}
 
