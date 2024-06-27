@@ -515,8 +515,8 @@ const EthPage = () => {
         <CalloutBanner
           my={20}
           mx={0}
-          titleKey={"page-eth:page-eth-where-to-buy"}
-          descriptionKey={"page-eth:page-eth-where-to-buy-desc"}
+          title={t("page-eth:page-eth-where-to-buy")}
+          description={t("page-eth:page-eth-where-to-buy-desc")}
           image={ethCat}
           alt={t("page-eth-cat-img-alt")}
           imageWidth={300}

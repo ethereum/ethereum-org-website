@@ -1579,19 +1579,17 @@ const DappsPage = () => {
               mt={32}
               mx={0}
               mb={{ base: 0, lg: 16 }}
-              titleKey={"page-dapps:page-dapps-wallet-callout-title"}
-              descriptionKey={
+              title={t("page-dapps:page-dapps-wallet-callout-title")}
+              description={t(
                 "page-dapps:page-dapps-wallet-callout-description"
-              }
+              )}
               image={wallet}
               imageWidth={300}
               alt={t("page-dapps-wallet-callout-image-alt")}
             >
-              <Box>
-                <ButtonLink to="/wallets/find-wallet/">
-                  {t("page-dapps-wallet-callout-button")}
-                </ButtonLink>
-              </Box>
+              <ButtonLink to="/wallets/find-wallet/">
+                {t("page-dapps-wallet-callout-button")}
+              </ButtonLink>
             </CalloutBanner>
           </Content>
         )}

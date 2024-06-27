@@ -654,8 +654,8 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           mt={8}
           mb={16}
           mx={0}
-          titleKey={t("page-stablecoins-stablecoins-dapp-callout-title")}
-          descriptionKey={t(
+          title={t("page-stablecoins-stablecoins-dapp-callout-title")}
+          description={t(
             "page-stablecoins-stablecoins-dapp-callout-description"
           )}
           image={dogeComputerImg}

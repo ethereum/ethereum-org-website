@@ -1,77 +1,70 @@
-import { useTranslation } from "next-i18next"
-import { Flex, type FlexProps } from "@chakra-ui/react"
-
-import type { TranslationKey } from "@/lib/types"
+import { Box, Flex, type FlexProps, Heading, Text } from "@chakra-ui/react"
 
 import { Image, type ImageProps } from "@/components/Image"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 
 export type CalloutBannerProps = FlexProps & {
   children?: React.ReactNode
   image: ImageProps["src"]
   imageWidth?: number
-  titleKey: TranslationKey
-  descriptionKey: TranslationKey
+  title: string
+  description: string
   alt: string
+  alignImage?: FlexProps["alignItems"]
 }
 
 const CalloutBanner = ({
   image,
   imageWidth,
-  titleKey,
-  descriptionKey,
+  title,
+  description,
   alt,
   children,
+  alignImage = "center",
   ...props
 }: CalloutBannerProps) => {
-  const { t } = useTranslation("page-staking")
-
   return (
     <Flex
       as="aside"
-      direction={{ base: "column", lg: "row-reverse" }}
+      flexDir={{ base: "column", md: "row-reverse" }}
       bg="layer2Gradient"
-      p={{ base: 8, sm: 12 }}
       borderRadius="base"
       {...props}
     >
       {image && (
-        <Flex>
+        <Flex
+          flex="1 1 50%"
+          position="relative"
+          justify="center"
+          align={alignImage}
+          minH={{ base: 200, md: "auto" }}
+          px={{ base: 8, md: 0 }}
+        >
           <Image
             src={image}
-            alt={alt}
             width={imageWidth}
+            alt={alt}
+            position="absolute"
+            w="full"
+            maxH="150%"
             style={{
               objectFit: "contain",
             }}
-            mx="auto"
-            mt={-24}
-            mb={{ base: 0, lg: -24 }}
           />
         </Flex>
       )}
       <Flex
-        flexGrow={1}
-        flexShrink={0}
-        flexBasis="50%"
-        direction="column"
-        justifyContent="center"
-        ps={{ base: 0, sm: 4, lg: 8 }}
-        w={{ base: "full", lg: "inherit" }}
+        flex="1 1 50%"
+        flexDir="column"
+        gap="8"
+        py="8"
+        ps="8"
+        pe={{ base: 8, lg: 0 }}
       >
-        <OldHeading
-          as="h2"
-          mt={0}
-          fontSize={{ base: "2xl", sm: "2rem" }}
-          lineHeight="1.4"
-        >
-          {t(titleKey)}
-        </OldHeading>
-        <Text fontSize="xl" w="90%" lineHeight="140%" mb={8} color="text200">
-          {t(descriptionKey)}
-        </Text>
-        {children}
+        <Flex gap="2" flexDir="column">
+          <Heading size="lg">{title}</Heading>
+          <Text size="lg">{description}</Text>
+        </Flex>
+        <Box>{children}</Box>
       </Flex>
     </Flex>
   )
