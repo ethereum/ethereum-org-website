@@ -35,6 +35,14 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
     "Switch to Light Theme"
   )
 
+  const desktopHoverFocusStyles = {
+    '& > svg': {
+      transform: "rotate(10deg)",
+      color: "primary.hover",
+      transition: "transform 0.5s, color 0.2s"
+    }
+  }
+
   /**
    * Adds a keydown event listener to toggle color mode (ctrl|cmd + \)
    * or open the language picker (\).
@@ -54,16 +62,12 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
   return (
     <HStack hideBelow="md" gap="0">
       <IconButton
-        transition="transform 0.5s, color 0.2s"
         icon={ThemeIcon}
         aria-label={themeIconAriaLabel}
         variant="ghost"
         isSecondary
         px={{ base: "2", xl: "3" }}
-        _hover={{
-          transform: "rotate(10deg)",
-          color: "primary.hover",
-        }}
+        _hover={desktopHoverFocusStyles}
         onClick={toggleColorMode}
       />
 
