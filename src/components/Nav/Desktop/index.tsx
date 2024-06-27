@@ -68,6 +68,7 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
         isSecondary
         px={{ base: "2", xl: "3" }}
         _hover={desktopHoverFocusStyles}
+        _focus={desktopHoverFocusStyles}
         onClick={toggleColorMode}
       />
 
