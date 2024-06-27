@@ -30,6 +30,7 @@ import ChainIDEImage from "@/public/images/dev-tools/chainIDE.png"
 import ChainShotImage from "@/public/images/dev-tools/chainshot.png"
 import ConsensysImage from "@/public/images/dev-tools/consensys.png"
 import CryptoZombieImage from "@/public/images/dev-tools/crypto-zombie.png"
+import DappWorldImage from "@/public/images/dev-tools/dapp-world.png"
 import EthDotBuildImage from "@/public/images/dev-tools/eth-dot-build.png"
 import MetaschoolImage from "@/public/images/dev-tools/metaschool.png"
 import NFTSchoolImage from "@/public/images/dev-tools/nftschool.png"
@@ -209,6 +210,19 @@ const LearningToolsPage = () => {
       background: "#0f1524",
       subjects: ["Solidity", "Vyper", "web3"],
     },
+    {
+      name: 'DApp World',
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-dapp-world-description"
+      ),
+      url: 'https://dapp-world.com',
+      image: DappWorldImage,
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-dapp-world-logo-alt"
+      ),
+      background: "#e5e7eb",
+      subjects: ["Solidity", "web3"],
+    }
   ])
 
   const games: Array<LearningTool> = [
