@@ -34,7 +34,7 @@ Ahhoz, hogy az alkalmazás az Ethereum-blokklánccal működni tudjon, egy [Ethe
 
 Az Ethereum csomópontok egy szoftvert - Ethereum klienst - futtató számítógépek. Egy kliens egy Ethereum implementáció, mely hitelesíti az összes tranzakciót az egyes blokkokban, így a hálózat biztonságos marad az adatok pedig pontosak. **Az Ethereum-csomópontok összessége az Ethereum-blokklánc**. Kollektívan tárolják az Ethereum blokklánc állapotát és konszenzust érnek el a tranzakciókon, melyek a blokklánc állapotot megváltoztatják.
 
-Hogyha összekapcsolja az alkalmazást egy Ethereum-csomóponttal ([JSON RPC-n](/developers/docs/apis/json-rpc/) keresztül), akkor az alkalmazás képes lesz adatokat leolvasni a blokkláncról (például felhasználóiszámla-egyenlegek), illetve új tranzakciókat közvetíteni a hálózatra (például ETH-átutalás felhasználói számlák között, illetve okosszerződés-függvények futtatása).
+Hogyha összekapcsolja az alkalmazást egy Ethereum-csomóponttal ([JSON-RPC-n](/developers/docs/apis/json-rpc/) keresztül), akkor az alkalmazás képes lesz adatokat leolvasni a blokkláncról (például felhasználóiszámla-egyenlegek), illetve új tranzakciókat közvetíteni a hálózatra (például ETH-átutalás felhasználói számlák között, illetve okosszerződés-függvények futtatása).
 
 ## Négyes szint: Ethereum kliens API-ok {#ethereum-client-apis}
 

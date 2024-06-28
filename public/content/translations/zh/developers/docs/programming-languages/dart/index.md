@@ -20,7 +20,7 @@ incomplete: true
 
 ## 使用以太坊客户端 {#working-with-ethereum-clients}
 
-你可以使用以太坊来创建去中心化应用程序（或称“dapp”），这种应用可以利用加密货币和区块链技术。 Dart 当前至少维护了两个调用以太坊 [JSON RPC 应用程序接口](/developers/docs/apis/json-rpc/)的库。
+你可以使用以太坊来创建去中心化应用程序（或称“dapp”），这种应用可以利用加密货币和区块链技术。 Dart 当前至少维护了两个调用以太坊 [JSON-RPC 应用程序接口](/developers/docs/apis/json-rpc/)的库。
 
 1. [来自 simonbutler.eu 的 Web3dart](https://pub.dev/packages/web3dart)
 1. [来自 darticulate.com 的以太坊 5.0.0](https://pub.dev/packages/ethereum)

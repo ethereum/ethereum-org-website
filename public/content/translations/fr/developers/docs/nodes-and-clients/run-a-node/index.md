@@ -226,7 +226,7 @@ Cette section vous guidera dans le démarrage des clients d'exécution. Elle ser
 - Définit le répertoire de données, où toutes les données, y compris la blockchain, seront enregistrées
   - Assurez-vous de remplacer le chemin par un chemin réel, par exemple pointant vers votre disque externe
 - Active les interfaces pour communiquer avec le client
-  - Y compris JSON RPC et Engine API pour la communication avec le client de consensus
+  - Y compris JSON-RPC et Engine API pour la communication avec le client de consensus
 - Définit le chemin vers `jwtsecret` pour l'API authentifiée
   - Assurez-vous de remplacer le chemin exemple par un chemin réel accessible par les clients, par exemple `/tmp/jwtsecret`
 
@@ -236,7 +236,7 @@ Gardez à l'esprit que ce n'est qu'un exemple de base, tous les autres paramètr
 
 ##### Exécuter Besu
 
-Cet exemple fait démarrer Besu sur le réseau principal, stocke les données blockchain au format par défaut dans `/data/ethereum`, actifs JSON RPC et Engine RPC pour connecter le client de consensus. Engine API est authentifié avec le jeton `jwtsecret` et seuls les appels de `localhost` sont autorisés.
+Cet exemple fait démarrer Besu sur le réseau principal, stocke les données blockchain au format par défaut dans `/data/ethereum`, actifs JSON-RPC et Engine RPC pour connecter le client de consensus. Engine API est authentifié avec le jeton `jwtsecret` et seuls les appels de `localhost` sont autorisés.
 
 ```
 besu --network=mainnet \
@@ -258,7 +258,7 @@ besu --Xlauncher
 
 ##### Exécuter Erigon
 
-Cet exemple fait démarrer Erigon sur le réseau principal, stocke les données blockchain dans `/data/ethereum`, active JSON RPC, définit les espaces de noms autorisés et active l'authentification pour connecter le client de consensus défini par le chemin `jwtsecret`.
+Cet exemple fait démarrer Erigon sur le réseau principal, stocke les données blockchain dans `/data/ethereum`, active JSON-RPC, définit les espaces de noms autorisés et active l'authentification pour connecter le client de consensus défini par le chemin `jwtsecret`.
 
 ```
 erigon --chain mainnet \
@@ -271,7 +271,7 @@ Erigon effectue par défaut une synchronisation complète avec un disque dur de 
 
 ##### Exécuter Geth
 
-Cet exemple fait démarrer Geth sur le réseau principal, stocke les données blockchain dans `/data/ethereum`, active JSON RPC et définit les espaces de noms autorisés. Il active également l'authentification pour connecter le client de consensus qui nécessite le chemin vers `jwtsecret` ainsi que l'option définissant les connexions autorisées, dans notre exemple uniquement à partir de `localhost`.
+Cet exemple fait démarrer Geth sur le réseau principal, stocke les données blockchain dans `/data/ethereum`, active JSON-RPC et définit les espaces de noms autorisés. Il active également l'authentification pour connecter le client de consensus qui nécessite le chemin vers `jwtsecret` ainsi que l'option définissant les connexions autorisées, dans notre exemple uniquement à partir de `localhost`.
 
 ```
 geth --mainnet \
@@ -286,7 +286,7 @@ Vérifiez la documentation [pour toutes les options de configuration](https://ge
 
 ##### Exécuter Nethermind
 
-Nethermind offre diverses [options d'installation](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). Le paquet est fourni avec divers binaires, y compris un lanceur doté d'une installation guidée, qui vous aidera à créer votre configuration de manière interactive. Autrement, vous trouverez Runner, qui est l'exécutable lui-même, et pouvez simplement l'exécuter en utilisant des options de configuration. JSON RPC est activé par défaut.
+Nethermind offre diverses [options d'installation](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). Le paquet est fourni avec divers binaires, y compris un lanceur doté d'une installation guidée, qui vous aidera à créer votre configuration de manière interactive. Autrement, vous trouverez Runner, qui est l'exécutable lui-même, et pouvez simplement l'exécuter en utilisant des options de configuration. JSON-RPC est activé par défaut.
 
 ```
 Nethermind.Runner --config mainnet \

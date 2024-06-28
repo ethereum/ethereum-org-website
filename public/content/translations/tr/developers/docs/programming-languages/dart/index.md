@@ -20,7 +20,7 @@ incomplete: true
 
 ## Ethereum istemcileri ile çalışma {#working-with-ethereum-clients}
 
-Ethereum'u, kripto para birimi ve blok zinciri teknolojisinin faydalarını kullanan merkeziyetsiz uygulamalar (veya "dapp'ler") oluşturmak için kullanabilirsiniz. Dart'ın Ethereum için [JSON RPC API](/developers/docs/apis/json-rpc/)'sini kullanması için şu anda yürütülen en az iki kütüphane vardır.
+Ethereum'u, kripto para birimi ve blok zinciri teknolojisinin faydalarını kullanan merkeziyetsiz uygulamalar (veya "dapp'ler") oluşturmak için kullanabilirsiniz. Dart'ın Ethereum için [JSON-RPC API](/developers/docs/apis/json-rpc/)'sini kullanması için şu anda yürütülen en az iki kütüphane vardır.
 
 1. [Simonbutler.eu'dan Web3dart](https://pub.dev/packages/web3dart)
 1. [Darticulate.com'dan Ethereum 5.0.0](https://pub.dev/packages/ethereum)

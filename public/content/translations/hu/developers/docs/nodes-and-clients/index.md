@@ -166,7 +166,7 @@ A Nethermind egy Ethereum-implementáció, amelyet a C# .NET tech stackkel hozta
 
 - egy optimizált virtuális géppel;
 - állapoteléréssel;
-- networkinggel és sokféle funkcióval, mint a Prometheus/Graphana irányítópultok, seq vállalati naplózási támogatás, JSON RPC nyomon követés és analitikai pluginek.
+- networkinggel és sokféle funkcióval, mint a Prometheus/Graphana irányítópultok, seq vállalati naplózási támogatás, JSON-RPC nyomon követés és analitikai pluginek.
 
 Ezenkívül a Nethermind [részletes dokumentációval](https://docs.nethermind.io), erős fejlesztői támogatással és online közösséggel is rendelkezik, valamint nonstop támogatással a prémium felhasználók részére.
 

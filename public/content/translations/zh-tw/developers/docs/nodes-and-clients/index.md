@@ -164,7 +164,7 @@ Nethermind 是使用 C# .NET 技術堆疊開發的以太坊實作，以 LGPL-3.0
 
 - 最佳化的虛擬機
 - 狀態存取
-- 網路和豐富的功能，如 Prometheus/Grafana 儀表板、seq 企業日誌記錄支援、JSON RPC 追蹤和分析插件。
+- 網路和豐富的功能，如 Prometheus/Grafana 儀表板、seq 企業日誌記錄支援、JSON-RPC 追蹤和分析插件。
 
 Nethermind 也為高級使用者提供[詳細文件](https://docs.nethermind.io)、強大的開發支援、線上社群和全年無休支援。
 

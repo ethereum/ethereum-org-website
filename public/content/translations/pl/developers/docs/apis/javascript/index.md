@@ -8,7 +8,7 @@ Aby aplikacja mogła wchodzić w interakcję z blockchainem Ethereum (tj. odczyt
 
 W tym celu każdy klient Ethereum implementuje specyfikację JSON-RPC, dzięki czemu istnieje jednolity zestaw punktów końcowych, na których mogą polegać aplikacje.
 
-Jeśli chcesz użyć określonego języka programowania do połączenia z węzłem Ethereum, rozpisz własne rozwiązanie, ale w ekosystemie istnieje kilka wygodnych bibliotek, które znacznie to ułatwiają. Dzięki tym bibliotekom programiści mogą pisać intuicyjne, jednowierszowe metody inicjowania żądań JSON RPC (pod maską), które współdziałają z Ethereum.
+Jeśli chcesz użyć określonego języka programowania do połączenia z węzłem Ethereum, rozpisz własne rozwiązanie, ale w ekosystemie istnieje kilka wygodnych bibliotek, które znacznie to ułatwiają. Dzięki tym bibliotekom programiści mogą pisać intuicyjne, jednowierszowe metody inicjowania żądań JSON-RPC (pod maską), które współdziałają z Ethereum.
 
 ## Wymagania wstępne {#prerequisites}
 

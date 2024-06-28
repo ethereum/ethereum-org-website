@@ -8,7 +8,7 @@ Para um aplicativo de software interagir com a blockchain Ethereum (ou seja, lei
 
 Para isso, cada cliente Ethereum implementa a especificação [JSON-RPC](/developers/docs/apis/json-rpc/), portanto, há um conjunto uniforme de [métodos](/developers/docs/apis/json-rpc/#json-rpc-methods) com os quais as aplicações podem contar.
 
-Se você quiser usar uma linguagem de programação específica para se conectar com um nó Ethereum, existem várias bibliotecas de conveniência dentro do ecossistema que tornam isso muito mais fácil. Com essas bibliotecas, os desenvolvedores podem escrever intuitivamente métodos on-line para iniciar requisições JSON RPC (por debaixo dos panos) que interajam com a Ethereum.
+Se você quiser usar uma linguagem de programação específica para se conectar com um nó Ethereum, existem várias bibliotecas de conveniência dentro do ecossistema que tornam isso muito mais fácil. Com essas bibliotecas, os desenvolvedores podem escrever intuitivamente métodos on-line para iniciar requisições JSON-RPC (por debaixo dos panos) que interajam com a Ethereum.
 
 ## Pré-requisitos {#prerequisites}
 

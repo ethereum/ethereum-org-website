@@ -70,7 +70,7 @@ getBlockNumber()
 
 Vous pouvez consulter toutes les fonctions disponibles sur l'instance Web3 dans la [documentation officielle de Web3.js](https://docs.web3js.org/).
 
-La plupart des bibliothèques Web3 sont asynchrones parce qu'en arrière-plan, la bibliothèque fait appel au serveur JSON RPC pour accéder au noeud qui renvoie le résultat.
+La plupart des bibliothèques Web3 sont asynchrones parce qu'en arrière-plan, la bibliothèque fait appel au serveur JSON-RPC pour accéder au noeud qui renvoie le résultat.
 
 <Divider />
 

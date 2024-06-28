@@ -149,7 +149,7 @@ Nethermind adalah satu implementasi Ethereum yang dibuat dengan tumpukan teknolo
 
 - mesin virtual yang dioptimalkan
 - akses state
-- jaringan dan fitur yang kaya seperti dasbor Prometheus/Graphana, dukungan logging perusahaan seq, pelacakan JSON RPC, dan plugin analitik.
+- jaringan dan fitur yang kaya seperti dasbor Prometheus/Graphana, dukungan logging perusahaan seq, pelacakan JSON-RPC, dan plugin analitik.
 
 Nethermind juga mempunyai [dokumentasi detil](https://docs.nethermind.io), dukungan pengembang yang kuat, komunitasi daring dan dukungan 24/7 yang tersedia untuk para pengguna premium.
 

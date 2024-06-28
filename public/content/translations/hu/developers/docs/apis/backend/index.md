@@ -8,7 +8,7 @@ Ahhoz, hogy egy szoftver alkalmazás interakcióba lépjen az Ethereum blokklán
 
 Erre a célra minden Ethereum-kliens implementálja a [JSON-RPC](/developers/docs/apis/json-rpc/) specifikációt, így egységes [módszerek](/developers/docs/apis/json-rpc/#json-rpc-methods) állnak rendelkezésre, amelyekre az alkalmazások támaszkodhatnak.
 
-Ha egy bizonyos programnyelvet szeretne használni, hogy kapcsolódjon egy Ethereum csomóponttal, akkor számos könyvtár létezik az ökoszisztémán belül, melyek megkönnyítik ezt. Ezekkel a könyvtárakkal a fejlesztők intuitív, egysoros metódusokat írhatnak, hogy kezdeményezzenek egy JSON RPC kérést (a háttérben), mely interakcióba lép az Ethereummal.
+Ha egy bizonyos programnyelvet szeretne használni, hogy kapcsolódjon egy Ethereum csomóponttal, akkor számos könyvtár létezik az ökoszisztémán belül, melyek megkönnyítik ezt. Ezekkel a könyvtárakkal a fejlesztők intuitív, egysoros metódusokat írhatnak, hogy kezdeményezzenek egy JSON-RPC kérést (a háttérben), mely interakcióba lép az Ethereummal.
 
 ## Előfeltételek {#prerequisites}
 
@@ -135,7 +135,7 @@ Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóp
 - [NOWNodes.io](https://nownodes.io/)
 - [Dokumentáció](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
-**Node RPC – _Költséghatékony EVM JSON RPC-szolgáltató_**
+**Node RPC – _Költséghatékony EVM JSON-RPC-szolgáltató_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Dokumentáció](https://docs.noderpc.xyz/)

@@ -226,7 +226,7 @@ Ez a rész a végrehajtási kliensek elindítását mutatja be. Csak példaként
 - Meghatározza az adatkönyvtárat, ahol az összes adat, beleértve a blokkláncot is, le lesz tárolva
   - Írja át az útvonalat egy valódira, pl. ami a külső meghajtójára mutat
 - Lehetővé teszi, hogy az interfészek kommunikáljanak a klienssel
-  - Beleértve a JSON RPC-t és az Engine API-t a konszenzusos klienssel való kommunikációhoz
+  - Beleértve a JSON-RPC-t és az Engine API-t a konszenzusos klienssel való kommunikációhoz
 - Meghatározza a `jwtsecret` kódhoz tartozó útvonalat a hitelesített API-hoz
   - Cserélje le a példát egy valódi útvonallal, amit elérnek a kliensek, pl. `/tmp/jwtsecret`
 
@@ -236,7 +236,7 @@ Ne feledje, hogy ez csak alappélda, az összes beállítás a kezdőértéken m
 
 ##### A Besu futtatása
 
-Ez a példa a Besut a főhálózaton indítja el, a blokkláncadatokat az alapértelmezett formátumban tárolja a `/data/ethereum` alatt, engedélyezi a JSON RPC-t és Engine RPC-t a konszenzusos klienssel való kapcsolódáshoz. Az Engine API-t a `jwtsecret` token hitelesíti, és csak a `localhostból` jövő hívások vannak megengedve.
+Ez a példa a Besut a főhálózaton indítja el, a blokkláncadatokat az alapértelmezett formátumban tárolja a `/data/ethereum` alatt, engedélyezi a JSON-RPC-t és Engine RPC-t a konszenzusos klienssel való kapcsolódáshoz. Az Engine API-t a `jwtsecret` token hitelesíti, és csak a `localhostból` jövő hívások vannak megengedve.
 
 ```
 besu --network=mainnet \
@@ -258,7 +258,7 @@ A [Besu dokumentációja](https://besu.hyperledger.org/en/latest/HowTo/Get-Start
 
 ##### Az Erigon futtatása
 
-Ez a példa az Erigont a főhálózaton indítja el, a blokkláncadatot a `/data/ethereum` alatt tárolja, engedélyezi a JSON RPC-t, meghatározza a namespace-eket, és engedélyezi a hitelesítést a konszenzusos klienssel való kapcsolódáshoz, amit a `jwtsecret` útvonal határoz meg.
+Ez a példa az Erigont a főhálózaton indítja el, a blokkláncadatot a `/data/ethereum` alatt tárolja, engedélyezi a JSON-RPC-t, meghatározza a namespace-eket, és engedélyezi a hitelesítést a konszenzusos klienssel való kapcsolódáshoz, amit a `jwtsecret` útvonal határoz meg.
 
 ```
 erigon --chain mainnet \
@@ -271,7 +271,7 @@ Az Erigon alapból teljes szinkronizálást végez 8 GB HDD-vel, ami több mint 
 
 ##### A Geth futtatása
 
-Ez a példa a Gethet a főhálózaton indítja el, a blokkláncadatokat a `/data/ethereum` alatt tárolja, engedélyezi a JSON RPC-t, és meghatározza a namespace-eket. Engedélyezi a hitelesítést, hogy a konszenzusos klienssel lehessen kapcsolódni, amihez a `jwtsecret` útvonal szükséges, és azt is megadja, hogy milyen kapcsolódások lehetségesek, jelen példánkban csak a `localhosttól` érkezők.
+Ez a példa a Gethet a főhálózaton indítja el, a blokkláncadatokat a `/data/ethereum` alatt tárolja, engedélyezi a JSON-RPC-t, és meghatározza a namespace-eket. Engedélyezi a hitelesítést, hogy a konszenzusos klienssel lehessen kapcsolódni, amihez a `jwtsecret` útvonal szükséges, és azt is megadja, hogy milyen kapcsolódások lehetségesek, jelen példánkban csak a `localhosttól` érkezők.
 
 ```
 geth --mainnet \
@@ -286,7 +286,7 @@ Tekintse meg a [dokumentációt az összes konfigurálási opcióhoz](https://ge
 
 ##### A Nethermind futtatása
 
-A Nethermind különféle [telepítési opciókat](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) kínál. A csomag számos binárist tartalmaz, beleértve egy Telepítőt, ami egy vezetett felállítást tesz lehetővé, így a konfigurációt interaktív módon lehet létrehozni. Másik megoldásként használhatja a Runner-t is, ami a végrehajtási program maga, és konfigurációs jelölőkkel futtathatja. A JSON RPC alapból engedélyezve van.
+A Nethermind különféle [telepítési opciókat](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) kínál. A csomag számos binárist tartalmaz, beleértve egy Telepítőt, ami egy vezetett felállítást tesz lehetővé, így a konfigurációt interaktív módon lehet létrehozni. Másik megoldásként használhatja a Runner-t is, ami a végrehajtási program maga, és konfigurációs jelölőkkel futtathatja. A JSON-RPC alapból engedélyezve van.
 
 ```
 Nethermind.Runner --config mainnet \

@@ -16,7 +16,7 @@ Ethereum istemcilerinin her biri, JSON-RPC şartnamesini uygularken farklı prog
 
 ## Kolaylık Kütüphaneleri {#convenience-libraries}
 
-JSON-RPC API aracılığıyla Ethereum istemcileriyle doğrudan etkileşim kurmayı seçebilseniz de, dapp geliştiricileri için genellikle daha kolay seçenekler vardır. JSON-RPC API'sinin üzerinde paketleyiciler sağlamak için birçok [JavaScript](/developers/docs/apis/javascript/#available-libraries) ve [arka uç API'si](/developers/docs/apis/backend/#available-libraries) kütüphanesi bulunur. Bu kütüphanelerle geliştiriciler, Ethereum ile etkileşime giren JSON RPC taleplerini (arka planda) başlatmak için tercih ettikleri programlama dilinde sezgisel ve tek satırlı yöntemler yazabilirler.
+JSON-RPC API aracılığıyla Ethereum istemcileriyle doğrudan etkileşim kurmayı seçebilseniz de, dapp geliştiricileri için genellikle daha kolay seçenekler vardır. JSON-RPC API'sinin üzerinde paketleyiciler sağlamak için birçok [JavaScript](/developers/docs/apis/javascript/#available-libraries) ve [arka uç API'si](/developers/docs/apis/backend/#available-libraries) kütüphanesi bulunur. Bu kütüphanelerle geliştiriciler, Ethereum ile etkileşime giren JSON-RPC taleplerini (arka planda) başlatmak için tercih ettikleri programlama dilinde sezgisel ve tek satırlı yöntemler yazabilirler.
 
 ## Fikir birliği istemci API'ları {#consensus-clients}
 

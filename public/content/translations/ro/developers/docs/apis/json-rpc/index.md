@@ -21,7 +21,7 @@ Fiecare client Ethereum poate utiliza câte un limbaj de programare diferit la i
 
 ## Biblioteci practice {#convenience-libraries}
 
-Deși puteţi opta să interacționaţi direct cu clienții Ethereum prin API-ul JSON-RPC, există adesea opțiuni mai simple pentru dezvoltatorii de aplicații dapp. Există multe biblioteci de [JavaScript](/developers/docs/apis/javascript/#available-libraries) și [API-uri pentru backend](/developers/docs/apis/backend/#available-libraries) pentru a oferi wrappere peste API-ul JSON-RPC. Cu aceste biblioteci, dezvoltatorii pot scrie metode intuitive și scurte în limbajul de programare pe care îl aleg pentru a inițializa cererile JSON RPC (în culise) care interacționează cu Ethereum.
+Deși puteţi opta să interacționaţi direct cu clienții Ethereum prin API-ul JSON-RPC, există adesea opțiuni mai simple pentru dezvoltatorii de aplicații dapp. Există multe biblioteci de [JavaScript](/developers/docs/apis/javascript/#available-libraries) și [API-uri pentru backend](/developers/docs/apis/backend/#available-libraries) pentru a oferi wrappere peste API-ul JSON-RPC. Cu aceste biblioteci, dezvoltatorii pot scrie metode intuitive și scurte în limbajul de programare pe care îl aleg pentru a inițializa cererile JSON-RPC (în culise) care interacționează cu Ethereum.
 
 ## Subiecte corelate {#related-topics}
 

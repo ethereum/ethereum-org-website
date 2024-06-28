@@ -250,7 +250,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 ### 步骤 12：安装 Ethers.js {#step-12-install-ethersjs}
 
-Ethers.js 是一个程序库，通过以更加方便用户的方法打包[标准 JSON RPC 方法](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc)，从而更容易与以太坊互动，以及向以太坊提出请求。
+Ethers.js 是一个程序库，通过以更加方便用户的方法打包[标准 JSON-RPC 方法](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc)，从而更容易与以太坊互动，以及向以太坊提出请求。
 
 安全帽可用于集成[插件](https://hardhat.org/plugins/)以获取额外的工具和扩展功能。 我们将利用 [Ethers 插件](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html)完成合约部署。
 

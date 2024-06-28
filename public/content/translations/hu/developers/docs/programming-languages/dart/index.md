@@ -22,7 +22,7 @@ incomplete: true
 
 ## Az Ethereum-kliensek használata {#working-with-ethereum-clients}
 
-Az Ethereumot decentralizált alkalmazások (dappok) fejlesztésére használhatja, amelyek a kriptovaluták és a blokklánc-technológia nyújtotta összes előnyét kiélvezhetik. A Darthoz legalább két könyvtárat tartanak karban, hogy a [JSON RPC API-t](/developers/docs/apis/json-rpc/) használja az Ethereumra.
+Az Ethereumot decentralizált alkalmazások (dappok) fejlesztésére használhatja, amelyek a kriptovaluták és a blokklánc-technológia nyújtotta összes előnyét kiélvezhetik. A Darthoz legalább két könyvtárat tartanak karban, hogy a [JSON-RPC API-t](/developers/docs/apis/json-rpc/) használja az Ethereumra.
 
 1. [Web3dart a simonbutler.eu forrásból](https://pub.dev/packages/web3dart)
 1. [Ethereum 5.0.0 a darticulate.com forrásból](https://pub.dev/packages/ethereum)

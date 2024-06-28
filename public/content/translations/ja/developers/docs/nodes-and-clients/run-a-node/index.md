@@ -226,7 +226,7 @@ openssl rand -hex 32 > jwtsecret
 - ブロックチェーンを含むすべてのデータが格納されるデータディレクトリを定義
   - パスは必ず実際のものに変更する(例: 外付けドライブのディレクトリの指定など)
 - クライアントと通信するためのインターフェースを有効化
-  - コンセンサスクライアントとの通信で利用するJSON RPCとエンジンAPIを含む
+  - コンセンサスクライアントとの通信で利用するJSON-RPCとエンジンAPIを含む
 - API認証で使う`jwtsecret`のパスを定義
   - 例えば、`/tmp/jwtsecret`など、クライアントがアクセス可能な実際のパスにする
 
@@ -236,7 +236,7 @@ openssl rand -hex 32 > jwtsecret
 
 ##### Besuの実行
 
-この例では、メインネットでBesuを起動し、ブロックチェーンデータをデフォルトフォーマットで`/data/ethereum`に保存し、コンセンサスクライアントへの接続のためにJSON RPCとEngine RPCを有効にしています。 エンジンAPIは、トークン`jwtsecret`で認証され、`localhost`からの呼び出しのみが許可されます。
+この例では、メインネットでBesuを起動し、ブロックチェーンデータをデフォルトフォーマットで`/data/ethereum`に保存し、コンセンサスクライアントへの接続のためにJSON-RPCとEngine RPCを有効にしています。 エンジンAPIは、トークン`jwtsecret`で認証され、`localhost`からの呼び出しのみが許可されます。
 
 ```
 besu --network=mainnet \
@@ -258,7 +258,7 @@ besu --Xlauncher
 
 ##### Erigonの実行
 
-この例では、Erigonをメインネットで起動して、ブロックチェーンデータを`/data/ethereum`に保存します。また、JSON RPCを有効にして、許可するネームスペースを定義します。さらに、`jwtsecret`パスで定義されるコンセンサスクライアントへの接続認証を有効にしています。
+この例では、Erigonをメインネットで起動して、ブロックチェーンデータを`/data/ethereum`に保存します。また、JSON-RPCを有効にして、許可するネームスペースを定義します。さらに、`jwtsecret`パスで定義されるコンセンサスクライアントへの接続認証を有効にしています。
 
 ```
 erigon --chain mainnet \
@@ -271,7 +271,7 @@ Erigonは、デフォルトで8GBのHDDでフル同期を行います。アー�
 
 ##### Gethの実行
 
-この例では、Gethをメインネットで起動し、ブロックチェーンデータを`/data/ethereum`に保存します。また、JSON RPCを有効にして、許可するネームスペースを定義します。 さらに、コンセンサスクライアントに接続するための認証を有効にし、認証に必要な`jwtsecret`を定義し、許可する接続のオプションも合わせて(この例では`localhost`からのみ)定義しています。
+この例では、Gethをメインネットで起動し、ブロックチェーンデータを`/data/ethereum`に保存します。また、JSON-RPCを有効にして、許可するネームスペースを定義します。 さらに、コンセンサスクライアントに接続するための認証を有効にし、認証に必要な`jwtsecret`を定義し、許可する接続のオプションも合わせて(この例では`localhost`からのみ)定義しています。
 
 ```
 geth --mainnet \
@@ -286,7 +286,7 @@ geth --mainnet \
 
 ##### Nethermindの実行
 
-Nethermindは、さまざまな[インストールオプション](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)を提供しています。 パッケージには、ガイド付きセットアップ機能を備えたランチャーなどのさまざまなバイナリが含まれており、インタラクティブに設定できます。 他にも、設定フラグを付けて実行できるランナーなどがあります。 JSON RPCはデフォルトで有効になっています。
+Nethermindは、さまざまな[インストールオプション](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)を提供しています。 パッケージには、ガイド付きセットアップ機能を備えたランチャーなどのさまざまなバイナリが含まれており、インタラクティブに設定できます。 他にも、設定フラグを付けて実行できるランナーなどがあります。 JSON-RPCはデフォルトで有効になっています。
 
 ```
 Nethermind.Runner --config mainnet \

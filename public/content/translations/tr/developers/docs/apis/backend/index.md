@@ -8,7 +8,7 @@ Bir yazılım uygulamasının Ethereum blok zinciri ile etkileşime girmesi (yan
 
 Bu amaçla, her Ethereum istemcisi [JSON-RPC](/developers/docs/apis/json-rpc/) spesifikasyonunu uygular, böylece uygulamaların güvenebileceği tek tip [metotlar](/developers/docs/apis/json-rpc/#json-rpc-methods) olur.
 
-Bir Ethereum düğümüne bağlanmak için belirli bir programlama dili kullanmak istiyorsanız, ekosistem içinde bunu çok daha kolay hâle getiren birkaç kolaylık kütüphanesi vardır. Bu kütüphanelerle geliştiriciler, Ethereum ile etkileşime giren JSON RPC taleplerini (arka planda) başlatmak için sezgisel ve tek satırlı yöntemler yazabilirler.
+Bir Ethereum düğümüne bağlanmak için belirli bir programlama dili kullanmak istiyorsanız, ekosistem içinde bunu çok daha kolay hâle getiren birkaç kolaylık kütüphanesi vardır. Bu kütüphanelerle geliştiriciler, Ethereum ile etkileşime giren JSON-RPC taleplerini (arka planda) başlatmak için sezgisel ve tek satırlı yöntemler yazabilirler.
 
 ## Ön Koşullar {#prerequisites}
 
