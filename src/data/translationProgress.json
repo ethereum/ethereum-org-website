@@ -79,7 +79,7 @@
   {
     "languageId": "cs",
     "words": {
-      "approved": 50878,
+      "approved": 50981,
       "total": 266142
     }
   },
@@ -100,7 +100,7 @@
   {
     "languageId": "el",
     "words": {
-      "approved": 109312,
+      "approved": 109916,
       "total": 266142
     }
   },
@@ -114,7 +114,7 @@
   {
     "languageId": "es-EM",
     "words": {
-      "approved": 238699,
+      "approved": 239049,
       "total": 266142
     }
   },
@@ -135,7 +135,7 @@
   {
     "languageId": "fa",
     "words": {
-      "approved": 91885,
+      "approved": 92288,
       "total": 266142
     }
   },
@@ -163,7 +163,7 @@
   {
     "languageId": "fr",
     "words": {
-      "approved": 251072,
+      "approved": 252889,
       "total": 266142
     }
   },
@@ -254,7 +254,7 @@
   {
     "languageId": "ja",
     "words": {
-      "approved": 263222,
+      "approved": 266142,
       "total": 266142
     }
   },
@@ -576,7 +576,7 @@
   {
     "languageId": "uk",
     "words": {
-      "approved": 73202,
+      "approved": 75656,
       "total": 266142
     }
   },
@@ -618,14 +618,14 @@
   {
     "languageId": "zh-CN",
     "words": {
-      "approved": 245130,
+      "approved": 247101,
       "total": 266142
     }
   },
   {
     "languageId": "zh-TW",
     "words": {
-      "approved": 121892,
+      "approved": 134284,
       "total": 266142
     }
   },
