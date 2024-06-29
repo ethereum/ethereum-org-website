@@ -168,7 +168,7 @@ Nethermind is an Ethereum implementation created with the C# .NET tech stack, li
 
 - an optimized virtual machine
 - state access
-- networking and rich features like Prometheus/Grafana dashboards, seq enterprise logging support, JSON RPC tracing, and analytics plugins.
+- networking and rich features like Prometheus/Grafana dashboards, seq enterprise logging support, JSON-RPC tracing, and analytics plugins.
 
 Nethermind also has [detailed documentation](https://docs.nethermind.io), strong dev support, an online community and 24/7 support available for premium users.
 
