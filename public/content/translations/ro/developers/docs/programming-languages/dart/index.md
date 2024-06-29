@@ -20,7 +20,7 @@ incomplete: true
 
 ## Cum se lucrează cu clienții Ethereum {#working-with-ethereum-clients}
 
-Puteți folosi Ethereum pentru a crea aplicații descentralizate (sau „dapp-uri”) care folosesc atât beneficiile criptomonedelor, cât și ale tehnologiei blockchain. Sunt întreţinute cel puțin două biblioteci actualmente pentru ca Dart să utilizeze [API-ul JSON-RPC](/developers/docs/apis/json-rpc/) pentru Ethereum.
+Puteți folosi Ethereum pentru a crea aplicații descentralizate (sau „dapp-uri”) care folosesc atât beneficiile criptomonedelor, cât și ale tehnologiei blockchain. Sunt întreţinute cel puțin două biblioteci actualmente pentru ca Dart să utilizeze [API-ul JSON RPC](/developers/docs/apis/json-rpc/) pentru Ethereum.
 
 1. [Web3dart din simonbutler.eu](https://pub.dev/packages/web3dart)
 1. [Ethereum 5.0.0 de la darticulate.com](https://pub.dev/packages/ethereum)

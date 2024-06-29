@@ -226,7 +226,7 @@ Questa sezione ti guiderà nell'avvio dei client di esecuzione. Serve solo da es
 - Definisce la cartella dei dati in cui saranno memorizzati tutti i dati, inclusa la blockchain
   - Assicurati di sostituire il percorso con quello reale, es. puntando alla tua unità esterna
 - Abilita le interfacce per comunicare col client
-  - Inclusi l'API di JSON-RPC e l'API Engine per la comunicazione col client di consenso
+  - Inclusi l'API di JSON RPC e l'API Engine per la comunicazione col client di consenso
 - Definisce il percorso a `jwtsecret` per l'API autenticata
   - Assicurati di sostituire il percorso d'esempio con quello reale accessibile dai client, es. `/tmp/jwtsecret`
 
@@ -236,7 +236,7 @@ Ricordati che questo è solo un esempio di base, tutte le altre impostazioni sar
 
 ##### Eseguire Besu
 
-Questo esempio avvia Besu sulla rete principale, memorizza i dati della blockchain nel formato predefinito a `/data/ethereum`, abilita JSON-RPC e Engine RPC per connettere il client di consenso. L'API Engine è autenticata con il token `jwtsecret` e solo le chiamate da `localhost` sono consentite.
+Questo esempio avvia Besu sulla rete principale, memorizza i dati della blockchain nel formato predefinito a `/data/ethereum`, abilita JSON RPC e Engine RPC per connettere il client di consenso. L'API Engine è autenticata con il token `jwtsecret` e solo le chiamate da `localhost` sono consentite.
 
 ```
 besu --network=mainnet \
@@ -258,7 +258,7 @@ La [documentazione di Besu](https://besu.hyperledger.org/en/latest/HowTo/Get-Sta
 
 ##### Eseguire Erigon
 
-Questo esempio avvia Erigon sulla rete principale, memorizza i dati della blockchain in `/data/ethereum`, abilita JSON-RPC, definisce quali spazi del nome sono consentiti e consente l'autenticazione per connettere il client di consenso, definito dal percorso `jwtsecret`.
+Questo esempio avvia Erigon sulla rete principale, memorizza i dati della blockchain in `/data/ethereum`, abilita JSON RPC, definisce quali spazi del nome sono consentiti e consente l'autenticazione per connettere il client di consenso, definito dal percorso `jwtsecret`.
 
 ```
 erigon --chain mainnet \
@@ -271,7 +271,7 @@ Erigon esegue di default una sincronizzazione completa con 8GB di HDD, che risul
 
 ##### Eseguire Geth
 
-Questo esempio avvia Geth sulla rete principale, memorizza i dati della blockchain i `/data/ethereum`, abilita JSON-RPC e definisce quali spazi del nome sono consentiti. Inoltre, consente l'autenticazione per connettere il client di consenso, che richiede il percorso a `jwtsecret` e, inoltre, l'opzione che definisce quali connessioni sono consentite, nel nostro esempio solo da `localhost`.
+Questo esempio avvia Geth sulla rete principale, memorizza i dati della blockchain i `/data/ethereum`, abilita JSON RPC e definisce quali spazi del nome sono consentiti. Inoltre, consente l'autenticazione per connettere il client di consenso, che richiede il percorso a `jwtsecret` e, inoltre, l'opzione che definisce quali connessioni sono consentite, nel nostro esempio solo da `localhost`.
 
 ```
 geth --mainnet \
@@ -286,7 +286,7 @@ Controlla la [documentazione per tutte le opzioni di configurazione](https://get
 
 ##### Eseguire Nethermind
 
-Nethermind offre varie [opzioni d'installazione](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). Il pacchetto presenta vari binari, incluso un Launcher con una configurazione guidata, che ti aiuterà a creare la configurazione in modo interattivo. In alternativa trovi Runner, che è l'eseguibile stesso, e puoi eseguirlo coi flag di configurazione. JSON-RPC è abilitato di default.
+Nethermind offre varie [opzioni d'installazione](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). Il pacchetto presenta vari binari, incluso un Launcher con una configurazione guidata, che ti aiuterà a creare la configurazione in modo interattivo. In alternativa trovi Runner, che è l'eseguibile stesso, e puoi eseguirlo coi flag di configurazione. JSON RPC è abilitato di default.
 
 ```
 Nethermind.Runner --config mainnet \

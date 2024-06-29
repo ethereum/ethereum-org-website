@@ -70,7 +70,7 @@ getBlockNumber()
 
 Web3 örneğinde kullanılabilen tüm fonksiyonları, [resmi web3.js belgelerinde](https://docs.web3js.org/) görebilirsiniz.
 
-Web3 kütüphanelerinin çoğu eşzamansızdır çünkü arka planda kütüphane, sonucu geri gönderen düğüme JSON-RPC çağrıları yapar.
+Web3 kütüphanelerinin çoğu eşzamansızdır çünkü arka planda kütüphane, sonucu geri gönderen düğüme JSON RPC çağrıları yapar.
 
 <Divider />
 

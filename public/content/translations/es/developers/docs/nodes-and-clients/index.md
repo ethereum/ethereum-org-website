@@ -164,7 +164,7 @@ Nethermind es una implementación de Ethereum diseñada con el bloque de C# .NET
 
 - una máquina virtual optimizada
 - acceso al estado
-- redes y características importantes, como paneles de control Prometheus/Graphana, asistencia de registro para empresas de seg, rastreo de JSON-RPC y complementos de análisis.
+- redes y características importantes, como paneles de control Prometheus/Graphana, asistencia de registro para empresas de seg, rastreo de JSON RPC y complementos de análisis.
 
 Además, Nethermind dispone de [documentación detallada](https://docs.nethermind.io), una sólido soporte para desarrolladores, una comunidad en línea y asistencia ininterrumpida disponible para usuarios premium.
 

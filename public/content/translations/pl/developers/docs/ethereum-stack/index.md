@@ -34,7 +34,7 @@ Aby aplikacja mogła komunikować się z blockchainem Ethereum (np. pobierać da
 
 Węzły Ethereum są komputerami, które obsługują oprogramowanie - klienta Ethereum. Klient jest implementacją Ethereum, która za zadanie ma weryfikację wszystkich transakcji w kolejnych blokach, utrzymywać bezpieczeństwo sieci i poprawność danych. Węzły Ethereum SĄ blockchainem Ethereum. Kolektywnie przechowują stan sieci Ethereum i ustalają konsensus nad transakcjami, aby zmienić stan blockchainu.
 
-Poprzez połączenie swojej aplikacji z węzłem Ethereum (przez specyfikację JSON-RPC), nasza aplikacja jest w stanie czytać dane pochodzące z blockchinu (takie jak bilans konta użytkownika), jak również rozgłaszać nowe transakcje do sieci (jak transfer ETH pomiędzy kontami użytkowników lub wykonywanie inteligentnych kontraktów).
+Poprzez połączenie swojej aplikacji z węzłem Ethereum (przez specyfikację JSON RPC), nasza aplikacja jest w stanie czytać dane pochodzące z blockchinu (takie jak bilans konta użytkownika), jak również rozgłaszać nowe transakcje do sieci (jak transfer ETH pomiędzy kontami użytkowników lub wykonywanie inteligentnych kontraktów).
 
 ## Warstwa 4: Interfejsy API klienta Ethereum {#ethereum-client-apis}
 

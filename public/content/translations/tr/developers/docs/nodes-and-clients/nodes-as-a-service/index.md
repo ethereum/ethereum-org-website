@@ -312,7 +312,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Geçmiş verilere ücretsiz erişim
     - 8 kata kadar daha hızlı okuma ağırlıklı iş yükü
     - %100 istikrarlı okuma erişimi
-    - JSON-RPC uç noktaları
+    - JSON RPC uç noktaları
     - UI temelli RPC istek inşacısı ve istek ön izlemesi
     - Tenderly'nin geliştirme, hata ayıklama ve test araçlarıyla sıkı şekilde entegre
     - İşlem simülasyonları

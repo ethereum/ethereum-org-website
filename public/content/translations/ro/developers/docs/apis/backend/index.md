@@ -8,7 +8,7 @@ Pentru ca o aplicație software să interacționeze cu blockchain-ul Ethereum (a
 
 În acest scop, fiecare client Ethereum implementează specificația [JSON-RPC](/developers/docs/apis/json-rpc/), astfel încât să existe un set uniform de [endpoint-uri](/developers/docs/apis/json-rpc/#json-rpc-methods) pe care se pot baza aplicațiile.
 
-Dacă vreţi să utilizaţi un anumit limbaj de programare pentru a vă conecta la un nod Ethereum, există mai multe biblioteci practice în cadrul ecosistemului care facilitează acest lucru. Cu aceste biblioteci, programatorii pot scrie metode intuitive şi scurte pentru a inițializa cererile JSON-RPC (în culise) care interacționează cu Ethereum.
+Dacă vreţi să utilizaţi un anumit limbaj de programare pentru a vă conecta la un nod Ethereum, există mai multe biblioteci practice în cadrul ecosistemului care facilitează acest lucru. Cu aceste biblioteci, programatorii pot scrie metode intuitive şi scurte pentru a inițializa cererile JSON RPC (în culise) care interacționează cu Ethereum.
 
 ## Condiții prealabile {#prerequisites}
 

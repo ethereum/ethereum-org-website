@@ -226,7 +226,7 @@ Esta sección le guiará y ayudará en sus comienzos con los clientes de ejecuci
 - Define el directorio de datos, donde se almacenarán todos los datos, incluida la cadena de bloques.
   - Asegúrese de sustituir la ruta por una real, por ejemplo, señalando su unidad externa.
 - Permite interfaces para comunicarse con el cliente.
-  - Incluye JSON-RPC y Engine API para la comunicación con el cliente de consenso.
+  - Incluye JSON RPC y Engine API para la comunicación con el cliente de consenso.
 - Define la ruta a `jwtsecret` para la API autenticada.
   - Asegúrese de sustituir la ruta de ejemplo por una real a la que pueden acceder los clientes, por ejemplo, `/tmp/jwtsecret`.
 
@@ -236,7 +236,7 @@ Tenga en cuenta que este es sólo un ejemplo básico, todas las demás configura
 
 ##### Cómo ejecutar Besu
 
-Este ejemplo inicia Besu en mainnet, almacena datos de la cadena de bloques en formato predeterminado en `/data/ethereum`, activa JSON-RPC y Engine RPC para conectar al cliente de consenso. La API del motor está autenticada con token `jwtsecret` y solo se permiten llamadas de `localhost`.
+Este ejemplo inicia Besu en mainnet, almacena datos de la cadena de bloques en formato predeterminado en `/data/ethereum`, activa JSON RPC y Engine RPC para conectar al cliente de consenso. La API del motor está autenticada con token `jwtsecret` y solo se permiten llamadas de `localhost`.
 
 ```
 besu --network=mainnet \

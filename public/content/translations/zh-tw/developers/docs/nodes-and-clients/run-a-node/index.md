@@ -226,7 +226,7 @@ openssl rand -hex 32 > jwtsecret
 - 定義資料目錄，用於儲存所有包含區塊鏈的資料
   - 請確保將預設路徑替換成真實路徑：如指向你外部硬碟的路徑
 - 啟用與用戶端通訊的介面
-  - 包括用於與共識用戶端通訊的 JSON-RPC 和引擎應用程式介面
+  - 包括用於與共識用戶端通訊的 JSON RPC 和引擎應用程式介面
 - 定義經過驗證的應用程式介面的 `jwtsecret` 路徑
   - 請確保將範例路徑替換成用戶端能夠存取的真實路徑，如：`/tmp/jwtsecret`
 
@@ -236,7 +236,7 @@ openssl rand -hex 32 > jwtsecret
 
 ##### 運行 Besu
 
-此範例在主網上運行 Besu，將區塊鏈資料以預設格式儲存在 `/data/ethereum`，啟用 JSON-RPC 及引擎應用程式介面以連接至共識用戶端。 引擎應用程式介面使用 `jwtsecret` 權杖驗證，且只允許來自 `localhost` 的呼叫。
+此範例在主網上運行 Besu，將區塊鏈資料以預設格式儲存在 `/data/ethereum`，啟用 JSON RPC 及引擎應用程式介面以連接至共識用戶端。 引擎應用程式介面使用 `jwtsecret` 權杖驗證，且只允許來自 `localhost` 的呼叫。
 
 ```
 besu --network=mainnet \
@@ -258,7 +258,7 @@ besu --Xlauncher
 
 ##### 運行 Erigon
 
-此範例在主網上運行 Erigon，將區塊鏈資料儲存在 `/data/ethereum`，啟用 JSON-RPC，定義了哪些命名空間是允許的，並啟用由 `jwtsecret` 路徑定義的共識用戶端連接身份驗證。
+此範例在主網上運行 Erigon，將區塊鏈資料儲存在 `/data/ethereum`，啟用 JSON RPC，定義了哪些命名空間是允許的，並啟用由 `jwtsecret` 路徑定義的共識用戶端連接身份驗證。
 
 ```
 erigon --chain mainnet \
@@ -271,7 +271,7 @@ Erigon 預設與 8GB 的硬碟執行完整同步，這會產生超過 2TB 的歸
 
 ##### 運行 Geth
 
-此範例在主網上運行 Geth，將區塊鏈資料儲存在 `/data/ethereum`，啟用 JSON-RPC 並定義了哪些命名空間是允許的。 它也啟用了連接至共識用戶端的身份驗證，這需要 `jwtsecrest` 路徑並可以選擇定義哪些連接是允許的，在這個例子中，只允許 `localhost`。
+此範例在主網上運行 Geth，將區塊鏈資料儲存在 `/data/ethereum`，啟用 JSON RPC 並定義了哪些命名空間是允許的。 它也啟用了連接至共識用戶端的身份驗證，這需要 `jwtsecrest` 路徑並可以選擇定義哪些連接是允許的，在這個例子中，只允許 `localhost`。
 
 ```
 geth --mainnet \
@@ -286,7 +286,7 @@ geth --mainnet \
 
 ##### 運行 Nethermind
 
-Nethermind 提供多種 [安裝選項](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)。 此套件包含許多二進位檔案，包括有引導式設定的啟動器，可以互動式幫助你建立設定。 或者，你可以找到可執行執行器，並使用設定標記執行它。 預設啟用 JSON-RPC。
+Nethermind 提供多種 [安裝選項](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)。 此套件包含許多二進位檔案，包括有引導式設定的啟動器，可以互動式幫助你建立設定。 或者，你可以找到可執行執行器，並使用設定標記執行它。 預設啟用 JSON RPC。
 
 ```
 Nethermind.Runner --config mainnet \

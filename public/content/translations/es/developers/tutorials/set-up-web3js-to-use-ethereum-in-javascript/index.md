@@ -70,7 +70,7 @@ getBlockNumber()
 
 Puede ver todas las funciones disponibles en la instancia de Web3 en [la documentación oficial de web3.js](https://docs.web3js.org/).
 
-La mayoría de las bibliotecas Web3 son asíncronas porque, en segundo plano, la biblioteca realiza llamadas JSON-RPC al nodo que devuelve el resultado.
+La mayoría de las bibliotecas Web3 son asíncronas porque, en segundo plano, la biblioteca realiza llamadas JSON RPC al nodo que devuelve el resultado.
 
 <Divider />
 

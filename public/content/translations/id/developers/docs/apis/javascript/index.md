@@ -8,7 +8,7 @@ Agar aplikasi web dapat berinteraksi dengan blockchain Ethereum (yaitu membaca d
 
 Untuk keperluan ini, setiap klien Ethereum mengimplementasikan spesifikasi [JSON-RPC](/developers/docs/apis/json-rpc/), sehingga ada keseragaman kumpulan [titik akhir](/developers/docs/apis/json-rpc/) yang bisa menjadi tumpuan aplikasi.
 
-Jika ingin Anda menggunakan JavaScript untuk terhubung dengan node Ethereum, dimungkinkan menggunakan JavaScript vanilla, tetapi beberapa pustaka praktis telah ada di dalam ekosistem yang akan membuat proses ini jauh lebih mudah. Dengan pustaka ini, pengembang dapat menulis metode satu baris yang intuitif untuk memulai permintaan JSON-RPC (di bawah tenda) yang berinteraksi dengan Ethereum.
+Jika ingin Anda menggunakan JavaScript untuk terhubung dengan node Ethereum, dimungkinkan menggunakan JavaScript vanilla, tetapi beberapa pustaka praktis telah ada di dalam ekosistem yang akan membuat proses ini jauh lebih mudah. Dengan pustaka ini, pengembang dapat menulis metode satu baris yang intuitif untuk memulai permintaan JSON RPC (di bawah tenda) yang berinteraksi dengan Ethereum.
 
 ## Prasyarat {#prerequisites}
 

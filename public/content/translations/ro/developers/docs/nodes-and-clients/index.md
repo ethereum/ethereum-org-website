@@ -151,7 +151,7 @@ Nethermind este o implementare Ethereum creată cu stiva de tehnologie C# .NET, 
 
 - o mașină virtuală optimizată
 - acces la stare
-- rețele și funcţionalităţi bogate, cum ar fi tablouri de bord Prometheus/Grafana, acceptarea logării seq enterprise, urmărire JSON-RPC și plugin-uri analitice.
+- rețele și funcţionalităţi bogate, cum ar fi tablouri de bord Prometheus/Grafana, acceptarea logării seq enterprise, urmărire JSON RPC și plugin-uri analitice.
 
 Nethermind are o [documentație detaliată](https://docs.nethermind.io), asistenţă foarte bună pentru dezvoltatori, o comunitate online și asistenţă non-stop pentru utilizatorii premium.
 

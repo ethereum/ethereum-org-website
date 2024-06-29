@@ -135,7 +135,7 @@ lang: ja
 - [NOWNodes.io](https://nownodes.io/)
 - [ドキュメント](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
-**Node RPC - _費用効果の高いEVM JSON-RPCプロバイダ_**
+**Node RPC - _費用効果の高いEVM JSON RPCプロバイダ_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [ドキュメント](https://docs.noderpc.xyz/)

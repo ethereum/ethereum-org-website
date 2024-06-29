@@ -47,7 +47,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 使用JSON-RPC和curl通过Alchemy与以太坊区块链交互。
 
-对于手动请求，我们建议通过`JSON-RPC`发送`POST`请求来进行交互。 只需传入`Content-Type: application/json`标头和查询作为`POST`主体，具有以下字段：
+对于手动请求，我们建议通过`JSON RPC`发送`POST`请求来进行交互。 只需传入`Content-Type: application/json`标头和查询作为`POST`主体，具有以下字段：
 
 - `jsonrpc`: JSON-RPC版本，目前只支持`2.0`。
 - `method`：ETH API方法。 [请参阅API参考。](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc)

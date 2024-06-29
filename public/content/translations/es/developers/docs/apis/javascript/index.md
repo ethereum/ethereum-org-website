@@ -8,7 +8,7 @@ Para que una aplicación web interactúe con el blockchain de Ethereum (es decir
 
 Para esto, cada cliente de Ethereum implementa una especificacion [JSON-RPC](/developers/docs/apis/json-rpc/), para que haya un grupo uniforme de [endpoints](/developers/docs/apis/json-rpc/#json-rpc-methods) en que las aplicaciones pueden confiar.
 
-Si quieres usar JavaScript para conectar con un nodo de Ethereum, puedes usar VanillaJS (Vanilla JavaScript). Sin embargo, hay varias bibliotecas de conveniencia que existen dentro del ecosistema que lo simplifican. Con estas bibliotecas, los desarrolladores pueden escribir intuitivamente métodos de una línea para iniciar requerimientos de JSON-RPC (de manera oculta) que interactúan con Ethereum.
+Si quieres usar JavaScript para conectar con un nodo de Ethereum, puedes usar VanillaJS (Vanilla JavaScript). Sin embargo, hay varias bibliotecas de conveniencia que existen dentro del ecosistema que lo simplifican. Con estas bibliotecas, los desarrolladores pueden escribir intuitivamente métodos de una línea para iniciar requerimientos de JSON RPC (de manera oculta) que interactúan con Ethereum.
 
 Tenga en cuenta que desde [La Fusión](/roadmap/merge/), dos piezas conectadas de software de Ethereum― un cliente de ejecucion y un cliente de consenso― son necesarias para ejecutar un nodo. Asegúrese de que su nodo incluya tanto un cliente de ejecución como un cliente de consenso. Si su nodo no se encuentra en su computadora local (por ejemplo, se ejecuta en una instancia de AWS), actualice las direcciones IP en el tutorial según corresponda. Para obtener más información, vea nuestra página sobre [ejecutar un nodo](/developers/docs/nodes-and-clients/run-a-node/).
 

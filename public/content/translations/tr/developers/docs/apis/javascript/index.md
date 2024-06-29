@@ -8,7 +8,7 @@ Bir web uygulamasının Ethereum blok zinciri ile etkileşime girebilmesi için 
 
 Bu amaçla, her Ethereum istemcisi [JSON-RPC](/developers/docs/apis/json-rpc/) spesifikasyonunu uygular, böylece uygulamaların güvenebileceği tek tip [metotlar](/developers/docs/apis/json-rpc/#json-rpc-methods) olur.
 
-Eğer bir Ethereum düğümüne bağlanmak için JavaScript kullanmak istiyorsanız, düz JavaScript'i kullanmak mümkündür ancak ekosistem içinde bunu çok daha kolay hâle getiren birkaç kolaylık kütüphanesi bulunur. Bu kitaplıklarla geliştiriciler, Ethereum ile etkileşime giren JSON-RPC isteklerini (başlık altında) başlatmak için sezgisel, tek satırlı yöntemler yazabilir.
+Eğer bir Ethereum düğümüne bağlanmak için JavaScript kullanmak istiyorsanız, düz JavaScript'i kullanmak mümkündür ancak ekosistem içinde bunu çok daha kolay hâle getiren birkaç kolaylık kütüphanesi bulunur. Bu kitaplıklarla geliştiriciler, Ethereum ile etkileşime giren JSON RPC isteklerini (başlık altında) başlatmak için sezgisel, tek satırlı yöntemler yazabilir.
 
 Lütfen "[Birleşim](/roadmap/merge/) olayından bu yana, bir düğümü çalıştırmak için iki bağlantılı Ethereum yazılımının parçası olan bir yürütüm istemcisi ve bir fikir birliği istemcisi gerektiğini unutmayın. Lütfen düğümünüzün hem bir yürütüm hem de fikir birliği istemcisini içerdiğinden emin olun. Eğer düğümünüz yerel makinanızda değilse (ör. düğümünüz bir AWS örneğinde çalışıyorsa) bu eğitimdeki IP adreslerini buna göre güncelleyin. Daha fazla bilgi için lütfen [bir düğüm çalıştırma](/developers/docs/nodes-and-clients/run-a-node/) sayfamıza bakın.
 

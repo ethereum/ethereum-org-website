@@ -163,7 +163,7 @@ Nethermind, C# .NET teknoloji yığınıyla oluşturulmuş bir Ethereum uygulama
 
 - optimize edilmiş bir sanal makine
 - durum erişimi
-- Prometheus/Grafana gösterge panelleri, sıralı kurumsal kayıt desteği, JSON-RPC izleme ve analiz eklentileri gibi ağ iletişimi ve zengin özellikler.
+- Prometheus/Grafana gösterge panelleri, sıralı kurumsal kayıt desteği, JSON RPC izleme ve analiz eklentileri gibi ağ iletişimi ve zengin özellikler.
 
 Nethermind ayrıca premium kullanıcılar için [ayrıntılı dokümanlar](https://docs.nethermind.io), güçlü geliştirici desteği, çevrimiçi bir topluluk ve 7/24 desteğe de sahiptir.
 

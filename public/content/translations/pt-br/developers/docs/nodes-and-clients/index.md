@@ -164,7 +164,7 @@ Nethermind é uma implementação do Ethereum criada com a pilha de tecnologia C
 
 - uma máquina virtual otimizada
 - acesso ao estado
-- rede e recursos ricos como painéis Prometheus/Graphana, suporte ao registro empresarial seq, rastreamento JSON-RPC e plugins de análise.
+- rede e recursos ricos como painéis Prometheus/Graphana, suporte ao registro empresarial seq, rastreamento JSON RPC e plugins de análise.
 
 Nethermind também tem uma [documentação detalhada](https://docs.nethermind.io), um suporte eficaz ao desenvolvedor, uma comunidade online e suporte 24 horas por dia disponível para usuários Premium.
 

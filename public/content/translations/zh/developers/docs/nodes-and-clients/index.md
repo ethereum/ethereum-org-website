@@ -164,7 +164,7 @@ Nethermind 是使用 C# .NET 技术栈创建的以太坊实现，依照 LGPL-3.0
 
 - 优化虚拟机
 - 状态访问
-- 联网和丰富的功能，如 Promethe/Graphana 仪表板、seq 企业日志支持、JSON-RPC 跟踪和分析插件
+- 联网和丰富的功能，如 Promethe/Graphana 仪表板、seq 企业日志支持、JSON RPC 跟踪和分析插件
 
 Nethermind 也有[详细的相关文档](https://docs.nethermind.io)、强大的开发支持、在线社区，并为高级用户提供全天候支持。
 

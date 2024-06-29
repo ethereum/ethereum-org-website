@@ -226,7 +226,7 @@ Dieser Abschnitt führt Sie durch die Einrichtung eines Ausführungsclients. Er 
 - Festlegen des Datenverzeichnisses, in dem alle Daten, einschließlich der Blockchain, gespeichert werden sollen
   - Stellen Sie sicher, dass Sie den Pfad durch einen echten Pfad ersetzen, der z. B. auf Ihr externes Laufwerk verweist
 - Aktivieren von Schnittstellen für die Kommunikation mit dem Client
-  - Einbeziehen von JSON-RPC und Engine API für die Kommunikation mit dem Konsensclient
+  - Einbeziehen von JSON RPC und Engine API für die Kommunikation mit dem Konsensclient
 - Festlegen des Pfads zu `jwtsecret` für authentifizierte API
   - Stellen Sie sicher, dass Sie den Beispielpfad durch einen echten Pfad ersetzen, auf den die Clients zugreifen können, z. B. `/tmp/jwtsecret`.
 
@@ -236,7 +236,7 @@ Bitte beachten Sie, dass dies nur ein einfaches Beispiel ist, alle anderen Einst
 
 ##### Ausführen von Besu
 
-Dieses Beispiel startet Besu im Mainnet, speichert Blockchain-Daten im Standardformat unter `/data/ethereum`, aktiviert JSON-RPC und Engine RPC für die Verbindung zum Konsensclient. Engine-API ist mit dem Token `jwtsecret` authentifiziert und nur Aufrufe von `localhost` sind erlaubt.
+Dieses Beispiel startet Besu im Mainnet, speichert Blockchain-Daten im Standardformat unter `/data/ethereum`, aktiviert JSON RPC und Engine RPC für die Verbindung zum Konsensclient. Engine-API ist mit dem Token `jwtsecret` authentifiziert und nur Aufrufe von `localhost` sind erlaubt.
 
 ```
 besu --network=mainnet \
@@ -258,7 +258,7 @@ besu --Xlauncher
 
 ##### Ausführen von Erigon
 
-Dieses Beispiel startet Erigon im Mainnet, speichert Blockchain-Daten unter `/data/ethereum`, aktiviert JSON-RPC, definiert, welche Namespaces erlaubt sind und aktiviert die Authentifizierung für die Verbindung zum Konsensclient, der durch den Pfad `jwtsecret` definiert ist.
+Dieses Beispiel startet Erigon im Mainnet, speichert Blockchain-Daten unter `/data/ethereum`, aktiviert JSON RPC, definiert, welche Namespaces erlaubt sind und aktiviert die Authentifizierung für die Verbindung zum Konsensclient, der durch den Pfad `jwtsecret` definiert ist.
 
 ```
 erigon --chain mainnet \
@@ -271,7 +271,7 @@ Erigon führt standardmäßig eine vollständige Synchronisierung mit einer 8 GB
 
 ##### Ausführen von Geth
 
-Dieses Beispiel startet Geth im Mainnet, speichert Blockchain-Daten unter `/data/ethereum`, aktiviert JSON-RPC und definiert, welche Namespaces erlaubt sind. Es ermöglicht auch die Authentifizierung für den Verbindungsaufbau zum Konsensclient, welcher den Pfad zu `jwtsecret` benötigt, sowie eine Option, die festlegt, welche Verbindungen erlaubt sind; in unserem Beispiel nur von `localhost`.
+Dieses Beispiel startet Geth im Mainnet, speichert Blockchain-Daten unter `/data/ethereum`, aktiviert JSON RPC und definiert, welche Namespaces erlaubt sind. Es ermöglicht auch die Authentifizierung für den Verbindungsaufbau zum Konsensclient, welcher den Pfad zu `jwtsecret` benötigt, sowie eine Option, die festlegt, welche Verbindungen erlaubt sind; in unserem Beispiel nur von `localhost`.
 
 ```
 geth --mainnet \
@@ -286,7 +286,7 @@ geth --mainnet \
 
 ##### Ausführen von Nethermind
 
-Nethermind bietet verschiedene [Installationsoptionen](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). Das Paket enthält verschiedene Binärdateien, darunter einen Launcher mit einem geführten Setup, mit dem Sie die Konfiguration interaktiv erstellen können. Alternativ finden Sie Runner, das die ausführbare Datei selbst ist, und Sie können sie einfach mit Konfigurationsflaggen ausführen. JSON-RPC ist standardmäßig aktiviert.
+Nethermind bietet verschiedene [Installationsoptionen](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). Das Paket enthält verschiedene Binärdateien, darunter einen Launcher mit einem geführten Setup, mit dem Sie die Konfiguration interaktiv erstellen können. Alternativ finden Sie Runner, das die ausführbare Datei selbst ist, und Sie können sie einfach mit Konfigurationsflaggen ausführen. JSON RPC ist standardmäßig aktiviert.
 
 ```
 Nethermind.Runner --config mainnet \

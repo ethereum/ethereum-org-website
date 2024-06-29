@@ -16,7 +16,7 @@ Cada cliente Ethereum pode utilizar linguagens de programação diferentes ao im
 
 ## Bibliotecas de Conveniência {#convenience-libraries}
 
-Embora você possa optar por interagir diretamente com clientes da Ethereum usando a API JSON-RPC, muitas vezes existem opções mais fáceis para desenvolvedores de dapps. Muitas [bibliotecas de](/developers/docs/apis/javascript/#available-libraries) e [de backend API](/developers/docs/apis/backend/#available-libraries) existem para fornecer wrappers além de API JSON-RPC. Com essas bibliotecas, os desenvolvedores podem escrever intuitivamente métodos de uma linha para inicializar requisições JSON-RPC (sob os capôs) que interagem com a Ethereum.
+Embora você possa optar por interagir diretamente com clientes da Ethereum usando a API JSON-RPC, muitas vezes existem opções mais fáceis para desenvolvedores de dapps. Muitas [bibliotecas de](/developers/docs/apis/javascript/#available-libraries) e [de backend API](/developers/docs/apis/backend/#available-libraries) existem para fornecer wrappers além de API JSON-RPC. Com essas bibliotecas, os desenvolvedores podem escrever intuitivamente métodos de uma linha para inicializar requisições JSON RPC (sob os capôs) que interagem com a Ethereum.
 
 ## APIs de cliente de consenso {#consensus-clients}
 

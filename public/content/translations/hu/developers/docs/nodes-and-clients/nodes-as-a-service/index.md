@@ -321,7 +321,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Ingyenes hozzáférés az előzményadatokhoz
     - 8-szor gyorsabb olvasásintenzív terhelés
     - 100%-ban konzisztens olvasási hozzáférés
-    - JSON-RPC-végpontok
+    - JSON RPC-végpontok
     - UI-alapú RPC lekérdezésépítő és lekérdezés-előnézet
     - Szorosan integrált a Tenderly fejlesztéssel, hibajavítással és tesztelőeszközökkel
     - Tranzakciószimulációk

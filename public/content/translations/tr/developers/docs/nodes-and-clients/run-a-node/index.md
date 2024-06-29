@@ -226,7 +226,7 @@ Bu bölüm size yürütüm istemcileri başlatmada rehberlik edecektir. Sadece i
 - Blok zincir dahil tüm verinin depolanacağı veri klasörünü belirtir
   - Yolu gerçek bir versiyonu ile değiştirdiğinizden emin olun, örneğin harici diskinize işaret edecek şekilde
 - İstemci ile iletişim için arayüzleri aktif eder
-  - Fikir birliği istemcisi ile iletişim için Motor API ve JSON-RPC dahil
+  - Fikir birliği istemcisi ile iletişim için Motor API ve JSON RPC dahil
 - Doğrulanmış API için `jwtsecret` yolunu belirler
   - Örnek yolu istemciler tarafından erişilebilecek gerçek bir versiyonu ile değiştirdiğinizden emin olun, ör. `/tmp/jwtsecret`
 
@@ -236,7 +236,7 @@ Bunun temel bir örnek olduğunu aklınızda tutun, diğer tüm ayarlar varsayı
 
 ##### Besu'yu Çalıştırmak
 
-Bu örnek Besu'yu ana ağda başlatır, blok zincir verisini varsayılan biçimde `/veri/ethereum` lokasyonunda tutar, JSON-RPC ve Motor RPC'yi fikir birliği istemcisini bağlamak için etkinleştirir. Motor API `jwtsecret` ile doğrulanmıştır ve sadece `localhost` tarafından gelen çağrılara izin verilir.
+Bu örnek Besu'yu ana ağda başlatır, blok zincir verisini varsayılan biçimde `/veri/ethereum` lokasyonunda tutar, JSON RPC ve Motor RPC'yi fikir birliği istemcisini bağlamak için etkinleştirir. Motor API `jwtsecret` ile doğrulanmıştır ve sadece `localhost` tarafından gelen çağrılara izin verilir.
 
 ```
 besu --network=mainnet \
@@ -258,7 +258,7 @@ besu --Xlauncher
 
 ##### Erigon'u Çalıştırmak
 
-Bu örnek Erigon'u ana ağda başlatır, blok zincir verisini `/data/ethereum` lokasyonunda depolar, JSON-RPC'yi etkinleştirir, hangi isim alanlarına izin verildiğini belirler ve `jwtsecret` yolu tarafından belirlenen mutabakat mekanizmasının bağlanması için doğrulamayı etkinleştirir.
+Bu örnek Erigon'u ana ağda başlatır, blok zincir verisini `/data/ethereum` lokasyonunda depolar, JSON RPC'yi etkinleştirir, hangi isim alanlarına izin verildiğini belirler ve `jwtsecret` yolu tarafından belirlenen mutabakat mekanizmasının bağlanması için doğrulamayı etkinleştirir.
 
 ```
 erigon --chain mainnet \
@@ -271,7 +271,7 @@ Erigon varsayılan olarak 8 GB bir HDD ile tam senkronizasyon gerçekleştirir, 
 
 ##### Geth'i Çalıştırmak
 
-Bu örnek Geth'i ana ağda başlatır, blok zincir verisini `/data/ethereum` lokasyonunda depolar, JSON-RPC'yi etkinleştirir ve hangi isim alanlarına izin verildiğini belirler. Aynı zamanda `jwtsecret` yolu gereken bağlanan fikir birliği istemcisi için doğrulamayı ve hangi bağlantılara izin verildiğini belirlemeyi etkinleştirir, bizim örneğimizde bu sadece `localhost` tarafından gelenlerdir.
+Bu örnek Geth'i ana ağda başlatır, blok zincir verisini `/data/ethereum` lokasyonunda depolar, JSON RPC'yi etkinleştirir ve hangi isim alanlarına izin verildiğini belirler. Aynı zamanda `jwtsecret` yolu gereken bağlanan fikir birliği istemcisi için doğrulamayı ve hangi bağlantılara izin verildiğini belirlemeyi etkinleştirir, bizim örneğimizde bu sadece `localhost` tarafından gelenlerdir.
 
 ```
 geth --mainnet \
@@ -286,7 +286,7 @@ geth --mainnet \
 
 ##### Nethermind'ı Çalıştırmak
 
-Nethermind çeşitli [kurulum seçenekleri](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) sunar. Paket çeşitli dosyalarla gelir, bunlara yapılandırmayı etkileşimli bir şekilde oluşturmanıza yardımcı olacak kılavuzlu kurulumu olan bir Başlatıcı dahildir. Alternatif olarak, çalıştırılabilir dosyanın kendisi olan Çalıştırıcı'yı bulacaksınız ve bunu sadece yapılandırma bayrakları ile çalıştırabilirsiniz. JSON-RPC varsayılan olarak etkinleştirilir.
+Nethermind çeşitli [kurulum seçenekleri](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) sunar. Paket çeşitli dosyalarla gelir, bunlara yapılandırmayı etkileşimli bir şekilde oluşturmanıza yardımcı olacak kılavuzlu kurulumu olan bir Başlatıcı dahildir. Alternatif olarak, çalıştırılabilir dosyanın kendisi olan Çalıştırıcı'yı bulacaksınız ve bunu sadece yapılandırma bayrakları ile çalıştırabilirsiniz. JSON RPC varsayılan olarak etkinleştirilir.
 
 ```
 Nethermind.Runner --config mainnet \
@@ -395,7 +395,7 @@ Fikir birliği istemcilerinin tümü, fikir birliği istemcisinin durumunu kontr
 
 #### RPC'ye ulaşma {#reaching-rpc}
 
-Yürütüm istemcisi JSON-RPC'si için varsayılan port `8545`'tir, ancak yapılandırmada yerel uç noktalarının portlarını değiştirebilirsiniz. Varsayılan olarak, RPC arayüzüne sadece bilgisayarınızın yerel sunucusundan erişilebilir. Eğer bunu uzaktan erişilebilir hale getirmek istiyorsanız, adresi `0.0.0.0` yaparak genel duruma getirebilirsiniz. Bu, onu yerel ağ ve genel IP adresleri üzerinden erişilebilir hale getirecektir. Çoğu durumda yönlendiricinizde port yönlendirmeyi de kurmanız gerekecektir.
+Yürütüm istemcisi JSON RPC'si için varsayılan port `8545`'tir, ancak yapılandırmada yerel uç noktalarının portlarını değiştirebilirsiniz. Varsayılan olarak, RPC arayüzüne sadece bilgisayarınızın yerel sunucusundan erişilebilir. Eğer bunu uzaktan erişilebilir hale getirmek istiyorsanız, adresi `0.0.0.0` yaparak genel duruma getirebilirsiniz. Bu, onu yerel ağ ve genel IP adresleri üzerinden erişilebilir hale getirecektir. Çoğu durumda yönlendiricinizde port yönlendirmeyi de kurmanız gerekecektir.
 
 İnternete port açmaya dikkatle yaklaşın çünkü bu internetteki herhangi birinin düğümünüzü kontrol etmesine izin verecektir. Kötü amaçlı aktörler, sisteminizi çökertmek için düğümünüze erişim sağlayabilirler veya istemcinizi cüzdan olarak kullanıyorsanız paranızı çalabilirler.
 

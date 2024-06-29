@@ -16,7 +16,7 @@ lang: zh
 
 ## 便利性库 {#convenience-libraries}
 
-虽然你可以选择通过 JSON 应用程序接口直接与以太坊客户端交互，但是对于去中心化应用程序开发者来说，常常有更容易的选项。 许多 [JavaScript](/developers/docs/apis/javascript/#available-libraries) 和[后端应用程序接口](/developers/docs/apis/backend/#available-libraries)库已经存在，可以在 JSON-RPC 应用程序接口之上提供封装。 通过这些库，开发者可以用他们选择的语言写下直观的一行函数来初始化（后端的）JSON-RPC 请求并用于与以太坊进行交互。
+虽然你可以选择通过 JSON 应用程序接口直接与以太坊客户端交互，但是对于去中心化应用程序开发者来说，常常有更容易的选项。 许多 [JavaScript](/developers/docs/apis/javascript/#available-libraries) 和[后端应用程序接口](/developers/docs/apis/backend/#available-libraries)库已经存在，可以在 JSON-RPC 应用程序接口之上提供封装。 通过这些库，开发者可以用他们选择的语言写下直观的一行函数来初始化（后端的）JSON RPC 请求并用于与以太坊进行交互。
 
 ## 共识客户端应用程序接口 {#consensus-clients}
 
