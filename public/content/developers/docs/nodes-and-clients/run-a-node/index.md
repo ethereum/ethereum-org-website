@@ -227,7 +227,7 @@ This section will guide you through starting execution clients. It only serves a
 - Defines data directory, where all the data including blockchain will be stored
   - Make sure to substitute the path with a real one, e.g. pointing to your external drive
 - Enables interfaces for communicating with the client
-  - Including JSON RPC and Engine API for communication with consensus client
+  - Including JSON-RPC and Engine API for communication with consensus client
 - Defines path to `jwtsecret` for authenticated API
   - Make sure to substitute the example path with a real one which can be accessed by clients, e.g. `/tmp/jwtsecret`
 
@@ -237,7 +237,7 @@ Please keep in mind that this is just a basic example, all other settings will b
 
 ##### Running Besu
 
-This example starts Besu on mainnet, stores blockchain data in default format at `/data/ethereum`, enables JSON RPC and Engine RPC for connecting consensus client. Engine API is authenticated with token `jwtsecret` and only calls from `localhost` are allowed.
+This example starts Besu on mainnet, stores blockchain data in default format at `/data/ethereum`, enables JSON-RPC and Engine RPC for connecting consensus client. Engine API is authenticated with token `jwtsecret` and only calls from `localhost` are allowed.
 
 ```
 besu --network=mainnet \
@@ -259,7 +259,7 @@ besu --Xlauncher
 
 ##### Running Erigon
 
-This example starts Erigon on mainnet, stores blockchain data at `/data/ethereum`, enables JSON RPC, defines which namespaces are allowed and enables authentication for connecting the consensus client which is defined by the `jwtsecret` path.
+This example starts Erigon on mainnet, stores blockchain data at `/data/ethereum`, enables JSON-RPC, defines which namespaces are allowed and enables authentication for connecting the consensus client which is defined by the `jwtsecret` path.
 
 ```
 erigon --chain mainnet \
@@ -272,7 +272,7 @@ Erigon by default performs a full sync with 8GB HDD which will result in more th
 
 ##### Running Geth
 
-This example starts Geth on mainnet, stores blockchain data at `/data/ethereum`, enables JSON RPC and defines which namespaces are allowed. It also enables authentication for connecting consensus client which requires path to `jwtsecret` and also option defining which connections are allowed, in our example only from `localhost`.
+This example starts Geth on mainnet, stores blockchain data at `/data/ethereum`, enables JSON-RPC and defines which namespaces are allowed. It also enables authentication for connecting consensus client which requires path to `jwtsecret` and also option defining which connections are allowed, in our example only from `localhost`.
 
 ```
 geth --mainnet \
@@ -287,7 +287,7 @@ Check [docs for all configuration options](https://geth.ethereum.org/docs/fundam
 
 ##### Running Nethermind
 
-Nethermind offers various [installation options](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). The package comes with various binaries, including a Launcher with a guided setup, which will help you to create the configuration interactively. Alternatively, you find Runner which is the executable itself and you can just run it with config flags. JSON RPC is enabled by default.
+Nethermind offers various [installation options](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). The package comes with various binaries, including a Launcher with a guided setup, which will help you to create the configuration interactively. Alternatively, you find Runner which is the executable itself and you can just run it with config flags. JSON-RPC is enabled by default.
 
 ```
 Nethermind.Runner --config mainnet \

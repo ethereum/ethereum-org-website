@@ -1,6 +1,6 @@
 import { SimpleGrid } from "@chakra-ui/react"
 
-import type { AllMetricData, MetricReturnData } from "@/lib/types"
+import type { AllMetricData } from "@/lib/types"
 
 import { GridItem } from "./GridItem"
 import { useStatsBoxGrid } from "./useStatsBoxGrid"
@@ -11,6 +11,7 @@ type StatsBoxGridProps = {
 
 const StatsBoxGrid = ({ data }: StatsBoxGridProps) => {
   const metrics = useStatsBoxGrid(data)
+
   return (
     <SimpleGrid
       columns={{ base: 1, lg: 2 }}

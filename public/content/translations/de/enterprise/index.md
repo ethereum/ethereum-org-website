@@ -85,7 +85,7 @@ Beispiele für L2-Lösungen, die produktionsbereit sind oder es bald sein werden
 - ZK-Rollups (Daten on-chain, ZK-Gültigkeitsnachweise)
   - [Loopring](https://loopring.org)
   - [Starkware](https://starkware.co)
-  - [Matter Labs zkSync](https://matter-labs.io/)
+  - [Matter Labs ZKsync](https://matter-labs.io/)
   - [Aztec 2.0](https://aztec.network/)
 - Validium (Daten off-chain, ZK-Gültigkeitsnachweise)
   - [Starkware](https://starkware.co)

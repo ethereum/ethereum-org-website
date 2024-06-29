@@ -1,10 +1,8 @@
 import type { IconType } from "react-icons/lib"
 import { Icon, Stack, Text } from "@chakra-ui/react"
 
-import { Button, type ButtonProps } from "@/components/Buttons"
-import ButtonLink, {
-  type ButtonLinkProps,
-} from "@/components/Buttons/ButtonLink"
+import Button, { type ButtonProps } from "../Button"
+import ButtonLink, { type ButtonLinkProps } from "../ButtonLink"
 
 type CommonProps = {
   icon: IconType | typeof Icon
@@ -72,7 +70,7 @@ const ButtonTwoLines = (props: ButtonTwoLinesProps) => {
 
   return (
     // TODO: fix type error
-    // @ts-ignore
+    // @ts-expect-error incompatible prop type shapes
     <Component
       {...buttonStyles}
       size={size}

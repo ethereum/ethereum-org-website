@@ -13,12 +13,14 @@ export const baseLocales = {
 export const ns = [
   "common",
   "glossary",
+  "glossary-tooltip",
   "learn-quizzes",
   "page-about",
   "page-index",
   "page-learn",
   "page-upgrades",
   "page-developers-index",
+  "page-what-is-ethereum",
 ] as const
 const supportedLngs = Object.keys(baseLocales)
 

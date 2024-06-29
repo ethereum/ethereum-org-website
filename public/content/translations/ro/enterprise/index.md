@@ -84,7 +84,7 @@ Câteva exemple de soluții de Nivelul 2 care sunt pregătite pentru producție 
 - ZK-rollup-uri (date pe lanț, dovezi de validitate ZK)
   - [Loopring](https://loopring.org)
   - [Starkware](https://starkware.co)
-  - [Matter Labs zkSync](https://matter-labs.io/)
+  - [Matter Labs ZKsync](https://matter-labs.io/)
   - [Aztec 2.0](https://aztec.network/)
 - Validium (date în afara lanțului, dovezi de validitate ZK)
   - [Starkware](https://starkware.co)
