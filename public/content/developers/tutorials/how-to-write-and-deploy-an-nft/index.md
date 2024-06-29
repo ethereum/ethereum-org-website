@@ -1,54 +1,49 @@
 ---
 title: How to Write & Deploy an NFT (Part 1/3 of NFT Tutorial Series)
-description: This tutorial is Part 1 of a series on NFTs that will take you step by step on how to write and deploy a Non Fungible Token (ERC-721 token) smart contract using Ethereum and Inter Planetary File System (IPFS).
-author: "Sumi Mudgil"
+description: This is Part 1 of a tutorial series on NFTs that will take you teach you how to write, deploy, mint, and view a Non Fungible Token (ERC-721 token) smart contract using Ethereum and Inter Planetary File System (IPFS).
+author: "Sumi Mudgil, edited by [Aaron Shey](https://github.com/aaronzshey)"
 tags: ["ERC-721", "Alchemy", "Solidity", "smart contracts"]
 skill: beginner
 lang: en
-published: 2021-04-22
+published: 2024-04-22
 ---
+Want to sound smart at parties?  Keep hearing about NFTs but have no idea what they are?  Get your hands dirty and mint your own NFT!  
 
-With NFTs bringing blockchain into the public eye, now is an excellent opportunity to understand the hype yourself by publishing your own NFT contract (ERC-721 Token) on the Ethereum blockchain!
+In this tutorial, we will walk through creating and deploying an ERC-721 smart contract on the Sepolia test network using [MetaMask](https://metamask.io/), [Solidity](https://soliditylang.org), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/) and [Alchemy](https://alchemy.com/signup/eth) (don’t fret if you don’t understand what any of this means yet — we will explain it!).
 
-Alchemy is extremely proud to be powering the biggest names in the NFT space, including Makersplace (recently set a record digital artwork sale at Christie’s for $69 Million), Dapper Labs (creators of NBA Top Shot & Crypto Kitties), OpenSea (the world’s largest NFT marketplace), Zora, Super Rare, NFTfi, Foundation, Enjin, Origin Protocol, Immutable, and more.
-
-In this tutorial, we will walk through creating and deploying an ERC-721 smart contract on the Sepolia test network using [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/) and [Alchemy](https://alchemy.com/signup/eth) (don’t fret if you don’t understand what any of this means yet — we will explain it!).
+Alchemy powers some of the biggest names in NFT space, including Makersplace (recently set a record digital artwork sale at [Christie’s](https://twitter.com/ChristiesInc/status/1361670588608176128?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1361670588608176128%7Ctwgr%5Efd6084148e3365400c508866e80083eeebcff14e%7Ctwcon%5Es1_c10&ref_url=https%3A%2F%2Fwww.theverge.com%2F2021%2F3%2F11%2F22325054%2Fbeeple-christies-nft-sale-cost-everydays-69-million) for [\$69 Million](https://www.theverge.com/2021/3/11/22325054/beeple-christies-nft-sale-cost-everydays-69-million)), Dapper Labs ([creators of NBA Top Shot & Crypto Kitties](https://www.linkedin.com/company/dapper-labs)), and OpenSea ([the world’s largest NFT marketplace](https://www.investopedia.com/what-is-opensea-6362477#:~:text=OpenSea%20is%20the%20largest%20NFT,on%20the%20OpenSea%20listing%20page)).
 
 In Part 2 of this tutorial we’ll go through how we can use our smart contract to mint an NFT, and in Part 3 we’ll explain how to view your NFT on MetaMask.
 
-And of course, if you have questions at any point, don’t hesitate to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB) or visit [Alchemy's NFT API docs](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!
-
 ## Step 1: Connect to the Ethereum network {#connect-to-ethereum}
 
-There are a bunch of ways to make requests to the Ethereum blockchain, but to make things easy, we’ll use a free account on [Alchemy](https://alchemy.com/signup/eth), a blockchain developer platform and API that allows us to communicate with the Ethereum chain without having to run our own nodes.
+There are a bunch of ways to make requests to the Ethereum blockchain, but to make things easy, we’ll use a free account on [Alchemy](https://alchemy.com), a blockchain developer platform and API that allows us to communicate with the Ethereum chain without having to run our own nodes.
 
-In this tutorial, we’ll also take advantage of Alchemy’s developer tools for monitoring and analytics to understand what’s going on under the hood in our smart contract deployment. If you don’t already have an Alchemy account, you can sign up for free [here](https://alchemy.com/signup/eth).
+In this tutorial, we’ll also take advantage of Alchemy’s developer tools for monitoring and analytics to understand what’s going on under the hood in our smart contract deployment. If you don’t already have an Alchemy account, you can sign up for free [here](https://auth.alchemy.com).
 
-## Step 2: Create your app (and API key) {#make-api-key}
+## Step 2: Create and configure your app {#make-app}
 
-Once you’ve created an Alchemy account, you can generate an API key by creating an app. This will allow us to make requests to the Sepolia test network. Check out [this guide](https://docs.alchemyapi.io/guides/choosing-a-network) if you’re curious to learn more about test networks.
+Once you’ve created an Alchemy account, you can generate an API key by creating an app. This will allow us to make requests to the Sepolia test network. Check out [this guide](https://docs.alchemy.com/docs/choosing-a-web3-network) if you’re curious to learn more about test networks.
 
-1. Navigate to the “Create App” page in your Alchemy Dashboard by hovering over “Apps” in the nav bar and clicking “Create App”
+1. From the [Alchemy dashboard](https://dashboard.alchemy.com), click on "Create New App" in the upper right-hand corner, and give your app a cool name and description!
 
-![Create your app](./create-your-app.png)
+![Create your app](./create-your-app.gif)
 
-2. Name your app (we chose “My First NFT!”), offer a short description, select “Ethereum” for the Chain, and choose “Sepolia” for your network. Since the merge the other testnets have been deprecated.
+2. Once you're done, the "Networks" tab should be automatically highlighted.  Click on it, select "configure" in the upper right-hand corner, disable all the other networks, and only leave "Ethereum Sepolia" enabled.
 
-![Configure and publish your app](./alchemy-explorer-sepolia.png)
-
-3. Click “Create app” and that’s it! Your app should appear in the table below.
+![Configure and publish your app](./alchemy-network-sepolia.gif)
 
 ## Step 3: Create an Ethereum account (address) {#create-eth-address}
 
 We need an Ethereum account to send and receive transactions. For this tutorial, we’ll use MetaMask, a virtual wallet in the browser used to manage your Ethereum account address. If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/) from the Ethereum foundation.
 
-You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Sepolia Test Network” in the upper right (so that we’re not dealing with real money).
+You can download MetaMask and create an account for free [here](https://metamask.io/). Once you have created an account, or if you already have an account, make sure to switch over to the “Sepolia Test Network” in the upper right (so that we’re not dealing with real money).
 
-![Set Sepolia as your network](./metamask-goerli.png)
+![Set Sepolia as your network](./switch-to-sepolia.gif)
 
-## Step 4: Add ether from a Faucet {#step-4-add-ether-from-a-faucet}
+## Step 4: Add ether from a Faucet {#add-ether-from-a-faucet}
 
-In order to deploy our smart contract to the test network, we’ll need some fake ETH. To get ETH you can go to the [Sepolia Faucet](https://sepoliafaucet.com/) hosted by Alchemy, log in and enter your account address, click “Send Me ETH”. You should see ETH in your MetaMask account soon after!
+In order to deploy our smart contract to the test network, we’ll need "fake" ETH - or SepoliaETH.  You can get SepoliaETH from a [faucet](https://www.alchemy.com/faucets#:~:text=A%20testnet%20faucet%20provides%20web3%20developers%20with%20free%20tokens%20for%20deploying%2C%20testing%2C%20and%20optimizing%20smart%20contracts%20on%20test%20blockchains%20such%20as%20Sepolia)!  However, most faucets have other requirements - the [Alchemy faucet](https://www.alchemy.com/faucets/ethereum-sepolia) requires at least 0.001 ETH (about [US\$3 ](https://www.coinbase.com/converter/eth/usd)right now), while the [Infura faucet](https://www.infura.io/faucet/sepolia) requires an Infura account.  This [Google Cloud faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) currently has no requirements, but this could change by the time you're reading this tutorial!
 
 ## Step 5: Check your Balance {#check-balance}
 
