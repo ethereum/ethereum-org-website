@@ -5,7 +5,7 @@ author: "Sumi Mudgil"
 tags: ["ERC-721", "alchemy", "solidity", "smart contracts"]
 skill: beginner
 lang: en
-published: 2021-04-22
+published: 2024-07-4
 ---
 
 [Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): $69 Million
