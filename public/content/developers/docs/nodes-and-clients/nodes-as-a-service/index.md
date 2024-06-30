@@ -287,7 +287,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - Decentralized RPC Protocol and Marketplace
     - 1M Requests Per Day Free Tier (per endpoint, max 2)
-    - Public Endpoints
+    - [Public Endpoints](https://docs.pokt.network/developers/public-endpoints)
     - Pre-Stake+ Program (if you need more than 1M requests per day)
     - 15+ Blockchains Supported
     - 6400+ Nodes earning POKT for serving applications
@@ -301,7 +301,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Infinitely scale the number of requests per day and nodes per hour as you go
     - The most private, censorship-resistant option
     - Hands-on developer support
-    - Pocket Portal dashboard and analytics
+    - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) dashboard and analytics
 
 - [**QuickNode**](https://www.quicknode.com)
   - [Docs](https://www.quicknode.com/docs/)
@@ -314,7 +314,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Intuitive dashboard, analytics suite, RPC composer
     - Advanced security features (JWT, masking, whitelisting)
     - NFT data and analytics API
-    - SOC2 Certified
+    - [SOC2 Certified](https://www.quicknode.com/security)
     - Suitable for Developers to Enterprises
 
 - [**Rivet**](https://rivet.cloud/)
