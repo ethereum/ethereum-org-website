@@ -19,6 +19,7 @@ export const ns = [
   "page-index",
   "page-learn",
   "page-upgrades",
+  "page-developers-docs",
   "page-developers-index",
   "page-what-is-ethereum",
 ] as const
