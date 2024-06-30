@@ -1,6 +1,5 @@
-import { ReactNode, useState } from "react"
+import { lazy, ReactNode, Suspense, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
-import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -238,10 +237,13 @@ const CodeblockSkeleton = () => (
   </Stack>
 )
 
-const Codeblock = dynamic(() => import("@/components/Codeblock"), {
-  ssr: false,
-  loading: () => <CodeblockSkeleton />,
-})
+const Codeblock = lazy(() =>
+  Promise.all([
+    import("@/components/Codeblock"),
+    // Add a delay to prevent the skeleton from flashing
+    new Promise((resolve) => setTimeout(resolve, 1000)),
+  ]).then(([module]) => module)
+)
 
 const HomePage = ({
   communityEvents,
@@ -558,13 +560,15 @@ const HomePage = ({
               setIsOpen={setModalOpen}
               title={codeExamples[activeCode].title}
             >
-              <Codeblock
-                codeLanguage={codeExamples[activeCode].codeLanguage}
-                allowCollapse={false}
-                fromHomepage
-              >
-                {codeExamples[activeCode].code}
-              </Codeblock>
+              <Suspense fallback={<CodeblockSkeleton />}>
+                <Codeblock
+                  codeLanguage={codeExamples[activeCode].codeLanguage}
+                  allowCollapse={false}
+                  fromHomepage
+                >
+                  {codeExamples[activeCode].code}
+                </Codeblock>
+              </Suspense>
             </CodeModal>
           )}
         </Row>
