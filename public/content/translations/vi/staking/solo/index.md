@@ -4,7 +4,7 @@ description: Tổng quan về cách bắt đầu đặt cọc ETH một mình
 lang: vi
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Tê giác Leslie trên chip máy tính riêng.
 sidebarDepth: 2
 summaryPoints:
@@ -101,7 +101,7 @@ Các chỉ báo thuộc tính được sử dụng bên dưới để cho biết
 
 ## Tìm hiểu về nút và bộ công cụ thiết lập máy khách {#node-and-client-tools}
 
-Có nhiều tùy chọn có sẵn để giúp bạn thiết lập. Sử dụng các chỉ báo bên trên làm hướng dẫn về các công cụ bên dưới.
+Có nhiều tùy chọn có sẵn để giúp bạn thiết lập. Sử dụng các chỉ báo bên trên để giúp hướng dẫn bạn qua các công cụ bên dưới.
 
 <ProductDisclaimer />
 
@@ -123,7 +123,7 @@ Bạn có đề xuất về một công cụ đặt cọc mà chúng tôi còn t
 
 <StakingGuides />
 
-## Frequently asked questions {#faq}
+## Những câu hỏi thường gặp {#faq}
 
 Đây là một vài trong số các câu hỏi phổ biến nhất về đặt cọc.
 

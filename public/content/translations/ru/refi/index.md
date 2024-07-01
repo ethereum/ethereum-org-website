@@ -5,7 +5,7 @@ lang: ru
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Альтернативная экономическая система, построенная на регенеративных принципах
 summaryPoint2: Попытка использовать Ethereum, чтобы решить координационные кризисы на глобальном уровне, такие как изменение климата

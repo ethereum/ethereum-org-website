@@ -2,7 +2,7 @@
 title: Permettre l'évolutivité d'Ethereum
 description: Les rollups regroupent des transactions hors chaîne, ce qui réduit les coûts pour l'utilisateur. Cependant, la manière dont les rollups utilisent actuellement les données est pour l'heure trop coûteuse, ce qui limite le coût des transactions. La solution Proto-Danksharding règle ce problème.
 lang: fr
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "Feuille de route d'Ethereum"
 template: roadmap
 ---

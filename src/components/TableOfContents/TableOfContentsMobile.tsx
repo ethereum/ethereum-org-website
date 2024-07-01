@@ -8,7 +8,6 @@ import {
   Flex,
   Icon,
   List,
-  Show,
   useDisclosure,
   useToken,
 } from "@chakra-ui/react"

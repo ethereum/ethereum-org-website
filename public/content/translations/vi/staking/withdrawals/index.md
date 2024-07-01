@@ -3,7 +3,7 @@ title: Rút tài sản đặt cược
 description: Trang tóm tắt về rút tiền đẩy đặt cược là gì, cách chúng hoạt động và những gì người góp cổ phần cần làm để nhận được phần thưởng
 lang: vi
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Tê giác Leslie và phần thưởng đặt cọc
 sidebarDepth: 2
 summaryPoints:
@@ -72,7 +72,7 @@ Bản nâng cấp Shanghai/Capella cho phép người dùng lấy lại ETH đã
 
 Nút xác thực có đủ điều kiện để rút tiền hay không sẽ phụ thuộc vào tình trạng của chính tài khoản nút xác thực đó. Người dùng không cần phải can thiệp để bắt đầu quá trình rút tiền cho tài khoản. Toàn bộ quá trình được thực hiện tự động bởi lớp đồng thuận theo một vòng lặp liên tục.
 
-### More of a visual learner? {#visual-learner}
+### Tìm hiểu thêm từ video trực quan? {#visual-learner}
 
 Hãy xem qua giải thích này của Finematics về rút cổ phần Ethereum:
 
@@ -125,7 +125,7 @@ Mở rộng phép tính này, chúng ta có thể ước tính thời gian cần
 
 Như bạn có thể thấy, hoạt động sẽ chậm lại khi có nhiều nút xác thực hơn trên mạng lưới. Tăng số lượng vị trí bị bỏ qua có thể làm chậm quá trình này một cách tương ứng, nhưng điều này thường thể hiện ngưỡng thời gian thấp hơn trong số các kết quả có thể xảy ra.
 
-## Frequently asked questions {#faq}
+## Những câu hỏi thường gặp {#faq}
 
 <ExpandableCard
 title="Sau khi cung cấp địa chỉ rút tiền, tôi có thể thay đổi sang địa chỉ rút tiền khác không?"
@@ -196,7 +196,7 @@ eventName="read more">
 
 Các nhà điều hành nút xác thực được khuyến nghị truy cập trang <a href="https://launchpad.ethereum.org/withdrawals/">Rút tiền trên Staking Launchpad</a> để biết thêm chi tiết về cách chuẩn bị nút xác thực để rút tiền, thời gian diễn ra sự kiện và nhiều thông tin hơn về cách thức hoạt động của chức năng rút tiền.
 
-Để thử thiết lập trên mạng thử nghiệm trước, hãy truy cập <a href="https://goerli.launchpad.ethereum.org">Staking Launchpad của Mạng thử nghiệm Goerli</a> để bắt đầu.
+Để thử thiết lập trên mạng thử nghiệm trước, hãy truy cập <a href="https://holesky.launchpad.ethereum.org">Staking Launchpad của Mạng thử nghiệm Holesky</a> để bắt đầu.
 
 </ExpandableCard>
 

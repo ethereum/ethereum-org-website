@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 // Library requires
 const i18Config = require("../../i18n.config.json")
 const {
@@ -64,6 +65,7 @@ type BucketsList = { [key: string]: Array<number> }
 const USER_OVERRIDE: BucketsList = {
   // FORMAT: lang_code: [bucket_number, bucket_number, ...],
   // EXAMPLE: es: [1, 10, 12, 14],
+  hu: [3, 6, 7, 10, 11, 12, 13, 16, 21],
 }
 
 /******************************
@@ -166,7 +168,7 @@ const trackers: TrackerObject = {
  * @param message Any arbitrary message
  * @param optionalParams Any additional arbitrary messages
  */
-const log = (message: any, ...optionalParams: any): void => {
+const log = (message: unknown, ...optionalParams: unknown[]): void => {
   VERBOSE && console.log(message, ...optionalParams)
 }
 
@@ -289,9 +291,7 @@ const scrapeDirectory = (
       copyFileSync(source, jsonDestinationPath)
       // Update .json tracker
       trackers.langs[repoLangCode].jsonCopyCount++
-    } else if (
-      item.endsWith(".md")
-    ) {
+    } else if (item.endsWith(".md")) {
       const mdDestDirPath: string = join(
         repoRoot,
         "public",

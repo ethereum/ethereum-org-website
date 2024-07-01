@@ -66,16 +66,15 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
 - [**All That Node**](https://allthatnode.com/)
   - [Docs](https://docs.allthatnode.com/)
   - Features
-    - Largest free tier with 150,000 requests daily
-    - Access to 24+ blockchain nodes
-    - RPC, HTTPS and WSS endpoints
-    - Unlimited access to archive data
-    - 24/7 support and uptime over 99.9%
+    - 50,000 requests per day with free tier
+    - Support for over 40 protocols
+    - JSON-RPC (EVM, Tendermint), REST, and Websocket APIs supported
+    - Unlimited access to archive date
+    - 24/7 technical support and 99.9% over uptime
     - Faucet available on multi chains
-    - Unlimited endpoint access with limitless number of API keys
-    - Trace/Debug namespace available
+    - Unlimited endpoint access with an limitless number of API keys
+    - Trace/Debug API supported
     - Automated updates
-    - Technical support
 - [**Amazon Managed Blockchain**](https://aws.amazon.com/managed-blockchain/)
   - [Docs](https://aws.amazon.com/managed-blockchain/resources/)
   - Features
@@ -321,7 +320,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Free access to historical data
     - Up to 8x faster read-heavy workloads
     - 100% consistent read access
-    - JSON RPC endpoints
+    - JSON-RPC endpoints
     - UI-based RPC request builder and request preview
     - Tightly integrated with Tenderly’s development, debugging, and testing tools
     - Transaction simulations

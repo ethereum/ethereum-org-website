@@ -3,7 +3,7 @@ title: Prelievi di staking
 description: Pagina di riepilogo su cosa sono i prelievi push di staking, come funzionano e cosa devono fare gli staker per ottenere le proprie ricompense
 lang: it
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Leslie il rinoceronte con le sue ricompense di staking
 sidebarDepth: 2
 summaryPoints:
@@ -114,12 +114,12 @@ Espandendo tale calcolo, possiamo stimare il tempo necessario a elaborare un dat
 <TableContainer>
 
 | Numero di prelievi | Tempo di completamento |
-| :----------------: | :--------------------: |
-|      400.000       |       3,5 giorni       |
-|      500.000       |       4,3 giorni       |
-|      600.000       |       5,2 giorni       |
-|      700.000       |       6,1 giorni       |
-|      800.000       |       7,0 giorni       |
+| :-------------------: | :--------------: |
+|        400.000        |     3,5 giorni     |
+|        500.000        |     4,3 giorni     |
+|        600.000        |     5,2 giorni     |
+|        700.000        |     6,1 giorni     |
+|        800.000        |     7,0 giorni     |
 
 </TableContainer>
 
@@ -196,7 +196,7 @@ eventName="read more">
 
 Gli operatori del validatore dovrebbero visitare la pagina dei <a href="https://launchpad.ethereum.org/withdrawals/">Prelievi del Launchpad di Staking</a>, dove troveranno ulteriori dettagli su come preparare il proprio validatore ai prelievi, le tempistiche degli eventi e ulteriori dettagli sul funzionamento dei prelievi.
 
-Per testare la tua configurazione su una rete di prova, visita prima il <a href="https://goerli.launchpad.ethereum.org">Launchpad di Staking della Rete di Prova di Goerli</a> per iniziare.
+Per testare la tua configurazione su una rete di prova, visita prima il <a href="https://holesky.launchpad.ethereum.org">Launchpad di Staking della Rete di Prova di Holesky</a> per iniziare.
 
 </ExpandableCard>
 

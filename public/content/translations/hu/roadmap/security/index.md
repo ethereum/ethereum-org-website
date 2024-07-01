@@ -2,7 +2,7 @@
 title: Biztonságosabb Ethereum
 description: Az Ethereum a legbiztonságosabb és leginkább decentralizált okosszerződés-platform a világon. Azonban még mindig vannak fejlődési lehetőségek, hogy az Ethereum ellenálló maradjon minden szinten a támadásokkal szemben a jövőben is.
 lang: hu
-image: /roadmap/roadmap-security.png
+image: /images/roadmap/roadmap-security.png
 alt: "Ethereum-ütemterv"
 template: roadmap
 ---

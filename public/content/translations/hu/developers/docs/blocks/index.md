@@ -56,8 +56,8 @@ A blokk `body` számos mezőt tartalmaz:
 | `graffiti`           | tetszőleges adat a blokkok taggelésére                              |
 | `proposer_slashings` | a validátorok listája, akiket slashelni kell                        |
 | `attester_slashings` | a tanusítók listája, akiket slashelni kell                          |
-| `attestations`       | a tanúsítók listája, akik ezt a blokkot támogatják                  |
-| `deposits`           | az új letétek listája a letéti szerződésbe                          |
+| `attestations`        | a tanúsítók listája, akik ezt a blokkot támogatják                  |
+| `deposits`         | az új letétek listája a letéti szerződésbe                          |
 | `voluntary_exits`    | a validátorok listája, akik kilépnek a hálózatból                   |
 | `sync_aggregate`     | a validátorok egy csoportja, akik a könnyű klienseket szolgálják ki |
 | `execution_payload`  | a végrehajtási klienstől jövő tranzakciók                           |
@@ -68,7 +68,7 @@ A `attestations` (tanúsítások) mező tartalmazza a blokkban lévő az összes
 |:------------------ |:------------------------------------------------------------ |
 | `aggregation_bits` | a validátorok listája, akik részt vettek a tanúsításban      |
 | `data`             | konténer számos almezővel                                    |
-| `signature`        | az összes tanúsítást végző validátor aláírásának aggregátuma |
+| `signature`          | az összes tanúsítást végző validátor aláírásának aggregátuma |
 
 A `data` mező a `tanúsítás` részen belül tartalmazza:
 
@@ -120,7 +120,7 @@ Az `execution_payload` maga a következőket tartalmazza (ami azonos a fejlécce
 | `base_fee_per_gas` | az alapdíj értéke                                                        |
 | `block_hash`       | a végrehajtó blokk hash-e                                                |
 | `tranzakciók`      | a tranzakciók listája, amit végre kell hajtani                           |
-| `withdrawals`      | a visszavonásra kerülő objektumok listája                                |
+| `withdrawals`        | a visszavonásra kerülő objektumok listája                                |
 
 A `withdrawals` (visszavonások) listája tartalmazza a `withdrawal` (visszavonási) objektumokat, amelyek a következőképpen vannak strukturálva:
 

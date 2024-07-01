@@ -5,7 +5,7 @@ lang: ko
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: 홀로그램을 통해 표시되고 있는 ETH 로고.
 summaryPoint1: 이더리움 기반 자산으로 고유한 모든 것을 나타내는 방법입니다.
 summaryPoint2: NFT는 콘텐츠 창작자에게 그 어느 때보다도 더 많은 힘을 실어주고 있습니다.

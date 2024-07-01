@@ -4,7 +4,7 @@ description: Ortak ETH hisselemeye nasıl başlanacağına dair genel bir bakı�
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: Gergedan Leslie havuzda yüzüyor.
 sidebarDepth: 2
 summaryPoints:

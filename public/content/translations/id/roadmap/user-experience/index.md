@@ -2,7 +2,7 @@
 title: Meningkatkan pengalaman pengguna
 description: Masih terlalu rumit untuk menggunakan Ethereum bagi kebanyakan orang. Untuk mendorong adopsi massal, Ethereum harus secara drastis menurunkan hambatan masuknya - pengguna harus mendapatkan manfaat dari akses yang terdesentralisasi, tanpa izin, dan tahan sensor ke Ethereum, tetapi harus sama mudahnya dengan menggunakan aplikasi web2 tradisional.
 lang: id
-image: /roadmap/roadmap-ux.png
+image: /images/roadmap/roadmap-ux.png
 alt: "Peta Perjalanan Ethereum"
 template: roadmap
 ---

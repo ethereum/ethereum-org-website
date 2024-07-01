@@ -5,7 +5,7 @@ lang: ms
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Perwakilan pengundian DAO pada cadangan.
 summaryPoint1: Komuniti milik ahli tanpa kepimpinan berpusat.
 summaryPoint2: Cara selamat untuk bekerjasama dengan orang asing internet.

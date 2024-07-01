@@ -59,12 +59,12 @@ Bien que les fonctionnalités clés du Web3 ne soient pas isolées et ne rentren
 
 Le Web3 vous donne la propriété de vos actifs numériques de façon inégalée. Par exemple, disons que vous jouez à un jeu web2. Si vous achetez un objet dans le jeu, il est lié directement à votre compte. Si les créateurs du jeu suppriment votre compte, vous perdrez ces objets. Ou, si vous arrêtez de jouer au jeu, vous perdez la valeur que vous avez investie dans vos objets pendant que vous jouiez.
 
-Web3 permet la propriété directe via les [jetons non-fongibles (NFT)](/nft/). Personne, pas même les créateurs du jeu, n'a le pouvoir de vous retirer votre propriété. En outre, si vous vous arrêtez de jouer, vous pouvez vendre ou échanger vos objets en jeu sur des marchés ouverts et récupérer leur valeur.
+Le Web3 permet la propriété directe via les [jetons non-fongibles (NFT)](/glossary/#nft). Personne, pas même les créateurs du jeu, n'a le pouvoir de vous retirer votre propriété. En outre, si vous vous arrêtez de jouer, vous pouvez vendre ou échanger vos objets en jeu sur des marchés ouverts et récupérer leur valeur.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>En savoir plus sur les NFT</div>
   <ButtonLink to="/nft/">
-    Plus d'infos sur les NFT
+    Plus d'infos sur les NTF
   </ButtonLink>
 </InfoBanner>
 
@@ -82,7 +82,7 @@ Le Web 2.0 exige que les créateurs de contenu fassent confiance aux plateformes
 
 En plus de posséder vos données sur le Web3, vous pouvez posséder la plateforme en tant que groupe, en utilisant des jetons qui agissent comme des parts dans une entreprise. Les DAO vous permettent de coordonner la propriété décentralisée d'une plateforme et de prendre des décisions concernant son futur.
 
-Les DAO sont définies techniquement comme des contrats intelligents convenus qui automatisent la prise de décision décentralisée sur un ensemble de ressources (jetons). Les utilisateurs disposant de jetons votent sur la manière dont les ressources sont dépensées, et le code exécute automatiquement le résultat du vote.
+Les DAO sont définies techniquement comme des [contrats intelligents](/glossary/#smart-contract) convenus qui automatisent les prises de décision décentralisées sur un ensemble de ressources (jetons). Les utilisateurs disposant de jetons votent sur la manière dont les ressources sont dépensées, et le code exécute automatiquement le résultat du vote.
 
 Le fait est toutefois que les gens définissent de nombreuses communautés Web3 comme étant des DAO. Ces communautés ont toutes des niveaux différents de décentralisation et d'automatisation par code. Actuellement, nous explorons ce que sont les DAO et comment elles pourraient évoluer à l'avenir.
 
@@ -97,15 +97,11 @@ Le fait est toutefois que les gens définissent de nombreuses communautés Web3 
 
 Normalement, vous créez un compte pour chaque plateforme que vous utilisez. Par exemple, vous pourriez avoir un compte Twitter, un compte YouTube et un compte Reddit. Vous voulez changer votre nom tel qu'il s'affiche ou votre photo de profil ? Vous devez le faire sur tous les comptes. Vous pouvez utiliser des connexions avec les réseaux sociaux dans certains cas, mais cela pose un problème bien connu : la censure. En un seul clic, ces plateformes peuvent vous bloquer l'accès à toute votre vie en ligne. Pire encore, de nombreuses plates-formes exigent que vous leur fassiez confiance en leur confiant des informations personnelles pour créer un compte.
 
-Web3 résout ces problèmes en vous permettant de contrôler votre identité numérique avec une adresse Ethereum et un profil ENS. Utiliser une adresse Ethereum offre un moyen de connexion unique à toutes les plateformes qui est sûr, résistant à la censure et anonyme.
-
-<ButtonLink to="https://login.xyz/">
-  Connectez-vous avec Ethereum
-</ButtonLink>
+Le Web3 résout ces problèmes en vous permettant de contrôler votre identité digitale avec une adresse Ethereum et un profil de [service de nom Ethereum (ENS)](/glossary/#ens). Utiliser une adresse Ethereum offre un moyen de connexion unique à toutes les plateformes qui est sûr, résistant à la censure et anonyme.
 
 ### Paiements natifs {#native-payments}
 
-L'infrastructure de paiement sur le Web2 repose sur les banques et les processeurs de paiement, excluant les personnes sans compte bancaire ou les personnes qui vivent dans le mauvais pays. Le Web3 utilise des jetons comme [ETH](/eth/) pour envoyer de l'argent directement depuis un navigateur et ne nécessite pas de tiers de confiance.
+L'infrastructure de paiement sur le Web2 repose sur les banques et les processeurs de paiement, excluant les personnes sans compte bancaire ou les personnes qui vivent dans le mauvais pays. Le Web3 utilise des jetons comme [ETH](/glossary/#ether) pour envoyer de l'argent directement depuis un navigateur et ne nécessite pas de tiers de confiance.
 
 <ButtonLink to="/eth/">
   Autres informations sur ETH
@@ -117,7 +113,7 @@ Malgré les nombreux avantages du Web3 dans sa forme actuelle, il existe encore 
 
 ### Accessibilité {#accessibility}
 
-Des fonctionnalités importantes du Web3, comme Sign-in with Ethereum (siwe), sont déjà disponibles gratuitement pour tout le monde. Mais le coût relatif des transactions reste encore élevé pour beaucoup de personnes. Le Web3 est moins susceptible d'être utilisé dans les pays moins riches et en développement, en raison de frais de transaction élevés. Sur Ethereum, ces défis sont résolus par [la feuille de route](/roadmap/) et [les solutions de mise à l'échelle de la couche 2](/developers/docs/scaling/). La technologie est prête, mais les solutions de niveau 2 doivent être plus largement adoptées pour rendre le Web3 accessible à tous.
+Des fonctionnalités importantes du Web3, comme Sign-in with Ethereum (siwe), sont déjà disponibles gratuitement pour tout le monde. Mais le coût relatif des transactions reste encore élevé pour beaucoup de personnes. Le Web3 est moins susceptible d'être utilisé dans les pays moins riches et en développement, en raison de frais de transaction élevés. Sur Ethereum, ces défis sont résolus par [la feuille de route](/roadmap/) et [les solutions de mise à l'échelle de la couche 2](/glossary/#layer-2). La technologie est prête, mais les solutions de niveau 2 doivent être plus largement adoptées pour rendre le Web3 accessible à tous.
 
 ### Expérience utilisateur {#user-experience}
 

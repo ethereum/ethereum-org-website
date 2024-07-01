@@ -22,7 +22,7 @@ Yüz binlerce Ethereum meraklısı, haberleri paylaşmak, son gelişmeler hakkı
 ## Sohbet odaları {#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Kedi Güdücüler</Link> - Ethereum geliştirmeye proje yönetimi desteği sunmaya odaklı topluluk</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Bilgisayar Korsanları</Link> - ETHGlobal tarafından yürütülen Discord sohbeti: tüm dünyadaki Ethereum bilgisayar korsanları için çevrimiçi bir topluluk</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://ethglobal.com/discord">Ethereum Bilgisayar Korsanları</Link> - ETHGlobal tarafından yürütülen Discord sohbeti: tüm dünyadaki Ethereum bilgisayar korsanları için çevrimiçi bir topluluk</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - Ethereum geliştirme odaklı Discord topluluğu</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link> - mevcut ve potansiyel kilitleyiciler için topluluk tarafından yönetilen rehberlik, eğitim, destek ve kaynaklar</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="/discord/">Ethereum.org web sitesi ekibi</Link> - uğrayın ve ethereum.org web geliştirme ve tasarımı ekibi ile ve topluluktan insanlarla sohbet edin</SocialListItem>

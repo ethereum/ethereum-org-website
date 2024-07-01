@@ -199,12 +199,8 @@
               to: /developers/docs/standards/tokens/erc-20/
             - id: docs-nav-erc-721
               to: /developers/docs/standards/tokens/erc-721/
-            - id: docs-nav-erc-777
-              to: /developers/docs/standards/tokens/erc-777/
             - id: docs-nav-erc-1155
               to: /developers/docs/standards/tokens/erc-1155/
-            - id: docs-nav-erc-4626
-              to: /developers/docs/standards/tokens/erc-4626/
     - id: docs-nav-mev
       to: /developers/docs/mev/
       description: docs-nav-mev-description
@@ -230,6 +226,9 @@
     - id: docs-nav-data-availability
       to: /developers/docs/data-availability/
       description: docs-nav-data-availability-description
+      items:
+        - id: docs-nav-data-availability-storage-strategies
+          to: /developers/docs/data-availability/blockchain-data-storage-strategies/
     - id: docs-nav-networking-layer
       to: /developers/docs/networking-layer/
       description: docs-nav-networking-layer-description

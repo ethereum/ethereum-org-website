@@ -1,5 +1,4 @@
 import { useMemo } from "react"
-import { useRouter } from "next/navigation"
 import { FaTwitter } from "react-icons/fa"
 import { Center, Icon } from "@chakra-ui/react"
 
@@ -65,7 +64,7 @@ export const QuizButtonGroup = () => {
 
     setShowAnswer(true)
 
-    if (!!quizPageProps) {
+    if (quizPageProps) {
       if (currentQuestionAnswerChoice.isCorrect) {
         return quizPageProps.statusHandler?.("success")
       }
@@ -166,7 +165,12 @@ export const QuizButtonGroup = () => {
               <Translation id="learn-quizzes:try-again" />
             </Button>
           )}
-          <Button onClick={handleContinue}>
+          <Button
+            onClick={handleContinue}
+            data-testid={
+              finishedQuiz ? "see-results-button" : "next-question-button"
+            }
+          >
             <Translation
               id={
                 finishedQuiz
@@ -183,6 +187,7 @@ export const QuizButtonGroup = () => {
       <Button
         onClick={handleSubmitAnswer}
         isDisabled={!currentQuestionAnswerChoice}
+        data-testid="check-answer-button"
       >
         <Translation id="learn-quizzes:submit-answer" />
       </Button>

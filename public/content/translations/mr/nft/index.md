@@ -5,7 +5,7 @@ lang: mr
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: होलोग्रामद्वारे Ethचा लोगो प्रदर्शित केले जात आहे.
 summaryPoint1: Ethereum-आधारित मालमत्ता म्हणून अद्वितीय कोणत्याही गोष्टीचे प्रतिनिधित्व करण्याचा एक मार्ग.
 summaryPoint2: NFT सामग्री निर्मात्यांना पूर्वीपेक्षा अधिक शक्ती देत ​​आहेत.

@@ -14,7 +14,7 @@ import {
   type Icon as ChakraIcon,
 } from "@chakra-ui/react"
 
-import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import { Button, ButtonLink } from "@/components/Buttons"
 import Emoji from "@/components/Emoji"
@@ -43,17 +43,18 @@ import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { InfoGrid } from "@/layouts/Staking"
-import community from "@/public/enterprise-eth.png"
-import hackathon from "@/public/hackathon_transparent.png"
-import impact from "@/public/impact_transparent.png"
-import Dappnode from "@/public/run-a-node/dappnode.svg"
-import Dapptap from "@/public/run-a-node/dapptap.svg"
-import ethereumInside from "@/public/run-a-node/ethereum-inside.png"
-import Terminal from "@/public/run-a-node/terminal.svg"
-import leslie from "@/public/upgrades/upgrade_rhino.png"
+import community from "@/public/images/enterprise-eth.png"
+import hackathon from "@/public/images/hackathon_transparent.png"
+import impact from "@/public/images/impact_transparent.png"
+import Dappnode from "@/public/images/run-a-node/dappnode.svg"
+import Dapptap from "@/public/images/run-a-node/dapptap.svg"
+import ethereumInside from "@/public/images/run-a-node/ethereum-inside.png"
+import Terminal from "@/public/images/run-a-node/terminal.svg"
+import leslie from "@/public/images/upgrades/upgrade_rhino.png"
 
 const Divider = () => <Box my="16" w="10%" h="1" bg="homeDivider" />
 
@@ -334,12 +335,16 @@ export const getStaticProps = (async ({ locale }) => {
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
@@ -436,7 +441,7 @@ const RunANodePage = () => {
       <PageMetadata
         title={t("page-run-a-node-title")}
         description={t("page-run-a-node-meta-description")}
-        image="/run-a-node/ethereum-inside.png"
+        image="/images/run-a-node/ethereum-inside.png"
       />
       <HeroContainer>
         <Box pb="8">
@@ -502,7 +507,7 @@ const RunANodePage = () => {
               contentPreview={preview}
               title={title}
               // TODO: make a11y svgs (using <title>)
-              // @ts-ignore
+              // @ts-expect-error alt does not exist as a valid prop
               alt={alt}
               svg={image}
               key={title}
@@ -543,7 +548,7 @@ const RunANodePage = () => {
             <ColumnNarrow>
               <Terminal
                 // TODO: make a11y svgs (using <title>)
-                // @ts-ignore
+                // @ts-expect-error alt does not exist as a valid prop
                 alt={t("page-run-a-node-glyph-alt-terminal")}
               />
             </ColumnNarrow>
@@ -553,7 +558,7 @@ const RunANodePage = () => {
             <ColumnNarrow>
               <Dappnode
                 // TODO: make a11y svgs (using <title>)
-                // @ts-ignore
+                // @ts-expect-error alt does not exist as a valid prop
                 alt={t("page-run-a-node-glyph-alt-dappnode")}
               />
             </ColumnNarrow>
@@ -579,7 +584,7 @@ const RunANodePage = () => {
             <ColumnNarrow>
               <Dapptap
                 // TODO: make a11y svgs (using <title>)
-                // @ts-ignore
+                // @ts-expect-error alt does not exist as a valid prop
                 alt={t("page-run-a-node-glyph-alt-phone")}
               />
             </ColumnNarrow>
@@ -652,7 +657,7 @@ const RunANodePage = () => {
           <SvgTitle>
             <HardwareGlyphIcon
               // TODO: make a11y svgs (using <title>)
-              // @ts-ignore
+              // @ts-expect-error alt does not exist as a valid prop
               alt={t("page-run-a-node-glyph-alt-hardware")}
             />
             <H3>{t("page-run-a-node-build-your-own-hardware-title")}</H3>
@@ -724,7 +729,7 @@ const RunANodePage = () => {
           <SvgTitle>
             <DownloadGlyphIcon
               // TODO: make a11y svgs (using <title>)
-              // @ts-ignore
+              // @ts-expect-error alt does not exist as a valid prop
               alt={t("page-run-a-node-glyph-alt-software")}
             />
             <H3>{t("page-run-a-node-build-your-own-software")}</H3>

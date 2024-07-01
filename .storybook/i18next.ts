@@ -10,16 +10,19 @@ export const baseLocales = {
 }
 
 // Only i18n files named in this array are being exposed to Storybook. Add filenames as necessary.
-const ns = [
+export const ns = [
   "common",
   "glossary",
+  "glossary-tooltip",
+  "learn-quizzes",
   "page-about",
   "page-index",
   "page-learn",
   "page-upgrades",
   "page-developers-index",
   "page-roadmap-vision",
-]
+  "page-what-is-ethereum",
+] as const
 const supportedLngs = Object.keys(baseLocales)
 
 /**
@@ -50,6 +53,7 @@ const resources: Resource = ns.reduce((acc, n) => {
 
   return acc
 }, {})
+console.log("🚀 ~ constresources:Resource=ns.reduce ~ resources:", resources)
 
 i18n.use(initReactI18next).init({
   debug: true,
@@ -58,6 +62,7 @@ i18n.use(initReactI18next).init({
   react: { useSuspense: false },
   supportedLngs,
   resources,
+  defaultNS: "common",
 })
 
 export default i18n

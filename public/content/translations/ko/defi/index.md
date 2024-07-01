@@ -4,7 +4,7 @@ description: 이더리움의 디파이 개요
 lang: ko
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: 레고 블록으로 만든 이더리움 로고.
 sidebarDepth: 2
 summaryPoint1: 현재 금융 시스템에 대한 글로벌하고 개방적인 대안입니다.

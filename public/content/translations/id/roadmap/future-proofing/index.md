@@ -2,7 +2,7 @@
 title: Ethereum yang siap menghadapi masa depan
 description: Peningkatan ini memperkuat Ethereum sebagai lapisan dasar terdesentralisasi yang tangguh untuk masa depan, apa pun yang akan terjadi.
 lang: id
-image: /roadmap/roadmap-future.png
+image: /images/roadmap/roadmap-future.png
 alt: "Peta Perjalanan Ethereum"
 template: roadmap
 ---

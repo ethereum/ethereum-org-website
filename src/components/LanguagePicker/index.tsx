@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import {
   Box,
   Flex,
@@ -5,6 +6,7 @@ import {
   FormLabel,
   Input,
   InputGroup,
+  InputLeftElement,
   InputRightElement,
   Kbd,
   Menu,
@@ -16,10 +18,15 @@ import {
   useEventListener,
 } from "@chakra-ui/react"
 
-import { Button } from "@/components/Buttons"
+import { Lang, LocaleDisplayInfo } from "@/lib/types"
+
 import { BaseLink } from "@/components/Link"
 
+import { isMobile } from "@/lib/utils/isMobile"
+import { isLangRightToLeft } from "@/lib/utils/translations"
+
 import MenuItem from "./MenuItem"
+import { MobileCloseBar } from "./MobileCloseBar"
 import NoResultsCallout from "./NoResultsCallout"
 import { useLanguagePicker } from "./useLanguagePicker"
 
@@ -59,6 +66,22 @@ const LanguagePicker = ({
     inputRef.current?.focus()
   })
 
+  // onClick handlers
+  const handleMobileCloseBarClick = () => onClose()
+  const handleMenuItemClose = (displayInfo: LocaleDisplayInfo) =>
+    onClose({
+      eventAction: "Locale chosen",
+      eventName: displayInfo.localeOption,
+    })
+  const handleBaseLinkClose = () =>
+    onClose({
+      eventAction: "Translation program link (menu footer)",
+      eventName: "/contributing/translation-program",
+    })
+
+  const { locale } = useRouter()
+  const isRtl = isLangRightToLeft(locale! as Lang)
+
   return (
     <Menu isLazy placement={placement} autoSelect={false} {...disclosure}>
       {children}
@@ -76,23 +99,10 @@ const LanguagePicker = ({
         {...props}
       >
         {/* Mobile Close bar */}
-        <Flex
-          justifyContent="end"
-          hideFrom="md"
-          position="sticky"
-          zIndex="sticky"
-          top="0"
-          bg="background.base"
-        >
-          <Button
-            p="4"
-            variant="ghost"
-            alignSelf="end"
-            onClick={() => onClose()}
-          >
-            {t("common:close")}
-          </Button>
-        </Flex>
+        {/* avoid rendering mobile only feature on desktop */}
+        {isMobile() && (
+          <MobileCloseBar handleClick={handleMobileCloseBarClick} />
+        )}
 
         {/* Main Language selection menu */}
         <Box
@@ -128,6 +138,7 @@ const LanguagePicker = ({
                 mb="2"
                 bg="background.base"
                 color="body.base"
+                sx={isRtl ? { pl: 10, pr: 2 } : {}}
                 onKeyDown={(e) => {
                   // Navigate to first result on enter
                   if (e.key === "Enter") {
@@ -146,25 +157,41 @@ const LanguagePicker = ({
                 }}
                 onFocus={handleInputFocus}
               />
-              <InputRightElement
-                hideBelow="md"
-                cursor="text"
-              >
-                <Kbd
-                  fontSize="sm"
-                  lineHeight="none"
-                  me="2"
-                  p="1"
-                  py="0.5"
-                  ms="auto"
-                  border="1px"
-                  borderColor="disabled"
-                  color="disabled"
-                  rounded="base"
-                >
-                  \
-                </Kbd>
-              </InputRightElement>
+              {isRtl ? (
+                <InputLeftElement hideBelow="md" cursor="text">
+                  <Kbd
+                    fontSize="sm"
+                    lineHeight="none"
+                    ms="4"
+                    p="1"
+                    py="0.5"
+                    me="auto"
+                    border="1px"
+                    borderColor="disabled"
+                    color="disabled"
+                    rounded="base"
+                  >
+                    /
+                  </Kbd>
+                </InputLeftElement>
+              ) : (
+                <InputRightElement hideBelow="md" cursor="text">
+                  <Kbd
+                    fontSize="sm"
+                    lineHeight="none"
+                    me="2"
+                    p="1"
+                    py="0.5"
+                    ms="auto"
+                    border="1px"
+                    borderColor="disabled"
+                    color="disabled"
+                    rounded="base"
+                  >
+                    \
+                  </Kbd>
+                </InputRightElement>
+              )}
             </InputGroup>
 
             {filteredNames.map((displayInfo, index) => (
@@ -177,12 +204,7 @@ const LanguagePicker = ({
                   e.preventDefault()
                   inputRef.current?.focus()
                 }}
-                onClick={() =>
-                  onClose({
-                    eventAction: "Locale chosen",
-                    eventName: displayInfo.localeOption,
-                  })
-                }
+                onClick={() => handleMenuItemClose(displayInfo)}
               />
             ))}
 
@@ -215,12 +237,7 @@ const LanguagePicker = ({
             <BaseLink
               ref={footerRef}
               href="/contributing/translation-program"
-              onClick={() =>
-                onClose({
-                  eventAction: "Translation program link (menu footer)",
-                  eventName: "/contributing/translation-program",
-                })
-              }
+              onClick={handleBaseLinkClose}
             >
               {t("common:learn-more")}
             </BaseLink>
