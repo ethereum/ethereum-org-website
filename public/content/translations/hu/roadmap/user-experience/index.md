@@ -2,7 +2,7 @@
 title: A felhasználói élmény javítása
 description: A legtöbb ember számára még mindig túl bonyolult az Ethereum használata. A tömeges használathoz az Ethereumnak drasztikusan csökkentenie kell ezt az akadályt – mindenki számára előnyösnek kell lennie a decentralizált, engedélymentes és cenzúrának ellenálló Ethereum-hozzáférésnek, ugyanakkor olyan könnyednek kell lennie, mint a hagyományos web2 alkalmazás használata.
 lang: hu
-image: /images/roadmap/roadmap-ux.png
+image: /roadmap/roadmap-ux.png
 alt: "Ethereum-ütemterv"
 template: roadmap
 ---

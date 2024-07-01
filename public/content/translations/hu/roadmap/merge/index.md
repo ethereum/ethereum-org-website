@@ -3,7 +3,7 @@ title: A beolvadás
 description: További információ a beolvadásról – amikor az Ethereum fő hálózata áttért a proof-of-stake konszenzusra.
 lang: hu
 template: upgrade
-image: /images/upgrades/merge.png
+image: /upgrades/merge.png
 alt:
 summaryPoint1: Az Ethereum fő hálózata proof-of-stake konszenzust használ, ám ez nem mindig volt így.
 summaryPoint2: Az áttérés az eredeti proof-of-work mechanizmusról a proof-of-stake mechanizmusa a beolvadás nevet kapta.
