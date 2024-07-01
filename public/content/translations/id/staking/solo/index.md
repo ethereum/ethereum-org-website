@@ -4,7 +4,7 @@ description: Berikut adalah gambaran buat kamu cara memulai solo penaruhan ETH
 lang: id
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Leslie seekor badak dengan komputer chipnya sendiri.
 sidebarDepth: 2
 summaryPoints:
