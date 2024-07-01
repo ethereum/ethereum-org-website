@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react"
+import { lazy, ReactNode, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -14,6 +14,7 @@ import {
   HeadingProps,
   Icon,
   SimpleGridProps,
+  SkeletonText,
   Stack,
   useToken,
 } from "@chakra-ui/react"
@@ -29,9 +30,9 @@ import CodeModal from "@/components/CodeModal"
 import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
+import LazyLoadComponent from "@/components/LazyLoadComponent"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
-import StatsBoxGrid from "@/components/StatsBoxGrid"
 import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
 import Translation from "@/components/Translation"
 
@@ -69,6 +70,21 @@ import infrastructurefixed from "@/public/images/infrastructure_transparent.png"
 import merge from "@/public/images/upgrades/merge.png"
 import robotfixed from "@/public/images/wallet-cropped.png"
 import ethereum from "@/public/images/what-is-ethereum.png"
+
+const StatsBoxGrid = lazy(() => import("@/components/StatsBoxGrid"))
+
+// FIXME: using same design as in #13121 for testing purposes
+const CodeblockSkeleton = () => (
+  <Stack px={6}>
+    <SkeletonText
+      mt="4"
+      noOfLines={10}
+      spacing={3}
+      skeletonHeight="1rem"
+      startColor="body.base"
+    />
+  </Stack>
+)
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
@@ -563,7 +579,17 @@ const HomePage = ({
             <Translation id="page-index:page-index-network-stats-subtitle" />
           </SectionDecription>
         </ContentBox>
-        <StatsBoxGrid data={metricResults} />
+
+        <LazyLoadComponent
+          component={StatsBoxGrid}
+          fallback={<CodeblockSkeleton />}
+          componentProps={{ data: metricResults }}
+          intersectionOptions={{
+            root: null,
+            rootMargin: "500px",
+            threshold: 0,
+          }}
+        />
       </GrayContainer>
       <Divider mb={16} mt={16} w="10%" height="0.25rem" bgColor="homeDivider" />
       <CommunityEvents events={communityEvents} />
