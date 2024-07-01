@@ -2,9 +2,9 @@
 title: Η αποθήκευση κεφαλαίου ως υπηρεσία
 description: Μια επισκόπηση πώς να ξεκινήσετε με αποθήκευση ETH σε δεξαμενή
 lang: el
-template: staking
+template: staking (αποθήκευση)
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /staking/leslie-saas.png
 alt: Η Leslie ο ρινόκερος πετάει στα σύννεφα.
 sidebarDepth: 2
 summaryPoints:
