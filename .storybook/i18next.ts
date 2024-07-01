@@ -18,6 +18,7 @@ const ns = [
   "page-learn",
   "page-upgrades",
   "page-developers-index",
+  "page-roadmap-vision",
 ]
 const supportedLngs = Object.keys(baseLocales)
 
