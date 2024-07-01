@@ -4,7 +4,7 @@ description: Eine Übersicht darüber, wie man mit gepooltem ETH-Staking beginne
 lang: de
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /staking/leslie-saas.png
 alt: Leslie, das in den Wolken schwebende Nashorn.
 sidebarDepth: 2
 summaryPoints:

@@ -4,7 +4,7 @@ description: Ein Überblick darüber, wie Sie mit dem Solo-Staking Ihres ETH beg
 lang: de
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Leslie das Nashorn auf ihrem eigenen Computerchip.
 sidebarDepth: 2
 summaryPoints:

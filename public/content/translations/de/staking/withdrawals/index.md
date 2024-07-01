@@ -3,7 +3,7 @@ title: Staking-Auszahlungen
 description: Seite mit einer Zusammenfassung zu Staking-Push-Auszahlungen, wie sie funktionieren und was Staker tun müssen, um ihre Belohnungen zu erhalten
 lang: de
 template: staking
-image: /images/staking/leslie-withdrawal.png
+image: /staking/leslie-withdrawal.png
 alt: Leslie das Nashorn mit ihren Staking-Auszahlungen
 sidebarDepth: 2
 summaryPoints:
@@ -196,7 +196,7 @@ eventName="read more">
 
 Validator-Betreibern wird empfohlen, die Seite <a href="https://launchpad.ethereum.org/withdrawals/">Startplattform für Staking-Auszahlungen</a> zu besuchen. Dort können sie mehr Details darüber erfahren, wie Sie Ihren Validator auf Auszahlungen vorbereiten, sowie Informationen zum Zeitpunkt der Ereignisse und zur Funktionsweise von Auszahlungen erhalten.
 
-Um Ihre Einrichtung zunächst auf einem Testnetz auszuprobieren, können Sie mit dem <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> beginnen.
+Um Ihre Einrichtung zunächst auf einem Testnetz auszuprobieren, können Sie mit dem <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a> beginnen.
 
 </ExpandableCard>
 
