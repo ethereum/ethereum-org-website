@@ -2,9 +2,9 @@
 title: Đặt cọc ETH một mình
 description: Tổng quan về cách bắt đầu đặt cọc ETH một mình
 lang: vi
-template: staking
+template: cổ phần
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Tê giác Leslie trên chip máy tính riêng.
 sidebarDepth: 2
 summaryPoints:

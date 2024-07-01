@@ -2,9 +2,9 @@
 title: Đặt cọc như là một dịch vụ
 description: Tổng quan về cách bắt đầu với đặt cược ETH nhóm
 lang: vi
-template: staking
+template: cổ phần
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /staking/leslie-saas.png
 alt: Tê giác Leslie lơ lửng giữa những đám mây.
 sidebarDepth: 2
 summaryPoints:
