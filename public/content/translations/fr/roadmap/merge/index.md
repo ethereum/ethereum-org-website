@@ -3,7 +3,7 @@ title: La Fusion
 description: En savoir plus sur La Fusion - quand le réseau principal Ethereum adopte la preuve d'enjeu.
 lang: fr
 template: upgrade
-image: /images/upgrades/merge.png
+image: /upgrades/merge.png
 alt:
 summaryPoint1: Le réseau principal Ethereum utilise la preuve d'enjeu, mais cela n'a pas toujours été le cas.
 summaryPoint2: La mise à niveau du mécanisme original de preuve de travail à celui de la preuve d'enjeu a été appelé La Fusion.
@@ -200,7 +200,7 @@ Les mises à niveau Ethereum sont plus ou moins interdépendantes. Alors résumo
 
 La Fusion représente l'adoption formelle de la Chaîne phare comme nouvelle couche de consensus pour la couche d'exécution sur le réseau principal d'origine. Depuis La Fusion, les validateurs sont affectés au réseau principal sécurisé d'Ethereum et le minage par [preuve de travail](/developers/docs/consensus-mechanisms/pow/) n'est plus un moyen valide de production de blocs.
 
-Les blocs sont dès lors proposés par validation des nœuds qui ont misé l'ETH en échange du droit de participer au consensus. Ces mises à niveau permettent de préparer le terrain pour de futures améliorations d'évolutivité, y compris la fragmentation.
+Les blocs sont dès lors proposés par validation des nœuds qui ont misés l'ETH en échange du droit de participer au consensus. Ces mises à niveau permettent de préparer le terrain pour de futures améliorations d'évolutivité, y compris la fragmentation.
 
 <ButtonLink to="/roadmap/beacon-chain/">
   La Chaîne phare

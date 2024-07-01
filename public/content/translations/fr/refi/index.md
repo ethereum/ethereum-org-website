@@ -5,7 +5,7 @@ lang: fr
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /images/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: Un système économique alternatif fondé sur des principes de régénération
 summaryPoint2: Une tentative d'utilisation d'Ethereum pour résoudre les crises de coordination au niveau mondial, telles que le changement climatique
@@ -60,7 +60,7 @@ Quatre éléments majeurs composent le paysage actuel du DCM :
 
 Une nouvelle vague de projets innovants est en train d'être développée sur des blockchains dans le but de bouleverser les acteurs établis de ce secteur.
 
-2. Ponts carbone, aussi appelés tokeniseurs, fournissent la technologie pour représenter ou transférer les crédits carbones depuis les registres traditionnels vers les DCM. [Toucan Protocol](https://toucan.earth/), [C3](https://c3.app/), and [Moss.Earth](https://moss.earth/) font partie des exemples remarquables.
+2. Ponts carbone, aussi appelées tokeniseurs, fournissent la technologie pour représenter ou transférer les crédits carbones depuis les registres traditionnels vers les DCM. [Toucan Protocol](https://toucan.earth/), [C3](https://c3.app/), and [Moss.Earth](https://moss.earth/) font partie des exemples remarquables.
 3. Les services intégrés offrent des crédits d'évitement ou de suppression de carbone aux utilisateurs finaux afin qu'ils obtiennent le bénéfice environnemental de leur crédit et partagent leur soutien à l'action climatique avec le monde.
 
 Certains, comme [Klima Infinity](https://www.klimadao.finance/infinity) et [Senken](https://senken.io/), proposent une grande variété de projets développés par des tiers et émis conformément à des normes établies telles que Verra ; d'autres, comme [Nori](https://nori.com/), ne proposent que des projets spécifiques développés selon leur propre norme de crédit carbone, qu'ils émettent et pour laquelle ils ont leur propre marché dédié.
