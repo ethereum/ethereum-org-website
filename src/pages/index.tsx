@@ -62,7 +62,6 @@ import ethfixed from "@/public/images/eth.png"
 import finance from "@/public/images/finance_transparent.png"
 import future from "@/public/images/future_transparent.png"
 import hackathon from "@/public/images/hackathon_transparent.png"
-import hero from "@/public/images/home/hero.png"
 import impact from "@/public/images/impact_transparent.png"
 import infrastructure from "@/public/images/infrastructure_transparent.png"
 import infrastructurefixed from "@/public/images/infrastructure_transparent.png"
@@ -350,7 +349,7 @@ const HomePage = ({
         description={t("page-index:page-index-meta-description")}
       />
       <Box w="full">
-        <HomeHero heroImg={hero} />
+        <HomeHero />
       </Box>
       {/* Getting Started Section */}
       <GrayContainer>
