@@ -4,7 +4,7 @@ description: 關於如何開始聯合以太幣質押的概覽
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-pool.png
+image: /staking/leslie-pool.png
 alt: 萊斯利犀牛在池中游泳
 sidebarDepth: 2
 summaryPoints:
