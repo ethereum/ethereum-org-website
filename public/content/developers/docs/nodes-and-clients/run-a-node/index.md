@@ -97,8 +97,9 @@ The sync mode and client you choose will affect space requirements, but we've es
 | Nethermind | 500GB+                | 12TB+                    |
 | Besu       | 800GB+                | 12TB+                    |
 | Erigon     | N/A                   | 2.5TB+                   |
+| Reth       | N/A                   | 2.2TB+                   |
 
-- Note: Erigon does not offer snap sync, but Full Pruning is possible (~500GB)
+- Note: Erigon and Reth do not offer snap sync, but Full Pruning is possible (~2TB for Erigon, ~1.2TB for Reth)
 
 For consensus clients, space requirement also depends on client implementation and enabled features (e.g. validator slasher) but generally count with another 200GB needed for beacon data. With a large number of validators, the bandwidth load grows as well. You can find [details on consensus client requirements in this analysis](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
@@ -155,6 +156,7 @@ Here are the release pages of clients where you can find their pre-built binarie
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
+- [Reth](https://reth.rs/installation/installation.html)
 
 It is also worth noting that client diversity is an [issue on the execution layer](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). It is recommended that readers consider running a minority execution client.
 
@@ -298,6 +300,19 @@ Nethermind.Runner --config mainnet \
 Nethermind docs offer a [complete guide](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) on running Nethermind with consensus client.
 
 An execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. The execution client will await a connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
+
+##### Running Reth
+
+This example starts Reth on Mainnet, using default data location. Enables JSON-RPC and Engine RPC authentication for connecting the consensus client which is defined by the `jwtsecret` path, with only calls from `localhost` are allowed.
+
+```sh
+reth node \
+    --authrpc.jwtsecret /path/to/jwtsecret \
+    --authrpc.addr 127.0.0.1 \
+    --authrpc.port 8551
+```
+
+See [Configuring Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) to learn more about data default data directories. [Reth's documentation](https://reth.rs/run/mainnet.html) contains additional options and configuration details.
 
 #### Starting the consensus client {#starting-the-consensus-client}
 
