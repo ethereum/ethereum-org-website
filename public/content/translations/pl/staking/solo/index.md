@@ -4,7 +4,7 @@ description: Przegląd tego, jak rozpocząć samodzielne stakowanie ETH
 lang: pl
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Nosorożec Leslie na własnym chipie komputerowym.
 sidebarDepth: 2
 summaryPoints:

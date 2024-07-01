@@ -5,7 +5,7 @@ lang: pl
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Logo Ethereum wyświetlane jako hologram.
 summaryPoint1: Sposób reprezentowania czegoś wyjątkowego jako aktywu na blockchainie Ethereum.
 summaryPoint2: NFT dają ich twórcom możliwości, których nigdy wcześniej nie mieli.
@@ -103,6 +103,11 @@ Kwestie bezpieczeństwa związane z NFT są najczęściej związane z oszustwami
 - [Moduł śledzący EtherscanNFT](https://etherscan.io/nft-top-contracts)
 - [Standard tokenów ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Standard tokenów ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [Popularne aplikacje i narzędzia NFT](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Inne zasoby {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 
