@@ -4,7 +4,7 @@ description: Una visión general de cómo empezar a postar su ETH individualment
 lang: es
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Leslie, el rinoceronte, en su propio chip.
 sidebarDepth: 2
 summaryPoints:
