@@ -3,7 +3,7 @@ title: 合并
 description: 了解合并 - 以太坊主网何时采用权益证明机制。
 lang: zh
 template: upgrade
-image: /images/upgrades/merge.png
+image: /upgrades/merge.png
 alt:
 summaryPoint1: 以太坊主网采用权益证明机制，但情况并非一直如此。
 summaryPoint2: 从原有的工作量证明机制过渡到权益证明机制的升级称为合并。

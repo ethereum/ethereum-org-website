@@ -4,7 +4,7 @@ description: 简要介绍如何单独质押你的以太币
 lang: zh
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: 莱斯利犀牛在自己的电脑芯片上。
 sidebarDepth: 2
 summaryPoints:
