@@ -276,6 +276,7 @@ const Codeblock = ({
               style={style}
               className={className}
               pt={hasTopBar ? "2.75rem" : 6}
+              pb={"1.5rem"}
               ps={4}
               m={0}
               overflow="visible"
