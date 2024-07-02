@@ -2,9 +2,9 @@
 title: Samostatný vklad do ETH
 description: Přehled toho, jak začít samostatně vkládat ETH
 lang: cs
-template: staking
+template: stakování
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Nosorožec Leslie na svém vlastním počítačovém čipu.
 sidebarDepth: 2
 summaryPoints:
