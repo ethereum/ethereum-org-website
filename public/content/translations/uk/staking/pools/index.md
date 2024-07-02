@@ -4,7 +4,7 @@ description: Огляд початку роботи з об’єднаним с�
 lang: uk
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-pool.png
+image: /staking/leslie-pool.png
 alt: Носоріг Леслі плаває в басейні.
 sidebarDepth: 2
 summaryPoints:

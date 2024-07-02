@@ -4,7 +4,7 @@ description: 'Огляд: як почати самостійний стейкі�
 lang: uk
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Носоріг Леслі на власному комп’ютерному чіпі.
 sidebarDepth: 2
 summaryPoints:
