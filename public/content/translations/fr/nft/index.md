@@ -5,7 +5,7 @@ lang: fr
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Un logo Eth affiché par hologramme.
 summaryPoint1: Un moyen de représenter toute chose unique en tant qu'actif Ethereum.
 summaryPoint2: Les NFT offrent plus de possibilités que jamais aux créateurs de contenus.
@@ -103,6 +103,11 @@ Les questions de sécurité concernant les NFT sont le plus souvent liées aux e
 - [Traqueur de NFTs de Etherscan](https://etherscan.io/nft-top-contracts)
 - [Norme de jeton ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Norme de jeton ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [Applications et outils NFT populaires](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Autres ressources {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

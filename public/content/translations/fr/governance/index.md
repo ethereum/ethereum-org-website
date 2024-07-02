@@ -120,7 +120,7 @@ Les fourches sont lorsque des mises à niveau techniques majeures ou des modific
 
 La fourche DAO est la réponse à l'attaque [DAO de 2016](https://www.coindesk.com/understanding-dao-hack-journalists) où un contrat non sécurisé d'une [DAO](/glossary/#dao) a été vidé de plus de 3,6 millions d'ETH lors d'un piratage. La fourche a transféré les fonds du contrat défectueux à un nouveau contrat permettant à quiconque a perdu des fonds dans le piratage de les récupérer.
 
-Ce plan d'action a été voté par la communauté Ethereum. Tout détenteur d'ETH a pu voter via une transaction sur [une plateforme de vote](http://v1.carbonvote.com/). Plus de 85 % des votes étaient favorables à la fourche.
+Ce plan d'action a été voté par la communauté Ethereum. Tout détenteur d'ETH a pu voter via une transaction sur [une plateforme de vote](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Plus de 85 % des votes étaient favorables à la fourche.
 
 Il est important de noter qu'alors que le protocole a fait une fourche pour annuler le hack, le poids du vote lors de la décision de la fourche est discutable pour quelques raisons :
 

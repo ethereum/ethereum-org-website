@@ -4,7 +4,7 @@ description: Un aperçu de la façon de débuter avec la mise en jeu d'ETH mutua
 lang: fr
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-pool.png
+image: /staking/leslie-pool.png
 alt: Leslie le rhinocéros nage dans la piscine.
 sidebarDepth: 2
 summaryPoints:

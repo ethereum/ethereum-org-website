@@ -4,7 +4,7 @@ description: Un aperçu de la façon de commencer à miser votre ETH de manière
 lang: fr
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Leslie le rhinocéros sur sa puce d'ordinateur.
 sidebarDepth: 2
 summaryPoints:

@@ -32,7 +32,7 @@ Enfin, le validateur signe l'attestation et la diffuse sur le réseau.
 
 Les frais additionnels associés au transfert de données pour chaque validateur sur le réseau sont très élevés. Ainsi, les attestations des validateurs individuels sont regroupées au sein de sous-réseaux avant d’être diffusées plus largement. Cela inclut l'agrégation des signatures afin qu'une attestation diffusée comprenne les `data` de consensus et une signature unique formée en combinant les signatures de tous les validateurs qui sont d'accord avec ces `data`. Ceci peut être vérifié en utilisant `aggregation_bits` parce que ce champ fournit l'index de chaque validateur dans leur comité (dont l'ID est fournit dans `data`) qui peut être utilisé pour faire une requête sur les signatures individuelles.
 
-Dans chaque époque, un validateur dans chaque sous-réseau est sélectionné pour être `aggregator`. L'agrégateur recueille toutes les attestations dont il entend parler sur le réseau gossip qui ont des `data` équivalentes aux siennes. L'expéditeur de chaque attestation correspondante est enregistré dans les `aggregation_bits`. L'agrégateur diffuse ensuite l'agrégat d'attestation sur le réseau plus large.
+À chaque période, 16 validateurs de chaque sous-réseau sont sélectionnés pour être les `agrégateurs`. Les agrégateurs collectent toutes les attestations dont ils entendent parler sur le réseau gossip disposant de `données` équivalentes aux leurs. L'expéditeur de chaque attestation correspondante est enregistré dans les `aggregation_bits`. Les agrégateurs diffusent ensuite l'agrégat d'attestation sur le réseau plus large.
 
 Lorsqu'un validateur est sélectionné pour proposer un bloc, il regroupe les attestations globales des sous-réseaux jusqu'au dernier emplacement du nouveau bloc.
 
@@ -50,9 +50,15 @@ Le cycle de vie de l'attestation est décrit dans le schéma ci-dessous :
 
 ## Récompenses {#rewards}
 
-Les validateurs sont récompensés pour avoir soumis des attestations. La récompense d'attestation dépend de deux variables, la `récompense de base` et le `délai d'inclusion`. Le meilleur argument en faveur du retard d'inclusion est d'être égal à 1.
+Les validateurs sont récompensés pour avoir soumis des attestations. La récompense d'attestation dépend des indicateurs de participation (source, cible et chef), de la récompense de base et du taux de participation.
 
-`récompense d'attestation = 7/8 x récompense de base x (retard 1/inclusion)`
+Chacun des indicateurs de participation peut être vrai ou faux, en fonction de l'attestation soumise et de son retard d'inscription.
+
+Le meilleur scénario est celui où les trois drapeaux sont vrais, auquel cas un validateur gagnerait (par drapeau correct) :
+
+`récompense += récompense de base * pondération de l'indicateur * niveau d'attestation de l'indicateur / 64`
+
+Le taux d'attestation de l'indicateur est mesuré en utilisant la somme des soldes effectifs de tous les validateurs attestant pour l'indicateur donné par rapport au solde effectif actif total.
 
 ### Récompense de base {#base-reward}
 
@@ -81,6 +87,6 @@ Notez que, dans certains cas, un agrégateur chanceux peut aussi devenir le prop
 ## Complément d'information {#further-reading}
 
 - [Attestations dans la spécification du consensus annoté de Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
-- [Attestations dans eth2book.info](https://eth2book.info/altair/part3/containers/dependencies#attestationdata)
+- [Attestations dans eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_

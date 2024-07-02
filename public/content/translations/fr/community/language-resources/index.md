@@ -16,9 +16,9 @@ Vous connaissez une ressource éducative dans votre langue ? [Ouvrez un ticket](
 
 ## Ressources d'Ethereum.org {#ethereum-org}
 
-Ethereum.org est traduit d'emblée dans plus de 40 langues, que vous pouvez trouver sur notre page des langues.
+Ethereum.org est traduit de manière native dans plus de 40 langues que vous pouvez trouver en utilisant notre menu de sélection de langues, situé en haut de chaque page.
 
-![Language selector menu](./language-selector-menu.png)
+![Menu de sélection de la langue](./language-selector-menu.png)
 
 Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de personnes, vous pouvez aussi contribuer au [Programme de traduction d'Ethereum.org](/contributing/translation-program/#translation-program) afin de nous aider à traduire le site.
 
@@ -32,6 +32,7 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - version brésilienne de Cointelegraph, un des principaux médias sur les cryptomonnaies
 - [Livecoins](http://www.livecoins.com.br/ethereum) - actualités et outils de cryptomonnaies
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - actualités et informations sur les cryptomonnaies
+- [Modular Crypto](https://modularcrypto.xyz/) - Actualité des cryptomonnaies et articles éducatifs
 
 **Formation**
 
