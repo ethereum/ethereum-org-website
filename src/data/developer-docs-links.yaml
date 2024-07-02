@@ -255,3 +255,8 @@
     - id: docs-nav-design-and-ux
       to: /developers/docs/design-and-ux/
       description: docs-nav-design-and-ux-description
+      items:
+        - id: docs-nav-heuristics-for-web3
+          to: /developers/docs/design-and-ux/heuristics-for-web3/
+        - id: docs-nav-dex-design-best-practice
+          to: /developers/docs/design-and-ux/dex-design-best-practice/
