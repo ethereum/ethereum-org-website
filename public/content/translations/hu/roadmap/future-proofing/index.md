@@ -2,7 +2,7 @@
 title: Jövőálló Ethereum
 description: Ezek a fejlesztések az Ethereumot ellenálló, decentralizált alapréteggé teszik a jövő számára, bármit is hozzon az.
 lang: hu
-image: /images/roadmap/roadmap-future.png
+image: /roadmap/roadmap-future.png
 alt: "Ethereum-ütemterv"
 template: roadmap
 ---
