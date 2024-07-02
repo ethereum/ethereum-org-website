@@ -2,9 +2,9 @@
 title: Стейкинг как услуга
 description: Обзор того, как разместить ETH в пуле
 lang: ru
-template: staking
+template: ставки
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /staking/leslie-saas.png
 alt: Носорог Лесли плавает в облаках.
 sidebarDepth: 2
 summaryPoints:

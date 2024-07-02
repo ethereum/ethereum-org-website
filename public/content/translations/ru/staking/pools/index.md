@@ -2,9 +2,9 @@
 title: Объединенный стейкинг
 description: 'Как начать совместный стейкинг ETH: краткий обзор'
 lang: ru
-template: staking
+template: ставки
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-pool.png
+image: /staking/leslie-pool.png
 alt: Носорог Лесли плавает в бассейне.
 sidebarDepth: 2
 summaryPoints:
