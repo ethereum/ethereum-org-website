@@ -5,7 +5,7 @@ lang: el
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /images/infrastructure_transparent.png
+image: /infrastructure_transparent.png
 alt: Ένα λογότυπο Eth που προβάλλεται μέσω ολογράμματος.
 summaryPoint1: Ένας τρόπος για να αντιπροσωπεύσετε οτιδήποτε μοναδικό ως περιουσιακό στοιχείο με βάση το Ethereum.
 summaryPoint2: Τα NFT δίνουν περισσότερη δύναμη στους δημιουργούς περιεχομένου από ποτέ.
@@ -103,6 +103,11 @@ summaryPoint3: Υποστηρίζονται από έξυπνα συμβόλαι
 - [Ανιχνευτής EtherscanNFT](https://etherscan.io/nft-top-contracts)
 - [Πρότυπο κρυπτονομισμάτων ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Πρότυπο κρυπτονομισμάτων ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [Δημοφιλή εφαρμογές NFT και εργαλεία](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Άλλες πηγές {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

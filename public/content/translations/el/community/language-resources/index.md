@@ -32,6 +32,7 @@ lang: el
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - έκδοση του Cointelegraph για τη Βραζιλία, ένας σημαντικός ιστότοπος με νέα για κρυπτονομίσματα
 - [Livecoins](http://www.livecoins.com.br/ethereum) - νέα κρυπτονομισμάτων και εργαλεία
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - νέα κρυπτονομισμάτων και αναφορές
+- [Modular Crypto](https://modularcrypto.xyz/) - ειδήσεις και εκπαιδευτικά άρθρα για κρυπτονομίσματα
 
 **Εκπαίδευση**
 
