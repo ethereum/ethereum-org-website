@@ -1,6 +1,6 @@
+export * from "./BaseLayout"
 export * from "./Docs"
 export * from "./Roadmap"
-export * from "./RootLayout"
 export * from "./Staking"
 export * from "./Static"
 export * from "./Tutorial"
