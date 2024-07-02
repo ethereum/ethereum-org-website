@@ -463,7 +463,7 @@ const HomePage = ({
             <Translation id="page-index:page-index-network-stats-subtitle" />
           </SectionDecription>
         </ContentBox>
-        <StatsBoxGrid data={metricResults} />
+        {/* <StatsBoxGrid data={metricResults} /> */}
       </GrayContainer>
       <hr className="mb-16 mt-16 w-[10%] h-1 bg-homeDivider" />
 
