@@ -4,7 +4,7 @@ description: Gambaran umum mengenai bagaimana cara memulai staking untuk pooled 
 lang: id
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-saas.png
+image: /staking/leslie-saas.png
 alt: Leslie si badak mengapung di awan.
 sidebarDepth: 2
 summaryPoints:
