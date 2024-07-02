@@ -1,21 +1,11 @@
-import { useRef } from "react"
+import { useRef, forwardRef } from "react"
 import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdSearch } from "react-icons/md"
-import {
-  Box,
-  forwardRef,
-  IconButtonProps,
-  Portal,
-  ThemeTypings,
-  type UseDisclosureReturn,
-  useMergeRefs,
-} from "@chakra-ui/react"
+import * as Portal from "@radix-ui/react-portal"
 import { useDocSearchKeyboardEvents } from "@docsearch/react"
 import { DocSearchHit } from "@docsearch/react/dist/esm/types"
-
-import { Button } from "@/components/Buttons"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
@@ -24,36 +14,35 @@ import { sanitizeHitUrl } from "@/lib/utils/url"
 import SearchButton from "./SearchButton"
 
 import "@docsearch/css"
+import { Button, ButtonProps } from "../ui/button"
 
 const SearchModal = dynamic(() => import("./SearchModal"))
 
-export const SearchIconButton = forwardRef<IconButtonProps, "button">(
+export const SearchIconButton = forwardRef<HTMLButtonElement, ButtonProps>(
   (props, ref) => (
     <Button
       ref={ref}
       variant="ghost"
-      isSecondary
-      px={2}
-      _hover={{
-        color: "primary.base",
-        transform: "rotate(5deg)",
-        transition: "transform 0.2s ease-in-out",
-      }}
-      transition="transform 0.2s ease-in-out"
+      size="icon"
+      className="px-2 transition-transform duration-200 ease-in-out hover:text-primary-base hover:rotate-5"
       {...props}
     >
-      <MdSearch />
+      <MdSearch className="w-8 h-8" />
     </Button>
   )
 )
 
-type Props = Pick<UseDisclosureReturn, "isOpen" | "onOpen" | "onClose">
+type Props = {
+  isOpen: boolean
+  onOpen: () => void
+  onClose: () => void
+}
 
-const Search = forwardRef<Props, "button">(
+const Search = forwardRef<HTMLButtonElement, Props>(
   ({ isOpen, onOpen, onClose }, ref) => {
     const { locale } = useRouter()
     const searchButtonRef = useRef<HTMLButtonElement>(null)
-    const mergedButtonRefs = useMergeRefs(ref, searchButtonRef)
+    // const mergedButtonRefs = useMergeRefs(ref, searchButtonRef)
     const { t } = useTranslation("common")
 
     useDocSearchKeyboardEvents({
@@ -68,13 +57,11 @@ const Search = forwardRef<Props, "button">(
     const indexName =
       process.env.NEXT_PUBLIC_ALGOLIA_BASE_SEARCH_INDEX_NAME || "ethereumorg"
 
-    const breakpointToken: ThemeTypings["breakpoints"] = "xl"
-
     return (
       <>
-        <Box hideBelow={breakpointToken}>
+        <div className="hidden xl:block">
           <SearchButton
-            ref={mergedButtonRefs}
+            // ref={mergedButtonRefs}
             onClick={() => {
               onOpen()
               trackCustomEvent({
@@ -88,9 +75,10 @@ const Search = forwardRef<Props, "button">(
               buttonAriaLabel: t("search"),
             }}
           />
-        </Box>
-        <Box hideFrom={breakpointToken}>
+        </div>
+        <div className="xl:hidden">
           <SearchIconButton
+            ref={ref}
             onClick={() => {
               onOpen()
               trackCustomEvent({
@@ -99,11 +87,10 @@ const Search = forwardRef<Props, "button">(
                 eventName: "search open",
               })
             }}
-            ref={mergedButtonRefs}
             aria-label={t("aria-toggle-search-button")}
           />
-        </Box>
-        <Portal>
+        </div>
+        <Portal.Root>
           {isOpen && (
             <SearchModal
               apiKey={apiKey}
@@ -173,7 +160,7 @@ const Search = forwardRef<Props, "button">(
               }}
             />
           )}
-        </Portal>
+        </Portal.Root>
       </>
     )
   }

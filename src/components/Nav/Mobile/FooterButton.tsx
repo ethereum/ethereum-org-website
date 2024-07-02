@@ -1,23 +1,14 @@
 import type { IconType } from "react-icons"
 import { type ButtonProps, Icon } from "@chakra-ui/react"
 
-import { Button } from "@/components/Buttons"
+import { Button } from "@/components/ui/button"
 
-type FooterButtonProps = ButtonProps & {
+type FooterButtonProps = {
   icon: IconType
 }
 
 const FooterButton = ({ icon, ...props }: FooterButtonProps) => (
-  <Button
-    leftIcon={<Icon as={icon} />}
-    sx={{ span: { m: 0 } }}
-    variant="ghost"
-    flexDir="column"
-    alignItems="center"
-    color="body.base"
-    px="1"
-    {...props}
-  />
+  <Button variant="ghost" {...props} />
 )
 
 export default FooterButton

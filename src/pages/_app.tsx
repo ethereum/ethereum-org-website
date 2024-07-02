@@ -9,6 +9,7 @@ import "@/styles/globals.css"
 
 import { RootLayout } from "@/layouts/RootLayout"
 import { mono } from "@/lib/fonts"
+import { ThemeProvider } from "@/components/ThemeProvider"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   useEffect(() => {
@@ -38,15 +39,22 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
           }
         `}
       </style>
-      {/* <ChakraProvider theme={theme}> */}
-      <RootLayout
-        contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
-        contentNotTranslated={pageProps.contentNotTranslated}
-        lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
       >
-        {getLayout(<Component {...pageProps} />)}
-      </RootLayout>
-      {/* </ChakraProvider> */}
+        {/* <ChakraProvider theme={theme}> */}
+        <RootLayout
+          contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
+          contentNotTranslated={pageProps.contentNotTranslated}
+          lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
+        >
+          {getLayout(<Component {...pageProps} />)}
+        </RootLayout>
+        {/* </ChakraProvider> */}
+      </ThemeProvider>
     </>
   )
 }

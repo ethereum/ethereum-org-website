@@ -1,3 +1,167 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* Gray scale colors */
+    --gray-100: #f7f7f7;
+    --gray-150: #f2f2f2;
+    --gray-200: #e7e7e7;
+    --gray-300: #c8c8c8;
+    --gray-400: #8c8c8c;
+    --gray-500: #616161;
+    --gray-600: #333333;
+    --gray-700: #222222;
+    --gray-800: #1b1b1b;
+    --gray-900: #141414;
+
+    /* Blue scale colors */
+    --blue-50: #f6f6ff;
+    --blue-100: #ebebff;
+    --blue-200: #d6d6ff;
+    --blue-300: #9999ff;
+    --blue-400: #5555ff;
+    --blue-500: #1c1cff;
+    --blue-600: #0000e0;
+    --blue-700: #0000a3;
+    --blue-800: #000066;
+    --blue-900: #000029;
+
+    /* Orange scale colors */
+    --orange-50: #fff3ed;
+    --orange-100: #ffe5d6;
+    --orange-200: #ffcbad;
+    --orange-300: #ffb185;
+    --orange-400: #ff985c;
+    --orange-500: #ff7324;
+    --orange-550: #df5a0e;
+    --orange-600: #b84300;
+    --orange-700: #7a2d00;
+    --orange-800: #521e00;
+    --orange-900: #2f1000;
+
+    /* Red scale colors */
+    --red-100: #f7c8c8;
+    --red-500: #b80000;
+    --red-900: #1b0c0c; /* Note: Marked for deprecation */
+
+    /* Green scale colors */
+    --green-100: #ddf4e4;
+    --green-400: #48bb78; /* Note: Marked for deprecation */
+    --green-500: #0a7146;
+    --green-900: #0a160e; /* Note: Marked for deprecation */
+
+    /* Yellow scale colors */
+    --yellow-200: #fff8df;
+    --yellow-500: #bd8400;
+
+    /* Semantic Tokens - Light Theme */
+    --primary-base-light: var(--blue-500);
+    --primary-highContrast-light: var(--blue-800);
+    --primary-lowContrast-light: var(--blue-100);
+    --primary-hover-light: var(--blue-400);
+    --primary-visited-light: var(--blue-700);
+    --body-base-light: var(--gray-800);
+    --body-medium-light: var(--gray-500);
+    --body-light-light: var(--gray-200);
+    --background-base: #ffffff;
+    --background-highlight-light: var(--gray-100);
+    --disabled-light: var(--gray-400);
+    --attention-base-light: var(--yellow-500);
+    --attention-light-light: var(--yellow-200);
+    --error-base-light: var(--red-500);
+    --error-light-light: var(--red-100);
+    --success-base-light: var(--green-500);
+    --success-light-light: var(--green-100);
+
+    /* Semantic Tokens - Dark Theme */
+    --primary-base-dark: var(--orange-500);
+    --primary-highContrast-dark: var(--orange-100);
+    --primary-lowContrast-dark: var(--orange-800);
+    --primary-hover-dark: var(--orange-400);
+    --primary-visited-dark: var(--orange-550);
+    --body-base-dark: var(--gray-100);
+    --body-medium-dark: var(--gray-400);
+    --body-light-dark: var(--gray-600);
+    --background-base-dark: var(--gray-800);
+    --background-highlight-dark: var(--gray-900);
+    --disabled-dark: var(--gray-500);
+    --attention-base-dark: var(--yellow-500);
+    --attention-light-dark: var(--yellow-200);
+    --error-base-dark: var(--red-500);
+    --error-light-dark: var(--red-100);
+    --success-base-dark: var(--green-500);
+    --success-light-dark: var(--green-100);
+
+    /* Theme */
+    --background: var(--background-base-light);
+    --foreground: var(--body-base-light);
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: var(--primary-base-light);
+    --primary-foreground: var(--primary-highContrast-light);
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: var(--background-base-dark);
+    --foreground: var(--body-base-dark);
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: var(--primary-base-dark);
+    --primary-foreground: var(--primary-highContrast-dark);
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

@@ -27,7 +27,7 @@ const Nav = () => {
       <nav
         ref={navWrapperRef}
         aria-label={t("nav-primary")}
-        className="bg-background-base border-b border-[rgba(0, 0, 0, 0.1)] h-[4.75rem] flex justify-center py-4 px-4 xl:px-8"
+        className="bg-background border-b border-[rgba(0, 0, 0, 0.1)] h-[4.75rem] flex justify-center py-4 px-4 xl:px-8"
       >
         <div className="flex items-center md:items-normal justify-between md:justify-normal w-full max-w-[var(--container-2xl)]">
           <Link
@@ -38,21 +38,22 @@ const Nav = () => {
             <EthHomeIcon className="opacity-85 hover:opacity-100" />
           </Link>
           <div className="flex w-full justify-end md:justify-between ms-3 xl:ms-8">
-            {isDesktop && <Menu hideBelow="md" sections={linkSections} />}
+            {/* {isDesktop && <Menu hideBelow="md" sections={linkSections} />} */}
             <div className="flex items-center">
               <div className="hidden md:block">
+                <div />
                 {/* <Search {...searchModalDisclosure} />
                 <DesktopNavMenu toggleColorMode={toggleColorMode} /> */}
               </div>
-              <div className="md:hidden">
+              <div className="md:hidden flex">
                 <Suspense>
-                  {/* <Search {...searchModalDisclosure} />
+                  <Search {...searchModalDisclosure} />
                   <MobileNavMenu
                     {...mobileNavProps}
                     linkSections={linkSections}
                     toggleSearch={searchModalDisclosure.onOpen}
                     drawerContainerRef={navWrapperRef}
-                  /> */}
+                  />
                 </Suspense>
               </div>
             </div>

@@ -140,3 +140,199 @@
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
     U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+:root {
+  --docsearch-modal-background: var(--eth-colors-background-base);
+  --docsearch-searchbox-height: fit-content;
+  --docsearch-highlight-color: var(--eth-colors-primary-hover);
+  --docsearch-modal-width: 650px;
+  --docsearch-hit-height: fit-content;
+}
+
+.DocSearch.DocSearch-Container {
+  position: fixed;
+  inset: 0;
+}
+
+.DocSearch-SearchBar {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .DocSearch-SearchBar {
+    padding: 2rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.DocSearch-SearchBar form {
+  --docsearch-searchbox-shadow: inset 0 0 0 1px
+    var(--eth-colors-primary-highContrast);
+  background-color: var(--eth-colors-neutral);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.DocSearch-SearchBar label,
+.DocSearch-SearchBar input {
+  color: var(--eth-colors-primary-highContrast);
+}
+
+.DocSearch-SearchBar label {
+  width: 1rem;
+  height: 1rem;
+}
+
+.DocSearch-SearchBar input {
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .DocSearch-SearchBar input {
+    font-size: 1.25rem;
+  }
+}
+
+.DocSearch-Cancel {
+  color: var(--eth-colors-primary-base);
+}
+
+@media (min-width: 768px) {
+  .DocSearch-Cancel {
+    color: var(--eth-colors-primary-highContrast);
+  }
+}
+
+.DocSearch-Cancel:hover {
+  color: var(--eth-colors-primary-base);
+}
+
+.DocSearch-Container.DocSearch[aria-expanded="true"] {
+  z-index: var(10);
+}
+
+.DocSearch-Container--Stalled .DocSearch-MagnifierLabel,
+.DocSearch-Container--Stalled .DocSearch-LoadingIndicator {
+  color: var(--eth-colors-primary-highContrast);
+}
+
+.DocSearch-Dropdown {
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+  max-height: calc(
+    100vh - 75px - var(--docsearch-footer-height) - 2 * var(--inset)
+  );
+  overflow-y: scroll;
+}
+
+@media (min-width: 768px) {
+  .DocSearch-Dropdown {
+    padding-left: 2rem;
+    padding-right: 1rem;
+    max-height: calc(100vh - 16rem);
+    overflow-y: auto;
+  }
+}
+
+.DocSearch-Hit-source {
+  color: var(--eth-colors-body-base);
+  line-height: 1.5rem;
+  padding-bottom: 0.125rem;
+}
+
+.DocSearch-Hit {
+  padding-bottom: 0;
+}
+
+.DocSearch-Hit a {
+  --docsearch-hit-shadow: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--eth-colors-disabled);
+  background-color: none;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.DocSearch-Hit[aria-selected="true"] a {
+  --docsearch-hit-active-color: var(--eth-colors-background-base);
+  background-color: var(--eth-colors-primary-hover);
+  box-shadow: 4px 4px 0 0 var(--eth-colors-primary-light);
+  border-color: transparent;
+}
+
+.DocSearch-Hit-content-wrapper {
+  white-space: normal;
+}
+
+.DocSearch-Hit-icon {
+  color: var(--eth-colors-body-base);
+}
+
+.DocSearch-Hit-Select-Icon:focus,
+.DocSearch-Hit-Select-Icon:hover {
+  color: var(--eth-colors-switchBackground);
+}
+
+.DocSearch-Footer {
+  --docsearch-footer-height: 2.5rem;
+  --docsearch-logo-color: var(--eth-colors-body-light);
+  --docsearch-footer-shadow: none;
+  background-color: var(--eth-colors-primary-lowContrast);
+  border-top: 2px solid var(--eth-colors-primary-base);
+}
+
+.DocSearch-Commands {
+  gap: 1rem;
+}
+
+.DocSearch-Commands li {
+  margin: 0;
+}
+
+.DocSearch-Label {
+  color: var(--eth-colors-body-base);
+  text-transform: lowercase;
+}
+
+.DocSearch-Commands-Key {
+  background-color: var(--eth-colors-background-base);
+  border: 1px solid var(--eth-colors-primary-base);
+  color: var(--eth-colors-primary-base);
+  box-shadow: none;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-base);
+  margin-right: 0;
+  margin-left: 0.375rem;
+}
+
+.DocSearch-Logo .DocSearch-Label {
+  color: var(--eth-colors-body-medium);
+  text-transform: uppercase;
+}
+
+svg[aria-label="Algolia"] {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+svg[aria-label="Algolia"] * {
+  fill: var(--eth-colors-body-medium);
+}
+
+@media (max-width: 768px) {
+  .DocSearch-Modal {
+    --inset: 1rem;
+    border-radius: var(--radius-base);
+    inset: var(--inset);
+    max-width: calc(100vw - 2 * var(--inset));
+    max-height: calc(100vh - 2 * var(--inset));
+    overflow: hidden;
+    position: fixed;
+  }
+}

@@ -44,7 +44,7 @@ export const RootLayout = ({
   // const originalPagePath = toPosixPath(join(DEFAULT_LOCALE, asPath))
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-0">
       {/* <SkipLink /> */}
 
       <Nav />

@@ -1,19 +1,14 @@
 import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdSearch, MdWbSunny } from "react-icons/md"
-import {
-  DrawerFooter,
-  Grid,
-  MenuButton,
-  useColorModeValue,
-} from "@chakra-ui/react"
 
 import LanguagePicker from "@/components/LanguagePicker"
 
 import { MOBILE_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
 
-import FooterButton from "./FooterButton"
-import FooterItemText from "./FooterItemText"
+import { DrawerFooter } from "@/components/ui/drawer"
+import { useTheme } from "next-themes"
+import { Button } from "@/components/ui/button"
 
 type MenuFooterProps = {
   onToggle: () => void
@@ -27,35 +22,32 @@ const MenuFooter = ({
   toggleSearch,
 }: MenuFooterProps) => {
   const { t } = useTranslation("common")
-  const ThemeIcon = useColorModeValue(MdBrightness2, MdWbSunny)
-  const themeLabelKey = useColorModeValue("dark-mode", "light-mode")
+  const { theme } = useTheme()
+  const ThemeIcon = theme === "dark" ? MdBrightness2 : MdWbSunny
+  const themeLabelKey = theme === "dark" ? "dark-mode" : "light-mode"
 
   return (
-    <DrawerFooter
-      bg="background.base"
-      borderTop="1px"
-      borderColor="primary.lowContrast"
-      justifyContent="space-between"
-      height="108px"
-      px={4}
-      py={0}
-      mt="auto"
-    >
-      <Grid templateColumns="repeat(3, 1fr)" w="full">
-        <FooterButton
-          icon={MdSearch}
+    <DrawerFooter className="flex justify-between h-[108px] px-4 py-0 mt-auto border-t">
+      <div className="grid grid-cols-3 w-full">
+        <Button
+          variant="ghost"
           onClick={() => {
             // Workaround to ensure the input for the search modal can have focus
             onToggle()
             toggleSearch()
           }}
         >
-          <FooterItemText>{t("search")}</FooterItemText>
-        </FooterButton>
+          <MdSearch />
+          <p className="text-sm leading-base font-normal tracking-wider mt-2 uppercase text-center opacity-70 hover:opacity-100">
+            {t("search")}
+          </p>
+        </Button>
 
-        <FooterButton icon={ThemeIcon} onClick={toggleColorMode}>
-          <FooterItemText>{t(themeLabelKey)}</FooterItemText>
-        </FooterButton>
+        <Button variant="ghost" onClick={toggleColorMode}>
+          <p className="text-sm leading-base font-normal tracking-wider mt-2 uppercase text-center opacity-70 hover:opacity-100">
+            {t(themeLabelKey)}
+          </p>
+        </Button>
         <LanguagePicker
           hideFrom="md"
           position="fixed"
@@ -70,15 +62,14 @@ const MenuFooter = ({
             opacity: 0.4,
           }} // TODO: Replace with overlay component
         >
-          <MenuButton
-            as={FooterButton}
-            icon={BsTranslate}
-            name={MOBILE_LANGUAGE_BUTTON_NAME}
-          >
-            <FooterItemText>{t("languages")}</FooterItemText>
-          </MenuButton>
+          <Button variant="ghost" name={MOBILE_LANGUAGE_BUTTON_NAME}>
+            <BsTranslate />
+            <p className="text-sm leading-base font-normal tracking-wider mt-2 uppercase text-center opacity-70 hover:opacity-100">
+              {t("languages")}
+            </p>
+          </Button>
         </LanguagePicker>
-      </Grid>
+      </div>
     </DrawerFooter>
   )
 }

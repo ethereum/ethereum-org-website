@@ -1,21 +1,15 @@
 import * as React from "react"
-import { Button, forwardRef } from "@chakra-ui/react"
 import { DocSearchButton, DocSearchButtonProps } from "@docsearch/react"
 
 import { getSearchButtonStyles } from "./utils"
+import { Button, ButtonProps } from "../ui/button"
 
-const SearchButton = forwardRef<DocSearchButtonProps, "button">(
-  (props, ref) => {
-    return (
-      <Button
-        as={DocSearchButton}
-        ref={ref}
-        className="DocSearch-Button"
-        {...getSearchButtonStyles()}
-        {...props}
-      />
-    )
-  }
-)
+const SearchButton = (props: Omit<DocSearchButtonProps, "ref">) => {
+  return (
+    <Button className="DocSearch-Button" {...props} asChild>
+      <DocSearchButton />
+    </Button>
+  )
+}
 
 export default SearchButton
