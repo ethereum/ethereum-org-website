@@ -46,3 +46,4 @@ export const langViewportModes = Object.entries(
     ...currLangViewObj,
   }
 }, {})
+console.log("🚀 ~ langViewportModes:", langViewportModes)
