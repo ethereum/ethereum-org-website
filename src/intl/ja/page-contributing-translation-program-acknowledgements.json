@@ -28,15 +28,15 @@
   "page-contributing-translation-program-acknowledgements-translator": "翻訳者",
   "page-contributing-translation-program-acknowledgements-language": "言語",
   "page-contributing-translation-program-acknowledgements-total-words": "総単語数",
-  "page-contributing-translation-program-acknowledgements-poaps-title": "出席証明プロトコル(POAP)",
-  "page-contributing-translation-program-acknowledgements-1": "翻訳者の皆様には、出席証明プロトコル(POAP)という、ethereum.org 翻訳プログラムへの参加を証明する、非代替性トークンを付与します。",
-  "page-contributing-translation-program-acknowledgements-2": "翻訳者の活動に基づいて提供できるいくつかの種類の出席証明プロトコル(POAP)があります。",
-  "page-contributing-translation-program-acknowledgements-3": "Crowdinで翻訳に貢献すると、出席証明プロトコル(POAP)がもらえます。ぜひご参加ください。",
+  "page-contributing-translation-program-acknowledgements-oats-title": "OAT",
+  "page-contributing-translation-program-acknowledgements-1": "翻訳プログラムのコントリビュータは、さまざまなOAT(オンチェーン功績トークン)を受け取る資格があります。OATは、非代替性トークンでethereum.org翻訳プログラムへの参加を証明します。",
+  "page-contributing-translation-program-acknowledgements-2": "翻訳者の活動に基づいて提供できるいくつかの種類のオンチェーン功績トークン(OAT)があります。",
+  "page-contributing-translation-program-acknowledgements-3": "Crowdinで翻訳に貢献すると、オンチェーン功績トークン(OAT)がもらえます。",
   "page-contributing-translation-program-acknowledgements-how-to-claim-title": "申請方法",
   "page-contributing-translation-program-acknowledgements-how-to-claim-1": "参加: ",
   "page-contributing-translation-program-acknowledgements-how-to-claim-1-discord": "Discord サーバー",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-2": "#🥇| poapsチャネルにCrowdinアカウントのリンクを貼付けます。",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-3": "出席証明プロトコル(POAP)へのリンクが送られるまでお待ちください。",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-4": "出席証明プロトコル(POAP)を受け取ります。",
-  "page-contributing-translation-program-acknowledgements-4": "出席証明プロトコル(POAP)の受け取りには、セルフカストディ・ウォレットのみを使用してください。取引所のアカウントや秘密鍵を保有していないその他のアカウントなどは、使わないでください。これらのアカウントでは、出席証明プロトコル(POAP)へのアクセスや管理ができません。"
+  "page-contributing-translation-program-acknowledgements-how-to-claim-2": "#🥇 | proof-of-contributionチャンネルにあなたのCrowdinアカウントを貼り付けてください。",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-3": "チームメンバーからOATを申請するために必要なロールがあなたにアサインされるまでお待ちください。",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-4": "オンチェーン功績トークン(OAT)を受け取ります。",
+  "page-contributing-translation-program-acknowledgements-4": "オンチェーン功績トークン(OAT)の受け取りには、セルフカストディ・ウォレットのみを使用してください。取引所のアカウントや秘密鍵を保有していないその他のアカウントなどは、使わないでください。これらのアカウントでは、オンライン功績トークン(OAT)へのアクセスや管理ができません。"
 }
