@@ -32,7 +32,7 @@ lang: zh
 
 对于验证者来说，在网络传递此数据需要大量的开销。 因此，在更加广泛地广播前，个人验证者的认证会在子网内进行聚合。 这包括聚合签名，以便广播的认证包含共识 `data` 和一个签名，后者结合了所有同意 `data` 的验证者的签名。 这可以使用 `aggregation_bits` 来检查，因为它提供了委员会中每个验证者的索引（其 ID 在 `data` 中提供），可用于查询个人签名。
 
-在每个时段，每个子网中会有一个验证者被选为 `aggregator`（聚合者）。 聚合者收集所有在网络听到的，与他们自己的 `data` 相同的所有认证。 每一个匹配认证的发送者被记录在 `aggregation_bits` 中。 然后聚合者会把聚合的认证广播到更广泛的网络。
+在每个时段，每个子网中会有 16 个验证者被选为`聚合者`。 聚合者收集所有在广播网络听到的，与他们自己的 `data` 相同的所有认证。 每一个匹配认证的发送者被记录在 `aggregation_bits` 中。 然后聚合者将聚合的认证广播到更广泛的网络上。
 
 当一个验证者被选为区块提议者时，他们打包从子网到新区块最新时隙的聚合认证。
 
@@ -87,6 +87,6 @@ lang: zh
 ## 延伸阅读 {#further-reading}
 
 - [Vitalik 的注释共识规范中的认证](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
-- [eth2book.info 中的认证](https://eth2book.info/altair/part3/containers/dependencies#attestationdata)
+- [eth2book.info 中的认证](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
 _还有哪些社区资源对你有所帮助？ 编辑并添加本页面！_
