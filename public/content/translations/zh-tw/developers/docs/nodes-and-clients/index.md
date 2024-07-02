@@ -130,13 +130,14 @@ sidebarDepth: 2
 
 此表總結了不同的用戶端。 所有這些用戶端都通過了[用戶端測試](https://github.com/ethereum/tests)，並積極維護以保持最新的網路升級狀態。
 
-| 用戶端                                             | 語言      | 作業系統                  | 網路                    | 同步策略            | 狀態修剪   |
-| ----------------------------------------------- | ------- | --------------------- | --------------------- | --------------- | ------ |
-| [Geth](https://geth.ethereum.org/)              | Go      | Linux, Windows, macOS | 主網、Sepolia、Goerli     | 快照、完整           | 歸檔、已修剪 |
-| [Nethermind](http://nethermind.io/)             | C#、.NET | Linux、Windows、macOS   | 主網、Sepolia、Goerli、及其他 | 快照（不提供服務）、快速、完整 | 歸檔, 緩衝 |
-| [Besu](https://besu.hyperledger.org/en/stable/) | Java    | Linux, Windows, macOS | 主網、Sepolia、Goerli、及其他 | 快照、快速、完整        | 歸檔, 緩衝 |
-| [Erigon](https://github.com/ledgerwatch/erigon) | Go      | Linux, Windows, macOS | 主網、Sepolia、Goerli、及其他 | 完整              | 歸檔, 緩衝 |
-| [Reth](https://github.com/paradigmxyz/reth)     | Rust    | Linux、Windows、macOS   | 主網、Sepolia、Goerli、及其他 | 完整              | 歸檔、已修剪 |
+| 用戶端                                                                    | 語言         | 作業系統                  | 網路                        | 同步策略            | 狀態修剪   |
+| ---------------------------------------------------------------------- | ---------- | --------------------- | ------------------------- | --------------- | ------ |
+| [Geth](https://geth.ethereum.org/)                                     | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | 快照、完整           | 歸檔、已修剪 |
+| [Nethermind](http://nethermind.io/)                                    | C#、.NET    | Linux、Windows、macOS   | Mainnet, Sepolia, Holesky | 快照（不提供服務）、快速、完整 | 歸檔, 緩衝 |
+| [Besu](https://besu.hyperledger.org/en/stable/)                        | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | 快照、快速、完整        | 歸檔, 緩衝 |
+| [Erigon](https://github.com/ledgerwatch/erigon)                        | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | 完整              | 歸檔, 緩衝 |
+| [Reth](https://github.com/paradigmxyz/reth) _（測試版）_                    | Rust       | Linux、Windows、macOS   | Mainnet, Sepolia, Holesky | 完整              | 歸檔、已修剪 |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo)_（測試版）_ | TypeScript | Linux, Windows, macOS | Sepolia、Holesky           | 完整              | 已修剪    |
 
 有關受支援網路的更多信息，請閱讀[以太坊網路](/developers/docs/networks/)。
 
@@ -168,6 +169,16 @@ Nethermind 是使用 C# .NET 技術堆疊開發的以太坊實作，以 LGPL-3.0
 
 Nethermind 也為高級使用者提供[詳細文件](https://docs.nethermind.io)、強大的開發支援、線上社群和全年無休支援。
 
+### 開發中 {#execution-in-development}
+
+這些用戶端仍處於開發早期階段，尚未推薦正式使用。
+
+#### EthereumJS {#ethereumjs}
+
+EthereumJS 執行用戶端 (EthereumJS) 是以 TypeScript 編寫，並由多個套件組成，包括以區塊表示的核心以太坊基礎單元、交易和梅克爾帕特里夏樹據結構類別，以及核心用戶端元件，包括以太坊虛擬機 (EVM) 的實作、區塊鏈類別和 DevP2P 網路堆疊。
+
+閱讀相關[文件](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)，了解更多資訊。
+
 ## 共識用戶端 {#consensus-clients}
 
 有多種共識用戶端（以前稱為「以太坊 2」用戶端）支援[共識升級](/roadmap/beacon-chain/)。 它們負責所有共識相關的邏輯，包含了分叉選擇演算法、處理證明並管理[權益證明](/developers/docs/consensus-mechanisms/pos)的獎勵和懲處。
@@ -178,7 +189,7 @@ Nethermind 也為高級使用者提供[詳細文件](https://docs.nethermind.io)
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | 信標鏈、Goerli、Sepolia、Ropsten 等                |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | 信標鏈、Goerli、Sepolia、Ropsten 等                |
 | [Prysm](https://docs.prylabs.network/docs/getting-started/)   | 開始         | Linux, Windows, macOS | 信標鏈、Gnosis、Goerli、Pyrmont、Sepolia、Ropsten 等 |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | 信標鏈、Gnosis、Goerli、Sepolia、Ropsten 等         |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS   | 信標鏈、Gnosis、Goerli、Sepolia、Ropsten 等         |
 
 ### Lighthouse {#lighthouse}
 

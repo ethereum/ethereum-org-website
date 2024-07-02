@@ -55,7 +55,7 @@ lang: zh-tw
 | `eth1_data`          | 關於存款合約的資訊      |
 | `塗鴉`                 | 用於標記區塊的任意資料    |
 | `proposer_slashings` | 將被罰沒的驗證者清單     |
-| `attester_slashings` | 將被罰沒的驗證者清單     |
+| `attester_slashings` | 將被罰沒的證明者清單     |
 | `證明`                 | 支持當前區塊的證明清單    |
 | `存款`                 | 存款合約的新增存款清單    |
 | `voluntary_exits`    | 離開網路的驗證者清單     |

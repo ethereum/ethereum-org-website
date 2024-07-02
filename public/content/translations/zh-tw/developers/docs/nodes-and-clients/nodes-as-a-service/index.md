@@ -66,24 +66,23 @@ sidebarDepth: 2
 - [**All That Node**](https://allthatnode.com/)
   - [文件](https://docs.allthatnode.com/)
   - 特徵
-    - 最大的免費方案每天提供 15 萬次請求
-    - 存取超過 24 種區塊鏈節點
-    - 遠端程序呼叫、超文字安全傳輸通訊協定及 WSS 端點
-    - 無限制存取歸檔資料
-    - 全年無休支援且正常運行時間超過 99.9%
+    - 免費方案每天 50,000 個請求
+    - 支援 40 多種協定
+    - 支援 JSON-RPC（以太坊虛擬機、Tendermint）、具象狀態傳輸和 Websocket 應用程式介面
+    - 無限制存取歸檔日期
+    - 全年無休的技術支援和 99.9% 以上的正常運作時間
     - 支援多鏈的水龍頭
-    - 無限制存取端點，無限的應用程式介面金鑰數量
-    - 提供追蹤/除錯命名空間
+    - 使用不限數量的應用程式介面金鑰進行無限的端點存取
+    - 支援追蹤/除錯應用程式介面
     - 自動更新
-    - 技術支援
-- [**亞馬遜的託管區塊鏈**](https://aws.amazon.com/managed-blockchain/)
+- [**亞馬遜託管區塊鏈**](https://aws.amazon.com/managed-blockchain/)
   - [文件](https://aws.amazon.com/managed-blockchain/resources/)
   - 功能
     - 完全託管的以太坊節點
     - 在 6 個地區可用
-    - 基於 HTTP 的 JSON-RPC 和安全 WebSockets
-    - 支援 3 種鏈
-    - SLAs, AWS 全天客服支援
+    - 基於超文字傳輸協定的 JSON-RPC 和安全 WebSocket
+    - 支援 3 條鏈
+    - 服務等級協定，全年無休的 AWS 支援
     - Go-ethereum 及 Lighthouse
 - [**Ankr**](https://www.ankr.com/)
   - [文件](https://docs.ankr.com/)
@@ -95,7 +94,7 @@ sidebarDepth: 2
     - 隨時擴容
     - 分析工具
     - 儀表板
-    - RPC, HTTPS 及 WSS 端點
+    - 遠端程序呼叫、超文字安全傳輸通訊協定及 WSS 端點
     - 直接支援
 - [**Blast**](https://blastapi.io/)
   - [文件](https://docs.blastapi.io/)
@@ -261,7 +260,7 @@ sidebarDepth: 2
   - 功能
     - 去中央化遠端程序中呼叫協定與市場
     - 免費方案每天 100 萬個請求（每個端點，最大為 2）
-    - [公共端點](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - [公共端點](https://docs.pokt.network/developers/public-endpoints)
     - Pre-Stake+ 計畫（如果你每天需要超過 100 萬個請求）
     - 支援超過 15 條區塊鏈
     - 6400+ 節點透過服務應用程式賺取 POKT 幣
