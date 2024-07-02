@@ -3,7 +3,7 @@ import React from "react"
 import { Center, Text } from "@chakra-ui/react"
 
 // Components
-import BannerNotification from "../BannerNotification"
+import BannerNotification from "../../BannerNotification"
 
 const BugBountyBanner = () => (
   <BannerNotification shouldShow>
