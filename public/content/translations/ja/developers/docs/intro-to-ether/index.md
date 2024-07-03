@@ -28,7 +28,7 @@ lang: ja
 
 [広く一般的](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum)にイーサリアムとイーサが
 
-[混同](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum)されますが、「イーサリアムの価格」について話されている時は、イーサの価格を意味します。</p> 
+[混同](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum)されますが、「イーサリアムの価格」について話されている時は、イーサの価格を意味します。
 
 
 
