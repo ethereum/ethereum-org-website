@@ -2,7 +2,7 @@
 title: Sdružené uzamčení
 description: Přehled, jak začít se zapojením do sdruženého vkládání ETH
 lang: cs
-template: staking
+template: stakování
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
 alt: Nosorožec Leslie plave v bazénu.
