@@ -121,7 +121,7 @@ We welcome feedback on our design principles, design system and the style guide.
 
 ## License {#license}
 
-The ethereum.org website is open source and built under an [MIT License](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) unless otherwise specified.
+The ethereum.org website is open source and built under an [MIT License](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) unless otherwise specified. More on [terms of use](/terms-of-use/) of ethereum.org.
 
 ## Open jobs {#open-jobs}
 
