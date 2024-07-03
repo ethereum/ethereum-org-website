@@ -1,26 +1,19 @@
 import { useRouter } from "next/router"
-import {
-  Accordion,
-  AccordionButton,
-  AccordionItem,
-  AccordionPanel,
-  Box,
-  Button,
-  chakra,
-  Heading,
-  Text,
-} from "@chakra-ui/react"
-
-import { BaseLink } from "@/components/Link"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { cleanPath } from "@/lib/utils/url"
 
 import type { Level, NavItem, NavSectionKey } from "../types"
 
-import ExpandIcon from "./ExpandIcon"
-
 import { useNavMenuColors } from "@/hooks/useNavMenuColors"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 type LvlAccordionProps = {
   lvl: Level
@@ -38,7 +31,7 @@ const LvlAccordion = ({
   const { asPath, locale } = useRouter()
   const menuColors = useNavMenuColors()
   return (
-    <Accordion allowToggle boxShadow="menu.accordion">
+    <Accordion type="single" collapsible className="w-full">
       {items.map(({ label, description, ...action }) => {
         const isLink = "href" in action
         const isActivePage = isLink && cleanPath(asPath) === action.href
@@ -46,24 +39,16 @@ const LvlAccordion = ({
           return (
             <AccordionItem
               key={label}
-              borderTop="1px"
-              borderColor="inherit"
-              _last={{ borderBottomWidth: "1px" }}
+              value={label}
+              className="border-t border-inherit last:border-b"
             >
               <Button
-                as={BaseLink}
-                w="full"
-                href={action.href}
                 variant="ghost"
-                borderRadius="none"
-                borderColor={menuColors.stroke}
-                justifyContent="start"
-                gap="2"
-                ps={(lvl + 2) * 4}
-                py="4"
-                _hover={{
-                  color: menuColors.highlight,
-                }}
+                className={`w-full variant-ghost border-none border-${
+                  menuColors.stroke
+                } justify-start gap-2 ps-${(lvl + 2) * 4} py-4 hover:text-${
+                  menuColors.highlight
+                }`}
                 onClick={() => {
                   trackCustomEvent({
                     eventCategory: "Mobile navigation menu",
@@ -72,95 +57,65 @@ const LvlAccordion = ({
                   })
                   onToggle()
                 }}
+                asChild
               >
-                <Box flex="1" textAlign="start">
-                  <Text
-                    fontWeight="bold"
-                    fontSize="md"
-                    color={isActivePage ? menuColors.active : menuColors.body}
-                  >
-                    {label}
-                  </Text>
-                  <Text
-                    fontWeight="regular"
-                    fontSize="sm"
-                    color={
-                      isActivePage
-                        ? menuColors.active
-                        : menuColors.lvl[lvl].subtext
-                    }
-                  >
-                    {description}
-                  </Text>
-                </Box>
+                <Link href={action.href!}>
+                  <div className="flex-1 text-start">
+                    <p
+                      className={`font-bold text-md text-${
+                        isActivePage ? menuColors.active : menuColors.body
+                      }`}
+                    >
+                      {label}
+                    </p>
+                    <p
+                      className={`font-normal text-sm text-${
+                        isActivePage
+                          ? menuColors.active
+                          : menuColors.lvl[lvl].subtext
+                      }`}
+                    >
+                      {description}
+                    </p>
+                  </div>
+                </Link>
               </Button>
             </AccordionItem>
           )
         return (
           <AccordionItem
             key={label}
-            borderTop="1px"
-            borderColor="inherit"
-            _last={{ borderBottomWidth: "1px" }}
+            value={label}
+            className="border-t border-inherit last:border-b"
           >
-            {({ isExpanded }) => (
-              <>
-                <Heading
-                  as={chakra[`h${lvl + 1}`]}
-                  color={menuColors.body}
-                  py="0"
-                  borderColor={menuColors.stroke}
-                  onClick={() => {
-                    trackCustomEvent({
-                      eventCategory: "Mobile navigation menu",
-                      eventAction: `Level ${lvl - 1} section changed`,
-                      eventName: `${
-                        isExpanded ? "Close" : "Open"
-                      } section: ${label} - ${description.slice(0, 16)}...`,
-                    })
-                  }}
-                >
-                  <AccordionButton
-                    justifyContent="start"
-                    gap="2"
-                    ps={lvl * 4}
-                    pe="4"
-                    py="4"
+            <AccordionTrigger>
+              <h2
+                className={`py-0 text-${menuColors.body} border-${menuColors.stroke}`}
+              >
+                <div className="flex-1 text-start">
+                  <p className={`font-bold text-md text-${menuColors.body}`}>
+                    {label}
+                  </p>
+                  <p
+                    className={`font-normal text-sm text-${menuColors.lvl[lvl].subtext}`}
                   >
-                    <ExpandIcon isOpen={isExpanded} />
-                    <Box flex="1" textAlign="start">
-                      <Text
-                        fontWeight="bold"
-                        fontSize="md"
-                        color={menuColors.body}
-                      >
-                        {label}
-                      </Text>
-                      <Text
-                        fontWeight="regular"
-                        fontSize="sm"
-                        color={menuColors.lvl[lvl].subtext}
-                      >
-                        {description}
-                      </Text>
-                    </Box>
-                  </AccordionButton>
-                </Heading>
+                    {description}
+                  </p>
+                </div>
+              </h2>
+            </AccordionTrigger>
 
-                <AccordionPanel
-                  p="0"
-                  mt="0"
-                  bg={menuColors.lvl[lvl + 1].background}
-                >
-                  <LvlAccordion
-                    lvl={(lvl + 1) as Level}
-                    items={action.items}
-                    activeSection={activeSection}
-                    onToggle={onToggle}
-                  />
-                </AccordionPanel>
-              </>
-            )}
+            <AccordionContent
+              className="p-0 mt-0"
+              style={{ backgroundColor: menuColors.lvl[lvl + 1].background }}
+            >
+              <LvlAccordion
+                lvl={(lvl + 1) as Level}
+                items={action.items}
+                activeSection={activeSection}
+                onToggle={onToggle}
+              />
+            </AccordionContent>
           </AccordionItem>
         )
       })}
