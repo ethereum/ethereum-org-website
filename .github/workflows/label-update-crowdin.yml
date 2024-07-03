@@ -1,0 +1,44 @@
+name: Labeler - Update Crowdin
+
+on:
+  pull_request:
+    paths:
+      - "public/content/translations/**/*.md"
+      - "src/intl/**/*.json"
+      - "!src/intl/en/**"
+
+jobs:
+  check_and_label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exit early if branch name contains 'crowdin' or is 'dev', 'staging', or 'master'
+        id: check_branch
+        run: |
+          if [[ "${{ github.head_ref }}" == *crowdin* ]] || 
+             [[ "${{ github.ref }}" == 'refs/heads/dev' ]] || 
+             [[ "${{ github.ref }}" == 'refs/heads/staging' ]] || 
+             [[ "${{ github.ref }}" == 'refs/heads/master' ]]
+          then
+            echo "Branch name contains 'crowdin' or is 'dev', 'staging', or 'master': Stopping workflow"
+            echo "::set-output name=skip::true"
+          else
+            echo "::set-output name=skip::false"
+          fi
+
+      - name: Checkout code
+        if: steps.check_branch.outputs.skip == 'false'
+        uses: actions/checkout@v2
+
+      - name: Add label and comment
+        if: steps.check_branch.outputs.skip == 'false'
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const { repo, issue } = context;
+            const prNumber = issue.number;
+            await github.rest.issues.addLabels({
+              ...repo,
+              issue_number: prNumber,
+              labels: ["Update Crowdin"]
+            });
