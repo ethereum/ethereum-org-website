@@ -2,7 +2,7 @@
 title: Одиночный стейкинг со своими ETH
 description: Обзор того, как начать одиночный стекинг ETH
 lang: ru
-template: staking
+template: ставки
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
 alt: Носорог Лесли на собственном компьютерном чипе.
