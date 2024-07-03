@@ -10,6 +10,11 @@ import "@/styles/globals.css"
 import { RootLayout } from "@/layouts/RootLayout"
 import { mono } from "@/lib/fonts"
 import { ThemeProvider } from "@/components/ThemeProvider"
+import { useLocaleDirection } from "@/hooks/useLocaleDirection"
+import { ChakraProvider } from "@chakra-ui/react"
+import merge from "lodash/merge"
+
+import customTheme from "@/@chakra-ui/theme"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   useEffect(() => {

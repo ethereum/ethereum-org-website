@@ -7,7 +7,7 @@ import Search from "@/components/Search"
 
 import { isMobile } from "@/lib/utils/isMobile"
 
-// import DesktopNavMenu from "./Desktop"
+import DesktopNavMenu from "./Desktop"
 import Menu from "./Menu"
 import { useNav } from "./useNav"
 import Link from "next/link"
@@ -41,9 +41,8 @@ const Nav = () => {
             {/* {isDesktop && <Menu hideBelow="md" sections={linkSections} />} */}
             <div className="flex items-center">
               <div className="hidden md:block">
-                <div />
-                {/* <Search {...searchModalDisclosure} />
-                <DesktopNavMenu toggleColorMode={toggleColorMode} /> */}
+                <Search {...searchModalDisclosure} />
+                <DesktopNavMenu toggleColorMode={toggleColorMode} />
               </div>
               <div className="md:hidden flex">
                 <Suspense>

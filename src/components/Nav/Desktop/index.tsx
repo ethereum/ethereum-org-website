@@ -1,23 +1,14 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdWbSunny } from "react-icons/md"
-import {
-  Button,
-  HStack,
-  Icon,
-  MenuButton,
-  Text,
-  useColorModeValue,
-  useDisclosure,
-  useEventListener,
-} from "@chakra-ui/react"
 
-import { IconButton } from "@/components/Buttons"
 import LanguagePicker from "@/components/LanguagePicker"
 
 import { DESKTOP_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
+import { useTheme } from "next-themes"
+import { Button } from "@/components/ui/button"
 
 type DesktopNavMenuProps = {
   toggleColorMode: () => void
@@ -25,8 +16,11 @@ type DesktopNavMenuProps = {
 
 const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
   const { t } = useTranslation("common")
+  const { theme } = useTheme()
+  const useColorModeValue = (light: any, dark: any) =>
+    theme === "light" ? light : dark
   const { locale } = useRouter()
-  const languagePickerState = useDisclosure()
+  const [isOpen, setOpen] = useState(false)
   const languagePickerRef = useRef<HTMLButtonElement>(null)
 
   const ThemeIcon = useColorModeValue(<MdBrightness2 />, <MdWbSunny />)
@@ -35,82 +29,54 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
     "Switch to Light Theme"
   )
 
+  const languagePickerState = {
+    isOpen,
+    onOpen: () => setOpen(true),
+    onClose: () => setOpen(false),
+  }
+
   /**
    * Adds a keydown event listener to toggle color mode (ctrl|cmd + \)
    * or open the language picker (\).
    * @param {string} event - The keydown event.
    */
-  useEventListener("keydown", (e) => {
-    if (e.key !== "\\") return
-    e.preventDefault()
-    if (e.metaKey || e.ctrlKey) {
-      toggleColorMode()
-    } else {
-      if (languagePickerState.isOpen) return
-      languagePickerRef.current?.click()
-    }
-  })
+  // useEventListener("keydown", (e) => {
+  //   if (e.key !== "\\") return
+  //   e.preventDefault()
+  //   if (e.metaKey || e.ctrlKey) {
+  //     toggleColorMode()
+  //   } else {
+  //     if (languagePickerState.isOpen) return
+  //     languagePickerRef.current?.click()
+  //   }
+  // })
 
   return (
-    <HStack hideBelow="md" gap="0">
-      <IconButton
-        transition="transform 0.5s, color 0.2s"
-        icon={ThemeIcon}
+    <div className="hidden md:flex gap-0">
+      <button
         aria-label={themeIconAriaLabel}
-        variant="ghost"
-        isSecondary
-        px={{ base: "2", xl: "3" }}
-        _hover={{
-          transform: "rotate(10deg)",
-          color: "primary.hover",
-        }}
+        className="transition-transform duration-500 ease-in-out transform hover:rotate-10 text-current hover:text-primary-hover"
         onClick={toggleColorMode}
-      />
+      >
+        {ThemeIcon}
+      </button>
 
       {/* Locale-picker menu */}
-      <LanguagePicker
-        placement="bottom-end"
-        minH="unset"
-        maxH="75vh"
-        w="xs"
-        inset="unset"
-        top="unset"
-        menuState={languagePickerState}
-      >
-        <MenuButton
-          as={Button}
+      <LanguagePicker placement="bottom-end" menuState={languagePickerState}>
+        <Button
           name={DESKTOP_LANGUAGE_BUTTON_NAME}
           ref={languagePickerRef}
-          variant="ghost"
-          color="body.base"
-          transition="color 0.2s"
-          px={{ base: "2", xl: "3" }}
-          _hover={{
-            color: "primary.hover",
-            "& svg": {
-              transform: "rotate(10deg)",
-              transition: "transform 0.5s",
-            },
-          }}
-          _active={{
-            color: "primary.hover",
-            bg: "primary.lowContrast",
-          }}
-          sx={{
-            "& svg": {
-              transform: "rotate(0deg)",
-              transition: "transform 0.5s",
-            },
-          }}
+          className="transition-colors duration-200 ease-in-out text-body-base hover:text-primary-hover active:text-primary-hover active:bg-primary-lowContrast"
+          style={{ padding: "0.5rem 0.75rem" }}
         >
-          <Icon as={BsTranslate} fontSize="2xl" verticalAlign="middle" me={2} />
-          <Text hideBelow="lg" as="span">
+          <BsTranslate className="text-2xl align-middle mr-2" />
+          <span className="hidden lg:inline">
             {t("common:languages")}&nbsp;
-          </Text>
+          </span>
           {locale!.toUpperCase()}
-        </MenuButton>
+        </Button>
       </LanguagePicker>
-    </HStack>
+    </div>
   )
 }
 

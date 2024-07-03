@@ -21,7 +21,7 @@ const progressData = progressDataJson satisfies ProjectProgressData[]
 
 export const useLanguagePicker = (
   handleClose?: () => void,
-  menuState?: UseDisclosureReturn
+  menuState?: { isOpen: boolean; onOpen: () => void; onClose: () => void }
 ) => {
   const { t } = useTranslation("common")
   const { locale, locales: rawLocales } = useRouter()
