@@ -11,7 +11,7 @@ hideEditButton: true
 
 <UpcomingEventsList/>
 
-這是一個由我們社群所維護的部分活動清單。 若你知曉其他未於此清單列出的以太坊活動， [請幫忙加入！](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)
+這是一個由我們社群所維護的部分活動清單。 若你知曉其他未於此清單列出的以太坊活動， [請幫忙新增](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)！
 
 ## 以太坊聚會 {#meetups}
 
