@@ -176,7 +176,7 @@ Aliceのアカウントに **+1.0 ETH**振り込み
 
 ## 型付トランザクションエンベロープ(Typed Transaction Envelope) {#typed-transaction-envelope}
 
-イーサリアムは当初、トランザクション形式は1つのみでした。 各トランザクションには、ノンス (nonce)、ガス代、ガスリミット、toアドレス、値、データ、v、r、sがあります。 これらのフィールドは、以下のように[RLPエンコード](/developers/docs/data-structures-and-encoding/rlp/)されています。
+イーサリアムは当初、トランザクション形式は1つのみでした。 各トランザクションには、ノンス (nonce)、ガス代、ガスリミット、toアドレス、値、データ、v、r、sがあります。 これらのフィールドは、以下のように[RLPエンコード](/developers/docs/data- Structures-and-encoding/rlp/)されています。
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
@@ -195,7 +195,7 @@ Aliceのアカウントに **+1.0 ETH**振り込み
 
 - [EIP-2718: 型付トランザクションエンベロープ(Typed Transaction Envelope)](https://eips.ethereum.org/EIPS/eip-2718)
 
-_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
+_イーサリアムを学ぶために利用したコミュニティリソースはありますか？ もしあればページを編集して追加してください！_
 
 ## 関連トピック {#related-topics}
 
