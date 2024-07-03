@@ -16,7 +16,7 @@
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "Trình xác thực mạng thử nghiệm Holesky này cần được nâng cấp.",
   "comp-withdrawal-credentials-not-upgraded-2": "Hướng dẫn nâng cấp có thể tìm thấy tại <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a>",
   "comp-withdrawal-credentials-verify-mainnet": "Xác thực trên Mainnet",
-  "comp-withdrawal-credentials-verify-Holesky": "Xác thực trên Holesky",
+  "comp-withdrawal-credentials-verify-holesky": "Xác thực trên Holesky",
   "page-staking-image-alt": "Hình ảnh linh vật Tê giác cho cổ phần launchpad.",
   "page-staking-benefits-1-title": "Kiếm phần thưởng",
   "page-staking-benefits-1-description": "Rewards are given for actions that help the network reach <a href=\"/glossary/#consensus\">consensus</a>. You'll get rewards for running software that properly batches transactions into new blocks and checks the work of other validators because that's what keeps the chain running securely.",
