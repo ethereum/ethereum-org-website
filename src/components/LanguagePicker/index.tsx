@@ -7,9 +7,7 @@ import { BaseLink } from "@/components/Link"
 import { isMobile } from "@/lib/utils/isMobile"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import MenuItem from "./MenuItem"
 import { MobileCloseBar } from "./MobileCloseBar"
-import NoResultsCallout from "./NoResultsCallout"
 import { useLanguagePicker } from "./useLanguagePicker"
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
 

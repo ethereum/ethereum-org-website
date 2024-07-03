@@ -48,20 +48,7 @@ const MenuFooter = ({
             {t(themeLabelKey)}
           </p>
         </Button>
-        <LanguagePicker
-          hideFrom="md"
-          position="fixed"
-          w="calc(100vw - var(--eth-sizes-8))"
-          inset="4"
-          handleClose={onToggle}
-          _before={{
-            content: '""',
-            position: "fixed",
-            inset: 0,
-            bg: "black",
-            opacity: 0.4,
-          }} // TODO: Replace with overlay component
-        >
+        <LanguagePicker handleClose={onToggle}>
           <Button variant="ghost" name={MOBILE_LANGUAGE_BUTTON_NAME}>
             <BsTranslate />
             <p className="text-sm leading-base font-normal tracking-wider mt-2 uppercase text-center opacity-70 hover:opacity-100">
