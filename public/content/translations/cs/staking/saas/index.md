@@ -2,7 +2,7 @@
 title: Uzamčení jako služba
 description: Přehled, jak začít se zapojením do sdruženého vkládání ETH
 lang: cs
-template: stakování
+template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
 alt: Nosorožec Leslie plovoucí v oblacích.
