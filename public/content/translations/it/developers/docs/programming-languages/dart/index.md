@@ -16,7 +16,9 @@ incomplete: true
 - [Creare una dapp Mobile con Flutter](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) è molto più breve, il che potrebbe esser meglio se conosci già le basi
 - Se preferisci imparare guardando un video, puoi guardare [Build Your First Blockchain Flutter App](https://www.youtube.com/watch?v=3Eeh3pJ6PeA), lungo all'incirca un'ora
 - Se sei impaziente, questo potrebbe fare al caso tuo [Building a Blockchain Decentralized-app with Flutter and Dart on Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s) (Creare un'app decentralizzata sulla Blockchain con Flutter e Dart su Ethereum), che dura solo circa venti minuti
-- [Integrare MetaMask nell'applicazione di Flutter](https://youtu.be/8qzVDje3IWk); questo breve video ti guida ai passaggi necessari per integrare MetaMask nelle tue applicazioni di Flutter
+- [Integrating MetaMask in Flutter application with Web3Modal by WalletConnect](https://www.youtube.com/watch?v=v_M2buHCpc4) - questo breve video ti guida nei passaggi dell'integrazione di MetaMask nelle tue applicazioni di Flutter con la libreria [Web3Modal](https://pub.dev/packages/web3modal_flutter) di WalletConnect
+- [Flutter Dapp Simple Wallet](https://youtu.be/JMfIBpuAhKA) e [First Flutter DApp - Solidity, Truffle, Ganache](https://youtu.be/bHw2gQZxJ_s) - questi video dimostrano come creare semplici dapp in Flutter utilizzando Truffle e Ganache
+- [Mobile Blockchain Developer Bootcamp Course With Solidity & Flutter](https://youtube.com/playlist?list=PL4V4Unlk5luhQ26ERO6hWEbcUwHDSSmVH) - playlist del corso per sviluppatori di blockchain mobili full stack
 
 ## Lavorare con i client di Ethereum {#working-with-ethereum-clients}
 

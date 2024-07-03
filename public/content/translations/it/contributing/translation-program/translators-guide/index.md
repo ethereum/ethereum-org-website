@@ -10,9 +10,9 @@ La guida di stile per la traduzione di ethereum.org contiene alcune linee guida,
 
 Questo documento funge da guida generale e non è specifico per nessuna lingua.
 
-In caso di domande, suggerimenti o feedback, non esitare a contattarci all'indirizzo translations@ethereum.org, inviare un messaggio a @ethdotorg su Crowdin oppure [unisciti al nostro Discord](https://discord.gg/ethereum-org), dove puoi inviarci un messaggio nel canale #traduzioni o contattare un membro del team.
+Per qualsiasi domanda, suggerimento o feedback, non esitare a contattarci all'indirizzo translations@ethereum.org, inviare un messaggio a @ethdotorg su Crowdin, oppure [unisciti al nostro Discord](https://discord.gg/ethereum-org), dove puoi scriverci un messaggio sul canale #translations o contattare un qualsiasi membro del team.
 
-## Usare Crowdin {#using-crowdin}
+## Utilizzare Crowdin {#using-crowdin}
 
 Puoi trovare le istruzioni di base su come partecipare al progetto in Crowdin e su come utilizzare l'editor online di Crowdin nella pagina del [Programma di traduzione](/contributing/translation-program/#how-to-translate).
 
@@ -86,11 +86,11 @@ Crowdin offre una funzionalità integrata che avvisa i traduttori quando stanno 
 
 **Non ignorare mai questi avvisi, poiché solitamente significano che c'è qualcosa che non va o che manca una parte fondamentale del testo di partenza.**
 
-Un esempio di avviso di Crowdin quando dimentichi di aggiungere un tag nella tua traduzione: ![Esempio di avviso di Crowdin](./crowdin-warning-example.png)
+Un esempio di un avviso di Crowdin quando dimentichi di aggiungere un tag alla tua traduzione: ![Esempio di avviso di Crowdin](./crowdin-warning-example.png)
 
-## Gestire tag e frammenti di codice {#dealing-with-tags}
+## Gestire i tag e i frammenti di codice {#dealing-with-tags}
 
-Molti dei contenuti di origine contengono tag e variabili, evidenziati in giallo nell'editor di Crowdin. Questi svolgono diverse funzioni e dovrebbero essere trattati correttamente.
+Molti contenuti di partenza contengono tag e variabili, evidenziati in giallo nell'editor di Crowdin. Questi svolgono diverse funzioni e dovrebbero esser trattati correttamente.
 
 **Impostazioni di Crowdin**
 
@@ -212,8 +212,8 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 
 **Maiuscole/minuscole**
 
-- Esistono notevoli differenze nell'uso delle maiuscole/minuscole nelle varie lingue.
-- In inglese, è comune usare la maiuscola per tutte le parole di titoli e nomi, mesi e giorni, nomi di lingue, festività, ecc. In molte altre lingue, questo è sbagliato dal punto di vista grammaticale, in quanto vigono regole diverse sull'uso delle maiuscole/minuscole.
+- Esistono notevoli differenze nell'uso di maiuscole e minuscole in diverse lingue.
+- In inglese, è comune usare le maiuscole per tutte le parole di titoli e nomi, mesi e giorni, nomi di lingue, festività, etc. In molte altre lingue, questo è sbagliato dal punto di vista grammaticale, in quanto vigono regole diverse sull'uso delle maiuscole/minuscole.
 - Alcune lingue hanno anche regole sull'uso della maiuscola per pronomi personali, sostantivi e alcuni aggettivi, che in inglese vengono scritti con l'iniziale minuscola.
 
 **Spaziatura**

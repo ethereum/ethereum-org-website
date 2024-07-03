@@ -53,7 +53,7 @@ Codificando i dati non formattati (insiemi di dati, indirizzi dei conti, hash, i
 Ecco alcuni esempi:
 
 - 0x41 (dimensione 1, "A")
-- 0x004200 (dimensione 3, "\0B\0")
+- 0x004200 (dimensione 3, "0B0")
 - 0x (dimensione 0, "")
 - ERRATO: 0xf0f0f (dev'essere un numero di cifre pari)
 - ERRATO: 004200 (deve avere il prefisso 0x)
@@ -131,6 +131,10 @@ Alcuni metodi base del protocollo JSON-RPC richiedono dati dalla rete di Ethereu
 - [eth_getTransactionReceipt](#eth_gettransactionreceipt)
 - [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
 - [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
+
+## Playground dell'API di JSON-RPC
+
+Puoi utilizzare lo [strumento playground](https://ethereum-json-rpc.com) per scoprire e provare i metodi dell'API. Inoltre, ti mostra le reti e i metodi supportati dai vari fornitori di nodi.
 
 ## I metodi dell'API JSON-RPC {#json-rpc-methods}
 
@@ -560,7 +564,7 @@ Restituisce il saldo del conto del dato indirizzo.
 **Parametri**
 
 1. `DATA`, 20 byte - indirizzo per controllare il saldo.
-2. `QUANTITY|TAG` - numero intero del blocco, o stringa `"latest"`, `"earliest"` o `"pending"`. Vedere il [parametro predefinito del blocco](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - intero del numero di blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"` o `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
@@ -591,7 +595,7 @@ Restituisce il valore da una posizione di archiviazione a un dato indirizzo.
 
 1. `DATA`, 20 byte - Indirizzo di archiviazione.
 2. `QUANTITY` - intero della posizione di archiviazione.
-3. `QUANTITY|TAG` - numero intero del blocco, o stringa `"latest"`, `"earliest"` o `"pending"`. Vedere il [parametro predefinito del blocco](/developers/docs/apis/json-rpc/#default-block)
+3. `QUANTITY|TAG` - intero del numero di blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block)
 
 **Restituisce**
 
@@ -657,7 +661,7 @@ Restituisce il numero di transazioni _inviate_da un indirizzo.
 **Parametri**
 
 1. `DATA`, 20 byte - indirizzo.
-2. `QUANTITY|TAG` - numero intero del blocco, o stringa `"latest"`, `"earliest"` o `"pending"`. Vedere il [parametro predefinito del blocco](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - intero del numero di blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"` o `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -718,7 +722,7 @@ Restituisce il numero di transazioni in un blocco corrispondente al numero di bl
 
 **Parametri**
 
-1. `QUANTITY|TAG` - numero intero del blocco, o stringa `"earliest"`, `"latest"` o `"pending"`, come nel [parametro predefinito del blocco](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - intero del numero di un blocco, o la stringa `"earliest"`, `"latest"`, `"pending"`, `"safe"` o `"finalized"`, come nel [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block).
 
 ```js
 params: [
@@ -778,7 +782,7 @@ Restituisce il numero di ommer in un blocco da un blocco che corrisponde all'has
 
 **Parametri**
 
-1. `QUANTITY|TAG` - intero del numero di blocco, o stringa "latest", "earliest" o "pending". Vedere il [parametro predefinito del blocco](/developers/docs/apis/json-rpc/#default-block)
+1. `QUANTITY|TAG` - intero del numero di un blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"` o `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -810,7 +814,7 @@ Restituisce il codice ad un dato indirizzo.
 **Parametri**
 
 1. `DATA`, 20 byte - indirizzo
-2. `QUANTITY|TAG` - numero intero del blocco, o stringa `"latest"`, `"earliest"` o `"pending"`. Vedere il [parametro predefinito del blocco](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - intero del numero di blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"` o `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -997,7 +1001,7 @@ Esegue immediatamente una nuova chiamata di messaggio senza creare una transazio
 - `value`: `QUANTITY` - (facoltativo) Intero del valore inviato con questa transazione
 - `input`: `DATA` - (facoltativo) Hash della firma del metodo e dei parametri codificati. Per i dettagli, consulta [ABI del Contratto di Ethereum nella documentazione di Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html).
 
-2. `QUANTITY|TAG` - numero intero del blocco, o stringa `"latest"`, `"earliest"` o `"pending"`. Vedere il [parametro predefinito del blocco](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - intero del numero di blocco, o la stringa `"latest"`, `"earliest"`, `"pending"`, `"safe"` o `"finalized"`, vedi il [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block)
 
 **Restituisce**
 
@@ -1124,7 +1128,7 @@ Restituisce informazioni su un blocco per numero di blocco.
 
 **Parametri**
 
-1. `QUANTITY|TAG` - numero intero del blocco, o stringa `"earliest"`, `"latest"` o `"pending"`, come nel [parametro predefinito del blocco](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - intero del numero di un blocco, o la stringa `"earliest"`, `"latest"`, `"pending"`, `"safe"` o `"finalized"`, come nel [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block).
 2. `Boolean` - Se `true` restituisce gli oggetti di transazione completi, se `falso` solo gli hash delle transazioni.
 
 ```js
@@ -1237,7 +1241,7 @@ Restituisce informazioni su una transazione per hash del blocco e posizione dell
 
 **Parametri**
 
-1. `QUANTITY|TAG` - intero del blocco, o stringa `"earliest"`, `"latest"` oppure `"pending"`, come nel [parametro predefinito del blocco](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG`: il numero di un blocco, o la stringa `"earliest"`, `"latest"`, `"pending"`, `"safe"` o `"finalized"`, come nel [parametro del blocco predefinito](/developers/docs/apis/json-rpc/#default-block).
 2. `QUANTITY` - la posizione dell'indice della transazione.
 
 ```js
@@ -1252,7 +1256,7 @@ params: [
 **Esempio**
 
 ```js
-// Richiesta
+// Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
@@ -1360,7 +1364,7 @@ Restituisce informazioni su un ommer di un blocco in base al numero e alla posiz
 
 **Parametri**
 
-1. `QUANTITY|TAG` - intero del blocco, o stringa `"earliest"`, `"latest"` oppure `"pending"`, come nel [parametro predefinito del blocco](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - il numero di un blocco, o la stringa `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, come nel [parametro predefinito del blocco](/developers/docs/apis/json-rpc/#default-block).
 2. `QUANTITY` - la posizione dell'indice dell'ommer.
 
 ```js
@@ -1398,8 +1402,8 @@ Crea un oggetto filtro, basato sulle opzioni di filtro, per avvertire quando lo 
 
 1. `Object` - Le opzioni del filtro:
 
-- `fromBlock`: `QUANTITY|TAG` - (facoltativo, predefinito: `"latest"`) Numero intero del blocco, oppure `"latest"` per l'ultimo blocco minato oppure `"pending"`, `"earliest"` per le transazioni non ancora minate.
-- `toBlock`: `QUANTITY|TAG` - (facoltativo, predefinito: `"latest"`) numero intero del blocco, oppure `"latest"` per l'ultimo blocco minato, oppure `"pending"`, `"earliest"` per le transazioni non ancora minate.
+- `fromBlock`: `QUANTITY|TAG`: (facoltativo, predefinito: `"latest"`) Intero del numero di blocco, o `"latest"` per l'ultimo blocco minato, `"safe"` per l'ultimo blocco sicuro, `"finalized"` per l'ultimo blocco finalizzato, o `"pending"`, `"earliest"` per transazioni non ancora minate.
+- `toBlock`: `QUANTITY|TAG`: (facoltativo, predefinito: `"latest"`) Intero del numero di blocco, o `"latest"` per l'ultimo blocco minato, `"safe"` per l'ultimo blocco sicuro, `"finalized"` per l'ultimo blocco finalizzato, o `"pending"`, `"earliest"` per transazioni non ancora minate.
 - `address`: `DATA|Array`, 20 byte - (facoltativo) L'indirizzo del contratto oppure un elenco di indirizzi da cui dovrebbero avere origine i registri.
 - `topics`: `Array of DATA`, - (facoltativo) Array di argomenti `DATA` a 32 byte. Gli argomenti dipendono dall'ordine. Ogni argomento può anche essere una matrice di DATA con opzioni "OR".
 
@@ -1592,8 +1596,8 @@ Restituisce un array di tutti i registri che corrispondono a un dato oggetto fil
 
 1. `Object` - Le opzioni del filtro:
 
-- `fromBlock`: `QUANTITY|TAG` - (facoltativo, predefinito: `"latest"`) Numero intero del blocco, oppure `"latest"` per l'ultimo blocco minato oppure `"pending"`, `"earliest"` per le transazioni non ancora minate.
-- `toBlock`: `QUANTITY|TAG` - (facoltativo, predefinito: `"latest"`) numero intero del blocco, oppure `"latest"` per l'ultimo blocco minato, oppure `"pending"`, `"earliest"` per le transazioni non ancora minate.
+- `fromBlock`: `QUANTITY|TAG`: (facoltativo, predefinito: `"latest"`) Intero del numero di blocco, o `"latest"` per l'ultimo blocco minato, `"safe"` per l'ultimo blocco sicuro, `"finalized"` per l'ultimo blocco finalizzato, o `"pending"`, `"earliest"` per transazioni non ancora minate.
+- `toBlock`: `QUANTITY|TAG`: (facoltativo, predefinito: `"latest"`) Intero del numero di blocco, o `"latest"` per l'ultimo blocco minato, `"safe"` per l'ultimo blocco sicuro, `"finalized"` per l'ultimo blocco finalizzato, o `"pending"`, `"earliest"` per transazioni non ancora minate.
 - `address`: `DATA|Array`, 20 byte - (facoltativo) L'indirizzo del contratto oppure un elenco di indirizzi da cui dovrebbero avere origine i registri.
 - `topics`: `Array of DATA`, - (facoltativo) Array di argomenti `DATA` a 32 byte. Gli argomenti dipendono dall'ordine. Ogni argomento può anche essere una matrice di DATA con opzioni "OR".
 - `blockhash`: `DATI`, 32 byte - (facoltativo , **future**) Con l'aggiunta di EIP-234, `blockHash` sarà una nuova opzione di filtro che limita i registri restituiti al singolo blocco con l'hash `blockHash` da 32 byte. L'utilizzo di `blockHash` equivale a `fromBlock` = `toBlock` = il numero di blocco con hash `blockHash`. Se `blockHash` è presente nei criteri di filtraggio, non sono permessi né `fromBlock` né `toBlock`.
