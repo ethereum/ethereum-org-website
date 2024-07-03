@@ -65,7 +65,6 @@ type BucketsList = { [key: string]: Array<number> }
 const USER_OVERRIDE: BucketsList = {
   // FORMAT: lang_code: [bucket_number, bucket_number, ...],
   // EXAMPLE: es: [1, 10, 12, 14],
-  hu: [3, 6, 7, 10, 11, 12, 13, 16, 21],
 }
 
 /******************************
