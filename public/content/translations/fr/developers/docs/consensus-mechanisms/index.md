@@ -89,3 +89,4 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 - [Preuve de travail](/developers/docs/consensus-mechanisms/pow/)
 - [Minage](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
+- [Preuve d'autorité](/developers/docs/consensus-mechanisms/poa/)

@@ -196,7 +196,7 @@ eventName="read more">
 
 Il est recommandé aux opérateurs de validateurs de consulter la page <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> où vous trouverez plus de détails sur la façon de préparer votre validateur aux retraits, le calendrier des événements, et davantage d'informations sur le fonctionnement des retraits.
 
-Pour commencer en testant votre configuration sur un réseau de test, visitez la <a href="https://holesky.launchpad.ethereum.org">Platforme de lancement pour la mise en jeu sur le réseau de test Holesky</a>.
+Pour commencer en testant votre configuration sur un réseau de test, visitez la <a href="https://goerli.launchpad.ethereum.org">Platforme de lancement pour la mise en jeu sur le réseau de test Goerli</a>.
 
 </ExpandableCard>
 
