@@ -3,6 +3,10 @@ const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 
 const { i18n } = require("./next-i18next.config")
 
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: true,
+})
+
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
 
 const experimental = LIMIT_CPUS
@@ -68,4 +72,5 @@ module.exports = (phase, { defaultConfig }) => {
   }
 
   return nextConfig
+  // return withBundleAnalyzer(nextConfig)
 }

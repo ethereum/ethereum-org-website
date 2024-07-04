@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { appWithTranslation } from "next-i18next"
 import { init } from "@socialgouv/matomo-next"
+import { onLCP, onINP, onCLS, onTTFB } from "web-vitals"
 
 import { AppPropsWithLayout } from "@/lib/types"
 
@@ -10,11 +11,6 @@ import "@/styles/globals.css"
 import { RootLayout } from "@/layouts/RootLayout"
 import { mono } from "@/lib/fonts"
 import { ThemeProvider } from "@/components/ThemeProvider"
-import { useLocaleDirection } from "@/hooks/useLocaleDirection"
-import { ChakraProvider } from "@chakra-ui/react"
-import merge from "lodash/merge"
-
-import customTheme from "@/@chakra-ui/theme"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   useEffect(() => {
@@ -26,13 +22,16 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
     }
   }, [])
 
+  useEffect(() => {
+    onCLS(console.log)
+    onINP(console.log)
+    onLCP(console.log)
+    onTTFB(console.log)
+  }, [])
+
   // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page)
-
-  // const direction = useLocaleDirection()
-
-  // const theme = merge(customTheme, { direction })
 
   return (
     <>
@@ -50,7 +49,6 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
         enableSystem
         disableTransitionOnChange
       >
-        {/* <ChakraProvider theme={theme}> */}
         <RootLayout
           contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
           contentNotTranslated={pageProps.contentNotTranslated}
@@ -58,7 +56,6 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
         >
           {getLayout(<Component {...pageProps} />)}
         </RootLayout>
-        {/* </ChakraProvider> */}
       </ThemeProvider>
     </>
   )

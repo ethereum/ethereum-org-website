@@ -25,6 +25,8 @@ import allQuestionData from "@/data/quizzes/questionBank"
 
 import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
+import { layoutMapping } from "@/pages/[...slug]"
+
 // Credit: https://stackoverflow.com/a/52331580
 export type Unpacked<T> = T extends (infer U)[] ? U : T
 
@@ -59,7 +61,7 @@ export type Frontmatter = RoadmapFrontmatter &
   DocsFrontmatter &
   TutorialFrontmatter
 
-export type LayoutMappingType = unknown
+export type LayoutMappingType = typeof layoutMapping
 export type Layout = keyof LayoutMappingType
 
 export type Lang =
