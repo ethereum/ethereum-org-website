@@ -229,10 +229,11 @@ const CodeblockSkeleton = () => (
   <Stack px={6} pt="2.75rem" h="50vh">
     <SkeletonText
       mt="4"
-      noOfLines={10}
-      spacing={3}
-      skeletonHeight="1rem"
-      startColor="body.base"
+      noOfLines={6}
+      spacing={4}
+      skeletonHeight="1.4rem"
+      startColor="body.medium"
+      opacity={0.2}
     />
   </Stack>
 )
