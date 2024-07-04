@@ -238,7 +238,7 @@ Os projetos que trabalham em zkEVMs incluem:
 
 - **[Scroll](https://scroll.io/blog/zkEVM)**: _Scroll é uma empresa impulsionada pela tecnologia que trabalha no desenvolvimento de uma solução nativa zkEVM de camada 2 para Ethereum._
 
-- **[Taiko](https://taiko.xyz)** - _Taiko é um ZK-rollup descentralizado, equivalente ao Ethereum (um [ZK-EVM do Tipo 1](https://vitalik.ca/general/2022/08/04/zkevm.html))._
+- **[Taiko](https://taiko.xyz)** - _Taiko é um ZK-rollup descentralizado, equivalente ao Ethereum (um [ZK-EVM do Tipo 1](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
 
 - **[ZKsync](https://docs.zksync.io/)** - _ZKsync Era is an EVM-compatible ZK Rollup built by Matter Labs, powered by its own zkEVM._
 
