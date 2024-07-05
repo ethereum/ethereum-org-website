@@ -37,11 +37,11 @@ const semanticTokens = {
 
     // Main Set
     primary: {
-      base: { _light: "purple.500", _dark: "purple.300" },
-      highContrast: { _light: "purple.700", _dark: "purple.200" },
-      lowContrast: { _light: "purple.200", _dark: "purple.700" },
-      hover: { _light: "purple.600", _dark: "purple.400" },
-      visited: { _light: "purple.600", _dark: "purple.400" },
+      base: { _light: "purple.600", _dark: "purple.400" },
+      highContrast: { _light: "purple.800", _dark: "purple.200" },
+      lowContrast: { _light: "purple.200", _dark: "purple.800" },
+      hover: { _light: "purple.700", _dark: "purple.300" },
+      visited: { _light: "purple.700", _dark: "purple.300" },
       // ! Deprecating primary.light
       light: { _light: "blue.100", _dark: "orange.100" },
       // ! Deprecating primary.dark
@@ -67,9 +67,9 @@ const semanticTokens = {
 
 ///////// ! NEW TOKENS
     link: {
-      base: { _light: "blue.600", _dark: "blue.300" },
-      hover: { _light: "blue.700", _dark: "blue.400" },
-      visited: { _light: "blue.700", _dark: "blue.400" },
+      base: { _light: "purple.600", _dark: "purple.400" },
+      hover: { _light: "purple.700", _dark: "purple.300" },
+      visited: { _light: "purple.700", _dark: "purple.300" },
     },
 ////////////////////////
 
