@@ -34,7 +34,7 @@ La première fois que vous ouvrez votre nouveau portefeuille, il vous sera deman
 
 ## Étape 4 : Conservez votre phrase de récupération
 
-Certaines applications vous demanderont de posséder une "seed phrase" ou suite de mots (souvent 12 ou 24) également entendue comme "phrase de récupération" ou moyen mnémonique.  Conserver cette phrase de récupération relève de la plus haute importance. Cette phrase de récupération est utilisée pour générer une clé secrète (privée) reliée à un compte, et qui peut être utilisée pour signer puis envoyer des transactions.  Toute personne qui aura accès à cette phrase de récupération, pourra ainsi prendre le contrôle de l'ensemble de vos comptes générés par celle-ci. Il ne faut jamais partager cette phrase de récupération (seed phrase) avec qui que ce soit. La phrase de récupération doit contenir une suite de 12 à 24 mots générés de manière aléatoire, mais l'ordre de ces mots s'avère des plus importants.
+Certaines applications vous demanderont de posséder une "seed phrase" ou suite de mots (souvent 12 ou 24) également entendue comme "phrase de récupération" ou moyen mnémonique. Conserver cette phrase de récupération relève de la plus haute importance. Cette phrase de récupération est utilisée pour générer une clé secrète (privée) reliée à un compte, et qui peut être utilisée pour signer puis envoyer des transactions. Toute personne qui aura accès à cette phrase de récupération, pourra ainsi prendre le contrôle de l'ensemble de vos comptes générés par celle-ci. Il ne faut jamais partager cette phrase de récupération (seed phrase) avec qui que ce soit. La phrase de récupération doit contenir une suite de 12 à 24 mots générés de manière aléatoire, mais l'ordre de ces mots s'avère des plus importants.
 
 Une fois votre phrase de récupération enregistrée, vous pourrez consulter le tableau de bord de votre portefeuille et l'accès au solde de celui-ci. Consultez notre guide : [comment utiliser un portefeuille.](/guides/how-to-use-a-wallet)
 
@@ -61,7 +61,7 @@ Non, vous ne pouvez pas. Le bitcoin et l'ether existent sur deux réseaux distin
 
 ### Si je possède une adresse ETH, est-ce que je peux l'utiliser sur d'autres blockchains ?
 
-Vous pouvez utiliser la même [adresse](/glossary/#address) sur toutes les blockchains qui utilisent un logiciel sous-jacent similaire à Ethereum (« compatible-EVM »). Cette [liste ](https://chainlist.org/) vous présente les blockchains que vous pouvez utiliser avec la même adresse. Certaines blockchains, comme Bitcoin, utilisent un ensemble de règles de réseau totalement différentes et vous aurez donc besoin d'une adresse différente fonctionnant sous un autre format. Si vous utilisez un portefeuille de contrats intelligents, vous pouvez consulter son site web pour plus d'informations sur les blockchains pris en charge.
+Vous pouvez utiliser la même [adresse](/glossary/#address) sur toutes les blockchains qui utilisent un logiciel sous-jacent similaire à Ethereum (« compatible-EVM »). Cette [liste](https://chainlist.org/) vous présente les blockchains que vous pouvez utiliser avec la même adresse. Certaines blockchains, comme Bitcoin, utilisent un ensemble de règles de réseau totalement différentes et vous aurez donc besoin d'une adresse différente fonctionnant sous un autre format. Si vous utilisez un portefeuille de contrats intelligents, vous pouvez consulter son site web pour plus d'informations sur les blockchains pris en charge.
 
 ### Est-il plus sûr de garder mes fonds sur mon portefeuille plutôt que sur un échange ?
 

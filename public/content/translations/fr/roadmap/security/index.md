@@ -19,7 +19,7 @@ La transition de la [preuve de travail](/glossary/#pow) à la preuve d'enjeu a c
 
 ## Se défendre contre les attaques {#defending-against-attacks}
 
-Il existe un certain nombre d'améliorations qui peuvent être apportées au protocole de preuve d'enjeu d'Ethereum. L'une est connue sous le nom de [agrégation de points de vue ](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739) - un algorithme de choix de [bifurcation](/glossary/#fork) plus sécurisé qui rend certains types d'attaques sophistiquées plus difficiles.
+Il existe un certain nombre d'améliorations qui peuvent être apportées au protocole de preuve d'enjeu d'Ethereum. L'une est connue sous le nom de [agrégation de points de vue](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739) - un algorithme de choix de [bifurcation](/glossary/#fork) plus sécurisé qui rend certains types d'attaques sophistiquées plus difficiles.
 
 Réduire le temps que prend Ethereum pour [finaliser](/glossary/#finality) les blocs offrirait une meilleure expérience utilisateur et empêcherait les attaques sophistiquées de « reorg » où les attaquants essaient de réorganiser les blocs très récents pour en tirer profit ou censurer certaines transactions. [**La finalité à créneau unique (SSF)**](/roadmap/single-slot-finality/) est un **moyen de minimiser le délai de finalisation**. Actuellement, il y a l'équivalent de 15 minutes de blocs qu'un attaquant pourrait théoriquement convaincre d'autres validateurs de reconfigurer. Avec SSF, il y en aurait 0. Les utilisateurs, des individus aux applications jusqu'aux échanges, bénéficient d'une assurance rapide que leurs transactions ne seront pas annulées, et le réseau bénéficie lui de l'élimination d'une catégorie entière d'attaques.
 
@@ -39,7 +39,7 @@ Il existe des ajouts potentiels à PBS, tels que les transactions chiffrées et 
 
 ## Protéger les validateurs {#protecting-validators}
 
-Il est possible qu'un attaquant sophistiqué puisse identifier les validateurs imminents et les spammer pour les empêcher de proposer des blocs ; cela s'appelle une **attaque par déni de service (DoS)**. Implémenter [<strong x-id="1")>l'élection secrète du leader (SLE)</strong>](/roadmap/secret-leader-election) protégera contre ce type d'attaque en empêchant les proposants de bloc d'être connus à l'avance. Cela fonctionne en mélangeant continuellement un ensemble d'engagements cryptographiques représentant les candidats proposeurs de blocs et en utilisant leur ordre pour déterminer quel validateur est sélectionné de telle manière que seuls les validateurs eux-mêmes connaissent leur ordre à l'avance.
+Il est possible qu'un attaquant sophistiqué puisse identifier les validateurs imminents et les spammer pour les empêcher de proposer des blocs ; cela s'appelle une **attaque par déni de service (DoS)**. Implémenter [**l'élection secrète du leader (SLE)**](/roadmap/secret-leader-election) protégera contre ce type d'attaque en empêchant les proposants de bloc d'être connus à l'avance. Cela fonctionne en mélangeant continuellement un ensemble d'engagements cryptographiques représentant les candidats proposeurs de blocs et en utilisant leur ordre pour déterminer quel validateur est sélectionné de telle manière que seuls les validateurs eux-mêmes connaissent leur ordre à l'avance.
 
 <ButtonLink variant="outline-color" to="/roadmap/secret-leader-election">En apprendre plus à propos de l'élection d'un leader secret</ButtonLink>
 

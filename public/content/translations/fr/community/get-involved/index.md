@@ -38,7 +38,7 @@ Avez-vous une formation en mathématiques, en cryptographie ou en économie ? V
 - [Ethresear.ch](https://ethresear.ch) - le principal forum de recherche d'Ethereum et le forum le plus influent au monde pour la cryptoéconomie
 - [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - Une série de questions-réponses avec des chercheurs. Dès l'ouverture de chaque partie suivante, tout le monde peut poster des questions.
 - [Liste de souhaits du programme de soutien à l'écosystème](https://esp.ethereum.foundation/wishlist/) - domaines de recherche dans lesquels le programme de soutien à l'écosystème Ethereum recherche activement des demandes de subvention
-- [AllWalletDevs](allwallet.dev) - Un forum pour les développeurs Ethereum, les designeurs, et les utilisateurs intéressés leur permettant d'interagir régulièrement et de discuter des portefeuilles
+- [AllWalletDevs](https://allwallet.dev) - Un forum pour les développeurs Ethereum, les designeurs, et les utilisateurs intéressés leur permettant d'interagir régulièrement et de discuter des portefeuilles
 
 [Explorer des domaines de recherche plus actifs](/community/research/).
 
