@@ -1,7 +1,7 @@
 ---
 title: How to Write & Deploy an NFT (Part 1/3 of NFT Tutorial Series)
 description: This is Part 1 of a tutorial series on NFTs that will take you teach you how to write, deploy, mint, and view a Non Fungible Token (ERC-721 token) smart contract using Ethereum and Inter Planetary File System (IPFS).
-author: "Sumi Mudgil, edited by [Aaron Shey](https://github.com/aaronzshey)"
+author: "Sumi Mudgil, revised by Aaron Shey"
 tags: ["ERC-721", "Alchemy", "Solidity", "smart contracts"]
 skill: beginner
 lang: en
@@ -29,31 +29,25 @@ Once you’ve created an Alchemy account, you can generate an API key by creatin
 
 ![Create your app](./create-your-app.gif)
 
-2. Once you're done, the "Networks" tab should be automatically highlighted.  Click on it, select "configure" in the upper right-hand corner, disable all the other networks, and only leave "Ethereum Sepolia" enabled.
+2. Once you're done, the "Networks" tab should be automatically highlighted.  Click on it, select "configure" in the upper right-hand corner, disable all the other networks, and leave "Ethereum Sepolia" enabled.
 
 ![Configure and publish your app](./alchemy-network-sepolia.gif)
 
 ## Step 3: Create an Ethereum account (address) {#create-eth-address}
 
-We need an Ethereum account to send and receive transactions. For this tutorial, we’ll use MetaMask, a virtual wallet in the browser used to manage your Ethereum account address. If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/) from the Ethereum foundation.
+We need an Ethereum account to send and receive transactions. For this tutorial, we’ll use MetaMask, an open-source Ethereum wallet with over [10,000](https://github.com/MetaMask/metamask-extension) stars on GitHub! If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/) from the Ethereum foundation.
 
-You can download MetaMask and create an account for free [here](https://metamask.io/). Once you have created an account, or if you already have an account, make sure to switch over to the “Sepolia Test Network” in the upper right (so that we’re not dealing with real money).
+You can download MetaMask and create an account for free [here](https://metamask.io/). Once you have created an account, or if you already have an account, make sure to switch over to the “Sepolia Test Network” in the upper left (so that we’re not dealing with real money).
 
 ![Set Sepolia as your network](./switch-to-sepolia.gif)
 
 ## Step 4: Add ether from a Faucet {#add-ether-from-a-faucet}
 
-In order to deploy our smart contract to the test network, we’ll need "fake" ETH - or SepoliaETH.  You can get SepoliaETH from a [faucet](https://www.alchemy.com/faucets#:~:text=A%20testnet%20faucet%20provides%20web3%20developers%20with%20free%20tokens%20for%20deploying%2C%20testing%2C%20and%20optimizing%20smart%20contracts%20on%20test%20blockchains%20such%20as%20Sepolia)!  However, most faucets have other requirements - the [Alchemy faucet](https://www.alchemy.com/faucets/ethereum-sepolia) requires at least 0.001 ETH (about [US\$3 ](https://www.coinbase.com/converter/eth/usd)right now), while the [Infura faucet](https://www.infura.io/faucet/sepolia) requires an Infura account.  This [Google Cloud faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) currently has no requirements, but this could change by the time you're reading this tutorial!
+In order to deploy our smart contract to the test network, we’ll need "fake" ETH - or SepoliaETH.  You can get SepoliaETH from a [faucet](https://www.alchemy.com/faucets#:~:text=A%20testnet%20faucet%20provides%20web3%20developers%20with%20free%20tokens%20for%20deploying%2C%20testing%2C%20and%20optimizing%20smart%20contracts%20on%20test%20blockchains%20such%20as%20Sepolia)!  However, most faucets have other requirements - the [Alchemy faucet](https://www.alchemy.com/faucets/ethereum-sepolia) requires at least 0.001 ETH (about [\$3](https://nft-tutorial-utils.vercel.app/?ethValue=0.001) right now), while the [Infura faucet](https://www.infura.io/faucet/sepolia) requires an Infura account.  This [Google Cloud faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) currently has no requirements, but this could change by the time you're reading this tutorial!
 
 ## Step 5: Check your Balance {#check-balance}
 
-To double check our balance is there, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of ETH in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
-
-    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
-
-> **Note** This result is in wei, not ETH. Wei is used as the smallest denomination of ether. The conversion from wei to ETH is 1 eth = 10<sup>18</sup> wei. So if we convert 0xde0b6b3a7640000 to decimal we get 1\*10<sup>18</sup> wei, which equals 1 ETH.
-
-Phew! Our fake money is all there.
+To double check our balance is there, let’s use Etherscan
 
 ## Step 6: Initialize our project {#initialize-project}
 
