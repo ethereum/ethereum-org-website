@@ -107,6 +107,7 @@ Podívejte se na níže uvedené projekty a zapojte se do DeSci komunity.
 - [CureDAO: Platforma vlastněná komunitou pro precizní zdravotní péči](https://docs.curedao.org/)
 - [IdeaMarkets: Získávání decentralizované vědecké kredibility](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
+- [ValleyDAO: otevřená, globální komunita nabízející financování a překladatelskou podporu pro výzkum syntetické biologie](https://www.valleydao.bio)
 
 Uvítáme návrhy na nové projekty, které je třeba uvést na seznam – pro začátek si přečtěte naše [zásady pro zařazení do seznamu](/contributing/adding-desci-projects/)!
 
