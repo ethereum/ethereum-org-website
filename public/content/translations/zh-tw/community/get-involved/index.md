@@ -38,7 +38,7 @@ lang: zh-tw
 - [Ethresear.ch](https://ethresear.ch) - 以太坊為研究而設的主要論壇，同時也是加密貨幣經濟學在世界上最有影響力的論壇。
 - [以太坊基金會研究線上問答](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - 由研究人員提供的問答系列。 當下階段開放時，任何人都可以提出問題。
 - [生態系統支援計劃的願望清單](https://esp.ethereum.foundation/wishlist/) - 以太坊生態系統支援計劃正在積極籌備資助申請的領域
-- [AllWalletDevs](allwallet.dev) - 讓以太坊開發者、設計師和有興趣的使用者，定期聚到一起並討論錢包的論壇
+- [AllWalletDevs](https://allwallet.dev) - 讓以太坊開發者、設計師和有興趣的使用者，定期聚到一起並討論錢包的論壇
 
 [探索更多活躍的研究領域](/community/research/)。
 
