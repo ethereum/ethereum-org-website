@@ -57,7 +57,7 @@ const semanticTokens = {
       inverted: { _light: "gray.100", _dark: "gray.800" },
     },
     background: {
-      base: { _light: "white", _dark: "gray.800" },
+      base: { _light: "white", _dark: "black" },
       highlight: { _light: "gray.100", _dark: "gray.900" },
     },
     disabled: { _light: "gray.400", _dark: "gray.500" },
