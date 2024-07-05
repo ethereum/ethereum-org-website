@@ -37,11 +37,11 @@ const semanticTokens = {
 
     // Main Set
     primary: {
-      base: { _light: "blue.500", _dark: "orange.500" },
-      highContrast: { _light: "blue.800", _dark: "orange.100" },
-      lowContrast: { _light: "blue.100", _dark: "orange.800" },
-      hover: { _light: "blue.400", _dark: "orange.400" },
-      visited: { _light: "blue.700", _dark: "orange.550" },
+      base: { _light: "purple.600", _dark: "purple.400" },
+      highContrast: { _light: "purple.800", _dark: "purple.100" },
+      lowContrast: { _light: "purple.100", _dark: "purple.800" },
+      hover: { _light: "purple.700", _dark: "purple.400" },
+      visited: { _light: "purple.700", _dark: "purple.400" },
       // ! Deprecating primary.light
       light: { _light: "blue.100", _dark: "orange.100" },
       // ! Deprecating primary.dark
@@ -63,6 +63,15 @@ const semanticTokens = {
     disabled: { _light: "gray.400", _dark: "gray.500" },
     // ! Deprecating neutral
     neutral: { _light: "white", _dark: "gray.900" },
+
+
+///////// ! NEW TOKENS
+    link: {
+      base: { _light: "blue.600", _dark: "blue.300" },
+      hover: { _light: "blue.700", _dark: "blue.400" },
+      visited: { _light: "blue.700", _dark: "blue.400" },
+    },
+////////////////////////
 
     // Complementary Set
     attention: {
