@@ -49,7 +49,9 @@ In order to deploy our smart contract to the test network, we’ll need "fake" E
 
 To double check our balance is there, let’s use [Etherscan]([About Us (etherscan.io)](https://etherscan.io/aboutus)), the Ethereum block explorer!  A [block explorer](https://www.sofi.com/learn/content/blockchain-explorer/)) is a website that lets you check out various transactions on the blockchain, keeping everything nice and transparent.  
 
-Paste your wallet address [here](https://sepolia.etherscan.io/balancecheck-tool), and then click on the "Lookup" button.  
+Paste your wallet address [here](https://sepolia.etherscan.io/balancecheck-tool), and then click on the "Lookup" button.  You should see a value equal to your SepoliaETH balance pop up!
+
+![Check your wallet balance](./check-balance.gif)
 
 ## Step 6: Initialize our project {#initialize-project}
 
