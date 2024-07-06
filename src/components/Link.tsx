@@ -58,12 +58,11 @@ export const BaseLink = forwardRef(function Link(
   ref
 ) {
   const { asPath } = useRouter()
-  const cleanAsPath = asPath.replace(/#.*/, "");
   const { flipForRtl } = useRtlFlip()
 
   let href = (to ?? hrefProp) as string
 
-  const isActive = url.isHrefActive(href, cleanAsPath, isPartiallyActive)
+  const isActive = url.isHrefActive(href, asPath, isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
   const isPdf = url.isPdf(href)
   const isExternal = url.isExternal(href)
