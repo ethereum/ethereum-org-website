@@ -14,7 +14,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn("eth-border-b", className)}
+    className={className}
     {...props}
   />
 ))
@@ -28,13 +28,13 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "eth-flex eth-flex-1 eth-items-center eth-justify-between eth-py-4 eth-font-medium eth-transition-all hover:eth-underline [&[data-state=open]>svg]:eth-rotate-180",
+        "accordion-trigger",
         className
       )}
       {...props}
     >
       {children}
-      <ChevronDown className="eth-h-4 eth-w-4 eth-shrink-0 eth-transition-transform eth-duration-200" />
+      <ChevronDown className="accordion-indicator" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
@@ -46,10 +46,12 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="eth-overflow-hidden eth-text-sm eth-transition-all data-[state=closed]:eth-animate-accordion-up data-[state=open]:eth-animate-accordion-down"
+    className={cn(
+      "accordion-item",
+    )}
     {...props}
   >
-    <div className={cn("eth-pb-4 eth-pt-0", className)}>{children}</div>
+    <div className={className}>{children}</div>
   </AccordionPrimitive.Content>
 ))
 
