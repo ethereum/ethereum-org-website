@@ -7,11 +7,11 @@ import NextDocument, {
 } from "next/document"
 import { ColorModeScript } from "@chakra-ui/react"
 
-import theme from "@/@chakra-ui/theme"
-
 import { Lang } from "@/lib/types"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
+
+import { STORAGE_KEY } from "./_app"
 
 class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
@@ -39,7 +39,11 @@ class Document extends NextDocument {
           />
         </Head>
         <body>
-          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+          {/*
+            Still needed to insert the chakra specific classname on the `body` (`chakra-ui-light` & `chakra-ui-dark`)
+            and avoid color mode flashing
+          */}
+          <ColorModeScript initialColorMode="system" storageKey={STORAGE_KEY} />
           <Main />
           <NextScript />
         </body>

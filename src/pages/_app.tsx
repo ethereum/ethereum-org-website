@@ -1,21 +1,19 @@
 import { useEffect } from "react"
-import { merge } from "lodash"
 import { appWithTranslation } from "next-i18next"
-// ChakraProvider import updated as recommended on https://github.com/chakra-ui/chakra-ui/issues/4975#issuecomment-1174234230
-// to reduce bundle size. Should be reverted to "@chakra-ui/react" in case on theme issues
-import { ChakraProvider } from "@chakra-ui/provider"
+import { ThemeProvider as NextThemesProvider } from "next-themes"
 import { init } from "@socialgouv/matomo-next"
 
-import customTheme from "@/@chakra-ui/theme"
-
 import { AppPropsWithLayout } from "@/lib/types"
+
+import ChakraThemeProvider from "@/components/ChakraThemeProvider"
 
 import "@/styles/global.css"
 import "@/styles/main.css"
 
-import { useLocaleDirection } from "@/hooks/useLocaleDirection"
 import { RootLayout } from "@/layouts/RootLayout"
 import { mono } from "@/lib/fonts"
+
+export const STORAGE_KEY = "theme"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   useEffect(() => {
@@ -31,10 +29,6 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page)
 
-  const direction = useLocaleDirection()
-
-  const theme = merge(customTheme, { direction })
-
   return (
     <>
       <style jsx global>
@@ -45,15 +39,23 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
           }
         `}
       </style>
-      <ChakraProvider theme={theme}>
-        <RootLayout
-          contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
-          contentNotTranslated={pageProps.contentNotTranslated}
-          lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
-        >
-          {getLayout(<Component {...pageProps} />)}
-        </RootLayout>
-      </ChakraProvider>
+      <NextThemesProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+        storageKey={STORAGE_KEY}
+      >
+        <ChakraThemeProvider>
+          <RootLayout
+            contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
+            contentNotTranslated={pageProps.contentNotTranslated}
+            lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
+          >
+            {getLayout(<Component {...pageProps} />)}
+          </RootLayout>
+        </ChakraThemeProvider>
+      </NextThemesProvider>
     </>
   )
 }

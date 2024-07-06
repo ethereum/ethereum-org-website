@@ -1,5 +1,6 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
+import { useTheme } from "next-themes"
 import {
   BsBook,
   BsBuildings,
@@ -19,7 +20,6 @@ import {
 } from "react-icons/bs"
 import { PiFlask, PiUsersFourLight } from "react-icons/pi"
 import {
-  useColorMode,
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react"
@@ -36,9 +36,9 @@ export const useNav = () => {
   const { asPath } = useRouter()
   const { isOpen, onToggle } = useDisclosure()
   const { t } = useTranslation("common")
+  const { theme, setTheme } = useTheme()
 
   const colorToggleEvent = useColorModeValue("dark mode", "light mode") // This will be inverted as the state is changing
-  const { toggleColorMode: chakraToggleColorMode } = useColorMode()
 
   const linkSections: NavSections = {
     learn: {
@@ -477,7 +477,7 @@ export const useNav = () => {
       : ""
 
   const toggleColorMode = () => {
-    chakraToggleColorMode()
+    setTheme(theme === "dark" ? "light" : "dark")
     trackCustomEvent({
       eventCategory: "nav bar",
       eventAction: "click",
