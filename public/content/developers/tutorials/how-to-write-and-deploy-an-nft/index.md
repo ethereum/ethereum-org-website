@@ -43,11 +43,15 @@ You can download MetaMask and create an account for free [here](https://metamask
 
 ## Step 4: Add ether from a Faucet {#add-ether-from-a-faucet}
 
-In order to deploy our smart contract to the test network, we’ll need "fake" ETH - or SepoliaETH.  You can get SepoliaETH from a [faucet](https://www.alchemy.com/faucets#:~:text=A%20testnet%20faucet%20provides%20web3%20developers%20with%20free%20tokens%20for%20deploying%2C%20testing%2C%20and%20optimizing%20smart%20contracts%20on%20test%20blockchains%20such%20as%20Sepolia)!  However, most faucets have other requirements - the [Alchemy faucet](https://www.alchemy.com/faucets/ethereum-sepolia) requires at least 0.001 ETH (about [\$3](https://nft-tutorial-utils.vercel.app/?ethValue=0.001) right now), while the [Infura faucet](https://www.infura.io/faucet/sepolia) requires an Infura account.  This [Google Cloud faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) currently has no requirements, but this could change by the time you're reading this tutorial!
+In order to deploy our smart contract to the test network, we’ll need "fake" ETH - or SepoliaETH.  You can get SepoliaETH from a [faucet](https://www.alchemy.com/faucets#:~:text=A%20testnet%20faucet%20provides%20web3%20developers%20with%20free%20tokens%20for%20deploying%2C%20testing%2C%20and%20optimizing%20smart%20contracts%20on%20test%20blockchains%20such%20as%20Sepolia)!  However, most faucets have other requirements - the [Alchemy faucet](https://www.alchemy.com/faucets/ethereum-sepolia) requires at least 0.001 ETH (about [US\$3 ](https://www.coinbase.com/converter/eth/usd)right now), while the [Infura faucet](https://www.infura.io/faucet/sepolia) requires an Infura account.  This [Google Cloud faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) currently has no requirements, but this could change by the time you're reading this tutorial!  Once you've used a faucet to get SepoliaETH, you can open MetaMask again to check your balance.
 
-## Step 5: Check your Balance {#check-balance}
+## Step 5: Check our balance with Etherscan {#check-balance-with-etherscan}
 
-To double check our balance is there, let’s use Etherscan
+To double check our balance is there, let’s use [Etherscan]([About Us (etherscan.io)](https://etherscan.io/aboutus)), the Ethereum block explorer!  A [block explorer](https://www.sofi.com/learn/content/blockchain-explorer/)) is a website that lets you check out various transactions on the blockchain, keeping everything nice and transparent.  
+
+Paste your wallet address [here](https://sepolia.etherscan.io/balancecheck-tool), and then click on the "Lookup" button.  You should see a value equal to your SepoliaETH balance pop up!
+
+![Check your wallet balance](./check-balance.gif)
 
 ## Step 6: Initialize our project {#initialize-project}
 
@@ -56,11 +60,11 @@ First, we’ll need to create a folder for our project. Navigate to your command
     mkdir my-nft
     cd my-nft
 
-Now that we’re inside our project folder, we’ll use npm init to initialize the project. If you don’t already have npm installed, follow [these instructions](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (we’ll also need [Node.js](https://nodejs.org/en/download/), so download that too!).
+Now that we’re inside our project folder, we’ll use npm init to initialize the project. If you don’t already have npm installed, follow [these instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
     npm init
 
-It doesn’t really matter how you answer the installation questions; here is how we did it for reference:
+It doesn’t really matter how you answer the installation questions, but here's how we did it for reference:
 
     package name: (my-nft)
     version: (1.0.0)
@@ -87,9 +91,9 @@ It doesn’t really matter how you answer the installation questions; here is ho
 
 Approve the package.json, and we’re good to go!
 
-## Step 7: Install [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
+## Step 7: Install Hardhat {#install-hardhat}
 
-Hardhat is a development environment to compile, deploy, test, and debug your Ethereum software. It helps developers when building smart contracts and dapps locally before deploying to the live chain.
+[Hardhat](https://hardhat.org/docs) is a development environment to compile, deploy, test, and debug your Ethereum software. It helps developers test their smart contracts and dApps locally and make sure they work before deploying them the live chain.
 
 Inside our my-nft project run:
 
@@ -113,7 +117,7 @@ You should then see a welcome message and option to select what you want to do. 
     888    888 .d888888 888    888  888 888  888 .d888888 888
     888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
     888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
-    👷 Welcome to Hardhat v2.0.11 👷‍
+    👷 Welcome to Hardhat v2.22.6 👷‍
     ? What do you want to do? …
     Create a sample project
     ❯ Create an empty hardhat.config.js
@@ -128,76 +132,93 @@ To keep our project organized, we’ll create two new folders. Navigate to the r
     mkdir contracts
     mkdir scripts
 
-- contracts/ is where we’ll keep our NFT smart contract code
+- contracts/ is the directory where we’ll keep our NFT smart contract code
 
-- scripts/ is where we’ll keep scripts to deploy and interact with our smart contract
+- scripts/ is the directory where we’ll keep scripts to deploy and interact with our smart contract
 
 ## Step 10: Write our contract {#write-contract}
 
 Now that our environment is set up, on to more exciting stuff: _writing our smart contract code!_
 
-Open up the my-nft project in your favorite editor (we like [VSCode](https://code.visualstudio.com/)). Smart contracts are written in a language called Solidity which is what we will use to write our MyNFT.sol smart contract.‌
+Open up the my-nft project in your favorite editor. Smart contracts are written in a language called Solidity, which is what we will use to write our MyNFT.sol smart contract.‌
 
 1. Navigate to the `contracts` folder and create a new file called MyNFT.sol
 
-2. Below is our NFT smart contract code, which we based on the [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc721) library’s ERC-721 implementation. Copy and paste the contents below into your MyNFT.sol file.
+2. Below is our NFT smart contract code, which we based on the OpenZeppelin Contract Wizard's ERC-721 code, with the mintable, auto-increment IDs, and URIStorage options checked in.  You can play around with the Contract Wizard [here](https://wizard.openzeppelin.com/#erc721)! Copy and paste the contents below into your MyNFT.sol file.
 
-   ```solidity
-   //Contract based on [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
-   // SPDX-License-Identifier: MIT
-   pragma solidity ^0.8.0;
+```solidity// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT
+// Compatible with OpenZeppelin Contracts ^5.0.0
+pragma solidity ^0.8.20;
 
-   import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-   import "@openzeppelin/contracts/utils/Counters.sol";
-   import "@openzeppelin/contracts/access/Ownable.sol";
-   import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-   contract MyNFT is ERC721URIStorage, Ownable {
-       using Counters for Counters.Counter;
-       Counters.Counter private _tokenIds;
+contract MyToken is ERC721, ERC721URIStorage, Ownable {
+    uint256 private _nextTokenId;
 
-       constructor() ERC721("MyNFT", "NFT") {}
+    constructor(address initialOwner)
+        ERC721("MyNFT", "NFT")
+        Ownable(initialOwner)
+    {}
 
-       function mintNFT(address recipient, string memory tokenURI)
-           public onlyOwner
-           returns (uint256)
-       {
-           _tokenIds.increment();
+    function safeMint(address to, string memory uri) public onlyOwner {
+        uint256 tokenId = _nextTokenId++;
+        _safeMint(to, tokenId);
+        _setTokenURI(tokenId, uri);
+    }
 
-           uint256 newItemId = _tokenIds.current();
-           _mint(recipient, newItemId);
-           _setTokenURI(newItemId, tokenURI);
+    // The following functions are overrides required by Solidity.
 
-           return newItemId;
-       }
-   }
-   ```
+    function tokenURI(uint256 tokenId)
+        public
+        view
+        override(ERC721, ERC721URIStorage)
+        returns (string memory)
+    {
+        return super.tokenURI(tokenId);
+    }
 
-3. Because we are inheriting classes from the OpenZeppelin contracts library, in your command line run `npm install @openzeppelin/contracts` to install the library into our folder.
+    function supportsInterface(bytes4 interfaceId)
+        public
+        view
+        override(ERC721, ERC721URIStorage)
+        returns (bool)
+    {
+        return super.supportsInterface(interfaceId);
+    }
+}
+
+```
+
+3. Because we are inheriting classes from the OpenZeppelin contracts library, in your command line run `npm install @openzeppelin/contracts` to install the library.
 
 So, what does this code _do_ exactly? Let’s break it down, line-by-line.
 
 At the top of our smart contract, we import three [OpenZeppelin](https://openzeppelin.com/) smart contract classes:
 
-- @openzeppelin/contracts/token/ERC721/ERC721.sol contains the implementation of the ERC-721 standard, which our NFT smart contract will inherit. (To be a valid NFT, your smart contract must implement all the methods of the ERC-721 standard.) To learn more about the inherited ERC-721 functions, check out the interface definition [here](https://eips.ethereum.org/EIPS/eip-721).
+- [`@openzeppelin/contracts/token/ERC721/ERC721.sol`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol) contains the implementation of the ERC-721 standard, which our NFT smart contract will inherit. (To be a valid NFT, your smart contract must implement all the methods of the ERC-721 standard.) To learn more about the inherited ERC-721 functions, check out the interface definition [here](https://eips.ethereum.org/EIPS/eip-721).
 
-- @openzeppelin/contracts/utils/Counters.sol provides counters that can only be incremented or decremented by one. Our smart contract uses a counter to keep track of the total number of NFTs minted and set the unique ID on our new NFT. (Each NFT minted using a smart contract must be assigned a unique ID—here our unique ID is just determined by the total number of NFTs in existence. For example, the first NFT we mint with our smart contract has an ID of "1," our second NFT has an ID of "2," etc.)
+- [`@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/extensions/ERC721URIStorage.sol) contains the implementation of the `IERC721Metadata` schema, which allows ERC-721 smart contracts to contain and return additional information, such as a link to an image.  This is important for later, when we add a cool picture to our NFT!
 
-- @openzeppelin/contracts/access/Ownable.sol sets up [access control](https://docs.openzeppelin.com/contracts/3.x/access-control) on our smart contract, so only the owner of the smart contract (you) can mint NFTs. (Note, including access control is entirely a preference. If you'd like anyone to be able to mint an NFT using your smart contract, remove the word Ownable on line 10 and onlyOwner on line 17.)
+- @openzeppelin/contracts/access/Ownable.sol sets up [access control](https://docs.openzeppelin.com/contracts/5.x/access-control) on our smart contract, so only the owner of the smart contract (you) can mint NFTs. (Note, including access control is entirely a preference. If you'd like anyone to be able to mint an NFT using your smart contract, remove the lines `Ownable(initialOwner)` and `import "@openzeppelin/contracts/access/Ownable.sol";`, and the words `public onlyOwner`, )
 
-After our import statements, we have our custom NFT smart contract, which is surprisingly short — it only contains a counter, a constructor, and single function! This is thanks to our inherited OpenZeppelin contracts, which implement most of the methods we need to create an NFT, such as `ownerOf` which returns the owner of the NFT, and `transferFrom`, which transfers ownership of the NFT from one account to another.
+After our import statements, we have our custom NFT smart contract, which is surprisingly short — it only contains a counter, a constructor, and single function! This is thanks to our inherited OpenZeppelin contracts, which implement most of the methods we need to create an NFT, such as `ownerOf` which returns the owner of the NFT, and `transferFrom`, which transfers ownership of the NFT from one account to another.  
 
 In our ERC-721 constructor, you’ll notice we pass 2 strings, “MyNFT” and “NFT.” The first variable is the smart contract’s name, and the second is its symbol. You can name each of these variables whatever you wish!
 
-Finally, we have our function `mintNFT(address recipient, string memory tokenURI)` that allows us to mint an NFT! You'll notice this function takes in two variables:
+Next, we have our function `safeMint(address to, string memory uri)` that allows us to mint an NFT! You'll notice this function takes in two variables:
 
-- `address recipient` specifies the address that will receive your freshly minted NFT
+- `address to` specifies the address that will receive your freshly minted NFT
 
-- `string memory tokenURI` is a string that should resolve to a JSON document that describes the NFT's metadata. An NFT's metadata is really what brings it to life, allowing it to have configurable properties, such as a name, description, image, and other attributes. In part 2 of this tutorial, we will describe how to configure this metadata.
+- `string memory uri` is a string that should resolve to a JSON document that describes the NFT's metadata. An NFT's metadata is really what brings it to life, allowing it to have configurable properties, such as a name, description, image, and other attributes. In part 2 of this tutorial, we will describe how to configure this metadata.
 
-`mintNFT` calls some methods from the inherited ERC-721 library, and ultimately returns a number that represents the ID of the freshly minted NFT.
+`safeMint` calls some methods from the inherited ERC-721 library, and ultimately returns a number that represents the ID of the freshly minted NFT.
 
-## Step 11: Connect MetaMask & Alchemy to your project {#connect-metamask-and-alchemy}
+Finally, we have some "function overrides that are required by Solidity"!  While these are necessary, their reasons for existence are rather arcane.  If you're interested, [here's](https://forum.openzeppelin.com/t/the-following-functions-are-overrides-required-by-solidity/20104/4) a short explanation written by a member of the Solidity dev team explaining why we need them.
+
+## Step 11: Connect MetaMask and Alchemy to your project {#connect-metamask-and-alchemy}
 
 Now that we’ve created a MetaMask wallet, Alchemy account, and written our smart contract, it’s time to connect the three.
 
@@ -211,11 +232,13 @@ First, install the dotenv package in your project directory:
 
 Then, create a `.env` file in the root directory of our project, and add your MetaMask private key and HTTP Alchemy API URL to it.
 
-- Follow [these instructions](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) to export your private key from MetaMask
+- Here's how to find your MetaMask private key:
 
-- See below to get HTTP Alchemy API URL and copy it to your clipboard
+![Find your MetaMask private key](./show-private-key.gif)
 
-![Copy your Alchemy API URL](./copy-alchemy-api-url.gif)
+- Here's how to get your Alchemy API URL and copy it to your clipboard
+
+![Get your Alchemy API URL](./get-alchemy-api-url.gif)
 
 Your `.env` should now look like this:
 
