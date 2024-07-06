@@ -65,7 +65,7 @@
     --body-base-light: var(--gray-800);
     --body-medium-light: var(--gray-500);
     --body-light-light: var(--gray-200);
-    --background-base: #ffffff;
+    --background-base-light: #ffffff;
     --background-highlight-light: var(--gray-100);
     --disabled-light: var(--gray-400);
     --attention-base-light: var(--yellow-500);

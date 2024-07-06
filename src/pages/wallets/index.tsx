@@ -43,7 +43,6 @@ import DappsImage from "@/public/images/doge-computer.png"
 import ETHImage from "@/public/images/eth-logo.png"
 import FindWalletImage from "@/public/images/wallets/find-wallet.png"
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
-import ChakraProvider from "@/components/ChakraProvider"
 
 const Page = (props: BoxProps) => (
   <Flex
@@ -274,248 +273,239 @@ const WalletsPage = () => {
   ]
 
   return (
-    <ChakraProvider>
-      <Page>
-        <PageMetadata
-          title={t("page-wallets-meta-title")}
-          description={t("page-wallets-meta-description")}
-          image="/images/wallets/wallet-hero.png"
-        />
-        <PageHero content={heroContent} isReverse />
-        <GrayContainer>
-          <Intro>
-            <H2>{t("page-wallets-whats-a-wallet")}</H2>
-          </Intro>
-          <TwoColumnContent mb={0}>
-            <Box
-              flexGrow="0"
-              flexShrink="1"
-              flexBasis="50%"
-              me={{ base: 0, lg: 8 }}
-              mt={{ lg: 0 }}
-              maxWidth={{ lg: "100%" }}
-            >
-              <Text>{t("page-wallets-description")}</Text>
-              <Text>{t("page-wallets-desc-2")}</Text>
-              <CardList items={guides} mb={{ base: 6, lg: 0 }} />
-            </Box>
-            <RightColumn>
-              <Text>{t("page-wallets-desc-3")}</Text>
-              <Text>{t("page-wallets-desc-4")}</Text>
-            </RightColumn>
-          </TwoColumnContent>
-          <Content>
-            <CardContainer>
-              {cards.map((card, idx) => (
-                <StyledCard
-                  key={idx}
-                  emoji={card.emoji}
-                  title={card.title}
-                  description={card.description}
-                />
-              ))}
-            </CardContainer>
-          </Content>
-        </GrayContainer>
-        <TwoColumnContent marginBottom={-8} marginTop={8}>
-          <LeftColumn>
-            <H2>{t("page-wallets-accounts-addresses")}</H2>
-            <Text>{t("page-wallets-accounts-addresses-desc")}</Text>
-            <ul>
-              <li>
-                <Text>
-                  <Translation id="page-wallets:page-wallets-ethereum-account" />
-                </Text>
-              </li>
-              <li>
-                <Text>
-                  <Translation id="page-wallets:page-wallets-accounts-ethereum-addresses" />
-                </Text>
-              </li>
-              <li>
-                <Text>
-                  <Translation id="page-wallets:page-wallets-ethereum-wallet" />
-                </Text>
-              </li>
-            </ul>
-            <Text>{t("page-wallets-most-wallets")}</Text>
-          </LeftColumn>
-          <RightColumn mt={{ base: 12, lg: 0 }}>
-            <H2>{t("page-wallets-types")}</H2>
-            <Text>{t("page-wallets-types-desc")}</Text>
-            <Box>
-              {types.map((type, idx) => (
-                <HorizontalCard
-                  minWidth="100%"
-                  marginTop={2}
-                  marginBottom={2}
-                  ms={0}
-                  me={0}
-                  key={idx}
-                  emoji={type.emoji}
-                  description={type.description}
-                  emojiSize={2.5}
-                  alignItems="center"
-                />
-              ))}
-            </Box>
+    <Page>
+      <PageMetadata
+        title={t("page-wallets-meta-title")}
+        description={t("page-wallets-meta-description")}
+        image="/images/wallets/wallet-hero.png"
+      />
+      <PageHero content={heroContent} isReverse />
+      <GrayContainer>
+        <Intro>
+          <H2>{t("page-wallets-whats-a-wallet")}</H2>
+        </Intro>
+        <TwoColumnContent mb={0}>
+          <Box
+            flexGrow="0"
+            flexShrink="1"
+            flexBasis="50%"
+            me={{ base: 0, lg: 8 }}
+            mt={{ lg: 0 }}
+            maxWidth={{ lg: "100%" }}
+          >
+            <Text>{t("page-wallets-description")}</Text>
+            <Text>{t("page-wallets-desc-2")}</Text>
+            <CardList items={guides} mb={{ base: 6, lg: 0 }} />
+          </Box>
+          <RightColumn>
+            <Text>{t("page-wallets-desc-3")}</Text>
+            <Text>{t("page-wallets-desc-4")}</Text>
           </RightColumn>
         </TwoColumnContent>
-        {locale === "en" ? (
-          <Content my={20} px={0}>
-            <Simulator data={walletOnboardingSimData}>
-              <ChakraText
-                fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
-                fontStyle="italic"
-                color="body.medium"
-                mb={2}
-              >
-                Interactive tutorial
-              </ChakraText>
-              <Heading
-                as="h2"
-                size={{ base: "xl", lg: "2xl" }}
-                lineHeight="115%"
-                fontWeight="bold"
-                m={0}
-              >
-                How to use a wallet
-              </Heading>
-            </Simulator>
-          </Content>
-        ) : (
-          <GrayContainer
-            my={12}
-            bgGradient="linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%,
+        <Content>
+          <CardContainer>
+            {cards.map((card, idx) => (
+              <StyledCard
+                key={idx}
+                emoji={card.emoji}
+                title={card.title}
+                description={card.description}
+              />
+            ))}
+          </CardContainer>
+        </Content>
+      </GrayContainer>
+      <TwoColumnContent marginBottom={-8} marginTop={8}>
+        <LeftColumn>
+          <H2>{t("page-wallets-accounts-addresses")}</H2>
+          <Text>{t("page-wallets-accounts-addresses-desc")}</Text>
+          <ul>
+            <li>
+              <Text>
+                <Translation id="page-wallets:page-wallets-ethereum-account" />
+              </Text>
+            </li>
+            <li>
+              <Text>
+                <Translation id="page-wallets:page-wallets-accounts-ethereum-addresses" />
+              </Text>
+            </li>
+            <li>
+              <Text>
+                <Translation id="page-wallets:page-wallets-ethereum-wallet" />
+              </Text>
+            </li>
+          </ul>
+          <Text>{t("page-wallets-most-wallets")}</Text>
+        </LeftColumn>
+        <RightColumn mt={{ base: 12, lg: 0 }}>
+          <H2>{t("page-wallets-types")}</H2>
+          <Text>{t("page-wallets-types-desc")}</Text>
+          <Box>
+            {types.map((type, idx) => (
+              <HorizontalCard
+                minWidth="100%"
+                marginTop={2}
+                marginBottom={2}
+                ms={0}
+                me={0}
+                key={idx}
+                emoji={type.emoji}
+                description={type.description}
+                emojiSize={2.5}
+                alignItems="center"
+              />
+            ))}
+          </Box>
+        </RightColumn>
+      </TwoColumnContent>
+      {locale === "en" ? (
+        <Content my={20} px={0}>
+          <Simulator data={walletOnboardingSimData}>
+            <ChakraText
+              fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
+              fontStyle="italic"
+              color="body.medium"
+              mb={2}
+            >
+              Interactive tutorial
+            </ChakraText>
+            <Heading
+              as="h2"
+              size={{ base: "xl", lg: "2xl" }}
+              lineHeight="115%"
+              fontWeight="bold"
+              m={0}
+            >
+              How to use a wallet
+            </Heading>
+          </Simulator>
+        </Content>
+      ) : (
+        <GrayContainer
+          my={12}
+          bgGradient="linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%,
     rgba(134, 168, 231, 0.2) 58.46%,
     rgba(145, 234, 228, 0.2) 97.05%)"
-          >
-            <Content>
-              <Flex flexDirection="column" alignItems="center" mb="8">
-                <H2>{t("page-wallets-features-title")}</H2>
-                <Box
-                  fontSize="xl"
-                  lineHeight={1.4}
-                  color="text"
-                  textAlign="center"
-                  mb={6}
-                >
-                  {t("page-wallets-features-desc")}
-                </Box>
-                <ButtonLink to="/wallets/find-wallet/">
-                  {t("page-wallets-find-wallet-btn")}
-                </ButtonLink>
-                <Image
-                  src={FindWalletImage}
-                  alt=""
-                  mt={8}
-                  maxW="800px"
-                  backgroundSize="cover"
-                  backgroundRepeat="no-repeat"
-                  w="full"
-                />
-              </Flex>
-            </Content>
-          </GrayContainer>
-        )}
-        <TwoColumnContent>
-          <LeftColumn>
-            <H2>{t("page-wallets-stay-safe")}</H2>
-            <Box lineHeight={1.4} mb={6} color="text300">
-              <Translation id="page-wallets:page-wallets-stay-safe-desc" />
-            </Box>
-            <Box>
-              <ChecklistItem
-                key="0"
-                emoji=":white_check_mark:"
-                title={t("page-wallets-take-responsibility")}
-                description={t("page-wallets-take-responsibility-desc")}
-              />
-              <ChecklistItem
-                key="1"
-                emoji=":white_check_mark:"
-                title={
-                  <Translation id="page-wallets:page-wallets-seed-phrase" />
-                }
-                description={t("page-wallets-seed-phrase-desc")}
+        >
+          <Content>
+            <Flex flexDirection="column" alignItems="center" mb="8">
+              <H2>{t("page-wallets-features-title")}</H2>
+              <Box
+                fontSize="xl"
+                lineHeight={1.4}
+                color="text"
+                textAlign="center"
+                mb={6}
               >
-                <Text>{t("page-wallets-seed-phrase-example")}</Text>
-                <Box bg="black" p={2} mb={4} borderRadius="base">
-                  <Text
-                    fontFamily="monospace"
-                    fontSize="sm"
-                    color="white"
-                    mb={0}
-                  >
-                    {t("page-wallets-seed-phrase-snippet")}
-                  </Text>
-                </Box>
-                <Text>{t("page-wallets-seed-phrase-write-down")}</Text>
-              </ChecklistItem>
-              <ChecklistItem
-                key="2"
-                emoji=":white_check_mark:"
-                title={t("page-wallets-bookmarking")}
-                description={t("page-wallets-bookmarking-desc")}
-              />
-              <ChecklistItem
-                key="3"
-                emoji=":white_check_mark:"
-                title={t("page-wallets-triple-check")}
-                description={t("page-wallets-triple-check-desc")}
-              />
-            </Box>
-          </LeftColumn>
-          <RightColumn mt={{ base: 12, lg: 0 }}>
-            <H2>{t("page-wallets-tips")}</H2>
-            <Box lineHeight={1.4} color="text300" mb={6}>
-              {t("page-wallets-tips-community")}
-            </Box>
-            <CardList items={articles} />
-          </RightColumn>
-        </TwoColumnContent>
-        <Content>
-          <Divider />
-          <H2>{t("page-wallets-explore")}</H2>
-          <CalloutCardContainer>
-            <Callout
-              flex="1 1 424px"
-              minH="full"
-              image={ETHImage}
-              titleKey="page-wallets:page-wallets-get-some"
-              alt={t("page-wallets-get-some-alt")}
-              descriptionKey="page-wallets:page-wallets-get-some-desc"
-            >
-              <Box>
-                <ButtonLink to="/get-eth/">
-                  {t("page-wallets-get-some-btn")}
-                </ButtonLink>
+                {t("page-wallets-features-desc")}
               </Box>
-            </Callout>
-            <Callout
-              flex="1 1 424px"
-              minH="full"
-              image={DappsImage}
-              titleKey="page-wallets:page-wallets-try-dapps"
-              alt={t("page-wallets-try-dapps-alt")}
-              descriptionKey="page-wallets:page-wallets-try-dapps-desc"
+              <ButtonLink to="/wallets/find-wallet/">
+                {t("page-wallets-find-wallet-btn")}
+              </ButtonLink>
+              <Image
+                src={FindWalletImage}
+                alt=""
+                mt={8}
+                maxW="800px"
+                backgroundSize="cover"
+                backgroundRepeat="no-repeat"
+                w="full"
+              />
+            </Flex>
+          </Content>
+        </GrayContainer>
+      )}
+      <TwoColumnContent>
+        <LeftColumn>
+          <H2>{t("page-wallets-stay-safe")}</H2>
+          <Box lineHeight={1.4} mb={6} color="text300">
+            <Translation id="page-wallets:page-wallets-stay-safe-desc" />
+          </Box>
+          <Box>
+            <ChecklistItem
+              key="0"
+              emoji=":white_check_mark:"
+              title={t("page-wallets-take-responsibility")}
+              description={t("page-wallets-take-responsibility-desc")}
+            />
+            <ChecklistItem
+              key="1"
+              emoji=":white_check_mark:"
+              title={<Translation id="page-wallets:page-wallets-seed-phrase" />}
+              description={t("page-wallets-seed-phrase-desc")}
             >
-              <Box>
-                <ButtonLink to="/dapps/">
-                  {t("page-wallets-more-on-dapps-btn")}
-                </ButtonLink>
+              <Text>{t("page-wallets-seed-phrase-example")}</Text>
+              <Box bg="black" p={2} mb={4} borderRadius="base">
+                <Text fontFamily="monospace" fontSize="sm" color="white" mb={0}>
+                  {t("page-wallets-seed-phrase-snippet")}
+                </Text>
               </Box>
-            </Callout>
-          </CalloutCardContainer>
-        </Content>
-        <Content>
-          <StandaloneQuizWidget quizKey="wallets" />
-        </Content>
-        <Content>
-          <FeedbackCard />
-        </Content>
-      </Page>
-    </ChakraProvider>
+              <Text>{t("page-wallets-seed-phrase-write-down")}</Text>
+            </ChecklistItem>
+            <ChecklistItem
+              key="2"
+              emoji=":white_check_mark:"
+              title={t("page-wallets-bookmarking")}
+              description={t("page-wallets-bookmarking-desc")}
+            />
+            <ChecklistItem
+              key="3"
+              emoji=":white_check_mark:"
+              title={t("page-wallets-triple-check")}
+              description={t("page-wallets-triple-check-desc")}
+            />
+          </Box>
+        </LeftColumn>
+        <RightColumn mt={{ base: 12, lg: 0 }}>
+          <H2>{t("page-wallets-tips")}</H2>
+          <Box lineHeight={1.4} color="text300" mb={6}>
+            {t("page-wallets-tips-community")}
+          </Box>
+          <CardList items={articles} />
+        </RightColumn>
+      </TwoColumnContent>
+      <Content>
+        <Divider />
+        <H2>{t("page-wallets-explore")}</H2>
+        <CalloutCardContainer>
+          <Callout
+            flex="1 1 424px"
+            minH="full"
+            image={ETHImage}
+            titleKey="page-wallets:page-wallets-get-some"
+            alt={t("page-wallets-get-some-alt")}
+            descriptionKey="page-wallets:page-wallets-get-some-desc"
+          >
+            <Box>
+              <ButtonLink to="/get-eth/">
+                {t("page-wallets-get-some-btn")}
+              </ButtonLink>
+            </Box>
+          </Callout>
+          <Callout
+            flex="1 1 424px"
+            minH="full"
+            image={DappsImage}
+            titleKey="page-wallets:page-wallets-try-dapps"
+            alt={t("page-wallets-try-dapps-alt")}
+            descriptionKey="page-wallets:page-wallets-try-dapps-desc"
+          >
+            <Box>
+              <ButtonLink to="/dapps/">
+                {t("page-wallets-more-on-dapps-btn")}
+              </ButtonLink>
+            </Box>
+          </Callout>
+        </CalloutCardContainer>
+      </Content>
+      <Content>
+        <StandaloneQuizWidget quizKey="wallets" />
+      </Content>
+      <Content>
+        <FeedbackCard />
+      </Content>
+    </Page>
   )
 }
 

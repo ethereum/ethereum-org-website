@@ -59,7 +59,6 @@ import { fetchGFIs } from "@/lib/api/fetchGFIs"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import remarkInferToc from "@/lib/rehype/remarkInferToc"
-import ChakraProvider from "@/components/ChakraProvider"
 
 interface Params extends ParsedUrlQuery {
   slug: string[]
@@ -263,18 +262,16 @@ ContentPage.getLayout = (page) => {
   const Layout = layoutMapping[layout]
 
   return (
-    <ChakraProvider>
-      <Layout {...layoutProps}>
-        <PageMetadata
-          title={frontmatter.title}
-          description={frontmatter.description}
-          image={frontmatter.image}
-          author={frontmatter.author}
-          canonicalUrl={frontmatter.sourceUrl}
-        />
-        {page}
-      </Layout>
-    </ChakraProvider>
+    <Layout {...layoutProps}>
+      <PageMetadata
+        title={frontmatter.title}
+        description={frontmatter.description}
+        image={frontmatter.image}
+        author={frontmatter.author}
+        canonicalUrl={frontmatter.sourceUrl}
+      />
+      {page}
+    </Layout>
   )
 }
 

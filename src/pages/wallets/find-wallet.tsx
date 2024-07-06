@@ -47,7 +47,7 @@ import {
 import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
 import { useWalletTable } from "@/hooks/useWalletTable"
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
-import ChakraProvider from "@/components/ChakraProvider"
+import ChakraProvider from "@/components/ChakraThemeProvider"
 
 const Subtitle = ({ children }: ChildOnlyProp) => (
   <Text
@@ -144,139 +144,137 @@ const FindWalletPage = ({
   }
 
   return (
-    <ChakraProvider>
-      <Flex as={MainArticle} direction="column" position="relative" w="full">
-        <PageMetadata
-          title={t("page-find-wallet-meta-title")}
-          description={t("page-find-wallet-meta-description")}
-          image="/images/wallets/wallet-hero.png"
-        />
+    <Flex as={MainArticle} direction="column" position="relative" w="full">
+      <PageMetadata
+        title={t("page-find-wallet-meta-title")}
+        description={t("page-find-wallet-meta-description")}
+        image="/images/wallets/wallet-hero.png"
+      />
 
-        <BannerNotification shouldShow={true}>
-          {t("page-find-wallet-footnote-1")}
-        </BannerNotification>
+      <BannerNotification shouldShow={true}>
+        {t("page-find-wallet-footnote-1")}
+      </BannerNotification>
 
-        <Flex
-          direction={{ base: "column", sm: "row" }}
-          position="relative"
-          w="full"
-          p={12}
-          bg="layer2Gradient"
-          mb="44px"
-        >
-          <Box w={{ base: "full", sm: "50%" }} mt={{ base: 8, sm: 0 }}>
-            <Breadcrumbs slug={pathname} />
-            <OldHeading
-              as="h1"
-              fontSize={{ base: "2.5rem", md: "5xl" }}
-              lineHeight={1.4}
-            >
-              {t("page-find-wallet-title")}
-            </OldHeading>
-            <Subtitle>{t("page-find-wallet-description")}</Subtitle>
-            <Subtitle>
-              {t("page-find-wallet-desc-2")}{" "}
-              <InlineLink to="/wallets">
-                {t("page-find-wallet-desc-2-wallets-link")}
-              </InlineLink>
-            </Subtitle>
-          </Box>
-          <Center w={{ base: "full", sm: "50%" }}>
-            <Image
-              src={HeroImage}
-              // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
-              sizes="(max-width: 480px) 100vw, 500px"
-              alt=""
-              priority
-              style={{
-                objectFit: "contain",
-              }}
-            />
-          </Center>
-        </Flex>
-
-        {/* Wallet Personas */}
-        <Box px={{ base: 4, "2xl": 0 }}>
+      <Flex
+        direction={{ base: "column", sm: "row" }}
+        position="relative"
+        w="full"
+        p={12}
+        bg="layer2Gradient"
+        mb="44px"
+      >
+        <Box w={{ base: "full", sm: "50%" }} mt={{ base: 8, sm: 0 }}>
+          <Breadcrumbs slug={pathname} />
           <OldHeading
-            as="h3"
-            fontSize="xl"
-            fontWeight="bold"
+            as="h1"
+            fontSize={{ base: "2.5rem", md: "5xl" }}
             lineHeight={1.4}
-            mt={0}
-            mb={3}
           >
-            {t("page-find-wallet-personas-title")}
+            {t("page-find-wallet-title")}
           </OldHeading>
+          <Subtitle>{t("page-find-wallet-description")}</Subtitle>
+          <Subtitle>
+            {t("page-find-wallet-desc-2")}{" "}
+            <InlineLink to="/wallets">
+              {t("page-find-wallet-desc-2-wallets-link")}
+            </InlineLink>
+          </Subtitle>
+        </Box>
+        <Center w={{ base: "full", sm: "50%" }}>
+          <Image
+            src={HeroImage}
+            // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+            sizes="(max-width: 480px) 100vw, 500px"
+            alt=""
+            priority
+            style={{
+              objectFit: "contain",
+            }}
+          />
+        </Center>
+      </Flex>
 
-          <WalletFilterPersona
+      {/* Wallet Personas */}
+      <Box px={{ base: 4, "2xl": 0 }}>
+        <OldHeading
+          as="h3"
+          fontSize="xl"
+          fontWeight="bold"
+          lineHeight={1.4}
+          mt={0}
+          mb={3}
+        >
+          {t("page-find-wallet-personas-title")}
+        </OldHeading>
+
+        <WalletFilterPersona
+          resetFilters={resetFilters}
+          setFilters={setFilters}
+          selectedPersona={selectedPersona}
+          setSelectedPersona={setSelectedPersona}
+          showMobileSidebar={showMobileSidebar}
+        />
+      </Box>
+
+      {/* Context value is updated when using the language filter */}
+      <WalletSupportedLanguageContext.Provider
+        value={{ supportedLanguage, setSupportedLanguage }}
+      >
+        {/* Mobile filters menu */}
+        <Box hideFrom="lg">
+          <MobileFiltersMenu
+            totalWallets={filteredWallets.length}
+            filters={filters}
+            resetWalletFilter={resetWalletFilter}
+            updateFilterOption={updateFilterOption}
+            updateFilterOptions={updateFilterOptions}
             resetFilters={resetFilters}
-            setFilters={setFilters}
             selectedPersona={selectedPersona}
+            setFilters={setFilters}
             setSelectedPersona={setSelectedPersona}
             showMobileSidebar={showMobileSidebar}
+            onOpen={onOpen}
+            onClose={onClose}
           />
         </Box>
 
-        {/* Context value is updated when using the language filter */}
-        <WalletSupportedLanguageContext.Provider
-          value={{ supportedLanguage, setSupportedLanguage }}
-        >
-          {/* Mobile filters menu */}
-          <Box hideFrom="lg">
-            <MobileFiltersMenu
-              totalWallets={filteredWallets.length}
-              filters={filters}
-              resetWalletFilter={resetWalletFilter}
-              updateFilterOption={updateFilterOption}
-              updateFilterOptions={updateFilterOptions}
-              resetFilters={resetFilters}
-              selectedPersona={selectedPersona}
-              setFilters={setFilters}
-              setSelectedPersona={setSelectedPersona}
-              showMobileSidebar={showMobileSidebar}
-              onOpen={onOpen}
-              onClose={onClose}
-            />
-          </Box>
+        <Box px={{ md: 4, "2xl": 0 }}>
+          <Flex pt={4} pb={6} gap={6}>
+            {/* Filters sidebar */}
+            {/* Use `Show` instead of `hideBelow` prop to avoid rendering the sidebar on mobile */}
+            <Show above="lg">
+              <WalletFilterSidebar
+                top={calc(NAV_BAR_PX_HEIGHT).subtract("2px").toString()}
+                {...{
+                  filters,
+                  resetWalletFilter,
+                  updateFilterOption,
+                  updateFilterOptions,
+                  resetFilters,
+                  selectedPersona,
+                  setFilters,
+                  setSelectedPersona,
+                }}
+              />
+            </Show>
 
-          <Box px={{ md: 4, "2xl": 0 }}>
-            <Flex pt={4} pb={6} gap={6}>
-              {/* Filters sidebar */}
-              {/* Use `Show` instead of `hideBelow` prop to avoid rendering the sidebar on mobile */}
-              <Show above="lg">
-                <WalletFilterSidebar
-                  top={calc(NAV_BAR_PX_HEIGHT).subtract("2px").toString()}
-                  {...{
-                    filters,
-                    resetWalletFilter,
-                    updateFilterOption,
-                    updateFilterOptions,
-                    resetFilters,
-                    selectedPersona,
-                    setFilters,
-                    setSelectedPersona,
-                  }}
-                />
-              </Show>
-
-              {/* Wallets table */}
-              <Box mt={0.5} w="full">
-                <WalletTable
-                  filters={filters}
-                  resetFilters={resetFilters}
-                  resetWalletFilter={resetWalletFilter}
-                  filteredWallets={filteredWallets}
-                  totalWallets={walletCardData.length}
-                  updateMoreInfo={updateMoreInfo}
-                  featureDropdownItems={featureDropdownItems}
-                  onOpen={onOpen}
-                />
-              </Box>
-            </Flex>
-          </Box>
-        </WalletSupportedLanguageContext.Provider>
-      </Flex>
-    </ChakraProvider>
+            {/* Wallets table */}
+            <Box mt={0.5} w="full">
+              <WalletTable
+                filters={filters}
+                resetFilters={resetFilters}
+                resetWalletFilter={resetWalletFilter}
+                filteredWallets={filteredWallets}
+                totalWallets={walletCardData.length}
+                updateMoreInfo={updateMoreInfo}
+                featureDropdownItems={featureDropdownItems}
+                onOpen={onOpen}
+              />
+            </Box>
+          </Flex>
+        </Box>
+      </WalletSupportedLanguageContext.Provider>
+    </Flex>
   )
 }
 

@@ -10,7 +10,10 @@ import "@/styles/globals.css"
 
 import { RootLayout } from "@/layouts/RootLayout"
 import { mono } from "@/lib/fonts"
-import { ThemeProvider } from "@/components/ThemeProvider"
+import { ThemeProvider as NextThemeProvider } from "next-themes"
+import ChakraThemeProvider from "@/components/ChakraThemeProvider"
+
+export const STORAGE_KEY = "theme"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   useEffect(() => {
@@ -43,20 +46,23 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
           }
         `}
       </style>
-      <ThemeProvider
+      <NextThemeProvider
         attribute="class"
         defaultTheme="system"
         enableSystem
         disableTransitionOnChange
+        storageKey={STORAGE_KEY}
       >
-        <RootLayout
-          contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
-          contentNotTranslated={pageProps.contentNotTranslated}
-          lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
-        >
-          {getLayout(<Component {...pageProps} />)}
-        </RootLayout>
-      </ThemeProvider>
+        <ChakraThemeProvider>
+          <RootLayout
+            contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
+            contentNotTranslated={pageProps.contentNotTranslated}
+            lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
+          >
+            {getLayout(<Component {...pageProps} />)}
+          </RootLayout>
+        </ChakraThemeProvider>
+      </NextThemeProvider>
     </>
   )
 }

@@ -31,6 +31,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { FROM_QUERY } from "@/lib/constants"
 
 import type { NavSections } from "./types"
+import { useTheme } from "next-themes"
 
 export const useNav = () => {
   const { asPath } = useRouter()
@@ -38,7 +39,7 @@ export const useNav = () => {
   const { t } = useTranslation("common")
 
   const colorToggleEvent = useColorModeValue("dark mode", "light mode") // This will be inverted as the state is changing
-  const { toggleColorMode: chakraToggleColorMode } = useColorMode()
+  const { theme, setTheme } = useTheme()
 
   const linkSections: NavSections = {
     learn: {
@@ -477,7 +478,7 @@ export const useNav = () => {
       : ""
 
   const toggleColorMode = () => {
-    chakraToggleColorMode()
+    setTheme(theme === "dark" ? "light" : "dark")
     trackCustomEvent({
       eventCategory: "nav bar",
       eventAction: "click",
