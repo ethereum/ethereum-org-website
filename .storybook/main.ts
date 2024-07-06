@@ -21,12 +21,17 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "@storybook/addon-themes",
     "storybook-react-i18next",
-    "@chromatic-com/storybook"
+    "@chromatic-com/storybook",
   ],
   staticDirs: ["../public"],
   framework: {
     name: "@storybook/nextjs",
     options: {},
+  },
+  refs: {
+    "@chakra-ui/react": { 
+      disable: true
+    }
   },
   docs: {
     autodocs: "tag",
