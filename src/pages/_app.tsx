@@ -10,7 +10,8 @@ import customTheme from "@/@chakra-ui/theme"
 
 import { AppPropsWithLayout } from "@/lib/types"
 
-import "../styles/global.css"
+import "@/styles/global.css"
+import "@/styles/main.css"
 
 import { useLocaleDirection } from "@/hooks/useLocaleDirection"
 import { RootLayout } from "@/layouts/RootLayout"
