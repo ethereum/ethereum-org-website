@@ -43,17 +43,13 @@ You can download MetaMask and create an account for free [here](https://metamask
 
 ## Step 4: Add ether from a Faucet {#add-ether-from-a-faucet}
 
-In order to deploy our smart contract to the test network, we’ll need "fake" ETH - or SepoliaETH.  You can get SepoliaETH from a [faucet](https://www.alchemy.com/faucets#:~:text=A%20testnet%20faucet%20provides%20web3%20developers%20with%20free%20tokens%20for%20deploying%2C%20testing%2C%20and%20optimizing%20smart%20contracts%20on%20test%20blockchains%20such%20as%20Sepolia)!  However, most faucets have other requirements - the [Alchemy faucet](https://www.alchemy.com/faucets/ethereum-sepolia) requires at least 0.001 ETH (about [US\$3 ](https://www.coinbase.com/converter/eth/usd)right now), while the [Infura faucet](https://www.infura.io/faucet/sepolia) requires an Infura account.  This [Google Cloud faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) currently has no requirements, but this could change by the time you're reading this tutorial!
+In order to deploy our smart contract to the test network, we’ll need "fake" ETH - or SepoliaETH.  You can get SepoliaETH from a [faucet](https://www.alchemy.com/faucets#:~:text=A%20testnet%20faucet%20provides%20web3%20developers%20with%20free%20tokens%20for%20deploying%2C%20testing%2C%20and%20optimizing%20smart%20contracts%20on%20test%20blockchains%20such%20as%20Sepolia)!  However, most faucets have other requirements - the [Alchemy faucet](https://www.alchemy.com/faucets/ethereum-sepolia) requires at least 0.001 ETH (about [US\$3 ](https://www.coinbase.com/converter/eth/usd)right now), while the [Infura faucet](https://www.infura.io/faucet/sepolia) requires an Infura account.  This [Google Cloud faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) currently has no requirements, but this could change by the time you're reading this tutorial!  Once you've used a faucet to get SepoliaETH, you can open MetaMask again to check your balance.
 
-## Step 5: Check your Balance {#check-balance}
+## Step 5: Check your Balance With Etherscan {#check-balance-with-etherscan}
 
-To double check our balance is there, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of ETH in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
+To double check our balance is there, let’s use [Etherscan]([About Us (etherscan.io)](https://etherscan.io/aboutus)), the Ethereum block explorer!  A [block explorer](https://www.sofi.com/learn/content/blockchain-explorer/)) is a website that lets you check out various transactions on the blockchain, keeping everything nice and transparent.  
 
-    `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
-
-> **Note** This result is in wei, not ETH. Wei is used as the smallest denomination of ether. The conversion from wei to ETH is 1 eth = 10<sup>18</sup> wei. So if we convert 0xde0b6b3a7640000 to decimal we get 1\*10<sup>18</sup> wei, which equals 1 ETH.
-
-Phew! Our fake money is all there.
+Paste your wallet address [here](https://sepolia.etherscan.io/balancecheck-tool), and then click on the "Lookup" button.  
 
 ## Step 6: Initialize our project {#initialize-project}
 
@@ -62,11 +58,11 @@ First, we’ll need to create a folder for our project. Navigate to your command
     mkdir my-nft
     cd my-nft
 
-Now that we’re inside our project folder, we’ll use npm init to initialize the project. If you don’t already have npm installed, follow [these instructions](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (we’ll also need [Node.js](https://nodejs.org/en/download/), so download that too!).
+Now that we’re inside our project folder, we’ll use npm init to initialize the project. If you don’t already have npm installed, follow [these instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
     npm init
 
-It doesn’t really matter how you answer the installation questions; here is how we did it for reference:
+It doesn’t really matter how you answer the installation questions, but here's how we did it for reference:
 
     package name: (my-nft)
     version: (1.0.0)
@@ -93,9 +89,9 @@ It doesn’t really matter how you answer the installation questions; here is ho
 
 Approve the package.json, and we’re good to go!
 
-## Step 7: Install [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
+## Step 7: Install Hardhat {#install-hardhat}
 
-Hardhat is a development environment to compile, deploy, test, and debug your Ethereum software. It helps developers when building smart contracts and dapps locally before deploying to the live chain.
+[Hardhat](https://hardhat.org/docs) is a development environment to compile, deploy, test, and debug your Ethereum software. It helps developers test their smart contracts and dApps locally and make sure they work before deploying them the live chain.
 
 Inside our my-nft project run:
 
@@ -134,50 +130,61 @@ To keep our project organized, we’ll create two new folders. Navigate to the r
     mkdir contracts
     mkdir scripts
 
-- contracts/ is where we’ll keep our NFT smart contract code
+- contracts/ is the directory where we’ll keep our NFT smart contract code
 
-- scripts/ is where we’ll keep scripts to deploy and interact with our smart contract
+- scripts/ is the directory where we’ll keep scripts to deploy and interact with our smart contract
 
 ## Step 10: Write our contract {#write-contract}
 
 Now that our environment is set up, on to more exciting stuff: _writing our smart contract code!_
 
-Open up the my-nft project in your favorite editor (we like [VSCode](https://code.visualstudio.com/)). Smart contracts are written in a language called Solidity which is what we will use to write our MyNFT.sol smart contract.‌
+Open up the my-nft project in your favorite edito. Smart contracts are written in a language called Solidity, which is what we will use to write our MyNFT.sol smart contract.‌
 
 1. Navigate to the `contracts` folder and create a new file called MyNFT.sol
 
-2. Below is our NFT smart contract code, which we based on the [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc721) library’s ERC-721 implementation. Copy and paste the contents below into your MyNFT.sol file.
+2. Below is our NFT smart contract code, which we based on the OpenZeppelin Contract Wizard's ERC-721 code, with mintable and numerable as features. Copy and paste the contents below into your MyNFT.sol file.
 
-   ```solidity
-   //Contract based on [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)
-   // SPDX-License-Identifier: MIT
-   pragma solidity ^0.8.0;
+```solidity// SPDX-License-Identifier: MIT
+// Compatible with OpenZeppelin Contracts ^5.0.0
+pragma solidity ^0.8.20;
 
-   import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-   import "@openzeppelin/contracts/utils/Counters.sol";
-   import "@openzeppelin/contracts/access/Ownable.sol";
-   import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/utils/cryptography/EIP712.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Votes.sol";
 
-   contract MyNFT is ERC721URIStorage, Ownable {
-       using Counters for Counters.Counter;
-       Counters.Counter private _tokenIds;
+contract MyNFT is ERC721, Ownable, EIP712, ERC721Votes {
+    uint256 private _nextTokenId;
 
-       constructor() ERC721("MyNFT", "NFT") {}
+    constructor(address initialOwner)
+        ERC721("MyNFT", "NFT")
+        Ownable(initialOwner)
+        EIP712("MyNFT", "1")
+    {}
 
-       function mintNFT(address recipient, string memory tokenURI)
-           public onlyOwner
-           returns (uint256)
-       {
-           _tokenIds.increment();
+    function safeMint(address to) public onlyOwner {
+        uint256 tokenId = _nextTokenId++;
+        _safeMint(to, tokenId);
+    }
 
-           uint256 newItemId = _tokenIds.current();
-           _mint(recipient, newItemId);
-           _setTokenURI(newItemId, tokenURI);
+    // The following functions are overrides required by Solidity.
 
-           return newItemId;
-       }
-   }
-   ```
+    function _update(address to, uint256 tokenId, address auth)
+        internal
+        override(ERC721, ERC721Votes)
+        returns (address)
+    {
+        return super._update(to, tokenId, auth);
+    }
+
+    function _increaseBalance(address account, uint128 value)
+        internal
+        override(ERC721, ERC721Votes)
+    {
+        super._increaseBalance(account, value);
+    }
+}
+```
 
 3. Because we are inheriting classes from the OpenZeppelin contracts library, in your command line run `npm install @openzeppelin/contracts` to install the library into our folder.
 
