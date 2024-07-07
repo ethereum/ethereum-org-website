@@ -1,11 +1,12 @@
 import { withThemeByClassName } from "@storybook/addon-themes"
 import type { Preview } from "@storybook/react"
 
-import { ThemeProvider } from "../src/components/ThemeProvider"
+import { ThemeProvider } from "../../src/components/ThemeProvider"
 
 import i18n, { baseLocales } from "./i18next"
 
-import "../src/styles/global.css"
+import "../../src/styles/global.css"
+import "../../src/styles/main.css"
 
 
 const preview: Preview = {

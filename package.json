@@ -14,6 +14,7 @@
     "preversion": "bash ./src/scripts/updatePublishDate.sh",
     "crowdin-contributors": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/getCrowdinContributors.ts",
     "storybook": "storybook dev -p 6006",
+    "storybook:tw": "storybook dev -p 6007 -c ./tailwind/.storybook",
     "build-storybook": "storybook build",
     "build-storybook:chromatic": "storybook build --test",
     "chromatic": "chromatic --project-token fee8e66c9916",
