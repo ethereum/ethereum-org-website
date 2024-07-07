@@ -1,6 +1,5 @@
-
 import * as React from "react"
-import {MdChevronRight} from 'react-icons/md'
+import { MdChevronRight } from "react-icons/md"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 
 import { cn } from "@/lib/utils/cn"
@@ -11,11 +10,7 @@ const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
-  <AccordionPrimitive.Item
-    ref={ref}
-    className={className}
-    {...props}
-  />
+  <AccordionPrimitive.Item ref={ref} className={className} {...props} />
 ))
 AccordionItem.displayName = "AccordionItem"
 
@@ -26,10 +21,7 @@ const AccordionTrigger = React.forwardRef<
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       ref={ref}
-      className={cn(
-        "accordion-trigger",
-        className
-      )}
+      className={cn("accordion-trigger", className)}
       {...props}
     >
       {children}
@@ -45,9 +37,7 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className={cn(
-      "accordion-item",
-    )}
+    className={cn("accordion-item")}
     {...props}
   >
     <div className={className}>{children}</div>
@@ -56,4 +46,4 @@ const AccordionContent = React.forwardRef<
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
-export { Accordion, AccordionContent,AccordionItem, AccordionTrigger }
+export { Accordion, AccordionContent, AccordionItem, AccordionTrigger }
