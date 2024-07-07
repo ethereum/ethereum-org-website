@@ -144,9 +144,9 @@ Open up the my-nft project in your favorite editor. Smart contracts are written 
 
 1. Navigate to the `contracts` folder and create a new file called MyNFT.sol
 
-2. Below is our NFT smart contract code, which we based on the OpenZeppelin Contract Wizard's ERC-721 code, with the mintable, auto-increment IDs, and URIStorage options checked in.  You can play around with the Contract Wizard [here](https://wizard.openzeppelin.com/#erc721)! Copy and paste the contents below into your MyNFT.sol file.
+2. Below is our NFT smart contract code, which we based on the OpenZeppelin Contract Wizard's ERC-721 code, with the mintable, auto-increment IDs, and URIStorage options checked in.  You can play around with the Contract Wizard [here](https://wizard.openzeppelin.com/#erc721)!  Copy and paste the contents below into your MyNFT.sol file.
 
-```solidity// SPDX-License-Identifier: MIT
+```solidity
 // SPDX-License-Identifier: MIT
 // Compatible with OpenZeppelin Contracts ^5.0.0
 pragma solidity ^0.8.20;
@@ -155,7 +155,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract MyToken is ERC721, ERC721URIStorage, Ownable {
+contract MyNFT is ERC721, ERC721URIStorage, Ownable {
     uint256 private _nextTokenId;
 
     constructor(address initialOwner)
@@ -189,7 +189,6 @@ contract MyToken is ERC721, ERC721URIStorage, Ownable {
         return super.supportsInterface(interfaceId);
     }
 }
-
 ```
 
 3. Because we are inheriting classes from the OpenZeppelin contracts library, in your command line run `npm install @openzeppelin/contracts` to install the library.
@@ -200,9 +199,9 @@ At the top of our smart contract, we import three [OpenZeppelin](https://openzep
 
 - [`@openzeppelin/contracts/token/ERC721/ERC721.sol`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol) contains the implementation of the ERC-721 standard, which our NFT smart contract will inherit. (To be a valid NFT, your smart contract must implement all the methods of the ERC-721 standard.) To learn more about the inherited ERC-721 functions, check out the interface definition [here](https://eips.ethereum.org/EIPS/eip-721).
 
-- [`@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/extensions/ERC721URIStorage.sol) contains the implementation of the `IERC721Metadata` schema, which allows ERC-721 smart contracts to contain and return additional information, such as a link to an image.  This is important for later, when we add a cool picture to our NFT!
+- [`@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/extensions/ERC721URIStorage.sol) contains the implementation of the `IERC721Metadata` schema, which allows ERC-721 smart contracts to store and return additional information, such as a link to an image.  This is important for later, when we add a cool picture to our NFT!
 
-- @openzeppelin/contracts/access/Ownable.sol sets up [access control](https://docs.openzeppelin.com/contracts/5.x/access-control) on our smart contract, so only the owner of the smart contract (you) can mint NFTs. (Note, including access control is entirely a preference. If you'd like anyone to be able to mint an NFT using your smart contract, remove the lines `Ownable(initialOwner)` and `import "@openzeppelin/contracts/access/Ownable.sol";`, and the words `public onlyOwner`, )
+- @openzeppelin/contracts/access/Ownable.sol sets up [access control](https://docs.openzeppelin.com/contracts/5.x/access-control) on our smart contract, so only the owner of the smart contract (you) can mint NFTs. (Note, including access control is entirely a preference. If you'd like anyone to be able to mint an NFT using your smart contract, remove the lines `Ownable(initialOwner)` and `import "@openzeppelin/contracts/access/Ownable.sol";`, along with the words `public onlyOwner`. )
 
 After our import statements, we have our custom NFT smart contract, which is surprisingly short — it only contains a counter, a constructor, and single function! This is thanks to our inherited OpenZeppelin contracts, which implement most of the methods we need to create an NFT, such as `ownerOf` which returns the owner of the NFT, and `transferFrom`, which transfers ownership of the NFT from one account to another.  
 
@@ -257,7 +256,7 @@ Hardhat makes it super easy to integrate [Plugins](https://hardhat.org/plugins/)
 
 In your project directory type:
 
-    npm install --save-dev @nomiclabs/hardhat-ethers ethers@^5.0.0
+    npm install --save-dev @nomiclabs/hardhat-ethers ethers
 
 We’ll also require ethers in our hardhat.config.js in the next step.
 
