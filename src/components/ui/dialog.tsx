@@ -1,4 +1,3 @@
-"use client"
 
 import * as React from "react"
 import { X } from "lucide-react"
@@ -21,7 +20,7 @@ const DialogOverlay = React.forwardRef<
   <DialogPrimitive.Overlay
     ref={ref}
     className={cn(
-      "eth-fixed eth-inset-0 eth-z-50 eth-bg-black/80 eth- data-[state=open]:eth-animate-in data-[state=closed]:eth-animate-out data-[state=closed]:eth-fade-out-0 data-[state=open]:eth-fade-in-0",
+      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
       className
     )}
     {...props}
@@ -38,15 +37,15 @@ const DialogContent = React.forwardRef<
     <DialogPrimitive.Content
       ref={ref}
       className={cn(
-        "eth-fixed eth-left-[50%] eth-top-[50%] eth-z-50 eth-grid eth-w-full eth-max-w-lg eth-translate-x-[-50%] eth-translate-y-[-50%] eth-gap-4 eth-border eth-bg-background eth-p-6 eth-shadow-lg eth-duration-200 data-[state=open]:eth-animate-in data-[state=closed]:eth-animate-out data-[state=closed]:eth-fade-out-0 data-[state=open]:eth-fade-in-0 data-[state=closed]:eth-zoom-out-95 data-[state=open]:eth-zoom-in-95 data-[state=closed]:eth-slide-out-to-left-1/2 data-[state=closed]:eth-slide-out-to-top-[48%] data-[state=open]:eth-slide-in-from-left-1/2 data-[state=open]:eth-slide-in-from-top-[48%] sm:eth-rounded-lg",
+        "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg",
         className
       )}
       {...props}
     >
       {children}
-      <DialogPrimitive.Close className="eth-absolute eth-right-4 eth-top-4 eth-rounded-sm eth-opacity-70 eth-ring-offset-background eth-transition-opacity hover:eth-opacity-100 focus:eth-outline-none focus:eth-ring-2 focus:eth-ring-ring focus:eth-ring-offset-2 disabled:eth-pointer-events-none data-[state=open]:eth-bg-accent data-[state=open]:eth-text-muted-foreground">
-        <X className="eth-h-4 eth-w-4" />
-        <span className="eth-sr-only">Close</span>
+      <DialogPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground">
+        <X className="h-4 w-4" />
+        <span className="sr-only">Close</span>
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
   </DialogPortal>
@@ -59,7 +58,7 @@ const DialogHeader = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "eth-flex eth-flex-col eth-space-y-1.5 eth-text-center sm:eth-text-left",
+      "flex flex-col space-y-1.5 text-center sm:text-left",
       className
     )}
     {...props}
@@ -73,7 +72,7 @@ const DialogFooter = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "eth-flex eth-flex-col-reverse sm:eth-flex-row sm:eth-justify-end sm:eth-space-x-2",
+      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
       className
     )}
     {...props}
@@ -88,7 +87,7 @@ const DialogTitle = React.forwardRef<
   <DialogPrimitive.Title
     ref={ref}
     className={cn(
-      "eth-text-lg eth-font-semibold eth-leading-none eth-tracking-tight",
+      "text-lg font-semibold leading-none tracking-tight",
       className
     )}
     {...props}
@@ -102,7 +101,7 @@ const DialogDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Description
     ref={ref}
-    className={cn("eth-text-sm eth-text-muted-foreground", className)}
+    className={cn("text-sm text-muted-foreground", className)}
     {...props}
   />
 ))

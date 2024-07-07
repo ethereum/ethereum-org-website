@@ -1,4 +1,3 @@
-"use client"
 
 import * as React from "react"
 import useEmblaCarousel, {
@@ -138,7 +137,7 @@ const Carousel = React.forwardRef<
         <div
           ref={ref}
           onKeyDownCapture={handleKeyDown}
-          className={cn("eth-relative", className)}
+          className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
           {...props}
@@ -158,12 +157,12 @@ const CarouselContent = React.forwardRef<
   const { carouselRef, orientation } = useCarousel()
 
   return (
-    <div ref={carouselRef} className="eth-overflow-hidden">
+    <div ref={carouselRef} className="overflow-hidden">
       <div
         ref={ref}
         className={cn(
-          "eth-flex",
-          orientation === "horizontal" ? "eth--ml-4" : "eth--mt-4 eth-flex-col",
+          "flex",
+          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
           className
         )}
         {...props}
@@ -185,8 +184,8 @@ const CarouselItem = React.forwardRef<
       role="group"
       aria-roledescription="slide"
       className={cn(
-        "eth-min-w-0 eth-shrink-0 eth-grow-0 eth-basis-full",
-        orientation === "horizontal" ? "eth-pl-4" : "eth-pt-4",
+        "min-w-0 shrink-0 grow-0 basis-full",
+        orientation === "horizontal" ? "pl-4" : "pt-4",
         className
       )}
       {...props}
@@ -207,18 +206,18 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "eth-absolute eth- eth-h-8 eth-w-8 eth-rounded-full",
+        "absolute  h-8 w-8 rounded-full",
         orientation === "horizontal"
-          ? "eth--left-12 eth-top-1/2 eth--translate-y-1/2"
-          : "eth--top-12 eth-left-1/2 eth--translate-x-1/2 eth-rotate-90",
+          ? "-left-12 top-1/2 -translate-y-1/2"
+          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft className="eth-h-4 eth-w-4" />
-      <span className="eth-sr-only">Previous slide</span>
+      <ArrowLeft className="h-4 w-4" />
+      <span className="sr-only">Previous slide</span>
     </Button>
   )
 })
@@ -236,18 +235,18 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "eth-absolute eth-h-8 eth-w-8 eth-rounded-full",
+        "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
-          ? "eth--right-12 eth-top-1/2 eth--translate-y-1/2"
-          : "eth--bottom-12 eth-left-1/2 eth--translate-x-1/2 eth-rotate-90",
+          ? "-right-12 top-1/2 -translate-y-1/2"
+          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight className="eth-h-4 eth-w-4" />
-      <span className="eth-sr-only">Next slide</span>
+      <ArrowRight className="h-4 w-4" />
+      <span className="sr-only">Next slide</span>
     </Button>
   )
 })

@@ -19,7 +19,7 @@ const BreadcrumbList = React.forwardRef<
   <ol
     ref={ref}
     className={cn(
-      "eth-flex eth-flex-wrap eth-items-center eth-gap-1.5 eth-break-words eth-text-sm eth-text-muted-foreground sm:eth-gap-2.5",
+      "flex flex-wrap items-center gap-1.5 break-words text-sm text-muted-foreground sm:gap-2.5",
       className
     )}
     {...props}
@@ -33,7 +33,7 @@ const BreadcrumbItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <li
     ref={ref}
-    className={cn("eth-inline-flex eth-items-center eth-gap-1.5", className)}
+    className={cn("inline-flex items-center gap-1.5", className)}
     {...props}
   />
 ))
@@ -50,7 +50,7 @@ const BreadcrumbLink = React.forwardRef<
   return (
     <Comp
       ref={ref}
-      className={cn("eth-transition-colors hover:eth-text-foreground", className)}
+      className={cn("transition-colors hover:text-foreground", className)}
       {...props}
     />
   )
@@ -66,7 +66,7 @@ const BreadcrumbPage = React.forwardRef<
     role="link"
     aria-disabled="true"
     aria-current="page"
-    className={cn("eth-font-normal eth-text-foreground", className)}
+    className={cn("font-normal text-foreground", className)}
     {...props}
   />
 ))
@@ -80,7 +80,7 @@ const BreadcrumbSeparator = ({
   <li
     role="presentation"
     aria-hidden="true"
-    className={cn("[&>svg]:eth-size-3.5", className)}
+    className={cn("[&>svg]:size-3.5", className)}
     {...props}
   >
     {children ?? <ChevronRight />}
@@ -95,11 +95,11 @@ const BreadcrumbEllipsis = ({
   <span
     role="presentation"
     aria-hidden="true"
-    className={cn("eth-flex eth-h-9 eth-w-9 eth-items-center eth-justify-center", className)}
+    className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
-    <MoreHorizontal className="eth-h-4 eth-w-4" />
-    <span className="eth-sr-only">More</span>
+    <MoreHorizontal className="h-4 w-4" />
+    <span className="sr-only">More</span>
   </span>
 )
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"

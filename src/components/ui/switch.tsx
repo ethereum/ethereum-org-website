@@ -1,4 +1,3 @@
-"use client"
 
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
@@ -11,7 +10,7 @@ const Switch = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SwitchPrimitives.Root
     className={cn(
-      "eth-peer eth-inline-flex eth-h-6 eth-w-11 eth-shrink-0 eth-cursor-pointer eth-items-center eth-rounded-full eth-border-2 eth-border-transparent eth-transition-colors focus-visible:eth-outline-none focus-visible:eth-ring-2 focus-visible:eth-ring-ring focus-visible:eth-ring-offset-2 focus-visible:eth-ring-offset-background disabled:eth-cursor-not-allowed disabled:eth-opacity-50 data-[state=checked]:eth-bg-primary data-[state=unchecked]:eth-bg-input",
+      "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input",
       className
     )}
     {...props}
@@ -19,7 +18,7 @@ const Switch = React.forwardRef<
   >
     <SwitchPrimitives.Thumb
       className={cn(
-        "eth-pointer-events-none eth-block eth-h-5 eth-w-5 eth-rounded-full eth-bg-background eth-shadow-lg eth-ring-0 eth-transition-transform data-[state=checked]:eth-translate-x-5 data-[state=unchecked]:eth-translate-x-0"
+        "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"
       )}
     />
   </SwitchPrimitives.Root>

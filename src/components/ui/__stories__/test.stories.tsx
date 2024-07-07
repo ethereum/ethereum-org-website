@@ -7,5 +7,5 @@ const meta = {
 export default meta
 
 export const Test: StoryObj = {
-    render: () => <div className="eth-text-primary-hover">Test</div>
+    render: () => <div className="text-primary-hover">Test</div>
 }

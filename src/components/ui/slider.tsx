@@ -1,4 +1,3 @@
-"use client"
 
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
@@ -12,15 +11,15 @@ const Slider = React.forwardRef<
   <SliderPrimitive.Root
     ref={ref}
     className={cn(
-      "eth-relative eth-flex eth-w-full eth-touch-none eth-select-none eth-items-center",
+      "relative flex w-full touch-none select-none items-center",
       className
     )}
     {...props}
   >
-    <SliderPrimitive.Track className="eth-relative eth-h-2 eth-w-full eth-grow eth-overflow-hidden eth-rounded-full eth-bg-secondary">
-      <SliderPrimitive.Range className="eth-absolute eth-h-full eth-bg-primary" />
+    <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary">
+      <SliderPrimitive.Range className="absolute h-full bg-primary" />
     </SliderPrimitive.Track>
-    <SliderPrimitive.Thumb className="eth-block eth-h-5 eth-w-5 eth-rounded-full eth-border-2 eth-border-primary eth-bg-background eth-ring-offset-background eth-transition-colors focus-visible:eth-outline-none focus-visible:eth-ring-2 focus-visible:eth-ring-ring focus-visible:eth-ring-offset-2 disabled:eth-pointer-events-none disabled:eth-opacity-50" />
+    <SliderPrimitive.Thumb className="block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" />
   </SliderPrimitive.Root>
 ))
 Slider.displayName = SliderPrimitive.Root.displayName

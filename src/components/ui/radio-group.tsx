@@ -1,4 +1,3 @@
-"use client"
 
 import * as React from "react"
 import { Circle } from "lucide-react"
@@ -12,7 +11,7 @@ const RadioGroup = React.forwardRef<
 >(({ className, ...props }, ref) => {
   return (
     <RadioGroupPrimitive.Root
-      className={cn("eth-grid eth-gap-2", className)}
+      className={cn("grid gap-2", className)}
       {...props}
       ref={ref}
     />
@@ -28,13 +27,13 @@ const RadioGroupItem = React.forwardRef<
     <RadioGroupPrimitive.Item
       ref={ref}
       className={cn(
-        "eth-aspect-square eth-h-4 eth-w-4 eth-rounded-full eth-border eth-border-primary eth-text-primary eth-ring-offset-background focus:eth-outline-none focus-visible:eth-ring-2 focus-visible:eth-ring-ring focus-visible:eth-ring-offset-2 disabled:eth-cursor-not-allowed disabled:eth-opacity-50",
+        "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
         className
       )}
       {...props}
     >
-      <RadioGroupPrimitive.Indicator className="eth-flex eth-items-center eth-justify-center">
-        <Circle className="eth-h-2.5 eth-w-2.5 eth-fill-current eth-text-current" />
+      <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
+        <Circle className="h-2.5 w-2.5 fill-current text-current" />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
   )
