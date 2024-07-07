@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from 'tailwindcss'
 
 const config = {
   darkMode: ["class"],
@@ -7,56 +7,75 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+      fontFamily: {
+        heading: "var(--font-inter)",
+        body: "var(--font-inter)",
+        monospace: "var(--font-mono)"
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+      lineHeight: {
+        "6xs": "1.1",
+        "5xs": "1.15",
+        "4xs": "1.2",
+        "3xs": "1.25",
+        "2xs": "1.3",
+        xs: "1.4",
+        sm: "1.5",
+        base: "1.6",
+      },
+      colors: {
+        primary: {
+          DEFAULT: "var(--primary)",
+          highContrast: "var(--primary-highContrast)",
+          lowContrast: "var(--primary-lowContrast)",
+          hover: "var(--primary-hover)",
+          visited: "var(--primary-visited)",
+          light: "var(--primary-light)",
+          dark: "var(--primary-dark)",
+          pressed: "var(--primary-pressed)",
+        },
+        body: {
+          DEFAULT: "var(--body)",
+          medium: "var(--body-medium)",
+          light: "var(--body-light)",
+          inverted: "var(--body-inverted)",
+        },
+        background: {
+          DEFAULT: "var(--background)",
+          highlight: "var(--background-highlight)",
+        },
+        disabled: "var(--disabled)",
+        neutral: "var(--neutral)",
+        tooltipShadow: "var(--tooltipShadow)",
+        switchBackground: "var(--switchBackground)",
+        hubHeroContentBg: "var(--hubHeroContentBg)",
+      },
+      backgroundImage: {
+        bgMainGradient: "var(--bg-main-gradient)"
+      },
+      boxShadow: {
+        tableBox: "var(--table-box-shadow)",
+        table: "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",
+        drop: "0 4px 17px 0 rgba(0,0,0,0.08)",
+        tableBoxHover: "0px 8px 17px rgba(0, 0, 0, 0.15)",
+        tableItemBox: "var(--table-item-box-shadow)",
+        tableItemBoxHover: "0 0 1px var(--primary)",
+        gridYellowBoxShadow: "8px 8px 0px 0px #ffe78e",
+        gridBlueBowShadow: "8px 8px 0px 0px #a7d0f4",
+        // Part of new DS
+        "menu-accordion": "0px 2px 2px 0px rgba(0, 0, 0, 0.12) inset, 0px -3px 2px 0px rgba(0, 0, 0, 0.14) inset",
+        // TODO: From current theme. Deprecate for 'buttonHover'
+        primary: "4px 4px 0px 0px var(--primary)",
+        buttonHover: "4px 4px 0 0 var(--primary-lowContrast)",
+        tooltip: "0 0 16px var(--tooltipShadow)",
+      },
+      spacing: {
+        7.5: "1.875rem",
+        10.5: "2.625rem",
+        19: "4.75rem", // Nav height
       },
       keyframes: {
         "accordion-down": {

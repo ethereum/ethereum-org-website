@@ -1,5 +1,3 @@
-import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin"
-import { propNames } from "@chakra-ui/react"
 import type { StorybookConfig } from "@storybook/nextjs"
 
 /**
@@ -15,60 +13,30 @@ import type { StorybookConfig } from "@storybook/nextjs"
  */
 
 const config: StorybookConfig = {
-  stories: ["../src/components/**/*.stories.{ts,tsx}"],
+  // stories: ["../src/components/**/*.stories.{ts,tsx}"],
+  stories: ["../src/components/ui/__stories__/*.stories.tsx"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "@storybook/addon-themes",
     "storybook-react-i18next",
-    "@chromatic-com/storybook"
+    "@chromatic-com/storybook",
   ],
   staticDirs: ["../public"],
   framework: {
     name: "@storybook/nextjs",
     options: {},
   },
+  refs: {
+    "@chakra-ui/react": { 
+      disable: true
+    }
+  },
   docs: {
     autodocs: "tag",
   },
-  refs: {
-    "@chakra-ui/react": {
-      disable: true,
-    },
-  },
-  webpackFinal: async (config) => {
-    if (config.resolve) {
-      config.resolve.plugins = [
-        ...(config.resolve.plugins || []),
-        new TsconfigPathsPlugin({
-          extensions: config.resolve.extensions,
-        }),
-      ]
-    }
-    return config
-  },
   typescript: {
-    reactDocgenTypescriptOptions: {
-      shouldExtractLiteralValuesFromEnum: true,
-      /**
-       * For handling bloated controls table of Chakra Props
-       *
-       * https://github.com/chakra-ui/chakra-ui/issues/2009#issuecomment-852793946
-       */
-      propFilter: (prop) => {
-        const excludedPropNames = propNames.concat([
-          "as",
-          "apply",
-          "sx",
-          "__css",
-        ])
-        const isStyledSystemProp = excludedPropNames.includes(prop.name)
-        const isHTMLElementProp =
-          prop.parent?.fileName.includes("node_modules") ?? false
-        return !(isStyledSystemProp || isHTMLElementProp)
-      },
-    },
-
     reactDocgen: "react-docgen-typescript"
   },
 }
