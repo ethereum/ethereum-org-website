@@ -1,11 +1,11 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss"
 
 const config = {
   darkMode: ["class"],
   content: [
-    './src/**/*.{ts,tsx}',
+    "./src/**/*.{ts,tsx}",
     // TODO: remove after migration
-    './tailwind/**/*.tsx'
+    "./tailwind/**/*.tsx",
   ],
   prefix: "",
   theme: {
@@ -13,7 +13,7 @@ const config = {
       fontFamily: {
         heading: "var(--font-inter)",
         body: "var(--font-inter)",
-        monospace: "var(--font-mono)"
+        monospace: "var(--font-mono)",
       },
       lineHeight: {
         "6xs": "1.1",
@@ -53,11 +53,12 @@ const config = {
         hubHeroContentBg: "var(--hubHeroContentBg)",
       },
       backgroundImage: {
-        bgMainGradient: "var(--bg-main-gradient)"
+        bgMainGradient: "var(--bg-main-gradient)",
       },
       boxShadow: {
         tableBox: "var(--table-box-shadow)",
-        table: "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",
+        table:
+          "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",
         drop: "0 4px 17px 0 rgba(0,0,0,0.08)",
         tableBoxHover: "0px 8px 17px rgba(0, 0, 0, 0.15)",
         tableItemBox: "var(--table-item-box-shadow)",
@@ -65,7 +66,8 @@ const config = {
         gridYellowBoxShadow: "8px 8px 0px 0px #ffe78e",
         gridBlueBowShadow: "8px 8px 0px 0px #a7d0f4",
         // Part of new DS
-        "menu-accordion": "0px 2px 2px 0px rgba(0, 0, 0, 0.12) inset, 0px -3px 2px 0px rgba(0, 0, 0, 0.14) inset",
+        "menu-accordion":
+          "0px 2px 2px 0px rgba(0, 0, 0, 0.12) inset, 0px -3px 2px 0px rgba(0, 0, 0, 0.14) inset",
         // TODO: From current theme. Deprecate for 'buttonHover'
         primary: "4px 4px 0px 0px var(--primary)",
         buttonHover: "4px 4px 0 0 var(--primary-lowContrast)",

@@ -37,10 +37,10 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className={cn("accordion-item")}
+    className={"accordion-content"}
     {...props}
   >
-    <div className={className}>{children}</div>
+    <div className={cn("p-2 md:p-4", className)}>{children}</div>
   </AccordionPrimitive.Content>
 ))
 

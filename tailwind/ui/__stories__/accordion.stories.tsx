@@ -12,7 +12,7 @@ const meta = {
   component: Accordion,
   decorators: [
     (Story) => (
-      <div className="w-[300px]">
+      <div className="h-64 w-[300px]">
         <Story />
       </div>
     ),
