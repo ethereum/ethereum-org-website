@@ -1,76 +1,210 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 
-  @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 0 0% 3.9%;
+@layer base {
+  :root {
+    /* Primitive Color Scheme */
+    --gray-100: #f7f7f7;
+    --gray-150: #f2f2f2;
+    --gray-200: #e7e7e7;
+    --gray-300: #c8c8c8;
+    --gray-400: #8c8c8c;
+    --gray-500: #616161;
+    --gray-600: #333333;
+    --gray-700: #222222;
+    --gray-800: #1b1b1b;
+    --gray-900: #141414;
 
-      --card: 0 0% 100%;
-      --card-foreground: 0 0% 3.9%;
+    --blue-50: #f6f6ff;
+    --blue-100: #ebebff;
+    --blue-200: #d6d6ff;
+    --blue-300: #9999ff;
+    --blue-400: #5555ff;
+    --blue-500: #1c1cff;
+    --blue-600: #000066;
+    --blue-700: #0000a3;
+    --blue-800: #000066;
+    --blue-900: #000029;
 
-      --popover: 0 0% 100%;
-      --popover-foreground: 0 0% 3.9%;
+    --orange-50: #fff3ed;
+    --orange-100: #ffe5d6;
+    --orange-200: #ffcbad;
+    --orange-300: #ffb18f;
+    --orange-400: #ff985c;
+    --orange-500: #ff7324;
+    --orange-600: #b84300;
+    --orange-700: #7a2d00;
+    --orange-800: #521e00;
+    --orange-900: #2f1000;
 
-      --primary: 0 0% 9%;
-      --primary-foreground: 0 0% 98%;
+    --red-100: #f7c8c8;
+    --red-500: #b80000;
+    /* ! Deprecating 900 */
+    --red-900: #180c0c;
 
-      --secondary: 0 0% 96.1%;
-      --secondary-foreground: 0 0% 9%;
+    --green-100: #ddf4e4;
+    /* ! Deprecating 400 */
+    --green-400: #48bb78;
+    --green-500: #0a7146;
+    /* ! Deprecating 900 */
+    --green-900: #0a160e;
 
-      --muted: 0 0% 96.1%;
-      --muted-foreground: 0 0% 45.1%;
+    --yellow-200: #fff8df;
+    --yellow-500: #bd8400;
 
-      --accent: 0 0% 96.1%;
-      --accent-foreground: 0 0% 9%;
+    /* Semantic Colors: Light mode */
+    --primary: var(--blue-500);
+    --primary-highContrast: var(--blue-800);
+    --primary-lowContrast: var(--blue-100);
+    --primary-hover: var(--blue-400);
+    --primary-visited: var(--blue-700);
+    /* ! Deprecating primary-light */
+    --primary-light: var(--blue.100);
+    /* ! Deprecating primary-dark */
+    --primary-dark: var(--blue.700);
+    /* ! Deprecating primary-pressed */
+    --primary-pressed: var(--blue.400);
 
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 0 0% 98%;
+    --body: var(--gray-800);
+    --body-medium: var(--gray-500);
+    --body-light: var(--gray-200);
+    /* ! Deprecating body-inverted */
+    --body-inverted: var(--gray-100);
 
-      --border: 0 0% 89.8%;
-      --input: 0 0% 89.8%;
-      --ring: 0 0% 3.9%;
+    --background: white;
+    --background-highlight: var(--gray-100);
 
-      --radius: 0.5rem;
-    }
+    --disabled: var(--gray-400);
 
-    .dark {
-      --background: 0 0% 3.9%;
-      --foreground: 0 0% 98%;
+    /* ! Deprecating neutral */
+    --neutral: white;
 
-      --card: 0 0% 3.9%;
-      --card-foreground: 0 0% 98%;
+    /* Misc sematics: light mode */
+    --tooltipShadow: rgba(0, 0, 0, 0.24);
+    --switchBackground: var(--gray-300);
+    --hubHeroContentBg: rgba(255, 255, 255, 0.80);
+    --bg-main-gradient: linear-gradient(102.7deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 51.56%, rgba(58, 142, 137, 0.2) 100%);
+    --table-box-shadow: 0 14px 66px rgba(0, 0, 0, .07), 0 10px 17px rgba(0, 0, 0, .03), 0 4px 7px rgba(0, 0, 0, .05);
+    --table-item-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  }
 
-      --popover: 0 0% 3.9%;
-      --popover-foreground: 0 0% 98%;
+  .dark {
+    /* Semantic Colors: Dark mode */
+    --primary: var(--orange-500);
+    --primary-highContrast: var(--orange-100);
+    --primary-lowContrast: var(--orange-800);
+    --primary-hover: var(--orange-400);
+    --primary-visited: var(--orange-550);
+    /* ! Deprecating primary-light */
+    --primary-light: var(--orange.100);
+    /* ! Deprecating primary-dark */
+    --primary-dark: var(--orange.800);
+    /* ! Deprecating primary-pressed */
+    --primary-pressed: var(--orange.800);
 
-      --primary: 0 0% 98%;
-      --primary-foreground: 0 0% 9%;
+    --body: var(--gray-100);
+    --body-medium: var(--gray-400);
+    --body-light: var(--gray-600);
+    /* ! Deprecating body-inverted */
+    --body-inverted: var(--gray-800);
 
-      --secondary: 0 0% 14.9%;
-      --secondary-foreground: 0 0% 98%;
+    --background: var(--gray-800);
+    --background-highlight: var(--gray-900);
 
-      --muted: 0 0% 14.9%;
-      --muted-foreground: 0 0% 63.9%;
+    --disabled: var(--gray-500);
 
-      --accent: 0 0% 14.9%;
-      --accent-foreground: 0 0% 98%;
+    /* ! Deprecating neutral */
+    --neutral: var(--gray-900);
 
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 0 0% 98%;
+    /* Misc sematics: light mode */
+    --tooltipShadow: rgba(255, 255, 255, 0.24);
+    --switchBackground: rgba(255, 255, 255, 0.24);
+    --hubHeroContentBg: rgba(34, 34, 34, 0.80);
+    --bg-main-gradient: linear-gradient(102.7deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 51.56%, rgba(58, 142, 137, 0.2) 100%);
+    --table-box-shadow: 0 14px 66px hsla(0, 0%, 96.1%, .07), 0 10px 17px hsla(0, 0%, 96.1%, .03), 0 4px 7px hsla(0, 0%, 96.1%, .05);
+    --table-item-box-shadow: 0 1px 1px hsla(0, 0%, 100%, .1);
+  }
+}
 
-      --border: 0 0% 14.9%;
-      --input: 0 0% 14.9%;
-      --ring: 0 0% 83.1%;
+@layer base {
+  body {
+    @apply font-body bg-background text-body leading-base;
+  }
+
+  a {
+    @apply text-primary underline
+  }
+
+  /* Should be replaced with list component styles */
+  ul, ol {
+    margin: 0px 0px 1.45rem 1.45rem;
+    padding: 0;
+
+    & li {
+
+      padding-inline-start: 0;
     }
   }
 
-  @layer base {
-    * {
-      @apply border-border;
+  li {
+    margin-bottom: calc(1.45rem / 2);
+
+    &>ol,
+    &>ul {
+      margin-inline-start: 1.45rem;
+      margin-block: calc(1.45rem / 2);
     }
-    body {
-      @apply bg-background text-foreground;
+
+    & * {
+      @apply last:mb-0
+    }
+
+    &>p {
+      margin-bottom: calc(1.45rem / 2)
     }
   }
+
+  /* Anchor tag styles */
+  /* Selected specifically for mdx rendered side icon link */
+  .header-anchor {
+    position: "relative !important";
+    display: "initial";
+    margin-inline-start: "-1.5em";
+    padding-inline-end: "0.5rem !important";
+    font-size: "1rem";
+    vertical-align: "middle";
+
+    & svg {
+      @apply fill-primary inline invisible
+    }
+
+    &:focus svg {
+      @apply visible
+    }
+  }
+
+
+  h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    & .header-anchor svg {
+      @apply visible
+    }
+  }
+
+  pre, code, kbd, samp {
+    @apply text-base leading-base font-monospace
+  }
+}
+
+@layer components {
+  .accordion-trigger {
+    @apply flex flex-1 gap-2 items-center justify-between py-2 px-2 md:px-4 font-medium transition-all hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:outline-primary-hover focus-visible:-outline-offset-1 [&[data-state=open]>svg]:rotate-180 [&[data-state=open]]:bg-background-highlight [&[data-state=open]]:text-primary-highContrast
+  }
+  .accordion-item {
+    @apply overflow-hidden text-sm transition-all mt-2 p-2 md:p-4 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down
+  }
+
+  .accordion-indicator {
+    @apply size-[1em] text-2xl shrink-0 transition-transform duration-200 rotate-[270deg]
+  }
+}
