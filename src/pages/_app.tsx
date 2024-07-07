@@ -1,11 +1,11 @@
 import { useEffect } from "react"
 import { appWithTranslation } from "next-i18next"
-import { ThemeProvider as NextThemesProvider } from "next-themes"
 import { init } from "@socialgouv/matomo-next"
 
 import { AppPropsWithLayout } from "@/lib/types"
 
 import ChakraThemeProvider from "@/components/ChakraThemeProvider"
+import NextThemeProvider from '@/components/ThemeProvider'
 
 import "@/styles/global.css"
 import "@/styles/main.css"
@@ -39,23 +39,17 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
           }
         `}
       </style>
-      <NextThemesProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
-        storageKey={STORAGE_KEY}
-      >
+      <NextThemeProvider>
         <ChakraThemeProvider>
           <RootLayout
             contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
             contentNotTranslated={pageProps.contentNotTranslated}
             lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
-          >
+            >
             {getLayout(<Component {...pageProps} />)}
           </RootLayout>
         </ChakraThemeProvider>
-      </NextThemesProvider>
+      </NextThemeProvider>
     </>
   )
 }

@@ -1,17 +1,27 @@
-import {ThemeProvider as NextThemesProvider} from 'next-themes'
-import type { ThemeProviderProps } from "next-themes/dist/types";
+import { ThemeProvider as NextThemesProvider } from "next-themes"
+import type { ThemeProviderProps } from "next-themes/dist/types"
+
+export const STORAGE_KEY = "theme"
 
 /**
- * Primary theming wrapper with use with color mode. Uses the theme provider
+ * Primary theming wrapper for use with color mode. Uses the theme provider
  * from `next-themes`.
- * 
- * Applied to _app.tsx as the main provider for the project, and supplied as the 
+ *
+ * Applied to _app.tsx as the main provider for the project, and supplied as the
  * primary decorator to Storybook.
  */
-export const ThemeProvider = ({children}: Pick<ThemeProviderProps, 'children'>) => {
-    return (
-        <NextThemesProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-            {children}
-        </NextThemesProvider>
-    )
+const ThemeProvider = ({ children }: Pick<ThemeProviderProps, "children">) => {
+  return (
+    <NextThemesProvider
+      attribute="data-theme"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+      storageKey={STORAGE_KEY}
+    >
+      {children}
+    </NextThemesProvider>
+  )
 }
+
+export default ThemeProvider
