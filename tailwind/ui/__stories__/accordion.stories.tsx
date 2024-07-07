@@ -21,7 +21,7 @@ type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
   render: () => (
-    <Accordion collapsible>
+    <Accordion collapsible defaultValue='item-1'>
       <AccordionItem value='item-1'>
         <AccordionTrigger>
             Label text of the accordion

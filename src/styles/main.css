@@ -198,13 +198,13 @@
 
 @layer components {
   .accordion-trigger {
-    @apply flex flex-1 gap-2 items-center justify-between py-2 px-2 md:px-4 font-medium transition-all hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:outline-primary-hover focus-visible:-outline-offset-1 [&[data-state=open]>svg]:rotate-180 [&[data-state=open]]:bg-background-highlight [&[data-state=open]]:text-primary-highContrast
+    @apply flex flex-1 gap-2 items-center justify-between py-2 px-2 md:px-4 font-medium transition-all hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:outline-primary-hover focus-visible:-outline-offset-1 [&[data-state=open]>svg]:-rotate-90 [&[data-state=open]]:bg-background-highlight [&[data-state=open]]:text-primary-highContrast
   }
   .accordion-item {
     @apply overflow-hidden text-sm transition-all mt-2 p-2 md:p-4 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down
   }
 
   .accordion-indicator {
-    @apply size-[1em] text-2xl shrink-0 transition-transform duration-200 rotate-[270deg]
+    @apply size-[1em] text-2xl shrink-0 transition-transform duration-200
   }
 }
