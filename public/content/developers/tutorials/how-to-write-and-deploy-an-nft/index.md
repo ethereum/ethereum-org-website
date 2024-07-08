@@ -43,7 +43,7 @@ You can download MetaMask and create an account for free [here](https://metamask
 
 ## Step 4: Add ether from a Faucet {#add-ether-from-a-faucet}
 
-In order to deploy our smart contract to the test network, we’ll need "fake" ETH - or SepoliaETH.  You can get SepoliaETH from a [faucet](https://www.alchemy.com/faucets#:~:text=A%20testnet%20faucet%20provides%20web3%20developers%20with%20free%20tokens%20for%20deploying%2C%20testing%2C%20and%20optimizing%20smart%20contracts%20on%20test%20blockchains%20such%20as%20Sepolia)!  However, most faucets have other requirements - the [Alchemy faucet](https://www.alchemy.com/faucets/ethereum-sepolia) requires at least 0.001 ETH (about [US\$3 ](https://www.coinbase.com/converter/eth/usd)right now), while the [Infura faucet](https://www.infura.io/faucet/sepolia) requires an Infura account.  This [Google Cloud faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) currently has no requirements, but this could change by the time you're reading this tutorial!  Once you've used a faucet to get SepoliaETH, you can open MetaMask again to check your balance.
+In order to deploy our smart contract to the test network, we’ll need "fake" ETH - or SepoliaETH.  You can get SepoliaETH from a [faucet](https://www.alchemy.com/faucets#:~:text=A%20testnet%20faucet%20provides%20web3%20developers%20with%20free%20tokens%20for%20deploying%2C%20testing%2C%20and%20optimizing%20smart%20contracts%20on%20test%20blockchains%20such%20as%20Sepolia)!  However, most faucets have other requirements - the [Alchemy faucet](https://www.alchemy.com/faucets/ethereum-sepolia) requires at least 0.001 ETH (about [US\$3 ](https://nft-tutorial-utils.vercel.app/?ethValue=0.001)right now), while the [Infura faucet](https://www.infura.io/faucet/sepolia) requires an Infura account.  This [Google Cloud faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia) currently has no requirements, but this could change by the time you're reading this tutorial!  Once you've used a faucet to get SepoliaETH, you can open MetaMask again to check your balance.
 
 ## Step 5: Check our balance with Etherscan {#check-balance-with-etherscan}
 
@@ -357,17 +357,17 @@ Click on the link in the terminal (most terminals support ctrl-click to visit hy
 
 ![View your transaction address on Etherscan](./etherscan-sepolia-contract-creation.png)
 
-
-If you click on the transaction address (the link after the words "at txn 0x..." circled above), you should see your MetaMask address in the "From" field, and a green check mark and the words "Created" in the "To" field.
+If you click on the transaction address (the link after the words "at txn 0x..." circled above), you should see your MetaMask address in the "From" field, and a the words "Created" in the "To" field, along with a green check mark.
 
 ![View your contract address on Etherscan](./etherscan-sepolia-tx-details.png)
 
 Yasssss! You just deployed your NFT smart contract to the Ethereum (testnet) chain!
 
-To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard](https://dashboard.alchemyapi.io/explorer). If you have multiple Alchemy apps make sure to filter by app and select “MyNFT”.
+To understand what’s going on under the hood, let’s head to the Alchemy dashboard's "Request Logs" on the sidebar, and check out the requests our app's been making.
 
-![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
+![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-api-calls.gif)
 
-Here you’ll see a handful of JSON-RPC calls that Hardhat/Ethers made under the hood for us when we called the .deploy() function. Two important ones to call out here are [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction), which is the request to actually write our smart contract onto the Sepolia chain, and [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash) which is a request to read information about our transaction given the hash (a typical pattern when sending transactions). To learn more about sending transactions, check out this tutorial on [sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+Here you’ll see a handful of JSON-RPC calls that Ethers.js has made under the hood for us when we called the .deploy() function. Two important ones to call out here are [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction), which is the request to actually write our smart contract onto the Sepolia chain, and [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash) which is a request to read information about our transaction given the hash (a typical pattern when sending transactions).  Some of these requests might appear as a "batch" - this is when the blockchain groups a [bunch of transactions](https://docs.alchemy.com/docs/erc-4337-bundle-vs-batch#what-is-a-batch-transaction-batching) or function calls by one user together, to reduce gas fees. To learn more about sending transactions, check out this tutorial on [sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
 That’s all for Part 1 of this tutorial. In [Part 2, we’ll actually interact with our smart contract by minting an NFT](/developers/tutorials/how-to-mint-an-nft/), and in [Part 3 we’ll show you how to view your NFT in your Ethereum wallet](/developers/tutorials/how-to-view-nft-in-metamask/)!
+# 
