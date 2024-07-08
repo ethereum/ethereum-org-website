@@ -44,13 +44,15 @@ const HubHero = ({
         borderRadius={{ xl: "base" }}
         bg={{ xl: "hubHeroContentBg" }}
         position={{ xl: "absolute" }}
-        insetInlineStart={{ xl: "8" }}
         maxW={{ xl: "sm" }}
         top={{ xl: "50%" }}
         transform={{ xl: "translateY(-50%)" }}
         backdropFilter={{ xl: "auto" }}
         backdropBlur={{ xl: "base" }}
         wordBreak="break-word"
+        sx={{
+          "inset-inline-start": { xl: "32px" },
+        }}
       >
         {title ? (
           <Text
