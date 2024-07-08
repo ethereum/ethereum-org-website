@@ -70,7 +70,28 @@ import merge from "@/public/images/upgrades/merge.png"
 import robotfixed from "@/public/images/wallet-cropped.png"
 import ethereum from "@/public/images/what-is-ethereum.png"
 
+// lazy loaded components
+const Codeblock = lazy(() =>
+  Promise.all([
+    import("@/components/Codeblock"),
+    // Add a delay to prevent the skeleton from flashing
+    new Promise((resolve) => setTimeout(resolve, 1000)),
+  ]).then(([module]) => module)
+)
 const StatsBoxGrid = lazy(() => import("@/components/StatsBoxGrid"))
+
+const Skeleton = () => (
+  <Stack px={6} pt="2.75rem" h="50vh">
+    <SkeletonText
+      mt="4"
+      noOfLines={6}
+      spacing={4}
+      skeletonHeight="1.4rem"
+      startColor="body.medium"
+      opacity={0.2}
+    />
+  </Stack>
+)
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
@@ -226,27 +247,6 @@ export const getStaticProps = (async ({ locale }) => {
     revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
-
-const CodeblockSkeleton = () => (
-  <Stack px={6} pt="2.75rem" h="50vh">
-    <SkeletonText
-      mt="4"
-      noOfLines={6}
-      spacing={4}
-      skeletonHeight="1.4rem"
-      startColor="body.medium"
-      opacity={0.2}
-    />
-  </Stack>
-)
-
-const Codeblock = lazy(() =>
-  Promise.all([
-    import("@/components/Codeblock"),
-    // Add a delay to prevent the skeleton from flashing
-    new Promise((resolve) => setTimeout(resolve, 1000)),
-  ]).then(([module]) => module)
-)
 
 const HomePage = ({
   communityEvents,
@@ -563,7 +563,7 @@ const HomePage = ({
               setIsOpen={setModalOpen}
               title={codeExamples[activeCode].title}
             >
-              <Suspense fallback={<CodeblockSkeleton />}>
+              <Suspense fallback={<Skeleton />}>
                 <Codeblock
                   codeLanguage={codeExamples[activeCode].codeLanguage}
                   allowCollapse={false}
@@ -589,7 +589,7 @@ const HomePage = ({
 
         <LazyLoadComponent
           component={StatsBoxGrid}
-          fallback={<CodeblockSkeleton />}
+          fallback={<Skeleton />}
           componentProps={{ data: metricResults }}
           intersectionOptions={{
             root: null,
