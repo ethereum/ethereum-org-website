@@ -123,18 +123,15 @@ You should then see a welcome message and option to select what you want to do. 
     ❯ Create an empty hardhat.config.js
     Quit
 
-This will generate a hardhat.config.js file for us which is where we’ll specify all of the set up for our project (on step 13).
+This will generate a hardhat.config.js file for us which is where we’ll specify all of the set up for our project (on step 13), along with the folders `ignition/`, `cache/`, and `contracts/`.
 
-## Step 9: Add project folders {#add-project-folders}
+## Step 9: Add script folder {#add-script-folder}
 
-To keep our project organized, we’ll create two new folders. Navigate to the root directory of your project in your command line and type:
+To keep our project organized, we’ll create another folder. Navigate to the root directory of your project in your command line and type:
 
-    mkdir contracts
     mkdir scripts
 
-- contracts/ is the directory where we’ll keep our NFT smart contract code
-
-- scripts/ is the directory where we’ll keep scripts to deploy and interact with our smart contract
+This is where we’ll keep the scripts to deploy and interact with our smart contract
 
 ## Step 10: Write our contract {#write-contract}
 
@@ -142,7 +139,7 @@ Now that our environment is set up, on to more exciting stuff: _writing our smar
 
 Open up the my-nft project in your favorite editor. Smart contracts are written in a language called Solidity, which is what we will use to write our MyNFT.sol smart contract.‌
 
-1. Navigate to the `contracts` folder and create a new file called MyNFT.sol
+1. Navigate to the `contracts` folder (automatically created by Hardhat` and create a new file called MyNFT.sol
 
 2. Below is our NFT smart contract code, which we based on the OpenZeppelin Contract Wizard's ERC-721 code, with the mintable, auto-increment IDs, and URIStorage options checked in.  You can play around with the Contract Wizard [here](https://wizard.openzeppelin.com/#erc721)!  Copy and paste the contents below into your MyNFT.sol file.
 
@@ -211,7 +208,7 @@ Next, we have our function `safeMint(address to, string memory uri)` that allows
 
 - `address to` specifies the address that will receive your freshly minted NFT
 
-- `string memory uri` is a string that should resolve to a JSON document that describes the NFT's metadata. An NFT's metadata is really what brings it to life, allowing it to have configurable properties, such as a name, description, image, and other attributes. In part 2 of this tutorial, we will describe how to configure this metadata.
+- `string memory uri` is a string that should resolve to a JSON document that describes the NFT's metadata. An NFT's metadata is really what brings it to life, allowing it to have properties such as a name, description, image, and other attributes. In part 2 of this tutorial, we will describe how to configure this metadata.
 
 `safeMint` calls some methods from the inherited ERC-721 library, and ultimately returns a number that represents the ID of the freshly minted NFT.
 
@@ -229,7 +226,7 @@ First, install the dotenv package in your project directory:
 
     npm install dotenv --save
 
-Then, create a `.env` file in the root directory of our project, and add your MetaMask private key and HTTP Alchemy API URL to it.
+Then, create a `.env` file in the root directory of our project, and add your MetaMask private key, public key (wallet address) and HTTP Alchemy API URL to it.
 
 - Here's how to find your MetaMask private key:
 
@@ -239,10 +236,13 @@ Then, create a `.env` file in the root directory of our project, and add your Me
 
 ![Get your Alchemy API URL](./get-alchemy-api-url.gif)
 
+- To find your MetaMask public key, simply open your wallet and copy your address.  
+
 Your `.env` should now look like this:
 
     API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
     PRIVATE_KEY="your-metamask-private-key"
+    PUBLIC_KEY="your-public-key"
 
 To actually connect these to our code, we’ll reference these variables in our hardhat.config.js file in step 13.
 
@@ -252,11 +252,9 @@ To actually connect these to our code, we’ll reference these variables in our 
 
 Ethers.js is a library that makes it easier to interact and make requests to Ethereum by wrapping [standard JSON-RPC methods](/developers/docs/apis/json-rpc/) with more user friendly methods.
 
-Hardhat makes it super easy to integrate [Plugins](https://hardhat.org/plugins/) for additional tooling and extended functionality. We’ll be taking advantage of the [Ethers plugin](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html) for contract deployment ([Ethers.js](https://github.com/ethers-io/ethers.js/) has some super clean contract deployment methods).
-
 In your project directory type:
 
-    npm install --save-dev @nomiclabs/hardhat-ethers ethers
+    npm install --save-dev ethers
 
 We’ll also require ethers in our hardhat.config.js in the next step.
 
@@ -266,23 +264,28 @@ We’ve added several dependencies and plugins so far, now we need to update har
 
 Update your hardhat.config.js to look like this:
 
-    /**
-    * @type import('hardhat/config').HardhatUserConfig
-    */
-    require('dotenv').config();
-    require("@nomiclabs/hardhat-ethers");
-    const { API_URL, PRIVATE_KEY } = process.env;
-    module.exports = {
-       solidity: "0.8.1",
-       defaultNetwork: "sepolia",
-       networks: {
-          hardhat: {},
-          sepolia: {
-             url: API_URL,
-             accounts: [`0x${PRIVATE_KEY}`]
-          }
-       },
-    }
+```js
+require("@nomicfoundation/hardhat-toolbox");
+
+/** @type import('hardhat/config').HardhatUserConfig */
+require("dotenv").config();
+const API_URL = process.env.API_URL;
+const PRIVATE_KEY = process.env.PRIVATE_KEY;
+
+module.exports = {
+  solidity: "0.8.24",
+  defaultNetwork: "sepolia",
+  networks: {
+    hardhat: {},
+    sepolia: {
+      url: API_URL,
+      accounts: [`0x${PRIVATE_KEY}`],
+    },
+  },
+};
+```
+
+This config file should be fairly self-explanatory - if you're curious, you can check out [Hardhat's article](https://hardhat.org/hardhat-runner/docs/config) about writing config files.
 
 ## Step 14: Compile our contract {#compile-contract}
 
@@ -292,7 +295,7 @@ From the command line run:
 
     npx hardhat compile
 
-You might get a warning about SPDX license identifier not provided in source file , but no need to worry about that — hopefully everything else looks good! If not, you can always message in the [Alchemy discord](https://discord.gg/u72VCg3).
+You might get a warning about SPDX license identifier not provided in source file , but no need to worry about that — hopefully everything else looks good!  You can check in the `artifacts/contracts/MyNFT.sol` directory for the compiled output - you should see two files: `MyNFT.json` and `MyNFT.dbg.json`. If not, you can always send message in the [Alchemy discord](https://discord.com/invite/alchemyplatform)!
 
 ## Step 15: Write our deploy script {#write-deploy}
 
@@ -301,21 +304,37 @@ Now that our contract is written and our configuration file is good to go, it’
 Navigate to the `scripts/` folder and create a new file called `deploy.js`, adding the following contents to it:
 
 ```js
-async function main() {
-  const MyNFT = await ethers.getContractFactory("MyNFT")
+import { ethers } from "ethers";
+import "dotenv/config";
+import * as contract from "../artifacts/contracts/MyNFT.sol/MyNFT.json" with { type: "json" };
 
-  // Start deployment, returning a promise that resolves to a contract object
-  const myNFT = await MyNFT.deploy()
-  await myNFT.deployed()
-  console.log("Contract deployed to address:", myNFT.address)
+const PUBLIC_KEY = process.env.PUBLIC_KEY
+const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const API_KEY = process.env.API_KEY;
+
+async function main() {
+  const provider = new ethers.AlchemyProvider("sepolia", API_KEY);
+  const signer = new ethers.Wallet(PRIVATE_KEY, provider);
+
+  const MyNFT = new ethers.ContractFactory(
+    contract.default.abi,
+    contract.default.bytecode,
+    signer,
+  );
+
+  const myNFTDeployed = await MyNFT.deploy(PUBLIC_KEY);
+
+  await myNFTDeployed.waitForDeployment();
+  const address = await myNFTDeployed.getAddress();
+  console.log("Contract deployed to address:", address);
 }
 
 main()
   .then(() => process.exit(0))
   .catch((error) => {
-    console.error(error)
-    process.exit(1)
-  })
+    console.error(error);
+    process.exit(1);
+  });
 ```
 
 Hardhat does an amazing job of explaining what each of these lines of code does in their [Contracts tutorial](https://hardhat.org/tutorial/testing-contracts.html#writing-tests), we’ve adopted their explanations here.
@@ -334,7 +353,7 @@ We’re finally ready to deploy our smart contract! Navigate back to the root of
 
     npx hardhat --network sepolia run scripts/deploy.js
 
-You should then see something like:
+You should then see something like after a couple seconds:
 
     Contract deployed to address: 0x4C5266cCc4b3F426965d2f51b6D910325a0E7650
 
