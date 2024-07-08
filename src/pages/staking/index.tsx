@@ -482,6 +482,9 @@ const StakingPage = ({
                     <li>
                       {t("page-staking-section-comparison-solo-risks-li3")}
                     </li>
+                    <li>
+                      {t("page-staking-section-comparison-solo-risks-li4")}
+                    </li>
                   </ul>
                 </div>
                 <div style={{ gridArea: "solo-reqs" }}>

@@ -281,6 +281,7 @@ const StakingHierarchy = () => {
             <Translation id="page-staking:page-staking-hierarchy-solo-p1" />
           </Text>
           <Text>{t("page-staking-hierarchy-solo-p2")}</Text>
+          <Text>{t("page-staking-hierarchy-solo-p3")}</Text>
           <Box>
             <ButtonLink
               to="/staking/solo/"
