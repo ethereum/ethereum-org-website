@@ -1,9 +1,11 @@
-import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react"
+import { Box, Heading, Stack, Text } from "@chakra-ui/react"
 
 import type { CommonHeroProps } from "@/lib/types"
 
 import { CallToAction } from "@/components/Hero/CallToAction"
 import { Image } from "@/components/Image"
+
+export type HubHeroProps = Omit<CommonHeroProps, "breadcrumbs" | "blurDataURL">
 
 const HubHero = ({
   heroImg,
@@ -11,7 +13,7 @@ const HubHero = ({
   header,
   description,
   buttons,
-}: CommonHeroProps) => {
+}: HubHeroProps) => {
   if (buttons && buttons.length > 2) {
     throw new Error(
       "Can not have more than two call-to-action buttons in this hero component."
@@ -24,7 +26,8 @@ const HubHero = ({
         src={heroImg}
         alt=""
         priority
-        sizes="100vw"
+        // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+        sizes="(max-width: 1504px) 100vw, 1504px"
         style={{ width: "100vw", objectFit: "cover" }}
         h={{
           base: "192px",
@@ -35,7 +38,7 @@ const HubHero = ({
         }}
       />
       <Stack
-        spacing={{ base: "3", md: "4" }}
+        spacing="4"
         p={{ base: "4", lg: "8" }}
         textAlign={{ base: "center", xl: "start" }}
         borderRadius={{ xl: "base" }}
@@ -70,12 +73,16 @@ const HubHero = ({
           </Heading>
           <Text size="lg">{description}</Text>
         </Stack>
-        <HStack justify={{ md: "center", xl: "start" }} spacing="4">
+        <Stack
+          direction={{ base: "column", md: "row" }}
+          justify={{ md: "center", xl: "start" }}
+          spacing="4"
+        >
           {buttons?.map((button, idx) => {
             if (!button) return
             return <CallToAction key={idx} index={idx} {...button} />
           })}
-        </HStack>
+        </Stack>
       </Stack>
     </Box>
   )

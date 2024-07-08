@@ -5,7 +5,7 @@ lang: sw
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Nembo ya Eth ikionyeshwa kwa kupitia hologramu.
 summaryPoint1: Njia ya kuwakilisha kitu chochote cha pekee kama mali zilizojengwa na Ethereum.
 summaryPoint2: NFT zinawapatia waundaji wa maudhui nguvu zaidi kuliko zamani.

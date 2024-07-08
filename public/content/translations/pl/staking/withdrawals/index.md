@@ -3,7 +3,7 @@ title: Wypłaty ze stakingu
 description: Strona podsumowująca, czym są wypłaty ze stakingu i jak działają, a także co muszą zrobić stakerzy, aby otrzymać nagrody
 lang: pl
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Nosorożec Leslie z nagrodami ze stakingu
 sidebarDepth: 2
 summaryPoints:
@@ -196,7 +196,7 @@ eventName="read more">
 
 Operatorom walidatorów zaleca się odwiedzenie strony <a href="https://launchpad.ethereum.org/withdrawals/">wypłaty Staking Launchpad</a>, gdzie można znaleźć więcej szczegółów na temat przygotowania walidatora do wypłat, czasu wydarzeń i więcej szczegółów na temat działania wypłat.
 
-Aby najpierw wypróbować swoją konfigurację w sieci testowej, odwiedź <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a>, aby rozpocząć.
+Aby najpierw wypróbować swoją konfigurację w sieci testowej, odwiedź <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a>, aby rozpocząć.
 
 </ExpandableCard>
 

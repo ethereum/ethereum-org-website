@@ -1,20 +1,11 @@
 import * as React from "react"
-import {
-  Box,
-  Center,
-  Flex,
-  Link as ChakraLink,
-  Stack,
-  Text,
-  VStack,
-} from "@chakra-ui/react"
+import { Box, Center, Flex, Stack, Text, VStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import components from "@/@chakra-ui/components"
 
+import LinkComponent from "../Link"
 import Translation from "../Translation"
-
-type TextType = typeof Text
 
 const meta = {
   title: "Atoms / Typography / Text",
@@ -41,7 +32,7 @@ const meta = {
       </Center>
     ),
   ],
-} satisfies Meta<TextType>
+} satisfies Meta<typeof Text>
 
 export default meta
 
@@ -130,7 +121,7 @@ export const Italic: Story = {
   },
 }
 
-export const Link: StoryObj<typeof ChakraLink> = {
+export const Link: StoryObj<typeof LinkComponent> = {
   args: {
     children: SINGLE_TEXT_CHILD,
   },
@@ -147,7 +138,7 @@ export const Link: StoryObj<typeof ChakraLink> = {
               <Text size={key} flex="1" textAlign="end">
                 {key}
               </Text>
-              <ChakraLink size={key} href="#" flex="9" {...args} />
+              <LinkComponent size={key} href="#" flex="9" {...args} />
             </Flex>
           ))}
         </Stack>

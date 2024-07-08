@@ -110,7 +110,7 @@ Az Ethereumon létezik egy másik típusú kulcs is, amelyet a proof-of-work-ala
 
 A számla nem egyenlő a tárcával. A számla az a kulcspár, amely a felhasználó Ethereum számlájához tartozik. A tárca egy olyan interfész vagy alkalmazás, amely lehetővé teszi az Ethereum számlával való interakciót.
 
-## Vizuális bemutató {#a-visual-demo}
+## Egy vizuális bemutató {#a-visual-demo}
 
 Nézze meg, ahogy Austin elmagyarázza a hash funkciót és a kulcspárokat.
 
@@ -122,7 +122,7 @@ Nézze meg, ahogy Austin elmagyarázza a hash funkciót és a kulcspárokat.
 
 - [Az Ethereum-számlák megértése](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
 
-_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
+_Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_
 
 ## Kapcsolódó témák {#related-topics}
 

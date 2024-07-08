@@ -63,7 +63,6 @@ Les [clients d'exécution Ethereum](/developers/docs/nodes-and-clients/#executio
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
-- [eEVM](https://github.com/microsoft/eevm) - _C++_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## Complément d'information {#further-reading}

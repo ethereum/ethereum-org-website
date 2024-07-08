@@ -10,9 +10,9 @@ import {
   Flex,
 } from "@chakra-ui/react"
 
-import { Button } from "@/components/Buttons"
+import type { WalletFilter } from "@/lib/types"
 
-import walletData from "@/data/wallets/wallet-data"
+import { Button } from "@/components/Buttons"
 
 import OldHeading from "../OldHeading"
 
@@ -23,15 +23,18 @@ import WalletFilterSidebar, {
   WalletFilterSidebarProps,
 } from "./WalletFilterSidebar"
 
-import { useWalletTable } from "@/hooks/useWalletTable"
-
 type MobileFiltersMenuProps = WalletFilterSidebarProps & {
   showMobileSidebar: boolean
+  setFilters: React.Dispatch<React.SetStateAction<WalletFilter>>
+  selectedPersona: number
+  setSelectedPersona: React.Dispatch<React.SetStateAction<number>>
   onOpen: () => void
   onClose: () => void
+  totalWallets: number
 }
 
 export const MobileFiltersMenu = ({
+  totalWallets,
   filters,
   resetWalletFilter,
   resetFilters,
@@ -45,7 +48,6 @@ export const MobileFiltersMenu = ({
   onClose,
 }: MobileFiltersMenuProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
-  const { filteredWallets } = useWalletTable({ filters, t, walletData })
 
   return (
     <>
@@ -127,8 +129,7 @@ export const MobileFiltersMenu = ({
               </Box>
 
               <Button w="100%" flex={1} onClick={onClose}>
-                {t("page-find-wallet-see-wallets")}{" "}
-                {`(${filteredWallets.length})`}
+                {t("page-find-wallet-see-wallets")} {`(${totalWallets})`}
               </Button>
             </Flex>
           </DrawerBody>

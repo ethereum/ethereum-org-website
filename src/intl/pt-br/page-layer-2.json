@@ -120,7 +120,7 @@
   "optimism-description": "O Optimism é um rollup otimista equivalente a uma EVM rápida, simples e segura. Ele dimensiona a tecnologia do Ethereum enquanto também dimensiona seus valores por meio de financiamento retroativo de bens públicos.",
   "boba-description": "Boba é um Rollup Otimista originalmente bifurcado do otimismo, o qual é uma solução de escalabilidade que visa reduzir as taxas de gás, melhorar a vazão das transações e estender as capacidades dos contratos inteligentes.",
   "loopring-description": "A solução zkRollup L2 da Loopring visa oferecer as mesmas garantias de segurança que a rede principal Ethereum, com um grande aumento de escalabilidade: taxa de transferência aumentada em 1000x e custo reduzido para apenas 0,1% da L1.",
-  "zksync-description": "zkSync é uma plataforma de rollup zk centrada no usuário da Matter Labs. É uma solução de escalabilidade para o Ethereum, já disponível na rede principal Ethereum. Ele suporta pagamentos, trocas de token e cunhagem de NFT.",
+  "zksync-description": "ZKsync é uma plataforma de rollup zk centrada no usuário da Matter Labs. É uma solução de escalabilidade para o Ethereum, já disponível na rede principal Ethereum. Ele suporta pagamentos, trocas de token e cunhagem de NFT.",
   "zkspace-description": "A plataforma ZKSpace é composta por três partes principais: uma camada 2 AMM DEX que utiliza a tecnologia ZK-Rollups, chamada ZKSwap, um serviço de pagamento chamado ZKSquare e um marketplace de NFT chamado ZKSea.",
   "aztec-description": "A Aztec Network é o primeiro rollup de conhecimento zero privado no Ethereum, permitindo que aplicativos descentralizados acessem privacidade e escalabilidade.",
   "layer-2-note": "Observação:",

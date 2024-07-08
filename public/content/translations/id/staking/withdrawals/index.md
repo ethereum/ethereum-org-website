@@ -3,7 +3,7 @@ title: Penarikan penaruhan
 description: Halaman yang merangkum tentang penarikan tekan penaruhan, bagaimana cara kerjanya, dan apa yang harus dilakukan oleh staker untuk mendapatkan imbalan mereka
 lang: id
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Leslie si badak dengan imbalan penaruhannya
 sidebarDepth: 2
 summaryPoints:
@@ -196,7 +196,7 @@ eventName="read more">
 
 Operator validator disarankan mengunjungi halaman <a href="https://launchpad.ethereum.org/withdrawals/">Penarikan Landasan Peluncuran Penaruhan</a>, tempat Anda akan menemukan detail selengkapnya tentang cara menyiapkan validator Anda untuk penarikan, penetapan waktu aksi, dan detail selengkapnya tentang fungsi penarikan.
 
-Untuk mencoba pengaturan Anda di jaringan percobaan terlebih dahulu, kunjungi <a href="https://goerli.launchpad.ethereum.org">Landasan Peluncuran Penaruhan Jaringan Percobaan Goerli</a> untuk memulai.
+Untuk mencoba pengaturan Anda di jaringan percobaan terlebih dahulu, kunjungi <a href="https://holesky.launchpad.ethereum.org">Landasan Peluncuran Penaruhan Jaringan Percobaan Holesky</a> untuk memulai.
 
 </ExpandableCard>
 

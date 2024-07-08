@@ -1,37 +1,41 @@
-import { useTranslation } from "next-i18next"
 import { Meta, StoryObj } from "@storybook/react"
 
+import { getTranslation } from "@/storybook-utils"
+
+import { langViewportModes } from "../../../../.storybook/modes"
+
 import ContentHeroComponent, { ContentHeroProps } from "."
-
-type ContentHeroType = typeof ContentHeroComponent
-
-import contentHeroImg from "../../../../public/mainnet.png"
 
 const meta = {
   title: "Organisms / Layouts / Hero",
   component: ContentHeroComponent,
   parameters: {
     layout: "none",
-  },
-  argTypes: {
-    heroImg: {
-      table: {
-        disable: true,
+    chromatic: {
+      modes: {
+        ...langViewportModes,
       },
     },
   },
-} satisfies Meta<ContentHeroType>
+} satisfies Meta<typeof ContentHeroComponent>
 
 export default meta
 
 export const ContentHero: StoryObj = {
+  parameters: {
+    // Set asPath in mock router so the Breadcrums component can render
+    // the "home" text with correct translation
+    nextjs: {
+      router: {
+        asPath: "/en",
+      },
+    },
+  },
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { t } = useTranslation("page-learn")
-
+    const PAGE_LEARN_NS = "page-learn"
     const buttons: ContentHeroProps["buttons"] = [
       {
-        content: t("hero-button-lets-get-started"),
+        content: getTranslation("hero-button-lets-get-started", PAGE_LEARN_NS),
         toId: "what-is-crypto-ethereum",
         matomo: {
           eventCategory: "learn hub hero buttons",
@@ -50,10 +54,12 @@ export const ContentHero: StoryObj = {
     ]
     return (
       <ContentHeroComponent
-        breadcrumbs={{ slug: "/en/run-a-node/" }}
-        heroImg={contentHeroImg}
-        title={t("hero-header")}
-        description={t("hero-subtitle")}
+        breadcrumbs={{ slug: "/run-a-node/" }}
+        heroImg="/images/upgrades/merge.png"
+        // Can not properly hardcode this URL. So it's left blank
+        blurDataURL=""
+        title={getTranslation("hero-header", PAGE_LEARN_NS)}
+        description={getTranslation("hero-subtitle", PAGE_LEARN_NS)}
         buttons={buttons}
       />
     )

@@ -3,7 +3,7 @@ title: स्टेकिंग निकालना
 description: पेज संक्षेप में बताता है कि पुश निकासी क्या हैं, वे कैसे काम करते हैं, और हितधारकों को अपने पुरस्कार प्राप्त करने के लिए क्या करने की आवश्यकता है
 lang: hi
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: लेस्ली राइनो अपने स्टेकिंग पुरस्कारों के साथ
 sidebarDepth: 2
 summaryPoints:
@@ -196,7 +196,7 @@ eventName="read more">
 
 सत्यापनकर्ता ऑपरेटरों को <a href="https://launchpad.ethereum.org/withdrawals/">स्टेकिंग लॉन्चपैड निकासी</a> पृष्ठ पर जाने की सिफारिश की जाती है जहां आपको निकासी के लिए अपने सत्यापनकर्ता को तैयार करने के बारे में अधिक जानकारी मिलेगी। तैयार, घटनाओं का समय, और निकासी कैसे कार्य करती है, इसके बारे में अधिक जानकारी।
 
-पहले टेस्टनेट पर अपने सेटअप को आज़माने के लिए, आरंभ करने के लिए <a href="https://goerli.launchpad.ethereum.org">Goerli टेस्टनेट स्टेकिंग लॉन्चपैड</a> पर जाएं।
+पहले टेस्टनेट पर अपने सेटअप को आज़माने के लिए, आरंभ करने के लिए <a href="https://holesky.launchpad.ethereum.org">Holesky टेस्टनेट स्टेकिंग लॉन्चपैड</a> पर जाएं।
 
 </ExpandableCard>
 

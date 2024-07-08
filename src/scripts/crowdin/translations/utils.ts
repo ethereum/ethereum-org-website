@@ -41,6 +41,12 @@ export const decompressFile = async (filePath: string, targetDir: string) => {
 }
 
 const getQAMessage = (locale: string) => {
+  console.log("Checking summary path:", SUMMARY_PATH)
+  if (!fs.existsSync(SUMMARY_PATH)) {
+    console.error("Could not find summary path:", SUMMARY_PATH)
+    throw new Error("No summary file found.")
+  }
+
   const summaryJson: QASummary = JSON.parse(readFileSync(SUMMARY_PATH, "utf-8"))
   const qaResults = summaryJson[locale]
     ? summaryJson[locale].map((s) => "- " + s).join("\n")
@@ -56,6 +62,8 @@ yarn markdown-checker
 
 ${qaResults}
 </details>
+
+@coderabbitai review
 `
 }
 
@@ -73,7 +81,7 @@ export const createLocaleTranslationPR = (
     .toLowerCase()
   const timestamp = new Date().toISOString().replace(/[^0-9]/g, "")
 
-  const branchName = `${month}-${locale}-${timestamp}`
+  const branchName = `crowdin-${month}-${locale}-${timestamp}`
   const message = `chore: import translations for ${locale}`
   const startingBranch = execSync("git branch --show-current", {
     encoding: "utf-8",

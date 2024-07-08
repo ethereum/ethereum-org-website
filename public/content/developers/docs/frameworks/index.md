@@ -132,6 +132,13 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Documentation](https://catapulta.sh/docs)
 - [Github](https://github.com/catapulta-sh)
 
+**Covalent -** **_Enriched blockchain APIs for 200+ Chains._**
+
+- [covalenthq.com](https://www.covalenthq.com/)
+- [Documentation](https://www.covalenthq.com/docs/api/)
+- [GitHub](https://github.com/covalenthq)
+- [Discord](https://www.covalenthq.com/discord/)
+
 **Wake -** **_All-in-one Python framework for contracts testing, fuzzing, deployment, vulnerability scanning and code navigation._**
 
 - [Homepage](https://getwake.io/)

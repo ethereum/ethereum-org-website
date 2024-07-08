@@ -45,7 +45,7 @@ const PageMetadata = ({
   const fullTitle = `${title} | ${siteTitle}`
 
   // Remove any query params (?) or hash links (#)
-  const path = asPath.replace(/[\?\#].*/, "")
+  const path = asPath.replace(/[?#].*/, "")
   const slug = path.split("/")
 
   // Set canonical URL w/ language path to avoid duplicate content

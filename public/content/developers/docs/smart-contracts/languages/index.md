@@ -11,6 +11,8 @@ The two most active and maintained languages are:
 - Solidity
 - Vyper
 
+Remix IDE provides a comprehensive development environment for creating and testing contracts in both Solidity and Vyper. [Try the in-browser Remix IDE](https://remix.ethereum.org) to start coding.
+
 More experienced developers also might want to use Yul, an intermediate language for the [Ethereum Virtual Machine](/developers/docs/evm/), or Yul+, an extension to Yul.
 
 If you're curious and like to help test new languages that are still under heavy development you can experiment with Fe, an emerging smart contract language which is currently still in its infancy.

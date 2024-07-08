@@ -120,7 +120,7 @@
   "optimism-description": "İyimserlik; hızlı, basit ve güvenli bir EVM eş değeri iyimser toplamadır. Ethereum'un teknolojisini ölçeklendirirken aynı zamanda Ethereum'un değerlerini, geçmişe dönük kamu fonlaması yardımyla ölçeklendirir.",
   "boba-description": "Boba, başlangıçta gaz ücretlerini azaltmayı, işlem hacmini iyileştirmeyi ve akıllı sözleşmelerin yeteneklerini genişletmeyi amaçlayan bir ölçeklendirme çözümü olan Optimism'den çatallanan bir İyimser Toplamadır.",
   "loopring-description": "Loopring'in zkRollup L2 çözümü, büyük bir ölçeklenebilirlik artışı ile Ethereum ana ağı ile aynı güvenlik garantilerini sunmayı hedefliyor: verim 1000 kat arttı ve maliyet Katman 1'in sadece %0,1'ine düşürüldü.",
-  "zksync-description": "zkSync, Matter Labs'ın kullanıcı merkezli bir zk toplama platformudur. Zaten Ethereum ana ağında yaşayan Ethereum için bir ölçeklendirme çözümüdür. Ödemeleri, token takaslarını ve NFT basımını destekler.",
+  "zksync-description": "ZKsync, Matter Labs'ın kullanıcı merkezli bir zk toplama platformudur. Zaten Ethereum ana ağında yaşayan Ethereum için bir ölçeklendirme çözümüdür. Ödemeleri, token takaslarını ve NFT basımını destekler.",
   "zkspace-description": "ZKSpace platformu üç ana bölümden oluşmaktadır: ZK-Rollups teknolojisini kullanan bir katman 2 otomatik piyasa yapıcısı (AMM) ve merkeziyetsiz borsa (DEX) olan ZKSwap, ZKSquare adında bir ödeme hizmeti ve ZKSea adında bir NFT pazarı.",
   "aztec-description": "Aztec Ağı, Ethereum'daki ilk özel zk toplamasıdır ve merkeziyetsiz uygulamaların gizliliğe ve ölçeklendirmeye erişmesini sağlar.",
   "layer-2-note": "Not:",

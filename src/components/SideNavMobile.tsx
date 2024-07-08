@@ -26,7 +26,7 @@ const getPageTitleId = (
       return link.id
     }
     if (link.items) {
-      let pageTitle = getPageTitleId(to, link.items)
+      const pageTitle = getPageTitleId(to, link.items)
       if (pageTitle) {
         return pageTitle
       }

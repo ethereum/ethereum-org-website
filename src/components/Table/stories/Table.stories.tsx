@@ -40,7 +40,7 @@ export const Tables: Story = {
   ),
 }
 
-export const MockDocContent = {
+export const MockDocContent: StoryObj = {
   render: () => (
     <>
       <TableComponent variant="simple">

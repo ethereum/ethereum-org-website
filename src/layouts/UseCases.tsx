@@ -216,6 +216,8 @@ export const UseCasesLayout = ({
           width={1200}
           height={610}
           style={{ objectFit: "cover" }}
+          // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+          sizes="(max-width: 992px) 100vw, 750px"
           priority
           alignSelf={{
             base: "center",

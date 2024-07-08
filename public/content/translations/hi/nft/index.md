@@ -5,7 +5,7 @@ lang: hi
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: होलोग्राम के माध्यम से एक Eth लोगो प्रदर्शित किया जा रहा है।
 summaryPoint1: किसी भी अनूठी वस्तु को एथेरियम-आधारित सम्पत्ति के रूप में प्रस्तुत करने का एक तरीका।
 summaryPoint2: कंटेंट निर्माताओं को NFT पहले से कहीं ज़्यादा मज़बूत कर रहे हैं।

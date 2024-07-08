@@ -23,7 +23,6 @@ import { useActiveHash } from "@/hooks/useActiveHash"
 export type TableOfContentsProps = BoxProps & {
   items: Array<ToCItem>
   maxDepth?: number
-  slug?: string
   editPath?: string
   hideEditButton?: boolean
   isMobile?: boolean
@@ -32,7 +31,6 @@ export type TableOfContentsProps = BoxProps & {
 const TableOfContents = ({
   items,
   maxDepth = 1,
-  slug,
   editPath,
   hideEditButton = false,
   isMobile = false,

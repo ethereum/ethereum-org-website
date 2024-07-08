@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react"
+import { lazy, ReactNode, Suspense, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -14,17 +14,17 @@ import {
   HeadingProps,
   Icon,
   SimpleGridProps,
+  SkeletonText,
   Stack,
   useToken,
 } from "@chakra-ui/react"
 
 import { AllMetricData, BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
-import type { CommunityEventsReturnType } from "@/lib/interfaces"
+import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
-import Codeblock from "@/components/Codeblock"
 import CodeModal from "@/components/CodeModal"
 import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
@@ -32,12 +32,13 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import StatsBoxGrid from "@/components/StatsBoxGrid"
-import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
+import TitleCardList from "@/components/TitleCardList"
 import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import {
   getRequiredNamespacesForPage,
   isLangRightToLeft,
@@ -54,20 +55,20 @@ import { fetchNodes } from "@/lib/api/fetchNodes"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
-import devfixed from "@/public/developers-eth-blocks.png"
-import dogefixed from "@/public/doge-computer.png"
-import enterprise from "@/public/enterprise-eth.png"
-import ethfixed from "@/public/eth.png"
-import finance from "@/public/finance_transparent.png"
-import future from "@/public/future_transparent.png"
-import hackathon from "@/public/hackathon_transparent.png"
-import hero from "@/public/home/hero.png"
-import impact from "@/public/impact_transparent.png"
-import infrastructure from "@/public/infrastructure_transparent.png"
-import infrastructurefixed from "@/public/infrastructure_transparent.png"
-import merge from "@/public/upgrades/merge.png"
-import robotfixed from "@/public/wallet-cropped.png"
-import ethereum from "@/public/what-is-ethereum.png"
+import devfixed from "@/public/images/developers-eth-blocks.png"
+import dogefixed from "@/public/images/doge-computer.png"
+import enterprise from "@/public/images/enterprise-eth.png"
+import ethfixed from "@/public/images/eth.png"
+import finance from "@/public/images/finance_transparent.png"
+import future from "@/public/images/future_transparent.png"
+import hackathon from "@/public/images/hackathon_transparent.png"
+import hero from "@/public/images/home/hero.png"
+import impact from "@/public/images/impact_transparent.png"
+import infrastructure from "@/public/images/infrastructure_transparent.png"
+import infrastructurefixed from "@/public/images/infrastructure_transparent.png"
+import merge from "@/public/images/upgrades/merge.png"
+import robotfixed from "@/public/images/wallet-cropped.png"
+import ethereum from "@/public/images/what-is-ethereum.png"
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
@@ -120,8 +121,6 @@ const StyledActionCard = chakra(ActionCard, {
     margin: 0,
   },
 })
-
-const StyledCodeModal = chakra(CodeModal)
 
 const StyledTitleCardList = chakra(TitleCardList)
 
@@ -209,18 +208,43 @@ export const getStaticProps = (async ({ locale }) => {
 
   // load last deploy date to pass to Footer in RootLayout
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       communityEvents,
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
       metricResults,
     },
     revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
+
+const CodeblockSkeleton = () => (
+  <Stack px={6} pt="2.75rem" h="50vh">
+    <SkeletonText
+      mt="4"
+      noOfLines={6}
+      spacing={4}
+      skeletonHeight="1.4rem"
+      startColor="body.medium"
+      opacity={0.2}
+    />
+  </Stack>
+)
+
+const Codeblock = lazy(() =>
+  Promise.all([
+    import("@/components/Codeblock"),
+    // Add a delay to prevent the skeleton from flashing
+    new Promise((resolve) => setTimeout(resolve, 1000)),
+  ]).then(([module]) => module)
+)
 
 const HomePage = ({
   communityEvents,
@@ -291,11 +315,6 @@ const HomePage = ({
       to: "/community/",
     },
   ]
-
-  interface CodeExample extends ITitleCardItem {
-    codeLanguage: string
-    code: string
-  }
 
   const codeExamples: Array<CodeExample> = [
     {
@@ -535,38 +554,24 @@ const HomePage = ({
               </ButtonLink>
             </ButtonLinkRow>
           </FeatureContent>
-          <StyledCodeModal
-            isOpen={isModalOpen}
-            setIsOpen={setModalOpen}
-            title={codeExamples[activeCode].title}
-            sx={{
-              ".modal-component-container": {
-                padding: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                top: "50%",
-              },
-              ".modal-component": {
-                maxWidth: "100%",
-                maxHeight: "50%",
-                padding: 0,
-              },
-              ".modal-component-content": {
-                marginTop: "3rem",
-                width: "100%",
-                overflow: "auto",
-              },
-            }}
-          >
-            <Codeblock
-              codeLanguage={codeExamples[activeCode].codeLanguage}
-              allowCollapse={false}
-              fromHomepage
+          {/* Render CodeModal & Codeblock conditionally */}
+          {isModalOpen && (
+            <CodeModal
+              isOpen={isModalOpen}
+              setIsOpen={setModalOpen}
+              title={codeExamples[activeCode].title}
             >
-              {codeExamples[activeCode].code}
-            </Codeblock>
-          </StyledCodeModal>
+              <Suspense fallback={<CodeblockSkeleton />}>
+                <Codeblock
+                  codeLanguage={codeExamples[activeCode].codeLanguage}
+                  allowCollapse={false}
+                  fromHomepage
+                >
+                  {codeExamples[activeCode].code}
+                </Codeblock>
+              </Suspense>
+            </CodeModal>
+          )}
         </Row>
       </MainSectionContainer>
       {/* Eth Today Section */}

@@ -3,7 +3,7 @@ title: बीकन चेन
 description: बीकन चेन के बारे में जानें - अपग्रेड जिसने हिस्सेदारी का सबूत एथेरियम पेश किया।
 lang: hi
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
 alt: 
 summaryPoint1: बीकन चेन ने एथेरियम इकोसिस्टम के लिए हिस्सेदारी का सबूत पेश किया।
 summaryPoint2: इसे सितंबर 2022 में ओरिजिनल एथेरियम काम का सबूत चेन के साथ मर्ज कर दिया गया था।

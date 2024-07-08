@@ -119,6 +119,10 @@ Make sure you read [our principles](/contributing/design-principles/) and [our s
 
 We welcome feedback on our design principles, design system and the style guide. Remember, ethereum.org is for the community, by the community.
 
+## License {#license}
+
+The ethereum.org website is open source and built under an [MIT License](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) unless otherwise specified. More on [terms of use](/terms-of-use/) of ethereum.org.
+
 ## Open jobs {#open-jobs}
 
 Although this website is open-source and anyone can work on it, we do have a team dedicated to ethereum.org and other Ethereum Foundation web projects.

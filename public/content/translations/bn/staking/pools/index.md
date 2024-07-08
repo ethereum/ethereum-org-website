@@ -4,7 +4,7 @@ description: পুল করা দিয়ে কীভাবে ETH স্�
 lang: bn
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: Leslie the rhino পুলে সাঁতার কাটছে।
 sidebarDepth: 2
 summaryPoints:

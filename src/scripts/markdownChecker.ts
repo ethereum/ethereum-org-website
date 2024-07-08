@@ -2,12 +2,13 @@ import fs from "fs"
 import path from "path"
 
 import matter from "gray-matter"
+import minimist from "minimist"
 
 import type { Lang } from "../lib/types"
 
 type Summary = Record<string, string[]>
 
-const argv = require("minimist")(process.argv.slice(2))
+const argv = minimist(process.argv.slice(2))
 
 const LANG_ARG: string | null = argv.lang || null
 const PATH_TO_INTL_MARKDOWN = "./public/content/translations/"
@@ -65,6 +66,9 @@ const SPELLING_MISTAKES: Array<string> = [
   "Ehtereum",
   "Eferum",
 ]
+
+// ! Current usage of this const is commented out
+// eslint-disable-next-line unused-imports/no-unused-vars
 const CASE_SENSITIVE_SPELLING_MISTAKES = ["Thereum", "Metamask", "Github"]
 // Ideas:
 // Regex for explicit lang path (e.g. /en/) && for glossary links (trailing slash breaks links e.g. /glossary/#pos/ doesn't work)
@@ -81,7 +85,7 @@ function getAllMarkdownPaths(
   dirPath: string,
   arrayOfMarkdownPaths: Array<string> = []
 ): Array<string> {
-  let files: Array<string> = fs.readdirSync(dirPath)
+  const files: Array<string> = fs.readdirSync(dirPath)
 
   arrayOfMarkdownPaths = arrayOfMarkdownPaths || []
 
@@ -117,7 +121,7 @@ function sortMarkdownPathsIntoLanguages(
     const langIndex = path.indexOf(translationDir) + translationDir.length
 
     // RegEx to grab the root of the path (e.g. the lang code for translated files)
-    const regex = /^([^\/]+)\//
+    const regex = /^([^/]+)\//
     const match = path.substring(langIndex).match(regex)
     const lang = isTranslation && match && match.length > 1 ? match[1] : "en"
 
@@ -198,7 +202,7 @@ function processFrontmatter(
       log(`Missing 'published' frontmatter at ${path}:`, "warn", summary)
     } else {
       try {
-        let stringDate = frontmatter.published.toISOString().slice(0, 10)
+        const stringDate = frontmatter.published.toISOString().slice(0, 10)
         const dateIsFormattedCorrectly = TUTORIAL_DATE_REGEX.test(stringDate)
 
         if (!dateIsFormattedCorrectly) {
@@ -368,6 +372,7 @@ const writeSummary = (summary: Summary, summaryWritePath: string) => {
 }
 
 export function checkMarkdown(summaryWritePath?: string) {
+  console.log("Checking markdown for common issues...")
   const summary = {} as Summary
   const markdownPaths: Array<string> = getAllMarkdownPaths(PATH_TO_ALL_CONTENT)
   const markdownPathsByLang: Languages =
@@ -383,8 +388,10 @@ export function checkMarkdown(summaryWritePath?: string) {
 
     if (!summary[lang].length) delete summary[lang]
   }
+  if (!summaryWritePath) return
 
-  summaryWritePath && writeSummary(summary, summaryWritePath)
+  writeSummary(summary, summaryWritePath)
+  console.log("Writing markdown checker summary to:", summaryWritePath)
 }
 
 checkMarkdown()

@@ -3,7 +3,7 @@ title: Staking withdrawals
 description: Page summarizing what staking push withdrawals are, how they work, and what stakers need to do to get their rewards
 lang: en
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Leslie the rhino with her staking rewards
 sidebarDepth: 2
 summaryPoints:
@@ -196,7 +196,7 @@ eventName="read more">
 
 Validator operators are recommended to visit the <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> page where you'll find more details about how to prepare your validator for withdrawals, timing of events, and more details about how withdrawals function.
 
-To try out your setup on a testnet first, visit the <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a> to get started.
+To try out your setup on a testnet first, visit the <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> to get started.
 
 </ExpandableCard>
 

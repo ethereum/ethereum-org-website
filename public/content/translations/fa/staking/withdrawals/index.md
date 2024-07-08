@@ -3,7 +3,7 @@ title: برداشت‌ها از سهام‌گذاری
 description: این صفحه به طور خلاصه بیان می‌کند که برداشت‌های سهامگذاری خودکار چه هستند، چطور کار می‌کنند، و سهامگذاران برای دریافت پاداش‌هایشان به چه کار باید انجام بدهند
 lang: fa
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: لزلی (Leslie) کرگدن، با پاداش سهام گذاری‌اش
 sidebarDepth: 2
 summaryPoints:
@@ -196,7 +196,7 @@ eventName="read more">
 
 به اپراتورهای اعتبارسنج توصیه می‌شود از صفحه <a href="https://launchpad.ethereum.org/withdrawals/">برداشت‌های سکوی پرتاب سهامگذاری</a> بازدید کنند، که در آنجا جزئیات بیشتری درباره نجوه آماده‌سازی اعتبارسنج خود برای برداشت‌ها پیدا خواهید کرد. تهیه شده، زمان‌بندی رویدادها و اطلاعات بیشتر درباره چگونگی کار برداشت‌ها.
 
-برای امتحان اولیه تنظیمات خود در یک شبکه آزمایشی، به صفحه <a href="https://goerli.launchpad.ethereum.org">سکوی پرتاب سهامگذاری شبکه آزمایشی Goerli</a> برای شروع مراجعه کنید.
+برای امتحان اولیه تنظیمات خود در یک شبکه آزمایشی، به صفحه <a href="https://holesky.launchpad.ethereum.org">سکوی پرتاب سهامگذاری شبکه آزمایشی Holesky</a> برای شروع مراجعه کنید.
 
 </ExpandableCard>
 

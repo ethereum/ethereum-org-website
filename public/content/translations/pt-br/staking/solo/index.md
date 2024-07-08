@@ -4,7 +4,7 @@ description: Uma visão geral de como começar a fazer staking individual com se
 lang: pt-br
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Leslie, o rinoceronte, em seu próprio chip de computador
 sidebarDepth: 2
 summaryPoints:

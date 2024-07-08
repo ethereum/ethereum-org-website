@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Box, Flex, SimpleGrid } from "@chakra-ui/react"
 
@@ -7,8 +6,10 @@ import { DropdownOption, WalletFilter } from "@/lib/types"
 import { WalletMoreInfoCategory } from "./WalletMoreInfoCategory"
 import { WalletSocialLinks } from "./WalletSocialLinks"
 
+import type { WalletMoreInfoData } from "@/hooks/useWalletTable"
+
 type WalletMoreInfoProps = {
-  wallet: Record<string, any>
+  wallet: WalletMoreInfoData
   filters: WalletFilter
   idx: number
   featureDropdownItems: DropdownOption[]
@@ -23,7 +24,6 @@ export const WalletMoreInfo = ({
   hasAllLabels,
 }: WalletMoreInfoProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
-  const { locale } = useRouter()
   const walletHasFilter = (filterKey) => {
     return wallet[filterKey] === true
   }

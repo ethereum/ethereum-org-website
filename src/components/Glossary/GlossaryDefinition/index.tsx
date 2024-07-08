@@ -1,8 +1,9 @@
 import { ComponentProps } from "react"
-import { Box, Text } from "@chakra-ui/react"
+import { type HeadingProps, Text, VStack } from "@chakra-ui/react"
 
+import Heading from "@/components/Heading"
+import IdAnchor from "@/components/IdAnchor"
 import InlineLink from "@/components/Link"
-import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
 
 import { DEFAULT_GLOSSARY_NS } from "@/lib/constants"
@@ -24,22 +25,28 @@ const GlossaryDefinition = ({
   size = "md",
   options = { ns: DEFAULT_GLOSSARY_NS },
 }: GlossaryDefinitionProps) => {
-  const headingStyles =
-    size === "sm"
-      ? { fontSize: "md", mt: 0, mb: 2 }
-      : { fontSize: { base: "xl", md: "2xl" } }
-
   const textStyles = size === "sm" ? { mb: 0 } : {}
 
+  const headingPropsForAnchor = (id?: string): HeadingProps => {
+    if (!id) return {}
+    return {
+      scrollMarginTop: 28,
+      id,
+      "data-group": true,
+      position: "relative",
+    } as HeadingProps
+  }
+
   return (
-    <Box textAlign="start">
-      <OldHeading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
+    <VStack spacing={4} align="stretch" textAlign="start" mb={8}>
+      <Heading size="md" {...headingPropsForAnchor(term)}>
+        <IdAnchor id={term} />
         <Translation
           id={term + "-term"}
           options={options}
           transform={components}
         />
-      </OldHeading>
+      </Heading>
       {/**
        * `as="span"` prevents hydration warnings for strings that contain
        * elements that cannot be nested inside `p` tags, like `ul` tags
@@ -53,7 +60,7 @@ const GlossaryDefinition = ({
           transform={components}
         />
       </Text>
-    </Box>
+    </VStack>
   )
 }
 

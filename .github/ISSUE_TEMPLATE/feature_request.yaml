@@ -1,7 +1,7 @@
 name: Feature request
 description: Suggest an idea for this project
 title: Feature request
-labels: ["feature :sparkles:"]
+labels: ["feature ✨"]
 body:
   - type: textarea
     id: feature_request_description

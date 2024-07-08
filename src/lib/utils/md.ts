@@ -59,6 +59,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/blocks",
     "/developers/docs/bridges",
     "/developers/docs/consensus-mechanisms",
+    "/developers/docs/consensus-mechanisms/poa",
     "/developers/docs/consensus-mechanisms/pos",
     "/developers/docs/consensus-mechanisms/pos/attack-and-defense",
     "/developers/docs/consensus-mechanisms/pos/attestations",
@@ -78,6 +79,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/data-and-analytics",
     "/developers/docs/data-and-analytics/block-explorers",
     "/developers/docs/data-availability",
+    "/developers/docs/data-availability/blockchain-data-storage-strategies",
     "/developers/docs/data-structures-and-encoding",
     "/developers/docs/data-structures-and-encoding/patricia-merkle-trie",
     "/developers/docs/data-structures-and-encoding/rlp",
@@ -139,6 +141,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/standards",
     "/developers/docs/standards/tokens",
     "/developers/docs/standards/tokens/erc-20",
+    "/developers/docs/standards/tokens/erc-223",
     "/developers/docs/standards/tokens/erc-721",
     "/developers/docs/standards/tokens/erc-777",
     "/developers/docs/standards/tokens/erc-1155",
@@ -172,6 +175,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/tutorials/how-to-view-nft-in-metamask",
     "/developers/tutorials/how-to-write-and-deploy-an-nft",
     "/developers/tutorials/interact-with-other-contracts-from-solidity",
+    "/developers/tutorials/ipfs-decentralized-ui",
     "/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app",
     "/developers/tutorials/learn-foundational-ethereum-topics-with-sql",
     "/developers/tutorials/logging-events-smart-contracts",
@@ -334,7 +338,13 @@ export const getContentBySlug = (slug: string) => {
   const fileContents = fs.readFileSync(fullPath, "utf8")
   const { data, content } = matter(fileContents)
   const frontmatter = data as Frontmatter
-  const items: Omit<MdPageContent, "tocItems" | "crowdinContributors"> = {
+  const items: Omit<
+    MdPageContent,
+    | "tocItems"
+    | "contributors"
+    | "lastEditLocaleTimestamp"
+    | "lastDeployLocaleTimestamp"
+  > = {
     slug,
     content,
     frontmatter,

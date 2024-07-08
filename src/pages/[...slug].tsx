@@ -16,6 +16,7 @@ import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
 import type {
+  CommitHistory,
   Lang,
   Layout,
   LayoutMappingType,
@@ -26,12 +27,12 @@ import type {
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
 
-import { getCrowdinContributors } from "@/lib/utils/crowdin"
+import { getFileContributorInfo } from "@/lib/utils/contributors"
 import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { remapTableOfContents } from "@/lib/utils/toc"
 import {
   filterRealLocales,
@@ -114,6 +115,8 @@ const gfIssuesDataFetch = runOnlyOnce(async () => {
   return await fetchGFIs()
 })
 
+const commitHistoryCache: CommitHistory = {}
+
 export const getStaticProps = (async (context) => {
   const params = context.params!
   const { locale } = context
@@ -153,8 +156,6 @@ export const getStaticProps = (async (context) => {
   const timeToRead = readingTime(markdown.content)
   const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
   const slug = `/${params.slug.join("/")}/`
-  const lastUpdatedDate = getLastModifiedDate(slug, locale!)
-  const lastDeployDate = getLastDeployDate()
 
   // Get corresponding layout
   let layout = (frontmatter.template as Layout) ?? "static"
@@ -172,11 +173,27 @@ export const getStaticProps = (async (context) => {
     }
   }
 
-  const crowdinContributors = ["docs", "tutorial"].includes(layout)
-    ? getCrowdinContributors(mdPath, locale as Lang)
-    : []
-
   const requiredNamespaces = getRequiredNamespacesForPage(slug, layout)
+
+  const { contributors, lastUpdatedDate } = await getFileContributorInfo(
+    mdDir,
+    mdPath,
+    slug,
+    locale!,
+    frontmatter.lang,
+    layout,
+    commitHistoryCache
+  )
+
+  const lastDeployDate = getLastDeployDate()
+  const lastEditLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastUpdatedDate
+  )
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   const gfissues = await gfIssuesDataFetch()
 
@@ -186,13 +203,13 @@ export const getStaticProps = (async (context) => {
       mdxSource,
       slug,
       frontmatter,
-      lastUpdatedDate,
-      lastDeployDate,
+      lastEditLocaleTimestamp,
+      lastDeployLocaleTimestamp,
       contentNotTranslated,
       layout,
       timeToRead: Math.round(timeToRead.minutes),
       tocItems,
-      crowdinContributors,
+      contributors,
       gfissues,
     },
   }
@@ -202,7 +219,7 @@ const ContentPage: NextPageWithLayout<
   InferGetStaticPropsType<typeof getStaticProps>
 > = ({ mdxSource, layout, gfissues }) => {
   // TODO: Address component typing error here (flip `FC` types to prop object types)
-  // @ts-expect-error
+  // @ts-expect-error Incompatible component function signatures
   const components: Record<string, React.ReactNode> = {
     ...mdComponents,
     ...componentsMapping[layout],
@@ -223,21 +240,23 @@ ContentPage.getLayout = (page) => {
   const {
     slug,
     frontmatter,
-    lastUpdatedDate,
+    lastEditLocaleTimestamp,
+    lastDeployLocaleTimestamp,
     layout,
     timeToRead,
     tocItems,
-    crowdinContributors,
+    contributors,
     contentNotTranslated,
   } = page.props
 
   const layoutProps = {
     slug,
     frontmatter,
-    lastUpdatedDate,
+    lastEditLocaleTimestamp,
+    lastDeployLocaleTimestamp,
     timeToRead,
     tocItems,
-    crowdinContributors,
+    contributors,
     contentNotTranslated,
   }
   const Layout = layoutMapping[layout]

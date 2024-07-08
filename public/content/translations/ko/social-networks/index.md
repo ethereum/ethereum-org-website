@@ -5,7 +5,7 @@ lang: ko
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: 소셜 상호작용, 콘텐츠 창작 및 배포를 위한 블록체인 기반 플랫폼입니다.
 summaryPoint2: 분산형 소셜 미디어 네트워크는 사용자의 개인 정보를 보호하고 데이터 보안을 강화합니다.
 summaryPoint3: 토큰과 NFT는 콘텐츠를 통한 수익 창출의 새로운 방법을 만듭니다.
