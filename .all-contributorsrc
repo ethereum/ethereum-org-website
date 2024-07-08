@@ -12260,6 +12260,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "saurabhburade",
+      "name": "Saurabh Burade",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39492927?v=4",
+      "profile": "https://bsaurabh.xyz/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
