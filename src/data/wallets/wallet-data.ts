@@ -1929,7 +1929,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://docs.shapeshift.com/",
     documentation: "https://docs.shapeshift.com/",
-    new_to_crypto: true,
+    new_to_crypto: false,
   },
   {
     last_updated: "2024-06-20",
