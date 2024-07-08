@@ -13,8 +13,6 @@ import "@/styles/main.css"
 import { RootLayout } from "@/layouts/RootLayout"
 import { mono } from "@/lib/fonts"
 
-export const STORAGE_KEY = "theme"
-
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   useEffect(() => {
     if (!process.env.IS_PREVIEW_DEPLOY) {

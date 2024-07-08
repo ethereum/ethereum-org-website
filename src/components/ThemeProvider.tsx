@@ -1,7 +1,7 @@
 import { ThemeProvider as NextThemesProvider } from "next-themes"
 import type { ThemeProviderProps } from "next-themes/dist/types"
 
-export const STORAGE_KEY = "theme"
+import { COLOR_MODE_STORAGE_KEY } from "@/lib/constants"
 
 /**
  * Primary theming wrapper for use with color mode. Uses the theme provider
@@ -17,7 +17,7 @@ const ThemeProvider = ({ children }: Pick<ThemeProviderProps, "children">) => {
       defaultTheme="system"
       enableSystem
       disableTransitionOnChange
-      storageKey={STORAGE_KEY}
+      storageKey={COLOR_MODE_STORAGE_KEY}
     >
       {children}
     </NextThemesProvider>
