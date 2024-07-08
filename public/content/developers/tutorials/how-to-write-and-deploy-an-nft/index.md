@@ -204,7 +204,7 @@ After our import statements, we have our custom NFT smart contract, which is sur
 
 In our ERC-721 constructor, you’ll notice we pass 2 strings, “MyNFT” and “NFT.” The first variable is the smart contract’s name, and the second is its symbol. You can name each of these variables whatever you wish!
 
-Next, we have our function `safeMint(address to, string memory uri)` that allows us to mint an NFT! You'll notice this function takes in two variables:
+Next, we have our function `safeMint(address to, string memory uri)` that allows us to mint the NFT! You'll notice this function takes in two variables:
 
 - `address to` specifies the address that will receive your freshly minted NFT
 
@@ -244,7 +244,7 @@ Your `.env` should now look like this:
     PRIVATE_KEY="your-metamask-private-key"
     PUBLIC_KEY="your-public-key"
 
-To actually connect these to our code, we’ll reference these variables in our hardhat.config.js file in step 13.
+We'll integrate these values into our project in the next few steps!
 
 <EnvWarningBanner />
 
@@ -326,7 +326,7 @@ async function main() {
 
   await myNFTDeployed.waitForDeployment();
   const address = await myNFTDeployed.getAddress();
-  console.log("Contract deployed to address:", address);
+  console.log("Contract deployed to address:", address, "\nView it at https://sepolia.etherscan.io/address/", address);
 }
 
 main()
@@ -337,16 +337,11 @@ main()
   });
 ```
 
-Hardhat does an amazing job of explaining what each of these lines of code does in their [Contracts tutorial](https://hardhat.org/tutorial/testing-contracts.html#writing-tests), we’ve adopted their explanations here.
+Let's quickly run through this code!  Throughout this project, we're going to use `import` to load external libraries instead of `require` - you can read more at this [Stack Overflow answer](https://stackoverflow.com/a/70356073/12981681), and the [Node.js docs](https://nodejs.org/docs/latest-v16.x/api/esm.html#import-assertions).  
 
-    const MyNFT = await ethers.getContractFactory("MyNFT");
+Inside of the asynchronous function `main`, we first create a [`signer`](https://docs.ethers.org/v6/api/providers/#Signer).  This is necessary to deploy the contract, because we need an account linked with some funds to pay the gas fee!  Hopefully you were able to get some SepoliaETH from a faucet a couple minutes ago.
 
-A ContractFactory in ethers.js is an abstraction used to deploy new smart contracts, so MyNFT here is a factory for instances of our NFT contract. When using the hardhat-ethers plugin ContractFactory and Contract instances are connected to the first signer by default.
-
-    const myNFT = await MyNFT.deploy();
-
-Calling deploy() on a ContractFactory will start the deployment, and return a Promise that resolves to a Contract. This is the object that has a method for each of our smart contract functions.
-
+Next, we create a [`ContractFactory`](https://docs.ethers.org/v6/api/contract/#ContractFactory), which is essentially a contract that can make other contracts.  We then deploy the NFT using the [`.deploy()`](https://docs.ethers.org/v6/api/contract/#ContractFactory-deploy) method, then wait until its deployed using the asynchronous [`.waitForDeployment()`](https://docs.ethers.org/v6/api/contract/#BaseContract-waitForDeployment) method.  Finally, we find its address and print it! 
 ## Step 16: Deploy our contract {#deploy-contract}
 
 We’re finally ready to deploy our smart contract! Navigate back to the root of your project directory, and in the command line run:
@@ -355,13 +350,15 @@ We’re finally ready to deploy our smart contract! Navigate back to the root of
 
 You should then see something like after a couple seconds:
 
-    Contract deployed to address: 0x4C5266cCc4b3F426965d2f51b6D910325a0E7650
+    Contract deployed to address: 0xe49A13ad27c56034cAbB825d6385f332A24e7065
+    View it at https://sepolia.etherscan.io/address/0xe49a13ad27c56034cabb825d6385f332a24e7065
 
-If we go to the [Sepolia etherscan](https://sepolia.etherscan.io/) and search for our contract address we should be able to see that it has been deployed successfully. If you can't see it immediately, please wait a while as it can take some time. The transaction will look something like this:
+Click on the link in the terminal (most terminals support ctrl-click to visit hyperlink) to check out your very own smart contract!  If the link doesn't work, you can also visit [Sepolia Etherscan](https://sepolia.etherscan.io/) and paste the address into the search bar.  If you can't see it immediately, please wait a while as it can take some time. The transaction will look something like this:
 
-![View your transaction address on Etherscan](./etherscan-sepoila-contract-creation.png)
+![View your transaction address on Etherscan](./etherscan-sepolia-contract-creation.png)
 
-The From address should match your MetaMask account address and the To address will say “Contract Creation.” If we click into the transaction, we’ll see our contract address in the To field:
+
+If you click on the transaction address (the link after the words "at txn 0x..." circled above), you should see your MetaMask address in the "From" field, and a green check mark and the words "Created" in the "To" field.
 
 ![View your contract address on Etherscan](./etherscan-sepolia-tx-details.png)
 
