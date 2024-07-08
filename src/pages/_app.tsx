@@ -4,14 +4,12 @@ import { init } from "@socialgouv/matomo-next"
 
 import { AppPropsWithLayout } from "@/lib/types"
 
-import ChakraThemeProvider from "@/components/ChakraThemeProvider"
-import NextThemeProvider from '@/components/ThemeProvider'
+import ThemeProvider from '@/components/ThemeProvider'
 
 import "@/styles/global.css"
 import "@/styles/main.css"
 
 import { RootLayout } from "@/layouts/RootLayout"
-import { mono } from "@/lib/fonts"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   useEffect(() => {
@@ -29,16 +27,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
 
   return (
     <>
-      <style jsx global>
-        {`
-          :root {
-            --font-inter: Inter, sans-serif;
-            --font-mono: ${mono.style.fontFamily};
-          }
-        `}
-      </style>
-      <NextThemeProvider>
-        <ChakraThemeProvider>
+      <ThemeProvider>
           <RootLayout
             contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
             contentNotTranslated={pageProps.contentNotTranslated}
@@ -46,8 +35,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
             >
             {getLayout(<Component {...pageProps} />)}
           </RootLayout>
-        </ChakraThemeProvider>
-      </NextThemeProvider>
+      </ThemeProvider>
     </>
   )
 }

@@ -18,9 +18,15 @@ const config: StorybookConfig = {
   stories: ["../src/components/**/*.stories.tsx"],
   addons: [
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
+    {
+      name: "@storybook/addon-essentials",
+      options: {
+        backgrounds: false
+      }
+    },
     "@storybook/addon-interactions",
     "storybook-react-i18next",
+    "@storybook/addon-themes",
     "@chromatic-com/storybook"
   ],
   staticDirs: ["../public"],

@@ -1,12 +1,16 @@
+import isChromatic from "chromatic/isChromatic"
+import { MotionGlobalConfig } from "framer-motion"
 import { withThemeByDataAttribute } from "@storybook/addon-themes"
 import type { Preview } from "@storybook/react"
 
-import ThemeProvider from "../../src/components/ThemeProvider"
+import ThemeProvider from "@/components/ThemeProvider"
 
 import i18n, { baseLocales } from "./i18next"
 
-import "../../src/styles/global.css"
-import "../../src/styles/main.css"
+import "../src/styles/global.css"
+import "../src/styles/main.css"
+
+MotionGlobalConfig.skipAnimations = isChromatic()
 
 export const breakpointSet: [token: string, value: string][] = [
   ["base", "375px"],
@@ -18,20 +22,19 @@ export const breakpointSet: [token: string, value: string][] = [
 
 ]
 
-
 const preview: Preview = {
   globals: {
     locale: "en",
     locales: baseLocales,
   },
   decorators: [
-   withThemeByDataAttribute({
-    themes: {
-      light: 'light',
-      dark: 'dark',
-    },
-     defaultTheme: 'light',
-  }),
+    withThemeByDataAttribute({
+      themes: {
+        light: 'light',
+        dark: 'dark',
+      },
+      defaultTheme: 'light',
+    }),
     (Story) => (
       <ThemeProvider>
         <Story />
@@ -40,14 +43,12 @@ const preview: Preview = {
   ],
   parameters: {
     i18n,
+    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
-    },
-    backgrounds: {
-      disable: true,
     },
     chromatic: {
       prefersReducedMotion: "reduce",
