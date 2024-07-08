@@ -5,13 +5,10 @@ import NextDocument, {
   Main,
   NextScript,
 } from "next/document"
-import { ColorModeScript } from "@chakra-ui/react"
 
 import { Lang } from "@/lib/types"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
-
-import { STORAGE_KEY } from "./_app"
 
 class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
@@ -39,11 +36,6 @@ class Document extends NextDocument {
           />
         </Head>
         <body>
-          {/*
-            Still needed to insert the chakra specific classname on the `body` (`chakra-ui-light` & `chakra-ui-dark`)
-            and avoid color mode flashing
-          */}
-          <ColorModeScript initialColorMode="system" storageKey={STORAGE_KEY} />
           <Main />
           <NextScript />
         </body>

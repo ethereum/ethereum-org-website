@@ -1,33 +1,24 @@
 import { PropsWithChildren, useMemo } from "react"
 import merge from "lodash/merge"
-import { useTheme as useNextTheme } from "next-themes"
-import { ColorMode, ColorModeContext, ThemeProvider } from "@chakra-ui/react"
+import { ChakraBaseProvider, createLocalStorageManager } from "@chakra-ui/react"
 
 import customTheme from "@/@chakra-ui/theme"
 
+import { COLOR_MODE_STORAGE_KEY } from "@/lib/constants"
+
 import { useLocaleDirection } from "@/hooks/useLocaleDirection"
 
-function ChakraThemeProvider({ children }: PropsWithChildren) {
-  // get the theme from next-themes
-  const { resolvedTheme } = useNextTheme()
+const colorModeManager = createLocalStorageManager(COLOR_MODE_STORAGE_KEY)
 
+function ChakraThemeProvider({ children }: PropsWithChildren) {
   const direction = useLocaleDirection()
 
   const theme = useMemo(() => merge(customTheme, { direction }), [direction])
 
   return (
-    <ThemeProvider theme={theme}>
-      <ColorModeContext.Provider
-        value={{
-          colorMode: resolvedTheme as ColorMode,
-          toggleColorMode: () => {},
-          setColorMode: () => {},
-          forced: true,
-        }}
-      >
+    <ChakraBaseProvider theme={theme} colorModeManager={colorModeManager}>
         {children}
-      </ColorModeContext.Provider>
-    </ThemeProvider>
+    </ChakraBaseProvider>
   )
 }
 

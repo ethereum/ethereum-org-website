@@ -7,13 +7,13 @@ import { AppPropsWithLayout } from "@/lib/types"
 
 import ChakraThemeProvider from "@/components/ChakraThemeProvider"
 
+import { COLOR_MODE_STORAGE_KEY } from "@/lib/constants"
+
 import "@/styles/global.css"
 import "@/styles/main.css"
 
 import { RootLayout } from "@/layouts/RootLayout"
 import { mono } from "@/lib/fonts"
-
-export const STORAGE_KEY = "theme"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   useEffect(() => {
@@ -40,11 +40,11 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
         `}
       </style>
       <NextThemesProvider
-        attribute="class"
+        attribute="data-theme"
         defaultTheme="system"
         enableSystem
         disableTransitionOnChange
-        storageKey={STORAGE_KEY}
+        storageKey={COLOR_MODE_STORAGE_KEY}
       >
         <ChakraThemeProvider>
           <RootLayout
