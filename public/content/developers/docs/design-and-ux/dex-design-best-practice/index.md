@@ -98,7 +98,7 @@ Order routing is interesting, but doesn’t make much difference to most users.
 
 Some other details are simply restating the same thing in different ways. For example “minimum received” and “slippage” are two sides of the same coin. If you have slippage set at 1%, then the minimum you can expect to receive = expected output-1%. Some UIs will show expected amount, minimum amount, and slippage… Which is useful but possibly overkill. 
 
-Most users will leave slippage on Auto anyway.
+Most users will leave default slippage anyway.
 
 “Price impact” is often shown in brackets next to the usd equivalent in the “to” field. This is a great ux detail to add, but if it is shown here, does it really need to be shown again below? And then again on a preview screen?
 
