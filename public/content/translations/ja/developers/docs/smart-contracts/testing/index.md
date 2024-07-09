@@ -144,13 +144,13 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 - **[Remixを使った単体テストの実行](https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests)**
 - **[Apeを使った単体テストの実行](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
 - **[Hardhatを使った単体テストの実行](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
+- **[Wakeを使った単体テストの実行](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
 ### 統合テスト {#integration-testing-for-smart-contracts}
 
 単体テストでは、コントラクトの関数を個別にデバッグしましたが、統合テストでは、スマートコントラクトのコンポーネント全体を評価します。 統合テストでは、スマートコントラクト間の呼び出しで発生する問題や、同じスマートコントラクト内の異なる関数間のやり取りで発生する問題を検出できます。 例えば、[継承](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance)や依存性注入などの機能が正しく動作するかどうかを確認するのに役立ちます。
 
-統合テストは、コントラクトがモジュラー型アーキテクチャを採用していたり、実行中に他のオンチェーンコントラクトと接続する場合に有用です。 統合テストを実行する方法の1つは、([Forge](https://book.getfoundry.sh/forge/fork-testing)や[Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks)などのツールを使用して)[ブロックチェーンの](/glossary/#fork)特定のブロックの高さで
-フォークすることです。そして、デプロイされたコントラクトと作成したコントラクトのやり取りをシミュレートします
+統合テストは、コントラクトがモジュラー型アーキテクチャを採用していたり、実行中に他のオンチェーンコントラクトと接続する場合に有用です。統合テストを実行する方法の1つは、[ブロックチェーンを特定の高さでフォーク](/glossary/#fork)([Forge](https://book.getfoundry.sh/forge/fork-testing)や[Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks)などのツールを使用して)フォークすることです。そして、デプロイされたコントラクトと作成したコントラクトのやり取りをシミュレートします。
 
 フォークされたブロックチェーンは、メインネットと同様の仕組みで動作し、アカウントに状態と残高が関連付けられています。 しかし、サンドボックス化されたローカル開発環境としてのみ機能します。例えば、トランザクションに実際のETHは必要なく、変更しても実際のイーサリアムプロトコルに影響することはありません。
 
@@ -197,9 +197,11 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 プロパティテストツールは、適切に構成することで、ランダムに生成された入力値を使ってスマートコントラクトの関数を実行することができます。 アサーション違反が発生した場合、評価対象のプロパティに違反する具体的な入力データがレポートに含まれます。 プロパティベースのテストを実行するには、以下のさまざまなツールのガイドを参照してください。
 
 - **[Slitherを使ったスマートコントラクト静的解析](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither#slither)**
+- **[Wakeを使ったスマートコントラクト静的解析](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**
 - **[Brownieを使ったプロパティベースのテスト](https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html)**
 - **[Foundryを使ったコントラクトのファジング](https://book.getfoundry.sh/forge/fuzz-testing)**
 - **[Echidnaを使ったコントラクトのファジング](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
+- **[Wakeを使ったコントラクトのファジング](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Manticoreを使ったスマートコントラクトのシンボリック実行](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[Mythrilを使ったスマートコントラクトのシンボリック実行](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
@@ -285,6 +287,8 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 
 - **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _イーサリアム仮想マシン用のスマートコントラクトでPythonベースの開発およびテストのためのフレームワーク_。
 
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _Pythonベースの単体テストとファジングのフレームワークで、強力なデバック機能とクロスチェーンテストをサポートしており、pytestおよびAnvilを生かした最高のユーザーエクスペリエンスとパフォーマンスを実現。_
+
 
 
 ### プロパティベースのテストツール {#property-based-testing-tools}
@@ -298,6 +302,8 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _スマートコントラクトのプログラミング言語であるSolidityのスタイルとセキュリティのベストプラクティスを適用するためのリンター_。
 
 - **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Rustベースの静的解析ツールで、特にWeb3スマートコントラクトのセキュリティと開発のために設計されています。_
+
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Pythonベースの静的解析フレームワークで、脆弱性とコード品質の検出器、コードから有用な情報を抽出するプリンター、カスタムサブモジュールの作成をサポート。_
 
 
 

@@ -210,7 +210,7 @@ KYCなしの分散型ツール
 - [分散型ストレージとは](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [分散型ストレージに関する5つの一般的な通念を覆す](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
-_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
+_役に立つコミュニティリソースをご存知の場合は、 ページを編集して追加してください。_
 
 ## 関連トピック {#related-topics}
 

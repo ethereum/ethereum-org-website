@@ -53,7 +53,7 @@ JSON-RPC APIを介してイーサリアムクライアントと直接やり取�
 以下に、いくつかの例を示します。
 
 - 0x41(サイズ1、「A」)
-- 0x004200(サイズ3、「\0B\0」)
+- 0x004200 (サイズ3, "0B0")
 - 0x(サイズ0、「」)
 - 誤り: 0xf0f0f(偶数でなければなりません)
 - 誤り: 004200(接頭辞が0xでなければなりません)
@@ -131,6 +131,10 @@ curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","metho
 - [eth_getTransactionReceipt](#eth_gettransactionreceipt)
 - [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
 - [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
+
+## JSON-RPC APIプレイグラウンド
+
+APIメソッドの発見と試用に[プレイグラウンドツール](https://ethereum-json-rpc.com)が使えます。 プレイグラウンドツールでは、さまざまなノードプロバイダーによってサポートされているメソッドとネットワークも表示されます。
 
 ## JSON-RPC APIメソッド {#json-rpc-methods}
 
@@ -1360,7 +1364,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex"
 
 **パラメータ**
 
-1. `QUANTITY|TAG` - ブロックの番号、または文字列`"latest"`、`"earliest"`、`"pending"`、`"safe"`、`"finalized"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください
+1. `QUANTITY|TAG` - ブロックの番号、または文字列`"earliest"`、`"latest"`、`"pending"`、`"safe"`、`"finalized"`のいずれか。[デフォルトのブロックパラメータ](/developers/docs/apis/json-rpc/#default-block)を参照してください。
 2. `QUANTITY` - アンクルのインデックスの位置
 
 ```js
