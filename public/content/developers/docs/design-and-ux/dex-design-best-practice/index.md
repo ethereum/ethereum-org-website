@@ -71,7 +71,7 @@ During the evolution of DeFi, lots of different things have been included here.
 
 In the early days of DeFi, the fiat equivalent was often missing. If you are building any sort of Web3 project, it is essential that a fiat equivalent is shown. Users still think in terms of local currencies, so in order to match real world mental models, this should be included.
 
-On the second field (the one where you choose the token you are swapping to) you can also include the price impact next to the USD amount, by calculating the difference between the input amount and estimated output amounts. This is quite a useful detail to include.
+On the second field (the one where you choose the token you are swapping to) you can also include the price impact next to the fiat currency amount, by calculating the difference between the input amount and estimated output amounts. This is quite a useful detail to include.
 
 Percentage buttons (e.g. 25%, 50%, 75%) can be a useful feature, but they take up more space, add more CTAs, and add more mental load. Same with percentage sliders. Some of these UI decisions will depend on your brand and your user type.
 
