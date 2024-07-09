@@ -10,7 +10,7 @@ Les clés Ethereum sont générées à l'aide de la cryptographie à [courbe ell
 
 Cependant, quand Ethereum est passé de la [preuve de travail](/developers/docs/consensus-mechanisms/pow) à la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos), un nouveau type de clé a été ajouté à Ethereum. Les clés d'origine fonctionnent toujours exactement comme avant — il n'y a eu aucune modification aux clés basées sur des courbes elliptiques qui sécurisent les comptes. Toutefois, les utilisateurs avaient besoin d'un nouveau type de clé pour participer à la preuve d'enjeu en stakant l'ETH et en exécutant les validateurs. Ce besoin est né des problèmes d'évolutivité associés aux nombreux messages passant entre un grand nombre de validateurs, qui nécessitaient une méthode cryptographique pouvant être facilement agrégée afin de réduire la quantité de communication nécessaire à l'obtention d'un consensus dans le réseau.
 
-Ce nouveau type de clé utilise le **schéma de signature** [Boneh-Lyn-Shacham (BLS)](https://wikipedia.org/wiki/BLS_digital_signature). BLS permet une agrégation très efficace des signatures mais permet également l'ingénierie inverse des clés individuelles des validateurs agrégées et est idéal pour gérer les actions entre validateurs.
+Ce nouveau type de clés utilise le [schéma de signature **Boneh-Lynn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). BLS permet une agrégation très efficace des signatures mais permet également l'ingénierie inverse des clés individuelles des validateurs agrégées et est idéal pour gérer les actions entre validateurs.
 
 ## Les deux types de clés de validateur {#two-types-of-keys}
 
