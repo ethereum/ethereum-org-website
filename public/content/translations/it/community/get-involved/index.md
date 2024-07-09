@@ -38,7 +38,7 @@ Hai conoscenze di matematica, crittografia o economia? Potresti essere interessa
 - [Ethresearch.ch](https://ethresear.ch) - il forum principale di Ethereum per la ricerca, e il forum più influente al mondo per la criptoeconomia
 - [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - una serie continuativa di domande e risposte con i ricercatori. Ogni volta che si apre una parte successiva, chiunque può pubblicare domande.
 - [Lista dei desideri del Programma di supporto dell'ecosistema](https://esp.ethereum.foundation/wishlist/) - aree di ricerca in cui il Programma di supporto dell'ecosistema Ethereum sta cercando attivamente domande di sovvenzione
-- [AllWalletDevs](allwallet.dev): un forum per sviluppatori, progettisti e utenti interessati a Ethereum, per riunirsi regolarmente e discutere dei portafogli
+- [AllWalletDevs](https://allwallet.dev): un forum per sviluppatori, progettisti e utenti interessati a Ethereum, per riunirsi regolarmente e discutere dei portafogli
 
 [Esplora altre aree di ricerca attive](/community/research/).
 
