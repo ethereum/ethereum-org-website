@@ -10,7 +10,7 @@ Az Ethereum kulcsait [elliptikus görbe kriptográfiával](https://en.wikipedia.
 
 Amikor azonban az Ethereum [proof-of-work](/developers/docs/consensus-mechanisms/pow) mechanizmusról [proof-of-stake-re](/developers/docs/consensus-mechanisms/pos) váltott, egy új típusú kulcs került az Ethereumba. Az eredeti kulcsok továbbra is pontosan ugyanúgy működnek, mint korábban – a számlákat biztosító elliptikus görbén alapuló kulcsok nem változtak. A felhasználóknak azonban új típusú kulcsra volt szükségük ahhoz, hogy részt vehessenek a proof-of-stake-ben az ETH letétbe helyezésével és a validátorok futtatásával. Ez az igény a skálázhatóság miatt érdekes, hogy a nagyszámú validátorok közötti üzenetekhez olyan kriptográfiai módszer legyen, amely könnyen aggregálható, így csökkenti a hálózati konszenzus kommunikációs igényét.
 
-Ez az új típusú kulcs a [**Boneh-Lyn-Shacham (BLS)** aláírási sémát használja](https://wikipedia.org/wiki/BLS_digital_signature). A BLS lehetővé teszi az aláírások nagyon hatékony aggregálását, ugyanakkor az aggregált egyedi validátorkulcsok visszafejtését is, és ideális a validátorok közötti műveletek kezelésére.
+Ez az új típusú kulcs a [**Boneh-Lynn-Shacham (BLS)** aláírási sémát használja](https://wikipedia.org/wiki/BLS_digital_signature). A BLS lehetővé teszi az aláírások nagyon hatékony aggregálását, ugyanakkor az aggregált egyedi validátorkulcsok visszafejtését is, és ideális a validátorok közötti műveletek kezelésére.
 
 ## A validátorkulcsok két típusa {#two-types-of-keys}
 

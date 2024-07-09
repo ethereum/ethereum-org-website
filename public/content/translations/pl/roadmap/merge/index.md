@@ -3,7 +3,7 @@ title: Połączenie
 description: Dowiedz się więcej o Połączeniu — kiedy w sieci głównej Ethereum przyjęto dowód stawki (proof-of-stake).
 lang: pl
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Sieć główna Ethereum wykorzystuje mechanizm proof-of-stake, ale nie zawsze tak było.
 summaryPoint2: Przejście z oryginalnego mechanizmu proof-of-work na proof-of-stake zostało nazwane Połączeniem.

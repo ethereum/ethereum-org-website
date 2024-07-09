@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, SimpleGrid, Stack, Text } from "@chakra-ui/react"
+import { Box, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react"
 
 import type { CommonHeroProps } from "@/lib/types"
 
@@ -26,7 +26,8 @@ const ContentHero = (props: ContentHeroProps) => {
             blurDataURL={blurDataURL}
             width={760}
             height={451}
-            sizes="(max-width: 992px) 100vw, 50vw"
+            // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+            sizes="(max-width: 992px) 100vw, 760px"
             boxSize="full"
             style={{ objectFit: "contain" }}
             flex={{ base: "1 1 100%", md: "none" }}
@@ -44,12 +45,12 @@ const ContentHero = (props: ContentHeroProps) => {
               description
             )}
             {buttons && (
-              <HStack spacing="4">
+              <Stack direction={{ base: "column", md: "row" }} spacing="4">
                 {buttons.map((button, idx) => {
                   if (!button) return
                   return <CallToAction key={idx} index={idx} {...button} />
                 })}
-              </HStack>
+              </Stack>
             )}
           </Stack>
           {/* TODO:

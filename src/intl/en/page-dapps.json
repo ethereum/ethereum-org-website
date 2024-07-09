@@ -41,6 +41,7 @@
   "page-dapps-choose-category": "Choose category",
   "page-dapps-category-social": "Social media",
   "page-dapps-category-content": "Content",
+  "page-dapps-category-community": "Community", 
   "page-dapps-category-messaging": "Messaging",
   "page-dapps-category-identity": "Identity",
   "page-dapps-collectibles-benefits-1-description": "When art is tokenised on Ethereum, ownership can be proved for all to see. You can trace the artwork's journey from creation to its current holder. This prevents forgeries.",
@@ -95,6 +96,7 @@
   "page-dapps-dapp-description-loopring": "Peer-to-peer trading platform built for speed.",
   "page-dapps-dapp-description-marble-cards": "Create and trade unique digital cards based on URLs.",
   "page-dapps-dapp-description-matcha": "Searches multiple exchanges to help find you the best prices.",
+  "page-dapps-dapp-description-meeds": "Web3 community hubs for the age of decentralized work. Reward fairly and transparently contributions that matter.",
   "page-dapps-dapp-description-mirror": "Built on web3 for web3, Mirror’s robust publishing platform pushes the boundaries of writing online",
   "page-dapps-dapp-description-multichain": "The ultimate Router for web3. It is an infrastructure developed for arbitrary cross-chain interactions.",
   "page-dapps-dapp-description-nifty-gateway": "Buy works on-chain from top artists, athletes, brands, and creators.",
@@ -218,6 +220,7 @@
   "page-dapps-marble-cards-logo-alt": "marble.cards logo",
   "page-dapps-async-logo-alt": "Async logo",
   "page-dapps-matcha-logo-alt": "Matcha logo",
+  "page-dapps-meeds-logo-alt": "Meeds logo", 
   "page-dapps-metaverse-benefits-title": "metaverse",
   "page-dapps-metaverse-benefits-description": "What is it about Ethereum that allows the metaverse to thrive?",
   "page-dapps-metaverse-benefits-1-title": "NFTs",
@@ -285,5 +288,7 @@
   "page-dapps-dapp-description-dodo": "DODO is a on-chain liquidity provider, which leverages the Proactive Market Maker algorithm (PMM)",
   "page-dapps-dodo-image-alt": "DODO logo",
   "page-dapps-dapp-description-artblocks": "Art Blocks is dedicated to bringing compelling works of contemporary generative art to life",
-  "page-dapps-artblocks-image-alt": "Art Blocks logo"
+  "page-dapps-artblocks-image-alt": "Art Blocks logo",
+  "page-dapps-explore-title": "Want to browse more apps?",
+  "page-dapps-explore": "Check out hundreds of dapps"
 }

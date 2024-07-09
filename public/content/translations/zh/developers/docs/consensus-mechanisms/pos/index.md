@@ -91,3 +91,4 @@ lang: zh
 ## 相关主题 {#related-topics}
 
 - [工作量证明](/developers/docs/consensus-mechanisms/pow/)
+- [权威证明](/developers/docs/consensus-mechanisms/poa/)

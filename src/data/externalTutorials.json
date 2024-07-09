@@ -1,5 +1,47 @@
 [
   {
+    "url": "https://medium.com/@kaishinaw/issuing-and-verifying-ethereum-dids-with-metamask-a42070c0a04d",
+    "title": "Issuing And Verifying Ethereum DIDs with Metamask",
+    "description": "An initial explainer on how decentralized identity works",
+    "author": "Aw Kai Shin",
+    "authorGithub": "https://github.com/0xKai27",
+    "tags": [
+      "identity"
+    ],
+    "skillLevel": "intermediate",
+    "timeToRead": "9",
+    "lang": "en",
+    "publishDate": "11/10/2022"
+  },
+  {
+    "url": "https://www.cyfrin.io/blog/what-is-eip-4844-proto-danksharding-and-blob-transactions",
+    "title": "What is EIP-4844? Proto-Danksharding and blob transactions explained",
+    "description": "What is the EIP-4844? Learn what proto-danksharding and blobs are, how they work, and how to send your first blob transaction using the new Ethereum improvement proposal",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": [
+      "layer 2"
+    ],
+    "skillLevel": "intermediate",
+    "timeToRead": "11",
+    "lang": "en",
+    "publishDate": "05/29/2024"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=LmQTRGqUL9s",
+    "title": "What is EIP-4844? | Blobs & Proto-danksharding",
+    "description": "What is EIP-4844? What are blob-carrying transactions?",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": [
+      "layer 2"
+    ],
+    "skillLevel": "intermediate",
+    "timeToRead": "10",
+    "lang": "en",
+    "publishDate": "05/29/2024"
+  },
+  {
     "url": "https://updraft.cyfrin.io/courses/security",
     "title": "Learn Smart Contract Auditing, Security, and DeFi",
     "description": "The ultimate web3 security course for all those looking to be top smart contract developer or security researchers. We teach you all the cutting edge skills needed to make web3 safer and start a successful career in web3 security.",

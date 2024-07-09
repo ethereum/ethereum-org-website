@@ -25,7 +25,7 @@ incomplete: true
 
 You can use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology.
 There are at least two currently maintained libraries for Dart to use the
-[JSON RPC API](/developers/docs/apis/json-rpc/) for Ethereum.
+[JSON-RPC API](/developers/docs/apis/json-rpc/) for Ethereum.
 
 1. [Web3dart from simonbutler.eu](https://pub.dev/packages/web3dart)
 1. [Ethereum 5.0.0 from darticulate.com](https://pub.dev/packages/ethereum)

@@ -5,7 +5,7 @@ lang: el
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Μια παγκόσμια, ανοικτή εναλλακτική λύση στο τρέχον επιστημονικό σύστημα.
 summaryPoint2: Τεχνολογία που επιτρέπει στους επιστήμονες να αντλήσουν χρηματοδοτήσεις, να εκτελέσουν πειράματα, να μοιραστούν δεδομένα, ιδέες και πολλά άλλα.
@@ -107,6 +107,7 @@ summaryPoint3: Δημιουργία πάνω στο ανοιχτό επιστη�
 - [CureDAO: Πλατφόρμα ανάλυσης υγείας που ανήκει στην κοινότητα.](https://docs.curedao.org/)
 - [IdeaMarkets: Ενεργοποίηση της αποκεντρωμένης επιστημονικής αξιοπιστίας.](https://ideamarket.io/)
 - [Εργαστήρια DeSci](https://www.desci.com/)
+- [ValleyDAO: μια ανοιχτή, παγκόσμια κοινότητα που προσφέρει χρηματοδότηση και μεταφραστική υποστήριξη για την έρευνα συνθετικής βιολογίας](https://www.valleydao.bio)
 
 Χαιρετίζουμε τις προτάσεις νέων έργων για τη λίστα. Δείτε την [πολιτική καταχώρισης](/contributing/adding-desci-projects/) για να ξεκινήσετε!
 

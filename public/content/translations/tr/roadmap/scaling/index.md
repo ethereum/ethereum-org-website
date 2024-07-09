@@ -2,7 +2,7 @@
 title: Ethereum'u ölçeklendirmek
 description: Toplamalar işlemleri zincir dışında topluca gerçekleştiriyor, böylece kullanıcı için maliyetleri azaltıyor. Ancak, toplamaların şu andaki veri kullanımı çok pahalı ve bu durum, işlemlerin ucuz olabilme yolunu sınırlıyor. Proto-Danksharding bunu çözüyor.
 lang: tr
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "Ethereum yol haritası"
 template: roadmap
 ---

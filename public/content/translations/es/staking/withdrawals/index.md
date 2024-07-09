@@ -3,7 +3,7 @@ title: Retiradas de participaciones
 description: La página resume lo que son los «empujones de retirada», cómo funcionan y lo que los participantes deben hacer para obtener sus recompensas
 lang: es
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Leslie el rinoceronte con sus recompensas de participaciones
 sidebarDepth: 2
 summaryPoints:
@@ -196,7 +196,7 @@ eventName="read more">
 
 Se recomienda a los operadores validadores visitar la página <a href="https://launchpad.ethereum.org/withdrawals/">Retiradas del lanzador de apuestas</a> donde encontrará más detalles sobre cómo preparar su validador para las retiradas, la sincronización de los eventos y más detalles sobre cómo funcionan las retiradas.
 
-Para probar primero su configuración en una red de pruebas, visite el <a href="https://goerli.launchpad.ethereum.org">Lanzador de apuestas de red de prueba Goerli</a> para empezar.
+Para probar primero su configuración en una red de pruebas, visite el <a href="https://holesky.launchpad.ethereum.org">Lanzador de apuestas de red de prueba Holesky</a> para empezar.
 
 </ExpandableCard>
 

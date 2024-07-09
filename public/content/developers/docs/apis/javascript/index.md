@@ -8,7 +8,7 @@ In order for a web app to interact with the Ethereum blockchain (i.e. read block
 
 For this purpose, every Ethereum client implements the [JSON-RPC](/developers/docs/apis/json-rpc/) specification, so there are a uniform set of [methods](/developers/docs/apis/json-rpc/#json-rpc-methods) that applications can rely on.
 
-If you want to use JavaScript to connect with an Ethereum node, it's possible to use vanilla JavaScript but several convenience libraries exist within the ecosystem that make this much easier. With these libraries, developers can write intuitive, one-line methods to initialize JSON RPC requests (under the hood) that interact with Ethereum.
+If you want to use JavaScript to connect with an Ethereum node, it's possible to use vanilla JavaScript but several convenience libraries exist within the ecosystem that make this much easier. With these libraries, developers can write intuitive, one-line methods to initialize JSON-RPC requests (under the hood) that interact with Ethereum.
 
 Please note that since [The Merge](/roadmap/merge/), two connected pieces of Ethereum software - an execution client and a consensus client - are required to run a node. Please ensure your node includes both an execution and consensus client. If your node is not on your local machine (e.g. your node is running on an AWS instance) update the IP addresses in the tutorial accordingly. For more information please see our page on [running a node](/developers/docs/nodes-and-clients/run-a-node/).
 
@@ -29,9 +29,9 @@ Using providers, these libraries allow you to connect to Ethereum and read its d
 **Ethers example**
 
 ```js
-// A Web3Provider wraps a standard Web3 provider, which is
+// A BrowserProvider wraps a standard Web3 provider, which is
 // what MetaMask injects as window.ethereum into each page
-const provider = new ethers.providers.Web3Provider(window.ethereum)
+const provider = new ethers.BrowserProvider(window.ethereum)
 
 // The MetaMask plugin also allows signing transactions to
 // send ether and pay to change state within the blockchain.
@@ -80,7 +80,7 @@ Here's an examples from Ethers
 // Create a wallet instance from a mnemonic...
 mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
-walletMnemonic = Wallet.fromMnemonic(mnemonic)
+walletMnemonic = Wallet.fromPhrase(mnemonic)
 
 // ...or from a private key
 walletPrivateKey = new Wallet(walletMnemonic.privateKey)

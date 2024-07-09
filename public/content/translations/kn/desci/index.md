@@ -5,7 +5,7 @@ lang: kn
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: ಪ್ರಸ್ತುತ ವೈಜ್ಞಾನಿಕ ವ್ಯವಸ್ಥೆಗೆ ಜಾಗತಿಕ, ಮುಕ್ತ ಪರ್ಯಾಯ.
 summaryPoint2: ವಿಜ್ಞಾನಿಗಳಿಗೆ ಅನ್ವಯಿಸಿಕೊಳ್ಳುವ ಹಣ ಸಂಗ್ರಹಣೆ, ಪ್ರಯೋಗಾಲೋಚನೆ ನಡೆಸುವುದು, ಡೇಟಾ ಹಂಚಿಕೆ ಮಾಡುವುದು, ಅರಿವುಗಳನ್ನು ಹರಡುವುದು, ಮತ್ತು ಇತರ ಕ್ರಿಯೆಗಳನ್ನು ಮುಗಿಸಿಕೊಳ್ಳುವ ತಂತ್ರಜ್ಞಾನ ಮತ್ತಷ್ಟು ಆಗಿದೆ.

@@ -54,7 +54,7 @@ const Morpher = () => {
     let count = 0
     let spentTime = 0
     // splitTime  = milliseconds / letters
-    let splitTime = (duration * 70) / Math.max(slen, rlen)
+    const splitTime = (duration * 70) / Math.max(slen, rlen)
 
     function update() {
       // Update present date and spent time

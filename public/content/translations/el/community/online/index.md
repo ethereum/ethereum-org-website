@@ -22,7 +22,7 @@ lang: el
 ## Αίθουσες συνομιλίας {#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - κοινότητα προσανατολισμένη στην προσφορά υποστήριξης διαχείρισης έργου για την ανάπτυξη του Ethereum.</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> - συνομιλία στο Discord που διευθύνεται από την ETHGlobal: μια διαδικτυακή κοινότητα για χάκερ Ethereum σε όλο τον κόσμο</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://ethglobal.com/discord">Ethereum Hackers</Link> - συνομιλία στο Discord που διευθύνεται από την ETHGlobal: μια διαδικτυακή κοινότητα για χάκερ Ethereum σε όλο τον κόσμο</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - Η κοινότητα Discord εστιασμένη στην ανάπτυξη του Ethereum.</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link> - καθοδήγηση, εκπαίδευση, υποστήριξη και πόροι από την κοινότητα για υπάρχοντες και πιθανούς συμμετέχοντες.</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Ομάδα ιστότοπου Ethereum.org</Link> - ελάτε και συζητήστε για την ανάπτυξη και τον σχεδιασμό του ιστότοπου ethereum.org με την ομάδα και τους ανθρώπους από την κοινότητα.</SocialListItem>

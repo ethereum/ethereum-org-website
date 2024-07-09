@@ -15,7 +15,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-import type { BasePageProps, TranslationKey } from "@/lib/types"
+import type { BasePageProps, Lang, TranslationKey } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import Card from "@/components/Card"
@@ -37,6 +37,7 @@ import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { layer2Data } from "@/data/layer-2/layer-2"
@@ -44,20 +45,20 @@ import { layer2Data } from "@/data/layer-2/layer-2"
 import Layer2Onboard from "../components/Layer2/Layer2Onboard"
 import ProductList from "../components/ProductList"
 
-import DogeImage from "@/public/doge-computer.png"
-import EthHomeImage from "@/public/eth-home-icon.png"
-import HeroImage from "@/public/heroes/layer-2-hub-hero.jpg"
-import DebankImage from "@/public/layer-2/debank.png"
-import ethereumecosystemImage from "@/public/layer-2/ethereumecosystem.png"
-import growthepieImage from "@/public/layer-2/growthepie.png"
-import L2BEATImage from "@/public/layer-2/l2beat.jpg"
-import OptimisticRollupImage from "@/public/layer-2/optimistic_rollup.png"
-import RollupImage from "@/public/layer-2/rollup-2.png"
-import ZapperImage from "@/public/layer-2/zapper.png"
-import ZerionImage from "@/public/layer-2/zerion.png"
-import ZKRollupImage from "@/public/layer-2/zk_rollup.png"
-import DAOImage from "@/public/use-cases/dao-2.png"
-import WhatIsEthereumImage from "@/public/what-is-ethereum.png"
+import DogeImage from "@/public/images/doge-computer.png"
+import EthHomeImage from "@/public/images/eth-home-icon.png"
+import HeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
+import DebankImage from "@/public/images/layer-2/debank.png"
+import ethereumecosystemImage from "@/public/images/layer-2/ethereumecosystem.png"
+import growthepieImage from "@/public/images/layer-2/growthepie.png"
+import L2BEATImage from "@/public/images/layer-2/l2beat.jpg"
+import OptimisticRollupImage from "@/public/images/layer-2/optimistic_rollup.png"
+import RollupImage from "@/public/images/layer-2/rollup-2.png"
+import ZapperImage from "@/public/images/layer-2/zapper.png"
+import ZerionImage from "@/public/images/layer-2/zerion.png"
+import ZKRollupImage from "@/public/images/layer-2/zk_rollup.png"
+import DAOImage from "@/public/images/use-cases/dao-2.png"
+import WhatIsEthereumImage from "@/public/images/what-is-ethereum.png"
 
 type ContentBoxProps = BoxProps & {
   isLightGrayBg?: boolean
@@ -108,6 +109,10 @@ const Layer2CardGrid = (props) => (
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2")
 
@@ -117,7 +122,7 @@ export const getStaticProps = (async ({ locale }) => {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
@@ -256,7 +261,7 @@ const Layer2Page = () => {
       <PageMetadata
         title={t("layer-2-hero-title")}
         description={t("layer-2-metadata-description")}
-        image="/heroes/layer-2-hub-hero.jpg"
+        image="/images/heroes/layer-2-hub-hero.jpg"
       />
       {/* Hero Section */}
       <HubHero {...heroContent} />

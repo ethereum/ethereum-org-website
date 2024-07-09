@@ -1,7 +1,7 @@
 name: Event listing
 description: Request an Ethereum event for listing
 title: Event listing
-labels: ["event :calendar:"]
+labels: ["event 📅"]
 body:
   - type: input
     id: event_listing_name

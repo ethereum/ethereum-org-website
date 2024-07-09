@@ -4,7 +4,7 @@ description: 關於如何開始聯合以太幣質押的概覽
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: 萊斯利犀牛在池中游泳
 sidebarDepth: 2
 summaryPoints:
@@ -24,9 +24,9 @@ summaryPoints:
 除了我們在[質押簡介](/staking/)中描述的好處之外，聯合質押還具有許多獨特的好處。
 
 <CardGrid>
-  <Card title="參與門檻低" emoji="🐟" description="沒有大筆資產？ 沒關係。 大多數質押礦池允許你透過與其他質押者聯手來質押任意數量的以太幣，這與需要 32 個以太幣的單獨質押不同。" />
-  <Card title="立即質押" emoji=":stopwatch:" description="使用礦池進行質押就像交換代幣一樣簡單。 你不需擔心硬體設定與節點維護。 礦池允許你存入以太幣，這使得節點營運商能夠執行驗證程式。 在減去節點操作的費用之後，剩餘的酬勞將分配給所有貢獻者。" />
-  <Card title="質押代幣" emoji=":droplet:" description="許多質押礦池會提供代幣，代表你在礦池中質押的以太幣及其產生的酬勞。 這使得你可以將質押中的以太幣妥善利用，例如，作為去中心化金融應用程式的抵押品。" />
+  <Card title="參與門檻低" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
+  <Card title="立即質押" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
+  <Card title="質押代幣" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />

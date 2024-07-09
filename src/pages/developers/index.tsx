@@ -13,7 +13,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
@@ -30,12 +30,13 @@ import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import SpeedRunEthereumImage from "@/public/dev-tools/speed-run-ethereum-banner.png"
-import DevelopersImage from "@/public/developers-eth-blocks.png"
-import DogeImage from "@/public/doge-computer.png"
-import HeroImage from "@/public/heroes/developers-hub-hero.jpg"
+import SpeedRunEthereumImage from "@/public/images/dev-tools/speed-run-ethereum-banner.png"
+import DevelopersImage from "@/public/images/developers-eth-blocks.png"
+import DogeImage from "@/public/images/doge-computer.png"
+import HeroImage from "@/public/images/heroes/developers-hub-hero.jpg"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
@@ -167,9 +168,7 @@ const SpeedRunEthereumBanner = ({
       wordBreak="break-word"
       alignItems="flex-start"
     >
-      <Heading>
-        {title}
-      </Heading>
+      <Heading>{title}</Heading>
       <ButtonLink href="https://speedrunethereum.com/">{linkLabel}</ButtonLink>
     </Stack>
   </Box>
@@ -181,12 +180,16 @@ export const getStaticProps = (async ({ locale }) => {
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
@@ -262,7 +265,7 @@ const DevelopersPage = () => {
         header={`${t("page-developers-index:page-developers-title-1")} ${t(
           "page-developers-index:page-developers-title-2"
         )} ${t("page-developers-index:page-developers-title-3")}`}
-        title={t("developers")}
+        title={t("common:developers")}
         description={t("page-developers-index:page-developers-subtitle")}
       />
       <Content>

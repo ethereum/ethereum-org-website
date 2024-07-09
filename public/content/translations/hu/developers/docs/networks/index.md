@@ -50,6 +50,7 @@ A két nyilvános teszthálózat, amelyet a kliens fejlesztők jelenleg fenntart
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Csapok
 
@@ -60,7 +61,6 @@ A két nyilvános teszthálózat, amelyet a kliens fejlesztők jelenleg fenntart
 - [Alchemy Sepolia csap](https://sepoliafaucet.com/)
 - [Infura Sepolia csap](https://www.infura.io/faucet)
 - [Chainstack Sepolia csap](https://faucet.chainstack.com/sepolia-faucet)
-- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 #### Goerli _(hosszútávú támogatás)_ {#goerli}
 
@@ -72,11 +72,12 @@ A Goerli egy olyan teszthálózat, ahol a validálást és a letétbe helyezést
 - Sok státusz elérhető, ezért alkalmas az okosszerződések komplex interakcióit letesztelni
 - Hosszabb ideig tart a szinkronizálás és több tárhely kell a csomópont futtatáshoz
 
-##### Források
+##### Erőforrások
 
 - [Honlap](https://goerli.net/)
 - [GitHub](https://github.com/eth-clients/goerli)
 - [Etherscan](https://goerli.etherscan.io)
+- [Blockscout](https://eth-goerli.blockscout.com/)
 
 ##### Csapok
 
@@ -88,7 +89,6 @@ A Goerli egy olyan teszthálózat, ahol a validálást és a letétbe helyezést
 - [All That Node Goerli csap](https://www.allthatnode.com/faucet/ethereum.dsrv)
 - [Coinbase Wallet csap | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Chainstack Goerli csap](https://faucet.chainstack.com/goerli-faucet)
-- [Blockscout](https://eth-goerli.blockscout.com/)
 
 Ha szeretne egy validátort indítani a Goerli teszthálózaton, akkor használja az ethstaker [olcsó goerli validátor launchpad-et](https://goerli.launchpad.ethstaker.cc/en/).
 

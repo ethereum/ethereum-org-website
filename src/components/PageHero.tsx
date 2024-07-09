@@ -156,7 +156,8 @@ const PageHero = ({
       >
         <Image
           src={image}
-          sizes="(max-width: 992px) 100vw, 50vw"
+          // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+          sizes="(max-width: 992px) 100vw, 624px"
           style={{
             width: "100%",
             height: "auto",

@@ -27,6 +27,7 @@ const STATUSES = ["error", "success", "warning", "info"] as const
 export const StatusVariants: Story = {
   args: {
     description: DEMO_DESC,
+    // To show the close button
     onClose: () => {},
   },
   render: (args) => (
@@ -54,11 +55,12 @@ export const ContentVariants: Story = {
 export const StyleVariants: Story = {
   args: {
     description: DEMO_DESC,
+    // To show the close button
     onClose: () => {},
   },
   argTypes: {
     status: {
-      options: STATUSES,
+      options: [...STATUSES],
       control: {
         type: "radio",
       },
