@@ -100,7 +100,7 @@ Some other details are simply restating the same thing in different ways. For ex
 
 Most users will leave default slippage anyway.
 
-“Price impact” is often shown in brackets next to the usd equivalent in the “to” field. This is a great ux detail to add, but if it is shown here, does it really need to be shown again below? And then again on a preview screen?
+“Price impact” is often shown in brackets next to the fiat equivalent in the “to” field. This is a great ux detail to add, but if it is shown here, does it really need to be shown again below? And then again on a preview screen?
 
 Many users (especially those swapping small amounts) will not care about these details; they will simply enter a number and hit swap.
 
