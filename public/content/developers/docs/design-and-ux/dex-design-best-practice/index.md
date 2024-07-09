@@ -69,7 +69,7 @@ During the evolution of DeFi, lots of different things have been included here.
 - USD equivalent
 - Price impact on the “received” amount
 
-In the early days of DeFi, the USD equivalent was often missing. If you are building any sort of Web3 project, it is essential that a USD equivalent is shown. Users still think in terms of dollars, so in order to match real world mental models, this should be included.
+In the early days of DeFi, the fiat equivalent was often missing. If you are building any sort of Web3 project, it is essential that a fiat equivalent is shown. Users still think in terms of local currencies, so in order to match real world mental models, this should be included.
 
 On the second field (the one where you choose the token you are swapping to) you can also include the price impact next to the USD amount, by calculating the difference between the input amount and estimated output amounts. This is quite a useful detail to include.
 
