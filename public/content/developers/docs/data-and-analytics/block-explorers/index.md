@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 3
 ---
 
-Block explorers are your portal to Ethereum's data. You can use them to see real-time data on blocks, transactions, miners, accounts, and other on-chain activity.
+Block explorers are your portal to Ethereum's data. You can use them to see real-time data on blocks, transactions, validators, accounts, and other on-chain activity.
 
 ## Prerequisites {#prerequisites}
 
@@ -54,7 +54,7 @@ New blocks are added to Ethereum every 12 seconds (unless a block proposer misse
 - Gas limit - The total gas limits set by the transactions in the block
 - Base fee per gas - The minimum multiplier required for a transaction to be included in a block
 - Burnt fees - How much ETH is burned in the block
-- Extra data - Any extra data the miner has included in the block
+- Extra data - Any extra data the builder has included in the block
 
 **Advanced data**
 
@@ -82,12 +82,12 @@ Block explorers have become a common place for people to track the progress of t
 - Transaction hash - A hash generated when the transaction is submitted
 - Status - An indication of whether the transaction is pending, failed or a success
 - Block - The block in which the transaction has been included
-- Timestamp - The time at which a miner mined the transaction
+- Timestamp - The time at which a transaction was included in a block proposed by a validator
 - From - The address of the account that submitted the transaction
 - To - The address of the recipient or smart contract that the transaction interacts with
 - Tokens transferred - A list of tokens that were transferred as part of the transaction
 - Value - The total ETH value being transferred
-- Transaction fee - The amount paid to the miner to process the transaction (calculated by gas price\*gas used)
+- Transaction fee - The amount paid to the validator to process the transaction (calculated by gas price\*gas used)
 
 **Advanced data**
 
