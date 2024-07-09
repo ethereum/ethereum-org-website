@@ -127,7 +127,6 @@ In Web3, there are actions you take in the UI, and actions you take in the walle
 
 **Tips:**
 - Communicate system status via feedback in the UI
-- Show the user what tokens they have in their wallet
 - Keep a record of their history
 - Provide links to block explorers for old transactions
 - Provide shortcuts to change networks. 
