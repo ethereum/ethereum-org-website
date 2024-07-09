@@ -91,7 +91,7 @@ Try to use simple terms that will be understood by the broadest group of people.
 
 ### 5. Actions are as Short as Possible
 
-Speed up the user’s interactions by accelerating and grouping sub actions. 
+Speed up the user’s interactions by grouping sub actions. 
 This may be done on the smart contract level, as well as the UI. The user should not have to move from one part of the system to another – or leave the system entirely – to complete a common action. 
 
 **Tips:**
