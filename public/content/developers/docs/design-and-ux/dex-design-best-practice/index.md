@@ -73,7 +73,7 @@ In the early days of DeFi, the fiat equivalent was often missing. If you are bui
 
 On the second field (the one where you choose the token you are swapping to) you can also include the price impact next to the fiat currency amount, by calculating the difference between the input amount and estimated output amounts. This is quite a useful detail to include.
 
-Percentage buttons (e.g. 25%, 50%, 75%) can be a useful feature, but they take up more space, add more CTAs, and add more mental load. Same with percentage sliders. Some of these UI decisions will depend on your brand and your user type.
+Percentage buttons (e.g. 25%, 50%, 75%) can be a useful feature, but they take up more space, add more call to actions, and add more mental load. Same with percentage sliders. Some of these UI decisions will depend on your brand and your user type.
 
 Extra details can be shown below the main form. As this type of info is mostly for pro users, it makes sense to either:
 - keep it as minimal as possible, or;
