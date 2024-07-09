@@ -28,8 +28,8 @@ const config = {
       colors: {
         primary: {
           DEFAULT: "var(--primary)",
-          highContrast: "var(--primary-highContrast)",
-          lowContrast: "var(--primary-lowContrast)",
+          "high-contrast": "var(--primary-high-contrast)",
+          "low-contrast": "var(--primary-low-contrast)",
           hover: "var(--primary-hover)",
           visited: "var(--primary-visited)",
           light: "var(--primary-light)",
@@ -48,30 +48,30 @@ const config = {
         },
         disabled: "var(--disabled)",
         neutral: "var(--neutral)",
-        tooltipShadow: "var(--tooltipShadow)",
-        switchBackground: "var(--switchBackground)",
-        hubHeroContentBg: "var(--hubHeroContentBg)",
+        "tooltip-shadow": "var(--tooltip-shadow)",
+        "switch-background": "var(--switch-background)",
+        "hub-hero-content-bg": "var(--hub-hero-content-bg)",
       },
       backgroundImage: {
-        bgMainGradient: "var(--bg-main-gradient)",
+        "bg-main-gradient": "var(--bg-main-gradient)",
       },
       boxShadow: {
-        tableBox: "var(--table-box-shadow)",
+        "table-box": "var(--table-box-shadow)",
         table:
           "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",
         drop: "0 4px 17px 0 rgba(0,0,0,0.08)",
-        tableBoxHover: "0px 8px 17px rgba(0, 0, 0, 0.15)",
-        tableItemBox: "var(--table-item-box-shadow)",
-        tableItemBoxHover: "0 0 1px var(--primary)",
-        gridYellowBoxShadow: "8px 8px 0px 0px #ffe78e",
-        gridBlueBowShadow: "8px 8px 0px 0px #a7d0f4",
+        "table-box-hover": "0px 8px 17px rgba(0, 0, 0, 0.15)",
+        "table-item-box": "var(--table-item-box-shadow)",
+        "table-item-box-hover": "0 0 1px var(--primary)",
+        "grid-yellow-box-shadow": "8px 8px 0px 0px #ffe78e",
+        "gird-blue-box-shadow": "8px 8px 0px 0px #a7d0f4",
         // Part of new DS
         "menu-accordion":
           "0px 2px 2px 0px rgba(0, 0, 0, 0.12) inset, 0px -3px 2px 0px rgba(0, 0, 0, 0.14) inset",
-        // TODO: From current theme. Deprecate for 'buttonHover'
+        // TODO: From current theme. Deprecate for 'button-hover'
         primary: "4px 4px 0px 0px var(--primary)",
-        buttonHover: "4px 4px 0 0 var(--primary-lowContrast)",
-        tooltip: "0 0 16px var(--tooltipShadow)",
+        "button-hover": "4px 4px 0 0 var(--primary-low-contrast)",
+        tooltip: "0 0 16px var(--tooltip-shadow)",
       },
       spacing: {
         7.5: "1.875rem",

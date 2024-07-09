@@ -55,8 +55,8 @@
 
     /* Semantic Colors: Light mode */
     --primary: var(--blue-500);
-    --primary-highContrast: var(--blue-800);
-    --primary-lowContrast: var(--blue-100);
+    --primary-high-contrast: var(--blue-800);
+    --primary-low-contrast: var(--blue-100);
     --primary-hover: var(--blue-400);
     --primary-visited: var(--blue-700);
     /* ! Deprecating primary-light */
@@ -81,9 +81,9 @@
     --neutral: white;
 
     /* Misc sematics: light mode */
-    --tooltipShadow: rgba(0, 0, 0, 0.24);
-    --switchBackground: var(--gray-300);
-    --hubHeroContentBg: rgba(255, 255, 255, 0.8);
+    --tooltip-shadow: rgba(0, 0, 0, 0.24);
+    --switch-background: var(--gray-300);
+    --hub-hero-content-bg: rgba(255, 255, 255, 0.8);
     --bg-main-gradient: linear-gradient(
       102.7deg,
       rgba(185, 185, 241, 0.2) 0%,
@@ -98,8 +98,8 @@
   [data-theme="dark"] {
     /* Semantic Colors: Dark mode */
     --primary: var(--orange-500);
-    --primary-highContrast: var(--orange-100);
-    --primary-lowContrast: var(--orange-800);
+    --primary-high-contrast: var(--orange-100);
+    --primary-low-contrast: var(--orange-800);
     --primary-hover: var(--orange-400);
     --primary-visited: var(--orange-550);
     /* ! Deprecating primary-light */
@@ -124,9 +124,9 @@
     --neutral: var(--gray-900);
 
     /* Misc sematics: light mode */
-    --tooltipShadow: rgba(255, 255, 255, 0.24);
-    --switchBackground: rgba(255, 255, 255, 0.24);
-    --hubHeroContentBg: rgba(34, 34, 34, 0.8);
+    --tooltip-shadow: rgba(255, 255, 255, 0.24);
+    --switch-background: rgba(255, 255, 255, 0.24);
+    --hub-hero-content-bg: rgba(34, 34, 34, 0.8);
     --bg-main-gradient: linear-gradient(
       102.7deg,
       rgba(185, 185, 241, 0.2) 0%,
@@ -217,7 +217,7 @@
 
 @layer components {
   .accordion-trigger {
-    @apply flex flex-1 items-center justify-between gap-2 px-2 py-2 font-medium transition-all hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover md:px-4 [&[data-state=open]>svg]:-rotate-90 [&[data-state=open]]:bg-background-highlight [&[data-state=open]]:text-primary-highContrast;
+    @apply flex flex-1 items-center justify-between gap-2 px-2 py-2 font-medium transition-all hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover md:px-4 [&[data-state=open]>svg]:-rotate-90 [&[data-state=open]]:bg-background-highlight [&[data-state=open]]:text-primary-high-contrast;
   }
   .accordion-content {
     @apply overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down;
