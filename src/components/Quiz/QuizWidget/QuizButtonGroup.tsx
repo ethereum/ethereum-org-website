@@ -87,7 +87,7 @@ export const QuizButtonGroup = ({
 
     setShowAnswer(true)
 
-    if (!!quizPageProps) {
+    if (quizPageProps) {
       if (currentQuestionAnswerChoice.isCorrect) {
         return quizPageProps.statusHandler?.("success")
       }

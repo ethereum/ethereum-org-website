@@ -5,7 +5,7 @@ lang: mr
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: पुनरुत्पादक तत्त्वांवर आधारित पर्यायी आर्थिक व्यवस्था
 summaryPoint2: हवामान बदलासारख्या जागतिक स्तरावरील समन्वय संकटांचे निराकरण करण्यासाठी Ethereum चा वापर करण्याचा प्रयत्न

@@ -99,7 +99,7 @@ sidebarDepth: 2
 
 - 注意：Erigon 並不提供快速同步，但有提供完整修剪（約 500GB）
 
-至於共識用戶端，所需硬碟容量也視用戶端實作及啟用的功能而定 (如罰沒驗證者的功能)，但通常還需要額外的 200G 以儲存信標資料。 由於龐大的驗證者數量，帶寬負載也隨之增長。 你可以在[此分析報告中查看共識用戶端的詳細硬體要求](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e)。
+至於共識用戶端，所需硬碟容量也視用戶端實作及啟用的功能而定 (如罰沒驗證者的功能)，但通常還需要額外的 200G 以儲存信標資料。 由於龐大的驗證者數量，帶寬負載也隨之增長。 你可以[在此分析中找到有關共識用戶端要求的詳細資料](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)。
 
 #### 隨插即用解決方案 {#plug-and-play}
 
@@ -126,7 +126,7 @@ sidebarDepth: 2
 
 以下是一些只要點按幾下就能幫助你安裝並控制用戶端的專案：
 
-- [DappNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) - DappNode 不僅僅是一個供應商提供的機器。 軟體、實際節點啟動器和擁有許多功能的控制中心可在任意硬體上使用。
+- [DappNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) - DappNode 並非只能使用供應商提供的機器。 軟體、實際節點啟動器和擁有許多功能的控制中心可在任意硬體上使用。
 - [eth-docker](https://eth-docker.net/) - 使用 Docker 進行自動化設定，專注於打造輕鬆安全的質押體驗，需要對終端機和 Docker 有基本認識，適合較進階的使用者。
 - [Stereum](https://stereum.net/ethereum-node-setup/) - 該啟動器具有圖形化使用者介面設定指南、控制中心以及許多其他功能，可透過 SSH 連接在遠端伺服器上安裝用戶端。
 - [NiceNode](https://www.nicenode.xyz/) - 該啟動器提供直覺化使用者體驗，可在你的電腦上運行節點。 只要選擇用戶端並簡單點按幾下即可啟動。 仍在開發中。
@@ -175,7 +175,7 @@ sidebarDepth: 2
 
 開發者使用他們的 PGP 金鑰簽署發佈的二進位檔案，如此一來你就可以使用密碼學方式驗證你運行的是他們建立的軟體。 你只需要獲得開發者使用的公鑰，這些公鑰可以在用戶端發佈頁面或文件中找到。 在下載用戶端版本及其簽名後，你可以使用 PGP 實作，如 [GnuPG](https://gnupg.org/download/index.html) 來輕鬆驗證用戶端。 查看在 [linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) 或 [Windows/MacOS](https://freedom.press/training/verifying-open-source-software/) 上使用 `gpg` 驗證開源軟體的教學。
 
-另一種驗證方式是確定你下載軟體的雜湊（獨一無二的密碼學指紋）和開發者提供的雜湊相符。 這比使用 PGP 進行驗證更加容易，有些用戶端也只提供此選項。 只需對下載的軟體運行雜湊函數，並將其與軟體發佈頁面的雜湊比較即可。 例如:
+另一種驗證方式是確定你下載軟體的雜湊（獨一無二的密碼學指紋）和開發者提供的雜湊相符。 這比使用 PGP 進行驗證更加容易，有些用戶端也只提供此選項。 只需對下載的軟體運行雜湊函數，並將其與軟體發佈頁面的雜湊比較即可。 例如：
 
 ```
 sha256sum teku-22.6.1.tar.gz
@@ -431,7 +431,7 @@ _這不適用於共識層驗證者節點。_節點離線將影響所有依賴節
 
 你需要確保透過安全補丁、功能與[以太坊改善提議](/eips/)讓你的用戶端軟體保持最新。 特別是[硬分叉](/history/)前，請確保你運行的是正確的用戶端版本。
 
-> 在重大的網路更新前，以太坊基金會在它們的[部落格](https://blog.ethereum.org)上發布貼文。 你可以[訂閱這些公告](https://groups.google.com/a/ethereum.org/g/announcements)，在你的節點需要升級時，透過電子郵件接收通知。
+> 在重大的網路更新前，以太坊基金會在它們的[部落格](https://blog.ethereum.org)上發布貼文。 你可以[訂閱這些公告](https://blog.ethereum.org/category/protocol#subscribe)，在你的節點需要更新時，透過電子郵件接收通知。
 
 更新用戶端非常簡單。 在每個用戶端的文檔中都有具體的說明，但實際上只要下載最新版的用戶端並透過最新的可執行檔重新啟動用戶端即可。 用戶端應從上次同步中斷的地方繼續同步，且完成用戶端更新。
 

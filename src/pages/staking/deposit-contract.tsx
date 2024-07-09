@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import makeBlockie from "ethereum-blockies-base64"
 import { type GetStaticProps } from "next"
 import { useRouter } from "next/router"
@@ -14,6 +14,7 @@ import {
   Heading,
   Img,
   Text,
+  TextProps,
   useToken,
 } from "@chakra-ui/react"
 
@@ -47,9 +48,9 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
 
-import consensys from "@/public/projects/consensys.png"
-import etherscan from "@/public/projects/etherscan-logo-circle.png"
-import ef from "@/public/staking/ef-blog-logo.png"
+import consensys from "@/public/images/projects/consensys.png"
+import etherscan from "@/public/images/projects/etherscan-logo-circle.png"
+import ef from "@/public/images/staking/ef-blog-logo.png"
 
 const FlexBox = (props: ChildOnlyProp) => (
   <Flex
@@ -201,17 +202,16 @@ const Blockie = (props: { src: string }) => (
   <Img src={props.src} borderRadius="base" height={16} width={16} />
 )
 
-const StyledFakeLink = (props: { onClick: any; children: ReactNode }) => (
+const StyledFakeLink = forwardRef<TextProps, "button">((props, ref) => (
   <Text
+    ref={ref}
     as="button"
-    onClick={props.onClick}
     me={2}
     color="primary.base"
     cursor="pointer"
-  >
-    {props.children}
-  </Text>
-)
+    {...props}
+  />
+))
 
 const CHUNKED_ADDRESS = DEPOSIT_CONTRACT_ADDRESS.match(/.{1,3}/g)?.join(" ")
 
@@ -266,7 +266,7 @@ const DepositContractPage = () => {
     const browserHasTextToSpeechSupport = !!window.speechSynthesis
     if (!browserHasTextToSpeechSupport) return
     // Create textToSpeechRequest
-    let speech = new SpeechSynthesisUtterance()
+    const speech = new SpeechSynthesisUtterance()
     speech.lang = "en-US"
     speech.text = DEPOSIT_CONTRACT_ADDRESS.split("").join(",")
     speech.volume = 1

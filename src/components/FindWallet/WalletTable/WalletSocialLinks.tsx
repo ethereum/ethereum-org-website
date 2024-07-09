@@ -9,8 +9,10 @@ import InlineLink, { LinkProps } from "@/components/Link"
 
 import { getLocaleFormattedDate } from "@/lib/utils/time"
 
+import type { WalletMoreInfoData } from "@/hooks/useWalletTable"
+
 type WalletSocialLinksProps = {
-  wallet: Record<string, any>
+  wallet: WalletMoreInfoData
   idx: number
   filters: WalletFilter
 }

@@ -3,7 +3,7 @@ title: Saque de staking
 description: Página que resume o que são os saques por staking, como eles funcionam e o que os stakers (participantes) precisam fazer para obter suas recompensas
 lang: pt-br
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Leslie, o rinoceronte, com suas recompensas de staking
 sidebarDepth: 2
 summaryPoints:
@@ -196,7 +196,7 @@ eventName="read more">
 
 Recomenda-se que os operadores do validador visitem a página <a href="https://launchpad.ethereum.org/withdrawals/">Plataforma de Saque de Stake</a>, na qual você encontrará mais detalhes sobre como preparar seu validador para saques. preparado, tempo de eventos e mais detalhes sobre como funcionam os saques.
 
-Para testar a sua configuração numa rede de testes, primeiro visite o <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a> para começar.
+Para testar a sua configuração numa rede de testes, primeiro visite o <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> para começar.
 
 </ExpandableCard>
 

@@ -5,7 +5,7 @@ lang: el
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Ένα εναλλακτικό οικονομικό σύστημα που βασίζεται σε αναγεννητικές αρχές.
 summaryPoint2: Μια προσπάθεια αξιοποίησης του Ethereum για την επίλυση κρίσεων συντονισμού σε παγκόσμιο επίπεδο, όπως η κλιματική αλλαγή.

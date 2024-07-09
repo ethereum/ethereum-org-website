@@ -5,7 +5,7 @@ lang: zh-tw
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: 全息投影顯示的以太幣標誌。
 summaryPoint1: 一種用以太坊資產來呈現任何獨特事物的方式。
 summaryPoint2: 非同質化代幣賦予了內容創作者前所未有的強大力量。
@@ -103,7 +103,7 @@ summaryPoint3: 由建置於以太坊區塊鏈上的智慧型合約提供支援�
 - [Etherscan 的非同質化代幣追蹤器](https://etherscan.io/nft-top-contracts)
 - [ERC-721 代幣標準](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 代幣標準](/developers/docs/standards/tokens/erc-1155/)
-- [熱門 NFT App 和工具](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+- [熱門非同質化代幣應用程式和工具](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
 
 ## 其他資源 {#other-resources}
 

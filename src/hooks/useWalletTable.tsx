@@ -1,8 +1,10 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext, useState } from "react"
 
 import type { DropdownOption, Wallet, WalletFilter } from "@/lib/types"
 
 import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
+
+export type WalletMoreInfoData = Wallet & { moreInfo: boolean; key: string }
 
 type UseWalletTableProps = {
   walletData: Wallet[]
@@ -120,19 +122,11 @@ export const useWalletTable = ({
     },
   ]
 
-  const [walletCardData, setWalletData] = useState(
+  const [walletCardData, setWalletData] = useState<WalletMoreInfoData[]>(
     walletData.map((wallet) => {
       return { ...wallet, moreInfo: false, key: wallet.name }
     })
   )
-
-  useEffect(() => {
-    setWalletData(
-      walletData.map((wallet) => {
-        return { ...wallet, moreInfo: false, key: wallet.name }
-      })
-    )
-  }, [walletData])
 
   // Context API for language filter
   const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
@@ -185,7 +179,7 @@ export const useWalletTable = ({
       .filter((item) => item[1])
       .map((item) => item[0])
 
-    for (let item of mobileFiltersTrue) {
+    for (const item of mobileFiltersTrue) {
       if (wallet[item]) {
         mobileCheck = true
         break
@@ -194,7 +188,7 @@ export const useWalletTable = ({
       }
     }
 
-    for (let item of desktopFiltersTrue) {
+    for (const item of desktopFiltersTrue) {
       if (wallet[item]) {
         desktopCheck = true
         break
@@ -203,7 +197,7 @@ export const useWalletTable = ({
       }
     }
 
-    for (let item of browserFiltersTrue) {
+    for (const item of browserFiltersTrue) {
       if (wallet[item]) {
         browserCheck = true
         break
@@ -212,7 +206,7 @@ export const useWalletTable = ({
       }
     }
 
-    for (let item of hardwareFiltersTrue) {
+    for (const item of hardwareFiltersTrue) {
       if (wallet[item]) {
         hardwareCheck = true
         break

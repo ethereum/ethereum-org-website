@@ -107,7 +107,7 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
   // Construct array of all linkable documents in order recursively
   const docsArray: DocsArrayProps[] = []
   const getDocs = (links: Array<DeveloperDocsLink>): void => {
-    for (let item of links) {
+    for (const item of links) {
       // If object has 'items' key
       if (item.items) {
         // And if item has a 'to' key

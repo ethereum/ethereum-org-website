@@ -75,6 +75,7 @@ const UpcomingEventsList = () => {
     })
 
     setOrderedUpcomingEvents(formattedEvents)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const loadMoreEvents = () => {

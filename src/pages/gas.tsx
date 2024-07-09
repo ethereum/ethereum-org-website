@@ -47,11 +47,11 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 // Static assets
-import dogeComputerImg from "@/public/doge-computer.png"
-import ethImg from "@/public/eth.png"
-import infrastructureTransparentImg from "@/public/infrastructure_transparent.png"
-import walletImg from "@/public/wallet.png"
-import whatIsEthereumImg from "@/public/what-is-ethereum.png"
+import dogeComputerImg from "@/public/images/doge-computer.png"
+import ethImg from "@/public/images/eth.png"
+import infrastructureTransparentImg from "@/public/images/infrastructure_transparent.png"
+import walletImg from "@/public/images/wallet.png"
+import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
 

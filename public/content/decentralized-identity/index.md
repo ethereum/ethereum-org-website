@@ -5,7 +5,7 @@ lang: en
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: Traditional identity systems have centralized the issuance, maintenance and control of your identifiers.
 summaryPoint2: Decentralized identity removes reliance on centralized third parties.
 summaryPoint3: Thanks to crypto, users now have the tools to issue, hold and control their own identifiers and attestations once again.
@@ -73,7 +73,7 @@ Decentralized identity can help create online communities that are free of fake 
 
 ### 4. Anti-Sybil protection {#sybil-protection}
 
-Sybil attacks refer to individual humans tricking a system into thinking they are multiple people to increase their influence. Grant-giving applications that use [quadratic voting](/glossary/#quadratic-voting) are vulnerable to these Sybil attacks because the value of a grant is increased when more individuals vote for it, incentivizing users to split their contributions across many identities. Decentralized identities help to prevent this by raising the burden on each participant to prove that they are really human, although often without having to reveal specific private information.
+Grant-giving applications that use [quadratic voting](/glossary/#quadratic-voting) are vulnerable to [Sybil attacks](/glossary/#sybil-attack) because the value of a grant is increased when more individuals vote for it, incentivizing users to split their contributions across many identities. Decentralized identities help to prevent this by raising the burden on each participant to prove that they are really human, although often without having to reveal specific private information.
 
 ## What are attestations? {#what-are-attestations}
 
@@ -163,7 +163,7 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (or PoH) is a social identity verification system built on Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _A decentralized, open-source social identity network seeking to reform identity verification through the creation and analysis of a social graph._
 - **[walt.id](https://walt.id)** — _Open source decentralized identity and wallet infrastructure that enables developers and organizations to leverage self-sovereign identity and NFTs/SBTs._
-- **[Masca](https://masca.io/)** — _Open source decentralized identity wallet implemented as MetaMask Snap that enables users and developers to leverage DIDs and VCs._
+- **[Veramo](https://veramo.io/)** - _A JavaScript framework that makes it easy for anyone to use cryptographically verifiable data in their applications._
 
 ## Further reading {#further-reading}
 

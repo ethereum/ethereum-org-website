@@ -8,7 +8,7 @@ Les voleurs et les saboteurs sont constamment à la recherche d'opportunités po
 
 ## Les prérequis {#prerequisites}
 
-Quelques notions de bases de la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) sont requises. Aussi, cela serait utile d'avoir les notions de compréhension de base des la couche d'incitation [d'Ethereum](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) et de l'algorithme de choix de fourche [, LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper).
+Quelques notions de bases de la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) sont requises. Aussi, cela serait utile d'avoir les notions de compréhension de base des la couche d'incitation [d'Ethereum](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) et de l'algorithme de choix de fourche, [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper).
 
 ## Que veulent les attaquants ? {#what-do-attackers-want}
 

@@ -5,7 +5,7 @@ lang: ja
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: ホログラムを介して表示されているETHロゴ
 summaryPoint1: イーサリアムベースのアセットとして、唯一無二なものをトークンとして表現する方法。
 summaryPoint2: NFTは、これまで以上に多くのコンテンツ・クリエイターを後押ししています。

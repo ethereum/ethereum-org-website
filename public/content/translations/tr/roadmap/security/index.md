@@ -2,7 +2,7 @@
 title: Daha güvenli bir Ethereum
 description: Ethereum, var olan en güvenli ve merkeziyetsiz akıllı sözleşme platformudur. Bununla birlikte, Ethereum'un gelecekte her türlü saldırıya karşı dayanıklı kalabilmesi için yapılabilecek iyileştirmeler hâlâ var.
 lang: tr
-image: /roadmap/roadmap-security.png
+image: /images/roadmap/roadmap-security.png
 alt: "Ethereum yol haritası"
 template: roadmap
 ---

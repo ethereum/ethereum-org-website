@@ -240,7 +240,7 @@ FinematicsによるZKロールアップの説明動画をご覧ください：
 
 - **[Taiko](https://taiko.xyz)** - _Taiko は分散型のイーサリアム等価のゼロ知識ロールアップです ([タイプ1のZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))_。
 
-- **[ZKSync](https://docs.zksync.io/)** - _ZkSync Eraは、Matter Labsが独自開発したzkEVMを搭載するEVM互換のゼロ知識ロールアップです_。
+- **[ZKsync](https://docs.zksync.io/)** - _ZKsync Eraは、Matter Labsが独自開発したzkEVMを搭載するEVM互換のゼロ知識ロールアップです_。
 
 - **[Starknet](https://starkware.co/starknet/)** - _StarkNetは、StarkWareによって開発されたEVM互換のレイヤー2スケーリングソリューションです。_
 

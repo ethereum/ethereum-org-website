@@ -4,7 +4,7 @@ description: Přehled, jak začít se zapojením do sdruženého vkládání ETH
 lang: cs
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: Nosorožec Leslie plovoucí v oblacích.
 sidebarDepth: 2
 summaryPoints:

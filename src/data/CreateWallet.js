@@ -1,3 +1,5 @@
+// ? Should this become a `*.ts` file?
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const ethers = require("ethers")
 
 // Create a wallet instance from a mnemonic...
@@ -6,9 +8,11 @@ const mnemonic =
 const walletMnemonic = ethers.Wallet.fromMnemonic(mnemonic)
 
 // ...or from a private key
+// eslint-disable-next-line unused-imports/no-unused-vars
 const walletPrivateKey = new ethers.Wallet(walletMnemonic.privateKey)
 
 // ...or create a wallet from a random private key
+// eslint-disable-next-line unused-imports/no-unused-vars
 const randomWallet = ethers.Wallet.createRandom()
 
 walletMnemonic.address
@@ -30,6 +34,7 @@ walletMnemonic.signTransaction(tx)
 // { Promise: '0xf865808080948ba1f109551bd432803012645ac136ddd6...dfc' }
 
 // Connect to the Ethereum network using a provider
+// eslint-disable-next-line no-undef
 const wallet = walletMnemonic.connect(provider)
 
 // Query the network

@@ -154,7 +154,7 @@ Multiple projects provide implementations of Validium and volitions that you can
 **Matter Labs zkPorter**- _zkPorter is a Layer 2 scaling protocol tackling data availability with a hybrid approach that combines the ideas of zkRollup and sharding. It can support arbitrarily many shards, each with its own data availability policy._
 
 - [Blog](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
-- [Documentation](https://docs.zksync.io/zk-stack/concepts/hyperchains-hyperscaling.html#logical-state-partitions-in-zk-porters)
+- [Documentation](https://docs.zksync.io/zk-stack/concepts/data-availability)
 - [Website](https://zksync.io/)
 
 ## Further reading {#further-reading}
