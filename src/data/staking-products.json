@@ -317,7 +317,7 @@
       "launchDate": "2021-02-01",
       "url": "https://docs.stakewise.io/for-operators/operator-service",
       "audits": [],
-      "minEth": "",
+      "minEth": 0,
       "isFoss": true,
       "hasBugBounty": true,
       "isTrustless": true,
