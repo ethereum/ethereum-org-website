@@ -8,7 +8,7 @@ import ThemeProvider from "@/components/ThemeProvider"
 import i18n, { baseLocales } from "./i18next"
 
 import "../src/styles/global.css"
-import "../src/styles/main.css"
+import "../src/styles/fonts.css"
 
 MotionGlobalConfig.skipAnimations = isChromatic()
 
@@ -19,7 +19,6 @@ export const breakpointSet: [token: string, value: string][] = [
   ["lg", "1024px"],
   ["xl", "1280px"],
   ["2xl", "1536px"],
-
 ]
 
 const preview: Preview = {
@@ -30,16 +29,16 @@ const preview: Preview = {
   decorators: [
     withThemeByDataAttribute({
       themes: {
-        light: 'light',
-        dark: 'dark',
+        light: "light",
+        dark: "dark",
       },
-      defaultTheme: 'light',
+      defaultTheme: "light",
     }),
     (Story) => (
       <ThemeProvider>
         <Story />
       </ThemeProvider>
-    )
+    ),
   ],
   parameters: {
     i18n,
@@ -61,18 +60,23 @@ const preview: Preview = {
     layout: "centered",
     // Modify viewport selection to match Chakra breakpoints (or custom breakpoints)
     viewport: {
-      viewports: breakpointSet.reduce<{ [token: string]: { name: string, styles: Record<'width' | 'height', string>} }>((arr, [token, value]) => {
+      viewports: breakpointSet.reduce<{
+        [token: string]: {
+          name: string
+          styles: Record<"width" | "height", string>
+        }
+      }>((arr, [token, value]) => {
         return {
           ...arr,
           [token]: {
             name: token,
             styles: {
               width: value,
-              height: "800px"
-            }
-          }
+              height: "800px",
+            },
+          },
         }
-      }, {})
+      }, {}),
     },
   },
 }

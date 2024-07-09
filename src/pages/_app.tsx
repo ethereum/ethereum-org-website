@@ -4,10 +4,10 @@ import { init } from "@socialgouv/matomo-next"
 
 import { AppPropsWithLayout } from "@/lib/types"
 
-import ThemeProvider from '@/components/ThemeProvider'
+import ThemeProvider from "@/components/ThemeProvider"
 
 import "@/styles/global.css"
-import "@/styles/main.css"
+import "@/styles/fonts.css"
 
 import { RootLayout } from "@/layouts/RootLayout"
 
@@ -28,13 +28,13 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   return (
     <>
       <ThemeProvider>
-          <RootLayout
-            contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
-            contentNotTranslated={pageProps.contentNotTranslated}
-            lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
-            >
-            {getLayout(<Component {...pageProps} />)}
-          </RootLayout>
+        <RootLayout
+          contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
+          contentNotTranslated={pageProps.contentNotTranslated}
+          lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
+        >
+          {getLayout(<Component {...pageProps} />)}
+        </RootLayout>
       </ThemeProvider>
     </>
   )
