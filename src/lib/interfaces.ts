@@ -163,3 +163,26 @@ export interface IGetInvolvedCard {
   title: string
   description: string
 }
+
+/**
+ * TitleCardList
+ */
+
+export interface ITitleCardItem {
+  title: string
+  description: string
+  caption?: string
+  link?: string
+  image?: string
+  alt?: string
+  id?: number
+}
+
+/**
+ * Codeblock
+ */
+
+export interface CodeExample extends ITitleCardItem {
+  codeLanguage: string
+  code: string
+}
