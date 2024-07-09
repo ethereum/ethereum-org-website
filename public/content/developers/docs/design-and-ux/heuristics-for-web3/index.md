@@ -113,7 +113,7 @@ This is especially important on multichain apps. The main functions of the app s
 - Show as much of the app as possible while disconnected
 - Show which network the user is currently connected to
 - Don’t make the user go to the wallet to change network
-- If the app requires the user to switch network, prompt the action from the main CTA
+- If the app requires the user to switch network, prompt the action from the main call to action
 - If the app contains markets or vaults for multiple networks, clearly state which set the user is currently looking at
 
 **Example:** Show the user which network they are connected to, and allow them to change it,  in the appbar.
