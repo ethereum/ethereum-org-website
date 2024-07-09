@@ -42,7 +42,7 @@ Showing each step involved in a transaction helps users know where they are in t
 ### 2. Security and Trust are Baked in
 
 Security should be prioritised, and this should be emphasised for the user. 
-People care deeply about anything financial. Safety is often a primary concern for users, so it should be considered at all levels of the design. You should always be seeking to earn the trust of your users, but the way you do this can mean different things on different apps. It should not be an afterthought, but should be designed consciously throughout. Build trust throughout the user experience, including social channels and documentation, as well as the final UI. Things like the level of decentralisation, the treasury multi-sig status, and whether the team is doxxed, all affect users' trust
+People care deeply about their data. Safety is often a primary concern for users, so it should be considered at all levels of the design. You should always be seeking to earn the trust of your users, but the way you do this can mean different things on different apps. It should not be an afterthought, but should be designed consciously throughout. Build trust throughout the user experience, including social channels and documentation, as well as the final UI. Things like the level of decentralisation, the treasury multi-sig status, and whether the team is doxxed, all affect users' trust
 
 **Tips:**
 - List your audits proudly
