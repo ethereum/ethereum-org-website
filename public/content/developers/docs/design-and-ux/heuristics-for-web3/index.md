@@ -79,7 +79,7 @@ Try to use simple terms that will be understood by the broadest group of people.
 
 **Tips:**
 - Use simple and consistent terminology
-- Use existing, real-world, language as much as possible
+- Use existing language as much as possible
 - Don’t come up with your own terms
 - Follow conventions as they appear
 - Educate users as much as possible
