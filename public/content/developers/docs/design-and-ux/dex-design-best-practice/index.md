@@ -66,7 +66,7 @@ During the evolution of DeFi, lots of different things have been included here.
 
 - Balance in wallet
 - Max button
-- USD equivalent
+- Fiat equivalent
 - Price impact on the “received” amount
 
 In the early days of DeFi, the fiat equivalent was often missing. If you are building any sort of Web3 project, it is essential that a fiat equivalent is shown. Users still think in terms of local currencies, so in order to match real world mental models, this should be included.
