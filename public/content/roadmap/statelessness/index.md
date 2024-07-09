@@ -14,7 +14,7 @@ Cheaper hard drives can be used to store older data but those are too slow to ke
 
 ## Reducing storage for nodes {#reducing-storage-for-nodes}
 
-There are several ways to reduce the amount of data each node has to store, each requiring Ethereum's core protocol to be updates to a different extent:
+There are several ways to reduce the amount of data each node has to store, each requiring Ethereum's core protocol to be updated to a different extent:
 
 - **History expiry**: enable nodes to discard state data older than X blocks, but does not change how Ethereum client's handle state data
 - **State expiry**: allow state data that is not used frequently to become inactive. Inactive data can be ignored by clients until it is resurrected.
