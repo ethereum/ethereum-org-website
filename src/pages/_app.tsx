@@ -13,7 +13,6 @@ import { AppPropsWithLayout } from "@/lib/types"
 import "../styles/global.css"
 
 import { useLocaleDirection } from "@/hooks/useLocaleDirection"
-
 import { BaseLayout } from "@/layouts/BaseLayout"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
