@@ -1,8 +1,11 @@
 import React from "react"
-import { Box, Heading } from "@chakra-ui/react"
+import { BsCalendar3 } from "react-icons/bs"
+import { Box, Flex, Heading, Icon } from "@chakra-ui/react"
+import { Image } from "@chakra-ui/react"
+
+import { formatDateRange } from "@/lib/utils/date"
 
 import { ButtonLink } from "./Buttons"
-import Emoji from "./Emoji"
 import Text from "./OldText"
 
 const clearStyles = {
@@ -16,87 +19,108 @@ export type EventCardProps = {
   title: string
   to: string
   date: string
+  startDate: string
+  endDate: string
   description: string
   className?: string
   location: string
   isEven: boolean
+  imageUrl?: string
 }
 
 const EventCard = ({
   title,
   to,
-  date,
   description,
   className,
   location,
-  isEven,
-}: EventCardProps) => (
-  <Box
-    className={className}
-    position="relative"
-    marginTop={{ base: "30px", md: 0 }}
-    _before={clearStyles}
-    _after={clearStyles}
-  >
+  imageUrl,
+  endDate,
+  startDate,
+}: EventCardProps) => {
+  const formatedDate = formatDateRange(startDate, endDate)
+  return (
     <Box
-      w="24px"
-      h="24px"
-      position="absolute"
-      top="0"
-      insetInlineStart="50%"
-      overflow="hidden"
-      ms="-12px"
-      backgroundColor="primary.base"
-      display={{ base: "none", md: "block" }}
-    />
-    <Box
-      width={{ base: "100%", md: "45%" }}
-      padding={6}
-      backgroundColor="ednBackground"
-      borderRadius="sm"
-      border="1px solid"
-      borderColor="lightBorder"
-      float={isEven ? "inline-end" : { base: "inline-end", md: "none" }}
-      marginTop={isEven ? { base: 0, md: "-25%" } : 0}
-      _before={{
-        content: '""',
-        position: "absolute",
-        top: "10px",
-        width: 0,
-        height: "3px",
-        display: { base: "none", md: "inline" },
-        ...(isEven
-          ? {
-              insetInlineStart: "inherit",
-              insetInlineEnd: "45%",
-              borderInlineStart: 0,
-              borderInlineEnd: "25px solid",
-            }
-          : {
-              insetInlineStart: "45%",
-              borderInlineStart: "25px solid",
-              borderInlineEnd: 0,
-            }),
-        borderColor: "primary.base",
-      }}
+      className={className}
+      position="relative"
+      marginTop={{ base: "0", md: 0 }}
+      _before={clearStyles}
+      _after={clearStyles}
+      width={{ base: "100%", md: "100%", xl: "100%" }}
+      height={"100%"}
     >
-      <Text color="primary.base" marginBottom={0} textAlign="end">
-        {date}
-        <Emoji text=":spiral_calendar:" fontSize="md" ms={2} />
-      </Text>
-      <Text marginBottom={0} textAlign="end">
-        <Text as="span" opacity={0.6}>
-          {location}
-        </Text>
-        <Emoji text=":round_pushpin:" fontSize="md" ms={2} />
-      </Text>
-      <Heading as="h3" marginTop={0} fontWeight="semibold" lineHeight={1.4}>
-        {title}
-      </Heading>
-      <Text>{description}</Text>
-      <ButtonLink to={to}>View Event</ButtonLink>
+      <Flex
+        borderRadius="sm"
+        border="1px solid"
+        borderColor="lightBorder"
+        height={"100%"}
+        direction={"column"}
+        justifyContent={"space-between"}
+        rounded={"4px"}
+      >
+        <Box>
+          <Flex
+            alignItems={"center"}
+            justifyContent={"center"}
+            background={"grayBackground"}
+            padding={2}
+            gap={2}
+            borderBottom="1px solid"
+            borderColor="primary.base"
+            roundedTop={"4px"}
+          >
+            <Icon as={BsCalendar3} boxSize={6} color="primary.base" />
+
+            <Text color="primary.base" marginBottom={0} textAlign="end">
+              {formatedDate}
+            </Text>
+          </Flex>
+
+          {/* TODO : add image hostname to next config or add event image to public dir  */}
+          <Flex
+            alignItems="center"
+            justifyContent="center"
+            boxShadow="rgb(0 0 0 / 10%) 0px -1px 0px inset;"
+          >
+            <Image
+              src={imageUrl ? imageUrl : "/images/events/event-placeholder.png"}
+              alt={title}
+              width={{ base: "100%", sm: "100%" }}
+              height={{ base: "224px", xl: "124px" }}
+              objectFit={"cover"}
+              fallbackSrc="/images/events/event-placeholder.png"
+            />
+          </Flex>
+          <Box padding={4}>
+            <Box textAlign={"center"}>
+              <Heading
+                as="h3"
+                fontSize={{ base: "md", md: "2xl" }}
+                marginTop={0}
+                fontWeight="semibold"
+                lineHeight={1.4}
+              >
+                {title}
+              </Heading>
+              <Text as="span" opacity={0.6}>
+                {location}
+              </Text>
+            </Box>
+            <Box>
+              <Text fontSize={{ base: "sm", md: "sm" }} mb={0} noOfLines={4}>
+                {description}
+              </Text>
+            </Box>
+          </Box>
+        </Box>
+        <Box padding={4} paddingTop={0} width={"100%"}>
+          <ButtonLink to={to} width={"100%"} variant="outline">
+            View Event
+          </ButtonLink>
+        </Box>
+      </Flex>
     </Box>
-  </Box>
-)
+  )
+}
 
 export default EventCard
