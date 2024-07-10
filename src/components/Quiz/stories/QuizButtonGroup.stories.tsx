@@ -58,19 +58,19 @@ export const IncorrectAnswer: Story = {
   },
 }
 
-export const FinishQuizIncorrect: Story = {
+export const FinishQuizIncorrect = {
   name: "Finish Quiz - Incorrect Answer",
   args: {
     answerStatus: "incorrect" as const,
     userQuizProgress: Array.from({ length: layer2Questions.length - 1 }),
   },
-}
+} satisfies Story
 
 export const FinishQuizCorrect: Story = {
   name: "Finish Quiz - Correct Answer",
   args: {
+    ...FinishQuizIncorrect.args,
     answerStatus: "correct" as const,
-    userQuizProgress: Array.from({ length: layer2Questions.length - 1 }),
   },
 }
 
