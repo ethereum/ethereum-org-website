@@ -19,6 +19,7 @@ const meta = {
       security: [false, 0],
       wallets: [false, 0],
       web3: [false, 0],
+      daos: [false, 0],
     },
     totalCorrectAnswers: 0,
   },
@@ -30,7 +31,7 @@ type Story = StoryObj<typeof meta>
 
 export const StartingStats: Story = {}
 
-export const OneCompletedQuiz: Story = {
+export const OneCompletedQuiz = {
   args: {
     averageScoresArray: [100],
     completedQuizzes: {
@@ -39,15 +40,15 @@ export const OneCompletedQuiz: Story = {
     },
     totalCorrectAnswers: 4,
   },
-}
+} satisfies Story
 
 export const HasIncompleteQuiz: Story = {
   args: {
-    averageScoresArray: [...OneCompletedQuiz.args?.averageScoresArray!, 50],
+    averageScoresArray: [...OneCompletedQuiz.args.averageScoresArray, 50],
     completedQuizzes: {
-      ...OneCompletedQuiz.args?.completedQuizzes!,
+      ...OneCompletedQuiz.args.completedQuizzes,
       "what-is-ether": [false, 2],
     },
-    totalCorrectAnswers: OneCompletedQuiz.args?.totalCorrectAnswers! + 2,
+    totalCorrectAnswers: OneCompletedQuiz.args.totalCorrectAnswers + 2,
   },
 }

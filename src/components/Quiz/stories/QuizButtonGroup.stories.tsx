@@ -10,7 +10,7 @@ const meta = {
   title: "Molecules / Display Content / Quiz / QuizWidget / ButtonGroup",
   component: QuizButtonGroup,
   args: {
-    answerStatus: null,
+    answerStatus: undefined,
     currentQuestionAnswerChoice: null,
     currentQuestionIndex: 0,
     numberOfCorrectAnswers: 0,
@@ -23,6 +23,7 @@ const meta = {
     handleReset: fn(),
     setCurrentQuestionAnswerChoice: fn(),
     setShowAnswer: fn(),
+    setUserQuizProgress: fn(),
   },
   decorators: [
     (Story, { args }) => (
@@ -47,20 +48,20 @@ export const SelectedAnswer: Story = {
 
 export const CorrectAnswer: Story = {
   args: {
-    answerStatus: "correct",
+    answerStatus: "correct" as const,
   },
 }
 
 export const IncorrectAnswer: Story = {
   args: {
-    answerStatus: "incorrect",
+    answerStatus: "incorrect" as const,
   },
 }
 
 export const FinishQuizIncorrect: Story = {
   name: "Finish Quiz - Incorrect Answer",
   args: {
-    answerStatus: "incorrect",
+    answerStatus: "incorrect" as const,
     userQuizProgress: Array.from({ length: layer2Questions.length - 1 }),
   },
 }
@@ -68,7 +69,7 @@ export const FinishQuizIncorrect: Story = {
 export const FinishQuizCorrect: Story = {
   name: "Finish Quiz - Correct Answer",
   args: {
-    answerStatus: "correct",
+    answerStatus: "correct" as const,
     userQuizProgress: Array.from({ length: layer2Questions.length - 1 }),
   },
 }
