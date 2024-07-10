@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import type { IconType } from "react-icons/lib"
 import { MdInfoOutline, MdWarning } from "react-icons/md"
-import { Box, chakra, Flex, HStack, Icon, Text } from "@chakra-ui/react"
+import { chakra, Flex, HStack, Icon, Text } from "@chakra-ui/react"
 
 import { NULL_VALUE } from "@/lib/constants"
 

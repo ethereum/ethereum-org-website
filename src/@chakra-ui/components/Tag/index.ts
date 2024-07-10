@@ -7,7 +7,7 @@ import {
 
 import { defineMergeStyles } from "../components.utils"
 
-import { $badgeColor, STATUS_COLORS } from "./utils"
+import { $badgeBg, $badgeColor, STATUS_COLORS } from "./utils"
 
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(tagAnatomy.keys)
@@ -48,10 +48,6 @@ const baseStyleCloseButton = defineStyle({
   m: 0,
   // Clear default
   _focusVisible: null,
-  "&:focus-visible, &:hover": {
-    outline: "3px solid",
-    outlineOffset: "-2px",
-  },
 })
 
 const baseStyle = definePartsStyle({
@@ -79,6 +75,11 @@ const variantSubtle = definePartsStyle((props) => {
       _dark: {},
       ...statusStyles.container,
     },
+    closeButton: {
+      "&:focus-visible, &:hover": {
+        bg: "white",
+      },
+    },
   }
 })
 
@@ -92,6 +93,12 @@ const variantSolid = definePartsStyle((props) => {
       // Remove default dark mode styles
       _dark: {},
       ...statusStyles.container,
+    },
+    closeButton: {
+      "&:focus-visible, &:hover": {
+        bg: "white",
+        color: $badgeBg.reference,
+      },
     },
   }
 })
@@ -108,6 +115,11 @@ const variantOutline = definePartsStyle((props) => {
       // Remove default dark mode styles
       _dark: {},
       ...statusStyles.container,
+    },
+    closeButton: {
+      "&:focus-visible, &:hover": {
+        bg: "body.light",
+      },
     },
   }
 })

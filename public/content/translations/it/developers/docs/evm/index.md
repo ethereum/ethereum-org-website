@@ -4,13 +4,11 @@ description: Un'introduzione alla Macchina Virtuale di Ethereum e a come si rela
 lang: it
 ---
 
-La creazione di istanze fisiche dell’EVM non può essere paragonata allo scrivere codice per puntare a un cloud o a un’onda dell'oceano, ma _esiste_ come entità singola gestita da migliaia di computer collegati, che eseguono un client Ethereum.
-
-Il protocollo di Ethereum stesso esiste unicamente allo scopo di mantenere la continua, ininterrotta e immutabile operazione di questa speciale macchina di stato. È l'ambiente in cui risiedono tutti i conti e contratti intelligenti di Ethereum. A ogni dato blocco nella catena, Ethereum ha un solo stato 'canonico' e l'EVM è ciò che definisce le regole di calcolo di un nuovo stato valido da blocco a blocco.
+La Macchina Virtuale di Ethereum (EVM) è un ambiente virtuale decentralizzato che esegue il codice con coerenza e sicurezza su tutti i nodi di Ethereum. I nodi eseguono l'EVM per eseguire i contratti intelligenti, utilizzando il "[gas](/gas/)" per misurare lo sforzo di calcolo necessario per le [operazioni](/developers/docs/evm/opcodes/), assicurando un'efficace allocazione delle risorse e la sicurezza della rete.
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere l'EVM, è richiesta una conoscenza di base dei termini comuni dell'informatica, come ad esempio [byte](https://wikipedia.org/wiki/Byte), [memoria](https://wikipedia.org/wiki/Computer_memory) e [stack](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>). Sarebbe inoltre utile esser a conoscenza dei concetti crittografici e della blockchain come le [funzioni di hash](https://wikipedia.org/wiki/Cryptographic_hash_function) e l'[albero di Merkle](https://wikipedia.org/wiki/Merkle_tree).
+Per comprendere l'EVM, è richiesta una conoscenza di base dei termini comuni dell'informatica, come ad esempio [byte](https://wikipedia.org/wiki/Byte), [memoria](https://wikipedia.org/wiki/Computer_memory) e [stack](https://wikipedia.org/wiki/Stack_(abstract_data_type)). Sarebbe inoltre utile esser a conoscenza dei concetti crittografici e della blockchain come le [funzioni di hash](https://wikipedia.org/wiki/Cryptographic_hash_function) e l'[albero di Merkle](https://wikipedia.org/wiki/Merkle_tree).
 
 ## Dal libro mastro alla macchina a stati {#from-ledger-to-state-machine}
 
@@ -74,6 +72,7 @@ Tutti i [client Ethereum](/developers/docs/nodes-and-clients/#execution-clients)
 - [Ethereum Virtual Machine Opcodes](https://www.ethervm.io/)
 - [Documentazione di riferimento del codice operativo della macchina virtuale di Ethereum](https://www.evm.codes/)
 - [Una breve introduzione alla documentazione di Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
+- [Padroneggiare Ethereum - La Macchina Virtuale di Ethereum](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
 
 ## Argomenti correlati {#related-topics}
 

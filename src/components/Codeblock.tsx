@@ -10,11 +10,11 @@ import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
+
 // https://github.com/FormidableLabs/prism-react-renderer/tree/master#custom-language-support
+import { LINES_BEFORE_COLLAPSABLE } from "@/lib/constants"
 ;(typeof global !== "undefined" ? global : window).Prism = Prism
 require("prismjs/components/prism-solidity")
-
-const LINES_BEFORE_COLLAPSABLE = 8
 
 const TopBarItem = (props: BoxProps) => {
   const bgColor = useColorModeValue("#f7f7f7", "#363641")
@@ -236,8 +236,8 @@ const Codeblock = ({
     className = codeLanguage || ""
   }
 
-  const matches = className?.match(/language-(?<lang>.*)/)
-  const language = matches?.groups?.lang || ""
+  const matches = className?.match(/language-(.*)/)
+  const language = matches?.[1] || ""
 
   const shouldShowCopyWidget = ["js", "json", "python", "solidity"].includes(
     language

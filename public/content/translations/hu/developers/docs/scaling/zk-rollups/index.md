@@ -240,7 +240,7 @@ Többek között az alábbi projektek dolgoznak zkEVM-en:
 
 - **[Taiko](https://taiko.xyz)** - _A Taiko egy decentralizált, Ethereum-egyenértékű ZK összevont tranzakció ([1-es típusú ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
 
-- **[ZKSync](https://docs.zksync.io/)** - _A ZkSync Era egy EVM-kompatibilis ZK összevont tranzakció, amelyet a Matter Labs készített a saját zkEVM-jével alátámasztva._
+- **[ZKsync](https://docs.zksync.io/)** - _A ZKsync Era egy EVM-kompatibilis ZK összevont tranzakció, amelyet a Matter Labs készített a saját zkEVM-jével alátámasztva._
 
 - **[Starknet](https://starkware.co/starknet/)** - _A StarkNet egy EVM-kompatibilis L2 skálázási megoldás, amelyet a StarkWare készített._
 

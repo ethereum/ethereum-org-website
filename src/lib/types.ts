@@ -32,7 +32,10 @@ export type Unpacked<T> = T extends (infer U)[] ? U : T
 
 export type ChildOnlyProp = { children?: ReactNode }
 
-export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+export type NextPageWithLayout<P = Record<string, unknown>, IP = P> = NextPage<
+  P,
+  IP
+> & {
   getLayout?: (page: ReactElement<P>) => ReactNode
 }
 
@@ -273,12 +276,6 @@ export type LocaleDisplayInfo = {
   isBrowserDefault?: boolean
 }
 
-type TranslatedStats = {
-  tmMatch: number
-  default: number
-  total: number
-}
-
 /**
  * Translation cost report
  */
@@ -347,11 +344,13 @@ export type CostLeaderboardData = Pick<
   }
 
 // GitHub contributors
+
 export type Commit = {
   commit: {
     author: {
       name: string
       email: string
+      date: string
     }
   }
   author: {

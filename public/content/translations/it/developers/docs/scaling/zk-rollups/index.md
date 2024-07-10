@@ -1,5 +1,5 @@
 ---
-title: Rollup a conoscenza zero
+title: Rollup zero-knowledge
 description: Un'introduzione ai rollup a conoscenza zero, una soluzione di ridimensionamento usata dalla community di Ethereum.
 lang: it
 ---
@@ -12,7 +12,7 @@ Dovresti aver letto e compreso la nostra pagina sul [ridimensionamento di Ethere
 
 ## Cosa sono i rollup a conoscenza zero? {#what-are-zk-rollups}
 
-I **rollup a conoscenza zero (rollup ZK)** impacchettano (o 'eseguono il roll up') le transazioni in batch eseguiti al di fuori della catena. Il calcolo off-chain riduce la quantità di dati da pubblicare nella blockchain. Gli operatori del rollup ZK inviano un riepilogo delle modifiche necessarie per rappresentare tutte le transazioni in un batch, piuttosto che inviare individualmente ogni transazione. Inoltre, producono delle [prove di validità](/glossary/#validity-proof) per dimostrare la correttezza delle loro modifiche. La prova di validità dimostra con certezza crittografica che le modifiche proposte allo stato di Ethereum sono veramente il risultato finale dell'esecuzione di tutte le transazioni nel batch.
+I **rollup a conoscenza zero (rollup ZK)** impacchettano (o 'eseguono il roll up') le transazioni in batch eseguiti al di fuori della catena. Il calcolo off-chain riduce la quantità di dati da pubblicare nella blockchain. Gli operatori del rollup ZK inviano un riepilogo delle modifiche necessarie per rappresentare tutte le transazioni in un batch, piuttosto che inviare individualmente ogni transazione. Inoltre, producono delle [prove di validità](/glossary/#validity-proof) per dimostrare la correttezza delle loro modifiche.
 
 Lo stato del rollup ZK è mantenuto da un contratto intelligente distribuito sulla rete di Ethereum. Per aggiornare questo stato, i nodi del rollup ZK devono inviare una prova di validità per la verifica. Come accennato, la prova di validità è una garanzia crittografica che il cambiamento di stato proposto dal rollup sia realmente il risultato dell'esecuzione dello specifico batch di transazioni. Questo significa che i rollup ZK devono solo fornire le prove di validità per finalizzare le transazioni su Ethereum invece di pubblicare tutti i dati della transazione on-chain come i [rollup ottimistici](/developers/docs/scaling/optimistic-rollups/).
 
@@ -30,7 +30,7 @@ L'architettura principale del rollup ZK si compone dei seguenti componenti:
 
 2. **Macchina virtuale (VM) off-chain**: benché il protocollo del rollup ZK risieda su Ethereum, l'esecuzione della transazione e l'archiviazione di stato si verificano su una macchina virtuale separata e indipendente dall'[EVM](/developers/docs/evm/). Questa VM off-chain è l'ambiente di esecuzione per le transazioni sul rollup ZK e serve da livello secondario o "livello 2" per il protocollo rollup ZK. Le prove di validità verificate sulla Rete principale di Ethereum garantiscono la correttezza delle transizioni di stato nella VM off-chain.
 
-I rollup ZK sono "soluzioni di ridimensionamento ibride": protocolli off-chain che operano indipendentemente ma derivano la sicurezza da Ethereum. Nello specifico, la rete di Ethereum impone la validità degli aggiornamenti di stato sul rollup ZK e garantisce la disponibilità dei dati dietro ogni aggiornamento allo stato del rollup. Di conseguenza, i rollup ZK sono considerevolmente più sicuri delle soluzioni di ridimensionamento off-chain, come le [sidechain](/developers/docs/scaling/sidechains/), responsabili delle proprie proprietà di sicurezza, o i [validium](/developers/docs/scaling/validium/), che pur verificando le transazioni su Ethereum con le prove di validità, memorizzano altrove i dati della transazione.
+I rollup ZK sono "soluzioni di ridimensionamento ibride": protocolli off-chain che operano indipendentemente ma derivano la sicurezza da Ethereum. Nello specifico, la rete di Ethereum impone la validità degli aggiornamenti di stato sul rollup ZK e garantisce la disponibilità dei dati dietro ogni aggiornamento allo stato del rollup. Di conseguenza, i rollup ZK sono considerevolmente più sicuri delle soluzioni di ridimensionamento off-chain, come le [sidechain](/developers/docs/scaling/sidechains/), responsabili delle proprie proprietà di sicurezza, o i [validium](/developers/docs/scaling/validiums/), che pur verificando le transazioni su Ethereum con le prove di validità, memorizzano altrove i dati della transazione.
 
 I rollup ZK si affidano al protocollo principale di Ethereum per quanto segue:
 
@@ -117,7 +117,7 @@ Prima di accettare le transazioni, l'operatore eseguirà i soliti controlli. Que
 
 Una volta che il nodo del rollup ZK ha abbastanza transazioni, le aggrega in un batch e compila gli input per il circuito di prova da compilare in una prova "piccola" ZK. Questo include:
 
-- Un albero di Merkle che comprenda tutte le transazioni nel batch.
+- La radice di una albero di Merkel che comprende tutte le transazioni nel gruppo.
 - Le prove di Merkle per le transazioni per provare l'inclusione nel batch.
 - Prove di Merkle per ogni coppia mittente-destinatario nelle transazioni, per provare che questi conti facciano parte dell'albero di stato del rollup.
 - Una serie di radici di stato intermedie, derivate dall'aggiornamento della radice di stato dopo l'applicazione degli aggiornamenti di stato per ogni transazione (cioè, la riduzione dei conti dei mittente e l'aumento dei conti dei destinatari).
@@ -232,15 +232,19 @@ Esistono molteplici implementazioni dei rollup ZK che puoi integrare nelle tue d
 
 I progetti che stanno lavorando alle zkEVM includono:
 
-- **[Applied ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _Applied ZKP è un progetto finanziato dalla Ethereum Foundation per sviluppare un rollup ZK compatibile con l'EVM e un meccanismo per generare prove di validità per i blocchi di Ethereum._
+- **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM è un progetto finanziato dalla Ethereum Foundation per sviluppare un rollup ZK compatibile con l'EVM e un meccanismo per generare prove di validità per i blocchi di Ethereum._
 
 - **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _ è un Rollup ZK decentralizzato sulla rete principale di Ethereum che opera su una Macchina Virtuale di Ethereum a conoscenza zero (zkEVM) che esegue le transazioni di Ethereum in modo trasparente, includendo contratti intelligenti con validazioni di prova a conoscenza zero._
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll è un'azienda orientata alla tecnologia che sta lavorando alla creazione di una Soluzione di Livello 2 dello zkEVM nativa per Ethereum._
 
-- **[Taiko](https://taiko.xyz)** - _Taiko è un rollup ZK decentralizzato ed equivalente a Ethereum (un [Tipo 1 ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
+- **[Taiko](https://taiko.xyz)** - _Taiko è un rollup ZK decentralizzato ed equivalente a Ethereum (un [ZK-EVM di Tipo 1](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
 
-- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 è un rollup ZK compatibile con l'EVM creato da Matter Labs, basato sulla propria zkEVM._
+- **[ZKSync](https://docs.zksync.io/)** - _ZkSync Era è un rollup ZK compatibile con l'EVM sviluppato da Matter Labs, basato sulla propria zkEVM._
+
+- **[StarkNet](https://starkware.co/starknet/)**. _StarkNet è una soluzione di ridimensionamento del livello 2 compatibile con l'EVM, creata da StarkWare._
+
+- **[Morph](https://www.morphl2.io/)** - _Morph è una soluzione di ridimensionamento dei rollup ibrida che utilizza le prove ZK per risolvere i problemi di dimostrazione dello stato dei livelli 2._
 
 ## Ulteriori letture sui rollup ZK {#further-reading-on-zk-rollups}
 
@@ -248,6 +252,7 @@ I progetti che stanno lavorando alle zkEVM includono:
 - [What are zero-knowledge rollups?](https://alchemy.com/blog/zero-knowledge-rollups)
 - [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [What is a zkEVM?](https://www.alchemy.com/overviews/zkevm)
+- [Tipi di ZK-EVM: equivalente a Ethereum, equivalente all'EVM, Tipo 1, Tipo 4 e altre parole chiave criptiche](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)
 - [Intro to zkEVM](https://hackmd.io/@yezhang/S1_KMMbGt)
 - [Awesome-zkEVM resources](https://github.com/LuozhuZhang/awesome-zkevm)
 - [ZK-SNARKS under the hood](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)

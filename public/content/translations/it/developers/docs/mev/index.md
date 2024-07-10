@@ -6,7 +6,7 @@ lang: it
 
 Il valore estraibile massimo (MEV) si riferisce al valore massimo che può esser estratto dalla produzione del blocco, oltre alla ricompensa standard del blocco e alle commissioni sul gas, includendo, escludendo e cambiando l'ordine delle transazioni in un blocco.
 
-## Valore estraibile dal miner {#miner-extractable-value}
+## Valore estraibile massimo {#maximal-extractable-value}
 
 Il valore estraibile massimo fu applicato per la prima volta nel contesto del [proof-of-work](/developers/docs/consensus-mechanisms/pow/) e fu inizialmente definito come "valore estraibile dal miner". Questo perché nel Proof of Work i miner controllano l'inclusione, l'esclusione e l'ordinamento della transazione. Tuttavia, a partire dalla transizione al proof-of-stake tramite [La Fusione](/roadmap/merge), i validatori sono responsabili di tali ruoli e il mining non fa più parte del protocollo di Ethereum. I metodi d'estrazione del valore però esistono ancora, quindi il termine usato adesso è invece "Valore estraibile massimo".
 
@@ -22,7 +22,7 @@ I validatori ottengono comunque una porzione dell'intero importo del MEV, poich�
 
 Così, per alcune opportunità di MEV molto competitive, come l'[arbitraggio della DEX](#mev-examples-dex-arbitrage), i ricercatori potrebbero dover pagare il 90%, se non più, delle loro entrate totali del MEV in commissioni sul gas al validatore, poiché così tante persone vogliono eseguire lo stesso scambio d'arbitraggio profittevole. Questo è perché il solo modo per garantire che la loro transazione d'arbitraggio sia eseguita se inviano la transazione con il prezzo sul gas maggiore.
 
-### Golf del gas {#mev-extraction-gas-golfing}
+### Golfing del gas {#mev-extraction-gas-golfing}
 
 Questa dinamica ha reso esser bravi al "golf del gas", la programmazione delle transazioni così che usino l'importo minimo di gas, un vantaggio competitivo, poiché consente ai ricercatori di impostare un prezzo del gas maggiore, mantenendo costanti le proprie commissioni sul gas totali (poiché, commissioni sul gas = prezzo del gas \* gas usato).
 
@@ -70,7 +70,7 @@ Un ricercatore può calcolare l'effetto approssimativo del prezzo di questo scam
 
 Il sandwiching, tuttavia, è più rischioso non essendo atomico (a differenza dell'arbitraggio di DEX, come descritto sopra) ed è soggetto a un [attacco di salmonella](https://github.com/Defi-Cartel/salmonella).
 
-### MEV nel mondo dei NFT {#mev-examples-nfts}
+### MEV dei NFT {#mev-examples-nfts}
 
 Nel mondo dei NFT, il MEV è un fenomeno emergente e non necessariamente redditizio.
 
@@ -114,7 +114,7 @@ Mentre molti ricercatori guadagnano ancora molto dal MEV, con il diffondersi del
 
 D'altra parte, la transizione dal proof-of-work al proof-of-stake e lo sforzo di ridimensionamento di Ethereum in corso usando i rollup stanno modificando il panorama del MEV in modi ancora piuttosto nebulosi. Non è ancora noto come il fatto di conoscere i propositori di blocchi garantiti lievemente in anticipo modifichi le dinamiche di estrazione del MEV rispetto al modello probabilistico nel proof-of-work, o come questo sarà sconvolto quando l'[elezione segreta di un singolo capo ](https://ethresear.ch/t/secret-non-single-leader-election/11789) e la [tecnologia distribuita del validatore](/staking/dvt/) saranno implementate. Similmente, resta da vedere quali opportunità del MEV esistono quando gran parte dell'attività degli utenti è portata via da Ethereum e sui suoi rollup e shard di livello 2.
 
-## MEV nel proof-of-stake (PoS) di Ethereum {#mev-in-ethereum-proof-of-stake}
+## MEV nel Proof-of-Stake (PoS) di Ethereum {#mev-in-ethereum-proof-of-stake}
 
 Come spiegato, il MEV ha implicazioni negative per l’esperienza complessiva degli utenti e per la sicurezza al livello di consenso. Ma la transizione di Ethereum al protocollo di consenso proof-of-stake (soprannominato “La Fusione”) introduce potenzialmente nuovi rischi legati al MEV:
 
@@ -128,7 +128,7 @@ I pool di staking più grandi avranno probabilmente più risorse da investire ne
 
 Con un minor numero di risorse a loro disposizione, gli staker autonomi potrebbero non essere in grado di trarre profitto dalle opportunità offerte dal MEV. Questo potrebbe aumentare la pressione sui validatori autonomi per unire potenti pool di staking per aumentare i loro guadagni, riducendo la decentralizzazione in Ethereum.
 
-### Mempool con permessi (permissioned) {#permissioned-mempools}
+### Mempool con permessi {#permissioned-mempools}
 
 In risposta agli attacchi di sandwiching e di frontrunning, i trader possono iniziare a condurre operazioni off-chain con validatori per la privacy delle transazioni. Invece di inviare una potenziale transazione MEV al mempool pubblico, il trader la invia direttamente al validatore, che la include in un blocco e divide i profitti con il trader.
 
@@ -138,7 +138,7 @@ I mempool con permessi accelererebbero anche i rischi di centralizzazione descri
 
 La lotta a questi problemi legati al MEV successivamente alla Fusione di Ethereum è un ambito centrale di ricerca. Ad oggi, due soluzioni proposte per ridurre l'impatto negativo del MEV sulla decentralizzazione e la sicurezza di Ethereum dopo La Fusione sono la **Separazione propositore-costruttore (PBS)** e l'**API Builder**.
 
-### Separazione propositore-costruttore {#proposer-builder-separation}
+### Separazione del Propositore e del Costruttore {#proposer-builder-separation}
 
 Sia nel proof-of-of-work che nel proof-of-stake, un nodo che costruisce un blocco propone di aggiungerlo alla catena ad altri nodi che partecipano al consenso. Un nuovo blocco diventa parte della catena principale dopo che un altro miner costruisce sopra di esso (nella PoW) o riceve attestazioni dalla maggior parte dei validatori (nella Pos).
 
@@ -160,7 +160,7 @@ La separazione propositore-costruttore riduce anche i rischi di centralizzazione
 
 Allo stesso modo, i validatori non devono fidarsi del fatto che i costruttori non tratterranno i corpi dei blocchi o non pubblicheranno blocchi non validi perché il pagamento è incondizionato. La commissione del validatore continua a essere elaborata anche se il blocco proposto non è disponibile o è dichiarato non valido da altri validatori. In quest'ultimo caso, il blocco viene semplicemente scartato, costringendo il costruttore di blocchi a perdere tutte le commissioni di transazione e i ricavi di MEV.
 
-### API Builder {#builder-api}
+### API del Costruttore {#builder-api}
 
 Mentre la separazione tra propositori e creatori promette di ridurre gli effetti dell'estrazione del MEV, la sua attuazione richiede modifiche al protocollo di consenso. In particolare, la regola [scelta della diramazione](/developers/docs/consensus-mechanisms/pos/#fork-choice) sulla Beacon Chain dovrebbe essere aggiornata. L'API [Builder](https://github.com/ethereum/builder-specs) è una soluzione temporanea volta a fornire un'implementazione funzionante della separazione propositore-costruttore, anche se con presupposti di fiducia più elevati.
 
@@ -207,7 +207,7 @@ Alcuni progetti, come MEV Boost, utilizzano l'API Builder come parte di una stru
 - [MEV-Explore](https://explore.flashbots.net/) _Pannello di controllo ed esploratore live delle transazioni per transazioni MEV_
 - [mevboost.org](https://www.mevboost.org/) - _Tracker con statistiche in tempo reale per relay e costruttori di blocchi di MEV Boost_
 
-## Ulteriori letture {#further-reading}
+## Letture consigliate {#further-reading}
 
 - [What Is Miner-Extractable Value (MEV)?](https://blog.chain.link/what-is-miner-extractable-value-mev/)
 - [MEV and Me](https://www.paradigm.xyz/2021/02/mev-and-me)
@@ -218,4 +218,4 @@ Alcuni progetti, come MEV Boost, utilizzano l'API Builder come parte di una stru
 - [MEV-Boost: architettura Flashbots pronta per la Fusione](https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177)
 - [Che cos'è MEV Boost?](https://www.alchemy.com/overviews/mev-boost)
 - [Perché eseguire mev-boost?](https://writings.flashbots.net/writings/why-run-mevboost/)
-- [The Hitchhikers Guide To Ethereum](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum)
+- [La guida per autostoppisti a Ethereum](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum)

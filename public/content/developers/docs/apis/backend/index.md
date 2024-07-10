@@ -63,7 +63,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _Cost-effective EVM JSON RPC provider_**
+**Node RPC - _Cost-effective EVM JSON-RPC provider_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Documentation](https://docs.noderpc.xyz/node-rpc)

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import { FaGithub } from "react-icons/fa"
-import { Flex, FlexProps, Icon, useToken } from "@chakra-ui/react"
+import { Flex, FlexProps, Icon } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -37,13 +37,6 @@ const DescriptionParagraph = ({ children }: ChildOnlyProp) => (
 )
 
 const CallToContribute = ({ editPath }: CallToContributeProps) => {
-  /**
-   * TODO: After completion of the UI migration,
-   * Remove this and pass the token value directly
-   * into the `hideBelow` prop
-   */
-  const largeBp = useToken("breakpoints", "lg")
-
   return (
     <Flex
       as="aside"

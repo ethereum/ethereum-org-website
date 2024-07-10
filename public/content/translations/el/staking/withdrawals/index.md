@@ -196,7 +196,7 @@ eventName="read more">
 
 Συνιστάται στους χειριστές επικυρωτών να επισκεφθούν τη σελίδα <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Retriwals</a> όπου θα βρείτε περισσότερες λεπτομέρειες σχετικά με τον τρόπο προετοιμασίας του επικυρωτή για τις αναλήψεις, τα χρονοδιάγραμμα των γεγονότων και περισσότερες λεπτομέρειες σχετικά με τον τρόπο λειτουργίας των αναλήψεων.
 
-Για να δοκιμάσετε αρχικά την εγκατάστασή σας σε ένα δίκτυο δοκιμών, επισκεφθείτε το <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a> για να ξεκινήσετε.
+Για να δοκιμάσετε αρχικά την εγκατάστασή σας σε ένα δίκτυο δοκιμών, επισκεφθείτε το <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> για να ξεκινήσετε.
 
 </ExpandableCard>
 

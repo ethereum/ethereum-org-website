@@ -50,6 +50,7 @@ lang: ja
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### フォーセット
 
@@ -60,7 +61,6 @@ lang: ja
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
 - [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
-- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 #### Goerli(ゴエリ) _(長期サポート)_ {#goerli}
 
@@ -77,6 +77,7 @@ Goerliは、バリデーションやステーキングのテストを行うた�
 - [ウェブサイト](https://goerli.net/)
 - [GitHub](https://github.com/eth-clients/goerli)
 - [Etherscan](https://goerli.etherscan.io)
+- [Blockscout](https://eth-goerli.blockscout.com/)
 
 ##### フォーセット
 
@@ -88,7 +89,6 @@ Goerliは、バリデーションやステーキングのテストを行うた�
 - [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
 - [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Chainstack Goerli faucet](https://faucet.chainstack.com/goerli-faucet)
-- [Blockscout](https://eth-goerli.blockscout.com/)
 
 Goerliテストネットでバリデータを起動するには、ethstakerの["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/)を使用してください。
 

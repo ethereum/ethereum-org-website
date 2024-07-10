@@ -4,9 +4,7 @@ description: 介绍以太坊虚拟机及其与状态、交易和智能合约的�
 lang: zh
 ---
 
-EVM 的物理实例不能像人们指向云或海浪那样描述，它是真实_存在_并由数以千计运行以太坊客户端的计算机共同维护的一个实体。
-
-以太坊协议本身的存在仅仅是为了让这个特殊状态机保持连续、不间断和不可变的运行。 以太坊虚拟机是所有以太坊帐户和智能合约依存的环境。 在链上任何给定的区块处，以太坊有且只有一个“规范”状态，而以太坊虚拟机定义从一个区块到另一个区块计算新的有效状态的规则。
+以太坊虚拟机 (EVM) 是一个去中心化虚拟环境，它在所有以太坊节点上一种安全一致地方式执行代码。 节点运行以太坊虚拟机，以执行智能合约，利用“[燃料](/gas/)”度量执行[操作](/developers/docs/evm/opcodes/)所需的计算工作，从而确保高效的资源分配和网络安全性。
 
 ## 前提条件 {#prerequisites}
 
@@ -74,6 +72,7 @@ EVM 的所有实现都必须遵守以太坊黄皮书中描述的规范。
 - [以太坊虚拟机操作码](https://www.ethervm.io/)
 - [以太坊虚拟机操作码交互参考](https://www.evm.codes/)
 - [Solidity 文档的简短介绍](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
+- [精通以太坊 - 以太坊虚拟机](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
 
 ## 相关主题 {#related-topics}
 
