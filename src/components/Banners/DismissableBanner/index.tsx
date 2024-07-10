@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import { Center, CloseButton } from "@chakra-ui/react"
 
 // Components
-import BannerNotification from "../../BannerNotification"
+import BannerNotification from "@/components/BannerNotification"
 
 // Interface
 export type DismissableBannerProps = {
