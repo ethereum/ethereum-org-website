@@ -5,7 +5,7 @@ lang: it
 incomplete: true
 ---
 
-<FeaturedText>Impara a sviluppare per Ethereum usando progetti e strumenti basati su Rust</FeaturedText>
+<FeaturedText>Impara a sviluppare per Ehereum, utilizzando progetti e strumenti basati su Rust</FeaturedText>
 
 Usa Ethereum per creare applicazioni decentralizzate (dette "dapp") che sfruttano i vantaggi delle criptovalute e della tecnologia blockchain. Queste dapp sono attendibili perché, una volta "caricate" su Ethereum, vengono eseguite sempre come sono state programmate. Possono controllare risorse digitali per creare nuove tipologie di applicazioni finanziarie. Possono essere decentralizzate, il che significa che nessuna singola entità o persona le controlla e sono quasi impossibile da censurare.
 
@@ -51,6 +51,7 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [SewUp](https://github.com/second-state/SewUp) - _Una libreria per aiutarti a creare il tuo contratto webassembly di Ethereum con Rust e sviluppare in un backend comune_
 - [Substreams](https://github.com/streamingfast/substreams): _tecnologia d'indicizzazione parallelizzata dei dati della blockchain_
 - [Reth](https://github.com/paradigmxyz/reth) Reth (abbreviazione di Rust Ethereum, pronuncia) è una nuova implementazione a nodo completo su Ethereum
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust): _Una raccolta curata di progetti nell'ecosistema di Ethereum, scritta in Rust_
 
 Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers.](/developers/)
 

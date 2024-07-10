@@ -20,7 +20,7 @@ Un "nodo" è qualsiasi istanza del software del client di Ethereum connessa ad a
 - Il client di esecuzione (noto anche come il Motore di Esecuzione, client EL o, precedentemente, client di Eth1) attende le nuove transazioni trasmesse nella rete, le esegue nell'EVM e detiene l'ultimo stato e database di tutti i dati correnti di Ethereum.
 - Il client di consenso (noto anche come il Nodo Beacon, client CL o, precedentemente, client di Eth2) implementa l'algoritmo di consenso di proof-of-stake, che consente alla rete di raggiungere l'accordo secondo i dati validati dal client di esecuzione. C'è inoltre un terzo pezzo di software, chiamato "validatore" che può essere aggiunto al client di consenso, permettendo al nodo di partecipare alla messa in sicurezza della rete.
 
-I client lavorano assieme per tenere traccia della testa della blockchain Ethereum e permettere agli utenti di interagire con la rete Ethereum. Il design modulare con molteplici pezzi di software che lavorano assieme è chiamato [complessità incapsulata](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Questo approccio ha semplificato l'esecuzione de [La Fusione](/roadmap/merge) senza problemi, permette di mantenere e sviluppare più facilmente il software client, e consente il riutilizzo di client individuali ad esempio nell'[ecosistema di livello 2](/layer-2/).
+I client lavorano assieme per tenere traccia della testa della blockchain Ethereum e permettere agli utenti di interagire con la rete Ethereum. Il design modulare con molte parti di software che cooperano è detto [complessità incapsulata](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Questo approccio ha semplificato l'esecuzione de [La Fusione](/roadmap/merge) senza problemi, permette di mantenere e sviluppare più facilmente il software client, e consente il riutilizzo di client individuali ad esempio nell'[ecosistema di livello 2](/layer-2/).
 
 ![Client di esecuzione e consenso accoppiati](./eth1eth2client.png) Diagramma semplificato di un client di esecuzione e uno di consenso accoppiati.
 
@@ -130,13 +130,14 @@ La community di Ethereum mantiene numerosi client di esecuzione open source (pre
 
 Questa tabella riepiloga i diversi client. Tutti superano i [test dei client](https://github.com/ethereum/tests) e sono mantenuti attivamente per rimanere al passo con gli aggiornamenti di rete.
 
-| Client                                          | Linguaggio | Sistemi operativi     | Reti                                     | Strategie di sincronizzazione          | Cancellazione dello stato |
-| ----------------------------------------------- | ---------- | --------------------- | ---------------------------------------- | -------------------------------------- | ------------------------- |
-| [Geth](https://geth.ethereum.org/)              | Vai        | Linux, Windows, macOS | Rete Principale, Sepolia, Goerli         | Snap, Completa                         | Archiviata, Tagliata      |
-| [Nethermind](http://nethermind.io/)             | C#, .NET   | Linux, Windows, macOS | Rete Principale, Sepolia, Goerli e altre | Snap (senza servire), Rapida, Completa | Archiviata, Tagliata      |
-| [Besu](https://besu.hyperledger.org/en/stable/) | Java       | Linux, Windows, macOS | Rete Principale, Sepolia, Goerli e altre | Snap, Veloce, Completo                 | Archiviata, Tagliata      |
-| [Erigon](https://github.com/ledgerwatch/erigon) | Go         | Linux, Windows, macOS | Rete Principale, Sepolia, Goerli e altre | Completa                               | Archiviata, Tagliata      |
-| [Reth](https://github.com/paradigmxyz/reth)     | Rust       | Linux, Windows, macOS | Rete Principale, Sepolia, Goerli e altre | Completa                               | Archiviata, Tagliata      |
+| Client                                                                   | Linguaggio | Sistemi operativi     | Reti                              | Strategie di sincronizzazione          | Cancellazione dello stato |
+| ------------------------------------------------------------------------ | ---------- | --------------------- | --------------------------------- | -------------------------------------- | ------------------------- |
+| [Geth](https://geth.ethereum.org/)                                       | Vai        | Linux, Windows, macOS | Rete Principale, Sepolia, Holesky | Snap, Completa                         | Archiviata, Tagliata      |
+| [Nethermind](http://nethermind.io/)                                      | C#, .NET   | Linux, Windows, macOS | Rete Principale, Sepolia, Holesky | Snap (senza servire), Rapida, Completa | Archiviata, Tagliata      |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Rete Principale, Sepolia, Holesky | Snap, Veloce, Completo                 | Archiviata, Tagliata      |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Rete Principale, Sepolia, Holesky | Completa                               | Archiviata, Tagliata      |
+| [Reth](https://github.com/paradigmxyz/reth) _(beta)_                     | Rust       | Linux, Windows, macOS | Rete Principale, Sepolia, Holesky | Completa                               | Archiviata, Tagliata      |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Holesky                  | Completa                               | Tagliata                  |
 
 Per ulteriori informazioni sulle reti supportate, consulta [reti Ethereum](/developers/docs/networks/).
 
@@ -167,6 +168,16 @@ Nethermind è un'implementazione di Ethereum creata con lo stack tecnologico C #
 - networking e funzionalità avanzate come dashboard Prometheus/Graphana, supporto per la registrazione aziendale seq, tracciamento RPC JSON e plug-in di analisi.
 
 Inoltre, Nethermind vanta una [documentazione dettagliata](https://docs.nethermind.io), un efficace supporto per gli sviluppatori, una community online e un supporto disponibile 24 ore al giorno, 7 giorni su 7 per gli utenti premium.
+
+### In fase di sviluppo {#execution-in-development}
+
+Questi client sono ancora nelle prime fasi di sviluppo e non sono ancora consigliate per l'utilizzo in produzione.
+
+#### EthereumJS {#ethereumjs}
+
+Il client di esecuzione di EthereumJS è scritto in TypeScript e composto da svariati pacchetti, inclusi i primitivi essenziali di Ethereum rappresentati dalle classi Blocco, Transazione e Albero di Merkle-Patricia, e i componenti essenziali dei client, inclusa un'implementazione della Macchina Virtuale di Ethereum (EVM), una classe della blockchain e lo stack di rete di DevP2P.
+
+Scopri di più leggendo la sua [documentazione](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)
 
 ## Client di consenso {#consensus-clients}
 

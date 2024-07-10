@@ -23,7 +23,7 @@ Le transazioni richiedono una commissione e devono essere incluse in un blocco v
 Una transazione inviata contiene le seguenti informazioni:
 
 - `from` – indirizzo del mittente che firmerà la transazione. Questo sarà un conto posseduto esternamente, in quanto i conti di contratti non possono inviare transazioni.
-- `recipient` – l'indirizzo ricevente (se è un conto posseduto esternamente, la transazione trasferirà valore. Se è un conto di contratto, la transazione eseguirà il codice del contratto)
+- `to`: l'indirizzo del destinatario (se è un conto posseduto esternamente, la transazione trasferirà il valore. Se è un conto di contratto, la transazione eseguirà il codice del contratto)
 - `signature` – l'identificativo del mittente. Viene generata quando la chiave privata del mittente firma la transazione e conferma che il mittente ha autorizzato la transazione
 - `nonce` – un contatore con incremento sequenziale, che indica il numero della transazione dal conto
 - `value` – quantità di ETH da trasferire dal mittente al destinatario (denominata in WEI, dove 1 ETH corrisponde a 1e+18wei)

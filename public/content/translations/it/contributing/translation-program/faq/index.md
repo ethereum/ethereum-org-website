@@ -116,4 +116,4 @@ A breve prevediamo di aggiungere il supporto per l'inserimento di contenuti non 
 
 ## Contattaci {#contact}
 
-Grazie per aver letto tutte queste informazioni. Speriamo che ti aiutino a muovere i primi passi nel nostro programma. Sentiti libero/a di unirti al nostro [canale di traduzione Discord](https://discord.gg/XVepFu7sqR) per fare domande e collaborare con altri traduttori, o contattarci a translations@ethereum.org!
+Grazie per aver letto tutte queste informazioni. Speriamo che ti aiutino a muovere i primi passi nel nostro programma. Sentiti libero di unirti al nostro [canale di traduzione di Discord](https://discord.gg/ethereum-org) per porre domande e collaborare con gli altri traduttori, o contattaci a translations@ethereum.org!
