@@ -1,8 +1,9 @@
 import { Box } from "@chakra-ui/react"
 
+import Emoji from "../Emoji"
+import InlineLink from "../Link"
+
 import BannerNotification from "./BannerNotification"
-import Emoji from "./Emoji"
-import InlineLink from "./Link"
 
 const UpgradeBannerNotification = () => (
   <BannerNotification shouldShow>
