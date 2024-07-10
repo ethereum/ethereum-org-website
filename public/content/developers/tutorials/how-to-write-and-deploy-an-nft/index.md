@@ -361,6 +361,14 @@ If you click on the transaction address (the link after the words "at txn 0x..."
 
 ![View your contract address on Etherscan](./etherscan-sepolia-tx-details.png)
 
+Finally, add the contract address displayed in the terminal to your `.env` file like this:
+
+```
+CONTRACT_ADDRESS="0xe49A13ad27c56034cAbB825d6385f332A24e7065"
+```
+
+Your .env file should now have 4 lines in it.  You'll need this address later to mint your NFT!
+
 Yasssss! You just deployed your NFT smart contract to the Ethereum (testnet) chain!
 
 To understand what’s going on under the hood, let’s head to the Alchemy dashboard's "Request Logs" on the sidebar, and check out the requests our app's been making.
