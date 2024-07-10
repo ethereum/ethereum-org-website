@@ -14,7 +14,6 @@ import "../styles/global.css"
 
 import { useLocaleDirection } from "@/hooks/useLocaleDirection"
 import { BaseLayout } from "@/layouts/BaseLayout"
-import { mono } from "@/lib/fonts"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   useEffect(() => {
@@ -40,7 +39,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
         {`
           :root {
             --font-inter: Inter, sans-serif;
-            --font-mono: ${mono.style.fontFamily};
+            --font-mono: "IBM Plex Mono", Courier, monospace;
           }
         `}
       </style>
