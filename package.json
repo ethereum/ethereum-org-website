@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "8.7.0",
+  "version": "8.7.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -87,9 +87,9 @@
     "eslint-config-next": "^14.2.2",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-storybook": "0.8.0",
     "eslint-plugin-unused-imports": "^3.0.0",
     "husky": "^9.0.11",
-    "eslint-plugin-storybook": "0.8.0",
     "image-size": "^1.0.2",
     "lint-staged": "^15.2.5",
     "mdast-util-toc": "^7.0.0",
