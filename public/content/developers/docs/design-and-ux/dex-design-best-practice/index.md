@@ -1,11 +1,12 @@
 ---
-title: Decentralised Exchange (DEX) Design Best Practice
+title: Decentralized exchange (DEX) design best practices
 description: A guide explaining UX/UI decisions for swapping tokens.
 lang: en
 ---
-# Introduction to Decentralised Exchanges
 
-Since the launch of Uniswap in 2018, there have been hundreds of Decentralised Exchanges launched across dozens of different chains.
+# Introduction to decentralized exchanges {#introduction-to-decentralized-exchanges}
+
+Since the launch of Uniswap in 2018, there have been hundreds of decentralized exchanges launched across dozens of different chains.
 Many of these have introduced new elements or added their own twist, but the interface has remained generally the same.
 
 One reason for this is [Jakob’s Law](https://lawsofux.com/jakobs-law/):
@@ -13,7 +14,7 @@ One reason for this is [Jakob’s Law](https://lawsofux.com/jakobs-law/):
 > Users spend most of their time on other sites. This means that users prefer your site to work the same way as all the other sites they already know.
 
 Thanks to early innovators like Uniswap, Pancakeswap, and Sushiswap, DeFi users have a collective idea of what a DEX looks like.
-For this reason, something like “best practice” is now emerging. We see more and more design decisions being standardised across sites. You can see the evolution of DEXes as a giant example of testing it live. Things that worked stayed, things that didn’t, got tossed out. There’s still room for personality, but there are certain standards a DEX should conform to.
+For this reason, something like “best practice” is now emerging. We see more and more design decisions being standardized across sites. You can see the evolution of DEXes as a giant example of testing it live. Things that worked stayed, things that didn’t, got tossed out. There’s still room for personality, but there are certain standards a DEX should conform to.
 
 This article is a summary of:
 - what to include
@@ -24,7 +25,7 @@ All of the example wireframes were made specifically for this article, although 
 
 The Figma kit is also included at the bottom - feel free to use it and speed up your own wireframes!
 
-## Basic Anatomy of a DEX
+## Basic anatomy of a DEX {#basic-anatomy-of-a-dex}
 
 The UI generally contains three elements:
 1. Main form
@@ -34,9 +35,9 @@ The UI generally contains three elements:
 ![Generic DEX UI, showing the three main elements](./1.png)
 
 
-## Variations
+## Variations {#variations}
 
-This will be a common theme in this article, but there are various different ways these elements can be organised. The “details panel” can be:
+This will be a common theme in this article, but there are various different ways these elements can be organized. The “details panel” can be:
 - Above the button
 - Below the button
 - Hidden in an accordion panel
@@ -44,7 +45,7 @@ This will be a common theme in this article, but there are various different way
   
 N.B. A “preview” modal is optional, but if you are showing very few details on the main UI, it becomes essential.
 
-## Structure of the Main Form
+## Structure of the main form {#structure-of-the-main-form}
 
 This is the box where you actually choose which token you want to swap. The component consists of an input field and a small button in a row.
 
@@ -52,7 +53,7 @@ DEXes typically display additional details in one row above and one row below, a
 
 ![Input row, with a details row above and below](./2.png)
 
-## Variations
+## Variations {#variations2}
 
 Two UI variations are shown here; one without any borders, creating a very open design, and one where the input row has a border, creating a focus on that element.
 
@@ -62,7 +63,7 @@ This basic structure allows **four key pieces of info** to be shown in the desig
 
 During the evolution of DeFi, lots of different things have been included here.
 
-## Key Info to Include
+## Key info to include {#key-info-to-include}
 
 - Balance in wallet
 - Max button
@@ -81,7 +82,7 @@ Extra details can be shown below the main form. As this type of info is mostly f
 
 ![Details shown in the corners of that main form](./4.png)
 
-## Extra Info to Include
+## Extra info to include {#extra-info-to-include}
 
 - Token price
 - Slippage
@@ -117,7 +118,8 @@ Entering numbers in Main Form → Scanning Details → Clicking to Preview Scree
 Should the details panel be visible at all times, or does the user need to click it to expand?
 Should you create friction by adding a preview screen? This forces the user to slow down and consider their trade, which can be useful. But do they want to see all the same info again? What is most useful to them at this point?
 
-## Design Options
+## Design options {#design-options}
+
 As mentioned, a lot of this comes down to your personal style
 Who is your user?
 What is your brand?
@@ -126,13 +128,15 @@ Even if you’re aiming for the pro users who want all info possible, you should
 
 > No matter how beautiful, no matter how cool your interface, it would be better if there were less of it.
 
-### Structure
+### Structure {#structure}
+
 - tokens on the left, or tokens on the right
 - 2 rows or 3
 - details above or below the button
 - details expanded, minimized, or not shown
 
-### Component Style
+### Component style {#component-style}
+
 - empty
 - outlined
 - filled
@@ -157,7 +161,7 @@ Take a look at the below examples to see different ways you can put it all toget
 
 ![2 rows in a filled style](./12.png)
 
-## But which side should the token go on?
+## But which side should the token go on? {#but-which-side-should-the-token-go-on}
 
 The bottom line is that it probably doesn’t make a huge difference to usability. There are a few things to bear in mind, however, which might sway you one way or the other.
 
@@ -175,7 +179,7 @@ The law of proximity states that items that are close together are perceived as 
 
 Ultimately, there are pluses and minuses for both options, but it is interesting how the trend appears to be towards token on the right.
 
-# Button Behaviour
+# Button behavior {#button-behavior}
 
 Don’t have a separate button for Approve. Also don’t have a separate click for Approve. The user wants to Swap, so just say “swap” on the button and initiate the approval as the first step. A modal can show progress with a stepper, or a simple “tx 1 of 2 - approving” notification.
 
@@ -183,7 +187,7 @@ Don’t have a separate button for Approve. Also don’t have a separate click f
 
 ![A UI with one button that says approve](./15.png)
 
-## Button as contextual help
+## Button as contextual help {#button-as-contextual-help}
 
 The button can do double duty as an alert!
 
@@ -197,11 +201,11 @@ If the main action - SWAP - is unavailable due to an error, the reason why can b
 
 The button can also be **mapped to the action** that needs to be performed. For example, if the user cannot swap because they are on the wrong network, the button should say “switch to Ethereum”, and when the user clicks on the button, it should switch the network to Ethereum. This speeds up the user flow significantly.
 
-![Key ctions being initated from the main CTA](./16.png)
+![Key actions being initiated from the main CTA](./16.png)
 
 ![Error message shown within the main CTA](./17.png)
 
-## Build Your Own with this Figma File
+## Build your own with this figma file {#build-your-own-with-this-figma-file}
 
 Thanks to the hard work of multiple protocols, DEX design has improved a lot. We know what info the user needs, how we should show it, and how to make the flow as smooth as possible.
 Hopefully this article provides a solid overview of the UX principles. 
