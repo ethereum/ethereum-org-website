@@ -9,7 +9,6 @@ import {
   Icon,
   MenuButton,
   Text,
-  useColorModeValue,
   useDisclosure,
   useEventListener,
 } from "@chakra-ui/react"
@@ -18,6 +17,8 @@ import { IconButton } from "@/components/Buttons"
 import LanguagePicker from "@/components/LanguagePicker"
 
 import { DESKTOP_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
+
+import useColorModeValue from "@/hooks/useColorModeValue"
 
 type DesktopNavMenuProps = {
   toggleColorMode: () => void

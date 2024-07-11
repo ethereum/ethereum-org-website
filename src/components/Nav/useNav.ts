@@ -20,7 +20,6 @@ import {
 } from "react-icons/bs"
 import { PiFlask, PiUsersFourLight } from "react-icons/pi"
 import {
-  useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react"
 
@@ -31,6 +30,8 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { FROM_QUERY } from "@/lib/constants"
 
 import type { NavSections } from "./types"
+
+import useColorModeValue from "@/hooks/useColorModeValue"
 
 export const useNav = () => {
   const { asPath } = useRouter()

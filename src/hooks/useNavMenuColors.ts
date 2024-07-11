@@ -1,6 +1,8 @@
-import { useColorModeValue } from "@chakra-ui/react"
+
 
 import { Level } from "@/components/Nav/types"
+
+import useColorModeValue from "./useColorModeValue"
 
 type LevelColors = {
   subtext: string

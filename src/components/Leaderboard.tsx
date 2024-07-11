@@ -7,7 +7,6 @@ import {
   LinkOverlay,
   List,
   ListItem,
-  useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react"
 
@@ -16,6 +15,7 @@ import { BaseLink } from "@/components/Link"
 
 import { GITHUB_URL } from "@/lib/constants"
 
+import useColorModeValue from "@/hooks/useColorModeValue"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type Person = {
