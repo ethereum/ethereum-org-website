@@ -103,6 +103,11 @@ I problemi di sicurezza degli NFT sono molto spesso correlati alle truffe di phi
 - [Tracker EtherscanNFT](https://etherscan.io/nft-top-contracts)
 - [Standard token ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Standard token ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [App e strumenti NFT popolari](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Altre risorse {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

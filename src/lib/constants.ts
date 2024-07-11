@@ -150,3 +150,6 @@ export const DEFAULT_GLOSSARY_NS = "glossary"
 export const HAMBURGER_BUTTON_ID = "mobile-menu-button"
 export const MOBILE_LANGUAGE_BUTTON_NAME = "mobile-language-button"
 export const DESKTOP_LANGUAGE_BUTTON_NAME = "desktop-language-button"
+
+// Codeblock
+export const LINES_BEFORE_COLLAPSABLE = 8

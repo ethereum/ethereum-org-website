@@ -6,7 +6,7 @@
 [![gitpoap badge](https://public-api.gitpoap.io/v1/repo/ethereum/ethereum-org-website/badge)](https://www.gitpoap.io/gh/ethereum/ethereum-org-website)
 
 <div align="center" style="margin-top: 1em; margin-bottom: 3em;">
-  <a href="https://ethereum.org"><img alt="ethereum logo" src="./public/assets/eth-transparent.png" alt="ethereum.org" width="125"></a>
+  <a href="https://ethereum.org"><img alt="ethereum logo" src="./public/images/assets/eth-transparent.png" alt="ethereum.org" width="125"></a>
   <h1>👋 Welcome to ethereum.org!</h1>
 </div>
 
@@ -116,7 +116,7 @@ git push
 - After your changes are committed to your GitHub fork, submit a pull request (PR) to the `dev` branch of the `ethereum/ethereum-org-website` repo
 - In your PR description, reference the issue it resolves (see [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword))
   - ex. `Updates out of date content [Fixes #1234]`
-- Netlify (our hosting service for build previews) deploys all PRs to a publicly accessible preview URL, e.g.: ![Netlify deploy preview](public/preview-deploy.png)
+- Netlify (our hosting service for build previews) deploys all PRs to a publicly accessible preview URL, e.g.: ![Netlify deploy preview](public/images/preview-deploy.png)
 - _Confirm your Netlify preview deploy looks & functions as expected_
 - Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/ethereum-org)?
 
@@ -136,7 +136,7 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
-![POAP Logo](public/poap-logo.svg)
+![POAP Logo](public/images/poap-logo.svg)
 
 ## Claim your POAP!
 
@@ -1874,6 +1874,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/JacobSharples"><img src="https://avatars.githubusercontent.com/u/45126111?v=4?s=100" width="100px;" alt="Jacob Sharples"/><br /><sub><b>Jacob Sharples</b></sub></a><br /><a href="#content-JacobSharples" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/omahs"><img src="https://avatars.githubusercontent.com/u/73983677?v=4?s=100" width="100px;" alt="omahs"/><br /><sub><b>omahs</b></sub></a><br /><a href="#translation-omahs" title="Translation">🌍</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Shiva-Sai-ssb"><img src="https://avatars.githubusercontent.com/u/112751524?v=4?s=100" width="100px;" alt="Shiva Sai"/><br /><sub><b>Shiva Sai</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AShiva-Sai-ssb" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://bsaurabh.xyz/"><img src="https://avatars.githubusercontent.com/u/39492927?v=4?s=100" width="100px;" alt="Saurabh Burade"/><br /><sub><b>Saurabh Burade</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=saurabhburade" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/yorkerhodes3"><img src="https://avatars.githubusercontent.com/u/17415717?v=4?s=100" width="100px;" alt="Yorke E. Rhodes III"/><br /><sub><b>Yorke E. Rhodes III</b></sub></a><br /><a href="#content-yorkerhodes3" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

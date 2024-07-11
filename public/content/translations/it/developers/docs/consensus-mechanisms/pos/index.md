@@ -91,3 +91,4 @@ Ethereum non è sempre stata una rete di proof-of-stake. All'inizio Ethereum uti
 ## Argomenti correlati {#related-topics}
 
 - [Proof of Work](/developers/docs/consensus-mechanisms/pow/)
+- [Proof of Authority](/developers/docs/consensus-mechanisms/poa/)

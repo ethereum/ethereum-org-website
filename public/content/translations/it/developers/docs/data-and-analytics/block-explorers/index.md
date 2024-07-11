@@ -14,17 +14,23 @@ I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per visua
 ## Servizi {#services}
 
 - [Etherscan](https://etherscan.io/): _disponibile anche in cinese, coreano, russo e giapponese_
+- [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum): _disponibile anche in spagnolo, francese, italiano, olandese, portoghese, russo, cinese e farsi_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
+- [Ethernow](https://www.ethernow.xyz/)
 - [Ethplorer](https://ethplorer.io/): _disponibile anche in cinese, spagnolo, francese, turco, russo, coreano e vietnamita_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Otterscan](https://otterscan.io/)
 - [Rantom](https://rantom.app/)
+
+## Strumenti open source {#open-source-tools}
+
+- [Otterscan](https://otterscan.io/)
+- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 
 ## Dati {#data}
 
@@ -232,11 +238,13 @@ I dati di livello superiore del livello di consenso includono quanto segue:
 ## Block explorer {#block-explorers}
 
 - [Etherscan](https://etherscan.io/) - un esploratore di blocchi che puoi usare per recuperare i dati per la Rete Principale di Ethereum e le reti di prova di Ropsten, Kovan, Rinkeby e Goerli
+- [3xpl](https://3xpl.com/ethereum) - un esploratore di Ethereum open source e privo di inserzioni che consente di scaricare i propri dataset
 - [Beaconcha.in](https://beaconcha.in/) - un esploratore di blocchi open source per la Rete Principale di Ethereum e la rete di prova di Goerli
 - [Blockchair](https://blockchair.com/ethereum): l'esploratore di Ethereum più privato. Anche per ordinare e filtrare i dati (mempool)
 - [Etherchain](https://www.etherchain.org/) - un esploratore di blocchi per la rete principale di Ethereum
 - [Ethplorer](https://ethplorer.io/) - un esploratore di blocchi incentrato sui token per la Rete Principale di Ethereum e la rete di prova di Kovan
 - [Rantom](https://rantom.app/): Un visualizzatore di transazioni NFT e DeFi open source e intuitivo per gli utenti, per una visione dettagliata
+- [Ethernow](https://www.ethernow.xyz/): un esploratore in tempo reale delle transazioni che ti consente di visualizzare il livello pre-catena della Rete Principale di Ethereum
 
 ## Approfondimenti {#further-reading}
 

@@ -103,6 +103,11 @@ summaryPoint3: Υποστηρίζονται από έξυπνα συμβόλαι
 - [Ανιχνευτής EtherscanNFT](https://etherscan.io/nft-top-contracts)
 - [Πρότυπο κρυπτονομισμάτων ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Πρότυπο κρυπτονομισμάτων ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [Δημοφιλή εφαρμογές NFT και εργαλεία](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Άλλες πηγές {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

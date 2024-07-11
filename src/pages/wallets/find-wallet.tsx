@@ -15,7 +15,7 @@ import {
 
 import type { BasePageProps, ChildOnlyProp, Lang, Wallet } from "@/lib/types"
 
-import BannerNotification from "@/components/BannerNotification"
+import BannerNotification from "@/components/Banners/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { MobileFiltersMenu } from "@/components/FindWallet/MobileFiltersMenu"
 import WalletFilterPersona from "@/components/FindWallet/WalletFilterPersona"

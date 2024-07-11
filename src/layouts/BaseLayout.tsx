@@ -14,13 +14,12 @@ import { SkipLink } from "@/components/SkipLink"
 // import TranslationBannerLegal from "@/components/TranslationBannerLegal"
 // import { toPosixPath } from "@/lib/utils/relativePath"
 // import { DEFAULT_LOCALE } from "@/lib/constants"
-import { lightTheme as oldTheme } from "../theme"
 
 const FeedbackWidget = dynamic(() => import("@/components/FeedbackWidget"), {
   ssr: false,
 })
 
-export const RootLayout = ({
+export const BaseLayout = ({
   children,
   // contentIsOutdated,
   // contentNotTranslated,
@@ -49,27 +48,37 @@ export const RootLayout = ({
   // const originalPagePath = toPosixPath(join(DEFAULT_LOCALE, asPath))
 
   return (
-    <Container mx="auto" maxW={oldTheme.variables.maxPageWidth}>
+    <>
+      {/**
+       * The Skip Link is positioned above the container to ensure it is not affecting the
+       * layout on initial load.
+       */}
       <SkipLink />
+      <Container maxW="container.2xl" marginInline="auto">
+        <Nav />
 
-      <Nav />
+        {/* TODO: FIX TRANSLATION BANNER LOGIC FOR https://github.com/ethereum/ethereum-org-website/issues/11305 */}
+        {/* <TranslationBanner
+            shouldShow={shouldShowTranslationBanner}
+            isPageContentEnglish={contentNotTranslated}
+            originalPagePath={originalPagePath}
+          />
 
-      {/* TODO: FIX TRANSLATION BANNER LOGIC FOR https://github.com/ethereum/ethereum-org-website/issues/11305 */}
-      {/* <TranslationBanner
-        shouldShow={shouldShowTranslationBanner}
-        isPageContentEnglish={contentNotTranslated}
-        originalPagePath={originalPagePath}
-      />
+          <TranslationBannerLegal
+            shouldShow={shouldShowLegalTranslationBanner}
+            originalPagePath={originalPagePath}
+          /> */}
 
-      <TranslationBannerLegal
-        shouldShow={shouldShowLegalTranslationBanner}
-        originalPagePath={originalPagePath}
-      /> */}
+        {children}
 
-      {children}
+        <Footer lastDeployLocaleTimestamp={lastDeployLocaleTimestamp} />
+      </Container>
+      {/**
+       * The Feedback Widget is positioned below the container to ensure it is not affecting the
+       * layout on initial load.
+       */}
 
-      <Footer lastDeployLocaleTimestamp={lastDeployLocaleTimestamp} />
       <FeedbackWidget />
-    </Container>
+    </>
   )
 }

@@ -24,7 +24,11 @@ lang: ja
 
 イーサ暗号通貨は、イーサリアムのコンピューティング能力の価格設定メカニズムに対応しています。 トランザクションを行うには、ブロックチェーン上でトランザクションを認識してもらうためにイーサを支払う必要があります。 これらの使用料は[ガス代](/developers/docs/gas/)として知られており、ガス代は処理を実行するために必要な計算力の量と、その時のネットワーク全体の計算力の需要により決まります。
 
-そのため、悪意のある分散型アプリ(Dapp)が無限ループを送信したとしても、最終的には保有しているイーサを使い果たしてトランザクションが終了し、ネットワークが正常に戻ることになります。[広く一般的](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum)にイーサリアムとイーサが[混同](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum)されますが、「イーサリアムの価格」について話されている時は、イーサの価格を意味します。
+そのため、悪意のある分散型アプリ(Dapp)が無限ループを送信したとしても、最終的には保有しているイーサを使い果たしてトランザクションが終了し、ネットワークが正常に戻ることになります。
+
+[広く一般的](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum)にイーサリアムとイーサが
+
+[混同](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum)されますが、「イーサリアムの価格」について話されている時は、イーサの価格を意味します。
 
 
 

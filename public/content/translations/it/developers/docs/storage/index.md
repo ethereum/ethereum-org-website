@@ -61,6 +61,7 @@ IPFS è un sistema distribuito per memorizzare e accedere a file, siti web, appl
 - [IPFS Scan](https://ipfs-scan.io) _(esploratore di pinning di IPFS)_
 - [4EVERLAND](https://www.4everland.org/)_（Servizio di pinning IPFS）_
 - [Filebase](https://filebase.com) _(Servizio di pinning IPFS)_
+- [Spheron Network](https://spheron.network/) _(Servizio di pinning IPFS/Filecoin)_
 
 SWARM è una tecnologia decentralizzata di archiviazione e distribuzione di dati con un sistema di incentivazione di archiviazione e un oracolo del prezzo di affitto della memoria.
 
@@ -197,6 +198,12 @@ Basata sul proof-of-stake:
 - [Kaleido](https://kaleido.io/)
 - [Documentazione](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
+
+**Spheron Network - _Spheron è una platform-as-a-service (PaaS) progettata per le dApp che desiderano lanciare le proprie applicazioni su infrastrutture decentralizzate con le migliori prestazioni. Fornisce calcolo, archiviazione decentralizzata, CDN e hosting web pronti all'uso._**
+
+- [spheron.network](https://spheron.network/)
+- [Documentazione](https://docs.spheron.network/)
+- [GitHub](https://github.com/spheronFdn)
 
 ## Letture consigliate {#further-reading}
 

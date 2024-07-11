@@ -10,22 +10,13 @@ import {
 } from "@chakra-ui/react"
 
 import { TranslationKey } from "@/lib/types"
+import { ITitleCardItem } from "@/lib/interfaces"
 
 import { Image } from "@/components/Image"
 import { BaseLink } from "@/components/Link"
 import Translation from "@/components/Translation"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
-
-export interface ITitleCardItem {
-  title: string
-  description: string
-  caption?: string
-  link?: string
-  image?: string
-  alt?: string
-  id?: number
-}
 
 export type TitleCardListProps = {
   content: Array<ITitleCardItem>

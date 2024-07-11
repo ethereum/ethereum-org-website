@@ -32,7 +32,7 @@ Infine, il validatore firma l'attestazione e la trasmette sulla rete.
 
 Le spese aggiuntive associate al trasferimento di questi dati nella rete sono molto elevate per ogni validatore. Di conseguenza, prima ancora che avvenga la trasmissione su larga scala, le attestazioni dei singoli validatori sono aggregate in reti secondarie. Questo include l'aggregazione delle firme in modo che un'attestazione che viene trasmessa includa i `dati` di consenso e un'unica firma creata combinando le firme di tutte i validatori d'accordo con tali `dati`. Ciò è verificabile utilizzando `aggregation_bits`, poiché questi forniscono l'indice di ogni validatore nella propria commissione (i cui ID sono forniti in `data`) che può essere utilizzato per richiedere le singole firme.
 
-In ogni epoca, un validatore in ogni rete secondaria è selezionato dall'`aggregator`. L'aggregatore raccoglie tutte le attestazioni che sente nella rete di gossip aventi `data` equivalenti propri. Il mittente di ogni attestazione corrispondente è registrato negli `aggregation_bits`. L'aggregatore trasmette quindi l'attestazione aggregata alla rete più ampia.
+In ogn epoca 16 validatori in ogni rete secondaria sono selezionati per fungere da `aggregatori`. Gli aggregatori raccolgono tutte le attestazioni a loro note sulla rete di gossip aventi `dati` equivalenti ai loro. Il mittente di ogni attestazione corrispondente è registrato negli `aggregation_bits`. Quindi, gli aggregatori trasmettono l'aggregato di attestazioni al resto della rete.
 
 Quando un validatore viene selezionato per essere un propositore di blocchi, impacchetta le attestazioni aggregate dalle reti secondarie fino all'ultimo slot nel nuovo blocco.
 
@@ -84,9 +84,9 @@ Per ogni epoca ci sono in totale 16 Aggregatori. Inoltre, alcuni validatori casu
 
 Si noti che in alcuni casi un aggregatore fortunato potrebbe anche diventare il propositore di blocchi. Se l'attestazione non è stata inclusa perché il propositore di blocchi è mancante, sarebbe il propositore successivo a selezionare l'attestazione aggregata e includerla nel blocco successivo. Tuttavia, il **ritardo d'inclusione** aumenterebbe di uno.
 
-## Letture consigliate {#further-reading}
+## Lettura consigliate {#further-reading}
 
 - [Le attestazioni nelle specifiche del consenso annotate da Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
 - [Le attestazioni su eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
-_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_

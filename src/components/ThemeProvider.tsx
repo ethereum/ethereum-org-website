@@ -9,7 +9,6 @@ import customTheme from "@/@chakra-ui/theme"
 import { COLOR_MODE_STORAGE_KEY } from "@/lib/constants"
 
 import { useLocaleDirection } from "@/hooks/useLocaleDirection"
-import { mono } from "@/lib/fonts"
 
 const colorModeManager = createLocalStorageManager(COLOR_MODE_STORAGE_KEY)
 
@@ -40,7 +39,7 @@ const ThemeProvider = ({ children }: Pick<ThemeProviderProps, "children">) => {
           {`
             :root {
               --font-inter: Inter, sans-serif;
-              --font-mono: ${mono.style.fontFamily};
+              --font-mono: "IBM Plex Mono", Courier, monospace;
             }
           `}
         </style>

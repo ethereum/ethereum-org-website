@@ -9,7 +9,7 @@ import ThemeProvider from "@/components/ThemeProvider"
 import "@/styles/global.css"
 import "@/styles/fonts.css"
 
-import { RootLayout } from "@/layouts/RootLayout"
+import { BaseLayout } from "@/layouts/BaseLayout"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   useEffect(() => {
@@ -28,13 +28,13 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   return (
     <>
       <ThemeProvider>
-        <RootLayout
+        <BaseLayout
           contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
           contentNotTranslated={pageProps.contentNotTranslated}
           lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
         >
           {getLayout(<Component {...pageProps} />)}
-        </RootLayout>
+        </BaseLayout>
       </ThemeProvider>
     </>
   )
