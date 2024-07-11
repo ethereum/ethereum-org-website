@@ -56,11 +56,6 @@ const Nav = () => {
           >
             <EthHomeIcon opacity={0.85} _hover={{ opacity: 1 }} />
           </BaseLink>
-
-          <div className="bg-background text-foreground flex justify-center items-center">
-            test
-          </div>
-
           {/* Desktop */}
           <Flex
             w="full"
