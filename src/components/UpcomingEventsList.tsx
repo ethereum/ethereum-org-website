@@ -114,7 +114,7 @@ const UpcomingEventsList = () => {
               <Heading
                 as="h3"
                 fontSize={{ base: "xl", md: "2xl" }}
-                py={4}
+                py={8}
                 fontWeight="semibold"
                 lineHeight={1.4}
               >
