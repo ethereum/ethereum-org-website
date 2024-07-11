@@ -20,7 +20,7 @@ import communityEvents from "@/data/community-events.json"
 const UpcomingEventsList = () => {
   const { locale } = useRouter()
   const { t } = useTranslation("page-community")
-  const monthsPerLoad = 1
+  const monthsPerLoad = 2
 
   const [monthGroupedEvents, setMonthGroupedEvents] = useState({})
 
