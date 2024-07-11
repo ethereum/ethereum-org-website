@@ -84,7 +84,11 @@ const UpcomingEventsList = () => {
   }, [])
 
   const loadMoreEvents = () => {
-    setMaxRange((counter) => counter + monthsPerLoad)
+    setMaxRange((counter) => {
+      if (counter + monthsPerLoad > Object.keys(monthGroupedEvents)?.length)
+        return Object.keys(monthGroupedEvents)?.length
+      return counter + monthsPerLoad
+    })
     trackCustomEvent({
       eventCategory: "more events button",
       eventAction: "click",
