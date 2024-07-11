@@ -1,19 +1,15 @@
 import { useEffect } from "react"
 import { appWithTranslation } from "next-i18next"
-import { ThemeProvider as NextThemesProvider } from "next-themes"
 import { init } from "@socialgouv/matomo-next"
 
 import { AppPropsWithLayout } from "@/lib/types"
 
-import ChakraThemeProvider from "@/components/ChakraThemeProvider"
-
-import { COLOR_MODE_STORAGE_KEY } from "@/lib/constants"
+import ThemeProvider from "@/components/ThemeProvider"
 
 import "@/styles/global.css"
-import "@/styles/main.css"
+import "@/styles/fonts.css"
 
 import { RootLayout } from "@/layouts/RootLayout"
-import { mono } from "@/lib/fonts"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   useEffect(() => {
@@ -31,31 +27,15 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
 
   return (
     <>
-      <style jsx global>
-        {`
-          :root {
-            --font-inter: Inter, sans-serif;
-            --font-mono: ${mono.style.fontFamily};
-          }
-        `}
-      </style>
-      <NextThemesProvider
-        attribute="data-theme"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
-        storageKey={COLOR_MODE_STORAGE_KEY}
-      >
-        <ChakraThemeProvider>
-          <RootLayout
-            contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
-            contentNotTranslated={pageProps.contentNotTranslated}
-            lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
-          >
-            {getLayout(<Component {...pageProps} />)}
-          </RootLayout>
-        </ChakraThemeProvider>
-      </NextThemesProvider>
+      <ThemeProvider>
+        <RootLayout
+          contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
+          contentNotTranslated={pageProps.contentNotTranslated}
+          lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
+        >
+          {getLayout(<Component {...pageProps} />)}
+        </RootLayout>
+      </ThemeProvider>
     </>
   )
 }
