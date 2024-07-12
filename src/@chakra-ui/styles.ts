@@ -50,30 +50,6 @@ const styles = {
     "li > p": {
       marginBottom: "calc(1.45rem / 2)",
     },
-    // Anchor tag styles
-    // Selected specifically for mdx rendered side icon link
-    ".header-anchor": {
-      position: "relative !important",
-      display: "initial",
-      marginStart: "-1.5em",
-      paddingEnd: "0.5rem !important",
-      fontSize: "1rem",
-      verticalAlign: "middle",
-
-      svg: {
-        display: "inline",
-        fill: "primary.base",
-        visibility: "hidden",
-      },
-    },
-    "h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,h6:hover": {
-      ".header-anchor svg": {
-        visibility: "visible",
-      },
-    },
-    ".header-anchor:focus svg": {
-      visibility: "visible",
-    },
     "pre, code, kbd, samp": {
       fontSize: "md",
       lineHeight: "base",

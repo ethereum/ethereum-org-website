@@ -177,36 +177,6 @@
     }
   }
 
-  /* Anchor tag styles */
-  /* Selected specifically for mdx rendered side icon link */
-  .header-anchor {
-    position: "relative !important";
-    display: "initial";
-    margin-inline-start: "-1.5em";
-    padding-inline-end: "0.5rem !important";
-    font-size: "1rem";
-    vertical-align: "middle";
-
-    & svg {
-      @apply invisible inline fill-primary;
-    }
-
-    &:focus svg {
-      @apply visible;
-    }
-  }
-
-  h1:hover,
-  h2:hover,
-  h3:hover,
-  h4:hover,
-  h5:hover,
-  h6:hover {
-    & .header-anchor svg {
-      @apply visible;
-    }
-  }
-
   pre,
   code,
   kbd,
