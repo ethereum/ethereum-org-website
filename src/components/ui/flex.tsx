@@ -22,7 +22,7 @@ const Center = forwardRef<FlexElement, FlexProps>(
     return (
       <Flex
         ref={ref}
-        className={cn("items-center justify-center", className)}
+        className={cn("items-center justify-center gap-2", className)}
         {...props}
       />
     )

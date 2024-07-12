@@ -4,6 +4,10 @@
 
 @layer base {
   :root {
+
+    --font-inter: Inter, sans-serif;
+    --font-mono: "IBM Plex Mono", Courier, monospace;
+
     /* Primitive Color Scheme */
     --gray-100: #f7f7f7;
     --gray-150: #f2f2f2;
@@ -147,6 +151,34 @@
 
   a {
     @apply text-primary underline;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold
+  }
+
+  h1 {
+    @apply text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl lg:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl lg:text-2xl;
+  }
+
+  h5 {
+    @apply text-md lg:text-xl;
+  }
+
+  h6 {
+    @apply text-sm lg:text-md;
   }
 
   /* TODO: to be replaced with list component styles */
