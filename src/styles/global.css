@@ -141,7 +141,7 @@
 
 @layer base {
   body {
-    @apply bg-background font-body leading-base text-body;
+    @apply bg-background font-body text-body text-sm lg:text-md;
   }
 
   a {
