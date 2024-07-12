@@ -4,8 +4,6 @@ description: Principles to improve the usability of Web3
 lang: en
 ---
 
-# Heuristics for Web3 {#heuristics-for-web3}
-
 Usability heuristics are broad “rules of thumb” that you can use to measure the usability of your site.
 These heuristics are specifically tailored for Web3 and should be used alongside Jakob Nielsen's [10 general principles for interaction design](https://www.nngroup.com/articles/ten-usability-heuristics/).
 
