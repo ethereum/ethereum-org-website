@@ -15,6 +15,18 @@ const config = {
         body: "var(--font-inter)",
         monospace: "var(--font-mono)",
       },
+      fontSize: {
+        '6xl': ['3.75rem', '1.2'], // [6xl, 4xs]
+        '5xl': ['3rem', '1.2'], // [5xl, 4xs]
+        '4xl': ['2.25rem', '1.2'], // [4xl, 4xs]
+        '3xl': ['1.875rem', '1.3'], // [3xl, 2xs]
+        '2xl': ['1.5rem', '1.3'], // [2xl, 2xs]
+        xl: ['1.25rem', '1.4'], // [xl, xs]
+        lg: ['1.125rem', '1.6'], // [lg, base]
+        md: ['1rem', '1.6'], // [md, base]
+        sm: ['0.875rem', '1.6'], // [sm, base]
+        xs: ['0.75rem', '1.6'], // [xs, base]
+      },
       lineHeight: {
         "6xs": "1.1",
         "5xs": "1.15",
