@@ -149,7 +149,7 @@
     @apply text-primary underline;
   }
 
-  /* Should be replaced with list component styles */
+  /* TODO: to be replaced with list component styles */
   ul,
   ol {
     margin: 0px 0px 1.45rem 1.45rem;
@@ -167,6 +167,7 @@
     & > ul {
       margin-inline-start: 1.45rem;
       margin-block: calc(1.45rem / 2);
+      margin-top: calc(1.45rem / 2);
     }
 
     & * {
@@ -175,36 +176,6 @@
 
     & > p {
       margin-bottom: calc(1.45rem / 2);
-    }
-  }
-
-  /* Anchor tag styles */
-  /* Selected specifically for mdx rendered side icon link */
-  .header-anchor {
-    position: "relative !important";
-    display: "initial";
-    margin-inline-start: "-1.5em";
-    padding-inline-end: "0.5rem !important";
-    font-size: "1rem";
-    vertical-align: "middle";
-
-    & svg {
-      @apply invisible inline fill-primary;
-    }
-
-    &:focus svg {
-      @apply visible;
-    }
-  }
-
-  h1:hover,
-  h2:hover,
-  h3:hover,
-  h4:hover,
-  h5:hover,
-  h6:hover {
-    & .header-anchor svg {
-      @apply visible;
     }
   }
 
