@@ -36,7 +36,7 @@ Cryptographic mechanisms ensure that once transactions are verified as valid and
 
 **Ether (ETH)** is the native cryptocurrency of Ethereum. The purpose of ETH is to allow for a market for computation. Such a market provides an economic incentive for participants to verify and execute transaction requests and provide computational resources to the network.
 
-Any participant who broadcasts a transaction request must also offer some amount of ETH to the network as a bounty. The network will award this bounty to whoever eventually does the work of verifying the transaction, executing it, committing it to the blockchain, and broadcasting it to the network.
+Any participant who broadcasts a transaction request must also offer some amount of ETH to the network as a bounty. The network will burn part of the bounty and award the rest to whoever eventually does the work of verifying the transaction, executing it, committing it to the blockchain, and broadcasting it to the network.
 
 The amount of ETH paid corresponds to the resources required to do the computation. These bounties also prevent malicious participants from intentionally clogging the network by requesting the execution of infinite computation or other resource-intensive scripts, as these participants must pay for computation resources.
 
@@ -107,7 +107,7 @@ A reusable snippet of code (a program) which a developer publishes into EVM stat
 ## Further reading {#further-reading}
 
 - [Ethereum Whitepaper](/whitepaper/)
-- [How does Ethereum work, anyway?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**NB** this resource is still valuable but be aware that it predates [The Merge](/roadmap/merge) and therefore still refers to Ethereum's proof-of-work mechanism - Ethereum is actually now secured using [proof-of-stake](/developers/docs/consensus-mechanisms/pos))
+- [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**NB** this resource is still valuable but be aware that it predates [The Merge](/roadmap/merge) and therefore still refers to Ethereum's proof-of-work mechanism - Ethereum is actually now secured using [proof-of-stake](/developers/docs/consensus-mechanisms/pos))
 
 _Know of a community resource that helped you? Edit this page and add it!_
 

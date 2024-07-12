@@ -291,8 +291,8 @@ export const useWalletFilterFeature = ({
 
   useEffect(() => {
     const resetFilters = () => {
-      for (let filterItem of filterOptions) {
-        for (let item of filterItem.items) {
+      for (const filterItem of filterOptions) {
+        for (const item of filterItem.items) {
           if (item.options.length > 0) {
             item.showOptions = false
           } else {

@@ -13,7 +13,7 @@ const HomeHero = ({ heroImg }: HomeHeroProps) => {
   const { t } = useTranslation("page-index")
   return (
     <Box>
-      <Box h={440}>
+      <Box h={{ base: "300px", sm: "350px", md: "380px", lg: "440px" }}>
         <Image
           src={heroImg}
           alt={t("page-index:page-index-hero-image-alt")}
@@ -34,11 +34,11 @@ const HomeHero = ({ heroImg }: HomeHeroProps) => {
           maxW="2xl"
         >
           <Morpher />
-          <VStack spacing="6">
+          <VStack spacing="6" maxW={{ lg: "2xl" }}>
             <Heading as="h1" size="2xl">
               {t("page-index:page-index-title")}
             </Heading>
-            <Text size="xl">{t("page-index:page-index-description")}</Text>
+            <Text size="lg">{t("page-index:page-index-description")}</Text>
             <ButtonLink href="/learn/">
               {t("page-index:page-index-title-button")}
             </ButtonLink>

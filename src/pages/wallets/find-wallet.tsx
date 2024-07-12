@@ -15,7 +15,7 @@ import {
 
 import type { BasePageProps, ChildOnlyProp, Lang, Wallet } from "@/lib/types"
 
-import BannerNotification from "@/components/BannerNotification"
+import BannerNotification from "@/components/Banners/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { MobileFiltersMenu } from "@/components/FindWallet/MobileFiltersMenu"
 import WalletFilterPersona from "@/components/FindWallet/WalletFilterPersona"
@@ -130,7 +130,7 @@ const FindWalletPage = ({
 
   const updateFilterOptions = (keys, value) => {
     const updatedFilters = { ...filters }
-    for (let key of keys) {
+    for (const key of keys) {
       updatedFilters[key] = value
     }
     setFilters(updatedFilters)

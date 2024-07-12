@@ -49,12 +49,13 @@ Gli alberi di Verkle sono coppie `(key,value)` in cui le chiavi sono elementi da
 
 Le reti di prova dell'albero di Verkle sono già in esecuzione, ma servono ancora aggiornamenti sostanziali e straordinari, necessari a supportarli. Puoi aiutare ad accelerare il progresso distribuendo contratti alle reti di prova od operando dei client delle reti di prova.
 
-[Esplora la rete di prova di Verkle di Beverly Hills](https://beverlyhills.ethpandaops.io)
+[Esplora la rete di prova di Verkle Gen Devnet 2](https://verkle-gen-devnet-2.ethpandaops.io/)
 
-[Guarda Guillaume Ballet spiegare la rete di prova di Verkle di Condrieu](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (nota che la rete di prova di Condrieu era in proof-of-work e, ora, è stata sospesa dalla [rete di prova di Kaustinen](https://kaustinen.ethdevops.io)).
+[Guarda Guillaume Ballet spiegare la rete di prova di Verkle Condrieu](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (nota che la rete di prova Condrieu era in proof-of-work e ora è stata sostituita dalla rete di prova di Verkle Gen Devnet 2).
 
 ## Letture consigliate {#further-reading}
 
+- [Alberi di Verkle per l'assenza di stato](https://verkle.info/)
 - [Dankrad Feist spiega gli alberi di Verkle su PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Guillaume Ballet spiega gli alberi di Verkle all'ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["Come gli alberi di Verkle rendono Ethereum snello e succinto" di Guillaume Ballet al Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)

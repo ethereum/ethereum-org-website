@@ -120,7 +120,7 @@ Le diramazioni si verificano quando occorre eseguire aggiornamenti tecnici o mod
 
 La diramazione DAO arrivò in risposta all'[attacco alla DAO del 2016](https://www.coindesk.com/understanding-dao-hack-journalists), durante il quale un contratto [DAO](/glossary/#dao) non sicuro fu svuotato di oltre 3,6 milioni di ETH in una sola volta. La diramazione ha spostato i fondi dal contratto lacunoso a uno nuovo, consentendo a chiunque avesse perso i fondi di hackerare per recuperarli.
 
-Questo corso d'azione fu votato dalla community di Ethereum. Ogni titolare di ETH poté votare tramite una transazione su [una piattaforma di voto](http://v1.carbonvote.com/). La decisione di creare la diramazione ottenne oltre l'85% dei voti.
+Questo corso d'azione fu votato dalla community di Ethereum. Ogni titolare di ETH ha potuto votare tramite una transazione su [una piattaforma di voto](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). La decisione di creare la diramazione ottenne oltre l'85% dei voti.
 
 È importante notare che, anche se la diramazione del protocollo è servita per invertire l'attacco, il peso assegnato al voto per decidere in merito alla diramazione è discutibile per alcune ragioni:
 
@@ -174,9 +174,9 @@ Quando la Beacon Chain si è fusa al livello d'esecuzione di Ethereum il 15 sett
 
 La governance in Ethereum non è definita rigidamente. I vari partecipanti della comunità hanno diverse prospettive a riguardo. Eccone alcune:
 
-- [Note sulla governance della blockchain](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [Note sulla Governance della Blockchain](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [Come funziona la governance di Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotester_
 - [Come funziona la governance di Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Cos'è uno sviluppatore core di Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [Governance, parte 2: la plutocrazia è ancora una brutta cosa](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [Andare oltre la governance con voto tramite token](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [Governance, Parte 2: La plutocrazia non va ancora beene](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [Andando oltre la governance di voto con moneta](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_

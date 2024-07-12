@@ -419,6 +419,14 @@
     "imageUrl": "https://assets-global.website-files.com/65b77a0b9370aa6cf9f28462/65d329fd71a77f03daa10342_RectangleBannerWebsite_ETHMilan24_def.jpg"
   },
   {
+    "title": "ETHKL2024",
+    "startDate": "2024-10-04",
+    "endDate": "2024-10-06",
+    "to": "https://www.2024.ethkl.org/",
+    "location": "Kuala Lumpur, Malaysia",
+    "description": "Returning bigger from last year success, this time at Malaysia's most iconic landmark KLCC. ETHKL24 is a 3 days Conference & Hackathon event to promote the growth and adoption of Ethereum and related technology, and gathering industry experts to explore the latest advancements in Ethereum."
+  },
+  {
     "title": "Pragma San Francisco",
     "to": "https://ethglobal.com/events/pragma-sanfrancisco",
     "location": "San Francisco, California",
@@ -453,6 +461,15 @@
     "startDate": "2024-11-12",
     "endDate": "2024-11-15",
     "imageUrl": "https://www.devcon.org/assets/images/dc7-og.png"
+  },
+  {
+    "title": "Industry Day at Devcon 7 - Southeast Asia",
+    "to": "https://www.eeaday.org/",
+    "location": "Bangkok, Thailand",
+    "description": "Discover how Ethereum is powering businesses worldwide with host: Enterprise Ethereum Alliance.",
+    "startDate": "2024-11-11",
+    "endDate": "2024-11-11",
+    "imageUrl": "https://framerusercontent.com/images/aizr1HegwVVCdVEZg20haxW04oM.png"
   },
   {
     "title": "ETHGlobal Devcon 2024",

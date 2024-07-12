@@ -89,3 +89,4 @@ _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 - [工作量证明](/developers/docs/consensus-mechanisms/pow/)
 - [矿工](/developers/docs/consensus-mechanisms/pow/mining/)
 - [权益证明](/developers/docs/consensus-mechanisms/pos/)
+- [权威证明](/developers/docs/consensus-mechanisms/poa/)
