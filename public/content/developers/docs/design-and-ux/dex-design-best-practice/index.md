@@ -1,10 +1,8 @@
 ---
-title: Decentralized exchange (DEX) design best practices
+title: Decentralized exchange (DEX) best design practices
 description: A guide explaining UX/UI decisions for swapping tokens.
 lang: en
 ---
-
-# Introduction to decentralized exchanges {#introduction-to-decentralized-exchanges}
 
 Since the launch of Uniswap in 2018, there have been hundreds of decentralized exchanges launched across dozens of different chains.
 Many of these have introduced new elements or added their own twist, but the interface has remained generally the same.
