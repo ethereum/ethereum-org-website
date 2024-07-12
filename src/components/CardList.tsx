@@ -8,13 +8,13 @@ import {
   LinkBox,
   LinkOverlay,
   type StackProps,
-  useColorModeValue,
 } from "@chakra-ui/react"
 
 import { BaseLink } from "@/components/Link"
 
 import * as url from "@/lib/utils/url"
 
+import useColorModeValue from "@/hooks/useColorModeValue"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export type CardListItem = {

@@ -6,12 +6,13 @@ import {
   Heading,
   LinkBox,
   LinkOverlay,
-  useColorModeValue,
 } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
 
 import Text from "./OldText"
+
+import useColorModeValue from "@/hooks/useColorModeValue"
 
 export interface DataRow {
   logo: StaticImageData

@@ -22,9 +22,15 @@ const config: StorybookConfig = {
   ],
   addons: [
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
+    {
+      name: "@storybook/addon-essentials",
+      options: {
+        backgrounds: false
+      }
+    },
     "@storybook/addon-interactions",
     "storybook-react-i18next",
+    "@storybook/addon-themes",
     "@chromatic-com/storybook"
   ],
   staticDirs: ["../public"],
