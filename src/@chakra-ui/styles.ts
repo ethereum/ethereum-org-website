@@ -10,50 +10,7 @@ const styles = {
      * don't need the global styles anymore
      */
     body: {
-      bg: "background.base",
-      lineHeight: "base",
       fontSize: ["sm", null, null, "md"],
-    },
-    a: {
-      color: "primary.base",
-      textDecoration: "underline",
-    },
-    // should be replace with https://chakra-ui.com/docs/components/list
-    "ul, ol": {
-      margin: "0px 0px 1.45rem 1.45rem",
-      padding: 0,
-    },
-    // imported global CSS styles for list items
-    li: {
-      marginBottom: "calc(1.45rem / 2)",
-    },
-    "ol li": {
-      paddingInlineStart: "0",
-    },
-    "ul li": {
-      paddingInlineStart: "0",
-    },
-    "li > ol": {
-      marginInlineStart: "1.45rem",
-      marginBottom: "calc(1.45rem / 2)",
-      marginTop: "calc(1.45rem / 2)",
-    },
-    "li > ul": {
-      marginInlineStart: "1.45rem",
-      marginBottom: "calc(1.45rem / 2)",
-      marginTop: "calc(1.45rem / 2)",
-    },
-
-    "li *:last-child": {
-      marginBottom: "0",
-    },
-    "li > p": {
-      marginBottom: "calc(1.45rem / 2)",
-    },
-    "pre, code, kbd, samp": {
-      fontSize: "md",
-      lineHeight: "base",
-      fontFamily: "monospace",
     },
   },
 }

@@ -148,7 +148,7 @@
     @apply text-primary underline;
   }
 
-  /* Should be replaced with list component styles */
+  /* TODO: to be replaced with list component styles */
   ul,
   ol {
     margin: 0px 0px 1.45rem 1.45rem;
@@ -166,6 +166,7 @@
     & > ul {
       margin-inline-start: 1.45rem;
       margin-block: calc(1.45rem / 2);
+      margin-top: calc(1.45rem / 2);
     }
 
     & * {
