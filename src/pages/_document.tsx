@@ -5,9 +5,6 @@ import NextDocument, {
   Main,
   NextScript,
 } from "next/document"
-import { ColorModeScript } from "@chakra-ui/react"
-
-import theme from "@/@chakra-ui/theme"
 
 import { Lang } from "@/lib/types"
 
@@ -39,7 +36,6 @@ class Document extends NextDocument {
           />
         </Head>
         <body>
-          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
         </body>

@@ -5,7 +5,6 @@ import {
   DrawerFooter,
   Grid,
   MenuButton,
-  useColorModeValue,
 } from "@chakra-ui/react"
 
 import LanguagePicker from "@/components/LanguagePicker"
@@ -14,6 +13,8 @@ import { MOBILE_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
 
 import FooterButton from "./FooterButton"
 import FooterItemText from "./FooterItemText"
+
+import useColorModeValue from "@/hooks/useColorModeValue"
 
 type MenuFooterProps = {
   onToggle: () => void

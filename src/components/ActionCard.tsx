@@ -7,13 +7,14 @@ import {
   Heading,
   LinkBox,
   type LinkBoxProps,
-  LinkOverlay,
-  useColorModeValue,
+  LinkOverlay
 } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
 import { BaseLink } from "@/components/Link"
 import Text from "@/components/OldText"
+
+import useColorModeValue from "@/hooks/useColorModeValue"
 
 const linkBoxFocusStyles: BoxProps = {
   borderRadius: "base",

@@ -14,7 +14,7 @@ import {
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
-import BannerNotification from "@/components/BannerNotification"
+import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"

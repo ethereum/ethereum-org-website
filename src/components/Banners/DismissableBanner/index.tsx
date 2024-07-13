@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import { Center, CloseButton } from "@chakra-ui/react"
 
 // Components
-import BannerNotification from "@/components/BannerNotification"
+import BannerNotification from "../BannerNotification"
 
 // Interface
 export type DismissableBannerProps = {
@@ -28,9 +28,9 @@ const DismissableBanner = ({
   }
 
   return (
-    <BannerNotification shouldShow={show}>
-      <Center paddingEnd={8}>{children}</Center>
-      <CloseButton onClick={onClose} aria-label="Close Banner" />
+    <BannerNotification shouldShow={show} gap='8'>
+      <Center marginInlineStart='auto'>{children}</Center>
+      <CloseButton marginInlineStart='auto' onClick={onClose} aria-label="Close Banner" />
     </BannerNotification>
   )
 }

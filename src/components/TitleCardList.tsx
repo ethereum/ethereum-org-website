@@ -7,7 +7,6 @@ import {
   Icon,
   LinkBox,
   LinkOverlay,
-  useColorModeValue,
 } from "@chakra-ui/react"
 
 import { TranslationKey } from "@/lib/types"
@@ -16,6 +15,8 @@ import { ITitleCardItem } from "@/lib/interfaces"
 import { Image } from "@/components/Image"
 import { BaseLink } from "@/components/Link"
 import Translation from "@/components/Translation"
+
+import useColorModeValue from "@/hooks/useColorModeValue"
 
 export type TitleCardListProps = {
   content: Array<ITitleCardItem>

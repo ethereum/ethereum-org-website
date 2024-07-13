@@ -8,8 +8,7 @@ import {
   Heading,
   type HeadingProps,
   SimpleGrid,
-  type SimpleGridProps,
-  useColorModeValue,
+  type SimpleGridProps
 } from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
@@ -37,6 +36,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 // import leslieTheRhino from "@/public/images/upgrades/upgrade_rhino.png"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import useColorModeValue from "@/hooks/useColorModeValue"
 import ethDiamondBlack from "@/public/images/assets/eth-diamond-black.png"
 import ethDiamondBlackGray from "@/public/images/assets/eth-diamond-black-gray.png"
 import ethDiamondBlackWhite from "@/public/images/assets/eth-diamond-black-white.jpg"
