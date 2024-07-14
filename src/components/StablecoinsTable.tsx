@@ -100,7 +100,7 @@ const StablecoinsTable = ({
             {url && (
               <Td textAlign="end">
                 <ButtonLink to={url} size="sm">
-                  Go to {name}
+                  {t('page-stablecoins-go-to')} {name}
                 </ButtonLink>
               </Td>
             )}
