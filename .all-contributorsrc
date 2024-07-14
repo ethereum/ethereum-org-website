@@ -12278,6 +12278,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "sandeepV2",
+      "name": "Sandeep Belagavi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52043035?v=4",
+      "profile": "https://github.com/sandeepV2",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
