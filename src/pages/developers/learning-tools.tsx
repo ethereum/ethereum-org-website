@@ -35,6 +35,7 @@ import DappWorldImage from "@/public/images/dev-tools/dapp-world.png"
 import EthDotBuildImage from "@/public/images/dev-tools/eth-dot-build.png"
 import MetaschoolImage from "@/public/images/dev-tools/metaschool.png"
 import NFTSchoolImage from "@/public/images/dev-tools/nftschool.png"
+import NodeGuardiansImage from "@/public/images/dev-tools/node-guardians.jpg"
 import EthernautImage from "@/public/images/dev-tools/oz.png"
 import PlatziImage from "@/public/images/dev-tools/platzi.png"
 import PointerImage from "@/public/images/dev-tools/pointer.png"
@@ -225,18 +226,18 @@ const LearningToolsPage = () => {
       subjects: ["Solidity"],
     },
     {
-      name: 'DApp World',
+      name: "DApp World",
       description: t(
         "page-developers-learning-tools:page-learning-tools-dapp-world-description"
       ),
-      url: 'https://dapp-world.com',
+      url: "https://dapp-world.com",
       image: DappWorldImage,
       alt: t(
         "page-developers-learning-tools:page-learning-tools-dapp-world-logo-alt"
       ),
       background: "#e5e7eb",
       subjects: ["Solidity", "web3"],
-    }
+    },
   ])
 
   const games: Array<LearningTool> = [
@@ -278,6 +279,19 @@ const LearningToolsPage = () => {
       ),
       background: "#1b9aaa",
       subjects: ["Solidity"],
+    },
+    {
+      name: "Node Guardians",
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-node-guardians-description"
+      ),
+      url: "https://nodeguardians.io/",
+      image: NodeGuardiansImage,
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-node-guardians-logo-alt"
+      ),
+      background: "#000",
+      subjects: ["Solidity", "web3"],
     },
   ]
 
