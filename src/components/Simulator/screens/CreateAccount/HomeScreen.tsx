@@ -1,7 +1,7 @@
 import React from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { MdArrowDownward } from "react-icons/md"
-import { Box, Grid, GridProps, Icon  } from "@chakra-ui/react"
+import { Box, Grid, GridProps, Icon } from "@chakra-ui/react"
 
 import type { SimulatorNavProps } from "@/lib/types"
 

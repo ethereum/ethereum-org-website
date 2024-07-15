@@ -125,7 +125,9 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
       mt={16}
       className={className}
     >
-      <OldHeading fontSize="2rem">{t("page-staking-comparison-with-other-options")}</OldHeading>
+      <OldHeading fontSize="2rem">
+        {t("page-staking-comparison-with-other-options")}
+      </OldHeading>
       {selectedData.map(
         ({ title, linkText, to, color, content, glyph, matomo }, idx) => (
           <Flex gap={6} direction={{ base: "column", md: "row" }} key={idx}>

@@ -19,9 +19,7 @@ import {
   BsUiChecksGrid,
 } from "react-icons/bs"
 import { PiFlask, PiUsersFourLight } from "react-icons/pi"
-import {
-  useDisclosure,
-} from "@chakra-ui/react"
+import { useDisclosure } from "@chakra-ui/react"
 
 import { EthereumIcon } from "@/components/icons/EthereumIcon"
 
