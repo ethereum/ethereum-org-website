@@ -615,14 +615,14 @@ const Layer2Page = () => {
         <TwoColumnContent>
           <Box flex="50%">
             <ProductList
-              category={t('layer-2-information')}
+              category={t("layer-2-information")}
               content={toolsData.information}
               actionLabel={t("page-dapps-ready-button")}
             />
           </Box>
           <Box flex="50%">
             <ProductList
-              category={t('layer-2-wallet-managers')}
+              category={t("layer-2-wallet-managers")}
               content={toolsData.walletManagers}
               actionLabel={t("page-dapps-ready-button")}
             />
