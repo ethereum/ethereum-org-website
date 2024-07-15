@@ -11,6 +11,7 @@ import type { MdPageContent, SharedFrontmatter } from "@/lib/interfaces"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import { ButtonLink } from "@/components/Buttons"
 import { ContentHero } from "@/components/Hero"
+import { Image } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
 import {
   ContentContainer,
@@ -20,10 +21,32 @@ import {
 } from "@/components/MdComponents"
 
 import translatathonHeroImg from "@/public/images/heroes/translatathon-hero.png"
+import robotImage from '@/public/images/wallet.png'
 
-// UseCases layout components
+const ContentSplit = ({children}) => {
+  return (
+    <Flex
+      w="full"
+      direction={{ base: "column", md: "row" }}
+    >
+      <Box>
+        {children}
+      </Box>
+      <Flex maxHeight="300px">
+        <Image
+          src={robotImage}
+          alt="robot"
+          style={{ objectFit: "contain" }}
+        />
+      </Flex>
+    </Flex>
+  )
+}
+
+// Translatathon layout components
 export const translatathonComponents = {
   // Export empty object if none needed
+  ContentSplit
 }
 
 type TranslatathonLayoutProps = ChildOnlyProp &
