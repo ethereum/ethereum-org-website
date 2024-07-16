@@ -3,17 +3,17 @@
   "name": "ethereum.org",
   "icons": [
     {
-      "src": "/assets/manifest-app-icon.svg",
+      "src": "/images/assets/manifest-app-icon.svg",
       "type": "image/svg+xml",
       "sizes": "512x512"
     },
     {
-      "src": "/assets/manifest-app-icon-192.png",
+      "src": "/images/assets/manifest-app-icon-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/assets/manifest-app-icon-512.png",
+      "src": "/images/assets/manifest-app-icon-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -32,7 +32,7 @@
       "url": "/developers",
       "icons": [
         {
-          "src": "/assets/manifest-app-icon-192.png",
+          "src": "/images/assets/manifest-app-icon-192.png",
           "sizes": "192x192"
         }
       ]

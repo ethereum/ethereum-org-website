@@ -1,11 +1,20 @@
 {
   "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "next/core-web-vitals",
     "prettier",
     "plugin:storybook/recommended"
   ],
-  "env": { "es6": true },
-  "plugins": ["simple-import-sort"],
+  "env": {
+    "es6": true
+  },
+  "plugins": [
+    "simple-import-sort",
+    "@typescript-eslint",
+    "unused-imports"
+  ],
+  "parser": "@typescript-eslint/parser",
   "rules": {
     "simple-import-sort/imports": [
       "error",
@@ -17,32 +26,76 @@
           ],
           // Packages. `react` related packages come first.
           // Also, put `react-icons` in sorting order not with `react`
-          ["^react(?!-.)$", "^\\w", "^@\\w"],
+          [
+            "^react(?!-.)$",
+            "^\\w",
+            "^@\\w"
+          ],
           // The Chakra theme directory if imported to story file or other places
-          ["^@/@chakra-ui"],
+          [
+            "^@/@chakra-ui"
+          ],
           // From the `types` directory.
-          ["^@/lib/types", "^@/lib/interfaces"],
+          [
+            "^@/lib/types",
+            "^@/lib/interfaces"
+          ],
           // From the `components` directory.
-          ["^@/components"],
+          [
+            "^@/components"
+          ],
           // From the `utils` directory.
-          ["^@/lib/utils"],
+          [
+            "^@/lib/utils"
+          ],
           // From the `data` directory.
-          ["^@/data"],
+          [
+            "^@/data"
+          ],
           // From the `constants` directory.
           ["^@/lib/constants"],
           // From the `.storybook/utils` file
           ["^@/storybook-utils"],
           // Parent imports. Put `..` last.
-          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          [
+            "^\\.\\.(?!/?$)",
+            "^\\.\\./?$"
+          ],
           // Other relative imports. Put same-folder imports and `.` last.
-          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          [
+            "^\\./(?=.*/)(?!/?$)",
+            "^\\.(?!/?$)",
+            "^\\./?$"
+          ],
           // Style imports.
-          ["^.+\\.s?css$"],
+          [
+            "^.+\\.s?css$"
+          ],
           // Side effect imports.
-          ["^\\u0000"]
+          [
+            "^\\u0000"
+          ]
         ]
       }
     ],
-    "simple-import-sort/exports": "error"
+    "simple-import-sort/exports": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": [
+      "error",
+      {
+        "fixToUnknown": true
+      }
+    ],
+    "unused-imports/no-unused-vars": [
+      "error",
+        {
+        "args": "all",
+        "argsIgnorePattern": "^_$",
+        "varsIgnorePattern": "^_$"
+      }
+    ],
+    "unused-imports/no-unused-imports-ts": "warn"
   }
 }
+

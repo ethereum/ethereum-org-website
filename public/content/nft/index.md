@@ -5,7 +5,7 @@ lang: en
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: An Eth logo being displayed via hologram.
 summaryPoint1: A way to represent anything unique as an Ethereum-based asset.
 summaryPoint2: NFTs are giving more power to content creators than ever before.

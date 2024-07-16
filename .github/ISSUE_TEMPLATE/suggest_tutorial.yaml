@@ -1,7 +1,7 @@
 name: Suggest a tutorial
 description: Suggest a tutorial to our developers platform
 title: Suggest a tutorial
-labels: ["feature :sparkles:", "content :fountain_pen:"]
+labels: ["feature ✨", "content 🖋️"]
 body:
   - type: markdown
     attributes:

@@ -5,7 +5,7 @@ lang: fr
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Une alternative globale et ouverte au système scientifique actuel.
 summaryPoint2: Technologie qui permet aux scientifiques de recueillir des fonds, de mener des expériences, de partager des données, de diffuser des idées et plus encore.
@@ -76,7 +76,7 @@ La propriété intellectuelle (PI) pose problème dans la science traditionnelle
 
 De la même manière que les NFT peuvent transmettre les recettes de futures transactions au créateur initial, vous pouvez établir des chaînes d'attribution de valeur transparentes pour récompenser les chercheurs, les organes directeurs (les DAO par exemple), ou même les personnes dont les données sont collectées.
 
-Les [NFT liés à la PI](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) peuvent également servir de clé d'accès à un référentiel de données décentralisé relatif aux expériences de recherche en cours, et puiser dans les NFT et le financement de la [DeFi](/glossary/#defi) (de la fractionalisation aux groupes de prêt et à l'estimation de la valeur). Ils permettent également aux entités nativement en chaîne, telles que les DAO comme [VitaDAO](https://www.vitadao.com/), de mener des recherches directement en chaîne. Les [jetons «soulbound»](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) non transférables peuvent également jouer un rôle important en matière de DeSci en permettant aux individus d'apporter la preuve de leur expérience et leurs identifiants liés à leur adresse Ethereum.
+Les [NFT liés à la PI](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) peuvent également servir de clé d'accès à un référentiel de données décentralisé relatif aux expériences de recherche en cours, et puiser dans les NFT et le financement de la [DeFi](/glossary/#defi) (de la fractionalisation aux groupes de prêt et à l'estimation de la valeur). Ils permettent également aux entités nativement en chaîne, telles que les DAO comme [VitaDAO](https://www.vitadao.com/), de mener des recherches directement en chaîne. Les [jetons « soulbound »](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)non transférables peuvent également jouer un rôle important en matière de DeSci en permettant aux individus d'apporter la preuve de leur expérience et leurs identifiants liés à leur adresse Ethereum.
 
 ### Stockage de données, accès et architecture {#data-storage}
 
@@ -107,6 +107,7 @@ Explorer les projets et rejoindre la communauté DeSci.
 - [CureDAO : plateforme de santé de précision détenue par une communauté](https://docs.curedao.org/)
 - [IdeaMarkets : pour une crédibilité scientifique décentralisée renforcée](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
+- [ValleyDAO : une communauté ouverte et mondiale offrant un financement et un support translationnel à la recherche en biologie synthétique](https://www.valleydao.bio)
 
 Nous accueillons volontiers les suggestions de nouveaux projets à répertorier - veuillez consulter notre [politique d'inscription](/contributing/adding-desci-projects/) pour commencer !
 

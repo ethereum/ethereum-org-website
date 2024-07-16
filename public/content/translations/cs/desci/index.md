@@ -5,7 +5,7 @@ lang: cs
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Globální, otevřená alternativa ke stávajícímu vědeckému systému.
 summaryPoint2: Technologie, která vědcům umožňuje získávat financování, provádět experimenty, sdílet data, šířit poznatky a další.
@@ -107,6 +107,7 @@ Podívejte se na níže uvedené projekty a zapojte se do DeSci komunity.
 - [CureDAO: Platforma vlastněná komunitou pro precizní zdravotní péči](https://docs.curedao.org/)
 - [IdeaMarkets: Získávání decentralizované vědecké kredibility](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
+- [ValleyDAO: otevřená, globální komunita nabízející financování a překladatelskou podporu pro výzkum syntetické biologie](https://www.valleydao.bio)
 
 Uvítáme návrhy na nové projekty, které je třeba uvést na seznam – pro začátek si přečtěte naše [zásady pro zařazení do seznamu](/contributing/adding-desci-projects/)!
 

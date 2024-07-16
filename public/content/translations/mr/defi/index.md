@@ -4,7 +4,7 @@ description: Ethereum वर DeFi चे विहंगावलोकन
 lang: mr
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: लेगो विटांनी बनवलेला Eth लोगो.
 sidebarDepth: 2
 summaryPoint1: सध्याच्या आर्थिक व्यवस्थेसाठी जागतिक, खुला पर्याय.

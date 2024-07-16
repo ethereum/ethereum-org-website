@@ -28,7 +28,7 @@ export const DISCORD_PATH = "/discord/"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
 export const MAIN_CONTENT_ID = "main-content"
 export const WEBSITE_EMAIL = "website@ethereum.org"
-export const DEFAULT_OG_IMAGE = "/home/hero.png"
+export const DEFAULT_OG_IMAGE = "/images/home/hero.png"
 
 // Config
 export const CONTENT_IMAGES_MAX_WIDTH = 800
@@ -41,6 +41,7 @@ export const COINGECKO_API_BASE_URL =
 export const COINGECKO_API_URL_PARAMS =
   "&order=market_cap_desc&per_page=100&page=1&sparkline=false"
 export const BASE_TIME_UNIT = 3600 // 1 hour
+export const COLOR_MODE_STORAGE_KEY = "theme"
 
 // Quiz Hub
 export const PROGRESS_BAR_GAP = "4px"
@@ -66,7 +67,7 @@ export const REGULAR_RATES: ReportsModel.RegularRate[] = [
   },
 ]
 
-export const languagePathRootRegExp = /^.+\/content\/translations\/[a-z\-]*\//
+export const languagePathRootRegExp = /^.+\/content\/translations\/[a-z-]*\//
 
 // Metrics
 export const DAYS_TO_FETCH = 90
@@ -149,3 +150,6 @@ export const DEFAULT_GLOSSARY_NS = "glossary"
 export const HAMBURGER_BUTTON_ID = "mobile-menu-button"
 export const MOBILE_LANGUAGE_BUTTON_NAME = "mobile-language-button"
 export const DESKTOP_LANGUAGE_BUTTON_NAME = "desktop-language-button"
+
+// Codeblock
+export const LINES_BEFORE_COLLAPSABLE = 8

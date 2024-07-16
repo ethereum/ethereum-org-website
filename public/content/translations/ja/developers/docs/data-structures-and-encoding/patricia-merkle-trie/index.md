@@ -35,13 +35,11 @@ sidebarDepth: 2
 
 ```
     def update(node,path,value):
+        curnode = db.get(node) if node else [ NULL ] * 17
+        newnode = curnode.copy()
         if path == '':
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newnode[-1] = value
         else:
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newindex = update(curnode[path[0]],path[1:],value)
             newnode[path[0]] = newindex
         db.put(hash(newnode),newnode)
@@ -164,7 +162,7 @@ sidebarDepth: 2
 
 ### ツリーの例 {#example-trie}
 
-次の4つのパスバリューのペアを含むツリーが必要だとします。 `('do', 'verb')`、`('dog', 'puppy')`、`('doge', 'coins')`、`('horse', 'stallion')`
+次の4つのパス／バリューのペアを含むツリーが必要だとします。 `('do', 'verb')`、`('dog', 'puppy')`、`('doge', 'coins')`、`('horse', 'stallion')`。
 
 まず、パスと値(バリュー)の両方を`bytes`に変換します。 以下では、_paths_を実際のバイト表現 `<>`によって表示しています。しかし、 _values_は、分かりやすいように文字列として`''`で表示しています(実際は`bytes`) 。
 

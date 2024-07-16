@@ -3,7 +3,7 @@ title: マージ
 description: マージについて - イーサリアムメインネットへのプルーフ・オブ・ステークの導入
 lang: ja
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt:
 summaryPoint1: イーサリアムメインネットは現在プルーフ・オブ・ステークを使用していますが、これまではそうではありませんでした。
 summaryPoint2: 旧プルーフ・オブ・ワークのメカニズムからプルーフ・オブ・ステークへのアップグレードはマージと呼ばれます。

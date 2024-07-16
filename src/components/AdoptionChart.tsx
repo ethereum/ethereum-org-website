@@ -1,5 +1,6 @@
 import { useTranslation } from "next-i18next"
-import { Box, type BoxProps, Flex, useColorMode } from "@chakra-ui/react"
+import { useTheme } from "next-themes"
+import { Box, type BoxProps, Flex } from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
@@ -48,8 +49,8 @@ const ColumnName = ({ children }: ChildOnlyProp) => (
 
 const AdoptionChart = () => {
   const { t } = useTranslation("page-what-is-ethereum")
-  const { colorMode } = useColorMode()
-  const isDark = colorMode === "dark"
+  const { theme } = useTheme()
+  const isDark = theme === "dark"
 
   return (
     <Flex>

@@ -106,3 +106,4 @@ Ad alto livello, il Proof of Stake ha lo stesso obiettivo del Proof of Work: per
 
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Proof of Stake](/developers/docs/consensus-mechanisms/pos/)
+- [Proof of Authority](/developers/docs/consensus-mechanisms/poa/)

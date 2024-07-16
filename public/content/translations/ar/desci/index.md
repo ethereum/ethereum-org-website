@@ -5,7 +5,7 @@ lang: ar
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: نظام عالمي ومفتوح بديل للنظام العلمي الحالي.
 summaryPoint2: تتيح التكنولوجيا للعلماء جمع التمويل وإجراء التجارب، ومشاركة البيانات، ونشر النتائج، والمزيد.

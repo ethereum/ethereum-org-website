@@ -5,7 +5,7 @@ lang: en
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: Blockchain-based platforms for social interaction and content creation and distribution.
 summaryPoint2: Decentralized social media networks protect user privacy and enhance data security.
 summaryPoint3: Tokens and NFTs create new ways to monetize content.

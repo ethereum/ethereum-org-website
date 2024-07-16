@@ -1,4 +1,4 @@
-import type { CommitHistory, FileContributor } from "@/lib/types"
+import type { Commit, CommitHistory } from "@/lib/types"
 
 import {
   CONTENT_DIR,
@@ -6,9 +6,7 @@ import {
   OLD_CONTENT_DIR,
 } from "@/lib/constants"
 
-async function fetchWithRateLimit(
-  filepath: string
-): Promise<Record<any, any>[]> {
+async function fetchWithRateLimit(filepath: string): Promise<Commit[]> {
   const url = new URL(GITHUB_COMMITS_URL)
   url.searchParams.set("path", filepath)
   url.searchParams.set("sha", "master")
@@ -18,7 +16,11 @@ async function fetchWithRateLimit(
   // If no token available, return empty array
   if (!gitHubToken) return []
 
+  /* eslint-disable no-constant-condition --
+   * eslint does not like while(true)
+   **/
   while (true) {
+    console.log("looping")
     const response = await fetch(url.href, {
       headers: { Authorization: `token ${gitHubToken}` },
     })
@@ -54,6 +56,7 @@ export const fetchAndCacheGitContributors = async (
 
   // Fetch and save commit history for file
   const history = (await fetchWithRateLimit(filepath)) || []
+
   const legacyHistory =
     (await fetchWithRateLimit(
       filepath.replace(CONTENT_DIR, OLD_CONTENT_DIR)
@@ -62,11 +65,11 @@ export const fetchAndCacheGitContributors = async (
   // Transform commitHistory
   const contributors = [...history, ...legacyHistory]
     .filter(({ author }) => !!author)
-    .map((contribution: Record<any, any>) => {
+    .map((contribution) => {
       const { login, avatar_url, html_url } = contribution.author
       const { date } = contribution.commit.author
       return { login, avatar_url, html_url, date }
-    }) as FileContributor[]
+    })
 
   // Remove duplicates from same login
   const uniqueContributors = contributors.filter(

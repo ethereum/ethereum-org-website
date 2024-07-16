@@ -2,7 +2,7 @@
 title: イーサリアムのスケーリング
 description: ロールアップでは、トランザクションをオフチェーンでまとめて処理することで、ユーザーのコスト削減を実現しています。 しかし、現在のロールアップでは、データを使用するコストが高く、トランザクションを安価にすることが難しいという課題があります。 これについては、プロトダンクシャーディングによって解決できます。
 lang: ja
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "イーサリアムロードマップ"
 template: roadmap
 ---

@@ -5,7 +5,7 @@ lang: ja
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: 提案に対する分散型自律組織(DAO)投票
 summaryPoint1: 中央集権的な制御がない、メンバー所有のコミュニティ
 summaryPoint2: インターネットの見知らぬ人と協力する安全な方法
@@ -14,9 +14,9 @@ summaryPoint3: 特定の目的に資金を委ねるのに安全な場所
 
 ## 自律分散組織(DAO)とは {#what-are-daos}
 
-DAO は、共通の目的のために行動する、集団所有された組織のことです。
+DAOは、共通の目的のために行動する、集団所有された組織のことです。
 
-分散型自律組織(DAO)は資金や運営の管理において、誰かを信用することなく、世界中の同じ志を持つ人々と共に働くことを可能します。 気まぐれに資金を使い込む CEO はいませんし、帳簿を操作できる CFO もいません。 誰かを依存・信用するのではなく、ブロックチェーンベースのルールがコード化され、組織の運営や資金の使われ方を定義しています。
+分散型自律組織(DAO)は資金や運営の管理において、誰かを信用することなく、世界中の同じ志を持つ人々と共に働くことを可能します。 気まぐれに資金を使い込むCEOはいませんし、帳簿を操作できるCFOもいません。 誰かを依存・信用するのではなく、ブロックチェーンベースのルールがコード化され、組織の運営や資金の使われ方を定義しています。
 
 グループの承認なしには誰もアクセスできない資金が組み込まれています。 意思決定は、提案と投票によって行われ、組織内の誰しもが発言権を持つことが保障されています。また、全て[オンチェーン](/glossary/#on-chain)で行われるため、透明性も確保されています。
 
@@ -28,13 +28,13 @@ DAO は、共通の目的のために行動する、集団所有された組織�
 
 ### 比較 {#dao-comparison}
 
-| 分散型自律組織(DAO)                                                              | 従来の組織                                                                                     |
-| -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| 通常はフラットな組織で、完全に民主化                                             | 通常は階層的                                                                                   |
-| 変更を実行するには、メンバーによる投票が必要                                     | 組織構造によっては、単独の当事者から変更が要求されることがあり、または投票が行われる場合がある |
-| 投票は集計され、結果は信頼できる仲介者なしに自動的に実行される                   | 投票が可能な場合、投票は内部で集計され、投票結果は手動での処理が必要                           |
-| 提供されるサービスは、自動的に分散化された方法で処理される(例えば慈善資金の分配) | 人間による処理、または集中管理された自動化を必要とし、改ざんされるおそれがある                 |
-| すべてのアクティビティは透明で完全に公開                                         | 通常、アクティビティは非公開で、一般には非公開                                                 |
+| 分散型自律組織(DAO)                              | 従来の組織                                           |
+| ----------------------------------------- | ----------------------------------------------- |
+| 通常はフラットな組織で、完全に民主化                        | 通常は階層的                                          |
+| 変更を実行するには、メンバーによる投票が必要                    | 組織構造によっては、単独の当事者から変更が要求されることがあり、または投票が行われる場合がある |
+| 投票は集計され、結果は信頼できる仲介者なしに自動的に実行される           | 投票が可能な場合、投票は内部で集計され、投票結果は手動での処理が必要              |
+| 提供されるサービスは、自動的に分散化された方法で処理される(例えば慈善資金の分配) | 人間による処理、または集中管理された自動化を必要とし、改ざんされるおそれがある         |
+| すべてのアクティビティは透明で完全に公開                      | 通常、アクティビティは非公開で、一般には非公開                         |
 
 ### 分散型自律組織(DAO)の事例 {#dao-examples}
 
@@ -71,7 +71,7 @@ DAO は、共通の目的のために行動する、集団所有された組織�
 
 #### 有名な事例 {#governance-example}
 
-[ENS](https://claim.ens.domains/delegate-ranking) – ENS 保有者は、自分たちの代表として、コミュニティメンバーに投票を委任できます。
+[ENS](https://claim.ens.domains/delegate-ranking) – ENS保有者は、自分たちの代表として、コミュニティメンバーに投票を委任できます。
 
 ### 自動トランザクションガバナンス {#governance-example}
 
@@ -79,79 +79,79 @@ DAO は、共通の目的のために行動する、集団所有された組織�
 
 #### 有名な事例 {#governance-example}
 
-[Nouns](https://nouns.wtf) – Nouns DAO では、定足数を満たし、過半数が賛成票であれば、創設者が拒否権を行使しない限り、トランザクションは自動的に実行されます。
+[Nouns](https://nouns.wtf) – Nouns DAOでは、定足数を満たし、過半数が賛成票であれば、創設者が拒否権を行使しない限り、トランザクションは自動的に実行されます。
 
 ### マルチシグガバナンス {#governance-example}
 
-分散型自律組織(DAO)には投票権のあるメンバーが何千人も在籍するかもしれませんが、資金は 5 ～ 20 人のアクティブなメンバーが共有する[ウォレット](/glossary/#wallet)に保有されている場合があります。これらのメンバーは信用されており、通常は個人情報が公開されています(コミュニティに公的な身元が公開)。 投票の結果をもって、[マルチシグ](/glossary/#multisig)の署名者はコミュニティの意思を実施します。
+分散型自律組織(DAO)には投票権のあるメンバーが何千人も在籍するかもしれませんが、資金は5～20人のアクティブなメンバーが共有する[ウォレット](/glossary/#wallet)に保有されている場合があります。これらのメンバーは信用されており、通常は個人情報が公開されています(コミュニティに公的な身元が公開)。 投票の結果をもって、[マルチシグ](/glossary/#multisig)の署名者はコミュニティの意思を実施します。
 
 ## 分散型自律組織(DAO)法 {#dao-laws}
 
-1977 年にワイオミング州は、起業家を保護し、責任を有限にする合同会社(LLC)を制定しました。 近年では、ワイオミング州は分散型自律組織(DAO)の法的地位を確立する法律を制定し、パイオニアとなっています。 現在、ワイオミング州、バーモント州、ヴァージン諸島に、何らかの形の分散型自律組織(DAO)法があります。
+1977年にワイオミング州は、起業家を保護し、責任を有限にする合同会社(LLC)を制定しました。 近年では、ワイオミング州は分散型自律組織(DAO)の法的地位を確立する法律を制定し、パイオニアとなっています。 現在、ワイオミング州、バーモント州、ヴァージン諸島に、何らかの形の分散型自律組織(DAO)法があります。
 
 ### 有名な事例 {#law-example}
 
-[CitiDAO](https://citydao.io) – CitiDAO は、ワイオミング州の分散型自律組織(DAO)法を利用して、イエローストーン国立公園近くの 40 エーカーの土地を購入しました。
+[CityDAO](https://citydao.io) – CityDAOは、ワイオミング州の分散型自律組織(DAO)法を利用して、イエローストーン国立公園近くの40エーカーの土地を購入しました。
 
 ## 分散型自律組織(DAO)のメンバーシップ {#dao-membership}
 
-分散型自律組織(DAO)のメンバーシップにはいくつかのモデルがあります。 メンバーシップにより、投票の仕組みや DAO の他の重要な部分を決定することができます。
+分散型自律組織(DAO)のメンバーシップにはいくつかのモデルがあります。 メンバーシップにより、投票の仕組みやDAOの他の重要な部分を決定することができます。
 
 ### トークンベースのメンバーシップ {#token-based-membership}
 
 使用されるトークンにもよりますが、通常は完全に[パーミッションレス](/glossary/#permissionless)です。 ほとんどの場合、これらのガバナンストークンは、[分散型取引所](/glossary/#dex)でパーミッションレスで取引できます。 それ以外のトークンは、流動性もしくはその他の「プルーフ・オブ・ワーク」を提供することで獲得する必要があります。 いずれにせよ、トークンの保持により投票権が付与されます。
 
-一般的には、広範な分散型プロトコルやトークン自体を管理するために使用されます。
+_一般的には、広範な分散型プロトコルやトークン自体を管理するために使用されます。_
 
 #### 有名な事例 {#token-example}
 
-[MakerDAO](https://makerdao.com) – MakerDAO のトークンである MKR は分散型取引所で広く入手可能で、購入することにより、誰でも Maker プロトコルの将来についての投票権を得ることができます。
+[MakerDAO](https://makerdao.com) – MakerDAOのトークンであるMKRは分散型取引所で広く入手可能で、購入することにより、誰でもMakerプロトコルの将来についての投票権を得ることができます。
 
 ### シェアベースのメンバーシップ {#share-based-membership}
 
 シェアベースの分散型自律組織(DAO)は、よりパーミッション型ではありますが、かなりオープンです。 分散型自律組織(DAO)への参加希望者は、トークンや作品といった何らかの価値のある物を提供することで、自分自身の参加を提案します。 シェアは、直接投票権と所有権を表します。 メンバーはいつでも、自分の保有する資産の持分を持って退会できます。
 
-一般的には、慈善団体やワーカーズ・コレクティブ、投資クラブなど、より密接な関係を持つ人間が中心となる組織に使われています。 また、プロトコルやトークンも管理できます。
+_一般的には、慈善団体やワーカーズ・コレクティブ、投資クラブなど、より密接な関係を持つ人間が中心となる組織に使われています。 また、プロトコルやトークンも管理できます。_
 
 #### 有名な事例 {#share-example}
 
-[MolochDAO](http://molochdao.com/) - MolochDAO は主にイーサリアムプロジェクトの資金調達を行っています。 メンバーになるには、提案が必要となります。この提案によって、あなたが助成先候補に関して、十分な情報に基づいて判断できるだけの必要な専門知識と資本を持っているかどうかが評価されます。 オープン市場で権利を購入するだけでは、この分散型自律組織(DAO)に参加することはできません。
+[MolochDAO](http://molochdao.com/) - MolochDAOは主にイーサリアムプロジェクトの資金調達を行っています。 メンバーになるには、提案が必要となります。この提案によって、あなたが助成先候補に関して、十分な情報に基づいて判断できるだけの必要な専門知識と資本を持っているかどうかが評価されます。 オープン市場で権利を購入するだけでは、この分散型自律組織(DAO)に参加することはできません。
 
 ### レピュテーション(評価・評判)ベースのメンバーシップ {#reputation-based-membership}
 
 レピュテーション(評価・評判)とは、分散型自律組織(DAO)における参加証明と投票権の付与を表します。 トークンやシェアベースのメンバーシップとは異なり、レピュテーションベースの分散型自律組織(DAO)は所有権をコントリビューターに譲渡しません。 レピュテーションは購入、移管、または委任できず、分散型自律組織メンバーは参加を通じてレピュテーションを構築する必要があります。 オンチェーン投票はパーミッションレスで、メンバー候補は分散型自律組織(DAO)への参加を自由に提案でき、貢献の対価としてレピュテーションやトークンを受け取ることを要求することができます。
 
-_主にプロトコルや[Dapp](/glossary/#dapp)の分散型開発や分散型ガバナンスに利用されていますが、慈善団体、ワーカーズ・コレクティブ、投資クラブなど、多様な組織にも向いています。_
+_主にプロトコルや[分散型アプリ(Dapp)](/glossary/#dapp)の分散型開発や分散型ガバナンスに利用されていますが、慈善団体、ワーカーズ・コレクティブ、投資クラブなど、多様な組織にも向いています。_
 
 #### 有名な事例 {#reputation-example}
 
-[DXdao](https://DXdao.eth.limo) - DXdao は、2019 年から分散型プロトコルやアプリケーションを構築し統治するグローバル・ソブリン団体でした。 レピュテーションに基づくガバナンスと[ホログラフィック・コンセンサス](/glossary/#holographic-consensus)を活用して資金を調整・管理することで、誰かが金銭的な手段を使って、DXdao の今後に影響をおよぼしたり、支配したりすることはできませんでした。
+[DXdao](https://DXdao.eth.limo) - DXdaoは、2019年から分散型プロトコルやアプリケーションを構築し統治するグローバル・ソブリン団体でした。 レピュテーションに基づくガバナンスと[ホログラフィック・コンセンサス](/glossary/#holographic-consensus)を活用して資金を調整・管理することで、誰かが金銭的な手段を使って、DXdaoの今後に影響をおよぼしたり、支配したりすることはできませんでした。
 
-## DAO に参加する/DAO を立ち上げる {#join-start-a-dao}
+## DAOに参加する/DAOを立ち上げる {#join-start-a-dao}
 
 ### 分散型自律組織(DAO)への参加 {#join-a-dao}
 
 - [イーサリアムコミュニティ分散型自律組織(DAO)](/community/get-involved/#decentralized-autonomous-organizations-daos)
-- [DAOHaus の分散型自律組織(DAO)リスト](https://app.daohaus.club/explore)
-- [Tally.xyz の分散型自律組織(DAO)リスト](https://www.tally.xyz)
+- [DAOHausの分散型自律組織(DAO)リスト](https://app.daohaus.club/explore)
+- [Tally.xyzの分散型自律組織(DAO)リスト](https://www.tally.xyz)
 
 ### 分散型自律組織(DAO)を始める {#start-a-dao}
 
-- [DAOHaus で分散型自律組織(DAO)を招集](https://app.daohaus.club/summon)
-- [Tally で Governor DAO を始める](https://www.tally.xyz/add-a-dao)
-- [Aragon による分散型自律組織(DAO)を作成](https://aragon.org/product)
+- [DAOHausで分散型自律組織(DAO)を招集](https://app.daohaus.club/summon)
+- [TallyでGovernor DAOを始める](https://www.tally.xyz/add-a-dao)
+- [Aragonによる分散型自律組織(DAO)を作成](https://aragon.org/product)
 - [コロニーを始める](https://colony.io/)
-- [DAOstack のホログラフィック・コンセンサスで DAO を作成](https://alchemy.daostack.io/daos/create)
+- [DAOstackのホログラフィック・コンセンサスでDAOを作成](https://alchemy.daostack.io/daos/create)
 
 ## 参考文献 {#further-reading}
 
 ### 分散型自律組織(DAO)の関連記事 {#dao-articles}
 
-- [分散型自律組織(DAO)とは](https://aragon.org/dao) - [Aragon](https://aragon.org/)
-- [分散型自律組織(DAO)](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) - [Metagame](https://wiki.metagame.wtf/)
-- [分散型自律組織(DAO)とは、およびその目的](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) - [DAOhaus](https://daohaus.club/)
-- [分散型自律組織(DAO)のデジタルコミュニティの作成方法](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) - [DAOhaus](https://daohaus.club/)
-- [分散型自律組織(DAO)とは](https://coinmarketcap.com/alexandria/article/what-is-a-dao) - [Coinmarketcap](https://coinmarketcap.com)
+- [分散型自律組織(DAO)とは](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [分散型自律組織(DAO)](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
+- [分散型自律組織(DAO)とは、およびその目的](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
+- [分散型自律組織(DAO)のデジタルコミュニティの作成方法](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
+- [分散型自律組織(DAO)とは](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [ホログラフィック・コンセンサスとは](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
 - [分散型自律組織(DAO)とは企業ではなく、分散型の自律組織 – Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [分散型自律組織(DAO)、分散型自律企業(DAC)、分散型アプリケーション(DA)など: 不完全な用語集](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [イーサリアムブログ](https://blog.ethereum.org)
@@ -159,4 +159,4 @@ _主にプロトコルや[Dapp](/glossary/#dapp)の分散型開発や分散型�
 ### ビデオ {#videos}
 
 - [仮想通貨における分散型自律組織(DAO)とは](https://youtu.be/KHm0uUPqmVE)
-- [分散型自律組織(DAO)で街はつくれるのか?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) - [TED](https://www.ted.com/)
+- [分散型自律組織(DAO)で街はつくれるのか?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)

@@ -3,7 +3,7 @@ title: 质押提款
 description: 本页面概述质押推送提款是什么，它们如何工作，质押人需要做什么才能获得奖励
 lang: zh
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: 犀牛莱斯利与她的质押奖励
 sidebarDepth: 2
 summaryPoints:
@@ -196,7 +196,7 @@ eventName="read more">
 
 建议验证者运营商访问<a href="https://launchpad.ethereum.org/withdrawals/">质押启动板提款</a>页面，你可以在其中找到有关如何准备验证者以便提款的更多详细信息、事件的时间安排，以及有关提款如何运作的更多详细信息。
 
-要首先在测试网上测试你的设置，请访问 <a href="https://goerli.launchpad.ethereum.org">Goerli 测试网质押启动板</a>开始测试。
+要首先在测试网上测试你的设置，请访问 <a href="https://holesky.launchpad.ethereum.org">Holesky 测试网质押启动板</a>开始测试。
 
 </ExpandableCard>
 

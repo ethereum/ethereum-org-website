@@ -5,7 +5,7 @@ lang: cs
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Vyobrazení decentralizované autonomní organizace hlasující o návrhu.
 summaryPoint1: Členské komunity bez centralizovaného vedení.
 summaryPoint2: Bezpečný způsob, jak spolupracovat s lidmi na internetu.
@@ -65,7 +65,7 @@ Ethereum je ideálním ekosystémem pro založení DAO a to hned z několika dů
 
 Při řízení DAO je třeba zvážit mnoho aspektů, například způsob hlasování a navrhování.
 
-### Delegace #{governance-delegation}
+### Delegace {#governance-delegation}
 
 Delegování je něco jako DAO verze zastupitelské demokracie. Držitelé tokenu delegují hlasy uživatelům, kteří se nabídnou a slíbí, že budou spravovat protokol a zůstanou o něm informováni.
 
@@ -73,7 +73,7 @@ Delegování je něco jako DAO verze zastupitelské demokracie. Držitelé token
 
 [ENS](https://claim.ens.domains/delegate-ranking) – Držitelé ENS mohou delegovat své hlasy členům angažovaných komunit za účelem reprezentace v zastoupení.
 
-### Automatické řízení transakcí #{governance-example}
+### Automatické řízení transakcí {#governance-example}
 
 V mnoha DAO budou transakce provedeny automaticky, pokud bude dostatečně uživatelů hlasovat pro.
 
@@ -81,7 +81,7 @@ V mnoha DAO budou transakce provedeny automaticky, pokud bude dostatečně uživ
 
 [Nouns](https://nouns.wtf) – V Nouns DAO je transakce provedena pouze v případě, pokud je dosaženo dostatečného počtu hlasů, většina z nich je pro, a zakladatelé Nouns DAO tuto transakci nevetují.
 
-### Řízení Multisig #{governance-example}
+### Řízení Multisig {#governance-example}
 
 Přestože DAO mohou mít i tísíce hlasujících členů, finanční prostředky takové organizace mohou být uloženy v [peněžence](/glossary/#wallet) sdílené 5 až 20 aktivními členy komunity, kteří jsou důvěryhodní a doxxnutí (jejich veřejná identita je komunitě známá). Po skončení hlasování vykonají právě tito členové vůli celé komunity.
 
@@ -89,7 +89,7 @@ Přestože DAO mohou mít i tísíce hlasujících členů, finanční prostřed
 
 V roce 1977 představil stát Wyoming LLC, typ společnosti ekvivalentní k české společnosti s ručením omezením, který chrání podnikatele a omezuje jejich odpovědnost. V nedávné době se stal průkopníkem zákona DAO, který pro organizaci zavádí právní status. V současné době mají Wyoming, Vermont a Panenské ostrovy v nějaké formě zákony DAO.
 
-### Příklad z praxe #{law-example}
+### Příklad z praxe {#law-example}
 
 [CityDAO](https://citydao.io) – CityDAO používal zákon DAO státu Wyoming ke koupi 40 akrů půdy poblíž Yellowstonského národního parku.
 
@@ -97,7 +97,7 @@ V roce 1977 představil stát Wyoming LLC, typ společnosti ekvivalentní k čes
 
 Existují různé typy členství v DAO. Na základně nich je pak určeno, jak v dané DAO funguje hlasování a další klíčové principy.
 
-### Členství založené na tokenech #{token-based-membership}
+### Členství založené na tokenech {#token-based-membership}
 
 Obvykle zcela [bez nutnosti povolení](/glossary/#permissionless), v závislosti na použitém tokenu. Takové tokeny jsou typicky volně obchodovány na [decentralizovaných burzách](/glossary/#dex). získávány poskytnutím likvidity anebo těženy nějakým „proof-of-work“ způsobem. Ve všech případech ale pouhé držení tokenu umožňuje přístup k hlasování.
 
@@ -107,7 +107,7 @@ _Obvykle se používá k řízení rozsáhlých decentralizovaných protokolů a
 
 [MakerDAO](https://makerdao.com) – Token MKR společnosti MakerDAO je široce dostupný na decentralizovaných burzách a kdokoliv si může koupit hlasovací práva ohledně budoucnosti protokolu Maker.
 
-### Členství založené na akciích #{share-based-membership}
+### Členství založené na akciích {#share-based-membership}
 
 DAO založené na akciích jsou přísnější, ale stále docela otevřené. Každý potenciální člen může předložit návrh na přijetí, který obvykle nabízí hodnotu ve formě tokenů nebo určitého typu práce. Akcie pak představují přímou hlasovací sílu a vlastnictví. Členové mohou z takové DAO kdykoli vystoupit a to se svým poměrným podílem celkových prostředků.
 
@@ -117,7 +117,7 @@ _Obvykle se používá u lidskoprávních organizací, jako jsou charity a odbor
 
 [MolochDAO](http://molochdao.com/) – MolochDAO se zaměřuje na financování projektů, které běží na Ethereu. Pro získání členství je potřeba předložit návrh, na jehož základě skupina posoudí, má-li zájemce potřebné odborné znalosti a kapitál, aby mohl činit informované úsudky o potenciálních grantech. Přístup k takovému DAO tedy nelze koupit na otevřeném trhu.
 
-### Členství založené na reputaci #{reputation-based-membership}
+### Členství založené na reputaci {#reputation-based-membership}
 
 Reputace je důkazem účasti a poskytuje hlasovací práva v DAO. Na rozdíl od tokenových či podílových členství, organizace DAO založené na reputaci nepřevádějí vlastnictví na přispěvatele. Reputaci nelze koupit, převést či delegovat; členové DAO si ji musí získat prostřednictvím účasti. Hlasování na blockchainuje je veřejně dostupné a budoucí členové mohou svobodně předložit návrhy na vstup do DAO a požádat o získání reputace a tokenů jako odměnu za své příspěvky.
 
@@ -129,13 +129,13 @@ _Tento přístup se obvykle používá při decentralizovaném vývoji a řízen
 
 ## Připojte se / založte DAO {#join-start-a-dao}
 
-### Připojte se k DAO #{join-a-dao}
+### Připojte se k DAO {#join-a-dao}
 
 - [DAO pro komunitu kolem Etherea](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [Seznam DAO od platformy DAOHaus](https://app.daohaus.club/explore)
 - [Seznam DAO Tally.xyz](https://www.tally.xyz)
 
-### Založte DAO #{start-a-dao}
+### Založte DAO {#start-a-dao}
 
 - [Rozběhněte DAO pomocí DAOHaus](https://app.daohaus.club/summon)
 - [Založte guvernéské DAO s Tally](https://www.tally.xyz/add-a-dao)
@@ -145,7 +145,7 @@ _Tento přístup se obvykle používá při decentralizovaném vývoji a řízen
 
 ## Další informace {#further-reading}
 
-### Články o DAO #{dao-articles}
+### Články o DAO {#dao-articles}
 
 - [Co je DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
@@ -156,7 +156,7 @@ _Tento přístup se obvykle používá při decentralizovaném vývoji a řízen
 - [DAO nejsou korporace: kde na decentralizaci v autonomních organizacích záleží od Vitalika](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO, DAC, DA a další: Neúplná příručka terminologie](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.ethereum.org)
 
-### Videa #{videos}
+### Videa {#videos}
 
 - [Co je to DAO?](https://youtu.be/KHm0uUPqmVE)
 - [Dokáže DAO vybudovat město?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)

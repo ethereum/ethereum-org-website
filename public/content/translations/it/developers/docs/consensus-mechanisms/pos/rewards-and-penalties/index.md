@@ -78,7 +78,7 @@ Se il livello del consenso ha superato più di quattro epoche senza finalizzare,
 
 Il design di ricompense, sanzioni e frazionamenti del meccanismo di consenso incoraggia i singoli validatori a comportarsi correttamente. Tuttavia, da tali scelte di progettazione emerge un sistema che incentiva fortemente la distribuzione equa dei validatori tra i vari client e dovrebbe disincentivare fortemente il dominio di un singolo client.
 
-## Letture consigliate {#further-reading}
+## Ulteriori letture {#further-reading}
 
 - [Aggiornare Ethereum: Il livello d'incentivazione](https://eth2book.info/altair/part2/incentives)
 - [Incentivi nel protocollo ibrido Casper di Ethereum](https://arxiv.org/pdf/1903.04205.pdf)

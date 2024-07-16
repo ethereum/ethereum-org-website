@@ -89,3 +89,4 @@ _役に立つコミュニティリソースをご存知の場合は、 ページ
 - [プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)
 - [マイニング](/developers/docs/consensus-mechanisms/pow/mining/)
 - [プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)
+- [プルーフ・オブ・オーソリティ](/developers/docs/consensus-mechanisms/poa/)

@@ -2,7 +2,7 @@
 title: Підготовка Ethereum до використання в майбутньому
 description: Ці оновлення роблять з Ethereum стійкий, децентралізований базовий рівень для використання в майбутньому, яким би воно не було.
 lang: uk
-image: /roadmap/roadmap-future.png
+image: /images/roadmap/roadmap-future.png
 alt: "План розвитку Ethereum"
 template: roadmap
 ---

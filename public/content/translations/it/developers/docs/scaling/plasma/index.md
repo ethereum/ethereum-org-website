@@ -162,10 +162,7 @@ Plasma è differente perché la Rete principale riceve solo informazioni minime 
 
 Diversi progetti forniscono implementazioni di Plasma che puoi integrare nelle tue dapp:
 
-- [OMG Network](https://omg.network/)
 - [Polygon](https://polygon.technology/) (precedentemente Matic Network)
-- [Gluon](https://gluon.network/)
-- [LeapDAO](https://ipfs.leapdao.org/)
 
 ## Letture consigliate {#further-reading}
 
@@ -175,4 +172,4 @@ Diversi progetti forniscono implementazioni di Plasma che puoi integrare nelle t
 - [Comprendere Plasma, Parte 1: Fondamenti](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [The Life and Death of Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
-_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_

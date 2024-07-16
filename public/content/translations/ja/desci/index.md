@@ -5,7 +5,7 @@ lang: ja
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: 現在の科学に代わる、グローバルで開かれたシステム。
 summaryPoint2: 科学者が資金を調達し、実験を行い、データーを共有し、得られた見識を広めることなどを可能にする技術。
@@ -107,6 +107,7 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 - [CureDAO: コミュニティ所有のプレシジョンヘルスプラットフォーム](https://docs.curedao.org/)
 - [IdeaMarkets: 分散型科学の信ぴょう性の有効化](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
+- [ValleyDAO: オープンなグローバルコミュニティで合成生物学研究のファンディングおよび翻訳に関するサポートを提供](https://www.valleydao.bio)
 
 新しいプロジェクトを提案する際には[ポリシー一覧](/contributing/adding-desci-projects/)をご覧ください。
 

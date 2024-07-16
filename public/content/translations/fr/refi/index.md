@@ -5,7 +5,7 @@ lang: fr
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Un système économique alternatif fondé sur des principes de régénération
 summaryPoint2: Une tentative d'utilisation d'Ethereum pour résoudre les crises de coordination au niveau mondial, telles que le changement climatique
@@ -47,7 +47,7 @@ La transition du VCM vers le nouveau **marché numérique du carbone (DCM)** bas
 Les projets ReFi utilisent la technologie de la blockchain pour atténuer de nombreux problèmes du marché traditionnel :
 
 - **La liquidité est concentrée sur un petit nombre de pools** où chacun peut commercer. Les grandes organisations comme les individus peuvent utiliser ces pools sans devoir rechercher manuellement des acheteurs/vendeurs, sans frais de participation ou sans enregistrement préalable.
-- **Toutes les transactions sont enregistrées sur des blockchains publiques**. Le chemin que chaque crédit carbone prend en raison de l'activité de trading est retraçable à jamais dès qu'il est est rendu disponible dans le DCM.
+- **Toutes les transactions sont enregistrées sur des blockchains publiques**. Le chemin que chaque crédit carbone prend en raison de l'activité de trading est retraçable à jamais dès qu'il est rendu disponible dans le DCM.
 - **La rapidité des transactions est quasiment instantanée**. Sécuriser de vastes quantités de crédits carbone via les marchés traditionnels peut prendre des jours ou des semaines, alors que ceci peut être réalisé en quelques secondes dans le DCM.
 - **Les activités de trading ont lieu sans intermédiaires**, qui facturent des fortes commissions. Les crédits carbones numériques représentent une réduction de coût conséquente comparé aux crédits traditionnels.
 - **Le DCM peut passer à l'échelle** et répondre aussi bien aux attentes des individus que des entreprises multinationales.
@@ -60,7 +60,7 @@ Quatre éléments majeurs composent le paysage actuel du DCM :
 
 Une nouvelle vague de projets innovants est en train d'être développée sur des blockchains dans le but de bouleverser les acteurs établis de ce secteur.
 
-2. Ponts carbone, aussi appelées tokeniseurs, fournissent la technologie pour représenter ou transférer les crédits carbones depuis les registres traditionnels vers les DCM. [Toucan Protocol](https://toucan.earth/), [C3](https://c3.app/), and [Moss.Earth](https://moss.earth/) font partie des exemples remarquables.
+2. Ponts carbone, aussi appelés tokeniseurs, fournissent la technologie pour représenter ou transférer les crédits carbones depuis les registres traditionnels vers les DCM. [Toucan Protocol](https://toucan.earth/), [C3](https://c3.app/), and [Moss.Earth](https://moss.earth/) font partie des exemples remarquables.
 3. Les services intégrés offrent des crédits d'évitement ou de suppression de carbone aux utilisateurs finaux afin qu'ils obtiennent le bénéfice environnemental de leur crédit et partagent leur soutien à l'action climatique avec le monde.
 
 Certains, comme [Klima Infinity](https://www.klimadao.finance/infinity) et [Senken](https://senken.io/), proposent une grande variété de projets développés par des tiers et émis conformément à des normes établies telles que Verra ; d'autres, comme [Nori](https://nori.com/), ne proposent que des projets spécifiques développés selon leur propre norme de crédit carbone, qu'ils émettent et pour laquelle ils ont leur propre marché dédié.

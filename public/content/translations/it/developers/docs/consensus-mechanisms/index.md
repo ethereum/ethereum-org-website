@@ -89,3 +89,4 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 - [Proof of Work](/developers/docs/consensus-mechanisms/pow/)
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Proof of Stake](/developers/docs/consensus-mechanisms/pos/)
+- [Proof of Authority](/developers/docs/consensus-mechanisms/poa/)

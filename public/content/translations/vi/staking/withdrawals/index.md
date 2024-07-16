@@ -3,7 +3,7 @@ title: Rút tài sản đặt cược
 description: Trang tóm tắt về rút tiền đẩy đặt cược là gì, cách chúng hoạt động và những gì người góp cổ phần cần làm để nhận được phần thưởng
 lang: vi
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Tê giác Leslie và phần thưởng đặt cọc
 sidebarDepth: 2
 summaryPoints:
@@ -196,7 +196,7 @@ eventName="read more">
 
 Các nhà điều hành nút xác thực được khuyến nghị truy cập trang <a href="https://launchpad.ethereum.org/withdrawals/">Rút tiền trên Staking Launchpad</a> để biết thêm chi tiết về cách chuẩn bị nút xác thực để rút tiền, thời gian diễn ra sự kiện và nhiều thông tin hơn về cách thức hoạt động của chức năng rút tiền.
 
-Để thử thiết lập trên mạng thử nghiệm trước, hãy truy cập <a href="https://goerli.launchpad.ethereum.org">Staking Launchpad của Mạng thử nghiệm Goerli</a> để bắt đầu.
+Để thử thiết lập trên mạng thử nghiệm trước, hãy truy cập <a href="https://holesky.launchpad.ethereum.org">Staking Launchpad của Mạng thử nghiệm Holesky</a> để bắt đầu.
 
 </ExpandableCard>
 

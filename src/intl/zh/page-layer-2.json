@@ -124,7 +124,7 @@
   "boba-description": "Boba 是最初从乐观卷叠分叉而来的乐观卷叠链，它是一种旨在降低铸币费用，提高交易吞吐量，并扩展智能合约能力的扩容解决方案。",
   "base-description": "Base 是一个安全、低成本、对开发者友好的以太坊二层网络，致力于把十亿新用户带入 web3。它是以太坊二层网络，由 Coinbase 孵化，建立在开源 OP 堆栈上。",
   "loopring-description": "Loopring 的零知识卷叠二层网络解决方案旨在提供与以太坊主链相同的安全保障，并大规模提升可扩展性：交易吞吐量增加 1000 倍，交易费用降至一层网络 0.1%。",
-  "zksync-description": "zkSync 是由 Matter Labs 推出的以用户为中心的零知识卷叠平台。它是以太坊的扩容解决方案，已经在以太坊主链上线，支持付款、代币交换和非同质化代币挖矿。",
+  "zksync-description": "ZKsync 是由 Matter Labs 推出的以用户为中心的零知识卷叠平台。它是以太坊的扩容解决方案，已经在以太坊主链上线，支持付款、代币交换和非同质化代币挖矿。",
   "zkspace-description": "ZKSpace 平台由三个主要部分组成：利用零知识卷叠技术建立的二层自动化做市商，名为 ZKSwap；名为 ZKSquare 的支付服务，以及名为 ZKSea 的非同质化代币市场。",
   "aztec-description": "Aztec Network 是以太坊上的第一个私有零知识卷叠，使去中心化应用程序能够访问隐私并扩展。",
   "starknet-description": "Starknet 是有效性卷叠二层网络。它提供高吞吐量、低燃料成本并保留以太坊一层网络的安全级别。",

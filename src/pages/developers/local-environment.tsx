@@ -9,7 +9,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 import { Framework } from "@/lib/interfaces"
 
 import FeedbackCard from "@/components/FeedbackCard"
@@ -24,10 +24,11 @@ import Translation from "@/components/Translation"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { getLocalEnvironmentFrameworkData } from "@/lib/api/ghRepoData"
-import EthBlocksImage from "@/public/developers-eth-blocks.png"
+import EthBlocksImage from "@/public/images/developers-eth-blocks.png"
 
 const Content = ({ children }: ChildOnlyProp) => {
   return (
@@ -70,13 +71,17 @@ export const getStaticProps = (async ({ locale }) => {
   const frameworksListData = await cachedFetchLocalEnvironmentFrameworkData()
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       frameworksList: frameworksListData,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<Props>

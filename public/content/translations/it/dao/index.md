@@ -5,7 +5,7 @@ lang: it
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 3
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Rappresentazione di una votazione DAO su una proposta.
 summaryPoint1: Community posseduta dai membri, prive di leadership centralizzata.
 summaryPoint2: Un modo sicuro per collaborare con sconosciuti su Internet.
@@ -48,7 +48,7 @@ Per aiutarti a comprendere meglio, ecco alcuni esempi di come potresti utilizzar
 
 ## Come funziona la DAO? {#how-daos-work}
 
-La struttura portante di una DAO è rappresentata dal suo [contratto intelligente](/glossary/#smart-contract), che definisce le regole dell'organizzazione e detiene il patrimonio del gruppo. Una volta che il contratto è attivo su Ethereum, nessuno può modificare le regole se non tramite voto. Nessuno può fare qualcosa che non sia previsto dalle regole e dalla logica del codice. E poiché anche il patrimonio è definito dal contratto intelligente, ciò significa che nessuno può spendere il denaro senza l'approvazione del gruppo. Questo significa che le DAO non hanno bisogno di un'autorità centrale. Al contrario, il gruppo prende le decisioni collettivamente e i pagamenti sono autorizzati automaticamente quando le proposte sono approvate dal voto.
+La struttura portante di una DAO è rappresentata dal suo [ contratto intelligente](/glossary/#smart-contract), che definisce le regole dell'organizzazione e detiene il patrimonio del gruppo. Una volta che il contratto è attivo su Ethereum, nessuno può modificare le regole se non tramite voto. Nessuno può fare qualcosa che non sia previsto dalle regole e dalla logica del codice. E poiché anche il patrimonio è definito dal contratto intelligente, ciò significa che nessuno può spendere il denaro senza l'approvazione del gruppo. Questo significa che le DAO non hanno bisogno di un'autorità centrale. Al contrario, il gruppo prende le decisioni collettivamente e i pagamenti sono autorizzati automaticamente quando le proposte sono approvate dal voto.
 
 Ciò è possibile perché i contratti intelligenti sono a prova di manomissione, una volta che sono attivi su Ethereum. Non è possibile modificare il codice (le regole della DAO) senza che gli altri lo notino, perché tutto è pubblico.
 
@@ -101,7 +101,7 @@ Ci sono diversi modelli per aderire a una DAO. L'adesione può determinare come 
 
 In genere è completamente [senza permessi](/glossary/#permissionless), a seconda del token utilizzato. Questi token di governance possono essere per lo più scambiati senza permessi su una [borsa decentralizzata](/glossary/#dex). Altri, invece, devono esser guadagnati fornendo liquidità o altri tipi di "Proof of Work". In entrambi i casi, la semplice detenzione del token garantisce l'accesso al voto.
 
-*Di solito usato per governare ampi protocolli decentralizzati e/o i token stessi.*
+_Di solito usato per governare ampi protocolli decentralizzati e/o i token stessi._
 
 #### Un celebre esempio {#token-example}
 
@@ -111,21 +111,21 @@ In genere è completamente [senza permessi](/glossary/#permissionless), a second
 
 I DAO basati su quote sono maggiormente soggetti a permessi, ma comunque abbastanza aperti. Tutti i potenziali membri possono inviare una proposta di adesione alla DAO, solitamente offrendo un tributo di qualche valore sotto forma di token o di lavoro. Le quote rappresentano il potere di voto diretto e la proprietà. I membri possono uscire in qualsiasi momento con la propria quota proporzionale del patrimonio.
 
-*In genere usato per organizzazioni più compatte e incentrate sul fattore umano, come enti di beneficenza, collettivi di lavoratori e club di investimento. Può anche governare protocolli e token.*
+_In genere usato per organizzazioni più compatte e incentrate sul fattore umano, come enti di beneficenza, collettivi di lavoratori e club di investimento. Può anche governare protocolli e token._
 
 #### Un celebre esempio {#share-example}
 
-[MolochDAO](http://molochdao.com/) – MolochDAO si concentra sul finanziamento dei progetti su Ethereum. Richiede una proposta di adesione in modo che il gruppo possa valutare se il richiedente ha la competenza e il capitale necessari per formulare giudizi informati sui potenziali beneficiari. Non si può semplicemente acquistare l'accesso al DAO sul mercato.
+[MolochDAO](http://molochdao.com/): MolochDAO si concentra sul finanziamento dei progetti su Ethereum. Richiede una proposta di adesione in modo che il gruppo possa valutare se il richiedente ha la competenza e il capitale necessari per formulare giudizi informati sui potenziali beneficiari. Non si può semplicemente acquistare l'accesso al DAO sul mercato.
 
 ### Appartenenza basata sulla reputazione {#reputation-based-membership}
 
 La reputazione rappresenta la prova di partecipazione e conferisce potere di voto nella DAO. A differenza dell'adesione basata sui token o sulle quote, le DAO basate sulla reputazione non trasferiscono la proprietà ai collaboratori. La reputazione non può esser comprata, trasferita o delegata; i membri della DAO devono ottenere la reputazione tramite la loro partecipazione. Il voto sulla blockchain è privo di permessi e i potenziali membri possono inviare liberamente proposte per aderire alla DAO e richiedere di ricevere reputazione e token come ricompensa in cambio dei loro contributi.
 
-*Sono tipicamente utilizzate per lo sviluppo e governance decentralizzati di protocolli e [dapp](/glossary/#dapp), ma si adattano bene anche ad una vasta gamma di organizzazioni, quali enti di beneficenza, collettivi di lavoratori, club di investimento, ecc.*
+_Sono tipicamente utilizzate per lo sviluppo e governance decentralizzati di protocolli e [dapp](/glossary/#dapp), ma si adattano bene anche ad una vasta gamma di organizzazioni, quali enti di beneficenza, collettivi di lavoratori, club di investimento, ecc._
 
 #### Un celebre esempio {#reputation-example}
 
-[DXdao](https://DXdao.eth.limo) – DXdao è un collettivo sovrano globale che dal 2019 crea e amministra protocolli e applicazioni decentralizzati. Ha sfruttato la governance basata sulla reputazione e il [consenso olografico](/glossary/#holographic-consensus) per coordinare e gestire i fondi, il che significa che nessuno poteva farsi strada per influenzarne il futuro o la governance.
+[DXdao](https://DXdao.eth.limo): DXdao è un collettivo sovrano globale che dal 2019 crea e amministra protocolli e applicazioni decentralizzati. Ha sfruttato la governance basata sulla reputazione e il [consenso olografico](/glossary/#holographic-consensus) per coordinare e gestire i fondi, il che significa che nessuno poteva farsi strada per influenzarne il futuro o la governance.
 
 ## Aderisci a / Crea una DAO {#join-start-a-dao}
 

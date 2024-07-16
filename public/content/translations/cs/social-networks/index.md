@@ -5,7 +5,7 @@ lang: cs
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: Platformy založené na blockchainu pro sociální interakci a tvorbu a distribuci obsahu.
 summaryPoint2: Decentralizované sociální sítě chrání soukromí uživatelů a zvyšují bezpečnost dat.
 summaryPoint3: Tokeny a NFT umožňují monetizovat obsah novým způsobem.

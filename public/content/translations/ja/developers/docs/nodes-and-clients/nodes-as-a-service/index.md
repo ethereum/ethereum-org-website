@@ -66,16 +66,15 @@ sidebarDepth: 2
 - [**All That Node**](https://allthatnode.com/)
   - [ドキュメント](https://docs.allthatnode.com/)
   - 機能
-    - 1日あたり15万リクエストの最大の無料ティア
-    - 24以上のブロックチェーンノードへのアクセス
-    - RPC、HTTPS、WSSエンドポイント
+    - 5万リクエスト/日と無料ティア
+    - 40以上のプロトコルのサポート
+    - JSON-RPC(EVM、Tendermint)、REST、Websocket APIのサポート
     - アーカイブデータへの無制限アクセス
     - 24時間年中無休のサポートと99.9%超の稼働時間
     - 複数のチェーンで利用可能なフォーセット
     - 無制限のAPIキー数でエンドポイントに無制限アクセス
-    - トレース/デバッグ名前空間が利用可能
+    - トレース/デバックAPIのサポート
     - 自動アップデート
-    - 技術サポート
 - [**Amazon Managed Blockchain**](https://aws.amazon.com/managed-blockchain/)
   - [ドキュメント](https://aws.amazon.com/managed-blockchain/resources/)
   - 機能
@@ -257,7 +256,7 @@ sidebarDepth: 2
     - パーソナルアカウントマネージャー
     - 共有、アーカイブ、バックアップ、専用ノード
 - [**Pocket Network**](https://www.pokt.network/)
-  - [ドキュメント](https://docs.pokt.network/home/)
+  - [ドキュメンテーション](https://docs.pokt.network/home/)
   - 機能
     - 分散型RPCプロトコルとマーケットプレイス
     - 1日あたり100万件のリクエストができる無料ティア(エンドポイントあたり最大2件)
@@ -277,7 +276,7 @@ sidebarDepth: 2
     - ハンズオンデベロッパーサポート
     - [Pocket Portal](https://bit.ly/ETHorg_POKTportal)ダッシュボードと分析
 - [**QuickNode**](https://www.quicknode.com)
-  - [ドキュメント](https://www.quicknode.com/docs/)
+  - [ドキュメンテーション](https://www.quicknode.com/docs/)
   - 機能
     - 24時間年中無休の技術サポートとデベロッパーのDiscordコミュニティ
     - 地理的なバランスを考慮した、マルチクラウド/メタルの低遅延ネットワーク
@@ -290,19 +289,19 @@ sidebarDepth: 2
     - [SOC2認証](https://www.quicknode.com/security)
     - デベロッパーからエンタープライズまで幅広く対応
 - [**Rivet**](https://rivet.cloud/)
-  - [ドキュメント](https://rivet.readthedocs.io/en/latest/)
+  - [ドキュメンテーション](https://rivet.readthedocs.io/en/latest/)
   - 機能
     - 無料ティアオプション
     - 従量課金制
 - [**SenseiNode**](https://senseinode.com)
-  - [ドキュメント](https://docs.senseinode.com/)
+  - [ドキュメンテーション](https://docs.senseinode.com/)
   - 機能
     - 専用ノードと共有ノード
     - ダッシュボード
     - ラテンアメリカの様々な地域に拠点を置く複数のホスティングプロバイダーを利用して、AWS外部でホスティング
     - PrysmとLighthouseクライアント
 - [**SettleMint**](https://console.settlemint.com/)
-  - [ドキュメント](https://docs.settlemint.com/)
+  - [ドキュメンテーション](https://docs.settlemint.com/)
   - 機能
     - 無料トライアル
     - 従量課金制

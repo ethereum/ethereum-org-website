@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
+import { Box, Flex } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -10,6 +10,8 @@ import { isMobile } from "../lib/utils/isMobile"
 import Emoji from "./Emoji"
 import InlineLink from "./Link"
 import OldHeading from "./OldHeading"
+
+import useColorModeValue from "@/hooks/useColorModeValue"
 
 // Represent string as 32-bit integer
 const hashCode = (string: string): number => {
@@ -289,8 +291,8 @@ const StablecoinBoxGrid = ({ items }: StablecoinBoxGridProps) => {
       maxW="100%"
     >
       {items.map((item, idx) => {
-        let columnNumber = 1
-        let rowNumber = 1
+        const columnNumber = 1
+        const rowNumber = 1
         const colorIdx = hashCode(item.emoji) % colors.length
         const color = colors[colorIdx]
         return (

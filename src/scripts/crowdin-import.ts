@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 // Library requires
 const i18Config = require("../../i18n.config.json")
 const {
@@ -166,7 +167,7 @@ const trackers: TrackerObject = {
  * @param message Any arbitrary message
  * @param optionalParams Any additional arbitrary messages
  */
-const log = (message: any, ...optionalParams: any): void => {
+const log = (message: unknown, ...optionalParams: unknown[]): void => {
   VERBOSE && console.log(message, ...optionalParams)
 }
 
@@ -289,9 +290,7 @@ const scrapeDirectory = (
       copyFileSync(source, jsonDestinationPath)
       // Update .json tracker
       trackers.langs[repoLangCode].jsonCopyCount++
-    } else if (
-      item.endsWith(".md")
-    ) {
+    } else if (item.endsWith(".md")) {
       const mdDestDirPath: string = join(
         repoRoot,
         "public",
@@ -351,9 +350,8 @@ importSelection.forEach(
     // Initialize working directory and check for existence
     const _path: string = join(crowdinRoot, crowdinLangCode)
     if (!existsSync(_path)) {
-      trackers.langs[
-        repoLangCode
-      ].error = `Path doesn't exist for lang ${crowdinLangCode}`
+      trackers.langs[repoLangCode].error =
+        `Path doesn't exist for lang ${crowdinLangCode}`
       return
     }
     const langLs: Array<string> = readdirSync(_path)

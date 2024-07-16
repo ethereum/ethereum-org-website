@@ -5,7 +5,7 @@ lang: ja
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: /ethereum-learn.png
+image: /images/ethereum-learn.png
 summaryPoint1: ソーシャル・インタラクションとコンテンツの作成と配信のためのブロックチェーンベースのプラットフォーム
 summaryPoint2: 分散型ソーシャル・メディア・ネットワークは、ユーザーのプライバシーを保護し、データセキュリティを強化
 summaryPoint3: トークンと非代替性トークン(NFT)により、コンテンツを収益化する新しい方法の創出

@@ -1,11 +1,11 @@
 ---
-title: 非代替性トークン(NFT)
+title: 非代替トークン (NFT)
 description: イーサリアムにおける非代替性トークン(NFT)の概要
 lang: ja
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: ホログラムを介して表示されているETHロゴ
 summaryPoint1: イーサリアムベースのアセットとして、唯一無二なものをトークンとして表現する方法。
 summaryPoint2: NFTは、これまで以上に多くのコンテンツ・クリエイターを後押ししています。
@@ -103,6 +103,11 @@ NFTに関連するセキュリティの問題の大半は、フィッシング�
 - [EtherscanNFTトラッカー](https://etherscan.io/nft-top-contracts)
 - [ERC-721トークン標準](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155トークン標準](/developers/docs/standards/tokens/erc-1155/)
+- [人気のNFTアプリとツール](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## その他のリソース {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

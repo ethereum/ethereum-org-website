@@ -4,9 +4,7 @@ description: 以太坊虛擬機及其與網路狀態、交易、智慧型合約�
 lang: zh-tw
 ---
 
-不能用描述雲彩或海浪的相同方式來描述以太坊虛擬機的實體安裝，但它確實作為一個單獨_實體_存在，由數千臺相互連結且運行以太坊用戶端的電腦維護。
-
-以太坊協議本身的存在僅是為了保持這個特殊狀態機持續、不間斷和不可變的運行。 它是所有以太坊帳戶和智慧型合約存在的環境。 對於區塊鏈上的任何一個區塊，以太坊有且僅有一種『規範』狀態，而以太坊虛擬機用於定義在區塊之間計算新的有效狀態的規則。
+以太坊虛擬機 (EVM) 是去中心化的虛擬環境，可以跨所有以太坊節點一致且安全地執行程式碼。 節點運行以太坊虛擬機來執行智慧型合約，使用「[燃料](/gas/)」來衡量[運算](/developers/docs/evm/opcodes/)所需的算力，確保高效的資源分配和網路安全。
 
 ## 基本資訊 {#prerequisites}
 
@@ -74,6 +72,7 @@ Y(S, T)= S'
 - [以太坊虛擬機作業碼](https://www.ethervm.io/)
 - [以太坊虛擬機作業碼互動式參考資料](https://www.evm.codes/)
 - [Solidity 文件簡介](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
+- [掌握以太坊 - 以太坊虛擬機 (EVM)](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
 
 ## 相關主題 {#related-topics}
 
