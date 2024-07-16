@@ -1,4 +1,7 @@
-import NextImage, { ImageProps as NextImageProps, StaticImageData } from "next/image"
+import NextImage, {
+  ImageProps as NextImageProps,
+  StaticImageData,
+} from "next/image"
 import { chakra, ChakraComponent, HTMLChakraProps } from "@chakra-ui/react"
 
 export type ImageProps = NextImageProps &
@@ -31,14 +34,19 @@ const imageProps: (keyof NextImageProps)[] = [
 ]
 
 const DefaultNextImage = (props: ImageProps) => {
-  const hasBlurData = !!((props.src as StaticImageData).blurDataURL || props.blurDataURL)
-  return <NextImage placeholder={hasBlurData ? "blur" : "empty"} {...props}  />
+  const hasBlurData = !!(
+    (props.src as StaticImageData).blurDataURL || props.blurDataURL
+  )
+  return <NextImage placeholder={hasBlurData ? "blur" : "empty"} {...props} />
 }
 
 /**
  * TODO: replace this component with import { Image } from "@chakra-ui/next-js"
  * once https://github.com/vercel/next.js/issues/52216 is fixed
  */
-export const Image: ChakraComponent<"img", NextImageProps> = chakra(DefaultNextImage, {
-  shouldForwardProp: (prop) => (imageProps as string[]).includes(prop),
-})
+export const Image: ChakraComponent<"img", NextImageProps> = chakra(
+  DefaultNextImage,
+  {
+    shouldForwardProp: (prop) => (imageProps as string[]).includes(prop),
+  }
+)

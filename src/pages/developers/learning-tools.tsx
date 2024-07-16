@@ -23,6 +23,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import AlchemyUniversityImage from "@/public/images/dev-tools/alchemyuniversity.png"
+import AtlasImage from "@/public/images/dev-tools/atlas.png"
 import BloomTechImage from "@/public/images/dev-tools/bloomtech.png"
 import BuildSpaceImage from "@/public/images/dev-tools/buildspace.png"
 import CaptureTheEtherImage from "@/public/images/dev-tools/capturetheether.png"
@@ -30,9 +31,11 @@ import ChainIDEImage from "@/public/images/dev-tools/chainIDE.png"
 import ChainShotImage from "@/public/images/dev-tools/chainshot.png"
 import ConsensysImage from "@/public/images/dev-tools/consensys.png"
 import CryptoZombieImage from "@/public/images/dev-tools/crypto-zombie.png"
+import DappWorldImage from "@/public/images/dev-tools/dapp-world.png"
 import EthDotBuildImage from "@/public/images/dev-tools/eth-dot-build.png"
 import MetaschoolImage from "@/public/images/dev-tools/metaschool.png"
 import NFTSchoolImage from "@/public/images/dev-tools/nftschool.png"
+import NodeGuardiansImage from "@/public/images/dev-tools/node-guardians.jpg"
 import EthernautImage from "@/public/images/dev-tools/oz.png"
 import PlatziImage from "@/public/images/dev-tools/platzi.png"
 import PointerImage from "@/public/images/dev-tools/pointer.png"
@@ -209,6 +212,32 @@ const LearningToolsPage = () => {
       background: "#0f1524",
       subjects: ["Solidity", "Vyper", "web3"],
     },
+    {
+      name: "Atlas",
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-atlas-description"
+      ),
+      url: "https://www.atlaszk.com",
+      image: AtlasImage,
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-atlas-logo-alt"
+      ),
+      background: "#000000",
+      subjects: ["Solidity"],
+    },
+    {
+      name: "DApp World",
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-dapp-world-description"
+      ),
+      url: "https://dapp-world.com",
+      image: DappWorldImage,
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-dapp-world-logo-alt"
+      ),
+      background: "#e5e7eb",
+      subjects: ["Solidity", "web3"],
+    },
   ])
 
   const games: Array<LearningTool> = [
@@ -250,6 +279,19 @@ const LearningToolsPage = () => {
       ),
       background: "#1b9aaa",
       subjects: ["Solidity"],
+    },
+    {
+      name: "Node Guardians",
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-node-guardians-description"
+      ),
+      url: "https://nodeguardians.io/",
+      image: NodeGuardiansImage,
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-node-guardians-logo-alt"
+      ),
+      background: "#000",
+      subjects: ["Solidity", "web3"],
     },
   ]
 

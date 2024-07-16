@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react"
+import { lazy, ReactNode, Suspense, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -14,17 +14,17 @@ import {
   HeadingProps,
   Icon,
   SimpleGridProps,
+  SkeletonText,
   Stack,
   useToken,
 } from "@chakra-ui/react"
 
 import { AllMetricData, BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
-import type { CommunityEventsReturnType } from "@/lib/interfaces"
+import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
-import Codeblock from "@/components/Codeblock"
 import CodeModal from "@/components/CodeModal"
 import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
@@ -32,7 +32,7 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import StatsBoxGrid from "@/components/StatsBoxGrid"
-import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
+import TitleCardList from "@/components/TitleCardList"
 import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -225,6 +225,27 @@ export const getStaticProps = (async ({ locale }) => {
   }
 }) satisfies GetStaticProps<Props>
 
+const CodeblockSkeleton = () => (
+  <Stack px={6} pt="2.75rem" h="50vh">
+    <SkeletonText
+      mt="4"
+      noOfLines={6}
+      spacing={4}
+      skeletonHeight="1.4rem"
+      startColor="body.medium"
+      opacity={0.2}
+    />
+  </Stack>
+)
+
+const Codeblock = lazy(() =>
+  Promise.all([
+    import("@/components/Codeblock"),
+    // Add a delay to prevent the skeleton from flashing
+    new Promise((resolve) => setTimeout(resolve, 1000)),
+  ]).then(([module]) => module)
+)
+
 const HomePage = ({
   communityEvents,
   metricResults,
@@ -294,11 +315,6 @@ const HomePage = ({
       to: "/community/",
     },
   ]
-
-  interface CodeExample extends ITitleCardItem {
-    codeLanguage: string
-    code: string
-  }
 
   const codeExamples: Array<CodeExample> = [
     {
@@ -538,19 +554,24 @@ const HomePage = ({
               </ButtonLink>
             </ButtonLinkRow>
           </FeatureContent>
-          <CodeModal
-            isOpen={isModalOpen}
-            setIsOpen={setModalOpen}
-            title={codeExamples[activeCode].title}
-          >
-            <Codeblock
-              codeLanguage={codeExamples[activeCode].codeLanguage}
-              allowCollapse={false}
-              fromHomepage
+          {/* Render CodeModal & Codeblock conditionally */}
+          {isModalOpen && (
+            <CodeModal
+              isOpen={isModalOpen}
+              setIsOpen={setModalOpen}
+              title={codeExamples[activeCode].title}
             >
-              {codeExamples[activeCode].code}
-            </Codeblock>
-          </CodeModal>
+              <Suspense fallback={<CodeblockSkeleton />}>
+                <Codeblock
+                  codeLanguage={codeExamples[activeCode].codeLanguage}
+                  allowCollapse={false}
+                  fromHomepage
+                >
+                  {codeExamples[activeCode].code}
+                </Codeblock>
+              </Suspense>
+            </CodeModal>
+          )}
         </Row>
       </MainSectionContainer>
       {/* Eth Today Section */}

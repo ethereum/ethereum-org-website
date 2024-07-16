@@ -152,10 +152,4 @@ SSZは、シンプル・シリアライゼーションの略です。 SSZは、�
 
 ## 参考文献 {#further-reading}
 
-- [DevP2P](https://github.com/ethereum/devp2p)
-- [LibP2p](https://github.com/libp2p/specs)
-- [コンセンサスレイヤーネットワークの仕様](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) 
-- カデムリアからdiscv5[discv5](https://vac.dev/kademlia-to-discv5)
-- [カデムリアペーパー](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf)
-- [Ethereumピアツーピア入門](https://p2p.paris/en/talks/intro-ethereum-networking/) [eth1eth2の関係](http://ethresear.ch/t/eth1-eth2-client-relationship/7248)
-- [マージとeth2クライアントの詳細に関するビデオ](https://www.youtube.com/watch?v=zNIrIninMgg)
+[DevP2P](https://github.com/ethereum/devp2p) [LibP2p](https://github.com/libp2p/specs) [コンセンサスレイヤーネットワークの仕様](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) カデムリアからdiscv5[discv5](https://vac.dev/kademlia-to-discv5) [カデムリアペーパー](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) [Ethereumピアツーピア入門](https://p2p.paris/en/talks/intro-ethereum-networking/) [eth1eth2の関係](http://ethresear.ch/t/eth1-eth2-client-relationship/7248) [マージとeth2クライアントの詳細に関するビデオ](https://www.youtube.com/watch?v=zNIrIninMgg)

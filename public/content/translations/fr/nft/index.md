@@ -103,6 +103,11 @@ Les questions de sécurité concernant les NFT sont le plus souvent liées aux e
 - [Traqueur de NFTs de Etherscan](https://etherscan.io/nft-top-contracts)
 - [Norme de jeton ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Norme de jeton ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [Applications et outils NFT populaires](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Autres ressources {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

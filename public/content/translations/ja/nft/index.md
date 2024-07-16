@@ -1,5 +1,5 @@
 ---
-title: 非代替性トークン(NFT)
+title: 非代替トークン (NFT)
 description: イーサリアムにおける非代替性トークン(NFT)の概要
 lang: ja
 template: use-cases
@@ -103,6 +103,11 @@ NFTに関連するセキュリティの問題の大半は、フィッシング�
 - [EtherscanNFTトラッカー](https://etherscan.io/nft-top-contracts)
 - [ERC-721トークン標準](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155トークン標準](/developers/docs/standards/tokens/erc-1155/)
+- [人気のNFTアプリとツール](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## その他のリソース {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

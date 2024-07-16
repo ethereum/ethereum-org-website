@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 import { MdChevronLeft, MdChevronRight } from "react-icons/md"
-import { Icon,type IconProps } from "@chakra-ui/react"
+import { Icon, type IconProps } from "@chakra-ui/react"
 
 import type { Lang } from "@/lib/types"
 

@@ -463,6 +463,15 @@
     "imageUrl": "https://www.devcon.org/assets/images/dc7-og.png"
   },
   {
+    "title": "Industry Day at Devcon 7 - Southeast Asia",
+    "to": "https://www.eeaday.org/",
+    "location": "Bangkok, Thailand",
+    "description": "Discover how Ethereum is powering businesses worldwide with host: Enterprise Ethereum Alliance.",
+    "startDate": "2024-11-11",
+    "endDate": "2024-11-11",
+    "imageUrl": "https://framerusercontent.com/images/aizr1HegwVVCdVEZg20haxW04oM.png"
+  },
+  {
     "title": "ETHGlobal Devcon 2024",
     "to": "https://ethglobal.com/events/devcon2024",
     "location": "TBD",

@@ -38,6 +38,7 @@ Avez-vous une formation en mathématiques, en cryptographie ou en économie ? V
 - [Ethresear.ch](https://ethresear.ch) - le principal forum de recherche d'Ethereum et le forum le plus influent au monde pour la cryptoéconomie
 - [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - Une série de questions-réponses avec des chercheurs. Dès l'ouverture de chaque partie suivante, tout le monde peut poster des questions.
 - [Liste de souhaits du programme de soutien à l'écosystème](https://esp.ethereum.foundation/wishlist/) - domaines de recherche dans lesquels le programme de soutien à l'écosystème Ethereum recherche activement des demandes de subvention
+- [AllWalletDevs](https://allwallet.dev) - Un forum pour les développeurs Ethereum, les designeurs, et les utilisateurs intéressés leur permettant d'interagir régulièrement et de discuter des portefeuilles
 
 [Explorer des domaines de recherche plus actifs](/community/research/).
 
@@ -89,7 +90,7 @@ L'écosystème Ethereum a pour mission de financer des biens publics et des proj
 
 ## Chefs de produit <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- L'écosystème Ethereum a besoin de vos talents ! De nombreuses entreprises embauchent pour des postes de chef de produit. Si vous souhaitez commencer par contribuer à un projet open source, contactez les [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) ou [RaidGuild](https://www.raidguild.org/)
+- L'écosystème Ethereum a besoin de vos talents ! De nombreuses entreprises embauchent pour des postes de chef de produit. Si vous souhaitez commencer à contribuer à un projet open source, contactez les [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) ou [RaidGuild](https://www.raidguild.org/)
 
 ## Marketing <Emoji text=":megaphone:" size={1} /> {#marketing}
 
@@ -104,11 +105,9 @@ L'écosystème Ethereum a pour mission de financer des biens publics et des proj
 - [Offres d'emploi de l'Ethereum Foundation (BambooHR)](https://ethereum.bamboohr.com/jobs/)
 - [JobStash](https://jobstash.xyz)
 - [Offres Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
-- [Offres Crypto.jobs](https://crypto.jobs/)
 - [Carrières chez ConsenSys](https://consensys.net/careers/)
 - [Offres Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
 - [Offres d'emploi Bankless](https://pallet.xyz/list/bankless/jobs)
-- [Offres useWeb3](https://www.useweb3.xyz/jobs)
 - [Offres Web3 Jobs](https://web3.career)
 - [Offres Web3 Army](https://web3army.xyz/)
 - [Offres Crypto Valley Jobs](https://cryptovalley.jobs/)
@@ -119,13 +118,12 @@ L'écosystème Ethereum a pour mission de financer des biens publics et des proj
 
 Les « DAO » sont des organisations autonomes décentralisées. Ces groupes tirent parti de la technologie Ethereum pour faciliter l'organisation et la collaboration. Par exemple, pour contrôler l'adhésion, voter sur des propositions ou gérer des actifs mis en commun. Bien que les DAO soient encore expérimentales, elles vous offrent la possibilité de trouver des groupes auxquels vous vous identifiez, de trouver des collaborateurs et d'accroître votre impact sur la communauté Ethereum. [En savoir plus sur les DAO](/dao/)
 
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promouvoir le concept de DAO dans le domaine non technologique et aider les personnes à créer de la valeur grâce au DAO_
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) - _Promouvoir le concept de DAO dans le domaine non technologique et aider les personnes à créer de la valeur grâce au DAO_
 - [Développeur DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Communauté de constructeurs qui croient en la propriété collective d'Internet_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - *Collectif de développement Web3 indépendant travaillant en tant que DAO*
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - *Gouvernance communautaire de DAOhaus*
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - *Ingénierie juridique*
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - *Communauté artistique*
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - *Incubateur DAO*
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - *Venture pour des projets de crypto pré-amorçage*
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - *Mécaniques de jeu MMORPG pour la vraie vie*
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - *Marques de vêtements digiphysiques*

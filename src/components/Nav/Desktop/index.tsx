@@ -9,7 +9,6 @@ import {
   Icon,
   MenuButton,
   Text,
-  useColorModeValue,
   useDisclosure,
   useEventListener,
 } from "@chakra-ui/react"
@@ -18,6 +17,8 @@ import { IconButton } from "@/components/Buttons"
 import LanguagePicker from "@/components/LanguagePicker"
 
 import { DESKTOP_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
+
+import useColorModeValue from "@/hooks/useColorModeValue"
 
 type DesktopNavMenuProps = {
   toggleColorMode: () => void
@@ -34,6 +35,14 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
     "Switch to Dark Theme",
     "Switch to Light Theme"
   )
+
+  const desktopHoverFocusStyles = {
+    "& > svg": {
+      transform: "rotate(10deg)",
+      color: "primary.hover",
+      transition: "transform 0.5s, color 0.2s",
+    },
+  }
 
   /**
    * Adds a keydown event listener to toggle color mode (ctrl|cmd + \)
@@ -54,16 +63,13 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
   return (
     <HStack hideBelow="md" gap="0">
       <IconButton
-        transition="transform 0.5s, color 0.2s"
         icon={ThemeIcon}
         aria-label={themeIconAriaLabel}
         variant="ghost"
         isSecondary
         px={{ base: "2", xl: "3" }}
-        _hover={{
-          transform: "rotate(10deg)",
-          color: "primary.hover",
-        }}
+        _hover={desktopHoverFocusStyles}
+        _focus={desktopHoverFocusStyles}
         onClick={toggleColorMode}
       />
 

@@ -4810,7 +4810,8 @@
       "profile": "http://www.technobunnies.com",
       "contributions": [
         "doc",
-        "maintenance"
+        "maintenance",
+        "content"
       ]
     },
     {
@@ -11319,7 +11320,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/71248977?v=4",
       "profile": "https://github.com/UNOFFICIALbgd",
       "contributions": [
-        "bug"
+        "bug",
+        "doc"
       ]
     },
     {
@@ -12248,7 +12250,62 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/73983677?v=4",
       "profile": "https://github.com/omahs",
       "contributions": [
-        "translation"
+        "translation",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Shiva-Sai-ssb",
+      "name": "Shiva Sai",
+      "avatar_url": "https://avatars.githubusercontent.com/u/112751524?v=4",
+      "profile": "https://github.com/Shiva-Sai-ssb",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "saurabhburade",
+      "name": "Saurabh Burade",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39492927?v=4",
+      "profile": "https://bsaurabh.xyz/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "yorkerhodes3",
+      "name": "Yorke E. Rhodes III",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17415717?v=4",
+      "profile": "https://github.com/yorkerhodes3",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "sandeepV2",
+      "name": "Sandeep Belagavi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52043035?v=4",
+      "profile": "https://github.com/sandeepV2",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "codingmickey",
+      "name": "Kartik Jolapara",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42518907?v=4",
+      "profile": "https://github.com/codingmickey",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Ekam-Bitt",
+      "name": "Ekam Bitt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/74407205?v=4",
+      "profile": "https://ekam-bitt.github.io",
+      "contributions": [
+        "maintenance"
       ]
     }
   ],
