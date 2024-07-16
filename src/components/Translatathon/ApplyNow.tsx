@@ -9,7 +9,7 @@ import DolphinImage from "@/public/images/translatathon/translatathon_dolphin.pn
 
 export const ApplyNow = () => {
   const dateToday = new Date()
-  const deadline = new Date("August 3, 2024")
+  const deadline = new Date("August 6, 2024")
 
   if (dateToday < deadline) {
     return (
