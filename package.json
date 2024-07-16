@@ -1,6 +1,7 @@
 {
   "name": "ethereum-org-website",
   "version": "8.7.1",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
