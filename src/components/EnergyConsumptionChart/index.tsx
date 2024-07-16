@@ -12,12 +12,7 @@ import ChartDataLabels from "chartjs-plugin-datalabels"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Bar } from "react-chartjs-2"
-import {
-  Box,
-  Center,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react"
+import { Box, Center, Text, useBreakpointValue } from "@chakra-ui/react"
 
 import type { Lang } from "@/lib/types"
 

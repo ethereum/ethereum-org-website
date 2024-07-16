@@ -1176,7 +1176,7 @@ const DappsPage = () => {
       image: meeds,
       alt: t("page-dapps-meeds-logo-alt"),
     },
-  ]  
+  ]
 
   const demandAggregator = [
     {
@@ -1794,7 +1794,7 @@ const DappsPage = () => {
                 <ProductList
                   category={t("page-dapps-category-community")}
                   content={community}
-                />                
+                />
               </LeftColumn>
               <RightColumn />
             </TwoColumnContent>

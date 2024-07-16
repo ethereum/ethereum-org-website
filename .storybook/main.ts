@@ -25,13 +25,13 @@ const config: StorybookConfig = {
     {
       name: "@storybook/addon-essentials",
       options: {
-        backgrounds: false
-      }
+        backgrounds: false,
+      },
     },
     "@storybook/addon-interactions",
     "storybook-react-i18next",
     "@storybook/addon-themes",
-    "@chromatic-com/storybook"
+    "@chromatic-com/storybook",
   ],
   staticDirs: ["../public"],
   framework: {
@@ -79,7 +79,7 @@ const config: StorybookConfig = {
       },
     },
 
-    reactDocgen: "react-docgen-typescript"
+    reactDocgen: "react-docgen-typescript",
   },
 }
 export default config

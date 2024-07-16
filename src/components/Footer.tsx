@@ -352,7 +352,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           isSecondary
           onClick={() => scrollIntoView("__next")}
         >
-          Go to top
+          {t("go-to-top")}
         </Button>
       </Flex>
 

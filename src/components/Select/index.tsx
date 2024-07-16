@@ -37,7 +37,7 @@ export type SelectOnChange<Option> = (
 const Select = <
   Option,
   Group extends GroupBase<Option> = GroupBase<Option>,
-  IsMulti extends boolean = false
+  IsMulti extends boolean = false,
 >({
   variant,
   ...rest
