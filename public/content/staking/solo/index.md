@@ -35,7 +35,7 @@ Home staking comes with more responsibility but provides you with maximum contro
   <Card title="Network security" emoji="🔐" description="Home staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## Considerations before staking home {#considerations-before-staking-solo}
+## Considerations before home staking {#considerations-before-staking-solo}
 
 As much as we wish that home staking was accessible and risk free to everyone, this is not reality. There are some practical and serious considerations to keep in mind before choosing to home stake your ETH.
 
