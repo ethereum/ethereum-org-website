@@ -70,3 +70,5 @@ All of the Translatathon participants will be required to join the project in Cr
 <ExpandableCard title="FAQ 4 question">
     Answer FAQ 4
 </ExpandableCard>
+
+<ApplyNow />

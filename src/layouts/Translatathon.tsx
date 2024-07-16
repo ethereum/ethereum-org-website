@@ -19,6 +19,7 @@ import {
   MobileButtonDropdown,
   Page,
 } from "@/components/MdComponents"
+import { ApplyNow } from "@/components/Translatathon/ApplyNow"
 
 import translatathonHeroImg from "@/public/images/heroes/translatathon-hero.png"
 import robotImage from '@/public/images/wallet.png'
@@ -46,6 +47,7 @@ const ContentSplit = ({children}) => {
 // Translatathon layout components
 export const translatathonComponents = {
   // Export empty object if none needed
+  ApplyNow,
   ContentSplit
 }
 
