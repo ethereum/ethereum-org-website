@@ -4,7 +4,6 @@
 
 @layer base {
   :root {
-
     --font-inter: Inter, sans-serif;
     --font-mono: "IBM Plex Mono", Courier, monospace;
 
@@ -146,15 +145,20 @@
 
 @layer base {
   body {
-    @apply bg-background font-body text-body text-sm lg:text-md;
+    @apply bg-background font-body text-sm text-body lg:text-md;
   }
 
   a {
-    @apply text-primary underline;
+    @apply text-primary underline underline-offset-3 hover:text-primary-hover focus-visible:rounded-sm focus-visible:shadow-none focus-visible:outline-offset-2 focus-visible:outline-primary-hover;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
   }
 
   h1 {
