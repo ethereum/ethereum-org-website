@@ -41,6 +41,7 @@ export const COINGECKO_API_BASE_URL =
 export const COINGECKO_API_URL_PARAMS =
   "&order=market_cap_desc&per_page=100&page=1&sparkline=false"
 export const BASE_TIME_UNIT = 3600 // 1 hour
+export const COLOR_MODE_STORAGE_KEY = "theme"
 
 // Quiz Hub
 export const PROGRESS_BAR_GAP = "4px"

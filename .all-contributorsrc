@@ -11320,7 +11320,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/71248977?v=4",
       "profile": "https://github.com/UNOFFICIALbgd",
       "contributions": [
-        "bug"
+        "bug",
+        "doc"
       ]
     },
     {
@@ -12249,7 +12250,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/73983677?v=4",
       "profile": "https://github.com/omahs",
       "contributions": [
-        "translation"
+        "translation",
+        "maintenance"
       ]
     },
     {
@@ -12277,6 +12279,33 @@
       "profile": "https://github.com/yorkerhodes3",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "sandeepV2",
+      "name": "Sandeep Belagavi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52043035?v=4",
+      "profile": "https://github.com/sandeepV2",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "codingmickey",
+      "name": "Kartik Jolapara",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42518907?v=4",
+      "profile": "https://github.com/codingmickey",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Ekam-Bitt",
+      "name": "Ekam Bitt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/74407205?v=4",
+      "profile": "https://ekam-bitt.github.io",
+      "contributions": [
+        "maintenance"
       ]
     }
   ],

@@ -12,19 +12,14 @@ import ChartDataLabels from "chartjs-plugin-datalabels"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Bar } from "react-chartjs-2"
-import {
-  Box,
-  Center,
-  Text,
-  useBreakpointValue,
-  useColorModeValue,
-} from "@chakra-ui/react"
+import { Box, Center, Text, useBreakpointValue } from "@chakra-ui/react"
 
 import type { Lang } from "@/lib/types"
 
 import { wrapLabel } from "@/lib/utils/charts"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
+import useColorModeValue from "@/hooks/useColorModeValue"
 import { useIsClient } from "@/hooks/useIsClient"
 
 // ChartDataLabels required to display y-labels on top of bars

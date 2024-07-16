@@ -1,17 +1,12 @@
 import React from "react"
 import { GrMenu } from "react-icons/gr"
-import {
-  Box,
-  type BoxProps,
-  Flex,
-  Icon,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react"
+import { Box, type BoxProps, Flex, Icon, Text } from "@chakra-ui/react"
 
 import { FAKE_DEMO_ADDRESS } from "../../constants"
 import { EthGlyphIcon } from "../../icons"
 import { NotificationPopover } from "../../NotificationPopover"
+
+import useColorModeValue from "@/hooks/useColorModeValue"
 
 type Web3AppProps = BoxProps & {
   displayUrl: string

@@ -84,6 +84,6 @@ PROPOSER_WEIGHT uint64(8)
 - [ヴィタリクによる注釈付き仕様](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#rewards-and-penalties-1)
 - [Eth2においてスラッシングを避けるためのヒント](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50)
 
-_出典_
+_ソース_
 
 - _[https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/](https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/)_
