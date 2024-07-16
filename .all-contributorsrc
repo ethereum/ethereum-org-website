@@ -12298,6 +12298,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Ekam-Bitt",
+      "name": "Ekam Bitt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/74407205?v=4",
+      "profile": "https://ekam-bitt.github.io",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
