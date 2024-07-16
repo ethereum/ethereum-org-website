@@ -36,7 +36,36 @@ Here are the important dates for the 2024 translatathon
 
 ## Participate
 
+![](../../images/translatathon/participate.png)
+
 ### Who should participate
+
+Everyone can participate [see full conditions](/translatathon/terms-and-conditions) as long as is a human over 18years old and wants to be a part and onboarded to the ethereum ecosystem
+
+<TwoColumnContent>
+  <CardContent>
+    <h3>Do I need to be a translator?</h3>
+    No!  
+    all you need is to speak/write more than one language, and we have over 50 languages available.
+  </CardContent>
+  <CardContent>
+  <h3>Do I need to know what is ethereum?</h3>
+    No!  
+    This is a leraning iniciative .......
+  </CardContent>
+</TwoColumnContent>
+
+<TwoColumnContent>
+  <CardContent>
+    <h3>I'm not sure I have time</h3>
+    It’s normal to have this reaction, you might havea full time job. this will to require more than xhours a day and you can take it as a game
+  </CardContent>
+  <CardContent>
+    <h3>Do I need a computer?</h3>
+    Preferable Yes!  
+    we will be using applications like crowdin that work better on larger screens but you can try to use on the phone
+  </CardContent>
+</TwoColumnContent>
 
 ### Step by step instructions
 

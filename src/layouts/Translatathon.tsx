@@ -54,9 +54,10 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
   <Flex
     w="full"
     direction={{ base: "column", md: "row" }}
-    align="flex-start"
+    align="stretch"
     me={{ lg: 8 }}
-    mt={16}
+    mt={8}
+    gap={8}
     {...props}
   />
 )
@@ -91,6 +92,22 @@ const HowDoesItWorkColumn = (props: ChildOnlyProp) => (
   </Flex>
 )
 
+const CardContent = (props: ChildOnlyProp) => (
+  <Flex
+    w="full"
+    m={{ base: "auto 0", lg: 0 }}
+    borderRadius={4}
+    border="1px solid"
+    borderColor="body.light"
+    direction="column"
+    px={8}
+    pb={8}
+    flex="1"
+  >
+    {props.children}
+  </Flex>
+)
+
 const CardContainer = (props: ChildOnlyProp) => (
   <Flex wrap="wrap" mx={-4} {...props} />
 )
@@ -112,6 +129,7 @@ export const translatathonComponents = {
   // Export empty object if none needed
   ApplyNow,
   CardContainer,
+  CardContent,
   ContentSplit,
   DatesAndTimeline,
   EmojiCard,
