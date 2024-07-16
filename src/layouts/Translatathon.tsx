@@ -10,6 +10,7 @@ import type { MdPageContent, SharedFrontmatter } from "@/lib/interfaces"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import { ButtonLink } from "@/components/Buttons"
+import Card from "@/components/Card"
 import { ContentHero } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
@@ -20,6 +21,7 @@ import {
   Page,
 } from "@/components/MdComponents"
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
+import { DatesAndTimeline } from "@/components/Translatathon/DatesAndTimeline"
 import { LocalCommunitiesList } from "@/components/Translatathon/LocalCommunitiesList"
 
 import translatathonHeroImg from "@/public/images/heroes/translatathon-hero.png"
@@ -88,11 +90,30 @@ const HowDoesItWorkColumn = (props: ChildOnlyProp) => (
   </Flex>
 )
 
+const CardContainer = (props: ChildOnlyProp) => (
+  <Flex wrap="wrap" mx={-4} {...props} />
+)
+
+const EmojiCard = ({ emoji, title, description }) => (
+  <Card
+    emoji={emoji}
+    title={title}
+    description={description}
+    flex="1 1 30%"
+    minW="240px"
+    m={4}
+    p={6}
+  />
+)
+
 // Translatathon layout components
 export const translatathonComponents = {
   // Export empty object if none needed
   ApplyNow,
+  CardContainer,
   ContentSplit,
+  DatesAndTimeline,
+  EmojiCard,
   HowDoesItWorkColumn,
   LocalCommunitiesList,
   TwoColumnContent,
