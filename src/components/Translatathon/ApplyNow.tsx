@@ -3,7 +3,7 @@ import { Box, Flex } from "@chakra-ui/react"
 import { ButtonLink } from "@/components/Buttons"
 import Callout from "@/components/Callout"
 
-import DolphinImage from "@/public/images/translatathon_dolphin.png"
+import DolphinImage from "@/public/images/translatathon/translatathon_dolphin.png"
 
 // TODO: Confirm deadline for applying
 

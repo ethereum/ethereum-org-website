@@ -20,8 +20,11 @@ import {
   Page,
 } from "@/components/MdComponents"
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
+import { LocalCommunitiesList } from "@/components/Translatathon/LocalCommunitiesList"
 
 import translatathonHeroImg from "@/public/images/heroes/translatathon-hero.png"
+import WhyWeDoItImage from "@/public/images/translatathon/man-baby-woman.png"
+import HowDoesItWorkImage from "@/public/images/translatathon/round-table.png"
 import robotImage from '@/public/images/wallet.png'
 
 const ContentSplit = ({children}) => {
@@ -44,11 +47,56 @@ const ContentSplit = ({children}) => {
   )
 }
 
+const TwoColumnContent = (props: ChildOnlyProp) => (
+  <Flex
+    w="full"
+    direction={{ base: "column", md: "row" }}
+    align="flex-start"
+    me={{ lg: 8 }}
+    mt={16}
+    {...props}
+  />
+)
+
+const WhyWeDoItColumn = (props: ChildOnlyProp) => (
+  <Flex w="full" m={{ base: "auto 0", lg: 0 }} me={{ lg: 8 }} direction="column">
+    <Box m="auto">
+      <Image
+        src={WhyWeDoItImage}
+        alt=''
+        height="272"
+      />
+    </Box>
+    <Box>
+      {props.children}
+    </Box>
+  </Flex>
+)
+
+const HowDoesItWorkColumn = (props: ChildOnlyProp) => (
+  <Flex w="full" m={{ base: "auto 0", lg: 0 }} ms={{ lg: 8 }} direction="column">
+    <Box m="auto">
+      <Image
+        src={HowDoesItWorkImage}
+        alt=''
+        height="272"
+      />
+    </Box>
+    <Box>
+      {props.children}
+    </Box>
+  </Flex>
+)
+
 // Translatathon layout components
 export const translatathonComponents = {
   // Export empty object if none needed
   ApplyNow,
-  ContentSplit
+  ContentSplit,
+  HowDoesItWorkColumn,
+  LocalCommunitiesList,
+  TwoColumnContent,
+  WhyWeDoItColumn
 }
 
 type TranslatathonLayoutProps = ChildOnlyProp &
