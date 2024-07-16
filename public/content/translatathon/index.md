@@ -32,7 +32,7 @@ Here are the important dates for the 2024 translatathon
 
 <DatesAndTimeline />
 
-## Translatathon in a nut shell
+<TranslatathonInANutshell />
 
 ## Participate
 

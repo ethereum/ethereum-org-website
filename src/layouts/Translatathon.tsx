@@ -23,6 +23,7 @@ import {
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
 import { DatesAndTimeline } from "@/components/Translatathon/DatesAndTimeline"
 import { LocalCommunitiesList } from "@/components/Translatathon/LocalCommunitiesList"
+import { TranslatathonInANutshell } from "@/components/Translatathon/TranslatathonInANutshell"
 
 import translatathonHeroImg from "@/public/images/heroes/translatathon-hero.png"
 import WhyWeDoItImage from "@/public/images/translatathon/man-baby-woman.png"
@@ -116,6 +117,7 @@ export const translatathonComponents = {
   EmojiCard,
   HowDoesItWorkColumn,
   LocalCommunitiesList,
+  TranslatathonInANutshell,
   TwoColumnContent,
   WhyWeDoItColumn
 }
