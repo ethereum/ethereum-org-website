@@ -1880,6 +1880,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/yorkerhodes3"><img src="https://avatars.githubusercontent.com/u/17415717?v=4?s=100" width="100px;" alt="Yorke E. Rhodes III"/><br /><sub><b>Yorke E. Rhodes III</b></sub></a><br /><a href="#content-yorkerhodes3" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/sandeepV2"><img src="https://avatars.githubusercontent.com/u/52043035?v=4?s=100" width="100px;" alt="Sandeep Belagavi"/><br /><sub><b>Sandeep Belagavi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AsandeepV2" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/codingmickey"><img src="https://avatars.githubusercontent.com/u/42518907?v=4?s=100" width="100px;" alt="Kartik Jolapara"/><br /><sub><b>Kartik Jolapara</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=codingmickey" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://ekam-bitt.github.io"><img src="https://avatars.githubusercontent.com/u/74407205?v=4?s=100" width="100px;" alt="Ekam Bitt"/><br /><sub><b>Ekam Bitt</b></sub></a><br /><a href="#maintenance-Ekam-Bitt" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
