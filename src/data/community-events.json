@@ -392,6 +392,14 @@
     "location": "Nairobi & Kilifi, Kenya",
     "description": "Welcome to the largest Ethereum event happening in Africa! Join the BlockTrain from Nairobi to celebrate an ETH-festival held underneath ancient Boabab trees in Kilifi."
   },
+   {
+    "title": "Ethereum Singapore,
+    "startDate": "2024-09-16",
+    "endDate": "2024-09-23",
+    "to": "https://ethereumsingapore.com/",
+    "location": "Singapore, SG",
+    "description": "Ethereum Singapore week is a festival of innovation, hapennin in collaboration with Singpaore's Art Science Museum. The festival features a number of summits, and workshops and, and also a physical exhibiton on the 10 years of Ethereum."
+  },
   {
     "title": "TOKEN2049",
     "startDate": "2024-09-18",
