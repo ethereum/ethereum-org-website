@@ -401,6 +401,14 @@
     "description": "TOKEN2049 is organized annually in Dubai and Singapore, where founders and executives in the web3 industry share their view on the industry"
   },
   {
+    "title": "Ethereum Singapore",
+    "startDate": "2024-04-16",
+    "endDate": "2024-04-23",
+    "to": "https://ethereumsingapore.com/",
+    "location": "Singapore, Singapore",
+    "description": "Come by Singapore for what is set to be one of the largest gatherings of the Ethereum community. We can’t wait to host you!",
+  },
+  {
     "title": "ETHGlobal Singapore",
     "to": "https://ethglobal.com/events/singapore2024",
     "location": "Singapore, Singapore",
