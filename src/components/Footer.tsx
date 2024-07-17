@@ -316,7 +316,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
             <h3 className="my-5 text-sm font-bold">
               <Translation id={section.title} />
             </h3>
-            <List className="m-0 mb-4 text-sm">
+            <List className="m-0 mb-4 list-none text-sm">
               {section.links.map((link, linkIdx) => (
                 <ListItem key={linkIdx} className="mb-4">
                   <BaseLink
@@ -346,7 +346,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
             </BaseLink>
           ))}
         </div>
-        <List className="m-0 flex flex-col flex-wrap justify-center p-5 text-sm font-normal sm:flex-row sm:justify-between md:justify-center">
+        <List className="m-0 flex list-none flex-col flex-wrap justify-center p-5 text-sm font-normal sm:flex-row sm:justify-between md:justify-center">
           {dipperLinks.map(({ to, text }) => (
             <ListItem key={text} className="px-2 text-center">
               <BaseLink
