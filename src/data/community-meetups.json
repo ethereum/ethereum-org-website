@@ -245,12 +245,12 @@
     "location": "Lagos",
     "link": "https://www.meetup.com/Lagos-Ethereum-Meetup/"
   },
-  {
+    {
     "title": "Ethereum Singapore",
     "emoji": ":singapore:",
     "location": "Singapore",
-    "link": "https://www.meetup.com/Ethereum-Singapore/"
-  },
+    "link": "https://ethereumsingapore.com/"
+    }, 
   {
     "title": "Cape Town Ethereum Meetup",
     "emoji": ":south_africa:",
