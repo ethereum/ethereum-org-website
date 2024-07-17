@@ -316,7 +316,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
             <h3 className="my-5 text-sm font-bold">
               <Translation id={section.title} />
             </h3>
-            <List className="text-sm">
+            <List className="m-0 mb-4 text-sm">
               {section.links.map((link, linkIdx) => (
                 <ListItem key={linkIdx} className="mb-4">
                   <BaseLink
