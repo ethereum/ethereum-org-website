@@ -1,8 +1,9 @@
 import * as React from "react"
-import { Center, ListItem, Stack, Text, UnorderedList } from "@chakra-ui/react"
+import { Center, Stack, Text } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import Link from "../Link"
+import { ListItem, UnorderedList } from "../ui/list"
 
 const meta = {
   title: "Molecules / Navigation / Links",
