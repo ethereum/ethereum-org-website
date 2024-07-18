@@ -1,5 +1,5 @@
 ---
-title: Decentralized exchange (DEX) best design practices
+title: Decentralized exchange (DEX) design best practices
 description: A guide explaining UX/UI decisions for swapping tokens.
 lang: en
 ---
