@@ -90,7 +90,9 @@ const TableOfContents = ({
           {t("edit-page")}
         </ButtonLink>
       )}
-      <Box textTransform="uppercase">{t("on-this-page")}</Box>
+      <Box textTransform="uppercase" color="body.medium">
+        {t("on-this-page")}
+      </Box>
       <List m={0} spacing="2" {...outerListProps}>
         <ItemsList
           items={items}
