@@ -2,7 +2,6 @@ import { AnchorHTMLAttributes, forwardRef } from "react"
 import NextLink, { type LinkProps as NextLinkProps } from "next/link"
 import { useRouter } from "next/router"
 import { RxExternalLink } from "react-icons/rx"
-import { Icon } from "@chakra-ui/react"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 import { cn } from "@/lib/utils/cn"
@@ -103,13 +102,10 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         {children}
         <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
         {!hideArrow && (
-          <Icon
-            as={RxExternalLink}
-            boxSize="6"
-            p="1"
-            verticalAlign="middle"
-            me="-1"
-            transform={flipForRtl}
+          <RxExternalLink
+            className={cn("-me-1 inline h-6 w-6 p-1 align-middle", {
+              transform: flipForRtl,
+            })}
           />
         )}
       </a>
