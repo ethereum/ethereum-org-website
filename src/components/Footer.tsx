@@ -6,6 +6,7 @@ import type { FooterLink, FooterLinkSection } from "@/lib/types"
 
 import Translation from "@/components/Translation"
 
+import { cn } from "@/lib/utils/cn"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
 import { BaseLink } from "../../tailwind/Link"
@@ -298,6 +299,9 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
     },
   ]
 
+  const footerLinkClassName =
+    "text-body-medium no-underline hover:text-primary hover:after:text-primary"
+
   return (
     <footer className="px-8 py-4">
       <div className="flex flex-wrap items-center justify-center gap-8 border-t border-body-light py-4 md:justify-between">
@@ -321,7 +325,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
                 <ListItem key={linkIdx} className="mb-4">
                   <BaseLink
                     href={link.to}
-                    className="text-body-medium no-underline hover:text-primary hover:after:text-primary"
+                    className={footerLinkClassName}
                     isPartiallyActive={false}
                   >
                     {link.text}
@@ -351,7 +355,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
             <ListItem key={text} className="px-2 text-center">
               <BaseLink
                 href={to}
-                className="w-full text-body-medium no-underline hover:text-primary hover:after:text-primary sm:w-auto"
+                className={cn("w-full sm:w-auto", footerLinkClassName)}
                 isPartiallyActive={false}
               >
                 {text}
