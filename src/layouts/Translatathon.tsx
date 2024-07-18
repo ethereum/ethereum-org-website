@@ -23,7 +23,9 @@ import {
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
 import { DatesAndTimeline } from "@/components/Translatathon/DatesAndTimeline"
 import { LocalCommunitiesList } from "@/components/Translatathon/LocalCommunitiesList"
+import { TranslatathonCalendar } from "@/components/Translatathon/TranslatathonCalendar"
 import { TranslatathonInANutshell } from "@/components/Translatathon/TranslatathonInANutshell"
+import { TranslationHubCallout } from "@/components/Translatathon/TranslationHubCallout"
 
 import translatathonHeroImg from "@/public/images/heroes/translatathon-hero.png"
 import WhyWeDoItImage from "@/public/images/translatathon/man-baby-woman.png"
@@ -124,6 +126,8 @@ const EmojiCard = ({ emoji, title, description }) => (
   />
 )
 
+
+
 // Translatathon layout components
 export const translatathonComponents = {
   // Export empty object if none needed
@@ -135,6 +139,8 @@ export const translatathonComponents = {
   EmojiCard,
   HowDoesItWorkColumn,
   LocalCommunitiesList,
+  TranslatathonCalendar,
+  TranslationHubCallout,
   TranslatathonInANutshell,
   TwoColumnContent,
   WhyWeDoItColumn

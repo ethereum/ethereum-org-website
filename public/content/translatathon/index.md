@@ -58,7 +58,7 @@ Everyone can participate [see full conditions](/translatathon/terms-and-conditio
 <TwoColumnContent>
   <CardContent>
     <h3>I'm not sure I have time</h3>
-    It’s normal to have this reaction, you might havea full time job. this will to require more than xhours a day and you can take it as a game
+    It’s normal to have this reaction, you might havea full time job.this will to require more than xhours a day and you can take it as a game
   </CardContent>
   <CardContent>
     <h3>Do I need a computer?</h3>
@@ -70,5 +70,15 @@ Everyone can participate [see full conditions](/translatathon/terms-and-conditio
 ### Step by step instructions
 
 ## Stay updated
+
+<TranslationHubCallout>
+  <h3 style={{margin:0}}>Translataton hubs</h3>
+
+  THis year we bring IRL community hugs to join local communities and help translate.
+
+  this hubs are located all over the world, find out if there is one close to you and jion the community
+</TranslationHubCallout>
+
+<TranslatathonCalendar />
 
 <ApplyNow />

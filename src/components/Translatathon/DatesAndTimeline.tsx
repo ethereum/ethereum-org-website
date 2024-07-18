@@ -46,7 +46,7 @@ const dates = [
 ]
 
 export const DatesAndTimeline = () => {
-  const todaysDate = new Date()
+  const todaysDate = new Date('August 9, 2024')
 
   return (
     <Flex direction="column" p={4}>
