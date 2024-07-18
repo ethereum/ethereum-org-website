@@ -23,6 +23,7 @@ import {
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
 import { DatesAndTimeline } from "@/components/Translatathon/DatesAndTimeline"
 import { LocalCommunitiesList } from "@/components/Translatathon/LocalCommunitiesList"
+import { StepByStepInstructions } from "@/components/Translatathon/StepByStepInstructions"
 import { TranslatathonCalendar } from "@/components/Translatathon/TranslatathonCalendar"
 import { TranslatathonInANutshell } from "@/components/Translatathon/TranslatathonInANutshell"
 import { TranslationHubCallout } from "@/components/Translatathon/TranslationHubCallout"
@@ -139,6 +140,7 @@ export const translatathonComponents = {
   EmojiCard,
   HowDoesItWorkColumn,
   LocalCommunitiesList,
+  StepByStepInstructions,
   TranslatathonCalendar,
   TranslationHubCallout,
   TranslatathonInANutshell,
