@@ -2,7 +2,6 @@
 
 import dynamic from "next/dynamic"
 
-// import { useRouter } from "next/router"
 import type { Root } from "@/lib/types"
 
 import Footer from "@/components/Footer"

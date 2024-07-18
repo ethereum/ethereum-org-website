@@ -300,7 +300,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
 
   return (
     <footer className="px-8 py-4">
-      <div className="flex flex-wrap items-center justify-center gap-8 border-t border-body-light pb-4 pt-4 md:justify-between">
+      <div className="flex flex-wrap items-center justify-center gap-8 border-t border-body-light py-4 md:justify-between">
         <p className="text-sm italic text-body-medium">
           <Translation id="website-last-updated" />: {lastDeployLocaleTimestamp}
         </p>
