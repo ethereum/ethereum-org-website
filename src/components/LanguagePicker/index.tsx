@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import {
   Box,
   Flex,
@@ -5,6 +6,7 @@ import {
   FormLabel,
   Input,
   InputGroup,
+  InputLeftElement,
   InputRightElement,
   Kbd,
   Menu,
@@ -16,11 +18,12 @@ import {
   useEventListener,
 } from "@chakra-ui/react"
 
-import { LocaleDisplayInfo } from "@/lib/types"
+import { Lang, LocaleDisplayInfo } from "@/lib/types"
 
 import { BaseLink } from "@/components/Link"
 
 import { isMobile } from "@/lib/utils/isMobile"
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import MenuItem from "./MenuItem"
 import { MobileCloseBar } from "./MobileCloseBar"
@@ -75,6 +78,9 @@ const LanguagePicker = ({
       eventAction: "Translation program link (menu footer)",
       eventName: "/contributing/translation-program",
     })
+
+  const { locale } = useRouter()
+  const isRtl = isLangRightToLeft(locale! as Lang)
 
   return (
     <Menu isLazy placement={placement} autoSelect={false} {...disclosure}>
@@ -132,6 +138,7 @@ const LanguagePicker = ({
                 mb="2"
                 bg="background.base"
                 color="body.base"
+                sx={isRtl ? { pl: 10, pr: 2 } : {}}
                 onKeyDown={(e) => {
                   // Navigate to first result on enter
                   if (e.key === "Enter") {
@@ -150,22 +157,41 @@ const LanguagePicker = ({
                 }}
                 onFocus={handleInputFocus}
               />
-              <InputRightElement hideBelow="md" cursor="text">
-                <Kbd
-                  fontSize="sm"
-                  lineHeight="none"
-                  me="2"
-                  p="1"
-                  py="0.5"
-                  ms="auto"
-                  border="1px"
-                  borderColor="disabled"
-                  color="disabled"
-                  rounded="base"
-                >
-                  \
-                </Kbd>
-              </InputRightElement>
+              {isRtl ? (
+                <InputLeftElement hideBelow="md" cursor="text">
+                  <Kbd
+                    fontSize="sm"
+                    lineHeight="none"
+                    ms="4"
+                    p="1"
+                    py="0.5"
+                    me="auto"
+                    border="1px"
+                    borderColor="disabled"
+                    color="disabled"
+                    rounded="base"
+                  >
+                    /
+                  </Kbd>
+                </InputLeftElement>
+              ) : (
+                <InputRightElement hideBelow="md" cursor="text">
+                  <Kbd
+                    fontSize="sm"
+                    lineHeight="none"
+                    me="2"
+                    p="1"
+                    py="0.5"
+                    ms="auto"
+                    border="1px"
+                    borderColor="disabled"
+                    color="disabled"
+                    rounded="base"
+                  >
+                    \
+                  </Kbd>
+                </InputRightElement>
+              )}
             </InputGroup>
 
             {filteredNames.map((displayInfo, index) => (

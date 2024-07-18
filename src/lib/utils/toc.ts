@@ -3,7 +3,7 @@ import { ListProps } from "@chakra-ui/react"
 import type { ToCItem, TocNodeType } from "@/lib/types"
 
 // RegEx patterns
-const customIdRegEx = /^.+(\s*\{#([^\}]+?)\}\s*)$/
+const customIdRegEx = /^.+(\s*\{#([^}]+?)\}\s*)$/
 const emojiRegEx = /<Emoji [^/]+\/>/g
 const h1RegEx = /mdx\("h1"/g
 

@@ -107,6 +107,7 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 - [CureDAO: コミュニティ所有のプレシジョンヘルスプラットフォーム](https://docs.curedao.org/)
 - [IdeaMarkets: 分散型科学の信ぴょう性の有効化](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
+- [ValleyDAO: オープンなグローバルコミュニティで合成生物学研究のファンディングおよび翻訳に関するサポートを提供](https://www.valleydao.bio)
 
 新しいプロジェクトを提案する際には[ポリシー一覧](/contributing/adding-desci-projects/)をご覧ください。
 

@@ -36,7 +36,7 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
   const isOpen = !!pathId
 
   const clearUrlParams = () => {
-    const pathWithoutParams = router.asPath.replace(/\?[^\#]*/, "")
+    const pathWithoutParams = router.asPath.replace(/\?[^#]*/, "")
     router.replace(pathWithoutParams)
   }
 

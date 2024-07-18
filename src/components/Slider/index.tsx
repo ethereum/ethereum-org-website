@@ -1,4 +1,4 @@
-import React, { ReactNode, useCallback, useEffect, useState } from "react"
+import React, { useCallback, useEffect, useState } from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import { MdChevronLeft, MdChevronRight } from "react-icons/md"
 import { Box, Center, Flex, IconButton, Stack } from "@chakra-ui/react"

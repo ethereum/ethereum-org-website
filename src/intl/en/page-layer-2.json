@@ -126,7 +126,7 @@
   "boba-description": "Boba is an Optimistic Rollup originally forked from Optimism which is a scaling solution that aims to reduce gas fees, improve transaction throughput, and extend the capabilities of smart contracts.",
   "base-description": "Base is a secure, low-cost, developer-friendly Ethereum L2 built to bring the next billion users to web3. It is an Ethereum L2, incubated by Coinbase and built on the open-source OP Stack.",
   "loopring-description": "Loopring's zkRollup L2 solution aims to offer the same security guarantees as Ethereum mainnet, with a big scalability boost: throughput increased by 1000x, and cost reduced to just 0.1% of L1.",
-  "zksync-description": "zkSync is a ZK Rollup that aims to scale Ethereum and its values to mainstream adoption, without degrading security or decentralization.",
+  "zksync-description": "ZKsync is a ZK Rollup that aims to scale Ethereum and its values to mainstream adoption, without degrading security or decentralization.",
   "zkspace-description": "The ZKSpace platform consists of three main parts: a layer 2 AMM DEX utilizing ZK-Rollups technology called ZKSwap, a payment service called ZKSquare, and an NFT marketplace called ZKSea.",
   "aztec-description": "Aztec Network is the first private zk-rollup on Ethereum, enabling decentralized applications to access privacy and scale.",
   "starknet-description": "Starknet is a Validity Rollup Layer 2. It provides high throughput, low gas costs, and retains Ethereum Layer 1 levels of security.",
@@ -134,5 +134,7 @@
   "layer-2-ecosystem-portal": "Ecosystem Portal",
   "layer-2-token-lists": "Token Lists",
   "layer-2-explore": "Explore",
-  "page-dapps-ready-button": "Go"
+  "page-dapps-ready-button": "Go",
+  "layer-2-information": "Information",
+  "layer-2-wallet-managers": "Wallet managers"
 }

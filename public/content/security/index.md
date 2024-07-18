@@ -81,7 +81,7 @@ It is impossible to stop scammers completely, but we can make them less effectiv
 
 ![Twitter link phishing](./twitterPhishingScam.png)
 
-There is a method for spoofing Twitter's (also known as X) link preview feature (unfurling) to potentially deceive users into thinking they are visiting a legitimate website. This technique exploits Twitter's mechanism for generating previews of URLs shared in tweets, and shows _from ethereum.org_ for example (shown above), when in fact they are being redirected to a malicious site. 
+There is a method for spoofing Twitter's (also known as X) link preview feature (unfurling) to potentially deceive users into thinking they are visiting a legitimate website. This technique exploits Twitter's mechanism for generating previews of URLs shared in tweets, and shows _from ethereum.org_ for example (shown above), when in fact they are being redirected to a malicious site.
 
 Always check that you are on the right domain, especially after clicking a link.
 
@@ -243,15 +243,7 @@ Using **Two-Factor Authentication (2FA)** provides an additional *security fa
 
 <InfoBanner emoji=":lock:">
   <div>
-    Note: Using SMS-based 2FA is susceptible to 
-    <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
-      SIM jacking
-    </a>
-     and is not secure. For the best security, use a service like{" "}
-    <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
-      Google Authenticator
-    </a>
-     or <a href="https://authy.com/">Authy</a>.
+    Note: Using SMS-based 2FA is susceptible to <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> and is not secure. For the best security, use a service like <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> or <a href="https://authy.com/">Authy</a>.
   </div>
 </InfoBanner>
 

@@ -63,7 +63,7 @@ lang: ja
 6. これで完了です！ アプリを使い始めましょう [dAppsページ](/dapps/#explore)にて、興味深いプロジェクトを見つけることができます。 <br />
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div>さらに詳しく知りたいですか？</div>
+  <div>詳細をご希望の場合は、</div>
   <ButtonLink to="/guides/">
     他のガイドを参照する
   </ButtonLink>

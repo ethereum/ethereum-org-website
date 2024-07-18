@@ -261,7 +261,7 @@ const Layer2Page = () => {
       <PageMetadata
         title={t("layer-2-hero-title")}
         description={t("layer-2-metadata-description")}
-        image="/heroes/layer-2-hub-hero.jpg"
+        image="/images/heroes/layer-2-hub-hero.jpg"
       />
       {/* Hero Section */}
       <HubHero {...heroContent} />
@@ -615,14 +615,14 @@ const Layer2Page = () => {
         <TwoColumnContent>
           <Box flex="50%">
             <ProductList
-              category="Information"
+              category={t("layer-2-information")}
               content={toolsData.information}
               actionLabel={t("page-dapps-ready-button")}
             />
           </Box>
           <Box flex="50%">
             <ProductList
-              category="Wallet managers"
+              category={t("layer-2-wallet-managers")}
               content={toolsData.walletManagers}
               actionLabel={t("page-dapps-ready-button")}
             />

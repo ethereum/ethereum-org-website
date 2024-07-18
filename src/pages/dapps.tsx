@@ -91,6 +91,7 @@ import lido from "@/public/images/dapps/lido.png"
 import loopring from "@/public/images/dapps/loopring.png"
 import marble from "@/public/images/dapps/marble.png"
 import matcha from "@/public/images/dapps/matcha.png"
+import meeds from "@/public/images/dapps/meeds.png"
 import mirror from "@/public/images/dapps/mirror.png"
 import nexus from "@/public/images/dapps/nexus.png"
 import nifty from "@/public/images/dapps/nifty.png"
@@ -1167,6 +1168,16 @@ const DappsPage = () => {
     },
   ]
 
+  const community = [
+    {
+      title: "Meeds",
+      description: t("page-dapps-dapp-description-meeds"),
+      link: "https://meeds.io",
+      image: meeds,
+      alt: t("page-dapps-meeds-logo-alt"),
+    },
+  ]
+
   const demandAggregator = [
     {
       title: "KyberSwap",
@@ -1554,6 +1565,16 @@ const DappsPage = () => {
                 />
               </RightColumn>
             </TwoColumnContent>
+            <Box py={4} w="full">
+              <Text m={0} fontWeight="bold">
+                {t("page-dapps:page-dapps-explore-title")}
+              </Text>
+              <Text m={0}>
+                <InlineLink href="https://www.ethereum-ecosystem.com/apps">
+                  {t("page-dapps:page-dapps-explore")}
+                </InlineLink>
+              </Text>
+            </Box>
             <CalloutBanner
               mt={32}
               mx={0}
@@ -1768,6 +1789,27 @@ const DappsPage = () => {
                 />
               </RightColumn>
             </TwoColumnContent>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList
+                  category={t("page-dapps-category-community")}
+                  content={community}
+                />
+              </LeftColumn>
+              <RightColumn />
+            </TwoColumnContent>
+          </Content>
+        )}
+        {selectedCategory !== CategoryType.FINANCE && (
+          <Content>
+            <Text m={0} fontWeight="bold">
+              {t("page-dapps:page-dapps-explore-title")}
+            </Text>
+            <Text m={0}>
+              <InlineLink href="https://www.ethereum-ecosystem.com/apps">
+                {t("page-dapps:page-dapps-explore")}
+              </InlineLink>
+            </Text>
           </Content>
         )}
         {/* General content for all categories */}

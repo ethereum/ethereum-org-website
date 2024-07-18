@@ -6,13 +6,11 @@ import { IExternalTutorial, ITutorial } from "@/pages/developers/tutorials"
 
 // Take all tutorials, and return a list of tutorials for a specific locale
 export const filterTutorialsByLang = (
-  internalTutorials: any,
+  internalTutorials: ITutorial[],
   externalTutorials: Array<IExternalTutorial>,
   locale: Lang
 ): Array<ITutorial> => {
   const internalTutorialsMap = internalTutorials.map((tutorial) => {
-    const lang = tutorial?.lang || "en"
-
     return {
       to: tutorial.to || "",
       title: tutorial?.title || "",

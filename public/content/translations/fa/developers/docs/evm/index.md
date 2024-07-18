@@ -63,7 +63,6 @@ EVM به صورت یک [ماشین پشته‌ای](https://wikipedia.org/wiki/S
 - [Py-EVM](https://github.com/ethereum/py-evm) ‏- _‏پایتون_
 - [evmone](https://github.com/ethereum/evmone) ‏- _سی‌پلاس‌پلاس_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) ‏- _جاوا اسکریپت_
-- [eEVM](https://github.com/microsoft/eevm) ‏- _سی‌پلاس‌پلاس_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## اطلاعات بیشتر {#further-reading}

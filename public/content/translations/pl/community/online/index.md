@@ -22,7 +22,7 @@ Setki tysięcy entuzjastów Ethereum gromadzi się na tych forach internetowych,
 ## Czaty {#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> — społeczność skoncentrowana na oferowaniu wsparcia w zarządzaniu projektami rozwoju Ethereum</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> — czat Discord prowadzony przez ETHGlobal: społeczność internetowa dla hakerów Ethereum na całym świecie</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://ethglobal.com/discord">Ethereum Hackers</Link> — czat Discord prowadzony przez ETHGlobal: społeczność internetowa dla hakerów Ethereum na całym świecie</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> — społeczność Discord skupiająca się na rozwoju Ethereum</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link> — prowadzone przez społeczność wskazówki, edukacja, wsparcie i zasoby dla obecnych i potencjalnych stakerów</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Zespół strony internetowej ethereum.org</Link> — wpadnij i porozmawiaj o tworzeniu i projektowaniu strony internetowej ethereum.org z zespołem i ludźmi ze społeczności</SocialListItem>

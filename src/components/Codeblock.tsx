@@ -6,15 +6,17 @@ import Highlight, {
   PrismTheme,
 } from "prism-react-renderer"
 import Prism from "prism-react-renderer/prism"
-import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
+import { Box, BoxProps, Flex } from "@chakra-ui/react"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
+
+import { LINES_BEFORE_COLLAPSABLE } from "@/lib/constants"
+
 // https://github.com/FormidableLabs/prism-react-renderer/tree/master#custom-language-support
+import useColorModeValue from "@/hooks/useColorModeValue"
 ;(typeof global !== "undefined" ? global : window).Prism = Prism
 require("prismjs/components/prism-solidity")
-
-const LINES_BEFORE_COLLAPSABLE = 8
 
 const TopBarItem = (props: BoxProps) => {
   const bgColor = useColorModeValue("#f7f7f7", "#363641")
@@ -236,8 +238,8 @@ const Codeblock = ({
     className = codeLanguage || ""
   }
 
-  const matches = className?.match(/language-(?<lang>.*)/)
-  const language = matches?.groups?.lang || ""
+  const matches = className?.match(/language-(.*)/)
+  const language = matches?.[1] || ""
 
   const shouldShowCopyWidget = ["js", "json", "python", "solidity"].includes(
     language
@@ -276,6 +278,7 @@ const Codeblock = ({
               style={style}
               className={className}
               pt={hasTopBar ? "2.75rem" : 6}
+              pb={6}
               ps={4}
               m={0}
               overflow="visible"

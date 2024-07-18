@@ -91,6 +91,24 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Microsoft Learn (Ethereum networks)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - connect to and deploy Ethereum networks
 - [Microsoft Learn (blockchains)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - entry into blockchain development
 
+### Hebrew {#he}
+
+- [Udi Wertheimer - What bitcoiners can learn from Ethereum](https://www.cryptojungle.co.il/udi-wertheimer-what-bitcoiners-can-learn-from-ethereum/)
+- [Omer Greismen (OpenZeppelin) - How We Prevented a 15 Billion Dollars Smart Contract Hack](https://www.cryptojungle.co.il/omer-greisman-openzeppelin/)
+- [Shy Datika (INX) - Tokenization and the future of securities, including is Ethereum a security](https://www.cryptojungle.co.il/shy-datika-tokenization/)
+- [Roy Confino (Lemonade) - Insurance @ Ethereum](https://www.cryptojungle.co.il/roy-confino-insurance/)
+- [Idan Ofrat (Fireblocks) - Instutional Adoption](https://www.cryptojungle.co.il/idan-ofrat-fireblocks/)
+- [Gal Weizman (MetaMask) - What is MetaMask](https://www.cryptojungle.co.il/gal-weizman-metamask/)
+- [Dror Aviely (Consensys) - The center of Ethereum](https://www.cryptojungle.co.il/dror-aviely-ethereum-center/)
+- [Nir Rozin - Being a cryptopunk](https://www.cryptojungle.co.il/nir-rozin-cryptopunk/)
+- [Adan Kedem - Gaming & Metaverse](https://www.cryptojungle.co.il/adan-kedem-web3-gaming/)
+- [Uri Kolodny (Starkware) - Ethereum and blockchain layers](https://www.cryptojungle.co.il/uri-kolodny-starkware/)
+- [Udi Wertheimer - Ethereum 2.0 vs competition](https://www.cryptojungle.co.il/udi-on-eth2/)
+- [Ben Samocha (myself) - Ethereum 2.0 - an opportunity?](https://www.cryptojungle.co.il/etherurm2-week-summary/)
+- [Alon Muroch (Bloxstaking) - What is Ethereum 2.0?](https://www.cryptojungle.co.il/alon-moroch-eth2/)
+- [Eilon Aviv (Collider Ventures) - What can go wrong with Ethereum 2.0](https://www.cryptojungle.co.il/eilon-aviv-eth2-0/)
+- [Eilon Aviv (Collider Ventures) - Why do we need Ethereum 2.0](https://www.cryptojungle.co.il/eilon-aviv-ethereum-2-0/)
+
 ### Italian {#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) - Ethereum education, events, and news, focusing on smart contracts and blockchain technology
@@ -110,6 +128,8 @@ If you are bilingual and want to help us reach more people, you can also get inv
 ### Russian {#ru}
 
 - [Cyber Academy](https://cyberacademy.dev) - educational space for web3 builders
+- [Forklog](https://forklog.com) - news and educational articles about crypto in general, existing technologies and future upgrades of different blockchains
+- [BeInCrypto](https://ru.beincrypto.com) - news, crypto price analysis and non-technical articles with simple explanations about everything in crypto
 
 ### Spanish {#es}
 

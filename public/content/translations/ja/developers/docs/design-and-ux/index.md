@@ -12,7 +12,7 @@ lang: ja
 
 効果的なデザインは、視覚的に魅力的なユーザーインターフェイスを作成するだけにとどまりません。 ユーザーのニーズ、目的、推進要因などを深く理解することが伴います。 そのため、すべてのデザイナーが[**ダイヤモンドプロセス**](https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model))などのデザインプロセスを採用することをお勧めします。これは、仕事が意図的であることを確実にします。
 
-- [Web3では、より多くのUXリサーチャーとデザイナーが必要](https://akasha.org/blog/2022/10/11/akasha-conversation-09-web3-ux-researchers-and-designers) - 現在のデザイン成熟度の概要
+- [Web3では、より多くのUXリサーチャーとデザイナーが必要](https://blog.akasha.org/akasha-conversations-9-web3-needs-more-ux-researchers-and-designers) - 現在のデザイン成熟度の概要
 - [web3におけるUXリサーチの簡単なガイド](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1) - リサーチ方法の簡単なガイド
 - [Web3におけるUXデザインのアプローチ方法](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - 定量的リサーチと定性的リサーチの概要とその2つの違い (6分間のビデオ)
 - [Web3のUXリサーチャーになること](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) - Web3のUXリサーチャーがどのようなものかついての個人的な見解
@@ -79,7 +79,7 @@ lang: ja
 
 ## デザインシステム {#design-systems}
 
-- [オプティミズムデザイン](https://www.figma.com/@oplabs) (Figma)
+- [オプティミズムデザイン](https://www.figma.com/@optimism) (Figma)
 - [Ethereum.orgデザインシステム](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity、Polygonによるデザインシステム](https://www.figma.com/community/file/1073921725197233598/finity-design-system) (Figma)
 - [Klerosデザインシステム](https://www.figma.com/community/file/999852250110186964/kleros-design-system) (Figma)

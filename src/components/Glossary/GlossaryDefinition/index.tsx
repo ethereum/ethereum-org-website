@@ -1,9 +1,9 @@
 import { ComponentProps } from "react"
-import { Box, type HeadingProps, Text } from "@chakra-ui/react"
+import { type HeadingProps, Text, VStack } from "@chakra-ui/react"
 
+import Heading from "@/components/Heading"
 import IdAnchor from "@/components/IdAnchor"
 import InlineLink from "@/components/Link"
-import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
 
 import { DEFAULT_GLOSSARY_NS } from "@/lib/constants"
@@ -36,27 +36,17 @@ const GlossaryDefinition = ({
       position: "relative",
     } as HeadingProps
   }
-  const commonHeadingProps = (id?: string): HeadingProps => ({
-    fontWeight: 700,
-    lineHeight: 1.4,
-    ...headingPropsForAnchor(id),
-  })
-  const Heading3 = ({ id, children, ...rest }: HeadingProps) => (
-    <OldHeading as="h3" {...commonHeadingProps(id)} fontSize="2xl" {...rest}>
-      <IdAnchor id={id} />
-      {children}
-    </OldHeading>
-  )
 
   return (
-    <Box textAlign="start">
-      <Heading3 id={term}>
+    <VStack spacing={4} align="stretch" textAlign="start" mb={8}>
+      <Heading size="md" {...headingPropsForAnchor(term)}>
+        <IdAnchor id={term} />
         <Translation
           id={term + "-term"}
           options={options}
           transform={components}
         />
-      </Heading3>
+      </Heading>
       {/**
        * `as="span"` prevents hydration warnings for strings that contain
        * elements that cannot be nested inside `p` tags, like `ul` tags
@@ -70,7 +60,7 @@ const GlossaryDefinition = ({
           transform={components}
         />
       </Text>
-    </Box>
+    </VStack>
   )
 }
 
