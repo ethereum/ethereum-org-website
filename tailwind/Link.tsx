@@ -77,8 +77,6 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 
   const commonProps = {
     ref,
-    target: isExternal ? "_blank" : undefined,
-    rel: isExternal ? "noopener" : undefined,
     ...props,
     className: cn(className, { [activeClassName]: isActive }),
     href,
@@ -87,6 +85,8 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   if (isExternal) {
     return (
       <a
+        target="_blank"
+        rel="noopener"
         onClick={() =>
           trackCustomEvent(
             customEventOptions ?? {
@@ -114,7 +114,9 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 
   if (isInternalPdf) {
     return (
-      <a
+      <NextLink
+        target="_blank"
+        rel="noopener"
         // disable locale prefixing for internal PDFs
         // TODO: add i18n support using a rehype plugin (similar as we do for
         // images)
@@ -132,7 +134,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         {...commonProps}
       >
         {children}
-      </a>
+      </NextLink>
     )
   }
 
