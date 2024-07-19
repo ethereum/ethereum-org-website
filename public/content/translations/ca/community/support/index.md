@@ -12,11 +12,11 @@ Esteu buscant el suport oficial d'Ethereum? La primera cosa que heu de saber és
 
 Entendre la realitat descentralitzada d'Ethereum és vital, ja que qualsevol que afirmi ser el suport oficial d'Ethereum probablement us estarà intentant estafar! La millor forma de protegir-se contra els estafadors és educant-se un mateix i prendre proteccions de forma segura.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Seguretat i prevenció d'estafes a Ethereum
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Apreneu sobre els fonaments d'Ethereum
 </DocLink>
 

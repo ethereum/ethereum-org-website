@@ -110,11 +110,11 @@ Ang mga browser extension tulad ng mga Chrome extension o Add-on para sa Firefox
 
 Ang isa sa mga pangunahing dahilan kung bakit nasa-scam ang mga tao sa crypto ay kakulangan sa pag-unawa. Halimbawa, kung hindi mo nauunawaan na ang Ethereum network ay decentralized at hindi pagmamay-ari ng kahit sino, madaling maging biktima ng isang taong nagpapanggap na customer service agent na nangangakong ibabalik ang nawawalang ETH mo kapalit ng iyong mga pribadong key. Napakagandang puhunan ng pag-aaral sa kung paano gumagana ang Ethereum.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Ano ang Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Ano ang ether?
 </DocLink>
 <Divider />
@@ -127,7 +127,7 @@ Ang isa sa mga pangunahing dahilan kung bakit nasa-scam ang mga tao sa crypto ay
 
 Ang pribadong key ng iyong wallet ang nagsisilbing password sa iyong Ethereum wallet. Ito lang ang pumipigil sa sinumang nakakaalam ng iyong wallet address na tangayin ang lahat ng asset ng iyong account!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Ano ang Ethereum wallet?
 </DocLink>
 

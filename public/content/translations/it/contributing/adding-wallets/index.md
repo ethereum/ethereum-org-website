@@ -61,7 +61,7 @@ I portafogli sono in rapido cambiamento su Ethereum. Abbiamo provato a creare un
 
 Se desideri aggiungere un portafoglio a ethereum.org, crea un ticket su GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Crea un ticket
 </ButtonLink>
 

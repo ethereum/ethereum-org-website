@@ -63,7 +63,7 @@ lang: ko
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>NFT에 대해 자세히 알아보기</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     NFT 이해하기
   </ButtonLink>
 </InfoBanner>
@@ -88,7 +88,7 @@ DAO는 리소스 풀(토큰)을 이용한 자동화된 분산형 의사 결정�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>DAO에 대해 자세히 알아보기</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     DAO 이해하기
   </ButtonLink>
 </InfoBanner>
@@ -99,7 +99,7 @@ DAO는 리소스 풀(토큰)을 이용한 자동화된 분산형 의사 결정�
 
 웹3는 귀하가 이더리움 주소 및 ENS 프로필을 통해 디지털 신원을 제어할 수 있게 허용하여 이러한 문제를 해결합니다. 이더리움 주소를 통해 안전하고, 검열 저항력을 지니며, 익명성이 보증되는 단일 로그인 방식을 다양한 플랫폼에서 사용할 수 있습니다.
 
-<ButtonLink to="https://login.xyz/">
+<ButtonLink href="https://login.xyz/">
   이더리움으로 로그인하기
 </ButtonLink>
 
@@ -107,7 +107,7 @@ DAO는 리소스 풀(토큰)을 이용한 자동화된 분산형 의사 결정�
 
 웹2의 결제 인프라는 은행이나 결제 서비스 업체에 의존하기 때문에 은행 계좌가 없거나 다른 나라에 사는 사람들은 배제됩니다. 웹3는 [ETH](/eth/)와 같은 토큰을 사용하여 브라우저에서 직접 돈을 보내며, 제3자에 의존하지 않습니다.
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   ETH에 대해 자세히 알아보기
 </ButtonLink>
 

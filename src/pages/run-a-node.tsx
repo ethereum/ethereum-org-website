@@ -615,10 +615,10 @@ const RunANodePage = () => {
               </ul>
             </Box>
             <ButtonContainer>
-              <ButtonLink to="https://shop.dappnode.io/">
+              <ButtonLink href="https://shop.dappnode.io/">
                 {t("page-run-a-node-shop-dappnode")}
               </ButtonLink>
-              <ButtonLink to="https://ava.do/">
+              <ButtonLink href="https://ava.do/">
                 {t("page-run-a-node-shop-avado")}
               </ButtonLink>
             </ButtonContainer>
@@ -748,7 +748,7 @@ const RunANodePage = () => {
                 </Text>
               </Box>
               <ButtonContainer>
-                <ButtonLink to="https://docs.dappnode.io">
+                <ButtonLink href="https://docs.dappnode.io">
                   {t("page-run-a-node-build-your-own-software-option-1-button")}
                 </ButtonLink>
               </ButtonContainer>
@@ -772,7 +772,7 @@ const RunANodePage = () => {
               </Box>
               <ButtonContainer>
                 <ButtonLink
-                  to="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
+                  href="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
                   variant="outline"
                 >
                   <Text as="code">
@@ -796,11 +796,15 @@ const RunANodePage = () => {
             <ButtonContainer>
               <ButtonLink
                 leftIcon={<FaDiscord />}
-                to="https://discord.com/invite/dappnode"
+                href="https://discord.com/invite/dappnode"
               >
                 {t("page-run-a-node-community-link-1")}
               </ButtonLink>
-              <ButtonLink to="/community/online/" variant="outline" isSecondary>
+              <ButtonLink
+                href="/community/online/"
+                variant="outline"
+                isSecondary
+              >
                 {t("page-run-a-node-community-link-2")}
               </ButtonLink>
             </ButtonContainer>
@@ -860,7 +864,7 @@ const RunANodePage = () => {
           <H2>{t("page-run-a-node-staking-title")}</H2>
           <Text>{t("page-run-a-node-staking-description")}</Text>
           <ButtonContainer>
-            <ButtonLink to="/staking/">
+            <ButtonLink href="/staking/">
               {t("page-run-a-node-staking-link")}
             </ButtonLink>
           </ButtonContainer>

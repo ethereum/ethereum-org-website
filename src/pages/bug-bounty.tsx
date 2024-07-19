@@ -474,10 +474,10 @@ const BugBountiesPage = () => {
             </SloganGradient>
             <Subtitle>{t("page-upgrades-bug-bounty-subtitle")}</Subtitle>
             <ButtonRow>
-              <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
+              <StyledButton href="https://forms.gle/Gnh4gzGh66Yc3V7G8">
                 {t("page-upgrades-bug-bounty-submit")}
               </StyledButton>
-              <StyledButton variant="outline" to="#rules" isSecondary>
+              <StyledButton variant="outline" href="#rules" isSecondary>
                 {t("page-upgrades-bug-bounty-rules")}
               </StyledButton>
             </ButtonRow>

@@ -86,7 +86,7 @@ Ethereum je zabezpečeno mechanismem proof-of-stake. Systém je navržen tak, ab
 
 Bezpečnostní otázky týkající se NFT se nejčastěji týkají podvodů s phishingem, zranitelnosti smart kontraktů nebo uživatelské chyby (jako je neúmyslné odhalení soukromého klíče). Dobrá ochrana peněženky je tedy pro majitele NFT klíčovou.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Více o bezpečnosti
 </ButtonLink>
 

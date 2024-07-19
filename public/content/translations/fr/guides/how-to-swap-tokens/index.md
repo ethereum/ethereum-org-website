@@ -51,7 +51,7 @@ Vous recevez automatiquement les jetons échangés dans votre portefeuille lorsq
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vous voulez en savoir plus ?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>
 </InfoBanner>

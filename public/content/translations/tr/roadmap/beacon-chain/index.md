@@ -56,7 +56,7 @@ Ethereum yükseltmelerinin tamamı bir şekilde ilişkilidir. İşaret Zincirini
 
 İlk başta İşaret Zinciri, Ethereum Ana Ağı'ndan ayrıydı, ancak 2022'de birleştirildi.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Birleştirme
 </ButtonLink>
 
@@ -64,7 +64,7 @@ Ethereum yükseltmelerinin tamamı bir şekilde ilişkilidir. İşaret Zincirini
 
 Parçalama, Ethereum ekosistemine yalnızca bir Hisse İspatı mutabakat mekanizması ile güvenli bir şekilde girebilir. İşare Zinciri Ana Ağ ile "bireleşerek" Ethereum'un daha da ölçeklenmesine yardımcı olmak için parçalamanın önünü açan hisselemeyi tanıttı.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Parça zincirleri
 </ButtonLink>
 

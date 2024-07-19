@@ -15,7 +15,7 @@ Les comptes sur Ethereum sont protégés par une paire de clés utilisées pour 
 
 La solution à cela consiste à utiliser des portefeuilles [de contrats intelligents](/glossary/#smart-contract) pour interagir avec Ethereum. Les portefeuilles de contrats intelligents permettent de protéger les comptes si les clés sont perdues ou volées, offrent une meilleure détection et défense contre les fraudes, et permettent aux portefeuilles de fournir de nouvelles fonctionnalités. Bien que les portefeuilles de contrats intelligents existent déjà aujourd'hui, ils sont difficiles à implémenter car le protocole Ethereum doit mieux les prendre en charge. Ce support supplémentaire est ce que l'on appelle l'abstraction de compte.
 
-<ButtonLink variant="outline-color" to="/roadmap/account-abstraction/">En savoir plus sur l'abstraction de compte</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/account-abstraction/">En savoir plus sur l'abstraction de compte</ButtonLink>
 
 ## Des nœuds pour tous
 
@@ -23,7 +23,7 @@ Les utilisateurs qui possèdent des [nœuds](/glossary/#node) n'ont pas besoin d
 
 Plusieurs mises à jour faciliteront l'exécution des nœuds et réduiront considérablement les ressources nécessaires. La manière dont les données sont stockées sera modifiée pour utiliser une structure plus efficace en termes d'espace, appelée **arbre Verkle**. De plus, grâce au [principe de non-vérification de l'état](/roadmap/statelessness) ou à [l'expiration des données](/roadmap/statelessness/#data-expiry), les nœuds Ethereum n'auront pas besoin de stocker une copie de l'intégralité des données d'état de la blockchain, ce qui réduira considérablement les besoin d'espace sur le disque dur. [Les nœuds légers](/developers/docs/nodes-and-clients/light-clients/) offriront de nombreux avantages de l'exécution d'un nœud complet, mais pourront fonctionner facilement sur les téléphones mobiles ou à l'intérieur de simples applications de navigateur.
 
-<ButtonLink variant="outline-color" to="/roadmap/verkle-trees/">En savoir plus sur les arbres Verkle</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/verkle-trees/">En savoir plus sur les arbres Verkle</ButtonLink>
 
 Avec ces mises à jour, les freins à l'exécution d'un nœud sont réduites à pratiquement rien. Les utilisateurs bénéficieront d'un accès sécurisé et sans demande d'autorisation à Ethereum sans avoir à sacrifier du stockage ou de la puissance de calcul CPU sur leur ordinateur ou leur téléphone portable, et ils n'auront pas à dépendre de tiers pour les données ou l'accès au réseau lorsqu'ils utilisent des applications.
 

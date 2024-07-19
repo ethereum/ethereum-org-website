@@ -110,11 +110,11 @@ Rozszerzenia przeglądarki, takie jak rozszerzenia Chrome lub dodatki do Firefok
 
 Jednym z najczęstszych powodów, dla których ludzie są oszukiwani w kryptowalutach, jest brak zrozumienia. Na przykład, jeśli nie rozumiesz, że sieć Ethereum jest zdecentralizowana i nie jest niczyją własnością, łatwo jest paść ofiarą kogoś udającego agenta obsługi klienta, który obiecuje zwrócić utracone na giełdzie ETH w zamian za twoje klucze prywatne. Edukowanie się na temat działania Ethereum jest opłacalną inwestycją.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Co to jest Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Czym jest eter?
 </DocLink>
 <Divider />
@@ -127,7 +127,7 @@ Jednym z najczęstszych powodów, dla których ludzie są oszukiwani w kryptowal
 
 Klucz prywatny do portfela działa jak hasło do portfela Ethereum. Jest to jedyna rzecz, która powstrzymuje kogoś, kto zna adres Twojego portfela, przed opróżnieniem Twojego konta ze wszystkich jego aktywów!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Czym jest portfel Ethereum?
 </DocLink>
 

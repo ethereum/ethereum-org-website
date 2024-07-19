@@ -17,7 +17,7 @@ template: roadmap
 
 Τα [σχήματα δέσμευσης «KZG»](/roadmap/danksharding/#what-is-kzg) που χρησιμοποιούνται σε πολλά σημεία στο Ethereum για τη δημιουργία κρυπτογραφικών μυστικών είναι γνωστό ότι είναι κβαντικά ευάλωτα. Επί του παρόντος, αυτό παρακάμπτεται με τη χρήση «αξιόπιστων ρυθμίσεων» όπου πολλοί χρήστες δημιουργούν τυχαίες καταστάσεις που δεν μπορούν να δημιουργηθούν αντίστροφα από έναν κβαντικό υπολογιστή. Ωστόσο, η ιδανική λύση θα ήταν απλώς η ενσωμάτωση της κβαντικής ασφαλούς κρυπτογραφίας. Υπάρχουν δύο κορυφαίες προσεγγίσεις που θα μπορούσαν να γίνουν αποτελεσματικές αντικαταστάσεις για το σχήμα BLS: [το βασισμένο σε STARK](https://hackmd.io/@vbuterin/stark_aggregation) και [το βασισμένο σε πλέγμα](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175) υπογραφή. **Αυτά είναι ακόμα υπό έρευνα και δημιουργία πρωτότυπου.**
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Διαβάστε για το KZG και τις αξιόπιστες ρυθμίσεις</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> Διαβάστε για το KZG και τις αξιόπιστες ρυθμίσεις</ButtonLink>
 
 ## Πιο απλό και αποτελεσματικό Ethereum {#simpler-more-efficient-ethereum}
 

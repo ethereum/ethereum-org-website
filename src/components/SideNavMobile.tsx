@@ -96,7 +96,7 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
       <Box>
         <LinkContainer>
           {item.to && (
-            <SideNavLink to={item.to} isPartiallyActive={false}>
+            <SideNavLink href={item.to} isPartiallyActive={false}>
               {t(item.id)}
             </SideNavLink>
           )}
@@ -137,7 +137,7 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
   return (
     <Box onClick={toggle}>
       <LinkContainer>
-        <SideNavLink to={item.to} isPartiallyActive={false}>
+        <SideNavLink href={item.to} isPartiallyActive={false}>
           {t(item.id)}
         </SideNavLink>
       </LinkContainer>

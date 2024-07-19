@@ -105,7 +105,7 @@ const PageHero = ({
                   <WrapItem key={idx}>
                     <ButtonLink
                       variant={button.variant}
-                      to={button.to}
+                      href={button.to}
                       onClick={() =>
                         trackCustomEvent({
                           eventCategory: button.matomo.eventCategory,

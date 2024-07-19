@@ -12,11 +12,11 @@ Căutați asistența oficială pentru Ethereum? Primul lucru pe care trebuie să
 
 Înțelegerea naturii descentralizate a lui Ethereum este vitală, deoarece oricine pretinde a reprezenta asistența oficială pentru Ethereum încearcă probabil să vă escrocheze! Cea mai bună protecție împotriva escrocilor este să vă educați și să luați în serios securitatea.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Securitatea și prevenirea fraudelor la Ethereum
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Învățați noțiunile de bază ale lui Ethereum
 </DocLink>
 

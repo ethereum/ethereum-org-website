@@ -174,7 +174,7 @@ const FindWalletPage = ({
           <Subtitle>{t("page-find-wallet-description")}</Subtitle>
           <Subtitle>
             {t("page-find-wallet-desc-2")}{" "}
-            <InlineLink to="/wallets">
+            <InlineLink href="/wallets">
               {t("page-find-wallet-desc-2-wallets-link")}
             </InlineLink>
           </Subtitle>
