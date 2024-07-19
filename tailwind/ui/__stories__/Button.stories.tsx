@@ -3,9 +3,9 @@ import type { Meta, StoryObj } from "@storybook/react"
 
 import Translation from "@/components/Translation"
 
+import { HStack, VStack } from "../../../src/components/ui/flex"
 import { Button, type ButtonVariantProps } from "../buttons/Button"
 import { ButtonLink } from "../buttons/Button"
-import { HStack, VStack } from "../flex"
 
 const meta = {
   title: "Atoms / Form / ShadCn Buttons",

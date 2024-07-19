@@ -2,7 +2,7 @@ import type { IconType } from "react-icons/lib"
 
 import { cn } from "@/lib/utils/cn"
 
-import { Stack } from "../flex"
+import { Stack } from "../../../src/components/ui/flex"
 
 import {
   Button,
