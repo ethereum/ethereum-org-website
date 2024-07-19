@@ -190,7 +190,7 @@ Amint a visszavonási adatok be vannak állítva, a jutalmak (a 32 ETH-en felül
 
 A teljes egyenleg visszavonásához végig kell menni a validátorkiléptetési folyamaton.
 
-<ButtonLink to="/staking/withdrawals/">Bővebben a letétbe helyezés visszavonásáról</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Bővebben a letétbe helyezés visszavonásáról</ButtonLink>
 </ExpandableCard>
 
 ## További olvasnivaló {#further-reading}

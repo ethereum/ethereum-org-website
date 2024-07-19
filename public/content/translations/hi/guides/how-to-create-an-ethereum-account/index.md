@@ -14,7 +14,7 @@ lang: hi
 
 वॉलेट एक ऐप है जो आपके इथेरियम खाते को मैनेज करने में आपकी मदद करता है। यह आपकी कुंजियों का इस्तेमाल लेनदेन भेजने और प्राप्त करना तथा ऐप्स में साइन इन में करता है। वहां पर चुनने के लिए दर्जनों विभिन्न वॉलेट हैं—मोबाइल, डेस्कटॉप और यहां तक कि ब्राउज़र के एक्सटेंशन भी।
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   वॉलेट खोजें
 </ButtonLink>
 
@@ -42,7 +42,7 @@ lang: hi
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>और अधिक सीखना चाहते है?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     हमारी अन्य गाइडें देखें
   </ButtonLink>
 </InfoBanner>

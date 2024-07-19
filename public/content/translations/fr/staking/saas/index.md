@@ -78,7 +78,7 @@ Les retraits de prises ont été mis en œuvre lors de la mise à niveau de Shan
 
 Les validateurs peuvent également se retirer entièrement en tant que validateur, ce qui débloquera leur solde ETH restant pour le retrait. Les comptes qui ont fourni une adresse de retrait d’exécution et terminé le processus de sortie recevront tout leur solde à l’adresse de retrait fournie lors du prochain balayage du validateur.
 
-<ButtonLink to="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Que se passe-t-il si je suis banni ?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

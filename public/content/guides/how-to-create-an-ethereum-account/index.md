@@ -14,7 +14,7 @@ Unlike opening a new account with a company, creating an Ethereum account is don
 
 A wallet is an app that helps you manage your Ethereum account. It uses your keys to send and receive transactions and sign in to apps. There are dozens of different wallets to choose from—mobile, desktop, or even browser extensions.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Find a wallet
 </ButtonLink>
 
@@ -42,7 +42,7 @@ Once you have saved your seed phrase you should see your wallet dashboard with y
  
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Want to learn more?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     See our other guides
   </ButtonLink>
 </InfoBanner>

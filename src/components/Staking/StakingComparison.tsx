@@ -151,7 +151,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
                 onClick={() => {
                   trackCustomEvent(matomo)
                 }}
-                to={to}
+                href={to}
               >
                 {t(linkText)}
               </InlineLink>

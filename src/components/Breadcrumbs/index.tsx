@@ -71,7 +71,7 @@ const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
           <BreadcrumbItem key={fullPath} isCurrentPage={isCurrentPage}>
             <BreadcrumbLink
               as={BaseLink}
-              to={fullPath}
+              href={fullPath}
               isPartiallyActive={isCurrentPage}
               textTransform="uppercase"
             >

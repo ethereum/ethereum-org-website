@@ -287,13 +287,13 @@ const LearnPage = () => {
             </AdditionalReadingHeader>
 
             <DocsContainer>
-              <DocLink to="/guides/">{t("guides-hub-desc")}</DocLink>
-              <DocLink to="/quizzes/">{t("quiz-hub-desc")}</DocLink>
-              <DocLink to="/smart-contracts/">
+              <DocLink href="/guides/">{t("guides-hub-desc")}</DocLink>
+              <DocLink href="/quizzes/">{t("quiz-hub-desc")}</DocLink>
+              <DocLink href="/smart-contracts/">
                 {t("additional-reading-what-are-smart-contracts")}
               </DocLink>
               <DocLink
-                to="https://www.youtube.com/watch?v=UihMqcj-cqc"
+                href="https://www.youtube.com/watch?v=UihMqcj-cqc"
                 isExternal
               >
                 {t("additional-reading-ethereum-in-thirty-minutes")}
@@ -379,16 +379,16 @@ const LearnPage = () => {
               {t("additional-reading-more-on-using-ethereum")}
             </AdditionalReadingHeader>
             <DocsContainer>
-              <DocLink to="/guides/how-to-create-an-ethereum-account/">
+              <DocLink href="/guides/how-to-create-an-ethereum-account/">
                 {t("additional-reading-how-to-create-an-ethereum-account")}
               </DocLink>
-              <DocLink to="/guides/how-to-use-a-wallet/">
+              <DocLink href="/guides/how-to-use-a-wallet/">
                 {t("additional-reading-how-to-use-a-wallet")}
               </DocLink>
-              <DocLink to="/layer-2/">
+              <DocLink href="/layer-2/">
                 {t("additional-reading-layer-2")}
               </DocLink>
-              <DocLink to="/get-eth/">
+              <DocLink href="/get-eth/">
                 {t("additional-reading-get-eth")}
               </DocLink>
             </DocsContainer>
@@ -591,16 +591,16 @@ const LearnPage = () => {
               {t("more-on-ethereum-protocol-title")}
             </AdditionalReadingHeader>
             <DocsContainer>
-              <DocLink to="/developers/">
+              <DocLink href="/developers/">
                 {t("more-on-ethereum-protocol-ethereum-for-developers")}
               </DocLink>
-              <DocLink to="/developers/docs/consensus-mechanisms">
+              <DocLink href="/developers/docs/consensus-mechanisms">
                 {t("more-on-ethereum-protocol-consensus")}
               </DocLink>
-              <DocLink to="/developers/docs/evm/">
+              <DocLink href="/developers/docs/evm/">
                 {t("more-on-ethereum-protocol-evm")}
               </DocLink>
-              <DocLink to="/developers/docs/nodes-and-clients/">
+              <DocLink href="/developers/docs/nodes-and-clients/">
                 {t("more-on-ethereum-protocol-nodes-and-clients")}
               </DocLink>
             </DocsContainer>

@@ -12,11 +12,11 @@ Sind Sie auf der Suche nach dem offiziellen Ethereum-Support? Es ist wichtig, zu
 
 Es ist wichtig, die dezentrale Gestaltung von Ethereum zu verstehen, denn jeder, der behauptet, offizieller Support für Ethereum zu sein, versucht wahrscheinlich, Sie zu betrügen. Der beste Schutz vor Betrug ist, sich zu informieren und Sicherheit ernst zu nehmen.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Ethereum – Sicherheits- und Betrugsvorbeugung
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Mehr erfahren über die Grundlagen von Ethereum
 </DocLink>
 

@@ -78,7 +78,7 @@ Inilunsad ang pag-withdraw sa staking sa Shanghai/Capella upgrade noong Abril 20
 
 Puwede ring ganap na umalis ang mga validator bilang validator, na siyang mag-a-unlock ng natitirang nilang ETH balance para ma-withdraw. Matatanggap ng mga account na nagbigay ng execution withdrawal address at nakatapos ng proseso ng pag-alis ang kanilang buong balanse sa withdrawal address na ibinigay sa susunod na validator sweep.
 
-<ButtonLink to="/staking/withdrawals/">Iba pang detalye tungkol sa mga pag-withdraw sa staking</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Iba pang detalye tungkol sa mga pag-withdraw sa staking</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Anong mangyayari kung masa-slash ako?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

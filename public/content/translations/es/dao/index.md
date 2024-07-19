@@ -50,7 +50,7 @@ La columna vertebral de una DAO son los contratos inteligentes, estos definen la
 
 Esto se consigue gracias a que los contratos inteligentes son a prueba de manipulación una vez que conectan con Ethereum. No puede editar el código (las reglas de la DAO) sin que la gente se dé cuenta, ya que todo es público.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Más sobre contratos inteligentes
 </DocLink>
 

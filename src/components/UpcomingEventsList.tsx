@@ -129,7 +129,7 @@ const UpcomingEventsList = () => {
               <EventCard
                 key={idx}
                 title={title}
-                to={to}
+                href={to}
                 date={date}
                 description={formattedDetails}
                 location={location}

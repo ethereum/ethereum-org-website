@@ -61,7 +61,7 @@ lang: ja
 
 ethereum.orgにウォレットの追加をご希望の場合は、GitHubでイシューを作成してください。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   問題の作成
 </ButtonLink>
 

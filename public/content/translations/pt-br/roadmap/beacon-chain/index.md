@@ -56,7 +56,7 @@ As melhorias do Ethereum estão, de certa forma, relacionadas. Vamos recapitular
 
 No começo, a Beacon Chain existia separadamente da rede principal do Ethereum, mas ocorreu uma fusão em 2022.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   A integração
 </ButtonLink>
 
@@ -64,7 +64,7 @@ No começo, a Beacon Chain existia separadamente da rede principal do Ethereum, 
 
 As cadeias de fragmentação apenas podem ser introduzidas no ecossistema Ethereum por meio do estabelecimento de um mecanismo de consenso de prova de participação. A Beacon Chain introduziu a participação, que se "fundiu" com a rede principal, abrindo caminho para a fragmentação, de forma a ajudar a dimensionar ainda mais o Ethereum.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Cadeias de fragmentos
 </ButtonLink>
 

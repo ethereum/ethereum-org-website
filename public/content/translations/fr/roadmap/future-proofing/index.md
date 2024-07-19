@@ -17,7 +17,7 @@ Le défi auquel sont confrontés les développeurs d'Ethereum est que le protoco
 
 Les [schémas d'engagement « KZG»](/roadmap/danksharding/#what-is-kzg) utilisés à plusieurs endroits à travers Ethereum pour générer des secrets cryptographiques sont connus pour être vulnérables. Actuellement, cela est contourné en utilisant des « configurations de confiance » où de nombreux utilisateurs génèrent un aléa qui ne peut pas être inversé par un ordinateur quantique. Cependant, la solution idéale serait simplement d'intégrer la cryptographie quantique sûre. Il y a deux approches principales qui pourraient devenir des remplacements efficaces pour le schéma BLS : la signature [basée sur le STARK](https://hackmd.io/@vbuterin/stark_aggregation) et la signature [basée sur le treillis](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175). **Ils sont encore en cours de recherche et de prototype**.
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> En savoir plus sur KZG et les configurations fiables</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> En savoir plus sur KZG et les configurations fiables</ButtonLink>
 
 ## Ethereum plus simple et plus efficace {#simpler-more-efficient-ethereum}
 

@@ -68,7 +68,7 @@ Right now! The Shanghai/Capella network upgrade occurred in April 2023, and intr
 
 Alternatively, pools that utilize an ERC-20 staking token allow users to trade this token in the open market, allowing you to sell your staking position, effectively "withdrawing" without actually removing ETH from the staking contract.
 
-<ButtonLink to="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Is this different from staking with my exchange?">

@@ -12,11 +12,11 @@ lang: zh-tw
 
 明白以太坊的去中心化本質十分重要，因為任何聲稱是以太坊官方支援的人都可能正試圖欺詐你！ 預防騙徒的最佳保護措施是自我教育，並認真看待網路安全。
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   以太坊安全及詐騙預防
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   學習以太坊基礎知識
 </DocLink>
 

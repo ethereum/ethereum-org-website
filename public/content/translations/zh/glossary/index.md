@@ -21,7 +21,7 @@ sidebarDepth: 2
 
 帐户是一个对象，它包含[地址](#address)、余额、[随机数](#nonce)，并且存储了状态和代码（皆可为空）。 一个帐户可以是[合约帐户](#contract-account)，也可以是[外部帐户（EOA）](#eoa)。
 
-<DocLink to="/developers/docs/accounts">
+<DocLink href="/developers/docs/accounts">
   以太坊帐户
 </DocLink>
 
@@ -33,7 +33,7 @@ sidebarDepth: 2
 
 与以太坊生态系统中[合约](#contract-account)进行交互的标准方法，均来自区块链外部，用于合约间交互。
 
-<DocLink to="/developers/docs/smart-contracts/compiling/#web-applications">
+<DocLink href="/developers/docs/smart-contracts/compiling/#web-applications">
   应用程序二进制接口
 </DocLink>
 
@@ -49,7 +49,7 @@ sidebarDepth: 2
 
 在 [Solidity 语言里](#solidity)，`assert(false)` 被编译为 `0xfe`，这是一个无效操作码，会消耗完剩下的[燃料](#gas)并回滚所有变更。 当有 `assert()` 语句失效时，表明出现了非常严重且没有预料到的问题，你将需要修复代码。 应该使用 `assert()` 以避免此类永远不应发生的情况。
 
-<DocLink to="/developers/docs/smart-contracts/security/">
+<DocLink href="/developers/docs/smart-contracts/security/">
   智能合约安全性
 </DocLink>
 
@@ -57,7 +57,7 @@ sidebarDepth: 2
 
 实体做出的关于某事件属实的声明。 就以太坊而言，共识验证者必须对他们认为的链状态做出声明。 在指定时间，每个验证者负责发布不同的认证，正式声明自己对于链的看法，包括最后一个最终确定的检查点和最新的区块头。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/attestations/">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/attestations/">
   认证
 </DocLink>
 
@@ -69,7 +69,7 @@ sidebarDepth: 2
 
 每个[区块](#block)都有一个称为“基础费”的底价。 用户必须支付此最低[燃料](#gas)费用，交易才能打包进入下一个区块。
 
-<DocLink to="/developers/docs/gas/">
+<DocLink href="/developers/docs/gas/">
   燃料和费用
 </DocLink>
 
@@ -77,7 +77,7 @@ sidebarDepth: 2
 
 信标链是为以太坊引入[权益证明](#pos)和[验证者](#validator)的区块链。 从 2020 年 12 月开始，它与采用工作量证明的以太坊主网一起运行，直到 2022 年 9 月这两条链合并，形成了今天的以太坊。
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   信标链
 </DocLink>
 
@@ -89,7 +89,7 @@ sidebarDepth: 2
 
 区块是一个汇总的信息单位，包括有序的交易列表及与共识相关的信息。 区块由权益证明验证者提出，然后它们在整个对等网络中共享，所有其他节点可以在对等网络中方便地对区块进行独立验证。 共识规则控制区块的哪些内容是有效的，任何无效的区块都会被网络忽略。 这些区块的顺序和其中的交易创建了一条确定性的事件链，链条的一端表示网络的当前状态。
 
-<DocLink to="/developers/docs/blocks/">
+<DocLink href="/developers/docs/blocks/">
   区块
 </DocLink>
 
@@ -134,7 +134,7 @@ sidebarDepth: 2
 
 一个[区块](#block)序列，每个都通过引用前一个区块的哈希值链接到前一个区块，一直到[创世区块](#genesis-block)。 区块链的完整性由基于权益证明共识机制通过经济的加密方式提供保证。
 
-<DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
+<DocLink href="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
   什么是区块链？
 </DocLink>
 
@@ -166,7 +166,7 @@ Casper-FFG 是一种权益证明共识协议，与 [LMD-GHOST](#lmd-ghost) 分�
 
 将用高级编程语言（例如，[Solidity](#solidity)）编写的代码转换为低级语言（例如，以太坊虚拟机[字节码](#bytecode)）。
 
-<DocLink to="/developers/docs/smart-contracts/compiling/">
+<DocLink href="/developers/docs/smart-contracts/compiling/">
   编译智能合约
 </DocLink>
 
@@ -228,7 +228,7 @@ DAG 代表有向无环图。 它是由节点和节点之间的链接组成的一
 
 Dapp 代表去中心化应用程序。 狭义上来说，去中心化应用程序是一个[智能合约](#smart-contract)，也是一个 Web 用户界面。 广义上来讲，它是建立在开放、去中心化、对等基础设施服务之上的 Web 应用程序。 此外，许多去中心化应用程序包括去中心化存储和/或报文协议及平台。
 
-<DocLink to="/developers/docs/dapps/">
+<DocLink href="/developers/docs/dapps/">
   去中心化应用程序简介
 </DocLink>
 
@@ -244,7 +244,7 @@ Dapp 代表去中心化应用程序。 狭义上来说，去中心化应用程�
 
 不采用分级管理运营的公司或其他组织。 DAO 可能还指一份名为“The DAO”的合约。该合约在 2016 年 4 月 30 日发布，后来在 2016 年 6 月遭受黑客攻击；这件事最终在 1,192,000 区块引发了一次[硬分叉](#hard-fork)（代码名称为 DAO）。此次分叉逆转了遭受黑客攻击的 DAO 合约，并导致分为以太坊和以太坊经典两个互相竞争的系统。
 
-<DocLink to="/dao/">
+<DocLink href="/dao/">
   去中心化自治组织 (DAO)
 </DocLink>
 
@@ -252,7 +252,7 @@ Dapp 代表去中心化应用程序。 狭义上来说，去中心化应用程�
 
 一种[去中心化应用程序](#dapp)，让人们可以在网络上交换代币。 你需要有[以太币](#ether)才能使用去中心化交易所（以支付[交易费](#transaction-fee)），但它们不像中心化交易所那样受地理区域限制，而是任何人都可以参与。
 
-<DocLink to="/get-eth/#dex">
+<DocLink href="/get-eth/#dex">
   去中心化交易所
 </DocLink>
 
@@ -268,7 +268,7 @@ Dapp 代表去中心化应用程序。 狭义上来说，去中心化应用程�
 
 DeFi 是“去中心化金融”的缩写，是一类广义的[去中心化应用程序](#dapp)，旨在提供由区块链支持的金融服务，无需中介，任何人只需要互联网连接就可以参与。
 
-<DocLink to="/defi/">
+<DocLink href="/defi/">
   去中心化金融 (DeFi)
 </DocLink>
 
@@ -316,7 +316,7 @@ DeFi 是“去中心化金融”的缩写，是一类广义的[去中心化应�
 
 32 个[时隙](#slot)为一个时段，每个时隙为 12 秒，共计 6.4 分钟。 出于安全原因，在每个时段验证者[委员会](#committee)都会被重组。 每个时段都提供[最终确定](#finality)链的机会。 每个时段开始时都会给每个验证者分配新的职责。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   权益证明
 </DocLink>
 
@@ -328,7 +328,7 @@ DeFi 是“去中心化金融”的缩写，是一类广义的[去中心化应�
 
 “以太坊 1”是指主网以太坊，即现有的工作量证明区块链。 该术语已弃用，取而代之的是“执行层”。 [详细了解此名称更改](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)。
 
-<DocLink to="/roadmap/">
+<DocLink href="/roadmap/">
   有关以太坊升级的更多信息
 </DocLink>
 
@@ -336,7 +336,7 @@ DeFi 是“去中心化金融”的缩写，是一类广义的[去中心化应�
 
 “以太坊 2”是指以太坊协议的一系列升级，包括以太坊的权益证明过渡。 该术语已弃用，取而代之的是“共识层”。 [详细了解此名称更改](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)。
 
-<DocLink to="/roadmap/">
+<DocLink href="/roadmap/">
   有关以太坊升级的更多信息
 </DocLink>
 
@@ -344,7 +344,7 @@ DeFi 是“去中心化金融”的缩写，是一类广义的[去中心化应�
 
 为以太坊社区提供信息的一种设计文档，描述提议的新功能或其流程或环境（请参阅[以太坊意见征求](#erc)）。
 
-<DocLink to="/eips/">
+<DocLink href="/eips/">
   以太坊改进提案介绍
 </DocLink>
 
@@ -370,7 +370,7 @@ DeFi 是“去中心化金融”的缩写，是一类广义的[去中心化应�
 
 一种标签，应用于一些试图定义以太坊具体使用标准的[以太坊改进提案](#eip)。
 
-<DocLink to="/eips/">
+<DocLink href="/eips/">
   以太坊改进提案介绍
 </DocLink>
 
@@ -384,7 +384,7 @@ DeFi 是“去中心化金融”的缩写，是一类广义的[去中心化应�
 
 以太坊生态系统中使用的原生加密货币，用来支付执行交易时的[燃料](#gas)费用。 以太币也写作 ETH 或符号形式 Ξ，这是希腊字母 Xi 的大写。
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   我们数字未来的货币
 </DocLink>
 
@@ -392,7 +392,7 @@ DeFi 是“去中心化金融”的缩写，是一类广义的[去中心化应�
 
 允许使用[以太坊虚拟机](#evm)日志记录工具。 [去中心化应用程序](#dapp)可以监听事件，并在用户界面使用事件触发 JavaScript 回调。
 
-<DocLink to="/developers/docs/smart-contracts/anatomy/#events-and-logs">
+<DocLink href="/developers/docs/smart-contracts/anatomy/#events-and-logs">
   事件和日志
 </DocLink>
 
@@ -400,7 +400,7 @@ DeFi 是“去中心化金融”的缩写，是一类广义的[去中心化应�
 
 执行[字节码](#bytecode)的基于堆栈的虚拟机。 在以太坊中，执行模型指定如何在给定一系列字节码指令和一个包含环境数据小元组的情况下更改系统状态。 通过虚拟状态机的形式化模型指定系统状态更改方式。
 
-<DocLink to="/developers/docs/evm/">
+<DocLink href="/developers/docs/evm/">
   以太坊虚拟机
 </DocLink>
 
@@ -420,7 +420,7 @@ DeFi 是“去中心化金融”的缩写，是一类广义的[去中心化应�
 
 通过[智能合约](#smart-contract)执行的服务，免费提供可在测试网上使用的测试以太币。
 
-<DocLink to="/developers/docs/networks/#testnet-faucets">
+<DocLink href="/developers/docs/networks/#testnet-faucets">
   测试网水龙头
 </DocLink>
 
@@ -428,7 +428,7 @@ DeFi 是“去中心化金融”的缩写，是一类广义的[去中心化应�
 
 最终确定性是在给定时间之前，一组交易不会变更且无法回滚的保证。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#finality">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/#finality">
   权益证明最终确定性
 </DocLink>
 
@@ -448,7 +448,7 @@ DeFi 是“去中心化金融”的缩写，是一类广义的[去中心化应�
 
 一些[二层网络](#layer-2)解决方案的安全模型。为了加快交易速度，交易成批[卷叠](#rollups)并在单笔交易中提交给以太坊。 交易假定有效，但如果怀疑有欺诈行为，可以对它们提出质疑。 之后，欺诈证明会运行交易，以确定是否发生欺诈。 这种方法可增加交易量，同时保证安全性。 部分[卷叠](#rollups)采用[有效性证明](#validity-proof)。
 
-<DocLink to="/developers/docs/scaling/optimistic-rollups/">
+<DocLink href="/developers/docs/scaling/optimistic-rollups/">
   乐观卷叠
 </DocLink>
 
@@ -464,7 +464,7 @@ DeFi 是“去中心化金融”的缩写，是一类广义的[去中心化应�
 
 以太坊中为执行智能合约消耗的虚拟“燃料”。 [以太坊虚拟机](#evm)使用一种记账方法来衡量燃料用量并限制算力资源的消耗（请参阅[图灵完备](#turing-complete)）。
 
-<DocLink to="/developers/docs/gas/">
+<DocLink href="/developers/docs/gas/">
   燃料和费用
 </DocLink>
 
@@ -540,7 +540,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 通常将代码编辑器、编译器、运行时和调试器合并在一起的用户界面。
 
-<DocLink to="/developers/docs/ides/">
+<DocLink href="/developers/docs/ides/">
   集成开发环境
 </DocLink>
 
@@ -548,7 +548,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 [合约](#smart-contract)（或[库](#library)）的代码一经部署，便不可更改。 标准软件开发习惯于能够修复可能的缺陷并增加新功能，但这对智能合约开发而言是一个挑战。
 
-<DocLink to="/developers/docs/smart-contracts/deploying/">
+<DocLink href="/developers/docs/smart-contracts/deploying/">
   部署智能合约
 </DocLink>
 
@@ -568,7 +568,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 也称为“密码拉伸算法”。[密钥库](#keystore-file)格式使用该算法，通过对密码反复进行哈希运算，防止针对密码加密的暴力攻击、字典攻击和彩虹表攻击。
 
-<DocLink to="/developers/docs/smart-contracts/security/">
+<DocLink href="/developers/docs/smart-contracts/security/">
   智能合约安全性
 </DocLink>
 
@@ -588,7 +588,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 一个开发领域，专注于以太坊协议上的分层改进。 这些改进关系到[交易](#transaction)速度、[交易费](#transaction-fee)的削减以及交易隐私。
 
-<DocLink to="/layer-2/">
+<DocLink href="/layer-2/">
   二层网络
 </DocLink>
 
@@ -600,7 +600,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 一种特殊类型的[合约](#smart-contract)，没有可支付函数，没有回退函数，也没有数据存储。 因此，它不能接收或保存以太币，也不能存储数据。 库可用作之前部署的代码，其他合约只能进行只读调用，以用于计算。
 
-<DocLink to="/developers/docs/smart-contracts/libraries/">
+<DocLink href="/developers/docs/smart-contracts/libraries/">
   智能合约库
 </DocLink>
 
@@ -620,7 +620,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 "main network"（主网）的缩写，是主要的公共以太坊[区块链](#blockchain)。 它具有真正的以太币、真正的价值和真正的共识。 在讨论[二层网络](#layer-2)扩容解决方案时，主网也被称为一层网络。 （另请参阅[测试网](#testnet)）。
 
-<DocLink to="/developers/docs/networks/">
+<DocLink href="/developers/docs/networks/">
   以太坊网络
 </DocLink>
 
@@ -652,7 +652,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 通过不断执行哈希运算，为新区块找到有效[工作量证明](#pow)的网络[节点](#node)（请参阅 [Ethash](#ethash)）。 矿工不再是以太坊的一部分，在以太坊迁移至[权益证明](#pos)后他们已被验证者所取代。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/mining/">
+<DocLink href="/developers/docs/consensus-mechanisms/pow/mining/">
   挖矿
 </DocLink>
 
@@ -668,7 +668,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 指以太坊网络，一种向每个以太坊节点（网络参与者）传播交易和区块的对等网络。
 
-<DocLink to="/developers/docs/networks/">
+<DocLink href="/developers/docs/networks/">
   网络
 </DocLink>
 
@@ -680,10 +680,10 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 也称为“契约”，是 ERC721 提案中提出的代币标准。 非同质化代币既能跟踪也可以交易，但每个代币都是独一无二的，不可互换，这与以太币和 [ERC-20 代币](#token-standard)不同。 非同质化代币能够代表数字或实体资产的所有权。
 
-<DocLink to="/nft/">
+<DocLink href="/nft/">
   非同质化代币 (NFT)
 </DocLink>
-<DocLink to="/developers/docs/standards/tokens/erc-721/">
+<DocLink href="/developers/docs/standards/tokens/erc-721/">
   ERC-721 非同质化代币标准
 </DocLink>
 
@@ -691,7 +691,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 参与网络的软件客户端。
 
-<DocLink to="/developers/docs/nodes-and-clients/">
+<DocLink href="/developers/docs/nodes-and-clients/">
   节点和客户端
 </DocLink>
 
@@ -711,7 +711,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 使用[欺诈证明](#rollups)的交易的[卷叠](#fraud-proof)，在使用[主网](#layer-2)（一层网络）提供的安全性的同时，提供了更高的[二层网络](#mainnet)交易吞吐量。 与[以太坊 Plasma 扩容解决方案](#plasma)（一种相似的二层网络解决方案）不同，乐观卷叠可以处理更复杂的交易类型 -- [以太坊虚拟机](#evm)中任何可能的交易。 与[零知识卷叠](#zk-rollups)相比，乐观卷叠确实存在延迟问题，因为可以通过欺诈证明来质疑交易。
 
-<DocLink to="/developers/docs/scaling/optimistic-rollups/">
+<DocLink href="/developers/docs/scaling/optimistic-rollups/">
   乐观卷叠
 </DocLink>
 
@@ -719,7 +719,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 预言机是[区块链](#blockchain)与真实世界之间的桥梁。 预言机起到链上[应用程序接口](#api)的作用，可以向其查询信息，也可在[智能合约](#smart-contract)中使用。
 
-<DocLink to="/developers/docs/oracles/">
+<DocLink href="/developers/docs/oracles/">
   预言机
 </DocLink>
 
@@ -743,7 +743,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 使用[欺诈证明](#fraud-proof)的链下扩容解决方案，例如[乐观卷叠](#optimistic-rollups)。 Plasma 扩容解决方案仅限于简单交易，例如基本的代币转账和交换。
 
-<DocLink to="/developers/docs/scaling/plasma">
+<DocLink href="/developers/docs/scaling/plasma">
   以太坊 Plasma 扩容解决方案
 </DocLink>
 
@@ -759,7 +759,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 加密货币区块链协议用以实现分布式[共识](#consensus)的方法。 权益证明要求用户证明自己拥有一定数量的加密货币（他们在网络中的“质押”），以便能够参与交易的验证。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/">
   权益证明
 </DocLink>
 
@@ -767,7 +767,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 需要大量计算才能得出的数据（证明）。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/">
+<DocLink href="/developers/docs/consensus-mechanisms/pow/">
   工作量证明
 </DocLink>
 
@@ -787,7 +787,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 此攻击是指攻击者合约调用受害者合约函数，使得在执行期间，受害者会再次调用攻击者合约，如此循环往复。 可能导致的结果包括：通过跳过受害者合约中更新余额或计算提款金额的部分来盗窃资金。
 
-<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy">
+<DocLink href="/developers/docs/smart-contracts/security/#re-entrancy">
   重入攻击
 </DocLink>
 
@@ -803,7 +803,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 一种[二层网络](#layer-2)扩容解决方案，将多笔交易分批提交到[以太坊主链](#mainnet)的单笔交易中。 这样可以降低[燃料](#gas)成本，增加[交易](#transaction)吞吐量。 乐观卷叠和零知识卷叠使用不同的安全方法提供这些可扩展性效益。
 
-<DocLink to="/developers/docs/scaling/#rollups">
+<DocLink href="/developers/docs/scaling/#rollups">
   卷叠
 </DocLink>
 
@@ -823,7 +823,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 启动了一组扩容和可持续性升级的以太坊开发阶段，以前称为“以太坊 2.0”或“以太坊 2”。
 
-<DocLink to="/roadmap/">
+<DocLink href="/roadmap/">
   以太坊升级
 </DocLink>
 
@@ -835,7 +835,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 分片链是整个区块链中验证者的子集可以负责的离散部分。 这将为以太坊提供更高的交易吞吐量，并提高[二层网络](#layer-2)解决方案（如[乐观卷叠](#optimistic-rollups)和[零知识卷叠](#zk-rollups)）的数据可用性。
 
-<DocLink to="/roadmap/danksharding">
+<DocLink href="/roadmap/danksharding">
   Danksharding
 </DocLink>
 
@@ -843,7 +843,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 一种扩容解决方案，使用具有不同[共识机制](#consensus-rules)（通常速度更快）的单独链。 要将这些侧链连接到[主网](#mainnet)，需要用到链桥。 [卷叠](#rollups)也使用侧链，但是它们与[主网](#mainnet)协作运行。
 
-<DocLink to="/developers/docs/scaling/sidechains/">
+<DocLink href="/developers/docs/scaling/sidechains/">
   侧链
 </DocLink>
 
@@ -863,7 +863,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 [权益证明](#pos)系统中的[验证者](#validator)可以提出新区块的时间段（12 秒）。 时隙有可能为空， 32 个时隙构成一个[时段](#epoch)。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   权益证明
 </DocLink>
 
@@ -871,7 +871,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 在以太坊计算基础设施上执行的程序。
 
-<DocLink to="/developers/docs/smart-contracts/">
+<DocLink href="/developers/docs/smart-contracts/">
   智能合约简介
 </DocLink>
 
@@ -879,7 +879,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 SNARK 是“succinct non-interactive argument of knowledge”（简洁的非交互式知识论证）的缩写，是一种[零知识证明](#zk-proof)。
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   零知识卷叠
 </DocLink>
 
@@ -891,7 +891,7 @@ SNARK 是“succinct non-interactive argument of knowledge”（简洁的非交�
 
 一种语法类似 JavaScript、C++ 或 Java 的程序化（命令式）编程语言， 是编写以太坊[智能合约](#smart-contract)最流行、最常用的编程语言。 该语言由 Gavin Wood 博士创造。
 
-<DocLink to="/developers/docs/smart-contracts/languages/#solidity">
+<DocLink href="/developers/docs/smart-contracts/languages/#solidity">
   Solidity
 </DocLink>
 
@@ -907,7 +907,7 @@ SNARK 是“succinct non-interactive argument of knowledge”（简洁的非交�
 
 一种 [ERC-20 代币](#token-standard)，其价值与另一种资产的价值挂钩。 有的稳定币受美元等法定货币、黄金等贵金属以及比特币等其他加密货币的支持。
 
-<DocLink to="/eth/#tokens">
+<DocLink href="/eth/#tokens">
   以太币不是以太坊唯一的加密货币
 </DocLink>
 
@@ -915,7 +915,7 @@ SNARK 是“succinct non-interactive argument of knowledge”（简洁的非交�
 
 存入一定量的[以太币](#ether)（质押）成为验证者，并保护[以太坊网络](#network)的安全。 在[权益证明](#pos)共识模型中，验证者检查[交易](#transaction)并提出[区块](#block)。 质押能够为符合网络最大利益的行为提供经济激励。 你将会因为履行[验证者](#validator)职责而获得奖励，反之将损失不等数量的以太币。
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   质押你的以太币，成为以太坊验证者
 </DocLink>
 
@@ -923,7 +923,7 @@ SNARK 是“succinct non-interactive argument of knowledge”（简洁的非交�
 
 多个以太坊权益者的合并以太币，必须达到 32 个以太币才能激活一组验证者密钥。 节点运营商使用这些密钥参与共识，[区块奖励](#block-reward)分配给参与贡献的质押者。 质押池或委托质押并不是以太坊协议原生的，但社区已经开发了许多解决方案。
 
-<DocLink to="/staking/pools/">
+<DocLink href="/staking/pools/">
   联合质押
 </DocLink>
 
@@ -931,7 +931,7 @@ SNARK 是“succinct non-interactive argument of knowledge”（简洁的非交�
 
 STARK 是“scalable transparent argument of knowledge”（可扩展的透明知识论证）的缩写，是一种[零知识证明](#zk-proof)。
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   零知识卷叠
 </DocLink>
 
@@ -943,7 +943,7 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 一种[二层网络](#layer-2)解决方案，在参与者之间设置一个通道，以便他们以较低的成本自由交易。 只有开设和关闭通道的[交易](#transaction)才会发送到[主网](#mainnet)。 这样可以实现非常高的交易吞吐量，但需要预先知晓参与者人数并锁定资金。
 
-<DocLink to="/developers/docs/scaling/state-channels/#state-channels">
+<DocLink href="/developers/docs/scaling/state-channels/#state-channels">
   状态通道
 </DocLink>
 
@@ -979,7 +979,7 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 “测试网络”的简称，用于模拟以太坊主网行为的网络（请参阅[主网](#mainnet)）。
 
-<DocLink to="/developers/docs/networks/#ethereum-testnets">
+<DocLink href="/developers/docs/networks/#ethereum-testnets">
   测试网
 </DocLink>
 
@@ -991,7 +991,7 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 由 ERC-20 提案引入，为同质化代币提供标准化[智能合约](#smart-contract)结构。 与[非同质化代币](#nft)不同，可以跟踪、交易和互相兑换相同合约中的代币。
 
-<DocLink to="/developers/docs/standards/tokens/erc-20/">
+<DocLink href="/developers/docs/standards/tokens/erc-20/">
   ERC-20 代币标准
 </DocLink>
 
@@ -999,7 +999,7 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 提交到以太坊区块链的数据，由一个原始[帐户](#account)签名，并以一个特定的[地址](#address)为目标。 交易包含交易的[燃料限制](#gas-limit)等元数据。
 
-<DocLink to="/developers/docs/transactions/">
+<DocLink href="/developers/docs/transactions/">
   交易
 </DocLink>
 
@@ -1027,10 +1027,10 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 [权益证明](#pos)系统中的[节点](#node)，负责存储数据、处理交易并且在区块链中添加新区块。 要激活验证者软件，需要能够[质押](#staking) 32 个以太币。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos">
+<DocLink href="/developers/docs/consensus-mechanisms/pos">
   权益证明
 </DocLink>
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   以太坊中的质押
 </DocLink>
 
@@ -1048,7 +1048,7 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 某些[二层网络](#layer-2)解决方案的安全模型，为了提高速度，将交易[卷叠](/#rollups)为若干个批次，并作为单笔交易提交到以太坊。 交易计算在链下进行，然后附带有效性证明提交给主链。 这种方法在保证安全性的同时可能增加交易量。 部分[卷叠](#rollups)使用[欺诈证明](#fraud-proof)。
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   零知识卷叠
 </DocLink>
 
@@ -1056,7 +1056,7 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 使用[有效性证明](#validity-proof)来提高交易吞吐量的链下解决方案。 与[零知识卷叠](#zk-rollup)不同，Validium 的数据没有存储在一层网络[主网](#mainnet)中。
 
-<DocLink to="/developers/docs/scaling/validium/">
+<DocLink href="/developers/docs/scaling/validium/">
   Validium
 </DocLink>
 
@@ -1064,7 +1064,7 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 一种高级编程语言，语法与 Python 类似。 但 Vyper 更接近纯函数式语言， 其创造者为 Vitalik Buterin。
 
-<DocLink to="/developers/docs/smart-contracts/languages/#vyper">
+<DocLink href="/developers/docs/smart-contracts/languages/#vyper">
   Vyper
 </DocLink>
 
@@ -1076,7 +1076,7 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 持有[私钥](#private-key)的软件。 钱包用来访问和管理以太坊[帐户](#account)，并与[智能合约](#smart-contract)交互。 密钥无需存储在钱包中，为了提高安全性，可以从离线存储（如，存储卡或纸张）检索。 虽然称其为“钱包”，但它并不存储货币或代币。
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   以太坊钱包
 </DocLink>
 
@@ -1084,7 +1084,7 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 万维网的第三个版本。 Web3 最初由 Gavin Wood 博士提出，代表了 Web 应用程序的新愿景和关注点 - 从集中拥有和管理的应用程序变为基于去中心化协议的应用程序（请参阅[去中心化应用程序](#dapp)）。
 
-<DocLink to="/developers/docs/web2-vs-web3/">
+<DocLink href="/developers/docs/web2-vs-web3/">
   Web2 与 Web3 的对比
 </DocLink>
 
@@ -1104,7 +1104,7 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 零知识证明是一种加密方法，使个人可以在不传达任何额外信息的情况下证明陈述是真实的。
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   零知识卷叠
 </DocLink>
 
@@ -1112,7 +1112,7 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 使用[有效性证明](#validity-proof)的交易[卷叠](#rollups)，在使用[主网](#mainnet)（一层网络）安全性的同时，提高了[二层网络](#layer-2)的交易吞吐量。 虽然无法像[乐观卷叠](#optimistic-rollups)那样处理复杂的交易类型，但没有延迟问题，因为交易在提交时就可以证明其有效性。
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   零知识卷叠
 </DocLink>
 

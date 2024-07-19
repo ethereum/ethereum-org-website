@@ -95,6 +95,6 @@ _Wir untersuchen auch Optionen für Abstimmungen, damit die Community ihre Präf
 
 Wenn Sie eine dApp zu ethereum.org hinzufügen möchten und sie die Kriterien erfüllt, erstellen Sie einen Eintrag auf GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
   Eintrag erstellen
 </ButtonLink>
