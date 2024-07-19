@@ -42,7 +42,7 @@ Some apps will request you to save a secret 'recovery phrase' (sometimes called 
  <br />
  
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div>**Wallet installed? Learn how to use it.**</div>
+  <div><b>Wallet installed? Learn how to use it.</b></div>
   <ButtonLink to="/guides/how-to-use-a-wallet">
     How to use a wallet
   </ButtonLink>
@@ -50,7 +50,7 @@ Some apps will request you to save a secret 'recovery phrase' (sometimes called 
 
  <br />
  
-Interested in other guides? Check out our: [Step by step guides.](/guides/)
+Interested in other guides? Check out our: [Step by step guides](/guides/)
 
 
 ## Frequently asked questions
