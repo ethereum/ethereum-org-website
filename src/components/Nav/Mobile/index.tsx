@@ -1,11 +1,11 @@
-import type { RefObject } from "react"
+import { ButtonProps } from "@/components/ui/button"
 import {
-  type ButtonProps,
-  Drawer,
-  DrawerContent,
-  DrawerOverlay,
-  useBreakpointValue,
-} from "@chakra-ui/react"
+  Sheet,
+  SheetContent,
+  SheetFooter,
+  SheetHeader,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 
 import type { NavSections } from "../types"
 
@@ -20,7 +20,6 @@ type MobileNavMenuProps = ButtonProps & {
   toggleColorMode: () => void
   toggleSearch: () => void
   linkSections: NavSections
-  drawerContainerRef: RefObject<HTMLElement | null>
 }
 
 const MobileNavMenu = ({
@@ -29,40 +28,36 @@ const MobileNavMenu = ({
   toggleColorMode,
   toggleSearch,
   linkSections,
-  drawerContainerRef,
   ...props
 }: MobileNavMenuProps) => {
-  const isMenuOpen = useBreakpointValue({ base: isOpen, md: false }) as boolean
-
   return (
     <>
-      <HamburgerButton isMenuOpen={isMenuOpen} onToggle={onToggle} {...props} />
-
       {/* DRAWER MENU */}
-      <Drawer
-        portalProps={{ containerRef: drawerContainerRef }}
-        isOpen={isMenuOpen}
-        onClose={onToggle}
-        placement="start"
-        size="md"
-      >
-        <DrawerOverlay onClick={onToggle} bg="modalBackground" />
-
-        <DrawerContent bg="background.base">
+      <Sheet open={isOpen} onOpenChange={onToggle}>
+        <SheetTrigger asChild>
+          <HamburgerButton isMenuOpen={isOpen} onClick={onToggle} {...props} />
+        </SheetTrigger>
+        <SheetContent side="left" className="flex flex-col" aria-describedby="">
           {/* HEADER ELEMENTS: SITE NAME, CLOSE BUTTON */}
-          <MenuHeader />
+          <SheetHeader>
+            <MenuHeader />
+          </SheetHeader>
 
           {/* MAIN NAV ACCORDION CONTENTS OF MOBILE MENU */}
-          <MenuBody linkSections={linkSections} onToggle={onToggle} />
+          <div className="flex-1 overflow-auto">
+            <MenuBody linkSections={linkSections} onToggle={onToggle} />
+          </div>
 
           {/* FOOTER ELEMENTS: SEARCH, LIGHT/DARK, LANGUAGES */}
-          <MenuFooter
-            onToggle={onToggle}
-            toggleSearch={toggleSearch}
-            toggleColorMode={toggleColorMode}
-          />
-        </DrawerContent>
-      </Drawer>
+          <SheetFooter className="h-[108px] justify-center border-t border-primary-low-contrast px-4 py-0">
+            <MenuFooter
+              onToggle={onToggle}
+              toggleSearch={toggleSearch}
+              toggleColorMode={toggleColorMode}
+            />
+          </SheetFooter>
+        </SheetContent>
+      </Sheet>
     </>
   )
 }

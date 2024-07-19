@@ -87,7 +87,6 @@ const Nav = () => {
                     {...mobileNavProps}
                     linkSections={linkSections}
                     toggleSearch={searchModalDisclosure.onOpen}
-                    drawerContainerRef={navWrapperRef}
                   />
                 </Suspense>
               </Hide>

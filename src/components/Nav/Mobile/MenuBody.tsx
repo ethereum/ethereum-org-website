@@ -5,7 +5,6 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
-  DrawerBody,
   Heading,
 } from "@chakra-ui/react"
 
@@ -30,7 +29,7 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
   const menuColors = useNavMenuColors()
 
   return (
-    <DrawerBody as="nav" p="0">
+    <nav className="p-0">
       <Accordion allowToggle>
         {SECTION_LABELS.map((key) => {
           const { label, items } = linkSections[key]
@@ -102,7 +101,7 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
           )
         })}
       </Accordion>
-    </DrawerBody>
+    </nav>
   )
 }
 
