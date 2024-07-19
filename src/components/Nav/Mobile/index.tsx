@@ -14,28 +14,28 @@ import MenuBody from "./MenuBody"
 import MenuFooter from "./MenuFooter"
 import MenuHeader from "./MenuHeader"
 
+import useDisclosure from "@/hooks/useDisclosure"
+
 type MobileNavMenuProps = ButtonProps & {
-  isOpen: boolean
-  onToggle: () => void
   toggleColorMode: () => void
   toggleSearch: () => void
   linkSections: NavSections
 }
 
 const MobileNavMenu = ({
-  isOpen,
-  onToggle,
   toggleColorMode,
   toggleSearch,
   linkSections,
   ...props
 }: MobileNavMenuProps) => {
+  const { isOpen, onToggle } = useDisclosure()
+
   return (
     <>
       {/* DRAWER MENU */}
       <Sheet open={isOpen} onOpenChange={onToggle}>
         <SheetTrigger asChild>
-          <HamburgerButton isMenuOpen={isOpen} onClick={onToggle} {...props} />
+          <HamburgerButton isMenuOpen={isOpen} {...props} />
         </SheetTrigger>
         <SheetContent side="left" className="flex flex-col" aria-describedby="">
           {/* HEADER ELEMENTS: SITE NAME, CLOSE BUTTON */}

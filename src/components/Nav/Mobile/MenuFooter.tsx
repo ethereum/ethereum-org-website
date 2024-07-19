@@ -1,7 +1,6 @@
 import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdSearch, MdWbSunny } from "react-icons/md"
-import { MenuButton } from "@chakra-ui/react"
 
 import LanguagePicker from "@/components/LanguagePicker"
 

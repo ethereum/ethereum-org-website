@@ -2,7 +2,7 @@ import { forwardRef } from "react"
 import { motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
 
-import { ButtonIcon, type ButtonProps } from "@/components/ui/button"
+import { Button, type ButtonProps } from "@/components/ui/button"
 
 import { HAMBURGER_BUTTON_ID } from "@/lib/constants"
 
@@ -20,44 +20,30 @@ type HamburgerProps = ButtonProps & {
   isMenuOpen: boolean
 }
 
-const HamburgerButton = forwardRef<HTMLSpanElement, HamburgerProps>(
+const HamburgerButton = forwardRef<HTMLButtonElement, HamburgerProps>(
   ({ isMenuOpen, ...props }, ref) => {
     const { t } = useTranslation("common")
 
     return (
-      <ButtonIcon
+      <Button
         ref={ref}
         id={HAMBURGER_BUTTON_ID}
         aria-label={t("aria-toggle-search-button")}
         className="px-0 text-body"
         variant="ghost"
-        icon={
-          <svg
-            viewBox="0 0 24 40"
-            // pointerEvents={isMenuOpen ? "none" : "auto"}
-            className="pointer-events-auto relative mx-2 h-10 w-6 stroke-body stroke-2 hover:stroke-primary"
-            // _hover={{
-            //   color: "primary.base",
-            //   "& > path": {
-            //     stroke: "primary.base",
-            //   },
-            // }}
-            // sx={{
-            //   "& > path": {
-            //     stroke: "text",
-            //     fill: "none",
-            //   },
-            // }}
-          >
-            <motion.path
-              variants={hamburgerVariants}
-              initial={false}
-              animate={isMenuOpen ? "open" : "closed"}
-            />
-          </svg>
-        }
         {...props}
-      />
+      >
+        <svg
+          viewBox="0 0 24 40"
+          className="relative mx-2 h-10 w-6 stroke-body stroke-2 hover:stroke-primary hover:text-primary [&>path]:fill-none hover:[&>path]:stroke-primary"
+        >
+          <motion.path
+            variants={hamburgerVariants}
+            initial={false}
+            animate={isMenuOpen ? "open" : "closed"}
+          />
+        </svg>
+      </Button>
     )
   }
 )

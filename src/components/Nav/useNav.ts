@@ -18,7 +18,6 @@ import {
   BsUiChecksGrid,
 } from "react-icons/bs"
 import { PiFlask, PiUsersFourLight } from "react-icons/pi"
-import { useDisclosure } from "@chakra-ui/react"
 
 import { EthereumIcon } from "@/components/icons/EthereumIcon"
 
@@ -29,7 +28,6 @@ import type { NavSections } from "./types"
 import useColorModeValue from "@/hooks/useColorModeValue"
 
 export const useNav = () => {
-  const { isOpen, onToggle } = useDisclosure()
   const { t } = useTranslation("common")
   const { theme, setTheme } = useTheme()
 
@@ -474,15 +472,8 @@ export const useNav = () => {
     })
   }
 
-  const mobileNavProps = {
-    isOpen,
-    toggleColorMode,
-    onToggle,
-  }
-
   return {
     linkSections,
-    mobileNavProps,
     toggleColorMode,
   }
 }

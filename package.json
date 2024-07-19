@@ -74,6 +74,7 @@
     "remark-gfm": "^3.0.1",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
+    "usehooks-ts": "^3.1.0",
     "yaml-loader": "^0.8.0"
   },
   "devDependencies": {
