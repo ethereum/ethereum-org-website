@@ -115,31 +115,7 @@ We could find a JavaScript or Solidity code to implement [the best Zokrates hash
 
 #### The hash function {#hash-function}
 
-This is the function that calculates the hash of a map:
-
-```
-from "hashes/pedersen/512bitBool.zok" import main as pederhash;
-import "utils/casts/bool_256_to_u32_8.zok" as bool_256_to_u32_8;
-
-def hashMap(bool[${width+2}][${height+2}] map) -> u32[8] {
-   bool[512] mut map1d = [false; 512];
-   u32 mut counter = 0;
-
-   for u32 x in 0..${width+2} {
-      for u32 y in 0..${height+2} {
-         map1d[counter] = map[x][y];
-         counter = counter+1;
-      }
-   }
-
-   return bool_256_to_u32_8(pederhash(map1d));
-}
-```
-
-Note that the function has `${width+2}` and `${height+2}`. This is because the Zokrates programs are stored as [Template Strings](https://www.w3schools.com/js/js_string_templates.asp), so code between `${` and `}` is evaluated by JavaScript.
-This way the program can be used for different map sizes.
-
-We'll go over this code line by line
+This is the function that calculates the hash of a map. We'll go over this code line by line.
 
 ```
 from "hashes/pedersen/512bitBool.zok" import main as pederhash;
@@ -154,7 +130,9 @@ def hashMap(bool[${width+2}][${height+2}] map) -> u32[8] {
 
 This line starts a function definition. `hashMap` gets a single parameter called `map`, a two dimensional `bool`(ean) array. The size of the map is `width+2` by `height+2` for reasons that are explained below.
 
-***  GOON   PUT LINK HERE ***
+We also use `${width+2}` and `${height+2}`. This is because the Zokrates programs are stored in this application as [Template Strings](https://www.w3schools.com/js/js_string_templates.asp). Code between `${` and `}` is evaluated by JavaScript, and this way the program can be used for different map sizes.
+
+The map parameter has a one location wide border all around it without any bombs, which is the reason we need to add two to the width and height. This is necessary because of the way Zokrates handles if statements, [as explained below](#why-map-border).
 
 The return value is an array of eight unsigned 32-bit values, the hash.
 
@@ -186,7 +164,7 @@ This is for you declare a [for loop](https://zokrates.github.io/language/control
    }
 ```
 
-For every cell in the map, put that value in the `map1d` array and increment the counter.
+For every location in the map, put that value in the `map1d` array and increment the counter.
 
 ```
    return bool_256_to_u32_8(pederhash(map1d));
@@ -199,9 +177,74 @@ Ideally, we'd prefer to return the hash as a single 256-bit value. However, Zokr
 
 #### The hash program {#hash-program}
 
-The 
+The server needs to call `hashMap` directly to create game identifiers. However, Zokrates can only call the `main` function on a program to start, so we create a program with a `main` that calls the hash function.
+
+```
+${zokratesSource.hashFragment}
+
+def main(bool[${width+2}][${height+2}] map) -> u32[8] {
+   return hashMap(map);
+}
+```
 
 #### The dig program {#dig-program}
+
+This is the heart of the zero-knowledge part of the application, where we produce the proofs that are used to verify dig results.
+
+```
+${zokratesSource.hashFragment}
+
+// The number of mines in location (x,y)
+def map2mineCount(bool[${width+2}][${height+2}] map, u32 x, u32 y) -> u8 {
+   return if map[x+1][y+1] { 1 } else { 0 };
+}
+```
+
+<a id="why-map-border">
+Zero-knowlege proofs use [arithmetic circuits](https://medium.com/web3studio/simple-explanations-of-arithmetic-circuits-and-zero-knowledge-proofs-806e59a79785), which don't have an easy equivalent to an `if` statement. Instead, they use the equivalent of the [conditional operator](https://en.wikipedia.org/wiki/Ternary_conditional_operator). If `a` can be either zero or one, you can calculate `if a { b } else { c }` as `(1-a)b+ac`.
+
+Because of this issue, a Zokrates `if` statement always evaluates both branches. For example, if you have this code:
+
+```
+bool[5] arr = [false; 5];
+u32 index=10;
+return if index>4 { 0 } else { arr[index] }
+```
+
+It will error out, because it needs to calculate `arr[10]`, even though that value will be multiplied by zero. 
+
+This is the reason we need a one location wide border all around the map. We need to calculate the total number of mines around a location, and that means we need to see the location one row above and below, to the left and to the right, of the location where we're digging. Which means those location have to exist in the map array that Zokrates is provided.
+
+```
+def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (u32[8], u8) {
+```
+
+By default Zokrates proofs include their inputs. It does no good to know there are five mines around a spot unless you actually know which spot it is (and you can't just match it to your request, because then the prover could use different values and not tell you about it). However, we need to keep the map a secret, while providing it to Zokrates. The solution is to use a `private` parameter, one that is *not* revealed by the proof.
+
+This opens another venue for abuse. The prover could use the correct coordinates, but create a map with any desired number of mines around the location, and possibly at the location itself. To prevent this abuse, we make the zero knowledge proof include the hash of the map, which is the game identifier.
+
+```
+   return (hashMap(map) ,
+```
+
+The return value here is a tuple that includes the map hash array as well as the dig result.
+
+```
+         if map2mineCount(map, x, y) > 0 { 0xFF } else {
+```
+
+We use 255 as a special value in case the location itself has a bomb.
+
+```
+            map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+            map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
+            map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)                         
+         } 
+   );
+}
+```
+
+If the player hasn't hit a mine, add the mine counts for the area around the location and return that.
 
 
 ### The on-chain component {#onchain}
