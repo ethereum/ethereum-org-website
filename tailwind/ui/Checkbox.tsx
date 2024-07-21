@@ -20,7 +20,7 @@ const Checkbox = React.forwardRef<
     )}
     {...props}
   >
-    <CheckboxPrimitive.Indicator>
+    <CheckboxPrimitive.Indicator className="flex items-center justify-center">
       <RxCheck className="text-sm" />
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
