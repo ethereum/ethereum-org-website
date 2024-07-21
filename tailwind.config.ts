@@ -110,7 +110,7 @@ const config = {
   plugins: [
     require("tailwindcss-animate"),
     plugin(function ({ matchVariant }) {
-      // The :not() pseudo-class. `i.e. not-[&:disabled]`
+      // The :not() pseudo-class. `i.e. not-[:checked]`
       matchVariant(
         "not",
         (value) => {
@@ -118,6 +118,7 @@ const config = {
         },
         {
           values: {
+            // not-disabled => ":not(:disabled)"
             disabled: ":disabled",
           },
         }
