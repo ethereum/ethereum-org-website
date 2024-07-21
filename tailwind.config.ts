@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import plugin from "tailwindcss/plugin"
 
 const config = {
   darkMode: ["class"],
@@ -106,7 +107,23 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    plugin(function ({ matchVariant }) {
+      // The :not() pseudo-class. `i.e. not-[&:disabled]`
+      matchVariant(
+        "not",
+        (value) => {
+          return `&:not(${value})`
+        },
+        {
+          values: {
+            disabled: ":disabled",
+          },
+        }
+      )
+    }),
+  ],
 } satisfies Config
 
 export default config
