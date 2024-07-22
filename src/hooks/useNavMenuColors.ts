@@ -1,6 +1,6 @@
-import { Level } from "@/components/Nav/types"
+import { useTheme } from "next-themes"
 
-import useColorModeValue from "./useColorModeValue"
+import { Level } from "@/components/Nav/types"
 
 type LevelColors = {
   subtext: string
@@ -16,31 +16,36 @@ type NavMenuColors = {
   lvl: Record<Level, LevelColors>
 }
 
-export const useNavMenuColors = (): NavMenuColors => ({
-  body: "body.base",
-  stroke: "body.light",
-  highlight: "primary.base",
-  active: "primary.highContrast",
-  lvl: {
-    1: {
-      subtext: useColorModeValue("gray.400", "gray.400"),
-      background: useColorModeValue("white", "black"),
-      activeBackground: useColorModeValue("gray.150", "gray.700"),
+export const useNavMenuColors = (): NavMenuColors => {
+  const { theme } = useTheme()
+  const isLight = theme === "light"
+
+  return {
+    body: "text-body",
+    stroke: "border-body-light",
+    highlight: "text-primary",
+    active: "text-primary-high-contrast",
+    lvl: {
+      1: {
+        subtext: isLight ? "text-gray-400" : "text-gray-400",
+        background: isLight ? "bg-white" : "bg-black",
+        activeBackground: isLight ? "bg-gray-150" : "bg-gray-700",
+      },
+      2: {
+        subtext: isLight ? "text-gray-400" : "text-gray-300",
+        background: isLight ? "bg-gray-150" : "bg-gray-700",
+        activeBackground: isLight ? "bg-gray-200" : "bg-gray-600",
+      },
+      3: {
+        subtext: isLight ? "text-gray-500" : "text-gray-300",
+        background: isLight ? "bg-gray-200" : "bg-gray-600",
+        activeBackground: isLight ? "bg-gray-100" : "bg-gray-700",
+      },
+      4: {
+        subtext: isLight ? "text-gray-700" : "text-gray-300",
+        background: isLight ? "bg-gray-300" : "bg-gray-700",
+        activeBackground: isLight ? "bg-gray-200" : "bg-gray-800",
+      },
     },
-    2: {
-      subtext: useColorModeValue("gray.400", "gray.300"),
-      background: useColorModeValue("gray.150", "gray.700"),
-      activeBackground: useColorModeValue("gray.200", "gray.600"),
-    },
-    3: {
-      subtext: useColorModeValue("gray.500", "gray.300"),
-      background: useColorModeValue("gray.200", "gray.600"),
-      activeBackground: useColorModeValue("gray.100", "gray.700"),
-    },
-    4: {
-      subtext: useColorModeValue("gray.700", "gray.300"),
-      background: useColorModeValue("gray.300", "gray.700"),
-      activeBackground: useColorModeValue("gray.200", "gray.800"),
-    },
-  },
-})
+  }
+}
