@@ -38,7 +38,7 @@ Here are the important dates for the 2024 translatathon
 
 ## Participate
 
-![](../../images/translatathon/participate.png)
+![](./participate.png)
 
 ### Who should participate
 

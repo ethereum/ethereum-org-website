@@ -4,7 +4,7 @@ lang: en
 template: translatathon
 ---
 
-![](../../../images/translatathon/local-communities.png)
+![](./local-communities.png)
 
 ## Overview
 
