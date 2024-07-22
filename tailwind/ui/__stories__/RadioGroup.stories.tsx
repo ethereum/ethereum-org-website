@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react/*"
 
-import { HStack } from "../flex"
+import { HStack } from "../../../src/components/ui/flex"
 import {
   RadioGroup,
   RadioGroupItem,
