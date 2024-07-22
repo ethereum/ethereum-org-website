@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from "react"
 import { useRouter } from "next/router"
-import { useDisclosure } from "@chakra-ui/react"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { useDisclosure } from "@/hooks/useDisclosure"
 import { useSurvey } from "@/hooks/useSurvey"
 
 export const useFeedbackWidget = () => {
