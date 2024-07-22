@@ -28,9 +28,13 @@ const DismissableBanner = ({
   }
 
   return (
-    <BannerNotification shouldShow={show} gap='8'>
-      <Center marginInlineStart='auto'>{children}</Center>
-      <CloseButton marginInlineStart='auto' onClick={onClose} aria-label="Close Banner" />
+    <BannerNotification shouldShow={show} gap="8">
+      <Center marginInlineStart="auto">{children}</Center>
+      <CloseButton
+        marginInlineStart="auto"
+        onClick={onClose}
+        aria-label="Close Banner"
+      />
     </BannerNotification>
   )
 }

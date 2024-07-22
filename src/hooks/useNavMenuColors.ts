@@ -1,5 +1,3 @@
-
-
 import { Level } from "@/components/Nav/types"
 
 import useColorModeValue from "./useColorModeValue"

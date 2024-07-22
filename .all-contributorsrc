@@ -11320,7 +11320,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/71248977?v=4",
       "profile": "https://github.com/UNOFFICIALbgd",
       "contributions": [
-        "bug"
+        "bug",
+        "doc"
       ]
     },
     {
@@ -12296,6 +12297,33 @@
       "profile": "https://github.com/codingmickey",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "Ekam-Bitt",
+      "name": "Ekam Bitt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/74407205?v=4",
+      "profile": "https://ekam-bitt.github.io",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "iankressin",
+      "name": "Ian K. Guimarães",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29215044?v=4",
+      "profile": "http://iankguimaraes.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "jncrabb",
+      "name": "jncrabb",
+      "avatar_url": "https://avatars.githubusercontent.com/u/27811684?v=4",
+      "profile": "https://github.com/jncrabb",
+      "contributions": [
+        "content"
       ]
     }
   ],

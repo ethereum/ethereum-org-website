@@ -2,13 +2,7 @@ import { useRouter } from "next/router"
 import type { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  Center,
-  Heading,
-  ListItem,
-  UnorderedList,
-} from "@chakra-ui/react"
+import { Box, Center, Heading, ListItem, UnorderedList } from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 

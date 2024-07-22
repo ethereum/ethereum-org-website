@@ -71,7 +71,7 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
   const activeStyles = {
     bg: "background.highlight",
     color: "body.base",
-    transition: "background 0.5s, color 0.5s"
+    transition: "background 0.5s, color 0.5s",
   }
 
   return (

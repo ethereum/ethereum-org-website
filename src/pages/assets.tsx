@@ -8,7 +8,7 @@ import {
   Heading,
   type HeadingProps,
   SimpleGrid,
-  type SimpleGridProps
+  type SimpleGridProps,
 } from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"

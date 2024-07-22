@@ -1,11 +1,7 @@
 import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdSearch, MdWbSunny } from "react-icons/md"
-import {
-  DrawerFooter,
-  Grid,
-  MenuButton,
-} from "@chakra-ui/react"
+import { DrawerFooter, Grid, MenuButton } from "@chakra-ui/react"
 
 import LanguagePicker from "@/components/LanguagePicker"
 

@@ -7,7 +7,7 @@ import {
   Heading,
   LinkBox,
   type LinkBoxProps,
-  LinkOverlay
+  LinkOverlay,
 } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"

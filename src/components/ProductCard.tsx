@@ -159,7 +159,7 @@ const ProductCard = ({
           ))}
       </HStack>
       <ButtonLink to={url} m={4} height={20}>
-        {t('open')} {name}
+        {t("open")} {name}
       </ButtonLink>
     </Flex>
   )

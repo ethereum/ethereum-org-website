@@ -417,7 +417,7 @@ type HeroButtonProps = Omit<CallToActionProps, "index">
  * or a string. (defaults to `StaticImageData`)
  */
 export type CommonHeroProps<
-  HeroImg extends StaticImageData | string = StaticImageData
+  HeroImg extends StaticImageData | string = StaticImageData,
 > = {
   /**
    * Decorative image displayed as the full background or an aside to
@@ -488,6 +488,15 @@ export type EthStoreResponse = Data<{
   day: number
   effective_balances_sum_wei: number
 }>
+
+export type EthStakedResponse = {
+  result: {
+    rows?: {
+      cum_deposited_eth: number
+      time: string
+    }[]
+  }
+}
 
 export type EpochResponse = Data<{
   validatorscount: number
