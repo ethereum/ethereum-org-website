@@ -51,6 +51,7 @@ Some apps will request you to save a secret 'recovery phrase' (sometimes called 
 
  <br />
  
+
 Interested in other guides? Check out our: [Step by step guides](/guides/)
 
 
