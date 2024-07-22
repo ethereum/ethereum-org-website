@@ -194,7 +194,7 @@ export const TranslatathonLayout = ({
         description={
           <>
             <Text>
-              Welcome to the thereum.org Translatathon! A translatathon is a
+              Welcome to the ethereum.org Translatathon! A translatathon is a
               collaborative and competitive hackathon-style event where
               individuals and teams compete for prizes by translating
               ethereum.org content into different languages.
