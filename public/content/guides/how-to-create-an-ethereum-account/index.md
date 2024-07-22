@@ -8,12 +8,11 @@ lang: en
 
 **Anyone can create an Ethereum account for free.** You just need to install a crypto wallet app. Wallets create and manage your Ethereum account. They can send transactions, check your balances and connect you to other apps built on Ethereum.
 
-With a wallet you can also log into any token exchange, games, [NFT](/glossary/#nft) marketplaces instantly. There is no need for individual registration, one account is shared for all apps built on Ethereum. 
+With a wallet you can also log into any token exchange, games, [NFT](/glossary/#nft) marketplaces instantly. There is no need for individual registration, one account is shared for all apps built on Ethereum.
 
 ## Step 1: Choose a wallet
 
 A wallet is an app that helps you manage your Ethereum account. There are dozens of different wallets to choose from: mobile, desktop, or even browser extensions.
-
 
 <ButtonLink to="/wallets/find-wallet/">
   List of wallets
@@ -31,7 +30,7 @@ Once you have decided on a specific wallet, visit their official website or app 
 
 ## Step 3: Open the app and create your Ethereum account
 
-The first time you open your new wallet you might be asked to choose between creating a new account or importing an existing one. Click on the new account creation. **This is the step during which the wallet software generates your Ethereum account.** 
+The first time you open your new wallet you might be asked to choose between creating a new account or importing an existing one. Click on the new account creation. **This is the step during which the wallet software generates your Ethereum account.**
 
 ## Step 4: Store your recovery phrase
 
