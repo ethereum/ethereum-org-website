@@ -20,7 +20,6 @@ async function fetchWithRateLimit(filepath: string): Promise<Commit[]> {
    * eslint does not like while(true)
    **/
   while (true) {
-    console.log("looping")
     const response = await fetch(url.href, {
       headers: { Authorization: `token ${gitHubToken}` },
     })

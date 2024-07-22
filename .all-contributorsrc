@@ -12307,6 +12307,24 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "iankressin",
+      "name": "Ian K. Guimarães",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29215044?v=4",
+      "profile": "http://iankguimaraes.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "jncrabb",
+      "name": "jncrabb",
+      "avatar_url": "https://avatars.githubusercontent.com/u/27811684?v=4",
+      "profile": "https://github.com/jncrabb",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
