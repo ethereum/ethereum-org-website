@@ -70,9 +70,11 @@ const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
         return (
           <BreadcrumbItem key={fullPath} isCurrentPage={isCurrentPage}>
             <BreadcrumbLink
-              as={BaseLink}
+              // If current page, render as span since the `href` will not be
+              // passed down to the child
+              // ref: https://github.com/chakra-ui/chakra-ui/blob/v2/packages/components/src/breadcrumb/breadcrumb-link.tsx#L32
+              as={isCurrentPage ? "span" : BaseLink}
               href={fullPath}
-              isPartiallyActive={isCurrentPage}
               textTransform="uppercase"
             >
               {text}
