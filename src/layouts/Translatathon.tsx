@@ -1,9 +1,4 @@
-import {
-  Box,
-  Flex,
-  Text,
-  useToken,
-} from "@chakra-ui/react"
+import { Box, Flex, Text, useToken } from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, SharedFrontmatter } from "@/lib/interfaces"
@@ -30,23 +25,14 @@ import { TranslationHubCallout } from "@/components/Translatathon/TranslationHub
 
 import WhyWeDoItImage from "@/public/images/translatathon/man-baby-woman.png"
 import HowDoesItWorkImage from "@/public/images/translatathon/round-table.png"
-import robotImage from '@/public/images/wallet.png'
+import robotImage from "@/public/images/wallet.png"
 
-const ContentSplit = ({children}) => {
+const ContentSplit = ({ children }) => {
   return (
-    <Flex
-      w="full"
-      direction={{ base: "column", md: "row" }}
-    >
-      <Box>
-        {children}
-      </Box>
+    <Flex w="full" direction={{ base: "column", md: "row" }}>
+      <Box>{children}</Box>
       <Flex maxHeight="300px">
-        <Image
-          src={robotImage}
-          alt="robot"
-          style={{ objectFit: "contain" }}
-        />
+        <Image src={robotImage} alt="robot" style={{ objectFit: "contain" }} />
       </Flex>
     </Flex>
   )
@@ -65,32 +51,30 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
 )
 
 const WhyWeDoItColumn = (props: ChildOnlyProp) => (
-  <Flex w="full" m={{ base: "auto 0", lg: 0 }} me={{ lg: 8 }} direction="column">
+  <Flex
+    w="full"
+    m={{ base: "auto 0", lg: 0 }}
+    me={{ lg: 8 }}
+    direction="column"
+  >
     <Box m="auto">
-      <Image
-        src={WhyWeDoItImage}
-        alt=''
-        height="272"
-      />
+      <Image src={WhyWeDoItImage} alt="" height="272" />
     </Box>
-    <Box>
-      {props.children}
-    </Box>
+    <Box>{props.children}</Box>
   </Flex>
 )
 
 const HowDoesItWorkColumn = (props: ChildOnlyProp) => (
-  <Flex w="full" m={{ base: "auto 0", lg: 0 }} ms={{ lg: 8 }} direction="column">
+  <Flex
+    w="full"
+    m={{ base: "auto 0", lg: 0 }}
+    ms={{ lg: 8 }}
+    direction="column"
+  >
     <Box m="auto">
-      <Image
-        src={HowDoesItWorkImage}
-        alt=''
-        height="272"
-      />
+      <Image src={HowDoesItWorkImage} alt="" height="272" />
     </Box>
-    <Box>
-      {props.children}
-    </Box>
+    <Box>{props.children}</Box>
   </Flex>
 )
 
@@ -126,8 +110,6 @@ const EmojiCard = ({ emoji, title, description }) => (
   />
 )
 
-
-
 // Translatathon layout components
 export const translatathonComponents = {
   // Export empty object if none needed
@@ -144,13 +126,13 @@ export const translatathonComponents = {
   TranslationHubCallout,
   TranslatathonInANutshell,
   TwoColumnContent,
-  WhyWeDoItColumn
+  WhyWeDoItColumn,
 }
 
 type TranslatathonLayoutProps = ChildOnlyProp &
-Pick<MdPageContent, "slug" | "tocItems"> & {
-  frontmatter: SharedFrontmatter
-}
+  Pick<MdPageContent, "slug" | "tocItems"> & {
+    frontmatter: SharedFrontmatter
+  }
 
 export const TranslatathonLayout = ({
   children,
@@ -204,23 +186,25 @@ export const TranslatathonLayout = ({
   }
 
   return (
-    <Box
-      position="relative"
-      width="full"
-      dir={'ltr'}
-    >
+    <Box position="relative" width="full" dir={"ltr"}>
       <ContentHero
         breadcrumbs={{ slug, startDepth: 1 }}
         title={frontmatter.title}
-        maxHeight={'400px'}
-        description={<>
-          <Text>Welcome to the thereum.org Translatathon!
-          A translatathon is a collaborative and competitive hackathon-style event where individuals and teams compete for prizes by translating ethereum.org content into different languages.</Text>
-          <Flex>
-            <ButtonLink href="/">Apply to translate</ButtonLink> 
-          </Flex>
-        </>}
-        heroImg={'/images/heroes/translatathon-hero.png'}
+        maxHeight={"400px"}
+        description={
+          <>
+            <Text>
+              Welcome to the thereum.org Translatathon! A translatathon is a
+              collaborative and competitive hackathon-style event where
+              individuals and teams compete for prizes by translating
+              ethereum.org content into different languages.
+            </Text>
+            <Flex>
+              <ButtonLink href="/">Apply to translate</ButtonLink>
+            </Flex>
+          </>
+        }
+        heroImg={"/images/heroes/translatathon-hero.png"}
         blurDataURL={""}
       />
       <Page>
@@ -229,9 +213,7 @@ export const TranslatathonLayout = ({
           dropdownLinks={dropdownLinks}
           tocItems={tocItems}
         />
-        <ContentContainer id="content">
-          {children}
-        </ContentContainer>
+        <ContentContainer id="content">{children}</ContentContainer>
         <MobileButton>
           <MobileButtonDropdown list={dropdownLinks} />
         </MobileButton>

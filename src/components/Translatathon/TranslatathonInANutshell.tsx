@@ -1,6 +1,6 @@
-import { Flex, Heading, Text } from '@chakra-ui/react'
+import { Flex, Heading, Text } from "@chakra-ui/react"
 
-import { Image } from '@/components/Image'
+import { Image } from "@/components/Image"
 
 import dogeImage from "@/public/images/doge-computer.png"
 import settlementImage from "@/public/images/translatathon/settlement.png"
@@ -36,13 +36,14 @@ export const TranslatathonInANutshell = () => {
             What is a Translatathon?
           </Heading>
           <Text>
-            The goal is to translate website content and help make ethereum.org more accessible to non-English speakers, raise awareness of the 
+            The goal is to translate website content and help make ethereum.org
+            more accessible to non-English speakers, raise awareness of the
           </Text>
         </Flex>
         <Flex w="full" justifyContent="center">
           <Image
             src={settlementImage}
-            alt=''
+            alt=""
             w="327"
             style={{ objectFit: "contain" }}
           />
@@ -58,7 +59,7 @@ export const TranslatathonInANutshell = () => {
         <Flex w="full" justifyContent="center">
           <Image
             src={mergeImage}
-            alt=''
+            alt=""
             w="327"
             style={{ objectFit: "contain" }}
           />
@@ -68,7 +69,8 @@ export const TranslatathonInANutshell = () => {
             Why we do it
           </Heading>
           <Text>
-            The goal is to translate website content and help make ethereum.org more accessible to non-English speakers, raise awareness of the 
+            The goal is to translate website content and help make ethereum.org
+            more accessible to non-English speakers, raise awareness of the
           </Text>
         </Flex>
       </Flex>
@@ -84,13 +86,14 @@ export const TranslatathonInANutshell = () => {
             Why should you participate
           </Heading>
           <Text>
-            The goal is to translate website content and help make ethereum.org more accessible to non-English speakers, raise awareness of the 
+            The goal is to translate website content and help make ethereum.org
+            more accessible to non-English speakers, raise awareness of the
           </Text>
         </Flex>
         <Flex w="full" justifyContent="center">
           <Image
             src={dogeImage}
-            alt=''
+            alt=""
             w="327"
             style={{ objectFit: "contain" }}
           />

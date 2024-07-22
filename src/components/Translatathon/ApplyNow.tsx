@@ -20,12 +20,10 @@ export const ApplyNow = () => {
           titleKey="page-translatathon:translatathon-apply-now"
           descriptionKey="page-translatathon:translatathon-apply-now-desc"
           alignItems="center"
-          textAlign='center'
+          textAlign="center"
         >
           <Flex m="auto">
-            <ButtonLink href="/">
-              Apply now
-            </ButtonLink>
+            <ButtonLink href="/">Apply now</ButtonLink>
           </Flex>
         </Callout>
       </Box>

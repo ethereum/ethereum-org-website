@@ -5,7 +5,7 @@ import { Image } from "@/components/Image"
 
 import WalkingImage from "@/public/images/translatathon/walking.png"
 
-export const TranslationHubCallout = ({children}) => {
+export const TranslationHubCallout = ({ children }) => {
   return (
     <Flex
       w="full"
@@ -14,18 +14,15 @@ export const TranslationHubCallout = ({children}) => {
       direction={{ base: "column", lg: "row" }}
       p={8}
     >
-      <Flex
-        w="full"
-        direction="column"
-      >
+      <Flex w="full" direction="column">
         {children}
         <Flex>
-          <ButtonLink href="/translatathon/local-communities">Find out more on hubs</ButtonLink>
+          <ButtonLink href="/translatathon/local-communities">
+            Find out more on hubs
+          </ButtonLink>
         </Flex>
       </Flex>
-      <Flex
-        w="full"
-      >
+      <Flex w="full">
         <Image
           src={WalkingImage}
           alt=""
