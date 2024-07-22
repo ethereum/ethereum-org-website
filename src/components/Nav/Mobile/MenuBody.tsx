@@ -1,21 +1,21 @@
 import { useState } from "react"
 import { useRouter } from "next/router"
-import * as AccordionPrimitive from "@radix-ui/react-accordion"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { SECTION_LABELS } from "@/lib/constants"
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-} from "../../../../tailwind/ui/accordion"
 import type { Level, NavSections } from "../types"
 
 import ExpandIcon from "./ExpandIcon"
 import LvlAccordion from "./LvlAccordion"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./MenuAccordion"
 
 import { useNavMenuColorsTw } from "@/hooks/useNavMenuColorsTw"
 
@@ -47,8 +47,8 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
               value={key}
               className="border-b border-body-light first:border-t"
             >
-              <AccordionPrimitive.Header
-                className="flex"
+              <AccordionTrigger
+                className={cn(menuColors.body)}
                 onClick={() => {
                   trackCustomEvent({
                     eventCategory: "Mobile navigation menu",
@@ -58,22 +58,12 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
                     } section: ${locale} - ${key}`,
                   })
                 }}
-                asChild
               >
-                <h2>
-                  <AccordionPrimitive.Trigger
-                    className={cn(
-                      "group flex flex-1 items-center justify-between gap-2 px-4 py-4 font-medium transition-all hover:bg-background-highlight focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover md:px-4 [&[data-state=open]]:bg-background-highlight [&[data-state=open]]:text-primary-high-contrast",
-                      menuColors.body
-                    )}
-                  >
-                    <ExpandIcon isOpen={isExpanded} />
-                    <span className="flex-1 text-start text-lg font-bold leading-none">
-                      {label}
-                    </span>
-                  </AccordionPrimitive.Trigger>
-                </h2>
-              </AccordionPrimitive.Header>
+                <ExpandIcon isOpen={isExpanded} />
+                <span className="flex-1 text-start text-lg font-bold leading-none">
+                  {label}
+                </span>
+              </AccordionTrigger>
 
               <AccordionContent
                 className={cn(

@@ -9,14 +9,15 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { cleanPath } from "@/lib/utils/url"
 
 import { BaseLink } from "../../../../tailwind/Link"
+import type { Level, NavItem, NavSectionKey } from "../types"
+
+import ExpandIcon from "./ExpandIcon"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
-} from "../../../../tailwind/ui/accordion"
-import type { Level, NavItem, NavSectionKey } from "../types"
-
-import ExpandIcon from "./ExpandIcon"
+  AccordionTrigger,
+} from "./MenuAccordion"
 
 import { useNavMenuColorsTw } from "@/hooks/useNavMenuColorsTw"
 
@@ -106,15 +107,15 @@ const LvlAccordion = ({
             </AccordionItem>
           )
 
-        const Heading = `h${lvl + 1}` as "h2" | "h3" | "h4" | "h5"
         return (
           <AccordionItem
             key={label}
             value={label}
             className="border-t border-body-light last:border-b"
           >
-            <AccordionPrimitive.Header
-              className="flex"
+            <AccordionTrigger
+              heading={`h${lvl + 1}` as "h2" | "h3" | "h4" | "h5"}
+              className={cn(menuColors.body, nestedAccordionSpacingMap[lvl])}
               onClick={() => {
                 trackCustomEvent({
                   eventCategory: "Mobile navigation menu",
@@ -124,38 +125,27 @@ const LvlAccordion = ({
                   } section: ${label} - ${description.slice(0, 16)}...`,
                 })
               }}
-              asChild
             >
-              <Heading>
-                <AccordionPrimitive.Trigger
+              <ExpandIcon isOpen={isExpanded} />
+              <div>
+                <p
                   className={cn(
-                    "group flex flex-1 items-center justify-start gap-2 px-4 py-4 text-start font-medium transition-all hover:bg-background-highlight focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover md:px-4 [&[data-state=open]]:bg-background-highlight [&[data-state=open]]:text-primary-high-contrast",
-                    menuColors.body,
-                    nestedAccordionSpacingMap[lvl]
+                    "flex-1 text-md font-bold leading-tight",
+                    menuColors.body
                   )}
                 >
-                  <ExpandIcon isOpen={isExpanded} />
-                  <div>
-                    <p
-                      className={cn(
-                        "flex-1 text-md font-bold leading-tight",
-                        menuColors.body
-                      )}
-                    >
-                      {label}
-                    </p>
-                    <p
-                      className={cn(
-                        "text-sm font-normal leading-tight",
-                        menuColors.lvl[lvl].subtext
-                      )}
-                    >
-                      {description}
-                    </p>
-                  </div>
-                </AccordionPrimitive.Trigger>
-              </Heading>
-            </AccordionPrimitive.Header>
+                  {label}
+                </p>
+                <p
+                  className={cn(
+                    "text-sm font-normal leading-tight",
+                    menuColors.lvl[lvl].subtext
+                  )}
+                >
+                  {description}
+                </p>
+              </div>
+            </AccordionTrigger>
 
             <AccordionContent
               className={cn("mt-0 p-0", menuColors.lvl[lvl + 1].background)}
