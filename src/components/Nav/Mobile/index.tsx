@@ -49,7 +49,7 @@ const MobileNavMenu = ({
           </div>
 
           {/* FOOTER ELEMENTS: SEARCH, LIGHT/DARK, LANGUAGES */}
-          <SheetFooter className="h-[108px] justify-center border-t border-disabled px-4 py-0">
+          <SheetFooter className="h-[108px] justify-center border-t border-body-light px-4 py-0">
             <MenuFooter
               onToggle={onToggle}
               toggleSearch={toggleSearch}

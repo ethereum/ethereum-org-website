@@ -17,7 +17,7 @@ import type { Level, NavSections } from "../types"
 import ExpandIcon from "./ExpandIcon"
 import LvlAccordion from "./LvlAccordion"
 
-import { useNavMenuColors } from "@/hooks/useNavMenuColors"
+import { useNavMenuColorsTw } from "@/hooks/useNavMenuColorsTw"
 
 type MenuBodyProps = {
   onToggle: () => void
@@ -26,7 +26,7 @@ type MenuBodyProps = {
 
 const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
   const { locale } = useRouter()
-  const menuColors = useNavMenuColors()
+  const menuColors = useNavMenuColorsTw()
   const [value, setValue] = useState("")
 
   return (
@@ -42,7 +42,11 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
           const isExpanded = value === key
 
           return (
-            <AccordionItem key={key} value={key}>
+            <AccordionItem
+              key={key}
+              value={key}
+              className="border-b border-body-light first:border-t"
+            >
               <AccordionPrimitive.Header
                 className="flex"
                 onClick={() => {
@@ -64,7 +68,7 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
                     )}
                   >
                     <ExpandIcon isOpen={isExpanded} />
-                    <span className="flex-1 text-start text-lg font-bold leading-tight">
+                    <span className="flex-1 text-start text-lg font-bold leading-none">
                       {label}
                     </span>
                   </AccordionPrimitive.Trigger>

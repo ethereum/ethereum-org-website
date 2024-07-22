@@ -18,7 +18,7 @@ import type { Level, NavItem, NavSectionKey } from "../types"
 
 import ExpandIcon from "./ExpandIcon"
 
-import { useNavMenuColors } from "@/hooks/useNavMenuColors"
+import { useNavMenuColorsTw } from "@/hooks/useNavMenuColorsTw"
 
 type LvlAccordionProps = {
   lvl: Level
@@ -34,7 +34,7 @@ const LvlAccordion = ({
   onToggle,
 }: LvlAccordionProps) => {
   const { asPath, locale } = useRouter()
-  const menuColors = useNavMenuColors()
+  const menuColors = useNavMenuColorsTw()
   const [value, setValue] = useState("")
 
   return (
@@ -44,8 +44,7 @@ const LvlAccordion = ({
         const isActivePage = isLink && cleanPath(asPath) === action.href
         const isExpanded = value === label
 
-        const Heading = `h${lvl + 1}` as "h2" | "h3" | "h4" | "h5"
-        const headingMap = {
+        const nestedAccordionSpacingMap = {
           2: "ps-8",
           3: "ps-12",
           4: "ps-16",
@@ -65,7 +64,7 @@ const LvlAccordion = ({
                 <Button
                   className={cn(
                     "flex h-full justify-start whitespace-normal px-4 py-4 text-start text-body no-underline",
-                    headingMap[lvl + 2]
+                    nestedAccordionSpacingMap[lvl + 2]
                   )}
                   variant="ghost"
                   asChild
@@ -107,6 +106,7 @@ const LvlAccordion = ({
             </AccordionItem>
           )
 
+        const Heading = `h${lvl + 1}` as "h2" | "h3" | "h4" | "h5"
         return (
           <AccordionItem
             key={label}
@@ -130,8 +130,8 @@ const LvlAccordion = ({
                 <AccordionPrimitive.Trigger
                   className={cn(
                     "group flex flex-1 items-center justify-start gap-2 px-4 py-4 text-start font-medium transition-all hover:bg-background-highlight focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover md:px-4 [&[data-state=open]]:bg-background-highlight [&[data-state=open]]:text-primary-high-contrast",
-                    headingMap[lvl],
-                    menuColors.body
+                    menuColors.body,
+                    nestedAccordionSpacingMap[lvl]
                   )}
                 >
                   <ExpandIcon isOpen={isExpanded} />

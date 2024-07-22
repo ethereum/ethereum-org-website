@@ -13,7 +13,6 @@ const FooterButton = forwardRef<HTMLButtonElement, FooterButtonProps>(
       ref={ref}
       className="flex h-fit flex-col items-center px-1 text-body"
       variant="ghost"
-      // sx={{ span: { m: 0 } }}
       {...props}
     >
       <Icon className="h-6 w-6" />
