@@ -120,7 +120,7 @@ const FindWalletPage = ({
     filteredWallets,
     updateMoreInfo,
     walletCardData,
-  } = useWalletTable({ filters, t, walletData: wallets })
+  } = useWalletTable({ filters, supportedLanguage, t, walletData: wallets })
 
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
