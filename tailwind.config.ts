@@ -73,6 +73,33 @@ const config = {
           900: "var(--gray-900)",
         },
 
+        blue: {
+          50: "var(--blue-50)",
+          100: "var(--blue-100)",
+          200: "var(--blue-200)",
+          300: "var(--blue-300)",
+          400: "var(--blue-400)",
+          500: "var(--blue-500)",
+          600: "var(--blue-600)",
+          700: "var(--blue-700)",
+          800: "var(--blue-800)",
+          900: "var(--blue-900)",
+        },
+
+        orange: {
+          50: "var(--orange-50)",
+          100: "var(--orange-100)",
+          200: "var(--orange-200)",
+          300: "var(--orange-300)",
+          400: "var(--orange-400)",
+          500: "var(--orange-500)",
+          550: "var(--orange-550)",
+          600: "var(--orange-600)",
+          700: "var(--orange-700)",
+          800: "var(--orange-800)",
+          900: "var(--orange-900)",
+        },
+
         primary: {
           DEFAULT: "var(--primary)",
           "high-contrast": "var(--primary-high-contrast)",
