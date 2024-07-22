@@ -43,7 +43,7 @@ Some apps will request you to save a secret 'recovery phrase' (sometimes called 
  
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div><b>Wallet installed?</b>
-    <br>Learn how to use it.</br></div>
+    <br/>Learn how to use it.</div>
   <ButtonLink to="/guides/how-to-use-a-wallet">
     How to use a wallet
   </ButtonLink>
