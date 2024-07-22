@@ -1,7 +1,7 @@
 import type { MotionProps } from "framer-motion"
 import { useRouter } from "next/router"
 
-import { useNavMenuColors } from "@/hooks/useNavMenuColorsTw"
+import { useNavMenuColors } from "@/hooks/useNavMenuColors"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 const PADDING = 4 // Chakra-UI space token

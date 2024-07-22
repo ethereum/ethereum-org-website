@@ -5,7 +5,7 @@ import { cleanPath } from "@/lib/utils/url"
 
 import type { Level, NavItem } from "../types"
 
-import { useNavMenuColors } from "@/hooks/useNavMenuColorsTw"
+import { useNavMenuColors } from "@/hooks/useNavMenuColors"
 
 type ItemProps = {
   item: NavItem
