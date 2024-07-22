@@ -19,9 +19,6 @@ import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type BaseProps = {
-  /** @deprecated Use `href` prop instead */
-  to?: string
-  href?: string
   hideArrow?: boolean
   isPartiallyActive?: boolean
   activeStyle?: StyleProps
@@ -46,8 +43,7 @@ export type LinkProps = BaseProps &
  */
 export const BaseLink = forwardRef(function Link(
   {
-    to,
-    href: hrefProp,
+    href,
     children,
     hideArrow,
     isPartiallyActive = true,
@@ -60,7 +56,10 @@ export const BaseLink = forwardRef(function Link(
   const { asPath } = useRouter()
   const { flipForRtl } = useRtlFlip()
 
-  let href = (to ?? hrefProp) as string
+  if (!href) {
+    console.warn("Link component is missing href prop")
+    return <ChakraLink {...props} />
+  }
 
   const isActive = url.isHrefActive(href, asPath, isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
