@@ -34,7 +34,7 @@ The first time you open your new wallet you might be asked to choose between cre
 
 ## Step 4: Store your recovery phrase
 
-Some apps will request you to save a secret 'recovery phrase' (sometimes called a "seed phrase" or a "mnemonic"). Keeping this phrase safe is extremely important! This is used to generate your Ethereum account and can be used to submit transactions.
+Some apps will request you to save a secret "recovery phrase" (sometimes called a "seed phrase" or a "mnemonic"). Keeping this phrase safe is extremely important! This is used to generate your Ethereum account and can be used to submit transactions.
 
 **Any person who knows the phrase can take control of all funds.** Never share this with anyone. This phrase should contain 12 to 24 randomly generated words (the order of the words matters).
 
