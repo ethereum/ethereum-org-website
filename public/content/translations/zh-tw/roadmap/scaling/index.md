@@ -34,13 +34,13 @@ template: roadmap
 
 這個第二步也稱作[「Danksharding」](/roadmap/danksharding/)， 全面實作**可能還需要數年時間**。 Danksharding 還需要仰賴其他的技術開發，例如[將區塊建置和區塊提出分開](/roadmap/pbs)，以及新的網路設計，使得網路能夠透過一次隨機採樣幾千字節來有效地確認資料可用（也稱作[資料可用性採樣 (DAS)](/developers/docs/data-availability)）。
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding/">更多分片相關資訊</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding/">更多分片相關資訊</ButtonLink>
 
 ## 卷軸去中心化 {#decentralizing-rollups}
 
 [卷軸](/layer-2)已在推動以太坊擴容。 憑藉[豐富的卷軸專案生態系統](https://l2beat.com/scaling/tvl)，使用者可以在有安全保證的狀況下快速實惠地完成交易。 然而，一直以來卷軸都是使用中心化排序者（先完成所有交易處理和匯總，再將結果提交至以太坊的電腦）啟動的。 這樣便容易受到審查，因為排序者營運商可能被制裁、賄賂或者做出其他讓步。 同時，[卷軸也會採取不同方式](https://l2beat.com)驗證傳入的資料。 最好的方法是讓「證明者」提交[詐欺證明](/glossary/#fraud-proof)或有效性證明，但並非所有卷軸都能做到這一點。 即使是確實使用有效性/欺詐證明的卷軸也只使用一小部分已知的證明者。 因此，以太坊擴容的下一個關鍵步驟就是將運行排序者和證明者的責任分配給更多人。
 
-<ButtonLink variant="outline-color" to="/developers/docs/scaling/">更多卷軸相關資訊</ButtonLink>
+<ButtonLink variant="outline-color" href="/developers/docs/scaling/">更多卷軸相關資訊</ButtonLink>
 
 ## 目前進度 {#current-progress}
 

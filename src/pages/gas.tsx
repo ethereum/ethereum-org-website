@@ -243,7 +243,7 @@ const GasPage = () => {
                   "page-gas-how-do-i-pay-less-gas-card-3-description"
                 )}
               >
-                <ButtonLink w="fit-content" to="/layer-2/">
+                <ButtonLink w="fit-content" href="/layer-2/">
                   {t("page-gas-try-layer-2")}
                 </ButtonLink>
               </StyledCard>
@@ -427,7 +427,7 @@ const GasPage = () => {
             )}
           >
             <Box>
-              <ButtonLink to="/layer-2/">
+              <ButtonLink href="/layer-2/">
                 {t("page-gas-use-layer-2")}
               </ButtonLink>
             </Box>
@@ -444,7 +444,7 @@ const GasPage = () => {
             )}
           >
             <Box>
-              <ButtonLink to="/dapps/">
+              <ButtonLink href="/dapps/">
                 {t("page-community:page-community-explore-dapps")}
               </ButtonLink>
             </Box>

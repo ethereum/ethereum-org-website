@@ -9,7 +9,7 @@ import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
 const buttonVariants = cva(
-  "inline-flex gap-2 items-center justify-center rounded border-[1px] border-solid border-current text-primary transition focus-visible:outline focus-visible:outline-4 focus-visible:outline-primary-hover focus-visible:-outline-offset-1 disabled:text-disabled disabled:pointer-events-none hover:text-primary-hover [&[data-secondary='true']]:text-body",
+  "inline-flex gap-2 items-center justify-center rounded border border-solid border-current text-primary transition focus-visible:outline focus-visible:outline-4 focus-visible:outline-primary-hover focus-visible:-outline-offset-1 disabled:text-disabled disabled:pointer-events-none hover:text-primary-hover [&[data-secondary='true']]:text-body [&>svg]:flex-shrink-0",
   {
     variants: {
       variant: {

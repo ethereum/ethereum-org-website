@@ -58,7 +58,7 @@ Wszystkie uaktualnienia Ethereum są poniekąd wzajemnie powiązane. Podsumujmy 
 
 Na początku łańcuch śledzący istniał oddzielnie od sieci głównej Ethereum, ale zostały one połączone w 2022 r.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Połączenie
 </ButtonLink>
 
@@ -66,7 +66,7 @@ Na początku łańcuch śledzący istniał oddzielnie od sieci głównej Ethereu
 
 Sharding może bezpiecznie wejść do ekosystemu Ethereum tylko z mechanizmem konsensusu proof-of-stake. W łańcuchu śledzącym wprowadzono staking, który „połączył się” z siecią główną, torując drogę shardingowi, który pomoże w dalszym skalowaniu Ethereum.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Łańcuchy odłamkowe
 </ButtonLink>
 

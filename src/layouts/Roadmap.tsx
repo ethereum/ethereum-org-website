@@ -154,7 +154,7 @@ export const RoadmapLayout = ({
                   if (button?.to) {
                     return (
                       <WrapItem key={idx}>
-                        <ButtonLink variant={button?.variant} to={button?.to}>
+                        <ButtonLink variant={button?.variant} href={button?.to}>
                           {button.label}
                         </ButtonLink>
                       </WrapItem>

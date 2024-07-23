@@ -64,11 +64,11 @@
     --primary-hover: var(--blue-400);
     --primary-visited: var(--blue-700);
     /* ! Deprecating primary-light */
-    --primary-light: var(--blue.100);
+    --primary-light: var(--blue-100);
     /* ! Deprecating primary-dark */
-    --primary-dark: var(--blue.700);
+    --primary-dark: var(--blue-700);
     /* ! Deprecating primary-pressed */
-    --primary-pressed: var(--blue.400);
+    --primary-pressed: var(--blue-400);
 
     --body: var(--gray-800);
     --body-medium: var(--gray-500);
@@ -125,11 +125,11 @@
     --primary-hover: var(--orange-400);
     --primary-visited: var(--orange-550);
     /* ! Deprecating primary-light */
-    --primary-light: var(--orange.100);
+    --primary-light: var(--orange-100);
     /* ! Deprecating primary-dark */
-    --primary-dark: var(--orange.800);
+    --primary-dark: var(--orange-800);
     /* ! Deprecating primary-pressed */
-    --primary-pressed: var(--orange.800);
+    --primary-pressed: var(--orange-800);
 
     --body: var(--gray-100);
     --body-medium: var(--gray-400);

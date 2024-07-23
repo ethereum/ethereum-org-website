@@ -190,7 +190,7 @@ Staking Launchpad یک برنامه منبع‌باز است که به شما ک
 
 برای باز کردن و بازپس‌گیری کل موجودی تان باید فرایند خروج از اعتبارسنج خود را نیز تکمیل کنید.
 
-<ButtonLink to="/staking/withdrawals/">اطلاعات بیشتر درباره برداشت‌های سهامگذاری</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">اطلاعات بیشتر درباره برداشت‌های سهامگذاری</ButtonLink>
 </ExpandableCard>
 
 ## بیشتر بخوانید {#further-reading}

@@ -17,9 +17,9 @@ Kemajuan kami sejauh ini:
 Jika Anda ingin terlibat dan membantu kami mengembangkan komunitas Ethereum global dengan menerjemahkan situs web ke dalam bahasa Anda, ikuti langkah-langkah di bawah ini!
 
 <InfoBanner emoji=":tada:">
-  Lihat halaman <Link to="/contributing/translation-program/acknowledgements/">Penghargaan Penerjemah</Link> kami, dan{" "}
+  Lihat halaman <Link href="/contributing/translation-program/acknowledgements/">Penghargaan Penerjemah</Link> kami, dan{" "}
   ambil token POAP Anda! Jika Anda menerjemahkan ethereum.org pada tahun 2021, ada POAP unik yang menunggu Anda.{" "}
-  <Link to="/contributing/translation-program/acknowledgements/#poap">Selengkapnya tentang POAP</Link>
+  <Link href="/contributing/translation-program/acknowledgements/#poap">Selengkapnya tentang POAP</Link>
 </InfoBanner>
 
 ## Misi dan visi {#mission-and-vision}
@@ -46,7 +46,7 @@ Program Terjemahan ethereum.org bertujuan untuk membuat Ethereum dapat diakses o
 
 <InfoBanner shouldCenter emoji=":light_bulb:">
   Kami menyarankan Anda untuk melihat Panduan Gaya Penerjemahan ethereum.org. Ini berisi beberapa panduan, instruksi, dan tips yang paling penting bagi para penerjemah dan bisa menjadi rujukan saat melokalkan situs web.
-  {" "}<Link to="/contributing/translation-program/translators-guide/">Lihat Panduan Gaya Penerjemahan</Link>
+  {" "}<Link href="/contributing/translation-program/translators-guide/">Lihat Panduan Gaya Penerjemahan</Link>
 </InfoBanner>
 
 1. **[Bergabung dengan projek kami di Crowdin](https://crowdin.com/project/ethereum-org/)**  
@@ -115,7 +115,7 @@ Jika Anda adalah seorang penerjemah ethereum.org atau ingin menjadi salah satuny
 
 <InfoBanner shouldCenter emoji=":information_source:">
   Jika Anda membantu kami dengan terjemahan, Anda mungkin menemukan beberapa informasi yang berguna dalam Pertanyaan yang Sering Diajukan tentang terjemahan kami.
-  {" "}<Link to="/contributing/translation-program/faq/">Pertanyaan yang Sering Diajukan tentang menerjemahkan ethereum.org</Link>
+  {" "}<Link href="/contributing/translation-program/faq/">Pertanyaan yang Sering Diajukan tentang menerjemahkan ethereum.org</Link>
 </InfoBanner>
 
 ## Sumber Daya {#resources}

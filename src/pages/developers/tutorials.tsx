@@ -285,7 +285,7 @@ const TutorialPage = ({
             <ButtonLink
               leftIcon={<FaGithub />}
               variant="outline"
-              to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.yaml&title="
+              href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.yaml&title="
             >
               <Translation id="page-developers-tutorials:page-tutorial-raise-issue-btn" />
             </ButtonLink>
@@ -313,7 +313,7 @@ const TutorialPage = ({
             <ButtonLink
               leftIcon={<FaGithub />}
               variant="outline"
-              to="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
+              href="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
             >
               <Translation id="page-developers-tutorials:page-tutorial-pull-request-btn" />
             </ButtonLink>
@@ -438,7 +438,7 @@ const TutorialPage = ({
                 bg: "tableBackgroundHover",
               }}
               key={tutorial.to}
-              to={tutorial.to ?? undefined}
+              href={tutorial.to ?? undefined}
               hideArrow
             >
               <Flex

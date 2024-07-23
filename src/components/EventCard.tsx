@@ -94,7 +94,7 @@ const EventCard = ({
         {title}
       </Heading>
       <Text>{description}</Text>
-      <ButtonLink to={to}>View Event</ButtonLink>
+      <ButtonLink href={to}>View Event</ButtonLink>
     </Box>
   </Box>
 )

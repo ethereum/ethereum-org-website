@@ -32,7 +32,7 @@ Opačný přístup, off-chain správa, spočívá v tom, že jakákoliv rozhodnu
 
 _Zatímco na úrovni protokolu je řízení Etherea off-chain, velké množství projektů běžících na Ethereu, jako jsou DAO, používá řízení on-chain._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Více o DAO
 </ButtonLink>
 
@@ -58,7 +58,7 @@ _Poznámka: Každý může být součástí více skupin (např. vývojář prot
 
 Důležitým procesem používaným při správě Etherea je **návrh na zlepšení Etherea (Ethereum Improvement Proposals, EIP)**. EIP jsou standardy specifikující potenciální nové funkce nebo procesy pro Ethereum. EIP může vytvořit kdokoliv. Jestliže chcete sepsat EIP nebo se zúčastnit vzájemného hodnocení a/nebo správy, podívejte se na:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Více o EIP
 </ButtonLink>
 
@@ -154,7 +154,7 @@ Implementace specifikací a vývoje byly i v případě Beacon Chainu vždy pln�
 
 Když se 15. září 2022 sloučil Beacon Chain s realizační vrstvou Etherea, byl merge dokončen jako součást [pařížského upgradu sítě](/history/#paris). Stav návrhu [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) byl změněn z „Poslední výzva“ na „Konečný“, čímž byl dokončen přechod na proof-of-stake.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Více o mergi
 </ButtonLink>
 

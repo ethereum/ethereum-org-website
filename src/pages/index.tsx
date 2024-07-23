@@ -428,10 +428,10 @@ const HomePage = ({
               <Translation id="page-index:page-index-what-is-ethereum-description" />
             </SectionDecription>
             <ButtonLinkRow>
-              <ButtonLink to="/what-is-ethereum/">
+              <ButtonLink href="/what-is-ethereum/">
                 <Translation id="page-index:page-index-what-is-ethereum-button" />
               </ButtonLink>
-              <ButtonLink to="/eth/" variant="outline" isSecondary>
+              <ButtonLink href="/eth/" variant="outline" isSecondary>
                 <Translation id="page-index:page-index-what-is-ethereum-secondary-button" />
               </ButtonLink>
             </ButtonLinkRow>
@@ -456,7 +456,7 @@ const HomePage = ({
               <Translation id="page-index:page-index-defi-description" />
             </SectionDecription>
             <ButtonLinkRow>
-              <ButtonLink to="/defi/">
+              <ButtonLink href="/defi/">
                 <Translation id="page-index:page-index-defi-button" />
               </ButtonLink>
             </ButtonLinkRow>
@@ -481,7 +481,7 @@ const HomePage = ({
               <Translation id="page-index:page-index-nft-description" />
             </SectionDecription>
             <ButtonLinkRow>
-              <ButtonLink to="/nft/">
+              <ButtonLink href="/nft/">
                 <Translation id="page-index:page-index-nft-button" />
               </ButtonLink>
             </ButtonLinkRow>
@@ -507,10 +507,10 @@ const HomePage = ({
                 <Translation id="page-index:page-index-internet-description" />
               </SectionDecription>
               <ButtonLinkRow>
-                <ButtonLink to="/dapps/?category=technology">
+                <ButtonLink href="/dapps/?category=technology">
                   <Translation id="page-index:page-index-internet-button" />
                 </ButtonLink>
-                <ButtonLink to="/wallets/" variant="outline" isSecondary>
+                <ButtonLink href="/wallets/" variant="outline" isSecondary>
                   <Translation id="page-index:page-index-internet-secondary-button" />
                 </ButtonLink>
               </ButtonLinkRow>
@@ -549,7 +549,7 @@ const HomePage = ({
               <Translation id="page-index:page-index-developers-description" />
             </SectionDecription>
             <ButtonLinkRow>
-              <ButtonLink to="/developers/">
+              <ButtonLink href="/developers/">
                 <Translation id="page-index:page-index-developers-button" />
               </ButtonLink>
             </ButtonLinkRow>
@@ -624,11 +624,11 @@ const HomePage = ({
           mx={0}
         >
           <ButtonLinkRow>
-            <ButtonLink to="/contributing/">
+            <ButtonLink href="/contributing/">
               <Translation id="page-index:page-index-contribution-banner-button" />
             </ButtonLink>
             <ButtonLink
-              to="https://github.com/ethereum/ethereum-org-website"
+              href="https://github.com/ethereum/ethereum-org-website"
               leftIcon={<Icon as={FaGithub} fontSize="2xl" />}
               variant="outline"
               isSecondary

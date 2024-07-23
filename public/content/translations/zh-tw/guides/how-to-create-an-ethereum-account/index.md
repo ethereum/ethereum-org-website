@@ -14,7 +14,7 @@ lang: zh-tw
 
 錢包是一個幫助你管理以太坊帳戶的應用程式。 它使用你的金鑰來收發交易以及登入應用程式。 錢包有數十種不同的選擇，包括手機、桌面甚至是瀏覽器擴展元件。
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   尋找錢包
 </ButtonLink>
 
@@ -42,7 +42,7 @@ lang: zh-tw
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>想要學習更多功能嗎？</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     查看我們的其他指南
   </ButtonLink>
 </InfoBanner>

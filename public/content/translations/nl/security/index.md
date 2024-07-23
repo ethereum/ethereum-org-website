@@ -110,11 +110,11 @@ Browserextensies zoals Chrome-extensies of add-ons voor Firefox kunnen de functi
 
 Een van de grootste redenen waarom mensen zich in het algemeen laten misleiden in crypto is een gebrek aan begrip. Als u bijvoorbeeld niet begrijpt dat het Ethereum-netwerk gedecentraliseerd is en eigendom is van niemand, is het makkelijk om ten prooi te vallen aan iemand die doet alsof hij een klantenservicemedewerker is die belooft uw verloren ETH terug te geven in ruil voor uw privé-sleutels. Het is een waardevolle investering om jezelf te leren hoe Ethereum functioneert.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Wat is Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Wat is ether?
 </DocLink>
 <Divider />
@@ -127,7 +127,7 @@ Een van de grootste redenen waarom mensen zich in het algemeen laten misleiden i
 
 De prive-sleutel van uw portemonnee fungeert als een wachtwoord voor uw Ethereum-portemonnee. Het is het enige dat iemand die uw portemonnee-adres kent ervan weerhoudt om uw account en al uw activa te stelen!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Wat is een Ethereum-portemonnee?
 </DocLink>
 

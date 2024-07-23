@@ -56,7 +56,7 @@ Die Ethereum-Upgrades sind alle in gewisser Weise miteinander verbunden. Zusamme
 
 Zunächst existierte die Beacon Chain getrennt vom Ethereum Mainnet. Sie wurden im Jahre 2022 zusammengeführt.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Die Zusammenführung
 </ButtonLink>
 
@@ -64,7 +64,7 @@ Zunächst existierte die Beacon Chain getrennt vom Ethereum Mainnet. Sie wurden 
 
 Sharding kann nur sicher in das Ethereum Ökosystem eingeführt werden, wenn ein Proof-of-Stake Konsensmechanismus aktiv ist. Die Beacon Chain, welche mit Mainnet zusammengeführt wurde, führte das Staking ein. Dieses ebnet den Weg für Sharding, was wiederum bei einer besseren Skalierung von Ethereum hilft.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Shard Chains
 </ButtonLink>
 

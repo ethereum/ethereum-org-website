@@ -75,7 +75,7 @@ const StepBox = (
             as={BaseLink}
             color="inherit"
             textDecoration="inherit"
-            to={props.to}
+            href={props.to}
             fontWeight={700}
             textAlign="start"
             _hover={{
@@ -125,7 +125,7 @@ const StablecoinAccordion = () => {
           <InfoBanner emoji=":light_bulb:">
             <H4>{t("page-stablecoins-accordion-swap-editors-tip")}</H4>
             <Text>{t("page-stablecoins-accordion-swap-editors-tip-copy")}</Text>
-            <ButtonLink to="/wallets/find-wallet/">
+            <ButtonLink href="/wallets/find-wallet/">
               {t("page-stablecoins-accordion-swap-editors-tip-button")}
             </ButtonLink>
           </InfoBanner>

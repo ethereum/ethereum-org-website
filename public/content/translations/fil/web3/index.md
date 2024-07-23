@@ -63,7 +63,7 @@ Pinapayagan ng Web3 ang pagmamay-ari sa pamamagitan ng [mga non-fungible token (
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Magbasa pa tungkol sa NFTs</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     Iba pang detalye tungkol sa NFTs
   </ButtonLink>
 </InfoBanner>
@@ -88,7 +88,7 @@ Gayunpaman, itinuturing na DAOs ng mga tao ang maraming komunidad sa Web3. May i
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Magkaroon ng higit pang kaalaman tungkol sa DAOs</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     Iba pang kaalaman ukol sa DAOs
   </ButtonLink>
 </InfoBanner>
@@ -99,7 +99,7 @@ Karaniwan, gagawa ka ng account para sa bawat platform na gagamitin mo. Halimbaw
 
 Nilulutas ng Web3 ang mga problemang ito sa pamamagitan ng pagbibigay sayo ng kontrol sa iyong digital identity gamit ang Ethereum address at ENS profile. Kapag gumamit ng Ethereum address, iisang login na lang ang gagamitin sa mga platform na secure, ligtas sa censorship, at anonymous.
 
-<ButtonLink to="https://login.xyz/">
+<ButtonLink href="https://login.xyz/">
   Mag-sign in sa Ethereum
 </ButtonLink>
 
@@ -107,7 +107,7 @@ Nilulutas ng Web3 ang mga problemang ito sa pamamagitan ng pagbibigay sayo ng ko
 
 Ang paraan ng pagbabayad sa Web2 ay nakasalalay sa mga bangko at iba pang payment processor, hindi pa kasama rito ang mga taong walang bank account o nakatira sa mahihigpit na bansa. Gumagamit ang Web3 ng mga token gaya ng [ETH](/eth/) upang direktang magpadala ng pera sa browser at hindi nito kailangan ng pinagkakatiwalaang third party.
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   Iba pang kaalaman ukol sa ETH
 </ButtonLink>
 

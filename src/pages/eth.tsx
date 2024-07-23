@@ -394,7 +394,7 @@ const EthPage = () => {
             <Subtitle>{t("page-eth-is-money")}</Subtitle>
             <SubtitleTwo>{t("page-eth-currency-for-apps")}</SubtitleTwo>
             <EthPriceCard isLeftAlign={false} mb={8} />
-            <ButtonLink to="/get-eth/">
+            <ButtonLink href="/get-eth/">
               {t("page-eth-button-buy-eth")}
             </ButtonLink>
           </Header>
@@ -522,7 +522,9 @@ const EthPage = () => {
           imageWidth={300}
         >
           <Box>
-            <ButtonLink to="/get-eth/">{t("page-eth-get-eth-btn")}</ButtonLink>
+            <ButtonLink href="/get-eth/">
+              {t("page-eth-get-eth-btn")}
+            </ButtonLink>
           </Box>
         </CalloutBanner>
       </Content>
