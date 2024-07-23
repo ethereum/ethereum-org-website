@@ -14,7 +14,8 @@ With a wallet you can also log into any token exchange, games, [NFT](/glossary/#
 
 A wallet is an app that helps you manage your Ethereum account. There are dozens of different wallets to choose from: mobile, desktop, or even browser extensions.
 
-<ButtonLink to="/wallets/find-wallet/">
+
+<ButtonLink href="/wallets/find-wallet/">
   List of wallets
 </ButtonLink>
 
@@ -41,7 +42,7 @@ Some apps will request you to save a secret "recovery phrase" (sometimes called 
 <div>
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div><b>Wallet installed?</b><br/>Learn how to use it.</div>
-  <ButtonLink to="/guides/how-to-use-a-wallet">
+  <ButtonLink href="/guides/how-to-use-a-wallet">
     How to use a wallet
   </ButtonLink>
 </InfoBanner>

@@ -542,7 +542,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <Box>
                       <ButtonLink
                         variant="outline"
-                        to="https://www.coinbase.com/price/dai#WhatIsDaiDAI"
+                        href="https://www.coinbase.com/price/dai#WhatIsDaiDAI"
                         isSecondary
                       >
                         {t("page-stablecoins-dai-banner-learn-button")}
@@ -593,7 +593,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                   <Box>
                     <ButtonLink
                       variant="outline"
-                      to="https://www.coinbase.com/usdc"
+                      href="https://www.coinbase.com/usdc"
                       isSecondary
                     >
                       {t("page-stablecoins-usdc-banner-learn-button")}
@@ -663,12 +663,12 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
         >
           <Flex flexFlow="wrap" gap="1em">
-            <ButtonLink to="/dapps/">
+            <ButtonLink href="/dapps/">
               {t("page-stablecoins-explore-dapps")}
             </ButtonLink>
             <ButtonLink
               variant="outline"
-              to="/defi/"
+              href="/defi/"
               whiteSpace="normal"
               isSecondary
             >

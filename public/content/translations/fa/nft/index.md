@@ -56,7 +56,7 @@ NFTها کاربرد بسیاری دارند، از جمله:
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>NFT اثر هنری/کلکسیونی خود را جستوجو کنید، بخرید یا بسازید...</div>
-  <ButtonLink to="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/dapps/?category=collectibles#explore">
     مشاهده‌ی آثار هنری NFT
   </ButtonLink>
 </InfoBanner>
@@ -93,7 +93,7 @@ NFTها، مانند هر آیتم دیجیتالی در بلاکچین اتری
 
 مسائل امنیتی مربوط به NFTها اغلب به کلاهبرداری‌های فیشینگ، آسیب‌پذیری‌های قرارداد هوشمند یا خطاهای کاربر (مانند افشای ناخواسته کلیدهای خصوصی) مربوط می‌شود، که امنیت خوب برای کیف پول را برای دارندگان NFT ضروری می‌کند.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   اطلاعات بیشتر در مورد امنیت
 </ButtonLink>
 

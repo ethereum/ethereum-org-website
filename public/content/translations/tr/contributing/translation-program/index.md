@@ -22,7 +22,7 @@ Ethereum.org Çeviri Programı açıktır ve herkes katkı verebilir!
 
 _Çeviriler konusunda iş birliği yapmak, sorular sormak, geribildirim ve fikir paylaşmak veya bir tercüme grubuna katılmak için [ethereum.org Discord](/discord/)'una katılın._
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Çeviriye başlayın
 </ButtonLink>
 

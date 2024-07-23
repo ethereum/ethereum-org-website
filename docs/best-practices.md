@@ -35,7 +35,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   ```tsx
   <p>
     All Ethereum transactions require a fee, known as Gas, that gets paid to the
-    miner. <Link to="link">More on Gas</Link>
+    miner. <Link href="link">More on Gas</Link>
   </p>
   ```
 
@@ -44,7 +44,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   ```tsx
   <p>
     <Translation id="page-transactions" />{" "}
-    <Link to="link">
+    <Link href="link">
       <Translation id="page-transactions-gas-link" />
     </Link>
   </p>

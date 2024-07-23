@@ -32,7 +32,7 @@ Nasprotni pristop, upravljanje izven verige je proces, pri katerem se kakršneko
 
 _Čeprav je na nivoju protokola upravljanje Ethereuma izven verige, se v veliko primerih razvitih na Ethereumu, kot so DAOs, uporablja upravljanje na verigi._
 
-<ButtonLink to="/dao/">Več o DAOs</ButtonLink>
+<ButtonLink href="/dao/">Več o DAOs</ButtonLink>
 
 <Divider />
 
@@ -56,7 +56,7 @@ _Opomba: katerikoli posameznik je lahko del različnih skupin (na primer, razvij
 
 Pomemben proces, ki se uporablja pri upravljanju Ethereuma je predlaganje **Ethereum predlogov za izboljšave (EIPs)**. EIPs so standard za opredeljevanje potencialnih lastnosti ali procesov Ethereuma. Kdorkoli znotraj Ethereum skupnosti lahko ustvari EIP. Na primer, noben od avtorjev EIP-721 - EIP-ja, ki je standardiziral NFT-je, ni neposredno delal na razvoju Ethereum protokola.
 
-<ButtonLink to="/eips/">Več o EIPs</ButtonLink>
+<ButtonLink href="/eips/">Več o EIPs</ButtonLink>
 
 <Divider />
 
@@ -150,7 +150,7 @@ Medtem ko je bil razvoj specifikacij in implementacij vedno povsem odprtokoden, 
 
 Ko se bo Oddajniška veriga združila z Ethereumovo izvršilno plastjo, se bo upravljavski proces za predlaganje sprememb poenotil. Proces za implementacijo združitve je [že na poti](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/roadmap/merge/">Več o združitvi</ButtonLink>
+<ButtonLink href="/roadmap/merge/">Več o združitvi</ButtonLink>
 
 <Divider />
 

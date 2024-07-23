@@ -171,6 +171,6 @@ ethereum.orgへの製品の掲載は、1つの要因で決められるもので�
 
 ethereum.orgにステーキング製品の追加をご希望の場合は、GitHubでイシューを作成してください。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
   問題の作成
 </ButtonLink>

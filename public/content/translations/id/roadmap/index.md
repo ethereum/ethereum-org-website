@@ -24,28 +24,28 @@ Peta jalan Ethereum menguraikan peningkatan spesifik yang akan dilakukan pada pr
 
 <CardGrid>
   <RoadmapActionCard
-    to="/roadmap/scaling"
+    href="/roadmap/scaling"
     title="Transaksi yang lebih murah"
     image="scaling"
     description="Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems."
     buttonText="More on reducing fees"
   />
   <RoadmapActionCard
-    to="/roadmap/security"
+    href="/roadmap/security"
     title="Keamanan ekstra"
     image="security"
     description="Ethereum is already very secure but it can be made even stronger, ready to withstand all kinds of attack far into the future."
     buttonText="More on security"
   />
   <RoadmapActionCard
-    to="/roadmap/user-experience"
+    href="/roadmap/user-experience"
     title="Pengalaman pengguna yang lebih baik"
     image="userExperience"
     description="More support for smart contract wallets and light-weight nodes will make using Ethereum simpler and safer."
     buttonText="More on user experience"
   />
   <RoadmapActionCard
-    to="/roadmap/future-proofing"
+    href="/roadmap/future-proofing"
     title="Tetap relevan untuk masa depan"
     image="futureProofing"
     description="Ethereum researchers and developers are solving tomorrow's problems today, readying the network for future generations."

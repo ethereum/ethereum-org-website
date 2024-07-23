@@ -50,7 +50,7 @@ De backbone van een DAO is de smart contract ervan die de regels van de organisa
 
 Dit is mogelijk omdat smart contracts fraudebestendig zijn zodra ze live op Ethereum gaan. U kunt de code (de regels van DAO's) niet gewoon bewerken zonder dat mensen dat merken, omdat alles openbaar is.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Meer over slimme contracten
 </DocLink>
 

@@ -14,7 +14,7 @@ A diferencia de la forma tradicional de abrir una nueva cuenta en una empresa, c
 
 Una cartera es una aplicación que te ayuda a gestionar tu cuenta de Ethereum. Utiliza sus claves para enviar y recibir transacciones e iniciar sesión en las aplicaciones. Hay docenas de carteras diferentes entre las que elegir: móvil, de escritorio o incluso extensiones de navegador.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Encontrar una cartera
 </ButtonLink>
 
@@ -42,7 +42,7 @@ Una vez que haya guardado su frase de recuperación, debería ver el panel de su
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>¿Quiere saber más?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Consulte nuestras demás guias
   </ButtonLink>
 </InfoBanner>

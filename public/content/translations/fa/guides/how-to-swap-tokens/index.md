@@ -51,7 +51,7 @@ lang: fa
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>می‌خواهید بیشتر بدانید؟</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     راهنماهای دیگر ما را ببینید
   </ButtonLink>
 </InfoBanner>

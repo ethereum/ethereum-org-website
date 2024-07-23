@@ -78,7 +78,7 @@ Ethereum's Sikurity dey kome from Proof-of-stake. Di system dey design to ekonom
 
 Sikurity issues wey rilate to NFTs dey often rilate to phishin skams, vulnerabilitis wey dey smart contracts abi user errors ( such as private key to dey ekspose), wey dey make good wallet sikurity kritical for NFT ownas dem.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   More on sikurity
 </ButtonLink>
 

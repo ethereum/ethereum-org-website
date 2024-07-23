@@ -480,7 +480,7 @@ const DepositContractPage = () => {
                       )}
                     </CopyToClipboard>
                     <InlineLink
-                      to={`https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`}
+                      href={`https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`}
                     >
                       {t("page-staking-deposit-contract-etherscan")}
                     </InlineLink>

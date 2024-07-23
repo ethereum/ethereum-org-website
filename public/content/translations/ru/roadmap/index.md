@@ -24,28 +24,28 @@ Ethereum — это мощная платформа для глобальной 
 
 <CardGrid>
   <RoadmapActionCard
-    to="/roadmap/scaling"
+    href="/roadmap/scaling"
     title="Более дешевые транзакции"
     image="scaling"
     description="Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems."
     buttonText="More on reducing fees"
   />
   <RoadmapActionCard
-    to="/roadmap/security"
+    href="/roadmap/security"
     title="Усиленная безопасность"
     image="security"
     description="Ethereum is already very secure but it can be made even stronger, ready to withstand all kinds of attack far into the future."
     buttonText="More on security"
   />
   <RoadmapActionCard
-    to="/roadmap/user-experience"
+    href="/roadmap/user-experience"
     title="Better user experience"
     image="userExperience"
     description="More support for smart contract wallets and light-weight nodes will make using Ethereum simpler and safer."
     buttonText="More on user experience"
   />
   <RoadmapActionCard
-    to="/roadmap/future-proofing"
+    href="/roadmap/future-proofing"
     title="Обеспечение будущего"
     image="futureProofing"
     description="Ethereum researchers and developers are solving tomorrow's problems today, readying the network for future generations."

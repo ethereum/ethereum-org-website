@@ -63,7 +63,7 @@ Web3 umožňuje přímé vlastnictví prostřednictvím [nezaměnitelných token
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Další informace o NFT</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     Více o NFT
   </ButtonLink>
 </InfoBanner>
@@ -88,7 +88,7 @@ Lidé definují spoustu Web3 komunit jako DAO. Všechny tyto komunity mají růz
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Learn more about DAOs</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     Více o DAO
   </ButtonLink>
 </InfoBanner>
@@ -103,7 +103,7 @@ Web3 řeší tyto problémy tím, že vám umožňuje ovládat vaši digitální
 
 Platební infrastruktura Web2 spoléhá na banky a další subjekty, přičemž lidé bez bankovních účtů nebo ti, kteří nežijí ve "správné" zemi, nemohou platit vůbec. Web3 používá tokeny jako [ETH](/glossary/#ether) k odesílání peněz přímo v prohlížeči a nevyžaduje žádnou třetí stranu, které byste museli důvěřovat.
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   Více na ETH
 </ButtonLink>
 

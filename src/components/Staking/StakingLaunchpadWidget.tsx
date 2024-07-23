@@ -72,7 +72,7 @@ const StakingLaunchpadWidget = () => {
       </Text>
       <Box mb={4}>
         <ButtonLink
-          to={data[selection].url}
+          href={data[selection].url}
           width={{ base: "full", md: "auto" }}
         >
           {selection === "mainnet"
@@ -85,7 +85,7 @@ const StakingLaunchpadWidget = () => {
       </Text>
       <Box>
         <ButtonLink
-          to="#node-and-client-tools"
+          href="#node-and-client-tools"
           variant="outline"
           width={{ base: "full", md: "auto" }}
           leftIcon={<FaTools />}

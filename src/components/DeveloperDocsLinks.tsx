@@ -20,7 +20,7 @@ const DeveloperDocsLinks = ({ headerId }: DeveloperDocsLinksProps) => (
             items.map(({ id, to, path, description, items }) => (
               <ListItem key={id}>
                 {to || path ? (
-                  <InlineLink to={to || path}>
+                  <InlineLink href={to || path}>
                     <Translation id={`page-developers-docs:${id}`} />
                   </InlineLink>
                 ) : (
@@ -39,7 +39,7 @@ const DeveloperDocsLinks = ({ headerId }: DeveloperDocsLinksProps) => (
                   {items &&
                     items.map(({ id, to, path }) => (
                       <ListItem key={id}>
-                        <InlineLink to={to || path}>
+                        <InlineLink href={to || path}>
                           <Translation id={`page-developers-docs:${id}`} />
                         </InlineLink>
                       </ListItem>

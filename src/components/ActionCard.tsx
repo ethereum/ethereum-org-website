@@ -100,7 +100,7 @@ const ActionCard = ({
             color="text"
             hideArrow
             textDecoration="none"
-            to={to}
+            href={to}
             _hover={linkFocusStyles}
             _focus={linkFocusStyles}
           >

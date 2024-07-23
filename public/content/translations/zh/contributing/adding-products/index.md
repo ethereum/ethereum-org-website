@@ -95,6 +95,6 @@ _我们也在调研投票的可能性，以便社区能够表明他们的喜好�
 
 如果你想将去中心化应用程序添加到 ethereum.org 并且它符合标准，请在 GitHub 上创建一个问题。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
   创建一个提议
 </ButtonLink>
