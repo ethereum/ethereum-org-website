@@ -16,7 +16,7 @@ import { Button } from "@/../tailwind/ui/buttons/Button"
 const FeedbackWidget = () => {
   const { t } = useTranslation("common")
   const {
-    bottomOffset,
+    offsetBottom,
     cancelRef,
     feedbackSubmitted,
     handleClose,
@@ -33,7 +33,7 @@ const FeedbackWidget = () => {
         open={isOpen}
       >
         <PopoverTrigger asChild>
-          <FixedDot bottomOffset={bottomOffset} isExpanded={isExpanded} />
+          <FixedDot offsetBottom={offsetBottom} isExpanded={isExpanded} />
         </PopoverTrigger>
 
         <PopoverContent className="mx-2 w-fit max-w-80 rounded bg-background p-4 sm:p-8">
@@ -46,11 +46,11 @@ const FeedbackWidget = () => {
             <PopoverClose asChild>
               <Button
                 variant="ghost"
-                className="h-fit text-body"
+                className="h-fit py-0 text-body"
                 size="sm"
                 ref={cancelRef}
               >
-                <MdClose />
+                <MdClose className="size-5 h-fit" />
               </Button>
             </PopoverClose>
           </div>

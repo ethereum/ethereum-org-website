@@ -29,16 +29,15 @@ export const useFeedbackWidget = () => {
 
   const surveyUrl = useSurvey(feedbackSubmitted)
 
-  const bottomOffset = useMemo(() => {
+  const offsetBottom = useMemo(() => {
     const pathsWithBottomNav = ["/staking", "/dao", "/defi", "/nft"]
-    const CONDITIONAL_OFFSET = 6.75
-    let offset = 0
+    let shouldOffset = false
     pathsWithBottomNav.forEach((path) => {
       if (asPath.includes(path)) {
-        offset = CONDITIONAL_OFFSET
+        shouldOffset = true
       }
     })
-    return offset
+    return shouldOffset
   }, [asPath])
 
   const handleClose = (): void => {
@@ -80,7 +79,7 @@ export const useFeedbackWidget = () => {
   }
 
   return {
-    bottomOffset,
+    offsetBottom,
     cancelRef,
     feedbackSubmitted,
     getButtonProps,

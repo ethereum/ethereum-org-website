@@ -9,12 +9,12 @@ import { FeedbackGlyphIcon } from "../icons"
 import { Button } from "@/../tailwind/ui/buttons/Button"
 
 type FixedDotProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  bottomOffset: number
   isExpanded: boolean
+  offsetBottom?: boolean
 }
 
 const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
-  ({ bottomOffset, isExpanded, className, ...props }, ref) => {
+  ({ offsetBottom, isExpanded, className, ...props }, ref) => {
     const { t } = useTranslation("common")
     const size = "12"
     return (
@@ -27,8 +27,8 @@ const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
           "transition-all duration-200",
           "hover:scale-110 hover:transition-transform hover:duration-200",
           `size-${size}`,
-          `bottom-[${bottomOffset + 1}rem] lg:bottom-4`,
           isExpanded ? "lg:w-[15rem] lg:gap-3" : `lg:w-${size}`,
+          offsetBottom && "bottom-31 lg:bottom-4",
           className
         )}
         {...props}
