@@ -51,24 +51,26 @@ type ButtonTwoLinesProps = ButtonTypeProps | ButtonLinkTypeProps
 const ButtonTwoLines = ({
   iconAlignment = "start",
   className,
+  size = "md",
   ...props
 }: ButtonTwoLinesProps) => {
   const isIconLeft = ["left", "start"].includes(iconAlignment)
 
   const commonClassStyles = cn(
     isIconLeft ? "text-start justify-start" : "text-end justify-end",
+    size === "md" ? "py-4" : "py-2",
     className
   )
 
   if (props.componentType === "link") {
     return (
-      <ButtonLink className={commonClassStyles} {...props}>
+      <ButtonLink className={commonClassStyles} size={size} {...props}>
         <ChildContent {...props} isIconLeft={isIconLeft} />
       </ButtonLink>
     )
   }
   return (
-    <Button className={commonClassStyles} {...props}>
+    <Button className={commonClassStyles} size={size} {...props}>
       <ChildContent {...props} isIconLeft={isIconLeft} />
     </Button>
   )
