@@ -4,6 +4,10 @@ lang: en
 template: translatathon
 ---
 
+Welcome to the ethereum.org Translatathon!
+
+The translatathon is a competitive hackathon-style event where you can compete for prizes by translating ethereum.org content into different languages.
+
 <CardContainer>
   <EmojiCard
     emoji=':money_with_wings:'
@@ -13,7 +17,7 @@ template: translatathon
   <EmojiCard
     emoji=':money_with_wings:'
     title='Win prizes'
-    description='Compete for your share of 30,000$ in prizes and opportunities to win [Devcon](https://devcon.org) tickets'
+    description='Compete for your share of 30,000$ in prizes and opportunities to win Devcon tickets'
   />
   <EmojiCard
     emoji=':closed_lock_with_key:'
@@ -24,9 +28,13 @@ template: translatathon
 
 ## Introduction
 
-Welcome to the ethereum.org Translatathon!
+The [ethereum.org Translation program](/contributing/translation-program/) is an initiative to translate the website into as many languages as possible in order to make educational content around Ethereum content and onboarding resources for beginners accessible to everyone, regardless of the language they speak.
 
-The translatathon is a competitive hackathon-style event where you can compete for prizes by translating ethereum.org content into different languages.
+As part of the Translation program, we are organizing the 2nd edition of the Translatation with the aim of incentivizing translation contributions in less active languages, increasing the number of languages and amount of content available on the site, onboard new contributors and reward our existing ones.
+
+If you are bilingual and want to help make Ethereum content more accessible while competing for prizes, read on to learn more!
+
+[Learn more about the translation program](/contributing/translation-program/)
 
 ## Dates and timeline
 
@@ -79,13 +87,14 @@ Everyone can participate [see full conditions](/translatathon/terms-and-conditio
 
 ## Stay updated
 
-<TranslationHubCallout>
+<!-- TODO: Uncomment when the hubs page is ready -->
+<!-- <TranslationHubCallout>
   <h3 style={{margin:0}}>Translataton hubs</h3>
 
   THis year we bring IRL community hugs to join local communities and help translate.
 
   this hubs are located all over the world, find out if there is one close to you and jion the community
-</TranslationHubCallout>
+</TranslationHubCallout> -->
 
 <TranslatathonCalendar />
 

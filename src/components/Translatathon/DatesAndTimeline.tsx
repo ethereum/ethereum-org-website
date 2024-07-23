@@ -27,7 +27,7 @@ const dates = [
       "The translation period - translate as much or as little as you want",
     startDate: new Date("August 9, 2024"),
     endDate: new Date("August 18, 2024"),
-    link: "https://example.com", //TODO update link
+    link: "https://crowdin.com/project/ethereum-org",
     linkText: "Translating link text",
   },
   {
@@ -50,7 +50,7 @@ const dates = [
 ]
 
 export const DatesAndTimeline = () => {
-  const todaysDate = new Date("August 9, 2024")
+  const todaysDate = new Date()
 
   return (
     <Flex direction="column" p={4}>

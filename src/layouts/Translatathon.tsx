@@ -1,4 +1,4 @@
-import { Box, Flex, Text, useToken } from "@chakra-ui/react"
+import { Box, Flex, Grid, Text, useToken } from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, SharedFrontmatter } from "@/lib/interfaces"
@@ -95,7 +95,13 @@ const CardContent = (props: ChildOnlyProp) => (
 )
 
 const CardContainer = (props: ChildOnlyProp) => (
-  <Flex wrap="wrap" mx={-4} {...props} />
+  <Grid
+    templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
+    gap={8}
+    mt={8}
+  >
+    {props.children}
+  </Grid>
 )
 
 const EmojiCard = ({ emoji, title, description }) => (
@@ -104,7 +110,6 @@ const EmojiCard = ({ emoji, title, description }) => (
     title={title}
     description={description}
     flex="1 1 30%"
-    minW="240px"
     m={4}
     p={6}
   />

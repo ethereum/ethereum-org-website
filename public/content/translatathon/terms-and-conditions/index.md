@@ -9,7 +9,10 @@ The Ethereum.org Translation Competition, also referred to as the “Translatath
 ## Modification and Termination.
 
 We reserve the right to modify the rules or to terminate the Translatathon at any time, without prior notice. All changes will be effective immediately upon announcement.
-Eligibility, Judging, and Prizes. The determination of eligibility, scoring and judging methodology, and prize distribution fall solely and irrevocably under our discretion.
+
+## Eligibility, Judging, and Prizes
+
+The determination of eligibility, scoring and judging methodology, and prize distribution fall solely and irrevocably under our discretion.
 
 ## Data Privacy
 
@@ -27,8 +30,14 @@ Participants agree that by submitting a translation work during the Translatatho
 
 Any tax implications arising from the receipt of prizes are the sole responsibility of the prize recipient.
 
-Comprehensively Sanctioned Countries. Participants from regions or countries that are subject to comprehensive international sanctions (including, but not limited to Cuba, Iran, North Korea, and Syria) will not be eligible for participation.
+## Comprehensively Sanctioned Countries
 
-Waiver of Liability. Participants agree that the Ethereum Foundation, its affiliates, and all of their respective officers, directors, employees, and agents will have no liability whatsoever for any injuries, losses, or damages of any kind arising from or in connection with their participation in the Translatathon.
+Participants from regions or countries that are subject to comprehensive international sanctions (including, but not limited to Iran, Cuba, Syria, North Korea, and the Crimea, Donetsk People's Republic and Luhansk People's Republic regions of Ukraine) will not be eligible for participation.
 
-Governing Law. Any dispute or claim arising out of or relating to the Translatathon (in each case, including non-contractual disputes or claims), shall be governed by and construed in accordance with the laws of Switzerland without giving effect to any choice or conflict of law provision or rule (whether of Switzerland or any other jurisdiction).
+## Waiver of Liability
+
+Participants agree that the Ethereum Foundation, its affiliates, and all of their respective officers, directors, employees, and agents will have no liability whatsoever for any injuries, losses, or damages of any kind arising from or in connection with their participation in the Translatathon.
+
+## Governing Law
+
+Any dispute or claim arising out of or relating to the Translatathon (in each case, including non-contractual disputes or claims), shall be governed by and construed in accordance with the laws of Switzerland without giving effect to any choice or conflict of law provision or rule (whether of Switzerland or any other jurisdiction).

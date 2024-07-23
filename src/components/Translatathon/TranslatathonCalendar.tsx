@@ -21,25 +21,30 @@ const matomoEvent = (buttonType: string) => {
 const events = [
   {
     date: "2024-08-06T09:30:00Z",
-    title: "Translatathon workshop",
+    title: "Crowdin walkthrough + Q&A",
     calendarLink:
       "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MHJoczcybG42Y2R2YXFncDBwZmxvbzRoNjUgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc&tmsrc=c_9e4b1b2760743463816100a169d142430352a7cfc3344b1e785db52385c9fd36%40group.calendar.google.com",
   },
   {
-    date: "2024-08-07T15:30:00Z",
-    title: "Translatathon workshop",
+    date: "2024-08-07T16:00:00Z",
+    title: "Crowdin walkthrough + Q&A",
     calendarLink:
       "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGRpZWo3Y3E4a2d2dWVqMjdjNnFtZzZzZTEgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc&tmsrc=c_9e4b1b2760743463816100a169d142430352a7cfc3344b1e785db52385c9fd36%40group.calendar.google.com",
   },
   {
+    date: "2024-08-09T12:00:00Z",
+    title: "Translatathon kickoff call",
+    calendarLink: "",
+  },
+  {
     date: "2024-08-13T09:30:00Z",
-    title: "Translatathon office hours ☕",
+    title: "Translatathon office hours",
     calendarLink:
       "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=N292aDBqNWRnb3BoY2lldXBmcDVsM2o4MjIgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc&tmsrc=c_9e4b1b2760743463816100a169d142430352a7cfc3344b1e785db52385c9fd36%40group.calendar.google.com",
   },
   {
-    date: "2024-08-15T15:30:00Z",
-    title: "Translatathon office hours ☕",
+    date: "2024-08-15T15:00:00Z",
+    title: "Translatathon office hours",
     calendarLink:
       "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGJxazFsa2xjdm9ocmZnaGU0ZWZqbGIwNWEgY185ZTRiMWIyNzYwNzQzNDYzODE2MTAwYTE2OWQxNDI0MzAzNTJhN2NmYzMzNDRiMWU3ODVkYjUyMzg1YzlmZDM2QGc&tmsrc=c_9e4b1b2760743463816100a169d142430352a7cfc3344b1e785db52385c9fd36%40group.calendar.google.com",
   },

@@ -1,5 +1,6 @@
 import { Flex, Heading, Text } from "@chakra-ui/react"
 
+import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
 
 import dogeImage from "@/public/images/doge-computer.png"
@@ -21,7 +22,7 @@ export const TranslatathonInANutshell = () => {
     >
       <Flex m="auto">
         <Heading as="h2" fontSize="3xl" mb={8}>
-          Translatathon in a nutshell
+          Key Translatathon rules
         </Heading>
       </Flex>
       <Flex
@@ -33,11 +34,11 @@ export const TranslatathonInANutshell = () => {
       >
         <Flex w="full" direction="column" gap={2} alignSelf="center">
           <Heading as="h3" fontSize="2xl">
-            What is a Translatathon?
+            Earn points
           </Heading>
           <Text>
-            The goal is to translate website content and help make ethereum.org
-            more accessible to non-English speakers, raise awareness of the
+            Translate ethereum.org and secondary content to earn points and
+            compete with other participants. 1 translated word = 1 point
           </Text>
         </Flex>
         <Flex w="full" justifyContent="center">
@@ -66,11 +67,12 @@ export const TranslatathonInANutshell = () => {
         </Flex>
         <Flex w="full" direction="column" gap={2} alignSelf="center">
           <Heading as="h3" fontSize="2xl">
-            Why we do it
+            Don’t use machine translation
           </Heading>
           <Text>
-            The goal is to translate website content and help make ethereum.org
-            more accessible to non-English speakers, raise awareness of the
+            Using machine translation is forbidden! All suggested translations
+            will be reviewed & evaluated and translators using machine
+            translation will not be eligible for prizes
           </Text>
         </Flex>
       </Flex>
@@ -83,11 +85,12 @@ export const TranslatathonInANutshell = () => {
       >
         <Flex w="full" direction="column" gap={2} alignSelf="center">
           <Heading as="h3" fontSize="2xl">
-            Why should you participate
+            Translate untranslated strings
           </Heading>
           <Text>
-            The goal is to translate website content and help make ethereum.org
-            more accessible to non-English speakers, raise awareness of the
+            Translate strings that do not have any suggested translations yet.
+            Do not translate strings that have already been translated and
+            approved
           </Text>
         </Flex>
         <Flex w="full" justifyContent="center">
@@ -98,6 +101,9 @@ export const TranslatathonInANutshell = () => {
             style={{ objectFit: "contain" }}
           />
         </Flex>
+      </Flex>
+      <Flex width="full" justifyContent="center">
+        <ButtonLink href="/translatathon/details">Details and rules</ButtonLink>
       </Flex>
     </Flex>
   )
