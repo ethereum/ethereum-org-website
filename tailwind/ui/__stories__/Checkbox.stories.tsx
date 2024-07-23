@@ -35,13 +35,12 @@ const checkboxDataSet: (CheckboxProps & { label: string })[] = [
     disabled: true,
     checked: true,
   },
-  // TODO: Waiting for PR #13434 to be merged
-  // {
-  //   id: "invalid",
-  //   value: "invalid",
-  //   label: "invalid",
-  //   "aria-invalid": true,
-  // },
+  {
+    id: "invalid",
+    value: "invalid",
+    label: "invalid",
+    "aria-invalid": true,
+  },
 ]
 
 export const Checkbox: StoryObj<typeof meta> = {
