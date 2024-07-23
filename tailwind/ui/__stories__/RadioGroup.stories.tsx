@@ -40,14 +40,12 @@ const radioSet: Array<RadioGroupItemProps & { label: string }> = [
     checked: true,
     label: "disabled-checked",
   },
-
-  // TODO: Waiting for PR #13434 to be merged
-  //   {
-  //     id: "invalid",
-  //     value: "invalid",
-  //     "aria-invalid": true,
-  //     label: "invalid",
-  //   },
+  {
+    id: "invalid",
+    value: "invalid",
+    "aria-invalid": true,
+    label: "invalid",
+  },
 ]
 
 export const Radio: StoryObj<typeof meta> = {
