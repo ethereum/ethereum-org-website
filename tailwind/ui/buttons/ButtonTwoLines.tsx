@@ -65,13 +65,13 @@ const ButtonTwoLines = ({
   if (props.componentType === "link") {
     return (
       <ButtonLink className={commonClassStyles} size={size} {...props}>
-        <ChildContent {...props} isIconLeft={isIconLeft} />
+        <ChildContent {...props} size={size} isIconLeft={isIconLeft} />
       </ButtonLink>
     )
   }
   return (
     <Button className={commonClassStyles} size={size} {...props}>
-      <ChildContent {...props} isIconLeft={isIconLeft} />
+      <ChildContent {...props} size={size} isIconLeft={isIconLeft} />
     </Button>
   )
 }
@@ -83,7 +83,7 @@ const ChildContent = (
 ) => {
   const {
     reverseTextOrder = false,
-    size = "md",
+    size,
     mainText,
     helperText,
     icon: Icon,
