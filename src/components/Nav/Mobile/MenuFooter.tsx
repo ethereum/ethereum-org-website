@@ -1,6 +1,7 @@
 import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdSearch, MdWbSunny } from "react-icons/md"
+import { Button, ButtonProps, Icon, MenuButton } from "@chakra-ui/react"
 
 import LanguagePicker from "@/components/LanguagePicker"
 
@@ -10,6 +11,17 @@ import FooterButton from "./FooterButton"
 import FooterItemText from "./FooterItemText"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
+
+/**
+ * This is necessary to be backwards compatible with the old FooterButton
+ * component where the ref was NOT passed to the Button component in order to
+ * render the MenuList with an undefined position (not relative to the button).
+ *
+ * TODO: remove this component once the LanguagePicker component is migrated
+ */
+function ButtonWORef(props: ButtonProps) {
+  return <Button {...props} />
+}
 
 type MenuFooterProps = {
   onToggle: () => void
@@ -57,9 +69,19 @@ const MenuFooter = ({
           opacity: 0.4,
         }} // TODO: Replace with overlay component
       >
-        <FooterButton icon={BsTranslate} name={MOBILE_LANGUAGE_BUTTON_NAME}>
+        <MenuButton
+          as={ButtonWORef}
+          name={MOBILE_LANGUAGE_BUTTON_NAME}
+          leftIcon={<Icon as={BsTranslate} />}
+          sx={{ span: { m: 0 } }}
+          variant="ghost"
+          flexDir="column"
+          alignItems="center"
+          color="body.base"
+          px="1"
+        >
           <FooterItemText>{t("languages")}</FooterItemText>
-        </FooterButton>
+        </MenuButton>
       </LanguagePicker>
     </div>
   )
