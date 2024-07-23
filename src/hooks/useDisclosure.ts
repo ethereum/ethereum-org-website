@@ -8,9 +8,13 @@ type UseDisclosureProps = {
   id?: string
 }
 
-type GetButtonPropsProps = Record<string, unknown> & { onClick?: () => void }
+type GetButtonPropsProps = Record<string, string | undefined> & {
+  onClick?: () => void
+}
 
-type GetDisclosurePropsProps = Record<string, unknown> & { id?: string }
+type GetDisclosurePropsProps = Record<string, string | undefined> & {
+  id?: string
+}
 
 type UseDisclosureReturn = {
   isOpen: boolean
@@ -19,10 +23,10 @@ type UseDisclosureReturn = {
   onToggle: () => void
   getButtonProps: (props?: GetButtonPropsProps) => {
     "aria-expanded": boolean
-    "aria-controls": unknown
+    "aria-controls"?: string
     onClick: () => void
   }
-  getDisclosureProps: (props: GetDisclosurePropsProps) => {
+  getDisclosureProps: (props?: GetDisclosurePropsProps) => {
     hidden: boolean
     id: string
   }
@@ -31,7 +35,7 @@ type UseDisclosureReturn = {
 const generateId = (prefix = "id") =>
   `${prefix}-${Math.random().toString(36).slice(2, 11)}`
 
-const useId = (idProp, prefix) => {
+const useId = (idProp?: string, prefix?: string) => {
   const [dynamicId, setDynamicId] = useState(idProp || generateId(prefix))
 
   useEffect(() => {
