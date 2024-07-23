@@ -108,7 +108,7 @@ const ChildContent = (
         )}
       >
         <span
-          className={cn("text-md", size === "md" ? "text-bold" : "text-normal")}
+          className={cn("text-md", size === "md" ? "font-bold" : "font-normal")}
         >
           {mainText}
         </span>
