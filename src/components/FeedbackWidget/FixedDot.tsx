@@ -16,19 +16,16 @@ type FixedDotProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
   ({ offsetBottom, isExpanded, className, ...props }, ref) => {
     const { t } = useTranslation("common")
-    const size = "12"
     return (
       <Button
         ref={ref}
         data-testid="feedback-widget-button"
         aria-label={t("feedback-widget")}
         className={cn(
-          "lg:mt-inherit sticky z-[98] me-4 ms-auto flex items-center gap-0 rounded-full text-white shadow-table-item-box",
-          "transition-all duration-200",
-          "hover:scale-110 hover:transition-transform hover:duration-200",
-          `size-${size}`,
-          isExpanded ? "lg:w-[15rem] lg:gap-3" : `lg:w-${size}`,
+          "lg:mt-inherit sticky bottom-4 z-20 me-4 ms-auto flex size-12 items-center gap-0 rounded-full text-white shadow-table-item-box",
+          "transition-all duration-200 hover:scale-110 hover:transition-transform hover:duration-200",
           offsetBottom && "bottom-31 lg:bottom-4",
+          isExpanded ? "lg:w-60 lg:gap-3" : `lg:w-12`,
           className
         )}
         {...props}
