@@ -21,7 +21,6 @@ const FeedbackWidget = () => {
     bottomOffset,
     cancelRef,
     feedbackSubmitted,
-    getButtonProps,
     handleClose,
     handleOpen,
     handleSubmit,
@@ -32,7 +31,6 @@ const FeedbackWidget = () => {
   return (
     <>
       <FixedDot
-        {...getButtonProps()}
         onClick={handleOpen}
         bottomOffset={bottomOffset}
         isExpanded={isExpanded}
