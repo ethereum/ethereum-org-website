@@ -19,7 +19,6 @@ const config: StorybookConfig = {
     "../src/components/**/*.stories.{ts,tsx}",
     "../src/@chakra-ui/stories/*.stories.tsx",
     "../src/layouts/stories/*.stories.tsx",
-    "../tailwind/**/*.stories.tsx",
   ],
   addons: [
     "@storybook/addon-links",
