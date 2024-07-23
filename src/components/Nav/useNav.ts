@@ -19,7 +19,6 @@ import {
   BsUiChecksGrid,
 } from "react-icons/bs"
 import { PiFlask, PiUsersFourLight } from "react-icons/pi"
-import { useDisclosure } from "@chakra-ui/react"
 
 import { EthereumIcon } from "@/components/icons/EthereumIcon"
 
@@ -30,6 +29,7 @@ import { FROM_QUERY } from "@/lib/constants"
 import type { NavSections } from "./types"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
+import { useDisclosure } from "@/hooks/useDisclosure"
 
 export const useNav = () => {
   const { asPath } = useRouter()

@@ -11,12 +11,13 @@ import {
   HStack,
   Icon,
   Stack,
-  useDisclosure,
   VStack,
 } from "@chakra-ui/react"
 
 import { Image, type ImageProps } from "@/components/Image"
 import Text from "@/components/OldText"
+
+import { useDisclosure } from "@/hooks/useDisclosure"
 
 export type ExpandableInfoProps = ChakraProps & {
   children?: ReactNode

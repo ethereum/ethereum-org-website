@@ -1,22 +1,15 @@
 import React from "react"
 import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
-import {
-  Box,
-  chakra,
-  Fade,
-  Flex,
-  Icon,
-  List,
-  useDisclosure,
-  useToken,
-} from "@chakra-ui/react"
+import { Box, chakra, Fade, Flex, Icon, List, useToken } from "@chakra-ui/react"
 
 import type { ToCItem } from "@/lib/types"
 
 import { outerListProps } from "@/lib/utils/toc"
 
 import ItemsList from "./ItemsList"
+
+import { useDisclosure } from "@/hooks/useDisclosure"
 
 export type TableOfContentsMobileProps = {
   items?: Array<ToCItem>

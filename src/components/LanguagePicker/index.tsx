@@ -14,7 +14,6 @@ import {
   type MenuListProps,
   type MenuProps,
   Text,
-  type UseDisclosureReturn,
   useEventListener,
 } from "@chakra-ui/react"
 
@@ -29,6 +28,8 @@ import MenuItem from "./MenuItem"
 import { MobileCloseBar } from "./MobileCloseBar"
 import NoResultsCallout from "./NoResultsCallout"
 import { useLanguagePicker } from "./useLanguagePicker"
+
+import { type UseDisclosureReturn } from "@/hooks/useDisclosure"
 
 type LanguagePickerProps = Omit<MenuListProps, "children"> & {
   children: React.ReactNode

@@ -1,11 +1,9 @@
 import React from "react"
-import {
-  type ModalContentProps,
-  type ModalProps,
-  UseDisclosureReturn,
-} from "@chakra-ui/react"
+import { type ModalContentProps, type ModalProps } from "@chakra-ui/react"
 
 import Modal from "../Modal"
+
+import { type UseDisclosureReturn } from "@/hooks/useDisclosure"
 
 type SimulatorModalProps = ModalContentProps &
   Pick<ModalProps, "size"> & {

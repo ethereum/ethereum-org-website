@@ -9,7 +9,6 @@ import {
   IconButtonProps,
   Portal,
   ThemeTypings,
-  type UseDisclosureReturn,
   useMergeRefs,
 } from "@chakra-ui/react"
 import { useDocSearchKeyboardEvents } from "@docsearch/react"
@@ -24,6 +23,8 @@ import { sanitizeHitUrl } from "@/lib/utils/url"
 import SearchButton from "./SearchButton"
 
 import "@docsearch/css"
+
+import { type UseDisclosureReturn } from "@/hooks/useDisclosure"
 
 const SearchModal = dynamic(() => import("./SearchModal"))
 

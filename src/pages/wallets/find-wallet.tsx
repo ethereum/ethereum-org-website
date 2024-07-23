@@ -3,15 +3,7 @@ import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  calc,
-  Center,
-  Flex,
-  Show,
-  Text,
-  useDisclosure,
-} from "@chakra-ui/react"
+import { Box, calc, Center, Flex, Show, Text } from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang, Wallet } from "@/lib/types"
 
@@ -45,6 +37,7 @@ import {
 } from "@/lib/constants"
 
 import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
+import { useDisclosure } from "@/hooks/useDisclosure"
 import { useWalletTable } from "@/hooks/useWalletTable"
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
 

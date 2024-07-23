@@ -7,10 +7,11 @@ import {
   PopoverProps,
   PopoverTrigger,
   Portal,
-  useDisclosure,
 } from "@chakra-ui/react"
 
 import { isMobile } from "@/lib/utils/isMobile"
+
+import { useDisclosure } from "@/hooks/useDisclosure"
 
 export interface TooltipProps extends PopoverProps {
   content: ReactNode
