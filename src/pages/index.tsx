@@ -33,6 +33,7 @@ import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import StatsBoxGrid from "@/components/StatsBoxGrid"
 import TitleCardList from "@/components/TitleCardList"
+import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -251,7 +252,7 @@ const HomePage = ({
   metricResults,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation(["common", "page-index"])
-  const { locale } = useRouter()
+  const { locale, asPath } = useRouter()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
   const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
@@ -365,6 +366,7 @@ const HomePage = ({
         title={t("page-index:page-index-meta-title")}
         description={t("page-index:page-index-meta-description")}
       />
+      <TranslatathonBanner pathname={asPath} />
       <Box w="full">
         <HomeHero heroImg={hero} />
       </Box>
