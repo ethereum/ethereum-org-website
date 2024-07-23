@@ -62,7 +62,7 @@ No, you cannot. Bitcoin and ether exist on two separate networks (i.e. different
 
 ### If I own an ETH address, do I own the same address on other blockchains?
 
-You can use the same [address](/glossary/#address) on all blockchains that use similar underlying software to Ethereum (known as 'EVM-compatible'). This [list](https://chainlist.org/) will show you which blockchains you can use with the same address. Some blockchains, like Bitcoin, implement a completely separate set of network rules and you will need a different address with a different format. If you have a smart contract wallet you should check its product website for more info on which blockchains are supported because usuallly those have limited but more secure scope.
+You can use the same [address](/glossary/#address) on all blockchains that use similar underlying software to Ethereum (known as 'EVM-compatible'). This [list](https://chainlist.org/) will show you which blockchains you can use with the same address. Some blockchains, like Bitcoin, implement a completely separate set of network rules and you will need a different address with a different format. If you have a smart contract wallet you should check its product website for more info on which blockchains are supported because usually those have limited but more secure scope.
 
 ### Is having my own wallet safer than keeping my funds on an exchange?
 
