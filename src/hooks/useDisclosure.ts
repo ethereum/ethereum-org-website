@@ -47,7 +47,7 @@ const useId = (idProp?: string, prefix?: string) => {
   return dynamicId
 }
 
-export const useDisclosure = ({
+const useDisclosure = ({
   onClose: onCloseProp,
   onOpen: onOpenProp,
   isOpen: isOpenProp,
@@ -97,3 +97,5 @@ export const useDisclosure = ({
     getDisclosureProps,
   }
 }
+
+export { useDisclosure, type UseDisclosureProps, type UseDisclosureReturn }
