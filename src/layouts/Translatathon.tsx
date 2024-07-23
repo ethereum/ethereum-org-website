@@ -16,6 +16,7 @@ import {
   Page,
 } from "@/components/MdComponents"
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
+import { CountdownBanner } from "@/components/Translatathon/CountdownBanner"
 import { DatesAndTimeline } from "@/components/Translatathon/DatesAndTimeline"
 import { LocalCommunitiesList } from "@/components/Translatathon/LocalCommunitiesList"
 import { StepByStepInstructions } from "@/components/Translatathon/StepByStepInstructions"
@@ -192,6 +193,7 @@ export const TranslatathonLayout = ({
 
   return (
     <Box position="relative" width="full" dir={"ltr"}>
+      <CountdownBanner />
       <ContentHero
         breadcrumbs={{ slug, startDepth: 1 }}
         title={frontmatter.title}
