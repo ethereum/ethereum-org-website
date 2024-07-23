@@ -36,9 +36,9 @@ const FeedbackWidget = () => {
           <FixedDot offsetBottom={offsetBottom} isExpanded={isExpanded} />
         </PopoverTrigger>
 
-        <PopoverContent className="mx-2 w-fit max-w-80 rounded bg-background p-4 sm:p-8">
+        <PopoverContent className="mx-2 w-80 max-w-[calc(100vw_-_1rem)] rounded bg-background p-4 sm:p-8">
           <div className="items-top flex gap-2">
-            <header className="me-0 p-0 text-xl font-bold">
+            <header className="me-0 flex-1 p-0 text-xl font-bold">
               {feedbackSubmitted
                 ? t("feedback-widget-thank-you-title")
                 : t("feedback-widget-prompt")}
@@ -46,11 +46,11 @@ const FeedbackWidget = () => {
             <PopoverClose asChild>
               <Button
                 variant="ghost"
-                className="h-fit py-0 text-body"
+                className="w-8 py-0 text-body"
                 size="sm"
                 ref={cancelRef}
               >
-                <MdClose className="size-5 h-fit" />
+                <MdClose className="h-fit w-5" />
               </Button>
             </PopoverClose>
           </div>
@@ -66,7 +66,7 @@ const FeedbackWidget = () => {
             </>
           )}
 
-          <footer className="flex gap-6 pt-8">
+          <footer className="mt-8 flex gap-6">
             {feedbackSubmitted ? (
               <Button onClick={handleSurveyOpen} className="flex-1">
                 {t("feedback-widget-thank-you-cta")}
