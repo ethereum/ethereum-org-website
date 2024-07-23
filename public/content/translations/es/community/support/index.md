@@ -12,11 +12,11 @@ lang: es
 
 Comprender la naturaleza descentralizada de Ethereum es vital, ya que todo aquel que afirme ser el soporte técnico oficial de Ethereum probablemente esté tratando de estafarle. La mejor manera de protegerse contra estafadores es enterarse bien y tomarse la seguridad en serio.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Seguridad en Ethereum y prevención de fraudes
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Aprenda los fundamentos de Ethereum.
 </DocLink>
 

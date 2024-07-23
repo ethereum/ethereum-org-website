@@ -18,7 +18,7 @@ Para quienes aprenden mejor observando, vean la guía paso a paso de Luka para c
 
 Deberá iniciar sesión en su cuenta de Crowdin o registrarse si aún no tiene una. Para registrarse solo necesita una cuenta de correo electrónico y una contraseña.
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Únase al proyecto
 </ButtonLink>
 

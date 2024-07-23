@@ -78,7 +78,7 @@ Keselamatan Ethereum adalah berasaskan bukti penaruhan. Sistem ini direka untuk 
 
 Isu keselamatan berhubung dengan NFT paling kerap berkaitan dengan penipuan pancingan data, kelemahan kontrak pintar atau kesilapan pengguna (seperti mendedahkan kunci persendirian secara tidak sengaja), oleh itu keselamatan dompet yang mantap adalah amat penting bagi pemilik NFT.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Maklumat lanjut tentang keselamatan
 </ButtonLink>
 

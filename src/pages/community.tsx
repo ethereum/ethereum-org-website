@@ -341,12 +341,12 @@ const CommunityPage = () => {
             <H2>{t("page-community-open-source")}</H2>
             <Subtitle>{t("page-community-open-source-description")}</Subtitle>
             <ButtonRow>
-              <ButtonLink to="/community/get-involved/#ethereum-jobs/">
+              <ButtonLink href="/community/get-involved/#ethereum-jobs/">
                 {t("page-community-find-a-job")}
               </ButtonLink>
               <StyledButtonLink
                 variant="outline"
-                to="/community/grants/"
+                href="/community/grants/"
                 isSecondary
               >
                 {t("page-community-explore-grants")}
@@ -386,12 +386,12 @@ const CommunityPage = () => {
               <H2>{t("page-community-contribute")}</H2>
               <Subtitle>{t("page-community-contribute-description")}</Subtitle>
               <ButtonRow>
-                <ButtonLink to="/contributing/">
+                <ButtonLink href="/contributing/">
                   {t("page-community-contribute-button")}
                 </ButtonLink>
                 <StyledButtonLink
                   variant="outline"
-                  to="https://github.com/ethereum/ethereum-org-website/"
+                  href="https://github.com/ethereum/ethereum-org-website/"
                   isSecondary
                 >
                   {t("page-community-contribute-secondary-button")}
@@ -426,7 +426,7 @@ const CommunityPage = () => {
             <H2>{t("page-community-support")}</H2>
             <Subtitle>{t("page-community-support-description")}</Subtitle>
             <Box>
-              <ButtonLink to="/community/support/">
+              <ButtonLink href="/community/support/">
                 {t("page-community-support-button")}
               </ButtonLink>
             </Box>
@@ -468,7 +468,7 @@ const CommunityPage = () => {
             descriptionKey="page-community:page-community-get-eth-description"
           >
             <Box>
-              <ButtonLink to="/get-eth/">
+              <ButtonLink href="/get-eth/">
                 {t("page-community-get-eth")}
               </ButtonLink>
             </Box>
@@ -483,7 +483,7 @@ const CommunityPage = () => {
             descriptionKey="page-community:page-community-explore-dapps-description"
           >
             <Box>
-              <ButtonLink to="/dapps/">
+              <ButtonLink href="/dapps/">
                 {t("page-community-explore-dapps")}
               </ButtonLink>
             </Box>

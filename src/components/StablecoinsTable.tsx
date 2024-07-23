@@ -99,7 +99,7 @@ const StablecoinsTable = ({
             <Td verticalAlign="middle">{stablecoinsType[type]}</Td>
             {url && (
               <Td textAlign="end">
-                <ButtonLink to={url} size="sm">
+                <ButtonLink href={url} size="sm">
                   {t("page-stablecoins-go-to")} {name}
                 </ButtonLink>
               </Td>

@@ -78,7 +78,7 @@ De veiligheid van Ethereum komt van proof-of-stake. Het systeem is ontworpen om 
 
 Beveiligingskwesties met betrekking tot NFT's hebben meestal te maken met phishing-scams, kwetsbaarheden van slimme contracten of gebruikersfouten (zoals het per ongeluk blootgeven van privésleutels), waardoor goede portemonneebeveiliging van cruciaal belang is voor NFT-eigenaren.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Meer over beveiliging
 </ButtonLink>
 

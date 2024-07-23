@@ -110,11 +110,11 @@ Browsererweiterungen wie die Chrome-Erweiterungen oder die Add-ons von Firefox k
 
 Einer der häufigsten Gründe, warum Menschen in der Kryptoszene betrogen werden, ist mangelndes Verständnis. Angenommen, Sie hätten nicht verstanden, dass das Ethereum-Netzwerk dezentralisiert ist und niemandem direkt gehört. In diesem Fall wäre es einfach, dass Sie auf jemanden hereinfallen, der vorgibt, ein Kundendienstmitarbeiter zu sein, und verspricht, im Gegenzug für Ihren Private-Key, Ihr verlorenes ETH zurückzuerstatten. Es ist lohnenswert, sich über die Funktionsweise von Ethereum zu informieren.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Was ist Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Was ist Ether?
 </DocLink>
 <Divider />
@@ -127,7 +127,7 @@ Einer der häufigsten Gründe, warum Menschen in der Kryptoszene betrogen werden
 
 Der Private-Key zu Ihrer Wallet fungiert als Kennwort für Ihre Ethereum-Wallet. Es ist das Einzige, das verhindert, dass jemand, der Ihre Wallet-Adresse kennt, Ihr Konto um all seine Vermögenswerte erleichtert!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Was ist eine Ethereum-Wallet?
 </DocLink>
 

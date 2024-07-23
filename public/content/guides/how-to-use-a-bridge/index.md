@@ -54,7 +54,7 @@ You can use [chainlist.org](http://chainlist.org) to find the network's RPC deta
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Want to learn more?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     See our other guides
   </ButtonLink>
 </InfoBanner>

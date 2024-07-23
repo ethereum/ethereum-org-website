@@ -412,7 +412,7 @@ const WalletTable = ({
                           {/* Wallet Website Button (desktop) */}
                           <Box display={{ base: "none", md: "block" }}>
                             <ButtonLink
-                              to={wallet.url}
+                              href={wallet.url}
                               variant="outline"
                               w="auto"
                               isExternal
@@ -443,7 +443,7 @@ const WalletTable = ({
                   {/* Wallet Website Button (mobile) */}
                   <Box display={{ base: "block", md: "none" }} mt={6} w="100%">
                     <ButtonLink
-                      to={wallet.url}
+                      href={wallet.url}
                       variant="outline"
                       w="100%"
                       isExternal

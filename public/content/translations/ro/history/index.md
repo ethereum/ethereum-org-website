@@ -124,7 +124,7 @@ Actualizarea Berlin a optimizat costul gazului pentru anumite acțiuni EVM și c
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   Lanțul Beacon
 </DocLink>
 
@@ -140,7 +140,7 @@ Contractul de depunere a mizei a introdus [mizarea](/glossary/#staking) în ecos
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Mizarea
 </DocLink>
 
@@ -394,6 +394,6 @@ Cartea galbenă, scrisă de Dr. Gavin Wood, este o definiție tehnică a protoco
 
 Lucrarea introductivă, publicată în 2013 de Vitalik Buterin, fondatorul lui Ethereum, înainte de lansarea proiectului în 2015.
 
-<DocLink to="/whitepaper/">
+<DocLink href="/whitepaper/">
   Cartea albă
 </DocLink>

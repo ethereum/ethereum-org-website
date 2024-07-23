@@ -14,7 +14,7 @@ Im Gegensatz zur Eröffnung eines neuen Kontos bei einem Unternehmen erfolgt die
 
 Eine Wallet ist eine App, mit der Sie Ihr Ethereum-Konto verwalten können. Die App verwendet Ihre Schlüssel, um Transaktionen zu senden oder entgegenzunehmen und sich bei Anwendungen anzumelden. Es gibt Dutzende von verschiedenen Wallets (Geldbörsen) zur Auswahl - für das Handy, für den Desktop oder sogar für Browser-Erweiterungen.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Finden Sie eine Wallet
 </ButtonLink>
 
@@ -42,7 +42,7 @@ Sobald Sie Ihre Seed-Phrase gespeichert haben, sollten Sie Ihr Wallet-Dashboard 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Möchten Sie mehr erfahren?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Sehen Sie unsere anderen Anleitungen
   </ButtonLink>
 </InfoBanner>

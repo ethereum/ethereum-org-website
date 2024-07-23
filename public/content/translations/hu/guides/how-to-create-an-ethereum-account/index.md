@@ -14,7 +14,7 @@ A hagyományos számlanyitáshoz képest az Ethereum-számlát szabadon, privát
 
 A tárca egy olyan alkalmazás, amely segíti az Ethereum-számla kezelését. Kulcsokat használ a tranzakciók küldéséhez és fogadásához, illetve az alkalmazásokba való bejelentkezéshez. Tucatnyi különböző tárca közül választhat – mobil, asztali alkalmazásokkal vagy akár böngészőbővítményekkel működő tárcák is léteznek.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Tárca keresése
 </ButtonLink>
 
@@ -42,7 +42,7 @@ A kulcsmondat eltárolása után láthatja a tárca irányítópultját az Ön e
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Szeretne többet megtudni?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Tekintse meg a további útmutatóinkat
   </ButtonLink>
 </InfoBanner>

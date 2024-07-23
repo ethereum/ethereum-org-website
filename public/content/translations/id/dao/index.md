@@ -50,7 +50,7 @@ Penyokong utama DAO adalah kontrak pintar, yang menentukan aturan organisasi dan
 
 Ini mungkin terjadi karena kontrak pintar bersifat tahan perubahan setelah dijalankan di Ethereum. Anda tidak bisa hanya mengedit kode (aturan DAO) tanpa diketahui orang-orang karena semua hal terbuka untuk publik.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Lebih lanjut tentang kontrak pintar
 </DocLink>
 

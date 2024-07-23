@@ -86,7 +86,7 @@ Tính bảo mật của Ethereum đến từ cơ chế bằng chứng cổ phầ
 
 Các vấn đề bảo mật liên quan đến NFT thường ít hay nhiều liên quan đến nạn lừa đảo, lỗ hổng hợp đồng thông minh hoặc lỗi người dùng (chẳng hạn như vô tình làm lộ khóa cá nhân), khiến cho việc bảo mật ví hữu hiệu trở nên cực kì quan trọng đối với chủ sở hữu NFT.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Tìm hiểu thêm về bảo mật
 </ButtonLink>
 

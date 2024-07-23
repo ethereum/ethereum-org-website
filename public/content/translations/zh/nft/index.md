@@ -56,7 +56,7 @@ summaryPoint3: 由以太坊区块链上的智能合约提供支持
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>探索、购买或创建自己的非同质化代币艺术品/收藏品...</div>
-  <ButtonLink to="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/dapps/?category=collectibles#explore">
     探索非同质化代币艺术品
   </ButtonLink>
 </InfoBanner>
@@ -93,7 +93,7 @@ summaryPoint3: 由以太坊区块链上的智能合约提供支持
 
 非同质化代币的安全问题通常与网络钓鱼诈骗、智能合约漏洞或用户错误（例如无意中暴露私钥）有关，因此非同质化代币所有者务必保障钱包的安全性。
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   有关安全性的更多信息
 </ButtonLink>
 

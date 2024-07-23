@@ -35,6 +35,6 @@ Occorre inoltre fornire ad ethereum.org la sicurezza che la piattaforma di scamb
 
 Se desideri aggiungere una piattaforma di scambio a ethereum.org, crea un ticket su GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
   Crea un ticket
 </ButtonLink>
