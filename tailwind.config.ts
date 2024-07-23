@@ -64,6 +64,23 @@ const config = {
         "tooltip-shadow": "var(--tooltip-shadow)",
         "switch-background": "var(--switch-background)",
         "hub-hero-content-bg": "var(--hub-hero-content-bg)",
+        attention: {
+          DEFAULT: "var(--attention)",
+          light: "var(--attention-light)",
+          outline: "var(--attention-outline)",
+        },
+        error: {
+          DEFAULT: "var(--error)",
+          light: "var(--error-light)",
+          outline: "var(--error-outline)",
+          neutral: "var(--error-neutral)",
+        },
+        success: {
+          DEFAULT: "var(--success)",
+          light: "var(--success-light)",
+          outline: "var(--success-outline)",
+          neutral: "var(--success-neutral)",
+        },
       },
       backgroundImage: {
         "bg-main-gradient": "var(--bg-main-gradient)",
