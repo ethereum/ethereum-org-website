@@ -485,6 +485,15 @@ export type EthStoreResponse = Data<{
   effective_balances_sum_wei: number
 }>
 
+export type EthStakedResponse = {
+  result: {
+    rows?: {
+      cum_deposited_eth: number
+      time: string
+    }[]
+  }
+}
+
 export type EpochResponse = Data<{
   validatorscount: number
 }>
