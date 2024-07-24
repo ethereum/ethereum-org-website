@@ -34,7 +34,7 @@ If you are bilingual and want to help make Ethereum content more accessible whil
 
 ## Dates and timeline
 
-Here are the important dates for the 2024 Translatathon
+Here are the important dates for the 2024 Translatathon:
 
 <DatesAndTimeline />
 
