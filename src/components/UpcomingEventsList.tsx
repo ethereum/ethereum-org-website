@@ -158,7 +158,6 @@ const UpcomingEventsList = () => {
                       date={date}
                       description={formattedDetails}
                       location={location}
-                      isEven={(idx + 1) % 2 === 0}
                       imageUrl={imageUrl}
                       startDate={startDate}
                       endDate={endDate}

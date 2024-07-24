@@ -24,7 +24,6 @@ export type EventCardProps = {
   description: string
   className?: string
   location: string
-  isEven: boolean
   imageUrl?: string
 }
 
