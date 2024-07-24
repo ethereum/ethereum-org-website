@@ -201,7 +201,7 @@ Die Zusammenführung stellt die formale Übernahme der Beacon Chain als neue Kon
 
 Blöcke werden stattdessen durch validierende Nodes vorgeschlagen, die ETH als Gegenleistung für das Recht auf Teilnahme am Konsens eingesetzt haben. Diese Upgrades setzten die Voraussetzungen für zukünftige Skalierbarkeitsverbesserungen, einschließlich Sharding.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   Die Beacon Chain
 </ButtonLink>
 
@@ -217,7 +217,7 @@ Ursprünglich war geplant, vor der Zusammenführung an Sharding zu arbeiten, um 
 
 Pläne für die gemeinsame Nutzung entwickeln sich rasch, aber angesichts des Anstiegs und des Erfolgs von Lay-2-Technologien, um Transaktionsausführung zu skalieren, haben sich gemeinsame Pläne auf die Suche nach dem optimalen Weg zur Verteilung der Belastung durch die Speicherung komprimierter Rufdaten aus Rollup-Verträgen verlagert. Dies ermöglicht ein exponentielles Wachstum der Netzwerkkapazität. Dies wäre ohne den ersten Übergang zu Proof-of-Stake nicht möglich.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Sharding
 </ButtonLink>
 

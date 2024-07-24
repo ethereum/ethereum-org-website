@@ -8,7 +8,6 @@ import localEvents from "../data/community-events.json"
 import { EthereumEventsImport } from "./events/ethereum-events-import"
 
 import "dotenv/config"
-
 ;(async () => {
   const communityEvents = localEvents as CommunityConference[]
 

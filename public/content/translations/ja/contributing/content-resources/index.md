@@ -27,6 +27,6 @@ description: ethereum.orgへのコンテンツリソースの掲載基準
 
 本基準を満たしたコンテンツのethereum.orgへの掲載をご希望の場合は、GitHubで問題を作成してください。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
   問題の作成
 </ButtonLink>

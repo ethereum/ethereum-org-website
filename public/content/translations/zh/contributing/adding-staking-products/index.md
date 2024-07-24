@@ -171,6 +171,6 @@ lang: zh
 
 如果你想将质押产品或服务添加到 ethereum.org，请在 GitHub 上创建一个问题。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
   创建一个提议
 </ButtonLink>

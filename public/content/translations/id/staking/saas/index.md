@@ -78,7 +78,7 @@ Penarikan penaruhan diimplementasikan dalam peningkatan Shanghai/Capella pada Ap
 
 Para validator juga dapat sepenuhnya keluar sebagai validator, yang akan membuka kunci saldo ETH mereka yang tersisa untuk penarikan. Akun yang telah menyediakan alamat penarikan eksekusi dan menyelesaikan proses keluar akan menerima seluruh saldo mereka ke alamat penarikan yang disediakan selama sweep validator berikutnya.
 
-<ButtonLink to="/staking/withdrawals/">Lebih lanjut tentang penarikan penaruhan</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Lebih lanjut tentang penarikan penaruhan</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Apa yang terjadi jika saya terkena pengurangan hadiah pemotongan?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

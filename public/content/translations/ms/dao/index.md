@@ -50,7 +50,7 @@ Tulang belakang DAO ialah kontrak pintarnya, yang menentukan peraturan organisas
 
 Ini boleh dilakukan kerana kontrak pintar tidak boleh diubah sebaik sahaja kontrak dimulakan di Ethereum. Anda tidak boleh mengedit kod (peraturan DAO) tanpa diketahui oleh orang lain kerana semua tindakan adalah umum.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Lebih lanjut tentang kontrak pintar
 </DocLink>
 

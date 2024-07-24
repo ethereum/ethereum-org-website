@@ -33,7 +33,7 @@ A másik megközelítés, a láncon kívüli irányítás az, amikor a protokoll
 
 _Miközben a protokollszintű Ethereum-irányítás láncon kívül zajlik, addig számos alkalmazási területe van a láncon belüli irányításnak, mint például a decentralizált autonóm szervezetek (DAO) működése._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Bővebben a DAO-król
 </ButtonLink>
 
@@ -59,7 +59,7 @@ _Megjegyzés: bárki lehet több csoport tagja is (pl. a protokollfejlesztő leh
 
 Az egyik fontos Ethereum-irányítási eszköz az **Ethereum fejlesztési javaslatok (EIP)** kezelése. Az EIP olyan szabvány, amely egy lehetséges új funkciót vagy folyamatot specifikál az Ethereum számára. Az Ethereum-közösség bármelyik tagja létrehozhat EIP-t. Ha Önt érdekli az EIP írása, értékelése vagy irányítása, akkor:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Bővebben az EIP-kről
 </ButtonLink>
 
@@ -155,7 +155,7 @@ Miközben a specifikáció és a fejlesztés teljesen nyitott volt, a hivatalos 
 
 Amikor a Beacon-lánc egyesült az Ethereum végrehajtási réteggel 2022. szeptember 15-én, a Merge teljesült a [Paris hálózati frissítés](/history/#paris) részeként. Az [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) javaslat státusza véglegesre változott befejezve az átállást a proof-of-stake mechanizmusra.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   A beolvadásról bővebben
 </ButtonLink>
 

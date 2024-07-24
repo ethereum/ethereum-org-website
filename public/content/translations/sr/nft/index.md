@@ -78,7 +78,7 @@ Bezbednost Ethereum dolazi od dokaza o ulogu. Sistem je projektovan tako da ekon
 
 Problemi bezbednosti NFT-ijeva su uglavnom povezani sa fišingom, ranjivošću pametnih ugovora ili korisničkom greškom (kao što je nenamerno izlaganje privatnih ključeva), čineći sigurnost novčanika ključnom za vlasnike NFT-ijeva.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Više o bezbednosti
 </ButtonLink>
 

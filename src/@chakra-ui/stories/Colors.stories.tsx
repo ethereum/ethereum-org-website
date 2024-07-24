@@ -79,8 +79,8 @@ const ColorGroupWrapper = ({
         color === "gray"
           ? `linear-gradient(180deg, #1b1b1b 35%, #fff 35%)`
           : color === "orange"
-          ? "gray.800"
-          : undefined
+            ? "gray.800"
+            : undefined
       }
     >
       {children}
@@ -131,12 +131,12 @@ export const SemanticScheme: StoryObj = {
           const tokenObj = semanticTokenColors[tokenName]
 
           const filteredTokenObj =
-          "base" in tokenObj
-          ? Object.keys(semanticTokens["colors"][tokenName]).filter(
-            (key) => !currentDeprecatedTokens.includes(key)
-          )
+            "base" in tokenObj
+              ? Object.keys(semanticTokens["colors"][tokenName]).filter(
+                  (key) => !currentDeprecatedTokens.includes(key)
+                )
               : undefined
-          
+
           return (
             <Flex key={tokenName} direction="column" gap="4">
               <Heading>{capitalize(tokenName)}</Heading>
@@ -180,6 +180,8 @@ const SemanticColorBlock = ({
       size="20"
       bg={tokenName === nestedKey ? tokenName : `${tokenName}.${nestedKey}`}
     />
-    <Text>{tokenName}.{nestedKey}</Text>
+    <Text>
+      {tokenName}.{nestedKey}
+    </Text>
   </Flex>
 )

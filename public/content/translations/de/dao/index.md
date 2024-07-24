@@ -50,7 +50,7 @@ Das Fundament einer DAO ist ihr Smart Contract, der das Regelwerk der Organisati
 
 Möglich wird dies durch die Manipulationssicherheit veröffentlichter Smart Contracts. Da alle Vorgänge öffentlich sind, sind unbemerkte Änderungen am Code (also den Regeln der DAO) unmöglich.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Mehr zu Smart Contracts
 </DocLink>
 

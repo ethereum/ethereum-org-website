@@ -1,7 +1,7 @@
 import { baseLocales } from "./i18next"
-import { chakraBreakpointArray } from "./preview"
+import { breakpointSet } from "./preview"
 
-export const viewportModes = chakraBreakpointArray.reduce<{
+export const viewportModes = breakpointSet.reduce<{
   [mode: string]: { viewport: string }
 }>((arr, [token]) => {
   return {
