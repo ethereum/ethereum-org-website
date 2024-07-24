@@ -10,7 +10,7 @@ export const SkipLink = () => {
     <div className="bg-primary">
       <BaseLink
         href={"#" + MAIN_CONTENT_ID}
-        className="absolute -top-3 ms-2 leading-8 text-background no-underline hover:no-underline focus:static"
+        className="absolute -top-12 ms-2 leading-8 text-background no-underline hover:no-underline focus:static"
       >
         {t("skip-to-main-content")}
       </BaseLink>
