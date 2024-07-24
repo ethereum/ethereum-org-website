@@ -104,6 +104,7 @@ import pooltogether from "@/public/images/dapps/pooltogether.png"
 import pwn from "@/public/images/dapps/pwn.png"
 import radicle from "@/public/images/dapps/radicle.png"
 import rarible from "@/public/images/dapps/rarible.png"
+import requestFinance from "@/public/images/dapps/requestFinance.png"
 import rotki from "@/public/images/dapps/rotki.png"
 import rubic from "@/public/images/dapps/rubic.png"
 import sablier from "@/public/images/dapps/sablier.png"
@@ -827,6 +828,13 @@ const DappsPage = () => {
       link: "https://app.sablier.com",
       image: sablier,
       alt: t("page-dapps-sablier-logo-alt"),
+    },
+    {
+      title: "Request Finance",
+      description: t("page-dapps-dapp-description-request-finance"),
+      link: "https://request.finance",
+      image: requestFinance,
+      alt: t("page-dapps-request-finance-logo-alt"),
     },
   ]
 
