@@ -50,8 +50,8 @@ Here are the important dates for the 2024 Translatathon:
 
 <TwoColumnContent>
   <CardContent>
-    <h3>Who can participate?</h3>
-    In order to participate, you need to be older than 18 years and fluent in at least one language in addition to English.
+    <h3>Who can join?</h3>
+   Be older than 18 years and fluent in at least one language in addition to English.
   </CardContent>
   <CardContent>
   <h3>Do I need to be a translator?</h3>
@@ -73,7 +73,7 @@ Here are the important dates for the 2024 Translatathon:
 <TwoColumnContent>
   <CardContent>
     <h3>What do I need to participate?</h3>
-    We recommend using a computer to translate since using Crowdin will be optimal on desktop. You’ll also need an internet connection and you’re good to go.
+    We recommend using a computer to translate since our translation platform, Crowdin, is optimized for desktop.
   </CardContent>
 </TwoColumnContent>
 

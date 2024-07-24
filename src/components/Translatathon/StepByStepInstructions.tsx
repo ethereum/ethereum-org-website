@@ -6,7 +6,7 @@ const instructions = [
   {
     title: "Read the rules and FAQs",
     description:
-      "Learn more about the Translatathon to make sure you understand the rules and translation process",
+      "Get familiar with the rules, prizes and translation process",
     cta: "/translatathon/details",
     ctaLabel: "Learn",
   },
@@ -18,7 +18,7 @@ const instructions = [
     ctaLabel: "Apply",
   },
   {
-    title: "Join the project in Crowdin",
+    title: "Register on Crowdin (translation platform)",
     description:
       "Join the ethereum.org project and familiarize yourself with Crowdin, where all the translations will take place",
     cta: "https://crowdin.com/project/ethereum-org",
@@ -41,13 +41,13 @@ const instructions = [
   {
     title: "Wait for evaluations",
     description:
-      "All participants translations will be evaluated to ensure they are human translations and meet the minimum quality threshold",
+      "All translations will be evaluated for quality and machine translations will be rejected",
     cta: null,
   },
   {
     title: "Claim your prizes",
     description:
-      "We will announce the final results on August 29th and all eligible participants will receive an email with next steps to claim their prizes",
+      "Results will be announced on **August 29th**. Eligible participants will receive an email with prize claim instructions.",
     cta: null,
   },
 ]

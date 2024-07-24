@@ -86,7 +86,7 @@ export const TranslatathonInANutshell = () => {
       >
         <Flex w="full" direction="column" gap={2} alignSelf="center">
           <Heading as="h3" fontSize="2xl">
-            Translate untranslated strings
+            Focus on untranslated lines only 
           </Heading>
           <Text>
             Translate strings that do not have any suggested translations yet.

@@ -47,7 +47,7 @@ A detailed breakdown of prizes will be announced at the end of the application p
 
 ### Evaluation process
 
-As part of the evaluation process for the Translatathon, all translations will be subject to a QA and feedback step, where professional linguists will evaluate submissions by individual translators based on quality and accuracy.
+All translations will be subject to QA and feedback, where professional linguists will evaluate submissions based on quality and accuracy.
 
 We will also be running **anti-machine translation measures**, with Crowdin providing some tools that automatically detect machine translations.
 

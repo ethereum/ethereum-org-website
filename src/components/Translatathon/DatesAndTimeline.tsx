@@ -33,7 +33,7 @@ const dates = [
   {
     title: "Evaluation period",
     description:
-      "Each participants translations are evaluated by professional reviewers to ensure they are human translations and meet the minimum quality threshold",
+      "Each translation will be evaluated by professional reviewers to verify translations were not done with AI tools and meet the minimum quality threshold",
     startDate: new Date("August 19, 2024"),
     endDate: new Date("August 28, 2024"),
     link: null,
