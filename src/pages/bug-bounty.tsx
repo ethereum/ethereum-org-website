@@ -2,13 +2,7 @@ import { useRouter } from "next/router"
 import type { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  Center,
-  Heading,
-  ListItem,
-  UnorderedList,
-} from "@chakra-ui/react"
+import { Box, Center, Heading, ListItem, UnorderedList } from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
@@ -480,10 +474,10 @@ const BugBountiesPage = () => {
             </SloganGradient>
             <Subtitle>{t("page-upgrades-bug-bounty-subtitle")}</Subtitle>
             <ButtonRow>
-              <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
+              <StyledButton href="https://forms.gle/Gnh4gzGh66Yc3V7G8">
                 {t("page-upgrades-bug-bounty-submit")}
               </StyledButton>
-              <StyledButton variant="outline" to="#rules" isSecondary>
+              <StyledButton variant="outline" href="#rules" isSecondary>
                 {t("page-upgrades-bug-bounty-rules")}
               </StyledButton>
             </ButtonRow>

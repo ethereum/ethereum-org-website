@@ -63,7 +63,7 @@ Web3 pozwala na bezpośrednią własność poprzez [niewymienialne tokeny (NFT)]
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Dowiedz się więcej o NFT</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     Więcej o NFT
   </ButtonLink>
 </InfoBanner>
@@ -88,7 +88,7 @@ Ludzie jednak definiują wiele społeczności Web3 jako DAO. Wszystkie te społe
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Dowiedz się więcej o DAO</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     Więcej informacji o: DAO
   </ButtonLink>
 </InfoBanner>
@@ -99,7 +99,7 @@ Tradycyjnie należałoby utworzyć konto dla każdej używanej platformy. Na prz
 
 Web3 rozwiązuje te problemy, umożliwiając kontrolowanie tożsamości cyfrowej za pomocą adresu Ethereum i profilu ENS. Korzystanie z adresu Ethereum zapewnia pojedynczy login na różnych platformach, który jest bezpieczny, odporny na cenzurę i anonimowy.
 
-<ButtonLink to="https://login.xyz/">
+<ButtonLink href="https://login.xyz/">
   Zaloguj się za pomocą Ethereum
 </ButtonLink>
 
@@ -107,7 +107,7 @@ Web3 rozwiązuje te problemy, umożliwiając kontrolowanie tożsamości cyfrowej
 
 Infrastruktura płatności Web2 opiera się na bankach i przetwórcach płatności, wykluczając osoby bez kont bankowych lub te, które mieszkają w granicach niewłaściwego kraju. Web3 wykorzystuje tokeny takie jak [ETH](/eth/) do wysyłania pieniędzy bezpośrednio w przeglądarce i nie wymaga zaufanej strony trzeciej.
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   Więcej na temat ETH
 </ButtonLink>
 

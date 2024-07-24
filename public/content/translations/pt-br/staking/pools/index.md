@@ -68,7 +68,7 @@ Agora mesmo! A atualização da rede Shanghai/Capella ocorreu em abril de 2023 e
 
 Como alternativa, os pools que utilizam um token de participação ERC-20 permitem que os usuários negociem esse token no mercado aberto, o que possibilita a venda da posição de participação, com "saque" sem realmente remover o ETH do contrato de participação.
 
-<ButtonLink to="/staking/withdrawals/">Mais sobre retirada de participação</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Mais sobre retirada de participação</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Isso é diferente de fazer staking com minha exchange (corretora)?">

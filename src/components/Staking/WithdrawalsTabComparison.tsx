@@ -67,7 +67,7 @@ const WithdrawalsTabComparison = () => {
             <ListItem>{t("comp-withdrawal-comparison-new-li-2")}</ListItem>
           </UnorderedList>
           <Text fontWeight="bold">{t("comp-withdrawal-comparison-new-p")}</Text>
-          <ButtonLink to="https://launchpad.ethereum.org/" hideArrow>
+          <ButtonLink href="https://launchpad.ethereum.org/" hideArrow>
             {t("comp-withdrawal-comparison-new-link")}
           </ButtonLink>
         </TabPanel>

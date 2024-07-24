@@ -49,7 +49,7 @@ Le aconsejamos que actualice la herramienta de revocación transcurridos unos mi
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>¿Quiere saber más?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Consulte nuestras demás guias
   </ButtonLink>
 </InfoBanner>

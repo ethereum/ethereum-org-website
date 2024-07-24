@@ -54,7 +54,7 @@ Anda boleh menggunakan [chainlist.org](http://chainlist.org) untuk mencari butir
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Mahu belajar lebih lanjut?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Lihat panduan-panduan lain kami
   </ButtonLink>
 </InfoBanner>

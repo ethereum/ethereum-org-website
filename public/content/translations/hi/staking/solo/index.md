@@ -190,7 +190,7 @@ summaryPoints:
 
 अपना पूरा बैलेंस वापस पाने और अनलॉक करने के लिए आपको अपने सत्यापनकर्ता से बाहर निकलने की प्रक्रिया भी पूरी करनी होगी।
 
-<ButtonLink to="/staking/withdrawals/">स्टेकिंग निकासी पर अधिक जानकारी</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">स्टेकिंग निकासी पर अधिक जानकारी</ButtonLink>
 </ExpandableCard>
 
 ## अग्रिम पठन {#further-reading}

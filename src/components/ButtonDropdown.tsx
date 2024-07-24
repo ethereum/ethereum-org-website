@@ -83,7 +83,7 @@ const ButtonDropdown = ({ list, ...rest }: ButtonDropdownProps) => {
           return to ? (
             <BaseLink
               key={idx}
-              to={to!}
+              href={to!}
               isPartiallyActive={false}
               textDecor="none"
               color="text"

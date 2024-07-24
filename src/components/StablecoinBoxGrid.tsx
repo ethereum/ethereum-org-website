@@ -235,7 +235,7 @@ const GridItem = ({
                     <li key={idx}>
                       <InlineLink
                         key={idx}
-                        to={link.url}
+                        href={link.url}
                         color="black300"
                         _hover={{
                           color: "black",

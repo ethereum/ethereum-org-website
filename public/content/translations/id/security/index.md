@@ -110,11 +110,11 @@ Ekstensi peramban seperti Chrome extension atau pengaya dalam Firefox dapat mena
 
 Salah satu alasan terbesar orang tertipu dalam kripto secara umum adalah kurangnya pemahaman. Sebagai contoh, jika Anda tidak mengerti bahwa jaringan Ethereum terdesentralisasi dan tidak dimiliki siapapun, maka mudah untuk jatuh pada jebakan seseorang yang mencoba menjadi agen layanan konsumen yang menjanjikan Anda mengembalikan hilangnya ETH di bursa dengan memberi kunci privat Anda. Mengedukasi diri Anda sendiri tentang bagaimana Ethereum bekerja adalah investasi yang sepadan.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Apa yang Dimaksud dengan Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Apa yang Dimaksud dengan ether?
 </DocLink>
 <Divider />
@@ -127,7 +127,7 @@ Salah satu alasan terbesar orang tertipu dalam kripto secara umum adalah kurangn
 
 Kunci privat dompet Anda bertindak sebagai kata sandi ke dompet Ethereum Anda. Ini satu-satunya cara menghentikan seseorang yang mengetahui alamat dompet Anda dari menghabisi akun Anda dan semua asetnya!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Apa itu dompet Ethereum?
 </DocLink>
 

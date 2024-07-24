@@ -1,12 +1,6 @@
 import React from "react"
 import { StaticImageData } from "next/image"
-import {
-  Box,
-  Flex,
-  Heading,
-  LinkBox,
-  LinkOverlay,
-} from "@chakra-ui/react"
+import { Box, Flex, Heading, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
 

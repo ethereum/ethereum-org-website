@@ -11,8 +11,8 @@ import type { ArgTypes } from "@storybook/react"
 type KeyOf<T> = [T] extends [never]
   ? never
   : T extends object
-  ? Extract<keyof T, string>
-  : never
+    ? Extract<keyof T, string>
+    : never
 
 export type ThemingArgTypeKey = "variant" | "size"
 
@@ -49,8 +49,10 @@ export type ThemingArgTypeKey = "variant" | "size"
  * @param componentName component name to create the ArgTypes for
  */
 export function getThemingArgTypes<
-  Theme extends Record<string, unknown> & { components?: Record<string, StyleConfig> },
-  ComponentName extends KeyOf<Theme["components"]>
+  Theme extends Record<string, unknown> & {
+    components?: Record<string, StyleConfig>
+  },
+  ComponentName extends KeyOf<Theme["components"]>,
 >(theme: Theme, componentName: ComponentName) {
   const component = theme.components?.[componentName]
   if (!component) {

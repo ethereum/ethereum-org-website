@@ -18,7 +18,7 @@ Görsel olarak daha kolay öğrenenler için Luka'nın Crowdin'in kurulumunu anl
 
 Crowdin hesabınızda oturum açmanız veya henüz hesabınız yoksa Crowdin hesabı oluşturmanız gerekecektir. Kaydolmak için gerekli olan tek şey bir e-posta hesabı ve şifredir.
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Projeye katılın
 </ButtonLink>
 

@@ -104,6 +104,7 @@ import pooltogether from "@/public/images/dapps/pooltogether.png"
 import pwn from "@/public/images/dapps/pwn.png"
 import radicle from "@/public/images/dapps/radicle.png"
 import rarible from "@/public/images/dapps/rarible.png"
+import requestFinance from "@/public/images/dapps/requestFinance.png"
 import rotki from "@/public/images/dapps/rotki.png"
 import rubic from "@/public/images/dapps/rubic.png"
 import sablier from "@/public/images/dapps/sablier.png"
@@ -828,6 +829,13 @@ const DappsPage = () => {
       image: sablier,
       alt: t("page-dapps-sablier-logo-alt"),
     },
+    {
+      title: "Request Finance",
+      description: t("page-dapps-dapp-description-request-finance"),
+      link: "https://request.finance",
+      image: requestFinance,
+      alt: t("page-dapps-request-finance-logo-alt"),
+    },
   ]
 
   const investments = [
@@ -1176,7 +1184,7 @@ const DappsPage = () => {
       image: meeds,
       alt: t("page-dapps-meeds-logo-alt"),
     },
-  ]  
+  ]
 
   const demandAggregator = [
     {
@@ -1360,7 +1368,7 @@ const DappsPage = () => {
         </Text>
         <Row>
           <StepBoxContainer>
-            <StepBox to="/get-eth/">
+            <StepBox href="/get-eth/">
               <Box>
                 <StyledH3>
                   {/* TODO: Use CSS counter for intl-friendly numbering  */}
@@ -1380,7 +1388,7 @@ const DappsPage = () => {
                 {t("common:get-eth")}
               </ButtonSecondary>
             </StepBox>
-            <StepBox to="/wallets/find-wallet/">
+            <StepBox href="/wallets/find-wallet/">
               <Box>
                 <StyledH3>2. {t("page-dapps-set-up-a-wallet-title")}</StyledH3>
                 <Text>{t("page-dapps-set-up-a-wallet-description")}</Text>
@@ -1397,7 +1405,7 @@ const DappsPage = () => {
                 {t("page-dapps-set-up-a-wallet-button")}
               </ButtonSecondary>
             </StepBox>
-            <StepBox to="#explore">
+            <StepBox href="#explore">
               <Box>
                 <StyledH3>3. {t("page-dapps-ready-title")}</StyledH3>
                 <Text>{t("page-dapps-ready-description")}</Text>
@@ -1588,7 +1596,7 @@ const DappsPage = () => {
               alt={t("page-dapps-wallet-callout-image-alt")}
             >
               <Box>
-                <ButtonLink to="/wallets/find-wallet/">
+                <ButtonLink href="/wallets/find-wallet/">
                   {t("page-dapps-wallet-callout-button")}
                 </ButtonLink>
               </Box>
@@ -1794,7 +1802,7 @@ const DappsPage = () => {
                 <ProductList
                   category={t("page-dapps-category-community")}
                   content={community}
-                />                
+                />
               </LeftColumn>
               <RightColumn />
             </TwoColumnContent>
@@ -1839,21 +1847,21 @@ const DappsPage = () => {
               </CardContainer>
               {selectedCategory === CategoryType.FINANCE && (
                 <MoreButtonContainer>
-                  <ButtonLink variant="outline" to="/defi/">
+                  <ButtonLink variant="outline" href="/defi/">
                     {t("page-dapps-more-on-defi-button")}
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
               {selectedCategory === CategoryType.COLLECTIBLES && (
                 <MoreButtonContainer>
-                  <ButtonLink variant="outline" to="/nft/">
+                  <ButtonLink variant="outline" href="/nft/">
                     {t("page-dapps-more-on-nft-button")}
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
               {selectedCategory === CategoryType.GAMING && (
                 <MoreButtonContainer>
-                  <ButtonLink variant="outline" to="/nft/">
+                  <ButtonLink variant="outline" href="/nft/">
                     {t("page-dapps-more-on-nft-gaming-button")}
                   </ButtonLink>
                 </MoreButtonContainer>
@@ -1925,7 +1933,7 @@ const DappsPage = () => {
               alt={t("page-dapps-learn-callout-image-alt")}
             >
               <Box>
-                <ButtonLink to="/developers/">
+                <ButtonLink href="/developers/">
                   {t("page-dapps-learn-callout-button")}
                 </ButtonLink>
               </Box>
