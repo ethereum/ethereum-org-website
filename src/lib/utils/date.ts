@@ -1,54 +1,43 @@
 export const dateToString = (published: Date | string) =>
   new Date(published).toISOString().split("T")[0]
 
-// Define an array of month names
-export const months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-]
-
 export const formatDateRange = (startDate: string, endDate: string) => {
   // Parse the input dates
   // .replace(/-/g, "/") ==> Fixes Safari Invalid date
+
   const start = new Date(startDate.replace(/-/g, "/"))
   const end = new Date(endDate.replace(/-/g, "/"))
 
-  // Extract day and month from the start and end dates
-  const startDay = start.getDate()
-  const startMonth = months[start.getMonth()]
-  const endDay = end.getDate()
-  const endMonth = months[end.getMonth()]
+  // Formatter for day and month
+  // undefined :: denotes to use automatic user's locale
+  const dayMonthFormatter = new Intl.DateTimeFormat(undefined, {
+    day: "numeric",
+    month: "short",
+  })
 
-  // Extract year from start and end dates
-  const startYear = start.getFullYear()
-  const endYear = end.getFullYear()
+  // Extract formatted strings
+  const startDayMonth = dayMonthFormatter.format(start)
+  const endDayMonth = dayMonthFormatter.format(end)
+  const startMonth = new Intl.DateTimeFormat(undefined, {
+    month: "short",
+  }).format(start)
+  const endMonth = new Intl.DateTimeFormat(undefined, {
+    month: "short",
+  }).format(end)
 
-  // Format the year (if start and end years are the same, only show the year once)
-  const startYearFormatted = startYear.toString()
-  const endYearFormatted = endYear.toString()
-
-  // Format the date range string
+  // Determine the date range string
   let dateRangeString
-
-  if (startYear === endYear && start.getMonth() === end.getMonth()) {
-    dateRangeString = `${startDay}-${endDay} ${startMonth} ${startYearFormatted}`
-  } else if (startYear === endYear) {
-    dateRangeString = `${startDay} ${startMonth} - ${endDay} ${endMonth} ${startYearFormatted}`
+  if (start.toDateString() === end.toDateString()) {
+    dateRangeString = startDayMonth // If the start and end dates are the same
+  } else if (
+    startMonth === endMonth &&
+    start.getFullYear() === end.getFullYear()
+  ) {
+    // Output as "12-14 Jul" in the user's locale format
+    dateRangeString = `${start.getDate()}-${end.getDate()} ${startMonth}`
   } else {
-    dateRangeString = `${startDay} ${startMonth} ${startYearFormatted} - ${endDay} ${endMonth} ${endYearFormatted}`
-  }
-  if (startDate === endDate) {
-    dateRangeString = `${startDay} ${startMonth} ${startYearFormatted}`
+    // If different months or years, show as "12 Jul - 14 Aug"
+    dateRangeString = `${startDayMonth}-${endDayMonth}`
   }
 
   return dateRangeString

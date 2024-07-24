@@ -11,7 +11,6 @@ import EventCard from "@/components/EventCard"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
 
-import { months } from "@/lib/utils/date"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
@@ -72,10 +71,12 @@ const UpcomingEventsList = () => {
     })
     const groupedEvents = _.groupBy(formattedEvents, ({ startDate }) => {
       // .replace(/-/g, "/") ==> Fixes Safari Invalid date
-      const month = new Date(startDate.replace(/-/g, "/")).getMonth()
-      const year = new Date(startDate.replace(/-/g, "/")).getFullYear()
-      const monthName = months[month]
-      return `${monthName} ${year}`
+      const start = new Date(startDate.replace(/-/g, "/"))
+      const formatYearMonth = new Intl.DateTimeFormat(undefined, {
+        month: "short",
+        year: "numeric",
+      }).format(start)
+      return `${formatYearMonth}`
     })
 
     setMonthGroupedEvents(groupedEvents)
