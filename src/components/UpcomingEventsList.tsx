@@ -182,6 +182,7 @@ const UpcomingEventsList = () => {
           justifyContent="center"
           maxWidth="620px"
           marginTop="5"
+          paddingY="8"
         >
           <Button onClick={loadMoreEvents}>
             {t("page-community-upcoming-events-load-more")}

@@ -113,7 +113,7 @@ const EventCard = ({
           </Box>
         </Box>
         <Box padding={4} paddingTop={0} width={"100%"}>
-          <ButtonLink to={to} width={"100%"} variant="outline">
+          <ButtonLink href={to} width={"100%"} variant="outline">
             View Event
           </ButtonLink>
         </Box>
