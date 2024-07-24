@@ -121,7 +121,8 @@
     "tsconfig-paths-webpack-plugin": "4.1.0",
     "typescript": "^5.5.2",
     "unified": "^10.0.0",
-    "unist-util-visit": "^5.0.0"
+    "unist-util-visit": "^5.0.0",
+    "usehooks-ts": "^3.1.0"
   },
   "resolutions": {
     "jackspeak": "2.1.1",
