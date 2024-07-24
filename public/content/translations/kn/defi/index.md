@@ -327,7 +327,7 @@ DeFi ಒಂದು ಓಪನ್ ಸೋರ್ಸ್ ಚಳವಳಿಯಾಗಿದ
   dapps ಗಳನ್ನು ನಿರ್ಮಿಸುವ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು
 </ButtonLink>
 
-## Further reading {#futher-reading}
+## Further reading {#further-reading}
 
 ### DeFi ಡೇಟಾ {#defi-data}
 
