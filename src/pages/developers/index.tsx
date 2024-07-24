@@ -10,6 +10,7 @@ import {
   SimpleGrid,
   Stack,
   TextProps,
+  useColorModeValue,
 } from "@chakra-ui/react"
 
 import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
@@ -32,7 +33,6 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import useColorModeValue from "@/hooks/useColorModeValue"
 import SpeedRunEthereumImage from "@/public/images/dev-tools/speed-run-ethereum-banner.png"
 import DevelopersImage from "@/public/images/developers-eth-blocks.png"
 import DogeImage from "@/public/images/doge-computer.png"
