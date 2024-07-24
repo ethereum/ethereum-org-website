@@ -28,7 +28,7 @@ The translatathon is a competitive hackathon-style event where you can compete f
 
 ## Introduction
 
-The [ethereum.org Translation program](/contributing/translation-program/) is an initiative to translate the website into as many languages as possible in order to make educational content around Ethereum content and onboarding resources for beginners accessible to everyone, regardless of the language they speak.
+The ethereum.org Translation program is an initiative to translate the website into as many languages as possible in order to make educational content around Ethereum content and onboarding resources for beginners accessible to everyone, regardless of the language they speak.
 
 As part of the Translation program, we are organizing the 2nd edition of the Translatation with the aim of incentivizing translation contributions in less active languages, increasing the number of languages and amount of content available on the site, onboard new contributors and reward our existing ones.
 
@@ -85,7 +85,7 @@ Everyone can participate [see full conditions](/translatathon/terms-and-conditio
 
 <StepByStepInstructions />
 
-## Stay updated
+## Stay up to date
 
 <!-- TODO: Uncomment when the hubs page is ready -->
 <!-- <TranslationHubCallout>

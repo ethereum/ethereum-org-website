@@ -4,71 +4,73 @@ lang: en
 template: translatathon
 ---
 
-## General rules
+## Details and rules
 
 <ContentSplit>
-  A translatathon is a collaborative and competitive hackathon-style event where individuals and teams compete for prizes by translating ethereum.org content into different languages.
+  The Translatathon is open and anyone can participate by filling out the application form and joining the project in Crowdin.
 
-  The goal is to translate website content and help make ethereum.org more accessible to non-English speakers, raise awareness of the importance of localization and the Translation program, onboard new contributors and give back to our community, while fostering a sense of community by teaming up, collaborating on translations, and competing against other teams.
+  Translators collect points by suggesting translations for untranslated strings in their language in the Crowdin editor during the translation period (August 9th - August 18th).
+
+  Each participants final score is determined by the number of words they have translated during the translation period and any potential multipliers they’ve collected.
 </ContentSplit>
 
-## Details and submission criteria
+### Getting started
 
-### Requirements and scoring
+The translation process takes place in the ethereum.org project in Crowdin and translators suggest their translations for untranslated strings, made up of almost all of content from the ethereum.org website.
 
-With the translation process taking place in Crowdin, the deliverable for Translatathon participants is simply the content you have translated in the ethereum.org project(opens in a new tab). No need to manually submit anything.
+Translations are suggested directly in the online editor so there is no need to download or upload any files or deliverables. Each translated word is tracked and counted.
 
-In order for your submissions to be counted, make sure that you are only translating untranslated and unapproved strings.
-This means that you should only be translating files that are less than 100% translated, and strings with no existing translations. They can be easily identified by the red square (as shown in the image below).
+**1) Join the project**
+- To start contributing, you will need to join the [ethereum.org project in Crowdin](https://crowdin.com/project/ethereum-org)
+- You will need to sign in or create an account - all that is required is an email address and password
 
-Untranslated string (translate this!):
+**2) Select your language**
+- Find your language on the list of target languages and open it by clicking on its name or flag
+- If you would like to translate into a language that isn’t available, reach out to [Ethereum.org Team](https://crowdin.com/profile/ethdotorg) on crowdin or send us an email to translations@ethereum.org and we will add new additional target languages per request
 
-![unapproved](./unapproved.png)
+**3) Open an untranslated file**
+- Find the first untranslated file to start translating. The folders containing the source files are based on priority - (1) Homepage, 2) Essential learning, 3) Essentials, 4) Exploring, etc. so you should start translating the first folder that contains untranslated files
+- Each file has a progress indicator showing how much of the translatable content in the file has been translated and approved… if translation progress for any file is below 100%, please translate it
 
-Translated strings (do not translate):
+**4) Translate the untranslated strings**
+- When you open a file to translate, make sure you are only translating untranslated strings!
+- Each string has a status indicator that shows whether it’s *Translated*, *Untranslated*, or *Approved*. If a source string already has a suggested translation in your language, there is no need to translate it
+- You can also filter strings in the editor to show *Untranslated first* or *Untranslated only*
 
-![approved](./approved.png)
+For a detailed guide to navigating and using the Crowdin online editor, we recommend all Translatathon participants to read our ‘[How to translate](https://ethereum.org/en/contributing/translation-program/how-to-translate/)’ guide.
 
-String with an approved translation (do not translate):
+To learn more about the conventions and best practices for translating ethereum.org content, yo can also check out our [translation style guide](https://ethereum.org/en/contributing/translation-program/translators-guide/).
 
-![unapproved](./unapproved.png)
+### Prizes
 
-The files for translation are already categorized by priority in Crowdin, with initial content buckets containing the most high-traffic pages.
-You can read more about content buckets here, and check the exact distribution of pages across different content buckets here.
-We always recommend contributors to translate the content buckets in order, starting with 1) Homepage → 2) Essentials → 3) Exploring → 4) Use Ethereum pages, etc., but during the Translatathon, this will be especially important and could heavily influence your score, since the higher priority buckets will have a higher multiplier when calculating the final score.
+The total prize pool for the Translatathon is 30,000$.
 
-Full breakdown of multipliers by content bucket:
-- Content buckets 1-8: 1.2x points multiplier
-- Content buckets 9-15: 1.1x points multiplier
-- Content buckets 16-28: 1x points multiplier
-- Remix translations: 0.8x points multiplier
+A detailed breakdown of prizes will be announced at the end of the application period.
 
-## Evaluation process
+### Evaluation process
 
-text
+We work with [Acolad](https://www.acolad.com/), a leading localization agency, on all review and QA processes for ethereum.org content.
 
-## Where does it happen
+As part of the evaluation process for the Translatathon, all translations will be subject to a QA and feedback step, where professional linguists will evaluate submissions by individual translators based on quality and accuracy.
 
-The translations and review process will take place in the ethereum.org project on Crowdin(opens in a new tab), a localization management platform where all of our localization processes take place.
+We will also be running anti-machine translation measures, with Crowdin providing some tools that automatically detect machine translations.
 
-All of the Translatathon participants will be required to join the project in Crowdin and translate directly on the platform, where you can translate as individuals or collaborate as part of a team.
+While translation quality will not play a critical role in the scoring, any participants found using machine translation or suggesting low-quality and inaccurate translations will be disqualified and not eligible to compete for prizes!
 
-## FAQ - Frequently asked questions
+The evaluation period will take place between August 19th-28th and the results will be announced on the ethereum.org community call on August 29th.
 
-<ExpandableCard title="FAQ 1 question">
-    Answer FAQ 1
+All translations will also be subject to a thorough review before being added to the website.
+
+### FAQ - Frequently asked questions
+
+<ExpandableCard title="Who can I contact if I need help or have questions, feedback, or ideas?">
+    - In Crowdin, you can send a direct message to [**Ethereum.org Team**](https://crowdin.com/profile/ethdotorg)
+    - On the ethereum.org Discord, you can send a message in the **#translatathon** & **#translate** channels
+    - You can send an email to **translations@ethereum.org**
 </ExpandableCard>
 
-<ExpandableCard title="FAQ 2 question">
-    Answer FAQ 2
-</ExpandableCard>
-
-<ExpandableCard title="FAQ 3 question">
-    Answer FAQ 3
-</ExpandableCard>
-
-<ExpandableCard title="FAQ 4 question">
-    Answer FAQ 4
+<ExpandableCard title="Which languages can I translate into?">
+    You can translate into any language! It is recommended to only translate into your native language to ensure sufficient quality, but in short, all language available in Crowdin are in scope for the Translatathon.
 </ExpandableCard>
 
 <ApplyNow />
