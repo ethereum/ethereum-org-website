@@ -6,9 +6,8 @@ import {
   ModalContent,
   ModalHeader,
   ModalOverlay,
+  useColorModeValue,
 } from "@chakra-ui/react"
-
-import useColorModeValue from "@/hooks/useColorModeValue"
 
 type CodeModalProps = {
   title: string
