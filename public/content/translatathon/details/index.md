@@ -63,7 +63,7 @@ All translations will also be subject to a thorough review before being added to
 
 <ExpandableCard title="Who can I contact if I need help or have questions, feedback, or ideas?">
   <ul>
-    <li>In Crowdin, you can send a direct message to <a href="https://crowdin.com/profile/ethdotorg"><strong>Ethereum.org Team</strong></a></li>
+    <li>In Crowdin, you can send a direct message to <a href="https://crowdin.com/project/ethereum-org"><strong>Ethereum.org Team</strong></a></li>
     <li>On the ethereum.org Discord, you can send a message in the <strong>#translatathon</strong> & <strong>#translate</strong> channels</li>
     <li>You can send an email to <strong>translations@ethereum.org</strong></li>
   </ul>

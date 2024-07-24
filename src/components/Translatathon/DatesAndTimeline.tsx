@@ -9,7 +9,7 @@ const dates = [
       "Fill out the application form to participate and compete for prizes",
     startDate: new Date("July 25, 2024"),
     endDate: new Date("August 8, 2024"),
-    link: "https://translatathon.paperform.co/",
+    link: "https://gtly.to/Mql-w3Gs_",
     linkText: "Apply link text",
   },
   {
@@ -41,7 +41,8 @@ const dates = [
   },
   {
     title: "Results announcement",
-    description: "We will announce the results and winners on the ethereum.org community call",
+    description:
+      "We will announce the results and winners on the ethereum.org community call",
     startDate: new Date("August 29, 2024"),
     endDate: new Date("September 31, 2024"),
     link: null,
