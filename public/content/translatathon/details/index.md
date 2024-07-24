@@ -4,13 +4,13 @@ lang: en
 template: translatathon
 ---
 
-<ContentSplit>
-  The Translatathon is open and anyone can participate by filling out the application form and joining the project in Crowdin.
+![](./participate.png)
 
-  Translators collect points by suggesting translations for untranslated strings in their language in the Crowdin editor during the translation period (August 9th - August 18th).
+The Translatathon is open and anyone can participate by filling out the application form and joining the project in Crowdin.
 
-  Each participants final score is determined by the number of words they have translated during the translation period and any potential multipliers they’ve collected.
-</ContentSplit>
+Translators collect points by suggesting translations for untranslated strings in their language in the Crowdin editor during the translation period (August 9th - August 18th).
+
+Each participants final score is determined by the number of words they have translated during the translation period and any potential multipliers they’ve collected.
 
 ### Getting started
 
@@ -49,9 +49,9 @@ A detailed breakdown of prizes will be announced at the end of the application p
 
 As part of the evaluation process for the Translatathon, all translations will be subject to a QA and feedback step, where professional linguists will evaluate submissions by individual translators based on quality and accuracy.
 
-We will also be running anti-machine translation measures, with Crowdin providing some tools that automatically detect machine translations.
+We will also be running **anti-machine translation measures**, with Crowdin providing some tools that automatically detect machine translations.
 
-While translation quality will not play a critical role in the scoring, any participants found using machine translation or suggesting low-quality and inaccurate translations will be disqualified and not eligible to compete for prizes!
+While translation quality will not play a critical role in the scoring, any **participants found using machine translation** or suggesting low-quality and inaccurate translations **will be disqualified** and not eligible to compete for prizes!
 
 The evaluation period will take place between August 19th-28th and the results will be announced on the ethereum.org community call on August 29th.
 
@@ -60,13 +60,16 @@ All translations will also be subject to a thorough review before being added to
 ### FAQ - Frequently asked questions
 
 <ExpandableCard title="Who can I contact if I need help or have questions, feedback, or ideas?">
-    - In Crowdin, you can send a direct message to [**Ethereum.org Team**](https://crowdin.com/profile/ethdotorg)
-    - On the ethereum.org Discord, you can send a message in the **#translatathon** & **#translate** channels
-    - You can send an email to **translations@ethereum.org**
+  <ul>
+    <li>In Crowdin, you can send a direct message to <a href="https://crowdin.com/project/ethereum-org"><strong>Ethereum.org Team</strong></a></li>
+    <li>On the ethereum.org Discord, you can send a message in the <strong>#translatathon</strong> & <strong>#translate</strong> channels</li>
+    <li>You can send an email to <strong>translations@ethereum.org</strong></li>
+  </ul>
 </ExpandableCard>
 
 <ExpandableCard title="Which languages can I translate into?">
     You can translate into any language! It is recommended to only translate into your native language to ensure sufficient quality, but in short, all language available in Crowdin are in scope for the Translatathon.
+
     If you want to translate into a language that isn't available in Crowdin, reach out to us and we will add any language per request.
 </ExpandableCard>
 

@@ -179,15 +179,16 @@ export const TranslatathonLayout = ({
           eventName: "terms and conditions",
         },
       },
-      {
-        text: "Local communities",
-        to: "/translatathon/local-communities",
-        matomo: {
-          eventCategory: "translatathon menu",
-          eventAction: "click",
-          eventName: "local communities",
-        },
-      },
+      // TODO: Add back in when this page is ready
+      // {
+      //   text: "Local communities",
+      //   to: "/translatathon/local-communities",
+      //   matomo: {
+      //     eventCategory: "translatathon menu",
+      //     eventAction: "click",
+      //     eventName: "local communities",
+      //   },
+      // },
     ],
   }
 
@@ -200,11 +201,11 @@ export const TranslatathonLayout = ({
         maxHeight={"400px"}
         description={
           <>
+            <Text>Welcome to the ethereum.org Translatathon!</Text>
             <Text>
-              Welcome to the ethereum.org Translatathon! A translatathon is a
-              collaborative and competitive hackathon-style event where
-              individuals and teams compete for prizes by translating
-              ethereum.org content into different languages.
+              The translatathon is a competitive hackathon-style event where you
+              can compete for prizes by translating ethereum.org content into
+              different languages.
             </Text>
             <Flex>
               <ButtonLink href="/">Apply to translate</ButtonLink>

@@ -4,8 +4,8 @@ import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
 
 import dogeImage from "@/public/images/doge-computer.png"
+import futureImage from "@/public/images/future_transparent.png"
 import settlementImage from "@/public/images/translatathon/settlement.png"
-import mergeImage from "@/public/images/upgrades/merge.png"
 
 export const TranslatathonInANutshell = () => {
   return (
@@ -59,7 +59,7 @@ export const TranslatathonInANutshell = () => {
       >
         <Flex w="full" justifyContent="center">
           <Image
-            src={mergeImage}
+            src={futureImage}
             alt=""
             w="327"
             style={{ objectFit: "contain" }}
