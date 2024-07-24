@@ -4,23 +4,19 @@ lang: en
 template: translatathon
 ---
 
-Welcome to the ethereum.org Translatathon!
-
-The translatathon is a competitive hackathon-style event where you can compete for prizes by translating ethereum.org content into different languages.
-
 <CardContainer>
   <EmojiCard
-    emoji=':money_with_wings:'
+    emoji=':globe_with_meridians:'
     title='Translate ethereum.org'
     description='Translate ethereum.org content into your language and help make the website more accessible'
   />
   <EmojiCard
-    emoji=':money_with_wings:'
+    emoji=':trophy:'
     title='Win prizes'
     description='Compete for your share of 30,000$ in prizes and opportunities to win Devcon tickets'
   />
   <EmojiCard
-    emoji=':closed_lock_with_key:'
+    emoji=':bulb:'
     title='Learn about Ethereum'
     description='Learn about different Ethereum related topics while contributing and competing'
   />

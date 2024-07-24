@@ -1,10 +1,8 @@
 ---
-title: Details and submission criteria
+title: Details and rules
 lang: en
 template: translatathon
 ---
-
-## Details and rules
 
 <ContentSplit>
   The Translatathon is open and anyone can participate by filling out the application form and joining the project in Crowdin.
@@ -71,6 +69,7 @@ All translations will also be subject to a thorough review before being added to
 
 <ExpandableCard title="Which languages can I translate into?">
     You can translate into any language! It is recommended to only translate into your native language to ensure sufficient quality, but in short, all language available in Crowdin are in scope for the Translatathon.
+    If you want to translate into a language that isn't available in Crowdin, reach out to us and we will add any language per request.
 </ExpandableCard>
 
 <ApplyNow />

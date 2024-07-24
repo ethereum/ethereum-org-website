@@ -13,7 +13,7 @@ export const TranslatathonBanner = ({ pathname }) => {
   return todaysDate < translatathonStartDate && showBanner ? (
     <DismissableBanner storageKey="translatathon-banner">
       <Center gap={4}>
-        <Text>🚨 Applications for the 2024 translathathon are are open 🚨</Text>
+        <Text>🚨 Applications for the 2024 Translathathon are open 🚨</Text>
         <ButtonLink href="/translatathon" variant="outline">
           Learn more
         </ButtonLink>
