@@ -3,7 +3,7 @@ import { useRouter } from "next/router"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { useDisclosure } from "@/hooks/useDisclosure"
+import useDisclosure from "@/hooks/useDisclosure"
 import { useSurvey } from "@/hooks/useSurvey"
 
 export const useFeedbackWidget = () => {
@@ -12,7 +12,7 @@ export const useFeedbackWidget = () => {
   const [isExpanded, setIsExpanded] = useState(false)
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
 
-  const { getButtonProps, isOpen, onClose, onOpen } = useDisclosure()
+  const { isOpen, onClose, onOpen } = useDisclosure()
 
   const cancelRef = useRef<HTMLButtonElement>(null)
 
@@ -82,7 +82,6 @@ export const useFeedbackWidget = () => {
     offsetBottom,
     cancelRef,
     feedbackSubmitted,
-    getButtonProps,
     handleClose,
     handleOpen,
     handleSubmit,
