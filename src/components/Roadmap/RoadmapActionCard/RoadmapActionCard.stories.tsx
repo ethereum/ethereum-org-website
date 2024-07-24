@@ -26,7 +26,7 @@ export default meta
 export const RoadmapActionCard: StoryObj<typeof meta> = {
   args: {
     alt: "",
-    to: "/roadmap/scaling",
+    href: "/roadmap/scaling",
     title: "Cheaper transactions",
     image: "scaling",
     description:
