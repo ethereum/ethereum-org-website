@@ -99,7 +99,8 @@ const CardContainer = (props: ChildOnlyProp) => (
   <Grid
     templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
     gap={8}
-    mt={8}
+    mb={20}
+    mt={{ base: 8, lg: 0 }}
   >
     {props.children}
   </Grid>
@@ -111,7 +112,6 @@ const EmojiCard = ({ emoji, title, description }) => (
     title={title}
     description={description}
     flex="1 1 30%"
-    m={4}
     p={6}
   />
 )

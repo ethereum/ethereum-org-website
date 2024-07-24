@@ -22,8 +22,6 @@ template: translatathon
   />
 </CardContainer>
 
-<br/><br/>
-
 ## Introduction
 
 The ethereum.org Translation program is an ongoing effort to translate the website into as many languages as possible. We believe that Ethereum content and onboarding resources should be accessible to everyone, regardless of the language they speak.
