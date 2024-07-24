@@ -150,22 +150,20 @@ const UpcomingEventsList = () => {
                       endDate,
                     },
                     idx
-                  ) => {
-                    return (
-                      <EventCard
-                        key={idx}
-                        title={title}
-                        to={to}
-                        date={date}
-                        description={formattedDetails}
-                        location={location}
-                        isEven={(idx + 1) % 2 === 0}
-                        imageUrl={imageUrl}
-                        startDate={startDate}
-                        endDate={endDate}
-                      />
-                    )
-                  }
+                  ) => (
+                    <EventCard
+                      key={idx}
+                      title={title}
+                      to={to}
+                      date={date}
+                      description={formattedDetails}
+                      location={location}
+                      isEven={(idx + 1) % 2 === 0}
+                      imageUrl={imageUrl}
+                      startDate={startDate}
+                      endDate={endDate}
+                    />
+                  )
                 )}
               </Grid>
             </Box>
