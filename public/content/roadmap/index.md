@@ -76,7 +76,7 @@ The roadmap is mostly the result of years of work by researchers and developers 
 
 **Yes—almost definitely**. The roadmap is the current plan for upgrading Ethereum, covering both near-term and future plans. We expect the roadmap to change as new information and technology become available.
 
-Think of Ethereum's roadmap as a set of intentions for improving Ethereum; it is the core researchers' and developers' best hypothesize of Ethereum's most optimal path forward.
+Think of Ethereum's roadmap as a set of intentions for improving Ethereum; it is the core researchers' and developers' best hypothesis of Ethereum's most optimal path forward.
 
 ## When will the roadmap be finished? {#when-will-the-roadmap-be-finished}
 
