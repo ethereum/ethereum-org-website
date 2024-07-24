@@ -17,6 +17,8 @@ const LazyLoadComponent = <T extends React.ElementType>({
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    const obsRef = ref.current
+
     const observer = new IntersectionObserver(([entry]) => {
       // Update the state when observer callback fires
       if (entry.isIntersecting) {
@@ -25,17 +27,17 @@ const LazyLoadComponent = <T extends React.ElementType>({
       }
     }, intersectionOptions)
 
-    if (ref.current) {
-      observer.observe(ref.current)
+    if (obsRef) {
+      observer.observe(obsRef)
     }
 
     // Clean up the observer on component unmount
     return () => {
-      if (ref.current) {
+      if (obsRef) {
         observer.disconnect()
       }
     }
-  }, [])
+  }, [intersectionOptions])
 
   return (
     <div ref={ref}>
