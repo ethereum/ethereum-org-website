@@ -57,7 +57,6 @@ export const BaseLink = forwardRef(function Link(
   const { flipForRtl } = useRtlFlip()
 
   if (!href) {
-    console.warn(children)
     console.warn("Link component is missing href prop")
     return <ChakraLink {...props} />
   }
