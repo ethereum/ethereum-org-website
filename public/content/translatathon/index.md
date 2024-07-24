@@ -38,6 +38,8 @@ Here are the important dates for the 2024 Translatathon
 
 <DatesAndTimeline />
 
+<br/><br/>
+
 <TranslatathonInANutshell />
 
 ## Participate
