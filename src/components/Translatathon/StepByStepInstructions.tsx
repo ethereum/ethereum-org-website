@@ -11,7 +11,7 @@ const instructions = [
     ctaLabel: "Learn",
   },
   {
-    title: "Apply to participate",
+    title: "Submit your application",
     description:
       "Everyone needs to fill out the application form before the translation period starts to be eligible to participate",
     cta: "https://gtly.to/Mql-w3Gs_",
