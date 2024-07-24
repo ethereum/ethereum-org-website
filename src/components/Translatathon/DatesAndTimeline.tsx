@@ -41,7 +41,7 @@ const dates = [
   },
   {
     title: "Results announcement",
-    description: "Results announcement",
+    description: "We will announce the results and winners on the ethereum.org community call",
     startDate: new Date("August 29, 2024"),
     endDate: new Date("September 31, 2024"),
     link: null,

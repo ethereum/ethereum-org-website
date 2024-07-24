@@ -67,7 +67,7 @@ export const TranslatathonCalendar = () => {
         <Heading as="h3" fontSize="2xl">
           Translatathon calls
         </Heading>
-        <Text>Text about community calls</Text>
+        <Text>Join us on the ethereum.org Discord for a series of onboarding calls and workshops where we’ll cover everything you need to know about the Translatathon, walk through using Crowdin and answer any questions you might have.</Text>
         <ButtonLink
           to="/discord/"
           gap={2}

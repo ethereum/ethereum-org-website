@@ -34,7 +34,7 @@ If you are bilingual and want to help make Ethereum content more accessible whil
 
 ## Dates and timeline
 
-Here are the important dates for the 2024 translatathon
+Here are the important dates for the 2024 Translatathon
 
 <DatesAndTimeline />
 
@@ -45,8 +45,6 @@ Here are the important dates for the 2024 translatathon
 ![](./participate.png)
 
 ### Who should participate
-
-Everyone can participate [see full conditions](/translatathon/terms-and-conditions) as long as is a human over 18years old and wants to be a part and onboarded to the ethereum ecosystem
 
 <TwoColumnContent>
   <CardContent>
@@ -76,6 +74,8 @@ Everyone can participate [see full conditions](/translatathon/terms-and-conditio
     We recommend using a computer to translate since using Crowdin will be optimal on desktop. You’ll also need an internet connection and you’re good to go.
   </CardContent>
 </TwoColumnContent>
+
+For more details, [see the full Terms & conditions](/translatathon/terms-and-conditions)
 
 ### Step by step instructions
 
