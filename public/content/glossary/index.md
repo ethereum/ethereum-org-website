@@ -292,7 +292,7 @@ lang: en
 
 <GlossaryDefinition term="message-call" />
 
-<GlossaryDefinition term="MEV" />
+<GlossaryDefinition term="mev" />
 
 <GlossaryDefinition term="mining" />
 
