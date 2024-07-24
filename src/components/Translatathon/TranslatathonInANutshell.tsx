@@ -22,7 +22,7 @@ export const TranslatathonInANutshell = () => {
     >
       <Flex m="auto">
         <Heading as="h2" fontSize="3xl" mb={8}>
-          Key Translatathon rules
+          Translatathon essentials
         </Heading>
       </Flex>
       <Flex
@@ -37,7 +37,7 @@ export const TranslatathonInANutshell = () => {
             Earn points
           </Heading>
           <Text>
-            Translate ethereum.org and secondary content to earn points and
+            Translate ethereum.org and ecosystem content to earn points and
             compete with other participants. 1 translated word = 1 point
           </Text>
         </Flex>
@@ -67,12 +67,13 @@ export const TranslatathonInANutshell = () => {
         </Flex>
         <Flex w="full" direction="column" gap={2} alignSelf="center">
           <Heading as="h3" fontSize="2xl">
-            Don’t use machine translation
+            Human translations only
           </Heading>
           <Text>
-            Using machine translation is forbidden! All suggested translations
-            will be reviewed & evaluated and translators using machine
-            translation will not be eligible for prizes
+            Using machine translation is forbidden! All translations will be
+            reviewed and evaluated, and participants using machine translation
+            will be automatically disqualified and not be eligible to claim
+            prizes (see Terms and conditions)
           </Text>
         </Flex>
       </Flex>

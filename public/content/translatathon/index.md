@@ -1,5 +1,5 @@
 ---
-title: Translatathon hub
+title: 2024 ethereum.org Translatathon
 lang: en
 template: translatathon
 ---
@@ -8,12 +8,12 @@ template: translatathon
   <EmojiCard
     emoji=':globe_with_meridians:'
     title='Translate ethereum.org'
-    description='Translate ethereum.org content into your language and help make the website more accessible'
+    description='Translate ethereum.org content into your language so that more people can learn about Ethereum'
   />
   <EmojiCard
     emoji=':trophy:'
     title='Win prizes'
-    description='Compete for your share of 30,000$ in prizes and opportunities to win Devcon tickets'
+    description='Compete for your share of 30,000$ in prizes and a chance to get Devcon tickets'
   />
   <EmojiCard
     emoji=':bulb:'
@@ -26,13 +26,13 @@ template: translatathon
 
 The ethereum.org Translation program is an initiative to translate the website into as many languages as possible in order to make educational content around Ethereum content and onboarding resources for beginners accessible to everyone, regardless of the language they speak.
 
-As part of the Translation program, we are organizing the 2nd edition of the Translatation with the aim of incentivizing translation contributions in less active languages, increasing the number of languages and amount of content available on the site, onboard new contributors and reward our existing ones.
+As part of the Translation program, we are organizing the second edition of the Translatation with the aim of incentivizing translation contributions in less active languages, increasing the number of languages and amount of content available on the site, onboard new contributors and reward our existing ones.
 
 If you are bilingual and want to help make Ethereum content more accessible while competing for prizes, read on to learn more!
 
-[Learn more about the translation program](/contributing/translation-program/)
+[Learn more about the Translation program](/contributing/translation-program/)
 
-## Dates and timeline
+## Timeline
 
 Here are the important dates for the 2024 Translatathon
 
@@ -43,8 +43,6 @@ Here are the important dates for the 2024 Translatathon
 ## Participate
 
 ![](./participate.png)
-
-### Who should participate
 
 <TwoColumnContent>
   <CardContent>

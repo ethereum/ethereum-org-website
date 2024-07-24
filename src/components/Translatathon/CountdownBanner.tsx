@@ -41,14 +41,14 @@ export const CountdownBanner = () => {
   return new Date() < translatathonStartDate ? (
     <>
       <BannerNotification shouldShow={true}>
-        Translations start in {countdown}
+        Translatathon starts in {countdown}
       </BannerNotification>
     </>
   ) : new Date() > translatathonStartDate &&
     new Date() < translatathonEndDate ? (
     <>
       <BannerNotification shouldShow={true}>
-        Translations end in {countdown}
+        Translatathon ends in {countdown}
       </BannerNotification>
     </>
   ) : (
