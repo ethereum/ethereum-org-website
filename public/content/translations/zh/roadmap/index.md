@@ -12,7 +12,7 @@ buttons:
     toId: 即将发生什么变化
   - 
     label: 以往升级
-    to: /history/
+    href: /history/
     variant: 简要
 ---
 

@@ -44,7 +44,7 @@ const StepBoxContainer = (props: ChildOnlyProp) => (
 )
 
 const StepBox = (
-  props: { to: string } & Record<"titleId" | "descId", TranslationKey>
+  props: { href: string } & Record<"titleId" | "descId", TranslationKey>
 ) => {
   const { t } = useTranslation("page-stablecoins")
 
@@ -75,7 +75,7 @@ const StepBox = (
             as={BaseLink}
             color="inherit"
             textDecoration="inherit"
-            href={props.to}
+            href={props.href}
             fontWeight={700}
             textAlign="start"
             _hover={{
@@ -112,12 +112,12 @@ const StablecoinAccordion = () => {
           </SectionTitle>
           <StepBoxContainer>
             <StepBox
-              to="/wallets/"
+              href="/wallets/"
               titleId="page-stablecoins-accordion-swap-requirement-1"
               descId="page-stablecoins-accordion-swap-requirement-1-description"
             />
             <StepBox
-              to="/get-eth/"
+              href="/get-eth/"
               titleId="page-stablecoins-accordion-swap-requirement-2"
               descId="page-stablecoins-accordion-swap-requirement-2-description"
             />
@@ -156,7 +156,7 @@ const StablecoinAccordion = () => {
           </Text>
           <StepBoxContainer>
             <StepBox
-              to="/get-eth/"
+              href="/get-eth/"
               titleId="page-stablecoins-accordion-buy-requirement-1"
               descId="page-stablecoins-accordion-buy-requirement-1-description"
             />
@@ -185,7 +185,7 @@ const StablecoinAccordion = () => {
           </Text>
           <StepBoxContainer>
             <StepBox
-              to="/wallets/"
+              href="/wallets/"
               titleId="page-stablecoins-accordion-earn-requirement-1"
               descId="page-stablecoins-accordion-earn-requirement-1-description"
             />
@@ -212,12 +212,12 @@ const StablecoinAccordion = () => {
           </Text>
           <StepBoxContainer>
             <StepBox
-              to="/wallets/"
+              href="/wallets/"
               titleId="page-stablecoins-accordion-borrow-requirement-1"
               descId="page-stablecoins-accordion-borrow-requirement-1-description"
             />
             <StepBox
-              to="/get-eth/"
+              href="/get-eth/"
               titleId="page-stablecoins-accordion-borrow-requirement-2"
               descId="page-stablecoins-accordion-borrow-requirement-2-description"
             />

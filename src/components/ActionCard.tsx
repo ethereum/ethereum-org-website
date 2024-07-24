@@ -30,7 +30,7 @@ const linkFocusStyles: BoxProps = {
 
 export type ActionCardProps = Omit<LinkBoxProps, "title"> & {
   children?: ReactNode
-  to: string
+  href: string
   alt?: string
   image: StaticImageData
   imageWidth?: number
@@ -42,7 +42,7 @@ export type ActionCardProps = Omit<LinkBoxProps, "title"> & {
 }
 
 const ActionCard = ({
-  to,
+  href,
   alt,
   image,
   imageWidth = 220,
@@ -100,7 +100,7 @@ const ActionCard = ({
             color="text"
             hideArrow
             textDecoration="none"
-            href={to}
+            href={href}
             _hover={linkFocusStyles}
             _focus={linkFocusStyles}
           >

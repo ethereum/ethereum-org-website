@@ -10,7 +10,7 @@ buttons:
   - label: Further upgrades
     toId: what-changes-are-coming
   - label: Past upgrades
-    to: /history/
+    href: /history/
     variant: outline
 ---
 

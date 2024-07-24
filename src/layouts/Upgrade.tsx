@@ -82,7 +82,7 @@ export const UpgradeLayout = ({
     items: [
       {
         text: t("page-upgrades-upgrades-beacon-chain"),
-        to: "/roadmap/beacon-chain/",
+        href: "/roadmap/beacon-chain/",
         matomo: {
           eventCategory: "upgrade menu",
           eventAction: "click",
@@ -91,7 +91,7 @@ export const UpgradeLayout = ({
       },
       {
         text: t("page-upgrades-upgrades-docking"),
-        to: "/roadmap/merge/",
+        href: "/roadmap/merge/",
         matomo: {
           eventCategory: "upgrade menu",
           eventAction: "click",

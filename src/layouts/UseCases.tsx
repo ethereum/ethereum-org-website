@@ -107,7 +107,7 @@ export const UseCasesLayout = ({
     items: [
       {
         text: t("template-usecase:template-usecase-dropdown-defi"),
-        to: "/defi/",
+        href: "/defi/",
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",
@@ -116,7 +116,7 @@ export const UseCasesLayout = ({
       },
       {
         text: t("template-usecase:template-usecase-dropdown-nft"),
-        to: "/nft/",
+        href: "/nft/",
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",
@@ -125,7 +125,7 @@ export const UseCasesLayout = ({
       },
       {
         text: t("template-usecase:template-usecase-dropdown-dao"),
-        to: "/dao/",
+        href: "/dao/",
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",
@@ -134,7 +134,7 @@ export const UseCasesLayout = ({
       },
       {
         text: t("template-usecase:template-usecase-dropdown-social-networks"),
-        to: "/social-networks/",
+        href: "/social-networks/",
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",
@@ -143,7 +143,7 @@ export const UseCasesLayout = ({
       },
       {
         text: t("template-usecase:template-usecase-dropdown-identity"),
-        to: "/decentralized-identity/",
+        href: "/decentralized-identity/",
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",
@@ -152,7 +152,7 @@ export const UseCasesLayout = ({
       },
       {
         text: t("template-usecase:template-usecase-dropdown-desci"),
-        to: "/desci/",
+        href: "/desci/",
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",
@@ -161,7 +161,7 @@ export const UseCasesLayout = ({
       },
       {
         text: t("template-usecase:template-usecase-dropdown-refi"),
-        to: "/refi/",
+        href: "/refi/",
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",

@@ -12,7 +12,7 @@ buttons:
     toId: چه تغییراتی ایجاد خواهد شد
   - 
     label: ارتقاهای پیشین
-    to: /history/
+    href: /history/
     variant: طرح کلی
 ---
 
