@@ -51,7 +51,7 @@ We work with [Acolad](https://www.acolad.com/), a leading localization agency, 
 
 As part of the evaluation process for the Translatathon, all translations will be subject to a QA and feedback step, where professional linguists will evaluate submissions by individual translators based on quality and accuracy.
 
-We will also be running anti-machine translation measures, with Crowdin providing some tools that automatically detect machine translations.
+We will also be running **anti-machine translation measures**, with Crowdin providing some tools that automatically detect machine translations.
 
 While translation quality will not play a critical role in the scoring, any **participants found using machine translation** or suggesting low-quality and inaccurate translations **will be disqualified** and not eligible to compete for prizes!
 
