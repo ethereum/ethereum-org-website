@@ -46,8 +46,6 @@ Here are the important dates for the 2024 Translatathon
 
 ![](./participate.png)
 
-### Who should participate
-
 <TwoColumnContent>
   <CardContent>
     <h3>Who can participate?</h3>
