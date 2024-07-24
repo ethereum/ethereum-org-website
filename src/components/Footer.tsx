@@ -10,8 +10,8 @@ import { cn } from "@/lib/utils/cn"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
 import { BaseLink } from "../../tailwind/Link"
+import { Button } from "../../tailwind/ui/buttons/Button"
 
-import { Button, ButtonIcon } from "./ui/button"
 import { List, ListItem } from "./ui/list"
 
 const socialLinks = [
@@ -309,8 +309,12 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           <Translation id="website-last-updated" />: {lastDeployLocaleTimestamp}
         </p>
 
-        <Button variant="secondary" onClick={() => scrollIntoView("__next")}>
-          <ButtonIcon icon={<IoChevronUpSharp />} /> Go to top
+        <Button
+          variant="outline"
+          isSecondary
+          onClick={() => scrollIntoView("__next")}
+        >
+          <IoChevronUpSharp /> Go to top
         </Button>
       </div>
 
