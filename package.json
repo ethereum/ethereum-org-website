@@ -37,6 +37,7 @@
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-navigation-menu": "^1.2.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@sentry/nextjs": "^8.19.0",
     "@socialgouv/matomo-next": "^1.8.0",
     "chart.js": "^4.4.2",
     "chartjs-plugin-datalabels": "^2.2.0",

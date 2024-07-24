@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
+const { withSentryConfig } = require("@sentry/nextjs")
 
 const { i18n } = require("./next-i18next.config")
 
@@ -67,5 +68,10 @@ module.exports = (phase, { defaultConfig }) => {
     }
   }
 
-  return nextConfig
+  return withSentryConfig(nextConfig, {
+    org: "ethereumorg-ow",
+    project: "javascript-nextjs",
+    authToken: process.env.SENTRY_AUTH_TOKEN,
+    silent: false,
+  })
 }
