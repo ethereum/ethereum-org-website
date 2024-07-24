@@ -78,7 +78,7 @@
   "devDependencies": {
     "@chakra-ui/cli": "^2.4.1",
     "@chromatic-com/storybook": "1.5.0",
-    "@netlify/plugin-nextjs": "^5.0.0",
+    "@netlify/plugin-nextjs": "^5.5.1",
     "@storybook/addon-essentials": "8.1.10",
     "@storybook/addon-interactions": "8.1.10",
     "@storybook/addon-links": "8.1.10",

@@ -14,6 +14,7 @@ const baseStyle = defineStyle({
   borderRadius: "base",
   border: "1px",
   color: "primary.base",
+  fontWeight: "normal",
   lineHeight: "1.6",
   transitionProperty: "common",
   transitionDuration: "normal",
