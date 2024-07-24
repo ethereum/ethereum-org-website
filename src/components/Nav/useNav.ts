@@ -19,7 +19,7 @@ import {
   BsUiChecksGrid,
 } from "react-icons/bs"
 import { PiFlask, PiUsersFourLight } from "react-icons/pi"
-import { useDisclosure } from "@chakra-ui/react"
+import { useColorMode, useDisclosure } from "@chakra-ui/react"
 
 import { EthereumIcon } from "@/components/icons/EthereumIcon"
 
@@ -36,6 +36,7 @@ export const useNav = () => {
   const { isOpen, onToggle } = useDisclosure()
   const { t } = useTranslation("common")
   const { theme, setTheme } = useTheme()
+  const { setColorMode } = useColorMode()
 
   const colorToggleEvent = useColorModeValue("dark mode", "light mode") // This will be inverted as the state is changing
 
@@ -477,6 +478,7 @@ export const useNav = () => {
 
   const toggleColorMode = () => {
     setTheme(theme === "dark" ? "light" : "dark")
+    setColorMode(theme === "dark" ? "light" : "dark")
     trackCustomEvent({
       eventCategory: "nav bar",
       eventAction: "click",
