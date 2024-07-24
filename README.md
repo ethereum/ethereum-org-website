@@ -1883,6 +1883,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://ekam-bitt.github.io"><img src="https://avatars.githubusercontent.com/u/74407205?v=4?s=100" width="100px;" alt="Ekam Bitt"/><br /><sub><b>Ekam Bitt</b></sub></a><br /><a href="#maintenance-Ekam-Bitt" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://iankguimaraes.com"><img src="https://avatars.githubusercontent.com/u/29215044?v=4?s=100" width="100px;" alt="Ian K. Guimarães"/><br /><sub><b>Ian K. Guimarães</b></sub></a><br /><a href="#maintenance-iankressin" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jncrabb"><img src="https://avatars.githubusercontent.com/u/27811684?v=4?s=100" width="100px;" alt="jncrabb"/><br /><sub><b>jncrabb</b></sub></a><br /><a href="#content-jncrabb" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/bibo7086"><img src="https://avatars.githubusercontent.com/u/24389200?v=4?s=100" width="100px;" alt="Saidu Sokoto"/><br /><sub><b>Saidu Sokoto</b></sub></a><br /><a href="#content-bibo7086" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
