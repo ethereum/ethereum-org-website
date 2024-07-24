@@ -14,9 +14,6 @@ import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type BaseProps = {
-  /** @deprecated Use `href` prop instead */
-  to?: string
-  href?: string
   hideArrow?: boolean
   isPartiallyActive?: boolean
   activeClassName?: string
@@ -24,7 +21,7 @@ type BaseProps = {
 }
 
 export type LinkProps = BaseProps &
-  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> &
+  AnchorHTMLAttributes<HTMLAnchorElement> &
   Omit<NextLinkProps, "href">
 
 /**
@@ -41,8 +38,7 @@ export type LinkProps = BaseProps &
  */
 export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   {
-    to,
-    href: hrefProp,
+    href,
     children,
     className,
     hideArrow,
@@ -56,7 +52,10 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   const { asPath } = useRouter()
   const { flipForRtl } = useRtlFlip()
 
-  let href = (to ?? hrefProp) as string
+  if (!href) {
+    console.warn("Link component is missing href prop")
+    return <a {...props} />
+  }
 
   const isActive = url.isHrefActive(href, asPath, isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
