@@ -53,7 +53,7 @@ As part of the evaluation process for the Translatathon, all translations will b
 
 We will also be running anti-machine translation measures, with Crowdin providing some tools that automatically detect machine translations.
 
-While translation quality will not play a critical role in the scoring, any participants found using machine translation or suggesting low-quality and inaccurate translations will be disqualified and not eligible to compete for prizes!
+While translation quality will not play a critical role in the scoring, any **participants found using machine translation** or suggesting low-quality and inaccurate translations **will be disqualified** and not eligible to compete for prizes!
 
 The evaluation period will take place between August 19th-28th and the results will be announced on the ethereum.org community call on August 29th.
 
