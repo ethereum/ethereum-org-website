@@ -13,12 +13,7 @@ Ethereum can help many kinds of businesses, including large companies:
 - Build new business models and value creation opportunities
 - Competitively future-proof their organization
 
-
-
 In the early years, many enterprise blockchain applications were built on private permissioned Ethereum compatible blockchains or consortium chains. Today, thanks to technological advances which enable greater throughput, lower transaction cost, and privacy, most enterprise applications that use Ethereum technology are being built on the public Ethereum Mainnet or on [Layer 2](/layer-2) chains.
-
-
-
 
 
 ## Resources {#enterprise-resources}
@@ -72,7 +67,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 
 ### Scalability solutions {#scalability-solutions}
 
-Most new blockchain applicaitons are being built on [Layer 2](/layer-2). Layer 2 is a set of technologies or systems that run on top of Ethereum (Layer 1), inherit security properties from Layer 1, and provide greater transaction processing capacity (throughput), lower transaction fees (operating cost), and faster transaction confirmations than Layer 1. Layer 2 scaling solutions are secured by Layer 1, but they enable blockchain applications to handle many more users or actions or data than Layer 1 could accommodate. Many of them leverage recent advances in cryptography and zero-knowledge (ZK) proofs to maximize performance and security, and some offer an additional level of privacy.
+Most new blockchain applications are being built on [Layer 2](/layer-2) chains. Layer 2 is a set of technologies or systems that run on top of Ethereum (Layer 1), inherit security properties from Layer 1, and provide greater transaction processing capacity (throughput), lower transaction fees (operating cost), and faster transaction confirmations than Layer 1. Layer 2 scaling solutions are secured by Layer 1, but they enable blockchain applications to handle many more users or actions or data than Layer 1 could accommodate. Many of them leverage recent advances in cryptography and zero-knowledge (ZK) proofs to maximize performance and security, and some offer an additional level of privacy.
 
 ## Enterprise applications live on Ethereum Mainnet {#enterprise-live-on-mainnet}
 
