@@ -18,7 +18,7 @@ template: translatathon
   <EmojiCard
     emoji=':bulb:'
     title='Learn about Ethereum'
-    description='Learn about different Ethereum related topics while contributing and competing'
+    description='Learn more about Ethereum while translating and competing'
   />
 </CardContainer>
 
