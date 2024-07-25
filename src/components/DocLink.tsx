@@ -16,11 +16,11 @@ import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export type DocLinkProps = {
   children?: React.ReactNode
-  to: string
+  href: string
   isExternal?: boolean
 }
 
-const DocLink = ({ to, children, isExternal = false }: DocLinkProps) => {
+const DocLink = ({ href, children, isExternal = false }: DocLinkProps) => {
   const linkBoxShadowColor = useToken("colors", "primary.base")
   const { flipForRtl } = useRtlFlip()
 
@@ -51,7 +51,7 @@ const DocLink = ({ to, children, isExternal = false }: DocLinkProps) => {
         </Flex>
         <Box flex={1} flexDirection="column">
           <LinkOverlay
-            href={to}
+            href={href}
             as={BaseLink}
             isExternal={isExternal}
             textDecoration="none"
