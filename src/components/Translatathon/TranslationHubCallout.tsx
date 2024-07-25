@@ -17,7 +17,7 @@ export const TranslationHubCallout = ({ children }) => {
       <Flex w="full" direction="column">
         {children}
         <Flex>
-          <ButtonLink href="/translatathon/local-communities">
+          <ButtonLink href="/contributing/translation-program/translatathon/local-communities">
             Find out more on hubs
           </ButtonLink>
         </Flex>

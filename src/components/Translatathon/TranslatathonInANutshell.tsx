@@ -76,7 +76,7 @@ export const TranslatathonInANutshell = () => {
             reviewed and evaluated, and participants using machine translation
             will be automatically disqualified and not be eligible to claim
             prizes (see{" "}
-            <Link href="/translatathon/terms-and-conditions/">
+            <Link href="/contributing/translation-program/translatathon/terms-and-conditions/">
               terms and conditions
             </Link>
             )
@@ -110,7 +110,9 @@ export const TranslatathonInANutshell = () => {
         </Flex>
       </Flex>
       <Flex width="full" justifyContent="center">
-        <ButtonLink href="/translatathon/details">Details and rules</ButtonLink>
+        <ButtonLink href="/contributing/translation-program/translatathon/details">
+          Details and rules
+        </ButtonLink>
       </Flex>
     </Flex>
   )

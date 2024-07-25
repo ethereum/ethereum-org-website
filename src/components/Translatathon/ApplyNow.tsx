@@ -3,7 +3,7 @@ import { Box, Flex } from "@chakra-ui/react"
 import { ButtonLink } from "@/components/Buttons"
 import Callout from "@/components/Callout"
 
-import { APPLICATION_END_DATE } from "./constants"
+import { APPLICATION_END_DATE, APPLICATION_URL } from "./constants"
 
 import DolphinImage from "@/public/images/translatathon/translatathon_dolphin.png"
 
@@ -25,7 +25,7 @@ export const ApplyNow = () => {
           textAlign="center"
         >
           <Flex m="auto">
-            <ButtonLink href="/">Apply now</ButtonLink>
+            <ButtonLink href={APPLICATION_URL}>Apply now</ButtonLink>
           </Flex>
         </Callout>
       </Box>

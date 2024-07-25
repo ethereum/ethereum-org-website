@@ -14,7 +14,10 @@ export const TranslatathonBanner = ({ pathname }) => {
     <DismissableBanner storageKey="translatathon-banner">
       <Center gap={4}>
         <Text>🚨 Applications for the 2024 Translathathon are open 🚨</Text>
-        <ButtonLink href="/translatathon" variant="outline">
+        <ButtonLink
+          href="/contributing/translation-program/translatathon"
+          variant="outline"
+        >
           Learn more
         </ButtonLink>
       </Center>

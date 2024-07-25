@@ -14,7 +14,7 @@ const instructions = [
   {
     title: "Read the rules and FAQs",
     description: "Get familiar with the rules, prizes and translation process",
-    ctaLink: "/translatathon/details/",
+    ctaLink: "/contributing/translation-program/translatathon/details/",
     ctaLabel: "Learn",
   },
   {

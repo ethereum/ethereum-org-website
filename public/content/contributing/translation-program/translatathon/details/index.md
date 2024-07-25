@@ -39,9 +39,9 @@ Translations are suggested directly in the online editor so there is no need to 
 - Each string has a status indicator that shows whether it’s _Translated_, _Untranslated_, or _Approved_. If a source string already has a suggested translation in your language, there is no need to translate it
 - You can also filter strings in the editor to show _Untranslated first_ or _Untranslated only_
 
-For a detailed guide to navigating and using the Crowdin online editor, we recommend all Translatathon participants to read our [How to translate](https://ethereum.org/en/contributing/translation-program/how-to-translate/) guide.
+For a detailed guide to navigating and using the Crowdin online editor, we recommend all Translatathon participants to read our [How to translate](/contributing/translation-program/how-to-translate/) guide.
 
-To learn more about the conventions and best practices for translating ethereum.org content, you can also check out our [translation style guide](https://ethereum.org/en/contributing/translation-program/translators-guide/).
+To learn more about the conventions and best practices for translating ethereum.org content, you can also check out our [translation style guide](/contributing/translation-program/translators-guide/).
 
 ### Prizes
 
