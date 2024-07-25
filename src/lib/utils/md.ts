@@ -242,6 +242,9 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/contributing/translation-program/playbook",
     "/contributing/translation-program/resources",
     "/contributing/translation-program/translatathon",
+    "/contributing/translation-program/translatathon/details",
+    "/contributing/translation-program/translatathon/local-communities",
+    "/contributing/translation-program/translatathon/terms-and-conditions",
     "/contributing/translation-program/translators-guide",
     "/cookie-policy",
     "/eips",
@@ -272,6 +275,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/security",
     "/smart-contracts",
     "/staking/dvt",
+
     "/terms-of-use",
     "/web3",
     "/whitepaper",
