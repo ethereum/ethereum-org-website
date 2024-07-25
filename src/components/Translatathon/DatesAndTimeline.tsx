@@ -2,15 +2,23 @@ import { Box, Flex, Heading, Text } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
 
-const dates = [
+import { CROWDIN_PROJECT_URL } from "@/lib/constants"
+
+import {
+  APPLICATION_END_DATE,
+  APPLICATION_START_DATE,
+  APPLICATION_URL,
+} from "./constants"
+
+export const dates = [
   {
     title: "Applications open",
     description:
       "Fill out the application form to participate and compete for prizes",
-    startDate: new Date("2024-07-25T12:00:00Z"),
-    endDate: new Date("2024-08-08T12:00:00Z"),
-    link: "https://gtly.to/Mql-w3Gs_",
     linkText: "Apply link text",
+    startDate: new Date(APPLICATION_START_DATE),
+    endDate: new Date(APPLICATION_END_DATE),
+    link: APPLICATION_URL,
   },
   {
     title: "Workshops",
@@ -27,8 +35,8 @@ const dates = [
       "The translation period - translate as much or as little as you want",
     startDate: new Date("2024-08-09T12:00:00Z"),
     endDate: new Date("2024-08-18T12:00:00Z"),
-    link: "https://crowdin.com/project/ethereum-org",
     linkText: "Translating link text",
+    link: CROWDIN_PROJECT_URL,
   },
   {
     title: "Evaluation period",

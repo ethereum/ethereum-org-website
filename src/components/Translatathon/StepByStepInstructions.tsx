@@ -2,53 +2,56 @@ import { Center, Flex, Text } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
 
+import { CROWDIN_PROJECT_URL } from "@/lib/constants"
+
+import { APPLICATION_URL } from "./constants"
+
 const instructions = [
   {
     title: "Read the rules and FAQs",
-    description:
-      "Get familiar with the rules, prizes and translation process",
-    cta: "/translatathon/details",
+    description: "Get familiar with the rules, prizes and translation process",
+    ctaLink: "/translatathon/details/",
     ctaLabel: "Learn",
   },
   {
     title: "Submit your application",
     description:
       "Everyone needs to fill out the application form before the translation period starts!",
-    cta: "https://gtly.to/Mql-w3Gs_",
+    ctaLink: APPLICATION_URL,
     ctaLabel: "Apply",
   },
   {
     title: "Register on Crowdin (translation platform)",
     description:
       "Join the ethereum.org project and familiarize yourself with Crowdin, where all the translations will take place",
-    cta: "https://crowdin.com/project/ethereum-org",
+    ctaLink: CROWDIN_PROJECT_URL,
     ctaLabel: "Join",
   },
   {
     title: "Join our Discord",
     description:
       "Attend the onboarding calls and workshops, stay up to date with the latest news or ask questions",
-    cta: "https://discord.com/invite/ethereum-org",
+    ctaLink: "/discord/",
     ctaLabel: "Join",
   },
   {
     title: "Translate! August 9th to August 18th",
     description:
       "Translate content to earn points. Each word you translate counts towards your final score",
-    cta: "https://crowdin.com/project/ethereum-org",
+    ctaLink: CROWDIN_PROJECT_URL,
     ctaLabel: "Translate",
   },
   {
     title: "Wait for evaluations",
     description:
       "All translations will be evaluated for quality and machine translations will be rejected",
-    cta: null,
+    ctaLink: null,
   },
   {
     title: "Claim your prizes",
     description:
       "Results will be announced on **August 29th**. Eligible participants will receive an email with prize claim instructions.",
-    cta: null,
+    ctaLink: null,
   },
 ]
 
@@ -92,9 +95,9 @@ export const StepByStepInstructions = () => {
               <Text>{instruction.description}</Text>
             </Flex>
           </Flex>
-          {instruction.cta ? (
+          {instruction.ctaLink ? (
             <Flex height="42px">
-              <ButtonLink href={instruction.cta} variant="outline">
+              <ButtonLink href={instruction.ctaLink} variant="outline">
                 {instruction.ctaLabel}
               </ButtonLink>
             </Flex>

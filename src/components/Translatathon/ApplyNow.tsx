@@ -3,13 +3,15 @@ import { Box, Flex } from "@chakra-ui/react"
 import { ButtonLink } from "@/components/Buttons"
 import Callout from "@/components/Callout"
 
+import { APPLICATION_END_DATE } from "./constants"
+
 import DolphinImage from "@/public/images/translatathon/translatathon_dolphin.png"
 
 // TODO: Confirm deadline for applying
 
 export const ApplyNow = () => {
   const dateToday = new Date()
-  const deadline = new Date("August 6, 2024")
+  const deadline = new Date(APPLICATION_END_DATE)
 
   if (dateToday < deadline) {
     return (
