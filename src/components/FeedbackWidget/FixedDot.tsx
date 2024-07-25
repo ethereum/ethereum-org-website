@@ -24,7 +24,7 @@ const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
         aria-label={t("feedback-widget")}
         className={cn(
           "lg:mt-inherit sticky bottom-4 z-20 me-4 ms-auto flex size-12 items-center gap-0 rounded-full text-white shadow-table-item-box",
-          "transition-all duration-200 hover:transition-transform hover:duration-200",
+          "transition-all duration-200 hover:shadow-none hover:transition-transform hover:duration-200",
           !suppressScale && "hover:scale-110",
           offsetBottom && "bottom-31 lg:bottom-4",
           isExpanded ? "lg:w-60 lg:gap-3" : "lg:w-12",
