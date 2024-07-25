@@ -54,7 +54,7 @@ export const DatesAndTimeline = () => {
   const todaysDate = new Date()
 
   return (
-    <Flex direction="column" p={4}>
+    <Flex direction="column" p={4} mb={16}>
       {dates.map((date, index) => (
         <Flex
           key={index}
