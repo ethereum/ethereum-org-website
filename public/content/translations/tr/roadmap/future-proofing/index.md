@@ -17,7 +17,7 @@ Ethereum geliştiricilerinin karşılaştığı zorluk, Mevcut hisse ispatı pro
 
 Ethereum'da kriptografik sırlar oluşturmak için çeşitli yerlerde kullanılan ["KZG" taahhüt şemaları](/roadmap/danksharding/#what-is-kzg)nın kuantum açısından savunmasız olduğu bilinmektedir. Şu anda, bu durum "güvenilir kurulumlar" kullanılarak önlenmektedir, burada birçok kullanıcı kuantum bilgisayar tarafından tersine mühendislik yapılamayan rastgelelik oluşturur. Ancak ideal çözüm, sadece kuantum güvenli kriptografiyi entegre etmek olacaktır. BLS şemasının yerine verimli bir şekilde geçebilecek iki önde gelen yaklaşım bulunmaktadır: [STARK tabanlı](https://hackmd.io/@vbuterin/stark_aggregation) ve [kafes tabanlı](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175) imzalama. Bu yöntemler hâlâ araştırılıyor ve prototip aşamasında bulunuyor.
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> KZG ve güvenilir kurulumlar hakkındakileri okuyun</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> KZG ve güvenilir kurulumlar hakkındakileri okuyun</ButtonLink>
 
 ## Daha basit ve daha verimli Ethereum {#simpler-more-efficient-ethereum}
 

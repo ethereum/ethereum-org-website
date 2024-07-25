@@ -11320,7 +11320,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/71248977?v=4",
       "profile": "https://github.com/UNOFFICIALbgd",
       "contributions": [
-        "bug"
+        "bug",
+        "doc"
       ]
     },
     {
@@ -12249,7 +12250,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/73983677?v=4",
       "profile": "https://github.com/omahs",
       "contributions": [
-        "translation"
+        "translation",
+        "maintenance"
       ]
     },
     {
@@ -12275,6 +12277,69 @@
       "name": "Yorke E. Rhodes III",
       "avatar_url": "https://avatars.githubusercontent.com/u/17415717?v=4",
       "profile": "https://github.com/yorkerhodes3",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "sandeepV2",
+      "name": "Sandeep Belagavi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52043035?v=4",
+      "profile": "https://github.com/sandeepV2",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "codingmickey",
+      "name": "Kartik Jolapara",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42518907?v=4",
+      "profile": "https://github.com/codingmickey",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Ekam-Bitt",
+      "name": "Ekam Bitt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/74407205?v=4",
+      "profile": "https://ekam-bitt.github.io",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "iankressin",
+      "name": "Ian K. Guimarães",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29215044?v=4",
+      "profile": "http://iankguimaraes.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "jncrabb",
+      "name": "jncrabb",
+      "avatar_url": "https://avatars.githubusercontent.com/u/27811684?v=4",
+      "profile": "https://github.com/jncrabb",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "bibo7086",
+      "name": "Saidu Sokoto",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24389200?v=4",
+      "profile": "https://github.com/bibo7086",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "krishchvn",
+      "name": "Krishnakumar Chavan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58606754?v=4",
+      "profile": "https://github.com/krishchvn",
       "contributions": [
         "content"
       ]

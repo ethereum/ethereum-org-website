@@ -220,7 +220,7 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   Rantai Suar
 </DocLink>
 
@@ -236,7 +236,7 @@ Kontrak setoran penaruhan memperkenalkan [penaruhan](/glossary/#staking) ke ekos
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Penaruhan
 </DocLink>
 
@@ -505,6 +505,6 @@ Yellow Paper, yang ditulis oleh Dr. Gavin Wood, adalah definisi teknis dari prot
 
 Makalah pengantar, diterbitkan pada tahun 2013 oleh Vitalik Buterin, pendiri Ethereum, sebelum peluncuran proyek pada tahun 2015.
 
-<DocLink to="/whitepaper/">
+<DocLink href="/whitepaper/">
   Laporan Resmi
 </DocLink>

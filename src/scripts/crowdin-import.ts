@@ -350,9 +350,8 @@ importSelection.forEach(
     // Initialize working directory and check for existence
     const _path: string = join(crowdinRoot, crowdinLangCode)
     if (!existsSync(_path)) {
-      trackers.langs[
-        repoLangCode
-      ].error = `Path doesn't exist for lang ${crowdinLangCode}`
+      trackers.langs[repoLangCode].error =
+        `Path doesn't exist for lang ${crowdinLangCode}`
       return
     }
     const langLs: Array<string> = readdirSync(_path)

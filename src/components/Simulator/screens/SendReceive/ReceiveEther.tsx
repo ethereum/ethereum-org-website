@@ -1,7 +1,7 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { Button, useColorModeValue } from "@chakra-ui/react"
-import { Box, Flex, Text } from "@chakra-ui/react"
+import { Button } from "@chakra-ui/react"
+import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
 

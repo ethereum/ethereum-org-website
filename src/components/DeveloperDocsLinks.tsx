@@ -17,10 +17,10 @@ const DeveloperDocsLinks = ({ headerId }: DeveloperDocsLinksProps) => (
       .map(({ items, id }) => (
         <UnorderedList ms={6} spacing={3} key={id}>
           {items &&
-            items.map(({ id, to, path, description, items }) => (
+            items.map(({ id, href, path, description, items }) => (
               <ListItem key={id}>
-                {to || path ? (
-                  <InlineLink to={to || path}>
+                {href || path ? (
+                  <InlineLink href={href || path}>
                     <Translation id={`page-developers-docs:${id}`} />
                   </InlineLink>
                 ) : (
@@ -37,9 +37,9 @@ const DeveloperDocsLinks = ({ headerId }: DeveloperDocsLinksProps) => (
                   style={{ listStyleType: "circle" }}
                 >
                   {items &&
-                    items.map(({ id, to, path }) => (
+                    items.map(({ id, href, path }) => (
                       <ListItem key={id}>
-                        <InlineLink to={to || path}>
+                        <InlineLink href={href || path}>
                           <Translation id={`page-developers-docs:${id}`} />
                         </InlineLink>
                       </ListItem>

@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react"
+import { useTranslation } from "next-i18next"
 import {
   Badge,
   Box,
@@ -85,6 +86,7 @@ const ProductCard = ({
   githubRepoLanguages = [],
   hideStars = false,
 }: ProductCardProps) => {
+  const { t } = useTranslation("common")
   const DESCRIPTION_STYLES: TextProps = {
     opacity: 0.8,
     fontSize: "sm",
@@ -156,8 +158,8 @@ const ProductCard = ({
             </SubjectBadge>
           ))}
       </HStack>
-      <ButtonLink to={url} m={4} height={20}>
-        Open {name}
+      <ButtonLink href={url} m={4} height={20}>
+        {t("open")} {name}
       </ButtonLink>
     </Flex>
   )

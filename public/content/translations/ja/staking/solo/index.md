@@ -190,7 +190,7 @@ ETHのソロステーキングを支援するツールやサービスは増え�
 
 アンロックして残高全体を受け取るには、自分のバリデータを除外する手続きを完了する必要があります。
 
-<ButtonLink to="/staking/withdrawals/">ステーキング引き出しの詳細</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">ステーキング引き出しの詳細</ButtonLink>
 </ExpandableCard>
 
 ## 参考文献 {#further-reading}

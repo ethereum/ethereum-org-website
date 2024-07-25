@@ -68,7 +68,7 @@ Subito! L'aggiornamento della rete di Shanghai/Capella è avvenuto ad aprile 202
 
 In alternativa, i pool che utilizzano un token di staking ERC-20 consentono agli utenti di scambiare questo token sul mercato libero, permettendo di vendere la propria posizione di staking, "prelevando" i propri fondi di fatto senza rimuovere effettivamente ETH dal contratto di staking.
 
-<ButtonLink to="/staking/withdrawals/">Di più sui prelievi di staking</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Di più sui prelievi di staking</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="È diverso dallo staking con la mia borsa?">

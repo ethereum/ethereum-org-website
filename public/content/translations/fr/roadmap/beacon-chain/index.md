@@ -56,7 +56,7 @@ Les mises à niveau d'Ethereum sont plus ou moins interdépendantes. Récapitulo
 
 Au début, la Chaîne phare existait séparément du réseau principal Ethereum, mais ils ont été fusionnés en 2022.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   La Fusion
 </ButtonLink>
 
@@ -64,7 +64,7 @@ Au début, la Chaîne phare existait séparément du réseau principal Ethereum,
 
 La fragmentation ne peut s'ajouter en toute sécurité dans l'écosystème Ethereum que s'il existe un mécanisme de consensus sur la preuve d'enjeu. La Chaîne phare a introduit la mise en jeu qui a « fusionné » avec le réseau principal et a ouvert la voie à la fragmentation pour favoriser une plus grande évolutivité d'Ethereum.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Chaînes de fragments
 </ButtonLink>
 

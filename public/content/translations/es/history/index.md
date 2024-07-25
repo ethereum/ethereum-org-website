@@ -220,7 +220,7 @@ La [cadena de baliza](/roadmap/beacon-chain/) necesita 16.384 depósitos de 32 E
 
 [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   La cadena de baliza
 </DocLink>
 
@@ -236,7 +236,7 @@ El contrato de depósito de participación introdujo la [participación](/glossa
 
 [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Staking (apostar)
 </DocLink>
 
@@ -505,6 +505,6 @@ El protocolo, escrito por el Dr. Gavin Wood, es una definición técnica del pro
 
 Documento introductorio, publicado en el 2013 por Vitalik Buterin, fundador de Ethereum, antes del lanzamiento del proyecto en 2015.
 
-<DocLink to="/whitepaper/">
+<DocLink href="/whitepaper/">
   Informe
 </DocLink>

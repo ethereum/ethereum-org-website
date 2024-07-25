@@ -56,7 +56,7 @@ Gli aggiornamenti di Ethereum sono tutti in qualche modo interconnessi. Quindi r
 
 Inizialmente la Beacon Chain esisteva separatamente dalla Rete principale di Ethereum, ma le due sono state fuse nel 2022.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   La fusione
 </ButtonLink>
 
@@ -64,7 +64,7 @@ Inizialmente la Beacon Chain esisteva separatamente dalla Rete principale di Eth
 
 Lo sharding potrà entrare in modo sicuro nell'ecosistema Ethereum solo quando sarà presente un meccanismo di consenso proof of stake. La Beacon Chain ha introdotto lo staking, che si è 'fuso' con la Rete principale, spianando la strada allo sharding per contribuire a ridimensionare ulteriormente Ethereum.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Shard chain
 </ButtonLink>
 

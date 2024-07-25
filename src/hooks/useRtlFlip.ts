@@ -18,5 +18,9 @@ type UseDirection = {
 export const useRtlFlip = (): UseDirection => {
   const { locale } = useRouter()
   const isRtl = isLangRightToLeft(locale as Lang)
-  return { flipForRtl: isRtl ? "scaleX(-1)" : undefined, isRtl, direction: isRtl ? "rtl" : "ltr" }
+  return {
+    flipForRtl: isRtl ? "scaleX(-1)" : undefined,
+    isRtl,
+    direction: isRtl ? "rtl" : "ltr",
+  }
 }

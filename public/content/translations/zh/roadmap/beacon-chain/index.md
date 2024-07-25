@@ -56,7 +56,7 @@ summaryPoint3: 信标链引入了共识逻辑和区块广播协议，为当前�
 
 最初，信标链与以太坊主网相互独立，但两者在 2022 合并。
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   合并
 </ButtonLink>
 
@@ -64,7 +64,7 @@ summaryPoint3: 信标链引入了共识逻辑和区块广播协议，为当前�
 
 只有在已建立权益证明共识机制的情况下，分片才能安全进入以太坊生态系统。 信标链引入了质押，它与主网“合并”，为分片铺平了道路，以帮助进一步扩展以太坊。
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   分片链
 </ButtonLink>
 

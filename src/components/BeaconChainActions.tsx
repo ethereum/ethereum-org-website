@@ -75,10 +75,10 @@ const BeaconChainActions = () => {
           title={t("consensus-become-staker")}
           description={t("consensus-become-staker-desc")}
         >
-          <ButtonLink mb={3} to="https://launchpad.ethereum.org">
+          <ButtonLink mb={3} href="https://launchpad.ethereum.org">
             <Translation id="get-started" />
           </ButtonLink>
-          <ButtonLink variant="outline" to="/staking/">
+          <ButtonLink variant="outline" href="/staking/">
             <Translation id="page-upgrades-index-staking-learn" />
           </ButtonLink>
         </Card>

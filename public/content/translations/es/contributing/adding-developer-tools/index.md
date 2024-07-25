@@ -56,6 +56,6 @@ A menos que los productos estén específicamente ordenados de otra manera, como
 
 Si desea añadir una herramienta para desarrollador a ethereum.org y cumple con los criterios, cree una incidencia en GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
   Crear una incidencia
 </ButtonLink>

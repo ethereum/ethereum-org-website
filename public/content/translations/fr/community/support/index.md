@@ -12,11 +12,11 @@ Vous recherchez l'assistance officielle Ethereum ? La première chose que vous d
 
 Comprendre la nature décentralisée d'Ethereum est essentiel, car quiconque prétendant représenter l'assiatnce officielle d'Ethereum essaie probablement de vous escroquer ! La meilleure protection contre les arnaques consiste à vous informer et à prendre la sécurité au sérieux.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Sécurité d'Ethereum et prévention des arnaques
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Apprendre les fondamentaux d'Ethereum
 </DocLink>
 

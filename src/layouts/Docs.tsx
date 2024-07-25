@@ -164,7 +164,7 @@ const BackToTop = (props: ChildOnlyProp) => (
     borderColor="border"
     {...props}
   >
-    <Link to="#top">
+    <Link href="#top">
       <Translation id="back-to-top" /> ↑
     </Link>
   </Flex>

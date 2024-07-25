@@ -40,7 +40,7 @@ type PageHeroProps = {
 
 const isButtonLink = (
   button: ButtonType | ButtonLinkType
-): button is ButtonLinkType => (button as ButtonLinkType).to !== undefined
+): button is ButtonLinkType => (button as ButtonLinkType).href !== undefined
 
 const PageHero = ({
   content: { buttons, title, header, subtitle, image, alt },
@@ -105,7 +105,7 @@ const PageHero = ({
                   <WrapItem key={idx}>
                     <ButtonLink
                       variant={button.variant}
-                      to={button.to}
+                      href={button.href}
                       onClick={() =>
                         trackCustomEvent({
                           eventCategory: button.matomo.eventCategory,

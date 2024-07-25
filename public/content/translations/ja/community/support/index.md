@@ -12,11 +12,11 @@ lang: ja
 
 「イーサリアムの公式サポート」を称する人物は、詐欺であるおそれがあります。このため、イーサリアムの分散型の性質をご理解ください。 詐欺師から身を守るには、自分自身で学び、セキュリティを真剣に受け止めることが何よりも大切です。
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   イーサリアムのセキュリティと詐欺対策
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   イーサリアムの基礎知識を学ぶ
 </DocLink>
 

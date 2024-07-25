@@ -203,7 +203,7 @@ The Merge represents the formal adoption of the Beacon Chain as the new consensu
 
 Blocks are instead proposed by validating nodes that have staked ETH in return for the right to participate in consensus. These upgrades set the stage for future scalability upgrades, including sharding.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   The Beacon Chain
 </ButtonLink>
 
@@ -219,7 +219,7 @@ Originally, the plan was to work on sharding before The Merge to address scalabi
 
 Plans for sharding are rapidly evolving, but given the rise and success of layer 2 technologies to scale transaction execution, sharding plans have shifted to finding the most optimal way to distribute the burden of storing compressed calldata from rollup contracts, allowing for exponential growth in network capacity. This would not be possible without first transitioning to proof-of-stake.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Sharding
 </ButtonLink>
 

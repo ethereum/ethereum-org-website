@@ -17,7 +17,7 @@ template: roadmap
 
 イーサリアムでは、暗号秘密を生成するために[「KZG」コミットメントスキーム](/roadmap/danksharding/#what-is-kzg)が広く使われています。しかし、このスキームは量子コンピュータによって破られる可能性があります。 現在は、多くのユーザーが生成したランダム性を使用して「信頼できるセットアップ」として回避されており、量子コンピューターによるリバースエンジニアリングができないようになっています。 しかし、理想的には、量子安全暗号を組み込むことで、脆弱性を根本的に解決することが望まれます。 BLSスキームの効率的な代替となる可能性のある2つの主要なアプローチとして、[STARKベース](https://hackmd.io/@vbuterin/stark_aggregation)と[ラティスベース](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175)の署名スキームがあります。 **これらについては現在、研究および試作中です**。
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> KZGと信頼できるセットアップについての詳細</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> KZGと信頼できるセットアップについての詳細</ButtonLink>
 
 ## よりシンプルで効率的なイーサリアム {#simpler-more-efficient-ethereum}
 

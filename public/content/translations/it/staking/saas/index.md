@@ -78,7 +78,7 @@ I prelievi di staking sono stati implementati nell'aggiornamento di Shanghai/Cap
 
 I validatori, inoltre, possono uscire interamente come tali, il che sbloccherà il loro saldo in ETH rimanente per il prelievo. I conti che hanno fornito un indirizzo di prelievo d'esecuzione e hanno completato il procedimento di uscita riceveranno interamente il proprio saldo all'indirizzo di prelievo fornito durante la successiva pulizia dei validatori.
 
-<ButtonLink to="/staking/withdrawals/">Di più sulle ricompense di staking</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Di più sulle ricompense di staking</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Cosa succede se vengo tagliato?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

@@ -86,7 +86,7 @@ Ethereum-un təhlükəsizliyi hissə sübutundan gəlir. Sistem, zərərli hər�
 
 NFT-lərlə bağlı təhlükəsizlik məsələləri çox vaxt fişinq fırıldaqları, ağıllı müqavilə zəiflikləri və ya istifadəçi səhvləri (məsələn, şəxsi açarların təsadüfən ifşa edilməsi) ilə əlaqədardır ki, bu da pulqabının uyğun səviyyədə təhlükəsizliyini NFT sahibləri üçün kritik edir.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Təhlükəsizlik haqqında daha çox məlumat
 </ButtonLink>
 

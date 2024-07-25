@@ -36,11 +36,11 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
   )
 
   const desktopHoverFocusStyles = {
-    '& > svg': {
+    "& > svg": {
       transform: "rotate(10deg)",
       color: "primary.hover",
-      transition: "transform 0.5s, color 0.2s"
-    }
+      transition: "transform 0.5s, color 0.2s",
+    },
   }
 
   /**

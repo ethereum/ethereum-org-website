@@ -56,7 +56,7 @@ NFTは以下のような多数の用途に使用されます。
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>非代替性トークン(NFT)アート/収集品を探す、買う、作る</div>
-  <ButtonLink to="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/dapps/?category=collectibles#explore">
     非代替性トークン(NFT)アートを探す
   </ButtonLink>
 </InfoBanner>
@@ -93,7 +93,7 @@ NFTスマートコントラクトには、次のいくつかの重要な機能�
 
 NFTに関連するセキュリティの問題の大半は、フィッシング詐欺、スマートコントラクトの脆弱性、ユーザーの過失(不注意で秘密鍵を公開するなど)のいずれかに関連しており、ウォレットのセキュリティがNFT所有者にとって非常に重要になります。
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   セキュリティの詳細
 </ButtonLink>
 

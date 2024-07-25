@@ -17,7 +17,7 @@ template: roadmap
 
 Відомо, що [схеми фіксації KZG](/roadmap/danksharding/#what-is-kzg), які використовуються в Ethereum для генерації криптографічних ключів, є квантово вразливими. Зараз це питання вирішується за допомогою "довірених схем", коли багато користувачів генерують випадковість, яку квантовий комп’ютер не може проаналізувати. Однак ідеальним рішенням було б використання квантово-безпечної криптографії. Існують два основні підходи, які можуть ефективно замінити схему BLS: підписи на основі [STARK](https://hackmd.io/@vbuterin/stark_aggregation) та [решітки](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175). **Вони все ще на стадії дослідження і створення прототипів**.
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Читайте про KZG і довірені схеми</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> Читайте про KZG і довірені схеми</ButtonLink>
 
 ## Простіший і ефективніший Ethereum {#simpler-more-efficient-ethereum}
 
