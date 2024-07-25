@@ -149,8 +149,8 @@ export const TranslatathonLayout = ({
   const lgBp = useToken("breakpoints", "lg")
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "Translatathon dropdown",
-    ariaLabel: "Translatathon dropdown",
+    text: "Translatathon menu",
+    ariaLabel: "Translatathon menu",
     items: [
       {
         text: "Translatathon",
