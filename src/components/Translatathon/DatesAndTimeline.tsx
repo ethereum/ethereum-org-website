@@ -15,10 +15,10 @@ export const dates = [
     title: "Applications open",
     description:
       "Fill out the application form to participate and compete for prizes",
-    linkText: "Apply link text",
     startDate: new Date(APPLICATION_START_DATE),
     endDate: new Date(APPLICATION_END_DATE),
     link: APPLICATION_URL,
+    linkText: "Apply",
   },
   {
     title: "Workshops",
@@ -26,8 +26,8 @@ export const dates = [
       "Join our Discord to participate in onboarding calls and workshops and learn all about the Translatathon",
     startDate: new Date("2024-08-05T12:00:00Z"),
     endDate: new Date("2024-08-08T12:00:00Z"),
-    link: "https://discord.gg/ethereum-org",
-    linkText: "Join discord",
+    link: "/discord/",
+    linkText: "Prepare",
   },
   {
     title: "Translations open",
@@ -35,8 +35,8 @@ export const dates = [
       "The translation period - translate as much or as little as you want",
     startDate: new Date("2024-08-09T12:00:00Z"),
     endDate: new Date("2024-08-18T12:00:00Z"),
-    linkText: "Translating link text",
     link: CROWDIN_PROJECT_URL,
+    linkText: "Translate",
   },
   {
     title: "Evaluation period",
