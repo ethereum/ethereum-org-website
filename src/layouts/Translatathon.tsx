@@ -212,7 +212,7 @@ export const TranslatathonLayout = ({
             </Flex>
           </>
         }
-        heroImg={"/images/heroes/translatathon-hero.png"}
+        heroImg={"/images/heroes/translatathon-hero.svg"}
         blurDataURL={""}
       />
       <Page>
