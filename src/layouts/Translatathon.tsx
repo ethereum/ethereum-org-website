@@ -154,7 +154,7 @@ export const TranslatathonLayout = ({
     items: [
       {
         text: "Translatathon",
-        to: "/translatathon",
+        href: "/translatathon",
         matomo: {
           eventCategory: "translatathon menu",
           eventAction: "click",
@@ -163,7 +163,7 @@ export const TranslatathonLayout = ({
       },
       {
         text: "Details and submission criteria",
-        to: "/translatathon/details",
+        href: "/translatathon/details",
         matomo: {
           eventCategory: "translatathon menu",
           eventAction: "click",
@@ -172,7 +172,7 @@ export const TranslatathonLayout = ({
       },
       {
         text: "Terms and conditions",
-        to: "/translatathon/terms-and-conditions",
+        href: "/translatathon/terms-and-conditions",
         matomo: {
           eventCategory: "translatathon menu",
           eventAction: "click",
