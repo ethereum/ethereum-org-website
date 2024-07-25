@@ -456,7 +456,7 @@ const EthPage = () => {
             </Text>
           </Box>
           <CentralActionCard
-            to="/what-is-ethereum/"
+            href="/what-is-ethereum/"
             title={t("page-eth-whats-ethereum")}
             description={t("page-eth-whats-ethereum-desc")}
             image={ethereum}
@@ -469,7 +469,7 @@ const EthPage = () => {
             </Text>
             <Text>{t("page-eth-underpins-desc-2")}</Text>
             <CentralActionCard
-              to="/defi/"
+              href="/defi/"
               title={t("page-eth-whats-defi")}
               description={t("page-eth-whats-defi-description")}
               image={defi}

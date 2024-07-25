@@ -1333,7 +1333,7 @@ const DappsPage = () => {
     buttons: [
       {
         content: t("page-dapps-explore-dapps-title"),
-        to: "#beginner",
+        href: "#beginner",
         matomo: {
           eventCategory: "dapp hero buttons",
           eventAction: "click",
@@ -1342,7 +1342,7 @@ const DappsPage = () => {
       },
       {
         content: t("page-dapps-what-are-dapps"),
-        to: "#what-are-dapps",
+        href: "#what-are-dapps",
         variant: "outline",
         matomo: {
           eventCategory: "dapp hero buttons",
@@ -1918,10 +1918,10 @@ const DappsPage = () => {
             </Text>
             <Text>{t("page-dapps-how-dapps-work-p2")}</Text>
             <Text>{t("page-dapps-how-dapps-work-p3")}</Text>
-            <DocLink to="/developers/docs/dapps/">
+            <DocLink href="/developers/docs/dapps/">
               {t("page-dapps-docklink-dapps")}
             </DocLink>
-            <DocLink to="/developers/docs/smart-contracts/">
+            <DocLink href="/developers/docs/smart-contracts/">
               {t("page-dapps-docklink-smart-contracts")}
             </DocLink>
           </LeftColumn>

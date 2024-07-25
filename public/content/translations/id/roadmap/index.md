@@ -10,7 +10,7 @@ buttons:
   - label: Peningkatan lebih lanjut
     toId: perubahan-apa-yang-akan-terjadi
   - label: Peningkatan sebelumnya
-    to: /history/
+    href: /history/
     variant: ikhtisar
 ---
 

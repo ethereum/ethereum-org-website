@@ -28,6 +28,7 @@ import MeetupList from "@/components/MeetupList"
 import Text from "@/components/OldText"
 import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
+import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import Translation from "@/components/Translation"
 import TranslationChartImage from "@/components/TranslationChartImage"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
@@ -93,6 +94,7 @@ export const StaticLayout = ({
 
   return (
     <Box w="full">
+      <TranslatathonBanner pathname={asPath} />
       <DevconGrantsBanner pathname={asPath} />
       <Flex
         justifyContent="space-between"

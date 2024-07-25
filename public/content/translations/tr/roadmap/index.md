@@ -10,7 +10,7 @@ buttons:
   - label: Sonraki yükseltmeler
     toId: hangi-degişiklikler-geliyor
   - label: Geçmiş yükseltmeler
-    to: /history/
+    href: /history/
     variant: ana hat
 ---
 

@@ -12,7 +12,7 @@ buttons:
     toId: welche-veränderungen-kommen-werden
   - 
     label: Bisherige Upgrades
-    to: /history/
+    href: /history/
     variant: Übersicht
 ---
 

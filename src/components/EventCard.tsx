@@ -14,7 +14,7 @@ const clearStyles = {
 
 export type EventCardProps = {
   title: string
-  to: string
+  href: string
   date: string
   description: string
   className?: string
@@ -24,7 +24,7 @@ export type EventCardProps = {
 
 const EventCard = ({
   title,
-  to,
+  href,
   date,
   description,
   className,
@@ -94,7 +94,7 @@ const EventCard = ({
         {title}
       </Heading>
       <Text>{description}</Text>
-      <ButtonLink href={to}>View Event</ButtonLink>
+      <ButtonLink href={href}>View Event</ButtonLink>
     </Box>
   </Box>
 )
