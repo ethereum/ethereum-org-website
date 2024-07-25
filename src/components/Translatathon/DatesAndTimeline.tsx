@@ -30,7 +30,7 @@ export const dates = [
     linkText: "Prepare",
   },
   {
-    title: "Translations open",
+    title: "Translatathon",
     description:
       "The translation period - translate as much or as little as you want",
     startDate: new Date("2024-08-09T12:00:00Z"),
@@ -50,7 +50,7 @@ export const dates = [
   {
     title: "Results announcement",
     description:
-      "We will announce the results and winners on the ethereum.org community call",
+      "We will announce the results and winners on the ethereum.org community Call",
     startDate: new Date("2024-08-29T12:00:00Z"),
     endDate: new Date("2024-09-30T12:00:00Z"),
     link: null,
