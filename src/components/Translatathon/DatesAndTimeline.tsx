@@ -55,76 +55,65 @@ export const DatesAndTimeline = () => {
 
   return (
     <Flex direction="column" p={4} mb={16}>
-      {dates.map((date, index) => (
-        <Flex
-          key={index}
-          borderLeft={"1px solid"}
-          borderColor={
-            index === dates.length - 1 ? "transparent" : "primary.base"
-          }
-          px={4}
-          pb={index === dates.length - 1 ? 0 : 16}
-          gap={4}
-        >
-          <Flex>
-            <Box
-              w={8}
-              h={8}
-              bg={
-                todaysDate >= date.startDate && todaysDate <= date.endDate
-                  ? "primary.base"
-                  : "primary.lowContrast"
-              }
-              borderRadius="full"
-              ml={-8}
-            />
-          </Flex>
-          <Flex direction="column" gap={6}>
-            <Flex
-              h={8}
-              bg={
-                todaysDate >= date.startDate && todaysDate <= date.endDate
-                  ? "primary.base"
-                  : "primary.lowContrast"
-              }
-              borderRadius="full"
-              px={4}
-              alignItems="center"
-              color={
-                todaysDate >= date.startDate && todaysDate <= date.endDate
-                  ? "background.base"
-                  : "body.base"
-              }
-            >
-              <Text>
-                {date.startDate.toDateString()} - {date.endDate.toDateString()}
-              </Text>
+      {dates.map((date, index) => {
+        const isLive =
+          todaysDate >= date.startDate && todaysDate <= date.endDate
+        return (
+          <Flex
+            key={index}
+            borderLeft={"1px solid"}
+            borderColor={
+              index === dates.length - 1 ? "transparent" : "primary.base"
+            }
+            px={4}
+            pb={index === dates.length - 1 ? 0 : 16}
+            gap={4}
+          >
+            <Flex>
+              <Box
+                w={8}
+                h={8}
+                bg={isLive ? "primary.base" : "primary.lowContrast"}
+                borderRadius="full"
+                ml={-8}
+              />
             </Flex>
-            <Flex direction="column">
-              <Heading as="h3" fontSize="2xl">
-                {date.title}
-              </Heading>
-              <Text>{date.description}</Text>
-            </Flex>
-            {date.link && (
-              <Flex>
-                <ButtonLink
-                  href={date.link}
-                  mt={2}
-                  variant="outline"
-                  isDisabled={
-                    !(
-                      todaysDate >= date.startDate && todaysDate <= date.endDate
-                    )
-                  }
-                >
-                  {date.linkText}
-                </ButtonLink>
+            <Flex direction="column" gap={6}>
+              <Flex
+                h={8}
+                bg={isLive ? "primary.base" : "primary.lowContrast"}
+                borderRadius="full"
+                px={4}
+                alignItems="center"
+                color={isLive ? "background.base" : "body.base"}
+              >
+                <Text>
+                  {date.startDate.toDateString()} -{" "}
+                  {date.endDate.toDateString()}
+                </Text>
               </Flex>
-            )}
+              <Flex direction="column">
+                <Heading as="h3" fontSize="2xl">
+                  {date.title}
+                </Heading>
+                <Text>{date.description}</Text>
+              </Flex>
+              {date.link && (
+                <Flex>
+                  <ButtonLink
+                    href={date.link}
+                    mt={2}
+                    variant="outline"
+                    isDisabled={index === 0 && !isLive} // Application only
+                  >
+                    {date.linkText}
+                  </ButtonLink>
+                </Flex>
+              )}
+            </Flex>
           </Flex>
-        </Flex>
-      ))}
+        )
+      })}
     </Flex>
   )
 }
