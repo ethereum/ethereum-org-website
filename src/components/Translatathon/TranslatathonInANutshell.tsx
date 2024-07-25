@@ -3,6 +3,8 @@ import { Flex, Heading, Text } from "@chakra-ui/react"
 import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
 
+import Link from "../Link"
+
 import dogeImage from "@/public/images/doge-computer.png"
 import futureImage from "@/public/images/future_transparent.png"
 import settlementImage from "@/public/images/translatathon/settlement.png"
@@ -73,7 +75,11 @@ export const TranslatathonInANutshell = () => {
             Using machine translation is forbidden! All translations will be
             reviewed and evaluated, and participants using machine translation
             will be automatically disqualified and not be eligible to claim
-            prizes (see Terms and conditions)
+            prizes (see{" "}
+            <Link href="/translatathon/terms-and-conditions/">
+              terms and conditions
+            </Link>
+            )
           </Text>
         </Flex>
       </Flex>
@@ -86,7 +92,7 @@ export const TranslatathonInANutshell = () => {
       >
         <Flex w="full" direction="column" gap={2} alignSelf="center">
           <Heading as="h3" fontSize="2xl">
-            Focus on untranslated lines only 
+            Focus on untranslated lines only
           </Heading>
           <Text>
             Translate strings that do not have any suggested translations yet.

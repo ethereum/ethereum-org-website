@@ -53,8 +53,12 @@ const instructions = [
   },
   {
     title: "Claim your prizes",
-    description:
-      "Results will be announced on **August 29th**. Eligible participants will receive an email with prize claim instructions.",
+    description: (
+      <>
+        Results will be announced on <strong>August 29th</strong>. Eligible
+        participants will receive an email with prize claim instructions.
+      </>
+    ),
     ctaLink: null,
   },
 ]

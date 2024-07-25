@@ -19,25 +19,29 @@ The translation process takes place in the ethereum.org project in Crowdin and t
 Translations are suggested directly in the online editor so there is no need to download or upload any files or deliverables. Each translated word is tracked and counted.
 
 **1) Join the project**
+
 - To start contributing, you will need to join the [ethereum.org project in Crowdin](https://crowdin.com/project/ethereum-org)
 - You will need to sign in or create an account - all that is required is an email address and password
 
 **2) Select your language**
+
 - Find your language on the list of target languages and open it by clicking on its name or flag
 - If you would like to translate into a language that isn’t available, reach out to [Ethereum.org Team](https://crowdin.com/profile/ethdotorg) on crowdin or send us an email to translations@ethereum.org and we will add new additional target languages per request
 
 **3) Open an untranslated file**
-- Find the first untranslated file to start translating. The folders containing the source files are based on priority - (1) Homepage, 2) Essential learning, 3) Essentials, 4) Exploring, etc. so you should start translating the first folder that contains untranslated files
+
+- Find the first untranslated file to start translating. The folders containing the source files are based on priority - 1) Homepage, 2) Essential learning, 3) Essentials, 4) Exploring, etc. so you should start translating the first folder that contains untranslated files
 - Each file has a progress indicator showing how much of the translatable content in the file has been translated and approved… if translation progress for any file is below 100%, please translate it
 
 **4) Translate the untranslated strings**
+
 - When you open a file to translate, make sure you are only translating untranslated strings!
-- Each string has a status indicator that shows whether it’s *Translated*, *Untranslated*, or *Approved*. If a source string already has a suggested translation in your language, there is no need to translate it
-- You can also filter strings in the editor to show *Untranslated first* or *Untranslated only*
+- Each string has a status indicator that shows whether it’s _Translated_, _Untranslated_, or _Approved_. If a source string already has a suggested translation in your language, there is no need to translate it
+- You can also filter strings in the editor to show _Untranslated first_ or _Untranslated only_
 
-For a detailed guide to navigating and using the Crowdin online editor, we recommend all Translatathon participants to read our ‘[How to translate](https://ethereum.org/en/contributing/translation-program/how-to-translate/)’ guide.
+For a detailed guide to navigating and using the Crowdin online editor, we recommend all Translatathon participants to read our [How to translate](https://ethereum.org/en/contributing/translation-program/how-to-translate/) guide.
 
-To learn more about the conventions and best practices for translating ethereum.org content, yo can also check out our [translation style guide](https://ethereum.org/en/contributing/translation-program/translators-guide/).
+To learn more about the conventions and best practices for translating ethereum.org content, you can also check out our [translation style guide](https://ethereum.org/en/contributing/translation-program/translators-guide/).
 
 ### Prizes
 
@@ -71,6 +75,7 @@ All translations will also be subject to a thorough review before being added to
     You can translate into any language! It is recommended to only translate into your native language to ensure sufficient quality, but in short, all language available in Crowdin are in scope for the Translatathon.
 
     If you want to translate into a language that isn't available in Crowdin, reach out to us and we will add any language per request.
+
 </ExpandableCard>
 
 <ApplyNow />
