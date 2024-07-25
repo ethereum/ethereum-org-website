@@ -10,7 +10,7 @@ Welcome to the first ever ethereum.org Translatathon!
 
 A translatathon is a collaborative and competitive hackathon-style event where individuals and teams compete for prizes by translating ethereum.org content into different languages.
 
-The goal is to translate website content and help make ethereum.org more accessible to non-English speakers, raise awareness of the importance of localization and the [Translation program](/contributing/translation-program/), onboard new contributors and give back to our community, while fostering a sense of community by teaming up, collaborating on translations, and competing against other teams.
+The goal is to translate website content and help make ethereum.org more accessible to non-English speakers, raise awareness of the importance of localization and the [ethereum.org Translation Program](/contributing/translation-program/), onboard new contributors and give back to our community, while fostering a sense of community by teaming up, collaborating on translations, and competing against other teams.
 
 We invite you to join us in breaking down language barriers and making ethereum.org content available to a truly global audience. By participating in the Translatathon, you’ll have an opportunity to meet and collaborate with like-minded individuals from across the globe, compete for exciting prizes, and contribute to making Ethereum content more accessible to the world!
 
@@ -136,7 +136,7 @@ All translations will also be subject to a thorough review before being added to
 
 ## Terms & conditions {#Terms-and-Conditions}
 
-_The Ethereum.org Translation Competition, also referred to as the “Translatathon”, is an experimental initiative by the ethereum.org team to incentivise and reward contributions to the ethereum.org Translation Program._
+_The Ethereum.org Translation Competition, also referred to as the “Translatathon”, is an experimental initiative by the ethereum.org team to incentivize and reward contributions to the ethereum.org Translation Program._
 
 - <strong>Modification and Termination.</strong> We reserve the right to modify the rules or to terminate the Translatathon at any time, without prior notice. All changes will be effective immediately upon announcement.
 
@@ -146,7 +146,7 @@ _The Ethereum.org Translation Competition, also referred to as the “Translatat
 
 - <strong>Translation Standards.</strong> The use of machine translation tools, as determined by us in our sole discretion, may result in disqualification from the competition. In addition, the submission of incorrect and/or inaccurate translations, as determined by us in our sole discretion, may result in ineligibility for prize consideration. Further, any contributions towards strings that have already been translated or reviewed, as determined by us in our sole discretion, will not be included in the participants’ final score. We reserve the right to make such determinations, which shall be final and binding.
 
-- <strong>Intellectual Property.</strong> Participants agree that by submitting a translation work during the Translatathon, they grant the Ethereum Foundation an irrevocable, non-exclusive, royalty-free licence to use, reproduce, distribute, display, modify, adapt, create derivative works from, and otherwise alter their translation work. Further, participants agree that their translation works may be made publicly available on the ethereum.org website under an open-source licence, including a Creative Commons licence, which allows others to use, share, and build upon the work.
+- <strong>Intellectual Property.</strong> Participants agree that by submitting a translation work during the Translatathon, they grant the Ethereum Foundation an irrevocable, non-exclusive, royalty-free license to use, reproduce, distribute, display, modify, adapt, create derivative works from, and otherwise alter their translation work. Further, participants agree that their translation works may be made publicly available on the ethereum.org website under an open-source license, including a Creative Commons license, which allows others to use, share, and build upon the work.
 
 - <strong>Taxes.</strong> Any tax implications arising from the receipt of prizes are the sole responsibility of the prize recipient.
 
