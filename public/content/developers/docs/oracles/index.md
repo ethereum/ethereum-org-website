@@ -314,7 +314,7 @@ The following are common use-cases for oracles in Ethereum:
 
 A DeFi lending protocol, for example, needs to query current market prices for assets (e.g., ETH) deposited as collateral. This lets the contract determine the value of collateral assets and determine how much it can borrow from the system.
 
-Popular “price oracles” (as they are often called) in DeFi include Chainlink Price Feeds, Compound Protocol’s [Open Price Feed](https://compound.finance/docs/prices), Uniswap’s [Time-Weighted Average Prices (TWAPs)](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles), and [Chronicle Oracles](https://docs.chroniclelabs.org/).
+Popular “price oracles” (as they are often called) in DeFi include Chainlink Price Feeds, Compound Protocol’s [Open Price Feed](https://compound.finance/docs/prices), Uniswap’s [Time-Weighted Average Prices (TWAPs)](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles), and [Maker Oracles](https://docs.makerdao.com/smart-contract-modules/oracle-module).
 
 Builders should understand the caveats that come with these price oracles before integrating them into their project. This [article](https://blog.openzeppelin.com/secure-smart-contract-guidelines-the-dangers-of-price-oracles/) provides a detailed analysis of what to consider when planning to use any of the price oracles mentioned.
 
@@ -388,7 +388,7 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Chainlink](https://chain.link/)** - _Chainlink decentralized oracle networks provide tamper-proof inputs, outputs, and computations to support advanced smart contracts on any blockchain._
 
-**[Chronicle](https://chroniclelabs.org/)** - _Chronicle overcomes the current limitations of transferring data on-chain by developing truly scalable, cost-efficient, decentralized, and verifiable Oracles._
+**[Chronicle](https://chroniclelabs.org/)** - _Chronicle overcomes the current limitations of transferring data on-chain by developing truly scalable, cost-efficient, decentralized, and verifiable oracles._
 
 **[Witnet](https://witnet.io/)** - _Witnet is a permissionless, decentralized, and censorship-resistant oracle helping smart contracts to react to real world events with strong crypto-economic guarantees._
 
