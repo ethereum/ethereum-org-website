@@ -208,7 +208,9 @@ export const TranslatathonLayout = ({
               different languages.
             </Text>
             <Flex>
-              <ButtonLink href="/">Apply to translate</ButtonLink>
+              <ButtonLink href="https://translatathon.paperform.co/">
+                Apply to translate
+              </ButtonLink>
             </Flex>
           </>
         }
