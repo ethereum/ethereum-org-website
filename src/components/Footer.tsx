@@ -17,17 +17,17 @@ import { List, ListItem } from "./ui/list"
 const socialLinks = [
   {
     icon: FaGithub,
-    to: "https://github.com/ethereum/ethereum-org-website",
+    href: "https://github.com/ethereum/ethereum-org-website",
     ariaLabel: "GitHub",
   },
   {
     icon: FaTwitter,
-    to: "https://twitter.com/ethdotorg",
+    href: "https://twitter.com/ethdotorg",
     ariaLabel: "Twitter",
   },
   {
     icon: FaDiscord,
-    to: "https://discord.gg/ethereum-org",
+    href: "https://discord.gg/ethereum-org",
     ariaLabel: "Discord",
   },
 ]
@@ -44,47 +44,47 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
       title: t("learn"),
       links: [
         {
-          to: "/learn/",
+          href: "/learn/",
           text: t("learn-hub"),
         },
         {
-          to: "/what-is-ethereum/",
+          href: "/what-is-ethereum/",
           text: t("what-is-ethereum"),
         },
         {
-          to: "/eth/",
+          href: "/eth/",
           text: t("what-is-ether"),
         },
         {
-          to: "/wallets/",
+          href: "/wallets/",
           text: t("ethereum-wallets"),
         },
         {
-          to: "/web3/",
+          href: "/web3/",
           text: t("web3"),
         },
         {
-          to: "/smart-contracts/",
+          href: "/smart-contracts/",
           text: t("smart-contracts"),
         },
         {
-          to: "/gas/",
+          href: "/gas/",
           text: "Gas fees",
         },
         {
-          to: "/run-a-node/",
+          href: "/run-a-node/",
           text: t("run-a-node"),
         },
         {
-          to: "/security/",
+          href: "/security/",
           text: t("ethereum-security"),
         },
         {
-          to: "/quizzes/",
+          href: "/quizzes/",
           text: t("quizzes-title"),
         },
         {
-          to: "/glossary/",
+          href: "/glossary/",
           text: t("ethereum-glossary"),
         },
       ],
@@ -93,47 +93,47 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
       title: t("use"),
       links: [
         {
-          to: "/guides/",
+          href: "/guides/",
           text: t("guides"),
         },
         {
-          to: "/wallets/find-wallet/",
+          href: "/wallets/find-wallet/",
           text: t("nav-find-wallet-label"),
         },
         {
-          to: "/get-eth/",
+          href: "/get-eth/",
           text: t("get-eth"),
         },
         {
-          to: "/dapps/",
+          href: "/dapps/",
           text: t("decentralized-applications-dapps"),
         },
         {
-          to: "/stablecoins/",
+          href: "/stablecoins/",
           text: t("stablecoins"),
         },
         {
-          to: "/nft/",
+          href: "/nft/",
           text: t("nft-page"),
         },
         {
-          to: "/defi/",
+          href: "/defi/",
           text: t("defi-page"),
         },
         {
-          to: "/dao/",
+          href: "/dao/",
           text: t("dao-page"),
         },
         {
-          to: "/decentralized-identity/",
+          href: "/decentralized-identity/",
           text: t("decentralized-identity"),
         },
         {
-          to: "/staking/",
+          href: "/staking/",
           text: t("stake-eth"),
         },
         {
-          to: "/layer-2/",
+          href: "/layer-2/",
           text: t("layer-2"),
         },
       ],
@@ -142,44 +142,44 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
       title: t("build"),
       links: [
         {
-          to: "/developers/",
+          href: "/developers/",
           text: t("nav-builders-home-label"),
           isPartiallyActive: false,
         },
         {
-          to: "/developers/tutorials/",
+          href: "/developers/tutorials/",
           text: t("tutorials"),
         },
         {
-          to: "/developers/docs/",
+          href: "/developers/docs/",
           text: t("documentation"),
         },
         {
-          to: "/developers/learning-tools/",
+          href: "/developers/learning-tools/",
           text: t("learn-by-coding"),
         },
         {
-          to: "/developers/local-environment/",
+          href: "/developers/local-environment/",
           text: t("set-up-local-env"),
         },
         {
-          to: "/community/grants/",
+          href: "/community/grants/",
           text: t("grants"),
         },
         {
-          to: "/developers/docs/intro-to-ethereum/",
+          href: "/developers/docs/intro-to-ethereum/",
           text: t("nav-docs-foundation-label"),
         },
         {
-          to: "/developers/docs/design-and-ux/",
+          href: "/developers/docs/design-and-ux/",
           text: t("nav-docs-design-label"),
         },
         {
-          to: "/enterprise/",
+          href: "/enterprise/",
           text: t("enterprise-mainnet"),
         },
         {
-          to: "/enterprise/private-ethereum/",
+          href: "/enterprise/private-ethereum/",
           text: t("enterprise-private"),
         },
       ],
@@ -188,43 +188,43 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
       title: t("participate"),
       links: [
         {
-          to: "/community/",
+          href: "/community/",
           text: t("community-hub"),
         },
         {
-          to: "/community/online/",
+          href: "/community/online/",
           text: t("ethereum-online"),
         },
         {
-          to: "/community/events/",
+          href: "/community/events/",
           text: t("ethereum-events"),
         },
         {
-          to: "/contributing/",
+          href: "/contributing/",
           text: t("nav-contribute-label"),
         },
         {
-          to: "/contributing/translation-program/",
+          href: "/contributing/translation-program/",
           text: t("translation-program"),
         },
         {
-          to: "/bug-bounty/",
+          href: "/bug-bounty/",
           text: t("ethereum-bug-bounty"),
         },
         {
-          to: "/foundation/",
+          href: "/foundation/",
           text: t("ethereum-foundation"),
         },
         {
-          to: "https://blog.ethereum.org/",
+          href: "https://blog.ethereum.org/",
           text: t("ef-blog"),
         },
         {
-          to: "https://esp.ethereum.foundation",
+          href: "https://esp.ethereum.foundation",
           text: t("esp"),
         },
         {
-          to: "https://devcon.org/",
+          href: "https://devcon.org/",
           text: t("devcon"),
         },
       ],
@@ -233,31 +233,31 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
       title: t("research"),
       links: [
         {
-          to: "/whitepaper/",
+          href: "/whitepaper/",
           text: t("ethereum-whitepaper"),
         },
         {
-          to: "/roadmap/",
+          href: "/roadmap/",
           text: t("ethereum-roadmap"),
         },
         {
-          to: "/roadmap/security/",
+          href: "/roadmap/security/",
           text: t("nav-roadmap-security-label"),
         },
         {
-          to: "/history/",
+          href: "/history/",
           text: t("nav-history-label"),
         },
         {
-          to: "/community/research/",
+          href: "/community/research/",
           text: t("nav-open-research-label"),
         },
         {
-          to: "/eips/",
+          href: "/eips/",
           text: t("eips"),
         },
         {
-          to: "/governance/",
+          href: "/governance/",
           text: t("ethereum-governance"),
         },
       ],
@@ -266,35 +266,35 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
 
   const dipperLinks: FooterLink[] = [
     {
-      to: "/about/",
+      href: "/about/",
       text: t("about-us"),
     },
     {
-      to: "/assets/",
+      href: "/assets/",
       text: t("ethereum-brand-assets"),
     },
     {
-      to: "/community/code-of-conduct/",
+      href: "/community/code-of-conduct/",
       text: t("nav-code-of-conduct"),
     },
     {
-      to: "/about/#open-jobs",
+      href: "/about/#open-jobs",
       text: t("jobs"),
     },
     {
-      to: "/privacy-policy/",
+      href: "/privacy-policy/",
       text: t("privacy-policy"),
     },
     {
-      to: "/terms-of-use/",
+      href: "/terms-of-use/",
       text: t("terms-of-use"),
     },
     {
-      to: "/cookie-policy/",
+      href: "/cookie-policy/",
       text: t("cookie-policy"),
     },
     {
-      to: "mailto:press@ethereum.org",
+      href: "mailto:press@ethereum.org",
       text: t("contact"),
     },
   ]
@@ -328,7 +328,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
               {section.links.map((link, linkIdx) => (
                 <ListItem key={linkIdx} className="mb-4">
                   <BaseLink
-                    href={link.to}
+                    href={link.href}
                     className={footerLinkClassName}
                     isPartiallyActive={false}
                   >
@@ -342,10 +342,10 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
       </div>
       <div className="flex flex-col items-center justify-center bg-background-highlight p-6 text-sm">
         <div className="flex gap-4">
-          {socialLinks.map(({ to, ariaLabel, icon: Icon }) => (
+          {socialLinks.map(({ href, ariaLabel, icon: Icon }) => (
             <BaseLink
-              key={to}
-              href={to}
+              key={href}
+              href={href}
               hideArrow
               aria-label={ariaLabel}
               className="text-body hover:text-primary"
@@ -355,10 +355,10 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           ))}
         </div>
         <List className="m-0 flex list-none flex-col flex-wrap justify-center p-5 text-sm font-normal sm:flex-row sm:justify-between md:justify-center">
-          {dipperLinks.map(({ to, text }) => (
+          {dipperLinks.map(({ href, text }) => (
             <ListItem key={text} className="px-2 text-center">
               <BaseLink
-                href={to}
+                href={href}
                 className={cn("w-full sm:w-auto", footerLinkClassName)}
                 isPartiallyActive={false}
               >

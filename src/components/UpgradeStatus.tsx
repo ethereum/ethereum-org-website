@@ -1,12 +1,11 @@
 import React from "react"
 import { useTranslation } from "next-i18next"
 import { Heading, VStack } from "@chakra-ui/react"
+import { useColorModeValue } from "@chakra-ui/react"
 
 import type { TranslationKey } from "@/lib/types"
 
 import Text from "./OldText"
-
-import useColorModeValue from "@/hooks/useColorModeValue"
 
 export interface IStyledContainer {
   isShipped: boolean

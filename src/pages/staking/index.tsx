@@ -50,7 +50,7 @@ type BenefitsType = {
   emoji: string
   description: ReactNode
   linkText?: string
-  to?: string
+  href?: string
 }
 
 const PageContainer = (props: ChildOnlyProp) => (
@@ -269,7 +269,7 @@ const StakingPage = ({
       emoji: "🍃",
       description: t("page-staking-benefits-3-description"),
       linkText: t("page-staking-benefits-3-link"),
-      to: "/energy-consumption",
+      href: "/energy-consumption",
     },
   ]
 
@@ -279,7 +279,7 @@ const StakingPage = ({
     items: [
       {
         text: t("page-staking-dropdown-home"),
-        to: "/staking/",
+        href: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -288,7 +288,7 @@ const StakingPage = ({
       },
       {
         text: t("page-staking-dropdown-solo"),
-        to: "/staking/solo/",
+        href: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -297,7 +297,7 @@ const StakingPage = ({
       },
       {
         text: t("page-staking-dropdown-saas"),
-        to: "/staking/saas/",
+        href: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -306,7 +306,7 @@ const StakingPage = ({
       },
       {
         text: t("page-staking-dropdown-pools"),
-        to: "/staking/pools/",
+        href: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -315,7 +315,7 @@ const StakingPage = ({
       },
       {
         text: t("page-staking-dropdown-withdrawals"),
-        to: "/staking/withdrawals/",
+        href: "/staking/withdrawals/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -324,7 +324,7 @@ const StakingPage = ({
       },
       {
         text: t("page-staking-dropdown-dvt"),
-        to: "/staking/dvt/",
+        href: "/staking/dvt/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -404,15 +404,15 @@ const StakingPage = ({
               </H2>
               <CardGrid>
                 {benefits.map(
-                  ({ title, description, emoji, linkText, to }, idx) => (
+                  ({ title, description, emoji, linkText, href }, idx) => (
                     <StyledCard
                       title={title}
                       emoji={emoji}
                       key={idx}
                       description={description}
                     >
-                      {to && linkText && (
-                        <InlineLink href={to}>{linkText}</InlineLink>
+                      {href && linkText && (
+                        <InlineLink href={href}>{linkText}</InlineLink>
                       )}
                     </StyledCard>
                   )

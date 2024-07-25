@@ -200,7 +200,7 @@ const TranslatorAcknowledgements = () => {
         </Text>
         <Box
           as={ActionCard}
-          to="/contributing/translation-program/contributors/"
+          href="/contributing/translation-program/contributors/"
           title={t(
             "page-contributing-translation-program-acknowledgements-our-translators-view-all"
           )}
