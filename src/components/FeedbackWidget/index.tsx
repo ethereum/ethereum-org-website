@@ -33,7 +33,11 @@ const FeedbackWidget = () => {
         open={isOpen}
       >
         <PopoverTrigger asChild>
-          <FixedDot offsetBottom={offsetBottom} isExpanded={isExpanded} />
+          <FixedDot
+            offsetBottom={offsetBottom}
+            isExpanded={isExpanded}
+            suppressScale={isOpen}
+          />
         </PopoverTrigger>
 
         <PopoverContent className="mx-2 w-80 max-w-[calc(100vw_-_1rem)] rounded bg-background p-4 sm:p-8">
