@@ -14,7 +14,7 @@ lang: ru
 
 Кошелек — это приложение, которое поможет вам управлять вашей учетной записью Ethereum. Он использует ваши ключи для отправки и получения транзакций и входа в приложения. Есть десятки различных кошельков на выбор: мобильные, настольные и даже расширения для браузера.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Найти кошелек
 </ButtonLink>
 
@@ -42,7 +42,7 @@ lang: ru
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Хотите узнать больше?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Посмотрите другие наши руководства
   </ButtonLink>
 </InfoBanner>

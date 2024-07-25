@@ -392,7 +392,7 @@ export const getTutorialsData = (locale: string): ITutorial[] => {
       const frontmatter = data as Frontmatter
 
       return {
-        to: join(`/${locale}/developers/tutorials`, dir),
+        href: join(`/${locale}/developers/tutorials`, dir),
         title: frontmatter.title,
         description: frontmatter.description,
         author: frontmatter.author || "",

@@ -18,15 +18,15 @@ import {
 
 // Traverse all links to find page id
 const getPageTitleId = (
-  to: string,
+  href: string,
   links: Array<DeveloperDocsLink>
 ): TranslationKey => {
   for (const link of links) {
-    if (link.to === to) {
+    if (link.href === href) {
       return link.id
     }
     if (link.items) {
-      const pageTitle = getPageTitleId(to, link.items)
+      const pageTitle = getPageTitleId(href, link.items)
       if (pageTitle) {
         return pageTitle
       }
@@ -95,12 +95,12 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
     return (
       <Box>
         <LinkContainer>
-          {item.to && (
-            <SideNavLink to={item.to} isPartiallyActive={false}>
+          {item.href && (
+            <SideNavLink href={item.href} isPartiallyActive={false}>
               {t(item.id)}
             </SideNavLink>
           )}
-          {!item.to && (
+          {!item.href && (
             <Box w="full" cursor="pointer" onClick={() => setIsOpen(!isOpen)}>
               {t(item.id)}
             </Box>
@@ -137,7 +137,7 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
   return (
     <Box onClick={toggle}>
       <LinkContainer>
-        <SideNavLink to={item.to} isPartiallyActive={false}>
+        <SideNavLink href={item.href} isPartiallyActive={false}>
           {t(item.id)}
         </SideNavLink>
       </LinkContainer>

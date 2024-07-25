@@ -332,7 +332,7 @@ A [Beacon lánc](/roadmap/beacon-chain/) biztonságos elindításához 16384 dar
 
 [Olvassa el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   A Beacon lánc
 </DocLink>
 
@@ -348,7 +348,7 @@ A letétbe helyezési szerződés vezette be a [letétbe helyezés](/glossary/#s
 
 [Olvassa el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Letétbe helyezés
 </DocLink>
 
@@ -618,6 +618,6 @@ A Sárgakönyv, melynek a szerzője Dr. Gavin Wood, az Ethereum protokoll műsza
 
 A bemutatkozó kiadvány, melyet Vitalik Buterin, az Ethereum alapítója adott ki 2013-ban, a projekt 2015-ös indulása előtt.
 
-<DocLink to="/whitepaper/">
+<DocLink href="/whitepaper/">
   Fehérkönyv
 </DocLink>

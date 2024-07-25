@@ -110,11 +110,11 @@ Rozšíření prohlížeče, jako jsou rozšíření pro Chrome nebo doplňky pr
 
 Jedním z největších důvodů, proč se lidé nechávají v kryptu podvádět, je obecně nedostatečné porozumění. Pokud například nechápete, že síť Ethereum je decentralizovaná a nikdo ji nevlastní, můžete se snadno stát obětí někoho, kdo se vydává za pracovníka zákaznického servisu a slibuje vám vrácení ztracených ETH výměnou za vaše privátní klíče. Vzdělávat se v oblasti fungování Etherea se vyplatí.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Co je to Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Co je Ether?
 </DocLink>
 <Divider />
@@ -127,7 +127,7 @@ Jedním z největších důvodů, proč se lidé nechávají v kryptu podvádět
 
 Privátní klíč k vaší peněžence slouží jako heslo k vaší Ethereum peněžence. Je to jediná věc, která brání tomu, aby někdo, kdo zná adresu vaší peněženky, vybral z vašeho účtu veškerá aktiva!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Co je Ethereum peněženka?
 </DocLink>
 

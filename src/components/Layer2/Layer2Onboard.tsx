@@ -289,7 +289,7 @@ const Layer2Onboard = ({
                 } ${t("layer-2-onboard-wallet-selected-2")}`}</b>
               </Text>
               <Text>{selectedL2.bridgeWallets.join(", ")}</Text>
-              <ButtonLink to={selectedL2.bridge} mt={10}>
+              <ButtonLink href={selectedL2.bridge} mt={10}>
                 {`${selectedL2.name} ${t("layer-2-bridge")}`}
               </ButtonLink>
             </SelectedContainer>
@@ -317,7 +317,7 @@ const Layer2Onboard = ({
                   </UnorderedList>
                 </Flex50>
               </TwoColumnContent>
-              <ButtonLink to={selectedExchange.url}>
+              <ButtonLink href={selectedExchange.url}>
                 {`${t("layer-2-go-to")} ${selectedExchange.name}`}
               </ButtonLink>
             </SelectedContainer>
@@ -331,7 +331,7 @@ const Layer2Onboard = ({
               <Text>{selectedCexOnboard.cex_support.join(", ")}</Text>
               <H3>Supported layer 2s</H3>
               <Text>{selectedCexOnboard.network_support.join(", ")}</Text>
-              <ButtonLink to={selectedCexOnboard.url}>
+              <ButtonLink href={selectedCexOnboard.url}>
                 {`${t("layer-2-go-to")} ${selectedCexOnboard.name}`}
               </ButtonLink>
             </SelectedContainer>

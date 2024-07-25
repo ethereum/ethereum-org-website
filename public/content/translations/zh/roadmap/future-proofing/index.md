@@ -17,7 +17,7 @@ template: roadmap
 
 在以太坊的多个地方使用的、用于生成密码学密钥的[“KZG”承诺方案](/roadmap/danksharding/#what-is-kzg)面临量子计算时存在漏洞。 目前，这个问题是通过“可信设置”来规避的，即多个用户生成的随机性无法被量子计算机逆向工程。 然而，理想的解决方案就是采用量子安全加密技术。 可以替代 BLS 方案的高效方法主要有两种：[基于 STARK ](https://hackmd.io/@vbuterin/stark_aggregation)和[基于点阵的](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175)签名方案。 **这些方案仍处在研究和原型开发阶段**。
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> 阅读了解 KZG 和可信设置的相关内容。</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> 阅读了解 KZG 和可信设置的相关内容。</ButtonLink>
 
 ## 简化以太坊，提高以太坊效率 {#simpler-more-efficient-ethereum}
 

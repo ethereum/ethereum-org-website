@@ -579,7 +579,7 @@ export type PhoneScreenProps = SimulatorNavProps & {
 }
 export type CommunityConference = {
   title: string
-  to: string
+  href: string
   location: string
   description: string
   startDate: string
@@ -732,7 +732,7 @@ export type NetworkUpgradeData = Record<string, NetworkUpgradeDetails>
 
 // Footer
 export type FooterLink = {
-  to: string
+  href: string
   text: TranslationKey
   isPartiallyActive?: boolean
 }

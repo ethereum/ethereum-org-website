@@ -64,7 +64,7 @@ Adreesị gị ga-abụ otu na nkwekọrịta Ethereum niile. I kwesighị ịde
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Chọrọ ịmụtakwu?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Hụ ntuziaka anyị ndị ọzọ
   </ButtonLink>
 </InfoBanner>

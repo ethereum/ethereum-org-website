@@ -110,11 +110,11 @@ Chrome uzantıları veya Firefox Eklentileri gibi tarayıcı uzantıları, kulla
 
 İnsanların kriptoda dolandırılmalarının en büyük nedenlerinden biri genellikle anlayış eksikliğidir. Örneğin, Ethereum ağının merkezi olmadığını ve kimseye ait olmadığını anlamıyorsanız, özel anahtarlarınız karşılığında kayıp ETH'nizi geri vermeyi vaat eden bir müşteri hizmetleri temsilcisi gibi davranan biri tarafından avlanmak kolaydır. Kendinizi Ethereum'un nasıl çalıştığı konusunda eğitmek değerli bir yatırımdır.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Ethereum nedir?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Ether nedir?
 </DocLink>
 <Divider />
@@ -127,7 +127,7 @@ Chrome uzantıları veya Firefox Eklentileri gibi tarayıcı uzantıları, kulla
 
 Cüzdanınızın özel anahtarı, Ethereum cüzdanınız için bir şifre görevi görür. Cüzdan adresinizi bilen birinin hesabınızın tüm varlıklarını ele geçirmesini engelleyen tek şey budur!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Ethereum cüzdanı nedir?
 </DocLink>
 

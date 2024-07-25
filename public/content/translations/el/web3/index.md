@@ -63,7 +63,7 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Μάθετε περισσότερα για τα NFT</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     Περισσότερα για τα NFT
   </ButtonLink>
 </InfoBanner>
@@ -88,7 +88,7 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Μάθετε περισσότερα για τους DAO</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     Περισσότερα για τους DAO
   </ButtonLink>
 </InfoBanner>
@@ -103,7 +103,7 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 Η υποδομή πληρωμών του Web2 βασίζεται σε τράπεζες και διαχειριστές πληρωμών, εξαιρώντας τα άτομα χωρίς τραπεζικούς λογαριασμούς ή εκείνων που τυχαίνει να ζουν σε διαφορετική χώρα. Το Web3 χρησιμοποιεί ψηφιακά στοιχεία όπως το [ETH](/glossary/#ether) για την αποστολή χρημάτων απευθείας στο πρόγραμμα περιήγησης και δεν απαιτεί κάποιο αξιόπιστο τρίτο μέρος.
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   Περισσότερα για το ETH
 </ButtonLink>
 

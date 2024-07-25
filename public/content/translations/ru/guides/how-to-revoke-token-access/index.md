@@ -49,7 +49,7 @@ lang: ru
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Хотите узнать больше?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Посмотрите другие наши руководства
   </ButtonLink>
 </InfoBanner>

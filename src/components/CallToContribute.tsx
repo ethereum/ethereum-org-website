@@ -68,18 +68,18 @@ const CallToContribute = ({ editPath }: CallToContributeProps) => {
         </DescriptionParagraph>
         <DescriptionParagraph>
           <Translation id="page-developers-docs:page-calltocontribute-desc-3" />{" "}
-          <InlineLink to="https://www.notion.so/efdn/Writer-template-4b40d196cde7422ca6a2091de33550bd">
+          <InlineLink href="https://www.notion.so/efdn/Writer-template-4b40d196cde7422ca6a2091de33550bd">
             <Translation id="page-developers-docs:page-calltocontribute-link" />
           </InlineLink>
         </DescriptionParagraph>
         <DescriptionParagraph>
           <Translation id="page-developers-docs:page-calltocontribute-desc-4" />{" "}
-          <InlineLink to="https://discord.gg/ethereum-org">
+          <InlineLink href="https://discord.gg/ethereum-org">
             <Translation id="page-developers-docs:page-calltocontribute-link-2" />
           </InlineLink>{" "}
         </DescriptionParagraph>
         <ButtonLink
-          to={editPath}
+          href={editPath}
           leftIcon={
             <Icon
               fill="background.base"

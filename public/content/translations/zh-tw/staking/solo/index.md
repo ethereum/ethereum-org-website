@@ -190,7 +190,7 @@ summaryPoints:
 
 要解鎖並拿回全部餘額，你還必須完成退出驗證者的過程。
 
-<ButtonLink to="/staking/withdrawals/">更多關於提取質押代幣的資訊</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">更多關於提取質押代幣的資訊</ButtonLink>
 </ExpandableCard>
 
 ## 延伸閱讀 {#further-reading}

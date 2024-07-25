@@ -22,7 +22,7 @@ El programa de traducción es un esfuerzo colaborativo para traducir ethereum.or
 
 _Únase a [ethereum.org Discord](/discord/) para colaborar en traducciones, hacer preguntas, compartir comentarios e ideas o unirse a un grupo de traducción._
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Empezar a traducir
 </ButtonLink>
 

@@ -27,6 +27,6 @@ Conteúdos de aprendizado serão avaliados pelos seguintes critérios:
 
 Se você deseja adicionar uma fonte de conteúdo ao ethereum.org que atende aos critérios, abra um tíquete no GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
   Criar um novo problema
 </ButtonLink>
