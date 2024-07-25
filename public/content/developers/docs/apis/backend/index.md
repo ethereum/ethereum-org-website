@@ -92,6 +92,9 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
 
+**Etherscan - Block Explorer and Transaction APIs**
+- [Documentation](https://docs.etherscan.io/)
+
 ### Development tools {#development-tools}
 
 **ethers-kt -** **_Async, high-performance Kotlin/Java/Android library for EVM-based blockchains._**
