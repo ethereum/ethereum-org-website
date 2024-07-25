@@ -4,13 +4,23 @@ import * as SheetPrimitive from "@radix-ui/react-dialog"
 
 import { cn } from "@/lib/utils/cn"
 
+import { Button } from "../../../tailwind/ui/buttons/Button"
+
 const Sheet = SheetPrimitive.Root
 
 const SheetTrigger = SheetPrimitive.Trigger
 
-const SheetClose = SheetPrimitive.Close
-
 const SheetPortal = SheetPrimitive.Portal
+
+const SheetClose = React.forwardRef<
+  React.ElementRef<typeof SheetPrimitive.Close>,
+  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Close>
+>((props, ref) => (
+  <SheetPrimitive.Close ref={ref} asChild>
+    <Button variant="ghost" isSecondary {...props} />
+  </SheetPrimitive.Close>
+))
+SheetClose.displayName = SheetPrimitive.Close.displayName
 
 const SheetOverlay = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Overlay>,

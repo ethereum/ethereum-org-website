@@ -2,13 +2,12 @@ import { useState } from "react"
 import { useRouter } from "next/router"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 
-import { Button } from "@/components/ui/button"
-
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { cleanPath } from "@/lib/utils/url"
 
 import { BaseLink } from "../../../../tailwind/Link"
+import { Button } from "../../../../tailwind/ui/buttons/Button"
 import type { Level, NavItem, NavSectionKey } from "../types"
 
 import ExpandIcon from "./ExpandIcon"

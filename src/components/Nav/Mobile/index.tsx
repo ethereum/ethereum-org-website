@@ -1,4 +1,3 @@
-import { ButtonProps } from "@/components/ui/button"
 import {
   Sheet,
   SheetContent,
@@ -7,6 +6,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 
+import { ButtonProps } from "../../../../tailwind/ui/buttons/Button"
 import type { NavSections } from "../types"
 
 import HamburgerButton from "./HamburgerButton"
