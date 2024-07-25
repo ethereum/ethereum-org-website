@@ -4,7 +4,11 @@ import { ButtonLink } from "@/components/Buttons"
 
 import { CROWDIN_PROJECT_URL } from "@/lib/constants"
 
-import { APPLICATION_URL } from "./constants"
+import {
+  APPLICATION_END_DATE,
+  APPLICATION_START_DATE,
+  APPLICATION_URL,
+} from "./constants"
 
 const instructions = [
   {
@@ -56,6 +60,11 @@ const instructions = [
 ]
 
 export const StepByStepInstructions = () => {
+  const appStartDate = new Date(APPLICATION_START_DATE)
+  const appEndDate = new Date(APPLICATION_END_DATE)
+  const todaysDate = new Date()
+  const appLive = todaysDate >= appStartDate && todaysDate <= appEndDate
+
   return (
     <Flex w="full" flexDir="column">
       {instructions.map((instruction, index) => (
@@ -97,7 +106,11 @@ export const StepByStepInstructions = () => {
           </Flex>
           {instruction.ctaLink ? (
             <Flex height="42px">
-              <ButtonLink href={instruction.ctaLink} variant="outline">
+              <ButtonLink
+                href={instruction.ctaLink}
+                variant="outline"
+                isDisabled={instruction.ctaLink === APPLICATION_URL && !appLive}
+              >
                 {instruction.ctaLabel}
               </ButtonLink>
             </Flex>

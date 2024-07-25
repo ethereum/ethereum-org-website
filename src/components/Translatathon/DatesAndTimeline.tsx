@@ -112,7 +112,7 @@ export const DatesAndTimeline = () => {
                     href={date.link}
                     mt={2}
                     variant="outline"
-                    isDisabled={index === 0 && !isLive} // Application only
+                    isDisabled={date.link === APPLICATION_URL && !isLive} // Application only
                   >
                     {date.linkText}
                   </ButtonLink>
