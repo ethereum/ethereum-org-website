@@ -167,7 +167,7 @@ const WalletsPage = () => {
       locale === "en"
         ? [
             {
-              to: "/wallets/find-wallet/",
+              href: "/wallets/find-wallet/",
               content: t("page-wallets-find-wallet-link"),
               matomo: {
                 eventCategory: "wallet hero buttons",
@@ -176,7 +176,7 @@ const WalletsPage = () => {
               },
             },
             {
-              to: `#${SIMULATOR_ID}`,
+              href: `#${SIMULATOR_ID}`,
               content: "How to use a wallet",
               matomo: {
                 eventCategory: "wallet hero buttons",
@@ -188,7 +188,7 @@ const WalletsPage = () => {
           ]
         : [
             {
-              to: "/wallets/find-wallet/",
+              href: "/wallets/find-wallet/",
               content: t("page-wallets-find-wallet-link"),
               matomo: {
                 eventCategory: "wallet hero buttons",

@@ -104,6 +104,7 @@ import pooltogether from "@/public/images/dapps/pooltogether.png"
 import pwn from "@/public/images/dapps/pwn.png"
 import radicle from "@/public/images/dapps/radicle.png"
 import rarible from "@/public/images/dapps/rarible.png"
+import requestFinance from "@/public/images/dapps/requestFinance.png"
 import rotki from "@/public/images/dapps/rotki.png"
 import rubic from "@/public/images/dapps/rubic.png"
 import sablier from "@/public/images/dapps/sablier.png"
@@ -828,6 +829,13 @@ const DappsPage = () => {
       image: sablier,
       alt: t("page-dapps-sablier-logo-alt"),
     },
+    {
+      title: "Request Finance",
+      description: t("page-dapps-dapp-description-request-finance"),
+      link: "https://request.finance",
+      image: requestFinance,
+      alt: t("page-dapps-request-finance-logo-alt"),
+    },
   ]
 
   const investments = [
@@ -1325,7 +1333,7 @@ const DappsPage = () => {
     buttons: [
       {
         content: t("page-dapps-explore-dapps-title"),
-        to: "#beginner",
+        href: "#beginner",
         matomo: {
           eventCategory: "dapp hero buttons",
           eventAction: "click",
@@ -1334,7 +1342,7 @@ const DappsPage = () => {
       },
       {
         content: t("page-dapps-what-are-dapps"),
-        to: "#what-are-dapps",
+        href: "#what-are-dapps",
         variant: "outline",
         matomo: {
           eventCategory: "dapp hero buttons",
@@ -1910,10 +1918,10 @@ const DappsPage = () => {
             </Text>
             <Text>{t("page-dapps-how-dapps-work-p2")}</Text>
             <Text>{t("page-dapps-how-dapps-work-p3")}</Text>
-            <DocLink to="/developers/docs/dapps/">
+            <DocLink href="/developers/docs/dapps/">
               {t("page-dapps-docklink-dapps")}
             </DocLink>
-            <DocLink to="/developers/docs/smart-contracts/">
+            <DocLink href="/developers/docs/smart-contracts/">
               {t("page-dapps-docklink-smart-contracts")}
             </DocLink>
           </LeftColumn>

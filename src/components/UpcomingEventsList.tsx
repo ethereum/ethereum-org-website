@@ -124,12 +124,12 @@ const UpcomingEventsList = () => {
       >
         {orderedUpcomingEvents
           ?.slice(0, maxRange)
-          .map(({ title, to, formattedDetails, date, location }, idx) => {
+          .map(({ title, href, formattedDetails, date, location }, idx) => {
             return (
               <EventCard
                 key={idx}
                 title={title}
-                to={to}
+                href={href}
                 date={date}
                 description={formattedDetails}
                 location={location}

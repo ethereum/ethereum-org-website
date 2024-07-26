@@ -1,10 +1,15 @@
-import { Box, Flex, List, ListItem, VisuallyHidden } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  List,
+  ListItem,
+  useColorModeValue,
+  VisuallyHidden,
+} from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
 import { Image, type ImageProps } from "@/components/Image"
 import OldHeading from "@/components/OldHeading"
-
-import useColorModeValue from "@/hooks/useColorModeValue"
 
 type Content = {
   title: string

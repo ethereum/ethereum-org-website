@@ -3644,7 +3644,7 @@
     pump "^3.0.0"
     tar-fs "^2.1.1"
 
-"@netlify/plugin-nextjs@^5.0.0":
+"@netlify/plugin-nextjs@^5.5.1":
   version "5.5.1"
   resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-5.5.1.tgz#463ac58b59a1732f6de7dd7ad9fda484e4509f6f"
   integrity sha512-E0LP4HI6F1Us0va+rCpu9ecJh1GumoH/plQDvAteZv0C4nSP19tn1H+tJUjpVVDsoj6MWIB97ssMh8K0gen1zA==

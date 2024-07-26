@@ -116,7 +116,7 @@ export interface IExternalTutorial {
 }
 
 export interface ITutorial {
-  to: string
+  href: string
   title: string
   description: string
   author: string
@@ -437,8 +437,8 @@ const TutorialPage = ({
                 boxShadow: "0 0 1px var(--eth-colors-primary-base)",
                 bg: "tableBackgroundHover",
               }}
-              key={tutorial.to}
-              href={tutorial.to ?? undefined}
+              key={tutorial.href}
+              href={tutorial.href ?? undefined}
               hideArrow
             >
               <Flex

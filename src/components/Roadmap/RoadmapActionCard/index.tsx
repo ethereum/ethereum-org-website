@@ -16,7 +16,7 @@ import scaling from "@/public/images/roadmap/roadmap-transactions.png"
 import userExperience from "@/public/images/roadmap/roadmap-ux.png"
 
 type RoadmapActionCardProps = {
-  to: string
+  href: string
   alt: string
   image: string
   title: string
@@ -25,7 +25,7 @@ type RoadmapActionCardProps = {
 }
 
 const RoadmapActionCard = ({
-  to,
+  href,
   alt,
   image,
   title,
@@ -55,7 +55,7 @@ const RoadmapActionCard = ({
           {title}
         </Heading>
         <Text flex="1">{description}</Text>
-        <LinkOverlay as={ButtonLink} href={to}>
+        <LinkOverlay as={ButtonLink} href={href}>
           {buttonText}
         </LinkOverlay>
       </Flex>
