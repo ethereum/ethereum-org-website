@@ -619,6 +619,11 @@ export type ChainIdNetworkResponse = {
   }
 }
 
+export type Chain = Pick<
+  ChainIdNetworkResponse,
+  "name" | "infoURL" | "chainId" | "nativeCurrency" | "chain"
+>
+
 export type ChainName = (typeof chains)[number]["name"]
 
 // Wallets
