@@ -583,6 +583,41 @@ export type CommunityConference = {
   imageUrl: string
 }
 
+// Chains
+export type ChainIdNetworkResponse = {
+  name: string
+  chain: string
+  title?: string
+  icon?: string
+  rpc: string[]
+  features?: { name: string }[]
+  faucets?: string[]
+  nativeCurrency: {
+    name: string
+    symbol: string
+    decimals: number
+  }
+  infoURL: string
+  shortName: string
+  chainId: number
+  networkId: number
+  redFlags?: string[]
+  slip44?: number
+  ens?: { registry: string }
+  explorers?: {
+    name: string
+    url: string
+    icon?: string
+    standard: string
+  }[]
+  status?: "deprecated" | "active" | "incubating"
+  parent?: {
+    type: "L2" | "shard"
+    chain: string
+    bridges?: { url: string }[]
+  }
+}
+
 // Wallets
 export interface WalletData {
   last_updated: string
