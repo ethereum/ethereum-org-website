@@ -52,6 +52,9 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
+**Etherscan - Block Explorer and Transaction APIs**
+- [Documentation](https://docs.etherscan.io/)
+
 **GetBlock-** **_Blockchain-as-a-service for Web3 development_**
 
 - [GetBlock.io](https://getblock.io/)
@@ -91,9 +94,6 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [GitHub](https://github.com/zmok-io)
 - [Documentation](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
-
-**Etherscan - Block Explorer and Transaction APIs**
-- [Documentation](https://docs.etherscan.io/)
 
 ### Development tools {#development-tools}
 
