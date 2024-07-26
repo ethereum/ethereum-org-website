@@ -3645,9 +3645,9 @@
     tar-fs "^2.1.1"
 
 "@netlify/plugin-nextjs@^5.0.0":
-  version "5.3.2"
-  resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-5.3.2.tgz#c8faf96631d2eaf35c0f1c0afa5b4da3d3cefdc0"
-  integrity sha512-DC3sNpWnnhIfJxAfqdktbkU2LxYUDKCVQnxqEhJSyheQ5G9ILu1spUKa5pEe8X2EvtH8FwtMAc7Gi5h6pft22A==
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-5.5.1.tgz#463ac58b59a1732f6de7dd7ad9fda484e4509f6f"
+  integrity sha512-E0LP4HI6F1Us0va+rCpu9ecJh1GumoH/plQDvAteZv0C4nSP19tn1H+tJUjpVVDsoj6MWIB97ssMh8K0gen1zA==
 
 "@next/env@14.2.3":
   version "14.2.3"
