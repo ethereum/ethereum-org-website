@@ -20,6 +20,7 @@ import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import { SimulatorNav } from "@/components/Simulator/interfaces"
 
+import chains from "@/data/chains"
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
@@ -618,8 +619,10 @@ export type ChainIdNetworkResponse = {
   }
 }
 
+export type ChainName = (typeof chains)[number]["name"]
+
 // Wallets
-export interface WalletData {
+export type WalletData = {
   last_updated: string
   name: string
   image: StaticImageData
@@ -652,6 +655,7 @@ export interface WalletData {
   swaps: boolean
   multichain?: boolean
   layer_2: boolean
+  supported_chains?: ChainName[]
   gas_fee_customization: boolean
   ens_support: boolean
   erc_20_support: boolean
