@@ -1,13 +1,7 @@
 import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdSearch, MdWbSunny } from "react-icons/md"
-import {
-  Button,
-  ButtonProps,
-  Icon,
-  MenuButton,
-  useColorModeValue,
-} from "@chakra-ui/react"
+import { Button, ButtonProps, Icon, MenuButton } from "@chakra-ui/react"
 
 import LanguagePicker from "@/components/LanguagePicker"
 
@@ -15,6 +9,8 @@ import { MOBILE_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
 
 import FooterButton from "./FooterButton"
 import FooterItemText from "./FooterItemText"
+
+import useColorModeValue from "@/hooks/useColorModeValue"
 
 /**
  * This is necessary to be backwards compatible with the old FooterButton
