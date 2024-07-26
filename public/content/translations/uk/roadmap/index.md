@@ -12,7 +12,7 @@ buttons:
     toId: what-changes-are-coming
   - 
     label: Минулі оновлення
-    to: /history/
+    href: /history/
     variant: начерк
 ---
 
