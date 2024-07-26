@@ -39,6 +39,11 @@ import UnstoppableWalletImage from "@/public/images/wallets/unstoppable.png"
 import XDEFIImage from "@/public/images/wallets/xdefi.png"
 import ZerionImage from "@/public/images/wallets/zerion.png"
 
+/**
+ * See src/data/chains.ts for available chains and names for use within
+ * the optional `supported_chains` array.
+ */
+
 export const walletsData: WalletData[] = [
   {
     last_updated: "2022-06-22",
@@ -1293,6 +1298,27 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "",
+    supported_chains: [
+      "Arbitrum One",
+      "Astar zkEVM",
+      "Aurora Mainnet",
+      "Base",
+      "Blast",
+      "Boba Network",
+      "Cyber Mainnet",
+      "DBK Chain",
+      "Fraxtal",
+      "Karak Mainnet",
+      "Metis Andromeda Mainnet",
+      "Mint Mainnet",
+      "Mode",
+      "Linea",
+      "OP Mainnet",
+      "Polygon zkEVM",
+      "Scroll",
+      "zkSync Mainnet",
+      "Zora",
+    ],
   },
   {
     last_updated: "2022-08-31",
