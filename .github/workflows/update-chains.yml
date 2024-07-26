@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '20 16 * * FRI' # Runs every Friday at 16:20 UTC
   workflow_dispatch: # Can be dispatched manually
+  push:
+    branches:
+      - wallet-network-schema
 
 jobs:
   update-chains:
