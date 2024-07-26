@@ -80,10 +80,7 @@ export const MdxEnergyConsumpData = () => (
         <Td textAlign="end">131</Td>
         <Td textAlign="end">50,000x</Td>
         <Td>
-          <InlineLink
-            href="https://ccaf.io/cbnsi/cbeci/comparisons"
-            dir="ltr"
-          >
+          <InlineLink href="https://ccaf.io/cbnsi/cbeci/comparisons" dir="ltr">
             source
           </InlineLink>
         </Td>
@@ -93,10 +90,7 @@ export const MdxEnergyConsumpData = () => (
         <Td textAlign="end">131</Td>
         <Td textAlign="end">50,000x</Td>
         <Td>
-          <InlineLink
-            href="https://ccaf.io/cbnsi/cbeci/comparisons"
-            dir="ltr"
-          >
+          <InlineLink href="https://ccaf.io/cbnsi/cbeci/comparisons" dir="ltr">
             source
           </InlineLink>
         </Td>
