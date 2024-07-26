@@ -14,7 +14,7 @@ import MenuBody from "./MenuBody"
 import MenuFooter from "./MenuFooter"
 import MenuHeader from "./MenuHeader"
 
-import useDisclosure from "@/hooks/useDisclosure"
+import { useDisclosure } from "@/hooks/useDisclosure"
 
 type MobileNavMenuProps = ButtonProps & {
   toggleColorMode: () => void

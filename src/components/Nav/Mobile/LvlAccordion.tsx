@@ -57,7 +57,7 @@ const LvlAccordion = ({
             <AccordionItem
               key={label}
               value={label}
-              className={cn("border-t border-body-light last:border-b")}
+              className="border-t border-body-light last:border-b"
             >
               <AccordionPrimitive.Trigger asChild>
                 {/* TODO: replace this with ButtonLink when is implemented */}
