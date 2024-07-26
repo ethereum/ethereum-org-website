@@ -24,7 +24,7 @@ const AccordionTrigger = ({
       <Heading>
         <AccordionPrimitive.Trigger
           className={cn(
-            "group flex flex-1 items-center justify-start gap-2 px-4 py-4 text-start font-medium transition-all hover:bg-background-highlight focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover md:px-4 [&[data-state=open]]:bg-background-highlight [&[data-state=open]]:text-primary-high-contrast",
+            "group flex flex-1 items-center justify-start gap-2 rounded px-4 py-4 text-start font-medium transition-all hover:bg-background-highlight focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover md:px-4 [&[data-state=open]]:bg-background-highlight [&[data-state=open]]:text-primary-high-contrast",
             className
           )}
           {...props}
