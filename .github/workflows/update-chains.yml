@@ -39,10 +39,16 @@ jobs:
           echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
           git checkout -b $BRANCH_NAME
           git add -A
+          if git diff-index --quiet HEAD --; then
+            echo "No changes to commit"
+            exit 0
+          fi 
           git commit -m 'Update chains data'
           git push origin $BRANCH_NAME
+          echo "CHANGES=true" >> $GITHUB_ENV
 
       - name: Create Pull Request
+        if: env.CHANGES == 'true'
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
