@@ -21,8 +21,11 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: Install ts-node
+        run: yarn global add ts-node
+
       - name: Update chains data
-        run: ts-node -O '{ "module": "commonjs" }' src/scripts/update-chains.ts
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/update-chains.ts
 
       - name: Commit changes
         id: commit-changes
@@ -32,8 +35,9 @@ jobs:
           BRANCH_NAME=update-chains-$(date +%Y%m%dT%H%M%S)
           echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
           git checkout -b $BRANCH_NAME
-          git add .
+          git add -A
           git commit -m 'Update chains data'
+          git push origin $BRANCH_NAME
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
