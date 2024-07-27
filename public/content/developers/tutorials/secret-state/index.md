@@ -107,13 +107,13 @@ To verify the integrity of this dapp, it is not enough to verify the Solidity co
 Clients do not *have* to run this flow, the game works without it, but without this step you can't know if the zero knowledge proofs actually prove what you need.
 
 
-## The Zokrates programs {#zokrates-programs}
+## Using Zokrates {#using-zokrates}
 
 ### Hashing the map {#hashing-map}
 
 We could find a JavaScript or Solidity code to implement [the best Zokrates hash function](https://zokrates.github.io/toolbox/stdlib.html#pedersen-hashes). However, then we'd have to ensure the input format is exactly the same as that calculated by Zokrates. It is easier to just use a Zokrates program to calculate the hash of a map. So we need two different Zokrates programs, one to just calculate the hash of a map (`hash`) and one to actually create a zero-knowledge proof of the result of the dig in a location on the map (`dig`).
 
-#### The hash function {#hash-function}
+### The hash function {#hash-function}
 
 This is the function that calculates the hash of a map. We'll go over this code line by line.
 
@@ -175,24 +175,24 @@ The hash function is imported as `pederhash`. It takes an array of 512 booleans,
 
 Ideally, we'd prefer to return the hash as a single 256-bit value. However, Zokrates does not work with those values. The primary arithmetic type of Zokrates is [`field`](https://zokrates.github.io/language/types.html#field), whose value is between zero and a large (254-bit) prime number. It cannot return a single 256-bit value, so we use an array instead.
 
-#### The hash program {#hash-program}
+### The hash program {#hash-program}
 
 The server needs to call `hashMap` directly to create game identifiers. However, Zokrates can only call the `main` function on a program to start, so we create a program with a `main` that calls the hash function.
 
 ```
-${zokratesSource.hashFragment}
+${hashFragment}
 
 def main(bool[${width+2}][${height+2}] map) -> u32[8] {
    return hashMap(map);
 }
 ```
 
-#### The dig program {#dig-program}
+### The dig program {#dig-program}
 
 This is the heart of the zero-knowledge part of the application, where we produce the proofs that are used to verify dig results.
 
 ```
-${zokratesSource.hashFragment}
+${hashFragment}
 
 // The number of mines in location (x,y)
 def map2mineCount(bool[${width+2}][${height+2}] map, u32 x, u32 y) -> u8 {
@@ -224,7 +224,7 @@ By default Zokrates proofs include their inputs. It does no good to know there a
 This opens another venue for abuse. The prover could use the correct coordinates, but create a map with any desired number of mines around the location, and possibly at the location itself. To prevent this abuse, we make the zero knowledge proof include the hash of the map, which is the game identifier.
 
 ```
-   return (hashMap(map) ,
+   return (hashMap(map),
 ```
 
 The return value here is a tuple that includes the map hash array as well as the dig result.
@@ -246,14 +246,147 @@ We use 255 as a special value in case the location itself has a bomb.
 
 If the player hasn't hit a mine, add the mine counts for the area around the location and return that.
 
+### Using Zokrates from TypeScript {#using-zokrates-from-typescript}
 
-### The on-chain component {#onchain}
+Zokrates has a command line interface, but in this program we use it in the [TypeScript code](https://zokrates.github.io/toolbox/zokrates_js.html). Using [TypeScript](https://www.typescriptlang.org/), which gets compiled to JavaScript, lets us use the same code on the server and the client.
+
+The library that contains the Zokrates definitions is called `zero-knowledge.ts`.
+
+** GOON    LINK TO GITHUB GOES HERE ***
+
+```typescript
+import { initialize as zokratesInitialize } from "zokrates-js";
+```
+
+Import the [Zokrates JavaScript bindings](https://zokrates.github.io/toolbox/zokrates_js.html). We only need the [`initialize`](https://zokrates.github.io/toolbox/zokrates_js.html#initialize) function because it returns a promise that resolves to all the Zokrates definitions we need.
+
+```typescript
+export const zkFunctions = async (width: number, height: number) : Promise<any> => {
+```
+
+Similar to Zokrates itself, we also export only one function, which is also [asynchronous](https://www.w3schools.com/js/js_async.asp). When it eventually returns, it provides three functions as we'll see below.
+
+```typescript
+    const zokrates = await zokratesInitialize()
+```
+
+Initialize Zokrates, get everything we need from the library.
+
+```typescript
+    const hashFragment = `
+        from "hashes/pedersen/512bitBool.zok" import main as pederhash;
+            .
+            .
+            .
+        }
+    `
+
+    const hashProgram = `
+        ${hashFragment}
+            .
+            .
+            .
+    `
+
+    const digProgram = `
+        ${hashFragment}
+            .
+            .
+            .
+    `
+```
+
+Next we have the three Zokrates programs we saw above.
+
+```typescript
+    const digCompiled = zokrates.compile(digProgram)
+    const hashCompiled = zokrates.compile(hashProgram)
+```
+
+Here we compile those programs. We could save some resources by saving the compiled version as files and only recompiling when needed (when the map size changes), but that would be more complicated. This program is opitimized for simplicity, it's not production-level code but a tutorial.
+
+```typescript
+    // Create the keys for zero knowledge verification.
+    // Doing this here is simple, but it might be insecure.
+    // On a production system you'd want to use a setup ceremony. 
+    // (https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony).
+    const keySetupResults = zokrates.setup(digCompiled.program, "")
+    const verifierKey = keySetupResults.vk
+    const proverKey = keySetupResults.pk
+```
+
+On a production system we'd use a more complicated [setup ceremony](https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony), but this is good enough for a demonstration. It's not a problem that the users know the prover key - they still cannot use it to prove things unless they are true.
+
+```typescript
+    const joinHashArray = function(arr: string[]): string {
+        return "0x"+arr.map(x => x.slice(2)).reduce((a,b) => a+b)
+    }
+
+    const calculateMapHash = function(hashMe: boolean[][]): string {
+        return joinHashArray(JSON.parse(
+            zokrates.computeWitness(hashCompiled, [hashMe]).output)
+        )
+    }
+```
+
+The Zokrates [hash program](hash-program) returns an array of eight 32-bit values. However, on the EVM it is easier to handle a single 256-bit value. 
+
+```typescript
+    // Dig and return a zero knowledge proof of the result
+    // (server-side code)
+    const zkDig = function(map: boolean[][], x: number, y: number) : any {
+        if (x<0 || x>=width || y<0 || y>=height)
+            throw new Error("Trying to dig outside the map")
+
+        const runResults = zokrates.computeWitness(digCompiled, 
+            [map, `${x}`, `${y}`]
+        )
+
+        const proof = zokrates.generateProof(
+            digCompiled.program,
+            runResults.witness,
+            proverKey)
+
+        return proof
+    }
+
+    // Verify a dig's results (client-side code)
+    const verifyDig = function(hashOfMap: string, digResultProof: any) : any {
+        const hashInProof = "0x" + digResultProof.inputs.slice(2,-1)
+            .map((x: string) => x.slice(-8)).reduce((a: string, b: string) => a+b)
+        
+        // The proof used the wrong map
+        if (hashInProof != hashOfMap)
+            return false
+
+        if (!zokrates.verify(verifierKey, digResultProof))
+            return false
+
+        return {
+            x: parseInt(digResultProof.inputs[0]),
+            y: parseInt(digResultProof.inputs[1]),
+            bombs: parseInt(digResultProof.inputs[digResultProof.inputs.length-1])
+        }
+    }
+
+    return {
+        zkDig,
+        verifyDig,
+        calculateMapHash
+    }
+}
+
+```
+
+
+
+## The on-chain component {#onchain}
 
 This is, 
 
 #### 
 
-### The server {#server}
+## The server {#server}
 
 The server needs to respond to these requests:
 
@@ -262,13 +395,13 @@ The server needs to respond to these requests:
   - If there is no bomb in `(x,y)` the server provides the number of bombs around that location, as well as a zero-knowledge proof that verifies that there is a map with that hash has that number of bombs around that location.
   - If there is a bomb in the location the server provides a zero-knowledge proof, which sets the number of bombs to 255 (a special flag value that means "boom"), as well as the full map. The server also deletes the map as no longer needed.
 
-#### New game request {#new-game-request}
+### New game request {#new-game-request}
 
 When the client requests a new game, 
 
-#### Dig request {#dig-request}
+### Dig request {#dig-request}
 
-### The client {#client}
+## The client {#client}
 
 ## Design considerations {#design}
 
