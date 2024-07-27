@@ -38,7 +38,10 @@ import { fetchNodes } from "@/lib/api/fetchNodes"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
+import buildersImage from "@/public/images/heroes/developers-hub-hero.jpg"
 import activityImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
+import learnImage from "@/public/images/heroes/learn-hub-hero.png"
+import communityImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import hero from "@/public/images/home/hero.png"
 
 const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
@@ -170,29 +173,33 @@ const HomePage = ({
 
   const comingSoon = [
     {
-      header: "A new way to use the internet",
+      title: "A new way to use the internet",
       tag: "Use cases",
     },
     {
-      header: "The strongest ecosystem",
+      title: "The strongest ecosystem",
       tag: "Activity",
+      imgSrc: activityImage,
     },
     {
-      header: "Understanding Ethereum",
+      title: "Understanding Ethereum",
       tag: "Learn",
+      imgSrc: learnImage,
     },
-    { header: "The internet is changing" },
+    { title: "The internet is changing" },
     {
-      header: "Bockchain's biggest builder community",
+      title: "Bockchain's biggest builder community",
       tag: "Builders",
+      imgSrc: buildersImage,
     },
     {
-      header: "Built by the community",
+      title: "Built by the community",
       tag: "Ethereum.org community",
+      imgSrc: communityImage,
     },
-    { header: "Ethereum news" },
-    { header: "Ethereum events" },
-    { header: "Join ethereum.org" },
+    { title: "Ethereum news" },
+    { title: "Ethereum events" },
+    { title: "Join ethereum.org" },
   ]
   return (
     <Flex
@@ -253,11 +260,13 @@ const HomePage = ({
       </HomeSection>
 
       {/* Temporary coming soon section template */}
-      {comingSoon.map(({ header, tag }: { header: string; tag?: string }) => (
-        <div className="w-full px-6 py-10" key={header}>
-          {tag && <p>{tag}</p>}
-          <h2 className="font-black">{header}</h2>
-        </div>
+      {comingSoon.map(({ title, tag, imgSrc }) => (
+        <HomeSection
+          tag={tag || ""}
+          title={title}
+          imgSrc={imgSrc}
+          key={title}
+        />
       ))}
     </Flex>
   )
