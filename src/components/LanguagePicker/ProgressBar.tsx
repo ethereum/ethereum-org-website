@@ -2,6 +2,9 @@ import { Progress, ProgressProps } from "@chakra-ui/react"
 
 type ProgressBarProps = Pick<ProgressProps, "value">
 
+{
+  /* TODO migrate */
+}
 const ProgressBar = ({ value }: ProgressBarProps) => (
   <Progress
     value={value}

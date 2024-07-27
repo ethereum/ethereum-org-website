@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { useDisclosure, type UseDisclosureReturn } from "@chakra-ui/react"
 
 import type {
   I18nLocale,
@@ -17,21 +16,13 @@ import progressDataJson from "@/data/translationProgress.json"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
+import useDisclosure from "@/hooks/useDisclosure"
+
 const progressData = progressDataJson satisfies ProjectProgressData[]
 
-export const useLanguagePicker = (
-  handleClose?: () => void,
-  menuState?: UseDisclosureReturn
-) => {
+export const useLanguagePicker = (handleClose?: () => void) => {
   const { t } = useTranslation("common")
   const { locale, locales: rawLocales } = useRouter()
-  const refs = {
-    inputRef: useRef<HTMLInputElement>(null),
-    firstItemRef: useRef<HTMLAnchorElement>(null),
-    noResultsRef: useRef<HTMLAnchorElement>(null),
-    footerRef: useRef<HTMLAnchorElement>(null),
-  }
-  const [filterValue, setFilterValue] = useState("")
 
   const [filteredNames, setFilteredNames] = useState<LocaleDisplayInfo[]>([])
 
@@ -161,17 +152,10 @@ export const useLanguagePicker = (
         return b.approvalProgress - a.approvalProgress
       }) || []
 
-    setFilteredNames(
-      displayNames.filter(
-        ({ localeOption, sourceName, targetName, englishName }) =>
-          (localeOption + sourceName + targetName + englishName)
-            .toLowerCase()
-            .includes(filterValue.toLowerCase())
-      )
-    )
-  }, [filterValue, locale, rawLocales, t])
+    setFilteredNames(displayNames)
+  }, [locale, rawLocales, t])
 
-  const { isOpen, ...menu } = useDisclosure()
+  const { isOpen, setValue, ...menu } = useDisclosure()
 
   const eventBase: Pick<MatomoEventOptions, "eventCategory" | "eventAction"> = {
     eventCategory: `Language picker`,
@@ -180,7 +164,6 @@ export const useLanguagePicker = (
 
   const onOpen = () => {
     menu.onOpen()
-    menuState?.onOpen()
     trackCustomEvent({
       ...eventBase,
       eventName: "Opened",
@@ -195,10 +178,8 @@ export const useLanguagePicker = (
     customMatomoEvent?: Required<Pick<MatomoEventOptions, "eventName">> &
       Partial<MatomoEventOptions>
   ): void => {
-    setFilterValue("")
     handleClose && handleClose()
     menu.onClose()
-    menuState?.onClose()
     trackCustomEvent(
       (customMatomoEvent
         ? { ...eventBase, ...customMatomoEvent }
@@ -223,10 +204,7 @@ export const useLanguagePicker = (
 
   return {
     t,
-    refs,
-    disclosure: { isOpen, onOpen, onClose },
-    filterValue,
-    setFilterValue,
+    disclosure: { isOpen, setValue, onOpen, onClose },
     filteredNames,
     handleInputFocus,
   }

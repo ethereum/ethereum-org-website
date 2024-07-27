@@ -1,12 +1,7 @@
 import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdSearch, MdWbSunny } from "react-icons/md"
-import {
-  DrawerFooter,
-  Grid,
-  MenuButton,
-  useColorModeValue,
-} from "@chakra-ui/react"
+import { DrawerFooter, Grid, useColorModeValue } from "@chakra-ui/react"
 
 import LanguagePicker from "@/components/LanguagePicker"
 
@@ -57,26 +52,13 @@ const MenuFooter = ({
           <FooterItemText>{t(themeLabelKey)}</FooterItemText>
         </FooterButton>
         <LanguagePicker
-          hideFrom="md"
-          position="fixed"
-          w="calc(100vw - var(--eth-sizes-8))"
-          inset="4"
+          className="fixed inset-4 h-[calc(100vh-var(--eth-sizes-8))]"
           handleClose={onToggle}
-          _before={{
-            content: '""',
-            position: "fixed",
-            inset: 0,
-            bg: "black",
-            opacity: 0.4,
-          }} // TODO: Replace with overlay component
         >
-          <MenuButton
-            as={FooterButton}
-            icon={BsTranslate}
-            name={MOBILE_LANGUAGE_BUTTON_NAME}
-          >
+          {/* TODO migrate once #13449 is merged */}
+          <FooterButton icon={BsTranslate} name={MOBILE_LANGUAGE_BUTTON_NAME}>
             <FooterItemText>{t("languages")}</FooterItemText>
-          </MenuButton>
+          </FooterButton>
         </LanguagePicker>
       </Grid>
     </DrawerFooter>
