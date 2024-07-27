@@ -321,7 +321,11 @@ On a production system we'd use a more complicated [setup ceremony](https://zokr
     const joinHashArray = function(arr: string[]): string {
         return "0x"+arr.map(x => x.slice(2)).reduce((a,b) => a+b)
     }
+```
 
+The Zokrates [hash program](hash-program) returns an array of eight 32-bit values. However, on the EVM it is easier to handle a single 256-bit value. Here we combine those values, provided as hexadecimal strings, into a single hexadecimal string. We could have done this in Zokrates, but Zokrates is a lot more resource intensive, so it's best to limit it to where it is necessary.
+
+```typescript
     const calculateMapHash = function(hashMe: boolean[][]): string {
         return joinHashArray(JSON.parse(
             zokrates.computeWitness(hashCompiled, [hashMe]).output)
@@ -329,19 +333,32 @@ On a production system we'd use a more complicated [setup ceremony](https://zokr
     }
 ```
 
-The Zokrates [hash program](hash-program) returns an array of eight 32-bit values. However, on the EVM it is easier to handle a single 256-bit value. 
+[`computeWitness`](https://zokrates.github.io/toolbox/zokrates_js.html#computewitnessartifacts-args-options) actually runs the Zokrates program. It returns a structure with two fields: `output`, which is the output of the program as a JSON string, and `witness`, which is the information needed to create the a zero knowledge proof of the result. Here we just need the output.
 
 ```typescript
     // Dig and return a zero knowledge proof of the result
     // (server-side code)
+```
+
+The zero knowledge proof includes the public inputs (`x` and `y`) and results (hash of the map and number of bombs).
+
+```typescript
     const zkDig = function(map: boolean[][], x: number, y: number) : any {
         if (x<0 || x>=width || y<0 || y>=height)
             throw new Error("Trying to dig outside the map")
+```
 
+It's a problem to check if an index is out of bounds in Zokrates, so we do it here.
+
+```typescript
         const runResults = zokrates.computeWitness(digCompiled, 
             [map, `${x}`, `${y}`]
         )
+```
 
+Execute the dig program.
+
+```typescript
         const proof = zokrates.generateProof(
             digCompiled.program,
             runResults.witness,
@@ -349,33 +366,68 @@ The Zokrates [hash program](hash-program) returns an array of eight 32-bit value
 
         return proof
     }
+```
 
+Use [`generateProof`](https://zokrates.github.io/toolbox/zokrates_js.html#generateproofprogram-witness-provingkey-entropy) and return the proof.
+
+
+```typescript
     // Verify a dig's results (client-side code)
     const verifyDig = function(hashOfMap: string, digResultProof: any) : any {
+```
+
+Verify the dig results in TypeScript. We don't actually use this function, because we made a [conscious design choice](#where-verification) to verify onchain. It is provided here for completeness.
+
+```typescript
         const hashInProof = "0x" + digResultProof.inputs.slice(2,-1)
             .map((x: string) => x.slice(-8)).reduce((a: string, b: string) => a+b)
-        
+```
+
+The fields in the proofs (it's called `.input`, but it is both inputs and outputs) are provided as strings that contain 256-bit numbers in hexadecimal. The first two values are `x` and `y`. The last value is the number of bombs. We remove them because they aren't part of calculating the hash. Next, we remove all but the last eight hex digits (the ones that contain the 32-bit value we get from the hash function) of the hash values and put them together.
+
+```typescript
         // The proof used the wrong map
         if (hashInProof != hashOfMap)
             return false
+```
 
+We could have compared the hashes in the Zokrates program, but we try to limit the use of Zokrates to where it is needed to save on resources. It is a lot cheaper to do the comparison in the TypeScript.
+
+```typescript
         if (!zokrates.verify(verifierKey, digResultProof))
             return false
+```
 
+If the verification failed, this isn't a result we can trust. To reality check this function, create fake `digResultProof` values and see that the verification fails.
+
+```typescript
         return {
             x: parseInt(digResultProof.inputs[0]),
             y: parseInt(digResultProof.inputs[1]),
             bombs: parseInt(digResultProof.inputs[digResultProof.inputs.length-1])
         }
     }
+```
 
+If the proof is trustworthy, return the `x`, `y`, and number of bombs (or 255 if we blew up).
+
+```typescript
+    const solidityVerifier = zokrates.exportSolidityVerifier(verifierKey)    
+    const formatProof = (proof: any) => zokrates.utils.formatProof(proof)
+```
+
+These two definitions are useful for 
+
+
+```typescript
     return {
         zkDig,
         verifyDig,
-        calculateMapHash
+        calculateMapHash,
+        solidityVerifier,
+        formatProof
     }
 }
-
 ```
 
 
