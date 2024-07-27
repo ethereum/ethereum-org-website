@@ -9,10 +9,10 @@ import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import HomeHero from "@/components/Hero/HomeHero"
-import ChooseNetworkIcon from "@/components/icons/choose-network-icon.svg"
-import GetEthIcon from "@/components/icons/get-eth-icon.svg"
-import PickWalletIcon from "@/components/icons/pick-wallet-icon.svg"
-import TryAppsIcon from "@/components/icons/try-apps-icon.svg"
+import EthTokenIcon from "@/components/icons/eth-token.svg"
+import PickWalletIcon from "@/components/icons/eth-wallet.svg"
+import ChooseNetworkIcon from "@/components/icons/network-layers.svg"
+import TryAppsIcon from "@/components/icons/phone-homescreen.svg"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
@@ -147,7 +147,7 @@ const HomePage = ({
       label: "Get ETH",
       description: "The currency of Ethereum",
       href: "/get-eth/",
-      Svg: GetEthIcon,
+      Svg: EthTokenIcon,
       colorClass: "text-accent-a",
     },
     {
