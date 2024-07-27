@@ -36,6 +36,7 @@
     "@hookform/resolvers": "^3.8.0",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-navigation-menu": "^1.2.0",
+    "@radix-ui/react-popover": "^1.1.1",
     "@radix-ui/react-slot": "^1.1.0",
     "@socialgouv/matomo-next": "^1.8.0",
     "chart.js": "^4.4.2",
@@ -77,7 +78,7 @@
   "devDependencies": {
     "@chakra-ui/cli": "^2.4.1",
     "@chromatic-com/storybook": "1.5.0",
-    "@netlify/plugin-nextjs": "^5.0.0",
+    "@netlify/plugin-nextjs": "^5.5.1",
     "@storybook/addon-essentials": "8.1.10",
     "@storybook/addon-interactions": "8.1.10",
     "@storybook/addon-links": "8.1.10",
@@ -120,7 +121,8 @@
     "tsconfig-paths-webpack-plugin": "4.1.0",
     "typescript": "^5.5.2",
     "unified": "^10.0.0",
-    "unist-util-visit": "^5.0.0"
+    "unist-util-visit": "^5.0.0",
+    "usehooks-ts": "^3.1.0"
   },
   "resolutions": {
     "jackspeak": "2.1.1",

@@ -10,7 +10,7 @@ buttons:
   - label: Будущие обновления
     toId: what-changes-are-coming
   - label: Прошлые обновления
-    to: /history/
+    href: /history/
     variant: план
 ---
 

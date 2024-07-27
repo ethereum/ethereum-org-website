@@ -9,6 +9,7 @@ import {
   LinkOverlay,
   List,
   ListItem,
+  useColorModeValue,
   useToken,
   VisuallyHidden,
 } from "@chakra-ui/react"
@@ -23,7 +24,6 @@ import Translation from "@/components/Translation"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import meetups from "@/data/community-meetups.json"
-
 
 export interface Meetup {
   title: string

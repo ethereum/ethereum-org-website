@@ -33,6 +33,7 @@ import LazyLoadComponent from "@/components/LazyLoadComponent"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import TitleCardList from "@/components/TitleCardList"
+import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -253,7 +254,7 @@ const HomePage = ({
   metricResults,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation(["common", "page-index"])
-  const { locale } = useRouter()
+  const { locale, asPath } = useRouter()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
   const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
@@ -269,28 +270,28 @@ const HomePage = ({
       title: t("page-index:page-index-get-started-wallet-title"),
       description: t("page-index:page-index-get-started-wallet-description"),
       alt: t("page-index:page-index-get-started-wallet-image-alt"),
-      to: "/wallets/find-wallet/",
+      href: "/wallets/find-wallet/",
     },
     {
       image: ethfixed,
       title: t("page-index:page-index-get-started-eth-title"),
       description: t("page-index:page-index-get-started-eth-description"),
       alt: t("page-index:page-index-get-started-eth-image-alt"),
-      to: "/get-eth/",
+      href: "/get-eth/",
     },
     {
       image: dogefixed,
       title: t("page-index:page-index-get-started-dapps-title"),
       description: t("page-index:page-index-get-started-dapps-description"),
       alt: t("page-index:page-index-get-started-dapps-image-alt"),
-      to: "/dapps/",
+      href: "/dapps/",
     },
     {
       image: devfixed,
       title: t("page-index:page-index-get-started-devs-title"),
       description: t("page-index:page-index-get-started-devs-description"),
       alt: t("page-index:page-index-get-started-devs-image-alt"),
-      to: "/developers/",
+      href: "/developers/",
     },
   ]
 
@@ -300,21 +301,21 @@ const HomePage = ({
       alt: t("page-index:page-index-tout-upgrades-image-alt"),
       title: t("page-index:page-index-tout-upgrades-title"),
       description: t("page-index:page-index-tout-upgrades-description"),
-      to: "/roadmap/",
+      href: "/roadmap/",
     },
     {
       image: infrastructurefixed,
       alt: t("page-index:page-index-tout-enterprise-image-alt"),
       title: t("page-index:page-index-tout-enterprise-title"),
       description: t("page-index:page-index-tout-enterprise-description"),
-      to: "/enterprise/",
+      href: "/enterprise/",
     },
     {
       image: enterprise,
       alt: t("page-index:page-index-tout-community-image-alt"),
       title: t("page-index:page-index-tout-community-title"),
       description: t("page-index:page-index-tout-community-description"),
-      to: "/community/",
+      href: "/community/",
     },
   ]
 
@@ -367,6 +368,7 @@ const HomePage = ({
         title={t("page-index:page-index-meta-title")}
         description={t("page-index:page-index-meta-description")}
       />
+      <TranslatathonBanner pathname={asPath} />
       <Box w="full">
         <HomeHero heroImg={hero} />
       </Box>
@@ -411,7 +413,7 @@ const HomePage = ({
                 title={card.title}
                 description={card.description}
                 alt={card.alt}
-                to={card.to}
+                href={card.href}
                 image={card.image}
                 imageWidth={320}
               />
@@ -615,7 +617,7 @@ const HomePage = ({
                 title={tout.title}
                 description={tout.description}
                 alt={tout.alt}
-                to={tout.to}
+                href={tout.href}
                 image={tout.image}
                 imageWidth={320}
                 boxShadow={cardBoxShadow}

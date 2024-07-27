@@ -12,7 +12,7 @@ buttons:
     toId: 即將發生的變化
   - 
     label: 過往的升級
-    to: /history/
+    href: /history/
     variant: 概述
 ---
 
