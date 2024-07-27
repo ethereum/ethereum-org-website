@@ -217,57 +217,60 @@ const HomePage = ({
       <div className="w-full">
         <HomeHero heroImg={hero} />
       </div>
-      <div className="grid w-full grid-cols-2 gap-4 px-6 py-20 lg:grid-cols-4 lg:gap-x-10">
-        {SubHeroCTAs.map(({ label, description, href, colorClass, Svg }) => (
-          <SvgButtonLink
-            key={label}
-            Svg={Svg}
-            href={href}
-            label={label}
-            className={colorClass}
-          >
-            {description}
-          </SvgButtonLink>
-        ))}
-      </div>
 
-      <HomeSection
-        tag="Activity"
-        title="The strongest ecosystem"
-        imgSrc={activityImage}
-      >
-        <div className="my-32">
-          <p className="text-bold">Activity from all the Ethereum networks</p>
-          <div className="grid w-full grid-cols-2">
-            <div>
-              <p className="text-size-2xl">$44.89B</p>
-              <p>Total value held on Ethereum [More info icon]</p>
-            </div>
-            <div>
-              <p className="text-size-2xl">$44.89B</p>
-              <p>Total value held on Ethereum [More info icon]</p>
-            </div>
-            <div>
-              <p className="text-size-2xl">$44.89B</p>
-              <p>Total value held on Ethereum [More info icon]</p>
-            </div>
-            <div>
-              <p className="text-size-2xl">$44.89B</p>
-              <p>Total value held on Ethereum [More info icon]</p>
+      <div className="px-4 md:px-6">
+        <div className="grid w-full grid-cols-2 gap-4 py-20 lg:grid-cols-4 lg:gap-x-10">
+          {SubHeroCTAs.map(({ label, description, href, colorClass, Svg }) => (
+            <SvgButtonLink
+              key={label}
+              Svg={Svg}
+              href={href}
+              label={label}
+              className={colorClass}
+            >
+              {description}
+            </SvgButtonLink>
+          ))}
+        </div>
+
+        <HomeSection
+          tag="Activity"
+          title="The strongest ecosystem"
+          imgSrc={activityImage}
+        >
+          <div className="my-32">
+            <p className="text-bold">Activity from all the Ethereum networks</p>
+            <div className="grid w-full grid-cols-2">
+              <div>
+                <p className="text-size-2xl">$44.89B</p>
+                <p>Total value held on Ethereum [More info icon]</p>
+              </div>
+              <div>
+                <p className="text-size-2xl">$44.89B</p>
+                <p>Total value held on Ethereum [More info icon]</p>
+              </div>
+              <div>
+                <p className="text-size-2xl">$44.89B</p>
+                <p>Total value held on Ethereum [More info icon]</p>
+              </div>
+              <div>
+                <p className="text-size-2xl">$44.89B</p>
+                <p>Total value held on Ethereum [More info icon]</p>
+              </div>
             </div>
           </div>
-        </div>
-      </HomeSection>
+        </HomeSection>
 
-      {/* Temporary coming soon section template */}
-      {comingSoon.map(({ title, tag, imgSrc }) => (
-        <HomeSection
-          tag={tag || ""}
-          title={title}
-          imgSrc={imgSrc}
-          key={title}
-        />
-      ))}
+        {/* Temporary coming soon section template */}
+        {comingSoon.map(({ title, tag, imgSrc }) => (
+          <HomeSection
+            tag={tag || ""}
+            title={title}
+            imgSrc={imgSrc}
+            key={title}
+          />
+        ))}
+      </div>
     </Flex>
   )
 }

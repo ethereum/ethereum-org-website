@@ -23,7 +23,7 @@ const HomeSection = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 gap-x-32 gap-y-8 px-6 lg:grid-cols-3",
+        "grid grid-cols-1 gap-x-32 gap-y-8 lg:grid-cols-3",
         imageLast && "md:flex-row-reverse",
         className
       )}
