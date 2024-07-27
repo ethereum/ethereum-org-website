@@ -416,7 +416,7 @@ If the proof is trustworthy, return the `x`, `y`, and number of bombs (or 255 if
     const formatProof = (proof: any) => zokrates.utils.formatProof(proof)
 ```
 
-These two definitions are useful for 
+These two definitions are used for verifiying Zokrates proofs on the blockchain.
 
 
 ```typescript
