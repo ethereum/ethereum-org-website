@@ -24,10 +24,15 @@ import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
 import ButtonLink from "@/components/Buttons/ButtonLink"
+import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
 import CodeModal from "@/components/CodeModal"
 import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
+import ChooseNetworkIcon from "@/components/icons/choose-network-icon.svg"
+import GetEthIcon from "@/components/icons/get-eth-icon.svg"
+import PickWalletIcon from "@/components/icons/pick-wallet-icon.svg"
+import TryAppsIcon from "@/components/icons/try-apps-icon.svg"
 import { Image } from "@/components/Image"
 import LazyLoadComponent from "@/components/LazyLoadComponent"
 import MainArticle from "@/components/MainArticle"
@@ -356,6 +361,37 @@ const HomePage = ({
 
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
 
+  const SubHeroCTAs = [
+    {
+      label: "Pick a wallet",
+      description: "Create accounts, manage assets",
+      href: "/wallets/find-wallet/",
+      Svg: PickWalletIcon,
+      colorClass: "text-primary",
+    },
+    {
+      label: "Get ETH",
+      description: "The currency of Ethereum",
+      href: "/get-eth/",
+      Svg: GetEthIcon,
+      colorClass: "text-accent-a",
+    },
+    {
+      label: "Choose a network",
+      description: "Enjoy minimal fees",
+      href: "/layer-2/", // TODO: Update with new networks page when ready
+      Svg: ChooseNetworkIcon,
+      colorClass: "text-accent-b",
+    },
+    {
+      label: "Try apps",
+      description: "See what Ethereum can do",
+      href: "/dapps/",
+      Svg: TryAppsIcon,
+      colorClass: "text-accent-c",
+    },
+  ]
+
   return (
     <Flex
       as={MainArticle}
@@ -369,9 +405,22 @@ const HomePage = ({
         description={t("page-index:page-index-meta-description")}
       />
       <TranslatathonBanner pathname={asPath} />
-      <Box w="full">
+      <div className="w-full">
         <HomeHero heroImg={hero} />
-      </Box>
+      </div>
+      <div className="grid w-full grid-cols-2 gap-4 px-6 py-20 lg:grid-cols-4 lg:gap-x-10">
+        {SubHeroCTAs.map(({ label, description, href, colorClass, Svg }) => (
+          <SvgButtonLink
+            key={label}
+            Svg={Svg}
+            href={href}
+            label={label}
+            className={colorClass}
+          >
+            {description}
+          </SvgButtonLink>
+        ))}
+      </div>
       {/* Getting Started Section */}
       <GrayContainer>
         <ContentBox>
