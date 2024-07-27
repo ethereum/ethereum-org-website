@@ -619,5 +619,14 @@
     "to": "https://www.ethereumbolivia.org/buildathon-2024",
     "location": "Santa Cruz de la Sierra, Bolivia",
     "description": "La Buildathon Ethereum Bolivia, el primero en su tipo, es un evento que congrega a desarrolladores, entusiastas blockchain, con el fin de convertir ideas en Productos Mínimo Viables, brindando además seminarios y talleres relacionados."
-  }
+  },
+  {
+    "title": "ETHVenice 2024",
+    "href": "https://ethvenice.com/",
+    "location": "Venice, Italy",
+    "description": "Join the second edition of the event in the center of Venice, to learn more about Blockchain, Technology and with an eye towards art.",
+    "startDate": "2024-12-02",
+    "endDate": "2024-12-03",
+    "imageUrl": "https://www.ethvenice.com/images/logo.png"
+  },
 ]
