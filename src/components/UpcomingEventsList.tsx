@@ -143,6 +143,7 @@ const UpcomingEventsList = () => {
                     {
                       title,
                       to,
+                      href,
                       formattedDetails,
                       date,
                       location,
@@ -155,7 +156,7 @@ const UpcomingEventsList = () => {
                     <EventCard
                       key={idx}
                       title={title}
-                      to={to}
+                      to={to || href}
                       date={date}
                       description={formattedDetails}
                       location={location}
@@ -185,7 +186,6 @@ const UpcomingEventsList = () => {
           marginTop="5"
           paddingY="8"
         >
-
           <Button onClick={loadMoreEvents}>
             {t("page-community-upcoming-events-load-more")}
           </Button>

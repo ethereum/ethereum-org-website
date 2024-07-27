@@ -17,7 +17,7 @@ const clearStyles = {
 
 export type EventCardProps = {
   title: string
-  href: string
+  to: string
   date: string
   startDate: string
   endDate: string
