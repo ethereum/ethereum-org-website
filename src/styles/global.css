@@ -93,6 +93,10 @@
     --background: white;
     --background-highlight: var(--gray-100);
 
+    --accent-a: #C32E8A;
+    --accent-b: #3C4CEB;
+    --accent-c: #29948F;
+
     --disabled: var(--gray-400);
 
     /* ! Deprecating neutral */

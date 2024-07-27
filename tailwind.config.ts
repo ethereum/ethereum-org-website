@@ -48,6 +48,11 @@ const config = {
           dark: "var(--primary-dark)",
           pressed: "var(--primary-pressed)",
         },
+        accent: {
+          a: "var(--accent-a)",
+          b: "var(--accent-b)",
+          c: "var(--accent-c)",
+        },
         body: {
           DEFAULT: "var(--body)",
           medium: "var(--body-medium)",
