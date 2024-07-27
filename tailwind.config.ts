@@ -16,6 +16,7 @@ const config = {
         monospace: "var(--font-mono)",
       },
       fontSize: {
+        "7xl": ["4rem", "1.1"], // [7xl, 6xs]
         "6xl": ["3.75rem", "1.2"], // [6xl, 4xs]
         "5xl": ["3rem", "1.2"], // [5xl, 4xs]
         "4xl": ["2.25rem", "1.2"], // [4xl, 4xs]

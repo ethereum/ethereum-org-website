@@ -23,21 +23,30 @@ const HomeSection = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 gap-x-32 gap-y-8 lg:grid-cols-3",
-        imageLast && "md:flex-row-reverse",
+        "grid grid-flow-dense grid-cols-1 lg:grid-cols-2 xl:grid-cols-3",
+        "gap-8 xl:gap-16",
         className
       )}
     >
       <NextImage
-        className="min-h-full rounded-4xl object-cover object-center"
+        className={cn(
+          "col-span-1",
+          "col-span-1 min-h-full rounded-4xl object-cover object-center",
+          imageLast && "md:col-start-3"
+        )}
         src={imgSrc || ""}
         alt=""
       />
-      <div className="lg:col-span-2">
+      <div
+        className={cn(
+          "col-span-1 xl:col-span-2",
+          imageLast && "md:col-start-3"
+        )}
+      >
         <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
           {tag}
         </div>
-        <h2 className="mt-2 text-5xl font-black">{title}</h2>
+        <h2 className="mt-2 text-5xl font-black xl:text-7xl">{title}</h2>
         {children}
       </div>
     </div>
