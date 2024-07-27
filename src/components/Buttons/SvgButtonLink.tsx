@@ -23,7 +23,7 @@ const SvgButtonLink = ({
       <div className="relative grid size-[5em] place-items-center rounded-2xl border shadow-lg">
         <Svg />
       </div>
-      <div className="lg:text-start">
+      <div className="text-center lg:text-start">
         <p className="text-xl font-bold">{label}</p>
         <p className="text-body">{children}</p>
       </div>
