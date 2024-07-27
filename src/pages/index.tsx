@@ -9,6 +9,7 @@ import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import HomeHero from "@/components/Hero/HomeHero"
+import HomeSection from "@/components/HomeSection"
 import EthTokenIcon from "@/components/icons/eth-token.svg"
 import PickWalletIcon from "@/components/icons/eth-wallet.svg"
 import ChooseNetworkIcon from "@/components/icons/network-layers.svg"
@@ -37,6 +38,7 @@ import { fetchNodes } from "@/lib/api/fetchNodes"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
+import activityImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import hero from "@/public/images/home/hero.png"
 
 const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
@@ -221,6 +223,35 @@ const HomePage = ({
           </SvgButtonLink>
         ))}
       </div>
+
+      <HomeSection
+        tag="Activity"
+        title="The strongest ecosystem"
+        imgSrc={activityImage}
+      >
+        <div className="my-32">
+          <p className="text-bold">Activity from all the Ethereum networks</p>
+          <div className="grid w-full grid-cols-2">
+            <div>
+              <p className="text-size-2xl">$44.89B</p>
+              <p>Total value held on Ethereum [More info icon]</p>
+            </div>
+            <div>
+              <p className="text-size-2xl">$44.89B</p>
+              <p>Total value held on Ethereum [More info icon]</p>
+            </div>
+            <div>
+              <p className="text-size-2xl">$44.89B</p>
+              <p>Total value held on Ethereum [More info icon]</p>
+            </div>
+            <div>
+              <p className="text-size-2xl">$44.89B</p>
+              <p>Total value held on Ethereum [More info icon]</p>
+            </div>
+          </div>
+        </div>
+      </HomeSection>
+
       {/* Temporary coming soon section template */}
       {comingSoon.map(({ header, tag }: { header: string; tag?: string }) => (
         <div className="w-full px-6 py-10" key={header}>
