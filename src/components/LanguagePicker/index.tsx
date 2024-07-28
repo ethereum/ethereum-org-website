@@ -19,6 +19,8 @@ import { MobileCloseBar } from "./MobileCloseBar"
 import NoResultsCallout from "./NoResultsCallout"
 import { useLanguagePicker } from "./useLanguagePicker"
 
+import { useEventListener } from "@/hooks/useEventListener"
+
 type LanguagePickerProps = {
   children: React.ReactNode
   className?: string
@@ -38,17 +40,17 @@ const LanguagePicker = ({
     // TODO: Implement this
     // handleInputFocus,
   } = useLanguagePicker(handleClose)
-  const { isOpen, setValue, onClose } = disclosure
+  const { isOpen, setValue, onClose, onOpen } = disclosure
 
   /**
    * Adds a keydown event listener to focus filter input (\).
    * @param {string} event - The keydown event.
    */
-  // useEventListener("keydown", (e) => {
-  //   if (e.key !== "\\") return
-  //   e.preventDefault()
-  //   inputRef.current?.focus()
-  // })
+  useEventListener("keydown", (e) => {
+    if (e.key !== "\\") return
+    e.preventDefault()
+    onOpen()
+  })
 
   // onClick handlers
   const handleMobileCloseBarClick = () => onClose()
