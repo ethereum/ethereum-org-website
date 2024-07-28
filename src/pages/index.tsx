@@ -7,6 +7,7 @@ import { Flex } from "@chakra-ui/react"
 import { AllMetricData, BasePageProps, Lang } from "@/lib/types"
 import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
+import BigNumber from "@/components/BigNumber"
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import HomeHero from "@/components/Hero/HomeHero"
 import HomeSection from "@/components/HomeSection"
@@ -177,16 +178,12 @@ const HomePage = ({
       tag: "Use cases",
     },
     {
-      title: "The strongest ecosystem",
-      tag: "Activity",
-      imgSrc: activityImage,
-    },
-    {
       title: "Understanding Ethereum",
       tag: "Learn",
       imgSrc: learnImage,
+      imageLast: true,
     },
-    { title: "The internet is changing" },
+    { title: "The internet is changing", tag: "" },
     {
       title: "Bockchain's biggest builder community",
       tag: "Builders",
@@ -196,10 +193,11 @@ const HomePage = ({
       title: "Built by the community",
       tag: "Ethereum.org community",
       imgSrc: communityImage,
+      imageLast: true,
     },
-    { title: "Ethereum news" },
-    { title: "Ethereum events" },
-    { title: "Join ethereum.org" },
+    { title: "Ethereum news", tag: "" },
+    { title: "Ethereum events", tag: "" },
+    { title: "Join ethereum.org", tag: "" },
   ]
   return (
     <Flex
@@ -218,7 +216,7 @@ const HomePage = ({
         <HomeHero heroImg={hero} />
       </div>
 
-      <div className="px-4 md:px-6">
+      <div className="space-y-16 px-4 md:px-6 lg:space-y-32">
         <div className="grid w-full grid-cols-2 gap-4 py-20 lg:grid-cols-4 lg:gap-x-10">
           {SubHeroCTAs.map(({ label, description, href, colorClass, Svg }) => (
             <SvgButtonLink
@@ -238,37 +236,51 @@ const HomePage = ({
           title="The strongest ecosystem"
           imgSrc={activityImage}
         >
-          <div className="my-32">
-            <p className="text-bold">Activity from all the Ethereum networks</p>
-            <div className="grid w-full grid-cols-2">
-              <div>
-                <p className="text-size-2xl">$44.89B</p>
-                <p>Total value held on Ethereum [More info icon]</p>
-              </div>
-              <div>
-                <p className="text-size-2xl">$44.89B</p>
-                <p>Total value held on Ethereum [More info icon]</p>
-              </div>
-              <div>
-                <p className="text-size-2xl">$44.89B</p>
-                <p>Total value held on Ethereum [More info icon]</p>
-              </div>
-              <div>
-                <p className="text-size-2xl">$44.89B</p>
-                <p>Total value held on Ethereum [More info icon]</p>
-              </div>
+          <div className="mt-16 xl:mt-32">
+            <p className="mt-8 text-xl font-bold">
+              Activity from all Ethereum networks
+            </p>
+            <div className="grid w-full grid-cols-1 xl:grid-cols-2">
+              {/* TODO: Plug in real data */}
+              <BigNumber
+                className="border-b border-body-light xl:border-e xl:pe-8"
+                value="$44.89B"
+                sourceName="Defi Llama"
+              >
+                Total value held on Ethereum
+              </BigNumber>
+
+              <BigNumber
+                className="border-b border-body-light xl:ps-8"
+                value="8.36M"
+                sourceName="Etherscan"
+                sourceUrl="https://etherscan.io/"
+              >
+                Transactions in the last 24h
+              </BigNumber>
+
+              <BigNumber
+                className="border-b border-body-light xl:border-b-0 xl:border-e xl:pe-8"
+                value="$0.01"
+              >
+                Average transaction cost
+              </BigNumber>
+
+              <BigNumber
+                className="xl:ps-8"
+                value="$115B"
+                sourceName="Dune Analytics"
+                sourceUrl="https://dune.xyz/"
+              >
+                Value protecting Ethereum
+              </BigNumber>
             </div>
           </div>
         </HomeSection>
 
         {/* Temporary coming soon section template */}
-        {comingSoon.map(({ title, tag, imgSrc }) => (
-          <HomeSection
-            tag={tag || ""}
-            title={title}
-            imgSrc={imgSrc}
-            key={title}
-          />
+        {comingSoon.map((item) => (
+          <HomeSection {...item} key={item.title} />
         ))}
       </div>
     </Flex>
