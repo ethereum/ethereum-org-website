@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils/cn"
 
 type SvgButtonLinkProps = {
   Svg: FunctionComponent<SVGProps<SVGSVGElement>>
-  label: string
+  label?: string
   children: ReactNode
   href: string
   className?: string
@@ -24,8 +24,8 @@ const SvgButtonLink = ({
         <Svg />
       </div>
       <div className="text-center lg:text-start">
-        <p className="text-xl font-bold">{label}</p>
-        <p className="text-body">{children}</p>
+        {label && <p className="text-xl font-bold">{label}</p>}
+        {children}
       </div>
     </div>
   </a>
