@@ -135,6 +135,7 @@
     --table-item-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 
     --primary-highlight-gradient: linear-gradient(180deg, rgba(167, 121, 226, 0.05) 0%, rgba(167, 121, 226, 0.00) 100%);
+    --accept-gradient: linear-gradient(0deg, rgba(185, 185, 241, 0.24) 0%, rgba(84, 132, 234, 0.08) 100%);
   }
 
   [data-theme="dark"] {
