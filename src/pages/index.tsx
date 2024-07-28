@@ -1,17 +1,21 @@
+import { Suspense, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { MdChevronRight } from "react-icons/md"
-import { Flex } from "@chakra-ui/react"
+import { Flex, Skeleton } from "@chakra-ui/react"
 
 import { AllMetricData, BasePageProps, Lang } from "@/lib/types"
 import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
 import BigNumber from "@/components/BigNumber"
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
+import Codeblock from "@/components/Codeblock"
+import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
 import HomeSection from "@/components/HomeSection"
+import AngleBrackets from "@/components/icons/angle-brackets.svg"
 import BlockHeap from "@/components/icons/block-heap.svg"
 import EthTokenIcon from "@/components/icons/eth-token.svg"
 import PickWalletIcon from "@/components/icons/eth-wallet.svg"
@@ -104,6 +108,14 @@ const HomePage = ({
   const { t } = useTranslation(["common", "page-index"])
   const { locale, asPath } = useRouter()
   const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
+
+  const [isModalOpen, setModalOpen] = useState(false)
+  const [activeCode, setActiveCode] = useState(0)
+
+  const toggleCodeExample = (id: number): void => {
+    setActiveCode(id)
+    setModalOpen(true)
+  }
 
   const codeExamples: CodeExample[] = [
     {
@@ -363,7 +375,46 @@ const HomePage = ({
               Documentation
             </ButtonLink>
           </div>
-          <div className="flex flex-col space-y-8"></div>
+          <div className="flex flex-col overflow-hidden rounded-2xl border shadow">
+            <div className="flex items-center gap-4 bg-primary-highlight-gradient p-4">
+              <div className="grid size-10 place-items-center rounded-lg border">
+                <AngleBrackets />
+              </div>
+              <p className="font-bold">
+                {t("page-index:page-index-developers-code-examples")}
+              </p>
+            </div>
+            {codeExamples.map(({ title, description }, idx) => (
+              <button
+                key={title}
+                className="flex flex-col space-y-0.5 border-t px-6 py-4 hover:bg-black/5"
+                onClick={() => toggleCodeExample(idx)}
+              >
+                <p className="font-bold">{title}</p>
+                <p className="text-start text-sm text-body-medium">
+                  {description}
+                </p>
+              </button>
+            ))}
+          </div>
+          {isModalOpen && (
+            // TODO: Migrate CodeModal, CodeBlock, Skeleton from Chakra-UI to tailwind/shad-cn
+            <CodeModal
+              isOpen={isModalOpen}
+              setIsOpen={setModalOpen}
+              title={codeExamples[activeCode].title}
+            >
+              <Suspense fallback={<Skeleton />}>
+                <Codeblock
+                  codeLanguage={codeExamples[activeCode].codeLanguage}
+                  allowCollapse={false}
+                  fromHomepage
+                >
+                  {codeExamples[activeCode].code}
+                </Codeblock>
+              </Suspense>
+            </CodeModal>
+          )}
         </HomeSection>
 
         <HomeSection

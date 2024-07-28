@@ -89,6 +89,7 @@ const config = {
       },
       backgroundImage: {
         "bg-main-gradient": "var(--bg-main-gradient)",
+        "primary-highlight-gradient": "var(--primary-highlight-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
