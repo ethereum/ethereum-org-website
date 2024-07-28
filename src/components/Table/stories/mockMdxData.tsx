@@ -1,6 +1,8 @@
 import * as React from "react"
 import { Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
 
+import InlineLink from "@/components/Link"
+
 /*
  * Note on the Chakra Table components:
  *
@@ -65,15 +67,12 @@ export const MdxEnergyConsumpData = () => (
         <Td textAlign="end">200</Td>
         <Td textAlign="end">77,000x</Td>
         <Td>
-          <a
-            target="_blank"
-            rel="noopener"
+          <InlineLink
             href="https://www.iea.org/commentaries/data-centres-and-energy-from-global-headlines-to-local-headaches"
             dir="ltr"
           >
             source
-            <span aria-hidden="true">↗</span>
-          </a>
+          </InlineLink>
         </Td>
       </Tr>
       <Tr>
@@ -81,15 +80,9 @@ export const MdxEnergyConsumpData = () => (
         <Td textAlign="end">131</Td>
         <Td textAlign="end">50,000x</Td>
         <Td>
-          <a
-            target="_blank"
-            rel="noopener"
-            href="https://ccaf.io/cbnsi/cbeci/comparisons"
-            dir="ltr"
-          >
+          <InlineLink href="https://ccaf.io/cbnsi/cbeci/comparisons" dir="ltr">
             source
-            <span aria-hidden="true">↗</span>
-          </a>
+          </InlineLink>
         </Td>
       </Tr>
       <Tr>
@@ -97,15 +90,9 @@ export const MdxEnergyConsumpData = () => (
         <Td textAlign="end">131</Td>
         <Td textAlign="end">50,000x</Td>
         <Td>
-          <a
-            target="_blank"
-            rel="noopener"
-            href="https://ccaf.io/cbnsi/cbeci/comparisons"
-            dir="ltr"
-          >
+          <InlineLink href="https://ccaf.io/cbnsi/cbeci/comparisons" dir="ltr">
             source
-            <span aria-hidden="true">↗</span>
-          </a>
+          </InlineLink>
         </Td>
       </Tr>
       <Tr>
@@ -113,15 +100,12 @@ export const MdxEnergyConsumpData = () => (
         <Td textAlign="end">78</Td>
         <Td textAlign="end">30,000x</Td>
         <Td>
-          <a
-            target="_blank"
-            rel="noopener"
+          <InlineLink
             href="https://digiconomist.net/ethereum-energy-consumption"
             dir="ltr"
           >
             source
-            <span aria-hidden="true">↗</span>
-          </a>
+          </InlineLink>
         </Td>
       </Tr>
       <Tr>
@@ -129,15 +113,12 @@ export const MdxEnergyConsumpData = () => (
         <Td textAlign="end">12</Td>
         <Td textAlign="end">4600x</Td>
         <Td>
-          <a
-            target="_blank"
-            rel="noopener"
+          <InlineLink
             href="https://www.gstatic.com/gumdrop/sustainability/google-2020-environmental-report.pdf"
             dir="ltr"
           >
             source
-            <span aria-hidden="true">↗</span>
-          </a>
+          </InlineLink>
         </Td>
       </Tr>
       <Tr>
@@ -145,15 +126,12 @@ export const MdxEnergyConsumpData = () => (
         <Td textAlign="end">34</Td>
         <Td textAlign="end">13,000x</Td>
         <Td>
-          <a
-            target="_blank"
-            rel="noopener"
+          <InlineLink
             href="https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential"
             dir="ltr"
           >
             source
-            <span aria-hidden="true">↗</span>
-          </a>
+          </InlineLink>
         </Td>
       </Tr>
       <Tr>
@@ -161,15 +139,12 @@ export const MdxEnergyConsumpData = () => (
         <Td textAlign="end">0.451</Td>
         <Td textAlign="end">173x</Td>
         <Td>
-          <a
-            target="_blank"
-            rel="noopener"
+          <InlineLink
             href="https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf"
             dir="ltr"
           >
             source
-            <span aria-hidden="true">↗</span>
-          </a>
+          </InlineLink>
         </Td>
       </Tr>
       <Tr>
@@ -177,15 +152,12 @@ export const MdxEnergyConsumpData = () => (
         <Td textAlign="end">0.26</Td>
         <Td textAlign="end">100x</Td>
         <Td>
-          <a
-            target="_blank"
-            rel="noopener"
+          <InlineLink
             href="https://app.impaakt.com/analyses/paypal-consumed-264100-mwh-of-energy-in-2020-24-from-non-renewable-sources-27261"
             dir="ltr"
           >
             source
-            <span aria-hidden="true">↗</span>
-          </a>
+          </InlineLink>
         </Td>
       </Tr>
       <Tr>
@@ -193,15 +165,12 @@ export const MdxEnergyConsumpData = () => (
         <Td textAlign="end">0.02</Td>
         <Td textAlign="end">8x</Td>
         <Td>
-          <a
-            target="_blank"
-            rel="noopener"
+          <InlineLink
             href="https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf"
             dir="ltr"
           >
             source
-            <span aria-hidden="true">↗</span>
-          </a>
+          </InlineLink>
         </Td>
       </Tr>
       <Tr>
@@ -209,15 +178,12 @@ export const MdxEnergyConsumpData = () => (
         <Td textAlign="end">0.0026</Td>
         <Td textAlign="end">1x</Td>
         <Td>
-          <a
-            target="_blank"
-            rel="noopener"
+          <InlineLink
             href="https://carbon-ratings.com/eth-report-2022"
             dir="ltr"
           >
             source
-            <span aria-hidden="true">↗</span>
-          </a>
+          </InlineLink>
         </Td>
       </Tr>
     </Tbody>

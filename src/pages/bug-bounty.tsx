@@ -2,7 +2,14 @@ import { useRouter } from "next/router"
 import type { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box, Center, Heading, ListItem, UnorderedList } from "@chakra-ui/react"
+import {
+  Box,
+  Center,
+  Heading,
+  ListItem,
+  UnorderedList,
+  useColorModeValue,
+} from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
@@ -31,7 +38,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import consensusData from "@/data/consensus-bounty-hunters.json"
 import executionData from "@/data/execution-bounty-hunters.json"
 
-import useColorModeValue from "@/hooks/useColorModeValue"
 import besu from "@/public/images/upgrades/besu.png"
 import erigon from "@/public/images/upgrades/erigon.png"
 import geth from "@/public/images/upgrades/geth.png"

@@ -1,6 +1,14 @@
 import React from "react"
 import { IoCodeOutline } from "react-icons/io5"
-import { Box, Flex, Hide, Icon, LinkBox, LinkOverlay } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  Hide,
+  Icon,
+  LinkBox,
+  LinkOverlay,
+  useColorModeValue,
+} from "@chakra-ui/react"
 
 import { TranslationKey } from "@/lib/types"
 import { ITitleCardItem } from "@/lib/interfaces"
@@ -8,8 +16,6 @@ import { ITitleCardItem } from "@/lib/interfaces"
 import { Image } from "@/components/Image"
 import { BaseLink } from "@/components/Link"
 import Translation from "@/components/Translation"
-
-import useColorModeValue from "@/hooks/useColorModeValue"
 
 export type TitleCardListProps = {
   content: Array<ITitleCardItem>

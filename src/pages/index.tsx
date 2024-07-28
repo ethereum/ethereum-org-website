@@ -29,10 +29,11 @@ import CodeModal from "@/components/CodeModal"
 import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
+import LazyLoadComponent from "@/components/LazyLoadComponent"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
-import StatsBoxGrid from "@/components/StatsBoxGrid"
 import TitleCardList from "@/components/TitleCardList"
+import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -69,6 +70,29 @@ import infrastructurefixed from "@/public/images/infrastructure_transparent.png"
 import merge from "@/public/images/upgrades/merge.png"
 import robotfixed from "@/public/images/wallet-cropped.png"
 import ethereum from "@/public/images/what-is-ethereum.png"
+
+// lazy loaded components
+const Codeblock = lazy(() =>
+  Promise.all([
+    import("@/components/Codeblock"),
+    // Add a delay to prevent the skeleton from flashing
+    new Promise((resolve) => setTimeout(resolve, 1000)),
+  ]).then(([module]) => module)
+)
+const StatsBoxGrid = lazy(() => import("@/components/StatsBoxGrid"))
+
+const Skeleton = () => (
+  <Stack px={6} pt="2.75rem" h="50vh">
+    <SkeletonText
+      mt="4"
+      noOfLines={6}
+      spacing={4}
+      skeletonHeight="1.4rem"
+      startColor="body.medium"
+      opacity={0.2}
+    />
+  </Stack>
+)
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
@@ -225,33 +249,12 @@ export const getStaticProps = (async ({ locale }) => {
   }
 }) satisfies GetStaticProps<Props>
 
-const CodeblockSkeleton = () => (
-  <Stack px={6} pt="2.75rem" h="50vh">
-    <SkeletonText
-      mt="4"
-      noOfLines={6}
-      spacing={4}
-      skeletonHeight="1.4rem"
-      startColor="body.medium"
-      opacity={0.2}
-    />
-  </Stack>
-)
-
-const Codeblock = lazy(() =>
-  Promise.all([
-    import("@/components/Codeblock"),
-    // Add a delay to prevent the skeleton from flashing
-    new Promise((resolve) => setTimeout(resolve, 1000)),
-  ]).then(([module]) => module)
-)
-
 const HomePage = ({
   communityEvents,
   metricResults,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation(["common", "page-index"])
-  const { locale } = useRouter()
+  const { locale, asPath } = useRouter()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
   const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
@@ -267,28 +270,28 @@ const HomePage = ({
       title: t("page-index:page-index-get-started-wallet-title"),
       description: t("page-index:page-index-get-started-wallet-description"),
       alt: t("page-index:page-index-get-started-wallet-image-alt"),
-      to: "/wallets/find-wallet/",
+      href: "/wallets/find-wallet/",
     },
     {
       image: ethfixed,
       title: t("page-index:page-index-get-started-eth-title"),
       description: t("page-index:page-index-get-started-eth-description"),
       alt: t("page-index:page-index-get-started-eth-image-alt"),
-      to: "/get-eth/",
+      href: "/get-eth/",
     },
     {
       image: dogefixed,
       title: t("page-index:page-index-get-started-dapps-title"),
       description: t("page-index:page-index-get-started-dapps-description"),
       alt: t("page-index:page-index-get-started-dapps-image-alt"),
-      to: "/dapps/",
+      href: "/dapps/",
     },
     {
       image: devfixed,
       title: t("page-index:page-index-get-started-devs-title"),
       description: t("page-index:page-index-get-started-devs-description"),
       alt: t("page-index:page-index-get-started-devs-image-alt"),
-      to: "/developers/",
+      href: "/developers/",
     },
   ]
 
@@ -298,21 +301,21 @@ const HomePage = ({
       alt: t("page-index:page-index-tout-upgrades-image-alt"),
       title: t("page-index:page-index-tout-upgrades-title"),
       description: t("page-index:page-index-tout-upgrades-description"),
-      to: "/roadmap/",
+      href: "/roadmap/",
     },
     {
       image: infrastructurefixed,
       alt: t("page-index:page-index-tout-enterprise-image-alt"),
       title: t("page-index:page-index-tout-enterprise-title"),
       description: t("page-index:page-index-tout-enterprise-description"),
-      to: "/enterprise/",
+      href: "/enterprise/",
     },
     {
       image: enterprise,
       alt: t("page-index:page-index-tout-community-image-alt"),
       title: t("page-index:page-index-tout-community-title"),
       description: t("page-index:page-index-tout-community-description"),
-      to: "/community/",
+      href: "/community/",
     },
   ]
 
@@ -365,6 +368,7 @@ const HomePage = ({
         title={t("page-index:page-index-meta-title")}
         description={t("page-index:page-index-meta-description")}
       />
+      <TranslatathonBanner pathname={asPath} />
       <Box w="full">
         <HomeHero heroImg={hero} />
       </Box>
@@ -409,7 +413,7 @@ const HomePage = ({
                 title={card.title}
                 description={card.description}
                 alt={card.alt}
-                to={card.to}
+                href={card.href}
                 image={card.image}
                 imageWidth={320}
               />
@@ -561,7 +565,7 @@ const HomePage = ({
               setIsOpen={setModalOpen}
               title={codeExamples[activeCode].title}
             >
-              <Suspense fallback={<CodeblockSkeleton />}>
+              <Suspense fallback={<Skeleton />}>
                 <Codeblock
                   codeLanguage={codeExamples[activeCode].codeLanguage}
                   allowCollapse={false}
@@ -584,7 +588,17 @@ const HomePage = ({
             <Translation id="page-index:page-index-network-stats-subtitle" />
           </SectionDecription>
         </ContentBox>
-        <StatsBoxGrid data={metricResults} />
+
+        <LazyLoadComponent
+          component={StatsBoxGrid}
+          fallback={<Skeleton />}
+          componentProps={{ data: metricResults }}
+          intersectionOptions={{
+            root: null,
+            rootMargin: "500px",
+            threshold: 0,
+          }}
+        />
       </GrayContainer>
       <Divider mb={16} mt={16} w="10%" height="0.25rem" bgColor="homeDivider" />
       <CommunityEvents events={communityEvents} />
@@ -603,7 +617,7 @@ const HomePage = ({
                 title={tout.title}
                 description={tout.description}
                 alt={tout.alt}
-                to={tout.to}
+                href={tout.href}
                 image={tout.image}
                 imageWidth={320}
                 boxShadow={cardBoxShadow}

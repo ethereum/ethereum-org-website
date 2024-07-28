@@ -7,6 +7,7 @@ import {
   Button as ChakraButton,
   Flex,
   Img,
+  useColorModeValue,
   useRadio,
   useRadioGroup,
 } from "@chakra-ui/react"
@@ -15,8 +16,6 @@ import type { CostLeaderboardData } from "@/lib/types"
 
 import Emoji from "./Emoji"
 import Text from "./OldText"
-
-import useColorModeValue from "@/hooks/useColorModeValue"
 
 const Button = (props) => {
   return (

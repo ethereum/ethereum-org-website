@@ -86,7 +86,7 @@ export const RoadmapLayout = ({
     items: [
       {
         text: "nav-roadmap-home",
-        to: "/roadmap/",
+        href: "/roadmap/",
         matomo: {
           eventCategory: `Roadmap dropdown`,
           eventAction: `Clicked`,
@@ -95,7 +95,7 @@ export const RoadmapLayout = ({
       },
       {
         text: "nav-roadmap-security",
-        to: "/roadmap/security",
+        href: "/roadmap/security",
         matomo: {
           eventCategory: `Roadmap security dropdown`,
           eventAction: `Clicked`,
@@ -104,7 +104,7 @@ export const RoadmapLayout = ({
       },
       {
         text: "nav-roadmap-scaling",
-        to: "/roadmap/scaling",
+        href: "/roadmap/scaling",
         matomo: {
           eventCategory: `Roadmap scaling dropdown`,
           eventAction: `Clicked`,
@@ -113,7 +113,7 @@ export const RoadmapLayout = ({
       },
       {
         text: "nav-roadmap-user-experience",
-        to: "/roadmap/user-experience/",
+        href: "/roadmap/user-experience/",
         matomo: {
           eventCategory: `Roadmap user experience dropdown`,
           eventAction: `Clicked`,
@@ -122,7 +122,7 @@ export const RoadmapLayout = ({
       },
       {
         text: "nav-roadmap-future-proofing",
-        to: "/roadmap/future-proofing",
+        href: "/roadmap/future-proofing",
         matomo: {
           eventCategory: `Roadmap future-proofing dropdown`,
           eventAction: `Clicked`,
@@ -151,10 +151,13 @@ export const RoadmapLayout = ({
             {frontmatter?.buttons && (
               <Wrap spacing={2} marginBottom={4} sx={{ ul: { m: 0 } }}>
                 {frontmatter.buttons.map((button, idx) => {
-                  if (button?.to) {
+                  if (button?.href) {
                     return (
                       <WrapItem key={idx}>
-                        <ButtonLink variant={button?.variant} href={button?.to}>
+                        <ButtonLink
+                          variant={button?.variant}
+                          href={button?.href}
+                        >
                           {button.label}
                         </ButtonLink>
                       </WrapItem>
