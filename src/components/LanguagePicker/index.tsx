@@ -33,13 +33,7 @@ const LanguagePicker = ({
   className,
 }: LanguagePickerProps) => {
   const { asPath, push } = useRouter()
-  const {
-    t,
-    disclosure,
-    filteredNames,
-    // TODO: Implement this
-    // handleInputFocus,
-  } = useLanguagePicker(handleClose)
+  const { t, disclosure, filteredNames } = useLanguagePicker(handleClose)
   const { isOpen, setValue, onClose, onOpen } = disclosure
 
   /**

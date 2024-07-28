@@ -72,7 +72,6 @@ const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
             >
               {targetName}
             </p>
-            {/* TODO */}
             {isBrowserDefault && (
               <Badge
                 className="h-fit-content rounded border-body-medium p-1 text-2xs font-normal uppercase leading-none text-body-medium"
