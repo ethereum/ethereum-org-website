@@ -298,7 +298,7 @@ const HomePage = ({
           tag="Learn"
           title="Understanding Ethereum"
           imgSrc={learnImage}
-          className="lg:flex-row-reverse"
+          isFlipped
         >
           <div className="flex flex-col space-y-16 xl:space-y-32">
             <p className="text-lg">
@@ -370,7 +370,8 @@ const HomePage = ({
           tag="Ethereum.org Community"
           title="Built by the community"
           imgSrc={communityImage}
-          className="flex-col-reverse"
+          isFlipped
+          className=""
         >
           <span className="text-[5rem]">👷‍♀️🚧🔜</span>
         </HomeSection>
