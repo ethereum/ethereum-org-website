@@ -207,22 +207,6 @@ const HomePage = ({
   ]
 
   const comingSoon = [
-    {
-      title: "A new way to use the internet",
-      tag: "Use cases",
-    },
-    { title: "The internet is changing", tag: "" },
-    {
-      title: "Bockchain's biggest builder community",
-      tag: "Builders",
-      imgSrc: buildersImage,
-    },
-    {
-      title: "Built by the community",
-      tag: "Ethereum.org community",
-      imgSrc: communityImage,
-      className: "flex-col-reverse",
-    },
     { title: "Ethereum news", tag: "" },
     { title: "Ethereum events", tag: "" },
     { title: "Join ethereum.org", tag: "" },
@@ -258,6 +242,10 @@ const HomePage = ({
             </SvgButtonLink>
           ))}
         </div>
+
+        <HomeSection tag="Use cases" title="A new way to use the internet">
+          <span className="text-[5rem]">👷‍♀️🚧🔜</span>
+        </HomeSection>
 
         <HomeSection
           tag="Activity"
@@ -344,6 +332,27 @@ const HomePage = ({
               </div>
             </div>
           </div>
+        </HomeSection>
+
+        <HomeSection tag="" title="The internet is changing">
+          <span className="text-[5rem]">👷‍♀️🚧🔜</span>
+        </HomeSection>
+
+        <HomeSection
+          tag="Builders"
+          title="Blockchain's biggest builder community"
+          imgSrc={buildersImage}
+        >
+          <span className="text-[5rem]">👷‍♀️🚧🔜</span>
+        </HomeSection>
+
+        <HomeSection
+          tag="Ethereum.org Community"
+          title="Built by the community"
+          imgSrc={communityImage}
+          className="flex-col-reverse"
+        >
+          <span className="text-[5rem]">👷‍♀️🚧🔜</span>
         </HomeSection>
 
         {/* Temporary coming soon section template */}
