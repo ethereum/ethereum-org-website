@@ -2,12 +2,12 @@ import { ComponentPropsWithoutRef } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { BsCheck } from "react-icons/bs"
-import { Badge } from "@chakra-ui/react"
 
 import type { LocaleDisplayInfo } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
 
+import { Badge } from "../ui/badge"
 import { CommandItem } from "../ui/command"
 
 import ProgressBar from "./ProgressBar"
@@ -75,14 +75,8 @@ const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
             {/* TODO */}
             {isBrowserDefault && (
               <Badge
-                border="1px"
-                borderColor="body.medium"
-                color="body.medium"
-                lineHeight="none"
-                fontSize="2xs"
-                p="1"
-                h="fit-content"
-                bg="none"
+                className="h-fit-content rounded border-body-medium p-1 text-2xs font-normal uppercase leading-none text-body-medium"
+                variant="outline"
               >
                 {t("page-languages-browser-default")}
               </Badge>
