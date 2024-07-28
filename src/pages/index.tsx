@@ -3,6 +3,7 @@ import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { FaDiscord, FaGithub } from "react-icons/fa"
 import { MdChevronRight } from "react-icons/md"
 import { Flex, Skeleton } from "@chakra-ui/react"
 
@@ -36,7 +37,7 @@ import {
   isLangRightToLeft,
 } from "@/lib/utils/translations"
 
-import { BASE_TIME_UNIT } from "@/lib/constants"
+import { BASE_TIME_UNIT, GITHUB_REPO_URL } from "@/lib/constants"
 
 import { ButtonLink } from "../../tailwind/ui/buttons/Button"
 
@@ -422,9 +423,44 @@ const HomePage = ({
           title="Built by the community"
           imgSrc={communityImage}
           isFlipped
-          className=""
         >
-          <span className="text-[5rem]">👷‍♀️🚧🔜</span>
+          <div className="mt-8 flex flex-col gap-8">
+            <p className="text-lg">
+              The ethereum.org website is built and maintained by hundreds of
+              translators, coders, designers, copywriters, and enthusiastic
+              community members each month.
+            </p>
+            <p className="text-lg">
+              Come ask questions, connect with people around the world and
+              contribute to the website. You will get relevant practical
+              experience and be guided during the process!
+            </p>
+            <p className="text-lg">
+              Ethereum.org community is the perfect place to start and learn.
+            </p>
+          </div>
+          <div className="BUTTON_GROUP flex flex-wrap gap-3 py-8">
+            <ButtonLink
+              linkProps={{ href: "/discord/", hideArrow: true }}
+              className="w-fit text-lg"
+              variant="outline"
+            >
+              <FaDiscord />
+            </ButtonLink>
+            <ButtonLink
+              linkProps={{ href: GITHUB_REPO_URL, hideArrow: true }}
+              className="w-fit text-lg"
+              variant="outline"
+            >
+              <FaGithub />
+            </ButtonLink>
+            <ButtonLink
+              linkProps={{ href: "/community/" }}
+              className="w-fit text-lg"
+            >
+              More on ethereum.org <MdChevronRight />
+            </ButtonLink>
+          </div>
         </HomeSection>
 
         {/* Temporary coming soon section template */}

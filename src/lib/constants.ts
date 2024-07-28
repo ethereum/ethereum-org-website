@@ -25,6 +25,8 @@ export const LOCALES_CODES = BUILD_LOCALES
 // Site urls
 export const SITE_URL = "https://ethereum.org"
 export const DISCORD_PATH = "/discord/"
+export const GITHUB_REPO_URL =
+  "https://github.com/ethereum/ethereum-org-website"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
 export const MAIN_CONTENT_ID = "main-content"
 export const WEBSITE_EMAIL = "website@ethereum.org"
