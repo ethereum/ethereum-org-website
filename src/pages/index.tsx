@@ -2,6 +2,7 @@ import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { MdChevronRight } from "react-icons/md"
 import { Flex } from "@chakra-ui/react"
 
 import { AllMetricData, BasePageProps, Lang } from "@/lib/types"
@@ -11,10 +12,13 @@ import BigNumber from "@/components/BigNumber"
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import HomeHero from "@/components/Hero/HomeHero"
 import HomeSection from "@/components/HomeSection"
+import BlockHeap from "@/components/icons/block-heap.svg"
 import EthTokenIcon from "@/components/icons/eth-token.svg"
 import PickWalletIcon from "@/components/icons/eth-wallet.svg"
 import ChooseNetworkIcon from "@/components/icons/network-layers.svg"
 import TryAppsIcon from "@/components/icons/phone-homescreen.svg"
+import RoadmapSign from "@/components/icons/roadmap-sign.svg"
+import Whitepaper from "@/components/icons/whitepaper.svg"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
@@ -29,6 +33,8 @@ import {
 } from "@/lib/utils/translations"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
+
+import { ButtonLink } from "../../tailwind/ui/buttons/Button"
 
 import CreateWalletContent from "!!raw-loader!@/data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
@@ -172,16 +178,38 @@ const HomePage = ({
     },
   ]
 
+  const popularTopics = [
+    {
+      label: "What is Ethereum?",
+      Svg: EthTokenIcon,
+      href: "/what-is-ethereum/",
+    },
+    {
+      label: "What are crypto wallets?",
+      Svg: PickWalletIcon,
+      href: "/wallets/",
+    },
+    {
+      label: "How to start? (step by step)",
+      Svg: BlockHeap,
+      href: "/guides/",
+    },
+    {
+      label: "Ethereum Whitepaper",
+      Svg: Whitepaper,
+      href: "/whitepaper/",
+    },
+    {
+      label: "Ethereum roadmap",
+      Svg: RoadmapSign,
+      href: "/roadmap/",
+    },
+  ]
+
   const comingSoon = [
     {
       title: "A new way to use the internet",
       tag: "Use cases",
-    },
-    {
-      title: "Understanding Ethereum",
-      tag: "Learn",
-      imgSrc: learnImage,
-      imageLast: true,
     },
     { title: "The internet is changing", tag: "" },
     {
@@ -193,7 +221,7 @@ const HomePage = ({
       title: "Built by the community",
       tag: "Ethereum.org community",
       imgSrc: communityImage,
-      imageLast: true,
+      className: "flex-col-reverse",
     },
     { title: "Ethereum news", tag: "" },
     { title: "Ethereum events", tag: "" },
@@ -274,6 +302,46 @@ const HomePage = ({
               >
                 Value protecting Ethereum
               </BigNumber>
+            </div>
+          </div>
+        </HomeSection>
+
+        <HomeSection
+          tag="Learn"
+          title="Understanding Ethereum"
+          imgSrc={learnImage}
+          className="lg:flex-row-reverse"
+        >
+          <div className="flex flex-col space-y-16 xl:space-y-32">
+            <p className="text-lg">
+              Cryptocurrency can feel overwhelming. Don&apos;t worry, these
+              materials are designed to help you understand Ethereum in just a
+              few minutes.
+            </p>
+            <div className="flex flex-col space-y-8">
+              <p className="text-xl font-bold">Popular topics</p>
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+                {popularTopics.map(({ label, Svg, href }) => (
+                  <SvgButtonLink
+                    key={label}
+                    Svg={Svg}
+                    href={href}
+                    className="text-primary [&>:first-child]:flex-row"
+                  >
+                    <p className="text-start text-xl font-bold text-body">
+                      {label}
+                    </p>
+                  </SvgButtonLink>
+                ))}
+              </div>
+              <div className="flex justify-center py-8 lg:justify-start">
+                <ButtonLink
+                  linkProps={{ href: "/learn/" }}
+                  className="w-fit text-lg"
+                >
+                  Other topics <MdChevronRight />
+                </ButtonLink>
+              </div>
             </div>
           </div>
         </HomeSection>
