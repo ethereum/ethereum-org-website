@@ -33,7 +33,7 @@ const LanguagePicker = ({
   className,
 }: LanguagePickerProps) => {
   const { asPath, push } = useRouter()
-  const { t, disclosure, filteredNames } = useLanguagePicker(handleClose)
+  const { t, disclosure, languages } = useLanguagePicker(handleClose)
   const { isOpen, setValue, onClose, onOpen } = disclosure
 
   /**
@@ -82,9 +82,7 @@ const LanguagePicker = ({
         <Command
           className="gap-2 p-4"
           filter={(value: string, search: string) => {
-            const item = filteredNames.find(
-              (name) => name.localeOption === value
-            )
+            const item = languages.find((name) => name.localeOption === value)
 
             if (!item) return 0
 
@@ -104,7 +102,7 @@ const LanguagePicker = ({
           <div className="text-xs text-body-medium">
             {t("page-languages-filter-label")}{" "}
             <span className="lowercase">
-              ({filteredNames.length} {t("common:languages")})
+              ({languages.length} {t("common:languages")})
             </span>
           </div>
 
@@ -126,7 +124,7 @@ const LanguagePicker = ({
               />
             </CommandEmpty>
             <CommandGroup className="p-0">
-              {filteredNames.map((displayInfo) => (
+              {languages.map((displayInfo) => (
                 <MenuItem
                   key={"item-" + displayInfo.localeOption}
                   displayInfo={displayInfo}
