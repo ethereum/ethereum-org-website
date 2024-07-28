@@ -113,6 +113,7 @@ const config = {
         10.5: "2.625rem",
         19: "4.75rem", // Nav height
         31: "7.75rem", // FeedbackWidget conditional bottom offset
+        128: "32rem",
       },
       keyframes: {
         "accordion-down": {
