@@ -5,6 +5,7 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaDiscord, FaGithub } from "react-icons/fa"
 import { MdChevronRight } from "react-icons/md"
+import { RxExternalLink } from "react-icons/rx"
 import { Flex, Skeleton } from "@chakra-ui/react"
 
 import { AllMetricData, BasePageProps, Lang } from "@/lib/types"
@@ -18,6 +19,7 @@ import HomeHero from "@/components/Hero/HomeHero"
 import HomeSection from "@/components/HomeSection"
 import AngleBrackets from "@/components/icons/angle-brackets.svg"
 import BlockHeap from "@/components/icons/block-heap.svg"
+import Calendar from "@/components/icons/calendar.svg"
 import EthTokenIcon from "@/components/icons/eth-token.svg"
 import PickWalletIcon from "@/components/icons/eth-wallet.svg"
 import ChooseNetworkIcon from "@/components/icons/network-layers.svg"
@@ -27,7 +29,9 @@ import Whitepaper from "@/components/icons/whitepaper.svg"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
+import WindowBox from "@/components/WindowBox"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
@@ -39,7 +43,7 @@ import {
 
 import { BASE_TIME_UNIT, GITHUB_REPO_URL } from "@/lib/constants"
 
-import { ButtonLink } from "../../tailwind/ui/buttons/Button"
+import { Button, ButtonLink } from "../../tailwind/ui/buttons/Button"
 
 import CreateWalletContent from "!!raw-loader!@/data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
@@ -219,6 +223,25 @@ const HomePage = ({
     },
   ]
 
+  const dummyCalendarData = [
+    {
+      date: "May 29, 2024 at 18:00",
+      title: "ethereum.org Community Call - May 2024",
+    },
+    {
+      date: "Jul 25, 2024",
+      title: "☎️ ethereum.org Community Call - July 2024",
+    },
+    {
+      date: "Jul 3, 2024",
+      title: "🛠 QA session - ethereum.org portal",
+    },
+    {
+      date: "May 8, 2024",
+      title:
+        "👾 Live coding session - Implementing a visual testing component on ethereum.org",
+    },
+  ]
   const comingSoon = [
     { title: "Ethereum news", tag: "" },
     { title: "Ethereum events", tag: "" },
@@ -376,15 +399,10 @@ const HomePage = ({
               Documentation
             </ButtonLink>
           </div>
-          <div className="flex flex-col overflow-hidden rounded-2xl border shadow">
-            <div className="flex items-center gap-4 bg-primary-highlight-gradient p-4">
-              <div className="grid size-10 place-items-center rounded-lg border">
-                <AngleBrackets />
-              </div>
-              <p className="font-bold">
-                {t("page-index:page-index-developers-code-examples")}
-              </p>
-            </div>
+          <WindowBox
+            title={t("page-index:page-index-developers-code-examples")}
+            Svg={AngleBrackets}
+          >
             {codeExamples.map(({ title, description }, idx) => (
               <button
                 key={title}
@@ -397,7 +415,8 @@ const HomePage = ({
                 </p>
               </button>
             ))}
-          </div>
+          </WindowBox>
+
           {isModalOpen && (
             // TODO: Migrate CodeModal, CodeBlock, Skeleton from Chakra-UI to tailwind/shad-cn
             <CodeModal
@@ -461,6 +480,41 @@ const HomePage = ({
               More on ethereum.org <MdChevronRight />
             </ButtonLink>
           </div>
+
+          <WindowBox title="Next calls" Svg={Calendar}>
+            {dummyCalendarData.map(({ date, title }, idx) => (
+              <div
+                key={title}
+                className={cn(
+                  "flex flex-col justify-between gap-6 border-t px-6 py-4 xl:flex-row",
+                  idx === 0 && "bg-accent-gradient"
+                )}
+              >
+                <div
+                  className={cn(
+                    "flex flex-col space-y-0.5 text-center text-base sm:text-start"
+                  )}
+                >
+                  <p className="italic text-body-medium">{date}</p>
+                  <p
+                    className={cn(
+                      "text-sm text-body",
+                      idx === 0 && "font-bold"
+                    )}
+                  >
+                    {title}
+                  </p>
+                </div>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="h-fit w-full text-nowrap border-body !text-body sm:w-fit xl:self-center"
+                >
+                  Add to calendar <RxExternalLink />
+                </Button>
+              </div>
+            ))}
+          </WindowBox>
         </HomeSection>
 
         {/* Temporary coming soon section template */}
