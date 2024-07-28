@@ -29,7 +29,9 @@ const HomeSection = ({
         <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
           {tag}
         </div>
-        <h2 className="mt-2 text-5xl font-black xl:text-7xl">{title}</h2>
+        <h2 className="mb-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
+          {title}
+        </h2>
         {children}
       </div>
     </div>

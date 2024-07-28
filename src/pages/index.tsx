@@ -343,7 +343,27 @@ const HomePage = ({
           title="Blockchain's biggest builder community"
           imgSrc={buildersImage}
         >
-          <span className="text-[5rem]">👷‍♀️🚧🔜</span>
+          <p className="text-lg">
+            Ethereum is home to Web3’s largest and most vibrant developer
+            ecosystem. Use JavaScript and Python, or learn a smart contract
+            language like Solidity or Vyper to write your own app.
+          </p>
+          <div className="flex flex-col justify-center gap-6 py-8 md:flex-row lg:justify-start">
+            <ButtonLink
+              linkProps={{ href: "/developers/" }}
+              className="w-fit text-lg"
+            >
+              Builder&apos;s Portal <MdChevronRight />
+            </ButtonLink>
+            <ButtonLink
+              linkProps={{ href: "/developers/docs/" }}
+              className="w-fit text-lg"
+              variant="outline"
+            >
+              Documentation
+            </ButtonLink>
+          </div>
+          <div className="flex flex-col space-y-8"></div>
         </HomeSection>
 
         <HomeSection
