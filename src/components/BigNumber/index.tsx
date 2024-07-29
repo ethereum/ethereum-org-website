@@ -33,7 +33,7 @@ const BigNumber = ({
         className
       )}
     >
-      <div className="text-5xl">{value}</div>
+      <div className="text-5xl font-bold">{value}</div>
       <div className="text-sm">
         {children}
         {sourceName && sourceUrl && (
