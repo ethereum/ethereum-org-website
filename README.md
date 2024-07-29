@@ -1873,7 +1873,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/abonnaudet-ledger"><img src="https://avatars.githubusercontent.com/u/71646516?v=4?s=100" width="100px;" alt="abonnaudet-ledger"/><br /><sub><b>abonnaudet-ledger</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aabonnaudet-ledger" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/JacobSharples"><img src="https://avatars.githubusercontent.com/u/45126111?v=4?s=100" width="100px;" alt="Jacob Sharples"/><br /><sub><b>Jacob Sharples</b></sub></a><br /><a href="#content-JacobSharples" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/omahs"><img src="https://avatars.githubusercontent.com/u/73983677?v=4?s=100" width="100px;" alt="omahs"/><br /><sub><b>omahs</b></sub></a><br /><a href="#translation-omahs" title="Translation">🌍</a> <a href="#maintenance-omahs" title="Maintenance">🚧</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Shiva-Sai-ssb"><img src="https://avatars.githubusercontent.com/u/112751524?v=4?s=100" width="100px;" alt="Shiva Sai"/><br /><sub><b>Shiva Sai</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AShiva-Sai-ssb" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Shiva-Sai-ssb"><img src="https://avatars.githubusercontent.com/u/112751524?v=4?s=100" width="100px;" alt="Shiva Sai"/><br /><sub><b>Shiva Sai</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AShiva-Sai-ssb" title="Bug reports">🐛</a> <a href="#maintenance-Shiva-Sai-ssb" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://bsaurabh.xyz/"><img src="https://avatars.githubusercontent.com/u/39492927?v=4?s=100" width="100px;" alt="Saurabh Burade"/><br /><sub><b>Saurabh Burade</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=saurabhburade" title="Code">💻</a></td>
     </tr>
     <tr>
@@ -1887,6 +1887,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/krishchvn"><img src="https://avatars.githubusercontent.com/u/58606754?v=4?s=100" width="100px;" alt="Krishnakumar Chavan"/><br /><sub><b>Krishnakumar Chavan</b></sub></a><br /><a href="#content-krishchvn" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xV4L3NT1N3"><img src="https://avatars.githubusercontent.com/u/33112835?v=4?s=100" width="100px;" alt="0xV4L3NT1N3"/><br /><sub><b>0xV4L3NT1N3</b></sub></a><br /><a href="#tool-0xV4L3NT1N3" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>

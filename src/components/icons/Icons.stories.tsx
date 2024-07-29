@@ -3,7 +3,6 @@ import { Center, Flex, Icon, SimpleGrid } from "@chakra-ui/react"
 import type { Meta, StoryObj } from "@storybook/react"
 
 import { EthHomeIcon } from "./EthHomeIcon"
-import { FeedbackGlyphIcon } from "./FeedbackGlyphIcon"
 import { FeedbackThumbsUpIcon } from "./FeedbackThumbsUpIcon"
 import { HighlightDarkIcon } from "./HighlightDarkIcon"
 import { HighlightIcon } from "./HighlightIcon"
@@ -171,7 +170,6 @@ const iconsDefinitions = [
   SwapIcon,
   WithdrawCryptoIcon,
   EthHomeIcon,
-  FeedbackGlyphIcon,
   FeedbackThumbsUpIcon,
   HighlightDarkIcon,
   HighlightIcon,

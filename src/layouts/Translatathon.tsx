@@ -16,6 +16,7 @@ import {
   Page,
 } from "@/components/MdComponents"
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
+import { APPLICATION_URL } from "@/components/Translatathon/constants"
 import { CountdownBanner } from "@/components/Translatathon/CountdownBanner"
 import { DatesAndTimeline } from "@/components/Translatathon/DatesAndTimeline"
 import { LocalCommunitiesList } from "@/components/Translatathon/LocalCommunitiesList"
@@ -208,7 +209,7 @@ export const TranslatathonLayout = ({
               different languages.
             </Text>
             <Flex>
-              <ButtonLink href="/">Apply to translate</ButtonLink>
+              <ButtonLink href={APPLICATION_URL}>Apply to translate</ButtonLink>
             </Flex>
           </>
         }
