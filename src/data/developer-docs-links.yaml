@@ -97,7 +97,6 @@
                       href: /developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/
                     - id: docs-nav-ethash
                       href: /developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/
-        
         - id: docs-nav-proof-of-authority
           href: /developers/docs/consensus-mechanisms/poa/
 - id: docs-nav-ethereum-stack
