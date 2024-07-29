@@ -28,11 +28,13 @@ const HomeSection = ({
         className
       )}
     >
-      <NextImage
-        className="min-h-full w-full rounded-4xl object-cover object-center lg:max-w-128"
-        src={imgSrc || ""}
-        alt=""
-      />
+      {imgSrc && (
+        <NextImage
+          className="min-h-full w-full rounded-4xl object-cover object-center lg:max-w-128"
+          src={imgSrc}
+          alt=""
+        />
+      )}
       <div className="w-full">
         <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
           {tag}
