@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react/*"
 
 import { VStack } from "../../../src/components/ui/flex"
-import { Input } from "../Input"
+import Input from "../Input"
 
 const meta = {
   title: "Atoms / Form / ShadCN Input",
