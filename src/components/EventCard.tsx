@@ -1,4 +1,5 @@
 import React from "react"
+import { useTranslation } from "react-i18next"
 import { BsCalendar3 } from "react-icons/bs"
 import { Box, Flex, Heading, Icon } from "@chakra-ui/react"
 import { Image } from "@chakra-ui/react"
@@ -37,6 +38,7 @@ const EventCard = ({
   endDate,
   startDate,
 }: EventCardProps) => {
+  const { t } = useTranslation("page-community")
   const formatedDate = formatDateRange(startDate, endDate)
   return (
     <Box
@@ -114,7 +116,7 @@ const EventCard = ({
         </Box>
         <Box padding={4} paddingTop={0} width={"100%"}>
           <ButtonLink href={to} width={"100%"} variant="outline">
-            View Event
+            {t("page-community-upcoming-events-view-event")}
           </ButtonLink>
         </Box>
       </Flex>
