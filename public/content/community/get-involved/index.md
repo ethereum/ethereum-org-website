@@ -15,7 +15,7 @@ Start by reading about the ethereum.org mission and values in our [code of condu
 - Learn about and try Ethereum at [ethereum.org/developers/](/developers/)
 - Attend an [ETHGlobal](http://ethglobal.co/) hackathon near you!
 - Check out [projects related to your area of expertise or programming language of choice](/developers/docs/programming-languages/)
-- Watch or participate in the [Core Dev calls](https://www.youtube.com/@EthereumProtocol)
+- Watch or participate in the [Consensus and Execution Layer calls](https://www.youtube.com/@EthereumProtocol/streams)
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 - [Web3Bridge](https://www.web3bridge.com/) - join the aspiring web3 community in their initiative to identify, train, and support hundreds of developers and community members throughout Africa
 - Join the [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
