@@ -34,6 +34,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@hookform/resolvers": "^3.8.0",
+    "@next/bundle-analyzer": "^14.2.5",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-navigation-menu": "^1.2.0",
     "@radix-ui/react-popover": "^1.1.1",

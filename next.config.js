@@ -1,6 +1,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 const { withSentryConfig } = require("@sentry/nextjs")
+const { DefinePlugin } = require("webpack")
+
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: true,
+})
 
 const { i18n } = require("./next-i18next.config")
 
@@ -32,6 +37,13 @@ module.exports = (phase, { defaultConfig }) => {
         test: /\.svg$/,
         use: "@svgr/webpack",
       })
+
+      config.plugins.push(
+        new DefinePlugin({
+          __SENTRY_DEBUG__: false,
+          __SENTRY_TRACING__: false,
+        })
+      )
 
       return config
     },
@@ -68,10 +80,12 @@ module.exports = (phase, { defaultConfig }) => {
     }
   }
 
-  return withSentryConfig(nextConfig, {
-    org: "ethereumorg-ow",
-    project: "javascript-nextjs",
-    authToken: process.env.SENTRY_AUTH_TOKEN,
-    silent: false,
-  })
+  return withBundleAnalyzer(
+    withSentryConfig(nextConfig, {
+      org: "ethereumorg-ow",
+      project: "javascript-nextjs",
+      authToken: process.env.SENTRY_AUTH_TOKEN,
+      silent: false,
+    })
+  )
 }
