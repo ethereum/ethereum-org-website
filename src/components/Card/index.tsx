@@ -16,7 +16,7 @@ const Card = ({ emoji, title, description, children, ...props }: CardProps) => (
     justifyContent="space-between"
     bg="ednBackground"
     borderRadius="sm"
-    border="1px"
+    border="2px"
     borderStyle="solid"
     borderColor="lightBorder"
     p="6"
