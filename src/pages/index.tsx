@@ -29,6 +29,7 @@ import Whitepaper from "@/components/icons/whitepaper.svg"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
@@ -40,6 +41,8 @@ import {
   getRequiredNamespacesForPage,
   isLangRightToLeft,
 } from "@/lib/utils/translations"
+
+import events from "@/data/community-events.json"
 
 import { BASE_TIME_UNIT, GITHUB_REPO_URL } from "@/lib/constants"
 
@@ -242,11 +245,18 @@ const HomePage = ({
         "👾 Live coding session - Implementing a visual testing component on ethereum.org",
     },
   ]
+
   const comingSoon = [
     { title: "Ethereum news", tag: "" },
-    { title: "Ethereum events", tag: "" },
     { title: "Join ethereum.org", tag: "" },
   ]
+
+  const upcomingEvents = events
+    .sort(
+      (a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime()
+    )
+    .slice(0, 3)
+
   return (
     <Flex
       as={MainArticle}
@@ -265,7 +275,7 @@ const HomePage = ({
       </div>
 
       <div className="space-y-16 px-4 md:px-6 lg:space-y-32">
-        <div className="grid w-full grid-cols-2 gap-4 py-20 lg:grid-cols-4 lg:gap-x-10">
+        <div className="grid w-full grid-cols-2 gap-x-4 gap-y-8 py-20 lg:grid-cols-4 lg:gap-x-10">
           {SubHeroCTAs.map(({ label, description, href, colorClass, Svg }) => (
             <SvgButtonLink
               key={label}
@@ -515,8 +525,75 @@ const HomePage = ({
               </div>
             ))}
           </WindowBox>
+
+          {/* TODO: News sub-section */}
         </HomeSection>
 
+        <HomeSection tag="" title="Ethereum events">
+          <p>We have many community events scheduled around the globe</p>
+          <div className="mt-4 lg:mt-16">
+            <div className="flex flex-col gap-8 self-stretch md:flex-row">
+              {upcomingEvents.map(
+                ({
+                  title,
+                  href,
+                  location,
+                  description,
+                  startDate,
+                  endDate,
+                  imageUrl,
+                }) => {
+                  return (
+                    <a
+                      href={href}
+                      className="md:w-1/3 md:max-w-128"
+                      key={title}
+                    >
+                      <Card
+                        className={cn(
+                          "w-full space-y-4",
+                          "border-none shadow-none",
+                          "transition-transform duration-100 hover:scale-105 hover:transition-transform hover:duration-100"
+                        )}
+                      >
+                        <CardHeader className="bgBACKUP-bg-main-gradient h-48 w-full self-stretch overflow-hidden rounded-2xl bg-bg-main-gradient p-0">
+                          {imageUrl && (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
+                              src={imageUrl}
+                              alt=""
+                              className="object-cover object-center"
+                            />
+                          )}
+                          {/* TODO: Handle event image */}
+                        </CardHeader>
+                        <CardContent className="space-y-8 p-2">
+                          <div>
+                            <p className="text-2xl">{title}</p>
+                            <p className="text-sm italic text-body-medium">
+                              {new Intl.DateTimeFormat(locale, {
+                                month: "2-digit",
+                                day: "2-digit",
+                                year: "numeric",
+                              }).formatRange(
+                                new Date(startDate),
+                                new Date(endDate)
+                              )}
+                            </p>
+                            <p className="text-sm italic text-body-medium">
+                              {location}
+                            </p>
+                          </div>
+                          <p>{description}</p>
+                        </CardContent>
+                      </Card>
+                    </a>
+                  )
+                }
+              )}
+            </div>
+          </div>
+        </HomeSection>
         {/* Temporary coming soon section template */}
         {comingSoon.map((item) => (
           <HomeSection {...item} key={item.title} />
