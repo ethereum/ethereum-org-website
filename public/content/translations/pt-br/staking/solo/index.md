@@ -190,7 +190,7 @@ Depois que as credenciais de saque estiverem definidas, os pagamentos de recompe
 
 Para desbloquear e receber todo o seu saldo de volta, você deve concluir o processo de saída de seu validador.
 
-<ButtonLink to="/staking/withdrawals/">Mais sobre saques de participação</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Mais sobre saques de participação</ButtonLink>
 </ExpandableCard>
 
 ## Leitura adicional {#further-reading}

@@ -95,6 +95,6 @@ _コミュニティーが好みの製品や最高の製品を推奨できるよ�
 
 本基準を満たした分散型アプリ(Dapp)のethereum.orgへの掲載をご希望の場合は、GitHubでイシューを作成してください。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
   問題の作成
 </ButtonLink>

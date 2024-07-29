@@ -94,7 +94,7 @@ const config = {
         "table-item-box": "var(--table-item-box-shadow)",
         "table-item-box-hover": "0 0 1px var(--primary)",
         "grid-yellow-box-shadow": "8px 8px 0px 0px #ffe78e",
-        "gird-blue-box-shadow": "8px 8px 0px 0px #a7d0f4",
+        "grid-blue-box-shadow": "8px 8px 0px 0px #a7d0f4",
         // Part of new DS
         "menu-accordion":
           "0px 2px 2px 0px rgba(0, 0, 0, 0.12) inset, 0px -3px 2px 0px rgba(0, 0, 0, 0.14) inset",
@@ -107,6 +107,7 @@ const config = {
         7.5: "1.875rem",
         10.5: "2.625rem",
         19: "4.75rem", // Nav height
+        31: "7.75rem", // FeedbackWidget conditional bottom offset
       },
       keyframes: {
         "accordion-down": {

@@ -219,7 +219,7 @@ Die [Beacon Chain](/roadmap/beacon-chain/) benötigte zum sicheren Betrieb 16.38
 
 [Die Ankündigung der Ethereum Foundation lesen](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   Die Beacon Chain
 </DocLink>
 
@@ -235,7 +235,7 @@ Mit dem Staking-Einzahlungsvertrag wurde [Staking](/glossary/#staking) im Ökosy
 
 [Lies die Ankündigung der Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Staking
 </DocLink>
 
@@ -506,6 +506,6 @@ Das Yellowpaper, verfasst von Dr. Gavin Wood, ist eine technische Definition des
 
 Dieses einleitende Papier wurde ursprünglich 2013 von Vitalik Buterin, dem Gründer von Ethereum, vor dem Projektstart im Jahr 2015 veröffentlicht.
 
-<DocLink to="/whitepaper/">
+<DocLink href="/whitepaper/">
   Whitepaper
 </DocLink>

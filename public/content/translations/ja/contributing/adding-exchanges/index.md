@@ -35,6 +35,6 @@ lang: ja
 
 ethereum.orgに取引所を追加掲載するには、GitHubで問題を作成してください。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
   問題の作成
 </ButtonLink>

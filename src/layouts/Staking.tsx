@@ -204,7 +204,7 @@ export const StakingLayout = ({
     items: [
       {
         text: t("page-staking-dropdown-home"),
-        to: "/staking/",
+        href: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -213,7 +213,7 @@ export const StakingLayout = ({
       },
       {
         text: t("page-staking-dropdown-solo"),
-        to: "/staking/solo/",
+        href: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -222,7 +222,7 @@ export const StakingLayout = ({
       },
       {
         text: t("page-staking-dropdown-saas"),
-        to: "/staking/saas/",
+        href: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -231,7 +231,7 @@ export const StakingLayout = ({
       },
       {
         text: t("page-staking-dropdown-pools"),
-        to: "/staking/pools/",
+        href: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
@@ -240,7 +240,7 @@ export const StakingLayout = ({
       },
       {
         text: t("page-staking-dropdown-withdrawals"),
-        to: "/staking/withdrawals/",
+        href: "/staking/withdrawals/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,

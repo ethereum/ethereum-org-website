@@ -14,7 +14,7 @@ A differenza dell'apertura di un nuovo conto presso un'azienda, la creazione di 
 
 Un portafoglio è un'applicazione che ti aiuta a gestire il tuo conto di Ethereum. Utilizza le chiavi per inviare e ricevere transazioni e accedere alle applicazioni. Esistono decine di portafogli diversi tra cui scegliere: per mobile, desktop o persino estensioni per browser.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Trova un portafoglio
 </ButtonLink>
 
@@ -42,7 +42,7 @@ Una volta salvata la frase di seed, si dovrebbe vedere il pannello di controllo 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vuoi saperne di più?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Visualizza le altre guide
   </ButtonLink>
 </InfoBanner>

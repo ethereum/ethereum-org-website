@@ -202,7 +202,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 ブロックは、コンセンサスに参加する権利を得るために、ETHをステーキングしたノードを検証することで提案されます。 これらのアップグレードは、シャーディングを含む将来のスケーラビリティのアップグレードの準備段階となります。
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   ビーコンチェーン
 </ButtonLink>
 
@@ -218,7 +218,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 シャーディング計画は急速に進展していますが、トランザクションの実行をスケールリングするレイヤー2技術の台頭と成功により、ロールアップコントラクトからの圧縮コールデータ(calldata)の保存を負荷分散する最適な方法を見つけることにシフトしています。これにより、ネットワーク容量を指数関数的に増やすことができるようになります。 プルーフ・オブ・ステークへの移行がなければ、これは実現不可能なことでした。
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   シャーディング画像
 </ButtonLink>
 

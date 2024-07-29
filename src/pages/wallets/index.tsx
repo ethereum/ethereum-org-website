@@ -167,7 +167,7 @@ const WalletsPage = () => {
       locale === "en"
         ? [
             {
-              to: "/wallets/find-wallet/",
+              href: "/wallets/find-wallet/",
               content: t("page-wallets-find-wallet-link"),
               matomo: {
                 eventCategory: "wallet hero buttons",
@@ -176,7 +176,7 @@ const WalletsPage = () => {
               },
             },
             {
-              to: `#${SIMULATOR_ID}`,
+              href: `#${SIMULATOR_ID}`,
               content: "How to use a wallet",
               matomo: {
                 eventCategory: "wallet hero buttons",
@@ -188,7 +188,7 @@ const WalletsPage = () => {
           ]
         : [
             {
-              to: "/wallets/find-wallet/",
+              href: "/wallets/find-wallet/",
               content: t("page-wallets-find-wallet-link"),
               matomo: {
                 eventCategory: "wallet hero buttons",
@@ -400,7 +400,7 @@ const WalletsPage = () => {
               >
                 {t("page-wallets-features-desc")}
               </Box>
-              <ButtonLink to="/wallets/find-wallet/">
+              <ButtonLink href="/wallets/find-wallet/">
                 {t("page-wallets-find-wallet-btn")}
               </ButtonLink>
               <Image
@@ -478,7 +478,7 @@ const WalletsPage = () => {
             descriptionKey="page-wallets:page-wallets-get-some-desc"
           >
             <Box>
-              <ButtonLink to="/get-eth/">
+              <ButtonLink href="/get-eth/">
                 {t("page-wallets-get-some-btn")}
               </ButtonLink>
             </Box>
@@ -492,7 +492,7 @@ const WalletsPage = () => {
             descriptionKey="page-wallets:page-wallets-try-dapps-desc"
           >
             <Box>
-              <ButtonLink to="/dapps/">
+              <ButtonLink href="/dapps/">
                 {t("page-wallets-more-on-dapps-btn")}
               </ButtonLink>
             </Box>

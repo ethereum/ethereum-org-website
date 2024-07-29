@@ -50,7 +50,7 @@ A espinha dorsal de uma DAO é o seu contrato inteligente, que define as regras 
 
 Isto é possível porque os contratos inteligentes são à prova de adulteração quando entram em funcionamento na Ethereum. Não se pode simplesmente editar o código (as regras das DAO) sem que as pessoas se apercebam, porque tudo é público.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Mais sobre contratos inteligentes
 </DocLink>
 

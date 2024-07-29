@@ -64,7 +64,7 @@ Votre adresse sera la même pour tous les projets Ethereum. Vous n'avez pas beso
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vous voulez en savoir plus ?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>
 </InfoBanner>

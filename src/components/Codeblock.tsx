@@ -6,15 +6,13 @@ import Highlight, {
   PrismTheme,
 } from "prism-react-renderer"
 import Prism from "prism-react-renderer/prism"
-import { Box, BoxProps, Flex } from "@chakra-ui/react"
+import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
 
+// https://github.com/FormidableLabs/prism-react-renderer/tree/master#custom-language-support
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
 
 import { LINES_BEFORE_COLLAPSABLE } from "@/lib/constants"
-
-// https://github.com/FormidableLabs/prism-react-renderer/tree/master#custom-language-support
-import useColorModeValue from "@/hooks/useColorModeValue"
 ;(typeof global !== "undefined" ? global : window).Prism = Prism
 require("prismjs/components/prism-solidity")
 

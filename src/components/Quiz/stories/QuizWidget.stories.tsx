@@ -1,30 +1,18 @@
-import { getI18n } from "react-i18next"
 import type { Meta, StoryObj } from "@storybook/react"
 import { expect, userEvent, waitFor, within } from "@storybook/test"
 
-import questionBank from "@/data/quizzes/questionBank"
+import { getTranslation } from "@/storybook-utils"
 
-import { StandaloneQuizWidget } from "./"
+import { StandaloneQuizWidget } from "../QuizWidget"
 
-const layer2QuestionBank = Object.entries(questionBank).reduce<
-  { id: string; correctAnswer: string }[]
->((arr, curr) => {
-  if (!curr[0].startsWith("g")) return [...arr]
-
-  return [
-    ...arr,
-    {
-      id: curr[0],
-      correctAnswer: curr[1].correctAnswerId,
-    },
-  ]
-}, [])
-
-type QuizWidgetType = typeof StandaloneQuizWidget
+import { LAYER_2_QUIZ_KEY, layer2Questions } from "./utils"
 
 const meta = {
-  title: "QuizWidget",
+  title: "Molecules / Display Content / Quiz / QuizWidget",
   component: StandaloneQuizWidget,
+  args: {
+    quizKey: LAYER_2_QUIZ_KEY,
+  },
   argTypes: {
     quizKey: {
       table: {
@@ -32,21 +20,16 @@ const meta = {
       },
     },
   },
-} satisfies Meta<QuizWidgetType>
+} satisfies Meta<typeof StandaloneQuizWidget>
 
 export default meta
 
-export const QuizWidgetAllCorrect: StoryObj<typeof meta> = {
-  args: {
-    quizKey: "layer-2",
-  },
-  render: (args) => <StandaloneQuizWidget {...args} />,
+type Story = StoryObj<typeof meta>
 
+export const AllCorrectQuestions: Story = {
   play: async ({ canvasElement, step, args }) => {
-    const { t } = getI18n()
-
-    const translatedQuizKey = t(args.quizKey, { ns: "common" })
-    const translatedPassedQuiz = t("passed", { ns: "learn-quizzes" })
+    const translatedQuizKey = getTranslation(args.quizKey, "common")
+    const translatedPassedQuiz = getTranslation("passed", "learn-quizzes")
 
     const canvas = within(canvasElement)
 
@@ -64,15 +47,15 @@ export const QuizWidgetAllCorrect: StoryObj<typeof meta> = {
     )
 
     await step("Answer all questions correctly", async () => {
-      for (let i = 0; i < layer2QuestionBank.length; i++) {
+      for (let i = 0; i < layer2Questions.length; i++) {
         const questionGroupId = canvas.getByTestId("question-group").id
         const questionAnswers = canvas.getAllByTestId("quiz-question-answer")
-        const currentQuestionBank = layer2QuestionBank.find(
+        const currentQuestionBank = layer2Questions.find(
           ({ id }) => id === questionGroupId
         )!
         await userEvent.click(
           questionAnswers.find(
-            (answer) => answer.id === currentQuestionBank.correctAnswer
+            (answer) => answer.id === currentQuestionBank.correctAnswerId
           )!
         )
 
@@ -81,7 +64,7 @@ export const QuizWidgetAllCorrect: StoryObj<typeof meta> = {
           canvas.getByTestId("answer-status-correct")
         ).toBeInTheDocument()
 
-        if (i === layer2QuestionBank.length - 1) {
+        if (i === layer2Questions.length - 1) {
           await userEvent.click(canvas.getByTestId("see-results-button"))
         } else {
           await userEvent.click(canvas.getByTestId("next-question-button"))
@@ -95,12 +78,7 @@ export const QuizWidgetAllCorrect: StoryObj<typeof meta> = {
   },
 }
 
-export const QuizWidgetAllIncorrect: StoryObj<typeof meta> = {
-  args: {
-    quizKey: "layer-2",
-  },
-  render: (args) => <StandaloneQuizWidget {...args} />,
-
+export const AllIncorrectQuestions: Story = {
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement)
 
@@ -112,15 +90,15 @@ export const QuizWidgetAllIncorrect: StoryObj<typeof meta> = {
     )
 
     await step("Answer some questions incorrectly", async () => {
-      for (let i = 0; i < layer2QuestionBank.length; i++) {
+      for (let i = 0; i < layer2Questions.length; i++) {
         const questionGroupId = canvas.getByTestId("question-group").id
         const questionAnswers = canvas.getAllByTestId("quiz-question-answer")
-        const currentQuestionBank = layer2QuestionBank.find(
+        const currentQuestionBank = layer2Questions.find(
           ({ id }) => id === questionGroupId
         )!
         await userEvent.click(
           questionAnswers.find(
-            (answer) => answer.id !== currentQuestionBank.correctAnswer
+            (answer) => answer.id !== currentQuestionBank.correctAnswerId
           )!
         )
 
@@ -129,7 +107,7 @@ export const QuizWidgetAllIncorrect: StoryObj<typeof meta> = {
           canvas.getByTestId("answer-status-incorrect")
         ).toBeInTheDocument()
 
-        if (i === layer2QuestionBank.length - 1) {
+        if (i === layer2Questions.length - 1) {
           await userEvent.click(canvas.getByTestId("see-results-button"))
         } else {
           await userEvent.click(canvas.getByTestId("next-question-button"))

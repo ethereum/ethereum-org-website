@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from "react"
 import { useRouter } from "next/router"
-import { useDisclosure } from "@chakra-ui/react"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import useDisclosure from "@/hooks/useDisclosure"
 import { useSurvey } from "@/hooks/useSurvey"
 
 export const useFeedbackWidget = () => {
@@ -12,7 +12,7 @@ export const useFeedbackWidget = () => {
   const [isExpanded, setIsExpanded] = useState(false)
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
 
-  const { getButtonProps, isOpen, onClose, onOpen } = useDisclosure()
+  const { isOpen, onClose, onOpen } = useDisclosure()
 
   const cancelRef = useRef<HTMLButtonElement>(null)
 
@@ -29,16 +29,15 @@ export const useFeedbackWidget = () => {
 
   const surveyUrl = useSurvey(feedbackSubmitted)
 
-  const bottomOffset = useMemo(() => {
+  const offsetBottom = useMemo(() => {
     const pathsWithBottomNav = ["/staking", "/dao", "/defi", "/nft"]
-    const CONDITIONAL_OFFSET = 6.75
-    let offset = 0
+    let shouldOffset = false
     pathsWithBottomNav.forEach((path) => {
       if (asPath.includes(path)) {
-        offset = CONDITIONAL_OFFSET
+        shouldOffset = true
       }
     })
-    return offset
+    return shouldOffset
   }, [asPath])
 
   const handleClose = (): void => {
@@ -80,10 +79,9 @@ export const useFeedbackWidget = () => {
   }
 
   return {
-    bottomOffset,
+    offsetBottom,
     cancelRef,
     feedbackSubmitted,
-    getButtonProps,
     handleClose,
     handleOpen,
     handleSubmit,

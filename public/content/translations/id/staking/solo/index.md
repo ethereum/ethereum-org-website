@@ -191,7 +191,7 @@ Setelah kredensial penarikan diatur, pembayaran imbalan (ETH yang terakumulasi d
 
 Untuk membuka dan menerima seluruh saldo Anda kembali, Anda juga harus menyelesaikan proses keluar dari validator Anda.
 
-<ButtonLink to="/staking/withdrawals/">Lebih lanjut tentang penarikan penaruhan</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Lebih lanjut tentang penarikan penaruhan</ButtonLink>
 </ExpandableCard>
 
 ## Bacaan lebih lanjut {#further-reading}

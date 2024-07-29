@@ -190,7 +190,7 @@ Once withdrawal credentials are set, reward payments (accumulated ETH over the i
 
 To unlock and receive your entire balance back you must also complete the process of exiting your validator.
 
-<ButtonLink to="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
 </ExpandableCard>
 
 ## Further reading {#further-reading}

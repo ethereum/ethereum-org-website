@@ -54,7 +54,7 @@ lang: hi
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>और अधिक सीखना चाहते है?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     हमारी अन्य गाइडें देखें
   </ButtonLink>
 </InfoBanner>

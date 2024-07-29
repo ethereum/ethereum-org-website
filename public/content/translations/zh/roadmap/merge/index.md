@@ -202,7 +202,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 相反，区块由验证节点提出，验证节点质押以太币以获得参与共识的权利。 这些升级为未来的可扩展性升级（包括分片）奠定了基础。
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   信标链
 </ButtonLink>
 
@@ -218,7 +218,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 分片计划正在迅速发展，但随着扩展交易执行的二层网络技术的兴起和成功，分片计划已变为寻找最佳的负载分配方式，来存储来自卷叠合约中的压缩调用数据，这使得网络容量呈指数级增长。 如果不先过渡到权益证明，这是不可能的。
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   分片
 </ButtonLink>
 
