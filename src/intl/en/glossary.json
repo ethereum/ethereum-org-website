@@ -238,7 +238,7 @@
   "message-call-term": "Message call",
   "message-call-definition": "The act of passing a <a href=\"/glossary/#message\">message</a> from one account to another. If the destination account is associated with <a href=\"/glossary/#evm\">EVM</a> code, then the VM will be started with the state of that object and the message acted upon.",
   "mev-term": "MEV",
-  "mev-definition": "Maximal extractable value (MEV) refers to the maximum value that can be extracted from block production in excess of the standard block reward and gas fees by including, excluding, and changing the order of transactions in a block.",
+  "mev-definition": "The maximum value that can be extracted from block production in excess of the standard block reward and gas fees by including, excluding, and changing the order of transactions in a block.",
   "mining-term": "Mining",
   "mining-definition": "The process of repeatedly hashing a block header while incrementing a <a href=\"/glossary/#nonce\">nonce</a> until the result contains an arbitrary number of leading binary zeros. This is the process by which new <a href=\"/glossary/#block\">blocks</a> are added to a proof-of-work blockchain. This was how Ethereum was secured before it moved to proof-of-stake.",
   "miner-term": "Miner",
