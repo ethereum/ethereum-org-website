@@ -109,7 +109,6 @@ const LanguagePicker = ({
           <CommandInput
             placeholder={t("page-languages-filter-placeholder")}
             className="h-9"
-            icon={undefined}
           />
 
           <CommandList className="max-h-[75vh]">
