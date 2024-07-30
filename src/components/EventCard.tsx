@@ -17,7 +17,7 @@ const clearStyles = {
 
 export type EventCardProps = {
   title: string
-  to: string
+  href: string
   date: string
   startDate: string
   endDate: string
@@ -29,7 +29,7 @@ export type EventCardProps = {
 
 const EventCard = ({
   title,
-  to,
+  href,
   description,
   className,
   location,
@@ -119,7 +119,7 @@ const EventCard = ({
           </Box>
         </Box>
         <Box padding={4} paddingTop={0} width={"100%"}>
-          <ButtonLink href={to} width={"100%"} variant="outline">
+          <ButtonLink href={href} width={"100%"} variant="outline">
             {t("page-community-upcoming-events-view-event")}
           </ButtonLink>
         </Box>
