@@ -1,8 +1,6 @@
 // import { join } from "path"
 
 import dynamic from "next/dynamic"
-// import { useRouter } from "next/router"
-import { Container } from "@chakra-ui/react"
 
 import type { Root } from "@/lib/types"
 
@@ -54,7 +52,7 @@ export const BaseLayout = ({
        * layout on initial load.
        */}
       <SkipLink />
-      <Container maxW="container.2xl" marginInline="auto">
+      <div className="max-w-screen-2xl mx-auto">
         <Nav />
 
         {/* TODO: FIX TRANSLATION BANNER LOGIC FOR https://github.com/ethereum/ethereum-org-website/issues/11305 */}
@@ -72,7 +70,7 @@ export const BaseLayout = ({
         {children}
 
         <Footer lastDeployLocaleTimestamp={lastDeployLocaleTimestamp} />
-      </Container>
+      </div>
       {/**
        * The Feedback Widget is positioned below the container to ensure it is not affecting the
        * layout on initial load.
