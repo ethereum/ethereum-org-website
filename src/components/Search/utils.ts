@@ -29,6 +29,7 @@ export const getSearchButtonStyles = (): ButtonProps => ({
   _focus: commonBtnStateStyles,
   _active: commonBtnStateStyles,
   sx: {
+    // TODO: check this
     "--docsearch-searchbox-shadow": `inset 0 0 0 1px var(--eth-colors-primary-highContrast)`,
     ".DocSearch-Button-Container svg": {
       boxSize: 3.5,
