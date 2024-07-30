@@ -3,13 +3,10 @@ import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdSearch } from "react-icons/md"
-import {
-  Portal,
-  type UseDisclosureReturn,
-  useMergeRefs,
-} from "@chakra-ui/react"
+import { type UseDisclosureReturn, useMergeRefs } from "@chakra-ui/react"
 import { useDocSearchKeyboardEvents } from "@docsearch/react"
 import { DocSearchHit } from "@docsearch/react/dist/esm/types"
+import * as Portal from "@radix-ui/react-portal"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
@@ -76,7 +73,7 @@ const Search = forwardRef<HTMLButtonElement, Props>(
             <MdSearch />
           </Button>
         </div>
-        <Portal>
+        <Portal.Root>
           {isOpen && (
             <SearchModal
               apiKey={apiKey}
@@ -146,7 +143,7 @@ const Search = forwardRef<HTMLButtonElement, Props>(
               }}
             />
           )}
-        </Portal>
+        </Portal.Root>
       </>
     )
   }

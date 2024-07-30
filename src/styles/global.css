@@ -251,32 +251,3 @@
     }
   }
 }
-
-/**
-  * Custom styles for the DocSearch component
-  * https://docsearch.algolia.com/docs/styling
-  */
-.DocSearch-Button-Container {
-  @apply hidden lg:flex;
-}
-
-.DocSearch-Button-Container svg {
-  @apply size-3.5;
-}
-
-.DocSearch-Search-Icon,
-.DocSearch-Button-Placeholder {
-  @apply text-body;
-}
-
-.DocSearch-Button-Placeholder {
-  @apply font-normal lowercase;
-}
-
-.DocSearch-Button-Keys {
-  @apply mt-0.5 flex h-full min-w-max items-center gap-1 p-0;
-}
-
-.DocSearch-Button-Key {
-  @apply m-0 size-5 border border-solid border-disabled bg-none p-0.5 text-sm lowercase text-disabled shadow-none first:pt-1 first:text-md;
-}
