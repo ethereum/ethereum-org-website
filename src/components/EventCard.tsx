@@ -112,9 +112,7 @@ const EventCard = ({
               </Text>
             </Box>
             <Box>
-              <Text fontSize={{ base: "sm", md: "sm" }} mb={0} noOfLines={4}>
-                {description}
-              </Text>
+              <Text fontSize={{ base: "sm", md: "sm" }}>{description}</Text>
             </Box>
           </Box>
         </Box>
