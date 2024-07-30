@@ -49,7 +49,7 @@ lang: uk
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Хочете дізнатися більше?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Перегляньте наші інші посібники
   </ButtonLink>
 </InfoBanner>

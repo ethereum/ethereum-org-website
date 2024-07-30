@@ -25,7 +25,7 @@ const CardRow = ({ children }: ChildOnlyProp) => (
 )
 
 const SubmitBugBountyButton = ({ children, ...props }: ButtonLinkProps) => (
-  <ButtonLink m="4" to="https://forms.gle/Gnh4gzGh66Yc3V7G8" {...props}>
+  <ButtonLink m="4" href="https://forms.gle/Gnh4gzGh66Yc3V7G8" {...props}>
     {children}
   </ButtonLink>
 )

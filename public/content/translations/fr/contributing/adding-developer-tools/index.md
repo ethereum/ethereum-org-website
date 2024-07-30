@@ -56,6 +56,6 @@ De nombreux projets dans l'espace Ethereum sont open source. Nous sommes plus su
 
 Si vous souhaitez ajouter un outil de développement à ethereum.org et qu'il répond aux critères, créez un ticket sur GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
   Créez un ticket
 </ButtonLink>

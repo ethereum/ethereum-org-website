@@ -202,7 +202,7 @@ La Fusion représente l'adoption formelle de la Chaîne phare comme nouvelle cou
 
 Les blocs sont dès lors proposés par validation des nœuds qui ont misé l'ETH en échange du droit de participer au consensus. Ces mises à niveau permettent de préparer le terrain pour de futures améliorations d'évolutivité, y compris la fragmentation.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   La Chaîne phare
 </ButtonLink>
 
@@ -218,7 +218,7 @@ Initialement, l'objectif était de travailler sur la fragmentation avant la Fusi
 
 Les plans liés à la fragmentation évoluent rapidement, mais compte tenu du développement et du succès rencontré par les technologies de couche 2 visant à augmenter l'évolutivité de l'exécution des transactions, ces plans de fragmentation ont été modifiés afin de trouver la meilleure manière de répartir le poids lié au stockage des données d'appel comprimées émanant des contrats roll-up et de permettre la croissance exponentielle du réseau. Cela ne serait pas possible sans opérer d'abord une transition vers le système de preuve d'enjeu.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Fragmentation
 </ButtonLink>
 

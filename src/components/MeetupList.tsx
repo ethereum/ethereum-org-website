@@ -7,6 +7,7 @@ import {
   LinkOverlay,
   List,
   ListItem,
+  useColorModeValue,
   useToken,
   VisuallyHidden,
 } from "@chakra-ui/react"
@@ -22,7 +23,6 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import meetups from "@/data/community-meetups.json"
 
-import useColorModeValue from "@/hooks/useColorModeValue"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export interface Meetup {

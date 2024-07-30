@@ -53,7 +53,7 @@ const Callout = ({
           <Image src={image} alt={alt || ""} height={200} />
         </Center>
       )}
-      <Flex direction="column" justify="space-between" mt={10} h="full">
+      <Flex direction="column" justify="space-between" h="full">
         <div>
           {emoji && <Emoji text={emoji} fontSize="5xl" />}
           <OldHeading as="h3" fontSize="2xl" lineHeight={1.4}>

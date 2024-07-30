@@ -119,7 +119,7 @@ The Ethereum [scalability upgrades](/roadmap/) should ultimately address some of
 
 Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. [More on layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).
 
-## Monitoring gas fees {#moitoring-gas-fees}
+## Monitoring gas fees {#monitoring-gas-fees}
 
 If you want to monitor gas prices, so you can send your ETH for less, you can use many different tools such as:
 

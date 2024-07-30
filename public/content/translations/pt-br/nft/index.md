@@ -78,7 +78,7 @@ A segurança do Ethereum vem da prova de participação. O sistema foi projetado
 
 Os problemas de segurança relacionados aos NFTs são, na maioria das vezes, relacionados a golpes de phishing, vulnerabilidades de contratos inteligentes ou erros do usuário (como a exposição inadvertida de chaves privadas), o que faz com que a segurança adequada da carteira seja essencial para os proprietários de NFTs.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Mais sobre segurança
 </ButtonLink>
 

@@ -14,7 +14,7 @@ lang: ja
 
 ウォレットはイーサリアムアカウントを管理するアプリです。 ウォレットはトランザクションを送受信したり、イーサリアム上のアプリにログインするためにあなたに代わってキーを使います。 モバイル、デスクトップ、ブラウザ拡張機能など、さまざまなウォレットから選択できます。
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   ウォレットを探す
 </ButtonLink>
 
@@ -42,7 +42,7 @@ lang: ja
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>さらに詳しく知りたいですか？</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     他のガイドを参照する
   </ButtonLink>
 </InfoBanner>

@@ -190,7 +190,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 要解锁并收回全部余额，还必须完成验证者退出流程。
 
-<ButtonLink to="/staking/withdrawals/">更多关于质押提款的信息</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">更多关于质押提款的信息</ButtonLink>
 </ExpandableCard>
 
 ## 延伸阅读 {#further-reading}

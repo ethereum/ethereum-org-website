@@ -334,7 +334,7 @@ DeFi is an open-source movement. The DeFi protocols and applications are all ope
   More on building dapps
 </ButtonLink>
 
-## Further reading {#futher-reading}
+## Further reading {#further-reading}
 
 ### DeFi data {#defi-data}
 

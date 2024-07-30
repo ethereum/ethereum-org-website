@@ -14,7 +14,7 @@ W przeciwieństwie do otwierania nowego konta w firmie, tworzenie konta Ethereum
 
 Portfel to aplikacja, która pomaga zarządzać kontem Ethereum. Wykorzystuje ona klucze użytkownika do wysyłania i odbierania transakcji oraz logowania się do aplikacji. Istnieją dziesiątki różnych portfeli do wyboru — mobilne, komputerowe, czy nawet w formie rozszerzenia do przeglądarki.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Znajdź portfel
 </ButtonLink>
 
@@ -42,7 +42,7 @@ Po zapisaniu swojej frazy ziarna powinieneś zobaczyć pulpit nawigacyjny swojeg
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Chcesz dowiedzieć się więcej?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Zobacz nasze inne przewodniki
   </ButtonLink>
 </InfoBanner>

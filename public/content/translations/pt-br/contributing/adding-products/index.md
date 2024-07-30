@@ -95,6 +95,6 @@ _Estamos também investigando opções de votação para que a comunidade possa 
 
 Se você quiser adicionar um dapp ao ethereum.org e ele atender aos critérios, abra um tíquete no GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
   Criar um novo problema
 </ButtonLink>

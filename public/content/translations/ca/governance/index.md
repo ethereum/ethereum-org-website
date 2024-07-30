@@ -32,7 +32,7 @@ En la fórmula oposada, la governança en cadena, les decisions sobre qualsevol 
 
 _Mentre que a nivell del protocol la governança d'Ethereum és fora de cadena, molts casos d'ús, construïts en base a Ethereum, com les DAO, fan servir governança en cadena._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Més sobre les DAO
 </ButtonLink>
 
@@ -58,7 +58,7 @@ _Nota: Qualsevol particular pot ser part de mutitud d'aquests grups (p. ex. un d
 
 Un procés important utilitzat en la governança d'Ethereum és la iniciativa d'**EIP (Propostes de Millora d'Ethereum o «Ethereum Improvement Proposals», en anglès)**. Les EIP són estàndards que especifiquen nous processos o característiques potencials per a Ethereum. Qualsevol persona dins la comunitat Ethereum pot crear una EIP. Per exemple, cap dels autors de la EIP-721, l'EIP que ha estandarditzat els NFT, ha treballat directament en el desenvolupament del protocol d'Ethereum.
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Més informació sobre les EIP
 </ButtonLink>
 
@@ -154,7 +154,7 @@ Mentre que el desenvolupament de les especificacions i les implementacions ha es
 
 Quan la cadena de balisa es fusioni amb la capa d'execució d'Ethereum, el procés de governança per proposar canvis estarà harmonitzat. Aquest procés d'implementar la fusió ja es troba [en marxa](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Més informació sobre La Fusió
 </ButtonLink>
 

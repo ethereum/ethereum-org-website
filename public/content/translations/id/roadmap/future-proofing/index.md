@@ -17,7 +17,7 @@ Tantangan yang dihadapi oleh para pengembang Ethereum adalah protokol bukti taru
 
 [Skema komitmen "KZG"](/roadmap/danksharding/#what-is-kzg) yang digunakan di beberapa tempat di seluruh Ethereum untuk menghasilkan rahasia kriptografi dikenal rentan terhadap kuantum. Saat ini, hal ini diakali dengan menggunakan "pengaturan tepercaya" di mana banyak pengguna menghasilkan keacakan yang tidak dapat direkayasa oleh komputer kuantum. Namun, solusi yang ideal adalah dengan menggabungkan kriptografi aman kuantum. Terdapat dua pendekatan utama yang dapat menjadi pengganti yang efisien untuk skema BLS: [berbasis STARK](https://hackmd.io/@vbuterin/stark_aggregation) dan [berbasis lattice](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175) untuk penandatanganan. Ini masih dalam tahap penelitian dan pembuatan prototipe.
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Baca tentang KZG dan pengaturan tepercaya</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> Baca tentang KZG dan pengaturan tepercaya</ButtonLink>
 
 ## Ethereum yang lebih sederhana dan lebih efisien {#simpler-more-efficient-ethereum}
 

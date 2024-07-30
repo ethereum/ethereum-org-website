@@ -56,6 +56,6 @@ Ethereum alanındaki birçok proje açık kaynak kodludur. Topluluk geliştirici
 
 Eğer ethereum.org'a geliştirici aracı eklemek istiyorsanız ve kriterleri karşılıyorsa GitHub'da bir konu oluşturun.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
   Sorun oluştur
 </ButtonLink>

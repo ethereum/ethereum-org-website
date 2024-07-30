@@ -32,7 +32,7 @@ De tegenovergestelde benadering, off-chain governance, is het proces waarbij bes
 
 _Terwijl governance bij Ethereum op protocolniveau off-chain is, gebruiken veel use-cases die zijn gebouwd bovenop Ethereum, zoals DAO's, on-chain governance._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Meer over DAO's
 </ButtonLink>
 
@@ -58,7 +58,7 @@ _Opmerking: elk individu kan deel uitmaken van meerdere van deze groepen (bijv. 
 
 Een belangrijk proces dat wordt gebruikt in Ethereum governance is het voorstel van **Ethereum Improvement Proposals (EIPs)**. EIP's zijn standaarden die potentiële nieuwe functies of processen voor Ethereum specificeren. Iedereen binnen de Ethereum-gemeenschap kan een EIP maken. Zo heeft bijvoorbeeld geen van de auteurs van EIP-721, het EIP dat NFT's gestandaardiseerd heeft, direct aan de ontwikkeling van het protocol van Ethereum gewerkt.
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Meer over EIP's
 </ButtonLink>
 
@@ -154,7 +154,7 @@ Hoewel de ontwikkeling van specificaties en implementaties altijd volledig open 
 
 Wanneer de Beacon Chain samenvalt met de uitvoeringslaag van Ethereum, zal het governance-proces om wijzigingen voor te stellen worden geharmoniseerd. Dit proces om de merge te implementeren is [al gaande](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Meer over de merge
 </ButtonLink>
 

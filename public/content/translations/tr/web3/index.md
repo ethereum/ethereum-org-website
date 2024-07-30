@@ -63,7 +63,7 @@ Web3, [eşsiz jetonlar (NFT'ler)](/nft/) aracılığıyla doğrudan mülkiyete i
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>NFT’ler hakkında daha fazlasını öğrenin</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     NFT'ler hakkında daha fazlası
   </ButtonLink>
 </InfoBanner>
@@ -88,7 +88,7 @@ Ancak, insanlar birçok Web3 topluluğunu DAO olarak tanımlar. Bu toplulukları
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>DAO’lar hakkında daha fazlasını öğrenin</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     DAO'lar hakkında daha fazlası
   </ButtonLink>
 </InfoBanner>
@@ -99,7 +99,7 @@ Geleneksel yöntemde kullandığınız her platform için bir hesap oluştururdu
 
 Web3, dijital kimliğinizi bir Ethereum adresi ve ENS profili ile kontrol etmenize izin vererek bu sorunları çözer. Bir Ethereum adresi kullanmak güvenli, sansüre dayanıklıdır ve anonim olan platformlarda tek bir oturum açabilmenizi sağlar.
 
-<ButtonLink to="https://login.xyz/">
+<ButtonLink href="https://login.xyz/">
   Ethereum ile giriş yapın
 </ButtonLink>
 
@@ -107,7 +107,7 @@ Web3, dijital kimliğinizi bir Ethereum adresi ve ENS profili ile kontrol etmeni
 
 Web2'nin ödeme altyapısı bankalara ve ödeme işlemcilerine dayanır; banka hesabı olmayan veya kapsam dışı bırakılan ülke sınırları içinde yaşayan kişileri hariç tutar. Web3, doğrudan tarayıcıdan para göndermek için [ETH](/eth/) gibi tokenleri kullanır ve güvenilir üçüncü taraf gerektirmez.
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   ETH hakkında daha fazlası
 </ButtonLink>
 
