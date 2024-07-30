@@ -3,7 +3,7 @@ import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdSearch } from "react-icons/md"
-import { type UseDisclosureReturn, useMergeRefs } from "@chakra-ui/react"
+import { mergeRefs } from "react-merge-refs"
 import { useDocSearchKeyboardEvents } from "@docsearch/react"
 import { DocSearchHit } from "@docsearch/react/dist/esm/types"
 import * as Portal from "@radix-ui/react-portal"
@@ -16,15 +16,17 @@ import { Button } from "../../../tailwind/ui/buttons/Button"
 
 import SearchButton from "./SearchButton"
 
+import type useDisclosure from "@/hooks/useDisclosure"
+
 const SearchModal = dynamic(() => import("./SearchModal"))
 
-type Props = Pick<UseDisclosureReturn, "isOpen" | "onOpen" | "onClose">
+type Props = ReturnType<typeof useDisclosure>
 
 const Search = forwardRef<HTMLButtonElement, Props>(
   ({ isOpen, onOpen, onClose }, ref) => {
     const { locale } = useRouter()
     const searchButtonRef = useRef<HTMLButtonElement>(null)
-    const mergedButtonRefs = useMergeRefs(ref, searchButtonRef)
+    const mergedButtonRefs = mergeRefs([ref, searchButtonRef])
     const { t } = useTranslation("common")
 
     useDocSearchKeyboardEvents({
