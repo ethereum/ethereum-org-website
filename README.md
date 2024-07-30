@@ -1888,6 +1888,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/krishchvn"><img src="https://avatars.githubusercontent.com/u/58606754?v=4?s=100" width="100px;" alt="Krishnakumar Chavan"/><br /><sub><b>Krishnakumar Chavan</b></sub></a><br /><a href="#content-krishchvn" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xV4L3NT1N3"><img src="https://avatars.githubusercontent.com/u/33112835?v=4?s=100" width="100px;" alt="0xV4L3NT1N3"/><br /><sub><b>0xV4L3NT1N3</b></sub></a><br /><a href="#tool-0xV4L3NT1N3" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/JoshDavisLight"><img src="https://avatars.githubusercontent.com/u/82784104?v=4?s=100" width="100px;" alt="Josh Davis"/><br /><sub><b>Josh Davis</b></sub></a><br /><a href="#content-JoshDavisLight" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
