@@ -1,10 +1,9 @@
 import React from "react"
+import { useRouter } from "next/router"
 import { useTranslation } from "react-i18next"
 import { BsCalendar3 } from "react-icons/bs"
 import { Box, Flex, Heading, Icon } from "@chakra-ui/react"
 import { Image } from "@chakra-ui/react"
-
-import { formatDateRange } from "@/lib/utils/date"
 
 import { ButtonLink } from "./Buttons"
 import Text from "./OldText"
@@ -38,8 +37,13 @@ const EventCard = ({
   endDate,
   startDate,
 }: EventCardProps) => {
+  const { locale } = useRouter()
   const { t } = useTranslation("page-community")
-  const formatedDate = formatDateRange(startDate, endDate)
+  const formatedDate = new Intl.DateTimeFormat(locale, {
+    day: "2-digit",
+    month: "short",
+  }).formatRange(new Date(startDate), new Date(endDate))
+
   return (
     <Box
       className={className}

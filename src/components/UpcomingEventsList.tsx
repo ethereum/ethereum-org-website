@@ -72,7 +72,7 @@ const UpcomingEventsList = () => {
     const groupedEvents = _.groupBy(formattedEvents, ({ startDate }) => {
       // .replace(/-/g, "/") ==> Fixes Safari Invalid date
       const start = new Date(startDate.replace(/-/g, "/"))
-      const formatYearMonth = new Intl.DateTimeFormat(undefined, {
+      const formatYearMonth = new Intl.DateTimeFormat(locale, {
         month: "short",
         year: "numeric",
       }).format(start)
