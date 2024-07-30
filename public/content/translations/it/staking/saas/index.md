@@ -4,7 +4,7 @@ description: Una panoramica di come iniziare con lo staking in pool di ETH
 lang: it
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: Leslie il rinoceronte che fluttua tra le nuvole.
 sidebarDepth: 2
 summaryPoints:
@@ -47,7 +47,7 @@ Di seguito alcuni fornitori di SaaS disponibili. Usa i suddetti indicatori per o
 
 <StakingProductsCardGrid category="saas" />
 
-Ricorda l'importanza di supportare la [diversità del client](/developers/docs/nodes-and-clients/client-diversity/) poiché migliora la sicurezza della rete e limita i tuoi rischi. I servizi aventi prova della limitazione dell'utilizzo dei client di maggioranza sono indicati con <em style={{ textTransform: "uppercase" }}>"diversità del client d'esecuzione"</em> e <em style={{ textTransform: "uppercase" }}>"diversità del client del consenso."</em>
+Ricorda l'importanza di supportare la [diversità del client](/developers/docs/nodes-and-clients/client-diversity/) poiché migliora la sicurezza della rete e limita i tuoi rischi. I servizi per i quali è dimostrato che limitano l'utilizzo dei client di maggioranza sono indicati con <em style={{ textTransform: "uppercase" }}>"diversità del client di esecuzione"</em> e <em style={{ textTransform: "uppercase" }}>"diversità del client di consenso."</em>
 
 ### Generatori di chiavi
 
@@ -78,7 +78,7 @@ I prelievi di staking sono stati implementati nell'aggiornamento di Shanghai/Cap
 
 I validatori, inoltre, possono uscire interamente come tali, il che sbloccherà il loro saldo in ETH rimanente per il prelievo. I conti che hanno fornito un indirizzo di prelievo d'esecuzione e hanno completato il procedimento di uscita riceveranno interamente il proprio saldo all'indirizzo di prelievo fornito durante la successiva pulizia dei validatori.
 
-<ButtonLink to="/staking/withdrawals/">Di più sulle ricompense di staking</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Di più sulle ricompense di staking</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Cosa succede se vengo tagliato?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
@@ -91,4 +91,5 @@ Contatta il singolo fornitore di SaaS per ulteriori dettagli su qualsiasi opzion
 
 ## Approfondimenti {#further-reading}
 
+- [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Valutare i servizi di Staking](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

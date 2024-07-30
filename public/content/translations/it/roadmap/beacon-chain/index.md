@@ -3,11 +3,11 @@ title: La Beacon Chain
 description: Informati rigurado alla Beacon Chain - l'aggiornamento che ha introdotto la prova-di-interesse Ethereum.
 lang: it
 template: upgrade
-image: /upgrades/core.png
-alt: 
-summaryPoint1: La Beacon Chain ha introdotto il proof-of-stake nell'ecosistema Ethereum.
-summaryPoint2: È stata fusa con la catena di proof-of-work originale di Ethereum nel settembre 2022.
-summaryPoint3: La Beacon Chain ha introdotto la logica del consenso e il protocollo di gossip del blocco, che ora protegge Ethereum.
+image: /images/upgrades/core.png
+alt:
+summaryPoint1: La Beacon Chain ha introdotto il proof-of-stake all'ecosistema di Ethereum.
+summaryPoint2: Si è unita alla catena di proof-of-work originale di Ethereum a settembre 2022.
+summaryPoint3: La Beacon Chain ha introdotto la logica del consenso e il protocollo di gossip dei blocchi, che ora protegge Ethereum.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -28,7 +28,7 @@ Beacon Chain è il nome dato a un libro mastro di conti che hanno condotto e coo
 
 La Beacon Chain ha introdotto la [proof of stake](/developers/docs/consensus-mechanisms/pos/) in Ethereum. Questo mantiene sicura Ethereum e consente ai validatori di guadagnare più ETH nel processo. In pratica, lo staking prevede di puntare ETH per poter attivare il software del validatore. Come staker, esegui il software che crea e convalida i nuovi blocchi nella catena.
 
-Lo staking serve a uno scopo simile a quello del [mining](/developers/docs/mining/), ma è differente in molti modi. Il mining richiedeva ingenti spese iniziali sotto forma di hardware potente e consumi energetici, risultando in economie di scala e promuovendo la centralizzazione. Il mining, inoltre, non prevedeva alcun requisito di bloccare le risorse come garanzie, limitando la capacità del protocollo di punire gli utenti malevoli dopo un attacco.
+Lo staking ha un ruolo simile a quello che aveva il [mining](/developers/docs/consensus-mechanisms/pow/mining/), ma è differente in molti modi. Il mining richiedeva ingenti spese iniziali sotto forma di hardware potente e consumi energetici, risultando in economie di scala e promuovendo la centralizzazione. Il mining, inoltre, non prevedeva alcun requisito di bloccare le risorse come garanzie, limitando la capacità del protocollo di punire gli utenti malevoli dopo un attacco.
 
 La transizione al proof of stake ha reso Ethereum significativamente più sicura e decentralizzata rispetto al proof of work. Più persone parteciperanno alla rete, più questa diventerà decentralizzata e protetta dagli attacchi.
 
@@ -56,7 +56,7 @@ Gli aggiornamenti di Ethereum sono tutti in qualche modo interconnessi. Quindi r
 
 Inizialmente la Beacon Chain esisteva separatamente dalla Rete principale di Ethereum, ma le due sono state fuse nel 2022.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   La fusione
 </ButtonLink>
 
@@ -64,7 +64,7 @@ Inizialmente la Beacon Chain esisteva separatamente dalla Rete principale di Eth
 
 Lo sharding potrà entrare in modo sicuro nell'ecosistema Ethereum solo quando sarà presente un meccanismo di consenso proof of stake. La Beacon Chain ha introdotto lo staking, che si è 'fuso' con la Rete principale, spianando la strada allo sharding per contribuire a ridimensionare ulteriormente Ethereum.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Shard chain
 </ButtonLink>
 

@@ -66,13 +66,13 @@ L'assenza di stato debole richiede modifiche a come i nodi di Ethereum verifican
 
 **Nell'assenza di stato debole, la proposta dei blocchi richiede l'accesso ai dati di stato completi, ma la verifica dei blocchi no**
 
-Perché ciò si verifichi, devono già essere stati implementati gli [alberi di Verkle](/roadmap/verkle-trees) nei client di Ethereum. Gli alberi di Verkle sono strutture di dati sostitutive per memorizzare i dati di stato di Ethereum, che consentono a "testimoni" di dati di dimensioni ridotte e fisse, di essere passati tra i pari e utilizzati per verificare i blocchi, invece di verificarli rispetto ai database locali. Anche la [separazione tra propositori e costruttori](/roadmap/pbs/) è necessaria poiché consente ai costruttori di blocchi di essere nodi specializzati con hardware più potente, essendo coloro che necessitano di accedere ai dati di stato completi.
+Perché ciò si verifichi, gli [alberi di Verkle](/roadmap/verkle-trees/) devono già essere stati implementati nei client di Ethereum. Gli alberi di Verkle sono strutture di dati sostitutive per memorizzare i dati di stato di Ethereum, che consentono a "testimoni" di dati di dimensioni ridotte e fisse, di essere passati tra i pari e utilizzati per verificare i blocchi, invece di verificarli rispetto ai database locali. Anche la [separazione tra propositori e costruttori](/roadmap/pbs/) è necessaria poiché consente ai costruttori di blocchi di essere nodi specializzati con hardware più potente, essendo coloro che necessitano di accedere ai dati di stato completi.
 
 <ExpandableCard title="Perché va bene affidarsi a meno propositori di blocchi?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 L'assenza di stato si affida ai costruttori di blocchi che mantengono una copia dei dati di stato completi, così che possano generare testimoni utilizzabili per verificare il blocco. Gli altri nodi non necessitano di accedere ai dati di stato, tutte le informazioni necessarie per verificare il blocco sono disponibili nel testimone. Ciò crea una situazione in cui proporre un blocco è costoso, ma verificarlo è economico, implicando che meno operatori eseguiranno un nodo di proposta dei blocchi. Tuttavia, la decentralizzazione dei propositori di blocchi non è fondamentale, finché quanti più partecipanti possibili possono verificare indipendentemente che i blocchi proposti siano validi.
 
-<ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Leggi di più sulle note di Dankrad</ButtonLink>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Leggi di più sulle note di Dankrad</ButtonLink>
 </ExpandableCard>
 
 I propositori di blocchi utilizzano i dati di stato per creare dei "testimoni": la serie minima di dati che prova i valori dello stato modificati dalle transazioni in un blocco. Gli altri validatori non detengono lo stato, memorizzano semplicemente la radice di stato (un hash dell'intero stato). Ricevono un blocco e un testimone e li utilizzano per aggiornare la radice di stato. Questo rende un nodo di convalida estremamente leggero.
@@ -81,7 +81,7 @@ L'assenza di stato debole è in uno stato avanzato di ricerca, ma si affida all'
 
 ### Assenza di stato forte {#strong-statelessness}
 
-L'assenza di stato forte rimuove il bisogno di qualsiasi blocco, di memorizzare i dati di stato. Invece, le transazioni sono inviate con i testimoni, aggregabili dai produttori di blocchi. I produttori di blocchi sono quindi responsabili della memorizzazione di soltanto quello stato, necessario per generare testimoni per i conti rilevanti. La responsabilità per lo stato è quasi interamente trasferita agli utenti, poiché inviano i testimoni e 'accedono agli elenchi' per dichiarare con quali conti e quali chiavi d'archiviazione stanno interagendo.
+L'assenza di stato forte rimuove l'esigenza per qualsiasi nodo di memorizzare i dati di stato. Invece, le transazioni sono inviate con i testimoni, aggregabili dai produttori di blocchi. I produttori di blocchi sono quindi responsabili della memorizzazione di soltanto quello stato, necessario per generare testimoni per i conti rilevanti. La responsabilità per lo stato è quasi interamente trasferita agli utenti, poiché inviano i testimoni e 'accedono agli elenchi' per dichiarare con quali conti e quali chiavi d'archiviazione stanno interagendo. Questo consentirebbe la presenza di nodi estremamente leggeri, ma esistono dei compromessi, incluso il rendere più difficili le transazioni con i contratti intelligenti.
 
 L'assenza di stato forte è stata investigata dai ricercatori, ma non è correntemente previsto che diventi parte della tabella di marcia di Ethereum: è più probabile che l'assenza di stato debole sia sufficiente per le esigenze di ridimensionamento di Ethereum.
 

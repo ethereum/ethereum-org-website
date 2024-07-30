@@ -5,7 +5,7 @@ lang: fil
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Representasyon ng botohan ng DAO sa isang panukala.
 summaryPoint1: Mga komunidad ng mga miyembro na walang sentralisadong pamumuno.
 summaryPoint2: Isang ligtas na paraan para makipag-collaborate sa mga hindi kakilala sa internet.
@@ -50,7 +50,7 @@ Ang pundasyon ng isang DAO ay ang smart contract nito, na nagtatakda ng mga panu
 
 Posible ito dahil hindi mababago ang mga smart contract kapag live na ang mga ito sa Ethereum. Hindi mo mae-edit nang basta-basta ang code (ang mga panuntunan ng DAO) nang hindi napapansin ng mga tao dahil ang lahat ay pampubliko.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Higit pa sa mga matalinong kontrata
 </DocLink>
 

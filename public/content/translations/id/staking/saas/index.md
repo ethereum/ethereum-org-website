@@ -4,7 +4,7 @@ description: Gambaran umum mengenai bagaimana cara memulai staking untuk pooled 
 lang: id
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: Leslie si badak mengapung di awan.
 sidebarDepth: 2
 summaryPoints:
@@ -78,7 +78,7 @@ Penarikan penaruhan diimplementasikan dalam peningkatan Shanghai/Capella pada Ap
 
 Para validator juga dapat sepenuhnya keluar sebagai validator, yang akan membuka kunci saldo ETH mereka yang tersisa untuk penarikan. Akun yang telah menyediakan alamat penarikan eksekusi dan menyelesaikan proses keluar akan menerima seluruh saldo mereka ke alamat penarikan yang disediakan selama sweep validator berikutnya.
 
-<ButtonLink to="/staking/withdrawals/">Lebih lanjut tentang penarikan penaruhan</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Lebih lanjut tentang penarikan penaruhan</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Apa yang terjadi jika saya terkena pengurangan hadiah pemotongan?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
@@ -91,4 +91,5 @@ Hubungi penyedia SaaS secara individu untuk mendapatkan informasi lebih lanjut t
 
 ## Bacaan lebih lanjut {#further-reading}
 
+- [Direktori Penaruhan Ethereum](https://www.staking.directory/) - _Eridian dan Spacesider_
 - [Menilai Layanan Penaruhan](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

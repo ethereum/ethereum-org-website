@@ -51,7 +51,7 @@ lang: zh-tw
 
 **Scaffold-ETH _- 透過可適應你的智慧型合約的前端，快速體驗 Solidity。_**
 
-- [Github](https://github.com/austintgriffith/scaffold-eth)
+- [Github](https://github.com/scaffold-eth/scaffold-eth-2)
 - [範例去中心化應用程式](https://punkwallet.io/)
 
 **Create Eth App _- 通過一條指令建立以太坊支援的應用程式。_**
@@ -73,6 +73,12 @@ lang: zh-tw
 - [首頁](https://thirdweb.com/)
 - [文件](https://portal.thirdweb.com/)
 - [Github](https://github.com/thirdweb-dev/)
+
+**Crossmint _- 企業級 Web3 開發平台，可用於部署智慧型合約，支援信用卡和跨鏈支付，並使用應用程式介面來建立、分發、銷售、儲存和編輯非同質化代幣。_**
+
+- [crossmint.com](https://www.crossmint.com)
+- [文件](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
 
 ## 衍生閱讀 {#further-reading}
 

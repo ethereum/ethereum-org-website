@@ -1,4 +1,10 @@
-import { type ComponentPropsWithRef, useEffect, useRef, useState } from "react"
+import React, {
+  type ComponentPropsWithRef,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from "react"
 import { type GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -18,7 +24,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import BoxGrid from "@/components/BoxGrid"
 import ButtonLink from "@/components/Buttons/ButtonLink"
@@ -29,7 +35,6 @@ import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import GhostCard from "@/components/GhostCard"
-import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink, { BaseLink } from "@/components/Link"
@@ -42,84 +47,84 @@ import ProductCard from "@/components/ProductCard"
 import ProductListComponent, {
   type ProductListProps,
 } from "@/components/ProductList"
+import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import aave from "@/public/dapps/aave.png"
-import ankr from "@/public/dapps/ankr.png"
-import api3 from "@/public/dapps/api3.png"
-import artblocks from "@/public/dapps/artblocks.png"
-import arweave from "@/public/dapps/arweave.png"
-import asyncart from "@/public/dapps/asyncart.png"
-import audius from "@/public/dapps/audius.png"
-import augur from "@/public/dapps/augur.png"
-import axie from "@/public/dapps/axie.png"
-import balancer from "@/public/dapps/balancer.png"
-import brave from "@/public/dapps/brave.png"
-import compound from "@/public/dapps/compound.png"
-import convex from "@/public/dapps/convex.png"
-import cryptopunks from "@/public/dapps/cryptopunks.png"
-import cryptovoxels from "@/public/dapps/cryptovoxels.png"
-import curve from "@/public/dapps/curve.png"
-import cyberconnect from "@/public/dapps/cyberconnect.png"
-import darkforest from "@/public/dapps/darkforest.png"
-import decentraland from "@/public/dapps/decentraland.png"
-import dodo from "@/public/dapps/dodo.png"
-import ens from "@/public/dapps/ens.png"
-import etherisc from "@/public/dapps/etherisc.png"
-import foundation from "@/public/dapps/foundation.png"
-import gitcoin from "@/public/dapps/gitcoin.png"
-import gm from "@/public/dapps/gm.png"
-import gods from "@/public/dapps/gods.png"
-import golem from "@/public/dapps/golem.png"
-import graph from "@/public/dapps/graph.png"
-import index from "@/public/dapps/index-coop.png"
-import ipfs from "@/public/dapps/ipfs.png"
-import krystal from "@/public/dapps/krystal.png"
-import kyberswap from "@/public/dapps/kyberswap.png"
-import lido from "@/public/dapps/lido.png"
-import loopring from "@/public/dapps/loopring.png"
-import marble from "@/public/dapps/marble.png"
-import matcha from "@/public/dapps/matcha.png"
-import mirror from "@/public/dapps/mirror.png"
-import multichain from "@/public/dapps/multichain.png"
-import nexus from "@/public/dapps/nexus.png"
-import nifty from "@/public/dapps/nifty.png"
-import opensea from "@/public/dapps/opensea.png"
-import opera from "@/public/dapps/opera.png"
-import osuvox from "@/public/dapps/osuvox.png"
-import poap from "@/public/dapps/poap.png"
-import polymarket from "@/public/dapps/polymarket.png"
-import pooltogether from "@/public/dapps/pooltogether.png"
-import pwn from "@/public/dapps/pwn.png"
-import radicle from "@/public/dapps/radicle.png"
-import rarible from "@/public/dapps/rarible.png"
-import rotki from "@/public/dapps/rotki.png"
-import rubic from "@/public/dapps/rubic.png"
-import sablier from "@/public/dapps/sablier.png"
-import set from "@/public/dapps/set.png"
-import skiff from "@/public/dapps/skiff.png"
-import spatial from "@/public/dapps/spatial.png"
-import spruce from "@/public/dapps/spruce.png"
-import dai from "@/public/dapps/stabledai.png"
-import status from "@/public/dapps/status.png"
-import superrare from "@/public/dapps/superrare.png"
-import synthetix from "@/public/dapps/synthetix.png"
-import uniswapec from "@/public/dapps/uni.png"
-import uniswap from "@/public/dapps/uni.png"
-import xmtp from "@/public/dapps/xmtp.png"
-import yearn from "@/public/dapps/yearn.png"
-import zapper from "@/public/dapps/zapper.png"
-import zerion from "@/public/dapps/zerion.png"
-import developers from "@/public/developers-eth-blocks.png" // Handled inside Callout => height=200
-import doge from "@/public/doge-computer.png" // HERO, full? 624px
-import ogImage from "@/public/doge-computer.png" // PageMetadata, src only
-import oneinch from "@/public/exchanges/1inch.png"
-import magicians from "@/public/magicians.png"
-import wallet from "@/public/wallet.png" // width=300
+import aave from "@/public/images/dapps/aave.png"
+import ankr from "@/public/images/dapps/ankr.png"
+import api3 from "@/public/images/dapps/api3.png"
+import artblocks from "@/public/images/dapps/artblocks.png"
+import arweave from "@/public/images/dapps/arweave.png"
+import asyncart from "@/public/images/dapps/asyncart.png"
+import audius from "@/public/images/dapps/audius.png"
+import augur from "@/public/images/dapps/augur.png"
+import axie from "@/public/images/dapps/axie.png"
+import balancer from "@/public/images/dapps/balancer.png"
+import brave from "@/public/images/dapps/brave.png"
+import compound from "@/public/images/dapps/compound.png"
+import convex from "@/public/images/dapps/convex.png"
+import cryptopunks from "@/public/images/dapps/cryptopunks.png"
+import cryptovoxels from "@/public/images/dapps/cryptovoxels.png"
+import curve from "@/public/images/dapps/curve.png"
+import cyberconnect from "@/public/images/dapps/cyberconnect.png"
+import darkforest from "@/public/images/dapps/darkforest.png"
+import decentraland from "@/public/images/dapps/decentraland.png"
+import dodo from "@/public/images/dapps/dodo.png"
+import ens from "@/public/images/dapps/ens.png"
+import etherisc from "@/public/images/dapps/etherisc.png"
+import foundation from "@/public/images/dapps/foundation.png"
+import gitcoin from "@/public/images/dapps/gitcoin.png"
+import gm from "@/public/images/dapps/gm.png"
+import gods from "@/public/images/dapps/gods.png"
+import golem from "@/public/images/dapps/golem.png"
+import graph from "@/public/images/dapps/graph.png"
+import index from "@/public/images/dapps/index-coop.png"
+import ipfs from "@/public/images/dapps/ipfs.png"
+import krystal from "@/public/images/dapps/krystal.png"
+import kyberswap from "@/public/images/dapps/kyberswap.png"
+import lido from "@/public/images/dapps/lido.png"
+import loopring from "@/public/images/dapps/loopring.png"
+import marble from "@/public/images/dapps/marble.png"
+import matcha from "@/public/images/dapps/matcha.png"
+import meeds from "@/public/images/dapps/meeds.png"
+import mirror from "@/public/images/dapps/mirror.png"
+import nexus from "@/public/images/dapps/nexus.png"
+import nifty from "@/public/images/dapps/nifty.png"
+import opensea from "@/public/images/dapps/opensea.png"
+import opera from "@/public/images/dapps/opera.png"
+import osuvox from "@/public/images/dapps/osuvox.png"
+import poap from "@/public/images/dapps/poap.png"
+import polymarket from "@/public/images/dapps/polymarket.png"
+import pooltogether from "@/public/images/dapps/pooltogether.png"
+import pwn from "@/public/images/dapps/pwn.png"
+import radicle from "@/public/images/dapps/radicle.png"
+import rarible from "@/public/images/dapps/rarible.png"
+import requestFinance from "@/public/images/dapps/requestFinance.png"
+import rotki from "@/public/images/dapps/rotki.png"
+import rubic from "@/public/images/dapps/rubic.png"
+import sablier from "@/public/images/dapps/sablier.png"
+import set from "@/public/images/dapps/set.png"
+import spatial from "@/public/images/dapps/spatial.png"
+import spruce from "@/public/images/dapps/spruce.png"
+import status from "@/public/images/dapps/status.png"
+import summerfi from "@/public/images/dapps/summerfi.png"
+import superrare from "@/public/images/dapps/superrare.png"
+import synthetix from "@/public/images/dapps/synthetix.png"
+import uniswap from "@/public/images/dapps/uni.png"
+import xmtp from "@/public/images/dapps/xmtp.png"
+import yearn from "@/public/images/dapps/yearn.png"
+import zapper from "@/public/images/dapps/zapper.png"
+import zerion from "@/public/images/dapps/zerion.png"
+import developers from "@/public/images/developers-eth-blocks.png" // Handled inside Callout => height=200
+import doge from "@/public/images/doge-computer.png" // HERO, full? 624px
+import oneinch from "@/public/images/exchanges/1inch.png"
+import magicians from "@/public/images/magicians.png"
+import wallet from "@/public/images/wallet.png" // width=300
 
 const Page = (props: ChildOnlyProp & FlexProps) => (
   <Flex
@@ -423,7 +428,7 @@ interface Category {
   benefits?: Array<{
     emoji: string
     title: string
-    description: string
+    description: ReactNode
   }>
 }
 
@@ -434,15 +439,19 @@ interface Categories {
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
@@ -603,7 +612,9 @@ const DappsPage = () => {
         {
           emoji: ":scales:",
           title: t("page-dapps-finance-benefits-3-title"),
-          description: t("page-dapps-finance-benefits-3-description"),
+          description: (
+            <Translation id="page-dapps:page-dapps-finance-benefits-3-description" />
+          ),
         },
         {
           emoji: ":chains:",
@@ -709,11 +720,11 @@ const DappsPage = () => {
       alt: t("page-dapps-compound-logo-alt"),
     },
     {
-      title: "Oasis",
-      description: t("page-dapps-dapp-description-oasis"),
-      link: "https://oasis.app/",
-      image: dai,
-      alt: t("page-dapps-oasis-logo-alt"),
+      title: "Summer.fi",
+      description: t("page-dapps-dapp-description-summerfi"),
+      link: "https://summer.fi/",
+      image: summerfi,
+      alt: t("page-dapps-summerfi-logo-alt"),
     },
     {
       title: "PWN",
@@ -817,6 +828,13 @@ const DappsPage = () => {
       link: "https://app.sablier.com",
       image: sablier,
       alt: t("page-dapps-sablier-logo-alt"),
+    },
+    {
+      title: "Request Finance",
+      description: t("page-dapps-dapp-description-request-finance"),
+      link: "https://request.finance",
+      image: requestFinance,
+      alt: t("page-dapps-request-finance-logo-alt"),
     },
   ]
 
@@ -1139,13 +1157,6 @@ const DappsPage = () => {
       image: xmtp,
       alt: t("page-dapps-xmtp-logo-alt"),
     },
-    {
-      title: "Skiff",
-      description: t("page-dapps-dapp-description-skiff"),
-      link: "https://skiff.com/",
-      image: skiff,
-      alt: t("page-dapps-skiff-logo-alt"),
-    },
   ]
 
   const identity = [
@@ -1162,6 +1173,16 @@ const DappsPage = () => {
       link: "https://www.spruceid.com/",
       image: spruce,
       alt: t("page-dapps-spruce-logo-alt"),
+    },
+  ]
+
+  const community = [
+    {
+      title: "Meeds",
+      description: t("page-dapps-dapp-description-meeds"),
+      link: "https://meeds.io",
+      image: meeds,
+      alt: t("page-dapps-meeds-logo-alt"),
     },
   ]
 
@@ -1218,13 +1239,6 @@ const DappsPage = () => {
 
   const bridges = [
     {
-      title: "Multichain",
-      description: t("page-dapps-dapp-description-multichain"),
-      link: "https://multichain.xyz/",
-      image: multichain,
-      alt: t("page-dapps-multichain-logo-alt"),
-    },
-    {
       title: "Rubic",
       description: t("page-dapps-dapp-description-rubic"),
       link: "https://rubic.exchange/",
@@ -1272,7 +1286,7 @@ const DappsPage = () => {
       name: "Uniswap",
       description: t("page-dapps-editors-choice-uniswap"),
       url: "https://uniswap.exchange/swap",
-      image: uniswapec,
+      image: uniswap,
       alt: t("page-dapps-uniswap-logo-alt"),
       background: "#212f46",
       type: CategoryType.FINANCE,
@@ -1319,7 +1333,7 @@ const DappsPage = () => {
     buttons: [
       {
         content: t("page-dapps-explore-dapps-title"),
-        to: "#beginner",
+        href: "#beginner",
         matomo: {
           eventCategory: "dapp hero buttons",
           eventAction: "click",
@@ -1328,7 +1342,7 @@ const DappsPage = () => {
       },
       {
         content: t("page-dapps-what-are-dapps"),
-        to: "#what-are-dapps",
+        href: "#what-are-dapps",
         variant: "outline",
         matomo: {
           eventCategory: "dapp hero buttons",
@@ -1342,22 +1356,19 @@ const DappsPage = () => {
     <Page>
       <PageMetadata
         title={t("common:decentralized-applications-dapps")}
-        description={t("common:page-dapps-desc")}
-        image={ogImage.src}
+        description={t("page-dapps-desc")}
+        image="/images/doge-computer.png"
       />
       <PageHero content={heroContent} />
       <Divider />
       <Content>
         <StyledH2>{t("common:get-started")}</StyledH2>
         <Text>
-          {t("page-dapps-get-started-subtitle")}{" "}
-          <GlossaryTooltip termKey="transaction-fee">
-            {t("transaction-fees")}
-          </GlossaryTooltip>
+          <Translation id="page-dapps:page-dapps-get-started-subtitle" />
         </Text>
         <Row>
           <StepBoxContainer>
-            <StepBox to="/get-eth/">
+            <StepBox href="/get-eth/">
               <Box>
                 <StyledH3>
                   {/* TODO: Use CSS counter for intl-friendly numbering  */}
@@ -1377,7 +1388,7 @@ const DappsPage = () => {
                 {t("common:get-eth")}
               </ButtonSecondary>
             </StepBox>
-            <StepBox to="/wallets/find-wallet/">
+            <StepBox href="/wallets/find-wallet/">
               <Box>
                 <StyledH3>2. {t("page-dapps-set-up-a-wallet-title")}</StyledH3>
                 <Text>{t("page-dapps-set-up-a-wallet-description")}</Text>
@@ -1394,7 +1405,7 @@ const DappsPage = () => {
                 {t("page-dapps-set-up-a-wallet-button")}
               </ButtonSecondary>
             </StepBox>
-            <StepBox to="#explore">
+            <StepBox href="#explore">
               <Box>
                 <StyledH3>3. {t("page-dapps-ready-title")}</StyledH3>
                 <Text>{t("page-dapps-ready-description")}</Text>
@@ -1562,6 +1573,16 @@ const DappsPage = () => {
                 />
               </RightColumn>
             </TwoColumnContent>
+            <Box py={4} w="full">
+              <Text m={0} fontWeight="bold">
+                {t("page-dapps:page-dapps-explore-title")}
+              </Text>
+              <Text m={0}>
+                <InlineLink href="https://www.ethereum-ecosystem.com/apps">
+                  {t("page-dapps:page-dapps-explore")}
+                </InlineLink>
+              </Text>
+            </Box>
             <CalloutBanner
               mt={32}
               mx={0}
@@ -1575,7 +1596,7 @@ const DappsPage = () => {
               alt={t("page-dapps-wallet-callout-image-alt")}
             >
               <Box>
-                <ButtonLink to="/wallets/find-wallet/">
+                <ButtonLink href="/wallets/find-wallet/">
                   {t("page-dapps-wallet-callout-button")}
                 </ButtonLink>
               </Box>
@@ -1659,11 +1680,7 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-collectibles-title")}{" "}
-                  <Emoji
-                    fontSize="5xl"
-                    ms={"0.5rem"}
-                    text=":frame_with_picture:"
-                  />
+                  <Emoji fontSize="5xl" ms={2} text=":frame_with_picture:" />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-collectibles-description")}</Subtitle>
               </Column>
@@ -1780,6 +1797,27 @@ const DappsPage = () => {
                 />
               </RightColumn>
             </TwoColumnContent>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList
+                  category={t("page-dapps-category-community")}
+                  content={community}
+                />
+              </LeftColumn>
+              <RightColumn />
+            </TwoColumnContent>
+          </Content>
+        )}
+        {selectedCategory !== CategoryType.FINANCE && (
+          <Content>
+            <Text m={0} fontWeight="bold">
+              {t("page-dapps:page-dapps-explore-title")}
+            </Text>
+            <Text m={0}>
+              <InlineLink href="https://www.ethereum-ecosystem.com/apps">
+                {t("page-dapps:page-dapps-explore")}
+              </InlineLink>
+            </Text>
           </Content>
         )}
         {/* General content for all categories */}
@@ -1809,21 +1847,21 @@ const DappsPage = () => {
               </CardContainer>
               {selectedCategory === CategoryType.FINANCE && (
                 <MoreButtonContainer>
-                  <ButtonLink variant="outline" to="/defi/">
+                  <ButtonLink variant="outline" href="/defi/">
                     {t("page-dapps-more-on-defi-button")}
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
               {selectedCategory === CategoryType.COLLECTIBLES && (
                 <MoreButtonContainer>
-                  <ButtonLink variant="outline" to="/nft/">
+                  <ButtonLink variant="outline" href="/nft/">
                     {t("page-dapps-more-on-nft-button")}
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
               {selectedCategory === CategoryType.GAMING && (
                 <MoreButtonContainer>
-                  <ButtonLink variant="outline" to="/nft/">
+                  <ButtonLink variant="outline" href="/nft/">
                     {t("page-dapps-more-on-nft-gaming-button")}
                   </ButtonLink>
                 </MoreButtonContainer>
@@ -1867,7 +1905,7 @@ const DappsPage = () => {
           <Text textAlign={{ base: "left", sm: "center" }} maxW="800px" mb={4}>
             {t("page-dapps-magic-behind-dapps-description")}
           </Text>
-          <InlineLink to="/what-is-ethereum/">
+          <InlineLink href="/what-is-ethereum/">
             {t("page-dapps-magic-behind-dapps-link")}
           </InlineLink>
         </Flex>
@@ -1875,13 +1913,15 @@ const DappsPage = () => {
         <Row>
           <LeftColumn>
             <H2>{t("page-dapps-how-dapps-work-title")}</H2>
-            <Text>{t("page-dapps-how-dapps-work-p1")}</Text>
+            <Text>
+              <Translation id="page-dapps:page-dapps-how-dapps-work-p1" />
+            </Text>
             <Text>{t("page-dapps-how-dapps-work-p2")}</Text>
             <Text>{t("page-dapps-how-dapps-work-p3")}</Text>
-            <DocLink to="/developers/docs/dapps/">
+            <DocLink href="/developers/docs/dapps/">
               {t("page-dapps-docklink-dapps")}
             </DocLink>
-            <DocLink to="/developers/docs/smart-contracts/">
+            <DocLink href="/developers/docs/smart-contracts/">
               {t("page-dapps-docklink-smart-contracts")}
             </DocLink>
           </LeftColumn>
@@ -1893,7 +1933,7 @@ const DappsPage = () => {
               alt={t("page-dapps-learn-callout-image-alt")}
             >
               <Box>
-                <ButtonLink to="/developers/">
+                <ButtonLink href="/developers/">
                   {t("page-dapps-learn-callout-button")}
                 </ButtonLink>
               </Box>

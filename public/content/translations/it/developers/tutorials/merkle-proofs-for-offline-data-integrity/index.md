@@ -60,15 +60,15 @@ const dataArray = [
 Codificando ogni voce in un unico numero intero da 256 bit si ottiene un codice meno leggibile rispetto, ad esempio, all'utilizzo di JSON. Tuttavia, ciò comporta un'elaborazione significativamente ridotta per recuperare i dati nel contratto, quindi costi del gas molto inferiori. [JSON può essere letto sulla catena](https://github.com/chrisdotn/jsmnSol), ma è una cattiva idea, quindi se possibile consigliamo di evitarlo.
 
 ```javascript
-// L'insieme di valori di hash, come BigInts
+// The array of hash values, as BigInts
 const hashArray = dataArray
 ```
 
 In questo caso, per iniziare i nostri dati sono valori da 256 bit, quindi non è necessaria alcuna elaborazione. Se usiamo una struttura di dati più complicata, come le stringhe, dovremo assicurarci di eseguire per prima cosa l'hashing dei dati, così da ottenere un insieme di hash. Anche questo, ricordiamo che non importa se gli utenti conoscono le informazioni altrui. In caso contrario, dovremmo eseguire l'hashing in modo tale che l'utente 1 non conosca il valore per l'utente 0, l'utente 2 non conosca il valore per l'utente 3, ecc.
 
 ```javascript
-// Converte tra la stringa che la funzione di hash prevede e
-// BigInt che usiamo ovunque.
+// Convert between the string the hash function expects and the
+// BigInt we use everywhere else.
 const hash = (x) =>
   BigInt(ethers.utils.keccak256("0x" + x.toString(16).padStart(64, 0)))
 ```
@@ -76,7 +76,7 @@ const hash = (x) =>
 La funzione hash di ethers prevede di ottenere una stringa in JavaScript con un numero esadecimale, come `0x60A7` e rispondere con un'altra stringa con la stessa struttura. Tuttavia, per il resto del codice è più facile usare `BigInt`, in modo da poter convertire in una stringa esadecimale e tornare indietro.
 
 ```javascript
-// Hash simmetrico di una coppia, così che non ci importerà se l'ordine è invertito.
+// Symmetrical hash of a pair so we won't care if the order is reversed.
 const pairHash = (a, b) => hash(hash(a) ^ hash(b))
 ```
 
@@ -85,8 +85,8 @@ Questa funzione è simmetrica (hash di una b [xor](https://en.wikipedia.org/wiki
 Attenzione: La crittografia è più complessa di quanto sembri. La versione iniziale di questo articolo conteneva la funzione di hash `hash(a^b)`. Quella era una **cattiva** idea, poiché comportava che, conoscendo i valori legittimi di `a` e `b` avresti potuto usare `b' = a^b^a'` per provare qualsiasi valore `a'` desiderato. Con questa funzione dovresti calcolare `b'` così che `hash(a') ^ hash(b')` sia pari a un valore noto (il ramo successivo verso la radice), il che è molto più difficile.
 
 ```javascript
-// Il valore denota che un certo ramo è vuoto, non
-// ha un valore
+// The value to denote that a certain branch is empty, doesn't
+// have a value
 const empty = 0n
 ```
 
@@ -95,11 +95,11 @@ Quando il numero di valori non è una potenza intera di due, dobbiamo gestire i 
 ![Albero di Merkle con rami mancanti](merkle-empty-hash.png)
 
 ```javascript
-// Calcola un livello in alto nell'albero di un insieme di hash prenendo l'hash
-// di ogni coppia in sequenza
+// Calculate one level up the tree of a hash array by taking the hash of
+// each pair in sequence
 const oneLevelUp = (inputArray) => {
   var result = []
-  var inp = [...inputArray] // Per evitare l'eccesso di input // Aggiunge un valore vuoto se necessario (necessitiamo che tutte le uscite siano accoppiate a //)
+  var inp = [...inputArray] // To avoid over writing the input // Add an empty value if necessary (we need all the leaves to be // paired)
 
   if (inp.length % 2 === 1) inp.push(empty)
 
@@ -116,7 +116,7 @@ Questa funzione "scala" un livello nell'albero di Merkle eseguendo l'hashing di 
 const getMerkleRoot = (inputArray) => {
   var result
 
-  result = [...inputArray] // Scala l'albero finché c'è solo un valore, questa è la radice //. // // Se un livello ha un numero dispari di voci, il // codice in oneLevelUp aggiunge un valore vuoto, quindi abbiamo, ad esempio, // 10 foglie, avremo 5 rami al secondo livello, 3 // rami al terzo, 2 al quarto e la radice al quinto
+  result = [...inputArray] // Climb up the tree until there is only one value, that is the // root. // // If a layer has an odd number of entries the // code in oneLevelUp adds an empty value, so if we have, for example, // 10 leaves we'll have 5 branches in the second layer, 3 // branches in the third, 2 in the fourth and the root is the fifth
 
   while (result.length > 1) result = oneLevelUp(result)
 
@@ -131,22 +131,22 @@ Per ottenere la radice, scala finché non resta un solo valore.
 Una prova di Merkle è data dai valori da sottoporre all'hashing insieme al valore dimostrato in modo da ottenere nuovamente il root di Merkle. Il valore da provare spesso è ricavabile da altri dati, quindi preferisco fornirlo separatamente anziché come parte del codice.
 
 ```javascript
-// Una prova di merkle consiste nel valore dell'elenco di voci con
-// cui eseguire l'hash. Poiché usiamo una funzione di hash simmetrica, non
-// ci serve la posizione dell'elemento per verificare la prova, solo per crearla
+// A merkle proof consists of the value of the list of entries to
+// hash with. Because we use a symmetrical hash function, we don't
+// need the item's location to verify the proof, only to create it
 const getMerkleProof = (inputArray, n) => {
     var result = [], currentLayer = [...inputArray], currentN = n
 
-    // Finché arriviamo in cima
+    // Until we reach the top
     while (currentLayer.length > 1) {
-        // Nessun livello dalla lunghezza dispari
+        // No odd length layers
         if (currentLayer.length % 2)
             currentLayer.push(empty)
 
         result.push(currentN % 2
-               // Se currentN è dispari, aggiungiamo il valore precedente alla prova
+               // If currentN is odd, add with the value before it to the proof
             ? currentLayer[currentN-1]
-               // Se è pari, aggiungi il valore successivo
+               // If it is even, add the value after it
             : currentLayer[currentN+1])
 
 ```
@@ -154,7 +154,7 @@ const getMerkleProof = (inputArray, n) => {
 Eseguiamo l'hashing di `(v[0],v[1])`, `(v[2],v[3])`, ecc. Quindi per i valori pari ci serve quello successivo, mentre per i valori dispari ci serve quello precedente.
 
 ```javascript
-        // Sposta al livello successivo superiore
+        // Move to the next layer up
         currentN = Math.floor(currentN/2)
         currentLayer = oneLevelUp(currentLayer)
     }   // while currentLayer.length > 1
@@ -185,9 +185,9 @@ contract MerkleProof {
       return merkleRoot;
     }
 
-    // Estremamente insicuro, nel codice di produzione l'accesso a
-    // questa funzione DEVE ESSERE rigorosamente limitato, probabilmente a un
-    // proprietario
+    // Extremely insecure, in production code access to
+    // this function MUST BE strictly limited, probably to an
+    // owner
     function setRoot(uint _merkleRoot) external {
       merkleRoot = _merkleRoot;
     }   // setRoot
@@ -210,7 +210,7 @@ Questa funzione genera l'hash di una coppia. È semplicemente la traduzione di S
 **Nota:** Questo è un altro caso d'ottimizzazione per migliorare la leggibilità. In base alla [definizione della funzione](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm), potrebbe essere possibile memorizzare i dati come valore [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) ed evitare le conversioni.
 
 ```solidity
-    // Verifica una prova di Merkle
+    // Verify a Merkle proof
     function verifyProof(uint _value, uint[] calldata _proof)
         public view returns (bool) {
       uint temp = _value;

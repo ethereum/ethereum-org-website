@@ -1,8 +1,5 @@
 import { create } from "@storybook/theming"
 
-// @ts-ignore
-import brandImage from "./preview-logo.svg"
-
 export default create({
   base: "dark",
 
@@ -11,7 +8,7 @@ export default create({
   appBorderRadius: 4,
 
   brandTitle: "Ethereum.org",
-  brandImage,
+  brandImage: "./preview-logo.svg",
   brandUrl: "https://www.ethereum.org",
 
   barSelectedColor: "#ff7324",

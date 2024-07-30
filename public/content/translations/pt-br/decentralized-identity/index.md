@@ -5,7 +5,7 @@ lang: pt-br
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: Os sistemas de identidade tradicionais centralizaram a emissão, manutenção e controle de seus identificadores.
 summaryPoint2: A identidade descentralizada elimina a dependência de terceiros centralizados.
 summaryPoint3: Graças à criptografia, os usuários agora têm as ferramentas para emitir, manter e controlar seus próprios identificadores e atestações novamente.
@@ -49,7 +49,7 @@ Os identificadores descentralizados são armazenados em livros-razões distribu�
 
 ## O que torna os identificadores descentralizados possíveis? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infraestrutura de chave pública (PKI) {#public-key-infrastructure}
+### 1. Infraestrutura de chave pública (PKI) {#public-key-cryptography}
 
 A infraestrutura de chave pública (PKI) é uma medida de segurança da informação que gera uma [chave pública](/glossary/#public-key) e uma [ chave privada](/glossary/#private-key) para uma entidade. A criptografia de chave pública é usada em redes blockchain para autenticar identidades de usuários e provar a propriedade de ativos digitais.
 

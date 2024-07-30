@@ -73,33 +73,33 @@ const Layer2ProductCard = ({
               {children}
             </Box>
           )}
-          <Text opacity="0.8" fontSize="sm" mb={2} lineHeight="140%">
+          <Text fontSize="sm" mb={2} lineHeight="140%">
             {description}
           </Text>
           {note.length > 0 && (
-            <Text opacity="0.8" fontSize="sm" mb={2} lineHeight="140%">
+            <Text fontSize="sm" mb={2} lineHeight="140%">
               {t("layer-2-note")} {note}
             </Text>
           )}
         </Box>
         {bridge && (
-          <InlineLink to={bridge}>
+          <InlineLink href={bridge}>
             {name} {t("layer-2-bridge")}
           </InlineLink>
         )}
         {ecosystemPortal && (
-          <InlineLink to={ecosystemPortal}>
+          <InlineLink href={ecosystemPortal}>
             {name} {t("layer-2-ecosystem-portal")}
           </InlineLink>
         )}
         {tokenLists && (
-          <InlineLink to={tokenLists}>
+          <InlineLink href={tokenLists}>
             {name} {t("layer-2-token-lists")}
           </InlineLink>
         )}
       </Flex>
       <Box>
-        <ButtonLink m={2} to={url} display="flex">
+        <ButtonLink m={2} href={url} display="flex">
           {t("layer-2-explore")} {name}
         </ButtonLink>
       </Box>

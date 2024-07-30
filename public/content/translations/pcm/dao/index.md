@@ -5,7 +5,7 @@ lang: pcm
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: One show of hau one DAO dey vote on top one proposal.
 summaryPoint1: Kommunitis wey membas own and nor get one pesin wey dey kontrol evrytin.
 summaryPoint2: One way wey bam wey u fit join pipol wey yu nor sabi for intanet witout wahala.
@@ -50,7 +50,7 @@ Di tori of any DAO na hin contract wey sharp. na him go tell us the matter wey g
 
 This one possible becasue of say our smart contract no fit shake once they don dey live on Ethereum. Yu nor fit edit di kode (DAO matter) make anybody nor sabi bikos na evrythin wi go dey si.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   More on smart kontracts
 </DocLink>
 

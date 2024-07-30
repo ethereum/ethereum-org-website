@@ -12,7 +12,7 @@ Vous devez avoir lu et compris notre page sur [la mise à l'échelle d'Ethereum]
 
 ## Qu'est-ce que les rollups zero-knowledge ? {#what-are-zk-rollups}
 
-**Les rollups à connaissance nulle (ZK-rollups)**regroupent (« roll up ») les transactions dans des lots qui sont exécutés hors chaîne. Le calcul hors chaîne réduit la quantité de données qui doivent être publiées dans la blockchain. Les opérateurs ZK-rollup soumettent un résumé des modifications requises pour représenter toutes les transactions dans un lot plutôt que d'envoyer chaque transaction individuellement. Ils produisent également [des preuves de validité](/glossary/#validity-proof) pour prouver la justesse de leurs modifications.
+**Les rollups à connaissance nulle (ZK-rollups)** regroupent (« roll up ») les transactions dans des lots qui sont exécutés hors chaîne. Le calcul hors chaîne réduit la quantité de données qui doivent être publiées dans la blockchain. Les opérateurs ZK-rollup soumettent un résumé des modifications requises pour représenter toutes les transactions dans un lot plutôt que d'envoyer chaque transaction individuellement. Ils produisent également [des preuves de validité](/glossary/#validity-proof) pour prouver la justesse de leurs modifications.
 
 L'état du ZK-rollup est maintenu par un contrat intelligent déployé sur le réseau Ethereum. Pour mettre à jour cet état, les nœuds ZK-rollup doivent soumettre une preuve de validité pour vérification. Comme mentionné ci-dessus, la preuve de validité est l'assurance cryptographique que le changement d'état proposé par le rollup correspond au résultat de l'exécution du lot de transactions donné. Cela signifie que les ZK-rollups n'ont besoin que de fournir des preuves de validité pour finaliser les transactions sur Ethereum au lieu de poster toutes les données de transaction sur la chaîne comme les [rollups optimistes](/developers/docs/scaling/optimistic-rollups/).
 
@@ -240,7 +240,7 @@ Les projets fonctionnant sur les zkEVM comprennent :
 
 - **[Taiko](https://taiko.xyz)** - _Taiko est un rollup ZK décentralisé, équivalent à Ethereum (une [EVM ZK de type 1](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
 
-- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 est un rollup ZK compatible avec l'EVM développé par Matter Labs, propulsé par son propre zkEVM._
+- **[ZKsync](https://docs.zksync.io/)** - _ZKsync 2.0 est un rollup ZK compatible avec l'EVM développé par Matter Labs, propulsé par son propre zkEVM._
 
 ## Lecture supplémentaire sur les rollups ZK {#further-reading-on-zk-rollups}
 

@@ -3,14 +3,14 @@ title: Peta Perjalanan Ethereum
 description: Jalan menuju peningkatan skalabilitas, keamanan, dan keberlanjutan Ethereum.
 lang: id
 template: roadmap
-image: /roadmap/roadmap-main.png
+image: /images/heroes/roadmap-hub-hero.jpg
 alt: "Peta Perjalanan Ethereum"
 summaryPoints:
 buttons:
   - label: Peningkatan lebih lanjut
     toId: perubahan-apa-yang-akan-terjadi
   - label: Peningkatan sebelumnya
-    to: /history/
+    href: /history/
     variant: ikhtisar
 ---
 
@@ -24,28 +24,28 @@ Peta jalan Ethereum menguraikan peningkatan spesifik yang akan dilakukan pada pr
 
 <CardGrid>
   <RoadmapActionCard
-    to="/roadmap/scaling"
+    href="/roadmap/scaling"
     title="Transaksi yang lebih murah"
     image="scaling"
     description="Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems."
     buttonText="More on reducing fees"
   />
   <RoadmapActionCard
-    to="/roadmap/security"
+    href="/roadmap/security"
     title="Keamanan ekstra"
     image="security"
     description="Ethereum is already very secure but it can be made even stronger, ready to withstand all kinds of attack far into the future."
     buttonText="More on security"
   />
   <RoadmapActionCard
-    to="/roadmap/user-experience"
+    href="/roadmap/user-experience"
     title="Pengalaman pengguna yang lebih baik"
     image="userExperience"
     description="More support for smart contract wallets and light-weight nodes will make using Ethereum simpler and safer."
     buttonText="More on user experience"
   />
   <RoadmapActionCard
-    to="/roadmap/future-proofing"
+    href="/roadmap/future-proofing"
     title="Tetap relevan untuk masa depan"
     image="futureProofing"
     description="Ethereum researchers and developers are solving tomorrow's problems today, readying the network for future generations."
@@ -61,7 +61,7 @@ Ethereum ditingkatkan secara rutin untuk meningkatkan skalabilitas, keamanan, at
 
 Peta jalan ini sebagian besar adalah hasil kerja bertahun-tahun dari para peneliti dan pengembang - karena protokol ini sangat teknis - tetapi setiap orang yang berminat boleh ikut serta. Ide-ide biasanya dimulai dari diskusi di forum seperti [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://www.figma.com/exit?url=https%3A%2F%2Fethereum-magicians.org%2F) atau server discord Eth R&D. Ide-ide tersebut mungkin tanggapan terhadap kerentanan baru yang ditemukan, saran dari organisasi yang bekerja di lapisan aplikasi (seperti dapps dan bursa pertukaran) atau dari perselisihan yang diketahui oleh pengguna akhir (seperti biaya atau kecepatan transaksi). Ketika sudah matang, ide-ide ini dapat diusulkan sebagai [Proposal Peningkatan Ethereum](https://eips.ethereum.org/). Semua ini dilakukan di ruang publik sehingga setiap anggota komunitas dapat memberi masukan kapan saja.
 
-[Selengkapnya tentang tata kelola Ethereum](/governance/)
+[Selengkapnya tentang pemerintahan Ethereum](/governance/)
 
 </RoadmapImageContent>
 
@@ -114,4 +114,4 @@ Sharding adalah pemecahan rantai blok Ethereum agar subset validator hanya berta
 - [Pemilihan pemimpin rahasia](/roadmap/secret-leader-election) - Kriptografi cerdas dapat digunakan untuk memastikan agar identitas pengusul blok terkini tidak diumumkan kepada publik sehingga melindunginya dari beberapa jenis serangan tertentu.
 - [Abstraksi akun](/roadmap/account-abstraction) - Abstraksi akun adalah suatu tingkat peningkatan yang mendukung dompet kontrak pintar secara asli di Ethereum, sebagai pengganti penggunaan middleware yang rumit.
 - [Pohon Verkle](/roadmap/verkle-trees) - Pohon Verkle adalah struktur data yang dapat digunakan untuk mengaktifkan klien tanpa keadaan di Ethereum. Klien "tanpa keadaan" ini hanya membutuhkan ruang penyimpanan yang sangat kecil, tetapi masih dapat memverifikasi blok baru.
-- [Keadaan tanpa keadaan](/roadmap/statelessness) - klien tanpa keadaan akan dapat memverifikasi blok baru tanpa harus menyimpan data dalam jumlah besar. Hal ini akan memberikan semua manfaat menjalankan simpul dengan biaya yang sangat kecil dibandingkan dengan biaya yang berlaku saat ini.
+- [Keadaan tanpa kewarganegaraan](/roadmap/statelessness) - Klien keadaan tanpa kewarganegaraan akan dapat memverifikasi blok baru tanpa harus menyimpan data dalam jumlah besar. Hal ini akan memberikan semua manfaat menjalankan simpul dengan biaya yang sangat kecil dibandingkan dengan biaya yang berlaku saat ini.

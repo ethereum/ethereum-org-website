@@ -5,7 +5,7 @@ lang: fi
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Kuvitus, jossa hajautettu yhteisö äänestää ehdotuksesta.
 summaryPoint1: Jäsenten omistamat yhteisöt ilman keskitettyä johtajuutta.
 summaryPoint2: Turvallinen tapa tehdä yhteistyötä nettituttujen kanssa.
@@ -50,7 +50,7 @@ DAOn selkäranka on sen älykäs sopimus, joka määrittelee organisaation sää
 
 Tämä on mahdollista koska älysopimukset ovat suojattuja, eikä niitä voi "peukaloida" sen jälkeen, kun ne julkaistaan Ethereumissa. Koodin huomaamaton muokkaaminen on poissuljettu (DAOn säännöt). Kaikki on julkista ja avointa.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Lisätietoa älysopimuksista
 </DocLink>
 

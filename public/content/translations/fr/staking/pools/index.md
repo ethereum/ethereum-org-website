@@ -4,7 +4,7 @@ description: Un aperçu de la façon de débuter avec la mise en jeu d'ETH mutua
 lang: fr
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: Leslie le rhinocéros nage dans la piscine.
 sidebarDepth: 2
 summaryPoints:
@@ -35,7 +35,7 @@ En plus des avantages que nous avons décrits dans notre [introduction à la mis
 
 La mise en jeu mutualisée ou déléguée n'est pas prise en charge nativement par le protocole Ethereum, mais compte tenu de la demande des utilisateurs de miser moins de 32 ETH, un nombre croissant de solutions ont été construites pour répondre à cette demande.
 
-Chaque pool et les outils ou contrats intelligents qu'ils utilisent ont été élaborés par différentes équipes, et chacun présente des avantages et des risques. Les pools permettent aux utilisateurs d'échanger leur ETH contre un jeton représentant l'ETH mis en jeu. Ce jeton est utile car il permet aux utilisateurs d'échanger n'importe quel montant d'ETH avec un montant équivalent d'un jeton porteur d'intérêts qui génère des rendements à partir des récompenses de staking appliqués aux ETH sous-jacents (et vice versa) sur les plateformes d'échanges décentralisées alors même que l'ETH réel reste mis en jeu sur la couche consensus. Cela signifie que les échanges entre un produit ETH mis en jeu générateur de rendement et l'« ETH brut» sont rapides, faciles et pas uniquement disponibles en multiples de 32 ETH.
+Chaque pool et les outils ou contrats intelligents qu'ils utilisent ont été élaborés par différentes équipes, et chacun présente des avantages et des risques. Les pools permettent aux utilisateurs d'échanger leur ETH contre un jeton représentant l'ETH mis en jeu. Ce jeton est utile car il permet aux utilisateurs d'échanger n'importe quel montant d'ETH avec un montant équivalent d'un jeton porteur d'intérêts qui génère des rendements à partir des récompenses de staking appliqués aux ETH sous-jacents (et vice versa) sur les plateformes d'échanges décentralisées alors même que l'ETH réel reste mis en jeu sur la couche consensus. Cela signifie que les échanges entre un produit générateur de rendement basé sur de l'ETH mis en jeu et de l'« ETH brut» sont rapides, faciles et pas uniquement disponibles en multiples de 32 ETH.
 
 Toutefois, ces jetons d'ETH mis en jeu ont tendance à créer des comportements assimilables à des cartels où de vastes montants d'ETH mis en jeu finissent sous le contrôle de quelques organisations centralisées plutôt que réparties à travers de nombreux individus indépendants. Cela crée les conditions d'une censure ou d'une extraction de valeur. La norme d'excellence pour la mise en jeu devrait toujours porter sur des personnes individuelles qui exécutent des nœuds validateurs sur leur propre matériel, dans la mesure du possible.
 
@@ -68,7 +68,7 @@ Et c'est déjà le cas ! La mise à niveau du réseau Shanghai/Capella a eu lieu
 
 Alternativement, les pools qui utilisent les jetons de staking ERC-20 permettent à leurs utilisateurs d'échanger ce jeton sur le marché ouvert, vous permettant de vendre votre position de mise, en retirant sans pour autant supprimer l'ETH du contrat de staking.
 
-<ButtonLink to="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu.</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu.</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Est-ce différent de la mise en jeu via mon service d'échange ?">

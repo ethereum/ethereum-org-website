@@ -51,10 +51,10 @@ Un contratto intelligente è codice che risiede sulla blockchain di Ethereum e o
 
 **Scaffold-ETH _ Sperimenta rapidamente con Solidity utilizzando un frontend che si adatta al tuo contratto intelligente._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Esempio di dApp](https://punkwallet.io/)
 
-**Crea Eth App*- Crea app basate su Ethereum con un comando.***
+**Crea Eth App_- Crea app basate su Ethereum con un comando._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
@@ -73,6 +73,12 @@ Un contratto intelligente è codice che risiede sulla blockchain di Ethereum e o
 - [Home page](https://thirdweb.com/)
 - [Documentazione](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
+
+**Crossmint: _piattaforma di sviluppo Web3 per imprese per distribuire i contratti intelligenti, abilitare i pagamenti con carta di credito e tra catene e utilizzare le API per creare, distribuire, vendere, memorizzare e modificare i NFT._**
+
+- [crossmint.com](https://www.crossmint.com)
+- [Documentazione](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
 
 ## Letture consigliate {#further-reading}
 

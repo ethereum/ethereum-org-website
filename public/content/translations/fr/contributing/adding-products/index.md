@@ -17,8 +17,8 @@ Les Dapps sont actuellement listés sur:
 
 Bien que nous appréciions les nouveaux ajouts, nous avons choisi les DApps actuelles en fonction d'une expérience que nous essayons de créer pour nos utilisateurs. Ceux-ci sont basés sur certains de nos principes de conception :
 
-- *Inspirant* : tout ce qui est sur ethereum.org devrait offrir quelque chose de nouveau aux utilisateurs
-- *Une bonne histoire* : ce qui est répertorié devrait entraîner un moment de révélation (ah, ah !)
+- _Inspirant_ : tout ce qui est sur ethereum.org devrait offrir quelque chose de nouveau aux utilisateurs
+- _Une bonne histoire_ : ce qui est répertorié devrait entraîner un moment de révélation (ah, ah !)
 - _Crédible_ : toutes les entreprises/projets doivent être légitimes pour minimiser les risques pour les utilisateurs
 
 Dans l’ensemble, **ethereum.org souhaite offrir une « expérience d’intégration transparente » aux nouveaux utilisateurs**. C'est pourquoi nous ajoutons des DApps en fonction de leur :
@@ -95,6 +95,6 @@ _Nous étudions également des options de vote afin que la communauté puisse in
 
 Si vous souhaitez ajouter une DApp à ethereum.org et qu’elle répond aux critères, créez un ticket sur GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
   Créez un ticket
 </ButtonLink>

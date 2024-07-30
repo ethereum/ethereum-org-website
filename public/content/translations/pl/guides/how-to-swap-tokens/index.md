@@ -12,7 +12,7 @@ Wymiana tokenów obejmuje wymianę dwóch różnych aktywów istniejących w sie
 
 **Wymaganie wstępne:**
 
-- posiadanie portfela kryptowalutowego, możesz postępować zgodnie z tym samouczkiem: [Jak „zarejestrować” konto Ethereum](/guides/how-to-register-an-ethereum-account/)
+- posiadanie portfela kryptowalutowego, możesz postępować zgodnie z tym samouczkiem: [Jak „zarejestrować” konto Ethereum](/guides/how-to-create-an-ethereum-account/)
 - dodanie środków do portfela
 
 ## 1. Podłącz swój portfel do wybranej przez siebie zdecentralizowanej giełdy (DEX)
@@ -51,7 +51,7 @@ Po przetworzeniu transakcji automatycznie otrzymasz wymienione tokeny do swojego
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Chcesz dowiedzieć się więcej?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Zobacz nasze inne przewodniki
   </ButtonLink>
 </InfoBanner>

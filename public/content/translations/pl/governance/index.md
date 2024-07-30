@@ -2,7 +2,6 @@
 title: Zarządzanie Ethereum
 description: Wprowadzenie do sposobu podejmowania decyzji w sprawie Ethereum.
 lang: pl
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Wprowadzenie do zarządzania Ethereum {#introduction}
@@ -33,7 +32,7 @@ Przeciwne podejście, zarządzanie poza łańcuchem, polega na tym, że wszelkie
 
 _Podczas gdy na poziomie protokołu zarządzanie Ethereum odbywa się poza łańcuchem, wiele przypadków użycia zbudowanych na Ethereum, takich jak DAO, wykorzystuje zarządzanie w łańcuchu._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Więcej o DAO
 </ButtonLink>
 
@@ -59,7 +58,7 @@ _Uwaga: każda osoba może być częścią wielu z tych grup (np. deweloper prot
 
 Jednym z ważniejszych procesów zarządzania Ethereum jest tzw. **Propozycja Ulepszenia Ethereum (EIP)**. EIP są standardami określającymi nowe funkcje lub procesy dla Ethereum. Każdy członek społeczności Ethereum może stworzyć EIP. Jeżeli jesteś zainteresowany stworzeniem EIP lub uczestnictwem w weryfikacji i/lub zarządzaniem zobacz:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Więcej o EIP
 </ButtonLink>
 
@@ -155,7 +154,7 @@ Podczas gdy specyfikacja i implementacje deweloperskie zawsze były w pełni ope
 
 Kiedy łańcuch śledzący połączył się z warstwą wykonawczą Ethereum 15 września 2022 r., Połączenie zostało zakończone w ramach [aktualizacji sieci Paris](/history/#paris). Propozycja [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) została zmieniona z „Last Call” na „Final”, kończąc przejście na proof-of-stake.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Więcej o Połączeniu
 </ButtonLink>
 
@@ -175,9 +174,9 @@ Kiedy łańcuch śledzący połączył się z warstwą wykonawczą Ethereum 15 w
 
 Zarządzanie w Ethereum nie jest jednoznacznie zdefiniowane. Perspektywy na ten temat różnią się wśród różnych uczestników społeczności. Oto kilka z nich:
 
-- [Uwagi na temat zarządzania blockchainem](https://vitalik.eth.limo/general/2017/12/17/voting.html) — _Vitalik Buterin_
+- [Więcej o zarządzaniu blockchain](https://vitalik.eth.limo/general/2017/12/17/voting.html) – _Vitalik Buterin_
 - [Jak działa zarządzanie Ethereum?](https://cryptotesters.com/blog/ethereum-governance) — _Cryptotesters_
 - [Jak działa zarządzanie Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) — _Micah Zoltu_
 - [Czym jest główny deweloper Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) — _Hudson Jameson_
-- [Zarządzanie, część 2: plutokracja wciąż jest zła](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) — _Vitalik Buterin_
-- [Wyjście poza zarządzanie głosowaniem monetami](https://vitalik.eth.limo/general/2021/08/16/voting3.html) — _Vitalik Buterin_
+- [Zarządzanie, część 2: plutokracja jest nadal zła](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
+- [Wyjście poza zarządzanie głosowaniem monetami](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_

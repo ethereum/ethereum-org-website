@@ -7,8 +7,6 @@ import {
   Flex,
   type FlexProps,
   type HeadingProps,
-  ListItem as ChakraListItem,
-  type ListItemProps,
   type ListProps,
   OrderedList as ChakraOrderedList,
   UnorderedList as ChakraUnorderedList,
@@ -18,17 +16,16 @@ import {
 import { ChildOnlyProp } from "@/lib/types"
 import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 
-import BannerNotification from "@/components/BannerNotification"
+import BannerNotification from "@/components/Banners/BannerNotification"
 import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
-import CrowdinContributors from "@/components/CrowdinContributors"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
-import GitHubContributors from "@/components/GitHubContributors"
+import FileContributors from "@/components/FileContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
@@ -49,11 +46,6 @@ import Translation from "@/components/Translation"
 import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"
-
-// Utils
-import { DEFAULT_LOCALE } from "@/lib/constants"
-
-import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
 const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
   <Flex
@@ -100,7 +92,7 @@ const H1 = (props: HeadingProps) => (
     {...baseHeadingStyle}
     fontSize={{ base: "2rem", md: "2.5rem" }}
     mt={{ base: 0, md: 8 }}
-    mb={{ base: 4, md: 8 }}
+    mb="8"
     {...props}
   />
 )
@@ -138,10 +130,6 @@ const OrderedList = (props: ListProps) => (
   <ChakraOrderedList ms="1.45rem" {...props} />
 )
 
-const ListItem = (props: ListItemProps) => (
-  <ChakraListItem color="text300" {...props} />
-)
-
 // Apply styles for classes within markdown here
 const Content = (props: ChildOnlyProp) => {
   const mdBreakpoint = useToken("breakpoints", "md")
@@ -150,8 +138,8 @@ const Content = (props: ChildOnlyProp) => {
     <Box
       as={MainArticle}
       flex={`1 1 ${mdBreakpoint}`}
-      maxW={{ base: "full", lg: mdBreakpoint }}
-      pt={{ base: 32, md: 12 }}
+      w={{ base: "full", lg: "0" }}
+      pt={{ base: 8, md: 12 }}
       pb={{ base: 8, md: 16 }}
       px={{ base: 8, md: 16 }}
       m="0 auto"
@@ -176,7 +164,7 @@ const BackToTop = (props: ChildOnlyProp) => (
     borderColor="border"
     {...props}
   >
-    <Link to="#top">
+    <Link href="#top">
       <Translation id="back-to-top" /> ↑
     </Link>
   </Flex>
@@ -190,7 +178,6 @@ export const docsComponents = {
   p: Paragraph,
   ul: UnorderedList,
   ol: OrderedList,
-  li: ListItem,
   pre: Codeblock,
   ...mdxTableComponents,
   Badge,
@@ -206,36 +193,30 @@ export const docsComponents = {
   YouTube,
 }
 
-interface DocsLayoutProps
-  extends Pick<
-      MdPageContent,
-      | "slug"
-      | "tocItems"
-      | "lastUpdatedDate"
-      | "crowdinContributors"
-      | "contentNotTranslated"
-    >,
-    ChildOnlyProp {
-  frontmatter: DocsFrontmatter
-}
+type DocsLayoutProps = Pick<
+  MdPageContent,
+  | "slug"
+  | "tocItems"
+  | "lastEditLocaleTimestamp"
+  | "contributors"
+  | "contentNotTranslated"
+> &
+  Required<Pick<MdPageContent, "lastEditLocaleTimestamp">> &
+  ChildOnlyProp & {
+    frontmatter: DocsFrontmatter
+  }
 
 export const DocsLayout = ({
   children,
   frontmatter,
-  slug,
   tocItems,
-  lastUpdatedDate,
-  crowdinContributors,
+  lastEditLocaleTimestamp,
+  contributors,
   contentNotTranslated,
 }: DocsLayoutProps) => {
   const isPageIncomplete = !!frontmatter.incomplete
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = getEditPath(relativePath)
-
-  const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
-  const intlLastEdit = "data" in gitHubLastEdit ? gitHubLastEdit.data! : ""
-  const useGitHubContributors =
-    frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
   return (
     <Page>
@@ -249,20 +230,11 @@ export const DocsLayout = ({
         <SideNav path={relativePath} />
         <Content>
           <H1 id="top">{frontmatter.title}</H1>
-          {useGitHubContributors ? (
-            <GitHubContributors
-              relativePath={relativePath}
-              lastUpdatedDate={lastUpdatedDate!}
-            />
-          ) : (
-            <CrowdinContributors
-              relativePath={relativePath}
-              lastUpdatedDate={intlLastEdit}
-              contributors={crowdinContributors}
-            />
-          )}
+          <FileContributors
+            contributors={contributors}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          />
           <TableOfContents
-            slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
             isMobile
@@ -277,7 +249,6 @@ export const DocsLayout = ({
         </Content>
         {tocItems && (
           <TableOfContents
-            slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
             maxDepth={frontmatter.sidebarDepth!}

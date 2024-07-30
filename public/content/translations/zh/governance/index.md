@@ -2,7 +2,6 @@
 title: 以太坊治理
 description: 简介：如何做出关于以太坊的决策。
 lang: zh
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # 以太坊治理简介 {#introduction}
@@ -33,7 +32,7 @@ _如果没有人拥有以太坊，那么关于以太坊过去和未来变化的�
 
 _虽然在协议层上，以太坊的治理在链下进行，但许多基于以太坊构建的使用案例（例如 DAO）采用链上治理。_
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   关于去中心化自治组织的更多信息
 </ButtonLink>
 
@@ -59,7 +58,7 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 以太坊治理中使用的一个重要流程是**以太坊改进提案**。 以太坊改进提案是指明以太坊潜在新功能或流程的一套标准。 以太坊社区内的任何人都可以创建以太坊改进提案。 如果你对撰写以太坊改进提案或参与同行评审和/或治理感兴趣，请参阅：
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   关于以太坊改进提案的更多信息
 </ButtonLink>
 
@@ -155,7 +154,7 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 当信标链于 2022 年 9 月 15 日与以太坊执行层合并时，作为[巴黎网络升级](/history/#paris)的一部分，合并完成。 提案 [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) 从“上次调用”变为“最终版”，完成向权益正面的过渡。
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   关于合并的更多信息
 </ButtonLink>
 
@@ -175,7 +174,7 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 以太坊的治理并没有严格定义。 各社区参与者对此有着不同的看法。 以下是其中一部分：
 
-- [关于区块链管理的说明](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [关于区块链治理的说明](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [以太坊治理如何发挥作用？](https://cryptotesters.com/blog/ethereum-governance) - _Cryptotestters_
 - [以太坊治理如何发挥作用](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a)- _Micah Zoltu_
 - [什么是以太坊核心开发者？](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/)- _Hudson Jameson_

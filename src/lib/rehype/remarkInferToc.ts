@@ -38,6 +38,7 @@ const remarkInferToc: Plugin<[IRemarkTocOptions]> = (options) => {
         })
 
         return current
+        // falls through
       }
 
       case `list`: {
@@ -46,6 +47,7 @@ const remarkInferToc: Plugin<[IRemarkTocOptions]> = (options) => {
         typedCurrent.items = node.children.map((item) => processToC(item, {}))
 
         return typedCurrent
+        // falls through
       }
 
       case `listItem`: {
@@ -58,6 +60,7 @@ const remarkInferToc: Plugin<[IRemarkTocOptions]> = (options) => {
 
           return heading
         }
+        // falls through
       }
 
       default:

@@ -4,7 +4,7 @@ description: Μια επισκόπηση πώς να ξεκινήσετε με �
 lang: el
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: Η Leslie ο ρινόκερος κολυμπά στην πισίνα.
 sidebarDepth: 2
 summaryPoints:
@@ -68,7 +68,7 @@ summaryPoints:
 
 Εναλλακτικά, οι δεξαμενές που χρησιμοποιούν ένα κρυπτονόμισμα ERC-20 επιτρέπουν στους χρήστες να διαπραγματεύονται αυτό το κρυπτονόμισμα στην ανοιχτή αγορά, επιτρέποντάς σας να πουλήσετε τη θέση σας, ουσιαστικά να «αποσυρθείτε» χωρίς να αφαιρέσετε τα ETH από το συμβόλαιο αποθήκευσης.
 
-<ButtonLink to="/staking/withdrawals/">Περισσότερα για την ανάληψη αποθηκευμένων κεφαλαίων</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Περισσότερα για την ανάληψη αποθηκευμένων κεφαλαίων</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Είναι διαφορετικό από την αποθήκευση σε ανταλλακτήριο;">

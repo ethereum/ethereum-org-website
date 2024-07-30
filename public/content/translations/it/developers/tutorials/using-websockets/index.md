@@ -4,12 +4,12 @@ description: Guida all'uso di WebSocket e Alchemy per creare richieste JSON-RPC 
 author: "Elan Halpern"
 lang: it
 tags:
-  - "fornisce servizi e strumenti Api per la creazione e il monitoraggio di applicazioni su Ethereum. \nFile: glossario"
+  - "alchemy"
   - "websocket"
   - "query"
   - "javascript"
 skill: beginner
-source: Documentazione di Alchemy
+source: documentazione Alchemy
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
 published: 2020-12-01
 ---
@@ -83,7 +83,7 @@ Mentre l'iscrizione è attiva, ricevi eventi che sono oggetti con i seguenti cam
 - `jsonrpc`: sempre "2.0"
 - `method`: sempre "eth_subscription"
 - `params`: un oggetto con i campi seguenti:
-  - `subscription`: ID dell'iscrizione restituito dalla chiamata `eth_subscription` che ha creato questa iscrizione.
+  - `subscription`: l'ID di iscrizione restituito dalla chiamata a `eth_subscribe` che ha creato questa iscrizione.
   - `result`: oggetto i cui contenuti variano in base al tipo di iscrizione.
 
 #### Tipi di iscrizione {#subscription-types}

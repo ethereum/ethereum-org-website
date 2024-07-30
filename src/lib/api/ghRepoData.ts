@@ -1,13 +1,13 @@
 import { Framework } from "@/lib/interfaces"
 
-import EthDiamondBlackImage from "@/public/assets/eth-diamond-black.png"
-import EpirusImage from "@/public/dev-tools/epirus.png"
-import FoundryImage from "@/public/dev-tools/foundry.png"
-import HardhatImage from "@/public/dev-tools/hardhat.png"
-import KurtosisImage from "@/public/dev-tools/kurtosis.png"
-import ScaffoldEthImage from "@/public/dev-tools/scaffoldeth.png"
-import TruffleImage from "@/public/dev-tools/truffle.png"
-import WaffleImage from "@/public/dev-tools/waffle.png"
+import EthDiamondBlackImage from "@/public/images/assets/eth-diamond-black.png"
+import EpirusImage from "@/public/images/dev-tools/epirus.png"
+import FoundryImage from "@/public/images/dev-tools/foundry.png"
+import HardhatImage from "@/public/images/dev-tools/hardhat.png"
+import KurtosisImage from "@/public/images/dev-tools/kurtosis.png"
+import ScaffoldEthImage from "@/public/images/dev-tools/scaffoldeth.png"
+import TruffleImage from "@/public/images/dev-tools/truffle.png"
+import WaffleImage from "@/public/images/dev-tools/waffle.png"
 
 const frameworksList: Array<Framework> = [
   {
@@ -22,11 +22,11 @@ const frameworksList: Array<Framework> = [
     image: WaffleImage,
   },
   {
-    id: "kurtosis",
-    url: "https://www.kurtosis.com/",
-    githubUrl: "https://github.com/kurtosis-tech/kurtosis",
+    id: "Kurtosis Ethereum Package",
+    url: "https://github.com/kurtosis-tech/ethereum-package",
+    githubUrl: "https://github.com/kurtosis-tech/ethereum-package",
     background: "#000000",
-    name: "Kurtosis",
+    name: "Kurtosis Ethereum Package",
     description:
       "page-developers-local-environment:page-local-environment-kurtosis-desc",
     alt: "page-developers-local-environment:page-local-environment-kurtosis-logo-alt",

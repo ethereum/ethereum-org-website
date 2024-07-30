@@ -5,7 +5,7 @@ lang: fil
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Logo ng Eth naka display via hologram.
 summaryPoint1: Isang paraan para katawanin ang kahit anong natatangi bilang Ethereum-based asset.
 summaryPoint2: Mas binibigyang-kakayahan ngayon ng mga NFT ang mga content creator.
@@ -78,7 +78,7 @@ Ang seguridad ng Ethereum ay mula sa proof-of-stake. Ang system na ito ay idinis
 
 Pinakamadalas na nauugnay sa mga phishing scam, vulnerability ng smart contract o error ng user (gaya ng hindi sinasadyang pagsisiwalat ng mga pribadong key) ang mga isyu sa seguridad kaugnay ng mga NFT, kung kaya, kritikal para sa mga may-ari ng NFT ang mainam na seguridad para sa wallet.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Iba pang detalye tungkol sa seguridad
 </ButtonLink>
 

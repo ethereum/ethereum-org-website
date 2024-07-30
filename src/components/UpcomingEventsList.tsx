@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 
-import type { CommunityConference } from "@/lib/types"
+import type { CommunityConference, Lang } from "@/lib/types"
 
 import { Button } from "@/components/Buttons"
 import EventCard from "@/components/EventCard"
@@ -10,8 +11,9 @@ import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 
-import communityConferences from "@/data/community-events"
+import communityEvents from "@/data/community-events.json"
 
 type OrderedUpcomingEvent = CommunityConference & {
   date: string
@@ -19,6 +21,7 @@ type OrderedUpcomingEvent = CommunityConference & {
 }
 
 const UpcomingEventsList = () => {
+  const { locale } = useRouter()
   const { t } = useTranslation("page-community")
   const eventsPerLoad = 10
   const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState<
@@ -37,7 +40,7 @@ const UpcomingEventsList = () => {
   }
 
   useEffect(() => {
-    const eventsList: CommunityConference[] = [...communityConferences]
+    const eventsList = communityEvents as CommunityConference[]
     const yesterday = new Date()
     yesterday.setDate(yesterday.getDate() - 1)
 
@@ -54,12 +57,13 @@ const UpcomingEventsList = () => {
 
     // Add formatted string to display
     const formattedEvents = orderedEvents.map((event) => {
+      const getDate = (date) =>
+        getLocaleTimestamp(locale! as Lang, dateParse(date).toString(), {})
+
       const dateRange =
         event.startDate === event.endDate
-          ? dateParse(event.startDate).toLocaleDateString()
-          : `${dateParse(event.startDate).toLocaleDateString()} - ${dateParse(
-              event.endDate
-            ).toLocaleDateString()}`
+          ? getDate(event.startDate)
+          : `${getDate(event.startDate)} - ${getDate(event.endDate)}`
 
       const details = `${event.description}`
 
@@ -71,6 +75,7 @@ const UpcomingEventsList = () => {
     })
 
     setOrderedUpcomingEvents(formattedEvents)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const loadMoreEvents = () => {
@@ -86,7 +91,7 @@ const UpcomingEventsList = () => {
     return (
       <InfoBanner emoji=":information_source:">
         {t("page-community-upcoming-events-no-events")}{" "}
-        <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
+        <InlineLink href="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
           {t("page-community-please-add-to-page")}
         </InlineLink>
       </InfoBanner>
@@ -119,12 +124,12 @@ const UpcomingEventsList = () => {
       >
         {orderedUpcomingEvents
           ?.slice(0, maxRange)
-          .map(({ title, to, formattedDetails, date, location }, idx) => {
+          .map(({ title, href, formattedDetails, date, location }, idx) => {
             return (
               <EventCard
                 key={idx}
                 title={title}
-                to={to}
+                href={href}
                 date={date}
                 description={formattedDetails}
                 location={location}

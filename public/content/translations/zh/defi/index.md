@@ -4,7 +4,7 @@ description: 以太坊上的去中心化金融简介
 lang: zh
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: 由乐高积木拼成的以太坊徽标。
 sidebarDepth: 2
 summaryPoint1: 当前金融体系的全球性、开放性替代方案。
@@ -37,17 +37,17 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 
 ### 对比 {#defi-comparison}
 
-| 去中心化金融                                                    | 传统金融                                                                 |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| 你持有你的钱。                                                  | 资金由机构持有。                                                         |
-| 你可以控制自己的资金流向和使用方式。                            | 你必须相信机构不会出现资金管理不善问题，比如不会将钱借给高风险借款人。   |
-| 资金转移在几分钟内完成。                                        | 如果人工处理，支付可能需要几天时间。                                     |
-| 匿名交易。                                                      | 金融活动与你的身份紧密相连。                                             |
-| 去中心化金融对任何人开放。                                      | 你必须申请使用金融服务。                                                 |
-| 交易时间 24 小时不间断。                                        | 根据人工作息时间制定交易时间。                                           |
+| 去中心化金融                            | 传统金融                                 |
+| --------------------------------- | ------------------------------------ |
+| 你持有你的钱。                           | 资金由机构持有。                             |
+| 你可以控制自己的资金流向和使用方式。                | 你必须相信机构不会出现资金管理不善问题，比如不会将钱借给高风险借款人。  |
+| 资金转移在几分钟内完成。                      | 如果人工处理，支付可能需要几天时间。                   |
+| 匿名交易。                             | 金融活动与你的身份紧密相连。                       |
+| 去中心化金融对任何人开放。                     | 你必须申请使用金融服务。                         |
+| 交易时间 24 小时不间断。                    | 根据人工作息时间制定交易时间。                      |
 | 建立在透明基础上 - 任何人都可以查看产品数据并检查系统运行状况。 | 金融机构是闭门造车：你不能要求查看他们的贷款历史，管理资产的记录，等等。 |
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance#explore">
   探索去中心化金融应用程序
 </ButtonLink>
 
@@ -55,7 +55,7 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 
 从某种程度来讲，比特币是第一款去中心化金融应用程序。 比特币让你真正拥有和掌控价值，并可将其发送到世界任何地方。 为实现这一点，它提供了一种方式，让众多互不信任的人在无需可信赖中介的情况下，就帐户的账本达成一致。 比特币向所有人公开，任何人都无权更改其规则。 比特币的规则（例如稀缺性和开放性），都写入了技术中。 与传统金融不同：在传统金融中，政府可以印钞使你的存款贬值，而机构则可以关闭市场。
 
-以太坊便以此为基础。 就像比特币一样，规则不会因你而改变，而且每个人都可以得到。 使用[智能合约](/glossary#smart-contract)技术还可以让这种数字货币程序化，使它的功能不仅限于储蓄和交易。
+以太坊便以此为基础。 就像比特币一样，规则不会因你而改变，而且每个人都可以得到。 使用[智能合约](/glossary/#smart-contract)技术还可以让这种数字货币可编程，使其功能不仅仅限于储蓄和交易。
 
 <YouTube id="qFBYB4W2tqU" />
 
@@ -65,7 +65,7 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>如果你不熟悉以太坊，请尝试我们推荐的去中心化金融应用程序。</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink href="/dapps/?category=finance#explore">
     探索去中心化金融应用程序
   </ButtonLink>
 </InfoBanner>
@@ -90,9 +90,9 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 
 ### 向世界各地快速汇款 {#send-money}
 
-作为一个区块链，以太坊设计用于让用户在全球范围内安全地发送交易。 与比特币一样，以太坊使得向世界各地发送资金就像发送电子邮件一样容易。 只需从钱包中输入收款人的 [ENS 名称](/nft/#nft-domains)（如 bob.eth）或他们的帐户地址，你的付款（通常）将在几分钟内直接到达对方帐户。 要发送或接收付款，你将需要一个[钱包](/wallets/)。
+作为一个区块链，以太坊设计用于让用户在全球范围内安全地发送交易。 与比特币一样，以太坊使得向世界各地发送资金就像发送电子邮件一样容易。 只需从钱包中输入收款人的[以太坊域名服务名称](/glossary/#ens)（如 bob.eth）或他们的帐户地址，你的付款（通常）将在几分钟内直接到达对方帐户。 要发送或接收付款，你将需要一个[钱包](/wallets/)。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看支付 dapp
 </ButtonLink>
 
@@ -100,7 +100,7 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 
 你也可以通过以太坊汇款。 这可以让你秒速支付某人的工资，让他们可以在需要时获得资金。 或者立刻租用一些物品，如储物柜或电动滑板车。
 
-而且，如果你因为以太币的价值可能发生变化而不想发送[以太币](/eth/)，以太坊上还有其它可供选择的货币：稳定币。
+而且，如果你因为以太币的价值波动过大而不想发送或流式传输[以太币](/glossary/#ether)，以太坊上还有其他可供选择的货币：[稳定币](/glossary/#stablecoin)。
 
 <Divider />
 
@@ -110,7 +110,7 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 
 Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内。 这使他们能够完美地用于收入或零售。 在政府发行的货币出现巨大不确定性的时候，拉丁美洲的许多人都曾使用稳定币作为保护储蓄的一种方式。
 
-<ButtonLink to="/stablecoins/">
+<ButtonLink href="/stablecoins/">
   关于稳定币的更多信息
 </ButtonLink>
 
@@ -123,7 +123,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 - 点对点，意味着借款人将直接从特定贷款人那里借款。
 - 基于资金池，贷款人向借款人可以借贷的资金池提供资金（流动性）。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看借款 dapp
 </ButtonLink>
 
@@ -133,7 +133,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 今天，贷款和借钱都围绕着相关个人进行。 在放贷前，银行需要了解你是否有能力偿还贷款。
 
-去中心化借贷无需任何一方表明自己的身份即可进行。 但是，借款人必须提供抵押品，如果他们没有偿还贷款，贷款人将自动获得抵押品。 有的贷款人甚至接受非同质化代币作为抵押品。 非同质化代币是指绘画等独特资产。 [关于非同质化代币的更多信息](/nft/)
+去中心化借贷无需任何一方表明自己的身份即可进行。 但是，借款人必须提供抵押品，如果他们没有偿还贷款，贷款人将自动获得抵押品。 有的贷款人甚至接受[非同质化代币](/glossary/#nft)作为抵押品。 非同质化代币是指绘画等独特资产。 [关于非同质化代币的更多信息](/nft/)
 
 这允许你在不进行征信调查或透露私人信息的情况下借钱。
 
@@ -168,7 +168,9 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 要想在传统金融世界实现上述操作，你需要大量的资金。 这些赚钱的策略仅供已经拥有财富的人士使用。 闪电贷款是一个未来的例子，在这里，拥有金钱不一定是赚钱的先决条件。
 
-[关于闪电贷的更多信息](https://aave.com/flash-loans/)
+<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+  关于闪电贷的更多信息
+</ButtonLink>
 
 <Divider />
 
@@ -180,10 +182,10 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 - 你借出 100 Dai [稳定币](/stablecoins/)，借给类似 Aave 的产品。
 - 你会收到 100 个 Aave Dai (aDai)，代表你已借出的 Dai。
-- 你的 aDai 将根据利率增加，你可以看到钱包里的余额在增长。 根据 APR，你的钱包余额在几天甚至几小时后会显示为 100.1234 这样的数字。
+- 你的 aDai 将根据利率增加，你可以看到钱包里的余额在增长。 根据[年利率](/glossary/#apr)，你的钱包余额在几天甚至几小时后会显示为 100.1234 这样的数字。
 - 你可以随时提取与 aDai 余额等额的普通 Dai。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看借款 dapp
 </ButtonLink>
 
@@ -199,7 +201,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 奖池由所有借出彩票存款产生的利息汇聚而成，类似上面的借贷案例。
 
-<ButtonLink isSecondary to="https://pooltogether.com">
+<ButtonLink isSecondary href="https://pooltogether.com">
   尝试 PoolTogether
 </ButtonLink>
 
@@ -211,7 +213,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 例如，如果你想使用无损彩票 PoolTogether（如上所述），则需要类似 Dai 或 USDC 的代币。 DEX 允许你将以太币换成这些代币，并在完成交易后再换回来。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看代币兑换
 </ButtonLink>
 
@@ -223,7 +225,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 使用中心化交易所时，你必须在交易前存入资产，并相信交易所会妥善处理这些资产。 当你存入资产时，它们会面临风险，因为中心化交易所对黑客来说是诱人目标。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看更多交易 dapp
 </ButtonLink>
 
@@ -233,9 +235,9 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 以太坊上有一些基金管理产品，它们会尝试根据你选择的策略为你的投资组合增值。 自动完成而且对每个人都开放，没有管理人员从利润中抽成。
 
-一个很好的示例是[去中心化金融指数基金](https://defipulse.com/blog/defi-pulse-index/)。 这是一支自动再平衡基金，可确保你的投资组合总是包含[市值最高的去中心化金融代币](https://www.coingecko.com/en/defi)。 你无需管理任何细节，并且可以随时从基金中提款。
+一个很好的示例是[去中心化金融指数基金](https://defipulse.com/blog/defi-pulse-index/)。 这是一支自动再平衡基金，可确保你的投资组合总是包含市值最高的去中心化金融代币。 你无需管理任何细节，并且可以随时从基金中提款。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看投资去中心化应用程序
 </ButtonLink>
 
@@ -249,7 +251,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 - 公开透明，募捐者可以证明已经筹集了多少资金。 你甚至可以在以后的工作中追踪资金的使用情况。
 - 募捐者可以设置自动退款，例如，如果有未达到特定的最后期限和最低金额，就可以自动退款。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看更多众筹去中心化应用程序
 </ButtonLink>
 
@@ -266,7 +268,9 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 这意味着获得 100 笔 1 美元捐款的项目 A 最终可能比获得 1 笔 1 万美元捐款的项目 B 获得更多资金（取决于匹配池的大小）。
 
-[关于二次方融资的更多信息](https://wtfisqf.com)
+<ButtonLink href="https://wtfisqf.com">
+  关于二次方融资的更多信息
+</ButtonLink>
 
 <Divider />
 
@@ -276,7 +280,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 就像任何软件一样，以太坊产品也可能出现漏洞。 因此，目前该领域中的许多保险产品都致力于保护用户免受资金损失。 然而，一些项目开始构建全面覆盖我们生活中可能出现的各种情况的保险方案。 Etherisc 的作物保护就是一个很好的例子，其目的是[保护肯尼亚的小农户对抗干旱和洪水侵袭](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc)。 去中心化保险可以为那些经常被传统保险拒之门外的农民提供更便宜的保险。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看保险去中心化应用程序
 </ButtonLink>
 
@@ -286,7 +290,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 拥有了这么多种服务，你需要一种方法来跟踪跟踪所有投资、贷款和交易。 有许多产品可以让你集中协调所有去中心化金融活动。 这就是去中心化金融开放架构的魅力所在。 团队可以创建界面，你不仅可以看到各个产品中的余额，也可以使用其功能。 当你探索更多的去中心化金融时，可能会发现这个很有用。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance#explore">
   查看投资组合去中心化应用程序
 </ButtonLink>
 
@@ -320,11 +324,13 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 3. 协议 — 提供功能的[智能合约](/glossary/#smart-contract)，例如，一项提供去中心化资产借贷的服务。
 4. [应用程序](/dapps/) - 我们用来管理和访问协议的产品。
 
+注意：许多去中心化金融使用 [ERC-20 标准](/glossary/#erc-20)。 去中心化金融中的应用程序使用一种称为包装以太币 (WETH) 的以太币包装器。 [了解更多关于包装以太币的信息](/wrapped-eth)。
+
 ## 构建去中心化金融 {#build-defi}
 
 去中心化金融是一场开源行动。 去中心化金融协议和应用都是开放的，你可以自行检查、分叉和创新。 由于这个分层堆栈（他们都共享相同的基础区块链和资产），协议可以混合和匹配以解锁独特的组合机会。
 
-<ButtonLink to="/developers/docs/dapps/">
+<ButtonLink href="/developers/docs/dapps/">
   关于构建去中心化应用程序的更多信息
 </ButtonLink>
 
@@ -334,7 +340,6 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
-- [DeFi Rate](https://defirate.com/)
 
 ### 去中心化金融相关文章 {#defi-articles}
 
@@ -348,5 +353,5 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 ### 社区 {#communities}
 
-- [去中心化金融 Llama Discord 服务器](https://discord.gg/buPFYXzDDd)
+- [去中心化金融 Llama Discord 服务器](https://discord.defillama.com/)
 - [去中心化金融 Pulse Discord 服务器](https://discord.gg/Gx4TCTk)

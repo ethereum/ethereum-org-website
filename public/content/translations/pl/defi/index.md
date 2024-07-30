@@ -4,7 +4,7 @@ description: Przegląd DeFi na Ethereum
 lang: pl
 template: use-cases
 emoji: ":money_with_wings:"
-image: /use-cases/defi.png
+image: /images/use-cases/defi.png
 alt: Logo ETH wykonane z klocków lego.
 sidebarDepth: 2
 summaryPoint1: Globalna, otwarta alternatywa dla obecnego systemu finansowego.
@@ -47,7 +47,7 @@ Jednym z najlepszych sposobów na dostrzeżenie potencjału DeFi jest zrozumieni
 | Rynki są zawsze otwarte.                                                                                                   | Rynki zamykają się, gdyż do ich obsługi potrzebni są ludzi, a oni potrzebują przerw.                                                        |
 | Wszystko opiera się na transparentności — każdy ma wgląd do kodu źródłowego i może sprawdzić, jak dokładnie działa system. | Instytucje finansowe utajniają historie swojej działalności: nie możesz sprawdzić, komu pożyczają, ile, kiedy, jak zarządzają aktywami itp. |
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance">
   Odkryj aplikacje DeFi
 </ButtonLink>
 
@@ -65,7 +65,7 @@ To brzmi dziwnie... „Dlaczego mam programować moje pieniądze?” W ekosystem
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Zobacz nasze sugerowane aplikacje DeFi i przetestuj je, jeśli nie znasz jeszcze ekosystemu Ethereum.</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink href="/dapps/?category=finance">
     Eksploruj aplikacje DeFi
   </ButtonLink>
 </InfoBanner>
@@ -92,7 +92,7 @@ Istnieje zdecentralizowana alternatywa dla większości usług finansowych. Ethe
 
 Jako łańcuch bloków, platforma Ethereum jest stworzona do bezpiecznego przesyłania transakcji o globalnym zasięgu. Podobnie jak Bitcoin, Ethereum ułatwia wysyłanie pieniędzy na całym świecie, podobnie jak wysyłanie wiadomości e-mail. Wystarczy podać tylko nazwę odbiorcy w systemie [ENS](/nft/#nft-domains) (np. bob.eth) lub adres konta i zatwierdzić transakcję w swoim portfelu, a środki po kilku minutach (zazwyczaj) będą zaksięgowane u odbiorcy. Do wysyłania i odbierania płatności, potrzebny jest [portfel](/wallets/).
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance">
   Zobacz d-aplikacje do płatności
 </ButtonLink>
 
@@ -110,7 +110,7 @@ Zmienność kryptowalut jest problemem dla wielu produktów finansowych i ogóln
 
 Kryptowaluty takie jak Dai lub USDC mają wartość, której wahania pozostają w granicach kilku centów. To sprawia, że są idealne do zarabiania lub handlu detalicznego. Wiele osób w Ameryce Łacińskiej wykorzystywało monety stabilne jako sposób ochrony swoich oszczędności w czasach wielkiej niepewności w walutach emitowanych przez rząd.
 
-<ButtonLink to="/stablecoins/">
+<ButtonLink href="/stablecoins/">
   Więcej o stabilnych kryptowalutach
 </ButtonLink>
 
@@ -123,7 +123,7 @@ Pożyczanie pieniędzy od zdecentralizowanych pożyczkodawców odbywa się w dw�
 - Peer-to-peer, co oznacza, że kredytobiorca będzie pożyczał bezpośrednio od konkretnego kredytodawcy.
 - Na podstawie grupy, w której kredytodawcy przekazują środki (płynność) do puli kredytobiorców, od której kredytobiorcy mogą pożyczyć.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance">
   Sprawdź d-apliakcje pożyczkowe
 </ButtonLink>
 
@@ -183,7 +183,7 @@ Możesz zacząć zarabiać od swoich kryptowalut odsetki, które są naliczane w
 - Ilość twoich aDai będzie się powiększać w zależności od stóp procentowych w produkcie, a Ty masz do nich wgląd w każdej chwili w swoim portfelu. W zależności od oprocentowania saldo Twojego portfela może wskazywać np. 100,1234 aDai już po paru dniach, a nawet godzinach!
 - W każdej chwili możesz wymienić tokeny produktu z powrotem na oryginalne Dai.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance">
   Zobacz d-aplikacje pożyczkowe
 </ButtonLink>
 
@@ -199,7 +199,7 @@ Loterie bez przegranych, takie jak np. PoolTohether, są zabawną i innowacyjną
 
 Pula nagród to suma wszystkich odsetek uzyskanych dzięki pożyczaniu biletów loteryjnych, tak samo jak w przykładzie z pożyczkami.
 
-<ButtonLink isSecondary to="https://pooltogether.com">
+<ButtonLink isSecondary href="https://pooltogether.com">
   Wypróbuj PoolTogether
 </ButtonLink>
 
@@ -211,7 +211,7 @@ Na Ethereum są tysiące tokenów. Zdecentralizowane giełdy (DEX) umożliwiają
 
 Na przykład, jeśli chcesz skorzystać z loterii bez przegranych PoolTogether (opisanej powyżej), będziesz potrzebować tokena takiego jak Dai lub USDC. Zdecentralizowane giełdy dają Ci możliwość wymiany ETH na te tokeny i zamianę z powrotem, kiedy będziesz potrzebować.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance">
   Zobacz handel tokenami
 </ButtonLink>
 
@@ -223,7 +223,7 @@ Dla inwestorów, którzy lubią mieć nieco więcej kontroli, istnieją bardziej
 
 Na scentralizowanych giełdach musisz najpierw zdeponować swoje środki, a potem na czas obrotu zaufać danej platformie. Gdy Twoje środki są zdeponowane na scentralizowanej giełdzie, stają się atrakcyjnym celem dla hakerów, a Ty ponosisz ryzyko.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance">
   Zobacz d-aplikacje pożyczkowe
 </ButtonLink>
 
@@ -235,7 +235,7 @@ Na Ethereum są dostępne produkty do zarządzania funduszami, które będą pr�
 
 Dobrym przykładem jest [fundusz DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Jest to fundusz, który automatycznie przelicza saldo, aby Twoje portfolio zawsze zawierało [najlepsze tokeny DeFi według kapitalizacji rynkowej](https://www.coingecko.com/en/defi). Nigdy nie musisz zarządzać żadnymi szczegółami i możesz wycofać się z funduszu, kiedy tylko chcesz.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance">
   Zobacz d-aplikacje do obsługi inwestycji
 </ButtonLink>
 
@@ -249,7 +249,7 @@ Ethereum jest idealną platformą do finansowania społecznościowego:
 - Zbiórki są transparentne, nie ma możliwości utajnienia zebranej kwoty. Po zakończeniu zbiórki możesz nawet śledzić sposób wydatkowania zebranych pieniędzy.
 - Podmioty dokonujące zbiórki mogą ustawić automatyczne refundacje, jeżeli na przykład w określonym terminie nie zostanie zebrana ustalona kwota.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance">
   Sprawdź d-aplikacje do finansowania społecznościowego
 </ButtonLink>
 
@@ -276,8 +276,8 @@ Zdecentralizowane ubezpieczenia mają na celu obniżenie kosztów ubezpieczenia,
 
 Produkty Ethereum, podobnie jak każde oprogramowanie, mogą zawierać błędy i są narażone na oprogramowanie wykorzystujące luki. Dlatego obecnie wiele dostępnych produktów ubezpieczeniowych koncentruje się na ochronie użytkowników przed utratą środków. Jednak pojawiają się projekty, które zaczynają obejmować swoim zasięgiem wszystko, czym może nas zaskoczyć życie. Dobrym tego przykładem jest program Crop firmy Etherisc, którego celem jest [ochrona drobnych rolników w Kenii przed suszami i powodziami](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Zdecentralizowane ubezpieczenie może zapewnić tańszą ochronę ubezpieczeniową dla rolników, którzy często nie są uwzględniani przez tradycyjnych ubezpieczycieli.
 
-<ButtonLink to="/dapps/?category=finance">
-  Zobacz d-aplikacje ubezpieczeniowe
+<ButtonLink href="/dapps/?category=finance">
+  Zobacz zdecentralizowane aplikacje ubezpieczeniowe
 </ButtonLink>
 
 <Divider />
@@ -286,7 +286,7 @@ Produkty Ethereum, podobnie jak każde oprogramowanie, mogą zawierać błędy i
 
 W wielu przypadkach będziesz potrzebować sposobu, aby śledzić wszystkie swoje inwestycje, pożyczki i transakcje. Istnieje mnóstwo produktów, które służą do koordynowania całej aktywności DeFi z jednego miejsca. Na tym polega piękno otwartej architektury DeFi. Zespoły mogą budować interfejsy, w których nie tylko widzisz swoje salda w różnych produktach, ale możesz również korzystać z ich funkcji. Może ci się to przydać, gdy będziesz poznawać kolejne części DeFi.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink href="/dapps/?category=finance">
   Zobacz portfolio d-aplikacji
 </ButtonLink>
 
@@ -324,7 +324,7 @@ Możesz myśleć o DeFi jak o systemie wielowarstwowym:
 
 DeFi to ruch open-source. Protokoły i aplikacje DeFi są dla Ciebie otwarte: możesz je przeglądać, tworzyć i wprowadzać innowacje. Dzięki warstwowej konstrukcji (wszyscy mają ten sam podstawowy łańcuch bloków i zasoby), protokoły moża mieszać i dopasowywać, aby odblokować unikalne możliwości połączeń.
 
-<ButtonLink to="/developers/docs/dapps/">
+<ButtonLink href="/developers/docs/dapps/">
   Więcej o tworzeniu d-aplikacji
 </ButtonLink>
 

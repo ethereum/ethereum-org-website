@@ -4,7 +4,7 @@ description: مروری بر نحوه‌ی آغاز سهام‌گذاری به�
 lang: fa
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: لسلی اسب آبی روی تراشه رایانه‌ای خودش.
 sidebarDepth: 2
 summaryPoints:
@@ -190,7 +190,7 @@ Staking Launchpad یک برنامه منبع‌باز است که به شما ک
 
 برای باز کردن و بازپس‌گیری کل موجودی تان باید فرایند خروج از اعتبارسنج خود را نیز تکمیل کنید.
 
-<ButtonLink to="/staking/withdrawals/">اطلاعات بیشتر درباره برداشت‌های سهامگذاری</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">اطلاعات بیشتر درباره برداشت‌های سهامگذاری</ButtonLink>
 </ExpandableCard>
 
 ## بیشتر بخوانید {#further-reading}

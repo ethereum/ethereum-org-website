@@ -4,7 +4,7 @@ description: Un aperçu de la façon de débuter avec la mise en jeu ETH mutuali
 lang: fr
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: Leslie le rhinocéros flottant dans les nuages.
 sidebarDepth: 2
 summaryPoints:
@@ -22,7 +22,7 @@ Staking as a service ("la mise en jeu en tant que service, ou SaaS”) est une c
 Le protocole Ethereum ne soutient pas nativement la délégation de mise en jeu. Ces services ont donc été construits pour répondre à cette demande. Si vous avez 32 ETH à miser, mais que vous ne vous sentez pas à l'aise avec le matériel, les services SaaS vous permettent de déléguer la partie complexe pendant que vous gagnez des récompenses de bloc natif.
 
 <CardGrid>
-  <Card title="Votre propre validateur" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
+  <Card title="Votre propre validateur" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
   <Card title="Démarrage facile" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
   <Card title="Limitez vos risques" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
@@ -78,7 +78,7 @@ Les retraits de prises ont été mis en œuvre lors de la mise à niveau de Shan
 
 Les validateurs peuvent également se retirer entièrement en tant que validateur, ce qui débloquera leur solde ETH restant pour le retrait. Les comptes qui ont fourni une adresse de retrait d’exécution et terminé le processus de sortie recevront tout leur solde à l’adresse de retrait fournie lors du prochain balayage du validateur.
 
-<ButtonLink to="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Que se passe-t-il si je suis banni ?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

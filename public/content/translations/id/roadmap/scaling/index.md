@@ -2,7 +2,7 @@
 title: Penskalaan Ethereum
 description: Melakukan rollup transaksi batch secara bersamaan di luar rantai, sehingga mengurangi biaya bagi pengguna. Namun, cara rollup saat ini menggunakan data saat ini terlalu mahal, sehingga membatasi seberapa murah transaksi yang bisa dilakukan. Proto-Danksharding memperbaiki hal ini.
 lang: id
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "Peta Perjalanan Ethereum"
 template: roadmap
 ---
@@ -34,14 +34,16 @@ Tahap kedua dari perluasan data blob cukup rumit karena membutuhkan metode baru 
 
 Langkah kedua ini dikenal sebagai ["Danksharding"](/roadmap/danksharding/). Kemungkinan masih beberapa tahun lagi untuk dapat diimplementasikan secara penuh. Danksharding bergantung pada pengembangan lain seperti [pemisahan pembangunan blok dan proposal blok](/roadmap/pbs) dan desain jaringan baru yang memungkinkan jaringan secara efisien mengonfirmasi bahwa data tersedia dengan mengambil sampel beberapa kilobita secara acak dalam satu waktu, yang dikenal dengan nama [pengambilan sampel data (DAS)](/developers/docs/data-availability).
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding/">Lebih lanjut tentang Danksharding</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding/">Lebih lanjut tentang Danksharding</ButtonLink>
 
 ## Desentralisasi rollup {#decentralizing-rollups}
 
 [Rollup](/layer-2) sudah menskalakan Ethereum. Ekosistem [yang kaya akan proyek rollup](https://l2beat.com/scaling/tvl) memungkinkan pengguna untuk bertransaksi dengan cepat dan murah, dengan berbagai jaminan keamanan. Namun, rollup telah di-bootstrap menggunakan sequencer terpusat (komputer yang melakukan semua pemrosesan dan agregasi transaksi sebelum mengirimkannya ke Ethereum). Hal ini rentan terhadap penyensoran, karena operator sequencer dapat dikenai sanksi, disuap, atau dikompromikan. Pada saat yang sama, [rollup bervariasi](https://l2beat.com) dalam cara mereka memvalidasi data yang masuk. Cara terbaik adalah "pemberi bukti" mengirimkan bukti kecurangan atau bukti validitas, tetapi belum semua rollup ada di sana. Bahkan rollup yang menggunakan bukti validitas/penipuan menggunakan kumpulan kecil pemberi bukti yang diketahui. Oleh karena itu, langkah penting berikutnya dalam penskalaan Ethereum adalah mendistribusikan tanggung jawab untuk menjalankan sequencer dan pembuktian kepada lebih banyak orang.
 
-<ButtonLink variant="outline-color" to="/developers/docs/scaling/">Lebih lanjut tentang rollup</ButtonLink>
+<ButtonLink variant="outline-color" href="/developers/docs/scaling/">Lebih lanjut tentang rollup</ButtonLink>
 
 ## Kemajuan saat ini {#current-progress}
 
 Proto-Danksharding kemungkinan besar akan menjadi salah satu item peta perjalanan awal yang akan diimplementasikan. Langkah-langkah komputasi terdesentralisasi yang diperlukan untuk menyiapkannya sudah berjalan dan beberapa klien telah mengimplementasikan prototipe untuk menangani data blob. Danksharding penuh kemungkinan masih akan berlangsung beberapa tahun lagi, karena hal ini bergantung pada beberapa item peta perjalanan lainnya yang harus diselesaikan terlebih dahulu. Desentralisasi infrastruktur rollup kemungkinan besar akan menjadi proses yang bertahap - ada banyak rollup berbeda yang membangun sistem yang sedikit berbeda dan akan sepenuhnya terdesentralisasi dengan kecepatan yang berbeda.
+
+<QuizWidget quizKey="scaling" />

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
-import { MdExpandMore } from "react-icons/md"
+import { MdChevronRight } from "react-icons/md"
 import { Box, Center, HStack, Icon } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
@@ -18,15 +18,15 @@ import {
 
 // Traverse all links to find page id
 const getPageTitleId = (
-  to: string,
+  href: string,
   links: Array<DeveloperDocsLink>
 ): TranslationKey => {
   for (const link of links) {
-    if (link.to === to) {
+    if (link.href === href) {
       return link.id
     }
     if (link.items) {
-      let pageTitle = getPageTitleId(to, link.items)
+      const pageTitle = getPageTitleId(href, link.items)
       if (pageTitle) {
         return pageTitle
       }
@@ -95,12 +95,12 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
     return (
       <Box>
         <LinkContainer>
-          {item.to && (
-            <SideNavLink to={item.to} isPartiallyActive={false}>
+          {item.href && (
+            <SideNavLink href={item.href} isPartiallyActive={false}>
               {t(item.id)}
             </SideNavLink>
           )}
-          {!item.to && (
+          {!item.href && (
             <Box w="full" cursor="pointer" onClick={() => setIsOpen(!isOpen)}>
               {t(item.id)}
             </Box>
@@ -108,11 +108,12 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
           <Box
             as={motion.div}
             cursor="pointer"
+            display="flex"
             onClick={() => setIsOpen(!isOpen)}
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <Icon as={MdExpandMore} boxSize={6} color="secondary" />
+            <Icon as={MdChevronRight} boxSize={6} color="secondary" />
           </Box>
         </LinkContainer>
         <Box
@@ -136,7 +137,7 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
   return (
     <Box onClick={toggle}>
       <LinkContainer>
-        <SideNavLink to={item.to} isPartiallyActive={false}>
+        <SideNavLink href={item.href} isPartiallyActive={false}>
           {t(item.id)}
         </SideNavLink>
       </LinkContainer>
@@ -166,7 +167,7 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
       bgColor="ednBackground"
       height="auto"
       w="full"
-      display={{ base: "block", lg: "none" }}
+      hideFrom="lg"
     >
       <Center
         as={motion.div}
@@ -185,10 +186,11 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
         <Box
           as={motion.div}
           cursor="pointer"
+          display="flex"
           variants={dropdownIconContainerVariant}
           animate={isOpen ? "open" : "closed"}
         >
-          <Icon as={MdExpandMore} boxSize={6} color="secondary" />
+          <Icon as={MdChevronRight} boxSize={6} color="secondary" />
         </Box>
       </Center>
       <AnimatePresence>

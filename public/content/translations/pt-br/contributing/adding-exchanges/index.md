@@ -20,7 +20,7 @@ Devido a esse contexto, precisaremos de algumas informações específicas quand
 
 ## Do que precisamos {#what-we-need}
 
-- As restrições geográficas aplicáveis ao câmbio
+- As restrições geográficas aplicáveis ao câmbio. As restrições geográficas associadas ao câmbio devem ser detalhadas em uma página ou seção dedicada do site da corretora de câmbio.
 - As moedas que os usuários podem usar para comprar ETH
 - Prova de que a agência de câmbio é uma empresa comercial legítima
 - Qualquer informação adicional que você tenha: podem ser informações sobre a empresa, como anos de operação, apoio financeiro, etc.
@@ -35,6 +35,6 @@ E para que o ethereum.org possa confiar na legitimidade e segurança dos serviç
 
 Se você deseja adicionar uma agência de câmbio no ethereum.org, crie um tíquete no GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
   Criar tíquete
 </ButtonLink>

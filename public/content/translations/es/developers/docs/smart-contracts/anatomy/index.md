@@ -1,6 +1,6 @@
 ---
 title: Anatomía de los contratos inteligentes
-description: "Una mirada en profundidad a la anatomía de un contacto inteligente: Sus funciones, datos y variables."
+description: 'Una mirada en profundidad a la anatomía de un contacto inteligente: Sus funciones, datos y variables.'
 lang: es
 ---
 
@@ -76,7 +76,7 @@ De una forma simplista, las funciones pueden obtener información o establecer i
 Existen dos tipos de llamadas de funciones:
 
 - `Internas`: Estas no crean una llamada a la EVM.
-  - Sólo se puede acceder a las funciones internas y a las variables de estado internamente (es decir, desde el contrato actual o los contratos que derivan de él)
+  - Solo se puede acceder a las funciones internas y a las variables de estado internamente (es decir, desde el contrato actual o los contratos que derivan de él)
 - `Externas`: Estas crean una llamada a la EVM.
   - Las funciones externas forman parte de la interfaz del contrato, lo que significa que se pueden llamar desde otros contratos y a través de transacciones. Una función externa `f` no puede llamarse internamente (es decir, `f()` no funciona, pero `this.f()` funciona).
 
@@ -131,7 +131,7 @@ Qué se considera modificar un estado:
 7. Usar llamadas de bajo nivel.
 8. Utilizando un ensamblaje en línea que contiene ciertos códigos de operador.
 
-### Constructor (funciones) {#constructor-functions}
+### Funciones de constructor {#constructor-functions}
 
 Las funciones `constructor` solo se ejecutan una vez cuando el contrato es implementado por primera vez. Al igual que ocurre con `constructor` en muchos otros lenguajes de programación basados en clases, estas funciones a menudo inicializan variables de estado a sus valores especificados.
 
@@ -169,7 +169,7 @@ Esto permite que los contratos envíen ETH a otras cuentas.
 
 ## Funciones de escritura {#writing-functions}
 
-Tu función necesita:
+Su función necesita:
 
 - parámetro de la variable y tipo de variable (si acepta parámetros)
 - declaraciónde variable interna/externa
@@ -201,15 +201,15 @@ contract ExampleDapp {
 
 Un contrato completo podría verse así. Aquí la función `constructor` proporciona un valor inicial para la variable `dapp_name`.
 
-## Eventos y logs {#events-and-logs}
+## Eventos y registros {#events-and-logs}
 
-Los eventos le permiten comunicarse con su contrato inteligente desde su front-end u otras aplicaciones de suscripción. Cuando se mina una transacción, los contratos inteligentes pueden emitir eventos y escribir registros en la cadena de bloques que el front-end puede procesar.
+Los eventos le permiten comunicarse con su contrato inteligente desde su front-end u otras aplicaciones de suscripción. Cuando se mina una transacción, los contratos inteligentes pueden emitir eventos y escribir registros en la cadena de bloques que el front-end pueda procesar.
 
-## Ejemplos agregados {#annotated-examples}
+## Ejemplos anotados {#annotated-examples}
 
-Estos son algunos ejemplos escritos en Solidity. Si quiere experimentar con el código, puede interactuar ellos en [Remix](http://remix.ethereum.org).
+Estos son algunos ejemplos escritos en Solidity. Si quiere experimentar con el código, puede interactuar con ellos en [Remix](http://remix.ethereum.org).
 
-### Hola mundo {#hello-world}
+### Hello World {#hello-world}
 
 ```solidity
 // Especifica la versión de Solidity, utilizando la versión semántica.
@@ -282,19 +282,19 @@ contract Token {
         // `requiere` es una estructura de control utilizada para hacer cumplir ciertas condiciones.
         // Si una instrucción `require` evalúa a `falso`, se activa una excepción,
         // la cual revierte todos los cambios realizados en el estado durante la llamada actual.
-        // Más información: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // Sólo el propietario del contrato puede llamar a esta función
+        // Only the contract owner can call this function
         require(msg.sender == owner, "You are not the owner.");
 
-        // Impone una cantidad máxima de tokens
+        // Enforces a maximum amount of tokens
         require(amount < 1e60, "Maximum issuance exceeded");
 
-        // Aumenta el saldo del `receiver` en `amount`.
+        // Increases the balance of `receiver` by `amount`
         balances[receiver] += amount;
     }
 
-    // Envía una cantidad de tokens existentes de cualquier llamante a una dirección.
+    // Sends an amount of existing tokens from any caller to an address.
     function transfer(address receiver, uint amount) public {
         // El remitente debe tener suficientes tokens para enviar
         require(amount <= balances[msg.sender], "Insufficient balance.");
@@ -328,7 +328,7 @@ import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 // Más información: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
     // Utiliza la librería SafeMath de OpenZeppelin para realizar operaciones aritméticas de forma segura.
-    // Más información:
+    // Más información: 
 https://docs.openzeppelin.com/contracts/3. /api/math#SafeMath
     using SafeMath for uint256;
 
@@ -627,10 +627,10 @@ https://docs.openzeppelin.com/contracts/3. /api/math#SafeMath
         uint256 size;
         // Currently there is no better way to check if there is a contract in an address
         // than to check the size of the code at that address.
-        // En https://ethereum.stackexchange.com/a/14016/36603
-        // podrás consultar más detalles sobre cómo funciona esto.
-        // TODO Verifica esto de nuevo antes de el lanzamiento de Serenity, porque todas las direcciones serán
-        // contratos entonces.
+        // See https://ethereum.stackexchange.com/a/14016/36603
+        // for more details about how this works.
+        // TODO Check this again before the Serenity release, because all addresses will be
+        // contracts then.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)
@@ -640,7 +640,7 @@ https://docs.openzeppelin.com/contracts/3. /api/math#SafeMath
 }
 ```
 
-## Leer más {#further-reading}
+## Más información {#further-reading}
 
 Revise la documentación de Solidity y Vyper para ver una descripción más completa de los contratos inteligentes:
 

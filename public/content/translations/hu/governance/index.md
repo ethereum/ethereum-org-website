@@ -19,7 +19,7 @@ Az irányítás az a rendszer, amely lehetővé teszi a döntéshozást. Egy tip
 
 Az Ethereum protokollt nem birtokolja vagy kontrollálja senki, ugyanakkor a változásokról dönteni kell, hogy a hálózat hosszú életét és prosperitását a leginkább biztosítsák. A tulajdonlás hiánya miatt a hagyományos szervezeti irányítás nem működő megoldás.
 
-## Ethereum-felügyelet {#ethereum-governance}
+## Az Ethereum irányítása {#ethereum-governance}
 
 Az Ethereum irányítása (governance) az a folyamat, amely által a protokoll megváltoztatható. Fontos kiemelni, hogy ez nem kapcsolódik ahhoz, hogy az emberek és az alkalmazások hogyan használják a protokollt, mert az Ethereum egy engedélymentes hálózat. A világon bárki bárhonnan részt vehet a láncon zajló tevékenységekben. Nincsenek olyan szabályok, hogy ki csinálhat vagy nem csinálhat alkalmazást vagy indíthat tranzakciókat. Ugyanakkor van egy folyamat, mellyel változásokat lehet kezdeményezni a protokollban, amelyre a decentralizált alkalmazások épülnek. Mivel sok ember függ az Ethereum stabilitásától, ezért a kulcsváltozások koordinációs küszöbe nagyon magas, beleértve a közösségi és technikai folyamatokét is, hogy az Ethereum módosítása biztonságos és a közösség által széles körben támogatott legyen.
 
@@ -33,7 +33,7 @@ A másik megközelítés, a láncon kívüli irányítás az, amikor a protokoll
 
 _Miközben a protokollszintű Ethereum-irányítás láncon kívül zajlik, addig számos alkalmazási területe van a láncon belüli irányításnak, mint például a decentralizált autonóm szervezetek (DAO) működése._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Bővebben a DAO-król
 </ButtonLink>
 
@@ -59,7 +59,7 @@ _Megjegyzés: bárki lehet több csoport tagja is (pl. a protokollfejlesztő leh
 
 Az egyik fontos Ethereum-irányítási eszköz az **Ethereum fejlesztési javaslatok (EIP)** kezelése. Az EIP olyan szabvány, amely egy lehetséges új funkciót vagy folyamatot specifikál az Ethereum számára. Az Ethereum-közösség bármelyik tagja létrehozhat EIP-t. Ha Önt érdekli az EIP írása, értékelése vagy irányítása, akkor:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Bővebben az EIP-kről
 </ButtonLink>
 
@@ -121,7 +121,7 @@ Az elágazások akkor jönnek létre, amikor komoly technikai változások tört
 
 A DAO-elágazás volt a válasz egy [2016-os DAO-támadásra](https://www.coindesk.com/understanding-dao-hack-journalists), amikor egy sebezhető [DAO](/glossary/#dao) szerződésből 3,6 millió ETH-t ürítettek le a támadás során. Az elágazás a pénzeszközöket a hibás szerződésből egy újba tette át, hogy a támadás során károsultak kaphassanak belőle.
 
-Ennek az akciónak a kezelését megszavazták az Ethereum közösségen belül. Bármely ETH tulajdonos szavazhatott egy tranzakción keresztül [egy szavazási platformon](http://v1.carbonvote.com/). Az elágazás mellett több mint a szavazók 85%-a voksolt.
+Ennek az akciónak a kezelését megszavazták az Ethereum közösségen belül. Bármely ETH tulajdonos szavazhatott egy tranzakción keresztül [egy szavazási platformon](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Az elágazás mellett több mint a szavazók 85%-a voksolt.
 
 Fontos megjegyezni, hogy miközben a protokoll tényleg elágazott, hogy visszafordítsa a támadást, a szavazás súlya megkérdőjelezhető:
 
@@ -155,13 +155,13 @@ Miközben a specifikáció és a fejlesztés teljesen nyitott volt, a hivatalos 
 
 Amikor a Beacon-lánc egyesült az Ethereum végrehajtási réteggel 2022. szeptember 15-én, a Merge teljesült a [Paris hálózati frissítés](/history/#paris) részeként. Az [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) javaslat státusza véglegesre változott befejezve az átállást a proof-of-stake mechanizmusra.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   A beolvadásról bővebben
 </ButtonLink>
 
 <Divider />
 
-## Hogyan lehet ebben részt venni? {#get-involved}
+## Hogyan lehet részt venni? {#get-involved}
 
 - [Javasoljon egy EIP-t](/eips/#participate)
 - [Vitassa meg a jelenlegi javaslatokat](https://ethereum-magicians.org/)
@@ -179,5 +179,5 @@ Az Ethereumban az irányítás nincs szigorúan definiálva. A közösség kül�
 - [Hogyan működik az Ethereum irányítása?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Hogyan működik az Ethereum irányítása](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Kik az az Ethereum protokollfejlesztői?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_
-- [Irányítás – 2. rész: a plutokrácia, vagyis a gazdagok általi irányítás még mindig nem az igazi](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
-- [Túllépni az érmealapú szavazáson](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_
+- [Irányítás, 2. rész: A plutokrácia még mindig rossz](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
+- [Túl az érmealapú szavazásra épülő irányításon](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_

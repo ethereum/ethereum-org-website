@@ -78,7 +78,7 @@ _Nous ne considérons pas comme relevant de la couche 2 les autres solutions d'�
 
 **Liens vers des dApps dans l'écosystème de la Couche 2**
 
-- Nous voulons être en mesure de fournir des informations sur ce que les utilisateurs peuvent s'attendre à pouvoir faire sur cette Couche 2. (ex. : https://portal.arbitrum.one/, https://www.optimism.io/apps/all)
+- Nous voulons être en mesure de fournir des informations sur ce que les utilisateurs peuvent s'attendre à pouvoir faire sur cette Couche 2. (ex. : https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
 **Listes de contrat de jetons**
 
@@ -92,6 +92,6 @@ _Nous ne considérons pas comme relevant de la couche 2 les autres solutions d'�
 
 Si vous souhaitez ajouter une Couche 2 sur ethereum.org, créez un ticket sur GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Créez un ticket
 </ButtonLink>

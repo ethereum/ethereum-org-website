@@ -2,7 +2,6 @@
 title: Ethereum-Governance
 description: Eine Einführung in die Entscheidungsfindung bei Ethereum
 lang: de
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Governance bei Ethereum – eine Einführung {#introduction}
@@ -33,7 +32,7 @@ Der gegenteilige Ansatz ist die Off-Chain-Governance. Dabei werden Entscheidunge
 
 _Governance auf Protokollebene erfolgt bei Ethereum off-chain, doch bei Anwendungsfällen, die auf Ethereum aufbauen, wie zum Beispiel DAOs, greift das System der on-chain Governance._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Mehr zu DAOs
 </ButtonLink>
 
@@ -59,7 +58,7 @@ _Hinweis: Jede Person kann Teil von mehreren dieser Gruppen sein (z. B. ein Prot
 
 Ein wichtiger Prozess, der für die Ethereum-Governance zum Tragen kommt, ist die Anregung von **Ethereum-Verbesserungsvorschlägen (EIPs)**. EIPs sind Standards, über die potenzielle neue Funktionen oder Prozesse für Ethereum spezifiziert werden. Alle Personen in der Ethereum-Community haben die Möglichkeit, einen EIP zu erstellen. Wenn Sie daran interessiert sind, eine EIP zu verfassen oder an Peer-Reviews und/oder Governance teilzunehmen, lesen Sie bitte weiter:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Mehr zu EIPs
 </ButtonLink>
 
@@ -155,7 +154,7 @@ Während die Entwicklung der Spezifikation und Implementierungen immer vollstän
 
 Am 15. September 2022 wurde die Fusion der Beacon Chain mit der Ethereum-Ausführungsschicht im Rahmen des [Paris-Netzwerk-Updates](/history/#paris) abgeschlossen. Der Vorschlag [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) wurde von "Last Call" auf "Final" geändert, womit der Übergang zum Proof-of-Stake-Verfahren vollständig abgeschlossen wurde.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Mehr zum Zusammenschluss
 </ButtonLink>
 
@@ -175,9 +174,9 @@ Am 15. September 2022 wurde die Fusion der Beacon Chain mit der Ethereum-Ausfüh
 
 Governance in Ethereum ist nicht starr definiert. Verschiedene Teilnehmer der Community haben unterschiedliche Ansichten dazu. Hier sind einige davon:
 
-- [Erläuterungen zur Blockchain-Governance](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [Notes on Blockchain Governance (Anmerkungen zur Blockchain-Verwaltung)](https://vitalik.eth.limo/general/2017/12/17/voting.html) – _Vitalik Buterin_
 - [Wie funktioniert die Ethereum-Governance?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Wie Ethereum Governance funktioniert](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Was ist ein Ethereum Core Entwickler?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [Governance, Teil 2: Plutokratie ist immer noch schlecht](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [Governance per Münzabstimmung überwinden](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [Governance, Part 2: Plutocracy Is Still Bad (Verwaltung, Teil 2: Plutokratie ist immer noch schlecht](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
+- [Moving beyond coin voting governance (Über die Verwaltung der Tokenabstimmung hinaus gehen)](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_

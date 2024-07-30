@@ -10,7 +10,7 @@ import {
   useTheme,
 } from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp, CommonHeroProps } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 import { ICard, IGetInvolvedCard } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
@@ -19,6 +19,7 @@ import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
+import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
@@ -26,33 +27,38 @@ import PageMetadata from "@/components/PageMetadata"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 // Static assets
-import developersEthBlockImg from "@/public/developers-eth-blocks.png"
-import dogeComputerImg from "@/public/doge-computer.png"
-import ethImg from "@/public/eth.png"
-import financeTransparentImg from "@/public/finance_transparent.png"
-import futureTransparentImg from "@/public/future_transparent.png"
-import hackathonTransparentImg from "@/public/hackathon_transparent.png"
+import developersEthBlockImg from "@/public/images/developers-eth-blocks.png"
+import dogeComputerImg from "@/public/images/doge-computer.png"
+import ethImg from "@/public/images/eth.png"
+import financeTransparentImg from "@/public/images/finance_transparent.png"
+import futureTransparentImg from "@/public/images/future_transparent.png"
+import hackathonTransparentImg from "@/public/images/hackathon_transparent.png"
 // -- Hero
-import communityHeroImg from "@/public/heroes/community-hero.png"
+import communityHeroImg from "@/public/images/heroes/community-hero.png"
 // -- Cards
-import upgradesCoreImg from "@/public/upgrades/core.png"
-import whatIsEthereumImg from "@/public/what-is-ethereum.png"
+import upgradesCoreImg from "@/public/images/upgrades/core.png"
+import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
 
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/community")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
@@ -171,28 +177,28 @@ const CommunityPage = () => {
       title: t("page-community-card-1-title"),
       description: t("page-community-card-1-description"),
       alt: t("page-index-get-started-wallet-image-alt"),
-      to: "/community/online/",
+      href: "/community/online/",
     },
     {
       image: ethImg,
       title: t("page-community-card-2-title"),
       description: t("page-community-card-2-description"),
       alt: t("page-index-get-started-eth-image-alt"),
-      to: "/community/events/",
+      href: "/community/events/",
     },
     {
       image: dogeComputerImg,
       title: t("page-community-card-3-title"),
       description: t("page-community-card-3-description"),
       alt: t("page-index-get-started-dapps-image-alt"),
-      to: "/community/get-involved/",
+      href: "/community/get-involved/",
     },
     {
       image: futureTransparentImg,
       title: t("page-community-card-4-title"),
       description: t("page-community-card-4-description"),
       alt: t("page-index-get-started-dapps-image-alt"),
-      to: "/community/grants/",
+      href: "/community/grants/",
     },
   ]
 
@@ -214,7 +220,7 @@ const CommunityPage = () => {
     },
   ]
 
-  const heroContent: CommonHeroProps = {
+  const heroContent: HubHeroProps = {
     title: t("page-community-hero-title"),
     header: t("page-community-hero-header"),
     description: t("page-community-hero-subtitle"),
@@ -308,7 +314,7 @@ const CommunityPage = () => {
                 key={idx}
                 title={card.title}
                 description={card.description}
-                to={card.to}
+                href={card.href}
                 image={card.image}
                 imageWidth={320}
                 alt={card.alt}
@@ -335,10 +341,14 @@ const CommunityPage = () => {
             <H2>{t("page-community-open-source")}</H2>
             <Subtitle>{t("page-community-open-source-description")}</Subtitle>
             <ButtonRow>
-              <ButtonLink to="/community/get-involved/#ethereum-jobs/">
+              <ButtonLink href="/community/get-involved/#ethereum-jobs/">
                 {t("page-community-find-a-job")}
               </ButtonLink>
-              <StyledButtonLink variant="outline" to="/community/grants/">
+              <StyledButtonLink
+                variant="outline"
+                href="/community/grants/"
+                isSecondary
+              >
                 {t("page-community-explore-grants")}
               </StyledButtonLink>
             </ButtonRow>
@@ -376,12 +386,13 @@ const CommunityPage = () => {
               <H2>{t("page-community-contribute")}</H2>
               <Subtitle>{t("page-community-contribute-description")}</Subtitle>
               <ButtonRow>
-                <ButtonLink to="/contributing/">
+                <ButtonLink href="/contributing/">
                   {t("page-community-contribute-button")}
                 </ButtonLink>
                 <StyledButtonLink
                   variant="outline"
-                  to="https://github.com/ethereum/ethereum-org-website/"
+                  href="https://github.com/ethereum/ethereum-org-website/"
+                  isSecondary
                 >
                   {t("page-community-contribute-secondary-button")}
                 </StyledButtonLink>
@@ -415,7 +426,7 @@ const CommunityPage = () => {
             <H2>{t("page-community-support")}</H2>
             <Subtitle>{t("page-community-support-description")}</Subtitle>
             <Box>
-              <ButtonLink to="/community/support/">
+              <ButtonLink href="/community/support/">
                 {t("page-community-support-button")}
               </ButtonLink>
             </Box>
@@ -457,7 +468,7 @@ const CommunityPage = () => {
             descriptionKey="page-community:page-community-get-eth-description"
           >
             <Box>
-              <ButtonLink to="/get-eth/">
+              <ButtonLink href="/get-eth/">
                 {t("page-community-get-eth")}
               </ButtonLink>
             </Box>
@@ -472,7 +483,7 @@ const CommunityPage = () => {
             descriptionKey="page-community:page-community-explore-dapps-description"
           >
             <Box>
-              <ButtonLink to="/dapps/">
+              <ButtonLink href="/dapps/">
                 {t("page-community-explore-dapps")}
               </ButtonLink>
             </Box>

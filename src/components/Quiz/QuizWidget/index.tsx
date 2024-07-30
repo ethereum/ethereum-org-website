@@ -16,7 +16,6 @@ import Translation from "@/components/Translation"
 import { useLocalQuizData } from "../useLocalQuizData"
 
 import { AnswerIcon } from "./AnswerIcon"
-import { QuizWidgetProvider } from "./context"
 import { QuizButtonGroup } from "./QuizButtonGroup"
 import { QuizConfetti } from "./QuizConfetti"
 import { QuizContent } from "./QuizContent"
@@ -103,7 +102,7 @@ const QuizWidget = ({
 
   const getMainContainerBg = (): StackProps["bg"] => {
     if (!answerStatus) {
-      return "neutral"
+      return isStandaloneQuiz ? "background.highlight" : "background.base"
     }
 
     if (answerStatus === "correct") {
@@ -114,11 +113,11 @@ const QuizWidget = ({
   }
 
   return (
-    <VStack spacing="12" width="full" maxW="600px">
+    <VStack data-testid="quiz-widget" spacing="12" width="full" maxW="600px">
       <Stack
         w="full"
         gap="8"
-        px={{ base: "8", md: "12", lg: "16" }}
+        px={isStandaloneQuiz ? "4" : "0"}
         // Reduce padding when showing Spinner
         pt={!quizData ? "10" : { base: "5", md: "12" }}
         pb={!quizData ? "5" : { base: "4", md: "8" }}
@@ -139,39 +138,57 @@ const QuizWidget = ({
         >
           <AnswerIcon answerStatus={answerStatus} />
         </Center>
-        <Stack spacing="8" justifyContent="space-between">
-          {!!quizData ? (
-            <QuizWidgetProvider
-              value={{
-                ...quizData,
-                answerStatus,
-                currentQuestionIndex,
-                userQuizProgress,
-                showResults,
-                currentQuestionAnswerChoice,
-                quizPageProps: quizPageProps.current,
-                numberOfCorrectAnswers,
-                quizScore,
-                ratioCorrect,
-                isPassingScore,
-                initialize,
-                setUserQuizProgress,
-                setShowAnswer,
-                setCurrentQuestionAnswerChoice,
-              }}
-            >
-              <QuizContent>
+        <Stack
+          spacing="8"
+          justifyContent="space-between"
+          mt={{ base: 8, sm: 0 }}
+        >
+          {quizData ? (
+            <>
+              <QuizContent answerStatus={answerStatus} title={quizData.title}>
                 {!showResults ? (
                   <>
-                    <QuizProgressBar />
-                    <QuizRadioGroup />
+                    <QuizProgressBar
+                      answerStatus={answerStatus}
+                      currentQuestionIndex={currentQuestionIndex}
+                      questions={quizData.questions}
+                      userQuizProgress={userQuizProgress}
+                    />
+                    <QuizRadioGroup
+                      answerStatus={answerStatus}
+                      currentQuestionIndex={currentQuestionIndex}
+                      questions={quizData.questions}
+                      setCurrentQuestionAnswerChoice={
+                        setCurrentQuestionAnswerChoice
+                      }
+                    />
                   </>
                 ) : (
-                  <QuizSummary />
+                  <QuizSummary
+                    questionsLength={quizData.questions.length}
+                    isPassingScore={isPassingScore}
+                    numberOfCorrectAnswers={numberOfCorrectAnswers}
+                    ratioCorrect={ratioCorrect}
+                  />
                 )}
               </QuizContent>
-              <QuizButtonGroup />
-            </QuizWidgetProvider>
+              <QuizButtonGroup
+                answerStatus={answerStatus}
+                currentQuestionAnswerChoice={currentQuestionAnswerChoice}
+                currentQuestionIndex={currentQuestionIndex}
+                handleReset={initialize}
+                numberOfCorrectAnswers={numberOfCorrectAnswers}
+                questions={quizData.questions}
+                quizPageProps={quizPageProps.current}
+                quizScore={quizScore}
+                setCurrentQuestionAnswerChoice={setCurrentQuestionAnswerChoice}
+                setShowAnswer={setShowAnswer}
+                showResults={showResults}
+                title={quizData.title}
+                userQuizProgress={userQuizProgress}
+                setUserQuizProgress={setUserQuizProgress}
+              />
+            </>
           ) : (
             <Center>
               <Spinner />

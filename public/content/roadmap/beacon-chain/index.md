@@ -3,7 +3,7 @@ title: The Beacon Chain
 description: Learn about the Beacon Chain - the upgrade that introduced proof-of-stake Ethereum.
 lang: en
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
 alt: 
 summaryPoint1: The Beacon Chain introduced proof-of-stake to the Ethereum ecosystem.
 summaryPoint2: It was merged with the original Ethereum proof-of-work chain in September 2022.
@@ -30,7 +30,7 @@ Read more on our [node architecture page](/developers/docs/nodes-and-clients/nod
 
 The Beacon Chain introduced [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) to Ethereum. This keeps Ethereum secure and earns validators more ETH in the process. In practice, staking involves staking ETH in order to activate validator software. As a staker, you run the software that creates and validates new blocks in the chain.
 
-Staking serves a similar purpose that [mining](/developers/docs/mining/) used to, but is different in many ways. Mining required large up-front expenditures in the form of powerful hardware and energy consumption, resulting in economies of scale, and promoting centralization. Mining also did not come with any requirement to lock up assets as collateral, limiting the protocol's ability to punish bad actors after an attack.
+Staking serves a similar purpose that [mining](/developers/docs/consensus-mechanisms/pow/mining/) used to, but is different in many ways. Mining required large up-front expenditures in the form of powerful hardware and energy consumption, resulting in economies of scale, and promoting centralization. Mining also did not come with any requirement to lock up assets as collateral, limiting the protocol's ability to punish bad actors after an attack.
 
 The transition to proof-of-stake made Ethereum significantly more secure and decentralized by comparison to proof-of-work. The more people that participate in the network, the more decentralized and safe from attacks it becomes.
 
@@ -58,7 +58,7 @@ The Ethereum upgrades are all somewhat interrelated. So let’s recap how the Be
 
 At first, The Beacon Chain existed separately from Ethereum Mainnet, but they were merged in 2022.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   The Merge
 </ButtonLink>
 
@@ -66,7 +66,7 @@ At first, The Beacon Chain existed separately from Ethereum Mainnet, but they we
 
 Sharding can only safely enter the Ethereum ecosystem with a proof-of-stake consensus mechanism in place. The Beacon Chain introduced staking, which 'merged' with Mainnet, paving the way for sharding to help further scale Ethereum.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Shard chains
 </ButtonLink>
 

@@ -75,8 +75,8 @@ Nota che le immagini per le schede Rock 5B e Odroid M1 sono disponibili alla [pa
 La scheda MicroSD che sarà usata per il Raspberry Pi dovrebbe innanzitutto essere inserita in un computer desktop o portatile, così da eseguirne la copia. Poi, i seguenti comandi del terminale eseguiranno la copia dell'immagine scaricata sulla scheda SD:
 
 ```shell
-# verifica il nome della scheda MicroSD
-sudo fdisk -I
+# check the MicroSD card name
+sudo fdisk -l
 
 >> sdxxx
 ```
@@ -123,7 +123,7 @@ sudo journalctl -u lighthouse-beacon
 
 Si noti che il client di consenso si sincronizzerà in pochi minuti perché utilizza la sincronizzazione dei checkpoint. Il client di esecuzione richiederà più tempo, potenzialmente diverse ore, e si avvierà quando il client di consenso avrà già terminato la sincronizzazione (questo perché il client di esecuzione ha bisogno di un obiettivo per la sincronizzazione fornito dal client di consenso).
 
-Con i servizi Geth e Lighthouse in esecuzione e sincronizzati, il tuo Raspberry Pi è ora un nodo Ethereum! È più comune interagire con la rete Ethereum utilizzando la console Javascript di Geth, che può essere collegata al client Geth sulla porta 8545. È anche possibile inviare comandi formattati come oggetti JSON utilizzando uno strumento di richiesta come Curl. Maggiori informazioni nella [documentazione di Geth](https://geth.ethereum.org).
+Con i servizi Geth e Lighthouse in esecuzione e sincronizzati, il tuo Raspberry Pi è ora un nodo Ethereum! È più comune interagire con la rete Ethereum utilizzando la console Javascript di Geth, che può essere collegata al client Geth sulla porta 8545. È anche possibile inviare comandi formattati come oggetti JSON utilizzando uno strumento di richiesta come Curl. Maggiori informazioni nella [documentazione di Geth](https://geth.ethereum.org/).
 
 Geth è preconfigurato per segnalare le metriche a un pannello Grafana che può essere visualizzato nel browser. Gli utenti più avanzati potrebbero voler utilizzare questa funzione per monitorare lo stato di salute del loro nodo accedendo a `ipaddress:3000` con nome `utente: admin` e `passwd: ethereum`.
 
@@ -146,13 +146,13 @@ Una volta che il file dei dati di deposito è disponibile sul computer che esegu
 Tornando al Raspberry Pi, può essere avviato un validatore. Ciò richiede l'importazione delle chiavi del validatore, l'impostazione dell'indirizzo per incassare le ricompense e successivamente l'avvio del processo pre-configurato del validatore. Gli esempi seguenti sono per Lighthouse, le istruzioni per gli altri client di consenso sono disponibili nella [documentazione di Ethereum su Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/):
 
 ```shell
-# importa le chiavi del validatore
-lighthouse-kl account validator import --lighthouse account validator import --directory=/home/ethereum/validator_keys
+# import the validator keys
+lighthouse account validator import --directory=/home/ethereum/validator_keys
 
-# imposta l'indirizzo di ricompensa
+# set the reward address
 sudo sed -i 's/<ETH_ADDRESS>' /etc/ethereum/lighthouse-validator.conf
 
-# avvia il validatore
+# start the validator
 sudo systemctl start lighthouse-validator
 ```
 

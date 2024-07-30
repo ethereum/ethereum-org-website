@@ -5,7 +5,7 @@ lang: tr
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Hologram ile gösterilen bir Eth logosu.
 summaryPoint1: Benzersiz bir şeyi Ethereum tabanlı bir varlık olarak göstermenin yolu.
 summaryPoint2: NFT'ler içerik oluşturuculara her zamankinden daha fazla güç veriyor.
@@ -86,7 +86,7 @@ Ethereum'un güvenliği, hisse ispatından gelir. Sistem, kötü niyetli eylemle
 
 NFT'lerle ilgili güvenlik sorunları çoğunlukla kimlik avı dolandırıcılığı, akıllı sözleşme güvenlik açıkları veya kullanıcı hataları (istenmeden özel anahtarların açığa çıkarılması gibi) ile ilgilidir ve bu da iyi cüzdan güvenliğini NFT sahipleri için kritik hale getirir.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Güvenlik hakkında daha fazla bilgi
 </ButtonLink>
 

@@ -3,7 +3,7 @@ title: Oddajniška veriga
 description: Več informacij o oddajniški verigi – nadgradnji, s katero je bil uveden Ethereum z dokazom o deležu.
 lang: sl
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
 alt: 
 summaryPoint1: Oddajniška veriga je v Ethereumovo okolje vpeljala dokaz o deležu.
 summaryPoint2: Z izvirno Ethereumovo verigo, ki je uporabljala dokaz o delu, je bila spojena septembra 2022.
@@ -32,7 +32,7 @@ Oddajniška veriga je bila temeljni del [varnega, okolju prijaznega in prilagodl
 
 Oddajniška veriga je v Ethereum vpeljala mehanizem [dokaza o deležu](/developers/docs/consensus-mechanisms/pos/). Ta ščiti Ethereum in omogoča validatorjem, da v postopku zaslužijo več ETH. V praksi to pomeni, da je treba za aktiviranje programske opreme za validacijo zastaviti ETH. Kot zastavljavec poganjate programsko opremo, ki ustvarja in validira nove bloke v verigi.
 
-Zastavljanje deluje podobno, kot je prej [rudarjenje](/developers/docs/mining/), vendar je drugačno. Rudarjenje je zahtevalo veliko predhodno investicijo v obliki zmogljive strojne opreme in porabe energije. Posledici sta bili ekonomija obsega in spodbujanje centralizacije. Rudarjenje prav tako ni vključevalo zahteve po zamrznitvi sredstev kot jamstva, kar je omejevalo možnosti prokotola, da kaznuje storilce po napadu.
+Zastavljanje deluje podobno, kot je prej [rudarjenje](/developers/docs/consensus-mechanisms/pow/mining/), vendar je drugačno. Rudarjenje je zahtevalo veliko predhodno investicijo v obliki zmogljive strojne opreme in porabe energije. Posledici sta bili ekonomija obsega in spodbujanje centralizacije. Rudarjenje prav tako ni vključevalo zahteve po zamrznitvi sredstev kot jamstva, kar je omejevalo možnosti prokotola, da kaznuje storilce po napadu.
 
 S prehodom na mehanizem dokaza o deležu je Ethereum postal občutno varnejši in bolj decentraliziran v primerjavi z mehanizmom dokaza o delu. Več ljudi kot sodeluje v omrežju, bolj decentralizirano in varno pred napadi postane.
 
@@ -58,7 +58,7 @@ Vse nadgradnje Ethereuma so med seboj delno povezane. Povzemimo torej, kako odda
 
 Oddajniška veriga je najprej delovala neodvisno od Ethereumovega glavnega omrežja, vendar sta se leta 2022 spojila.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Spojitev
 </ButtonLink>
 
@@ -66,7 +66,7 @@ Oddajniška veriga je najprej delovala neodvisno od Ethereumovega glavnega omre�
 
 Razdrobitev je mogoče v Ethereumovo okolje varno uvesti le, ko je vpeljan mehanizem za doseganje soglasja z dokazom o deležu. Oddajniška veriga je vpeljala zastavljanje, ki se je "spojilo" z glavnim omrežem in tlakovalo pot razdrobitvi, ki bo pomagala pri širitvi Ethereumovega omrežja.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Razdrobljene verige
 </ButtonLink>
 

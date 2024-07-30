@@ -5,7 +5,7 @@ lang: es
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Imagen de una DAO votando una propuesta.
 summaryPoint1: Comunidades con propiedad compartida por los miembros sin liderazgo centralizado.
 summaryPoint2: Una forma segura de colaborar con desconocidos en Internet.
@@ -50,7 +50,7 @@ La columna vertebral de una DAO son los contratos inteligentes, estos definen la
 
 Esto se consigue gracias a que los contratos inteligentes son a prueba de manipulación una vez que conectan con Ethereum. No puede editar el código (las reglas de la DAO) sin que la gente se dé cuenta, ya que todo es público.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Más sobre contratos inteligentes
 </DocLink>
 
@@ -119,7 +119,7 @@ _Normalmente se utiliza para organizaciones más estrechas, centradas en el ser 
 
 [MolochDAO](http://molochdao.com/) – MolochDAO se centra en la financiación de proyectos Ethereum. Requieren una propuesta de membresía para que el grupo pueda evaluar si tiene la experiencia y el capital necesarios para emitir juicios informados sobre posibles subvenciones. No se puede simplemente comprar acceso a la DAO en el mercado abierto.
 
-### Adhesión de miembros basada en la reputación {#reputation-based-membership}
+### Inscripción basada en la reputación {#reputation-based-membership}
 
 La reputación representa una prueba de participación y otorga poder de voto en la DAO. A diferencia de la adhesión de miembros basada en tókenes o en la participación, las DAO basadas en la reputación no transfieren la propiedad a colaboradores. La reputación no puede comprarse, transferirse ni delegarse; los miembros de la DAO deben ganarse la reputación mediante la participación. La votación en cadena se realiza sin permisos y los potenciales miembros pueden presentar propuestas libremente para unirse a la DAO y solicitar reputación y tókenes como recompensa a cambio de su contribución.
 
@@ -131,7 +131,7 @@ _Suele usarse para el desarrollo descentralizado y la gobernanza de protocolos y
 
 ## Crear/unirse a una DAO {#join-start-a-dao}
 
-### Unirse a una DAO {#join-a-dao}
+### Únase a una DAO {#join-a-dao}
 
 - [Comunidad Ethereum y DAO](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [Lista de DAOHaus de las DAO](https://app.daohaus.club/explore)

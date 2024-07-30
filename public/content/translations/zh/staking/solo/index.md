@@ -4,7 +4,7 @@ description: 简要介绍如何单独质押你的以太币
 lang: zh
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: 莱斯利犀牛在自己的电脑芯片上。
 sidebarDepth: 2
 summaryPoints:
@@ -190,7 +190,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 要解锁并收回全部余额，还必须完成验证者退出流程。
 
-<ButtonLink to="/staking/withdrawals/">更多关于质押提款的信息</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">更多关于质押提款的信息</ButtonLink>
 </ExpandableCard>
 
 ## 延伸阅读 {#further-reading}
@@ -202,3 +202,5 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 - [如何选购以太坊验证者的硬件](https://www.youtube.com/watch?v=C2wwu1IlhDc)- _EthStaker 2022_
 - [加入以太坊 2.0 测试网的详细步骤](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [以太坊 2 防止罚没小技巧](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
+
+<QuizWidget quizKey="solo-staking" />

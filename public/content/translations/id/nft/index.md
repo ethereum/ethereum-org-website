@@ -5,7 +5,7 @@ lang: id
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Logo Eth yang ditampilkan melalui hologram.
 summaryPoint1: Cara untuk mewakili apa pun yang unik sebagai aset berbasis Ethereum.
 summaryPoint2: NFT memberi lebih banyak pemberdayaan terhadap para pembuat konten daripada sebelumnya.
@@ -78,7 +78,7 @@ Keamanan Ethereum berasal dari bukti taruhan. Sistem dirancang untuk memberikan 
 
 Masalah keamanan terkait NFT sering kali terkait dengan penipuan phishing, kerentanan kontrak pintar, atau kesalahan pengguna (seperti secara tidak sengaja mengekspos kunci pribadi), sehingga keamanan dompet yang baik menjadi sangat penting bagi pemilik NFT.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Lebih lanjut tentang keamanan
 </ButtonLink>
 

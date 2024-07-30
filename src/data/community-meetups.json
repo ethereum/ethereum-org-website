@@ -1,37 +1,49 @@
 [
   {
+    "title": "DC Onchain",
+    "emoji": ":united_states:",
+    "location": "Arlington, Virginia",
+    "link": "https://dc-onchain.com/"
+  },
+  {
+    "title": "Web3 Family",
+    "emoji": ":spain:",
+    "location": "Barcelona",
+    "link": "https://www.meetup.com/web3family/"
+  },
+  {
     "title": "CryptoCanal",
-    "emoji": ":nl:",
+    "emoji": ":netherlands:",
     "location": "Amsterdam",
     "link": "https://www.cryptocanal.org/agenda"
   },
   {
     "title": "CryptoCanal",
-    "emoji": ":ch:",
+    "emoji": ":switzerland:",
     "location": "Zurich",
     "link": "https://www.cryptocanal.org/agenda"
   },
   {
     "title": "Web3.NE",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "Omaha",
     "link": "https://www.meetup.com/web3-ne/"
   },
   {
     "title": "ETH Belgrade Community",
-    "emoji": "🇷🇸",
+    "emoji": ":serbia:",
     "location": "Belgrade",
     "link": "https://ethbelgrade.rs/community"
   },
   {
     "title": "ETHTbilisi",
-    "emoji": ":ge:",
+    "emoji": ":georgia:",
     "location": "Georgia",
     "link": "https://lu.ma/ETHTbilisi"
   },
   {
     "title": "ETH Nanjing",
-    "emoji": ":cn:",
+    "emoji": ":china:",
     "location": "Nanjing",
     "link": "https://lu.ma/ETHNanJing"
   },
@@ -43,21 +55,51 @@
   },
   {
     "title": "Ethereum Ecuador",
-    "emoji": ":ec:",
+    "emoji": ":ecuador:",
     "location": "Ecuador",
     "link": "https://www.eventbrite.com/o/ethereum-ecuador-64512134823"
   },
   {
     "title": "Kyiv Ethereum",
-    "emoji": "🇺🇦",
+    "emoji": ":ukraine:",
     "location": "Ukraine",
     "link": "https://kyivethereum.com/"
   },
   {
     "title": "Ethereum Bogota",
-    "emoji": ":co:",
+    "emoji": ":colombia:",
     "location": "Colombia",
     "link": "https://www.meetup.com/ethereum-bogota"
+  },
+    {
+    "title": "Ethereum Eje Cafetero",
+    "emoji": ":colombia:",
+    "location": "Colombia",
+    "link": "https://www.meetup.com/ethereum-eje-cafetero"
+  },
+    {
+    "title": "Ethereum Medellin",
+    "emoji": ":colombia:",
+    "location": "Colombia",
+    "link": "https://www.meetup.com/ethereum-medellin"
+  },
+    {
+    "title": "Ethereum Caribe",
+    "emoji": ":colombia:",
+    "location": "Colombia",
+    "link": "https://www.meetup.com/ethereum-caribe"
+  },
+    {
+    "title": "Ethereum Cali",
+    "emoji": ":colombia:",
+    "location": "Colombia",
+    "link": "https://www.meetup.com/ethereumcali"
+  },
+    {
+    "title": "Ethereum Arauca",
+    "emoji": ":colombia:",
+    "location": "Colombia",
+    "link": "https://www.meetup.com/ethereum-arauca"
   },
   {
     "title": "Bokky's Ethereum Workshop",
@@ -67,7 +109,7 @@
   },
   {
     "title": "Web3Mi",
-    "emoji": ":it:",
+    "emoji": ":italy:",
     "location": "Milan",
     "link": "https://www.eventbrite.it/o/web3mi-52766466683"
   },
@@ -85,7 +127,7 @@
   },
   {
     "title": "Web3 London",
-    "emoji": ":uk:",
+    "emoji": ":united_kingdom:",
     "location": "London",
     "link": "https://www.meetup.com/web3london/"
   },
@@ -133,19 +175,19 @@
   },
   {
     "title": "Ethereum-France",
-    "emoji": ":fr:",
+    "emoji": ":france:",
     "location": "France",
     "link": "https://www.meetup.com/fr-FR/ethereum-france/"
   },
   {
     "title": "Ethereum Paris",
-    "emoji": ":fr:",
+    "emoji": ":france:",
     "location": "Paris",
     "link": "https://www.meetup.com/Ethereum-Paris/"
   },
   {
     "title": "Berlin Ethereum Meetup",
-    "emoji": ":de:",
+    "emoji": ":germany:",
     "location": "Berlin",
     "link": "https://www.meetup.com/Berlin-Ethereum-Meetup/"
   },
@@ -163,25 +205,25 @@
   },
   {
     "title": "Italian Ethereum Meetup",
-    "emoji": ":it:",
+    "emoji": ":italy:",
     "location": "Milan",
     "link": "https://www.meetup.com/it-IT/Italian-Ethereum-Meetup/"
   },
   {
     "title": "Ethereum Italia Hub (Telegram Group)",
-    "emoji": ":it:",
+    "emoji": ":italy:",
     "location": "Remote",
     "link": "https://t.me/ethereumitalia"
   },
   {
     "title": "Ethereum Venezia Meetup",
-    "emoji": ":it:",
+    "emoji": ":italy:",
     "location": "Venice",
     "link": "https://discord.gg/VMzVjCHN8k"
   },
   {
     "title": "Ethereum Japan",
-    "emoji": ":jp:",
+    "emoji": ":japan:",
     "location": "Multiple locations",
     "link": "https://ethereumjapan.connpass.com/"
   },
@@ -217,31 +259,31 @@
   },
   {
     "title": "Jeju Blockchain Meetup",
-    "emoji": ":kr:",
+    "emoji": ":south_korea:",
     "location": "Jeju",
     "link": "https://www.meetup.com/Jeju-Blockchain-Meetup"
   },
   {
     "title": "Seoul Ethereum Meetup",
-    "emoji": ":kr:",
+    "emoji": ":south_korea:",
     "location": "Seoul",
     "link": "https://www.meetup.com/Seoul-Ethereum-Meetup/"
   },
   {
     "title": "BCN Ethereum Dev",
-    "emoji": ":es:",
+    "emoji": ":spain:",
     "location": "Barcelona",
     "link": "https://www.meetup.com/ethereumbcn"
   },
   {
     "title": "Ethereum Spain",
-    "emoji": ":es:",
+    "emoji": ":spain:",
     "location": "Madrid",
     "link": "https://www.meetup.com/Ethereum-Spain/"
   },
   {
     "title": "Ethereum Madrid",
-    "emoji": ":es:",
+    "emoji": ":spain:",
     "location": "Madrid",
     "link": "https://www.meetup.com/ethereum-madrid/"
   },
@@ -253,103 +295,103 @@
   },
   {
     "title": "Ethereum London",
-    "emoji": ":gb:",
+    "emoji": ":united_kingdom:",
     "location": "London",
     "link": "https://www.meetup.com/ethereum/"
   },
   {
     "title": "Brighton Blockchain",
-    "emoji": ":gb:",
+    "emoji": ":united_kingdom:",
     "location": "Brighton and Hove",
     "link": "https://www.meetup.com/brighton-blockchain/"
   },
   {
     "title": "Austin Ethereum Meetup",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "Austin",
     "link": "https://www.meetup.com/Austin-Ethereum-Meetup/"
   },
   {
     "title": "Ethereum Columbus",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "Columbus",
     "link": "https://www.meetup.com/eth-columbus/"
   },
   {
     "title": "Ethereum Denver",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "Denver",
     "link": "https://www.meetup.com/Ethereum-Denver/"
   },
   {
     "title": "Ethereum Los Angeles",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "Los Angeles",
     "link": "https://www.meetup.com/Ethereum-Los-Angeles/"
   },
   {
     "title": "Ethereum Community NYC",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "New York City",
     "link": "https://www.meetup.com/ConsenSys-Ethereum-Meetup/"
   },
   {
     "title": "NYC Ethereum",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "New York City",
     "link": "https://www.meetup.com/NYC_Ethereum/"
   },
   {
     "title": "Blockchain Wall Street Tech",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "New York City",
     "link": "https://www.meetup.com/blockchain-wallstreet-tech/"
   },
   {
     "title": "EthPDX",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "Portland",
     "link": "https://www.meetup.com/ethpdx/"
   },
   {
     "title": "Blockchain and Brews (San Diego)",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "San Diego",
     "link": "https://www.meetup.com/Blockchain-and-Brews/"
   },
   {
     "title": "ETH SD",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "San Diego",
     "link": "https://withkoji.com/@ethsd"
   },
   {
     "title": "SF Ethereum Developers",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "SF/ Bay Area",
     "link": "https://www.meetup.com/SF-Ethereum-Developers/"
   },
   {
     "title": "Silicon Valley Ethereum Meetup",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "SF / Bay Area",
     "link": "https://www.meetup.com/SF-Ethereum-Developers/"
   },
   {
     "title": "SF Ethereum",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "SF / Bay Area",
     "link": "https://www.meetup.com/SF_Ethereum/"
   },
   {
     "title": "Chainlink San Francisco",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "SF / Bay Area",
     "link": "https://www.meetup.com/Chainlink-San-Francisco/"
   },
   {
     "title": "Seattle",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "Seattle",
     "link": "https://www.meetup.com/Seattle-Ethereum-Meetup/"
   },
@@ -367,7 +409,7 @@
   },
   {
     "title": "Chicago Ethereum Meetup",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "Chicago",
     "link": "https://www.meetup.com/Chicago-Ethereum-Meetup/"
   },
@@ -379,25 +421,25 @@
   },
   {
     "title": "Web3Dubai",
-    "emoji": ":flag_united_arab_emirates:",
+    "emoji": ":united_arab_emirates:",
     "location": "Dubai",
     "link": "https://www.meetup.com/web3dubai/"
   },
   {
     "title": "DeFi Dubai",
-    "emoji": ":flag_united_arab_emirates:",
+    "emoji": ":united_arab_emirates:",
     "location": "Dubai",
     "link": "https://www.meetup.com/defi-dubai/"
   },
   {
     "title": "ETHAnglia",
-    "emoji": ":gb:",
+    "emoji": ":united_kingdom:",
     "location": "Norwich",
     "link": "https://www.ethanglia.org/"
   },
   {
     "title": "CryptoSD",
-    "emoji": ":us:",
+    "emoji": ":united_states:",
     "location": "San Diego",
     "link": "http://cryptosandiego.org"
   },
@@ -409,13 +451,13 @@
   },
   {
     "title": "Ethereum Costa Rica",
-    "emoji": ":cr:",
+    "emoji": ":costa_rica:",
     "location": "Costa Rica",
     "link": "https://twitter.com/EthereumCR"
   },
   {
     "title": "Hash House Medellín",
-    "emoji": ":co:",
+    "emoji": ":colombia:",
     "location": "Colombia",
     "link": "https://www.meetup.com/hash-house-medellin/"
   },
@@ -436,5 +478,23 @@
     "emoji": ":belgium:",
     "location": "Brussels",
     "link": "https://dao.brussels/"
-  }
+  },
+  {
+    "title": "Ethereum Edmonton Meetup",
+    "emoji": ":canada:",
+    "location": "Edmonton",
+    "link": "https://www.meetup.com/ethereum-edmonton-meetup/"
+  },
+  {
+    "title": "BeerFi Prague - Web3 on-chain dev Meetup",
+    "emoji": ":czech_republic:",
+    "location": "Prague",
+    "link": "https://www.meetup.com/web3-on-chain-dev-meetup-group/"
+  },
+  {
+    "title": "NapulETH Meetup",
+    "emoji": ":italy:",
+    "location": "Naples",
+    "link": "https://www.eventbrite.it/e/863744451907/"
+  }    
 ]

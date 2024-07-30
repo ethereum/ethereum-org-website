@@ -20,7 +20,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-import { BasePageProps } from "@/lib/types"
+import { BasePageProps, Lang } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import Callout from "@/components/Callout"
@@ -43,14 +43,15 @@ import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 // Static assets
-import dogeComputerImg from "@/public/doge-computer.png"
-import ethImg from "@/public/eth.png"
-import infrastructureTransparentImg from "@/public/infrastructure_transparent.png"
-import walletImg from "@/public/wallet.png"
-import whatIsEthereumImg from "@/public/what-is-ethereum.png"
+import dogeComputerImg from "@/public/images/doge-computer.png"
+import ethImg from "@/public/images/eth.png"
+import infrastructureTransparentImg from "@/public/images/infrastructure_transparent.png"
+import walletImg from "@/public/images/wallet.png"
+import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
 
@@ -100,15 +101,19 @@ const H3 = (props: HeadingProps) => (
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/gas")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
@@ -119,7 +124,9 @@ const GasPage = () => {
   const benefits = [
     {
       emoji: "🪪",
-      description: t("page-gas-benefits-1-description"),
+      description: (
+        <Translation id="page-gas:page-gas-benefits-1-description" />
+      ),
     },
     {
       emoji: ":money_with_wings:",
@@ -189,7 +196,9 @@ const GasPage = () => {
               {t("page-gas-what-are-gas-fees-header")}
             </H2>
             <Text>{t("page-gas-what-are-gas-fees-text-1")}</Text>
-            <Text>{t("page-gas-what-are-gas-fees-text-2")}</Text>
+            <Text>
+              <Translation id="page-gas:page-gas-what-are-gas-fees-text-2" />
+            </Text>
           </Box>
 
           <Box
@@ -234,7 +243,7 @@ const GasPage = () => {
                   "page-gas-how-do-i-pay-less-gas-card-3-description"
                 )}
               >
-                <ButtonLink w="fit-content" to="/layer-2/">
+                <ButtonLink w="fit-content" href="/layer-2/">
                   {t("page-gas-try-layer-2")}
                 </ButtonLink>
               </StyledCard>
@@ -256,11 +265,13 @@ const GasPage = () => {
           >
             <H3 mt={0}>{t("page-gas-what-causes-high-gas-fees-header")}</H3>
             <Text>{t("page-gas-what-causes-high-gas-fees-text-1")}</Text>
-            <Text>{t("page-gas-what-causes-high-gas-fees-text-2")}</Text>
+            <Text>
+              <Translation id="page-gas:page-gas-what-causes-high-gas-fees-text-2" />
+            </Text>
             <Text>{t("page-gas-what-causes-high-gas-fees-text-3")}</Text>
             <Text>
               {t("page-gas-want-to-dive-deeper")}{" "}
-              <InlineLink to="/developers/docs/gas/">
+              <InlineLink href="/developers/docs/gas/">
                 {t("page-gas-check-out-the-developer-docs")}
               </InlineLink>
             </Text>
@@ -289,8 +300,8 @@ const GasPage = () => {
               <H2 mt={0}>{t("page-gas-why-do-we-need-gas-header")}</H2>
               <Text>{t("page-gas-why-do-we-need-gas-text")}</Text>
             </Box>
-            {benefits.map((benefit) => (
-              <Box key={benefit.description} minWidth="full" my={2}>
+            {benefits.map((benefit, index) => (
+              <Box key={index} minWidth="full" my={2}>
                 <HorizontalCard
                   key={benefit.emoji}
                   emoji={benefit.emoji}
@@ -416,7 +427,7 @@ const GasPage = () => {
             )}
           >
             <Box>
-              <ButtonLink to="/layer-2/">
+              <ButtonLink href="/layer-2/">
                 {t("page-gas-use-layer-2")}
               </ButtonLink>
             </Box>
@@ -433,7 +444,7 @@ const GasPage = () => {
             )}
           >
             <Box>
-              <ButtonLink to="/dapps/">
+              <ButtonLink href="/dapps/">
                 {t("page-community:page-community-explore-dapps")}
               </ButtonLink>
             </Box>

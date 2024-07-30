@@ -3,7 +3,7 @@ title: نقشه‌ راه اتریوم
 description: مسیری به سمت مقیاس‌پذیری، امنیت و پایداری بیشتر اتریوم.
 lang: fa
 template: roadmap
-image: /heroes/roadmap-hub-hero.jpg
+image: /images/heroes/roadmap-hub-hero.jpg
 alt: "نقشه‌ راه اتریوم"
 summaryPoints:
 buttons:
@@ -12,7 +12,7 @@ buttons:
     toId: چه تغییراتی ایجاد خواهد شد
   - 
     label: ارتقاهای پیشین
-    to: /history/
+    href: /history/
     variant: طرح کلی
 ---
 
@@ -26,28 +26,28 @@ buttons:
 
 <CardGrid>
   <RoadmapActionCard
-    to="/roadmap/scaling"
+    href="/roadmap/scaling"
     title="تراکنش‌های ارزان‌تر"
     image="scaling"
     description="Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems."
     buttonText="More on reducing fees"
   />
   <RoadmapActionCard
-    to="/roadmap/security"
+    href="/roadmap/security"
     title="امنیت بالاتر"
     image="security"
     description="Ethereum is already very secure but it can be made even stronger, ready to withstand all kinds of attack far into the future."
     buttonText="More on security"
   />
   <RoadmapActionCard
-    to="/roadmap/user-experience"
-    title="Better user experience"
+    href="/roadmap/user-experience"
+    title="بهتر تجربه کاربری"
     image="userExperience"
     description="More support for smart contract wallets and light-weight nodes will make using Ethereum simpler and safer."
     buttonText="More on user experience"
   />
   <RoadmapActionCard
-    to="/roadmap/future-proofing"
+    href="/roadmap/future-proofing"
     title="اثبات آتی"
     image="futureProofing"
     description="Ethereum researchers and developers are solving tomorrow's problems today, readying the network for future generations."
@@ -61,7 +61,7 @@ buttons:
 
 <RoadmapImageContent title="چگونگی تعریف نقشه راه">
 
-عمدۀ این نقشۀ راه حاصل سال‌ها تلاش پژوهشگران و توسعه‌دهندگان است، زیرا این پروتکل بسیار تخصصی است. با این حال، هر فرد باانگیزه‌ای می‌تواند در این مسیر سهیم باشد. Ideas usually start off as discussions on a forum such as [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://ethereum-magicians.org/) or the Eth R&D discord server. این بحث‌ها ممکن است در پی کشف آسیب‌های جدید شبکه شکل بگیرد یا ممکن است پیشنهاداتی از طرف سازمان‌های فعال در لایۀ برنامه (مثل dappها یا صرافی‌ها) یا از اصطحلاکات شناخته‌شده‌ای باشد که کاربران نهایی متحمل می‌شوند (مثل هزینه‌ها یا سرعت تراکنش‌ها). زمانی که این ایده‌ها تکامل‌ یافتند، می‌توانند در قالب [پیشنهاد بهبود اتریوم] مطرح شوند (https://eips.ethereum.org/). تمام این فرآیند به شکل عمومی صورت می‌گیرد تا هر فردی از این جامعه بتواند هر زمانی در آن نقش داشته باشد.
+عمدۀ این نقشۀ راه حاصل سال‌ها تلاش پژوهشگران و توسعه‌دهندگان است، زیرا این پروتکل بسیار تخصصی است. با این حال، هر فرد باانگیزه‌ای می‌تواند در این مسیر سهیم باشد. خاستگاه اصلی ایده‌ها معمولا بحث‌هایی است که در انجمن‌های مختلف شکل‌ می‌گیرد، ازجمله [ethresear.ch](https://ethresear.ch/)، [جادوگران اتریوم] (https://www.figma.com/exit?url=https%3A%2F%2Fethereum-magicians.org%2F) یا سرور دیسکورد تحقیق و توسعۀ اتریوم. این بحث‌ها ممکن است در پی کشف آسیب‌های جدید شبکه شکل بگیرد یا ممکن است پیشنهاداتی از طرف سازمان‌های فعال در لایۀ برنامه (مثل dappها یا صرافی‌ها) یا از اصطحلاکات شناخته‌شده‌ای باشد که کاربران نهایی متحمل می‌شوند (مثل هزینه‌ها یا سرعت تراکنش‌ها). زمانی که این ایده‌ها تکامل‌ یافتند، می‌توانند در قالب [پیشنهاد بهبود اتریوم] مطرح شوند (https://eips.ethereum.org/). تمام این فرآیند به شکل عمومی صورت می‌گیرد تا هر فردی از این جامعه بتواند هر زمانی در آن نقش داشته باشد.
 
 [مطالب بیشتر درباره حاکمیت اتریوم](/governance/)
 

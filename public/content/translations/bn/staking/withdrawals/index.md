@@ -3,7 +3,7 @@ title: স্টেকিং উইথড্রয়াল
 description: স্টেকিং পুশ উত্তোলন কি, সেগুলি কীভাবে কাজ করে এবং সেগুলোর জন্য পুরষ্কার পেতে স্টেকদের কী করতে হবে তার সংক্ষিপ্ত বিবরণীর পেজ
 lang: bn
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Leslie the rhino তার স্টেকিং পুরষ্কার সহ
 sidebarDepth: 2
 summaryPoints:
@@ -196,7 +196,7 @@ eventName="read more">
 
 ভ্যালিডেটর অপারেটরদের <a href="https://launchpad.ethereum.org/withdrawals/">স্টেকিং লঞ্চপ্যাড উইথড্রয়ালস</a> পৃষ্ঠাতে যাওয়ার পরামর্শ দেওয়া হচ্ছে যেখানে আপনি কীভাবে আপনার ভ্যালিডেটরদের উত্তোলনের জন্য প্রস্তুত করবেন সে সম্পর্কে আরও বিশদ তথ্য পাবেন। প্রস্তুত, ইভেন্টের সময় এবং উত্তোলন কীভাবে কাজ করে সে সম্পর্কে আরও বিশদ বিবরণ।
 
-প্রথমে একটি টেস্টনেটে আপনার সেটআপ চেষ্টা করে দেখতে, শুরু করতে <a href="https://goerli.launchpad.ethereum.org">Goerli টেস্টনেট স্টেকিং লঞ্চপ্যাডে</a> যান।
+প্রথমে একটি টেস্টনেটে আপনার সেটআপ চেষ্টা করে দেখতে, শুরু করতে <a href="https://holesky.launchpad.ethereum.org">Holesky টেস্টনেট স্টেকিং লঞ্চপ্যাডে</a> যান।
 
 </ExpandableCard>
 

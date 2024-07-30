@@ -2,27 +2,25 @@ import { useTranslation } from "next-i18next"
 
 import { CardListItem } from "../CardList"
 
-import aaveImg from "@/public/dapps/aave.png"
+import aaveImg from "@/public/images/dapps/aave.png"
 // -- borrow
-import compoundImg from "@/public/dapps/compound.png"
+import compoundImg from "@/public/images/dapps/compound.png"
 // -- earn
-import gitcoinImg from "@/public/dapps/gitcoin.png"
-import loopringImg from "@/public/dapps/loopring.png"
-import matchaImg from "@/public/dapps/matcha.png"
-import oasisImg from "@/public/dapps/stabledai.png"
+import gitcoinImg from "@/public/images/dapps/gitcoin.png"
+import loopringImg from "@/public/images/dapps/loopring.png"
+import matchaImg from "@/public/images/dapps/matcha.png"
+import summerfiImg from "@/public/images/dapps/summerfi.png"
 // Static assets
 // -- dapps
-import uniImg from "@/public/dapps/uni.png"
-import oneInchImg from "@/public/exchanges/1inch.png"
-import binanceImg from "@/public/exchanges/binance.png"
-import bittrexImg from "@/public/exchanges/bittrex.png"
+import uniImg from "@/public/images/dapps/uni.png"
+import oneInchImg from "@/public/images/exchanges/1inch.png"
+import binanceImg from "@/public/images/exchanges/binance.png"
 // -- exchanges
-import coinbaseImg from "@/public/exchanges/coinbase.png"
-import coinmamaImg from "@/public/exchanges/coinmama.png"
-import geminiImg from "@/public/exchanges/gemini.png"
-import krakenImg from "@/public/exchanges/kraken.png"
-import ethImg from "@/public/favicon.png"
-import makerImg from "@/public/stablecoins/maker.png"
+import coinbaseImg from "@/public/images/exchanges/coinbase.png"
+import coinmamaImg from "@/public/images/exchanges/coinmama.png"
+import geminiImg from "@/public/images/exchanges/gemini.png"
+import krakenImg from "@/public/images/exchanges/kraken.png"
+import ethImg from "@/public/images/favicon.png"
 
 export const useStablecoinAccordion = () => {
   const { t } = useTranslation("page-stablecoins")
@@ -37,7 +35,7 @@ export const useStablecoinAccordion = () => {
     {
       title: "Loopring",
       image: loopringImg,
-      link: "https://loopring.org",
+      link: "https://loopring.io/#/pro",
       alt: t("loopring-logo"),
     },
     {
@@ -68,10 +66,10 @@ export const useStablecoinAccordion = () => {
       alt: t("aave-logo"),
     },
     {
-      title: "Oasis",
-      image: oasisImg,
-      link: "https://oasis.app",
-      alt: t("oasis-logo"),
+      title: "Summer.fi",
+      image: summerfiImg,
+      link: "https://summer.fi/",
+      alt: t("summerfi-logo"),
     },
   ]
 
@@ -82,13 +80,6 @@ export const useStablecoinAccordion = () => {
       link: "https://gitcoin.co/explorer",
       description: t("page-stablecoins-accordion-earn-project-1-description"),
       alt: t("gitcoin-logo"),
-    },
-    {
-      title: t("page-stablecoins-accordion-earn-project-community"),
-      image: makerImg,
-      link: "https://makerdao.world/en/resources/",
-      description: t("page-stablecoins-accordion-earn-project-2-description"),
-      alt: t("makerdao-logo"),
     },
     {
       title: t("page-stablecoins-accordion-earn-project-bug-bounties"),
@@ -123,12 +114,6 @@ export const useStablecoinAccordion = () => {
       image: coinmamaImg,
       link: "https://coinmama.com",
       alt: t("coinmama-logo"),
-    },
-    {
-      title: "Bittrex",
-      image: bittrexImg,
-      link: "https://global.bittrex.com",
-      alt: t("bittrex-logo"),
     },
     {
       title: "Binance",

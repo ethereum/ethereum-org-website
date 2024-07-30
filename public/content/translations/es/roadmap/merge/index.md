@@ -3,7 +3,7 @@ title: La Fusión
 description: Conozca más sobre La Fusión y sobre cuándo la red principal de Ethereum implementará la prueba de participación.
 lang: es
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: La red principal de Ethereum usa prueba de participación, pero esto no fue siempre el caso.
 summaryPoint2: La actualización del mecanismo original de prueba de trabajo a prueba de participación se denominó «La fusión».
@@ -11,7 +11,7 @@ summaryPoint3: La Fusión se refiere a la fusión original de la red principal d
 summaryPoint4: La Fusión reduce el consumo de energía de Ethereum en un ~99.95%.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   La Fusión se ejecutó el 15 de septiembre de 2022. Esto completó la transición de Ethereum al consenso de prueba de participación, dejando de lado oficialmente la prueba de trabajo y reduciendo el consumo de energía en un ~99,95%.
 </UpgradeStatus>
 
@@ -202,7 +202,7 @@ La Fusión representa la adopción formal de la cadena de baliza como la nueva c
 
 En su lugar, los bloques serán propuestos desde un nodo validado que tenga ETH apostados a cambio del derecho de participar en el consenso. Estas actualizaciones sientan las bases para futuras mejoras de escalabilidad, incluida la fragmentación.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   La cadena de baliza
 </ButtonLink>
 
@@ -218,7 +218,7 @@ Originalmente, el plan era trabajar en la fragmentación antes de La Fusión par
 
 Los planes de fragmentación están evolucionando rápidamente, pero dado el auge y el éxito de las tecnologías de capa 2 para escalar la ejecución de transacciones, los planes de fragmentación han pasado a buscar la forma más óptima de distribuir la carga de almacenar los datos comprimidos de las llamadas procedentes de las acumulaciones, permitiendo un crecimiento exponencial de la capacidad de la red. Esto no sería posible sin pasar primero a la prueba de participación.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Fragmentación
 </ButtonLink>
 

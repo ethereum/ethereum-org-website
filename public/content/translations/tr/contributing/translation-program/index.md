@@ -22,7 +22,7 @@ Ethereum.org Çeviri Programı açıktır ve herkes katkı verebilir!
 
 _Çeviriler konusunda iş birliği yapmak, sorular sormak, geribildirim ve fikir paylaşmak veya bir tercüme grubuna katılmak için [ethereum.org Discord](/discord/)'una katılın._
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Çeviriye başlayın
 </ButtonLink>
 
@@ -37,7 +37,7 @@ Ethereum.org Çeviri Programının [misyon ve vizyonu](/contributing/translation
 ### Şimdiye kadarki ilerleme durumumuz {#our-progress}
 
 - [**5.100 +** çevirmen](/contributing/translation-program/contributors/)
-- [**54** sitenin yayında olduğu dil sayısı](/languages/)
+- **54** sitenin yayında olduğu dil sayısı
 - [**3 milyon** 2022'de çevrilen kelime sayısı](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />

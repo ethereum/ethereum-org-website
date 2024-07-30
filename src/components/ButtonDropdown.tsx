@@ -1,4 +1,4 @@
-import React, { MouseEvent } from "react"
+import React, { MouseEvent, useState } from "react"
 import { useTranslation } from "next-i18next"
 import { MdMenu } from "react-icons/md"
 import {
@@ -18,7 +18,7 @@ import { BaseLink } from "./Link"
 
 export interface ListItem {
   text: string
-  to?: string
+  href?: string
   matomo?: {
     eventCategory: string
     eventAction: string
@@ -39,6 +39,7 @@ export type ButtonDropdownProps = ButtonProps & {
 
 const ButtonDropdown = ({ list, ...rest }: ButtonDropdownProps) => {
   const { t } = useTranslation("common")
+  const [selectedItem, setSelectedItem] = useState(list.text)
   const handleClick = (
     e: MouseEvent<HTMLElement>,
     item: ListItem,
@@ -54,6 +55,7 @@ const ButtonDropdown = ({ list, ...rest }: ButtonDropdownProps) => {
       e.preventDefault()
       callback(idx)
     }
+    setSelectedItem(item.text)
   }
 
   return (
@@ -65,7 +67,7 @@ const ButtonDropdown = ({ list, ...rest }: ButtonDropdownProps) => {
         _active={{ bg: "transparent" }}
         {...rest}
       >
-        {t(list.text)}
+        {t(selectedItem)}
       </MenuButton>
       <MenuList
         py={2}
@@ -76,12 +78,12 @@ const ButtonDropdown = ({ list, ...rest }: ButtonDropdownProps) => {
         zIndex="popover"
       >
         {list.items.map((item, idx) => {
-          const { text, to } = item
+          const { text, href } = item
 
-          return to ? (
+          return href ? (
             <BaseLink
               key={idx}
-              to={to!}
+              href={href!}
               isPartiallyActive={false}
               textDecor="none"
               color="text"

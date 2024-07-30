@@ -5,7 +5,7 @@ lang: sr
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Eth logo koji se prikazuje putem holograma.
 summaryPoint1: Način da se bilo šta jedinstveno prikaže kao sredstvo zasnovano na Ethereum.
 summaryPoint2: NFT-ijevi daju više moći kreatorima sadržaja nego ikada ranije.
@@ -78,7 +78,7 @@ Bezbednost Ethereum dolazi od dokaza o ulogu. Sistem je projektovan tako da ekon
 
 Problemi bezbednosti NFT-ijeva su uglavnom povezani sa fišingom, ranjivošću pametnih ugovora ili korisničkom greškom (kao što je nenamerno izlaganje privatnih ključeva), čineći sigurnost novčanika ključnom za vlasnike NFT-ijeva.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Više o bezbednosti
 </ButtonLink>
 

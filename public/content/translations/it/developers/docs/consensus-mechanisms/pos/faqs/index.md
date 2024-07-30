@@ -18,7 +18,7 @@ Il proof-of-stake richiede che i nodi, noti come validatori, inviino esplicitame
 
 Il proof-of-work consuma molta più energia perché il processo di mining consumata elettricità. Il proof-of-stake, d'altra parte, richiede soltanto una piccola quantità di energia: i validatori di Ethereum possono essere eseguiti persino su un dispositivo a bassa potenza, come un Raspberry Pi. Il meccanismo di proof-of-stake di Ethereum è concepito per essere più sicuro del proof-of-work, perché il costo dell'attacco è maggiore e le conseguenze sono più severe.
 
-Il confronto proof-of-work vs. proof-of-stake è un argomento controverso. [Il blog di Vitalik Buterin](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) e il dibattito tra Justin Drake e Lyn Alden hanno dato una buona sintesi delle argomentazioni.
+Il confronto proof-of-work vs. proof-of-stake è un argomento controverso. Il [blog di Vitalik Buterin](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) e il dibattito tra Justin Drake e Lyn Alden offrono una buona sintesi delle argomentazioni.
 
 <YouTube id="1m12zgJ42dI" />
 
@@ -74,7 +74,7 @@ I validatori devono mettere in staking ETH così che abbiano qualcosa da perdere
 
 ## Come sono selezionati i validatori? {#how-are-validators-selected}
 
-Un singolo validatore è scelto pseudo-casualmente per proporre un blocco in ogni slot utilizzando un algoritmo detto RANDAO, che combina un hash dal propositore del blocco con un seed aggiornato a ogni blocco. Questo valore è utilizzato per selezionare un validatore specifico dall'insieme totale di validatori. La selezione del validatore è fissata a quattro epoche in anticipo.
+Un singolo validatore è scelto pseudo-casualmente per proporre un blocco in ogni slot utilizzando un algoritmo detto RANDAO, che combina un hash dal propositore del blocco con un seed aggiornato a ogni blocco. Questo valore è utilizzato per selezionare un validatore specifico dall'insieme totale di validatori. La selezione del validatore è fissata con due epoche di anticipo.
 
 [Maggiori informazioni sulla selezione dei validatori](/developers/docs/consensus-mechanisms/pos/block-proposal)
 

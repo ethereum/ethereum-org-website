@@ -4,7 +4,7 @@ description: Una panoramica di come iniziare a mettere in staking in solo i tuoi
 lang: it
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Leslie il rinoceronte sul suo chip informatico.
 sidebarDepth: 2
 summaryPoints:
@@ -109,7 +109,7 @@ Esistono una varietà di opzioni disponibili per aiutarti con la tua configurazi
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Ricorda l'importanza di scegliere un [client di minoranza](/developers/docs/nodes-and-clients/client-diversity/), poiché migliora la sicurezza della rete e limita i tuoi rischi. Gli strumenti che ti consentono di configurare il client di minoranza sono denotati come <em style={{ textTransform: "uppercase" }}>"multi-client".</em>
+Ricorda l'importanza di scegliere un [client di minoranza](/developers/docs/nodes-and-clients/client-diversity/), poiché migliora la sicurezza della rete e limita i tuoi rischi. Gli strumenti che ti consentono di configurare il client di minoranza sono contrassegnati come <em style={{ textTransform: "uppercase" }}>"multi-client".</em>
 
 ### Generatori di chiavi
 
@@ -167,7 +167,7 @@ I bug equivalenti in un <em>client di minoranza non sarebbero mai finalizzati</e
 <ExpandableCard title="Quale client è il migliore?">
 I client individuali potrebbero variare lievemente in termini di prestazioni e interfaccia utente, poiché ognuno è sviluppato da team differenti che usano diversi linguaggi di programmazione. Detto ciò, nessuno di essi è il "migliore." Tutti i client di produzione sono eccellenti pezzi di software, che eseguono tutti le stesse funzioni fondamentali per sincronizzarsi e interagire con la blockchain.
 
-Poiché tutti i client di produzione forniscono la stessa funzionalità di base, è davvero molto importante che tu scelga un <strong>client di minoranza</strong>, vale a dire qualsiasi client che NON sia attualmente in uso da una maggioranza di validatori sulla rete. Questo potrebbe sembrare controintuitivo, ma operare un client di maggioranza o di super maggioranza espone maggiormente al rischio di tagli nel caso di un bug in quel client. Operare un client di minoranza riduce drasticamente tali rischi.
+Poiché tutti i client di produzione forniscono la stessa funzionalità di base, è davvero molto importante che tu scelga un <strong>client di minoranza</strong>, vale a dire qualsiasi client che NON sia attualmente in uso da una maggioranza di validatori sulla rete. Questo potrebbe sembrare controintuitivo, ma operare un client di maggioranza o di super maggioranza espone  maggiormente al rischio di tagli nel caso di un bug in quel client. Operare un client di minoranza riduce drasticamente tali rischi.
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Scopri di più sul perché la diversità dei client è fondamentale</a>
 </ExpandableCard>
@@ -190,14 +190,17 @@ Una volta impostate le credenziali di prelievo, i pagamenti delle ricompense (gl
 
 Per sbloccare e ricevere il tuo intero saldo, devi inoltre completare il processo di uscita dal tuo validatore.
 
-<ButtonLink to="/staking/withdrawals/">Di più sulle ricompense di staking</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Di più sulle ricompense di staking</ButtonLink>
 </ExpandableCard>
 
 ## Approfondimenti {#further-reading}
 
+- [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Problema di diversità dei client di Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [Aiutare la diversità dei client](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [La diversità del client sul livello di consenso di Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [How to: acquistare l'hardware del validatore di Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [Passo dopo Passo: come unirsi alla Testnet di Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Suggerimenti per la prevenzione dei tagli di Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
+
+<QuizWidget quizKey="solo-staking" />

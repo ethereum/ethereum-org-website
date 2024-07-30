@@ -51,7 +51,7 @@ Volviendo a nuestro ejemplo inicial, un trader de arbitraje puede tomar un prés
 
 ## Ejemplos de componibilidad en Ethereum {#composability-in-ethereum}
 
-### Intercambio de tokens {#token-swaps}
+### Intercambio de tókenes {#token-swaps}
 
 Si crea un dapp que requiere que las transacciones se paguen en ETH, puede permitir que los usuarios paguen en otros tokens ERC-20 integrando la lógica de intercambio de tokens. El código convertirá automáticamente el token del usuario a ETH antes de que el contrato ejecute la función invocada.
 
@@ -65,8 +65,7 @@ En lugar de crear un sistema de autenticación personalizado o usar proveedores 
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Componibilidad de los contratos: bloques fundamentales para el desarrollo de contratos inteligentes de Ethereum](https://blog.decentlabs.io/contract-composability-the-building-blocks-of-ethereum-smart-contract-development/)
-- [Comienza el desarrollo de tu interfaz Dapp con create-eth-app,](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/)_ un resumen sobre cómo usar create-eth-app para crear apps con contratos inteligentes populares previamente formulados. _
+- [Comience con el desarrollo del fontend de su DApp con create-eth-app:](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/)_ un resumen sobre cómo usar create-eth-app para crear aplicaciones con contratos inteligentes populares previamente formulados. _
 
 ## Más información {#further-reading}
 

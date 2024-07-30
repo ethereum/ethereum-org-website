@@ -1,33 +1,55 @@
-import { useMemo } from "react"
-import { useRouter } from "next/navigation"
+import { type Dispatch, type SetStateAction, useMemo } from "react"
 import { FaTwitter } from "react-icons/fa"
 import { Center, Icon } from "@chakra-ui/react"
+
+import type { AnswerChoice, Question, QuizKey, QuizStatus } from "@/lib/types"
 
 import { Button } from "@/components/Buttons"
 import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { useQuizWidgetContext } from "./context"
+import type { AnswerStatus } from "./useQuizWidget"
 
-export const QuizButtonGroup = () => {
-  const {
-    showResults,
-    initialize: handleReset,
-    currentQuestionAnswerChoice,
-    title,
-    questions,
-    currentQuestionIndex,
-    quizPageProps,
-    answerStatus,
-    numberOfCorrectAnswers,
-    userQuizProgress,
-    quizScore,
-    setCurrentQuestionAnswerChoice,
-    setUserQuizProgress,
-    setShowAnswer,
-  } = useQuizWidgetContext()
+type QuizButtonGroupProps = {
+  showResults: boolean
+  handleReset: () => void
+  currentQuestionAnswerChoice: AnswerChoice | null
+  title: string
+  questions: Question[]
+  currentQuestionIndex: number
+  quizPageProps:
+    | {
+        currentHandler: (nextKey: QuizKey) => void
+        statusHandler: (status: QuizStatus) => void
+        nextQuiz: QuizKey | undefined
+      }
+    | false
+  answerStatus: AnswerStatus
+  numberOfCorrectAnswers: number
+  userQuizProgress: AnswerChoice[]
+  quizScore: number
+  setCurrentQuestionAnswerChoice: (answer: AnswerChoice | null) => void
+  setUserQuizProgress: Dispatch<SetStateAction<AnswerChoice[]>>
+  setShowAnswer: (prev: boolean) => void
+}
 
+export const QuizButtonGroup = ({
+  showResults,
+  handleReset,
+  currentQuestionAnswerChoice,
+  title,
+  questions,
+  currentQuestionIndex,
+  quizPageProps,
+  answerStatus,
+  numberOfCorrectAnswers,
+  userQuizProgress,
+  quizScore,
+  setCurrentQuestionAnswerChoice,
+  setUserQuizProgress,
+  setShowAnswer,
+}: QuizButtonGroupProps) => {
   const finishedQuiz = useMemo(
     () => userQuizProgress.length === questions.length! - 1,
     [questions.length, userQuizProgress.length]
@@ -65,7 +87,7 @@ export const QuizButtonGroup = () => {
 
     setShowAnswer(true)
 
-    if (!!quizPageProps) {
+    if (quizPageProps) {
       if (currentQuestionAnswerChoice.isCorrect) {
         return quizPageProps.statusHandler?.("success")
       }
@@ -166,7 +188,12 @@ export const QuizButtonGroup = () => {
               <Translation id="learn-quizzes:try-again" />
             </Button>
           )}
-          <Button onClick={handleContinue}>
+          <Button
+            onClick={handleContinue}
+            data-testid={
+              finishedQuiz ? "see-results-button" : "next-question-button"
+            }
+          >
             <Translation
               id={
                 finishedQuiz
@@ -183,6 +210,7 @@ export const QuizButtonGroup = () => {
       <Button
         onClick={handleSubmitAnswer}
         isDisabled={!currentQuestionAnswerChoice}
+        data-testid="check-answer-button"
       >
         <Translation id="learn-quizzes:submit-answer" />
       </Button>

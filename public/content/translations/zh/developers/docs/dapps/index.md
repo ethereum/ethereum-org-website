@@ -51,7 +51,7 @@ dapp 可以用任何语言编写（就像是一个 app）。它有前端代码�
 
 **Scaffold-ETH _ - 使用能自适应智能合约的前端，快速尝试 Solidity。_**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [示例 dapp](https://punkwallet.io/)
 
 **创建以太坊应用程序 _- 使用一个命令创建以太坊驱动的应用程序。_**
@@ -73,6 +73,12 @@ dapp 可以用任何语言编写（就像是一个 app）。它有前端代码�
 - [主页](https://thirdweb.com/)
 - [相关文档](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
+
+**Crossmint _- 企业级 Web3 开发平台，可用于部署智能合约，支持信用卡和跨链支付方式，可利用应用程序接口创建、分发、销售、存储、编辑非同质化代币。_**
+
+- [crossmint.com](https://www.crossmint.com)
+- [相关文档](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
 
 ## 延伸阅读 {#further-reading}
 

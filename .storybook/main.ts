@@ -1,7 +1,6 @@
-import path from "path"
-
-import type { StorybookConfig } from "@storybook/nextjs"
+import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin"
 import { propNames } from "@chakra-ui/react"
+import type { StorybookConfig } from "@storybook/nextjs"
 
 /**
  * Note regarding package.json settings related to Storybook:
@@ -16,13 +15,23 @@ import { propNames } from "@chakra-ui/react"
  */
 
 const config: StorybookConfig = {
-  stories: ["../src/components/**/*.stories.{ts,tsx}"],
+  stories: [
+    "../src/components/**/*.stories.{ts,tsx}",
+    "../src/@chakra-ui/stories/*.stories.tsx",
+    "../src/layouts/stories/*.stories.tsx",
+  ],
   addons: [
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
+    {
+      name: "@storybook/addon-essentials",
+      options: {
+        backgrounds: false,
+      },
+    },
     "@storybook/addon-interactions",
-    "@chakra-ui/storybook-addon",
     "storybook-react-i18next",
+    "@storybook/addon-themes",
+    "@chromatic-com/storybook",
   ],
   staticDirs: ["../public"],
   framework: {
@@ -37,11 +46,15 @@ const config: StorybookConfig = {
       disable: true,
     },
   },
-  webpackFinal: async (config: any) => {
-    // Add path aliases
-    config.resolve.alias["@"] = path.resolve(__dirname, "../src")
-    config.resolve.alias["@/public"] = path.resolve(__dirname, "../public")
-
+  webpackFinal: async (config) => {
+    if (config.resolve) {
+      config.resolve.plugins = [
+        ...(config.resolve.plugins || []),
+        new TsconfigPathsPlugin({
+          extensions: config.resolve.extensions,
+        }),
+      ]
+    }
     return config
   },
   typescript: {
@@ -65,6 +78,8 @@ const config: StorybookConfig = {
         return !(isStyledSystemProp || isHTMLElementProp)
       },
     },
+
+    reactDocgen: "react-docgen-typescript",
   },
 }
 export default config

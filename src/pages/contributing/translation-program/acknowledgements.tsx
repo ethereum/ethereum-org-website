@@ -12,7 +12,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import { BasePageProps } from "@/lib/types"
+import { BasePageProps, Lang } from "@/lib/types"
 
 import ActionCard from "@/components/ActionCard"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -27,16 +27,17 @@ import TranslationLeaderboard from "@/components/TranslationLeaderboard"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import allTimeData from "../../../data/translation-reports/alltime/alltime-data.json"
 import monthData from "../../../data/translation-reports/month/month-data.json"
 import quarterData from "../../../data/translation-reports/quarter/quarter-data.json"
 
-import darkThemeCertificateImg from "@/public/certificates/dark-certificate.png"
-import lightThemeCertificateImg from "@/public/certificates/light-certificate.png"
-import dogeComputerImg from "@/public/doge-computer.png"
-import whatIsEthereumImg from "@/public/what-is-ethereum.png"
+import darkThemeCertificateImg from "@/public/images/certificates/dark-certificate.png"
+import lightThemeCertificateImg from "@/public/images/certificates/light-certificate.png"
+import dogeComputerImg from "@/public/images/doge-computer.png"
+import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
 
 const Content = (props: BoxProps) => (
   <Box as={MainArticle} py={4} px={10} w="full" {...props} />
@@ -48,18 +49,22 @@ const ContentHeading = (props: HeadingProps) => (
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/contributing/translation-program/acknowledgements"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
@@ -122,7 +127,7 @@ const TranslatorAcknowledgements = () => {
               {t(
                 "page-contributing-translation-program-acknowledgements-acknowledgement-page-3"
               )}{" "}
-              <InlineLink to="/contributing/translation-program/contributors/">
+              <InlineLink href="/contributing/translation-program/contributors/">
                 {t(
                   "page-contributing-translation-program-acknowledgements-acknowledgement-page-link"
                 )}
@@ -195,7 +200,7 @@ const TranslatorAcknowledgements = () => {
         </Text>
         <Box
           as={ActionCard}
-          to="/contributing/translation-program/contributors/"
+          href="/contributing/translation-program/contributors/"
           title={t(
             "page-contributing-translation-program-acknowledgements-our-translators-view-all"
           )}
@@ -249,14 +254,14 @@ const TranslatorAcknowledgements = () => {
         </Flex>
       </Content>
 
-      <Content id="poap">
+      <Content id="oats">
         <ContentHeading
           as="h2"
           fontSize={{ base: "2xl", md: "2rem" }}
           fontWeight={600}
         >
           {t(
-            "page-contributing-translation-program-acknowledgements-poaps-title"
+            "page-contributing-translation-program-acknowledgements-oats-title"
           )}
         </ContentHeading>
         <Text>
@@ -283,7 +288,7 @@ const TranslatorAcknowledgements = () => {
             {t(
               "page-contributing-translation-program-acknowledgements-how-to-claim-1"
             )}{" "}
-            <InlineLink to="https://discord.gg/CetY6Y4">
+            <InlineLink href="/discord/">
               {t(
                 "page-contributing-translation-program-acknowledgements-how-to-claim-1-discord"
               )}

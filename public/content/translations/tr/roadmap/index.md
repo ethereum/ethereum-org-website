@@ -3,14 +3,14 @@ title: Ethereum yol haritası
 description: Ethereum için daha ölçeklenebilir, güvenli ve sürdürülebilir olmanın yolu.
 lang: tr
 template: roadmap
-image: /roadmap/roadmap-main.png
+image: /images/heroes/roadmap-hub-hero.jpg
 alt: "Ethereum yol haritası"
 summaryPoints:
 buttons:
   - label: Sonraki yükseltmeler
     toId: hangi-degişiklikler-geliyor
   - label: Geçmiş yükseltmeler
-    to: /history/
+    href: /history/
     variant: ana hat
 ---
 
@@ -24,28 +24,28 @@ Ethereum yol haritası, gelecekte protokole yapılacak özgün geliştirmelerin 
 
 <CardGrid>
   <RoadmapActionCard
-    to="/roadmap/scaling"
+    href="/roadmap/scaling"
     title="Daha ucuz işlemler"
     image="scaling"
     description="Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems."
     buttonText="More on reducing fees"
   />
   <RoadmapActionCard
-    to="/roadmap/security"
+    href="/roadmap/security"
     title="Daha fazla güvenlik"
     image="security"
     description="Ethereum is already very secure but it can be made even stronger, ready to withstand all kinds of attack far into the future."
     buttonText="More on security"
   />
   <RoadmapActionCard
-    to="/roadmap/user-experience"
+    href="/roadmap/user-experience"
     title="Daha iyi kullanıcı deneyimi"
     image="userExperience"
     description="More support for smart contract wallets and light-weight nodes will make using Ethereum simpler and safer."
     buttonText="More on user experience"
   />
   <RoadmapActionCard
-    to="/roadmap/future-proofing"
+    href="/roadmap/future-proofing"
     title="Gelecek garantisi"
     image="futureProofing"
     description="Ethereum researchers and developers are solving tomorrow's problems today, readying the network for future generations."
@@ -61,7 +61,7 @@ Ethereum; ölçeklenebilirliğini, güvenliğini ya da sürdürülebilirliğini 
 
 Yol haritası çoğunlukla, araştırmacı ve geliştirmecilerin yıllar süren çalışmasının ürünüdür çünkü protokol oldukça tekniktir, ancak motive olmuş kişiler katılabilir. Fikirler genellikle [ethresear.ch](https://ethresear.ch/), [Ethereum sihirbazları](https://ethereum-magicians.org/) gibi forumlarda veya Eth Ar&Ge discord sunucusunda tartışma başlıkları olarak ortaya atılır. Yeni keşfedilmiş sistem açıklarına karşı tepkiler, uygulama katmanında çalışan organizasyonlardan (merkeziyetsiz uygulama ve borsalar) öneriler ya da son kullanıcılar için bilinen ihtilaflar (ücretler veya işlem hızları gibi) olabilir. Bu fikirler olgunlaştığında [Ethereum İyileştirme Önerileri](https://eips.ethereum.org/) olarak önerilebilirler. Herhangi bir zamanda topluluk içinden fikir sunulması için bu, tümüyle halka açık biçimde yapılır.
 
-[Ethereum yönetişimi hakkında daha fazlası](/yönetişim/)
+[Ethereum yönetişimi hakkında daha fazlası](/governance/)
 
 </RoadmapImageContent>
 

@@ -5,7 +5,7 @@ lang: fil
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: Ang mga tradisyonal na identity system ay nakasentro sa pagbibigay, pagpapanatili at pagkontrol ng iyong mga identifier.
 summaryPoint2: Inaalis ng decentralized identity ang pagdepende sa mga centralized na third party.
 summaryPoint3: Dahil sa crypto, mayroon na ulit ang mga user ng mga tool para ibigay, pangasiwaan at kontrolin ang sarili nilang mga identifier at attestation.
@@ -49,7 +49,7 @@ Ang mga decentralized identifier ay sino-store sa mga distributed ledger (blockc
 
 ## Paano naging posible ang mga decentralized identifier? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Public Key Infrastructure (PKI) {#public-key-infrastructure}
+### 1. Public Key Infrastructure (PKI) {#public-key-cryptography}
 
 Ang public-key infrastructure (PKI) ay isang hakbang para sa seguridad ng impormasyon na bumubuo ng [pampublikong key](/glossary/#public-key) at [ pribadong key](/glossary/#private-key) para sa isang entity. Ang public-key cryptography ay ginagamit sa mga blockchain network upang patunayan ang identity ng user at patunayan ang pagmamay-ari sa mga digital asset.
 

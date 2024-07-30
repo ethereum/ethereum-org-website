@@ -31,7 +31,12 @@ Scopri come utilizzare [Web3J](https://github.com/web3j/web3j) e Hyperledger Bes
 - [Ascoltare per Eventi del Contratto Intelligente di Ethereum](https://kauri.io/article/760f495423db42f988d17b8c145b0874/listening-for-ethereum-smart-contract-events-in-java)
 - [Using Besu (Pantheon), the Java Ethereum Client with Linux](https://kauri.io/article/276dd27f1458443295eea58403fd6965/using-pantheon-the-java-ethereum-client-with-linux)
 - [Running a Hyperledger Besu (Pantheon) Node in Java Integration Tests](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
-- [Web3j Cheat Sheet](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
+- [Web3j Cheat Sheet](https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c)
+
+Scopri come utilizzare [ethers-kt](https://github.com/Kr1ptal/ethers-kt), una libreria Kotlin asincrona e ad alte prestazioni per interagire con le blockchain basate sull'EVM. Si occupando delle piattaforme JVM e Android.
+- [Transfer ERC20 tokens](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/abi/TransferERC20.kt)
+- [UniswapV2 swap with event listening](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/tokenswapwitheventlistening/TokenSwapWithEventListening.kt)
+- [ETH / ERC20 balance tracker](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/balancetracker/BalanceTracker.kt)
 
 ## Articoli di livello intermedio {#intermediate-articles}
 
@@ -47,6 +52,7 @@ Scopri come utilizzare [Web3J](https://github.com/web3j/web3j) e Hyperledger Bes
 
 - [Hyperledger Besu (Pantheon) (Ethereum Client)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (Library for Interacting with Ethereum Clients)](https://github.com/web3j/web3j)
+- [ethers-kt (Async, high-performance Kotlin/Java/Android library for EVM-based blockchains.)](https://github.com/Kr1ptal/ethers-kt)
 - [Eventeum (Event Listener)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (IPFS Dev Tools)](https://github.com/ConsenSys/mahuta)
 

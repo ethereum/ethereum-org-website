@@ -4,8 +4,8 @@ description: Una guida per iniziare a integrare l'oracolo di Tellor nel tuo prot
 author: "Tellor"
 lang: it
 tags:
-  - "Solidity"
-  - "Smart Contract"
+  - "solidity"
+  - "contratti intelligenti"
   - "oracoli"
 skill: beginner
 published: 2021-06-29

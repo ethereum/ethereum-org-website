@@ -4,7 +4,7 @@ description: Uma visão geral de como começar a fazer staking individual com se
 lang: pt-br
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Leslie, o rinoceronte, em seu próprio chip de computador
 sidebarDepth: 2
 summaryPoints:
@@ -190,7 +190,7 @@ Depois que as credenciais de saque estiverem definidas, os pagamentos de recompe
 
 Para desbloquear e receber todo o seu saldo de volta, você deve concluir o processo de saída de seu validador.
 
-<ButtonLink to="/staking/withdrawals/">Mais sobre saques de participação</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Mais sobre saques de participação</ButtonLink>
 </ExpandableCard>
 
 ## Leitura adicional {#further-reading}

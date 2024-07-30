@@ -1,4 +1,3 @@
-import { ReactNode } from "react"
 import { useTranslation } from "next-i18next"
 import { MdArrowForward } from "react-icons/md"
 import {
@@ -19,6 +18,7 @@ import InfoBanner from "../InfoBanner"
 import InlineLink, { BaseLink } from "../Link"
 import OldHeading from "../OldHeading"
 import Text from "../OldText"
+import Translation from "../Translation"
 
 import {
   AccordionCustomItem,
@@ -44,7 +44,7 @@ const StepBoxContainer = (props: ChildOnlyProp) => (
 )
 
 const StepBox = (
-  props: { to: string } & Record<"titleId" | "descId", TranslationKey>
+  props: { href: string } & Record<"titleId" | "descId", TranslationKey>
 ) => {
   const { t } = useTranslation("page-stablecoins")
 
@@ -75,7 +75,7 @@ const StepBox = (
             as={BaseLink}
             color="inherit"
             textDecoration="inherit"
-            to={props.to}
+            href={props.href}
             fontWeight={700}
             textAlign="start"
             _hover={{
@@ -104,7 +104,7 @@ const StablecoinAccordion = () => {
   const DEFAULT_IMAGE_WIDTH = 24
 
   return (
-    <Accordion borderRadius="base" width="full" allowToggle reduceMotion>
+    <Accordion borderRadius="base" width="full" allowToggle>
       <AccordionCustomItem category="dapps">
         <LeftColumnPanel>
           <SectionTitle>
@@ -112,12 +112,12 @@ const StablecoinAccordion = () => {
           </SectionTitle>
           <StepBoxContainer>
             <StepBox
-              to="/wallets/"
+              href="/wallets/"
               titleId="page-stablecoins-accordion-swap-requirement-1"
               descId="page-stablecoins-accordion-swap-requirement-1-description"
             />
             <StepBox
-              to="/get-eth/"
+              href="/get-eth/"
               titleId="page-stablecoins-accordion-swap-requirement-2"
               descId="page-stablecoins-accordion-swap-requirement-2-description"
             />
@@ -125,7 +125,7 @@ const StablecoinAccordion = () => {
           <InfoBanner emoji=":light_bulb:">
             <H4>{t("page-stablecoins-accordion-swap-editors-tip")}</H4>
             <Text>{t("page-stablecoins-accordion-swap-editors-tip-copy")}</Text>
-            <ButtonLink to="/wallets/find-wallet/?filters=has_card_deposits,has_dex_integrations">
+            <ButtonLink href="/wallets/find-wallet/">
               {t("page-stablecoins-accordion-swap-editors-tip-button")}
             </ButtonLink>
           </InfoBanner>
@@ -134,12 +134,12 @@ const StablecoinAccordion = () => {
           <SectionTitle>
             {t("page-stablecoins-accordion-swap-dapp-title")}
           </SectionTitle>
-          <p>
-            {t("page-stablecoins-accordion-swap-dapp-intro")}{" "}
-            <InlineLink to="/get-eth/#dex">
+          <Text>
+            <Translation id="page-stablecoins:page-stablecoins-accordion-swap-dapp-intro" />{" "}
+            <InlineLink href="/get-eth/#dex">
               {t("page-stablecoins-accordion-swap-dapp-link")}
             </InlineLink>
-          </p>
+          </Text>
           <CardList
             items={cardListGroups.dapps}
             imageWidth={DEFAULT_IMAGE_WIDTH}
@@ -156,7 +156,7 @@ const StablecoinAccordion = () => {
           </Text>
           <StepBoxContainer>
             <StepBox
-              to="/get-eth/"
+              href="/get-eth/"
               titleId="page-stablecoins-accordion-buy-requirement-1"
               descId="page-stablecoins-accordion-buy-requirement-1-description"
             />
@@ -180,10 +180,12 @@ const StablecoinAccordion = () => {
           <SectionTitle>
             {t("page-stablecoins-accordion-requirements")}
           </SectionTitle>
-          <p>{t("page-stablecoins-accordion-earn-requirements-description")}</p>
+          <Text>
+            {t("page-stablecoins-accordion-earn-requirements-description")}
+          </Text>
           <StepBoxContainer>
             <StepBox
-              to="/wallets/"
+              href="/wallets/"
               titleId="page-stablecoins-accordion-earn-requirement-1"
               descId="page-stablecoins-accordion-earn-requirement-1-description"
             />
@@ -193,7 +195,7 @@ const StablecoinAccordion = () => {
           <SectionTitle>
             {t("page-stablecoins-accordion-earn-projects-title")}
           </SectionTitle>
-          <p>{t("page-stablecoins-accordion-earn-projects-copy")}</p>
+          <Text>{t("page-stablecoins-accordion-earn-projects-copy")}</Text>
           <CardList
             items={cardListGroups.earn}
             imageWidth={DEFAULT_IMAGE_WIDTH}
@@ -205,17 +207,17 @@ const StablecoinAccordion = () => {
           <SectionTitle>
             {t("page-stablecoins-accordion-requirements")}
           </SectionTitle>
-          <p>
+          <Text>
             {t("page-stablecoins-accordion-borrow-requirements-description")}
-          </p>
+          </Text>
           <StepBoxContainer>
             <StepBox
-              to="/wallets/"
+              href="/wallets/"
               titleId="page-stablecoins-accordion-borrow-requirement-1"
               descId="page-stablecoins-accordion-borrow-requirement-1-description"
             />
             <StepBox
-              to="/get-eth/"
+              href="/get-eth/"
               titleId="page-stablecoins-accordion-borrow-requirement-2"
               descId="page-stablecoins-accordion-borrow-requirement-2-description"
             />
@@ -223,21 +225,21 @@ const StablecoinAccordion = () => {
           <SectionTitle>
             {t("page-stablecoins-accordion-borrow-crypto-collateral")}
           </SectionTitle>
-          <p>
+          <Text>
             {t("page-stablecoins-accordion-borrow-crypto-collateral-copy")}{" "}
-            <InlineLink to="#how">
+            <InlineLink href="#how">
               {t("page-stablecoins-accordion-borrow-crypto-collateral-link")}
             </InlineLink>
-          </p>
-          <p>
+          </Text>
+          <Text>
             {t("page-stablecoins-accordion-borrow-crypto-collateral-copy-p2")}
-          </p>
+          </Text>
         </LeftColumnPanel>
         <RightColumnPanel>
           <SectionTitle>
             {t("page-stablecoins-accordion-borrow-places-title")}
           </SectionTitle>
-          <p>{t("page-stablecoins-accordion-borrow-places-intro")}</p>
+          <Text>{t("page-stablecoins-accordion-borrow-places-intro")}</Text>
           <Box mb={8}>
             <CardList
               items={cardListGroups.borrow}
@@ -247,12 +249,12 @@ const StablecoinAccordion = () => {
           <SectionTitle>
             {t("page-stablecoins-accordion-borrow-risks-title")}
           </SectionTitle>
-          <p>
+          <Text>
             {t("page-stablecoins-accordion-borrow-risks-copy")}{" "}
-            <InlineLink to="/eth/">
+            <InlineLink href="/eth/">
               {t("page-stablecoins-accordion-borrow-risks-link")}
             </InlineLink>
-          </p>
+          </Text>
         </RightColumnPanel>
       </AccordionCustomItem>
     </Accordion>

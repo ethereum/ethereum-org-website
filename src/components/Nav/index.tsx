@@ -1,40 +1,34 @@
-import React, { FC, useRef } from "react"
-import { useRouter } from "next/router"
+import { lazy, Suspense, useRef } from "react"
 import { useTranslation } from "next-i18next"
-import { MdBrightness2, MdLanguage, MdWbSunny } from "react-icons/md"
-import { Box, Flex, HStack, Icon, useDisclosure } from "@chakra-ui/react"
+import { Box, Flex, Hide, Show, useDisclosure } from "@chakra-ui/react"
 
-import { ButtonLink, IconButton } from "../Buttons"
-import { EthHomeIcon } from "../icons"
-import { BaseLink } from "../Link"
-import Search from "../Search"
+import { EthHomeIcon } from "@/components/icons"
+import { BaseLink } from "@/components/Link"
+import Search from "@/components/Search"
 
+import { isDesktop } from "@/lib/utils/isDesktop"
+
+import { NAV_PY } from "@/lib/constants"
+
+import DesktopNavMenu from "./Desktop"
 import Menu from "./Menu"
-import MobileNavMenu from "./Mobile"
 import { useNav } from "./useNav"
 
-export interface IProps {
-  path: string
-}
+import { useIsClient } from "@/hooks/useIsClient"
+
+const MobileNavMenu = lazy(() => import("./Mobile"))
 
 // TODO display page title on mobile
-const Nav: FC<IProps> = ({ path }) => {
-  const {
-    ednLinks,
-    fromPageParameter,
-    isDarkTheme,
-    shouldShowSubNav,
-    toggleColorMode,
-    linkSections,
-    mobileNavProps,
-  } = useNav({ path })
-  const { locale } = useRouter()
+const Nav = () => {
+  const { toggleColorMode, linkSections, mobileNavProps } = useNav()
   const { t } = useTranslation("common")
   const searchModalDisclosure = useDisclosure()
   const navWrapperRef = useRef(null)
+  const isClient = useIsClient()
+  const isDesktopFlag = isDesktop()
 
   return (
-    <Box position="sticky" top={0} zIndex={100} width="full">
+    <Box position="sticky" top={0} zIndex="sticky" width="full">
       <Flex
         ref={navWrapperRef}
         as="nav"
@@ -44,17 +38,17 @@ const Nav: FC<IProps> = ({ path }) => {
         borderColor="rgba(0, 0, 0, 0.1)"
         height="4.75rem"
         justifyContent="center"
-        py={4}
+        py={NAV_PY}
         px={{ base: 4, xl: 8 }}
       >
         <Flex
-          alignItems={{ base: "center", lg: "normal" }}
-          justifyContent={{ base: "space-between", lg: "normal" }}
+          alignItems={{ base: "center", md: "normal" }}
+          justifyContent={{ base: "space-between", md: "normal" }}
           width="full"
           maxW="container.2xl"
         >
           <BaseLink
-            to="/"
+            href="/"
             aria-label={t("home")}
             display="inline-flex"
             alignItems="center"
@@ -65,102 +59,42 @@ const Nav: FC<IProps> = ({ path }) => {
           {/* Desktop */}
           <Flex
             w="full"
-            justifyContent={{ base: "flex-end", lg: "space-between" }}
+            justifyContent={{ base: "flex-end", md: "space-between" }}
             ms={{ base: 3, xl: 8 }}
           >
-            <Menu hideBelow="lg" path={path} sections={linkSections} />
-            <Flex
-              alignItems="center"
-              justifyContent="space-between"
-              gap={{ base: 2, xl: 4 }}
-            >
-              <Search {...searchModalDisclosure} />
-              {/* Mobile */}
-              <MobileNavMenu
-                {...mobileNavProps}
-                hideFrom="lg"
-                toggleSearch={searchModalDisclosure.onOpen}
-                drawerContainerRef={navWrapperRef}
-              />
-              <HStack spacing={2} hideBelow="lg">
-                <IconButton
-                  transition="transform 0.5s, color 0.2s"
-                  icon={isDarkTheme ? <MdWbSunny /> : <MdBrightness2 />}
-                  aria-label={
-                    isDarkTheme
-                      ? "Switch to Light Theme"
-                      : "Switch to Dark Theme"
-                  }
-                  variant="ghost"
-                  isSecondary
-                  px={1.5}
-                  _hover={{
-                    transform: "rotate(10deg)",
-                    color: "primary.hover",
-                  }}
-                  onClick={toggleColorMode}
-                ></IconButton>
-                <ButtonLink
-                  to={`/languages/${fromPageParameter}`}
-                  transition="color 0.2s"
-                  leftIcon={<Icon as={MdLanguage} />}
-                  variant="ghost"
-                  isSecondary
-                  px={1.5}
-                  _hover={{
-                    color: "primary.hover",
-                    "& svg": {
-                      transform: "rotate(10deg)",
-                      transition: "transform 0.5s",
-                    },
-                  }}
-                >
-                  {t("languages")} {locale!.toUpperCase()}
-                </ButtonLink>
-              </HStack>
+            {/* avoid rendering desktop Menu version on mobile */}
+
+            {isClient && isDesktopFlag ? (
+              <Menu className="hidden md:block" sections={linkSections} />
+            ) : (
+              <Box />
+            )}
+
+            <Flex alignItems="center" /*  justifyContent="space-between" */>
+              {/* Desktop */}
+              {/* avoid rendering desktop menu version on mobile */}
+              <Show above="md">
+                <Search {...searchModalDisclosure} />
+                <DesktopNavMenu toggleColorMode={toggleColorMode} />
+              </Show>
+
+              <Hide above="md">
+                {/* Mobile */}
+                {/* use Suspense to display the Search & the Menu at the same time */}
+                <Suspense>
+                  <Search {...searchModalDisclosure} />
+                  <MobileNavMenu
+                    {...mobileNavProps}
+                    linkSections={linkSections}
+                    toggleSearch={searchModalDisclosure.onOpen}
+                    drawerContainerRef={navWrapperRef}
+                  />
+                </Suspense>
+              </Hide>
             </Flex>
           </Flex>
         </Flex>
       </Flex>
-      {shouldShowSubNav && (
-        <Flex
-          as="nav"
-          aria-label={t("nav-developers")}
-          display={{ base: "none", lg: "flex" }}
-          bg="ednBackground"
-          borderBottom="1px"
-          borderColor="border"
-          boxSizing="border-box"
-          py={4}
-          px={8}
-        >
-          {ednLinks.map((link, idx) => (
-            <BaseLink
-              key={idx}
-              to={link.to}
-              isPartiallyActive={link.isPartiallyActive}
-              color="text"
-              fontWeight="normal"
-              textDecor="none"
-              me={8}
-              _hover={{
-                color: "primary.base",
-                svg: {
-                  fill: "currentColor",
-                },
-              }}
-              _visited={{}}
-              sx={{
-                svg: {
-                  fill: "currentColor",
-                },
-              }}
-            >
-              {link.text}
-            </BaseLink>
-          ))}
-        </Flex>
-      )}
     </Box>
   )
 }

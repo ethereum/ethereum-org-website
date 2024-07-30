@@ -4,7 +4,7 @@ description: Nlebaanya na NFT n'Ethereum
 lang: ig
 template: use-cases
 emoji: ":frame_with_picture:"
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: A na-egosipụta akara Eth site na hologram.
 summaryPoint1: Ụzọ e ji egosipụta ihe ọbụla pụrụ iche dị ka akụ Ethereum.
 summaryPoint2: NFT na-enye ndị na-ekepụta ihe ikike karịa ka ọ dị na mbụ.
@@ -77,7 +77,7 @@ Nchekwa Ethereum na-esi n'ihe akaebe-nke-itinye ego abịa. E mere sistemụ a k
 
 Okwu nchekwa metụtara NFT na-abukari ihe gbasara ozi maka iji aghụghọ nara mmadụ ihe, wepụta ngwa kọmputa maọbụ njehie onye ojiji (dị ka iwepụta igodo nkeonwe), na-eme ezigbo nchekwa akap ego ịntanetị taa akpụ nyere ndị nwe NFT.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Ihe ndị i ọzọ na nchekwa
 </ButtonLink>
 

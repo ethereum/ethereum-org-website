@@ -1,5 +1,3 @@
-import { useEffect } from "react"
-import { merge } from "lodash"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import {
@@ -16,12 +14,19 @@ import {
 
 import { numberToPercent } from "@/lib/utils/numberToPercent"
 
-import { useQuizWidgetContext } from "./context"
+type QuizSummaryProps = {
+  numberOfCorrectAnswers: number
+  questionsLength: number
+  ratioCorrect: number
+  isPassingScore: boolean
+}
 
-export const QuizSummary = () => {
-  const { numberOfCorrectAnswers, questions, ratioCorrect, isPassingScore } =
-    useQuizWidgetContext()
-
+export const QuizSummary = ({
+  numberOfCorrectAnswers,
+  questionsLength,
+  ratioCorrect,
+  isPassingScore,
+}: QuizSummaryProps) => {
   const { locale } = useRouter()
   const { t } = useTranslation("learn-quizzes")
 
@@ -80,7 +85,7 @@ export const QuizSummary = () => {
         {largerThanMobile && (
           <VStack>
             <Text size={commonTextSize} {...valueStyles}>
-              {questions.length}
+              {questionsLength}
             </Text>
             <Text size={commonTextSize} {...labelStyles}>
               {t("questions")}

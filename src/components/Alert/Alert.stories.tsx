@@ -4,9 +4,7 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import Alert from "."
 
-type AlertType = typeof Alert
-
-const meta: Meta<AlertType> = {
+const meta = {
   title: "Molecules / Action Feedback / Alerts",
   component: Alert,
   decorators: [
@@ -16,11 +14,11 @@ const meta: Meta<AlertType> = {
       </Flex>
     ),
   ],
-}
+} satisfies Meta<typeof Alert>
 
 export default meta
 
-type Story = StoryObj<AlertType>
+type Story = StoryObj<typeof meta>
 
 const DEMO_DESC = "This is an alert to be used in the top of the content"
 
@@ -29,6 +27,7 @@ const STATUSES = ["error", "success", "warning", "info"] as const
 export const StatusVariants: Story = {
   args: {
     description: DEMO_DESC,
+    // To show the close button
     onClose: () => {},
   },
   render: (args) => (
@@ -56,11 +55,12 @@ export const ContentVariants: Story = {
 export const StyleVariants: Story = {
   args: {
     description: DEMO_DESC,
+    // To show the close button
     onClose: () => {},
   },
   argTypes: {
     status: {
-      options: STATUSES,
+      options: [...STATUSES],
       control: {
         type: "radio",
       },

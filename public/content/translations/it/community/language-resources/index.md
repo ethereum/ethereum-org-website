@@ -16,7 +16,9 @@ Conosci una risorsa formativa nella tua lingua? [Apri una segnalazione](https://
 
 ## Risorse di Ethereum.org {#ethereum-org}
 
-Ethereum.org è tradotto in modo nativo in oltre 40 lingue che puoi trovare nella nostra [pagina dedicata alle lingue](/languages).
+Ethereum.org è tradotto nativamente in oltre 40 lingue, che puoi trovare utilizzando il nostro menu di selezione della lingua, ubicato in cima a ogni pagina.
+
+![Menu di selezione della lingua](./language-selector-menu.png)
 
 Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere coinvolto nel [Programma di Traduzione ethereum.org](/contributing/translation-program/#translation-program) e aiutarci a tradurre il sito web.
 
@@ -30,6 +32,7 @@ Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere co
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - Versione brasiliana di Cointelegraph, un importante outlet di notizie sulle criptovalute
 - [Livecoins](http://www.livecoins.com.br/ethereum) - notizie e strumenti sulle criptovalute
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - notizie e relazioni sulle criptovalute
+- [Modular Crypto](https://modularcrypto.xyz/): notizie sulle criptovalute e articoli educativi
 
 **Educazione**
 
@@ -72,7 +75,7 @@ Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere co
 - [Gwei.cz](https://gwei.cz) - community locale sul Web3, crea contenuti educativi, organizza eventi online e di persona
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) - Guida per principianti di Ethereum
 - [DAO Příručka](https://dao.gwei.cz/) - guida per principianti alle DAO
-- [Mastering Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Padroneggiare Ethereum in ceco
+- [Mastering Ethereum](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Padroneggiare Ethereum in ceco
 
 ### Francese {#fr}
 

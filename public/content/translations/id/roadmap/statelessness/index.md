@@ -66,13 +66,13 @@ Keadaan tanpa status yang lemah memang melibatkan perubahan pada cara simpul Eth
 
 **Dalam keadaan tanpa status yang lemah, pengajuan blok membutuhkan akses ke data negara secara penuh, tetapi verifikasi blok tidak membutuhkan data status**
 
-Untuk hal ini terjadi, [pohon Verkle](/roadmap/verkle-trees) harus sudah diimplementasikan dalam klien-klien Ethereum. Pohon Verkle adalah struktur data pengganti untuk menyimpan data status Ethereum yang memungkinkan "saksi" berukuran kecil dan tetap pada data yang akan diteruskan di antara rekan-rekan dan digunakan untuk memverifikasi blok alih-alih memverifikasi blok terhadap database lokal. [Pemisahan pembangun proposal](/roadmap/pbs/) juga diperlukan karena ini memungkinkan pembangun blok menjadi simpul yang berspesialisasi dengan perangkat keras yang lebih kuat, dan merekalah yang memerlukan akses ke data keadaan penuh.
+Untuk hal ini terjadi, [pohon Verkle](/roadmap/verkle-trees/) harus sudah diimplementasikan dalam klien-klien Ethereum. Pohon Verkle adalah struktur data pengganti untuk menyimpan data status Ethereum yang memungkinkan "saksi" berukuran kecil dan tetap pada data yang akan diteruskan di antara rekan-rekan dan digunakan untuk memverifikasi blok alih-alih memverifikasi blok terhadap database lokal. [Pemisahan pembangun proposal](/roadmap/pbs/) juga diperlukan karena ini memungkinkan pembangun blok menjadi simpul yang berspesialisasi dengan perangkat keras yang lebih kuat, dan merekalah yang memerlukan akses ke data keadaan penuh.
 
 <ExpandableCard title="Mengapa tidak masalah untuk mengandalkan lebih sedikit pengusul blok?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 Keadaan tanpa status bergantung pada pembangun blok yang menyimpan salinan data negara lengkap sehingga mereka dapat menghasilkan saksi yang dapat digunakan untuk memverifikasi blok. Simpul lain tidak membutuhkan akses ke data status, semua informasi yang diperlukan untuk memverifikasi blok tersedia di saksi. Hal ini menciptakan situasi di mana mengajukan blok itu mahal, tetapi memverifikasi blok itu murah, yang berarti lebih sedikit operator yang akan menjalankan simpul pengajuan blok. Akan tetapi, desentralisasi pengusul blok tidak terlalu penting selama sebanyak mungkin peserta dapat memverifikasi secara independen bahwa blok yang mereka ajukan valid.
 
-<ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Baca lebih lanjut tentang catatan Dankrad</ButtonLink>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Baca lebih lanjut tentang catatan Dankrad</ButtonLink>
 </ExpandableCard>
 
 Pengusul blok menggunakan data status untuk membuat "saksi" - sekumpulan data minimal yang membuktikan nilai status yang sedang diubah oleh transaksi dalam sebuah blok. Validator lain tidak menyimpan state, mereka hanya menyimpan status akar (hash dari seluruh status). Mereka menerima sebuah blok dan sebuah saksi dan menggunakannya untuk memperbarui status akar mereka. Hal ini membuat simpul validasi menjadi sangat ringan.
@@ -81,7 +81,7 @@ Keadaan tanpa status yang lemah sedang dalam tahap penelitian lanjutan, tetapi b
 
 ### Keadaan tanpa status yang kuat {#strong-statelessness}
 
-Tanpa kewarganegaraan yang kuat menghilangkan kebutuhan akan blok apa pun untuk menyimpan data negara. Sebagai gantinya, transaksi dikirim dengan saksi yang dapat diagregasi oleh produsen blok. Produsen blok kemudian bertanggung jawab untuk menyimpan hanya status yang diperlukan untuk menghasilkan saksi untuk akun yang relevan. Tanggung jawab untuk menyatakan hampir sepenuhnya berpindah ke pengguna, karena mereka mengirimkan saksi dan 'daftar akses' untuk menyatakan akun dan kunci penyimpanan mana yang berinteraksi dengan mereka.
+Tanpa kewarganegaraan yang kuat menghilangkan kebutuhan akan blok apa pun untuk menyimpan data negara. Sebagai gantinya, transaksi dikirim dengan saksi yang dapat diagregasi oleh produsen blok. Produsen blok kemudian bertanggung jawab untuk menyimpan hanya status yang diperlukan untuk menghasilkan saksi untuk akun yang relevan. Tanggung jawab untuk menyatakan hampir sepenuhnya berpindah ke pengguna, karena mereka mengirimkan saksi dan 'daftar akses' untuk menyatakan akun dan kunci penyimpanan mana yang berinteraksi dengan mereka. Hal ini akan memungkinkan simpul menjadi sangat ringan, namun ada konsekuensinya, termasuk membuatnya lebih sulit untuk bertransaksi dengan kontrak pintar.
 
 Keadaan tanpa status yang kuat telah diselidiki oleh para peneliti tetapi saat ini tidak diharapkan menjadi bagian dari peta perjalanan Ethereum - kemungkinan besar keadaan tanpa status yang lemah sudah cukup untuk kebutuhan penskalaan Ethereum.
 

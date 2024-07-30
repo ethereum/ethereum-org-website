@@ -1,9 +1,8 @@
 import * as React from "react"
-import { Center, Flex, SimpleGrid, VStack } from "@chakra-ui/react"
-import { Meta, StoryObj } from "@storybook/react"
+import { Center, Flex, Icon, SimpleGrid } from "@chakra-ui/react"
+import type { Meta, StoryObj } from "@storybook/react"
 
 import { EthHomeIcon } from "./EthHomeIcon"
-import { FeedbackGlyphIcon } from "./FeedbackGlyphIcon"
 import { FeedbackThumbsUpIcon } from "./FeedbackThumbsUpIcon"
 import { HighlightDarkIcon } from "./HighlightDarkIcon"
 import { HighlightIcon } from "./HighlightIcon"
@@ -32,13 +31,13 @@ import {
   AuditedIcon,
   AvadoGlyphIcon,
   BattleTestedIcon,
-  BloxstakingGlyphIcon,
   BugBountyIcon,
   CautionProductGlyphIcon,
   DefaultOpenSourceGlyphIcon,
   DockerGlyphIcon,
   EconomicalIcon,
   EthpoolGlyphIcon,
+  FigmentGlyphIcon,
   GreenCheckProductGlyphIcon,
   KilnGlyphIcon,
   LidoGlyphIcon,
@@ -70,11 +69,9 @@ import {
   BuyCryptoIcon,
   ConnectDappsIcon,
   DesktopIcon,
-  EIP1559Icon,
   ENSSupportIcon,
   ERC20SupportIcon,
   FilterBurgerIcon,
-  FrameIcon,
   GasFeeCustomizationIcon,
   HardwareIcon,
   HardwareSupportIcon,
@@ -88,14 +85,15 @@ import {
   SocialRecoverIcon,
   StakingIcon,
   SwapIcon,
-  WalletConnectIcon,
   WithdrawCryptoIcon,
 } from "./wallets"
 
-export default {
+const meta = {
+  component: Icon,
   title: "Atoms / Media & Icons / Icons",
-  component: VStack,
-} satisfies Meta<typeof VStack>
+} satisfies Meta<typeof Icon>
+
+export default meta
 
 const iconsDefinitions = [
   CorrectIcon,
@@ -118,7 +116,6 @@ const iconsDefinitions = [
   AuditedIcon,
   AvadoGlyphIcon,
   BattleTestedIcon,
-  BloxstakingGlyphIcon,
   BugBountyIcon,
   CautionProductGlyphIcon,
   StakingDappnodeGlyphIcon,
@@ -126,6 +123,7 @@ const iconsDefinitions = [
   DockerGlyphIcon,
   EconomicalIcon,
   EthpoolGlyphIcon,
+  FigmentGlyphIcon,
   GreenCheckProductGlyphIcon,
   P2PGlyphIcon,
   KilnGlyphIcon,
@@ -154,11 +152,9 @@ const iconsDefinitions = [
   BuyCryptoIcon,
   ConnectDappsIcon,
   DesktopIcon,
-  EIP1559Icon,
   ENSSupportIcon,
   ERC20SupportIcon,
   FilterBurgerIcon,
-  FrameIcon,
   GasFeeCustomizationIcon,
   HardwareIcon,
   HardwareSupportIcon,
@@ -172,10 +168,8 @@ const iconsDefinitions = [
   SocialRecoverIcon,
   StakingIcon,
   SwapIcon,
-  WalletConnectIcon,
   WithdrawCryptoIcon,
   EthHomeIcon,
-  FeedbackGlyphIcon,
   FeedbackThumbsUpIcon,
   HighlightDarkIcon,
   HighlightIcon,
@@ -201,7 +195,7 @@ const items = iconsDefinitions.map((IconDef) => (
   </Flex>
 ))
 
-export const Icons: StoryObj<typeof VStack> = {
+export const Icons: StoryObj<typeof meta> = {
   render: () => {
     return <SimpleGrid columns={[2, 2, 3, 5]}>{items}</SimpleGrid>
   },

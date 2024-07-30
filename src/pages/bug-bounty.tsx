@@ -5,14 +5,14 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   Center,
+  Heading,
   ListItem,
   UnorderedList,
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
-import BugBountyBanner from "@/components/Banners/BugBountyBanner"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import BugBountyCards from "@/components/BugBountyCards"
 import ButtonLink from "@/components/Buttons/ButtonLink"
@@ -32,22 +32,24 @@ import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import consensusData from "@/data/consensus-bounty-hunters.json"
 import executionData from "@/data/execution-bounty-hunters.json"
 
-import besu from "@/public/upgrades/besu.png"
-import erigon from "@/public/upgrades/erigon.png"
-import geth from "@/public/upgrades/geth.png"
-import lighthouseDark from "@/public/upgrades/lighthouse-dark.png"
-import lighthouseLight from "@/public/upgrades/lighthouse-light.png"
-import lodestar from "@/public/upgrades/lodestar.png"
-import nethermind from "@/public/upgrades/nethermind.png"
-import nimbus from "@/public/upgrades/nimbus-cloud.png"
-import prysm from "@/public/upgrades/prysm.png"
-import tekuDark from "@/public/upgrades/teku-dark.png"
-import tekuLight from "@/public/upgrades/teku-light.png"
+import besu from "@/public/images/upgrades/besu.png"
+import erigon from "@/public/images/upgrades/erigon.png"
+import geth from "@/public/images/upgrades/geth.png"
+import lighthouseDark from "@/public/images/upgrades/lighthouse-dark.png"
+import lighthouseLight from "@/public/images/upgrades/lighthouse-light.png"
+import lodestar from "@/public/images/upgrades/lodestar.png"
+import nethermind from "@/public/images/upgrades/nethermind.png"
+import nimbus from "@/public/images/upgrades/nimbus-cloud.png"
+import prysm from "@/public/images/upgrades/prysm.png"
+import reth from "@/public/images/upgrades/reth.png"
+import tekuDark from "@/public/images/upgrades/teku-dark.png"
+import tekuLight from "@/public/images/upgrades/teku-light.png"
 
 const Page = (props: ChildOnlyProp) => (
   <Box
@@ -103,18 +105,21 @@ const Subtitle = (props: ChildOnlyProp) => (
 
 const SloganGradient = (props: ChildOnlyProp) => (
   <Box
-    fontWeight="extrabold"
-    fontSize={{ base: "2.5rem", lg: "5xl" }}
-    lineHeight="xs"
     maxW="720px"
     mt="4"
-    mb="0"
     bgClip="text"
     overflow="auto"
     sx={{ WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
     bg="upgradesGradient"
   >
-    <Text>{props.children}</Text>
+    <Heading
+      as="h1"
+      fontSize={{ base: "2.5rem", lg: "5xl" }}
+      fontWeight="800"
+      mb="1.45rem"
+    >
+      {props.children}
+    </Heading>
   </Box>
 )
 
@@ -328,15 +333,19 @@ const sortBountyHuntersFn = (a: BountyHuntersArg, b: BountyHuntersArg) => {
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("bug-bounty")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
@@ -418,6 +427,11 @@ const BugBountiesPage = () => {
       image: prysm,
     },
     {
+      title: "Reth",
+      link: "https://reth.rs/",
+      image: reth,
+    },
+    {
       title: "Teku",
       link: "https://pegasys.tech/teku",
       image: useColorModeValue(tekuDark, tekuLight),
@@ -452,8 +466,7 @@ const BugBountiesPage = () => {
         title={t("page-upgrades-bug-bounty-meta-title")}
         description={t("page-upgrades-bug-bounty-meta-description")}
       />
-      {/* TODO: Remove two weeks prior to scheduled mainnet Dencun hardfork */}
-      <BugBountyBanner />
+      {/* INFO: Uncomment this to enable Bug Bounty Banner: <BugBountyBanner /> */}
       <Content>
         <HeroCard>
           <HeroContainer>
@@ -467,10 +480,10 @@ const BugBountiesPage = () => {
             </SloganGradient>
             <Subtitle>{t("page-upgrades-bug-bounty-subtitle")}</Subtitle>
             <ButtonRow>
-              <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
+              <StyledButton href="https://forms.gle/Gnh4gzGh66Yc3V7G8">
                 {t("page-upgrades-bug-bounty-submit")}
               </StyledButton>
-              <StyledButton variant="outline" to="#rules">
+              <StyledButton variant="outline" href="#rules" isSecondary>
                 {t("page-upgrades-bug-bounty-rules")}
               </StyledButton>
             </ButtonRow>
@@ -496,6 +509,9 @@ const BugBountiesPage = () => {
         </Client>
         <Client>
           <Image src={nethermind} alt="" {...iconImageProps} />
+        </Client>
+        <Client>
+          <Image src={reth} alt="" {...iconImageProps} />
         </Client>
       </ClientRow>
       <ClientRow>
@@ -526,7 +542,9 @@ const BugBountiesPage = () => {
       <StyledGrayContainer id="rules">
         <Content>
           <H2>{t("page-upgrades-bug-bounty-validity")}</H2>
-          <Text>{t("page-upgrades-bug-bounty-validity-desc")}</Text>
+          <Text>
+            <Translation id="page-bug-bounty:page-upgrades-bug-bounty-validity-desc" />
+          </Text>
           <StyledCardContainer>
             <StyledCard
               emoji=":ledger:"
@@ -669,6 +687,29 @@ const BugBountiesPage = () => {
                 <br />
                 <InlineLink href="https://github.com/ethereum/consensus-specs/blob/dev/solidity_deposit_contract/deposit_contract.sol">
                   Deposit Contract Source Code
+                </InlineLink>
+              </Box>
+            </StyledCard>
+            <StyledCard
+              emoji=":bug:"
+              title={t("page-upgrades-bug-bounty-dependency-bugs")}
+              description={t("page-upgrades-bug-bounty-dependency-bugs-desc")}
+            >
+              <Box>
+                <OldHeading
+                  as="h4"
+                  fontWeight="medium"
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
+                  {t("page-upgrades-bug-bounty-help-links")}
+                </OldHeading>
+                <InlineLink href="https://github.com/ethereum/c-kzg-4844">
+                  C-KZG-4844
+                </InlineLink>
+                <br />
+                <InlineLink href="https://github.com/crate-crypto/go-kzg-4844">
+                  Go-KZG-4844
                 </InlineLink>
               </Box>
             </StyledCard>

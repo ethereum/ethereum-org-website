@@ -13,7 +13,7 @@ O cronologie a tuturor reperelor majore, a fork-urilor și actualizărilor block
 
 Fork-urile apar atunci când trebuie făcute actualizări tehnice sau modificări majore în rețea – acestea provin de obicei din [Propunerile de îmbunătățire pentru Ethereum (EIP)](/eips/) și modifică „regulile” protocolului.
 
-Atunci când sunt necesare actualizări în software-ul tradițional, controlat central, compania doar va publica o nouă versiune pentru utilizatorul final. Blockchain-ul funcționează diferit, deoarece nu există proprietate centrală. [Clienții Ethereum](/developer/docs/nodes-and-clients/) trebuie să își actualizeze software-ul pentru a implementa noile reguli de fork-uri. În plus, creatorii de blocuri (miner-ii într-o lume a dovezii-muncii, validatorii într-o lume a dovezii-mizei) și nodurile trebuie să creeze blocuri și să valideze conform noilor reguli. [Mai multe despre mecanismele de consesn]/(developers/docs/consensus-mechanisms/)
+Atunci când sunt necesare actualizări în software-ul tradițional, controlat central, compania doar va publica o nouă versiune pentru utilizatorul final. Blockchain-ul funcționează diferit, deoarece nu există proprietate centrală. [Clienții Ethereum](/developers/docs/nodes-and-clients/) trebuie să își actualizeze software-ul pentru a implementa noile reguli de fork-uri. În plus, creatorii de blocuri (miner-ii într-o lume a dovezii-muncii, validatorii într-o lume a dovezii-mizei) și nodurile trebuie să creeze blocuri și să valideze conform noilor reguli. [Mai multe despre mecanismele de consesn]/(developers/docs/consensus-mechanisms/)
 
 Aceste schimbări de reguli pot crea o separare temporară în rețea. Pot fi produse blocuri noi conform regulilor noi sau celor vechi. Se convine în avans asupra creării fork-urilor, astfel încât clienții să adopte schimbările la unison și fork-ul cu actualizările să devină lanțul principal. Cu toate acestea, în cazuri rare, dezacordurile asupra fork-urilor pot determina divizarea permanentă a rețelei – cea mai cunoscută fiind crearea lui Ethereum Classic cu [fork-ul DAO](#dao-fork).
 
@@ -124,7 +124,7 @@ Actualizarea Berlin a optimizat costul gazului pentru anumite acțiuni EVM și c
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   Lanțul Beacon
 </DocLink>
 
@@ -140,7 +140,7 @@ Contractul de depunere a mizei a introdus [mizarea](/glossary/#staking) în ecos
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Mizarea
 </DocLink>
 
@@ -394,6 +394,6 @@ Cartea galbenă, scrisă de Dr. Gavin Wood, este o definiție tehnică a protoco
 
 Lucrarea introductivă, publicată în 2013 de Vitalik Buterin, fondatorul lui Ethereum, înainte de lansarea proiectului în 2015.
 
-<DocLink to="/whitepaper/">
+<DocLink href="/whitepaper/">
   Cartea albă
 </DocLink>

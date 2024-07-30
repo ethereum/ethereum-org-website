@@ -3,14 +3,15 @@ title: 合并
 description: 了解合并 - 以太坊主网何时采用权益证明机制。
 lang: zh
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
+alt:
 summaryPoint1: 以太坊主网采用权益证明机制，但情况并非一直如此。
 summaryPoint2: 从原有的工作量证明机制过渡到权益证明机制的升级称为合并。
-summaryPoint3: 合并是指原有的以太坊主网与单独的权益证明区块链即信标链合并，现已成为一条链。
+summaryPoint3: 合并是指原有的以太坊主网与单独的权益证明区块链（即信标链）合并，现已成为一条链。
 summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   合并于 2022 年 9 月 15 日执行， 它完成了以太坊向权益证明共识的过渡，以太坊正式弃用了工作量证明并将能源消耗减少了约 99.95%。
 </UpgradeStatus>
 
@@ -201,7 +202,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 相反，区块由验证节点提出，验证节点质押以太币以获得参与共识的权利。 这些升级为未来的可扩展性升级（包括分片）奠定了基础。
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   信标链
 </ButtonLink>
 
@@ -217,7 +218,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 分片计划正在迅速发展，但随着扩展交易执行的二层网络技术的兴起和成功，分片计划已变为寻找最佳的负载分配方式，来存储来自卷叠合约中的压缩调用数据，这使得网络容量呈指数级增长。 如果不先过渡到权益证明，这是不可能的。
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   分片
 </ButtonLink>
 

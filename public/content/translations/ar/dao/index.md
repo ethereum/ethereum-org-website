@@ -5,7 +5,7 @@ lang: ar
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: تمثيل لمنظمة مستقلة لامركزية تصوّت على مقترح.
 summaryPoint1: المجتمعات التي يملكها الأعضاء دون قيادة مركزية.
 summaryPoint2: طريقة آمنة للتعاون مع الغرباء على الإنترنت.
@@ -50,7 +50,7 @@ summaryPoint3: مكان آمن لتخصيص أموال لسبب محدد.
 
 هذا ممكن لأنه لا يمكن التلاعب بالعقود الذكية بعد تفعيلها ضمن إثيريوم. لا يمكنك تعديل التعليمات البرمجية (قواعد المنظمات المستقلة اللامركزية) دون ملاحظة الأشخاص ذلك لأن كل شيء عام.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   المزيد عن العقود الذكية
 </DocLink>
 

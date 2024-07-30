@@ -33,7 +33,7 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getTutorialsData } from "@/lib/utils/md"
-import { getLocaleTimestamp, INVALID_DATETIME } from "@/lib/utils/time"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
   filterTutorialsByLang,
@@ -84,16 +84,20 @@ export const getStaticProps = (async ({ locale }) => {
     "/developers/tutorials"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       internalTutorials: getTutorialsData(locale!),
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<Props>
@@ -112,7 +116,7 @@ export interface IExternalTutorial {
 }
 
 export interface ITutorial {
-  to: string
+  href: string
   title: string
   description: string
   author: string
@@ -126,9 +130,11 @@ export interface ITutorial {
 
 const published = (locale: string, published: string) => {
   const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
-  return localeTimestamp !== INVALID_DATETIME ? (
+
+  return localeTimestamp !== "Invalid Date" ? (
     <span>
-      <Emoji text=":calendar:" fontSize="sm" ms={2} me={2} /> {localeTimestamp}
+      <Emoji text=":calendar:" fontSize="sm" ms={2} me={2} />
+      {localeTimestamp}
     </span>
   ) : null
 }
@@ -217,6 +223,7 @@ const TutorialPage = ({
         )}
       />
       <Heading
+        as="h1"
         fontStyle="normal"
         fontWeight="semibold"
         fontFamily="monospace"
@@ -240,37 +247,34 @@ const TutorialPage = ({
         <Translation id="page-developers-tutorials:page-tutorial-subtitle" />
       </Text>
 
-      <Modal isOpen={isModalOpen} setIsOpen={setModalOpen} dir={dir}>
-        <Heading fontSize="2rem" lineHeight="1.4" mb={4}>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setModalOpen(false)}
+        size={{ base: "full", md: "xl" }}
+        contentProps={{ dir }}
+        title={
           <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
-        </Heading>
+        }
+      >
         <Text>
           <Translation id="page-developers-tutorials:page-tutorial-listing-policy-intro" />{" "}
-          <InlineLink to="/contributing/content-resources/">
+          <InlineLink href="/contributing/content-resources/">
             <Translation id="page-developers-tutorials:page-tutorial-listing-policy" />
           </InlineLink>
         </Text>
         <Text>
           <Translation id="page-developers-tutorials:page-tutorial-submit-tutorial" />
         </Text>
-        <Flex
-          flexDirection={{ base: "column", md: "initial" }}
-          maxH={{ base: 64, md: "initial" }}
-          overflowY={{ base: "scroll", md: "initial" }}
-        >
+        <Flex flexDirection={{ base: "column", md: "row" }} gap="2">
           <Flex
+            flex="1"
             borderWidth="1px"
             borderStyle="solid"
             borderColor="border"
             borderRadius="base"
             p={4}
             flexDirection="column"
-            w={{ base: "full", md: "50%" }}
             justifyContent="space-between"
-            mt={2}
-            mb={{ base: 2, md: 6 }}
-            ms={0}
-            me={{ base: 0, md: 2 }}
           >
             <Text as="b">
               <Translation id="page-developers-tutorials:page-tutorial-new-github" />
@@ -281,24 +285,20 @@ const TutorialPage = ({
             <ButtonLink
               leftIcon={<FaGithub />}
               variant="outline"
-              to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.yaml&title="
+              href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.yaml&title="
             >
               <Translation id="page-developers-tutorials:page-tutorial-raise-issue-btn" />
             </ButtonLink>
           </Flex>
           <Flex
+            flex="1"
             borderWidth="1px"
             borderStyle="solid"
             borderColor="border"
             borderRadius="base"
             p={4}
             flexDirection="column"
-            w={{ base: "full", md: "50%" }}
             justifyContent="space-between"
-            mt={2}
-            mb={{ base: 2, md: 6 }}
-            ms={0}
-            me={{ base: 0, md: 2 }}
           >
             <Text as="b">
               <Translation id="page-developers-tutorials:page-tutorial-pull-request" />
@@ -313,7 +313,7 @@ const TutorialPage = ({
             <ButtonLink
               leftIcon={<FaGithub />}
               variant="outline"
-              to="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
+              href="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
             >
               <Translation id="page-developers-tutorials:page-tutorial-pull-request-btn" />
             </ButtonLink>
@@ -437,8 +437,8 @@ const TutorialPage = ({
                 boxShadow: "0 0 1px var(--eth-colors-primary-base)",
                 bg: "tableBackgroundHover",
               }}
-              key={tutorial.to}
-              to={tutorial.to ?? undefined}
+              key={tutorial.href}
+              href={tutorial.href ?? undefined}
               hideArrow
             >
               <Flex
@@ -472,8 +472,10 @@ const TutorialPage = ({
               </Flex>
               <Text color="text200" fontSize="sm" textTransform="uppercase">
                 <Emoji text=":writing_hand:" fontSize="sm" me={2} />
-                {tutorial.author} •
-                {published(locale!, tutorial.published ?? "")}
+                {tutorial.author}
+                {tutorial.published ? (
+                  <> •{published(locale!, tutorial.published!)}</>
+                ) : null}
                 {tutorial.timeToRead && (
                   <>
                     {" "}

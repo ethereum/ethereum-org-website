@@ -4,7 +4,7 @@ description: ETH'nizi solo stake etmeye nasıl başlayacağınıza dair genel bi
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Gergedan Leslie bilgisayar çipinin üstünde.
 sidebarDepth: 2
 summaryPoints:
@@ -188,7 +188,7 @@ Yeni paydaşlar bunu anahtar üretim ve yatırma zamanında belirler. Henüz bu 
 
 Tüm bakiyenizin kilidini kaldırmak ve tamamını almak için aynı zamanda doğrulayıcınızın çıkış sürecini tamamlamanız da gerekir.
 
-<ButtonLink to="/staking/withdrawals/">Hisseleme para çekmeleri hakkında daha fazlası</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Hisseleme para çekmeleri hakkında daha fazlası</ButtonLink>
 </ExpandableCard>
 
 ## Daha fazla bilgi {#further-reading}

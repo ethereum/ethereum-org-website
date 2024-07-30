@@ -5,7 +5,7 @@ lang: ar
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: يتم عرض شعار إثير عبر صورة مجسَّمة.
 summaryPoint1: طريقة لتمثيل أي شيء فريد كأصل مستند إلى إثيريوم.
 summaryPoint2: بفضل الرموز المميزة غير القابلة للاستبدال، سيتمتع منشئو المحتوى بقوة غير مسبوقة.
@@ -78,7 +78,7 @@ summaryPoint3: مدعومة بواسطة العقود الذكية التي تق
 
 غالبًا ما تتعلق المسائل الأمنية المرتبطة بالرموز المميزة غير القابلة للاستبدال بعمليات الاحتيال والخداع، أو الثغرات في العقود الذكية، أو أخطاء المستخدم (مثل الكشف عن المفاتيح الخاصة دون قصد)، ما يجعل أمان المحفظة الجيد أمرًا حساسًا بالنسبة إلى مالكي الرموز المميزة غير القابلة للاستبدال.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   المزيد عن الأمان
 </ButtonLink>
 

@@ -12,14 +12,13 @@ Tokens can represent virtually anything in Ethereum:
 
 - reputation points in an online platform
 - skills of a character in a game
-- lottery tickets
 - financial assets like a share in a company
 - a fiat currency like USD
 - an ounce of gold
 - and more...
 
 Such a powerful feature of Ethereum must be handled by a robust standard, right? That's exactly
-where the ERC-20 plays its role! This standard allows developers to build token applications that are interoperable with other products and services.
+where the ERC-20 plays its role! This standard allows developers to build token applications that are interoperable with other products and services. The ERC-20 standard is also used to provide additional functionality to [ether](/glossary/#ether).
 
 **What is ERC-20?**
 
@@ -148,9 +147,33 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
+## Known issues {#erc20-issues}
+
+### ERC-20 token reception issue {#reception-issue}
+
+When ERC-20 tokens are sent to a smart contract that is not designed to handle ERC-20 tokens, those tokens can be permanently lost. This happens because the receiving contract does not have the functionality to recognize or respond to the incoming tokens, and there’s no mechanism in the ERC-20 standard to notify the receiving contract about the incoming tokens. The main ways this issue takes form is through:
+
+1.	Token transfer mechanism
+  - ERC-20 tokens are transferred using the transfer or transferFrom functions
+	-	When a user sends tokens to a contract address using these functions, the tokens are transferred regardless of whether the receiving contract is designed to handle them
+2.	Lack of notification
+	-	The receiving contract does not receive a notification or callback that tokens have been sent to it
+	-	If the receiving contract lacks a mechanism to handle tokens (e.g., a fallback function or a dedicated function to manage token reception), the tokens are effectively stuck in the contract’s address
+3.	No built-in handling
+	-	The ERC-20 standard does not include a mandatory function for receiving contracts to implement, leading to a situation where many contracts are unable to manage incoming tokens properly
+
+Some alternative standards have come out of this issue such as [ERC-223](/developers/docs/standards/tokens/erc-223)
+
 ## Further reading {#further-reading}
 
 - [EIP-20: ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Tokens](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - ERC-20 Implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Guide to Solidity ERC20 Tokens](https://www.alchemy.com/overviews/erc20-solidity)
+
+
+## Other fungible token standards {#fungible-token-standards}
+
+- [ERC-223](/developers/docs/standards/tokens/erc-223)
+- [ERC-777](/developers/docs/standards/tokens/erc-777)
+- [ERC-4626 - Tokenized vaults](/developers/docs/standards/tokens/erc-4626)

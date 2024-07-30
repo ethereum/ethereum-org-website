@@ -6,13 +6,13 @@ lang: fr
 
 # Comment échanger des jetons
 
-Fatigué de chercher un échange de cryptomonnaies qui répertorie tous vos jetons favoris ? Vous pouvez échanger la plupart des jetons en utilisant des échanges décentralisés.
+Fatigué de chercher un échange de cryptomonnaies qui répertorie tous vos jetons favoris ? Vous pouvez échanger la plupart des jetons en utilisant des [échanges décentralisés](/glossary/#dex).
 
-Un échange de jetons implique l'échange de deux actifs distincts et présents sur le réseau Ethereum, par exemple échanger ETH contre DAI (un jeton ERC-20). Le processus est à la fois très rapide et peu coûteux. Vous aurez besoin d'un portefeuille de cryptomonnaies pour échanger des jetons.
+Un échange de jetons implique l'échange de deux actifs différents qui existent sur le réseau Ethereum, par exemple l'échange d'ETH contre du DAI (un jeton [ERC-20](/glossary/#erc-20)). Le processus est à la fois très rapide et peu coûteux. Vous aurez besoin d'un portefeuille de cryptomonnaies pour échanger des jetons.
 
 **Prérequis :**
 
-- détenir un portefeuille de cryptomonnaies, vous pouvez suivre ce tutoriel : [Comment : « Enregistrer » un compte Ethereum](/guides/how-to-create-an-ethereum-account/)
+- détenir un [portefeuille de cryptomonnaies](/glossary/#wallet), vous pouvez suivre ce tutoriel : [Comment : « Enregistrer » un compte Ethereum](/guides/how-to-create-an-ethereum-account/)
 - ajouter des fonds à votre portefeuille
 
 ## 1. Connectez votre portefeuille à l'échange décentralisé (DEX) de votre choix
@@ -24,7 +24,7 @@ Parmi les échanges décentralisés les plus connus :
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://curve.fi/#/ethereum/swap)
 
-Si vous aimeriez en apprendre davantage sur la Finance Décentralisée (DeFi) et sur la façon dont ces nouveaux types d'échanges fonctionnent, nous vous recommandons la [Bibliothèque "Kernel"](https://library.kernel.community/Topic+-+DeFi/Topic+-+DeFi).
+Intéressant ? Apprenez-en plus sur ce qu'est la [finance décentralisée (DeFi)](/defi/) et comment ce nouveau type d'échange fonctionne.
 
 ## 2. Sélectionnez la paire de jetons que vous souhaitez échanger
 
@@ -51,7 +51,7 @@ Vous recevez automatiquement les jetons échangés dans votre portefeuille lorsq
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vous voulez en savoir plus ?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>
 </InfoBanner>

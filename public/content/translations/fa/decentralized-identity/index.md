@@ -5,7 +5,7 @@ lang: fa
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: سیستم های هویت صنعتی صدور، نگهداری و کنترل شناسه های شما را متمرکز کرده اند.
 summaryPoint2: هویت نامتمرکز اتکا، اشخاص ثالث متمرکز را از بین می برد.
 summaryPoint3: به لطف رمزنگاری، کاربران اکنون ابزارهایی برای صدور، نگهداری و کنترل مجدد شناسه ها و گواهی های خود دارند.
@@ -49,7 +49,7 @@ summaryPoint3: به لطف رمزنگاری، کاربران اکنون ابزا
 
 ## چه چیزی شناسه های غیرمتمرکز را ممکن می کند? {#what-makes-decentralized-identifiers-possible}
 
-### 1. زیرساخت کلید عمومی (PKI) {#public-key-infrastructure}
+### 1. زیرساخت کلید عمومی (PKI) {#public-key-cryptography}
 
 زیرساخت کلید عمومی (PKI) یک اقدام امنیتی اطلاعاتی است که یک [کلید عمومی](/glossary/#public-key) و [ ایجاد می‌کند. کلید خصوصی](/glossary/#private-key) برای یک موجودیت. رمزنگاری کلید عمومی در شبکه های بلاک چین برای احراز هویت کاربران و اثبات مالکیت دارایی های دیجیتال استفاده می شود.
 

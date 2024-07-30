@@ -49,7 +49,7 @@ Anyị na-adụ ọdụ ka i megharịa akụrụngwa i ji eme nkagbu mgbe nkeji
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Chọrọ ịmụtakwu?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Hụ ntuziaka anyị ndị ọzọ
   </ButtonLink>
 </InfoBanner>

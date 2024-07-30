@@ -2,7 +2,7 @@
 title: Um Ethereum mais seguro
 description: O Ethereum é a plataforma de contrato inteligente mais segura e descentralizada que existe. Entretanto, ainda existem melhorias que podem ser feitas para que o Ethereum permaneça resiliente a qualquer nível de ataque no futuro.
 lang: pt-br
-image: /roadmap/roadmap-security.png
+image: /images/roadmap/roadmap-security.png
 alt: "Planejamento Ethereum"
 template: roadmap
 ---
@@ -15,7 +15,7 @@ Há também melhorias que tornam as transações de censura muito mais difíceis
 
 A melhoria da prova de trabalho para a prova de participação começou com a "participação" de ETHs dos pioneiros do Ethereum em um contrato de depósito. Esse ETH é utilizado para proteger a rede. Entretanto, esse ETH ainda não pode ser desbloqueado e devolvido aos usuários. Permitir o saque do ETH é uma parte essencial da melhoria da prova de participação. Além de os saques serem um componente essencial de um protocolo de prova de participação totalmente funcional, permitir saques também é apropriado para a segurança do Ethereum, pois permite que os participantes usem suas recompensas de ETH para outros fins que não sejam de participação. Isso significa que os usuários que querem liquidez não precisam depender de derivativos de participação líquida (LSDs), que podem ser uma força centralizadora no Ethereum. Essa melhoria está programada para ser concluída em 12 de abril de 2023.
 
-<ButtonLink variant="outline-color" to="/staking/withdrawals/">Leia sobre saques</ButtonLink>
+<ButtonLink variant="outline-color" href="/staking/withdrawals/">Leia sobre saques</ButtonLink>
 
 ## Defesa contra ataques {#defending-against-attacks}
 
@@ -23,25 +23,25 @@ Mesmo após os saques, há melhorias que podem ser feitas no protocolo de [prova
 
 Reduzir o tempo que o Ethereum leva para finalizar os blocos proporcionaria uma melhor experiência ao usuário e evitaria ataques sofisticados de "reorganização", em que os invasores tentam reorganizar blocos muito recentes para obter lucro ou censurar transações específicas. [**Finalidade de espaço único (SSF)**](/roadmap/single-slot-finality/) é uma maneira de minimizar o atraso na finalização. No momento, há 15 minutos de blocos que um invasor poderia, teoricamente, convencer outros validadores a reconfigurar. Com a SSF, há 0. Os usuários, de indivíduos a aplicativos e corretoras, beneficiam-se da garantia rápida de que as transações não serão revertidas, e a rede se beneficia ao desativar toda uma classe de ataques.
 
-<ButtonLink variant="outline-color" to="/roadmap/single-slot-finality/">Leia sobre a finalidade de espaço único</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/single-slot-finality/">Leia sobre a finalidade de espaço único</ButtonLink>
 
 ## Defesa contra a censura {#defending-against-censorship}
 
 A descentralização evita que indivíduos ou pequenos grupos de validadores se tornem muito influentes. Novas tecnologias de participação podem ajudar a garantir que os validadores do Ethereum permaneçam o mais descentralizados possível e, ao mesmo tempo, defendê-los contra falhas de hardware, software e rede. Isso inclui software que compartilha as responsabilidades do validador entre diversos nós. Isso é conhecido como **tecnologia de validador distribuído (DVT)**. Os pools de participação são incentivados a usar a DVT porque ela permite que diversos computadores participem coletivamente da validação, agregando redundância e tolerância a falhas. Ela também divide as chaves do validador entre diversos sistemas, em vez de ter um único operador executando vários validadores. Isso torna mais difícil para os operadores desonestos coordenarem ataques ao Ethereum. Em geral, a ideia é obter benefícios de segurança ao executar validadores como _comunidades_, em vez de indivíduos.
 
-<ButtonLink variant="outline-color" to="/staking/dvt/">Leia sobre a tecnologia de validador distribuído</ButtonLink>
+<ButtonLink variant="outline-color" href="/staking/dvt/">Leia sobre a tecnologia de validador distribuído</ButtonLink>
 
 A implementação da **separação entre proponente e construtor (PBS)** melhorará drasticamente as defesas internas do Ethereum contra a censura. A PBS permite que um validador crie um bloco e outro o transmita pela rede Ethereum. Isso garante que os ganhos dos algoritmos profissionais de construção de blocos que maximizam o lucro sejam compartilhados de forma mais justa em toda a rede, **impedindo que a participação se concentre** nos participantes institucionais de melhor desempenho ao longo do tempo. O proponente do bloco pode selecionar o bloco mais lucrativo oferecido por um mercado de construtores de blocos. Para censurar, um proponente de bloco geralmente teria que escolher um bloco menos lucrativo, o que seria **economicamente irracional e também óbvio para o restante dos validadores** na rede.
 
 Há potenciais complementos para a PBS, como transações criptografadas e listas de inclusão, que poderiam melhorar ainda mais a resistência do Ethereum à censura. Isso faz com que o construtor e o proponente do bloco não saibam quais são as transações reais incluídas nos respectivos blocos.
 
-<ButtonLink variant="outline-color" to="/roadmap/pbs/">Leia sobre a separação entre proponente e construtor</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/pbs/">Leia sobre a separação entre proponente e construtor</ButtonLink>
 
 ## Proteção dos validadores {#protecting-validators}
 
 É possível que um invasor experiente identifique os próximos validadores e envie spam para impedi-los de propor blocos. Isso é conhecido como um ataque de **negação de serviço (DoS)**. A implementação da [**eleição de líder secreto (SLE)**](/roadmap/secret-leader-election) protegerá contra esse tipo de ataque ao impedir que os proponentes de blocos possam ser conhecidos antecipadamente. Isso funciona ao embaralhar continuamente um conjunto de compromissos criptográficos que representam os proponentes de blocos candidatos e utilizar a ordem deles para determinar qual validador é selecionado, de forma que apenas os validadores saibam a ordem com antecedência.
 
-<ButtonLink variant="outline-color" to="/roadmap/secret-leader-election">Leia sobre a eleição do líder secreto</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">Leia sobre a eleição do líder secreto</ButtonLink>
 
 ## Progresso atual {#current-progress}
 

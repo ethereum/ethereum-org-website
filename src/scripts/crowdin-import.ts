@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 // Library requires
 const i18Config = require("../../i18n.config.json")
 const {
@@ -54,7 +55,7 @@ const argv = require("minimist")(process.argv.slice(2))
  *
  * 4. Execute script:
  *   1. Execute script by running `yarn crowdin-import`
- *   2. If successful, copy `GATSBY_BUILD_LANGS={langs}` output and paste in
+ *   2. If successful, copy `BUILD_LOCALES={langs}` output and paste in
  *      your `.env`, then build site to test results.
  *
  * *Remember: Revert any working changes to this file before committing Crowdin import
@@ -64,7 +65,6 @@ type BucketsList = { [key: string]: Array<number> }
 const USER_OVERRIDE: BucketsList = {
   // FORMAT: lang_code: [bucket_number, bucket_number, ...],
   // EXAMPLE: es: [1, 10, 12, 14],
-
 }
 
 /******************************
@@ -167,7 +167,7 @@ const trackers: TrackerObject = {
  * @param message Any arbitrary message
  * @param optionalParams Any additional arbitrary messages
  */
-const log = (message: any, ...optionalParams: any): void => {
+const log = (message: unknown, ...optionalParams: unknown[]): void => {
   VERBOSE && console.log(message, ...optionalParams)
 }
 
@@ -290,11 +290,7 @@ const scrapeDirectory = (
       copyFileSync(source, jsonDestinationPath)
       // Update .json tracker
       trackers.langs[repoLangCode].jsonCopyCount++
-    } else if (
-      item.endsWith(".md") ||
-      item.endsWith(".svg") ||
-      item.endsWith(".xlsx")
-    ) {
+    } else if (item.endsWith(".md")) {
       const mdDestDirPath: string = join(
         repoRoot,
         "public",
@@ -354,9 +350,8 @@ importSelection.forEach(
     // Initialize working directory and check for existence
     const _path: string = join(crowdinRoot, crowdinLangCode)
     if (!existsSync(_path)) {
-      trackers.langs[
-        repoLangCode
-      ].error = `Path doesn't exist for lang ${crowdinLangCode}`
+      trackers.langs[repoLangCode].error =
+        `Path doesn't exist for lang ${crowdinLangCode}`
       return
     }
     const langLs: Array<string> = readdirSync(_path)
@@ -412,7 +407,7 @@ const langsSummary: string = summary.reduce(
 log("Empty buckets:", trackers.emptyBuckets)
 if (summary.length) {
   console.table(summary)
-  console.log("Langs to test:", `\nGATSBY_BUILD_LANGS=en${langsSummary}`)
+  console.log("Langs to test:", `\nBUILD_LOCALES=en${langsSummary}`)
   console.log("🎉 Crowdin import complete.")
 } else {
   console.warn("Nothing imported, see instruction at top of crowdin-imports.ts")

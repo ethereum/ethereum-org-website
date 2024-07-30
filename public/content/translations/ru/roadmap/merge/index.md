@@ -3,7 +3,7 @@ title: Слияние
 description: Узнайте о слиянии — переходе основной сети Ethereum на доказательство владения.
 lang: ru
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Основная сеть Ethereum использует доказательство владения, но так было не всегда.
 summaryPoint2: Переход от изначального механизма доказательства работы на доказательство владения был назван слиянием.
@@ -11,7 +11,7 @@ summaryPoint3: Под слиянием понимается объединени
 summaryPoint4: Слияние уменьшило потребление энергии Ethereum на ~99,95 %.
 ---
 
-<UpgradeStatus dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Слияние было выполнено 15 сентября 2022 года. Это завершило переход Ethereum к консенсусу на основе доказательства владения с официальным отказом от доказательства работы и сокращением энергопотребления на ~99,95 %.
 </UpgradeStatus>
 
@@ -202,7 +202,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 Вместо этого блоки предлагаются узлами-валидаторами, у которых есть поставленные ЕТН в обмен на право участия в консенсусе. Эти улучшения создали основу для будущих обновлений масштабируемости, включая шардинг.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   Сеть Beacon
 </ButtonLink>
 
@@ -218,7 +218,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 Планы по шардингу быстро развиваются. Но с учетом развития и успеха технологий уровня 2 для масштабирования выполнения транзакций планы, касающиеся шардинга, сместились в сторону поиска наиболее оптимального способа распределения бремени хранения сжатых данных из контрактов свертков. При этом должна сохраняться возможность экспоненциального роста пропускной способности сети. Это было бы невозможно без предварительного перехода на доказательство владения.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Шардинг
 </ButtonLink>
 

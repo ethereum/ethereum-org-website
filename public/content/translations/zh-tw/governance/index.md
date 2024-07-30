@@ -2,7 +2,6 @@
 title: 以太坊管理體系
 description: 以太坊決策方式的簡介。
 lang: zh-tw
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # 以太坊管理體系的簡介 {#introduction}
@@ -33,7 +32,7 @@ _如果沒人擁有以太坊，如何針對以太坊過去和未來的變動，�
 
 _雖然以太坊管理體系在協定層級為鏈下，但許多建立在以太坊上的使用案例，例如去中心化自治組織，都使用鏈上管理體系。_
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   更多去中心化自治組織相關資訊
 </ButtonLink>
 
@@ -59,7 +58,7 @@ _注意：任何人都能參與多個組別，例如，協定開發者可以支�
 
 以太坊管理體系採用一個重要的流程，就是**以太坊改進提案 (EIP)**。 以太坊改進提案是規定以太坊潛在的新功能或流程的標準。 以太坊社群中的每一個人都能建立以太坊改進提案。 如果你有興趣編寫 以太坊改進提案或參與同儕審查和/或管理體系，請參閱：
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   更多以太坊改進提案相關資訊
 </ButtonLink>
 
@@ -75,13 +74,13 @@ _注意：任何人都能參與多個組別，例如，協定開發者可以支�
 
 > 此階段可能產生以下結果：
 
-> - 未來升級網路時會考慮此 以太坊改進提案
+> - 未來升級網路時會考慮此以太坊改進提案
 > - 將請求進行技術變更
 > - 如果非當務之急，或相對於開發工作而言，改善程度不夠顯著，可能會被拒絕
 
 3. **朝最終提案進行迭代：**收到所有利益相關方的回饋意見後，你很可能需要對初始提案進行修改，以提高安全性或更加滿足多種使用者的需求。 當以太坊改進提案納入你認為必須納入的所有變更，你需要再次提供給協定開發者。 之後將進入此流程的下個步驟；或是出現新的問題，提案必須再迭代一輪。
 
-4. **網路升級中納入以太坊改進提案**：假設以太坊改進提案已核准、測試及實作，以太坊改進提案會被安排為網路升級的一部分。 由於網路升級的協調成本很高（每個人需同步升級)，升級通常會將以太坊改進提案綁搭在一起。
+4. **網路升級中納入以太坊改進提案**：假設以太坊改進提案已核准、測試及實作，以太坊改進提案會被安排為網路升級的一部分。 由於網路升級的協調成本很高（每個人需同步升級），升級通常會將以太坊改進提案綁搭在一起。
 
 5. **網路升級啟動**：啟動網路升級後，以太坊改進提案將能在以太坊網路上線。 _注意：網路升級通常會先在測試網上啟動，之後才在以太坊主網上啟動。_
 
@@ -121,7 +120,7 @@ _注意：任何人都能參與多個組別，例如，協定開發者可以支�
 
 實行去中心化自治組織分叉是因為 [2016 DAO 攻擊](https://www.coindesk.com/understanding-dao-hack-journalists)，[去中心化自治組織](/glossary/#dao)合約不夠安全，被駭客榨取超過 360 萬以太幣。 使用分叉後，資金從這份有缺陷的合約轉移到新的合約，當時因駭客攻擊而損失資金的人，後來都拿回了資金。
 
-這個做法是以太坊社群投票的結果。 當時，任何以太幣持有者都能透過[投票平台](http://v1.carbonvote.com/)上的交易來投票。 許多人支持分叉的決定，投票率超過 85%。
+這個做法是以太坊社群投票的結果。 任何ETH持有者都能投票藉由交易於一[投票平台](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). 許多人支持分叉的決定，投票率超過 85%。
 
 要注意的是，雖然協定當時利用分叉轉危為安，但投票在決定分叉時所佔的重要性，仍存在爭議，原因如下：
 
@@ -155,7 +154,7 @@ _注意：任何人都能參與多個組別，例如，協定開發者可以支�
 
 2022 年 9 月 15 日，信標鏈與以太坊執行層完成合併，這項合併當時是[巴黎網路升級](/history/#paris)的一部分。 提案 [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) 從「最後召集」變成「最終確定」，轉變成權益證明機制。
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   合併案的相關細節
 </ButtonLink>
 
@@ -175,9 +174,9 @@ _注意：任何人都能參與多個組別，例如，協定開發者可以支�
 
 以太坊管理體系的定義並不嚴謹。 不同社群參與者對其看法不一。 其中包括：
 
-- [區塊鏈管理體系筆記](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [區塊鏈治理筆記](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [以太坊管理體系如何運作？](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [以太坊管理體系如何運作](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [以太坊核心開發者為何？](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [管理體系，第二部分：金權政治仍舊令人搖頭](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [跳脫貨幣投票管理體系](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [管理體系，第二部分：統治階級仍舊令人搖頭](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [跳脫代幣投票治理體系](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_

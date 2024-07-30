@@ -27,11 +27,11 @@ Gelecekteki protokol yükseltmelerini mi arıyorsunuz? [Ethereum yol haritasınd
 
 ## 2023 {#2023}
 
-### Şanghay {#shanghai}
+### Şanghay-Capella ("Shapella") {#shapella}
 
-<NetworkUpgradeSummary name="shanghai" />
+<NetworkUpgradeSummary name="shapella" />
 
-#### Özet {#shanghai-summary}
+#### Şanghay özeti {#shanghai-summary}
 
 Şanghay yükseltmesi, hisselemede çekimlerini yürütüm katmanına getirdi. Bu, Capella yükseltmesiyle birlikte blokların çekim işlemlerini kabul etmesi sağladı; bu da, paydaşların ETH'lerini İşaret Zincirinden yürütüm katmanına çekmelerine olanak tanıyor.
 
@@ -49,13 +49,7 @@ Gelecekteki protokol yükseltmelerini mi arıyorsunuz? [Ethereum yol haritasınd
 
 - [Şanghay güncellemesinin spesifikasyonunu okuyun](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
----
-
-### Capella {#capella}
-
-<NetworkUpgradeSummary name="capella" />
-
-#### Özet {#capella-summary}
+#### Capella özeti {#capella-summary}
 
 Capella yükseltmesi, fikir birliği katmanındaki (İşaret Zinciri) en büyük 3. büyük yükseltmeydi ve hisseleme çekimlerini mümkün kıldı. Capella, Şanghay yürütüm katmanı yükseltmesi ile eş zamanlı gerçekleşti ve hisseleme çekim işlevselliğini aktif hale getirdi.
 
@@ -226,7 +220,7 @@ Berlin yükseltmesi, belirli Ethereum Sanal Makinesi eylemleri için optimize ed
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   İşaret Zinciri
 </DocLink>
 
@@ -242,7 +236,7 @@ Hisseleme yatırma sözleşmesi, Ethereum ekosistemine [hisselemeyi](/glossary/#
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Stake etme
 </DocLink>
 
@@ -512,6 +506,6 @@ Dr. Gavin Wood tarafından yazılan Sarı Kağıt, Ethereum protokolünün tekni
 
 Projenin 2015'teki lansmanından önce, Ethereum'un kurucusu Vitalik Buterin tarafından 2013'te yayımlanan tanıtım yazısıdır.
 
-<DocLink to="/whitepaper/">
+<DocLink href="/whitepaper/">
   Tanıtım belgesi
 </DocLink>

@@ -49,7 +49,7 @@ Ipinapayo naming i-refresh mo ang tool para sa pagbawi pagkalipas ng ilang minut
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Gusto mong magbasa pa?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Tingnan ang iba pa naming gabay
   </ButtonLink>
 </InfoBanner>

@@ -4,7 +4,7 @@ description: Havuzlanmış ETH faiz getirisi elde etmeye nasıl başlanacağına
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: Gergedan Leslie bulutlarda dalgalanıyor.
 sidebarDepth: 2
 summaryPoints:
@@ -78,7 +78,7 @@ Kilitleme çekimleri Nisan 2023'teki Shanghai/Capella yükseltmesinde uygulanmı
 
 Doğrulayıcılar ayrıca bir doğrulayıcı olarak tamamen çıkabilir, bu da kalan ETH bakiyelerinin çekim için kilidini kaldıracaktır. Bir yürütme çekim adresi sağlamış ve çıkış sürecini tamamlamış adresler sıradaki doğrulayıcı süpürmesinde çekim adresine tüm bakiyelerini alacaklardır.
 
-<ButtonLink to="/staking/withdrawals/">Hisseleme para çekmeleri hakkında daha fazlası</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Hisseleme para çekmeleri hakkında daha fazlası</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Kesik yersem ne olur?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

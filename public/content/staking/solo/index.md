@@ -4,7 +4,7 @@ description: An overview of how to get started solo staking your ETH
 lang: en
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Leslie the rhino on her own computer chip.
 sidebarDepth: 2
 summaryPoints:
@@ -190,7 +190,7 @@ Once withdrawal credentials are set, reward payments (accumulated ETH over the i
 
 To unlock and receive your entire balance back you must also complete the process of exiting your validator.
 
-<ButtonLink to="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
 </ExpandableCard>
 
 ## Further reading {#further-reading}

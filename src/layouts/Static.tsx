@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { Box, chakra, Flex, type HeadingProps, Icon } from "@chakra-ui/react"
+import { Box, Flex, type HeadingProps, Icon } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
@@ -7,9 +7,11 @@ import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import Callout from "@/components/Callout"
 import Contributors from "@/components/Contributors"
+import DevconGrantsBanner from "@/components/DevconGrantsBanner"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
+import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { HubHero } from "@/components/Hero"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import Link from "@/components/Link"
@@ -26,15 +28,15 @@ import MeetupList from "@/components/MeetupList"
 import Text from "@/components/OldText"
 import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
+import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import Translation from "@/components/Translation"
 import TranslationChartImage from "@/components/TranslationChartImage"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 
 import { getEditPath } from "@/lib/utils/editPath"
-import { getLocaleTimestamp } from "@/lib/utils/time"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import GuideHeroImage from "@/public/heroes/guides-hub-hero.jpg"
+import GuideHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />
@@ -49,22 +51,17 @@ const Heading4 = (props: HeadingProps) => (
   <MdHeading4 fontSize={{ base: "md", md: "xl" }} {...props} />
 )
 
-const ListItem = (props: ChildOnlyProp) => (
-  <chakra.li color="text300" {...props} />
-)
-
 // Static layout components
 export const staticComponents = {
-  a: Link,
   h1: Heading1,
   h2: Heading2,
   h3: Heading3,
   h4: Heading4,
-  li: ListItem,
   Callout,
   Contributors,
   EnergyConsumptionChart,
   GlossaryDefinition,
+  GlossaryTooltip,
   Icon,
   Link,
   Logo,
@@ -79,7 +76,7 @@ export const staticComponents = {
 type StaticLayoutProps = ChildOnlyProp &
   Pick<
     MdPageContent,
-    "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
+    "slug" | "tocItems" | "lastEditLocaleTimestamp" | "contentNotTranslated"
   > & {
     frontmatter: StaticFrontmatter
   }
@@ -88,15 +85,17 @@ export const StaticLayout = ({
   frontmatter,
   slug,
   tocItems,
-  lastUpdatedDate,
+  lastEditLocaleTimestamp,
   contentNotTranslated,
 }: StaticLayoutProps) => {
-  const { locale } = useRouter()
+  const { locale, asPath } = useRouter()
 
   const absoluteEditPath = getEditPath(slug)
 
   return (
     <Box w="full">
+      <TranslatathonBanner pathname={asPath} />
+      <DevconGrantsBanner pathname={asPath} />
       <Flex
         justifyContent="space-between"
         w="full"
@@ -106,7 +105,7 @@ export const StaticLayout = ({
         pt={{ base: 8, lg: 16 }}
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
-        <Box>
+        <Box w="full">
           {slug === "/guides/" ? (
             <HubHero
               heroImg={GuideHeroImage}
@@ -117,12 +116,13 @@ export const StaticLayout = ({
           ) : (
             <>
               <Breadcrumbs slug={slug} mb="8" />
+
               <Text
                 color="text200"
                 dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
               >
                 <Translation id="page-last-updated" />:{" "}
-                {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
+                {lastEditLocaleTimestamp}
               </Text>
             </>
           )}

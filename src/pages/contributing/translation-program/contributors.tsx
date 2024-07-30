@@ -12,7 +12,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-import { AllTimeData, BasePageProps, Unpacked } from "@/lib/types"
+import { BasePageProps, CostLeaderboardData, Lang } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -24,31 +24,29 @@ import PageMetadata from "@/components/PageMetadata"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import allTimeData from "../../../data/translation-reports/alltime/alltime-data.json"
 
-type TranslatorDataType = {
-  user: {
-    username: Unpacked<AllTimeData["data"]>["user"]["username"]
-    fullName: Unpacked<AllTimeData["data"]>["user"]["fullName"]
-  }
-}
-
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/contributing/translation-program/contributors"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
@@ -61,45 +59,14 @@ const ContentHeading = (props: HeadingProps) => (
 )
 
 const Contributors = () => {
-  const { t } = useTranslation([
-    "page-contributing-translation-program-contributors",
-    "page-languages",
-  ])
+  const { t } = useTranslation(
+    "page-contributing-translation-program-contributors"
+  )
   const router = useRouter()
 
-  // TODO: Remove specific user checks once Acolad has updated their usernames
-  const translatorData = (
-    allTimeData as AllTimeData
-  ).data.flatMap<TranslatorDataType>(
-    // use flatMap to get cleaner object types withouts nulls
-    (item) => {
-      const user = item.user
-
-      const userName = user.username
-
-      const fullName = user.fullName
-
-      return userName !== "ethdotorg" &&
-        !userName.includes("LQS_") &&
-        !userName.includes("REMOVED_USER") &&
-        !userName.includes("Aco_") &&
-        !fullName.includes("Aco_") &&
-        !userName.includes("Acc_") &&
-        !fullName.includes("Acc_") &&
-        userName !== "Finnish_Sandberg" &&
-        userName !== "Norwegian_Sandberg" &&
-        userName !== "Swedish_Sandberg"
-        ? [
-            {
-              user: {
-                username: userName,
-                fullName: fullName,
-              },
-            },
-          ]
-        : []
-    }
-  )
+  const translators = (allTimeData as CostLeaderboardData[])
+    .map((item: CostLeaderboardData) => item.username)
+    .filter((item) => item.length > 0)
 
   return (
     <Flex direction="column" align="center" w="full">
@@ -130,7 +97,7 @@ const Contributors = () => {
             {t(
               "page-contributing-translation-program-contributors-number-of-contributors"
             )}{" "}
-            {translatorData.length}
+            {translators.length}
           </Text>
         </ContentHeading>
         <Text>
@@ -149,9 +116,9 @@ const Contributors = () => {
           )}
         </Text>
         <Text>
-          {t("page-languages:page-languages-interested")}{" "}
-          <InlineLink to="/contributing/translation-program/">
-            {t("page-languages:page-languages-learn-more")}
+          {t("common:page-languages-interested")}{" "}
+          <InlineLink href="/contributing/translation-program/">
+            {t("common:page-languages-learn-more")}
           </InlineLink>
           .
         </Text>
@@ -163,23 +130,20 @@ const Contributors = () => {
           {t("page-contributing-translation-program-contributors-thank-you")}
         </ContentHeading>
         <SimpleGrid as={UnorderedList} columns={[1, 2, 3, 4, 6]} ms="1.45rem">
-          {translatorData
-            .map(({ user }) => user.username)
+          {translators
             .sort((user1, user2) =>
               user1.toLowerCase().localeCompare(user2.toLowerCase())
             )
-            .map((user) => {
-              return (
-                <ListItem key={user} color="text300">
-                  {user}
-                </ListItem>
-              )
-            })}
+            .map((user) => (
+              <ListItem key={user} color="text300">
+                {user}
+              </ListItem>
+            ))}
         </SimpleGrid>
         <Text>
-          {t("page-languages:page-languages-interested")}{" "}
-          <InlineLink to="/contributing/translation-program/">
-            {t("page-languages:page-languages-learn-more")}
+          {t("common:page-languages-interested")}{" "}
+          <InlineLink href="/contributing/translation-program/">
+            {t("common:page-languages-learn-more")}
           </InlineLink>
           .
         </Text>

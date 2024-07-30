@@ -5,7 +5,7 @@ lang: ro
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: O reprezentare a votului unui DAO în favoarea unei propuneri.
 summaryPoint1: Comunități deținute de membri, fără o conducere centralizată.
 summaryPoint2: Un mod sigur de a colabora cu persoane necunoscute pe internet.
@@ -74,7 +74,7 @@ Temelia unei organizaţii DAO este reprezentată de contractul său inteligent. 
 
 Acest lucru este posibil deoarece contractele inteligente nu pot fi falsificate odată ce ajung live pe Ethereum. Nu puteţi pur și simplu să modificaţi codul (regulile organizaţiei DAO) fără ca lumea să observe, pentru că totul este public.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Mai multe despre contractele inteligente
 </DocLink>
 

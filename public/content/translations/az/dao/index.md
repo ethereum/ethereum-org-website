@@ -5,7 +5,7 @@ lang: az
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Bir təklif üzrə səsvermədə iştirak edən DAO-nun təqdimatı.
 summaryPoint1: Mərkəzləşdirilmiş rəhbərliyi olmayan üzvlərə məxsus icmalar.
 summaryPoint2: İnternetdən kənar şəxslərlə əməkdaşlığın təhlükəsiz yolu.
@@ -50,7 +50,7 @@ DAO-nun əsası təşkilatın qaydalarını müəyyən edən və qrupun xəzinə
 
 Bu mümkündür, çünki ağıllı müqavilələr Ethereum-da yayımlandıqdan sonra saxtakarlığa davamlıdır. İnsanların fərqinə varmadan sadəcə qanunu (DAO qaydalarını) redaktə edə bilməzsiniz, çünki hər şey açıqdır.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Ağıllı müqavilələr haqqında daha çox
 </DocLink>
 

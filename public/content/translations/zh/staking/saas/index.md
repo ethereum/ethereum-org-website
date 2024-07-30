@@ -4,7 +4,7 @@ description: 简要介绍如何开始以太币联合质押
 lang: zh
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: 莱斯利犀牛在云中漂浮。
 sidebarDepth: 2
 summaryPoints:
@@ -78,7 +78,7 @@ BLS 提款密钥用于签署一次性信息，声明质押奖励和退出的资�
 
 验证者还能够以验证者身份完全退出，这种情况下，他们剩余的以太币余额将解锁以供提取。 提供执行提款地址并完成退出流程的帐户将在下次验证者扫描时在提供的提款地址收到其全部余额。
 
-<ButtonLink to="/staking/withdrawals/">更多关于质押提款的信息</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">更多关于质押提款的信息</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="如果我遭到罚没，会发生什么？" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

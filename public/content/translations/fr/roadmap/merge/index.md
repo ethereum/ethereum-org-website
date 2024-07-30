@@ -3,14 +3,15 @@ title: La Fusion
 description: En savoir plus sur La Fusion - quand le réseau principal Ethereum adopte la preuve d'enjeu.
 lang: fr
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
+alt:
 summaryPoint1: Le réseau principal Ethereum utilise la preuve d'enjeu, mais cela n'a pas toujours été le cas.
-summaryPoint2: La mise à niveau du mécanisme original de preuve de travail à celui de la preuve d'enjeu s'appelle La Fusion.
+summaryPoint2: La mise à niveau du mécanisme original de preuve de travail à celui de la preuve d'enjeu a été appelé La Fusion.
 summaryPoint3: La Fusion fait référence à la fusion du réseau principal original Ethereum avec une blockchain distincte de preuve d'enjeu appelée la Chaîne phare, qui existe maintenant sous la forme d'une chaîne unique.
 summaryPoint4: La Fusion a réduit la consommation d'énergie d'Ethereum de ~99,95 %.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   La Fusion a été réalisée le 15 septembre 2022. Cette étape a permis à Ethereum de passer à un consensus de preuve d'enjeu, de rendre officiellement obsolète la preuve de travail et de réduire sa consommation d'énergie d'environ 99,95 %.
 </UpgradeStatus>
 
@@ -199,9 +200,9 @@ Les mises à niveau Ethereum sont plus ou moins interdépendantes. Alors résumo
 
 La Fusion représente l'adoption formelle de la Chaîne phare comme nouvelle couche de consensus pour la couche d'exécution sur le réseau principal d'origine. Depuis La Fusion, les validateurs sont affectés au réseau principal sécurisé d'Ethereum et le minage par [preuve de travail](/developers/docs/consensus-mechanisms/pow/) n'est plus un moyen valide de production de blocs.
 
-Les blocs sont dès lors proposés par validation des nœuds qui ont misés l'ETH en échange du droit de participer au consensus. Ces mises à niveau permettent de préparer le terrain pour de futures améliorations d'évolutivité, y compris la fragmentation.
+Les blocs sont dès lors proposés par validation des nœuds qui ont misé l'ETH en échange du droit de participer au consensus. Ces mises à niveau permettent de préparer le terrain pour de futures améliorations d'évolutivité, y compris la fragmentation.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   La Chaîne phare
 </ButtonLink>
 
@@ -217,7 +218,7 @@ Initialement, l'objectif était de travailler sur la fragmentation avant la Fusi
 
 Les plans liés à la fragmentation évoluent rapidement, mais compte tenu du développement et du succès rencontré par les technologies de couche 2 visant à augmenter l'évolutivité de l'exécution des transactions, ces plans de fragmentation ont été modifiés afin de trouver la meilleure manière de répartir le poids lié au stockage des données d'appel comprimées émanant des contrats roll-up et de permettre la croissance exponentielle du réseau. Cela ne serait pas possible sans opérer d'abord une transition vers le système de preuve d'enjeu.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Fragmentation
 </ButtonLink>
 

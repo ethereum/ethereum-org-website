@@ -4,7 +4,7 @@ description: Pangkalahatang-ideya tungkol sa kung paano magsimula sa pooled stak
 lang: fil
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: Lumalangoy sa pool ang rhino na si Leslie.
 sidebarDepth: 2
 summaryPoints:
@@ -68,7 +68,7 @@ Ngayon na! Ang Shanghai/Capella network upgrade ay nangyari noong Abril 2023, at
 
 Binibigyang-daan naman ng mga pool na gumagamit ng ERC-20 staking token ang mga user na i-trade ang token na ito sa open market. Kung gayon, maibebenta mo ang iyong staking position at makakapag-"withdraw" ka nang hindi inaalis ang EH sa staking contract.
 
-<ButtonLink to="/staking/withdrawals/">Iba pang detalye tungkol sa mga pag-withdraw sa staking</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Iba pang detalye tungkol sa mga pag-withdraw sa staking</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Iba ba ito sa pag-stake sa aking exchange?">

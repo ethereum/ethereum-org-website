@@ -50,6 +50,7 @@ lang: zh-tw
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [以太掃瞄器（Etherscan）](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### 水龍頭
 
@@ -60,7 +61,6 @@ lang: zh-tw
 - [Alchemy Sepolia 水龍頭](https://sepoliafaucet.com/)
 - [Infura Sepolia 水龍頭](https://www.infura.io/faucet)
 - [Chainstack Sepolia 水龍頭](https://faucet.chainstack.com/sepolia-faucet)
-- [測試網水龍頭 | Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli_（長期支援）_ {#goerli}
 
@@ -76,7 +76,8 @@ Goerli 是測試驗證和質押的測試網。 Goerli 測試網對想要運行�
 
 - [官網](https://goerli.net/)
 - [GitHub](https://github.com/eth-clients/goerli)
-- [以太掃瞄器（Etherscan）](https://goerli.etherscan.io)
+- [Etherscan](https://goerli.etherscan.io)
+- [Blockscout](https://eth-goerli.blockscout.com/)
 
 ##### 水龍頭
 

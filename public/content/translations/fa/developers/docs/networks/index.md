@@ -60,7 +60,6 @@ lang: fa
 - [فاست Alchemy Sepolia](https://sepoliafaucet.com/)
 - [فاست Infura Sepolia](https://www.infura.io/faucet)
 - [فاست Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
-- [فاست Testnet |‏ Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli_(پشتیبانی طولانی مدت)_ {#goerli}
 

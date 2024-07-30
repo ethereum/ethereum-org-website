@@ -4,7 +4,7 @@ description: Un regard détaillé sur l'algorithme Dagger-Hashimoto.
 lang: fr
 ---
 
-Dagger-Hashimoto représentait l'implémentation et la spécification originales de recherche pour l'algorithme de minage d'Ethereum. Dagger-Hashimoto a été remplacé par [Ethash](#ethash). Le minage a été complètement arrêté avec [La Fusion](/updates/merge) du 15 septembre 2022. Depuis lors, Ethereum a été sécurisé en utilisant à la place un mécanisme de [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos). Cette page a un intérêt historique - l'information fournie n'est plus pertinente depuis La Fusion Ethereum.
+Dagger-Hashimoto représentait l'implémentation et la spécification originales de recherche pour l'algorithme de minage d'Ethereum. Dagger-Hashimoto a été remplacé par [Ethash](#ethash). Le minage a été complètement arrêté avec [La Fusion](/roadmap/merge/) du 15 septembre 2022. Depuis lors, Ethereum a été sécurisé en utilisant à la place un mécanisme de [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos). Cette page a un intérêt historique - l'information fournie n'est plus pertinente depuis La Fusion Ethereum.
 
 ## Prérequis {#prerequisites}
 
@@ -143,7 +143,7 @@ L'algorithme utilisé pour générer l'ensemble des DAG utilisés pour calculer 
 def get_prevhash(n):
     from pyethereum.blocks import GENESIS_PREVHASH
     from pyethereum import chain_manager
-    if num <= 0:
+    if n <= 0:
         return hash_to_int(GENESIS_PREVHASH)
     else:
         prevhash = chain_manager.index.get_block_by_number(n - 1)
@@ -186,7 +186,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
         shifted_A = hash_output_A >> i
         transaction = shifted_A % len(list_of_transactions)
         txid_mix ^= list_of_transactions[transaction] << i
-    return txid_max ^ (nonce << 192)
+    return txid_mix ^ (nonce << 192)
 ```
 
 Malheureusement, bien que Hashimoto soit considéré comme de la RAM en dur, il repose sur l'arithmétique 256-bit, qui présente des frais supplémentaires de calcul considérables. Cependant, Dagger-Hashimoto n'utilise que les 64 bits les moins significatifs lors de l'indexation de son jeu de données pour résoudre ce problème.

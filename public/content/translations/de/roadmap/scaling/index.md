@@ -2,7 +2,7 @@
 title: Ethereum zu skalieren
 description: Rollups fassen Transaktionen off-chain zusammen und senken so die Kosten für den Nutzer. Die Art und Weise, wie Rollups derzeit Daten verwenden, ist jedoch zu teuer und schränkt ein, wie günstig Transaktionen sein können. Proto-Danksharding behebt das.
 lang: de
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "Ethereum-Roadmap"
 template: roadmap
 ---
@@ -34,13 +34,13 @@ Die zweite Stufe der Erweiterung von Blobdaten ist kompliziert, weil sie neue Me
 
 Dieser zweite Schritt ist bekannt unter dem Namen [“Danksharding”](/roadmap/danksharding/). Es wird wahrscheinlich noch einige Jahre dauern, bis es vollständig umgesetzt ist. Danksharding stützt sich auf andere Entwicklungen wie die [Trennung von Blockbildung und Blockvorschlag](/roadmap/pbs) und neue Netzwerkdesigns, die es dem Netzwerk ermöglichen, die Verfügbarkeit von Daten effizient zu bestätigen, indem jeweils einige Kilobyte zufällig abgetastet werden, was als [data availability sampling (DAS)](/developers/docs/data-availability) bekannt ist.
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding/">Mehr zu Danksharding</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding/">Mehr zu Danksharding</ButtonLink>
 
 ## Rollups dezentralisieren {#decentralizing-rollups}
 
 [Rollups](/layer-2) sind bereits dabei, Ethereum zu skalieren. Ein [reichhaltiges Ökosystem von Rollup-Projekten](https://l2beat.com/scaling/tvl) ermöglicht es den Nutzern, schnell und kostengünstig Transaktionen durchzuführen und dabei eine Reihe von Sicherheitsgarantien zu bieten. Rollups wurden jedoch mit zentralisierten Sequenzern (Computer, die die gesamte Transaktionsverarbeitung und -aggregation durchführen, bevor sie an Ethereum übermittelt werden) gebootet. Dies ist anfällig für Zensur, da die Betreiber der Sequenzer sanktioniert, bestochen oder anderweitig kompromittiert werden können. Gleichzeitig unterscheiden sich [Rollups](https://l2beat.com) in der Art und Weise, wie sie die eingehenden Daten validieren. Am besten ist es, wenn die "Prüfer" Betrugs- oder Gültigkeitsnachweise vorlegen, aber noch sind nicht alle Rollups so weit. Selbst die Rollups, die Gültigkeits-/Betrugsnachweise verwenden, nutzen einen kleinen Pool von bekannten Prüfern. Daher besteht der nächste kritische Schritt bei der Skalierung von Ethereum darin, die Verantwortung für den Betrieb von Sequenzern und Prüfern auf mehr Personen zu verteilen.
 
-<ButtonLink variant="outline-color" to="/developers/docs/scaling/">Mehr zu Rollups</ButtonLink>
+<ButtonLink variant="outline-color" href="/developers/docs/scaling/">Mehr zu Rollups</ButtonLink>
 
 ## Aktueller Fortschritt {#current-progress}
 

@@ -2,7 +2,7 @@
 title: Mejorar la experiencia de usuario
 description: "Todavía es demasiado complejo el uso de Ethereum para la mayoría de las personas. Para fomentar la adopción masiva, Ethereum debe reducir drásticamente sus barreras de entrada: los usuarios deben obtener los beneficios del acceso descentralizado, sin permiso y resistente a la censura a Ethereum, pero debe ser tan sencillo como usar una aplicación Web2 tradicional."
 lang: es
-image: /roadmap/roadmap-ux.png
+image: /images/roadmap/roadmap-ux.png
 alt: "Hoja de ruta de Ethereum"
 template: roadmap
 ---
@@ -15,7 +15,7 @@ Las cuentas de Ethereum están protegidas por un par de claves que se utilizan p
 
 La solución a esto es el uso de carteras de contratos inteligentes para interactuar con Ethereum. Las carteras de contratos inteligentes crean formas de proteger las cuentas en caso de pérdida o robo de las claves, suponen oportunidades para una mejor detección y defensa del fraude, y permiten que las carteras obtengan nuevas funciones. Aunque las carteras de contratos inteligentes existen hoy en día, son difíciles de construir porque el protocolo Ethereum necesita soportarlas mejor. Este soporte adicional se conoce como abstracción de cuentas.
 
-<ButtonLink variant="outline-color" to="/roadmap/account-abstraction/">Más información sobre la abstracción de cuentas</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/account-abstraction/">Más información sobre la abstracción de cuentas</ButtonLink>
 
 ## Nodos para todos
 
@@ -23,7 +23,7 @@ Los usuarios que ejecutan nodos no tienen que confiar en terceros para proporcio
 
 Hay varias actualizaciones que simplificarán y reducirán la dependencia de recursos de la ejecución de los nodos. La forma en que se almacenan los datos se cambiará para utilizar una estructura más eficiente en el espacio conocida como **Verkle Tree**. Además, con [sin estado](/roadmap/statelessness) o [vencimiento de datos](/roadmap/statelessness/#data-expiry), los nodos de Ethereum no necesitarán almacenar una copia de todos los datos del estado de Ethereum, lo que reducirá drásticamente los requisitos de espacio en el disco duro. [Los nodos ligeros](/developers/docs/nodes-and-clients/light-clients/) ofrecerán muchos beneficios de ejecutar un nodo completo, pero se pueden ejecutar fácilmente en teléfonos móviles o dentro de simples aplicaciones de navegador.
 
-<ButtonLink variant="outline-color" to="/roadmap/verkle-trees/">Más información acerca de los árboles Verkle</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/verkle-trees/">Más información acerca de los árboles Verkle</ButtonLink>
 
 Con estas actualizaciones, las barreras para ejecutar un nodo se reducen efectivamente a cero. Los usuarios se beneficiarán de un acceso seguro y sin permiso a Ethereum sin tener que sacrificar un considerable espacio en el disco o la CPU de su ordenador o teléfono móvil, ni tampoco tendrán que depender de terceros para acceder a los datos o a la red cuando utilicen aplicaciones.
 

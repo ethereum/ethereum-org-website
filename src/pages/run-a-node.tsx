@@ -14,7 +14,7 @@ import {
   type Icon as ChakraIcon,
 } from "@chakra-ui/react"
 
-import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import { Button, ButtonLink } from "@/components/Buttons"
 import Emoji from "@/components/Emoji"
@@ -43,17 +43,18 @@ import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { InfoGrid } from "@/layouts/Staking"
-import community from "@/public/enterprise-eth.png"
-import hackathon from "@/public/hackathon_transparent.png"
-import impact from "@/public/impact_transparent.png"
-import Dappnode from "@/public/run-a-node/dappnode.svg"
-import Dapptap from "@/public/run-a-node/dapptap.svg"
-import ethereumInside from "@/public/run-a-node/ethereum-inside.png"
-import Terminal from "@/public/run-a-node/terminal.svg"
-import leslie from "@/public/upgrades/upgrade_rhino.png"
+import community from "@/public/images/enterprise-eth.png"
+import hackathon from "@/public/images/hackathon_transparent.png"
+import impact from "@/public/images/impact_transparent.png"
+import Dappnode from "@/public/images/run-a-node/dappnode.svg"
+import Dapptap from "@/public/images/run-a-node/dapptap.svg"
+import ethereumInside from "@/public/images/run-a-node/ethereum-inside.png"
+import Terminal from "@/public/images/run-a-node/terminal.svg"
+import leslie from "@/public/images/upgrades/upgrade_rhino.png"
 
 const Divider = () => <Box my="16" w="10%" h="1" bg="homeDivider" />
 
@@ -331,15 +332,19 @@ type RunANodeCard = {
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/run-a-node")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
@@ -360,16 +365,6 @@ const RunANodePage = () => {
           eventCategory: "run a node hero buttons",
           eventAction: "click",
           eventName: "learn more",
-        },
-      },
-      {
-        content: t("page-run-a-node-hero-cta-2"),
-        toId: "getting-started",
-        variant: "outline",
-        matomo: {
-          eventCategory: "run a node hero buttons",
-          eventAction: "click",
-          eventName: "lets dive in",
         },
       },
     ],
@@ -446,6 +441,7 @@ const RunANodePage = () => {
       <PageMetadata
         title={t("page-run-a-node-title")}
         description={t("page-run-a-node-meta-description")}
+        image="/images/run-a-node/ethereum-inside.png"
       />
       <HeroContainer>
         <Box pb="8">
@@ -490,7 +486,9 @@ const RunANodePage = () => {
           background="runNodeGradient2"
           forceOpen
         >
-          <Text>{t("page-run-a-node-who-copy-1")}</Text>
+          <Text>
+            <Translation id="page-run-a-node:page-run-a-node-who-copy-1" />
+          </Text>
           <Text>{t("page-run-a-node-who-copy-2")}</Text>
           <Text>{t("page-run-a-node-who-copy-3")}</Text>
           <StrongParagraph>
@@ -509,7 +507,7 @@ const RunANodePage = () => {
               contentPreview={preview}
               title={title}
               // TODO: make a11y svgs (using <title>)
-              // @ts-ignore
+              // @ts-expect-error alt does not exist as a valid prop
               alt={alt}
               svg={image}
               key={title}
@@ -543,14 +541,14 @@ const RunANodePage = () => {
                   )}
                 </Text>
               </Text>
-              <InlineLink to="/developers/docs/nodes-and-clients/run-a-node/">
+              <InlineLink href="/developers/docs/nodes-and-clients/run-a-node/">
                 {t("page-run-a-node-getting-started-software-section-1-link")}
               </InlineLink>
             </ColumnFill>
             <ColumnNarrow>
               <Terminal
                 // TODO: make a11y svgs (using <title>)
-                // @ts-ignore
+                // @ts-expect-error alt does not exist as a valid prop
                 alt={t("page-run-a-node-glyph-alt-terminal")}
               />
             </ColumnNarrow>
@@ -560,7 +558,7 @@ const RunANodePage = () => {
             <ColumnNarrow>
               <Dappnode
                 // TODO: make a11y svgs (using <title>)
-                // @ts-ignore
+                // @ts-expect-error alt does not exist as a valid prop
                 alt={t("page-run-a-node-glyph-alt-dappnode")}
               />
             </ColumnNarrow>
@@ -580,13 +578,13 @@ const RunANodePage = () => {
                 {t("page-run-a-node-getting-started-software-section-3a")}
               </Text>
               <Text>
-                {t("page-run-a-node-getting-started-software-section-3b")}
+                <Translation id="page-run-a-node:page-run-a-node-getting-started-software-section-3b" />
               </Text>
             </ColumnFill>
             <ColumnNarrow>
               <Dapptap
                 // TODO: make a11y svgs (using <title>)
-                // @ts-ignore
+                // @ts-expect-error alt does not exist as a valid prop
                 alt={t("page-run-a-node-glyph-alt-phone")}
               />
             </ColumnNarrow>
@@ -617,10 +615,10 @@ const RunANodePage = () => {
               </ul>
             </Box>
             <ButtonContainer>
-              <ButtonLink to="https://shop.dappnode.io/">
+              <ButtonLink href="https://shop.dappnode.io/">
                 {t("page-run-a-node-shop-dappnode")}
               </ButtonLink>
-              <ButtonLink to="https://ava.do/">
+              <ButtonLink href="https://ava.do/">
                 {t("page-run-a-node-shop-avado")}
               </ButtonLink>
             </ButtonContainer>
@@ -659,7 +657,7 @@ const RunANodePage = () => {
           <SvgTitle>
             <HardwareGlyphIcon
               // TODO: make a11y svgs (using <title>)
-              // @ts-ignore
+              // @ts-expect-error alt does not exist as a valid prop
               alt={t("page-run-a-node-glyph-alt-hardware")}
             />
             <H3>{t("page-run-a-node-build-your-own-hardware-title")}</H3>
@@ -731,7 +729,7 @@ const RunANodePage = () => {
           <SvgTitle>
             <DownloadGlyphIcon
               // TODO: make a11y svgs (using <title>)
-              // @ts-ignore
+              // @ts-expect-error alt does not exist as a valid prop
               alt={t("page-run-a-node-glyph-alt-software")}
             />
             <H3>{t("page-run-a-node-build-your-own-software")}</H3>
@@ -750,7 +748,7 @@ const RunANodePage = () => {
                 </Text>
               </Box>
               <ButtonContainer>
-                <ButtonLink to="https://docs.dappnode.io">
+                <ButtonLink href="https://docs.dappnode.io">
                   {t("page-run-a-node-build-your-own-software-option-1-button")}
                 </ButtonLink>
               </ButtonContainer>
@@ -774,7 +772,7 @@ const RunANodePage = () => {
               </Box>
               <ButtonContainer>
                 <ButtonLink
-                  to="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
+                  href="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
                   variant="outline"
                 >
                   <Text as="code">
@@ -798,11 +796,15 @@ const RunANodePage = () => {
             <ButtonContainer>
               <ButtonLink
                 leftIcon={<FaDiscord />}
-                to="https://discord.gg/c28an8dA5k"
+                href="https://discord.com/invite/dappnode"
               >
                 {t("page-run-a-node-community-link-1")}
               </ButtonLink>
-              <ButtonLink to="/community/online/" variant="outline">
+              <ButtonLink
+                href="/community/online/"
+                variant="outline"
+                isSecondary
+              >
                 {t("page-run-a-node-community-link-2")}
               </ButtonLink>
             </ButtonContainer>
@@ -822,19 +824,19 @@ const RunANodePage = () => {
         <H2>{t("page-run-a-node-further-reading-title")}</H2>
         <ul>
           <li>
-            <InlineLink to="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
+            <InlineLink href="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
               {t("page-run-a-node-further-reading-1-link")}
             </InlineLink>{" "}
             -{" "}
             <Text as="i">{t("page-run-a-node-further-reading-1-author")}</Text>
           </li>
           <li>
-            <InlineLink to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest/">
+            <InlineLink href="https://ethereum-on-arm-documentation.readthedocs.io/en/latest/">
               {t("page-run-a-node-further-reading-2-link")}
             </InlineLink>
           </li>
           <li>
-            <InlineLink to="https://vitalik.eth.limo/general/2021/05/23/scaling.html">
+            <InlineLink href="https://vitalik.eth.limo/general/2021/05/23/scaling.html">
               {t("page-run-a-node-further-reading-3-link")}
             </InlineLink>{" "}
             -{" "}
@@ -862,14 +864,14 @@ const RunANodePage = () => {
           <H2>{t("page-run-a-node-staking-title")}</H2>
           <Text>{t("page-run-a-node-staking-description")}</Text>
           <ButtonContainer>
-            <ButtonLink to="/staking/">
+            <ButtonLink href="/staking/">
               {t("page-run-a-node-staking-link")}
             </ButtonLink>
           </ButtonContainer>
         </Column>
       </StakingCalloutContainer>
       <Content>
-        <H3 id="plan-on-staking">
+        <H3 id="plan-on-staking" display="flex" alignItems="center">
           <Emoji text=":cut_of_meat:" fontSize="2em" me="4" />
           {t("page-run-a-node-staking-plans-title")}
         </H3>
@@ -878,27 +880,18 @@ const RunANodePage = () => {
         </Text>
         <Text>
           {t("page-run-a-node-staking-plans-ethstaker-link-description")} -{" "}
-          <InlineLink to="https://youtu.be/C2wwu1IlhDc">
+          <InlineLink href="https://youtu.be/C2wwu1IlhDc">
             {t("page-run-a-node-staking-plans-ethstaker-link-label")}
           </InlineLink>
         </Text>
-        <H3 id="rasp-pi">
+        <H3 id="rasp-pi" display="flex" alignItems="center">
           <Emoji text=":pie:" fontSize="2em" me="4" />
           {t("page-run-a-node-rasp-pi-title")}
         </H3>
         <Text>{t("page-run-a-node-rasp-pi-description")}</Text>
         <ul>
           <li>
-            <InlineLink to="https://docs.dappnode.io/user/quick-start/Core/installation#arm">
-              {t("page-run-a-node-rasp-pi-note-1-link")}
-            </InlineLink>{" "}
-            -{" "}
-            <Text as="i">
-              {t("page-run-a-node-rasp-pi-note-1-description")}
-            </Text>
-          </li>
-          <li>
-            <InlineLink to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
+            <InlineLink href="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
               {t("page-run-a-node-rasp-pi-note-2-link")}
             </InlineLink>{" "}
             -{" "}
@@ -907,7 +900,7 @@ const RunANodePage = () => {
             </Text>
           </li>
           <li>
-            <InlineLink to="/developers/tutorials/run-node-raspberry-pi">
+            <InlineLink href="/developers/tutorials/run-node-raspberry-pi">
               {t("page-run-a-node-rasp-pi-note-3-link")}
             </InlineLink>{" "}
             -{" "}

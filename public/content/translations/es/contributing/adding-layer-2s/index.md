@@ -78,7 +78,7 @@ _No consideramos que otras soluciones de escalabilidad que no utilicen Ethereum 
 
 **Enlaces a dapps en el ecosistema de capa 2**
 
-- Queremos ser capaces de proporcionar información sobre lo que los usuarios pueden llegar a hacer en esta capa 2. (p. ej., https://portal.arbitrum.one/, https://www.optimism.io/apps/all)
+- Queremos ser capaces de proporcionar información sobre lo que los usuarios pueden llegar a hacer en esta capa 2. (p. ej., https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
 **Lista de contratos de tókenes**
 
@@ -92,6 +92,6 @@ _No consideramos que otras soluciones de escalabilidad que no utilicen Ethereum 
 
 Si quiere añadir una capa 2 a ethereum.org, cree una incidencia en GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Crear una incidencia
 </ButtonLink>

@@ -3,14 +3,14 @@ title: Hoja de ruta de Ethereum
 description: El camino hacia una mayor escalabilidad, seguridad y sostenibilidad para Ethereum.
 lang: es
 template: roadmap
-image: /heroes/roadmap-hub-hero.jpg
+image: /images/heroes/roadmap-hub-hero.jpg
 alt: "Hoja de ruta de Ethereum"
 summaryPoints:
 buttons:
   - label: Actualizaciones futuras
     toId: '¿Qué cambios están pendientes?'
   - label: Actualizaciones anteriores
-    to: /history/
+    href: /history/
     variant: borrador
 ---
 
@@ -24,28 +24,28 @@ La hoja de ruta de Ethereum describe las mejoras específicas que se harán en e
 
 <CardGrid>
   <RoadmapActionCard
-    to="/roadmap/scaling"
+    href="/roadmap/scaling"
     title="Transacciones más baratas"
     image="scaling"
     description="Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems."
     buttonText="More on reducing fees"
   />
   <RoadmapActionCard
-    to="/roadmap/security"
+    href="/roadmap/security"
     title="Mayor seguridad"
     image="security"
     description="Ethereum is already very secure but it can be made even stronger, ready to withstand all kinds of attack far into the future."
     buttonText="More on security"
   />
   <RoadmapActionCard
-    to="/roadmap/user-experience"
+    href="/roadmap/user-experience"
     title="Mejor experiencia de usuario"
     image="userExperience"
     description="More support for smart contract wallets and light-weight nodes will make using Ethereum simpler and safer."
     buttonText="More on user experience"
   />
   <RoadmapActionCard
-    to="/roadmap/future-proofing"
+    href="/roadmap/future-proofing"
     title="Futura prevención de errores"
     image="futureProofing"
     description="Ethereum researchers and developers are solving tomorrow's problems today, readying the network for future generations."
@@ -61,7 +61,7 @@ Ethereum se actualiza periódciamente para mejorar su escalabilidad, seguridad o
 
 La hoja de ruta es principalmente el resultado de años de trabajo de investigadores y desarrolladores, dado que el protocolo es muy técnico. No obstante cualquier persona motivada puede participar. Las ideas usualmente empiezan como discusiones en un foro del estilo [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://ethereum-magicians.org/) o el servidor de Discord de Eth. Pueden haber respuestas a nuevos puntos flacos que se descubren, sugerencias de organizaciones que trabajan en la capa de aplicaciones (como DApps e intercambios) o disuasiones conocidas para los usuarios finales (como costes o velocidades de transacción). Cuando estas ideas maduren, se pueden proponer como [propuestas de mejora de Ethereum o EIP] (https://eips.ethereum.org/). Todo esto se hace en público para que cualquier persona de la comunidad pueda intervenir en cualquier momento.
 
-[Más información sobre la gobernanza de Ethereum](/gobernanza/)
+[Más información sobre la gobernanza de Ethereum](/governance/)
 
 </RoadmapImageContent>
 

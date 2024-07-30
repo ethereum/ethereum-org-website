@@ -5,7 +5,7 @@ lang: kn
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: ಹೊಲೊಗ್ರಾಮ್ ಮೂಲಕ ಇಥ್ ಲೋಗೋವನ್ನು ಪ್ರದರ್ಶಿಸಲಾಗುತ್ತಿದೆ.
 summaryPoint1: ಇಥಿರಿಯಮ್ ಆಧಾರಿತ ಆಸ್ತಿಯಾಗಿ ಅನನ್ಯವಾದ ಯಾವುದನ್ನಾದರೂ ಪ್ರತಿನಿಧಿಸುವ ಒಂದು ಮಾರ್ಗ.
 summaryPoint2: NFT ಗಳು ವಿಷಯ ಸೃಷ್ಟಿಕರ್ತರಿಗೆ ಹಿಂದೆಂದಿಗಿಂತಲೂ ಹೆಚ್ಚಿನ ಶಕ್ತಿಯನ್ನು ನೀಡುತ್ತಿವೆ.
@@ -78,7 +78,7 @@ Ethereum.org ನಲ್ಲಿ, ಜನರು ನಮ್ಮ ಗಿಟ್‍ಹಬ್
 
 NFTಗಳಿಗೆ ಸಂಬಂಧಿಸಿದ ಭದ್ರತಾ ಸಮಸ್ಯೆಗಳು ಹೆಚ್ಚಾಗಿ ಫಿಶಿಂಗ್ ಹಗರಣಗಳು, ಸ್ಮಾರ್ಟ್ ಗುತ್ತಿಗೆ ದುರ್ಬಲತೆಗಳು ಅಥವಾ ಬಳಕೆದಾರ ದೋಷಗಳಿಗೆ ಸಂಬಂಧಿಸಿವೆ (ಅಜಾಗರೂಕತೆಯಿಂದ ಖಾಸಗಿ ಕೀಲಿಗಳನ್ನು ಬಹಿರಂಗಪಡಿಸುವುದು), NFT ಮಾಲೀಕರಿಗೆ ಉತ್ತಮ ವ್ಯಾಲೆಟ್ ಭದ್ರತೆಯನ್ನು ನಿರ್ಣಾಯಕವಾಗಿಸುತ್ತದೆ.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   ಭದ್ರತೆಯ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು
 </ButtonLink>
 

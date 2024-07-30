@@ -5,7 +5,7 @@ lang: nl
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Een vertegenwoordiging van een DAO die over een voorstel stemt.
 summaryPoint1: Gemeenschappen waarvan de leden eigenaar zijn en zonder gecentraliseerd leiderschap.
 summaryPoint2: Een veilige manier om samen te werken met vreemdelingen op het internet.
@@ -50,7 +50,7 @@ De backbone van een DAO is de smart contract ervan die de regels van de organisa
 
 Dit is mogelijk omdat smart contracts fraudebestendig zijn zodra ze live op Ethereum gaan. U kunt de code (de regels van DAO's) niet gewoon bewerken zonder dat mensen dat merken, omdat alles openbaar is.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Meer over slimme contracten
 </DocLink>
 

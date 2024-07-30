@@ -1,17 +1,17 @@
 ---
 title: La Fusione
-description: "Scopri La Fusione: quando la Rete principale di Ethereum ha adottato il Poof of stake."
+description: 'Scopri La Fusione: quando la Rete principale di Ethereum ha adottato il Poof of stake.'
 lang: it
 template: upgrade
-image: /upgrades/merge.png
-alt: 
-summaryPoint1: La Rete Principale di Ethereum usa il proof-of-stake, ma non è sempre stato così.
-summaryPoint2: L'aggiornamento dal meccanismo originale di proof-of-work al proof-of-stake è stato chiamato La Fusione.
-summaryPoint3: La Fusione si riferisce alla fusione della Rete Principale originale di Ethereum con una blockchain di proof-of-stake separata, detta Beacon Chain, ora esistenti come un'unica catena.
+image: /images/upgrades/merge.png
+alt:
+summaryPoint1: La Rete Principale di Ethereum utilizza il proof-of-stake, ma non è sempre stato così.
+summaryPoint2: L'aggiornamento dal meccanismo originale di proof-of-work al proof-of-stake, è stato detto La Fusione.
+summaryPoint3: La Fusione si riferisce all'unione della Rete Principale di Ethereum con una blockchain di proof-of-stake separata, detta Beacon Chain, ora coesistenti come un'unica catena.
 summaryPoint4: La Fusione ha ridotto il consumo energetico di Ethereum di circa il 99,95%.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   La Fusione è avvenuta il 15 settembre 2022. Ciò ha portato a termine la transizione di Ethereum al consenso di proof-of-stake, deprecando ufficialmente il proof-of-work e riducendo il consumo energetico di circa il 99,95%.
 </UpgradeStatus>
 
@@ -202,7 +202,7 @@ La Fusione rappresenta l'adozione formale della Beacon Chain come nuovo livello 
 
 I blocchi sono invece proposti dai nodi di convalida, che ottengono ETH in staking in cambio del diritto di partecipare al consenso. Questi aggiornamenti stabiliscono le basi per gli aggiornamenti di scalabilità futuri, incluso lo sharding.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   La beacon chain
 </ButtonLink>
 
@@ -218,7 +218,7 @@ Originariamente, il piano prevedeva di lavorare allo sharding prima della Fusion
 
 I piani per lo sharding si stanno evolvendo rapidamente, ma data la nascita e il successo delle tecnologie di livello 2 per scalare l'esecuzione delle transazioni, i piani per lo sharding hanno spostato l'attenzione sul trovare il modo ottimale per distribuire il carico per memorizzare i dati di chiamata compressi dai contratti di rollup, consentendo la crescita esponenziale della capacità di rete. Questo sarebbe impossibile senza prima passare al Proof of stake.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Sharding
 </ButtonLink>
 

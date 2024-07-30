@@ -4,7 +4,7 @@ description: مروری بر نحوه آغاز به کار سهام‌گذاری
 lang: fa
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: لسلی اسب آبی در حال شنا در استخر.
 sidebarDepth: 2
 summaryPoints:
@@ -68,7 +68,7 @@ summaryPoints:
 
 از طرفی، استخرهایی که از توکن سهامگذاری ERC-20 استفاده می‌کنند به کاربرانشان امکان معامله این توکن در بازار آزاد معامله را می‌دهند، و به شما اجازه می‌دهند که موقعیت سهامگذاری خود را بفروشید، عملاً یعنی "برداشت کردن" بدون حذف اتر از قرارداد سهامگذاری.
 
-<ButtonLink to="/staking/withdrawals/">اطلاعات بیشتر درباره برداشت‌های سهامگذاری</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">اطلاعات بیشتر درباره برداشت‌های سهامگذاری</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="آیا این کار با سهام‌گذاری از طریق صرافی‌ام تفاوت دارد؟">

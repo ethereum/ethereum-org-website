@@ -4,7 +4,7 @@ description: مروری بر نحوه شروع سهام‌گذاری مشترک 
 lang: fa
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: لسلی اسب آبی شناور در میان ابرها.
 sidebarDepth: 2
 summaryPoints:
@@ -77,7 +77,7 @@ summaryPoints:
 
 اعتبارسنج‌ها همچنین می‌توانند به صورت کامل از نقش اعتبارسنج خارج شوند، که منجر به باز شدن موجودی اتر باقیمانده آنها برای برداشت خواهد شد. حساب‌هایی که یک آدرس برداشت اجرایی را ارائه کرده‌اند و فرایند خروج را تکمیل کرده‌اند تمام موجودی خود را در نوبت اعتبارسنج بعدی در آدرس برداشتی که ارائه کرده‌اند دریافت خواهند نمود.
 
-<ButtonLink to="/staking/withdrawals/">اطلاعات بیشتر درباره برداشت‌های سهامگذاری</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">اطلاعات بیشتر درباره برداشت‌های سهامگذاری</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="اگر مشمول تقطیع شوم چه اتفاقی می افتد؟" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

@@ -15,6 +15,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Ethereum.org homepage](/)
 - Main navbar
 - Footer links
+- Language support
 
 ## 2) Essential pages {#essential-pages}
 
@@ -23,6 +24,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Get ETH](/get-eth/)
 - [Wallets](/wallets/)
 - [Find wallets](/wallets/find-wallet/)
+- [Network fees](/gas/)
 
 ## 3) Exploring {#exploring}
 
@@ -39,7 +41,6 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Developers' Home](/developers/)
 - [Developer learning tools](/developers/learning-tools/)
 - [Developer local environment setup](/developers/local-environment/)
-- [Language support](/languages/)
 
 ## 5) Use case pages {#use-case-pages}
 
@@ -47,7 +48,8 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Introduction to smart contracts](/smart-contracts/)
 - [Decentralized identity](/decentralized-identity/)
 - [Decentralized social networks](/social-networks/)
-- [Decentralized science (DeSci))](/desci/)
+- [Decentralized science (DeSci)](/desci/)
+- [Regenerative finance (ReFi)](/refi/)
 
 ## 6) Staking pages {#staking-pages}
 
@@ -57,6 +59,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Staking as a service](/staking/saas/)
 - [Staking deposit contract](/staking/deposit-contract/)
 - [Staking withdrawals](/staking/withdrawals/)
+- [Distributed validator technology](/dvt/)
 
 ## 7) Learn pages {#learn-pages}
 
@@ -76,6 +79,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [How to revoke smart contract access to your crypto funds](/guides/how-to-revoke-token-access/)
 - [How to bridge tokens to layer 2](/guides/how-to-use-a-bridge/)
 - [How to swap tokens](/guides/how-to-swap-tokens/)
+- [How to identify scam tokens](/guides/how-to-id-scam-tokens/)
 - [Learning quizzes](/quizzes/)
 
 ## 9) Upgrades {#upgrades}
@@ -97,6 +101,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Account abstraction](/roadmap/account-abstraction/)
 - [Verkle trees](/roadmap/verkle-trees/)
 - [Statelessness, state expiry and history expiry](/roadmap/statelessness/)
+- [How The Merge impacted ETH supply](/roadmap/merge/issuance/)
 
 ## 10) Community pages {#community-pages}
 
@@ -107,6 +112,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Online communities](/community/online/)
 - [Ethereum support](/community/support/)
 - [Community hub](/community/)
+- [Code of conduct](/community/code-of-conduct/#code-of-conduct)
 
 ## 11) Foundational developer docs {#foundational-docs}
 
@@ -147,14 +153,15 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Proof-of-stake rewards and penalties](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/)
 - [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
 - [Weak subjectivity](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/)
+- [Proof-of-stake vs. proof-of-work](/developers/docs/consensus-mechanisms/pos/pos-vs-pow/)
 
 ## 14) Foundational docs - Proof-of-Work {#PoW}
 
 - [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Mining algorithms](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)
-- [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/)
-- [Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/)
+- [Mining algorithms](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/)
+- [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/)
+- [Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/)
 
 ## 15) Ethereum stack developer docs {#ethereum-stack-docs}
 
@@ -220,6 +227,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Oracles](/developers/docs/oracles/)
 - [Bridges](/developers/docs/bridges/)
 - [Data availability](/developers/docs/data-availability/)
+- [Design and UX in Web3](/developers/docs/design-and-ux/)
 
 ## 21) Advanced developer docs - Scaling {#scaling-docs}
 
@@ -239,12 +247,8 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Recursive-length prefix (RLP) serialization](/developers/docs/data-structures-and-encoding/rlp/)
 - [Network addresses](/developers/docs/networking-layer/network-addresses/)
 - [Simple serialize](/developers/docs/data-structures-and-encoding/ssz/)
-- [Mining algorithms](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)
-- [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/)
-- [Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/)
-- [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
-- [Weak subjectivity](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/)
 - [Web3 secret storage definition](/developers/docs/data-structures-and-encoding/web3-secret-storage/)
+- [The Portal network](/developers/docs/networking-layer/portal-network/)
 
 ## 23) Miscellaneous {#miscellaneous}
 
@@ -253,6 +257,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Private Ethereum](/enterprise/private-ethereum/)
 - [Brand assets](/assets/)
 - [About the Ethereum Foundation](/foundation/)
+- [Bug bounty program](/bug-bounty/)
 
 ## 24) Contributing {#contributing}
 
@@ -266,6 +271,9 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Adding content resources](/contributing/content-resources/)
 - [Adding DeSci projects](/contributing/adding-desci-projects/)
 - [Adding wallets](/contributing/adding-wallets/)
+- [Adding a quiz](/contributing/quizzes/)
+- [Adding design resources](/contributing/design/adding-design-resources/)
+- [Design contribution to ethereum.org](/contributing/design/)
 - [Design principles](/contributing/design-principles/)
 - [Translation Program](/contributing/translation-program/)
 - [Translation guide](/contributing/translation-program/translation-guide/)
@@ -282,7 +290,6 @@ Below is a breakdown of the website pages each content bucket contains.
 - [How to write & deploy an NFT (Part 1/3 of NFT tutorial series)](/developers/tutorials/how-to-write-and-deploy-an-nft/)
 - [How to mint an NFT (Part 2/3 of NFT tutorial series)](/developers/tutorials/how-to-mint-an-nft/)
 - [How to view your NFT in your wallet (Part 3/3 of NFT tutorial series)](/developers/tutorials/how-to-view-nft-in-metamask/)
-- [Transfers and approval of ERC-20 tokens from a solidity smart contract](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/)
 - [Understand the ERC-20 token smart contract](/developers/tutorials/understand-the-erc-20-token-smart-contract/)
 - [Uniswap-v2 contract walkthrough](/developers/tutorials/uniswap-v2-annotated-code/)
 - Submit a tutorial
@@ -299,11 +306,13 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Sending tokens using ethers.js](/developers/tutorials/send-token-ethersjs/)
 - [The Graph: Fixing Web3 data querying](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 - [Transfers and approval of ERC-20 tokens from a Solidity smart contract](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/)
+- [Understanding the Yellowpaper's EVM specifications](/developers/tutorials/yellow-paper-evm/)
 
 ## 27) Developer tutorials 3 {#tutorials-3}
 
 - [A guide to smart contract security tools](/developers/tutorials/guide-to-smart-contract-security-tools/)
 - [All you can cache](/developers/tutorials/all-you-can-cache/)
+- [EIP-1271: Signing and verifying smart contract signatures](/developers/tutorials/eip-1271-smart-contract-signatures/)
 - [ERC-20 contract walkthrough](/developers/tutorials/erc20-annotated-code/)
 - [ERC-20 with safety rails](/developers/tutorials/erc20-with-safety-rails/)
 - [Getting Started with Ethereum Development](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)

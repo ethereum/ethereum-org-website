@@ -6,7 +6,7 @@ lang: en
 
 # Active areas of Ethereum research {#active-areas-of-ethereum-research}
 
-One of the primary strengths of Ethereum is that an active research and engineering community are constantly improving it. Many enthusiastic, skilled people worldwide would like to apply themselves to outstanding issues in Ethereum, but it is not always easy to find out what those issues are. This page outlines key active research areas as a rough guide to Ethereum's cutting edge.
+One of the primary strengths of Ethereum is that an active research and engineering community is constantly improving it. Many enthusiastic, skilled people worldwide would like to apply themselves to outstanding issues in Ethereum, but it is not always easy to find out what those issues are. This page outlines key active research areas as a rough guide to Ethereum's cutting edge.
 
 ## How Ethereum research works {#how-ethereum-research-works}
 
@@ -133,6 +133,10 @@ One particular area of layer 2 that requires more research and development is sa
 ### Sharding {#sharding}
 
 Sharding Ethereum's blockchain has long been part of the development roadmap. However, new scaling solutions such as "Danksharding" are currently taking center stage.
+
+The precursor to full Danksharding known as Proto-Danksharding went live with the Cancun-Deneb ("Dencun") network upgrade.
+
+[More about the Dencun upgrade](/roadmap/dencun/)
 
 #### Background reading {#background-reading-4}
 

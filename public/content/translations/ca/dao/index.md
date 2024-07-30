@@ -5,7 +5,7 @@ lang: ca
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Representació d'una DAO que vota una proposta.
 summaryPoint1: Comunitats de membres sense un lideratge centralitzat.
 summaryPoint2: Una forma segura de col·laborar amb desconeguts a internet.
@@ -74,7 +74,7 @@ La vèrtebra d'una DAO és el contracte intel·ligent. El contracte defineix les
 
 Això és possible perquè els contractes intel·ligents són a prova de manipulació un cop estan actius a Ethereum. No podeu editar el codi (normes de la DAO) sense que la gent se n'adoni, ja que tot és públic.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Més informació sobre els contractes intel·ligents
 </DocLink>
 

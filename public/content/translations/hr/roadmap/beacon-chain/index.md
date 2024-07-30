@@ -3,7 +3,7 @@ title: Beacon Chain
 description: Saznajte vieše o nadogradnji Beacon Chain kojom je implementiran dokaz uloga u Ethereumu.
 lang: hr
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
 alt: 
 summaryPoint1: Nadogradnja Beacon Chain implementirala je dokaz uloga u ekosustav Ethereuma.
 summaryPoint2: Nadogradnja je objedinjena s izvornim lancem dokaza rada Ethereuma u rujnu 2022.
@@ -32,7 +32,7 @@ Beacon Chain bila je temeljna komponenta [sadašnjeg sigurnog, ekološkog i pril
 
 Beacon Chain uveo je u Ethereum [dokaz uloga](/developers/docs/consensus-mechanisms/pos/). Tako je zaštićen Ethereum, a validatori imaju mogućnost veće zarade ETH-a. U praksi, ulaganje znači ulaganje ETH-a kako bi se aktivirao softver validatora. Kao ulagač pokrećete softver koji izrađuje i potvrđuje nove blokove u lancu.
 
-Ulaganje ima sličnu ulogu kao i [rudarenje](/developers/docs/mining/), ali uz mnoge razlike. Rudarenje zahtijeva veća prethodna ulaganja u obliku snažnog hardvera i potrošnje energije i rezultira proporcionalnom zaradom kroz proizvodnju i naprednom centralizacijom. Rudarenje nije imalo zahtjev da se sredstva blokiraju kao pokriće te protokol tako nije mogao kazniti loše sudionike nakon napada.
+Ulaganje ima sličnu ulogu kao i [rudarenje](/developers/docs/consensus-mechanisms/pow/mining/), ali uz mnoge razlike. Rudarenje zahtijeva veća prethodna ulaganja u obliku snažnog hardvera i potrošnje energije i rezultira proporcionalnom zaradom kroz proizvodnju i naprednom centralizacijom. Rudarenje nije imalo zahtjev da se sredstva blokiraju kao pokriće te protokol tako nije mogao kazniti loše sudionike nakon napada.
 
 Prijelazom na dokaz uloga Ethereum je postao sigurniji i manje centraliziran u odnosu na dokaz rada. Što više ljudi sudjeluje u mreži, to će ona biti decentraliziranija i sigurnija od napada.
 
@@ -58,7 +58,7 @@ Sve nadogradnje Ethereuma donekle su međusobno povezane. Dakle, ponovimo ukratk
 
 U početku je Beacon Chain postojao odvojeno od glavne mreže Ethereuma. Godine 2022. konačno su objedinjeni.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Spajanje
 </ButtonLink>
 
@@ -66,7 +66,7 @@ U početku je Beacon Chain postojao odvojeno od glavne mreže Ethereuma. Godine 
 
 Razdjeljivanje se sigurno može uvesti u Ethereumov ekosustav samo ako je uspostavljen mehanizam konsenzusa dokaza uloga. Beacon Chain uveo je ulaganje objedinjeno s glavnom mrežom i tako pripremio teren za razdjeljivanje koje će pomoći u daljnjem prilagođavanju Ethereuma.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Lanci djelića
 </ButtonLink>
 

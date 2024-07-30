@@ -3,7 +3,7 @@ title: Spajanje
 description: Saznajte više o spajanju – kada je glavna mreža Ethereuma usvojila dokaz uloga.
 lang: hr
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Glavna mreža Ethereuma upotrebljava dokaz uloga, međutim, to nije uvijek bilo tako.
 summaryPoint2: Nadogradnja izvornog mehanizma dokaza rada na dokaz uloga nazvana je The Merge (Spajanje).
@@ -11,7 +11,7 @@ summaryPoint3: Spajanjem je spojena izvorna glavna mreža Ethereumu sa zasebnim 
 summaryPoint4: Spajanjem je potrošnja energije Ethereuma smanjena za približno 99,95 %.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Spajanje je provedeno 15. rujna 2022. Dovršeni prijelaz Ethereuma na konsenzus dokaza uloga službeno je zamijenio dokaz rada i smanjio potrošnju energije za približno 99,95 %.
 </UpgradeStatus>
 
@@ -198,7 +198,7 @@ Spajanje predstavlja formalno usvajanje nadogradnje Beacon Chain kao novog sloja
 
 Blokove sada predlažu validirajući čvorovi s ulogom ETH-a u zamjenu za pravo da sudjeluju u konsenzusu. Te nadogradnje postavljaju temelj za buduće nadogradnje prilagođavanja, uključujući razdjeljivanje.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   Beacon Chain
 </ButtonLink>
 
@@ -214,7 +214,7 @@ Izvorni je plan bio razvijati razdjeljivanje prije spajanja kako bi se riješio 
 
 Planovi za razdjeljivanje brzo su se razvijali. Međutim, uzimajući u obzir rast i uspjeh tehnologija sloja 2 za skaliranje izvršavanja transakcija, planovi za razdjeljivanje prešli su u traženje najoptimalnijeg načina diobe opterećenja pohrane komprimiranih podataka iz poziva svih pametnih ugovora uz mogućnost eksponencijalnog rasta mrežnog kapaciteta. To ne bi bilo moguće bez prethodnog prelaska na koncept dokaza uloga.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Dijeljenje
 </ButtonLink>
 

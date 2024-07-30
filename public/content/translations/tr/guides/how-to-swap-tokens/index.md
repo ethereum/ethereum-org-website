@@ -51,7 +51,7 @@ Herhangi bir blok zincir tarayıcısında işlemin ilerlemesini görebilirsiniz.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Diğer rehberlerimizi inceleyin
   </ButtonLink>
 </InfoBanner>

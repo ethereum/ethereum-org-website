@@ -1,34 +1,74 @@
 import React, { ReactNode } from "react"
-import { Text, useBreakpointValue } from "@chakra-ui/react"
+import { useRouter } from "next/router"
+import { Box, Text, VStack } from "@chakra-ui/react"
 
-import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
-import Tooltip from "@/components/Tooltip"
+import Heading from "@/components/Heading"
+import Tooltip, { type TooltipProps } from "@/components/Tooltip"
+import Translation from "@/components/Translation"
 
-type GlossaryTooltipProps = {
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { cleanPath } from "@/lib/utils/url"
+
+type GlossaryTooltipProps = Omit<TooltipProps, "content"> & {
   children: ReactNode
   termKey: string
 }
 
-const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
-  const isLargeScreen = useBreakpointValue({ base: false, lg: true })
+const GlossaryTooltip = ({
+  children,
+  termKey,
+  ...props
+}: GlossaryTooltipProps) => {
+  const { asPath } = useRouter()
 
-  return isLargeScreen ? (
-    <Tooltip content={<GlossaryDefinition term={termKey} size="sm" />}>
-      <Text
-        as="u"
-        textDecorationStyle="dotted"
-        textUnderlineOffset="3px"
-        _hover={{
-          textDecorationColor: "primary.hover",
-          color: "primary.hover",
+  return (
+    <Box as="span" display="inline-block">
+      <Tooltip
+        {...props}
+        content={
+          <VStack spacing={2} align="stretch" textAlign="start">
+            <Heading as="h6">
+              <Translation
+                id={termKey + "-term"}
+                options={{ ns: "glossary-tooltip" }}
+              />
+            </Heading>
+            {/**
+             * `as="span"` prevents hydration warnings for strings that contain
+             * elements that cannot be nested inside `p` tags, like `ul` tags
+             * (found in some Glossary definition).
+             * TODO: Develop a better solution to handle this case.
+             */}
+            <Text as="span">
+              <Translation
+                id={termKey + "-definition"}
+                options={{ ns: "glossary-tooltip" }}
+              />
+            </Text>
+          </VStack>
+        }
+        onBeforeOpen={() => {
+          trackCustomEvent({
+            eventCategory: "Glossary Tooltip",
+            eventAction: cleanPath(asPath),
+            eventName: termKey,
+          })
         }}
-        cursor="help"
       >
-        {children}
-      </Text>
-    </Tooltip>
-  ) : (
-    <Text as="span">{children}</Text>
+        <Text
+          as="u"
+          textDecorationStyle="dotted"
+          textUnderlineOffset="3px"
+          _hover={{
+            textDecorationColor: "primary.hover",
+            color: "primary.hover",
+          }}
+          cursor="help"
+        >
+          {children}
+        </Text>
+      </Tooltip>
+    </Box>
   )
 }
 

@@ -3,13 +3,14 @@ title: A Beacon Chain
 description: Tudjon meg többet Beacon a láncról – arról a frissítésről, amely behozta a proof-of-stake mechanizmust az Ethereum hálózatára.
 lang: hu
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
+alt:
 summaryPoint1: A Beacon lánc vezette be a proof-of-stake konszenzust az Ethereum-ökoszisztémába.
 summaryPoint2: Az eredeti proof-of-work Ethereum-lánccal 2022 szeptemberében egyesült.
 summaryPoint3: A Beacon lánc vezette be az Ethereumot ma biztosító konszenzuslogikát és block gossip (blokkpletyka) protokollt.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   A Beacon lánc 2020. december 1-jén jelent meg, és 2022 szeptember 15-én a beolvadás frissítéssel hivatalosan is az Ethereum konszenzusmechanizmusává tette a proof-of-stake módszert.
 </UpgradeStatus>
 
@@ -27,7 +28,7 @@ Beacon lánc a neve annak a számlafőkönyvek, amely az Ethereum-[letétesek](/
 
 A Beacon lánc vezette be a [proof-of-stake-et](/developers/docs/consensus-mechanisms/pos/) az Ethereum rendszerébe. Ez tartja fent az Ethereum biztonságát, és a folyamat során a validátorokat több ETH-hoz juttatja. A gyakorlatban a letétbe helyezés úgy néz ki, hogy ETH-t helyez letétbe a validátorszoftver aktiválásához. Letétesként futtatja a szoftvert, amely új blokkokat hoz létre és validál a láncon.
 
-A letétbe helyezés hasonló célt szolgál, mint korábban a [bányászat](/developers/docs/mining/), de számos tekintetben különbözik attól. A bányászat nagy összegű kezdeti kiadásokkal járt, nagy teljesítményű hardverek beszerzésével és nagy energiafogyasztással, ami a tehetősebbeknek kedvezett, és elősegítette a centralizációt. Emellett a bányászat nem követelte meg a fedezetként szolgáló eszközök zárolását, ezzel korlátozta a protokoll képességét a rosszindulatú szereplők megbüntetésére egy támadás után.
+A letétbe helyezés hasonló célt szolgál, mint korábban a [bányászat](/developers/docs/consensus-mechanisms/pow/mining/), de számos tekintetben különbözik attól. A bányászat nagy összegű kezdeti kiadásokkal járt, nagy teljesítményű hardverek beszerzésével és nagy energiafogyasztással, ami a tehetősebbeknek kedvezett, és elősegítette a centralizációt. Emellett a bányászat nem követelte meg a fedezetként szolgáló eszközök zárolását, ezzel korlátozta a protokoll képességét a rosszindulatú szereplők megbüntetésére egy támadás után.
 
 A proof-of-stake mechanizmusra való áttérés jelentősen fokozta az Ethereum biztonságát és decentralizációját a proof-of-work rendszerhez képest. Minél több ember vesz részt a hálózatban, annál decentralizáltabb és védettebb lesz a támadásokkal szemben.
 
@@ -55,7 +56,7 @@ Az Ethereum-frissítések némileg összefüggnek egymással. Foglaljuk össze, 
 
 A Beacon lánc először az Ethereum fő hálózatától különállóan létezett, de 2022-ben egybeolvadtak.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   A beolvadás
 </ButtonLink>
 
@@ -63,7 +64,7 @@ A Beacon lánc először az Ethereum fő hálózatától különállóan léteze
 
 A láncszilánkokat csak működő proof-of-stake konszenzusmechanizmussal lehet biztonságosan bevezetni az Ethereum-ökoszisztémába. A Beacon lánc bevezette a letétbe helyezést, ami „egybeolvadt” a fő hálózattal, egyengetve az utat a szilánkolás előtt, amellyel tovább méretezhető az Ethereum.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Láncszilánkok
 </ButtonLink>
 

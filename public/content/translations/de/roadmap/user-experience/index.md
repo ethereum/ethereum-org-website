@@ -2,7 +2,7 @@
 title: Verbesserung der Benutzererfahrung
 description: Für die meisten Menschen ist es immer noch zu kompliziert Ethereum zu benutzen. Um die Massenakzeptanz von Ethereum zu fördern, müssen die Eintrittsbarrieren drastisch gesenkt werden - die Nutzer müssen die Vorteile eines dezentralisierten, erlaubnisfreien und zensurresistenten Zugangs zu Ethereum nutzen können, der jedoch so reibungslos sein muss wie die Nutzung einer herkömmlichen Web2-App.
 lang: de
-image: /roadmap/roadmap-ux.png
+image: /images/roadmap/roadmap-ux.png
 alt: "Ethereum-Roadmap"
 template: roadmap
 ---
@@ -15,7 +15,7 @@ Ethereum-Konten sind durch ein Schlüsselpaar geschützt, das zur Identifizierun
 
 Die Lösung für dieses Problem ist die Verwendung von Smart Contract Wallets zur Interaktion mit Ethereum. Smart Contract Wallets bieten die Möglichkeit, Konten bei Verlust oder dem Diebstahl der Schlüssel zu schützen, Betrug besser aufzudecken und abzuwehren und ermöglichen neue Funktionen für Wallets. Obwohl es heute bereits Smart Contract Wallets gibt, ist es schwierig, diese zu erstellen, da das Ethereum-Protokoll sie besser unterstützen muss. Diese zusätzliche Unterstützung wird als Kontoabstraktion bezeichnet.
 
-<ButtonLink variant="outline-color" to="/roadmap/account-abstraction/">Mehr zum Thema Kontenabstraktion</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/account-abstraction/">Mehr zum Thema Kontenabstraktion</ButtonLink>
 
 ## Nodes für jedermann
 
@@ -23,7 +23,7 @@ Nutzer, die Nodes betreiben, müssen nicht darauf vertrauen, dass Dritte ihnen D
 
 Es gibt mehrere Upgrades, die den Betrieb von Nodes wesentlich einfacher und weniger ressourcenintensiv machen werden. Die Art und Weise, wie Daten gespeichert werden, wird geändert, um eine platzsparendere Struktur zu verwenden, die als **Verkle Tree** bekannt ist. Außerdem werden mit [ statelessness](/roadmap/statelessness) oder [data expiry](/roadmap/statelessness/#data-expiry), Ethereum-Nodes nicht mehr Kopie der gesamten Ethereum-Statusdaten speichern müssen, was den Speicherplatzbedarf auf der Festplatte drastisch reduziert. [Light nodes](/developers/docs/nodes-and-clients/light-clients/) bietet viele Vorteile eine Full Node, kann aber problemlos auf Mobiltelefonen oder in einfachen Browseranwendungen ausgeführt werden.
 
-<ButtonLink variant="outline-color" to="/roadmap/verkle-trees/">Lesen Sie über Verkle-Trees</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/verkle-trees/">Lesen Sie über Verkle-Trees</ButtonLink>
 
 Mit diesen Upgrades werden die Hürden für den Betrieb einer Node praktisch auf Null reduziert. Die Nutzer werden von einem sicheren, erlaubnisfreien Zugang zu Ethereum profitieren, ohne dass sie nennenswerten Speicherplatz oder CPU auf ihrem Computer oder Mobiltelefon opfern müssen, und sie werden nicht auf Dritte angewiesen sein, wenn es um den Daten- oder Netzwerkzugang geht, wenn sie Apps verwenden.
 

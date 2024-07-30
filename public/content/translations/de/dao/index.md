@@ -5,7 +5,7 @@ lang: de
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Eine Repräsentation eines Abstimmungsvorschlags in einer DAO.
 summaryPoint1: Communitys im Besitz ihrer Mitglieder ohne zentrale Führung.
 summaryPoint2: Ein sicherer Weg, um mit Fremden im Internet zusammenzuarbeiten.
@@ -50,7 +50,7 @@ Das Fundament einer DAO ist ihr Smart Contract, der das Regelwerk der Organisati
 
 Möglich wird dies durch die Manipulationssicherheit veröffentlichter Smart Contracts. Da alle Vorgänge öffentlich sind, sind unbemerkte Änderungen am Code (also den Regeln der DAO) unmöglich.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Mehr zu Smart Contracts
 </DocLink>
 

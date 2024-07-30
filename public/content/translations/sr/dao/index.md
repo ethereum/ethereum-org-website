@@ -5,7 +5,7 @@ lang: sr
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Predstava nezavisne decentralizovane organizacije (DAO) koja glasa o predlogu.
 summaryPoint1: Zajednice koje su u vlasništvu članova bez centralizovanog vođstva.
 summaryPoint2: Siguran način da sarađujete sa strancima na internetu.
@@ -50,7 +50,7 @@ Suština svakog DAO-a je njegov pametni ugovor, kojim se definišu pravila organ
 
 To je moguće zato što su pametni ugovori, kada se objave na mreži Ethereum, zaštićeni od neovlašćenog rukovanja. Ne možete jednostavno urditi kod (pravila DAO-a), a da ljudi to ne primete zato što je sve javno.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Više o pametnim ugovorima
 </DocLink>
 

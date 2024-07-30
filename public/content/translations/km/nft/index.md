@@ -5,7 +5,7 @@ lang: km
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: និមិត្តសញ្ញា Eth ត្រូវបានបង្ហាញតាមរយៈ hologram ។
 summaryPoint1: មធ្យោបាយដើម្បីតំណាងឱ្យអ្វីដែលប្លែកខុសគេជាទ្រព្យសកម្មដែលមានមូលដ្ឋានលើ Ethereum
 summaryPoint2: NFTs នឹងផ្តល់អំណាចកាន់តែច្រើនដល់អ្នកបង្កើតមាតិកាជាងពេលមុនៗ
@@ -78,7 +78,7 @@ NFT ត្រូវបានប្រើក្នុងករណីជាច្�
 
 បញ្ហាសុវត្ថិភាពទាក់ទងនឹង NFTs ច្រើនតែទាក់ទងនឹងការបោកប្រាស់ កំហុសកូដនៃកិច្ចសន្យាឆ្លាតវៃ ឬកំហុសរបស់អ្នកប្រើប្រាស់ (ដូចជាការលាតត្រដាងសោឯកជនដោយអចេតនា) ធ្វើឱ្យការពង្រឹងសុវត្ថិភាពកាបូបឱ្យកាន់តែប្រសើរមានសារៈសំខាន់សម្រាប់ម្ចាស់ NFT ។
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   បន្ថែមទៀតអំពីសុវត្ថិភាព
 </ButtonLink>
 

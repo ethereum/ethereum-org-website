@@ -16,7 +16,9 @@ lang: el
 
 ## Πόροι του Ethereum.org {#ethereum-org}
 
-Το Ethereum.org είναι μεταφρασμένο σε περισσότερες από 40 γλώσσες όπου μπορείτε να βρείτε στη [σελίδα γλωσσών](/languages).
+Το Ethereum.org μεταφράζεται σε περισσότερες από 40 γλώσσες τις οποίες μπορείτε να βρείτε χρησιμοποιώντας το μενού επιλογής γλωσσών μας, που βρίσκεται στην κορυφή κάθε σελίδας.
+
+![Μενού επιλογής γλώσσας](./language-selector-menu.png)
 
 Εάν γνωρίζετε μια επιπλέον γλώσσα και θέλετε να βοηθήσετε περισσότερους ανθρώπους, μπορείτε να συμμετέχετε στο [πρόγραμμα μετάφρασης του ethereum.org](/contributing/translation-program/#translation-program) και να βοηθήσετε στη μετάφραση του ιστοτόπου.
 
@@ -30,6 +32,7 @@ lang: el
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - έκδοση του Cointelegraph για τη Βραζιλία, ένας σημαντικός ιστότοπος με νέα για κρυπτονομίσματα
 - [Livecoins](http://www.livecoins.com.br/ethereum) - νέα κρυπτονομισμάτων και εργαλεία
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - νέα κρυπτονομισμάτων και αναφορές
+- [Modular Crypto](https://modularcrypto.xyz/) - ειδήσεις και εκπαιδευτικά άρθρα για κρυπτονομίσματα
 
 **Εκπαίδευση**
 

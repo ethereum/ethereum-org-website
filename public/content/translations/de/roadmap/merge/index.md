@@ -3,15 +3,14 @@ title: Die Zusammenführung
 description: Erfahren Sie mehr über die Zusammenführung, als Mainnet Ethereum Proof-of-Stake einführte.
 lang: de
 template: upgrade
-image: /upgrades/merge.png
-alt: 
+image: /images/upgrades/merge.png
 summaryPoint1: Ethereum Mainnet verwendet Proof-of-Stake, aber das war nicht immer der Fall.
 summaryPoint2: Der Wechsel vom ursprünglichen Proof-of-Work Mechanismus zu Proof-of-Stake wurde Zusammenführung genannt.
 summaryPoint3: Die Zusammenführung bezieht sich auf das ursprüngliche Ethereum Mainnet, welches mit einer separaten Proof-of-Stake-Blockchain namens Beacon Chain vereinigt wurde, und somit nun beide als eine Blockchain existieren.
 summaryPoint4: Die Zusammenführung reduzierte Ethereums Energieverbrauch um ca. 99,95 %.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Die Zusammenführung wurde am 15. September 2022 durchgeführt. Dies vervollständigte Ethereums Übergang zu Proof-of-Stake, was Proof-of-Work offiziell abschaffte und den Energieverbrauch um ~99,95 % verringert hat.
 </UpgradeStatus>
 
@@ -179,18 +178,18 @@ Dadurch wird ein Massenexodus der für Staking eingesetzten Mittel verhindert. D
 Der effektive Jahreszins ist auch bewusst dynamisch, damit ein Markt von Stakern abwägen kann, wie viel sie bereit sind, für die Sicherung des Netzwerks zu zahlen. Wenn die Rate zu niedrig ist, werden die Validatoren mit einer durch das Protokoll begrenzten Rate aussteigen. Nach und nach wird dadurch die APR für alle erhöht, die bleiben und wieder neue oder wiederkehrende Staker anziehen.
 </ExpandableCard>
 
-## Was ist mit "Eth2" passiert? {#eth2}
+## Was ist mit „Eth2“ passiert? {#eth2}
 
 Der Begriff "Eth2" ist veraltet. Nach der Zusammenführung von "Eth1" und "Eth2" in eine einzelne Chain gibt es keinen Grund mehr zwischen zwei Ethereum Netzwerken zu unterscheiden. Es gibt nur Ethereum.
 
 Um Unklarheiten zu minimieren, hat die Community diese Begriffe aktualisiert:
 
-- „Eth1“ ist nun der „Ausführungslayer“, der Transaktionen verarbeitet und ausführt.
-- „Eth2“ ist nun der „Konsenslayer“, der den Proof-of-Stake-Konsens regelt.
+- „Eth1“ ist nun die „Ausführungsebene“, die Transaktionen und Ausführungen verarbeitet.
+- „Eth2“ ist nun die „Konsensebene“, die den Proof-of-Stake-Konsens regelt.
 
-Diese aktualisierte Terminologie ändert lediglich die Benennungskonventionen. Die Ziele von Ethereum oder die Roadmap ändern sich dadurch nicht.
+Diese aktualisierte Terminologie ändert lediglich die Benennungskonventionen. Die Ziele und der Fahrplan von Ethereum ändern sich dadurch nicht.
 
-[Mehr erfahren über die „Eth2“-Umbenennung](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Mehr über die „Eth2“-Umbenennung erfahren](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
 ## Beziehung zwischen den Upgrades {#relationship-between-upgrades}
 
@@ -202,7 +201,7 @@ Die Zusammenführung stellt die formale Übernahme der Beacon Chain als neue Kon
 
 Blöcke werden stattdessen durch validierende Nodes vorgeschlagen, die ETH als Gegenleistung für das Recht auf Teilnahme am Konsens eingesetzt haben. Diese Upgrades setzten die Voraussetzungen für zukünftige Skalierbarkeitsverbesserungen, einschließlich Sharding.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   Die Beacon Chain
 </ButtonLink>
 
@@ -218,7 +217,7 @@ Ursprünglich war geplant, vor der Zusammenführung an Sharding zu arbeiten, um 
 
 Pläne für die gemeinsame Nutzung entwickeln sich rasch, aber angesichts des Anstiegs und des Erfolgs von Lay-2-Technologien, um Transaktionsausführung zu skalieren, haben sich gemeinsame Pläne auf die Suche nach dem optimalen Weg zur Verteilung der Belastung durch die Speicherung komprimierter Rufdaten aus Rollup-Verträgen verlagert. Dies ermöglicht ein exponentielles Wachstum der Netzwerkkapazität. Dies wäre ohne den ersten Übergang zu Proof-of-Stake nicht möglich.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Sharding
 </ButtonLink>
 

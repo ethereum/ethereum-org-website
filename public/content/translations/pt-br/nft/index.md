@@ -5,7 +5,7 @@ lang: pt-br
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Um logotipo Eth sendo exibido via holograma.
 summaryPoint1: Uma forma de representar qualquer coisa única como um ativo baseado no Ethereum.
 summaryPoint2: Os NFTs estão dando mais poder do que nunca aos criadores de conteúdo.
@@ -78,7 +78,7 @@ A segurança do Ethereum vem da prova de participação. O sistema foi projetado
 
 Os problemas de segurança relacionados aos NFTs são, na maioria das vezes, relacionados a golpes de phishing, vulnerabilidades de contratos inteligentes ou erros do usuário (como a exposição inadvertida de chaves privadas), o que faz com que a segurança adequada da carteira seja essencial para os proprietários de NFTs.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Mais sobre segurança
 </ButtonLink>
 

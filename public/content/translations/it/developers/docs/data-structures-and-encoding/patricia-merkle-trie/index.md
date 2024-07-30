@@ -5,13 +5,17 @@ lang: it
 sidebarDepth: 2
 ---
 
-Un Trie di Patricia Merkle fornisce una struttura di dati autenticata crittograficamente, utilizzabile per memorizzare tutte le associazioni `(key, value)` (chiave, valore).
+Lo stato di Ethereum (la totalità di tutti i conti, i saldi e i contratti intelligenti) è codificato in una versione speciale della struttura dei dati, nota generalmente in informatica come un Albero di Merkle. Questa struttura è utile per molte applicazioni crittografiche, poiché crea una relazione verificabile tra tutti le singole parti di dati facenti parte dell'albero, dando come risultato un singolo valore di **radice** utilizzabile per provare delle cose sui dati.
 
-I Trie di Patricia Merkle sono interamente deterministici, a significare che è garantito che degli alberi con le stesse associazioni `(key, value)` siano identici, fino all'ultimo byte. Ciò significa che hanno lo stesso hash di root, fornendo il Sacro Graal dell'efficienza di `O(log(n))` per inserimenti, ricerche ed eliminazioni. Inoltre, sono più semplici da comprendere e programmare rispetto alle più complesse alternative basate sul confronto, come gli alberi rosso-nero.
+La struttura dei dati di Ethereum è un 'Trie di Merkle-Patricia modificato', così detto perché prende in prestito alcune funzionalità di PATRICIA (l'Algoritmo Pratico Per Recuperare Informazioni Codificate in Alfanumerico), e poiché è progetttato per il **recupero** efficiente dei dati che costituiscono lo stato di Ethereum.
+
+Un trie di Merkle-Patricia è deterministico e verificabile crittograficamente: il solo modo per generare una radice di stato è calcolandola da ogni singola parte dello stato, e due stati identici sono facilmente dimostrabili confrontando l'hash di radice e gli hash che hanno portato a esso (_una prova di Merkle_). Per contro, non esiste alcun modo per creare due stati differenti con lo stesso hash di radice, e qualsiasi tentativo di modificare lo stato con valori differenti risulterà in un hash della radice di stato differente. Teoricamente, questa struttura rappresenta il 'Sacro Graal' dell'efficienza di `O(log(n))` per inserimenti, ricerche ed eliminazioni.
+
+Nel prossimo futuro, Ethereum prevede di migrare a una struttura ad [Albero di Verkle](https://ethereum.org/en/roadmap/verkle-trees), che aprirà le porte a molte nuove possibilità per le future migliorie al protocollo.
 
 ## Prerequisiti {#prerequisites}
 
-Per meglio comprendere questa pagina, sarebbe utile avere una conoscenza di base di [hash](https://en.wikipedia.org/wiki/Hash_function), [alberi di Merkle](https://en.wikipedia.org/wiki/Merkle_tree), [trie](https://en.wikipedia.org/wiki/Trie) e [serializzazione](https://en.wikipedia.org/wiki/Serialization).
+Per meglio comprendere questa pagina, sarebbe utile avere una conoscenza di base di [hash](https://en.wikipedia.org/wiki/Hash_function), [alberi di Merkle](https://en.wikipedia.org/wiki/Merkle_tree), [trie](https://en.wikipedia.org/wiki/Trie) e [serializzazione](https://en.wikipedia.org/wiki/Serialization). Questo articolo si apre con una descrizione di un [albero radicato](https://en.wikipedia.org/wiki/Radix_tree) di base, introducendo poi gradualmente alle modifiche necessarie per la struttura di dati più ottimizzata di Ethereum.
 
 ## Trie della radice di base {#basic-radix-tries}
 
@@ -31,13 +35,11 @@ Le operazioni di aggiornamento ed eliminazione per gli alberi radicati sono defi
 
 ```
     def update(node,path,value):
+        curnode = db.get(node) if node else [ NULL ] * 17
+        newnode = curnode.copy()
         if path == '':
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newnode[-1] = value
         else:
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newindex = update(curnode[path[0]],path[1:],value)
             newnode[path[0]] = newindex
         db.put(hash(newnode),newnode)
@@ -62,7 +64,7 @@ Le operazioni di aggiornamento ed eliminazione per gli alberi radicati sono defi
                 return hash(newnode)
 ```
 
-Un albero Radicato di "Merkle" è costruito collegando i nodi utilizzando sinossi di hash crittografici generati deterministicamente. Questo indirizzamento del contenuto (nel DB chiave/valore `key == keccak256(rlp(value))`) fornisce una garanzia dell'integrità crittografica dei dati memorizzati. Se l'hash radice di un dato albero è noto pubblicamente, allora chiunque abbia accesso ai dati delle foglie sottostanti può costruire una prova che l'albero include un dato valore a un percorso specifico, fornendo gli hash di ogni nodo che unisce un valore specifico alla radice dell'albero.
+Un albero Radicato di "Merkle" è costruito collegando i nodi utilizzando sinossi di hash crittografici generati deterministicamente. Questo indirizzamento del contenuto (nel DB chiave/valore `key == keccak256(rlp(value))`) fornisce una garanzia dell'integrità crittografica dei dati memorizzati. Se l'hash radice di un dato albero è noto pubblicamente,  allora chiunque abbia accesso ai dati delle foglie sottostanti può costruire  una prova che l'albero include un dato valore a un percorso specifico, fornendo gli hash di ogni nodo che unisce un valore specifico alla radice dell'albero.
 
 È impossibile, per un utente malevolo, fornire una prova di una coppia `(percorso, valore)` che non esiste, poiché l'hash radice in definitiva si basa su tutti gli hash inferiori. Qualsiasi modifica sottostante modificherebbe l'hash radice. Si può pensare all'hash come una rappresentazione compressa delle informazioni strutturali sui dati, assicurata da una protezione pre-immagine della funzione di hashing.
 
@@ -160,14 +162,14 @@ Ecco il codice esteso per ottenere un nodo nel trie di Patricia Merkle:
 
 ### Esempio di Trie {#example-trie}
 
-Supponiamo di volere un trie contenente quattro coppie percorso/valore `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coin')`, `('horse', 'stallion')`.
+Supponiamo di volere un trie che contenga quattro coppie percorso/valore `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
 
 Per prima cosa, convertiamo sia i percorsi che i valori in `bytes`. Di seguito, le rappresentazioni reali dei byte per i _percorsi_ sono denotate da `<>`, sebbene i _valori_ siano mostrati ancora come stringhe, denotate da `"`, per maggiore facilità di comprensione (anch'essi, sarebbero in realtà `bytes`):
 
 ```
     <64 6f> : 'verb'
     <64 6f 67> : 'puppy'
-    <64 6f 67 65> : 'coin'
+    <64 6f 67 65> : 'coins'
     <68 6f 72 73 65> : 'stallion'
 ```
 
@@ -176,12 +178,12 @@ Ora, costruiamo un trie di questo tipo con le seguenti coppie chiave/valore nel 
 ```
     rootHash: [ <16>, hashA ]
     hashA:    [ <>, <>, <>, <>, hashB, <>, <>, <>, [ <20 6f 72 73 65>, 'stallion' ], <>, <>, <>, <>, <>, <>, <>, <> ]
-    hashB:    [ <00 6f>, hashD ]
-    hashD:    [ <>, <>, <>, <>, <>, <>, hashE, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
-    hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
+    hashB:    [ <00 6f>, hashC ]
+    hashC:    [ <>, <>, <>, <>, <>, <>, hashD, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
+    hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-Quando in un nodo si fa riferimento a un altro nodo, viene inserito `H(rlp.encode(x))`, dove `H(x) = keccak256(x) if len(x) >= 32 else x` e `rlp.encode` è la funzione di codifica [RLP](/developers/docs/data-structures-and-encoding/rlp).
+Quando in un nodo si fa riferimento a un altro nodo, viene inserito `H(rlp.encode(node))`, dove `H(x) = keccak256(x) if len(x) >= 32 else x` e `rlp.encode` è la funzione di codifica [RLP](/developers/docs/data-structures-and-encoding/rlp).
 
 Nota che, aggiornando un trie, si deve memorizzare la coppia chiave/valore `(keccak256(x), x)` in una tabella di ricerca persistente _se_ il nodo appena creato ha una lunghezza >= 32. Se invece il nodo è inferiore a questo valore, non è necessario memorizzare nulla, poiché la funzione f(x) = x è reversibile.
 

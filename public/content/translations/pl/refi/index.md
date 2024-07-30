@@ -5,7 +5,7 @@ lang: pl
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Alternatywny system ekonomiczny oparty na zasadach regeneracji
 summaryPoint2: Próba wykorzystania Ethereum do rozwiązania globalnych kryzysów koordynacyjnych, takich jak zmiany klimatu
@@ -18,7 +18,7 @@ summaryPoint3: Narzędzie do drastycznego skalowania aktywów przynoszących kor
 
 Zamiast tego ReFi ma na celu rozwiązywanie problemów środowiskowych, komunalnych lub społecznych poprzez tworzenie cykli regeneracyjnych. Systemy te tworzą wartość dla uczestników, jednocześnie przynosząc korzyści ekosystemom i społecznościom.
 
-Jednym z fundamentów ReFi jest koncepcja ekonomii regeneracyjnej, której pionierem jest John Fullerton z [Capital Institute](https://capitalinstitute.org). Zaproponował osiem powiązanych ze sobą zasad, które leżą u podstaw zdrowia systemowego:
+Jednym z fundamentów ReFi jest koncepcja ekonomii regeneracyjnej, której pionierem jest John Fullerton z Capital Institute. Zaproponował [osiem powiązanych ze sobą zasad](https://capitalinstitute.org/8-principles-regenerative-economy/), które leżą u podstaw zdrowia systemowego:
 
 ![Osiem połączonych ze sobą zasad](refi-regenerative-economy-diagram.png)
 

@@ -36,17 +36,12 @@ type Crumb = {
 //   { fullPath: "/en/eth2/", text: "ETH2" },
 //   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
-const Breadcrumbs = ({
-  slug: originalSlug,
-  startDepth = 0,
-  ...props
-}: BreadcrumbsProps) => {
+const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
   const { t } = useTranslation("common")
   const { locale, asPath } = useRouter()
   const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
   const hasHome = asPath !== "/"
-  const slug = originalSlug.replace(`/${locale}/`, "/")
   const slugChunk = slug.split("/")
   const sliced = slugChunk.filter((item) => !!item)
 
@@ -60,7 +55,6 @@ const Breadcrumbs = ({
           },
         ]
       : []),
-    ,
     ...sliced.map((path, idx) => ({
       fullPath: slugChunk.slice(0, idx + 2).join("/") + "/",
       text: t(path),
@@ -76,9 +70,11 @@ const Breadcrumbs = ({
         return (
           <BreadcrumbItem key={fullPath} isCurrentPage={isCurrentPage}>
             <BreadcrumbLink
-              as={BaseLink}
-              to={fullPath}
-              isPartiallyActive={isCurrentPage}
+              // If current page, render as span since the `href` will not be
+              // passed down to the child
+              // ref: https://github.com/chakra-ui/chakra-ui/blob/v2/packages/components/src/breadcrumb/breadcrumb-link.tsx#L32
+              as={isCurrentPage ? "span" : BaseLink}
+              href={fullPath}
               textTransform="uppercase"
             >
               {text}

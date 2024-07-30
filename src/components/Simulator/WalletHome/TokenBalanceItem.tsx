@@ -31,6 +31,7 @@ export const TokenBalanceItem = ({
       </Text>
       <Box
         textAlign="end"
+        fontSize="sm"
         lineHeight={1.5}
         fontWeight="bold"
         sx={{ p: { m: 0 } }}

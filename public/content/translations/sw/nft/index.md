@@ -5,7 +5,7 @@ lang: sw
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Nembo ya Eth ikionyeshwa kwa kupitia hologramu.
 summaryPoint1: Njia ya kuwakilisha kitu chochote cha pekee kama mali zilizojengwa na Ethereum.
 summaryPoint2: NFT zinawapatia waundaji wa maudhui nguvu zaidi kuliko zamani.
@@ -78,7 +78,7 @@ Usalama wa Ethereum unakuja kutokana na ushahidi wa hisa. Mfumo huu umebuniwa il
 
 Maswala ya usalama yanayohusiana na NFT sana sana yanahusiana na utapeli wa kutumia barua pepe, hatari za mkataba-erevu au makosa ya mtumiaji (kama vile kuweka wazi funguo za siri) na hivyo kufanya usalam bora wa pochi uwe muhimu sana kwa wamiliki NFT.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Maelezo zaidi kuhusu usalama
 </ButtonLink>
 

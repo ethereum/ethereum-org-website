@@ -4,7 +4,7 @@ description: Ortak ETH hisselemeye nasıl başlanacağına dair genel bir bakı�
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: Gergedan Leslie havuzda yüzüyor.
 sidebarDepth: 2
 summaryPoints:
@@ -68,7 +68,7 @@ Hemen şimdi! Şangay/Capella ağ yükseltmesi Nisan 2023'te gerçekleşti, hiss
 
 Alternatif olarak, bir ERC-20 likidite token'ı kullanan havuzlar, kullanıcıların bu token'ın açık pazarda ticaretini yapmalarına izin vererek hisseleme pozisyonunuzu satmanıza, ETH'yi hisseleme sözleşmesinden fiilen çıkarmadan etkin bir şekilde "çekmenize" olanak tanır.
 
-<ButtonLink to="/staking/withdrawals/">Hisseleme para çekmeleri hakkında daha fazlası</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Hisseleme para çekmeleri hakkında daha fazlası</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Bu benim borsamla stake yapmaktan farklı mı?">

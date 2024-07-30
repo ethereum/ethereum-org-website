@@ -4,6 +4,7 @@ import type { AppProps } from "next/app"
 import { StaticImageData } from "next/image"
 import { SSRConfig } from "next-i18next"
 import type { ReactElement, ReactNode } from "react"
+import { Icon } from "@chakra-ui/react"
 
 import type {
   DocsFrontmatter,
@@ -15,11 +16,14 @@ import type {
   UseCasesFrontmatter,
 } from "@/lib/interfaces"
 
+import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import { SimulatorNav } from "@/components/Simulator/interfaces"
 
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
+
+import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
 import { layoutMapping } from "@/pages/[...slug]"
 
@@ -28,7 +32,10 @@ export type Unpacked<T> = T extends (infer U)[] ? U : T
 
 export type ChildOnlyProp = { children?: ReactNode }
 
-export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+export type NextPageWithLayout<P = Record<string, unknown>, IP = P> = NextPage<
+  P,
+  IP
+> & {
   getLayout?: (page: ReactElement<P>) => ReactNode
 }
 
@@ -40,11 +47,11 @@ export type Root = {
   children: ReactNode
   contentIsOutdated: boolean
   contentNotTranslated: boolean
-  lastDeployDate: string
+  lastDeployLocaleTimestamp: string
 }
 
 export type BasePageProps = SSRConfig &
-  Pick<Root, "contentNotTranslated" | "lastDeployDate">
+  Pick<Root, "contentNotTranslated" | "lastDeployLocaleTimestamp">
 
 export type Frontmatter = RoadmapFrontmatter &
   UpgradeFrontmatter &
@@ -59,10 +66,13 @@ export type Layout = keyof LayoutMappingType
 
 export type Lang =
   | "en"
+  | "am"
   | "ar"
   | "az"
+  | "be"
   | "bg"
   | "bn"
+  | "bs"
   | "ca"
   | "cs"
   | "da"
@@ -71,6 +81,7 @@ export type Lang =
   | "es"
   | "fa"
   | "fi"
+  | "fil"
   | "fr"
   | "gl"
   | "gu"
@@ -78,6 +89,7 @@ export type Lang =
   | "hi"
   | "hr"
   | "hu"
+  | "hy-am"
   | "id"
   | "ig"
   | "it"
@@ -85,13 +97,15 @@ export type Lang =
   | "ka"
   | "kk"
   | "km"
+  | "kn"
   | "ko"
   | "lt"
   | "ml"
   | "mr"
   | "ms"
-  | "nl"
   | "nb"
+  | "ne-np"
+  | "nl"
   | "pcm"
   | "ph"
   | "pl"
@@ -105,7 +119,9 @@ export type Lang =
   | "sr"
   | "sw"
   | "ta"
+  | "te"
   | "th"
+  | "tk"
   | "tr"
   | "uk"
   | "ur"
@@ -155,7 +171,8 @@ export type RawQuestion = {
 
 export type QuestionBank = Record<string, RawQuestion>
 export type QuestionKey = keyof typeof allQuestionData
-export type AnswerKey = typeof allQuestionData[QuestionKey]["answers"][number]["id"]
+export type AnswerKey =
+  (typeof allQuestionData)[QuestionKey]["answers"][number]["id"]
 
 export type Question = RawQuestion & {
   id: QuestionKey
@@ -192,7 +209,10 @@ export type QuizKey = keyof typeof allQuizData
 type HasScoredPerfect = boolean
 type QuestionsCorrect = number
 
-export type CompletedQuizzes = Record<QuizKey, [HasScoredPerfect, QuestionsCorrect]>
+export type CompletedQuizzes = Record<
+  QuizKey,
+  [HasScoredPerfect, QuestionsCorrect]
+>
 
 export type UserStats = {
   score: number
@@ -237,12 +257,100 @@ export type LocaleContributions = {
   data: FileContributorData[]
 }
 
+// Crowdin translation progress
+export type ProjectProgressData = {
+  languageId: string
+  words: {
+    total: number
+    approved: number
+  }
+}
+
+export type LocaleDisplayInfo = {
+  localeOption: string
+  sourceName: string
+  targetName: string
+  englishName: string
+  approvalProgress: number
+  wordsApproved: number
+  isBrowserDefault?: boolean
+}
+
+/**
+ * Translation cost report
+ */
+type DateRange = { from: string; to: string }
+type Total = { total: number }
+type Cost = {
+  tmMatch: { "100": number; perfect: number }
+  mtMatch: { "100": string }
+  suggestionMatch: { "100": number }
+  total: number
+  default: { noMatch: number }
+}
+
+type CrowdinUser = {
+  id: number
+  username: string
+  fullName: string
+  avatarUrl: string
+  roleTitle: string
+}
+
+type CostItem = {
+  approvalCosts: Total
+  preTranslated: Cost
+  savings: Omit<Cost, "default">
+  totalCosts: number
+  translationCosts: Cost
+}
+
+type ReportLanguageItem = {
+  id: string
+  name: string
+  roleTitle: string
+}
+
+type ReportLanguage = CostItem & {
+  approvalRate: number
+  approved: Total
+  language: ReportLanguageItem
+  targetTranslated: Cost
+  translated: Cost
+  translatedByMt: Cost
+  translationRates: Omit<Cost, "total">
+}
+
+type DataItem = CostItem & {
+  user: CrowdinUser
+  languages: ReportLanguage[]
+}
+
+export type TranslationCostReport = CostItem & {
+  name: string
+  url: string
+  unit: string
+  dateRange: DateRange
+  currency: string
+  data: DataItem[]
+}
+
+export type CostLeaderboardData = Pick<
+  CrowdinUser,
+  "username" | "fullName" | "avatarUrl"
+> &
+  Pick<CostItem, "totalCosts"> & {
+    langs: string[]
+  }
+
 // GitHub contributors
+
 export type Commit = {
   commit: {
     author: {
       name: string
       email: string
+      date: string
     }
   }
   author: {
@@ -262,6 +370,16 @@ export type Author = {
   }
 }
 
+export type FileContributor = {
+  login: string
+  avatar_url: string
+  html_url: string
+  date?: string
+}
+
+type FilePath = string
+export type CommitHistory = Record<FilePath, FileContributor[]>
+
 /**
  * Table of contents
  */
@@ -275,8 +393,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-    items: TocNodeType[]
-  }
+      items: TocNodeType[]
+    }
 
 export type ToCItem = {
   title: string
@@ -289,12 +407,58 @@ export type IRemarkTocOptions = {
   callback: (toc: TocNodeType) => void
 }
 
-export type CommonHeroProps = {
-  heroImg: StaticImageData
-  header: string
+type HeroButtonProps = Omit<CallToActionProps, "index">
+
+/**
+ * General props to be picked or omitted for any of the hero components
+ *
+ * The generic prop type `HeroImg` is assigned to the `heroImg` prop
+ * to be able to declare either defining the prop as a static image object
+ * or a string. (defaults to `StaticImageData`)
+ */
+export type CommonHeroProps<
+  HeroImg extends StaticImageData | string = StaticImageData,
+> = {
+  /**
+   * Decorative image displayed as the full background or an aside to
+   * the text content
+   *
+   * Note: It is either required as a static image data object or the
+   * relative path of the image file, depending on the setup of the image component
+   * for the given hero component.
+   */
+  heroImg: HeroImg
+  /**
+   * File path for the image to show on prerender.
+   */
+  blurDataURL: string
+  /**
+   * Object of props to render the `Breadcrumbs` component.
+   */
+  breadcrumbs: BreadcrumbsProps
+  /**
+   * An array of content to render call-to-action buttons that leads the user to a section or sections of the
+   * given page from the hero.
+   *
+   * The hero can render no buttons or up to and no more than two.
+   */
+  buttons?: [HeroButtonProps, HeroButtonProps?]
+  /**
+   * The primary title of the page
+   */
   title: string
-  description: string
-  buttons?: [CallToActionProps, CallToActionProps?]
+  /**
+   * A tag name for the page
+   */
+  header: string
+  /**
+   * Preface text about the content in the given page
+   */
+  description: ReactNode
+  /**
+   * The maximum height of the image in the hero
+   */
+  maxHeight?: string
 }
 
 // Learning Tools
@@ -325,6 +489,15 @@ export type EthStoreResponse = Data<{
   effective_balances_sum_wei: number
 }>
 
+export type EthStakedResponse = {
+  result: {
+    rows?: {
+      cum_deposited_eth: number
+      time: string
+    }[]
+  }
+}
+
 export type EpochResponse = Data<{
   validatorscount: number
 }>
@@ -342,12 +515,12 @@ export type TimestampedData<T> = {
 
 export type MetricDataValue<Data, Value> =
   | {
-    error: string
-  }
+      error: string
+    }
   | {
-    data: Data
-    value: Value
-  }
+      data: Data
+      value: Value
+    }
 
 export type EtherscanNodeResponse = {
   result: {
@@ -406,57 +579,184 @@ export type PhoneScreenProps = SimulatorNavProps & {
 }
 export type CommunityConference = {
   title: string
-  to: string
+  href: string
   location: string
   description: string
   startDate: string
   endDate: string
+  imageUrl: string
 }
 
-type TranslatedStats = {
-  tmMatch: number
-  default: number
-  total: number
-}
-
-export type AllTimeData = {
+// Wallets
+export interface WalletData {
+  last_updated: string
   name: string
+  image: StaticImageData
+  brand_color: string
   url: string
-  unit: string
-  dateRange: {
-    from: string
-    to: string
-  }
-  currency: string
-  mode: string
-  totalCosts: number
-  totalTMSavings: number
-  totalPreTranslated: number
-  data: Array<{
-    user: {
-      id: number
-      username: string
-      fullName: string
-      userRole: string
-      avatarUrl: string
-      preTranslated: number
-      totalCosts: number
-    }
-    languages: Array<{
-      language: {
-        id: string
-        name: string
-        userRole: string
-        tmSavings: number
-        preTranslate: number
-        totalCosts: number
-      }
-      translated: TranslatedStats
-      targetTranslated: TranslatedStats
-      translatedByMt: TranslatedStats
-      approved: TranslatedStats
-      translationCosts: TranslatedStats
-      approvalCosts: TranslatedStats
-    }>
+  active_development_team: boolean
+  languages_supported: string[]
+  twitter: string
+  discord: string
+  reddit: string
+  telegram: string
+  ios: boolean
+  android: boolean
+  linux: boolean
+  windows: boolean
+  macOS: boolean
+  firefox: boolean
+  chromium: boolean
+  hardware: boolean
+  open_source: boolean
+  repo_url: string
+  non_custodial: boolean
+  security_audit: string[]
+  scam_protection: boolean
+  hardware_support: boolean
+  rpc_importing: boolean
+  nft_support: boolean
+  connect_to_dapps: boolean
+  staking: boolean
+  swaps: boolean
+  multichain?: boolean
+  layer_2: boolean
+  gas_fee_customization: boolean
+  ens_support: boolean
+  erc_20_support: boolean
+  buy_crypto: boolean
+  withdraw_crypto: boolean
+  multisig: boolean
+  social_recovery: boolean
+  onboard_documentation: string
+  documentation: string
+  mpc?: boolean
+  new_to_crypto?: boolean
+}
+
+export type Wallet = WalletData & {
+  supportedLanguages: string[]
+}
+
+export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
+
+export interface WalletFilterData {
+  title: TranslationKey
+  filterKey?: string
+  description: TranslationKey | ""
+}
+
+export type FilterOption = {
+  title: string
+  items: Array<{
+    title: string
+    icon: typeof Icon
+    description: string
+    filterKey: string | undefined
+    showOptions: boolean | undefined
+    options:
+      | Array<{
+          name: string
+          filterKey?: string
+          inputType: "checkbox"
+        }>
+      | []
   }>
+}
+
+export interface WalletPersonas {
+  title: string
+  description: string
+  presetFilters: {
+    android: boolean
+    ios: boolean
+    linux: boolean
+    windows: boolean
+    macOS: boolean
+    firefox: boolean
+    chromium: boolean
+    hardware: boolean
+    open_source: boolean
+    non_custodial: boolean
+    hardware_support: boolean
+    rpc_importing: boolean
+    nft_support: boolean
+    connect_to_dapps: boolean
+    staking: boolean
+    swaps: boolean
+    layer_2: boolean
+    gas_fee_customization: boolean
+    ens_support: boolean
+    erc_20_support: boolean
+    buy_crypto: boolean
+    withdraw_crypto: boolean
+    multisig: boolean
+    social_recovery: boolean
+    new_to_crypto?: boolean
+  }
+}
+
+export interface DropdownOption {
+  label: string
+  value: string
+  filterKey: string
+  category: string
+}
+
+export type WalletSupportedLanguageContextType = {
+  supportedLanguage: string
+  setSupportedLanguage: (language: string) => void
+}
+
+// Historical upgrades
+type NetworkUpgradeDetails = {
+  blockNumber?: number
+  epochNumber?: number
+  slotNumber?: number
+} & (
+  | {
+      isPending: true
+      dateTimeAsString?: string
+      ethPriceInUSD?: never
+      waybackLink?: never
+    }
+  | {
+      ethPriceInUSD: number
+      waybackLink: string
+      dateTimeAsString: string
+      isPending?: never
+    }
+)
+
+export type NetworkUpgradeData = Record<string, NetworkUpgradeDetails>
+
+// Footer
+export type FooterLink = {
+  href: string
+  text: TranslationKey
+  isPartiallyActive?: boolean
+}
+
+export type FooterLinkSection = {
+  title: TranslationKey
+  links: FooterLink[]
+}
+
+// GitHub API
+export type GHIssue = {
+  title: string
+  html_url: string
+  created_at: string
+  user: {
+    login: string
+    html_url: string
+    avatar_url: string
+  }
+  labels: GHLabel[]
+}
+
+export type GHLabel = {
+  id: number
+  name: string
+  color: string
 }

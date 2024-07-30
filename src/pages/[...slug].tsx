@@ -16,6 +16,7 @@ import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
 import type {
+  CommitHistory,
   Lang,
   Layout,
   LayoutMappingType,
@@ -26,13 +27,17 @@ import type {
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
 
-import { getCrowdinContributors } from "@/lib/utils/crowdin"
+import { getFileContributorInfo } from "@/lib/utils/contributors"
 import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
+import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { remapTableOfContents } from "@/lib/utils/toc"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import {
+  filterRealLocales,
+  getRequiredNamespacesForPage,
+} from "@/lib/utils/translations"
 
 import {
   docsComponents,
@@ -43,6 +48,8 @@ import {
   StakingLayout,
   staticComponents,
   StaticLayout,
+  translatathonComponents,
+  TranslatathonLayout,
   TutorialLayout,
   tutorialsComponents,
   upgradeComponents,
@@ -50,6 +57,7 @@ import {
   useCasesComponents,
   UseCasesLayout,
 } from "@/layouts"
+import { fetchGFIs } from "@/lib/api/fetchGFIs"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import remarkInferToc from "@/lib/rehype/remarkInferToc"
@@ -65,6 +73,7 @@ export const layoutMapping = {
   roadmap: RoadmapLayout,
   upgrade: UpgradeLayout,
   docs: DocsLayout,
+  translatathon: TranslatathonLayout,
   tutorial: TutorialLayout,
 }
 
@@ -75,6 +84,7 @@ const componentsMapping = {
   roadmap: roadmapComponents,
   upgrade: upgradeComponents,
   docs: docsComponents,
+  translatathon: translatathonComponents,
   tutorial: tutorialsComponents,
 } as const
 
@@ -82,7 +92,7 @@ export const getStaticPaths = (({ locales }) => {
   const contentFiles = getContent("/")
 
   // Generate page paths for each supported locale
-  const paths = locales!.flatMap((locale) =>
+  const paths = filterRealLocales(locales).flatMap((locale) =>
     contentFiles.map((file) => ({
       params: {
         // Splitting nested paths to generate proper slug
@@ -101,7 +111,15 @@ export const getStaticPaths = (({ locales }) => {
 type Props = Omit<Parameters<LayoutMappingType[Layout]>[0], "children"> &
   SSRConfig & {
     mdxSource: MDXRemoteSerializeResult
+    gfissues: Awaited<ReturnType<typeof fetchGFIs>>
   }
+
+// Fetch external API data once to avoid hitting rate limit
+const gfIssuesDataFetch = runOnlyOnce(async () => {
+  return await fetchGFIs()
+})
+
+const commitHistoryCache: CommitHistory = {}
 
 export const getStaticProps = (async (context) => {
   const params = context.params!
@@ -142,8 +160,6 @@ export const getStaticProps = (async (context) => {
   const timeToRead = readingTime(markdown.content)
   const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
   const slug = `/${params.slug.join("/")}/`
-  const lastUpdatedDate = getLastModifiedDate(slug, locale!)
-  const lastDeployDate = getLastDeployDate()
 
   // Get corresponding layout
   let layout = (frontmatter.template as Layout) ?? "static"
@@ -161,11 +177,29 @@ export const getStaticProps = (async (context) => {
     }
   }
 
-  const crowdinContributors = ["docs", "tutorial"].includes(layout)
-    ? getCrowdinContributors(mdPath, locale as Lang)
-    : []
-
   const requiredNamespaces = getRequiredNamespacesForPage(slug, layout)
+
+  const { contributors, lastUpdatedDate } = await getFileContributorInfo(
+    mdDir,
+    mdPath,
+    slug,
+    locale!,
+    frontmatter.lang,
+    layout,
+    commitHistoryCache
+  )
+
+  const lastDeployDate = getLastDeployDate()
+  const lastEditLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastUpdatedDate
+  )
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
+
+  const gfissues = await gfIssuesDataFetch()
 
   return {
     props: {
@@ -173,29 +207,33 @@ export const getStaticProps = (async (context) => {
       mdxSource,
       slug,
       frontmatter,
-      lastUpdatedDate,
-      lastDeployDate,
+      lastEditLocaleTimestamp,
+      lastDeployLocaleTimestamp,
       contentNotTranslated,
       layout,
       timeToRead: Math.round(timeToRead.minutes),
       tocItems,
-      crowdinContributors,
+      contributors,
+      gfissues,
     },
   }
 }) satisfies GetStaticProps<Props, Params>
 
 const ContentPage: NextPageWithLayout<
   InferGetStaticPropsType<typeof getStaticProps>
-> = ({ mdxSource, layout }) => {
+> = ({ mdxSource, layout, gfissues }) => {
   // TODO: Address component typing error here (flip `FC` types to prop object types)
-  // @ts-expect-error
+  // @ts-expect-error Incompatible component function signatures
   const components: Record<string, React.ReactNode> = {
     ...mdComponents,
     ...componentsMapping[layout],
   }
+
+  // Global scope for MDX components
+  const scope = { gfissues }
   return (
     <>
-      <MDXRemote {...mdxSource} components={components} />
+      <MDXRemote {...mdxSource} components={components} scope={scope} />
     </>
   )
 }
@@ -206,21 +244,23 @@ ContentPage.getLayout = (page) => {
   const {
     slug,
     frontmatter,
-    lastUpdatedDate,
+    lastEditLocaleTimestamp,
+    lastDeployLocaleTimestamp,
     layout,
     timeToRead,
     tocItems,
-    crowdinContributors,
+    contributors,
     contentNotTranslated,
   } = page.props
 
   const layoutProps = {
     slug,
     frontmatter,
-    lastUpdatedDate,
+    lastEditLocaleTimestamp,
+    lastDeployLocaleTimestamp,
     timeToRead,
     tocItems,
-    crowdinContributors,
+    contributors,
     contentNotTranslated,
   }
   const Layout = layoutMapping[layout]

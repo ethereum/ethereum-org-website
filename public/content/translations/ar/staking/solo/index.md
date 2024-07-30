@@ -4,7 +4,7 @@ description: نظرة عامة إلى كيفية بدء المراهنة الف�
 lang: ar
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: ليزلي فرس النهر على شريحة الحاسوب الخاصة بها.
 sidebarDepth: 2
 summaryPoints:
@@ -190,7 +190,7 @@ These tools can be used as an alternative to the [Staking Deposit CLI](https://g
 
 لفتح رصيدك واسترداده بالكامل، عليك أيضًا إكمال عملية الخروج من برنامج المدقق.
 
-<ButtonLink to="/staking/withdrawals/">مزيد من المعلومات حول عمليات السحب المتعلقة بالمراهنات</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">مزيد من المعلومات حول عمليات السحب المتعلقة بالمراهنات</ButtonLink>
 </ExpandableCard>
 
 ## قراءة إضافية {#further-reading}

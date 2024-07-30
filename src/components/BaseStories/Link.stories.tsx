@@ -4,8 +4,6 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import Link from "../Link"
 
-type LinkType = typeof Link
-
 const meta = {
   title: "Molecules / Navigation / Links",
   component: Link,
@@ -16,33 +14,33 @@ const meta = {
       </Center>
     ),
   ],
-} satisfies Meta<LinkType>
+} satisfies Meta<typeof Link>
 
 export default meta
 
 type Story = StoryObj<typeof meta>
 
-const MockParagraph = ({ to }: { to?: string }) => (
+const MockParagraph = ({ href }: { href: string }) => (
   <Text>
     Text body normal. Ethereum is open access to digital money and data-friendly
     services for everyone &ndash; no matter your background or location.
-    It&apos;s a <Link to={to}>community-built</Link> technology behind the
+    It&apos;s a <Link href={href}>community-built</Link> technology behind the
     cryptocurrency ether (ETH) and thousands of applications you can use today.
   </Text>
 )
 
 export const InternalLink: Story = {
   args: {
-    to: "#",
+    href: "#",
   },
-  render: (args) => <MockParagraph {...args} />,
+  render: (args) => <MockParagraph href={args.href!} />,
 }
 
 export const ExternalLink: Story = {
   args: {
-    to: "https://example.com",
+    href: "https://example.com",
   },
-  render: (args) => <MockParagraph {...args} />,
+  render: (args) => <MockParagraph href={args.href!} />,
 }
 
 export const LinkList: Story = {
@@ -59,7 +57,7 @@ export const LinkList: Story = {
         {Array.from({ length: 9 }).map((_, idx) => (
           <ListItem key={idx + 1}>
             <Link
-              to={idx % 2 === 0 ? "https://example.com" : "#"}
+              href={idx % 2 === 0 ? "https://example.com" : "#"}
             >{`List Item ${idx % 2 === 0 ? "External" : "Internal"} ${
               idx + 1
             }`}</Link>

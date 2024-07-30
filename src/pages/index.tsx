@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react"
+import { lazy, ReactNode, Suspense, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -14,30 +14,32 @@ import {
   HeadingProps,
   Icon,
   SimpleGridProps,
+  SkeletonText,
   Stack,
   useToken,
 } from "@chakra-ui/react"
 
 import { AllMetricData, BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
-import type { CommunityEventsReturnType } from "@/lib/interfaces"
+import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
-import Codeblock from "@/components/Codeblock"
 import CodeModal from "@/components/CodeModal"
 import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
+import LazyLoadComponent from "@/components/LazyLoadComponent"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
-import StatsBoxGrid from "@/components/StatsBoxGrid"
-import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
+import TitleCardList from "@/components/TitleCardList"
+import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import {
   getRequiredNamespacesForPage,
   isLangRightToLeft,
@@ -54,20 +56,43 @@ import { fetchNodes } from "@/lib/api/fetchNodes"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
-import devfixed from "@/public/developers-eth-blocks.png"
-import dogefixed from "@/public/doge-computer.png"
-import enterprise from "@/public/enterprise-eth.png"
-import ethfixed from "@/public/eth.png"
-import finance from "@/public/finance_transparent.png"
-import future from "@/public/future_transparent.png"
-import hackathon from "@/public/hackathon_transparent.png"
-import hero from "@/public/home/hero.png"
-import impact from "@/public/impact_transparent.png"
-import infrastructure from "@/public/infrastructure_transparent.png"
-import infrastructurefixed from "@/public/infrastructure_transparent.png"
-import merge from "@/public/upgrades/merge.png"
-import robotfixed from "@/public/wallet-cropped.png"
-import ethereum from "@/public/what-is-ethereum.png"
+import devfixed from "@/public/images/developers-eth-blocks.png"
+import dogefixed from "@/public/images/doge-computer.png"
+import enterprise from "@/public/images/enterprise-eth.png"
+import ethfixed from "@/public/images/eth.png"
+import finance from "@/public/images/finance_transparent.png"
+import future from "@/public/images/future_transparent.png"
+import hackathon from "@/public/images/hackathon_transparent.png"
+import hero from "@/public/images/home/hero.png"
+import impact from "@/public/images/impact_transparent.png"
+import infrastructure from "@/public/images/infrastructure_transparent.png"
+import infrastructurefixed from "@/public/images/infrastructure_transparent.png"
+import merge from "@/public/images/upgrades/merge.png"
+import robotfixed from "@/public/images/wallet-cropped.png"
+import ethereum from "@/public/images/what-is-ethereum.png"
+
+// lazy loaded components
+const Codeblock = lazy(() =>
+  Promise.all([
+    import("@/components/Codeblock"),
+    // Add a delay to prevent the skeleton from flashing
+    new Promise((resolve) => setTimeout(resolve, 1000)),
+  ]).then(([module]) => module)
+)
+const StatsBoxGrid = lazy(() => import("@/components/StatsBoxGrid"))
+
+const Skeleton = () => (
+  <Stack px={6} pt="2.75rem" h="50vh">
+    <SkeletonText
+      mt="4"
+      noOfLines={6}
+      spacing={4}
+      skeletonHeight="1.4rem"
+      startColor="body.medium"
+      opacity={0.2}
+    />
+  </Stack>
+)
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
@@ -120,8 +145,6 @@ const StyledActionCard = chakra(ActionCard, {
     margin: 0,
   },
 })
-
-const StyledCodeModal = chakra(CodeModal)
 
 const StyledTitleCardList = chakra(TitleCardList)
 
@@ -209,13 +232,17 @@ export const getStaticProps = (async ({ locale }) => {
 
   // load last deploy date to pass to Footer in RootLayout
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       communityEvents,
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
       metricResults,
     },
     revalidate: BASE_TIME_UNIT * 24,
@@ -227,7 +254,7 @@ const HomePage = ({
   metricResults,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation(["common", "page-index"])
-  const { locale } = useRouter()
+  const { locale, asPath } = useRouter()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
   const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
@@ -243,28 +270,28 @@ const HomePage = ({
       title: t("page-index:page-index-get-started-wallet-title"),
       description: t("page-index:page-index-get-started-wallet-description"),
       alt: t("page-index:page-index-get-started-wallet-image-alt"),
-      to: "/wallets/find-wallet/",
+      href: "/wallets/find-wallet/",
     },
     {
       image: ethfixed,
       title: t("page-index:page-index-get-started-eth-title"),
       description: t("page-index:page-index-get-started-eth-description"),
       alt: t("page-index:page-index-get-started-eth-image-alt"),
-      to: "/get-eth/",
+      href: "/get-eth/",
     },
     {
       image: dogefixed,
       title: t("page-index:page-index-get-started-dapps-title"),
       description: t("page-index:page-index-get-started-dapps-description"),
       alt: t("page-index:page-index-get-started-dapps-image-alt"),
-      to: "/dapps/",
+      href: "/dapps/",
     },
     {
       image: devfixed,
       title: t("page-index:page-index-get-started-devs-title"),
       description: t("page-index:page-index-get-started-devs-description"),
       alt: t("page-index:page-index-get-started-devs-image-alt"),
-      to: "/developers/",
+      href: "/developers/",
     },
   ]
 
@@ -274,28 +301,23 @@ const HomePage = ({
       alt: t("page-index:page-index-tout-upgrades-image-alt"),
       title: t("page-index:page-index-tout-upgrades-title"),
       description: t("page-index:page-index-tout-upgrades-description"),
-      to: "/roadmap/",
+      href: "/roadmap/",
     },
     {
       image: infrastructurefixed,
       alt: t("page-index:page-index-tout-enterprise-image-alt"),
       title: t("page-index:page-index-tout-enterprise-title"),
       description: t("page-index:page-index-tout-enterprise-description"),
-      to: "/enterprise/",
+      href: "/enterprise/",
     },
     {
       image: enterprise,
       alt: t("page-index:page-index-tout-community-image-alt"),
       title: t("page-index:page-index-tout-community-title"),
       description: t("page-index:page-index-tout-community-description"),
-      to: "/community/",
+      href: "/community/",
     },
   ]
-
-  interface CodeExample extends ITitleCardItem {
-    codeLanguage: string
-    code: string
-  }
 
   const codeExamples: Array<CodeExample> = [
     {
@@ -346,6 +368,7 @@ const HomePage = ({
         title={t("page-index:page-index-meta-title")}
         description={t("page-index:page-index-meta-description")}
       />
+      <TranslatathonBanner pathname={asPath} />
       <Box w="full">
         <HomeHero heroImg={hero} />
       </Box>
@@ -390,7 +413,7 @@ const HomePage = ({
                 title={card.title}
                 description={card.description}
                 alt={card.alt}
-                to={card.to}
+                href={card.href}
                 image={card.image}
                 imageWidth={320}
               />
@@ -409,10 +432,10 @@ const HomePage = ({
               <Translation id="page-index:page-index-what-is-ethereum-description" />
             </SectionDecription>
             <ButtonLinkRow>
-              <ButtonLink to="/what-is-ethereum/">
+              <ButtonLink href="/what-is-ethereum/">
                 <Translation id="page-index:page-index-what-is-ethereum-button" />
               </ButtonLink>
-              <ButtonLink to="/eth/" variant="outline">
+              <ButtonLink href="/eth/" variant="outline" isSecondary>
                 <Translation id="page-index:page-index-what-is-ethereum-secondary-button" />
               </ButtonLink>
             </ButtonLinkRow>
@@ -437,7 +460,7 @@ const HomePage = ({
               <Translation id="page-index:page-index-defi-description" />
             </SectionDecription>
             <ButtonLinkRow>
-              <ButtonLink to="/defi/">
+              <ButtonLink href="/defi/">
                 <Translation id="page-index:page-index-defi-button" />
               </ButtonLink>
             </ButtonLinkRow>
@@ -462,7 +485,7 @@ const HomePage = ({
               <Translation id="page-index:page-index-nft-description" />
             </SectionDecription>
             <ButtonLinkRow>
-              <ButtonLink to="/nft/">
+              <ButtonLink href="/nft/">
                 <Translation id="page-index:page-index-nft-button" />
               </ButtonLink>
             </ButtonLinkRow>
@@ -488,10 +511,10 @@ const HomePage = ({
                 <Translation id="page-index:page-index-internet-description" />
               </SectionDecription>
               <ButtonLinkRow>
-                <ButtonLink to="/dapps/?category=technology">
+                <ButtonLink href="/dapps/?category=technology">
                   <Translation id="page-index:page-index-internet-button" />
                 </ButtonLink>
-                <ButtonLink to="/wallets/" variant="outline">
+                <ButtonLink href="/wallets/" variant="outline" isSecondary>
                   <Translation id="page-index:page-index-internet-secondary-button" />
                 </ButtonLink>
               </ButtonLinkRow>
@@ -530,43 +553,29 @@ const HomePage = ({
               <Translation id="page-index:page-index-developers-description" />
             </SectionDecription>
             <ButtonLinkRow>
-              <ButtonLink to="/dapps/?category=technology">
+              <ButtonLink href="/developers/">
                 <Translation id="page-index:page-index-developers-button" />
               </ButtonLink>
             </ButtonLinkRow>
           </FeatureContent>
-          <StyledCodeModal
-            isOpen={isModalOpen}
-            setIsOpen={setModalOpen}
-            title={codeExamples[activeCode].title}
-            sx={{
-              ".modal-component-container": {
-                padding: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                top: "50%",
-              },
-              ".modal-component": {
-                maxWidth: "100%",
-                maxHeight: "50%",
-                padding: 0,
-              },
-              ".modal-component-content": {
-                marginTop: "3rem",
-                width: "100%",
-                overflow: "auto",
-              },
-            }}
-          >
-            <Codeblock
-              codeLanguage={codeExamples[activeCode].codeLanguage}
-              allowCollapse={false}
-              fromHomepage
+          {/* Render CodeModal & Codeblock conditionally */}
+          {isModalOpen && (
+            <CodeModal
+              isOpen={isModalOpen}
+              setIsOpen={setModalOpen}
+              title={codeExamples[activeCode].title}
             >
-              {codeExamples[activeCode].code}
-            </Codeblock>
-          </StyledCodeModal>
+              <Suspense fallback={<Skeleton />}>
+                <Codeblock
+                  codeLanguage={codeExamples[activeCode].codeLanguage}
+                  allowCollapse={false}
+                  fromHomepage
+                >
+                  {codeExamples[activeCode].code}
+                </Codeblock>
+              </Suspense>
+            </CodeModal>
+          )}
         </Row>
       </MainSectionContainer>
       {/* Eth Today Section */}
@@ -579,7 +588,17 @@ const HomePage = ({
             <Translation id="page-index:page-index-network-stats-subtitle" />
           </SectionDecription>
         </ContentBox>
-        <StatsBoxGrid data={metricResults} />
+
+        <LazyLoadComponent
+          component={StatsBoxGrid}
+          fallback={<Skeleton />}
+          componentProps={{ data: metricResults }}
+          intersectionOptions={{
+            root: null,
+            rootMargin: "500px",
+            threshold: 0,
+          }}
+        />
       </GrayContainer>
       <Divider mb={16} mt={16} w="10%" height="0.25rem" bgColor="homeDivider" />
       <CommunityEvents events={communityEvents} />
@@ -598,7 +617,7 @@ const HomePage = ({
                 title={tout.title}
                 description={tout.description}
                 alt={tout.alt}
-                to={tout.to}
+                href={tout.href}
                 image={tout.image}
                 imageWidth={320}
                 boxShadow={cardBoxShadow}
@@ -619,13 +638,14 @@ const HomePage = ({
           mx={0}
         >
           <ButtonLinkRow>
-            <ButtonLink to="/contributing/">
+            <ButtonLink href="/contributing/">
               <Translation id="page-index:page-index-contribution-banner-button" />
             </ButtonLink>
             <ButtonLink
-              to="https://github.com/ethereum/ethereum-org-website"
+              href="https://github.com/ethereum/ethereum-org-website"
               leftIcon={<Icon as={FaGithub} fontSize="2xl" />}
               variant="outline"
+              isSecondary
             >
               GitHub
             </ButtonLink>

@@ -5,7 +5,7 @@ lang: ro
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Sigla Eth-ului afișată printr-o hologramă.
 summaryPoint1: O manieră de reprezenta ceva unic ca un activ bazat pe Ethereum.
 summaryPoint2: NTF-urile oferă putere mai multă creatorilor de conținut decât oricând.
@@ -162,7 +162,7 @@ Odată ce conținutul este vândut, fondurile le revin în mod direct. Și chiar
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Explorați, cumpărați sau creați-vă propriile NFT-uri de artă/de colecție...</div>
-  <ButtonLink to="/dapps/?category=collectibles">
+  <ButtonLink href="/dapps/?category=collectibles">
     Explorați arta NFT
   </ButtonLink>
 </InfoBanner>
@@ -195,7 +195,7 @@ Jocul de realitate virtuală Decentraland vă oferă chiar posibilitatea să cum
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Aruncați o privire asupra jocurilor Ethereum, alimentate de NFT-uri...</div>
-  <ButtonLink to="/dapps/?category=gaming">
+  <ButtonLink href="/dapps/?category=gaming">
     Explorați jocurile NFT
   </ButtonLink>
 </InfoBanner>
@@ -350,7 +350,7 @@ _Este important să ne amintim că Ethereum nu doar efectuează tranzacții fina
 
 Procesul a început deja. [Lanțul Beacon](/roadmap/beacon-chain/), prima actualizare a fost lansată în decembrie 2020. Acesta oferă fundamentul pentru mizare, permițând stakerilor să intre în sistem. Pasul următor, important pentru eficiența energetică, este fuzionarea lanțului actual, cel securizat de miner-i, cu Lanțul Beacon, unde nu mai este nevoie de minare. Deocamdată, termenele de implementare nu pot fi exacte, dar se estimează că acest lucru se va întâmpla la un moment dat în 2022. Procesul este cunoscut sub numele de fuziune (cunoscut anterior sub numele de andocare). [Aflați mai multe despre fuziune](/roadmap/merge/).
 
-<ButtonLink to="/roadmap/">
+<ButtonLink href="/roadmap/">
   Mai multe despre actualizările Ethereum
 </ButtonLink>
 

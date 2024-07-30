@@ -32,7 +32,7 @@ lang: zh
 
 对于验证者来说，在网络传递此数据需要大量的开销。 因此，在更加广泛地广播前，个人验证者的认证会在子网内进行聚合。 这包括聚合签名，以便广播的认证包含共识 `data` 和一个签名，后者结合了所有同意 `data` 的验证者的签名。 这可以使用 `aggregation_bits` 来检查，因为它提供了委员会中每个验证者的索引（其 ID 在 `data` 中提供），可用于查询个人签名。
 
-在每个时段，每个子网中会有一个验证者被选为 `aggregator`（聚合者）。 聚合者收集所有在网络听到的，与他们自己的 `data` 相同的所有认证。 每一个匹配认证的发送者被记录在 `aggregation_bits` 中。 然后聚合者会把聚合的认证广播到更广泛的网络。
+在每个时段，每个子网中会有 16 个验证者被选为`聚合者`。 聚合者收集所有在广播网络听到的，与他们自己的 `data` 相同的所有认证。 每一个匹配认证的发送者被记录在 `aggregation_bits` 中。 然后聚合者将聚合的认证广播到更广泛的网络上。
 
 当一个验证者被选为区块提议者时，他们打包从子网到新区块最新时隙的聚合认证。
 
@@ -50,9 +50,15 @@ lang: zh
 
 ## 奖励 {#rewards}
 
-验证者提交认证将获得奖励。 认证奖励取决于两个变量，`base reward` 和 `inclusion delay`。 最佳的纳入延迟等于 1。
+验证者提交认证将获得奖励。 认证奖励决于参与标志（来源、目标和头)、基础奖励和参与率。
 
-`认证奖励 = 7/8 x 基础奖励 x (1/纳入延迟)`
+每个参与标志都可以为真 (true) 或假 (false)，这取决于提交的认证及其纳入延迟。
+
+最佳情况是全部三个标志都为真 (true)，此时对于每个正确标志，验证者将获得：
+
+`奖励 += 基础奖励 * 标志权重 * 标志认证率 / 64`
+
+标志认证率使用给定标志的所有认证验证者的有效余额之和与总活跃有效余额相比较得出。
 
 ### 基础奖励 {#base-reward}
 
@@ -81,6 +87,6 @@ lang: zh
 ## 延伸阅读 {#further-reading}
 
 - [Vitalik 的注释共识规范中的认证](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
-- [eth2book.info 中的认证](https://eth2book.info/altair/part3/containers/dependencies#attestationdata)
+- [eth2book.info 中的认证](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
 _还有哪些社区资源对你有所帮助？ 编辑并添加本页面！_

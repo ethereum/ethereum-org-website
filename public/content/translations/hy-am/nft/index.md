@@ -5,7 +5,7 @@ lang: hy-am
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Eth-ի պատկերանշանը ցուցադրվաում է հոլոգրամի միջոցով։
 summaryPoint1: "Ցանկացած յուրօրինակ օբյեկտ որպես Էթերիումում գործող ակտիվ ներկայացնելու ձև:"
 summaryPoint2: "NFT-ները ստեղծագործողներին նոր հնարավորություններ են ընձեռում:"
@@ -78,7 +78,7 @@ ethereum.org - ում, NFT-ներն օգտագործվում ցույց տալո
 
 NFT-ի հետ կապված անվտանգային հարցերը հիմանականում պայմանավորված են ֆիշինգներով, սմարթ կոնտրակտներում առկա թերություններով կամ օգտատերերի անզգուշությամբ, NFT սեփականատերերի համար լավ դրամապանակային անվտանգությունը օրհասական դարձնելով:
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Ավելին՝ անվտանգության մասին
 </ButtonLink>
 

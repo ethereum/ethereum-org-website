@@ -5,7 +5,7 @@ lang: hi
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: होलोग्राम के माध्यम से एक Eth लोगो प्रदर्शित किया जा रहा है।
 summaryPoint1: किसी भी अनूठी वस्तु को एथेरियम-आधारित सम्पत्ति के रूप में प्रस्तुत करने का एक तरीका।
 summaryPoint2: कंटेंट निर्माताओं को NFT पहले से कहीं ज़्यादा मज़बूत कर रहे हैं।
@@ -78,7 +78,7 @@ ethereum.org पर NFT का उपयोग यह दिखाने के 
 
 NFT से संबंधित सुरक्षा मुद्दे अक्सर फ़िशिंग घोटालों, स्मार्ट अनुबंध कमजोरियों या उपयोगकर्ता त्रुटियों (जैसे अनजाने में निजी कुंजी को उजागर करना) से संबंधित होते हैं, जिससे NFT मालिकों के लिए अच्छी वॉलेट सुरक्षा महत्वपूर्ण हो जाती है।
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   सुरक्षा को और जानें
 </ButtonLink>
 

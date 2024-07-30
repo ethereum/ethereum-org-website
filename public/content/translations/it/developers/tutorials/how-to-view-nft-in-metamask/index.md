@@ -1,6 +1,6 @@
 ---
 title: Come visualizzare il tuo NFT nel portafoglio (Parte 3/3 della Serie di tutorial sugli NFT)
-description: Questo tutorial descrive come visualizzare un NFT esistente su MetaMask!
+description: Questo tutorial descrive come visualizzare un NFT esistente su Metamask!
 author: "Sumi Mudgil"
 tags:
   - "ERC-721"
@@ -29,7 +29,7 @@ Una volta sulla rete di Sepolia, seleziona la scheda "Collezionabili" sulla dest
 
 ![Come trovare l'hash della tua transazione e l'ID del token ERC-721](./findNFTEtherscan.png)
 
-È possibile che tu debba ricaricare un paio di volte per vedere il tuo NFT — ma ci sarà <Emoji text="😄" size={1} />!
+È possibile che tu debba ricaricare un paio di volte per vedere il tuo NFT — ma ci sarà <Emoji text="" size={1} />!
 
 ![Come caricare il tuo NFT su MetaMask](./findNFTMetamask.gif)
 

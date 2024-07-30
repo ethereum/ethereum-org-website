@@ -27,7 +27,6 @@ const AssetDownload = ({
   artistUrl,
   image,
   title,
-  svgUrl,
   ...props
 }: AssetDownloadProps) => {
   const { t } = useTranslation(["page-assets"])
@@ -58,15 +57,21 @@ const AssetDownload = ({
         )}
       </Box>
       <Flex gap={5} mt={4}>
-        <ButtonLink href={imgSrc} onClick={matomoHandler} target="_blank">
+        <ButtonLink
+          href={imgSrc}
+          onClick={matomoHandler}
+          target="_blank"
+          locale={false}
+        >
           {t("page-assets-download-download")} (
           {extname(imgSrc).slice(1).toUpperCase()})
         </ButtonLink>
-        {svgUrl && (
+        {/* Disables SVG due to bug: https://github.com/ethereum/ethereum-org-website/issues/12267 */}
+        {/* {svgUrl && (
           <ButtonLink href={svgUrl} onClick={matomoHandler} target="_blank">
             {t("page-assets-download-download")} (SVG)
           </ButtonLink>
-        )}
+        )} */}
       </Flex>
     </Flex>
   )

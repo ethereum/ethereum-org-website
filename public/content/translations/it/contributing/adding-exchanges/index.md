@@ -20,7 +20,7 @@ Alla luce di ciò, abbiamo bisogno di ottenere alcune informazioni specifiche qu
 
 ## Di cosa abbiamo bisogno {#what-we-need}
 
-- Le limitazioni geografiche applicate alla piattaforma di scambio
+- Le limitazioni geografiche applicate alla piattaforma di scambio. Le restrizioni geografiche associate a un exchange devono essere spiegate nel dettaglio in una pagina o sezione dedicata sul sito dell'exchange.
 - Le valute che gli utenti possono usare per acquistare ETH
 - La prova che la piattaforma di scambio sia una società di trading legittima
 - Qualsiasi altra informazione aggiuntiva in tuo possesso, ad esempio dati sulla società come gli anni di attività, il supporto finanziario, ecc.
@@ -35,6 +35,6 @@ Occorre inoltre fornire ad ethereum.org la sicurezza che la piattaforma di scamb
 
 Se desideri aggiungere una piattaforma di scambio a ethereum.org, crea un ticket su GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
   Crea un ticket
 </ButtonLink>

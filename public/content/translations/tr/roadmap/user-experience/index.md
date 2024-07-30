@@ -2,7 +2,7 @@
 title: Kullanıcı deneyimini iyileştirme
 description: Ethereum'u kullanmak çoğu kişi için hâlâ oldukça karmaşık. Kitlesel kullanımı teşvik etmek için Ethereum, giriş engellerini büyük ölçüde azaltmalıdır - kullanıcılar, Ethereum'a merkeziyetsiz, izinsiz ve sansüre dirençli erişimin avantajlarından yararlanmalıdır; ancak bu, geleneksel bir web2 uygulamasını kullanmak kadar sorunsuz olmalıdır.
 lang: tr
-image: /roadmap/roadmap-ux.png
+image: /images/roadmap/roadmap-ux.png
 alt: "Ethereum yol haritası"
 template: roadmap
 ---
@@ -15,7 +15,7 @@ Ethereum hesapları, hesapların tanınması (açık anahtar) ve mesajların imz
 
 Bunun için çözüm, Ethereum ile etkileşecek akıllı sözleşme cüzdanlarının kullanımıdır. Akıllı sözleşme cüzdanları; anahtarlar kaybolur veya çalınırsa korunma yolları ile daha iyi sahtekarlık denetimi ve savunma yaratır ve cüzdanların yeni işlevsellik kazanmalarını sağlar. Bugün dahi akıllı sözleşme cüzdanları var olsa da üzerine inşa etmek için henüz kullanışsızdır çünkü Ethereum protokolünün bunları daha iyi desteklemesi gerekir. Bu fazladan destek, hesap soyutlaması olarak bilinmektedir.
 
-<ButtonLink variant="outline-color" to="/roadmap/account-abstraction/">Hesap soyutlaması hakkında daha fazlası</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/account-abstraction/">Hesap soyutlaması hakkında daha fazlası</ButtonLink>
 
 ## Herkes için düğümler
 
@@ -23,7 +23,7 @@ Düğüm işleten kullanıcılar, veri sağlamaları için üçüncü şahıslar
 
 Düğümleri yürütmeyi çok daha kolay ve daha az kaynak bağımlı hale getirecek birçok yükseltme vardır. Verinin depolanma yolu, hacmi daha etkili kullanmak adına **Verkle Ağacı** olarak da bilinen bir yapı ile değiştirilecektir. Aynı zamanda [durumsuzluk](/roadmap/statelessness) veya [veri sonlanması](/roadmap/statelessness/#data-expiry) ile beraber Ethereum düğümleri, hard disk boşluğu gereksinimini azımsanamayacak miktarda düşürecek olan tüm Ethereum durum verilerinin bir kopyasını depolamaya gerek duymayacaklar. [Hafif düğümler](/developers/docs/nodes-and-clients/light-clients/), tam bir düğümü yürütmenin çoğu getirisini sunacak, ancak cep telefonları veya temel tarayıcı uygulamalarının içinde kolaylıkla yürütülebilecektir.
 
-<ButtonLink variant="outline-color" to="/roadmap/verkle-trees/">Verkle ağaçları hakkındakileri okuyun</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/verkle-trees/">Verkle ağaçları hakkındakileri okuyun</ButtonLink>
 
 Bu yükseltmelerle bir düğüm yürütmenin önündeki engeller işlevsel olarak sıfıra indirilir. Kullanıcılar, bilgisayar veya cep telefonlarından, fark edilebilir disk hacmi veya CPU feda etmek zorunda kalmadan ve uygulama kullanırken veri ya da ağ erişimi için üçüncü şahıslara bel bağlamak zorunda olmadan Ethereum'a güvenli ve izne ihtiyaç duymayan erişimden faydalanacak.
 

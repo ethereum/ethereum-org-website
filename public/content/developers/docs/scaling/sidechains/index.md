@@ -17,7 +17,7 @@ Sidechains are independent blockchains, with different histories, development ro
 
 One of the qualities that make sidechains unique (i.e., different from Ethereum) is the consensus algorithm used. Sidechains don't rely on Ethereum for consensus and can choose alternative consensus protocols that suit their needs. Some examples of consensus algorithms used on sidechains include:
 
-- [Proof-of-authority](https://wikipedia.org/wiki/Proof_of_authority)
+- [Proof-of-authority](/developers/docs/consensus-mechanisms/poa/)
 - [Delegated proof-of-stake](https://en.bitcoin.it/wiki/Delegated_proof_of_stake)
 - [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained).
 
@@ -51,7 +51,7 @@ While bridges help users move funds between Ethereum and the sidechain, the asse
 
 | Pros                                                                                                                        | Cons                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| The technology underpinning sidechains is well-established and benefits from extensive research and improvements in design. | Sidechains trade off some measure of decentralization and trustlesness for scalability.                          |
+| The technology underpinning sidechains is well-established and benefits from extensive research and improvements in design. | Sidechains trade off some measure of decentralization and trustlessness for scalability.                          |
 | Sidechains support general computation and offer EVM compatibility (they can run Ethereum-native dapps).                    | A sidechain uses a separate consensus mechanism and doesn't benefit from Ethereum's security guarantees.         |
 | Sidechains use different consensus models to efficiently process transactions and lower transaction fees for users.         | Sidechains require higher trust assumptions (e.g., a quorum of malicious sidechain validators can commit fraud). |
 | EVM-compatible sidechains allow dapps to expand their ecosystem.                                                            |                                                                                                                  |

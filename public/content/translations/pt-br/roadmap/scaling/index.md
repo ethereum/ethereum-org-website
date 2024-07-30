@@ -2,7 +2,7 @@
 title: Escalar o Ethereum
 description: Rollups agrupam transações fora da cadeia, o que reduz os custos para o usuário. Entretanto, a maneira como rollups usam os dados atualmente é muito cara, o que limita a acessibilidade das transações. Proto-Danksharding corrige isso.
 lang: pt-br
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "Planejamento Ethereum"
 template: roadmap
 ---
@@ -34,13 +34,13 @@ O segundo estágio da expansão dos dados de blob é complicado, porque exige no
 
 Essa segunda etapa é conhecida como [“Danksharding”](/roadmap/danksharding/). É provável que a implementação total disso ainda demore muitos anos. O Danksharding depende de outros desenvolvimentos, como a [separação da construção e da proposta de bloco](/roadmap/pbs), e novos designs de rede que permitem que a rede confirme, de maneira eficaz, que os dados estão disponíveis por meio de uma amostragem aleatória de alguns kilobytes por vez, conhecida como [amostragem de disponibilidade de dados (DAS)](/developers/docs/data-availability).
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding/">Mais sobre Danksharding</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding/">Mais sobre Danksharding</ButtonLink>
 
 ## Descentralização de rollups {#decentralizing-rollups}
 
 [Os rollups](/layer-2) já estão dimensionando o Ethereum. Um [ecossistema sofisticado de projetos de rollup](https://l2beat.com/scaling/tvl) está permitindo que os usuários façam transações de forma rápida e barata, com diversas garantias de segurança. Entretanto, os rollups foram inicializados usando sequenciadores centralizados (computadores que fazem todo o processamento e a agregação das transações antes de enviá-las ao Ethereum). Isso é vulnerável à censura, pois os operadores do sequenciador podem ser sancionados, subornados ou comprometidos de qualquer outra forma. Ao mesmo tempo, os [rollups variam](https://l2beat.com) na maneira como validam os dados recebidos. A melhor maneira é os "provadores" enviarem provas de fraude ou de validação, mas nem todos os rollups estão disponíveis ainda. Mesmo os rollups que usam provas de validação/fraude utilizam um pequeno grupo de provadores conhecidos. Portanto, a próxima etapa essencial na escalabilidade do Ethereum é distribuir a responsabilidade pela execução de sequenciadores e provadores entre mais pessoas.
 
-<ButtonLink variant="outline-color" to="/developers/docs/scaling/">Mais sobre rollups</ButtonLink>
+<ButtonLink variant="outline-color" href="/developers/docs/scaling/">Mais sobre rollups</ButtonLink>
 
 ## Progresso atual {#current-progress}
 

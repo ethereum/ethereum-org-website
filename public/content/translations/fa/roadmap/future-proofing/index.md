@@ -2,7 +2,7 @@
 title: آینده‌نگری در اتریوم
 description: این ارتقاها اتریوم را به عنوان لایه پایه مقاوم و غیرمتمرکز برای هرآنچه در آینده پیش آید تقویت می‌کند.
 lang: fa
-image: /roadmap/roadmap-future.png
+image: /images/roadmap/roadmap-future.png
 alt: "نقشه‌ راه اتریوم"
 template: roadmap
 ---
@@ -17,7 +17,7 @@ template: roadmap
 
 [مدل‌های تعهدی KZG‏](/roadmap/danksharding/#what-is-kzg) که در چندین جا در سرتاسر شبکۀ اتریوم برای تولید رازهای رمزنگاری‌شده استفاده می‌شوند از جمله مدل‌هایی هستند که آسیب‌پذیریشان در برابر کوانتوم شناخته‌شده است. درحال حاضر، این مسئله با استفاده از «تنظیمات قابل اعتماد» دور زده می‌شود، یعنی جایی که در آن بسیاری از کاربران قابلیت انتخاب تصادفی را ایجاد می‌کنند و انجام مهندسی معکوس روی این قابلیت توسط کامپیوترهای کوانتومی امکان‌پذیر نیست. با این حال، راه‌حل ایده‌آل این است که خیلی ساده به جای این روش‌ها از رمزنگاری ایمن کوانتومی استفاده شود. دو رویکرد پیشرو در این زمینه وجود دارند که می‌توانند جایگزین‌های کارآمدی برای مدل BLS باشند: مدل‌های امضا به نام‌های [STARK-based](https://hackmd.io/@vbuterin/stark_aggregation) و [lattice-based](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175). این دو مدل همچنان در مرحلۀ تحقیق و نمونه‌سازی اولیه هستند.
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> درباره KZG و تنظیمات مورد اعتماد بخوانید</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> درباره KZG و تنظیمات مورد اعتماد بخوانید</ButtonLink>
 
 ## شبکۀ اتریومِ ساده‌تر و کارآمدتر {#simpler-more-efficient-ethereum}
 

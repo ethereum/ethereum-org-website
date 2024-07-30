@@ -110,11 +110,11 @@ Las extensiones del navegador como las extensiones Chrome o los complementos par
 
 Una de las razones más importantes por las que se sufren estafas con las criptomonedas suele ser la falta de conocimientos. Por ejemplo, si no entiende que la red Ethereum está descentralizada y no es propiedad de nadie, entonces es fácil ser víctima de alguien que pretende ser un operador de Atención al cliente que promete devolverle su ETH perdido a cambio de sus claves privadas. Vale la pena dedicar tiempo a conocer el funcionamiento de Ethereum.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   ¿Qué es Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   ¿Qué es el ether?
 </DocLink>
 <Divider />
@@ -127,7 +127,7 @@ Una de las razones más importantes por las que se sufren estafas con las cripto
 
 La clave privada de su billetera actúa como una contraseña para su billetera de Ethereum. ¡Es lo único que impide que alguien que conozca la dirección de su billetera saque todos los activos de su cuenta!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   ¿Qué es una cartera de Ethereum?
 </DocLink>
 
@@ -260,7 +260,7 @@ He aquí un compendio de puntos para recordar:
 
 ### Estafas de distribución de criptomonedas (airdropping) {#airdrop-scams}
 
-Las estafas de distribución de criptomonedas, o airdropping, implican una tentativa de estafa en el que un proyecto falso distribuye un activo (NFT, token) en su billetera para lo cual deben enviarlo a un un sitio web fraudulento a fin de reclamar el activo. Se le pedirá que inicie sesión con su billetera de Ethereum y que "apruebe" una transacción al intentar reclamar el activo. Esta transacción compromete su cuenta enviando sus claves públicas y privadas al estafador. Otra forma de esta estafa consiste en pedirle que confirme una transacción en la que se envían fondos a la cuenta del estafador.
+Las estafas de distribución de criptomonedas, o airdropping, implican una tentativa de estafa en el que un proyecto falso distribuye un activo (NFT, token) en su billetera para lo cual deben enviarlo a un sitio web fraudulento a fin de reclamar el activo. Se le pedirá que inicie sesión con su billetera de Ethereum y que "apruebe" una transacción al intentar reclamar el activo. Esta transacción compromete su cuenta enviando sus claves públicas y privadas al estafador. Otra forma de esta estafa consiste en pedirle que confirme una transacción en la que se envían fondos a la cuenta del estafador.
 
 [Más información sobre las estafas de airdropping](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 

@@ -5,13 +5,13 @@ lang: zh-tw
 hideEditButton: true
 ---
 
-## 即將開始的活動 {#events}
+# 即將開始的活動 {#events}
 
 **每個月，世界各地都會舉辦重大的以太坊活動。**考慮參加你附近的活動，結識更多社群成員，了解就業機會，並培養新技能。
 
 <UpcomingEventsList/>
 
-這是一個由我們社群所維護的部分活動清單。 若你知曉其他未於此清單列出的以太坊活動， [請幫忙加入！](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)
+這是一個由我們社群所維護的部分活動清單。 若你知曉其他未於此清單列出的以太坊活動， [請幫忙新增](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)！
 
 ## 以太坊聚會 {#meetups}
 

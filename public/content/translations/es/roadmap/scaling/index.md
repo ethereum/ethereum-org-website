@@ -2,7 +2,7 @@
 title: Escalar en Ethereum
 description: Las acumulaciones agrupan transacciones en lotes y lo hacen fuera de la cadena, reduciendo costes para el usuario. Sin embargo, la forma en que las acumulaciones gestionan los datos es muy cara en estos momentos, limitando con ello la posibilidad de tener transacciones baratas. Proto-anksharing se encarga de solucionarlo.
 lang: es
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "Hoja de ruta de Ethereum"
 template: roadmap
 ---
@@ -34,13 +34,13 @@ La segunda fase de expansión de los datos guardados masivamente es complicada, 
 
 Este segundo paso es conocido como [«Danksharding»](/roadmap/danksharding/). Es probable que aún tarde varios años en implementarse en su totalidad. Danksharding se basa en otros desarrollos como [separar la construcción y la propuesta de bloques](/roadmap/pbs) y nuevos diseños de red que permitan a la red confirmar eficientemente que los datos están disponibles, muestreando aleatoriamente unos cuantos kilobytes cada vez, lo que se denomina [muestreo de disponibilidad de datos (DAS)](/developers/docs/data-availability).
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding/">Más información sobre la fragmentación.</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding/">Más información sobre la fragmentación.</ButtonLink>
 
 ## Descentralizar las acumulaciones {#decentralizing-rollups}
 
 Las [acumulaciones](/layer-2) ya están escalando en Ethereum. Un ecosistema rico en [proyectos sobre acumulaciones](https://l2beat.com/scaling/tvl) permite que los usuarios hagan una transacción rápida y económica, con un rango de garantías de seguridad. Sin embargo, las acumulaciones se han implementado inicialmente utilizando secuenciadores centralizados (ordenadores que realizan todo el procesamiento de transacciones y la agregación antes de enviarlas a Ethereum). Esto los hace vulnerables a la censura, porque los operadores de los secuenciadores pueden ser sancionados, sobornados o verse expuestos a riesgos. Al mismo tiempo, [las acumulaciones se diferencian](https://l2beat.com) en la forma en que validan los datos entrantes. La mejor forma es que los «probadores» presenten pruebas de fraude o pruebas de validez, pero no todas las acumulaciones están a ese nivel. Incluso aquellas acumulaciones que utilizan pruebas de validez/fraude utilizan un pequeño grupo de probadores conocidos. Por lo tanto, el siguiente paso crítico en la escalabilidad de Ethereum es distribuir la responsabilidad de ejecutar secuenciadores y probadores entre más personas.
 
-<ButtonLink variant="outline-color" to="/developers/docs/scaling/">Más información sobre las acumulaciones.</ButtonLink>
+<ButtonLink variant="outline-color" href="/developers/docs/scaling/">Más información sobre las acumulaciones.</ButtonLink>
 
 ## Progreso actual {#current-progress}
 

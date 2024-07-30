@@ -3,7 +3,7 @@ title: Lanțul Beacon
 description: Aflați despre Lanțul Beacon - actualizarea care a introdus în Ethereum dovada-mizei.
 lang: ro
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
 alt: 
 summaryPoint1: Lanțul Beacon a introdus dovada mizei în ecosistemul Ethereum.
 summaryPoint2: Acesta a fost fuzionat cu lanțul dovadă a muncii Ethereum original în septembrie 2022.
@@ -32,7 +32,7 @@ Lanțul Beacon a fost o componentă fundamentală pentru [securitatea, respectul
 
 Lanțul Beacon a introdus [dovada mizei](/developers/docs/consensus-mechanisms/pos/) în Ethereum. Aceasta asigură securitatea Ethereum și generează mai mult ETH pentru validatori în cadrul procesului. În practică, mizarea implică mizarea ETH pentru activarea software-ului validatorului. În calitate de staker, rulați software-ul care creează și validează noile blocuri din lanț.
 
-Mizarea joacă același rol avut înainte de [minare](/developers/docs/mining/), dar diferă în multe moduri. Minarea necesita cheltuieli inițiale mari, sub forma unor echipamente hardware puternice și a unui consum mare de energie, ceea ce duce la economii de scalare și promovarea centralizării. De asemenea, minarea nu implica cerințe pentru blocarea activelor drept garanție, limitând capacitatea protocolului de a pedepsi actorii răi după un atac.
+Mizarea joacă același rol avut înainte de [minare](/developers/docs/consensus-mechanisms/pow/mining/), dar diferă în multe moduri. Minarea necesita cheltuieli inițiale mari, sub forma unor echipamente hardware puternice și a unui consum mare de energie, ceea ce duce la economii de scalare și promovarea centralizării. De asemenea, minarea nu implica cerințe pentru blocarea activelor drept garanție, limitând capacitatea protocolului de a pedepsi actorii răi după un atac.
 
 Tranziția la dovada mizei a făcut ca Ethereum să fie mult mai sigur și mai descentralizat în comparație cu dovada muncii. Cu cât numărul de oameni din rețea este mai mare, cu atât mai descentralizată și mai sigură în caz de atacuri devine aceasta.
 
@@ -58,7 +58,7 @@ Toate actualizările Ethereum se află într-o anumită corelație. Deci, să re
 
 La început, Lanțul Beacon a existat separat de Rețeaua principală Ethereum, dar au fuzionat în 2022.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Fuziunea
 </ButtonLink>
 
@@ -66,7 +66,7 @@ La început, Lanțul Beacon a existat separat de Rețeaua principală Ethereum, 
 
 Fragmentarea poate intra în ecosistemul Ethereum în siguranță doar cu un mecanism de consens în vigoare, dovada mizei. Lanțul Beacon a introdus mizarea, care a „fuzionat” cu Rețeaua principală, deschizând calea pentru fragmentare, pentru o scalare și mai mare a Ethereum.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Lanțurile de fragmente
 </ButtonLink>
 

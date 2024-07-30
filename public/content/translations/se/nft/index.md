@@ -5,7 +5,7 @@ lang: se
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: En Eth-logotyp visas via hologram.
 summaryPoint1: Ett sätt att representera något unikt, som en Ethereum-baserad tillgång.
 summaryPoint2: NFT:er ger mer kraft till innehållsskapare än någonsin tidigare.
@@ -169,7 +169,7 @@ När de säljer sitt innehåll går pengarna direkt till dem. Om den nya ägaren
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Utforska, köp eller skapa din egen NFT-konst/dina egna NFT-samlarföremål ...</div>
-  <ButtonLink to="/dapps/?category=collectibles">
+  <ButtonLink href="/dapps/?category=collectibles">
     Utforska NFT-konst
   </ButtonLink>
 </InfoBanner>
@@ -202,7 +202,7 @@ Decentraland, ett virtuell verklighetsspel, låter dig till och med köpa NFT:er
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Kolla in Ethereum-spel, som drivs med hjälp av NFT:er ...</div>
-  <ButtonLink to="/dapps/?category=gaming">
+  <ButtonLink href="/dapps/?category=gaming">
     Utforska NFT-spel
   </ButtonLink>
 </InfoBanner>
@@ -335,7 +335,7 @@ Ethereums säkerhet baseras på proof-of-stake. Systemet är utformat för att e
 
 Säkerhetsfrågor relaterade till NFT är oftast relaterade till phishing-bedrägerier, sårbarheter i smarta kontrakt eller användarfel (som att oavsiktligt röjda privata nycklar). Detta gör att god plånbokssäkerhet är A och O för NFT-ägare.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Mer om säkerhet
 </ButtonLink>
 

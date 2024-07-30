@@ -5,7 +5,7 @@ lang: az
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Holoqram ilə görüntülənən bir Eth loqosu.
 summaryPoint1: Ethereum əsaslı aktiv kimi bənzərsiz hər şeyi təsvir etmək üçün bir yol.
 summaryPoint2: NFT-lər məzmun yaradıcılarına əvvəlkindən daha çox güc verir.
@@ -86,7 +86,7 @@ Ethereum-un təhlükəsizliyi hissə sübutundan gəlir. Sistem, zərərli hər�
 
 NFT-lərlə bağlı təhlükəsizlik məsələləri çox vaxt fişinq fırıldaqları, ağıllı müqavilə zəiflikləri və ya istifadəçi səhvləri (məsələn, şəxsi açarların təsadüfən ifşa edilməsi) ilə əlaqədardır ki, bu da pulqabının uyğun səviyyədə təhlükəsizliyini NFT sahibləri üçün kritik edir.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Təhlükəsizlik haqqında daha çox məlumat
 </ButtonLink>
 

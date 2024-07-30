@@ -2,7 +2,7 @@
 title: Ethereum, готовый к будущему
 description: Эти обновления закрепляют положение Ethereum в качестве устойчивого и децентрализованного базового блокчейна для будущего независимо от того, каким оно будет.
 lang: ru
-image: /roadmap/roadmap-future.png
+image: /images/roadmap/roadmap-future.png
 alt: "Дорожная карта Ethereum"
 template: roadmap
 ---
@@ -17,7 +17,7 @@ template: roadmap
 
 [Схемы обязательств KZG](/roadmap/danksharding/#what-is-kzg) используются в нескольких местах Ethereum для создания криптографических секретов, которые известны как квантово-уязвимые. В настоящее время, это обходится с помощью «настроек с доверием», где многие пользователи создают случайность, которая не может быть обратно спроектирована квантовым компьютером. Однако идеальным решением было бы просто включение квантово-безопасной криптографии. Существуют два ведущих подхода, которые могли бы стать эффективной заменой схемы BLS: [подписи на основе STARK](https://hackmd.io/@vbuterin/stark_aggregation) и [подписи на основе решетки](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175). Пока они находятся на стадии изучения и подготовки прототипов.
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Подробнее о KZG и настройках с доверием</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> Подробнее о KZG и настройках с доверием</ButtonLink>
 
 ## Более простой и эффективный Ethereum {#simpler-more-efficient-ethereum}
 

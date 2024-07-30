@@ -1,4 +1,4 @@
-import { pick } from "lodash"
+import pick from "lodash/pick"
 import { avatarAnatomy } from "@chakra-ui/anatomy"
 import {
   createMultiStyleConfigHelpers,
@@ -89,6 +89,6 @@ const sizes = defineMergeStyles(pickedDefaultSizes, {
 
 export const Avatar = defineMultiStyleConfig({
   baseStyle,
-  // @ts-expect-error
+  // @ts-expect-error incompatible type shapes
   sizes,
 })

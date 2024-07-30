@@ -3,7 +3,7 @@ title: 质押提款
 description: 本页面概述质押推送提款是什么，它们如何工作，质押人需要做什么才能获得奖励
 lang: zh
 template: staking
-image: /staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: 犀牛莱斯利与她的质押奖励
 sidebarDepth: 2
 summaryPoints:
@@ -51,7 +51,7 @@ summaryPoints:
 
 ## 完全退出质押 {#exiting-staking-entirely}
 
-在从验证者帐户余额中转移*任何*资金之前，必须提供提款地址。
+在从验证者帐户余额中转移_任何_资金之前，必须提供提款地址。
 
 希望完全退出质押并取回全部余额的用户还必须使用验证者密钥签署并广播一个“自愿退出”的消息，这将启动退出质押的过程。 此操作通过你的验证者客户端完成，并提交给你的共识节点，无需燃料。
 
@@ -74,7 +74,7 @@ summaryPoints:
 
 ### 更愿意通过视频学习？ {#visual-learner}
 
-请查看 Finematics 对以太坊质押提款的解释：
+请查看Finematics对以太坊质押提款的解释：
 
 <YouTube id="RwwU3P9n3uo" />
 
@@ -114,12 +114,12 @@ summaryPoints:
 <TableContainer>
 
 | 提款数量 | 所需时间 |
-| :------: | :------: |
-| 400,000  |  3.5 天  |
-| 500,000  |  4.3 天  |
-| 600,000  |  5.2 天  |
-| 700,000  |  6.1 天  |
-| 800,000  |  7.0 天  |
+| :-------------------: | :--------------: |
+|        400,000        |     3.5 天     |
+|        500,000        |     4.3 天     |
+|        600,000        |     5.2 天     |
+|        700,000        |     6.1 天     |
+|        800,000        |     7.0 天     |
 
 </TableContainer>
 
@@ -196,7 +196,7 @@ eventName="read more">
 
 建议验证者运营商访问<a href="https://launchpad.ethereum.org/withdrawals/">质押启动板提款</a>页面，你可以在其中找到有关如何准备验证者以便提款的更多详细信息、事件的时间安排，以及有关提款如何运作的更多详细信息。
 
-要首先在测试网上测试你的设置，请访问 <a href="https://goerli.launchpad.ethereum.org">Goerli 测试网质押启动板</a>开始测试。
+要首先在测试网上测试你的设置，请访问 <a href="https://holesky.launchpad.ethereum.org">Holesky 测试网质押启动板</a>开始测试。
 
 </ExpandableCard>
 

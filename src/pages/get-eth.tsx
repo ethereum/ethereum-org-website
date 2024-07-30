@@ -10,7 +10,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react"
 
-import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
@@ -28,21 +28,22 @@ import { Divider } from "@/components/MdComponents"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
+import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDateByPath } from "@/lib/utils/gh"
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import uniswap from "@/public/dapps/uni.png"
-import dapps from "@/public/doge-computer.png"
-import oneinch from "@/public/exchanges/1inch.png"
-import bancor from "@/public/exchanges/bancor.png"
-import kyber from "@/public/exchanges/kyber.png"
-import loopring from "@/public/exchanges/loopring.png"
-import hero from "@/public/get-eth.png"
-import wallet from "@/public/wallet.png"
+import uniswap from "@/public/images/dapps/uni.png"
+import dapps from "@/public/images/doge-computer.png"
+import oneinch from "@/public/images/exchanges/1inch.png"
+import bancor from "@/public/images/exchanges/bancor.png"
+import kyber from "@/public/images/exchanges/kyber.png"
+import hero from "@/public/images/get-eth.png"
+import wallet from "@/public/images/wallet.png"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
@@ -56,9 +57,7 @@ const Page = (props: ChildOnlyProp) => (
   />
 )
 
-export const Content = (props: BoxProps) => (
-  <Box w="full" py={4} px={8} {...props} />
-)
+export const Content = (props: BoxProps) => <Box w="full" px={8} {...props} />
 
 const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card
@@ -109,19 +108,23 @@ type Props = BasePageProps & {
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("get-eth")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDataUpdateDate = getLastModifiedDateByPath(
     "src/data/exchangesByCountry.ts"
   )
 
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
       lastDataUpdateDate,
     },
   }
@@ -134,6 +137,12 @@ const GetEthPage = ({
 
   const tokenSwaps: CardListItem[] = [
     {
+      title: "Uniswap",
+      link: "https://app.uniswap.org/#/swap",
+      image: uniswap,
+      alt: "",
+    },
+    {
       title: "1inch",
       link: "https://1inch.exchange/#/",
       image: oneinch,
@@ -141,7 +150,7 @@ const GetEthPage = ({
     },
     {
       title: "Bancor",
-      link: "https://www.bancor.network/",
+      link: "https://www.carbondefi.xyz/",
       image: bancor,
       alt: "",
     },
@@ -151,19 +160,7 @@ const GetEthPage = ({
       image: kyber,
       alt: "",
     },
-    {
-      title: "Loopring",
-      link: "https://loopring.io/",
-      image: loopring,
-      alt: "",
-    },
-    {
-      title: "Uniswap",
-      link: "https://app.uniswap.org/#/swap",
-      image: uniswap,
-      alt: "",
-    },
-  ].sort((a, b) => a.title.localeCompare(b.title))
+  ]
 
   const safetyArticles: CardListItem[] = [
     {
@@ -175,11 +172,6 @@ const GetEthPage = ({
       title: t("page-get-eth-article-keeping-crypto-safe"),
       link: "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
       description: t("page-get-eth-article-keeping-crypto-safe-desc"),
-    },
-    {
-      title: t("page-get-eth-article-store-digital-assets"),
-      link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
-      description: t("page-get-eth-article-store-digital-assets-desc"),
     },
   ]
 
@@ -293,7 +285,7 @@ const GetEthPage = ({
         <StyledCard
           emoji=":robot:"
           title={t("page-get-eth-dex")}
-          description={t("page-get-eth-dex-desc")}
+          description={<Translation id="page-get-eth:page-get-eth-dex-desc" />}
         >
           <InlineLink href="#dex">{t("page-get-eth-try-dex")}</InlineLink>
         </StyledCard>
@@ -350,7 +342,11 @@ const GetEthPage = ({
         <CentralizedExchanges lastDataUpdateDate={lastDataUpdateDate} />
       </Flex>
       <Content id="dex">
-        <OldHeading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4}>
+        <OldHeading
+          fontSize={{ base: "2xl", md: "2rem" }}
+          lineHeight={1.4}
+          m={0}
+        >
           {t("page-get-eth-dexs")}
         </OldHeading>
       </Content>
@@ -372,9 +368,12 @@ const GetEthPage = ({
           </Text>
           <Text>{t("page-get-eth-dexs-desc-3")}</Text>
           <Text>{t("page-get-eth-need-wallet")}</Text>
-          <ButtonLink href="/wallets/">
+          <ButtonLink href="/wallets/find-wallet/">
             {t("page-get-eth-get-wallet-btn")}
           </ButtonLink>
+          <InfoBanner isWarning>
+            <Translation id="page-get-eth:page-get-eth-dexs-desc-4" />
+          </InfoBanner>
         </LeftColumn>
         <RightColumn>
           <OldHeading

@@ -1,7 +1,7 @@
 import { ComponentPropsWithRef } from "react"
 import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -11,7 +11,7 @@ import {
   Text as ChakraText,
 } from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
@@ -30,17 +30,19 @@ import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import { Simulator } from "@/components/Simulator"
 import { SIMULATOR_ID } from "@/components/Simulator/constants"
+import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { walletOnboardingSimData } from "@/data/WalletSimulatorData"
 
-import DappsImage from "@/public/doge-computer.png"
-import ETHImage from "@/public/eth-logo.png"
-import FindWalletImage from "@/public/wallets/find-wallet.png"
-import HeroImage from "@/public/wallets/wallet-hero.png"
+import DappsImage from "@/public/images/doge-computer.png"
+import ETHImage from "@/public/images/eth-logo.png"
+import FindWalletImage from "@/public/images/wallets/find-wallet.png"
+import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
 const Page = (props: BoxProps) => (
   <Flex
@@ -116,6 +118,7 @@ const ChecklistItem = (props: HorizontalCardProps) => (
   <HorizontalCard
     border={0}
     display="flex"
+    emojiSize={1.5}
     alignItems="flex-start"
     mb={4}
     {...props}
@@ -131,16 +134,20 @@ const CalloutCardContainer = (props: ChildOnlyProp) => (
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
 
   const requiredNamespaces = getRequiredNamespacesForPage("/wallets")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
-      lastDeployDate,
+      lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
@@ -160,7 +167,7 @@ const WalletsPage = () => {
       locale === "en"
         ? [
             {
-              to: "/wallets/find-wallet/",
+              href: "/wallets/find-wallet/",
               content: t("page-wallets-find-wallet-link"),
               matomo: {
                 eventCategory: "wallet hero buttons",
@@ -169,7 +176,7 @@ const WalletsPage = () => {
               },
             },
             {
-              to: `#${SIMULATOR_ID}`,
+              href: `#${SIMULATOR_ID}`,
               content: "How to use a wallet",
               matomo: {
                 eventCategory: "wallet hero buttons",
@@ -181,7 +188,7 @@ const WalletsPage = () => {
           ]
         : [
             {
-              to: "/wallets/find-wallet/",
+              href: "/wallets/find-wallet/",
               content: t("page-wallets-find-wallet-link"),
               matomo: {
                 eventCategory: "wallet hero buttons",
@@ -196,40 +203,48 @@ const WalletsPage = () => {
     {
       emoji: ":dollar:",
       title: t("page-wallets-manage-funds"),
-      description: t("page-wallets-manage-funds-desc"),
+      description: (
+        <Translation id="page-wallets:page-wallets-manage-funds-desc" />
+      ),
     },
     {
       emoji: ":frame_with_picture:",
       title: t("page-wallets-your-ethereum-account"),
-      description: t("page-wallets-your-ethereum-account-desc"),
+      description: (
+        <Translation id="page-wallets:page-wallets-your-ethereum-account-desc" />
+      ),
     },
     {
       emoji: ":bust_in_silhouette:",
       title: t("page-wallets-your-login"),
-      description: t("page-wallets-your-login-desc"),
+      description: (
+        <Translation id="page-wallets:page-wallets-your-login-desc" />
+      ),
     },
   ]
 
   const types = [
     {
       emoji: ":cd:",
-      description: t("page-wallets-cd"),
+      description: <Translation id="page-wallets:page-wallets-cd" />,
     },
     {
       emoji: ":mobile_phone:",
-      description: t("page-wallets-mobile"),
+      description: <Translation id="page-wallets:page-wallets-mobile" />,
     },
     {
       emoji: ":globe_with_meridians:",
-      description: t("page-wallets-web-browser"),
+      description: <Translation id="page-wallets:page-wallets-web-browser" />,
     },
     {
       emoji: ":globe_with_meridians:",
-      description: t("page-wallets-web-browser-extension"),
+      description: (
+        <Translation id="page-wallets:page-wallets-web-browser-extension" />
+      ),
     },
     {
       emoji: ":desktop_computer:",
-      description: t("page-wallets-desktop"),
+      description: <Translation id="page-wallets:page-wallets-desktop" />,
     },
   ]
 
@@ -243,11 +258,6 @@ const WalletsPage = () => {
       title: t("page-wallets-keys-to-safety"),
       description: t("page-wallets-blog"),
       link: "https://www.coinbase.com/learn/crypto-basics/how-to-secure-crypto",
-    },
-    {
-      title: t("page-wallets-how-to-store"),
-      description: "ConsenSys",
-      link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
     },
   ]
 
@@ -267,6 +277,7 @@ const WalletsPage = () => {
       <PageMetadata
         title={t("page-wallets-meta-title")}
         description={t("page-wallets-meta-description")}
+        image="/images/wallets/wallet-hero.png"
       />
       <PageHero content={heroContent} isReverse />
       <GrayContainer>
@@ -310,13 +321,19 @@ const WalletsPage = () => {
           <Text>{t("page-wallets-accounts-addresses-desc")}</Text>
           <ul>
             <li>
-              <Text>{t("page-wallets-ethereum-account")}</Text>
+              <Text>
+                <Translation id="page-wallets:page-wallets-ethereum-account" />
+              </Text>
             </li>
             <li>
-              <Text>{t("page-wallets-accounts-ethereum-addresses")}</Text>
+              <Text>
+                <Translation id="page-wallets:page-wallets-accounts-ethereum-addresses" />
+              </Text>
             </li>
             <li>
-              <Text>{t("page-wallets-ethereum-wallet")}</Text>
+              <Text>
+                <Translation id="page-wallets:page-wallets-ethereum-wallet" />
+              </Text>
             </li>
           </ul>
           <Text>{t("page-wallets-most-wallets")}</Text>
@@ -336,6 +353,7 @@ const WalletsPage = () => {
                 emoji={type.emoji}
                 description={type.description}
                 emojiSize={2.5}
+                alignItems="center"
               />
             ))}
           </Box>
@@ -382,7 +400,7 @@ const WalletsPage = () => {
               >
                 {t("page-wallets-features-desc")}
               </Box>
-              <ButtonLink to="/wallets/find-wallet/">
+              <ButtonLink href="/wallets/find-wallet/">
                 {t("page-wallets-find-wallet-btn")}
               </ButtonLink>
               <Image
@@ -402,7 +420,7 @@ const WalletsPage = () => {
         <LeftColumn>
           <H2>{t("page-wallets-stay-safe")}</H2>
           <Box lineHeight={1.4} mb={6} color="text300">
-            {t("page-wallets-stay-safe-desc")}
+            <Translation id="page-wallets:page-wallets-stay-safe-desc" />
           </Box>
           <Box>
             <ChecklistItem
@@ -414,7 +432,7 @@ const WalletsPage = () => {
             <ChecklistItem
               key="1"
               emoji=":white_check_mark:"
-              title={t("page-wallets-seed-phrase")}
+              title={<Translation id="page-wallets:page-wallets-seed-phrase" />}
               description={t("page-wallets-seed-phrase-desc")}
             >
               <Text>{t("page-wallets-seed-phrase-example")}</Text>
@@ -460,7 +478,7 @@ const WalletsPage = () => {
             descriptionKey="page-wallets:page-wallets-get-some-desc"
           >
             <Box>
-              <ButtonLink to="/get-eth/">
+              <ButtonLink href="/get-eth/">
                 {t("page-wallets-get-some-btn")}
               </ButtonLink>
             </Box>
@@ -474,7 +492,7 @@ const WalletsPage = () => {
             descriptionKey="page-wallets:page-wallets-try-dapps-desc"
           >
             <Box>
-              <ButtonLink to="/dapps/">
+              <ButtonLink href="/dapps/">
                 {t("page-wallets-more-on-dapps-btn")}
               </ButtonLink>
             </Box>

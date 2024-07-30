@@ -9,8 +9,8 @@ import CardList, { type CardListItem } from "@/components/CardList"
 import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
 
-import beaconchain from "@/public/upgrades/beaconchainemoji.png"
-import beaconscan from "@/public/upgrades/etherscan.png"
+import beaconchain from "@/public/images/upgrades/beaconchainemoji.png"
+import beaconscan from "@/public/images/upgrades/etherscan.png"
 
 const H3 = ({ children }: ChildOnlyProp) => (
   <OldHeading
@@ -75,10 +75,10 @@ const BeaconChainActions = () => {
           title={t("consensus-become-staker")}
           description={t("consensus-become-staker-desc")}
         >
-          <ButtonLink mb={3} to="https://launchpad.ethereum.org">
+          <ButtonLink mb={3} href="https://launchpad.ethereum.org">
             <Translation id="get-started" />
           </ButtonLink>
-          <ButtonLink variant="outline" to="/staking/">
+          <ButtonLink variant="outline" href="/staking/">
             <Translation id="page-upgrades-index-staking-learn" />
           </ButtonLink>
         </Card>

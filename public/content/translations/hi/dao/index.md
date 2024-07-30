@@ -5,7 +5,7 @@ lang: hi
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: किसी प्रस्ताव पर मतदान करने वाले DAO का प्रतिनिधित्व।
 summaryPoint1: केंद्रीकृत नेतृत्व के बिना सदस्य के स्वामित्व वाले समुदाय।
 summaryPoint2: इंटरनेट पर अजनबियों के साथ सहयोग करने का एक सुरक्षित तरीका।
@@ -50,7 +50,7 @@ DAO का सहारा उसका स्मार्ट अनुबंध
 
 यह संभव है क्योंकि इथेरियम पर लाइव होने के बाद स्मार्ट अनुबंध टैम्पर-प्रूफ होते हैं। आप लोगों के देखे बिना कोड (DAO नियम) को संपादित नहीं कर सकते क्योंकि सब कुछ सार्वजनिक होता है।
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   स्मार्ट अनुबंध के बारे में अधिक जानकारी
 </DocLink>
 

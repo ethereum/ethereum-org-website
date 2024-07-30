@@ -3,7 +3,7 @@ title: The Merge
 description: Learn about The Merge - when Mainnet Ethereum adopted proof-of-stake.
 lang: en
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Ethereum Mainnet uses proof-of-stake, but this wasn't always the case.
 summaryPoint2: The upgrade from the original proof-of-work mechanism to proof-of-stake was called The Merge.
@@ -11,7 +11,7 @@ summaryPoint3: The Merge refers to the original Ethereum Mainnet merging with a 
 summaryPoint4: The Merge reduced Ethereum's energy consumption by ~99.95%.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   The Merge was executed on September 15, 2022. This completed Ethereum's transition to proof-of-stake consensus, officially deprecating proof-of-work and reducing energy consumption by ~99.95%.
 </UpgradeStatus>
 
@@ -27,7 +27,7 @@ Imagine Ethereum is a spaceship that launched before it was quite ready for an i
 
 ## Merging with Mainnet {#merging-with-mainnet}
 
-Proof-of-work secured Ethereum Mainnet from genesis until The Merge. This allowed the Ethereum blockchain we're all used to to come into existence in July 2015 with all its familiar features—transactions, smart contracts, accounts, etc.
+Proof-of-work secured Ethereum Mainnet from genesis until The Merge. This allowed the Ethereum blockchain we're all used to come into existence in July 2015 with all its familiar features—transactions, smart contracts, accounts, etc.
 
 Throughout Ethereum's history, developers prepared for an eventual transition away from proof-of-work to proof-of-stake. On December 1, 2020, the Beacon Chain was created as a separate blockchain to Mainnet, running in parallel.
 
@@ -108,7 +108,7 @@ For more information, check out this blog post by Tim Beiko on <a href="https://
 
 ## The Merge and energy consumption {#merge-and-energy}
 
-The Merge marked the end of proof-of-work for Ethereum and start the era of a more sustainable, eco-friendly Ethereum. Ethereum's energy consumption dropped by an estimated 99.95%, making Ethereum a green blockchain. Learn more about [Ethereum energy consumption](/energy-consumption/).
+The Merge marked the end of proof-of-work for Ethereum and started the era of a more sustainable, eco-friendly Ethereum. Ethereum's energy consumption dropped by an estimated 99.95%, making Ethereum a green blockchain. Learn more about [Ethereum energy consumption](/energy-consumption/).
 
 ## The Merge and scaling {#merge-and-scaling}
 
@@ -203,7 +203,7 @@ The Merge represents the formal adoption of the Beacon Chain as the new consensu
 
 Blocks are instead proposed by validating nodes that have staked ETH in return for the right to participate in consensus. These upgrades set the stage for future scalability upgrades, including sharding.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   The Beacon Chain
 </ButtonLink>
 
@@ -219,7 +219,7 @@ Originally, the plan was to work on sharding before The Merge to address scalabi
 
 Plans for sharding are rapidly evolving, but given the rise and success of layer 2 technologies to scale transaction execution, sharding plans have shifted to finding the most optimal way to distribute the burden of storing compressed calldata from rollup contracts, allowing for exponential growth in network capacity. This would not be possible without first transitioning to proof-of-stake.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Sharding
 </ButtonLink>
 

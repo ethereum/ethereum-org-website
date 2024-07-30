@@ -2,7 +2,7 @@
 title: Ethereum garantía futura
 description: Estas actualizaciones consolidan a Ethereum como el fundamento descentralizado y resiliente del futuro, en todas sus formas.
 lang: es
-image: /roadmap/roadmap-future.png
+image: /images/roadmap/roadmap-future.png
 alt: "Hoja de ruta de Ethereum"
 template: roadmap
 ---
@@ -17,7 +17,7 @@ El desafío al que se enfrentan los desarrolladores de Ethereum es que el protoc
 
 Las [estrategias comprometidas «KZG»](/roadmap/danksharding/#what-is-kzg) que Ethereum utiliza en múltiples ocasiones para generar secretos criptográficos tienen vulnerabilidad cuántica. Actualmente, esto se evita usando «configuraciones seguras» en las que muchos usuarios generan una aleatoriedad a la que las computadoras cuánticas no pueden aplicar ingeniería inversa. De cualquier forma, la solución idónea sería incorporar simplemente criptografía cuántica segura. Hay dos enfoques principales que podrían convertirse en sustituciones eficientes de las estrategias BLS: [el basado en STARK](https://hackmd.io/@vbuterin/stark_aggregation) y [el basado en redes](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175) de firmas. Se siguen investigando y elaborando prototipos.
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Lea acerca de KZG y las configuraciones seguras</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> Lea acerca de KZG y las configuraciones seguras</ButtonLink>
 
 ## Ethereum más simple y eficiente {#simpler-more-efficient-ethereum}
 

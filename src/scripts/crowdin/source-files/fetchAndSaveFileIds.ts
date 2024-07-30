@@ -31,14 +31,14 @@ async function fetchFileIdsForDirectory(
       return []
     }
 
-    return response.data.map(
-      (item: ResponseObject<SourceFilesModel.File>): FileItem => {
-        return {
+    return response.data
+      .map(
+        (item: ResponseObject<SourceFilesModel.File>): FileItem => ({
           id: item.data.id,
           path: item.data.path,
-        }
-      }
-    )
+        })
+      )
+      .filter((file: FileItem) => file.path.endsWith(".md")) // filter out non-md files
   } catch (error: unknown) {
     if (error instanceof Error) {
       console.error(
@@ -113,9 +113,8 @@ function saveFileIdsToJSON(combinedData: FileItem[]): void {
 }
 
 async function fetchAndSaveFileIds(directoryIds: number[]): Promise<void> {
-  const transformedFileData = await fetchFileIdsForMultipleDirectories(
-    directoryIds
-  )
+  const transformedFileData =
+    await fetchFileIdsForMultipleDirectories(directoryIds)
 
   if (transformedFileData) {
     saveFileIdsToJSON(transformedFileData)

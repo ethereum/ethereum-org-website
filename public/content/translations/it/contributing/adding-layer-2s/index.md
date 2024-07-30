@@ -78,7 +78,7 @@ _Non prendiamo in considerazione altre soluzioni di scalabilità che non utilizz
 
 **Link alle dapp nell'ecosistema del livello 2**
 
-- Vogliamo poter fornire informazioni su cosa gli utenti possono aspettarsi di poter fare su questo livello 2 (es. https://portal.arbitrum.one/, https://www.optimism.io/apps/all)
+- Vogliamo poter fornire informazioni su cosa gli utenti possono aspettarsi di poter fare su questo livello 2 (es. https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
 **Elenchi di contratti token**
 
@@ -92,6 +92,6 @@ _Non prendiamo in considerazione altre soluzioni di scalabilità che non utilizz
 
 Se desideri aggiungere un livello 2 su ethereum.org, crea un ticket su GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Crea un ticket
 </ButtonLink>

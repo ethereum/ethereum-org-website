@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { sortBy } from "lodash"
+import sortBy from "lodash/sortBy"
 import {
   Box,
   Flex,
@@ -35,13 +35,10 @@ export interface Meetup {
 const filterMeetups = (query: string): Array<Meetup> => {
   if (!query) return sortedMeetups
 
-  const lowercaseQuery = query.toLowerCase()
-
   return sortedMeetups.filter((meetup) => {
-    return (
-      meetup.title.toLowerCase().includes(lowercaseQuery) ||
-      meetup.location.toLowerCase().includes(lowercaseQuery)
-    )
+    const flag = meetup.emoji.replace(/[:_]/g, " ")
+    const searchable = [meetup.title, meetup.location, flag].join(" ")
+    return searchable.toLowerCase().includes(query.toLowerCase())
   })
 }
 
@@ -152,9 +149,9 @@ const MeetupList = () => {
       <Box aria-live="assertive" aria-atomic>
         {!filteredMeetups.length && (
           <InfoBanner emoji=":information_source:">
-            <Translation id="page-community-meetuplist-no-meetups" />{" "}
-            <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
-              <Translation id="page-community-please-add-to-page" />
+            <Translation id="page-community:page-community-meetuplist-no-meetups" />{" "}
+            <InlineLink href="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
+              <Translation id="page-community:page-community-please-add-to-page" />
             </InlineLink>
           </InfoBanner>
         )}

@@ -2,7 +2,7 @@
 title: Ethereum'u ölçeklendirmek
 description: Toplamalar işlemleri zincir dışında topluca gerçekleştiriyor, böylece kullanıcı için maliyetleri azaltıyor. Ancak, toplamaların şu andaki veri kullanımı çok pahalı ve bu durum, işlemlerin ucuz olabilme yolunu sınırlıyor. Proto-Danksharding bunu çözüyor.
 lang: tr
-image: /roadmap/roadmap-transactions.png
+image: /images/roadmap/roadmap-transactions.png
 alt: "Ethereum yol haritası"
 template: roadmap
 ---
@@ -34,13 +34,13 @@ Blob verilerinin genişlemesinin ikinci aşaması karmaşıktır çünkü ağdak
 
 İkinci adım [“Danksharding”](/roadmap/danksharding/) olarak bilinir. Tam olarak uygulanmasına muhtemelen birkaç yıl var. Danksharding [blok oluşturma ve blok önermenin yanında,](/roadmap/pbs) [veri kullanılabilirliği örneklendirmesi (DAS)](/developers/docs/data-availability) şeklinde adlandırılan, her seferinde rastgele birkaç kilobayt örneklendirme ile verilerin kullanılabildiği ve kullanılabilirliği verimli bir şekilde doğrulayan yeni ağ tasarımlarına dayanır.
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding/">Danksharding hakkında daha fazlası</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding/">Danksharding hakkında daha fazlası</ButtonLink>
 
 ## Toplamaları merkeziyetsizleştirmek {#decentralizing-rollups}
 
 [Toplamalar](/layer-2) halihazırda Ethereum'u ölçeklendiriyor. [rToplama projelerinden oluşan zengin bir ekosistem](https://l2beat.com/scaling/tvl), bir dizi güvenlik garantisi ile kullanıcıların hızlı ve ucuz bir şekilde işlem yapmasını sağlıyor. Ancak toplamalar merkezi sıralayıcılar kulanılarak (Ethereum'a göndermeden önce işleme ve toplama işlemlerini gerçekleştiren bilgisayarlar) başlatıldı. Bu, sansüre karşı savunmasızdır çünkü sıralayıcı işlemlerine yaptırım uygulanabilir, rüşvet veya başka şekilde tehlikeye atılabilir. Aynı zamanda [toplamalar](https://l2beat.com), gelen veriyi doğrulama şekillerine göre de değişiklik gösterir. "Kanıtlayıcılar" için en iyi yol geçerlilik ve dolandırıcılık kanıtları sunmasını sağlmakatır, ancak bu henüz tüm toplamalar için mümkün değil. Geçerlilik/sahtecilik kanıtları kullanan toplamalar bile bilinen küçük bir kanıt havuzu kullanır. Bu sebeple, Ethereum'u ölçeklendirme yolundaki bir sonraki kritik adım, sıralayıcıların ve kanıtlayıcıların çalıştırılma sorumluluğunu daha fazla insana dağıtmaktır.
 
-<ButtonLink variant="outline-color" to="/developers/docs/scaling/">Toplama hakkında daha fazlası</ButtonLink>
+<ButtonLink variant="outline-color" href="/developers/docs/scaling/">Toplama hakkında daha fazlası</ButtonLink>
 
 ## Güncel ilerleme {#current-progress}
 

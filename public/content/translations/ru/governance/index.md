@@ -2,7 +2,6 @@
 title: Управление Ethereum
 description: О том, как принимаются решения по Ethereum.
 lang: ru
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Введение в систему управления Ethereum {#introduction}
@@ -33,7 +32,7 @@ _Если никто не владеет Ethereum, как принимаются
 
 _Хотя на уровне протокола управление Ethereum осуществляется вне цепи, многие варианты использования, построенные на основе Ethereum, такие как DAO, используют управление в цепи._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Подробнее о DAO
 </ButtonLink>
 
@@ -59,7 +58,7 @@ _Примечание. Любой человек может входить в н
 
 Одним из важных процессов в управлении Ethereum является вынесение **предложений по улучшению Ethereum (EIP)**. EIP — это стандарты, определяющие потенциальные новые функции или процессы для Ethereum. Любой человек в сообществе Ethereum может создать EIP. Если вы заинтересованы в написании EIP или участии в экспертной оценке и/или управлении, обратитесь к информации ниже.
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Подробнее об EIP
 </ButtonLink>
 
@@ -155,7 +154,7 @@ _Примечание. Любой человек может входить в н
 
 Когда сеть Beacon слилась с уровнем исполнения Ethereum 15 сентября 2022 г., в рамках [сетевого обновления Paris](/history/#paris) произошло слияние. Предложение [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) было изменено с Last Call на Final, что завершило переход на доказательство владения.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Подробнее о слиянии
 </ButtonLink>
 

@@ -12,11 +12,11 @@ Resmi Ethereum desteği mi arıyorsunuz? Bilmeniz gereken ilk şey, Ethereum'un 
 
 Ethereum'un merkeziyetsiz yapısını anlamak çok önemlidir çünkü Ethereum için resmi destek olduğunu iddia eden herkes muhtemelen sizi dolandırmaya çalışıyordur! Dolandırıcılara karşı en iyi koruma, kendinizi eğitmek ve güvenliği ciddiye almaktır.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Ethereum güvenliği ve dolandırıcılık önleme
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Ethereum'un temellerini öğrenin
 </DocLink>
 

@@ -9,7 +9,7 @@ import {
   WrapItem,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
+import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -32,7 +32,7 @@ import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
 import TableOfContents from "@/components/TableOfContents"
 
-import RoadmapHubHeroImage from "@/public/heroes/roadmap-hub-hero.jpg"
+import RoadmapHubHeroImage from "@/public/images/heroes/roadmap-hub-hero.jpg"
 
 const CardGrid = (props: ChildOnlyProp) => (
   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
@@ -81,12 +81,12 @@ export const RoadmapLayout = ({
   const lgBp = useToken("breakpoints", "lg")
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "Roadmap Options" as TranslationKey,
-    ariaLabel: "Roadmap options dropdown menu",
+    text: "nav-roadmap-options",
+    ariaLabel: "nav-roadmap-options-alt",
     items: [
       {
-        text: "Roadmap home" as TranslationKey,
-        to: "/roadmap/",
+        text: "nav-roadmap-home",
+        href: "/roadmap/",
         matomo: {
           eventCategory: `Roadmap dropdown`,
           eventAction: `Clicked`,
@@ -94,8 +94,8 @@ export const RoadmapLayout = ({
         },
       },
       {
-        text: "Better security" as TranslationKey,
-        to: "/roadmap/security",
+        text: "nav-roadmap-security",
+        href: "/roadmap/security",
         matomo: {
           eventCategory: `Roadmap security dropdown`,
           eventAction: `Clicked`,
@@ -103,8 +103,8 @@ export const RoadmapLayout = ({
         },
       },
       {
-        text: "Scaling" as TranslationKey,
-        to: "/roadmap/scaling",
+        text: "nav-roadmap-scaling",
+        href: "/roadmap/scaling",
         matomo: {
           eventCategory: `Roadmap scaling dropdown`,
           eventAction: `Clicked`,
@@ -112,8 +112,8 @@ export const RoadmapLayout = ({
         },
       },
       {
-        text: "Better user experience" as TranslationKey,
-        to: "/roadmap/user-experience/",
+        text: "nav-roadmap-user-experience",
+        href: "/roadmap/user-experience/",
         matomo: {
           eventCategory: `Roadmap user experience dropdown`,
           eventAction: `Clicked`,
@@ -121,8 +121,8 @@ export const RoadmapLayout = ({
         },
       },
       {
-        text: "Future-proofing" as TranslationKey,
-        to: "/roadmap/future-proofing",
+        text: "nav-roadmap-future-proofing",
+        href: "/roadmap/future-proofing",
         matomo: {
           eventCategory: `Roadmap future-proofing dropdown`,
           eventAction: `Clicked`,
@@ -151,10 +151,13 @@ export const RoadmapLayout = ({
             {frontmatter?.buttons && (
               <Wrap spacing={2} marginBottom={4} sx={{ ul: { m: 0 } }}>
                 {frontmatter.buttons.map((button, idx) => {
-                  if (button?.to) {
+                  if (button?.href) {
                     return (
                       <WrapItem key={idx}>
-                        <ButtonLink variant={button?.variant} to={button?.to}>
+                        <ButtonLink
+                          variant={button?.variant}
+                          href={button?.href}
+                        >
                           {button.label}
                         </ButtonLink>
                       </WrapItem>
@@ -185,6 +188,8 @@ export const RoadmapLayout = ({
               style={{ objectFit: "contain" }}
               width={1504}
               height={336}
+              // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+              sizes="(max-width: 992px) 100vw, 720px"
               priority
             />
           </Center>

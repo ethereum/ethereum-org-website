@@ -4,7 +4,7 @@ description: Uma visão geral de como começar com os pools de staking de ETH
 lang: pt-br
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: Leslie, o rinoceronte, flutuando nas nuvens
 sidebarDepth: 2
 summaryPoints:
@@ -78,7 +78,7 @@ Os saques de staking foram implementados na atualização Shanghai/Capella em ab
 
 Os validadores também podem sair totalmente como validadores, o que desbloqueará seus saldos de ETH restantes para saque. As contas que forneceram um endereço de saque para execução e concluíram o processo de saída receberão todo o seu saldo no endereço de saque fornecido durante a próxima varredura do validador.
 
-<ButtonLink to="/staking/withdrawals/">Mais sobre saques de participação</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Mais sobre saques de participação</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="O que acontece se eu for cortado?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

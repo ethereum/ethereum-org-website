@@ -2,7 +2,7 @@
 title: Meningkatkan pengalaman pengguna
 description: Masih terlalu rumit untuk menggunakan Ethereum bagi kebanyakan orang. Untuk mendorong adopsi massal, Ethereum harus secara drastis menurunkan hambatan masuknya - pengguna harus mendapatkan manfaat dari akses yang terdesentralisasi, tanpa izin, dan tahan sensor ke Ethereum, tetapi harus sama mudahnya dengan menggunakan aplikasi web2 tradisional.
 lang: id
-image: /roadmap/roadmap-ux.png
+image: /images/roadmap/roadmap-ux.png
 alt: "Peta Perjalanan Ethereum"
 template: roadmap
 ---
@@ -15,7 +15,7 @@ Akun Ethereum dilindungi oleh sepasang kunci yang digunakan untuk mengidentifika
 
 Solusi untuk hal ini adalah dengan menggunakan dompet kontrak pintar untuk berinteraksi dengan Ethereum. Dompet kontrak pintar menciptakan cara untuk melindungi akun jika kuncinya hilang atau dicuri, peluang untuk deteksi dan pertahanan yang lebih baik, dan memungkinkan dompet untuk mendapatkan fungsionalitas baru. Meskipun dompet kontrak pintar sudah ada saat ini, namun masih sulit untuk dibuat karena protokol Ethereum perlu mendukungnya dengan lebih baik. Dukungan tambahan ini dikenal sebagai abstraksi akun.
 
-<ButtonLink variant="outline-color" to="/roadmap/account-abstraction/">Lebih lanjut tentang abstraksi akun</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/account-abstraction/">Lebih lanjut tentang abstraksi akun</ButtonLink>
 
 ## Simpul untuk semua orang
 
@@ -23,7 +23,7 @@ Pengguna yang menjalankan node tidak perlu mempercayai pihak ketiga untuk member
 
 Ada beberapa peningkatan yang akan membuat menjalankan node jauh lebih mudah dan jauh lebih sedikit menggunakan sumber daya. Cara penyimpanan data akan berubah untuk menggunakan struktur yang lebih efisien dalam penggunaan ruang yang dikenal sebagai **Pohon Verkle**. Dengan [keadaan tanpa status](/roadmap/statelessness) atau [kedaluwarsa data](/roadmap/statelessness/#data-expiry), simpul Ethereum tidak perlu menyimpan salinan seluruh data keadaan Ethereum, yang secara drastis mengurangi kebutuhan ruang hard disk. [Simpul ringan](/developers/docs/nodes-and-clients/light-clients/) akan menawarkan banyak manfaat dari menjalankan simpul penuh, tetapi dapat dijalankan dengan mudah pada ponsel seluler atau dalam aplikasi browser sederhana.
 
-<ButtonLink variant="outline-color" to="/roadmap/verkle-trees/">Baca tentang pohon Verkle</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/verkle-trees/">Baca tentang pohon Verkle</ButtonLink>
 
 Dengan peningkatan ini, hambatan untuk menjalankan sebuah simpul dikurangi menjadi nol secara efektif. Pengguna akan mendapatkan keuntungan dari akses yang aman dan tanpa izin ke Ethereum tanpa harus mengorbankan ruang disk atau CPU yang signifikan di komputer atau ponsel mereka, dan tidak perlu bergantung pada pihak ketiga untuk akses data atau jaringan ketika mereka menggunakan aplikasi.
 

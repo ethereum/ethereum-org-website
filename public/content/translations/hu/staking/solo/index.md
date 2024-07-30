@@ -4,7 +4,7 @@ description: Az önálló letétbe helyezés áttekintése
 lang: hu
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Leslie, a rinocérosz a saját számítógépes chipjén.
 sidebarDepth: 2
 summaryPoints:
@@ -190,7 +190,7 @@ Amint a visszavonási adatok be vannak állítva, a jutalmak (a 32 ETH-en felül
 
 A teljes egyenleg visszavonásához végig kell menni a validátorkiléptetési folyamaton.
 
-<ButtonLink to="/staking/withdrawals/">Bővebben a letétbe helyezés visszavonásáról</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Bővebben a letétbe helyezés visszavonásáról</ButtonLink>
 </ExpandableCard>
 
 ## További olvasnivaló {#further-reading}
@@ -202,3 +202,5 @@ A teljes egyenleg visszavonásához végig kell menni a validátorkiléptetési 
 - [Hogyan kell: Ethereum validátorhardver vásárlása](https://www.youtube.com/watch?v=C2wwu1IlhDc) – _EthStaker 2022._
 - [Lépésről lépésre: hogyan kell csatlakozni az Ethereum 2.0 teszthálózathoz](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) – _Butta_
 - [Eth2 Slashing elkerülési tippek](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) – _Raul Jordan 2020._
+
+<QuizWidget quizKey="solo-staking" />

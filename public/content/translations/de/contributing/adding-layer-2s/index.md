@@ -78,7 +78,7 @@ _Wir betrachten andere Skalierungslösungen, die nicht Ethereum für Datenverfü
 
 **Links zu dApps im Ebene-2-Ökosystem**
 
-- Wir möchten unseren Benutzern Informationen bieten, was sie auf dieser Ebene 2 erwarten können. (z. B. https://portal.arbitrum.one/, https://www.optimism.io/apps/all)
+- Wir möchten unseren Benutzern Informationen bieten, was sie auf dieser Ebene 2 erwarten können. (z. B. https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
 **Token-Vertragslisten**
 
@@ -92,6 +92,6 @@ _Wir betrachten andere Skalierungslösungen, die nicht Ethereum für Datenverfü
 
 Wenn Sie eine Ebene 2 zu ethereum.org hinzufügen möchten, erstellen Sie einen Eintrag auf GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Eintrag erstellen
 </ButtonLink>

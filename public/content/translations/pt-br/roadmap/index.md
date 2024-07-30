@@ -3,14 +3,14 @@ title: Planejamento Ethereum
 description: O caminho para mais escalabilidade, segurança e sustentabilidade no Ethereum.
 lang: pt-br
 template: roadmap
-image: /roadmap/roadmap-main.png
+image: /images/heroes/roadmap-hub-hero.jpg
 alt: "Planejamento Ethereum"
 summaryPoints:
 buttons:
   - label: Melhorias adicionais
     toId: próximas-alterações
   - label: Melhorias anteriores
-    to: /history/
+    href: /history/
     variant: descrição
 ---
 
@@ -24,28 +24,28 @@ O planejamento do Ethereum descreve as melhorias específicas que serão feitas 
 
 <CardGrid>
   <RoadmapActionCard
-    to="/roadmap/scaling"
+    href="/roadmap/scaling"
     title="Transações mais baratas"
     image="scaling"
     description="Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems."
     buttonText="More on reducing fees"
   />
   <RoadmapActionCard
-    to="/roadmap/security"
+    href="/roadmap/security"
     title="Segurança extra"
     image="security"
     description="Ethereum is already very secure but it can be made even stronger, ready to withstand all kinds of attack far into the future."
     buttonText="More on security"
   />
   <RoadmapActionCard
-    to="/roadmap/user-experience"
+    href="/roadmap/user-experience"
     title="Melhor experiência do usuário"
     image="userExperience"
     description="More support for smart contract wallets and light-weight nodes will make using Ethereum simpler and safer."
     buttonText="More on user experience"
   />
   <RoadmapActionCard
-    to="/roadmap/future-proofing"
+    href="/roadmap/future-proofing"
     title="Preparado para o futuro"
     image="futureProofing"
     description="Ethereum researchers and developers are solving tomorrow's problems today, readying the network for future generations."
@@ -59,7 +59,7 @@ O Ethereum recebe melhorias regulares que aprimoram a escalabilidade, a seguran�
 
 <RoadmapImageContent title="Como o planejamento é definido">
 
-O planejamento é, em grande parte, o resultado de anos de trabalho de pesquisadores e desenvolvedores, pois o protocolo é muito técnico, mas qualquer pessoa motivada pode participar. As ideias geralmente começam como discussões em um fórum, como [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://www.figma.com/exit?url=https%3A%2F%2Fethereum-magicians.org%2F) ou no servidor Eth R&D no Discord. Elas podem ser respostas a novas vulnerabilidades constatadas, sugestões de organizações que trabalham na camada de aplicativos (como dApps e corretoras) ou de atritos conhecidos junto a usuários finais (como custos ou velocidades de transação). Quando essas ideias amadurecem, elas podem ser apresentadas como [Propostas de melhorias do Ethereum] (https://eips.ethereum.org/). Tudo isso é feito abertamente, e qualquer pessoa da comunidade pode dar sua opinião, a qualquer momento.
+O planejamento é, em grande parte, o resultado de anos de trabalho de pesquisadores e desenvolvedores, pois o protocolo é muito técnico, mas qualquer pessoa motivada pode participar. As ideias geralmente começam como discussões em um fórum, como [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://ethereum-magicians.org) ou no servidor Eth R&D no Discord. Elas podem ser respostas a novas vulnerabilidades constatadas, sugestões de organizações que trabalham na camada de aplicativos (como dApps e corretoras) ou de atritos conhecidos junto a usuários finais (como custos ou velocidades de transação). Quando essas ideias amadurecem, elas podem ser apresentadas como [Propostas de melhorias do Ethereum] (https://eips.ethereum.org/). Tudo isso é feito abertamente, e qualquer pessoa da comunidade pode dar sua opinião, a qualquer momento.
 
 [Mais sobre a governança do Ethereum](/governance/)
 

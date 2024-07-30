@@ -5,7 +5,7 @@ lang: nl
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Een Eth-logo dat via een hologram wordt weergegeven.
 summaryPoint1: Een manier om iets unieks te vertegenwoordigen als een op Ethereum gebaseerd activum.
 summaryPoint2: NFT's geven meer macht aan contentmakers dan ooit tevoren.
@@ -78,7 +78,7 @@ De veiligheid van Ethereum komt van proof-of-stake. Het systeem is ontworpen om 
 
 Beveiligingskwesties met betrekking tot NFT's hebben meestal te maken met phishing-scams, kwetsbaarheden van slimme contracten of gebruikersfouten (zoals het per ongeluk blootgeven van privésleutels), waardoor goede portemonneebeveiliging van cruciaal belang is voor NFT-eigenaren.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Meer over beveiliging
 </ButtonLink>
 

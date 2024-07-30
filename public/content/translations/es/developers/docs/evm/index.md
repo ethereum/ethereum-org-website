@@ -10,7 +10,7 @@ El propio protocolo Ethereum existe únicamente con el propósito de mantener el
 
 ## Requisitos previos {#prerequisites}
 
-Para comprender la EVM es necesario estar familiarizado con terminología básica y común de las ciencias informáticas, como [bytes](https://wikipedia.org/wiki/Byte), [memoria](https://wikipedia.org/wiki/Computer_memory) y [pila](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>). También sería útil sertirse cómodo con los conceptos de criptografía/cadena de bloques[funciones hash](https://wikipedia.org/wiki/Cryptographic_hash_function) y el [árbol Merkle](https://wikipedia.org/wiki/Merkle_tree).
+Para comprender la EVM es necesario estar familiarizado con terminología básica y común de las ciencias informáticas, como [bytes](https://wikipedia.org/wiki/Byte), [memoria](https://wikipedia.org/wiki/Computer_memory) y [pila](https://wikipedia.org/wiki/Stack_(abstract_data_type)). También sería útil sertirse cómodo con los conceptos de criptografía/cadena de bloques[funciones hash](https://wikipedia.org/wiki/Cryptographic_hash_function) y el [árbol Merkle](https://wikipedia.org/wiki/Merkle_tree).
 
 ## Del libro de contabilidad a la máquina de estado {#from-ledger-to-state-machine}
 
@@ -63,7 +63,7 @@ Durante los nueve años de historia de Ethereum, la EVM ha pasado varias revisio
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_.
 - [evmone](https://github.com/ethereum/evmone) - _C++_.
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_.
-- [eEVM](https://github.com/microsoft/eevm) - _C++_.
+- [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## Más información {#further-reading}
 
@@ -73,6 +73,7 @@ Durante los nueve años de historia de Ethereum, la EVM ha pasado varias revisio
 - [Códigos de operación de la máquina virtual de Ethereum](https://www.ethervm.io/)
 - [Referencia interactiva de códigos de operación de máquina virtual Ethereum](https://www.evm.codes/)
 - [Una breve introducción a la documentación de Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
+- [Dominar Ethereum - La máquina virtual de Ethereum](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc))
 
 ## Temas relacionados {#related-topics}
 

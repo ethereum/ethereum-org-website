@@ -3,7 +3,7 @@ title: Mnyororo Kioleza
 description: Jifunze juu ya Mnyororo Kioleza - Kisasisho kilichoanzishwa na Ethereum ya uthibitisho-wa-hisa.
 lang: sw
 template: upgrade
-image: /upgrades/core.png
+image: /images/upgrades/core.png
 alt: 
 summaryPoint1: Mnyororo Kioleza haitabadili kitu chochote katika Ethereum ya leo.
 summaryPoint2: Itaratibu mtandao, na kutumikia kama safu ya makubaliano.
@@ -27,7 +27,7 @@ Jukumu ya mnyororo wa Kioleza litabadilika baada ya mda ila sehemu ya msingi ya 
 
 Mnyororo wa Kioleza utaingiza [uthibitisho-wa-hisa](/developers/docs/consensus-mechanisms/pos/) kwenye Ethereum. Hii ndio njia mpya ya wewe kusaidia Ethereum kua salama. Ifikirie kama faida kw jamii ambayo itafanya Ethereum kua na afya na kukutenegenezea hela zaidi wakati wa mchakato. Kiuhalisia, itahusisha wewe kuweka hisa za ETH ili kuamsha programu. Kama mthibitishaji utafanya mchakato wa shughuli za pesa na utaunda vitalu vipya kwenye mnyororo.
 
-Kuweka hisa na kua mt hibitishaji ni rahisi kuliko [kuchimba](/developers/docs/mining/)(jinsi ambavyo mtandao ni saklama kwa sasa). Mwishowe hii inamatumaini itasaidia Ethereum kua salama zaidi. Jinsi watu wengi wanavyoshiriki katika mtandao, ndivyo unavyozodi kujitegemea na salama kutoka kwa shambulio litakalokuja.
+Kuweka hisa na kua mt hibitishaji ni rahisi kuliko [kuchimba](/developers/docs/consensus-mechanisms/pow/mining/)(jinsi ambavyo mtandao ni saklama kwa sasa). Mwishowe hii inamatumaini itasaidia Ethereum kua salama zaidi. Jinsi watu wengi wanavyoshiriki katika mtandao, ndivyo unavyozodi kujitegemea na salama kutoka kwa shambulio litakalokuja.
 
 <InfoBanner emoji=":money_bag:">
 Kama ungependa kua mthibitishaji na kusaidia kulinda mnyororo wa Kioleza, <a href="/staking/">jifunze zaidi jinsi ya kuweka hisa</a>.
@@ -49,7 +49,7 @@ Visasisho vyote vya Eth2 vinahusiana kwa kiasi fulani. Basi hebu tukumbushe jins
 
 Mnyororo Kioleza, mwanzoni, itakuwa imetengana na Mtandao mkuu wa Ethereum tunaotumia leo hii. Lakini mwishowe vitaunganishwa. Mpango ni "kuunganisha" Mtandao Mkuu kwenye mfumo wa uthibitisho-wa-hisa amabao Mnyororo Kioleza unaudhibiti na kuuratibu.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
     Unganisha
 </ButtonLink>
 
@@ -57,7 +57,7 @@ Mnyororo Kioleza, mwanzoni, itakuwa imetengana na Mtandao mkuu wa Ethereum tunao
 
 Minyororo ya Vigae itakua salama kuingia katika ikolojia ya Ethereum pale tu utaratibu wa makubaliano kwenye uthibitisho-wa-hisa utakapochukua nafasi. Mnyororo Kioleza utaanzisha hisa, ikitengeneza njia ili uboreshwaji wa mnyororo-kigae ufuate.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
     Minyororo ya Kigae
 </ButtonLink>
 

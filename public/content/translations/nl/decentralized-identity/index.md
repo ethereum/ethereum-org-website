@@ -5,7 +5,7 @@ lang: nl
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: /eth-gif-cat.png
+image: /images/eth-gif-cat.png
 summaryPoint1: Traditionele identiteitssystemen hebben de uitgifte, het onderhoud en de controle van uw identificatiemiddelen gecentraliseerd.
 summaryPoint2: Gedecentraliseerde identiteit verwijdert vertrouwen op gecentraliseerde derden.
 summaryPoint3: Dankzij crypto hebben gebruikers nu de tools om hun eigen identificaties en attestaties uit te geven, bij te houden en te beheren.
@@ -49,7 +49,7 @@ Gedecentraliseerde identificatiekenmerken worden opgeslagen op gedistribueerde l
 
 ## Wat maakt gedecentraliseerde identificatiekenmerken mogelijk? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Publieke sleutel-infrastructuur (PKI) {#public-key-infrastructure}
+### 1. Publieke sleutel-infrastructuur (PKI) {#public-key-cryptography}
 
 Publieke sleutel-infrastructuur (PKI) is een informatiebeveiligingsmaatregel die een [publieke sleutel](/glossary/#public-key) en [privé-sleutel](/glossary/#private-key) voor een entiteit genereert. Publieke sleutel-cryptografie wordt gebruikt in blockchain-netwerken om gebruikersidentiteiten te verifiëren en eigendom van digitale activa te bewijzen.
 

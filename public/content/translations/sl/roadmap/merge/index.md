@@ -3,7 +3,7 @@ title: Spojitev
 description: Več informacij o spojitvi – trenutku, ko je Ethereumovo glavno omrežje začelo uporabljati dokaz o deležu.
 lang: sl
 template: upgrade
-image: /upgrades/merge.png
+image: /images/upgrades/merge.png
 alt: 
 summaryPoint1: Ethereumovo glavno omrežje uporablja dokaz o deležu, vendar ni bilo vedno tako.
 summaryPoint2: Nadgradnja z izvirnega mehanizma dokaza o delu na dokaz o deležu se je imenovala spojitev.
@@ -11,7 +11,7 @@ summaryPoint3: Spojitev je ime dogodka, ko se je Ethereumovo glavno omrežje spo
 summaryPoint4: Spojitev je Ethereumovo porabo energijo zmanjšala za približno 99,95 %.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Spojitev je bila izvedena 15. septembra 2022. Zaključila je Ethereumov prehod na mehanizem za doseganje soglasja z dokazom o deležu. Ta je uradno zamenjal mehanizem dokaza o delu in porabo energije zmanjšal za približno 99,95 %.
 </UpgradeStatus>
 
@@ -198,7 +198,7 @@ Spojitev predstavlja uradno dodajanje oddajniške verige kot nove plasti za dose
 
 Namesto tega bloke predlagajo validacijska vozlišča, ki so zastavila ETH v zameno za pravico, da sodelujejo pri sprejemanju soglasja. Te nadgradnje postavljajo temelje za prihodnje nadgradnje za širjenje omrežja, vključno z razdrobitvijo.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   Oddajniška veriga
 </ButtonLink>
 
@@ -214,7 +214,7 @@ Začetni načrt je predvideval delo na razdrobitvi, s katero bi nadgradljivost n
 
 Načrti za razdrobitev se hitro spreminjajo, vendar so se s pojavom in uspehom tehnologij 2. plasti za nadgradnjo opravljanja transakcij preusmerili na iskanje najboljšega načina za porazdelitev bremena shranjevanja klicanih podatkov iz vseh pogodb, kar bi omogočilo eksponentno rast kapacitete omrežja. To ne bi bilo mogoče brez predhodnega prehoda na mehanizem dokaza o deležu.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Razdrobitev
 </ButtonLink>
 

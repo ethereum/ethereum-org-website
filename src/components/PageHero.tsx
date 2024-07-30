@@ -40,7 +40,7 @@ type PageHeroProps = {
 
 const isButtonLink = (
   button: ButtonType | ButtonLinkType
-): button is ButtonLinkType => (button as ButtonLinkType).to !== undefined
+): button is ButtonLinkType => (button as ButtonLinkType).href !== undefined
 
 const PageHero = ({
   content: { buttons, title, header, subtitle, image, alt },
@@ -99,12 +99,13 @@ const PageHero = ({
         {buttons && (
           <Wrap spacing={2} overflow="visible" sx={{ ul: { m: 0 } }}>
             {buttons.map((button, idx) => {
+              const isSecondary = idx !== 0
               if (isButtonLink(button)) {
                 return (
                   <WrapItem key={idx}>
                     <ButtonLink
                       variant={button.variant}
-                      to={button.to}
+                      href={button.href}
                       onClick={() =>
                         trackCustomEvent({
                           eventCategory: button.matomo.eventCategory,
@@ -112,6 +113,7 @@ const PageHero = ({
                           eventName: button.matomo.eventName,
                         })
                       }
+                      isSecondary={isSecondary}
                     >
                       {button.content}
                     </ButtonLink>
@@ -132,6 +134,7 @@ const PageHero = ({
                           eventName: button.matomo.eventName,
                         })
                       }
+                      isSecondary={isSecondary}
                     >
                       {button.content}
                     </Button>
@@ -153,7 +156,8 @@ const PageHero = ({
       >
         <Image
           src={image}
-          sizes="(max-width: 992px) 100vw, 50vw"
+          // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
+          sizes="(max-width: 992px) 100vw, 624px"
           style={{
             width: "100%",
             height: "auto",

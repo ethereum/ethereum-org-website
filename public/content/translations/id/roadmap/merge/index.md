@@ -3,15 +3,15 @@ title: Penggabungan
 description: Pelajari tentang Penggabungan - ketika Jaringan Utama Ethereum mengadopsi bukti taruhan.
 lang: id
 template: upgrade
-image: /upgrades/merge.png
-alt: 
+image: /images/upgrades/merge.png
+alt:
 summaryPoint1: Jaringan Utama Ethereum menggunakan bukti taruhan, tetapi tidak selalu demikian.
 summaryPoint2: Peningkatan dari mekanisme bukti kerja yang asli menjadi bukti taruhan disebut Penggabungan.
 summaryPoint3: Penggabungan mengacu pada penggabungan Jaringan Utama Ethereum asli dengan rantai blok bukti taruhan terpisah yang disebut Rantai Suar, yang sekarang ada sebagai satu rantai.
 summaryPoint4: Penggabungan ini mengurangi konsumsi energi Ethereum sebesar ~99,95%.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Penggabungan telah dilaksanakan pada tanggal 15 September 2022. Hal ini menyelesaikan transisi Ethereum ke konsensus bukti taruhan, yang secara resmi tidak lagi menggunakan bukti kerja dan mengurangi konsumsi energi sebesar ~99,95%.
 </UpgradeStatus>
 
@@ -188,7 +188,7 @@ Untuk mengurangi kebingungan, komunitas telah memperbarui istilah-istilah beriku
 - 'Eth1' sekarang adalah 'lapisan eksekusi', yang menangani transaksi dan eksekusi.
 - 'Eth2' sekarang adalah 'lapisan konsensus', yang menangani konsensus bukti taruhan.
 
-Pembaruan terminologi ini hanya mengubah konvensi penamaan; ini tidak mengubah tujuan atau peta jalan Ethereum.
+Pembaruan terminologi ini hanya mengubah konvensi penamaan; ini tidak mengubah tujuan atau peta perjalanan Ethereum.
 
 [Pelajari selengkapnya tentang penamaan ulang 'Eth2'](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
@@ -202,7 +202,7 @@ Pengabungan mewakili adopsi resmi Rantai Suar sebagai lapisan konsensus baru unt
 
 Blok diusulkan dengan memvalidasi simpul yang telah mempertaruhkan ETH dengan imbalan hak untuk berpartisipasi dalam konsensus. Peningkatan ini menyiapkan panggung untuk peningkatan skalabilitas di masa depan, termasuk pecahan.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   Rantai Suar
 </ButtonLink>
 
@@ -218,7 +218,7 @@ Awalnya, rencananya adalah mengerjakan pecahan sebelum Penggabungan untuk mengat
 
 Rencana untuk pecahan berkembang dengan cepat, tetapi dengan munculnya dan keberhasilan teknologi lapisan ke-2 untuk meningkatkan eksekusi transaksi, rencana pecahan telah bergeser untuk menemukan cara yang paling optimal untuk mendistribusikan beban penyimpanan data panggilan terkompresi dari kontrak rollup, yang memungkinkan pertumbuhan kapasitas jaringan secara eksponensial. Hal ini tidak akan mungkin terjadi tanpa terlebih dahulu beralih ke bukti taruhan.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Pecahan
 </ButtonLink>
 

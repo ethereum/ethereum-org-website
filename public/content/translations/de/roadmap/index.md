@@ -3,14 +3,16 @@ title: Ethereum-Roadmap
 description: Der Weg zu mehr Skalierbarkeit, Sicherheit und Nachhaltigkeit für Ethereum.
 lang: de
 template: roadmap
-image: /roadmap/roadmap-main.png
+image: /images/heroes/roadmap-hub-hero.jpg
 alt: "Ethereum-Roadmap"
 summaryPoints:
 buttons:
-  - label: Weitere Upgrades
+  - 
+    label: Weitere Upgrades
     toId: welche-veränderungen-kommen-werden
-  - label: Bisherige Upgrades
-    to: /history/
+  - 
+    label: Bisherige Upgrades
+    href: /history/
     variant: Übersicht
 ---
 
@@ -24,28 +26,28 @@ Die Ethereum-Roadmap beschreibt die spezifischen Verbesserungen, die in Zukunft 
 
 <CardGrid>
   <RoadmapActionCard
-    to="/roadmap/scaling"
+    href="/roadmap/scaling"
     title="Günstigere Transaktionen"
     image="scaling"
     description="Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems."
     buttonText="More on reducing fees"
   />
   <RoadmapActionCard
-    to="/roadmap/security"
+    href="/roadmap/security"
     title="Extra Sicherheit"
     image="security"
     description="Ethereum is already very secure but it can be made even stronger, ready to withstand all kinds of attack far into the future."
     buttonText="More on security"
   />
   <RoadmapActionCard
-    to="/roadmap/user-experience"
+    href="/roadmap/user-experience"
     title="Bessere Nutzererfahrung"
     image="userExperience"
     description="More support for smart contract wallets and light-weight nodes will make using Ethereum simpler and safer."
     buttonText="More on user experience"
   />
   <RoadmapActionCard
-    to="/roadmap/future-proofing"
+    href="/roadmap/future-proofing"
     title="Zukunftssicherung"
     image="futureProofing"
     description="Ethereum researchers and developers are solving tomorrow's problems today, readying the network for future generations."
@@ -59,7 +61,7 @@ Ethereum erhält regelmäßig Upgrades, die seine Skalierbarkeit, Sicherheit ode
 
 <RoadmapImageContent title="Wie die Roadmap definiert wird">
 
-Die Roadmap ist vor allem das Ergebnis jahrelanger Arbeit von Forschern und Entwicklern - da das Protokoll sehr technisch ist - aber jede motivierte Person kann sich daran beteiligen. Die Ideen beginnen in der Regel als Diskussionen in einem Forum wie [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://www.figma.com/exit?url=https%3A%2F%2Fethereum-magicians.org%2F) oder dem Eth R&D Discord Server. Dabei kann es sich um Reaktionen auf neu entdeckte Schwachstellen handeln, um Vorschläge von Organisationen, die auf der Anwendungsebene arbeiten (z. B. Dapps und Börsen), oder um bekannte Schwierigkeiten für Endnutzer (z. B. Kosten oder Transaktionsgeschwindigkeit). Wenn diese Ideen ausgereift sind, können sie als [Ethereum Improvement Proposals](https://eips.ethereum.org/) vorgeschlagen werden. Dies alles geschieht öffentlich, so dass sich jeder aus der Community jederzeit einbringen kann.
+Die Roadmap ist vor allem das Ergebnis jahrelanger Arbeit von Forschern und Entwicklern - da das Protokoll sehr technisch ist - aber jede motivierte Person kann sich daran beteiligen. Ideen beginnen in der Regel als Diskussionen in einem Forum wie [ethresear.ch](https://ethresear.ch/), [Ethereum Magicians](https://ethereum-magicians.org/) oder dem Eth R&D-Discord-Server. Dabei kann es sich um Reaktionen auf neu entdeckte Schwachstellen handeln, um Vorschläge von Organisationen, die auf der Anwendungsebene arbeiten (z. B. Dapps und Börsen), oder um bekannte Schwierigkeiten für Endnutzer (z. B. Kosten oder Transaktionsgeschwindigkeit). Wenn diese Ideen ausgereift sind, können sie als [Ethereum Improvement Proposals](https://eips.ethereum.org/) vorgeschlagen werden. Dies alles geschieht öffentlich, so dass sich jeder aus der Community jederzeit einbringen kann.
 
 [Mehr über Ethereum-Governance](/governance/)
 
@@ -114,4 +116,4 @@ Beim Sharding wird die Ethereum-Blockchain so aufgeteilt, dass Untergruppen von 
 - [Secret leader election](/roadmap/secret-leader-election) - Durch geschickte Kryptographie kann sichergestellt werden, dass die Identität des aktuellen Blockantragstellers nicht bekannt gegeben wird, wodurch er vor bestimmten Arten von Angriffen geschützt ist.
 - [Account abstraction](/roadmap/account-abstraction)- Die Kontoabstraktion ist eine Klasse von Upgrades, die Smart-Contract-Wallets direkt auf Ethereum unterstützen, anstatt komplexe Middleware zu verwenden.
 - [Verkle trees](/roadmap/verkle-trees) - Verkle-Bäume sind eine Datenstruktur, die verwendet werden kann, um zustandslose Clients auf Ethereum zu ermöglichen. Diese "zustandslosen" Clients benötigen nur wenig Speicherplatz, sind aber dennoch in der Lage, neue Blöcke zu verifizieren.
-- [Statelessness](/roadmap/statelessness) - zustandslose Clients können neue Blöcke verifizieren, ohne große Datenmengen speichern zu müssen. Dies bietet alle Vorteile des Betriebs einer Node mit nur einem kleinen Bruchteil der heutigen Kosten.
+- [Statuslosigkeit](/roadmap/statelessness) – Statuslose Clients werden in der Lage sein, neue Blöcke zu überprüfen, ohne große Mengen an Daten speichern zu müssen. Dies bietet alle Vorteile des Betriebs einer Node mit nur einem kleinen Bruchteil der heutigen Kosten.

@@ -5,7 +5,7 @@ lang: de
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: /future_transparent.png
+image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Eine globale, offene Alternative zum derzeitigen wissenschaftlichen System.
 summaryPoint2: Technologie, die es Wissenschaftlern ermöglicht, Finanzierung zu erhalten, Experimente durchzuführen, Daten zu teilen, Erkenntnisse zu verbreiten und vieles mehr.
@@ -68,7 +68,7 @@ Das derzeitige Standardmodell der Wissenschaftsförderung besteht darin, dass Ei
 
 Studien haben gezeigt, dass die Bewilligungsgremien bei der Auswahl von qualitativ hochwertigen Anträgen schlecht abschneiden: Gleiche Anträge, die verschiedenen Gremien vorgelegt werden, führen zu sehr unterschiedlichen Ergebnissen. Aufgrund der Mittelknappheit konzentrierten sie sich auf einen kleineren Pool älterer Forscher mit intellektuell konservativeren Projekten. Dies hat zu einer extrem wettbewerbsorientierten Förderlandschaft geführt, die falsche Anreize setzt und die Innovation im Keim erstickt.
 
-Web3 hat das Potenzial, dieses kaputte Finanzierungsmodell zu durchbrechen, indem es mit verschiedenen Anreizmodellen experimentiert, die von DAOs und Web3 im Allgemeinen entwickelt werden. [Retroaktive Fördermittel für öffentliche Güter](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [quadratische Förderung](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [DAO Governance](https://www.antler.co/blog/daos-and-web3-governance) und [tokenisierte Anreizstrukturen](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) sind einige der Web3-Tools, die die Wissenschaftsförderung revolutionieren könnten.
+Web3 hat das Potenzial, dieses kaputte Finanzierungsmodell zu durchbrechen, indem es mit verschiedenen Anreizmodellen experimentiert, die von DAOs und Web3 im Allgemeinen entwickelt werden. [Retroaktive Fördermittel für öffentliche Güter](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [quadratische Förderung](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [DAO Governance](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) und [tokenisierte Anreizstrukturen](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) sind einige der Web3-Tools, die die Wissenschaftsförderung revolutionieren könnten.
 
 ### IP-Eigentum und -Entwicklung {#ip-ownership}
 
@@ -103,7 +103,7 @@ Erkunden Sie Projekte und werden Sie Teil der DeSci-Gemeinschaft.
 - [OceanDAO: DAO regelte die Finanzierung der datenbezogenen Wissenschaft](https://oceanprotocol.com/dao)
 - [OpScientia: offene dezentrale wissenschaftliche Workflows](https://opsci.io/research/)
 - [LabDAO: Falten eines Proteins in Silizium](https://alphafodl.vercel.app/)
-- [Bio.xyz: Erhalten Sie Mittel für Ihr Biotech-DAO oder desci-Projekt](https://www.molecule.to/)
+- [Bio.xyz: Erhalten Sie Mittel für Ihr Biotech-DAO oder desci-Projekt](https://www.bio.xyz/)
 - [ResearchHub: Poste ein wissenschaftliches Ergebnis und führe ein Gespräch mit Partnern](https://www.researchhub.com/)
 - [VitaDAO: Langfristige Forschung finanziert durch gesponserte Forschungsverträge](https://www.vitadao.com/)
 - [Flamming-Protokoll: Open-Source-Datenwirtschaft, die die kollaborative biomedizinische Entdeckung fördert](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)

@@ -34,6 +34,10 @@ const quizzes = {
     title: "learn-quizzes:page-assets-merge",
     questions: ["h001", "h002", "h003", "h004", "h005"],
   },
+  daos: {
+    title: "DAOs",
+    questions: ["i001", "i002", "i003", "i004", "i005"],
+  },
   "solo-staking": {
     title: "solo",
     questions: ["j001", "j002", "j004", "j005", "j006", "j007", "j008"],
@@ -84,21 +88,26 @@ export const usingEthereumQuizzes: QuizzesSection[] = [
   {
     id: "nfts",
     level: "beginner",
-    next: "scaling",
-  },
-  {
-    id: "scaling",
-    level: "intermediate",
     next: "layer-2",
   },
   {
     id: "layer-2",
+    level: "intermediate",
+    next: "daos",
+  },
+  {
+    id: "daos",
     level: "intermediate",
     next: "run-a-node",
   },
   {
     id: "run-a-node",
     level: "intermediate",
+    next: "scaling",
+  },
+  {
+    id: "scaling",
+    level: "advanced",
     next: "solo-staking",
   },
   {

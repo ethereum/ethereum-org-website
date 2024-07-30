@@ -5,7 +5,7 @@ lang: sl
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Logotip Eth prikazan prek holograma.
 summaryPoint1: Način predstavitve česarkoli edinstvenega kot sredstva, ki temelji na Ethereumu.
 summaryPoint2: NFT-ji dajejo ustvarjalcem vsebin več moči, kot so jo imeli kadarkoli prej.
@@ -78,7 +78,7 @@ Ethereumovo varnost zagotavlja mehanizem dokaza o deležu. Sistem je zasnovan ta
 
 Varnostne težave, povezane z NFT-ji, so najpogosteje posledica prevar z lažnim predstavljanjem, ranljivosti v pametnih pogodbah ali uporabniških napak (na primer nenamerno izpostavljanje zasebnih ključev), zato je ustrezna zaščita denarnic za lastnike NFT-jev izjemno pomembna.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Več o varnosti
 </ButtonLink>
 

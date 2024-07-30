@@ -5,7 +5,7 @@ lang: pl
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao-2.png
+image: /images/use-cases/dao-2.png
 alt: Reprezentacja DAO głosującego nad wnioskiem.
 summaryPoint1: Społeczności należące do członków bez scentralizowanego przywództwa.
 summaryPoint2: Bezpieczny sposób współpracy z nieznajomymi w internecie.
@@ -50,7 +50,7 @@ Podstawą DAO jest inteligentny kontrakt, który określa zasady organizacji i k
 
 Jest to możliwe, ponieważ inteligentne kontrakty są zabezpieczone przed ingerencją osób niepowołanych po ich wdrożeniu na Ethereum. Nie możesz po prostu edytować kodu (zasad DAO) niepostrzeżenie, ponieważ wszystko jest publiczne.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Więcej na temat inteligentnych kontraktów
 </DocLink>
 

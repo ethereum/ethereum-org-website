@@ -1,22 +1,19 @@
-"review needed :eyes:":
-  - src/**/*
-  - public/*
-
-"documentation :book:":
+"documentation 📖":
   - README.md
+  - docs/**/*
 
-"tooling :wrench:":
+"tooling 🔧":
   - .github/**/*
-  - src/scripts/*
-  - src/lib/*
-  - src/hooks/*
+  - src/scripts/**/*
+  - src/lib/**/*
+  - src/hooks/**/*
+  - .storybook/**/*
 
-"dependencies :package:":
+"dependencies 📦":
   - package.json
   - yarn.lock
 
-"internal :house:":
-  - .all-contributorsrc
+"config ⚙️":
   - i18n.config.json
   - next.config.js
   - next-i18next.config,js
@@ -29,14 +26,13 @@
   - .prettierrc
   - netlify.toml
 
-"translation :earth_africa:":
-  - src/content/translations/**/*
+"translation 🌍":
+  - public/content/translations/**/*
   - src/intl/**/*
-  - src/lib/utils/translations.ts
 
-"content :fountain_pen:":
-  - src/pages/*
+"content 🖋️":
+  - src/intl/en/**
   - public/content/**/*
 
-"event :date:":
+"event 📅":
   - src/data/community-events.json

@@ -4,7 +4,7 @@ description: Una visión general de cómo empezar con la participación agrupada
 lang: es
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: Leslie, el rinoceronte, nadando en la piscina.
 sidebarDepth: 2
 summaryPoints:
@@ -68,7 +68,7 @@ Por lo general, los tókenes de participación ERC-20 se emiten a los participan
 
 Alternativamente, los grupos que usan tókenes de participación ERC-20, permiten a los usuarios operar dicho token en el libre mercado, pudiendo vender la posición en participación, «retirándola» de forma eficaz sin tener que eliminar ETH del contrato de participación.
 
-<ButtonLink to="/staking/withdrawals/">Más sobre retiradas de participaciones</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Más sobre retiradas de participaciones</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="¿Es esto diferente a participar con mi intercambio?">

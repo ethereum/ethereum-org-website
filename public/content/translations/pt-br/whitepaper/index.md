@@ -3,6 +3,7 @@ title: Whitepaper sobre o Ethereum
 description: Um documento de introdução ao Ethereum, publicado em 2013 antes de seu lançamento.
 lang: pt-br
 sidebarDepth: 2
+hideEditButton: true
 ---
 
 # Whitepaper do Ethereum {#ethereum-whitepaper}
@@ -11,7 +12,7 @@ _Este artigo de introdução foi publicado em 2014 por Vitalik Buterin, o fundad
 
 _Apesar de já terem se passado alguns anos desde sua publicação, nós o mantivemos porque ele continua a ser uma referência útil e uma autêntica representação do Ethereum e de sua visão. Para aprender sobre os desenvolvimentos mais recentes do Ethereum e como as mudanças no protocolo são feitas, recomendamos [este manual](/learn/)._
 
-[Abra o whitepaper do Ethereum em PDF](./whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
+[Pesquisadores e acadêmicos que buscam uma versão histórica ou uma versão canônica do whitepaper [de Dezembro de 2014] devem usar este PDF.](./whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
 
 ## Uma nova geração de contrato inteligente e plataforma de aplicativos descentralizada {#a-next-generation-smart-contract-and-decentralized-application-platform}
 
@@ -134,7 +135,7 @@ Mesmo sem nenhuma extensão, o protocolo Bitcoin realmente facilita uma versão 
 No entanto, o idioma de scripting conforme implementado no Bitcoin tem várias limitações importantes:
 
 - **A falta de completude de Turing** - ou seja, embora haja um grande subconjunto de computação que a linguagem de script de Bitcoin suporta, ele nem de perto suporta tudo. A principal categoria que está faltando são laços (loops). Isso é feito para evitar loops infinitos durante a verificação da transação. Teoricamente é um obstáculo para programadores de script, já que qualquer loop pode ser simulado simplesmente repetindo o código, muitas vezes com uma instrução if, mas leva a scripts que são muito ineficientes em termos de espaço. Por exemplo, a implementação de um algoritmo alternativo de assinatura de curva elíptica provavelmente exigiria 256 rodadas de multiplicação repetidas, todas incluídas individualmente no código.
-- **Valor blindado** - não há como um script UTXO fornecer controle fino sobre o valor que pode ser sacado. Por exemplo, um caso de uso poderoso de um contrato Oracle seria um contrato de hedge, em que A e B colocam BTC 1000 e, após 30 dias, o script envia BTC 1000 para A e o restante para B. Isto exigiria um Oracle para determinar o valor de BTC 1 em USD, mesmo assim é uma grande melhoria em termos de confiança e requisitos de infraestrutura em relação às soluções totalmente centralizadas que estão disponíveis agora. No entanto, como UTXOs são tudo ou nada, a única maneira de conseguir isso é com o hack muito ineficiente de ter muitos UTXO de denominações variadas (por exemplo, um UTXO de 2<sup>k</sup> para todo k até 30) e fazendo com que O escolha qual UTXO enviar para A e qual para B.
+- **Valor blindado** - não há como um script UTXO fornecer controle fino sobre o valor que pode ser sacado. Por exemplo, um caso de uso poderoso de um contrato Oracle seria um contrato de hedge, em que A e B colocam BTC 1000 e, após 30 dias, o script envia BTC 1000 para A e o restante para B. Isto exigiria um Oracle para determinar o valor de BTC 1 em USD, mesmo assim é uma grande melhoria em termos de confiança e requisitos de infraestrutura em relação às soluções totalmente centralizadas que estão disponíveis agora. No entanto, como os UTXO são tudo ou nada, a única forma de alcançar isso é através do hack muito ineficiente de ter muitos UTXO de denominações variadas (por exemplo, um UTXO de 2<sup>k</sup> para cada k até 30) e fazer com que o oráculo escolha qual UTXO enviar para A e qual para B.
 - **Falta de estado** - UTXOs podem ser gastos ou não. Contratos multiestados ou scripts que mantenham qualquer outro estado interno além disso não são possíveis. Isso dificulta a criação de contratos de opções multiestados, ofertas de troca descentralizadas ou protocolos de compromisso criptográfico de dois estágios (necessários para recompensas computacionais seguras). Isso também significa que o UTXO só pode ser usado para construir contratos pontuais simples e não contratos "com estado" mais complexos (como organizações descentralizadas) torna os meta-protocolos difíceis de implementar. O estado binário combinado com o valor blindado também significa que a importante aplicação de limites de retirada é possível.
 - **Blockchain blindada** - o UTXO é blindado para os dados de blockchain, como nonce, carimbos de tempo e hashes de blocos anteriores. Isto limita extremamente as aplicações em jogos de azar e várias outras categorias, privando a linguagem de script de uma fonte potencialmente valiosa de aleatoriedade.
 
@@ -229,7 +230,7 @@ O código nos contratos Ethereum é escrito em linguagem bytecode "stack-based" 
 
 O código também pode acessar o valor, o remetente e os dados da mensagem entrante, bem como os dados do cabeçalho do bloco. Ele também pode retornar um array de bytes como resultado.
 
-O modelo de execução formal do código EVM é bem simples. Enquanto a máquina virtual Ethereum está em execução, seu estado computacional completo pode ser definido pela tupla `(block_state, transaction, message, code, memory, stack, pc, gas)`, em que `block_state` é o estado global que contém todas as contas e inclui saldos e armazenamento. No início de cada rodada de execução, a instrução atual é encontrada pegando o `pc`ésimo byte de `code` (ou 0 se `pc >= len(code)`), e cada instrução tem sua própria definição em termos de como ela afeta a tupla. Por exemplo, `ADD` retira dois itens do stack e adiciona a soma deles, reduz `gas` em 1, incrementa `pc` em 1 e `SSTORE` retira os dois itens do stack, finalmente insere o segundo item no armazenamento do contrato no índice especificado pelo primeiro item. Embora existam muitas maneiras de otimizar a execução da máquina virtual Ethereum por meio de compilação just-in-time, a implementação básica do Ethereum pode ser feita com poucas centenas de linhas de código.
+O modelo de execução formal do código EVM é bem simples. Enquanto a máquina virtual Ethereum está em execução, seu estado computacional completo pode ser definido pela tupla `(block_state, transaction, message, code, memory, stack, pc, gas)`, em que `block_state` é o estado global que contém todas as contas e inclui saldos e armazenamento. No início de cada rodada de execução, a instrução atual é encontrada pegando o `pc`ésimo byte de `code` (ou 0 se `pc >= len(code)`), e cada instrução tem sua própria definição em termos de como ela afeta a tupla. Por exemplo, `ADD` retira dois itens da pilha e coloca sua soma, reduz o `gás` em 1 e incrementa o `pc` em 1 e o ` SSTORE` remove os dois primeiros itens da pilha e insere o segundo item no armazenamento do contrato, no índice especificado pelo primeiro item. Embora existam muitas maneiras de otimizar a execução da máquina virtual Ethereum por meio de compilação just-in-time, a implementação básica do Ethereum pode ser feita com poucas centenas de linhas de código.
 
 ### Blocos e mineração {#blockchain-and-mining}
 
@@ -314,7 +315,7 @@ Um esboço geral de como codificar uma DAO é o seguinte: o design mais simples 
 - `[1,i]` para registrar um voto a favor da proposta `i`
 - `[2,i]` para finalizar a proposta `i` se houver votos suficientes
 
-O contrato teria, então, cláusulas para cada uma dessas transações. Ele manteria um registro de todas as mudanças no armazenamento aberto, e uma lista de quem votou nelas. Haveria também uma lista de todos os membros. Quando qualquer alteração de armazenamento chega a dois terços dos membros votando nela, uma transação finalizada poderia executar a mudança. Um esqueleto mais sofisticado também teria capacidade de votação integrada para recursos como enviar uma transação, adicionar e remover membros e poderia até fornecer delegação de votos no estilo [democracia líquida](https://wikipedia.org/wiki/Delegative_democracy), em que qualquer um pode designar alguém para votar em seu lugar, e a designação é transitiva: se A designa B e B designa C, então C determina o voto de A. Este desenho faria a DAO crescer de forma orgânica como comunidade descentralizada, permitindo que pessoas eventualmente delegassem a tarefa de filtrar quem é um membro a especialistas, diferente do "sistema atual" em que especialistas podem aparecer e desaparecer ao longo do tempo à medida que os membros individuais da comunidade mudam seus alinhamentos.
+O contrato teria, então, cláusulas para cada uma dessas transações. Ele manteria um registro de todas as mudanças no armazenamento aberto, e uma lista de quem votou nelas. Haveria também uma lista de todos os membros. Quando qualquer alteração de armazenamento chega a dois terços dos membros votando nela, uma transação finalizada poderia executar a mudança. Um esqueleto mais sofisticado também teria a capacidade de votação integrada para recursos, como enviar uma transação, adicionar e remover membros, e poderia até fornecer uma delegação de votos no estilo [Democracia Líquida](https://wikipedia.org/wiki/Liquid_democracy) (ou seja, qualquer pessoa pode designar alguém para votar em seu lugar, e a designação é transitiva: se A designa B e B designa C, então C determina o voto de A). Este desenho faria a DAO crescer de forma orgânica como comunidade descentralizada, permitindo que pessoas eventualmente delegassem a tarefa de filtrar quem é um membro a especialistas, diferente do "sistema atual" em que especialistas podem aparecer e desaparecer ao longo do tempo à medida que os membros individuais da comunidade mudam seus alinhamentos.
 
 Um modelo alternativo seria o de empresa descentralizada, onde qualquer conta pode ter zero ou mais ações, e dois terços das ações são necessários para se tomar uma decisão. Um esqueleto completo envolveria a funcionalidade de gerenciamento de ativos, a capacidade de fazer uma oferta de compra ou venda de ações, e a capacidade de aceitar ofertas (de preferência com um mecanismo de correspondência de pedidos dentro do contrato). A delegação também existiria no estilo democracia líquida, generalizando o conceito de "conselho de administração".
 
@@ -501,15 +502,15 @@ O conceito de uma função de transição de estado arbitrária implementada pel
 10. [Whitepaper sobre moedas coloridas](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
 11. [Whitepaper sobre Mastercoin](https://github.com/mastercoin-MSC/spec)
 12. [Empresas autônomas descentralizadas, Bitcoin Magazine](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
-13. [Verificação de pagamento simplificado](https://en.bitcoin.it/wiki/Scalability#Simplifiedpaymentverification)
+13. [Verificação de pagamento simplificado](https://en.bitcoin.it/wiki/Scalability#Simplified_payment_verification)
 14. [Árvores de Merkle](https://wikipedia.org/wiki/Merkle_tree)
 15. [Árvores Patricia](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ e agentes autónomos, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
-18. [Mike Hearn fala sobre propriedades inteligentes no Festival de Turing](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)
+18. [Mike Hearn fala sobre propriedades inteligentes no Festival de Turing](https://www.youtube.com/watch?v=MVyv4t0OKe4)
 19. [Ethereum RLP](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
 20. [Árvores Ethereum Merkle Patricia](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
-21. [Pedro Todd sobre árvores da soma Merkle](http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
+21. [Pedro Todd sobre árvores da soma Merkle](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
 _Para a história do whitepaper, veja [esta wiki](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 

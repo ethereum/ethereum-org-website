@@ -32,7 +32,7 @@ Infine, il validatore firma l'attestazione e la trasmette sulla rete.
 
 Le spese aggiuntive associate al trasferimento di questi dati nella rete sono molto elevate per ogni validatore. Di conseguenza, prima ancora che avvenga la trasmissione su larga scala, le attestazioni dei singoli validatori sono aggregate in reti secondarie. Questo include l'aggregazione delle firme in modo che un'attestazione che viene trasmessa includa i `dati` di consenso e un'unica firma creata combinando le firme di tutte i validatori d'accordo con tali `dati`. Ciò è verificabile utilizzando `aggregation_bits`, poiché questi forniscono l'indice di ogni validatore nella propria commissione (i cui ID sono forniti in `data`) che può essere utilizzato per richiedere le singole firme.
 
-In ogni epoca, un validatore in ogni rete secondaria è selezionato dall'`aggregator`. L'aggregatore raccoglie tutte le attestazioni che sente nella rete di gossip aventi `data` equivalenti propri. Il mittente di ogni attestazione corrispondente è registrato negli `aggregation_bits`. L'aggregatore trasmette quindi l'attestazione aggregata alla rete più ampia.
+In ogn epoca 16 validatori in ogni rete secondaria sono selezionati per fungere da `aggregatori`. Gli aggregatori raccolgono tutte le attestazioni a loro note sulla rete di gossip aventi `dati` equivalenti ai loro. Il mittente di ogni attestazione corrispondente è registrato negli `aggregation_bits`. Quindi, gli aggregatori trasmettono l'aggregato di attestazioni al resto della rete.
 
 Quando un validatore viene selezionato per essere un propositore di blocchi, impacchetta le attestazioni aggregate dalle reti secondarie fino all'ultimo slot nel nuovo blocco.
 
@@ -50,9 +50,15 @@ Il ciclo di vita dell'attestazione è delineato nel seguente schema:
 
 ## Ricompense {#rewards}
 
-I validatori sono ricompensati per l'invio delle attestazioni. La ricompensa dell'attestazione dipende da due variabili, la `base reward` (ricompensa di base) e l'`inclusion delay` (ritardo d'inclusione). Il miglior caso per il ritardo d'inclusione è che sia pari a 1.
+I validatori sono ricompensati per l'invio delle attestazioni. La ricompensa d'attestazione dipende dai flag di partecipazione (sorgente, destinazione e testa), dalla ricompensa di base e dal tasso di partecipazione.
 
-`ricompensa d'attestazione = 7/8 x ricompensa di base x (1/ritardo d'inclusione)`
+Ogni flag di partecipazione può essere vero o falso, a seconda dell'attestazione inviata e del suo ritardo di inclusione.
+
+Lo scenario migliore si verifica quando i tre flag sono tutti veri, nel qual caso un validatore guadagnerà (per flag corretto):
+
+`ricompensa += ricompensa di base * peso del flag * tasso di attestazione del flag / 64`
+
+Il tasso di attestazione del flag si misura utilizzando la somma dei saldi effettivi di tutti i validatori attestanti per il dato flag confrontato al saldo effettivo attivo totale.
 
 ### Ricompensa di base {#base-reward}
 
@@ -81,6 +87,6 @@ Si noti che in alcuni casi un aggregatore fortunato potrebbe anche diventare il 
 ## Lettura consigliate {#further-reading}
 
 - [Le attestazioni nelle specifiche del consenso annotate da Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
-- [Le attestazioni su eth2book.info](https://eth2book.info/altair/part3/containers/dependencies#attestationdata)
+- [Le attestazioni su eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
 _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_

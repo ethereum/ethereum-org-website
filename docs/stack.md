@@ -5,7 +5,7 @@
 - [NextJS](https://nextjs.org/)
   - React framework that provides some goodies out of the box (pages router, SSG, SSR, i18n support, Image component, etc)
   - Configurable in `next.config.js`
-  - [NextJS Tutorial](https://nextjs.org/learn/foundations/about-nextjs)
+  - [NextJS Tutorial](https://nextjs.org/learn)
   - [NextJS Docs](https://nextjs.org/docs)
 - [React](https://reactjs.org/) - A JavaScript library for building component-based user interfaces
 - [Typescript](https://www.typescriptlang.org/) - TypeScript is a strongly typed programming language that builds on JavaScript

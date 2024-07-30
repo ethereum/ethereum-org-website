@@ -2,7 +2,7 @@
 title: Zukunftssicherung von Ethereum
 description: Diese Verbesserungen festigen Ethereum als widerstandsfähige und dezentrale Grundlage für die ungewisse Zukunft.
 lang: de
-image: /roadmap/roadmap-future.png
+image: /images/roadmap/roadmap-future.png
 alt: "Ethereum-Roadmap"
 template: roadmap
 ---
@@ -17,7 +17,7 @@ Die Herausforderung für Ethereum-Entwickler besteht darin, dass das aktuelle Pr
 
 Die in mehreren Bereichen von Ethereum zur Generierung kryptographischer Geheimnisse verwendeten ["KZG"-Verpflichtungsschemata](/roadmap/danksharding/#what-is-kzg) sind als quantenanfällig bekannt. Derzeit wird dies durch "vertrauenswürdige Setups" umgangen, bei denen viele Benutzer Zufälligkeit erzeugen, die von einem Quantencomputer nicht rückgängig gemacht werden kann. Die ideale Lösung wäre jedoch einfach, Quanten-sichere Kryptographie einzubauen. Es gibt zwei führende Ansätze, die effiziente Ersatzlösungen für das BLS-Schema werden könnten: [STARK-basierte](https://hackmd.io/@vbuterin/stark_aggregation) und [Gitter-basierte](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175) Signierung. Diese werden noch erforscht und prototypisiert.
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Lesen Sie über KZG und vertrauenswürdige Setups</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> Lesen Sie über KZG und vertrauenswürdige Setups</ButtonLink>
 
 ## Einfacheres und effizienteres Ethereum {#simpler-more-efficient-ethereum}
 

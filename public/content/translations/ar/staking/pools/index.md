@@ -4,7 +4,7 @@ description: نظرة عامة على كيفية بدء مراهنة عملة ET
 lang: ar
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-pool.png
+image: /images/staking/leslie-pool.png
 alt: يسبح ليزلي فرس النهر في حمام السباحة.
 sidebarDepth: 2
 summaryPoints:
@@ -68,7 +68,7 @@ summaryPoints:
 
 وكحل بديل، تسمح بعض التجمعات التي تستخدم رموز مميزة للمراهنة وفقًا لمعيار ERC-20 لمستخدميها بتداول هذه الرموز المميزة في السوق المفتوحة، وتسمح لهم ببيع موضع المراهنة الخاص بهم، بشكلٍ يؤدي إلى انسحابهم من عملية المراهنة دون إزالة عملة ETH من عقد المراهنة.
 
-<ButtonLink to="/staking/withdrawals/">مزيد من المعلومات حول عمليات السحب المتعلقة بالمراهنات</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">مزيد من المعلومات حول عمليات السحب المتعلقة بالمراهنات</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="هل هذا مختلف عن المراهنة باستخدام منصة التبادل التي أستخدمها؟">

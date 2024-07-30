@@ -4,7 +4,7 @@ description: Un aperçu de la façon de commencer à miser votre ETH de manière
 lang: fr
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-solo.png
+image: /images/staking/leslie-solo.png
 alt: Leslie le rhinocéros sur sa puce d'ordinateur.
 sidebarDepth: 2
 summaryPoints:
@@ -190,7 +190,7 @@ Une fois que les identifiants de retrait sont définis, les paiements de récomp
 
 Pour déverrouiller et recevoir la totalité de votre solde, vous devez également terminer le processus de sortie de votre validateur.
 
-<ButtonLink to="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink>
 </ExpandableCard>
 
 ## Complément d'information {#further-reading}
@@ -202,3 +202,5 @@ Pour déverrouiller et recevoir la totalité de votre solde, vous devez égaleme
 - [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [Step by Step: How to join the Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
+
+<QuizWidget quizKey="solo-staking" />

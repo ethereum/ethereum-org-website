@@ -18,7 +18,7 @@ lang: zh
 
 工作量证明需要在挖矿过程中消耗大量的电力，因此能耗要高得多。 而权益证明只需要非常少量的能量 - 以太坊验证者甚至可以在树莓派等低功耗设备上运行。 以太坊的权益证明机制被认为比工作量证明机制更安全，因为攻击的代价更高，并且给攻击者造成的后果更严重。
 
-工作量证明与权益证明是一个有争议的话题。 [Vitalik Buterin 的博客](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work)以及 Justin Drake 与 Lyn Alden 之间的辩论对这些论点做了很好的总结。
+工作量证明与权益证明是一个有争议的话题。 [Vitalik Buterin 的博客](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work)以及 Justin Drake 和 Lyn Alden 间的辩论很好地总结了各方论点。
 
 <YouTube id="1m12zgJ42dI" />
 
@@ -74,7 +74,7 @@ Casper 和 LMD_GHOST 的组合被称为 Gasper。
 
 ## 验证者是如何被选中的？ {#how-are-validators-selected}
 
-每个时隙都会以伪随机的方式选择一个验证者来提议区块，使用的算法被称为 RANDAO，它将区块提议者的哈希与一个随每个区块更新的种子混合在一起。 这个值用于在所有验证者中选择一个特定的验证者。 验证者的选择会提前四个时段固定。
+每个时隙都会以伪随机的方式选择一个验证者来提议区块，使用的算法被称为 RANDAO，它将区块提议者的哈希与一个随每个区块更新的种子混合在一起。 这个值用于在所有验证者中选择一个特定的验证者。 验证者的选择会提前两个时段固定。
 
 [关于如何选择验证者的更多信息](/developers/docs/consensus-mechanisms/pos/block-proposal)
 

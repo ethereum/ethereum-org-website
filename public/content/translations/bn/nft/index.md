@@ -5,7 +5,7 @@ lang: bn
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: হলোগ্রামের মাধ্যমে একটি Eth লোগো ডিসপ্লে করা হচ্ছে।.
 summaryPoint1: একটি ইথেরিয়াম-ভিত্তিক সম্পদ হিসেবে অনন্য কিছু উপস্থাপন করার একটি উপায়।
 summaryPoint2: NFT কন্টেন্ট নির্মাতাদের আগের চেয়ে আরও ক্ষমতা দিচ্ছে।
@@ -78,7 +78,7 @@ ethereum.org-এ, NFT ব্যবহার করা হয় তা দেখ
 
 NFT-এর সাথে সম্পর্কিত নিরাপত্তা সমস্যাগুলি প্রায়শই ফিশিং স্ক্যাম, স্মার্ট কন্ট্র্যাক্টের দুর্বলতা বা ব্যবহারকারীর ত্রুটিগুলির সাথে সম্পর্কিত (যেমন অসাবধানতাবশত ব্যক্তিগত কীগুলি প্রকাশ করা), যা NFT মালিকদের জন্য ভাল ওয়ালেটের নিরাপত্তাকে গুরুত্বপূর্ণ করে তোলে।
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   নিরাপত্তা সম্পর্কে আরো
 </ButtonLink>
 

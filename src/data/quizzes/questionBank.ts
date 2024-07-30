@@ -421,7 +421,7 @@ const questionBank = {
         explanation: "d002-d-explanation",
       },
     ],
-    correctAnswerId: "d002-c",
+    correctAnswerId: "d002-d",
   },
   d003: {
     prompt: "d003-prompt",
@@ -886,6 +886,137 @@ const questionBank = {
       },
     ],
     correctAnswerId: "h005-b",
+  },
+  // DAOs
+  i001: {
+    prompt: "i001-prompt",
+    answers: [
+      {
+        id: "i001-a",
+        label: "i001-a-label",
+        explanation: "i001-a-explanation",
+      },
+      {
+        id: "i001-b",
+        label: "i001-b-label",
+        explanation: "i001-b-explanation",
+      },
+      {
+        id: "i001-c",
+        label: "i001-c-label",
+        explanation: "i001-c-explanation",
+      },
+      {
+        id: "i001-d",
+        label: "i001-d-label",
+        explanation: "i001-d-explanation",
+      },
+    ],
+    correctAnswerId: "i001-d",
+  },
+  i002: {
+    prompt: "i002-prompt",
+    answers: [
+      {
+        id: "i002-a",
+        label: "i002-a-label",
+        explanation: "i002-a-explanation",
+      },
+      {
+        id: "i002-b",
+        label: "i002-b-label",
+        explanation: "i002-b-explanation",
+      },
+      {
+        id: "i002-c",
+        label: "i002-c-label",
+        explanation: "i002-c-explanation",
+      },
+      {
+        id: "i002-d",
+        label: "i002-d-label",
+        explanation: "i002-d-explanation",
+      },
+    ],
+    correctAnswerId: "i002-d",
+  },
+  i003: {
+    prompt: "i003-prompt",
+    answers: [
+      {
+        id: "i003-a",
+        label: "i003-a-label",
+        explanation: "i003-a-explanation",
+      },
+      {
+        id: "i003-b",
+        label: "i003-b-label",
+        explanation: "i003-b-explanation",
+      },
+      {
+        id: "i003-c",
+        label: "i003-c-label",
+        explanation: "i003-c-explanation",
+      },
+      {
+        id: "i003-d",
+        label: "i003-d-label",
+        explanation: "i003-d-explanation",
+      },
+    ],
+    correctAnswerId: "i003-b",
+  },
+  i004: {
+    prompt: "i004-prompt",
+    answers: [
+      {
+        id: "i004-a",
+        label: "i004-a-label",
+        explanation: "i004-a-explanation",
+      },
+      {
+        id: "i004-b",
+        label: "i004-b-label",
+        explanation: "i004-b-explanation",
+      },
+      {
+        id: "i004-c",
+        label: "i004-c-label",
+        explanation: "i004-c-explanation",
+      },
+      {
+        id: "i004-d",
+        label: "i004-d-label",
+        explanation: "i004-d-explanation",
+      },
+    ],
+    correctAnswerId: "i004-c",
+  },
+  i005: {
+    prompt: "i005-prompt",
+    answers: [
+      {
+        id: "i005-a",
+        label: "i005-a-label",
+        explanation: "i005-a-explanation",
+      },
+      {
+        id: "i005-b",
+        label: "i005-b-label",
+        explanation: "i005-b-explanation",
+      },
+      {
+        id: "i005-c",
+        label: "i005-c-label",
+        explanation: "i005-c-explanation",
+      },
+      {
+        id: "i005-d",
+        label: "i005-d-label",
+        explanation: "i005-d-explanation",
+      },
+    ],
+    correctAnswerId: "i005-d",
   },
   // Solo staking
   j001: {

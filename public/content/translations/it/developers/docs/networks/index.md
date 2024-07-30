@@ -20,9 +20,9 @@ Le reti pubbliche sono accessibili da chiunque nel mondo abbia una connessione i
 
 La rete principale è la blockchain di produzione Ethereum pubblica primaria, dove le transazioni con valore reale vengono eseguite sul libro mastro distribuito.
 
-Quando per persone e scambi si parla di prezzi in ETH, si parla di ETH della rete principale.
+Quando le persone e le piattaforme centralizzate parlano dei prezzi di ETH, essi parlano di ETH della rete principale.
 
-### Rete di prova di Ethereum {#ethereum-testnets}
+### Reti di prova di Ethereum {#ethereum-testnets}
 
 Oltre alla rete principale, sono disponibili reti di prova pubbliche. Queste, sono reti usate dagli sviluppatori di protocolli o contratti intelligenti per testare sia gli aggiornamenti del protocollo che i potenziali contratti intelligenti, in un ambiente simile a quello di produzione prima della distribuzione alla Rete Principale. In pratica, è analogo ad ambiente di produzione rispetto a server di staging.
 
@@ -50,6 +50,7 @@ Le due reti di prova pubbliche che gli sviluppatori di client stanno mantenendo 
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Faucet
 
@@ -59,11 +60,11 @@ Le due reti di prova pubbliche che gli sviluppatori di client stanno mantenendo 
 - [Faucet Coinbase Wallet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Faucet Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Faucet Infura Sepolia](https://www.infura.io/faucet)
-- [Faucet Sepolia di Chainstack](https://faucet.chainstack.com/sepolia-faucet)
+- [Faucet Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
 
 #### Goerli _(supporto a lungo termine)_ {#goerli}
 
-_Nota: [la rete di prova Goerli è obsoleta](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) e sarà sostituita da [Holesovice](https://github.com/eth-clients/holesovice) nel 2023. Sei pregato di considerare la migrazione delle tue applicazioni a Sepolia._
+_Nota: [la rete di prova Goerli è obsoleta ](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) e sarà sostituita da [Holesovice](https://github.com/eth-clients/holesovice) nel 2023. Sei pregato di considerare la migrazione delle tue applicazioni a Sepolia._
 
 Goerli è una rete di prova per testare la convalida e lo staking. La rete Goerli è aperta per gli utenti che vogliono eseguire un validatore della rete di prova. Gli staker che desiderano testare gli aggiornamenti del protocollo prima che siano distribuiti sulla rete principale dovrebbero quindi utilizzare Goerli.
 
@@ -76,6 +77,7 @@ Goerli è una rete di prova per testare la convalida e lo staking. La rete Goerl
 - [Sito web](https://goerli.net/)
 - [GitHub](https://github.com/eth-clients/goerli)
 - [Etherscan](https://goerli.etherscan.io)
+- [Blockscout](https://eth-goerli.blockscout.com/)
 
 ##### Faucet
 
@@ -111,6 +113,14 @@ Una rete di prova per [Optimism](https://www.optimism.io/).
 - [Faucet Paradigm](https://faucet.paradigm.xyz/)
 - [Faucet Coinbase Wallet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
+#### Starknet Goerli {#starknet-goerli}
+
+Una rete di prova per [Starknet](https://www.starknet.io).
+
+##### Faucet
+
+- [Faucet di Starknet](https://faucet.goerli.starknet.io)
+
 ## Reti private {#private-networks}
 
 Una rete Ethereum è una rete privata se i relativi nodi non sono connessi a una rete pubblica (ossia Rete principale o una rete di prova). In questo contesto, privato significa solo riservato o isolato, e non protetto o sicuro.
@@ -129,7 +139,7 @@ Se una rete Ethereum pubblica è come la rete Internet pubblica, una rete di con
 
 ## Strumenti correlati {#related-tools}
 
-- Elenco di [Chainlist](https://chainlist.org/) _ di reti EVM per connettere portafogli e fornitori all'ID della Catena e ID di Rete appropriati._
+- [Chainlist](https://chainlist.org/) _Elenco di reti EVM per connettere portafogli e fornitori all'ID della Catena e ID di Rete appropriati._
 - [Catene basate su EVM](https://github.com/ethereum-lists/chains) _Repository di GitHub di metadati della catena che alimentano Chainlist._
 
 ## Letture consigliate {#further-reading}

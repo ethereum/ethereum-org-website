@@ -5,7 +5,7 @@ lang: fi
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2
-image: /infrastructure_transparent.png
+image: /images/infrastructure_transparent.png
 alt: Eth-logo hologrammina heijastettuna.
 summaryPoint1: Tapa esittää mitä tahansa ainutlaatuista digitaalisena Ethereum-omaisuuseränä.
 summaryPoint2: NFT:t antavat valtaa sisällöntuottajille ennen näkemättömällä tavalla.
@@ -169,7 +169,7 @@ Kun sisältöä myydään, ansainta ohjautuu suoraan luojalle. Jos uusi sisäll�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tutki, osta tai luo omia NFT-toteutuksia</div>
-  <ButtonLink to="/dapps/?category=collectibles">
+  <ButtonLink href="/dapps/?category=collectibles">
     Tutustu NFT-taiteeseen
   </ButtonLink>
 </InfoBanner>
@@ -202,7 +202,7 @@ Decentraland, virtuaalinen reality-peli, jossa NFTt edustavat tontteja tai kiint
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tutustu Ethereum-peleihin, joita NFTt boostaavat...</div>
-  <ButtonLink to="/dapps/?category=gaming">
+  <ButtonLink href="/dapps/?category=gaming">
     Tutki NFT-pelejä
   </ButtonLink>
 </InfoBanner>
@@ -335,7 +335,7 @@ Ethereumin turvallisuus syntyy hajautetusta sijoittamisesta siihen. Järjestelm�
 
 Turvallisuushaasteet, jotka liittyvät NFTeihin, ovat monesti kalasteluyrityksiä, älysopimuksen haavoittuvuuksia tai käyttäjien virheitä (kuten yksityisavaimen paljastaminen). Lompakkojen suojaus on keskeistä NFTen omistajille.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Lisää tietoturvasta ja suojauksesta
 </ButtonLink>
 

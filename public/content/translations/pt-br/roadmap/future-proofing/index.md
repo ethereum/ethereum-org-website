@@ -2,7 +2,7 @@
 title: Preparação do Ethereum para o futuro
 description: Essas melhorias consolidam o Ethereum como a camada de base resiliente e descentralizada para o futuro, seja ele qual for.
 lang: pt-br
-image: /roadmap/roadmap-future.png
+image: /images/roadmap/roadmap-future.png
 alt: "Planejamento Ethereum"
 template: roadmap
 ---
@@ -17,7 +17,7 @@ O desafio enfrentado pelos desenvolvedores do Ethereum é que o protocolo atual 
 
 Os [esquemas de compromisso "KZG"](/roadmap/danksharding/#what-is-kzg) utilizados em diversos lugares no Ethereum para gerar segredos criptográficos são conhecidos por serem vulneráveis ao quântico. Atualmente, isso é contornado por meio da utilização de "configurações confiáveis", em que muitos usuários geram uma aleatoriedade que não pode ser revertida por um computador quântico. Entretanto, a solução ideal seria simplesmente incorporar a criptografia quântica segura. Há duas abordagens principais que poderiam se tornar substitutos eficientes para o esquema BLS: assinatura [com base em STARK](https://hackmd.io/@vbuterin/stark_aggregation) e [em malha](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175). Essas abordagens ainda estão sendo pesquisadas e desenvolvidas.
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Leia sobre o KZG e as configurações confiáveis</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> Leia sobre o KZG e as configurações confiáveis</ButtonLink>
 
 ## Ethereum mais simples e mais eficiente {#simpler-more-efficient-ethereum}
 

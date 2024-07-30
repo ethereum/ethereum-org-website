@@ -4,7 +4,7 @@ description: نظرة عامة على كيفية بدء مع تجميع ETH
 lang: ar
 template: staking
 emoji: ":money_with_wings:"
-image: /staking/leslie-saas.png
+image: /images/staking/leslie-saas.png
 alt: يطوف ليزلي فرس النهر في السحاب.
 sidebarDepth: 2
 summaryPoints:
@@ -78,7 +78,7 @@ summaryPoints:
 
 بإمكان المدققين أيضًا أن الخروج كليًا من عملية المراهنة، ما يتيح لهم إمكانية سحب رصيد ETH المتبقي لهم. ستحصل الحسابات التي وفرت عنوان سحب للتنفيذ، وأنهت عملية الخروج، على رصيدها بالكامل على عنوان السحب الذي تم توفيرة خلال عملية توزيع المكافآت الأولى.
 
-<ButtonLink to="/staking/withdrawals/">مزيد من المعلومات حول عمليات السحب المتعلقة بالمراهنات</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">مزيد من المعلومات حول عمليات السحب المتعلقة بالمراهنات</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="ماذا يحدث في حال تم شطبي؟" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
