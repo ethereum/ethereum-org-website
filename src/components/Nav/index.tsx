@@ -65,7 +65,7 @@ const Nav = () => {
             {/* avoid rendering desktop Menu version on mobile */}
 
             {isClient && isDesktopFlag ? (
-              <Menu hideBelow="md" sections={linkSections} />
+              <Menu className="hidden md:block" sections={linkSections} />
             ) : (
               <Box />
             )}

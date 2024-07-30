@@ -139,7 +139,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 
   if (isHash) {
     return (
-      <NextLink
+      <a
         onClick={(e) => {
           e.stopPropagation()
           trackCustomEvent(
@@ -154,7 +154,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         {...commonProps}
       >
         {children}
-      </NextLink>
+      </a>
     )
   }
 
