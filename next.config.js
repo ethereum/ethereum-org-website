@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 const { withSentryConfig } = require("@sentry/nextjs")
-const webpack = require("webpack")
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
@@ -28,7 +27,7 @@ module.exports = (phase, { defaultConfig }) => {
   let nextConfig = {
     ...defaultConfig,
     reactStrictMode: true,
-    webpack: (config) => {
+    webpack: (config, { webpack }) => {
       config.module.rules.push({
         test: /\.ya?ml$/,
         use: "yaml-loader",
@@ -38,18 +37,19 @@ module.exports = (phase, { defaultConfig }) => {
         use: "@svgr/webpack",
       })
 
-      return config
-    },
-    plugins: [
       // Tree shake Sentry debug code
       // ref. https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/tree-shaking/#tree-shaking-with-nextjs
-      new webpack.DefinePlugin({
-        __SENTRY_DEBUG__: false,
-        __RRWEB_EXCLUDE_IFRAME__: true,
-        __RRWEB_EXCLUDE_SHADOW_DOM__: true,
-        __SENTRY_EXCLUDE_REPLAY_WORKER__: true,
-      }),
-    ],
+      config.plugins.push(
+        new webpack.DefinePlugin({
+          __SENTRY_DEBUG__: false,
+          __RRWEB_EXCLUDE_IFRAME__: true,
+          __RRWEB_EXCLUDE_SHADOW_DOM__: true,
+          __SENTRY_EXCLUDE_REPLAY_WORKER__: true,
+        })
+      )
+
+      return config
+    },
     i18n,
     trailingSlash: true,
     images: {
