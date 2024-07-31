@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 const { withSentryConfig } = require("@sentry/nextjs")
-const { DefinePlugin } = require("webpack")
+const webpack = require("webpack")
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: true,
+  enabled: process.env.ANALYZE === "true",
 })
 
 const { i18n } = require("./next-i18next.config")
@@ -38,15 +38,18 @@ module.exports = (phase, { defaultConfig }) => {
         use: "@svgr/webpack",
       })
 
-      config.plugins.push(
-        new DefinePlugin({
-          __SENTRY_DEBUG__: false,
-          __SENTRY_TRACING__: false,
-        })
-      )
-
       return config
     },
+    plugins: [
+      // Tree shake Sentry debug code
+      // ref. https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/tree-shaking/#tree-shaking-with-nextjs
+      new webpack.DefinePlugin({
+        __SENTRY_DEBUG__: false,
+        __RRWEB_EXCLUDE_IFRAME__: true,
+        __RRWEB_EXCLUDE_SHADOW_DOM__: true,
+        __SENTRY_EXCLUDE_REPLAY_WORKER__: true,
+      }),
+    ],
     i18n,
     trailingSlash: true,
     images: {
@@ -82,10 +85,13 @@ module.exports = (phase, { defaultConfig }) => {
 
   return withBundleAnalyzer(
     withSentryConfig(nextConfig, {
+      // TODO: temp config, update this to the correct org & project
       org: "ethereumorg-ow",
       project: "javascript-nextjs",
       authToken: process.env.SENTRY_AUTH_TOKEN,
-      silent: false,
+      silent: true,
+      disableLogger: true,
+      release: `${process.env.BUILD_ID}_${process.env.REVIEW_ID}`,
     })
   )
 }
