@@ -55,6 +55,12 @@ module.exports = (phase, { defaultConfig }) => {
     images: {
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
     },
+    env: {
+      NEXT_PUBLIC_CONTEXT: process.env.CONTEXT,
+    },
+    experimental: {
+      instrumentationHook: true,
+    },
   }
 
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
@@ -89,9 +95,9 @@ module.exports = (phase, { defaultConfig }) => {
       org: "ethereumorg-ow",
       project: "javascript-nextjs",
       authToken: process.env.SENTRY_AUTH_TOKEN,
-      silent: true,
-      disableLogger: true,
       release: `${process.env.BUILD_ID}_${process.env.REVIEW_ID}`,
+      disableLogger: true,
+      silent: true,
     })
   )
 }
