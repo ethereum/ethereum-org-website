@@ -48,20 +48,19 @@ const EventCard = ({
     <Box
       className={className}
       position="relative"
-      marginTop={{ base: "0", md: 0 }}
+      mt="0"
       _before={clearStyles}
       _after={clearStyles}
-      width={{ base: "100%", md: "100%", xl: "100%" }}
-      height={"100%"}
+      w="full"
+      h="full"
     >
       <Flex
-        borderRadius="sm"
         border="1px solid"
         borderColor="lightBorder"
         height={"100%"}
         direction={"column"}
         justifyContent={"space-between"}
-        rounded={"4px"}
+        rounded="base"
       >
         <Box>
           <Flex
@@ -88,9 +87,9 @@ const EventCard = ({
             boxShadow="rgb(0 0 0 / 10%) 0px -1px 0px inset;"
           >
             <Image
-              src={imageUrl ? imageUrl : "/images/events/event-placeholder.png"}
+              src={imageUrl || "/images/events/event-placeholder.png"}
               alt={title}
-              width={{ base: "100%", sm: "100%" }}
+              w="full"
               height={{ base: "224px", xl: "124px" }}
               objectFit={"cover"}
               fallbackSrc="/images/events/event-placeholder.png"
@@ -102,7 +101,6 @@ const EventCard = ({
                 as="h3"
                 fontSize={{ base: "md", md: "2xl" }}
                 marginTop={0}
-                fontWeight="semibold"
                 lineHeight={1.4}
               >
                 {title}
@@ -112,7 +110,7 @@ const EventCard = ({
               </Text>
             </Box>
             <Box>
-              <Text fontSize={{ base: "sm", md: "sm" }}>{description}</Text>
+              <Text fontSize="sm">{description}</Text>
             </Box>
           </Box>
         </Box>
