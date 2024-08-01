@@ -63,7 +63,7 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Μάθετε περισσότερα για τα NFT</div>
-  <ButtonLink href="/nft/">
+  <ButtonLink to="/nft/">
     Περισσότερα για τα NFT
   </ButtonLink>
 </InfoBanner>
@@ -88,7 +88,7 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Μάθετε περισσότερα για τους DAO</div>
-  <ButtonLink href="/dao/">
+  <ButtonLink to="/dao/">
     Περισσότερα για τους DAO
   </ButtonLink>
 </InfoBanner>
@@ -103,7 +103,7 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 Η υποδομή πληρωμών του Web2 βασίζεται σε τράπεζες και διαχειριστές πληρωμών, εξαιρώντας τα άτομα χωρίς τραπεζικούς λογαριασμούς ή εκείνων που τυχαίνει να ζουν σε διαφορετική χώρα. Το Web3 χρησιμοποιεί ψηφιακά στοιχεία όπως το [ETH](/glossary/#ether) για την αποστολή χρημάτων απευθείας στο πρόγραμμα περιήγησης και δεν απαιτεί κάποιο αξιόπιστο τρίτο μέρος.
 
-<ButtonLink href="/eth/">
+<ButtonLink to="/eth/">
   Περισσότερα για το ETH
 </ButtonLink>
 
@@ -147,7 +147,7 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 Το Web3 δεν είναι αυστηρά καθορισμένο. Διάφοροι συμμετέχοντες της κοινότητας έχουν διαφορετικές απόψεις για αυτό. Δείτε παρακάτω μερικές:
 
-- [Τι είναι το Web3; Το Αποκεντρωμένο Διαδίκτυο του Μέλλοντος Περιγράφηκε](https://www.freecodecamp.org/news/what-is-web3/) - _Nader Dabit_
+- [Τι είναι το Web3; Το Αποκεντρωμένο Διαδίκτυο του Μέλλοντος Περιγράφηκε ](https://www.freecodecamp.org/news/what-is-web3/) - _Nader Dabit_
 - [Κατανοώντας το Web3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) - _Josh Stark_
 - [Γιατί το Web3 έχει σημασία](https://future.a16z.com/why-web3-matters/) - _ Chris Dixon_
 - [Γιατί η αποκέντρωσης έχει σημασία](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _ Chris Dixon_

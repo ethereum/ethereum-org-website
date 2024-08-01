@@ -28,12 +28,12 @@ lang: el
 - [Balancer](https://grants.balancer.community/) – _[Balancer](https://balancer.fi/) χρηματοδότηση οικοσυστήματος_
 - [Πρόγραμμα Επιχορηγήσεων Chainlink](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) κοινοτικές επιχορηγήσεις_
 - [Πρόγραμμα Επιχορηγήσεων Decentraland](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) DAO Metaverse_
-- [Lido Ecosystem Grants Organization (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/) χρηματοοικονομικό οικοσύστημα_
+- [Lido Ecosystem Grants Organization (LEGO)](https://lido.fi/lego) – _[Lido](https://lido. fi/) χρηματοοικονομικό οικοσύστημα_
 - [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) employee-led grants DAO_
 - [Πρόγραμμα επιχορήγησης δικτύου SKALE](https://skale.space/developers#grants) - _[SKALE](https://skale.space/)δίκτυο οικοσυστήματος_
 - [Ίδρυμα Swarm πρόγραμμα χρηματοδοτήσεων](https://my.ethswarm.org/grants) - _Οικοσύστημα [Ιδρύματος Swarm](https://www.ethswarm.org/)_
 - [The Graph](https://thegraph.com/ecosystem/grants/) – _Οικοσύστημα [The Graph](https://thegraph.com/)_
-- [Πρόγραμμα χρηματοδοτήσεων Uniswap](https://www.uniswapfoundation.org/grants) – _Κοινότητα [Uniswap](https://uniswap.org/)_
+- [Πρόγραμμα χρηματοδοτήσεων Uniswap](https://www.uniswapfoundation.org/approach) – _Κοινότητα [Uniswap](https://uniswap.org/)_
 
 ## Τετραγωνική χρηματοδότηση {#quadratic-funding}
 

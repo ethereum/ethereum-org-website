@@ -2,7 +2,7 @@
 title: Η αποθήκευση κεφαλαίου ως υπηρεσία
 description: Μια επισκόπηση πώς να ξεκινήσετε με αποθήκευση ETH σε δεξαμενή
 lang: el
-template: staking
+template: staking (αποθήκευση)
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png
 alt: Η Leslie ο ρινόκερος πετάει στα σύννεφα.
@@ -78,7 +78,7 @@ summaryPoints:
 
 Οι επικυρωτές μπορούν επίσης να εξέλθουν πλήρως από την επικύρωση, όπου θα ξεκλειδωθεί το υπόλοιπο ETH τους για ανάληψη. Οι λογαριασμοί που έχουν υποβάλλει διεύθυνση ανάληψης εκτέλεσης και έχουν ολοκληρώσει τη διαδικασία εξόδου θα λάβουν ολόκληρο το υπόλοιπό τους στη διεύθυνση ανάληψης που παρέχεται κατά την επόμενη σάρωση του ελέγχου επικύρωσης.
 
-<ButtonLink href="/staking/withdrawals/">Περισσότερα για την ανάληψη αποθηκευμένων κεφαλαίων</ButtonLink>
+<ButtonLink to="/staking/withdrawals/">Περισσότερα για την ανάληψη αποθηκευμένων κεφαλαίων</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Τι συμβαίνει εάν επιβληθεί η ποινή της απόρριψης;" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

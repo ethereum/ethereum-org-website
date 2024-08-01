@@ -12,7 +12,7 @@ buttons:
     toId: ποιές-αλλαγές-έρχονται
   - 
     label: Προηγούμενες αναβαθμίσεις
-    href: /history/
+    to: /history/
     variant: περίγραμμα
 ---
 
@@ -26,28 +26,28 @@ buttons:
 
 <CardGrid>
   <RoadmapActionCard
-    href="/roadmap/scaling"
+    to="/roadmap/scaling"
     title="Φθηνότερες συναλλαγές"
     image="scaling"
     description="Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems."
     buttonText="More on reducing fees"
   />
   <RoadmapActionCard
-    href="/roadmap/security"
+    to="/roadmap/security"
     title="Επιπλέον ασφάλεια"
     image="security"
     description="Ethereum is already very secure but it can be made even stronger, ready to withstand all kinds of attack far into the future."
     buttonText="More on security"
   />
   <RoadmapActionCard
-    href="/roadmap/user-experience"
+    to="/roadmap/user-experience"
     title="Καλύτερη εμπειρία χρήστη"
     image="userExperience"
     description="More support for smart contract wallets and light-weight nodes will make using Ethereum simpler and safer."
     buttonText="More on user experience"
   />
   <RoadmapActionCard
-    href="/roadmap/future-proofing"
+    to="/roadmap/future-proofing"
     title="Πρόβλεψη για το μέλλον"
     image="futureProofing"
     description="Ethereum researchers and developers are solving tomorrow's problems today, readying the network for future generations."
