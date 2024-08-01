@@ -124,18 +124,17 @@
     --tooltip-shadow: rgba(0, 0, 0, 0.24);
     --switch-background: var(--gray-300);
     --hub-hero-content-bg: rgba(255, 255, 255, 0.8);
-    --bg-main-gradient: linear-gradient(
-      102.7deg,
-      rgba(185, 185, 241, 0.2) 0%,
-      rgba(84, 132, 234, 0.2) 51.56%,
-      rgba(58, 142, 137, 0.2) 100%
-    );
+    --bg-main-gradient: linear-gradient(102.7deg,
+        rgba(185, 185, 241, 0.2) 0%,
+        rgba(84, 132, 234, 0.2) 51.56%,
+        rgba(58, 142, 137, 0.2) 100%);
     --table-box-shadow: 0 14px 66px rgba(0, 0, 0, 0.07),
       0 10px 17px rgba(0, 0, 0, 0.03), 0 4px 7px rgba(0, 0, 0, 0.05);
     --table-item-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 
     --primary-highlight-gradient: linear-gradient(180deg, rgba(167, 121, 226, 0.05) 0%, rgba(167, 121, 226, 0.00) 100%);
-    --accept-gradient: linear-gradient(0deg, rgba(185, 185, 241, 0.24) 0%, rgba(84, 132, 234, 0.08) 100%);
+    --accent-gradient-a: linear-gradient(0deg, rgba(185, 185, 241, 0.24) 0%, rgba(84, 132, 234, 0.08) 100%);
+    --accent-gradient-b: radial-gradient(127.67% 82.36% at 50% -30.36%, rgba(201, 179, 245, 0.16)0%, rgba(201, 179, 245, 0.48)33%, rgba(136, 170, 241, 0.16)66%, rgba(255, 255, 255, 0.00)100%)
   }
 
   [data-theme="dark"] {
@@ -181,12 +180,10 @@
     --tooltip-shadow: rgba(255, 255, 255, 0.24);
     --switch-background: rgba(255, 255, 255, 0.24);
     --hub-hero-content-bg: rgba(34, 34, 34, 0.8);
-    --bg-main-gradient: linear-gradient(
-      102.7deg,
-      rgba(185, 185, 241, 0.2) 0%,
-      rgba(84, 132, 234, 0.2) 51.56%,
-      rgba(58, 142, 137, 0.2) 100%
-    );
+    --bg-main-gradient: linear-gradient(102.7deg,
+        rgba(185, 185, 241, 0.2) 0%,
+        rgba(84, 132, 234, 0.2) 51.56%,
+        rgba(58, 142, 137, 0.2) 100%);
     --table-box-shadow: 0 14px 66px hsla(0, 0%, 96.1%, 0.07),
       0 10px 17px hsla(0, 0%, 96.1%, 0.03), 0 4px 7px hsla(0, 0%, 96.1%, 0.05);
     --table-item-box-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.1);
@@ -249,8 +246,8 @@
   li {
     margin-bottom: calc(1.45rem / 2);
 
-    & > ol,
-    & > ul {
+    &>ol,
+    &>ul {
       margin-inline-start: 1.45rem;
       margin-block: calc(1.45rem / 2);
       margin-top: calc(1.45rem / 2);
@@ -260,7 +257,7 @@
       @apply last:mb-0;
     }
 
-    & > p {
+    &>p {
       margin-bottom: calc(1.45rem / 2);
     }
   }

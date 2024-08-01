@@ -3,7 +3,7 @@ import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { FaDiscord, FaGithub } from "react-icons/fa"
+import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 import { MdChevronRight } from "react-icons/md"
 import { Flex, Skeleton } from "@chakra-ui/react"
 
@@ -20,6 +20,7 @@ import BlockHeap from "@/components/icons/block-heap.svg"
 import Calendar from "@/components/icons/calendar.svg"
 import EthTokenIcon from "@/components/icons/eth-token.svg"
 import PickWalletIcon from "@/components/icons/eth-wallet.svg"
+import Layer2Icon from "@/components/icons/layer-2.svg"
 import ChooseNetworkIcon from "@/components/icons/network-layers.svg"
 import TryAppsIcon from "@/components/icons/phone-homescreen.svg"
 import RoadmapSign from "@/components/icons/roadmap-sign.svg"
@@ -219,10 +220,7 @@ const HomePage = ({
     },
   ]
 
-  const comingSoon = [
-    { title: "Ethereum news", tag: "" },
-    { title: "Join ethereum.org", tag: "" },
-  ]
+  const comingSoon = [{ title: "Ethereum news", tag: "" }]
 
   const upcomingEvents = events
     .sort(
@@ -438,7 +436,7 @@ const HomePage = ({
                 key={title}
                 className={cn(
                   "flex flex-col justify-between gap-6 border-t px-6 py-4 xl:flex-row",
-                  idx === 0 && "bg-accent-gradient"
+                  idx === 0 && "bg-accent-gradient-a"
                 )}
               >
                 <div
@@ -479,6 +477,11 @@ const HomePage = ({
           {/* TODO: News sub-section */}
         </HomeSection>
 
+        {/* Temporary coming soon section template */}
+        {comingSoon.map((item) => (
+          <HomeSection {...item} key={item.title} />
+        ))}
+
         <HomeSection tag="" title="Ethereum events">
           <p>We have many community events scheduled around the globe</p>
           <div className="mt-4 lg:mt-16">
@@ -517,7 +520,7 @@ const HomePage = ({
                               className="max-w-full object-cover object-center"
                             />
                           ) : (
-                            <EventFallback className="max-w-full object-cover object-center text-body" />
+                            <EventFallback className="w-full object-cover text-body" />
                           )}
                         </CardHeader>
                         <CardContent className="space-y-8 p-2">
@@ -556,10 +559,62 @@ const HomePage = ({
             </ButtonLink>
           </div>
         </HomeSection>
-        {/* Temporary coming soon section template */}
-        {comingSoon.map((item) => (
-          <HomeSection {...item} key={item.title} />
-        ))}
+
+        <div className="flex flex-col gap-y-8 rounded-4xl border border-b-0 border-black/[0.04] bg-accent-gradient-b px-4 py-8">
+          <div className="flex flex-col space-y-4 text-center">
+            <h2>Join ethereum.org</h2>
+            <p>
+              This website is open source with hundreds of community
+              contributors. You can propose edits to any of the content on this
+              site.
+            </p>
+          </div>
+          {/* TODO: Fix icon sizing, fix button/icon layout on mobile */}
+          <div className="max-w-105 mx-auto grid grid-cols-1 gap-16 md:grid-cols-2 lg:max-w-screen-md">
+            <SvgButtonLink
+              Svg={Layer2Icon}
+              label="How to contribute"
+              href="/contributing/"
+              className="text-accent-c"
+            >
+              <p className="text-body">
+                Find out all the different ways you can help ethereum.org grow
+                and be better.
+              </p>
+            </SvgButtonLink>
+            <SvgButtonLink
+              Svg={FaGithub}
+              label="GitHub"
+              href={GITHUB_REPO_URL}
+              className="text-accent-a"
+            >
+              <p className="text-body">
+                Contribute to code, content, articles etc.
+              </p>
+            </SvgButtonLink>
+            <SvgButtonLink
+              Svg={FaDiscord}
+              label="Discord"
+              href="/discord/"
+              className="text-primary"
+            >
+              <p className="text-body">
+                To ask questions, coordinate contribution and join community
+                calls.
+              </p>
+            </SvgButtonLink>
+            <SvgButtonLink
+              Svg={FaTwitter}
+              label="Twitter"
+              href="https://x.com/EthDotOrg"
+              className="text-accent-b"
+            >
+              <p className="text-body">
+                To keep up with our updates and important news.
+              </p>
+            </SvgButtonLink>
+          </div>
+        </div>
       </div>
     </Flex>
   )

@@ -90,7 +90,8 @@ const config = {
       backgroundImage: {
         "bg-main-gradient": "var(--bg-main-gradient)",
         "primary-highlight-gradient": "var(--primary-highlight-gradient)",
-        "accent-gradient": "var(--accept-gradient)",
+        "accent-gradient-a": "var(--accent-gradient-a)",
+        "accent-gradient-b": "var(--accent-gradient-b)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
