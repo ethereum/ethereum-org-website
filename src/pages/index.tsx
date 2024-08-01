@@ -312,10 +312,7 @@ const HomePage = ({
                 ))}
               </div>
               <div className="flex justify-center py-8 lg:justify-start">
-                <ButtonLink
-                  linkProps={{ href: "/learn/" }}
-                  className="w-fit text-lg"
-                >
+                <ButtonLink linkProps={{ href: "/learn/" }} size="lg">
                   Other topics <MdChevronRight />
                 </ButtonLink>
               </div>
@@ -340,13 +337,15 @@ const HomePage = ({
           <div className="flex flex-col justify-center gap-6 py-8 md:flex-row lg:justify-start">
             <ButtonLink
               linkProps={{ href: "/developers/" }}
-              className="w-fit text-lg"
+              size="lg"
+              className="w-fit"
             >
               Builder&apos;s Portal <MdChevronRight />
             </ButtonLink>
             <ButtonLink
               linkProps={{ href: "/developers/docs/" }}
-              className="w-fit text-lg"
+              size="lg"
+              className="w-fit"
               variant="outline"
             >
               Documentation
@@ -411,25 +410,24 @@ const HomePage = ({
               Ethereum.org community is the perfect place to start and learn.
             </p>
           </div>
-          <div className="BUTTON_GROUP flex flex-wrap gap-3 py-8">
+          <div className="flex flex-wrap gap-3 py-8">
             <ButtonLink
               linkProps={{ href: "/discord/", hideArrow: true }}
-              className="w-fit text-lg"
               variant="outline"
+              size="lg"
+              className="px-5"
             >
               <FaDiscord />
             </ButtonLink>
             <ButtonLink
               linkProps={{ href: GITHUB_REPO_URL, hideArrow: true }}
-              className="w-fit text-lg"
               variant="outline"
+              size="lg"
+              className="px-5"
             >
               <FaGithub />
             </ButtonLink>
-            <ButtonLink
-              linkProps={{ href: "/community/" }}
-              className="w-fit text-lg"
-            >
+            <ButtonLink linkProps={{ href: "/community/" }} size="lg">
               More on ethereum.org <MdChevronRight />
             </ButtonLink>
           </div>
@@ -551,7 +549,8 @@ const HomePage = ({
           <div className="flex justify-center py-8 lg:justify-start">
             <ButtonLink
               linkProps={{ href: "/community/events/" }}
-              className="mx-auto text-lg"
+              size="lg"
+              className="mx-auto"
             >
               See all events <MdChevronRight />
             </ButtonLink>
