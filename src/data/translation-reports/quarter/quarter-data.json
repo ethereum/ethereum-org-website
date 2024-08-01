@@ -1,399 +1,461 @@
 [
   {
-    "username": "0xkaka",
-    "fullName": "0xkaka",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16257342/medium/0ade44df3e258fb79c65cf845b2cdf28_default.png",
-    "totalCosts": 58,
-    "langs": [
-      "Chinese Simplified"
-    ]
-  },
-  {
-    "username": "0xmike7",
-    "fullName": "0xmike7",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14897770/medium/48581e20c04cdfde4e05e0b73f80e7c5_default.png",
-    "totalCosts": 1115,
-    "langs": [
-      "Greek"
-    ]
-  },
-  {
-    "username": "ACO_km_linguist",
-    "fullName": "ACO_km_linguist",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15451522/medium/a535a722e0c011a9d54af4ae93dd0e3e_default.png",
-    "totalCosts": 2648,
-    "langs": [
-      "Khmer",
-      "Nepali"
-    ]
-  },
-  {
-    "username": "AIgs",
-    "fullName": "AIgs",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16214280/medium/011c9b71a999ad4486b3fa091e2fd5c4_default.png",
-    "totalCosts": 277,
-    "langs": [
-      "Turkish"
-    ]
-  },
-  {
-    "username": "Alpiren",
-    "fullName": "Alpiren",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16280946/medium/03d579e1eebac2974a7eb25b8945a049_default.png",
-    "totalCosts": 241,
-    "langs": [
-      "Turkish"
-    ]
-  },
-  {
-    "username": "Alunchic",
-    "fullName": "Alunchic",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16250414/medium/74a7da17c6b77e901f75efe40e8efeca_default.png",
-    "totalCosts": 279,
-    "langs": [
-      "Russian"
-    ]
-  },
-  {
-    "username": "Aof6775",
-    "fullName": "Aof6775",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16291662/medium/d1ceb2deacadcb1c33a31917ad9584c5_default.png",
-    "totalCosts": 8,
-    "langs": [
-      "Thai"
-    ]
-  },
-  {
-    "username": "Bamzy",
-    "fullName": "Bamzy",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16172046/medium/3fd248e99da87d2bfabb46c85d69e598_default.png",
-    "totalCosts": 67,
-    "langs": [
-      "Nigerian Pidgin"
-    ]
-  },
-  {
-    "username": "Blessing-Mba",
-    "fullName": "Blessing-Mba",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16183444/medium/a24a8b866a18a577e4186bfccdece60d_default.png",
-    "totalCosts": 129,
-    "langs": [
-      "Igbo"
-    ]
-  },
-  {
-    "username": "CHAROENPHONG",
-    "fullName": "CHAROENPHONG",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16267722/medium/0a5975b64aba1aa71a100cd2944a9548_default.png",
-    "totalCosts": 4,
-    "langs": [
-      "Swahili"
-    ]
-  },
-  {
-    "username": "DikkeMazda323",
-    "fullName": "DikkeMazda323",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14604578/medium/a1a82523c0a01b6fe5a7b887d2721295_default.png",
-    "totalCosts": 2,
-    "langs": [
-      "Dutch"
-    ]
-  },
-  {
-    "username": "Fame96",
-    "fullName": "Fame96",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16260452/medium/6841ac5419c20851d708fb3a73f739c0_default.png",
-    "totalCosts": 10,
-    "langs": [
-      "Norwegian"
-    ]
-  },
-  {
-    "username": "FloPi1",
-    "fullName": "FloPi1",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16183828/medium/f92232789d716c1700de865e36115c9a_default.png",
-    "totalCosts": 1,
-    "langs": [
-      "Hungarian"
-    ]
-  },
-  {
-    "username": "Gerald5652",
-    "fullName": "Gerald5652",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16298726/medium/eba3ba19eed739ab397cbb575b9f8bfd_default.png",
-    "totalCosts": 504,
-    "langs": [
-      "Yoruba"
-    ]
-  },
-  {
-    "username": "Haezam_6060",
-    "fullName": "Haezam_6060",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15872945/medium/3ec2dd680ab34c2527988f75843e4f98_default.png",
-    "totalCosts": 7,
+    "username": "AhmadRaashdy",
+    "fullName": "AhmadRaashdy",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16381862/medium/0621616cc5fac53b34711de472d9489a_default.png",
+    "totalCosts": 138,
     "langs": [
       "Persian"
     ]
   },
   {
-    "username": "Hasanfleih",
-    "fullName": "Hasanfleih",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16197178/medium/0aea948e76b4de5edc20633d6592a209.jpg",
-    "totalCosts": 2,
+    "username": "AlanisVale21",
+    "fullName": "AlanisVale21",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16327348/medium/883808a0391fbf6c316ce145f482a7fe_default.png",
+    "totalCosts": 108,
     "langs": [
-      "Arabic"
+      "Spanish (Modern)"
+    ]
+  },
+  {
+    "username": "Andypsl8",
+    "fullName": "Andypsl8",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15236832/medium/59227a901011469470b992963cd20855.jpg",
+    "totalCosts": 1326,
+    "langs": [
+      "Chinese Simplified"
+    ]
+  },
+  {
+    "username": "Ashgartaheri",
+    "fullName": "Ashgartaheri",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16337464/medium/ed15f401c3cb769d420f128f1bba6107_default.png",
+    "totalCosts": 213,
+    "langs": [
+      "Persian"
+    ]
+  },
+  {
+    "username": "Builinh97",
+    "fullName": "Builinh97",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320572/medium/d9e6dbd06beb2c6958ed278e483073bd_default.png",
+    "totalCosts": 11,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "CROISSANT0011",
+    "fullName": "CROISSANT0011",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15585929/medium/497d8de2723f2e6c57594ca686885474.png",
+    "totalCosts": 22,
+    "langs": [
+      "French"
+    ]
+  },
+  {
+    "username": "Caquyn",
+    "fullName": "Caquyn",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320406/medium/07f11b6bb2becf64980b2f8d85525315_default.png",
+    "totalCosts": 27,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "CathyDing",
+    "fullName": "CathyDing",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16328010/medium/5b56e5d831cf8d6f4e7b66f68eccaaee.jpeg",
+    "totalCosts": 57,
+    "langs": [
+      "Chinese Simplified",
+      "Chinese Traditional",
+      "Armenian"
+    ]
+  },
+  {
+    "username": "Crptojunky",
+    "fullName": "Crptojunky",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16440927/medium/618c213ca242ce7fded029bebc0cec43.jpeg",
+    "totalCosts": 1093,
+    "langs": [
+      "Russian"
+    ]
+  },
+  {
+    "username": "Cuogg",
+    "fullName": "Cuogg",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320484/medium/bb6974794b1073d1416c1349bf00db4b_default.png",
+    "totalCosts": 24,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "Cuong17",
+    "fullName": "Cuong17",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320548/medium/c6368c8202f1f093c5f719b8e0830fd0_default.png",
+    "totalCosts": 63,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "DanhLee",
+    "fullName": "DanhLee",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317150/medium/836b5a651ce3b7eac47dfb722359d5fd_default.png",
+    "totalCosts": 331,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "Daria_Tkachuk",
+    "fullName": "Daria_Tkachuk",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16333692/medium/4676c1f74c0d600719a8fb19370f811f_default.png",
+    "totalCosts": 122,
+    "langs": [
+      "Ukrainian"
+    ]
+  },
+  {
+    "username": "Denismuliatama",
+    "fullName": "Denismuliatama",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16414328/medium/50c4b8887b1c5a993a6fe0bf0ff6d05b_default.png",
+    "totalCosts": 57,
+    "langs": [
+      "Indonesian"
+    ]
+  },
+  {
+    "username": "Dijerom",
+    "fullName": "Dijerom",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16417752/medium/9f83462db1ecedd9086316197e1fd4da.jpg",
+    "totalCosts": 973,
+    "langs": [
+      "Ukrainian"
+    ]
+  },
+  {
+    "username": "Dungtranghahaha",
+    "fullName": "Dungtranghahaha",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320472/medium/f62a085d70fafb5b91ec6dabcf222150_default.png",
+    "totalCosts": 176,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "EzigboOmenana",
+    "fullName": "EzigboOmenana",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13419366/medium/42b34d793b1d9d4ed3eab07e176102f9_default.png",
+    "totalCosts": 1,
+    "langs": [
+      "Igbo"
+    ]
+  },
+  {
+    "username": "Hamed.p",
+    "fullName": "Hamed.p",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317758/medium/d66097ecab88e31dedef312d28c56c37_default.png",
+    "totalCosts": 27,
+    "langs": [
+      "Persian"
     ]
   },
   {
     "username": "Herbie_23",
     "fullName": "Herbie_23",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13461670/medium/c9291075edb8582a7efe26fe983237e1.jpg",
-    "totalCosts": 9046,
+    "totalCosts": 14524,
     "langs": [
       "Italian"
     ]
   },
   {
-    "username": "Ibetc",
-    "fullName": "Ibetc",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16197332/medium/c0ffde2fbcde1357084a9458b294749d_default.png",
-    "totalCosts": 53,
+    "username": "JSM42",
+    "fullName": "JSM42",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16346092/medium/eebed7a74c0d70539dbf02f89f3a6ecc_default.png",
+    "totalCosts": 155,
     "langs": [
-      "Danish"
+      "Spanish (Modern)"
     ]
   },
   {
-    "username": "Itungbenga",
-    "fullName": "Itungbenga",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15967601/medium/32f675299bf73e2baee8c785c6965848_default.png",
-    "totalCosts": 1113,
+    "username": "Jagreeo",
+    "fullName": "Jagreeo",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16314224/medium/0fad6219d8adb4b8d6711ba0bb1b666f_default.png",
+    "totalCosts": 164,
     "langs": [
-      "Nigerian Pidgin"
-    ]
-  },
-  {
-    "username": "Janspin",
-    "fullName": "Janspin",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16243332/medium/a569e90278e0dbe8e3547c341b9d008a_default.png",
-    "totalCosts": 49,
-    "langs": [
-      "Czech"
+      "Arabic"
     ]
   },
   {
     "username": "Joanmacat",
     "fullName": "Joanmacat",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15344526/medium/9c82a079035424edd8b43ca59a8dcb3f.jpg",
-    "totalCosts": 2132,
+    "totalCosts": 1285,
     "langs": [
       "Catalan"
     ]
   },
   {
-    "username": "JunghooLee",
-    "fullName": "JunghooLee",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15732175/medium/59654c2402b1a8304d9d760e74a57365_default.png",
-    "totalCosts": 48,
+    "username": "JooGii28",
+    "fullName": "JooGii28",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16376400/medium/983e6f11f03f0989c736b2210a995dd0_default.png",
+    "totalCosts": 64,
     "langs": [
-      "Korean"
+      "Polish"
     ]
   },
   {
-    "username": "Kapma",
-    "fullName": "Kapma",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16193008/medium/608982c7f3c809709dfd1bb1ecf4437d_default.png",
-    "totalCosts": 0,
-    "langs": [
-      "Russian"
-    ]
-  },
-  {
-    "username": "Karydade",
-    "fullName": "Karydade",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16227238/medium/c7b847447cc3c8f51a507f762797209a_default.png",
-    "totalCosts": 113,
-    "langs": [
-      "Portuguese"
-    ]
-  },
-  {
-    "username": "Karym_GG",
-    "fullName": "Karym_GG",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15714091/medium/69afa2fb791e1be17640c54018cb4e2e_default.png",
-    "totalCosts": 769,
-    "langs": [
-      "Spanish (Modern)"
-    ]
-  },
-  {
-    "username": "Kubzel33",
-    "fullName": "Kubzel33",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16285868/medium/031257f59f1fc9cf278fbfdaa6a65aed_default.png",
-    "totalCosts": 61,
-    "langs": [
-      "Czech"
-    ]
-  },
-  {
-    "username": "Kuu_",
-    "fullName": "Kuu_",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16275116/medium/514d93e943fe6c7ac6a122f588df32f8_default.png",
-    "totalCosts": 9986,
-    "langs": [
-      "Filipino"
-    ]
-  },
-  {
-    "username": "LXNDR",
-    "fullName": "LXNDR",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16246464/medium/a0108140f8248fefdde2178348b7dec5_default.png",
+    "username": "Kris55",
+    "fullName": "Kris55",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16382056/medium/194f9de7d00e228788eef467851eaaac_default.png",
     "totalCosts": 4,
     "langs": [
-      "German"
+      "Khmer"
     ]
   },
   {
-    "username": "MatheusMd",
-    "fullName": "MatheusMd",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16256228/medium/a23e1d06fb3955836b583764d1e22697_default.png",
-    "totalCosts": 11,
+    "username": "Kristof180",
+    "fullName": "Kristof180",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16337866/medium/e2414974dcae5727592a7a994975d908_default.png",
+    "totalCosts": 12,
     "langs": [
-      "Portuguese"
+      "Dutch"
     ]
   },
   {
-    "username": "Miltzz13",
-    "fullName": "Miltzz13",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16297324/medium/af8aaaaebd7bcfdebd46d6d0eb34251f_default.png",
-    "totalCosts": 31,
+    "username": "LYQUOCTRUNG",
+    "fullName": "LYQUOCTRUNG",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16357536/medium/f0919a863f4d35179b3810b828fec270_default.png",
+    "totalCosts": 47,
     "langs": [
-      "Portuguese"
+      "Vietnamese"
     ]
   },
   {
-    "username": "Moamen_Abdullah",
-    "fullName": "Moamen_Abdullah",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16244680/medium/739d67b7439062aef54ead1fcd7381b0_default.png",
-    "totalCosts": 49,
+    "username": "M78heydari",
+    "fullName": "M78heydari",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16318344/medium/95d6d7746c917392d018551bd004597d_default.png",
+    "totalCosts": 6,
     "langs": [
-      "Arabic"
+      "Persian"
     ]
   },
   {
-    "username": "Mugur",
-    "fullName": "Mugur",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16189278/medium/988f17a913bbfed2c049c9523e09ba9c_default.png",
-    "totalCosts": 446,
-    "langs": [
-      "Romanian"
-    ]
-  },
-  {
-    "username": "Nyolega",
-    "fullName": "Nyolega",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16271696/medium/b604d1b6a7da0f71cf22ac505727b420_default.png",
-    "totalCosts": 17,
+    "username": "Maamouli",
+    "fullName": "Maamouli",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16312562/medium/00063cfeedc5cb7b64b5e432bcc24e48_default.png",
+    "totalCosts": 9984,
     "langs": [
       "Russian"
     ]
   },
   {
-    "username": "Omegaaa",
-    "fullName": "Omegaaa",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16275280/medium/2aefc9424db61914950a53b4b7e849b5_default.png",
-    "totalCosts": 9968,
+    "username": "Marcenkov666",
+    "fullName": "Marcenkov666",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16347452/medium/511acc90e60bcd0c53fd772841bc39cf_default.png",
+    "totalCosts": 3,
+    "langs": [
+      "Afrikaans"
+    ]
+  },
+  {
+    "username": "MoSquare",
+    "fullName": "MoSquare",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16393476/medium/ba17f4ddf9f6fb43cf2bda0f996fcc5e_default.png",
+    "totalCosts": 30,
+    "langs": [
+      "Indonesian"
+    ]
+  },
+  {
+    "username": "Mosayb65",
+    "fullName": "Mosayb65",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16363632/medium/e48c8906e2588024ca179fd920e7fc35_default.png",
+    "totalCosts": 44,
+    "langs": [
+      "Persian"
+    ]
+  },
+  {
+    "username": "N1k",
+    "fullName": "N1k",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16325182/medium/fe6dbf868fc1818b6bc64e2b0cf4367a_default.png",
+    "totalCosts": 225,
+    "langs": [
+      "Ukrainian"
+    ]
+  },
+  {
+    "username": "Nhung1234",
+    "fullName": "Nhung1234",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317318/medium/7d04959084adda8e6894ef38380ce951_default.png",
+    "totalCosts": 5,
     "langs": [
       "Vietnamese"
     ]
   },
   {
-    "username": "Paulniga",
-    "fullName": "Paulniga",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16231284/medium/46803873091303a09474a35212c4d048_default.png",
-    "totalCosts": 43,
+    "username": "Nineeeee",
+    "fullName": "Nineeeee",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16324840/medium/3307a2ac7aec88f18ee0532661813556_default.png",
+    "totalCosts": 373,
     "langs": [
-      "Nigerian Pidgin"
+      "Chinese Simplified"
     ]
   },
   {
-    "username": "Quyetkk1",
-    "fullName": "Quyetkk1",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16238618/medium/33da517d11b46732d1e55c4cece59243_default.png",
-    "totalCosts": 6,
+    "username": "Nocente1121",
+    "fullName": "Nocente1121",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16423202/medium/4c32ca1bb85555a189bbe3e47d4f86f7_default.png",
+    "totalCosts": 1,
+    "langs": [
+      "German"
+    ]
+  },
+  {
+    "username": "Nowhere",
+    "fullName": "Nowhere",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16326808/medium/80a24aa67cae20f3b4dd93bb445f6b80_default.png",
+    "totalCosts": 98,
+    "langs": [
+      "Tamil"
+    ]
+  },
+  {
+    "username": "Noz011",
+    "fullName": "Noz011",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320542/medium/0b0ee25bb1665f026f321506adb0a079_default.png",
+    "totalCosts": 20,
     "langs": [
       "Vietnamese"
     ]
   },
   {
-    "username": "Rise101",
-    "fullName": "Rise101",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16191582/medium/227a43e48b1efc223a413da42c733ab4_default.png",
-    "totalCosts": 1250,
+    "username": "PHUSIT",
+    "fullName": "PHUSIT",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16321006/medium/9bce7925507db469fd48f15817b7034a_default.png",
+    "totalCosts": 0,
     "langs": [
-      "German"
+      "French"
     ]
   },
   {
-    "username": "SSB_HR_Trans",
-    "fullName": "SSB_HR_Trans",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15427034/medium/c1c9ab53edcbf78210434ef0cc76e619_default.png",
-    "totalCosts": 4395,
+    "username": "Phuongthao123",
+    "fullName": "Phuongthao123",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317306/medium/344ccf5bf55d79c43db7ab779d5df046_default.png",
+    "totalCosts": 11,
     "langs": [
-      "Slovak",
-      "Croatian",
-      "Serbian (Latin)"
+      "Vietnamese"
     ]
   },
   {
-    "username": "Sagitario",
-    "fullName": "Sagitario",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15310784/medium/cfdc53d28658b94b21e45d51acc457c7.jpg",
-    "totalCosts": 1028,
+    "username": "RPTransworks",
+    "fullName": "RPTransworks",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16312358/medium/d317ee4733e76601bc308a1ba4d96ba9_default.png",
+    "totalCosts": 15,
     "langs": [
-      "German"
+      "Telugu"
+    ]
+  },
+  {
+    "username": "RealMeal",
+    "fullName": "RealMeal",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16314168/medium/00d0e511f36003702fe53060a743c97f_default.png",
+    "totalCosts": 4,
+    "langs": [
+      "Estonian"
+    ]
+  },
+  {
+    "username": "Ric7001",
+    "fullName": "Ric7001",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16445433/medium/af713863877acb097da987241ec19307_default.png",
+    "totalCosts": 90,
+    "langs": [
+      "Portuguese"
+    ]
+  },
+  {
+    "username": "Rule1",
+    "fullName": "Rule1",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16361080/medium/6fcd9b8dd7fbfdb0ad92a01563063b34.jpg",
+    "totalCosts": 0,
+    "langs": [
+      "Italian"
+    ]
+  },
+  {
+    "username": "RuslanaT",
+    "fullName": "RuslanaT",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15822519/medium/ed13ef516475fc3f78b40421ce4a8705_default.png",
+    "totalCosts": 952,
+    "langs": [
+      "Ukrainian"
+    ]
+  },
+  {
+    "username": "Saloh2596",
+    "fullName": "Saloh2596",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16327014/medium/dc8b01bf06d78a07c1cb22377443bd2e_default.png",
+    "totalCosts": 3,
+    "langs": [
+      "Uzbek"
     ]
   },
   {
     "username": "Satglow",
     "fullName": "Satglow",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15965461/medium/d0c82c3b7d4885069b13e4b4dc3f2963_default.png",
-    "totalCosts": 55491,
+    "totalCosts": 13794,
     "langs": [
       "Hungarian"
     ]
   },
   {
-    "username": "SnackpackWayne",
-    "fullName": "SnackpackWayne",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15868583/medium/4cdd5d237a9c8673ddbcc95bb035d0ee.png",
-    "totalCosts": 0,
+    "username": "Shervin2039",
+    "fullName": "Shervin2039",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16313260/medium/c170face978aae9d51cf5afe2eb71632_default.png",
+    "totalCosts": 220,
     "langs": [
-      "German"
+      "Persian"
     ]
   },
   {
-    "username": "Steveha8620",
-    "fullName": "Steveha8620",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16216914/medium/426102e05307e6d5a6fa6f0e6b3f1e46_default.png",
-    "totalCosts": 0,
+    "username": "Tamming",
+    "fullName": "Tamming",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317214/medium/2805b9ae631686136a1c4a2086bfed65_default.png",
+    "totalCosts": 363,
     "langs": [
-      "Arabic"
+      "Vietnamese"
     ]
   },
   {
-    "username": "THEABSARITH",
-    "fullName": "THEABSARITH",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16234326/medium/61f9c54fc8bf664b76d53507f1edb015_default.png",
-    "totalCosts": 20,
+    "username": "TanguyLD",
+    "fullName": "TanguyLD",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16361380/medium/e26b197e96c78605e47b09ad38d61b1a_default.png",
+    "totalCosts": 4313,
     "langs": [
-      "Khmer"
+      "French"
     ]
   },
   {
-    "username": "TheBat",
-    "fullName": "TheBat",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16211870/medium/76b612b3a17e36446813b2302ea176a5_default.png",
+    "username": "Teeraponza_1990220233",
+    "fullName": "Teeraponza_1990220233",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16324190/medium/ce64f314e1377e7d7650f295fea3e2d1_default.png",
     "totalCosts": 2,
+    "langs": [
+      "Thai"
+    ]
+  },
+  {
+    "username": "Timofey228",
+    "fullName": "Timofey228",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16346148/medium/717ab6132468bde8422bba9358c00035_default.png",
+    "totalCosts": 22,
     "langs": [
       "Russian"
     ]
@@ -402,351 +464,385 @@
     "username": "TinatiniKOBAKHIDZE",
     "fullName": "TinatiniKOBAKHIDZE",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16295640/medium/3be8bc02417d46882b29cc10505dc66f_default.png",
-    "totalCosts": 166,
+    "totalCosts": 5,
     "langs": [
       "Georgian"
     ]
   },
   {
-    "username": "TinsaeSeeker",
-    "fullName": "TinsaeSeeker",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14350296/medium/2ea922b045118f7415338dc97bce1da9.jpg",
-    "totalCosts": 632,
-    "langs": [
-      "Amharic"
-    ]
-  },
-  {
-    "username": "Tjmin",
-    "fullName": "Tjmin",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16201976/medium/e4c92be84c0c0b1f08c76ad801087656_default.png",
-    "totalCosts": 681,
-    "langs": [
-      "Chinese Simplified",
-      "Armenian"
-    ]
-  },
-  {
-    "username": "Tonongwa",
-    "fullName": "Tonongwa",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16187070/medium/d1848abb8f90244563a0d2346426e97f_default.png",
-    "totalCosts": 8,
-    "langs": [
-      "Thai"
-    ]
-  },
-  {
-    "username": "Totozao",
-    "fullName": "Totozao",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14843078/medium/4fdb35b37819b2de36280beeef727d1d_default.png",
-    "totalCosts": 97,
-    "langs": [
-      "Russian"
-    ]
-  },
-  {
-    "username": "TracySambu",
-    "fullName": "TracySambu",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16200928/medium/6514a5cc9d169119e8ca8e31b0368a34_default.png",
-    "totalCosts": 56,
-    "langs": [
-      "Swahili"
-    ]
-  },
-  {
-    "username": "Tradetoday",
-    "fullName": "Tradetoday",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16183902/medium/369406b6fa8df485258945eb9781c871_default.png",
-    "totalCosts": 1,
-    "langs": [
-      "German"
-    ]
-  },
-  {
-    "username": "Velcro_RU",
-    "fullName": "Velcro_RU",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16273026/medium/3a5e822145702ac3899ab0ba5ae1de19.jpg",
-    "totalCosts": 9959,
-    "langs": [
-      "Russian"
-    ]
-  },
-  {
-    "username": "Vorosha",
-    "fullName": "Vorosha",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16276134/medium/35e076208e5ad5652df5e78fbfaaf364_default.png",
-    "totalCosts": 291,
-    "langs": [
-      "Russian"
-    ]
-  },
-  {
-    "username": "Xojisoli6592",
-    "fullName": "Xojisoli6592",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16253888/medium/3931bc31c34f07665bb253cd4cda0f79_default.png",
-    "totalCosts": 14,
-    "langs": [
-      "Uzbek"
-    ]
-  },
-  {
-    "username": "Zaforivhen",
-    "fullName": "Zaforivhen",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16204826/medium/eac0af2b9d9a5d606a7de40c8bf0a050_default.png",
-    "totalCosts": 122,
-    "langs": [
-      "Spanish (Modern)"
-    ]
-  },
-  {
-    "username": "aaron61412",
-    "fullName": "aaron61412",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16261178/medium/8fa8c89ba8294b7235c84868e6c69dc7_default.png",
-    "totalCosts": 2,
-    "langs": [
-      "Chinese Traditional"
-    ]
-  },
-  {
-    "username": "airwand",
-    "fullName": "airwand",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16276914/medium/7820e6b5685a42af4ea9d03b9e461a0b_default.png",
-    "totalCosts": 10141,
+    "username": "TranThien",
+    "fullName": "TranThien",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317212/medium/0d98e2de7b169d170905851020d864c4_default.png",
+    "totalCosts": 133,
     "langs": [
       "Vietnamese"
     ]
   },
   {
-    "username": "almodaber966",
-    "fullName": "almodaber966",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16288342/medium/6d55aa5cf94fd28a40fb2a493cf58490_default.png",
-    "totalCosts": 143,
-    "langs": [
-      "Arabic"
-    ]
-  },
-  {
-    "username": "alsaire711",
-    "fullName": "alsaire711",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16003355/medium/51c4633e69fabebd1e2c599eaae01c8f_default.png",
-    "totalCosts": 9,
-    "langs": [
-      "Arabic"
-    ]
-  },
-  {
-    "username": "annuska2902",
-    "fullName": "annuska2902",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13440487/medium/673f0937920d5419069d2e9fb004e6f2.jpg",
-    "totalCosts": 189,
-    "langs": [
-      "Russian"
-    ]
-  },
-  {
-    "username": "baohung1410",
-    "fullName": "baohung1410",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16237274/medium/07c7de18010ceb335744b4a68ba9d52e_default.png",
-    "totalCosts": 10,
-    "langs": [
-      "Vietnamese"
-    ]
-  },
-  {
-    "username": "benjiriro",
-    "fullName": "benjiriro",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13917555/medium/304dd03df53b52c37cca54860ac922ed.jpeg",
-    "totalCosts": 8,
-    "langs": [
-      "Spanish (Modern)"
-    ]
-  },
-  {
-    "username": "boos2025",
-    "fullName": "boos2025",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16234354/medium/0ab85fffa99dd5b2add633a763723da4_default.png",
-    "totalCosts": 1,
-    "langs": [
-      "Arabic"
-    ]
-  },
-  {
-    "username": "brentspine",
-    "fullName": "brentspine",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14743258/medium/2d318d68dfc26d6e33dc92185225e37c.gif",
-    "totalCosts": 55,
-    "langs": [
-      "German"
-    ]
-  },
-  {
-    "username": "chloe.palmans",
-    "fullName": "chloe.palmans",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16263266/medium/eebf71166617b89d0313a2b81e457555_default.png",
-    "totalCosts": 27,
+    "username": "Ulka_A",
+    "fullName": "Ulka_A",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16420968/medium/f83219d2235f760a330d3e8cf2c97831_default.png",
+    "totalCosts": 36,
     "langs": [
       "French"
     ]
   },
   {
-    "username": "dearnadia",
-    "fullName": "dearnadia",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16285540/medium/26722ad3d5e6479fb92a143cc7836fd5.jpeg",
-    "totalCosts": 105,
+    "username": "VENIAMIN034",
+    "fullName": "VENIAMIN034",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16358854/medium/3be949ab963728f15e43c008b2a0ebc1_default.png",
+    "totalCosts": 16,
     "langs": [
-      "Russian"
-    ]
-  },
-  {
-    "username": "duckedop",
-    "fullName": "duckedop",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16247492/medium/c36e72eb1b644dcda6f4b9027e49e584_default.png",
-    "totalCosts": 190,
-    "langs": [
-      "Dutch"
-    ]
-  },
-  {
-    "username": "ethapple",
-    "fullName": "ethapple",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16206752/medium/5352b56be141b56d57a498e7df74d50f_default.png",
-    "totalCosts": 1044,
-    "langs": [
-      "Danish"
-    ]
-  },
-  {
-    "username": "feodallbot",
-    "fullName": "feodallbot",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16179020/medium/212a125909ff4e93f4a8bad87e4a362a_default.png",
-    "totalCosts": 182,
-    "langs": [
-      "Russian",
       "Ukrainian"
     ]
   },
   {
-    "username": "grandell",
-    "fullName": "grandell",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16264706/medium/974c44fad1550404e0ef532c5acc1c1c_default.png",
-    "totalCosts": 597,
-    "langs": [
-      "Russian"
-    ]
-  },
-  {
-    "username": "hurricaneneo",
-    "fullName": "hurricaneneo",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14950571/medium/510b4d38b82089ab61750fe62172118e_default.png",
-    "totalCosts": 75,
-    "langs": [
-      "Serbian (Latin)"
-    ]
-  },
-  {
-    "username": "hweersot",
-    "fullName": "hweersot",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16231456/medium/67b2fcfd6782db7b41efc531e5f3b1d1_default.png",
-    "totalCosts": 9,
-    "langs": [
-      "Korean"
-    ]
-  },
-  {
-    "username": "ibrahem990",
-    "fullName": "ibrahem990",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16204970/medium/4d2c8084a087c7a5a334ab02c3b123a7_default.png",
-    "totalCosts": 4,
-    "langs": [
-      "Arabic"
-    ]
-  },
-  {
-    "username": "iraklis",
-    "fullName": "iraklis",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16284120/medium/07210c62d17c9e8f1dd80c88feb153e5.jpeg",
-    "totalCosts": 30,
-    "langs": [
-      "Georgian"
-    ]
-  },
-  {
-    "username": "jkfzero",
-    "fullName": "jkfzero",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13935595/medium/1906e23b6a9407fdde92b4e0b6f5acf5_default.png",
-    "totalCosts": 16,
+    "username": "Wing666",
+    "fullName": "Wing666",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16362934/medium/4366117c4480a190704c1c92c5ab8934_default.png",
+    "totalCosts": 174,
     "langs": [
       "Chinese Simplified"
     ]
   },
   {
-    "username": "kamran1",
-    "fullName": "kamran1",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16269486/medium/685d42f9cd7d24bfbdbcb4e05d69beec_default.png",
-    "totalCosts": 599,
+    "username": "Xionger",
+    "fullName": "Xionger",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16326728/medium/d68449774d19c7aaa44b976482b28058_default.png",
+    "totalCosts": 2,
+    "langs": [
+      "Afrikaans"
+    ]
+  },
+  {
+    "username": "ZH03111",
+    "fullName": "ZH03111",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16375520/medium/3104d03c1c697e71b23d8d51c17fc818_default.png",
+    "totalCosts": 6,
+    "langs": [
+      "Chinese Simplified"
+    ]
+  },
+  {
+    "username": "_hchito25",
+    "fullName": "_hchito25",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320370/medium/2e30233a92a09bd5ec4811aede68eec1_default.png",
+    "totalCosts": 2,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "_sossi",
+    "fullName": "_sossi",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16332746/medium/7fb5e215c2c609e655b80cad1a298577_default.png",
+    "totalCosts": 165,
+    "langs": [
+      "Amharic"
+    ]
+  },
+  {
+    "username": "adeloth",
+    "fullName": "adeloth",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16315706/medium/6935dabc55747273549f78a8f2dfdca5_default.png",
+    "totalCosts": 371,
+    "langs": [
+      "Arabic"
+    ]
+  },
+  {
+    "username": "ahmadovenn",
+    "fullName": "ahmadovenn",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16307176/medium/c92aa76a8f9b057e78daf89b665a0a7c_default.png",
+    "totalCosts": 35,
+    "langs": [
+      "Uzbek"
+    ]
+  },
+  {
+    "username": "aldenteGO",
+    "fullName": "aldenteGO",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16324508/medium/c4a800630b84c215f94eaae2e95d7e0e_default.png",
+    "totalCosts": 142,
+    "langs": [
+      "Polish"
+    ]
+  },
+  {
+    "username": "amakxy",
+    "fullName": "amakxy",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16377886/medium/a708f28db1ac29d9ba933b87a146b73f_default.png",
+    "totalCosts": 64,
+    "langs": [
+      "Hausa"
+    ]
+  },
+  {
+    "username": "amir.hdri",
+    "fullName": "amir.hdri",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16382062/medium/184bf9f46824f5859a0966d8094e6d48_default.png",
+    "totalCosts": 11,
     "langs": [
       "Persian"
     ]
   },
   {
-    "username": "kunskiey",
-    "fullName": "kunskiey",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16301738/medium/349ee23ad2ab33407e7c325fb7572c65_default.png",
-    "totalCosts": 131,
+    "username": "anh_anh2811",
+    "fullName": "anh_anh2811",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320514/medium/c32cd2bcb841e4f677439ae52292c6b3_default.png",
+    "totalCosts": 5,
     "langs": [
-      "Yoruba"
+      "Vietnamese"
     ]
   },
   {
-    "username": "mary111",
-    "fullName": "mary111",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16197242/medium/bcda42f05b851093dc3b209ea34fa9ee_default.png",
-    "totalCosts": 243,
+    "username": "baonhi1207",
+    "fullName": "baonhi1207",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317346/medium/50c63b1bded5a56c395752d0ce7ef343_default.png",
+    "totalCosts": 104,
     "langs": [
-      "Russian"
+      "Vietnamese"
     ]
   },
   {
-    "username": "matinmirakhori",
-    "fullName": "matinmirakhori",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16271482/medium/7585210123e73fb6091ce2dcb7f959b4_default.png",
-    "totalCosts": 55,
+    "username": "conglam",
+    "fullName": "conglam",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320408/medium/dfb257951a014a65a1235ee7825accf0_default.png",
+    "totalCosts": 27,
     "langs": [
-      "Persian"
+      "Vietnamese"
     ]
   },
   {
-    "username": "megumii",
-    "fullName": "megumii",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15899963/medium/de3841cfdca3531137f1ddd603ef016a_default.png",
-    "totalCosts": 1,
+    "username": "daryna.beznuskoo",
+    "fullName": "daryna.beznuskoo",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16362530/medium/876a52c87a736ebd94572303f589ab99_default.png",
+    "totalCosts": 115,
+    "langs": [
+      "Ukrainian"
+    ]
+  },
+  {
+    "username": "dingdong99",
+    "fullName": "dingdong99",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16367902/medium/1783cb15492272999904f35f21ddb7ad_default.png",
+    "totalCosts": 5,
     "langs": [
       "Indonesian"
     ]
   },
   {
-    "username": "nasia_",
-    "fullName": "nasia_",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16090156/medium/0b8ecf363b2f8480e44a943f7ac6d6e6_default.png",
-    "totalCosts": 511,
+    "username": "duckburk",
+    "fullName": "duckburk",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16356612/medium/e5b31e1d1f6a731bcd67ae1e473dd55f_default.png",
+    "totalCosts": 155,
     "langs": [
-      "Greek"
+      "Swedish"
     ]
   },
   {
-    "username": "natoil42.eth",
-    "fullName": "natoil42.eth",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16277902/medium/288f4d391b3637dff0e5857aed958a20_default.png",
-    "totalCosts": 28,
+    "username": "giro_guillem",
+    "fullName": "giro_guillem",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16327716/medium/9a1178e7f4c83f411283e6e3e4b544de_default.png",
+    "totalCosts": 785,
+    "langs": [
+      "Catalan"
+    ]
+  },
+  {
+    "username": "hainam22102005",
+    "fullName": "hainam22102005",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317298/medium/3b44b89e2721463cb35f045a3739d10a_default.png",
+    "totalCosts": 1,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "hauluong29",
+    "fullName": "hauluong29",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317234/medium/597f5a93063230eaeb8044529abac6fb_default.png",
+    "totalCosts": 38,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "herkuli",
+    "fullName": "herkuli",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14422150/medium/e3c7bcf5716f9db3bfa17d9eb65571f6_default.png",
+    "totalCosts": 75,
+    "langs": [
+      "Polish"
+    ]
+  },
+  {
+    "username": "hoang0811",
+    "fullName": "hoang0811",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317268/medium/d1cf58110feebd9fa07b7e18d4b57646_default.png",
+    "totalCosts": 5,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "igfvn",
+    "fullName": "igfvn",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16377420/medium/be0abc47f7fb30f0f64e9a87a7e0ae02.jpg",
+    "totalCosts": 98,
+    "langs": [
+      "Spanish (Modern)"
+    ]
+  },
+  {
+    "username": "itsakhilnair",
+    "fullName": "itsakhilnair",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16410700/medium/e8565f74070a918fb74f5cbeafdcf2d0_default.png",
+    "totalCosts": 57,
+    "langs": [
+      "Malayalam"
+    ]
+  },
+  {
+    "username": "jaja_in_web3",
+    "fullName": "jaja_in_web3",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16301748/medium/b292dee2eb05d315fbc1664d08906a31_default.png",
+    "totalCosts": 2422,
     "langs": [
       "Italian"
     ]
   },
   {
-    "username": "ncm",
-    "fullName": "ncm",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16249714/medium/1bde51dfa4109edc2dfe1afff13fa6f8_default.png",
-    "totalCosts": 194,
+    "username": "jisoung",
+    "fullName": "jisoung",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16330472/medium/796b25b42d50874a3b30ca9d73e427d4_default.png",
+    "totalCosts": 13,
+    "langs": [
+      "Korean"
+    ]
+  },
+  {
+    "username": "joycejoy",
+    "fullName": "joycejoy",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16403760/medium/7c33f909d59c575a403ae11100936cf7.jpg",
+    "totalCosts": 342,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "kamepal_",
+    "fullName": "kamepal_",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16335762/medium/26e15b31c725cf7849deb6ce8d2c8b2e_default.png",
+    "totalCosts": 366,
+    "langs": [
+      "Telugu"
+    ]
+  },
+  {
+    "username": "krlsky",
+    "fullName": "krlsky",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16386586/medium/36a744ac7dc127290676ede1df8d59ab_default.png",
+    "totalCosts": 71,
+    "langs": [
+      "Bulgarian"
+    ]
+  },
+  {
+    "username": "lethuy1417",
+    "fullName": "lethuy1417",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16336042/medium/ae869b5bab845bca781fe8b2c7d5d8cc_default.png",
+    "totalCosts": 9,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "maros07",
+    "fullName": "maros07",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16372192/medium/047832b4bba2b45a9f7176e8e20beb3b_default.png",
+    "totalCosts": 231,
+    "langs": [
+      "Slovak"
+    ]
+  },
+  {
+    "username": "masarouji",
+    "fullName": "masarouji",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16343380/medium/fbfb47fdfa25b258b9a710840e4131e1_default.png",
+    "totalCosts": 11,
+    "langs": [
+      "Arabic"
+    ]
+  },
+  {
+    "username": "mayank27417",
+    "fullName": "mayank27417",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317296/medium/959351f7124a6c127cb47c4424d066c5_default.png",
+    "totalCosts": 33,
+    "langs": [
+      "Hindi"
+    ]
+  },
+  {
+    "username": "mownten",
+    "fullName": "mownten",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13531821/medium/e7e4ff81a3d4328e80cf29fc6cc57d59_default.png",
+    "totalCosts": 652,
+    "langs": [
+      "Persian"
+    ]
+  },
+  {
+    "username": "mriveroib",
+    "fullName": "mriveroib",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16446545/medium/783326ef85512c36325ec4f7ef419153_default.png",
+    "totalCosts": 18,
+    "langs": [
+      "Spanish (Modern)"
+    ]
+  },
+  {
+    "username": "muoiucute2002",
+    "fullName": "muoiucute2002",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320478/medium/3b8f78b5b12a309a87fd04c324aa495e_default.png",
+    "totalCosts": 4,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "nattwoffie",
+    "fullName": "nattwoffie",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16386932/medium/007c98b1e034a8e03a580081959a0354_default.png",
+    "totalCosts": 52,
+    "langs": [
+      "Indonesian"
+    ]
+  },
+  {
+    "username": "ndl1709",
+    "fullName": "ndl1709",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320564/medium/eac5f2a8aa9ed611a5bdb395ce3bee77_default.png",
+    "totalCosts": 15,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "ngohoang0207",
+    "fullName": "ngohoang0207",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317146/medium/a802edc56e52b824fadac76870beaca3_default.png",
+    "totalCosts": 484,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "nhuquynh01234",
+    "fullName": "nhuquynh01234",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320488/medium/51af6d099629b311d12eca9450c18bf0_default.png",
+    "totalCosts": 283,
     "langs": [
       "Vietnamese"
     ]
@@ -755,467 +851,469 @@
     "username": "noelsbaccy",
     "fullName": "noelsbaccy",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16287034/medium/82739beaba0639a0f22a19202647e1dd_default.png",
-    "totalCosts": 36,
+    "totalCosts": 19,
     "langs": [
       "Dutch"
     ]
   },
   {
-    "username": "qinjiangban",
-    "fullName": "qinjiangban",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15864389/medium/30c73ff3330be929f8260b878b13fa03_default.png",
-    "totalCosts": 124,
+    "username": "noraoele",
+    "fullName": "noraoele",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16385820/medium/cf9f87af2c562d479e8bc0382c0bc62f_default.png",
+    "totalCosts": 88,
     "langs": [
-      "Chinese Simplified"
+      "Spanish (Modern)"
+    ]
+  },
+  {
+    "username": "pautapia99",
+    "fullName": "pautapia99",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16325622/medium/42c9988a8bccc80645910f4fcc8d0001.jpg",
+    "totalCosts": 3296,
+    "langs": [
+      "Catalan"
     ]
   },
   {
     "username": "rafarocha",
     "fullName": "rafarocha",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13986387/medium/72bb87143f2a8d013cddac84c4e2afac.jpg",
-    "totalCosts": 69,
+    "totalCosts": 142,
     "langs": [
       "Portuguese, Brazilian"
     ]
   },
   {
-    "username": "ramarya108",
-    "fullName": "ramarya108",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16282336/medium/d07927e6d871bd49ea985fdd6fa07af3_default.png",
+    "username": "revval1",
+    "fullName": "revval1",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16324006/medium/7096ef8a5df23be8613571f3248eef3b_default.png",
     "totalCosts": 0,
     "langs": [
-      "Hindi"
+      "Indonesian"
     ]
   },
   {
     "username": "rinkashi",
     "fullName": "rinkashi",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16203888/medium/3c5bfdd16019bda375b4057580341140_default.png",
-    "totalCosts": 213,
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16203888/medium/4d9b45333a1ea006c5c9c2838c7c7f92.jpg",
+    "totalCosts": 54,
     "langs": [
       "Tagalog"
-    ]
-  },
-  {
-    "username": "rohmat26",
-    "fullName": "rohmat26",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16186000/medium/9864fc2952d25499899a668df69bbdd3_default.png",
-    "totalCosts": 1,
-    "langs": [
-      "Indonesian"
     ]
   },
   {
     "username": "roifnaufal21",
     "fullName": "roifnaufal21",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15927303/medium/e39f725004e850246a765bb86dddf780_default.png",
-    "totalCosts": 1,
+    "totalCosts": 82,
     "langs": [
       "Indonesian"
     ]
   },
   {
-    "username": "rytmik",
-    "fullName": "rytmik",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16187612/medium/d337218ebec8fb276e1903eb06858c46_default.png",
-    "totalCosts": 6,
-    "langs": [
-      "Polish"
-    ]
-  },
-  {
-    "username": "sang_shi",
-    "fullName": "sang_shi",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16158452/medium/8544f339158effd95f9bda0987cb93aa_default.png",
-    "totalCosts": 919,
-    "langs": [
-      "Chinese Simplified"
-    ]
-  },
-  {
-    "username": "sawatech",
-    "fullName": "sawatech",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16180444/medium/92d39dd72f9bca0361771609e9317a40_default.png",
-    "totalCosts": 7,
-    "langs": [
-      "Arabic"
-    ]
-  },
-  {
-    "username": "silvias",
-    "fullName": "silvias",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16189536/medium/495d9e8e0ff7ed8e52b0fb4a4676d2fc_default.png",
-    "totalCosts": 72,
+    "username": "s.joy",
+    "fullName": "s.joy",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15211006/medium/28bea1b362d046dcfa46b6ed26f8a75f_default.png",
+    "totalCosts": 163,
     "langs": [
       "Italian"
     ]
   },
   {
-    "username": "sun_dariia",
-    "fullName": "sun_dariia",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15804803/medium/e753b43a4cf480cd2a37c5795cdb83ba_default.png",
-    "totalCosts": 4106,
+    "username": "salehih1251",
+    "fullName": "salehih1251",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16319786/medium/fb6abacf8bbe1bc267794c44fc599e0a_default.png",
+    "totalCosts": 26,
     "langs": [
-      "Azerbaijani"
+      "Persian"
     ]
   },
   {
-    "username": "tanqe",
-    "fullName": "tanqe",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16184516/medium/347a90f6c867232e5e94d0d6ad91a5f9_default.png",
-    "totalCosts": 401,
+    "username": "subarska.viktoriia",
+    "fullName": "subarska.viktoriia",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16373664/medium/caecc647c851a6f4c841028b87255eaf_default.png",
+    "totalCosts": 135,
     "langs": [
-      "German"
+      "Ukrainian"
     ]
   },
   {
-    "username": "tapioka84",
-    "fullName": "tapioka84",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14950177/medium/beb313e77ee6f94f342383baac038e40_default.png",
-    "totalCosts": 49,
+    "username": "tellrv",
+    "fullName": "tellrv",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317056/medium/81d7249edb368a8939c2493213266394_default.png",
+    "totalCosts": 7,
     "langs": [
-      "German"
+      "Hindi"
     ]
   },
   {
-    "username": "tareqgh",
-    "fullName": "tareqgh",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15966777/medium/c434fa240e13cc295e9947bd14d0394f_default.png",
-    "totalCosts": 358,
+    "username": "thinhote",
+    "fullName": "thinhote",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320402/medium/bde75c24fe05ddbc9f5800c31cbaa3a8_default.png",
+    "totalCosts": 50,
     "langs": [
-      "Arabic"
+      "Vietnamese"
     ]
   },
   {
-    "username": "tomengo18",
-    "fullName": "tomengo18",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14618130/medium/b971c950cf96d0f10aafd695e2595007_default.png",
-    "totalCosts": 8,
+    "username": "tiendola1",
+    "fullName": "tiendola1",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16332826/medium/0443370d8e2031f9a88717d7a23de947_default.png",
+    "totalCosts": 23,
     "langs": [
-      "Polish"
+      "Albanian"
     ]
   },
   {
-    "username": "transmaster",
-    "fullName": "transmaster",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15834217/medium/763c75815f1373c95b94976bae622adc_default.png",
-    "totalCosts": 233,
+    "username": "tonytran",
+    "fullName": "tonytran",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16398068/medium/3a472e719715c3c2cd90f6fd9f9fd52a_default.png",
+    "totalCosts": 377,
     "langs": [
-      "Bulgarian"
+      "Vietnamese"
     ]
   },
   {
-    "username": "walkercx",
-    "fullName": "walkercx",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16188474/medium/c081001d06cae02ebe2e4dc3249fa8b2_default.png",
-    "totalCosts": 365,
+    "username": "tuandz",
+    "fullName": "tuandz",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320262/medium/3cebaa50d794c6ea75d496bee5ee87bd_default.png",
+    "totalCosts": 15,
     "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "uwa001",
+    "fullName": "uwa001",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16333224/medium/d974525d789de99fc6d7504c423a4029_default.png",
+    "totalCosts": 84,
+    "langs": [
+      "Nigerian Pidgin"
+    ]
+  },
+  {
+    "username": "comme.le.gnu",
+    "fullName": "0xCm (comme.le.gnu)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13672373/medium/9921ca5aa36af788bfd5fc5a898fbf43.jpg",
+    "totalCosts": 11921,
+    "langs": [
+      "Chinese Traditional",
+      "Spanish (Modern)",
       "Chinese Simplified"
     ]
   },
   {
-    "username": "waseemJa",
-    "fullName": "waseemJa",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16212024/medium/181bc26fc0c8fd87b21b2ac498ff8e75_default.png",
-    "totalCosts": 1,
+    "username": "af3000",
+    "fullName": "A O (af3000)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16377902/medium/c6c8da49cd111eca8c6bd338a7375ade.png",
+    "totalCosts": 33,
     "langs": [
-      "Arabic"
+      "Persian"
     ]
   },
   {
-    "username": "xyx986",
-    "fullName": "xyx986",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15923725/medium/a45b2b8b350379cc69a690d09596c3bc_default.png",
-    "totalCosts": 481,
+    "username": "proemailscrapping",
+    "fullName": "Abid Adnan (proemailscrapping)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16342006/medium/ac654721a3d2e8aed4848cd8309378cb.png",
+    "totalCosts": 6,
     "langs": [
-      "Chinese Simplified"
+      "Malayalam"
     ]
   },
   {
-    "username": "ehdspdjtjs",
-    "fullName": "201호아저씨 (ehdspdjtjs)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16260520/medium/352769a92ab7f67ad73daea5025143e6.jpeg",
-    "totalCosts": 2,
+    "username": "yafiabiyyu",
+    "fullName": "Abiyyu (yafiabiyyu)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16443751/medium/0e1b5418968b943a26e0a612319eef47.jpeg",
+    "totalCosts": 0,
     "langs": [
-      "Korean"
+      "Indonesian"
     ]
   },
   {
-    "username": "FutureTrans01",
-    "fullName": "ACO_Future Trans (FutureTrans01)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14226882/medium/6f2e227d358c748cdfcd3a1969d69b20_default.png",
-    "totalCosts": 3389,
+    "username": "adam.hrkel",
+    "fullName": "Adam Hrkel (adam.hrkel)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16377072/medium/f29e79297052c5fc5fa3dfc954ef9e6d.png",
+    "totalCosts": 25,
     "langs": [
-      "Uzbek",
-      "Turkish"
+      "Italian"
     ]
   },
   {
-    "username": "ACO_GU",
-    "fullName": "ACO_SJS (ACO_GU)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15548673/medium/97b26c4f72dce4b2597928269c77ad95_default.png",
-    "totalCosts": 17252,
+    "username": "blackdoc2011",
+    "fullName": "Alejandro (blackdoc2011)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15841229/medium/5514ba1535da633174719bd26911a404.jpeg",
+    "totalCosts": 12,
     "langs": [
-      "Telugu",
-      "Gujarati",
-      "Tamil",
-      "Nepali"
+      "Ukrainian"
     ]
   },
   {
-    "username": "coscujin64",
-    "fullName": "Alejandro Rodriguez (coscujin64)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16224092/medium/3d8af10f6adb207ed307b53a2942fe16.png",
-    "totalCosts": 104,
+    "username": "wooxy3",
+    "fullName": "Aleksandr Avdejev (wooxy3)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15786219/medium/b1b9c660b6f95b01e4bed3c21122d037.png",
+    "totalCosts": 17,
     "langs": [
-      "Spanish (Modern)"
+      "Russian"
     ]
   },
   {
-    "username": "alettetimmerman",
-    "fullName": "Alette Timmerman (alettetimmerman)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16208882/medium/614eda63d287750c910a64cc5a7154be.png",
-    "totalCosts": 18,
+    "username": "MedveckyA",
+    "fullName": "Aleksandr Medvecky (MedveckyA)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15049205/medium/0be15eb751f0359262535f9dfed66c95.jpeg",
+    "totalCosts": 161,
     "langs": [
-      "Dutch"
+      "Russian"
+    ]
+  },
+  {
+    "username": "MrGunkin",
+    "fullName": "Alex Gunkin (MrGunkin)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16417254/medium/3b60472af8e3b416a16a38468e0ea821.jpeg",
+    "totalCosts": 548,
+    "langs": [
+      "Russian"
+    ]
+  },
+  {
+    "username": "alexander_arfe",
+    "fullName": "Alexander Septian Arfe (alexander_arfe)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16346826/medium/0f272a941a6ba943428225c61c351d4e.png",
+    "totalCosts": 244,
+    "langs": [
+      "Indonesian"
+    ]
+  },
+  {
+    "username": "Alexei123",
+    "fullName": "Alexei Antoci (Alexei123)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16312240/medium/2b0fd2b79e1398f29c56acb05211f43e.jpg",
+    "totalCosts": 0,
+    "langs": [
+      "Italian"
     ]
   },
   {
     "username": "AleCox1980",
     "fullName": "Alexia (AleCox1980)",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16293112/medium/3cc05399e6a1c894db05b1b9eb0ff61d.jpeg",
-    "totalCosts": 4395,
+    "totalCosts": 1929,
     "langs": [
-      "Spanish (Modern)",
-      "Italian"
+      "Spanish (Modern)"
     ]
   },
   {
-    "username": "ali.abobashar1991",
-    "fullName": "Ali Abobashar (ali.abobashar1991)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16185486/medium/6cb2a938207f9e766646b739eabed393.png",
-    "totalCosts": 69,
-    "langs": [
-      "Afrikaans",
-      "Arabic",
-      "Armenian",
-      "Persian",
-      "Chinese Simplified"
-    ]
-  },
-  {
-    "username": "alien_max",
-    "fullName": "Ali Hosseini (alien_max)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16279808/medium/569d39880c4f22122a7b4a18290b56e5.png",
-    "totalCosts": 1440,
-    "langs": [
-      "Persian"
-    ]
-  },
-  {
-    "username": "aliaksei.niamkovich",
-    "fullName": "Aliaksei Niamkovich (aliaksei.niamkovich)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15643769/medium/d6a578f854f6e1dbdd505fae6ccc2144.PNG",
+    "username": "maarut",
+    "fullName": "Amarulloh M Khoeri (maarut)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16413412/medium/e702efeae1c381f7d92d9de546b7f1ac.jpeg",
     "totalCosts": 0,
     "langs": [
-      "Belarusian"
+      "Indonesian"
     ]
   },
   {
-    "username": "amanoullah",
-    "fullName": "Amanoullah Nazir (amanoullah)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16223056/medium/dd51015ea92987bd3b19ef23b97095ac.png",
-    "totalCosts": 118,
+    "username": "Jakubhajek91",
+    "fullName": "Anna Hellerová (Jakubhajek91)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16333394/medium/18a2d33aa74d18693d398f118e5afe66.png",
+    "totalCosts": 31,
     "langs": [
-      "French"
+      "Czech"
     ]
   },
   {
-    "username": "seifizade",
-    "fullName": "Amin Bourse (seifizade)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16269888/medium/a7a3bf0212b280f6b131a5e49ff17488.jpeg",
-    "totalCosts": 5,
-    "langs": [
-      "Persian"
-    ]
-  },
-  {
-    "username": "remember-me",
-    "fullName": "Amin Esmkhani | امین اسمخانی (remember-me)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15716521/medium/3baa1298bf9e76becf54cb5abdde531b.jpg",
-    "totalCosts": 2,
-    "langs": [
-      "Persian"
-    ]
-  },
-  {
-    "username": "Angel_bzh",
-    "fullName": "Angel_bzh",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13718709/medium/ec76cd449084dd05424fce21ed23220c.jpg",
-    "totalCosts": 17,
-    "langs": [
-      "French"
-    ]
-  },
-  {
-    "username": "Arima243",
-    "fullName": "Arima Nimyra (Arima243)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16237394/medium/bfea1f8cb7cecec910e6af8ce30e7cf9.jpeg",
+    "username": "bumchenko",
+    "fullName": "Anton (bumchenko)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16298870/medium/d6bfbf1dc7ffd7fda04a1def5024c848.png",
     "totalCosts": 4,
-    "langs": [
-      "German"
-    ]
-  },
-  {
-    "username": "Ayzaki23",
-    "fullName": "Ayzaki23",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16191192/medium/2eeb667c6d61d4845e0e3d9f28a19975.png",
-    "totalCosts": 1,
     "langs": [
       "Ukrainian"
     ]
   },
   {
-    "username": "basharshkiss1977",
-    "fullName": "Bashar Shkiss (basharshkiss1977)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16267380/medium/a874a87fc2e9f9c73087cf8e16f8692a.png",
-    "totalCosts": 22,
+    "username": "aquariuslt",
+    "fullName": "Aquariuslt (aquariuslt)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15498336/medium/33c5b16783e2cf00e5d32ae940e52c2d.jpeg",
+    "totalCosts": 1050,
+    "langs": [
+      "Chinese Simplified"
+    ]
+  },
+  {
+    "username": "arabijb999",
+    "fullName": "Arabi jbara (arabijb999)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16383584/medium/0435f1c853c8b86f2dea7095e08563b0.png",
+    "totalCosts": 60,
     "langs": [
       "Arabic"
+    ]
+  },
+  {
+    "username": "globart",
+    "fullName": "Artem Stankov (globart)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15300418/medium/28c0af8820123db5d3a0cbf7bc72e713.jpeg",
+    "totalCosts": 5,
+    "langs": [
+      "Ukrainian"
+    ]
+  },
+  {
+    "username": "artofey",
+    "fullName": "Artyom Yarovenko (artofey)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16350962/medium/ebd734dd890143bd576143823023f1d2.png",
+    "totalCosts": 702,
+    "langs": [
+      "Russian"
+    ]
+  },
+  {
+    "username": "atsushiishida",
+    "fullName": "Atsushi Ishida (atsushiishida)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16410394/medium/48c189d30dd3bd8654f240ec56d34bf0.png",
+    "totalCosts": 58,
+    "langs": [
+      "Japanese"
+    ]
+  },
+  {
+    "username": "dbao09107",
+    "fullName": "B22DCCN060 - Đặng Quân Bảo (dbao09107)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317148/medium/c5348ede3a0cd2594bdc1002d3b0c10f.png",
+    "totalCosts": 174,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "bartascnk",
+    "fullName": "Bartosz Skalny (bartascnk)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15435476/medium/5f172c39f058146c5d918dd4310743fc.jpg",
+    "totalCosts": 182,
+    "langs": [
+      "Polish"
     ]
   },
   {
     "username": "olumhenseben",
     "fullName": "Benedict Olumhense (olumhenseben)",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16298528/medium/319188ad42e19cfefdaa0c6c6bb88a2c.jpeg",
-    "totalCosts": 6718,
+    "totalCosts": 7829,
     "langs": [
       "Yoruba"
+    ]
+  },
+  {
+    "username": "bibekpoudel",
+    "fullName": "Bibek Poudel (bibekpoudel)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13120780/medium/bb68c03ec4c2bc307833fabe2d6f9739.jpg",
+    "totalCosts": 11,
+    "langs": [
+      "Nepali"
+    ]
+  },
+  {
+    "username": "abdoamrabdoamr1",
+    "fullName": "Boda ElJoKeR (abdoamrabdoamr1)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16384076/medium/0c5acc44174aa44d0de0db12f0e3d783.jpeg",
+    "totalCosts": 26,
+    "langs": [
+      "Arabic"
     ]
   },
   {
     "username": "dovbyshbgd",
     "fullName": "Bogdan Dovbysh (dovbyshbgd)",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15763855/medium/5b59dc54e26664f82eab09a76961eaf7.png",
-    "totalCosts": 970,
+    "totalCosts": 6322,
     "langs": [
       "Russian"
     ]
   },
   {
-    "username": "bokandebojan",
-    "fullName": "Bojan “Bokande” Lazarevic (bokandebojan)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16196958/medium/a57cc611433c151693d265528bea5048.jpeg",
-    "totalCosts": 1,
+    "username": "buddybob629",
+    "fullName": "Buddy Bob (buddybob629)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16414048/medium/1779df31185486768107904f422e3960.png",
+    "totalCosts": 333,
     "langs": [
-      "Serbian (Latin)"
+      "Afrikaans"
     ]
   },
   {
-    "username": "Tomlp054",
-    "fullName": "Boonteangkhadsee (Tomlp054)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16215486/medium/75e803963fcb6243b3a55829e61fd174_default.png",
-    "totalCosts": 113,
+    "username": "bichoa05",
+    "fullName": "Bích Hoa (bichoa05)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317326/medium/f4d04f39a9803ee5aa9c78ac9424f2f5.png",
+    "totalCosts": 21,
     "langs": [
-      "Thai"
+      "Vietnamese"
     ]
   },
   {
-    "username": "Prisfer",
-    "fullName": "Bruna Priscilla Sousa (Prisfer)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16198168/medium/bd459fa75ba703df945b018ae1c584cb.png",
-    "totalCosts": 111,
+    "username": "cecilio.gonzalez3045",
+    "fullName": "CECILIO BRUNO GONZALEZ RAMOS (cecilio.gonzalez3045)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16345524/medium/6c9860083bc4d196ea6150976426988a.png",
+    "totalCosts": 66,
     "langs": [
-      "Portuguese"
+      "Croatian",
+      "Arabic"
     ]
   },
   {
-    "username": "burakuenal28",
-    "fullName": "Burak Ünal (burakuenal28)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16142874/medium/fbb60101cf81bd174bad44c54c66fb51.png",
-    "totalCosts": 14,
+    "username": "linyejoe2",
+    "fullName": "CHENG QING LIN (linyejoe2)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16342788/medium/fbe9d6923b6bbdfea2bd01f4197ad8ad.jpeg",
+    "totalCosts": 51,
     "langs": [
-      "Turkish"
+      "Chinese Traditional"
     ]
   },
   {
-    "username": "Arrowy",
-    "fullName": "Buynzayah Batchimed (Arrowy)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16205238/medium/0312145d70d3861d60149af729c5d207.jpeg",
-    "totalCosts": 110,
+    "username": "itz-Amethyst",
+    "fullName": "Callme-Milad (itz-Amethyst)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16319608/medium/41847080b93e23125566302a94a4186c.jpeg",
+    "totalCosts": 5,
     "langs": [
-      "Mongolian"
+      "Persian"
     ]
   },
   {
-    "username": "eclipse1228",
-    "fullName": "ByeongSu Go (eclipse1228)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16247014/medium/f8f95d0a4151cf6905669b947c3b7756.jpeg",
-    "totalCosts": 973,
+    "username": "NGOCHUY1812",
+    "fullName": "Cao Ngọc Huy (NGOCHUY1812)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317304/medium/50365284109c773d36380b5f1fe89917.jpeg",
+    "totalCosts": 23,
     "langs": [
-      "Korean"
+      "Vietnamese"
     ]
   },
   {
-    "username": "Fritzhoy",
-    "fullName": "Camila Gonçalves (Fritzhoy)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15422032/medium/a2df65c9d9309dec39402a0175f3a57f.png",
-    "totalCosts": 1685,
+    "username": "prometheus_mx",
+    "fullName": "Cesar Soriano (prometheus_mx)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16407332/medium/6c89cce1bd37ecb8cf32fbc117900b5f.jpeg",
+    "totalCosts": 349,
     "langs": [
-      "Portuguese, Brazilian",
-      "Portuguese"
-    ]
-  },
-  {
-    "username": "Chnerin5217",
-    "fullName": "Chanerin Thinthip (Chnerin5217)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16224218/medium/af53082433ada8b24af9041a6874142a.jpeg",
-    "totalCosts": 107,
-    "langs": [
-      "Thai"
+      "Spanish (Modern)"
     ]
   },
   {
     "username": "cychung",
     "fullName": "Chen-Yuan Chung (cychung)",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15947735/medium/4023f995a7c5a29531aba4ba3d6f4c73.jpg",
-    "totalCosts": 18,
+    "totalCosts": 96,
     "langs": [
       "Chinese Traditional"
     ]
   },
   {
-    "username": "cheng-en-yang",
-    "fullName": "Cheng-En Yang (cheng-en-yang)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16298594/medium/7d2b90178c34081beecd8284816fcf43.jpeg",
-    "totalCosts": 30,
+    "username": "barfoo",
+    "fullName": "Chris (barfoo)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16446439/medium/8daa5212e8a865bca8b3160e46b3f3e8.png",
+    "totalCosts": 104,
     "langs": [
-      "Chinese Traditional"
+      "Polish"
     ]
   },
   {
-    "username": "chsieh5",
-    "fullName": "Chihung Hsieh (chsieh5)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16300722/medium/4a2c27ad1be6a5881694f821021e5614.png",
-    "totalCosts": 11,
-    "langs": [
-      "Chinese Traditional"
-    ]
-  },
-  {
-    "username": "ferri97",
-    "fullName": "Christian Ferriero (Ferri_real) (ferri97)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16184408/medium/fe3ae1d15171d1103ab1e0bdda536cd9.jpeg",
-    "totalCosts": 17,
-    "langs": [
-      "German"
-    ]
-  },
-  {
-    "username": "CongLeSolutionX",
-    "fullName": "Cong Le (CongLeSolutionX)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16185176/medium/f1815463a90eb56d8a3c00c6c19e5c23.jpeg",
-    "totalCosts": 372,
+    "username": "companykobiimports",
+    "fullName": "Company Kobi (companykobiimports)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16357926/medium/cd9e77f745731654634677a884c40857.png",
+    "totalCosts": 0,
     "langs": [
       "Vietnamese"
     ]
@@ -1224,1091 +1322,1295 @@
     "username": "Cypherpunkfish1",
     "fullName": "Cypherpunkfish1",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15418890/medium/e4ddbefa9793c099a4bd2b97bdd5f42b.jpg",
-    "totalCosts": 30,
+    "totalCosts": 34,
     "langs": [
       "Spanish (Modern)"
     ]
   },
   {
-    "username": "saddiamond2003",
-    "fullName": "Damon Wang (saddiamond2003)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16290062/medium/0805624823601e88f8322df677b7270b_default.png",
-    "totalCosts": 718,
-    "langs": [
-      "Chinese Simplified"
-    ]
-  },
-  {
-    "username": "danfersil",
-    "fullName": "Daniel Ferreira (danfersil)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16212170/medium/a6ae6e791f2312d7bc6527abca4559f2.jpeg",
-    "totalCosts": 236,
-    "langs": [
-      "Portuguese, Brazilian"
-    ]
-  },
-  {
-    "username": "dannycech77",
-    "fullName": "Daniel Čech (dannycech77)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16250700/medium/b34159c20eed604304ddf488f75a4745.png",
-    "totalCosts": 20,
-    "langs": [
-      "Czech"
-    ]
-  },
-  {
-    "username": "DanielvinS",
-    "fullName": "DanielvinS",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16234610/medium/383a2345044e23deb84c162b36a7d005.png",
-    "totalCosts": 82,
-    "langs": [
-      "Korean"
-    ]
-  },
-  {
-    "username": "predator5k26",
-    "fullName": "Danp Panp (predator5k26)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16225952/medium/320d6bd7dec527844a26cc4f9cfaaf9e.jpeg",
-    "totalCosts": 5,
-    "langs": [
-      "Japanese"
-    ]
-  },
-  {
-    "username": "Dasferco",
-    "fullName": "Dasferco",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15617973/medium/3dfc9ee8000385d013ae2c9f4ca88f25_default.png",
-    "totalCosts": 92,
-    "langs": [
-      "Chinese Simplified"
-    ]
-  },
-  {
-    "username": "drsticka.david",
-    "fullName": "David Drštička (drsticka.david)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15701215/medium/e88deaad9afa8cb84d012b354f516a21.jpeg",
-    "totalCosts": 541,
-    "langs": [
-      "Czech"
-    ]
-  },
-  {
-    "username": "DavidPhan1997",
-    "fullName": "DavidPhan (DavidPhan1997)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13993561/medium/c42aed3276572863f7767c1d6f9a5779.jpg",
-    "totalCosts": 40,
-    "langs": [
-      "Vietnamese"
-    ]
-  },
-  {
-    "username": "denkeni",
-    "fullName": "Denken (denkeni)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/12976499/medium/a368628ff8068cc82c69ffbf0863b19f.jpg",
-    "totalCosts": 11,
-    "langs": [
-      "Chinese Traditional"
-    ]
-  },
-  {
-    "username": "wongcie",
-    "fullName": "Dwi Cahyono (wongcie)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13332574/medium/e5d356a816a34edc6657cb41bb54d8f0.jpg",
-    "totalCosts": 2,
-    "langs": [
-      "Indonesian"
-    ]
-  },
-  {
-    "username": "Dzenan",
-    "fullName": "Dženan (Dzenan)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13842283/medium/bbfb9ef4136417577f368ab059d20644.jpeg",
-    "totalCosts": 18,
-    "langs": [
-      "Swedish"
-    ]
-  },
-  {
-    "username": "EffectChen",
-    "fullName": "Effect Chen (EffectChen)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14829178/medium/39ff70d1cbcdbad8e9056cb4aa4ee789.jpg",
-    "totalCosts": 253,
-    "langs": [
-      "Chinese Simplified"
-    ]
-  },
-  {
-    "username": "EmelyGarcia",
-    "fullName": "Emely García (EmelyGarcia)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15553253/medium/2077ec790711bf21dd6cad91f776f003.png",
-    "totalCosts": 359,
-    "langs": [
-      "Spanish (Modern)"
-    ]
-  },
-  {
-    "username": "EnzoX",
-    "fullName": "Enzo (EnzoX)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16240750/medium/38e4806a0dc8cf7b8ce7c73d4084b6a8.png",
-    "totalCosts": 37,
-    "langs": [
-      "Chinese Simplified"
-    ]
-  },
-  {
-    "username": "EslamAbdElhakem",
-    "fullName": "EslamAbdElhakem",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16206880/medium/15f0b68a2515289f08bf5b0428994f96.jpeg",
-    "totalCosts": 22,
-    "langs": [
-      "Arabic"
-    ]
-  },
-  {
-    "username": "ethereummr",
-    "fullName": "Ethereummr (ethereummr)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16007531/medium/3cf81984db909fb3a73f039a1e08f1d7.png",
-    "totalCosts": 7,
-    "langs": [
-      "Urdu (Pakistan)"
-    ]
-  },
-  {
-    "username": "farukbinali4",
-    "fullName": "Faruk Bin ali (farukbinali4)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16289830/medium/52c2d09c7d233353b638aa829baef19b.jpeg",
-    "totalCosts": 1,
-    "langs": [
-      "Bengali"
-    ]
-  },
-  {
-    "username": "Feek131",
-    "fullName": "Feek131",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16261326/medium/9ef2d59e242d11b24ec2a28e86480135.jpeg",
-    "totalCosts": 12287,
-    "langs": [
-      "Chinese Traditional"
-    ]
-  },
-  {
-    "username": "fevzi.4325",
-    "fullName": "Fevzi Çakmak (fevzi.4325)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16191684/medium/14ecb063873904aa574b54dfe59aae32.png",
-    "totalCosts": 2,
-    "langs": [
-      "Turkish"
-    ]
-  },
-  {
-    "username": "Fog3211",
-    "fullName": "Fog3211",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15963711/medium/ba0b1dc3d3ee55858b2679ec88df1cb8.jpeg",
-    "totalCosts": 36,
-    "langs": [
-      "Chinese Simplified"
-    ]
-  },
-  {
-    "username": "FoltinV",
-    "fullName": "FoltinV",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15843833/medium/d9afa5c66a59b8166143dd4e1cca0630.jpeg",
-    "totalCosts": 10449,
-    "langs": [
-      "Czech"
-    ]
-  },
-  {
-    "username": "ForestKeeperIO",
-    "fullName": "ForestKeeperIO",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15499312/medium/1d79e9c9f39999b2c426fce276d4188e.jpg",
-    "totalCosts": 140,
-    "langs": [
-      "Spanish (Modern)"
-    ]
-  },
-  {
-    "username": "mr_giorgos",
-    "fullName": "George Kitsoukakis (mr_giorgos)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14568334/medium/245b5c69aab62ffabb575daf603b70b8.jpg",
-    "totalCosts": 16676,
-    "langs": [
-      "Greek"
-    ]
-  },
-  {
-    "username": "ka_tra",
-    "fullName": "Georgian Linguist (ka_tra)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15813757/medium/1f38058695efa26b9f163eb4d2479639_default.png",
-    "totalCosts": 152,
-    "langs": [
-      "Georgian"
-    ]
-  },
-  {
-    "username": "maogagiggy.eth",
-    "fullName": "Gideon Maoga (maogagiggy.eth)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16297562/medium/269c8decd6724e9ec7d658d09fcbd45b.png",
-    "totalCosts": 25,
-    "langs": [
-      "Swahili"
-    ]
-  },
-  {
-    "username": "GoForceX",
-    "fullName": "GoForceX",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15073799/medium/a33ad8c1e01cf31890babace80908193.png",
-    "totalCosts": 4496,
-    "langs": [
-      "Chinese Simplified"
-    ]
-  },
-  {
-    "username": "iamgorgasiagian",
-    "fullName": "Gorga Siagian (11S18045) (iamgorgasiagian)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15711553/medium/78d86636558fbd59511b5c714ae72f78.jpeg",
-    "totalCosts": 94,
-    "langs": [
-      "Indonesian"
-    ]
-  },
-  {
-    "username": "Dokuwiki",
-    "fullName": "Haerul Fuad (Dokuwiki)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13490365/medium/b21500325635bedea53ee3cb5bc9131e.jpg",
-    "totalCosts": 15,
-    "langs": [
-      "Indonesian"
-    ]
-  },
-  {
-    "username": "HannahCong",
-    "fullName": "Hanh Cong (HannahCong)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16178236/medium/7992655e66fc4396baf4f59721eb835e.png",
-    "totalCosts": 56,
-    "langs": [
-      "Vietnamese"
-    ]
-  },
-  {
-    "username": "HarryJing",
-    "fullName": "Harry (HarryJing)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16266862/medium/6cac8bffcdc418bbf91be6c574556862.jpeg",
-    "totalCosts": 71,
-    "langs": [
-      "Chinese Simplified"
-    ]
-  },
-  {
-    "username": "H.K.M",
-    "fullName": "Hautiare Fanaura (H.K.M)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15325324/medium/31ae77c461f78b0a823f73598c9a1f7a.jpeg",
-    "totalCosts": 4,
-    "langs": [
-      "French"
-    ]
-  },
-  {
-    "username": "hedwika",
-    "fullName": "Hedwika (hedwika)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15086733/medium/e58bffb1edb2cd4a9e2bbe7046a0d1e8.jpeg",
-    "totalCosts": 385,
-    "langs": [
-      "Czech"
-    ]
-  },
-  {
-    "username": "kot30112001",
-    "fullName": "Heiterov Nahui (kot30112001)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16188898/medium/2bfd3aa7ff70877c4f289633a120cf05.png",
-    "totalCosts": 2,
-    "langs": [
-      "Ukrainian"
-    ]
-  },
-  {
-    "username": "uhemadevi",
-    "fullName": "Hema Devi (uhemadevi)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16292238/medium/057426cbddbcc70d26553d0837c207e7.jpeg",
-    "totalCosts": 384,
-    "langs": [
-      "Tamil"
-    ]
-  },
-  {
-    "username": "igntsh",
-    "fullName": "Heo Ignatius (igntsh)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13903009/medium/04ae0d1fd930da54d2c40b2d5e37e31c.jpg",
-    "totalCosts": 4297,
-    "langs": [
-      "Korean"
-    ]
-  },
-  {
-    "username": "hieucandy12",
-    "fullName": "Hieu Le (hieucandy12)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16217096/medium/a45bc9b2e77767d4eb79bc49eb8984e3.png",
-    "totalCosts": 0,
-    "langs": [
-      "Vietnamese"
-    ]
-  },
-  {
-    "username": "HiroyukiNaito",
-    "fullName": "Hiroyuki Naito (HiroyukiNaito)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg",
-    "totalCosts": 21708,
-    "langs": [
-      "Japanese"
-    ]
-  },
-  {
-    "username": "hotr1pak",
-    "fullName": "Hotripak (hotr1pak)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15473664/medium/3a3252bf9769d99be4ca6d1b94dbb91f.jpg",
-    "totalCosts": 3429,
-    "langs": [
-      "Ukrainian"
-    ]
-  },
-  {
-    "username": "egwimikenna881",
-    "fullName": "Ikenna Egwim (egwimikenna881)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16201876/medium/714cb30637491175eea0387ec8d4547d.png",
-    "totalCosts": 29,
-    "langs": [
-      "Yoruba",
-      "Hausa"
-    ]
-  },
-  {
-    "username": "ishankjena",
-    "fullName": "Ishank Jena (ishankjena)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16270318/medium/de2924fc5568c2afb654e7b567aea1f8.jpeg",
-    "totalCosts": 100,
-    "langs": [
-      "Hindi"
-    ]
-  },
-  {
-    "username": "Izabel_chaves",
-    "fullName": "Izabel Chaves (Izabel_chaves)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15724803/medium/7f2b4419d308a52a62f3b8f9ca9b4adf.jpg",
-    "totalCosts": 33,
-    "langs": [
-      "Portuguese, Brazilian"
-    ]
-  },
-  {
-    "username": "Jakkrih3",
-    "fullName": "Jakkrit Kaewtoom (Jakkrih3)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16253720/medium/3566a35c5fe400a00afee12a231380a6.png",
-    "totalCosts": 29,
-    "langs": [
-      "Turkish"
-    ]
-  },
-  {
-    "username": "jakub.konopka",
-    "fullName": "Jakub Konopka (jakub.konopka)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15179948/medium/11b1832085a9b3441669c0e6ac6634e8.jpeg",
-    "totalCosts": 2,
-    "langs": [
-      "Czech"
-    ]
-  },
-  {
-    "username": "jetislay0r",
-    "fullName": "Jeti Slay0r (jetislay0r)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16281668/medium/dc60f61c0520ef2a38bcbeb8941aeb83.png",
-    "totalCosts": 119,
-    "langs": [
-      "German"
-    ]
-  },
-  {
-    "username": "jimmy-martin",
-    "fullName": "Jimmy Martin (jimmy-martin)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16278488/medium/f6b89a52a7c0f643d801f5fabe0a1689.jpeg",
-    "totalCosts": 20,
-    "langs": [
-      "French"
-    ]
-  },
-  {
-    "username": "joacirferrarezi",
-    "fullName": "Joacir Ferrarezi (joacirferrarezi)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15822529/medium/2cfb3489e56881807de1d3ce9406cfa3.jpeg",
-    "totalCosts": 29,
-    "langs": [
-      "German",
-      "Portuguese, Brazilian"
-    ]
-  },
-  {
-    "username": "jpaulo99",
-    "fullName": "Joao Vilela (jpaulo99)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16278430/medium/446c3811c1c2f796a1bb3fe0de5d4fd2.jpeg",
-    "totalCosts": 13,
-    "langs": [
-      "Portuguese"
-    ]
-  },
-  {
-    "username": "johanneberthelsenlynge",
-    "fullName": "Johanne Berthelsen Lynge (johanneberthelsenlynge)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16262466/medium/18bd527bc85c74d204427107855aeba8.png",
-    "totalCosts": 7,
-    "langs": [
-      "Danish"
-    ]
-  },
-  {
-    "username": "Coram_Deo",
-    "fullName": "Jonas Neubert (Coram_Deo)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15123193/medium/b3211607cc43c707c0034f7502299d8d.jpeg",
-    "totalCosts": 4251,
-    "langs": [
-      "German"
-    ]
-  },
-  {
-    "username": "jose.cabrita",
-    "fullName": "José Pedro Cabrita (jose.cabrita)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16204330/medium/211c18306f2d2b6c8dd028eb77729f85.png",
-    "totalCosts": 202,
-    "langs": [
-      "Portuguese"
-    ]
-  },
-  {
-    "username": "JUANCARLOSS1977",
-    "fullName": "JuanCarlos (JUANCARLOSS1977)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15959599/medium/af95a7176a863708dedb04b35f4ee223.jpg",
-    "totalCosts": 0,
-    "langs": [
-      "Spanish (Modern)"
-    ]
-  },
-  {
-    "username": "karelp231",
-    "fullName": "Karelp (karelp231)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16236038/medium/aa4d6b56dbd2dc59ffbdc5bee7cb5525.png",
-    "totalCosts": 2,
-    "langs": [
-      "Czech"
-    ]
-  },
-  {
-    "username": "Kero-i",
-    "fullName": "Kero-i",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16266218/medium/dc3778227ab31689a3335b962427a8eb.jpeg",
-    "totalCosts": 85,
-    "langs": [
-      "German"
-    ]
-  },
-  {
-    "username": "dellacer1810",
-    "fullName": "Khoa Đăng. (dellacer1810)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16241594/medium/14b27ec39ee30cc06f814886220cd6fc.jpeg",
-    "totalCosts": 20,
-    "langs": [
-      "Vietnamese"
-    ]
-  },
-  {
-    "username": "Kinchie",
-    "fullName": "Kinchie Diego (Kinchie)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16208002/medium/5bd76cd59d9f7715d3adb1d2d34af26b.png",
-    "totalCosts": 56,
-    "langs": [
-      "Chinese Simplified"
-    ]
-  },
-  {
-    "username": "Kler",
-    "fullName": "Kler",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14075861/medium/a3cf69cc209acc2c520607aab4d1c615.jpeg",
-    "totalCosts": 1,
-    "langs": [
-      "French"
-    ]
-  },
-  {
-    "username": "kooroshshokri2",
-    "fullName": "Koorosh Shokri (kooroshshokri2)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16192288/medium/71adfbc6b41aa78167163728ce0a5ed2.png",
-    "totalCosts": 11,
-    "langs": [
-      "Persian"
-    ]
-  },
-  {
-    "username": "lostksak",
-    "fullName": "Ksa (lostksak)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16291544/medium/e5b8f6bd1902fb5d48635dd2fac06a22.png",
-    "totalCosts": 125,
-    "langs": [
-      "Arabic"
-    ]
-  },
-  {
-    "username": "LIulyEmpty",
-    "fullName": "LIulyEmpty",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16230594/medium/cd7250313adac6c32fcac7ef601c0343.jpg",
-    "totalCosts": 227,
-    "langs": [
-      "Vietnamese"
-    ]
-  },
-  {
-    "username": "storming_heaven",
-    "fullName": "Lena Kotlyar (storming_heaven)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15720271/medium/8af1a5867d08e0a56b993cc13a0cd15f.png",
-    "totalCosts": 137,
-    "langs": [
-      "Russian"
-    ]
-  },
-  {
-    "username": "Lepolyn",
-    "fullName": "Lucas Coutinho (Lepolyn)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16240492/medium/357b85986effd29b8596ff18aa4af012.jpeg",
-    "totalCosts": 592,
-    "langs": [
-      "Portuguese, Brazilian"
-    ]
-  },
-  {
-    "username": "lorincze",
-    "fullName": "Lőrincz Erzsébet (lorincze)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16211894/medium/7c5d58b22e6ffb1f49de6656f35ff162.png",
-    "totalCosts": 2006,
-    "langs": [
-      "Hungarian"
-    ]
-  },
-  {
-    "username": "mshawaiz",
-    "fullName": "M Shawaiz (mshawaiz)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16279228/medium/ad455a4bc6f4fd030415b374ecb21b64.png",
-    "totalCosts": 13,
-    "langs": [
-      "Urdu (Pakistan)"
-    ]
-  },
-  {
-    "username": "MGETH",
-    "fullName": "MGETH",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg",
-    "totalCosts": 4737,
-    "langs": [
-      "Spanish (Modern)"
-    ]
-  },
-  {
-    "username": "Magkoohp",
-    "fullName": "Magkoohp",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16228696/medium/b00378417317de53c14a70e3c1a15645.png",
-    "totalCosts": 33,
-    "langs": [
-      "Arabic"
-    ]
-  },
-  {
-    "username": "grubliauskasmantas0",
-    "fullName": "Mantas Grubliauskas (grubliauskasmantas0)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16110064/medium/601f9100f4fbdfaab4f91f018c96cab6.png",
-    "totalCosts": 7,
-    "langs": [
-      "Lithuanian"
-    ]
-  },
-  {
-    "username": "IlumNguyen",
-    "fullName": "Maplestory Pocket (IlumNguyen)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16275364/medium/cfc57fc40c6d04073d5728f782f829b4.png",
-    "totalCosts": 11,
-    "langs": [
-      "Vietnamese"
-    ]
-  },
-  {
-    "username": "MATsxm",
-    "fullName": "Marc Antoine Thevenet (MATsxm)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/12844463/medium/6fae27edb4b41f363587f737ea2f96de.jpg",
-    "totalCosts": 1010,
-    "langs": [
-      "French"
-    ]
-  },
-  {
-    "username": "marianbaby1015",
-    "fullName": "Marian Iko (marianbaby1015)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16304330/medium/cdbbf0c4a9979549a537e6a9dce1f419.jpeg",
-    "totalCosts": 1,
-    "langs": [
-      "Bulgarian"
-    ]
-  },
-  {
-    "username": "mariohiteon8",
-    "fullName": "Mario Kasteljan (mariohiteon8)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16293650/medium/862b62aa8d37002f83e4dd6968fb22a6.jpeg",
-    "totalCosts": 171,
-    "langs": [
-      "Croatian"
-    ]
-  },
-  {
-    "username": "d4r3d3v1l",
-    "fullName": "Mario Maiwald-Merzbach (d4r3d3v1l)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14591426/medium/3f3e51694844fe3ad87b6a874cc0bf97.jpg",
-    "totalCosts": 50,
-    "langs": [
-      "German"
-    ]
-  },
-  {
-    "username": "caoyishong",
-    "fullName": "Mars (caoyishong)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16156628/medium/edc3d1173f191519759cb1870bc8ceee_default.png",
-    "totalCosts": 52,
-    "langs": [
-      "Burmese"
-    ]
-  },
-  {
-    "username": "martin.schink.martensen",
-    "fullName": "Martin martensen (martin.schink.martensen)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16281970/medium/27b96c8e4532564ac8c0abb467165b24.png",
-    "totalCosts": 1,
-    "langs": [
-      "Danish"
-    ]
-  },
-  {
-    "username": "zxya",
-    "fullName": "Matheus (zxya)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16183768/medium/9d897b4b01fb6b6399e896256b998abf.png",
-    "totalCosts": 17,
-    "langs": [
-      "Portuguese, Brazilian"
-    ]
-  },
-  {
-    "username": "mathiasml",
-    "fullName": "Mathias Larsen (mathiasml)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13298668/medium/bcb551efb2720b8e70a04772510f8816_default.png",
-    "totalCosts": 24,
-    "langs": [
-      "Danish"
-    ]
-  },
-  {
-    "username": "Goinmulq",
-    "fullName": "Max (Goinmulq)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16238898/medium/5b7855921c56d3fe952b5a6e9d06f29e.jpeg",
-    "totalCosts": 2,
-    "langs": [
-      "Czech"
-    ]
-  },
-  {
-    "username": "maywehner",
-    "fullName": "May Wehner (maywehner)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16297050/medium/b530deaf50a256f624064154f33ac099.png",
-    "totalCosts": 28,
-    "langs": [
-      "Danish"
-    ]
-  },
-  {
-    "username": "DrEverr",
-    "fullName": "Mewa (DrEverr)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16278518/medium/9eef3c0b6429bc9a434a60c15d879ea5.jpeg",
-    "totalCosts": 0,
-    "langs": [
-      "Polish"
-    ]
-  },
-  {
-    "username": "kep9109",
-    "fullName": "Michał T (kep9109)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16269490/medium/a4cda9250aaefa4b8a5ca5f0e4993f9f.jpeg",
-    "totalCosts": 0,
-    "langs": [
-      "Polish"
-    ]
-  },
-  {
-    "username": "nettocompanny",
-    "fullName": "Mitercino Rodrigues de França Neto (nettocompanny)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16231438/medium/33cdc4c818b940d7ccb3a94ceb963524_default.png",
-    "totalCosts": 129,
-    "langs": [
-      "Portuguese, Brazilian",
-      "Portuguese"
-    ]
-  },
-  {
-    "username": "maciejkiraga",
-    "fullName": "Modest 8k (maciejkiraga)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16187608/medium/02673c3d41a87a7afdef342f1391b3ab.png",
-    "totalCosts": 114,
-    "langs": [
-      "Polish"
-    ]
-  },
-  {
-    "username": "Wdomda900",
-    "fullName": "Mohamed  (Wdomda900)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16204392/medium/239cd40a0c03bfb600c03999b9b8c75b.png",
-    "totalCosts": 44,
-    "langs": [
-      "Hungarian"
-    ]
-  },
-  {
-    "username": "0xArkonomi",
-    "fullName": "Mohammad Mahdi Keshavarz (0xArkonomi)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16001243/medium/b75b58e1e84d60e633167eb068b1253e.jpg",
-    "totalCosts": 14,
-    "langs": [
-      "Persian"
-    ]
-  },
-  {
-    "username": "Jaux",
-    "fullName": "Moses Joshua (Jaux)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15968031/medium/a763502b6e5b9ad73f6ca17072a9f297.png",
-    "totalCosts": 553,
-    "langs": [
-      "Nigerian Pidgin"
-    ]
-  },
-  {
-    "username": "hypebeans",
-    "fullName": "Muumi (ミュウミ) (hypebeans)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14708760/medium/c99d5e08a676eaebe6f2a383a81222e1.jpg",
-    "totalCosts": 655,
-    "langs": [
-      "Indonesian",
-      "Japanese"
-    ]
-  },
-  {
-    "username": "Niainarisoa",
-    "fullName": "NOMENJANAHARY Niainarisoa Aime (Niainarisoa)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15466824/medium/a5fd6d5af3cb8d37ce7784e9c70237a6.png",
-    "totalCosts": 1236,
-    "langs": [
-      "French"
-    ]
-  },
-  {
-    "username": "naman2608",
-    "fullName": "Naman Chhabra (naman2608)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16295050/medium/b53684a6b12fa77478e80bfca9460134.jpeg",
-    "totalCosts": 39,
-    "langs": [
-      "Hindi"
-    ]
-  },
-  {
-    "username": "N_8terno",
-    "fullName": "Nao K (N_8terno)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16195550/medium/26a424433e92086f0e45cf018eb3860d.png",
-    "totalCosts": 1058,
-    "langs": [
-      "Japanese"
-    ]
-  },
-  {
-    "username": "trungan1511",
-    "fullName": "Nguyen An (trungan1511)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14943437/medium/03d7b6c2f65c04c60b008a38a221cf5f.png",
+    "username": "soicodoc2299",
+    "fullName": "Cô độc Sói (soicodoc2299)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16318644/medium/b56a2ca1dad8e1457df718261ecb8c46.png",
     "totalCosts": 31,
     "langs": [
       "Vietnamese"
     ]
   },
   {
-    "username": "xcaro",
-    "fullName": "Nhan Vo (xcaro)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15225566/medium/d5edb114381cf4cd5976eb6413069e7a.jpg",
-    "totalCosts": 19,
+    "username": "congd",
+    "fullName": "Công Dinh (congd)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317300/medium/1dff895a023f32584eeb4d593b47e246.png",
+    "totalCosts": 112,
     "langs": [
       "Vietnamese"
     ]
   },
   {
-    "username": "nikita72she",
-    "fullName": "Nikita Sh (nikita72she)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16173876/medium/9f7787cb5b52bd5357e98de0cf0576e6.jpeg",
-    "totalCosts": 1,
+    "username": "saddiamond2003",
+    "fullName": "Damon Wang (saddiamond2003)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16290062/medium/0805624823601e88f8322df677b7270b_default.png",
+    "totalCosts": 45,
     "langs": [
-      "Russian"
+      "Chinese Simplified"
     ]
   },
   {
-    "username": "Nithyamickey",
-    "fullName": "Nithyamickey",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16201820/medium/39e0bc0ec9290afd0745673f676bde64.png",
-    "totalCosts": 24,
+    "username": "szhzc123",
+    "fullName": "Daniel Huang (szhzc123)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16381580/medium/4a8761f873046df39d5645f687ae41fb.png",
+    "totalCosts": 0,
     "langs": [
-      "Malay"
+      "Chinese Simplified"
     ]
   },
   {
-    "username": "its-andrew",
-    "fullName": "Ondřej Krucký (its-andrew)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16241220/medium/c5a8201973af0fbd7312bc44eba1b7f1.jpeg",
-    "totalCosts": 24,
+    "username": "tida20",
+    "fullName": "Daniel Percze (tida20)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16365968/medium/d6cb43dfa6cddb26996107b20232dec0.png",
+    "totalCosts": 0,
+    "langs": [
+      "Hungarian"
+    ]
+  },
+  {
+    "username": "sh3ifu",
+    "fullName": "Denys Datskov (sh3ifu)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16329284/medium/94aff1679dd6e774e7744ad61b60b080.jpg",
+    "totalCosts": 1534,
+    "langs": [
+      "Ukrainian"
+    ]
+  },
+  {
+    "username": "Dilrong",
+    "fullName": "Dilrong",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15253076/medium/2551dedf52ffb347b9ee6baee6080755.jpeg",
+    "totalCosts": 766,
+    "langs": [
+      "Korean"
+    ]
+  },
+  {
+    "username": "quynh.quynh.5642",
+    "fullName": "Diễm Quỳnh Đặng (quynh.quynh.5642)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317292/medium/aac9da0064452c608e55099b72beb0c0.png",
+    "totalCosts": 10,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "dmitriy.potikha.technolex",
+    "fullName": "Dmitriy Potikha (dmitriy.potikha.technolex)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16344220/medium/7a61df780dba3333cfd56efb01e4fa01.png",
+    "totalCosts": 2347,
+    "langs": [
+      "Ukrainian"
+    ]
+  },
+  {
+    "username": "DonMartin3z",
+    "fullName": "Don_martinez.eth (DonMartin3z)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15951635/medium/1dd1e9e649050ded753a7303b66a4e0d.jpeg",
+    "totalCosts": 456,
+    "langs": [
+      "Portuguese, Brazilian"
+    ]
+  },
+  {
+    "username": "Dzenan",
+    "fullName": "Dženan (Dzenan)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13842283/medium/bbfb9ef4136417577f368ab059d20644.jpeg",
+    "totalCosts": 30,
+    "langs": [
+      "Swedish"
+    ]
+  },
+  {
+    "username": "thangchoduong1",
+    "fullName": "Dương vũ (thangchoduong1)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317312/medium/fa770df8d8c7500ec749fbe0905558ef.png",
+    "totalCosts": 64,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "phanthanhdan105264",
+    "fullName": "Dạn Phan Thanh (Tư Bảnh) (phanthanhdan105264)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16381272/medium/38a0ff21a868f21a7fc5f3e38800b697.png",
+    "totalCosts": 10,
+    "langs": [
+      "Armenian"
+    ]
+  },
+  {
+    "username": "EffectChen",
+    "fullName": "Effect Chen (EffectChen)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14829178/medium/39ff70d1cbcdbad8e9056cb4aa4ee789.jpg",
+    "totalCosts": 1296,
+    "langs": [
+      "Chinese Simplified"
+    ]
+  },
+  {
+    "username": "elilee",
+    "fullName": "Eli Lee (elilee)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15493144/medium/1dddf6aff9d640b54067fbc6fcaa6a10_default.png",
+    "totalCosts": 1272,
+    "langs": [
+      "Chinese Traditional"
+    ]
+  },
+  {
+    "username": "emilfalasa99",
+    "fullName": "Emil Falasa (emilfalasa99)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16373926/medium/d41e34ebe770a1da2910f5c9ac4319a3.jpeg",
+    "totalCosts": 130,
+    "langs": [
+      "Polish"
+    ]
+  },
+  {
+    "username": "Floewmp",
+    "fullName": "Floewmp",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16410602/medium/4442fcc4748a15eb06753439863d10f4.png",
+    "totalCosts": 2886,
+    "langs": [
+      "French"
+    ]
+  },
+  {
+    "username": "FoltinV",
+    "fullName": "FoltinV",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15843833/medium/d9afa5c66a59b8166143dd4e1cca0630.jpeg",
+    "totalCosts": 2886,
     "langs": [
       "Czech"
     ]
   },
   {
-    "username": "ornellavalentinamarioli",
-    "fullName": "Ornella Valentina Marioli (ornellavalentinamarioli)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16289298/medium/f83e1c6fea9c74e9f70269bec38211f7.png",
-    "totalCosts": 465,
+    "username": "foxsenrubas",
+    "fullName": "Foxsen Rubas (foxsenrubas)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16338858/medium/51e907c831d9bfdc109e66b70c5af843.png",
+    "totalCosts": 156,
+    "langs": [
+      "Ukrainian"
+    ]
+  },
+  {
+    "username": "dhamavat8888",
+    "fullName": "Fábio Vantini (dhamavat8888)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16311168/medium/b5df6ef59211519219d6c109df8ebc1d.jpeg",
+    "totalCosts": 16,
+    "langs": [
+      "Portuguese, Brazilian"
+    ]
+  },
+  {
+    "username": "mr_giorgos",
+    "fullName": "George Kitsoukakis (mr_giorgos)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14568334/medium/245b5c69aab62ffabb575daf603b70b8.jpg",
+    "totalCosts": 34959,
+    "langs": [
+      "Greek"
+    ]
+  },
+  {
+    "username": "kritsadanuansutha",
+    "fullName": "Github Developers Jobs Community (kritsadanuansutha)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16294780/medium/97210ef3409441a5eb4c50669d9f6548.png",
+    "totalCosts": 1301,
+    "langs": [
+      "Thai"
+    ]
+  },
+  {
+    "username": "GoForceX",
+    "fullName": "GoForceX",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15073799/medium/a33ad8c1e01cf31890babace80908193.png",
+    "totalCosts": 373,
+    "langs": [
+      "Chinese Simplified"
+    ]
+  },
+  {
+    "username": "latoxxikka",
+    "fullName": "Guadalupe Banda Garcia (latoxxikka)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16377046/medium/05873568b5113a2e580798affd3997d9.png",
+    "totalCosts": 5,
+    "langs": [
+      "Spanish (Modern)"
+    ]
+  },
+  {
+    "username": "ishnowa",
+    "fullName": "Guilherme (ishnowa)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16435073/medium/4e7fe7a91bb6ba69bf2150c58d5d3d7d.jpeg",
+    "totalCosts": 1564,
+    "langs": [
+      "Portuguese",
+      "Portuguese, Brazilian"
+    ]
+  },
+  {
+    "username": "gururevana",
+    "fullName": "Guruswamy Revana (gururevana)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317084/medium/46a46c8352d3489256e5dcab32824569.png",
+    "totalCosts": 32,
+    "langs": [
+      "Telugu"
+    ]
+  },
+  {
+    "username": "enter7081",
+    "fullName": "Halibut (enter7081)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317116/medium/0d6b2ea556a6f312786b82ec822b88b4.jpeg",
+    "totalCosts": 84,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "hawraa81",
+    "fullName": "Hawraa (hawraa81)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16409760/medium/5c95bb0a8098648c7badb4360757a52e.png",
+    "totalCosts": 117,
+    "langs": [
+      "Arabic"
+    ]
+  },
+  {
+    "username": "HayattiQ",
+    "fullName": "Hayatti (HayattiQ)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16321818/medium/e3009e33cf1497fcb99f77970bb526b1.png",
+    "totalCosts": 72,
+    "langs": [
+      "Japanese"
+    ]
+  },
+  {
+    "username": "jesusheber29",
+    "fullName": "Heber Jesus (jesusheber29)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16339140/medium/cda7a4b685d65536563c776f525d2a94.png",
+    "totalCosts": 142,
+    "langs": [
+      "Spanish (Modern)"
+    ]
+  },
+  {
+    "username": "hnavas",
+    "fullName": "Hector Navas (hnavas)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15129399/medium/2ba066fe3a0776fd5c790c55b9a74fb9.jpeg",
+    "totalCosts": 2,
+    "langs": [
+      "Spanish (Modern)"
+    ]
+  },
+  {
+    "username": "hedwika",
+    "fullName": "Hedwika (hedwika)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15086733/medium/e58bffb1edb2cd4a9e2bbe7046a0d1e8.jpeg",
+    "totalCosts": 1274,
+    "langs": [
+      "Czech"
+    ]
+  },
+  {
+    "username": "henriquebothome",
+    "fullName": "Henrique (henriquebothome)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317582/medium/c50d7fb5b01acfd26dae7e368a883d3f.jpg",
+    "totalCosts": 2,
+    "langs": [
+      "Portuguese, Brazilian"
+    ]
+  },
+  {
+    "username": "igntsh",
+    "fullName": "Heo Ignatius (igntsh)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13903009/medium/04ae0d1fd930da54d2c40b2d5e37e31c.jpg",
+    "totalCosts": 5,
+    "langs": [
+      "Korean"
+    ]
+  },
+  {
+    "username": "HiroyukiNaito",
+    "fullName": "Hiroyuki Naito (HiroyukiNaito)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg",
+    "totalCosts": 24227,
+    "langs": [
+      "Japanese"
+    ]
+  },
+  {
+    "username": "duchieutuyen",
+    "fullName": "Hiếu Giáp Minh (duchieutuyen)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317230/medium/60b5946ea3ca515d04ea6c16590af99e.jpeg",
+    "totalCosts": 651,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "Duchieu123",
+    "fullName": "Hiếu Nguyễn (Duchieu123)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317308/medium/9450ed548f37fbf42502125a8b037666.png",
+    "totalCosts": 0,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "nguyenduchieu1810",
+    "fullName": "Hiếu Nguyễn Đức (nguyenduchieu1810)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317294/medium/2b2e3b7126e5a26fe2cb760f31bcbec5.jpeg",
+    "totalCosts": 30,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "hienduong14122k5",
+    "fullName": "Hiền Dương (hienduong14122k5)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317186/medium/8ec9a204bab7ecb9bb8b462fcb16951b.png",
+    "totalCosts": 300,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "hoanp0624",
+    "fullName": "Hoàng Phong (hoanp0624)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317202/medium/f52eff2404c335f88d82567ab6745647.png",
+    "totalCosts": 112,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "tarcanhursit",
+    "fullName": "Hursit Tarcan (tarcanhursit)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15084373/medium/63831adb2cf079020b094666d47417fd.jpg",
+    "totalCosts": 471,
+    "langs": [
+      "Dutch"
+    ]
+  },
+  {
+    "username": "huynnguyen26",
+    "fullName": "Huy Nguyễn (huynnguyen26)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317206/medium/e81b119858a90b01da0bf22f9848acdb.jpeg",
+    "totalCosts": 37,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "PhongPhung",
+    "fullName": "Huy Phong (PhongPhung)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320506/medium/b679fc5aa5d55de0d3b72e0a378bd33d.png",
+    "totalCosts": 27,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "hyunjinku",
+    "fullName": "Hyun Jin Ku (hyunjinku)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16384154/medium/7cf617855f0c66ce2f25979922af7976.jpeg",
+    "totalCosts": 44,
+    "langs": [
+      "Korean"
+    ]
+  },
+  {
+    "username": "nguyethang253",
+    "fullName": "Hằng Trần Thị Nguyệt (nguyethang253)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317302/medium/22904753d1ebf2224daca64eda160e5a.png",
+    "totalCosts": 3,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "hm29012005",
+    "fullName": "Hồ Minh (hm29012005)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317322/medium/a1daae34c148cef270019c3fd3371a0a.png",
+    "totalCosts": 18,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "Elth3lab",
+    "fullName": "Ibrahim Ghonem (Elth3lab)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16341782/medium/efe9ff419a4971f7edb7b03ed2f0ab63.jpeg",
+    "totalCosts": 15,
+    "langs": [
+      "Arabic"
+    ]
+  },
+  {
+    "username": "KernelMrex",
+    "fullName": "Ilya Shulepov (KernelMrex)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16367202/medium/51ce11ebf4cc1980b43fdbf674856464.jpeg",
+    "totalCosts": 19,
+    "langs": [
+      "Russian"
+    ]
+  },
+  {
+    "username": "SunSchizzzz",
+    "fullName": "InspirAktion (SunSchizzzz)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16378882/medium/971096204f53a3db00ad7d2173ea80c2.jpeg",
+    "totalCosts": 15,
+    "langs": [
+      "German"
+    ]
+  },
+  {
+    "username": "irakliES",
+    "fullName": "Irakli Esiava (irakliES)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16351350/medium/26759b5be52615ccf7e47e358a5ed3a9.png",
+    "totalCosts": 3,
+    "langs": [
+      "Georgian"
+    ]
+  },
+  {
+    "username": "isaias.tavarez34",
+    "fullName": "Isaac Tavarez (isaias.tavarez34)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16356720/medium/b5aa3227759a8ba96e41e2ec7026e4a7.jpeg",
+    "totalCosts": 31,
+    "langs": [
+      "Spanish (Modern)"
+    ]
+  },
+  {
+    "username": "clickname",
+    "fullName": "Ivan Vasilev (clickname)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16316572/medium/07fd8abdae5bbbbe7fc82739669311b1.jpeg",
+    "totalCosts": 488,
+    "langs": [
+      "Russian"
+    ]
+  },
+  {
+    "username": "iwonakaczma760",
+    "fullName": "Iwona Kaczma (iwonakaczma760)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16330252/medium/1e4ee672aaf5ae6302fa491fac386b86.png",
+    "totalCosts": 64,
+    "langs": [
+      "Polish"
+    ]
+  },
+  {
+    "username": "tyja4996",
+    "fullName": "Ja Ty (tyja4996)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16310160/medium/e23c55c41ee14418f5ebf087f876f2cd.png",
+    "totalCosts": 80,
+    "langs": [
+      "Slovak"
+    ]
+  },
+  {
+    "username": "j777777999999m",
+    "fullName": "Janice (j777777999999m)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16415056/medium/af7f001879bde93e623f8a2944573c59.png",
+    "totalCosts": 0,
     "langs": [
       "Italian"
     ]
   },
   {
-    "username": "floressolorzanopablo00",
-    "fullName": "Pablo Flores (floressolorzanopablo00)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16185662/medium/c047b29a4d3d8820fda1f1481e575472.png",
-    "totalCosts": 9,
+    "username": "nodirbekahmadjonov837",
+    "fullName": "Javlonbek Xojamnazarov (Joha8866) (nodirbekahmadjonov837)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16338260/medium/f9f76c0fa7a017fca6bb8cd685a2606f.jpeg",
+    "totalCosts": 3,
     "langs": [
-      "Italian"
+      "Uzbek"
+    ]
+  },
+  {
+    "username": "joacirferrarezi",
+    "fullName": "Joacir Ferrarezi (joacirferrarezi)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15822529/medium/2cfb3489e56881807de1d3ce9406cfa3.jpeg",
+    "totalCosts": 38,
+    "langs": [
+      "Chinese Simplified"
+    ]
+  },
+  {
+    "username": "Joe-Chen",
+    "fullName": "Joe Chen (Joe-Chen)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16372068/medium/bf1ede23ed85a8ae5b1d9088a8fba1a9.png",
+    "totalCosts": 8928,
+    "langs": [
+      "Chinese Simplified"
+    ]
+  },
+  {
+    "username": "Coram_Deo",
+    "fullName": "Jonas Neubert (Coram_Deo)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15123193/medium/b3211607cc43c707c0034f7502299d8d.jpeg",
+    "totalCosts": 2225,
+    "langs": [
+      "German"
+    ]
+  },
+  {
+    "username": "kangmutan",
+    "fullName": "Kang Mutan (kangmutan)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16444143/medium/5aa1a1178051a1bb83c3ff748d088860.jpeg",
+    "totalCosts": 39,
+    "langs": [
+      "Indonesian"
+    ]
+  },
+  {
+    "username": "kenforever",
+    "fullName": "Ken Leong (kenforever)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14661950/medium/d12c67f954a833d343013ee215f59335.jpg",
+    "totalCosts": 1039,
+    "langs": [
+      "Chinese Traditional"
+    ]
+  },
+  {
+    "username": "Khyati06",
+    "fullName": "Khyati sharma (Khyati06)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16373710/medium/56ea08eb9478f784bab55778d2e9e325.png",
+    "totalCosts": 0,
+    "langs": [
+      "Hindi"
+    ]
+  },
+  {
+    "username": "khanhminecraft4321",
+    "fullName": "Khánh Đàm Quốc (khanhminecraft4321)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317156/medium/a48bc751608e4fe7671ac74e96ee36ad.jpeg",
+    "totalCosts": 85,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "K1ethoang",
+    "fullName": "Kiet Hoang Gia (K1ethoang)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317880/medium/fe650a71b27054b6909ec48afe42236b.png",
+    "totalCosts": 10,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "kobihoang",
+    "fullName": "Kobi Hoàngs (kobihoang)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14538218/medium/47624f72c401110958d44a36bcb23982.jpeg",
+    "totalCosts": 71,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "AstrooKai",
+    "fullName": "Kyle (AstrooKai)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15720067/medium/98d8cab46fa5fc6d21d31d3e58ef63a0.png",
+    "totalCosts": 497,
+    "langs": [
+      "Filipino"
+    ]
+  },
+  {
+    "username": "lorenz29",
+    "fullName": "Lorenzo Hardoy (lorenz29)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16390276/medium/0c0707139b589ccbb868e203bdb52504.jpeg",
+    "totalCosts": 14,
+    "langs": [
+      "Spanish (Modern)"
+    ]
+  },
+  {
+    "username": "Lepolyn",
+    "fullName": "Lucas Coutinho (Lepolyn)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16240492/medium/357b85986effd29b8596ff18aa4af012.jpeg",
+    "totalCosts": 162,
+    "langs": [
+      "Portuguese, Brazilian"
+    ]
+  },
+  {
+    "username": "lucky.m.cr7",
+    "fullName": "Lucky M (lucky.m.cr7)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16343024/medium/e1c556d1493d23c1c78cbcd1f22b0cdd.png",
+    "totalCosts": 11,
+    "langs": [
+      "Afrikaans"
+    ]
+  },
+  {
+    "username": "mualib3",
+    "fullName": "Luiz felipe mualib De azevedo cavalcante (mualib3)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16331710/medium/1c29f3374cd8baed1a5442174f259d57.png",
+    "totalCosts": 22,
+    "langs": [
+      "Portuguese, Brazilian"
+    ]
+  },
+  {
+    "username": "khanhly149tt",
+    "fullName": "Ly Khánh (khanhly149tt)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317286/medium/e8c4547b068bb7a35227f8576848a9ed.jpeg",
+    "totalCosts": 13,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "ThanhThn",
+    "fullName": "Lê Hoàng Quốc Thanh (ThanhThn)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16370524/medium/79e8a907216eec0bb4c9472588ec9d8c.jpeg",
+    "totalCosts": 65,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "lorincze",
+    "fullName": "Lőrincz Erzsébet (lorincze)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16211894/medium/7c5d58b22e6ffb1f49de6656f35ff162.png",
+    "totalCosts": 6024,
+    "langs": [
+      "Hungarian"
+    ]
+  },
+  {
+    "username": "filetinstal",
+    "fullName": "M G (filetinstal)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16336694/medium/4cf06fbf84be98d8cd175886f332f548.jpeg",
+    "totalCosts": 12,
+    "langs": [
+      "French",
+      "Russian"
+    ]
+  },
+  {
+    "username": "maniekn",
+    "fullName": "MARIUSZ NOWAK (maniekn)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16413766/medium/1214b5979ecd59044067c088b444433e.png",
+    "totalCosts": 2,
+    "langs": [
+      "French"
+    ]
+  },
+  {
+    "username": "IIMEHMETHAN",
+    "fullName": "MEHMET ORUÇ (IIMEHMETHAN)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16166060/medium/3d375bcf2f1510a1cb82de0c8e260d49_default.png",
+    "totalCosts": 186,
+    "langs": [
+      "Turkish"
+    ]
+  },
+  {
+    "username": "MGETH",
+    "fullName": "MGETH",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg",
+    "totalCosts": 646,
+    "langs": [
+      "Spanish (Modern)"
+    ]
+  },
+  {
+    "username": "mahmodsalehi169",
+    "fullName": "Mahmod Salehi (mahmodsalehi169)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16368496/medium/46b5f1ccc35b6f31c488ec6e83339217.png",
+    "totalCosts": 74,
+    "langs": [
+      "Persian",
+      "Afrikaans"
+    ]
+  },
+  {
+    "username": "maria-andreea",
+    "fullName": "Maria Andreea (maria-andreea)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16372538/medium/ce6ca7d1f553220cd20e762ecabec5ac.jpeg",
+    "totalCosts": 807,
+    "langs": [
+      "Romanian"
+    ]
+  },
+  {
+    "username": "clarapipoquete",
+    "fullName": "Maria F. Constantino (clarapipoquete)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16393162/medium/2f51edd6ec8be574dc3528c8424c8dea.jpeg",
+    "totalCosts": 3,
+    "langs": [
+      "Portuguese, Brazilian"
+    ]
+  },
+  {
+    "username": "mariohiteon8",
+    "fullName": "Mario Kasteljan (mariohiteon8)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16293650/medium/862b62aa8d37002f83e4dd6968fb22a6.jpeg",
+    "totalCosts": 0,
+    "langs": [
+      "Croatian"
+    ]
+  },
+  {
+    "username": "mariuszokon120",
+    "fullName": "Mariusz Okon (mariuszokon120)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15514302/medium/940a2cc2822ce61fbc64f01efb63b8ce.png",
+    "totalCosts": 161,
+    "langs": [
+      "Polish"
+    ]
+  },
+  {
+    "username": "martinmarkus345",
+    "fullName": "Martin Markus (martinmarkus345)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16334602/medium/af8ac82fb1207460d024b376e9c5e5e5.png",
+    "totalCosts": 65,
+    "langs": [
+      "Slovak"
+    ]
+  },
+  {
+    "username": "BTConBlockchain",
+    "fullName": "Memo Bitcoin (BTConBlockchain)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16324336/medium/21f340ff5cc64085c21ce48d67ee1c9d.jpg",
+    "totalCosts": 125,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "Actimike",
+    "fullName": "Mickaël Vaz (Actimike)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16271298/medium/3610263d402c3c0bac9efd3320cb3942_default.png",
+    "totalCosts": 3019,
+    "langs": [
+      "French"
+    ]
+  },
+  {
+    "username": "gtandish",
+    "fullName": "Miel (gtandish)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15594507/medium/ac79872b0963a2042dc08f112dc1e1b4.png",
+    "totalCosts": 15,
+    "langs": [
+      "Japanese"
+    ]
+  },
+  {
+    "username": "mihaelabastea7",
+    "fullName": "Mihaela Bastea (mihaelabastea7)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16052418/medium/0e36202573cf19df9021165831372156.jpg",
+    "totalCosts": 74,
+    "langs": [
+      "Romanian"
+    ]
+  },
+  {
+    "username": "mn20050129",
+    "fullName": "Minh Nguyễn (mn20050129)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317266/medium/84c704fd33409a5049510a3e4bb7185c.jpeg",
+    "totalCosts": 86,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "nguyenqminh16",
+    "fullName": "Minh Nguyễn Quang (nguyenqminh16)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317100/medium/d58a650e7f7485e445531356f7e9b75e.png",
+    "totalCosts": 86,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "phuong2005",
+    "fullName": "Minh Phương (phuong2005)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317192/medium/27f31a15139e25314c688bfe360173af.jpeg",
+    "totalCosts": 23,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "thanhtrollvybg",
+    "fullName": "Minh Phương Dương (thanhtrollvybg)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320268/medium/de94137d07183aee3501da653f2f8306.png",
+    "totalCosts": 111,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "mthao28805",
+    "fullName": "Minh Thảoo (mthao28805)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317276/medium/39def929e2e2793caa923a841eadfefd.jpeg",
+    "totalCosts": 39,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "miroslav.habara",
+    "fullName": "Miroslav Habara (miroslav.habara)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16407658/medium/8dcfb88034bae404598730cd65e617b7.png",
+    "totalCosts": 8,
+    "langs": [
+      "Slovak"
+    ]
+  },
+  {
+    "username": "mbcse50",
+    "fullName": "Mohit Bhat (mbcse50)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317200/medium/01c387dee1363e90c6fba090c92fe878.png",
+    "totalCosts": 22,
+    "langs": [
+      "Hindi"
+    ]
+  },
+  {
+    "username": "monika1725",
+    "fullName": "Monika Lewandowska (monika1725)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16377878/medium/2ae7e18f1910426cb2a2d5f043fe2de6.png",
+    "totalCosts": 22,
+    "langs": [
+      "Polish"
+    ]
+  },
+  {
+    "username": "Mouhand",
+    "fullName": "Mouhand Al qarni (Mouhand)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320184/medium/33116daa412bfb599653359896666897.png",
+    "totalCosts": 6,
+    "langs": [
+      "Arabic"
+    ]
+  },
+  {
+    "username": "must479",
+    "fullName": "Must479 (must479)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14976975/medium/534d2bb457849d79f81ccc4ea5d410bc.png",
+    "totalCosts": 27,
+    "langs": [
+      "Indonesian"
+    ]
+  },
+  {
+    "username": "mykhanhtran.work",
+    "fullName": "Mỹ Khánh Trần Kim (mykhanhtran.work)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317124/medium/a6ef8be51fda591a3ce7cd6a0c3c9b43.png",
+    "totalCosts": 38,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "natabum98",
+    "fullName": "Natalia Andreevna (natabum98)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16345932/medium/e4a9338bd7200e954c86418fab5ebc48.png",
+    "totalCosts": 51,
+    "langs": [
+      "Russian"
+    ]
+  },
+  {
+    "username": "zfk67163",
+    "fullName": "Nguyễn Văn Cường (zfk67163)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317264/medium/d03b77327eb8f420b4f9259833e23d6e.jpeg",
+    "totalCosts": 115,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "sabrialzoubi15",
+    "fullName": "Noof Al soud (sabrialzoubi15)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16206234/medium/fe58567ddcd33789d464c44549159b85.png",
+    "totalCosts": 7,
+    "langs": [
+      "Arabic"
+    ]
+  },
+  {
+    "username": "elnotwick",
+    "fullName": "Not Wick (elnotwick)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15714091/medium/4108416200d30f40ae15786e5b097631_default.png",
+    "totalCosts": 172,
+    "langs": [
+      "Spanish (Modern)"
+    ]
+  },
+  {
+    "username": "Omid_sa",
+    "fullName": "Omid saremi (Omid_sa)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16263264/medium/b9061657a2582908f9d97346ddb990bc_default.png",
+    "totalCosts": 22,
+    "langs": [
+      "Persian"
+    ]
+  },
+  {
+    "username": "Ooonry",
+    "fullName": "Ooonry",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16360624/medium/6fe661c49c9aabe76788a194ba25f975.png",
+    "totalCosts": 51,
+    "langs": [
+      "Albanian",
+      "Russian"
     ]
   },
   {
     "username": "wackerow",
     "fullName": "Paul Wackerow (wackerow)",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14575966/medium/1e22043e754e8830a78257791e1c6bad.png",
-    "totalCosts": 0,
+    "totalCosts": 511,
     "langs": [
-      "Arabic"
-    ]
-  },
-  {
-    "username": "paflo",
-    "fullName": "Pedro Oliveira (paflo)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16234268/medium/d4bd0c7758f9ba0628ccb6a3ba6fbd4b.png",
-    "totalCosts": 97,
-    "langs": [
-      "Portuguese"
-    ]
-  },
-  {
-    "username": "ngocloi981993",
-    "fullName": "Pham Ngoc Loi (ngocloi981993)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15521636/medium/a3f847e34594cb7df1e63a4cad31c511.jpg",
-    "totalCosts": 16,
-    "langs": [
+      "French",
+      "Chinese Simplified",
+      "Japanese",
+      "Arabic",
+      "Bengali",
+      "Chinese Traditional",
+      "Dutch",
+      "Filipino",
+      "German",
+      "Greek",
+      "Hindi",
+      "Hungarian",
+      "Indonesian",
+      "Italian",
+      "Korean",
+      "Persian",
+      "Polish",
+      "Portuguese, Brazilian",
+      "Russian",
+      "Spanish (Modern)",
+      "Turkish",
+      "Ukrainian",
       "Vietnamese"
     ]
   },
   {
-    "username": "Ziyn",
-    "fullName": "Phạm Minh Dũng (Ziyn)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14986651/medium/ce81355cdfbc7f8dcbb3b803d7d3ca5a.png",
-    "totalCosts": 7,
+    "username": "paulojpgomes",
+    "fullName": "Paulo Gomes (paulojpgomes)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16330264/medium/31a813c46bbbec59aedd5ff7f33d900e.png",
+    "totalCosts": 486,
     "langs": [
-      "Vietnamese"
+      "Portuguese, Brazilian"
+    ]
+  },
+  {
+    "username": "jpratik999",
+    "fullName": "Pratik (jpratik999)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317172/medium/20bbb90859b23b48a4bb60a164b73396.png",
+    "totalCosts": 17,
+    "langs": [
+      "Hindi"
+    ]
+  },
+  {
+    "username": "jromashov",
+    "fullName": "Prizrak (jromashov)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16324868/medium/456793ad51c702284747633746386c4a.jpeg",
+    "totalCosts": 2,
+    "langs": [
+      "Ukrainian"
     ]
   },
   {
     "username": "queenie0815",
     "fullName": "Queenie Chang (queenie0815)",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15954333/medium/589465a479a53254001094f2a4322a0f.png",
-    "totalCosts": 543,
+    "totalCosts": 209,
     "langs": [
       "Chinese Traditional"
     ]
   },
   {
-    "username": "rahatekin1373",
-    "fullName": "Raha Hashemi (rahatekin1373)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16258954/medium/9013a7bc33a9aa55574ba29c0d37d58a.jpeg",
+    "username": "manhquan03tn",
+    "fullName": "Quân Mạnh (manhquan03tn)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320508/medium/3bed889ecc03654ee1e3eac44a1134b9.jpeg",
+    "totalCosts": 10,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "lequocanh40029081",
+    "fullName": "Quốc anh Lê (lequocanh40029081)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16370272/medium/f926a2f0a8b5627729288de023bf3921.jpeg",
     "totalCosts": 1,
     "langs": [
-      "Persian"
+      "Vietnamese"
     ]
   },
   {
-    "username": "Vinchek",
-    "fullName": "Raptor Буntarьツ (Vinchek)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16169958/medium/01d7cdaf86d532e5f2ce0a221e27358f.png",
-    "totalCosts": 424,
+    "username": "giangvq0212",
+    "fullName": "Quỳnh Giang Vũ (giangvq0212)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320310/medium/283d5714c8de1ebba197e4b0991e84fb.png",
+    "totalCosts": 60,
     "langs": [
-      "Ukrainian"
+      "Vietnamese"
     ]
   },
   {
-    "username": "zahi.robs",
-    "fullName": "Rob Zahi (zahi.robs)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16303778/medium/9f36158a50c25573201c2504ff07ae9a.jpeg",
-    "totalCosts": 17,
+    "username": "raselmahmud-coder",
+    "fullName": "RASEL MAHMUD (raselmahmud-coder)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16336604/medium/a4d0f6de757229965e57923696b9e78e.png",
+    "totalCosts": 38,
     "langs": [
-      "Chinese Simplified"
+      "Bengali"
     ]
   },
   {
-    "username": "SamB",
-    "fullName": "Samira Bourai (SamB)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14914333/medium/9fe76315a573f9f4e574d0260b5e5b02.png",
-    "totalCosts": 22,
+    "username": "ranonklayprem",
+    "fullName": "Ranon Klayprem (ranonklayprem)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16352122/medium/2a6b9c867d9f6da2dd5f4ad020f445b5.jpeg",
+    "totalCosts": 19,
+    "langs": [
+      "Thai"
+    ]
+  },
+  {
+    "username": "recep_02_1682",
+    "fullName": "Recep Kaya (recep_02_1682)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16340632/medium/d5c4eac923f3d32ef88fc4f15d82207b.jpeg",
+    "totalCosts": 77,
+    "langs": [
+      "Turkish"
+    ]
+  },
+  {
+    "username": "Ronski89",
+    "fullName": "Ron Nuthmann (Ronski89)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16316730/medium/e392ac352b36002114f65d60d132600b.jpeg",
+    "totalCosts": 138,
+    "langs": [
+      "German"
+    ]
+  },
+  {
+    "username": "roney.romualdo",
+    "fullName": "Roney Romualdo (roney.romualdo)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16308172/medium/504cfe0d537b75c92d99bec59242ef07.png",
+    "totalCosts": 5,
+    "langs": [
+      "Portuguese"
+    ]
+  },
+  {
+    "username": "5313327479",
+    "fullName": "SA (5313327479)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16347170/medium/ff4bd5d4ee48f5a34139322d6a243502_default.png",
+    "totalCosts": 39,
     "langs": [
       "Arabic"
     ]
   },
   {
-    "username": "Chiago",
-    "fullName": "Santiago (Chiago)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16186988/medium/ecbf83e8ec54fad32f81e31b9b36c98b.jpeg",
-    "totalCosts": 54,
+    "username": "sarawutpromwong82",
+    "fullName": "Sarawut Promwong (sarawutpromwong82)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16315096/medium/eccaa66f76381bbdb633bd521d45da3f.jpeg",
+    "totalCosts": 38,
     "langs": [
-      "Spanish (Modern)"
-    ]
-  },
-  {
-    "username": "santi-gnzlz",
-    "fullName": "Santiago Gonzalez (santi-gnzlz)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15448050/medium/b795cd3e997f1157bb866ef1a077fef2.png",
-    "totalCosts": 281,
-    "langs": [
-      "Spanish (Modern)"
-    ]
-  },
-  {
-    "username": "senhannafy54",
-    "fullName": "Sen Hannafy (senhannafy54)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16269284/medium/7047019f7f0a7e52bf1266e8c9732d1d.jpeg",
-    "totalCosts": 1,
-    "langs": [
-      "Khmer"
+      "Armenian"
     ]
   },
   {
     "username": "sipbikardi",
     "fullName": "Sepehr Hashemi (sipbikardi)",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15967353/medium/bdbc4e456ff62160eead47d69c036137.jpg",
-    "totalCosts": 938,
+    "totalCosts": 788,
     "langs": [
       "Persian"
     ]
   },
   {
-    "username": "shamshod23",
-    "fullName": "Shamshod (shamshod23)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15594487/medium/b06a8fa438c73c21de539933b5c7190f.png",
-    "totalCosts": 57,
+    "username": "shafaque",
+    "fullName": "Shafaque Naaz (shafaque)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16348270/medium/b5a7e7c4c5ce9aaecb4fcb0137ce6199_default.png",
+    "totalCosts": 34,
     "langs": [
-      "Uzbek"
+      "Urdu (India)"
     ]
   },
   {
-    "username": "Shivasai_ssb",
-    "fullName": "Shiva Sai (Shivasai_ssb)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16173352/medium/186d1f739c0c7280f6110c10aa1da194.jpg",
-    "totalCosts": 12220,
+    "username": "joya58346",
+    "fullName": "Shiksha (joya58346)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16340316/medium/ec8a6c17f9aaba8a5d1925432d946141.png",
+    "totalCosts": 21,
     "langs": [
-      "Telugu"
+      "Spanish (Modern)",
+      "Amharic"
     ]
   },
   {
-    "username": "soou5558",
-    "fullName": "Soou (soou5558)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16281762/medium/5b67605f973214aff7e7781ca3309c5d.png",
-    "totalCosts": 18,
+    "username": "swpark1004",
+    "fullName": "Sungwoong Park (swpark1004)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16054974/medium/21f3f27ceb5330aeabde9a90ba4a5f85.jpeg",
+    "totalCosts": 508,
     "langs": [
-      "Arabic"
+      "Korean"
     ]
   },
   {
-    "username": "soroushjalalvandi",
-    "fullName": "Soroush Jalalvandi (soroushjalalvandi)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16271952/medium/638e2394ca47625acada6b708d760cdd.png",
-    "totalCosts": 7,
+    "username": "TJC47",
+    "fullName": "TJC472 (TJC47)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16389388/medium/0aa84b1125fbf76b235927cfe322537f.png",
+    "totalCosts": 20,
     "langs": [
-      "Persian"
+      "German"
     ]
   },
   {
-    "username": "hackerhtml2137",
-    "fullName": "Stanisław Jurkowski (hackerhtml2137)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16291742/medium/ac2c194b1ebdecdbec776816a9a09856.jpeg",
-    "totalCosts": 133,
+    "username": "TTa77",
+    "fullName": "TTa77",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15425018/medium/a0ec669dae445a589d6b020b2fd856c8.png",
+    "totalCosts": 205,
     "langs": [
-      "Polish"
+      "Chinese Simplified"
     ]
   },
   {
-    "username": "Sumi2work",
-    "fullName": "Sumitra (Sumi2work)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15837511/medium/cf193b4206f6661e86e69d83172f06e1_default.png",
-    "totalCosts": 805,
-    "langs": [
-      "Bengali"
-    ]
-  },
-  {
-    "username": "Wiselord911",
-    "fullName": "Suthipong Masopmao (Wiselord911)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16240978/medium/aaf8e2898e6e7eab5d0fc3b6797a9b61.gif",
-    "totalCosts": 175,
-    "langs": [
-      "Thai"
-    ]
-  },
-  {
-    "username": "maztak",
-    "fullName": "Takuya Matsuda (maztak)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15502922/medium/2c6cd1b72d171b769f1764a3f38d2ab1.PNG",
-    "totalCosts": 4,
+    "username": "shigetaichi",
+    "fullName": "Taichi Shigematsu (shigetaichi)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14972661/medium/63e8470a66ada0a7237a8e5626f0e7b3.jpeg",
+    "totalCosts": 84,
     "langs": [
       "Japanese"
     ]
   },
   {
-    "username": "Buyabuya",
-    "fullName": "Tatsunari Shibuya (Buyabuya)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16274540/medium/fff14edb8869578304921016a436ab18.jpeg",
-    "totalCosts": 520,
+    "username": "horvath198809",
+    "fullName": "Tamas Horváth (horvath198809)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14668072/medium/e8dde7f6007b5045dcc7cadabdec18f7.jpg",
+    "totalCosts": 6,
     "langs": [
-      "Japanese"
+      "Hungarian"
     ]
   },
   {
-    "username": "terrancrypt",
-    "fullName": "Thai Pham Ngoc Tuong (terrancrypt)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16213616/medium/77ab2a192d972cf9ae0405777befd884.jpeg",
-    "totalCosts": 476,
+    "username": "karmantomi",
+    "fullName": "Tamás Kármán (karmantomi)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16374608/medium/d3d5ecee829046d4828052b3f37aa2e2.jpeg",
+    "totalCosts": 8,
+    "langs": [
+      "Hungarian"
+    ]
+  },
+  {
+    "username": "lethanhtung",
+    "fullName": "Thanh Tùng Lê (lethanhtung)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317232/medium/f081077da20f63484ac45eed21d9fab5.jpeg",
+    "totalCosts": 660,
     "langs": [
       "Vietnamese"
     ]
   },
   {
-    "username": "ngthailinh00",
-    "fullName": "Thai linh Nguyễn (ngthailinh00)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16219232/medium/7d412a250492a3f9ca3694387a5d05ca.jpeg",
-    "totalCosts": 95,
+    "username": "distacrypto",
+    "fullName": "Thomas Di Stabile (distacrypto)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16315450/medium/87332a06f6d4e86e990c7769dbdaf006.png",
+    "totalCosts": 859,
+    "langs": [
+      "French",
+      "Spanish (Modern)"
+    ]
+  },
+  {
+    "username": "vtt2972005",
+    "fullName": "Thành Vũ (vtt2972005)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317216/medium/a54d69c6bb20833334775044bb1ccde3.png",
+    "totalCosts": 0,
     "langs": [
       "Vietnamese"
     ]
   },
   {
-    "username": "ycmyxx",
-    "fullName": "ThuanNguyen (ycmyxx)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16098474/medium/d50155dc23a524ef8a6a90188747c34f.png",
-    "totalCosts": 1046,
+    "username": "thaisonmcmv",
+    "fullName": "Thái Sơn (thaisonmcmv)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317218/medium/25c81d0470a5a696c7b0fbdd8e767050.jpeg",
+    "totalCosts": 97,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "buithinhh05",
+    "fullName": "Thịnh Bùi (buithinhh05)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320250/medium/325b036ee04dea595f09d3efc7b74b13.png",
+    "totalCosts": 25,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "thinhemon1",
+    "fullName": "Thịnh Nguyễn Hưng (thinhemon1)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320490/medium/03abe064df2cbbbbcae3a626b4c4cda6.png",
+    "totalCosts": 20,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "datnguyenk300work",
+    "fullName": "Tien Dat Nguyen (datnguyenk300work)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317278/medium/b89915dc6e4cf0d980dcc5edb13deec3.png",
+    "totalCosts": 61,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "Tomiborges",
+    "fullName": "Tomiborges",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16367398/medium/50a08ea001b6ef2aadcc4b4c4c949fc0.png",
+    "totalCosts": 0,
+    "langs": [
+      "Portuguese, Brazilian"
+    ]
+  },
+  {
+    "username": "SilkvamP",
+    "fullName": "Tommy R. (SilkvamP)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16364244/medium/e5c27a5fc0a5bdebebdf77274d59381c.jpeg",
+    "totalCosts": 68,
+    "langs": [
+      "Dutch"
+    ]
+  },
+  {
+    "username": "dotrungkien.kien",
+    "fullName": "Trung Kiên Đỗ (dotrungkien.kien)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317194/medium/fd4fa2290ec64d046f85d379f9711309.jpeg",
+    "totalCosts": 246,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "hieuskybaby",
+    "fullName": "Trọng Hiếu Lê (hieuskybaby)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320240/medium/02b5097ad4a26fa3b268520caa66fbe2.jpeg",
+    "totalCosts": 6,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "tuq5838",
+    "fullName": "Tu Quoc (tuq5838)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317248/medium/839ca32a792aa5ea7ea0b3b27e546268.png",
+    "totalCosts": 22,
     "langs": [
       "Vietnamese"
     ]
@@ -2317,606 +2619,739 @@
     "username": "ngo461596",
     "fullName": "Tuấn Ngô (ngo461596)",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14045960/medium/01a57dd06ba1a0e6203aff54f82e00f3.jpeg",
-    "totalCosts": 75,
+    "totalCosts": 12,
     "langs": [
       "Vietnamese"
     ]
   },
   {
-    "username": "tdtuan1702",
-    "fullName": "Tuấn Trần Anh (tdtuan1702)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16208126/medium/be0cbc0fa743eb3a6071bb5ae22d8f71.png",
-    "totalCosts": 285,
+    "username": "tamercuba",
+    "fullName": "Tâmer Pinheiro Cuba (tamercuba)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16331412/medium/6fe4bb0dda0b042991551a01f12c6647.jpeg",
+    "totalCosts": 1600,
     "langs": [
-      "Vietnamese"
+      "Portuguese, Brazilian"
     ]
   },
   {
-    "username": "kelreel",
-    "fullName": "Tyurin Kirill (kelreel)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16245810/medium/61d2750eec5417a17928c9931eb1fbca.jpeg",
-    "totalCosts": 28,
+    "username": "vahidyolme",
+    "fullName": "Vahid Yolme (vahidyolme)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16312854/medium/59bb121788a2cce1aea7a36a5a3fcddf.jpeg",
+    "totalCosts": 22,
+    "langs": [
+      "Persian"
+    ]
+  },
+  {
+    "username": "viktoshachezte",
+    "fullName": "Vika Che (viktoshachezte)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16313612/medium/0a97aef0360b8a3b915dba0d8bb85c73.png",
+    "totalCosts": 6,
     "langs": [
       "Russian"
-    ]
-  },
-  {
-    "username": "VBNR",
-    "fullName": "V BNR (VBNR)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16223548/medium/5180965174cf3cb16dce62588295b58a.png",
-    "totalCosts": 604,
-    "langs": [
-      "Dutch"
-    ]
-  },
-  {
-    "username": "pop4tune",
-    "fullName": "Vadim (pop4tune)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/12402801/medium/ff9c13daaef05f4ca90e2075aef1cf51_default.png",
-    "totalCosts": 0,
-    "langs": [
-      "Russian"
-    ]
-  },
-  {
-    "username": "aco_novatranslate",
-    "fullName": "Vladimir Angelov (aco_novatranslate)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15241608/medium/dfa20fade20b2314f45079d92687afee_default.png",
-    "totalCosts": 1427,
-    "langs": [
-      "Bulgarian"
     ]
   },
   {
     "username": "elec7reify",
     "fullName": "Vladislav Butnyk (elec7reify)",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15370334/medium/76e465cc7e7d20d661f6fcd995061cb7.jpg",
-    "totalCosts": 147,
+    "totalCosts": 45,
     "langs": [
       "Ukrainian"
     ]
   },
   {
-    "username": "Spanish_TR",
-    "fullName": "WL_ES_Translator (Spanish_TR)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13913559/medium/0447775371e46561bf7c657820a28d71_default.png",
-    "totalCosts": 2102,
+    "username": "orlovvladlen26",
+    "fullName": "Vladlen Orlov (orlovvladlen26)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16191898/medium/11b416e09078321ecd698a91bd9090b5.png",
+    "totalCosts": 196,
     "langs": [
-      "Galician"
+      "Russian"
     ]
   },
   {
-    "username": "waseemjala65",
-    "fullName": "Waseem JA (waseemjala65)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16304914/medium/10f65ab57ab94cf712cca6343a064c2f.png",
-    "totalCosts": 13,
+    "username": "minhbom141",
+    "fullName": "Vũ Minh (minhbom141)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16373356/medium/eb9e5a9498604bac1b558c4a72e9af40.png",
+    "totalCosts": 19,
     "langs": [
-      "Arabic"
+      "Vietnamese"
     ]
   },
   {
-    "username": "xavier.figuls",
-    "fullName": "Xavier Fíguls (xavier.figuls)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16291550/medium/c7575f83289b1357bfda21165030822f_default.png",
-    "totalCosts": 43,
+    "username": "linhvtt.12bhla",
+    "fullName": "Vũ Thị Thuỳ Linh (linhvtt.12bhla)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317228/medium/1bbdec9976052b45370dc9583bf05ae1.jpeg",
+    "totalCosts": 73,
     "langs": [
-      "Catalan"
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "Varadiell",
+    "fullName": "William SIMON VEZO (Varadiell)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16351376/medium/1dedcace4f1f17b6713fb41b8b4db778.png",
+    "totalCosts": 855,
+    "langs": [
+      "French"
     ]
   },
   {
     "username": "XofEE",
     "fullName": "XofEE",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15954931/medium/7254d648c451b822632980e5bfcb61fa.png",
-    "totalCosts": 182,
+    "totalCosts": 4740,
     "langs": [
       "French"
     ]
   },
   {
-    "username": "Yahiaaaay",
-    "fullName": "Yahiaaaay",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16296096/medium/18ed10fe1d0d99b288eeda8d50a4af7c.png",
-    "totalCosts": 55,
-    "langs": [
-      "Turkish"
-    ]
-  },
-  {
-    "username": "Mindy00",
-    "fullName": "Yamin Li (Mindy00)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16105472/medium/e3c4ba4f35bd3c3e5bc13053976cd282.png",
-    "totalCosts": 41,
+    "username": "tzbkk",
+    "fullName": "Xue Haolin (tzbkk)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15381970/medium/b43b331e365346453668db293656f269.jpeg",
+    "totalCosts": 1073,
     "langs": [
       "Chinese Simplified"
     ]
   },
   {
-    "username": "YuTu",
-    "fullName": "Yurii (YuTu)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16238420/medium/374374461ac40306c4bb73baf3ea07e4.png",
-    "totalCosts": 2053,
+    "username": "xuploxanh38",
+    "fullName": "Xuploxanh (xuploxanh38)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317260/medium/e8560fba44e796f4a0e89970d0945495_default.png",
+    "totalCosts": 15,
     "langs": [
-      "Ukrainian"
+      "Vietnamese"
     ]
   },
   {
-    "username": "ztom",
-    "fullName": "Zhi Hern Tom (ztom)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16275174/medium/f5351b2c235eb5b5141fce6e3fe77df8.png",
-    "totalCosts": 63,
+    "username": "thanhyprofile",
+    "fullName": "Y Thanh (thanhyprofile)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16319016/medium/a2bb7cf0472ee9fb45a7f13f884cd7e7.jpeg",
+    "totalCosts": 0,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "bangyoyono.1",
+    "fullName": "YoYo Bằng (bangyoyono.1)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16344048/medium/d7bc92c4b49324bafb037dbccb5e6662.jpeg",
+    "totalCosts": 14,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "yulduzabdusalomova107",
+    "fullName": "Yulduz Abdusalomova (yulduzabdusalomova107)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16340256/medium/80b6b3384b2593bfe6b77eb6484159b7.png",
+    "totalCosts": 1,
+    "langs": [
+      "Uzbek"
+    ]
+  },
+  {
+    "username": "unic001",
+    "fullName": "Yunique Unic (unic001)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16365268/medium/3f9ff285d0ac931ed30b71d7c8f9d16a.png",
+    "totalCosts": 11,
+    "langs": [
+      "Japanese",
+      "Chinese Traditional"
+    ]
+  },
+  {
+    "username": "zaiehilmi",
+    "fullName": "Zaie Hilmi (zaiehilmi)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16080656/medium/4d265a9d5f0b127f5f274e136002effc.jpeg",
+    "totalCosts": 60,
     "langs": [
       "Malay"
     ]
   },
   {
-    "username": "zinyawehtet44444",
-    "fullName": "Zin Yawe Htet (zinyawehtet44444)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16215520/medium/84e0d55d5c9b1481ed34db9b8e486562.png",
-    "totalCosts": 27,
+    "username": "zakourjafaar934",
+    "fullName": "Zakour Jafaar (zakourjafaar934)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16368460/medium/f23b5280c7b9f64110dfe53e2b5cb8f9.jpeg",
+    "totalCosts": 0,
     "langs": [
-      "Burmese"
+      "Arabic"
     ]
   },
   {
-    "username": "akza00789",
-    "fullName": "aekmimi Channel (akza00789)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16274744/medium/0b8c19dedc742af7259c8c060ffb8937.jpeg",
-    "totalCosts": 18,
+    "username": "zeneiltongranja",
+    "fullName": "Zeneilton Granja (zeneiltongranja)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13615786/medium/a3e5faef0a6a6e884bd33a0d8cb7770a.png",
+    "totalCosts": 89,
+    "langs": [
+      "Portuguese, Brazilian"
+    ]
+  },
+  {
+    "username": "aeythy",
+    "fullName": "aeythy",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16302432/medium/adfc9b00e3763803d44008f66d8b8a1f.jpeg",
+    "totalCosts": 2083,
     "langs": [
       "Thai"
     ]
   },
   {
-    "username": "0xOZ",
-    "fullName": "ahmad abuzaid (0xOZ)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15930651/medium/b4738a8e10109842b168d657d53eeaec.jpeg",
-    "totalCosts": 16,
+    "username": "zxc05685",
+    "fullName": "ai mmh (zxc05685)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16349392/medium/ce32674063dc81133175fefa6e9a1f62.png",
+    "totalCosts": 100,
     "langs": [
       "Arabic"
     ]
   },
   {
-    "username": "gmalasma95",
-    "fullName": "asma gmal (gmalasma95)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16188542/medium/ef7869f44e3c495d0207aff5d99e9d05.png",
-    "totalCosts": 430,
+    "username": "siteiujuly17",
+    "fullName": "an nguyen (siteiujuly17)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16341870/medium/f73f7d651d2387699a0232ca0f015caa.jpeg",
+    "totalCosts": 58,
     "langs": [
-      "Arabic"
-    ]
-  },
-  {
-    "username": "aysha8665",
-    "fullName": "aysha8665",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16265308/medium/8a227fff96f2c14d0cffeba3d20e9763.jpeg",
-    "totalCosts": 1443,
-    "langs": [
-      "Persian"
-    ]
-  },
-  {
-    "username": "bianc8",
-    "fullName": "bianc8.eth (bianc8)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16171038/medium/d0bf697b97124361ae9caa68aab37fa9.jpeg",
-    "totalCosts": 90,
-    "langs": [
-      "Italian"
+      "Vietnamese"
     ]
   },
   {
     "username": "callmebor",
     "fullName": "callmebor",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/12476641/medium/f85eea323b30f674e7ce9dfd262d1011_default.png",
-    "totalCosts": 114,
+    "totalCosts": 0,
     "langs": [
       "Belarusian"
     ]
   },
   {
-    "username": "zhangshichun",
-    "fullName": "chun-ge (zhangshichun)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16302070/medium/71d16e89c1be6c482759c19c804f5aca.png",
-    "totalCosts": 22,
+    "username": "calvin121546",
+    "fullName": "calvin Ar (calvin121546)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16321876/medium/9265b13ab3e756b7679ae6810e684432.png",
+    "totalCosts": 0,
+    "langs": [
+      "Chinese Traditional"
+    ]
+  },
+  {
+    "username": "chee.chee2806",
+    "fullName": "chee nq (chee.chee2806)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317270/medium/24d09f5418b3df2fe7aab4d62cda1111.png",
+    "totalCosts": 1,
+    "langs": [
+      "Vietnamese"
+    ]
+  },
+  {
+    "username": "danielCalbonero12345",
+    "fullName": "danielCalbonero12345",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16348938/medium/fbf6fc461e5cb2684d936fab22b19dc4.png",
+    "totalCosts": 38,
+    "langs": [
+      "Filipino"
+    ]
+  },
+  {
+    "username": "laftehzero",
+    "fullName": "falcon (laftehzero)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16347610/medium/20dd486c6aab3f923ae67c0ace3830b1.jpeg",
+    "totalCosts": 55,
+    "langs": [
+      "Persian"
+    ]
+  },
+  {
+    "username": "sigurn7979",
+    "fullName": "flag james (sigurn7979)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16434161/medium/16ec60bfd28debb24466fad57a2c70b6.png",
+    "totalCosts": 28,
     "langs": [
       "Chinese Simplified"
     ]
   },
   {
-    "username": "cmpdchtr",
-    "fullName": "cmpdchtr",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16250056/medium/734ba22791f637395446ceed93114660.png",
-    "totalCosts": 0,
+    "username": "flooklnw.24992499",
+    "fullName": "flook lnw (flooklnw.24992499)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16081670/medium/dff370ea481c587696e7b973abda4fd9.jpeg",
+    "totalCosts": 220,
     "langs": [
-      "Ukrainian"
+      "Thai"
     ]
   },
   {
-    "username": "cypherspeare",
-    "fullName": "cypherspeare",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16250850/medium/480291b49040c2f171136ee44cb20391.png",
-    "totalCosts": 1728,
-    "langs": [
-      "Slovak"
-    ]
-  },
-  {
-    "username": "elsisi33",
-    "fullName": "elsisi33",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16301654/medium/3438475ab55b0b46c067dba9e58e4749.png",
-    "totalCosts": 9,
-    "langs": [
-      "Polish",
-      "Yoruba"
-    ]
-  },
-  {
-    "username": "seoh",
-    "fullName": "eth.seoh (seoh)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15087917/medium/436328b66c11b44622caf9b3de1c4ef0_default.png",
-    "totalCosts": 317,
-    "langs": [
-      "Korean"
-    ]
-  },
-  {
-    "username": "fynnluka22",
-    "fullName": "fynnlukahrblx (fynnluka22)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16244738/medium/1cde8d423dd73e4af9e6d55adb021aa5.jpeg",
-    "totalCosts": 77,
-    "langs": [
-      "German"
-    ]
-  },
-  {
-    "username": "ihabhamed",
-    "fullName": "ihabhamed",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16031264/medium/b1b2ecbce08c22555b6089b25ef0482f.jpeg",
-    "totalCosts": 677,
+    "username": "hdmed",
+    "fullName": "hdmed.dev (hdmed)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13324494/medium/e15dc911ade7cf545aeb847438d6742c.jpeg",
+    "totalCosts": 7,
     "langs": [
       "Arabic"
     ]
   },
   {
-    "username": "koaungaungthu7",
-    "fullName": "ko Aung Thu (koaungaungthu7)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16235908/medium/13faf25d0fb9374b481abab8b6bddff3.jpeg",
-    "totalCosts": 208,
+    "username": "hosinomrani422",
+    "fullName": "hosin omrani (hosinomrani422)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16322428/medium/f6948044e11b92b4cde70e8c1ed7e3e3.png",
+    "totalCosts": 46,
     "langs": [
-      "Burmese"
+      "Persian"
+    ]
+  },
+  {
+    "username": "gallejnthn",
+    "fullName": "jo nathan (gallejnthn)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16359296/medium/7d7507c6bcb9b3c560a92f51c6cbb476.jpeg",
+    "totalCosts": 220,
+    "langs": [
+      "Indonesian"
+    ]
+  },
+  {
+    "username": "kayeetanso",
+    "fullName": "kayeru etanso (kayeetanso)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16307012/medium/3541aa21b72a83c3893b60b99ca2f866.jpeg",
+    "totalCosts": 18,
+    "langs": [
+      "Amharic"
+    ]
+  },
+  {
+    "username": "Daride",
+    "fullName": "khakhula daryna (Daride)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15824933/medium/9537e45abd1b689484969991849572a9_default.png",
+    "totalCosts": 9738,
+    "langs": [
+      "Ukrainian"
+    ]
+  },
+  {
+    "username": "kongtaoxing",
+    "fullName": "kongtaoxing",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16358960/medium/b20762c5b650f3ef1871a37f0e324547.png",
+    "totalCosts": 155,
+    "langs": [
+      "Chinese Simplified"
     ]
   },
   {
     "username": "lja0207",
     "fullName": "lja0207",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16254604/medium/fb499391a046c43dcb2260028458a6d4.jpeg",
-    "totalCosts": 42,
+    "totalCosts": 134,
     "langs": [
-      "Korean",
-      "Armenian"
+      "Korean"
     ]
   },
   {
-    "username": "martinmarkus1234",
-    "fullName": "martin marks (martinmarkus1234)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16189656/medium/f885ad36fff3b6c190725f88f62b5fb8.jpeg",
-    "totalCosts": 6,
+    "username": "mateusz265432",
+    "fullName": "mateusz sulikowski (mateusz265432)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15514702/medium/8066556099a46e9c9c13eb743b78c915.jpeg",
+    "totalCosts": 117,
     "langs": [
-      "Slovak",
-      "Nigerian Pidgin"
+      "Polish"
+    ]
+  },
+  {
+    "username": "nihongodeoke",
+    "fullName": "me (nihongodeoke)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15647313/medium/507fc5fd4d96785c2603c6f38ab61819.png",
+    "totalCosts": 0,
+    "langs": [
+      "Japanese"
+    ]
+  },
+  {
+    "username": "misikir",
+    "fullName": "misikir Mindaye Melaku (misikir)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16322622/medium/ce3c67311834dae8d90dcfa73d1edc7a.png",
+    "totalCosts": 3,
+    "langs": [
+      "Amharic"
+    ]
+  },
+  {
+    "username": "miyamok",
+    "fullName": "miyamok",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15680077/medium/abb3d1d999f2ccd196d0c81aec7a8e69_default.png",
+    "totalCosts": 47,
+    "langs": [
+      "Japanese"
+    ]
+  },
+  {
+    "username": "manhung31122004",
+    "fullName": "mạnh hùng (manhung31122004)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320352/medium/eb2cc6e0f4cd9acfb30f98081e1853b1.png",
+    "totalCosts": 32,
+    "langs": [
+      "Vietnamese"
     ]
   },
   {
     "username": "naiba3434",
     "fullName": "naiba quliyeva (naiba3434)",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15363186/medium/d4f4865f0038539de56219781b308488.jpeg",
-    "totalCosts": 35,
+    "totalCosts": 204,
     "langs": [
-      "Turkish",
-      "Italian"
+      "Turkish"
     ]
   },
   {
-    "username": "navelorange1999",
-    "fullName": "navelorange1999",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15144274/medium/592d795c7eb06457ed47372ce13ec5aa.png",
-    "totalCosts": 6,
+    "username": "nsnl-coder",
+    "fullName": "nsnl-coder",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16333432/medium/52f501b4aad9279ea54e55a543735f5a.png",
+    "totalCosts": 3371,
     "langs": [
-      "Chinese Simplified"
+      "Vietnamese"
     ]
   },
   {
     "username": "omahs",
     "fullName": "omahs",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14823260/medium/2e90039ed53752ac5277c9cf4fce6fe7.jpeg",
-    "totalCosts": 1037,
+    "totalCosts": 13,
     "langs": [
       "French"
     ]
   },
   {
-    "username": "zigbalthazar",
-    "fullName": "pouya (zigbalthazar)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16273232/medium/6ec63afef69e8489d8da4950687bb2f3.jpeg",
-    "totalCosts": 18,
+    "username": "amaramtamar80",
+    "fullName": "omar Hilmy (amaramtamar80)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16373620/medium/06e8fd594573a9aa2507c305596b7562.jpeg",
+    "totalCosts": 41,
     "langs": [
-      "Persian"
+      "Basque",
+      "Arabic"
     ]
   },
   {
-    "username": "rianchain",
-    "fullName": "rianzi hasan albana  (rianchain)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16251160/medium/26d629279417cf8f3001bbb5d5b51e7d.png",
-    "totalCosts": 1075,
+    "username": "plebbitor",
+    "fullName": "plebbitor",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16321330/medium/e21cb77bff156bea5e29c3a9f94c01c1.png",
+    "totalCosts": 22,
     "langs": [
-      "Indonesian"
+      "Turkish"
+    ]
+  },
+  {
+    "username": "johwy",
+    "fullName": "polo striker (johwy)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16341944/medium/8a916f77d0e76380176e4237af8e6ed4.png",
+    "totalCosts": 694,
+    "langs": [
+      "Kazakh"
+    ]
+  },
+  {
+    "username": "rorosanjpr8886",
+    "fullName": "pory moni (rorosanjpr8886)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16303354/medium/7ddd0b97faa073b52a394abb80db55cd.png",
+    "totalCosts": 0,
+    "langs": [
+      "Afrikaans"
+    ]
+  },
+  {
+    "username": "qihang",
+    "fullName": "qihangq (qihang)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16363412/medium/07eb60af6a5870fe0ed23ef6f5306639.png",
+    "totalCosts": 0,
+    "langs": [
+      "Chinese Simplified"
+    ]
+  },
+  {
+    "username": "popins345",
+    "fullName": "sematary Mountain (popins345)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16336786/medium/e894cd43dafb7ff09e423e1fd5352470.jpeg",
+    "totalCosts": 42,
+    "langs": [
+      "Russian"
+    ]
+  },
+  {
+    "username": "dadsetan1382",
+    "fullName": "sina dadsetn (dadsetan1382)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14851078/medium/fbfe8a853ae6eb7878c348147282e1c4.png",
+    "totalCosts": 37,
+    "langs": [
+      "Persian"
     ]
   },
   {
     "username": "smaeili",
     "fullName": "smaeili",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16232368/medium/b9d94f965b0462ae42a3f4b939a06320.png",
-    "totalCosts": 11,
+    "totalCosts": 43,
     "langs": [
       "Persian"
     ]
   },
   {
-    "username": "thetoos659",
-    "fullName": "soe thet oo (thetoos659)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16300158/medium/e4586ac8dc10bed04a4f3383c74b80c9.png",
-    "totalCosts": 26,
-    "langs": [
-      "Burmese"
-    ]
-  },
-  {
-    "username": "the2g2",
-    "fullName": "the2g2",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16216082/medium/ffa61771ba1a56acf195dd933b50fdbc.png",
+    "username": "tayobus",
+    "fullName": "tayobus",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16379056/medium/7c9b4e0be7349cafaf0c56a5365244c3.png",
     "totalCosts": 38,
     "langs": [
-      "Ukrainian"
+      "Korean"
     ]
   },
   {
-    "username": "watch237",
-    "fullName": "watch237",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16184854/medium/f01c0208df42c8b72cd7aecb74b44069.png",
-    "totalCosts": 13,
+    "username": "thanhnho2k1",
+    "fullName": "thanhnho2k1",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16316654/medium/9b6d28a20d1ff36c80c0cc58b83a70ab.png",
+    "totalCosts": 22,
     "langs": [
-      "Thai"
+      "Vietnamese"
     ]
   },
   {
-    "username": "awaqawaqawaq",
-    "fullName": "why w (awaqawaqawaq)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16305066/medium/febb7c36c1e23a133cc7a9ed3718af9e.jpeg",
-    "totalCosts": 7,
+    "username": "tiaangt2",
+    "fullName": "tiaan labuschagne (tiaangt2)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16421380/medium/d2eaab49c3732324c2553872e59fef20.png",
+    "totalCosts": 0,
     "langs": [
-      "Chinese Simplified"
+      "Afrikaans"
     ]
   },
   {
     "username": "wosek_",
     "fullName": "wosek_",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15894449/medium/a1d92e3a822252a09f842a8a5451c403.jpg",
-    "totalCosts": 1049,
+    "totalCosts": 2924,
     "langs": [
       "Polish"
+    ]
+  },
+  {
+    "username": "bongan_ha",
+    "fullName": "xand3r.eth from noox.world (bongan_ha)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14573254/medium/773c295520aef8f47008a8814c52e644.jpg",
+    "totalCosts": 1,
+    "langs": [
+      "Korean"
     ]
   },
   {
     "username": "Xeift",
     "fullName": "xeift.eth (Xeift)",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15399006/medium/4b4638642287027a89529ecb11074e44.png",
-    "totalCosts": 5725,
+    "totalCosts": 5214,
     "langs": [
       "Chinese Traditional"
     ]
   },
   {
-    "username": "yahya350",
-    "fullName": "yahya Alsaleh (yahya350)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16214176/medium/bc2e17984b6c8293775d8924975de192_default.png",
-    "totalCosts": 1,
+    "username": "trananh22052005",
+    "fullName": "Ánh Ánh (trananh22052005)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16317182/medium/49c7c7002c9e3e95cd527131886a86b8.jpeg",
+    "totalCosts": 332,
     "langs": [
-      "Arabic"
+      "Vietnamese"
     ]
   },
   {
-    "username": "islekcaganmert",
-    "fullName": "Çağan Mert İŞLEK (islekcaganmert)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16283642/medium/67028a64bc9d6fb05a3c06da84e1d1ab.png",
-    "totalCosts": 190,
+    "username": "duydong02012004",
+    "fullName": "Đông Lại (duydong02012004)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16320252/medium/88e0517f3af4ecd72810dd0790b2e036.png",
+    "totalCosts": 30,
     "langs": [
-      "Turkish"
+      "Vietnamese"
     ]
   },
   {
-    "username": "usluiso78",
-    "fullName": "İsmail Uslu (usluiso78)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16200138/medium/4d9aa84bf1f98df0cce6d482d96198f8.jpeg",
-    "totalCosts": 0,
+    "username": "RotRot512",
+    "fullName": "Đội Trưởng Mỹ (RotRot512)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16340098/medium/f9a6aab90730b98f2be5cac13b083333.jpg",
+    "totalCosts": 46,
     "langs": [
-      "Turkish"
+      "Vietnamese"
     ]
   },
   {
-    "username": "Zel",
-    "fullName": "Željko Skroza (Zel)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16254686/medium/e825412d69ebd6722d8a5e50a0d0eb79.jpeg",
-    "totalCosts": 26,
+    "username": "sarunas.andrijauskas",
+    "fullName": "Šarūnas Andrijauskas (sarunas.andrijauskas)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16368772/medium/b97636b0229c830ab74c0297f2242b16.png",
+    "totalCosts": 2,
     "langs": [
-      "Croatian"
+      "Lithuanian"
     ]
   },
   {
-    "username": "sebastiancaushi69",
-    "fullName": "ΣΕΜΠΑΣΤΙΑΝ ΤΣΑΟΥΣΗ (ACLEAN MANAGMENT) (sebastiancaushi69)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16271390/medium/2c96e128791fdf9249bfbd2e8fd603d7.png",
-    "totalCosts": 249,
-    "langs": [
-      "Albanian"
-    ]
-  },
-  {
-    "username": "pyotrbrazovsky",
-    "fullName": "Пётр Бразовский (pyotrbrazovsky)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16261068/medium/8dcd5fd20e8a037c2cd6548a968d7e17.png",
-    "totalCosts": 57,
+    "username": "Tatarin20",
+    "fullName": "Айнур Галиуллин (Tatarin20)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16383830/medium/6c9bc2b28d182bdd47de4e9bc80cd1cc.png",
+    "totalCosts": 58,
     "langs": [
       "Russian"
     ]
   },
   {
-    "username": "volodimirovicroman56",
-    "fullName": "Роман Володимирович (volodimirovicroman56)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16205966/medium/956a4e36876d59c19e429dd36d5373dc.png",
-    "totalCosts": 1,
+    "username": "jeltokjarvalqq",
+    "fullName": "Андрей Андрей (jeltokjarvalqq)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16378640/medium/eda4e3dd263eaeb80799aab9f444a094.png",
+    "totalCosts": 853,
+    "langs": [
+      "Russian"
+    ]
+  },
+  {
+    "username": "lev03022016",
+    "fullName": "Вячеслав Стефанов-Слободян (lev03022016)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16334866/medium/5652c4c3196773ccfa4fb6ce6c208315.jpeg",
+    "totalCosts": 29,
+    "langs": [
+      "Armenian"
+    ]
+  },
+  {
+    "username": "grek95grek",
+    "fullName": "Дмитрий Гречка (grek95grek)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16363840/medium/a945201637403057a284400c92dcc9b6.jpeg",
+    "totalCosts": 710,
+    "langs": [
+      "Russian"
+    ]
+  },
+  {
+    "username": "gogid70",
+    "fullName": "Дмитрий Ильин (gogid70)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16319178/medium/dd620ebfb031969be6300a0577f764c9.jpeg",
+    "totalCosts": 144,
+    "langs": [
+      "Russian"
+    ]
+  },
+  {
+    "username": "hotr1pak",
+    "fullName": "Дмитро Маркевич (hotr1pak)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15473664/medium/3a3252bf9769d99be4ca6d1b94dbb91f.jpg",
+    "totalCosts": 2841,
     "langs": [
       "Ukrainian"
     ]
   },
   {
-    "username": "smox555",
-    "fullName": "أبو حنين العالمي (smox555)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15780005/medium/4ffc686ca5902ad1257133ea55ffe06f.jpeg",
-    "totalCosts": 1,
+    "username": "markku4umov",
+    "fullName": "Марк Кучумов (markku4umov)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16378434/medium/097ad73ebb58a1228c67e8cbfdee697c.png",
+    "totalCosts": 199,
+    "langs": [
+      "Russian"
+    ]
+  },
+  {
+    "username": "colorage503",
+    "fullName": "Сергей Пехтерев (colorage503)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13587927/medium/e9d581f3aee00e482ae4f8bb0164004d.jpg",
+    "totalCosts": 9,
+    "langs": [
+      "Belarusian"
+    ]
+  },
+  {
+    "username": "87054296843nik",
+    "fullName": "николай брух (87054296843nik)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16392580/medium/a9e3f10533bfe1efb23d2738185416f5.png",
+    "totalCosts": 6,
+    "langs": [
+      "Russian"
+    ]
+  },
+  {
+    "username": "hsam20587",
+    "fullName": "حسام محمد (hsam20587)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16359856/medium/661d9376a4e84dae8a18a1837e8adcbf.jpeg",
+    "totalCosts": 12,
     "langs": [
       "Arabic"
     ]
   },
   {
-    "username": "jkiswani98",
-    "fullName": "جهاد المحيسن (jkiswani98)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16186246/medium/faf8a9d9a378628fdd31be6891e83649.jpeg",
-    "totalCosts": 0,
+    "username": "lmhmwdlbdallhrshydt",
+    "fullName": "رشيدة لمحمود لعبدالله (lmhmwdlbdallhrshydt)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16352206/medium/77e5068376f34a630abff58462b70d42.png",
+    "totalCosts": 71,
     "langs": [
       "Arabic"
     ]
   },
   {
-    "username": "aassdd0561393313",
-    "fullName": "عبدالله حمود الاشموري (aassdd0561393313)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14669252/medium/5c81a06246b1a1a039adf0ae3e7ea440.jpeg",
-    "totalCosts": 8,
+    "username": "pzshknzhadsasan417",
+    "fullName": "ساسان پزشک نژاد (pzshknzhadsasan417)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16360052/medium/b1f63156a5b264972c3ca20beebb49e9.png",
+    "totalCosts": 48,
+    "langs": [
+      "Persian"
+    ]
+  },
+  {
+    "username": "knkamxs1989",
+    "fullName": "غاوي حبيب (knkamxs1989)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16269066/medium/68ff50dce9d1afa6e93d83514775e51c.jpeg",
+    "totalCosts": 11,
     "langs": [
       "Arabic"
     ]
   },
   {
-    "username": "mohsenafg278",
-    "fullName": "محسن امینی (mohsenafg278)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16237252/medium/1ae6e8e45960e00f1529e324c0679be6.png",
-    "totalCosts": 13,
-    "langs": [
-      "Dari"
-    ]
-  },
-  {
-    "username": "rayoma666",
-    "fullName": "ملاك ملاك (rayoma666)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16292034/medium/6b8d33727e5d5debd585aafea6640199.jpeg",
-    "totalCosts": 4,
-    "langs": [
-      "Arabic",
-      "Dutch"
-    ]
-  },
-  {
-    "username": "maissam",
-    "fullName": "ميسم mimi (maissam)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16223614/medium/b12570ae9e0b0075884f08d34da055e9.png",
-    "totalCosts": 19,
-    "langs": [
-      "Arabic"
-    ]
-  },
-  {
-    "username": "Stam098",
-    "fullName": "ฉัตรชัย แสงอรุณ (Stam098)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16209696/medium/c2196f4f4b6fcb9c766e6933895661b8.jpeg",
-    "totalCosts": 17,
-    "langs": [
-      "Thai"
-    ]
-  },
-  {
-    "username": "pearchhonthicha.pp",
-    "fullName": "ชลธิชา นาคีสังข์ (pearchhonthicha.pp)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16304138/medium/28cc620c67cbc728fcbc2c6d7bec4310.jpeg",
-    "totalCosts": 1,
-    "langs": [
-      "Thai"
-    ]
-  },
-  {
-    "username": "vhanzaa55",
-    "fullName": "ธวัชชัยโพธิพฤกษ์ พิษณุโลก (vhanzaa55)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/12668453/medium/4b4db9fb4dcae0cce53dcdb6fde18970_default.png",
-    "totalCosts": 33,
-    "langs": [
-      "Thai"
-    ]
-  },
-  {
-    "username": "ampon0001",
-    "fullName": "ราชัน ไร้พ่าย (ampon0001)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13321601/medium/a2377e18d8f5f8ab2cd630eeb13ae688.jpg",
-    "totalCosts": 401,
-    "langs": [
-      "Thai"
-    ]
-  },
-  {
-    "username": "wirasritheph71",
-    "fullName": "วีระ ศรีเทพ (wirasritheph71)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16205376/medium/f0635f86626fdcef8dda60f62327dbcb.jpeg",
-    "totalCosts": 33,
-    "langs": [
-      "Thai"
-    ]
-  },
-  {
-    "username": "Targoyle",
-    "fullName": "たーごいる (Targoyle)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16188900/medium/cadfd7c895983fe6efca39af068ff0e4.jpeg",
-    "totalCosts": 18,
-    "langs": [
-      "Japanese"
-    ]
-  },
-  {
-    "username": "mariyuka777",
-    "fullName": "日野琉 (mariyuka777)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16300540/medium/1c85cf834999c360b7c382ac1e65394f.jpeg",
-    "totalCosts": 4,
-    "langs": [
-      "Japanese"
-    ]
-  },
-  {
-    "username": "cy185210",
-    "fullName": "海盐（迷失于过去的未来） (cy185210)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16166796/medium/fb8eb88bf2533e6b95147d698877a690.png",
-    "totalCosts": 114,
+    "username": "haje",
+    "fullName": "مفقس حاجياوا (haje)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16344818/medium/77b9c8acfe1a0de6a85503c585841be1.jpeg",
+    "totalCosts": 43,
     "langs": [
       "Chinese Simplified"
     ]
   },
   {
-    "username": "aa039823",
-    "fullName": "白月朧 (aa039823)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16261206/medium/f3768a053878bd626866a1a8e07a11fa.png",
+    "username": "witthawat.n1992",
+    "fullName": "วิทวัส เกตุชมภู (witthawat.n1992)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16441047/medium/b157f217eec9b706a3e63e75b745e34e.jpeg",
+    "totalCosts": 27,
+    "langs": [
+      "Thai"
+    ]
+  },
+  {
+    "username": "liuyuecai1995",
+    "fullName": "刘月财 (liuyuecai1995)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15933027/medium/99261f8e757214d292279b08fb5338b4.png",
+    "totalCosts": 386,
+    "langs": [
+      "Chinese Traditional"
+    ]
+  },
+  {
+    "username": "LouisL.eth",
+    "fullName": "卢悦 (LouisL.eth)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15798829/medium/139d50d04c807048126d0e776db73a99.jpeg",
+    "totalCosts": 822,
+    "langs": [
+      "Chinese Simplified",
+      "Chinese Traditional"
+    ]
+  },
+  {
+    "username": "zxv677",
+    "fullName": "小翼 (zxv677)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16366520/medium/4911b682cd4d6dc189ba69a6e8175c7e.png",
     "totalCosts": 0,
+    "langs": [
+      "Albanian"
+    ]
+  },
+  {
+    "username": "mailmailooxx",
+    "fullName": "阿无奈 (mailmailooxx)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16359098/medium/7d417ed52bc3611c01b3c8800c02406d.png",
+    "totalCosts": 55,
     "langs": [
       "Chinese Simplified"
     ]
   },
   {
-    "username": "shseo80",
-    "fullName": "서신희 (shseo80)",
-    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16305434/medium/e36a53b231a61fce14401b8c348ae508.png",
-    "totalCosts": 8,
+    "username": "san030",
+    "fullName": "김진산 (san030)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16436539/medium/10eb43f137b06835ca3cf826353bcda1.jpeg",
+    "totalCosts": 165,
     "langs": [
       "Korean"
     ]
