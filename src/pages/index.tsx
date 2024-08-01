@@ -8,10 +8,9 @@ import { MdChevronRight } from "react-icons/md"
 import { RxExternalLink } from "react-icons/rx"
 import { Flex, Skeleton } from "@chakra-ui/react"
 
-import { AllMetricData, BasePageProps, Lang } from "@/lib/types"
+import type { AllMetricData, BasePageProps, Lang } from "@/lib/types"
 import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
-import BigNumber from "@/components/BigNumber"
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import Codeblock from "@/components/Codeblock"
 import CodeModal from "@/components/CodeModal"
@@ -28,6 +27,7 @@ import RoadmapSign from "@/components/icons/roadmap-sign.svg"
 import Whitepaper from "@/components/icons/whitepaper.svg"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
+import StatsBoxGrid from "@/components/StatsBoxGrid"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import WindowBox from "@/components/WindowBox"
@@ -163,8 +163,6 @@ const HomePage = ({
   // TODO: Remove when used
   console.log("Values to use:", {
     communityEvents,
-    metricResults,
-    codeExamples,
   })
 
   const SubHeroCTAs = [
@@ -255,7 +253,7 @@ const HomePage = ({
     .sort(
       (a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime()
     )
-    .slice(0, 3)
+    .slice(0, 3) // Show 3 events ending soonest
 
   return (
     <Flex
@@ -302,41 +300,7 @@ const HomePage = ({
             <p className="mt-8 text-xl font-bold">
               Activity from all Ethereum networks
             </p>
-            <div className="grid w-full grid-cols-1 xl:grid-cols-2">
-              {/* TODO: Plug in real data */}
-              <BigNumber
-                className="border-b border-body-light xl:border-e xl:pe-8"
-                value="$44.89B"
-                sourceName="Defi Llama"
-              >
-                Total value held on Ethereum
-              </BigNumber>
-
-              <BigNumber
-                className="border-b border-body-light xl:ps-8"
-                value="8.36M"
-                sourceName="Etherscan"
-                sourceUrl="https://etherscan.io/"
-              >
-                Transactions in the last 24h
-              </BigNumber>
-
-              <BigNumber
-                className="border-b border-body-light xl:border-b-0 xl:border-e xl:pe-8"
-                value="$0.01"
-              >
-                Average transaction cost
-              </BigNumber>
-
-              <BigNumber
-                className="xl:ps-8"
-                value="$115B"
-                sourceName="Dune Analytics"
-                sourceUrl="https://dune.xyz/"
-              >
-                Value protecting Ethereum
-              </BigNumber>
-            </div>
+            <StatsBoxGrid metricResults={metricResults} />
           </div>
         </HomeSection>
 
