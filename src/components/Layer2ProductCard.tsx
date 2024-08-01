@@ -99,7 +99,7 @@ const Layer2ProductCard = ({
         )}
       </Flex>
       <Box>
-        <ButtonLink m={2} to={url} display="flex">
+        <ButtonLink m={2} href={url} display="flex">
           {t("layer-2-explore")} {name}
         </ButtonLink>
       </Box>

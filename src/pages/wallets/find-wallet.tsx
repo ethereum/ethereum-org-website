@@ -15,7 +15,7 @@ import {
 
 import type { BasePageProps, ChildOnlyProp, Lang, Wallet } from "@/lib/types"
 
-import BannerNotification from "@/components/BannerNotification"
+import BannerNotification from "@/components/Banners/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { MobileFiltersMenu } from "@/components/FindWallet/MobileFiltersMenu"
 import WalletFilterPersona from "@/components/FindWallet/WalletFilterPersona"
@@ -120,7 +120,7 @@ const FindWalletPage = ({
     filteredWallets,
     updateMoreInfo,
     walletCardData,
-  } = useWalletTable({ filters, t, walletData: wallets })
+  } = useWalletTable({ filters, supportedLanguage, t, walletData: wallets })
 
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
@@ -174,7 +174,7 @@ const FindWalletPage = ({
           <Subtitle>{t("page-find-wallet-description")}</Subtitle>
           <Subtitle>
             {t("page-find-wallet-desc-2")}{" "}
-            <InlineLink to="/wallets">
+            <InlineLink href="/wallets">
               {t("page-find-wallet-desc-2-wallets-link")}
             </InlineLink>
           </Subtitle>

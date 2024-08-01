@@ -61,7 +61,7 @@ Las billeteras cambian rápidamente en Ethereum. Hemos intentado crear un marco 
 
 Si quiere agregar una billetera a ethereum.org, cree una incidencia en GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Crear una incidencia
 </ButtonLink>
 

@@ -2,7 +2,6 @@
 title: 以太坊管理體系
 description: 以太坊決策方式的簡介。
 lang: zh-tw
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # 以太坊管理體系的簡介 {#introduction}
@@ -33,7 +32,7 @@ _如果沒人擁有以太坊，如何針對以太坊過去和未來的變動，�
 
 _雖然以太坊管理體系在協定層級為鏈下，但許多建立在以太坊上的使用案例，例如去中心化自治組織，都使用鏈上管理體系。_
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   更多去中心化自治組織相關資訊
 </ButtonLink>
 
@@ -59,7 +58,7 @@ _注意：任何人都能參與多個組別，例如，協定開發者可以支�
 
 以太坊管理體系採用一個重要的流程，就是**以太坊改進提案 (EIP)**。 以太坊改進提案是規定以太坊潛在的新功能或流程的標準。 以太坊社群中的每一個人都能建立以太坊改進提案。 如果你有興趣編寫 以太坊改進提案或參與同儕審查和/或管理體系，請參閱：
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   更多以太坊改進提案相關資訊
 </ButtonLink>
 
@@ -155,7 +154,7 @@ _注意：任何人都能參與多個組別，例如，協定開發者可以支�
 
 2022 年 9 月 15 日，信標鏈與以太坊執行層完成合併，這項合併當時是[巴黎網路升級](/history/#paris)的一部分。 提案 [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) 從「最後召集」變成「最終確定」，轉變成權益證明機制。
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   合併案的相關細節
 </ButtonLink>
 

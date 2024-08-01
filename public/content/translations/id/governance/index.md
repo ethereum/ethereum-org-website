@@ -32,7 +32,7 @@ Pendekatan yang berlawanan dengan itu, tata kelola off-chain, adalah jika keputu
 
 _Sekalipun pada tingkat protokol tata kelola Ethereum bersifat off-chain, banyak kasus penggunaan yang dibangun di atas Ethereum, seperti DAO, menggunakan tata kelola on-chain._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Selengkapnya tentang DAOs
 </ButtonLink>
 
@@ -58,7 +58,7 @@ _Catatan: setiap individu bisa memiliki beberapa peran pada grup ini (misalnya s
 
 Salah satu proses penting yang digunakan dalam tata kelola Ethereum adalah proposal **Proposal Peningkatan Ethereum (EIP)**. EIP adalah standar yang menentukan fitur atau proses baru yang berpotensi untuk Ethereum. Siapa pun yang terlibat dalam komunitas Ethereum dapat membuat EIP. Jika Anda tertarik untuk menulis EIP atau berpartisipasi dalam peer-review dan/atau pemerintahan, lihat:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Selengkapnya tentang EIP
 </ButtonLink>
 
@@ -154,7 +154,7 @@ Meskipun spesifikasi dan implementasi pengembangan selalu bersifat open source, 
 
 Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum pada 15 September 2022, penggabungan tersebut selesai sebagai bagian dari [Peningkatan jaringan Paris](/history/#paris). Usulan [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) diubah dari status 'Last Call' menjadi 'Final', menyelesaikan transisi ke bukti taruhan.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Selengkapnya tentang penggabungan
 </ButtonLink>
 

@@ -33,7 +33,7 @@ const StakingCommunityCallout = (props: StakingCommunityCalloutProps) => {
               eventName: "clicked discord",
             })
           }}
-          to="https://discord.gg/ethstaker"
+          href="https://discord.gg/ethstaker"
           w={{ base: "full", md: "auto" }}
         >
           Discord
@@ -46,7 +46,7 @@ const StakingCommunityCallout = (props: StakingCommunityCalloutProps) => {
               eventName: "clicked reddit",
             })
           }}
-          to="https://reddit.com/r/ethstaker"
+          href="https://reddit.com/r/ethstaker"
           w={{ base: "full", md: "auto" }}
         >
           Reddit
@@ -59,7 +59,7 @@ const StakingCommunityCallout = (props: StakingCommunityCalloutProps) => {
               eventName: "clicked website",
             })
           }}
-          to="https://ethstaker.cc"
+          href="https://ethstaker.cc"
           w={{ base: "full", md: "auto" }}
         >
           {t("common:rollup-component-website")}

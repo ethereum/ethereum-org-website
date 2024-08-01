@@ -140,7 +140,7 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
             )}
             <Flex flexDirection="column" gap={2}>
               <ButtonLink
-                to="/discord/"
+                href="/discord/"
                 gap={2}
                 onClick={() => matomoEvent("discord")}
               >
@@ -149,7 +149,7 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
               </ButtonLink>
               {reversedUpcomingEventData[0] && (
                 <InlineLink
-                  to={reversedUpcomingEventData[0].calendarLink}
+                  href={reversedUpcomingEventData[0].calendarLink}
                   onClick={() => matomoEvent("Add to calendar")}
                   fontWeight={700}
                 >

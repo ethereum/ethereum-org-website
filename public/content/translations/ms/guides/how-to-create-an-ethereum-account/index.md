@@ -14,7 +14,7 @@ Berbeza daripada membuka akaun baharu dengan syarikat, penciptaan akaun Ethereum
 
 Dompet ialah aplikasi yang membantu anda mengurus akaun Ethereum anda. Ia menggunakan kunci anda untuk menghantar dan menerima transaksi serta mendaftar masuk ke aplikasi. Terdapat beberapa dozen jenis dompet yang boleh dipilih—mudah alih, desktop, atau malah sambungan pelayar.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Cari dompet
 </ButtonLink>
 
@@ -42,7 +42,7 @@ Setelah anda menyimpan frasa benih anda, anda sepatutnya melihat papan pemuka do
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Mahu belajar lebih lanjut?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Lihat panduan-panduan lain kami
   </ButtonLink>
 </InfoBanner>

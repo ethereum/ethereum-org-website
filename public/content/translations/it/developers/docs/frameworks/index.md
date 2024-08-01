@@ -29,7 +29,7 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [Chat della community di Foundry su Telegram](https://t.me/foundry_support)
 - [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
-**Hardhat:** **_ambiente di sviluppo Ethereum per professionisti_**
+**Hardhat:** **_ ambiente di sviluppo Ethereum per professionisti_**
 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
@@ -44,6 +44,12 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [Home page](https://www.web3labs.com/web3j-sdk)
 - [Documentazione](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
+
+**ethers-kt -** **_Libreria asincrona e ad alte prestazioni per Kotlin/Java/Android per le blockchain basate sull'EVM._**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Esempi](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
 
 **Create Eth App -** **_Crea app per Ethereum con un comando. Offre una vasta scelta di framework per l'interfaccia utente e modelli DeFI tra cui scegliere._**
 
@@ -68,7 +74,7 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.com/invite/A39JVCM)
+- [Discord](https://discord.com/invite/alchemyplatform)
 
 **NodeReal -** **_Piattaforma di sviluppo per Ethereum._**
 
@@ -86,6 +92,12 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [chainstack.com](https://www.chainstack.com/)
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
+
+**Crossmint -** **_Piattaforma di sviluppo Web3 per imprese che ti consente di creare applicazioni NFT su tutte le principali catene EVM (e non solo)._**
+
+- [Sito Web](https://www.crossmint.com)
+- [Documentazione](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
 
 **Brownie -** **_ Ambiente di sviluppo e framework per il test basati su Python _**
 
@@ -105,6 +117,19 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Forum della community](https://forum.openzeppelin.com/c/support/17)
 - **Lo sviluppo di OpenZeppelin SDK è terminato**
+
+**Catapulta -** **_Strumento di distribuzione di contratti intelligenti multi-catena, automatizza le verifiche negli esploratori dei blocchi, tiene traccia dei contratti intelligenti distribuiti e condivide i rapporti di distribuzione; pronto all'uso per i progetti di Foundry e Hardhat._**
+
+- [Sito Web](https://catapulta.sh/)
+- [Documentazione](https://catapulta.sh/docs)
+- [Github](https://github.com/catapulta-sh)
+
+**Wake -** **_Assetto completo di Python per testare i contratti, fuzzing, distribuzione, scansione delle vulnerabilità e navigazione del codice_**
+
+- [Home page](https://getwake.io/)
+- [Documentazione](https://ackeeblockchain.com/wake/docs/latest/)
+- [GitHub](https://github.com/Ackee-Blockchain/wake)
+- [Estensione del codice VS](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
 ## Letture consigliate {#further-reading}
 

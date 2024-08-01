@@ -106,3 +106,4 @@ lang: ja
 
 - [マイニング](/developers/docs/consensus-mechanisms/pow/mining/)
 - [プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)
+- [プルーフ・オブ・オーソリティ](/developers/docs/consensus-mechanisms/poa/)

@@ -6,7 +6,7 @@ This documentation outlines our current processes for how we prioritize items in
 
 ### General review process
 
-We use a first-in, first-out system for reviewing pull requests. The longer a pull request has been open, the higher the priority it is for our team to review. In some cases—for example, fixing a high-priority issue or merging low-hanging fruit for a deploy—we will stray from this process and use our best judgement to get higher-impact changes deployed more quickly.
+We use a first-in, first-out system for reviewing pull requests. The longer a pull request has been open, the higher the priority it is for our team to review. In some cases—for example, fixing a high-priority issue or merging low-hanging fruit for a deploy—we will stray from this process and use our best judgment to get higher-impact changes deployed more quickly.
 
 We aim to have every new PR reviewed with change requests, merged, or closed within 30 days of opening. As outlined in the following sections, different types of pull requests do have different levels of priority, and this may influence how promptly a pull request is acted on.
 

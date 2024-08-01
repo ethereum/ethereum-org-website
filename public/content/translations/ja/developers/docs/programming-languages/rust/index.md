@@ -51,6 +51,7 @@ incomplete: true
 - [SewUp](https://github.com/second-state/SewUp) - _Rustを使用したイーサリアムWebAssemblyコントラクトの構築と、一般的なバックエンドと同様の開発をサポートするライブラリ_
 - [Substreams](https://github.com/streamingfast/substreams) - _並列化ブロックチェーンデータインデックス技術_
 - [Reth](https://github.com/paradigmxyz/reth)Reth(Rust Ethereumの略称)は、新しいイーサリアムのフルノード実装
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Rustで書かれたイーサリアム・エコシステム・プロジェクトの厳選コレクション_
 
 もっとリソースをお探しですか？ [ethereum.org/developers](/developers/)をご確認ください。
 

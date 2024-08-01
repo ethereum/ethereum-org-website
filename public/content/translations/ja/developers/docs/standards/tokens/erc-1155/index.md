@@ -143,4 +143,4 @@ _注記_：フックを含むすべてのバッチ関数は、バッチ処理で
 - [ERC-1155：マルチトークン規格](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155：Openzeppelinのドキュメンテーション](https://docs.openzeppelin.com/contracts/3.x/erc1155)
 - [ERC-1155：Githubリポジトリ](https://github.com/enjin/erc-1155)
-- [AlchemyのNFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
+- [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

@@ -64,7 +64,7 @@ Su dirección será la misma en todos los proyectos de Ethereum. No tiene que re
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>¿Quiere saber más?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Consulte nuestras demás guias
   </ButtonLink>
 </InfoBanner>

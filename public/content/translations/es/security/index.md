@@ -110,11 +110,11 @@ Las extensiones del navegador como las extensiones Chrome o los complementos par
 
 Una de las razones más importantes por las que se sufren estafas con las criptomonedas suele ser la falta de conocimientos. Por ejemplo, si no entiende que la red Ethereum está descentralizada y no es propiedad de nadie, entonces es fácil ser víctima de alguien que pretende ser un operador de Atención al cliente que promete devolverle su ETH perdido a cambio de sus claves privadas. Vale la pena dedicar tiempo a conocer el funcionamiento de Ethereum.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   ¿Qué es Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   ¿Qué es el ether?
 </DocLink>
 <Divider />
@@ -127,7 +127,7 @@ Una de las razones más importantes por las que se sufren estafas con las cripto
 
 La clave privada de su billetera actúa como una contraseña para su billetera de Ethereum. ¡Es lo único que impide que alguien que conozca la dirección de su billetera saque todos los activos de su cuenta!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   ¿Qué es una cartera de Ethereum?
 </DocLink>
 

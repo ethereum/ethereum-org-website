@@ -15,9 +15,8 @@ async function main() {
   const projectId = Number(process.env.CROWDIN_PROJECT_ID) || 363359
 
   try {
-    const listProjectBuilds = await crowdin.translationsApi.listProjectBuilds(
-      projectId
-    )
+    const listProjectBuilds =
+      await crowdin.translationsApi.listProjectBuilds(projectId)
 
     const latestId = listProjectBuilds.data
       .filter(({ data }) => data.status === "finished")

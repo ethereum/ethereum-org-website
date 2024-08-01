@@ -66,16 +66,24 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
 - [**Tutti quei nodi**](https://allthatnode.com/)
   - [Documentazione](https://docs.allthatnode.com/)
   - Caratteristiche
-    - Principale livello gratuito con 150.000 richieste giornaliere
-    - Accesso a oltre 24 nodi della blockchain
-    - Endpoint RPC, HTTPS e WSS
-    - Accesso illimitato ai dati di archivio
-    - Supporto 24/7 e tempi di disponibilità fino al 99,9%
+    - 50.000 richieste al giorno con il livello gratuito
+    - Supporto per oltre 40 protocolli
+    - API di JSON-RPC (EVM, Tendermint), REST e Websocket supportate
+    - Accesso illimitato per archiviare dati
+    - Supporto tecnico 24/7 e 99,9% di tempo d'attività
     - Faucet disponibile su diverse chain
-    - Accesso endpoint illimitato con un numero illimitato di chiavi API
-    - Spazio dei nomi Trace/Debug disponibile
+    - Accesso illimitato all'endpoint con un numero illimitato di chiavi API
+    - API Traccia/Debug supportata
     - Aggiornamenti automatizzati
-    - Supporto tecnico
+- [**Blockchain gestita da Amazon**](https://aws.amazon.com/managed-blockchain/)
+  - [Documentazione](https://aws.amazon.com/managed-blockchain/resources/)
+  - Caratteristiche
+    - Nodi di Ethereum gestiti interamente
+    - Disponibile in sei regioni
+    - JSON-RPC su HTTP e WebSocket sicure
+    - Supporta 3 catene
+    - SLA, Supporto ad AWS 24/7
+    - Go-ethereum e Lighthouse
 - [**Ankr**](https://www.ankr.com/)
   - [Documentazione](https://docs.ankr.com/)
   - Caratteristiche
@@ -86,7 +94,7 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Ridimensionamento secondo le esigenze
     - Strumenti di analisi
     - Pannello di controllo
-    - RPC, HTTPS ed endpoint WSS
+    - Endpoint RPC, HTTPS e WSS
     - Assistenza diretta
 - [**Blast**](https://blastapi.io/)
   - [Documentazione](https://docs.blastapi.io/)
@@ -144,7 +152,7 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Assistenza diretta 24 ore su 24, 7 giorni su 7
     - Pagamento in criptovalute (Enterprise)
 - [DRPC](https://drpc.org/)
-  - [Documentazione](https://docs.drpc.org/)
+  - [Documenti](https://docs.drpc.org/)
   - Caratteristiche
     - Nodi RPC decentralizzati
     - Oltre 15 fornitori di nodi
@@ -158,7 +166,7 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - [Endpoint pubblico](https://eth.drpc.org)
     - Nodi archivio condivisi gratuiti
 - [**GetBlock**](https://getblock.io/)
-  - [Documenti](https://getblock.io/docs/get-started/authentication-with-api-key/)
+  - [Documentazione](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Caratteristiche
     - Accesso a oltre 40 nodi della blockchain
     - 40.000 richieste giornaliere gratuite
@@ -180,7 +188,7 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Assistenza diretta 24 ore su 24, 7 giorni su 7
     - Accesso a oltre 50 nodi della blockchain
 - [**Infura**](https://infura.io/)
-  - [Documentazione](https://infura.io/docs)
+  - [Documenti](https://infura.io/docs)
   - Caratteristiche
     - Opzione livello gratuito
     - Ridimensionamento secondo le esigenze
@@ -208,7 +216,7 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Tariffe orarie semplici basate su Saas
     - Supporto SLA e 24x7
 - [**Lava Network**](https://www.lavanet.xyz/)
-  - [Documenti](https://docs.lavanet.xyz/)
+  - [Documentazione](https://docs.lavanet.xyz/)
   - Caratteristiche
     - Utilizzo gratuito di Testnet
     - Ridondanza decentralizzata per un elevato tempo di attività.
@@ -248,7 +256,7 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Gestore personale dell'account
     - Nodi condivisi, di archivio, di backup e dedicati
 - [**Pocket Network**](https://www.pokt.network/)
-  - [Documentazione](https://docs.pokt.network/home/)
+  - [Documenti](https://docs.pokt.network/home/)
   - Caratteristiche
     - Protocollo RPC e mercato decentralizzati
     - Livello con 1 milione di richieste giornaliere gratuite (per endpoint, max. 2)
@@ -268,7 +276,7 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Supporto pratico per sviluppatori
     - Dashboard e analisi di [Pocket Portal](https://bit.ly/ETHorg_POKTportal)
 - [**QuickNode**](https://www.quicknode.com)
-  - [Documenti](https://www.quicknode.com/docs/)
+  - [Docs](https://www.quicknode.com/docs/)
   - Caratteristiche
     - Supporto tecnico 24/7 e community Discord di sviluppatori
     - Bilanciamento geografico, multi-cloud/metal, rete a bassa latenza
@@ -306,7 +314,7 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Tariffe orarie
     - Assistenza diretta
 - [**Tenderly**](https://tenderly.co/web3-gateway)
-  - [Docs](https://docs.tenderly.co/web3-gateway/web3-gateway)
+  - [Documenti](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - Caratteristiche
     - Livello gratuito con 25 milioni di unità di Tenderly al mese
     - Accesso gratuito ai dati storici

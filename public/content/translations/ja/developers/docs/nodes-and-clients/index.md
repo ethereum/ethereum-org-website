@@ -137,8 +137,7 @@ sidebarDepth: 2
 | [Besu](https://besu.hyperledger.org/en/stable/)                         | Java       | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | スナップ、高速、フル        | アーカイブ、プルーン |
 | [Erigon](https://github.com/ledgerwatch/erigon)                         | Go         | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | フル                | アーカイブ、プルーン |
 | [Reth](https://github.com/paradigmxyz/reth) _(ベータ)_                     | Rust       | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | フル                | アーカイブ、プルーン |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(ベータ)_ | TypeScript | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | スナップ、フル、ライト       |            |
-
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(ベータ)_ | TypeScript | Linux、Windows、macOS | Sepolia, Holesky          | フル                | プルーン       |
 
 サポートされているネットワークの詳細については、[イーサリアムネットワーク](/developers/docs/networks/)をご覧ください。
 
@@ -169,6 +168,16 @@ Nethermindは、C# .NETの技術スタックで開発されたイーサリアム
 - ネットワーク機能と、Prometheus/Grafanaダッシュボード、シークエンス・エンタープライズ・ロギング・サポート、JSON RPCトレース、分析プラグインなどの豊富な機能
 
 また、Nethermindは、[詳細なドキュメント](https://docs.nethermind.io)、強力な開発サポート、オンラインコミュニティ、プレミアムユーザー向けの24時間年中無休のサポートなど、充実したサポート体制を整えています。
+
+### 開発中 {#execution-in-development}
+
+これらのクライアントはまだ開発の初期段階であるため、今のところ本番環境での使用は推奨されていません。
+
+#### EthereumJS {#ethereumjs}
+
+EthereumJS実行クライアント(EthereumJS)は、TypeScriptで書かれ、いくつかのパッケージで構成されています。ブロック、トランザクション、マークルパトリシアツリークラスで表すコアイーサリアムプリミティブや、イーサリアム仮想マシン(EVM)、ブロックチェーンクラス、DevP2Pネットワークスタックの実装などのコアクライアントコンポーネントを含みます。
+
+詳細については、EthereumJSの[ドキュメント](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)を参照してください。
 
 ## コンセンサスクライアント {#consensus-clients}
 

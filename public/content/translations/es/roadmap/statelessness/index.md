@@ -72,7 +72,7 @@ Para que esto suceda, deben haberse implementado en los clientes de Ethereum los
 
 El sin estado depende de que los constructores de bloques mantengan una copia de los datos del estado completos para que puedan generar testigos y que sirvan para verificar el bloque. Otros nodos no necesitan acceso a los datos del estado, toda la información necesaria para verificar el bloque está disponible en el testigo. Esto crea una situación en la que proponer un bloque es caro, pero verificar el bloque es barato, lo que implica que menos operadores ejecutarán un nodo de propuesta de bloque. Sin embargo, la descentralización de los proponentes de bloques no es crítica, siempre y cuando el mayor número posible de participantes puedan verificar de forma independiente que los bloques que proponen son válidos.
 
-<ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Más información sobre las notas de Dankrad.</ButtonLink>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Más información sobre las notas de Dankrad.</ButtonLink>
 </ExpandableCard>
 
 Los proponentes de bloques utilizan los datos del estado para crear «testigos», el conjunto mínimo de datos que prueban los valores del estado que las transacciones están cambiando en un bloque. Otros validadores no mantienen el estado, solo almacenan la raíz del estado (un hash de todo el estado). Reciben un bloqueo y un testigo y los usan para actualizar su raíz de estado. Esto hace que un nodo de validación sea extremadamente ligero.

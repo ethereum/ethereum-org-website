@@ -16,11 +16,11 @@ A kriptovaluták iránt nő az érdeklődés, ezért elengedhetetlen megtanulni 
 
 A legtipikusabb ok, amiért a kripto világában az emberek csalók áldozatai lesznek, az az ismeret és a működés megértésének hiánya. Például ha valaki nem érti, hogy az Ethereum-hálózat decentralizált és nincs senkinek sem a birtokában, akkor könnyedén elhiheti egy ügyfélszolgálati munkatársat megszemélyesítő csalónak, hogy visszaszerzi az elvesztett ETH a [privát kulcsaiért](/glossary/#private-key) cserébe. Az Ethereum működésének megértése megéri a befektetést.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Mi az Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Mi az ether?
 </DocLink>
 <Divider />
@@ -33,7 +33,7 @@ A legtipikusabb ok, amiért a kripto világában az emberek csalók áldozatai l
 
 A tárca visszaállítási kulcsa vagy mondata jelszóként működik az Ethereum-tárcához. Ez az egyetlen dolog, aminek a hiányában valaki nem viszi el az összes eszközt a tárcájából, ha ismeri annak a címét!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Mi az az Ethereum tárca?
 </DocLink>
 

@@ -55,7 +55,7 @@ Il blocco `body` contiene a sua volta diversi campi:
 | `et1_data`           | informazioni sul contratto di deposito                                 |
 | `graffiti`           | dati arbitrari utilizzati per contrassegnare blocchi                   |
 | `proposer_slashings` | elenco di validatori da tagliare                                       |
-| `taglio_attestatori` | elenco di validatori da tagliare                                       |
+| `taglio_attestatori` | elenco di attestatori da tagliare                                      |
 | `attestazioni`       | elenco di attestazioni a favore del blocco corrente                    |
 | `depositi`           | elenco dei nuovi depositi nel contratto di deposito                    |
 | `uscite_volontarie`  | elenco di validatori che escono dalla rete                             |
@@ -127,7 +127,7 @@ L'elenco dei `withdrawals` contiene oggetti `withdrawal` strutturati nel modo se
 | Campo            | Descrizione                          |
 |:---------------- |:------------------------------------ |
 | `address`        | indirizzo del conto che ha prelevato |
-| `amount`         | importo del prelievo                 |
+| `importo`        | importo del prelievo                 |
 | `indice`         | valore dell'indice di prelievo       |
 | `validatorIndex` | valore dell'indice del validatore    |
 

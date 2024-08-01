@@ -1,10 +1,8 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { MdExpandMore } from "react-icons/md"
 import {
   Box,
   Flex,
-  Icon,
   ListItem,
   Text,
   UnorderedList,
@@ -14,13 +12,13 @@ import {
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
-import BannerNotification from "@/components/BannerNotification"
+import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
-import InlineLink, { BaseLink } from "@/components/Link"
+import InlineLink from "@/components/Link"
 import {
   ContentContainer,
   MobileButton,
@@ -32,8 +30,6 @@ import TableOfContents from "@/components/TableOfContents"
 
 import { getEditPath } from "@/lib/utils/editPath"
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
-
-import { MAIN_CONTENT_ID } from "@/lib/constants"
 
 const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
@@ -111,7 +107,7 @@ export const UseCasesLayout = ({
     items: [
       {
         text: t("template-usecase:template-usecase-dropdown-defi"),
-        to: "/defi/",
+        href: "/defi/",
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",
@@ -120,7 +116,7 @@ export const UseCasesLayout = ({
       },
       {
         text: t("template-usecase:template-usecase-dropdown-nft"),
-        to: "/nft/",
+        href: "/nft/",
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",
@@ -129,7 +125,7 @@ export const UseCasesLayout = ({
       },
       {
         text: t("template-usecase:template-usecase-dropdown-dao"),
-        to: "/dao/",
+        href: "/dao/",
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",
@@ -138,7 +134,7 @@ export const UseCasesLayout = ({
       },
       {
         text: t("template-usecase:template-usecase-dropdown-social-networks"),
-        to: "/social-networks/",
+        href: "/social-networks/",
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",
@@ -147,7 +143,7 @@ export const UseCasesLayout = ({
       },
       {
         text: t("template-usecase:template-usecase-dropdown-identity"),
-        to: "/decentralized-identity/",
+        href: "/decentralized-identity/",
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",
@@ -156,7 +152,7 @@ export const UseCasesLayout = ({
       },
       {
         text: t("template-usecase:template-usecase-dropdown-desci"),
-        to: "/desci/",
+        href: "/desci/",
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",
@@ -165,7 +161,7 @@ export const UseCasesLayout = ({
       },
       {
         text: t("template-usecase:template-usecase-dropdown-refi"),
-        to: "/refi/",
+        href: "/refi/",
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",
@@ -236,20 +232,6 @@ export const UseCasesLayout = ({
           }}
         />
       </HeroContainer>
-      <Flex
-        as={BaseLink}
-        to={"#" + MAIN_CONTENT_ID}
-        bg="ednBackground"
-        justifyContent="center"
-        p={4}
-        width="full"
-        _hover={{
-          bg: "background.base",
-        }}
-        hideBelow={lgBp}
-      >
-        <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
-      </Flex>
       <Page>
         {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <LeftNavBar

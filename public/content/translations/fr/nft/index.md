@@ -56,7 +56,7 @@ Vous êtes peut-être un artiste qui souhaite partager ses œuvres à l'aide de 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Explorez, achetez ou créez vos propres collections NFT...</div>
-  <ButtonLink to="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/dapps/?category=collectibles#explore">
     Explorez les cartes NFT
   </ButtonLink>
 </InfoBanner>
@@ -93,7 +93,7 @@ La sécurité d'Ethereum émane de la [preuve d'enjeu](/glossary/#pos). Le syst�
 
 Les questions de sécurité concernant les NFT sont le plus souvent liées aux escroqueries par hameçonnage, aux vulnérabilités des contrats intelligents ou aux erreurs utilisateur (comme exposer par inadvertance des clés privées), rendant la sécurité du portefeuille critique pour les propriétaires de NFT.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   En savoir plus sur la sécurité
 </ButtonLink>
 
@@ -103,6 +103,11 @@ Les questions de sécurité concernant les NFT sont le plus souvent liées aux e
 - [Traqueur de NFTs de Etherscan](https://etherscan.io/nft-top-contracts)
 - [Norme de jeton ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Norme de jeton ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [Applications et outils NFT populaires](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Autres ressources {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

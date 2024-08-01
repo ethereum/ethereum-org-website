@@ -57,7 +57,7 @@ As carteiras estão mudando rapidamente no Ethereum. Tentamos criar uma estrutur
 
 Se você deseja adicionar uma carteira ao ethereum.org, crie um tíquete no GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Criar tíquete
 </ButtonLink>
 

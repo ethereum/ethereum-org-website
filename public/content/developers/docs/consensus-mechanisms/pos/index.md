@@ -53,7 +53,12 @@ When the network performs optimally and honestly, there is only ever one new blo
 
 The threat of a [51% attack](https://www.investopedia.com/terms/1/51-attack.asp) still exists on proof-of-stake as it does on proof-of-work, but it's even riskier for the attackers. An attacker would need 51% of the staked ETH. They could then use their own attestations to ensure their preferred fork was the one with the most accumulated attestations. The 'weight' of accumulated attestations is what consensus clients use to determine the correct chain, so this attacker would be able to make their fork the canonical one. However, a strength of proof-of-stake over proof-of-work is that the community has flexibility in mounting a counter-attack. For example, the honest validators could decide to keep building on the minority chain and ignore the attacker's fork while encouraging apps, exchanges, and pools to do the same. They could also decide to forcibly remove the attacker from the network and destroy their staked ETH. These are strong economic defenses against a 51% attack.
 
-51% attacks are just one flavor of malicious activity. Bad actors could attempt long-range attacks (although the finality gadget neutralizes this attack vector), short range 'reorgs' (although proposer boosting and attestation deadlines mitigate this), bouncing and balancing attacks (also mitigated by proposer boosting, and these attacks have anyway only been demonstrated under idealized network conditions) or avalanche attacks (neutralized by the fork choice algorithms rule of only considering the latest message).
+Beyond 51% attacks, bad actors might also attempt other types of malicious activities, such as:
+
+- long-range attacks (although the finality gadget neutralizes this attack vector)
+- short range 'reorgs' (although proposer boosting and attestation deadlines mitigate this)
+- bouncing and balancing attacks (also mitigated by proposer boosting, and these attacks have anyway only been demonstrated under idealized network conditions)
+- avalanche attacks (neutralized by the fork choice algorithms rule of only considering the latest message)
 
 Overall, proof-of-stake, as it is implemented on Ethereum, has been demonstrated to be more economically secure than proof-of-work.
 
@@ -68,7 +73,7 @@ Overall, proof-of-stake, as it is implemented on Ethereum, has been demonstrated
 
 ### Comparison to proof-of-work {#comparison-to-proof-of-work}
 
-Ethereum has not always been a proof-of-stake network. When Ethereum started, it used proof-of-work. The switch from proof-of-work to proof-of-stake happened in September 2022. Proof-of-stake comes with benefits over proof-of-work:
+Ethereum originally used proof-of-work but switched to proof-of-stake in September 2022. PoS offers several advantages over PoW, such as:
 
 - better energy efficiency – there is no need to use lots of energy on proof-of-work computations
 - lower barriers to entry, reduced hardware requirements – there is no need for elite hardware to stand a chance of creating new blocks
