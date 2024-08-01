@@ -1,4 +1,5 @@
 import { type ReactNode } from "react"
+import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
 
 import {
@@ -13,7 +14,7 @@ import { BaseLink } from "../Link"
 
 type BigNumberProps = {
   children: ReactNode
-  value: ReactNode
+  value?: ReactNode
   sourceName?: string
   sourceUrl?: string
   className?: string
@@ -26,6 +27,7 @@ const BigNumber = ({
   sourceUrl,
   className,
 }: BigNumberProps) => {
+  const { t } = useTranslation("common")
   return (
     <div
       className={cn(
@@ -33,20 +35,26 @@ const BigNumber = ({
         className
       )}
     >
-      <div className="text-5xl font-bold">{value}</div>
-      <div className="text-sm">
-        {children}
-        {sourceName && sourceUrl && (
-          <Popover>
-            <PopoverTrigger className="mb-0.5 ms-1 inline align-text-bottom">
-              <MdInfoOutline />
-            </PopoverTrigger>
-            <PopoverContent className="w-fit bg-background">
-              <BaseLink href={sourceUrl}>{sourceName}</BaseLink>
-            </PopoverContent>
-          </Popover>
-        )}
-      </div>
+      {value ? (
+        <>
+          <div className="text-5xl font-bold">{value}</div>
+          <div className="text-sm">
+            {children}
+            {sourceName && sourceUrl && (
+              <Popover>
+                <PopoverTrigger className="mb-0.5 ms-1 inline align-text-bottom">
+                  <MdInfoOutline />
+                </PopoverTrigger>
+                <PopoverContent className="w-fit bg-background">
+                  <BaseLink href={sourceUrl}>{sourceName}</BaseLink>
+                </PopoverContent>
+              </Popover>
+            )}
+          </div>
+        </>
+      ) : (
+        <span className="text-3xl">{t("loading-error-refresh")}</span>
+      )}
     </div>
   )
 }
