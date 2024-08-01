@@ -4,8 +4,7 @@ import type { Meta, StoryObj } from "@storybook/react"
 import Translation from "@/components/Translation"
 
 import { HStack, VStack } from "../../../src/components/ui/flex"
-import { Button, type ButtonVariantProps } from "../buttons/Button"
-import { ButtonLink } from "../buttons/Button"
+import { Button, ButtonLink, type ButtonVariantProps } from "../buttons/Button"
 
 const meta = {
   title: "Atoms / Form / ShadCn Buttons",
@@ -118,7 +117,7 @@ export const OverrideStyles: Story = {
           <MdNightlight />
         </Button>
         <ButtonLink
-          className="rounded-full px-0 py-0"
+          className="min-h-0 rounded-full px-0 py-0"
           linkProps={{ href: "#" }}
         >
           <Translation id="get-involved" />

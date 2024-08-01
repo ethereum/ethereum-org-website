@@ -9,8 +9,8 @@ import Translation from "@/components/Translation"
 import { cn } from "@/lib/utils/cn"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
-import { BaseLink } from "../../tailwind/Link"
 import { Button } from "../../tailwind/ui/buttons/Button"
+import { BaseLink } from "../../tailwind/ui/Link"
 
 import { List, ListItem } from "./ui/list"
 
