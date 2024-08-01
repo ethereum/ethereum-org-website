@@ -56,6 +56,7 @@ import { fetchNodes } from "@/lib/api/fetchNodes"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
+import EventFallback from "@/public/images/event-fallback.svg"
 import buildersImage from "@/public/images/heroes/developers-hub-hero.jpg"
 import activityImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import learnImage from "@/public/images/heroes/learn-hub-hero.png"
@@ -499,6 +500,8 @@ const HomePage = ({
                       href={href}
                       className="md:w-1/3 md:max-w-128"
                       key={title}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <Card
                         className={cn(
@@ -507,16 +510,17 @@ const HomePage = ({
                           "transition-transform duration-100 hover:scale-105 hover:transition-transform hover:duration-100"
                         )}
                       >
-                        <CardHeader className="bgBACKUP-bg-main-gradient h-48 w-full self-stretch overflow-hidden rounded-2xl bg-bg-main-gradient p-0">
-                          {imageUrl && (
+                        <CardHeader className="h-48 w-full self-stretch overflow-hidden rounded-2xl bg-bg-main-gradient p-0">
+                          {imageUrl ? (
                             // eslint-disable-next-line @next/next/no-img-element
                             <img
                               src={imageUrl}
                               alt=""
-                              className="object-cover object-center"
+                              className="max-w-full object-cover object-center"
                             />
+                          ) : (
+                            <EventFallback className="max-w-full object-cover object-center text-body" />
                           )}
-                          {/* TODO: Handle event image */}
                         </CardHeader>
                         <CardContent className="space-y-8 p-2">
                           <div>
@@ -543,6 +547,14 @@ const HomePage = ({
                 }
               )}
             </div>
+          </div>
+          <div className="flex justify-center py-8 lg:justify-start">
+            <ButtonLink
+              linkProps={{ href: "/community/events/" }}
+              className="mx-auto text-lg"
+            >
+              See all events <MdChevronRight />
+            </ButtonLink>
           </div>
         </HomeSection>
         {/* Temporary coming soon section template */}
