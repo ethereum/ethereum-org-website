@@ -190,7 +190,7 @@ Sobald die Auszahlungsdaten festgelegt sind, werden Prämienzahlungen (über den
 
 Um Ihr gesamtes Guthaben zu entsperren und zu erhalten, müssen Sie auch den Prozess des Verlassens Ihres Validators abschließen.
 
-<ButtonLink href="/staking/withdrawals/">Mehr zu Staking-Auszahlungen</ButtonLink>
+<ButtonLink to="/staking/withdrawals/">Mehr zu Staking-Auszahlungen</ButtonLink>
 </ExpandableCard>
 
 ## Weiterführende Informationen {#further-reading}
