@@ -349,6 +349,8 @@
   "state-channels-definition": "Una soluzione di <a href=\"/glossary/#layer-2\">livello 2</a> in cui è configurato un canale tra i partecipanti, dove possono svolgere transazioni liberamente ed economicamente. Alla <a href=\"/glossary/#mainnet\">Rete Principale</a> viene inviata soltanto una <a href=\"/glossary/#transaction\">transazione</a> per configurare e chiudere il canale. Ciò consente un volume molto elevato di transazioni, ma si affida alla conoscenza del numero di partecipanti in anticipo e al blocco dei fondi. <a href=\"/developers/docs/scaling/state-channels/#state-channels\">Maggiori informazioni sui canali di stato</a>.",
   "supermajority-term": "Supermaggioranza",
   "supermajority-definition": "Supermaggioranza è il termine dato a un importo che superi i 2/3 (66%) dell'ether in staking totale che protegge Ethereum. Un voto di supermaggioranza è necessario perché i blocchi siano <a href=\"/glossary/#finality\">finalizzati</a> sulla Beacon Chain.",
+  "sybil-attack-term": "Attacco Sybil",
+  "sybil-attack-definition": "Gli attacchi Sybil si riferiscono a persone che ingannano un sistema facendogli pensare che si tratti di più persone per incrementare la propria influenza.",
   "syncing-term": "Sincronizzazione",
   "syncing-definition": "Il processo di scaricare integralmente l'ultima versione della blockchain su un nodo.",
   "sync-committee-term": "Comitato di sincronizzazione",

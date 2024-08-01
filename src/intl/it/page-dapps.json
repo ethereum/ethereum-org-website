@@ -41,6 +41,7 @@
   "page-dapps-choose-category": "Scegli una categoria",
   "page-dapps-category-social": "Social media",
   "page-dapps-category-content": "Contenuto",
+  "page-dapps-category-community": "Community",
   "page-dapps-category-messaging": "Messaggistica",
   "page-dapps-category-identity": "Identità",
   "page-dapps-collectibles-benefits-1-description": "Quando l'arte è tokenizzata su Ethereum, la proprietà è dimostrabile da chiunque. Puoi monitorare il percorso dell'opera d'arte dalla sua creazione, al suo proprietario attuale. Ciò previene le falsificazioni.",
@@ -95,6 +96,7 @@
   "page-dapps-dapp-description-loopring": "Piattaforma di trading tra pari, realizzata per essere veloce.",
   "page-dapps-dapp-description-marble-cards": "Crea e scambia carte digitali uniche, basate sugli URL.",
   "page-dapps-dapp-description-matcha": "Cerca più piattaforme di scambio per aiutarti a trovare i prezzi migliori.",
+  "page-dapps-dapp-description-meeds": "Hub della community Web3 per l'era del lavoro decentralizzato. Ricompensa in modo equo e trasparente i contributi che contano.",
   "page-dapps-dapp-description-mirror": "Creato sul web3, per il web3, la robusta piattaforma di pubblicazione di Mirror supera i limiti della scrittura online",
   "page-dapps-dapp-description-multichain": "Il Router definitivo per il web3. Si tratta di un'infrastruttura sviluppata per le interazioni arbitrarie tra catene.",
   "page-dapps-dapp-description-nifty-gateway": "Acquista opere su catena dagli artisti, atleti, marchi e creatori più popolari.",
@@ -217,6 +219,7 @@
   "page-dapps-marble-cards-logo-alt": "Logo di marble.cards",
   "page-dapps-async-logo-alt": "Logo di Async",
   "page-dapps-matcha-logo-alt": "Logo di Matcha",
+  "page-dapps-meeds-logo-alt": "Logo di Meeds",
   "page-dapps-metaverse-benefits-title": "metaverso",
   "page-dapps-metaverse-benefits-description": "Perché Ethereum permette al metaverso di prosperare?",
   "page-dapps-metaverse-benefits-1-title": "NFT",
@@ -281,5 +284,7 @@
   "page-dapps-dapp-description-dodo": "DODO è un fornitore di liquidità on-chain, che sfrutta l'algoritmo Proactive Market Maker (PMM)",
   "page-dapps-dodo-image-alt": "Logo di DODO",
   "page-dapps-dapp-description-artblocks": "Art Blocks si dedica a dare vita ad avvincenti opere di arte generativa contemporanea",
-  "page-dapps-artblocks-image-alt": "Logo di Art block"
+  "page-dapps-artblocks-image-alt": "Logo di Art block",
+  "page-dapps-explore-title": "Desideri sfogliare altre app?",
+  "page-dapps-explore": "Dai un'occhiata a centinaia di dApp"
 }

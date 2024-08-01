@@ -125,7 +125,7 @@
   "boba-description": "Boba è un Rollup Ottimistico, biforcato originariamente da Optimism, una soluzione di ridimensionamento mirata a ridurre le commissioni sul gas, migliorare il volume delle transazioni ed estendere le capacità dei contratti intelligenti.",
   "base-description": "Base è un L2 di Ethereum sicuro, a basso costo e pensato per gli sviluppatori, per portare il prossimo miliardo di utenti sul web3. È un L2 di Ethereum, incubato da Coinbase e basato sullo Stack OP open source.",
   "loopring-description": "La soluzione di L2 zkRollup di Loopring mira a offrire le stesse garanzie di sicurezza della rete principale di Ethereum, con un grande aumento di scalabilità: volume aumentato del 1000x e costo ridotto allo 0,1% di L1.",
-  "zksync-description": "zkSync è un Rollup ZK che mira a ridimensionare Ethereum e i suoi valori per l'adozione di massa, senza degradarne la sicurezza o la decentralizzazione.",
+  "zksync-description": "ZKsync è un Rollup ZK che mira a ridimensionare Ethereum e i suoi valori per l'adozione di massa, senza degradarne la sicurezza o la decentralizzazione.",
   "zkspace-description": "La piattaforma ZKSpace è composta da tre parti principali: un DEX AMM di livello 2 che utilizza la tecnologia ZK-Rollups chiamata ZKSwap, un servizio di pagamento chiamato ZKSquare e un marketplace NFT chiamato ZKSea.",
   "aztec-description": "Aztec Network è il primo rollup zk privato su Ethereum, che consente alle applicazioni decentralizzate di avere accesso alla privacy e di scalare.",
   "starknet-description": "Starknet è un rollup di validità di livello 2. Fornisce un volume elevato, costi del gas ridotti e mantiene i livelli di sicurezza del livello 1 di Ethereum.",
