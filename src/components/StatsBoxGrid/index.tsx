@@ -1,31 +1,35 @@
-import { SimpleGrid } from "@chakra-ui/react"
-
 import type { AllMetricData } from "@/lib/types"
 
-import { GridItem } from "./GridItem"
+import BigNumber from "../BigNumber"
+
 import { useStatsBoxGrid } from "./useStatsBoxGrid"
 
 type StatsBoxGridProps = {
-  data: AllMetricData
+  metricResults: AllMetricData
 }
+const StatsBoxGrid = ({ metricResults }: StatsBoxGridProps) => {
+  const metrics = useStatsBoxGrid(metricResults)
 
-const StatsBoxGrid = ({ data }: StatsBoxGridProps) => {
-  const metrics = useStatsBoxGrid(data)
-
+  const gridBorderClasses = [
+    "border-b border-body-light xl:border-e xl:pe-8",
+    "border-b border-body-light xl:ps-8",
+    "border-b border-body-light xl:border-b-0 xl:border-e xl:pe-8",
+    "xl:ps-8",
+  ]
   return (
-    <SimpleGrid
-      columns={{ base: 1, lg: 2 }}
-      margin={{
-        base: "0",
-        sm: "2rem 0 0",
-        lg: "2rem 2rem 0",
-      }}
-      borderRadius="sm"
-    >
-      {metrics.map((metric, idx) => (
-        <GridItem key={idx} metric={metric} />
+    <div className="grid w-full grid-cols-1 xl:grid-cols-2">
+      {metrics.map(({ label, apiProvider, apiUrl, state }, idx) => (
+        <BigNumber
+          className={gridBorderClasses[idx]}
+          key={label}
+          value={"value" in state ? state.value : undefined}
+          sourceName={apiProvider}
+          sourceUrl={apiUrl}
+        >
+          {label}
+        </BigNumber>
       ))}
-    </SimpleGrid>
+    </div>
   )
 }
 
