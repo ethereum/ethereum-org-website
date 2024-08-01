@@ -32,7 +32,7 @@ L'approche opposée, la gouvernance hors chaîne, est celle où toute décision 
 
 _Bien qu'au niveau du protocole, la gouvernance d'Ethereum est hors chaîne, de nombreux cas d'utilisation basés sur Ethereum, tels que les DAO, utilisent la gouvernance sur la blockchain._
 
-<ButtonLink href="/dao/">
+<ButtonLink to="/dao/">
   En savoir plus sur les DAO
 </ButtonLink>
 
@@ -58,7 +58,7 @@ _Note : Toute personne peut faire partie de plusieurs de ces groupes (par exempl
 
 Un processus important utilisé dans la gouvernance Ethereum est la proposition de **Propositions d'amélioration Ethereum (EIP)**. Les EIP sont des normes qui spécifient de nouvelles fonctionnalités ou processus potentiels pour Ethereum. N'importe qui au sein de la communauté Ethereum peut créer une EIP. Si vous souhaitez écrire une EIP ou participer à une revue par les pairs, et/ou la gouvernance, voir :
 
-<ButtonLink href="/eips/">
+<ButtonLink to="/eips/">
   Plus d'infos les EIP
 </ButtonLink>
 
@@ -154,7 +154,7 @@ Bien que le développement des spécifications et des implémentations ait toujo
 
 Lorsque la Chaîne Phare a fusionné avec la couche d'exécution Ethereum le 15 septembre 2022, La Fusion s'est achevée à travers [la mise à jour Paris](/history/#paris). La proposition [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) est passée de 'Dernier appel' à 'Final', achevant ainsi la transition vers la preuve d'enjeu.
 
-<ButtonLink href="/roadmap/merge/">
+<ButtonLink to="/roadmap/merge/">
   Plus d'infos sur la fusion
 </ButtonLink>
 

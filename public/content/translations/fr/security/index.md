@@ -16,11 +16,11 @@ L'intérêt grandissant pour la cryptomonnaie amène avec lui un risque croissan
 
 Une mauvaise compréhension de la façon dont fonctionnent les cryptomonnaies peut amener à des erreurs coûteuses. Par exemple, si quelqu'un prétend être un agent d'un service client qui peut vous rendre vos ETH perdus en échange de vos clés privées, ils s'attaquent aux personnes ne comprenant pas qu'Ethereum est un réseau décentralisé manquant de ce genre de fonctionnalité. S'informer sur le fonctionnement d'Ethereum est un investissement qui en vaut la peine.
 
-<DocLink href="/what-is-ethereum/">
+<DocLink to="/what-is-ethereum/">
   Qu'est-ce qu'Ethereum&nbsp;?
 </DocLink>
 
-<DocLink href="/eth/">
+<DocLink to="/eth/">
   Qu'est-ce-que l'ether ?
 </DocLink>
 <Divider />
@@ -33,7 +33,7 @@ Une mauvaise compréhension de la façon dont fonctionnent les cryptomonnaies pe
 
 La clé privée de votre portefeuille fait office de mot de passe pour votre portefeuille Ethereum. Il s'agit de la seule chose qui empêche quelqu'un qui connaît l'adresse de votre portefeuille de vider votre compte de ses actifs !
 
-<DocLink href="/wallets/">
+<DocLink to="/wallets/">
   Qu'est-ce qu'un portefeuille Ethereum ?
 </DocLink>
 
