@@ -5,7 +5,6 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaDiscord, FaGithub } from "react-icons/fa"
 import { MdChevronRight } from "react-icons/md"
-import { RxExternalLink } from "react-icons/rx"
 import { Flex, Skeleton } from "@chakra-ui/react"
 
 import type { AllMetricData, BasePageProps, Lang } from "@/lib/types"
@@ -46,7 +45,7 @@ import events from "@/data/community-events.json"
 
 import { BASE_TIME_UNIT, GITHUB_REPO_URL } from "@/lib/constants"
 
-import { Button, ButtonLink } from "../../tailwind/ui/buttons/Button"
+import { ButtonLink } from "../../tailwind/ui/buttons/Button"
 
 import CreateWalletContent from "!!raw-loader!@/data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
@@ -160,11 +159,6 @@ const HomePage = ({
     },
   ]
 
-  // TODO: Remove when used
-  console.log("Values to use:", {
-    communityEvents,
-  })
-
   const SubHeroCTAs = [
     {
       label: "Pick a wallet",
@@ -224,26 +218,6 @@ const HomePage = ({
     },
   ]
 
-  const dummyCalendarData = [
-    {
-      date: "May 29, 2024 at 18:00",
-      title: "ethereum.org Community Call - May 2024",
-    },
-    {
-      date: "Jul 25, 2024",
-      title: "☎️ ethereum.org Community Call - July 2024",
-    },
-    {
-      date: "Jul 3, 2024",
-      title: "🛠 QA session - ethereum.org portal",
-    },
-    {
-      date: "May 8, 2024",
-      title:
-        "👾 Live coding session - Implementing a visual testing component on ethereum.org",
-    },
-  ]
-
   const comingSoon = [
     { title: "Ethereum news", tag: "" },
     { title: "Join ethereum.org", tag: "" },
@@ -254,6 +228,10 @@ const HomePage = ({
       (a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime()
     )
     .slice(0, 3) // Show 3 events ending soonest
+
+  const calendar = communityEvents.upcomingEventData
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .slice(0, 4) // Show next 4 events on the calendar
 
   return (
     <Flex
@@ -456,7 +434,7 @@ const HomePage = ({
           </div>
 
           <WindowBox title="Next calls" Svg={Calendar}>
-            {dummyCalendarData.map(({ date, title }, idx) => (
+            {calendar.map(({ date, title, calendarLink }, idx) => (
               <div
                 key={title}
                 className={cn(
@@ -469,7 +447,15 @@ const HomePage = ({
                     "flex flex-col space-y-0.5 text-center text-base sm:text-start"
                   )}
                 >
-                  <p className="italic text-body-medium">{date}</p>
+                  <p className="italic text-body-medium">
+                    {new Intl.DateTimeFormat(locale, {
+                      month: "long",
+                      day: "2-digit",
+                      year: "numeric",
+                      hour: "numeric",
+                      minute: "numeric",
+                    }).format(new Date(date))}
+                  </p>
                   <p
                     className={cn(
                       "text-sm text-body",
@@ -479,13 +465,14 @@ const HomePage = ({
                     {title}
                   </p>
                 </div>
-                <Button
+                <ButtonLink
                   size="sm"
                   variant="outline"
                   className="h-fit w-full text-nowrap border-body !text-body sm:w-fit xl:self-center"
+                  linkProps={{ href: calendarLink }}
                 >
-                  Add to calendar <RxExternalLink />
-                </Button>
+                  Add to calendar
+                </ButtonLink>
               </div>
             ))}
           </WindowBox>

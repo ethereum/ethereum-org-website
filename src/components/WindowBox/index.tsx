@@ -7,7 +7,7 @@ type WindowBoxProps = {
 }
 
 const WindowBox = ({ title, children, Svg }: WindowBoxProps) => (
-  <div className="flex flex-col overflow-hidden rounded-2xl border shadow">
+  <div className="flex max-w-screen-md flex-col overflow-hidden rounded-2xl border shadow">
     <div className="flex items-center gap-4 bg-primary-highlight-gradient p-4">
       <div className="grid size-10 place-items-center rounded-lg border">
         <Svg />
