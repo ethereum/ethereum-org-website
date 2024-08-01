@@ -508,19 +508,7 @@ export type StakingStatsData = {
   apr: number
 }
 
-export type TimestampedData<T> = {
-  timestamp: number
-  value: T
-}
-
-export type MetricDataValue<Data, Value> =
-  | {
-      error: string
-    }
-  | {
-      data: Data
-      value: Value
-    }
+export type ValueOrError<T> = { value: T } | { error: string }
 
 export type EtherscanNodeResponse = {
   result: {
@@ -545,27 +533,21 @@ export type DefiLlamaTVLResponse = {
   totalLiquidityUSD: number
 }[]
 
-export type MetricReturnData = MetricDataValue<
-  TimestampedData<number>[],
-  number
->
+export type MetricReturnData = ValueOrError<number>
 
-export type StatsBoxState = MetricDataValue<TimestampedData<number>[], string>
+export type StatsBoxState = ValueOrError<string>
 
-export type MetricSection =
+export type MetricName =
   | "totalEthStaked"
   | "nodeCount"
   | "totalValueLocked"
   | "txCount"
-
-export type AllMetricData = Record<MetricSection, MetricReturnData>
+export type AllMetricData = Record<MetricName, MetricReturnData>
 
 export type StatsBoxMetric = {
-  title: string
-  description: string
+  label: string
+  description?: string
   state: StatsBoxState
-  buttonContainer: JSX.Element
-  range: string
   apiUrl: string
   apiProvider: string
 }

@@ -1,8 +1,4 @@
-import type {
-  EtherscanNodeResponse,
-  MetricReturnData,
-  TimestampedData,
-} from "@/lib/types"
+import type { EtherscanNodeResponse, MetricReturnData } from "@/lib/types"
 
 import { DAYS_TO_FETCH, ETHERSCAN_API_URL } from "@/lib/constants"
 
@@ -33,18 +29,11 @@ export const fetchNodes = async (): Promise<MetricReturnData> => {
     }
 
     const json: EtherscanNodeResponse = await response.json()
-    const data: TimestampedData<number>[] = json.result
-      .map(({ UTCDate, TotalNodeCount }) => ({
-        timestamp: new Date(UTCDate).getTime(),
-        value: +TotalNodeCount,
-      }))
-      .sort((a, b) => a.timestamp - b.timestamp)
-    const { value } = data[data.length - 1]
+    // Today's value at start (only value) of array
+    const value = json.result[0].TotalNodeCount
 
-    return {
-      data, // historical data: { timestamp: unix-milliseconds, value }
-      value, // current value (number, unformatted)
-    }
+    // current value (number, unformatted)
+    return { value }
   } catch (error: unknown) {
     console.error((error as Error).message)
     return { error: (error as Error).message }

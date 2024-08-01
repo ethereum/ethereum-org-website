@@ -1,14 +1,6 @@
-import takeRightWhile from "lodash/takeRightWhile"
-
 import { DefiLlamaTVLResponse, MetricReturnData } from "@/lib/types"
 
-import { DAYS_TO_FETCH } from "@/lib/constants"
-
 export const fetchTotalValueLocked = async (): Promise<MetricReturnData> => {
-  const now = new Date()
-  const startDate = new Date(now.setDate(now.getDate() - DAYS_TO_FETCH))
-  const startTimestamp = Math.round(startDate.getTime() / 1000)
-
   try {
     const response = await fetch(`https://api.llama.fi/charts/Ethereum`)
     if (!response.ok) {
@@ -17,18 +9,11 @@ export const fetchTotalValueLocked = async (): Promise<MetricReturnData> => {
     }
 
     const json: DefiLlamaTVLResponse = await response.json()
-    const data = takeRightWhile(json, ({ date }) => +date > startTimestamp)
-      .map(({ date, totalLiquidityUSD }) => ({
-        timestamp: +date * 1000,
-        value: totalLiquidityUSD,
-      }))
-      .sort((a, b) => a.timestamp - b.timestamp)
-    const { value } = data[data.length - 1]
+    // Today's value at end of array
+    const value = json[json.length - 1].totalLiquidityUSD
 
-    return {
-      data, // historical data: { timestamp: unix-milliseconds, value }
-      value, // current value (number, unformatted)
-    }
+    // current value (number, unformatted)
+    return { value }
   } catch (error: unknown) {
     console.error((error as Error).message)
     return { error: (error as Error).message }

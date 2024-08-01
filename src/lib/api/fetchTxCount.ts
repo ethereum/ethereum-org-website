@@ -1,8 +1,4 @@
-import type {
-  EtherscanTxCountResponse,
-  MetricReturnData,
-  TimestampedData,
-} from "@/lib/types"
+import type { EtherscanTxCountResponse, MetricReturnData } from "@/lib/types"
 
 import { DAYS_TO_FETCH, ETHERSCAN_API_URL } from "@/lib/constants"
 
@@ -19,7 +15,7 @@ export const fetchTxCount = async (): Promise<MetricReturnData> => {
     action: "dailytx",
     startdate: startDate,
     enddate: endDate,
-    sort: "asc",
+    sort: "desc",
     apikey: apiKey,
   }).toString()
 
@@ -33,18 +29,11 @@ export const fetchTxCount = async (): Promise<MetricReturnData> => {
     }
 
     const json: EtherscanTxCountResponse = await response.json()
-    const data: TimestampedData<number>[] = json.result
-      .map(({ unixTimeStamp, transactionCount }) => ({
-        timestamp: +unixTimeStamp * 1000, // unix milliseconds
-        value: transactionCount,
-      }))
-      .sort((a, b) => a.timestamp - b.timestamp)
-    const { value } = data[data.length - 1]
+    // Today's value at start (only value) of array
+    const value = json.result[0].transactionCount
 
-    return {
-      data, // historical data: { timestamp: unix-milliseconds, value }
-      value, // current value (number, unformatted)
-    }
+    // current value (number, unformatted)
+    return { value }
   } catch (error: unknown) {
     console.error((error as Error).message)
     return {
