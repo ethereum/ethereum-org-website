@@ -18,10 +18,16 @@ const SvgButtonLink = ({
   className,
   ...props
 }: SvgButtonLinkProps) => (
-  <a className={cn("group", className)} {...props}>
+  <a
+    className={cn(
+      "group rounded-2xl focus:outline focus:outline-4 focus:outline-offset-8",
+      className
+    )}
+    {...props}
+  >
     <div className="flex flex-col items-center gap-3.5 lg:flex-row">
-      <div className="relative grid size-[5em] place-items-center rounded-2xl border shadow-lg">
-        <Svg className="group-hover:animate-pulse" />
+      <div className="relative grid size-[5em] place-items-center rounded-2xl border shadow-lg group-hover:shadow-2xl group-focus:shadow-2xl">
+        <Svg className="group-hover:animate-pulse group-focus:animate-pulse" />
       </div>
       <div className="text-center lg:text-start">
         {label && <p className="text-xl font-bold">{label}</p>}
