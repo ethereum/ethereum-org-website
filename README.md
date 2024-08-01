@@ -96,7 +96,8 @@ yarn dev
 - Pro Tip:
   - Explore scripts within `package.json` for more build options
   - Get **faster** production builds by building only one language. E.g. in your `.env` file, set `BUILD_LOCALES=en` to build the content only in English
-  - To build the site in other languages too, you need to set them in `BUILD_LOCALES`, eg: `` BUILD_LOCALES=`en,es` `` if you also want to include Spanish
+  - To build the site in other selected languages too, you need to set them in `BUILD_LOCALES`, eg: `BUILD_LOCALES=en,es` if you also want to build only English (required) and Spanish.
+  - To build all languages, simply comment this line out with a hash mark, eg: `# BUILD_LOCALES=`
 
 By default the script will build all the languages (complete list in `i18n.config.json`).
 
