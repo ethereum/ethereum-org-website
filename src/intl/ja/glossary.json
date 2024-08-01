@@ -349,6 +349,8 @@
   "state-channels-definition": "参加者間でチャンネルが設定され、自由かつ安価に取引できる<a href=\"/glossary/#layer-2\">レイヤー2</a>ソリューションです。チャンネルの設定と、チャンネルの終了時のみ<a href=\"/glossary/#transaction\">トランザクション</a>が<a href=\"/glossary/#mainnet\">メインネット</a>へ送信されます。非常に高いスループットを実現できますが、参加者数をあらかじめ知っている必要があり、資金をロックする必要があります。詳細は<a href=\"/developers/docs/scaling/state-channels/#state-channels\">ステートチャンネル</a>をご覧ください。",
   "supermajority-term": "スーパーマジョリティ",
   "supermajority-definition": "スーパーマジョリティは、イーサリアムの安全を確保するのにステーキングされている全Etherの3分の2(66%)を超える量を意味する用語です。スーパーマジョリティの投票は、ビーコンチェーンでブロックが<a href=\"/glossary/#finality\">ファイナライズ</a>されるのに必要になります。",
+  "sybil-attack-term": "シビル攻撃",
+  "sybil-attack-definition": "シビル攻撃とは、1人の人間がシステムを欺いて複数の人間だと認識させ、影響力を増大させることです。",
   "syncing-term": "同期",
   "syncing-definition": "最新バージョンのブロックチェーン全体をノードにダウンロードするプロセス。",
   "sync-committee-term": "同期委員会",

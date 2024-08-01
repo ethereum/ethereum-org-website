@@ -3,7 +3,6 @@
   "page-upgrades-bug-bounty-annotations": "以下の注釈を確認すると役に立つかもしれません。",
   "page-upgrades-bug-bounty-client-bugs": "クライアントのバグ",
   "page-upgrades-bug-bounty-client-bugs-desc": "クライアントはイーサリアムネットワークを実行し、仕様に定められたロジックに従い、潜在的な攻撃から保護する必要があります。探し出したいバグは、プロトコルの実装に関連するものです。",
-  "page-upgrades-bug-bounty-client-bugs-desc-2": "現在、実行レイヤークライアント(Besu、Erigon、Geth、Nethermind)とコンセンサスレイヤークライアント(Lighthouse、Lodestar、Nimbus、Teku、Prysm)がバグ報償金プログラムに含まれています。 監査が終わり本番環境へのリリースができるようになると、他のクライアントも追加される場合があります。また最近では、<a href=\"https://github.com/ethereum/c-kzg-4844\" target=\"_blank\" rel=\"noreferrer\">c-kzg-4844</a>と<a href=\"https://github.com/crate-crypto/go-kzg-4844\" target=\"_blank\" rel=\"noreferrer\">go-kzg-4844</a>もバグ報奨金プログラムに含まれています。",
   "page-upgrades-bug-bounty-clients": "報奨金があるクライアント",
   "page-upgrades-bug-bounty-clients-type-1": "仕様不適合の問題",
   "page-upgrades-bug-bounty-clients-type-2": "予期しないクラッシュ、RCEまたはサービス拒否(DOS)攻撃の脆弱性",

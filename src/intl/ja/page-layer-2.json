@@ -125,7 +125,7 @@
   "boba-description": "Bobaは、もともとOptimismからフォークされたオプティミスティック・ロールアップで、ガス代の削減、トランザクション・スループットの向上、スマートコントラクトの機能拡張を目的とするスケーリング・ソリューションです。",
   "base-description": "Baseは、安全、低コスト、デベロッパーフレンドリーなイーサリアムL2で、次の10億のユーザーをweb3にもたらすために構築されています。Coinbaseによってインキュベートされ、オープンソースのOPスタック上に構築されたイーサリアムL2です。",
   "loopring-description": "Loopringのゼロ知識レイヤー2ソリューションは、イーサリアムのメインネットと同等のセキュリティ保証と、スループットが1000倍、コストがレイヤー1の0.1％という大幅なスケーラビリティの向上を目指しています。",
-  "zksync-description": "zkSyncは、イーサリアムのスケーリングを目指すゼロ知識ロールアップで、セキュリティや分散化を損なうことなくメインストリームに受け入れられることに価値を置いています。",
+  "zksync-description": "ZKsyncは、イーサリアムのスケーリングを目指すゼロ知識ロールアップで、セキュリティや分散化を損なうことなくメインストリームに受け入れられることに価値を置いています。",
   "zkspace-description": "ZKSpaceプラットフォームは、zk-Rollups技術を活用したレイヤー2のAMM DEXであるZKSwap、決済サービスのZKSquare、そしてNFTマーケットプレイスのZKSeaの3つの部分から構成されます。",
   "aztec-description": "Aztecネットワークは、イーサリアム初のプライベート・ゼロ知識ロールアップで、分散型アプリケーションのプライバシーとスケールリングへのアクセスを可能にします。",
   "starknet-description": "Starknet is a Validity Rollup Layer 2. It provides high throughput, low gas costs, and retains Ethereum Layer 1 levels of security.",
