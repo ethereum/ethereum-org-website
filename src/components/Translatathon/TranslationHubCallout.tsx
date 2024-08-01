@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react"
+import { Center, Flex } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
@@ -22,14 +22,14 @@ export const TranslationHubCallout = ({ children }) => {
           </ButtonLink>
         </Flex>
       </Flex>
-      <Flex w="full">
+      <Center w="full">
         <Image
           src={WalkingImage}
           alt=""
           maxW={265}
           style={{ objectFit: "contain" }}
         />
-      </Flex>
+      </Center>
     </Flex>
   )
 }
