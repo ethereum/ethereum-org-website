@@ -724,6 +724,12 @@ const LearnPage = () => {
                   </InlineLink>{" "}
                   <Text as="i">{t("bankless-description")}</Text>
                 </ListItem>
+                <ListItem>
+                  <InlineLink href="https://www.youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5">
+                    {t("ethereum-basics-title")}
+                  </InlineLink>{" "}
+                  <Text as="i">{t("ethereum-basics-description")}</Text>
+                </ListItem>
               </UnorderedList>
             </Box>
           </Section>
