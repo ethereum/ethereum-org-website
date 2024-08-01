@@ -8,13 +8,12 @@ import {
   LinkBox,
   type LinkBoxProps,
   LinkOverlay,
+  useColorModeValue,
 } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
 import { BaseLink } from "@/components/Link"
 import Text from "@/components/OldText"
-
-import useColorModeValue from "@/hooks/useColorModeValue"
 
 const linkBoxFocusStyles: BoxProps = {
   borderRadius: "base",
@@ -30,7 +29,7 @@ const linkFocusStyles: BoxProps = {
 
 export type ActionCardProps = Omit<LinkBoxProps, "title"> & {
   children?: ReactNode
-  to: string
+  href: string
   alt?: string
   image: StaticImageData
   imageWidth?: number
@@ -42,7 +41,7 @@ export type ActionCardProps = Omit<LinkBoxProps, "title"> & {
 }
 
 const ActionCard = ({
-  to,
+  href,
   alt,
   image,
   imageWidth = 220,
@@ -100,7 +99,7 @@ const ActionCard = ({
             color="text"
             hideArrow
             textDecoration="none"
-            to={to}
+            href={href}
             _hover={linkFocusStyles}
             _focus={linkFocusStyles}
           >

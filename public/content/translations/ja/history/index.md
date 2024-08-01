@@ -217,7 +217,7 @@ sidebarDepth: 1
 
 [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink href="/upgrades/beacon-chain/">
   ビーコンチェーン
 </DocLink>
 
@@ -233,7 +233,7 @@ sidebarDepth: 1
 
 [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   ステーキング
 </DocLink>
 
@@ -488,6 +488,6 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 この概要論文は、元々はイーサリアム創始者のヴィタリック・ブテリンにより 2013 年に発表されました。2015 年にプロジェクトが始動する前のことです。
 
-<DocLink to="/whitepaper/">
+<DocLink href="/whitepaper/">
   ホワイト ペーパー
 </DocLink>

@@ -11,7 +11,7 @@ type GitHubRepo = {
   url: string
 }
 
-type GitStarsProps = Omit<LinkProps, "to" | "href"> & {
+type GitStarsProps = Omit<LinkProps, "href" | "href"> & {
   gitHubRepo: GitHubRepo
   hideStars: boolean
 }

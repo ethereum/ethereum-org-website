@@ -32,7 +32,7 @@ Con governance off-chain si intende invece l'approccio opposto, ovvero quando le
 
 _Mentre a livello di protocollo Ethereum la governance è gestita off-chain, molti casi d'uso costruiti su Ethereum, come le DAO, utilizzano una governance on-chain._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Maggiori informazioni sulle DAO
 </ButtonLink>
 
@@ -58,7 +58,7 @@ _Nota: chiunque può far parte di più gruppi (ad esempio uno sviluppatore di pr
 
 Un processo importante usato nella governance di Ethereum è la proposta di miglioramento di Ethereum **(Ethereum Improvement Proposal, EIP)**. Le EIP costituiscono lo standard per potenziali nuove funzioni o processi di Ethereum. Chiunque nella community Ethereum può creare un'EIP. Se sei interessata/o a scrivere un’EIP o a partecipare alla revisione tra colleghi e/o alla governance, vedi:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Maggiori informazioni sulle EIP
 </ButtonLink>
 
@@ -154,7 +154,7 @@ Lo sviluppo di specifiche e implementazioni è sempre stato totalmente open sour
 
 Quando la Beacon Chain si è fusa al livello d'esecuzione di Ethereum il 15 settembre 2022, la Fusione si è completata come parte dell'[aggiornamento di rete di Parigi](/history/#paris). La proposta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) è stata modificata da 'Ultimo Appello' a 'Definitiva', completando la transizione al proof-of-stake.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Maggiori informazioni sulla fusione
 </ButtonLink>
 

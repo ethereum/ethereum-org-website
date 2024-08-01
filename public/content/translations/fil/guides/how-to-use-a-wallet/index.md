@@ -64,7 +64,7 @@ Hindi magbabago ang iyong address sa lahat ng Ethereum project. Hindi mo kailang
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Gusto mong magbasa pa?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Tingnan ang iba pa naming gabay
   </ButtonLink>
 </InfoBanner>

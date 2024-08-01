@@ -51,7 +51,7 @@ Você receberá automaticamente os tokens trocados em sua carteira assim que a t
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Quer saber mais?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Veja nossos outros guias
   </ButtonLink>
 </InfoBanner>

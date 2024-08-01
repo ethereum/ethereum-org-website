@@ -110,11 +110,11 @@ Extensões de navegador como extensões do Chrome ou complementos para o Firefox
 
 Uma das maiores razões pelas quais as pessoas sofrem golpes com criptomoedas é, geralmente, a falta de conhecimento. Por exemplo, se você não entende que a rede Ethereum é descentralizada e não pertence a ninguém, então é fácil ser presa de alguém fingindo ser um agente de atendimento ao cliente que promete devolver o ETH perdido como negociação das suas chaves privadas. Educar-se sobre como o Ethereum funciona é um investimento valioso.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   O que é Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   O que é ether?
 </DocLink>
 <Divider />
@@ -127,7 +127,7 @@ Uma das maiores razões pelas quais as pessoas sofrem golpes com criptomoedas é
 
 A chave privada da sua carteira atua como uma senha para a sua carteira Ethereum. É a única coisa que impede que alguém que conheça o endereço de sua carteira drene todos os ativos da sua conta!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   O que é uma carteira Ethereum?
 </DocLink>
 

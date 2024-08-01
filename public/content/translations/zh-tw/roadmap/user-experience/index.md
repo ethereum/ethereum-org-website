@@ -15,7 +15,7 @@ template: roadmap
 
 這個問題的解決辦法是使用[智慧型合約<](/glossary/#smart-contract)錢包與以太坊交互。 智慧型合約錢包確立了金鑰丟失或被盜時保護帳戶的方法，提供更好地檢測和防禦欺詐的機會，並且允許為錢包新增功能。 儘管智慧型合約錢包目前已經存在，但其建構難度還很大，因為需要以太坊協定提供更好的支援。 此額外的支援稱為帳戶抽象。
 
-<ButtonLink variant="outline-color" to="/roadmap/account-abstraction/">更多帳戶抽象相關資訊</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/account-abstraction/">更多帳戶抽象相關資訊</ButtonLink>
 
 ## 所有人都能運行的節點
 
@@ -23,7 +23,7 @@ template: roadmap
 
 有些升級可以讓運行節點變得更加簡單，且不需消耗如此大量的資源。 儲存資料時將改為使用更節省空間的架構，稱為**沃克爾樹**。 同時，透過[無狀態](/roadmap/statelessness)或[資料過期](/roadmap/statelessness/#data-expiry)，以太坊節點無需儲存全部以太坊狀態資料的副本，從而大大減少硬碟空間需求。 [輕節點](/developers/docs/nodes-and-clients/light-clients/)將帶來運行全節點的許多好處，並且可以在行動電話或簡單的瀏覽器應用程式中輕鬆運行。
 
-<ButtonLink variant="outline-color" to="/roadmap/verkle-trees/">閱讀沃克爾樹的相關資訊</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/verkle-trees/">閱讀沃克爾樹的相關資訊</ButtonLink>
 
 透過這些升級，可以有效地將運行節點的障礙降低至零。 使用者無需許可即能安全存取以太坊，而不必犧牲電腦或行動電話上的大量磁碟或 CPU 空間，且使用應用程式時，不必仰賴第三方存取資料或是網路。
 

@@ -220,7 +220,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   信标链
 </DocLink>
 
@@ -236,7 +236,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   质押
 </DocLink>
 
@@ -505,6 +505,6 @@ Gavin Wood 博士撰写的黄皮书，关于以太坊协议的技术定义。
 
 以太坊项目在 2015 年启动。但早在 2013 年，以太坊创始人 Vitalik Buterin 就发表了这一介绍性文章。
 
-<DocLink to="/whitepaper/">
+<DocLink href="/whitepaper/">
   白皮书
 </DocLink>

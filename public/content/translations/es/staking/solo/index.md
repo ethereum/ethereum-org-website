@@ -190,7 +190,7 @@ Una vez establecidas las credenciales de retirada, los pagos de recompensa (ETH 
 
 Para desbloquear y recibir el saldo completo, también debe completar el proceso de salida de su validador.
 
-<ButtonLink to="/staking/withdrawals/">Más sobre los retiros de Staking</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Más sobre los retiros de Staking</ButtonLink>
 </ExpandableCard>
 
 ## Para profundizar sobre el tema {#further-reading}

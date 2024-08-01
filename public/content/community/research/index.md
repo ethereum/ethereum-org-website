@@ -6,7 +6,7 @@ lang: en
 
 # Active areas of Ethereum research {#active-areas-of-ethereum-research}
 
-One of the primary strengths of Ethereum is that an active research and engineering community are constantly improving it. Many enthusiastic, skilled people worldwide would like to apply themselves to outstanding issues in Ethereum, but it is not always easy to find out what those issues are. This page outlines key active research areas as a rough guide to Ethereum's cutting edge.
+One of the primary strengths of Ethereum is that an active research and engineering community is constantly improving it. Many enthusiastic, skilled people worldwide would like to apply themselves to outstanding issues in Ethereum, but it is not always easy to find out what those issues are. This page outlines key active research areas as a rough guide to Ethereum's cutting edge.
 
 ## How Ethereum research works {#how-ethereum-research-works}
 

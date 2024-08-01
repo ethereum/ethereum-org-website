@@ -38,7 +38,7 @@ const TextDiv = ({ children, ...props }: FlexProps) => (
 )
 
 type DocsArrayProps = {
-  to: string
+  href: string
   id: TranslationKey
 }
 
@@ -80,7 +80,7 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
         </Text>
         <LinkOverlay
           as={BaseLink}
-          href={docData.to}
+          href={docData.href}
           textAlign={isPrev ? "start" : "end"}
           rel={isPrev ? "prev" : "next"}
           onClick={() => {
@@ -112,12 +112,12 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
       if (item.items) {
         // And if item has a 'to' key
         // Add 'to' path and 'id' to docsArray
-        item.to && docsArray.push({ to: item.to, id: item.id })
+        item.href && docsArray.push({ href: item.href, id: item.id })
         // Then recursively add sub-items
         getDocs(item.items)
       } else {
         // If object has no further 'items', add and continue
-        docsArray.push({ to: item.to, id: item.id })
+        docsArray.push({ href: item.href, id: item.id })
       }
     }
   }
@@ -129,8 +129,8 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
   let currentIndex = 0
   for (let i = 0; i < docsArray.length; i++) {
     if (
-      asPath.indexOf(docsArray[i].to) >= 0 &&
-      asPath.length === docsArray[i].to.length
+      asPath.indexOf(docsArray[i].href) >= 0 &&
+      asPath.length === docsArray[i].href.length
     ) {
       currentIndex = i
     }

@@ -1,14 +1,13 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { Button } from "@chakra-ui/react"
-import { Box, Flex, Text } from "@chakra-ui/react"
+import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
 
 import { FAKE_DEMO_ADDRESS } from "../../constants"
 import { NotificationPopover } from "../../NotificationPopover"
 
-import useColorModeValue from "@/hooks/useColorModeValue"
 import QRDark from "@/public/images/qr-code-ethereum-org-dark.png"
 import QRLight from "@/public/images/qr-code-ethereum-org-light.png"
 

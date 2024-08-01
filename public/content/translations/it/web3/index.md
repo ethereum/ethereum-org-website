@@ -63,7 +63,7 @@ Il Web3 consente la proprietà diretta tramite i [token non fungibili (NFT)](/gl
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Maggiori informazioni sugli NFT</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     Maggiori informazioni sui NFT
   </ButtonLink>
 </InfoBanner>
@@ -88,7 +88,7 @@ Tuttavia, le persone definiscono molte community del Web3 come DAO. Queste commu
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Impara di più sulle DAO</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     Di più sulle DAO
   </ButtonLink>
 </InfoBanner>
@@ -103,7 +103,7 @@ Il Web3 risolve questi problemi consentendoti di controllare la tua identità di
 
 L'infrastruttura di pagamento del Web2 si affida a banche e processori di pagamento, escludendo le persone senza conti bancari o coloro che vivono nei confini del paese sbagliato. Web3 usa token come [ETH](/glossary/#ether) per inviare denaro direttamente nel browser e non richiede alcuna terza parte fidata.
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   Maggiori informazioni su ETH
 </ButtonLink>
 

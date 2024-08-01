@@ -16,11 +16,11 @@ Rising interest in cryptocurrency brings with it growing risk from scammers and 
 
 Misunderstandings about how crypto works can lead to costly mistakes. For example, if someone pretends to be a customer service agent who can return lost ETH in exchange for your private keys, they are preying on people not understanding that Ethereum is a decentralized network lacking this kind of functionality. Educating yourself on how Ethereum works is a worthwhile investment.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   What is Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   What is ether?
 </DocLink>
 <Divider />
@@ -33,7 +33,7 @@ Misunderstandings about how crypto works can lead to costly mistakes. For exampl
 
 The private key to your wallet is a password to your Ethereum wallet. It is the only thing stopping someone who knows your wallet address from draining your account of all of its assets!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   What's an Ethereum wallet?
 </DocLink>
 
