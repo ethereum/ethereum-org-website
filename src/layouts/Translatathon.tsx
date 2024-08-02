@@ -161,7 +161,7 @@ export const TranslatathonLayout = ({
         matomo: {
           eventCategory: "translatathon menu",
           eventAction: "click",
-          eventName: "translatathon hub",
+          eventName: "translatathon translatathon hub",
         },
       },
       {
@@ -170,7 +170,7 @@ export const TranslatathonLayout = ({
         matomo: {
           eventCategory: "translatathon menu",
           eventAction: "click",
-          eventName: "details and submission criteria",
+          eventName: "translatathon details and submission criteria",
         },
       },
       {
@@ -179,19 +179,18 @@ export const TranslatathonLayout = ({
         matomo: {
           eventCategory: "translatathon menu",
           eventAction: "click",
-          eventName: "terms and conditions",
+          eventName: "translatathon terms and conditions",
         },
       },
-      // TODO: Add back in when this page is ready
-      // {
-      //   text: "Local communities",
-      //   to: "/translatathon/local-communities",
-      //   matomo: {
-      //     eventCategory: "translatathon menu",
-      //     eventAction: "click",
-      //     eventName: "local communities",
-      //   },
-      // },
+      {
+        text: "Local communities",
+        href: "/contributing/translation-program/translatathon/local-communities",
+        matomo: {
+          eventCategory: "translatathon menu",
+          eventAction: "click",
+          eventName: "translatathon local communities",
+        },
+      },
     ],
   }
 

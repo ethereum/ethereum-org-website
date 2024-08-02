@@ -1,64 +1,15 @@
 import { Box, Flex, Text } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
-import { Image } from "@/components/Image"
 
-import KipuLogo from "@/public/images/translatathon/kipu-logo.png"
+import Emoji from "../Emoji"
 
 const localCommunitiesData = [
   {
     organizer: "ETH Kypo",
     description:
       "ETH Kipu is an organization dedicated to supporting the Ethereum ecosystem in Latin America.",
-    logo: KipuLogo,
-    lumaLink: "https://example.com",
-    location: "🇦🇷 Buenos Aires, Argentina",
-  },
-  {
-    organizer: "ETH Kypo",
-    description:
-      "ETH Kipu is an organization dedicated to supporting the Ethereum ecosystem in Latin America.",
-    logo: KipuLogo,
-    lumaLink: "https://example.com",
-    location: "🇦🇷 Buenos Aires, Argentina",
-  },
-  {
-    organizer: "ETH Kypo",
-    description:
-      "ETH Kipu is an organization dedicated to supporting the Ethereum ecosystem in Latin America.",
-    logo: KipuLogo,
-    lumaLink: "https://example.com",
-    location: "🇦🇷 Buenos Aires, Argentina",
-  },
-  {
-    organizer: "ETH Kypo",
-    description:
-      "ETH Kipu is an organization dedicated to supporting the Ethereum ecosystem in Latin America.",
-    logo: KipuLogo,
-    lumaLink: "https://example.com",
-    location: "🇦🇷 Buenos Aires, Argentina",
-  },
-  {
-    organizer: "ETH Kypo",
-    description:
-      "ETH Kipu is an organization dedicated to supporting the Ethereum ecosystem in Latin America.",
-    logo: KipuLogo,
-    lumaLink: "https://example.com",
-    location: "🇦🇷 Buenos Aires, Argentina",
-  },
-  {
-    organizer: "ETH Kypo",
-    description:
-      "ETH Kipu is an organization dedicated to supporting the Ethereum ecosystem in Latin America.",
-    logo: KipuLogo,
-    lumaLink: "https://example.com",
-    location: "🇦🇷 Buenos Aires, Argentina",
-  },
-  {
-    organizer: "ETH Kypo",
-    description:
-      "ETH Kipu is an organization dedicated to supporting the Ethereum ecosystem in Latin America.",
-    logo: KipuLogo,
+    emojiString: ":peru:",
     lumaLink: "https://example.com",
     location: "🇦🇷 Buenos Aires, Argentina",
   },
@@ -105,13 +56,7 @@ export const LocalCommunitiesList = () => {
             </Flex>
           </Flex>
           <Flex minW="90">
-            <Image
-              src={community.logo}
-              alt={community.organizer}
-              width="90"
-              height="130"
-              style={{ objectFit: "contain" }}
-            />
+            <Emoji fontSize={90} text={community.emojiString} />
           </Flex>
         </Flex>
       ))}
