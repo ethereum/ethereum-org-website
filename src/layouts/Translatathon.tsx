@@ -23,6 +23,7 @@ import { LocalCommunitiesList } from "@/components/Translatathon/LocalCommunitie
 import { StepByStepInstructions } from "@/components/Translatathon/StepByStepInstructions"
 import { TranslatathonCalendar } from "@/components/Translatathon/TranslatathonCalendar"
 import { TranslatathonInANutshell } from "@/components/Translatathon/TranslatathonInANutshell"
+import TranslatathonPrizes from "@/components/Translatathon/TranslatathonPrizes"
 import { TranslationHubCallout } from "@/components/Translatathon/TranslationHubCallout"
 
 import WhyWeDoItImage from "@/public/images/translatathon/man-baby-woman.png"
@@ -132,6 +133,7 @@ export const translatathonComponents = {
   TranslatathonCalendar,
   TranslationHubCallout,
   TranslatathonInANutshell,
+  TranslatathonPrizes,
   TwoColumnContent,
   WhyWeDoItColumn,
 }
