@@ -369,6 +369,14 @@
     "description": "EDCON is committed to serving the Ethereum ecosystem by boosting communication and engagement between Ethereum communities worldwide"
   },
   {
+    "title": "ETH Shenzhen 2024",
+    "startDate": "2024-8-16",
+    "endDate": "2024-8-18",
+    "to": "https://ethshenzhen.org",
+    "location": "Shenzhen, China",
+    "description": "ETH Shenzhen is an Ethereum Developer Conference and Hackathon event aimed at connecting, inspiring, and educating developers from the Guangdong-Hong Kong-Macao Greater Bay Area and beyond, while also fostering connections with the SEA community."
+  },
+  {
     "title": "ETHOnline 2024",
     "href": "https://ethglobal.com/events/ethonline2024",
     "location": "Remote",

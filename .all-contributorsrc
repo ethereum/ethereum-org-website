@@ -12260,7 +12260,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/112751524?v=4",
       "profile": "https://github.com/Shiva-Sai-ssb",
       "contributions": [
-        "bug"
+        "bug",
+        "maintenance"
       ]
     },
     {
@@ -12340,6 +12341,24 @@
       "name": "Krishnakumar Chavan",
       "avatar_url": "https://avatars.githubusercontent.com/u/58606754?v=4",
       "profile": "https://github.com/krishchvn",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "0xV4L3NT1N3",
+      "name": "0xV4L3NT1N3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33112835?v=4",
+      "profile": "https://github.com/0xV4L3NT1N3",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "JoshDavisLight",
+      "name": "Josh Davis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/82784104?v=4",
+      "profile": "https://github.com/JoshDavisLight",
       "contributions": [
         "content"
       ]
