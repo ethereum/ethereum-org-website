@@ -107,7 +107,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button"
 
 type ButtonLinkProps = ButtonProps & {
-  linkProps: LinkProps
+  linkProps: Omit<LinkProps, "onClick">
   customEventOptions?: MatomoEventOptions
 }
 
