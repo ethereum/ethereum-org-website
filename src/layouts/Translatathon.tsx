@@ -60,7 +60,7 @@ const WhyWeDoItColumn = (props: ChildOnlyProp) => (
     me={{ lg: 8 }}
     direction="column"
   >
-    <Box m="auto">
+    <Box mx="auto" height="272">
       <Image src={WhyWeDoItImage} alt="" height="272" />
     </Box>
     <Box>{props.children}</Box>
@@ -74,8 +74,8 @@ const HowDoesItWorkColumn = (props: ChildOnlyProp) => (
     ms={{ lg: 8 }}
     direction="column"
   >
-    <Box m="auto">
-      <Image src={HowDoesItWorkImage} alt="" height="272" />
+    <Box mx="auto" height="272">
+      <Image src={HowDoesItWorkImage} alt="" maxHeight="272" />
     </Box>
     <Box>{props.children}</Box>
   </Flex>

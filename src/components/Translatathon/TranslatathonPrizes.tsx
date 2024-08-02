@@ -11,7 +11,7 @@ const TranslatathonPrizes = () => {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <p className="text-2xl font-bold">Winner</p>
+            <p className="text-2xl font-bold">1st place</p>
             <p className="text-4xl font-bold">5000$</p>
           </div>
         </div>
@@ -29,7 +29,7 @@ const TranslatathonPrizes = () => {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <p className="text-lg font-bold">second place</p>
+            <p className="text-lg font-bold">2nd place</p>
             <p className="text-3xl font-bold">3000$</p>
           </div>
         </div>
@@ -40,7 +40,7 @@ const TranslatathonPrizes = () => {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <p className="text-lg font-bold">third place</p>
+            <p className="text-lg font-bold">3rd place</p>
             <p className="text-3xl font-bold">1500$</p>
           </div>
         </div>
@@ -72,12 +72,13 @@ const TranslatathonPrizes = () => {
       <div className="flex flex-col gap-3 text-center">
         <div className="flex flex-col">
           <p className="text-body-base text-lg">
-            Top translator in each language will win a 100$ bonus{" "}
+            Top translator in each language: 100${" "}
           </p>
           <p className="text-body-base text-lg">+ Participation prizes</p>
         </div>
         <div className="flex flex-col text-sm text-body-medium">
-          <p>all the prize disclaimer here</p>
+          {/* TODO: Add this disclaimer link later */}
+          {/* <p>see prizes disclaimer here</p> */}
         </div>
       </div>
     </div>

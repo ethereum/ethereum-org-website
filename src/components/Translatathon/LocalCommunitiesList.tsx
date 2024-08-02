@@ -44,7 +44,6 @@ export const LocalCommunitiesList = () => {
                 {community.organizer}
               </Text>
             </Box>
-            <Text>{community.description}</Text>
             <Flex>
               <ButtonLink
                 href={community.lumaLink}
