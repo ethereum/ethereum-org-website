@@ -52,7 +52,7 @@ export const BaseLayout = ({
        * layout on initial load.
        */}
       <SkipLink />
-      <div className="max-w-screen-2xl mx-auto">
+      <div className="mx-auto max-w-screen-2xl">
         <Nav />
 
         {/* TODO: FIX TRANSLATION BANNER LOGIC FOR https://github.com/ethereum/ethereum-org-website/issues/11305 */}
