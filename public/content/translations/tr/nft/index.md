@@ -86,7 +86,7 @@ Ethereum'un güvenliği, hisse ispatından gelir. Sistem, kötü niyetli eylemle
 
 NFT'lerle ilgili güvenlik sorunları çoğunlukla kimlik avı dolandırıcılığı, akıllı sözleşme güvenlik açıkları veya kullanıcı hataları (istenmeden özel anahtarların açığa çıkarılması gibi) ile ilgilidir ve bu da iyi cüzdan güvenliğini NFT sahipleri için kritik hale getirir.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Güvenlik hakkında daha fazla bilgi
 </ButtonLink>
 

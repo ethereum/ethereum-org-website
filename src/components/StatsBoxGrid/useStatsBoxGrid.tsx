@@ -96,8 +96,8 @@ export const useStatsBoxGrid = ({
 
   const metrics: StatsBoxMetric[] = [
     {
-      apiProvider: "Beaconcha.in",
-      apiUrl: "https://beaconcha.in/",
+      apiProvider: "Dune Analytics",
+      apiUrl: "https://dune.com/",
       title: t("page-index-network-stats-total-eth-staked"),
       description: t("page-index-network-stats-total-eth-staked-explainer"),
       buttonContainer: (

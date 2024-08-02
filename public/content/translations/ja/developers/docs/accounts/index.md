@@ -1,5 +1,5 @@
 ---
-title: Ethereumアカウント
+title: イーサリアムアカウント
 description: イーサリアムアカウントの説明 - データ構造、鍵ペア暗号技術との関係
 lang: ja
 ---

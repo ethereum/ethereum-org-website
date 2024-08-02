@@ -3,7 +3,6 @@ import { extendBaseTheme, type ThemeConfig } from "@chakra-ui/react"
 import components from "./components"
 import foundations from "./foundations"
 import semanticTokens from "./semanticTokens"
-import styles from "./styles"
 
 const config: ThemeConfig = {
   cssVarPrefix: "eth",
@@ -19,7 +18,6 @@ const config: ThemeConfig = {
  */
 const theme = {
   config,
-  styles,
   ...foundations,
   semanticTokens,
   components,

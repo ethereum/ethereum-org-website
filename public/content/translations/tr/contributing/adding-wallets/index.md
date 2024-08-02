@@ -57,7 +57,7 @@ Ethereum'da cüzdanlar çok hızlı bir biçimde değişiyor. Ethereum.org'da de
 
 Ethereum.org'a bir cüzdan eklemek istiyorsanız GitHub'da bir konu oluşturun.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Bir konu oluştur
 </ButtonLink>
 

@@ -41,6 +41,7 @@ export const COINGECKO_API_BASE_URL =
 export const COINGECKO_API_URL_PARAMS =
   "&order=market_cap_desc&per_page=100&page=1&sparkline=false"
 export const BASE_TIME_UNIT = 3600 // 1 hour
+export const COLOR_MODE_STORAGE_KEY = "theme"
 
 // Quiz Hub
 export const PROGRESS_BAR_GAP = "4px"
@@ -52,6 +53,7 @@ export const TOTAL_QUIZ_AVERAGE_SCORE = 67.4
 export const TOTAL_QUIZ_RETRY_RATE = 15.6
 
 // Crowdin
+export const CROWDIN_PROJECT_URL = "https://crowdin.com/project/ethereum-org"
 export const CROWDIN_PROJECT_ID = 363359
 export const CROWDIN_API_MAX_LIMIT = 500
 export const FIRST_CROWDIN_CONTRIBUTION_DATE = "2019-07-01T00:00:00+00:00"
@@ -73,6 +75,7 @@ export const DAYS_TO_FETCH = 90
 export const RANGES = ["30d", "90d"] as const
 export const BEACONCHA_IN_URL = "https://beaconcha.in/"
 export const ETHERSCAN_API_URL = "https://api.etherscan.io"
+export const DUNE_API_URL = "https://api.dune.com"
 
 // Wallets
 export const NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN = 5
@@ -149,3 +152,6 @@ export const DEFAULT_GLOSSARY_NS = "glossary"
 export const HAMBURGER_BUTTON_ID = "mobile-menu-button"
 export const MOBILE_LANGUAGE_BUTTON_NAME = "mobile-language-button"
 export const DESKTOP_LANGUAGE_BUTTON_NAME = "desktop-language-button"
+
+// Codeblock
+export const LINES_BEFORE_COLLAPSABLE = 8

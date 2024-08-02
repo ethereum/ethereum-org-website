@@ -92,6 +92,6 @@ _Não consideramos outras soluções de dimensionamento que não usam o Ethereum
 
 Se você quiser adicionar uma camada 2 ao ethereum.org, abra um tíquete no Github.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Crie um ticket
 </ButtonLink>

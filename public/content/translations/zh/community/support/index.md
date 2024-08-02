@@ -12,11 +12,11 @@ lang: zh
 
 了解以太坊的去中心化性质至关重要，因为任何自称是以太坊官方支持人员的人都可能在试图诈骗你！ 预防诈骗的最好办法就是自学并认真对待安全问题。
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   以太坊安全和预防欺诈措施
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   学习以太坊基础知识
 </DocLink>
 

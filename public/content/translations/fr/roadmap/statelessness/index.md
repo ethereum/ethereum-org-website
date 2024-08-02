@@ -72,7 +72,7 @@ Pour que cela soit possible, les [arbres de Verkle](/roadmap/verkle-trees/) doiv
 
 L'absence d'état requiert que les constructeurs de blocs conservent une copie des données d'état complètes afin qu'ils puissent générer des témoins pouvant être utilisés pour vérifier le bloc. Les autres nœuds n'ont pas besoin d'accéder aux données d'état, toute l'information requise pour vérifier le bloc est disponible dans le témoin. Cela crée une situation où proposer un bloc est coûteux, mais vérifier le bloc est bon marché, ce qui implique que moins d'opérateurs vont faire fonctionner un bloc proposant des noeuds. Cependant, la décentralisation des proposants de blocs n'est pas critique tant qu'autant de participants que possible peuvent vérifier que les blocs qu'ils proposent sont valides.
 
-<ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">En lire plus dans les notes de Dankrad</ButtonLink>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">En lire plus dans les notes de Dankrad</ButtonLink>
 </ExpandableCard>
 
 Les proposants de bloc utilisent les données d'état pour créer des « témoins » - l'ensemble minimal de données qui prouvent les valeurs de l'état qui sont modifiées par les transactions dans un bloc. Les autres validateurs ne détiennent pas l'état, ils ne stockent que la racine de l'état (une empreinte numérique de l'état complet). Ils reçoivent un bloc et un témoin et les utilisent pour mettre à jour leur racine de l'état. Cela rend un nœud validant extrêmement léger.
@@ -81,7 +81,7 @@ L'absence d'état faible est à un stade de recherche avancé, mais elle repose 
 
 ### Absence d'état forte {#strong-statelessness}
 
-L'absence d'état forte élimine le besoin pour tout bloc de stocker des données d'état. Au lieu de cela, les transactions sont envoyées avec des témoins qui peuvent être agrégés par les producteurs de blocs. Les producteurs de blocs sont alors chargés de stocker uniquement l'état nécessaire à la génération de témoins pour les comptes concernés. La responsabilité de l'état est presque entièrement transférée aux utilisateurs, car ils envoient des témoins et des « listes d'accès » pour déclarer avec quels comptes et clés de stockage ils interagissent. Cela permettrait de disposer de nœuds extrêmement légers, mais il y a des compromis, notamment la difficulté accrue de réaliser des transactions avec des contrats intelligents.
+L'absence d'état forte supprime le besoin pour tous les nœuds de stocker les données d'état. Au lieu de cela, les transactions sont envoyées avec des témoins qui peuvent être agrégés par les producteurs de blocs. Les producteurs de blocs sont alors chargés de stocker uniquement l'état nécessaire à la génération de témoins pour les comptes concernés. La responsabilité de l'état est presque entièrement transférée aux utilisateurs, car ils envoient des témoins et des « listes d'accès » pour déclarer avec quels comptes et clés de stockage ils interagissent. Cela permettrait de disposer de nœuds extrêmement légers, mais il y a des compromis, notamment la difficulté accrue de réaliser des transactions avec des contrats intelligents.
 
 L'absence d'état forte a été étudiée par les chercheurs mais on ne s'attend actuellement pas à ce qu'elle fasse partie de la feuille de route d'Ethereum - il est plus probable que l'absence d'état faible soit suffisante pour les besoins de mise à l'échelle d'Ethereum.
 

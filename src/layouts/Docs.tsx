@@ -16,7 +16,7 @@ import {
 import { ChildOnlyProp } from "@/lib/types"
 import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 
-import BannerNotification from "@/components/BannerNotification"
+import BannerNotification from "@/components/Banners/BannerNotification"
 import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
@@ -164,7 +164,7 @@ const BackToTop = (props: ChildOnlyProp) => (
     borderColor="border"
     {...props}
   >
-    <Link to="#top">
+    <Link href="#top">
       <Translation id="back-to-top" /> ↑
     </Link>
   </Flex>

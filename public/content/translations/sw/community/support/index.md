@@ -12,11 +12,11 @@ Je, unatafuta msaada rasmi wa Ethereum? Cha kwanza unachopaswa kujua ni kua Ethe
 
 Ufahamu wa asili ya ugatuzi wa Ethereum ni muhimu kwa kila mmoja maana yeyote anayedai kua mtu anaeweza kutoa msaada kuhusu Ethereum anaweza kukulaghai! Ulinzi thabiti dhidi ya walaghai na kujifunza na kua makini na ulinzi.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Usalama wa Ethereum na udhibiti wa matapeli
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Jifunze mambo ya msingi ya Ethereum
 </DocLink>
 

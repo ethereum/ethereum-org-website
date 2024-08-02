@@ -11,7 +11,7 @@ hideEditButton: true
 
 <UpcomingEventsList/>
 
-これはコミュニティにより、維持されているイベントのリストですが、すべてのイベントを網羅するものではありません。 リストに追加すべきイーサリアムのイベントをご存じの場合は、 [こちら](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.ts)に加えてください！
+これはコミュニティにより、維持されているイベントのリストですが、すべてのイベントを網羅するものではありません。 リストに追加すべきイーサリアムのイベントをご存じの場合は、 [ぜひ追加してください](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)。
 
 ## イーサリアムのミートアップ {#meetups}
 

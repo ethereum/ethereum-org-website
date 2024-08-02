@@ -49,7 +49,7 @@ Alle Ethereum-upgrades zijn ietwat met elkaar verbonden. Laten we nu samenvatten
 
 In het begin zal de Beacon Chain apart bestaan van het Ethereum-hoofdnet dat we dagelijks gebruiken. Maar uiteindelijke zullen ze verbonden worden. Het plan is om het hoofdnet "samen te voegen" met het proof-of-stake systeem dat gecontroleerd en gecoördineerd wordt door de Beacon Chain.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
     De Merge
 </ButtonLink>
 
@@ -57,7 +57,7 @@ In het begin zal de Beacon Chain apart bestaan van het Ethereum-hoofdnet dat we 
 
 Shardketens kunnen alleen op een veilige manier in het Ethereum-netwerk komen als er een proof-of-stake consensusmechanisme geïmplementeerd is. De Beacon Chain zal het staken introduceren en de weg vrijmaken voor de upgrade van de shardketen die zal volgen.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
     Shardketens
 </ButtonLink>
 

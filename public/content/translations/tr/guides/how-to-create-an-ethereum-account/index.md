@@ -14,7 +14,7 @@ Bir şirketle yeni bir hesap açmaktan farklı şekilde, bir Ethereum hesabı ol
 
 Cüzdan, Ethereum hesabınızı yönetmenize yardımcı olan bir uygulamadır. İşlemler göndermek ve almak için ve uygulamalara giriş yapmak için sizin anahtarlarınızı kullanır. Aralarından seçim yapabileceğiniz mobil, masaüstü ve hatta tarayıcı uzantıları olarak düzinelerce farklı cüzdan vardır.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Bir cüzdan bul
 </ButtonLink>
 
@@ -42,7 +42,7 @@ Güvenlik kelimelerinizi kaydettiğiniz andan itibaren bakiyenizle birlikte cüz
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Dahasını mı öğrenmek istiyorsunuz?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Diğer rehberlerimizi inceleyin
   </ButtonLink>
 </InfoBanner>

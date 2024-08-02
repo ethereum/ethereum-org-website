@@ -56,7 +56,7 @@ Maybe you are an artist that wants to share their work using NFTs, without losin
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Explore, buy or create your own NFT art/collectibles...</div>
-  <ButtonLink to="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/dapps/?category=collectibles#explore">
     Explore NFT art
   </ButtonLink>
 </InfoBanner>
@@ -93,7 +93,7 @@ Ethereum's security comes from [proof-of-stake](/glossary/#pos). The system is d
 
 Security issues relating to NFTs are most often related to phishing scams, smart contract vulnerabilities or user errors (such as inadvertently exposing private keys), making good wallet security critical for NFT owners.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   More on security
 </ButtonLink>
 

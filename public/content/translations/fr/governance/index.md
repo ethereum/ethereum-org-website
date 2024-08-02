@@ -32,7 +32,7 @@ L'approche opposée, la gouvernance hors chaîne, est celle où toute décision 
 
 _Bien qu'au niveau du protocole, la gouvernance d'Ethereum est hors chaîne, de nombreux cas d'utilisation basés sur Ethereum, tels que les DAO, utilisent la gouvernance sur la blockchain._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   En savoir plus sur les DAO
 </ButtonLink>
 
@@ -58,7 +58,7 @@ _Note : Toute personne peut faire partie de plusieurs de ces groupes (par exempl
 
 Un processus important utilisé dans la gouvernance Ethereum est la proposition de **Propositions d'amélioration Ethereum (EIP)**. Les EIP sont des normes qui spécifient de nouvelles fonctionnalités ou processus potentiels pour Ethereum. N'importe qui au sein de la communauté Ethereum peut créer une EIP. Si vous souhaitez écrire une EIP ou participer à une revue par les pairs, et/ou la gouvernance, voir :
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Plus d'infos les EIP
 </ButtonLink>
 
@@ -120,7 +120,7 @@ Les fourches sont lorsque des mises à niveau techniques majeures ou des modific
 
 La fourche DAO est la réponse à l'attaque [DAO de 2016](https://www.coindesk.com/understanding-dao-hack-journalists) où un contrat non sécurisé d'une [DAO](/glossary/#dao) a été vidé de plus de 3,6 millions d'ETH lors d'un piratage. La fourche a transféré les fonds du contrat défectueux à un nouveau contrat permettant à quiconque a perdu des fonds dans le piratage de les récupérer.
 
-Ce plan d'action a été voté par la communauté Ethereum. Tout détenteur d'ETH a pu voter via une transaction sur [une plateforme de vote](http://v1.carbonvote.com/). Plus de 85 % des votes étaient favorables à la fourche.
+Ce plan d'action a été voté par la communauté Ethereum. Tout détenteur d'ETH a pu voter via une transaction sur [une plateforme de vote](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Plus de 85 % des votes étaient favorables à la fourche.
 
 Il est important de noter qu'alors que le protocole a fait une fourche pour annuler le hack, le poids du vote lors de la décision de la fourche est discutable pour quelques raisons :
 
@@ -154,7 +154,7 @@ Bien que le développement des spécifications et des implémentations ait toujo
 
 Lorsque la Chaîne Phare a fusionné avec la couche d'exécution Ethereum le 15 septembre 2022, La Fusion s'est achevée à travers [la mise à jour Paris](/history/#paris). La proposition [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) est passée de 'Dernier appel' à 'Final', achevant ainsi la transition vers la preuve d'enjeu.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Plus d'infos sur la fusion
 </ButtonLink>
 

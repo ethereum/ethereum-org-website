@@ -4,10 +4,11 @@ description: 瞭解「合併 - 當以太坊主網採用權益證明時」的相�
 lang: zh-tw
 template: upgrade
 image: /images/upgrades/merge.png
+alt:
 summaryPoint1: 以太坊主網使用權益證明，但以前並非總是如此。
 summaryPoint2: 從原本的工作量證明機制到權益證明的升級稱為「合併」。
 summaryPoint3: 合併指原本的以太坊主網與稱為信標鏈的獨立權益證明區塊鏈合併，現在作為一條鏈存在。
-summaryPoint4: 合併將以太坊的能耗降低了大約 99.95%。
+summaryPoint4: 合併將以太坊的能源消耗降低了約 99.95%。
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -201,7 +202,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 相反，區塊是由質押了以太幣的驗證節點提出，以換取參與共識的權利。 這為包括分片在內的未來擴容升級奠定了基礎。
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   信標鏈
 </ButtonLink>
 
@@ -217,7 +218,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 分片計劃正在迅速發展，但考慮到用於擴展交易執行的二層網路技術的興起和成功，分片計劃已轉向尋找最佳方式來分配儲存來自卷軸合約的壓縮 calldata 的負擔，從而實現網路容量的指數級增長。 如果不過渡到權益證明，這是不可能的。
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   分片
 </ButtonLink>
 

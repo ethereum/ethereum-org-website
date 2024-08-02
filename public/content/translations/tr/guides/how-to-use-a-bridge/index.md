@@ -54,7 +54,7 @@ Ağın RPC detaylarını bulmak için [chainlist.org](http://chainlist.org) site
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Diğer rehberlerimizi inceleyin
   </ButtonLink>
 </InfoBanner>

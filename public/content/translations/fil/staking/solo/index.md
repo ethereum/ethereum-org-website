@@ -190,7 +190,7 @@ Kapag naitakda na ang mga kredensyal sa pag-withdraw, ang mga reward payment (na
 
 Upang ma-unlock at maibalik ang iyong buong balanse, dapat mo ring tapusin ang proseso ng pag-aalis ng iyong validator.
 
-<ButtonLink to="/staking/withdrawals/">Iba pang detalye tungkol sa mga pag-withdraw sa staking</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Iba pang detalye tungkol sa mga pag-withdraw sa staking</ButtonLink>
 </ExpandableCard>
 
 ## Karagdagang pagbabasa {#further-reading}
