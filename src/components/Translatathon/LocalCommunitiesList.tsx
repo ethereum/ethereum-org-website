@@ -7,9 +7,7 @@ import Emoji from "../Emoji"
 const localCommunitiesData = [
   {
     organizer: "ETH Kypo",
-    description:
-      "ETH Kipu is an organization dedicated to supporting the Ethereum ecosystem in Latin America.",
-    emojiString: ":peru:",
+    emojiString: "🇷🇴",
     lumaLink: "https://example.com",
     location: "🇦🇷 Buenos Aires, Argentina",
   },
@@ -25,6 +23,7 @@ export const LocalCommunitiesList = () => {
           direction={{ base: "column-reverse", md: "row" }}
           p={6}
           gap={8}
+          justifyContent={"space-between"}
         >
           <Flex direction="column" gap={6}>
             <Flex
@@ -50,7 +49,7 @@ export const LocalCommunitiesList = () => {
                 variant="outline"
                 color="body.base"
               >
-                Luma link
+                Register here
               </ButtonLink>
             </Flex>
           </Flex>

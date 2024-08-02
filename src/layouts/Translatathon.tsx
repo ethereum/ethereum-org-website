@@ -183,12 +183,12 @@ export const TranslatathonLayout = ({
         },
       },
       {
-        text: "Local communities",
-        href: "/contributing/translation-program/translatathon/local-communities",
+        text: "Translatathon Hubs",
+        href: "/contributing/translation-program/translatathon/translatathon-hubs",
         matomo: {
           eventCategory: "translatathon menu",
           eventAction: "click",
-          eventName: "translatathon local communities",
+          eventName: "translatathon hubs",
         },
       },
     ],
