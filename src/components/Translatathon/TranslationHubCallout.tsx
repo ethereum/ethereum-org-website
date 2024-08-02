@@ -13,6 +13,7 @@ export const TranslationHubCallout = ({ children }) => {
       bg="background.highlight"
       direction={{ base: "column", lg: "row" }}
       p={8}
+      gap={8}
     >
       <Flex w="full" direction="column">
         {children}
