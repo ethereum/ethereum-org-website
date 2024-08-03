@@ -156,3 +156,10 @@ export const DESKTOP_LANGUAGE_BUTTON_NAME = "desktop-language-button"
 
 // Codeblock
 export const LINES_BEFORE_COLLAPSABLE = 8
+
+// RSS Feeds
+export const RSS_DISPLAY_COUNT = 3
+export const XML_FEEDS = [
+  "https://vitalik.eth.limo/feed.xml",
+  "https://blog.ethereum.org/en/feed.xml",
+]

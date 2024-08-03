@@ -742,3 +742,50 @@ export type GHLabel = {
   name: string
   color: string
 }
+
+/**
+ * RSS Feed handling
+ */
+export type RSSItem = {
+  pubDate: string
+  title: string
+  source: string
+  content: string
+  link: string
+}
+
+export type RSSChannel = {
+  title: string[]
+  link: string[]
+  description: string[]
+  lastBuildDate: string[]
+  docs: string[]
+  generator: string[]
+  image: {
+    url: string[]
+    title: string[]
+    link: string[]
+  }[]
+  copyright: string[]
+  item: {
+    title: string[]
+    link: string[]
+    guid: string[]
+    pubDate: string[]
+    description: string[]
+    category: string[]
+    enclosure: {
+      $: {
+        url: string[]
+        length: string[]
+        type: string[]
+      }
+    }[]
+  }[]
+}
+
+export type RSSResult = {
+  rss: {
+    channel: RSSChannel[]
+  }
+}
