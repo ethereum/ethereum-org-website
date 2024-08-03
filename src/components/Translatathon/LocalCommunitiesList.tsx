@@ -6,10 +6,22 @@ import Emoji from "../Emoji"
 
 const localCommunitiesData = [
   {
-    organizer: "ETH Kypo",
     emojiString: "🇷🇴",
-    lumaLink: "https://example.com",
-    location: "🇦🇷 Buenos Aires, Argentina",
+    lumaLink: "https://lu.ma/b7m1nyid",
+    location: "Bucharest, Romania",
+    eventName: "Ethereum Translatathon Bucharest 🌐🐬",
+  },
+  {
+    emojiString: "🇪🇹",
+    lumaLink: "https://lu.ma/zi092c8v",
+    location: "Ababa, Ethiopia",
+    eventName: "Eth Translatathon",
+  },
+  {
+    emojiString: "🇷🇸",
+    lumaLink: "https://lu.ma/ehd86ohx",
+    location: "Belgrade, Serbia",
+    eventName: "Ethereum Translatathon — ETH Belgrade",
   },
 ]
 
@@ -36,11 +48,8 @@ export const LocalCommunitiesList = () => {
               <Text fontWeight="bold">{community.location}</Text>
             </Flex>
             <Box>
-              <Text size="sm" color="body.medium">
-                Organizer:
-              </Text>
               <Text size="lg" fontWeight="bold">
-                {community.organizer}
+                {community.eventName}
               </Text>
             </Box>
             <Flex>
