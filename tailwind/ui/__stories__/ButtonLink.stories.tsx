@@ -11,9 +11,7 @@ export default meta
 
 export const ButtonLink: StoryObj<typeof meta> = {
   args: {
-    linkProps: {
-      href: "#",
-    },
+    href: "#",
     children: "What is Ethereum?",
   },
 }

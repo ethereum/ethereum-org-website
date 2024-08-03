@@ -106,13 +106,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 Button.displayName = "Button"
 
-type ButtonLinkProps = ButtonProps & {
-  linkProps: Omit<LinkProps, "onClick">
+type ButtonLinkProps = Omit<LinkProps, "onClick"> & {
+  buttonProps?: ButtonProps
   customEventOptions?: MatomoEventOptions
 }
 
 const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
-  ({ linkProps, customEventOptions, children, ...buttonProps }, ref) => {
+  ({ buttonProps, customEventOptions, children, ...linkProps }, ref) => {
     const handleClick = () => {
       customEventOptions && trackCustomEvent(customEventOptions)
     }
