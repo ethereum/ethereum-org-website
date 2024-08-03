@@ -67,7 +67,7 @@ const ButtonTwoLines = ({
     return (
       <ButtonLink
         className={commonClassStyles}
-        size={size}
+        // size={size}
         buttonProps={buttonProps}
         {...rest}
       >
