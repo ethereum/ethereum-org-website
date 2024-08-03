@@ -7,7 +7,7 @@ import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 import { MdChevronRight } from "react-icons/md"
 import { Flex, Skeleton } from "@chakra-ui/react"
 
-import type { AllMetricData, BasePageProps, Lang } from "@/lib/types"
+import type { AllMetricData, BasePageProps, Lang, RSSItem } from "@/lib/types"
 import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
@@ -54,6 +54,7 @@ import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchNodes } from "@/lib/api/fetchNodes"
+import { fetchRSSDisplay } from "@/lib/api/fetchRSSDisplay"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
@@ -73,6 +74,7 @@ const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
 type Props = BasePageProps & {
   communityEvents: CommunityEventsReturnType
   metricResults: AllMetricData
+  rssItems: RSSItem[]
 }
 
 export const getStaticProps = (async ({ locale }) => {
@@ -98,6 +100,9 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  // load RSS feed items
+  const rssItems = await fetchRSSDisplay()
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
@@ -105,6 +110,7 @@ export const getStaticProps = (async ({ locale }) => {
       contentNotTranslated,
       lastDeployLocaleTimestamp,
       metricResults,
+      rssItems,
     },
     revalidate: BASE_TIME_UNIT * 24,
   }
@@ -113,6 +119,7 @@ export const getStaticProps = (async ({ locale }) => {
 const HomePage = ({
   communityEvents,
   metricResults,
+  rssItems,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation(["common", "page-index"])
   const { locale, asPath } = useRouter()
@@ -219,8 +226,6 @@ const HomePage = ({
       href: "/roadmap/",
     },
   ]
-
-  const comingSoon = [{ title: "Ethereum news", tag: "" }]
 
   const upcomingEvents = events
     .sort(
@@ -477,10 +482,33 @@ const HomePage = ({
           {/* TODO: News sub-section */}
         </HomeSection>
 
-        {/* Temporary coming soon section template */}
-        {comingSoon.map((item) => (
-          <HomeSection {...item} key={item.title} />
-        ))}
+        <HomeSection tag="" title="Ethereum news">
+          <p>The latest blog posts and updates from the community</p>
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:flex-row">
+            {rssItems.map(({ title, link, content, source, pubDate }) => (
+              <a
+                href={link}
+                key={title}
+                className="duration-100 hover:scale-105 hover:duration-100"
+              >
+                <div className="5 flex flex-col space-y-2">
+                  <p className="text-sm italic">
+                    {new Intl.DateTimeFormat(locale, {
+                      month: "long",
+                      day: "numeric",
+                      year: "numeric",
+                    }).format(new Date(pubDate))}
+                  </p>
+                  <p className="mb-2 text-2xl font-bold">{title}</p>
+                  <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
+                    {source}
+                  </div>
+                  <p>{content}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </HomeSection>
 
         <HomeSection tag="" title="Ethereum events">
           <p>We have many community events scheduled around the globe</p>
