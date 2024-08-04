@@ -1,5 +1,5 @@
 import { useTranslation } from "next-i18next"
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
+import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6" // Using FaTwitter
 import { IoChevronUpSharp } from "react-icons/io5"
 
 import type { FooterLink, FooterLinkSection } from "@/lib/types"
@@ -21,7 +21,7 @@ const socialLinks = [
     ariaLabel: "GitHub",
   },
   {
-    icon: FaTwitter,
+    icon: FaXTwitter, // Use FaTwitter
     href: "https://twitter.com/ethdotorg",
     ariaLabel: "Twitter",
   },
