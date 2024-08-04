@@ -2,7 +2,8 @@ import type { Config } from "tailwindcss"
 import plugin from "tailwindcss/plugin"
 
 const config = {
-  darkMode: ["class"],
+  // TODO: Move to "class" strategy after removing Chakra
+  darkMode: ["selector", '[data-theme="dark"]'],
   content: [
     "./src/**/*.{ts,tsx}",
     // TODO: remove after migration
@@ -90,7 +91,7 @@ const config = {
         },
       },
       backgroundImage: {
-        "bg-main-gradient": "var(--bg-main-gradient)",
+        "main-gradient": "var(--bg-main-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
