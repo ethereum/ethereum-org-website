@@ -1,3 +1,4 @@
+import { usePathname } from "next/navigation"
 import { useTranslation } from "next-i18next"
 import { FaGithub } from "react-icons/fa"
 import {
@@ -36,6 +37,7 @@ const TableOfContents = ({
   isMobile = false,
   ...rest
 }: TableOfContentsProps) => {
+  const pathname = usePathname()
   const { t } = useTranslation("common")
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
@@ -85,6 +87,11 @@ const TableOfContents = ({
               leftIcon={<Icon as={FaGithub} />}
               href={editPath}
               variant="outline"
+              customEventOptions={{
+                eventCategory: "edit_page",
+                eventAction: "gh_edit_click",
+                eventName: `${pathname}`,
+              }}
             >
               {t("edit-page")}
             </ButtonLink>
