@@ -20,11 +20,13 @@ import {
   BannerGridCell,
   BannerImage,
 } from "@/components/BannerGrid"
+import { Button, ButtonLink } from "@/components/Buttons"
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image, type ImageProps } from "@/components/Image"
+import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
@@ -45,9 +47,6 @@ import {
   getLocaleForNumberFormat,
   getRequiredNamespacesForPage,
 } from "@/lib/utils/translations"
-
-import InlineLink from "../../tailwind/Link"
-import { Button, ButtonLink } from "../../tailwind/ui/buttons/Button"
 
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
 import dogeComputerImg from "@/public/images/doge-computer.png"
@@ -653,10 +652,7 @@ const WhatIsEthereumPage = ({
                     <ButtonLink href="/smart-contracts/">
                       {t("page-what-is-ethereum-more-on-smart-contracts")}
                     </ButtonLink>
-                    <ButtonLink
-                      href="/dapps/"
-                      buttonProps={{ isSecondary: true, variant: "outline" }}
-                    >
+                    <ButtonLink href="/dapps/" variant="outline" isSecondary>
                       {t("page-what-is-ethereum-explore-dapps")}
                     </ButtonLink>
                   </ButtonRow>
@@ -679,10 +675,7 @@ const WhatIsEthereumPage = ({
                     <ButtonLink href="/eth/">
                       {t("page-what-is-ethereum-what-is-ether")}
                     </ButtonLink>
-                    <ButtonLink
-                      href="/get-eth/"
-                      buttonProps={{ isSecondary: true, variant: "outline" }}
-                    >
+                    <ButtonLink href="/get-eth/" variant="outline" isSecondary>
                       {t("page-what-is-ethereum-get-eth")}
                     </ButtonLink>
                   </ButtonRow>
@@ -711,7 +704,8 @@ const WhatIsEthereumPage = ({
                     </ButtonLink>
                     <ButtonLink
                       href="/roadmap/merge/"
-                      buttonProps={{ isSecondary: true, variant: "outline" }}
+                      variant="outline"
+                      isSecondary
                     >
                       {t("page-what-is-ethereum-the-merge-update")}
                     </ButtonLink>

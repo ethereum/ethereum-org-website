@@ -106,13 +106,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 Button.displayName = "Button"
 
-type ButtonLinkProps = LinkProps & {
-  buttonProps?: ButtonProps
+type ButtonLinkProps = ButtonProps & {
+  linkProps: LinkProps
   customEventOptions?: MatomoEventOptions
 }
 
 const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
-  ({ buttonProps, customEventOptions, children, ...linkProps }, ref) => {
+  ({ linkProps, customEventOptions, children, ...buttonProps }, ref) => {
     const handleClick = () => {
       customEventOptions && trackCustomEvent(customEventOptions)
     }
@@ -123,7 +123,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           activeStyle={{}}
           // TODO: Redress this override when migrating the link component
           color={
-            buttonProps?.variant === "solid" ? "background.base" : undefined
+            buttonProps.variant === "solid" ? "background.base" : undefined
           }
           textDecor="none"
           _hover={{
