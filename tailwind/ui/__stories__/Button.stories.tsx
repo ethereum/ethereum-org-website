@@ -117,7 +117,10 @@ export const OverrideStyles: Story = {
         <Button aria-label="toggle" className="px-1.5">
           <MdNightlight />
         </Button>
-        <ButtonLink className="rounded-full px-0 py-0" href="#">
+        <ButtonLink
+          className="rounded-full px-0 py-0"
+          linkProps={{ href: "#" }}
+        >
           <Translation id="get-involved" />
         </ButtonLink>
       </VStack>

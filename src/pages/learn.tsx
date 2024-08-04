@@ -5,6 +5,7 @@ import type { HTMLAttributes, ReactNode } from "react"
 
 import type { BasePageProps, ChildOnlyProp, Lang, ToCItem } from "@/lib/types"
 
+import ButtonLink from "@/components/Buttons/ButtonLink"
 import OriginalCard, {
   type CardProps as OriginalCardProps,
 } from "@/components/Card"
@@ -14,6 +15,7 @@ import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image, type ImageProps } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
+import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import { ContentContainer } from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
@@ -23,9 +25,6 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import InlineLink from "../../tailwind/Link"
-import { ButtonLink } from "../../tailwind/ui/buttons/Button"
 
 import developersEthBlocks from "@/public/images/developers-eth-blocks.png"
 import dogeComputer from "@/public/images/doge-computer.png"

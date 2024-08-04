@@ -63,20 +63,9 @@ const ButtonTwoLines = ({
   )
 
   if (props.componentType === "link") {
-    const { buttonProps, ...rest } = props
     return (
-      <ButtonLink
-        className={commonClassStyles}
-        size={size}
-        buttonProps={buttonProps}
-        {...rest}
-      >
-        <ChildContent
-          {...rest}
-          size={size}
-          isSecondary={buttonProps?.isSecondary}
-          isIconLeft={isIconLeft}
-        />
+      <ButtonLink className={commonClassStyles} size={size} {...props}>
+        <ChildContent {...props} size={size} isIconLeft={isIconLeft} />
       </ButtonLink>
     )
   }
@@ -90,10 +79,7 @@ const ButtonTwoLines = ({
 export default ButtonTwoLines
 
 const ChildContent = (
-  props: Omit<ButtonTwoLinesProps, "iconAlignment" | "buttonProps"> & {
-    isIconLeft: boolean
-    isSecondary?: boolean
-  }
+  props: Omit<ButtonTwoLinesProps, "iconAlignment"> & { isIconLeft: boolean }
 ) => {
   const {
     reverseTextOrder = false,
