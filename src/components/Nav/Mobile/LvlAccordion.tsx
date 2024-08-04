@@ -82,7 +82,7 @@ const LvlAccordion = ({
                     {label}
                   </Text>
                   <Text
-                    fontWeight="regular"
+                    fontWeight="normal"
                     fontSize="sm"
                     color={
                       isActivePage
