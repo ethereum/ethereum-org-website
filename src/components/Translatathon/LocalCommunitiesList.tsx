@@ -14,7 +14,7 @@ const localCommunitiesData = [
   {
     emojiString: "🇪🇹",
     lumaLink: "https://lu.ma/zi092c8v",
-    location: "Ababa, Ethiopia",
+    location: "Addis Ababa, Ethiopia",
     eventName: "Eth Translatathon",
   },
   {
@@ -22,6 +22,18 @@ const localCommunitiesData = [
     lumaLink: "https://lu.ma/ehd86ohx",
     location: "Belgrade, Serbia",
     eventName: "Ethereum Translatathon — ETH Belgrade",
+  },
+  {
+    emojiString: "🇹🇼",
+    lumaLink: "https://lu.ma/2i9fi2zi",
+    location: "Taipei, Taiwan",
+    eventName: "2024 ethereum.org Translatathon Hub - Taiwan",
+  },
+  {
+    emojiString: "🇿🇲",
+    lumaLink: "https://lu.ma/4xyfdlz7",
+    location: "Lusaka, Zambia",
+    eventName: "Ethereum Translatathon - Hosted by ETHZambezi",
   },
 ]
 
