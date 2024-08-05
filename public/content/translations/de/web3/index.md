@@ -63,7 +63,7 @@ Web3 ermöglicht direktes Eigentum durch [nicht-austauschbare Token (NFTs)](/glo
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Mehr über NFTs erfahren</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     Mehr zu NFTs
   </ButtonLink>
 </InfoBanner>
