@@ -103,7 +103,7 @@ Web3 löst diese Probleme, indem es Ihnen ermöglicht, Ihre digitale Identität 
 
 Die Zahlungsinfrastruktur von Web2 stützt sich auf Banken und Zahlungsdienstleister und schließt Menschen ohne Bankkonto oder solche, die zufällig im falschen Land leben, aus. Web3 verwendet Token wie [ETH](/glossary/#ether), um Geld direkt im Browser zu senden, und benötigt keine vertrauenswürdige dritte Partei.
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   Mehr zu ETH
 </ButtonLink>
 
