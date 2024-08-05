@@ -42,7 +42,11 @@ const EventCard = ({
   const formatedDate = new Intl.DateTimeFormat(locale, {
     day: "2-digit",
     month: "short",
-  }).formatRange(new Date(startDate), new Date(endDate))
+  }).formatRange(
+    // .replace(/-/g, "/") ==> Fixes Safari Invalid date
+    new Date(startDate?.replace(/-/g, "/")),
+    new Date(endDate?.replace(/-/g, "/"))
+  )
 
   return (
     <Box
