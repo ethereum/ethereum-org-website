@@ -93,7 +93,7 @@ Die Sicherheit von Ethereum basiert auf einem [Proof-of-Stake](/glossary/#pos). 
 
 Sicherheitsprobleme mit NFTs stehen oft im Zusammenhang mit Phishing-Betrügereien, Schwachstellen bei Smart Contracts oder Benutzerfehlern (z. B. unbeabsichtigtes Veröffentlichen privater Schlüssel). Damit wird ein sicherer Wallet für NFT-Besitzer umso wichtiger.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Weiteres zur Sicherheit
 </ButtonLink>
 
