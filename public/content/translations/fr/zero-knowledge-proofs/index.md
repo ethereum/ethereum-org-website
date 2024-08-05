@@ -44,7 +44,7 @@ En injectant dans le protocole une technologie à divulgation nulle de connaissa
 
 Les systèmes actuels de gestion de l'identité mettent en péril les renseignements personnels. Les preuves à divulgation nulle peuvent aider les individus à valider leur identité tout en protégeant leurs données personnelles.
 
-Les preuves à divulgation nulle sont particulièrement utiles dans un contexte de [ décentralisation de l'identité](/decentralized identity). La décentralisation de l'identité (également appelée "'identité auto-souveraine") donne à l'individu la possibilité de contrôler l'accès à ses données personnelles. Prouver votre citoyenneté sans révéler les détails de vos documents d'identité est un bon exemple de la manière dont la technologie de la preuve à divulgation nulle de connaissance permet une décentralisation de l'identité.
+Les preuves à divulgation nulle sont particulièrement utiles dans un contexte de [décentralisation de l'identité](/decentralized-identity/). La décentralisation de l'identité (également appelée "'identité auto-souveraine") donne à l'individu la possibilité de contrôler l'accès à ses données personnelles. Prouver votre citoyenneté sans révéler les détails de vos documents d'identité est un bon exemple de la manière dont la technologie de la preuve à divulgation nulle de connaissance permet une décentralisation de l'identité.
 
 ### Authentification {#authentication}
 

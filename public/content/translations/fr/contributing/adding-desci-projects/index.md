@@ -14,7 +14,7 @@ Chacun est libre de proposer un projet à inscrire sur la page DeSci d'ethereum.
 
 ### Critères d'inclusion : les incontournables {#the-must-haves}
 
-- <strong x-id="1"">Code/données open source</strong> - Le code et les données open source sont un principe fondamental de DeSci, les projets DeSci ne doivent pas être en code source fermé. La base de code doit être accessible et idéalement ouverte aux PR.
+- **Code/données open source** - Le code et les données open source sont un principe fondamental de DeSci, les projets DeSci ne doivent pas être en code source fermé. La base de code doit être accessible et idéalement ouverte aux PR.
 - **Les projets DeSci doivent être manifestement décentralisés** - Cela pourrait inclure d'être gouverné par un DAO, ou de construire avec une pile technologique décentralisée comprenant des portefeuilles non-dépositaires. Cela implique vraisemblablement des contrats intelligents vérifiables sur Ethereum.
 - **Informations honnêtes et précises sur les ajouts** - Nous exigeons que tous les nouveaux ajouts proposés par les projets soient accompagnées d'informations honnêtes et précises. Les produits dont les informations d'ajout sont falsifiées (par exemple, déclarer que votre produit est « open source » alors qu'il ne l'est pas) seront supprimés.
 - **Engagement manifeste en faveur de l'élargissement de l'accès à la science** - Un projet DeSci doit être en mesure d'expliquer comment il élargit la participation à la science au grand public, et pas seulement aux détenteurs d'un jeton ou d'un NFT.
