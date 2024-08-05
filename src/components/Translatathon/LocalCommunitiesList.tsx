@@ -47,6 +47,12 @@ const localCommunitiesData = [
     location: "Lagos, Nigeria",
     eventName: "Ethereum Yorùbá Translatathon",
   },
+  {
+    emojiString: "🇧🇷",
+    lumaLink: "https://lu.ma/lkiakqtu",
+    location: "Rio de Janeiro, Brazil",
+    eventName: "Ethereum Translathon 📜🔍 hosted by EthSamba & BambaLabs",
+  },
 ]
 
 export const LocalCommunitiesList = () => {
