@@ -3,7 +3,7 @@ title: Staking-Auszahlungen
 description: Seite mit einer Zusammenfassung zu Staking-Push-Auszahlungen, wie sie funktionieren und was Staker tun müssen, um ihre Belohnungen zu erhalten
 lang: de
 template: staking
-image: ../../images/staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Leslie das Nashorn mit ihren Staking-Auszahlungen
 sidebarDepth: 2
 summaryPoints:
