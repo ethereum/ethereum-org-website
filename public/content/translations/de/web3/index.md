@@ -88,7 +88,7 @@ Allerdings definieren Menschen viele Web3-Communities als DAOs. Diese Gemeinscha
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Erfahren Sie mehr über DAOs</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     Mehr über DAOs
   </ButtonLink>
 </InfoBanner>
