@@ -79,7 +79,6 @@ const config = {
         },
         disabled: "var(--disabled)",
         "tooltip-shadow": "var(--tooltip-shadow)",
-        "switch-background": "var(--switch-background)",
         "hub-hero-content-bg": "var(--hub-hero-content-bg)",
         attention: {
           DEFAULT: "var(--attention)",

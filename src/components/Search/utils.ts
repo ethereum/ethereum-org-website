@@ -160,10 +160,6 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
     color: "body.base",
   },
 
-  ".DocSearch-Hit-Select-Icon:focus, .DocSearch-Hit-Select-Icon:hover": {
-    color: "switchBackground", // TODO: Remove? Causing low contrast in dark mode
-  },
-
   ".DocSearch-Footer": {
     "--docsearch-footer-height": "space.10",
     "--docsearch-logo-color": "colors.body.light",
