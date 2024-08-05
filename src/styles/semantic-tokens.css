@@ -1,0 +1,83 @@
+@tailwind base;
+
+/* SEMANTIC TOKEN DECLARATIONS: Abstracted from color palettes for theming */
+
+/**
+* Color palette semantic breakdown ([brackets] denote dark mode):
+* 
+* 100: low-contrast
+* 200: [high-contrast]
+* 300: [hover]
+* 400: [DEFAULT]
+* 500: neutral, [neutral]
+* 600: DEFAULT
+* 700: hover
+* 800: high-contrast
+* 900: [low-contrast]
+*/
+
+@layer base {
+  /* Light mode (default) token declarations */
+  :root {
+    --body: var(--gray-800);
+    --body-medium: var(--gray-500);
+    --body-light: var(--gray-200);
+
+    --background: white;
+    --background-highlight: var(--gray-100);
+
+    --primary: var(--purple-600);
+    --primary-hover: var(--purple-700);
+    --primary-low-contrast: var(--purple-100);
+    --primary-high-contrast: var(--purple-800);
+
+    --accent-a: var(--blue-600);
+    --accent-a-hover: var(--blue-700);
+    --accent-a-low-contrast: var(--blue-100);
+    --accent-a-high-contrast: var(--blue-800);
+
+    --accent-b: var(--pink-600);
+    --accent-b-hover: var(--pink-700);
+    --accent-b-low-contrast: var(--pink-100);
+    --accent-b-high-contrast: var(--pink-800);
+
+    --accent-c: var(--cyan-600);
+    --accent-c-hover: var(--cyan-700);
+    --accent-c-low-contrast: var(--cyan-100);
+    --accent-c-high-contrast: var(--cyan-800);
+  }
+
+  /* Dark mode token declarations */
+  [data-theme="dark"] {
+    --body: var(--gray-100);
+    --body-medium: var(--gray-400);
+    --body-light: var(--gray-600);
+
+    --background: var(--gray-800);
+    --background-highlight: var(--gray-900);
+
+    --primary: var(--purple-400);
+    --primary-hover: var(--purple-300);
+    --primary-low-contrast: var(--purple-900);
+    --primary-high-contrast: var(--purple-200);
+    --primary-neutral: var(--purple-500);
+
+    --accent-a: var(--blue-400);
+    --accent-a-hover: var(--blue-300);
+    --accent-a-low-contrast: var(--blue-900);
+    --accent-a-high-contrast: var(--blue-200);
+    --accent-a-neutral: var(--blue-500);
+
+    --accent-b: var(--pink-400);
+    --accent-b-hover: var(--pink-300);
+    --accent-b-low-contrast: var(--pink-900);
+    --accent-b-high-contrast: var(--pink-200);
+    --accent-b-neutral: var(--pink-500);
+
+    --accent-c: var(--cyan-400);
+    --accent-c-hover: var(--cyan-300);
+    --accent-c-low-contrast: var(--cyan-900);
+    --accent-c-high-contrast: var(--cyan-200);
+    --accent-c-neutral: var(--cyan-500);
+  }
+}
