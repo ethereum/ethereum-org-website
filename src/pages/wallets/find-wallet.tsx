@@ -44,6 +44,8 @@ import {
   WALLETS_FILTERS_DEFAULT,
 } from "@/lib/constants"
 
+import { useWalletPersonas } from "../../hooks/useWalletPersonas"
+
 import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
 import { useWalletTable } from "@/hooks/useWalletTable"
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
@@ -106,7 +108,7 @@ const FindWalletPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { pathname } = useRouter()
   const { t } = useTranslation("page-wallets-find-wallet")
-
+  const personas = useWalletPersonas()
   const resetWalletFilter = useRef(() => {})
 
   const [filters, setFilters] = useState(WALLETS_FILTERS_DEFAULT)
@@ -122,10 +124,36 @@ const FindWalletPage = ({
     walletCardData,
   } = useWalletTable({ filters, supportedLanguage, t, walletData: wallets })
 
+  const updatePersonaUponFilterChange = (filters) => {
+    const newSelectedPersona: number[] = []
+    const trueFilters = Object.fromEntries(
+      Object.entries(filters).filter(([_, value]) => value)
+    )
+    if (Object.keys(trueFilters).length === 0) {
+      setSelectedPersona([])
+      return
+    }
+
+    for (let i = 0; i < personas.length; i++) {
+      const truePresetFilters = Object.fromEntries(
+        Object.entries(personas[i].presetFilters).filter(([_, value]) => value)
+      )
+      const isPersonaSelected = Object.entries(truePresetFilters).every(
+        ([key, value]) => trueFilters[key] === value
+      )
+      if (isPersonaSelected) {
+        newSelectedPersona.push(i)
+      }
+    }
+
+    setSelectedPersona(newSelectedPersona)
+  }
+
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
     updatedFilters[key] = !updatedFilters[key]
     setFilters(updatedFilters)
+    updatePersonaUponFilterChange(updatedFilters)
   }
 
   const updateFilterOptions = (keys, value) => {
@@ -134,6 +162,7 @@ const FindWalletPage = ({
       updatedFilters[key] = value
     }
     setFilters(updatedFilters)
+    updatePersonaUponFilterChange(updatedFilters)
   }
 
   const resetFilters = () => {
