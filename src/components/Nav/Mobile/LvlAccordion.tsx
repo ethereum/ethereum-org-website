@@ -6,8 +6,8 @@ import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { cleanPath } from "@/lib/utils/url"
 
-import { BaseLink } from "../../../../tailwind/Link"
 import { Button } from "../../../../tailwind/ui/buttons/Button"
+import { BaseLink } from "../../../../tailwind/ui/Link"
 import type { Level, NavItem, NavSectionKey } from "../types"
 
 import ExpandIcon from "./ExpandIcon"
