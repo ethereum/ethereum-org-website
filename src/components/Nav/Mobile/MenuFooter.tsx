@@ -52,7 +52,7 @@ const MenuFooter = ({
           <FooterItemText>{t(themeLabelKey)}</FooterItemText>
         </FooterButton>
         <LanguagePicker
-          className="fixed inset-4 h-[calc(100vh-var(--eth-sizes-8))]"
+          className="fixed inset-4 h-[calc(100vh-var(--eth-sizes-8))] w-[calc(100vw-var(--eth-sizes-8))]"
           handleClose={onToggle}
         >
           {/* TODO migrate once #13449 is merged */}
