@@ -2,7 +2,7 @@
 title: Using zero-knowledge for a secret state
 description: Onchain games are limited because they cannot keep any hidden information. After reading this tutorial, a reader will be able to combine zero-knowledge proofs and server components to create verifiable games with a secret state, offchain, component. The technique to do this will be demonstrated by creating a minesweeper game.
 author: Ori Pomerantz
-tags: ["server", "offchain", "centralized", "zero-knowledge", "zokrates"]
+tags: ["server", "offchain", "centralized", "zero-knowledge", "zokrates", "mud"]
 skill: intermediate
 lang: en
 published: 2024-08-15
@@ -18,7 +18,7 @@ After reading this article you will know how to create this kind of secret state
 * [Typescript](https://www.typescriptlang.org/) for both the server and the client.
 * [Node](https://nodejs.org/en) for the server.
 * [Viem](https://viem.sh/) for communication with the Blockchain.
-* [MUD](https://mud.dev/) for on-chain data management.
+* [MUD](https://mud.dev/) for on-chain data management. Proper disclosure: While I'm writing this on my own time for Ethereum Foundation, my day job is working for [Lattice](https://lattice.xyz/) which makes this framework. 
 * [React](https://react.dev/) for the user interface of the client.
 * [Vite](https://vitejs.dev/) for serving the client code.
 
@@ -36,11 +36,15 @@ We need several tables in the database to implement the functionality we need.
    - `height`: The height of a minefield
    - `width`: The width of a minefield
    - `numberOfBombs`: The number of bombs in each minefield
-   - `verifierKey`: The verifier key used to verify zero knowledge proofs, [see below](#creating-the-verifier-and-prover-keys-key-creation) to learn how it is created
-2. `PlayerGame`: The key is the player's address. The data is a 32 byte value that is the hash of the map the player is playing on (the game identifier).
-3. `DigNumber`: The key is the game identifier, and the value is the number of locations that have been dug by the player (without exploding).
-4. `WinsAndLoses`: The key is the player's address. The data is two fields, one for wins and the other for loses.
-5. `Map`: The key is a tuple of three values:
+   
+   The verifier key used to verify zero knowledge proofs is also part of the configuration, but because of the way the Solidity-Zokrates interface works it is inside a separate contract. 
+
+2. `PlayerGame`: The key is the player's address. The data is:
+    - `gameId`: 32 byte value that is the hash of the map the player is playing on (the game identifier).
+    - `win`: a boolean that is whether the player won the game.
+    - `lose`: a boolean that is whether the player lost the game.
+    - `digNumber`: the number of successful digs in the game.  
+3. `Map`: The key is a tuple of three values:
    - The game identifier
    - x
    - y
@@ -48,9 +52,9 @@ We need several tables in the database to implement the functionality we need.
 
 In addition, communication between the client and server happens through the on-chain component. This is also implemented using tables, but those are [off-chain tables](https://mud.dev/store/tables#types-of-tables), meaning the data is only available off-chain in the form of log events.
 
-6. `PendingGame`: Unserviced requests to start a new game.
-7. `PendingDig`: Unserviced requests to dig in a specific place in a specific game.
-8. `PendingDigResults`: Responses to dig requests. These include the proof of the result, and optionally also the map (if the result is that the player blew up and the game is over).
+4. `PendingGame`: Unserviced requests to start a new game.
+5. `PendingDig`: Unserviced requests to dig in a specific place in a specific game.
+6. `PendingDigResults`: Responses to dig requests. These include the proof of the result, and optionally also the map (if the result is that the player blew up and the game is over).
 
 ### Execution and data flows {#execution-data-flows}
 
@@ -82,8 +86,8 @@ These flows coordinate execution between the client, the on-chain component, and
 6. If the game is over (either because the user found a bomb, or because the user dug in `width*height - bombNumber` places), the server deletes the game from `gamesInProgress`.
 7. The server sends the on-chain component the proof, and optionally (if game over) the map.
 8. The on-chain component verifies the proof. The process only continues if the proof verifies.
-9. The on-chain component checks if it's game over, either because `DigNumber` is equal to `width*height - numberOfBombs` or because the dig found a bomb, delete the game from `PlayerGame` and update `WinsAndLosses`.
-10. The on-chain component updates `Map` with the new information. This change is automatically synchronized to the client by MUD. The on-chain component also increments `DigNumber`.
+9. The on-chain component checks if it's game over, either because `digNumber` is equal to `width*height - numberOfBombs` or because the dig found a bomb, note that fact in `PlayerGame`.
+10. The on-chain component updates `Map` with the new information. This change is automatically synchronized to the client by MUD. The on-chain component also increments `PlayerGame`'s `digNumber`.
 11. The client displays the new information to the player.
 12. If the game is over, the client informs the player of that fact.
 
@@ -431,7 +435,7 @@ These two definitions are used for verifiying Zokrates proofs on the blockchain.
 }
 ```
 
-
+Finally, return everything that other code might need.
 
 ## The on-chain component {#onchain}
 
