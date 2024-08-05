@@ -103,6 +103,7 @@ const config = {
         "primary-highlight-gradient": "var(--primary-highlight-gradient)",
         "accent-gradient-a": "var(--accent-gradient-a)",
         "accent-gradient-b": "var(--accent-gradient-b)",
+        "gradient-banner": "var(--gradient-banner)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
