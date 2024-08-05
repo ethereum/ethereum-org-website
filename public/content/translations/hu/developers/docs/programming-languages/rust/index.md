@@ -46,8 +46,9 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintse meg az [
 - [Solaris](https://github.com/paritytech/sol-rs) – _Solidity okosszerződések egységtesztelésének irányítása a natív Parity kliens EVM használatával._
 - [SputnikVM](https://github.com/rust-blockchain/evm) – _Rust Ethereum virtuálisgép-implementáció_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) – _Wavelet okosszerződés Rust-ban_
-- [Foundry](https://github.com/gakonst/foundry) – _Eszközkészlet az Ethereum alkalmazások fejlesztéséhez_
-- [Ethers_rs](https://github.com/gakonst/ethers-rs) – _Ethereum könyvtár- és tárcaimplementáció_
+- [Foundry](https://github.com/foundry-rs/foundry) – _Eszközkészlet az Ethereum alkalmazások fejlesztéséhez_
+- [Alloy](https://alloy.rs) - _Nagy teljesítményű, jól tesztelt és dokumentált könyvtárak az Ethereummal és más EVM-alapú láncokkal való interakcióhoz._
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Ethereum könyvtár- és tárcaimplementáció_
 - [SewUp](https://github.com/second-state/SewUp) – _Egy könyvtár, amely segít az Ethereum webassembly szerződés Rust-ban való megépítésében, mintha egy általános backend lenne_
 - [Substreams](https://github.com/streamingfast/substreams) – _Párhuzamos blokkláncadat-indexálási technológia_
 - [Reth](https://github.com/paradigmxyz/reth) A Rust Ethereum rövidítése, ami egy új teljescsomópont-implementáció az Ethereumon

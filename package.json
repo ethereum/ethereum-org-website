@@ -38,6 +38,7 @@
     "@radix-ui/react-checkbox": "^1.1.1",
     "@radix-ui/react-navigation-menu": "^1.2.0",
     "@radix-ui/react-popover": "^1.1.1",
+    "@radix-ui/react-radio-group": "^1.2.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-visually-hidden": "^1.1.0",
     "@socialgouv/matomo-next": "^1.8.0",
