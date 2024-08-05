@@ -269,9 +269,39 @@ const HomePage = ({
           ))}
         </div>
 
-        <HomeSection tag="Use cases" title="A new way to use the internet">
+        <HomeSection
+          tag="Use cases"
+          title="A new way to use the internet"
+          className="md:hidden"
+        >
           <span className="text-[5rem]">👷‍♀️🚧🔜</span>
         </HomeSection>
+
+        <div className="hidden grid-cols-12 gap-4 md:grid [&>div]:rounded-2xl [&>div]:p-8 [&>div]:outline [&>div]:outline-2">
+          <div className="col-span-3 col-start-2 flex flex-col gap-8">
+            <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
+              Use Cases
+            </div>
+            <h2 className="mb-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
+              A new way to use the internet
+            </h2>
+          </div>
+          <div className="col-span-7 col-start-5 row-span-1 row-start-1">
+            <h3 className="font-black">Crypto without volatility</h3>
+          </div>
+          <div className="col-span-4 col-start-2 row-span-1 row-start-2">
+            <h3 className="font-black">A fairer financial system</h3>
+          </div>
+          <div className="col-span-3 col-start-6 row-span-1 row-start-2">
+            <h3 className="font-black">Innovative apps</h3>
+          </div>
+          <div className="col-span-3 col-start-9 row-span-2 row-start-2">
+            <h3 className="font-black">The network of networks</h3>
+          </div>
+          <div className="col-span-7 col-start-2 row-span-1 row-start-3">
+            <h3 className="font-black">The internet of assets</h3>
+          </div>
+        </div>
 
         <HomeSection
           tag="Activity"
