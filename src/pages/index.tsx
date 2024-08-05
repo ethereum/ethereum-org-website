@@ -181,21 +181,21 @@ const HomePage = ({
       description: "The currency of Ethereum",
       href: "/get-eth/",
       Svg: EthTokenIcon,
-      colorClass: "text-secondary",
+      colorClass: "text-accent-a",
     },
     {
       label: "Choose a network",
       description: "Enjoy minimal fees",
       href: "/layer-2/", // TODO: Update with new networks page when ready
       Svg: ChooseNetworkIcon,
-      colorClass: "text-tertiary",
+      colorClass: "text-accent-b",
     },
     {
       label: "Try apps",
       description: "See what Ethereum can do",
       href: "/dapps/",
       Svg: TryAppsIcon,
-      colorClass: "text-quaternary",
+      colorClass: "text-accent-c",
     },
   ]
 
@@ -633,7 +633,7 @@ const HomePage = ({
               Svg={Layer2Icon}
               label="How to contribute"
               href="/contributing/"
-              className="text-quaternary"
+              className="text-accent-c"
             >
               <p className="text-body">
                 Find out all the different ways you can help ethereum.org grow
@@ -644,7 +644,7 @@ const HomePage = ({
               Svg={FaGithub}
               label="GitHub"
               href={GITHUB_REPO_URL}
-              className="text-secondary"
+              className="text-accent-a"
             >
               <p className="text-body">
                 Contribute to code, content, articles etc.
@@ -665,7 +665,7 @@ const HomePage = ({
               Svg={FaTwitter}
               label="Twitter"
               href="https://x.com/EthDotOrg"
-              className="text-tertiary"
+              className="text-accent-b"
             >
               <p className="text-body">
                 To keep up with our updates and important news.

@@ -44,19 +44,28 @@ const config = {
           "high-contrast": "var(--primary-high-contrast)",
           "low-contrast": "var(--primary-low-contrast)",
           hover: "var(--primary-hover)",
-          visited: "var(--primary-visited)",
-          light: "var(--primary-light)",
-          dark: "var(--primary-dark)",
-          pressed: "var(--primary-pressed)",
+          light: "var(--primary-light)" /* TODO: Migrate/deprecate */,
+          dark: "var(--primary-dark)" /* TODO: Migrate/deprecate */,
         },
-        secondary: {
-          DEFAULT: "var(--secondary)",
-        },
-        tertiary: {
-          DEFAULT: "var(--tertiary)",
-        },
-        quaternary: {
-          DEFAULT: "var(--quaternary)",
+        accent: {
+          a: {
+            DEFAULT: "var(--accent-a)",
+            "high-contrast": "var(--accent-a-high-contrast)",
+            "low-contrast": "var(--accent-a-low-contrast)",
+            hover: "var(--accent-a-hover)",
+          },
+          b: {
+            DEFAULT: "var(--accent-b)",
+            "high-contrast": "var(--accent-b-high-contrast)",
+            "low-contrast": "var(--accent-b-low-contrast)",
+            hover: "var(--accent-b-hover)",
+          },
+          c: {
+            DEFAULT: "var(--accent-c)",
+            "high-contrast": "var(--accent-c-high-contrast)",
+            "low-contrast": "var(--accent-c-low-contrast)",
+            hover: "var(--accent-c-hover)",
+          },
         },
         body: {
           DEFAULT: "var(--body)",
@@ -69,7 +78,6 @@ const config = {
           highlight: "var(--background-highlight)",
         },
         disabled: "var(--disabled)",
-        neutral: "var(--neutral)",
         "tooltip-shadow": "var(--tooltip-shadow)",
         "switch-background": "var(--switch-background)",
         "hub-hero-content-bg": "var(--hub-hero-content-bg)",
