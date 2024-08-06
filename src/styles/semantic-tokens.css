@@ -45,6 +45,28 @@
     --accent-c-hover: var(--cyan-700);
     --accent-c-low-contrast: var(--cyan-100);
     --accent-c-high-contrast: var(--cyan-800);
+
+    /* Gradients */
+    --gradient-primary: radial-gradient(
+      114.96% 111.8% at 100% 0%,
+      rgba(var(--purple-50-rgb), 0.32) 0%,
+      rgba(var(--purple-100-rgb), 0.56) 100%
+    );
+    --gradient-accent-a: radial-gradient(
+      114.96% 111.8% at 100% 0%,
+      rgba(var(--blue-100-rgb), 0.32) 0%,
+      rgba(var(--blue-200-rgb), 0.56) 100%
+    );
+    --gradient-accent-b: radial-gradient(
+      114.96% 111.8% at 100% 0%,
+      rgba(var(--pink-100-rgb), 0.32) 0%,
+      rgba(var(--pink-200-rgb), 0.48) 100%
+    );
+    --gradient-accent-c: radial-gradient(
+      114.96% 111.8% at 100% 0%,
+      rgba(var(--cyan-100-rgb), 0.32) 0%,
+      rgba(var(--cyan-200-rgb), 0.48) 100%
+    );
   }
 
   /* Dark mode token declarations */
@@ -79,5 +101,27 @@
     --accent-c-low-contrast: var(--cyan-900);
     --accent-c-high-contrast: var(--cyan-200);
     --accent-c-neutral: var(--cyan-500);
+
+    /* Gradients */
+    --gradient-primary: radial-gradient(
+      114.96% 111.8% at 100% 0%,
+      rgba(var(--purple-800-rgb), 0.32) 0%,
+      rgba(var(--purple-900-rgb), 0.56) 100%
+    );
+    --gradient-accent-a: radial-gradient(
+      114.96% 111.8% at 100% 0%,
+      rgba(var(--blue-800-rgb), 0.32) 0%,
+      rgba(var(--blue-900-rgb), 0.56) 100%
+    );
+    --gradient-accent-b: radial-gradient(
+      114.96% 111.8% at 100% 0%,
+      rgba(var(--pink-800-rgb), 0.32) 0%,
+      rgba(var(--pink-900-rgb), 0.48) 100%
+    );
+    --gradient-accent-c: radial-gradient(
+      114.96% 111.8% at 100% 0%,
+      rgba(var(--cyan-800-rgb), 0.32) 0%,
+      rgba(var(--cyan-900-rgb), 0.48) 100%
+    );
   }
 }

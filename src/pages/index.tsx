@@ -292,20 +292,20 @@ const HomePage = ({
               A new way to use the internet
             </h2>
           </div>
-          <div className="col-span-7 col-start-5 row-span-1 row-start-1">
-            <h3 className="font-black">Crypto without volatility</h3>
+          <div className="col-span-7 col-start-5 row-span-1 row-start-1 bg-gradient-primary">
+            <h3 className="text-3xl font-black">Crypto without volatility</h3>
           </div>
-          <div className="col-span-4 col-start-2 row-span-1 row-start-2">
-            <h3 className="font-black">A fairer financial system</h3>
+          <div className="col-span-4 col-start-2 row-span-1 row-start-2 bg-gradient-accent-c">
+            <h3 className="text-3xl font-black">A fairer financial system</h3>
           </div>
-          <div className="col-span-3 col-start-6 row-span-1 row-start-2">
-            <h3 className="font-black">Innovative apps</h3>
+          <div className="col-span-3 col-start-6 row-span-1 row-start-2 bg-gradient-accent-b">
+            <h3 className="text-3xl font-black">Innovative apps</h3>
           </div>
-          <div className="col-span-3 col-start-9 row-span-2 row-start-2">
-            <h3 className="font-black">The network of networks</h3>
+          <div className="col-span-3 col-start-9 row-span-2 row-start-2 bg-gradient-accent-a">
+            <h3 className="text-3xl font-black">The network of networks</h3>
           </div>
-          <div className="col-span-7 col-start-2 row-span-1 row-start-3">
-            <h3 className="font-black">The internet of assets</h3>
+          <div className="col-span-7 col-start-2 row-span-1 row-start-3 bg-gradient-primary">
+            <h3 className="text-3xl font-black">The internet of assets</h3>
           </div>
         </div>
 

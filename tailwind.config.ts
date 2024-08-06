@@ -104,6 +104,10 @@ const config = {
         "accent-gradient-a": "var(--accent-gradient-a)",
         "accent-gradient-b": "var(--accent-gradient-b)",
         "gradient-banner": "var(--gradient-banner)",
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-accent-a": "var(--gradient-accent-a)",
+        "gradient-accent-b": "var(--gradient-accent-b)",
+        "gradient-accent-c": "var(--gradient-accent-c)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
