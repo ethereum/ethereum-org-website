@@ -21,7 +21,7 @@ export const ns = [
   "page-upgrades",
   "page-developers-index",
   "page-what-is-ethereum",
-  "page-upgrades-index"
+  "page-upgrades-index",
 ] as const
 const supportedLngs = Object.keys(baseLocales)
 

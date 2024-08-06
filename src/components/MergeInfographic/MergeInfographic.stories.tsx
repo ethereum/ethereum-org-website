@@ -1,8 +1,9 @@
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
+import { ContentContainer } from "@/components/MdComponents"
+
 import { langViewportModes } from "../../../.storybook/modes"
-import { ContentContainer } from "../MdComponents"
 
 import MergeInfographicComponent from "."
 
@@ -24,12 +25,12 @@ const meta = {
           <Story />
         </ContentContainer>
       </Box>
-    )
-  ]
+    ),
+  ],
 } satisfies Meta<typeof MergeInfographicComponent>
 
 export default meta
 
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof meta>
 
 export const MergeInfographic: Story = {}
