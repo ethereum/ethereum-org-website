@@ -71,11 +71,14 @@ All translations will also be subject to a thorough review before being added to
   </ul>
 </ExpandableCard>
 
+<ExpandableCard title="Can I compete as part of a team?">
+    <p>No. This year, the Translatathon will only have one main individual track and there will be no team competition.</p>
+    <p>You can still team up with your friends and translate together, however everyone will be competing in the Translatathon as an individual and only the number of your individual translated words will count towards your final score.</p>
+</ExpandableCard>
+
 <ExpandableCard title="Which languages can I translate into?">
-    You can translate into any language! It is recommended to only translate into your native language to ensure sufficient quality, but in short, all language available in Crowdin are in scope for the Translatathon.
-
-    If you want to translate into a language that isn't available in Crowdin, reach out to us and we will add any language per request.
-
+    <p>You can translate into any language! It is recommended to only translate into your native language to ensure sufficient quality, but in short, all language available in Crowdin are in scope for the Translatathon.</p>
+    <p>If you want to translate into a language that isn't available in Crowdin, reach out to us and we will add any language per request.</p>
 </ExpandableCard>
 
 <ApplyNow />
