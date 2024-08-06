@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { Box, Flex, type HeadingProps, Icon } from "@chakra-ui/react"
+import { type HeadingProps } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
@@ -25,12 +25,12 @@ import {
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
 import MeetupList from "@/components/MeetupList"
-import Text from "@/components/OldText"
 import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import Translation from "@/components/Translation"
 import TranslationChartImage from "@/components/TranslationChartImage"
+import { Flex, Stack } from "@/components/ui/flex"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 
 import { getEditPath } from "@/lib/utils/editPath"
@@ -62,7 +62,6 @@ export const staticComponents = {
   EnergyConsumptionChart,
   GlossaryDefinition,
   GlossaryTooltip,
-  Icon,
   Link,
   Logo,
   MatomoOptOut,
@@ -93,19 +92,14 @@ export const StaticLayout = ({
   const absoluteEditPath = getEditPath(slug)
 
   return (
-    <Box w="full">
+    <div className="w-full">
       <TranslatathonBanner pathname={asPath} />
       <DevconGrantsBanner pathname={asPath} />
       <Flex
-        justifyContent="space-between"
-        w="full"
-        mx="auto"
-        mb={16}
-        p={8}
-        pt={{ base: 8, lg: 16 }}
+        className="mx-auto mb-16 w-full justify-between p-8 lg:pt-16"
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
-        <Box w="full">
+        <div className="w-full">
           {slug === "/guides/" ? (
             <HubHero
               heroImg={GuideHeroImage}
@@ -114,31 +108,20 @@ export const StaticLayout = ({
               description={frontmatter.description}
             />
           ) : (
-            <>
-              <Breadcrumbs slug={slug} mb="8" />
+            <Stack className="gap-8">
+              <Breadcrumbs slug={slug} />
 
-              <Text
-                color="text200"
+              <p
+                className="text-sm text-[#666] dark:text-[#b2b2b2]"
                 dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
               >
                 <Translation id="page-last-updated" />:{" "}
                 {lastEditLocaleTimestamp}
-              </Text>
-            </>
+              </p>
+            </Stack>
           )}
 
-          <Box
-            as={MainArticle}
-            maxW="container.md"
-            w="full"
-            sx={{
-              ".citation": {
-                p: {
-                  color: "text200",
-                },
-              },
-            }}
-          >
+          <MainArticle className="max-w-3xl">
             <TableOfContents
               position="relative"
               zIndex={2}
@@ -150,8 +133,8 @@ export const StaticLayout = ({
             {children}
 
             <FeedbackCard isArticle />
-          </Box>
-        </Box>
+          </MainArticle>
+        </div>
         <TableOfContents
           editPath={absoluteEditPath}
           items={tocItems}
@@ -159,6 +142,6 @@ export const StaticLayout = ({
           hideEditButton={!!frontmatter.hideEditButton}
         />
       </Flex>
-    </Box>
+    </div>
   )
 }
