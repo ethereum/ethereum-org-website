@@ -33,7 +33,7 @@ Une mauvaise compréhension de la façon dont fonctionnent les cryptomonnaies pe
 
 La clé privée de votre portefeuille fait office de mot de passe pour votre portefeuille Ethereum. Il s'agit de la seule chose qui empêche quelqu'un qui connaît l'adresse de votre portefeuille de vider votre compte de ses actifs !
 
-<DocLink href="/wallets/">
+<DocLink to="/wallets/">
   Qu'est-ce qu'un portefeuille Ethereum ?
 </DocLink>
 
