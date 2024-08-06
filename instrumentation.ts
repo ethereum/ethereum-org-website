@@ -1,15 +1,15 @@
 import * as Sentry from "@sentry/nextjs"
 
 export async function register() {
-  const dns = process.env.NEXT_PUBLIC_SENTRY_DSN
+  const dsn = process.env.NEXT_PUBLIC_SENTRY_DSN
 
-  if (!dns) {
+  if (!dsn) {
     console.warn("Sentry DSN not found, skipping")
     return
   }
 
   const commonSentryOptions = {
-    dsn: dns,
+    dsn,
     enabled: process.env.NODE_ENV === "production",
     tracesSampleRate: 1.0,
   }
