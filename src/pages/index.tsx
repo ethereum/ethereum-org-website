@@ -54,6 +54,7 @@ import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistr
 import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
+import { fetchAttestantPosts } from "@/lib/api/fetchAttestantPosts"
 import { fetchNodes } from "@/lib/api/fetchNodes"
 import { fetchRSS } from "@/lib/api/fetchRSS"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
@@ -71,6 +72,8 @@ const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
 const cachedFetchNodes = runOnlyOnce(fetchNodes)
 const cachedFetchTotalValueLocked = runOnlyOnce(fetchTotalValueLocked)
 const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
+const cachedXmlBlogFeeds = runOnlyOnce(async () => await fetchRSS(XML_FEEDS))
+const cachedAttestantBlog = runOnlyOnce(fetchAttestantPosts)
 
 type Props = BasePageProps & {
   communityEvents: CommunityEventsReturnType
@@ -102,7 +105,9 @@ export const getStaticProps = (async ({ locale }) => {
   )
 
   // load RSS feed items
-  const rssItems = polishRSSList(await fetchRSS(XML_FEEDS)) // TODO: Cache results
+  const xmlBlogs = await cachedXmlBlogFeeds()
+  const attestantBlog = await cachedAttestantBlog()
+  const rssItems = polishRSSList(xmlBlogs, attestantBlog)
 
   return {
     props: {

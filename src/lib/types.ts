@@ -790,3 +790,13 @@ export type RSSResult = {
     channel: RSSChannel[]
   }
 }
+
+type NestedDivs = {
+  div: NestedDivs[]
+}
+
+export type HTMLResult = {
+  html: {
+    body: Record<string, NestedDivs>[]
+  }
+}

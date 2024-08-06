@@ -1,0 +1,22 @@
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="480" height="200" viewBox="-105 24 480 220">
+<defs>
+<style>.cls-1{fill:#1d2a4c;}.cls-2{fill:url(#radial-gradient);}
+</style>
+<radialGradient id="radial-gradient" cx="537.2188" cy="-4.8619" fx="553.4215781368748" fy="-45.163460187997195" r="127.1258" gradientTransform="translate(-682.0616 141.0261) scale(1.5204 1.4923)" gradientUnits="userSpaceOnUse">
+<stop offset="0.0054" stop-color="#bebcde"/>
+<stop offset="0.0771" stop-color="#a7a8d2"/>
+<stop offset="0.2143" stop-color="#8187bf"/>
+<stop offset="0.3412" stop-color="#6670b1"/>
+<stop offset="0.4528" stop-color="#5561a9"/>
+<stop offset="0.5371" stop-color="#4f5ca6"/>
+</radialGradient>
+</defs>
+<path class="cls-2" d="M139.3628,230.4346C202.5508,210.537,232.3969,91.4211,232.3969,57.81L139.3628,37.1062Z"/>
+<path class="cls-2" d="M89.737,201.4622h39.7779V174.6409H71.6066A175.28,175.28,0,0,0,89.737,201.4622Z"/>
+<path class="cls-2" d="M129.5149,230.4346V211.747H99.3358C108.3891,220.35,118.4273,226.9432,129.5149,230.4346Z"/>
+<path class="cls-2" d="M66.2109,164.356h63.304V139.1482H55.2756C58.4988,147.6284,62.1378,156.1187,66.2109,164.356Z"/>
+<path class="cls-2" d="M41.17,91.8578h88.3449V67.7591H37.1062A228.59,228.59,0,0,0,41.17,91.8578Z"/>
+<polygon class="cls-2" points="129.515 57.474 129.515 37.106 37.991 57.474 129.515 57.474"/>
+<path class="cls-2" d="M51.5419,128.8631h77.973v-26.72H43.59C45.7442,110.6341,48.3916,119.6644,51.5419,128.8631Z"/>
+</svg>
