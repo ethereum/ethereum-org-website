@@ -2,6 +2,8 @@ import { forwardRef } from "react"
 import { motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
 
+import { cn } from "@/lib/utils/cn"
+
 import { HAMBURGER_BUTTON_ID } from "@/lib/constants"
 
 import {
@@ -24,7 +26,7 @@ type HamburgerProps = ButtonProps & {
 }
 
 const HamburgerButton = forwardRef<HTMLButtonElement, HamburgerProps>(
-  ({ isMenuOpen, ...props }, ref) => {
+  ({ isMenuOpen, className, ...props }, ref) => {
     const { t } = useTranslation("common")
 
     return (
@@ -32,13 +34,13 @@ const HamburgerButton = forwardRef<HTMLButtonElement, HamburgerProps>(
         ref={ref}
         id={HAMBURGER_BUTTON_ID}
         aria-label={t("aria-toggle-search-button")}
-        className="px-0 py-0 text-body"
+        className={cn("px-2 py-0 text-body", className)}
         variant="ghost"
         {...props}
       >
         <svg
           viewBox="0 0 24 40"
-          className="relative mx-2 h-10 w-6 stroke-body stroke-2 hover:stroke-primary hover:text-primary [&>path]:fill-none hover:[&>path]:stroke-primary"
+          className="relative h-10 w-6 stroke-body stroke-2 hover:stroke-primary hover:text-primary [&>path]:fill-none hover:[&>path]:stroke-primary"
         >
           <motion.path
             variants={hamburgerVariants}
