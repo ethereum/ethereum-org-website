@@ -30,24 +30,20 @@ lang: ja
 
 ## クライアントの多様性
 
-[クライアントの多様性](/developers/docs/nodes-and-clients/client-diversity/)は、バグや脆弱性に対する回復力を提供します。そのため、イーサリアムネットワーク全体の健全性にとって重要です。 現在、
-[clientdiversity.org](https://clientdiversity.org/)、[rated.network](https://www.rated.network)、[execution-diversity.info](https://execution-diversity.info/)、[Ethernodes](https://ethernodes.org/)など、いくつかのクライアント多様性ダッシュボードが存在します。
-
-
+[クライアントの多様性](/developers/docs/nodes-and-clients/client-diversity/)は、バグや脆弱性に対する回復力を提供します。そのため、イーサリアムネットワーク全体の健全性にとって重要です。 現在、[clientdiversity.org](https://clientdiversity.org/)、[rated.network](https://www.rated.network)、[supermajority.info](https://supermajority.info//)、[Ethernodes](https://ethernodes.org/)など、いくつかのクライアント多様性ダッシュボードが存在します。
 
 ## Dune Analytics {#dune-analytics}
 
 [Dune Analytics](https://dune.com/)は、リレーショナルデータベース(PostgreSQLおよびDatabricksSQL)テーブルのために、ブロックチェーンデータの前処理を行います。 これにより、ユーザーはSQLを使用してブロックチェーンデータのクエリを実行し、クエリ結果に基づいてダッシュボードを構築できるようになります。 オンチェーンデータは、`blocks`、`transactions`、(event) `logs`、(call) `traces`という、4つの未加工テーブルに編成されます。 一般的なコントラクトやプロトコルはデコードされており、それぞれにイベントと呼び出しのテーブルのセットがあります。 これらのイベントと呼び出しのテーブルはさらに処理され、DEX、レンディング、ステーブルコインなどのプロトコルの種類によって抽象テーブルに編成されます。
 
-
-
 ## SubQueryネットワーク {#subquery-network}
 
-[SubQuery](https://subquery.network/)は、優れたデータインデクサーでデベロッパーにWeb3プロジェクト用の高速で信頼性の高い分散型にカスタマイズされたAPIを提供します。 SubQueryでは、80以上のエコシステム(イーサリアムを含む)で豊富なインデックスされたデータを用いてデベロッパーがユーザーへ直観的で没入型のエクスペリエンスを構築できるようにします。 SubQueryネットワークは、回復力があり分散型のインフラストラクチャネットワークを用いて止まらないアプリにします。 SubQueryのブロックチェーン・デベロッパー・ツールキットを用いてweb3アプリケーションの未来を構築しましょう。データ処理を行うカスタムバックエンドの構築に時間を費やす必要はありません。
+[SubQuery](https://subquery.network/)は、優れたデータインデクサーでデベロッパーにWeb3プロジェクト用の高速で信頼性の高い分散型にカスタマイズされたAPIを提供します。 SubQueryでは、165以上のエコシステム(イーサリアムを含む)で豊富なインデックスされたデータを用いてデベロッパーがユーザーへ直観的で没入型のエクスペリエンスを構築できるようにします。 SubQueryネットワークは、回復力があり分散型のインフラストラクチャネットワークを用いて止まらないアプリにします。 SubQueryのブロックチェーン・デベロッパー・ツールキットを用いてweb3アプリケーションの未来を構築しましょう。データ処理を行うカスタムバックエンドの構築に時間を費やす必要はありません。
 
-開始するには、[イーサリアム・クイック・スタートガイド](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html)を参照し、Docker環境で数分でイーサリアムブロックチェーンデータをインデックス化してテストを行い、その後、 稼働している[SubQueryのマネージドサービス](https://managedservice.subquery.network/)か[SubQueryの分散型ネットワーク](https://kepler.subquery.network/explorer/home)を使用してみましょう。
+開始するには、[イーサリアム・クイック・スタートガイド](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html)を参照し、ローカルDocker環境で数分でイーサリアムブロックチェーンデータをインデックス化してテストを行い、その後、 稼働している[SubQueryのマネージドサービス](https://managedservice.subquery.network/)か[SubQueryの分散型ネットワーク](https://app.subquery.network/dashboard)を使用してみましょう。
 
-
+## Ethernow - メンプール・データ・プログラム {#ethernow}
+[Blocknative](https://www.blocknative.com/)は、イーサリアムの履歴[メンプール・データ・アーカイブ](https://www.ethernow.xyz/mempool-data-archive)へのオープンアクセスを提供しています。 これにより、研究者やコミュニティグッドプロジェクトはイーサリアムメインネットのプレチェーンレイヤーを探索できます。 データセットはアクティブに維持されており、イーサリアムのエコシステム内のメンプールのトランザクションイベントの、最も包括的な履歴レコードを表します。  詳細は[Ethernow](https://www.ethernow.xyz/)をご覧ください。
 
 ## 参考文献 {#further-reading}
 
@@ -56,3 +52,4 @@ lang: ja
 - [EtherScanのAPIコードの例](https://etherscan.io/apis#contracts)
 - [Beaconcha.inビーコンチェーンエクスプローラー](https://beaconcha.in)
 - [Duneの基礎](https://docs.dune.com/#dune-basics)
+- [SubQueryイーサリアム・クイックスタートガイド](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)

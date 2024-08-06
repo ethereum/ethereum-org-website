@@ -63,7 +63,7 @@ Le Web3 permet la propriété directe via les [jetons non-fongibles (NFT)](/glos
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>En savoir plus sur les NFT</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     Plus d'infos sur les NTF
   </ButtonLink>
 </InfoBanner>
@@ -88,7 +88,7 @@ Le fait est toutefois que les gens définissent de nombreuses communautés Web3 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>En savoir plus sur les DAO</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     En savoir plus sur les DAO
   </ButtonLink>
 </InfoBanner>
@@ -103,7 +103,7 @@ Le Web3 résout ces problèmes en vous permettant de contrôler votre identité 
 
 L'infrastructure de paiement sur le Web2 repose sur les banques et les processeurs de paiement, excluant les personnes sans compte bancaire ou les personnes qui vivent dans le mauvais pays. Le Web3 utilise des jetons comme [ETH](/glossary/#ether) pour envoyer de l'argent directement depuis un navigateur et ne nécessite pas de tiers de confiance.
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   Autres informations sur ETH
 </ButtonLink>
 

@@ -1,5 +1,5 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
+import { useTheme } from "next-themes"
 import {
   BsBook,
   BsBuildings,
@@ -28,17 +28,15 @@ import { EthereumIcon } from "@/components/icons/EthereumIcon"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { FROM_QUERY } from "@/lib/constants"
-
 import type { NavSections } from "./types"
 
 export const useNav = () => {
-  const { asPath } = useRouter()
   const { isOpen, onToggle } = useDisclosure()
   const { t } = useTranslation("common")
+  const { theme, setTheme } = useTheme()
+  const { setColorMode } = useColorMode()
 
   const colorToggleEvent = useColorModeValue("dark mode", "light mode") // This will be inverted as the state is changing
-  const { toggleColorMode: chakraToggleColorMode } = useColorMode()
 
   const linkSections: NavSections = {
     learn: {
@@ -470,14 +468,9 @@ export const useNav = () => {
     },
   }
 
-  const splitPath = asPath.split("/")
-  const fromPageParameter =
-    splitPath.length > 1 && splitPath[1] !== "languages"
-      ? `?${FROM_QUERY}=/${splitPath.slice(1).join("/")}`
-      : ""
-
   const toggleColorMode = () => {
-    chakraToggleColorMode()
+    setTheme(theme === "dark" ? "light" : "dark")
+    setColorMode(theme === "dark" ? "light" : "dark")
     trackCustomEvent({
       eventCategory: "nav bar",
       eventAction: "click",
@@ -486,14 +479,12 @@ export const useNav = () => {
   }
 
   const mobileNavProps = {
-    fromPageParameter,
     isOpen,
     toggleColorMode,
     onToggle,
   }
 
   return {
-    fromPageParameter,
     linkSections,
     mobileNavProps,
     toggleColorMode,

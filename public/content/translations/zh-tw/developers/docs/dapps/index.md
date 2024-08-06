@@ -74,6 +74,12 @@ lang: zh-tw
 - [文件](https://portal.thirdweb.com/)
 - [Github](https://github.com/thirdweb-dev/)
 
+**Crossmint _- 企業級 Web3 開發平台，可用於部署智慧型合約，支援信用卡和跨鏈支付，並使用應用程式介面來建立、分發、銷售、儲存和編輯非同質化代幣。_**
+
+- [crossmint.com](https://www.crossmint.com)
+- [文件](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+
 ## 衍生閱讀 {#further-reading}
 
 - [探索去中心化應用程式](/dapps)

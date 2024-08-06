@@ -6,7 +6,7 @@ lang: it
 
 # Come creare un conto di Ethereum
 
-Chiunque può creare un conto di Ethereum in qualsiasi momento, gratuitamente. Esistono diversi modi per farlo, ma il più semplice e comune è quello di utilizzare un'applicazione nota come portafoglio. I portafogli creano e proteggono le chiavi che ti consentono di utilizzare Ethereum. È possibile utilizzare il proprio portafoglio per inviare transazioni, controllare il saldo dei token e connettersi ad applicazioni basate su Ethereum, come borse scambio di token, videogiochi, marketplace NFT e altro ancora. Alcune applicazioni "web2" ora ti consentono di accedere anche con Ethereum.
+Chiunque può creare un conto di Ethereum in qualsiasi momento, gratuitamente. Esistono diversi modi per farlo, ma il più semplice e comune è quello di utilizzare un'applicazione nota come portafoglio. I portafogli creano e proteggono le [chiavi](/glossary/#key) che ti consentono di utilizzare Ethereum. Puoi utilizzare il tuo portafoglio per inviare transazioni, controllare i tuoi saldi di token e connetterti alle app basate su Ethereum, quali piattaforme di scambio di token, giochi, marketplace di [NFT](/glossary/#nft), e molto altro. Alcune applicazioni "web2" ora ti consentono di accedere anche con Ethereum.
 
 A differenza dell'apertura di un nuovo conto presso un'azienda, la creazione di un conto di Ethereum avviene liberamente, privatamente e senza bisogno di autorizzazione. I conti sono controllati da chiavi che il software del tuo portafoglio ti aiuta a generare, che non sono rilasciate da terzi né sono conservate in un registro centrale.
 
@@ -14,7 +14,7 @@ A differenza dell'apertura di un nuovo conto presso un'azienda, la creazione di 
 
 Un portafoglio è un'applicazione che ti aiuta a gestire il tuo conto di Ethereum. Utilizza le chiavi per inviare e ricevere transazioni e accedere alle applicazioni. Esistono decine di portafogli diversi tra cui scegliere: per mobile, desktop o persino estensioni per browser.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Trova un portafoglio
 </ButtonLink>
 
@@ -28,7 +28,7 @@ Esistono poi altri filtri del profilo per provvedere alle tue esigenze. Questi s
 
 Una volta scelto un portafoglio specifico, visitane il sito web ufficiale o l'app store, scaricalo e installalo. Dovrebbero essere tutti gratuiti.
 
-## Fase 3: Aprire l'app e generare o importare il proprio conto di Ethereum
+## Fase 3: Aprire l'app e creare il proprio conto di Ethereum
 
 La prima volta che apri il tuo nuovo portafoglio, ti potrebbe esser chiesto di scegliere tra creare un nuovo conto o importarne uno esistente. Clicca sulla creazione di un nuovo conto.
 
@@ -42,7 +42,7 @@ Una volta salvata la frase di seed, si dovrebbe vedere il pannello di controllo 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vuoi saperne di più?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Visualizza le altre guide
   </ButtonLink>
 </InfoBanner>
@@ -61,9 +61,9 @@ No, non puoi. Bitcoin ed ether esistono su due reti separate (cioè, blockchain 
 
 ### Se possiedo un indirizzo ETH, possiedo lo stesso indirizzo su altre blockchain?
 
-È possibile utilizzare lo stesso indirizzo su tutte le blockchain che utilizzano un software sottostante simile a Ethereum (noto come "compatibile con l'EVM"). Questo [elenco](https://chainlist.org/) ti mostrerà quali blockchain puoi utilizzare con lo stesso indirizzo. Alcune blockchain, come Bitcoin, implementano una serie di regole di rete completamente separata, e ti servirà un indirizzo diverso con un formato differente. Se hai un portafoglio di contratti intelligenti, dovresti consultare il sito web del prodotto per ulteriori informazioni su quali blockchain sono supportate.
+Puoi utilizzare lo stesso [indirizzo](/glossary/#address) su tutte le blockchain che utilizzano un software sottostante simile a Ethereum (noto come 'compatibile con l'EVM'). Questo [elenco](https://chainlist.org/) ti mostrerà quali blockchain puoi utilizzare con lo stesso indirizzo. Alcune blockchain, come Bitcoin, implementano una serie di regole di rete completamente separata, e ti servirà un indirizzo diverso con un formato differente. Se hai un portafoglio di contratti intelligenti, dovresti consultare il sito web del prodotto per ulteriori informazioni su quali blockchain sono supportate.
 
-### Avere il proprio portafoglio è più sicuro di mantenere i miei fondi su una borsa?
+### Avere un portafoglio personale è più sicuro che tenere i propri fondi su una piattaforma di scambio?
 
 Avere un portafoglio personale significa assumersi la responsabilità della sicurezza delle proprie risorse. Purtroppo ci sono molti esempi di borse fallite che hanno fatto perdere denaro ai loro clienti. Possedere un portafoglio (con una frase di seed) elimina il rischio associato al fidarsi di un'entità che detiene le tue risorse. Tuttavia, è necessario proteggere le proprie chiavi ed evitare truffe di phishing, l'approvazione accidentale di transazioni o l'esposizione delle chiavi, l'interazione con siti web fraudolenti e altri rischi legati all'autocustodia. I rischi e i benefici sono diversi.
 

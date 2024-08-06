@@ -46,8 +46,9 @@ incomplete: true
 - [Solaris](https://github.com/paritytech/sol-rs) - _使用本机 Parity 客户端以太坊虚拟机的 Solidity 智能合约单元测试工具。_
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _以太坊虚拟机的 Rust 实现_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust 语言的 Wavelet 智能合约_
-- [Foundry](https://github.com/gakonst/foundry) - _以太坊应用程序开发工具包_
-- [Ethers_rs](https://github.com/gakonst/ethers-rs)- _以太坊库和钱包的实现_
+- [Foundry](https://github.com/foundry-rs/foundry) - _以太坊应用程序开发工具包_
+- [Alloy](https://alloy.rs) - _用于与以太坊和其他基于 EVM 的链交互的高性能、经过充分测试和记录的库。_
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _以太坊库和钱包的实现_
 - [SewUp](https://github.com/second-state/SewUp) - _一个帮助用户用 Rust 语言构建以太坊 Webassembly 合约的库，正如在公共后端中开发一样_
 - [Substreams](https://github.com/streamingfast/substreams) - _并行化区块链数据索引技术_
 - [Reth](https://github.com/paradigmxyz/reth) - Reth 即 Rust Ethereum 简称的发音，是新的以太坊全节点实现

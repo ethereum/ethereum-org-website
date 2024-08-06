@@ -6,7 +6,7 @@ lang: fr
 
 # Comment créer un compte Ethereum
 
-Quiconque peut créer un compte Ethereum à tout moment, gratuitement. Il existe plusieurs façons de procéder, mais la plus simple et la plus courante consiste à utiliser une application appelée "portefeuille". Les portefeuilles créent et sécurisent les clés qui vous permettent d'utiliser Ethereum. Vous pouvez utiliser votre portefeuille pour réaliser des transactions, vérifier le solde de vos jetons et vous connecter à des applications construites sur Ethereum, telles que des échanges, des jeux, des places de marché NFT et bien d'autres encore. Certaines applications "web2" permettent désormais de se connecter avec Ethereum.
+Quiconque peut créer un compte Ethereum à tout moment, gratuitement. Il existe plusieurs façons de procéder, mais la plus simple et la plus courante consiste à utiliser une application appelée "portefeuille". Les portefeuilles créent et sécurisent les [clés](/glossary/#key) qui vous permettent d'utiliser Ethereum. Vous pouvez utiliser votre portefeuille pour envoyer des transactions, vérifier le solde de vos jetons et vous connecter à des applications construites sur Ethereum, telles que des échanges de jetons, des jeux, des places de marché [NFT](/glossary/#nft) et bien d'autres encore. Certaines applications "web2" permettent désormais de se connecter avec Ethereum.
 
 Contrairement à l'ouverture d'un nouveau compte auprès d'une entreprise, la création d'un compte Ethereum se fait librement, en privé et sans demander d'autorisation. Les comptes sont contrôlés par des clés que votre logiciel de portefeuille vous aide à créer, et ils ne sont pas émis par un tiers ni stockés dans un registre centralisé.
 
@@ -14,7 +14,7 @@ Contrairement à l'ouverture d'un nouveau compte auprès d'une entreprise, la cr
 
 Un portefeuille est une application qui vous aide à gérer votre compte Ethereum. Il utilise vos clés pour envoyer et recevoir des transactions et se connecter à des applications. Il existe des dizaines de portefeuilles différents - mobiles, de bureau ou même des extensions de navigateur.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Trouver un portefeuille
 </ButtonLink>
 
@@ -28,7 +28,7 @@ Il y a aussi d'autres filtres de profil pour répondre à vos besoins. Il s'agit
 
 Une fois que vous avez choisi votre portefeuille , visitez leur site Web officiel ou l'application officielle, téléchargez et installez-le. Ils devraient tous être gratuits.
 
-## Étape 3 : Ouvrez l'application et générez ou importez votre compte Ethereum
+## Étape 3 : Ouvrez l'application et créez votre compte Ethereum
 
 La première fois que vous ouvrez votre nouveau portefeuille, il vous sera demandé de choisir entre créer un nouveau compte ou importer un compte existant. Cliquez sur la création d'un nouveau compte.
 
@@ -42,7 +42,7 @@ Une fois votre phrase de récupération enregistrée, vous pourrez consulter le 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vous voulez en savoir plus ?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>
 </InfoBanner>
@@ -61,7 +61,7 @@ Non, vous ne pouvez pas. Le bitcoin et l'ether existent sur deux réseaux distin
 
 ### Si je possède une adresse ETH, est-ce que je peux l'utiliser sur d'autres blockchains ?
 
-Vous pouvez utiliser la même adresse sur toutes les blockchains qui utilisent un logiciel sous-jacent similaire à Ethereum ("compatible-EVM"). Cette [liste](https://chainlist.org/) vous présente les blockchains que vous pouvez utiliser avec la même adresse. Certaines blockchains, comme Bitcoin, utilisent un ensemble de règles de réseau totalement différentes et vous aurez donc besoin d'une adresse différente fonctionnant sous un autre format. Si vous utilisez un portefeuille de contrats intelligents, vous pouvez consulter son site web pour plus d'informations sur les blockchains pris en charge.
+Vous pouvez utiliser la même [adresse](/glossary/#address) sur toutes les blockchains qui utilisent un logiciel sous-jacent similaire à Ethereum (« compatible-EVM »). Cette [liste](https://chainlist.org/) vous présente les blockchains que vous pouvez utiliser avec la même adresse. Certaines blockchains, comme Bitcoin, utilisent un ensemble de règles de réseau totalement différentes et vous aurez donc besoin d'une adresse différente fonctionnant sous un autre format. Si vous utilisez un portefeuille de contrats intelligents, vous pouvez consulter son site web pour plus d'informations sur les blockchains pris en charge.
 
 ### Est-il plus sûr de garder mes fonds sur mon portefeuille plutôt que sur un échange ?
 

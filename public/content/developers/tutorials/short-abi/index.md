@@ -51,7 +51,6 @@ The vast majority of transactions access a contract from an externally-owned acc
 Most contracts are written in Solidity and interpret their data field per [the application binary interface (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
 However, the ABI was designed for L1, where a byte of calldata costs approximately the same as four arithmetic operations, not L2 where a byte of calldata costs more than a thousand arithmetic operations.
-For example, [here is an ERC-20 transfer transaction](https://kovan-optimistic.etherscan.io/tx/0x7ce4c144ebfce157b4de99d8ad53a352ae91b57b3fa06d8a1c79439df6bfa998).
 The calldata is divided like this:
 
 | Section             | Length | Bytes | Wasted bytes | Wasted gas | Necessary bytes | Necessary gas |
@@ -97,8 +96,6 @@ It would make a production ERC-20 contract useless, but it makes life easier whe
         _mint(msg.sender, 1000);
     }   // function faucet
 ```
-
-[You can see an example of this contract being deployed here](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8).
 
 ### CalldataInterpreter.sol {#calldatainterpreter-sol}
 
@@ -368,17 +365,6 @@ Create a transfer transaction. The first byte is "0x02", followed by the destina
 })      // describe
 ```
 
-### Example {#example}
-
-If you want to see these files in action without running them yourself, follow these links:
-
-1. [Deployment of `OrisUselessToken`](https://kovan-optimistic.etherscan.io/tx/1410744) to [address `0x950c753c0edbde44a74d3793db738a318e9c8ce8`](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8).
-2. [Deployment of `CalldataInterpreter`](https://kovan-optimistic.etherscan.io/tx/1410745) to [address `0x16617fea670aefe3b9051096c0eb4aeb4b3a5f55`](https://kovan-optimistic.etherscan.io/address/0x16617fea670aefe3b9051096c0eb4aeb4b3a5f55).
-3. [Call to `faucet()`](https://kovan-optimistic.etherscan.io/tx/1410746).
-4. [Call to `OrisUselessToken.approve()`](https://kovan-optimistic.etherscan.io/tx/1410747).
-   This call has to go directly to the token contract because the processing relies on `msg.sender`.
-5. [Call to `transfer()`](https://kovan-optimistic.etherscan.io/tx/1410748).
-
 ## Reducing the cost when you do control the destination contract {#reducing-the-cost-when-you-do-control-the-destination-contract}
 
 If you do have control over the destination contract you can create functions that bypass the `msg.sender` checks because they trust the calldata interpreter.
@@ -587,19 +573,6 @@ expect(await token.balanceOf(destAddr2)).to.equal(255)
 
 Test the two new functions.
 Note that `transferFromTx` requires two address parameters: the giver of the allowance and the receiver.
-
-### Example {#example-2}
-
-If you want to see these files in action without running them yourself, follow these links:
-
-1. [Deployment of `OrisUselessToken-2`](https://kovan-optimistic.etherscan.io/tx/1475397) at address [`0xb47c1f550d8af70b339970c673bbdb2594011696`](https://kovan-optimistic.etherscan.io/address/0xb47c1f550d8af70b339970c673bbdb2594011696).
-2. [Deployment of `CalldataInterpreter`](https://kovan-optimistic.etherscan.io/tx/1475400) at address [`0x0dccfd03e3aaba2f8c4ea4008487fd0380815892`](https://kovan-optimistic.etherscan.io/address/0x0dccfd03e3aaba2f8c4ea4008487fd0380815892).
-3. [Call to `setProxy()`](https://kovan-optimistic.etherscan.io/tx/1475402).
-4. [Call to `faucet()`](https://kovan-optimistic.etherscan.io/tx/1475409).
-5. [Call to `transferProxy()`](https://kovan-optimistic.etherscan.io/tx/1475416).
-6. [Call to `approveProxy()`](https://kovan-optimistic.etherscan.io/tx/1475419).
-7. [Call to `transferFromProxy()`](https://kovan-optimistic.etherscan.io/tx/1475421).
-   Note that this call comes from a different address than the other ones, `poorSigner` instead of `signer`.
 
 ## Conclusion {#conclusion}
 

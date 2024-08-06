@@ -78,7 +78,7 @@ summaryPoints:
 
 بإمكان المدققين أيضًا أن الخروج كليًا من عملية المراهنة، ما يتيح لهم إمكانية سحب رصيد ETH المتبقي لهم. ستحصل الحسابات التي وفرت عنوان سحب للتنفيذ، وأنهت عملية الخروج، على رصيدها بالكامل على عنوان السحب الذي تم توفيرة خلال عملية توزيع المكافآت الأولى.
 
-<ButtonLink to="/staking/withdrawals/">مزيد من المعلومات حول عمليات السحب المتعلقة بالمراهنات</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">مزيد من المعلومات حول عمليات السحب المتعلقة بالمراهنات</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="ماذا يحدث في حال تم شطبي؟" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

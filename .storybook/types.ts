@@ -1,5 +1,5 @@
+import type { StyleConfig, ThemingProps } from "@chakra-ui/react"
 import type { ArgTypes } from "@storybook/react"
-import type { ThemingProps } from "@chakra-ui/react"
 
 // Type declarations below pulled directly from `@chakra-ui/storybook-addon`
 // with some alteration
@@ -11,8 +11,8 @@ import type { ThemingProps } from "@chakra-ui/react"
 type KeyOf<T> = [T] extends [never]
   ? never
   : T extends object
-  ? Extract<keyof T, string>
-  : never
+    ? Extract<keyof T, string>
+    : never
 
 export type ThemingArgTypeKey = "variant" | "size"
 
@@ -49,10 +49,12 @@ export type ThemingArgTypeKey = "variant" | "size"
  * @param componentName component name to create the ArgTypes for
  */
 export function getThemingArgTypes<
-  Theme extends Record<string, any>,
-  ComponentName extends KeyOf<Theme["components"]>
+  Theme extends Record<string, unknown> & {
+    components?: Record<string, StyleConfig>
+  },
+  ComponentName extends KeyOf<Theme["components"]>,
 >(theme: Theme, componentName: ComponentName) {
-  const component = theme.components[componentName]
+  const component = theme.components?.[componentName]
   if (!component) {
     return undefined
   }

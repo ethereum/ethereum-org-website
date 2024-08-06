@@ -195,7 +195,9 @@ export const StakingProductCard = ({
           textTransform="uppercase"
           pt={6}
         >
-          {minEth > 0 ? `From ${minEth} ETH` : "Any amount"}
+          {minEth > 0
+            ? `${t("common:from")} ${minEth} ETH`
+            : t("page-staking-any-amount")}
         </Center>
       )}
       <Flex

@@ -139,8 +139,7 @@ export const layer2Data: Rollups = {
       ],
       blockExplorer: "https://explorer.zksync.io/",
       ecosystemPortal: "https://zksync.io/ecosystem",
-      tokenLists: 
-        "https://explorer.zksync.io/tokens",
+      tokenLists: "https://explorer.zksync.io/tokens",
       noteKey: "",
       purpose: ["universal"],
       descriptionKey: "zksync-description",

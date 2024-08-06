@@ -1,5 +1,5 @@
 import { ComponentProps } from "react"
-import { Box, type HeadingProps, Text, VStack } from "@chakra-ui/react"
+import { type HeadingProps, Text, VStack } from "@chakra-ui/react"
 
 import Heading from "@/components/Heading"
 import IdAnchor from "@/components/IdAnchor"

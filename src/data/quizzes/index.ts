@@ -88,11 +88,6 @@ export const usingEthereumQuizzes: QuizzesSection[] = [
   {
     id: "nfts",
     level: "beginner",
-    next: "scaling",
-  },
-  {
-    id: "scaling",
-    level: "intermediate",
     next: "layer-2",
   },
   {
@@ -108,6 +103,11 @@ export const usingEthereumQuizzes: QuizzesSection[] = [
   {
     id: "run-a-node",
     level: "intermediate",
+    next: "scaling",
+  },
+  {
+    id: "scaling",
+    level: "advanced",
     next: "solo-staking",
   },
   {

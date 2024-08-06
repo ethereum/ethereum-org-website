@@ -56,7 +56,7 @@ Potser sou un artista i voleu compartir la vostra obra utilitzant els NFT, sense
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Exploreu, compreu o creeu els vostres propis NFT d'art o col·leccionables...</div>
-  <ButtonLink to="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/dapps/?category=collectibles#explore">
     Exploreu l'art NFT
   </ButtonLink>
 </InfoBanner>
@@ -93,7 +93,7 @@ La seguretat d'Ethereum prové de la [prova d'admissió](/glossary/#pos). El sis
 
 Els problemes de seguretat relacionats amb les NFT solen estar relacionats amb estafes de phishing, vulnerabilitats dels contractes intel·ligents o errors dels usuaris (com exposar inadvertidament les claus privades), per la qual cosa una bona seguretat del moneder és fonamental per als propietaris de NFT.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Més sobre seguretat
 </ButtonLink>
 

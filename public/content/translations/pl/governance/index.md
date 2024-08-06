@@ -32,7 +32,7 @@ Przeciwne podejście, zarządzanie poza łańcuchem, polega na tym, że wszelkie
 
 _Podczas gdy na poziomie protokołu zarządzanie Ethereum odbywa się poza łańcuchem, wiele przypadków użycia zbudowanych na Ethereum, takich jak DAO, wykorzystuje zarządzanie w łańcuchu._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Więcej o DAO
 </ButtonLink>
 
@@ -58,7 +58,7 @@ _Uwaga: każda osoba może być częścią wielu z tych grup (np. deweloper prot
 
 Jednym z ważniejszych procesów zarządzania Ethereum jest tzw. **Propozycja Ulepszenia Ethereum (EIP)**. EIP są standardami określającymi nowe funkcje lub procesy dla Ethereum. Każdy członek społeczności Ethereum może stworzyć EIP. Jeżeli jesteś zainteresowany stworzeniem EIP lub uczestnictwem w weryfikacji i/lub zarządzaniem zobacz:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Więcej o EIP
 </ButtonLink>
 
@@ -154,7 +154,7 @@ Podczas gdy specyfikacja i implementacje deweloperskie zawsze były w pełni ope
 
 Kiedy łańcuch śledzący połączył się z warstwą wykonawczą Ethereum 15 września 2022 r., Połączenie zostało zakończone w ramach [aktualizacji sieci Paris](/history/#paris). Propozycja [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) została zmieniona z „Last Call” na „Final”, kończąc przejście na proof-of-stake.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Więcej o Połączeniu
 </ButtonLink>
 

@@ -65,7 +65,6 @@ type BucketsList = { [key: string]: Array<number> }
 const USER_OVERRIDE: BucketsList = {
   // FORMAT: lang_code: [bucket_number, bucket_number, ...],
   // EXAMPLE: es: [1, 10, 12, 14],
-  hu: [3, 6, 7, 10, 11, 12, 13, 16, 21],
 }
 
 /******************************
@@ -351,9 +350,8 @@ importSelection.forEach(
     // Initialize working directory and check for existence
     const _path: string = join(crowdinRoot, crowdinLangCode)
     if (!existsSync(_path)) {
-      trackers.langs[
-        repoLangCode
-      ].error = `Path doesn't exist for lang ${crowdinLangCode}`
+      trackers.langs[repoLangCode].error =
+        `Path doesn't exist for lang ${crowdinLangCode}`
       return
     }
     const langLs: Array<string> = readdirSync(_path)

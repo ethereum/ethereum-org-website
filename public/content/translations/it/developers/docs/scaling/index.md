@@ -9,7 +9,7 @@ sidebarDepth: 3
 
 Poiché il numero di persone che usano Ethereum è aumentato, la blockchain ha raggiunto determinati limiti di capacità. Ciò ha aumentato il costo di utilizzo della rete, creando la necessità di "soluzioni di scalabilità". Ci sono molteplici soluzioni in fase di ricerca, sperimentazione e implementazione, che adottano approcci diversi per raggiungere obiettivi simili.
 
-L'obiettivo principale della scalabilità è aumentare la velocità della transazione (finalità più veloce) e il volume di transazioni (numero elevato di transazioni al secondo), senza sacrificare la decentralizzazione o la sicurezza (maggiori informazioni su [Ethereum vision](/roadmap/vision/)). Sulla blockchain di livello 1 di Ethereum, l'elevata domanda comporta transazioni più lente e [prezzi del gas](/developers/docs/gas/) impraticabili. L'aumento della capacità della rete in termini di velocità e produttività è fondamentale per una significativa adozione di massa di Ethereum.
+L'obiettivo principale della scalabilità è incrementare la velocità (finalità più veloce) e il volume delle transazioni (maggior numero al secondo), senza sacrificare la decentralizzazione o la sicurezza (maggiori informazioni sulla [visione di Ethereum](/roadmap/vision/)). Sulla blockchain di livello 1 di Ethereum, l'elevata domanda comporta transazioni più lente e [prezzi del gas](/developers/docs/gas/) impraticabili. L'aumento della capacità della rete in termini di velocità e produttività è fondamentale per una significativa adozione di massa di Ethereum.
 
 Anche se velocità e produttività sono aspetti importanti, è essenziale che le soluzioni di scalabilità che rendono possibili questi obiettivi rimangano decentralizzate e sicure. Mantenere una barriera all'ingresso bassa per gli operatori dei nodi è fondamentale per scongiurare una progressione verso una potenza di calcolo centralizzata e insicura.
 
@@ -109,5 +109,6 @@ _Si noti che la spiegazione nel video usa il termine "Livello 2" per fare riferi
 - [Scalabilità della blockchain a conoscenza zero](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Perché i rollup e i frammenti di dati sono la sola soluzione sostenibile per un'elevata scalabilità](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [Che tipo di Livelli 3 hanno senso?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
+- [Disponibilità dei dati, ovvero come i rollup hanno imparato a smettere di preoccuparsi e ad amare Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)
 
-_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_

@@ -78,7 +78,7 @@ Keamanan Ethereum berasal dari bukti taruhan. Sistem dirancang untuk memberikan 
 
 Masalah keamanan terkait NFT sering kali terkait dengan penipuan phishing, kerentanan kontrak pintar, atau kesalahan pengguna (seperti secara tidak sengaja mengekspos kunci pribadi), sehingga keamanan dompet yang baik menjadi sangat penting bagi pemilik NFT.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Lebih lanjut tentang keamanan
 </ButtonLink>
 

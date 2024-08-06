@@ -64,7 +64,7 @@ lang: zh
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>想了解更多信息？</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     查看我们其他的指南
   </ButtonLink>
 </InfoBanner>

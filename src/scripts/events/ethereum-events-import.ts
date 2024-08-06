@@ -93,7 +93,7 @@ export async function EthereumEventsImport() {
       title: title,
       startDate: new Date(start).toISOString().substring(0, 10),
       endDate: new Date(end).toISOString().substring(0, 10),
-      to: websiteUrl,
+      href: websiteUrl,
       location: location,
       description: description,
       imageUrl: imageUrl,

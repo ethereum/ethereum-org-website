@@ -52,7 +52,7 @@ You will automatically receive the swapped tokens in your wallet once the transa
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Want to learn more?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     See our other guides
   </ButtonLink>
 </InfoBanner>

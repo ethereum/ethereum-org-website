@@ -86,6 +86,8 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/data-structures-and-encoding/ssz",
     "/developers/docs/data-structures-and-encoding/web3-secret-storage",
     "/developers/docs/design-and-ux",
+    "/developers/docs/design-and-ux/heuristics-for-web3",
+    "/developers/docs/design-and-ux/dex-design-best-practice",
     "/developers/docs/development-networks",
     "/developers/docs/ethereum-stack",
     "/developers/docs/evm",
@@ -240,6 +242,9 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/contributing/translation-program/playbook",
     "/contributing/translation-program/resources",
     "/contributing/translation-program/translatathon",
+    "/contributing/translation-program/translatathon/details",
+    "/contributing/translation-program/translatathon/translatathon-hubs",
+    "/contributing/translation-program/translatathon/terms-and-conditions",
     "/contributing/translation-program/translators-guide",
     "/cookie-policy",
     "/eips",
@@ -270,6 +275,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/security",
     "/smart-contracts",
     "/staking/dvt",
+
     "/terms-of-use",
     "/web3",
     "/whitepaper",
@@ -386,7 +392,7 @@ export const getTutorialsData = (locale: string): ITutorial[] => {
       const frontmatter = data as Frontmatter
 
       return {
-        to: join(`/${locale}/developers/tutorials`, dir),
+        href: join(`/${locale}/developers/tutorials`, dir),
         title: frontmatter.title,
         description: frontmatter.description,
         author: frontmatter.author || "",

@@ -17,7 +17,7 @@ import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 interface DataType {
   title: TranslationKey
   linkText: TranslationKey
-  to: string
+  href: string
   matomo: MatomoEventOptions
   color: string
   glyph: JSX.Element
@@ -36,7 +36,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
   const solo: DataType = {
     title: "page-staking-dropdown-solo",
     linkText: "page-staking-learn-more-solo",
-    to: "/staking/solo/",
+    href: "/staking/solo/",
     matomo: {
       eventCategory: `StakingComparison`,
       eventAction: `Clicked`,
@@ -48,7 +48,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
   const saas: DataType = {
     title: "page-staking-saas-with-abbrev",
     linkText: "page-staking-learn-more-saas",
-    to: "/staking/saas/",
+    href: "/staking/saas/",
     matomo: {
       eventCategory: `StakingComparison`,
       eventAction: `Clicked`,
@@ -60,7 +60,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
   const pools: DataType = {
     title: "page-staking-dropdown-pools",
     linkText: "page-staking-learn-more-pools",
-    to: "/staking/pools/",
+    href: "/staking/pools/",
     matomo: {
       eventCategory: `StakingComparison`,
       eventAction: `Clicked`,
@@ -125,9 +125,11 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
       mt={16}
       className={className}
     >
-      <OldHeading fontSize="2rem">Comparison with other options</OldHeading>
+      <OldHeading fontSize="2rem">
+        {t("page-staking-comparison-with-other-options")}
+      </OldHeading>
       {selectedData.map(
-        ({ title, linkText, to, color, content, glyph, matomo }, idx) => (
+        ({ title, linkText, href, color, content, glyph, matomo }, idx) => (
           <Flex gap={6} direction={{ base: "column", md: "row" }} key={idx}>
             {!!glyph && (
               <Flex
@@ -149,7 +151,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
                 onClick={() => {
                   trackCustomEvent(matomo)
                 }}
-                to={to}
+                href={href}
               >
                 {t(linkText)}
               </InlineLink>

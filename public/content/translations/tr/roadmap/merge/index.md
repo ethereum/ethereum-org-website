@@ -202,7 +202,7 @@ Birleşim, yeni fikir birliği katmanı olarak İşaret Zinciri'nin asıl Ana A�
 
 Bloklar, mutabakata katılma hakkı karşılığında hisselenmiş ETH sahibi doğrulayan düğümler tarafından önerilmektedir. Bu yükseltmeler, parçalama da dahil olmak üzere gelecekteki ölçeklenebilirlik yükseltmeleri için zemin hazırlar.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   İşaret Zinciri
 </ButtonLink>
 
@@ -218,7 +218,7 @@ Başlangıçta plan, ölçeklenebilirliği ele almak için Birleşim'den önce p
 
 Parçalama planları hızla gelişiyor, ancak işlem yürütmeyi ölçeklendirmek için katman 2 teknolojilerinin yükselişi ve başarısı göz önüne alındığında, parçalama planları, toplama sözleşmelerinden sıkıştırılmış çağrı verilerini depolamanın yükünü dağıtmak için en uygun yolu bulmaya kaydı ve ağ kapasitesinde katlanarak büyümeye izin verdi. Bu, ilk olarak hisse ispatına geçmeden mümkün olmazdı.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Parçalama
 </ButtonLink>
 

@@ -51,7 +51,7 @@ Recibirá automáticamente los tókenes intercambiados en su cartera una vez que
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>¿Quiere saber más?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Consulte nuestras demás guias
   </ButtonLink>
 </InfoBanner>

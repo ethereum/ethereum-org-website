@@ -35,13 +35,11 @@ Le operazioni di aggiornamento ed eliminazione per gli alberi radicati sono defi
 
 ```
     def update(node,path,value):
+        curnode = db.get(node) if node else [ NULL ] * 17
+        newnode = curnode.copy()
         if path == '':
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newnode[-1] = value
         else:
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newindex = update(curnode[path[0]],path[1:],value)
             newnode[path[0]] = newindex
         db.put(hash(newnode),newnode)
@@ -97,12 +95,12 @@ Attraversando i percorsi in "nibble", potremmo finire con un numero dispari di n
 
 Il flagging sia _della lunghezza del percorso parziale rimanente, dispari o pari,_ sia del _nodo leaf o estensione_, come descritto sopra, risiede nel primo nibble del percorso parziale di qualsiasi nodo di 2 elementi. Il risultato è il seguente:
 
-    hex char    bits    |    node type partial     path length
+    char hex    bit    |    parziale tipo nodo     lungh percorso
     ----------------------------------------------------------
-       0        0000    |       extension              even
-       1        0001    |       extension              odd
-       2        0010    |   terminating (leaf)         even
-       3        0011    |   terminating (leaf)         odd
+       0        0000    |       estensione              pari
+       1        0001    |       estensione              dispari
+       2        0010    |   terminazione (leaf)         pari
+       3        0011    |   terminazione (leaf)         dispari
 
 per la lunghezza del percorso rimanente pari (`0` or `2`), seguirà sempre un altro nibble di "padding" `0`.
 
@@ -116,7 +114,7 @@ per la lunghezza del percorso rimanente pari (`0` or `2`), seguirà sempre un al
             hexarray = [flags] + hexarray
         else:
             hexarray = [flags] + [0] + hexarray
-        // hexarray now has an even length whose first nibble is the flags.
+        // hexarray ha ora una lunghezza pari, il cui primo nibble si compone dei flag.
         o = ''
         for i in range(0,len(hexarray),2):
             o += chr(16 * hexarray[i] + hexarray[i+1])
@@ -164,7 +162,7 @@ Ecco il codice esteso per ottenere un nodo nel trie di Patricia Merkle:
 
 ### Esempio di Trie {#example-trie}
 
-Supponiamo di volere un trie contenente quattro coppie percorso/valore `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
+Supponiamo di volere un trie che contenga quattro coppie percorso/valore `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
 
 Per prima cosa, convertiamo sia i percorsi che i valori in `bytes`. Di seguito, le rappresentazioni reali dei byte per i _percorsi_ sono denotate da `<>`, sebbene i _valori_ siano mostrati ancora come stringhe, denotate da `"`, per maggiore facilità di comprensione (anch'essi, sarebbero in realtà `bytes`):
 

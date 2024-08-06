@@ -18,7 +18,7 @@ import { BaseLink } from "./Link"
 
 export interface ListItem {
   text: string
-  to?: string
+  href?: string
   matomo?: {
     eventCategory: string
     eventAction: string
@@ -78,12 +78,12 @@ const ButtonDropdown = ({ list, ...rest }: ButtonDropdownProps) => {
         zIndex="popover"
       >
         {list.items.map((item, idx) => {
-          const { text, to } = item
+          const { text, href } = item
 
-          return to ? (
+          return href ? (
             <BaseLink
               key={idx}
-              to={to!}
+              href={href!}
               isPartiallyActive={false}
               textDecor="none"
               color="text"

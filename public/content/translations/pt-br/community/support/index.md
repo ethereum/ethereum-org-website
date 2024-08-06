@@ -12,11 +12,11 @@ Você está procurando pelo suporte oficial do Ethereum? A primeira coisa que vo
 
 Compreender a natureza descentralizada do Ethereum é vital porque qualquer pessoa que afirme ser um suporte oficial para o Ethereum está provavelmente tentando enganar você! A melhor proteção contra os golpistas é educar-se e levar a segurança a sério.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Segurança e prevenção de fraude do Ethereum
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Aprenda os conceitos básicos do Ethereum
 </DocLink>
 
