@@ -2,7 +2,7 @@
 title: Объединенный стейкинг
 description: 'Как начать совместный стейкинг ETH: краткий обзор'
 lang: ru
-template: ставки
+template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
 alt: Носорог Лесли плавает в бассейне.
@@ -68,7 +68,7 @@ summaryPoints:
 
 В качестве альтернативы пулы, использующие токены стейкинга ERC-20, позволяют пользователям торговать этими токенами на открытом рынке. Это дает возможность продать находящуюся в стейкинге позицию без фактического вывода ETH из контракта стейкинга.
 
-<ButtonLink to="/staking/withdrawals/">Подробнее о выводе средств из стейкинга</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Подробнее о выводе средств из стейкинга</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Отличается ли это от стейкинга на моей бирже?">

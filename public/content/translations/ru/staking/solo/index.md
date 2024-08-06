@@ -2,7 +2,7 @@
 title: Одиночный стейкинг со своими ETH
 description: Обзор того, как начать одиночный стекинг ETH
 lang: ru
-template: ставки
+template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
 alt: Носорог Лесли на собственном компьютерном чипе.
@@ -190,7 +190,7 @@ summaryPoints:
 
 Чтобы разблокировать и получить весь баланс обратно, вы также должны завершить процесс выхода вашего валидатора.
 
-<ButtonLink to="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
 </ExpandableCard>
 
 ## Дополнительные ресурсы {#further-reading}

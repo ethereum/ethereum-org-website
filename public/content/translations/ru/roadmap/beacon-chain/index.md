@@ -56,7 +56,7 @@ summaryPoint3: С Beacon Chain в системе появился протоко
 
 Первоначально сеть Beacon существовала отдельно от основной сети Ethereum, но они были слиты воедино в 2022 году.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Слияние
 </ButtonLink>
 
@@ -64,7 +64,7 @@ summaryPoint3: С Beacon Chain в системе появился протоко
 
 Шардинг может безопасно войти в экосистему Ethereum только при наличии механизма консенсуса с доказательством владения. Сеть Beacon ввела стейкинг, который «слился» с основной сетью, прокладывая путь к шардингу, чтобы помочь дальнейшему масштабированию Ethereum.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Цепочки-осколки
 </ButtonLink>
 

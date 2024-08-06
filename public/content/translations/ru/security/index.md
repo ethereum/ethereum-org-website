@@ -16,11 +16,11 @@ lang: ru
 
 Непонимание того, как работают криптовалюты, может привести к дорогостоящим ошибкам. Например, если кто-то притворяется агентом по обслуживанию клиентов, который может вернуть потерянные ЕТН в обмен на ваши секретные ключи, то они охотятся на людей, не понимающих, что Ethereum является децентрализованной сетью, лишенной такого рода функциональности. Узнайте об устройстве системы Ethereum, это вам обязательно пригодится и поможет избежать неприятных ситуаций.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Что такое Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Что такое эфир?
 </DocLink>
 <Divider />
@@ -33,7 +33,7 @@ lang: ru
 
 Секретный ключ — это пароль к вашему кошельку Ethereum. Фраза восстановления — единственное, что мешает кому-то, кто знает адрес вашего кошелька, слить с вашего счета все активы!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Что такое кошелек Ethereum?
 </DocLink>
 
@@ -275,7 +275,7 @@ _Примечание. Существуют производные токены 
 
 - [До 3 миллионов устройств заражено вредоносными дополнениями для Chrome и Edge](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) — _Ден Гудин_
 - [Как создать надежный пароль, который вы не забудете](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) — _AVG_
-- [Что такое ключ безопасности? ](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) _Coinbase_
+- [Что такое ключ безопасности?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) _Coinbase_
 
 ### Безопасность криптовалюты {#reading-crypto-security}
 
