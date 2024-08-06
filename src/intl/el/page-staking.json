@@ -187,7 +187,7 @@
   "page-staking-section-comparison-solo-requirements-li1": "Πρέπει να καταθέσετε 32 ETH",
   "page-staking-section-comparison-solo-requirements-li2": "Να διατηρείται υλικό για τη λειτουργία του <a href=\"/glossary/#execution-client\">πελάτη εκτέλεσης</a> Ethereum και του <a href=\"/glossary/#consensus-client\">πελάτη συναίνεσης</a> ενώ είστε συνδεδεμένοι στο διαδίκτυο.",
   "page-staking-section-comparison-solo-requirements-li3": "Η <a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">Πλατφόρμα εκκίνησης αποθήκευσης κεφαλαίου</a> θα σας καθοδηγήσει σχετικά με τη διαδικασία και τις απαιτήσεις σε υλικό",
-  "page-staking-section-comparison-saas-requirements-li1": "Κατάθεση 32 ETH και δημιουργία των κλειδιών σας με βοήθεια",
+  "page-staking-section-comparison-saas-requirements-li1": "Καταθέστε 32 ETH και δημιουργήστε τα κλειδιών σας με βοήθεια",
   "page-staking-section-comparison-saas-requirements-li2": "Αποθηκεύστε τα κλειδιά σας με ασφάλεια",
   "page-staking-section-comparison-saas-requirements-li3": "Τα υπόλοιπα αναλαμβάνονται, αν και συγκεκριμένες υπηρεσίες διαφέρουν",
   "page-staking-section-comparison-pools-requirements-li1": "Μικρότερες απαιτήσεις σε ETH, ορισμένα έργα απαιτούν τόσο λίγα όσο 0.01 ETH",
