@@ -1,8 +1,7 @@
-import * as React from "react"
 import { Stack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import { ToCItem, TocNodeType } from "@/lib/types"
+import { ToCItem } from "@/lib/types"
 
 import TableOfContents from "./"
 
@@ -91,5 +90,5 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-  render: () => <TableOfContents slug="#web3" items={tocItems} maxDepth={2} />,
+  render: () => <TableOfContents items={tocItems} maxDepth={2} />,
 }
