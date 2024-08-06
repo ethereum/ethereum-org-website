@@ -2,11 +2,11 @@ import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { Slot } from "@radix-ui/react-slot"
 
-import { BaseLink, type LinkProps } from "@/components/Link"
-
 import { cn } from "@/lib/utils/cn"
 import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
+
+import { BaseLink, type LinkProps } from "../Link"
 
 const buttonVariants = cva(
   "pointer inline-flex gap-2 items-center justify-center rounded border border-solid border-current text-primary transition focus-visible:outline focus-visible:outline-4 focus-visible:outline-primary-hover focus-visible:-outline-offset-1 disabled:text-disabled disabled:pointer-events-none hover:text-primary-hover [&[data-secondary='true']]:text-body [&>svg]:flex-shrink-0",
@@ -14,7 +14,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         solid:
-          "!text-background bg-primary border-transparent disabled:bg-disabled disabled:text-background hover:text-background hover:bg-primary-hover hover:shadow-button-hover active:shadow-none",
+          "text-background bg-primary border-transparent disabled:bg-disabled disabled:text-background hover:text-background hover:bg-primary-hover hover:shadow-button-hover active:shadow-none",
         outline: "hover:shadow-button-hover active:shadow-none",
         ghost: "border-transparent",
         link: "border-transparent font-bold underline py-0 px-1 active:text-primary",
@@ -106,13 +106,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 Button.displayName = "Button"
 
-type ButtonLinkProps = ButtonProps & {
-  linkProps: LinkProps
+type ButtonLinkProps = Omit<LinkProps, "onClick"> & {
+  buttonProps?: ButtonProps
   customEventOptions?: MatomoEventOptions
 }
 
 const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
-  ({ linkProps, customEventOptions, children, ...buttonProps }, ref) => {
+  ({ buttonProps, customEventOptions, children, ...linkProps }, ref) => {
     const handleClick = () => {
       customEventOptions && trackCustomEvent(customEventOptions)
     }
@@ -120,15 +120,8 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
       <Button asChild {...buttonProps}>
         <BaseLink
           ref={ref}
-          activeStyle={{}}
-          // TODO: Redress this override when migrating the link component
-          color={
-            buttonProps.variant === "solid" ? "background.base" : undefined
-          }
-          textDecor="none"
-          _hover={{
-            textDecor: "none",
-          }}
+          className="no-underline hover:no-underline"
+          activeClassName=""
           {...linkProps}
           onClick={handleClick}
         >

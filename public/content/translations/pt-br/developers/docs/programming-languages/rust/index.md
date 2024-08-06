@@ -48,8 +48,9 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 - [Solaris](https://github.com/paritytech/sol-rs) — _Agente de teste unitário dos contratos inteligentes no Solidity usando o EVM nativo do cliente Parity._
 - [SputnikVM](https://github.com/rust-blockchain/evm) — _Implementação da Máquina Virtual do Ethereum no Rust_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _smart contract Wavelet em Rust_
-- [Foundry](https://github.com/gakonst/foundry) — _Conjunto de ferramentas para o desenvolvimento de aplicativos Ethereum_
-- [Ethers_rs](https://github.com/gakonst/ethers-rs) — _Implementação da biblioteca e da carteira Ethereum_
+- [Foundry](https://github.com/foundry-rs/foundry) - _Conjunto de ferramentas para o desenvolvimento de aplicativos Ethereum_
+- [Alloy](https://alloy.rs) - _Bibliotecas de alto desempenho, bem testadas e documentadas para interação com Ethereum e outras cadeias baseadas em EVM._
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Implementação da biblioteca e da carteira Ethereum_
 - [SewUp](https://github.com/second-state/SewUp) — _Uma biblioteca para ajudar você a construir seu contrato Webassembly do Ethereum com o Rust e desenvolvê-lo em um back-end comum_
 - [Reth](https://github.com/paradigmxyz/reth) Reth (abreviação de Rust Ethereum, pronúncia) é uma nova implementação de nó completo do Ethereum
 
