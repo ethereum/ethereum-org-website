@@ -40,7 +40,7 @@
     --tooltip-shadow: rgba(0, 0, 0, 0.24);
     --switch-background: var(--gray-300);
     --hub-hero-content-bg: rgba(255, 255, 255, 0.8);
-    --bg-main-gradient: linear-gradient(
+    --gradient-main: linear-gradient(
       102.7deg,
       rgba(185, 185, 241, 0.2) 0%,
       rgba(84, 132, 234, 0.2) 51.56%,
@@ -101,7 +101,7 @@
     --tooltip-shadow: rgba(255, 255, 255, 0.24);
     --switch-background: rgba(255, 255, 255, 0.24);
     --hub-hero-content-bg: rgba(34, 34, 34, 0.8);
-    --bg-main-gradient: linear-gradient(
+    --gradient-main: linear-gradient(
       102.7deg,
       rgba(185, 185, 241, 0.2) 0%,
       rgba(84, 132, 234, 0.2) 51.56%,

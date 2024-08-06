@@ -71,7 +71,6 @@ const config = {
           DEFAULT: "var(--body)",
           medium: "var(--body-medium)",
           light: "var(--body-light)",
-          inverted: "var(--body-inverted)",
         },
         background: {
           DEFAULT: "var(--background)",
@@ -99,7 +98,7 @@ const config = {
         },
       },
       backgroundImage: {
-        "bg-main-gradient": "var(--bg-main-gradient)",
+        "gradient-main": "var(--gradient-main)",
         "primary-highlight-gradient": "var(--primary-highlight-gradient)",
         "accent-gradient-a": "var(--accent-gradient-a)",
         "accent-gradient-b": "var(--accent-gradient-b)",

@@ -586,7 +586,7 @@ const HomePage = ({
                           "transition-transform duration-100 hover:scale-105 hover:transition-transform hover:duration-100"
                         )}
                       >
-                        <CardHeader className="h-48 w-full self-stretch overflow-hidden rounded-2xl bg-bg-main-gradient p-0">
+                        <CardHeader className="h-48 w-full self-stretch overflow-hidden rounded-2xl bg-gradient-main p-0">
                           {imageUrl ? (
                             // eslint-disable-next-line @next/next/no-img-element
                             <img

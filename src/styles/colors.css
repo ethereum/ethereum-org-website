@@ -72,15 +72,15 @@
     --cyan-800-rgb: 28, 69, 69; /* #1c4545 */
     --cyan-900-rgb: 31, 49, 47; /* #1f312f */
 
-    --orange-100: #FFF0DB;
-    --orange-200: #FFD7A7;
-    --orange-300: #FEB077;
-    --orange-400: #FD8640;
-    --orange-500: #FB610E;
-    --orange-600: #EC4A0A;
-    --orange-700: #C4350A;
-    --orange-800: #7D2711;
-    --orange-900: #3A291D;
+    --orange-100: #fff0db;
+    --orange-200: #ffd7a7;
+    --orange-300: #feb077;
+    --orange-400: #fd8640;
+    --orange-500: #fb610e;
+    --orange-600: #ec4a0a;
+    --orange-700: #c4350a;
+    --orange-800: #7d2711;
+    --orange-900: #3a291d;
 
     --red-100: #f7c8c8;
     --red-500: #b80000;
