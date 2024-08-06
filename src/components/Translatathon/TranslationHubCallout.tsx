@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react"
+import { Center, Flex } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
@@ -13,23 +13,24 @@ export const TranslationHubCallout = ({ children }) => {
       bg="background.highlight"
       direction={{ base: "column", lg: "row" }}
       p={8}
+      gap={8}
     >
       <Flex w="full" direction="column">
         {children}
         <Flex>
-          <ButtonLink href="/contributing/translation-program/translatathon/local-communities">
+          <ButtonLink href="/contributing/translation-program/translatathon/translatathon-hubs">
             Find out more on hubs
           </ButtonLink>
         </Flex>
       </Flex>
-      <Flex w="full">
+      <Center w="full">
         <Image
           src={WalkingImage}
           alt=""
           maxW={265}
           style={{ objectFit: "contain" }}
         />
-      </Flex>
+      </Center>
     </Flex>
   )
 }

@@ -94,12 +94,8 @@ export const TranslatathonCalendar = () => {
         </Text>
         {events.map((event, index) => (
           <Flex gap={6} mb={4} key={index}>
-            <Text key={index}>
-              {getLocaleTimestamp(locale! as Lang, event.date)}
-            </Text>
-            <InlineLink key={index} href={event.calendarLink}>
-              {event.title}
-            </InlineLink>
+            <Text>{getLocaleTimestamp(locale! as Lang, event.date)}</Text>
+            <InlineLink href={event.calendarLink}>{event.title}</InlineLink>
           </Flex>
         ))}
       </Flex>
