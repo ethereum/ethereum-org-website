@@ -35,6 +35,7 @@ import WindowBox from "@/components/WindowBox"
 import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { polishRSSList } from "@/lib/utils/rss"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import {
@@ -44,7 +45,7 @@ import {
 
 import events from "@/data/community-events.json"
 
-import { BASE_TIME_UNIT, GITHUB_REPO_URL } from "@/lib/constants"
+import { BASE_TIME_UNIT, GITHUB_REPO_URL, XML_FEEDS } from "@/lib/constants"
 
 import { ButtonLink } from "../../tailwind/ui/buttons/Button"
 
@@ -54,7 +55,7 @@ import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchNodes } from "@/lib/api/fetchNodes"
-import { fetchRSSDisplay } from "@/lib/api/fetchRSSDisplay"
+import { fetchRSS } from "@/lib/api/fetchRSS"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
@@ -101,7 +102,7 @@ export const getStaticProps = (async ({ locale }) => {
   )
 
   // load RSS feed items
-  const rssItems = await fetchRSSDisplay()
+  const rssItems = polishRSSList(await fetchRSS(XML_FEEDS)) // TODO: Cache results
 
   return {
     props: {
@@ -512,16 +513,28 @@ const HomePage = ({
           {/* TODO: News sub-section */}
         </HomeSection>
 
-        <HomeSection tag="" title="Ethereum news">
+        <div className="w-full">
+          <h3 className="mb-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
+            Ethereum news
+          </h3>
           <p>The latest blog posts and updates from the community</p>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:flex-row">
-            {rssItems.map(({ title, link, content, source, pubDate }) => (
+          <div className="mt-4 grid grid-cols-1 gap-8 lg:mt-16 lg:grid-cols-3 lg:flex-row">
+            {rssItems.map(({ title, link, imgSrc, source, pubDate }) => (
               <a
                 href={link}
                 key={title}
                 className="duration-100 hover:scale-105 hover:duration-100"
               >
-                <div className="5 flex flex-col space-y-2">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={imgSrc}
+                  alt=""
+                  className="h-48 w-full rounded-2xl object-cover"
+                />
+                <div className="flex flex-col space-y-2">
+                  <div className="mt-3 w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
+                    {source}
+                  </div>
                   <p className="text-sm italic">
                     {new Intl.DateTimeFormat(locale, {
                       month: "long",
@@ -529,18 +542,17 @@ const HomePage = ({
                       year: "numeric",
                     }).format(new Date(pubDate))}
                   </p>
-                  <p className="mb-2 text-2xl font-bold">{title}</p>
-                  <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
-                    {source}
-                  </div>
-                  <p>{content}</p>
+                  <p className="mb-2 text-2xl">{title}</p>
                 </div>
               </a>
             ))}
           </div>
-        </HomeSection>
+        </div>
 
-        <HomeSection tag="" title="Ethereum events">
+        <div className="w-full">
+          <h3 className="mb-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
+            Ethereum events
+          </h3>
           <p>We have many community events scheduled around the globe</p>
           <div className="mt-4 lg:mt-16">
             <div className="flex flex-col gap-8 self-stretch md:flex-row">
@@ -616,7 +628,7 @@ const HomePage = ({
               See all events <MdChevronRight />
             </ButtonLink>
           </div>
-        </HomeSection>
+        </div>
 
         <div className="flex flex-col gap-y-8 rounded-4xl border border-b-0 border-black/[0.04] bg-accent-gradient-b px-4 py-8">
           <div className="flex flex-col space-y-4 text-center">
