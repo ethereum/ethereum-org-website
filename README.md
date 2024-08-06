@@ -1890,6 +1890,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xV4L3NT1N3"><img src="https://avatars.githubusercontent.com/u/33112835?v=4?s=100" width="100px;" alt="0xV4L3NT1N3"/><br /><sub><b>0xV4L3NT1N3</b></sub></a><br /><a href="#tool-0xV4L3NT1N3" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/JoshDavisLight"><img src="https://avatars.githubusercontent.com/u/82784104?v=4?s=100" width="100px;" alt="Josh Davis"/><br /><sub><b>Josh Davis</b></sub></a><br /><a href="#content-JoshDavisLight" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/tr1sm0s1n"><img src="https://avatars.githubusercontent.com/u/47410557?v=4?s=100" width="100px;" alt="Mobin Mohanan"/><br /><sub><b>Mobin Mohanan</b></sub></a><br /><a href="#content-tr1sm0s1n" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Baystef"><img src="https://avatars.githubusercontent.com/u/36106823?v=4?s=100" width="100px;" alt="Adebayo Steve"/><br /><sub><b>Adebayo Steve</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Baystef" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
