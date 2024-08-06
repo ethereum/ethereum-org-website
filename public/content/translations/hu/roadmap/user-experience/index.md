@@ -15,7 +15,7 @@ Az Ethereum-számlákat egy kulcspár védi, amelyek a számla azonosítását (
 
 A megoldás az [intelligens szerződéses](/glossary/#smart-contract) pénztárcák használata az Ethereummal való interakcióhoz. Az okosszerződéses tárcák képesek megvédeni a számlát, ha a kulcsok elvesznek vagy ellopják azokat, jobban ellenállnak a csalásnak és támadásnak, és új funkciók használatát is lehetővé teszik a tárcákban. Habár okosszerződéses tárcák már most is léteznek, de nagyon nehézkes megépíteni azokat, mert az Ethereum-protokollnak jobban kellene azokat támogatni. Ezt az extra támogatást nevezzük számlaabsztrakciónak.
 
-<ButtonLink variant="outline-color" to="/roadmap/account-abstraction/">Bővebben a számlaabsztrakcióról</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/account-abstraction/">Bővebben a számlaabsztrakcióról</ButtonLink>
 
 ## Csomópont mindenkinek
 
@@ -23,7 +23,7 @@ A [csomópontokat](/glossary/#node) futtató felhasználóknak nem kell megbízn
 
 Számos fejlesztés meg fogja könnyíteni a csomópontok működtetését és csökkenti erőforrásigényüket. Az adatok tárolásához egy sokkal kevesebb tárhelyet igénylő struktúrát fognak használni, amit **Verkle fának** neveznek. Emellett a [státusztalanság](/roadmap/statelessness) és az [adatok lejárata](/roadmap/statelessness/#data-expiry) miatt a csomópontoknak nem kell majd a teljes Ethereum-státuszadatát tárolniuk, jelentősen lecsökkentve a merevlemezigényeket. A [könnyű kliensek](/developers/docs/nodes-and-clients/light-clients/) is rengeteg előnyt nyújtanak a teljes csomópontok üzemeltetéséhez, mivel ezeket mobileszközökről vagy egyszerű böngészőalkalmazásokból is futtatni lehet majd.
 
-<ButtonLink variant="outline-color" to="/roadmap/verkle-trees/">Bővebben a Verkle-fákról</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/verkle-trees/">Bővebben a Verkle-fákról</ButtonLink>
 
 Ezekkel az fejlesztésekkel gyakorlatilag nullára csökken a csomópontfuttatás akadálya. A felhasználók biztonságos, engedélymentes hozzáférést nyernek az Ethereumhoz, anélkül hogy komoly lemezterületet vagy CPU-t áldoznának erre, és nem kell harmadik félhez fordulniuk adatért vagy a hálózat eléréséhez, amikor alkalmazásokat használnak.
 

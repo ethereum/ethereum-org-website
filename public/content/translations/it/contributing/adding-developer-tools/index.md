@@ -56,6 +56,6 @@ A meno che i prodotti non siano specificamente ordinati in modo diverso, ad esem
 
 Se vuoi aggiungere a ethereum.org uno strumento per sviluppatori che soddisfa i criteri, crea un ticket su GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
   Crea un ticket
 </ButtonLink>

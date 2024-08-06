@@ -198,7 +198,7 @@ Spojitev predstavlja uradno dodajanje oddajniške verige kot nove plasti za dose
 
 Namesto tega bloke predlagajo validacijska vozlišča, ki so zastavila ETH v zameno za pravico, da sodelujejo pri sprejemanju soglasja. Te nadgradnje postavljajo temelje za prihodnje nadgradnje za širjenje omrežja, vključno z razdrobitvijo.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   Oddajniška veriga
 </ButtonLink>
 
@@ -214,7 +214,7 @@ Začetni načrt je predvideval delo na razdrobitvi, s katero bi nadgradljivost n
 
 Načrti za razdrobitev se hitro spreminjajo, vendar so se s pojavom in uspehom tehnologij 2. plasti za nadgradnjo opravljanja transakcij preusmerili na iskanje najboljšega načina za porazdelitev bremena shranjevanja klicanih podatkov iz vseh pogodb, kar bi omogočilo eksponentno rast kapacitete omrežja. To ne bi bilo mogoče brez predhodnega prehoda na mehanizem dokaza o deležu.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Razdrobitev
 </ButtonLink>
 

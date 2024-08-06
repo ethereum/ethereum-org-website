@@ -25,14 +25,15 @@ lang: ru
 В рамках этих проектов созданы их собственные гранты, направленные на разработку и тестирование собственных технологий.
 
 - [Программа грантов Aave](https://aavegrants.org/) — _гранты DAO от [Aave](https://aave.com/)_
-- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41): _фонд экосистемы [Balancer](https://balancer.fi/)._
+- [Balancer](https://grants.balancer.community/): _фонд экосистемы [Balancer](https://balancer.fi/)._
 - [Программа грантов Chainlink](https://chain.link/community/grants) — _гранты сообщества [Chainlink](https://chain.link/)_
 - [ Программа грантов Decentraland](https://governance.decentraland.org/grants/): _метавселенная DAO [Decentraland](https://decentraland.org/)._
 - [Организация грантов экосистемы Lido (LEGO)](https://lido.fi/lego): _финансовая экосистема [Lido](https://lido.fi/)._
 - [ Программа MetaMask](https://metamaskgrants.org/): _DAO по выдаче грантов под руководством сотрудников [MetaMask](https://metamask.io/)._
 - [Программа грантов SKALE Network](https://skale.space/developers#grants): _экосистема [SKALE Network](https://skale.space/)._
-- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm): _экосистема [The Graph](https://thegraph.com/)._
-- [Программа грантов Uniswap](https://www.uniswapfoundation.org/apply-for-a-grant): _сообщество [Uniswap](https://uniswap.org/)._
+- [Программа грантов фонда Swarm](https://my.ethswarm.org/grants) — _экосистема [фонда Swarm](https://www.ethswarm.org/)_
+- [The Graph](https://thegraph.com/ecosystem/grants/) — _экосистема [Graph](https://thegraph.com/)_
+- [Программа грантов Uniswap](https://www.uniswapfoundation.org/approach) — _сообщество [Uniswap](https://uniswap.org/)_
 
 ## Квадратичное финансирование {#quadratic-funding}
 

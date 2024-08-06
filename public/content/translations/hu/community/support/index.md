@@ -12,11 +12,11 @@ Egy hivatalos Ethereum ügyfélszolgálatot keres? Tudnia kell, hogy az Ethereum
 
 Ezt azért is fontos megérteni, mert bárki jelentkezik Önnél, mint hivatalos ügyfélszolgálatos, az csak csaló lehet! A csalók ellen a legjobb védekezés az ismeretek szerzése és a biztonság komolyan vétele.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Ethereum-biztonság és átverés elleni védelem
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Ismerje meg az Ethereum alapjait
 </DocLink>
 

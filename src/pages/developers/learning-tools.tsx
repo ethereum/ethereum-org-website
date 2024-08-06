@@ -510,7 +510,7 @@ const LearningToolsPage = () => {
             }
           >
             <Box>
-              <ButtonLink to="/developers/docs/">
+              <ButtonLink href="/developers/docs/">
                 <Translation id="page-developers-learning-tools:page-learning-tools-browse-docs" />
               </ButtonLink>
             </Box>

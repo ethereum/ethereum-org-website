@@ -85,6 +85,7 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
         sm: "2rem 0 0",
         lg: "2rem 2rem 0",
       }}
+      id="community-events"
     >
       <Center w={{ base: "100%", lg: "40%" }}>
         <Box pe={8} ps={{ base: 8, lg: 0 }}>
@@ -140,7 +141,7 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
             )}
             <Flex flexDirection="column" gap={2}>
               <ButtonLink
-                to="/discord/"
+                href="/discord/"
                 gap={2}
                 onClick={() => matomoEvent("discord")}
               >
@@ -149,7 +150,7 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
               </ButtonLink>
               {reversedUpcomingEventData[0] && (
                 <InlineLink
-                  to={reversedUpcomingEventData[0].calendarLink}
+                  href={reversedUpcomingEventData[0].calendarLink}
                   onClick={() => matomoEvent("Add to calendar")}
                   fontWeight={700}
                 >

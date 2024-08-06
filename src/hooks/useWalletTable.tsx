@@ -1,8 +1,6 @@
-import { useContext, useState } from "react"
+import { useState } from "react"
 
 import type { DropdownOption, Wallet, WalletFilter } from "@/lib/types"
-
-import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
 
 export type WalletMoreInfoData = Wallet & { moreInfo: boolean; key: string }
 
@@ -10,10 +8,12 @@ type UseWalletTableProps = {
   walletData: Wallet[]
   filters: WalletFilter
   t: (x: string) => string
+  supportedLanguage: string
 }
 
 export const useWalletTable = ({
   filters,
+  supportedLanguage,
   t,
   walletData,
 }: UseWalletTableProps) => {
@@ -127,9 +127,6 @@ export const useWalletTable = ({
       return { ...wallet, moreInfo: false, key: wallet.name }
     })
   )
-
-  // Context API for language filter
-  const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
 
   const updateMoreInfo = (key) => {
     const temp = [...walletCardData]

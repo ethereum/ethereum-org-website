@@ -12,11 +12,11 @@ Szukasz oficjalnego wsparcia Ethereum? Pierwszą rzeczą, którą powinieneś wi
 
 Zrozumienie zdecentralizowanej natury Ethereum jest kluczowe, ponieważ każdy, kto twierdzi, że jest oficjalnym wsparciem Ethereum, prawdopodobnie próbuje cię oszukać! Najlepszą ochroną przed oszustami jest edukacja i poważne podejście do kwestii bezpieczeństwa.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Bezpieczeństwo Ethereum i zapobieganie oszustwom
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Poznaj podstawy Ethereum
 </DocLink>
 

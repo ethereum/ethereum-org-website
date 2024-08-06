@@ -63,7 +63,7 @@ Web3 允許透過[非同質化代幣 (NFT) ](/glossary/#nft)實現直接所有�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>深入了解非同質化代幣</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     更多非同質化代幣相關資訊
   </ButtonLink>
 </InfoBanner>
@@ -88,7 +88,7 @@ Web 2.0 要求內容製作者相信平台不會更改規則，但抗審查是 We
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>了解更多關於去中心化自治組織</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     更多關於DAOs
   </ButtonLink>
 </InfoBanner>
@@ -103,7 +103,7 @@ Web3 透過以太坊地址及[以太坊名稱服務 (ENS) ](/glossary/#ens)個�
 
 Web2 的付款基礎設施仰賴於銀行和付款處理器，不包含那些沒有銀行帳戶的人，或碰巧住在非正確國家境內的人。 Web3 使用[以太幣](/glossary/#ether)等代幣直接在瀏覽器中匯款，不需要受信任的第三方。
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   更多詳情關於以太(以太幣)
 </ButtonLink>
 

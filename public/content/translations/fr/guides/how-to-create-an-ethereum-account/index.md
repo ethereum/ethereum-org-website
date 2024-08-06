@@ -14,7 +14,7 @@ Contrairement à l'ouverture d'un nouveau compte auprès d'une entreprise, la cr
 
 Un portefeuille est une application qui vous aide à gérer votre compte Ethereum. Il utilise vos clés pour envoyer et recevoir des transactions et se connecter à des applications. Il existe des dizaines de portefeuilles différents - mobiles, de bureau ou même des extensions de navigateur.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Trouver un portefeuille
 </ButtonLink>
 
@@ -42,7 +42,7 @@ Une fois votre phrase de récupération enregistrée, vous pourrez consulter le 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vous voulez en savoir plus ?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>
 </InfoBanner>

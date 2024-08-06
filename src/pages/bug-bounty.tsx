@@ -2,7 +2,14 @@ import { useRouter } from "next/router"
 import type { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box, Center, Heading, ListItem, UnorderedList } from "@chakra-ui/react"
+import {
+  Box,
+  Center,
+  Heading,
+  ListItem,
+  UnorderedList,
+  useColorModeValue,
+} from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
@@ -31,7 +38,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import consensusData from "@/data/consensus-bounty-hunters.json"
 import executionData from "@/data/execution-bounty-hunters.json"
 
-import useColorModeValue from "@/hooks/useColorModeValue"
 import besu from "@/public/images/upgrades/besu.png"
 import erigon from "@/public/images/upgrades/erigon.png"
 import geth from "@/public/images/upgrades/geth.png"
@@ -474,10 +480,10 @@ const BugBountiesPage = () => {
             </SloganGradient>
             <Subtitle>{t("page-upgrades-bug-bounty-subtitle")}</Subtitle>
             <ButtonRow>
-              <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
+              <StyledButton href="https://forms.gle/Gnh4gzGh66Yc3V7G8">
                 {t("page-upgrades-bug-bounty-submit")}
               </StyledButton>
-              <StyledButton variant="outline" to="#rules" isSecondary>
+              <StyledButton variant="outline" href="#rules" isSecondary>
                 {t("page-upgrades-bug-bounty-rules")}
               </StyledButton>
             </ButtonRow>

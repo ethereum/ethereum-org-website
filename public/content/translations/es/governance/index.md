@@ -32,7 +32,7 @@ El enfoque opuesto, la gobernanza «off-chain» o externa a la cadena, consiste 
 
 _A pesar de que siguiendo el protocolo, la gobernanza de Ethereum se desarrolla externa a la cadena de bloques, muchos casos de uso que se ejecutan sobre la red Ethereum, como las DAO, se sirven de la gobernanza dentro de la cadena._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Más información acerca de las DAO
 </ButtonLink>
 
@@ -58,7 +58,7 @@ _Nota: cualquier persona puede ser parte de varios de estos grupos (p. ej., un d
 
 Un proceso importante utilizado en la gobernanza Ethereum son las **propuestas de mejora de Ethereum (EIP, «Ethereum Improvement Proposals»)**. Las EIP son estándares que especifican posibles nuevas características o procesos para Ethereum. Cualquier persona dentro de la comunidad Ethereum puede formular una EIP. Si le interesa escribir una EIP o participar en una revisión entre pares, vea:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Más información sobre las EIP
 </ButtonLink>
 
@@ -154,7 +154,7 @@ Si bien la especificación y las implementaciones de desarrollo siempre han sido
 
 Cuando la cadena de baliza se fusionó con la capa de ejecución de Ethereum el 15 de septiembre de 2022, La fusión se completó como parte de la [actualización de la red París](/history/#paris). La propuesta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) se cambió de "Última llamada" a "Final", completando la transición a la prueba de participación.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Más sobre la fusión
 </ButtonLink>
 

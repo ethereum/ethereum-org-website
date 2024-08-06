@@ -32,7 +32,7 @@ Zıt yaklaşım olan zincir dışı yönetişim, herhangi bir protokol değişik
 
 _Protokol düzeyinde Ethereum yönetişimi zincir dışı olsa da, DAO'lar gibi Ethereum'un üzerine inşa edilmiş birçok kullanım alanı zincir içi yönetişim kullanır._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   DAO'lar hakkında daha fazla bilgi
 </ButtonLink>
 
@@ -58,7 +58,7 @@ _Not: Herhangi bir kişi bu grupların birçoğunun parçası olabilir (örneği
 
 Ethereum yönetişiminde kullanılan önemli süreçlerden birisi **Ethereum İyileştirme Önerileridir (EIP'ler)**. EIP'ler, Ethereum için potansiyel yeni özellikleri veya süreçleri belirleyen standartlardır. Ethereum topluluğu içindeki herkes bir EIP oluşturabilir. Eğer bir EIP yazmaya veya yönetişim ve/veya bağımsız değerlendirmeye katılım sağlamaya meraklıysanız şuna bakın:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   EIP'ler hakkında daha fazla bilgi
 </ButtonLink>
 
@@ -154,7 +154,7 @@ Tanım ve geliştirme uygulamaları her zaman tamamen açık kaynak olsa da, yuk
 
 İşaret Zinciri 15 Eylül 2022'de Ethereum yürütüm katmanı ile birleştiğinde Birleşim [Paris ağ yükseltmesinin](/history/#paris) bir parçası olarak tamamlanmıştı. [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) önerisi 'Son Çağrı' yerine 'Final' olmuştu ve hisse ispatına geçiş tamamlanmıştı.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Birleştirme hakkında ek bilgi
 </ButtonLink>
 

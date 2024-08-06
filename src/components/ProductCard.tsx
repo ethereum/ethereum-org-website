@@ -158,7 +158,7 @@ const ProductCard = ({
             </SubjectBadge>
           ))}
       </HStack>
-      <ButtonLink to={url} m={4} height={20}>
+      <ButtonLink href={url} m={4} height={20}>
         {t("open")} {name}
       </ButtonLink>
     </Flex>
