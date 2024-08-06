@@ -16,12 +16,14 @@ import {
   Page,
 } from "@/components/MdComponents"
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
+import { APPLICATION_URL } from "@/components/Translatathon/constants"
 import { CountdownBanner } from "@/components/Translatathon/CountdownBanner"
 import { DatesAndTimeline } from "@/components/Translatathon/DatesAndTimeline"
 import { LocalCommunitiesList } from "@/components/Translatathon/LocalCommunitiesList"
 import { StepByStepInstructions } from "@/components/Translatathon/StepByStepInstructions"
 import { TranslatathonCalendar } from "@/components/Translatathon/TranslatathonCalendar"
 import { TranslatathonInANutshell } from "@/components/Translatathon/TranslatathonInANutshell"
+import TranslatathonPrizes from "@/components/Translatathon/TranslatathonPrizes"
 import { TranslationHubCallout } from "@/components/Translatathon/TranslationHubCallout"
 
 import WhyWeDoItImage from "@/public/images/translatathon/man-baby-woman.png"
@@ -58,7 +60,7 @@ const WhyWeDoItColumn = (props: ChildOnlyProp) => (
     me={{ lg: 8 }}
     direction="column"
   >
-    <Box m="auto">
+    <Box mx="auto" height="272">
       <Image src={WhyWeDoItImage} alt="" height="272" />
     </Box>
     <Box>{props.children}</Box>
@@ -72,8 +74,8 @@ const HowDoesItWorkColumn = (props: ChildOnlyProp) => (
     ms={{ lg: 8 }}
     direction="column"
   >
-    <Box m="auto">
-      <Image src={HowDoesItWorkImage} alt="" height="272" />
+    <Box mx="auto" height="272">
+      <Image src={HowDoesItWorkImage} alt="" maxHeight="272" />
     </Box>
     <Box>{props.children}</Box>
   </Flex>
@@ -131,6 +133,7 @@ export const translatathonComponents = {
   TranslatathonCalendar,
   TranslationHubCallout,
   TranslatathonInANutshell,
+  TranslatathonPrizes,
   TwoColumnContent,
   WhyWeDoItColumn,
 }
@@ -158,7 +161,7 @@ export const TranslatathonLayout = ({
         matomo: {
           eventCategory: "translatathon menu",
           eventAction: "click",
-          eventName: "translatathon hub",
+          eventName: "translatathon translatathon hub",
         },
       },
       {
@@ -167,7 +170,7 @@ export const TranslatathonLayout = ({
         matomo: {
           eventCategory: "translatathon menu",
           eventAction: "click",
-          eventName: "details and submission criteria",
+          eventName: "translatathon details and submission criteria",
         },
       },
       {
@@ -176,19 +179,18 @@ export const TranslatathonLayout = ({
         matomo: {
           eventCategory: "translatathon menu",
           eventAction: "click",
-          eventName: "terms and conditions",
+          eventName: "translatathon terms and conditions",
         },
       },
-      // TODO: Add back in when this page is ready
-      // {
-      //   text: "Local communities",
-      //   to: "/translatathon/local-communities",
-      //   matomo: {
-      //     eventCategory: "translatathon menu",
-      //     eventAction: "click",
-      //     eventName: "local communities",
-      //   },
-      // },
+      {
+        text: "Translatathon Hubs",
+        href: "/contributing/translation-program/translatathon/translatathon-hubs",
+        matomo: {
+          eventCategory: "translatathon menu",
+          eventAction: "click",
+          eventName: "translatathon hubs",
+        },
+      },
     ],
   }
 
@@ -208,7 +210,7 @@ export const TranslatathonLayout = ({
               different languages.
             </Text>
             <Flex>
-              <ButtonLink href="/">Apply to translate</ButtonLink>
+              <ButtonLink href={APPLICATION_URL}>Apply to translate</ButtonLink>
             </Flex>
           </>
         }

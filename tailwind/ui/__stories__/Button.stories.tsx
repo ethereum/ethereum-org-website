@@ -1,11 +1,8 @@
-import { MdChevronRight, MdExpandMore, MdNightlight } from "react-icons/md"
+import { MdChevronRight, MdExpandMore } from "react-icons/md"
 import type { Meta, StoryObj } from "@storybook/react"
-
-import Translation from "@/components/Translation"
 
 import { HStack, VStack } from "../../../src/components/ui/flex"
 import { Button, type ButtonVariantProps } from "../buttons/Button"
-import { ButtonLink } from "../buttons/Button"
 
 const meta = {
   title: "Atoms / Form / ShadCn Buttons",
@@ -103,27 +100,5 @@ export const MultiLineText: Story = {
         </Button>
       </VStack>
     </HStack>
-  ),
-}
-
-export const OverrideStyles: Story = {
-  render: () => (
-    <>
-      <p>
-        Show custom styling examples here for visual testing of overrides from
-        the theme config
-      </p>
-      <VStack>
-        <Button aria-label="toggle" className="px-1.5">
-          <MdNightlight />
-        </Button>
-        <ButtonLink
-          className="rounded-full px-0 py-0"
-          linkProps={{ href: "#" }}
-        >
-          <Translation id="get-involved" />
-        </ButtonLink>
-      </VStack>
-    </>
   ),
 }
