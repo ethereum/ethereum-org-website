@@ -750,8 +750,9 @@ export type RSSItem = {
   pubDate: string
   title: string
   source: string
-  content: string
   link: string
+  sourceFeedUrl: string
+  imgSrc?: string
 }
 
 export type RSSChannel = {

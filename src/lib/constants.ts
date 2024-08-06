@@ -159,7 +159,6 @@ export const LINES_BEFORE_COLLAPSABLE = 8
 
 // RSS Feeds
 export const RSS_DISPLAY_COUNT = 3
-export const XML_FEEDS = [
-  "https://vitalik.eth.limo/feed.xml",
-  "https://blog.ethereum.org/en/feed.xml",
-]
+export const VITALIK_BLOG = "https://vitalik.eth.limo/feed.xml"
+export const EF_BLOG = "https://blog.ethereum.org/en/feed.xml"
+export const XML_FEEDS = [VITALIK_BLOG, EF_BLOG]
