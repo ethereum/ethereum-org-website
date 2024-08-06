@@ -12362,6 +12362,33 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "tr1sm0s1n",
+      "name": "Mobin Mohanan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47410557?v=4",
+      "profile": "https://github.com/tr1sm0s1n",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Baystef",
+      "name": "Adebayo Steve",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36106823?v=4",
+      "profile": "https://github.com/Baystef",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "sanjanaynvsdl",
+      "name": "Sanjana",
+      "avatar_url": "https://avatars.githubusercontent.com/u/142678317?v=4",
+      "profile": "https://github.com/sanjanaynvsdl",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
