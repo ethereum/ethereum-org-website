@@ -33,7 +33,11 @@ const ThemeProvider = ({ children }: Pick<ThemeProviderProps, "children">) => {
       disableTransitionOnChange
       storageKey={COLOR_MODE_STORAGE_KEY}
     >
-      <ChakraBaseProvider theme={theme} colorModeManager={colorModeManager}>
+      <ChakraBaseProvider
+        theme={theme}
+        colorModeManager={colorModeManager}
+        resetCSS={false}
+      >
         {/* TODO: Can these CSS Vars be moved to `global.css`? */}
         <style jsx global>
           {`
