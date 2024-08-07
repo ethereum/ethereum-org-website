@@ -151,6 +151,17 @@ const config = {
       borderRadius: {
         "4xl": "2rem" /* 32px */,
       },
+      borderColor: {
+        primary: "rgba(var(--primary), 0.1)",
+        accent: {
+          a: "rgba(var(--accent-a), 0.1)",
+          b: "rgba(var(--accent-b), 0.1)",
+          c: "rgba(var(--accent-c), 0.1)",
+        },
+      },
+      gridTemplateColumns: {
+        bento: "2rem repeat(10, 1fr) 2rem",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
