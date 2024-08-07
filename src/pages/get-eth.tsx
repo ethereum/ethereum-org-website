@@ -13,7 +13,7 @@ import CentralizedExchanges from "@/components/CentralizedExchanges"
 import Emoji from "@/components/Emoji"
 import EthPriceCard from "@/components/EthPriceCard"
 import FeedbackCard from "@/components/FeedbackCard"
-import { Image } from "@/components/Image"
+import { TwImage as Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import { TWMainArticle as MainArticle } from "@/components/MainArticle"
 import { Divider } from "@/components/MdComponents"
@@ -159,13 +159,8 @@ const GetEthPage = ({
       <div className="relative flex w-full flex-col-reverse justify-center lg:mx-auto lg:mb-8 lg:flex-col">
         <Image
           src={hero}
-          position="absolute"
-          zIndex={-1}
+          className="absolute -z-10 h-auto max-h-[400px] min-h-[300px] w-full overflow-x-auto object-cover"
           sizes="100%"
-          style={{ width: "100%", height: "auto", objectFit: "cover" }}
-          overflowX="auto"
-          minH="300px"
-          maxH="400px"
           alt={t("page-get-eth-hero-image-alt")}
           priority
         />
@@ -319,10 +314,9 @@ const GetEthPage = ({
           <div className="flex flex-col gap-4">
             <Image
               src={wallet}
+              className="mb-8 self-center"
               sizes={walletImageWidth}
               style={{ width: walletImageWidth, height: "auto" }}
-              alignSelf="center"
-              mb={8}
               alt=""
             />
             <h3 className="text-xl leading-6 md:text-2xl">
