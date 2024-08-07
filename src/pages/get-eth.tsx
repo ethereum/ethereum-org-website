@@ -267,7 +267,7 @@ const GetEthPage = ({
 
       <div
         id="country-picker"
-        className="my-0 flex flex-col items-center bg-radial-gradient px-8 py-16 sm:p-16 md:my-16"
+        className="-mx-8 my-0 flex flex-col items-center bg-radial-gradient px-8 py-16 sm:p-16 md:my-16 lg:mx-0"
       >
         <CentralizedExchanges lastDataUpdateDate={lastDataUpdateDate} />
       </div>
