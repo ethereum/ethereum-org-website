@@ -10,6 +10,7 @@ import { Flex, Skeleton } from "@chakra-ui/react"
 import type { AllMetricData, BasePageProps, Lang, RSSItem } from "@/lib/types"
 import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
+import BentoBox from "@/components/BentoBox"
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import Codeblock from "@/components/Codeblock"
 import CodeModal from "@/components/CodeModal"
@@ -66,6 +67,7 @@ import activityImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import learnImage from "@/public/images/heroes/learn-hub-hero.png"
 import communityImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import hero from "@/public/images/home/hero.png"
+import ImpactImage from "@/public/images/impact_transparent.png"
 
 const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
 const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
@@ -138,6 +140,76 @@ const HomePage = ({
     setActiveCode(id)
     setModalOpen(true)
   }
+
+  const bentoBoxes: {
+    title: string
+    children: React.ReactNode
+    action: string
+    href: string
+    imgSrc: StaticImageData
+    className: string
+  }[] = [
+    {
+      title: "Crypto without volatility",
+      children:
+        "Stablecoins are currencies that maintain stable value. Their price matches the U.S. dollar or other steady asset",
+      action: "Learn more",
+      href: "/stablecoins/",
+      imgSrc: ImpactImage,
+      className: cn(
+        "bg-gradient-primary border-primary",
+        "col-span-7 col-start-5 row-span-1 row-start-1"
+      ),
+    },
+    {
+      title: "A fairer financial system",
+      children:
+        "Billions can't open bank accounts or freely use their money. Ethereum's financial system is always open and unbiased.",
+      action: "Explore DeFi",
+      href: "/defi/",
+      imgSrc: ImpactImage, // TODO: Replace
+      className: cn(
+        "bg-gradient-accent-c border-accent-c flex-col-reverse",
+        "col-span-4 col-start-2 row-span-1 row-start-2"
+      ),
+    },
+    {
+      title: "Innovative apps",
+      children:
+        "Ethereum apps work without selling your data. Protect your privacy.",
+      action: "Browse apps",
+      href: "/dapps/",
+      imgSrc: ImpactImage, // TODO: Replace
+      className: cn(
+        "bg-gradient-accent-b border-accent-b flex-col",
+        "col-span-3 col-start-6 row-span-1 row-start-2"
+      ),
+    },
+    {
+      title: "The network of networks",
+      children:
+        "Ethereum is the hub for blockchain innovation. The best project are built on Ethereum.",
+      action: "Explore benefits",
+      href: "/layer-2/", // TODO: Confirm
+      imgSrc: ImpactImage, // TODO: Replace
+      className: cn(
+        "bg-gradient-accent-a border-accent-a flex-col-reverse",
+        "col-span-3 col-start-9 row-span-2 row-start-2"
+      ),
+    },
+    {
+      title: "The internet of assets",
+      children:
+        "Arts, certificates or even real estate can be tokenized. Anything can be a tradable token. Ownership is public and verifiable.",
+      action: "More on NFTs",
+      href: "/nft/",
+      imgSrc: ImpactImage, // TODO: Replace
+      className: cn(
+        "bg-gradient-primary border-primary",
+        "col-span-7 col-start-2 row-span-1 row-start-3"
+      ),
+    },
+  ]
 
   const codeExamples: CodeExample[] = [
     {
@@ -283,7 +355,7 @@ const HomePage = ({
           <span className="text-[5rem]">👷‍♀️🚧🔜</span>
         </HomeSection>
 
-        <div className="hidden grid-cols-12 gap-4 md:grid [&>div]:rounded-2xl [&>div]:p-8 [&>div]:outline [&>div]:outline-2">
+        <div className="hidden grid-cols-bento gap-4 md:grid">
           <div className="col-span-3 col-start-2 flex flex-col gap-8">
             <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
               Use Cases
@@ -292,21 +364,9 @@ const HomePage = ({
               A new way to use the internet
             </h2>
           </div>
-          <div className="col-span-7 col-start-5 row-span-1 row-start-1 bg-gradient-primary">
-            <h3 className="text-3xl font-black">Crypto without volatility</h3>
-          </div>
-          <div className="col-span-4 col-start-2 row-span-1 row-start-2 bg-gradient-accent-c">
-            <h3 className="text-3xl font-black">A fairer financial system</h3>
-          </div>
-          <div className="col-span-3 col-start-6 row-span-1 row-start-2 bg-gradient-accent-b">
-            <h3 className="text-3xl font-black">Innovative apps</h3>
-          </div>
-          <div className="col-span-3 col-start-9 row-span-2 row-start-2 bg-gradient-accent-a">
-            <h3 className="text-3xl font-black">The network of networks</h3>
-          </div>
-          <div className="col-span-7 col-start-2 row-span-1 row-start-3 bg-gradient-primary">
-            <h3 className="text-3xl font-black">The internet of assets</h3>
-          </div>
+          {bentoBoxes.map((box) => (
+            <BentoBox key={box.title} {...box} />
+          ))}
         </div>
 
         <HomeSection
