@@ -91,6 +91,7 @@ const config = {
       },
       backgroundImage: {
         "bg-main-gradient": "var(--bg-main-gradient)",
+        "radial-gradient": "var(--radial-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",

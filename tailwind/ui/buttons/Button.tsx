@@ -106,15 +106,21 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 Button.displayName = "Button"
 
-type ButtonLinkProps = Omit<LinkProps, "onClick"> & {
+type ButtonLinkProps = LinkProps & {
   buttonProps?: ButtonProps
   customEventOptions?: MatomoEventOptions
 }
 
 const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
-  ({ buttonProps, customEventOptions, children, ...linkProps }, ref) => {
-    const handleClick = () => {
+  (
+    { buttonProps, onClick, customEventOptions, children, ...linkProps },
+    ref
+  ) => {
+    const handleClick: React.MouseEventHandler<HTMLAnchorElement> = (
+      ...args
+    ) => {
       customEventOptions && trackCustomEvent(customEventOptions)
+      onClick?.(...args)
     }
     return (
       <Button asChild {...buttonProps}>

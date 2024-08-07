@@ -1,4 +1,4 @@
-import { ComponentProps } from "react"
+import { BaseHTMLAttributes, ComponentProps } from "react"
 import {
   Badge,
   Box,
@@ -27,6 +27,8 @@ import OldHeading from "@/components/OldHeading"
 import { mdxTableComponents } from "@/components/Table"
 import TooltipLink from "@/components/TooltipLink"
 import YouTube from "@/components/YouTube"
+
+import { cn } from "@/lib/utils/cn"
 
 import ContributorsQuizBanner from "./Banners/ContributorsQuizBanner"
 import GlossaryTooltip from "./Glossary/GlossaryTooltip"
@@ -215,7 +217,9 @@ export const MobileButtonDropdown = (
   props: ComponentProps<typeof StyledButtonDropdown>
 ) => <StyledButtonDropdown mb={0} {...props} />
 
-export const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
+export const Divider = ({ className }: BaseHTMLAttributes<HTMLDivElement>) => (
+  <div className={cn("my-16 h-1 w-1/12 bg-primary-high-contrast", className)} />
+)
 
 // All custom React components
 export const reactComponents = {

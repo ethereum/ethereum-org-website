@@ -1,34 +1,31 @@
 import type { GetStaticProps, InferGetStaticPropsType } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import type { ComponentPropsWithRef } from "react"
-import {
-  Box,
-  type BoxProps,
-  Flex,
-  type FlexProps,
-  useBreakpointValue,
-} from "@chakra-ui/react"
+import type { ReactNode } from "react"
+import { Box, useBreakpointValue } from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
-import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
-import Card from "@/components/Card"
 import type { CardListItem } from "@/components/CardList"
 import CardList from "@/components/CardList"
 import CentralizedExchanges from "@/components/CentralizedExchanges"
+import Emoji from "@/components/Emoji"
 import EthPriceCard from "@/components/EthPriceCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
-import InlineLink from "@/components/Link"
-import MainArticle from "@/components/MainArticle"
+import { TWMainArticle as MainArticle } from "@/components/MainArticle"
 import { Divider } from "@/components/MdComponents"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -36,6 +33,9 @@ import { getLastModifiedDateByPath } from "@/lib/utils/gh"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { ButtonLink } from "../../tailwind/ui/buttons/Button"
+import InlineLink from "../../tailwind/ui/Link"
 
 import uniswap from "@/public/images/dapps/uni.png"
 import dapps from "@/public/images/doge-computer.png"
@@ -45,60 +45,28 @@ import kyber from "@/public/images/exchanges/kyber.png"
 import hero from "@/public/images/get-eth.png"
 import wallet from "@/public/images/wallet.png"
 
-const Page = (props: ChildOnlyProp) => (
-  <Flex
-    as={MainArticle}
-    direction="column"
-    align="center"
-    width="full"
-    mx="auto"
-    my={0}
-    {...props}
-  />
+type CardProps = {
+  children: ReactNode
+  emoji: string
+  title: ReactNode
+  description: ReactNode
+}
+
+const StyledCard = ({ children, emoji, title, description }: CardProps) => (
+  <Card className="flex flex-col rounded-sm">
+    <CardHeader className="space-y-4">
+      <Emoji fontSize="5xl" lineHeight={0} text={emoji} />
+      <CardTitle>{title}</CardTitle>
+    </CardHeader>
+    <CardContent className="flex-1">
+      <p>{description}</p>
+    </CardContent>
+    <CardFooter>{children}</CardFooter>
+  </Card>
 )
 
-export const Content = (props: BoxProps) => <Box w="full" px={8} {...props} />
-
-const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
-  <Card
-    flex="1 1 30%"
-    minW="280px"
-    maxW={{ base: "full", md: "46%", lg: "31%" }}
-    m={4}
-    p={6}
-    {...props}
-  />
-)
-
-const TwoColumnContent = (props: FlexProps) => (
-  <Flex
-    w="full"
-    direction={{ base: "column", lg: "row" }}
-    justify="space-between"
-    p={8}
-    mb={12}
-    {...props}
-  />
-)
-
-const LeftColumn = (props: ChildOnlyProp) => (
-  <Box
-    flex="0 0 50%"
-    maxW={{ base: "full", lg: "75%" }}
-    me={{ lg: 16 }}
-    {...props}
-  />
-)
-
-const RightColumn = (props: ChildOnlyProp) => (
-  <Flex
-    flex="0 1 50%"
-    direction="column"
-    justify="center"
-    maxW={{ base: "full", lg: "75%" }}
-    mt={{ base: 12, lg: 0 }}
-    {...props}
-  />
+const TwoColumnContent = (props: ChildOnlyProp) => (
+  <div className="grid grid-cols-1 gap-16 lg:grid-cols-2" {...props} />
 )
 
 type Props = BasePageProps & {
@@ -182,25 +150,13 @@ const GetEthPage = ({
   })
 
   return (
-    <Page>
+    <MainArticle className="mx-auto flex flex-col gap-16 p-8">
       <PageMetadata
         title={t("page-get-eth-meta-title")}
         description={t("page-get-eth-meta-description")}
       />
 
-      <Flex
-        position="relative"
-        width="full"
-        maxWidth="1440px"
-        direction={{
-          base: "column-reverse",
-          md: "column",
-        }}
-        mt={8}
-        mx={0}
-        mb={{ base: 0, sm: 8 }}
-        justifyContent="center"
-      >
+      <div className="relative flex w-full flex-col-reverse justify-center lg:mx-auto lg:mb-8 lg:flex-col">
         <Image
           src={hero}
           position="absolute"
@@ -213,31 +169,13 @@ const GetEthPage = ({
           alt={t("page-get-eth-hero-image-alt")}
           priority
         />
-        <Flex
-          flexDir="column"
-          alignItems="center"
-          mx={{ base: 8, lg: 0 }}
-          mb={{ base: 8, lg: 0 }}
-          mt={{ base: 8, lg: 24 }}
-          textAlign="center"
-        >
-          <OldHeading
-            as="h1"
-            fontSize={{ base: "2.5rem", md: "5xl" }}
-            lineHeight={1.4}
-          >
+        <div className="mx-8 mb-8 mt-8 flex flex-col items-center text-center lg:mx-0 lg:mb-0 lg:mt-24">
+          <h1 className="my-8 text-4xl leading-6 md:text-5xl">
             {t("page-get-eth-where-to-buy-title")}
-          </OldHeading>
-          <Text
-            fontSize="xl"
-            lineHeight="140%"
-            maxWidth="45ch"
-            color="text200"
-            textAlign="center"
-            mb={0}
-          >
+          </h1>
+          <p className="mb-0 max-w-[45ch] text-center text-xl leading-snug text-body-medium">
             {t("page-get-eth-where-to-buy-desc")}
-          </Text>
+          </p>
           <br />
           <Box as={EthPriceCard} mb={8} />
           <ButtonLink
@@ -252,9 +190,10 @@ const GetEthPage = ({
           >
             {t("page-get-eth-search-by-country")}
           </ButtonLink>
-        </Flex>
-      </Flex>
-      <Flex flexWrap="wrap" mx={{ base: 4, lg: 8 }} my={{ base: 4, lg: 0 }}>
+        </div>
+      </div>
+
+      <div className="my-4 grid grid-cols-1 gap-8 md:grid-cols-2 lg:my-0 lg:grid-cols-3">
         <StyledCard
           emoji=":office_building:"
           title={t("page-get-eth-cex")}
@@ -307,186 +246,150 @@ const GetEthPage = ({
             {t("page-get-eth-staking-link-desc")}
           </InlineLink>
         </StyledCard>
-        <Content>
-          <Text>
-            <Text as="em">
-              {t("common:listing-policy-disclaimer")}{" "}
-              <InlineLink href="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-                {t("listing-policy-raise-issue-link")}
-              </InlineLink>
-            </Text>
-          </Text>
-          <InfoBanner emoji=":wave:" shouldCenter mt={8}>
-            {t("page-get-eth-new-to-eth")}{" "}
-            <InlineLink href="/eth/">
-              {t("page-get-eth-whats-eth-link")}
+      </div>
+
+      <div className="mb-8">
+        <p>
+          <em>
+            {t("common:listing-policy-disclaimer")}{" "}
+            <InlineLink href="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
+              {t("listing-policy-raise-issue-link")}
             </InlineLink>
-          </InfoBanner>
-        </Content>
-      </Flex>
-      <Flex
+          </em>
+        </p>
+        <InfoBanner emoji=":wave:" shouldCenter mt={8}>
+          {t("page-get-eth-new-to-eth")}{" "}
+          <InlineLink href="/eth/">
+            {t("page-get-eth-whats-eth-link")}
+          </InlineLink>
+        </InfoBanner>
+      </div>
+
+      <div
         id="country-picker"
-        bgGradient="radial-gradient(
-          46.28% 66.31% at 66.95% 58.35%,
-          rgba(127, 127, 213, 0.2) 0%,
-          rgba(134, 168, 231, 0.2) 50%,
-          rgba(145, 234, 228, 0.2) 100%
-        )"
-        w="full"
-        flexDir="column"
-        alignItems="center"
-        m={16}
-        px={{ base: 8, sm: 16 }}
-        py={{ base: 16, sm: 16 }}
+        className="my-0 flex flex-col items-center bg-radial-gradient px-8 py-16 sm:p-16 md:my-16"
       >
         <CentralizedExchanges lastDataUpdateDate={lastDataUpdateDate} />
-      </Flex>
-      <Content id="dex">
-        <OldHeading
-          fontSize={{ base: "2xl", md: "2rem" }}
-          lineHeight={1.4}
-          m={0}
-        >
+      </div>
+
+      <div className="space-y-12">
+        <h2 id="dex" className="text-2xl leading-6 md:text-3xl">
           {t("page-get-eth-dexs")}
-        </OldHeading>
-      </Content>
-      <TwoColumnContent>
-        <LeftColumn>
-          <OldHeading
-            as="h3"
-            fontSize={{ base: "xl", md: "2xl" }}
-            lineHeight={1.4}
-          >
-            {t("page-get-eth-what-are-DEX's")}
-          </OldHeading>
-          <Text>{t("page-get-eth-dexs-desc")}</Text>
-          <Text>
-            {t("page-get-eth-dexs-desc-2")}{" "}
-            <InlineLink href="/smart-contracts">
-              {t("page-get-eth-smart-contract-link")}
-            </InlineLink>
-          </Text>
-          <Text>{t("page-get-eth-dexs-desc-3")}</Text>
-          <Text>{t("page-get-eth-need-wallet")}</Text>
-          <ButtonLink href="/wallets/find-wallet/">
-            {t("page-get-eth-get-wallet-btn")}
-          </ButtonLink>
-          <InfoBanner isWarning>
-            <Translation id="page-get-eth:page-get-eth-dexs-desc-4" />
-          </InfoBanner>
-        </LeftColumn>
-        <RightColumn>
-          <OldHeading
-            as="h3"
-            fontSize={{ base: "xl", md: "2xl" }}
-            lineHeight={1.4}
-          >
-            {t("page-get-eth-other-cryptos")}
-          </OldHeading>
-          <Text>{t("page-get-eth-swapping")}</Text>
-          <CardList items={tokenSwaps} />
-          <InfoBanner isWarning>{t("page-get-eth-warning")}</InfoBanner>
-        </RightColumn>
-      </TwoColumnContent>
-      <Divider />
-      <Content>
-        <OldHeading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4}>
+        </h2>
+        <TwoColumnContent>
+          <div className="space-y-4">
+            <h3 className="text-xl leading-6 md:text-2xl">
+              {t("page-get-eth-what-are-DEX's")}
+            </h3>
+            <p>{t("page-get-eth-dexs-desc")}</p>
+            <p>
+              {t("page-get-eth-dexs-desc-2")}{" "}
+              <InlineLink href="/smart-contracts">
+                {t("page-get-eth-smart-contract-link")}
+              </InlineLink>
+            </p>
+            <p>{t("page-get-eth-dexs-desc-3")}</p>
+            <p>{t("page-get-eth-need-wallet")}</p>
+            <ButtonLink href="/wallets/find-wallet/">
+              {t("page-get-eth-get-wallet-btn")}
+            </ButtonLink>
+            <InfoBanner isWarning>
+              <Translation id="page-get-eth:page-get-eth-dexs-desc-4" />
+            </InfoBanner>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-xl leading-6 md:text-2xl">
+              {t("page-get-eth-other-cryptos")}
+            </h3>
+            <p>{t("page-get-eth-swapping")}</p>
+            <CardList items={tokenSwaps} />
+            <InfoBanner isWarning>{t("page-get-eth-warning")}</InfoBanner>
+          </div>
+        </TwoColumnContent>
+      </div>
+
+      <Divider className="mx-auto my-16 md:my-32" />
+
+      <div className="space-y-12">
+        <h2 className="text-2xl leading-6 md:text-3xl">
           {t("page-get-eth-keep-it-safe")}
-        </OldHeading>
-      </Content>
-      <TwoColumnContent>
-        <Flex as={LeftColumn} flexDir="column">
-          <Image
-            src={wallet}
-            sizes={walletImageWidth}
-            style={{ width: walletImageWidth, height: "auto" }}
-            alignSelf="center"
-            mb={8}
-            alt=""
-          />
-          <OldHeading
-            as="h3"
-            fontSize={{ base: "xl", md: "2xl" }}
-            lineHeight={1.4}
-          >
-            {t("page-get-eth-community-safety")}
-          </OldHeading>
-          <CardList items={safetyArticles} />
-        </Flex>
-        <RightColumn>
-          <Text>{t("page-get-eth-description")}</Text>
-          <Text>{t("page-get-eth-security")}</Text>
-          <OldHeading
-            as="h3"
-            fontSize={{ base: "xl", md: "2xl" }}
-            lineHeight={1.4}
-          >
-            {t("page-get-eth-protect-eth-in-wallet")}
-          </OldHeading>
-          <Text>{t("page-get-eth-protect-eth-desc")}</Text>
-          <InlineLink href="/wallets/">
-            {t("page-get-eth-your-address-wallet-link")}
-          </InlineLink>
-          <OldHeading
-            as="h3"
-            fontSize={{ base: "xl", md: "2xl" }}
-            lineHeight={1.4}
-          >
-            {t("page-get-eth-your-address")}
-          </OldHeading>
-          <Text>{t("page-get-eth-your-address-desc")}</Text>
-          <Flex
-            justifyContent="space-between"
-            bg="#191919"
-            borderRadius="base"
-            p={2}
-            mb={6}
-            userSelect="none"
-            flexDir={{ base: "column-reverse", lg: "initial" }}
-          >
-            <Text fontFamily="monospace" color="white" mb={0} fontSize="xs">
-              0x0125e2478d69eXaMpLe81766fef5c120d30fb53f
-            </Text>
-            <Text
-              textTransform="uppercase"
-              fontSize="sm"
-              color="fail300"
-              mb={0}
-              mx={4}
-            >
-              {t("page-get-eth-do-not-copy")}
-            </Text>
-          </Flex>
-          <Text>{t("page-get-eth-your-address-desc-3")}</Text>
-          <OldHeading
-            as="h3"
-            fontSize={{ base: "xl", md: "2xl" }}
-            lineHeight={1.4}
-          >
-            {t("page-get-eth-wallet-instructions")}
-          </OldHeading>
-          <Text>{t("page-get-eth-wallet-instructions-lost")}</Text>
-        </RightColumn>
-      </TwoColumnContent>
-      <Divider />
-      <CalloutBanner
-        mx={4}
-        mt={24}
-        mb={40}
-        titleKey="page-get-eth:page-get-eth-use-your-eth"
-        descriptionKey="page-get-eth:page-get-eth-use-your-eth-dapps"
-        image={dapps}
-        alt={t("page-index:page-index-sections-individuals-image-alt")}
-        imageWidth={600}
-      >
-        <Box>
-          <ButtonLink href="/dapps/">
-            {t("page-get-eth-checkout-dapps-btn")}
-          </ButtonLink>
-        </Box>
-      </CalloutBanner>
+        </h2>
+        <TwoColumnContent>
+          <div className="flex flex-col gap-4">
+            <Image
+              src={wallet}
+              sizes={walletImageWidth}
+              style={{ width: walletImageWidth, height: "auto" }}
+              alignSelf="center"
+              mb={8}
+              alt=""
+            />
+            <h3 className="text-xl leading-6 md:text-2xl">
+              {t("page-get-eth-community-safety")}
+            </h3>
+            <CardList items={safetyArticles} />
+          </div>
+
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <p>{t("page-get-eth-description")}</p>
+              <p>{t("page-get-eth-security")}</p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl leading-6 md:text-2xl">
+                {t("page-get-eth-protect-eth-in-wallet")}
+              </h3>
+              <p>{t("page-get-eth-protect-eth-desc")}</p>
+              <InlineLink href="/wallets/">
+                {t("page-get-eth-your-address-wallet-link")}
+              </InlineLink>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl leading-6 md:text-2xl">
+                {t("page-get-eth-your-address")}
+              </h3>
+              <p>{t("page-get-eth-your-address-desc")}</p>
+              <div className="mb-6 flex select-none flex-col-reverse justify-between rounded bg-[#191919] p-2 lg:flex-row">
+                <p className="mb-0 font-monospace text-xs text-white">
+                  0x0125e2478d69eXaMpLe81766fef5c120d30fb53f
+                </p>
+                <p className="text-fail300 mx-4 mb-0 text-sm uppercase">
+                  {t("page-get-eth-do-not-copy")}
+                </p>
+              </div>
+              <p>{t("page-get-eth-your-address-desc-3")}</p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl leading-6 md:text-2xl">
+                {t("page-get-eth-wallet-instructions")}
+              </h3>
+              <p>{t("page-get-eth-wallet-instructions-lost")}</p>
+            </div>
+          </div>
+        </TwoColumnContent>
+      </div>
+
+      <Divider className="mx-auto my-16 md:my-32" />
+
+      <div className="mb-20 md:mb-40">
+        <CalloutBanner
+          titleKey="page-get-eth:page-get-eth-use-your-eth"
+          descriptionKey="page-get-eth:page-get-eth-use-your-eth-dapps"
+          image={dapps}
+          alt={t("page-index:page-index-sections-individuals-image-alt")}
+          imageWidth={600}
+        >
+          <div>
+            <ButtonLink href="/dapps/">
+              {t("page-get-eth-checkout-dapps-btn")}
+            </ButtonLink>
+          </div>
+        </CalloutBanner>
+      </div>
+
       <FeedbackCard />
-    </Page>
+    </MainArticle>
   )
 }
 
