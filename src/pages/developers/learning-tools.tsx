@@ -38,7 +38,6 @@ import NFTSchoolImage from "@/public/images/dev-tools/nftschool.png"
 import NodeGuardiansImage from "@/public/images/dev-tools/node-guardians.jpg"
 import EthernautImage from "@/public/images/dev-tools/oz.png"
 import PlatziImage from "@/public/images/dev-tools/platzi.png"
-import PointerImage from "@/public/images/dev-tools/pointer.png"
 import QuestbookImage from "@/public/images/dev-tools/questbook.png"
 import RemixImage from "@/public/images/dev-tools/remix.png"
 import ReplitImage from "@/public/images/dev-tools/replit.png"
@@ -385,19 +384,6 @@ const LearningToolsPage = () => {
         "page-developers-learning-tools:page-learning-tools-nftschool-logo-alt"
       ),
       background: "#111f29",
-      subjects: ["Solidity", "web3"],
-    },
-    {
-      name: "Pointer",
-      description: t(
-        "page-developers-learning-tools:page-learning-tools-pointer-description"
-      ),
-      url: "https://pointer.gg/",
-      image: PointerImage,
-      alt: t(
-        "page-developers-learning-tools:page-learning-tools-pointer-logo-alt"
-      ),
-      background: "#171717",
       subjects: ["Solidity", "web3"],
     },
     {
