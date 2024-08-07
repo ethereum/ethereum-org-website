@@ -2,19 +2,14 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
-import {
-  Box,
-  Flex,
-  type FlexProps,
-  Heading,
-  Icon,
-  Text,
-} from "@chakra-ui/react"
 
 import type { LoadingState } from "@/lib/types"
 
-import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
+
+import { cn } from "@/lib/utils/cn"
+
+import InlineLink from "../../tailwind/ui/Link"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
@@ -30,17 +25,21 @@ type EthPriceState = {
   percentChangeUSD: number
 }
 
-export type EthPriceCardProps = FlexProps & {
+export type EthPriceCardProps = {
   isLeftAlign?: boolean
+  className?: string
 }
 
-const EthPriceCard = ({ isLeftAlign = false, ...props }: EthPriceCardProps) => {
+const EthPriceCard = ({
+  isLeftAlign = false,
+  className,
+}: EthPriceCardProps) => {
   const { locale } = useRouter()
   const { t } = useTranslation()
   const [state, setState] = useState<LoadingState<EthPriceState>>({
     loading: true,
   })
-  const { flipForRtl } = useRtlFlip()
+  const { isRtl } = useRtlFlip()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -100,95 +99,71 @@ const EthPriceCard = ({ isLeftAlign = false, ...props }: EthPriceCardProps) => {
   const change = hasData ? formatPercentage(state.data.percentChangeUSD) : ""
 
   const tooltipContent = (
-    <Box>
+    <div>
       {t("data-provided-by")}{" "}
       <InlineLink href="https://www.coingecko.com/en/coins/ethereum">
         coingecko.com
       </InlineLink>
-    </Box>
+    </div>
   )
 
   return (
-    <Flex
-      direction="column"
-      align={isLeftAlign ? "flex-start" : "center"}
-      justify="space-between"
-      background={
+    <div
+      className={cn(
+        "flex max-h-[192px] w-full max-w-[420px] flex-col justify-between rounded border border-solid p-6",
+        isLeftAlign ? "items-start" : "items-center",
         isNegativeChange
-          ? "priceCardBackgroundNegative"
-          : "priceCardBackgroundPositive"
-      }
-      border="1px solid"
-      borderColor={
-        isNegativeChange ? "priceCardBorderNegative" : "priceCardBorder"
-      }
-      p={6}
-      w="full"
-      maxW="420px"
-      maxH="192px"
-      borderRadius="base"
-      {...props}
+          ? "border-body-light dark:border-error"
+          : "border-body-light dark:border-success",
+        isNegativeChange
+          ? "bg-gradient-to-b from-error-light to-transparent dark:bg-none"
+          : "bg-gradient-to-t from-success-light to-transparent dark:bg-none",
+        className
+      )}
     >
-      <Heading
-        as="h4"
-        color="text200"
-        m={0}
-        fontSize="sm"
-        fontWeight="medium"
-        lineHeight="140%"
-        letterSpacing="0.04em"
-        textTransform="uppercase"
-      >
+      <h4 className="text-sm font-medium uppercase tracking-wider text-body-medium">
         {t("eth-current-price")}
         <Tooltip content={tooltipContent}>
-          <Box as="span" ms={2}>
-            <Icon as={MdInfoOutline} boxSize="14px" />
-          </Box>
+          <span className="ms-2 inline-block">
+            <MdInfoOutline className="h-4 w-4" />
+          </span>
         </Tooltip>
-      </Heading>
+      </h4>
 
-      <Box
-        m={hasError ? "1rem 0" : 0}
-        lineHeight="1.4"
-        fontSize={hasError ? "md" : "5xl"}
-        color={hasError ? "fail" : "text"}
+      <div
+        className={cn(
+          hasError ? "my-4" : "my-0",
+          hasError ? "text-md" : "text-5xl",
+          hasError ? "text-error" : "text-body"
+        )}
       >
         {price}
-      </Box>
-      <Flex
-        w="full"
-        align="center"
-        justify={isLeftAlign ? "flex-start" : "center"}
-        minH="33px" /* prevents jump when price loads*/
+      </div>
+      <div
+        className={cn(
+          "flex min-h-[33px] w-full flex-row items-center gap-4",
+          isLeftAlign ? "justify-start" : "justify-center"
+        )}
       >
-        <Box
-          fontSize="2xl"
-          lineHeight="140%"
-          me={4}
-          color={isNegativeChange ? "fail300" : "success.base"}
-        >
-          <Text
-            as="span"
-            _after={{
-              content: isNegativeChange ? '"↘"' : '"↗"',
-              transform: flipForRtl,
-              display: "inline-block",
-            }}
+        <div>
+          <span
+            className={cn(
+              "text-2xl after:inline-block",
+              isNegativeChange ? "text-error" : "text-success",
+              isNegativeChange
+                ? "after:content-['↘']"
+                : "after:content-['↗']",
+              isRtl ? "transform-[scaleX(-1)]" : ""
+            )}
           >
             {change}
-          </Text>
-        </Box>
-        <Box
-          fontSize="sm"
-          lineHeight="140%"
-          letterSpacing="0.04em"
-          textTransform="uppercase"
-          color="text300"
-        >
+          </span>
+        </div>
+        <div className="text-sm uppercase text-body-medium">
           ({t("last-24-hrs")})
-        </Box>
-      </Flex>
-    </Flex>
+        </div>
+      </div>
+    </div>
   )
 }
 

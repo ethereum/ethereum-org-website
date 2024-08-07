@@ -2,7 +2,7 @@ import type { GetStaticProps, InferGetStaticPropsType } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ReactNode } from "react"
-import { Box, useBreakpointValue } from "@chakra-ui/react"
+import { useBreakpointValue } from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
@@ -177,7 +177,7 @@ const GetEthPage = ({
             {t("page-get-eth-where-to-buy-desc")}
           </p>
           <br />
-          <Box as={EthPriceCard} mb={8} />
+          <EthPriceCard className="mb-8" />
           <ButtonLink
             href="#country-picker"
             onClick={() =>

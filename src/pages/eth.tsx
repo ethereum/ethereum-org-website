@@ -393,7 +393,7 @@ const EthPage = () => {
             <Slogan>{t("page-eth-currency-for-future")}</Slogan>
             <Subtitle>{t("page-eth-is-money")}</Subtitle>
             <SubtitleTwo>{t("page-eth-currency-for-apps")}</SubtitleTwo>
-            <EthPriceCard isLeftAlign={false} mb={8} />
+            <EthPriceCard isLeftAlign={false} className="mb-8" />
             <ButtonLink href="/get-eth/">
               {t("page-eth-button-buy-eth")}
             </ButtonLink>
