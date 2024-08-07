@@ -49,8 +49,8 @@
     /* Gradients */
     --gradient-primary: radial-gradient(
       114.96% 111.8% at 100% 0%,
-      rgba(var(--purple-50-rgb), 0.32) 0%,
-      rgba(var(--purple-100-rgb), 0.56) 100%
+      rgba(var(--purple-50), 0.32) 0%,
+      rgba(var(--purple-100), 0.56) 100%
     );
     --gradient-accent-a: radial-gradient(
       114.96% 111.8% at 100% 0%,
@@ -59,8 +59,8 @@
     );
     --gradient-accent-b: radial-gradient(
       114.96% 111.8% at 100% 0%,
-      rgba(var(--pink-100-rgb), 0.32) 0%,
-      rgba(var(--pink-200-rgb), 0.48) 100%
+      rgba(var(--pink-100), 0.32) 0%,
+      rgba(var(--pink-200), 0.48) 100%
     );
     --gradient-accent-c: radial-gradient(
       114.96% 111.8% at 100% 0%,
@@ -105,8 +105,8 @@
     /* Gradients */
     --gradient-primary: radial-gradient(
       114.96% 111.8% at 100% 0%,
-      rgba(var(--purple-800-rgb), 0.32) 0%,
-      rgba(var(--purple-900-rgb), 0.56) 100%
+      rgba(var(--purple-800), 0.32) 0%,
+      rgba(var(--purple-900), 0.56) 100%
     );
     --gradient-accent-a: radial-gradient(
       114.96% 111.8% at 100% 0%,
@@ -115,8 +115,8 @@
     );
     --gradient-accent-b: radial-gradient(
       114.96% 111.8% at 100% 0%,
-      rgba(var(--pink-800-rgb), 0.32) 0%,
-      rgba(var(--pink-900-rgb), 0.48) 100%
+      rgba(var(--pink-800), 0.32) 0%,
+      rgba(var(--pink-900), 0.48) 100%
     );
     --gradient-accent-c: radial-gradient(
       114.96% 111.8% at 100% 0%,
