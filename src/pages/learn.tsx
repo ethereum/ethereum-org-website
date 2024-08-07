@@ -20,6 +20,7 @@ import MainArticle from "@/components/MainArticle"
 import { ContentContainer } from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
 import { Center, Flex, Stack } from "@/components/ui/flex"
+import { ListItem, UnorderedList } from "@/components/ui/list"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -345,16 +346,16 @@ const LearnPage = () => {
               <Flex className="my-12 flex-col overflow-hidden rounded-[10px] bg-main-gradient lg:flex-row">
                 <Stack className="gap-8 p-12">
                   <H3>{t("things-to-consider-banner-title")}</H3>
-                  <ul className="mb-0">
-                    <li>{t("things-to-consider-banner-1")}</li>
-                    <li>
+                  <UnorderedList className="mb-0">
+                    <ListItem>{t("things-to-consider-banner-1")}</ListItem>
+                    <ListItem>
                       {t("things-to-consider-banner-2")}{" "}
                       <InlineLink href="/layer-2/">
                         {t("things-to-consider-banner-layer-2")}
                       </InlineLink>
                       .
-                    </li>
-                  </ul>
+                    </ListItem>
+                  </UnorderedList>
                 </Stack>
                 <div className="self-end">
                   <Image src={newRings} alt="" maxW={265} />
@@ -458,38 +459,38 @@ const LearnPage = () => {
                   description={t("emerging-use-cases-description")}
                 >
                   <Stack asChild className="flex-1 justify-center gap-0">
-                    <ul className="mb-0">
-                      <li>
+                    <UnorderedList className="mb-0">
+                      <ListItem>
                         <InlineLink href="/decentralized-identity/">
                           {t("common:decentralized-identity")}
                         </InlineLink>
-                      </li>
-                      <li>
+                      </ListItem>
+                      <ListItem>
                         <InlineLink href="/social-networks/">
                           {t("common:decentralized-social-networks")}
                         </InlineLink>
-                      </li>
-                      <li>
+                      </ListItem>
+                      <ListItem>
                         <InlineLink href="/desci/">
                           {t("common:decentralized-science")}
                         </InlineLink>
-                      </li>
-                      <li>
+                      </ListItem>
+                      <ListItem>
                         <InlineLink href="https://decrypt.co/resources/what-are-play-to-earn-games-how-players-are-making-a-living-with-nfts">
                           {t("play-to-earn")}
                         </InlineLink>
-                      </li>
-                      <li>
+                      </ListItem>
+                      <ListItem>
                         <InlineLink href="https://woodstockfund.medium.com/quadratic-funding-better-way-to-fund-public-goods-76f1679b2ba2">
                           {t("fundraising-through-quadratic-funding")}
                         </InlineLink>
-                      </li>
+                      </ListItem>
                       <li>
                         <InlineLink href="https://hbr.org/2022/01/how-walmart-canada-uses-blockchain-to-solve-supply-chain-challenges">
                           {t("supply-chain-management")}
                         </InlineLink>
                       </li>
-                    </ul>
+                    </UnorderedList>
                   </Stack>
                 </Card>
               </CardGrid>
@@ -660,71 +661,71 @@ const LearnPage = () => {
             >
               <Stack className="gap-8">
                 <H3>{t("books-about-ethereum")}</H3>
-                <ul>
-                  <li>
+                <UnorderedList>
+                  <ListItem>
                     <InlineLink href="https://www.goodreads.com/book/show/57356067-the-cryptopians">
                       {t("cryptopians-title")}
                     </InlineLink>{" "}
                     <i>{t("cryptopians-description")}</i>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <InlineLink href="https://www.goodreads.com/book/show/55360267-out-of-the-ether">
                       {t("out-of-the-ether-title")}
                     </InlineLink>{" "}
                     <i>{t("out-of-the-ether-description")}</i>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <InlineLink href="https://www.goodreads.com/en/book/show/50175330-the-infinite-machine">
                       {t("the-infinite-machine-title")}
                     </InlineLink>{" "}
                     <i>{t("the-infinite-machine-description")}</i>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <InlineLink href="https://github.com/ethereumbook/ethereumbook">
                       {t("mastering-ethereum-title")}
                     </InlineLink>{" "}
                     <i>{t("mastering-ethereum-description")} </i>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <InlineLink href="https://www.goodreads.com/en/book/show/59892281-proof-of-stake">
                       {t("proof-of-stake-title")}
                     </InlineLink>{" "}
                     <i>{t("proof-of-stake-description")}</i>
-                  </li>
-                </ul>
+                  </ListItem>
+                </UnorderedList>
                 <H3>{t("podcasts-about-ethereum")}</H3>
-                <ul>
-                  <li>
+                <UnorderedList>
+                  <ListItem>
                     <InlineLink href="https://www.youtube.com/@Green_Pill_Podcast">
                       {t("green-pill-title")}
                     </InlineLink>{" "}
                     <i>{t("green-pill-description")}</i>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <InlineLink href="https://www.zeroknowledge.fm/">
                       {t("zeroknowledge-title")}
                     </InlineLink>{" "}
                     <i>{t("zeroknowledge-description")}</i>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <InlineLink href="https://unchainedpodcast.com/">
                       {t("unchained-title")}
                     </InlineLink>{" "}
                     <i>{t("unchained-description")}</i>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <InlineLink href="https://www.youtube.com/@TheDailyGwei/">
                       {t("the-daily-gwei-title")}
                     </InlineLink>{" "}
                     <i>{t("the-daily-gwei-description")}</i>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <InlineLink href="http://podcast.banklesshq.com/">
                       {t("bankless-title")}
                     </InlineLink>{" "}
                     <i>{t("bankless-description")}</i>
-                  </li>
-                </ul>
+                  </ListItem>
+                </UnorderedList>
               </Stack>
             </Section>
 
