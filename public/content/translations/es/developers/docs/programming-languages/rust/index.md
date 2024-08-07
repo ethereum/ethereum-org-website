@@ -46,8 +46,9 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [Solaris:](https://github.com/paritytech/sol-rs) _arnés de pruebas unitarias de contratos inteligentes de Solidity usando la Parity Client EVM nativa._
 - [SputnikVM:](https://github.com/rust-blockchain/evm) _implementación de máquina virtual de Ethereum de Rust_
 - [Wavelet:](https://wavelet.perlin.net/docs/smart-contracts) _contrato inteligente de Wavelet en Rust_
-- [Foundry:](https://github.com/gakonst/foundry) _kit de herramientas de desarrollo de aplicaciones de Ethereum_
-- [Ethers_rs:](https://github.com/gakonst/ethers-rs) _implementación de billetera y biblioteca de Ethereum_
+- [Foundry:](https://github.com/foundry-rs/foundry) - _kit de herramientas de desarrollo de aplicaciones de Ethereum_
+- [Alloy:](https://alloy.rs) - _Bibliotecas de alto rendimiento, bien probadas y documentadas para interactuar con Ethereum y otras cadenas basadas en EVM._
+- [Ethers_rs:](https://github.com/gakonst/ethers-rs) - _implementación de billetera y biblioteca de Ethereum_
 - [SewUp:](https://github.com/second-state/SewUp) _biblioteca para ayudarlo a crear su contrato de Ethereum WebAssembly con Rust y desarrollar en un backend común_
 - [Substreams:](https://github.com/streamingfast/substreams) _tecnología de indexación de datos de cadena de bloques con paralelización_
 - [Reth](https://github.com/paradigmxyz/reth): Reth (abreviatura de Rust Ethereum) es una nueva implementación de nodo completo de Ethereum

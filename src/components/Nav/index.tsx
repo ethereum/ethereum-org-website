@@ -20,7 +20,7 @@ const MobileNavMenu = lazy(() => import("./Mobile"))
 
 // TODO display page title on mobile
 const Nav = () => {
-  const { toggleColorMode, linkSections, mobileNavProps } = useNav()
+  const { toggleColorMode, linkSections } = useNav()
   const { t } = useTranslation("common")
   const searchModalDisclosure = useDisclosure()
   const navWrapperRef = useRef(null)
@@ -65,7 +65,7 @@ const Nav = () => {
             {/* avoid rendering desktop Menu version on mobile */}
 
             {isClient && isDesktopFlag ? (
-              <Menu hideBelow="md" sections={linkSections} />
+              <Menu className="hidden md:block" sections={linkSections} />
             ) : (
               <Box />
             )}
@@ -84,10 +84,9 @@ const Nav = () => {
                 <Suspense>
                   <Search {...searchModalDisclosure} />
                   <MobileNavMenu
-                    {...mobileNavProps}
+                    toggleColorMode={toggleColorMode}
                     linkSections={linkSections}
                     toggleSearch={searchModalDisclosure.onOpen}
-                    drawerContainerRef={navWrapperRef}
                   />
                 </Suspense>
               </Hide>

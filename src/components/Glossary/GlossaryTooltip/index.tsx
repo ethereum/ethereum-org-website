@@ -3,6 +3,7 @@ import { useRouter } from "next/router"
 import { Box, Text, VStack } from "@chakra-ui/react"
 
 import Heading from "@/components/Heading"
+import InlineLink from "@/components/Link"
 import Tooltip, { type TooltipProps } from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 
@@ -31,6 +32,9 @@ const GlossaryTooltip = ({
               <Translation
                 id={termKey + "-term"}
                 options={{ ns: "glossary-tooltip" }}
+                // Override the default `a` tag transformation to avoid circular
+                // dependency issues
+                transform={{ a: InlineLink }}
               />
             </Heading>
             {/**
@@ -43,6 +47,9 @@ const GlossaryTooltip = ({
               <Translation
                 id={termKey + "-definition"}
                 options={{ ns: "glossary-tooltip" }}
+                // Override the default `a` tag transformation to avoid circular
+                // dependency issues
+                transform={{ a: InlineLink }}
               />
             </Text>
           </VStack>
