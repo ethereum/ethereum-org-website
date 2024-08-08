@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -101,13 +101,30 @@ export const getStaticProps = (async ({ locale }) => {
   }
 }) satisfies GetStaticProps<Props>
 
+const DEFAULT = {...WALLETS_FILTERS_DEFAULT}
+
 const FindWalletPage = ({
   wallets,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { pathname } = useRouter()
+  const { pathname, query, replace } = useRouter()
   const { t } = useTranslation("page-wallets-find-wallet")
 
   const resetWalletFilter = useRef(() => {})
+
+  useEffect(() => {
+    if (query.activeFilters) {
+      const updatedFilters = {...DEFAULT}
+      const activeFilters = (Array.isArray(query.activeFilters) ? query.activeFilters.join(",") : query.activeFilters).split(",")
+      for (const filter of activeFilters) {
+        updatedFilters[filter] = true
+      }
+      setFilters(updatedFilters)
+      replace({
+        query: {},
+      })
+    }
+    
+  }, [query])
 
   const [filters, setFilters] = useState(WALLETS_FILTERS_DEFAULT)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
