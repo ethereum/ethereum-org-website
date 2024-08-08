@@ -1,4 +1,5 @@
 import Emoji from "@/components/Emoji"
+import Link from "@/components/Link"
 
 const TranslatathonPrizes = () => {
   return (
@@ -77,8 +78,9 @@ const TranslatathonPrizes = () => {
           <p className="text-body-base text-lg">+ Participation prizes</p>
         </div>
         <div className="flex flex-col text-sm text-body-medium">
-          {/* TODO: Add this disclaimer link later */}
-          {/* <p>see prizes disclaimer here</p> */}
+          <Link href="/contributing/translation-program/translatathon/terms-and-conditions/">
+            See full Terms & Conditions here
+          </Link>
         </div>
       </div>
     </div>
