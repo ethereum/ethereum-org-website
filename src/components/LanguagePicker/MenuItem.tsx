@@ -51,15 +51,6 @@ const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
           : "bg-transparent"
       )}
       {...props}
-      // TODO double check this
-      // sx={{
-      //   p: {
-      //     textDecoration: "none",
-      //     overflow: "hidden",
-      //     textOverflow: "ellipsis",
-      //     whiteSpace: "nowrap",
-      //   },
-      // }}
     >
       <div className="flex w-full items-center">
         <div className="flex-1">
