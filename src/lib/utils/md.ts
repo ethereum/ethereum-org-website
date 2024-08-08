@@ -191,6 +191,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/tutorials/secure-development-workflow",
     "/developers/tutorials/send-token-ethersjs",
     "/developers/tutorials/sending-transactions-using-web3-and-alchemy",
+    "/developers/tutorials/server-components",
     "/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript",
     "/developers/tutorials/short-abi",
     "/developers/tutorials/smart-contract-security-guidelines",
