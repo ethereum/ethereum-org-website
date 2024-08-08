@@ -19,7 +19,7 @@ Some examples of current quizzes can be found here:
 
 ## Adding a learn quiz
 
-If there is a page that hasn't had a learn quiz created for it, please [open an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) for it.
+If there is a page that hasn't had a learning quiz created for it, please [open an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) for it.
 
 Please provide the following information:
 
