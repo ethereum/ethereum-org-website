@@ -50,7 +50,7 @@ Nodes are computers connected to the Ethereum network. Clients are the software 
 
 ## Is proof-of-stake a new idea? {#is-pos-new}
 
-No. A user on BitcoinTalk [proposed the basic idea of proof-of-stake](https://bitcointalk.org/index.php?topic=27787.0) as an upgrade to Bitcoin in 2011. It was eleven years before it was ready to implement on Ethereum Mainnet. Some other chains implemented proof-of-stake earlier than Ethereum, but not Ethereum's specific mechanism (known as Gasper).
+No. A user on BitcoinTalk [proposed the basic idea of proof-of-stake](https://bitcointalk.org/index.php?topic=27787.0) as an upgrade to Bitcoin in 2011. It was eleven years before it was ready to be implemented on Ethereum Mainnet. Some other chains implemented proof-of-stake earlier than Ethereum, but not Ethereum's specific mechanism (known as Gasper).
 
 ## What is special about Ethereum's proof-of-stake? {#why-is-ethereum-pos-special}
 
