@@ -11,7 +11,7 @@ const TranslatathonPrizes = () => {
               <Emoji text="🥇" fontSize={64} />
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex max-w-48 flex-col items-center justify-center text-center">
             <p className="text-2xl font-bold">1st place</p>
             <p className="text-4xl font-bold">$5000</p>
             <Link href="https://devcon.org">+ Devcon SEA ticket</Link>
@@ -30,7 +30,7 @@ const TranslatathonPrizes = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex max-w-48 flex-col items-center justify-center text-center">
             <p className="text-lg font-bold">2nd place</p>
             <p className="text-3xl font-bold">$3000</p>
             <Link href="https://devcon.org">+ Devcon SEA ticket</Link>
@@ -42,7 +42,7 @@ const TranslatathonPrizes = () => {
               <Emoji text="🥉" fontSize={44} />
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex max-w-48 flex-col items-center justify-center text-center">
             <p className="text-lg font-bold">3rd place</p>
             <p className="text-3xl font-bold">$1500</p>
             <Link href="https://devcon.org">+ Devcon SEA ticket</Link>
