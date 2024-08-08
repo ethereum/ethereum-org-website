@@ -10,14 +10,30 @@ import { CallToAction } from "../CallToAction"
 export type ContentHeroProps = Omit<CommonHeroProps<string>, "header">
 
 const ContentHero = (props: ContentHeroProps) => {
-  const { breadcrumbs, heroImg, buttons, title, description, blurDataURL, maxHeight } =
-    props
+  const {
+    breadcrumbs,
+    heroImg,
+    buttons,
+    title,
+    description,
+    blurDataURL,
+    maxHeight,
+  } = props
   return (
     <Box bgImg="bgMainGradient">
-      <SimpleGrid columns={{ base: 1, lg: 2 }} maxW="1536px" mx="auto" alignItems='center'>
+      <SimpleGrid
+        columns={{ base: 1, lg: 2 }}
+        maxW="1536px"
+        mx="auto"
+        alignItems="center"
+      >
         <Box
           order={{ lg: 1 }}
-          height={{ base: "300px", md: "400px", lg: maxHeight ? maxHeight : "full" }}
+          height={{
+            base: "300px",
+            md: "400px",
+            lg: maxHeight ? maxHeight : "full",
+          }}
         >
           <Image
             src={heroImg}

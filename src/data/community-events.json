@@ -369,6 +369,14 @@
     "description": "EDCON is committed to serving the Ethereum ecosystem by boosting communication and engagement between Ethereum communities worldwide"
   },
   {
+    "title": "ETH Shenzhen 2024",
+    "startDate": "2024-8-16",
+    "endDate": "2024-8-18",
+    "to": "https://ethshenzhen.org",
+    "location": "Shenzhen, China",
+    "description": "ETH Shenzhen is an Ethereum Developer Conference and Hackathon event aimed at connecting, inspiring, and educating developers from the Guangdong-Hong Kong-Macao Greater Bay Area and beyond, while also fostering connections with the SEA community."
+  },
+  {
     "title": "ETHOnline 2024",
     "href": "https://ethglobal.com/events/ethonline2024",
     "location": "Remote",
@@ -603,5 +611,22 @@
     "href": "https://conference.tum-blockchain.com/",
     "location": "Munich, Germany",
     "description": "Join us at Germany's leading student-run conference in order to explore the frontiers of blockchain technology during the Octoberfest!"
+  },
+  {
+    "title": "ETH Bolivia 2024",
+    "startDate": "2024-08-09",
+    "endDate": "2024-08-11",
+    "to": "https://www.ethereumbolivia.org/buildathon-2024",
+    "location": "Santa Cruz de la Sierra, Bolivia",
+    "description": "La Buildathon Ethereum Bolivia, el primero en su tipo, es un evento que congrega a desarrolladores, entusiastas blockchain, con el fin de convertir ideas en Productos Mínimo Viables, brindando además seminarios y talleres relacionados."
+  },
+  {
+    "title": "ETHVenice 2024",
+    "href": "https://ethvenice.com/",
+    "location": "Venice, Italy",
+    "description": "Join the second edition of the event in the center of Venice, to learn more about Blockchain, Technology and with an eye towards art.",
+    "startDate": "2024-12-02",
+    "endDate": "2024-12-03",
+    "imageUrl": "https://www.ethvenice.com/images/logo.png"
   }
 ]

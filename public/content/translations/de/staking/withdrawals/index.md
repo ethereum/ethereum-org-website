@@ -196,7 +196,7 @@ eventName="read more">
 
 Validator-Betreibern wird empfohlen, die Seite <a href="https://launchpad.ethereum.org/withdrawals/">Startplattform für Staking-Auszahlungen</a> zu besuchen. Dort können sie mehr Details darüber erfahren, wie Sie Ihren Validator auf Auszahlungen vorbereiten, sowie Informationen zum Zeitpunkt der Ereignisse und zur Funktionsweise von Auszahlungen erhalten.
 
-Um Ihre Einrichtung zunächst auf einem Testnetz auszuprobieren, können Sie mit dem <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> beginnen.
+Um Ihr Setup zuerst auf einem Testnet auszuprobieren, besuchen Sie das <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a>, um zu beginnen.
 
 </ExpandableCard>
 

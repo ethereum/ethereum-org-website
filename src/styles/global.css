@@ -178,7 +178,7 @@
   }
 
   a {
-    @apply text-primary underline;
+    @apply text-primary underline underline-offset-3 hover:text-primary-hover focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover;
   }
 
   h1,
@@ -214,7 +214,14 @@
     @apply text-sm lg:text-md;
   }
 
-  /* TODO: to be replaced with list component styles */
+  pre,
+  code,
+  kbd,
+  samp {
+    @apply font-monospace text-base leading-base;
+  }
+
+  /* TODO: remove these global styles when the list component migration is complete */
   ul,
   ol {
     margin: 0px 0px 1.45rem 1.45rem;
@@ -242,12 +249,5 @@
     & > p {
       margin-bottom: calc(1.45rem / 2);
     }
-  }
-
-  pre,
-  code,
-  kbd,
-  samp {
-    @apply font-monospace text-base leading-base;
   }
 }
