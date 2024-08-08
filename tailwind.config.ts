@@ -40,31 +40,31 @@ const config = {
       },
       colors: {
         primary: {
-          DEFAULT: "rgb(var(--primary))",
-          "high-contrast": "rgb(var(--primary-high-contrast))",
-          "low-contrast": "rgb(var(--primary-low-contrast))",
-          hover: "rgb(var(--primary-hover))",
+          DEFAULT: "rgba(var(--primary))",
+          "high-contrast": "rgba(var(--primary-high-contrast))",
+          "low-contrast": "rgba(var(--primary-low-contrast))",
+          hover: "rgba(var(--primary-hover))",
           light: "var(--primary-light)" /* TODO: Migrate/deprecate */,
           dark: "var(--primary-dark)" /* TODO: Migrate/deprecate */,
         },
         accent: {
           a: {
-            DEFAULT: "rgb(var(--accent-a))",
-            "high-contrast": "rgb(var(--accent-a-high-contrast))",
-            "low-contrast": "rgb(var(--accent-a-low-contrast))",
-            hover: "rgb(var(--accent-a-hover))",
+            DEFAULT: "rgba(var(--accent-a))",
+            "high-contrast": "rgba(var(--accent-a-high-contrast))",
+            "low-contrast": "rgba(var(--accent-a-low-contrast))",
+            hover: "rgba(var(--accent-a-hover))",
           },
           b: {
-            DEFAULT: "rgb(var(--accent-b))",
-            "high-contrast": "rgb(var(--accent-b-high-contrast))",
-            "low-contrast": "rgb(var(--accent-b-low-contrast))",
-            hover: "rgb(var(--accent-b-hover))",
+            DEFAULT: "rgba(var(--accent-b))",
+            "high-contrast": "rgba(var(--accent-b-high-contrast))",
+            "low-contrast": "rgba(var(--accent-b-low-contrast))",
+            hover: "rgba(var(--accent-b-hover))",
           },
           c: {
-            DEFAULT: "rgb(var(--accent-c))",
-            "high-contrast": "rgb(var(--accent-c-high-contrast))",
-            "low-contrast": "rgb(var(--accent-c-low-contrast))",
-            hover: "rgb(var(--accent-c-hover))",
+            DEFAULT: "rgba(var(--accent-c))",
+            "high-contrast": "rgba(var(--accent-c-high-contrast))",
+            "low-contrast": "rgba(var(--accent-c-low-contrast))",
+            hover: "rgba(var(--accent-c-hover))",
           },
         },
         body: {
@@ -152,7 +152,7 @@ const config = {
         "4xl": "2rem" /* 32px */,
       },
       borderColor: {
-        primary: "rgba(var(--primary), 0.1)",
+        primary: "rgba(var(--primary))",
         accent: {
           a: "rgba(var(--accent-a), 0.1)",
           b: "rgba(var(--accent-b), 0.1)",
