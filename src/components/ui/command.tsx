@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Command as CommandPrimitive } from "cmdk"
-import { Search } from "lucide-react"
+import { MdOutlineSearch } from "react-icons/md"
 import { type DialogProps } from "@radix-ui/react-dialog"
 
 import { Dialog, DialogContent } from "@/components/ui/dialog"
@@ -36,25 +36,42 @@ const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
   )
 }
 
+type CommandInputProps = React.ComponentPropsWithoutRef<
+  typeof CommandPrimitive.Input
+> & {
+  icon?: React.ElementType
+  kbdShortcut?: string
+}
+
 const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
-  React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input>
->(({ className, ...props }, ref) => (
-  <div
-    className="flex items-center rounded border border-body px-3"
-    cmdk-input-wrapper=""
-  >
-    <CommandPrimitive.Input
-      ref={ref}
-      className={cn(
-        "placeholder:text-muted-foreground flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none disabled:cursor-not-allowed disabled:opacity-50",
-        className
+  CommandInputProps
+>(({ className, icon = MdOutlineSearch, kbdShortcut, ...props }, ref) => {
+  const Icon = icon
+  return (
+    <div
+      className="flex items-center rounded border border-body px-3"
+      cmdk-input-wrapper=""
+    >
+      <CommandPrimitive.Input
+        ref={ref}
+        className={cn(
+          "placeholder:text-muted-foreground flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none disabled:cursor-not-allowed disabled:opacity-50",
+          className
+        )}
+        {...props}
+      />
+      {kbdShortcut && (
+        <kbd className="rounded border border-solid border-disabled px-1 text-sm text-disabled">
+          {kbdShortcut}
+        </kbd>
       )}
-      {...props}
-    />
-    <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
-  </div>
-))
+      {!kbdShortcut && Icon && (
+        <Icon className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+      )}
+    </div>
+  )
+})
 
 CommandInput.displayName = CommandPrimitive.Input.displayName
 

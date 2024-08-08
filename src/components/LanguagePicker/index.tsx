@@ -109,6 +109,7 @@ const LanguagePicker = ({
           <CommandInput
             placeholder={t("page-languages-filter-placeholder")}
             className="h-9"
+            kbdShortcut="\"
           />
 
           <CommandList className="max-h-[75vh]">
