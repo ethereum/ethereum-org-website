@@ -1,9 +1,11 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 import {
   Box,
   Flex,
   FlexProps,
+  Icon,
   LinkBox,
   LinkOverlay,
   Spacer,
@@ -12,7 +14,6 @@ import {
 import { TranslationKey } from "@/lib/types"
 import type { DeveloperDocsLink } from "@/lib/interfaces"
 
-import Emoji from "@/components/Emoji"
 import { BaseLink } from "@/components/Link"
 import Text from "@/components/OldText"
 
@@ -26,9 +27,9 @@ const TextDiv = ({ children, ...props }: FlexProps) => (
   <Flex
     direction="column"
     justify="space-between"
-    maxW="166px"
+    w="100%"
     h="100%"
-    wordwrap="break-word"
+    wordWrap="break-word"
     p={4}
     lineHeight={4}
     {...props}
@@ -63,19 +64,43 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
       h="82px"
       bg="background.base"
       border="1px"
-      borderColor="border"
-      borderRadius={1}
+      borderColor="primary.base"
+      borderRadius={4}
       justify={isPrev ? "flex-start" : "flex-end"}
+      _hover={{
+        borderColor: "primary.hover",
+        "& svg": {
+          fill: "primary.hover",
+        },
+        ".btn-txt": {
+          color: "primary.hover",
+        },
+      }}
     >
-      <Box textDecoration="none" p={4} h="100%" order={isPrev ? 0 : 1}>
-        <Emoji
-          text={isPrev ? ":point_left:" : ":point_right:"}
-          fontSize="5xl"
-          transform={contentNotTranslated ? undefined : flipForRtl}
-        />
+      <Box
+        textDecoration="none"
+        p={4}
+        order={isPrev ? 0 : 1}
+        transform={contentNotTranslated ? undefined : flipForRtl}
+      >
+        {isPrev ? (
+          <Icon
+            fill="primary.base"
+            fontSize="xl"
+            as={FaChevronLeft}
+            name="chevron left"
+          />
+        ) : (
+          <Icon
+            fill="primary.base"
+            fontSize="xl"
+            as={FaChevronRight}
+            name="chevron right"
+          />
+        )}
       </Box>
       <TextDiv {...xPadding} {...(!isPrev && { textAlign: "end" })}>
-        <Text textTransform="uppercase" m="0">
+        <Text m="0" color="primary.base" fontSize="lg" className="btn-txt">
           {t(isPrev ? "previous" : "next")}
         </Text>
         <LinkOverlay
@@ -83,6 +108,9 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
           href={docData.href}
           textAlign={isPrev ? "start" : "end"}
           rel={isPrev ? "prev" : "next"}
+          fontSize="sm"
+          textDecoration="none"
+          _hover={{ textDecoration: "none" }}
           onClick={() => {
             trackCustomEvent({
               eventCategory: "next/previous article DocsNav",
