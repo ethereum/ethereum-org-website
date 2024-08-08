@@ -26,14 +26,14 @@ const BentoBox = ({
 }: BentoBoxProps) => (
   <div
     className={cn(
-      "flex justify-evenly gap-16 rounded-2xl border p-8",
+      "flex items-center justify-evenly gap-16 rounded-2xl border p-8",
       className
     )}
   >
     <div className="grid place-items-center">
       <NextImage src={imgSrc} alt="" width={imgWidth} />
     </div>
-    <div className="my-auto">
+    <div>
       <h3 className="mb-2 text-3xl font-black">{title}</h3>
       <p className="mb-8">{children}</p>
       <ButtonLink

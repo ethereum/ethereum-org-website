@@ -10,7 +10,7 @@ import { Flex, Skeleton } from "@chakra-ui/react"
 import type { AllMetricData, BasePageProps, Lang, RSSItem } from "@/lib/types"
 import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
-import BentoBox from "@/components/BentoBox"
+import BentoBox, { type BentoBoxProps } from "@/components/BentoBox"
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import Codeblock from "@/components/Codeblock"
 import CodeModal from "@/components/CodeModal"
@@ -68,6 +68,10 @@ import learnImage from "@/public/images/heroes/learn-hub-hero.png"
 import communityImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import hero from "@/public/images/home/hero.png"
 import ImpactImage from "@/public/images/impact_transparent.png"
+import ManAndDogImage from "@/public/images/man-and-dog-playing.png"
+import ManBabyWomanImage from "@/public/images/man-baby-woman.png"
+import RobotBarImage from "@/public/images/robot-help-bar.png"
+import MergeImage from "@/public/images/upgrades/merge.png"
 
 const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
 const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
@@ -141,14 +145,7 @@ const HomePage = ({
     setModalOpen(true)
   }
 
-  const bentoBoxes: {
-    title: string
-    children: React.ReactNode
-    action: string
-    href: string
-    imgSrc: StaticImageData
-    className: string
-  }[] = [
+  const bentoBoxes: BentoBoxProps[] = [
     {
       title: "Crypto without volatility",
       children:
@@ -156,8 +153,9 @@ const HomePage = ({
       action: "Learn more",
       href: "/stablecoins/",
       imgSrc: ImpactImage,
+      imgWidth: 512,
       className: cn(
-        "bg-gradient-primary border-primary",
+        "bg-gradient-primary border-primary/10",
         "col-span-7 col-start-5 row-span-1 row-start-1"
       ),
     },
@@ -167,9 +165,9 @@ const HomePage = ({
         "Billions can't open bank accounts or freely use their money. Ethereum's financial system is always open and unbiased.",
       action: "Explore DeFi",
       href: "/defi/",
-      imgSrc: ImpactImage, // TODO: Replace
+      imgSrc: ManAndDogImage,
       className: cn(
-        "bg-gradient-accent-c border-accent-c flex-col-reverse",
+        "bg-gradient-accent-c border-accent-c/10 flex-col-reverse",
         "col-span-4 col-start-2 row-span-1 row-start-2"
       ),
     },
@@ -179,9 +177,9 @@ const HomePage = ({
         "Ethereum apps work without selling your data. Protect your privacy.",
       action: "Browse apps",
       href: "/dapps/",
-      imgSrc: ImpactImage, // TODO: Replace
+      imgSrc: MergeImage,
       className: cn(
-        "bg-gradient-accent-b border-accent-b flex-col",
+        "bg-gradient-accent-b border-accent-b/10 flex-col",
         "col-span-3 col-start-6 row-span-1 row-start-2"
       ),
     },
@@ -190,10 +188,10 @@ const HomePage = ({
       children:
         "Ethereum is the hub for blockchain innovation. The best project are built on Ethereum.",
       action: "Explore benefits",
-      href: "/layer-2/", // TODO: Confirm
-      imgSrc: ImpactImage, // TODO: Replace
+      href: "/layer-2/",
+      imgSrc: ManBabyWomanImage,
       className: cn(
-        "bg-gradient-accent-a border-accent-a flex-col-reverse",
+        "bg-gradient-accent-a border-accent-a/10 flex-col-reverse",
         "col-span-3 col-start-9 row-span-2 row-start-2"
       ),
     },
@@ -203,9 +201,10 @@ const HomePage = ({
         "Arts, certificates or even real estate can be tokenized. Anything can be a tradable token. Ownership is public and verifiable.",
       action: "More on NFTs",
       href: "/nft/",
-      imgSrc: ImpactImage, // TODO: Replace
+      imgSrc: RobotBarImage,
+      imgWidth: 224,
       className: cn(
-        "bg-gradient-primary border-primary",
+        "bg-gradient-primary border-primary/10",
         "col-span-7 col-start-2 row-span-1 row-start-3"
       ),
     },
@@ -331,7 +330,6 @@ const HomePage = ({
       <div className="w-full">
         <HomeHero heroImg={hero} />
       </div>
-
       <div className="space-y-16 px-4 md:px-6 lg:space-y-32">
         <div className="grid w-full grid-cols-2 gap-x-4 gap-y-8 py-20 lg:grid-cols-4 lg:gap-x-10">
           {SubHeroCTAs.map(({ label, description, href, colorClass, Svg }) => (
@@ -360,7 +358,7 @@ const HomePage = ({
             <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
               Use Cases
             </div>
-            <h2 className="mb-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
+            <h2 className="mb-4 me-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
               A new way to use the internet
             </h2>
           </div>
