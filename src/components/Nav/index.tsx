@@ -14,7 +14,7 @@ import DesktopNavMenu from "./Desktop"
 import Menu from "./Menu"
 import { useNav } from "./useNav"
 
-import useDisclosure from "@/hooks/useDisclosure"
+import { useDisclosure } from "@/hooks/useDisclosure"
 import { useIsClient } from "@/hooks/useIsClient"
 
 const MobileNavMenu = lazy(() => import("./Mobile"))

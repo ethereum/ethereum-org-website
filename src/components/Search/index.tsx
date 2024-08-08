@@ -16,7 +16,7 @@ import { Button } from "../../../tailwind/ui/buttons/Button"
 
 import SearchButton from "./SearchButton"
 
-import type useDisclosure from "@/hooks/useDisclosure"
+import { type useDisclosure } from "@/hooks/useDisclosure"
 
 const SearchModal = dynamic(() => import("./SearchModal"))
 
