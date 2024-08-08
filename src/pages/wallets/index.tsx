@@ -170,18 +170,18 @@ const WalletsPage = () => {
               href: "/wallets/find-wallet/",
               content: t("page-wallets-find-wallet-link"),
               matomo: {
-                eventCategory: "wallet hero buttons",
+                eventCategory: "Header buttons",
                 eventAction: "click",
-                eventName: "find wallet",
+                eventName: "Find_wallet",
               },
             },
             {
               href: `#${SIMULATOR_ID}`,
               content: "How to use a wallet",
               matomo: {
-                eventCategory: "wallet hero buttons",
+                eventCategory: "Header buttons",
                 eventAction: "click",
-                eventName: "interactive tutorial",
+                eventName: "How_to_use_wallet",
               },
               variant: "outline",
             },
@@ -191,9 +191,9 @@ const WalletsPage = () => {
               href: "/wallets/find-wallet/",
               content: t("page-wallets-find-wallet-link"),
               matomo: {
-                eventCategory: "wallet hero buttons",
+                eventCategory: "Header button",
                 eventAction: "click",
-                eventName: "find wallet",
+                eventName: "Find_wallet",
               },
             },
           ],
@@ -253,11 +253,21 @@ const WalletsPage = () => {
       title: t("page-wallets-protecting-yourself"),
       description: "MyCrypto",
       link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
+      customEventOptions: {
+        eventCategory: "Link",
+        eventAction: "Clicked_external",
+        eventName: "protecting_yourself",
+      },
     },
     {
       title: t("page-wallets-keys-to-safety"),
       description: t("page-wallets-blog"),
       link: "https://www.coinbase.com/learn/crypto-basics/how-to-secure-crypto",
+      customEventOptions: {
+        eventCategory: "Link",
+        eventAction: "Clicked_external",
+        eventName: "the_keys_to_keeping_crypto_safe",
+      },
     },
   ]
 
@@ -265,10 +275,20 @@ const WalletsPage = () => {
     {
       title: t("additional-reading-how-to-create-an-ethereum-account"),
       link: "/guides/how-to-create-an-ethereum-account/",
+      customEventOptions: {
+        eventCategory: "Link",
+        eventAction: "Clicked",
+        eventName: "Create_eth_acc",
+      },
     },
     {
       title: t("additional-reading-how-to-use-a-wallet"),
       link: "/guides/how-to-use-a-wallet/",
+      customEventOptions: {
+        eventCategory: "Link",
+        eventAction: "Clicked",
+        eventName: "How_to_use_wallet",
+      },
     },
   ]
 
@@ -400,7 +420,14 @@ const WalletsPage = () => {
               >
                 {t("page-wallets-features-desc")}
               </Box>
-              <ButtonLink href="/wallets/find-wallet/">
+              <ButtonLink
+                href="/wallets/find-wallet/"
+                customEventOptions={{
+                  eventCategory: "header buttons",
+                  eventAction: "click",
+                  eventName: "Find_wallet",
+                }}
+              >
                 {t("page-wallets-find-wallet-btn")}
               </ButtonLink>
               <Image
