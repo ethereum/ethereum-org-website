@@ -119,6 +119,10 @@ Privacy + Scaling explorations
 Speed Run Ethereum
 - https://crowdin.com/project/speed-run-ethereum
 
+EthStaker
+- https://crowdin.com/project/ethstaker-website
+- https://crowdin.com/project/ethstaker-knowledge-base
+
 ### Evaluation process
 
 All translations will be subject to QA and feedback, where professional linguists will evaluate submissions based on quality and accuracy.
