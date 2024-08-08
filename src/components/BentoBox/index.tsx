@@ -7,26 +7,33 @@ import { cn } from "@/lib/utils/cn"
 
 import { ButtonLink } from "../../../tailwind/ui/buttons/Button"
 
-type BentoBoxProps = HTMLAttributes<HTMLDivElement> & {
-  title: string
+export type BentoBoxProps = HTMLAttributes<HTMLDivElement> & {
   action: string
-  imgSrc: StaticImageData
   href: string
+  imgSrc: StaticImageData
+  imgWidth?: number
+  title: string
 }
 
 const BentoBox = ({
-  title,
-  children,
   action,
+  children,
+  className,
   href,
   imgSrc,
-  className,
+  imgWidth,
+  title,
 }: BentoBoxProps) => (
-  <div className={cn("flex gap-16 rounded-2xl border p-8", className)}>
-    <div className="grid w-full place-items-center">
-      <NextImage src={imgSrc} alt="" />
+  <div
+    className={cn(
+      "flex justify-evenly gap-16 rounded-2xl border p-8",
+      className
+    )}
+  >
+    <div className="grid place-items-center">
+      <NextImage src={imgSrc} alt="" width={imgWidth} />
     </div>
-    <div>
+    <div className="my-auto">
       <h3 className="mb-2 text-3xl font-black">{title}</h3>
       <p className="mb-8">{children}</p>
       <ButtonLink
