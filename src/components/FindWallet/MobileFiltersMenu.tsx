@@ -26,8 +26,8 @@ import WalletFilterSidebar, {
 type MobileFiltersMenuProps = WalletFilterSidebarProps & {
   showMobileSidebar: boolean
   setFilters: React.Dispatch<React.SetStateAction<WalletFilter>>
-  selectedPersona: number
-  setSelectedPersona: React.Dispatch<React.SetStateAction<number>>
+  selectedPersona: number[]
+  setSelectedPersona: React.Dispatch<React.SetStateAction<number[]>>
   onOpen: () => void
   onClose: () => void
   totalWallets: number
@@ -89,6 +89,7 @@ export const MobileFiltersMenu = ({
                 selectedPersona={selectedPersona}
                 setSelectedPersona={setSelectedPersona}
                 showMobileSidebar={showMobileSidebar}
+                resetWalletFilter={resetWalletFilter}
               />
             </Box>
 
