@@ -9,7 +9,7 @@ import { filterRealLocales } from "@/lib/utils/translations"
 
 import { localeToDisplayInfo } from "./localeToDisplayInfo"
 
-import useDisclosure from "@/hooks/useDisclosure"
+import { useDisclosure } from "@/hooks/useDisclosure"
 
 export const useLanguagePicker = (handleClose?: () => void) => {
   const { t } = useTranslation("common")

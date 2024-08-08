@@ -70,7 +70,7 @@ Regardez Austin vous guider à travers le minage et la blockchain de la preuve d
 
 ## L'algorithme de minage {#mining-algorithm}
 
-Le réseau principal Ethereum n'a jamais utilisé qu'un seul algorithme de minage - ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/). Ethhash était le successeur d'un algorithme R&D original connu sous le nom de ["Dagger-Hashimoto"](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/).
+Le réseau principal Ethereum n'a jamais utilisé qu'un seul algorithme de minage - ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/). Ethash était le successeur d'un algorithme R&D originel connu sous le nom de [«Dagger-Hashimoto»](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/).
 
 [Plus de détails sur les algorithmes de minage](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/).
 

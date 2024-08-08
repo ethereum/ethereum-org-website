@@ -40,7 +40,10 @@ const FeedbackWidget = () => {
           />
         </PopoverTrigger>
 
-        <PopoverContent className="mx-2 w-80 max-w-[calc(100vw_-_1rem)] rounded bg-background p-4 sm:p-8">
+        <PopoverContent
+          className="mx-2 w-80 max-w-[calc(100vw_-_1rem)] rounded bg-background p-4 sm:p-8"
+          data-testid="feedback-widget-modal"
+        >
           <div className="flex items-start gap-2">
             <header className="me-0 flex-1 p-0 text-xl font-bold">
               {feedbackSubmitted
