@@ -47,6 +47,7 @@ Multiple trackers offer a real-time overview of nodes in the Ethereum network. N
 
 - [Map of nodes](https://etherscan.io/nodetracker) by Etherscan
 - [Ethernodes](https://ethernodes.org/) by Bitfly
+- [Ethereum Node Crawler](https://crawler.ethereum.org/)
 - [Nodewatch](https://www.nodewatch.io/) by Chainsafe, crawling consensus nodes
 
 ## Node types {#node-types}
@@ -195,11 +196,18 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 
 | Client                                                        | Language   | Operating systems     | Networks                                                          |
 | ------------------------------------------------------------- | ---------- | --------------------- | ----------------------------------------------------------------- |
+| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Pyrmont, Sepolia, Ropsten, and more         |
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Pyrmont, Sepolia, Ropsten, and more         |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten, and more                  |
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten, and more                  |
 | [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten, and more |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Sepolia, Ropsten, and more          |
+
+### Grandine {#grandine}
+
+Grandine is the latest consensus client implementation, written in Rust under the GPL-3.0 license. It is maintained by the Grandine Core Team and is fast, high-performance and lightweight. It fits a wide range of stakers from solo stakers running on low-resource devices such as Raspberry Pi to large institutional stakers running tens of thousands of validators. Adoption will gradually reach larger institutional stakers because the client can handle a large number of validators per machine. 
+
+More information can be found in [Grandine Book](https://docs.grandine.io/)
 
 ### Lighthouse {#lighthouse}
 
