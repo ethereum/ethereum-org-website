@@ -37,17 +37,17 @@ const semanticTokens = {
 
     // Main Set
     primary: {
-      base: { _light: "blue.500", _dark: "orange.500" },
-      highContrast: { _light: "blue.800", _dark: "orange.100" },
-      lowContrast: { _light: "blue.100", _dark: "orange.800" },
-      hover: { _light: "blue.400", _dark: "orange.400" },
-      visited: { _light: "blue.700", _dark: "orange.550" },
+      base: { _light: "purple.600", _dark: "purple.600" },
+      highContrast: { _light: "purple.800", _dark: "purple.200" },
+      lowContrast: { _light: "purple.200", _dark: "purple.800" },
+      hover: { _light: "purple.700", _dark: "purple.500" },
+      visited: { _light: "purple.700", _dark: "purple.500" },
       // ! Deprecating primary.light
-      light: { _light: "blue.100", _dark: "orange.100" },
+      light: { _light: "purple.100", _dark: "purple.100" },
       // ! Deprecating primary.dark
-      dark: { _light: "blue.700", _dark: "orange.800" },
+      dark: { _light: "purple.700", _dark: "purple.800" },
       // ! Deprecating primary.pressed
-      pressed: { _light: "blue.400", _dark: "orange.800" },
+      pressed: { _light: "purple.400", _dark: "purple.800" },
     },
     body: {
       base: { _light: "gray.800", _dark: "gray.100" },
@@ -57,12 +57,21 @@ const semanticTokens = {
       inverted: { _light: "gray.100", _dark: "gray.800" },
     },
     background: {
-      base: { _light: "white", _dark: "gray.800" },
+      base: { _light: "white", _dark: "black" },
       highlight: { _light: "gray.100", _dark: "gray.900" },
     },
     disabled: { _light: "gray.400", _dark: "gray.500" },
     // ! Deprecating neutral
     neutral: { _light: "white", _dark: "gray.900" },
+
+
+///////// ! NEW TOKENS
+    link: {
+      base: { _light: "purple.600", _dark: "purple.400" },
+      hover: { _light: "purple.700", _dark: "purple.300" },
+      visited: { _light: "purple.700", _dark: "purple.300" },
+    },
+////////////////////////
 
     // Complementary Set
     attention: {
