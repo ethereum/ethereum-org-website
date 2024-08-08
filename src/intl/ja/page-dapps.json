@@ -41,6 +41,7 @@
   "page-dapps-choose-category": "カテゴリの選択",
   "page-dapps-category-social": "SNS",
   "page-dapps-category-content": "コンテンツ",
+  "page-dapps-category-community": "コミュニティ",
   "page-dapps-category-messaging": "メッセージング",
   "page-dapps-category-identity": "アイデンティティ",
   "page-dapps-collectibles-benefits-1-description": "アートがイーサリアム上でトークン化されると、所有権が誰の目にも明らかになります。作品の制作から現在の所有者までを追跡できるため、偽造を防ぐことができます。",
@@ -95,6 +96,7 @@
   "page-dapps-dapp-description-loopring": "ピアツーピア取引プラットフォームは、スピードのために構築されています。",
   "page-dapps-dapp-description-marble-cards": "URLに基づいてユニークなデジタルカードを作成し、取引します。",
   "page-dapps-dapp-description-matcha": "複数の取引所を検索して、最善の価格を見つけることができます。",
+  "page-dapps-dapp-description-meeds": "分散型ワークの時代におけるWeb3コミュニティハブです。重要な貢献に対し、公正かつ透明性をもって報酬が与えられます。",
   "page-dapps-dapp-description-mirror": "Web3のためにWeb3上に構築されたMirrorの堅牢なパブリッシングプラットフォームは、オンラインライティングの限界を押し上げます。",
   "page-dapps-dapp-description-multichain": "Web3用の究極のルーターで任意のクロスチェーンインタラクションのために開発されたインフラストラクチャです。",
   "page-dapps-dapp-description-nifty-gateway": "トップアーティスト、アスリート、ブランド、クリエイターからチェーン上で作品を購入。",
@@ -217,6 +219,7 @@
   "page-dapps-marble-cards-logo-alt": "marble.cardsロゴ",
   "page-dapps-async-logo-alt": "Asyncロゴ",
   "page-dapps-matcha-logo-alt": "Matchaロゴ",
+  "page-dapps-meeds-logo-alt": "Meedsのロゴ",
   "page-dapps-metaverse-benefits-title": "メタバース",
   "page-dapps-metaverse-benefits-description": "メタバースの成功を可能とするイーサリアムの特長は何ですか?",
   "page-dapps-metaverse-benefits-1-title": "NFT",
@@ -281,5 +284,7 @@
   "page-dapps-dapp-description-dodo": "DODOは、プロアクティブ・マーケット・メーカー・アルゴリズム (PMM) を活用するオンチェーン流動性プロバイダです。",
   "page-dapps-dodo-image-alt": "DODOロゴ",
   "page-dapps-dapp-description-artblocks": "Art Blocksでは、現代のジェネレーティブアートの魅力的な作品に命を吹き込むことに打ち込んでいます。",
-  "page-dapps-artblocks-image-alt": "Art Blocksロゴ"
+  "page-dapps-artblocks-image-alt": "Art Blocksロゴ",
+  "page-dapps-explore-title": "さらにアプリを閲覧しますか？",
+  "page-dapps-explore": "数百にも及ぶDappを確認する"
 }
