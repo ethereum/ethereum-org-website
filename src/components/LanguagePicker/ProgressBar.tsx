@@ -1,19 +1,11 @@
-import { Progress, ProgressProps } from "@chakra-ui/react"
+import { ComponentPropsWithoutRef } from "react"
 
-type ProgressBarProps = Pick<ProgressProps, "value">
+import { Progress } from "../ui/progress"
+
+type ProgressBarProps = Pick<ComponentPropsWithoutRef<typeof Progress>, "value">
 
 const ProgressBar = ({ value }: ProgressBarProps) => (
-  <Progress
-    value={value}
-    h="0.5"
-    w="full"
-    bg="body.light"
-    sx={{
-      "[role=progressbar]": {
-        backgroundColor: "disabled",
-      },
-    }}
-  />
+  <Progress value={value} className="h-0.5" />
 )
 
 export default ProgressBar

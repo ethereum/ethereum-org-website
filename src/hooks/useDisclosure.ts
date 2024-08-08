@@ -5,12 +5,14 @@ import { useBoolean } from "usehooks-ts"
  * modal, dropdown, or any other component that can be opened and closed.
  */
 export const useDisclosure = (defaultValue = false) => {
-  const { value, setTrue, setFalse, toggle } = useBoolean(defaultValue)
+  const { value, setTrue, setFalse, toggle, setValue } =
+    useBoolean(defaultValue)
 
   return {
     isOpen: value,
     onOpen: setTrue,
     onClose: setFalse,
     onToggle: toggle,
+    setValue,
   }
 }

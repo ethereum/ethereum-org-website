@@ -1,28 +1,22 @@
+import { ComponentPropsWithoutRef } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { BsCheck } from "react-icons/bs"
-import {
-  Badge,
-  Box,
-  Flex,
-  forwardRef,
-  Icon,
-  MenuItem as ChakraMenuItem,
-  type MenuItemProps as ChakraMenuItemProps,
-  Text,
-} from "@chakra-ui/react"
 
 import type { LocaleDisplayInfo } from "@/lib/types"
 
-import { BaseLink } from "@/components/Link"
+import { cn } from "@/lib/utils/cn"
+
+import { Badge } from "../ui/badge"
+import { CommandItem } from "../ui/command"
 
 import ProgressBar from "./ProgressBar"
 
-type ItemProps = ChakraMenuItemProps & {
+type ItemProps = ComponentPropsWithoutRef<typeof CommandItem> & {
   displayInfo: LocaleDisplayInfo
 }
 
-const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
+const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
   const {
     localeOption,
     sourceName,
@@ -32,7 +26,7 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
     isBrowserDefault,
   } = displayInfo
   const { t } = useTranslation("common")
-  const { asPath, locale } = useRouter()
+  const { locale } = useRouter()
   const isCurrent = localeOption === locale
 
   const getProgressInfo = (approvalProgress: number, wordsApproved: number) => {
@@ -48,86 +42,49 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
   const { progress, words } = getProgressInfo(approvalProgress, wordsApproved)
 
   return (
-    <ChakraMenuItem
-      as={BaseLink}
-      ref={ref}
-      flexDir="column"
-      w="full"
-      mb="1"
-      display="block"
-      pt="2 !important"
-      alignItems="start"
-      borderRadius="base"
-      bg={isCurrent ? "background.base" : "transparent"}
-      color="body.base"
-      textDecoration="none"
-      onFocus={(e) => {
-        e.target.scrollIntoView({ block: "nearest" })
-      }}
-      scrollMarginY="8"
-      _hover={{
-        bg: "primary.lowContrast",
-        textDecoration: "none",
-        "p.language-name": { color: "primary.base" },
-      }}
-      _focus={{ bg: "primary.lowContrast" }}
-      sx={{
-        p: {
-          textDecoration: "none",
-          overflow: "hidden",
-          textOverflow: "ellipsis",
-          whiteSpace: "nowrap",
-        },
-      }}
-      href={asPath}
-      locale={localeOption}
+    <CommandItem
+      value={localeOption}
+      className={cn(
+        "group mb-1 flex-col items-start rounded pt-2 text-body hover:bg-primary-low-contrast",
+        isCurrent
+          ? "bg-background hover:bg-primary-low-contrast"
+          : "bg-transparent"
+      )}
       {...props}
     >
-      <Flex alignItems="center" w="full">
-        <Box flex={1}>
-          <Flex alignItems="center" gap={2}>
-            <Text
-              className="language-name"
-              fontSize="lg"
-              color={isCurrent ? "primary.highContrast" : "body.base"}
+      <div className="flex w-full items-center">
+        <div className="flex-1">
+          <div className="flex items-center gap-2">
+            <p
+              className={cn(
+                "language-name text-lg group-aria-selected:text-primary",
+                isCurrent ? "text-primary-high-contrast" : "text-body"
+              )}
             >
               {targetName}
-            </Text>
+            </p>
             {isBrowserDefault && (
               <Badge
-                border="1px"
-                borderColor="body.medium"
-                color="body.medium"
-                lineHeight="none"
-                fontSize="2xs"
-                p="1"
-                h="fit-content"
-                bg="none"
+                className="h-fit-content rounded border-body-medium p-1 text-2xs font-normal uppercase leading-none text-body-medium"
+                variant="outline"
               >
                 {t("page-languages-browser-default")}
               </Badge>
             )}
-          </Flex>
-          <Text textTransform="uppercase" fontSize="xs" color="body.base">
-            {sourceName}
-          </Text>
-        </Box>
+          </div>
+          <p className="text-xs uppercase text-body">{sourceName}</p>
+        </div>
         {isCurrent && (
-          <Icon as={BsCheck} fontSize="2xl" color="primary.highContrast" />
+          <BsCheck className="text-2xl text-primary-high-contrast" />
         )}
-      </Flex>
-      <Text
-        textTransform="lowercase"
-        fontSize="xs"
-        color="body.medium"
-        maxW="full"
-      >
+      </div>
+      <p className="max-w-full text-xs lowercase text-body-medium">
         {progress} {t("page-languages-translated")} • {words}{" "}
         {t("page-languages-words")}
-      </Text>
+      </p>
       <ProgressBar value={approvalProgress} />
-    </ChakraMenuItem>
+    </CommandItem>
   )
-})
+}
 
 export default MenuItem
