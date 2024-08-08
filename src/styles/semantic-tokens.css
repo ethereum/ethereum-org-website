@@ -75,7 +75,7 @@
     --body-medium: var(--gray-400);
     --body-light: var(--gray-600);
 
-    --background: var(--gray-800);
+    --background: black;
     --background-highlight: var(--gray-900);
 
     --primary: var(--purple-400);
