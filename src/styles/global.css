@@ -178,7 +178,7 @@
   }
 
   a {
-    @apply text-primary underline underline-offset-3 hover:text-primary-hover focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover;
+    @apply underline-offset-3 text-primary underline hover:text-primary-hover focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover;
   }
 
   h1,
