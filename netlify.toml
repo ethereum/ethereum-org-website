@@ -9,6 +9,9 @@
   # Default build command.
   command = "yarn build"
 
+  # Skip build
+  ignore = "exit 0"
+
 [build.environment]
   NEXT_FORCE_EDGE_IMAGES="true"
 
