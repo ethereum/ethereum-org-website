@@ -12,7 +12,7 @@ const ICON_SELECTOR = "& svg"
 
 const baseStyle = defineStyle({
   borderRadius: "base",
-  border: "1px",
+  border: "2px",
   color: "primary.base",
   fontWeight: "normal",
   lineHeight: "1.6",
