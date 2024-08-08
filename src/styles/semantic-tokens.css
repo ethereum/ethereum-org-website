@@ -2,70 +2,50 @@
 
 /* SEMANTIC TOKEN DECLARATIONS: Abstracted from color palettes for theming */
 
-/**
-* Color palette semantic breakdown ([brackets] denote dark mode):
-* 
-* 100: low-contrast
-* 200: [high-contrast]
-* 300: [hover]
-* 400: [DEFAULT]
-* 500: neutral, [neutral]
-* 600: DEFAULT
-* 700: hover
-* 800: high-contrast
-* 900: [low-contrast]
-*/
-
 @layer base {
   /* Light mode (default) token declarations */
   :root {
     --body: var(--gray-800);
     --body-medium: var(--gray-500);
     --body-light: var(--gray-200);
+    --body-action: var(--white);
 
-    --background: white;
+    --background: var(--white);
     --background-highlight: var(--gray-100);
 
     --primary: var(--purple-600);
     --primary-hover: var(--purple-700);
     --primary-low-contrast: var(--purple-100);
     --primary-high-contrast: var(--purple-800);
+    --primary-action: var(--purple-600);
 
     --accent-a: var(--blue-600);
-    --accent-a-hover: var(--blue-700);
-    --accent-a-low-contrast: var(--blue-100);
-    --accent-a-high-contrast: var(--blue-800);
-
     --accent-b: var(--pink-600);
-    --accent-b-hover: var(--pink-700);
-    --accent-b-low-contrast: var(--pink-100);
-    --accent-b-high-contrast: var(--pink-800);
-
-    --accent-c: var(--cyan-600);
-    --accent-c-hover: var(--cyan-700);
-    --accent-c-low-contrast: var(--cyan-100);
-    --accent-c-high-contrast: var(--cyan-800);
+    --accent-c: var(--teal-600);
 
     /* Gradients */
-    --gradient-primary: radial-gradient(
-      114.96% 111.8% at 100% 0%,
-      rgba(var(--purple-50), 0.32) 0%,
-      rgba(var(--purple-100), 0.56) 100%
+    --gradient-angle: 90deg;
+    --start-opacity: 0.1;
+    --end-opacity: 0.05;
+    --gradient-primary: linear-gradient(
+      var(--gradient-angle),
+      rgba(var(--purple-500), var(--start-opacity)) 19.09%,
+      rgba(var(--purple-500), var(--end-opacity)) 40.63%
     );
-    --gradient-accent-a: radial-gradient(
-      114.96% 111.8% at 100% 0%,
-      rgba(var(--blue-100), 0.32) 0%,
-      rgba(var(--blue-200), 0.56) 100%
+    --gradient-accent-a: linear-gradient(
+      var(--gradient-angle),
+      rgba(var(--blue-500), var(--start-opacity)) 19.09%,
+      rgba(var(--blue-500), var(--end-opacity)) 40.63%
     );
-    --gradient-accent-b: radial-gradient(
-      114.96% 111.8% at 100% 0%,
-      rgba(var(--pink-100), 0.32) 0%,
-      rgba(var(--pink-200), 0.48) 100%
+    --gradient-accent-b: linear-gradient(
+      var(--gradient-angle),
+      rgba(var(--pink-500), var(--start-opacity)) 19.09%,
+      rgba(var(--pink-500), var(--end-opacity)) 40.63%
     );
-    --gradient-accent-c: radial-gradient(
-      114.96% 111.8% at 100% 0%,
-      rgba(var(--cyan-100), 0.32) 0%,
-      rgba(var(--cyan-200), 0.48) 100%
+    --gradient-accent-c: linear-gradient(
+      var(--gradient-angle),
+      rgba(var(--teal-500), var(--start-opacity)) 19.09%,
+      rgba(var(--teal-500), var(--end-opacity)) 40.63%
     );
   }
 
@@ -75,53 +55,20 @@
     --body-medium: var(--gray-400);
     --body-light: var(--gray-600);
 
-    --background: black;
+    --background: var(--black);
     --background-highlight: var(--gray-900);
 
     --primary: var(--purple-400);
     --primary-hover: var(--purple-300);
     --primary-low-contrast: var(--purple-900);
     --primary-high-contrast: var(--purple-200);
-    --primary-neutral: var(--purple-500);
 
     --accent-a: var(--blue-400);
-    --accent-a-hover: var(--blue-300);
-    --accent-a-low-contrast: var(--blue-900);
-    --accent-a-high-contrast: var(--blue-200);
-    --accent-a-neutral: var(--blue-500);
-
     --accent-b: var(--pink-400);
-    --accent-b-hover: var(--pink-300);
-    --accent-b-low-contrast: var(--pink-900);
-    --accent-b-high-contrast: var(--pink-200);
-    --accent-b-neutral: var(--pink-500);
-
-    --accent-c: var(--cyan-400);
-    --accent-c-hover: var(--cyan-300);
-    --accent-c-low-contrast: var(--cyan-900);
-    --accent-c-high-contrast: var(--cyan-200);
-    --accent-c-neutral: var(--cyan-500);
+    --accent-c: var(--teal-400);
 
     /* Gradients */
-    --gradient-primary: radial-gradient(
-      114.96% 111.8% at 100% 0%,
-      rgba(var(--purple-800), 0.32) 0%,
-      rgba(var(--purple-900), 0.56) 100%
-    );
-    --gradient-accent-a: radial-gradient(
-      114.96% 111.8% at 100% 0%,
-      rgba(var(--blue-800), 0.32) 0%,
-      rgba(var(--blue-900), 0.56) 100%
-    );
-    --gradient-accent-b: radial-gradient(
-      114.96% 111.8% at 100% 0%,
-      rgba(var(--pink-800), 0.32) 0%,
-      rgba(var(--pink-900), 0.48) 100%
-    );
-    --gradient-accent-c: radial-gradient(
-      114.96% 111.8% at 100% 0%,
-      rgba(var(--cyan-800), 0.32) 0%,
-      rgba(var(--cyan-900), 0.48) 100%
-    );
+    --gradient-angle: 180deg;
+    --end-opacity: 0.2;
   }
 }
