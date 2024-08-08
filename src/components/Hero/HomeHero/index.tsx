@@ -1,29 +1,47 @@
+import { getImageProps } from "next/image"
 import { useTranslation } from "next-i18next"
 import { Box, Heading, Stack, Text, VStack } from "@chakra-ui/react"
 
-import type { CommonHeroProps } from "@/lib/types"
-
 import { ButtonLink } from "@/components/Buttons"
-import { Image } from "@/components/Image"
 import Morpher from "@/components/Morpher"
 
-export type HomeHeroProps = Pick<CommonHeroProps, "heroImg">
+import heroDesktopImg from "@/public/images/home/hero.png"
+import heroMobileImg from "@/public/images/home/hero-mobile.png"
 
-const HomeHero = ({ heroImg }: HomeHeroProps) => {
+const HomeHero = () => {
   const { t } = useTranslation("page-index")
+
+  const common = {
+    alt: t("page-index:page-index-hero-image-alt"),
+    priority: true,
+  }
+  const {
+    props: { srcSet: desktop },
+  } = getImageProps({
+    ...common,
+    sizes: "(max-width: 1504px) 100vw, 1504px",
+    src: heroDesktopImg,
+  })
+  const {
+    props: { srcSet: mobile, ...rest },
+  } = getImageProps({
+    ...common,
+    width: 480,
+    src: heroMobileImg,
+  })
+
   return (
     <Box>
       <Box h={{ base: "300px", sm: "350px", md: "380px", lg: "440px" }}>
-        <Image
-          src={heroImg}
-          alt={t("page-index:page-index-hero-image-alt")}
-          // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
-          sizes="(max-width: 1504px) 100vw, 1504px"
-          w="full"
-          h="full"
-          priority
-          style={{ objectFit: "cover" }}
-        />
+        <picture>
+          <source media="(min-width: 480px)" srcSet={desktop} />
+          <source media="(max-width: 479px)" srcSet={mobile} />
+          {/* Fallback image: mobile version */}
+          <img
+            {...rest}
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
+        </picture>
       </Box>
       <VStack>
         <Stack
