@@ -28,7 +28,7 @@ jobs:
           cache-dependency-path: ./package.json
           node-version: 20
       - name: 📥 Install deps
-        run: npm install
+        run: yarn
       - name: Build Storybook
         run: npm run build-storybook
       - name: ⚡ Run chromatic
