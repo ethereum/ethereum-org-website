@@ -12371,6 +12371,24 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Baystef",
+      "name": "Adebayo Steve",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36106823?v=4",
+      "profile": "https://github.com/Baystef",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "sanjanaynvsdl",
+      "name": "Sanjana",
+      "avatar_url": "https://avatars.githubusercontent.com/u/142678317?v=4",
+      "profile": "https://github.com/sanjanaynvsdl",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
