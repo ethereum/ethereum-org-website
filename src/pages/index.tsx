@@ -10,7 +10,7 @@ import { Flex, Skeleton } from "@chakra-ui/react"
 import type { AllMetricData, BasePageProps, Lang, RSSItem } from "@/lib/types"
 import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
-import BentoBox, { type BentoBoxProps } from "@/components/BentoBox"
+import BentoBoxes from "@/components/BentoBoxes"
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import Codeblock from "@/components/Codeblock"
 import CodeModal from "@/components/CodeModal"
@@ -67,11 +67,6 @@ import activityImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import learnImage from "@/public/images/heroes/learn-hub-hero.png"
 import communityImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import hero from "@/public/images/home/hero.png"
-import ImpactImage from "@/public/images/impact_transparent.png"
-import ManAndDogImage from "@/public/images/man-and-dog-playing.png"
-import ManBabyWomanImage from "@/public/images/man-baby-woman.png"
-import RobotBarImage from "@/public/images/robot-help-bar.png"
-import MergeImage from "@/public/images/upgrades/merge.png"
 
 const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
 const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
@@ -80,17 +75,6 @@ const cachedFetchTotalValueLocked = runOnlyOnce(fetchTotalValueLocked)
 const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
 const cachedXmlBlogFeeds = runOnlyOnce(async () => await fetchRSS(XML_FEEDS))
 const cachedAttestantBlog = runOnlyOnce(fetchAttestantPosts)
-
-const BentoTitle = ({ className }) => (
-  <div className={cn("flex flex-col", className)}>
-    <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
-      Use Cases
-    </div>
-    <h2 className="mb-4 me-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
-      A new way to use the internet
-    </h2>
-  </div>
-)
 
 type Props = BasePageProps & {
   communityEvents: CommunityEventsReturnType
@@ -155,82 +139,6 @@ const HomePage = ({
     setActiveCode(id)
     setModalOpen(true)
   }
-
-  const bentoBoxes: BentoBoxProps[] = [
-    {
-      title: "Crypto without volatility",
-      children:
-        "Stablecoins are currencies that maintain stable value. Their price matches the U.S. dollar or other steady asset",
-      action: "Learn more",
-      href: "/stablecoins/",
-      imgSrc: ImpactImage,
-      imgWidth: 500,
-      className: cn(
-        "bg-gradient-primary border-primary/10",
-        "flex-col lg:flex-col-reverse xl:flex-row",
-        "lg:col-span-6 lg:row-start-2",
-        "xl:col-span-7 xl:col-start-5 xl:row-start-1"
-      ),
-    },
-    {
-      title: "A fairer financial system",
-      children:
-        "Billions can't open bank accounts or freely use their money. Ethereum's financial system is always open and unbiased.",
-      action: "Explore DeFi",
-      href: "/defi/",
-      imgSrc: ManAndDogImage,
-      className: cn(
-        "bg-gradient-accent-c border-accent-c/10",
-        "flex-col lg:flex-col xl:flex-col-reverse",
-        "lg:col-span-6 lg:col-start-7 lg:row-start-2",
-        "xl:col-span-4 xl:col-start-2 xl:row-start-2"
-      ),
-    },
-    {
-      title: "Innovative apps",
-      children:
-        "Ethereum apps work without selling your data. Protect your privacy.",
-      action: "Browse apps",
-      href: "/dapps/",
-      imgSrc: MergeImage,
-      imgWidth: 320,
-      className: cn(
-        "bg-gradient-accent-b border-accent-b/10",
-        "flex-col lg:flex-row xl:flex-col",
-        "lg:col-span-12 lg:row-start-3",
-        "xl:col-span-3 xl:col-start-6 xl:row-start-2"
-      ),
-    },
-    {
-      title: "The network of networks",
-      children:
-        "Ethereum is the hub for blockchain innovation. The best project are built on Ethereum.",
-      action: "Explore benefits",
-      href: "/layer-2/",
-      imgSrc: ManBabyWomanImage,
-      className: cn(
-        "bg-gradient-accent-a border-accent-a/10",
-        "flex-col lg:flex-col-reverse xl:flex-col-reverse",
-        "lg:col-span-6 lg:col-start-7 lg:row-start-4",
-        "xl:col-span-3 xl:col-start-9 xl:row-span-2 xl:row-start-2"
-      ),
-    },
-    {
-      title: "The internet of assets",
-      children:
-        "Arts, certificates or even real estate can be tokenized. Anything can be a tradable token. Ownership is public and verifiable.",
-      action: "More on NFTs",
-      href: "/nft/",
-      imgSrc: RobotBarImage,
-      imgWidth: 324,
-      className: cn(
-        "bg-gradient-primary border-primary/10",
-        "flex-col lg:flex-col xl:flex-row",
-        "lg:col-span-6 lg:row-start-4",
-        "xl:col-span-7 xl:col-start-2 xl:row-start-3"
-      ),
-    },
-  ]
 
   const codeExamples: CodeExample[] = [
     {
@@ -367,15 +275,7 @@ const HomePage = ({
           ))}
         </div>
 
-        <div>
-          <BentoTitle className="lg:hidden" />
-          <div className="carousel flex grid-cols-bento flex-row gap-4 lg:grid">
-            <BentoTitle className="hidden lg:col-span-12 lg:flex xl:col-span-3 xl:col-start-2" />
-            {bentoBoxes.map((box) => (
-              <BentoBox key={box.title} {...box} />
-            ))}
-          </div>
-        </div>
+        <BentoBoxes />
 
         <HomeSection
           tag="Activity"
