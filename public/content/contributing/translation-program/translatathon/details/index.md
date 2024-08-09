@@ -65,7 +65,8 @@ Bonus points breakdown:
 - Previous Translatathon participants: 1,000 bonus points
 
 1) ETHglossary translators
-[ETHglossary](https://ethglossaryproject.vercel.app/) is an open-source glossary of key Ethereum terms, and an initiative to create and maintain a glossary of Ethereum terms and their translations in 60+ languages that anyone can use and contribute to.
+
+[ETHglossary](https://www.ethglossary.xyz/) is an open-source glossary of key Ethereum terms, and an initiative to create and maintain a glossary of Ethereum terms and their translations in 60+ languages that anyone can use and contribute to.
 Translatathon participants can suggest translations for these terms and vote or discuss existing translations to earn bonus points in the Translathon.
 Each 10 translated terms will earn you 100 bonus points, with a bonus for completing all 70 terms currently available in the glossary app. The bonus points will be automatically added to your final score once the Translatathon ends and the final scores are calculated.
 
@@ -81,11 +82,13 @@ ETHglossary points breakdown:
 - 70 translated terms = 1,000 bonus points
 
 2) Ethereum.org contributors
+
 To reward our existing contributors, each past ethereum.org contributor is eligible for 1,000 bonus points.
 Contributors are individuals that have received any ethereum.org contributor POAP, OAT or GitPOAP in the past.
 You can check out the full list of eligible contributor POAPs, OATs and GitPOAPs [here](https://efdn.notion.site/Ethereum-org-contributor-credentials-1c23938dfd7f44d0bda3992c58897d63)
 
 3) Previous Translatathon participants
+
 Previous Translatathon participants will also receive 1,000 bonus points.
 Anyone who participated in the 2023 edition of the ethereum.org Translatathon and scored at least 100 points, will automatically receive their bonus points once the Translatathon ends and the final scores are calculated.
 
