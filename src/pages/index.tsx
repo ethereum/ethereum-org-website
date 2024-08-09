@@ -81,6 +81,17 @@ const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
 const cachedXmlBlogFeeds = runOnlyOnce(async () => await fetchRSS(XML_FEEDS))
 const cachedAttestantBlog = runOnlyOnce(fetchAttestantPosts)
 
+const BentoTitle = ({ className }) => (
+  <div className={cn("flex flex-col", className)}>
+    <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
+      Use Cases
+    </div>
+    <h2 className="mb-4 me-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
+      A new way to use the internet
+    </h2>
+  </div>
+)
+
 type Props = BasePageProps & {
   communityEvents: CommunityEventsReturnType
   metricResults: AllMetricData
@@ -153,10 +164,12 @@ const HomePage = ({
       action: "Learn more",
       href: "/stablecoins/",
       imgSrc: ImpactImage,
-      imgWidth: 512,
+      imgWidth: 500,
       className: cn(
         "bg-gradient-primary border-primary/10",
-        "col-span-7 col-start-5 row-span-1 row-start-1"
+        "flex-col lg:flex-col-reverse xl:flex-row",
+        "lg:col-span-6 lg:row-start-2",
+        "xl:col-span-7 xl:col-start-5 xl:row-start-1"
       ),
     },
     {
@@ -167,8 +180,10 @@ const HomePage = ({
       href: "/defi/",
       imgSrc: ManAndDogImage,
       className: cn(
-        "bg-gradient-accent-c border-accent-c/10 flex-col-reverse",
-        "col-span-4 col-start-2 row-span-1 row-start-2"
+        "bg-gradient-accent-c border-accent-c/10",
+        "flex-col lg:flex-col xl:flex-col-reverse",
+        "lg:col-span-6 lg:col-start-7 lg:row-start-2",
+        "xl:col-span-4 xl:col-start-2 xl:row-start-2"
       ),
     },
     {
@@ -178,9 +193,12 @@ const HomePage = ({
       action: "Browse apps",
       href: "/dapps/",
       imgSrc: MergeImage,
+      imgWidth: 320,
       className: cn(
-        "bg-gradient-accent-b border-accent-b/10 flex-col",
-        "col-span-3 col-start-6 row-span-1 row-start-2"
+        "bg-gradient-accent-b border-accent-b/10",
+        "flex-col lg:flex-row xl:flex-col",
+        "lg:col-span-12 lg:row-start-3",
+        "xl:col-span-3 xl:col-start-6 xl:row-start-2"
       ),
     },
     {
@@ -191,8 +209,10 @@ const HomePage = ({
       href: "/layer-2/",
       imgSrc: ManBabyWomanImage,
       className: cn(
-        "bg-gradient-accent-a border-accent-a/10 flex-col-reverse",
-        "col-span-3 col-start-9 row-span-2 row-start-2"
+        "bg-gradient-accent-a border-accent-a/10",
+        "flex-col lg:flex-col-reverse xl:flex-col-reverse",
+        "lg:col-span-6 lg:col-start-7 lg:row-start-4",
+        "xl:col-span-3 xl:col-start-9 xl:row-span-2 xl:row-start-2"
       ),
     },
     {
@@ -202,10 +222,12 @@ const HomePage = ({
       action: "More on NFTs",
       href: "/nft/",
       imgSrc: RobotBarImage,
-      imgWidth: 224,
+      imgWidth: 324,
       className: cn(
         "bg-gradient-primary border-primary/10",
-        "col-span-7 col-start-2 row-span-1 row-start-3"
+        "flex-col lg:flex-col xl:flex-row",
+        "lg:col-span-6 lg:row-start-4",
+        "xl:col-span-7 xl:col-start-2 xl:row-start-3"
       ),
     },
   ]
@@ -345,26 +367,14 @@ const HomePage = ({
           ))}
         </div>
 
-        <HomeSection
-          tag="Use cases"
-          title="A new way to use the internet"
-          className="md:hidden"
-        >
-          <span className="text-[5rem]">👷‍♀️🚧🔜</span>
-        </HomeSection>
-
-        <div className="hidden grid-cols-bento gap-4 md:grid">
-          <div className="col-span-3 col-start-2 flex flex-col gap-8">
-            <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
-              Use Cases
-            </div>
-            <h2 className="mb-4 me-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
-              A new way to use the internet
-            </h2>
+        <div>
+          <BentoTitle className="lg:hidden" />
+          <div className="carousel flex grid-cols-bento flex-row gap-4 lg:grid">
+            <BentoTitle className="hidden lg:col-span-12 lg:flex xl:col-span-3 xl:col-start-2" />
+            {bentoBoxes.map((box) => (
+              <BentoBox key={box.title} {...box} />
+            ))}
           </div>
-          {bentoBoxes.map((box) => (
-            <BentoBox key={box.title} {...box} />
-          ))}
         </div>
 
         <HomeSection
@@ -540,7 +550,8 @@ const HomePage = ({
               >
                 <div
                   className={cn(
-                    "flex flex-col space-y-0.5 text-center text-base sm:text-start"
+                    "flex flex-col space-y-0.5 text-center text-base sm:text-start",
+                    "flex sm:flex md:flex lg:flex xl:flex 2xl:flex"
                   )}
                 >
                   <p className="italic text-body-medium">
