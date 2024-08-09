@@ -59,7 +59,7 @@
   }
 
   /* Dark mode token declarations */
-  [data-theme="dark"] {
+  .dark {
     --body: var(--gray-100);
     --body-medium: var(--gray-400);
     --body-light: var(--gray-600);
