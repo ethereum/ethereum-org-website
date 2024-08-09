@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils/cn"
 
 import { MAIN_NAV_ID, SECTION_LABELS } from "@/lib/constants"
 
-import { Button } from "../../../../tailwind/ui/buttons/Button"
+import { Button } from "../../ui/buttons/Button"
 import type { NavSections } from "../types"
 
 import { useNavMenu } from "./useNavMenu"

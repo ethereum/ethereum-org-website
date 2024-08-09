@@ -9,9 +9,8 @@ import Translation from "@/components/Translation"
 import { cn } from "@/lib/utils/cn"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
-import { Button } from "../../tailwind/ui/buttons/Button"
-import { BaseLink } from "../../tailwind/ui/Link"
-
+import { Button } from "./ui/buttons/Button"
+import { BaseLink } from "./ui/Link"
 import { List, ListItem } from "./ui/list"
 
 const socialLinks = [

@@ -1,6 +1,8 @@
 import { useTranslation } from "next-i18next"
 import { MdClose } from "react-icons/md"
 
+import { Button } from "@/components/ui/buttons/Button"
+
 import {
   Popover,
   PopoverClose,
@@ -10,8 +12,6 @@ import {
 
 import FixedDot from "./FixedDot"
 import { useFeedbackWidget } from "./useFeedbackWidget"
-
-import { Button } from "@/../tailwind/ui/buttons/Button"
 
 const FeedbackWidget = () => {
   const { t } = useTranslation("common")
