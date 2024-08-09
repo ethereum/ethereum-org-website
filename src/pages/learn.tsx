@@ -5,7 +5,6 @@ import type { HTMLAttributes, ReactNode } from "react"
 
 import type { BasePageProps, ChildOnlyProp, Lang, ToCItem } from "@/lib/types"
 
-import ButtonLink from "@/components/Buttons/ButtonLink"
 import OriginalCard, {
   type CardProps as OriginalCardProps,
 } from "@/components/Card"
@@ -15,11 +14,12 @@ import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image, type ImageProps } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
-import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import { ContentContainer } from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Center, Flex, Stack } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
