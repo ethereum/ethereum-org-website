@@ -664,6 +664,12 @@ export type FilterOption = {
   }>
 }
 
+export interface TPresetFilters<TPreset> {
+  title: string
+  description: string
+  presetFilters: TPreset
+}
+
 export interface WalletPersonas {
   title: string
   description: string
