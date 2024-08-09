@@ -4,6 +4,7 @@
 
 @import "./colors.css";
 @import "./semantic-tokens.css";
+@import "./fonts.css";
 
 @layer base {
   :root {
