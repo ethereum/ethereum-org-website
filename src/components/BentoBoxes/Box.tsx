@@ -26,7 +26,7 @@ const BentoBox = ({
 }: BentoBoxProps) => (
   <div
     className={cn(
-      "flex items-center justify-evenly gap-16 rounded-2xl border p-8",
+      "bg-gradient-to-right flex items-center justify-evenly gap-16 rounded-2xl border p-8",
       className
     )}
   >
