@@ -26,7 +26,7 @@ const SvgButtonLink = ({
     {...props}
   >
     <div className="flex flex-col items-center gap-3.5 lg:flex-row">
-      <div className="relative grid size-[5em] place-items-center rounded-2xl border shadow-lg group-hover:shadow-2xl group-focus:shadow-2xl">
+      <div className="relative grid size-[5em] place-items-center rounded-2xl border shadow-lg group-hover:shadow-2xl group-hover:transition-shadow group-hover:duration-100 group-focus:shadow-2xl group-focus:transition-shadow group-focus:duration-100">
         <Svg className="group-hover:animate-pulse group-focus:animate-pulse" />
       </div>
       <div className="text-center lg:text-start">
