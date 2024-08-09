@@ -53,6 +53,7 @@ const config = {
           "high-contrast": "rgba(var(--primary-high-contrast))",
           "low-contrast": "rgba(var(--primary-low-contrast))",
           hover: "rgba(var(--primary-hover))",
+          action: "rgba(var(--primary-action))",
           light: "rgba(var(--primary-light))" /* TODO: Migrate/deprecate */,
           dark: "rgba(var(--primary-dark))" /* TODO: Migrate/deprecate */,
         },
