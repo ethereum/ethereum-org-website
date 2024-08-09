@@ -702,6 +702,8 @@ export interface WalletPersonas {
   }
 }
 
+export type ProductTablePresetFilters = WalletPersonas
+
 export interface DropdownOption {
   label: string
   value: string
