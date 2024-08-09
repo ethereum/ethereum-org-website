@@ -116,6 +116,7 @@ const config = {
         "gradient-accent-a": "var(--gradient-accent-a)",
         "gradient-accent-b": "var(--gradient-accent-b)",
         "gradient-accent-c": "var(--gradient-accent-c)",
+        "gradient-primary-hero": "var(--gradient-primary-hero)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",

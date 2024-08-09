@@ -24,28 +24,37 @@
     --accent-c: var(--teal-600);
 
     /* Gradients */
-    --gradient-angle: 90deg;
-    --start-opacity: 0.1;
-    --end-opacity: 0.05;
+    --gradient-primary-angle: 90deg;
+    --gradient-primary-opacity-from: 0.1;
+    --gradient-primary-opacity-to: 0.05;
     --gradient-primary: linear-gradient(
-      var(--gradient-angle),
-      rgba(var(--purple-500), var(--start-opacity)) 19.09%,
-      rgba(var(--purple-500), var(--end-opacity)) 40.63%
+      var(--gradient-primary-angle),
+      rgba(var(--purple-500), var(--gradient-primary-opacity-from)) 19.09%,
+      rgba(var(--purple-500), var(--gradient-primary-opacity-to)) 40.63%
     );
     --gradient-accent-a: linear-gradient(
-      var(--gradient-angle),
-      rgba(var(--blue-500), var(--start-opacity)) 19.09%,
-      rgba(var(--blue-500), var(--end-opacity)) 40.63%
+      var(--gradient-primary-angle),
+      rgba(var(--blue-500), var(--gradient-primary-opacity-from)) 19.09%,
+      rgba(var(--blue-500), var(--gradient-primary-opacity-to)) 40.63%
     );
     --gradient-accent-b: linear-gradient(
-      var(--gradient-angle),
-      rgba(var(--pink-500), var(--start-opacity)) 19.09%,
-      rgba(var(--pink-500), var(--end-opacity)) 40.63%
+      var(--gradient-primary-angle),
+      rgba(var(--pink-500), var(--gradient-primary-opacity-from)) 19.09%,
+      rgba(var(--pink-500), var(--gradient-primary-opacity-to)) 40.63%
     );
     --gradient-accent-c: linear-gradient(
-      var(--gradient-angle),
-      rgba(var(--teal-500), var(--start-opacity)) 19.09%,
-      rgba(var(--teal-500), var(--end-opacity)) 40.63%
+      var(--gradient-primary-angle),
+      rgba(var(--teal-500), var(--gradient-primary-opacity-from)) 19.09%,
+      rgba(var(--teal-500), var(--gradient-primary-opacity-to)) 40.63%
+    );
+
+    --gradient-primary-hero-angle: 180deg;
+    --gradient-primary-hero-opacity-from: 0.1;
+    --gradient-primary-hero-opacity-to: 0;
+    --gradient-primary-hero: linear-gradient(
+      var(--gradient-primary-hero-angle),
+      rgba(var(--purple-500), var(--gradient-primary-hero-opacity-from)) 0%,
+      rgba(var(--purple-500), var(--gradient-primary-hero-opacity-to)) 25%
     );
   }
 
@@ -68,7 +77,9 @@
     --accent-c: var(--teal-400);
 
     /* Gradients */
-    --gradient-angle: 180deg;
-    --end-opacity: 0.2;
+    --gradient-primary-angle: 180deg;
+    --gradient-primary-opacity-to: 0.2;
+
+    --gradient-primary-hero-opacity-from: 0.5;
   }
 }
