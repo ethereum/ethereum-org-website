@@ -60,21 +60,12 @@ const config = {
         accent: {
           a: {
             DEFAULT: "rgba(var(--accent-a))",
-            "high-contrast": "rgba(var(--accent-a-high-contrast))",
-            "low-contrast": "rgba(var(--accent-a-low-contrast))",
-            hover: "rgba(var(--accent-a-hover))",
           },
           b: {
             DEFAULT: "rgba(var(--accent-b))",
-            "high-contrast": "rgba(var(--accent-b-high-contrast))",
-            "low-contrast": "rgba(var(--accent-b-low-contrast))",
-            hover: "rgba(var(--accent-b-hover))",
           },
           c: {
             DEFAULT: "rgba(var(--accent-c))",
-            "high-contrast": "rgba(var(--accent-c-high-contrast))",
-            "low-contrast": "rgba(var(--accent-c-low-contrast))",
-            hover: "rgba(var(--accent-c-hover))",
           },
         },
         body: {
