@@ -148,7 +148,9 @@
     /* Complementary Set */
     --attention-outline: var(--attention-light);
 
-    --error-light: var(--error-light);
+    --error: var(--red-500);
+    --error-light: var(--red-100);
+    --error-outline: var(--error);
     /* ! Deprecating error-neutral */
     --error-netural: var(--red-900);
 
