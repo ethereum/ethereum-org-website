@@ -8,7 +8,6 @@ export type HorizontalCardProps = Omit<FlexProps, "title"> & {
   emoji: string
   title?: ReactNode
   description: ReactNode
-  emojiSize?: number
 }
 
 const HorizontalCard = ({
@@ -16,11 +15,10 @@ const HorizontalCard = ({
   title,
   description,
   children,
-  emojiSize,
   ...rest
 }: HorizontalCardProps) => (
   <Flex borderRadius="base" {...rest}>
-    <Emoji fontSize={`${emojiSize}rem`} text={emoji} />
+    <Emoji className="text-5xl" text={emoji} />
     <Box flexGrow="0" flexShrink="1" flexBasis="75%" ms="8">
       <Text fontSize="lg">{title}</Text>
       <Text mt="-4" mb="2">

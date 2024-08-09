@@ -16,6 +16,7 @@ import Emoji from "@/components/Emoji"
 import { BaseLink } from "@/components/Link"
 import Text from "@/components/OldText"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import docLinks from "@/data/developer-docs-links.yaml"
@@ -50,7 +51,7 @@ type CardLinkProps = {
 
 const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
   const { t } = useTranslation("page-developers-docs")
-  const { flipForRtl } = useRtlFlip()
+  const { isRtl } = useRtlFlip()
 
   const xPadding = isPrev ? { ps: "0" } : { pe: 0 }
 
@@ -70,8 +71,10 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
       <Box textDecoration="none" p={4} h="100%" order={isPrev ? 0 : 1}>
         <Emoji
           text={isPrev ? ":point_left:" : ":point_right:"}
-          fontSize="5xl"
-          transform={contentNotTranslated ? undefined : flipForRtl}
+          className={cn(
+            "text-5xl",
+            !contentNotTranslated && isRtl ? "-scale-x-100" : ""
+          )}
         />
       </Box>
       <TextDiv {...xPadding} {...(!isPrev && { textAlign: "end" })}>

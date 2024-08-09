@@ -82,13 +82,13 @@ const EventCard = ({
     >
       <Text color="primary.base" marginBottom={0} textAlign="end">
         {date}
-        <Emoji text=":spiral_calendar:" fontSize="md" ms={2} />
+        <Emoji text=":spiral_calendar:" className="ms-2 text-md" />
       </Text>
       <Text marginBottom={0} textAlign="end">
         <Text as="span" opacity={0.6}>
           {location}
         </Text>
-        <Emoji text=":round_pushpin:" fontSize="md" ms={2} />
+        <Emoji text=":round_pushpin:" className="ms-2 text-md" />
       </Text>
       <Heading as="h3" marginTop={0} fontWeight="semibold" lineHeight={1.4}>
         {title}
