@@ -53,8 +53,8 @@ const config = {
           "high-contrast": "rgba(var(--primary-high-contrast))",
           "low-contrast": "rgba(var(--primary-low-contrast))",
           hover: "rgba(var(--primary-hover))",
-          light: "var(--primary-light)" /* TODO: Migrate/deprecate */,
-          dark: "var(--primary-dark)" /* TODO: Migrate/deprecate */,
+          light: "rgba(var(--primary-light))" /* TODO: Migrate/deprecate */,
+          dark: "rgba(var(--primary-dark))" /* TODO: Migrate/deprecate */,
         },
         accent: {
           a: {
@@ -77,15 +77,15 @@ const config = {
           },
         },
         body: {
-          DEFAULT: "var(--body)",
-          medium: "var(--body-medium)",
-          light: "var(--body-light)",
+          DEFAULT: "rgba(var(--body))",
+          medium: "rgba(var(--body-medium))",
+          light: "rgba(var(--body-light))",
         },
         background: {
-          DEFAULT: "var(--background)",
-          highlight: "var(--background-highlight)",
+          DEFAULT: "rgba(var(--background))",
+          highlight: "rgba(var(--background-highlight))",
         },
-        disabled: "var(--disabled)",
+        disabled: "rgba(var(--disabled))",
         "tooltip-shadow": "var(--tooltip-shadow)",
         "hub-hero-content-bg": "var(--hub-hero-content-bg)",
         attention: {
@@ -124,15 +124,15 @@ const config = {
         drop: "0 4px 17px 0 rgba(0,0,0,0.08)",
         "table-box-hover": "0px 8px 17px rgba(0, 0, 0, 0.15)",
         "table-item-box": "var(--table-item-box-shadow)",
-        "table-item-box-hover": "0 0 1px var(--primary)",
+        "table-item-box-hover": "0 0 1px rgba(var(--primary))",
         "grid-yellow-box-shadow": "8px 8px 0px 0px #ffe78e",
         "grid-blue-box-shadow": "8px 8px 0px 0px #a7d0f4",
         // Part of new DS
         "menu-accordion":
           "0px 2px 2px 0px rgba(0, 0, 0, 0.12) inset, 0px -3px 2px 0px rgba(0, 0, 0, 0.14) inset",
         // TODO: From current theme. Deprecate for 'button-hover'
-        primary: "4px 4px 0px 0px var(--primary)",
-        "button-hover": "4px 4px 0 0 var(--primary-low-contrast)",
+        primary: "4px 4px 0px 0px rgba(var(--primary))",
+        "button-hover": "4px 4px 0 0 rgba(var(--primary-low-contrast))",
         tooltip: "0 0 16px var(--tooltip-shadow)",
       },
       spacing: {

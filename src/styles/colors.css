@@ -60,16 +60,17 @@
     --teal-800: 28, 69, 69; /* #1C4545 */
     --teal-900: 31, 49, 47; /* #1F312F */
 
-    --orange-100: #fff0db;
-    --orange-200: #ffd7a7;
-    --orange-300: #feb077;
-    --orange-400: #fd8640;
-    --orange-500: #fb610e;
-    --orange-600: #ec4a0a;
-    --orange-700: #c4350a;
-    --orange-800: #7d2711;
-    --orange-900: #3a291d;
+    --orange-100: 255, 240, 219; /* #FFF0DB */
+    --orange-200: 255, 215, 167; /* #FFD7A7 */
+    --orange-300: 254, 176, 119; /* #FEB077 */
+    --orange-400: 253, 134, 64; /* #FD8640 */
+    --orange-500: 251, 97, 14; /* #FB610E */
+    --orange-600: 236, 74, 10; /* #EC4A0A */
+    --orange-700: 196, 53, 10; /* #C4350A */
+    --orange-800: 125, 39, 17; /* #7D2711 */
+    --orange-900: 58, 41, 29; /* #3A291D */
 
+    /* TODO: Update these to R,G,B format, deprecate as needed */
     --red-100: #f7c8c8;
     --red-500: #b80000;
     /* ! Deprecating 900, error.neutral */
