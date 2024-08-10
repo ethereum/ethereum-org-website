@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss"
 import plugin from "tailwindcss/plugin"
 
 const config = {
-  darkMode: ["class"],
+  darkMode: ["selector", "[data-theme=dark]"],
   content: [
     "./src/**/*.{ts,tsx}",
     // TODO: remove after migration

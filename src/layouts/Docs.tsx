@@ -1,4 +1,5 @@
 import { useRouter } from "next/router"
+import type { HTMLAttributes } from "react"
 import {
   Badge,
   Box,
@@ -6,7 +7,6 @@ import {
   Divider as ChakraDivider,
   Flex,
   type FlexProps,
-  type HeadingProps,
   type ListProps,
   OrderedList as ChakraOrderedList,
   UnorderedList as ChakraUnorderedList,
@@ -45,6 +45,7 @@ import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
 import YouTube from "@/components/YouTube"
 
+import { cn } from "@/lib/utils/cn"
 import { getEditPath } from "@/lib/utils/editPath"
 
 const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
@@ -80,47 +81,33 @@ const ContentContainer = (props: ContentContainerProps) => (
   />
 )
 
-const baseHeadingStyle: HeadingProps = {
-  fontFamily: "mono",
-  textTransform: "uppercase",
-  fontWeight: "bold",
-  scrollMarginTop: 40,
-}
+const baseHeadingClasses = "font-mono uppercase font-bold scroll-mt-40"
 
-const H1 = (props: HeadingProps) => (
+const H1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading1
-    {...baseHeadingStyle}
-    fontSize={{ base: "2rem", md: "2.5rem" }}
-    mt={{ base: 0, md: 8 }}
-    mb="8"
+    className={cn(baseHeadingClasses, "max-md:mt-0 max-md:text-[2rem]")}
     {...props}
   />
 )
 
-const H2 = (props: HeadingProps) => (
+const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading2
-    {...baseHeadingStyle}
-    fontSize="2xl"
-    lineHeight={{ base: 1.2, md: 1.4 }}
-    pb={2}
-    mt={12}
-    borderBottom="1px"
-    borderColor="border"
+    className={cn(
+      baseHeadingClasses,
+      "mt-12 border-b-[1px] border-[#e5e5e5] pb-2 text-2xl max-md:leading-4xs dark:border-[#333]"
+    )}
     {...props}
   />
 )
 
-const baseSubHeadingStyles: HeadingProps = {
-  lineHeight: 1.4,
-  fontWeight: "semibold",
-}
+const baseSubHeadingClasses = "leading-xs font-semibold"
 
-const H3 = (props: HeadingProps) => (
-  <MdHeading3 {...baseSubHeadingStyles} mt={12} {...props} />
+const H3 = (props: HTMLAttributes<HTMLHeadingElement>) => (
+  <MdHeading3 className={cn(baseSubHeadingClasses, "mt-12")} {...props} />
 )
 
-const H4 = (props: HeadingProps) => (
-  <MdHeading4 {...baseSubHeadingStyles} {...props} />
+const H4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
+  <MdHeading4 className={baseSubHeadingClasses} {...props} />
 )
 
 const UnorderedList = (props: ListProps) => (

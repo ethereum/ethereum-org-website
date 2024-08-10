@@ -1,11 +1,11 @@
 import { useRouter } from "next/router"
+import type { HTMLAttributes } from "react"
 import {
   Badge,
   Box,
   type BoxProps,
   Divider,
   Flex,
-  type HeadingProps,
   Kbd,
   Text,
   type TextProps,
@@ -65,40 +65,30 @@ const ContentContainer = (props: ContentContainerProps) => {
   )
 }
 
-const Heading1 = (props: HeadingProps) => (
+const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading1
-    fontSize={{ base: "1.75rem", lg: "2.5rem" }}
-    fontFamily="monospace"
-    textTransform="uppercase"
+    className="my-8 font-monospace uppercase max-lg:text-[1.75rem]"
     {...props}
   />
 )
 
-const Heading2 = (props: HeadingProps) => (
+const Heading2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading2
-    fontSize={{ base: "2xl", md: "2rem" }}
-    fontFamily="monospace"
-    textTransform="uppercase"
-    scrollMarginTop={40}
-    mt={12}
+    className="mt-12 scroll-mt-40 font-monospace uppercase max-md:text-2xl"
     {...props}
   />
 )
 
-const Heading3 = (props: HeadingProps) => (
+const Heading3 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading3
-    fontWeight={{ base: "semibold" }}
-    fontSize={{ base: "1rem", md: "1.5rem" }}
-    scrollMarginTop={40}
+    className="scroll-mt-40 font-semibold max-md:text-md"
     {...props}
   />
 )
 
-const Heading4 = (props: HeadingProps) => (
+const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading4
-    fontWeight={{ base: "semibold" }}
-    fontSize={{ base: "1rem", md: "1.25rem" }}
-    scrollMarginTop={40}
+    className="scroll-mt-40 font-semibold max-md:text-md"
     {...props}
   />
 )

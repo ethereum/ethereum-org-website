@@ -1,18 +1,11 @@
-import { ComponentProps } from "react"
+import { ComponentProps, type HTMLAttributes } from "react"
 import {
   Badge,
   Box,
   type BoxProps,
-  chakra,
-  Divider as ChakraDivider,
-  Flex,
-  type FlexProps,
-  type HeadingProps,
   ListItem,
   OrderedList,
-  Text,
   UnorderedList,
-  useToken,
 } from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "@/lib/types"
@@ -23,14 +16,16 @@ import ButtonDropdown, {
 import { ButtonLink } from "@/components/Buttons"
 import Contributors from "@/components/Contributors"
 import MarkdownImage from "@/components/MarkdownImage"
-import OldHeading from "@/components/OldHeading"
 import { mdxTableComponents } from "@/components/Table"
 import TooltipLink from "@/components/TooltipLink"
 import YouTube from "@/components/YouTube"
 
+import { cn } from "@/lib/utils/cn"
+
 import ContributorsQuizBanner from "./Banners/ContributorsQuizBanner"
 import GlossaryTooltip from "./Glossary/GlossaryTooltip"
 import { StandaloneQuizWidget } from "./Quiz/QuizWidget"
+import { Flex } from "./ui/flex"
 import Card from "./Card"
 import DocLink from "./DocLink"
 import Emoji from "./Emoji"
@@ -42,90 +37,79 @@ import IssuesList from "./IssuesList"
 import LocaleDateTime from "./LocaleDateTime"
 import MainArticle from "./MainArticle"
 
-/**
- * Base HTML elements
- */
-const headingPropsForAnchor = (id?: string): HeadingProps => {
-  if (!id) return {}
-  return {
-    scrollMarginTop: 28,
-    id,
-    "data-group": true,
-    position: "relative",
-  } as HeadingProps
-}
-
-export const commonHeadingProps = (id?: string): HeadingProps => ({
-  fontWeight: 700,
-  lineHeight: 1.4,
-  ...headingPropsForAnchor(id),
+export const commonHeadingAttributes = (className: string, id?: string) => ({
+  id,
+  className: cn(
+    "font-bold leading-xs my-8",
+    id && "scroll-mt-28 relative",
+    className
+  ),
+  "data-group": !!id || undefined,
 })
 
-export const Heading1 = ({ children, ...rest }: HeadingProps) => (
-  <OldHeading as="h1" {...commonHeadingProps()} fontSize="2.5rem" {...rest}>
+type HeadingProps = HTMLAttributes<HTMLHeadingElement>
+
+export const Heading1 = ({ children, className, ...rest }: HeadingProps) => (
+  <h1 {...commonHeadingAttributes(cn("text-[2.5rem]", className))} {...rest}>
     {children}
-  </OldHeading>
+  </h1>
 )
 
-export const Heading2 = ({ id, children, ...rest }: HeadingProps) => (
-  <OldHeading
-    as="h2"
-    {...commonHeadingProps(id)}
-    fontSize="2rem"
-    mt={16}
+export const Heading2 = ({
+  id,
+  children,
+  className,
+  ...rest
+}: HeadingProps) => (
+  <h2
+    {...commonHeadingAttributes(cn("text-[2rem] mt-16", className), id)}
     {...rest}
   >
     <IdAnchor id={id} />
     {children}
-  </OldHeading>
+  </h2>
 )
 
-export const Heading3 = ({ id, children, ...rest }: HeadingProps) => (
-  <OldHeading as="h3" {...commonHeadingProps(id)} fontSize="2xl" {...rest}>
+export const Heading3 = ({
+  id,
+  children,
+  className,
+  ...rest
+}: HeadingProps) => (
+  <h3 {...commonHeadingAttributes(cn("text-2xl", className), id)} {...rest}>
     <IdAnchor id={id} />
     {children}
-  </OldHeading>
+  </h3>
 )
 
-export const Heading4 = ({ id, children, ...rest }: HeadingProps) => (
-  <OldHeading
-    as="h4"
-    {...commonHeadingProps(id)}
-    fontSize="xl"
-    fontWeight={600}
+export const Heading4 = ({
+  id,
+  children,
+  className,
+  ...rest
+}: HeadingProps) => (
+  <h4
+    {...commonHeadingAttributes(cn("text-xl font-semibold", className), id)}
     {...rest}
   >
     <IdAnchor id={id} />
     {children}
-  </OldHeading>
+  </h4>
 )
 
 export const Pre = (props: ChildOnlyProp) => (
-  <chakra.pre
-    bg="preBackground"
-    border="1px"
-    borderColor="preBorder"
-    borderRadius="base"
-    maxW="full"
-    overflowX="scroll"
-    p={4}
-    whiteSpace="pre-wrap"
+  <pre
+    className="max-w-full overflow-x-scroll whitespace-pre-wrap rounded border-[1px] border-[rgba(0,0,0,.05)] bg-[#f2f2f2] p-4 dark:border-[hsla(0,0%,100%,.05)] dark:bg-[#191919]"
     {...props}
   />
 )
 
 export const Paragraph = (props: ChildOnlyProp) => (
-  <Text mt={8} mb={4} {...props} />
+  <p className="mb-4 mt-8" {...props} />
 )
 
 export const HR = () => (
-  <ChakraDivider
-    mt={8}
-    mb={4}
-    display="inline-block"
-    position="inherit"
-    bg="border"
-  />
+  <hr className="mb-4 mt-8 inline-block w-full bg-[#e5e5e5] opacity-60 dark:bg-[#333]" />
 )
 
 // All base html element components
@@ -150,53 +134,36 @@ export const htmlElements = {
 /**
  * Custom React components
  */
-export const Page = (props: FlexProps) => (
+export const Page = ({
+  className,
+  ...props
+}: HTMLAttributes<HTMLDivElement>) => (
   <Flex
-    flexDirection={{ base: "column", lg: "row" }}
-    justifyContent="space-between"
-    mx="auto"
-    mb={16}
-    pt={{ lg: 16 }}
-    width="full"
-    sx={{ "h2:first-of-type": { mt: { lg: 0 } } }}
+    className={cn(
+      "mx-auto mb-16 w-full flex-col justify-between lg:flex-row lg:pt-16 lg:first-of-type:[&_h2]:mt-0",
+      className
+    )}
     {...props}
   />
 )
 
-export const Title = (props: ChildOnlyProp) => <Heading1 mt={4} {...props} />
+export const Title = (props: ChildOnlyProp) => (
+  <Heading1 className="mt-4" {...props} />
+)
 
 export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
-  const lgBp = useToken("breakpoints", "lg")
-
   return (
-    <Box
-      as={MainArticle}
-      flex={`1 1 ${lgBp}`}
-      position="relative"
-      px={8}
-      pb={8}
+    <MainArticle
+      className="relative flex-[1_1_992px] px-8 pb-8 [&_.citation_p]:text-[#666] dark:[&_.citation_p]:text-[#080808]"
       {...props}
-      sx={{
-        ".citation p": {
-          color: "text200",
-        },
-      }}
     />
   )
 }
 
 export const MobileButton = (props: ChildOnlyProp) => {
-  const borderColor = useToken("colors", "border")
   return (
-    <Box
-      hideFrom="lg"
-      bg="background.base"
-      boxShadow={`0 -1px 0 ${borderColor}`}
-      position="sticky"
-      bottom={0}
-      zIndex={99}
-      p={8}
-      width="full"
+    <div
+      className="sticky bottom-0 z-[99] w-full bg-background p-8 shadow-[0_-1px_0_#e5e5e5] lg:hidden dark:shadow-[0_-1px_0_#333]"
       {...props}
     />
   )
@@ -204,18 +171,24 @@ export const MobileButton = (props: ChildOnlyProp) => {
 
 export const StyledButtonDropdown = ({
   list,
+  className,
   ...rest
-}: FlexProps & Pick<ButtonDropdownProps, "list">) => (
-  <Flex align="flex-end" justify="flex-end" mb={8} {...rest}>
+}: HTMLAttributes<HTMLDivElement> & Pick<ButtonDropdownProps, "list">) => (
+  <Flex className={cn("mb-8 items-end justify-end", className)} {...rest}>
     <ButtonDropdown list={list} w={{ base: "full", lg: "auto" }} minW="240px" />
   </Flex>
 )
 
-export const MobileButtonDropdown = (
-  props: ComponentProps<typeof StyledButtonDropdown>
-) => <StyledButtonDropdown mb={0} {...props} />
+export const MobileButtonDropdown = ({
+  className,
+  ...props
+}: ComponentProps<typeof StyledButtonDropdown>) => (
+  <StyledButtonDropdown className={cn("mb-0", className)} {...props} />
+)
 
-export const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
+export const Divider = () => (
+  <div className="my-16 h-1 w-[10%] bg-[#a4a4f3] dark:bg-[#ffc7a7]" />
+)
 
 // All custom React components
 export const reactComponents = {

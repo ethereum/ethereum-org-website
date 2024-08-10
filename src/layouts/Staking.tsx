@@ -1,11 +1,11 @@
 import { useTranslation } from "next-i18next"
+import type { HTMLAttributes } from "react"
 import {
   Box,
   type BoxProps,
   chakra,
   Flex,
   Grid,
-  type HeadingProps,
   SimpleGrid,
   Text,
   UnorderedList,
@@ -43,16 +43,12 @@ import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabCompari
 import TableOfContents from "@/components/TableOfContents"
 import UpgradeStatus from "@/components/UpgradeStatus"
 
-const Heading1 = (props: HeadingProps) => (
-  <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />
+const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
+  <MdHeading1 className="md:text-5xl" {...props} />
 )
 
-const Heading4 = (props: HeadingProps) => (
-  <MdHeading4
-    fontSize={{ base: "md", md: "xl" }}
-    fontWeight="semibold"
-    {...props}
-  />
+const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
+  <MdHeading4 className="font-semibold max-md:text-md" {...props} />
 )
 
 const Paragraph = (props: ChildOnlyProp) => (

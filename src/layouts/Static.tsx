@@ -1,5 +1,6 @@
 import { useRouter } from "next/router"
-import { Box, Flex, type HeadingProps, Icon } from "@chakra-ui/react"
+import type { HTMLAttributes } from "react"
+import { Box, Flex, Icon } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
@@ -38,17 +39,17 @@ import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import GuideHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
 
-const Heading1 = (props: HeadingProps) => (
-  <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />
+const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
+  <MdHeading1 className="md:text-5xl" {...props} />
 )
-const Heading2 = (props: HeadingProps) => (
-  <MdHeading2 fontSize={{ base: "2xl", md: "2rem" }} {...props} />
+const Heading2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
+  <MdHeading2 className="max-md:text-2xl" {...props} />
 )
-const Heading3 = (props: HeadingProps) => (
-  <MdHeading3 fontSize={{ base: "xl", md: "2xl" }} {...props} />
+const Heading3 = (props: HTMLAttributes<HTMLHeadingElement>) => (
+  <MdHeading3 className="max-md:text-xl" {...props} />
 )
-const Heading4 = (props: HeadingProps) => (
-  <MdHeading4 fontSize={{ base: "md", md: "xl" }} {...props} />
+const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
+  <MdHeading4 className="max-md:text-md" {...props} />
 )
 
 // Static layout components
