@@ -78,7 +78,7 @@
     );
   }
 
-  [data-theme="dark"] {
+  .dark {
     /* Semantic Colors: Dark mode */
     /* ! Deprecating primary-light */
     --primary-light: var(--orange-100);
