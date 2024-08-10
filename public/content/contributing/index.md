@@ -19,7 +19,7 @@ We are a welcoming community that will help you grow and educate in the Ethereum
 - [Work on an open issue](https://github.com/ethereum/ethereum-org-website/issues) – Work we've identified that needs doing
 
 **Design**
-- [Help design the website](/contributing/design/) Designers of all levels can contribute to improve the website
+- [Help design the website](/contributing/design/) – Designers of all levels can contribute to improve the website
 
 **Content**
 - [Create/edit content](/contributing/#how-to-update-content) – Suggest new pages or make tweaks to what's here already
@@ -94,7 +94,7 @@ If your contribution gets merged into ethereum.org, you will have a chance to cl
 
 ### How to claim
 1. Join our [Discord server](https://discord.gg/ethereum-org).
-2. Paste a link to your contribution in the `#🥇 | proof-of-contribution` channel
+2. Paste a link to your contribution in the `#🥇 | proof-of-contribution` channel.
 3. Wait for a member of our team to send you a link to your OAT.
 4. Claim your OAT!
 
