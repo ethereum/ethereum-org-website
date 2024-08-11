@@ -16,7 +16,7 @@ Cheaper hard drives can be used to store older data but those are too slow to ke
 
 There are several ways to reduce the amount of data each node has to store, each requiring Ethereum's core protocol to be updated to a different extent:
 
-- **History expiry**: enable nodes to discard state data older than X blocks, but does not change how Ethereum client's handle state data
+- **History expiry**: enable nodes to discard state data older than X blocks, but does not change how Ethereum client's handle state data.
 - **State expiry**: allow state data that is not used frequently to become inactive. Inactive data can be ignored by clients until it is resurrected.
 - **Weak statelessness**: only block producers need access to full state data, other nodes can verify blocks without a local state database.
 - **Strong statelessness**: no nodes need access to the full state data.
