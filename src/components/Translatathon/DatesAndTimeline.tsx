@@ -52,7 +52,7 @@ export const dates = [
     description:
       "We will announce the results and winners on the ethereum.org community Call",
     startDate: new Date("2024-08-29T12:00:00Z"),
-    endDate: new Date("2024-09-30T12:00:00Z"),
+    endDate: null,
     link: null,
     linkText: null,
   },
@@ -65,7 +65,8 @@ export const DatesAndTimeline = () => {
     <Flex direction="column" p={4} mb={16}>
       {dates.map((date, index) => {
         const isLive =
-          todaysDate >= date.startDate && todaysDate <= date.endDate
+          todaysDate >= date.startDate &&
+          (date.endDate ? todaysDate <= date.endDate : true)
         return (
           <Flex
             key={index}
@@ -96,8 +97,8 @@ export const DatesAndTimeline = () => {
                 color={isLive ? "background.base" : "body.base"}
               >
                 <Text>
-                  {date.startDate.toDateString()} -{" "}
-                  {date.endDate.toDateString()}
+                  {date.startDate.toDateString()}{" "}
+                  {date.endDate ? `- ${date.endDate.toDateString()}` : ""}
                 </Text>
               </Flex>
               <Flex direction="column">
