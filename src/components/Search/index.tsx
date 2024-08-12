@@ -89,10 +89,8 @@ const Search = forwardRef<HTMLButtonElement, Props>(
                 items.map((item: DocSearchHit) => {
                   const newItem: DocSearchHit = structuredClone(item)
                   newItem.url = sanitizeHitUrl(item.url)
-                  const newTitle = sanitizeHitTitle(
-                    item._highlightResult.hierarchy.lvl0?.value || ""
-                  )
-                  newItem._highlightResult.hierarchy.lvl0.value = newTitle
+                  const newTitle = sanitizeHitTitle(item.hierarchy.lvl0 || "")
+                  newItem.hierarchy.lvl0 = newTitle
                   return newItem
                 })
               }
