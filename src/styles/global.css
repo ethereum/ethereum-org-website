@@ -10,10 +10,12 @@
     /* Primitive Color Scheme */
     --gray-100: #f7f7f7;
     --gray-150: #f2f2f2;
+    --gray-175: #ececec;
     --gray-200: #e7e7e7;
     --gray-300: #c8c8c8;
     --gray-400: #8c8c8c;
     --gray-500: #616161;
+    --gray-550: #404040;
     --gray-600: #333333;
     --gray-700: #222222;
     --gray-800: #1b1b1b;
@@ -79,6 +81,8 @@
     --background: white;
     --background-highlight: var(--gray-100);
 
+    --border-accordion: var(--gray-175);
+
     --disabled: var(--gray-400);
 
     /* ! Deprecating neutral */
@@ -139,6 +143,8 @@
 
     --background: var(--gray-800);
     --background-highlight: var(--gray-900);
+
+    --border-accordion: var(--gray-550);
 
     --disabled: var(--gray-500);
 

@@ -60,6 +60,9 @@ const config = {
         toast: "1700",
         tooltip: "1800",
       },
+      gridTemplateColumns: {
+        presetFilters: "200px",
+      },
       colors: {
         gray: {
           100: "var(--gray-100)",
@@ -120,6 +123,9 @@ const config = {
         background: {
           DEFAULT: "var(--background)",
           highlight: "var(--background-highlight)",
+        },
+        border: {
+          accordion: "var(--border-accordion)",
         },
         disabled: "var(--disabled)",
         neutral: "var(--neutral)",

@@ -1,26 +1,14 @@
-import { useRef, useState } from "react"
 import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  calc,
-  Center,
-  Flex,
-  Show,
-  Text,
-  useDisclosure,
-} from "@chakra-ui/react"
+import { Box, Center, Flex, Text } from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang, Wallet } from "@/lib/types"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
-import { MobileFiltersMenu } from "@/components/FindWallet/MobileFiltersMenu"
-import WalletFilterPersona from "@/components/FindWallet/WalletFilterPersona"
-import WalletFilterSidebar from "@/components/FindWallet/WalletFilterSidebar"
-import WalletTable from "@/components/FindWallet/WalletTable"
+import FindWalletProductTable from "@/components/FindWalletProductTable"
 import { Image } from "@/components/Image"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
@@ -37,15 +25,8 @@ import {
   getSupportedLocaleWallets,
 } from "@/lib/utils/wallets"
 
-import {
-  BASE_TIME_UNIT,
-  DEFAULT_LOCALE,
-  NAV_BAR_PX_HEIGHT,
-  WALLETS_FILTERS_DEFAULT,
-} from "@/lib/constants"
+import { BASE_TIME_UNIT } from "@/lib/constants"
 
-import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
-import { useWalletTable } from "@/hooks/useWalletTable"
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
 const Subtitle = ({ children }: ChildOnlyProp) => (
@@ -106,42 +87,7 @@ const FindWalletPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { pathname } = useRouter()
   const { t } = useTranslation("page-wallets-find-wallet")
-
-  const resetWalletFilter = useRef(() => {})
-
-  const [filters, setFilters] = useState(WALLETS_FILTERS_DEFAULT)
-  const [selectedPersona, setSelectedPersona] = useState(NaN)
-  const [supportedLanguage, setSupportedLanguage] = useState(DEFAULT_LOCALE)
-
-  const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
-
-  const {
-    featureDropdownItems,
-    filteredWallets,
-    updateMoreInfo,
-    walletCardData,
-  } = useWalletTable({ filters, supportedLanguage, t, walletData: wallets })
-
-  const updateFilterOption = (key) => {
-    const updatedFilters = { ...filters }
-    updatedFilters[key] = !updatedFilters[key]
-    setFilters(updatedFilters)
-  }
-
-  const updateFilterOptions = (keys, value) => {
-    const updatedFilters = { ...filters }
-    for (const key of keys) {
-      updatedFilters[key] = value
-    }
-    setFilters(updatedFilters)
-  }
-
-  const resetFilters = () => {
-    setSelectedPersona(NaN)
-    setFilters(WALLETS_FILTERS_DEFAULT)
-    setSupportedLanguage(DEFAULT_LOCALE)
-  }
-
+  console.log(wallets)
   return (
     <Flex as={MainArticle} direction="column" position="relative" w="full">
       <PageMetadata
@@ -192,87 +138,7 @@ const FindWalletPage = ({
           />
         </Center>
       </Flex>
-
-      {/* Wallet Personas */}
-      <Box px={{ base: 4, "2xl": 0 }}>
-        <OldHeading
-          as="h3"
-          fontSize="xl"
-          fontWeight="bold"
-          lineHeight={1.4}
-          mt={0}
-          mb={3}
-        >
-          {t("page-find-wallet-personas-title")}
-        </OldHeading>
-
-        <WalletFilterPersona
-          resetFilters={resetFilters}
-          setFilters={setFilters}
-          selectedPersona={selectedPersona}
-          setSelectedPersona={setSelectedPersona}
-          showMobileSidebar={showMobileSidebar}
-        />
-      </Box>
-
-      {/* Context value is updated when using the language filter */}
-      <WalletSupportedLanguageContext.Provider
-        value={{ supportedLanguage, setSupportedLanguage }}
-      >
-        {/* Mobile filters menu */}
-        <Box hideFrom="lg">
-          <MobileFiltersMenu
-            totalWallets={filteredWallets.length}
-            filters={filters}
-            resetWalletFilter={resetWalletFilter}
-            updateFilterOption={updateFilterOption}
-            updateFilterOptions={updateFilterOptions}
-            resetFilters={resetFilters}
-            selectedPersona={selectedPersona}
-            setFilters={setFilters}
-            setSelectedPersona={setSelectedPersona}
-            showMobileSidebar={showMobileSidebar}
-            onOpen={onOpen}
-            onClose={onClose}
-          />
-        </Box>
-
-        <Box px={{ md: 4, "2xl": 0 }}>
-          <Flex pt={4} pb={6} gap={6}>
-            {/* Filters sidebar */}
-            {/* Use `Show` instead of `hideBelow` prop to avoid rendering the sidebar on mobile */}
-            <Show above="lg">
-              <WalletFilterSidebar
-                top={calc(NAV_BAR_PX_HEIGHT).subtract("2px").toString()}
-                {...{
-                  filters,
-                  resetWalletFilter,
-                  updateFilterOption,
-                  updateFilterOptions,
-                  resetFilters,
-                  selectedPersona,
-                  setFilters,
-                  setSelectedPersona,
-                }}
-              />
-            </Show>
-
-            {/* Wallets table */}
-            <Box mt={0.5} w="full">
-              <WalletTable
-                filters={filters}
-                resetFilters={resetFilters}
-                resetWalletFilter={resetWalletFilter}
-                filteredWallets={filteredWallets}
-                totalWallets={walletCardData.length}
-                updateMoreInfo={updateMoreInfo}
-                featureDropdownItems={featureDropdownItems}
-                onOpen={onOpen}
-              />
-            </Box>
-          </Flex>
-        </Box>
-      </WalletSupportedLanguageContext.Provider>
+      <FindWalletProductTable />
     </Flex>
   )
 }

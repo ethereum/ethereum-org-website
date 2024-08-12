@@ -20,7 +20,7 @@ const PresetFilters = ({
   }
 
   return (
-    <div className="mb-2 grid auto-cols-fr grid-flow-col gap-4 overflow-x-auto">
+    <div className="mb-2 grid auto-cols-[200px] grid-flow-col gap-4 overflow-x-auto lg:auto-cols-fr">
       {presets.map((preset, idx) => {
         return (
           <div key={idx} className="grid-rows-1">
