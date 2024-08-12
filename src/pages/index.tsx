@@ -260,8 +260,8 @@ const HomePage = ({
       <div className="w-full">
         <HomeHero heroImg={hero} />
       </div>
-      <div className="space-y-16 px-4 md:px-6 lg:space-y-32">
-        <div className="grid w-full grid-cols-2 gap-x-4 gap-y-8 py-20 lg:grid-cols-4 lg:gap-x-10">
+      <div className="space-y-16 px-4 sm:px-6 md:space-y-32">
+        <div className="grid w-full grid-cols-2 gap-x-4 gap-y-8 py-20 md:grid-cols-4 md:gap-x-10">
           {SubHeroCTAs.map(({ label, description, href, colorClass, Svg }) => (
             <SvgButtonLink
               key={label}
@@ -282,7 +282,7 @@ const HomePage = ({
           title="The strongest ecosystem"
           imgSrc={activityImage}
         >
-          <div className="mt-16 xl:mt-32">
+          <div className="mt-16 lg:mt-32">
             <p className="mt-8 text-xl font-bold">
               Activity from all Ethereum networks
             </p>
@@ -296,7 +296,7 @@ const HomePage = ({
           imgSrc={learnImage}
           isFlipped
         >
-          <div className="flex flex-col space-y-16 xl:space-y-32">
+          <div className="flex flex-col space-y-16 lg:space-y-32">
             <p className="text-lg">
               Cryptocurrency can feel overwhelming. Don&apos;t worry, these
               materials are designed to help you understand Ethereum in just a
@@ -304,7 +304,7 @@ const HomePage = ({
             </p>
             <div className="flex flex-col space-y-8">
               <p className="text-xl font-bold">Popular topics</p>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
                 {popularTopics.map(({ label, Svg, href }) => (
                   <SvgButtonLink
                     key={label}
@@ -318,7 +318,7 @@ const HomePage = ({
                   </SvgButtonLink>
                 ))}
               </div>
-              <div className="flex justify-center py-8 lg:justify-start">
+              <div className="flex justify-center py-8 md:justify-start">
                 <ButtonLink linkProps={{ href: "/learn/" }} size="lg">
                   Other topics <MdChevronRight />
                 </ButtonLink>
@@ -341,7 +341,7 @@ const HomePage = ({
             ecosystem. Use JavaScript and Python, or learn a smart contract
             language like Solidity or Vyper to write your own app.
           </p>
-          <div className="flex flex-col justify-center gap-6 py-8 md:flex-row lg:justify-start">
+          <div className="flex flex-wrap gap-6 py-8">
             <ButtonLink
               linkProps={{ href: "/developers/" }}
               size="lg"
@@ -444,16 +444,11 @@ const HomePage = ({
               <div
                 key={title}
                 className={cn(
-                  "flex flex-col justify-between gap-6 border-t px-6 py-4 xl:flex-row",
+                  "flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row",
                   idx === 0 && "bg-accent-gradient-a"
                 )}
               >
-                <div
-                  className={cn(
-                    "flex flex-col space-y-0.5 text-center text-base sm:text-start",
-                    "flex sm:flex md:flex lg:flex xl:flex 2xl:flex"
-                  )}
-                >
+                <div className="flex flex-col space-y-0.5 text-center text-base sm:text-start">
                   <p className="italic text-body-medium">
                     {new Intl.DateTimeFormat(locale, {
                       month: "long",
@@ -475,7 +470,7 @@ const HomePage = ({
                 <ButtonLink
                   size="sm"
                   variant="outline"
-                  className="h-fit w-full text-nowrap border-body !text-body sm:w-fit xl:self-center"
+                  className="h-fit w-full text-nowrap border-body !text-body sm:w-fit lg:self-center xl:text-primary"
                   linkProps={{ href: calendarLink }}
                 >
                   Add to calendar
@@ -488,11 +483,11 @@ const HomePage = ({
         </HomeSection>
 
         <div className="w-full">
-          <h3 className="mb-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
+          <h3 className="mb-4 mt-2 text-5xl font-black lg:mb-6 lg:text-7xl">
             Ethereum news
           </h3>
           <p>The latest blog posts and updates from the community</p>
-          <div className="mt-4 grid grid-cols-1 gap-8 lg:mt-16 lg:grid-cols-3 lg:flex-row">
+          <div className="mt-4 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-3 md:flex-row">
             {rssItems.map(({ title, link, imgSrc, source, pubDate }) => (
               <a
                 href={link}
@@ -524,12 +519,12 @@ const HomePage = ({
         </div>
 
         <div className="w-full">
-          <h3 className="mb-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
+          <h3 className="mb-4 mt-2 text-5xl font-black lg:mb-6 lg:text-7xl">
             Ethereum events
           </h3>
           <p>We have many community events scheduled around the globe</p>
-          <div className="mt-4 lg:mt-16">
-            <div className="flex flex-col gap-8 self-stretch md:flex-row">
+          <div className="mt-4 md:mt-16">
+            <div className="flex flex-col gap-8 self-stretch sm:flex-row">
               {upcomingEvents.map(
                 ({
                   title,
@@ -543,7 +538,7 @@ const HomePage = ({
                   return (
                     <a
                       href={href}
-                      className="md:w-1/3 md:max-w-128"
+                      className="sm:w-1/3 sm:max-w-128"
                       key={title}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -593,7 +588,7 @@ const HomePage = ({
               )}
             </div>
           </div>
-          <div className="flex justify-center py-8 lg:justify-start">
+          <div className="flex justify-center py-8 md:justify-start">
             <ButtonLink
               linkProps={{ href: "/community/events/" }}
               size="lg"
@@ -614,7 +609,7 @@ const HomePage = ({
             </p>
           </div>
           {/* TODO: Fix icon sizing, fix button/icon layout on mobile */}
-          <div className="max-w-105 mx-auto grid grid-cols-1 gap-16 md:grid-cols-2 lg:max-w-screen-md">
+          <div className="max-w-105 mx-auto grid grid-cols-1 gap-16 sm:grid-cols-2 md:max-w-screen-md">
             <SvgButtonLink
               Svg={Layer2Icon}
               label="How to contribute"

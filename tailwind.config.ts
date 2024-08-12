@@ -10,15 +10,6 @@ const config = {
   prefix: "",
   theme: {
     extend: {
-      // TODO: Confirm new tw breakpoints
-      screens: {
-        sm: "20rem", // 320px
-        md: "30rem", // 480px (previous Chakra "sm")
-        lg: "48rem", // 768px (previous Chakra "md")
-        xl: "62rem", // 992px (previous Chakra "lg")
-        "2xl": "80rem", // 1280px (previous Chakra "xl")
-        max: "96rem", // 1536px (previous Chakra "2xl")
-      },
       fontFamily: {
         heading: "var(--font-inter)",
         body: "var(--font-inter)",
