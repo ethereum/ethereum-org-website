@@ -53,6 +53,24 @@ const localCommunitiesData = [
     location: "Rio de Janeiro, Brazil",
     eventName: "Ethereum Translathon 📜🔍 hosted by EthSamba & BambaLabs",
   },
+  {
+    emojiString: "🇲🇾",
+    lumaLink: "https://www.meetup.com/ethmalaysia/events/302654952/",
+    location: "Kuala Lumpur, Malaysia",
+    eventName: "Lepak and Join Translatathon",
+  },
+  {
+    emojiString: "🇮🇳",
+    lumaLink: "https://lu.ma/9eajbv89",
+    location: "Kerala, India",
+    eventName: "Ethereum.org - TRANSLATATHON INDIA - Jñāna",
+  },
+  {
+    emojiString: "🇬🇭",
+    lumaLink: "https://lu.ma/qvzlo7nc",
+    location: "Accra, Ghana",
+    eventName: "Ghana Ethereum Translatathon 2024",
+  },
 ]
 
 export const LocalCommunitiesList = () => {
