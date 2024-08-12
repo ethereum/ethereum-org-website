@@ -10,9 +10,9 @@ published: 2024-08-15
 
 *There are no secrets on the blockchain*. Everything that is posted on the blockchain is open to everybody to read. This is necessary, because the blockchain is based on anybody being able to verify it. However, games often rely on secret state. For example, the game of [minesweeper](https://en.wikipedia.org/wiki/Minesweeper_(video_game)) makes absolutely no sense if you can just go on a blockchain explorer and see the map.
 
-The simplest solution is to use a [server component](/developers/tutorials/server-components/) to hold the secret state. However, we don't want to trust that server component's honesty. Luckily, we don't need to. We can provide a hash of the state, and use provide [zero-knowledge proofs](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) to ensure that the state used to calculate the result of a move is the correct one.
+The simplest solution is to use a [server component](/developers/tutorials/server-components/) to hold the secret state. However, we don't want to trust that server component's honesty. Luckily, we don't need to. The server can provide a hash of the state, and use [zero-knowledge proofs](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) to prove that the state used to calculate the result of a move is the correct one.
 
-After reading this article you will know how to create this kind of secret state holding server, as well as an on-chain component for communication between the two. The main tools we use will be:
+After reading this article you will know how to create this kind of secret state holding server, a client for showing the state, and an on-chain component for communication between the two. The main tools we use will be:
 
 * [Zokrates](https://zokrates.github.io/) for zero-knowledge proofs and their verification.
 * [Typescript](https://www.typescriptlang.org/) for both the server and the client.
@@ -48,13 +48,12 @@ We need several tables in the database to implement the functionality we need.
    - The game identifier
    - x
    - y
-   The value is a single number. It's 255 if a bomb was detected. Otherwise, it is the number of bombs around that location plus one. We cannot use just the number of bombs, because by default all storage in the EVM and all row values in MUD are zero. We need to distinguish between "the player didn't dig here yet" and "the player dug here, and found there are zero bombs around".
+   The value is a single number. It's 255 if a bomb was detected. Otherwise, it is the number of bombs around that location plus one. We cannot use just the number of bombs, because by default all storage in the EVM and all row values in MUD are zero. We need to distinguish between "the player haven;t dug here yet" and "the player dug here, and found there are zero bombs around".
 
 In addition, communication between the client and server happens through the on-chain component. This is also implemented using tables, but those are [off-chain tables](https://mud.dev/store/tables#types-of-tables), meaning the data is only available off-chain in the form of log events.
 
 4. `PendingGame`: Unserviced requests to start a new game.
 5. `PendingDig`: Unserviced requests to dig in a specific place in a specific game.
-6. `PendingDigResults`: Responses to dig requests. These include the proof of the result, and optionally also the map (if the result is that the player blew up and the game is over).
 
 ### Execution and data flows {#execution-data-flows}
 
@@ -115,38 +114,40 @@ Clients do not *have* to run this flow, the game works without it, but without t
 
 ### Hashing the map {#hashing-map}
 
-We could find a JavaScript or Solidity code to implement [the best Zokrates hash function](https://zokrates.github.io/toolbox/stdlib.html#pedersen-hashes). However, then we'd have to ensure the input format is exactly the same as that calculated by Zokrates. It is easier to just use a Zokrates program to calculate the hash of a map. So we need two different Zokrates programs, one to just calculate the hash of a map (`hash`) and one to actually create a zero-knowledge proof of the result of the dig in a location on the map (`dig`).
+We can use [this JavaScript code](https://github.com/ZK-Plus/ICBC24_Tutorial_Compute-Offchain-Verify-Onchain/tree/solutions/exercise) to implement [Poseidon](https://www.poseidon-hash.info), the Zokrates hash function we use. However, while this would be faster, it would also be more complicated than just using the Zokrates hash function twice. This is a tutorial, and so the code is optimized for simplicity, not for performance. Therefore, we need two different Zokrates programs, one to just calculate the hash of a map (`hash`) and one to actually create a zero-knowledge proof of the result of the dig in a location on the map (`dig`).
+
 
 ### The hash function {#hash-function}
 
 This is the function that calculates the hash of a map. We'll go over this code line by line.
 
 ```
-from "hashes/pedersen/512bitBool.zok" import main as pederhash;
-import "utils/casts/bool_256_to_u32_8.zok" as bool_256_to_u32_8;
+import "hashes/poseidon/poseidon.zok" as poseidon;
+import "utils/pack/bool/pack128.zok" as pack128;
 ```
 
-These two lines import two functions from the [Zokrates standard library](https://zokrates.github.io/toolbox/stdlib.html). [The first function](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/hashes/pedersen/512bitBool.zok) is a [Pedersen hash](https://iden3-docs.readthedocs.io/en/latest/_downloads/4b929e0f96aef77b75bb5cfc0f832151/Pedersen-Hash.pdf).It takes 512 bits of input, and returns a 256 bit long hash. [The second function](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/casts/bool_256_to_u32_8.zok) lets us cast the 256-bit hash value to an array of eight 32-bit values.
+These two lines import two functions from the [Zokrates standard library](https://zokrates.github.io/toolbox/stdlib.html). [The first function](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/hashes/poseidon/poseidon.zok) is a [Poseidon hash](https://www.poseidon-hash.info/). It takes an array of [`field` elements](https://zokrates.github.io/language/types.html#field) and returns a `field`.
+
+The field element in Zokrates is typically less than 256 bits long, but not by much. To simplify the code, we restrict the map to be up to 512 bits, and hash an array of four fields, and in each field we use only 128 bits. [The `pack128` function](https://github.com/Zokrates/ZoKrates/blob/latest/zokrates_stdlib/stdlib/utils/pack/bool/pack128.zok) changes an array of 128 bits into a `field` for this purpose.
+
 
 ```
-def hashMap(bool[${width+2}][${height+2}] map) -> u32[8] {
+        def hashMap(bool[${width+2}][${height+2}] map) -> field {
 ```
 
-This line starts a function definition. `hashMap` gets a single parameter called `map`, a two dimensional `bool`(ean) array. The size of the map is `width+2` by `height+2` for reasons that are explained below.
+This line starts a function definition. `hashMap` gets a single parameter called `map`, a two dimensional `bool`(ean) array. The size of the map is `width+2` by `height+2` for reasons that are [explained below](#why-map-border).
 
-We also use `${width+2}` and `${height+2}`. This is because the Zokrates programs are stored in this application as [Template Strings](https://www.w3schools.com/js/js_string_templates.asp). Code between `${` and `}` is evaluated by JavaScript, and this way the program can be used for different map sizes.
+We can use `${width+2}` and `${height+2}` because the Zokrates programs are stored in this application as [Template Strings](https://www.w3schools.com/js/js_string_templates.asp). Code between `${` and `}` is evaluated by JavaScript, and this way the program can be used for different map sizes. The map parameter has a one location wide border all around it without any bombs, which is the reason we need to add two to the width and height.
 
-The map parameter has a one location wide border all around it without any bombs, which is the reason we need to add two to the width and height. This is necessary because of the way Zokrates handles if statements, [as explained below](#why-map-border).
-
-The return value is an array of eight unsigned 32-bit values, the hash.
+The return value is a `field` that contains the hash.
 
 ```
    bool[512] mut map1d = [false; 512];
 ```
 
-The map is two-dimensional. However, the input to the hash function needs to be a 512-value boolean array. Here we define a variable for it. By default Zokrates variables are constants, but we need to assign values to this array in a loop.
+The map is two-dimensional. However, the `pack128` function does not work with two-dimensional arrays. So we first flatten the map into a 512-byte array, using `map1d`. By default Zokrates variables are constants, but we need to assign values to this array in a loop, so we define it as [`mut`](https://zokrates.github.io/language/variables.html#mutability).
 
-We need to initialize the array, Zokrates doesn't have `undefined`. The `[false; 512]` expression means [an array of 512 `false` values](https://zokrates.github.io/language/types.html#declaration-and-initialization).
+We need to initialize the array because Zokrates doesn't have `undefined`. The `[false; 512]` expression means [an array of 512 `false` values](https://zokrates.github.io/language/types.html#declaration-and-initialization).
 
 ```
    u32 mut counter = 0;
@@ -158,7 +159,7 @@ We also need a counter to distinguish between the bits we already filled in `map
    for u32 x in 0..${width+2} {
 ```
 
-This is for you declare a [for loop](https://zokrates.github.io/language/control_flow.html#for-loops) in Zokrates. A Zokrates for loop has to have fixed bounds, because while it appears to be a loop, the compiler actually "unrolls" it. The expression `${width+2}` is a compile time constant because `width` is set by the TypeScript code before it calls the compiler.
+This is how you declare a [`for` loop](https://zokrates.github.io/language/control_flow.html#for-loops) in Zokrates. A Zokrates `for` loop has to have fixed bounds, because while it appears to be a loop, the compiler actually "unrolls" it. The expression `${width+2}` is a compile time constant because `width` is set by the TypeScript code before it calls the compiler.
 
 ```
       for u32 y in 0..${height+2} {
@@ -171,13 +172,23 @@ This is for you declare a [for loop](https://zokrates.github.io/language/control
 For every location in the map, put that value in the `map1d` array and increment the counter.
 
 ```
-   return bool_256_to_u32_8(pederhash(map1d));
+    field[4] hashMe = [
+        pack128(map1d[0..128]),
+        pack128(map1d[128..256]),
+        pack128(map1d[256..384]),
+        pack128(map1d[384..512])
+    ];
+```
+
+The `pack128` to create an array of four `field` values from `map1d`.
+
+```
+    return poseidon(hashMe);
 }
 ```
 
-The hash function is imported as `pederhash`. It takes an array of 512 booleans, and returns an array of 256 booleans. We then use `bool_256_to_u32_8` to convert the array into a smaller array of just eight 32-bit values.
+And use `poseidon` to convert this array to a hash.
 
-Ideally, we'd prefer to return the hash as a single 256-bit value. However, Zokrates does not work with those values. The primary arithmetic type of Zokrates is [`field`](https://zokrates.github.io/language/types.html#field), whose value is between zero and a large (254-bit) prime number. It cannot return a single 256-bit value, so we use an array instead.
 
 ### The hash program {#hash-program}
 
@@ -186,8 +197,8 @@ The server needs to call `hashMap` directly to create game identifiers. However,
 ```
 ${hashFragment}
 
-def main(bool[${width+2}][${height+2}] map) -> u32[8] {
-   return hashMap(map);
+def main(bool[${width+2}][${height+2}] map) -> field {
+    return hashMap(map);
 }
 ```
 
@@ -206,9 +217,9 @@ def map2mineCount(bool[${width+2}][${height+2}] map, u32 x, u32 y) -> u8 {
 
 <a id="why-map-border">
 
-Zero-knowlege proofs use [arithmetic circuits](https://medium.com/web3studio/simple-explanations-of-arithmetic-circuits-and-zero-knowledge-proofs-806e59a79785), which don't have an easy equivalent to an `if` statement. Instead, they use the equivalent of the [conditional operator](https://en.wikipedia.org/wiki/Ternary_conditional_operator). If `a` can be either zero or one, you can calculate `if a { b } else { c }` as `(1-a)b+ac`.
+Zero-knowlege proofs use [arithmetic circuits](https://medium.com/web3studio/simple-explanations-of-arithmetic-circuits-and-zero-knowledge-proofs-806e59a79785), which don't have an easy equivalent to an `if` statement. Instead, they use the equivalent of the [conditional operator](https://en.wikipedia.org/wiki/Ternary_conditional_operator). If `a` can be either zero or one, you can calculate `if a { b } else { c }` as `ab+(1-a)c`.
 
-Because of this issue, a Zokrates `if` statement always evaluates both branches. For example, if you have this code:
+Because of this, a Zokrates `if` statement always evaluates both branches. For example, if you have this code:
 
 ```
 bool[5] arr = [false; 5];
@@ -216,17 +227,17 @@ u32 index=10;
 return if index>4 { 0 } else { arr[index] }
 ```
 
-It will error out, because it needs to calculate `arr[10]`, even though that value will be multiplied by zero. 
+It will error out, because it needs to calculate `arr[10]`, even though that value will be later multiplied by zero.
 
 This is the reason we need a one location wide border all around the map. We need to calculate the total number of mines around a location, and that means we need to see the location one row above and below, to the left and to the right, of the location where we're digging. Which means those location have to exist in the map array that Zokrates is provided.
 
 ```
-def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (u32[8], u8) {
+def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8) {
 ```
 
 By default Zokrates proofs include their inputs. It does no good to know there are five mines around a spot unless you actually know which spot it is (and you can't just match it to your request, because then the prover could use different values and not tell you about it). However, we need to keep the map a secret, while providing it to Zokrates. The solution is to use a `private` parameter, one that is *not* revealed by the proof.
 
-This opens another venue for abuse. The prover could use the correct coordinates, but create a map with any desired number of mines around the location, and possibly at the location itself. To prevent this abuse, we make the zero knowledge proof include the hash of the map, which is the game identifier.
+This opens another venue for abuse. The prover could use the correct coordinates, but create a map with any any number of mines around the location, and possibly at the location itself. To prevent this abuse, we make the zero knowledge proof include the hash of the map, which is the game identifier.
 
 ```
    return (hashMap(map),
@@ -255,9 +266,7 @@ If the player hasn't hit a mine, add the mine counts for the area around the loc
 
 Zokrates has a command line interface, but in this program we use it in the [TypeScript code](https://zokrates.github.io/toolbox/zokrates_js.html). Using [TypeScript](https://www.typescriptlang.org/), which gets compiled to JavaScript, lets us use the same code on the server and the client.
 
-The library that contains the Zokrates definitions is called `zero-knowledge.ts`.
-
-** GOON    LINK TO GITHUB GOES HERE ***
+The library that contains the Zokrates definitions is called [`zero-knowledge.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts).
 
 ```typescript
 import { initialize as zokratesInitialize } from "zokrates-js";
@@ -269,7 +278,7 @@ Import the [Zokrates JavaScript bindings](https://zokrates.github.io/toolbox/zok
 export const zkFunctions = async (width: number, height: number) : Promise<any> => {
 ```
 
-Similar to Zokrates itself, we also export only one function, which is also [asynchronous](https://www.w3schools.com/js/js_async.asp). When it eventually returns, it provides three functions as we'll see below.
+Similar to Zokrates itself, we also export only one function, which is also [asynchronous](https://www.w3schools.com/js/js_async.asp). When it eventually returns, it provides several functions as we'll see below.
 
 ```typescript
     const zokrates = await zokratesInitialize()
@@ -279,7 +288,8 @@ Initialize Zokrates, get everything we need from the library.
 
 ```typescript
     const hashFragment = `
-        from "hashes/pedersen/512bitBool.zok" import main as pederhash;
+        import "utils/pack/bool/pack128.zok" as pack128;
+        import "hashes/poseidon/poseidon.zok" as poseidon;
             .
             .
             .
@@ -301,18 +311,17 @@ Initialize Zokrates, get everything we need from the library.
     `
 ```
 
-Next we have the three Zokrates programs we saw above.
+Next we have the hash function and two Zokrates programs we saw above.
 
 ```typescript
     const digCompiled = zokrates.compile(digProgram)
     const hashCompiled = zokrates.compile(hashProgram)
 ```
 
-Here we compile those programs. We could save some resources by saving the compiled version as files and only recompiling when needed (when the map size changes), but that would be more complicated. This program is opitimized for simplicity, it's not production-level code but a tutorial.
+Here we compile those programs.
 
 ```typescript
     // Create the keys for zero knowledge verification.
-    // Doing this here is simple, but it might be insecure.
     // On a production system you'd want to use a setup ceremony. 
     // (https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony).
     const keySetupResults = zokrates.setup(digCompiled.program, "")
@@ -320,25 +329,22 @@ Here we compile those programs. We could save some resources by saving the compi
     const proverKey = keySetupResults.pk
 ```
 
-On a production system we'd use a more complicated [setup ceremony](https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony), but this is good enough for a demonstration. It's not a problem that the users know the prover key - they still cannot use it to prove things unless they are true.
+On a production system we'd use a more complicated [setup ceremony](https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony), but this is good enough for a demonstration. It's not a problem that the users know the prover key - they still cannot use it to prove things unless they are true. Because we specify the entropy (the second parameter, `""`), the results are always going to be the same.
 
-```typescript
-    const joinHashArray = function(arr: string[]): string {
-        return "0x"+arr.map(x => x.slice(2)).reduce((a,b) => a+b)
-    }
-```
+**Note:** Compilation of Zokrates programs and key creation are slow processes. There is no need to repeat them every time, just when map size changes. On a production system you'd do them once, and then store the output. The only reason I am not doing it here is for the sake of simplicity.
 
-The Zokrates [hash program](hash-program) returns an array of eight 32-bit values. However, on the EVM it is easier to handle a single 256-bit value. Here we combine those values, provided as hexadecimal strings, into a single hexadecimal string. We could have done this in Zokrates, but Zokrates is a lot more resource intensive, so it's best to limit it to where it is necessary.
 
 ```typescript
     const calculateMapHash = function(hashMe: boolean[][]): string {
-        return joinHashArray(JSON.parse(
-            zokrates.computeWitness(hashCompiled, [hashMe]).output)
-        )
+        return "0x" + 
+            BigInt(zokrates.computeWitness(hashCompiled, [hashMe]).output.slice(1,-1))
+            .toString(16).padStart(64, "0")        
     }
 ```
 
 [`computeWitness`](https://zokrates.github.io/toolbox/zokrates_js.html#computewitnessartifacts-args-options) actually runs the Zokrates program. It returns a structure with two fields: `output`, which is the output of the program as a JSON string, and `witness`, which is the information needed to create the a zero knowledge proof of the result. Here we just need the output.
+
+The output is a string of the form `"31337"`, a decimal number enclosed in quotation marks. But the output we need for `viem` is a hexadecimal number of the form `0x60A7`. So we use `.slice(1,-1)` to remove the quotation marks and then `BigInt` to run the remaining string, which is a decimal number, to a [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). `.toString(16)` converts this `BigInt` into a hexadecimal string, and `"0x"+` adds the marker for hexadecimal numbers.
 
 ```typescript
     // Dig and return a zero knowledge proof of the result
@@ -375,49 +381,16 @@ Execute the dig program.
 
 Use [`generateProof`](https://zokrates.github.io/toolbox/zokrates_js.html#generateproofprogram-witness-provingkey-entropy) and return the proof.
 
-
 ```typescript
-    // Verify a dig's results (client-side code)
-    const verifyDig = function(hashOfMap: string, digResultProof: any) : any {
+    const solidityVerifier = `
+        // Map size: ${width} x ${height}
+        \n${zokrates.exportSolidityVerifier(verifierKey)}
+        `
 ```
 
-Verify the dig results in TypeScript. We don't actually use this function, because we made a [conscious design choice](#where-verification) to verify onchain. It is provided here for completeness.
+A Solidity verifier. 
 
-```typescript
-        const hashInProof = "0x" + digResultProof.inputs.slice(2,-1)
-            .map((x: string) => x.slice(-8)).reduce((a: string, b: string) => a+b)
-```
-
-The fields in the proofs (it's called `.input`, but it is both inputs and outputs) are provided as strings that contain 256-bit numbers in hexadecimal. The first two values are `x` and `y`. The last value is the number of bombs. We remove them because they aren't part of calculating the hash. Next, we remove all but the last eight hex digits (the ones that contain the 32-bit value we get from the hash function) of the hash values and put them together.
-
-```typescript
-        // The proof used the wrong map
-        if (hashInProof != hashOfMap)
-            return false
-```
-
-We could have compared the hashes in the Zokrates program, but we try to limit the use of Zokrates to where it is needed to save on resources. It is a lot cheaper to do the comparison in the TypeScript.
-
-```typescript
-        if (!zokrates.verify(verifierKey, digResultProof))
-            return false
-```
-
-If the verification failed, this isn't a result we can trust. To reality check this function, create fake `digResultProof` values and see that the verification fails.
-
-```typescript
-        return {
-            x: parseInt(digResultProof.inputs[0]),
-            y: parseInt(digResultProof.inputs[1]),
-            bombs: parseInt(digResultProof.inputs[digResultProof.inputs.length-1])
-        }
-    }
-```
-
-If the proof is trustworthy, return the `x`, `y`, and number of bombs (or 255 if we blew up).
-
-```typescript
-    const solidityVerifier = zokrates.exportSolidityVerifier(verifierKey)    
+```typescript  
     const formatProof = (proof: any) => zokrates.utils.formatProof(proof)
 ```
 
@@ -427,7 +400,6 @@ These two definitions are used for verifiying Zokrates proofs on the blockchain.
 ```typescript
     return {
         zkDig,
-        verifyDig,
         calculateMapHash,
         solidityVerifier,
         formatProof
@@ -436,6 +408,7 @@ These two definitions are used for verifiying Zokrates proofs on the blockchain.
 ```
 
 Finally, return everything that other code might need.
+
 
 ## The on-chain component {#onchain}
 
@@ -462,6 +435,12 @@ When the client requests a new game,
 
 ## Design considerations {#design}
 
+### Why zero-knowlege {#why-zero-knowledge}
+
+### Why Zokrates? {#why-zokrates}
+
+As opposed to other systems like circum
+
 ### Creating the verifier and prover keys (#key-creation)
 
 ### Where to verify {#where-verification}
@@ -469,3 +448,12 @@ When the client requests a new game,
 ### Flatten the map in TypeScript or Zokrates? {#where-flatten}
 
 ## Conclusion: when is this the appropriate technique {#conclusion}
+
+- Long running game
+- Some centralization acceptable
+
+### Acknowledgements {#acknowledgements}
+
+- Alvaro Alonso read a draft of this article and cleared up some of my misunderstandings about Zokrates.
+
+Any remaining errors are my responsibility.
