@@ -145,7 +145,8 @@ const config = {
         },
       },
       backgroundImage: {
-        "bg-main-gradient": "var(--bg-main-gradient)",
+        "main-gradient": "var(--main-gradient)",
+        "feedback-gradient": "var(--feedback-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
