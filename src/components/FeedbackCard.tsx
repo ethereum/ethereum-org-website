@@ -80,7 +80,7 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
                 variant="outline-color"
                 onClick={() => handleSubmit(true)}
               >
-                <FeedbackThumbsUpIcon />
+                <FeedbackThumbsUpIcon className="h-6 w-6" />
                 {t("yes")}
               </Button>
               <Button
