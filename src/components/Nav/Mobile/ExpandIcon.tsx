@@ -1,5 +1,4 @@
 import { motion } from "framer-motion"
-import { Icon } from "@chakra-ui/react"
 
 const expandedPathVariants = {
   closed: {
@@ -17,14 +16,9 @@ type ExpandIconProps = {
 }
 
 const ExpandIcon = ({ isOpen }: ExpandIconProps) => (
-  <Icon
+  <svg
     viewBox="0 0 24 25"
-    width={6}
-    height={6}
-    position="relative"
-    strokeWidth="2px"
-    display="inline-block"
-    stroke="currentColor"
+    className="relative inline-block h-6 w-6 stroke-current stroke-2 group-hover:text-primary-hover"
   >
     <motion.path
       variants={expandedPathVariants}
@@ -34,7 +28,7 @@ const ExpandIcon = ({ isOpen }: ExpandIconProps) => (
       stroke-width="2"
     />
     <path d="M7.375 12.5L16.625 12.5" stroke-width="2" />
-  </Icon>
+  </svg>
 )
 
 export default ExpandIcon

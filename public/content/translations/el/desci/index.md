@@ -104,10 +104,11 @@ summaryPoint3: Δημιουργία πάνω στο ανοιχτό επιστη�
 - [Bio.xyz: Λάβετε χρηματοδότηση για το έργο βιοτεχνολογίας DAO ή desci.](https://www.bio.xyz/)
 - [Πρωτόκολλο Fleming: Οικονομικά δεδομένα ανοιχτού κώδικα υποστηρίζοντας τη συλλογική βιοϊατρική έρευνα.](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
-- [CureDAO: Πλατφόρμα ανάλυσης υγείας που ανήκει στην κοινότητα.](https://docs.curedao.org/)
 - [IdeaMarkets: Ενεργοποίηση της αποκεντρωμένης επιστημονικής αξιοπιστίας.](https://ideamarket.io/)
 - [Εργαστήρια DeSci](https://www.desci.com/)
 - [ValleyDAO: μια ανοιχτή, παγκόσμια κοινότητα που προσφέρει χρηματοδότηση και μεταφραστική υποστήριξη για την έρευνα συνθετικής βιολογίας](https://www.valleydao.bio)
+- [Cerebrum DAO: προμήθεια και καλλιέργεια λύσεων για την προώθηση της υγείας του εγκεφάλου και την πρόληψη του νευροεκφυλισμού](https://www.cerebrumdao.com/)
+- [CryoDAO: χρηματοδότηση έρευνας moonshot στον τομέα της κρυοσυντήρησης](https://www.cryodao.org)
 
 Χαιρετίζουμε τις προτάσεις νέων έργων για τη λίστα. Δείτε την [πολιτική καταχώρισης](/contributing/adding-desci-projects/) για να ξεκινήσετε!
 

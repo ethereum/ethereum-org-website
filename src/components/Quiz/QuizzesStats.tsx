@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { FaTwitter } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 import {
   Box,
   Circle,
@@ -97,7 +97,7 @@ const QuizzesStats = ({
           <GridItem justifySelf={{ lg: "end" }} order={{ base: 3, lg: 2 }}>
             <Button
               variant="outline"
-              leftIcon={<FaTwitter />}
+              leftIcon={<FaXTwitter />}
               onClick={() =>
                 handleShare({
                   score: totalCorrectAnswers,
