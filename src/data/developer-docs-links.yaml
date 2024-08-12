@@ -223,6 +223,18 @@
           href: /developers/docs/scaling/plasma/
         - id: docs-nav-scaling-validium
           href: /developers/docs/scaling/validium/
+        - id: docs-nav-scaling-optimium
+          href: /developers/docs/scaling/optimiums/
+          description: docs-nav-optimium-description
+          items:
+          - id: docs-nav-scaling-optimium-architecture
+            href: /developers/docs/scaling/optimiums/architecture/
+          - id: docs-nav-scaling-optimium-faq
+            href: /developers/docs/scaling/optimiums/faq/
+          - id: docs-nav-scaling-optimium-comparison
+            href: /developers/docs/scaling/optimiums/comparison/
+          - id: docs-nav-scaling-optimium-building
+            href: /developers/docs/scaling/optimiums/building/
     - id: docs-nav-data-availability
       href: /developers/docs/data-availability/
       description: docs-nav-data-availability-description
