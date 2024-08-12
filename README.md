@@ -96,6 +96,8 @@ yarn dev
 - Pro Tip:
   - Explore scripts within `package.json` for more build options
   - Get **faster** production builds by building only one language. E.g. in your `.env` file, set `BUILD_LOCALES=en` to build the content only in English
+  - To build the site in other selected languages too, you need to set them in `BUILD_LOCALES`, eg: `BUILD_LOCALES=en,es` if you also want to build only English (required) and Spanish.
+  - To build all languages, simply comment this line out with a hash mark, eg: `# BUILD_LOCALES=`
 
 By default the script will build all the languages (complete list in `i18n.config.json`).
 
@@ -1892,6 +1894,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/tr1sm0s1n"><img src="https://avatars.githubusercontent.com/u/47410557?v=4?s=100" width="100px;" alt="Mobin Mohanan"/><br /><sub><b>Mobin Mohanan</b></sub></a><br /><a href="#content-tr1sm0s1n" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Baystef"><img src="https://avatars.githubusercontent.com/u/36106823?v=4?s=100" width="100px;" alt="Adebayo Steve"/><br /><sub><b>Adebayo Steve</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Baystef" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/sanjanaynvsdl"><img src="https://avatars.githubusercontent.com/u/142678317?v=4?s=100" width="100px;" alt="Sanjana"/><br /><sub><b>Sanjana</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asanjanaynvsdl" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.zaryabs.com/"><img src="https://avatars.githubusercontent.com/u/42082608?v=4?s=100" width="100px;" alt="Zaryab"/><br /><sub><b>Zaryab</b></sub></a><br /><a href="#content-zaryab2000" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
