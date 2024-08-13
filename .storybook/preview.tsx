@@ -7,8 +7,10 @@ import ThemeProvider from "@/components/ThemeProvider"
 
 import i18n, { baseLocales } from "./i18next"
 
+import "@docsearch/css"
 import "../src/styles/global.css"
 import "../src/styles/fonts.css"
+import "../src/styles/docsearch.css"
 
 MotionGlobalConfig.skipAnimations = isChromatic()
 
