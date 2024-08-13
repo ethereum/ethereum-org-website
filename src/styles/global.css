@@ -228,6 +228,7 @@
   ol {
     margin: 0px 0px 1.45rem 1.45rem;
     padding: 0;
+    list-style-type: initial;
 
     & li {
       padding-inline-start: 0;
