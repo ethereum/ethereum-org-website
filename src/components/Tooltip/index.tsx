@@ -1,5 +1,4 @@
 import React, { ReactNode, useEffect } from "react"
-import { PopoverProps } from "@chakra-ui/react"
 
 import { isMobile } from "@/lib/utils/isMobile"
 
@@ -12,18 +11,13 @@ import {
 
 import { useDisclosure } from "@/hooks/useDisclosure"
 
-export interface TooltipProps extends PopoverProps {
+export type TooltipProps = {
   content: ReactNode
   children?: ReactNode
   onBeforeOpen?: () => void
 }
 
-const Tooltip = ({
-  content,
-  children,
-  onBeforeOpen,
-  // ...rest
-}: TooltipProps) => {
+const Tooltip = ({ content, children, onBeforeOpen }: TooltipProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   // Close the popover when the user scrolls.
