@@ -1,13 +1,6 @@
 import React, { ReactNode, useEffect } from "react"
 
-import { isMobile } from "@/lib/utils/isMobile"
-
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
-import {
-  Tooltip as RootTooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "../ui/tooltip"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
 
@@ -59,24 +52,15 @@ const Tooltip = ({ content, children, onBeforeOpen }: TooltipProps) => {
     }
   }
 
-  // Mobile devices use the Popover component because it supports click/touch
-  // events
-  if (isMobile()) {
-    return (
-      <Popover open={isOpen} onOpenChange={handleOpenChange}>
-        <PopoverTrigger>{children}</PopoverTrigger>
-        <PopoverContent data-testid="tooltip-popover">{content}</PopoverContent>
-      </Popover>
-    )
-  }
-
-  // Desktop devices use the Tooltip component because it is desined for hover
-  // and focus events
   return (
-    <RootTooltip open={isOpen} onOpenChange={handleOpenChange}>
-      <TooltipTrigger>{children}</TooltipTrigger>
-      <TooltipContent data-testid="tooltip-popover">{content}</TooltipContent>
-    </RootTooltip>
+    <Popover open onOpenChange={handleOpenChange}>
+      <PopoverTrigger onMouseEnter={onOpen} onMouseLeave={onClose}>
+        {children}
+      </PopoverTrigger>
+      <PopoverContent side="top" data-testid="tooltip-popover">
+        {content}
+      </PopoverContent>
+    </Popover>
   )
 }
 
