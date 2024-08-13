@@ -5,6 +5,7 @@ import { init } from "@socialgouv/matomo-next"
 import { AppPropsWithLayout } from "@/lib/types"
 
 import ThemeProvider from "@/components/ThemeProvider"
+import { TooltipProvider } from "@/components/ui/tooltip"
 
 import "@/styles/global.css"
 import "@/styles/fonts.css"
@@ -26,8 +27,8 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page) => page)
 
   return (
-    <>
-      <ThemeProvider>
+    <ThemeProvider>
+      <TooltipProvider>
         <BaseLayout
           contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
           contentNotTranslated={pageProps.contentNotTranslated}
@@ -35,8 +36,8 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
         >
           {getLayout(<Component {...pageProps} />)}
         </BaseLayout>
-      </ThemeProvider>
-    </>
+      </TooltipProvider>
+    </ThemeProvider>
   )
 }
 

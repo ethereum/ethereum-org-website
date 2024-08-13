@@ -1,16 +1,16 @@
 import React, { ReactNode, useEffect } from "react"
-import {
-  Popover,
-  PopoverArrow,
-  PopoverBody,
-  PopoverContent,
-  PopoverProps,
-  PopoverTrigger,
-  Portal,
-  useDisclosure,
-} from "@chakra-ui/react"
+import { PopoverProps } from "@chakra-ui/react"
 
 import { isMobile } from "@/lib/utils/isMobile"
+
+import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
+import {
+  Tooltip as RootTooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "../ui/tooltip"
+
+import { useDisclosure } from "@/hooks/useDisclosure"
 
 export interface TooltipProps extends PopoverProps {
   content: ReactNode
@@ -22,7 +22,7 @@ const Tooltip = ({
   content,
   children,
   onBeforeOpen,
-  ...rest
+  // ...rest
 }: TooltipProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
@@ -57,24 +57,32 @@ const Tooltip = ({
     onOpen()
   }
 
+  const handleOpenChange = (open: boolean) => {
+    if (open) {
+      handleOpen()
+    } else {
+      onClose()
+    }
+  }
+
+  // Mobile devices use the Popover component because it supports click/touch
+  // events
+  if (isMobile()) {
+    return (
+      <Popover open={isOpen} onOpenChange={handleOpenChange}>
+        <PopoverTrigger>{children}</PopoverTrigger>
+        <PopoverContent data-testid="tooltip-popover">{content}</PopoverContent>
+      </Popover>
+    )
+  }
+
+  // Desktop devices use the Tooltip component because it is desined for hover
+  // and focus events
   return (
-    <Popover
-      isOpen={isOpen}
-      onOpen={handleOpen}
-      onClose={onClose}
-      placement="top"
-      trigger={isMobile() ? "click" : "hover"}
-      gutter={8}
-      {...rest}
-    >
-      <PopoverTrigger>{children}</PopoverTrigger>
-      <Portal>
-        <PopoverContent data-testid="tooltip-popover">
-          <PopoverArrow />
-          <PopoverBody>{content}</PopoverBody>
-        </PopoverContent>
-      </Portal>
-    </Popover>
+    <RootTooltip open={isOpen} onOpenChange={handleOpenChange}>
+      <TooltipTrigger>{children}</TooltipTrigger>
+      <TooltipContent data-testid="tooltip-popover">{content}</TooltipContent>
+    </RootTooltip>
   )
 }
 
