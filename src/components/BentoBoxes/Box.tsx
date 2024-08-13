@@ -12,6 +12,7 @@ export type BentoBoxProps = HTMLAttributes<HTMLDivElement> & {
   href: string
   imgSrc: StaticImageData
   imgWidth?: number
+  imgHeight?: number
   title: string
 }
 
@@ -22,6 +23,7 @@ const BentoBox = ({
   href,
   imgSrc,
   imgWidth,
+  imgHeight,
   title,
 }: BentoBoxProps) => (
   <div
@@ -31,7 +33,7 @@ const BentoBox = ({
     )}
   >
     <div className="grid place-items-center">
-      <NextImage src={imgSrc} alt="" width={imgWidth} />
+      <NextImage src={imgSrc} alt="" width={imgWidth} height={imgHeight} />
     </div>
     <div>
       <h3 className="mb-2 text-3xl font-black">{title}</h3>
