@@ -6,7 +6,7 @@ import { isLangRightToLeft } from "@/lib/utils/translations"
 
 type UseDirection = {
   flipForRtl: "scaleX(-1)" | undefined // transform (deprecated)
-  twFlipForRtl: "-scale-x-1" | undefined // className
+  twFlipForRtl: "-scale-x-1" | "" // className
   isRtl: boolean
   direction: "ltr" | "rtl"
 }
@@ -21,7 +21,7 @@ export const useRtlFlip = (): UseDirection => {
   const isRtl = isLangRightToLeft(locale as Lang)
   return {
     flipForRtl: isRtl ? "scaleX(-1)" : undefined, // transform (deprecated)
-    twFlipForRtl: isRtl ? "-scale-x-1" : undefined, // className (preferred)
+    twFlipForRtl: isRtl ? "-scale-x-1" : "", // className (preferred)
     isRtl,
     direction: isRtl ? "rtl" : "ltr",
   }
