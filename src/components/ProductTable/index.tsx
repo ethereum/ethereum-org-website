@@ -1,23 +1,25 @@
 import { useState } from "react"
 
-import type { ProductTablePresetFilters, TPresetFilters } from "@/lib/types"
+import type {
+  FilterOption,
+  ProductTablePresetFilters,
+  TPresetFilters,
+} from "@/lib/types"
 
 import Filters from "@/components/ProductTable/Filters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
 
 interface ProductTableProps<TData> {
-  filters: unknown
-  filtersDefault: unknown
+  filterOptions: FilterOption[]
   presetFilters: TPresetFilters<TData>[]
 }
 
 const ProductTable = ({
-  filters,
-  filtersDefault,
+  filterOptions,
   presetFilters,
 }: ProductTableProps<ProductTablePresetFilters>) => {
   const [activePresetIndex, setActivePresetIndex] = useState(NaN)
-  const [activeFilters, setActiveFilters] = useState(filtersDefault)
+  const [filters, setFilters] = useState(filterOptions)
 
   return (
     <div className="px-4">
@@ -31,11 +33,7 @@ const ProductTable = ({
         <></>
       )}
       <div className="flex gap-6 pb-6 pt-4 2xl:px-0">
-        <Filters
-          activeFilters={activeFilters}
-          filters={filters}
-          setActiveFilters={setActiveFilters}
-        />
+        <Filters filters={filters} setFilters={setFilters} />
         <div>Table</div>
       </div>
     </div>

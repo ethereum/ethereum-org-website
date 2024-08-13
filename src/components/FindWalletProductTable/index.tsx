@@ -2,16 +2,13 @@ import { WalletFilters } from "@/components/FindWalletProductTable/data/WalletFi
 import { WalletPersonaPresets } from "@/components/FindWalletProductTable/data/WalletPersonaPresets"
 import ProductTable from "@/components/ProductTable"
 
-import { WALLETS_FILTERS_DEFAULT } from "@/lib/constants"
-
 const FindWalletProductTable = () => {
   const walletPersonas = WalletPersonaPresets()
-  const walletFilters = WalletFilters()
+  const walletFilterOptions = WalletFilters()
 
   return (
     <ProductTable
-      filters={walletFilters}
-      filtersDefault={WALLETS_FILTERS_DEFAULT}
+      filterOptions={walletFilterOptions}
       presetFilters={walletPersonas}
     />
   )

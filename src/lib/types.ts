@@ -646,21 +646,25 @@ export interface WalletFilterData {
   description: TranslationKey | ""
 }
 
+export type FilterInputState = boolean | Lang | null
+
 export type FilterOption = {
   title: string
   items: Array<{
     title: string
-    icon: typeof Icon
-    description: string
-    filterKey: string | undefined
-    showOptions: boolean | undefined
-    options:
-      | Array<{
-          name: string
-          filterKey?: string
-          inputType: "checkbox"
-        }>
-      | []
+    icon: typeof Icon | null
+    input: string
+    inputState: FilterInputState
+    // description: string
+    // filterKey: string | undefined
+    // showOptions: boolean | undefined
+    // options:
+    //   | Array<{
+    //       name: string
+    //       filterKey?: string
+    //       inputType: "checkbox"
+    //     }>
+    //   | []
   }>
 }
 

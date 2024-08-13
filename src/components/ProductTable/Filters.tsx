@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next"
 import { BsArrowCounterclockwise } from "react-icons/bs"
 
-import { FilterOption } from "@/lib/types"
+import { FilterInputState, FilterOption } from "@/lib/types"
 
 import {
   Accordion,
@@ -9,19 +9,41 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/../tailwind/ui/accordion"
+import Switch from "@/../tailwind/ui/Switch"
 
 interface PresetFiltersProps {
-  activeFilters: unknown
   filters: FilterOption[]
-  setActiveFilters: () => void
+  setFilters: (filterOptions: FilterOption[]) => void
 }
 
-const PresetFilters = ({
-  // activeFilters,
-  filters,
-  // setActiveFilters,
-}: PresetFiltersProps) => {
+const Filters = ({ filters, setFilters }: PresetFiltersProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
+
+  const updateFilterState = (
+    filterIndex: number,
+    itemIndex: number,
+    newInputState: FilterInputState
+  ) => {
+    const updatedFilters = filters.map((filter, idx) => {
+      if (idx === filterIndex) {
+        const updatedItems = filter.items.map((item, i) => {
+          if (i === itemIndex) {
+            return {
+              ...item,
+              inputState: newInputState,
+            }
+          }
+          return item
+        })
+        return {
+          ...filter,
+          items: updatedItems,
+        }
+      }
+      return filter
+    })
+    setFilters(updatedFilters)
+  }
 
   return (
     <div className={`w-full md:w-80`}>
@@ -40,21 +62,63 @@ const PresetFilters = ({
         </div>
       </div>
       <Accordion
-        type="single"
-        collapsible
+        type="multiple"
         className="width-full flex flex-col gap-2"
+        defaultValue={filters.map((_, idx) => `item ${idx}`)}
       >
-        {filters.map((filter, idx) => {
+        {filters.map((filter, filterIndex) => {
           return (
             <AccordionItem
-              key={idx}
-              value={`item ${idx}`}
+              key={filterIndex}
+              value={`item ${filterIndex}`}
               className="bg-background-highlight p-6"
             >
               <AccordionTrigger className="border-b border-b-border-accordion">
-                <p className="text-base text-body">{filter.title}</p>
+                <p className="text-base text-primary-high-contrast">
+                  {filter.title}
+                </p>
               </AccordionTrigger>
-              <AccordionContent>Content</AccordionContent>
+              <AccordionContent className="p-0 md:p-0">
+                {filter.items.map((item, itemIndex) => {
+                  console.log(item.input)
+                  return (
+                    <div
+                      key={item.title}
+                      className="flex flex-row items-center justify-between gap-2 border-t border-t-border-accordion p-3"
+                    >
+                      {item.input === "switch" && (
+                        <>
+                          <div className="flex flex-row items-center">
+                            <div className="h-8 w-8">
+                              {item.icon && (
+                                <item.icon boxSize={7} mt={0.5} aria-hidden />
+                              )}
+                            </div>
+                            <p>{item.title}</p>
+                          </div>
+                          {item.input === "switch" && (
+                            <Switch
+                              checked={item.inputState as boolean}
+                              onCheckedChange={() => {
+                                updateFilterState(
+                                  filterIndex,
+                                  itemIndex,
+                                  !item.inputState
+                                )
+                              }}
+                            />
+                          )}
+                        </>
+                      )}
+                      {item.input === "select" && (
+                        <>
+                          <p>Select</p>
+                        </>
+                      )}
+                    </div>
+                  )
+                })}
+              </AccordionContent>
             </AccordionItem>
           )
         })}
@@ -63,4 +127,4 @@ const PresetFilters = ({
   )
 }
 
-export default PresetFilters
+export default Filters
