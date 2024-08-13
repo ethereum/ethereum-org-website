@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { useTheme } from "next-themes"
 import {
@@ -19,23 +18,17 @@ import {
   BsUiChecksGrid,
 } from "react-icons/bs"
 import { PiFlask, PiUsersFourLight } from "react-icons/pi"
-import {
-  useColorMode,
-  useColorModeValue,
-  useDisclosure,
-} from "@chakra-ui/react"
+import { useColorMode } from "@chakra-ui/react"
 
 import { EthereumIcon } from "@/components/icons/EthereumIcon"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { FROM_QUERY } from "@/lib/constants"
-
 import type { NavSections } from "./types"
 
+import useColorModeValue from "@/hooks/useColorModeValue"
+
 export const useNav = () => {
-  const { asPath } = useRouter()
-  const { isOpen, onToggle } = useDisclosure()
   const { t } = useTranslation("common")
   const { theme, setTheme } = useTheme()
   const { setColorMode } = useColorMode()
@@ -472,12 +465,6 @@ export const useNav = () => {
     },
   }
 
-  const splitPath = asPath.split("/")
-  const fromPageParameter =
-    splitPath.length > 1 && splitPath[1] !== "languages"
-      ? `?${FROM_QUERY}=/${splitPath.slice(1).join("/")}`
-      : ""
-
   const toggleColorMode = () => {
     setTheme(theme === "dark" ? "light" : "dark")
     setColorMode(theme === "dark" ? "light" : "dark")
@@ -488,17 +475,8 @@ export const useNav = () => {
     })
   }
 
-  const mobileNavProps = {
-    fromPageParameter,
-    isOpen,
-    toggleColorMode,
-    onToggle,
-  }
-
   return {
-    fromPageParameter,
     linkSections,
-    mobileNavProps,
     toggleColorMode,
   }
 }

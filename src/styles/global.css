@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "@docsearch/css";
 @import "./colors.css";
 @import "./semantic-tokens.css";
 @import "./fonts.css";
+@import "./docsearch.css";
 
 @layer base {
   :root {
@@ -47,6 +49,7 @@
       rgba(84, 132, 234, 0.2) 51.56%,
       rgba(58, 142, 137, 0.2) 100%
     );
+    --feedback-gradient: var(--gradient-main);
     --table-box-shadow: 0 14px 66px rgba(0, 0, 0, 0.07),
       0 10px 17px rgba(0, 0, 0, 0.03), 0 4px 7px rgba(0, 0, 0, 0.05);
     --table-item-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -108,6 +111,12 @@
       rgba(84, 132, 234, 0.2) 51.56%,
       rgba(58, 142, 137, 0.2) 100%
     );
+    --feedback-gradient: linear-gradient(
+      83.46deg,
+      #2c2c32 7.03%,
+      #44404d 52.42%,
+      #303038 98.77%
+    );
     --table-box-shadow: 0 14px 66px hsla(0, 0%, 96.1%, 0.07),
       0 10px 17px hsla(0, 0%, 96.1%, 0.03), 0 4px 7px hsla(0, 0%, 96.1%, 0.05);
     --table-item-box-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.1);
@@ -120,7 +129,7 @@
   }
 
   a {
-    @apply text-primary underline;
+    @apply underline-offset-3 text-primary underline hover:text-primary-hover focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover;
   }
 
   h1,
@@ -156,11 +165,19 @@
     @apply text-sm lg:text-md;
   }
 
-  /* TODO: to be replaced with list component styles */
+  pre,
+  code,
+  kbd,
+  samp {
+    @apply font-monospace text-base leading-base;
+  }
+
+  /* TODO: remove these global styles when the list component migration is complete */
   ul,
   ol {
     margin: 0px 0px 1.45rem 1.45rem;
     padding: 0;
+    list-style-type: initial;
 
     & li {
       padding-inline-start: 0;
@@ -184,13 +201,6 @@
     & > p {
       margin-bottom: calc(1.45rem / 2);
     }
-  }
-
-  pre,
-  code,
-  kbd,
-  samp {
-    @apply font-monospace text-base leading-base;
   }
 }
 

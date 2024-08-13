@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import plugin from "tailwindcss/plugin"
 
 const config = {
   darkMode: ["class"],
@@ -10,6 +11,13 @@ const config = {
   prefix: "",
   theme: {
     extend: {
+      screens: {
+        sm: "480px",
+        md: "768px",
+        lg: "992px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
       fontFamily: {
         heading: "var(--font-inter)",
         body: "var(--font-inter)",
@@ -27,6 +35,7 @@ const config = {
         md: ["1rem", "1.6"], // [md, base]
         sm: ["0.875rem", "1.6"], // [sm, base]
         xs: ["0.75rem", "1.6"], // [xs, base]
+        "2xs": ["0.625rem", "1.6"], // [2xs, base]
       },
       lineHeight: {
         "6xs": "1.1",
@@ -38,7 +47,62 @@ const config = {
         sm: "1.5",
         base: "1.6",
       },
+      zIndex: {
+        hide: "-1",
+        auto: "auto",
+        base: "0",
+        docked: "10",
+        dropdown: "1000",
+        sticky: "1100",
+        banner: "1200",
+        overlay: "1300",
+        modal: "1400",
+        popover: "1500",
+        skipLink: "1600",
+        toast: "1700",
+        tooltip: "1800",
+      },
       colors: {
+        gray: {
+          100: "var(--gray-100)",
+          150: "var(--gray-150)",
+          200: "var(--gray-200)",
+          300: "var(--gray-300)",
+          400: "var(--gray-400)",
+          500: "var(--gray-500)",
+          600: "var(--gray-600)",
+          700: "var(--gray-700)",
+          800: "var(--gray-800)",
+          900: "var(--gray-900)",
+        },
+
+        blue: {
+          50: "var(--blue-50)",
+          100: "var(--blue-100)",
+          200: "var(--blue-200)",
+          300: "var(--blue-300)",
+          400: "var(--blue-400)",
+          500: "var(--blue-500)",
+          600: "var(--blue-600)",
+          700: "var(--blue-700)",
+          800: "var(--blue-800)",
+          900: "var(--blue-900)",
+        },
+
+        orange: {
+          50: "var(--orange-50)",
+          100: "var(--orange-100)",
+          200: "var(--orange-200)",
+          300: "var(--orange-300)",
+          400: "var(--orange-400)",
+          500: "var(--orange-500)",
+          550: "var(--orange-550)",
+          600: "var(--orange-600)",
+          700: "var(--orange-700)",
+          800: "var(--orange-800)",
+          900: "var(--orange-900)",
+        },
+
         primary: {
           DEFAULT: "hsla(var(--primary))",
           "high-contrast": "hsla(var(--primary-high-contrast))",
@@ -100,6 +164,8 @@ const config = {
         "gradient-accent-b": "var(--gradient-accent-b)",
         "gradient-accent-c": "var(--gradient-accent-c)",
         "gradient-primary-hero": "var(--gradient-primary-hero)",
+        "main-gradient": "var(--gradient-main)", // TODO: Duplicate; remove one
+        "feedback-gradient": "var(--feedback-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
@@ -147,9 +213,29 @@ const config = {
       gridTemplateColumns: {
         bento: "2rem repeat(10, 1fr) 2rem",
       },
+      textUnderlineOffset: {
+        3: "3px",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    plugin(function ({ matchVariant }) {
+      // The :not() pseudo-class. `i.e. not-[:checked]`
+      matchVariant(
+        "not",
+        (value) => {
+          return `&:not(${value})`
+        },
+        {
+          values: {
+            // not-disabled => ":not(:disabled)"
+            disabled: ":disabled",
+          },
+        }
+      )
+    }),
+  ],
 } satisfies Config
 
 export default config

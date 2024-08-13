@@ -1,25 +1,17 @@
 import { useTranslation } from "next-i18next"
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
+import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
 import { IoChevronUpSharp } from "react-icons/io5"
-import {
-  Box,
-  Flex,
-  Heading,
-  Icon,
-  List,
-  ListItem,
-  SimpleGrid,
-  Text,
-} from "@chakra-ui/react"
 
 import type { FooterLink, FooterLinkSection } from "@/lib/types"
 
-import { BaseLink } from "@/components/Link"
 import Translation from "@/components/Translation"
 
+import { cn } from "@/lib/utils/cn"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
-import { Button } from "./Buttons"
+import { Button } from "./ui/buttons/Button"
+import { BaseLink } from "./ui/Link"
+import { List, ListItem } from "./ui/list"
 
 const socialLinks = [
   {
@@ -28,7 +20,7 @@ const socialLinks = [
     ariaLabel: "GitHub",
   },
   {
-    icon: FaTwitter,
+    icon: FaXTwitter,
     href: "https://twitter.com/ethdotorg",
     ariaLabel: "Twitter",
   },
@@ -306,132 +298,76 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
     },
   ]
 
-  const hoverStyles = {
-    textDecor: "none",
-    color: "primary.base",
-    _after: {
-      color: "primary.base",
-    },
-    "& svg": {
-      fill: "primary.base",
-    },
-  }
-
-  const linkProps = {
-    isPartiallyActive: false,
-    textDecor: "none",
-    color: "body.medium",
-    fontWeight: "normal",
-    _hover: hoverStyles,
-    sx: {
-      "& svg": {
-        fill: "body.medium",
-      },
-    },
-  }
+  const footerLinkClassName =
+    "text-body-medium no-underline hover:text-primary hover:after:text-primary"
 
   return (
-    <Box as="footer" py="4" px="8">
-      <Flex
-        justify={{ base: "center", md: "space-between" }}
-        alignItems="center"
-        flexWrap="wrap"
-        gap={8}
-        pt={4}
-        pb={4}
-        borderTop={"1px solid"}
-        borderColor={"body.light"}
-      >
-        <Text fontSize={"sm"} fontStyle={"italic"} color={"body.medium"}>
+    <footer className="px-8 py-4">
+      <div className="flex flex-wrap items-center justify-center gap-8 border-t border-body-light py-4 md:justify-between">
+        <p className="text-sm italic text-body-medium">
           <Translation id="website-last-updated" />: {lastDeployLocaleTimestamp}
-        </Text>
+        </p>
 
         <Button
-          leftIcon={<IoChevronUpSharp />}
           variant="outline"
           isSecondary
           onClick={() => scrollIntoView("__next")}
         >
-          {t("go-to-top")}
+          <IoChevronUpSharp /> Go to top
         </Button>
-      </Flex>
+      </div>
 
-      <SimpleGrid
-        gap={4}
-        justifyContent="space-between"
-        templateColumns={{
-          base: "auto",
-          sm: "repeat(2, auto)",
-          md: "repeat(3, auto)",
-          xl: "repeat(6, auto)",
-        }}
-      >
+      <div className="grid auto-cols-auto justify-between gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
         {linkSections.map((section: FooterLinkSection, idx) => (
-          <Box key={idx}>
-            <Heading as="h3" fontSize="sm" lineHeight="base" my="1.14em">
+          <div key={idx}>
+            <h3 className="my-5 text-sm font-bold">
               <Translation id={section.title} />
-            </Heading>
-            <List fontSize="sm" lineHeight="base" fontWeight="normal" m="0">
+            </h3>
+            <List className="m-0 mb-4 list-none text-sm">
               {section.links.map((link, linkIdx) => (
-                <ListItem key={linkIdx} mb={4}>
-                  <BaseLink href={link.href} {...linkProps}>
+                <ListItem key={linkIdx} className="mb-4">
+                  <BaseLink
+                    href={link.href}
+                    className={footerLinkClassName}
+                    isPartiallyActive={false}
+                  >
                     {link.text}
                   </BaseLink>
                 </ListItem>
               ))}
             </List>
-          </Box>
+          </div>
         ))}
-      </SimpleGrid>
-      <Flex
-        p={6}
-        flexDir="column"
-        alignItems="center"
-        justifyContent="center"
-        fontSize="sm"
-        bg="background.highlight"
-      >
-        <Box display="flex" gap={4}>
-          {socialLinks.map(({ href, ariaLabel, icon }) => (
+      </div>
+      <div className="flex flex-col items-center justify-center bg-background-highlight p-6 text-sm">
+        <div className="flex gap-4">
+          {socialLinks.map(({ href, ariaLabel, icon: Icon }) => (
             <BaseLink
               key={href}
               href={href}
               hideArrow
-              color="body.base"
               aria-label={ariaLabel}
-              _focus={{ color: "primary.base" }}
+              className="text-body hover:text-primary"
             >
-              <Icon
-                as={icon}
-                _hover={{
-                  transition:
-                    "color 0.2s ease-in-out, transform 0.2s ease-in-out",
-                }}
-                fontSize="4xl"
-              />
+              <Icon className="h-9 w-9 hover:transform hover:transition-colors" />
             </BaseLink>
           ))}
-        </Box>
-        <List
-          display="flex"
-          flexDir={{ base: "column", sm: "row" }}
-          flexWrap="wrap"
-          justifyContent={{ base: "center", sm: "space-between", md: "center" }}
-          fontWeight="normal"
-          fontSize="sm"
-          p={5}
-          m={0}
-        >
+        </div>
+        <List className="m-0 flex list-none flex-col flex-wrap justify-center p-5 text-sm font-normal sm:flex-row sm:justify-between md:justify-center">
           {dipperLinks.map(({ href, text }) => (
-            <ListItem key={text} textAlign="center" px="2">
-              <BaseLink href={href} w={["100%", null]} {...linkProps}>
+            <ListItem key={text} className="px-2 text-center">
+              <BaseLink
+                href={href}
+                className={cn("w-full sm:w-auto", footerLinkClassName)}
+                isPartiallyActive={false}
+              >
                 {text}
               </BaseLink>
             </ListItem>
           ))}
         </List>
-      </Flex>
-    </Box>
+      </div>
+    </footer>
   )
 }
 

@@ -1,27 +1,19 @@
 import { useTranslation } from "next-i18next"
-import { Box } from "@chakra-ui/react"
-
-import { BaseLink } from "@/components/Link"
 
 import { MAIN_CONTENT_ID } from "@/lib/constants"
+
+import { BaseLink } from "./ui/Link"
 
 export const SkipLink = () => {
   const { t } = useTranslation()
   return (
-    <Box bg="primary.base">
+    <div className="bg-primary">
       <BaseLink
         href={"#" + MAIN_CONTENT_ID}
-        lineHeight="taller"
-        position="absolute"
-        top="-12"
-        ms="2"
-        color="background.base"
-        textDecorationLine="none"
-        _hover={{ textDecoration: "none" }}
-        _focus={{ position: "static" }}
+        className="absolute -top-12 ms-2 leading-8 text-background no-underline hover:no-underline focus:static"
       >
         {t("skip-to-main-content")}
       </BaseLink>
-    </Box>
+    </div>
   )
 }
