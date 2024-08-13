@@ -20,7 +20,7 @@ const MobileNavMenu = lazy(() => import("./Mobile"))
 
 // TODO display page title on mobile
 const Nav = () => {
-  const { toggleColorMode, linkSections, mobileNavProps } = useNav()
+  const { toggleColorMode, linkSections } = useNav()
   const { t } = useTranslation("common")
   const searchModalDisclosure = useDisclosure()
   const navWrapperRef = useRef(null)
@@ -84,10 +84,9 @@ const Nav = () => {
                 <Suspense>
                   <Search {...searchModalDisclosure} />
                   <MobileNavMenu
-                    {...mobileNavProps}
+                    toggleColorMode={toggleColorMode}
                     linkSections={linkSections}
                     toggleSearch={searchModalDisclosure.onOpen}
-                    drawerContainerRef={navWrapperRef}
                   />
                 </Suspense>
               </Hide>

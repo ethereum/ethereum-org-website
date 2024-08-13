@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "8.8.0",
+  "version": "8.9.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -34,13 +34,17 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@hookform/resolvers": "^3.8.0",
+    "@next/bundle-analyzer": "^14.2.5",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-checkbox": "^1.1.1",
+    "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-navigation-menu": "^1.2.0",
     "@radix-ui/react-popover": "^1.1.1",
     "@radix-ui/react-radio-group": "^1.2.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-switch": "^1.1.0",
     "@radix-ui/react-visually-hidden": "^1.1.0",
+    "@sentry/nextjs": "^8.19.0",
     "@socialgouv/matomo-next": "^1.8.0",
     "chart.js": "^4.4.2",
     "chartjs-plugin-datalabels": "^2.2.0",
@@ -76,6 +80,7 @@
     "remark-gfm": "^3.0.1",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
+    "usehooks-ts": "^3.1.0",
     "yaml-loader": "^0.8.0"
   },
   "devDependencies": {
@@ -124,8 +129,7 @@
     "tsconfig-paths-webpack-plugin": "4.1.0",
     "typescript": "^5.5.2",
     "unified": "^10.0.0",
-    "unist-util-visit": "^5.0.0",
-    "usehooks-ts": "^3.1.0"
+    "unist-util-visit": "^5.0.0"
   },
   "resolutions": {
     "jackspeak": "2.1.1",
