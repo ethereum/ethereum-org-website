@@ -66,7 +66,12 @@ const Tooltip = ({
       >
         {children}
       </PopoverTrigger>
-      <PopoverContent side="top" data-testid="tooltip-popover">
+      <PopoverContent
+        side="top"
+        sideOffset={2}
+        className="w-80 px-5 text-sm"
+        data-testid="tooltip-popover"
+      >
         {content}
       </PopoverContent>
     </Popover>
