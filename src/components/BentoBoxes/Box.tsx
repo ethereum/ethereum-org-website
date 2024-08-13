@@ -32,15 +32,15 @@ const BentoBox = ({
       className
     )}
   >
-    <div className="grid place-items-center">
+    <div className="mb-6 grid place-items-center md:mb-auto">
       <NextImage src={imgSrc} alt="" width={imgWidth} height={imgHeight} />
     </div>
     <div>
       <h3 className="mb-2 text-3xl font-black">{title}</h3>
-      <p className="mb-8">{children}</p>
+      <p className="mb-8 text-md">{children}</p>
       <ButtonLink
         linkProps={{ href: href }}
-        className="!border-body !text-body" // TODO: Check this override
+        className="!border-body text-md !text-body" // TODO: Check this override
         variant="outline"
       >
         {action} <MdChevronRight />
