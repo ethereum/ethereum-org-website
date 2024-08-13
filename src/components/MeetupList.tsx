@@ -9,7 +9,6 @@ import {
   LinkOverlay,
   List,
   ListItem,
-  useColorModeValue,
   useToken,
   VisuallyHidden,
 } from "@chakra-ui/react"
