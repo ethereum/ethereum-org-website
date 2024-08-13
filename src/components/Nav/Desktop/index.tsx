@@ -7,10 +7,9 @@ import { HStack, useColorModeValue, useEventListener } from "@chakra-ui/react"
 
 import { IconButton } from "@/components/Buttons"
 import LanguagePicker from "@/components/LanguagePicker"
+import { Button } from "@/components/ui/buttons/Button"
 
 import { DESKTOP_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
-
-import { Button } from "../../../../tailwind/ui/buttons/Button"
 
 type DesktopNavMenuProps = {
   toggleColorMode: () => void

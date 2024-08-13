@@ -1,7 +1,7 @@
 import { MouseEventHandler } from "react"
 import { useTranslation } from "next-i18next"
 
-import { Button } from "../../../tailwind/ui/buttons/Button"
+import { Button } from "../ui/buttons/Button"
 
 type MobileCloseBarProps = {
   handleClick: MouseEventHandler<HTMLButtonElement>
