@@ -34,6 +34,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
+import { isValidDate } from "@/lib/utils/date"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { polishRSSList } from "@/lib/utils/rss"
@@ -235,13 +236,23 @@ const HomePage = ({
   ]
 
   const upcomingEvents = events
-    .sort(
-      (a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime()
-    )
+    .sort((a, b) => {
+      const dateA = isValidDate(a.endDate)
+        ? new Date(a.endDate).getTime()
+        : -Infinity
+      const dateB = isValidDate(b.endDate)
+        ? new Date(b.endDate).getTime()
+        : -Infinity
+      return dateA - dateB
+    })
     .slice(0, 3) // Show 3 events ending soonest
 
   const calendar = communityEvents.upcomingEventData
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .sort((a, b) => {
+      const dateA = isValidDate(a.date) ? new Date(a.date).getTime() : -Infinity
+      const dateB = isValidDate(b.date) ? new Date(b.date).getTime() : -Infinity
+      return dateA - dateB
+    })
     .slice(0, 4) // Show next 4 events on the calendar
 
   return (
@@ -504,13 +515,15 @@ const HomePage = ({
                   <div className="mt-3 w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
                     {source}
                   </div>
-                  <p className="text-sm italic">
-                    {new Intl.DateTimeFormat(locale, {
-                      month: "long",
-                      day: "numeric",
-                      year: "numeric",
-                    }).format(new Date(pubDate))}
-                  </p>
+                  {isValidDate(pubDate) && (
+                    <p className="text-sm italic">
+                      {new Intl.DateTimeFormat(locale, {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric",
+                      }).format(new Date(pubDate))}
+                    </p>
+                  )}
                   <p className="mb-2 text-2xl">{title}</p>
                 </div>
               </a>
@@ -566,14 +579,20 @@ const HomePage = ({
                           <div>
                             <p className="text-2xl">{title}</p>
                             <p className="text-sm italic text-body-medium">
-                              {new Intl.DateTimeFormat(locale, {
-                                month: "2-digit",
-                                day: "2-digit",
-                                year: "numeric",
-                              }).formatRange(
-                                new Date(startDate),
-                                new Date(endDate)
-                              )}
+                              {(isValidDate(startDate) ||
+                                isValidDate(endDate)) &&
+                                new Intl.DateTimeFormat(locale, {
+                                  month: "2-digit",
+                                  day: "2-digit",
+                                  year: "numeric",
+                                }).formatRange(
+                                  new Date(
+                                    isValidDate(startDate) ? startDate : endDate
+                                  ),
+                                  new Date(
+                                    isValidDate(endDate) ? endDate : startDate
+                                  )
+                                )}
                             </p>
                             <p className="text-sm italic text-body-medium">
                               {location}
