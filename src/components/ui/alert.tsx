@@ -4,7 +4,7 @@ import { MdClose } from "react-icons/md"
 
 import { cn } from "@/lib/utils/cn"
 
-import { Button } from "../../../tailwind/ui/buttons/Button"
+import { Button } from "./buttons/Button"
 
 const alertVariants = cva(
   "flex flex-row gap-4 items-center rounded-lg border p-4",
