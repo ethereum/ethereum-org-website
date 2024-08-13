@@ -2,7 +2,7 @@ import * as React from "react"
 import { useTranslation } from "react-i18next"
 import { DocSearchButton } from "@docsearch/react"
 
-import { Button, type ButtonProps } from "../../../tailwind/ui/buttons/Button"
+import { Button, type ButtonProps } from "../ui/buttons/Button"
 
 const SearchButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (props, ref) => {

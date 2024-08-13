@@ -12,7 +12,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
 import { sanitizeHitUrl } from "@/lib/utils/url"
 
-import { Button } from "../../../tailwind/ui/buttons/Button"
+import { Button } from "../ui/buttons/Button"
 
 import SearchButton from "./SearchButton"
 
