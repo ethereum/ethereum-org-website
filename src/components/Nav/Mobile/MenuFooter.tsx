@@ -43,10 +43,7 @@ const MenuFooter = ({
         <FooterItemText>{t(themeLabelKey)}</FooterItemText>
       </FooterButton>
 
-      <LanguagePicker
-        className="fixed inset-4 h-[calc(100vh-var(--eth-sizes-8))] w-[calc(100vw-var(--eth-sizes-8))]"
-        handleClose={onToggle}
-      >
+      <LanguagePicker dialog handleClose={onToggle}>
         <FooterButton icon={BsTranslate} name={MOBILE_LANGUAGE_BUTTON_NAME}>
           <FooterItemText>{t("languages")}</FooterItemText>
         </FooterButton>

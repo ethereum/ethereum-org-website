@@ -95,7 +95,6 @@ export const useLanguagePicker = (handleClose?: () => void) => {
   }
 
   return {
-    t,
     disclosure: { isOpen, setValue, onOpen, onClose },
     languages,
   }

@@ -65,9 +65,7 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
       />
 
       {/* Locale-picker menu */}
-      <LanguagePicker
-      // TODO w="xs"
-      >
+      <LanguagePicker>
         <Button
           name={DESKTOP_LANGUAGE_BUTTON_NAME}
           ref={languagePickerRef}
