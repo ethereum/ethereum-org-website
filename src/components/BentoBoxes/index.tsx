@@ -1,10 +1,16 @@
-import { useState } from "react"
-import { MdSwipeLeft, MdSwipeRight } from "react-icons/md"
+import { useEffect } from "react"
+import { Swiper } from "swiper"
+import { EffectCards } from "swiper/modules"
 
 import { cn } from "@/lib/utils/cn"
 
 import BentoBox, { BentoBoxProps } from "./Box"
 import Title from "./Title"
+
+import "swiper/css"
+import "swiper/css/effect-cards"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
 
 import ImpactImage from "@/public/images/impact_transparent.png"
 import ManAndDogImage from "@/public/images/man-and-dog-playing.png"
@@ -13,7 +19,14 @@ import RobotBarImage from "@/public/images/robot-help-bar.png"
 import MergeImage from "@/public/images/upgrades/merge.png"
 
 const BentoBoxes = () => {
-  const [activeIndex, setActiveIndex] = useState(0)
+  // Mobile swiper
+  useEffect(() => {
+    new Swiper(".swiper", {
+      grabCursor: true,
+      effect: "cards",
+      modules: [EffectCards],
+    })
+  }, [])
 
   const flow = {
     mobile: {
@@ -151,61 +164,27 @@ const BentoBoxes = () => {
     },
   ]
 
-  const n = bentoBoxes.length
-
-  const getPositionFromIndex = (index: number) => {
-    if (index === 0) return "z-[5] rotate-[-2deg]"
-    if (index === 1) return "z-[4] rotate-[-1deg]"
-    if (index === 2) return "z-[3] rotate-[0deg]"
-    if (index === 3) return "z-[2] rotate-[1deg]"
-    if (index === 4) return "z-[1] rotate-[2deg]"
-    console.warn("Warning, index out of range; tw classes may not be correct")
-    return "z-0 rotate-0"
-  }
-
-  const progressCard = () => setActiveIndex((prev) => (prev + 1) % n)
-
-  const regressCard = () => setActiveIndex((prev) => (prev - 1 + n) % n)
-
-  // Animation of old top card when active index progresses
-  // Progression: 0%: z-[5] translate-x-0 rotate-0 origin-bottom, 50%: z-[5] translate-x-[120%] rotate-45 origin-bottom, 51%%: z-[1] translate-x-[120%] rotate-45 origin-bottom, 100%: z-[1] translate-x-[0%] rotate-[8deg] origin-bottom
-
   return (
     <>
       {/* Mobile */}
-      <div className="relative my-16 overflow-visible lg:hidden">
+      <div className="relative my-16 lg:hidden">
         <Title className="" />
-        <div className="absolute inset-x-0 top-128 z-10 flex justify-evenly py-1 text-4xl">
-          <button onClick={regressCard}>
-            <MdSwipeLeft />
-          </button>
-          <button onClick={progressCard}>
-            <MdSwipeRight />
-          </button>
-        </div>
         {/* TODO: Fix height constraints */}
-        <div className="relative mx-auto grid h-[800px] max-w-[min(calc(100vw_-_10rem),30rem)]">
-          {bentoBoxes.map(({ className, ...box }, idx) => {
-            const adjustedIndex = (idx - activeIndex + n) % n
-            return (
-              // TODO: Complete mobile gesture animations
+        <div className="swiper mt-4 h-fit max-w-[min(calc(100vw_-_2rem),_30rem)]">
+          <div className="swiper-wrapper">
+            {bentoBoxes.map(({ className, ...box }) => (
               <BentoBox
                 key={box.title}
-                imgHeight={400}
+                imgHeight={160}
                 className={cn(
                   className,
-                  "origin-bottom",
-                  "bg-background",
-                  "transition-all duration-200",
-                  getPositionFromIndex(adjustedIndex),
-                  adjustedIndex === 0 ? "relative" : "absolute",
-                  "inset-0"
+                  "swiper-slide bg-background text-body"
                 )}
                 {...box}
                 imgWidth={undefined} // Intentionally last to override box
               />
-            )
-          })}
+            ))}
+          </div>
         </div>
       </div>
 
