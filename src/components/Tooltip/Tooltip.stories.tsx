@@ -61,6 +61,6 @@ export const Basic: Story = {}
 // for chromatic story snapshot showing the rendered popover
 export const OnOpen: Story = {
   args: {
-    isOpen: true,
+    open: true,
   },
 }

@@ -1,16 +1,21 @@
-import React, { ReactNode, useEffect } from "react"
+import React, { ComponentProps, ReactNode, useEffect } from "react"
 
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
 
-export type TooltipProps = {
+export type TooltipProps = ComponentProps<typeof Popover> & {
   content: ReactNode
   children?: ReactNode
   onBeforeOpen?: () => void
 }
 
-const Tooltip = ({ content, children, onBeforeOpen }: TooltipProps) => {
+const Tooltip = ({
+  content,
+  children,
+  onBeforeOpen,
+  ...props
+}: TooltipProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   // Close the popover when the user scrolls.
@@ -53,7 +58,7 @@ const Tooltip = ({ content, children, onBeforeOpen }: TooltipProps) => {
   }
 
   return (
-    <Popover open onOpenChange={handleOpenChange}>
+    <Popover open={isOpen} onOpenChange={handleOpenChange} {...props}>
       <PopoverTrigger onMouseEnter={onOpen} onMouseLeave={onClose}>
         {children}
       </PopoverTrigger>
