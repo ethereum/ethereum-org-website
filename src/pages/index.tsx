@@ -3,7 +3,7 @@ import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
+import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
 import { MdChevronRight } from "react-icons/md"
 import { Flex, Skeleton } from "@chakra-ui/react"
 
@@ -643,7 +643,7 @@ const HomePage = ({
               </p>
             </SvgButtonLink>
             <SvgButtonLink
-              Svg={FaTwitter}
+              Svg={FaXTwitter}
               label="Twitter"
               href="https://x.com/EthDotOrg"
               className="text-accent-b"
