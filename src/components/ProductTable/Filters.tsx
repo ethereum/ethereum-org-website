@@ -9,7 +9,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/../tailwind/ui/accordion"
-import Switch from "@/../tailwind/ui/Switch"
 
 interface PresetFiltersProps {
   filters: FilterOption[]
@@ -80,42 +79,15 @@ const Filters = ({ filters, setFilters }: PresetFiltersProps) => {
               </AccordionTrigger>
               <AccordionContent className="p-0 md:p-0">
                 {filter.items.map((item, itemIndex) => {
-                  console.log(item.input)
                   return (
-                    <div
-                      key={item.title}
-                      className="flex flex-row items-center justify-between gap-2 border-t border-t-border-accordion p-3"
-                    >
-                      {item.input === "switch" && (
-                        <>
-                          <div className="flex flex-row items-center">
-                            <div className="h-8 w-8">
-                              {item.icon && (
-                                <item.icon boxSize={7} mt={0.5} aria-hidden />
-                              )}
-                            </div>
-                            <p>{item.title}</p>
-                          </div>
-                          {item.input === "switch" && (
-                            <Switch
-                              checked={item.inputState as boolean}
-                              onCheckedChange={() => {
-                                updateFilterState(
-                                  filterIndex,
-                                  itemIndex,
-                                  !item.inputState
-                                )
-                              }}
-                            />
-                          )}
-                        </>
+                    <>
+                      {item.input(
+                        filterIndex,
+                        itemIndex,
+                        item.inputState,
+                        updateFilterState
                       )}
-                      {item.input === "select" && (
-                        <>
-                          <p>Select</p>
-                        </>
-                      )}
-                    </div>
+                    </>
                   )
                 })}
               </AccordionContent>

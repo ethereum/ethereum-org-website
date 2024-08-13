@@ -4,7 +4,6 @@ import type { AppProps } from "next/app"
 import { StaticImageData } from "next/image"
 import { SSRConfig } from "next-i18next"
 import type { ReactElement, ReactNode } from "react"
-import { Icon } from "@chakra-ui/react"
 
 import type {
   DocsFrontmatter,
@@ -651,10 +650,17 @@ export type FilterInputState = boolean | Lang | null
 export type FilterOption = {
   title: string
   items: Array<{
-    title: string
-    icon: typeof Icon | null
-    input: string
     inputState: FilterInputState
+    input: (
+      filterIndex: number,
+      itemIndex: number,
+      state: FilterInputState,
+      updateFilterState: (
+        filterIndex: number,
+        itemIndex: number,
+        inputState: FilterInputState
+      ) => void
+    ) => ReactElement
     // description: string
     // filterKey: string | undefined
     // showOptions: boolean | undefined
