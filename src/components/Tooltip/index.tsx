@@ -59,7 +59,11 @@ const Tooltip = ({
 
   return (
     <Popover open={isOpen} onOpenChange={handleOpenChange} {...props}>
-      <PopoverTrigger onMouseEnter={onOpen} onMouseLeave={onClose}>
+      <PopoverTrigger
+        onMouseEnter={onOpen}
+        onMouseLeave={onClose}
+        className="focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover"
+      >
         {children}
       </PopoverTrigger>
       <PopoverContent side="top" data-testid="tooltip-popover">
