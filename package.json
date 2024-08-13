@@ -71,6 +71,7 @@
     "react-select": "5.8.0",
     "reading-time": "^1.5.0",
     "remark-gfm": "^3.0.1",
+    "swiper": "^11.1.9",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "yaml-loader": "^0.8.0"
@@ -92,6 +93,7 @@
     "@types/node": "^20.4.2",
     "@types/react": "18.2.57",
     "@types/react-dom": "18.2.19",
+    "@types/swiper": "^6.0.0",
     "@types/xml2js": "^0.4.14",
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@typescript-eslint/parser": "^6.19.0",
