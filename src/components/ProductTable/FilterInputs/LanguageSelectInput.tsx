@@ -64,7 +64,6 @@ const LanguageSelectInput = ({
       </p>
       <div className="flex flex-row flex-wrap gap-2">
         {countSortedLanguagesCount.slice(0, 5).map((language, index, array) => {
-          console.log(array)
           return (
             <span
               key={language.langCode}

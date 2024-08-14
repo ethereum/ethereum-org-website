@@ -36,7 +36,6 @@ const SwitchFilterInput = ({
       <Switch
         checked={inputState as boolean}
         onCheckedChange={(e) => {
-          console.log()
           updateFilterState(filterIndex, itemIndex, e as boolean)
         }}
       />
