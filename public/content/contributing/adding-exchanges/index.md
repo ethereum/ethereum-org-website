@@ -4,6 +4,13 @@ description: The policy we use when adding exchanges to ethereum.org
 lang: en
 ---
 
+## List of Exchanges
+- **Uniswap**
+  - **Description**: Uniswap is a decentralized exchange (DEX) built on the Ethereum blockchain, enabling users to swap Ethereum-based tokens directly from their wallets.
+  - **Geographical Restrictions**: Uniswap is decentralized with minimal geographical restrictions. Users should ensure compliance with local regulations.
+  - **Accepted Currencies**: Supports Ethereum-based tokens (ERC-20). Operates on the Ethereum blockchain.
+  - **Proof of Legitimacy**: Uniswap is a well-established exchange. For more information, visit [Uniswap's official website](https://uniswap.org) and review [audit reports](https://uniswap.org/#security).
+
 # Adding Ethereum exchanges {#adding-ethereum-exchanges}
 
 Anyone is free to suggest new exchanges on ethereum.org.
