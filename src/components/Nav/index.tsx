@@ -1,6 +1,6 @@
 import { lazy, Suspense, useRef } from "react"
 import { useTranslation } from "next-i18next"
-import { Box, Flex, Hide, Show, useDisclosure } from "@chakra-ui/react"
+import { Box, Flex, Hide, Show } from "@chakra-ui/react"
 
 import { EthHomeIcon } from "@/components/icons"
 import { BaseLink } from "@/components/Link"
@@ -14,13 +14,14 @@ import DesktopNavMenu from "./Desktop"
 import Menu from "./Menu"
 import { useNav } from "./useNav"
 
+import { useDisclosure } from "@/hooks/useDisclosure"
 import { useIsClient } from "@/hooks/useIsClient"
 
 const MobileNavMenu = lazy(() => import("./Mobile"))
 
 // TODO display page title on mobile
 const Nav = () => {
-  const { toggleColorMode, linkSections, mobileNavProps } = useNav()
+  const { toggleColorMode, linkSections } = useNav()
   const { t } = useTranslation("common")
   const searchModalDisclosure = useDisclosure()
   const navWrapperRef = useRef(null)
@@ -84,10 +85,9 @@ const Nav = () => {
                 <Suspense>
                   <Search {...searchModalDisclosure} />
                   <MobileNavMenu
-                    {...mobileNavProps}
+                    toggleColorMode={toggleColorMode}
                     linkSections={linkSections}
                     toggleSearch={searchModalDisclosure.onOpen}
-                    drawerContainerRef={navWrapperRef}
                   />
                 </Suspense>
               </Hide>

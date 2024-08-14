@@ -16,6 +16,12 @@ type NavMenuColors = {
   lvl: Record<Level, LevelColors>
 }
 
+/**
+ * Hook to provide colors for the mobile navigation menu.
+ *
+ * TODO: replace with useNavMenuColorsTw when the desktop menu is migrated.
+ */
+
 export const useNavMenuColors = (): NavMenuColors => ({
   body: "body.base",
   stroke: "body.light",
