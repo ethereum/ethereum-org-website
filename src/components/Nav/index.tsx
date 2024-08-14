@@ -42,7 +42,7 @@ const Nav = () => {
             aria-label={t("home")}
             className="inline-flex items-center no-underline"
           >
-            <EthHomeIcon opacity={0.85} _hover={{ opacity: 1 }} />
+            <EthHomeIcon className="h-[35px] w-[22px] opacity-85 hover:opacity-100" />
           </BaseLink>
           {/* Desktop */}
           <div className="ms-3 flex w-full justify-end md:justify-between xl:ms-8">
