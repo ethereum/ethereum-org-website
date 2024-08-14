@@ -629,4 +629,12 @@
     "endDate": "2024-12-03",
     "imageUrl": "https://www.ethvenice.com/images/logo.png"
   }
+  {
+    "title": "ETH Riyadh 2024",
+    "to": "https://ethriyadh.com/",
+    "location": "Riyadh, Saudi Arabia",
+    "description": "ETH Riyadh 2024 unites Middle Eastern developers and blockchain enthusiasts to explore and advance Ethereum technology. Join us for an exciting event that fosters collaboration and innovation in the blockchain ecosystem.",
+    "startDate": "12/1/2024",
+    "endDate": "12/3/2024"
+}
 ]
