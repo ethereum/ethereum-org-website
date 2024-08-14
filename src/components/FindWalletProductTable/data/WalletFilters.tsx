@@ -2,6 +2,7 @@ import { useTranslation } from "next-i18next"
 
 import { FilterOption } from "@/lib/types"
 
+import FindWalletLanguageSelectInput from "@/components/FindWalletProductTable/filters/FindWalletLanguageSelectInput"
 import {
   BrowserIcon,
   BuyCryptoIcon,
@@ -24,7 +25,6 @@ import {
   SwapIcon,
   WithdrawCryptoIcon,
 } from "@/components/icons/wallets"
-import LanguageSelectInput from "@/components/ProductTable/FilterInputs/LanguageSelectInput"
 import SwitchFilterInput from "@/components/ProductTable/FilterInputs/SwitchFilterInput"
 
 export const WalletFilters = (): FilterOption[] => {
@@ -102,7 +102,7 @@ export const WalletFilters = (): FilterOption[] => {
           inputState: "en",
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
-              <LanguageSelectInput
+              <FindWalletLanguageSelectInput
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}

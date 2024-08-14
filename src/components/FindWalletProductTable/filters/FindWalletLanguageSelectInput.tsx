@@ -13,7 +13,7 @@ import {
 
 import { getLanguageCountWalletsData } from "@/lib/utils/wallets"
 
-interface LanguageSelectInputProps {
+interface FindWalletLanguageSelectInputProps {
   filterIndex: number
   itemIndex: number
   inputState: FilterInputState
@@ -24,13 +24,12 @@ interface LanguageSelectInputProps {
   ) => void
 }
 
-// TODO: Abstract wallet logic out of here
-const LanguageSelectInput = ({
+const FindWalletLanguageSelectInput = ({
   filterIndex,
   itemIndex,
   inputState,
   updateFilterState,
-}: LanguageSelectInputProps) => {
+}: FindWalletLanguageSelectInputProps) => {
   const { locale } = useRouter()
   const { t } = useTranslation("page-wallets-find-wallet")
   const languageCountWalletsData = getLanguageCountWalletsData(locale as string)
@@ -81,4 +80,4 @@ const LanguageSelectInput = ({
   )
 }
 
-export default LanguageSelectInput
+export default FindWalletLanguageSelectInput
