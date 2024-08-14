@@ -2,28 +2,24 @@ import { forwardRef, useRef } from "react"
 import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { MdSearch } from "react-icons/md"
 import { useDocSearchKeyboardEvents } from "@docsearch/react"
 import { DocSearchHit } from "@docsearch/react/dist/esm/types"
 import { useComposedRefs } from "@radix-ui/react-compose-refs"
 import * as Portal from "@radix-ui/react-portal"
+import { Slot } from "@radix-ui/react-slot"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
 import { sanitizeHitUrl } from "@/lib/utils/url"
 
-import { Button } from "../ui/buttons/Button"
-
-import SearchButton from "./SearchButton"
-
 import { type useDisclosure } from "@/hooks/useDisclosure"
 
 const SearchModal = dynamic(() => import("./SearchModal"))
 
-type Props = ReturnType<typeof useDisclosure>
+type Props = ReturnType<typeof useDisclosure> & { children?: React.ReactNode }
 
 const Search = forwardRef<HTMLButtonElement, Props>(
-  ({ isOpen, onOpen, onClose }, ref) => {
+  ({ isOpen, onOpen, onClose, children }, ref) => {
     const { locale } = useRouter()
     const searchButtonRef = useRef<HTMLButtonElement>(null)
     const mergedButtonRefs = useComposedRefs(ref, searchButtonRef)
@@ -43,38 +39,20 @@ const Search = forwardRef<HTMLButtonElement, Props>(
 
     return (
       <>
-        <div className="hidden xl:block">
-          <SearchButton
-            ref={mergedButtonRefs}
-            onClick={() => {
-              onOpen()
-              trackCustomEvent({
-                eventCategory: "nav bar",
-                eventAction: "click",
-                eventName: "search open",
-              })
-            }}
-          />
-        </div>
-        <div className="block xl:hidden">
-          <Button
-            ref={mergedButtonRefs}
-            className="px-2 transition-transform duration-200 ease-in-out hover:rotate-6 hover:text-primary"
-            variant="ghost"
-            isSecondary
-            onClick={() => {
-              onOpen()
-              trackCustomEvent({
-                eventCategory: "nav bar",
-                eventAction: "click",
-                eventName: "search open",
-              })
-            }}
-            aria-label={t("aria-toggle-search-button")}
-          >
-            <MdSearch />
-          </Button>
-        </div>
+        <Slot
+          ref={mergedButtonRefs}
+          aria-label={t("aria-toggle-search-button")}
+          onClick={() => {
+            onOpen()
+            trackCustomEvent({
+              eventCategory: "nav bar",
+              eventAction: "click",
+              eventName: "search open",
+            })
+          }}
+        >
+          {children}
+        </Slot>
         <Portal.Root>
           {isOpen && (
             <SearchModal

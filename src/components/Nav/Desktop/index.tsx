@@ -3,13 +3,15 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdWbSunny } from "react-icons/md"
-import { HStack, useColorModeValue, useEventListener } from "@chakra-ui/react"
 
-import { IconButton } from "@/components/Buttons"
 import LanguagePicker from "@/components/LanguagePicker"
 import { Button } from "@/components/ui/buttons/Button"
+import { HStack } from "@/components/ui/flex"
 
 import { DESKTOP_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
+
+import useColorModeValue from "@/hooks/useColorModeValue"
+import { useEventListener } from "@/hooks/useEventListener"
 
 type DesktopNavMenuProps = {
   toggleColorMode: () => void
@@ -20,19 +22,11 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
   const { locale } = useRouter()
   const languagePickerRef = useRef<HTMLButtonElement>(null)
 
-  const ThemeIcon = useColorModeValue(<MdBrightness2 />, <MdWbSunny />)
+  const ThemeIcon = useColorModeValue(MdBrightness2, MdWbSunny)
   const themeIconAriaLabel = useColorModeValue(
     "Switch to Dark Theme",
     "Switch to Light Theme"
   )
-
-  const desktopHoverFocusStyles = {
-    "& > svg": {
-      transform: "rotate(10deg)",
-      color: "primary.hover",
-      transition: "transform 0.5s, color 0.2s",
-    },
-  }
 
   /**
    * Adds a keydown event listener to toggle color mode (ctrl|cmd + \)
@@ -52,17 +46,16 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
   })
 
   return (
-    <HStack hideBelow="md" gap="0">
-      <IconButton
-        icon={ThemeIcon}
+    <HStack className="hidden gap-0 md:flex">
+      <Button
         aria-label={themeIconAriaLabel}
         variant="ghost"
         isSecondary
-        px={{ base: "2", xl: "3" }}
-        _hover={desktopHoverFocusStyles}
-        _focus={desktopHoverFocusStyles}
+        className="px-2 xl:px-3 [&>svg]:transition-all [&>svg]:duration-500 [&>svg]:hover:rotate-12 [&>svg]:hover:text-primary-hover"
         onClick={toggleColorMode}
-      />
+      >
+        <ThemeIcon />
+      </Button>
 
       {/* Locale-picker menu */}
       <LanguagePicker>

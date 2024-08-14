@@ -1,14 +1,15 @@
 import { lazy, Suspense, useRef } from "react"
 import { useTranslation } from "next-i18next"
-import { Box, Flex, Hide, Show } from "@chakra-ui/react"
+import { MdSearch } from "react-icons/md"
 
 import { EthHomeIcon } from "@/components/icons"
-import { BaseLink } from "@/components/Link"
 import Search from "@/components/Search"
 
 import { isDesktop } from "@/lib/utils/isDesktop"
 
-import { NAV_PY } from "@/lib/constants"
+import SearchButton from "../Search/SearchButton"
+import { Button } from "../ui/buttons/Button"
+import { BaseLink } from "../ui/Link"
 
 import DesktopNavMenu from "./Desktop"
 import Menu from "./Menu"
@@ -29,73 +30,63 @@ const Nav = () => {
   const isDesktopFlag = isDesktop()
 
   return (
-    <Box position="sticky" top={0} zIndex="sticky" width="full">
-      <Flex
+    <div className="sticky top-0 z-sticky w-full">
+      <nav
         ref={navWrapperRef}
-        as="nav"
+        className="flex h-19 justify-center border-b border-background-highlight bg-background px-4 py-4 xl:px-8"
         aria-label={t("nav-primary")}
-        bg="background.base"
-        borderBottom="1px"
-        borderColor="rgba(0, 0, 0, 0.1)"
-        height="4.75rem"
-        justifyContent="center"
-        py={NAV_PY}
-        px={{ base: 4, xl: 8 }}
       >
-        <Flex
-          alignItems={{ base: "center", md: "normal" }}
-          justifyContent={{ base: "space-between", md: "normal" }}
-          width="full"
-          maxW="container.2xl"
-        >
+        <div className="flex w-full max-w-screen-2xl items-center justify-between md:items-stretch md:justify-normal">
           <BaseLink
             href="/"
             aria-label={t("home")}
-            display="inline-flex"
-            alignItems="center"
-            textDecor="none"
+            className="inline-flex items-center no-underline"
           >
             <EthHomeIcon opacity={0.85} _hover={{ opacity: 1 }} />
           </BaseLink>
           {/* Desktop */}
-          <Flex
-            w="full"
-            justifyContent={{ base: "flex-end", md: "space-between" }}
-            ms={{ base: 3, xl: 8 }}
-          >
+          <div className="ms-3 flex w-full justify-end md:justify-between xl:ms-8">
             {/* avoid rendering desktop Menu version on mobile */}
-
             {isClient && isDesktopFlag ? (
               <Menu className="hidden md:block" sections={linkSections} />
             ) : (
-              <Box />
+              <div />
             )}
 
-            <Flex alignItems="center" /*  justifyContent="space-between" */>
+            <div className="flex items-center">
               {/* Desktop */}
-              {/* avoid rendering desktop menu version on mobile */}
-              <Show above="md">
-                <Search {...searchModalDisclosure} />
+              <div className="hidden md:flex">
+                <Search {...searchModalDisclosure}>
+                  <SearchButton />
+                </Search>
                 <DesktopNavMenu toggleColorMode={toggleColorMode} />
-              </Show>
+              </div>
 
-              <Hide above="md">
+              <div className="flex md:hidden">
                 {/* Mobile */}
                 {/* use Suspense to display the Search & the Menu at the same time */}
                 <Suspense>
-                  <Search {...searchModalDisclosure} />
+                  <Search {...searchModalDisclosure}>
+                    <Button
+                      className="px-2 transition-transform duration-200 ease-in-out hover:rotate-6 hover:text-primary"
+                      variant="ghost"
+                      isSecondary
+                    >
+                      <MdSearch />
+                    </Button>
+                  </Search>
                   <MobileNavMenu
                     toggleColorMode={toggleColorMode}
                     linkSections={linkSections}
                     toggleSearch={searchModalDisclosure.onOpen}
                   />
                 </Suspense>
-              </Hide>
-            </Flex>
-          </Flex>
-        </Flex>
-      </Flex>
-    </Box>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
   )
 }
 
