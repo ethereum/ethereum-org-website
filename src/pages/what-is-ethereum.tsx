@@ -1,4 +1,5 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next"
+import type { ImageProps } from "next/image"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -20,13 +21,11 @@ import {
   BannerGridCell,
   BannerImage,
 } from "@/components/BannerGrid"
-import { Button, ButtonLink } from "@/components/Buttons"
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
-import { Image, type ImageProps } from "@/components/Image"
-import InlineLink from "@/components/Link"
+import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
@@ -35,7 +34,9 @@ import StatErrorMessage from "@/components/StatErrorMessage"
 import Tabs from "@/components/Tabs"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
+import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import { Center, Flex, HStack, Stack, VStack } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -156,7 +157,7 @@ const NoWrapText = (props: ChildOnlyProp) => (
 )
 
 const Image400 = ({ src }: Pick<ImageProps, "src">) => (
-  <Image src={src} alt="" width={400} />
+  <TwImage src={src} alt="" width={400} />
 )
 
 const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
@@ -318,7 +319,7 @@ const WhatIsEthereumPage = ({
               </header>
             </Stack>
             <Hero>
-              <Image
+              <TwImage
                 src={hero}
                 alt={t("page-what-is-ethereum-alt-img-bazaar")}
                 // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
@@ -652,7 +653,13 @@ const WhatIsEthereumPage = ({
                     <ButtonLink href="/smart-contracts/">
                       {t("page-what-is-ethereum-more-on-smart-contracts")}
                     </ButtonLink>
-                    <ButtonLink href="/dapps/" variant="outline" isSecondary>
+                    <ButtonLink
+                      href="/dapps/"
+                      buttonProps={{
+                        variant: "outline",
+                        isSecondary: true,
+                      }}
+                    >
                       {t("page-what-is-ethereum-explore-dapps")}
                     </ButtonLink>
                   </ButtonRow>
@@ -675,7 +682,13 @@ const WhatIsEthereumPage = ({
                     <ButtonLink href="/eth/">
                       {t("page-what-is-ethereum-what-is-ether")}
                     </ButtonLink>
-                    <ButtonLink href="/get-eth/" variant="outline" isSecondary>
+                    <ButtonLink
+                      href="/get-eth/"
+                      buttonProps={{
+                        variant: "outline",
+                        isSecondary: true,
+                      }}
+                    >
                       {t("page-what-is-ethereum-get-eth")}
                     </ButtonLink>
                   </ButtonRow>
@@ -704,8 +717,10 @@ const WhatIsEthereumPage = ({
                     </ButtonLink>
                     <ButtonLink
                       href="/roadmap/merge/"
-                      variant="outline"
-                      isSecondary
+                      buttonProps={{
+                        variant: "outline",
+                        isSecondary: true,
+                      }}
                     >
                       {t("page-what-is-ethereum-the-merge-update")}
                     </ButtonLink>
