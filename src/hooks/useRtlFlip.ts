@@ -5,6 +5,7 @@ import type { Lang } from "@/lib/types"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 type UseDirection = {
+  /** @deprecated */
   flipForRtl: "scaleX(-1)" | undefined // transform (deprecated)
   twFlipForRtl: "-scale-x-1" | "" // className
   isRtl: boolean
