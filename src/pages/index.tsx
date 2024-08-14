@@ -30,6 +30,7 @@ import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import StatsBoxGrid from "@/components/StatsBoxGrid"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import WindowBox from "@/components/WindowBox"
 
@@ -48,8 +49,6 @@ import {
 import events from "@/data/community-events.json"
 
 import { BASE_TIME_UNIT, GITHUB_REPO_URL, XML_FEEDS } from "@/lib/constants"
-
-import { ButtonLink } from "../../tailwind/ui/buttons/Button"
 
 import CreateWalletContent from "!!raw-loader!@/data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
@@ -330,7 +329,10 @@ const HomePage = ({
                 ))}
               </div>
               <div className="flex justify-center py-8 md:justify-start">
-                <ButtonLink linkProps={{ href: "/learn/" }} size="lg">
+                <ButtonLink
+                  href="/learn/"
+                  className="rounded-lg px-8 py-3 text-lg no-underline"
+                >
                   Other topics <MdChevronRight />
                 </ButtonLink>
               </div>
@@ -354,17 +356,18 @@ const HomePage = ({
           </p>
           <div className="flex flex-wrap gap-6 py-8">
             <ButtonLink
-              linkProps={{ href: "/developers/" }}
-              size="lg"
-              className="w-fit"
+              href="/developers/"
+              className="w-fit rounded-lg px-8 py-3 text-lg no-underline"
             >
               Builder&apos;s Portal <MdChevronRight />
             </ButtonLink>
             <ButtonLink
-              linkProps={{ href: "/developers/docs/" }}
-              size="lg"
-              className="w-fit"
-              variant="outline"
+              href="/developers/docs/"
+              className={cn(
+                "w-fit",
+                "rounded-lg px-8 py-3 text-lg no-underline", // size="lg"
+                "border-body bg-transparent fill-body text-md text-body no-underline hover:bg-transparent hover:shadow-button-hover active:shadow-none" // variant="outline"
+              )}
             >
               Documentation
             </ButtonLink>
@@ -430,22 +433,31 @@ const HomePage = ({
           </div>
           <div className="flex flex-wrap gap-3 py-8">
             <ButtonLink
-              linkProps={{ href: "/discord/", hideArrow: true }}
-              variant="outline"
-              size="lg"
-              className="px-5"
+              href="/discord/"
+              hideArrow
+              className={cn(
+                "px-5",
+                "rounded-lg px-8 py-3 text-lg no-underline",
+                "border-body bg-transparent fill-body text-md text-body no-underline hover:bg-transparent hover:shadow-button-hover active:shadow-none"
+              )}
             >
               <FaDiscord />
             </ButtonLink>
             <ButtonLink
-              linkProps={{ href: GITHUB_REPO_URL, hideArrow: true }}
-              variant="outline"
-              size="lg"
-              className="px-5"
+              href={GITHUB_REPO_URL}
+              hideArrow
+              className={cn(
+                "px-5",
+                "rounded-lg px-8 py-3 text-lg no-underline",
+                "border-body bg-transparent fill-body text-md text-body no-underline hover:bg-transparent hover:shadow-button-hover active:shadow-none"
+              )}
             >
               <FaGithub />
             </ButtonLink>
-            <ButtonLink linkProps={{ href: "/community/" }} size="lg">
+            <ButtonLink
+              href="/community/"
+              className="rounded-lg px-8 py-3 text-lg no-underline"
+            >
               More on ethereum.org <MdChevronRight />
             </ButtonLink>
           </div>
@@ -479,10 +491,12 @@ const HomePage = ({
                   </p>
                 </div>
                 <ButtonLink
-                  size="sm"
-                  variant="outline"
-                  className="h-fit w-full text-nowrap border-body !text-body sm:w-fit lg:self-center xl:text-primary"
-                  linkProps={{ href: calendarLink }}
+                  className={cn(
+                    "px-5",
+                    "h-fit w-full text-nowrap border-body !text-body sm:w-fit lg:self-center xl:text-primary",
+                    "border-body bg-transparent fill-body text-md text-body no-underline hover:bg-transparent hover:shadow-button-hover active:shadow-none"
+                  )}
+                  href={calendarLink}
                 >
                   Add to calendar
                 </ButtonLink>
@@ -609,9 +623,11 @@ const HomePage = ({
           </div>
           <div className="flex justify-center py-8 md:justify-start">
             <ButtonLink
-              linkProps={{ href: "/community/events/" }}
-              size="lg"
-              className="mx-auto"
+              href="/community/events/"
+              className={cn(
+                "mx-auto",
+                "rounded-lg px-8 py-3 text-lg no-underline"
+              )}
             >
               See all events <MdChevronRight />
             </ButtonLink>

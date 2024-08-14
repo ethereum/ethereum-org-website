@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react"
 import { useMediaQuery } from "usehooks-ts"
 
+import { Button } from "@/components/ui/buttons/Button"
+
 import {
   DESKTOP_LANGUAGE_BUTTON_NAME,
   HAMBURGER_BUTTON_ID,
   MOBILE_LANGUAGE_BUTTON_NAME,
 } from "@/lib/constants"
-
-import { Button } from "../../tailwind/ui/buttons/Button"
 
 const Morpher = () => {
   const [state, setState] = useState({

@@ -1,9 +1,9 @@
-import { FunctionComponent, ReactNode, SVGProps } from "react"
+import type { FC, ReactNode, SVGProps } from "react"
 
 import { cn } from "@/lib/utils/cn"
 
 type SvgButtonLinkProps = {
-  Svg: FunctionComponent<SVGProps<SVGSVGElement>>
+  Svg: FC<SVGProps<SVGElement>>
   label?: string
   children: ReactNode
   href: string

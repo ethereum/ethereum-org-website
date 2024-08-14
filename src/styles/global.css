@@ -6,7 +6,7 @@
 @import "./colors.css";
 @import "./semantic-tokens.css";
 @import "./fonts.css";
-@import "./docsearch.css";
+@import "@/styles/docsearch.css";
 
 @layer base {
   :root {
@@ -19,7 +19,8 @@
     /* ! Deprecating primary-dark */
     --primary-dark: var(--blue-700);
 
-    --disabled: var(--gray-400);
+    --neutral: hsla(var(--white));
+    --disabled: hsla(var(--gray-400));
 
     /* Complementary Set */
     --attention: var(--yellow-500);
@@ -84,11 +85,13 @@
   .dark {
     /* Semantic Colors: Dark mode */
     /* ! Deprecating primary-light */
-    --primary-light: var(--orange-100);
+    --primary-light: hsla(var(--orange-100));
     /* ! Deprecating primary-dark */
-    --primary-dark: var(--orange-800);
+    --primary-dark: hsla(var(--orange-800));
 
-    --disabled: var(--gray-500);
+    /* ! Deprecating neutral */
+    --neutral: hsla(var(--gray-900));
+    --disabled: hsla(var(--gray-500));
 
     /* Complementary Set */
     --attention-outline: var(--attention-light);

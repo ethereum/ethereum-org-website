@@ -132,6 +132,8 @@ const config = {
           DEFAULT: "hsla(var(--background))",
           highlight: "hsla(var(--background-highlight))",
         },
+        neutral: "hsla(var(--neutral))", // TODO: Migrate/deprecate
+        "switch-background": "hsla(var(--switch-background))", // TODO: Migrate/deprecate
         disabled: "hsla(var(--disabled))",
         "tooltip-shadow": "var(--tooltip-shadow)",
         "hub-hero-content-bg": "var(--hub-hero-content-bg)",

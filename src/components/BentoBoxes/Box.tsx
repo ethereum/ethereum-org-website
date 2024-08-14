@@ -3,9 +3,9 @@ import NextImage from "next/image"
 import { type StaticImageData } from "next/image"
 import { MdChevronRight } from "react-icons/md"
 
-import { cn } from "@/lib/utils/cn"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 
-import { ButtonLink } from "../../../tailwind/ui/buttons/Button"
+import { cn } from "@/lib/utils/cn"
 
 export type BentoBoxProps = HTMLAttributes<HTMLDivElement> & {
   action: string
@@ -39,9 +39,9 @@ const BentoBox = ({
       <h3 className="mb-2 text-3xl font-black">{title}</h3>
       <p className="mb-8 text-md">{children}</p>
       <ButtonLink
-        linkProps={{ href: href }}
-        className="!border-body text-md !text-body" // TODO: Check this override
-        variant="outline"
+        href={href}
+        // TODO: Check this cn override
+        className="border-body bg-transparent fill-body text-md text-body no-underline hover:bg-transparent hover:shadow-button-hover active:shadow-none"
       >
         {action} <MdChevronRight />
       </ButtonLink>

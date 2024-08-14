@@ -1,8 +1,8 @@
-import { FunctionComponent, ReactNode, SVGProps } from "react"
+import type { FC, ReactNode, SVGProps } from "react"
 
 type WindowBoxProps = {
   title: ReactNode
-  Svg: FunctionComponent<SVGProps<SVGSVGElement>>
+  Svg: FC<SVGProps<SVGElement>>
   children?: ReactNode
 }
 

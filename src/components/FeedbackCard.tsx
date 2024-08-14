@@ -5,11 +5,10 @@ import { useTranslation } from "next-i18next"
 import type { Lang } from "@/lib/types"
 
 import { FeedbackThumbsUpIcon } from "@/components/icons"
+import { Button } from "@/components/ui/buttons/Button"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { isLangRightToLeft } from "@/lib/utils/translations"
-
-import { Button } from "../../tailwind/ui/buttons/Button"
 
 import Translation from "./Translation"
 
