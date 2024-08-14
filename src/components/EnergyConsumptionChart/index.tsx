@@ -12,13 +12,7 @@ import ChartDataLabels from "chartjs-plugin-datalabels"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Bar } from "react-chartjs-2"
-import {
-  Box,
-  Center,
-  Text,
-  useBreakpointValue,
-  useColorModeValue,
-} from "@chakra-ui/react"
+import { useBreakpointValue, useColorModeValue } from "@chakra-ui/react"
 
 import type { Lang } from "@/lib/types"
 
@@ -237,26 +231,19 @@ const EnergyConsumptionChart = () => {
   } satisfies ChartData
 
   return (
-    <Box my={16}>
-      <Center w="full" mb={{ base: 4, md: 6 }}>
-        <Box
-          position="relative"
-          maxW="500px"
-          m="auto"
-          w="80vw"
-          h={{ base: "300px", md: "400px" }}
-          mb={{ base: 4, md: 0 }}
-        >
+    <div className="my-16">
+      <div className="mb-4 flex w-full items-center justify-center md:mb-6">
+        <div className="relative m-auto mb-4 h-[300px] w-[80vw] max-w-[500px] md:mb-0 md:h-[400px]">
           {isClient && (
             <Bar options={chartOptions} data={chartData} updateMode="none" />
           )}
-        </Box>
-      </Center>
+        </div>
+      </div>
 
-      <Text fontWeight="semibold" textAlign="center">
+      <p className="text-center font-semibold">
         {t("page-what-is-ethereum-energy-consumption-chart-legend")}
-      </Text>
-    </Box>
+      </p>
+    </div>
   )
 }
 
