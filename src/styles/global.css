@@ -118,7 +118,7 @@
     --table-item-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   }
 
-  [data-theme="dark"] {
+  .dark {
     /* Semantic Colors: Dark mode */
     --primary: var(--orange-500);
     --primary-high-contrast: var(--orange-100);
