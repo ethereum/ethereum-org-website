@@ -9,8 +9,7 @@ import { FeedbackThumbsUpIcon } from "@/components/icons"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import { Button } from "../../tailwind/ui/buttons/Button"
-
+import { Button } from "./ui/buttons/Button"
 import Translation from "./Translation"
 
 import { useSurvey } from "@/hooks/useSurvey"
