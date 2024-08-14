@@ -594,7 +594,7 @@ export interface WalletData {
   brand_color: string
   url: string
   active_development_team: boolean
-  languages_supported: string[]
+  languages_supported: Lang[]
   twitter: string
   discord: string
   reddit: string

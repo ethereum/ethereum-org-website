@@ -184,3 +184,15 @@ export const walletsListingCount = (filters: WalletFilter) => {
     0
   )
 }
+
+export const getLanguageCountWalletsData = (locale: string) => {
+  const languageCountWalletsData = getAllWalletsLanguages(locale).map(
+    (language) => ({
+      langCode: language.langCode,
+      count: getLanguageTotalCount(language.langCode),
+      name: getLanguageCodeName(language.langCode, locale),
+    })
+  )
+  languageCountWalletsData.sort((a, b) => a.name.localeCompare(b.name))
+  return languageCountWalletsData
+}

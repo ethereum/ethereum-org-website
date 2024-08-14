@@ -25,7 +25,6 @@ const SwitchFilterInput = ({
   inputState,
   updateFilterState,
 }: SwitchFilterInputProps) => {
-  console.log(icon)
   return (
     <div className="flex flex-row items-center justify-between gap-2 border-t border-t-border-accordion p-3">
       <div className="flex flex-row items-center">

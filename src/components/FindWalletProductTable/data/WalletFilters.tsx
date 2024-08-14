@@ -24,6 +24,7 @@ import {
   SwapIcon,
   WithdrawCryptoIcon,
 } from "@/components/icons/wallets"
+import LanguageSelectInput from "@/components/ProductTable/FilterInputs/LanguageSelectInput"
 import SwitchFilterInput from "@/components/ProductTable/FilterInputs/SwitchFilterInput"
 
 export const WalletFilters = (): FilterOption[] => {
@@ -99,9 +100,15 @@ export const WalletFilters = (): FilterOption[] => {
       items: [
         {
           inputState: "en",
-          input: (filterIndex, itemIndex, state, updateFilterState) => {
-            console.log(filterIndex, itemIndex, state, updateFilterState)
-            return <></>
+          input: (filterIndex, itemIndex, inputState, updateFilterState) => {
+            return (
+              <LanguageSelectInput
+                filterIndex={filterIndex}
+                itemIndex={itemIndex}
+                inputState={inputState}
+                updateFilterState={updateFilterState}
+              />
+            )
           },
         },
       ],
