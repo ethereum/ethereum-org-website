@@ -144,6 +144,32 @@ const config = {
           outline: "var(--success-outline)",
           neutral: "var(--success-neutral)",
         },
+        menu: {
+          DEFAULT: "var(--menu)",
+          hover: "var(--menu-hover)",
+          active: "var(--menu-active)",
+          "active-background": "var(--menu-active-background)",
+          1: {
+            subtext: "var(--menu-1-subtext)",
+            background: "var(--menu-1-background)",
+            "active-background": "var(--menu-1-active-background)",
+          },
+          2: {
+            subtext: "var(--menu-2-subtext)",
+            background: "var(--menu-2-background)",
+            "active-background": "var(--menu-2-active-background)",
+          },
+          3: {
+            subtext: "var(--menu-3-subtext)",
+            background: "var(--menu-3-background)",
+            "active-background": "var(--menu-3-active-background)",
+          },
+          4: {
+            subtext: "var(--menu-4-subtext)",
+            background: "var(--menu-4-background)",
+            "active-background": "var(--menu-4-active-background)",
+          },
+        },
       },
       backgroundImage: {
         "main-gradient": "var(--main-gradient)",

@@ -83,6 +83,7 @@
     "reading-time": "^1.5.0",
     "remark-gfm": "^3.0.1",
     "tailwind-merge": "^2.3.0",
+    "tailwind-variants": "^0.2.1",
     "tailwindcss-animate": "^1.0.7",
     "usehooks-ts": "^3.1.0",
     "yaml-loader": "^0.8.0"

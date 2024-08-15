@@ -1,4 +1,4 @@
-import type { RefObject } from "react"
+import type { FC, RefObject, SVGProps } from "react"
 import type { IconType } from "react-icons"
 import type { IconProps } from "@chakra-ui/react"
 
@@ -9,7 +9,10 @@ type LinkXorItems = LinkOnly | ItemsOnly
 export type NavItem = {
   label: string
   description: string
-  icon?: IconType | ((props: IconProps) => JSX.Element)
+  icon?:
+    | IconType
+    | FC<SVGProps<SVGElement>>
+    | ((props: IconProps) => JSX.Element)
 } & LinkXorItems
 
 export type NavSectionKey =

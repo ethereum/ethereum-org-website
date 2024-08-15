@@ -116,6 +116,24 @@
     --table-box-shadow: 0 14px 66px rgba(0, 0, 0, 0.07),
       0 10px 17px rgba(0, 0, 0, 0.03), 0 4px 7px rgba(0, 0, 0, 0.05);
     --table-item-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+    /* Menu colors */
+    --menu: var(--body);
+    --menu-hover: var(--gray-200);
+    --menu-active: var(--primary);
+    --menu-active-background: var(--primary-high-contrast);
+    --menu-1-subtext: var(--gray-400);
+    --menu-1-background: white;
+    --menu-1-active-background: var(--gray-150);
+    --menu-2-subtext: var(--gray-400);
+    --menu-2-background: var(--gray-150);
+    --menu-2-active-background: var(--gray-200);
+    --menu-3-subtext: var(--gray-500);
+    --menu-3-background: var(--gray-200);
+    --menu-3-active-background: var(--gray-100);
+    --menu-4-subtext: var(--gray-700);
+    --menu-4-background: var(--gray-300);
+    --menu-4-active-background: var(--gray-200);
   }
 
   [data-theme="dark"] {
@@ -176,6 +194,24 @@
     --table-box-shadow: 0 14px 66px hsla(0, 0%, 96.1%, 0.07),
       0 10px 17px hsla(0, 0%, 96.1%, 0.03), 0 4px 7px hsla(0, 0%, 96.1%, 0.05);
     --table-item-box-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.1);
+
+    /* Menu colors */
+    --menu: var(--body);
+    --menu-hover: var(--gray-200);
+    --menu-active: var(--primary);
+    --menu-active-background: var(--primary-high-contrast);
+    --menu-1-subtext: var(--gray-400);
+    --menu-1-background: black;
+    --menu-1-active-background: var(--gray-700);
+    --menu-2-subtext: var(--gray-300);
+    --menu-2-background: var(--gray-700);
+    --menu-2-active-background: var(--gray-600);
+    --menu-3-subtext: var(--gray-300);
+    --menu-3-background: var(--gray-600);
+    --menu-3-active-background: var(--gray-700);
+    --menu-4-subtext: var(--gray-300);
+    --menu-4-background: var(--gray-700);
+    --menu-4-active-background: var(--gray-800);
   }
 }
 
@@ -185,7 +221,7 @@
   }
 
   a {
-    @apply underline-offset-3 text-primary underline hover:text-primary-hover focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover;
+    @apply text-primary underline underline-offset-3 hover:text-primary-hover focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover;
   }
 
   h1,

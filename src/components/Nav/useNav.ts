@@ -20,7 +20,7 @@ import {
 import { PiFlask, PiUsersFourLight } from "react-icons/pi"
 import { useColorMode } from "@chakra-ui/react"
 
-import { EthereumIcon } from "@/components/icons/EthereumIcon"
+import EthereumIcon from "@/components/icons/ethereum-icon.svg"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
