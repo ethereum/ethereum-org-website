@@ -42,9 +42,7 @@ export const Variants: Story = {
         <Alert key={variant} variant={variant} className="w-full" {...args}>
           <AlertContent>
             <AlertTitle>{DEMO_TITLE}</AlertTitle>
-            <AlertDescription>
-              This is a <pre className="inline text-sm">{variant}</pre> alert
-            </AlertDescription>
+            <AlertDescription>This is a {variant} alert</AlertDescription>
           </AlertContent>
         </Alert>
       ))}
