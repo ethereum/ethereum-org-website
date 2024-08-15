@@ -12,13 +12,16 @@ import ChartDataLabels from "chartjs-plugin-datalabels"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Bar } from "react-chartjs-2"
-import { useBreakpointValue, useColorModeValue } from "@chakra-ui/react"
+import { useBreakpointValue } from "@chakra-ui/react"
 
 import type { Lang } from "@/lib/types"
+
+import { Center } from "@/components/ui/flex"
 
 import { wrapLabel } from "@/lib/utils/charts"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
+import useColorModeValue from "@/hooks/useColorModeValue"
 import { useIsClient } from "@/hooks/useIsClient"
 
 // ChartDataLabels required to display y-labels on top of bars
@@ -232,13 +235,13 @@ const EnergyConsumptionChart = () => {
 
   return (
     <div className="my-16">
-      <div className="mb-4 flex w-full items-center justify-center md:mb-6">
+      <Center className="mb-4 w-full md:mb-6">
         <div className="relative m-auto mb-4 h-[300px] w-[80vw] max-w-[500px] md:mb-0 md:h-[400px]">
           {isClient && (
             <Bar options={chartOptions} data={chartData} updateMode="none" />
           )}
         </div>
-      </div>
+      </Center>
 
       <p className="text-center font-semibold">
         {t("page-what-is-ethereum-energy-consumption-chart-legend")}
