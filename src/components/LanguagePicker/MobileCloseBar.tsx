@@ -1,8 +1,7 @@
 import { MouseEventHandler } from "react"
 import { useTranslation } from "next-i18next"
-import { Flex } from "@chakra-ui/react"
 
-import { Button } from "@/components/Buttons"
+import { Button } from "../ui/buttons/Button"
 
 type MobileCloseBarProps = {
   handleClick: MouseEventHandler<HTMLButtonElement>
@@ -12,17 +11,10 @@ export const MobileCloseBar = ({ handleClick }: MobileCloseBarProps) => {
   const { t } = useTranslation()
 
   return (
-    <Flex
-      justifyContent="end"
-      hideFrom="md"
-      position="sticky"
-      zIndex="sticky"
-      top="0"
-      bg="background.base"
-    >
-      <Button p="4" variant="ghost" alignSelf="end" onClick={handleClick}>
+    <div className="sticky top-0 flex justify-end bg-background md:hidden">
+      <Button className="self-end p-4" variant="ghost" onClick={handleClick}>
         {t("close")}
       </Button>
-    </Flex>
+    </div>
   )
 }

@@ -56,6 +56,10 @@
     "path": "/developers/docs/evm/opcodes/index.md"
   },
   {
+    "id": 12040,
+    "path": "/developers/docs/wrapped-eth/index.md"
+  },
+  {
     "id": 2722,
     "path": "/developers/docs/programming-languages/java/index.md"
   },
@@ -188,6 +192,22 @@
     "path": "/developers/docs/design-and-ux/index.md"
   },
   {
+    "id": 12044,
+    "path": "/developers/docs/data-availability/blockchain-data-storage-strategies/index.md"
+  },
+  {
+    "id": 12050,
+    "path": "/developers/docs/design-and-ux/dex-design-best-practice/index.md"
+  },
+  {
+    "id": 12054,
+    "path": "/developers/docs/design-and-ux/heuristics-for-web3/index.md"
+  },
+  {
+    "id": 12058,
+    "path": "/developers/docs/standards/tokens/erc-223/index.md"
+  },
+  {
     "id": 2672,
     "path": "/history/index.md"
   },
@@ -222,6 +242,10 @@
   {
     "id": 8019,
     "path": "/community/code-of-conduct/index.md"
+  },
+  {
+    "id": 12036,
+    "path": "/community/research/index.md"
   },
   {
     "id": 2926,
@@ -642,6 +666,10 @@
   {
     "id": 7753,
     "path": "/roadmap/verkle-trees/index.md"
+  },
+  {
+    "id": 12032,
+    "path": "/roadmap/dencun/index.md"
   },
   {
     "id": 6398,

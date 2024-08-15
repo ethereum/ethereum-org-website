@@ -1,21 +1,32 @@
 import * as React from "react"
-import { Button, forwardRef } from "@chakra-ui/react"
-import { DocSearchButton, DocSearchButtonProps } from "@docsearch/react"
+import { useTranslation } from "react-i18next"
+import { DocSearchButton } from "@docsearch/react"
 
-import { getSearchButtonStyles } from "./utils"
+import { Button, type ButtonProps } from "../ui/buttons/Button"
 
-const SearchButton = forwardRef<DocSearchButtonProps, "button">(
+const SearchButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (props, ref) => {
+    const { t } = useTranslation("common")
+
     return (
       <Button
-        as={DocSearchButton}
         ref={ref}
-        className="DocSearch-Button"
-        {...getSearchButtonStyles()}
+        variant="ghost"
+        className="me-3 border border-disabled hover:border-primary-hover"
         {...props}
-      />
+        asChild
+      >
+        <DocSearchButton
+          translations={{
+            buttonText: t("search"),
+            buttonAriaLabel: t("search"),
+          }}
+        />
+      </Button>
     )
   }
 )
+
+SearchButton.displayName = "SearchButton"
 
 export default SearchButton
