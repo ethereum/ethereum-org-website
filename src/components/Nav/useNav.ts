@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { useTranslation } from "next-i18next"
 import { useTheme } from "next-themes"
 import {
@@ -26,14 +27,10 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import type { NavSections } from "./types"
 
-import useColorModeValue from "@/hooks/useColorModeValue"
-
 export const useNav = () => {
   const { t } = useTranslation("common")
-  const { theme, setTheme } = useTheme()
+  const { setTheme, resolvedTheme, systemTheme } = useTheme()
   const { setColorMode } = useColorMode()
-
-  const colorToggleEvent = useColorModeValue("dark mode", "light mode") // This will be inverted as the state is changing
 
   const linkSections: NavSections = {
     learn: {
@@ -465,13 +462,27 @@ export const useNav = () => {
     },
   }
 
+  // Listen for changes to systemTheme and update theme accordingly
+  // Important if the user has not engaged the color mode toggle yet, and
+  // toggles system color preferences
+  useEffect(() => {
+    setTheme("system")
+    setColorMode(systemTheme)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [systemTheme])
+
   const toggleColorMode = () => {
-    setTheme(theme === "dark" ? "light" : "dark")
-    setColorMode(theme === "dark" ? "light" : "dark")
+    // resolvedTheme: "light" | "dark" = Current resolved color mode from useTheme
+    const targetTheme = resolvedTheme === "dark" ? "light" : "dark"
+    // If target theme matches the users system pref, set ls theme to "system"
+    const lsTheme = targetTheme === systemTheme ? "system" : targetTheme
+
+    setTheme(lsTheme)
+    setColorMode(targetTheme)
     trackCustomEvent({
       eventCategory: "nav bar",
       eventAction: "click",
-      eventName: colorToggleEvent,
+      eventName: `${targetTheme} mode`,
     })
   }
 
