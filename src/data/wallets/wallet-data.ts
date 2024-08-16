@@ -1161,7 +1161,7 @@ export const walletsData: WalletData[] = [
     last_updated: "2024-08-16",
     name: "Infinity Wallet",
     image: InfinityWalletImage,
-    brand_color: "#137dc7",
+    brand_color: "#ffffff",
     url: "https://infinitywallet.io/",
     active_development_team: true,
     languages_supported: ["en", "es"],
