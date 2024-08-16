@@ -6,6 +6,7 @@ import type { Preview } from "@storybook/react"
 import ThemeProvider from "@/components/ThemeProvider"
 
 import i18n, { baseLocales } from "./i18next"
+import { ThemeChanger } from "./ThemeChanger"
 
 import "@docsearch/css"
 import "../src/styles/global.css"
@@ -36,11 +37,14 @@ const preview: Preview = {
       },
       defaultTheme: "light",
     }),
-    (Story) => (
-      <ThemeProvider>
-        <Story />
-      </ThemeProvider>
-    ),
+    (Story, context) => {
+      return (
+        <ThemeProvider>
+          <ThemeChanger theme={context.globals.theme} />
+          <Story />
+        </ThemeProvider>
+      )
+    },
   ],
   parameters: {
     i18n,
