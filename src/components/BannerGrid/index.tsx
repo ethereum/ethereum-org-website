@@ -4,6 +4,8 @@ import { ChildOnlyProp } from "@/lib/types"
 
 import { Flex } from "@/components/ui/flex"
 
+import { cn } from "@/lib/utils/cn"
+
 export const Banner = ({ children }: ChildOnlyProp) => {
   return (
     <Flex className="flex-col flex-nowrap bg-banner-grid-gradient lg:flex-row [&_h2]:mt-0 [&_ul]:mb-0">
@@ -38,7 +40,20 @@ export const BannerGridCell = ({ children }: ChildOnlyProp) => {
   return (
     <Flex
       // TODO:  refactor className to make it more readable
-      className={`flex-col border-t border-t-search-background px-0 py-8 first:border-t-0 md:border-l md:border-l-search-background md:px-12 lg:[&:first-child]:border-l-0 lg:[&:first-child]:ps-0 md:[&:nth-child(-n+2)]:border-t-0 lg:[&:nth-child(-n+2)]:border-t lg:[&:nth-child(-n+2)]:border-t-search-background lg:[&:nth-child(-n+3)]:justify-start lg:[&:nth-child(-n+3)]:border-t-0 lg:[&:nth-child(-n+3)]:pt-0 md:[&:nth-child(2n+1)]:border-l-0 lg:[&:nth-child(2n+1)]:border-l lg:[&:nth-child(2n+1)]:border-l-search-background lg:[&:nth-child(3n+1)]:border-l-0 lg:[&:nth-child(3n+1)]:ps-0 lg:[&:nth-child(n+4)]:justify-start lg:[&:nth-child(n+4)]:pb-0`}
+      className={cn(
+        "px-0 py-8 md:px-12",
+        "flex-col",
+        "border-t border-t-search-background",
+        "md:border-l md:border-l-search-background",
+        "first:border-t-0",
+        "md:[&:nth-child(-n+2)]:border-t-0 md:[&:nth-child(2n+1)]:border-l-0",
+        "lg:[&:first-child]:border-l-0",
+        "lg:[&:nth-child(-n+2)]:border-t lg:[&:nth-child(-n+2)]:border-t-search-background",
+        "lg:[&:nth-child(2n+1)]:border-l lg:[&:nth-child(2n+1)]:border-l-search-background",
+        "lg:[&:nth-child(-n+3)]:justify-start lg:[&:nth-child(-n+3)]:border-t-0 lg:[&:nth-child(-n+3)]:pt-0",
+        "lg:[&:nth-child(3n+1)]:border-l-0 lg:[&:nth-child(3n+1)]:ps-0",
+        "lg:[&:nth-child(n+4)]:justify-start lg:[&:nth-child(n+4)]:pb-0"
+      )}
     >
       {children}
     </Flex>
