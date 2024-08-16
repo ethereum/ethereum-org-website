@@ -39,17 +39,15 @@ export const BannerGrid = ({ children }: ChildOnlyProp) => {
 export const BannerGridCell = ({ children }: ChildOnlyProp) => {
   return (
     <Flex
-      // TODO:  refactor className to make it more readable
       className={cn(
         "px-0 py-8 md:px-12",
         "flex-col",
         "border-t border-t-search-background",
         "md:border-l md:border-l-search-background",
         "first:border-t-0",
-        "md:[&:nth-child(-n+2)]:border-t-0 md:[&:nth-child(2n+1)]:border-l-0",
         "lg:[&:first-child]:border-l-0",
-        "lg:[&:nth-child(-n+2)]:border-t lg:[&:nth-child(-n+2)]:border-t-search-background",
-        "lg:[&:nth-child(2n+1)]:border-l lg:[&:nth-child(2n+1)]:border-l-search-background",
+        "md:[&:nth-child(-n+2)]:border-t-0 lg:[&:nth-child(-n+2)]:border-t lg:[&:nth-child(-n+2)]:border-t-search-background",
+        "md:[&:nth-child(2n+1)]:border-l-0 lg:[&:nth-child(2n+1)]:border-l lg:[&:nth-child(2n+1)]:border-l-search-background",
         "lg:[&:nth-child(-n+3)]:justify-start lg:[&:nth-child(-n+3)]:border-t-0 lg:[&:nth-child(-n+3)]:pt-0",
         "lg:[&:nth-child(3n+1)]:border-l-0 lg:[&:nth-child(3n+1)]:ps-0",
         "lg:[&:nth-child(n+4)]:justify-start lg:[&:nth-child(n+4)]:pb-0"
