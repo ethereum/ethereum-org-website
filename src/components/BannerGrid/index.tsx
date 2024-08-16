@@ -20,9 +20,9 @@ export const BannerBody = ({ children }: ChildOnlyProp) => {
 
 export const BannerImage = ({ children }) => {
   return (
-    <div className="flex flex-shrink-[1] flex-grow-[2] basis-0 justify-end self-end">
+    <Flex className="flex-shrink-[1] flex-grow-[2] basis-0 justify-end self-end">
       {children}
-    </div>
+    </Flex>
   )
 }
 
