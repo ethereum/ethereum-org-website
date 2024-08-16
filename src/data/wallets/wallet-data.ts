@@ -1158,7 +1158,7 @@ export const walletsData: WalletData[] = [
       "https://support.ledger.com/hc/en-us/categories/4404376139409?docs=true",
   },
   {
-    last_updated: "2022-08-19",
+    last_updated: "2024-08-16",
     name: "Infinity Wallet",
     image: InfinityWalletImage,
     brand_color: "#137dc7",
@@ -1191,7 +1191,7 @@ export const walletsData: WalletData[] = [
     multichain: true,
     layer_2: true,
     gas_fee_customization: true,
-    ens_support: false,
+    ens_support: true,
     erc_20_support: true,
     buy_crypto: true,
     withdraw_crypto: true,
