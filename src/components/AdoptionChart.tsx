@@ -33,7 +33,7 @@ const Cell = ({ children, color, className, ...props }: CellProps) => (
 )
 
 const ColumnName = ({ children }: ChildOnlyProp) => (
-  <Cell className={"border-none pt-6"}>{children}</Cell>
+  <Cell className="border-none pt-6">{children}</Cell>
 )
 
 const AdoptionChart = () => {
