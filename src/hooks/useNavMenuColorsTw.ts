@@ -23,8 +23,8 @@ type NavMenuColors = {
  * TODO: rename to useNavMenuColors when the desktop menu is migrated.
  */
 export const useNavMenuColorsTw = (): NavMenuColors => {
-  const { theme } = useTheme()
-  const isLight = theme === "light"
+  const { resolvedTheme } = useTheme()
+  const isLight = resolvedTheme === "light"
 
   return {
     body: "text-body",
