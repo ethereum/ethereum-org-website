@@ -30,7 +30,7 @@ import useColorModeValue from "@/hooks/useColorModeValue"
 
 export const useNav = () => {
   const { t } = useTranslation("common")
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
   const { setColorMode } = useColorMode()
 
   const colorToggleEvent = useColorModeValue("dark mode", "light mode") // This will be inverted as the state is changing
@@ -466,8 +466,8 @@ export const useNav = () => {
   }
 
   const toggleColorMode = () => {
-    setTheme(theme === "dark" ? "light" : "dark")
-    setColorMode(theme === "dark" ? "light" : "dark")
+    setTheme(resolvedTheme === "dark" ? "light" : "dark")
+    setColorMode(resolvedTheme === "dark" ? "light" : "dark")
     trackCustomEvent({
       eventCategory: "nav bar",
       eventAction: "click",
