@@ -388,27 +388,18 @@ Use [`generateProof`](https://zokrates.github.io/toolbox/zokrates_js.html#genera
         `
 ```
 
-A Solidity verifier. 
-
-```typescript  
-    const formatProof = (proof: any) => zokrates.utils.formatProof(proof)
-```
-
-These two definitions are used for verifiying Zokrates proofs on the blockchain.
-
+A Solidity verifier, which gets deployed to the blockchain.
 
 ```typescript
     return {
         zkDig,
         calculateMapHash,
         solidityVerifier,
-        formatProof
     }
 }
 ```
 
 Finally, return everything that other code might need.
-
 
 ## The on-chain component {#onchain}
 
