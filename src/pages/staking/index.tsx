@@ -103,10 +103,7 @@ const StyledButtonLink = ({
 )
 
 const CardGrid = (props: ChildOnlyProp) => (
-  <div
-    className="grid grid-cols-[1fr] gap-8 lg:grid-cols-[repeat(3,1fr)]"
-    {...props}
-  />
+  <div className="grid grid-cols-1 gap-8 lg:grid-cols-3" {...props} />
 )
 
 const StyledCard = (props: {
