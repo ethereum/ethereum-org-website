@@ -66,16 +66,13 @@ const Slogan = (props: ChildOnlyProp) => (
 
 const Title = (props: ChildOnlyProp) => (
   <h1
-    className="text-sm font-medium uppercase leading-xs tracking-wider text-[#7f7f7f] dark:text-[hsla(0,0%,69.8%,.8)]"
+    className="text-sm font-medium uppercase leading-xs tracking-wider"
     {...props}
   />
 )
 
 const Subtitle = (props: ChildOnlyProp) => (
-  <p
-    className="text-xl leading-xs text-[#666] dark:text-[#b2b2b2]"
-    {...props}
-  />
+  <p className="text-xl leading-xs" {...props} />
 )
 
 const Hero = (props: ChildOnlyProp) => (
@@ -263,7 +260,7 @@ const WhatIsEthereumPage = ({
       title: t("page-what-is-ethereum-cryptocurrency-tab-title"),
       eventName: "Cryptocurrency tab",
       content: (
-        <Stack className="gap-[1.45rem]">
+        <Stack className="gap-6">
           <p>
             <Translation id="page-what-is-ethereum:page-what-is-ethereum-cryptocurrency-tab-content-1" />
           </p>
@@ -307,7 +304,7 @@ const WhatIsEthereumPage = ({
             <Stack className="mb-6 gap-4" asChild>
               <header>
                 <Title>{t("page-what-is-ethereum-title")}</Title>
-                <Stack className="gap-[1.45rem]">
+                <Stack className="gap-6">
                   <Slogan>{t("page-what-is-ethereum-desc")}</Slogan>
                   <Subtitle>{t("page-what-is-ethereum-subtitle")}</Subtitle>
                   <ButtonRow>
@@ -339,7 +336,7 @@ const WhatIsEthereumPage = ({
                       <h2 className="text-[1.4rem] leading-xs text-[#4c4c4c] dark:text-[#ccc]">
                         {t("page-what-is-ethereum-summary-title")}
                       </h2>
-                      <Stack className="gap-[1.45rem]">
+                      <Stack className="gap-6">
                         <p>{t("page-what-is-ethereum-summary-desc-1")}</p>
                         <p>{t("page-what-is-ethereum-summary-desc-2")}</p>
                         <p>{t("page-what-is-ethereum-summary-desc-3")}</p>
@@ -349,7 +346,7 @@ const WhatIsEthereumPage = ({
                 </Width60>
                 <Width40 />
               </TwoColumnContent>
-              <div>
+              <Stack className="gap-8">
                 <div>
                   <H2>{t("page-what-is-ethereum-what-can-eth-do-title")}</H2>
                   <CardContainer>
@@ -383,7 +380,7 @@ const WhatIsEthereumPage = ({
                   </Width60>
                   <Width40 />
                 </TwoColumnContent>
-              </div>
+              </Stack>
             </Stack>
           </Section>
 
@@ -393,7 +390,7 @@ const WhatIsEthereumPage = ({
                 <H2>
                   {t("page-what-is-ethereum-why-would-i-use-ethereum-title")}
                 </H2>
-                <Stack className="gap-[1.45rem]">
+                <Stack className="gap-6">
                   <p>{t("page-what-is-ethereum-why-would-i-use-ethereum-1")}</p>
                   <p>{t("page-what-is-ethereum-why-would-i-use-ethereum-2")}</p>
 
@@ -408,7 +405,7 @@ const WhatIsEthereumPage = ({
                   >
                     <EmblaSlide>
                       <H3>{t("page-what-is-ethereum-slide-1-title")}</H3>
-                      <Stack className="mb-[1.45rem] gap-[1.45rem]">
+                      <Stack className="mb-4 gap-6">
                         <p>
                           <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-1-desc-1" />
                         </p>
@@ -417,7 +414,7 @@ const WhatIsEthereumPage = ({
                     </EmblaSlide>
                     <EmblaSlide>
                       <H3>{t("page-what-is-ethereum-slide-2-title")}</H3>
-                      <Stack className="mb-[1.45rem] gap-[1.45rem]">
+                      <Stack className="mb-4 gap-6">
                         <p>{t("page-what-is-ethereum-slide-2-desc-1")}</p>
                         <p>
                           <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-2-desc-2" />
@@ -426,7 +423,7 @@ const WhatIsEthereumPage = ({
                     </EmblaSlide>
                     <EmblaSlide>
                       <H3>{t("page-what-is-ethereum-slide-3-title")}</H3>
-                      <Stack className="mb-[1.45rem] gap-[1.45rem]">
+                      <Stack className="mb-4 gap-6">
                         <p>
                           <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-3-desc-1" />
                         </p>
@@ -434,7 +431,7 @@ const WhatIsEthereumPage = ({
                     </EmblaSlide>
                     <EmblaSlide>
                       <H3>{t("page-what-is-ethereum-slide-4-title")}</H3>
-                      <Stack className="mb-[1.45rem] gap-[1.45rem]">
+                      <Stack className="mb-4 gap-6">
                         <p>{t("page-what-is-ethereum-slide-4-desc-1")}</p>
                         <p>{t("page-what-is-ethereum-slide-4-desc-2")}</p>
                       </Stack>
@@ -615,7 +612,7 @@ const WhatIsEthereumPage = ({
               </Width40>
               <Width60>
                 <H2>{t("page-what-is-ethereum-who-runs-ethereum-title")}</H2>
-                <Stack className="gap-[1.45rem]">
+                <Stack className="gap-6">
                   <p>
                     <Translation id="page-what-is-ethereum:page-what-is-ethereum-who-runs-ethereum-desc-1" />
                   </p>
@@ -639,7 +636,7 @@ const WhatIsEthereumPage = ({
               </Width40>
               <Width60>
                 <H2>{t("page-what-is-ethereum-smart-contract-title")}</H2>
-                <Stack className="gap-[1.45rem]">
+                <Stack className="gap-6">
                   <p>
                     <Translation id="page-what-is-ethereum:page-what-is-ethereum-smart-contract-desc-1" />
                   </p>
@@ -675,7 +672,7 @@ const WhatIsEthereumPage = ({
               </Width40>
               <Width60>
                 <H2>{t("page-what-is-ethereum-meet-ether-title")}</H2>
-                <Stack className="gap-[1.45rem]">
+                <Stack className="gap-6">
                   <p>{t("page-what-is-ethereum-meet-ether-desc-1")}</p>
                   <p>{t("page-what-is-ethereum-meet-ether-desc-2")}</p>
                   <ButtonRow>
@@ -704,7 +701,7 @@ const WhatIsEthereumPage = ({
               </Width40>
               <Width60>
                 <H2>{t("page-what-is-ethereum-energy-title")}</H2>
-                <Stack className="gap-[1.45rem]">
+                <Stack className="gap-6">
                   <p>
                     <Translation id="page-what-is-ethereum:page-what-is-ethereum-energy-desc-1" />
                   </p>
@@ -737,7 +734,7 @@ const WhatIsEthereumPage = ({
               </Width40>
               <Width60>
                 <H2>{t("page-what-is-ethereum-criminal-activity-title")}</H2>
-                <Stack className="gap-[1.45rem]">
+                <Stack className="gap-6">
                   <p>{t("page-what-is-ethereum-criminal-activity-desc-1")}</p>
                   <p>{t("page-what-is-ethereum-criminal-activity-desc-2")}</p>
                   <p>
@@ -766,7 +763,7 @@ const WhatIsEthereumPage = ({
               </Width40>
               <Width60>
                 <H2>{t("page-what-is-ethereum-btc-eth-diff-title")}</H2>
-                <Stack className="gap-[1.45rem]">
+                <Stack className="gap-6">
                   <p>{t("page-what-is-ethereum-btc-eth-diff-1")}</p>
                   <p>
                     <Translation id="page-what-is-ethereum:page-what-is-ethereum-btc-eth-diff-2" />
@@ -781,7 +778,7 @@ const WhatIsEthereumPage = ({
 
         <Content>
           <H2>{t("page-what-is-ethereum-additional-reading")}</H2>
-          <Stack className="mb-[1.45rem] gap-[1.45rem]">
+          <Stack className="mb-4 gap-6">
             <p>
               <InlineLink href="https://weekinethereumnews.com/">
                 {t("page-what-is-ethereum-week-in-ethereum")}
