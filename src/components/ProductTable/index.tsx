@@ -18,23 +18,31 @@ const ProductTable = ({
   filterOptions,
   presetFilters,
 }: ProductTableProps<ProductTablePresetFilters>) => {
-  const [activePresetIndex, setActivePresetIndex] = useState(NaN)
-  const [filters, setFilters] = useState(filterOptions)
+  const [activePresets, setActivePresets] = useState<number[]>([])
+  const [filters, setFilters] = useState<FilterOption[]>(filterOptions)
+
+  const handleSelectPreset = (idx: number) => {
+    if (activePresets.includes(idx)) {
+      setActivePresets(activePresets.filter((item) => item !== idx))
+    } else {
+      setActivePresets(activePresets.concat(idx))
+    }
+  }
 
   return (
     <div className="px-4">
       {presetFilters.length ? (
         <PresetFilters
           presets={presetFilters}
-          activePresetIndex={activePresetIndex}
-          setActivePresetIndex={setActivePresetIndex}
+          activePresets={activePresets}
+          handleSelectPreset={handleSelectPreset}
         />
       ) : (
         <></>
       )}
       <div className="flex gap-6 pb-6 pt-4 2xl:px-0">
         <Filters filters={filters} setFilters={setFilters} />
-        <div>Table</div>
+        <div>Columns and data driven heref</div>
       </div>
     </div>
   )
