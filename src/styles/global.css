@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @import "@docsearch/css";
-@import "./colors.css";
-@import "./semantic-tokens.css";
-@import "./fonts.css";
+@import "@/styles/colors.css";
+@import "@/styles/semantic-tokens.css";
+@import "@/styles/fonts.css";
 @import "@/styles/docsearch.css";
 
 @layer base {
