@@ -44,7 +44,7 @@ const LanguagePicker = ({
    * @param {string} event - The keydown event.
    */
   useEventListener("keydown", (e) => {
-    if (e.key !== "\\") return
+    if (e.key !== "\\" || e.metaKey || e.ctrlKey) return
     e.preventDefault()
     onOpen()
   })

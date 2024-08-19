@@ -123,6 +123,9 @@ EthStaker
 - https://crowdin.com/project/ethstaker-website
 - https://crowdin.com/project/ethstaker-knowledge-base
 
+Solidity Language Docs
+- https://crowdin.com/project/solidity-language-docs
+
 ### Evaluation process
 
 All translations will be subject to QA and feedback, where professional linguists will evaluate submissions based on quality and accuracy.
