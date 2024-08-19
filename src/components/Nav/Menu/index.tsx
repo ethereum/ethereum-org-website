@@ -18,6 +18,8 @@ import type { NavSections } from "../types"
 
 import { useNavMenu } from "./useNavMenu"
 
+const MenuContent = dynamic(() => import("./MenuContent"))
+
 type NavMenuProps = BaseHTMLAttributes<HTMLDivElement> & {
   sections: NavSections
 }
@@ -25,8 +27,6 @@ type NavMenuProps = BaseHTMLAttributes<HTMLDivElement> & {
 const Menu = ({ sections, ...props }: NavMenuProps) => {
   const { activeSection, direction, handleSectionChange, isOpen } =
     useNavMenu(sections)
-
-  const MenuContent = dynamic(() => import("./MenuContent"))
 
   return (
     <div {...props}>
