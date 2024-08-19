@@ -189,6 +189,7 @@
       rgba(127, 127, 213, 0.2) 0%,
       rgba(134, 168, 231, 0.2) 50%,
       rgba(145, 234, 228, 0.2) 100%
+    );
     --feedback-gradient: linear-gradient(
       83.46deg,
       #2c2c32 7.03%,
@@ -213,7 +214,7 @@
   }
 
   a {
-    @apply underline-offset-3 text-primary underline hover:text-primary-hover focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover;
+    @apply text-primary underline underline-offset-3 hover:text-primary-hover focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover;
   }
 
   h1,

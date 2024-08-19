@@ -19,6 +19,7 @@ import { TWMainArticle as MainArticle } from "@/components/MainArticle"
 import { Divider } from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardContent,
@@ -26,6 +27,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import InlineLink from "@/components/ui/Link"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -33,9 +35,6 @@ import { getLastModifiedDateByPath } from "@/lib/utils/gh"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import { ButtonLink } from "../../tailwind/ui/buttons/Button"
-import InlineLink from "../../tailwind/ui/Link"
 
 import uniswap from "@/public/images/dapps/uni.png"
 import dapps from "@/public/images/doge-computer.png"

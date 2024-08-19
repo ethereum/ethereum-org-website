@@ -11,7 +11,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { WEBSITE_EMAIL } from "@/lib/constants"
 
-import InlineLink from "../../../tailwind/ui/Link"
+import InlineLink from "../ui/Link"
 
 import { useCentralizedExchanges } from "@/hooks/useCentralizedExchanges"
 

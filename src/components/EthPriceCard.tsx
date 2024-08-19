@@ -9,7 +9,7 @@ import Tooltip from "@/components/Tooltip"
 
 import { cn } from "@/lib/utils/cn"
 
-import InlineLink from "../../tailwind/ui/Link"
+import InlineLink from "./ui/Link"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
