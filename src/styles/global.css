@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "@docsearch/css";
+@import "@/styles/fonts.css";
+@import "@/styles/docsearch.css";
+
 @layer base {
   :root {
     --font-inter: Inter, sans-serif;
