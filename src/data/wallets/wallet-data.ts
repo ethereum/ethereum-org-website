@@ -1921,7 +1921,7 @@ export const walletsData: WalletData[] = [
     layer_2: true,
     gas_fee_customization: true,
     ens_support: true,
-    erc_20_support: false,
+    erc_20_support: true,
     buy_crypto: true,
     withdraw_crypto: true,
     multisig: false,
