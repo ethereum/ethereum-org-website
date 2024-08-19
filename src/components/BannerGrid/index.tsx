@@ -18,7 +18,7 @@ export const BannerBody = ({ children }: ChildOnlyProp) => {
   return <div className="w-full flex-[4] p-10">{children}</div>
 }
 
-export const BannerImage = ({ children }) => {
+export const BannerImage = ({ children }: ChildOnlyProp) => {
   return <Flex className="flex-[2] justify-end self-end">{children}</Flex>
 }
 
