@@ -649,7 +649,9 @@ export type FilterInputState = boolean | Lang | null
 
 export type FilterOption = {
   title: string
+  showFilterOption: boolean
   items: Array<{
+    filterKey: string
     inputState: FilterInputState
     input: (
       filterIndex: number,
@@ -662,7 +664,6 @@ export type FilterOption = {
       ) => void
     ) => ReactElement
     // description: string
-    // filterKey: string | undefined
     // showOptions: boolean | undefined
     // options:
     //   | Array<{

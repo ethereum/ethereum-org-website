@@ -66,33 +66,35 @@ const Filters = ({ filters, setFilters }: PresetFiltersProps) => {
         defaultValue={filters.map((_, idx) => `item ${idx}`)}
       >
         {filters.map((filter, filterIndex) => {
-          return (
-            <AccordionItem
-              key={filterIndex}
-              value={`item ${filterIndex}`}
-              className="bg-background-highlight p-6"
-            >
-              <AccordionTrigger className="border-b border-b-border-accordion">
-                <p className="text-base text-primary-high-contrast">
-                  {filter.title}
-                </p>
-              </AccordionTrigger>
-              <AccordionContent className="p-0 md:p-0">
-                {filter.items.map((item, itemIndex) => {
-                  return (
-                    <>
-                      {item.input(
-                        filterIndex,
-                        itemIndex,
-                        item.inputState,
-                        updateFilterState
-                      )}
-                    </>
-                  )
-                })}
-              </AccordionContent>
-            </AccordionItem>
-          )
+          if (filter.showFilterOption) {
+            return (
+              <AccordionItem
+                key={filterIndex}
+                value={`item ${filterIndex}`}
+                className="bg-background-highlight p-6"
+              >
+                <AccordionTrigger className="border-b border-b-border-accordion">
+                  <p className="text-base text-primary-high-contrast">
+                    {filter.title}
+                  </p>
+                </AccordionTrigger>
+                <AccordionContent className="p-0 md:p-0">
+                  {filter.items.map((item, itemIndex) => {
+                    return (
+                      <>
+                        {item.input(
+                          filterIndex,
+                          itemIndex,
+                          item.inputState,
+                          updateFilterState
+                        )}
+                      </>
+                    )
+                  })}
+                </AccordionContent>
+              </AccordionItem>
+            )
+          }
         })}
       </Accordion>
     </div>

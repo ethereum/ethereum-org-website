@@ -32,8 +32,10 @@ export const WalletFilters = (): FilterOption[] => {
   return [
     {
       title: t("page-find-wallet-device"),
+      showFilterOption: true,
       items: [
         {
+          filterKey: "mobile",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -49,6 +51,7 @@ export const WalletFilters = (): FilterOption[] => {
           },
         },
         {
+          filterKey: "desktop",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -64,6 +67,7 @@ export const WalletFilters = (): FilterOption[] => {
           },
         },
         {
+          filterKey: "browser",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -79,6 +83,7 @@ export const WalletFilters = (): FilterOption[] => {
           },
         },
         {
+          filterKey: "hardware",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -97,8 +102,10 @@ export const WalletFilters = (): FilterOption[] => {
     },
     {
       title: t("page-find-wallet-languages-supported"),
+      showFilterOption: true,
       items: [
         {
+          filterKey: "languages",
           inputState: "en",
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -117,8 +124,10 @@ export const WalletFilters = (): FilterOption[] => {
       title: `${t("page-find-wallet-buy-crypto")} / ${t(
         "page-find-wallet-sell-for-fiat"
       )}`,
+      showFilterOption: true,
       items: [
         {
+          filterKey: "buy_crypto",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -134,6 +143,7 @@ export const WalletFilters = (): FilterOption[] => {
           },
         },
         {
+          filterKey: "withdraw_crypto",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -152,8 +162,10 @@ export const WalletFilters = (): FilterOption[] => {
     },
     {
       title: t("page-find-wallet-features"),
+      showFilterOption: true,
       items: [
         {
+          filterKey: "connect_to_dapps",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -169,6 +181,7 @@ export const WalletFilters = (): FilterOption[] => {
           },
         },
         {
+          filterKey: "nft_support",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -184,6 +197,7 @@ export const WalletFilters = (): FilterOption[] => {
           },
         },
         {
+          filterKey: "staking",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -199,6 +213,7 @@ export const WalletFilters = (): FilterOption[] => {
           },
         },
         {
+          filterKey: "layer_2",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -214,6 +229,7 @@ export const WalletFilters = (): FilterOption[] => {
           },
         },
         {
+          filterKey: "swaps",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -229,6 +245,7 @@ export const WalletFilters = (): FilterOption[] => {
           },
         },
         {
+          filterKey: "hardware_support",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -244,6 +261,7 @@ export const WalletFilters = (): FilterOption[] => {
           },
         },
         {
+          filterKey: "ens_support",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -262,8 +280,10 @@ export const WalletFilters = (): FilterOption[] => {
     },
     {
       title: t("page-find-wallet-security"),
+      showFilterOption: true,
       items: [
         {
+          filterKey: "open_source",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -279,6 +299,7 @@ export const WalletFilters = (): FilterOption[] => {
           },
         },
         {
+          filterKey: "non_custodial",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -297,8 +318,10 @@ export const WalletFilters = (): FilterOption[] => {
     },
     {
       title: t("page-find-wallet-smart-contract"),
+      showFilterOption: true,
       items: [
         {
+          filterKey: "multisig",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -314,6 +337,7 @@ export const WalletFilters = (): FilterOption[] => {
           },
         },
         {
+          filterKey: "social_recovery",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -332,8 +356,10 @@ export const WalletFilters = (): FilterOption[] => {
     },
     {
       title: t("page-find-wallet-advanced"),
+      showFilterOption: true,
       items: [
         {
+          filterKey: "rpc_importing",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -349,6 +375,7 @@ export const WalletFilters = (): FilterOption[] => {
           },
         },
         {
+          filterKey: "erc_20_support",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -364,6 +391,7 @@ export const WalletFilters = (): FilterOption[] => {
           },
         },
         {
+          filterKey: "gas_fee_customization",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -376,6 +404,19 @@ export const WalletFilters = (): FilterOption[] => {
                 updateFilterState={updateFilterState}
               />
             )
+          },
+        },
+      ],
+    },
+    {
+      title: "Hidden filters",
+      showFilterOption: false,
+      items: [
+        {
+          filterKey: "new_to_crypto",
+          inputState: false,
+          input: (_) => {
+            return <></>
           },
         },
       ],
