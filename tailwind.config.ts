@@ -34,6 +34,7 @@ const config = {
         md: ["1rem", "1.6"], // [md, base]
         sm: ["0.875rem", "1.6"], // [sm, base]
         xs: ["0.75rem", "1.6"], // [xs, base]
+        "2xs": ["0.625rem", "1.6"], // [2xs, base]
       },
       lineHeight: {
         "6xs": "1.1",
@@ -126,6 +127,7 @@ const config = {
         "tooltip-shadow": "var(--tooltip-shadow)",
         "switch-background": "var(--switch-background)",
         "hub-hero-content-bg": "var(--hub-hero-content-bg)",
+        "search-background": "var(--search-background)",
         attention: {
           DEFAULT: "var(--attention)",
           light: "var(--attention-light)",
@@ -145,7 +147,9 @@ const config = {
         },
       },
       backgroundImage: {
-        "bg-main-gradient": "var(--bg-main-gradient)",
+        "main-gradient": "var(--main-gradient)",
+        "feedback-gradient": "var(--feedback-gradient)",
+        "banner-grid-gradient": "var(--banner-grid-gradient)",
         "radial-gradient": "var(--radial-gradient)",
       },
       boxShadow: {

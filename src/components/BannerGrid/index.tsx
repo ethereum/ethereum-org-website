@@ -1,117 +1,51 @@
 import React from "react"
-import { Box, Flex, Grid, useToken } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 
+import { Flex } from "@/components/ui/flex"
+
+import { cn } from "@/lib/utils/cn"
+
 export const Banner = ({ children }: ChildOnlyProp) => {
   return (
-    <Flex
-      w="full"
-      background="bannerGridGradient"
-      direction={{ base: "column", lg: "row" }}
-      wrap="nowrap"
-      sx={{
-        h2: {
-          mt: 0,
-        },
-        ul: {
-          mb: 0,
-        },
-      }}
-    >
+    <Flex className="w-full flex-col flex-nowrap bg-banner-grid-gradient lg:flex-row [&_h2]:mt-0 [&_ul]:mb-0">
       {children}
     </Flex>
   )
 }
 
 export const BannerBody = ({ children }: ChildOnlyProp) => {
-  return (
-    <Box flex={4} p={10}>
-      {children}
-    </Box>
-  )
+  return <div className="w-full flex-[4] p-10">{children}</div>
 }
 
 export const BannerImage = ({ children }: ChildOnlyProp) => {
-  return (
-    <Flex justifyContent="end" flex={2} alignSelf="end">
-      {children}
-    </Flex>
-  )
+  return <Flex className="flex-[2] justify-end self-end">{children}</Flex>
 }
 
 export const BannerGrid = ({ children }: ChildOnlyProp) => {
   return (
-    <Grid
-      templateColumns={{
-        base: "repeat(1,1fr)",
-        md: "repeat(2,1fr)",
-        lg: "repeat(3,1fr)",
-      }}
-      templateRows={{
-        md: "repeat(3, 1fr)",
-        lg: "repeat(2, 1fr)",
-      }}
-      columnGap={0}
-      rowGap={0}
-    >
+    <div className="md:grid-rows-[repeat(3, 1fr)] lg:grid-rows-[repeat(2, 1fr)] grid w-full grid-cols-[repeat(1,1fr)] gap-0 md:grid-cols-[repeat(2,1fr)] lg:grid-cols-[repeat(3,1fr)]">
       {children}
-    </Grid>
+    </div>
   )
 }
 
 export const BannerGridCell = ({ children }: ChildOnlyProp) => {
-  const [medBp, lgBp] = useToken("breakpoints", ["md", "lg"])
-
   return (
     <Flex
-      px={{ base: 0, md: 12 }}
-      py={8}
-      direction="column"
-      borderTop="1px solid"
-      borderTopColor="searchBackground"
-      borderInlineStart={{ base: 0, md: "1px solid" }}
-      borderInlineStartColor={{ md: "searchBackground" }}
-      sx={{
-        "&:first-child": {
-          borderTop: 0,
-        },
-        [`@media (min-width: ${medBp})`]: {
-          "&:nth-child(-n + 2)": {
-            borderTop: 0,
-          },
-          "&:nth-child(2n + 1)": {
-            borderInlineStart: 0,
-          },
-        },
-        [`@media (min-width: ${lgBp})`]: {
-          "&:first-child": {
-            ps: 0,
-            borderInlineStart: 0,
-          },
-          "&:nth-child(-n + 2)": {
-            borderTop: "1px solid",
-            borderTopColor: "searchBackground",
-          },
-          "&:nth-child(2n + 1)": {
-            borderInlineStart: "1px solid",
-            borderInlineStartColor: "searchBackground",
-          },
-          "&:nth-child(-n + 3)": {
-            borderTop: 0,
-            justifyContent: "start",
-            paddingTop: 0,
-          },
-          "&:nth-child(3n + 1)": {
-            ps: 0,
-            borderInlineStart: 0,
-          },
-          "&:nth-child(n + 4)": {
-            justifyContent: "start",
-            paddingBottom: 0,
-          },
-        },
-      }}
+      className={cn(
+        "px-0 py-8 md:px-12",
+        "flex-col",
+        "border-t border-t-search-background",
+        "md:border-s md:border-s-search-background",
+        "first:border-t-0",
+        "lg:[&:first-child]:border-s-0",
+        "md:[&:nth-child(-n+2)]:border-t-0 lg:[&:nth-child(-n+2)]:border-t lg:[&:nth-child(-n+2)]:border-t-search-background",
+        "md:[&:nth-child(2n+1)]:border-s-0 lg:[&:nth-child(2n+1)]:border-s lg:[&:nth-child(2n+1)]:border-s-search-background",
+        "lg:[&:nth-child(-n+3)]:justify-start lg:[&:nth-child(-n+3)]:border-t-0 lg:[&:nth-child(-n+3)]:pt-0",
+        "lg:[&:nth-child(3n+1)]:border-s-0 lg:[&:nth-child(3n+1)]:ps-0",
+        "lg:[&:nth-child(n+4)]:justify-start lg:[&:nth-child(n+4)]:pb-0"
+      )}
     >
       {children}
     </Flex>

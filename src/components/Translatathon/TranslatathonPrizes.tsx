@@ -1,4 +1,5 @@
 import Emoji from "@/components/Emoji"
+import Link from "@/components/Link"
 
 const TranslatathonPrizes = () => {
   return (
@@ -10,9 +11,10 @@ const TranslatathonPrizes = () => {
               <Emoji text="🥇" fontSize={64} />
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex max-w-48 flex-col items-center justify-center text-center">
             <p className="text-2xl font-bold">1st place</p>
             <p className="text-4xl font-bold">$5000</p>
+            <Link href="https://devcon.org">+ Devcon SEA ticket</Link>
           </div>
         </div>
       </div>
@@ -28,9 +30,10 @@ const TranslatathonPrizes = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex max-w-48 flex-col items-center justify-center text-center">
             <p className="text-lg font-bold">2nd place</p>
             <p className="text-3xl font-bold">$3000</p>
+            <Link href="https://devcon.org">+ Devcon SEA ticket</Link>
           </div>
         </div>
         <div className="justify-left flex flex-1 items-center gap-4 sm:justify-center">
@@ -39,9 +42,10 @@ const TranslatathonPrizes = () => {
               <Emoji text="🥉" fontSize={44} />
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex max-w-48 flex-col items-center justify-center text-center">
             <p className="text-lg font-bold">3rd place</p>
             <p className="text-3xl font-bold">$1500</p>
+            <Link href="https://devcon.org">+ Devcon SEA ticket</Link>
           </div>
         </div>
       </div>
@@ -52,9 +56,12 @@ const TranslatathonPrizes = () => {
               <Emoji text="🌟" fontSize={36} />
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex max-w-48 flex-col items-center justify-center text-center">
             <p className="text-md font-bold">4th & 5th</p>
             <p className="text-2xl font-bold">$500</p>
+            <Link href="https://devcon.org">
+              + 50% Devcon SEA ticket discount
+            </Link>
           </div>
         </div>
         <div className="justify-left flex flex-1 items-center gap-4 sm:justify-center">
@@ -63,9 +70,12 @@ const TranslatathonPrizes = () => {
               <Emoji text=":scroll:" fontSize={36} />
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex max-w-48 flex-col items-center justify-center text-center">
             <p className="text-md font-bold">6th to 10th</p>
             <p className="text-2xl font-bold">$200</p>
+            <Link href="https://devcon.org">
+              + 50% Devcon SEA ticket discount
+            </Link>
           </div>
         </div>
       </div>
@@ -77,8 +87,9 @@ const TranslatathonPrizes = () => {
           <p className="text-body-base text-lg">+ Participation prizes</p>
         </div>
         <div className="flex flex-col text-sm text-body-medium">
-          {/* TODO: Add this disclaimer link later */}
-          {/* <p>see prizes disclaimer here</p> */}
+          <Link href="/contributing/translation-program/translatathon/terms-and-conditions/">
+            See full Terms & Conditions here
+          </Link>
         </div>
       </div>
     </div>

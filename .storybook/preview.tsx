@@ -9,6 +9,9 @@ import i18n, { baseLocales } from "./i18next"
 
 import "../src/styles/global.css"
 import "../src/styles/fonts.css"
+import "../src/styles/docsearch.css"
+
+import "@docsearch/css"
 
 MotionGlobalConfig.skipAnimations = isChromatic()
 
