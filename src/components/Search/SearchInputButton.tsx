@@ -1,12 +1,12 @@
-import { forwardRef } from "react"
+import * as React from "react"
 import { useTranslation } from "next-i18next"
-import { MdSearch } from "react-icons/md"
+import { DocSearchButton } from "@docsearch/react"
 
 import { cn } from "@/lib/utils/cn"
 
 import { Button, type ButtonProps } from "../ui/buttons/Button"
 
-const SearchButton = forwardRef<HTMLButtonElement, ButtonProps>(
+const SearchButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, ...props }, ref) => {
     const { t } = useTranslation("common")
 
@@ -14,15 +14,20 @@ const SearchButton = forwardRef<HTMLButtonElement, ButtonProps>(
       <Button
         ref={ref}
         aria-label={t("aria-toggle-search-button")}
+        variant="ghost"
         className={cn(
-          "px-2 transition-transform duration-200 ease-in-out hover:rotate-6 hover:text-primary",
+          "me-3 border border-disabled hover:border-primary-hover",
           className
         )}
-        variant="ghost"
-        isSecondary
         {...props}
+        asChild
       >
-        <MdSearch />
+        <DocSearchButton
+          translations={{
+            buttonText: t("search"),
+            buttonAriaLabel: t("search"),
+          }}
+        />
       </Button>
     )
   }

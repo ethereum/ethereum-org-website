@@ -1,6 +1,5 @@
 import { lazy, Suspense, useRef } from "react"
 import { useTranslation } from "next-i18next"
-import { MdSearch } from "react-icons/md"
 
 import { EthHomeIcon } from "@/components/icons"
 import Search from "@/components/Search"
@@ -8,14 +7,13 @@ import Search from "@/components/Search"
 import { isDesktop } from "@/lib/utils/isDesktop"
 
 import SearchButton from "../Search/SearchButton"
-import { Button } from "../ui/buttons/Button"
+import SearchInputButton from "../Search/SearchInputButton"
 import { BaseLink } from "../ui/Link"
 
 import DesktopNavMenu from "./Desktop"
 import Menu from "./Menu"
 import { useNav } from "./useNav"
 
-import { useDisclosure } from "@/hooks/useDisclosure"
 import { useIsClient } from "@/hooks/useIsClient"
 
 const MobileNavMenu = lazy(() => import("./Mobile"))
@@ -24,7 +22,6 @@ const MobileNavMenu = lazy(() => import("./Mobile"))
 const Nav = () => {
   const { toggleColorMode, linkSections } = useNav()
   const { t } = useTranslation("common")
-  const searchModalDisclosure = useDisclosure()
   const navWrapperRef = useRef(null)
   const isClient = useIsClient()
   const isDesktopFlag = isDesktop()
@@ -53,36 +50,34 @@ const Nav = () => {
               <div />
             )}
 
-            <div className="flex items-center">
-              {/* Desktop */}
-              <div className="hidden md:flex">
-                <Search {...searchModalDisclosure}>
-                  <SearchButton />
-                </Search>
-                <DesktopNavMenu toggleColorMode={toggleColorMode} />
-              </div>
+            <Search>
+              {({ onOpen }) => (
+                <div className="flex items-center">
+                  {/* Desktop */}
+                  <div className="hidden md:flex">
+                    <SearchButton className="xl:hidden" onClick={onOpen} />
+                    <SearchInputButton
+                      className="hidden xl:flex"
+                      onClick={onOpen}
+                    />
+                    <DesktopNavMenu toggleColorMode={toggleColorMode} />
+                  </div>
 
-              <div className="flex md:hidden">
-                {/* Mobile */}
-                {/* use Suspense to display the Search & the Menu at the same time */}
-                <Suspense>
-                  <Search {...searchModalDisclosure}>
-                    <Button
-                      className="px-2 transition-transform duration-200 ease-in-out hover:rotate-6 hover:text-primary"
-                      variant="ghost"
-                      isSecondary
-                    >
-                      <MdSearch />
-                    </Button>
-                  </Search>
-                  <MobileNavMenu
-                    toggleColorMode={toggleColorMode}
-                    linkSections={linkSections}
-                    toggleSearch={searchModalDisclosure.onOpen}
-                  />
-                </Suspense>
-              </div>
-            </div>
+                  <div className="flex md:hidden">
+                    {/* Mobile */}
+                    {/* use Suspense to display the Search & the Menu at the same time */}
+                    <Suspense>
+                      <SearchButton onClick={onOpen} />
+                      <MobileNavMenu
+                        toggleColorMode={toggleColorMode}
+                        linkSections={linkSections}
+                        toggleSearch={onOpen}
+                      />
+                    </Suspense>
+                  </div>
+                </div>
+              )}
+            </Search>
           </div>
         </div>
       </nav>
