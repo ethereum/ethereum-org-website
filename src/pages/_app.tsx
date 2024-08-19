@@ -6,10 +6,7 @@ import { AppPropsWithLayout } from "@/lib/types"
 
 import ThemeProvider from "@/components/ThemeProvider"
 
-import "@docsearch/css"
 import "@/styles/global.css"
-import "@/styles/fonts.css"
-import "@/styles/docsearch.css"
 
 import { BaseLayout } from "@/layouts/BaseLayout"
 
