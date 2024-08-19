@@ -1,19 +1,11 @@
 import { ComponentProps, type HTMLAttributes } from "react"
-import {
-  Badge,
-  Box,
-  type BoxProps,
-  ListItem,
-  OrderedList,
-  UnorderedList,
-} from "@chakra-ui/react"
+import { Badge, Box, type BoxProps } from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
 import ButtonDropdown, {
   type ButtonDropdownProps,
 } from "@/components/ButtonDropdown"
-import { ButtonLink } from "@/components/Buttons"
 import Contributors from "@/components/Contributors"
 import MarkdownImage from "@/components/MarkdownImage"
 import { mdxTableComponents } from "@/components/Table"
@@ -22,20 +14,22 @@ import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
 
-import ContributorsQuizBanner from "./Banners/ContributorsQuizBanner"
-import GlossaryTooltip from "./Glossary/GlossaryTooltip"
-import { StandaloneQuizWidget } from "./Quiz/QuizWidget"
-import { Flex } from "./ui/flex"
-import Card from "./Card"
-import DocLink from "./DocLink"
-import Emoji from "./Emoji"
-import ExpandableCard from "./ExpandableCard"
-import FeaturedText from "./FeaturedText"
-import IdAnchor from "./IdAnchor"
-import InfoBanner from "./InfoBanner"
-import IssuesList from "./IssuesList"
-import LocaleDateTime from "./LocaleDateTime"
-import MainArticle from "./MainArticle"
+import ContributorsQuizBanner from "../Banners/ContributorsQuizBanner"
+import Card from "../Card"
+import DocLink from "../DocLink"
+import Emoji from "../Emoji"
+import ExpandableCard from "../ExpandableCard"
+import FeaturedText from "../FeaturedText"
+import GlossaryTooltip from "../Glossary/GlossaryTooltip"
+import IdAnchor from "../IdAnchor"
+import InfoBanner from "../InfoBanner"
+import IssuesList from "../IssuesList"
+import LocaleDateTime from "../LocaleDateTime"
+import MainArticle from "../MainArticle"
+import { StandaloneQuizWidget } from "../Quiz/QuizWidget"
+import { ButtonLink } from "../ui/buttons/Button"
+import { Flex } from "../ui/flex"
+import { ListItem, OrderedList, UnorderedList } from "../ui/list"
 
 export const commonHeadingAttributes = (className: string, id?: string) => ({
   id,
