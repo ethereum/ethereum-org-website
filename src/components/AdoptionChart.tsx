@@ -49,8 +49,8 @@ const ColumnName = ({ children }: ChildOnlyProp) => (
 
 const AdoptionChart = () => {
   const { t } = useTranslation("page-what-is-ethereum")
-  const { theme } = useTheme()
-  const isDark = theme === "dark"
+  const { resolvedTheme } = useTheme()
+  const isDark = resolvedTheme === "dark"
 
   return (
     <Flex>

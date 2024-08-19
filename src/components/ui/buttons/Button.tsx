@@ -16,6 +16,8 @@ const buttonVariants = cva(
         solid:
           "text-background bg-primary border-transparent disabled:bg-disabled disabled:text-background hover:text-background hover:bg-primary-hover hover:shadow-button-hover active:shadow-none",
         outline: "hover:shadow-button-hover active:shadow-none",
+        "outline-color":
+          "hover:shadow-button-hover active:shadow-none border-primary",
         ghost: "border-transparent",
         link: "border-transparent font-bold underline py-0 px-1 active:text-primary",
       },
