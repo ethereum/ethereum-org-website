@@ -21,7 +21,7 @@ import { cleanPath } from "@/lib/utils/url"
 import type { Level, NavItem, NavSectionKey } from "../types"
 
 import ItemContent from "./ItemContent"
-import { navMenu } from "./MenuContent"
+import { navMenuVariants } from "./MenuContent"
 import NextChevron from "./NextChevron"
 import { useSubMenu } from "./useSubMenu"
 
@@ -43,7 +43,7 @@ type LvlContentProps = {
  */
 const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
   const { asPath, locale, menuVariants } = useSubMenu()
-  const { submenu, item: itemClasses } = navMenu({ level: lvl })
+  const { submenu, item: itemClasses, link } = navMenuVariants({ level: lvl })
 
   if (lvl > 3) return null
 
@@ -65,26 +65,11 @@ const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
                 const isLink = "href" in action
                 const isActivePage = isLink && cleanPath(asPath) === action.href
 
-                const buttonClasses = cn(
-                  "no-underline text-body",
-                  itemClasses()
-                )
+                const buttonClasses = cn("no-underline text-body", link())
 
                 return (
                   <Item key={label} asChild>
-                    <ListItem
-                      className="mb-2 last:mb-0"
-                      // TODO
-                      // sx={{
-                      //   '&:has(button[data-state="open"])': {
-                      //     roundedStart: "md",
-                      //     roundedEnd: "none",
-                      //     bg: menuColors.lvl[lvl].activeBackground,
-                      //     me: -PADDING,
-                      //     pe: PADDING,
-                      //   },
-                      // }}
-                    >
+                    <ListItem className={cn("mb-2 last:mb-0", itemClasses())}>
                       {isLink ? (
                         <NextLink href={action.href!} passHref legacyBehavior>
                           <NavigationMenuLink asChild>

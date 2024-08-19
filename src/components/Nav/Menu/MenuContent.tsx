@@ -9,29 +9,34 @@ import { NavItem, NavSections } from "../types"
 import SubMenu from "./SubMenu"
 import { useNavMenu } from "./useNavMenu"
 
-export const navMenu = tv({
+export const navMenuVariants = tv({
   slots: {
     base: "text-body",
-    item: "w-full relative -me-4 py-4 hover:text-menu-active [&:hover_p]:text-menu-active focus-visible:text-menu-active [&:focus-visible_p]:text-menu-active hover:outline-0 hover:rounded-md hover:shadow-none focus-visible:outline-0 focus-visible:rounded-md focus-visible:shadow-none",
+    item: "has-[button[data-state=open]]:rounded-s-md has-[button[data-state=open]]:rounded-e-none has-[button[data-state=open]]:-me-4 has-[button[data-state=open]]:pe-4",
+    link: "w-full relative -me-4 py-4 hover:text-menu-active [&:hover_p]:text-menu-active focus-visible:text-menu-active [&:focus-visible_p]:text-menu-active hover:outline-0 rounded-md hover:shadow-none focus-visible:outline-0 focus-visible:rounded-md focus-visible:shadow-none",
     submenu: "grid h-full w-full grid-cols-1",
   },
   variants: {
     level: {
       1: {
         submenu: "grid-cols-3 bg-menu-1-background",
-        item: "data-[active=true]:bg-menu-1-active-background hover:bg-menu-1-active-background focus-visible:bg-menu-1-active-background",
+        item: "has-[button[data-state=open]]:bg-menu-1-active-background",
+        link: "data-[active=true]:bg-menu-1-active-background hover:bg-menu-1-active-background focus-visible:bg-menu-1-active-background",
       },
       2: {
         submenu: "grid-cols-2 bg-menu-2-background",
-        item: "hover:bg-menu-2-active-background focus-visible:bg-menu-2-active-background data-[active=true]:bg-menu-2-active-background",
+        item: "has-[button[data-state=open]]:bg-menu-2-active-background",
+        link: "hover:bg-menu-2-active-background focus-visible:bg-menu-2-active-background data-[active=true]:bg-menu-2-active-background",
       },
       3: {
         submenu: "grid-cols-1 bg-menu-3-background",
-        item: "data-[active=true]:bg-menu-3-active-background hover:bg-menu-3-active-background",
+        item: "has-[button[data-state=open]]:bg-menu-3-active-background",
+        link: "data-[active=true]:bg-menu-3-active-background hover:bg-menu-3-active-background",
       },
       4: {
         submenu: "grid-cols-1 bg-menu-4-background",
-        item: "data-[active=true]:bg-menu-4-active-background hover:bg-menu-4-active-background",
+        item: "has-[button[data-state=open]]:bg-menu-4-active-background",
+        link: "data-[active=true]:bg-menu-4-active-background hover:bg-menu-4-active-background",
       },
     },
   },
@@ -46,7 +51,7 @@ type MenuContentProps = {
 // Desktop Menu content
 const MenuContent = ({ items, isOpen, sections }: MenuContentProps) => {
   const { activeSection, containerVariants, onClose } = useNavMenu(sections)
-  const { base } = navMenu()
+  const { base } = navMenuVariants()
 
   return (
     <Content asChild>
