@@ -248,7 +248,7 @@ The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/roadm
 
 - [Read the Altair upgrade specification](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <Emoji text=":tada:" size={1} me="0.5rem" />Fun fact! {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} className="me-2" />Fun fact! {#altair-fun-fact}
 
 Altair was the first major network upgrade that had an exact rollout time. Every upgrade prior had been based on a declared block number on the proof-of-work chain, where block times vary. The Beacon Chain does not require solving for proof-of-work, and instead works on a time-based epoch system consisting of 32 twelve-second "slots" of time where validators can propose blocks. This is why we knew exactly when we would hit epoch 74,240 and Altair became live!
 
