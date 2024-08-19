@@ -663,15 +663,20 @@ export type FilterOption = {
         inputState: FilterInputState
       ) => void
     ) => ReactElement
-    // description: string
-    // showOptions: boolean | undefined
-    // options:
-    //   | Array<{
-    //       name: string
-    //       filterKey?: string
-    //       inputType: "checkbox"
-    //     }>
-    //   | []
+    options: Array<{
+      filterKey: string
+      inputState: FilterInputState
+      input: (
+        filterIndex: number,
+        itemIndex: number,
+        state: FilterInputState,
+        updateFilterState: (
+          filterIndex: number,
+          itemIndex: number,
+          inputState: FilterInputState
+        ) => void
+      ) => ReactElement
+    }>
   }>
 }
 

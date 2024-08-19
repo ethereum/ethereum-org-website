@@ -49,6 +49,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
         {
           filterKey: "desktop",
@@ -65,6 +66,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
         {
           filterKey: "browser",
@@ -81,6 +83,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
         {
           filterKey: "hardware",
@@ -97,6 +100,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
       ],
     },
@@ -117,6 +121,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
       ],
     },
@@ -134,6 +139,7 @@ export const WalletFilters = (): FilterOption[] => {
               <SwitchFilterInput
                 icon={BuyCryptoIcon}
                 label={t("page-find-wallet-buy-crypto")}
+                description={t("page-find-wallet-buy-crypto-desc")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
@@ -141,6 +147,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
         {
           filterKey: "withdraw_crypto",
@@ -150,6 +157,7 @@ export const WalletFilters = (): FilterOption[] => {
               <SwitchFilterInput
                 icon={WithdrawCryptoIcon}
                 label={t("page-find-wallet-sell-for-fiat")}
+                description={t("page-find-wallet-sell-for-fiat-desc")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
@@ -157,6 +165,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
       ],
     },
@@ -172,6 +181,7 @@ export const WalletFilters = (): FilterOption[] => {
               <SwitchFilterInput
                 icon={ConnectDappsIcon}
                 label={t("page-find-wallet-connect-to-dapps")}
+                description={t("page-find-wallet-connect-to-dapps-desc")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
@@ -179,6 +189,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
         {
           filterKey: "nft_support",
@@ -188,6 +199,7 @@ export const WalletFilters = (): FilterOption[] => {
               <SwitchFilterInput
                 icon={NFTSupportIcon}
                 label={t("page-find-wallet-nft-support")}
+                description={t("page-find-wallet-nft-support-desc")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
@@ -195,6 +207,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
         {
           filterKey: "staking",
@@ -204,6 +217,7 @@ export const WalletFilters = (): FilterOption[] => {
               <SwitchFilterInput
                 icon={StakingIcon}
                 label={t("page-find-wallet-staking")}
+                description={t("page-find-wallet-staking-desc")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
@@ -211,6 +225,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
         {
           filterKey: "layer_2",
@@ -220,6 +235,7 @@ export const WalletFilters = (): FilterOption[] => {
               <SwitchFilterInput
                 icon={Layer2Icon}
                 label={t("page-find-wallet-layer-2")}
+                description={t("page-find-wallet-layer-2-desc")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
@@ -227,6 +243,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
         {
           filterKey: "swaps",
@@ -236,6 +253,7 @@ export const WalletFilters = (): FilterOption[] => {
               <SwitchFilterInput
                 icon={SwapIcon}
                 label={t("page-find-wallet-swaps")}
+                description={t("page-find-wallet-swaps-desc")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
@@ -243,6 +261,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
         {
           filterKey: "hardware_support",
@@ -252,6 +271,7 @@ export const WalletFilters = (): FilterOption[] => {
               <SwitchFilterInput
                 icon={HardwareSupportIcon}
                 label={t("page-find-wallet-hardware-wallet-support")}
+                description={t("page-find-wallet-hardware-wallet-support-desc")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
@@ -259,6 +279,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
         {
           filterKey: "ens_support",
@@ -268,6 +289,7 @@ export const WalletFilters = (): FilterOption[] => {
               <SwitchFilterInput
                 icon={ENSSupportIcon}
                 label={t("page-find-wallet-ens-support")}
+                description={t("page-find-wallet-ens-support-desc")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
@@ -275,6 +297,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
       ],
     },
@@ -290,6 +313,7 @@ export const WalletFilters = (): FilterOption[] => {
               <SwitchFilterInput
                 icon={OpenSourceWalletIcon}
                 label={t("page-find-wallet-open-source")}
+                description={t("page-find-wallet-open-source-desc")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
@@ -297,6 +321,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
         {
           filterKey: "non_custodial",
@@ -306,6 +331,7 @@ export const WalletFilters = (): FilterOption[] => {
               <SwitchFilterInput
                 icon={NonCustodialIcon}
                 label={t("page-find-wallet-non-custodial")}
+                description={t("page-find-wallet-non-custodial-desc")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
@@ -313,6 +339,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
       ],
     },
@@ -328,6 +355,7 @@ export const WalletFilters = (): FilterOption[] => {
               <SwitchFilterInput
                 icon={MultisigIcon}
                 label={t("page-find-wallet-multisig")}
+                description={t("page-find-wallet-multisig-desc")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
@@ -335,6 +363,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
         {
           filterKey: "social_recovery",
@@ -344,6 +373,7 @@ export const WalletFilters = (): FilterOption[] => {
               <SwitchFilterInput
                 icon={SocialRecoverIcon}
                 label={t("page-find-wallet-social-recovery")}
+                description={t("page-find-wallet-social-recovery-desc")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
@@ -351,6 +381,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
       ],
     },
@@ -366,6 +397,7 @@ export const WalletFilters = (): FilterOption[] => {
               <SwitchFilterInput
                 icon={RPCImportingIcon}
                 label={t("page-find-wallet-rpc-importing")}
+                description={t("page-find-wallet-rpc-importing-desc")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
@@ -373,6 +405,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
         {
           filterKey: "erc_20_support",
@@ -382,6 +415,7 @@ export const WalletFilters = (): FilterOption[] => {
               <SwitchFilterInput
                 icon={ERC20SupportIcon}
                 label={t("page-find-wallet-token-importing")}
+                description={t("page-find-wallet-token-importing-desc")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
@@ -389,6 +423,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
         {
           filterKey: "gas_fee_customization",
@@ -398,6 +433,7 @@ export const WalletFilters = (): FilterOption[] => {
               <SwitchFilterInput
                 icon={GasFeeCustomizationIcon}
                 label={t("page-find-wallet-gas-fee-customization")}
+                description={t("page-find-wallet-gas-fee-customization-desc")}
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
@@ -405,6 +441,7 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
+          options: [],
         },
       ],
     },
@@ -418,6 +455,7 @@ export const WalletFilters = (): FilterOption[] => {
           input: (_) => {
             return <></>
           },
+          options: [],
         },
       ],
     },
