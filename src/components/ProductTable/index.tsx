@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import type {
   FilterOption,
@@ -28,6 +28,24 @@ const ProductTable = ({
       setActivePresets(activePresets.concat(idx))
     }
   }
+
+  useEffect(() => {
+    const combinedPresetFilters = activePresets.reduce((combined, preset) => {
+      const updatedFilters = { ...combined }
+      Object.entries(presetFilters[preset].presetFilters).forEach(
+        ([name, value]) => {
+          if (!updatedFilters[name]) {
+            updatedFilters[name] = value
+          }
+          if (value === true) {
+            updatedFilters[name] = value
+          }
+        }
+      )
+      return updatedFilters
+    }, {})
+    console.log(combinedPresetFilters)
+  }, [activePresets])
 
   return (
     <div className="px-4">
