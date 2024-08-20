@@ -60,14 +60,11 @@ const PageContainer = (props: ChildOnlyProp) => (
 )
 
 const Divider = () => (
-  <div className="my-8 h-1 w-[10%] self-center bg-[#a4a4f3] dark:bg-[#ffc7a7]" />
+  <div className="my-8 h-1 w-[10%] self-center bg-primary-high-contrast" />
 )
 
 const HeroStatsWrapper = (props: ChildOnlyProp) => (
-  <VStack
-    className="w-full gap-0 bg-[linear-gradient(85.12deg,_rgba(185,_185,_241,_0.2)_0%,_rgba(84,_132,_234,_0.2)_56.29%,_rgba(58,_142,_137,_0.2)_99.99%)] pb-8 dark:bg-[linear-gradient(83.46deg,_rgba(127,_127,_213,_0.2)_7.03%,_rgba(138,_168,_231,_0.2)_52.42%,_rgba(145,_234,_228,_0.2)_98.77%)]"
-    {...props}
-  />
+  <VStack className="w-full gap-0 bg-main-gradient" {...props} />
 )
 
 const ComparisonGrid = (props: ChildOnlyProp) => {
