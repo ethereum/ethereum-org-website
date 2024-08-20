@@ -19,6 +19,7 @@ import HomeSection from "@/components/HomeSection"
 import AngleBrackets from "@/components/icons/angle-brackets.svg"
 import BlockHeap from "@/components/icons/block-heap.svg"
 import Calendar from "@/components/icons/calendar.svg"
+import CalendarAdd from "@/components/icons/calendar-add.svg"
 import EthTokenIcon from "@/components/icons/eth-token.svg"
 import PickWalletIcon from "@/components/icons/eth-wallet.svg"
 import Layer2Icon from "@/components/icons/layer-2.svg"
@@ -490,8 +491,9 @@ const HomePage = ({
                     "border-body bg-transparent fill-body text-md text-body no-underline hover:bg-transparent hover:shadow-button-hover active:shadow-none"
                   )}
                   href={calendarLink}
+                  hideArrow
                 >
-                  Add to calendar
+                  <CalendarAdd /> Add to calendar
                 </ButtonLink>
               </div>
             ))}
