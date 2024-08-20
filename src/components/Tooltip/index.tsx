@@ -1,6 +1,13 @@
 import React, { ComponentProps, ReactNode, useEffect } from "react"
 
+import { isMobile } from "@/lib/utils/isMobile"
+
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
+import {
+  Tooltip as Tooltipcomponent,
+  TooltipContent,
+  TooltipTrigger,
+} from "../ui/tooltip"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
 
@@ -57,24 +64,25 @@ const Tooltip = ({
     }
   }
 
+  // Use Popover on mobile devices since the user can't hover
+  const Component = isMobile() ? Popover : Tooltipcomponent
+  const Trigger = isMobile() ? PopoverTrigger : TooltipTrigger
+  const Content = isMobile() ? PopoverContent : TooltipContent
+
   return (
-    <Popover open={isOpen} onOpenChange={handleOpenChange} {...props}>
-      <PopoverTrigger
-        onMouseEnter={onOpen}
-        onMouseLeave={onClose}
-        className="focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover"
-      >
+    <Component open={isOpen} onOpenChange={handleOpenChange} {...props}>
+      <Trigger className="focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover">
         {children}
-      </PopoverTrigger>
-      <PopoverContent
+      </Trigger>
+      <Content
         side="top"
         sideOffset={2}
         className="w-80 px-5 text-sm"
         data-testid="tooltip-popover"
       >
         {content}
-      </PopoverContent>
-    </Popover>
+      </Content>
+    </Component>
   )
 }
 
