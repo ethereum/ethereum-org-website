@@ -175,34 +175,34 @@ const HomePage = ({
     },
   ]
 
-  const SubHeroCTAs = [
+  const subHeroCTAs = [
     {
       label: "Pick a wallet",
       description: "Create accounts, manage assets",
       href: "/wallets/find-wallet/",
       Svg: PickWalletIcon,
-      colorClass: "text-primary",
+      colorClass: "text-primary hover:text-primary/80", // TODO: Confirm hover style
     },
     {
       label: "Get ETH",
       description: "The currency of Ethereum",
       href: "/get-eth/",
       Svg: EthTokenIcon,
-      colorClass: "text-accent-a",
+      colorClass: "text-accent-a hover:text-accent-a/80",
     },
     {
       label: "Choose a network",
       description: "Enjoy minimal fees",
       href: "/layer-2/", // TODO: Update with new networks page when ready
       Svg: ChooseNetworkIcon,
-      colorClass: "text-accent-b",
+      colorClass: "text-accent-b hover:text-accent-b/80",
     },
     {
       label: "Try apps",
       description: "See what Ethereum can do",
       href: "/dapps/",
       Svg: TryAppsIcon,
-      colorClass: "text-accent-c",
+      colorClass: "text-accent-c hover:text-accent-c/80",
     },
   ]
 
@@ -267,7 +267,7 @@ const HomePage = ({
       </div>
       <div className="space-y-16 px-4 sm:px-6 md:space-y-32">
         <div className="grid w-full grid-cols-2 gap-x-4 gap-y-8 py-20 md:grid-cols-4 md:gap-x-10">
-          {SubHeroCTAs.map(({ label, description, href, colorClass, Svg }) => (
+          {subHeroCTAs.map(({ label, description, href, colorClass, Svg }) => (
             <SvgButtonLink
               key={label}
               Svg={Svg}
@@ -360,7 +360,7 @@ const HomePage = ({
               href="/developers/docs/"
               className={cn(
                 "w-fit",
-                "rounded-lg px-8 py-3 text-lg no-underline", // size="lg"
+                "rounded-lg px-8 py-3 text-lg", // size="lg"
                 "border-body bg-transparent fill-body text-md text-body no-underline hover:bg-transparent hover:shadow-button-hover active:shadow-none" // variant="outline"
               )}
             >
@@ -432,7 +432,7 @@ const HomePage = ({
               hideArrow
               className={cn(
                 "px-5",
-                "rounded-lg px-8 py-3 text-lg no-underline",
+                "rounded-lg px-8 py-3 text-lg",
                 "border-body bg-transparent fill-body text-md text-body no-underline hover:bg-transparent hover:shadow-button-hover active:shadow-none"
               )}
             >
@@ -443,7 +443,7 @@ const HomePage = ({
               hideArrow
               className={cn(
                 "px-5",
-                "rounded-lg px-8 py-3 text-lg no-underline",
+                "rounded-lg px-8 py-3 text-lg",
                 "border-body bg-transparent fill-body text-md text-body no-underline hover:bg-transparent hover:shadow-button-hover active:shadow-none"
               )}
             >
@@ -546,7 +546,7 @@ const HomePage = ({
           </h3>
           <p>We have many community events scheduled around the globe</p>
           <div className="mt-4 md:mt-16">
-            <div className="flex flex-col gap-8 self-stretch sm:flex-row">
+            <div className="flex flex-col gap-8 self-stretch md:flex-row">
               {upcomingEvents.map(
                 ({
                   title,
@@ -560,7 +560,7 @@ const HomePage = ({
                   return (
                     <a
                       href={href}
-                      className="sm:w-1/3 sm:max-w-128"
+                      className="no-underline md:w-1/3 md:max-w-128"
                       key={title}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -584,9 +584,9 @@ const HomePage = ({
                             <EventFallback className="w-full object-cover text-body" />
                           )}
                         </CardHeader>
-                        <CardContent className="space-y-8 p-2">
+                        <CardContent className="space-y-8 p-2 text-body">
                           <div>
-                            <p className="text-2xl">{title}</p>
+                            <p className="text-lg">{title}</p>
                             <p className="text-sm italic text-body-medium">
                               {(isValidDate(startDate) ||
                                 isValidDate(endDate)) &&
@@ -644,7 +644,7 @@ const HomePage = ({
               Svg={Layer2Icon}
               label="How to contribute"
               href="/contributing/"
-              className="text-accent-c"
+              className="text-accent-c hover:text-accent-c/80" // TODO: Confirm hover style
             >
               <p className="text-body">
                 Find out all the different ways you can help ethereum.org grow
@@ -655,7 +655,7 @@ const HomePage = ({
               Svg={FaGithub}
               label="GitHub"
               href={GITHUB_REPO_URL}
-              className="text-accent-a"
+              className="text-accent-a hover:text-accent-a/80"
             >
               <p className="text-body">
                 Contribute to code, content, articles etc.
@@ -665,7 +665,7 @@ const HomePage = ({
               Svg={FaDiscord}
               label="Discord"
               href="/discord/"
-              className="text-primary"
+              className="text-primary hover:text-primary/80"
             >
               <p className="text-body">
                 To ask questions, coordinate contribution and join community
@@ -676,7 +676,7 @@ const HomePage = ({
               Svg={FaXTwitter}
               label="Twitter"
               href="https://x.com/EthDotOrg"
-              className="text-accent-b"
+              className="text-accent-b hover:text-accent-b/80"
             >
               <p className="text-body">
                 To keep up with our updates and important news.
