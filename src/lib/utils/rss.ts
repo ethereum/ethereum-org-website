@@ -15,7 +15,11 @@ export const sortByPubDate = (items: RSSItem[]) =>
 export const addVitalikBanner = (rssItems: RSSItem[]) =>
   rssItems.map((item) => {
     if (item.sourceFeedUrl !== VITALIK_BLOG) return item
-    return { ...item, imgSrc: "/images/vitalik-blog-banner.png" }
+    return {
+      ...item,
+      imgSrc: "/images/vitalik-blog-banner.png",
+      link: item.link.replace(".ca", ".eth.limo"),
+    }
   })
 
 export const polishRSSList = (...items: RSSItem[][]) => {

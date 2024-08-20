@@ -513,6 +513,8 @@ const HomePage = ({
                 href={link}
                 key={title}
                 className="duration-100 hover:scale-105 hover:duration-100"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
