@@ -28,7 +28,6 @@ import BloomTechImage from "@/public/images/dev-tools/bloomtech.png"
 import BuildSpaceImage from "@/public/images/dev-tools/buildspace.png"
 import CaptureTheEtherImage from "@/public/images/dev-tools/capturetheether.png"
 import ChainIDEImage from "@/public/images/dev-tools/chainIDE.png"
-import ChainShotImage from "@/public/images/dev-tools/chainshot.png"
 import ConsensysImage from "@/public/images/dev-tools/consensys.png"
 import CryptoZombieImage from "@/public/images/dev-tools/crypto-zombie.png"
 import DappWorldImage from "@/public/images/dev-tools/dapp-world.png"
@@ -296,19 +295,6 @@ const LearningToolsPage = () => {
   ]
 
   const bootcamps: Array<LearningTool> = [
-    {
-      name: "ChainShot",
-      description: t(
-        "page-developers-learning-tools:page-learning-tools-chainshot-description"
-      ),
-      url: "https://www.chainshot.com",
-      image: ChainShotImage,
-      alt: t(
-        "page-developers-learning-tools:page-learning-tools-chainshot-logo-alt"
-      ),
-      background: "#111f29",
-      subjects: ["Solidity", "Vyper", "web3"],
-    },
     {
       name: "ConsenSys Academy",
       description: t(

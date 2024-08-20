@@ -47,7 +47,7 @@ const DocLink = ({ href, children, isExternal = false }: DocLinkProps) => {
         data-group
       >
         <Flex align="center">
-          <Emoji fontSize="md" me={4} text=":page_with_curl:" />
+          <Emoji className="me-4 text-md" text=":page_with_curl:" />
         </Flex>
         <Box flex={1} flexDirection="column">
           <LinkOverlay
