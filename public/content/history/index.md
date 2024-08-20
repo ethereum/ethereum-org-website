@@ -428,7 +428,7 @@ The Constantinople fork:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>optimises cost of certain on-chain actions.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1014">EIP-1014</a> – <em>allows you to interact with addresses that have yet to be created.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>optimises cost of certain on-chain actions.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>introduces the <code>EXTCODEHASH</code> instruction to retrieve the hash of another contract's code.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>makes sure the blockchain doesn&#39;t freeze before proof-of-stake and reduces block reward from 3 to 2 ETH.</em></li>
 </ul>
 
