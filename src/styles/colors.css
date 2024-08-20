@@ -7,6 +7,7 @@
     --white: 0, 0%, 100%; /* #ffffff */
     --gray-50: 0, 0%, 97%; /* #f7f7f7 */
     --gray-100: 0, 0%, 95%; /* #f2f2f2 */
+    --gray-150: 0, 0%, 93%; /* #ececec */ /* TODO: Confirm this shade, used in nav menu */
     --gray-200: 0, 0%, 91%; /* #e0e0e0 */
     --gray-300: 0, 0%, 78%; /* #bcbcbc */
     --gray-400: 0, 0%, 55%; /* #7a7a7a */
