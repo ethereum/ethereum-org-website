@@ -44,8 +44,21 @@ const ProductTable = ({
       )
       return updatedFilters
     }, {})
-    console.log(combinedPresetFilters)
-    // TODO: Apply filtering here
+
+    const filtersUpdated = [...filters]
+    filtersUpdated.forEach((group) => {
+      group.items.forEach((item) => {
+        if (item.options.length) {
+          item.options.forEach((option) => {
+            option.inputState = combinedPresetFilters[option.filterKey]
+          })
+        } else {
+          item.inputState = combinedPresetFilters[item.filterKey]
+        }
+      })
+    })
+
+    setFilters(filtersUpdated)
   }, [presetFilters, activePresets])
 
   return (
