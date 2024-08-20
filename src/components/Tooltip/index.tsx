@@ -10,6 +10,7 @@ import {
 } from "../ui/tooltip"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
+import { useIsClient } from "@/hooks/useIsClient"
 
 export type TooltipProps = ComponentProps<typeof Popover> & {
   content: ReactNode
@@ -24,6 +25,7 @@ const Tooltip = ({
   ...props
 }: TooltipProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const isClient = useIsClient()
 
   // Close the popover when the user scrolls.
   // This is useful for mobile devices where the popover is open by clicking the
@@ -62,6 +64,12 @@ const Tooltip = ({
     } else {
       onClose()
     }
+  }
+
+  // Avoid rendering on the server since the user can't interact with it and we
+  // need to use different components depending on the device
+  if (!isClient) {
+    return null
   }
 
   // Use Popover on mobile devices since the user can't hover
