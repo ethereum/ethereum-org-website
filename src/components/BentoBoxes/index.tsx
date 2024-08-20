@@ -8,7 +8,6 @@ import BentoBox, { BentoBoxProps } from "./Box"
 import Title from "./Title"
 
 import "swiper/css"
-
 import "swiper/css/effect-cards"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
