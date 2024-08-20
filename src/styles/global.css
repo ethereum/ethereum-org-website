@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "@docsearch/css";
+@import "@/styles/fonts.css";
+@import "@/styles/docsearch.css";
+
 @layer base {
   :root {
     --font-inter: Inter, sans-serif;
@@ -116,6 +120,13 @@
     --table-box-shadow: 0 14px 66px rgba(0, 0, 0, 0.07),
       0 10px 17px rgba(0, 0, 0, 0.03), 0 4px 7px rgba(0, 0, 0, 0.05);
     --table-item-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    --banner-grid-gradient: linear-gradient(
+      90deg,
+      rgba(127, 127, 213, 0.2) 0%,
+      rgba(132, 145, 221, 0.2) 50%,
+      rgba(145, 234, 228, 0.2) 100%
+    );
+    --search-background: var(--background);
   }
 
   [data-theme="dark"] {
@@ -149,7 +160,9 @@
     /* Complementary Set */
     --attention-outline: var(--attention-light);
 
-    --error-light: var(--error-light);
+    --error: var(--red-500);
+    --error-light: var(--red-100);
+    --error-outline: var(--error);
     /* ! Deprecating error-neutral */
     --error-netural: var(--red-900);
 
@@ -176,6 +189,12 @@
     --table-box-shadow: 0 14px 66px hsla(0, 0%, 96.1%, 0.07),
       0 10px 17px hsla(0, 0%, 96.1%, 0.03), 0 4px 7px hsla(0, 0%, 96.1%, 0.05);
     --table-item-box-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.1);
+    --banner-grid-gradient: linear-gradient(
+      90deg,
+      rgba(172, 182, 229, 0.08) 0%,
+      rgba(134, 253, 232, 0.08) 100%
+    );
+    --search-background: #4c4c4c;
   }
 }
 

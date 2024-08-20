@@ -331,12 +331,15 @@ const Codeblock = ({
                         <TopBarItem>
                           {!isCopied ? (
                             <>
-                              <Emoji text=":clipboard:" fontSize="md" />{" "}
+                              <Emoji text=":clipboard:" className="text-md" />{" "}
                               {t("copy")}
                             </>
                           ) : (
                             <>
-                              <Emoji text=":white_check_mark:" fontSize="md" />{" "}
+                              <Emoji
+                                text=":white_check_mark:"
+                                className="text-md"
+                              />{" "}
                               {t("copied")}
                             </>
                           )}

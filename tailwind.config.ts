@@ -127,6 +127,7 @@ const config = {
         "tooltip-shadow": "var(--tooltip-shadow)",
         "switch-background": "var(--switch-background)",
         "hub-hero-content-bg": "var(--hub-hero-content-bg)",
+        "search-background": "var(--search-background)",
         attention: {
           DEFAULT: "var(--attention)",
           light: "var(--attention-light)",
@@ -148,6 +149,7 @@ const config = {
       backgroundImage: {
         "main-gradient": "var(--main-gradient)",
         "feedback-gradient": "var(--feedback-gradient)",
+        "banner-grid-gradient": "var(--banner-grid-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",

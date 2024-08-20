@@ -118,7 +118,8 @@ export const walletOnboardingSimData: SimulatorData = {
             </Text>
             <UnorderedList listStyleType="none" mx={0} lineHeight={1}>
               <ListItem>
-                <Emoji text="✅" me={2} /> Consider saving in a password manager
+                <Emoji text="✅" className="me-2" /> Consider saving in a
+                password manager
               </ListItem>
             </UnorderedList>
             <Text fontWeight="bold" mb={2}>
@@ -126,15 +127,16 @@ export const walletOnboardingSimData: SimulatorData = {
             </Text>
             <UnorderedList listStyleType="none" mx={0} lineHeight={1}>
               <ListItem>
-                <Emoji text="✅" me={2} /> Write your recovery phrase down
+                <Emoji text="✅" className="me-2" /> Write your recovery phrase
+                down
               </ListItem>
               <ListItem>
-                <Emoji text="✅" me={2} /> Store it in a safe place (consider
-                multiple backups)
+                <Emoji text="✅" className="me-2" /> Store it in a safe place
+                (consider multiple backups)
               </ListItem>
               {/* TODO: Add link for seed phrase further reading */}
               {/* <ListItem>
-                <Emoji text="✅" me={2} />{" "}
+                <Emoji text="✅" className="me-2" />{" "}
                 <Link href="#TODO-link-out">
                   Learn more on protecting your recovery phrase
                 </Link>
@@ -145,15 +147,15 @@ export const walletOnboardingSimData: SimulatorData = {
             </Text>
             <UnorderedList listStyleType="none" mx={0} lineHeight={1}>
               <ListItem>
-                <Emoji text="❌" me={2} />
+                <Emoji text="❌" className="me-2" />
                 Texting it to a friend (or anyone!)
               </ListItem>
               <ListItem>
-                <Emoji text="❌" me={2} />
+                <Emoji text="❌" className="me-2" />
                 Taking a picture of the phrase
               </ListItem>
               <ListItem>
-                <Emoji text="❌" me={2} />
+                <Emoji text="❌" className="me-2" />
                 Saving it in a file on your computer
               </ListItem>
             </UnorderedList>

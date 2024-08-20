@@ -150,7 +150,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 - [阅读天鹰座升级规范](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />有趣的事实！ {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} className="me-2" />有趣的事实！ {#altair-fun-fact}
 
 天鹰座升级是第一个有确切发布时间的重大网络升级。 之前的每一次升级均基于一个已经在工作量证明链上申报过的区块编号，而该链上的区块时间各不相同。 信标链不需要解析工作量证明，而是在一个基于时间、由 32 个 12 秒“时隙”组成的时段系统上运作。在这个系统上，验证者可以提出区块。 这就是为什么我们能准确知晓达到时段 74,240 以及天鹰座升级启动的时间！
 
