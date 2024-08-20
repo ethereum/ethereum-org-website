@@ -10,10 +10,7 @@ export const fetchTotalEthStaked = async (): Promise<MetricReturnData> => {
     return { error: "Dune API key not found" }
   }
 
-  const url = new URL(
-    "api/v1/endpoints/pablop/eth-staked/results",
-    DUNE_API_URL
-  )
+  const url = new URL("api/v1/query/3915587/results", DUNE_API_URL)
 
   try {
     const ethStakedResponse = await fetch(url, {
