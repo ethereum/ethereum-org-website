@@ -29,6 +29,7 @@ const ProductTable = ({
     }
   }
 
+  // TODO: Fix this, its currently not applying presets correctly when there are none applied
   useEffect(() => {
     const combinedPresetFilters = activePresets.reduce((combined, preset) => {
       const updatedFilters = { ...combined }
@@ -52,9 +53,8 @@ const ProductTable = ({
           item.options.forEach((option) => {
             option.inputState = combinedPresetFilters[option.filterKey]
           })
-        } else {
-          item.inputState = combinedPresetFilters[item.filterKey]
         }
+        item.inputState = combinedPresetFilters[item.filterKey]
       })
     })
 
