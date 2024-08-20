@@ -335,9 +335,7 @@ const HomePage = ({
           </div>
         </HomeSection>
 
-        <HomeSection tag="" title="The internet is changing">
-          <span className="text-[5rem]">👷‍♀️🚧🔜</span>
-        </HomeSection>
+        {/* TODO: Add "The Internet Is Changing" section */}
 
         <HomeSection
           tag="Builders"
