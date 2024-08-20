@@ -235,15 +235,10 @@ const HomePage = ({
   ]
 
   const upcomingEvents = events
-    .sort((a, b) => {
-      const dateA = isValidDate(a.endDate)
-        ? new Date(a.endDate).getTime()
-        : -Infinity
-      const dateB = isValidDate(b.endDate)
-        ? new Date(b.endDate).getTime()
-        : -Infinity
-      return dateA - dateB
-    })
+    .filter((event) => isValidDate(event.endDate)) // Filter out invalid dates
+    .sort(
+      (a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime()
+    )
     .slice(0, 3) // Show 3 events ending soonest
 
   const calendar = communityEvents.upcomingEventData
