@@ -303,9 +303,9 @@ const HomePage = ({
         >
           <div className="flex flex-col space-y-16 lg:space-y-32">
             <p className="text-lg">
-              Cryptocurrency can feel overwhelming. Don&apos;t worry, these
-              materials are designed to help you understand Ethereum in just a
-              few minutes.
+              Crypto can feel overwhelming. Don&apos;t worry, these materials
+              are designed to help you understand Ethereum in just a few
+              minutes.
             </p>
             <div className="flex flex-col space-y-8">
               <p className="text-xl font-bold">Popular topics</p>
