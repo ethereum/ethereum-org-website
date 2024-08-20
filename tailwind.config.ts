@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss"
 import plugin from "tailwindcss/plugin"
 
 const config = {
-  darkMode: ["class"],
+  darkMode: ["selector", "[data-theme='dark']"],
   content: [
     "./src/**/*.{ts,tsx}",
     // TODO: remove after migration
@@ -137,6 +137,7 @@ const config = {
         disabled: "hsla(var(--disabled))",
         "tooltip-shadow": "var(--tooltip-shadow)",
         "hub-hero-content-bg": "var(--hub-hero-content-bg)",
+        "search-background": "var(--search-background)",
         attention: {
           DEFAULT: "hsla(var(--attention))",
           light: "hsla(var(--attention-light))",
@@ -168,6 +169,7 @@ const config = {
         "gradient-primary-hero": "var(--gradient-primary-hero)",
         "main-gradient": "var(--gradient-main)", // TODO: Duplicate; remove one
         "feedback-gradient": "var(--feedback-gradient)",
+        "banner-grid-gradient": "var(--banner-grid-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",

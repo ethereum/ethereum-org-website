@@ -937,7 +937,7 @@ const BugBountiesPage = () => {
             </InlineLink>
           </Text>
         </Box>
-        <Emoji fontSize="5xl" text=":email:" />
+        <Emoji className="text-5xl" text=":email:" />
       </Contact>
       <FeedbackCard />
     </Page>

@@ -149,7 +149,7 @@ Das Altair-Upgrade war das erste geplante Upgrade für die [Beacon Chain](/roadm
 
 - [Lesen Sie die Spezifikation zum Altair-Upgrade](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />Fun Fact! {#altair-fun-fact}
+#### <emoji text=":tada:" size={1} className="me-2" />Fun Fact! {#altair-fun-fact}
 
 Altair war das erste große Netzwerk-Upgrade, für das es einen genauen Einführungszeitpunkt gab. Jedes vorherige Upgrade basierte auf einer angegebenen Blocknummer auf der Proof-of-Work-Chain, bei der die Blockzeiten variieren. Die Beacon Chain erfordert kein Lösen von Proof-of-Work und arbeitet stattdessen mit einem zeitbasierten Epochensystem, das aus 32 zwölfsekündigen „Slots" besteht, in denen Validatoren Blöcke vorschlagen können. Deshalb wussten wir genau, wann wir Epoche 74.240 erreichen würden und Altair live gehen würde!
 

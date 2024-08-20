@@ -150,7 +150,7 @@ La actualización Altair fue la primera programada para la [cadena de baliza](/r
 
 - [Lea las especificaciones de actualización Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />¡Dato curioso! {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} className="me-2" />¡Dato curioso! {#altair-fun-fact}
 
 Altair fue la primera gran actualización de red que ha tenido un periodo de implementación preciso. Cada una de las actualizaciones anteriores se habían basado en un número de bloques declarados en la cadena de prueba de trabajo, donde los tiempos de bloque varían. La cadena de baliza no requiere resolución para la prueba de trabajo y, en lugar de ello, funciona en un sistema épocas basado en el tiempo, que consiste en «ranuras» de tiempo de doce segundos durante los cuales los validadores pueden proponer bloques. Por esta razón sabíamos exactamente cuándo alcanzaríamos la época 74.240 y Altair vería la luz.
 
