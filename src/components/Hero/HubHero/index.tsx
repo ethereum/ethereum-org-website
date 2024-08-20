@@ -1,9 +1,10 @@
-import { Box, Heading, Stack, Text } from "@chakra-ui/react"
-
 import type { CommonHeroProps } from "@/lib/types"
 
 import { CallToAction } from "@/components/Hero/CallToAction"
 import { Image } from "@/components/Image"
+import { Stack } from "@/components/ui/flex"
+
+import { cn } from "@/lib/utils/cn"
 
 export type HubHeroProps = Omit<CommonHeroProps, "breadcrumbs" | "blurDataURL">
 
@@ -21,7 +22,7 @@ const HubHero = ({
   }
 
   return (
-    <Box position="relative">
+    <div className="relative">
       <Image
         src={heroImg}
         alt=""
@@ -38,47 +39,45 @@ const HubHero = ({
         }}
       />
       <Stack
-        spacing="4"
-        p={{ base: "4", lg: "8" }}
-        textAlign={{ base: "center", xl: "start" }}
-        borderRadius={{ xl: "base" }}
-        bg={{ xl: "hubHeroContentBg" }}
-        position={{ xl: "absolute" }}
-        maxW={{ xl: "sm" }}
-        top={{ xl: "50%" }}
-        transform={{ xl: "translateY(-50%)" }}
-        backdropFilter={{ xl: "auto" }}
-        backdropBlur={{ xl: "base" }}
-        wordBreak="break-word"
-        sx={{
-          "inset-inline-start": { xl: "32px" },
-        }}
+        // spacing :: used space-y as considering it to be column
+        className={cn(
+          "gap-0 space-y-4 p-4 lg:p-8",
+          "text-center xl:text-start",
+          "xl:rounded",
+          "xl:bg-[#222222cc]",
+          "xl:absolute xl:top-1/2 xl:max-w-sm",
+          "xl:-translate-y-1/2 xl:transform",
+          "xl:backdrop-blur xl:backdrop-filter",
+          "break-words",
+          "xl:start-[32px]"
+        )}
       >
         {title ? (
-          <Text
-            as="h1"
-            size="md"
-            color="body.medium"
-            fontWeight="normal"
-            textTransform="uppercase"
-          >
+          <h1 className="text-md font-normal uppercase text-body-medium">
             {title}
-          </Text>
+          </h1>
         ) : null}
         <Stack
-          alignSelf="center"
-          spacing={{ base: "2", md: "1" }}
-          maxW="container.md"
+          // TODO: Spacings on @chakra Stack behaves differently on different screen sizes
+          // spacing :: used space-y as considering it to be column
+          // --eth-sizes-container-md: 768px ==> tailwind max-w-3xl
+          className="max-w-3xl gap-0 space-y-2 self-center md:space-y-1"
         >
-          <Heading as={title ? "h2" : "h1"} size="2xl">
-            {header}
-          </Heading>
-          <Text size="lg">{description}</Text>
+          {title ? (
+            <h2 className="text-4xl lg:text-5xl">{header}</h2>
+          ) : (
+            <h1 className="text-4xl lg:text-5xl">{header}</h1>
+          )}
+
+          <p className="text-lg">{description}</p>
         </Stack>
         <Stack
-          direction={{ base: "column", md: "row" }}
-          justify={{ md: "center", xl: "start" }}
-          spacing="4"
+          className={cn(
+            "h-fit flex-col gap-0 md:flex-row",
+            "md:justify-center xl:justify-start",
+            // spacing :: used space-y & x as considering it to be sm:column md:row
+            "space-y-4 md:space-x-4 md:space-y-0"
+          )}
         >
           {buttons?.map((button, idx) => {
             if (!button) return
@@ -86,7 +85,7 @@ const HubHero = ({
           })}
         </Stack>
       </Stack>
-    </Box>
+    </div>
   )
 }
 
