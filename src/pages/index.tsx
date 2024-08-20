@@ -504,7 +504,7 @@ const HomePage = ({
 
         <div className="w-full">
           <h3 className="mb-4 mt-2 text-5xl font-black lg:mb-6 lg:text-7xl">
-            Ethereum news
+            News
           </h3>
           <p>The latest blog posts and updates from the community</p>
           <div className="mt-4 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-3 md:flex-row">
@@ -512,20 +512,17 @@ const HomePage = ({
               <a
                 href={link}
                 key={title}
-                className="duration-100 hover:scale-105 hover:duration-100"
+                className="no-underline duration-100 hover:scale-105 hover:duration-100"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={imgSrc}
-                  alt=""
-                  className="h-48 w-full rounded-2xl object-cover"
-                />
-                <div className="flex flex-col space-y-2">
-                  <div className="mt-3 w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
-                    {source}
-                  </div>
+                <div className="flex flex-col space-y-2.5 text-body">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={imgSrc}
+                    alt=""
+                    className="h-48 w-full rounded-2xl object-cover"
+                  />
                   {isValidDate(pubDate) && (
                     <p className="text-sm italic">
                       {new Intl.DateTimeFormat(locale, {
@@ -535,7 +532,10 @@ const HomePage = ({
                       }).format(new Date(pubDate))}
                     </p>
                   )}
-                  <p className="mb-2 text-2xl">{title}</p>
+                  <div className="primary-low-contrast w-fit rounded-full bg-accent-a/20 px-4 py-0 text-sm uppercase text-accent-a">
+                    {source}
+                  </div>
+                  <p className="mb-2 text-2xl font-bold">{title}</p>
                 </div>
               </a>
             ))}
@@ -544,7 +544,7 @@ const HomePage = ({
 
         <div className="w-full">
           <h3 className="mb-4 mt-2 text-5xl font-black lg:mb-6 lg:text-7xl">
-            Ethereum events
+            Events
           </h3>
           <p>We have many community events scheduled around the globe</p>
           <div className="mt-4 md:mt-16">
