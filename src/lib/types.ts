@@ -669,11 +669,13 @@ export type FilterOption = {
       input: (
         filterIndex: number,
         itemIndex: number,
+        optionIndex: number,
         state: FilterInputState,
         updateFilterState: (
           filterIndex: number,
           itemIndex: number,
-          inputState: FilterInputState
+          inputState: FilterInputState,
+          optionIndex: number
         ) => void
       ) => ReactElement
     }>

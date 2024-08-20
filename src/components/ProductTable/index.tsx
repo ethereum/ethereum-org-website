@@ -45,7 +45,8 @@ const ProductTable = ({
       return updatedFilters
     }, {})
     console.log(combinedPresetFilters)
-  }, [activePresets])
+    // TODO: Apply filtering here
+  }, [presetFilters, activePresets])
 
   return (
     <div className="px-4">

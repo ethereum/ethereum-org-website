@@ -25,6 +25,7 @@ import {
   SwapIcon,
   WithdrawCryptoIcon,
 } from "@/components/icons/wallets"
+import CheckboxFilterInput from "@/components/ProductTable/FilterInputs/CheckboxFilterInput"
 import SwitchFilterInput from "@/components/ProductTable/FilterInputs/SwitchFilterInput"
 
 export const WalletFilters = (): FilterOption[] => {
@@ -49,7 +50,52 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
-          options: [],
+          options: [
+            {
+              filterKey: "android",
+              inputState: false,
+              input: (
+                filterIndex,
+                itemIndex,
+                optionIndex,
+                inputState,
+                updateFilterState
+              ) => {
+                return (
+                  <CheckboxFilterInput
+                    label={t("page-find-wallet-android")}
+                    filterIndex={filterIndex}
+                    itemIndex={itemIndex}
+                    optionIndex={optionIndex}
+                    inputState={inputState}
+                    updateFilterState={updateFilterState}
+                  />
+                )
+              },
+            },
+            {
+              filterKey: "ios",
+              inputState: false,
+              input: (
+                filterIndex,
+                itemIndex,
+                optionIndex,
+                inputState,
+                updateFilterState
+              ) => {
+                return (
+                  <CheckboxFilterInput
+                    label={t("page-find-wallet-iOS")}
+                    filterIndex={filterIndex}
+                    itemIndex={itemIndex}
+                    optionIndex={optionIndex}
+                    inputState={inputState}
+                    updateFilterState={updateFilterState}
+                  />
+                )
+              },
+            },
+          ],
         },
         {
           filterKey: "desktop",
@@ -66,7 +112,74 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
-          options: [],
+          options: [
+            {
+              filterKey: "linux",
+              inputState: false,
+              input: (
+                filterIndex,
+                itemIndex,
+                optionIndex,
+                inputState,
+                updateFilterState
+              ) => {
+                return (
+                  <CheckboxFilterInput
+                    label={t("page-find-wallet-linux")}
+                    filterIndex={filterIndex}
+                    itemIndex={itemIndex}
+                    optionIndex={optionIndex}
+                    inputState={inputState}
+                    updateFilterState={updateFilterState}
+                  />
+                )
+              },
+            },
+            {
+              filterKey: "windows",
+              inputState: false,
+              input: (
+                filterIndex,
+                itemIndex,
+                optionIndex,
+                inputState,
+                updateFilterState
+              ) => {
+                return (
+                  <CheckboxFilterInput
+                    label={t("page-find-wallet-windows")}
+                    filterIndex={filterIndex}
+                    itemIndex={itemIndex}
+                    optionIndex={optionIndex}
+                    inputState={inputState}
+                    updateFilterState={updateFilterState}
+                  />
+                )
+              },
+            },
+            {
+              filterKey: "macOS",
+              inputState: false,
+              input: (
+                filterIndex,
+                itemIndex,
+                optionIndex,
+                inputState,
+                updateFilterState
+              ) => {
+                return (
+                  <CheckboxFilterInput
+                    label={t("page-find-wallet-macOS")}
+                    filterIndex={filterIndex}
+                    itemIndex={itemIndex}
+                    optionIndex={optionIndex}
+                    inputState={inputState}
+                    updateFilterState={updateFilterState}
+                  />
+                )
+              },
+            },
+          ],
         },
         {
           filterKey: "browser",
@@ -83,7 +196,52 @@ export const WalletFilters = (): FilterOption[] => {
               />
             )
           },
-          options: [],
+          options: [
+            {
+              filterKey: "chromium",
+              inputState: false,
+              input: (
+                filterIndex,
+                itemIndex,
+                optionIndex,
+                inputState,
+                updateFilterState
+              ) => {
+                return (
+                  <CheckboxFilterInput
+                    label={t("page-find-wallet-chromium")}
+                    filterIndex={filterIndex}
+                    itemIndex={itemIndex}
+                    optionIndex={optionIndex}
+                    inputState={inputState}
+                    updateFilterState={updateFilterState}
+                  />
+                )
+              },
+            },
+            {
+              filterKey: "firefox",
+              inputState: false,
+              input: (
+                filterIndex,
+                itemIndex,
+                optionIndex,
+                inputState,
+                updateFilterState
+              ) => {
+                return (
+                  <CheckboxFilterInput
+                    label={t("page-find-wallet-firefox")}
+                    filterIndex={filterIndex}
+                    itemIndex={itemIndex}
+                    optionIndex={optionIndex}
+                    inputState={inputState}
+                    updateFilterState={updateFilterState}
+                  />
+                )
+              },
+            },
+          ],
         },
         {
           filterKey: "hardware",

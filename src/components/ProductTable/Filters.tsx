@@ -21,12 +21,28 @@ const Filters = ({ filters, setFilters }: PresetFiltersProps) => {
   const updateFilterState = (
     filterIndex: number,
     itemIndex: number,
-    newInputState: FilterInputState
+    newInputState: FilterInputState,
+    optionIndex?: number
   ) => {
     const updatedFilters = filters.map((filter, idx) => {
       if (idx === filterIndex) {
         const updatedItems = filter.items.map((item, i) => {
           if (i === itemIndex) {
+            if (typeof optionIndex !== "undefined") {
+              const updatedOptions = item.options.map((option, j) => {
+                if (j === optionIndex) {
+                  return {
+                    ...option,
+                    inputState: newInputState,
+                  }
+                }
+                return option
+              })
+              return {
+                ...item,
+                options: updatedOptions,
+              }
+            }
             return {
               ...item,
               inputState: newInputState,
@@ -88,6 +104,19 @@ const Filters = ({ filters, setFilters }: PresetFiltersProps) => {
                           item.inputState,
                           updateFilterState
                         )}
+                        {item.inputState === true && item.options.length ? (
+                          <div className="flex flex-row gap-6 px-2 pb-4">
+                            {item.options.map((option, optionIndex) => {
+                              return option.input(
+                                filterIndex,
+                                itemIndex,
+                                optionIndex,
+                                option.inputState,
+                                updateFilterState
+                              )
+                            })}
+                          </div>
+                        ) : null}
                       </>
                     )
                   })}
