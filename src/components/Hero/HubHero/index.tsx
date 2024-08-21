@@ -60,8 +60,8 @@ const HubHero = ({
           // --eth-sizes-container-md: 768px ==> tailwind max-w-3xl
           className="max-w-3xl gap-2 self-center md:gap-1"
         >
-          {/* Ref: file: src/components/Hero/HubHero/index.tsx:28 */}
-          {/* 2xl font size refers to  ["4xl", null, null, "5xl"] */}
+          {/* Ref file: src/@chakra-ui/components/Heading.ts:21 */}
+          {/* 2xl font size refers to  ["4xl", null, null, "5xl"]  */}
           {title ? (
             <h2 className="text-4xl lg:text-5xl">{header}</h2>
           ) : (
