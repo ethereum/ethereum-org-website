@@ -74,10 +74,7 @@ const TranslationBannerLegal = ({
               <Translation id="translation-banner-no-bugs-title" />
               <Emoji
                 text=":bug:"
-                fontSize="3xl"
-                pt={2}
-                ms={2}
-                mb={{ base: 4, sm: "auto" }}
+                className="mb-4 ms-2 pt-2 text-3xl sm:mb-auto"
               />
             </Heading>
           </Flex>
