@@ -2,6 +2,8 @@ import type { FC, ReactNode, SVGProps } from "react"
 
 import { cn } from "@/lib/utils/cn"
 
+import { BaseLink } from "../ui/Link"
+
 type SvgButtonLinkProps = {
   Svg: FC<SVGProps<SVGElement>>
   label?: string
@@ -18,7 +20,7 @@ const SvgButtonLink = ({
   className,
   ...props
 }: SvgButtonLinkProps) => (
-  <a
+  <BaseLink
     className={cn(
       "group rounded-2xl no-underline focus:outline focus:outline-4 focus:outline-offset-8",
       className
@@ -34,7 +36,7 @@ const SvgButtonLink = ({
         {children}
       </div>
     </div>
-  </a>
+  </BaseLink>
 )
 
 export default SvgButtonLink

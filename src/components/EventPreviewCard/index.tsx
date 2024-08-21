@@ -8,6 +8,8 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { cn } from "@/lib/utils/cn"
 import { isValidDate } from "@/lib/utils/date"
 
+import { BaseLink } from "../ui/Link"
+
 import EventFallback from "@/public/images/event-fallback.png"
 
 const EventPreviewCard = ({
@@ -22,11 +24,10 @@ const EventPreviewCard = ({
 }: EventCardProps) => {
   const { locale } = useRouter()
   return (
-    <a
+    <BaseLink
       href={href}
       className={cn("no-underline md:w-1/3 md:max-w-128", className)}
-      target="_blank"
-      rel="noopener noreferrer"
+      hideArrow
     >
       <Card
         className={cn(
@@ -70,7 +71,7 @@ const EventPreviewCard = ({
           <p>{description}</p>
         </CardContent>
       </Card>
-    </a>
+    </BaseLink>
   )
 }
 
