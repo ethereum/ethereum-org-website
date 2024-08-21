@@ -328,6 +328,12 @@ type Spec = {
   link: string
 }
 
+type Language = {
+  title: string
+  link: string
+  image: ImageProps["src"]
+}
+
 const sortBountyHuntersFn = (a: BountyHuntersArg, b: BountyHuntersArg) => {
   if (!a.score || !b.score) return 0
   return b.score - a.score
@@ -460,15 +466,15 @@ const BugBountiesPage = () => {
     },
   ]
 
-  const languages: Languages[] = [
+  const languages: Language[] = [
     {
       title: "Solidity",
-      link: "https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md",
+      link: "https://soliditylang.org/",
       image: solidity,
     },
     {
       title: "Vyper",
-      link: "https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/fork-choice.md",
+      link: "https://vyperlang.org/",
       image: vyper,
     },
   ]
