@@ -76,6 +76,19 @@ const config = {
           900: "hsla(var(--gray-900))",
         },
 
+        purple: {
+          50: "hsla(var(--purple-50))",
+          100: "hsla(var(--purple-100))",
+          200: "hsla(var(--purple-200))",
+          300: "hsla(var(--purple-300))",
+          400: "hsla(var(--purple-400))",
+          500: "hsla(var(--purple-500))",
+          600: "hsla(var(--purple-600))",
+          700: "hsla(var(--purple-700))",
+          800: "hsla(var(--purple-800))",
+          900: "hsla(var(--purple-900))",
+        },
+
         blue: {
           50: "hsla(var(--blue-50))",
           100: "hsla(var(--blue-100))",
