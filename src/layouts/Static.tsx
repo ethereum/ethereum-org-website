@@ -112,7 +112,7 @@ export const StaticLayout = ({
               <Breadcrumbs slug={slug} />
 
               <p
-                className="text-sm text-[#666] dark:text-[#b2b2b2]"
+                className="text-body-medium"
                 dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
               >
                 <Translation id="page-last-updated" />:{" "}
