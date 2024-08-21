@@ -36,6 +36,7 @@ import RoadmapSign from "@/components/icons/roadmap-sign.svg"
 import Whitepaper from "@/components/icons/whitepaper.svg"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
+import RssPreviewCard from "@/components/RssPreviewCard"
 import StatsBoxGrid from "@/components/StatsBoxGrid"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -530,36 +531,8 @@ const HomePage = ({
           </h3>
           <p>The latest blog posts and updates from the community</p>
           <div className="mt-4 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-3 md:flex-row">
-            {rssItems.map(({ title, link, imgSrc, source, pubDate }) => (
-              <a
-                href={link}
-                key={title}
-                className="no-underline duration-100 hover:scale-105 hover:duration-100"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="flex flex-col space-y-2.5 text-body">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={imgSrc}
-                    alt=""
-                    className="h-48 w-full rounded-2xl object-cover"
-                  />
-                  {isValidDate(pubDate) && (
-                    <p className="text-sm italic">
-                      {new Intl.DateTimeFormat(locale, {
-                        month: "long",
-                        day: "numeric",
-                        year: "numeric",
-                      }).format(new Date(pubDate))}
-                    </p>
-                  )}
-                  <div className="primary-low-contrast w-fit rounded-full bg-accent-a/20 px-4 py-0 text-sm uppercase text-accent-a">
-                    {source}
-                  </div>
-                  <p className="mb-2 text-2xl font-bold">{title}</p>
-                </div>
-              </a>
+            {rssItems.map((item) => (
+              <RssPreviewCard key={item.title} {...item} />
             ))}
           </div>
         </div>
