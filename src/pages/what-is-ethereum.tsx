@@ -757,7 +757,7 @@ const WhatIsEthereumPage = ({
           </Section>
 
           <Section>
-            <TwoColumnContent>
+            <TwoColumnContent className="lg:flex-row-reverse">
               <Width40>
                 <Image400 src={diffEthAndBtc} />
               </Width40>
@@ -776,7 +776,7 @@ const WhatIsEthereumPage = ({
           </Section>
         </div>
 
-        <Content>
+        <Section>
           <H2>{t("page-what-is-ethereum-additional-reading")}</H2>
           <Stack className="mb-4 gap-6">
             <p>
@@ -799,9 +799,9 @@ const WhatIsEthereumPage = ({
               {t("page-what-is-ethereum-kernel-dreamers-desc")}
             </p>
           </Stack>
-        </Content>
+        </Section>
 
-        <Content>
+        <Section>
           <Column>
             <H2>{t("page-what-is-ethereum-explore")}</H2>
           </Column>
@@ -835,15 +835,15 @@ const WhatIsEthereumPage = ({
               </div>
             </Callout>
           </CardContainer>
-        </Content>
+        </Section>
 
-        <Content>
+        <Section>
           <StandaloneQuizWidget quizKey="what-is-ethereum" />
-        </Content>
+        </Section>
 
-        <Content>
+        <Section>
           <FeedbackCard />
-        </Content>
+        </Section>
       </MainArticle>
     </VStack>
   )
