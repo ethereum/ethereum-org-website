@@ -255,6 +255,11 @@ const HomePage = ({
     })
     .slice(0, 4) // Show next 4 events on the calendar
 
+  // TODO: Migrate to button variants
+  const buttonSizeLg = "rounded-lg px-8 py-3 text-lg"
+  const buttonVariantOutline =
+    "border-body bg-transparent fill-body text-md text-body hover:bg-transparent hover:text-body hover:shadow-button-hover active:shadow-none"
+
   return (
     <Flex
       as={MainArticle}
@@ -332,7 +337,7 @@ const HomePage = ({
               <div className="flex justify-center py-8 md:justify-start">
                 <ButtonLink
                   href="/learn/"
-                  className="rounded-lg px-8 py-3 text-lg no-underline"
+                  className={cn("no-underline", buttonSizeLg)}
                 >
                   Other topics <MdChevronRight />
                 </ButtonLink>
@@ -356,16 +361,16 @@ const HomePage = ({
           <div className="flex flex-wrap gap-6 py-8">
             <ButtonLink
               href="/developers/"
-              className="w-fit rounded-lg px-8 py-3 text-lg no-underline"
+              className={cn("w-fit no-underline", buttonSizeLg)}
             >
               Builder&apos;s Portal <MdChevronRight />
             </ButtonLink>
             <ButtonLink
               href="/developers/docs/"
               className={cn(
-                "w-fit",
-                "rounded-lg px-8 py-3 text-lg", // size="lg"
-                "border-body bg-transparent fill-body text-md text-body no-underline hover:bg-transparent hover:shadow-button-hover active:shadow-none" // variant="outline"
+                "w-fit no-underline",
+                buttonSizeLg,
+                buttonVariantOutline
               )}
             >
               Documentation
@@ -434,28 +439,20 @@ const HomePage = ({
             <ButtonLink
               href="/discord/"
               hideArrow
-              className={cn(
-                "px-5",
-                "rounded-lg px-8 py-3 text-lg",
-                "border-body bg-transparent fill-body text-md text-body no-underline hover:bg-transparent hover:shadow-button-hover active:shadow-none"
-              )}
+              className={cn("no-underline", buttonSizeLg, buttonVariantOutline)}
             >
               <FaDiscord />
             </ButtonLink>
             <ButtonLink
               href={GITHUB_REPO_URL}
               hideArrow
-              className={cn(
-                "px-5",
-                "rounded-lg px-8 py-3 text-lg",
-                "border-body bg-transparent fill-body text-md text-body no-underline hover:bg-transparent hover:shadow-button-hover active:shadow-none"
-              )}
+              className={cn("no-underline", buttonSizeLg, buttonVariantOutline)}
             >
               <FaGithub />
             </ButtonLink>
             <ButtonLink
               href="/community/"
-              className="rounded-lg px-8 py-3 text-lg no-underline"
+              className={cn("no-underline", buttonSizeLg)}
             >
               More on ethereum.org <MdChevronRight />
             </ButtonLink>
@@ -491,9 +488,9 @@ const HomePage = ({
                 </div>
                 <ButtonLink
                   className={cn(
-                    "px-5",
-                    "h-fit w-full text-nowrap border-body !text-body sm:w-fit lg:self-center xl:text-primary",
-                    "border-body bg-transparent fill-body text-md text-body no-underline hover:bg-transparent hover:shadow-button-hover active:shadow-none"
+                    "px-5 no-underline",
+                    "h-fit w-full text-nowrap border-body !text-body sm:w-fit lg:self-center",
+                    buttonVariantOutline
                   )}
                   href={calendarLink}
                   hideArrow
@@ -562,10 +559,7 @@ const HomePage = ({
           <div className="flex justify-center py-8 md:justify-start">
             <ButtonLink
               href="/community/events/"
-              className={cn(
-                "mx-auto",
-                "rounded-lg px-8 py-3 text-lg no-underline"
-              )}
+              className={cn("mx-auto no-underline", buttonSizeLg)}
             >
               See all events <MdChevronRight />
             </ButtonLink>
