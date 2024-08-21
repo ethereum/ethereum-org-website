@@ -7,7 +7,6 @@ import { AppPropsWithLayout } from "@/lib/types"
 import ThemeProvider from "@/components/ThemeProvider"
 
 import "@/styles/global.css"
-import "@/styles/fonts.css"
 
 import { BaseLayout } from "@/layouts/BaseLayout"
 

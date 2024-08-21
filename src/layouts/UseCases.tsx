@@ -178,7 +178,7 @@ export const UseCasesLayout = ({
       dir={contentNotTranslated ? "ltr" : "unset"}
     >
       <BannerNotification shouldShow zIndex="sticky" hideBelow={lgBp}>
-        <Emoji text=":pencil:" fontSize="2xl" me={4} flexShrink={0} />
+        <Emoji text=":pencil:" className="me-4 shrink-0 text-2xl" />
         <Text m={0}>
           {t("template-usecase:template-usecase-banner")}{" "}
           <InlineLink href={absoluteEditPath}>
@@ -188,7 +188,7 @@ export const UseCasesLayout = ({
       </BannerNotification>
       <HeroContainer key={frontmatter.title}>
         <TitleCard>
-          <Emoji fontSize="4rem" text={frontmatter.emoji!} />
+          <Emoji className="text-[4rem]" text={frontmatter.emoji!} />
           <Title>{frontmatter.title}</Title>
           <Box>
             <UnorderedList ms="1.45rem">

@@ -5,7 +5,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import ButtonTwoLinesComponent from "../buttons/ButtonTwoLines"
 
 const meta = {
-  title: "Atoms / Form / ShadCn Buttons / ButtonTwoLines",
+  title: "Atoms / Form / Buttons / ButtonTwoLines",
   component: ButtonTwoLinesComponent,
 } satisfies Meta<typeof ButtonTwoLinesComponent>
 
