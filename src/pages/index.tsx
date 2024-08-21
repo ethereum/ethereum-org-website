@@ -251,7 +251,12 @@ const HomePage = ({
   ]
 
   const upcomingEvents = events
-    .filter((event) => isValidDate(event.endDate)) // Filter out invalid dates
+    .filter((event) => {
+      const isValid = isValidDate(event.endDate)
+      const isUpcoming =
+        new Date(event.endDate).getTime() > new Date().getTime()
+      return isValid && isUpcoming
+    })
     .sort(
       (a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime()
     )
@@ -543,9 +548,15 @@ const HomePage = ({
           </h3>
           <p>We have many community events scheduled around the globe</p>
           <div className="mt-4 md:mt-16">
-            <div className="flex flex-col gap-8 self-stretch md:flex-row">
-              {upcomingEvents.map((event) => (
-                <EventPreviewCard key={event.title} {...event} />
+            <div className="grid grid-cols-1 gap-8 self-stretch sm:grid-cols-2 md:grid-cols-3">
+              {upcomingEvents.map((event, idx) => (
+                <EventPreviewCard
+                  key={event.title}
+                  {...event}
+                  className={cn(
+                    idx === 0 && "col-span-1 sm:col-span-2 md:col-span-1"
+                  )}
+                />
               ))}
             </div>
           </div>

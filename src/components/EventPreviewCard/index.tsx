@@ -24,11 +24,7 @@ const EventPreviewCard = ({
 }: EventCardProps) => {
   const { locale } = useRouter()
   return (
-    <BaseLink
-      href={href}
-      className={cn("no-underline md:w-1/3 md:max-w-128", className)}
-      hideArrow
-    >
+    <BaseLink href={href} className={cn("no-underline", className)} hideArrow>
       <Card
         className={cn(
           "w-full space-y-4",
