@@ -9,7 +9,7 @@
   "page-upgrades-bug-bounty-clients-type-2": "Unexpected crashes, RCE or denial of service (DOS) vulnerabilities",
   "page-upgrades-bug-bounty-clients-type-3": "Any issues causing irreparable consensus splits from the rest of the network",
   "page-upgrades-bug-bounty-misc-bugs": "Language compiler bugs",
-  "page-upgrades-bug-bounty-misc-bugs-desc": "The Solidity and Vyper compilers are in scope of the bug bounty program.",
+  "page-upgrades-bug-bounty-misc-bugs-desc": "The Solidity and Vyper compilers are in scope of the bug bounty program. Please include all details necessary to reproduce the vulnerability such as: Input program that triggers the bug, Compiler version affected, Target EVM version, Framework/IDE if applicable, EVM execution environment/client if applicable and Operating system, Please include steps to reproduce the bug you have found in as much detail as possible.",
   "page-upgrades-bug-bounty-misc-bugs-desc-2": "Solidity and Vyper does not hold security guarantees regarding compilation of untrusted input – and we do not issue rewards for crashes of the compiler on maliciously generated data.",
   "page-upgrades-bug-bounty-deposit-bugs": "Deposit Contract bugs",
   "page-upgrades-bug-bounty-deposit-bugs-desc": "The specifications and source code of the Beacon Chain Deposit Contract is part of the bug bounty program.",
