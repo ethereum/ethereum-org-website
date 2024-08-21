@@ -51,6 +51,9 @@ import reth from "@/public/images/upgrades/reth.png"
 import tekuDark from "@/public/images/upgrades/teku-dark.png"
 import tekuLight from "@/public/images/upgrades/teku-light.png"
 
+import solidity from "@/public/images/upgrades/solidity.png"
+import vyper from "@/public/images/upgrades/vyper.png"
+
 const Page = (props: ChildOnlyProp) => (
   <Box
     as={MainArticle}
@@ -457,6 +460,19 @@ const BugBountiesPage = () => {
     },
   ]
 
+  const languages: Languages[] = [
+    {
+      title: "Solidity",
+      link: "https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md",
+      image: solidity,
+    },
+    {
+      title: "Vyper",
+      link: "https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/fork-choice.md",
+      image: vyper,
+    },
+  ]
+  
   const iconImageProps = {
     width: 60,
   }
@@ -662,9 +678,7 @@ const BugBountiesPage = () => {
                 >
                   {t("page-upgrades-bug-bounty-help-links")}
                 </OldHeading>
-                <InlineLink href="https://github.com/ethereum/solidity/blob/develop/SECURITY.md">
-                  SECURITY.md
-                </InlineLink>
+                <CardList items={languages} />
               </Box>
             </StyledCard>
             <StyledCard
