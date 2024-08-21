@@ -82,6 +82,15 @@ const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
 const cachedXmlBlogFeeds = runOnlyOnce(async () => await fetchRSS(XML_FEEDS))
 const cachedAttestantBlog = runOnlyOnce(fetchAttestantPosts)
 
+// TODO: Migrate to button variants
+export const buttonSizeLg = "rounded-lg px-8 py-3 text-lg"
+export const buttonVariantOutline =
+  "border-body bg-transparent fill-body text-md text-body hover:bg-transparent hover:text-body hover:shadow-button-hover active:shadow-none"
+export const buttonVariantOutlinePrimary =
+  "border-primary bg-transparent fill-primary text-md text-primary hover:bg-transparent hover:text-primary hover:shadow-button-hover active:shadow-none"
+export const buttonVariantSolid =
+  "border-transparent bg-primary-action text-md text-white hover:bg-primary-hover hover:text-background hover:shadow-button-hover active:shadow-none"
+
 type Props = BasePageProps & {
   communityEvents: CommunityEventsReturnType
   metricResults: AllMetricData
@@ -255,11 +264,6 @@ const HomePage = ({
     })
     .slice(0, 4) // Show next 4 events on the calendar
 
-  // TODO: Migrate to button variants
-  const buttonSizeLg = "rounded-lg px-8 py-3 text-lg"
-  const buttonVariantOutline =
-    "border-body bg-transparent fill-body text-md text-body hover:bg-transparent hover:text-body hover:shadow-button-hover active:shadow-none"
-
   return (
     <Flex
       as={MainArticle}
@@ -337,7 +341,11 @@ const HomePage = ({
               <div className="flex justify-center py-8 md:justify-start">
                 <ButtonLink
                   href="/learn/"
-                  className={cn("no-underline", buttonSizeLg)}
+                  className={cn(
+                    "no-underline",
+                    buttonSizeLg,
+                    buttonVariantSolid
+                  )}
                 >
                   Other topics <MdChevronRight />
                 </ButtonLink>
@@ -361,7 +369,11 @@ const HomePage = ({
           <div className="flex flex-wrap gap-6 py-8">
             <ButtonLink
               href="/developers/"
-              className={cn("w-fit no-underline", buttonSizeLg)}
+              className={cn(
+                "w-fit no-underline",
+                buttonSizeLg,
+                buttonVariantSolid
+              )}
             >
               Builder&apos;s Portal <MdChevronRight />
             </ButtonLink>
@@ -439,20 +451,28 @@ const HomePage = ({
             <ButtonLink
               href="/discord/"
               hideArrow
-              className={cn("no-underline", buttonSizeLg, buttonVariantOutline)}
+              className={cn(
+                "no-underline",
+                buttonSizeLg,
+                buttonVariantOutlinePrimary
+              )}
             >
               <FaDiscord />
             </ButtonLink>
             <ButtonLink
               href={GITHUB_REPO_URL}
               hideArrow
-              className={cn("no-underline", buttonSizeLg, buttonVariantOutline)}
+              className={cn(
+                "no-underline",
+                buttonSizeLg,
+                buttonVariantOutlinePrimary
+              )}
             >
               <FaGithub />
             </ButtonLink>
             <ButtonLink
               href="/community/"
-              className={cn("no-underline", buttonSizeLg)}
+              className={cn("no-underline", buttonSizeLg, buttonVariantSolid)}
             >
               More on ethereum.org <MdChevronRight />
             </ButtonLink>
@@ -559,7 +579,11 @@ const HomePage = ({
           <div className="flex justify-center py-8 md:justify-start">
             <ButtonLink
               href="/community/events/"
-              className={cn("mx-auto no-underline", buttonSizeLg)}
+              className={cn(
+                "mx-auto no-underline",
+                buttonSizeLg,
+                buttonVariantSolid
+              )}
             >
               See all events <MdChevronRight />
             </ButtonLink>
