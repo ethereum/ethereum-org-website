@@ -28,86 +28,134 @@ After reading this article you will know how to create this kind of secret state
 
 This application is written using [MUD](https://mud.dev/), a framework that lets us store data onchain using a [key-value database](https://aws.amazon.com/nosql/key-value/) and synchronize that data automatically with off-chain components. In addition to synchronization, MUD makes it easy to provide access control, and for other users to [extend](https://mud.dev/guides/extending-a-world) our application.
 
+### Running the minesweeper example {#running-minesweeper-example}
+
+To run the minesweeper example:
+
+1. Make sure you [have the prerequisites installed](https://mud.dev/quickstart#prerequisites): [Node](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), and [`pnpm`](https://git-scm.com/downloads).
+
+2. Clone the repository.
+
+   ```sh copy
+   git clone https://github.com/qbzzt/20240901-secret-state.git
+   ```
+
+3. Install the packages.
+
+   ```sh copy
+   cd 20240901-secret-state/
+   pnpm install
+   ```
+
+4. Start the program (including an [anvil](https://book.getfoundry.sh/anvil/) blockchain) and wait.
+
+   ```sh copy
+   pnpm dev
+   ```
+
+   Note that the startup takes a long time. To see the progress, first use the down arrow to scroll to the *contracts* tab to see the MUD contracts being deployed. When you get the message *Waiting for file changes…*, the contracts are deployed and further progress will happen in the *server* tab. There, you wait until you get the message *Verifier address: 0x....*.
+
+5. Now you can browse to [the client](http://localhost:3000), click **New Game** and start playing.
+
+
 ### Tables {#tables}
 
-We need several tables in the database to implement the functionality we need.
+We need [several tables](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/mud.config.ts) on-chain.
 
-1. `Configuration`: This table is a singleton, it has no key. It is used to hold game configuration information:
-   - `height`: The height of a minefield
-   - `width`: The width of a minefield
-   - `numberOfBombs`: The number of bombs in each minefield
+- `Configuration`: This table is a singleton, it has no key. It is used to hold game configuration information:
+  - `height`: The height of a minefield
+  - `width`: The width of a minefield
+  - `numberOfBombs`: The number of bombs in each minefield
    
-   The verifier key used to verify zero knowledge proofs is also part of the configuration, but because of the way the Solidity-Zokrates interface works it is inside a separate contract. 
+- `VerifierAddress`: This table is also a singleton. It is used to hold one part of the configuration, the address of the verifier contract (`verifier`). We could have put this information in the `Configuration` table, but it is set by a different component, the server, so it's easier to put it in a separate table.
 
-2. `PlayerGame`: The key is the player's address. The data is:
-    - `gameId`: 32 byte value that is the hash of the map the player is playing on (the game identifier).
-    - `win`: a boolean that is whether the player won the game.
-    - `lose`: a boolean that is whether the player lost the game.
-    - `digNumber`: the number of successful digs in the game.  
-3. `Map`: The key is a tuple of three values:
-   - The game identifier
-   - x
-   - y
-   The value is a single number. It's 255 if a bomb was detected. Otherwise, it is the number of bombs around that location plus one. We cannot use just the number of bombs, because by default all storage in the EVM and all row values in MUD are zero. We need to distinguish between "the player haven;t dug here yet" and "the player dug here, and found there are zero bombs around".
+- `PlayerGame`: The key is the player's address. The data is:
+   - `gameId`: 32 byte value that is the hash of the map the player is playing on (the game identifier).
+   - `win`: a boolean that is whether the player won the game.
+   - `lose`: a boolean that is whether the player lost the game.
+   - `digNumber`: the number of successful digs in the game.
 
-In addition, communication between the client and server happens through the on-chain component. This is also implemented using tables, but those are [off-chain tables](https://mud.dev/store/tables#types-of-tables), meaning the data is only available off-chain in the form of log events.
+- `GamePlayer`: This table holds the reverse mapping, from `gameId` to player address.
 
-4. `PendingGame`: Unserviced requests to start a new game.
-5. `PendingDig`: Unserviced requests to dig in a specific place in a specific game.
+- `Map`: The key is a tuple of three values:
+  - The game identifier
+  - x
+  - y
+  
+  The value is a single number. It's 255 if a bomb was detected. Otherwise, it is the number of bombs around that location plus one. We cannot just use the number of bombs, because by default all storage in the EVM and all row values in MUD are zero. We need to distinguish between "the player haven't dug here yet" and "the player dug here, and found there are zero bombs around".
+
+In addition, communication between the client and server happens through the on-chain component. This is also implemented using tables. 
+
+- `PendingGame`: Unserviced requests to start a new game.
+- `PendingDig`: Unserviced requests to dig in a specific place in a specific game. This is an [offchain table](https://mud.dev/store/tables#types-of-tables), meaning that it does not get written to EVM storage, it's only readable offline using events.
 
 ### Execution and data flows {#execution-data-flows}
 
 These flows coordinate execution between the client, the on-chain component, and the server.
 
+#### Initialization {#initialization-flow}
+
+When you run `pnpm dev`, these steps happen:
+
+1. [`mprocs`](https://github.com/pvolok/mprocs) runs four components:
+   - [Anvil](https://book.getfoundry.sh/anvil/), which runs a local blockchain
+   - [Contracts](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/contracts), which compiles (if needed) and deploys the contracts for MUD
+   - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), which runs [Vite](https://vitejs.dev/) to serve the UI and client code to web browsers.
+   - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), which performs the server actions
+
+2. After the `contracts` package deploys the MUD contracts and then runs [the `PostDeploy.s.sol` script](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). This script sets the configuration. The code from github specified [a 10x5 minefield with eight mines in it](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
+
+3. [The server](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) starts by [setting up MUD](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6). Among other things, this activates data synchronization, so that a copy of the relevant tables exists in the server's memory.
+
+4. The server subscribes a function to be executed [when the `Configuration` table changes](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23). [This function](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) is called when `PostDeploy.s.sol` executes.
+
+5. When the server initialization function has the configuration, [it calls `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) to initialize [the zero-knowledge part of the server](#using-zokrates-from-typescript). This cannot happen until we get the configuration because the zero-knowledge functions have to have the width and height of the minefield as constants.
+
+6. After the zero-knowledge part of the server is initialized, the next step is to [deploy the zero-knowledge verification contract to the blockchain](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) and set the verified address in MUD.
+
+7. Finally, we subscribe to updates so we'll see when a player requests either [to start a new game](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) or to [dig in an existing game](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108).
+
+
 #### New game {#new-game-flow}
 
-1. The client sends a new game request to the on-chain component.
-2. The on-chain component adds the client's address to the `PendingGame` table.
-3. The server detects that there is a new entry in the `PendingGame` table. Ultimately this is done through [events](/developers/tutorials/logging-events-smart-contracts/), but MUD abstracts it for us.
-4. The server creates a new game, calculates the map hash for the game identifier, and adds this information to `gamesInProgress`. 
-5. The server sends the on-chain component the hash of the game identifier and the identity of the user whose request has been serviced.
-6. The on-chain component adds the game information to `PlayerGame`.
-7. The client identifies that its address was added to the `PlayerGame` table, and starts displaying the board to the player.
+This is what happens when the user requests a new game.
+
+1. If there is no game in progress, or there is one but with a gameId of zero, the client displays a [new game button](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175). When the user presses this button, [React runs the `newGame` function](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L96).
+
+2. [`newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/mud/createSystemCalls.ts#L43-L46) is a `System` call. In MUD all calls are routed through the `World`, and in most cases you call `<namespace>__<function name>`. In this case, the call is to `app__newGame`, which MUD then routes to [`newGame` in `GameSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L16-L22).
+
+3. The on-chain function checks that the player does not have a game in progress, and if there isn't one [adds the request to the `PendingGame` table](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L21).
+
+4. The server detects the change in `PendingGame` and [runs the subscribed function](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71). This function calls [`newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L110-L114), which in turn calls [`createGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L116-L144).
+
+5. The first thing `createGame` does is [create a random map with the appropriate number of mines](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L120-L135). Then, it calls [`makeMapBorders`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L147-L166) to create a map with blank borders, which is necessary for Zokrates. Finally, `createGame` calls [`calculateMapHash`](#calculateMapHash), to get the hash of the map, which is used as the game ID.
+
+6. The `newGame` function adds the new game to `gamesInProgress`. 
+
+7. The last thing the server does is call [`app__newGameResponse`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L38-L43), which is on-chain. This function is in a different `System`, [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol), to enable access control. Access control is defined in the [MUD configuration file](https://mud.dev/config), [`mud.config.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/mud.config.ts#L67-L72). 
+
+   The access list only allows a single address to call the `System`. This restricts access to the server functions to a single address, so nobody can impersonate the server.
+
+8. The on-chain component updates the relevant tables:
+   - Create the game in `PlayerGame`.
+   - Set the reverse mapping in `GamePlayer`.
+   - Remove the request from `PendingGame`.
+
+9. The server identifies the change in `PendingGame`, but does not do anything because [`wantsGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L58-L60) is false.
+
+10. On the client [`gameRecord`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L143-L148) is set to the `PlayerGame` entry for the player's address. When `PlayerGame` changes, `gameRecord` changes too.
+
+11. If there is a value in `gameRecord`, and the game hasn't been won or lost, the client [displays the map](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175-L190).
+
 
 
 #### Dig {#dig-flow}
 
-1. The client sends a dig request, comprised of the game identifier and the x and y coordinates of the location to dig, to the on-chain component.
-2. The on-chain component verifies the dig request is legitimate:
-   - The client is the player for this game according to `PlayerGame`.
-   - The location has not been dug already (according to `Map`).
-3. The on-chain component adds this entry to `PendingDig`
-4. The server detects the new entry in `PendingDig` and retrieves the map from `gamesInProgress`. 
-5. The server calls the Zokrates library with the map and the dig location. This library then returns a proof with the following values:
-   - The x and y coordinates of the dig location
-   - Hash of the map, which is the game identifier
-   - Either 255 if there is a bomb in the location, or the number of bombs in an eight location area around the location if there isn't.
-6. If the game is over (either because the user found a bomb, or because the user dug in `width*height - bombNumber` places), the server deletes the game from `gamesInProgress`.
-7. The server sends the on-chain component the proof, and optionally (if game over) the map.
-8. The on-chain component verifies the proof. The process only continues if the proof verifies.
-9. The on-chain component checks if it's game over, either because `digNumber` is equal to `width*height - numberOfBombs` or because the dig found a bomb, note that fact in `PlayerGame`.
-10. The on-chain component updates `Map` with the new information. This change is automatically synchronized to the client by MUD. The on-chain component also increments `PlayerGame`'s `digNumber`.
-11. The client displays the new information to the player.
-12. If the game is over, the client informs the player of that fact.
+
 
 
 #### Verify setup artifacts {#setup-artifact-flow}
 
-To verify the integrity of this dapp, it is not enough to verify the Solidity code. Another attack vector is the Zokrates program. This flow can be used by a client to verify that the Zokrates program is the one expected.
-
-1. The client sends an "artifact request" to the on-chain component.
-2. The on-chain component responds with:
-   - The verifier key
-   - The Zokrates programs. Technically there are two of them, [as explained below](#zokrates-programs): one for calculating map hashes and one for creating verified dig results.
-   - The Zokrates configuration
-   - The version of Solidity
-3. The client compiles the verified dig results program and compares it to the verification function online. This is a multi-stage process.
-   A. The client compiles the Zokrates code into an arithmetic circuit with constraints (that's the form that zk-SNARK actually uses).
-   B. The client creates Solidity code from that arithmetic circuit with the constraints.
-   C. The client compiles that Solidity code into EVM code.
-   D. The client reads the code from the appropriate contract online and verifies it is identical.
-
-Clients do not *have* to run this flow, the game works without it, but without this step you can't know if the zero knowledge proofs actually prove what you need.
 
 
 ## Using Zokrates {#using-zokrates}
@@ -333,7 +381,7 @@ On a production system we'd use a more complicated [setup ceremony](https://zokr
 
 **Note:** Compilation of Zokrates programs and key creation are slow processes. There is no need to repeat them every time, just when map size changes. On a production system you'd do them once, and then store the output. The only reason I am not doing it here is for the sake of simplicity.
 
-
+<a id="calculateMapHash">
 ```typescript
     const calculateMapHash = function(hashMe: boolean[][]): string {
         return "0x" + 
@@ -401,30 +449,15 @@ A Solidity verifier, which gets deployed to the blockchain.
 
 Finally, return everything that other code might need.
 
-## The on-chain component {#onchain}
+## Security tests {#security-tests}
 
-This is, 
+Security tests are important because a functionality bug will eventually reveal itself. But if the application is insecure, that is likely to remain hidden for a long time before it is revealed by somebody cheating and getting away with resources that belong to others.
 
-#### 
+### Permissions {#premissions}
 
-## The server {#server}
+Blockchain code is assumed to
 
-The server needs to respond to these requests:
-
-- New game. When a player requests to start a new game, the server creates a new map, stores it, and provides the player with the hash of the map.
-- Dig. A dig request contains the hash of the map and the x and y coordinates. In response, the server may provide one of two things:
-  - If there is no bomb in `(x,y)` the server provides the number of bombs around that location, as well as a zero-knowledge proof that verifies that there is a map with that hash has that number of bombs around that location.
-  - If there is a bomb in the location the server provides a zero-knowledge proof, which sets the number of bombs to 255 (a special flag value that means "boom"), as well as the full map. The server also deletes the map as no longer needed.
-
-### New game request {#new-game-request}
-
-When the client requests a new game, 
-
-### Dig request {#dig-request}
-
-## The client {#client}
-
-## Design considerations {#design}
+## Design decisions {#design}
 
 ### Why zero-knowlege {#why-zero-knowledge}
 
