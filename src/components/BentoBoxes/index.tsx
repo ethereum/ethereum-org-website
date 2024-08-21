@@ -167,10 +167,10 @@ const BentoBoxes = () => {
   return (
     <>
       {/* Mobile */}
-      <div className="relative my-16 lg:hidden">
+      <div className="relative my-16 max-w-[min(calc(100vw_-_2rem),_30rem)] lg:hidden">
         <Title className="" />
         {/* TODO: Fix height constraints */}
-        <div className="swiper mt-4 h-fit max-w-[min(calc(100vw_-_2rem),_30rem)]">
+        <div className="swiper mt-4 h-fit">
           <div className="swiper-wrapper">
             {bentoBoxes.map(({ className, ...box }) => (
               <BentoBox
