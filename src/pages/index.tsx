@@ -7,13 +7,20 @@ import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
 import { MdChevronRight } from "react-icons/md"
 import { Flex, Skeleton } from "@chakra-ui/react"
 
-import type { AllMetricData, BasePageProps, Lang, RSSItem } from "@/lib/types"
+import type {
+  AllMetricData,
+  BasePageProps,
+  EventCardProps,
+  Lang,
+  RSSItem,
+} from "@/lib/types"
 import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
 import BentoBoxes from "@/components/BentoBoxes"
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import Codeblock from "@/components/Codeblock"
 import CodeModal from "@/components/CodeModal"
+import EventPreviewCard from "@/components/EventPreviewCard"
 import HomeHero from "@/components/Hero/HomeHero"
 import HomeSection from "@/components/HomeSection"
 import AngleBrackets from "@/components/icons/angle-brackets.svg"
@@ -32,7 +39,6 @@ import PageMetadata from "@/components/PageMetadata"
 import StatsBoxGrid from "@/components/StatsBoxGrid"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
@@ -62,7 +68,6 @@ import { fetchRSS } from "@/lib/api/fetchRSS"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
-import EventFallback from "@/public/images/event-fallback.svg"
 import buildersImage from "@/public/images/heroes/developers-hub-hero.jpg"
 import activityImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import learnImage from "@/public/images/heroes/learn-hub-hero.png"
@@ -240,7 +245,7 @@ const HomePage = ({
     .sort(
       (a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime()
     )
-    .slice(0, 3) // Show 3 events ending soonest
+    .slice(0, 3) as EventCardProps[] // Show 3 events ending soonest
 
   const calendar = communityEvents.upcomingEventData
     .sort((a, b) => {
@@ -549,73 +554,9 @@ const HomePage = ({
           <p>We have many community events scheduled around the globe</p>
           <div className="mt-4 md:mt-16">
             <div className="flex flex-col gap-8 self-stretch md:flex-row">
-              {upcomingEvents.map(
-                ({
-                  title,
-                  href,
-                  location,
-                  description,
-                  startDate,
-                  endDate,
-                  imageUrl,
-                }) => {
-                  return (
-                    <a
-                      href={href}
-                      className="no-underline md:w-1/3 md:max-w-128"
-                      key={title}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Card
-                        className={cn(
-                          "w-full space-y-4",
-                          "border-none shadow-none",
-                          "transition-transform duration-100 hover:scale-105 hover:transition-transform hover:duration-100"
-                        )}
-                      >
-                        <CardHeader className="h-48 w-full self-stretch overflow-hidden rounded-2xl bg-gradient-main p-0">
-                          {imageUrl ? (
-                            // eslint-disable-next-line @next/next/no-img-element
-                            <img
-                              src={imageUrl}
-                              alt=""
-                              className="max-w-full object-cover object-center"
-                            />
-                          ) : (
-                            <EventFallback className="w-full object-cover text-body" />
-                          )}
-                        </CardHeader>
-                        <CardContent className="space-y-8 p-2 text-body">
-                          <div>
-                            <p className="text-lg">{title}</p>
-                            <p className="text-sm italic text-body-medium">
-                              {(isValidDate(startDate) ||
-                                isValidDate(endDate)) &&
-                                new Intl.DateTimeFormat(locale, {
-                                  month: "2-digit",
-                                  day: "2-digit",
-                                  year: "numeric",
-                                }).formatRange(
-                                  new Date(
-                                    isValidDate(startDate) ? startDate : endDate
-                                  ),
-                                  new Date(
-                                    isValidDate(endDate) ? endDate : startDate
-                                  )
-                                )}
-                            </p>
-                            <p className="text-sm italic text-body-medium">
-                              {location}
-                            </p>
-                          </div>
-                          <p>{description}</p>
-                        </CardContent>
-                      </Card>
-                    </a>
-                  )
-                }
-              )}
+              {upcomingEvents.map((event) => (
+                <EventPreviewCard key={event.title} {...event} />
+              ))}
             </div>
           </div>
           <div className="flex justify-center py-8 md:justify-start">

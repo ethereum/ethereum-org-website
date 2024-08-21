@@ -5,6 +5,8 @@ import { BsCalendar3 } from "react-icons/bs"
 import { Box, Flex, Heading, Icon } from "@chakra-ui/react"
 import { Image } from "@chakra-ui/react"
 
+import type { EventCardProps } from "@/lib/types"
+
 import { ButtonLink } from "./Buttons"
 import Text from "./OldText"
 
@@ -13,18 +15,6 @@ const clearStyles = {
   display: "block",
   width: "100%",
   clear: "both",
-}
-
-export type EventCardProps = {
-  title: string
-  href: string
-  date: string
-  startDate: string
-  endDate: string
-  description: string
-  className?: string
-  location: string
-  imageUrl?: string
 }
 
 const EventCard = ({

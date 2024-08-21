@@ -800,3 +800,14 @@ export type HTMLResult = {
     body: Record<string, NestedDivs>[]
   }
 }
+
+export type EventCardProps = {
+  title: string
+  href: string
+  startDate: string
+  endDate: string
+  description: string
+  className?: string
+  location: string
+  imageUrl?: string
+}
