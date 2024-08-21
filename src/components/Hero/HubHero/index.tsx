@@ -39,9 +39,8 @@ const HubHero = ({
         }}
       />
       <Stack
-        // spacing :: used space-y as considering it to be column
         className={cn(
-          "gap-0 space-y-4 p-4 lg:p-8",
+          "gap-4 p-4 lg:p-8",
           "text-center xl:text-start",
           "xl:rounded",
           "xl:bg-hub-hero-content-bg",
@@ -58,10 +57,8 @@ const HubHero = ({
           </h1>
         ) : null}
         <Stack
-          // TODO: Spacings on @chakra Stack behaves differently on different screen sizes
-          // spacing :: used space-y as considering it to be column
           // --eth-sizes-container-md: 768px ==> tailwind max-w-3xl
-          className="max-w-3xl gap-0 space-y-2 self-center md:space-y-1"
+          className="max-w-3xl gap-2 self-center md:gap-1"
         >
           {title ? (
             <h2 className="text-4xl lg:text-5xl">{header}</h2>
@@ -75,8 +72,7 @@ const HubHero = ({
           className={cn(
             "h-fit flex-col gap-0 md:flex-row",
             "md:justify-center xl:justify-start",
-            // spacing :: used space-y & x as considering it to be sm:column md:row
-            "space-y-4 md:space-x-4 md:space-y-0"
+            "gap-4"
           )}
         >
           {buttons?.map((button, idx) => {
