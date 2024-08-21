@@ -326,7 +326,7 @@ const WhatIsEthereumPage = ({
             </Hero>
           </Flex>
         </Content>
-        <div className="w-full bg-[#fcfcfc] md:shadow-[inset_0px_1px_0px_rgba(0,0,0,0.1)] dark:bg-[#272627] dark:md:shadow-[inset_0px_1px_0px_hsla(0,0%,100%,.1)]">
+        <div className="w-full bg-background-highlight">
           <Section>
             <Stack className="gap-14">
               <TwoColumnContent id="summary">
