@@ -1,7 +1,7 @@
 import type { CommonHeroProps } from "@/lib/types"
 
 import { CallToAction } from "@/components/Hero/CallToAction"
-import { Image } from "@/components/Image"
+import { TwImage } from "@/components/Image"
 import { Stack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
@@ -23,20 +23,14 @@ const HubHero = ({
 
   return (
     <div className="relative">
-      <Image
+      <TwImage
         src={heroImg}
         alt=""
         priority
         // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
         sizes="(max-width: 1504px) 100vw, 1504px"
         style={{ width: "100vw", objectFit: "cover" }}
-        h={{
-          base: "192px",
-          md: "256px",
-          lg: "320px",
-          xl: "576px",
-          "2xl": "672px",
-        }}
+        className="h-[192px] w-screen object-cover md:h-[256px] lg:h-[320px] xl:h-[576px] 2xl:h-[672px]"
       />
       <Stack
         className={cn(
