@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { useBreakpointValue } from "@chakra-ui/react"
 
 import { Button } from "@/components/Buttons"
 
@@ -8,6 +7,8 @@ import {
   HAMBURGER_BUTTON_ID,
   MOBILE_LANGUAGE_BUTTON_NAME,
 } from "@/lib/constants"
+
+import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 
 const Morpher = () => {
   const [state, setState] = useState({
