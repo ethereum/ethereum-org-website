@@ -7,10 +7,10 @@ export const fetchAttestantPosts = async () => {
   const htmlData = (await fetchXml(BASE_URL)) as HTMLResult
 
   // Extract div containing list of posts from deeply nested HTML structure
-  const attestantPostsContainer =
+  const postsContainer =
     htmlData.html.body[0].div[0].div[1].div[0].div[0].div[0].div
 
-  const attestantBlogItems: RSSItem[] = attestantPostsContainer
+  const posts: RSSItem[] = postsContainer
     .map(({ a }) => {
       const [
         {
@@ -34,5 +34,5 @@ export const fetchAttestantPosts = async () => {
       (a: RSSItem, b: RSSItem) =>
         new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime()
     )
-  return attestantBlogItems
+  return posts
 }
