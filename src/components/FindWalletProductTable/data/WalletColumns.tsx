@@ -6,7 +6,7 @@ import { ColumnDef } from "@tanstack/react-table"
 
 import { WalletData } from "@/lib/types"
 
-import { Image } from "@/components/Image"
+import WalletInfo from "@/components/FindWalletProductTable/components/WalletInfo"
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
@@ -18,33 +18,13 @@ export type WalletColumns = {
 
 export const WalletColumns: ColumnDef<WalletColumns>[] = [
   {
-    accessorKey: "logo",
+    accessorKey: "information",
     header: () => null,
     minSize: 14,
     size: 14,
     maxSize: 14,
     cell: ({ row }) => {
-      return (
-        <Image
-          src={row.original.image}
-          width="14"
-          height="14"
-          alt=""
-          objectFit="contain"
-        />
-      )
-    },
-  },
-  {
-    accessorKey: "walletName",
-    header: () => null,
-    cell: ({ row }) => {
-      return (
-        <div className="flex">
-          <p className="text-xl font-bold">{row.original.name}</p>
-          <div></div>
-        </div>
-      )
+      return <WalletInfo wallet={row.original} />
     },
   },
   {
@@ -52,19 +32,15 @@ export const WalletColumns: ColumnDef<WalletColumns>[] = [
     header: () => <p>expander</p>,
     cell: ({ row }) => {
       return (
-        <button
-          className="text-primary"
-          {...{
-            onClick: row.getToggleExpandedHandler(),
-            style: { cursor: "pointer" },
-          }}
-        >
-          {row.getIsExpanded() ? (
-            <IoChevronUpSharp size={24} />
-          ) : (
-            <IoChevronDownSharp size={24} />
-          )}
-        </button>
+        <div>
+          <button className="text-primary">
+            {row.getIsExpanded() ? (
+              <IoChevronUpSharp size={24} />
+            ) : (
+              <IoChevronDownSharp size={24} />
+            )}
+          </button>
+        </div>
       )
     },
   },

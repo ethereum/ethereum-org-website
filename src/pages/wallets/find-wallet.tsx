@@ -87,7 +87,7 @@ const FindWalletPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { pathname } = useRouter()
   const { t } = useTranslation("page-wallets-find-wallet")
-  console.log(wallets)
+
   return (
     <Flex as={MainArticle} direction="column" position="relative" w="full">
       <PageMetadata
@@ -138,7 +138,7 @@ const FindWalletPage = ({
           />
         </Center>
       </Flex>
-      <FindWalletProductTable />
+      <FindWalletProductTable wallets={wallets} />
     </Flex>
   )
 }

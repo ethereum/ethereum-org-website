@@ -130,6 +130,10 @@ const ProductTable = ({
                   <TableRow
                     key={row.id}
                     data-state={row.getIsSelected() && "selected"}
+                    {...{
+                      onClick: row.getToggleExpandedHandler(),
+                      style: { cursor: "pointer" },
+                    }}
                   >
                     {row.getVisibleCells().map((cell) => (
                       <TableCell key={cell.id}>
