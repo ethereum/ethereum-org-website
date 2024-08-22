@@ -275,9 +275,7 @@ const HomePage = ({
         description={t("page-index:page-index-meta-description")}
       />
       <TranslatathonBanner pathname={asPath} />
-      <div className="w-full">
-        <HomeHero heroImg={hero} />
-      </div>
+      <HomeHero heroImg={hero} className="w-full" />
       <div className="w-full space-y-16 px-4 sm:px-6 md:space-y-32">
         <div className="grid w-full grid-cols-2 gap-x-4 gap-y-8 py-20 md:grid-cols-4 md:gap-x-10">
           {subHeroCTAs.map(({ label, description, href, colorClass, Svg }) => (

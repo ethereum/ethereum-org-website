@@ -1,18 +1,18 @@
 import NextImage from "next/image"
 import { useTranslation } from "next-i18next"
 
-import type { CommonHeroProps } from "@/lib/types"
+import type { ClassNameProp, CommonHeroProps } from "@/lib/types"
 
 import Morpher from "@/components/Morpher"
 
 import { cn } from "@/lib/utils/cn"
 
-export type HomeHeroProps = Pick<CommonHeroProps, "heroImg">
+export type HomeHeroProps = Pick<CommonHeroProps, "heroImg"> & ClassNameProp
 
-const HomeHero = ({ heroImg }: HomeHeroProps) => {
+const HomeHero = ({ heroImg, className }: HomeHeroProps) => {
   const { t } = useTranslation("page-index")
   return (
-    <div>
+    <div className={className}>
       <div className="h-[300px] sm:h-[350px] md:h-[380px] lg:h-[440px]">
         <NextImage
           src={heroImg}
