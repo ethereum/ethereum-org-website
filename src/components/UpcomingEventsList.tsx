@@ -145,7 +145,6 @@ const UpcomingEventsList = () => {
                       to,
                       href,
                       formattedDetails,
-                      date,
                       location,
                       imageUrl,
                       startDate,
@@ -157,7 +156,6 @@ const UpcomingEventsList = () => {
                       key={idx}
                       title={title}
                       href={to || href}
-                      date={date}
                       description={formattedDetails}
                       location={location}
                       imageUrl={imageUrl}
