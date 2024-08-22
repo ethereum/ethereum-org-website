@@ -1,11 +1,11 @@
 import isChromatic from "chromatic/isChromatic"
 import { MotionGlobalConfig } from "framer-motion"
-import { withThemeByDataAttribute } from "@storybook/addon-themes"
 import type { Preview } from "@storybook/react"
 
 import ThemeProvider from "@/components/ThemeProvider"
 
 import i18n, { baseLocales } from "./i18next"
+import { withNextThemes } from "./withNextThemes"
 
 import "@docsearch/css"
 import "../src/styles/global.css"
@@ -29,7 +29,7 @@ const preview: Preview = {
     locales: baseLocales,
   },
   decorators: [
-    withThemeByDataAttribute({
+    withNextThemes({
       themes: {
         light: "light",
         dark: "dark",

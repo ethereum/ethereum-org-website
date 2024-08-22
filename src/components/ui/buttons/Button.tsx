@@ -115,15 +115,19 @@ type ButtonLinkProps = Omit<LinkProps, "onClick"> & {
 }
 
 const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
-  ({ buttonProps, customEventOptions, children, ...linkProps }, ref) => {
+  (
+    { buttonProps, customEventOptions, children, className, ...linkProps },
+    ref
+  ) => {
+    const { size, variant } = buttonProps || {}
     const handleClick = () => {
       customEventOptions && trackCustomEvent(customEventOptions)
     }
     return (
-      <Button asChild {...buttonProps}>
+      <Button asChild size={size} variant={variant} {...buttonProps}>
         <BaseLink
           ref={ref}
-          className="no-underline hover:no-underline"
+          className={cn("no-underline hover:no-underline", className)}
           activeClassName=""
           {...linkProps}
           onClick={handleClick}
