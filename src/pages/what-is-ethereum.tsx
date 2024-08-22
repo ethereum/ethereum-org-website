@@ -650,13 +650,7 @@ const WhatIsEthereumPage = ({
                     <ButtonLink href="/smart-contracts/">
                       {t("page-what-is-ethereum-more-on-smart-contracts")}
                     </ButtonLink>
-                    <ButtonLink
-                      href="/dapps/"
-                      buttonProps={{
-                        variant: "outline",
-                        isSecondary: true,
-                      }}
-                    >
+                    <ButtonLink href="/dapps/" variant="outline" isSecondary>
                       {t("page-what-is-ethereum-explore-dapps")}
                     </ButtonLink>
                   </ButtonRow>
@@ -679,13 +673,7 @@ const WhatIsEthereumPage = ({
                     <ButtonLink href="/eth/">
                       {t("page-what-is-ethereum-what-is-ether")}
                     </ButtonLink>
-                    <ButtonLink
-                      href="/get-eth/"
-                      buttonProps={{
-                        variant: "outline",
-                        isSecondary: true,
-                      }}
-                    >
+                    <ButtonLink href="/get-eth/" variant="outline" isSecondary>
                       {t("page-what-is-ethereum-get-eth")}
                     </ButtonLink>
                   </ButtonRow>
@@ -714,10 +702,8 @@ const WhatIsEthereumPage = ({
                     </ButtonLink>
                     <ButtonLink
                       href="/roadmap/merge/"
-                      buttonProps={{
-                        variant: "outline",
-                        isSecondary: true,
-                      }}
+                      variant="outline"
+                      isSecondary
                     >
                       {t("page-what-is-ethereum-the-merge-update")}
                     </ButtonLink>
