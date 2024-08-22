@@ -12,8 +12,8 @@ import { useNavMenu } from "./useNavMenu"
 export const navMenuVariants = tv({
   slots: {
     base: "text-body",
-    item: "has-[button[data-state=open]]:rounded-s-md has-[button[data-state=open]]:rounded-e-none has-[button[data-state=open]]:-me-4 has-[button[data-state=open]]:pe-4",
-    link: "w-full relative -me-4 py-4 hover:text-menu-active [&:hover_p]:text-menu-active focus-visible:text-menu-active [&:focus-visible_p]:text-menu-active hover:outline-0 rounded-md hover:shadow-none focus-visible:outline-0 focus-visible:rounded-md focus-visible:shadow-none",
+    item: "has-[button[data-state=open]]:rounded-s-md has-[button[data-state=open]]:rounded-e-none has-[button[data-state=open]]:-me-2 has-[button[data-state=open]]:pe-2",
+    link: "w-full relative py-4 hover:text-menu-active [&:hover_p]:text-menu-active focus-visible:text-menu-active [&:focus-visible_p]:text-menu-active hover:outline-0 rounded-md hover:shadow-none focus-visible:outline-0 focus-visible:rounded-md focus-visible:shadow-none",
     submenu: "grid h-full w-full grid-cols-1",
   },
   variants: {
