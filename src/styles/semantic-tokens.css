@@ -29,8 +29,7 @@
     --gradient-primary-opacity-to: 0.05;
     --gradient-primary: linear-gradient(
       var(--gradient-primary-angle),
-      hsla(va
-      (--purple-500), var(--gradient-primary-opacity-from)) 19.09%,
+      hsla(var(--purple-500), var(--gradient-primary-opacity-from)) 19.09%,
       hsla(var(--purple-500), var(--gradient-primary-opacity-to)) 40.63%
     );
     --gradient-accent-a: linear-gradient(

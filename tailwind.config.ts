@@ -179,7 +179,6 @@ const config = {
         "gradient-accent-a": "var(--gradient-accent-a)",
         "gradient-accent-b": "var(--gradient-accent-b)",
         "gradient-accent-c": "var(--gradient-accent-c)",
-        "gradient-primary-hero": "var(--gradient-primary-hero)",
         "main-gradient": "var(--gradient-main)", // TODO: Duplicate; remove one
         "feedback-gradient": "var(--feedback-gradient)",
         "banner-grid-gradient": "var(--banner-grid-gradient)",

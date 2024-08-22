@@ -25,6 +25,7 @@ const SvgButtonLink = ({
       "group rounded-2xl no-underline focus:outline focus:outline-4 focus:outline-offset-8",
       className
     )}
+    hideArrow
     {...props}
   >
     <div className="flex flex-col items-center gap-3.5 lg:flex-row lg:items-center">
