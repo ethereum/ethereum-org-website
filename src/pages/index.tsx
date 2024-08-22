@@ -20,7 +20,6 @@ import BentoBox from "@/components/BentoBox"
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import Codeblock from "@/components/Codeblock"
 import CodeModal from "@/components/CodeModal"
-import EventPreviewCard from "@/components/EventPreviewCard"
 import HomeHero from "@/components/Hero/HomeHero"
 import HomeSection from "@/components/HomeSection"
 import AngleBrackets from "@/components/icons/angle-brackets.svg"
@@ -34,13 +33,20 @@ import ChooseNetworkIcon from "@/components/icons/network-layers.svg"
 import TryAppsIcon from "@/components/icons/phone-homescreen.svg"
 import RoadmapSign from "@/components/icons/roadmap-sign.svg"
 import Whitepaper from "@/components/icons/whitepaper.svg"
+import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
-import RssPreviewCard from "@/components/RssPreviewCard"
 import StatsBoxGrid from "@/components/StatsBoxGrid"
 import SwiperCards from "@/components/SwiperCards"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import {
+  Card,
+  CardBanner,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from "@/components/ui/card"
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
@@ -70,6 +76,7 @@ import { fetchRSS } from "@/lib/api/fetchRSS"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
+import EventFallback from "@/public/images/event-fallback.png"
 import buildersImage from "@/public/images/heroes/developers-hub-hero.jpg"
 import activityImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import learnImage from "@/public/images/heroes/learn-hub-hero.png"
@@ -503,8 +510,28 @@ const HomePage = ({
           </h3>
           <p>The latest blog posts and updates from the community</p>
           <div className="mt-4 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-3 md:flex-row">
-            {rssItems.map((item) => (
-              <RssPreviewCard key={item.title} {...item} />
+            {rssItems.map(({ pubDate, title, source, link, imgSrc }) => (
+              <Card key={title} href={link}>
+                <CardBanner>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={imgSrc} alt="" />
+                </CardBanner>
+                <CardContent className="">
+                  {isValidDate(pubDate) && (
+                    <p className="text-sm italic">
+                      {new Intl.DateTimeFormat(locale, {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric",
+                      }).format(new Date(pubDate))}
+                    </p>
+                  )}
+                  <div className="primary-low-contrast w-fit rounded-full bg-accent-a/20 px-4 py-0 text-sm uppercase text-accent-a">
+                    {source}
+                  </div>
+                  <CardTitle variant="strong">{title}</CardTitle>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
@@ -516,15 +543,65 @@ const HomePage = ({
           <p>We have many community events scheduled around the globe</p>
           <div className="mt-4 md:mt-16">
             <div className="grid grid-cols-1 gap-8 self-stretch sm:grid-cols-2 md:grid-cols-3">
-              {upcomingEvents.map((event, idx) => (
-                <EventPreviewCard
-                  key={event.title}
-                  {...event}
-                  className={cn(
-                    idx === 0 && "col-span-1 sm:col-span-2 md:col-span-1"
-                  )}
-                />
-              ))}
+              {upcomingEvents.map(
+                (
+                  {
+                    title,
+                    href,
+                    location,
+                    description,
+                    startDate,
+                    endDate,
+                    imageUrl,
+                  },
+                  idx
+                ) => (
+                  <Card
+                    key={title + description}
+                    href={href}
+                    className={cn(
+                      idx === 0 && "col-span-1 sm:col-span-2 md:col-span-1"
+                    )}
+                  >
+                    <CardBanner>
+                      {imageUrl ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={imageUrl}
+                          alt=""
+                          className="max-w-full object-cover object-center"
+                        />
+                      ) : (
+                        <TwImage src={EventFallback} alt="" />
+                      )}
+                    </CardBanner>
+                    <CardContent className="space-y-8 p-2">
+                      <div>
+                        <CardTitle>{title}</CardTitle>
+                        <CardDescription className="italic">
+                          {(isValidDate(startDate) || isValidDate(endDate)) &&
+                            new Intl.DateTimeFormat(locale, {
+                              month: "2-digit",
+                              day: "2-digit",
+                              year: "numeric",
+                            }).formatRange(
+                              new Date(
+                                isValidDate(startDate) ? startDate : endDate
+                              ),
+                              new Date(
+                                isValidDate(endDate) ? endDate : startDate
+                              )
+                            )}
+                        </CardDescription>
+                        <p className="text-sm italic text-body-medium">
+                          {location}
+                        </p>
+                      </div>
+                      <p>{description}</p>
+                    </CardContent>
+                  </Card>
+                )
+              )}
             </div>
           </div>
           <div className="flex justify-center py-8 md:justify-start">
