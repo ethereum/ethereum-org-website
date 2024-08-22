@@ -161,4 +161,6 @@ export const LINES_BEFORE_COLLAPSABLE = 8
 export const RSS_DISPLAY_COUNT = 3
 export const VITALIK_BLOG = "https://vitalik.eth.limo/feed.xml"
 export const EF_BLOG = "https://blog.ethereum.org/en/feed.xml"
-export const XML_FEEDS = [VITALIK_BLOG, EF_BLOG]
+export const PANDA_OPS_BLOG = "https://ethpandaops.io/posts/index.xml"
+export const SOLIDITY_BLOG = "https://soliditylang.org/feed.xml"
+export const XML_FEEDS = [VITALIK_BLOG, EF_BLOG, PANDA_OPS_BLOG, SOLIDITY_BLOG]
