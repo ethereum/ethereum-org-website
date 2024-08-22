@@ -63,6 +63,7 @@ const Table = ({
               <TableRow
                 key={row.id}
                 data-state={row.getIsSelected() && "selected"}
+                className={`${row.getIsExpanded() ? "border-b-body-inverted bg-body-inverted" : ""}`}
                 {...{
                   onClick: row.getToggleExpandedHandler(),
                   style: {
@@ -78,8 +79,8 @@ const Table = ({
                 ))}
               </TableRow>
               {row.getIsExpanded() && (
-                <TableRow>
-                  <TableCell>
+                <TableRow className={`bg-body-inverted`}>
+                  <TableCell colSpan={row.getAllCells().length}>
                     {subComponent && subComponent(row.original)}
                   </TableCell>
                 </TableRow>

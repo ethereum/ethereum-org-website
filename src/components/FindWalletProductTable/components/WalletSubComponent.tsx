@@ -5,8 +5,11 @@ interface WalletSubComponentProps {
 }
 
 const WalletSubComponent = ({ wallet }: WalletSubComponentProps) => {
-  console.log(wallet)
-  return <p>{wallet.name}</p>
+  return (
+    <div>
+      <p>{wallet.name}</p>
+    </div>
+  )
 }
 
 export default WalletSubComponent
