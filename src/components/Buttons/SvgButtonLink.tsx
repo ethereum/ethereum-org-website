@@ -40,6 +40,7 @@ const SvgButtonLink = ({
         <Svg
           className={cn(
             "group-hover:rotate-3 group-hover:scale-110",
+            "group-focus:rotate-3 group-focus:scale-110",
             "text-4xl duration-200 group-hover:duration-200 group-focus:rotate-3"
           )}
         />
