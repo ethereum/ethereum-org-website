@@ -6,7 +6,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 
-import { ButtonProps } from "../../../../tailwind/ui/buttons/Button"
+import { ButtonProps } from "../../ui/buttons/Button"
 import type { NavSections } from "../types"
 
 import HamburgerButton from "./HamburgerButton"

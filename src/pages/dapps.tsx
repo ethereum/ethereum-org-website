@@ -1467,7 +1467,7 @@ const DappsPage = () => {
                   })
                 }}
               >
-                <Emoji fontSize="2xl" me={`1rem`} text={category.emoji} />
+                <Emoji className="me-4 text-2xl" text={category.emoji} />
                 <OptionText>{category.title}</OptionText>
               </Option>
             )
@@ -1480,7 +1480,7 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-finance-title")}{" "}
-                  <Emoji fontSize="5xl" ms="2" text=":money_with_wings:" />
+                  <Emoji className="ms-2 text-5xl" text=":money_with_wings:" />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-finance-description")}</Subtitle>
               </Column>
@@ -1609,7 +1609,7 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-gaming-title")}{" "}
-                  <Emoji fontSize="5xl" ms="2" text=":video_game:" />
+                  <Emoji className="ms-2 text-5xl" text=":video_game:" />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-gaming-description")}</Subtitle>
               </Column>
@@ -1635,7 +1635,7 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-technology-title")}{" "}
-                  <Emoji fontSize="5xl" ms="2" text=":keyboard:" />
+                  <Emoji className="ms-2 text-5xl" text=":keyboard:" />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-technology-description")}</Subtitle>
               </Column>
@@ -1680,7 +1680,10 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-collectibles-title")}{" "}
-                  <Emoji fontSize="5xl" ms={2} text=":frame_with_picture:" />
+                  <Emoji
+                    className="ms-2 text-5xl"
+                    text=":frame_with_picture:"
+                  />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-collectibles-description")}</Subtitle>
               </Column>
@@ -1729,7 +1732,10 @@ const DappsPage = () => {
               <Column>
                 <H2>
                   {t("page-dapps-metaverse-title")}{" "}
-                  <Emoji fontSize="5xl" ms="2" text=":globe_with_meridians:" />
+                  <Emoji
+                    className="ms-2 text-5xl"
+                    text=":globe_with_meridians:"
+                  />
                 </H2>
                 <Subtitle>{t("page-dapps-metaverse-description")}</Subtitle>
               </Column>
@@ -1760,7 +1766,7 @@ const DappsPage = () => {
               <Column>
                 <H2>
                   {t("page-dapps-social-title")}{" "}
-                  <Emoji fontSize="5xl" ms="2" text=":incoming_envelope:" />
+                  <Emoji className="ms-2 text-5xl" text=":incoming_envelope:" />
                 </H2>
                 <Subtitle>{t("page-dapps-social-description")}</Subtitle>
               </Column>
@@ -1827,7 +1833,7 @@ const DappsPage = () => {
             <Box mt={12}>
               <H2>
                 {t("page-dapps-magic-title-1")}{" "}
-                <Emoji fontSize="2rem" text=":sparkles:" />{" "}
+                <Emoji className="text-[2rem]" text=":sparkles:" />{" "}
                 {t("page-dapps-magic-title-2")}{" "}
                 {categories[selectedCategory].benefitsTitle}
               </H2>
