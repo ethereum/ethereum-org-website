@@ -4,6 +4,7 @@ import type { AppProps } from "next/app"
 import { StaticImageData } from "next/image"
 import { SSRConfig } from "next-i18next"
 import type { ReactElement, ReactNode } from "react"
+import { ColumnDef } from "@tanstack/react-table"
 
 import type {
   DocsFrontmatter,
@@ -721,6 +722,8 @@ export interface WalletPersonas {
 }
 
 export type ProductTablePresetFilters = WalletPersonas
+
+export type ProductTableColumnDefs = ColumnDef<WalletPersonas>
 
 export interface DropdownOption {
   label: string
