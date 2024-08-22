@@ -83,15 +83,6 @@ const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
 const cachedXmlBlogFeeds = runOnlyOnce(async () => await fetchRSS(XML_FEEDS))
 const cachedAttestantBlog = runOnlyOnce(fetchAttestantPosts)
 
-// TODO: Migrate to button variants
-export const buttonSizeLg = "rounded-lg px-8 py-3 text-lg"
-export const buttonVariantOutline =
-  "border-body bg-transparent fill-body text-md text-body hover:bg-transparent hover:text-body hover:shadow-button-hover active:shadow-none"
-export const buttonVariantOutlinePrimary =
-  "border-primary bg-transparent fill-primary text-md text-primary hover:bg-transparent hover:text-primary hover:shadow-button-hover active:shadow-none"
-export const buttonVariantSolid =
-  "border-transparent bg-primary-action text-md text-white hover:bg-primary-hover hover:text-background hover:shadow-button-hover active:shadow-none"
-
 type Props = BasePageProps & {
   communityEvents: CommunityEventsReturnType
   metricResults: AllMetricData
@@ -345,14 +336,7 @@ const HomePage = ({
                 ))}
               </div>
               <div className="flex justify-center py-8 md:justify-start">
-                <ButtonLink
-                  href="/learn/"
-                  className={cn(
-                    "no-underline",
-                    buttonSizeLg,
-                    buttonVariantSolid
-                  )}
-                >
+                <ButtonLink href="/learn/" size="lg">
                   Other topics <MdChevronRight />
                 </ButtonLink>
               </div>
@@ -373,23 +357,14 @@ const HomePage = ({
             language like Solidity or Vyper to write your own app.
           </p>
           <div className="flex flex-wrap gap-6 py-8">
-            <ButtonLink
-              href="/developers/"
-              className={cn(
-                "w-fit no-underline",
-                buttonSizeLg,
-                buttonVariantSolid
-              )}
-            >
+            <ButtonLink href="/developers/" size="lg" className="w-fit">
               Builder&apos;s Portal <MdChevronRight />
             </ButtonLink>
             <ButtonLink
               href="/developers/docs/"
-              className={cn(
-                "w-fit no-underline",
-                buttonSizeLg,
-                buttonVariantOutline
-              )}
+              size="lg"
+              variant="outline"
+              className="w-fit"
             >
               Documentation
             </ButtonLink>
@@ -456,30 +431,21 @@ const HomePage = ({
           <div className="flex flex-wrap gap-3 py-8">
             <ButtonLink
               href="/discord/"
+              size="lg"
+              variant="outline-color"
               hideArrow
-              className={cn(
-                "no-underline",
-                buttonSizeLg,
-                buttonVariantOutlinePrimary
-              )}
             >
               <FaDiscord />
             </ButtonLink>
             <ButtonLink
               href={GITHUB_REPO_URL}
+              size="lg"
+              variant="outline-color"
               hideArrow
-              className={cn(
-                "no-underline",
-                buttonSizeLg,
-                buttonVariantOutlinePrimary
-              )}
             >
               <FaGithub />
             </ButtonLink>
-            <ButtonLink
-              href="/community/"
-              className={cn("no-underline", buttonSizeLg, buttonVariantSolid)}
-            >
+            <ButtonLink href="/community/" size="lg">
               More on ethereum.org <MdChevronRight />
             </ButtonLink>
           </div>
@@ -513,11 +479,8 @@ const HomePage = ({
                   </p>
                 </div>
                 <ButtonLink
-                  className={cn(
-                    "px-5 no-underline",
-                    "h-fit w-full text-nowrap border-body !text-body sm:w-fit lg:self-center",
-                    buttonVariantOutline
-                  )}
+                  className="h-fit w-full text-nowrap border-body px-5 !text-body sm:w-fit lg:self-center"
+                  variant="outline"
                   href={calendarLink}
                   hideArrow
                 >
@@ -561,14 +524,7 @@ const HomePage = ({
             </div>
           </div>
           <div className="flex justify-center py-8 md:justify-start">
-            <ButtonLink
-              href="/community/events/"
-              className={cn(
-                "mx-auto no-underline",
-                buttonSizeLg,
-                buttonVariantSolid
-              )}
-            >
+            <ButtonLink href="/community/events/" size="lg" className="mx-auto">
               See all events <MdChevronRight />
             </ButtonLink>
           </div>
