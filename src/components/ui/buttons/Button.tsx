@@ -15,7 +15,7 @@ const buttonVariants = cva(
       variant: {
         solid:
           "text-white bg-primary-action border-transparent disabled:bg-disabled disabled:text-background hover:text-background hover:bg-primary-hover hover:shadow-button-hover active:shadow-none",
-        outline: "hover:shadow-button-hover active:shadow-none",
+        outline: "hover:shadow-button-hover active:shadow-none text-body",
         "outline-color":
           "hover:shadow-button-hover active:shadow-none border-primary",
         ghost: "border-transparent",
