@@ -222,16 +222,3 @@
     }
   }
 }
-
-@layer components {
-  .carousel {
-    scroll-snap-type: x mandatory;
-    scroll-padding: 0 var(--eth-space-6);
-    max-width: calc(100vw - 2 * var(--eth-space-4));
-    overflow-x: auto;
-  }
-  .carousel > * {
-    scroll-snap-align: start;
-    width: 100%;
-  }
-}
