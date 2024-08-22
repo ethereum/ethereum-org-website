@@ -47,6 +47,18 @@
       hsla(var(--teal-500), var(--gradient-primary-opacity-from)) 19.09%,
       hsla(var(--teal-500), var(--gradient-primary-opacity-to)) 40.63%
     );
+
+    /* Shadows */
+    --shadow-color-a: hsla(266, 20%, 21%, 0.02);
+    --shadow-color-b: hsla(0, 48%, 6%, 0.04);
+    --shadow-1: -2px 2px 12px 1px var(--shadow-color-a);
+    --shadow-2: -16px 16px 12px -3px var(--shadow-color-a);
+    --shadow-3: -32px 32px 24px -6px var(--shadow-color-a);
+    --shadow-4: -40px 40px 40px -12px var(--shadow-color-b);
+    --shadow-1-hover: 0px 0px 12px 2px var(--shadow-color-a);
+    --shadow-2-hover: 0px 0px 12px 2px var(--shadow-color-a);
+    --shadow-3-hover: 0px 0px 24px 2px var(--shadow-color-a);
+    --shadow-4-hover: 0px 0px 40px 2px var(--shadow-color-b);
   }
 
   /* Dark mode token declarations */
@@ -70,5 +82,16 @@
     /* Gradients */
     --gradient-primary-angle: 180deg;
     --gradient-primary-opacity-to: 0.2;
+
+    /* Shadows */
+    --shadow-color: hsla(var(--white), 0.04);
+    --shadow-1: -2px 2px 12px 1px var(--shadow-color);
+    --shadow-2: -6px 6px 12px -3px var(--shadow-color);
+    --shadow-3: -12px 12px 24px -6px var(--shadow-color);
+    --shadow-4: -20px 20px 40px -12px var(--shadow-color);
+    --shadow-1-hover: 0px 0px 12px 2px var(--shadow-color);
+    --shadow-2-hover: 0px 0px 12px 2px var(--shadow-color);
+    --shadow-3-hover: 0px 0px 24px 2px var(--shadow-color);
+    --shadow-4-hover: 0px 0px 40px 2px var(--shadow-color);
   }
 }
