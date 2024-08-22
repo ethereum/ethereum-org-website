@@ -19,8 +19,8 @@
     /* ! Deprecating primary-dark */
     --primary-dark: var(--blue-700);
 
-    --neutral: hsla(var(--white));
-    --disabled: hsla(var(--gray-400));
+    --neutral: var(--white);
+    --disabled: var(--gray-400);
 
     /* Complementary Set */
     --attention: var(--yellow-500);
@@ -98,8 +98,8 @@
     --primary-dark: hsla(var(--orange-800));
 
     /* ! Deprecating neutral */
-    --neutral: hsla(var(--gray-900));
-    --disabled: hsla(var(--gray-500));
+    --neutral: var(--gray-900);
+    --disabled: var(--gray-500);
 
     /* Complementary Set */
     --attention-outline: var(--attention-light);
