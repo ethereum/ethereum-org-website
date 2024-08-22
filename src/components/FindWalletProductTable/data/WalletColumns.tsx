@@ -29,7 +29,7 @@ export const WalletColumns: ColumnDef<WalletColumns>[] = [
   },
   {
     id: "expander",
-    header: () => <p>expander</p>,
+    header: () => null,
     cell: ({ row }) => {
       return (
         <div>
