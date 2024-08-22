@@ -484,7 +484,8 @@ const HomePage = ({
                   </p>
                 </div>
                 <ButtonLink
-                  className="h-fit w-full text-nowrap border-body px-5 !text-body sm:w-fit lg:self-center"
+                  className="h-fit w-full text-nowrap px-5 sm:w-fit lg:self-center"
+                  size="md"
                   variant="outline"
                   href={calendarLink}
                   hideArrow
@@ -500,7 +501,7 @@ const HomePage = ({
 
         <div className="w-full">
           <h3 className="mb-4 mt-2 text-5xl font-black lg:mb-6 lg:text-7xl">
-            News
+            Recent posts
           </h3>
           <p>The latest blog posts and updates from the community</p>
           <div className="mt-4 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-3 md:flex-row">

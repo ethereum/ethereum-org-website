@@ -27,6 +27,7 @@ const RssPreviewCard = ({
         "no-underline duration-100 hover:scale-105 hover:duration-100",
         className
       )}
+      hideArrow
     >
       <div className="flex flex-col space-y-2.5 text-body">
         {/* eslint-disable-next-line @next/next/no-img-element */}
