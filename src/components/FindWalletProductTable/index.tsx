@@ -1,3 +1,4 @@
+import WalletSubComponent from "@/components/FindWalletProductTable/components/WalletSubComponent"
 import { WalletColumns } from "@/components/FindWalletProductTable/data/WalletColumns"
 import { WalletFilters } from "@/components/FindWalletProductTable/data/WalletFilters"
 import { WalletPersonaPresets } from "@/components/FindWalletProductTable/data/WalletPersonaPresets"
@@ -13,6 +14,7 @@ const FindWalletProductTable = ({ wallets }) => {
       data={wallets}
       filterOptions={walletFilterOptions}
       presetFilters={walletPersonas}
+      subComponent={(wallet) => <WalletSubComponent wallet={wallet} />}
     />
   )
 }

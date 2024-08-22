@@ -723,7 +723,9 @@ export interface WalletPersonas {
 
 export type ProductTablePresetFilters = WalletPersonas
 
-export type ProductTableColumnDefs = ColumnDef<WalletPersonas>
+export type ProductTableColumnDefs = ColumnDef<WalletData>
+
+export type ProductTableRow = WalletData
 
 export interface DropdownOption {
   label: string
