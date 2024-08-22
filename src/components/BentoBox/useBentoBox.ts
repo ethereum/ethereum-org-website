@@ -1,16 +1,6 @@
-import { useEffect } from "react"
-import { Swiper } from "swiper"
-import { EffectCards } from "swiper/modules"
-
 import { cn } from "@/lib/utils/cn"
 
-import BentoBox, { BentoBoxProps } from "./Box"
-import Title from "./Title"
-
-import "swiper/css"
-import "swiper/css/effect-cards"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
+import type { BentoCardProps } from "./BentoCard"
 
 import ImpactImage from "@/public/images/impact_transparent.png"
 import ManAndDogImage from "@/public/images/man-and-dog-playing.png"
@@ -18,16 +8,7 @@ import ManBabyWomanImage from "@/public/images/man-baby-woman.png"
 import RobotBarImage from "@/public/images/robot-help-bar.png"
 import MergeImage from "@/public/images/upgrades/merge.png"
 
-const BentoBoxes = () => {
-  // Mobile swiper
-  useEffect(() => {
-    new Swiper(".swiper", {
-      grabCursor: true,
-      effect: "cards",
-      modules: [EffectCards],
-    })
-  }, [])
-
+export const useBentoBox = () => {
   const flow = {
     mobile: {
       down: "flex-col bg-gradient-to-b",
@@ -36,22 +17,22 @@ const BentoBoxes = () => {
       left: "flex-row-reverse bg-gradient-to-l",
     },
     md: {
-      down: "md:flex-col md:bg-gradient-to-b md",
-      up: "md:flex-col-reverse md:bg-gradient-to-t md",
-      right: "md:flex-row md:bg-gradient-to-r md",
-      left: "md:flex-row-reverse md:bg-gradient-to-l md",
+      down: "md:flex-col md:bg-gradient-to-b",
+      up: "md:flex-col-reverse md:bg-gradient-to-t",
+      right: "md:flex-row md:bg-gradient-to-r",
+      left: "md:flex-row-reverse md:bg-gradient-to-l",
     },
     lg: {
-      down: "lg:flex-col lg:bg-gradient-to-b lg",
-      up: "lg:flex-col-reverse lg:bg-gradient-to-t lg",
-      right: "lg:flex-row lg:bg-gradient-to-r lg",
-      left: "lg:flex-row-reverse lg:bg-gradient-to-l lg",
+      down: "lg:flex-col lg:bg-gradient-to-b",
+      up: "lg:flex-col-reverse lg:bg-gradient-to-t",
+      right: "lg:flex-row lg:bg-gradient-to-r",
+      left: "lg:flex-row-reverse lg:bg-gradient-to-l",
     },
     xl: {
-      down: "xl:flex-col xl:bg-gradient-to-b xl",
-      up: "xl:flex-col-reverse xl:bg-gradient-to-t xl",
-      right: "xl:flex-row xl:bg-gradient-to-r xl",
-      left: "xl:flex-row-reverse xl:bg-gradient-to-l xl",
+      down: "xl:flex-col xl:bg-gradient-to-b",
+      up: "xl:flex-col-reverse xl:bg-gradient-to-t",
+      right: "xl:flex-row xl:bg-gradient-to-r",
+      left: "xl:flex-row-reverse xl:bg-gradient-to-l",
     },
   }
 
@@ -68,7 +49,7 @@ const BentoBoxes = () => {
       return "from-accent-c/10 to-accent-c/5 dark:from-accent-c/20 dark:to-accent-c/10"
   }
 
-  const bentoBoxes: BentoBoxProps[] = [
+  const items: BentoCardProps[] = [
     {
       title: "Crypto without volatility",
       children:
@@ -76,7 +57,7 @@ const BentoBoxes = () => {
       action: "Learn more",
       href: "/stablecoins/",
       imgSrc: ImpactImage,
-      imgWidth: 500,
+      imgWidth: 400, // TODO: Fix tablet size alignment (aligning top, should be center?)
       className: cn(
         "border-primary/10",
         positions,
@@ -132,6 +113,7 @@ const BentoBoxes = () => {
       action: "Explore benefits",
       href: "/layer-2/",
       imgSrc: ManBabyWomanImage,
+      imgWidth: 324,
       className: cn(
         "border-accent-a/10",
         positions,
@@ -164,41 +146,5 @@ const BentoBoxes = () => {
     },
   ]
 
-  return (
-    <>
-      {/* Mobile */}
-      <div className="relative my-16 max-w-[min(calc(100vw_-_2rem),_30rem)] lg:hidden">
-        <Title className="" />
-        {/* TODO: Fix height constraints */}
-        <div className="swiper mt-4 h-fit">
-          <div className="swiper-wrapper">
-            {bentoBoxes.map(({ className, ...box }) => (
-              <BentoBox
-                key={box.title}
-                imgHeight={160}
-                className={cn(
-                  className,
-                  "swiper-slide bg-background text-body"
-                )}
-                {...box}
-                imgWidth={undefined} // Intentionally last to override box
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Desktop */}
-      <div className="hidden lg:block">
-        <div className="flex grid-cols-bento flex-row gap-4 lg:grid">
-          <Title className="lg:col-span-12 lg:flex xl:col-span-3 xl:col-start-2" />
-          {bentoBoxes.map((box) => (
-            <BentoBox key={box.title} {...box} />
-          ))}
-        </div>
-      </div>
-    </>
-  )
+  return { items }
 }
-
-export default BentoBoxes

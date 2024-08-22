@@ -16,7 +16,7 @@ import type {
 } from "@/lib/types"
 import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
-import BentoBoxes from "@/components/BentoBoxes"
+import BentoBox from "@/components/BentoBox"
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import Codeblock from "@/components/Codeblock"
 import CodeModal from "@/components/CodeModal"
@@ -38,6 +38,7 @@ import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import RssPreviewCard from "@/components/RssPreviewCard"
 import StatsBoxGrid from "@/components/StatsBoxGrid"
+import SwiperCards from "@/components/SwiperCards"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import WindowBox from "@/components/WindowBox"
@@ -277,7 +278,7 @@ const HomePage = ({
       <div className="w-full">
         <HomeHero heroImg={hero} />
       </div>
-      <div className="space-y-16 px-4 sm:px-6 md:space-y-32">
+      <div className="w-full space-y-16 px-4 sm:px-6 md:space-y-32">
         <div className="grid w-full grid-cols-2 gap-x-4 gap-y-8 py-20 md:grid-cols-4 md:gap-x-10">
           {subHeroCTAs.map(({ label, description, href, colorClass, Svg }) => (
             <SvgButtonLink
@@ -292,7 +293,11 @@ const HomePage = ({
           ))}
         </div>
 
-        <BentoBoxes />
+        {/* Mobile */}
+        <SwiperCards className="my-16 lg:hidden" />
+
+        {/* Desktop */}
+        <BentoBox className="hidden lg:block" />
 
         <HomeSection
           tag="Activity"

@@ -1,6 +1,8 @@
+import type { ClassNameProp } from "@/lib/types"
+
 import { cn } from "@/lib/utils/cn"
 
-const Title = ({ className }) => (
+const Title = ({ className }: ClassNameProp) => (
   <div className={cn("flex flex-col", className)}>
     <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
       Use Cases

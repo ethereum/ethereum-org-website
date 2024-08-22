@@ -7,9 +7,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
 
-import { buttonSizeLg, buttonVariantOutline } from "@/pages"
-
-export type BentoBoxProps = HTMLAttributes<HTMLDivElement> & {
+export type BentoCardProps = HTMLAttributes<HTMLDivElement> & {
   action: string
   href: string
   imgSrc: StaticImageData
@@ -18,7 +16,7 @@ export type BentoBoxProps = HTMLAttributes<HTMLDivElement> & {
   title: string
 }
 
-const BentoBox = ({
+const BentoCard = ({
   action,
   children,
   className,
@@ -27,7 +25,7 @@ const BentoBox = ({
   imgWidth,
   imgHeight,
   title,
-}: BentoBoxProps) => (
+}: BentoCardProps) => (
   <div
     className={cn(
       "bg-gradient-to-right flex items-center justify-evenly gap-16 rounded-2xl border p-8",
@@ -40,14 +38,11 @@ const BentoBox = ({
     <div>
       <h3 className="mb-2 text-3xl font-black">{title}</h3>
       <p className="mb-8 text-md">{children}</p>
-      <ButtonLink
-        href={href}
-        className={cn("no-underline", buttonSizeLg, buttonVariantOutline)}
-      >
+      <ButtonLink href={href} size="lg" variant="outline">
         {action} <MdChevronRight />
       </ButtonLink>
     </div>
   </div>
 )
 
-export default BentoBox
+export default BentoCard

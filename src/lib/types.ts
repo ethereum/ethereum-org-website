@@ -32,6 +32,8 @@ export type Unpacked<T> = T extends (infer U)[] ? U : T
 
 export type ChildOnlyProp = { children?: ReactNode }
 
+export type ClassNameProp = { className?: string }
+
 export type NextPageWithLayout<P = Record<string, unknown>, IP = P> = NextPage<
   P,
   IP
