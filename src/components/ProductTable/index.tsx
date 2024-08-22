@@ -100,11 +100,10 @@ const ProductTable = ({
         <></>
       )}
       <div className="flex gap-6 pb-6 pt-4 2xl:px-0">
-        <Filters filters={filters} setFilters={setFilters} />
+        <div className="hidden lg:block">
+          <Filters filters={filters} setFilters={setFilters} />
+        </div>
         <div className="flex-1">
-          {/* <div>
-            <p>SHOWING</p>
-          </div> */}
           <Table>
             <TableHeader>
               {table.getHeaderGroups().map((headerGroup) => (
