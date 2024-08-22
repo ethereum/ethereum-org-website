@@ -1,18 +1,18 @@
-import React, { ReactNode, useEffect } from "react"
-import {
-  Popover,
-  PopoverArrow,
-  PopoverBody,
-  PopoverContent,
-  PopoverProps,
-  PopoverTrigger,
-  Portal,
-  useDisclosure,
-} from "@chakra-ui/react"
+import React, { ComponentProps, ReactNode, useEffect } from "react"
 
 import { isMobile } from "@/lib/utils/isMobile"
 
-export interface TooltipProps extends PopoverProps {
+import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
+import {
+  Tooltip as Tooltipcomponent,
+  TooltipContent,
+  TooltipTrigger,
+} from "../ui/tooltip"
+
+import { useDisclosure } from "@/hooks/useDisclosure"
+import { useIsClient } from "@/hooks/useIsClient"
+
+export type TooltipProps = ComponentProps<typeof Popover> & {
   content: ReactNode
   children?: ReactNode
   onBeforeOpen?: () => void
@@ -22,9 +22,10 @@ const Tooltip = ({
   content,
   children,
   onBeforeOpen,
-  ...rest
+  ...props
 }: TooltipProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const isClient = useIsClient()
 
   // Close the popover when the user scrolls.
   // This is useful for mobile devices where the popover is open by clicking the
@@ -57,24 +58,39 @@ const Tooltip = ({
     onOpen()
   }
 
+  const handleOpenChange = (open: boolean) => {
+    if (open) {
+      handleOpen()
+    } else {
+      onClose()
+    }
+  }
+
+  // Avoid rendering on the server since the user can't interact with it and we
+  // need to use different components depending on the device
+  if (!isClient) {
+    return null
+  }
+
+  // Use Popover on mobile devices since the user can't hover
+  const Component = isMobile() ? Popover : Tooltipcomponent
+  const Trigger = isMobile() ? PopoverTrigger : TooltipTrigger
+  const Content = isMobile() ? PopoverContent : TooltipContent
+
   return (
-    <Popover
-      isOpen={isOpen}
-      onOpen={handleOpen}
-      onClose={onClose}
-      placement="top"
-      trigger={isMobile() ? "click" : "hover"}
-      gutter={8}
-      {...rest}
-    >
-      <PopoverTrigger>{children}</PopoverTrigger>
-      <Portal>
-        <PopoverContent data-testid="tooltip-popover">
-          <PopoverArrow />
-          <PopoverBody>{content}</PopoverBody>
-        </PopoverContent>
-      </Portal>
-    </Popover>
+    <Component open={isOpen} onOpenChange={handleOpenChange} {...props}>
+      <Trigger className="focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover">
+        {children}
+      </Trigger>
+      <Content
+        side="top"
+        sideOffset={2}
+        className="w-80 px-5 text-sm"
+        data-testid="tooltip-popover"
+      >
+        {content}
+      </Content>
+    </Component>
   )
 }
 
