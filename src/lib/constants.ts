@@ -164,3 +164,18 @@ export const EF_BLOG = "https://blog.ethereum.org/en/feed.xml"
 export const PANDA_OPS_BLOG = "https://ethpandaops.io/posts/index.xml"
 export const SOLIDITY_BLOG = "https://soliditylang.org/feed.xml"
 export const XML_FEEDS = [VITALIK_BLOG, EF_BLOG, PANDA_OPS_BLOG, SOLIDITY_BLOG]
+
+export const ALL_COMMUNITY_BLOGS = [
+  { name: "Vitalik Buterin", href: "https://vitalik.eth.limo/" },
+  { name: "Ethereum Foundation", href: "https://blog.ethereum.org/" },
+  { name: "ethPandaOps", href: "https://ethpandaops.io/posts/" },
+  { name: "EthStaker", href: "https://ethstaker.cc/blog" },
+  { name: "0xParc", href: "https://0xparc.org/blog" },
+  { name: "Attestant", href: "https://www.attestant.io/posts/" },
+  { name: "Devcon", href: "https://devcon.org/en/blogs/" },
+  { name: "Solidity", href: "https://soliditylang.org/blog/" },
+  {
+    name: "Privacy and Scaling Explorations",
+    href: "https://mirror.xyz/privacy-scaling-explorations.eth",
+  },
+]

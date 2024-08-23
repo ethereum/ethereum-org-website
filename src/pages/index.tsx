@@ -49,6 +49,7 @@ import {
   CardDescription,
   CardTitle,
 } from "@/components/ui/card"
+import Link from "@/components/ui/Link"
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
@@ -65,7 +66,12 @@ import {
 
 import events from "@/data/community-events.json"
 
-import { BASE_TIME_UNIT, GITHUB_REPO_URL, XML_FEEDS } from "@/lib/constants"
+import {
+  ALL_COMMUNITY_BLOGS,
+  BASE_TIME_UNIT,
+  GITHUB_REPO_URL,
+  XML_FEEDS,
+} from "@/lib/constants"
 
 import CreateWalletContent from "!!raw-loader!@/data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
@@ -502,8 +508,6 @@ const HomePage = ({
               </div>
             ))}
           </WindowBox>
-
-          {/* TODO: News sub-section */}
         </HomeSection>
 
         <div className="w-full">
@@ -519,6 +523,17 @@ const HomePage = ({
             {rssItems.map((post) => (
               <PostPreviewCard key={post.title} {...post} />
             ))}
+          </div>
+
+          <div className="flex flex-col items-center justify-center gap-2 self-stretch rounded-2xl border p-8">
+            <p className="w-full text-lg">Read more on these websites</p>
+            <div className="flex flex-wrap gap-1">
+              {ALL_COMMUNITY_BLOGS.map(({ name, href }) => (
+                <Link href={href} key={name}>
+                  {name}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 
