@@ -21,7 +21,7 @@ const SwiperCards = ({ className }: ClassNameProp) => {
     <div className={cn(className, "max-w-full")}>
       <Title />
       <Swiper
-        className="max//-w-[min(calc(100vw_-_2rem),_30rem)] mx-auto mt-4 h-fit max-w-128"
+        className="mx-auto mt-4 h-fit max-w-128"
         effect="cards"
         grabCursor
         modules={[EffectCards]}
