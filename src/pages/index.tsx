@@ -21,6 +21,7 @@ import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import Codeblock from "@/components/Codeblock"
 import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
+import PostPreviewCard from "@/components/Homepage/PostPreviewCard"
 import HomeSection from "@/components/HomeSection"
 import AngleBrackets from "@/components/icons/angle-brackets.svg"
 import BlockHeap from "@/components/icons/block-heap.svg"
@@ -36,6 +37,7 @@ import Whitepaper from "@/components/icons/whitepaper.svg"
 import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
+import PostsSwiper from "@/components/PostsSwiper"
 import StatsBoxGrid from "@/components/StatsBoxGrid"
 import SwiperCards from "@/components/SwiperCards"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
@@ -509,29 +511,13 @@ const HomePage = ({
             Recent posts
           </h3>
           <p>The latest blog posts and updates from the community</p>
-          <div className="mt-4 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-3 md:flex-row">
-            {rssItems.map(({ pubDate, title, source, link, imgSrc }) => (
-              <Card key={title} href={link}>
-                <CardBanner>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={imgSrc} alt="" />
-                </CardBanner>
-                <CardContent className="">
-                  {isValidDate(pubDate) && (
-                    <p className="text-sm italic">
-                      {new Intl.DateTimeFormat(locale, {
-                        month: "long",
-                        day: "numeric",
-                        year: "numeric",
-                      }).format(new Date(pubDate))}
-                    </p>
-                  )}
-                  <div className="primary-low-contrast w-fit rounded-full bg-accent-a/20 px-4 py-0 text-sm uppercase text-accent-a">
-                    {source}
-                  </div>
-                  <CardTitle variant="strong">{title}</CardTitle>
-                </CardContent>
-              </Card>
+          {/* Mobile */}
+          <PostsSwiper items={rssItems} className="mt-4 md:hidden" />
+
+          {/* Desktop */}
+          <div className="hidden gap-8 md:mt-16 md:grid md:grid-cols-3">
+            {rssItems.map((post) => (
+              <PostPreviewCard key={post.title} {...post} />
             ))}
           </div>
         </div>
