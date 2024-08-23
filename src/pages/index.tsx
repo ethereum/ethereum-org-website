@@ -525,7 +525,7 @@ const HomePage = ({
             ))}
           </div>
 
-          <div className="flex flex-col gap-2 rounded-2xl border p-8">
+          <div className="mt-8 flex flex-col gap-2 rounded-2xl border p-8">
             <p className="text-lg">Read more on these websites</p>
             <div className="flex flex-wrap gap-x-2 gap-y-1">
               {ALL_COMMUNITY_BLOGS.map(({ name, href }) => (
