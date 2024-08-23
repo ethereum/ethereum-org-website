@@ -1,7 +1,8 @@
 import type { ReactNode } from "react"
 
-import { Button, type ButtonProps } from "@/components/Buttons"
+import { Button, type ButtonProps } from "@/components/ui/buttons/Button"
 
+import { cn } from "@/lib/utils/cn"
 import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
 export type CallToActionProps = Omit<
@@ -24,7 +25,7 @@ export const CallToAction = ({
   const buttonProps: ButtonProps = {
     variant: index === 0 ? "solid" : "outline",
     isSecondary: index !== 0,
-    flex: { base: 1, md: "initial" },
+    className: cn("flex-[1] md:flex-[initial]", props?.className),
   }
 
   return (
