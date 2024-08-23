@@ -26,7 +26,7 @@ const HomeHero = ({ heroImg, className }: HomeHeroProps) => {
       <div
         className={cn(
           "flex flex-col items-center space-y-4 border-t-[3px] border-primary-low-contrast px-4 py-8 text-center lg:space-y-7",
-          "bg-gradient-to-b from-purple-500/10 from-0% to-purple-500/0 to-25% dark:from-purple-500/50"
+          "bg-gradient-to-b from-purple-500/10 from-0% to-purple-500/0 to-25% dark:from-purple-500/30"
         )}
       >
         <Morpher />
