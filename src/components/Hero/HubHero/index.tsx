@@ -50,12 +50,7 @@ const HubHero = ({
             {title}
           </h1>
         ) : null}
-        <Stack
-          // --eth-sizes-container-md: 768px ==> tailwind max-w-3xl
-          className="max-w-3xl gap-2 self-center md:gap-1"
-        >
-          {/* Ref file: src/@chakra-ui/components/Heading.ts:21 */}
-          {/* 2xl font size refers to  ["4xl", null, null, "5xl"]  */}
+        <Stack className="max-w-screen-md gap-2 self-center md:gap-1">
           {title ? (
             <h2 className="text-4xl lg:text-5xl">{header}</h2>
           ) : (
