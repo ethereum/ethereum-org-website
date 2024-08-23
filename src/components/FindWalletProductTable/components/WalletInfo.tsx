@@ -23,8 +23,8 @@ const WalletInfo = ({ wallet }) => {
   wallet.hardware && deviceLabels.push(t("page-find-wallet-hardware"))
 
   return (
-    <div className="flex flex-row gap-4">
-      <div>
+    <div className="flex flex-col gap-4">
+      <div className="flex flex-row gap-4">
         <TwImage
           src={wallet.image}
           width="56"
@@ -32,18 +32,20 @@ const WalletInfo = ({ wallet }) => {
           alt=""
           objectFit="contain"
         />
+        <div className="flex flex-col gap-2">
+          <p className="text-xl font-bold">{wallet.name}</p>
+          {walletPersonas.length > 0 && (
+            <div className="flex flex-row gap-1">
+              {walletPersonas.map((persona) => (
+                <Badge key={persona} variant="productTable">
+                  {t(persona)}
+                </Badge>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
       <div className="flex flex-col gap-2">
-        <p className="text-xl font-bold">{wallet.name}</p>
-        {walletPersonas.length > 0 && (
-          <div className="flex flex-row gap-1">
-            {walletPersonas.map((persona) => (
-              <Badge key={persona} variant="productTable">
-                {t(persona)}
-              </Badge>
-            ))}
-          </div>
-        )}
         {deviceLabels.length > 0 && (
           <div className="flex flex-row gap-2">
             <DevicesIcon />
@@ -61,7 +63,7 @@ const WalletInfo = ({ wallet }) => {
           <ButtonLink
             href={wallet.url}
             variant="outline"
-            w="auto"
+            w={{ base: "full", lg: "auto" }}
             isExternal
             size="sm"
             customEventOptions={{

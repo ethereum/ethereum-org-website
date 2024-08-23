@@ -63,12 +63,14 @@ const Table = ({
               <TableRow
                 key={row.id}
                 data-state={row.getIsSelected() && "selected"}
-                className={`${row.getIsExpanded() ? "border-b-body-inverted bg-body-inverted" : ""}`}
-                {...{
-                  onClick: row.getToggleExpandedHandler(),
-                  style: {
-                    cursor: "pointer",
-                  },
+                className={`${row.getIsExpanded() ? "cursor-pointer border-b-body-inverted bg-body-inverted" : "cursor-pointer"}`}
+                onClick={(e) => {
+                  // Prevent expanding the wallet more info section when clicking on the "Visit website" button
+                  if (!e.target.matches("a, a svg")) {
+                    console.log("test")
+                    console.log(row)
+                    row.getToggleExpandedHandler()()
+                  }
                 }}
               >
                 {row.getVisibleCells().map((cell) => (
