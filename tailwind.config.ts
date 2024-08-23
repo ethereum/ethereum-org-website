@@ -2,7 +2,8 @@ import type { Config } from "tailwindcss"
 import plugin from "tailwindcss/plugin"
 
 const config = {
-  darkMode: ["class"],
+  // TODO: Move to "class" strategy after removing Chakra
+  darkMode: ["selector", '[data-theme="dark"]'],
   content: [
     "./src/**/*.{ts,tsx}",
     // TODO: remove after migration

@@ -252,7 +252,7 @@
   "network-hashrate-term": "Network hashrate",
   "network-hashrate-definition": "The collective hashrate produced by an entire mining network. Mining on Ethereum was switched off when Ethereum moved to proof-of-stake.",
   "nft-term": "Non-fungible token (NFT)",
-  "nft-definition": "Non-fungible-token (NFT ) is a unique digital item you can own, like art or collectibles, verified by blockchain technology. <a href=\"/nft/\">More on Non-Fungible Tokens (NFTs)</a>.",
+  "nft-definition": "A unique digital item you can own, like art or collectibles, verified by blockchain technology. <a href=\"/nft/\">More on non-fungible tokens (NFTs)</a>.",
   "node-term": "Node",
   "node-definition": "A software client that participates in the network. <a href=\"/developers/docs/nodes-and-clients/\">More on nodes and clients</a>.",
   "nonce-term": "Nonce",
