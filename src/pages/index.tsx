@@ -78,12 +78,12 @@ import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistr
 import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
-import { fetchNodes } from "@/lib/api/fetchNodes"
+import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
+import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
 import { fetchRSS } from "@/lib/api/fetchRSS"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
-import { fetchTxCount } from "@/lib/api/fetchTxCount"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 import buildersImage from "@/public/images/heroes/developers-hub-hero.jpg"
 import activityImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
@@ -91,13 +91,13 @@ import learnImage from "@/public/images/heroes/learn-hub-hero.png"
 import communityImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import hero from "@/public/images/home/hero.png"
 
-const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
+const cachedEthPrice = runOnlyOnce(fetchEthPrice)
 const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
-const cachedFetchNodes = runOnlyOnce(fetchNodes)
 const cachedFetchTotalValueLocked = runOnlyOnce(fetchTotalValueLocked)
-const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
 const cachedXmlBlogFeeds = runOnlyOnce(async () => await fetchRSS(XML_FEEDS))
 const cachedAttestantBlog = runOnlyOnce(fetchAttestantPosts)
+const cachedGrowThePieData = runOnlyOnce(fetchGrowThePie)
+const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
 
 type Props = BasePageProps & {
   communityEvents: CommunityEventsReturnType
@@ -106,11 +106,13 @@ type Props = BasePageProps & {
 }
 
 export const getStaticProps = (async ({ locale }) => {
+  const growThePieData = await cachedGrowThePieData()
   const metricResults: AllMetricData = {
+    ethPrice: await cachedEthPrice(),
     totalEthStaked: await cachedFetchTotalEthStaked(),
-    nodeCount: await cachedFetchNodes(),
     totalValueLocked: await cachedFetchTotalValueLocked(),
-    txCount: await cachedFetchTxCount(),
+    txCount: growThePieData.txCount,
+    txCostsMedianUsd: growThePieData.txCostsMedianUsd,
   }
 
   const communityEvents = await cachedFetchCommunityEvents()
