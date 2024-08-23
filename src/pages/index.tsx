@@ -525,9 +525,9 @@ const HomePage = ({
             ))}
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-2 self-stretch rounded-2xl border p-8">
-            <p className="w-full text-lg">Read more on these websites</p>
-            <div className="flex flex-wrap gap-1">
+          <div className="flex flex-col gap-2 rounded-2xl border p-8">
+            <p className="text-lg">Read more on these websites</p>
+            <div className="flex flex-wrap gap-x-2 gap-y-1">
               {ALL_COMMUNITY_BLOGS.map(({ name, href }) => (
                 <Link href={href} key={name}>
                   {name}
