@@ -2,15 +2,10 @@ import { type ReactNode } from "react"
 import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
 
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
-
 import { cn } from "@/lib/utils/cn"
 
-import { BaseLink } from "../Link"
+import Tooltip from "../Tooltip"
+import Link from "../ui/Link"
 
 type BigNumberProps = {
   children: ReactNode
@@ -41,14 +36,16 @@ const BigNumber = ({
           <div className="text-sm">
             {children}
             {sourceName && sourceUrl && (
-              <Popover>
-                <PopoverTrigger className="mb-0.5 ms-1 inline align-text-bottom">
-                  <MdInfoOutline />
-                </PopoverTrigger>
-                <PopoverContent className="w-fit bg-background">
-                  <BaseLink href={sourceUrl}>{sourceName}</BaseLink>
-                </PopoverContent>
-              </Popover>
+              <Tooltip
+                content={
+                  <>
+                    {t("data-provided-by")}{" "}
+                    <Link href={sourceUrl}>{sourceName}</Link>
+                  </>
+                }
+              >
+                <MdInfoOutline className="mb-0.5 ms-2 inline align-text-bottom" />
+              </Tooltip>
             )}
           </div>
         </>
