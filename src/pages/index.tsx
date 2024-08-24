@@ -206,28 +206,28 @@ const HomePage = ({
       description: "Create accounts, manage assets",
       href: "/wallets/find-wallet/",
       Svg: PickWalletIcon,
-      colorClass: "text-primary hover:text-primary/80", // TODO: Confirm hover style
+      className: "text-primary hover:text-primary/80", // TODO: Confirm hover style
     },
     {
       label: "Get ETH",
       description: "The currency of Ethereum",
       href: "/get-eth/",
       Svg: EthTokenIcon,
-      colorClass: "text-accent-a hover:text-accent-a/80",
+      className: "text-accent-a hover:text-accent-a/80",
     },
     {
       label: "Choose a network",
       description: "Enjoy minimal fees",
       href: "/layer-2/", // TODO: Update with new networks page when ready
       Svg: ChooseNetworkIcon,
-      colorClass: "text-accent-b hover:text-accent-b/80",
+      className: "text-accent-b hover:text-accent-b/80",
     },
     {
       label: "Try apps",
       description: "See what Ethereum can do",
       href: "/dapps/",
       Svg: TryAppsIcon,
-      colorClass: "text-accent-c hover:text-accent-c/80",
+      className: "text-accent-c hover:text-accent-c/80",
     },
   ]
 
@@ -279,6 +279,39 @@ const HomePage = ({
     })
     .slice(0, 4) // Show next 4 events on the calendar
 
+  const joinActions = [
+    {
+      Svg: Layer2Icon,
+      label: "How to contribute",
+      href: "/contributing/",
+      className: "text-accent-c hover:text-accent-c/80", // TODO: Confirm hover style
+      description:
+        "Find out all the different ways you can help ethereum.org grow and be better.",
+    },
+    {
+      Svg: FaGithub,
+      label: "GitHub",
+      href: GITHUB_REPO_URL,
+      className: "text-accent-a hover:text-accent-a/80",
+      description: "Contribute to code, content, articles etc.",
+    },
+    {
+      Svg: FaDiscord,
+      label: "Discord",
+      href: "/discord/",
+      className: "text-primary hover:text-primary/80",
+      description:
+        "To ask questions, coordinate contribution and join community calls.",
+    },
+    {
+      Svg: FaXTwitter,
+      label: "Twitter",
+      href: "https://x.com/EthDotOrg",
+      className: "text-accent-b hover:text-accent-b/80",
+      description: "To keep up with our updates and important news.",
+    },
+  ]
+
   return (
     <Flex
       as={MainArticle}
@@ -295,16 +328,29 @@ const HomePage = ({
       <HomeHero heroImg={hero} className="w-full" />
       <div className="w-full space-y-16 px-4 sm:px-6 md:space-y-32">
         <div className="grid w-full grid-cols-2 gap-x-4 gap-y-8 py-20 md:grid-cols-4 md:gap-x-10">
-          {subHeroCTAs.map(({ label, description, href, colorClass, Svg }) => (
-            <SvgButtonLink
-              key={label}
-              Svg={Svg}
-              href={href}
-              label={label}
-              className={colorClass}
-            >
-              {description}
-            </SvgButtonLink>
+          {subHeroCTAs.map(({ label, description, href, className, Svg }) => (
+            <>
+              <SvgButtonLink
+                key={label}
+                Svg={Svg}
+                href={href}
+                label={label}
+                className={cn("xl:hidden", className)}
+                variant="col"
+              >
+                {description}
+              </SvgButtonLink>
+              <SvgButtonLink
+                key={label}
+                Svg={Svg}
+                href={href}
+                label={label}
+                className={cn("hidden xl:block", className)}
+                variant="row"
+              >
+                {description}
+              </SvgButtonLink>
+            </>
           ))}
         </div>
 
@@ -624,49 +670,19 @@ const HomePage = ({
             </p>
           </div>
           {/* TODO: Fix icon sizing, fix button/icon layout on mobile */}
-          <div className="max-w-105 mx-auto grid grid-cols-1 gap-16 sm:grid-cols-2 md:max-w-screen-md">
-            <SvgButtonLink
-              Svg={Layer2Icon}
-              label="How to contribute"
-              href="/contributing/"
-              className="text-accent-c hover:text-accent-c/80" // TODO: Confirm hover style
-            >
-              <p className="text-body">
-                Find out all the different ways you can help ethereum.org grow
-                and be better.
-              </p>
-            </SvgButtonLink>
-            <SvgButtonLink
-              Svg={FaGithub}
-              label="GitHub"
-              href={GITHUB_REPO_URL}
-              className="text-accent-a hover:text-accent-a/80"
-            >
-              <p className="text-body">
-                Contribute to code, content, articles etc.
-              </p>
-            </SvgButtonLink>
-            <SvgButtonLink
-              Svg={FaDiscord}
-              label="Discord"
-              href="/discord/"
-              className="text-primary hover:text-primary/80"
-            >
-              <p className="text-body">
-                To ask questions, coordinate contribution and join community
-                calls.
-              </p>
-            </SvgButtonLink>
-            <SvgButtonLink
-              Svg={FaXTwitter}
-              label="Twitter"
-              href="https://x.com/EthDotOrg"
-              className="text-accent-b hover:text-accent-b/80"
-            >
-              <p className="text-body">
-                To keep up with our updates and important news.
-              </p>
-            </SvgButtonLink>
+          <div className="max-w-105 mx-auto grid grid-cols-1 gap-16 md:max-w-screen-md md:grid-cols-2">
+            {joinActions.map(({ Svg, label, href, className, description }) => (
+              <SvgButtonLink
+                key={label}
+                Svg={Svg}
+                label={label}
+                href={href}
+                className={cn("max-w-screen-sm", className)}
+                variant="row"
+              >
+                <p className="text-body">{description}</p>
+              </SvgButtonLink>
+            ))}
           </div>
         </div>
       </div>
