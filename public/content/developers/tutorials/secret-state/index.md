@@ -151,14 +151,24 @@ This is what happens when the user requests a new game.
 
 #### Dig {#dig-flow}
 
+1. The player [clicks the map cell's button](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L188), which calls [the `dig` function](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/mud/createSystemCalls.ts#L33-L36). This function calls [`dig` on-chain](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L24-L32).
 
+2. The on-chain component [performs a number of sanity checks](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L25-L30), and if successful adds the dig request to [`PendingDig`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L31).
 
+3. The server [detects the change in `PendingDig`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73). [If it is valid](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L75-L84), it [calls the zero-knowledge code](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L86-L95) (explained below) to generate both the result and a proof that it is valid.
 
-#### Verify setup artifacts {#setup-artifact-flow}
+4. [The server](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L97-L107) calls [`digResponse`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L45-L64) on-chain.
 
+5. `digResponse` does two things. First, it checks [the zero knowledge proof](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L47-L61). Then, if the proof is correct, it calls [`processDigResult`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L67-L86) to actually process the result.
+
+6. `processDigResult` checks if the game has been [lost](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L76-L78) or [won](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L83-L86), and [updates `Map`, the on-chain map](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L80).
+
+7. The client picks up the updates automatically and [updates the map displayed to the player](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175-L190), and if relevant tells the player if it's a win or a lose.
 
 
 ## Using Zokrates {#using-zokrates}
+
+In the flows explained above we skipped over the zero-knowledge parts, treating them as a black box. Now let's open it (slightly, we aren't going to get into the math) to see that portion works.
 
 ### Hashing the map {#hashing-map}
 
@@ -185,7 +195,7 @@ The field element in Zokrates is typically less than 256 bits long, but not by m
 
 This line starts a function definition. `hashMap` gets a single parameter called `map`, a two dimensional `bool`(ean) array. The size of the map is `width+2` by `height+2` for reasons that are [explained below](#why-map-border).
 
-We can use `${width+2}` and `${height+2}` because the Zokrates programs are stored in this application as [Template Strings](https://www.w3schools.com/js/js_string_templates.asp). Code between `${` and `}` is evaluated by JavaScript, and this way the program can be used for different map sizes. The map parameter has a one location wide border all around it without any bombs, which is the reason we need to add two to the width and height.
+We can use `${width+2}` and `${height+2}` because the Zokrates programs are stored in this application as [template strings](https://www.w3schools.com/js/js_string_templates.asp). Code between `${` and `}` is evaluated by JavaScript, and this way the program can be used for different map sizes. The map parameter has a one location wide border all around it without any bombs, which is the reason we need to add two to the width and height.
 
 The return value is a `field` that contains the hash.
 
@@ -456,6 +466,8 @@ Security tests are important because a functionality bug will eventually reveal 
 ### Permissions {#premissions}
 
 Blockchain code is assumed to
+
+### Zero-knowledge abuses {#zero-knowledge-abuses}
 
 ## Design decisions {#design}
 
