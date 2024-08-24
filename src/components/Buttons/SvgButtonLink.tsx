@@ -1,3 +1,4 @@
+import { cva, VariantProps } from "class-variance-authority"
 import type { FC, ReactNode, SVGProps } from "react"
 
 import { cn } from "@/lib/utils/cn"
@@ -13,13 +14,28 @@ type SvgButtonLinkProps = {
   size?: number
 }
 
+const variants = cva("flex items-center gap-3.5", {
+  variants: {
+    variant: {
+      col: "flex-col text-center [&_.body]:text-center",
+      row: "flex-row text-start [&_.body]:text-left [&_.header]:self-start",
+    },
+  },
+  defaultVariants: {
+    variant: "row",
+  },
+})
+
+type Variants = VariantProps<typeof variants>
+
 const SvgButtonLink = ({
   label,
   children,
   Svg,
   className,
+  variant,
   ...props
-}: SvgButtonLinkProps) => (
+}: SvgButtonLinkProps & Variants) => (
   <BaseLink
     className={cn(
       "group rounded-2xl no-underline focus:outline focus:outline-4 focus:outline-offset-8",
@@ -28,10 +44,11 @@ const SvgButtonLink = ({
     hideArrow
     {...props}
   >
-    <div className="flex flex-col items-center gap-3.5 lg:flex-row lg:items-center">
+    <div className={cn(variants({ variant }))}>
       <div
         className={cn(
-          "relative grid aspect-square size-[5em] shrink-0 place-items-center lg:self-start",
+          "header",
+          "relative grid aspect-square size-[5em] shrink-0 place-items-center",
           "rounded-2xl border shadow-svg-button-link transition-shadow duration-200",
           "group-hover:shadow-svg-button-link-hover group-hover:transition-shadow group-hover:duration-200",
           "group-focus:shadow-none group-focus:transition-shadow group-focus:duration-200"
@@ -45,7 +62,7 @@ const SvgButtonLink = ({
           )}
         />
       </div>
-      <div className="text-center lg:text-start">
+      <div className="body">
         {label && <p className="text-xl font-bold">{label}</p>}
         {children}
       </div>
