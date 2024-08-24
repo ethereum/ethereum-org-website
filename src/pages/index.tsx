@@ -309,7 +309,7 @@ const HomePage = ({
         </div>
 
         {/* Mobile */}
-        <SwiperCards className="my-16 lg:hidden" />
+        <SwiperCards className="lg:hidden" />
 
         {/* Desktop */}
         <BentoBox className="hidden lg:block" />

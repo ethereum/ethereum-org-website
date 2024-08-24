@@ -18,7 +18,12 @@ import "swiper/css/pagination"
 const SwiperCards = ({ className }: ClassNameProp) => {
   const { items } = useBentoBox()
   return (
-    <div className={cn(className, "max-w-full")}>
+    <div
+      className={cn(
+        "-mx-4 w-[100vw] overflow-hidden px-4 sm:-mx-6 sm:px-6",
+        className
+      )}
+    >
       <Title />
       <Swiper
         className="mx-auto mt-4 h-fit max-w-128"
