@@ -465,9 +465,94 @@ Security tests are important because a functionality bug will eventually reveal 
 
 ### Permissions {#premissions}
 
-Blockchain code is assumed to
+There is one privileged entity in this game, the server. It is the only user allowed to call the functions in [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). We can use [`cast`](https://book.getfoundry.sh/cast/) to verify calls to permissioned functions are only allowed as the server account.
+
+[The server's private key is in `setupNetwork.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/mud/setupNetwork.ts#L52).
+
+1. On the computer that runs `anvil` (the blockchain), set these environment variables.
+
+    ```sh copy
+    WORLD_ADDRESS=0x8d8b6b8414e1e3dcfd4168561b9be6bd3bf6ec4b
+    UNAUTHORIZED_KEY=0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a
+    AUTHORIZED_KEY=0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d
+    ```
+
+2. Use `cast` to attempt to set the verifier address as an unauthorized address.
+
+    ```sh copy
+    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
+    ```
+
+    Not only does `cast` report a failure, but you can open **MUD Dev Tools**, click **Tables**, and select **app__VerifierAddress**. See that the address is not zero.
+
+3. Set the verifier address as the server's address.
+
+    ```sh copy
+    cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $AUTHORIZED_KEY 
+    ```
+
+    The address in **app__VerifiedAddress** should now be zero.
+
+All MUD functions in the same `System` go through the same access control, so I consider this test sufficient. If you don't, you can check the other functions in [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol).
 
 ### Zero-knowledge abuses {#zero-knowledge-abuses}
+
+The math to verify Zokrates is beyond the scope of this tutorial (and my skills). However, we can run various checks on the zero-knowledge code to verify that if it is not done correctly it fails. All of these tests are going to require us to change [`zero-knowledge.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts) and restart the entire application. IT is not sufficient to restart the server process, because it puts the application in an impossible state (the player has a game in progress, but the game is no longer available).
+
+#### Wrong answer {#wrong-answer}
+
+The simplest possibility is to provide the wrong answer in the zero-knowledge proof. To do that, we go inside `zkDig` and [modify line 91](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L91):
+
+```ts
+        proof.inputs[3] = "0x"+'1'.padStart(64, "0")
+```
+
+This means we'll always claim there is one bomb, regardless of the correct answer. Try to play with this version, and you'll see in the **server** tab of the `pnpm dev` screen this error:
+
+```
+      cause: {
+        code: 3,
+        message: 'execution reverted: revert: Zero knowledge verification fail',
+        data: '0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000
+000000000000000000000000000000000000000000000000205a65726f206b6e6f776c6564676520766572696669636174696f6
+e206661696c'
+      },
+```
+
+So this kind of cheat fails.
+
+#### Wrong proof {#wrong-proof}
+
+What happens if we provide the correct information, but just have the wrong proof data? Now, replace line 91 with:
+
+```ts
+        proof.proof = {
+            a: [
+                "0x"+'1'.padStart(64, "0"),
+                "0x"+'2'.padStart(64, "0")
+            ],
+            b: [
+                [
+                    "0x"+'1'.padStart(64, "0"),
+                    "0x"+'2'.padStart(64, "0")
+                ],
+                [
+                    "0x"+'1'.padStart(64, "0"),
+                    "0x"+'2'.padStart(64, "0")
+                ]
+            ],
+            c: [
+                "0x"+'1'.padStart(64, "0"),
+                "0x"+'2'.padStart(64, "0")
+            ]            
+        }
+```
+
+It still fails, but now it fails without a reason because it happens during the verifier call.
+
+### How can a user verify the zero trust code? {#user-verify-zero-trust}
+
+The onchain definitions are relatively easy to verify. 
 
 ## Design decisions {#design}
 
@@ -477,11 +562,15 @@ Blockchain code is assumed to
 
 As opposed to other systems like circum
 
+### When to compile Zokrates {#when-compile-zokrates}
+
 ### Creating the verifier and prover keys (#key-creation)
 
 ### Where to verify {#where-verification}
 
 ### Flatten the map in TypeScript or Zokrates? {#where-flatten}
+
+
 
 ## Conclusion: when is this the appropriate technique {#conclusion}
 
