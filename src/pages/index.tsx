@@ -337,7 +337,7 @@ const HomePage = ({
                 className={cn("xl:hidden", className)}
                 variant="col"
               >
-                {description}
+                <p className="text-body">{description}</p>
               </SvgButtonLink>
               <SvgButtonLink
                 Svg={Svg}
@@ -346,7 +346,7 @@ const HomePage = ({
                 className={cn("hidden xl:block", className)}
                 variant="row"
               >
-                {description}
+                <p className="text-body">{description}</p>
               </SvgButtonLink>
             </Fragment>
           ))}
@@ -393,7 +393,7 @@ const HomePage = ({
                     href={href}
                     className="text-primary [&>:first-child]:flex-row"
                   >
-                    <p className="text-start text-xl font-bold text-body">
+                    <p className="text-start text-xl font-bold text-body group-hover:underline">
                       {label}
                     </p>
                   </SvgButtonLink>
@@ -440,7 +440,7 @@ const HomePage = ({
             {codeExamples.map(({ title, description }, idx) => (
               <button
                 key={title}
-                className="flex flex-col space-y-0.5 border-t px-6 py-4 hover:bg-black/5"
+                className="flex flex-col space-y-0.5 border-t px-6 py-4 hover:bg-background-highlight"
                 onClick={() => toggleCodeExample(idx)}
               >
                 <p className="font-bold">{title}</p>
@@ -493,18 +493,13 @@ const HomePage = ({
             </p>
           </div>
           <div className="flex flex-wrap gap-3 py-8">
-            <ButtonLink
-              href="/discord/"
-              size="lg"
-              variant="outline-color"
-              hideArrow
-            >
+            <ButtonLink href="/discord/" size="lg" variant="outline" hideArrow>
               <FaDiscord />
             </ButtonLink>
             <ButtonLink
               href={GITHUB_REPO_URL}
               size="lg"
-              variant="outline-color"
+              variant="outline"
               hideArrow
             >
               <FaGithub />
@@ -518,10 +513,7 @@ const HomePage = ({
             {calendar.map(({ date, title, calendarLink }, idx) => (
               <div
                 key={title}
-                className={cn(
-                  "flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row",
-                  idx === 0 && "bg-accent-gradient-a"
-                )}
+                className="flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row"
               >
                 <div className="flex flex-col space-y-0.5 text-center text-base sm:text-start">
                   <p className="italic text-body-medium">
@@ -573,7 +565,7 @@ const HomePage = ({
 
           <div className="mt-8 flex flex-col gap-2 rounded-2xl border p-8">
             <p className="text-lg">Read more on these websites</p>
-            <div className="flex flex-wrap gap-x-2 gap-y-1">
+            <div className="flex flex-wrap gap-x-4 gap-y-1">
               {ALL_COMMUNITY_BLOGS.map(({ name, href }) => (
                 <Link href={href} key={name}>
                   {name}

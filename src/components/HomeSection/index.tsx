@@ -36,7 +36,7 @@ const HomeSection = ({
         />
       )}
       <div className="w-full">
-        <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
+        <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0.5 text-sm uppercase text-primary">
           {tag}
         </div>
         <h2 className="mb-4 mt-2 text-5xl font-black lg:mb-6 lg:text-7xl">

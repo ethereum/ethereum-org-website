@@ -5,8 +5,6 @@ import type { ClassNameProp, CommonHeroProps } from "@/lib/types"
 
 import Morpher from "@/components/Morpher"
 
-import { cn } from "@/lib/utils/cn"
-
 export type HomeHeroProps = Pick<CommonHeroProps, "heroImg"> & ClassNameProp
 
 const HomeHero = ({ heroImg, className }: HomeHeroProps) => {
@@ -23,12 +21,7 @@ const HomeHero = ({ heroImg, className }: HomeHeroProps) => {
           priority
         />
       </div>
-      <div
-        className={cn(
-          "flex flex-col items-center space-y-4 border-t-[3px] border-primary-low-contrast px-4 py-8 text-center lg:space-y-7",
-          "bg-gradient-to-b from-purple-500/10 from-0% to-purple-500/0 to-25% dark:from-purple-500/30"
-        )}
-      >
+      <div className="flex flex-col items-center space-y-4 border-t-[3px] border-primary-low-contrast px-4 py-8 text-center lg:space-y-7">
         <Morpher />
         <div className="flex flex-col items-center space-y-5 lg:max-w-2xl">
           <h1 className="font-black">{t("page-index:page-index-title")}</h1>
