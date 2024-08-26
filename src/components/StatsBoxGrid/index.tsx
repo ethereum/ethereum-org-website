@@ -25,6 +25,7 @@ const StatsBoxGrid = ({ metricResults }: StatsBoxGridProps) => {
           value={"value" in state ? state.value : undefined}
           sourceName={apiProvider}
           sourceUrl={apiUrl}
+          lastUpdated={"timestamp" in state ? state.timestamp : undefined}
         >
           {label}
         </BigNumber>

@@ -510,7 +510,9 @@ export type StakingStatsData = {
   apr: number
 }
 
-export type ValueOrError<T> = { value: T } | { error: string }
+export type ValueOrError<T> =
+  | { value: T; timestamp?: number }
+  | { error: string }
 
 export type EtherscanNodeResponse = {
   result: {

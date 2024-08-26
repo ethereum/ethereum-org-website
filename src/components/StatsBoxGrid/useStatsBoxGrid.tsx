@@ -65,23 +65,33 @@ export const useStatsBoxGrid = ({
               : "",
       }
     : {
+        ...totalEthStaked,
         value: formatLargeUSD(totalStakedInUsd, localeForNumberFormat),
       }
 
   const valueLocked =
     "error" in totalValueLocked
       ? { error: totalValueLocked.error }
-      : { value: formatLargeUSD(totalValueLocked.value, localeForNumberFormat) }
+      : {
+          ...totalValueLocked,
+          value: formatLargeUSD(totalValueLocked.value, localeForNumberFormat),
+        }
 
   const txs =
     "error" in txCount
       ? { error: txCount.error }
-      : { value: formatLargeNumber(txCount.value, localeForNumberFormat) }
+      : {
+          ...txCount,
+          value: formatLargeNumber(txCount.value, localeForNumberFormat),
+        }
 
   const medianTxCost =
     "error" in txCostsMedianUsd
       ? { error: txCostsMedianUsd.error }
-      : { value: formatSmallUSD(txCostsMedianUsd.value, localeForNumberFormat) }
+      : {
+          ...txCostsMedianUsd,
+          value: formatSmallUSD(txCostsMedianUsd.value, localeForNumberFormat),
+        }
 
   const metrics: StatsBoxMetric[] = [
     {

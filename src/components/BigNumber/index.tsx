@@ -1,8 +1,10 @@
 import { type ReactNode } from "react"
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
 
 import { cn } from "@/lib/utils/cn"
+import { isValidDate } from "@/lib/utils/date"
 
 import Tooltip from "../Tooltip"
 import Link from "../ui/Link"
@@ -12,6 +14,7 @@ type BigNumberProps = {
   value?: ReactNode
   sourceName?: string
   sourceUrl?: string
+  lastUpdated?: number | string
   className?: string
 }
 
@@ -20,9 +23,18 @@ const BigNumber = ({
   value,
   sourceName,
   sourceUrl,
+  lastUpdated,
   className,
 }: BigNumberProps) => {
   const { t } = useTranslation("common")
+  const { locale } = useRouter()
+  const lastUpdatedDisplay =
+    lastUpdated && isValidDate(lastUpdated)
+      ? new Intl.DateTimeFormat(locale, {
+          dateStyle: "medium",
+          timeStyle: "short",
+        }).format(new Date(lastUpdated))
+      : ""
   return (
     <div
       className={cn(
@@ -39,8 +51,13 @@ const BigNumber = ({
               <Tooltip
                 content={
                   <>
-                    {t("data-provided-by")}{" "}
-                    <Link href={sourceUrl}>{sourceName}</Link>
+                    <p>
+                      {t("data-provided-by")}{" "}
+                      <Link href={sourceUrl}>{sourceName}</Link>
+                    </p>
+                    {lastUpdated && (
+                      <p className="mt-2">Last updated: {lastUpdatedDisplay}</p>
+                    )}
                   </>
                 }
               >

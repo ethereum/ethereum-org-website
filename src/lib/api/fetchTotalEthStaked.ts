@@ -29,7 +29,7 @@ export const fetchTotalEthStaked = async (): Promise<MetricReturnData> => {
     const value = rows[0].cum_deposited_eth
 
     // current value (number, unformatted)
-    return { value }
+    return { value, timestamp: Date.now() }
   } catch (error: unknown) {
     console.error((error as Error).message)
     return { error: (error as Error).message }

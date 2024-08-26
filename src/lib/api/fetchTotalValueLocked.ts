@@ -13,7 +13,7 @@ export const fetchTotalValueLocked = async (): Promise<MetricReturnData> => {
     const value = json[json.length - 1].totalLiquidityUSD
 
     // current value (number, unformatted)
-    return { value }
+    return { value, timestamp: Date.now() }
   } catch (error: unknown) {
     console.error((error as Error).message)
     return { error: (error as Error).message }

@@ -50,9 +50,12 @@ export const fetchGrowThePie = async (): Promise<GrowThePieData> => {
     // The weighted average of txcosts_median_usd, by txcount on each network (origin_key)
     const weightedAverage = totalTxCount ? weightedSum / totalTxCount : 0
 
+    // Last updated timestamp
+    const timestamp = Date.now()
+
     return {
-      txCount: { value: totalTxCount },
-      txCostsMedianUsd: { value: weightedAverage },
+      txCount: { value: totalTxCount, timestamp },
+      txCostsMedianUsd: { value: weightedAverage, timestamp },
     }
   } catch (error: unknown) {
     console.error((error as Error).message)
