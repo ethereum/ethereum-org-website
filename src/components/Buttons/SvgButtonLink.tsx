@@ -49,15 +49,15 @@ const SvgButtonLink = ({
         className={cn(
           "header",
           "relative grid aspect-square size-[5em] shrink-0 place-items-center",
-          "rounded-2xl border shadow-svg-button-link transition-shadow duration-200",
-          "group-hover:shadow-svg-button-link-hover group-hover:transition-shadow group-hover:duration-200",
-          "group-focus:shadow-none group-focus:transition-shadow group-focus:duration-200"
+          "rounded-2xl border shadow-svg-button-link transition-all duration-200",
+          "group-hover:shadow-svg-button-link-hover group-hover:transition-all group-hover:duration-200",
+          "group-focus:shadow-none group-focus:transition-all group-focus:duration-200"
         )}
       >
         <Svg
           className={cn(
-            "group-hover:rotate-3 group-hover:scale-110",
-            "group-focus:rotate-3 group-focus:scale-110",
+            "group-hover:rotate-3 group-hover:scale-110 group-hover:hue-rotate-15",
+            "group-focus:rotate-3 group-focus:scale-110 group-focus:hue-rotate-15",
             "text-4xl duration-200 group-hover:duration-200 group-focus:rotate-3"
           )}
         />
