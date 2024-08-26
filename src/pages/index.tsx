@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react"
+import { Fragment, Suspense, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -329,9 +329,8 @@ const HomePage = ({
       <div className="w-full space-y-16 px-4 sm:px-6 md:space-y-32">
         <div className="grid w-full grid-cols-2 gap-x-4 gap-y-8 py-20 md:grid-cols-4 md:gap-x-10">
           {subHeroCTAs.map(({ label, description, href, className, Svg }) => (
-            <>
+            <Fragment key={label}>
               <SvgButtonLink
-                key={label}
                 Svg={Svg}
                 href={href}
                 label={label}
@@ -341,7 +340,6 @@ const HomePage = ({
                 {description}
               </SvgButtonLink>
               <SvgButtonLink
-                key={label}
                 Svg={Svg}
                 href={href}
                 label={label}
@@ -350,7 +348,7 @@ const HomePage = ({
               >
                 {description}
               </SvgButtonLink>
-            </>
+            </Fragment>
           ))}
         </div>
 
