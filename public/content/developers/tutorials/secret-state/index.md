@@ -552,7 +552,78 @@ It still fails, but now it fails without a reason because it happens during the 
 
 ### How can a user verify the zero trust code? {#user-verify-zero-trust}
 
-The onchain definitions are relatively easy to verify. 
+On-chain definitions are relatively easy to verify. Typically, the develop publishes the source code to a block explorer, and the block explorer verifies that the source code does compile to the code in the [contract deployment transaction](https://ethereum.org/en/developers/docs/smart-contracts/deploying/). In the case of MUD `System`s this is [slightly more complicated](https://mud.dev/cli/verify), but not by much.
+
+This is harder with zero-knowledge. The verifier includes some constants and runs some calculations on them. This doesn't tell you what is being proved.
+
+```solidity
+    function verifyingKey() pure internal returns (VerifyingKey memory vk) {
+        vk.alpha = Pairing.G1Point(uint256(0x0f43f4fe7b5c2326fed4ac6ed2f4003ab9ab4ea6f667c2bdd77afb068617ee16), uint256(0x25a77832283f9726935219b5f4678842cda465631e72dbb24708a97ba5d0ce6f));
+        vk.beta = Pairing.G2Point([uint256(0x2cebd0fbd21aca01910581537b21ae4fed46bc0e524c055059aa164ba0a6b62b), uint256(0x18fd4a7bc386cf03a95af7163d5359165acc4e7961cb46519e6d9ee4a1e2b7e9)], [uint256(0x11449dee0199ef6d8eebfe43b548e875c69e7ce37705ee9a00c81fe52f11a009), uint256(0x066d0c83b32800d3f335bb9e8ed5e2924cf00e77e6ec28178592eac9898e1a00)]);
+```
+
+The solution, at least until block explorers get around to adding Zokrates verification to their user interfaces, is for the application developers to make available the Zokrates programs, and for at least some users to compile them themselves with the appropriate verification key.
+
+To do so:
+
+1. [Install Zokrates](https://zokrates.github.io/gettingstarted.html).
+2. Create a file, `dig.zok`, with the Zokrates program. The code below assumes you kept the original map size, 10x5.
+
+   ```zokrates
+    import "utils/pack/bool/pack128.zok" as pack128;
+    import "hashes/poseidon/poseidon.zok" as poseidon;
+    
+    def hashMap(bool[12][7] map) -> field {
+        bool[512] mut map1d = [false; 512];
+        u32 mut counter = 0;
+
+        for u32 x in 0..12 {
+            for u32 y in 0..7 {
+                map1d[counter] = map[x][y];
+                counter = counter+1;
+            }
+        }
+
+        field[4] hashMe = [
+            pack128(map1d[0..128]),
+            pack128(map1d[128..256]),
+            pack128(map1d[256..384]),
+            pack128(map1d[384..512])
+        ];
+
+        return poseidon(hashMe);
+    }
+
+
+    // The number of mines in location (x,y)
+    def map2mineCount(bool[12][7] map, u32 x, u32 y) -> u8 {
+        return if map[x+1][y+1] { 1 } else { 0 };
+    }
+
+    def main(private bool[12][7] map, u32 x, u32 y) -> (field, u8) {
+        return (hashMap(map) ,
+            if map2mineCount(map, x, y) > 0 { 0xFF } else {
+                map2mineCount(map, x-1, y-1) + map2mineCount(map, x, y-1) + map2mineCount(map, x+1, y-1) +
+                map2mineCount(map, x-1, y) + map2mineCount(map, x+1, y) +
+                map2mineCount(map, x-1, y+1) + map2mineCount(map, x, y+1) + map2mineCount(map, x+1, y+1)                                
+            } 
+        );
+    }
+    ```
+
+3. Compile the Zokrates code and create the verification key. The verification key has to be created with the same entropy used in the original server, [in this case an empty string](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L67).
+
+    ```sh copy
+    zokrates compile --input dig.zok
+    zokrates setup -e ""
+    ```
+
+4. Create the verifier on your own, and verify it is functionally identical to the one on the blockchain (the server adds a comment, but that's not important).
+ 
+    ```sh copy
+    zokrates export-verifier
+    diff verifier.sol ~/20240901-secret-state/packages/contracts/src/verifier.sol
+    ```
 
 ## Design decisions {#design}
 
