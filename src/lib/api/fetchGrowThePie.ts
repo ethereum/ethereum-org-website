@@ -25,7 +25,7 @@ export const fetchGrowThePie = async (): Promise<GrowThePieData> => {
       return itemDate > new Date(latest) ? item.date : latest
     }, data[0].date)
 
-    const todaysData = data.filter(
+    const mostRecentData = data.filter(
       (item) =>
         item.date === mostRecentDate &&
         [TXCOSTS_MEDIAN_USD, TXCOUNT].includes(item.metric_key)
@@ -34,10 +34,10 @@ export const fetchGrowThePie = async (): Promise<GrowThePieData> => {
     let totalTxCount = 0
     let weightedSum = 0
 
-    todaysData.forEach((item) => {
+    mostRecentData.forEach((item) => {
       if (item.metric_key !== TXCOSTS_MEDIAN_USD) return
 
-      const txCountItem = todaysData.find(
+      const txCountItem = mostRecentData.find(
         (txItem) =>
           txItem.metric_key === TXCOUNT && txItem.origin_key === item.origin_key
       )
