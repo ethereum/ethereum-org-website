@@ -20,7 +20,6 @@
     --primary-dark: var(--blue-700);
 
     --neutral: var(--white);
-    --disabled: var(--gray-400);
 
     /* Complementary Set */
     --attention: var(--yellow-500);
@@ -99,7 +98,6 @@
 
     /* ! Deprecating neutral */
     --neutral: var(--gray-900);
-    --disabled: var(--gray-500);
 
     /* Complementary Set */
     --attention-outline: var(--attention-light);

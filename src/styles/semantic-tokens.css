@@ -5,19 +5,21 @@
 @layer base {
   /* Light mode (default) token declarations */
   :root {
-    --body: var(--gray-800);
+    --body: var(--gray-900);
     --body-medium: var(--gray-500);
     --body-light: var(--gray-200);
-    --body-action: var(--white);
-
+    --body-inverse: var(--white);
+    --disabled: var(--gray-400);
     --background: var(--white);
-    --background-highlight: var(--gray-100);
+    --background-highlight: var(--gray-50);
 
     --primary: var(--purple-600);
-    --primary-hover: var(--purple-700);
-    --primary-low-contrast: var(--purple-100);
     --primary-high-contrast: var(--purple-800);
+    --primary-low-contrast: var(--purple-100);
+    --primary-hover: var(--purple-500);
+    --primary-visited: var(--purple-700);
     --primary-action: var(--purple-600);
+    --primary-action-hover: var(--purple-700);
 
     --accent-a: var(--blue-600);
     --accent-b: var(--pink-600);
@@ -63,17 +65,20 @@
 
   /* Dark mode token declarations */
   .dark {
-    --body: var(--gray-100);
+    --body: var(--gray-50);
     --body-medium: var(--gray-400);
     --body-light: var(--gray-600);
+    --body-inverse: var(--black);
+    --disabled: var(--gray-500);
 
     --background: var(--black);
     --background-highlight: var(--gray-900);
 
     --primary: var(--purple-400);
-    --primary-hover: var(--purple-300);
-    --primary-low-contrast: var(--purple-900);
     --primary-high-contrast: var(--purple-200);
+    --primary-low-contrast: var(--purple-900);
+    --primary-visited: var(--purple-300);
+    --primary-action-hover: var(--purple-600);
 
     --accent-a: var(--blue-400);
     --accent-b: var(--pink-400);
