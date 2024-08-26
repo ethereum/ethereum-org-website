@@ -127,6 +127,8 @@
       rgba(145, 234, 228, 0.2) 100%
     );
     --search-background: var(--background);
+    --text-200: #666666;
+    --text-300: #4c4c4c;
   }
 
   [data-theme="dark"] {
@@ -195,6 +197,8 @@
       rgba(134, 253, 232, 0.08) 100%
     );
     --search-background: #4c4c4c;
+    --text-200: #b2b2b2;
+    --text-300: #cccccc;
   }
 }
 
@@ -204,7 +208,7 @@
   }
 
   a {
-    @apply underline-offset-3 text-primary underline hover:text-primary-hover focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover;
+    @apply text-primary underline underline-offset-3 hover:text-primary-hover focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover;
   }
 
   h1,
