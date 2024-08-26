@@ -11,8 +11,8 @@ import { useBentoBox } from "../BentoBox/useBentoBox"
 
 import "swiper/css"
 import "swiper/css/effect-cards"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
+// import "swiper/css/navigation"
+// import "swiper/css/pagination"
 
 // TODO: Fix height constraints on
 const SwiperCards = ({ className }: ClassNameProp) => {
@@ -29,12 +29,13 @@ const SwiperCards = ({ className }: ClassNameProp) => {
         className="mx-auto mt-4 h-fit max-w-128"
         effect="cards"
         grabCursor
+        cssMode
         modules={[EffectCards]}
       >
         {items.map(({ className, ...item }) => (
           <SwiperSlide key={item.title}>
             <BentoCard
-              imgHeight={160}
+              imgHeight={220}
               className={cn(className, "bg-background text-body")}
               {...item}
               imgWidth={undefined} // Intentionally last to override box

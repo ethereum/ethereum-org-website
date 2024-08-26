@@ -28,7 +28,7 @@ const BentoCard = ({
 }: BentoCardProps) => (
   <div
     className={cn(
-      "bg-gradient-to-right flex items-center justify-evenly gap-16 rounded-2xl border p-8",
+      "bg-gradient-to-right flex items-center justify-evenly gap-4 rounded-2xl border p-8 lg:gap-16",
       className
     )}
   >
