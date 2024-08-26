@@ -32,7 +32,6 @@ const BigNumber = ({
     lastUpdated && isValidDate(lastUpdated)
       ? new Intl.DateTimeFormat(locale, {
           dateStyle: "medium",
-          timeStyle: "short",
         }).format(new Date(lastUpdated))
       : ""
   return (
