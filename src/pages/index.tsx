@@ -510,7 +510,7 @@ const HomePage = ({
           </div>
 
           <WindowBox title="Next calls" Svg={Calendar}>
-            {calendar.map(({ date, title, calendarLink }, idx) => (
+            {calendar.map(({ date, title, calendarLink }) => (
               <div
                 key={title}
                 className="flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row"
@@ -525,14 +525,7 @@ const HomePage = ({
                       minute: "numeric",
                     }).format(new Date(date))}
                   </p>
-                  <p
-                    className={cn(
-                      "text-sm text-body",
-                      idx === 0 && "font-bold"
-                    )}
-                  >
-                    {title}
-                  </p>
+                  <p className="text-sm text-body">{title}</p>
                 </div>
                 <ButtonLink
                   className="h-fit w-full text-nowrap px-5 sm:w-fit lg:self-center"
