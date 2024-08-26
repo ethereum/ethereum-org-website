@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { appWithTranslation } from "next-i18next"
+import { TooltipProvider } from "@radix-ui/react-tooltip"
 import { init } from "@socialgouv/matomo-next"
 
 import { AppPropsWithLayout } from "@/lib/types"
@@ -25,8 +26,8 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page) => page)
 
   return (
-    <>
-      <ThemeProvider>
+    <ThemeProvider>
+      <TooltipProvider>
         <BaseLayout
           contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
           contentNotTranslated={pageProps.contentNotTranslated}
@@ -34,8 +35,8 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
         >
           {getLayout(<Component {...pageProps} />)}
         </BaseLayout>
-      </ThemeProvider>
-    </>
+      </TooltipProvider>
+    </ThemeProvider>
   )
 }
 
