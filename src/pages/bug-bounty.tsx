@@ -48,10 +48,9 @@ import nethermind from "@/public/images/upgrades/nethermind.png"
 import nimbus from "@/public/images/upgrades/nimbus-cloud.png"
 import prysm from "@/public/images/upgrades/prysm.png"
 import reth from "@/public/images/upgrades/reth.png"
+import solidity from "@/public/images/upgrades/solidity.png"
 import tekuDark from "@/public/images/upgrades/teku-dark.png"
 import tekuLight from "@/public/images/upgrades/teku-light.png"
-
-import solidity from "@/public/images/upgrades/solidity.png"
 import vyper from "@/public/images/upgrades/vyper.png"
 
 const Page = (props: ChildOnlyProp) => (
@@ -478,7 +477,7 @@ const BugBountiesPage = () => {
       image: vyper,
     },
   ]
-  
+
   const iconImageProps = {
     width: 60,
   }
