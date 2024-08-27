@@ -1899,6 +1899,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://www.mtpelerin.com"><img src="https://avatars.githubusercontent.com/u/29145014?v=4?s=100" width="100px;" alt="Yann Gerardi"/><br /><sub><b>Yann Gerardi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yannggg" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/panditdhamdhere"><img src="https://avatars.githubusercontent.com/u/85685981?v=4?s=100" width="100px;" alt="Pandit Dhamdhere"/><br /><sub><b>Pandit Dhamdhere</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=panditdhamdhere" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://linkedin.com/in/fmarcelo"><img src="https://avatars.githubusercontent.com/u/11818521?v=4?s=100" width="100px;" alt="M@rC3L0"/><br /><sub><b>M@rC3L0</b></sub></a><br /><a href="#ideas-ferreiramarcelo" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
 </table>
