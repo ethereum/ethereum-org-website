@@ -10,6 +10,7 @@ import type {
 } from "@/lib/types"
 
 import Filters from "@/components/ProductTable/Filters"
+import MobileFilters from "@/components/ProductTable/MobileFilters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
 import Table from "@/components/ProductTable/Table"
 
@@ -86,7 +87,10 @@ const ProductTable = ({
       ) : (
         <></>
       )}
-      <div className="flex gap-6 pb-6 pt-4 2xl:px-0">
+      <div className="flex flex-col gap-6 pb-6 pt-4 lg:flex-row 2xl:px-0">
+        <div className="block lg:hidden">
+          <MobileFilters filters={filters} setFilters={setFilters} />
+        </div>
         <div className="hidden lg:block">
           <Filters filters={filters} setFilters={setFilters} />
         </div>
