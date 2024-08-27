@@ -37,11 +37,11 @@ const semanticTokens = {
 
     // Main Set
     primary: {
-      base: { _light: "blue.500", _dark: "orange.500" },
-      highContrast: { _light: "blue.800", _dark: "orange.100" },
-      lowContrast: { _light: "blue.100", _dark: "orange.800" },
-      hover: { _light: "blue.400", _dark: "orange.400" },
-      visited: { _light: "blue.700", _dark: "orange.550" },
+      base: { _light: "purple.600", _dark: "purple.400" },
+      highContrast: { _light: "purple.800", _dark: "purple.200" },
+      lowContrast: { _light: "purple.100", _dark: "purple.900" },
+      hover: { _light: "purple.500", _dark: "purple.500" },
+      visited: { _light: "purple.700", _dark: "purple.300" },
       // ! Deprecating primary.light
       light: { _light: "blue.100", _dark: "orange.100" },
       // ! Deprecating primary.dark
