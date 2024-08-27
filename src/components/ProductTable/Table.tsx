@@ -67,15 +67,12 @@ const Table = ({
                 onClick={(e) => {
                   // Prevent expanding the wallet more info section when clicking on the "Visit website" button
                   if (!e.target.matches("a, a svg")) {
-                    console.log("test")
-                    console.log(row)
                     row.getToggleExpandedHandler()()
                   }
                 }}
               >
                 {row.getVisibleCells().map((cell) => (
                   <TableCell key={cell.id}>
-                    <p>{row.getIsExpanded()}</p>
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </TableCell>
                 ))}

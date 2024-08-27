@@ -20,9 +20,6 @@ export const WalletColumns: ColumnDef<WalletColumns>[] = [
   {
     accessorKey: "information",
     header: () => null,
-    minSize: 14,
-    size: 14,
-    maxSize: 14,
     cell: ({ row }) => {
       return <WalletInfo wallet={row.original} />
     },
