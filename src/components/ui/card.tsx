@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils/cn"
 
 import { BaseLink } from "./Link"
 
-const titleVariants = cva("", {
+const titleVariants = cva("group-hover:underline", {
   variants: {
     variant: {
       normal: "font-normal text-lg",

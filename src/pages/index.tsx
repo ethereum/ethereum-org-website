@@ -493,20 +493,27 @@ const HomePage = ({
             </p>
           </div>
           <div className="flex flex-wrap gap-3 py-8">
-            <ButtonLink href="/discord/" size="lg" variant="outline" hideArrow>
-              <FaDiscord />
-            </ButtonLink>
-            <ButtonLink
-              href={GITHUB_REPO_URL}
-              size="lg"
-              variant="outline"
-              hideArrow
-            >
-              <FaGithub />
-            </ButtonLink>
             <ButtonLink href="/community/" size="lg">
               More on ethereum.org <MdChevronRight />
             </ButtonLink>
+            <div className="flex gap-3">
+              <ButtonLink
+                href="/discord/"
+                size="lg"
+                variant="outline"
+                hideArrow
+              >
+                <FaDiscord />
+              </ButtonLink>
+              <ButtonLink
+                href={GITHUB_REPO_URL}
+                size="lg"
+                variant="outline"
+                hideArrow
+              >
+                <FaGithub />
+              </ButtonLink>
+            </div>
           </div>
 
           <WindowBox title="Next calls" Svg={Calendar}>
@@ -609,7 +616,7 @@ const HomePage = ({
                     </CardBanner>
                     <CardContent className="space-y-8 p-2">
                       <div>
-                        <CardTitle>{title}</CardTitle>
+                        <CardTitle variant="strong">{title}</CardTitle>
                         <CardDescription className="italic">
                           {(isValidDate(startDate) || isValidDate(endDate)) &&
                             new Intl.DateTimeFormat(locale, {
