@@ -24,7 +24,7 @@ export const postProcess = (rssItems: RSSItem[]) =>
       case VITALIK_BLOG:
         return {
           ...item,
-          imgSrc: "/images/vitalik-blog-banner.png",
+          imgSrc: "/images/vitalik-blog-banner.svg",
           link: item.link.replace(".ca", ".eth.limo"),
         }
       case PANDA_OPS_BLOG:
