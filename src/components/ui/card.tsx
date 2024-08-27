@@ -67,7 +67,8 @@ const CardBanner = React.forwardRef<
     ref={ref}
     className={cn(
       "h-48 w-full self-stretch overflow-hidden rounded-2xl",
-      "[&_img]:size-full [&_img]:object-cover [&_img]:outline [&_img]:duration-200 group-hover:[&_img]:scale-110 group-hover:[&_img]:duration-200",
+      "bg-gradient-to-b from-accent-a/10 to-accent-a/0 dark:from-accent-a/15 dark:to-accent-a/5",
+      "[&_img]:size-full [&_img]:object-cover [&_img]:duration-200 group-hover:[&_img]:scale-110 group-hover:[&_img]:duration-200",
       className
     )}
     {...props}
