@@ -1,4 +1,5 @@
 import {
+  _0X_PARC_BLOG,
   PANDA_OPS_BLOG,
   RSS_DISPLAY_COUNT,
   SOLIDITY_BLOG,
@@ -35,6 +36,11 @@ export const postProcess = (rssItems: RSSItem[]) =>
         return {
           ...item,
           imgSrc: "/images/solidity-banner.png",
+        }
+      case _0X_PARC_BLOG:
+        return {
+          ...item,
+          imgSrc: "/images/0xparc-logo.svg",
         }
       default:
         return item

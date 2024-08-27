@@ -164,12 +164,14 @@ export const EF_BLOG = "https://blog.ethereum.org/en/feed.xml"
 export const PANDA_OPS_BLOG = "https://ethpandaops.io/posts/index.xml"
 export const SOLIDITY_BLOG = "https://soliditylang.org/feed.xml"
 export const ETH_STAKER_BLOG = "https://paragraph.xyz/api/blogs/rss/@ethstaker"
+export const _0X_PARC_BLOG = "https://rss.app/feeds/cWXGYts0ZM8C3F6t.xml"
 export const XML_FEEDS = [
   EF_BLOG,
   ETH_STAKER_BLOG,
   PANDA_OPS_BLOG,
   SOLIDITY_BLOG,
   VITALIK_BLOG,
+  _0X_PARC_BLOG,
 ]
 
 export const ALL_COMMUNITY_BLOGS = [
