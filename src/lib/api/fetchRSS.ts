@@ -1,6 +1,8 @@
 import { parseString } from "xml2js"
 
+import { RSS_DISPLAY_COUNT } from "../constants"
 import type { RSSChannel, RSSItem, RSSResult } from "../types"
+import { isValidDate } from "../utils/date"
 
 /**
  * Fetches RSS feed from the specified XML URL(s).
@@ -12,19 +14,39 @@ export const fetchRSS = async (xmlUrl: string | string[]) => {
   const allItems: RSSItem[] = []
   for (const url of urls) {
     const rssItems = (await fetchXml(url)) as RSSResult
-    const mainChannel: RSSChannel = rssItems.rss.channel[0]
-    const source = mainChannel.title[0]
-    const parsedRssItems = mainChannel.item.map(
-      ({ pubDate, title, link, enclosure }) =>
-        ({
-          pubDate: pubDate[0],
-          title: title[0],
-          link: link[0],
-          imgSrc: enclosure ? enclosure[0].$.url : "",
-          source,
-          sourceFeedUrl: url,
-        }) as RSSItem
-    )
+    if (!rssItems.rss) continue
+    const [mainChannel] = rssItems.rss.channel as RSSChannel[]
+    const [source] = mainChannel.title
+    const channelImage = mainChannel.image ? mainChannel.image[0].url[0] : ""
+
+    const parsedRssItems = mainChannel.item
+      // Filter out items with invalid dates
+      .filter((item) => {
+        if (!item.pubDate) return false
+        const [pubDate] = item.pubDate
+        return isValidDate(pubDate)
+      })
+      // Sort by pubDate (most recent is first in array
+      .sort((a, b) => {
+        const dateA = new Date(a.pubDate[0])
+        const dateB = new Date(b.pubDate[0])
+        return dateB.getTime() - dateA.getTime()
+      })
+      // Slice to first RSS_DISPLAY_COUNT items
+      .slice(0, RSS_DISPLAY_COUNT)
+      // Map to RSSItem object
+      .map(
+        (item) =>
+          ({
+            pubDate: item.pubDate[0],
+            title: item.title[0],
+            link: item.link[0],
+            imgSrc: item.enclosure ? item.enclosure[0].$.url : channelImage,
+            source,
+            sourceFeedUrl: url,
+          }) as RSSItem
+      )
+
     allItems.push(...parsedRssItems)
   }
   return allItems as RSSItem[]
