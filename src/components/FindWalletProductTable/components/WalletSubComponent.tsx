@@ -66,13 +66,20 @@ const WalletSubComponent = ({ wallet }: WalletSubComponentProps) => {
                         )}
                       </span>
                       <p className={`leading-1 ${featureColor}`}>
-                        {item.filterLabel}
+                        {item.filterLabel}{" "}
+                        <Tooltip
+                          content={
+                            <p className="text-body">
+                              {/* TODO: Add filter description */}
+                              {item.description}
+                            </p>
+                          }
+                        >
+                          <span className="whitespace-nowrap">
+                            <MdInfoOutline color={featureColor} />
+                          </span>
+                        </Tooltip>
                       </p>
-                      <Tooltip>
-                        <span className="whitespace-nowrap">
-                          <MdInfoOutline color={featureColor} />
-                        </span>
-                      </Tooltip>
                     </li>
                   )
                 })}

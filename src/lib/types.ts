@@ -654,6 +654,7 @@ export type FilterOption = {
   items: Array<{
     filterKey: string
     filterLabel: string
+    description: string
     inputState: FilterInputState
     input: (
       filterIndex: number,
@@ -668,6 +669,7 @@ export type FilterOption = {
     options: Array<{
       filterKey: string
       filterLabel: string
+      description: string
       inputState: FilterInputState
       input: (
         filterIndex: number,

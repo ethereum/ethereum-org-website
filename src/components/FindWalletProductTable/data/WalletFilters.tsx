@@ -38,6 +38,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "mobile",
           filterLabel: t("page-find-wallet-mobile"),
+          description: "",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -55,6 +56,7 @@ export const WalletFilters = (): FilterOption[] => {
             {
               filterKey: "android",
               filterLabel: t("page-find-wallet-android"),
+              description: "",
               inputState: false,
               input: (
                 filterIndex,
@@ -78,6 +80,7 @@ export const WalletFilters = (): FilterOption[] => {
             {
               filterKey: "ios",
               filterLabel: t("page-find-wallet-iOS"),
+              description: "",
               inputState: false,
               input: (
                 filterIndex,
@@ -103,6 +106,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "desktop",
           filterLabel: t("page-find-wallet-desktop"),
+          description: "",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -120,6 +124,7 @@ export const WalletFilters = (): FilterOption[] => {
             {
               filterKey: "linux",
               filterLabel: t("page-find-wallet-linux"),
+              description: "",
               inputState: false,
               input: (
                 filterIndex,
@@ -143,6 +148,7 @@ export const WalletFilters = (): FilterOption[] => {
             {
               filterKey: "windows",
               filterLabel: t("page-find-wallet-windows"),
+              description: "",
               inputState: false,
               input: (
                 filterIndex,
@@ -166,6 +172,7 @@ export const WalletFilters = (): FilterOption[] => {
             {
               filterKey: "macOS",
               filterLabel: t("page-find-wallet-macOS"),
+              description: "",
               inputState: false,
               input: (
                 filterIndex,
@@ -191,6 +198,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "browser",
           filterLabel: t("page-find-wallet-browser"),
+          description: "",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -208,6 +216,7 @@ export const WalletFilters = (): FilterOption[] => {
             {
               filterKey: "chromium",
               filterLabel: t("page-find-wallet-chromium"),
+              description: "",
               inputState: false,
               input: (
                 filterIndex,
@@ -231,6 +240,7 @@ export const WalletFilters = (): FilterOption[] => {
             {
               filterKey: "firefox",
               filterLabel: t("page-find-wallet-firefox"),
+              description: "",
               inputState: false,
               input: (
                 filterIndex,
@@ -256,6 +266,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "hardware",
           filterLabel: t("page-find-wallet-hardware"),
+          description: "",
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -280,6 +291,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "languages",
           filterLabel: t("page-find-wallet-languages-supported"),
+          description: "",
           inputState: "en",
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -304,6 +316,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "buy_crypto",
           filterLabel: t("page-find-wallet-buy-crypto"),
+          description: t("page-find-wallet-buy-crypto-desc"),
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -323,6 +336,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "withdraw_crypto",
           filterLabel: t("page-find-wallet-sell-for-fiat"),
+          description: t("page-find-wallet-sell-for-fiat-desc"),
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -348,6 +362,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "connect_to_dapps",
           filterLabel: t("page-find-wallet-connect-to-dapps"),
+          description: t("page-find-wallet-connect-to-dapps-desc"),
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -367,6 +382,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "nft_support",
           filterLabel: t("page-find-wallet-nft-support"),
+          description: t("page-find-wallet-nft-support-desc"),
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -386,6 +402,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "staking",
           filterLabel: t("page-find-wallet-staking"),
+          description: t("page-find-wallet-staking-desc"),
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -405,6 +422,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "layer_2",
           filterLabel: t("page-find-wallet-layer-2"),
+          description: t("page-find-wallet-layer-2-desc"),
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -424,6 +442,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "swaps",
           filterLabel: t("page-find-wallet-swaps"),
+          description: t("page-find-wallet-swaps-desc"),
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -443,6 +462,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "hardware_support",
           filterLabel: t("page-find-wallet-hardware-wallet-support"),
+          description: t("page-find-wallet-hardware-wallet-support-desc"),
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -462,6 +482,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "ens_support",
           filterLabel: t("page-find-wallet-ens-support"),
+          description: t("page-find-wallet-ens-support-desc"),
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -487,6 +508,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "open_source",
           filterLabel: t("page-find-wallet-open-source"),
+          description: t("page-find-wallet-open-source-desc"),
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -506,6 +528,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "non_custodial",
           filterLabel: t("page-find-wallet-non-custodial"),
+          description: t("page-find-wallet-non-custodial-desc"),
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -531,6 +554,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "multisig",
           filterLabel: t("page-find-wallet-multisig"),
+          description: t("page-find-wallet-multisig-desc"),
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -550,6 +574,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "social_recovery",
           filterLabel: t("page-find-wallet-social-recovery"),
+          description: t("page-find-wallet-social-recovery-desc"),
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -575,6 +600,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "rpc_importing",
           filterLabel: t("page-find-wallet-rpc-importing"),
+          description: t("page-find-wallet-rpc-importing-desc"),
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -594,6 +620,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "erc_20_support",
           filterLabel: t("page-find-wallet-token-importing"),
+          description: t("page-find-wallet-token-importing-desc"),
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -613,6 +640,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "gas_fee_customization",
           filterLabel: t("page-find-wallet-gas-fee-customization"),
+          description: t("page-find-wallet-gas-fee-customization-desc"),
           inputState: false,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
@@ -638,6 +666,7 @@ export const WalletFilters = (): FilterOption[] => {
         {
           filterKey: "new_to_crypto",
           filterLabel: "New to crypto",
+          description: "",
           inputState: false,
           input: (_) => {
             return <></>
