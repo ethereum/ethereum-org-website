@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
+import { Box, Flex } from "@chakra-ui/react"
+import { useColorModeValue } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -106,15 +107,8 @@ const Body = ({ children }: ChildOnlyProp) => {
 const StyledEmoji = ({ emoji }: { emoji: string }) => {
   return (
     <Emoji
-      fontSize="8xl"
+      className="order-2 m-2 self-center text-8xl hover:rotate-12 hover:duration-500"
       text={emoji}
-      margin={2}
-      alignSelf="center"
-      order="2"
-      _hover={{
-        transition: "transform 50s",
-        transform: "rotate(10turn)",
-      }}
     />
   )
 }
@@ -186,7 +180,7 @@ const GridItem = ({
       }}
     >
       {isOpen ? (
-        <Emoji mb={8} text={emoji} fontSize="8xl" />
+        <Emoji className="mb-8 text-8xl" text={emoji} />
       ) : (
         <>
           <StyledEmoji emoji={emoji} />
@@ -233,7 +227,7 @@ const GridItem = ({
                     <li key={idx}>
                       <InlineLink
                         key={idx}
-                        to={link.url}
+                        href={link.url}
                         color="black300"
                         _hover={{
                           color: "black",

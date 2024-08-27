@@ -5,7 +5,7 @@ lang: it
 sidebarDepth: 2
 ---
 
-La serializzazione a prefisso di lunghezza ricorsiva (RLP) è usata ampiamente nei client d'esecuzione di Ethereum. L’RLP standardizza il trasferimento di dati tra nodi in un formato efficiente a livello di spazio. Lo scopo dell’RLP è codificare arbitrariamente gli insiemi di dati binari nidificati e l’RLP è il metodo di codifica principale usato per serializzare gli oggetti nel livello d'esecuzione di Ethereum. Il solo scopo dell’RLP è codificare la struttura; la codifica di tipi di dati specifici (es. stringhe, float) è lasciata a protocolli di ordine superiore; ma gli interi RLP positivi devono essere rappresentati in forma binaria big-endian senza zero iniziali (dunque rendendo il valore intero zero equivalente all'array di byte vuoto). Gli interi positivi deserializzati con zeri iniziali sono trattati come non validi. La rappresentazione integrale della lunghezza della stringa deve essere anch'essa codificata in questo modo, così come gli interi nel payload.
+La serializzazione a prefisso di lunghezza ricorsiva (RLP) è usata ampiamente nei client d'esecuzione di Ethereum. L’RLP standardizza il trasferimento di dati tra nodi in un formato efficiente a livello di spazio. Lo scopo dell’RLP è codificare arbitrariamente gli insiemi di dati binari nidificati e l’RLP è il metodo di codifica principale usato per serializzare gli oggetti nel livello d'esecuzione di Ethereum. Lo scopo principale dell'RLP è codificare la struttura; con l'eccezione degli interi positivi, l'RLP delega la codifica dei tipi di dati specifici (es.,stringhe, virgola mobile) a protocolli di ordine superiore. Gli interi positivi devono essere rappresentati in forma binaria big-endian senza zeri iniziali (rendendo il valore intero zero equivalente all'array di byte vuoto). Gli interi positivi deserializzati con zero iniziali devono essere trattati come non validi da qualsiasi protocollo di ordine superiore che utilizzi l'RLP.
 
 Per maggiori informazioni, consultare lo [yellowpaper di Ethereum (Appendice B)](https://ethereum.github.io/yellowpaper/paper.pdf#page=19).
 
@@ -20,6 +20,7 @@ La codifica RLP prende un elemento. Un elemento è definito come segue:
 
 - una stringa (ovvero insieme di byte) è un elemento
 - un elenco di elementi è un elemento
+- un intero posiitivo è un elemento
 
 Ad esempio, tutti i seguenti sono elementi:
 
@@ -27,14 +28,17 @@ Ad esempio, tutti i seguenti sono elementi:
 - la stringa contenente la parola "gatto";
 - un elenco contenente qualsiasi numero di stringhe;
 - e strutture di dati più complesse come `["gatto", ["cucciolo", "vacca"], "cavallo", [[]], "maiale", [""], "pecora"]`.
+- il numero `100`
 
-Nota che nel resto di questa pagina, “stringa” indica "un certo numero di byte di dati binari"; non è usata alcuna codifica speciale e non è richiesta implicitamente alcuna conoscenza sul contenuto delle stringhe.
+Nota che, nel contesto del resto di questa pagina, 'stringa' significa "un certo numero di byte di dati binari"; non è utilizzata alcuna codifica speciale, e non è implicata alcuna conoscenza sul contenuto delle stringhe (tranne come richiesto dalla regola contro gli interi positivi non minimali).
 
 La codifica RLP è definita come segue:
 
+- Per un intero positivo, è convertito al più breve array di byte la cui interpretazione big-endian sia l'intero, quindi, e quindi codificato come una stringa secondo le seguenti regole.
 - Per un singolo byte il cui valore è nell'intervallo `[0x00, 0x7f]` (decimale `[0, 127]`), quel byte è la propria codifica RLP.
 - Altrimenti, se una stringa è lunga da 0 a 55 byte, la codifica RLP consiste in un singolo byte con valore **0x80** (dec. 128) più la lunghezza della stringa seguita dalla stringa. L'intervallo del primo byte è dunque `[0x80, 0xb7]` (dec. `[128, 183]`).
 - Se una stringa è più lunga di 55 byte, la codifica RLP consiste in un singolo byte con valore **0xb7** (dec. 183) più la lunghezza in byte della lunghezza della stringa in forma binaria, seguita dalla lunghezza della stringa, seguita dalla stringa. Ad esempio, una stringa lunga 1024 byte sarebbe codificata come `\xb9\x04\x00` (dec. `185, 4, 0`), seguita dalla stringa. Qui, `0xb9` (183 + 2 = 185) come primo byte, seguito dai 2 byte `0x0400` (dec. 1024) che denotano la lunghezza della stringa effettiva. L'intervallo del primo byte è dunque `[0xb8, 0xbf]` (dec. `[184, 191]`).
+- Se una stringa è lunga 2^64 byte o più, potrebbe non essere codificata.
 - Se il payload totale di un elenco (cioè la lunghezza combinata di tutti i suoi elementi codificati in RLP) è lunga da 0 a 55 byte, la codifica RLP consiste in un singolo byte dal valore **0xc0**, più la lunghezza del payload, seguita dalla concatenazione delle codifiche RLP degli elementi. L'intervallo del primo byte è dunque `[0xc0, 0xf7]` (dec. `[192, 247]`).
 - Se il carico utile totale di un elenco è più lungo di 55 byte, la codifica RLP consiste in un singolo byte con valore **oxf7**, più la lunghezza in byte della lunghezza del payload in forma binaria, seguita dalla lunghezza del carico utile, seguita dalla concatenazione delle codifiche RLP degli elementi. L'intervallo del primo byte è dunque `[0xf8, 0xff]` (dec. `[248, 255]`).
 
@@ -73,9 +77,9 @@ def to_binary(x):
 - la stringa vuota (“null”) = `[ 0x80 ]`
 - l'elenco vuoto = `[ 0xc0 ]`
 - l'intero 0 = `[ 0x80 ]`
-- l'intero codificato 0 ('\\x00') = `[ 0x00 ]`
-- l'intero codificato 15 ('\\x0f') = `[ 0x0f ]`
-- l'intero codificato 1024 ('\\x04\\x00') = `[ 0x82, 0x04, 0x00 ]`
+- il byte '\\x00' = `[ 0x00 ]`
+- il byte '\\x0f' = `[ 0x0f ]`
+- i byte '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
 - la [data rappresentazione teorica](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) di tre, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - la stringa "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
@@ -85,7 +89,7 @@ Secondo le regole e il processo della codifica RLP, l'input della decodifica RLP
 
 1.  a seconda del primo byte (ovvero il prefisso) dei dati di input e decodificando il tipo di dati, la lunghezza dei dati effettivi e l'offset;
 
-2.  a seconda del tipo e l'offset dei dati, decodifica i dati di conseguenza;
+2.  secondo il tipo e lo scostamento dei dati, decodificali di conseguenza, rispettando la regola di codifica minimale per gli interi positivi;
 
 3.  continua a decodificare il resto dell'input;
 

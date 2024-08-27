@@ -171,6 +171,6 @@ La logica del codice e le ponderazioni per questi criteri sono attualmente conte
 
 Se desideri aggiungere un prodotto o servizio di staking su ethereum.org, crea un ticket su GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
   Crea un ticket
 </ButtonLink>

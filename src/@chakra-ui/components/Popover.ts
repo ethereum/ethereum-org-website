@@ -35,8 +35,8 @@ const baseStyle = definePartsStyle(
       maxWidth: "xs", // 20rem
       lineHeight: "base",
       w: "auto",
-      _focusVisible: { 
-        boxShadow: 'none',
+      _focusVisible: {
+        boxShadow: "none",
       },
     },
     body: {

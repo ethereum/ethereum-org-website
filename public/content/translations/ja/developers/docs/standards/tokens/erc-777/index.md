@@ -12,7 +12,7 @@ lang: ja
 
 ERC-777は、既存の[ERC-20](/developers/docs/standards/tokens/erc-20/)規格を改善した代替性トークンの規格です。
 
-## 前提知識 {#prerequisites}
+## 事前に必要な環境 {#prerequisites}
 
 本ページの内容をよく理解するために、まず[ERC-20](/developers/docs/standards/tokens/erc-20/)に目を通すことをおすすめします。
 

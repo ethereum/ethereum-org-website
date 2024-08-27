@@ -118,7 +118,7 @@ const ChecklistItem = (props: HorizontalCardProps) => (
   <HorizontalCard
     border={0}
     display="flex"
-    emojiSize={1.5}
+    className="text-2xl"
     alignItems="flex-start"
     mb={4}
     {...props}
@@ -167,33 +167,33 @@ const WalletsPage = () => {
       locale === "en"
         ? [
             {
-              to: "/wallets/find-wallet/",
+              href: "/wallets/find-wallet/",
               content: t("page-wallets-find-wallet-link"),
               matomo: {
-                eventCategory: "wallet hero buttons",
+                eventCategory: "Header buttons",
                 eventAction: "click",
-                eventName: "find wallet",
+                eventName: "Find_wallet",
               },
             },
             {
-              to: `#${SIMULATOR_ID}`,
+              href: `#${SIMULATOR_ID}`,
               content: "How to use a wallet",
               matomo: {
-                eventCategory: "wallet hero buttons",
+                eventCategory: "Header buttons",
                 eventAction: "click",
-                eventName: "interactive tutorial",
+                eventName: "How_to_use_wallet",
               },
               variant: "outline",
             },
           ]
         : [
             {
-              to: "/wallets/find-wallet/",
+              href: "/wallets/find-wallet/",
               content: t("page-wallets-find-wallet-link"),
               matomo: {
-                eventCategory: "wallet hero buttons",
+                eventCategory: "Header button",
                 eventAction: "click",
-                eventName: "find wallet",
+                eventName: "Find_wallet",
               },
             },
           ],
@@ -253,11 +253,21 @@ const WalletsPage = () => {
       title: t("page-wallets-protecting-yourself"),
       description: "MyCrypto",
       link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
+      customEventOptions: {
+        eventCategory: "Link",
+        eventAction: "Clicked_external",
+        eventName: "protecting_yourself",
+      },
     },
     {
       title: t("page-wallets-keys-to-safety"),
       description: t("page-wallets-blog"),
       link: "https://www.coinbase.com/learn/crypto-basics/how-to-secure-crypto",
+      customEventOptions: {
+        eventCategory: "Link",
+        eventAction: "Clicked_external",
+        eventName: "the_keys_to_keeping_crypto_safe",
+      },
     },
   ]
 
@@ -265,10 +275,20 @@ const WalletsPage = () => {
     {
       title: t("additional-reading-how-to-create-an-ethereum-account"),
       link: "/guides/how-to-create-an-ethereum-account/",
+      customEventOptions: {
+        eventCategory: "Link",
+        eventAction: "Clicked",
+        eventName: "Create_eth_acc",
+      },
     },
     {
       title: t("additional-reading-how-to-use-a-wallet"),
       link: "/guides/how-to-use-a-wallet/",
+      customEventOptions: {
+        eventCategory: "Link",
+        eventAction: "Clicked",
+        eventName: "How_to_use_wallet",
+      },
     },
   ]
 
@@ -352,7 +372,7 @@ const WalletsPage = () => {
                 key={idx}
                 emoji={type.emoji}
                 description={type.description}
-                emojiSize={2.5}
+                className="text-[2.5rem]"
                 alignItems="center"
               />
             ))}
@@ -400,7 +420,14 @@ const WalletsPage = () => {
               >
                 {t("page-wallets-features-desc")}
               </Box>
-              <ButtonLink to="/wallets/find-wallet/">
+              <ButtonLink
+                href="/wallets/find-wallet/"
+                customEventOptions={{
+                  eventCategory: "header buttons",
+                  eventAction: "click",
+                  eventName: "Find_wallet",
+                }}
+              >
                 {t("page-wallets-find-wallet-btn")}
               </ButtonLink>
               <Image
@@ -478,7 +505,7 @@ const WalletsPage = () => {
             descriptionKey="page-wallets:page-wallets-get-some-desc"
           >
             <Box>
-              <ButtonLink to="/get-eth/">
+              <ButtonLink href="/get-eth/">
                 {t("page-wallets-get-some-btn")}
               </ButtonLink>
             </Box>
@@ -492,7 +519,7 @@ const WalletsPage = () => {
             descriptionKey="page-wallets:page-wallets-try-dapps-desc"
           >
             <Box>
-              <ButtonLink to="/dapps/">
+              <ButtonLink href="/dapps/">
                 {t("page-wallets-more-on-dapps-btn")}
               </ButtonLink>
             </Box>

@@ -13,7 +13,6 @@ lang: ja
 ## デベロッパー<Emoji text=":computer:" size={1} /> {#developers}
 
 - [ethereum.org/developers/](/developers/) - イーサリアムについての学習
-- [Gitcoin](https://gitcoin.co/) - 大小規模の技術問題に取り組み、暗号通貨の報酬を獲得
 - [ETHGlobal](http://ethglobal.co/) - お近くのETHGlobalハッカソンへの参加
 - [自分の専門分野や好きなプログラミング言語に関連するプロジェクト](/developers/docs/programming-languages/)の確認
 - [コアデベロッパーコール](https://www.youtube.com/@EthereumProtocol)の視聴または参加
@@ -39,6 +38,7 @@ lang: ja
 - [Ethresear.ch](https://ethresear.ch) - イーサリアム研究の主要なフォーラムであり、暗号経済学の世界で最も影響力のあるフォーラム
 - [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - 研究者とのQ&Aシリーズ。  次のパートが始まるたびに、誰でも質問を投稿可能
 - [エコシステム・サポート・プログラムのウィッシュリスト](https://esp.ethereum.foundation/wishlist/) - イーサリアムのエコシステム・サポート・プログラムが助成金の申請を募集している研究分野
+- [AllWalletDevs](https://allwallet.dev) - イーサリアムデベロッパー、デザイナー、関心のあるユーザーが定期的に集まってウォレットについて議論するフォーラム
 
 [研究が活発な領域を探索](/community/research/)
 
@@ -118,13 +118,12 @@ ETHをステーキングすると、イーサリアムネットワークの保�
 
 「DAO」とは分散型自律組織のことで、 メンバーシップの管理、提案への投票、またはプールされた資産の管理など、イーサリアム技術を活用し、組織やコラボレーションを円滑化しているグループを指します 。 分散型自律組織(DAO)はまだ実験段階ではありますが、自分が共感できるグループを見つけ、協力者を探し、イーサリアムコミュニティへの影響力を拡大する機会を提供してくれます。 [分散型自律組織(DAO)の詳細](/dao/)
 
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _非技術分野で分散型自律組織(DAO)の概念をプロモーションし、価値の創造を支援_
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) - _非技術分野で分散型自律組織(DAO)の概念をプロモーションし、価値の創造を支援_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _インターネットは共同所有されるべきという信念を共有するデベロッパーコミュニティ_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _分散型自律組織(DAO)として機能しているフリーランスのWeb3開発共同体_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhausのコミュニティガバナンス_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _リーガル・エンジニアリング_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _リーガル・エンジニアリング_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _アート・コミュニティ_
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _分散型自律組織(DAO)インキュベータ_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _プレシード暗号プロジェクトのベンチャー_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _実際のMMORPGゲームメカニクス_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _デジ・フィジカルのアパレルブランド_

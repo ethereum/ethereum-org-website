@@ -248,7 +248,7 @@ Az Altair frissítés a [Beacon lánc](/roadmap/beacon-chain) első tervezett v�
 
 - [Olvassa el az Altair frissítés specifikációit](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />Érdekesség! {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} className="me-2" />Érdekesség! {#altair-fun-fact}
 
 Az Altair volt az első nagyobb hálózati frissítés, aminek konkrét bevezetési ideje volt. Az összes korábbi frissítés egy adott blokkszám alapján történt a proof-of-work láncon, ahol a blokkonkénti idő változó. A Beacon láncnak nem kellett igazodnia a proof-of-workhöz, így időalapú korszakok rendszerén alapszik, amelyek 32 darab 12 másodperces slotból állnak, és a validátorok ezekben tudnak blokkot javasolni. Így pontosan lehetett tudni, hogy mikor következik a 74 240. korszak, hogy az Altair életbe léphessen!
 
@@ -332,7 +332,7 @@ A [Beacon lánc](/roadmap/beacon-chain/) biztonságos elindításához 16384 dar
 
 [Olvassa el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   A Beacon lánc
 </DocLink>
 
@@ -348,7 +348,7 @@ A letétbe helyezési szerződés vezette be a [letétbe helyezés](/glossary/#s
 
 [Olvassa el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Letétbe helyezés
 </DocLink>
 
@@ -618,6 +618,6 @@ A Sárgakönyv, melynek a szerzője Dr. Gavin Wood, az Ethereum protokoll műsza
 
 A bemutatkozó kiadvány, melyet Vitalik Buterin, az Ethereum alapítója adott ki 2013-ban, a projekt 2015-ös indulása előtt.
 
-<DocLink to="/whitepaper/">
+<DocLink href="/whitepaper/">
   Fehérkönyv
 </DocLink>

@@ -535,7 +535,7 @@ const RunANodePage = () => {
               </Text>
               <Text>
                 <Text as="code">
-                  <Emoji text=":warning:" fontSize="md" me="4" />
+                  <Emoji text=":warning:" className="me-4 text-md" />
                   {t(
                     "page-run-a-node-getting-started-software-section-1-alert"
                   )}
@@ -600,7 +600,7 @@ const RunANodePage = () => {
           <FullyLoaded>
             <Box>
               <H3>
-                <Emoji text=":shopping_cart:" fontSize="2em" me="4" />
+                <Emoji text=":shopping_cart:" className="me-4 text-[2rem]" />
                 {t("page-run-a-node-buy-fully-loaded-title")}
               </H3>
               <Text>{t("page-run-a-node-buy-fully-loaded-description")}</Text>
@@ -615,10 +615,10 @@ const RunANodePage = () => {
               </ul>
             </Box>
             <ButtonContainer>
-              <ButtonLink to="https://shop.dappnode.io/">
+              <ButtonLink href="https://shop.dappnode.io/">
                 {t("page-run-a-node-shop-dappnode")}
               </ButtonLink>
-              <ButtonLink to="https://ava.do/">
+              <ButtonLink href="https://ava.do/">
                 {t("page-run-a-node-shop-avado")}
               </ButtonLink>
             </ButtonContainer>
@@ -627,7 +627,10 @@ const RunANodePage = () => {
           <FullyLoaded>
             <Box>
               <H3>
-                <Emoji text=":building_construction:" fontSize="2em" me="4" />
+                <Emoji
+                  text=":building_construction:"
+                  className="me-4 text-[2rem]"
+                />
                 {t("page-run-a-node-build-your-own-title")}
               </H3>
               <Text>{t("page-run-a-node-choose-your-adventure-build-1")}</Text>
@@ -748,7 +751,7 @@ const RunANodePage = () => {
                 </Text>
               </Box>
               <ButtonContainer>
-                <ButtonLink to="https://docs.dappnode.io">
+                <ButtonLink href="https://docs.dappnode.io">
                   {t("page-run-a-node-build-your-own-software-option-1-button")}
                 </ButtonLink>
               </ButtonContainer>
@@ -772,7 +775,7 @@ const RunANodePage = () => {
               </Box>
               <ButtonContainer>
                 <ButtonLink
-                  to="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
+                  href="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
                   variant="outline"
                 >
                   <Text as="code">
@@ -796,11 +799,15 @@ const RunANodePage = () => {
             <ButtonContainer>
               <ButtonLink
                 leftIcon={<FaDiscord />}
-                to="https://discord.com/invite/dappnode"
+                href="https://discord.com/invite/dappnode"
               >
                 {t("page-run-a-node-community-link-1")}
               </ButtonLink>
-              <ButtonLink to="/community/online/" variant="outline" isSecondary>
+              <ButtonLink
+                href="/community/online/"
+                variant="outline"
+                isSecondary
+              >
                 {t("page-run-a-node-community-link-2")}
               </ButtonLink>
             </ButtonContainer>
@@ -860,7 +867,7 @@ const RunANodePage = () => {
           <H2>{t("page-run-a-node-staking-title")}</H2>
           <Text>{t("page-run-a-node-staking-description")}</Text>
           <ButtonContainer>
-            <ButtonLink to="/staking/">
+            <ButtonLink href="/staking/">
               {t("page-run-a-node-staking-link")}
             </ButtonLink>
           </ButtonContainer>
@@ -868,7 +875,7 @@ const RunANodePage = () => {
       </StakingCalloutContainer>
       <Content>
         <H3 id="plan-on-staking" display="flex" alignItems="center">
-          <Emoji text=":cut_of_meat:" fontSize="2em" me="4" />
+          <Emoji text=":cut_of_meat:" className="me-4 text-[2rem]" />
           {t("page-run-a-node-staking-plans-title")}
         </H3>
         <Text>
@@ -881,7 +888,7 @@ const RunANodePage = () => {
           </InlineLink>
         </Text>
         <H3 id="rasp-pi" display="flex" alignItems="center">
-          <Emoji text=":pie:" fontSize="2em" me="4" />
+          <Emoji text=":pie:" className="me-4 text-[2rem]" />
           {t("page-run-a-node-rasp-pi-title")}
         </H3>
         <Text>{t("page-run-a-node-rasp-pi-description")}</Text>

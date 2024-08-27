@@ -56,7 +56,7 @@ Maybe you are an artist that wants to share their work using NFTs, without losin
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Explore, buy or create your own NFT art/collectibles...</div>
-  <ButtonLink to="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/dapps/?category=collectibles#explore">
     Explore NFT art
   </ButtonLink>
 </InfoBanner>
@@ -75,7 +75,7 @@ This website also has an alternative domain name powered by NFTs, **ethereum.eth
 
 ## How do NFTs work? {#how-nfts-work}
 
-NFTs, like any digital items on the Ethereum blockchain, are created through a special Ethereum based computer program called a "smart contract." These contracts follow certain rules, like the [ERC-721](/glossary/#erc-721) or [ERC-1155](/glossary/#erc-1155) standards, which determine what the contract can do.
+NFTs, like any digital items on the Ethereum blockchain, are created through a special Ethereum based computer program called a "smart contract". These contracts follow certain rules, like the [ERC-721](/glossary/#erc-721) or [ERC-1155](/glossary/#erc-1155) standards, which determine what the contract can do.
 
 The NFT smart contract can do a few key things:
 
@@ -93,7 +93,7 @@ Ethereum's security comes from [proof-of-stake](/glossary/#pos). The system is d
 
 Security issues relating to NFTs are most often related to phishing scams, smart contract vulnerabilities or user errors (such as inadvertently exposing private keys), making good wallet security critical for NFT owners.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   More on security
 </ButtonLink>
 

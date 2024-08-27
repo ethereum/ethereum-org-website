@@ -49,7 +49,7 @@ Iji nyere aka mee ka nke a nwee nghọta karịa, nke a bụ ọmụmaatụ ole 
 
 Nke a ga-ekwe omume n'ihi na nkwekọrịta smart bụ ihe aghaghị emetuwu aka mgbe ha ga adị na Ethereum. Ị nweghị ike dezie Koodù ahụ (iwu DAO) na-enweghị ndị mmadụ ga achọpụta n'ihi na ọha na ahụ ihe niile.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Ọzọ na smart contracts
 </DocLink>
 

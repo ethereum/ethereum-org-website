@@ -31,7 +31,7 @@ sidebarDepth: 2
 
 イーサリアムノードの33%以上を占めるコンセンサスクライアントのバグがあると、コンセンサスレイヤーのファイナライズを妨げる可能性があります。つまり、トランザクションの取り消しや改ざんが発生するおそれがあります。 これはイーサリアム上に構築された多くのアプリ、特に分散型金融(DeFi)にとって非常に大きな問題となります。
 
-<Emoji text="🚨" me="1rem" /> さらに、3分の2のマジョリティを占めるクライアントの重大なバグにより、チェーンが<a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">誤って スプリットし、ファイナライズ</a>され、大量のバリデータが無効なチェーン上で立ち往生する可能性があります。 これらのバリデータが正しいチェーンに再び参加しようとする場合、スラッシングのペナルティを受けるか、時間がかかり高額となる任意退出後に、再度アクティベーションを行います。 スラッシングの規模は過失のあるノードの数に比例し、3分の2のマジョリティが最大のスラッシング(32 ETH)を受けます。
+<Emoji text="🚨" className="me-4" /> さらに、3分の2のマジョリティを占めるクライアントの重大なバグにより、チェーンが<a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">誤って スプリットし、ファイナライズ</a>され、大量のバリデータが無効なチェーン上で立ち往生する可能性があります。 これらのバリデータが正しいチェーンに再び参加しようとする場合、スラッシングのペナルティを受けるか、時間がかかり高額となる任意退出後に、再度アクティベーションを行います。 スラッシングの規模は過失のあるノードの数に比例し、3分の2のマジョリティが最大のスラッシング(32 ETH)を受けます。
 
 これらは可能性が低いシナリオですが、アクティブなノードにクライアントを均等に分散することで、イーサリアムのエコシステムはリスクを軽減することが出来ます。 特定のコンセンサスクライアントが、全ノードの33%のシェアを占めないことが理想です。
 
@@ -75,9 +75,9 @@ sidebarDepth: 2
 
 [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/)
 
-[Lodestar](https://github.com/ChainSafe/lodestar)
+[ロードスター](https://github.com/ChainSafe/lodestar)
 
-[Prysm](https://docs.prylabs.network/docs/getting-started)
+[プリズム](https://docs.prylabs.network/docs/getting-started)
 
 ノードオペレーターを大多数を占めるクライアントからの移行を奨励し、移行プロセスを加速できるよう、技術系のユーザーはマイノリティクライアント向けのチュートリアルやドキュメントの作成にご協力ください。 マイノリティコンセンサスクライアントへの移行に関するガイドは、 [clientdiversity.org](https://clientdiversity.org/)から入手できます。
 
@@ -90,7 +90,7 @@ sidebarDepth: 2
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/) **実行レイヤー:**
 
-- [execution-diversity.info](https://execution-diversity.info/)
+- [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
 ## 参考文献 {#further-reading}

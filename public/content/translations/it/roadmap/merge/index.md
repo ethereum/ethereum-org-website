@@ -202,7 +202,7 @@ La Fusione rappresenta l'adozione formale della Beacon Chain come nuovo livello 
 
 I blocchi sono invece proposti dai nodi di convalida, che ottengono ETH in staking in cambio del diritto di partecipare al consenso. Questi aggiornamenti stabiliscono le basi per gli aggiornamenti di scalabilità futuri, incluso lo sharding.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   La beacon chain
 </ButtonLink>
 
@@ -218,7 +218,7 @@ Originariamente, il piano prevedeva di lavorare allo sharding prima della Fusion
 
 I piani per lo sharding si stanno evolvendo rapidamente, ma data la nascita e il successo delle tecnologie di livello 2 per scalare l'esecuzione delle transazioni, i piani per lo sharding hanno spostato l'attenzione sul trovare il modo ottimale per distribuire il carico per memorizzare i dati di chiamata compressi dai contratti di rollup, consentendo la crescita esponenziale della capacità di rete. Questo sarebbe impossibile senza prima passare al Proof of stake.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Sharding
 </ButtonLink>
 

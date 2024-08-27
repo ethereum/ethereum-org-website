@@ -54,7 +54,7 @@ Vous pouvez utiliser chainlist.org pour trouver les détails RPC du réseau. Une
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vous voulez en savoir plus ?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>
 </InfoBanner>

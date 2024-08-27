@@ -99,7 +99,7 @@ La modalità di sincronizzazione e il client che scegli influenzeranno i requisi
 
 - Nota: Erigon non offre la sincronizzazione snap, ma è possibile la Potatura Completa (circa 500GB)
 
-Per i client di consenso, i requisiti di spazio dipendono anche dall'implementazione del client e dalle funzionalità abilitate (es. slasher del validatore), ma tengono generalmente conto di altri 200GB necessari per i dati della Beacon. Con un gran numero di validatori, cresce anche il carico della larghezza di banda. Puoi trovare [i dettagli sui requisiti del client di consenso in quest'analisi](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+Per i client di consenso, i requisiti di spazio dipendono anche dall'implementazione del client e dalle funzionalità abilitate (es. slasher del validatore), ma tengono generalmente conto di altri 200GB necessari per i dati della Beacon. Con un gran numero di validatori, cresce anche il carico della larghezza di banda. Puoi trovare i [dettagli sui requisiti del client di consenso in quest'analisi](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Soluzioni plug and play {#plug-and-play}
 
@@ -126,7 +126,7 @@ Diversi progetti intuitivi mirano a migliorare l'esperienza di configurazione di
 
 Di seguito trovi alcuni progetti che possono aiutarti a installare e controllare i client in pochi click:
 
-- [DappNode](https://docs.dappnode.io/user/quick-start/first-steps/) - DappNode non è fornito solo con una macchina da un fornitore. Il software, il launcher del nodo vero e proprio e il centro di controllo con molte funzionalità, sono utilizzabili su hardware arbitrario.
+- [DappNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path): DappNode non è fornito soltanto con una macchina da un venditore. Il software, il launcher del nodo vero e proprio e il centro di controllo con molte funzionalità, sono utilizzabili su hardware arbitrario.
 - [eth-docker](https://eth-docker.net/) - La configurazione automatizzata usando Docker, incentrata sullo staking facile e sicuro, richiede una conoscenza di base del terminale e di Docker, consigliata per gli utenti un po' più avanzati.
 - [Stereum](https://stereum.net/ethereum-node-setup/) - Launcher per installare i client su un server remoto tramite connessione SSH con una guida di configurazione con GUI, un centro di controllo e molte altre funzionalità.
 - [NiceNode](https://www.nicenode.xyz/) - Launcher con un'esperienza utente semplice per eseguire un nodo sul tuo computer. Basta scegliere i client e avviarli in pochi clic. Ancora in fase di sviluppo.
@@ -165,7 +165,7 @@ Vale anche la pena notare che la diversità dei client è un [problema sul livel
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
 
-La [diversità del client](/developers/docs/nodes-and-clients/client-diversity/) è cruciale per i nodi di consenso che eseguono validatori. Se la maggioranza dei validatori sta eseguendo una singola implementazione del client, la sicurezza della rete è a rischio. Si consiglia dunque di considerare la scelta di un client di minoranza.
+La [diversità del client](/developers/docs/nodes-and-clients/client-diversity/) è cruciale per i nodi di consenso che eseguono validatori. Se la maggioranza dei validatori sta operando un'implementazione singola del client, la sicurezza di rete è a rischio. Si consiglia dunque di considerare la scelta di un client di minoranza.
 
 [Visualizza l'uso più recente del client della rete](https://clientdiversity.org/) e scopri di più sulla [diversità dei client](/developers/docs/nodes-and-clients/client-diversity).
 
@@ -431,7 +431,7 @@ Valuta la possibilità di creare un servizio per eseguire automaticamente il tuo
 
 Devi mantenere aggiornato il software del tuo client con le patch di sicurezza, funzionalità ed [EIP](/eips/) più recenti. Specialmente prima di [diramazioni permanenti](/history/), assicurati che stai eseguendo la versione del client corretta.
 
-> Prima di importanti aggiornamenti di rete, la EF pubblica un post sul suo [blog](https://blog.ethereum.org). Puoi [iscriverti a questi annunci](https://groups.google.com/a/ethereum.org/g/announcements) per ricevere una notifica alla tua email quando il tuo nodo necessita di un aggiornamento.
+> Prima di importanti aggiornamenti di rete, la EF pubblica un post sul suo [blog](https://blog.ethereum.org). Puoi [iscriverti a questi annunci](https://blog.ethereum.org/category/protocol#subscribe) per ricevere una notifica nella tua mail quando il tuo nodo necessita di un aggiornamento.
 
 Aggiornare i client è molto semplice. Ogni client ha istruzioni specifiche nella propria documentazione, ma il processo consiste generalmente solo nello scaricare l'ultima versione e riavviare il client con il nuovo eseguibile. Il client dovrebbe riprendere da dove si è fermato, ma con gli aggiornamenti applicati.
 

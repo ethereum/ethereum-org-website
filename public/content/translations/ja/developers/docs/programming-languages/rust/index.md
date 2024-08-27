@@ -46,11 +46,13 @@ incomplete: true
 - [Solaris](https://github.com/paritytech/sol-rs) - _ネイティブParityクライアントEVMを使用したSolidityスマートコントラクトのユニットテストハーネス_
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Rustのイーサリアム仮想マシンの実装_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rustで書かれたWaveletスマートコントラクト_
-- [Foundry](https://github.com/gakonst/foundry)- _イーサリアムアプリケーション開発のためのツールキット_
-- [Ethers_rs](https://github.com/gakonst/ethers-rs)- _イーサリアムライブラリとウォレットの実装_
+- [Foundry](https://github.com/foundry-rs/foundry) - _イーサリアムアプリケーション開発のためのツールキット_
+- [Alloy](https://alloy.rs) - _Ethereum やその他の EVM ベースのチェーンと対話するための、高性能で十分にテストされ、文書化されたライブラリ。_
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _イーサリアムライブラリとウォレットの実装_
 - [SewUp](https://github.com/second-state/SewUp) - _Rustを使用したイーサリアムWebAssemblyコントラクトの構築と、一般的なバックエンドと同様の開発をサポートするライブラリ_
 - [Substreams](https://github.com/streamingfast/substreams) - _並列化ブロックチェーンデータインデックス技術_
 - [Reth](https://github.com/paradigmxyz/reth)Reth(Rust Ethereumの略称)は、新しいイーサリアムのフルノード実装
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Rustで書かれたイーサリアム・エコシステム・プロジェクトの厳選コレクション_
 
 もっとリソースをお探しですか？ [ethereum.org/developers](/developers/)をご確認ください。
 

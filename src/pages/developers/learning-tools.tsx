@@ -28,16 +28,15 @@ import BloomTechImage from "@/public/images/dev-tools/bloomtech.png"
 import BuildSpaceImage from "@/public/images/dev-tools/buildspace.png"
 import CaptureTheEtherImage from "@/public/images/dev-tools/capturetheether.png"
 import ChainIDEImage from "@/public/images/dev-tools/chainIDE.png"
-import ChainShotImage from "@/public/images/dev-tools/chainshot.png"
 import ConsensysImage from "@/public/images/dev-tools/consensys.png"
 import CryptoZombieImage from "@/public/images/dev-tools/crypto-zombie.png"
 import DappWorldImage from "@/public/images/dev-tools/dapp-world.png"
 import EthDotBuildImage from "@/public/images/dev-tools/eth-dot-build.png"
 import MetaschoolImage from "@/public/images/dev-tools/metaschool.png"
 import NFTSchoolImage from "@/public/images/dev-tools/nftschool.png"
+import NodeGuardiansImage from "@/public/images/dev-tools/node-guardians.jpg"
 import EthernautImage from "@/public/images/dev-tools/oz.png"
 import PlatziImage from "@/public/images/dev-tools/platzi.png"
-import PointerImage from "@/public/images/dev-tools/pointer.png"
 import QuestbookImage from "@/public/images/dev-tools/questbook.png"
 import RemixImage from "@/public/images/dev-tools/remix.png"
 import ReplitImage from "@/public/images/dev-tools/replit.png"
@@ -225,18 +224,18 @@ const LearningToolsPage = () => {
       subjects: ["Solidity"],
     },
     {
-      name: 'DApp World',
+      name: "DApp World",
       description: t(
         "page-developers-learning-tools:page-learning-tools-dapp-world-description"
       ),
-      url: 'https://dapp-world.com',
+      url: "https://dapp-world.com",
       image: DappWorldImage,
       alt: t(
         "page-developers-learning-tools:page-learning-tools-dapp-world-logo-alt"
       ),
       background: "#e5e7eb",
       subjects: ["Solidity", "web3"],
-    }
+    },
   ])
 
   const games: Array<LearningTool> = [
@@ -279,22 +278,22 @@ const LearningToolsPage = () => {
       background: "#1b9aaa",
       subjects: ["Solidity"],
     },
+    {
+      name: "Node Guardians",
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-node-guardians-description"
+      ),
+      url: "https://nodeguardians.io/",
+      image: NodeGuardiansImage,
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-node-guardians-logo-alt"
+      ),
+      background: "#000",
+      subjects: ["Solidity", "web3"],
+    },
   ]
 
   const bootcamps: Array<LearningTool> = [
-    {
-      name: "ChainShot",
-      description: t(
-        "page-developers-learning-tools:page-learning-tools-chainshot-description"
-      ),
-      url: "https://www.chainshot.com",
-      image: ChainShotImage,
-      alt: t(
-        "page-developers-learning-tools:page-learning-tools-chainshot-logo-alt"
-      ),
-      background: "#111f29",
-      subjects: ["Solidity", "Vyper", "web3"],
-    },
     {
       name: "ConsenSys Academy",
       description: t(
@@ -371,19 +370,6 @@ const LearningToolsPage = () => {
         "page-developers-learning-tools:page-learning-tools-nftschool-logo-alt"
       ),
       background: "#111f29",
-      subjects: ["Solidity", "web3"],
-    },
-    {
-      name: "Pointer",
-      description: t(
-        "page-developers-learning-tools:page-learning-tools-pointer-description"
-      ),
-      url: "https://pointer.gg/",
-      image: PointerImage,
-      alt: t(
-        "page-developers-learning-tools:page-learning-tools-pointer-logo-alt"
-      ),
-      background: "#171717",
       subjects: ["Solidity", "web3"],
     },
     {
@@ -496,7 +482,7 @@ const LearningToolsPage = () => {
             }
           >
             <Box>
-              <ButtonLink to="/developers/docs/">
+              <ButtonLink href="/developers/docs/">
                 <Translation id="page-developers-learning-tools:page-learning-tools-browse-docs" />
               </ButtonLink>
             </Box>

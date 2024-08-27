@@ -104,6 +104,7 @@ import pooltogether from "@/public/images/dapps/pooltogether.png"
 import pwn from "@/public/images/dapps/pwn.png"
 import radicle from "@/public/images/dapps/radicle.png"
 import rarible from "@/public/images/dapps/rarible.png"
+import requestFinance from "@/public/images/dapps/requestFinance.png"
 import rotki from "@/public/images/dapps/rotki.png"
 import rubic from "@/public/images/dapps/rubic.png"
 import sablier from "@/public/images/dapps/sablier.png"
@@ -828,6 +829,13 @@ const DappsPage = () => {
       image: sablier,
       alt: t("page-dapps-sablier-logo-alt"),
     },
+    {
+      title: "Request Finance",
+      description: t("page-dapps-dapp-description-request-finance"),
+      link: "https://request.finance",
+      image: requestFinance,
+      alt: t("page-dapps-request-finance-logo-alt"),
+    },
   ]
 
   const investments = [
@@ -1176,7 +1184,7 @@ const DappsPage = () => {
       image: meeds,
       alt: t("page-dapps-meeds-logo-alt"),
     },
-  ]  
+  ]
 
   const demandAggregator = [
     {
@@ -1325,7 +1333,7 @@ const DappsPage = () => {
     buttons: [
       {
         content: t("page-dapps-explore-dapps-title"),
-        to: "#beginner",
+        href: "#beginner",
         matomo: {
           eventCategory: "dapp hero buttons",
           eventAction: "click",
@@ -1334,7 +1342,7 @@ const DappsPage = () => {
       },
       {
         content: t("page-dapps-what-are-dapps"),
-        to: "#what-are-dapps",
+        href: "#what-are-dapps",
         variant: "outline",
         matomo: {
           eventCategory: "dapp hero buttons",
@@ -1360,7 +1368,7 @@ const DappsPage = () => {
         </Text>
         <Row>
           <StepBoxContainer>
-            <StepBox to="/get-eth/">
+            <StepBox href="/get-eth/">
               <Box>
                 <StyledH3>
                   {/* TODO: Use CSS counter for intl-friendly numbering  */}
@@ -1380,7 +1388,7 @@ const DappsPage = () => {
                 {t("common:get-eth")}
               </ButtonSecondary>
             </StepBox>
-            <StepBox to="/wallets/find-wallet/">
+            <StepBox href="/wallets/find-wallet/">
               <Box>
                 <StyledH3>2. {t("page-dapps-set-up-a-wallet-title")}</StyledH3>
                 <Text>{t("page-dapps-set-up-a-wallet-description")}</Text>
@@ -1397,7 +1405,7 @@ const DappsPage = () => {
                 {t("page-dapps-set-up-a-wallet-button")}
               </ButtonSecondary>
             </StepBox>
-            <StepBox to="#explore">
+            <StepBox href="#explore">
               <Box>
                 <StyledH3>3. {t("page-dapps-ready-title")}</StyledH3>
                 <Text>{t("page-dapps-ready-description")}</Text>
@@ -1459,7 +1467,7 @@ const DappsPage = () => {
                   })
                 }}
               >
-                <Emoji fontSize="2xl" me={`1rem`} text={category.emoji} />
+                <Emoji className="me-4 text-2xl" text={category.emoji} />
                 <OptionText>{category.title}</OptionText>
               </Option>
             )
@@ -1472,7 +1480,7 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-finance-title")}{" "}
-                  <Emoji fontSize="5xl" ms="2" text=":money_with_wings:" />
+                  <Emoji className="ms-2 text-5xl" text=":money_with_wings:" />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-finance-description")}</Subtitle>
               </Column>
@@ -1588,7 +1596,7 @@ const DappsPage = () => {
               alt={t("page-dapps-wallet-callout-image-alt")}
             >
               <Box>
-                <ButtonLink to="/wallets/find-wallet/">
+                <ButtonLink href="/wallets/find-wallet/">
                   {t("page-dapps-wallet-callout-button")}
                 </ButtonLink>
               </Box>
@@ -1601,7 +1609,7 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-gaming-title")}{" "}
-                  <Emoji fontSize="5xl" ms="2" text=":video_game:" />
+                  <Emoji className="ms-2 text-5xl" text=":video_game:" />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-gaming-description")}</Subtitle>
               </Column>
@@ -1627,7 +1635,7 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-technology-title")}{" "}
-                  <Emoji fontSize="5xl" ms="2" text=":keyboard:" />
+                  <Emoji className="ms-2 text-5xl" text=":keyboard:" />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-technology-description")}</Subtitle>
               </Column>
@@ -1672,7 +1680,10 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-collectibles-title")}{" "}
-                  <Emoji fontSize="5xl" ms={2} text=":frame_with_picture:" />
+                  <Emoji
+                    className="ms-2 text-5xl"
+                    text=":frame_with_picture:"
+                  />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-collectibles-description")}</Subtitle>
               </Column>
@@ -1721,7 +1732,10 @@ const DappsPage = () => {
               <Column>
                 <H2>
                   {t("page-dapps-metaverse-title")}{" "}
-                  <Emoji fontSize="5xl" ms="2" text=":globe_with_meridians:" />
+                  <Emoji
+                    className="ms-2 text-5xl"
+                    text=":globe_with_meridians:"
+                  />
                 </H2>
                 <Subtitle>{t("page-dapps-metaverse-description")}</Subtitle>
               </Column>
@@ -1752,7 +1766,7 @@ const DappsPage = () => {
               <Column>
                 <H2>
                   {t("page-dapps-social-title")}{" "}
-                  <Emoji fontSize="5xl" ms="2" text=":incoming_envelope:" />
+                  <Emoji className="ms-2 text-5xl" text=":incoming_envelope:" />
                 </H2>
                 <Subtitle>{t("page-dapps-social-description")}</Subtitle>
               </Column>
@@ -1794,7 +1808,7 @@ const DappsPage = () => {
                 <ProductList
                   category={t("page-dapps-category-community")}
                   content={community}
-                />                
+                />
               </LeftColumn>
               <RightColumn />
             </TwoColumnContent>
@@ -1819,7 +1833,7 @@ const DappsPage = () => {
             <Box mt={12}>
               <H2>
                 {t("page-dapps-magic-title-1")}{" "}
-                <Emoji fontSize="2rem" text=":sparkles:" />{" "}
+                <Emoji className="text-[2rem]" text=":sparkles:" />{" "}
                 {t("page-dapps-magic-title-2")}{" "}
                 {categories[selectedCategory].benefitsTitle}
               </H2>
@@ -1839,21 +1853,21 @@ const DappsPage = () => {
               </CardContainer>
               {selectedCategory === CategoryType.FINANCE && (
                 <MoreButtonContainer>
-                  <ButtonLink variant="outline" to="/defi/">
+                  <ButtonLink variant="outline" href="/defi/">
                     {t("page-dapps-more-on-defi-button")}
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
               {selectedCategory === CategoryType.COLLECTIBLES && (
                 <MoreButtonContainer>
-                  <ButtonLink variant="outline" to="/nft/">
+                  <ButtonLink variant="outline" href="/nft/">
                     {t("page-dapps-more-on-nft-button")}
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
               {selectedCategory === CategoryType.GAMING && (
                 <MoreButtonContainer>
-                  <ButtonLink variant="outline" to="/nft/">
+                  <ButtonLink variant="outline" href="/nft/">
                     {t("page-dapps-more-on-nft-gaming-button")}
                   </ButtonLink>
                 </MoreButtonContainer>
@@ -1910,10 +1924,10 @@ const DappsPage = () => {
             </Text>
             <Text>{t("page-dapps-how-dapps-work-p2")}</Text>
             <Text>{t("page-dapps-how-dapps-work-p3")}</Text>
-            <DocLink to="/developers/docs/dapps/">
+            <DocLink href="/developers/docs/dapps/">
               {t("page-dapps-docklink-dapps")}
             </DocLink>
-            <DocLink to="/developers/docs/smart-contracts/">
+            <DocLink href="/developers/docs/smart-contracts/">
               {t("page-dapps-docklink-smart-contracts")}
             </DocLink>
           </LeftColumn>
@@ -1925,7 +1939,7 @@ const DappsPage = () => {
               alt={t("page-dapps-learn-callout-image-alt")}
             >
               <Box>
-                <ButtonLink to="/developers/">
+                <ButtonLink href="/developers/">
                   {t("page-dapps-learn-callout-button")}
                 </ButtonLink>
               </Box>

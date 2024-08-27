@@ -63,7 +63,7 @@ Web3 memperbolehkan kepemilikan langsung melalui [Token yang tidak dapat dipertu
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Pelajari lebih lanjut tentang NFT</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     Selengkapnya tentang NFT
   </ButtonLink>
 </InfoBanner>
@@ -88,7 +88,7 @@ Namun, orang-orang mendefinisikan banyak komunitas Web3 sebagai DAO. Semua komun
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Pelajari lebih lanjut tentang DAO</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     Pelajari lebih lanjut tentang DAO
   </ButtonLink>
 </InfoBanner>
@@ -99,7 +99,7 @@ Biasanya, Anda dapat membuat akun untuk setiap platform yang Anda gunakan. Sebag
 
 Web3 memecahkan masalah-masalah ini dengan memungkinkan Anda untuk mengontrol identitas digital Anda dengan alamat Ethereum dan profil ENS. Menggunakan alamat Ethereum menyediakan login tunggal di seluruh platform yang aman, tahan sensor, dan anonim.
 
-<ButtonLink to="https://login.xyz/">
+<ButtonLink href="https://login.xyz/">
   Masuk dengan Ethereum
 </ButtonLink>
 
@@ -107,7 +107,7 @@ Web3 memecahkan masalah-masalah ini dengan memungkinkan Anda untuk mengontrol id
 
 Infrastruktur pembayaran Web2 bergantung pada bank dan pemroses pembayaran, tidak termasuk orang tanpa rekening bank atau mereka yang kebetulan tinggal di perbatasan negara yang salah. Web3 menggunakan token seperti [ETH](/eth/) untuk kirim uang secara langsung di browser dan tidak memerlukan pihak ketiga yang tepercaya.
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   Selengkapnya tentang ETH
 </ButtonLink>
 

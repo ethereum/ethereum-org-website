@@ -78,7 +78,7 @@ summaryPoints:
 
 Валідатори також можуть повністю вийти зі статусу валідатора, що розблокує їх залишковий баланс ETH для виведення. Облікові записи, які надали адресу виведення виконання та завершили процес виходу, отримають увесь свій баланс на адресу виведення, надану під час наступного сканування валідатора.
 
-<ButtonLink to="/staking/withdrawals/">Докладніше про виведення коштів під час стейкінгу</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Докладніше про виведення коштів під час стейкінгу</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Що станеться, якщо мене буде скорочено?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

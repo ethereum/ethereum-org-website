@@ -243,7 +243,7 @@ const GasPage = () => {
                   "page-gas-how-do-i-pay-less-gas-card-3-description"
                 )}
               >
-                <ButtonLink w="fit-content" to="/layer-2/">
+                <ButtonLink w="fit-content" href="/layer-2/">
                   {t("page-gas-try-layer-2")}
                 </ButtonLink>
               </StyledCard>
@@ -282,7 +282,7 @@ const GasPage = () => {
             alignSelf="center"
             mt={{ base: 16, lg: 2 }}
           >
-            <Emoji text=":cat:" fontSize="5xl" />
+            <Emoji text=":cat:" className="text-5xl" />
             <H3>{t("page-gas-attack-of-the-cryptokitties-header")}</H3>
             <Text>{t("page-gas-attack-of-the-cryptokitties-text")}</Text>
           </GhostCard>
@@ -306,7 +306,7 @@ const GasPage = () => {
                   key={benefit.emoji}
                   emoji={benefit.emoji}
                   description={benefit.description}
-                  emojiSize={3}
+                  className="text-5xl"
                   align="center"
                 />
               </Box>
@@ -427,7 +427,7 @@ const GasPage = () => {
             )}
           >
             <Box>
-              <ButtonLink to="/layer-2/">
+              <ButtonLink href="/layer-2/">
                 {t("page-gas-use-layer-2")}
               </ButtonLink>
             </Box>
@@ -444,7 +444,7 @@ const GasPage = () => {
             )}
           >
             <Box>
-              <ButtonLink to="/dapps/">
+              <ButtonLink href="/dapps/">
                 {t("page-community:page-community-explore-dapps")}
               </ButtonLink>
             </Box>

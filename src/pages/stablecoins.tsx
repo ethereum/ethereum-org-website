@@ -458,7 +458,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                 <HorizontalCard
                   emoji={token.emoji}
                   description={token.description}
-                  emojiSize={3}
+                  className="text-5xl"
                 />
               </Box>
             ))}
@@ -468,7 +468,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             me={{ base: 0, lg: 8 }}
             mt={{ base: 16, lg: 2 }}
           >
-            <Emoji text=":pizza:" fontSize="5xl" />
+            <Emoji text=":pizza:" className="text-5xl" />
             <H3>{t("page-stablecoins-bitcoin-pizza")}</H3>
             <Text>{t("page-stablecoins-bitcoin-pizza-body")} </Text>
           </GhostCard>
@@ -542,7 +542,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <Box>
                       <ButtonLink
                         variant="outline"
-                        to="https://www.coinbase.com/price/dai#WhatIsDaiDAI"
+                        href="https://www.coinbase.com/price/dai#WhatIsDaiDAI"
                         isSecondary
                       >
                         {t("page-stablecoins-dai-banner-learn-button")}
@@ -593,7 +593,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                   <Box>
                     <ButtonLink
                       variant="outline"
-                      to="https://www.coinbase.com/usdc"
+                      href="https://www.coinbase.com/usdc"
                       isSecondary
                     >
                       {t("page-stablecoins-usdc-banner-learn-button")}
@@ -663,12 +663,12 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
         >
           <Flex flexFlow="wrap" gap="1em">
-            <ButtonLink to="/dapps/">
+            <ButtonLink href="/dapps/">
               {t("page-stablecoins-explore-dapps")}
             </ButtonLink>
             <ButtonLink
               variant="outline"
-              to="/defi/"
+              href="/defi/"
               whiteSpace="normal"
               isSecondary
             >
@@ -706,7 +706,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             p={8}
             mx={{ base: "auto", lg: 0 }}
           >
-            <Emoji mb={4} text=":bank:" fontSize="5rem" />
+            <Emoji className="mb-4 text-[5rem]" text=":bank:" />
             <Text as="p" fontSize="64px" lineHeight="100%">
               {t("page-stablecoins-bank-apy")}
             </Text>

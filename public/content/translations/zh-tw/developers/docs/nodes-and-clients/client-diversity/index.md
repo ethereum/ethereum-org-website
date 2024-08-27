@@ -31,7 +31,7 @@ sidebarDepth: 2
 
 超過 33% 的以太坊節點共識用戶端中都存在的錯誤可能會阻止共識層的最終確定，這表示使用者沒辦法相信交易在某個時刻不會被撤銷或更改。 這對建立在以太坊上的許多應用程式是非常大的問題，尤其是去中心化金融。
 
-<Emoji text="🚨" me="1rem" /> 更糟糕的是，在兩三個主流用戶端中的重大錯誤可能會導致鏈<a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">錯誤地分叉和最終確定</a>，使大量的驗證者被卡在無效的鏈上。 如果這些驗證者想重新加入正確的鏈，它們可能會面臨罰沒或緩慢且昂貴的自願提款和重新啟用流程。 罰沒的規模與有罪節點的數量成正比，其中三分之二的主流節點會被罰沒最高金額（32 以太幣）。
+<Emoji text="🚨" className="me-4" /> 更糟糕的是，在兩三個主流用戶端中的重大錯誤可能會導致鏈<a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">錯誤地分叉和最終確定</a>，使大量的驗證者被卡在無效的鏈上。 如果這些驗證者想重新加入正確的鏈，它們可能會面臨罰沒或緩慢且昂貴的自願提款和重新啟用流程。 罰沒的規模與有罪節點的數量成正比，其中三分之二的主流節點會被罰沒最高金額（32 以太幣）。
 
 雖然這些情況不太可能發生，以太坊生態系可以透過平均分佈用戶端至各個活躍節點以降低風險。 理想上，不會有共識用戶端超過總節點數的 33%。
 
@@ -90,7 +90,7 @@ sidebarDepth: 2
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/) **執行層：**
 
-- [execution-diversity.info](https://execution-diversity.info/)
+- [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
 ## 衍生閱讀 {#further-reading}

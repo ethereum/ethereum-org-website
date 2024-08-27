@@ -74,7 +74,7 @@ Temelia unei organizaţii DAO este reprezentată de contractul său inteligent. 
 
 Acest lucru este posibil deoarece contractele inteligente nu pot fi falsificate odată ce ajung live pe Ethereum. Nu puteţi pur și simplu să modificaţi codul (regulile organizaţiei DAO) fără ca lumea să observe, pentru că totul este public.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Mai multe despre contractele inteligente
 </DocLink>
 

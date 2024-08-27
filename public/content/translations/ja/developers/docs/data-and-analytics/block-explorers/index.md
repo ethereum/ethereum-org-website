@@ -25,8 +25,12 @@ sidebarDepth: 3
 - [Ethplorer](https://ethplorer.io/) –_中国語、スペイン語、フランス語、トルコ語、ロシア語、韓国語、ベトナム語でも利用できます_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Otterscan](https://otterscan.io/)
 - [Rantom](https://rantom.app/)
+
+## オープンソースツール {#open-source-tools}
+
+- [Otterscan](https://otterscan.io/)
+- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 
 ## データ {#data}
 

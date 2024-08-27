@@ -1,6 +1,6 @@
-import { useColorModeValue } from "@chakra-ui/react"
-
 import { Level } from "@/components/Nav/types"
+
+import useColorModeValue from "./useColorModeValue"
 
 type LevelColors = {
   subtext: string
@@ -15,6 +15,12 @@ type NavMenuColors = {
   active: string
   lvl: Record<Level, LevelColors>
 }
+
+/**
+ * Hook to provide colors for the mobile navigation menu.
+ *
+ * TODO: replace with useNavMenuColorsTw when the desktop menu is migrated.
+ */
 
 export const useNavMenuColors = (): NavMenuColors => ({
   body: "body.base",

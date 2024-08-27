@@ -8,10 +8,10 @@ import Highlight, {
 import Prism from "prism-react-renderer/prism"
 import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
 
+// https://github.com/FormidableLabs/prism-react-renderer/tree/master#custom-language-support
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
 
-// https://github.com/FormidableLabs/prism-react-renderer/tree/master#custom-language-support
 import { LINES_BEFORE_COLLAPSABLE } from "@/lib/constants"
 ;(typeof global !== "undefined" ? global : window).Prism = Prism
 require("prismjs/components/prism-solidity")
@@ -276,6 +276,7 @@ const Codeblock = ({
               style={style}
               className={className}
               pt={hasTopBar ? "2.75rem" : 6}
+              pb={6}
               ps={4}
               m={0}
               overflow="visible"
@@ -330,12 +331,15 @@ const Codeblock = ({
                         <TopBarItem>
                           {!isCopied ? (
                             <>
-                              <Emoji text=":clipboard:" fontSize="md" />{" "}
+                              <Emoji text=":clipboard:" className="text-md" />{" "}
                               {t("copy")}
                             </>
                           ) : (
                             <>
-                              <Emoji text=":white_check_mark:" fontSize="md" />{" "}
+                              <Emoji
+                                text=":white_check_mark:"
+                                className="text-md"
+                              />{" "}
                               {t("copied")}
                             </>
                           )}

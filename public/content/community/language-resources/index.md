@@ -97,7 +97,7 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Omer Greismen (OpenZeppelin) - How We Prevented a 15 Billion Dollars Smart Contract Hack](https://www.cryptojungle.co.il/omer-greisman-openzeppelin/)
 - [Shy Datika (INX) - Tokenization and the future of securities, including is Ethereum a security](https://www.cryptojungle.co.il/shy-datika-tokenization/)
 - [Roy Confino (Lemonade) - Insurance @ Ethereum](https://www.cryptojungle.co.il/roy-confino-insurance/)
-- [Idan Ofrat (Fireblocks) - Instutional Adoption](https://www.cryptojungle.co.il/idan-ofrat-fireblocks/)
+- [Idan Ofrat (Fireblocks) - Institutional Adoption](https://www.cryptojungle.co.il/idan-ofrat-fireblocks/)
 - [Gal Weizman (MetaMask) - What is MetaMask](https://www.cryptojungle.co.il/gal-weizman-metamask/)
 - [Dror Aviely (Consensys) - The center of Ethereum](https://www.cryptojungle.co.il/dror-aviely-ethereum-center/)
 - [Nir Rozin - Being a cryptopunk](https://www.cryptojungle.co.il/nir-rozin-cryptopunk/)

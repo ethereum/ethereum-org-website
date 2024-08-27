@@ -16,6 +16,7 @@ import Emoji from "@/components/Emoji"
 import { BaseLink } from "@/components/Link"
 import Text from "@/components/OldText"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import docLinks from "@/data/developer-docs-links.yaml"
@@ -38,7 +39,7 @@ const TextDiv = ({ children, ...props }: FlexProps) => (
 )
 
 type DocsArrayProps = {
-  to: string
+  href: string
   id: TranslationKey
 }
 
@@ -50,7 +51,7 @@ type CardLinkProps = {
 
 const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
   const { t } = useTranslation("page-developers-docs")
-  const { flipForRtl } = useRtlFlip()
+  const { isRtl } = useRtlFlip()
 
   const xPadding = isPrev ? { ps: "0" } : { pe: 0 }
 
@@ -70,8 +71,10 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
       <Box textDecoration="none" p={4} h="100%" order={isPrev ? 0 : 1}>
         <Emoji
           text={isPrev ? ":point_left:" : ":point_right:"}
-          fontSize="5xl"
-          transform={contentNotTranslated ? undefined : flipForRtl}
+          className={cn(
+            "text-5xl",
+            !contentNotTranslated && isRtl ? "-scale-x-100" : ""
+          )}
         />
       </Box>
       <TextDiv {...xPadding} {...(!isPrev && { textAlign: "end" })}>
@@ -80,7 +83,7 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
         </Text>
         <LinkOverlay
           as={BaseLink}
-          href={docData.to}
+          href={docData.href}
           textAlign={isPrev ? "start" : "end"}
           rel={isPrev ? "prev" : "next"}
           onClick={() => {
@@ -112,12 +115,12 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
       if (item.items) {
         // And if item has a 'to' key
         // Add 'to' path and 'id' to docsArray
-        item.to && docsArray.push({ to: item.to, id: item.id })
+        item.href && docsArray.push({ href: item.href, id: item.id })
         // Then recursively add sub-items
         getDocs(item.items)
       } else {
         // If object has no further 'items', add and continue
-        docsArray.push({ to: item.to, id: item.id })
+        docsArray.push({ href: item.href, id: item.id })
       }
     }
   }
@@ -129,8 +132,8 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
   let currentIndex = 0
   for (let i = 0; i < docsArray.length; i++) {
     if (
-      asPath.indexOf(docsArray[i].to) >= 0 &&
-      asPath.length === docsArray[i].to.length
+      asPath.indexOf(docsArray[i].href) >= 0 &&
+      asPath.length === docsArray[i].href.length
     ) {
       currentIndex = i
     }

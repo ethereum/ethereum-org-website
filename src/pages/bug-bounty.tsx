@@ -48,8 +48,10 @@ import nethermind from "@/public/images/upgrades/nethermind.png"
 import nimbus from "@/public/images/upgrades/nimbus-cloud.png"
 import prysm from "@/public/images/upgrades/prysm.png"
 import reth from "@/public/images/upgrades/reth.png"
+import solidity from "@/public/images/upgrades/solidity.png"
 import tekuDark from "@/public/images/upgrades/teku-dark.png"
 import tekuLight from "@/public/images/upgrades/teku-light.png"
+import vyper from "@/public/images/upgrades/vyper.png"
 
 const Page = (props: ChildOnlyProp) => (
   <Box
@@ -325,6 +327,12 @@ type Spec = {
   link: string
 }
 
+type Language = {
+  title: string
+  link: string
+  image: ImageProps["src"]
+}
+
 const sortBountyHuntersFn = (a: BountyHuntersArg, b: BountyHuntersArg) => {
   if (!a.score || !b.score) return 0
   return b.score - a.score
@@ -457,6 +465,19 @@ const BugBountiesPage = () => {
     },
   ]
 
+  const languages: Language[] = [
+    {
+      title: "Solidity",
+      link: "https://soliditylang.org/",
+      image: solidity,
+    },
+    {
+      title: "Vyper",
+      link: "https://vyperlang.org/",
+      image: vyper,
+    },
+  ]
+
   const iconImageProps = {
     width: 60,
   }
@@ -480,10 +501,10 @@ const BugBountiesPage = () => {
             </SloganGradient>
             <Subtitle>{t("page-upgrades-bug-bounty-subtitle")}</Subtitle>
             <ButtonRow>
-              <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
+              <StyledButton href="https://forms.gle/Gnh4gzGh66Yc3V7G8">
                 {t("page-upgrades-bug-bounty-submit")}
               </StyledButton>
-              <StyledButton variant="outline" to="#rules" isSecondary>
+              <StyledButton variant="outline" href="#rules" isSecondary>
                 {t("page-upgrades-bug-bounty-rules")}
               </StyledButton>
             </ButtonRow>
@@ -662,9 +683,7 @@ const BugBountiesPage = () => {
                 >
                   {t("page-upgrades-bug-bounty-help-links")}
                 </OldHeading>
-                <InlineLink href="https://github.com/ethereum/solidity/blob/develop/SECURITY.md">
-                  SECURITY.md
-                </InlineLink>
+                <CardList items={languages} />
               </Box>
             </StyledCard>
             <StyledCard
@@ -937,7 +956,7 @@ const BugBountiesPage = () => {
             </InlineLink>
           </Text>
         </Box>
-        <Emoji fontSize="5xl" text=":email:" />
+        <Emoji className="text-5xl" text=":email:" />
       </Contact>
       <FeedbackCard />
     </Page>

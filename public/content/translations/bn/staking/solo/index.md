@@ -190,7 +190,7 @@ summaryPoints:
 
 আনলক করতে এবং আপনার সম্পূর্ণ ব্যালেন্স ফেরত পেতে আপনাকে অবশ্যই আপনার ভ্যালিডেটর বের করার প্রক্রিয়াটি সম্পূর্ণ করতে হবে।
 
-<ButtonLink to="/staking/withdrawals/">স্টেকিং প্রত্যাহার এর উপর আরো</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">স্টেকিং প্রত্যাহার এর উপর আরো</ButtonLink>
 </ExpandableCard>
 
 ## Further reading {#further-reading}

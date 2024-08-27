@@ -1,5 +1,5 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
+import { useTheme } from "next-themes"
 import {
   BsBook,
   BsBuildings,
@@ -18,27 +18,22 @@ import {
   BsUiChecksGrid,
 } from "react-icons/bs"
 import { PiFlask, PiUsersFourLight } from "react-icons/pi"
-import {
-  useColorMode,
-  useColorModeValue,
-  useDisclosure,
-} from "@chakra-ui/react"
+import { useColorMode } from "@chakra-ui/react"
 
 import { EthereumIcon } from "@/components/icons/EthereumIcon"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { FROM_QUERY } from "@/lib/constants"
-
 import type { NavSections } from "./types"
 
+import useColorModeValue from "@/hooks/useColorModeValue"
+
 export const useNav = () => {
-  const { asPath } = useRouter()
-  const { isOpen, onToggle } = useDisclosure()
   const { t } = useTranslation("common")
+  const { resolvedTheme, setTheme } = useTheme()
+  const { setColorMode } = useColorMode()
 
   const colorToggleEvent = useColorModeValue("dark mode", "light mode") // This will be inverted as the state is changing
-  const { toggleColorMode: chakraToggleColorMode } = useColorMode()
 
   const linkSections: NavSections = {
     learn: {
@@ -470,14 +465,9 @@ export const useNav = () => {
     },
   }
 
-  const splitPath = asPath.split("/")
-  const fromPageParameter =
-    splitPath.length > 1 && splitPath[1] !== "languages"
-      ? `?${FROM_QUERY}=/${splitPath.slice(1).join("/")}`
-      : ""
-
   const toggleColorMode = () => {
-    chakraToggleColorMode()
+    setTheme(resolvedTheme === "dark" ? "light" : "dark")
+    setColorMode(resolvedTheme === "dark" ? "light" : "dark")
     trackCustomEvent({
       eventCategory: "nav bar",
       eventAction: "click",
@@ -485,17 +475,8 @@ export const useNav = () => {
     })
   }
 
-  const mobileNavProps = {
-    fromPageParameter,
-    isOpen,
-    toggleColorMode,
-    onToggle,
-  }
-
   return {
-    fromPageParameter,
     linkSections,
-    mobileNavProps,
     toggleColorMode,
   }
 }

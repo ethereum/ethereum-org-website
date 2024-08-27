@@ -32,6 +32,7 @@ ethereum.orgは、40言語以上のネイティブに翻訳されており、各
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - ブラジル版Cointelegraph、主要な暗号通貨報道機関
 - [Livecoins](http://www.livecoins.com.br/ethereum) - 暗号通貨ニュースとツール
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - 暗号通貨ニュースとレポート
+- [Modular Crypto](https://modularcrypto.xyz/) - 暗号通貨ニュースおよび教育記事
 
 **教育**
 
