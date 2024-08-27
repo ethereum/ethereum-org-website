@@ -12398,6 +12398,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "yannggg",
+      "name": "Yann Gerardi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29145014?v=4",
+      "profile": "https://www.mtpelerin.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
