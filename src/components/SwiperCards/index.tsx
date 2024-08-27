@@ -1,4 +1,5 @@
-import { EffectCards } from "swiper/modules"
+import { MdChevronLeft, MdChevronRight } from "react-icons/md"
+import { EffectCards, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 import type { ClassNameProp } from "@/lib/types"
@@ -11,10 +12,9 @@ import { useBentoBox } from "../BentoBox/useBentoBox"
 
 import "swiper/css"
 import "swiper/css/effect-cards"
-// import "swiper/css/navigation"
-// import "swiper/css/pagination"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
 
-// TODO: Fix height constraints on
 const SwiperCards = ({ className }: ClassNameProp) => {
   const { items } = useBentoBox()
   return (
@@ -26,14 +26,20 @@ const SwiperCards = ({ className }: ClassNameProp) => {
     >
       <Title />
       <Swiper
-        className="mx-auto mt-4 h-fit max-w-128"
+        className="mx-auto mt-4 !flex h-fit max-w-128 flex-col items-center"
         effect="cards"
-        grabCursor
-        cssMode
-        modules={[EffectCards]}
+        pagination={{ clickable: true }}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
+        modules={[EffectCards, Pagination, Navigation]}
       >
         {items.map(({ className, ...item }) => (
-          <SwiperSlide key={item.title}>
+          <SwiperSlide
+            key={item.title}
+            className="overflow-visible rounded-2xl shadow-card-hover"
+          >
             <BentoCard
               imgHeight={220}
               className={cn(className, "bg-background text-body")}
@@ -42,6 +48,10 @@ const SwiperCards = ({ className }: ClassNameProp) => {
             />
           </SwiperSlide>
         ))}
+
+        <MdChevronLeft className="swiper-button-prev" />
+        <div className="swiper-pagination" />
+        <MdChevronRight className="swiper-button-next" />
       </Swiper>
     </div>
   )

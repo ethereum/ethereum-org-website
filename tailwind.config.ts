@@ -207,6 +207,7 @@ const config = {
           "var(--shadow-1), var(--shadow-2), var(--shadow-3), var(--shadow-4)",
         "svg-button-link-hover":
           "var(--shadow-1-hover), var(--shadow-2-hover), var(--shadow-3-hover), var(--shadow-4-hover)",
+        "card-hover": "var(--shadow-body-md), var(--shadow-body-lg)",
       },
       spacing: {
         7.5: "1.875rem",

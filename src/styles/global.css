@@ -220,3 +220,49 @@
     }
   }
 }
+
+@layer components {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    @apply bg-background-highlight;
+  }
+
+  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    @apply !relative;
+  }
+
+  .swiper-pagination {
+    @apply relative mt-8 flex h-[26px] max-w-48 items-center justify-center rounded-full bg-background-highlight;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet {
+    @apply bg-primary-high-contrast;
+  }
+
+  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
+    .swiper-pagination-bullet-active {
+    @apply bg-primary-hover;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply !h-6 !w-fit fill-primary px-2;
+
+    top: calc(100% - 11px) !important;
+    --nav-inset: calc(50% - 6rem);
+  }
+
+  .swiper-button-next {
+    inset-inline-end: var(--nav-inset) !important;
+    inset-inline-start: auto !important;
+  }
+
+  .swiper-button-prev {
+    inset-inline-end: auto !important;
+    inset-inline-start: var(--nav-inset) !important;
+  }
+}
+
+.swiper-slide-shadow {
+  background: transparent !important;
+}
