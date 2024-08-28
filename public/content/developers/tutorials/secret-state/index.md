@@ -26,7 +26,7 @@ After reading this article you will know how to create this kind of secret state
 
 [Minesweeper](https://en.wikipedia.org/wiki/Minesweeper_(video_game)) is a game that includes a secret map with a minefield. The player chooses to dig in a specific location. If that location has a mine, it's game over. Otherwise, the player gets the number of mines in the eight squares surrounding that location.
 
-This application is written using [MUD](https://mud.dev/), a framework that lets us store data on-chain using a [key-value database](https://aws.amazon.com/nosql/key-value/) and synchronize that data automatically with off-chain components. In addition to synchronization, MUD makes it easy to provide access control, and for other users to [extend](https://mud.dev/guides/extending-a-world) our application.
+This application is written using [MUD](https://mud.dev/), a framework that lets us store data on-chain using a [key-value database](https://aws.amazon.com/nosql/key-value/) and synchronize that data automatically with off-chain components. In addition to synchronization, MUD makes it easy to provide access control, and for other users to [extend](https://mud.dev/guides/extending-a-world) our application permissionlessly.
 
 ### Running the minesweeper example {#running-minesweeper-example}
 
@@ -55,14 +55,14 @@ To run the minesweeper example:
 
    Note that the startup takes a long time. To see the progress, first use the down arrow to scroll to the *contracts* tab to see the MUD contracts being deployed. When you get the message *Waiting for file changes…*, the contracts are deployed and further progress will happen in the *server* tab. There, you wait until you get the message *Verifier address: 0x....*.
 
-5. Now you can browse to [the client](http://localhost:3000), click **New Game** and start playing.
+5. Now you can browse to [the client](http://localhost:3000), click **New Game**, and start playing.
 
 
 ### Tables {#tables}
 
 We need [several tables](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/mud.config.ts) on-chain.
 
-- `Configuration`: This table is a singleton, it has no key. It is used to hold game configuration information:
+- `Configuration`: This table is a singleton, it has no key and single record. It is used to hold game configuration information:
   - `height`: The height of a minefield
   - `width`: The width of a minefield
   - `numberOfBombs`: The number of bombs in each minefield
@@ -87,7 +87,7 @@ We need [several tables](https://github.com/qbzzt/20240901-secret-state/blob/mai
 In addition, communication between the client and server happens through the on-chain component. This is also implemented using tables. 
 
 - `PendingGame`: Unserviced requests to start a new game.
-- `PendingDig`: Unserviced requests to dig in a specific place in a specific game. This is an [offchain table](https://mud.dev/store/tables#types-of-tables), meaning that it does not get written to EVM storage, it's only readable offline using events.
+- `PendingDig`: Unserviced requests to dig in a specific place in a specific game. This is an [offchain table](https://mud.dev/store/tables#types-of-tables), meaning that it does not get written to EVM storage, it's only readable off-chain using events.
 
 ### Execution and data flows {#execution-data-flows}
 
@@ -103,26 +103,26 @@ When you run `pnpm dev`, these steps happen:
    - [Client](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/client), which runs [Vite](https://vitejs.dev/) to serve the UI and client code to web browsers.
    - [Server](https://github.com/qbzzt/20240901-secret-state/tree/main/packages/server), which performs the server actions
 
-2. After the `contracts` package deploys the MUD contracts and then runs [the `PostDeploy.s.sol` script](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). This script sets the configuration. The code from github specified [a 10x5 minefield with eight mines in it](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
+2. The `contracts` package deploys the MUD contracts and then runs [the `PostDeploy.s.sol` script](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol). This script sets the configuration. The code from github specifies [a 10x5 minefield with eight mines in it](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/script/PostDeploy.s.sol#L23).
 
 3. [The server](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts) starts by [setting up MUD](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L6). Among other things, this activates data synchronization, so that a copy of the relevant tables exists in the server's memory.
 
-4. The server subscribes a function to be executed [when the `Configuration` table changes](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23). [This function](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) is called when `PostDeploy.s.sol` executes.
+4. The server subscribes a function to be executed [when the `Configuration` table changes](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L23). [This function](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L24-L168) is called after `PostDeploy.s.sol` executes and modifies the table.
 
 5. When the server initialization function has the configuration, [it calls `zkFunctions`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L34-L35) to initialize [the zero-knowledge part of the server](#using-zokrates-from-typescript). This cannot happen until we get the configuration because the zero-knowledge functions have to have the width and height of the minefield as constants.
 
-6. After the zero-knowledge part of the server is initialized, the next step is to [deploy the zero-knowledge verification contract to the blockchain](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) and set the verified address in MUD.
+6. After the zero-knowledge part of the server is initialized, the next step is to [deploy the zero-knowledge verification contract to the blockchain](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L42-L53) and set the verifiee address in MUD.
 
 7. Finally, we subscribe to updates so we'll see when a player requests either [to start a new game](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L55-L71) or to [dig in an existing game](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L73-L108).
 
 
 #### New game {#new-game-flow}
 
-This is what happens when the user requests a new game.
+This is what happens when the player requests a new game.
 
-1. If there is no game in progress, or there is one but with a gameId of zero, the client displays a [new game button](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175). When the user presses this button, [React runs the `newGame` function](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L96).
+1. If there is no game in progress for this player, or there is one but with a gameId of zero, the client displays a [new game button](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175). When the user presses this button, [React runs the `newGame` function](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L96).
 
-2. [`newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/mud/createSystemCalls.ts#L43-L46) is a `System` call. In MUD all calls are routed through the `World`, and in most cases you call `<namespace>__<function name>`. In this case, the call is to `app__newGame`, which MUD then routes to [`newGame` in `GameSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L16-L22).
+2. [`newGame`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/mud/createSystemCalls.ts#L43-L46) is a `System` call. In MUD all calls are routed through the `World` contract, and in most cases you call `<namespace>__<function name>`. In this case, the call is to `app__newGame`, which MUD then routes to [`newGame` in `GameSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L16-L22).
 
 3. The on-chain function checks that the player does not have a game in progress, and if there isn't one [adds the request to the `PendingGame` table](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/GameSystem.sol#L21).
 
@@ -159,7 +159,7 @@ This is what happens when the user requests a new game.
 
 4. [The server](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L97-L107) calls [`digResponse`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L45-L64) on-chain.
 
-5. `digResponse` does two things. First, it checks [the zero knowledge proof](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L47-L61). Then, if the proof is correct, it calls [`processDigResult`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L67-L86) to actually process the result.
+5. `digResponse` does two things. First, it checks [the zero knowledge proof](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L47-L61). Then, if the proof checks out, it calls [`processDigResult`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L67-L86) to actually process the result.
 
 6. `processDigResult` checks if the game has been [lost](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L76-L78) or [won](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L83-L86), and [updates `Map`, the on-chain map](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L80).
 
@@ -168,12 +168,11 @@ This is what happens when the user requests a new game.
 
 ## Using Zokrates {#using-zokrates}
 
-In the flows explained above we skipped over the zero-knowledge parts, treating them as a black box. Now let's open it (slightly, we aren't going to get into the math) to see that portion works.
+In the flows explained above we skipped over the zero-knowledge parts, treating them as a black box. Now let's crank it open and see how that code is written.
 
 ### Hashing the map {#hashing-map}
 
-We can use [this JavaScript code](https://github.com/ZK-Plus/ICBC24_Tutorial_Compute-Offchain-Verify-on-chain/tree/solutions/exercise) to implement [Poseidon](https://www.poseidon-hash.info), the Zokrates hash function we use. However, while this would be faster, it would also be more complicated than just using the Zokrates hash function twice. This is a tutorial, and so the code is optimized for simplicity, not for performance. Therefore, we need two different Zokrates programs, one to just calculate the hash of a map (`hash`) and one to actually create a zero-knowledge proof of the result of the dig in a location on the map (`dig`).
-
+We can use [this JavaScript code](https://github.com/ZK-Plus/ICBC24_Tutorial_Compute-Offchain-Verify-on-chain/tree/solutions/exercise) to implement [Poseidon](https://www.poseidon-hash.info), the Zokrates hash function we use. However, while this would be faster, it would also be more complicated than just using the Zokrates hash function to do it. This is a tutorial, and so the code is optimized for simplicity, not for performance. Therefore, we need two different Zokrates programs, one to just calculate the hash of a map (`hash`) and one to actually create a zero-knowledge proof of the result of the dig in a location on the map (`dig`).
 
 ### The hash function {#hash-function}
 
@@ -238,14 +237,14 @@ For every location in the map, put that value in the `map1d` array and increment
     ];
 ```
 
-The `pack128` to create an array of four `field` values from `map1d`.
+The `pack128` to create an array of four `field` values from `map1d`. In Zokrates `array[a..b]` means the slice of the array that starts at `a` and ends at `b-1`.
 
 ```
     return poseidon(hashMe);
 }
 ```
 
-And use `poseidon` to convert this array to a hash.
+Use `poseidon` to convert this array to a hash.
 
 
 ### The hash program {#hash-program}
@@ -295,7 +294,7 @@ def main(private bool[${width+2}][${height+2}] map, u32 x, u32 y) -> (field, u8)
 
 By default Zokrates proofs include their inputs. It does no good to know there are five mines around a spot unless you actually know which spot it is (and you can't just match it to your request, because then the prover could use different values and not tell you about it). However, we need to keep the map a secret, while providing it to Zokrates. The solution is to use a `private` parameter, one that is *not* revealed by the proof.
 
-This opens another venue for abuse. The prover could use the correct coordinates, but create a map with any any number of mines around the location, and possibly at the location itself. To prevent this abuse, we make the zero knowledge proof include the hash of the map, which is the game identifier.
+This opens another venue for abuse. The prover could use the correct coordinates, but create a map with any number of mines around the location, and possibly at the location itself. To prevent this abuse, we make the zero knowledge proof include the hash of the map, which is the game identifier.
 
 ```
    return (hashMap(map),
@@ -322,7 +321,7 @@ If the player hasn't hit a mine, add the mine counts for the area around the loc
 
 ### Using Zokrates from TypeScript {#using-zokrates-from-typescript}
 
-Zokrates has a command line interface, but in this program we use it in the [TypeScript code](https://zokrates.github.io/toolbox/zokrates_js.html). Using [TypeScript](https://www.typescriptlang.org/), which gets compiled to JavaScript, lets us use the same code on the server and the client.
+Zokrates has a command line interface, but in this program we use it in the [TypeScript code](https://zokrates.github.io/toolbox/zokrates_js.html).
 
 The library that contains the Zokrates definitions is called [`zero-knowledge.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts).
 
@@ -330,7 +329,7 @@ The library that contains the Zokrates definitions is called [`zero-knowledge.ts
 import { initialize as zokratesInitialize } from "zokrates-js";
 ```
 
-Import the [Zokrates JavaScript bindings](https://zokrates.github.io/toolbox/zokrates_js.html). We only need the [`initialize`](https://zokrates.github.io/toolbox/zokrates_js.html#initialize) function because it returns a promise that resolves to all the Zokrates definitions we need.
+Import the [Zokrates JavaScript bindings](https://zokrates.github.io/toolbox/zokrates_js.html). We only need the [`initialize`](https://zokrates.github.io/toolbox/zokrates_js.html#initialize) function because it returns a promise that resolves to all the Zokrates definitions.
 
 ```typescript
 export const zkFunctions = async (width: number, height: number) : Promise<any> => {
@@ -387,7 +386,7 @@ Here we compile those programs.
     const proverKey = keySetupResults.pk
 ```
 
-On a production system we'd use a more complicated [setup ceremony](https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony), but this is good enough for a demonstration. It's not a problem that the users know the prover key - they still cannot use it to prove things unless they are true. Because we specify the entropy (the second parameter, `""`), the results are always going to be the same.
+On a production system we might use a more complicated [setup ceremony](https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony), but this is good enough for a demonstration. It's not a problem that the users can know the prover key - they still cannot use it to prove things unless they are true. Because we specify the entropy (the second parameter, `""`), the results are always going to be the same.
 
 **Note:** Compilation of Zokrates programs and key creation are slow processes. There is no need to repeat them every time, just when map size changes. On a production system you'd do them once, and then store the output. The only reason I am not doing it here is for the sake of simplicity.
 
@@ -446,7 +445,7 @@ Use [`generateProof`](https://zokrates.github.io/toolbox/zokrates_js.html#genera
         `
 ```
 
-A Solidity verifier, which gets deployed to the blockchain.
+A Solidity verifier, a smart contract we can deploy to the blockchain and use to verify proofs generated by `digCompiled.program`.
 
 ```typescript
     return {
@@ -483,7 +482,7 @@ There is one privileged entity in this game, the server. It is the only user all
     cast send $WORLD_ADDRESS 'app__setVerifier(address)' `cast address-zero` --private-key $UNAUTHORIZED_KEY
     ```
 
-    Not only does `cast` report a failure, but you can open **MUD Dev Tools**, click **Tables**, and select **app__VerifierAddress**. See that the address is not zero.
+    Not only does `cast` report a failure, but you can open **MUD Dev Tools** in the game on the browser, click **Tables**, and select **app__VerifierAddress**. See that the address is not zero.
 
 3. Set the verifier address as the server's address.
 
@@ -497,7 +496,7 @@ All MUD functions in the same `System` go through the same access control, so I 
 
 ### Zero-knowledge abuses {#zero-knowledge-abuses}
 
-The math to verify Zokrates is beyond the scope of this tutorial (and my skills). However, we can run various checks on the zero-knowledge code to verify that if it is not done correctly it fails. All of these tests are going to require us to change [`zero-knowledge.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts) and restart the entire application. IT is not sufficient to restart the server process, because it puts the application in an impossible state (the player has a game in progress, but the game is no longer available).
+The math to verify Zokrates is beyond the scope of this tutorial (and my abilities). However, we can run various checks on the zero-knowledge code to verify that if it is not done correctly it fails. All of these tests are going to require us to change [`zero-knowledge.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts) and restart the entire application. IT is not sufficient to restart the server process, because it puts the application in an impossible state (the player has a game in progress, but the game is no longer available to the server).
 
 #### Wrong answer {#wrong-answer}
 
@@ -552,7 +551,7 @@ It still fails, but now it fails without a reason because it happens during the 
 
 ### How can a user verify the zero trust code? {#user-verify-zero-trust}
 
-On-chain definitions are relatively easy to verify. Typically, the develop publishes the source code to a block explorer, and the block explorer verifies that the source code does compile to the code in the [contract deployment transaction](https://ethereum.org/en/developers/docs/smart-contracts/deploying/). In the case of MUD `System`s this is [slightly more complicated](https://mud.dev/cli/verify), but not by much.
+Smart contracts are relatively easy to verify. Typically, the developer publishes the source code to a block explorer, and the block explorer verifies that the source code does compile to the code in the [contract deployment transaction](https://ethereum.org/en/developers/docs/smart-contracts/deploying/). In the case of MUD `System`s this is [slightly more complicated](https://mud.dev/cli/verify), but not by much.
 
 This is harder with zero-knowledge. The verifier includes some constants and runs some calculations on them. This doesn't tell you what is being proved.
 
@@ -618,7 +617,7 @@ To do so:
     zokrates setup -e ""
     ```
 
-4. Create the verifier on your own, and verify it is functionally identical to the one on the blockchain (the server adds a comment, but that's not important).
+4. Create the Solidity verifier on your own, and verify it is functionally identical to the one on the blockchain (the server adds a comment, but that's not important).
  
     ```sh copy
     zokrates export-verifier
