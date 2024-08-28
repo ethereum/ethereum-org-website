@@ -4,6 +4,8 @@ import { NavSectionKey } from "@/components/Nav/types"
 
 import i18nConfig from "../../i18n.config.json"
 
+import type { CommunityFeed } from "./types"
+
 export const OLD_CONTENT_DIR = "src/content"
 export const CONTENT_DIR = "public/content"
 export const TRANSLATIONS_DIR = "public/content/translations"
@@ -159,32 +161,54 @@ export const LINES_BEFORE_COLLAPSABLE = 8
 
 // RSS Feeds
 export const RSS_DISPLAY_COUNT = 3
-export const VITALIK_BLOG = "https://vitalik.eth.limo/feed.xml"
-export const EF_BLOG = "https://blog.ethereum.org/en/feed.xml"
-export const PANDA_OPS_BLOG = "https://ethpandaops.io/posts/index.xml"
-export const SOLIDITY_BLOG = "https://soliditylang.org/feed.xml"
-export const ETH_STAKER_BLOG = "https://paragraph.xyz/api/blogs/rss/@ethstaker"
-export const _0X_PARC_BLOG = "https://rss.app/feeds/cWXGYts0ZM8C3F6t.xml"
-export const XML_FEEDS = [
-  EF_BLOG,
-  ETH_STAKER_BLOG,
-  PANDA_OPS_BLOG,
-  SOLIDITY_BLOG,
-  VITALIK_BLOG,
-  _0X_PARC_BLOG,
-]
 
-export const ALL_COMMUNITY_BLOGS = [
-  { name: "Vitalik Buterin", href: "https://vitalik.eth.limo/" },
-  { name: "Ethereum Foundation", href: "https://blog.ethereum.org/" },
-  { name: "ethPandaOps", href: "https://ethpandaops.io/posts/" },
-  { name: "EthStaker", href: "https://ethstaker.cc/blog" },
-  { name: "0xParc", href: "https://0xparc.org/blog" },
-  { name: "Attestant", href: "https://www.attestant.io/posts/" },
+export const VITALIK_FEED = "https://vitalik.eth.limo/feed.xml"
+export const SOLIDITY_FEED = "https://soliditylang.org/feed.xml"
+export const _0X_PARC_FEED = "https://rss.app/feeds/cWXGYts0ZM8C3F6t.xml"
+
+export const COMMUNITY_BLOGS: CommunityFeed[] = [
+  {
+    name: "Vitalik Buterin",
+    href: "https://vitalik.eth.limo/",
+    feed: VITALIK_FEED,
+  },
+  {
+    name: "Ethereum Foundation",
+    href: "https://blog.ethereum.org/",
+    feed: "https://blog.ethereum.org/en/feed.xml",
+  },
+  {
+    name: "ethPandaOps",
+    href: "https://ethpandaops.io/posts/",
+    feed: "https://ethpandaops.io/posts/index.xml",
+  },
+  {
+    name: "EthStaker",
+    href: "https://ethstaker.cc/blog",
+    feed: "https://paragraph.xyz/api/blogs/rss/@ethstaker",
+  },
+  {
+    name: "0xParc",
+    href: "https://0xparc.org/blog",
+    feed: _0X_PARC_FEED,
+  },
+  {
+    name: "Attestant",
+    href: "https://www.attestant.io/posts/",
+  },
   { name: "Devcon", href: "https://devcon.org/en/blogs/" },
-  { name: "Solidity", href: "https://soliditylang.org/blog/" },
+  {
+    name: "Solidity",
+    href: "https://soliditylang.org/blog/",
+    feed: SOLIDITY_FEED,
+  },
   {
     name: "Privacy and Scaling Explorations",
     href: "https://mirror.xyz/privacy-scaling-explorations.eth",
+    // feed: "https://mirror.xyz/privacy-scaling-explorations.eth/feed/atom", // Old xml format
   },
 ]
+
+export const FEEDS = COMMUNITY_BLOGS.map(({ feed }) => feed).filter(
+  Boolean
+) as string[]

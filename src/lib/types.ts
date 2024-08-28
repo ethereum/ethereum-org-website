@@ -791,6 +791,7 @@ export type RSSChannel = {
         type: string[]
       }
     }[]
+    "media:content": { $: { url: string } }[]
   }[]
 }
 
@@ -798,6 +799,12 @@ export type RSSResult = {
   rss: {
     channel: RSSChannel[]
   }
+}
+
+export type CommunityFeed = {
+  name: string
+  href: string
+  feed?: string
 }
 
 type NestedDivs = {

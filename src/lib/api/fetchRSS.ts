@@ -35,17 +35,21 @@ export const fetchRSS = async (xmlUrl: string | string[]) => {
       // Slice to first RSS_DISPLAY_COUNT items
       .slice(0, RSS_DISPLAY_COUNT)
       // Map to RSSItem object
-      .map(
-        (item) =>
-          ({
-            pubDate: item.pubDate[0],
-            title: item.title[0],
-            link: item.link[0],
-            imgSrc: item.enclosure ? item.enclosure[0].$.url : channelImage,
-            source,
-            sourceFeedUrl: url,
-          }) as RSSItem
-      )
+      .map((item) => {
+        const getImgSrc = () => {
+          if (item.enclosure) return item.enclosure[0].$.url
+          if (item["media:content"]) return item["media:content"][0].$.url
+          return channelImage
+        }
+        return {
+          pubDate: item.pubDate[0],
+          title: item.title[0],
+          link: item.link[0],
+          imgSrc: getImgSrc(),
+          source,
+          sourceFeedUrl: url,
+        } as RSSItem
+      })
 
     allItems.push(...parsedRssItems)
   }

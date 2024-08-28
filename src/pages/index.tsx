@@ -67,10 +67,10 @@ import {
 import events from "@/data/community-events.json"
 
 import {
-  ALL_COMMUNITY_BLOGS,
   BASE_TIME_UNIT,
+  COMMUNITY_BLOGS,
+  FEEDS,
   GITHUB_REPO_URL,
-  XML_FEEDS,
 } from "@/lib/constants"
 
 import CreateWalletContent from "!!raw-loader!@/data/CreateWallet.js"
@@ -94,7 +94,7 @@ import hero from "@/public/images/home/hero.png"
 const cachedEthPrice = runOnlyOnce(fetchEthPrice)
 const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
 const cachedFetchTotalValueLocked = runOnlyOnce(fetchTotalValueLocked)
-const cachedXmlBlogFeeds = runOnlyOnce(async () => await fetchRSS(XML_FEEDS))
+const cachedXmlBlogFeeds = runOnlyOnce(async () => await fetchRSS(FEEDS))
 const cachedAttestantBlog = runOnlyOnce(fetchAttestantPosts)
 const cachedGrowThePieData = runOnlyOnce(fetchGrowThePie)
 const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
@@ -566,7 +566,7 @@ const HomePage = ({
           <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
             <p className="text-lg">Read more on these websites</p>
             <div className="flex flex-wrap gap-x-6 gap-y-4">
-              {ALL_COMMUNITY_BLOGS.map(({ name, href }) => (
+              {COMMUNITY_BLOGS.map(({ name, href }) => (
                 <Link href={href} key={name}>
                   {name}
                 </Link>

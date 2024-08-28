@@ -1,9 +1,8 @@
 import {
-  _0X_PARC_BLOG,
-  PANDA_OPS_BLOG,
+  _0X_PARC_FEED,
   RSS_DISPLAY_COUNT,
-  SOLIDITY_BLOG,
-  VITALIK_BLOG,
+  SOLIDITY_FEED,
+  VITALIK_FEED,
 } from "../constants"
 import type { RSSItem } from "../types"
 
@@ -21,23 +20,18 @@ export const sortByPubDate = (items: RSSItem[]) =>
 export const postProcess = (rssItems: RSSItem[]) =>
   rssItems.map((item) => {
     switch (item.sourceFeedUrl) {
-      case VITALIK_BLOG:
+      case VITALIK_FEED:
         return {
           ...item,
           imgSrc: "/images/vitalik-blog-banner.svg",
           link: item.link.replace(".ca", ".eth.limo"),
         }
-      case PANDA_OPS_BLOG:
-        return {
-          ...item,
-          imgSrc: "/images/panda-ops-banner.png",
-        }
-      case SOLIDITY_BLOG:
+      case SOLIDITY_FEED:
         return {
           ...item,
           imgSrc: "/images/solidity-banner.png",
         }
-      case _0X_PARC_BLOG:
+      case _0X_PARC_FEED:
         return {
           ...item,
           imgSrc: "/images/0xparc-logo.svg",
