@@ -523,6 +523,7 @@ const HomePage = ({
                 className="flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row"
               >
                 <div className="flex flex-col space-y-0.5 text-center text-base sm:text-start">
+                  <p className="text-sm font-bold text-body">{title}</p>
                   <p className="italic text-body-medium">
                     {new Intl.DateTimeFormat(locale, {
                       month: "long",
@@ -532,7 +533,6 @@ const HomePage = ({
                       minute: "numeric",
                     }).format(new Date(date))}
                   </p>
-                  <p className="text-sm text-body">{title}</p>
                 </div>
                 <ButtonLink
                   className="h-fit w-full text-nowrap px-5 sm:w-fit lg:self-center"
