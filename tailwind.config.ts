@@ -175,8 +175,6 @@ const config = {
       backgroundImage: {
         "gradient-main": "var(--gradient-main)",
         "primary-highlight-gradient": "var(--primary-highlight-gradient)",
-        "accent-gradient-a": "var(--accent-gradient-a)",
-        "accent-gradient-b": "var(--accent-gradient-b)",
         "gradient-banner": "var(--gradient-banner)",
         "gradient-primary": "var(--gradient-primary)",
         "gradient-accent-a": "var(--gradient-accent-a)",

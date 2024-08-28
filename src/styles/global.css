@@ -59,18 +59,6 @@
       rgba(167, 121, 226, 0.05) 0%,
       rgba(167, 121, 226, 0) 100%
     );
-    --accent-gradient-a: linear-gradient(
-      0deg,
-      rgba(185, 185, 241, 0.24) 0%,
-      rgba(84, 132, 234, 0.08) 100%
-    );
-    --accent-gradient-b: radial-gradient(
-      127.67% 82.36% at 50% -30.36%,
-      rgba(201, 179, 245, 0.16) 0%,
-      rgba(201, 179, 245, 0.48) 33%,
-      rgba(136, 170, 241, 0.16) 66%,
-      rgba(255, 255, 255, 0) 100%
-    );
 
     --gradient-banner: radial-gradient(
       155% 100% at 50% 0%,
