@@ -1,6 +1,6 @@
 ---
 title: Using zero-knowledge for a secret state
-description: Onchain games are limited because they cannot keep any hidden information. After reading this tutorial, a reader will be able to combine zero-knowledge proofs and server components to create verifiable games with a secret state, offchain, component. The technique to do this will be demonstrated by creating a minesweeper game.
+description: On-chain games are limited because they cannot keep any hidden information. After reading this tutorial, a reader will be able to combine zero-knowledge proofs and server components to create verifiable games with a secret state, offchain, component. The technique to do this will be demonstrated by creating a minesweeper game.
 author: Ori Pomerantz
 tags: ["server", "offchain", "centralized", "zero-knowledge", "zokrates", "mud"]
 skill: intermediate
@@ -26,7 +26,7 @@ After reading this article you will know how to create this kind of secret state
 
 [Minesweeper](https://en.wikipedia.org/wiki/Minesweeper_(video_game)) is a game that includes a secret map with a minefield. The player chooses to dig in a specific location. If that location has a mine, it's game over. Otherwise, the player gets the number of mines in the eight squares surrounding that location.
 
-This application is written using [MUD](https://mud.dev/), a framework that lets us store data onchain using a [key-value database](https://aws.amazon.com/nosql/key-value/) and synchronize that data automatically with off-chain components. In addition to synchronization, MUD makes it easy to provide access control, and for other users to [extend](https://mud.dev/guides/extending-a-world) our application.
+This application is written using [MUD](https://mud.dev/), a framework that lets us store data on-chain using a [key-value database](https://aws.amazon.com/nosql/key-value/) and synchronize that data automatically with off-chain components. In addition to synchronization, MUD makes it easy to provide access control, and for other users to [extend](https://mud.dev/guides/extending-a-world) our application.
 
 ### Running the minesweeper example {#running-minesweeper-example}
 
@@ -172,7 +172,7 @@ In the flows explained above we skipped over the zero-knowledge parts, treating 
 
 ### Hashing the map {#hashing-map}
 
-We can use [this JavaScript code](https://github.com/ZK-Plus/ICBC24_Tutorial_Compute-Offchain-Verify-Onchain/tree/solutions/exercise) to implement [Poseidon](https://www.poseidon-hash.info), the Zokrates hash function we use. However, while this would be faster, it would also be more complicated than just using the Zokrates hash function twice. This is a tutorial, and so the code is optimized for simplicity, not for performance. Therefore, we need two different Zokrates programs, one to just calculate the hash of a map (`hash`) and one to actually create a zero-knowledge proof of the result of the dig in a location on the map (`dig`).
+We can use [this JavaScript code](https://github.com/ZK-Plus/ICBC24_Tutorial_Compute-Offchain-Verify-on-chain/tree/solutions/exercise) to implement [Poseidon](https://www.poseidon-hash.info), the Zokrates hash function we use. However, while this would be faster, it would also be more complicated than just using the Zokrates hash function twice. This is a tutorial, and so the code is optimized for simplicity, not for performance. Therefore, we need two different Zokrates programs, one to just calculate the hash of a map (`hash`) and one to actually create a zero-knowledge proof of the result of the dig in a location on the map (`dig`).
 
 
 ### The hash function {#hash-function}
