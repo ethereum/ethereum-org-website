@@ -10,7 +10,7 @@ published: 2024-08-15
 
 *There are no secrets on the blockchain*. Everything that is posted on the blockchain is open to everybody to read. This is necessary, because the blockchain is based on anybody being able to verify it. However, games often rely on secret state. For example, the game of [minesweeper](https://en.wikipedia.org/wiki/Minesweeper_(video_game)) makes absolutely no sense if you can just go on a blockchain explorer and see the map.
 
-The simplest solution is to use a [server component](/developers/tutorials/server-components/) to hold the secret state. However, we don't want to trust that server component's honesty. Luckily, we don't need to. The server can provide a hash of the state, and use [zero-knowledge proofs](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) to prove that the state used to calculate the result of a move is the correct one.
+The simplest solution is to use a [server component](/developers/tutorials/server-components/) to hold the secret state. However, the reason we use blockchain is to prevent cheating by the game developer. We need to ensure the server component's honesty. The server can provide a hash of the state, and use [zero-knowledge proofs](/zero-knowledge-proofs/#why-zero-knowledge-proofs-are-important) to prove that the state used to calculate the result of a move is the correct one.
 
 After reading this article you will know how to create this kind of secret state holding server, a client for showing the state, and an on-chain component for communication between the two. The main tools we use will be:
 
