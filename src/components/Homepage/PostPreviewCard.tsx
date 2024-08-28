@@ -15,6 +15,7 @@ const PostPreviewCard = ({ pubDate, title, source, link, imgSrc }: RSSItem) => {
         <img src={imgSrc} alt="" />
       </CardBanner>
       <CardContent className="">
+        <CardTitle variant="strong">{title}</CardTitle>
         {isValidDate(pubDate) && (
           <p className="text-sm italic">
             {new Intl.DateTimeFormat(locale, {
@@ -27,7 +28,6 @@ const PostPreviewCard = ({ pubDate, title, source, link, imgSrc }: RSSItem) => {
         <div className="primary-low-contrast w-fit rounded-full bg-accent-a/20 px-4 py-0 text-sm uppercase text-accent-a">
           {source}
         </div>
-        <CardTitle variant="strong">{title}</CardTitle>
       </CardContent>
     </Card>
   )
