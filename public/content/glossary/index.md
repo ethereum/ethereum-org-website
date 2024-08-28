@@ -1,4 +1,5 @@
----
+                                                                                                                                                                                                                                                                       
+                                                                                                                                                                                ---
 title: Ethereum Glossary
 description: An incomplete glossary of technical and non-technical terms related to Ethereum
 lang: en
