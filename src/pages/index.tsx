@@ -650,29 +650,41 @@ const HomePage = ({
           </div>
         </div>
 
-        <div className="flex flex-col gap-y-8 rounded-4xl border border-b-0 border-black/[0.04] bg-accent-gradient-b px-4 py-8">
-          <div className="flex flex-col space-y-4 text-center">
-            <h2>Join ethereum.org</h2>
-            <p>
-              This website is open source with hundreds of community
-              contributors. You can propose edits to any of the content on this
-              site.
-            </p>
-          </div>
-          {/* TODO: Fix icon sizing, fix button/icon layout on mobile */}
-          <div className="max-w-105 mx-auto grid grid-cols-1 gap-16 md:max-w-screen-md md:grid-cols-2">
-            {joinActions.map(({ Svg, label, href, className, description }) => (
-              <SvgButtonLink
-                key={label}
-                Svg={Svg}
-                label={label}
-                href={href}
-                className={cn("max-w-screen-sm", className)}
-                variant="row"
-              >
-                <p className="text-body">{description}</p>
-              </SvgButtonLink>
-            ))}
+        <div
+          className={cn(
+            // Border/gradient positioning
+            "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-4xl before:content-['']",
+            // Border/gradient coloring
+            "before:bg-gradient-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20",
+            // Paint background color over card portion
+            "relative inset-0 rounded-4xl bg-background"
+          )}
+        >
+          <div className="mb-12 flex flex-col gap-y-8 rounded-4xl bg-radial-a px-4 py-8 lg:mb-32 xl:mb-36">
+            <div className="flex flex-col space-y-4 text-center">
+              <h2>Join ethereum.org</h2>
+              <p>
+                This website is open source with hundreds of community
+                contributors. You can propose edits to any of the content on
+                this site.
+              </p>
+            </div>
+            <div className="mx-auto grid grid-cols-1 gap-16 md:max-w-screen-md md:grid-cols-2">
+              {joinActions.map(
+                ({ Svg, label, href, className, description }) => (
+                  <SvgButtonLink
+                    key={label}
+                    Svg={Svg}
+                    label={label}
+                    href={href}
+                    className={cn("max-w-screen-sm", className)}
+                    variant="row"
+                  >
+                    <p className="text-body">{description}</p>
+                  </SvgButtonLink>
+                )
+              )}
+            </div>
           </div>
         </div>
       </div>
