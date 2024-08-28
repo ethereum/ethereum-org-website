@@ -25,8 +25,10 @@ Watch Anders explain hashes in blockchains:
 ## What is Ethereum? {#what-is-ethereum}
 
 Ethereum is a blockchain with a computer embedded in it. It is the foundation for building apps and organizations in a decentralized, permissionless, censorship-resistant way.
+ <!--This was confusing as a beginner to read. "Ethereum builds on blockchain technology and adds the Ethereum Virtual Machine (EVM) to enable decentralized computing, sounds clearer as this part of the documentation is intended for beginners and those with little to no knowledge of the blockchain and ethereum tech-->
 
 In the Ethereum universe, there is a single, canonical computer (called the Ethereum Virtual Machine, or EVM) whose state everyone on the Ethereum network agrees on. Everyone who participates in the Ethereum network (every Ethereum node) keeps a copy of the state of this computer. Additionally, any participant can broadcast a request for this computer to perform arbitrary computation. Whenever such a request is broadcast, other participants on the network verify, validate, and carry out ("execute") the computation. This execution causes a state change in the EVM, which is committed and propagated throughout the entire network.
+<!-- Using the word "single" here is misleading for something that should specifically NOT BE SINGLE. It gives the impression of ONE centralized machine EVM being hosted somewhere. For those who are well versed in the industry, these things dont matter but the whole purpose of reading this docuemtnation is to educate those who have little to no knowledge of Ethereum and the world of blockchain.-->
 
 Requests for computation are called transaction requests; the record of all transactions and the EVM's present state gets stored on the blockchain, which in turn is stored and agreed upon by all nodes.
 
