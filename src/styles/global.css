@@ -220,7 +220,7 @@
   }
 
   .swiper-pagination {
-    @apply relative mt-8 flex h-[26px] max-w-48 items-center justify-center rounded-full bg-background-highlight;
+    @apply relative mt-8 mx-auto flex h-[26px] max-w-48 items-center justify-center rounded-full bg-background-highlight;
   }
 
   .swiper-pagination .swiper-pagination-bullet {
@@ -235,20 +235,23 @@
   .swiper-button-prev,
   .swiper-button-next {
     @apply !h-6 !w-fit fill-primary px-2;
-
-    top: calc(100% - 11px) !important;
-    --nav-inset: calc(50% - 6rem);
   }
+}
 
-  .swiper-button-next {
-    inset-inline-end: var(--nav-inset) !important;
-    inset-inline-start: auto !important;
-  }
+.swiper-button-prev,
+.swiper-button-next {
+  top: calc(100% - 11px) !important;
+  --nav-inset: calc(50% - 6rem);
+}
 
-  .swiper-button-prev {
-    inset-inline-end: auto !important;
-    inset-inline-start: var(--nav-inset) !important;
-  }
+.swiper-button-next {
+  inset-inline-end: var(--nav-inset) !important;
+  inset-inline-start: auto !important;
+}
+
+.swiper-button-prev {
+  inset-inline-end: auto !important;
+  inset-inline-start: var(--nav-inset) !important;
 }
 
 .swiper-slide-shadow {
