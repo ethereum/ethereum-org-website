@@ -1,11 +1,11 @@
 import { MdChevronRight, MdExpandMore } from "react-icons/md"
 import type { Meta, StoryObj } from "@storybook/react"
 
-import { HStack, VStack } from "../../../src/components/ui/flex"
 import { Button, type ButtonVariantProps } from "../buttons/Button"
+import { HStack, VStack } from "../flex"
 
 const meta = {
-  title: "Atoms / Form / ShadCn Buttons",
+  title: "Atoms / Form / Buttons",
   component: Button,
   args: {
     children: "What is Ethereum?",

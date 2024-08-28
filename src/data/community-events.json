@@ -401,6 +401,14 @@
     "description": "Welcome to the largest Ethereum event happening in Africa! Join the BlockTrain from Nairobi to celebrate an ETH-festival held underneath ancient Boabab trees in Kilifi."
   },
   {
+    "title": "Ethereum Singapore: In the Ether",
+    "startDate": "2024-09-16",
+    "endDate": "2024-09-22",
+    "href": "https://ethereumsingapore.com/",
+    "location": "Singapore, SG",
+    "description": "Ethereum Singapore is back for its second year and we are excited to host the global Ethereum community once more! This time we have put together a festival, titled “IN THE ETHER” from 16-22 September 2024, at the iconic Artscience Museum in Singapore. Join us for an exciting calendar of events with our co-hosts right at the heart of Marina Bay!"
+  },
+  {
     "title": "TOKEN2049",
     "startDate": "2024-09-18",
     "endDate": "2024-09-19",
@@ -529,7 +537,7 @@
     "endDate": "2024-05-11",
     "href": "https://ethbratislava.com/",
     "location": "Bratislava, Slovakia",
-    "description": "Join the 1st #ETH hackathon &amp; conference in Bratislava empowering local communities &amp; sustainability on Ethereum. Follow us for more updates 🔜",
+    "description": "Join the 1st #ETH hackathon & conference in Bratislava empowering local communities & sustainability on Ethereum. Follow us for more updates 🔜",
     "imageUrl": "https://framerusercontent.com/images/wx8uSNTYpgWtsrSN5A2dkD0F4.png"
   },
   {
@@ -538,7 +546,7 @@
     "endDate": "2024-08-26",
     "href": "https://ethtokyo.com",
     "location": "Tokyo, JPN",
-    "description": "ETHTokyo 2024 is a Ethereum hackathon &amp; conference organized by Japanese Ethereum enthusiasts.",
+    "description": "ETHTokyo 2024 is a Ethereum hackathon & conference organized by Japanese Ethereum enthusiasts.",
     "imageUrl": "https://www.ethtokyo.com/images/thumbnail.jpg"
   },
   {
