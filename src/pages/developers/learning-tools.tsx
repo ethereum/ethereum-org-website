@@ -28,7 +28,6 @@ import BloomTechImage from "@/public/images/dev-tools/bloomtech.png"
 import BuildSpaceImage from "@/public/images/dev-tools/buildspace.png"
 import CaptureTheEtherImage from "@/public/images/dev-tools/capturetheether.png"
 import ChainIDEImage from "@/public/images/dev-tools/chainIDE.png"
-import ChainShotImage from "@/public/images/dev-tools/chainshot.png"
 import ConsensysImage from "@/public/images/dev-tools/consensys.png"
 import CryptoZombieImage from "@/public/images/dev-tools/crypto-zombie.png"
 import DappWorldImage from "@/public/images/dev-tools/dapp-world.png"
@@ -38,7 +37,6 @@ import NFTSchoolImage from "@/public/images/dev-tools/nftschool.png"
 import NodeGuardiansImage from "@/public/images/dev-tools/node-guardians.jpg"
 import EthernautImage from "@/public/images/dev-tools/oz.png"
 import PlatziImage from "@/public/images/dev-tools/platzi.png"
-import PointerImage from "@/public/images/dev-tools/pointer.png"
 import QuestbookImage from "@/public/images/dev-tools/questbook.png"
 import RemixImage from "@/public/images/dev-tools/remix.png"
 import ReplitImage from "@/public/images/dev-tools/replit.png"
@@ -297,19 +295,6 @@ const LearningToolsPage = () => {
 
   const bootcamps: Array<LearningTool> = [
     {
-      name: "ChainShot",
-      description: t(
-        "page-developers-learning-tools:page-learning-tools-chainshot-description"
-      ),
-      url: "https://www.chainshot.com",
-      image: ChainShotImage,
-      alt: t(
-        "page-developers-learning-tools:page-learning-tools-chainshot-logo-alt"
-      ),
-      background: "#111f29",
-      subjects: ["Solidity", "Vyper", "web3"],
-    },
-    {
       name: "ConsenSys Academy",
       description: t(
         "page-developers-learning-tools:page-learning-tools-consensys-academy-description"
@@ -385,19 +370,6 @@ const LearningToolsPage = () => {
         "page-developers-learning-tools:page-learning-tools-nftschool-logo-alt"
       ),
       background: "#111f29",
-      subjects: ["Solidity", "web3"],
-    },
-    {
-      name: "Pointer",
-      description: t(
-        "page-developers-learning-tools:page-learning-tools-pointer-description"
-      ),
-      url: "https://pointer.gg/",
-      image: PointerImage,
-      alt: t(
-        "page-developers-learning-tools:page-learning-tools-pointer-logo-alt"
-      ),
-      background: "#171717",
       subjects: ["Solidity", "web3"],
     },
     {

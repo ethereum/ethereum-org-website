@@ -1,5 +1,5 @@
 import { useTranslation } from "next-i18next"
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
+import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
 import { IoChevronUpSharp } from "react-icons/io5"
 
 import type { FooterLink, FooterLinkSection } from "@/lib/types"
@@ -9,9 +9,8 @@ import Translation from "@/components/Translation"
 import { cn } from "@/lib/utils/cn"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
-import { BaseLink } from "../../tailwind/Link"
-import { Button } from "../../tailwind/ui/buttons/Button"
-
+import { Button } from "./ui/buttons/Button"
+import { BaseLink } from "./ui/Link"
 import { List, ListItem } from "./ui/list"
 
 const socialLinks = [
@@ -21,7 +20,7 @@ const socialLinks = [
     ariaLabel: "GitHub",
   },
   {
-    icon: FaTwitter,
+    icon: FaXTwitter,
     href: "https://twitter.com/ethdotorg",
     ariaLabel: "Twitter",
   },

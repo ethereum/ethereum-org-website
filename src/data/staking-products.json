@@ -5,7 +5,7 @@
       "imageName": "RocketPool",
       "hue": 379,
       "launchDate": "2021-11-08",
-      "url": "https://rocketpool.net/node-operators",
+      "url": "https://docs.rocketpool.net/guides/node/responsibilities",
       "audits": [
         {
           "name": "Sigma Prime - May 2021",
@@ -984,6 +984,7 @@
       "socials": {
         "discord": "https://discord.com/invite/2BSdr2g",
         "twitter": "https://twitter.com/stakewise_io",
+        "telegram": "https://t.me/stakewise_io",
         "github": "https://github.com/stakewise"
       },
       "matomo": {

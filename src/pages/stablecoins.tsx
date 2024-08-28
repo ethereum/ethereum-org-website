@@ -458,7 +458,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                 <HorizontalCard
                   emoji={token.emoji}
                   description={token.description}
-                  emojiSize={3}
+                  className="text-5xl"
                 />
               </Box>
             ))}
@@ -468,7 +468,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             me={{ base: 0, lg: 8 }}
             mt={{ base: 16, lg: 2 }}
           >
-            <Emoji text=":pizza:" fontSize="5xl" />
+            <Emoji text=":pizza:" className="text-5xl" />
             <H3>{t("page-stablecoins-bitcoin-pizza")}</H3>
             <Text>{t("page-stablecoins-bitcoin-pizza-body")} </Text>
           </GhostCard>
@@ -706,7 +706,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             p={8}
             mx={{ base: "auto", lg: 0 }}
           >
-            <Emoji mb={4} text=":bank:" fontSize="5rem" />
+            <Emoji className="mb-4 text-[5rem]" text=":bank:" />
             <Text as="p" fontSize="64px" lineHeight="100%">
               {t("page-stablecoins-bank-apy")}
             </Text>

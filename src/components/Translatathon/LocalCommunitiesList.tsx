@@ -1,66 +1,75 @@
 import { Box, Flex, Text } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
-import { Image } from "@/components/Image"
 
-import KipuLogo from "@/public/images/translatathon/kipu-logo.png"
+import Emoji from "../Emoji"
 
 const localCommunitiesData = [
   {
-    organizer: "ETH Kypo",
-    description:
-      "ETH Kipu is an organization dedicated to supporting the Ethereum ecosystem in Latin America.",
-    logo: KipuLogo,
-    lumaLink: "https://example.com",
-    location: "🇦🇷 Buenos Aires, Argentina",
+    emojiString: "🇷🇴",
+    lumaLink: "https://lu.ma/b7m1nyid",
+    location: "Bucharest, Romania",
+    eventName: "Ethereum Translatathon Bucharest 🌐🐬",
   },
   {
-    organizer: "ETH Kypo",
-    description:
-      "ETH Kipu is an organization dedicated to supporting the Ethereum ecosystem in Latin America.",
-    logo: KipuLogo,
-    lumaLink: "https://example.com",
-    location: "🇦🇷 Buenos Aires, Argentina",
+    emojiString: "🇪🇹",
+    lumaLink: "https://lu.ma/zi092c8v",
+    location: "Addis Ababa, Ethiopia",
+    eventName: "Eth Translatathon",
   },
   {
-    organizer: "ETH Kypo",
-    description:
-      "ETH Kipu is an organization dedicated to supporting the Ethereum ecosystem in Latin America.",
-    logo: KipuLogo,
-    lumaLink: "https://example.com",
-    location: "🇦🇷 Buenos Aires, Argentina",
+    emojiString: "🇷🇸",
+    lumaLink: "https://lu.ma/ehd86ohx",
+    location: "Belgrade, Serbia",
+    eventName: "Ethereum Translatathon — ETH Belgrade",
   },
   {
-    organizer: "ETH Kypo",
-    description:
-      "ETH Kipu is an organization dedicated to supporting the Ethereum ecosystem in Latin America.",
-    logo: KipuLogo,
-    lumaLink: "https://example.com",
-    location: "🇦🇷 Buenos Aires, Argentina",
+    emojiString: "🇹🇼",
+    lumaLink: "https://lu.ma/2i9fi2zi",
+    location: "Taipei, Taiwan",
+    eventName: "2024 ethereum.org Translatathon Hub - Taiwan",
   },
   {
-    organizer: "ETH Kypo",
-    description:
-      "ETH Kipu is an organization dedicated to supporting the Ethereum ecosystem in Latin America.",
-    logo: KipuLogo,
-    lumaLink: "https://example.com",
-    location: "🇦🇷 Buenos Aires, Argentina",
+    emojiString: "🇿🇲",
+    lumaLink: "https://lu.ma/4xyfdlz7",
+    location: "Lusaka, Zambia",
+    eventName: "Ethereum Translatathon - Hosted by ETHZambezi",
   },
   {
-    organizer: "ETH Kypo",
-    description:
-      "ETH Kipu is an organization dedicated to supporting the Ethereum ecosystem in Latin America.",
-    logo: KipuLogo,
-    lumaLink: "https://example.com",
-    location: "🇦🇷 Buenos Aires, Argentina",
+    emojiString: "🇳🇬",
+    lumaLink: "https://lu.ma/w00aw06a",
+    location: "Kaduna, Nigeria",
+    eventName: "Ethereum Hausa Translatathon",
   },
   {
-    organizer: "ETH Kypo",
-    description:
-      "ETH Kipu is an organization dedicated to supporting the Ethereum ecosystem in Latin America.",
-    logo: KipuLogo,
-    lumaLink: "https://example.com",
-    location: "🇦🇷 Buenos Aires, Argentina",
+    emojiString: "🇳🇬",
+    lumaLink: "https://lu.ma/1vj9u4rj",
+    location: "Lagos, Nigeria",
+    eventName: "Ethereum Yorùbá Translatathon",
+  },
+  {
+    emojiString: "🇧🇷",
+    lumaLink: "https://lu.ma/lkiakqtu",
+    location: "Rio de Janeiro, Brazil",
+    eventName: "Ethereum Translathon 📜🔍 hosted by EthSamba & BambaLabs",
+  },
+  {
+    emojiString: "🇲🇾",
+    lumaLink: "https://www.meetup.com/ethmalaysia/events/302654952/",
+    location: "Kuala Lumpur, Malaysia",
+    eventName: "Lepak and Join Translatathon",
+  },
+  {
+    emojiString: "🇮🇳",
+    lumaLink: "https://lu.ma/9eajbv89",
+    location: "Kerala, India",
+    eventName: "Ethereum.org - TRANSLATATHON INDIA - Jñāna",
+  },
+  {
+    emojiString: "🇬🇭",
+    lumaLink: "https://lu.ma/qvzlo7nc",
+    location: "Accra, Ghana",
+    eventName: "Ghana Ethereum Translatathon 2024",
   },
 ]
 
@@ -74,6 +83,7 @@ export const LocalCommunitiesList = () => {
           direction={{ base: "column-reverse", md: "row" }}
           p={6}
           gap={8}
+          justifyContent={"space-between"}
         >
           <Flex direction="column" gap={6}>
             <Flex
@@ -86,32 +96,22 @@ export const LocalCommunitiesList = () => {
               <Text fontWeight="bold">{community.location}</Text>
             </Flex>
             <Box>
-              <Text size="sm" color="body.medium">
-                Organizer:
-              </Text>
               <Text size="lg" fontWeight="bold">
-                {community.organizer}
+                {community.eventName}
               </Text>
             </Box>
-            <Text>{community.description}</Text>
             <Flex>
               <ButtonLink
                 href={community.lumaLink}
                 variant="outline"
                 color="body.base"
               >
-                Luma link
+                Register here
               </ButtonLink>
             </Flex>
           </Flex>
           <Flex minW="90">
-            <Image
-              src={community.logo}
-              alt={community.organizer}
-              width="90"
-              height="130"
-              style={{ objectFit: "contain" }}
-            />
+            <Emoji className="text-[90px]" text={community.emojiString} />
           </Flex>
         </Flex>
       ))}
