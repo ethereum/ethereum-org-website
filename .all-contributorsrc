@@ -12398,6 +12398,42 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "yannggg",
+      "name": "Yann Gerardi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29145014?v=4",
+      "profile": "https://www.mtpelerin.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "panditdhamdhere",
+      "name": "Pandit Dhamdhere",
+      "avatar_url": "https://avatars.githubusercontent.com/u/85685981?v=4",
+      "profile": "https://github.com/panditdhamdhere",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ferreiramarcelo",
+      "name": "M@rC3L0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11818521?v=4",
+      "profile": "http://linkedin.com/in/fmarcelo",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "Refdeveloper",
+      "name": "DevOFtoken",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87125773?v=4",
+      "profile": "https://github.com/Refdeveloper",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
