@@ -185,6 +185,7 @@ const config = {
         "main-gradient": "var(--gradient-main)", // TODO: Duplicate; remove one
         "feedback-gradient": "var(--feedback-gradient)",
         "banner-grid-gradient": "var(--banner-grid-gradient)",
+        "radial-a": "var(--radial-a)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",

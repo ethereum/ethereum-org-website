@@ -50,6 +50,16 @@
       hsla(var(--teal-500), var(--gradient-primary-opacity-to)) 40.63%
     );
 
+    --radial-a-opacity-1: 0.08;
+    --radial-a-opacity-2: 0.24;
+    --radial-a: radial-gradient(
+      127.67% 82.36% at 50% -30.36%,
+      hsla(var(--purple-500), var(--radial-a-opacity-1)) 0%,
+      hsla(var(--purple-500), var(--radial-a-opacity-2)) 33%,
+      hsla(var(--blue-500), var(--radial-a-opacity-1)) 66%,
+      transparent 100%
+    );
+
     /* Shadows */
     --shadow-color-a: hsla(266, 20%, 21%, 0.02);
     --shadow-color-b: hsla(0, 48%, 6%, 0.04);
@@ -65,7 +75,6 @@
     --shadow-body-color-b: hsla(var(--gray-900), 0.05);
     --shadow-body-md: 0px 4px 4px 0px var(--shadow-body-color-a);
     --shadow-body-lg: 0px -6px 10px 0px var(--shadow-body-color-b);
-
   }
 
   /* Dark mode token declarations */
@@ -92,6 +101,9 @@
     /* Gradients */
     --gradient-primary-angle: 180deg;
     --gradient-primary-opacity-to: 0.2;
+
+    --radial-a-opacity-1: 0.16;
+    --radial-a-opacity-2: 0.48;
 
     /* Shadows */
     --shadow-color: hsla(var(--white), 0.04);
