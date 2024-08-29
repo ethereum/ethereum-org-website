@@ -25,9 +25,7 @@ const PostPreviewCard = ({ pubDate, title, source, link, imgSrc }: RSSItem) => {
             }).format(new Date(pubDate))}
           </p>
         )}
-        <div className="primary-low-contrast w-fit rounded-full bg-accent-a/20 px-4 py-0 text-sm uppercase text-accent-a">
-          {source}
-        </div>
+        <div className="w-fit text-sm uppercase text-accent-a">{source}</div>
       </CardContent>
     </Card>
   )

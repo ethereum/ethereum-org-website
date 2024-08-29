@@ -363,7 +363,7 @@ const HomePage = ({
           title={t("page-index:page-index-activity-title")}
           imgSrc={activityImage}
         >
-          <div className="mt-16 lg:mt-32">
+          <div className="my-16 lg:my-32">
             <p className="mt-8 text-xl font-bold">
               {t("page-index:page-index-activity-description")}
             </p>
@@ -548,7 +548,7 @@ const HomePage = ({
         </HomeSection>
 
         <div className="w-full">
-          <h3 className="mb-4 mt-2 text-5xl font-black lg:mb-6 lg:text-7xl">
+          <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
             {t("page-index:page-index-posts-header")}
           </h3>
           <p>{t("page-index:page-index-posts-subtitle")}</p>
@@ -575,7 +575,7 @@ const HomePage = ({
         </div>
 
         <div className="w-full">
-          <h3 className="mb-4 mt-2 text-5xl font-black lg:mb-6 lg:text-7xl">
+          <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
             {t("page-index:page-index-events-header")}
           </h3>
           <p>{t("page-index:page-index-events-subtitle")}</p>
