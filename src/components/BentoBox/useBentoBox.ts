@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next"
+
 import { cn } from "@/lib/utils/cn"
 
 import type { BentoCardProps } from "./BentoCard"
@@ -9,6 +11,8 @@ import RobotBarImage from "@/public/images/robot-help-bar.png"
 import MergeImage from "@/public/images/upgrades/merge.png"
 
 export const useBentoBox = () => {
+  const { t } = useTranslation("page-index")
+
   const flow = {
     mobile: {
       down: "flex-col bg-gradient-to-b",
@@ -51,10 +55,9 @@ export const useBentoBox = () => {
 
   const items: BentoCardProps[] = [
     {
-      title: "Crypto without volatility",
-      children:
-        "Stablecoins are currencies that maintain stable value. Their price matches the U.S. dollar or other steady asset",
-      action: "Learn more",
+      title: t("page-index:page-index-bento-stablecoins-title"),
+      children: t("page-index:page-index-bento-stablecoins-content"),
+      action: t("page-index:page-index-bento-stablecoins-action"),
       href: "/stablecoins/",
       imgSrc: ImpactImage,
       imgWidth: 400, // TODO: Fix tablet size alignment (aligning top, should be center?)
@@ -69,11 +72,11 @@ export const useBentoBox = () => {
         "xl:col-span-7 xl:col-start-5 xl:row-start-1"
       ),
     },
+
     {
-      title: "A fairer financial system",
-      children:
-        "Billions can't open bank accounts or freely use their money. Ethereum's financial system is always open and unbiased.",
-      action: "Explore DeFi",
+      title: t("page-index:page-index-bento-defi-title"),
+      children: t("page-index:page-index-bento-defi-content"),
+      action: t("page-index:page-index-bento-defi-action"),
       href: "/defi/",
       imgSrc: ManAndDogImage,
       className: cn(
@@ -88,10 +91,9 @@ export const useBentoBox = () => {
       ),
     },
     {
-      title: "Innovative apps",
-      children:
-        "Ethereum apps work without selling your data. Protect your privacy.",
-      action: "Browse apps",
+      title: t("page-index:page-index-bento-dapps-title"),
+      children: t("page-index:page-index-bento-dapps-content"),
+      action: t("page-index:page-index-bento-dapps-action"),
       href: "/dapps/",
       imgSrc: MergeImage,
       imgWidth: 320,
@@ -107,10 +109,9 @@ export const useBentoBox = () => {
       ),
     },
     {
-      title: "The network of networks",
-      children:
-        "Ethereum is the hub for blockchain innovation. The best project are built on Ethereum.",
-      action: "Explore benefits",
+      title: t("page-index:page-index-bento-networks-title"),
+      children: t("page-index:page-index-bento-networks-content"),
+      action: t("page-index:page-index-bento-networks-action"),
       href: "/layer-2/",
       imgSrc: ManBabyWomanImage,
       imgWidth: 324,
@@ -126,10 +127,9 @@ export const useBentoBox = () => {
       ),
     },
     {
-      title: "The internet of assets",
-      children:
-        "Arts, certificates or even real estate can be tokenized. Anything can be a tradable token. Ownership is public and verifiable.",
-      action: "More on NFTs",
+      title: t("page-index:page-index-bento-assets-title"),
+      children: t("page-index:page-index-bento-assets-content"),
+      action: t("page-index:page-index-bento-assets-action"),
       href: "/nft/",
       imgSrc: RobotBarImage,
       imgWidth: 324,

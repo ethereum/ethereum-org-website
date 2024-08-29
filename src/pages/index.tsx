@@ -202,29 +202,29 @@ const HomePage = ({
 
   const subHeroCTAs = [
     {
-      label: "Pick a wallet",
-      description: "Create accounts, manage assets",
+      label: t("page-index:page-index-cta-wallet-label"),
+      description: t("page-index:page-index-cta-wallet-description"),
       href: "/wallets/find-wallet/",
       Svg: PickWalletIcon,
       className: "text-primary hover:text-primary/80", // TODO: Confirm hover style
     },
     {
-      label: "Get ETH",
-      description: "The currency of Ethereum",
+      label: t("page-index:page-index-cta-get-eth-label"),
+      description: t("page-index:page-index-cta-get-eth-description"),
       href: "/get-eth/",
       Svg: EthTokenIcon,
       className: "text-accent-a hover:text-accent-a/80",
     },
     {
-      label: "Choose a network",
-      description: "Enjoy minimal fees",
+      label: t("page-index:page-index-cta-networks-label"),
+      description: t("page-index:page-index-cta-networks-description"),
       href: "/layer-2/", // TODO: Update with new networks page when ready
       Svg: ChooseNetworkIcon,
       className: "text-accent-b hover:text-accent-b/80",
     },
     {
-      label: "Try apps",
-      description: "See what Ethereum can do",
+      label: t("page-index:page-index-cta-dapps-label"),
+      description: t("page-index:page-index-cta-dapps-description"),
       href: "/dapps/",
       Svg: TryAppsIcon,
       className: "text-accent-c hover:text-accent-c/80",
@@ -233,27 +233,27 @@ const HomePage = ({
 
   const popularTopics = [
     {
-      label: "What is Ethereum?",
+      label: t("page-index:page-index-popular-topics-ethereum"),
       Svg: EthTokenIcon,
       href: "/what-is-ethereum/",
     },
     {
-      label: "What are crypto wallets?",
+      label: t("page-index:page-index-popular-topics-wallets"),
       Svg: PickWalletIcon,
       href: "/wallets/",
     },
     {
-      label: "How to start? (step by step)",
+      label: t("page-index:page-index-popular-topics-start"),
       Svg: BlockHeap,
       href: "/guides/",
     },
     {
-      label: "Ethereum Whitepaper",
+      label: t("page-index:page-index-popular-topics-whitepaper"),
       Svg: Whitepaper,
       href: "/whitepaper/",
     },
     {
-      label: "Ethereum roadmap",
+      label: t("page-index:page-index-popular-topics-roadmap"),
       Svg: RoadmapSign,
       href: "/roadmap/",
     },
@@ -282,33 +282,33 @@ const HomePage = ({
   const joinActions = [
     {
       Svg: Layer2Icon,
-      label: "How to contribute",
+      label: t("page-index:page-index-join-action-contribute-label"),
       href: "/contributing/",
       className: "text-accent-c hover:text-accent-c/80", // TODO: Confirm hover style
-      description:
-        "Find out all the different ways you can help ethereum.org grow and be better.",
+      description: t(
+        "page-index:page-index-join-action-contribute-description"
+      ),
     },
     {
       Svg: FaGithub,
       label: "GitHub",
       href: GITHUB_REPO_URL,
       className: "text-accent-a hover:text-accent-a/80",
-      description: "Contribute to code, content, articles etc.",
+      description: t("page-index:page-index-join-action-github-description"),
     },
     {
       Svg: FaDiscord,
       label: "Discord",
       href: "/discord/",
       className: "text-primary hover:text-primary/80",
-      description:
-        "To ask questions, coordinate contribution and join community calls.",
+      description: t("page-index:page-index-join-action-discord-description"),
     },
     {
       Svg: FaXTwitter,
-      label: "Twitter",
+      label: "X",
       href: "https://x.com/EthDotOrg",
       className: "text-accent-b hover:text-accent-b/80",
-      description: "To keep up with our updates and important news.",
+      description: t("page-index:page-index-join-action-twitter-description"),
     },
   ]
 
@@ -359,32 +359,32 @@ const HomePage = ({
         <BentoBox className="hidden lg:block" />
 
         <HomeSection
-          tag="Activity"
-          title="The strongest ecosystem"
+          tag={t("page-index:page-index-activity-tag")}
+          title={t("page-index:page-index-activity-title")}
           imgSrc={activityImage}
         >
           <div className="mt-16 lg:mt-32">
             <p className="mt-8 text-xl font-bold">
-              Activity from all Ethereum networks
+              {t("page-index:page-index-activity-description")}
             </p>
             <StatsBoxGrid metricResults={metricResults} />
           </div>
         </HomeSection>
 
         <HomeSection
-          tag="Learn"
-          title="Understanding Ethereum"
+          tag={t("page-index:page-index-learn-tag")}
+          title={t("page-index:page-index-learn-title")}
           imgSrc={learnImage}
           isFlipped
         >
           <div className="flex flex-col space-y-16 lg:space-y-32">
             <p className="text-lg">
-              Crypto can feel overwhelming. Don&apos;t worry, these materials
-              are designed to help you understand Ethereum in just a few
-              minutes.
+              {t("page-index:page-index-learn-description")}
             </p>
             <div className="flex flex-col space-y-8">
-              <p className="text-xl font-bold">Popular topics</p>
+              <p className="text-xl font-bold">
+                {t("page-index:page-index-popular-topics-label")}
+              </p>
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
                 {popularTopics.map(({ label, Svg, href }) => (
                   <SvgButtonLink
@@ -401,7 +401,8 @@ const HomePage = ({
               </div>
               <div className="flex justify-center py-8 md:justify-start">
                 <ButtonLink href="/learn/" size="lg">
-                  Other topics <MdChevronRight />
+                  {t("page-index:page-index-popular-topics-other")}{" "}
+                  <MdChevronRight />
                 </ButtonLink>
               </div>
             </div>
@@ -411,18 +412,17 @@ const HomePage = ({
         {/* TODO: Add "The Internet Is Changing" section */}
 
         <HomeSection
-          tag="Builders"
-          title="Blockchain's biggest builder community"
+          tag={t("page-index:page-index-builders-tag")}
+          title={t("page-index:page-index-builders-title")}
           imgSrc={buildersImage}
         >
           <p className="text-lg">
-            Ethereum is home to Web3’s largest and most vibrant developer
-            ecosystem. Use JavaScript and Python, or learn a smart contract
-            language like Solidity or Vyper to write your own app.
+            {t("page-index:page-index-builders-description")}
           </p>
           <div className="flex flex-wrap gap-6 py-8">
             <ButtonLink href="/developers/" size="lg" className="w-fit">
-              Builder&apos;s Portal <MdChevronRight />
+              {t("page-index:page-index-builders-action-primary")}{" "}
+              <MdChevronRight />
             </ButtonLink>
             <ButtonLink
               href="/developers/docs/"
@@ -430,7 +430,7 @@ const HomePage = ({
               variant="outline"
               className="w-fit"
             >
-              Documentation
+              {t("page-index:page-index-builders-action-secondary")}
             </ButtonLink>
           </div>
           <WindowBox
@@ -472,29 +472,19 @@ const HomePage = ({
         </HomeSection>
 
         <HomeSection
-          tag="Ethereum.org Community"
-          title="Built by the community"
+          tag={t("page-index:page-index-community-tag")}
+          title={t("page-index:page-index-community-title")}
           imgSrc={communityImage}
           isFlipped
         >
-          <div className="mt-8 flex flex-col gap-8">
-            <p className="text-lg">
-              The ethereum.org website is built and maintained by hundreds of
-              translators, coders, designers, copywriters, and enthusiastic
-              community members each month.
-            </p>
-            <p className="text-lg">
-              Come ask questions, connect with people around the world and
-              contribute to the website. You will get relevant practical
-              experience and be guided during the process!
-            </p>
-            <p className="text-lg">
-              Ethereum.org community is the perfect place to start and learn.
-            </p>
+          <div className="mt-8 flex flex-col gap-8 text-lg">
+            <p>{t("page-index:page-index-community-description-1")}</p>
+            <p>{t("page-index:page-index-community-description-2")}</p>
+            <p>{t("page-index:page-index-community-description-3")}</p>
           </div>
           <div className="flex flex-wrap gap-3 py-8">
             <ButtonLink href="/community/" size="lg">
-              More on ethereum.org <MdChevronRight />
+              {t("page-index:page-index-community-action")} <MdChevronRight />
             </ButtonLink>
             <div className="flex gap-3">
               <ButtonLink
@@ -516,43 +506,52 @@ const HomePage = ({
             </div>
           </div>
 
-          <WindowBox title="Next calls" Svg={Calendar}>
-            {calendar.map(({ date, title, calendarLink }) => (
-              <div
-                key={title}
-                className="flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row"
-              >
-                <div className="flex flex-col space-y-0.5 text-center text-base sm:text-start">
-                  <p className="text-sm font-bold text-body">{title}</p>
-                  <p className="italic text-body-medium">
-                    {new Intl.DateTimeFormat(locale, {
-                      month: "long",
-                      day: "2-digit",
-                      year: "numeric",
-                      hour: "numeric",
-                      minute: "numeric",
-                    }).format(new Date(date))}
-                  </p>
-                </div>
-                <ButtonLink
-                  className="h-fit w-full text-nowrap px-5 sm:w-fit lg:self-center"
-                  size="md"
-                  variant="outline"
-                  href={calendarLink}
-                  hideArrow
+          <WindowBox
+            title={t("page-index:page-index-calendar-title")}
+            Svg={Calendar}
+          >
+            {calendar.length > 0 ? (
+              calendar.map(({ date, title, calendarLink }) => (
+                <div
+                  key={title}
+                  className="flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row"
                 >
-                  <CalendarAdd /> Add to calendar
-                </ButtonLink>
+                  <div className="flex flex-col space-y-0.5 text-center text-base sm:text-start">
+                    <p className="text-sm font-bold text-body">{title}</p>
+                    <p className="italic text-body-medium">
+                      {new Intl.DateTimeFormat(locale, {
+                        month: "long",
+                        day: "2-digit",
+                        year: "numeric",
+                        hour: "numeric",
+                        minute: "numeric",
+                      }).format(new Date(date))}
+                    </p>
+                  </div>
+                  <ButtonLink
+                    className="h-fit w-full text-nowrap px-5 sm:w-fit lg:self-center"
+                    size="md"
+                    variant="outline"
+                    href={calendarLink}
+                    hideArrow
+                  >
+                    <CalendarAdd /> {t("page-index:page-index-calendar-add")}
+                  </ButtonLink>
+                </div>
+              ))
+            ) : (
+              <div className="flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row">
+                {t("page-index:page-index-calendar-fallback")}
               </div>
-            ))}
+            )}
           </WindowBox>
         </HomeSection>
 
         <div className="w-full">
           <h3 className="mb-4 mt-2 text-5xl font-black lg:mb-6 lg:text-7xl">
-            Recent posts
+            {t("page-index:page-index-posts-header")}
           </h3>
-          <p>The latest blog posts and updates from the community</p>
+          <p>{t("page-index:page-index-posts-subtitle")}</p>
           {/* Mobile */}
           <PostsSwiper items={rssItems} className="mt-4 md:hidden" />
 
@@ -564,7 +563,7 @@ const HomePage = ({
           </div>
 
           <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
-            <p className="text-lg">Read more on these websites</p>
+            <p className="text-lg">{t("page-index:page-index-posts-action")}</p>
             <div className="flex flex-wrap gap-x-6 gap-y-4">
               {COMMUNITY_BLOGS.map(({ name, href }) => (
                 <Link href={href} key={name}>
@@ -577,9 +576,9 @@ const HomePage = ({
 
         <div className="w-full">
           <h3 className="mb-4 mt-2 text-5xl font-black lg:mb-6 lg:text-7xl">
-            Events
+            {t("page-index:page-index-events-header")}
           </h3>
-          <p>We have many community events scheduled around the globe</p>
+          <p>{t("page-index:page-index-events-subtitle")}</p>
           <div className="mt-4 md:mt-16">
             <div className="grid grid-cols-1 gap-8 self-stretch sm:grid-cols-2 md:grid-cols-3">
               {upcomingEvents.map(
@@ -645,29 +644,22 @@ const HomePage = ({
           </div>
           <div className="flex justify-center py-8 md:justify-start">
             <ButtonLink href="/community/events/" size="lg" className="mx-auto">
-              See all events <MdChevronRight />
+              {t("page-index:page-index-events-action")} <MdChevronRight />
             </ButtonLink>
           </div>
         </div>
 
         <div
           className={cn(
-            // Border/gradient positioning
-            "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-4xl before:content-['']",
-            // Border/gradient coloring
-            "before:bg-gradient-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20",
-            // Paint background color over card portion
-            "relative inset-0 rounded-4xl bg-background"
+            "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-4xl before:content-['']", // Border/gradient positioning
+            "before:bg-gradient-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
+            "relative inset-0 rounded-4xl bg-background" // Paint background color over card portion
           )}
         >
           <div className="mb-12 flex flex-col gap-y-8 rounded-4xl bg-radial-a px-4 py-8 lg:mb-32 xl:mb-36">
             <div className="flex flex-col space-y-4 text-center">
-              <h2>Join ethereum.org</h2>
-              <p>
-                This website is open source with hundreds of community
-                contributors. You can propose edits to any of the content on
-                this site.
-              </p>
+              <h2>{t("page-index:page-index-join-header")}</h2>
+              <p>{t("page-index:page-index-join-description")}</p>
             </div>
             <div className="mx-auto grid grid-cols-1 gap-16 md:max-w-screen-md md:grid-cols-2">
               {joinActions.map(
