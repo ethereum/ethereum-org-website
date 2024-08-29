@@ -26,11 +26,11 @@ export type SelectOnChange<Option> = (
 /**
  * Custom Built Version of the `react-select` single-select component.
  *
- * A styles provider wraps the original `Select` to send Chakra styles straight to the
+ * A styles provider wraps the original `Select` to send Tailwind styles straight to the
  * custom internal components which are code-split into their own file.
  * See `./innerComponents.tsx`
  *
- * You can use the Chakra `variant` prop to declare a variant from the extended theme,
+ * You can use the `variant` prop from tailwind-variants to declare a variant from the extended theme,
  * and use any valid props sent to the `Select` component.
  *
  * @see {@link https://react-select.com/props#select-props} for the list of valid props
