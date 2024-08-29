@@ -10,6 +10,7 @@ import { Flex, Skeleton } from "@chakra-ui/react"
 import type {
   AllMetricData,
   BasePageProps,
+  CommunityBlog,
   EventCardProps,
   Lang,
   RSSItem,
@@ -68,9 +69,10 @@ import events from "@/data/community-events.json"
 
 import {
   BASE_TIME_UNIT,
-  COMMUNITY_BLOGS,
-  FEEDS,
+  BLOG_FEEDS,
+  BLOGS_WITHOUT_FEED,
   GITHUB_REPO_URL,
+  RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
 import CreateWalletContent from "!!raw-loader!@/data/CreateWallet.js"
@@ -94,7 +96,7 @@ import hero from "@/public/images/home/hero.png"
 const cachedEthPrice = runOnlyOnce(fetchEthPrice)
 const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
 const cachedFetchTotalValueLocked = runOnlyOnce(fetchTotalValueLocked)
-const cachedXmlBlogFeeds = runOnlyOnce(async () => await fetchRSS(FEEDS))
+const cachedXmlBlogFeeds = runOnlyOnce(async () => await fetchRSS(BLOG_FEEDS))
 const cachedAttestantBlog = runOnlyOnce(fetchAttestantPosts)
 const cachedGrowThePieData = runOnlyOnce(fetchGrowThePie)
 const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
@@ -102,7 +104,7 @@ const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
 type Props = BasePageProps & {
   communityEvents: CommunityEventsReturnType
   metricResults: AllMetricData
-  rssItems: RSSItem[]
+  rssData: { rssItems: RSSItem[]; blogLinks: CommunityBlog[] }
 }
 
 export const getStaticProps = (async ({ locale }) => {
@@ -133,7 +135,14 @@ export const getStaticProps = (async ({ locale }) => {
   // load RSS feed items
   const xmlBlogs = await cachedXmlBlogFeeds()
   const attestantBlog = await cachedAttestantBlog()
-  const rssItems = polishRSSList(xmlBlogs, attestantBlog)
+  const polishedRssItems = polishRSSList(attestantBlog, ...xmlBlogs)
+  const rssItems = polishedRssItems.slice(0, RSS_DISPLAY_COUNT)
+
+  const blogLinks = polishedRssItems.map(({ source, sourceUrl }) => ({
+    name: source,
+    href: sourceUrl,
+  })) as CommunityBlog[]
+  blogLinks.push(...BLOGS_WITHOUT_FEED)
 
   return {
     props: {
@@ -142,7 +151,7 @@ export const getStaticProps = (async ({ locale }) => {
       contentNotTranslated,
       lastDeployLocaleTimestamp,
       metricResults,
-      rssItems,
+      rssData: { rssItems, blogLinks },
     },
     revalidate: BASE_TIME_UNIT * 24,
   }
@@ -151,7 +160,7 @@ export const getStaticProps = (async ({ locale }) => {
 const HomePage = ({
   communityEvents,
   metricResults,
-  rssItems,
+  rssData: { rssItems, blogLinks },
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation(["common", "page-index"])
   const { locale, asPath } = useRouter()
@@ -567,7 +576,7 @@ const HomePage = ({
           <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
             <p className="text-lg">{t("page-index:page-index-posts-action")}</p>
             <div className="flex flex-wrap gap-x-6 gap-y-4">
-              {COMMUNITY_BLOGS.map(({ name, href }) => (
+              {blogLinks.map(({ name, href }) => (
                 <Link href={href} key={name}>
                   {name}
                 </Link>

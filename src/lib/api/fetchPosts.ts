@@ -25,6 +25,7 @@ export const fetchAttestantPosts = async () => {
         link,
         content,
         source: "Attestant",
+        sourceUrl: BASE_URL,
         sourceFeedUrl: BASE_URL,
         imgSrc: "/images/attestant-logo.svg",
         pubDate,

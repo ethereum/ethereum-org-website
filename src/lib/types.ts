@@ -761,6 +761,7 @@ export type RSSItem = {
   source: string
   link: string
   sourceFeedUrl: string
+  sourceUrl: string
   imgSrc?: string
 }
 
@@ -801,7 +802,7 @@ export type RSSResult = {
   }
 }
 
-export type CommunityFeed = {
+export type CommunityBlog = {
   name: string
   href: string
   feed?: string

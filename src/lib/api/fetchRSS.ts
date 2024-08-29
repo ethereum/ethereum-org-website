@@ -1,6 +1,5 @@
 import { parseString } from "xml2js"
 
-import { RSS_DISPLAY_COUNT } from "../constants"
 import type { RSSChannel, RSSItem, RSSResult } from "../types"
 import { isValidDate } from "../utils/date"
 
@@ -11,12 +10,13 @@ import { isValidDate } from "../utils/date"
  */
 export const fetchRSS = async (xmlUrl: string | string[]) => {
   const urls = Array.isArray(xmlUrl) ? xmlUrl : [xmlUrl]
-  const allItems: RSSItem[] = []
+  const allItems: RSSItem[][] = []
   for (const url of urls) {
     const rssItems = (await fetchXml(url)) as RSSResult
     if (!rssItems.rss) continue
     const [mainChannel] = rssItems.rss.channel as RSSChannel[]
     const [source] = mainChannel.title
+    const [sourceUrl] = mainChannel.link
     const channelImage = mainChannel.image ? mainChannel.image[0].url[0] : ""
 
     const parsedRssItems = mainChannel.item
@@ -32,8 +32,6 @@ export const fetchRSS = async (xmlUrl: string | string[]) => {
         const dateB = new Date(b.pubDate[0])
         return dateB.getTime() - dateA.getTime()
       })
-      // Slice to first RSS_DISPLAY_COUNT items
-      .slice(0, RSS_DISPLAY_COUNT)
       // Map to RSSItem object
       .map((item) => {
         const getImgSrc = () => {
@@ -47,13 +45,14 @@ export const fetchRSS = async (xmlUrl: string | string[]) => {
           link: item.link[0],
           imgSrc: getImgSrc(),
           source,
+          sourceUrl,
           sourceFeedUrl: url,
         } as RSSItem
       })
 
-    allItems.push(...parsedRssItems)
+    allItems.push(parsedRssItems)
   }
-  return allItems as RSSItem[]
+  return allItems as RSSItem[][]
 }
 
 /**

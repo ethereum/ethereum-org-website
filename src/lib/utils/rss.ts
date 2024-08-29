@@ -1,9 +1,4 @@
-import {
-  _0X_PARC_FEED,
-  RSS_DISPLAY_COUNT,
-  SOLIDITY_FEED,
-  VITALIK_FEED,
-} from "../constants"
+import { _0X_PARC_FEED, SOLIDITY_FEED, VITALIK_FEED } from "../constants"
 import type { RSSItem } from "../types"
 
 export const sortByPubDate = (items: RSSItem[]) =>
@@ -42,7 +37,11 @@ export const postProcess = (rssItems: RSSItem[]) =>
   })
 
 export const polishRSSList = (...items: RSSItem[][]) => {
-  const allItems = items.flat()
-  const readyForSorting = postProcess(allItems)
-  return sortByPubDate(readyForSorting).slice(0, RSS_DISPLAY_COUNT)
+  const latestOfEach = items
+    .filter(({ length }) => length)
+    .map((item) => item[0]) // Take only latest post (first in array) from each
+
+  const latestItems = latestOfEach.flat()
+  const readyForSorting = postProcess(latestItems)
+  return sortByPubDate(readyForSorting)
 }

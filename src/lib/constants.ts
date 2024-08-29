@@ -4,7 +4,7 @@ import { NavSectionKey } from "@/components/Nav/types"
 
 import i18nConfig from "../../i18n.config.json"
 
-import type { CommunityFeed } from "./types"
+import type { CommunityBlog } from "./types"
 
 export const OLD_CONTENT_DIR = "src/content"
 export const CONTENT_DIR = "public/content"
@@ -166,7 +166,7 @@ export const VITALIK_FEED = "https://vitalik.eth.limo/feed.xml"
 export const SOLIDITY_FEED = "https://soliditylang.org/feed.xml"
 export const _0X_PARC_FEED = "https://rss.app/feeds/cWXGYts0ZM8C3F6t.xml"
 
-export const COMMUNITY_BLOGS: CommunityFeed[] = [
+export const COMMUNITY_BLOGS: CommunityBlog[] = [
   {
     name: "Vitalik Buterin",
     href: "https://vitalik.eth.limo/",
@@ -195,6 +195,7 @@ export const COMMUNITY_BLOGS: CommunityFeed[] = [
   {
     name: "Attestant",
     href: "https://www.attestant.io/posts/",
+    feed: "https://www.attestant.io/posts/",
   },
   { name: "Devcon", href: "https://devcon.org/en/blogs/" },
   {
@@ -209,6 +210,8 @@ export const COMMUNITY_BLOGS: CommunityFeed[] = [
   },
 ]
 
-export const FEEDS = COMMUNITY_BLOGS.map(({ feed }) => feed).filter(
+export const BLOG_FEEDS = COMMUNITY_BLOGS.map(({ feed }) => feed).filter(
   Boolean
 ) as string[]
+
+export const BLOGS_WITHOUT_FEED = COMMUNITY_BLOGS.filter((item) => !item.feed)
