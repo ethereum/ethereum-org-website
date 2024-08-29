@@ -23,7 +23,10 @@
 
     --accent-a: var(--blue-600);
     --accent-b: var(--pink-600);
-    --accent-c: var(--teal-600);
+    --accent-c: var(--teal-700);
+    --accent-a-hover: var(--blue-500);
+    --accent-b-hover: var(--pink-500);
+    --accent-c-hover: var(--teal-600);
 
     /* Gradients */
     --gradient-primary-angle: 90deg;
@@ -97,6 +100,9 @@
     --accent-a: var(--blue-400);
     --accent-b: var(--pink-400);
     --accent-c: var(--teal-400);
+    --accent-a-hover: var(--blue-300);
+    --accent-b-hover: var(--pink-300);
+    --accent-c-hover: var(--teal-300);
 
     /* Gradients */
     --gradient-primary-angle: 180deg;

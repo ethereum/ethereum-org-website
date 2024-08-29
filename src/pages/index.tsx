@@ -206,28 +206,28 @@ const HomePage = ({
       description: t("page-index:page-index-cta-wallet-description"),
       href: "/wallets/find-wallet/",
       Svg: PickWalletIcon,
-      className: "text-primary hover:text-primary/80", // TODO: Confirm hover style
+      className: "text-primary hover:text-primary-hover", // TODO: Confirm hover style
     },
     {
       label: t("page-index:page-index-cta-get-eth-label"),
       description: t("page-index:page-index-cta-get-eth-description"),
       href: "/get-eth/",
       Svg: EthTokenIcon,
-      className: "text-accent-a hover:text-accent-a/80",
+      className: "text-accent-a hover:text-accent-a-hover",
     },
     {
       label: t("page-index:page-index-cta-networks-label"),
       description: t("page-index:page-index-cta-networks-description"),
       href: "/layer-2/", // TODO: Update with new networks page when ready
       Svg: ChooseNetworkIcon,
-      className: "text-accent-b hover:text-accent-b/80",
+      className: "text-accent-b hover:text-accent-b-hover",
     },
     {
       label: t("page-index:page-index-cta-dapps-label"),
       description: t("page-index:page-index-cta-dapps-description"),
       href: "/dapps/",
       Svg: TryAppsIcon,
-      className: "text-accent-c hover:text-accent-c/80",
+      className: "text-accent-c hover:text-accent-c-hover",
     },
   ]
 

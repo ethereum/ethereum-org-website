@@ -129,12 +129,15 @@ const config = {
         accent: {
           a: {
             DEFAULT: "hsla(var(--accent-a))",
+            hover: "hsla(var(--accent-a-hover))",
           },
           b: {
             DEFAULT: "hsla(var(--accent-b))",
+            hover: "hsla(var(--accent-b-hover))",
           },
           c: {
             DEFAULT: "hsla(var(--accent-c))",
+            hover: "hsla(var(--accent-c-hover))",
           },
         },
         body: {
