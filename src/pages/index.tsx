@@ -409,8 +409,8 @@ const HomePage = ({
                 ))}
               </div>
               <div className="flex justify-center py-8 md:justify-start">
-                <ButtonLink href="/learn/" size="lg" variant="outline">
-                  {t("page-index:page-index-popular-topics-other")}{" "}
+                <ButtonLink href="/learn/" size="lg">
+                  {t("page-index:page-index-popular-topics-action")}{" "}
                   <MdChevronRight />
                 </ButtonLink>
               </div>
