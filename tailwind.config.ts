@@ -206,10 +206,12 @@ const config = {
         "button-hover": "4px 4px 0 0 hsla(var(--primary-low-contrast))",
         tooltip: "0 0 16px var(--tooltip-shadow)",
         "svg-button-link":
-          "var(--shadow-1), var(--shadow-2), var(--shadow-3), var(--shadow-4)",
+          "var(--shadow-svg-button-link-1), var(--shadow-svg-button-link-2), var(--shadow-svg-button-link-3), var(--shadow-svg-button-link-4)",
         "svg-button-link-hover":
-          "var(--shadow-1-hover), var(--shadow-2-hover), var(--shadow-3-hover), var(--shadow-4-hover)",
+          "var(--shadow-svg-button-link-1-hover), var(--shadow-svg-button-link-2-hover), var(--shadow-svg-button-link-3-hover), var(--shadow-svg-button-link-4-hover)",
         "card-hover": "var(--shadow-body-md), var(--shadow-body-lg)",
+        "window-box":
+          "var(--shadow-window-box-1), var(--shadow-window-box-2), var(--shadow-window-box-3), var(--shadow-window-box-4), var(--shadow-window-box-5)",
       },
       spacing: {
         7.5: "1.875rem",
