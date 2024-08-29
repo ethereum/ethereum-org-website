@@ -20,7 +20,7 @@ ETH differs significantly from traditional fiat currencies issued by central ban
 
 - Transparency and Predictability: The rules governing ETH supply are transparent and predictable, coded into the Ethereum protocol. Changes require community consensus, unlike fiat currency policies that can change based on political decisions.
 
-- Scarcity Mechanism: While fiat currencies can be printed indefinitely leading to inflation, mechanisms like EIP-1559 introduce scarcity by burning part of the transaction fees, potentially making ETH deflationary under high network demand.
+- Scarcity Mechanism: While fiat currencies can be printed indefinitely leading to inflation, Ethereum introduced mechanisms for scarcity by burning part of the transaction fees, potentially making ETH deflationary under high network demand.
 
 ## What Are the Implications and Benefits?
 Understanding the nuances of ETH supply has several implications and benefits for users, investors, and the broader ecosystem.
