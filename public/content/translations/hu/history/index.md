@@ -248,7 +248,7 @@ Az Altair frissítés a [Beacon lánc](/roadmap/beacon-chain) első tervezett v�
 
 - [Olvassa el az Altair frissítés specifikációit](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />Érdekesség! {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} className="me-2" />Érdekesség! {#altair-fun-fact}
 
 Az Altair volt az első nagyobb hálózati frissítés, aminek konkrét bevezetési ideje volt. Az összes korábbi frissítés egy adott blokkszám alapján történt a proof-of-work láncon, ahol a blokkonkénti idő változó. A Beacon láncnak nem kellett igazodnia a proof-of-workhöz, így időalapú korszakok rendszerén alapszik, amelyek 32 darab 12 másodperces slotból állnak, és a validátorok ezekben tudnak blokkot javasolni. Így pontosan lehetett tudni, hogy mikor következik a 74 240. korszak, hogy az Altair életbe léphessen!
 

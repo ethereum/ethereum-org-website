@@ -170,6 +170,8 @@
           href: /developers/docs/programming-languages/delphi/
         - id: docs-nav-dot-net
           href: /developers/docs/programming-languages/dot-net/
+        - id: docs-nav-elixir
+          href: /developers/docs/programming-languages/elixir/
         - id: docs-nav-golang
           href: /developers/docs/programming-languages/golang/
         - id: docs-nav-java

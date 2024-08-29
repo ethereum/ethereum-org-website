@@ -48,8 +48,9 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [Solaris](https://github.com/paritytech/sol-rs) - _Yerli Parity İstemci EVM'si kullanılarak Solidity Akıllı Sözleşme birim testi teçhizatı._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust Ethereum Sanal Makinesi Uygulaması_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust'ta Wavelet sakıllı sözleşme_
-- [Foundry](https://github.com/gakonst/foundry)- _Ethereum uygulama geliştirme için araç takımı_
-- [Ethers_rs](https://github.com/gakonst/ethers-rs)- _Ethereum kütüphanesi ve cüzdan uygulaması_
+- [Foundry](https://github.com/foundry-rs/foundry) - _Ethereum uygulama geliştirme için araç takımı_
+- [Alloy](https://alloy.rs) - _Ethereum ve diğer EVM tabanlı zincirlerle etkileşime geçmek için yüksek performanslı, iyi test edilmiş ve belgelenmiş kütüphaneler._
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Ethereum kütüphanesi ve cüzdan uygulaması_
 - [SewUp](https://github.com/second-state/SewUp) - _Tıpkı ortak bir arka uçta geliştiriyormuş gibi Rust ile Ethereum webassembly sözleşmenizi oluşturmanıza yardımcı olacak bir kütüphane_
 - [Alt akımlar](https://github.com/streamingfast/substreams) - _Paralel hale getirilmiş blok zincir veri endeksleme teknolojisi_
 - [Reth](https://github.com/paradigmxyz/reth) Reth (Rust Ethereum'un söyleyişinin kısaltması) artık yeni bir Ethereum tam düğüm işlenmesidir

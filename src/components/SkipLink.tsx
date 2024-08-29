@@ -2,7 +2,7 @@ import { useTranslation } from "next-i18next"
 
 import { MAIN_CONTENT_ID } from "@/lib/constants"
 
-import { BaseLink } from "../../tailwind/Link"
+import { BaseLink } from "./ui/Link"
 
 export const SkipLink = () => {
   const { t } = useTranslation()

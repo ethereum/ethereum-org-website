@@ -39,7 +39,7 @@ Attributindikatoren werden unten verwendet, um nennenswerte Stärken oder Schwä
 
 ## Erkunden Sie die Staking-Dienstleister {#saas-providers}
 
-Nachfolgend finden Sie einige verfügbare SaaS-Anbieter. Verwenden Sie die obigen Indikatoren für die Beurteilung dieser Dienste
+Hier sind einige verfügbare SaaS-Anbieter. Verwenden Sie die obigen Indikatoren für die Beurteilung dieser Dienste
 
 <ProductDisclaimer />
 

@@ -47,7 +47,6 @@ Multiple trackers offer a real-time overview of nodes in the Ethereum network. N
 
 - [Map of nodes](https://etherscan.io/nodetracker) by Etherscan
 - [Ethernodes](https://ethernodes.org/) by Bitfly
-- [Ethereum Node Crawler](https://crawler.ethereum.org/)
 - [Nodewatch](https://www.nodewatch.io/) by Chainsafe, crawling consensus nodes
 
 ## Node types {#node-types}

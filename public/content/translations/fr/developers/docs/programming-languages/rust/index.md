@@ -47,7 +47,8 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 - [Solaris](https://github.com/paritytech/sol-rs) - _Exploiter le test unitaire des contrats intelligents Solidity utilisant l'EVM natif du client Parity._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Implémentation en Rust de machines virtuelles Ethereum_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Contrats intelligents Wavelet sous Rust_
-- [Foundry](https://github.com/gakonst/foundry)- _Boîte à outils pour le développement d'applications Ethereum_
+- [Foundry](https://github.com/foundry-rs/foundry)- _Boîte à outils pour le développement d'applications Ethereum_
+- [Alloy](https://alloy.rs) - _Bibliothèques hautes performances, bien testées et documentées pour interagir avec Ethereum et d'autres chaînes basées sur EVM._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Bibliothèque Ethereum et implémentation de portefeuille_
 - [SewUp](https://github.com/second-state/SewUp) - _Bibliothèque pour vous aider aussi bien à créer votre contrat Webassembly Ethereum avec Rust que développer un backend commun._
 - [Substreams](https://github.com/streamingfast/substreams) - _Il s'agit de protocoles d'indexation décentralisés des données qui sont soumises à une période d'immobilisation _

@@ -2,7 +2,7 @@ import type { IconType } from "react-icons/lib"
 
 import { cn } from "@/lib/utils/cn"
 
-import { Stack } from "../../../src/components/ui/flex"
+import { Stack } from "../flex"
 
 import {
   Button,
@@ -63,9 +63,20 @@ const ButtonTwoLines = ({
   )
 
   if (props.componentType === "link") {
+    const { buttonProps, ...rest } = props
     return (
-      <ButtonLink className={commonClassStyles} size={size} {...props}>
-        <ChildContent {...props} size={size} isIconLeft={isIconLeft} />
+      <ButtonLink
+        className={commonClassStyles}
+        // size={size}
+        buttonProps={buttonProps}
+        {...rest}
+      >
+        <ChildContent
+          {...rest}
+          size={size}
+          isSecondary={buttonProps?.isSecondary}
+          isIconLeft={isIconLeft}
+        />
       </ButtonLink>
     )
   }
@@ -79,7 +90,10 @@ const ButtonTwoLines = ({
 export default ButtonTwoLines
 
 const ChildContent = (
-  props: Omit<ButtonTwoLinesProps, "iconAlignment"> & { isIconLeft: boolean }
+  props: Omit<ButtonTwoLinesProps, "iconAlignment" | "buttonProps"> & {
+    isIconLeft: boolean
+    isSecondary?: boolean
+  }
 ) => {
   const {
     reverseTextOrder = false,
