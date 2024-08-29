@@ -109,7 +109,7 @@ export const useStatsBoxGrid = ({
     {
       apiProvider: "GrowThePie",
       apiUrl: "https://growthepie.xyz/",
-      label: "Median transaction cost", // t("page-index-network-stats-nodes-description"),
+      label: t("page-index-network-stats-tx-cost-description"),
       state: medianTxCost,
     },
     {
