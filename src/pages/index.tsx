@@ -400,7 +400,7 @@ const HomePage = ({
                     key={label}
                     Svg={Svg}
                     href={href}
-                    className="text-accent-b [&>:first-child]:flex-row"
+                    className="text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row"
                   >
                     <p className="text-start text-xl font-bold text-body group-hover:underline">
                       {label}
