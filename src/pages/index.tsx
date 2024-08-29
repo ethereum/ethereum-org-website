@@ -436,6 +436,7 @@ const HomePage = ({
           <WindowBox
             title={t("page-index:page-index-developers-code-examples")}
             Svg={AngleBrackets}
+            className="my-8 md:mb-16 md:mt-8 lg:mb-32 lg:mt-16"
           >
             {codeExamples.map(({ title, description }, idx) => (
               <button
@@ -509,6 +510,7 @@ const HomePage = ({
           <WindowBox
             title={t("page-index:page-index-calendar-title")}
             Svg={Calendar}
+            className="my-8 md:mt-8 lg:mt-16"
           >
             {calendar.length > 0 ? (
               calendar.map(({ date, title, calendarLink }) => (
