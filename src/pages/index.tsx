@@ -284,7 +284,7 @@ const HomePage = ({
       Svg: Layer2Icon,
       label: t("page-index:page-index-join-action-contribute-label"),
       href: "/contributing/",
-      className: "text-accent-c hover:text-accent-c/80", // TODO: Confirm hover style
+      className: "text-accent-c hover:text-accent-c-hover",
       description: t(
         "page-index:page-index-join-action-contribute-description"
       ),
@@ -293,21 +293,21 @@ const HomePage = ({
       Svg: FaGithub,
       label: "GitHub",
       href: GITHUB_REPO_URL,
-      className: "text-accent-a hover:text-accent-a/80",
+      className: "text-accent-a hover:text-accent-a-hover",
       description: t("page-index:page-index-join-action-github-description"),
     },
     {
       Svg: FaDiscord,
       label: "Discord",
       href: "/discord/",
-      className: "text-primary hover:text-primary/80",
+      className: "text-primary hover:text-primary-hover",
       description: t("page-index:page-index-join-action-discord-description"),
     },
     {
       Svg: FaXTwitter,
       label: "X",
       href: "https://x.com/EthDotOrg",
-      className: "text-accent-b hover:text-accent-b/80",
+      className: "text-accent-b hover:text-accent-b-hover",
       description: t("page-index:page-index-join-action-twitter-description"),
     },
   ]
