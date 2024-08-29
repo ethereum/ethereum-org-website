@@ -620,8 +620,8 @@ const HomePage = ({
                         <CardDescription className="italic">
                           {(isValidDate(startDate) || isValidDate(endDate)) &&
                             new Intl.DateTimeFormat(locale, {
-                              month: "2-digit",
-                              day: "2-digit",
+                              month: "long",
+                              day: "numeric",
                               year: "numeric",
                             }).formatRange(
                               new Date(
