@@ -1,16 +1,17 @@
 import { MdInfoOutline } from "react-icons/md"
-import { Box, Icon } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import { Image } from "@/components/Image"
+import { ChildOnlyProp } from "@/lib/types"
+
+import { TwImage } from "@/components/Image"
 import InlineLink from "@/components/Link"
-import Text from "@/components/OldText"
 import Tooltip from "@/components/Tooltip"
 
 import { getTranslation } from "@/storybook-utils"
 
 import { langViewportModes } from "../../../.storybook/modes"
 import { ContentContainer } from "../MdComponents"
+import { TooltipProvider } from "../ui/tooltip"
 
 import {
   Banner as BannerComponent,
@@ -35,11 +36,13 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <Box position="relative" w="full">
+      <div className="relative w-full">
         <ContentContainer>
-          <Story />
+          <TooltipProvider>
+            <Story />
+          </TooltipProvider>
         </ContentContainer>
-      </Box>
+      </div>
     ),
   ],
 } satisfies Meta<typeof BannerComponent>
@@ -59,13 +62,19 @@ const tooltipContent = ({ apiUrl, apiProvider, ariaLabel }) => (
   </div>
 )
 
+const StatPrimary = (props: ChildOnlyProp) => (
+  <div className="mb-4 text-5xl leading-none" {...props} />
+)
+
+const StatDescription = (props: ChildOnlyProp) => (
+  <div className="text-md text-[#666] dark:text-[#b2b2b2]" {...props} />
+)
+
 export const Banner: Story = {
   render: () => {
     return (
       <BannerComponent>
-        <Box fontSize="md" color="text200">
-          Banner
-        </Box>
+        <div className="text-md text-[#666] dark:text-[#b2b2b2]">Banner</div>
       </BannerComponent>
     )
   },
@@ -76,9 +85,9 @@ export const BannerBody: Story = {
     return (
       <BannerComponent>
         <BannerBodyComponent>
-          <Box fontSize="md" color="text200">
+          <div className="text-md text-[#666] dark:text-[#b2b2b2]">
             Banner Body
-          </Box>
+          </div>
         </BannerBodyComponent>
       </BannerComponent>
     )
@@ -90,7 +99,7 @@ export const BannerImage: Story = {
     return (
       <BannerComponent>
         <BannerImageComponent>
-          <Image src={stats} alt="" width={400} />
+          <TwImage src={stats} alt="" width={400} />
         </BannerImageComponent>
       </BannerComponent>
     )
@@ -103,15 +112,13 @@ export const BannerGridCell: Story = {
       <BannerComponent>
         <BannerBodyComponent>
           <BannerGridCellComponent>
-            <Box fontSize="5xl" mb={4} lineHeight={1}>
-              4k+
-            </Box>
-            <Box fontSize="md" color="text200">
+            <StatPrimary>4k+</StatPrimary>
+            <StatDescription>
               {getTranslation(
                 "page-what-is-ethereum-ethereum-in-numbers-stat-1-desc",
                 PAGE_WHAT_IS_ETH
               )}
-              <Text as="span" whiteSpace="nowrap">
+              <span className="whitespace-nowrap">
                 &nbsp;
                 <Tooltip
                   content={tooltipContent({
@@ -120,12 +127,12 @@ export const BannerGridCell: Story = {
                     ariaLabel: "Read more about Ethereum projects stats",
                   })}
                 >
-                  <Box as="span">
-                    <Icon as={MdInfoOutline} verticalAlign="middle" />
-                  </Box>
+                  <span>
+                    <MdInfoOutline className="inline-block align-middle" />
+                  </span>
                 </Tooltip>
-              </Text>
-            </Box>
+              </span>
+            </StatDescription>
           </BannerGridCellComponent>
         </BannerBodyComponent>
       </BannerComponent>
@@ -141,15 +148,13 @@ export const BannerGrid: Story = {
           <BannerGridComponent>
             {Array.from({ length: 6 }, (_, i) => i + 1).map((item) => (
               <BannerGridCellComponent key={item}>
-                <Box fontSize="5xl" mb={4} lineHeight={1}>
-                  {item}k+
-                </Box>
-                <Box fontSize="md" color="text200">
+                <StatPrimary>{item}k+</StatPrimary>
+                <StatDescription>
                   {getTranslation(
                     "page-what-is-ethereum-ethereum-in-numbers-stat-1-desc",
                     PAGE_WHAT_IS_ETH
                   )}
-                  <Text as="span" whiteSpace="nowrap">
+                  <span className="whitespace-nowrap">
                     &nbsp;
                     <Tooltip
                       content={tooltipContent({
@@ -159,18 +164,18 @@ export const BannerGrid: Story = {
                         ariaLabel: "Read more about Ethereum projects stats",
                       })}
                     >
-                      <Box as="span">
-                        <Icon as={MdInfoOutline} verticalAlign="middle" />
-                      </Box>
+                      <span>
+                        <MdInfoOutline className="inline-block align-middle" />
+                      </span>
                     </Tooltip>
-                  </Text>
-                </Box>
+                  </span>
+                </StatDescription>
               </BannerGridCellComponent>
             ))}
           </BannerGridComponent>
         </BannerBodyComponent>
         <BannerImageComponent>
-          <Image src={stats} alt="" width={400} />
+          <TwImage src={stats} alt="" width={400} />
         </BannerImageComponent>
       </BannerComponent>
     )
