@@ -18,7 +18,6 @@ type PostsSwiperProps = ClassNameProp & {
 const PostsSwiper = ({ className, items }: PostsSwiperProps) => (
   <div className={cn("h-fit gap-8", className)}>
     <Swiper
-      // cssMode
       navigation={{
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
