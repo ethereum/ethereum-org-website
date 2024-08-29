@@ -3,12 +3,14 @@ import { useRouter } from "next/router"
 import { useTranslation } from "react-i18next"
 import { BsCalendar3 } from "react-icons/bs"
 import { Box, Flex, Heading, Icon } from "@chakra-ui/react"
-import { Image } from "@chakra-ui/react"
 
 import type { EventCardProps } from "@/lib/types"
 
 import { ButtonLink } from "./Buttons"
+import { TwImage } from "./Image"
 import Text from "./OldText"
+
+import EventFallback from "@/public/images/events/event-placeholder.png"
 
 const clearStyles = {
   content: '""',
@@ -80,14 +82,16 @@ const EventCard = ({
             justifyContent="center"
             boxShadow="rgb(0 0 0 / 10%) 0px -1px 0px inset;"
           >
-            <Image
-              src={imageUrl || "/images/events/event-placeholder.png"}
-              alt={title}
-              w="full"
-              height={{ base: "224px", xl: "124px" }}
-              objectFit={"cover"}
-              fallbackSrc="/images/events/event-placeholder.png"
-            />
+            {imageUrl ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={imageUrl}
+                alt={title}
+                className="max-h-[224px] w-full object-cover xl:h-[124px]"
+              />
+            ) : (
+              <TwImage src={EventFallback} alt="" />
+            )}
           </Flex>
           <Box padding={4}>
             <Box textAlign={"center"}>
