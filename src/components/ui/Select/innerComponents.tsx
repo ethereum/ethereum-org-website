@@ -55,15 +55,6 @@ export const SelectStylesContext = createContext(selectVariants())
 
 const useSelectStyles = () => useContext(SelectStylesContext)
 
-export const reactSelectAnatomyKeys = [
-  "container",
-  "control",
-  "indicatorIcon",
-  "menuList",
-  "option",
-  "groupHeading",
-] as const
-
 export const nullop = () => null
 
 /*
