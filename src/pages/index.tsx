@@ -336,7 +336,7 @@ const HomePage = ({
       <TranslatathonBanner pathname={asPath} />
       <HomeHero heroImg={hero} className="w-full" />
       <div className="w-full space-y-16 px-4 sm:px-6 md:space-y-32">
-        <div className="grid w-full grid-cols-2 gap-x-4 gap-y-8 py-20 md:grid-cols-4 md:gap-x-10">
+        <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
           {subHeroCTAs.map(({ label, description, href, className, Svg }) => (
             <Fragment key={label}>
               <SvgButtonLink
@@ -391,9 +391,9 @@ const HomePage = ({
               {t("page-index:page-index-learn-description")}
             </p>
             <div className="flex flex-col space-y-8">
-              <p className="text-xl font-bold">
-                {t("page-index:page-index-popular-topics-label")}
-              </p>
+              <h3 className="text-xl font-bold">
+                {t("page-index:page-index-popular-topics-header")}
+              </h3>
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
                 {popularTopics.map(({ label, Svg, href }) => (
                   <SvgButtonLink

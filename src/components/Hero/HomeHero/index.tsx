@@ -21,7 +21,7 @@ const HomeHero = ({ heroImg, className }: HomeHeroProps) => {
           priority
         />
       </div>
-      <div className="flex flex-col items-center space-y-4 border-t-[3px] border-primary-low-contrast px-4 py-8 text-center lg:space-y-7">
+      <div className="flex flex-col items-center border-t-[3px] border-primary-low-contrast px-4 py-12 text-center">
         <Morpher />
         <div className="flex flex-col items-center space-y-5 lg:max-w-2xl">
           <h1 className="font-black">{t("page-index:page-index-title")}</h1>
