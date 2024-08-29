@@ -1,17 +1,10 @@
-import { SelectItem } from "@radix-ui/react-select"
-import type { Meta, StoryObj } from "@storybook/react/*"
+import { Meta, StoryObj } from "@storybook/react"
 
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "../Select"
+import { HStack } from "../flex"
+import Select from "../Select"
 
 const meta = {
-  title: "Atoms / Form / ShadCn Dropdown",
+  title: "Atoms / Form / ShadCN Dropdown",
   component: Select,
   parameters: {
     // TODO: Remove this when this story file becomes the primary one
@@ -28,37 +21,32 @@ const meta = {
 
 export default meta
 
-export const Dropdown: StoryObj<typeof meta> = {
-  render: () => (
-    <Select>
-      <SelectTrigger>
-        <SelectValue placeholder="Select..." />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectGroup>
-          {[
-            { label: "Ethereum", value: "eth" },
-            { label: "Bitcoin", value: "bit" },
-            { label: "Dogecoin", value: "doge" },
-          ].map(({ label, value }) => (
-            <SelectItem key={value} value={value}>
-              {label}
-            </SelectItem>
-          ))}
-        </SelectGroup>
-        <SelectGroup>
-          <SelectLabel>Layer2 Options</SelectLabel>
-          {[
-            { label: "Mainnet", value: "mainnet" },
-            { label: "Arbitrum", value: "arbitrum" },
-            { label: "Optimism", value: "optimism" },
-          ].map(({ label, value }) => (
-            <SelectItem key={value} value={value}>
-              {label}
-            </SelectItem>
-          ))}
-        </SelectGroup>
-      </SelectContent>
-    </Select>
+type Story = StoryObj<typeof meta>
+
+export const Dropdown: Story = {
+  args: {
+    options: [
+      {
+        options: [
+          { label: "Ethereum", value: "eth" },
+          { label: "Bitcoin", value: "bit" },
+          { label: "Dogecoin", value: "doge" },
+        ],
+      },
+      {
+        label: "Layer2 Options",
+        options: [
+          { label: "Mainnet", value: "mainnet" },
+          { label: "Arbitrum", value: "arbitrum" },
+          { label: "Optimism", value: "optimism" },
+        ],
+      },
+    ],
+  },
+  render: (args) => (
+    <HStack className="gap-4">
+      <Select {...args} />
+      <Select {...args} variant="outline" />
+    </HStack>
   ),
 }
