@@ -29,7 +29,7 @@ Co najmniej:
 - Wszystkie kody przechowywane w systemie z kontrolą wersji, takim jak git
 - Wszystkie modyfikacje kodu dokonane za pośrednictwem Pull Request
 - Wszystkie Pull Request mają przynajmniej jednego recenzenta. _Jeśli realizujesz projekt jednoosobowo, rozważ znalezienie innego autora pracującego solo i recenzji kodu handlowego!_
-- Pojedyncze polecenie kompiluje, wdraża i uruchamia zestaw testów na Twoim kodzie przy użyciu programistycznego środowiska Ethereum (patrz: Truffle)
+- Pojedyncze polecenie kompiluje, wdraża i uruchamia zestaw testów na Twoim kodzie przy użyciu programistycznego środowiska Ethereum
 - Uruchomiłeś swój kod za pomocą podstawowych narzędzi do analizy kodu, takich jak Mythril i Slither, najlepiej przed scaleniem każdego pull request, porównując różnice w danych wyjściowych
 - Solidity nie emituje ŻADNYCH ostrzeżeń kompilatora
 - Twój kod jest dobrze udokumentowany

@@ -10,9 +10,8 @@ incomplete: true
 ## Öğreticiler {#tutorials}
 
 - [Flutter ve Blok Zinciri – Hello World Dapp](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/) başlamanız için tüm adımlarda size yol gösterir:
-  1.  [Truffle geliştirme paketini](https://www.trufflesuite.com/) yükleme
-  2.  [Solidity](https://soliditylang.org/)'de akıllı sözleşme yazma
-  3.  Dart'ta bir kullanıcı arayüzü yazma
+  1.  [Solidity](https://soliditylang.org/)'de akıllı sözleşme yazma
+  2.  Dart'ta bir kullanıcı arayüzü yazma
 - Temel bilgileri hali hazırda biliyorsanız, [daha kısa olan Flutter ile Mobil bir dapp inşa etmek](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) daha iyi olabilir
 - Video izleyerek öğrenmeyi tercih ediyorsanız yaklaşık bir saat uzunluğundaki [İlk Blok Zinciri Flutter Uygulamanızı Oluşturun](https://www.youtube.com/watch?v=3Eeh3pJ6PeA) videosunu izleyebilirsiniz
 - Sabırsızsanız, yaklaşık yirmi dakika uzunluğundaki [Flutter ve Dart ile Ethereum Üzerinde bir Blok Zinciri Merkeziyetsiz Uygulaması Oluşturma](https://www.youtube.com/watch?v=jaMFEOCq_1s) videosunu tercih edebilirsiniz

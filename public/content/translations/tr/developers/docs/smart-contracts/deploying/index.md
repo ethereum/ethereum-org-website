@@ -27,7 +27,7 @@ Son olarak, sözleşmenizi dağıtmadan önce onu derlemeniz gerekir, bu yüzden
 
 ### Bir akıllı sözleşme dağıtmanın aşamaları {#steps-to-deploy}
 
-Belirli aşamalar kullandığınız araçlara göre değişecektir. Örnek olarak, [sözleşmelerinizin dağıtımı hakkında Hardhat belgeleri](https://hardhat.org/guides/deploying.html) veya [Ağlar ve uygulama dağıtımı üzerine Truffle belgelerine](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment) göz atın. Bu ikisi de dağıtım aşamalarını idare etmek için bir komut dosyası yazımını gerektiren ve akıllı sözleşme geliştirme için en popüler araçlardır.
+Belirli aşamalar kullandığınız araçlara göre değişecektir. Örnek olarak, [sözleşmelerinizin dağıtımı hakkında Hardhat belgeleri](https://hardhat.org/guides/deploying.html). Bu ikisi de dağıtım aşamalarını idare etmek için bir komut dosyası yazımını gerektiren ve akıllı sözleşme geliştirme için en popüler araçlardır.
 
 Dağıtıldığında, sözleşmeniz diğer [hesaplar](/developers/docs/accounts/) gibi bir Ethereum adresine sahip olacaktır.
 
@@ -50,12 +50,6 @@ Dağıtıldığında, sözleşmeniz diğer [hesaplar](/developers/docs/accounts/
 - [Sözleşme dağıtımı üzerine belgeler](https://hardhat.org/guides/deploying.html)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
-
-**Truffle -** **_Bir geliştirme ortamı, test çerçevesi, yapı hattı ve diğer araçlar._**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [Ağlar ve uygulama geliştirme üzerine belgeler](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
-- [GitHub](https://github.com/trufflesuite/truffle)
 
 **thirdweb - _Tek bir komut kullanarak herhangi bir sözleşmeyi Ethereum Sanal Makinesi uyumlu herhangi bir zincire kolayca dağıtın_**
 

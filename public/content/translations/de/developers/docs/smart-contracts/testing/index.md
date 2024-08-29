@@ -34,13 +34,11 @@ incomplete: true
 
 ## Verwandte Tutorials {#related-tutorials}
 
-- [Solidity and Truffle Continuous Integration Setup](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _ – So richten Sie Travis oder Circle CI für Trüffel-Tests zusammen mit nützlichen Plugins ein._
 - [Übersicht über Testprodukte](/developers/tutorials/guide-to-smart-contract-security-tools/) _ – Eine Übersicht und ein Vergleich verschiedener Testprodukte_
 - [So verwenden Sie Echidna zum Testen von Smart Contracts](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [So finden Sie mit Manticore Fehler in Smart Contracts](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [So finden Sie mit Slither Fehler in Smart Contracts](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [So simulieren Sie Solidity-Verträge zum Testen](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [So migrieren Sie von Truffle-Tests zur OpenZeppelin-Testumgebung](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
 - [So testen Sie Verträge, nachdem sie in einem Netzwerk bereitgestellt wurden](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
 
 ## Weiterführende Informationen {#further-reading}

@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "Thiết lập môi trường phát triển cục bộ của bạn",
   "page-local-environment-solidity-template-desc": "Mẫu GitHub cho cấu hình hợp đồng thông minh Solidity được tạo sẵn. Chứa mạng cục bộ Hardhat, Waffle để thử nghiệm, Ethers để triển khai ví và các thành phần khác.",
   "page-local-environment-solidity-template-logo-alt": "Logo của mẫu Solidity",
-  "page-local-environment-truffle-desc": "Truffle Suite giúp các nhà phát triển dễ dàng chuyển đổi từ ý tưởng sang ứng dụng phi tập trung (dapp).",
-  "page-local-environment-truffle-logo-alt": "Logo của Truffle",
   "page-local-environment-waffle-desc": "Thư viện tiên tiến nhất để thử nghiệm hợp đồng thông minh. Sử dụng riêng hoặc kết hợp với Scaffold-eth hoặc Hardhat.",
   "page-local-environment-waffle-logo-alt": "Logo của Waffle"
 }

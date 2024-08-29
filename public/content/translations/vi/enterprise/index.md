@@ -75,7 +75,6 @@ Mạng Ethereum công cộng và riêng tư có thể cần các tính năng c�
 
 - [Alethio -](https://explorer.aleth.io/) _Nền tảng phân tích dữ liệu Ethereum_
 - [Treum](https://treum.io/) _mang lại tính minh bạch, truy xuất nguồn gốc và tính truyền thống cho chuỗi cung ứng, sử dụng công nghệ chuỗi khối_
-- [Truffle Suite](https://trufflesuite.com) _bộ phát triển chuỗi khối (Truffle, Ganache, Drizzle)_
 
 ## Cộng đồng nhà phát triển doanh nghiệp {#enterprise-developer-community}
 

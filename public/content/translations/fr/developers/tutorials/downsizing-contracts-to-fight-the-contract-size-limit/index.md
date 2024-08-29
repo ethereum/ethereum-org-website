@@ -7,7 +7,6 @@ tags:
   - "solidity"
   - "contrats intelligents"
   - "stockage"
-  - "truffle"
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com
@@ -23,16 +22,6 @@ Le [22 novembre 2016,](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spuri
 Cette limite a été apportée pour empêcher les attaques par déni de service (DOS). Tout appel vers un contrat est relativement peu coûteux en gaz. Cependant, l'impact d'un appel de contrat sur les nœuds Ethereum augmente de manière exponentielle en fonction de la taille du code du contrat appelé (lecture du code sur le disque, pré-traitement du code et ajout des données à la preuve de Merkle). Dans une situation où l'attaquant n'a besoin que de peu de ressources pour donner beaucoup de travail aux autres nœuds, il y a un risque d'attaques DOS.
 
 À l'origine, le problème était moins préoccupant, car la limite naturelle de la taille des contrats était la limite de gaz par bloc. Bien entendu, un contrat doit être déployé dans une transaction qui contient tout le bytecode du contrat. Si vous n'incluez ensuite que cette seule transaction dans un bloc, vous pourrez utiliser tout le gaz, mais il ne sera pas illimité. Depuis la [mise à niveau de Londres](/history/#london), la limite de gaz de bloc a pu varier entre 15M et 30M unités selon la demande du réseau.
-
-## Relever le défi {#taking-on-the-fight}
-
-Malheureusement, il n'existe pas de moyen simple d'obtenir la taille du bytecode de vos contrats. Pour vous aider, le plugin [truffle-contract-size](https://github.com/IoBuilders/truffle-contract-size) est un excellent outil si vous utilisez Truffle.
-
-1. `npm install truffle-contract-size`
-2. Ajoutez le plugin au fichier _truffle-config.js_ : `plugins: ["truffle-contract-size"]`
-3. Lancez `truffle run contract-size`
-
-Cela vous aidera à comprendre comment vos changements affectent la taille totale des contrats.
 
 Dans les prochaines lignes, nous examinerons certaines méthodes classées en fonction de leur impact potentiel. Considérez ça comme perdre du poids. La meilleure stratégie pour atteindre son poids cible (dans notre cas, 24 kb) est de se concentrer en premier lieu sur les méthodes à fort impact. Dans la plupart des cas, il suffit de revoir son régime alimentaire pour y parvenir, mais il faut parfois aller un peu plus loin. Ensuite, vous pouvez ajouter à cela un peu d'exercice (impact modéré) ou même des suppléments (impact faible).
 

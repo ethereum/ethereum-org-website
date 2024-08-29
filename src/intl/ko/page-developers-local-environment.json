@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "로컬 개발 환경을 설정하기",
   "page-local-environment-solidity-template-desc": "Solidity 스마트 계약을 위해 미리 빌드된 설정의 GitHub 템플릿입니다. 여기에는 Hardhat 로컬 네트워크, 테스트용 Waffle, 지갑 실행용 Ethers 등이 포함됩니다.",
   "page-local-environment-solidity-template-logo-alt": "Solidity 템플릿 로고",
-  "page-local-environment-truffle-desc": "Truffle Suite는 개발자가 아이디어를 디앱으로 최대한 편하게 바꿀 수 있게 합니다.",
-  "page-local-environment-truffle-logo-alt": "Truffle 로고",
   "page-local-environment-waffle-desc": "스마트 계약을 위한 가장 진화된 테스팅 라이브러리입니다. 단독으로 사용하거나, Scaffold-eth 또는 Hardhat과 함께 사용합니다.",
   "page-local-environment-waffle-logo-alt": "Waffle 로고"
 }

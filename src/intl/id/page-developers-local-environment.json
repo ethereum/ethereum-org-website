@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "Siapkan lingkungan pengembangan lokal Anda",
   "page-local-environment-solidity-template-desc": "Sebuah templat GitHub untuk pengaturan bawaan kontrak pintar Solidity Anda. Sudah termasuk sebuah jaringan lokal Hardhat, Waffle untuk pengujian, Ethers untuk implementasi dompet, dan banyak lagi.",
   "page-local-environment-solidity-template-logo-alt": "Logo template Solidity",
-  "page-local-environment-truffle-desc": "Truffle Suite membawa para pengembang dari ide ke pembuatan dapp senyaman mungkin.",
-  "page-local-environment-truffle-logo-alt": "Logo Truffle",
   "page-local-environment-waffle-desc": "Pengujian lib yang paling canggih untuk kontrak pintar. Gunakan sendiri atau dengan Scaffold-eth atau Hardhat.",
   "page-local-environment-waffle-logo-alt": "Logo Waffle"
 }

@@ -27,7 +27,7 @@ Implementarea unui contract costă de asemenea ether (ETH), deci ar trebui să v
 
 ### Etapele de implementare a un contract inteligent {#steps-to-deploy}
 
-Etapele specificie implicate vor depinde de instrumentele pe care le folosiţi. De exemplu, consultaţi [documentația Hardhat pentru implementarea contractelor dvs.](https://hardhat.org/guides/deploying.html) sau [documentația Truffle despre rețele și implementarea aplicațiilor](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment). Acestea sunt două dintre cele mai populare instrumente pentru implementarea contractelor inteligente, care implică redactarea unui script pentru a gestiona etapele de implementare.
+Etapele specificie implicate vor depinde de instrumentele pe care le folosiţi. De exemplu, consultaţi [documentația Hardhat pentru implementarea contractelor dvs.](https://hardhat.org/guides/deploying.html). Acestea sunt două dintre cele mai populare instrumente pentru implementarea contractelor inteligente, care implică redactarea unui script pentru a gestiona etapele de implementare.
 
 Odată implementat, contractul dvs. va avea o adresă Ethereum ca și alte [conturi](/developers/docs/accounts/).
 
@@ -50,12 +50,6 @@ Odată implementat, contractul dvs. va avea o adresă Ethereum ca și alte [cont
 - [Documentație despre implementarea contractelor dvs.](https://hardhat.org/guides/deploying.html)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
-
-**Truffle - ** **_Un mediu de dezvoltare, un framework de testare, de construire de pipeline-uri și alte instrumente._**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [Documentație despre rețele și implementarea aplicațiilor](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
-- [GitHub](https://github.com/trufflesuite/truffle)
 
 ## Tutoriale corelate {#related-tutorials}
 

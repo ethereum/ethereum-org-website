@@ -22,7 +22,6 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 
 ## Artykuły dla początkujących {#beginner-articles}
 
-- [Wybór klienta Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Klient Ethereum Rust](https://wiki.parity.io/Setup)
 - [Wysyłanie transakcji do Ethereum za pomocą Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Wprowadzenie do inteligentnych kontraktów z klientem Parity Ethereum](https://wiki.parity.io/Smart-Contracts)

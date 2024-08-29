@@ -75,7 +75,6 @@ sidebarDepth: 1
 
 - [Alethio](https://explorer.aleth.io/) _이더리움 데이터 분석 플랫폼_
 - [Treum](https://treum.io/) _블록체인 기술을 사용하여 공급망에 투명성, 추적성, 거래성 제공_
-- [Truffle Suite](https://trufflesuite.com) _블록체인 개발 제품군(Truffle, Ganache, Drizzle)_
 
 ## 엔터프라이즈 개발자 커뮤니티 {#enterprise-developer-community}
 

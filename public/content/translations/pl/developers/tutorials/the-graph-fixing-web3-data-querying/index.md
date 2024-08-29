@@ -120,7 +120,7 @@ Manifest jest naszym plikiem konfiguracyjnym i definiuje:
 - inne rzeczy do słuchania, takie jak wywołania funkcji lub bloki
 - wywoływane funkcje mapujące (zobacz mapping.ts poniżej)
 
-Tutaj możesz zdefiniować wiele kontraktów i programów obsługi. Typowa konfiguracja miałaby folder podrzędny wewnątrz projektu Truffle/Hardhat z własnym repozytorium. Wtedy możesz łatwo odwołać się do ABI.
+Tutaj możesz zdefiniować wiele kontraktów i programów obsługi. Typowa konfiguracja miałaby folder podrzędny wewnątrz projektu Hardhat z własnym repozytorium. Wtedy możesz łatwo odwołać się do ABI.
 
 Dla wygody możesz również użyć narzędzia szablonu, takiego jak wąsy. Następnie tworzysz subgraph.template.yaml i wstawiasz adresy oparte na najnowszych wdrożeniach. Aby zapoznać się z bardziej zaawansowaną przykładową konfiguracją, zobacz na przykład [Repozytorium subgrafów Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 

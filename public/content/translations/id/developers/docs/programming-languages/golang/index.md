@@ -23,7 +23,6 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 
 ## Artikel dan buku untuk pemula {#beginner-articles-and-books}
 
-- [Memilih Klien Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Mulai Menggunakan Geth](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
 - [Gunakan Golang untuk Terhubung ke Ethereum](https://www.youtube.com/watch?v=-7uChuO_VzM)
 - [Gunakan Kontrak Pintar Ethereum Menggunakan Golang](https://www.youtube.com/watch?v=pytGqQmDslE)

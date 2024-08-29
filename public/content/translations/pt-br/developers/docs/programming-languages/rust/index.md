@@ -22,7 +22,6 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 ## Artigos para Iniciantes {#beginner-articles}
 
-- [Escolhendo um Cliente Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [O cliente Rust Ethereum](https://openethereum.github.io/) /**\*Note que o OpenEthereum [foi descontinuado](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e não está mais sendo mantido.** Use-o com cuidado e de preferência mude para outra implementação do cliente.
 - [Enviando uma transação para Ethereum usando Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Uma Introdução aos Contratos Inteligentes com o Cliente Parity Ethereum](https://wiki.parity.io/Smart-Contracts)

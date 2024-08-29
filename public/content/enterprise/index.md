@@ -63,7 +63,6 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Baseline Project](https://www.baseline-protocol.org/) - _The Baseline Protocol is a set of tools and libraries that helps enterprises coordinate complex, multi-party business processes and workflows with privacy while keeping data in respective systems of record. The standard enables two or more state machines to achieve and maintain data consistency and workflow continuity by using a network as a common frame of reference._
 - [Chainlens](https://www.chainlens.com/) - _SaaS and on-prem blockchain data and analytics platform from Web3 Labs_
 - [Ernst & Young's 'Nightfall'](https://github.com/EYBlockchain/nightfall_3) - _an application for transferring ERC20, ERC721 and ERC1155 applications under Zero Knowledge, using an Optimistic Rollup_
-- [Truffle Suite](https://trufflesuite.com) - _blockchain development suite (Truffle, Ganache, Drizzle)_
 
 ### Scalability solutions {#scalability-solutions}
 

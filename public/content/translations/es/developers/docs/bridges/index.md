@@ -103,7 +103,7 @@ Si una dapp va por la ruta de integrar un puente o un agregador, hay diferentes 
 
 ### Implementar una dapp en múltiples cadenas {#deploying-a-dapp-on-multiple-chains}
 
-Para implementar una dapp en múltiples cadenas, los desarrolladores pueden usar plataformas de desarrollo como [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Truffle](https://trufflesuite.com/), [Moralis](https://moralis.io/), etc. Por lo general, estas plataformas vienen con complementos componibles que pueden permitir que las dapps se hagan multicadena o se usen en otras. Por ejemplo, los desarrolladores pueden usar un proxy de implementación determinista ofrecido por el [complemento hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
+Para implementar una dapp en múltiples cadenas, los desarrolladores pueden usar plataformas de desarrollo como [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/), etc. Por lo general, estas plataformas vienen con complementos componibles que pueden permitir que las dapps se hagan multicadena o se usen en otras. Por ejemplo, los desarrolladores pueden usar un proxy de implementación determinista ofrecido por el [complemento hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
 
 #### Ejemplos:
 

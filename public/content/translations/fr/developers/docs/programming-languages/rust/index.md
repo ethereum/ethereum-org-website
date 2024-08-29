@@ -22,7 +22,6 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 
 ## Articles pour les débutants {#beginner-articles}
 
-- [Choisir un client Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Le client Rust Ethereum](https://openethereum.github.io/) **Veuillez noter que OpenEthereum [a été déprécié](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) et n'est plus maintenu.** Utilisez-le avec prudence et passez de préférence à une autre implémentation client.
 - [Envoi de la transaction à Ethereum en utilisant Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Un tutoriel sur la façon d'écrire des contrats dans Rust Wasm pour Kovan](https://github.com/paritytech/pwasm-tutorial)

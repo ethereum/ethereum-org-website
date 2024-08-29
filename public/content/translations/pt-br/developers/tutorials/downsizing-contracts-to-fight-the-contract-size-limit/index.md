@@ -7,7 +7,6 @@ tags:
   - "solidez"
   - "smart contracts"
   - "armazenamento"
-  - "truffle"
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com
@@ -23,16 +22,6 @@ Em [22 de novembro de 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-
 Este limite foi introduzido para impedir ataques de negação de serviço (DOS). Qualquer apelo a um contrato é relativamente barato. No entanto, o impacto de uma chamada de contrato para os nós da Ethereum aumenta de forma desproporcionada, dependendo do tamanho do código do contrato chamado (lendo o código do disco, pré-processando o código, adicionando dados à prova de Merkle). Sempre que você tiver uma situação em que o agressor requer poucos recursos para causar muito trabalho para os outros, você tem o potencial para ataques DOS.
 
 Originalmente, tratava-se de um problema menor, porque um limite de tamanho natural do contrato é o limite de gas por bloco. Obviamente, um contrato precisa ser implementado dentro de uma transação que tenha todo o bytecode do contrato. Se você incluir apenas essa transação em um bloco, você pode usar todo esse gas, mas não é infinito. Desde a [London Upgrade](/history/#london), o limite de gas de bloco tem sido capaz de variar entre 15M e 30M de unidades, de acordo com a demanda da rede.
-
-## Começando a luta {#taking-on-the-fight}
-
-Infelizmente, não há maneira fácil de obter o tamanho do bytecode dos seus contratos. Uma ótima ferramenta para ajudá-lo é o plugin [truffle-contract-size](https://github.com/IoBuilders/truffle-contract-size) se você estiver usando o Truffle.
-
-1. `npm install truffle-contract-size`
-2. Adicione o plugin ao _truffle-config.js_: `plugins: ["truffle-contract-size"]`
-3. Execute `truffle rodando contract-size`
-
-Isso irá ajudá-lo a descobrir como suas mudanças estão afetando o tamanho total do contrato.
 
 A seguir, analisaremos alguns métodos ordenados pelo seu potencial impacto. Pense nisso em termos de perda de peso. A melhor estratégia para alguém atingir o seu peso alvo (no nosso caso 24kb) é concentrar-se primeiro nos grandes métodos de impacto. Na maioria dos casos, só de ajustar a sua dieta já ajudará, mas às vezes é necessário de um pouco mais. Então você pode adicionar algum exercício (impacto médio) ou até suplementos (impacto pequeno).
 

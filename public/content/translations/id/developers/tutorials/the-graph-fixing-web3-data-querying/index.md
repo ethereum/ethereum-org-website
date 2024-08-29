@@ -120,7 +120,7 @@ Manifestasi adalah file konfigurasi kita dan menentukan:
 - hal lain untuk didengarkan seperti fungsi pemanggilan atau blok
 - the mapping functions being called (see `mapping.ts` below)
 
-Anda bisa menentukan kontrak dan handler beragam di sini. Pengaturan umumnya akan memiliki folder subgraph di dalam proyek Truffle/Hardhat dengan repositorinya sendiri. Lalu Anda bisa dengan mudah merujuk ABI-nya.
+Anda bisa menentukan kontrak dan handler beragam di sini. Pengaturan umumnya akan memiliki folder subgraph di dalam proyek Hardhat dengan repositorinya sendiri. Lalu Anda bisa dengan mudah merujuk ABI-nya.
 
 Untuk alasan kenyamanan, Anda mungkin juga mau menggunakan peralatan templat seperti mustache. Then you create a `subgraph.template.yaml` and insert the addresses based on the latest deployments. Untuk pengaturan percontohan yang lebih canggih, lihat contoh [repo subgraph Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 

@@ -28,8 +28,6 @@
   "page-local-environment-setup-title": "Kuinka luoda paikallinen kehitysympäristö?",
   "page-local-environment-solidity-template-desc": "GitHub-malli on valmiiksi rakennettu alusta Solidity-kielen älysopimuksille. Se sisältää HardHat-paikallisverkon, Wafflen testausta varten, Ethereitä lompakon käyttöönottoon ja muuta tarvittavaa.",
   "page-local-environment-solidity-template-logo-alt": "Solidity-logo",
-  "page-local-environment-truffle-desc": "Truffle on suosittu, koska se auttaa kehittäjiä luomaan dAppeja muitta mutkitta.",
-  "page-local-environment-truffle-logo-alt": "Truffle logo",
   "page-local-environment-waffle-desc": "Kehittynein testauskirjasto älysopimuksille. Käytä sellaisenaan, Scaffold-Etherilla tai HardHatilla.",
   "page-local-environment-waffle-logo-alt": "Waffle logo"
 }

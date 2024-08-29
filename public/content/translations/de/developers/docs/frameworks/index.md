@@ -22,11 +22,6 @@ Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit de
 
 ## Verfügbare Frameworks {#available-frameworks}
 
-**Truffle –** **_Eine Entwicklungsumgebung, Test-Framework, Build-Pipeline und weitere Tools_**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-
 **Hardhat –** **_Ethereum-Entwicklungsumgebung für Experten_**
 
 - [hardhat.org](https://hardhat.org)

@@ -23,7 +23,6 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps p
 
 ## Artículos y libros para principiantes {#beginner-articles-and-books}
 
-- [Seleccionar a un cliente de Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Comenzar con Geth](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
 - [Usar Golang para conectarte a Ethereum](https://www.youtube.com/watch?v=-7uChuO_VzM)
 - [Implementar contratos inteligentes de Ethereum mediante Golang](https://www.youtube.com/watch?v=pytGqQmDslE)

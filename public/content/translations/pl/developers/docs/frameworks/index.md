@@ -22,11 +22,6 @@ Przed zagłębieniem się w frameworki zalecamy przeczytanie naszego wprowadzeni
 
 ## Dostępne frameworki {#available-frameworks}
 
-**Truffle —** **_środowisko programistyczne, testowanie frameworka i inne narzędzia._**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-
 **Epirus —** **_platforma do tworzenia, wdrażania i monitorowania aplikacji blockchain na JVM_**
 
 - [Strona główna](https://www.web3labs.com/epirus)

@@ -130,4 +130,3 @@ ethereum.orgは、40言語以上のネイティブに翻訳されており、各
 - [一般社団法人日本暗号資産ビジネス協会](https://cryptocurrency-association.org/)
 - [ブロックチェーン開発の概要 - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - ブロックチェーンとイーサリアムプラットフォームでの開発に関する説明
 - [マスタリング・イーサリアム](https://www.oreilly.co.jp/books/9784873118963/) - スマートコントラクトと分散型アプリ(Dapp)の構築
-- [SolidityとEthereumによる実践スマートコントラクト開発](https://www.oreilly.co.jp/books/9784873119342/) - Truffle Suiteを用いた開発の基礎からデプロイまで

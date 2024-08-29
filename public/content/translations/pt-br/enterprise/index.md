@@ -72,7 +72,6 @@ Diversas organizações trabalharam juntas para tornar o Ethereum amigável para
 - [Ernst & Young ‘Nightfall’](https://github.com/EYBlockchain/nightfall) _é um conjunto de ferramentas para transações privadas_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _é um aplicativo de assinatura de transações para ser usado com um provedor web3_
 - [Tenderly](https://tenderly.co/) _é uma plataforma de dados que fornece análise em tempo real, alertando e monitorando com suporte a redes privadas_
-- [Truffle Suite](https://trufflesuite.com) _pacote de desenvolvimento da blockchain (Truffle, Ganache, Drizzle)_
 
 ### Soluções de escalabilidade {#scalability-solutions}
 

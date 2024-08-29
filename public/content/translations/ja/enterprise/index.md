@@ -83,7 +83,6 @@ Hyperledger、Quorum、Cordaプロジェクトが開始された2016年頃から
 - [ベースラインプロジェクト](https://www.baseline-protocol.org/) - _ベースラインプロトコルはツールとライブラリのセットで、企業が各システムのデータを維持しつつ、プライバシーを守って複雑でマルチパーティのビジネスプロセスおよびワークフローを調整することを支援。 この標準により、ネットワークを共通の参照フレームとして使うことで、2つ以上の状態マシンがデータの一貫性とワークフローの継続性を実現し、維持することが可能_
 - [Chainlens](https://www.chainlens.com/) - _Web3 LabsのSaaSおよびオンプレミスのブロックチェーンデータおよび分析プラットフォーム_
 - [アーンスト・アンド・ヤング「Nightfall」](https://github.com/EYBlockchain/nightfall_3) - _オプティミスティック・ロールアップを使って、ERC20、ERC721、ERC1155アプリケーションをゼロ知識で転送するためのアプリケーション_
-- [Truffle Suite](https://trufflesuite.com) - _ブロックチェーン開発スイート (Truffle、Ganache、Drizzle)_
 
 ### スケーラビリティソリューション {#scalability-solutions}
 

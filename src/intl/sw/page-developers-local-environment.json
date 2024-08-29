@@ -26,8 +26,6 @@
   "page-local-environment-setup-title": "Anzisha eneo lako rafiki kwaajili ya uundaji",
   "page-local-environment-solidity-template-desc": "Kiolezo cha GitHub kilichojengwa tayari kwa ajili ya mikataba erevu ya Solidity utakayojenga. Inajumuisha mtandao wa Hardhat, Waffle kwa ajili ya kufanya majaribio, Ethers kwa ajili ya utekelezaji wa pochi, na mengine mengi.",
   "page-local-environment-solidity-template-logo-alt": "Nembo kiolezo cha Solidity",
-  "page-local-environment-truffle-desc": "Msaninidi programu anaweza kufanya wazo lake kua programu zilizogatuliwa kwa urahisi kwa kutumia Truffle.",
-  "page-local-environment-truffle-logo-alt": "Nembo ya Truffle",
   "page-local-environment-waffle-desc": "Maktaba ya juu zaidi ya majaribio kwa mikataba mahiri. Tumia peke yako au kwa Scaffold-eth au Hardhat.",
   "page-local-environment-waffle-logo-alt": "Nembo ya Waffle"
 }

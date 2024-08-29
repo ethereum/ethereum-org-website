@@ -72,7 +72,6 @@ Diferentes organizaciones han emprendido iniciativas de colaboración para que E
 - [Ernst & Nightfall's "Nightfall"](https://github.com/EYBlockchain/nightfall) _: un conjunto de herramientas para realizar transacciones privadas_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _: una aplicación de firmado de transacción para utilizarse con un proveedor de web3_
 - [Anteriormente](https://tenderly.co/) _era una plataforma de datos que proporciona análisis en tiempo real, alertas y monitoreo con soporte para redes privadas._
-- [Truffle Suite:](https://trufflesuite.com) _suite de desarrollo de cadena de bloques (Truffle, Ganache, Drizzle)_
 
 ### Soluciones de escalabilidad {#scalability-solutions}
 

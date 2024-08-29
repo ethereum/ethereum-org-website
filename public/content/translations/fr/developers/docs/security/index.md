@@ -29,7 +29,7 @@ Il faut au minimum que :
 - tout le code soit stocké dans un système de contrôle de version comme git ;
 - toutes les modifications de code soient effectuées via des PR (Pull Requests) ;
 - toutes les PR aient au moins un réviseur ; _Si vous travaillez sur un projet en solo, envisagez de trouver un autre auteur solo pour négocier des révisions de code !_
-- une seule commande compile, déploie et exécute une suite de tests sur votre code en utilisant un environnement de développement Ethereum (Voir : Truffle) ;
+- une seule commande compile, déploie et exécute une suite de tests sur votre code en utilisant un environnement de développement Ethereum;
 - vous ayez exécuté votre code via des outils d'analyse basiques comme Mythril et Slither, idéalement avant que chaque PR soit fusionnée, en comparant les différences de sortie ;
 - Solidity n'émette aucune alerte à la compilation ;
 - votre code soit bien documenté.

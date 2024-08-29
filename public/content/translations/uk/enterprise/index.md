@@ -75,7 +75,6 @@ sidebarDepth: 1
 
 - [Alethio](https://explorer.aleth.io/) _— платформа для аналізу даних Ethereum_
 - [Treum](https://treum.io/) _забезпечує прозорість, можливості відстеження та реалізації ланцюгів поставок з використанням технології блокчейну_
-- [Truffle Suite](https://trufflesuite.com) _— набір для розробки блокчейну (Truffle, Ganache, Drizzle)_
 
 ## Спільнота розробників для корпоративного сектора {#enterprise-developer-community}
 

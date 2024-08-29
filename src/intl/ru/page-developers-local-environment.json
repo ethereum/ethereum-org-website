@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "Настройте локальную среду разработки",
   "page-local-environment-solidity-template-desc": "Шаблон GitHub для предварительной установки ваших смарт-контрактов Solidity. Включает в себя локальную сеть Hardhat, Waffle для тестирования, Ethers для применения кошелька и многое другое.",
   "page-local-environment-solidity-template-logo-alt": "Логотип шаблона Solidity",
-  "page-local-environment-truffle-desc": "Truffle Suite обеспечивает разработчикам максимальный комфорт в работе от идеи до dapp.",
-  "page-local-environment-truffle-logo-alt": "Логотип Truffle",
   "page-local-environment-waffle-desc": "Самая продвинутая тестовая версия для смарт-контрактов. Используйте отдельно или со Scaffold-eth или Hardhat.",
   "page-local-environment-waffle-logo-alt": "Логотип Waffle"
 }

@@ -7,7 +7,6 @@ tags:
   - "solidity"
   - "contracte inteligente"
   - "stocare"
-  - "truffle"
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com
@@ -23,16 +22,6 @@ Pe [22 noiembrie 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spuri
 Această limită a fost introdusă pentru a preveni atacurile prin refuzul-serviciului (DOS). Orice apel la un contract este relativ ieftin din punct de vedere al gazului. Cu toate acestea, impactul unui apel de contract pentru nodurile Ethereum crește în mod disproporționat în funcție de dimensiunea codului contractului apelat (citirea codului de pe disc, preprocesarea codului, adăugarea de date la dovada Merkle). De fiecare dată când aveți o astfel de situație în care atacatorul are nevoie de puține resurse pentru a le da mult de lucru celorlalți, există posibilitatea unor atacuri DOS.
 
 Inițial aceasta era o problemă mai puțin serioasă, pentru că o limită naturală a mărimii contractului este limita de gaz pe bloc. În mod evident, un contract trebuie să fie implementat în cadrul unei tranzacții care conține tot bytecode-ul contractului. Dar dacă includeți doar acea tranzacție într-un bloc, puteți utiliza tot gazul, care însă nu este infinit. Problema în acest caz este însă că limita de gaz pe bloc se modifică în timp și este teoretic nemărginită. În momentul introducerii EIP-170, limita de gaz pe bloc era de numai 4,7 milioane. Acum limita de gaz pe bloc tocmai [a crescut din nou](https://etherscan.io/chart/gaslimit) luna trecută la 11,9 milioane.
-
-## Cum să contracarăm {#taking-on-the-fight}
-
-Din nefericire, nu există o modalitate ușoară de a obține dimensiunea bytecode-ului contractelor dvs. Dacă utilizați Truffle, un instrument excelent pentru a vă ajuta în acest sens este plugin-ul [truffle-contract-size](https://github.com/IoBuilders/truffle-contract-size).
-
-1. `npm install truffle-contract-size`
-2. Adăugați plugin-ul la _truffle-config.js_: `plugins: ["truffle-contract-size"]`
-3. Rulați `truffle run contract-size`
-
-Aceasta vă va ajuta să înțelegeți cum afectează modificările dvs. dimensiunea totală a contractului.
 
 În cele ce urmează vom examina câteva metode în ordinea impactului lor potențial. Considerați-le din perspectiva pierderii în greutate. Strategia cea mai bună pentru ca cineva să-și atingă greutatea propusă (în cazul nostru 24kB) este să se axeze întâi pe metodele cu impact mare. În cele mai multe cazuri va fi suficient să vă modificați regimul alimentar ca să vă atingeți scopul, dar uneori mai este necesar și altceva. Apoi ați mai putea face niște exerciții fizice (impact mediu) sau chiar lua suplimente (impact mic).
 

@@ -6,7 +6,6 @@ import FoundryImage from "@/public/images/dev-tools/foundry.png"
 import HardhatImage from "@/public/images/dev-tools/hardhat.png"
 import KurtosisImage from "@/public/images/dev-tools/kurtosis.png"
 import ScaffoldEthImage from "@/public/images/dev-tools/scaffoldeth.png"
-import TruffleImage from "@/public/images/dev-tools/truffle.png"
 import WaffleImage from "@/public/images/dev-tools/waffle.png"
 
 const frameworksList: Array<Framework> = [
@@ -42,17 +41,6 @@ const frameworksList: Array<Framework> = [
       "page-developers-local-environment:page-local-environment-hardhat-desc",
     alt: "page-developers-local-environment:page-local-environment-hardhat-logo-alt",
     image: HardhatImage,
-  },
-  {
-    id: "truffle",
-    url: "https://www.trufflesuite.com/",
-    githubUrl: "https://github.com/trufflesuite/truffle",
-    background: "#31272a",
-    name: "Truffle",
-    description:
-      "page-developers-local-environment:page-local-environment-truffle-desc",
-    alt: "page-developers-local-environment:page-local-environment-truffle-logo-alt",
-    image: TruffleImage,
   },
   {
     id: "brownie",

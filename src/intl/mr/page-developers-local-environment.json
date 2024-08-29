@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "आपले स्थानिक विकास वातावरण सेट करा",
   "page-local-environment-solidity-template-desc": "तुमच्या Solidity स्मार्ट कॉन्ट्रॅक्ट्ससाठी पूर्व-निर्मित सेटअपसाठी एक GitHub टेम्पलेट. Hardhat स्थानिक नेटवर्क, चाचण्यांसाठी Waffle, वॉलेट अंमलबजावणीसाठी इथर्स आणि बरेच काही समाविष्ट आहे.",
   "page-local-environment-solidity-template-logo-alt": "Solidity टेम्पलेट लोगो",
-  "page-local-environment-truffle-desc": "Truffle Suite विकसकांना शक्य तितक्या आरामात कल्पनेतून dapp करण्याची संधी देते.",
-  "page-local-environment-truffle-logo-alt": "Truffle लोगो",
   "page-local-environment-waffle-desc": "स्मार्ट करारांसाठी सर्वात प्रगत चाचणी लिब. एकट्याने किंवा Scaffold-eth किंवा Hardhat सह वापरा.",
   "page-local-environment-waffle-logo-alt": "Waffle लोगो"
 }

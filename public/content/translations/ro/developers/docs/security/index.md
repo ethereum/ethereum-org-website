@@ -29,7 +29,7 @@ Cel puțin:
 - Toate codurile stocate într-un sistem de control al versiunii, cum ar fi Git
 - Toate modificările de cod efectuate prin Solicitări Pull
 - Toate Solicitările Pull au cel puțin un examinator. _Dacă ești într-un proiect solo, ia în considerare găsirea unui alt autor solo și negociază cu el recenzii de coduri!_
-- O singură comandă compilează, implementează și rulează o suită de teste împotriva codului tău utilizând un mediu Ethereum de dezvoltare (vezi: Truffle)
+- O singură comandă compilează, implementează și rulează o suită de teste împotriva codului tău utilizând un mediu Ethereum de dezvoltare
 - Ai rulat codul prin instrumente de analiză a codului de bază, cum ar fi Mythril și Slither, în mod ideal înainte ca fiecare solicitare de extragere să fie îmbinată, comparând diferențele de ieșire
 - Solidity nu emite NICIUN avertisment al compilatorului
 - Codul tău este bine documentat

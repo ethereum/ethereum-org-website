@@ -72,7 +72,6 @@ lang: zh
 - [Ernst & Young 的“Nightfall”](https://github.com/EYBlockchain/nightfall) _私有的交易工具包_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _与 Web3 应用提供商一起使用的交易签名应用程序_
 - [Tenderly](https://tenderly.co/)_，一个提供实时分析、告警和监控，并为专用网络提供支持的数据平台_
-- [Truffle Suite](https://trufflesuite.com) _区块链开发套件（Truffle、Ganache、Drizzle）_
 
 ### 可扩展性解决方案 {#scalability-solutions}
 

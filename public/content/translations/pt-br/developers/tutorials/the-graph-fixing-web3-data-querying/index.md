@@ -120,7 +120,7 @@ O manifesto é nosso arquivo de configuração e define:
 - outras coisas para ouvir como chamadas de função ou blocos
 - as fnções de mapping sendo chamadas (conferir `mapping.ts` below)
 
-Aqui você pode definir vários contratos e manipuladores. Uma configuração típica teria uma pasta de subgráfico dentro do projeto Truffle/Hardhat com seu próprio repositório. Então você pode facilmente se referir ao ABI.
+Aqui você pode definir vários contratos e manipuladores. Uma configuração típica teria uma pasta de subgráfico dentro do projeto Hardhat com seu próprio repositório. Então você pode facilmente se referir ao ABI.
 
 Por conveniência você também pode querer usar uma ferramenta modelo tipo um bigode. Em seguida, você cria um `subgraph.template.yaml` e insere os endereços com base nas mais recentes implantações. Para uma configuração de exemplo mais avançada, veja, por exemplo, o [repositório de subgráfico Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 

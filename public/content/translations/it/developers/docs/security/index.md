@@ -29,7 +29,7 @@ Requisiti minimi:
 - Tutto il codice memorizzato in un sistema di controllo delle versioni, come git
 - Tutte le modifiche al codice effettuate tramite richieste pull
 - Tutte le richieste pull hanno almeno un revisore. _Se sei l'unico sviluppatore nel progetto, prendi in considerazione la possibilità di trovare un altro sviluppatore che lavori da solo per revisionarvi i progetti a vicenda_
-- Un singolo comando compila, distribuisce ed esegue una serie di test sul codice utilizzando un ambiente di sviluppo per Ethereum (vedi: Truffle)
+- Un singolo comando compila, distribuisce ed esegue una serie di test sul codice utilizzando un ambiente di sviluppo per Ethereum
 - Hai verificato il codice con strumenti di base di analisi del codice come Mythril e Slither, idealmente prima dell'unione di ogni richiesta pull, e confrontato le differenze nell'output
 - Solidity non produce NESSUN avviso in fase di compilazione
 - Il codice è ben documentato

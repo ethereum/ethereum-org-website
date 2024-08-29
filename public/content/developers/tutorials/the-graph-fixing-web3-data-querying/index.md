@@ -122,7 +122,7 @@ The manifest is our configuration file and defines:
 - other things to listen to like function calls or blocks
 - the mapping functions being called (see `mapping.ts` below)
 
-You can define multiple contracts and handlers here. A typical setup would have a subgraph folder inside the Truffle/Hardhat project with its own repository. Then you can easily reference the ABI.
+You can define multiple contracts and handlers here. A typical setup would have a subgraph folder inside the Hardhat project with its own repository. Then you can easily reference the ABI.
 
 For convenience reasons you also might want to use a template tool like mustache. Then you create a `subgraph.template.yaml` and insert the addresses based on the latest deployments. For a more advanced example setup, see for example the [Aave subgraph repo](https://github.com/aave/aave-protocol/tree/master/thegraph).
 

@@ -22,11 +22,6 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 
 ## Mevcut çerçeveler {#available-frameworks}
 
-**Truffle -** **_Bir geliştirme ortamı, test çerçevesi, yapı hattı ve diğer araçlar._**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-
 **Hardhat -** **_Profesyoneller için Ethereum geliştirme platformu._**
 
 - [hardhat.org](https://hardhat.org)

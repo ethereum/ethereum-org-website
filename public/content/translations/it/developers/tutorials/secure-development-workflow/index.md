@@ -26,7 +26,6 @@ Considera le funzionalità speciali del tuo contratto:
 
 - I tuoi contratti sono aggiornabili? Revisiona il tuo codice di aggiornabilità per i difetti con [`slither-check-upgradeability`](https://github.com/crytic/slither/wiki/Upgradeability-Checks) o [Crytic](https://blog.trailofbits.com/2020/06/12/upgradeable-contracts-made-safer-with-crytic/). Abbiamo documentato 17 modi in cui gli aggiornamenti possono andare male.
 - I tuoi contratti pretendono di esser conformi agli ERC? Controllali con [`slither-check-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance). Questo strumento identifica istantaneamente le deviazioni da sei specifiche comuni.
-- Hai test unitari su Truffle? Arricchiscili con [`slither-prop`](https://github.com/crytic/slither/wiki/Property-generation). Genera automaticamente una robusta suite di proprietà di sicurezza per le funzionalità di ERC20 in base al tuo codice specifico.
 - Integri con token di terze parti? Revisiona il nostro [elenco di controllo di integrazione del token](/developers/tutorials/token-integration-checklist/) prima di affidarti a contratti esterni.
 
 Ispeziona visivamente le funzionalità di sicurezza critiche del tuo codice:

@@ -22,11 +22,6 @@ Antes de mergulhar em frameworks, recomendamos que você primeiro leia a nossa i
 
 ## Frameworks disponíveis {#available-frameworks}
 
-**Truffle -\*\***_Um ambiente de desenvolvimento, teste de framework, compilação e outras ferramentas._\*\*
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-
 **Hardhat -** **_Ambiente de desenvolvimento da Ethereum para profissionais._**
 
 - [hardhat.org](https://hardhat.org)

@@ -26,7 +26,6 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 - コントラクトがアップグレード可能かどうか： [`slither-check-upgradeability`](https://github.com/crytic/slither/wiki/Upgradeability-Checks)または[Crytic](https://blog.trailofbits.com/2020/06/12/upgradeable-contracts-made-safer-with-crytic/)を使って、アップグレード可能性に関するコードに欠陥がないか確認します。 当チームでは、アップグレードの失敗につながる17のケースを文書化しています。
 - コントラクトは、ERC準拠を謳っていますか？ [`slither-check-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance)で確認してください。 このツールでは、6種類の一般的な仕様に準拠していない場合、ただちに指摘されます。
-- Truffleの単体テストを活用していますか？ [`slither-prop`](https://github.com/crytic/slither/wiki/Property-generation)を使って、単体テストを含めてください。 あなたが作成したコードに基づき、ERC-20の各機能につき、セキュリティに関する一連の堅牢な属性を自動的に生成します。
 - サードパーティのトークンと統合予定ですか？ 外部コントラクトを利用する事前に、この[トークン統合チェックリスト](/developers/tutorials/token-integration-checklist/)でレビューしてください。
 
 コードにおける重要なセキュリティ関連の機能を、視覚的にチェックします。

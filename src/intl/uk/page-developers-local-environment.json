@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "Налаштування локального середовища розробки",
   "page-local-environment-solidity-template-desc": "Шаблон GitHub для попередньо вбудованих налаштувань розумних контрактів мовою Solidity. Включає локальну мережу Hardhat, Waffle для тестування, Ether для запуску гаманця тощо.",
   "page-local-environment-solidity-template-logo-alt": "Solidity template logo",
-  "page-local-environment-truffle-desc": "Набір інструментів Truffle Suite допомагає розробникам легко втілити ідею в реальну децентралізовану програму.",
-  "page-local-environment-truffle-logo-alt": "Truffle logo",
   "page-local-environment-waffle-desc": "Найдосконаліша тестова бібліотека для розумних контрактів. Використовуйте окремо або разом із Scaffold-eth або Hardhat.",
   "page-local-environment-waffle-logo-alt": "Waffle logo"
 }

@@ -72,7 +72,6 @@ Ethereum'u işletme dostu hâle getirmek için farklı kuruluşlar tarafından b
 - [Ernst & Young'ın "Nightfall"u](https://github.com/EYBlockchain/nightfall) _özel işlemler için bir araç takımı_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _bir web3 sağlayıcısıyla kullanılacak bir işlem imzalama uygulaması_
 - [Tenderly](https://tenderly.co/)_gerçek zamanlı analizler sağlayan, özel ağlar için destek sunarak uyarılarda bulunan ve izleme gerçekleştiren bir Veri Platformudur_
-- [Truffle Suite](https://trufflesuite.com) _blok zinciri geliştirme paketi (Truffle, Ganache, Drizzle)_
 
 ### Ölçeklenebilirlik çözümleri {#scalability-solutions}
 

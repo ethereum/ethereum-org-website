@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "设置你的本地开发环境",
   "page-local-environment-solidity-template-desc": "一个GitHub模板，用于为Solidity智能合约预构建设置。包括一个安全帽本地网络，用于测试的华夫饼，用于钱包实现的以太等等。",
   "page-local-environment-solidity-template-logo-alt": "Solidity template徽标",
-  "page-local-environment-truffle-desc": "Truffle Suite让开发者尽可能轻松地获取开发应用的主意。",
-  "page-local-environment-truffle-logo-alt": "Truffle徽标",
   "page-local-environment-waffle-desc": "智能合约最先进的测试版块。单独使用或使用Scaffold-eth或安全帽。",
   "page-local-environment-waffle-logo-alt": "Waffle徽标"
 }

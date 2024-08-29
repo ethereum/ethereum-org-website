@@ -120,7 +120,7 @@ Il manifest è il nostro file di configurazione e definisce:
 - altri elementi da attendere, come chiamate a funzioni o blocchi
 - le funzioni di mapping chiamate (vedi `mapping.ts` sotto)
 
-Qui puoi definire più contratti e gestori. Una configurazione tipica avrebbe una cartella subgraph nel progetto Truffle/Hardhat con un proprio repository. A questo punto puoi facilmente fare riferimento all'ABI.
+Qui puoi definire più contratti e gestori. Una configurazione tipica avrebbe una cartella subgraph nel progetto Hardhat con un proprio repository. A questo punto puoi facilmente fare riferimento all'ABI.
 
 Per motivi di comodità potresti anche usare uno strumento di modelli come mustache. Poi crei un ` subgraph.template.yaml` e inserisci gli indirizzi in base alle distribuzioni più recenti. Per una configurazione più avanzata, vedi ad esempio il [repo del subgraph Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 

@@ -74,7 +74,6 @@ Offentlige og private Ethereum-nettverk kan trenge spesifikke funksjoner som kre
 
 - [Alethio](https://explorer.aleth.io/) _Ethereum Data Analyse Platform_
 - [Treum](https://treum.io/) _bringer gjennomsiktighet, sporbarhet og evne til å forsyne kjeder, ved bruk av blokkjedeteknologi_
-- [Truffle Suite](https://trufflesuite.com) _blockchain development suite (Truffle, Ganache, Drizzle)_
 
 ## Fellesskap for bedriftsutviklere {#enterprise-developer-community}
 

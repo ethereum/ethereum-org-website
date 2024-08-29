@@ -26,8 +26,6 @@
   "page-local-environment-setup-title": "Configurați-vă mediul de dezvoltare locală",
   "page-local-environment-solidity-template-desc": "Un șablon GitHub pentru o configurație preconstruită pentru contractele dvs. inteligente Solidity. Include o rețea locală Hardhat, Waffle pentru testare, Ethers pentru implementarea portofelului și multe altele.",
   "page-local-environment-solidity-template-logo-alt": "Sigla șablonului Solidity",
-  "page-local-environment-truffle-desc": "Suita Truffle conduce dezvoltatorii de la idee la dapp cât mai confortabil posibil.",
-  "page-local-environment-truffle-logo-alt": "Sigla Truffle",
   "page-local-environment-waffle-desc": "Cea mai avansată bibliotecă de testare pentru contractele inteligente. Se utilizează singură sau împreună cu Scafold-eth sau Hardhat.",
   "page-local-environment-waffle-logo-alt": "Sigla Waffle"
 }

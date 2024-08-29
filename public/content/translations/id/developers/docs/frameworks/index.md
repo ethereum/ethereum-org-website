@@ -22,11 +22,6 @@ Sebelum menyelami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 
 ## Kerangka kerja yang tersedia {#available-frameworks}
 
-**Truffle -** **_Lingkungan pengembangan, kerangka kerja pengujian, pipeline pengembangan, dan peralatan lainnya._**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-
 **Hardhat -** **_Lingkungan pengembangan Ethereum untuk kalangan profesional_**
 
 - [hardhat.org](https://hardhat.org)

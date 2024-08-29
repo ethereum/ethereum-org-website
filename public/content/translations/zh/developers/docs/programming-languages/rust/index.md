@@ -22,7 +22,6 @@ incomplete: true
 
 ## 初学者文章 {#beginner-articles}
 
-- [选择以太坊客户端](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Rust 以太坊客户端](https://openethereum.github.io/) \* **注意 OpenEthereum [已被废弃](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)并已停止维护。** 请谨慎使用，最好切换至其他客户端实现。
 - [使用 Rust 向以太坊发送交易](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [如何用 Rust Wasm 为 Kovan 编写合约的分步教程](https://github.com/paritytech/pwasm-tutorial)

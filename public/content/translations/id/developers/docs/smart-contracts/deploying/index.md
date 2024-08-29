@@ -27,7 +27,7 @@ Akhirnya, Anda hanya perlu mengompilasi kontrak sebelum menggunakannya, jadi pas
 
 ### Langkah-langkah untuk menggunakan kontrak pintar {#steps-to-deploy}
 
-Langkah-langkah khusus yang diperlukan akan bergantung pada peralatan yang Anda gunakan. Sebagai contoh, lihat [dokumentasi Hardhat tentang menggunakan kontrak Anda](https://hardhat.org/guides/deploying.html) atau [dokumentasi Truffle tentang penggunaan jaringan dan aplikasi](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment). Ini adalah dua dari peralatan paling populer untuk penggunaan kontrak pintar, yang melibatkan penulisan skrip untuk menangani langkah-langkah penggunaan.
+Langkah-langkah khusus yang diperlukan akan bergantung pada peralatan yang Anda gunakan. Sebagai contoh, lihat [dokumentasi Hardhat tentang menggunakan kontrak Anda](https://hardhat.org/guides/deploying.html). Ini adalah dua dari peralatan paling populer untuk penggunaan kontrak pintar, yang melibatkan penulisan skrip untuk menangani langkah-langkah penggunaan.
 
 Setelah digunakan, kontrak Anda akan memiliki alamat Ethereum seperti [akun](/developers/docs/accounts/) lainnya.
 
@@ -50,12 +50,6 @@ Setelah digunakan, kontrak Anda akan memiliki alamat Ethereum seperti [akun](/de
 - [Dokumen tentang penyebaran kontrak Anda](https://hardhat.org/guides/deploying.html)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
-
-**Truffle -** **_Lingkungan pengembangan, kerangka kerja pengujian, pipeline pengembangan, dan peralatan lainnya._**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [Dokumentasi tentang penggunaan jaringan dan aplikasi](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
-- [GitHub](https://github.com/trufflesuite/truffle)
 
 **thirdweb - _Sebarkan setiap kontrak dengan mudah ke setiap rantai yang kompatibel dengan EVM, dengan menggunakan satu perintah tunggal_**
 

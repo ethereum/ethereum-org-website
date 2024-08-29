@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "Skonfiguruj swoje lokalne środowisko programistyczne",
   "page-local-environment-solidity-template-desc": "Szablon GitHub gotowej konfiguracji inteligentnych kontraktów Solidity. Zawiera sieć lokalną Hardhat, Waffle do testów, etery do implementacji portfela i wiele innych.",
   "page-local-environment-solidity-template-logo-alt": "Logo Solidity template",
-  "page-local-environment-truffle-desc": "Truffle Suite umożliwia programistom przejście od pomysłu do zdecentralizowanej aplikacji tak wygodnie, jak to tylko możliwe.",
-  "page-local-environment-truffle-logo-alt": "Logo Truffle",
   "page-local-environment-waffle-desc": "Najbardziej zaawansowana baza testowa inteligentnych kontraktów. Używaj samodzielnie lub ze Scaffold-eth lub Hardhat.",
   "page-local-environment-waffle-logo-alt": "Logo Waffle"
 }
