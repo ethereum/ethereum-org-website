@@ -13,7 +13,7 @@ const titleVariants = cva("group-hover:underline", {
     },
   },
   defaultVariants: {
-    variant: "normal",
+    variant: "strong",
   },
 })
 
@@ -77,7 +77,7 @@ const CardBanner = React.forwardRef<
 CardBanner.displayName = "CardBanner"
 
 const CardTitle = React.forwardRef<
-  HTMLParagraphElement,
+  HTMLHeadingElement,
   React.HTMLAttributes<HTMLHeadingElement> & VariantProps<typeof titleVariants>
 >(({ className, variant, ...props }, ref) => (
   <h3
@@ -87,6 +87,26 @@ const CardTitle = React.forwardRef<
   />
 ))
 CardTitle.displayName = "CardTitle"
+
+const CardSubTitle = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLParagraphElement>
+>(({ className, ...props }, ref) => (
+  <p ref={ref} className={cn("text-sm italic", className)} {...props} />
+))
+CardSubTitle.displayName = "CardSubTitle"
+
+const CardHighlight = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLParagraphElement>
+>(({ className, ...props }, ref) => (
+  <p
+    ref={ref}
+    className={cn("text-sm uppercase text-accent-a", className)}
+    {...props}
+  />
+))
+CardHighlight.displayName = "CardHighlight"
 
 const CardDescription = React.forwardRef<
   HTMLParagraphElement,
@@ -127,5 +147,7 @@ export {
   CardDescription,
   CardFooter,
   CardHeader,
+  CardHighlight,
+  CardSubTitle,
   CardTitle,
 }

@@ -47,7 +47,8 @@ import {
   Card,
   CardBanner,
   CardContent,
-  CardDescription,
+  CardHighlight,
+  CardSubTitle,
   CardTitle,
 } from "@/components/ui/card"
 import Link from "@/components/ui/Link"
@@ -629,29 +630,22 @@ const HomePage = ({
                         <TwImage src={EventFallback} alt="" />
                       )}
                     </CardBanner>
-                    <CardContent className="space-y-8 p-2">
-                      <div>
-                        <CardTitle variant="strong">{title}</CardTitle>
-                        <CardDescription className="italic">
-                          {(isValidDate(startDate) || isValidDate(endDate)) &&
-                            new Intl.DateTimeFormat(locale, {
-                              month: "long",
-                              day: "numeric",
-                              year: "numeric",
-                            }).formatRange(
-                              new Date(
-                                isValidDate(startDate) ? startDate : endDate
-                              ),
-                              new Date(
-                                isValidDate(endDate) ? endDate : startDate
-                              )
-                            )}
-                        </CardDescription>
-                        <p className="text-sm italic text-body-medium">
-                          {location}
-                        </p>
-                      </div>
-                      <p>{description}</p>
+                    <CardContent>
+                      <CardTitle>{title}</CardTitle>
+                      <CardSubTitle>
+                        {(isValidDate(startDate) || isValidDate(endDate)) &&
+                          new Intl.DateTimeFormat(locale, {
+                            month: "long",
+                            day: "numeric",
+                            year: "numeric",
+                          }).formatRange(
+                            new Date(
+                              isValidDate(startDate) ? startDate : endDate
+                            ),
+                            new Date(isValidDate(endDate) ? endDate : startDate)
+                          )}
+                      </CardSubTitle>
+                      <CardHighlight>{location}</CardHighlight>
                     </CardContent>
                   </Card>
                 )
