@@ -9,7 +9,7 @@ Unlike Bitcoin, which has a capped supply of 21 million coins, Ethereum doesn't 
 
 
 ## How Does the Supply Work?
-The creation and distribution of ETH are governed by rules encoded in the Ethereum protocol, which operates on a consensus mechanism known as Proof of Stake (PoS), following the transition from Proof of Work (PoW) with the Ethereum 2.0 upgrade. Miners, now referred to as validators in the PoS model, are chosen to create new blocks and validate transactions based on the amount of ETH they hold and are willing to "stake" as collateral.
+Ethereum creates and distributes ETH using a Proof of Stake (PoS) system. In this model, validators are chosen to create new blocks and verify transactions based on how much ETH they hold and are willing to “stake” as collateral. A new block is created approximately every 12 seconds.
 
 Validators are rewarded with newly minted ETH for successfully creating a block, but they also risk losing a portion of their staked ETH if they act maliciously or fail to perform their duties correctly. This system ensures network security and integrity while also controlling the rate of new ETH entering circulation.
 
