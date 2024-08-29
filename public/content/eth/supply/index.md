@@ -5,7 +5,7 @@ lang: en
 ---
 
 ## How Many ETH Are There?
-Unlike Bitcoin, which has a capped supply of 21 million coins, Ethereum doesn't have a predefined limit on the total number of ETH that can exist. Instead, the supply grows over time through a process called mining, where miners validate transactions and add them to the Ethereum blockchain. In return for their computational work, miners receive newly minted ETH as rewards.
+Unlike Bitcoin, which has a capped supply of 21 million coins, Ethereum doesn't have a predefined limit on the total number of ETH that can exist. Instead, the amount of new ETH created over time adjusts based on network needs, and a portion of transaction fees is burned (destroyed), which helps control the total supply.
 
 The rate at which new ETH enters circulation has varied over time due to protocol upgrades. Initially, the reward per mined block was set at 5 ETH, but changes such as the [Ethereum Improvement Proposal](https://eips.ethereum.org/) (EIP) 1559 introduced in August 2021 have altered the dynamics. [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) introduced a mechanism that burns a portion of transaction fees, potentially reducing the net issuance of new ETH under certain conditions.
 
