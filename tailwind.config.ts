@@ -190,8 +190,10 @@ const config = {
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
-        table:
-          "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",
+        table: `
+          0 14px 66px rgba(0,0,0,.07),
+          0 10px 17px rgba(0,0,0,.03),
+          0 4px 7px rgba(0,0,0,.05)`,
         drop: "0 4px 17px 0 rgba(0,0,0,0.08)",
         "table-box-hover": "0px 8px 17px rgba(0, 0, 0, 0.15)",
         "table-item-box": "var(--table-item-box-shadow)",
@@ -199,19 +201,26 @@ const config = {
         "grid-yellow-box-shadow": "8px 8px 0px 0px #ffe78e",
         "grid-blue-box-shadow": "8px 8px 0px 0px #a7d0f4",
         // Part of new DS
-        "menu-accordion":
-          "0px 2px 2px 0px rgba(0, 0, 0, 0.12) inset, 0px -3px 2px 0px rgba(0, 0, 0, 0.14) inset",
+        "menu-accordion": `
+          0px 2px 2px 0px rgba(0, 0, 0, 0.12) inset,
+          0px -3px 2px 0px rgba(0, 0, 0, 0.14) inset`,
         // TODO: From current theme. Deprecate for 'button-hover'
         primary: "4px 4px 0px 0px hsla(var(--primary))",
         "button-hover": "4px 4px 0 0 hsla(var(--primary-low-contrast))",
         tooltip: "0 0 16px var(--tooltip-shadow)",
-        "svg-button-link":
-          "var(--shadow-svg-button-link-1), var(--shadow-svg-button-link-2), var(--shadow-svg-button-link-3), var(--shadow-svg-button-link-4)",
-        "svg-button-link-hover":
-          "var(--shadow-svg-button-link-1-hover), var(--shadow-svg-button-link-2-hover), var(--shadow-svg-button-link-3-hover), var(--shadow-svg-button-link-4-hover)",
+        "svg-button-link": `
+          var(--shadow-svg-button-link-1), var(--shadow-svg-button-link-2),
+          var(--shadow-svg-button-link-3), var(--shadow-svg-button-link-4)`,
+        "svg-button-link-hover": `
+          var(--shadow-svg-button-link-1-hover),
+          var(--shadow-svg-button-link-2-hover),
+          var(--shadow-svg-button-link-3-hover),
+          var(--shadow-svg-button-link-4-hover)`,
         "card-hover": "var(--shadow-body-md), var(--shadow-body-lg)",
-        "window-box":
-          "var(--shadow-window-box-1), var(--shadow-window-box-2), var(--shadow-window-box-3), var(--shadow-window-box-4), var(--shadow-window-box-5)",
+        "window-box": `
+          var(--shadow-window-box-1), var(--shadow-window-box-2),
+          var(--shadow-window-box-3), var(--shadow-window-box-4),
+          var(--shadow-window-box-5)`,
       },
       spacing: {
         7.5: "1.875rem",
