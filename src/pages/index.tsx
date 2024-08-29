@@ -528,7 +528,12 @@ const HomePage = ({
                   className="flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row"
                 >
                   <div className="flex flex-col space-y-0.5 text-center text-base sm:text-start">
-                    <p className="text-sm font-bold text-body">{title}</p>
+                    <a
+                      href={calendarLink}
+                      className="text-sm font-bold text-body no-underline hover:underline"
+                    >
+                      {title}
+                    </a>
                     <p className="italic text-body-medium">
                       {new Intl.DateTimeFormat(locale, {
                         month: "long",
