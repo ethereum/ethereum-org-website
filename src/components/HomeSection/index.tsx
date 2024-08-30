@@ -1,7 +1,13 @@
 import NextImage, { type StaticImageData } from "next/image"
 import type { ReactNode } from "react"
 
-import { cn } from "@/lib/utils/cn"
+import {
+  Section,
+  SectionBanner,
+  SectionContent,
+  SectionTag,
+  SectionTitle,
+} from "../ui/section"
 
 type HomeSectionProps = {
   tag: string
@@ -17,26 +23,18 @@ const HomeSection = ({
   imgSrc,
   className,
   children,
-}: HomeSectionProps) => {
-  return (
-    <div className={cn("flex flex-col gap-8 md:flex-row lg:gap-16", className)}>
-      <NextImage
-        className="min-h-full w-full rounded-4xl object-cover object-center md:w-1/3 md:max-w-96 lg:max-w-128"
-        src={imgSrc}
-        alt=""
-      />
+}: HomeSectionProps) => (
+  <Section className={className}>
+    <SectionBanner>
+      <NextImage src={imgSrc} alt="" />
+    </SectionBanner>
 
-      <div className="w-full">
-        <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0.5 text-sm uppercase text-primary">
-          {tag}
-        </div>
-        <h2 className="mb-4 mt-2 text-5xl font-black lg:mb-6 lg:text-6xl">
-          {title}
-        </h2>
-        {children}
-      </div>
-    </div>
-  )
-}
+    <SectionContent>
+      <SectionTag>{tag}</SectionTag>
+      <SectionTitle>{title}</SectionTitle>
+      {children}
+    </SectionContent>
+  </Section>
+)
 
 export default HomeSection
