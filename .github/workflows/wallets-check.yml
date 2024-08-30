@@ -3,7 +3,7 @@ name: Check Wallet Data for new_to_crypto
 on:
   pull_request:
     paths:
-      - "data/wallets/wallet-data.ts"
+      - "src/data/wallets/wallet-data.ts"
 
 jobs:
   check_new_to_crypto:
