@@ -1294,6 +1294,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "",
+    new_to_crypto: true,
   },
   {
     last_updated: "2022-08-31",
