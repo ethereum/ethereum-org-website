@@ -51,7 +51,6 @@ import {
   CardSubTitle,
   CardTitle,
 } from "@/components/ui/card"
-import { Stack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import {
   Section,
@@ -344,7 +343,7 @@ const HomePage = ({
       />
       <TranslatathonBanner pathname={asPath} />
       <HomeHero heroImg={hero} className="w-full" />
-      <Stack className="flex flex-col gap-16 px-4 sm:px-6 md:gap-32">
+      <div className="w-full space-y-16 px-4 sm:px-6 md:space-y-32">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
           {subHeroCTAs.map(({ label, description, href, className, Svg }) => (
             <Fragment key={label}>
@@ -721,7 +720,7 @@ const HomePage = ({
             </div>
           </div>
         </div>
-      </Stack>
+      </div>
     </Flex>
   )
 }
