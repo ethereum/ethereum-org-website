@@ -22,10 +22,12 @@
     --primary-action-hover: var(--purple-700);
 
     --accent-a: var(--blue-600);
-    --accent-b: var(--pink-600);
-    --accent-c: var(--teal-700);
     --accent-a-hover: var(--blue-500);
+
+    --accent-b: var(--pink-600);
     --accent-b-hover: var(--pink-500);
+
+    --accent-c: var(--teal-700);
     --accent-c-hover: var(--teal-600);
 
     /**
@@ -90,14 +92,18 @@
     --primary: var(--purple-400);
     --primary-high-contrast: var(--purple-200);
     --primary-low-contrast: var(--purple-900);
-    --primary-visited: var(--purple-300);
+    --primary-hover: var(--purple-300);
+    --primary-visited: var(--purple-500);
     --primary-action-hover: var(--purple-600);
+    /* TODO: hover same as action in dark mode: */
 
     --accent-a: var(--blue-400);
-    --accent-b: var(--pink-400);
-    --accent-c: var(--teal-400);
     --accent-a-hover: var(--blue-300);
+
+    --accent-b: var(--pink-400);
     --accent-b-hover: var(--pink-300);
+
+    --accent-c: var(--teal-400);
     --accent-c-hover: var(--teal-300);
 
     /* Gradients (dark mode adjustments) */
