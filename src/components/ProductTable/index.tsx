@@ -89,7 +89,14 @@ const ProductTable = ({
       )}
       <div className="flex flex-col gap-6 pb-6 pt-4 lg:flex-row 2xl:px-0">
         <div className="block lg:hidden">
-          <MobileFilters filters={filters} setFilters={setFilters} />
+          <MobileFilters
+            filters={filters}
+            setFilters={setFilters}
+            presets={presetFilters}
+            activePresets={activePresets}
+            handleSelectPreset={handleSelectPreset}
+            dataCount={data.length}
+          />
         </div>
         <div className="hidden lg:block">
           <Filters filters={filters} setFilters={setFilters} />
