@@ -8,10 +8,7 @@ const Section = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn(
-      "group/section flex flex-col gap-8 md:flex-row lg:gap-16",
-      className
-    )}
+    className={cn("flex flex-col gap-8 md:flex-row lg:gap-16", className)}
     {...props}
   />
 ))

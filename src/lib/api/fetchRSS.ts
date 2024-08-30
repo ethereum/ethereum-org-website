@@ -6,7 +6,7 @@ import { isValidDate } from "../utils/date"
 /**
  * Fetches RSS feed from the specified XML URL(s).
  * @param xmlUrl - The URL(s) of the XML feed to fetch.
- * @returns An array of RSS items containing the publication date, title, link, and source.
+ * @returns An array sources, each containing an array of RSS items
  */
 export const fetchRSS = async (xmlUrl: string | string[]) => {
   const urls = Array.isArray(xmlUrl) ? xmlUrl : [xmlUrl]
