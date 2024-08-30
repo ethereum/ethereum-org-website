@@ -16,7 +16,7 @@ const WindowBox = ({ title, Svg, children, className }: WindowBoxProps) => (
       className
     )}
   >
-    <div className="flex items-center gap-4 bg-primary-highlight-gradient p-4">
+    <div className="flex items-center gap-4 bg-gradient-to-b from-primary-hover/5 p-4 dark:from-primary-hover/20">
       <div className="grid size-10 place-items-center rounded-lg border">
         <Svg />
       </div>
