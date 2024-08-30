@@ -59,6 +59,11 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
         variant="ghost"
         isSecondary
         px={{ base: "2", xl: "3" }}
+        sx={{
+          "& > svg": {
+            transition: "transform 0.5s, color 0.2s",
+          },
+        }}
         _hover={desktopHoverFocusStyles}
         _focus={desktopHoverFocusStyles}
         onClick={toggleColorMode}
