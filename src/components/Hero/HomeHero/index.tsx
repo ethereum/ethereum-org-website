@@ -1,18 +1,19 @@
-import NextImage from "next/image"
 import { useTranslation } from "next-i18next"
 
 import type { ClassNameProp, CommonHeroProps } from "@/lib/types"
 
+import { TwImage } from "@/components/Image"
 import Morpher from "@/components/Morpher"
 
 export type HomeHeroProps = Pick<CommonHeroProps, "heroImg"> & ClassNameProp
 
 const HomeHero = ({ heroImg, className }: HomeHeroProps) => {
   const { t } = useTranslation("page-index")
+
   return (
     <div className={className}>
       <div className="h-[300px] sm:h-[350px] md:h-[380px] lg:h-[440px]">
-        <NextImage
+        <TwImage
           src={heroImg}
           alt={t("page-index:page-index-hero-image-alt")}
           // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)

@@ -1,6 +1,5 @@
 import { Fragment, lazy, Suspense, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
-import NextImage from "next/image"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -386,7 +385,7 @@ const HomePage = ({
 
         <Section>
           <SectionBanner>
-            <NextImage src={ActivityImage} alt="" />
+            <TwImage src={ActivityImage} alt="" />
           </SectionBanner>
 
           <SectionContent>
@@ -405,7 +404,7 @@ const HomePage = ({
 
         <Section className="md:flex-row-reverse">
           <SectionBanner>
-            <NextImage src={LearnImage} alt="" />
+            <TwImage src={LearnImage} alt="" />
           </SectionBanner>
 
           <SectionContent>
@@ -450,7 +449,7 @@ const HomePage = ({
 
         <Section>
           <SectionBanner>
-            <NextImage src={BuildersImage} alt="" />
+            <TwImage src={BuildersImage} alt="" />
           </SectionBanner>
 
           <SectionContent>
@@ -518,7 +517,7 @@ const HomePage = ({
 
         <Section className="md:flex-row-reverse">
           <SectionBanner>
-            <NextImage src={CommunityImage} alt="" />
+            <TwImage src={CommunityImage} alt="" />
           </SectionBanner>
 
           <SectionContent>

@@ -1,8 +1,8 @@
 import { HTMLAttributes } from "react"
-import NextImage from "next/image"
 import { type StaticImageData } from "next/image"
 import { MdChevronRight } from "react-icons/md"
 
+import { TwImage } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
@@ -33,7 +33,7 @@ const BentoCard = ({
     )}
   >
     <div className="mb-6 grid place-items-center">
-      <NextImage src={imgSrc} alt="" width={imgWidth} height={imgHeight} />
+      <TwImage src={imgSrc} alt="" width={imgWidth} height={imgHeight} />
     </div>
     <div>
       <h3 className="mb-2 text-3xl font-black">{title}</h3>
