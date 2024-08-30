@@ -1,9 +1,9 @@
-name: Check Wallet Data
+name: Check Wallet Data for new_to_crypto
 
 on:
   pull_request:
     paths:
-      - 'data/wallets/wallet-data.ts'
+      - "data/wallets/wallet-data.ts"
 
 jobs:
   check_new_to_crypto:
@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Check for "new_to_crypto: true"
+      - name: Check for new_to_crypto
         id: check_new_to_crypto
         run: |
           if git diff --name-only HEAD^ | grep -q "data/wallets/wallet-data.ts"; then
@@ -24,7 +24,7 @@ jobs:
             fi
           fi
 
-      - name: Comment on PR if "new_to_crypto: true" is added
+      - name: Comment on PR if new_to_crypto is added
         if: steps.check_new_to_crypto.outputs.new_to_crypto_found == 'true'
         uses: actions-ecosystem/action-add-comment@v1
         with:
