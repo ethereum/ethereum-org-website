@@ -34,7 +34,6 @@ const PostsSwiper = ({ className, items }: PostsSwiperProps) => (
       ))}
 
       <MdChevronLeft className="swiper-button-prev" />
-      <div className="swiper-pagination" />
       <MdChevronRight className="swiper-button-next" />
     </Swiper>
   </div>
