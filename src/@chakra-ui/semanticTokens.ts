@@ -38,6 +38,7 @@ const semanticTokens = {
     // Main Set
     primary: {
       base: { _light: "purple.600", _dark: "purple.400" },
+      action: { _light: "purple.500", _dark: "purple.500" },
       highContrast: { _light: "purple.800", _dark: "purple.200" },
       lowContrast: { _light: "purple.100", _dark: "purple.900" },
       hover: { _light: "purple.500", _dark: "purple.500" },
