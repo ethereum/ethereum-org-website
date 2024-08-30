@@ -385,7 +385,7 @@ const HomePage = ({
           tag={t("page-index:page-index-learn-tag")}
           title={t("page-index:page-index-learn-title")}
           imgSrc={learnImage}
-          isFlipped
+          className="md:flex-row-reverse"
         >
           <div className="flex flex-col space-y-16 lg:space-y-32">
             <p className="text-lg">
@@ -486,7 +486,7 @@ const HomePage = ({
           tag={t("page-index:page-index-community-tag")}
           title={t("page-index:page-index-community-title")}
           imgSrc={communityImage}
-          isFlipped
+          className="md:flex-row-reverse"
         >
           <div className="mt-8 flex flex-col gap-8 text-lg">
             <p>{t("page-index:page-index-community-description-1")}</p>
