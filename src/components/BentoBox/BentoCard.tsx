@@ -38,7 +38,7 @@ const BentoCard = ({
     <div>
       <h3 className="mb-2 text-3xl font-black">{title}</h3>
       <p className="mb-8 text-md">{children}</p>
-      <ButtonLink href={href} size="lg" variant="outline">
+      <ButtonLink href={href} variant="outline">
         {action} <MdChevronRight />
       </ButtonLink>
     </div>

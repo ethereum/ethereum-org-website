@@ -75,7 +75,6 @@ export const useBentoBox = () => {
           "xl:col-span-7 xl:col-start-5 xl:row-start-1"
         ),
       },
-
       {
         title: t("page-index:page-index-bento-defi-title"),
         children: t("page-index:page-index-bento-defi-content"),

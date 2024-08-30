@@ -26,9 +26,9 @@ import AngleBrackets from "@/components/icons/angle-brackets.svg"
 import BlockHeap from "@/components/icons/block-heap.svg"
 import Calendar from "@/components/icons/calendar.svg"
 import CalendarAdd from "@/components/icons/calendar-add.svg"
+import EthGlyphIcon from "@/components/icons/eth-glyph.svg"
 import EthTokenIcon from "@/components/icons/eth-token.svg"
 import PickWalletIcon from "@/components/icons/eth-wallet.svg"
-import Layer2Icon from "@/components/icons/layer-2.svg"
 import ChooseNetworkIcon from "@/components/icons/network-layers.svg"
 import TryAppsIcon from "@/components/icons/phone-homescreen.svg"
 import RoadmapSign from "@/components/icons/roadmap-sign.svg"
@@ -306,7 +306,7 @@ const HomePage = ({
 
   const joinActions = [
     {
-      Svg: Layer2Icon,
+      Svg: EthGlyphIcon,
       label: t("page-index:page-index-join-action-contribute-label"),
       href: "/contributing/",
       className: "text-accent-c hover:text-accent-c-hover",
@@ -435,7 +435,7 @@ const HomePage = ({
                   ))}
                 </div>
                 <div className="flex justify-center py-8 md:justify-start">
-                  <ButtonLink href="/learn/" size="lg">
+                  <ButtonLink href="/learn/" size="lg" variant="outline">
                     {t("page-index:page-index-popular-topics-action")}{" "}
                     <MdChevronRight />
                   </ButtonLink>
@@ -705,7 +705,7 @@ const HomePage = ({
             "relative inset-0 rounded-4xl bg-background" // Paint background color over card portion
           )}
         >
-          <div className="mb-12 flex flex-col gap-y-8 rounded-4xl bg-radial-a px-4 py-8 lg:mb-32 xl:mb-36">
+          <div className="mb-12 flex flex-col gap-y-8 rounded-4xl bg-radial-a px-8 py-12 lg:mb-32 xl:mb-36">
             <div className="flex flex-col gap-y-4 text-center">
               <h2>{t("page-index:page-index-join-header")}</h2>
               <p>{t("page-index:page-index-join-description")}</p>

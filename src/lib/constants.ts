@@ -201,6 +201,11 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     href: "https://mirror.xyz/privacy-scaling-explorations.eth",
     // feed: "https://mirror.xyz/privacy-scaling-explorations.eth/feed/atom", // Old xml format
   },
+  // {
+  //   href: "https://stark.mirror.xyz/",
+  //   feed: "https://stark.mirror.xyz/feed/atom", // Old xml format
+  // },
+  // TODO: Add support for old xml format, re-enable above when ready
 ]
 
 export const BLOG_FEEDS = COMMUNITY_BLOGS.map(({ feed }) => feed).filter(
