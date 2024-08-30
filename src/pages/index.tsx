@@ -1,5 +1,6 @@
 import { Fragment, Suspense, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
+import NextImage from "next/image"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -23,7 +24,6 @@ import Codeblock from "@/components/Codeblock"
 import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
 import PostPreviewCard from "@/components/Homepage/PostPreviewCard"
-import HomeSection from "@/components/HomeSection"
 import AngleBrackets from "@/components/icons/angle-brackets.svg"
 import BlockHeap from "@/components/icons/block-heap.svg"
 import Calendar from "@/components/icons/calendar.svg"
@@ -53,6 +53,13 @@ import {
 } from "@/components/ui/card"
 import { Stack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
+import {
+  Section,
+  SectionBanner,
+  SectionContent,
+  SectionTag,
+  SectionTitle,
+} from "@/components/ui/section"
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
@@ -369,202 +376,225 @@ const HomePage = ({
         {/* Desktop */}
         <BentoBox className="hidden lg:block" />
 
-        <HomeSection
-          tag={t("page-index:page-index-activity-tag")}
-          title={t("page-index:page-index-activity-title")}
-          imgSrc={activityImage}
-        >
-          <div className="py-16 lg:py-32">
-            <p className="mt-8 text-xl font-bold">
-              {t("page-index:page-index-activity-description")}
-            </p>
-            <StatsBoxGrid metricResults={metricResults} />
-          </div>
-        </HomeSection>
+        <Section>
+          <SectionBanner>
+            <NextImage src={activityImage} alt="" />
+          </SectionBanner>
 
-        <HomeSection
-          tag={t("page-index:page-index-learn-tag")}
-          title={t("page-index:page-index-learn-title")}
-          imgSrc={learnImage}
-          className="md:flex-row-reverse"
-        >
-          <div className="flex flex-col gap-y-16 lg:gap-y-32">
-            <p className="text-lg">
-              {t("page-index:page-index-learn-description")}
-            </p>
-            <div className="flex flex-col gap-y-8">
-              <h3 className="text-xl font-bold">
-                {t("page-index:page-index-popular-topics-header")}
-              </h3>
-              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
-                {popularTopics.map(({ label, Svg, href }) => (
-                  <SvgButtonLink
-                    key={label}
-                    Svg={Svg}
-                    href={href}
-                    className="text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row"
-                  >
-                    <p className="text-start text-xl font-bold text-body group-hover:underline">
-                      {label}
-                    </p>
-                  </SvgButtonLink>
-                ))}
-              </div>
-              <div className="flex justify-center py-8 md:justify-start">
-                <ButtonLink href="/learn/" size="lg">
-                  {t("page-index:page-index-popular-topics-action")}{" "}
-                  <MdChevronRight />
-                </ButtonLink>
-              </div>
+          <SectionContent>
+            <SectionTag>{t("page-index:page-index-activity-tag")}</SectionTag>
+            <SectionTitle>
+              {t("page-index:page-index-activity-title")}
+            </SectionTitle>
+            <div className="py-16 lg:py-32">
+              <p className="mt-8 text-xl font-bold">
+                {t("page-index:page-index-activity-description")}
+              </p>
+              <StatsBoxGrid metricResults={metricResults} />
             </div>
-          </div>
-        </HomeSection>
+          </SectionContent>
+        </Section>
+
+        <Section className="md:flex-row-reverse">
+          <SectionBanner>
+            <NextImage src={learnImage} alt="" />
+          </SectionBanner>
+
+          <SectionContent>
+            <SectionTag>{t("page-index:page-index-learn-tag")}</SectionTag>
+            <SectionTitle>
+              {t("page-index:page-index-learn-title")}
+            </SectionTitle>
+            <div className="flex flex-col gap-y-16 lg:gap-y-32">
+              <p className="text-lg">
+                {t("page-index:page-index-learn-description")}
+              </p>
+              <div className="flex flex-col gap-y-8">
+                <h3 className="text-xl font-bold">
+                  {t("page-index:page-index-popular-topics-header")}
+                </h3>
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+                  {popularTopics.map(({ label, Svg, href }) => (
+                    <SvgButtonLink
+                      key={label}
+                      Svg={Svg}
+                      href={href}
+                      className="text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row"
+                    >
+                      <p className="text-start text-xl font-bold text-body group-hover:underline">
+                        {label}
+                      </p>
+                    </SvgButtonLink>
+                  ))}
+                </div>
+                <div className="flex justify-center py-8 md:justify-start">
+                  <ButtonLink href="/learn/" size="lg">
+                    {t("page-index:page-index-popular-topics-action")}{" "}
+                    <MdChevronRight />
+                  </ButtonLink>
+                </div>
+              </div>
+            </div>{" "}
+          </SectionContent>
+        </Section>
 
         {/* TODO: Add "The Internet Is Changing" section */}
 
-        <HomeSection
-          tag={t("page-index:page-index-builders-tag")}
-          title={t("page-index:page-index-builders-title")}
-          imgSrc={buildersImage}
-        >
-          <p className="text-lg">
-            {t("page-index:page-index-builders-description")}
-          </p>
-          <div className="flex flex-wrap gap-6 py-8">
-            <ButtonLink href="/developers/" size="lg" className="w-fit">
-              {t("page-index:page-index-builders-action-primary")}{" "}
-              <MdChevronRight />
-            </ButtonLink>
-            <ButtonLink
-              href="/developers/docs/"
-              size="lg"
-              variant="outline"
-              className="w-fit"
-            >
-              {t("page-index:page-index-builders-action-secondary")}
-            </ButtonLink>
-          </div>
-          <div className="py-8 md:pb-16 md:pt-8 lg:pb-32 lg:pt-16">
-            <WindowBox
-              title={t("page-index:page-index-developers-code-examples")}
-              Svg={AngleBrackets}
-            >
-              {codeExamples.map(({ title, description }, idx) => (
-                <button
-                  key={title}
-                  className="flex flex-col gap-y-0.5 border-t px-6 py-4 hover:bg-background-highlight"
-                  onClick={() => toggleCodeExample(idx)}
-                >
-                  <p className="font-bold">{title}</p>
-                  <p className="text-start text-sm text-body-medium">
-                    {description}
-                  </p>
-                </button>
-              ))}
-            </WindowBox>
-          </div>
+        <Section>
+          <SectionBanner>
+            <NextImage src={buildersImage} alt="" />
+          </SectionBanner>
 
-          {isModalOpen && (
-            // TODO: Migrate CodeModal, CodeBlock, Skeleton from Chakra-UI to tailwind/shad-cn
-            <CodeModal
-              isOpen={isModalOpen}
-              setIsOpen={setModalOpen}
-              title={codeExamples[activeCode].title}
-            >
-              <Suspense fallback={<Skeleton />}>
-                <Codeblock
-                  codeLanguage={codeExamples[activeCode].codeLanguage}
-                  allowCollapse={false}
-                  fromHomepage
-                >
-                  {codeExamples[activeCode].code}
-                </Codeblock>
-              </Suspense>
-            </CodeModal>
-          )}
-        </HomeSection>
-
-        <HomeSection
-          tag={t("page-index:page-index-community-tag")}
-          title={t("page-index:page-index-community-title")}
-          imgSrc={communityImage}
-          className="md:flex-row-reverse"
-        >
-          <div className="mt-8 flex flex-col gap-8 text-lg">
-            <p>{t("page-index:page-index-community-description-1")}</p>
-            <p>{t("page-index:page-index-community-description-2")}</p>
-            <p>{t("page-index:page-index-community-description-3")}</p>
-          </div>
-          <div className="flex flex-wrap gap-3 py-8">
-            <ButtonLink href="/community/" size="lg">
-              {t("page-index:page-index-community-action")} <MdChevronRight />
-            </ButtonLink>
-            <div className="flex gap-3">
-              <ButtonLink
-                href="/discord/"
-                size="lg"
-                variant="outline"
-                hideArrow
-              >
-                <FaDiscord />
+          <SectionContent>
+            <SectionTag>{t("page-index:page-index-builders-tag")}</SectionTag>
+            <SectionTitle>
+              {t("page-index:page-index-builders-title")}
+            </SectionTitle>
+            <p className="text-lg">
+              {t("page-index:page-index-builders-description")}
+            </p>
+            <div className="flex flex-wrap gap-6 py-8">
+              <ButtonLink href="/developers/" size="lg" className="w-fit">
+                {t("page-index:page-index-builders-action-primary")}{" "}
+                <MdChevronRight />
               </ButtonLink>
               <ButtonLink
-                href={GITHUB_REPO_URL}
+                href="/developers/docs/"
                 size="lg"
                 variant="outline"
-                hideArrow
+                className="w-fit"
               >
-                <FaGithub />
+                {t("page-index:page-index-builders-action-secondary")}
               </ButtonLink>
             </div>
-          </div>
-          <div className="py-8 md:pt-8 lg:pt-16">
-            <WindowBox
-              title={t("page-index:page-index-calendar-title")}
-              Svg={Calendar}
-            >
-              {calendar.length > 0 ? (
-                calendar.map(({ date, title, calendarLink }) => (
-                  <div
+            <div className="py-8 md:pb-16 md:pt-8 lg:pb-32 lg:pt-16">
+              <WindowBox
+                title={t("page-index:page-index-developers-code-examples")}
+                Svg={AngleBrackets}
+              >
+                {codeExamples.map(({ title, description }, idx) => (
+                  <button
                     key={title}
-                    className="flex flex-col justify-between gap-6 border-t px-6 py-4 xl:flex-row"
+                    className="flex flex-col gap-y-0.5 border-t px-6 py-4 hover:bg-background-highlight"
+                    onClick={() => toggleCodeExample(idx)}
                   >
-                    <div className="flex flex-col gap-y-0.5 text-center text-base sm:text-start">
-                      <a
-                        href={calendarLink}
-                        className="text-sm font-bold text-body no-underline hover:underline"
-                      >
-                        {title}
-                      </a>
-                      <p className="italic text-body-medium">
-                        {new Intl.DateTimeFormat(locale, {
-                          month: "long",
-                          day: "2-digit",
-                          year: "numeric",
-                          hour: "numeric",
-                          minute: "numeric",
-                        }).format(new Date(date))}
-                      </p>
-                    </div>
-                    <ButtonLink
-                      className="h-fit w-full text-nowrap px-5 sm:w-fit xl:self-center"
-                      size="md"
-                      variant="outline"
-                      href={calendarLink}
-                      hideArrow
+                    <p className="font-bold">{title}</p>
+                    <p className="text-start text-sm text-body-medium">
+                      {description}
+                    </p>
+                  </button>
+                ))}
+              </WindowBox>
+            </div>
+
+            {isModalOpen && (
+              // TODO: Migrate CodeModal, CodeBlock, Skeleton from Chakra-UI to tailwind/shad-cn
+              <CodeModal
+                isOpen={isModalOpen}
+                setIsOpen={setModalOpen}
+                title={codeExamples[activeCode].title}
+              >
+                <Suspense fallback={<Skeleton />}>
+                  <Codeblock
+                    codeLanguage={codeExamples[activeCode].codeLanguage}
+                    allowCollapse={false}
+                    fromHomepage
+                  >
+                    {codeExamples[activeCode].code}
+                  </Codeblock>
+                </Suspense>
+              </CodeModal>
+            )}
+          </SectionContent>
+        </Section>
+
+        <Section className="md:flex-row-reverse">
+          <SectionBanner>
+            <NextImage src={communityImage} alt="" />
+          </SectionBanner>
+
+          <SectionContent>
+            <SectionTag>{t("page-index:page-index-community-tag")}</SectionTag>
+            <SectionTitle>
+              {t("page-index:page-index-community-title")}
+            </SectionTitle>
+            <div className="mt-8 flex flex-col gap-8 text-lg">
+              <p>{t("page-index:page-index-community-description-1")}</p>
+              <p>{t("page-index:page-index-community-description-2")}</p>
+              <p>{t("page-index:page-index-community-description-3")}</p>
+            </div>
+            <div className="flex flex-wrap gap-3 py-8">
+              <ButtonLink href="/community/" size="lg">
+                {t("page-index:page-index-community-action")} <MdChevronRight />
+              </ButtonLink>
+              <div className="flex gap-3">
+                <ButtonLink
+                  href="/discord/"
+                  size="lg"
+                  variant="outline"
+                  hideArrow
+                >
+                  <FaDiscord />
+                </ButtonLink>
+                <ButtonLink
+                  href={GITHUB_REPO_URL}
+                  size="lg"
+                  variant="outline"
+                  hideArrow
+                >
+                  <FaGithub />
+                </ButtonLink>
+              </div>
+            </div>
+            <div className="py-8 md:pt-8 lg:pt-16">
+              <WindowBox
+                title={t("page-index:page-index-calendar-title")}
+                Svg={Calendar}
+              >
+                {calendar.length > 0 ? (
+                  calendar.map(({ date, title, calendarLink }) => (
+                    <div
+                      key={title}
+                      className="flex flex-col justify-between gap-6 border-t px-6 py-4 xl:flex-row"
                     >
-                      <CalendarAdd /> {t("page-index:page-index-calendar-add")}
-                    </ButtonLink>
+                      <div className="flex flex-col gap-y-0.5 text-center text-base sm:text-start">
+                        <a
+                          href={calendarLink}
+                          className="text-sm font-bold text-body no-underline hover:underline"
+                        >
+                          {title}
+                        </a>
+                        <p className="italic text-body-medium">
+                          {new Intl.DateTimeFormat(locale, {
+                            month: "long",
+                            day: "2-digit",
+                            year: "numeric",
+                            hour: "numeric",
+                            minute: "numeric",
+                          }).format(new Date(date))}
+                        </p>
+                      </div>
+                      <ButtonLink
+                        className="h-fit w-full text-nowrap px-5 sm:w-fit xl:self-center"
+                        size="md"
+                        variant="outline"
+                        href={calendarLink}
+                        hideArrow
+                      >
+                        <CalendarAdd />{" "}
+                        {t("page-index:page-index-calendar-add")}
+                      </ButtonLink>
+                    </div>
+                  ))
+                ) : (
+                  <div className="flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row">
+                    {t("page-index:page-index-calendar-fallback")}
                   </div>
-                ))
-              ) : (
-                <div className="flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row">
-                  {t("page-index:page-index-calendar-fallback")}
-                </div>
-              )}
-            </WindowBox>
-          </div>
-        </HomeSection>
+                )}
+              </WindowBox>
+            </div>{" "}
+          </SectionContent>
+        </Section>
 
         <div className="w-full">
           <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
