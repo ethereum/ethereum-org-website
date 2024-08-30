@@ -51,6 +51,7 @@ import {
   CardSubTitle,
   CardTitle,
 } from "@/components/ui/card"
+import { Stack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import WindowBox from "@/components/WindowBox"
 
@@ -336,7 +337,7 @@ const HomePage = ({
       />
       <TranslatathonBanner pathname={asPath} />
       <HomeHero heroImg={hero} className="w-full" />
-      <div className="w-full space-y-16 px-4 sm:px-6 md:space-y-32">
+      <Stack className="flex flex-col gap-16 px-4 sm:px-6 md:gap-32">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
           {subHeroCTAs.map(({ label, description, href, className, Svg }) => (
             <Fragment key={label}>
@@ -373,7 +374,7 @@ const HomePage = ({
           title={t("page-index:page-index-activity-title")}
           imgSrc={activityImage}
         >
-          <div className="my-16 lg:my-32">
+          <div className="py-16 lg:py-32">
             <p className="mt-8 text-xl font-bold">
               {t("page-index:page-index-activity-description")}
             </p>
@@ -387,11 +388,11 @@ const HomePage = ({
           imgSrc={learnImage}
           className="md:flex-row-reverse"
         >
-          <div className="flex flex-col space-y-16 lg:space-y-32">
+          <div className="flex flex-col gap-y-16 lg:gap-y-32">
             <p className="text-lg">
               {t("page-index:page-index-learn-description")}
             </p>
-            <div className="flex flex-col space-y-8">
+            <div className="flex flex-col gap-y-8">
               <h3 className="text-xl font-bold">
                 {t("page-index:page-index-popular-topics-header")}
               </h3>
@@ -443,24 +444,25 @@ const HomePage = ({
               {t("page-index:page-index-builders-action-secondary")}
             </ButtonLink>
           </div>
-          <WindowBox
-            title={t("page-index:page-index-developers-code-examples")}
-            Svg={AngleBrackets}
-            className="my-8 md:mb-16 md:mt-8 lg:mb-32 lg:mt-16"
-          >
-            {codeExamples.map(({ title, description }, idx) => (
-              <button
-                key={title}
-                className="flex flex-col space-y-0.5 border-t px-6 py-4 hover:bg-background-highlight"
-                onClick={() => toggleCodeExample(idx)}
-              >
-                <p className="font-bold">{title}</p>
-                <p className="text-start text-sm text-body-medium">
-                  {description}
-                </p>
-              </button>
-            ))}
-          </WindowBox>
+          <div className="py-8 md:pb-16 md:pt-8 lg:pb-32 lg:pt-16">
+            <WindowBox
+              title={t("page-index:page-index-developers-code-examples")}
+              Svg={AngleBrackets}
+            >
+              {codeExamples.map(({ title, description }, idx) => (
+                <button
+                  key={title}
+                  className="flex flex-col gap-y-0.5 border-t px-6 py-4 hover:bg-background-highlight"
+                  onClick={() => toggleCodeExample(idx)}
+                >
+                  <p className="font-bold">{title}</p>
+                  <p className="text-start text-sm text-body-medium">
+                    {description}
+                  </p>
+                </button>
+              ))}
+            </WindowBox>
+          </div>
 
           {isModalOpen && (
             // TODO: Migrate CodeModal, CodeBlock, Skeleton from Chakra-UI to tailwind/shad-cn
@@ -516,52 +518,52 @@ const HomePage = ({
               </ButtonLink>
             </div>
           </div>
-
-          <WindowBox
-            title={t("page-index:page-index-calendar-title")}
-            Svg={Calendar}
-            className="my-8 md:mt-8 lg:mt-16"
-          >
-            {calendar.length > 0 ? (
-              calendar.map(({ date, title, calendarLink }) => (
-                <div
-                  key={title}
-                  className="flex flex-col justify-between gap-6 border-t px-6 py-4 xl:flex-row"
-                >
-                  <div className="flex flex-col space-y-0.5 text-center text-base sm:text-start">
-                    <a
-                      href={calendarLink}
-                      className="text-sm font-bold text-body no-underline hover:underline"
-                    >
-                      {title}
-                    </a>
-                    <p className="italic text-body-medium">
-                      {new Intl.DateTimeFormat(locale, {
-                        month: "long",
-                        day: "2-digit",
-                        year: "numeric",
-                        hour: "numeric",
-                        minute: "numeric",
-                      }).format(new Date(date))}
-                    </p>
-                  </div>
-                  <ButtonLink
-                    className="h-fit w-full text-nowrap px-5 sm:w-fit xl:self-center"
-                    size="md"
-                    variant="outline"
-                    href={calendarLink}
-                    hideArrow
+          <div className="py-8 md:pt-8 lg:pt-16">
+            <WindowBox
+              title={t("page-index:page-index-calendar-title")}
+              Svg={Calendar}
+            >
+              {calendar.length > 0 ? (
+                calendar.map(({ date, title, calendarLink }) => (
+                  <div
+                    key={title}
+                    className="flex flex-col justify-between gap-6 border-t px-6 py-4 xl:flex-row"
                   >
-                    <CalendarAdd /> {t("page-index:page-index-calendar-add")}
-                  </ButtonLink>
+                    <div className="flex flex-col gap-y-0.5 text-center text-base sm:text-start">
+                      <a
+                        href={calendarLink}
+                        className="text-sm font-bold text-body no-underline hover:underline"
+                      >
+                        {title}
+                      </a>
+                      <p className="italic text-body-medium">
+                        {new Intl.DateTimeFormat(locale, {
+                          month: "long",
+                          day: "2-digit",
+                          year: "numeric",
+                          hour: "numeric",
+                          minute: "numeric",
+                        }).format(new Date(date))}
+                      </p>
+                    </div>
+                    <ButtonLink
+                      className="h-fit w-full text-nowrap px-5 sm:w-fit xl:self-center"
+                      size="md"
+                      variant="outline"
+                      href={calendarLink}
+                      hideArrow
+                    >
+                      <CalendarAdd /> {t("page-index:page-index-calendar-add")}
+                    </ButtonLink>
+                  </div>
+                ))
+              ) : (
+                <div className="flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row">
+                  {t("page-index:page-index-calendar-fallback")}
                 </div>
-              ))
-            ) : (
-              <div className="flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row">
-                {t("page-index:page-index-calendar-fallback")}
-              </div>
-            )}
-          </WindowBox>
+              )}
+            </WindowBox>
+          </div>
         </HomeSection>
 
         <div className="w-full">
@@ -667,7 +669,7 @@ const HomePage = ({
           )}
         >
           <div className="mb-12 flex flex-col gap-y-8 rounded-4xl bg-radial-a px-4 py-8 lg:mb-32 xl:mb-36">
-            <div className="flex flex-col space-y-4 text-center">
+            <div className="flex flex-col gap-y-4 text-center">
               <h2>{t("page-index:page-index-join-header")}</h2>
               <p>{t("page-index:page-index-join-description")}</p>
             </div>
@@ -689,7 +691,7 @@ const HomePage = ({
             </div>
           </div>
         </div>
-      </div>
+      </Stack>
     </Flex>
   )
 }
