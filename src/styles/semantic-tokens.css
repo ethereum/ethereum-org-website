@@ -28,31 +28,11 @@
     --accent-b-hover: var(--pink-500);
     --accent-c-hover: var(--teal-600);
 
-    /* Gradients */
-    --gradient-primary-angle: 90deg;
-    --gradient-primary-opacity-from: 0.1;
-    --gradient-primary-opacity-to: 0.05;
-    --gradient-primary: linear-gradient(
-      var(--gradient-primary-angle),
-      hsla(var(--purple-500), var(--gradient-primary-opacity-from)) 19.09%,
-      hsla(var(--purple-500), var(--gradient-primary-opacity-to)) 40.63%
-    );
-    --gradient-accent-a: linear-gradient(
-      var(--gradient-primary-angle),
-      hsla(var(--blue-500), var(--gradient-primary-opacity-from)) 19.09%,
-      hsla(var(--blue-500), var(--gradient-primary-opacity-to)) 40.63%
-    );
-    --gradient-accent-b: linear-gradient(
-      var(--gradient-primary-angle),
-      hsla(var(--pink-500), var(--gradient-primary-opacity-from)) 19.09%,
-      hsla(var(--pink-500), var(--gradient-primary-opacity-to)) 40.63%
-    );
-    --gradient-accent-c: linear-gradient(
-      var(--gradient-primary-angle),
-      hsla(var(--teal-500), var(--gradient-primary-opacity-from)) 19.09%,
-      hsla(var(--teal-500), var(--gradient-primary-opacity-to)) 40.63%
-    );
-
+    /**
+    /* Gradients (radial, conic)
+    /* For linear-gradient, Tailwind classes preferred
+    /* https://tailwindcss.com/docs/background-image#linear-gradients
+    */
     --radial-a-opacity-1: 0.08;
     --radial-a-opacity-2: 0.24;
     --radial-a: radial-gradient(
@@ -121,9 +101,6 @@
     --accent-c-hover: var(--teal-300);
 
     /* Gradients (dark mode adjustments) */
-    --gradient-primary-angle: 180deg;
-    --gradient-primary-opacity-to: 0.2;
-
     --radial-a-opacity-1: 0.16;
     --radial-a-opacity-2: 0.48;
 

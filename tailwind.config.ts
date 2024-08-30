@@ -177,12 +177,7 @@ const config = {
       },
       backgroundImage: {
         "gradient-main": "var(--gradient-main)",
-        "primary-highlight-gradient": "var(--primary-highlight-gradient)",
         "gradient-banner": "var(--gradient-banner)",
-        "gradient-primary": "var(--gradient-primary)",
-        "gradient-accent-a": "var(--gradient-accent-a)",
-        "gradient-accent-b": "var(--gradient-accent-b)",
-        "gradient-accent-c": "var(--gradient-accent-c)",
         "main-gradient": "var(--gradient-main)", // TODO: Duplicate; remove one
         "feedback-gradient": "var(--feedback-gradient)",
         "banner-grid-gradient": "var(--banner-grid-gradient)",

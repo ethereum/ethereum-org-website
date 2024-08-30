@@ -54,12 +54,6 @@
       0 10px 17px rgba(0, 0, 0, 0.03), 0 4px 7px rgba(0, 0, 0, 0.05);
     --table-item-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 
-    --primary-highlight-gradient: linear-gradient(
-      180deg,
-      rgba(167, 121, 226, 0.05) 0%,
-      rgba(167, 121, 226, 0) 100%
-    );
-
     --gradient-banner: radial-gradient(
       155% 100% at 50% 0%,
       rgba(201, 179, 245, 0.16) 0%,
@@ -220,7 +214,7 @@
   }
 
   .swiper-pagination {
-    @apply relative mt-8 mx-auto flex h-[26px] max-w-48 items-center justify-center rounded-full bg-background-highlight;
+    @apply relative mx-auto mt-8 flex h-[26px] max-w-48 items-center justify-center rounded-full bg-background-highlight;
   }
 
   .swiper-pagination .swiper-pagination-bullet {
