@@ -93,11 +93,11 @@ import { fetchRSS } from "@/lib/api/fetchRSS"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import EventFallback from "@/public/images/events/event-placeholder.png"
-import buildersImage from "@/public/images/heroes/developers-hub-hero.jpg"
-import activityImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
-import learnImage from "@/public/images/heroes/learn-hub-hero.png"
-import communityImage from "@/public/images/heroes/quizzes-hub-hero.png"
-import hero from "@/public/images/home/hero.png"
+import BuildersImage from "@/public/images/heroes/developers-hub-hero.jpg"
+import ActivityImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
+import LearnImage from "@/public/images/heroes/learn-hub-hero.png"
+import CommunityImage from "@/public/images/heroes/quizzes-hub-hero.png"
+import Hero from "@/public/images/home/hero.png"
 
 // lazy loaded components
 const Codeblock = lazy(() =>
@@ -351,7 +351,7 @@ const HomePage = ({
         description={t("page-index:page-index-meta-description")}
       />
       <TranslatathonBanner pathname={asPath} />
-      <HomeHero heroImg={hero} className="w-full" />
+      <HomeHero heroImg={Hero} className="w-full" />
       <div className="w-full space-y-16 px-4 sm:px-6 md:space-y-32">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
           {subHeroCTAs.map(({ label, description, href, className, Svg }) => (
@@ -386,7 +386,7 @@ const HomePage = ({
 
         <Section>
           <SectionBanner>
-            <NextImage src={activityImage} alt="" />
+            <NextImage src={ActivityImage} alt="" />
           </SectionBanner>
 
           <SectionContent>
@@ -405,7 +405,7 @@ const HomePage = ({
 
         <Section className="md:flex-row-reverse">
           <SectionBanner>
-            <NextImage src={learnImage} alt="" />
+            <NextImage src={LearnImage} alt="" />
           </SectionBanner>
 
           <SectionContent>
@@ -450,7 +450,7 @@ const HomePage = ({
 
         <Section>
           <SectionBanner>
-            <NextImage src={buildersImage} alt="" />
+            <NextImage src={BuildersImage} alt="" />
           </SectionBanner>
 
           <SectionContent>
@@ -518,7 +518,7 @@ const HomePage = ({
 
         <Section className="md:flex-row-reverse">
           <SectionBanner>
-            <NextImage src={communityImage} alt="" />
+            <NextImage src={CommunityImage} alt="" />
           </SectionBanner>
 
           <SectionContent>
