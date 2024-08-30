@@ -1,4 +1,4 @@
-import { Fragment, Suspense, useState } from "react"
+import { Fragment, lazy, Suspense, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import NextImage from "next/image"
 import { useRouter } from "next/router"
@@ -20,7 +20,6 @@ import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
 import BentoBox from "@/components/BentoBox"
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
-import Codeblock from "@/components/Codeblock"
 import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
 import PostPreviewCard from "@/components/Homepage/PostPreviewCard"
@@ -39,7 +38,6 @@ import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import PostsSwiper from "@/components/PostsSwiper"
-import StatsBoxGrid from "@/components/StatsBoxGrid"
 import SwiperCards from "@/components/SwiperCards"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -100,6 +98,17 @@ import activityImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import learnImage from "@/public/images/heroes/learn-hub-hero.png"
 import communityImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import hero from "@/public/images/home/hero.png"
+
+// lazy loaded components
+const Codeblock = lazy(() =>
+  Promise.all([
+    import("@/components/Codeblock"),
+    // Add a delay to prevent the skeleton from flashing
+    new Promise((resolve) => setTimeout(resolve, 1000)),
+  ]).then(([module]) => module)
+)
+
+const StatsBoxGrid = lazy(() => import("@/components/StatsBoxGrid"))
 
 const cachedEthPrice = runOnlyOnce(fetchEthPrice)
 const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
