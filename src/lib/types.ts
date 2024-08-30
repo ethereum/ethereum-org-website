@@ -803,10 +803,8 @@ export type RSSResult = {
 }
 
 export type CommunityBlog = {
-  name: string
   href: string
-  feed?: string
-}
+} & ({ name: string; feed?: string } | { name?: string; feed: string })
 
 type NestedDivs = {
   div: NestedDivs[]

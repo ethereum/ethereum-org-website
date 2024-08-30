@@ -168,38 +168,31 @@ export const _0X_PARC_FEED = "https://rss.app/feeds/cWXGYts0ZM8C3F6t.xml"
 
 export const COMMUNITY_BLOGS: CommunityBlog[] = [
   {
-    name: "Vitalik Buterin",
     href: "https://vitalik.eth.limo/",
     feed: VITALIK_FEED,
   },
   {
-    name: "Ethereum Foundation",
     href: "https://blog.ethereum.org/",
     feed: "https://blog.ethereum.org/en/feed.xml",
   },
   {
-    name: "ethPandaOps",
     href: "https://ethpandaops.io/posts/",
     feed: "https://ethpandaops.io/posts/index.xml",
   },
   {
-    name: "EthStaker",
     href: "https://ethstaker.cc/blog",
     feed: "https://paragraph.xyz/api/blogs/rss/@ethstaker",
   },
   {
-    name: "0xParc",
     href: "https://0xparc.org/blog",
     feed: _0X_PARC_FEED,
   },
   {
-    name: "Attestant",
     href: "https://www.attestant.io/posts/",
     feed: "https://www.attestant.io/posts/",
   },
   { name: "Devcon", href: "https://devcon.org/en/blogs/" },
   {
-    name: "Solidity",
     href: "https://soliditylang.org/blog/",
     feed: SOLIDITY_FEED,
   },
