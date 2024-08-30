@@ -1,5 +1,4 @@
 {
-  "page-index-description": "Ethereum is the community-run technology powering the cryptocurrency ether (ETH) and thousands of decentralized applications.",
   "page-index-title-button": "Explore Ethereum",
   "page-index-touts-header": "Explore ethereum.org",
   "page-index-contribution-banner-title": "Contribute to ethereum.org",
@@ -66,6 +65,7 @@
   "page-index-activity-description": "Activity from all Ethereum networks",
   "page-index-activity-tag": "Activity",
   "page-index-activity-title": "The strongest ecosystem",
+  "page-index-bento-header": "A new way to use the internet",
   "page-index-bento-assets-action": "More on NFTs",
   "page-index-bento-assets-content": "Arts, certificates or even real estate can be tokenized. Anything can be a tradable token. Ownership is public and verifiable.",
   "page-index-bento-assets-title": "The internet of assets",
@@ -103,6 +103,7 @@
   "page-index-cta-networks-label": "Choose a network",
   "page-index-cta-wallet-description": "Create accounts, manage assets",
   "page-index-cta-wallet-label": "Pick a wallet",
+  "page-index-description": "The leading platform for innovative apps and Ethereum-backed blockchain networks",
   "page-index-developers-code-example-description-0": "Build a bank powered by logic you've programmed",
   "page-index-developers-code-example-description-1": "Create tokens that you can transfer and use across applications",
   "page-index-developers-code-example-description-2": "Use existing languages to interact with Ethereum and other applications",

@@ -23,15 +23,10 @@ const HomeHero = ({ heroImg, className }: HomeHeroProps) => {
       </div>
       <div className="flex flex-col items-center border-t-[3px] border-primary-low-contrast px-4 py-12 text-center">
         <Morpher />
-        <div className="flex flex-col items-center space-y-5 lg:max-w-2xl">
+        <div className="flex flex-col items-center gap-y-5 lg:max-w-2xl">
           <h1 className="font-black">{t("page-index:page-index-title")}</h1>
-          <p
-            className="max-w-96 text-body-medium"
-            // TODO: Match paragraph color to design
-            // TODO: Extract intl
-          >
-            The leading platform for innovative apps and Ethereum-backed
-            blockchain networks
+          <p className="max-w-96 text-body-medium">
+            {t("page-index:page-index-description")}
           </p>
         </div>
       </div>

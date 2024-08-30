@@ -32,7 +32,7 @@ const BentoCard = ({
       className
     )}
   >
-    <div className="mb-6 grid place-items-center md:mb-auto">
+    <div className="mb-6 grid place-items-center">
       <NextImage src={imgSrc} alt="" width={imgWidth} height={imgHeight} />
     </div>
     <div>

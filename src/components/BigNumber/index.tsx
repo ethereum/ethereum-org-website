@@ -55,7 +55,9 @@ const BigNumber = ({
                       <Link href={sourceUrl}>{sourceName}</Link>
                     </p>
                     {lastUpdated && (
-                      <p className="mt-2">Last updated: {lastUpdatedDisplay}</p>
+                      <p className="mt-2">
+                        {t("last-updated")}: {lastUpdatedDisplay}
+                      </p>
                     )}
                   </>
                 }

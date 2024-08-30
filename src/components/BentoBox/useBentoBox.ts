@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "next-i18next"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -63,7 +63,7 @@ export const useBentoBox = () => {
         action: t("page-index:page-index-bento-stablecoins-action"),
         href: "/stablecoins/",
         imgSrc: ImpactImage,
-        imgWidth: 400, // TODO: Fix tablet size alignment (aligning top, should be center?)
+        imgWidth: 400,
         className: cn(
           "border-primary/10",
           positions,

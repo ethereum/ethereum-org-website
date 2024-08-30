@@ -16,7 +16,7 @@ type PostsSwiperProps = ClassNameProp & {
   items: RSSItem[]
 }
 const PostsSwiper = ({ className, items }: PostsSwiperProps) => (
-  <div className={cn("h-fit gap-8", className)}>
+  <div className={cn("h-fit", className)}>
     <Swiper
       navigation={{
         nextEl: ".swiper-button-next",
