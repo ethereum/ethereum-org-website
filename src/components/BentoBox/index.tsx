@@ -4,11 +4,6 @@ import BentoCard from "./BentoCard"
 import Title from "./Title"
 import { useBentoBox } from "./useBentoBox"
 
-import "swiper/css"
-import "swiper/css/effect-cards"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-
 const BentoBox = ({ className }: ClassNameProp) => {
   const { items } = useBentoBox()
 

@@ -17,6 +17,7 @@ import "swiper/css/pagination"
 
 const SwiperCards = ({ className }: ClassNameProp) => {
   const { items } = useBentoBox()
+
   return (
     <div
       className={cn(
