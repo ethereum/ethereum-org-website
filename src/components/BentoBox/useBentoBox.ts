@@ -11,18 +11,15 @@ import ManBabyWomanImage from "@/public/images/man-baby-woman.png"
 import RobotBarImage from "@/public/images/robot-help-bar.png"
 import MergeImage from "@/public/images/upgrades/merge.png"
 
-const flow = {
+type Breakpoint = "mobile" | "lg" | "xl"
+type Direction = "down" | "up" | "right" | "left"
+
+const flow: Record<Breakpoint, Record<Direction, string>> = {
   mobile: {
     down: "flex-col bg-gradient-to-b",
     up: "flex-col-reverse bg-gradient-to-t",
     right: "flex-row bg-gradient-to-r",
     left: "flex-row-reverse bg-gradient-to-l",
-  },
-  md: {
-    down: "md:flex-col md:bg-gradient-to-b",
-    up: "md:flex-col-reverse md:bg-gradient-to-t",
-    right: "md:flex-row md:bg-gradient-to-r",
-    left: "md:flex-row-reverse md:bg-gradient-to-l",
   },
   lg: {
     down: "lg:flex-col lg:bg-gradient-to-b",
@@ -38,17 +35,49 @@ const flow = {
   },
 }
 
-const positions = "from-20% to-60%"
+const pos: Record<Breakpoint, string[]> = {
+  mobile: [
+    flow.mobile.down,
+    flow.mobile.down,
+    flow.mobile.down,
+    flow.mobile.down,
+    flow.mobile.down,
+  ],
+  lg: [
+    cn("lg:col-span-6 lg:row-start-2", flow.lg.up),
+    cn("lg:col-span-6 lg:col-start-7 lg:row-start-2", flow.lg.down),
+    cn("lg:col-span-12 lg:row-start-3", flow.lg.right),
+    cn("lg:col-span-6 lg:col-start-7 lg:row-start-4", flow.lg.up),
+    cn("lg:col-span-6 lg:row-start-4", flow.lg.down),
+  ],
+  xl: [
+    cn("xl:col-span-7 xl:col-start-5 xl:row-start-1", flow.xl.right),
+    cn("xl:col-span-4 xl:col-start-2 xl:row-start-2", flow.xl.up),
+    cn("xl:col-span-3 xl:col-start-6 xl:row-start-2", flow.xl.down),
+    cn("xl:col-span-3 xl:col-start-9 xl:row-span-2 xl:row-start-2", flow.xl.up),
+    cn("xl:col-span-7 xl:col-start-2 xl:row-start-3", flow.xl.right),
+  ],
+}
 
-const colors = (color: "primary" | "accent-a" | "accent-b" | "accent-c") => {
-  if (color === "primary")
-    return "from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10"
-  if (color === "accent-a")
-    return "from-accent-a/10 to-accent-a/5 dark:from-accent-a/20 dark:to-accent-a/10"
-  if (color === "accent-b")
-    return "from-accent-b/10 to-accent-b/5 dark:from-accent-b/20 dark:to-accent-b/10"
-  if (color === "accent-c")
-    return "from-accent-c/10 to-accent-c/5 dark:from-accent-c/20 dark:to-accent-c/10"
+const gradientStops = "from-20% to-60%"
+
+const colors = {
+  primary: cn(
+    gradientStops,
+    "from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10 border-primary/10"
+  ),
+  "accent-a": cn(
+    gradientStops,
+    "from-accent-a/10 to-accent-a/5 dark:from-accent-a/20 dark:to-accent-a/10 border-accent-a/10"
+  ),
+  "accent-b": cn(
+    gradientStops,
+    "from-accent-b/10 to-accent-b/5 dark:from-accent-b/20 dark:to-accent-b/10 border-accent-b/10"
+  ),
+  "accent-c": cn(
+    gradientStops,
+    "from-accent-c/10 to-accent-c/5 dark:from-accent-c/20 dark:to-accent-c/10 border-accent-c/10"
+  ),
 }
 
 export const useBentoBox = () => {
@@ -64,16 +93,7 @@ export const useBentoBox = () => {
         href: "/stablecoins/",
         imgSrc: ImpactImage,
         imgWidth: 400,
-        className: cn(
-          "border-primary/10",
-          positions,
-          colors("primary"),
-          flow.mobile.down,
-          flow.lg.up,
-          flow.xl.right,
-          "lg:col-span-6 lg:row-start-2",
-          "xl:col-span-7 xl:col-start-5 xl:row-start-1"
-        ),
+        className: cn(colors["primary"], pos.mobile[0], pos.lg[0], pos.xl[0]),
       },
       {
         title: t("page-index:page-index-bento-defi-title"),
@@ -81,16 +101,7 @@ export const useBentoBox = () => {
         action: t("page-index:page-index-bento-defi-action"),
         href: "/defi/",
         imgSrc: ManAndDogImage,
-        className: cn(
-          "border-accent-c/10",
-          positions,
-          colors("accent-c"),
-          flow.mobile.down,
-          flow.lg.down,
-          flow.xl.up,
-          "lg:col-span-6 lg:col-start-7 lg:row-start-2",
-          "xl:col-span-4 xl:col-start-2 xl:row-start-2"
-        ),
+        className: cn(colors["accent-c"], pos.mobile[1], pos.lg[1], pos.xl[1]),
       },
       {
         title: t("page-index:page-index-bento-dapps-title"),
@@ -99,16 +110,7 @@ export const useBentoBox = () => {
         href: "/dapps/",
         imgSrc: MergeImage,
         imgWidth: 320,
-        className: cn(
-          "border-accent-b/10",
-          positions,
-          colors("accent-b"),
-          flow.mobile.down,
-          flow.lg.right,
-          flow.xl.down,
-          "lg:col-span-12 lg:row-start-3",
-          "xl:col-span-3 xl:col-start-6 xl:row-start-2"
-        ),
+        className: cn(colors["accent-b"], pos.mobile[2], pos.lg[2], pos.xl[2]),
       },
       {
         title: t("page-index:page-index-bento-networks-title"),
@@ -117,16 +119,7 @@ export const useBentoBox = () => {
         href: "/layer-2/",
         imgSrc: ManBabyWomanImage,
         imgWidth: 324,
-        className: cn(
-          "border-accent-a/10",
-          positions,
-          colors("accent-a"),
-          flow.mobile.down,
-          flow.lg.up,
-          flow.xl.up,
-          "lg:col-span-6 lg:col-start-7 lg:row-start-4",
-          "xl:col-span-3 xl:col-start-9 xl:row-span-2 xl:row-start-2"
-        ),
+        className: cn(colors["accent-a"], pos.mobile[3], pos.lg[3], pos.xl[3]),
       },
       {
         title: t("page-index:page-index-bento-assets-title"),
@@ -135,16 +128,7 @@ export const useBentoBox = () => {
         href: "/nft/",
         imgSrc: RobotBarImage,
         imgWidth: 324,
-        className: cn(
-          "border-primary/10",
-          positions,
-          colors("primary"),
-          flow.mobile.down,
-          flow.lg.down,
-          flow.xl.right,
-          "lg:col-span-6 lg:row-start-4",
-          "xl:col-span-7 xl:col-start-2 xl:row-start-3"
-        ),
+        className: cn(colors["primary"], pos.mobile[4], pos.lg[4], pos.xl[4]),
       },
     ])
   }, [t])
