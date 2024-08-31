@@ -34,8 +34,8 @@ There is a difference between looking something up in the 'trie' and the underly
 The update and delete operations for radix tries can be defined as follows:
 
 ```
-    def update(node,path,value):
-        curnode = db.get(node) if node else [ NULL ] * 17
+    def update(node_hash,path,value):
+        curnode = db.get(node_hash) if node else [ NULL ] * 17
         newnode = curnode.copy()
         if path == '':
             newnode[-1] = value
@@ -45,11 +45,11 @@ The update and delete operations for radix tries can be defined as follows:
         db.put(hash(newnode),newnode)
         return hash(newnode)
 
-    def delete(node,path):
+    def delete(node_hash,path):
         if node is NULL:
             return NULL
         else:
-            curnode = db.get(node)
+            curnode = db.get(node_hash)
             newnode = curnode.copy()
             if path == '':
                 newnode[-1] = NULL
