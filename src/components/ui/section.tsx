@@ -31,7 +31,7 @@ const SectionBanner = React.forwardRef<
 ))
 SectionBanner.displayName = "SectionBanner"
 
-const SectionTitle = React.forwardRef<
+const SectionHeader = React.forwardRef<
   HTMLHeadingElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
@@ -44,7 +44,7 @@ const SectionTitle = React.forwardRef<
     {...props}
   />
 ))
-SectionTitle.displayName = "SectionTitle"
+SectionHeader.displayName = "SectionHeader"
 
 const SectionTag = React.forwardRef<
   HTMLDivElement,
@@ -69,4 +69,4 @@ const SectionContent = React.forwardRef<
 ))
 SectionContent.displayName = "SectionContent"
 
-export { Section, SectionBanner, SectionContent, SectionTag, SectionTitle }
+export { Section, SectionBanner, SectionContent, SectionHeader, SectionTag }

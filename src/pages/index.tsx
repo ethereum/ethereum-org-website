@@ -42,8 +42,8 @@ import {
   Section,
   SectionBanner,
   SectionContent,
+  SectionHeader,
   SectionTag,
-  SectionTitle,
 } from "@/components/ui/section"
 import WindowBox from "@/components/WindowBox"
 
@@ -234,9 +234,9 @@ const HomePage = ({
 
           <SectionContent>
             <SectionTag>{t("page-index:page-index-activity-tag")}</SectionTag>
-            <SectionTitle>
-              {t("page-index:page-index-activity-title")}
-            </SectionTitle>
+            <SectionHeader>
+              {t("page-index:page-index-activity-header")}
+            </SectionHeader>
             <div className="py-16 lg:py-32">
               <p className="mt-8 text-xl font-bold">
                 {t("page-index:page-index-activity-description")}
@@ -253,9 +253,9 @@ const HomePage = ({
 
           <SectionContent>
             <SectionTag>{t("page-index:page-index-learn-tag")}</SectionTag>
-            <SectionTitle>
-              {t("page-index:page-index-learn-title")}
-            </SectionTitle>
+            <SectionHeader>
+              {t("page-index:page-index-learn-header")}
+            </SectionHeader>
             <div className="flex flex-col gap-y-16 lg:gap-y-32">
               <p className="text-lg">
                 {t("page-index:page-index-learn-description")}
@@ -298,9 +298,9 @@ const HomePage = ({
 
           <SectionContent>
             <SectionTag>{t("page-index:page-index-builders-tag")}</SectionTag>
-            <SectionTitle>
-              {t("page-index:page-index-builders-title")}
-            </SectionTitle>
+            <SectionHeader>
+              {t("page-index:page-index-builders-header")}
+            </SectionHeader>
             <p className="text-lg">
               {t("page-index:page-index-builders-description")}
             </p>
@@ -366,9 +366,9 @@ const HomePage = ({
 
           <SectionContent>
             <SectionTag>{t("page-index:page-index-community-tag")}</SectionTag>
-            <SectionTitle>
-              {t("page-index:page-index-community-title")}
-            </SectionTitle>
+            <SectionHeader>
+              {t("page-index:page-index-community-header")}
+            </SectionHeader>
             <div className="mt-8 flex flex-col gap-8 text-lg">
               <p>{t("page-index:page-index-community-description-1")}</p>
               <p>{t("page-index:page-index-community-description-2")}</p>
