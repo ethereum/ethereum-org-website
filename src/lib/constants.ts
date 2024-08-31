@@ -159,6 +159,9 @@ export const DESKTOP_LANGUAGE_BUTTON_NAME = "desktop-language-button"
 // Codeblock
 export const LINES_BEFORE_COLLAPSABLE = 8
 
+// Ethereum.org community
+export const CALENDAR_DISPLAY_COUNT = 4
+
 // RSS Feeds
 export const RSS_DISPLAY_COUNT = 3
 
