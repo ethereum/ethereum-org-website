@@ -523,10 +523,10 @@ export const walletsData: WalletData[] = [
     documentation: "",
   },
   {
-    last_updated: "2022-06-24",
+    last_updated: "2024-08-31",
     name: "imToken",
     image: imTokenImage,
-    brand_color: "#098de6",
+    brand_color: "#007FFF",
     url: "https://token.im/",
     active_development_team: true,
     languages_supported: [
@@ -553,8 +553,8 @@ export const walletsData: WalletData[] = [
     firefox: false,
     chromium: false,
     hardware: false,
-    open_source: false,
-    repo_url: "https://github.com/consenlabs/token-core",
+    open_source: true,
+    repo_url: "https://github.com/consenlabs/",
     non_custodial: true,
     security_audit: ["https://cure53.de/pentest-report_imtoken.pdf"],
     scam_protection: true,
@@ -572,7 +572,7 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
-    onboard_documentation: "",
+    onboard_documentation: "https://support.token.im/hc/categories/360000925393",
     documentation: "https://support.token.im/hc/en-us",
   },
   {
