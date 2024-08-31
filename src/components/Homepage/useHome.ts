@@ -3,8 +3,8 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
 
-import { EventCardProps, Lang } from "@/lib/types"
-import { CodeExample } from "@/lib/interfaces"
+import type { EventCardProps, Lang } from "@/lib/types"
+import type { CodeExample } from "@/lib/interfaces"
 
 import BlockHeap from "@/components/icons/block-heap.svg"
 import EthGlyphIcon from "@/components/icons/eth-glyph.svg"
@@ -137,8 +137,9 @@ export const useHome = () => {
   const upcomingEvents = events
     .filter((event) => {
       const isValid = isValidDate(event.endDate)
-      const isUpcoming =
-        new Date(event.endDate).getTime() > new Date().getTime()
+      const beginningOfEndDate = new Date(event.endDate).getTime()
+      const endOfEndDate = beginningOfEndDate + 24 * 60 * 60 * 1000
+      const isUpcoming = endOfEndDate >= new Date().getTime()
       return isValid && isUpcoming
     })
     .sort(
