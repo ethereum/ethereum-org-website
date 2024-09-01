@@ -104,10 +104,11 @@ Esplora i progetti e unisciti alla community della DeSci.
 - [Bio.xyz: ricevi finanziamenti per la tua DAO biotecnologica o il tuo progetto di DeSci](https://www.bio.xyz/)
 - [Fleming Protocol: economia dei dati open source che alimenta la scoperta biomedica collaborativa](http://flemingprotocol.io/)
 - [Istituto di Inferenza Attiva](https://www.activeinference.org/)
-- [CureDAO: piattaforma sanitaria di precisione, gestita dalla community](https://docs.curedao.org/)
 - [IdeaMarkets: la credibilità scientifica decentralizzata diventa realtà](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
 - [ValleyDAO: una community globale e aperta che offre finanziamenti e supporto traslazionale per la ricerca biologica sintetica](https://www.valleydao.bio)
+- [Cerebrum DAO: soluzioni di approvvigionamento e cura per far progredire la salute cerebrale e prevenire la neurodegenerazione](https://www.cerebrumdao.com/)
+- [CryoDAO: finanziamento della rivoluzionaria ricerca nel campo della crioconservazione](https://www.cryodao.org)
 
 Accogliamo suggerimenti per nuovi progetti da elencare: per iniziare, ti preghiamo di consultare la nostra [politica di inserzione](/contributing/adding-desci-projects/)!
 
