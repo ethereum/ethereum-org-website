@@ -1,20 +1,20 @@
 {
   "month": {
-    "reportId": "d4f07690-d028-451e-9d24-f0961157200c",
-    "from": "2024-03-01T00:00:00.000Z",
-    "to": "2024-04-01T00:00:00.000Z",
+    "reportId": "40f90cc7-84d1-4282-bc2c-575837e8e2e9",
+    "from": "2024-08-01T00:00:00.000Z",
+    "to": "2024-09-01T00:00:00.000Z",
     "filePath": "src/data/translation-reports/month/month-data.json"
   },
   "quarter": {
-    "reportId": "7ba42e96-5c0f-49f1-8cae-c3b0c400c61c",
-    "from": "2024-01-01T00:00:00.000Z",
-    "to": "2024-04-01T00:00:00.000Z",
+    "reportId": "71fe5120-6635-4d03-8d1d-c20b1c902f2e",
+    "from": "2024-04-01T00:00:00.000Z",
+    "to": "2024-07-01T00:00:00.000Z",
     "filePath": "src/data/translation-reports/quarter/quarter-data.json"
   },
   "allTime": {
-    "reportId": "d9bc052b-816c-4303-825a-251608ec9556",
+    "reportId": "f21f44a2-d224-477e-90ad-1f320512209c",
     "from": "2019-06-27T00:00:00Z",
-    "to": "2024-04-05T05:32:59.302Z",
+    "to": "2024-09-01T16:30:01.934Z",
     "filePath": "src/data/translation-reports/alltime/alltime-data.json"
   }
 }
