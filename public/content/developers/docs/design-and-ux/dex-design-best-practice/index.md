@@ -5,7 +5,7 @@ lang: en
 ---
 
 Since the launch of Uniswap in 2018, there have been hundreds of decentralized exchanges launched across dozens of different chains.
-Many of these have introduced new elements or added their own twist, but the interface has remained generally the same.
+Many of these introduced new elements or added their own twist, but the interface has remained generally the same.
 
 One reason for this is [Jakob’s Law](https://lawsofux.com/jakobs-law/):
 
