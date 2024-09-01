@@ -18,7 +18,7 @@ description: ethereum.orgの翻訳でCrowdinを使う手順
 
 お持ちのCrowdinアカウントでログインします。無い場合はサインアップする必要があります。 サインアップに必要なのは、Eメールとパスワードだけです。
 
-<ButtonLink href="https://crowdin.com/project/ethereum-org/">
+<ButtonLink to="https://crowdin.com/project/ethereum-org/">
   プロジェクトに参加
 </ButtonLink>
 
@@ -70,7 +70,7 @@ Crowdinへログインすると、プロジェクトの説明と翻訳可能な�
 
 また、上部のボタンで、既存の翻訳を検索できる「翻訳メモリ」や、重要な用語の説明や標準的な翻訳を収録した「用語集」に切り替えることができます。
 
-さらに詳しく知りたいですか？ [Crowdinオンラインエディターの使用方法に関するドキュメント](https://support.crowdin.com/online-editor/)をご参照ください。
+詳細をご希望の場合は、 [Crowdinオンラインエディターの使用方法に関するドキュメント](https://support.crowdin.com/online-editor/)をご参照ください。
 
 ### レビュープロセス {#review-process}
 
