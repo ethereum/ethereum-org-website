@@ -1,10 +1,11 @@
 import type { Options } from "mdast-util-toc"
 import type { NextPage } from "next"
 import type { AppProps } from "next/app"
-import { StaticImageData } from "next/image"
-import { SSRConfig } from "next-i18next"
+import type { StaticImageData } from "next/image"
+import type { SSRConfig } from "next-i18next"
 import type { ReactElement, ReactNode } from "react"
-import { Icon } from "@chakra-ui/react"
+import resolveConfig from "tailwindcss/resolveConfig"
+import type { Icon } from "@chakra-ui/react"
 
 import type {
   DocsFrontmatter,
@@ -18,13 +19,14 @@ import type {
 
 import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
-import { SimulatorNav } from "@/components/Simulator/interfaces"
+import type { SimulatorNav } from "@/components/Simulator/interfaces"
 
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
 import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
+import tailwindConfig from "@/../tailwind.config"
 import { layoutMapping } from "@/pages/[...slug]"
 
 // Credit: https://stackoverflow.com/a/52331580
@@ -826,3 +828,7 @@ export type EventCardProps = {
   location: string
   imageUrl?: string
 }
+
+const twConfig = resolveConfig(tailwindConfig)
+
+export type BreakpointKey = keyof typeof twConfig.theme.screens
