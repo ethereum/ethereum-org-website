@@ -334,7 +334,7 @@ DeFi ist eine Open-Source-Bewegung. DeFi-Protokolle und -Anwendungen sind für j
   Mehr zum Erstellen von dApps
 </ButtonLink>
 
-## Weiterführende Informationen {#futher-reading}
+## Weiterführende Informationen {#further-reading}
 
 ### DeFi-Daten {#defi-data}
 
