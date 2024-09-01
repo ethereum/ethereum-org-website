@@ -17,7 +17,6 @@ import BentoBox from "@/components/BentoBox"
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
-import PostPreviewCard from "@/components/Homepage/PostPreviewCard"
 import { useHome } from "@/components/Homepage/useHome"
 import AngleBrackets from "@/components/icons/angle-brackets.svg"
 import Calendar from "@/components/icons/calendar.svg"
@@ -452,15 +451,8 @@ const HomePage = ({
             {t("page-index:page-index-posts-header")}
           </h3>
           <p>{t("page-index:page-index-posts-subtitle")}</p>
-          {/* Mobile */}
-          <PostsSwiper items={rssItems} className="mt-4 md:hidden" />
 
-          {/* Desktop */}
-          <div className="hidden gap-8 md:mt-16 md:grid md:grid-cols-3">
-            {rssItems.map((post) => (
-              <PostPreviewCard key={post.title} {...post} />
-            ))}
-          </div>
+          <PostsSwiper items={rssItems} className="mt-4 md:mt-16" />
 
           <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
             <p className="text-lg">{t("page-index:page-index-posts-action")}</p>

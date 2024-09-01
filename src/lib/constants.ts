@@ -163,7 +163,7 @@ export const LINES_BEFORE_COLLAPSABLE = 8
 export const CALENDAR_DISPLAY_COUNT = 4
 
 // RSS Feeds
-export const RSS_DISPLAY_COUNT = 3
+export const RSS_DISPLAY_COUNT = 6
 
 export const VITALIK_FEED = "https://vitalik.eth.limo/feed.xml"
 export const SOLIDITY_FEED = "https://soliditylang.org/feed.xml"

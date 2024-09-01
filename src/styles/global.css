@@ -217,6 +217,10 @@
     @apply relative mx-auto mt-8 flex h-[26px] max-w-48 items-center justify-center rounded-full bg-background-highlight;
   }
 
+  .css-posts-swiper .swiper-pagination {
+    @apply max-w-52 sm:max-w-40 lg:max-w-36;
+  }
+
   .swiper-pagination .swiper-pagination-bullet {
     @apply bg-primary-high-contrast;
   }
@@ -235,7 +239,21 @@
 .swiper-button-prev,
 .swiper-button-next {
   top: calc(100% - 11px) !important;
-  --nav-inset: calc(50% - 6rem);
+  --nav-inset: calc(50% - 6.5rem);
+}
+
+@media (min-width: theme("screens.sm")) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    --nav-inset: calc(50% - 5rem);
+  }
+}
+
+@media (min-width: theme("screens.lg")) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    --nav-inset: calc(50% - 4.5rem);
+  }
 }
 
 .swiper-button-next {
