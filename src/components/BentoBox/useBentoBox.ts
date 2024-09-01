@@ -13,6 +13,28 @@ import MergeImage from "@/public/images/upgrades/merge.png"
 
 type Breakpoint = "mobile" | "lg" | "xl"
 type Direction = "down" | "up" | "right" | "left"
+type Color = "primary" | "accent-a" | "accent-b" | "accent-c"
+
+const gradientStops = "from-20% to-60%"
+
+const colorOptions: Record<Color, string> = {
+  primary: cn(
+    gradientStops,
+    "from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10 border-primary/10"
+  ),
+  "accent-a": cn(
+    gradientStops,
+    "from-accent-a/10 to-accent-a/5 dark:from-accent-a/20 dark:to-accent-a/10 border-accent-a/10"
+  ),
+  "accent-b": cn(
+    gradientStops,
+    "from-accent-b/10 to-accent-b/5 dark:from-accent-b/20 dark:to-accent-b/10 border-accent-b/10"
+  ),
+  "accent-c": cn(
+    gradientStops,
+    "from-accent-c/10 to-accent-c/5 dark:from-accent-c/20 dark:to-accent-c/10 border-accent-c/10"
+  ),
+}
 
 const flow: Record<Breakpoint, Record<Direction, string>> = {
   mobile: {
@@ -35,7 +57,7 @@ const flow: Record<Breakpoint, Record<Direction, string>> = {
   },
 }
 
-const pos: Record<Breakpoint, string[]> = {
+const stylesByPosition: Record<Breakpoint, string[]> = {
   mobile: [
     flow.mobile.down,
     flow.mobile.down,
@@ -59,26 +81,12 @@ const pos: Record<Breakpoint, string[]> = {
   ],
 }
 
-const gradientStops = "from-20% to-60%"
-
-const colors = {
-  primary: cn(
-    gradientStops,
-    "from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10 border-primary/10"
-  ),
-  "accent-a": cn(
-    gradientStops,
-    "from-accent-a/10 to-accent-a/5 dark:from-accent-a/20 dark:to-accent-a/10 border-accent-a/10"
-  ),
-  "accent-b": cn(
-    gradientStops,
-    "from-accent-b/10 to-accent-b/5 dark:from-accent-b/20 dark:to-accent-b/10 border-accent-b/10"
-  ),
-  "accent-c": cn(
-    gradientStops,
-    "from-accent-c/10 to-accent-c/5 dark:from-accent-c/20 dark:to-accent-c/10 border-accent-c/10"
-  ),
-}
+const getPosition = (position: number): string =>
+  cn(
+    stylesByPosition.mobile[position],
+    stylesByPosition.lg[position],
+    stylesByPosition.xl[position]
+  )
 
 export const useBentoBox = () => {
   const { t } = useTranslation("page-index")
@@ -93,7 +101,7 @@ export const useBentoBox = () => {
         href: "/stablecoins/",
         imgSrc: ImpactImage,
         imgWidth: 400,
-        className: cn(colors["primary"], pos.mobile[0], pos.lg[0], pos.xl[0]),
+        className: cn(colorOptions["primary"], getPosition(0)),
       },
       {
         title: t("page-index:page-index-bento-defi-title"),
@@ -101,7 +109,7 @@ export const useBentoBox = () => {
         action: t("page-index:page-index-bento-defi-action"),
         href: "/defi/",
         imgSrc: ManAndDogImage,
-        className: cn(colors["accent-c"], pos.mobile[1], pos.lg[1], pos.xl[1]),
+        className: cn(colorOptions["accent-c"], getPosition(1)),
       },
       {
         title: t("page-index:page-index-bento-dapps-title"),
@@ -110,7 +118,7 @@ export const useBentoBox = () => {
         href: "/dapps/",
         imgSrc: MergeImage,
         imgWidth: 320,
-        className: cn(colors["accent-b"], pos.mobile[2], pos.lg[2], pos.xl[2]),
+        className: cn(colorOptions["accent-b"], getPosition(2)),
       },
       {
         title: t("page-index:page-index-bento-networks-title"),
@@ -119,7 +127,7 @@ export const useBentoBox = () => {
         href: "/layer-2/",
         imgSrc: ManBabyWomanImage,
         imgWidth: 324,
-        className: cn(colors["accent-a"], pos.mobile[3], pos.lg[3], pos.xl[3]),
+        className: cn(colorOptions["accent-a"], getPosition(3)),
       },
       {
         title: t("page-index:page-index-bento-assets-title"),
@@ -128,7 +136,7 @@ export const useBentoBox = () => {
         href: "/nft/",
         imgSrc: RobotBarImage,
         imgWidth: 324,
-        className: cn(colors["primary"], pos.mobile[4], pos.lg[4], pos.xl[4]),
+        className: cn(colorOptions["primary"], getPosition(4)),
       },
     ])
   }, [t])
