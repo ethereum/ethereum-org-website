@@ -48,6 +48,10 @@ This is a curated list of user research done in web3 that may help with design a
 - [Neueux.com](https://neueux.com/apps) - UI library of user flows with diverse filtering options
 - [Web3's Usability Crisis: What You NEED to Know!](https://www.youtube.com/watch?v=oBSXT_6YDzg) - A panel discussion on pitfalls of developer focused project building (video, 34 min)
 
+## Getting Started {#getting-started}
+- [Heuristics for Web3](https://ethereum.org/en/developers/docs/design-and-ux/heuristics-for-web3/) - 7 heuristics for Web3 interface design
+- [DEX Design Best Practices](https://ethereum.org/en/developers/docs/design-and-ux/dex-design-best-practice/) - A guide to designing Decentralized Exchanges
+
 ## Web3 Design Case Studies {#design-case-studies}
 
 - [Deep Work Studio](https://deepwork.studio/case-studies/)
