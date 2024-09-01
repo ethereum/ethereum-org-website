@@ -196,7 +196,7 @@ eventName="read more">
 
 建議驗證操作者訪問<a href="https://launchpad.ethereum.org/withdrawals/">質押啟動面板提款</a>頁面以便找到更多關於驗證者需要為提款作出的準備、活動時間，以及提款相關的詳細資訊。
 
-若想先在測試網上嘗試你的設置，請從造訪 <a href="https://holesky.launchpad.ethereum.org">Holesky 測試網質押啟動面板</a>開始。
+若想先在測試網上測試你的設定，請造訪 <a href="https://holesky.launchpad.ethereum.org">Holesky 測試網質押啟動面板</a>開始測試。
 
 </ExpandableCard>
 

@@ -334,7 +334,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
   關於建構去中心化應用程式
 </ButtonLink>
 
-## 延伸閱讀 {#futher-reading}
+## 了解更多 {#further-reading}
 
 ### 去中心化金融資料 {#defi-data}
 
