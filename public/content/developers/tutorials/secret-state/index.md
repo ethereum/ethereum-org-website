@@ -634,15 +634,19 @@ In any sufficiently complex application there are competing design goals that re
 
 For minesweeper you don't really need zero-knowledge. The server can always hold the map, and then just reveal all of it when the game is over. Then, at the end of the game, the smart contract can calculate the map hash, verify that it matches, and if it doesn't penalize the server or disregard the game completely.
 
-I didn't use this simpler solution because it would only work for short games with a well defined end state. When a game is potentially infinite (such as the case with [autonomous worlds](https://0xparc.org/blog/autonomous-worlds)), you need a solution that proves the state *without* revealing it.
+I didn't use this simpler solution because it only works for short games with a well defined end state. When a game is potentially infinite (such as the case with [autonomous worlds](https://0xparc.org/blog/autonomous-worlds)), you need a solution that proves the state *without* revealing it.
 
 As a tutorial this article needed a short game that is easy to understand, but this technique is most useful for longer games.
 
 ### Why Zokrates? {#why-zokrates}
 
-As opposed to other systems like circum
+[Zokrates](https://zokrates.github.io/) isn't the only zero-knowledge library available, but it is similar to a normal, [imperative](https://en.wikipedia.org/wiki/Imperative_programming) programming language and supports boolean variables. 
+
+For your application, with different requirements, you might prefer to use [Circum](https://docs.circom.io/getting-started/installation/) or [Cairo](https://www.cairo-lang.org/tutorials/getting-started-with-cairo/).
 
 ### When to compile Zokrates {#when-compile-zokrates}
+
+
 
 ### Creating the verifier and prover keys (#key-creation)
 
