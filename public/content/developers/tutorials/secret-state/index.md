@@ -393,16 +393,14 @@ On a production system we might use a more complicated [setup ceremony](https://
 <a id="calculateMapHash" />
    
 ```typescript
-
 const calculateMapHash = function(hashMe: boolean[][]): string {
   return "0x" + 
       BigInt(zokrates.computeWitness(hashCompiled, [hashMe]).output.slice(1,-1))
       .toString(16).padStart(64, "0")        
 }
-
 ```
 
-[`computeWitness`](https://zokrates.github.io/toolbox/zokrates_js.html#computewitnessartifacts-args-options) actually runs the Zokrates program. It returns a structure with two fields: `output`, which is the output of the program as a JSON string, and `witness`, which is the information needed to create the a zero knowledge proof of the result. Here we just need the output.
+The [`computeWitness`](https://zokrates.github.io/toolbox/zokrates_js.html#computewitnessartifacts-args-options) function actually runs the Zokrates program. It returns a structure with two fields: `output`, which is the output of the program as a JSON string, and `witness`, which is the information needed to create the a zero knowledge proof of the result. Here we just need the output.
 
 The output is a string of the form `"31337"`, a decimal number enclosed in quotation marks. But the output we need for `viem` is a hexadecimal number of the form `0x60A7`. So we use `.slice(1,-1)` to remove the quotation marks and then `BigInt` to run the remaining string, which is a decimal number, to a [`BigInt`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). `.toString(16)` converts this `BigInt` into a hexadecimal string, and `"0x"+` adds the marker for hexadecimal numbers.
 
