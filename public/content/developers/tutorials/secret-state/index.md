@@ -78,9 +78,9 @@ We need [several tables](https://github.com/qbzzt/20240901-secret-state/blob/mai
 - `GamePlayer`: This table holds the reverse mapping, from `gameId` to player address.
 
 - `Map`: The key is a tuple of three values:
-  - The game identifier
-  - x
-  - y
+  - `gameId`: 32 byte value that is the hash of the map the player is playing on (the game identifier).
+  - `x` coordinate
+  - `y` coordinate
   
   The value is a single number. It's 255 if a bomb was detected. Otherwise, it is the number of bombs around that location plus one. We cannot just use the number of bombs, because by default all storage in the EVM and all row values in MUD are zero. We need to distinguish between "the player haven't dug here yet" and "the player dug here, and found there are zero bombs around".
 
