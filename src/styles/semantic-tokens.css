@@ -19,7 +19,7 @@
     --primary-hover: var(--purple-500);
     --primary-visited: var(--purple-700);
     --primary-action: var(--purple-600);
-    --primary-action-hover: var(--purple-700);
+    --primary-action-hover: var(--purple-500);
 
     --accent-a: var(--blue-600);
     --accent-a-hover: var(--blue-500);
@@ -80,7 +80,7 @@
 
   /* Dark mode token declarations */
   .dark {
-    --body: var(--gray-50);
+    --body: var(--gray-100);
     --body-medium: var(--gray-400);
     --body-light: var(--gray-600);
     --body-inverse: var(--black);
@@ -94,7 +94,6 @@
     --primary-low-contrast: var(--purple-900);
     --primary-hover: var(--purple-300);
     --primary-visited: var(--purple-500);
-    --primary-action-hover: var(--purple-600);
     /* TODO: hover same as action in dark mode: */
 
     --accent-a: var(--blue-400);
