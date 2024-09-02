@@ -6,7 +6,7 @@ const Section = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div
+  <section
     ref={ref}
     className={cn("flex flex-col gap-8 md:flex-row lg:gap-16", className)}
     {...props}

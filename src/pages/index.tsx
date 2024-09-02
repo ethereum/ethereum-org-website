@@ -223,8 +223,8 @@ const HomePage = ({
           ))}
         </div>
 
-        {/* A new way to use the internet */}
-        <div
+        {/* Use Cases - A new way to use the internet */}
+        <Section
           className={cn(
             "max-lg:-mx-4 max-lg:w-[100vw] max-lg:overflow-hidden max-lg:px-4 sm:max-lg:-mx-6 sm:max-lg:px-6", // Mobile: Swiper cards
             "lg:grid lg:grid-cols-bento lg:gap-4" // Desktop: BentoBox grid
@@ -272,8 +272,9 @@ const HomePage = ({
               className={cn(className, "max-lg:hidden")} // Desktop only
             />
           ))}
-        </div>
+        </Section>
 
+        {/* Activity - The strongest ecosystem */}
         <Section>
           <SectionBanner>
             <TwImage src={ActivityImage} alt="" />
@@ -293,6 +294,7 @@ const HomePage = ({
           </SectionContent>
         </Section>
 
+        {/* Learn - Understand Ethereum */}
         <Section className="md:flex-row-reverse">
           <SectionBanner>
             <TwImage src={LearnImage} alt="" />
@@ -338,6 +340,7 @@ const HomePage = ({
 
         {/* TODO: Add "The Internet Is Changing" section */}
 
+        {/* Builders - Blockchain's biggest builder community */}
         <Section>
           <SectionBanner>
             <TwImage src={BuildersImage} alt="" />
@@ -406,6 +409,7 @@ const HomePage = ({
           </SectionContent>
         </Section>
 
+        {/* Ethereum.org community - Built by the community */}
         <Section className="md:flex-row-reverse">
           <SectionBanner>
             <TwImage src={CommunityImage} alt="" />
@@ -494,6 +498,7 @@ const HomePage = ({
           </SectionContent>
         </Section>
 
+        {/* Recent posts */}
         <div className="w-full">
           <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
             {t("page-index:page-index-posts-header")}
@@ -551,6 +556,7 @@ const HomePage = ({
           </div>
         </div>
 
+        {/* Event */}
         <div className="w-full">
           <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
             {t("page-index:page-index-events-header")}
@@ -619,9 +625,10 @@ const HomePage = ({
           </div>
         </div>
 
+        {/* Join ethereum.org */}
         <div
           className={cn(
-            "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-4xl before:content-['']", // Border/gradient positioning
+            "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(theme(borderRadius.4xl)+1px)] before:content-['']", // Border/gradient positioning
             "before:bg-gradient-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
             "relative inset-0 rounded-4xl bg-background" // Paint background color over card portion
           )}

@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils/cn"
 
 import { BaseLink } from "./Link"
 
-const titleVariants = cva("group-hover:underline", {
+const titleVariants = cva("group-hover/link:underline", {
   variants: {
     variant: {
       bold: "text-2xl font-bold",
@@ -27,7 +27,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
         <BaseLink
           href={href}
           className={cn(
-            "group rounded-2xl text-body no-underline hover:text-body",
+            "group/link rounded-2xl text-body no-underline hover:text-body",
             className
           )}
           hideArrow
