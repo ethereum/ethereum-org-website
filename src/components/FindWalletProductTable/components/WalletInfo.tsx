@@ -27,10 +27,8 @@ const WalletInfo = ({ wallet }) => {
       <div className="flex flex-row gap-4">
         <TwImage
           src={wallet.image}
-          width="56"
-          height="56"
           alt=""
-          objectFit="contain"
+          style={{ objectFit: "contain", width: "56px", height: "56px" }}
         />
         <div className="flex flex-col gap-2">
           <p className="text-xl font-bold">{wallet.name}</p>
