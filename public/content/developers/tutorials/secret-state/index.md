@@ -390,7 +390,7 @@ On a production system we might use a more complicated [setup ceremony](https://
 
 **Note:** Compilation of Zokrates programs and key creation are slow processes. There is no need to repeat them every time, just when map size changes. On a production system you'd do them once, and then store the output. The only reason I am not doing it here is for the sake of simplicity.
 
-<a id="calculateMapHash">
+<a id="calculateMapHash" />
    
 ```typescript
 
