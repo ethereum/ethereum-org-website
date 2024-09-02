@@ -1,4 +1,5 @@
 import React from "react"
+import { useTranslation } from "react-i18next"
 import { BsArrowCounterclockwise } from "react-icons/bs"
 
 import {
@@ -8,6 +9,7 @@ import {
 } from "@/lib/types"
 
 import Button from "@/components/Buttons/Button"
+import { FilterBurgerIcon } from "@/components/icons/wallets"
 import Filters from "@/components/ProductTable/Filters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
 import {
@@ -25,6 +27,7 @@ interface MobileFiltersProps<TPreset> {
   activePresets: number[]
   handleSelectPreset: (index: number) => void
   dataCount: number
+  activeFiltersCount: number
 }
 
 const MobileFilters = ({
@@ -34,11 +37,35 @@ const MobileFilters = ({
   activePresets,
   handleSelectPreset,
   dataCount,
+  activeFiltersCount,
 }: MobileFiltersProps<ProductTablePresetFilters>) => {
+  const { t } = useTranslation("page-wallets-find-wallet")
+
   return (
     <>
       <Drawer direction="left">
-        <DrawerTrigger>MobileFilters</DrawerTrigger>
+        <DrawerTrigger>
+          <Button
+            rightIcon={<FilterBurgerIcon />}
+            variant="outline"
+            border="none"
+            ps={0}
+            ms={4}
+            gap={4}
+            sx={{
+              svg: {
+                boxSize: 8,
+                line: { stroke: "primary.base" },
+                circle: { stroke: "primary.base" },
+              },
+            }}
+          >
+            <div className="flex flex-col text-left">
+              <p>{t("page-find-wallet-filters")}</p>
+              <p className="text-body-medium">{` ${activeFiltersCount} ${t("page-find-wallet-active")}`}</p>
+            </div>
+          </Button>
+        </DrawerTrigger>
         <DrawerContent className="flex h-full flex-col p-2">
           <div className="mt-12 flex-1 overflow-y-auto">
             <PresetFilters

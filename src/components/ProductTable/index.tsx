@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { ColumnDef } from "@tanstack/react-table"
 
 import type {
@@ -76,6 +76,23 @@ const ProductTable = ({
     setFilters(filtersUpdated)
   }, [presetFilters, activePresets])
 
+  const activeFiltersCount = useMemo(() => {
+    return filters.reduce((count, filter) => {
+      return (
+        count +
+        filter.items.reduce((itemCount, item) => {
+          if (item.options && item.options.length > 0) {
+            return (
+              itemCount +
+              item.options.filter((option) => option.inputState).length
+            )
+          }
+          return itemCount + (item.inputState ? 1 : 0)
+        }, 0)
+      )
+    }, 0)
+  }, [filters])
+
   return (
     <div className="px-4">
       {presetFilters.length ? (
@@ -96,6 +113,7 @@ const ProductTable = ({
             activePresets={activePresets}
             handleSelectPreset={handleSelectPreset}
             dataCount={data.length}
+            activeFiltersCount={activeFiltersCount}
           />
         </div>
         <div className="hidden lg:block">
