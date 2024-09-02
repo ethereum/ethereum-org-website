@@ -5,17 +5,20 @@ import { cn } from "@/lib/utils/cn"
 
 import { BaseLink } from "./Link"
 
-const titleVariants = cva("group-hover/link:underline", {
-  variants: {
-    variant: {
-      bold: "text-2xl font-bold",
-      black: "text-3xl font-black",
+const titleVariants = cva(
+  "group-hover/link:underline group-focus/link:underline",
+  {
+    variants: {
+      variant: {
+        bold: "text-2xl font-bold",
+        black: "text-3xl font-black",
+      },
     },
-  },
-  defaultVariants: {
-    variant: "bold",
-  },
-})
+    defaultVariants: {
+      variant: "bold",
+    },
+  }
+)
 
 type CardProps = React.HTMLAttributes<HTMLDivElement> & {
   href?: string
@@ -68,7 +71,8 @@ const CardBanner = React.forwardRef<
     className={cn(
       "h-48 w-full self-stretch overflow-hidden rounded-2xl",
       "bg-gradient-to-b from-accent-a/10 to-accent-a/0 dark:from-accent-a/15 dark:to-accent-a/5",
-      "[&_img]:size-full [&_img]:object-cover [&_img]:duration-200 group-hover:[&_img]:scale-110 group-hover:[&_img]:duration-200",
+      "[&_img]:size-full [&_img]:object-cover [&_img]:duration-200",
+      "group-hover/link:[&_img]:scale-110 group-hover/link:[&_img]:duration-200 group-focus/link:[&_img]:scale-110 group-focus/link:[&_img]:duration-200",
       className
     )}
     {...props}
