@@ -8,12 +8,12 @@ import { BaseLink } from "./Link"
 const titleVariants = cva("group-hover:underline", {
   variants: {
     variant: {
-      normal: "font-normal text-lg",
-      strong: "text-2xl font-bold",
+      bold: "text-2xl font-bold",
+      black: "text-3xl font-black",
     },
   },
   defaultVariants: {
-    variant: "strong",
+    variant: "bold",
   },
 })
 

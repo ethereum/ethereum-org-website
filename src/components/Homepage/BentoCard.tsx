@@ -7,6 +7,9 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
 
+import { Card, CardTitle } from "../ui/card"
+import { Center } from "../ui/flex"
+
 export type BentoCardProps = HTMLAttributes<HTMLDivElement> & {
   action: string
   href: string
@@ -26,23 +29,25 @@ const BentoCard = ({
   imgHeight,
   title,
 }: BentoCardProps) => (
-  <div
+  <Card
     className={cn(
-      "bg-gradient-to-right flex items-center justify-evenly gap-4 rounded-2xl border p-8 lg:gap-16",
+      "bg-gradient-to-right flex items-center justify-evenly gap-4 border p-8 lg:gap-16",
       className
     )}
   >
-    <div className="mb-6 grid place-items-center">
+    <Center>
       <TwImage src={imgSrc} alt="" width={imgWidth} height={imgHeight} />
-    </div>
+    </Center>
     <div>
-      <h3 className="mb-2 text-3xl font-black">{title}</h3>
+      <CardTitle variant="black" className="mb-2">
+        {title}
+      </CardTitle>
       <p className="mb-8 text-md">{children}</p>
       <ButtonLink href={href} variant="outline">
         {action} <MdChevronRight />
       </ButtonLink>
     </div>
-  </div>
+  </Card>
 )
 
 export default BentoCard
