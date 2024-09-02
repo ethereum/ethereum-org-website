@@ -648,13 +648,15 @@ For your application, with different requirements, you might prefer to use [Circ
 
 In this program we compile the Zokrates programs [every time the server starts](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L60-L61). This is clearly a waste of resources, but this is a tutorial, optimized for simplicity.
 
-If I were writing a production-level application, I'd check if I have a file with the compiled Zokrates programs at this minefield size, and if so use that.
+If I were writing a production-level application, I'd check if I have a file with the compiled Zokrates programs at this minefield size, and if so use that. The same is true for deploying a verifier contract onchain.
 
 ### Creating the verifier and prover keys (#key-creation)
 
 [Key creation](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L63-L69) is another pure calculation that needn't be done more than once for a given minefield size. Again, it is done only once for the sake of simplicity.
 
-Additionally, we could use [a setup ceremony](https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony). The advantage of a setupc ceremony is that you need either the entropy or some intermediate result from each participant to cheat on the zero-knowlege proof. If at least one ceremony participant is honest, the zero-knowledge proofs are safe. However, here we rely on [perpetual powers of tau](https://github.com/privacy-scaling-explorations/perpetualpowersoftau), with 
+Additionally, we could use [a setup ceremony](https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony). The advantage of a setup ceremony is that you need either the entropy or some intermediate result from each participant to cheat on the zero-knowlege proof. If at least one ceremony participant is honest and deletes that information, the zero-knowledge proofs are safe from certain attacks. However, there is *no mechanism* to verify that information has been deleted from everywhere. If zero-knowledge proofs are critically important, you want to participate in the setup ceremony.
+
+Here we rely on [perpetual powers of tau](https://github.com/privacy-scaling-explorations/perpetualpowersoftau), which had dozens of participants. It is probably safe enough, and much simpler.
 
 ### Where to verify {#where-verification}
 
