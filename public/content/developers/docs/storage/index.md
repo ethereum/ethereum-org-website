@@ -88,7 +88,6 @@ There aren't great tools to measure the level of decentralization of platforms, 
 
 Decentralized tools without KYC:
 
-- Züs (implementing a non-KYC edition)
 - Skynet
 - Arweave
 - Filecoin
