@@ -6,6 +6,7 @@ import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
 import type { EventCardProps, Lang } from "@/lib/types"
 import type { CodeExample } from "@/lib/interfaces"
 
+import { useBentoBox } from "@/components/BentoBox/useBentoBox"
 import BlockHeap from "@/components/icons/block-heap.svg"
 import EthGlyphIcon from "@/components/icons/eth-glyph.svg"
 import EthTokenIcon from "@/components/icons/eth-token.svg"
@@ -34,6 +35,8 @@ export const useHome = () => {
 
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
+
+  const { items: bentoItems } = useBentoBox()
 
   const toggleCodeExample = (id: number): void => {
     setActiveCode(id)
@@ -179,6 +182,7 @@ export const useHome = () => {
       description: t("page-index:page-index-join-action-twitter-description"),
     },
   ]
+
   return {
     t,
     locale,
@@ -193,5 +197,6 @@ export const useHome = () => {
     popularTopics,
     upcomingEvents,
     joinActions,
+    bentoItems,
   }
 }

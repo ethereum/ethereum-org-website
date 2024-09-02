@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next"
 import { MdChevronLeft, MdChevronRight } from "react-icons/md"
-import { Keyboard, Navigation, Pagination } from "swiper/modules"
-import { Swiper, SwiperSlide } from "swiper/react"
+import { EffectCards, Keyboard, Navigation, Pagination } from "swiper/modules"
+import { Swiper as SwiperParent, SwiperSlide } from "swiper/react"
 import type { SwiperOptions } from "swiper/types"
 
 import { cn } from "@/lib/utils/cn"
@@ -9,21 +9,26 @@ import { cn } from "@/lib/utils/cn"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
+import "swiper/css/effect-cards"
 
-type SlidingSwiperProps = {
+type SwiperProps = {
   children: React.ReactNode[]
   options?: SwiperOptions
   className?: string
+  swiperClass?: string
+  sliderClass?: string
 }
-const SlidingSwiper = ({
+const Swiper = ({
   children,
   className,
+  swiperClass,
+  sliderClass,
   options,
-}: SlidingSwiperProps) => {
+}: SwiperProps) => {
   const { t } = useTranslation("common")
   return (
     <div className={cn("h-fit", className)}>
-      <Swiper
+      <SwiperParent
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -34,22 +39,24 @@ const SlidingSwiper = ({
         }}
         pagination={{ clickable: true }}
         keyboard
-        spaceBetween={32}
-        modules={[Navigation, Pagination, Keyboard]}
+        modules={[Navigation, Pagination, Keyboard, EffectCards]}
         slidesPerView={1}
         slidesPerGroup={1}
+        className={swiperClass}
         {...options}
       >
         {children.map((child, index) => (
-          <SwiperSlide key={index}>{child}</SwiperSlide>
+          <SwiperSlide className={sliderClass} key={index}>
+            {child}
+          </SwiperSlide>
         ))}
 
         <MdChevronLeft className="swiper-button-prev" />
         <div className="swiper-pagination" />
         <MdChevronRight className="swiper-button-next" />
-      </Swiper>
+      </SwiperParent>
     </div>
   )
 }
 
-export default SlidingSwiper
+export default Swiper
