@@ -16,7 +16,7 @@ import Tooltip from "@/components/Tooltip"
 import { cn } from "@/lib/utils/cn"
 import { getLocaleFormattedDate } from "@/lib/utils/time"
 
-const SocialLink = (props: LinkProps) => (
+const SocialLink = (props) => (
   <InlineLink
     display="flex"
     height={6}

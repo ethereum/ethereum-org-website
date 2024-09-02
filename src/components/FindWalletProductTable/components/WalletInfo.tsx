@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next"
 
 import { ButtonLink } from "@/components/Buttons"
-import { SupportedLanguagesTooltip } from "@/components/FindWallet/WalletTable/SupportedLanguagesTooltip"
+import { SupportedLanguagesTooltip } from "@/components/FindWalletProductTable/components/SupportedLanguagesTooltip"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { TwImage } from "@/components/Image"
 import { Badge } from "@/components/ui/badge"
