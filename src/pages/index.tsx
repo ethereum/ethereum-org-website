@@ -638,7 +638,7 @@ const HomePage = ({
               <h2>{t("page-index:page-index-join-header")}</h2>
               <p>{t("page-index:page-index-join-description")}</p>
             </div>
-            <div className="mx-auto grid grid-cols-1 gap-16 md:max-w-screen-md md:grid-cols-2">
+            <div className="mx-auto grid grid-cols-1 gap-16 md:grid-cols-2">
               {joinActions.map(
                 ({ Svg, label, href, className, description }) => (
                   <SvgButtonLink
