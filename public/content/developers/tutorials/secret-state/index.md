@@ -646,13 +646,21 @@ For your application, with different requirements, you might prefer to use [Circ
 
 ### When to compile Zokrates {#when-compile-zokrates}
 
+In this program we compile the Zokrates programs [every time the server starts](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L60-L61). This is clearly a waste of resources, but this is a tutorial, optimized for simplicity.
 
+If I were writing a production-level application, I'd check if I have a file with the compiled Zokrates programs at this minefield size, and if so use that.
 
 ### Creating the verifier and prover keys (#key-creation)
+
+[Key creation](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L63-L69) is another pure calculation that needn't be done more than once for a given minefield size. Again, it is done only once for the sake of simplicity.
+
+Additionally, we could use [a setup ceremony](https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony). The advantage of a setupc ceremony is that you need either the entropy or some intermediate result from each participant to cheat on the zero-knowlege proof. If at least one ceremony participant is honest, the zero-knowledge proofs are safe. However, here we rely on [perpetual powers of tau](https://github.com/privacy-scaling-explorations/perpetualpowersoftau), with 
 
 ### Where to verify {#where-verification}
 
 ### Flatten the map in TypeScript or Zokrates? {#where-flatten}
+
+### Where to store maps {#where-store-maps}
 
 ## Conclusion: when is this the appropriate technique {#conclusion}
 
