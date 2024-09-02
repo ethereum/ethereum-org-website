@@ -30,6 +30,7 @@ interface MobileFiltersProps<TPreset> {
   activeFiltersCount: number
   mobileFiltersOpen: boolean
   setMobileFiltersOpen: React.Dispatch<React.SetStateAction<boolean>>
+  resetFilters: () => void
 }
 
 const MobileFilters = ({
@@ -42,6 +43,7 @@ const MobileFilters = ({
   activeFiltersCount,
   mobileFiltersOpen,
   setMobileFiltersOpen,
+  resetFilters,
 }: MobileFiltersProps<ProductTablePresetFilters>) => {
   const { t } = useTranslation("page-wallets-find-wallet")
 
@@ -81,12 +83,21 @@ const MobileFilters = ({
               handleSelectPreset={handleSelectPreset}
               showMobileSidebar={true}
             />
-            <Filters filters={filters} setFilters={setFilters} />
+            <Filters
+              filters={filters}
+              setFilters={setFilters}
+              resetFilters={resetFilters}
+              activeFiltersCount={activeFiltersCount}
+            />
           </div>
           <DrawerFooter>
             <div className="flex w-full">
               <div className="w-1/2">
-                <Button variant="ghost" className="gap-1">
+                <Button
+                  variant="ghost"
+                  className="gap-1"
+                  onClick={resetFilters}
+                >
                   <BsArrowCounterclockwise size={16} />
                   Reset
                 </Button>

@@ -3,6 +3,8 @@ import { BsArrowCounterclockwise } from "react-icons/bs"
 
 import { FilterInputState, FilterOption } from "@/lib/types"
 
+import { Button } from "@/components/ui/buttons/Button"
+
 import {
   Accordion,
   AccordionContent,
@@ -12,10 +14,17 @@ import {
 
 interface PresetFiltersProps {
   filters: FilterOption[]
+  activeFiltersCount: number
   setFilters: (filterOptions: FilterOption[]) => void
+  resetFilters: () => void
 }
 
-const Filters = ({ filters, setFilters }: PresetFiltersProps) => {
+const Filters = ({
+  filters,
+  setFilters,
+  resetFilters,
+  activeFiltersCount,
+}: PresetFiltersProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
 
   const updateFilterState = (
@@ -62,19 +71,16 @@ const Filters = ({ filters, setFilters }: PresetFiltersProps) => {
 
   return (
     <div className={`w-full lg:w-80`}>
-      <div className="width-full flex flex-row justify-between border-b border-b-primary px-2 py-2 lg:px-6">
-        <p className="text-md font-bold">Filters ({0})</p>
-        <div
-          className="flex hidden cursor-pointer flex-row items-center gap-1 text-primary hover:text-primary-hover lg:block"
-          onClick={() => {
-            console.log("RESET FILTERS")
-          }}
+      <div className="width-full flex flex-row items-center justify-between border-b border-b-primary px-2 py-1.5 lg:px-6">
+        <p className="text-md font-bold">Filters ({activeFiltersCount})</p>
+        <Button
+          variant="ghost"
+          className="min-h-0 gap-1 p-0"
+          onClick={resetFilters}
         >
-          <BsArrowCounterclockwise />
-          <p className="text-xs uppercase leading-none">
-            {t("page-find-wallet-reset-filters")}
-          </p>
-        </div>
+          <BsArrowCounterclockwise size={16} />
+          {t("page-find-wallet-reset-filters")}
+        </Button>
       </div>
       <Accordion
         type="multiple"

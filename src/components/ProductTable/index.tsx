@@ -95,6 +95,21 @@ const ProductTable = ({
     }, 0)
   }, [filters])
 
+  const resetFilters = () => {
+    const resetFilters = filters.map((filter) => ({
+      ...filter,
+      items: filter.items.map((item) => ({
+        ...item,
+        inputState: false,
+        options: item.options.map((option) => ({
+          ...option,
+          inputState: false,
+        })),
+      })),
+    }))
+    setFilters(resetFilters)
+  }
+
   return (
     <div className="px-0 lg:px-4">
       {presetFilters.length ? (
@@ -118,13 +133,19 @@ const ProductTable = ({
             activeFiltersCount={activeFiltersCount}
             mobileFiltersOpen={mobileFiltersOpen}
             setMobileFiltersOpen={setMobileFiltersOpen}
+            resetFilters={resetFilters}
           />
         </div>
         <div className="hidden lg:block">
-          <Filters filters={filters} setFilters={setFilters} />
+          <Filters
+            filters={filters}
+            setFilters={setFilters}
+            resetFilters={resetFilters}
+            activeFiltersCount={activeFiltersCount}
+          />
         </div>
         <div className="flex-1">
-          <div className="flex flex-row justify-between px-2">
+          <div className="flex flex-row justify-between px-2 py-1">
             <Button
               variant="ghost"
               className="block p-0 lg:hidden"
