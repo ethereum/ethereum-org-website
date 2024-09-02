@@ -74,6 +74,9 @@
     /* ! Deprecating primary-pressed */
     --primary-pressed: var(--blue-400);
 
+      /* To be reviewed */
+    --secondary: "#666666";
+
     --body: var(--gray-800);
     --body-medium: var(--gray-500);
     --body-light: var(--gray-200);
@@ -143,6 +146,9 @@
     /* ! Deprecating primary-pressed */
     --primary-pressed: var(--orange-800);
 
+     /* To be reviewed */
+    --secondary: "#b2b2b2";
+
     --body: var(--gray-100);
     --body-medium: var(--gray-400);
     --body-light: var(--gray-600);
@@ -170,7 +176,7 @@
     /* ! Deprecating success-neutral */
     --success-neutral: var(--green-900);
 
-    /* Misc sematics: light mode */
+    /* Misc sematics: dark mode */
     --tooltip-shadow: rgba(255, 255, 255, 0.24);
     --switch-background: rgba(255, 255, 255, 0.24);
     --hub-hero-content-bg: rgba(34, 34, 34, 0.8);
@@ -276,5 +282,12 @@
     & > p {
       margin-bottom: calc(1.45rem / 2);
     }
+  }
+}
+
+/* styles for classes within markdown */
+@layer components {
+  .citation p {
+    @apply text-secondary;
   }
 }

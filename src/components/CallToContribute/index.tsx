@@ -4,11 +4,11 @@ import { Flex, FlexProps, Icon } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 
-import { ButtonLink } from "./Buttons"
-import InlineLink from "./Link"
-import OldHeading from "./OldHeading"
-import Text from "./OldText"
-import Translation from "./Translation"
+import { ButtonLink } from "../Buttons"
+import InlineLink from "../Link"
+import OldHeading from "../OldHeading"
+import Text from "../OldText"
+import Translation from "../Translation"
 
 export type CallToContributeProps = {
   editPath: string

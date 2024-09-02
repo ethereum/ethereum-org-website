@@ -113,6 +113,9 @@ const config = {
           dark: "var(--primary-dark)",
           pressed: "var(--primary-pressed)",
         },
+        secondary: {
+          DEFAULT: "var(--secondary)",
+        },
         body: {
           DEFAULT: "var(--body)",
           medium: "var(--body-medium)",
