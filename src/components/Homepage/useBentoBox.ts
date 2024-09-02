@@ -1,9 +1,6 @@
-import { useEffect, useState } from "react"
 import { useTranslation } from "next-i18next"
 
 import { cn } from "@/lib/utils/cn"
-
-import type { BentoCardProps } from "./BentoCard"
 
 import ImpactImage from "@/public/images/impact_transparent.png"
 import ManAndDogImage from "@/public/images/man-and-dog-playing.png"
@@ -90,56 +87,51 @@ const getPosition = (position: number): string =>
 
 export const useBentoBox = () => {
   const { t } = useTranslation("page-index")
-  const [items, setItems] = useState<BentoCardProps[]>([])
 
-  useEffect(() => {
-    setItems([
-      {
-        title: t("page-index-bento-stablecoins-title"),
-        children: t("page-index:page-index-bento-stablecoins-content"),
-        action: t("page-index:page-index-bento-stablecoins-action"),
-        href: "/stablecoins/",
-        imgSrc: ImpactImage,
-        imgWidth: 400,
-        className: cn(colorOptions["primary"], getPosition(0)),
-      },
-      {
-        title: t("page-index:page-index-bento-defi-title"),
-        children: t("page-index:page-index-bento-defi-content"),
-        action: t("page-index:page-index-bento-defi-action"),
-        href: "/defi/",
-        imgSrc: ManAndDogImage,
-        className: cn(colorOptions["accent-c"], getPosition(1)),
-      },
-      {
-        title: t("page-index:page-index-bento-dapps-title"),
-        children: t("page-index:page-index-bento-dapps-content"),
-        action: t("page-index:page-index-bento-dapps-action"),
-        href: "/dapps/",
-        imgSrc: MergeImage,
-        imgWidth: 320,
-        className: cn(colorOptions["accent-b"], getPosition(2)),
-      },
-      {
-        title: t("page-index:page-index-bento-networks-title"),
-        children: t("page-index:page-index-bento-networks-content"),
-        action: t("page-index:page-index-bento-networks-action"),
-        href: "/layer-2/",
-        imgSrc: ManBabyWomanImage,
-        imgWidth: 324,
-        className: cn(colorOptions["accent-a"], getPosition(3)),
-      },
-      {
-        title: t("page-index:page-index-bento-assets-title"),
-        children: t("page-index:page-index-bento-assets-content"),
-        action: t("page-index:page-index-bento-assets-action"),
-        href: "/nft/",
-        imgSrc: RobotBarImage,
-        imgWidth: 324,
-        className: cn(colorOptions["primary"], getPosition(4)),
-      },
-    ])
-  }, [t])
-
-  return { items }
+  return [
+    {
+      title: t("page-index-bento-stablecoins-title"),
+      children: t("page-index:page-index-bento-stablecoins-content"),
+      action: t("page-index:page-index-bento-stablecoins-action"),
+      href: "/stablecoins/",
+      imgSrc: ImpactImage,
+      imgWidth: 400,
+      className: cn(colorOptions["primary"], getPosition(0)),
+    },
+    {
+      title: t("page-index:page-index-bento-defi-title"),
+      children: t("page-index:page-index-bento-defi-content"),
+      action: t("page-index:page-index-bento-defi-action"),
+      href: "/defi/",
+      imgSrc: ManAndDogImage,
+      className: cn(colorOptions["accent-c"], getPosition(1)),
+    },
+    {
+      title: t("page-index:page-index-bento-dapps-title"),
+      children: t("page-index:page-index-bento-dapps-content"),
+      action: t("page-index:page-index-bento-dapps-action"),
+      href: "/dapps/",
+      imgSrc: MergeImage,
+      imgWidth: 320,
+      className: cn(colorOptions["accent-b"], getPosition(2)),
+    },
+    {
+      title: t("page-index:page-index-bento-networks-title"),
+      children: t("page-index:page-index-bento-networks-content"),
+      action: t("page-index:page-index-bento-networks-action"),
+      href: "/layer-2/",
+      imgSrc: ManBabyWomanImage,
+      imgWidth: 324,
+      className: cn(colorOptions["accent-a"], getPosition(3)),
+    },
+    {
+      title: t("page-index:page-index-bento-assets-title"),
+      children: t("page-index:page-index-bento-assets-content"),
+      action: t("page-index:page-index-bento-assets-action"),
+      href: "/nft/",
+      imgSrc: RobotBarImage,
+      imgWidth: 324,
+      className: cn(colorOptions["primary"], getPosition(4)),
+    },
+  ]
 }

@@ -36,7 +36,7 @@ export const useHome = () => {
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
 
-  const { items: bentoItems } = useBentoBox()
+  const bentoItems = useBentoBox()
 
   const toggleCodeExample = (id: number): void => {
     setActiveCode(id)
