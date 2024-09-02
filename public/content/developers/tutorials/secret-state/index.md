@@ -463,7 +463,7 @@ Finally, return everything that other code might need.
 
 Security tests are important because a functionality bug will eventually reveal itself. But if the application is insecure, that is likely to remain hidden for a long time before it is revealed by somebody cheating and getting away with resources that belong to others.
 
-### Permissions {#premissions}
+### Permissions {#permissions}
 
 There is one privileged entity in this game, the server. It is the only user allowed to call the functions in [`ServerSystem`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol). We can use [`cast`](https://book.getfoundry.sh/cast/) to verify calls to permissioned functions are only allowed as the server account.
 
