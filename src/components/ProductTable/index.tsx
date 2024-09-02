@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react"
+import { useMemo, useState } from "react"
 import { ColumnDef } from "@tanstack/react-table"
 
 import type {
@@ -40,45 +40,68 @@ const ProductTable = ({
 
   const handleSelectPreset = (idx: number) => {
     if (activePresets.includes(idx)) {
+      // Get filters that are true for the preset being removed
+      const presetToRemove = presetFilters[idx].presetFilters
+      const filtersToRemove = Object.keys(presetToRemove).filter(
+        (key) => presetToRemove[key]
+      )
+
+      // Set inputState of filters to false for the filters being removed
+      const updatedFilters = filters.map((filter) => ({
+        ...filter,
+        items: filter.items.map((item) => ({
+          ...item,
+          inputState: filtersToRemove.includes(item.filterKey)
+            ? false
+            : item.inputState,
+          options: item.options.map((option) => ({
+            ...option,
+            inputState: filtersToRemove.includes(option.filterKey)
+              ? false
+              : option.inputState,
+          })),
+        })),
+      }))
+      setFilters(updatedFilters)
+
       setActivePresets(activePresets.filter((item) => item !== idx))
     } else {
-      setActivePresets(activePresets.concat(idx))
+      const newActivePresets = activePresets.concat(idx)
+      setActivePresets(newActivePresets)
+
+      // Apply the filters for the selected preset
+      const combinedPresetFilters = newActivePresets.reduce((acc, idx) => {
+        const preset = presetFilters[idx].presetFilters
+        Object.keys(preset).forEach((key) => {
+          acc[key] = acc[key] || preset[key]
+        })
+        return acc
+      }, {})
+
+      const updatedFilters = filters.map((filter) => ({
+        ...filter,
+        items: filter.items.map((item) => ({
+          ...item,
+          // Keep existing inputState if true, otherwise apply preset filter
+          inputState:
+            item.inputState ||
+            (item.ignoreFilterReset
+              ? item.inputState
+              : combinedPresetFilters[item.filterKey] || false),
+          options: item.options.map((option) => ({
+            ...option,
+            // Keep existing inputState if true, otherwise apply preset filter
+            inputState:
+              option.inputState ||
+              (option.ignoreFilterReset
+                ? option.inputState
+                : combinedPresetFilters[option.filterKey] || false),
+          })),
+        })),
+      }))
+      setFilters(updatedFilters)
     }
   }
-
-  // TODO: Fix this, its currently not applying presets correctly when there are none applied
-  useEffect(() => {
-    const combinedPresetFilters = activePresets.reduce((combined, preset) => {
-      const updatedFilters = { ...combined }
-      Object.entries(presetFilters[preset].presetFilters).forEach(
-        ([name, value]) => {
-          if (!updatedFilters[name]) {
-            updatedFilters[name] = value
-          }
-          if (value === true) {
-            updatedFilters[name] = value
-          }
-        }
-      )
-      return updatedFilters
-    }, {})
-
-    const filtersUpdated = [...filters]
-    filtersUpdated.forEach((group) => {
-      group.items.forEach((item) => {
-        if (item.ignoreFilterReset) return
-        if (item.options.length) {
-          item.options.forEach((option) => {
-            if (option.ignoreFilterReset) return
-            option.inputState = combinedPresetFilters[option.filterKey]
-          })
-        }
-        item.inputState = combinedPresetFilters[item.filterKey]
-      })
-    })
-
-    setFilters(filtersUpdated)
-  }, [presetFilters, activePresets])
 
   const activeFiltersCount = useMemo(() => {
     return filters.reduce((count, filter) => {
