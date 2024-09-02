@@ -225,6 +225,7 @@ const HomePage = ({
 
         {/* Use Cases - A new way to use the internet */}
         <section
+          id="use"
           className={cn(
             "max-lg:-mx-4 max-lg:flex max-lg:w-[100vw] max-lg:flex-col max-lg:overflow-hidden max-lg:px-4 sm:max-lg:-mx-6 sm:max-lg:px-6", // Mobile: Swiper cards
             "lg:grid lg:grid-cols-bento lg:gap-4" // Desktop: BentoBox grid
@@ -275,7 +276,7 @@ const HomePage = ({
         </section>
 
         {/* Activity - The strongest ecosystem */}
-        <Section>
+        <Section id="activity" variant="responsiveFlex">
           <SectionBanner>
             <TwImage src={ActivityImage} alt="" />
           </SectionBanner>
@@ -295,7 +296,11 @@ const HomePage = ({
         </Section>
 
         {/* Learn - Understand Ethereum */}
-        <Section className="md:flex-row-reverse">
+        <Section
+          id="learn"
+          variant="responsiveFlex"
+          className="md:flex-row-reverse"
+        >
           <SectionBanner>
             <TwImage src={LearnImage} alt="" />
           </SectionBanner>
@@ -341,7 +346,7 @@ const HomePage = ({
         {/* TODO: Add "The Internet Is Changing" section */}
 
         {/* Builders - Blockchain's biggest builder community */}
-        <Section>
+        <Section id="builders" variant="responsiveFlex">
           <SectionBanner>
             <TwImage src={BuildersImage} alt="" />
           </SectionBanner>
@@ -410,7 +415,11 @@ const HomePage = ({
         </Section>
 
         {/* Ethereum.org community - Built by the community */}
-        <Section className="md:flex-row-reverse">
+        <Section
+          id="community"
+          variant="responsiveFlex"
+          className="md:flex-row-reverse"
+        >
           <SectionBanner>
             <TwImage src={CommunityImage} alt="" />
           </SectionBanner>
@@ -499,7 +508,7 @@ const HomePage = ({
         </Section>
 
         {/* Recent posts */}
-        <div className="w-full">
+        <Section id="recent">
           <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
             {t("page-index:page-index-posts-header")}
           </h3>
@@ -554,10 +563,10 @@ const HomePage = ({
               ))}
             </div>
           </div>
-        </div>
+        </Section>
 
-        {/* Event */}
-        <div className="w-full">
+        {/* Events */}
+        <Section id="events">
           <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
             {t("page-index:page-index-events-header")}
           </h3>
@@ -623,10 +632,11 @@ const HomePage = ({
               {t("page-index:page-index-events-action")} <MdChevronRight />
             </ButtonLink>
           </div>
-        </div>
+        </Section>
 
         {/* Join ethereum.org */}
-        <div
+        <Section
+          id="join"
           className={cn(
             "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(theme(borderRadius.4xl)+1px)] before:content-['']", // Border/gradient positioning
             "before:bg-gradient-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
@@ -655,7 +665,7 @@ const HomePage = ({
               )}
             </div>
           </div>
-        </div>
+        </Section>
       </div>
     </Flex>
   )
