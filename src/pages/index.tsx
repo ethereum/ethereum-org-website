@@ -14,18 +14,18 @@ import type {
 } from "@/lib/types"
 
 import BentoBox from "@/components/BentoBox"
+import BentoCard from "@/components/BentoBox/BentoCard"
+import Title from "@/components/BentoBox/Title"
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
-import { useHome } from "@/components/Homepage/useHome"
 import AngleBrackets from "@/components/icons/angle-brackets.svg"
 import Calendar from "@/components/icons/calendar.svg"
 import CalendarAdd from "@/components/icons/calendar-add.svg"
 import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
-import PostsSwiper from "@/components/PostsSwiper"
-import SwiperCards from "@/components/SwiperCards"
+import Swiper from "@/components/Swiper"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
@@ -52,6 +52,7 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { polishRSSList } from "@/lib/utils/rss"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { breakpointAsNumber } from "@/lib/utils/screen"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -64,6 +65,9 @@ import {
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
+import "swiper/css/effect-cards"
+
+import { useHome } from "@/hooks/useHome"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -178,6 +182,7 @@ const HomePage = ({
     popularTopics,
     upcomingEvents,
     joinActions,
+    bentoItems,
   } = useHome()
 
   return (
@@ -221,7 +226,26 @@ const HomePage = ({
         </div>
 
         {/* Mobile */}
-        <SwiperCards className="lg:hidden" />
+        <div className="-mx-4 w-[100vw] overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
+          <Title />
+          <Swiper
+            options={{ effect: "cards", createElements: true }}
+            className={cn(
+              "[&_.swiper-slide]:overflow-visible [&_.swiper-slide]:rounded-2xl [&_.swiper-slide]:shadow-card-hover",
+              "[&_.swiper]:mx-auto [&_.swiper]:mt-4 [&_.swiper]:!flex [&_.swiper]:h-fit [&_.swiper]:max-w-128 [&_.swiper]:flex-col [&_.swiper]:items-center"
+            )}
+          >
+            {bentoItems.map((item) => (
+              <BentoCard
+                key={item.title}
+                imgHeight={220}
+                {...item}
+                className={cn(item.className, "bg-background text-body")}
+                imgWidth={undefined} // Intentionally last to override box
+              />
+            ))}
+          </Swiper>
+        </div>
 
         {/* Desktop */}
         <BentoBox className="hidden lg:block" />
@@ -452,7 +476,44 @@ const HomePage = ({
           </h3>
           <p>{t("page-index:page-index-posts-subtitle")}</p>
 
-          <PostsSwiper items={rssItems} className="mt-4 md:mt-16" />
+          <Swiper
+            className="mt-4 md:mt-16"
+            options={{
+              spaceBetween: 32,
+              breakpoints: {
+                [breakpointAsNumber.sm]: {
+                  slidesPerView: 2,
+                  slidesPerGroup: 2,
+                },
+                [breakpointAsNumber.lg]: {
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                },
+              },
+            }}
+          >
+            {rssItems.map(({ pubDate, title, source, link, imgSrc }) => (
+              <Card key={title} href={link}>
+                <CardBanner>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={imgSrc} alt="" />
+                </CardBanner>
+                <CardContent>
+                  <CardTitle>{title}</CardTitle>
+                  {isValidDate(pubDate) && (
+                    <CardSubTitle>
+                      {new Intl.DateTimeFormat(locale, {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric",
+                      }).format(new Date(pubDate))}
+                    </CardSubTitle>
+                  )}
+                  <CardHighlight>{source}</CardHighlight>
+                </CardContent>
+              </Card>
+            ))}
+          </Swiper>
 
           <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
             <p className="text-lg">{t("page-index:page-index-posts-action")}</p>
