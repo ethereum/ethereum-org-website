@@ -479,7 +479,7 @@ const HomePage = ({
                       <ButtonLink
                         className="h-fit w-full text-nowrap px-5 sm:w-fit xl:self-center"
                         size="md"
-                        variant="outline"
+                        variant="ghost"
                         href={calendarLink}
                         hideArrow
                       >
