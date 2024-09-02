@@ -163,7 +163,7 @@ This is what happens when the player requests a new game.
 
 6. `processDigResult` checks if the game has been [lost](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L76-L78) or [won](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L83-L86), and [updates `Map`, the on-chain map](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/contracts/src/systems/ServerSystem.sol#L80).
 
-7. The client picks up the updates automatically and [updates the map displayed to the player](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175-L190), and if relevant tells the player if it's a win or a lose.
+7. The client picks up the updates automatically and [updates the map displayed to the player](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/client/src/App.tsx#L175-L190), and if applicable tells the player if it's a win or a lose.
 
 
 ## Using Zokrates {#using-zokrates}
@@ -391,6 +391,7 @@ On a production system we might use a more complicated [setup ceremony](https://
 **Note:** Compilation of Zokrates programs and key creation are slow processes. There is no need to repeat them every time, just when map size changes. On a production system you'd do them once, and then store the output. The only reason I am not doing it here is for the sake of simplicity.
 
 <a id="calculateMapHash">
+   
 ```typescript
     const calculateMapHash = function(hashMe: boolean[][]): string {
         return "0x" + 
