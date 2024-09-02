@@ -293,6 +293,7 @@ export const WalletFilters = (): FilterOption[] => {
           filterLabel: t("page-find-wallet-languages-supported"),
           description: "",
           inputState: "en",
+          ignoreFilterReset: true,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <FindWalletLanguageSelectInput

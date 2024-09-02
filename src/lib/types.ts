@@ -651,41 +651,49 @@ export type FilterInputState = boolean | Lang | null
 export type FilterOption = {
   title: string
   showFilterOption: boolean
-  items: Array<{
-    filterKey: string
-    filterLabel: string
-    description: string
-    inputState: FilterInputState
-    input: (
-      filterIndex: number,
-      itemIndex: number,
-      state: FilterInputState,
-      updateFilterState: (
-        filterIndex: number,
-        itemIndex: number,
-        inputState: FilterInputState
-      ) => void
-    ) => ReactElement
-    options: Array<{
-      filterKey: string
-      filterLabel: string
-      description: string
-      inputState: FilterInputState
-      input: (
-        filterIndex: number,
-        itemIndex: number,
-        optionIndex: number,
-        state: FilterInputState,
-        updateFilterState: (
-          filterIndex: number,
-          itemIndex: number,
-          inputState: FilterInputState,
-          optionIndex: number
-        ) => void
-      ) => ReactElement
-    }>
-  }>
+  items: Array<FilterItem>
 }
+
+type FilterItem = {
+  filterKey: string
+  filterLabel: string
+  description: string
+  inputState: FilterInputState
+  ignoreFilterReset?: boolean
+  input: FilterInput
+  options: Array<FilterOptionItem>
+}
+
+type FilterInput = (
+  filterIndex: number,
+  itemIndex: number,
+  state: FilterInputState,
+  updateFilterState: UpdateFilterState
+) => ReactElement
+
+type FilterOptionItem = {
+  filterKey: string
+  filterLabel: string
+  description: string
+  ignoreFilterReset?: boolean
+  inputState: FilterInputState
+  input: FilterOptionInput
+}
+
+type FilterOptionInput = (
+  filterIndex: number,
+  itemIndex: number,
+  optionIndex: number,
+  state: FilterInputState,
+  updateFilterState: UpdateFilterState
+) => ReactElement
+
+type UpdateFilterState = (
+  filterIndex: number,
+  itemIndex: number,
+  inputState: FilterInputState,
+  optionIndex?: number
+) => void
 
 export interface TPresetFilters<TPreset> {
   title: string

@@ -66,8 +66,10 @@ const ProductTable = ({
     const filtersUpdated = [...filters]
     filtersUpdated.forEach((group) => {
       group.items.forEach((item) => {
+        if (item.ignoreFilterReset) return
         if (item.options.length) {
           item.options.forEach((option) => {
+            if (option.ignoreFilterReset) return
             option.inputState = combinedPresetFilters[option.filterKey]
           })
         }
