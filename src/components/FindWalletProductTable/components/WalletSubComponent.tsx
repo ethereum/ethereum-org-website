@@ -72,43 +72,51 @@ const WalletSubComponent = ({ wallet }: WalletSubComponentProps) => {
               <div key={idx} className="mx-2">
                 <h4 className="mb-2 text-md font-bold">{filterItem.title}</h4>
                 <ul className="m-0 list-none">
-                  {filterItem.items.map((item, idx) => {
-                    const featureColor = wallet[item.filterKey]
-                      ? "text-body"
-                      : "text-disabled"
-                    return (
-                      <li key={idx} className="mb-2 flex flex-row gap-2">
-                        <span>
-                          {wallet[item.filterKey] ? (
-                            <GreenCheckProductGlyphIcon
-                              className="text-primary"
-                              boxSize={4}
-                            />
-                          ) : (
-                            <WarningProductGlyphIcon
-                              className="text-secondary"
-                              boxSize={4}
-                            />
-                          )}
-                        </span>
-                        <p className={`leading-1 ${featureColor}`}>
-                          {item.filterLabel}{" "}
-                          <Tooltip
-                            content={
-                              <p className="text-body">
-                                {/* TODO: Add filter description */}
-                                {item.description}
-                              </p>
-                            }
-                          >
-                            <span className="whitespace-nowrap">
-                              <MdInfoOutline color={featureColor} />
-                            </span>
-                          </Tooltip>
-                        </p>
-                      </li>
+                  {filterItem.items
+                    .sort((a, b) =>
+                      wallet[b.filterKey] === wallet[a.filterKey]
+                        ? 0
+                        : wallet[b.filterKey]
+                          ? 1
+                          : -1
                     )
-                  })}
+                    .map((item, idx) => {
+                      const featureColor = wallet[item.filterKey]
+                        ? "text-body"
+                        : "text-disabled"
+                      return (
+                        <li key={idx} className="mb-2 flex flex-row gap-2">
+                          <span>
+                            {wallet[item.filterKey] ? (
+                              <GreenCheckProductGlyphIcon
+                                className="text-primary"
+                                boxSize={4}
+                              />
+                            ) : (
+                              <WarningProductGlyphIcon
+                                className="text-secondary"
+                                boxSize={4}
+                              />
+                            )}
+                          </span>
+                          <p className={`leading-1 ${featureColor}`}>
+                            {item.filterLabel}{" "}
+                            <Tooltip
+                              content={
+                                <p className="text-body">
+                                  {/* TODO: Add filter description */}
+                                  {item.description}
+                                </p>
+                              }
+                            >
+                              <span className="whitespace-nowrap">
+                                <MdInfoOutline color={featureColor} />
+                              </span>
+                            </Tooltip>
+                          </p>
+                        </li>
+                      )
+                    })}
                 </ul>
               </div>
             )
