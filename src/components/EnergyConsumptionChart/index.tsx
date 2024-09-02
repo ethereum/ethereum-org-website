@@ -212,9 +212,10 @@ const EnergyConsumptionChart = () => {
           font: {
             size: 10,
           },
-          autoSkip: false, // avoid long labels to be hidden
-          padding: 0, // removes default padding betwen x-labels and chart
-          maxRotation: 0, // turns off rotation
+          autoSkip: false,
+          padding: 0,
+          maxRotation: 0,
+          minRotation: 45,
         },
       },
     },
