@@ -13,10 +13,11 @@ import type {
   RSSItem,
 } from "@/lib/types"
 
-import BentoCard from "@/components/BentoBox/BentoCard"
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
+import BentoCard from "@/components/Homepage/BentoCard"
+import { useHome } from "@/components/Homepage/useHome"
 import AngleBrackets from "@/components/icons/angle-brackets.svg"
 import Calendar from "@/components/icons/calendar.svg"
 import CalendarAdd from "@/components/icons/calendar-add.svg"
@@ -65,7 +66,6 @@ import {
 
 import "swiper/css/effect-cards"
 
-import { useHome } from "@/hooks/useHome"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"

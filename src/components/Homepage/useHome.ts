@@ -6,7 +6,7 @@ import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
 import type { EventCardProps, Lang } from "@/lib/types"
 import type { CodeExample } from "@/lib/interfaces"
 
-import { useBentoBox } from "@/components/BentoBox/useBentoBox"
+import { useBentoBox } from "@/components/Homepage/useBentoBox"
 import BlockHeap from "@/components/icons/block-heap.svg"
 import EthGlyphIcon from "@/components/icons/eth-glyph.svg"
 import EthTokenIcon from "@/components/icons/eth-token.svg"
