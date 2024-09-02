@@ -13,6 +13,7 @@ import Filters from "@/components/ProductTable/Filters"
 import MobileFilters from "@/components/ProductTable/MobileFilters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
 import Table from "@/components/ProductTable/Table"
+import { Button } from "@/components/ui/buttons/Button"
 
 interface ProductTableProps<TData, TValue, TPreset> {
   columns: ColumnDef<TData, TValue>[]
@@ -35,6 +36,7 @@ const ProductTable = ({
 >) => {
   const [activePresets, setActivePresets] = useState<number[]>([])
   const [filters, setFilters] = useState<FilterOption[]>(filterOptions)
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
   const handleSelectPreset = (idx: number) => {
     if (activePresets.includes(idx)) {
@@ -94,7 +96,7 @@ const ProductTable = ({
   }, [filters])
 
   return (
-    <div className="px-4">
+    <div className="px-0 lg:px-4">
       {presetFilters.length ? (
         <PresetFilters
           presets={presetFilters}
@@ -104,7 +106,7 @@ const ProductTable = ({
       ) : (
         <></>
       )}
-      <div className="flex flex-col gap-6 pb-6 pt-4 lg:flex-row 2xl:px-0">
+      <div className="flex flex-col gap-4 pb-6 pt-4 lg:flex-row lg:gap-6 2xl:px-0">
         <div className="block lg:hidden">
           <MobileFilters
             filters={filters}
@@ -114,12 +116,26 @@ const ProductTable = ({
             handleSelectPreset={handleSelectPreset}
             dataCount={data.length}
             activeFiltersCount={activeFiltersCount}
+            mobileFiltersOpen={mobileFiltersOpen}
+            setMobileFiltersOpen={setMobileFiltersOpen}
           />
         </div>
         <div className="hidden lg:block">
           <Filters filters={filters} setFilters={setFilters} />
         </div>
         <div className="flex-1">
+          <div className="flex flex-row justify-between px-2">
+            <Button
+              variant="ghost"
+              className="block p-0 lg:hidden"
+              onClick={() => setMobileFiltersOpen(true)}
+            >
+              <p className="text-md">{`Filters (${activeFiltersCount})`}</p>
+            </Button>
+            <p>
+              Showing all wallets (<b>{data.length}</b>)
+            </p>
+          </div>
           <Table columns={columns} data={data} subComponent={subComponent} />
         </div>
       </div>

@@ -28,6 +28,8 @@ interface MobileFiltersProps<TPreset> {
   handleSelectPreset: (index: number) => void
   dataCount: number
   activeFiltersCount: number
+  mobileFiltersOpen: boolean
+  setMobileFiltersOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const MobileFilters = ({
@@ -38,13 +40,19 @@ const MobileFilters = ({
   handleSelectPreset,
   dataCount,
   activeFiltersCount,
+  mobileFiltersOpen,
+  setMobileFiltersOpen,
 }: MobileFiltersProps<ProductTablePresetFilters>) => {
   const { t } = useTranslation("page-wallets-find-wallet")
 
   return (
     <>
-      <Drawer direction="left">
-        <DrawerTrigger>
+      <Drawer
+        direction="left"
+        open={mobileFiltersOpen}
+        onOpenChange={setMobileFiltersOpen}
+      >
+        <DrawerTrigger className="px-4">
           <Button
             rightIcon={<FilterBurgerIcon />}
             variant="outline"

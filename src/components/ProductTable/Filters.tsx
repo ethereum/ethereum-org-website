@@ -61,11 +61,11 @@ const Filters = ({ filters, setFilters }: PresetFiltersProps) => {
   }
 
   return (
-    <div className={`w-full md:w-80`}>
-      <div className="width-full flex flex-row justify-between border-b border-b-primary px-6 py-2">
-        <p className="font-bold">Filters ({0})</p>
+    <div className={`w-full lg:w-80`}>
+      <div className="width-full flex flex-row justify-between border-b border-b-primary px-2 py-2 lg:px-6">
+        <p className="text-md font-bold">Filters ({0})</p>
         <div
-          className="flex cursor-pointer flex-row items-center gap-1 text-primary hover:text-primary-hover"
+          className="flex hidden cursor-pointer flex-row items-center gap-1 text-primary hover:text-primary-hover lg:block"
           onClick={() => {
             console.log("RESET FILTERS")
           }}
