@@ -52,8 +52,8 @@ const variantSolid = defineStyle({
     color: "background.base",
   },
   _hover: {
-    color: "background.base",
-    bg: "primary.hover",
+    color: "white",
+    bg: "primary.actionHover",
     boxShadow: "buttonHover",
   },
   _active: {
