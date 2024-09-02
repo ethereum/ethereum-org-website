@@ -1,14 +1,27 @@
 import * as React from "react"
+import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils/cn"
 
+const variants = cva("w-full scroll-mt-20", {
+  variants: {
+    variant: {
+      responsiveFlex: "flex flex-col gap-8 md:flex-row lg:gap-16",
+      normal: "",
+    },
+  },
+  defaultVariants: {
+    variant: "normal",
+  },
+})
+
 const Section = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
+  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof variants>
+>(({ className, variant, ...props }, ref) => (
   <section
     ref={ref}
-    className={cn("flex flex-col gap-8 md:flex-row lg:gap-16", className)}
+    className={cn(variants({ variant, className }))}
     {...props}
   />
 ))
