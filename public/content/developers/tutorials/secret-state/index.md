@@ -3,9 +3,9 @@ title: Using zero-knowledge for a secret state
 description: On-chain games are limited because they cannot keep any hidden information. After reading this tutorial, a reader will be able to combine zero-knowledge proofs and server components to create verifiable games with a secret state, offchain, component. The technique to do this will be demonstrated by creating a minesweeper game.
 author: Ori Pomerantz
 tags: ["server", "offchain", "centralized", "zero-knowledge", "zokrates", "mud"]
-skill: intermediate
+skill: advanced
 lang: en
-published: 2024-08-15
+published: 2024-09-15
 ---
 
 *There are no secrets on the blockchain*. Everything that is posted on the blockchain is open to everybody to read. This is necessary, because the blockchain is based on anybody being able to verify it. However, games often rely on secret state. For example, the game of [minesweeper](https://en.wikipedia.org/wiki/Minesweeper_(video_game)) makes absolutely no sense if you can just go on a blockchain explorer and see the map.
@@ -624,9 +624,18 @@ To do so:
     diff verifier.sol ~/20240901-secret-state/packages/contracts/src/verifier.sol
     ```
 
+
 ## Design decisions {#design}
 
+In any sufficiently complex application there are competing design goals that require trade-offs. Let's look at some of the tradeoffs and why the current solution is preferable to other options.
+
 ### Why zero-knowlege {#why-zero-knowledge}
+
+For minesweeper you don't really need zero-knowledge. The server can always hold the map, and then just reveal all of it when the game is over. Then, at the end of the game, the smart contract can calculate the map hash, verify that it matches, and if it doesn't penalize the server or disregard the game completely.
+
+I didn't use this simpler solution because it would only work for short games with a well defined end state. When a game is potentially infinite (such as the case with [autonomous worlds](https://0xparc.org/blog/autonomous-worlds)), you need a solution that proves the state *without* revealing it.
+
+As a tutorial this article needed a short game that is easy to understand, but this technique is most useful for longer games.
 
 ### Why Zokrates? {#why-zokrates}
 
@@ -639,8 +648,6 @@ As opposed to other systems like circum
 ### Where to verify {#where-verification}
 
 ### Flatten the map in TypeScript or Zokrates? {#where-flatten}
-
-
 
 ## Conclusion: when is this the appropriate technique {#conclusion}
 
