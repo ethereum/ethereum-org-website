@@ -650,7 +650,7 @@ In this program we compile the Zokrates programs [every time the server starts](
 
 If I were writing a production-level application, I'd check if I have a file with the compiled Zokrates programs at this minefield size, and if so use that. The same is true for deploying a verifier contract onchain.
 
-### Creating the verifier and prover keys (#key-creation)
+### Creating the verifier and prover keys {#key-creation}
 
 [Key creation](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L63-L69) is another pure calculation that needn't be done more than once for a given minefield size. Again, it is done only once for the sake of simplicity.
 
