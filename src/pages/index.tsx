@@ -224,16 +224,16 @@ const HomePage = ({
         </div>
 
         {/* Use Cases - A new way to use the internet */}
-        <Section
+        <section
           className={cn(
-            "max-lg:-mx-4 max-lg:w-[100vw] max-lg:overflow-hidden max-lg:px-4 sm:max-lg:-mx-6 sm:max-lg:px-6", // Mobile: Swiper cards
+            "max-lg:-mx-4 max-lg:flex max-lg:w-[100vw] max-lg:flex-col max-lg:overflow-hidden max-lg:px-4 sm:max-lg:-mx-6 sm:max-lg:px-6", // Mobile: Swiper cards
             "lg:grid lg:grid-cols-bento lg:gap-4" // Desktop: BentoBox grid
           )}
         >
           <div
             className={cn(
               "flex flex-col",
-              "lg:col-span-12 lg:flex xl:col-span-3 xl:col-start-2"
+              "lg:col-span-12 xl:col-span-3 xl:col-start-2"
             )}
           >
             <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
@@ -253,12 +253,12 @@ const HomePage = ({
               "[&_.swiper]:mx-auto [&_.swiper]:mt-4 [&_.swiper]:!flex [&_.swiper]:h-fit [&_.swiper]:max-w-128 [&_.swiper]:flex-col [&_.swiper]:items-center"
             )}
           >
-            {bentoItems.map((item) => (
+            {bentoItems.map(({ className, ...item }) => (
               <BentoCard
                 key={item.title}
                 imgHeight={220}
                 {...item}
-                className={cn(item.className, "bg-background text-body")}
+                className={cn(className, "bg-background text-body")}
                 imgWidth={undefined} // Intentionally last to override box
               />
             ))}
@@ -272,7 +272,7 @@ const HomePage = ({
               className={cn(className, "max-lg:hidden")} // Desktop only
             />
           ))}
-        </Section>
+        </section>
 
         {/* Activity - The strongest ecosystem */}
         <Section>
