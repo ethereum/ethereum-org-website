@@ -7,6 +7,7 @@ import { ColumnDef } from "@tanstack/react-table"
 import { WalletData } from "@/lib/types"
 
 import WalletInfo from "@/components/FindWalletProductTable/components/WalletInfo"
+import { TableHead } from "@/components/ui/table"
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
@@ -19,14 +20,14 @@ export type WalletColumns = {
 export const WalletColumns: ColumnDef<WalletColumns>[] = [
   {
     accessorKey: "information",
-    header: () => null,
+    header: () => <TableHead className="h-0" />,
     cell: ({ row }) => {
       return <WalletInfo wallet={row.original} />
     },
   },
   {
     id: "expander",
-    header: () => null,
+    header: () => <TableHead className="h-0" />,
     cell: ({ row }) => {
       return (
         <div>

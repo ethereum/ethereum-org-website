@@ -12,7 +12,6 @@ import {
   Table as TanStackTable,
   TableBody,
   TableCell,
-  TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
@@ -43,14 +42,14 @@ const Table = ({
           <TableRow key={headerGroup.id} className="border-primary">
             {headerGroup.headers.map((header) => {
               return (
-                <TableHead key={header.id}>
+                <div key={header.id}>
                   {header.isPlaceholder
                     ? null
                     : flexRender(
                         header.column.columnDef.header,
                         header.getContext()
                       )}
-                </TableHead>
+                </div>
               )
             })}
           </TableRow>
@@ -66,7 +65,7 @@ const Table = ({
                 className={`${row.getIsExpanded() ? "cursor-pointer border-b-body-inverted bg-body-inverted" : "cursor-pointer"}`}
                 onClick={(e) => {
                   // Prevent expanding the wallet more info section when clicking on the "Visit website" button
-                  if (!e.target.matches("a, a svg")) {
+                  if (!(e.target as Element).matches("a, a svg")) {
                     row.getToggleExpandedHandler()()
                   }
                 }}
