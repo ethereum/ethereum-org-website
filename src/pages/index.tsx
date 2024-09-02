@@ -13,9 +13,7 @@ import type {
   RSSItem,
 } from "@/lib/types"
 
-import BentoBox from "@/components/BentoBox"
 import BentoCard from "@/components/BentoBox/BentoCard"
-import Title from "@/components/BentoBox/Title"
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
@@ -225,12 +223,32 @@ const HomePage = ({
           ))}
         </div>
 
-        {/* Mobile */}
-        <div className="-mx-4 w-[100vw] overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
-          <Title />
+        {/* A new way to use the internet */}
+        <div
+          className={cn(
+            "max-lg:-mx-4 max-lg:w-[100vw] max-lg:overflow-hidden max-lg:px-4 sm:max-lg:-mx-6 sm:max-lg:px-6", // Mobile: Swiper cards
+            "lg:grid lg:grid-cols-bento lg:gap-4" // Desktop: BentoBox grid
+          )}
+        >
+          <div
+            className={cn(
+              "flex flex-col",
+              "lg:col-span-12 lg:flex xl:col-span-3 xl:col-start-2"
+            )}
+          >
+            <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
+              {t("common:nav-use-cases-label")}
+            </div>
+            <h2 className="mb-4 me-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
+              {t("page-index:page-index-bento-header")}
+            </h2>
+          </div>
+
+          {/* Mobile */}
           <Swiper
             options={{ effect: "cards", createElements: true }}
             className={cn(
+              "lg:hidden", // Mobile only
               "[&_.swiper-slide]:overflow-visible [&_.swiper-slide]:rounded-2xl [&_.swiper-slide]:shadow-card-hover",
               "[&_.swiper]:mx-auto [&_.swiper]:mt-4 [&_.swiper]:!flex [&_.swiper]:h-fit [&_.swiper]:max-w-128 [&_.swiper]:flex-col [&_.swiper]:items-center"
             )}
@@ -245,10 +263,16 @@ const HomePage = ({
               />
             ))}
           </Swiper>
-        </div>
 
-        {/* Desktop */}
-        <BentoBox className="hidden lg:block" />
+          {/* Desktop */}
+          {bentoItems.map(({ className, ...item }) => (
+            <BentoCard
+              key={item.title}
+              {...item}
+              className={cn(className, "max-lg:hidden")} // Desktop only
+            />
+          ))}
+        </div>
 
         <Section>
           <SectionBanner>
