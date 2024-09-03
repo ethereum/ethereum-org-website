@@ -184,10 +184,16 @@ const ProductTable = ({
           if (item.options && item.options.length > 0) {
             return (
               itemCount +
-              item.options.filter((option) => option.inputState).length
+              item.options.filter(
+                (option) =>
+                  typeof option.inputState === "boolean" && option.inputState
+              ).length
             )
           }
-          return itemCount + (item.inputState ? 1 : 0)
+          return (
+            itemCount +
+            (typeof item.inputState === "boolean" && item.inputState ? 1 : 0)
+          )
         }, 0)
       )
     }, 0)
