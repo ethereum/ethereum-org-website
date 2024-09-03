@@ -422,6 +422,9 @@ const StakingPage = ({
                     <ListItem>
                       {t("page-staking-section-comparison-solo-risks-li3")}
                     </ListItem>
+                    <ListItem>
+                      {t("page-staking-section-comparison-solo-risks-li4")}
+                    </ListItem>
                   </UnorderedList>
                 </div>
                 <div className="[grid-area:solo-reqs]">
