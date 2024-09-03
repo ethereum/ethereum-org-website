@@ -59,7 +59,10 @@ I vantaggi di questa progettazione della rete sono:
 
 Il diagramma seguente mostra le funzioni dei client esistenti che possono essere fornite dalla Rete Portal, consentendo agli utenti di accedere a tali funzioni su dispositivi con risorse molto limitate.
 
-![tabella della rete portal](portal-network-table2.png)
+### The Portal Networks
+| Beacon light client | State network | Transaction gossip | History network |
+| ------------------- | ------------- | ------------------ | --------------- |
+| <ul><li>Beacon chain light</li><li>Protocol data</li></ul> | <ul><li>Account and contract storage</li></ul> | <ul><li>Lightweight mempool</li></ul> | <ul><li>Headers</li><li>Block bodies</li><li>Receipts</li></ul> |
 
 ## Diversità dei client per impostazione predefinita {#client-diversity-as-default}
 

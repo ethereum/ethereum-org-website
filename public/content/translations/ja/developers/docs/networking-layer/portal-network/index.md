@@ -59,7 +59,10 @@ JSON-RPC APIは、ライトクライアントのデータリクエストに理�
 
 以下の図は、ポータルネットワークでやり取りできる現行のクライアントの機能を示しています。ユーザーは、非常に少ないリソースのデバイスでも、これらの機能にアクセスできます。
 
-![ポータルネットワークテーブル](portal-network-table2.png)
+### The Portal Networks
+| Beacon light client | State network | Transaction gossip | History network |
+| ------------------- | ------------- | ------------------ | --------------- |
+| <ul><li>Beacon chain light</li><li>Protocol data</li></ul> | <ul><li>Account and contract storage</li></ul> | <ul><li>Lightweight mempool</li></ul> | <ul><li>Headers</li><li>Block bodies</li><li>Receipts</li></ul> |
 
 ## デフォルトのクライアント多様性 {#client-diversity-as-default}
 

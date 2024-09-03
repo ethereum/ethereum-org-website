@@ -59,7 +59,10 @@ Ennek a hálózati dizájnnak az előnyei:
 
 Az alábbi ábra a meglévő kliensek azon funkcióit mutatja be, amelyeket a Portal Network biztosíthat, lehetővé téve a felhasználók számára, hogy ezeket a funkciókat nagyon alacsony erőforrásigényű eszközökön is elérjék.
 
-![portal network táblázat](portal-network-table2.png)
+### The Portal Networks
+| Beacon light client | State network | Transaction gossip | History network |
+| ------------------- | ------------- | ------------------ | --------------- |
+| <ul><li>Beacon chain light</li><li>Protocol data</li></ul> | <ul><li>Account and contract storage</li></ul> | <ul><li>Lightweight mempool</li></ul> | <ul><li>Headers</li><li>Block bodies</li><li>Receipts</li></ul> |
 
 ## Alapértelmezett kliensdiverzitás {#client-diversity-as-default}
 

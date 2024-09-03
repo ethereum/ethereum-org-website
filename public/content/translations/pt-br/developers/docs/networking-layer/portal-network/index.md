@@ -59,7 +59,10 @@ Os benefícios deste desenho de rede são:
 
 O diagrama abaixo mostra as funções dos clientes existentes que podem ser entregues pela Rede Portal, habilitando ao usuários acessar estas funções em dispositivos com muito poucos recursos.
 
-![tabela rede portal](portal-network-table2.png)
+### The Portal Networks
+| Beacon light client | State network | Transaction gossip | History network |
+| ------------------- | ------------- | ------------------ | --------------- |
+| <ul><li>Beacon chain light</li><li>Protocol data</li></ul> | <ul><li>Account and contract storage</li></ul> | <ul><li>Lightweight mempool</li></ul> | <ul><li>Headers</li><li>Block bodies</li><li>Receipts</li></ul> |
 
 ## Diversidade de cliente por padrão {#client-diversity-as-default}
 

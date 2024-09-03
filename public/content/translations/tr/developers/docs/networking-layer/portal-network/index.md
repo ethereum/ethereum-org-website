@@ -59,7 +59,10 @@ Bu ağ tasarımının faydaları şunlardır:
 
 Aşağıdaki diyagram, Portal Ağı tarafından sunulabilecek mevcut istemcilerin işlevlerini gösterir ve kullanıcıların çok düşük kaynaklı cihazlardan bu işlevlere erişmesini sağlar.
 
-![portal ağı tablosu](portal-network-table2.png)
+### The Portal Networks
+| Beacon light client | State network | Transaction gossip | History network |
+| ------------------- | ------------- | ------------------ | --------------- |
+| <ul><li>Beacon chain light</li><li>Protocol data</li></ul> | <ul><li>Account and contract storage</li></ul> | <ul><li>Lightweight mempool</li></ul> | <ul><li>Headers</li><li>Block bodies</li><li>Receipts</li></ul> |
 
 ## Varsayılan istemci çeşitliliği {#client-diversity-as-default}
 

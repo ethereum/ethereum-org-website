@@ -59,7 +59,10 @@ JSON-RPC 也不是轻客户端请求数据的理想选择，因为它必须要�
 
 下表展示了门户网络可提供的现有客户端的功能，让用户可在极低资源设备上访问它们。
 
-![门户网络表](portal-network-table2.png)
+### The Portal Networks
+| Beacon light client | State network | Transaction gossip | History network |
+| ------------------- | ------------- | ------------------ | --------------- |
+| <ul><li>Beacon chain light</li><li>Protocol data</li></ul> | <ul><li>Account and contract storage</li></ul> | <ul><li>Lightweight mempool</li></ul> | <ul><li>Headers</li><li>Block bodies</li><li>Receipts</li></ul> |
 
 ## 默认支持客户端多样性 {#client-diversity-as-default}
 
