@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next"
 import {
   ColumnDef,
   flexRender,
@@ -8,6 +9,7 @@ import {
 
 import type { ProductTableColumnDefs, ProductTableRow } from "@/lib/types"
 
+import { Button } from "@/components/ui/buttons/Button"
 import {
   Table as TanStackTable,
   TableBody,
@@ -20,13 +22,16 @@ interface TableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
   subComponent?: React.FC<TData>
+  resetFilters: () => void
 }
 
 const Table = ({
   columns,
   data,
   subComponent,
+  resetFilters,
 }: TableProps<ProductTableRow, ProductTableColumnDefs>) => {
+  const { t } = useTranslation("page-wallets-find-wallet")
   const table = useReactTable({
     data,
     columns,
@@ -88,7 +93,17 @@ const Table = ({
         ) : (
           <TableRow>
             <TableCell colSpan={columns.length} className="h-24 text-center">
-              No results.
+              <div className="m-24 border-2 border-dashed border-body-light">
+                <div className="p-12">
+                  <h3 className="mb-6 text-3xl font-normal">
+                    {t("page-find-wallet-empty-results-title")}
+                  </h3>
+                  <p>{t("page-find-wallet-empty-results-desc")}</p>
+                  <Button variant="ghost" onClick={resetFilters}>
+                    <p>{t("page-find-wallet-reset-filters")}</p>
+                  </Button>
+                </div>
+              </div>
             </TableCell>
           </TableRow>
         )}

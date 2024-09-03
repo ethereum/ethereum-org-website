@@ -61,7 +61,7 @@ const ProductTable = ({
       setFilters(updatedFilters)
       router.replace(router.pathname, undefined, { shallow: true })
     }
-  }, [router.query])
+  }, [router, filters])
 
   // Update or remove preset filters
   const handleSelectPreset = (idx: number) => {
@@ -215,6 +215,17 @@ const ProductTable = ({
     setFilters(resetFilters)
   }
 
+  const filteredData = useMemo(() => {
+    return data.filter((item) => {
+      console.log(item)
+      return filters.every((filter) => {
+        return filter.items.every((item) => {
+          return item.inputState === true
+        })
+      })
+    })
+  }, [data, filters])
+
   return (
     <div className="px-0 lg:px-4">
       {presetFilters.length ? (
@@ -259,10 +270,15 @@ const ProductTable = ({
               <p className="text-md">{`Filters (${activeFiltersCount})`}</p>
             </Button>
             <p>
-              Showing all wallets (<b>{data.length}</b>)
+              Showing all wallets (<b>{filteredData.length}</b>)
             </p>
           </div>
-          <Table columns={columns} data={data} subComponent={subComponent} />
+          <Table
+            columns={columns}
+            data={filteredData}
+            subComponent={subComponent}
+            resetFilters={resetFilters}
+          />
         </div>
       </div>
     </div>
