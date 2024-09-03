@@ -30,6 +30,7 @@ import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import ProductList from "@/components/ProductList"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import StablecoinAccordion from "@/components/StablecoinAccordion"
 import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
@@ -775,6 +776,8 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           </Box>
         </Flex>
       </Box>
+      {/* Stablecoins Quiz Section */}
+      <StandaloneQuizWidget quizKey="stablecoins" />
       <Content>
         <FeedbackCard />
       </Content>
