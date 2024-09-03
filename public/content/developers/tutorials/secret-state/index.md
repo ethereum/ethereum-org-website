@@ -666,14 +666,31 @@ Also, while this game is single player, a lot of blockchain games are multi-play
 
 ### Flatten the map in TypeScript or Zokrates? {#where-flatten}
 
-In general, when processing can be done either in TypeScript or Zokrates, it is better to do it TypeScript, which is a lot faster, and does not require zero-knowledge proofs. This is the reason, for example, that the 
+In general, when processing can be done either in TypeScript or Zokrates, it is better to do it TypeScript, which is a lot faster, and does not require zero-knowledge proofs. This is the reason, for example, that we don't provide Zokrates with the hash and make it verify that it is correct. Hashing has to be done inside Zokrates, but the match between the returned hash and the hash on-chain can happen outside it.
+
+However, we still [flatten the map in Zokrates](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L15-L20), whereas we could have done it in TypeScript. The reason is that the other options are, in my opinion, worse.
+
+- Provide a one dimensional array of boolean to the Zokrates code, and use an expression such as `x*(height+2)
++y` to get the two dimensional map. This would make [the code](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L44-L47) somewhat more complicated, so I decided the performance gain isn't worth it for a tutorial.
+
+- Send Zokrates both the one dimensional array and the two dimensional array. However, this solution doesn't gain us anything. The Zokrates code would have to verify that the one dimensional array it is provided really is the correct representation of the two dimensional array. So there wouldn't be any performance gain.
+
+- Flatten the two dimensional array in Zokrates. This is the simplest option, so I chose it.
 
 ### Where to store maps {#where-store-maps}
 
+In this application [`gamesInProgress`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/app.ts#L20) is simply a variable in memory. This means that if you server dies and needs to be restarted, all the information it stored is lost. Not only are players unable to continue their game, they cannot even start a new game because the onchain component thinks they still have a game in progress.
+
+This is clearly bad design for a production system, in which you'd store this information in a database. The only reason I used a variable here is because this is a tutorial and simplicity is the main consideration.
+
 ## Conclusion: when is this the appropriate technique {#conclusion}
 
-- Long running game
-- Some centralization acceptable
+So, now you know how to write a game with a server that stores secret state that doesn't belong on-chain. But in what cases should you do it? There are two main considerations.
+
+- *Long running game*: [As mentioned above](#why-zero-knowledge), in a short game you can just publish the state once the game is over and have everything verified then. But that is not an option when the game takes a long or indefinite time, and the state needs to stay secret.
+
+- *Some centralization acceptable*: Zero-knowledge proofs can verify integrity, that an entity is not faking the results. What they can't do is ensure that the entity will still be available and answer messages. In situations where availability also needs to be decentralized, zero-knowledge proofs are not a sufficient solution, and you need [multi-party computation](https://en.wikipedia.org/wiki/Secure_multi-party_computation).
+
 
 ### Acknowledgements {#acknowledgements}
 
