@@ -1,4 +1,5 @@
-import { useMemo, useState } from "react"
+import { FC, useEffect, useMemo, useState } from "react"
+import { useRouter } from "next/router"
 import { ColumnDef } from "@tanstack/react-table"
 
 import type {
@@ -20,7 +21,7 @@ interface ProductTableProps<TData, TValue, TPreset> {
   data: TData[]
   filterOptions: FilterOption[]
   presetFilters: TPresetFilters<TPreset>[]
-  subComponent?: React.FC<TData>
+  subComponent?: FC<TData>
 }
 
 const ProductTable = ({
@@ -34,6 +35,7 @@ const ProductTable = ({
   ProductTableColumnDefs,
   ProductTablePresetFilters
 >) => {
+  const router = useRouter()
   const [activePresets, setActivePresets] = useState<number[]>([])
   const [filters, setFilters] = useState<FilterOption[]>(filterOptions)
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
@@ -134,6 +136,29 @@ const ProductTable = ({
     }))
     setFilters(resetFilters)
   }
+
+  useEffect(() => {
+    if (Object.keys(router.query).length > 0) {
+      // Check if query is populated
+      const updatedFilters = filters.map((filter) => ({
+        ...filter,
+        items: filter.items.map((item) => ({
+          ...item,
+          inputState: Object.keys(router.query).includes(item.filterKey)
+            ? true
+            : item.inputState,
+          options: item.options.map((option) => ({
+            ...option,
+            inputState: Object.keys(router.query).includes(option.filterKey)
+              ? true
+              : option.inputState,
+          })),
+        })),
+      }))
+      setFilters(updatedFilters)
+      router.replace(router.pathname, undefined, { shallow: true })
+    }
+  }, [router.query])
 
   return (
     <div className="px-0 lg:px-4">
