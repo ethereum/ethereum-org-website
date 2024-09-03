@@ -3,15 +3,12 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils/cn"
 
+// TODO: Add to design system
 const variants = cva("w-full scroll-mt-20", {
   variants: {
     variant: {
       responsiveFlex: "flex flex-col gap-8 md:flex-row lg:gap-16",
-      normal: "",
     },
-  },
-  defaultVariants: {
-    variant: "normal",
   },
 })
 

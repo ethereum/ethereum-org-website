@@ -224,7 +224,7 @@ const HomePage = ({
         </div>
 
         {/* Use Cases - A new way to use the internet */}
-        <section
+        <Section
           id="use"
           className={cn(
             "max-lg:-mx-4 max-lg:flex max-lg:w-[100vw] max-lg:flex-col max-lg:overflow-hidden max-lg:px-4 sm:max-lg:-mx-6 sm:max-lg:px-6", // Mobile: Swiper cards
@@ -273,7 +273,7 @@ const HomePage = ({
               className={cn(className, "max-lg:hidden")} // Desktop only
             />
           ))}
-        </section>
+        </Section>
 
         {/* Activity - The strongest ecosystem */}
         <Section id="activity" variant="responsiveFlex">
