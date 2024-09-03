@@ -776,9 +776,8 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           </Box>
         </Flex>
       </Box>
-      {/* Stablecoins Quiz Section */}
-      <StandaloneQuizWidget quizKey="stablecoins" />
       <Content>
+        <StandaloneQuizWidget quizKey="stablecoins" />
         <FeedbackCard />
       </Content>
     </Page>
