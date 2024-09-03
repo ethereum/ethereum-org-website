@@ -40,6 +40,30 @@ const ProductTable = ({
   const [filters, setFilters] = useState<FilterOption[]>(filterOptions)
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
+  // Update filters based on router query
+  useEffect(() => {
+    if (Object.keys(router.query).length > 0) {
+      const updatedFilters = filters.map((filter) => ({
+        ...filter,
+        items: filter.items.map((item) => ({
+          ...item,
+          inputState: Object.keys(router.query).includes(item.filterKey)
+            ? true
+            : item.inputState,
+          options: item.options.map((option) => ({
+            ...option,
+            inputState: Object.keys(router.query).includes(option.filterKey)
+              ? true
+              : option.inputState,
+          })),
+        })),
+      }))
+      setFilters(updatedFilters)
+      router.replace(router.pathname, undefined, { shallow: true })
+    }
+  }, [router.query])
+
+  // Update or remove preset filters
   const handleSelectPreset = (idx: number) => {
     if (activePresets.includes(idx)) {
       // Get filters that are true for the preset being removed
@@ -105,6 +129,53 @@ const ProductTable = ({
     }
   }
 
+  // Update activePresets based on current filters
+  useEffect(() => {
+    const currentFilters = {}
+
+    filters.forEach((filter) => {
+      filter.items.forEach((item) => {
+        if (item.inputState === true) {
+          currentFilters[item.filterKey] = item.inputState
+        }
+
+        if (item.options && item.options.length > 0) {
+          item.options.forEach((option) => {
+            if (option.inputState === true) {
+              currentFilters[option.filterKey] = option.inputState
+            }
+          })
+        }
+      })
+    })
+
+    const presetsToApply = presetFilters.reduce<number[]>(
+      (acc, preset, idx) => {
+        const presetFilters = preset.presetFilters
+        const activePresetKeys = Object.keys(presetFilters).filter(
+          (key) => presetFilters[key]
+        )
+        const allItemsInCurrentFilters = activePresetKeys.every(
+          (key) => currentFilters[key] !== undefined
+        )
+
+        if (allItemsInCurrentFilters) {
+          acc.push(idx)
+        }
+        return acc
+      },
+      []
+    )
+
+    setActivePresets((prevActivePresets) => {
+      const newActivePresets = [
+        ...new Set([...prevActivePresets, ...presetsToApply]),
+      ]
+      return newActivePresets.filter((idx) => presetsToApply.includes(idx))
+    })
+  }, [filters, presetFilters])
+
+  // Count active filters
   const activeFiltersCount = useMemo(() => {
     return filters.reduce((count, filter) => {
       return (
@@ -122,6 +193,7 @@ const ProductTable = ({
     }, 0)
   }, [filters])
 
+  // Reset filters
   const resetFilters = () => {
     const resetFilters = filters.map((filter) => ({
       ...filter,
@@ -136,29 +208,6 @@ const ProductTable = ({
     }))
     setFilters(resetFilters)
   }
-
-  useEffect(() => {
-    if (Object.keys(router.query).length > 0) {
-      // Check if query is populated
-      const updatedFilters = filters.map((filter) => ({
-        ...filter,
-        items: filter.items.map((item) => ({
-          ...item,
-          inputState: Object.keys(router.query).includes(item.filterKey)
-            ? true
-            : item.inputState,
-          options: item.options.map((option) => ({
-            ...option,
-            inputState: Object.keys(router.query).includes(option.filterKey)
-              ? true
-              : option.inputState,
-          })),
-        })),
-      }))
-      setFilters(updatedFilters)
-      router.replace(router.pathname, undefined, { shallow: true })
-    }
-  }, [router.query])
 
   return (
     <div className="px-0 lg:px-4">
@@ -195,7 +244,7 @@ const ProductTable = ({
           />
         </div>
         <div className="flex-1">
-          <div className="flex flex-row justify-between px-2 py-1">
+          <div className="flex flex-row items-center justify-between px-2 py-1">
             <Button
               variant="ghost"
               className="block p-0 lg:hidden"
