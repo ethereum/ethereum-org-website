@@ -49,6 +49,7 @@ This is a curated list of user research done in web3 that may help with design a
 - [Web3's Usability Crisis: What You NEED to Know!](https://www.youtube.com/watch?v=oBSXT_6YDzg) - A panel discussion on pitfalls of developer focused project building (video, 34 min)
 
 ## Getting Started {#getting-started}
+
 - [Heuristics for Web3](/developers/docs/design-and-ux/heuristics-for-web3/) - 7 heuristics for Web3 interface design
 - [DEX Design Best Practices](/developers/docs/design-and-ux/dex-design-best-practice/) - A guide to designing Decentralized Exchanges
 
