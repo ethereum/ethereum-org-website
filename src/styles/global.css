@@ -74,9 +74,6 @@
     /* ! Deprecating primary-pressed */
     --primary-pressed: var(--blue-400);
 
-      /* To be reviewed */
-    --secondary: "#666666";
-
     --body: var(--gray-800);
     --body-medium: var(--gray-500);
     --body-light: var(--gray-200);
@@ -145,9 +142,6 @@
     --primary-dark: var(--orange-800);
     /* ! Deprecating primary-pressed */
     --primary-pressed: var(--orange-800);
-
-     /* To be reviewed */
-    --secondary: "#b2b2b2";
 
     --body: var(--gray-100);
     --body-medium: var(--gray-400);
@@ -282,12 +276,5 @@
     & > p {
       margin-bottom: calc(1.45rem / 2);
     }
-  }
-}
-
-/* styles for classes within markdown */
-@layer components {
-  .citation p {
-    @apply text-secondary;
   }
 }
