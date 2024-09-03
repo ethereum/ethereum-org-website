@@ -648,7 +648,7 @@ For your application, with different requirements, you might prefer to use [Circ
 
 In this program we compile the Zokrates programs [every time the server starts](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L60-L61). This is clearly a waste of resources, but this is a tutorial, optimized for simplicity.
 
-If I were writing a production-level application, I'd check if I have a file with the compiled Zokrates programs at this minefield size, and if so use that. The same is true for deploying a verifier contract onchain.
+If I were writing a production-level application, I'd check if I have a file with the compiled Zokrates programs at this minefield size, and if so use that. The same is true for deploying a verifier contract on-chain.
 
 ### Creating the verifier and prover keys {#key-creation}
 
@@ -656,11 +656,17 @@ If I were writing a production-level application, I'd check if I have a file wit
 
 Additionally, we could use [a setup ceremony](https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony). The advantage of a setup ceremony is that you need either the entropy or some intermediate result from each participant to cheat on the zero-knowlege proof. If at least one ceremony participant is honest and deletes that information, the zero-knowledge proofs are safe from certain attacks. However, there is *no mechanism* to verify that information has been deleted from everywhere. If zero-knowledge proofs are critically important, you want to participate in the setup ceremony.
 
-Here we rely on [perpetual powers of tau](https://github.com/privacy-scaling-explorations/perpetualpowersoftau), which had dozens of participants. It is probably safe enough, and much simpler.
+Here we rely on [perpetual powers of tau](https://github.com/privacy-scaling-explorations/perpetualpowersoftau), which had dozens of participants. It is probably safe enough, and much simpler. We also don't add entropy to the during key creation, which makes it easier for users to [verify the zero-knowledge configuration](#user-verify-zero-trust).
 
 ### Where to verify {#where-verification}
 
+We can verify the zero-knowledge proofs either on-chain (which costs gas) or in the client (using [`verify`](https://zokrates.github.io/toolbox/zokrates_js.html#verifyverificationkey-proof)). I chose the first, because this lets you [verify the verifier](#user-verify-zero-trust) once and then trust that if doesn't change as long as the contract address for it stays the same. If verification was done on the client, you'd have to verify the code you receive each time you download the client.
+
+Also, while this game is single player, a lot of blockchain games are multi-player. On-chain verification means you only verify the zero-knowledge proof once. Doing it in the client would require each client to verify independently.
+
 ### Flatten the map in TypeScript or Zokrates? {#where-flatten}
+
+In general, when processing can be done either in TypeScript or Zokrates, it is better to do it TypeScript, which is a lot faster, and does not require zero-knowledge proofs. This is the reason, for example, that the 
 
 ### Where to store maps {#where-store-maps}
 
