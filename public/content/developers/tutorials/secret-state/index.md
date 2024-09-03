@@ -683,7 +683,7 @@ In this application [`gamesInProgress`](https://github.com/qbzzt/20240901-secret
 
 This is clearly bad design for a production system, in which you'd store this information in a database. The only reason I used a variable here is because this is a tutorial and simplicity is the main consideration.
 
-## Conclusion: when is this the appropriate technique {#conclusion}
+## Conclusion: When is this the appropriate technique? {#conclusion}
 
 So, now you know how to write a game with a server that stores secret state that doesn't belong on-chain. But in what cases should you do it? There are two main considerations.
 
