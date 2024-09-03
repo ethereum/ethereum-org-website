@@ -105,6 +105,7 @@ export const WALLETS_FILTERS_DEFAULT = {
   withdraw_crypto: false,
   multisig: false,
   social_recovery: false,
+  new_to_crypto: false,
 }
 
 export const NEW_TO_CRYPTO_FEATURES = ["new_to_crypto"]
