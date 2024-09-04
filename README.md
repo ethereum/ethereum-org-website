@@ -1907,6 +1907,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://v2eth.com/"><img src="https://avatars.githubusercontent.com/u/7024451?v=4?s=100" width="100px;" alt="Mako Shan"/><br /><sub><b>Mako Shan</b></sub></a><br /><a href="#content-makoshan" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/cratiu222"><img src="https://avatars.githubusercontent.com/u/156356273?v=4?s=100" width="100px;" alt="Christina"/><br /><sub><b>Christina</b></sub></a><br /><a href="#content-cratiu222" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
