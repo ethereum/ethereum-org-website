@@ -2,7 +2,6 @@ import { Fragment, lazy, Suspense } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaDiscord, FaGithub } from "react-icons/fa6"
-import { MdChevronRight } from "react-icons/md"
 
 import type {
   AllMetricData,
@@ -13,6 +12,7 @@ import type {
 } from "@/lib/types"
 
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
+import { ChevronNext } from "@/components/Chevron"
 import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
@@ -189,7 +189,7 @@ const HomePage = ({
       />
       <TranslatathonBanner pathname={asPath} />
       <HomeHero heroImg={Hero} className="w-full" />
-      <div className="w-full space-y-32 lg:space-y-48">
+      <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
           {subHeroCTAs.map(({ label, description, href, className, Svg }) => (
             <Fragment key={label}>
@@ -329,7 +329,7 @@ const HomePage = ({
                 <div className="flex justify-center py-8 md:justify-start">
                   <ButtonLink href="/learn/" size="lg" variant="outline">
                     {t("page-index:page-index-popular-topics-action")}{" "}
-                    <MdChevronRight />
+                    <ChevronNext />
                   </ButtonLink>
                 </div>
               </div>
@@ -356,7 +356,7 @@ const HomePage = ({
             <div className="flex flex-wrap gap-6 py-8">
               <ButtonLink href="/developers/" size="lg" className="w-fit">
                 {t("page-index:page-index-builders-action-primary")}{" "}
-                <MdChevronRight />
+                <ChevronNext />
               </ButtonLink>
               <ButtonLink
                 href="/developers/docs/"
@@ -430,7 +430,7 @@ const HomePage = ({
             </div>
             <div className="flex flex-wrap gap-3 py-8">
               <ButtonLink href="/community/" size="lg">
-                {t("page-index:page-index-community-action")} <MdChevronRight />
+                {t("page-index:page-index-community-action")} <ChevronNext />
               </ButtonLink>
               <div className="flex gap-3">
                 <ButtonLink
@@ -623,7 +623,7 @@ const HomePage = ({
           </div>
           <div className="flex justify-center py-8 md:justify-start">
             <ButtonLink href="/community/events/" size="lg" className="mx-auto">
-              {t("page-index:page-index-events-action")} <MdChevronRight />
+              {t("page-index:page-index-events-action")} <ChevronNext />
             </ButtonLink>
           </div>
         </Section>

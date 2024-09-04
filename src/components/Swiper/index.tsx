@@ -1,8 +1,9 @@
 import { useTranslation } from "next-i18next"
-import { MdChevronLeft, MdChevronRight } from "react-icons/md"
 import { EffectCards, Keyboard, Navigation, Pagination } from "swiper/modules"
 import { Swiper as SwiperParent, SwiperSlide } from "swiper/react"
 import type { SwiperOptions } from "swiper/types"
+
+import { ChevronNext, ChevronPrev } from "@/components/Chevron"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -51,9 +52,9 @@ const Swiper = ({
           </SwiperSlide>
         ))}
 
-        <MdChevronLeft className="swiper-button-prev" />
+        <ChevronPrev className="swiper-button-prev" />
         <div className="swiper-pagination" />
-        <MdChevronRight className="swiper-button-next" />
+        <ChevronNext className="swiper-button-next" />
       </SwiperParent>
     </div>
   )
