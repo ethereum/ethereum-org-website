@@ -1,8 +1,6 @@
 import { Center } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import { TooltipProvider } from "@/components/ui/tooltip"
-
 import GlossaryTooltipComponent from "."
 
 const meta = {
@@ -15,9 +13,7 @@ const meta = {
   decorators: [
     (Story) => (
       <Center boxSize="md">
-        <TooltipProvider>
-          <Story />
-        </TooltipProvider>
+        <Story />
       </Center>
     ),
   ],

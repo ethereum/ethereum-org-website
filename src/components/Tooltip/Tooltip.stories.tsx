@@ -4,7 +4,6 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import InlineLink from "../Link"
 import Translation from "../Translation"
-import { TooltipProvider } from "../ui/tooltip"
 
 // TODO: remove `index` when we delete the old tooltip
 import TooltipComponent from "./index"
@@ -47,9 +46,7 @@ const meta = {
   decorators: [
     (Story) => (
       <Center boxSize="md">
-        <TooltipProvider>
-          <Story />
-        </TooltipProvider>
+        <Story />
       </Center>
     ),
   ],
