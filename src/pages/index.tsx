@@ -290,7 +290,9 @@ const HomePage = ({
               <p className="mt-8 text-xl font-bold">
                 {t("page-index:page-index-activity-description")}
               </p>
-              <StatsBoxGrid metricResults={metricResults} />
+              <Suspense fallback={<Skeleton />}>
+                <StatsBoxGrid metricResults={metricResults} />
+              </Suspense>
             </div>
           </SectionContent>
         </Section>
