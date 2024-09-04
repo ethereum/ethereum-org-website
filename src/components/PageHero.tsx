@@ -58,7 +58,7 @@ const PageHero = ({
     >
       <Box
         maxW={{ base: "full", lg: "container.sm" }}
-        pt={{ base: isReverse ? 0 : 8, lg: 32 }}
+        pt={{ base: isReverse ? 0 : 8, lg: 16 }}
         pb={{ base: isReverse ? 8 : 0, lg: 32 }}
         ps={{ base: 0, lg: 8 }}
         me={{ base: 0, lg: 4 }}
