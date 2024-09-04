@@ -334,7 +334,7 @@ PoolTogetherのような損失のない宝くじは、楽しく革新的な新�
   分散型アプリ(Dapp)構築の詳細
 </ButtonLink>
 
-## 参考文献 {#futher-reading}
+## 参考文献 {#further-reading}
 
 ### 分散型金融(DeFi)データ {#defi-data}
 
