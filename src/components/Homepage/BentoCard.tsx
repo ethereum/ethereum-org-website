@@ -1,12 +1,12 @@
 import { HTMLAttributes } from "react"
 import { type StaticImageData } from "next/image"
-import { MdChevronRight } from "react-icons/md"
 
 import { TwImage } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
 
+import { ChevronNext } from "../Chevron"
 import { Card, CardTitle } from "../ui/card"
 import { Center } from "../ui/flex"
 
@@ -44,7 +44,7 @@ const BentoCard = ({
       </CardTitle>
       <p className="mb-8 text-md">{children}</p>
       <ButtonLink href={href} variant="outline">
-        {action} <MdChevronRight />
+        {action} <ChevronNext />
       </ButtonLink>
     </div>
   </Card>
