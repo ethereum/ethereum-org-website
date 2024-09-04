@@ -64,7 +64,7 @@ const PageHero = ({
           "max-w-full lg:max-w-[640px]",
 
           isReverse ? "pb-8 pt-0" : "pb-0 pt-8",
-          "lg:py-32",
+          "lg:pb-32 lg:pt-16",
           "ps-0 lg:ps-8",
           "me-0 lg:me-4"
         )}
