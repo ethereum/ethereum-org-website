@@ -20,10 +20,10 @@ import { isValidDate } from "@/lib/utils/date"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import events from "@/data/community-events.json"
+import CreateWalletContent from "@/data/CreateWallet"
 
 import { GITHUB_REPO_URL } from "@/lib/constants"
 
-import CreateWalletContent from "!!raw-loader!@/data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
 import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
@@ -31,12 +31,13 @@ import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 export const useHome = () => {
   const { t } = useTranslation(["common", "page-index"])
   const { locale, asPath } = useRouter()
-  const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
 
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
 
   const bentoItems = useBentoBox()
+
+  const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
 
   const toggleCodeExample = (id: number): void => {
     setActiveCode(id)

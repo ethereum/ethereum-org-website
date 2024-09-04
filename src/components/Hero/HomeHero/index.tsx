@@ -12,7 +12,7 @@ const HomeHero = ({ heroImg, className }: HomeHeroProps) => {
 
   return (
     <div className={className}>
-      <div className="h-[300px] sm:h-[350px] md:h-[380px] lg:h-[440px]">
+      <div className="h-[240px] md:h-[380px] lg:h-[480px]">
         <TwImage
           src={heroImg}
           alt={t("page-index:page-index-hero-image-alt")}
@@ -22,7 +22,7 @@ const HomeHero = ({ heroImg, className }: HomeHeroProps) => {
           priority
         />
       </div>
-      <div className="flex flex-col items-center border-t-[3px] border-primary-low-contrast px-4 py-12 text-center">
+      <div className="flex flex-col items-center border-t-[3px] border-primary-low-contrast px-4 py-10 text-center">
         <Morpher />
         <div className="flex flex-col items-center gap-y-5 lg:max-w-2xl">
           <h1 className="font-black">{t("page-index:page-index-title")}</h1>
