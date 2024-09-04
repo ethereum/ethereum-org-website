@@ -189,7 +189,7 @@ const HomePage = ({
       />
       <TranslatathonBanner pathname={asPath} />
       <HomeHero heroImg={Hero} className="w-full" />
-      <div className="w-full space-y-16 px-4 sm:px-6 md:space-y-32">
+      <div className="w-full space-y-32 lg:space-y-48">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
           {subHeroCTAs.map(({ label, description, href, className, Svg }) => (
             <Fragment key={label}>
