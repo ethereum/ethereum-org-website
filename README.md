@@ -1905,6 +1905,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://raj.me"><img src="https://avatars.githubusercontent.com/u/8170980?v=4?s=100" width="100px;" alt="Abhishek Raj"/><br /><sub><b>Abhishek Raj</b></sub></a><br /><a href="#content-abraj" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/p1kalys"><img src="https://avatars.githubusercontent.com/u/85685112?v=4?s=100" width="100px;" alt="Pavan Emani"/><br /><sub><b>Pavan Emani</b></sub></a><br /><a href="#content-p1kalys" title="Content">🖋</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://v2eth.com/"><img src="https://avatars.githubusercontent.com/u/7024451?v=4?s=100" width="100px;" alt="Mako Shan"/><br /><sub><b>Mako Shan</b></sub></a><br /><a href="#content-makoshan" title="Content">🖋</a></td>
+    </tr>
   </tbody>
 </table>
 
