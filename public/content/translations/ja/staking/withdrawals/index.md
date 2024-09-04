@@ -3,7 +3,7 @@ title: ステーキングの引き出し
 description: ステーキングの引き出しとその仕組み、そしてステーカーが報酬を獲得するためにすべきことをまとめたページ
 lang: ja
 template: staking
-image: ../../images/staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: サイのレズリーとそのステーキング報酬
 sidebarDepth: 2
 summaryPoints:
