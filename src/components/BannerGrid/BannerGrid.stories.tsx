@@ -11,7 +11,6 @@ import { getTranslation } from "@/storybook-utils"
 
 import { langViewportModes } from "../../../.storybook/modes"
 import { ContentContainer } from "../MdComponents"
-import { TooltipProvider } from "../ui/tooltip"
 
 import {
   Banner as BannerComponent,
@@ -38,9 +37,7 @@ const meta = {
     (Story) => (
       <div className="relative w-full">
         <ContentContainer>
-          <TooltipProvider>
-            <Story />
-          </TooltipProvider>
+          <Story />
         </ContentContainer>
       </div>
     ),
