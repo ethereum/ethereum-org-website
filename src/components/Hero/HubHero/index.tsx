@@ -61,9 +61,8 @@ const HubHero = ({
         </Stack>
         <Stack
           className={cn(
-            "h-fit flex-col gap-0 md:flex-row",
-            "md:justify-center xl:justify-start",
-            "gap-4"
+            "flex-col gap-4 md:flex-row",
+            "md:justify-center xl:justify-start"
           )}
         >
           {buttons?.map((button, idx) => {

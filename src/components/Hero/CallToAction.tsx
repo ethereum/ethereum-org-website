@@ -18,6 +18,7 @@ export const CallToAction = ({
   content,
   matomo,
   index,
+  className,
   ...props
 }: CallToActionProps) => {
   const handleClick = () => trackCustomEvent(matomo)
@@ -25,7 +26,7 @@ export const CallToAction = ({
   const buttonProps: ButtonProps = {
     variant: index === 0 ? "solid" : "outline",
     isSecondary: index !== 0,
-    className: cn("flex-[1] md:flex-[initial]", props?.className),
+    className: cn("flex-[1] md:flex-[initial]", className),
   }
 
   return (
