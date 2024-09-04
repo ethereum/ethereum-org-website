@@ -3,7 +3,6 @@ import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaDiscord, FaGithub } from "react-icons/fa6"
 import { MdChevronRight } from "react-icons/md"
-import { Flex, Skeleton } from "@chakra-ui/react"
 
 import type {
   AllMetricData,
@@ -43,6 +42,7 @@ import {
   SectionHeader,
   SectionTag,
 } from "@/components/ui/section"
+import { SkeletonLines } from "@/components/ui/skeleton"
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
@@ -182,13 +182,7 @@ const HomePage = ({
   } = useHome()
 
   return (
-    <Flex
-      as={MainArticle}
-      flexDirection="column"
-      alignItems="center"
-      dir={dir}
-      width="full"
-    >
+    <MainArticle className="flex w-full flex-col items-center" dir={dir}>
       <PageMetadata
         title={t("page-index:page-index-meta-title")}
         description={t("page-index:page-index-meta-description")}
@@ -288,7 +282,7 @@ const HomePage = ({
               <p className="mt-8 text-xl font-bold">
                 {t("page-index:page-index-activity-description")}
               </p>
-              <Suspense fallback={<Skeleton />}>
+              <Suspense fallback={<SkeletonLines noOfLines={10} />}>
                 <StatsBoxGrid metricResults={metricResults} />
               </Suspense>
             </div>
@@ -394,13 +388,13 @@ const HomePage = ({
             </div>
 
             {isModalOpen && (
-              // TODO: Migrate CodeModal, CodeBlock, Skeleton from Chakra-UI to tailwind/shad-cn
+              // TODO: Migrate CodeModal, CodeBlock from Chakra-UI to tailwind/shad-cn
               <CodeModal
                 isOpen={isModalOpen}
                 setIsOpen={setModalOpen}
                 title={codeExamples[activeCode].title}
               >
-                <Suspense fallback={<Skeleton />}>
+                <Suspense fallback={<SkeletonLines noOfLines={16} />}>
                   <Codeblock
                     codeLanguage={codeExamples[activeCode].codeLanguage}
                     allowCollapse={false}
@@ -667,7 +661,7 @@ const HomePage = ({
           </div>
         </Section>
       </div>
-    </Flex>
+    </MainArticle>
   )
 }
 
