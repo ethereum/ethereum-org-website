@@ -111,13 +111,15 @@ export const StaticLayout = ({
             <Stack className="gap-8">
               <Breadcrumbs slug={slug} />
 
-              <p
-                className="text-body-medium"
-                dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
-              >
-                <Translation id="page-last-updated" />:{" "}
-                {lastEditLocaleTimestamp}
-              </p>
+              {!asPath.includes("/whitepaper") && (
+                <p
+                  className="text-body-medium"
+                  dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
+                >
+                  <Translation id="page-last-updated" />:{" "}
+                  {lastEditLocaleTimestamp}
+                </p>
+              )}
             </Stack>
           )}
 
