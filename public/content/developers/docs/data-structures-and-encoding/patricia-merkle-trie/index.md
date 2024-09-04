@@ -137,10 +137,10 @@ Examples:
 Here is the extended code for getting a node in the Merkle Patricia trie:
 
 ```
-    def get_helper(node,path):
-        if path == []: return node
-        if node = '': return ''
-        curnode = rlp.decode(node if len(node) < 32 else db.get(node))
+    def get_helper(node_hash,path):
+        if path == []: return node_hash
+        if node_hash == '': return ''
+        curnode = rlp.decode(node_hash if len(node_hash) < 32 else db.get(node_hash))
         if len(curnode) == 2:
             (k2, v2) = curnode
             k2 = compact_decode(k2)
@@ -151,13 +151,13 @@ Here is the extended code for getting a node in the Merkle Patricia trie:
         elif len(curnode) == 17:
             return get_helper(curnode[path[0]],path[1:])
 
-    def get(node,path):
+    def get(node_hash,path):
         path2 = []
         for i in range(len(path)):
             path2.push(int(ord(path[i]) / 16))
             path2.push(ord(path[i]) % 16)
         path2.push(16)
-        return get_helper(node,path2)
+        return get_helper(node_hash,path2)
 ```
 
 ### Example Trie {#example-trie}
