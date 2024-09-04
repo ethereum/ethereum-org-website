@@ -64,8 +64,6 @@ import {
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
-import "swiper/css/effect-cards"
-
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"

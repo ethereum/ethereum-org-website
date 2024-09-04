@@ -3,6 +3,7 @@ import { MotionGlobalConfig } from "framer-motion"
 import type { Preview } from "@storybook/react"
 
 import ThemeProvider from "@/components/ThemeProvider"
+import { TooltipProvider } from "@/components/ui/tooltip"
 
 import i18n, { baseLocales } from "./i18next"
 import { withNextThemes } from "./withNextThemes"
@@ -39,7 +40,9 @@ const preview: Preview = {
     }),
     (Story) => (
       <ThemeProvider>
-        <Story />
+        <TooltipProvider>
+          <Story />
+        </TooltipProvider>
       </ThemeProvider>
     ),
   ],
