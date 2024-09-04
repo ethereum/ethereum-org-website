@@ -20,7 +20,7 @@ Stattdessen zielt ReFi darauf ab, ökologische, kommunale oder soziale Probleme 
 
 Eine der Grundlagen von ReFi ist das Konzept der regenerativen Wirtschaft, das von John Fullerton vom Capital Institute erdacht wurde. Er schlug [acht miteinander verknüpfte Grundsätze](https://capitalinstitute.org/8-principles-regenerative-economy/) vor, die der systemischen Gesundheit zugrunde liegen:
 
-![Acht miteinander verknüpfte Grundsätze](./refi-regenerative-economy-diagram.png)
+![Acht miteinander verknüpfte Grundsätze](refi-regenerative-economy-diagram.png)
 
 ReFi-Projekte verwirklichen diese Prinzipien mithilfe von [Smart Contracts](/glossary/#smart-contract) und [dezentralen Finanzen (DeFi)](/glossary/#defi), um Anreize für regenerative Verhaltensweisen zu schaffen, z. B. für die Wiederherstellung geschädigter Ökosysteme, und die Zusammenarbeit in großem Maßstab bei globalen Problemen wie Klimawandel und Verlust der Artenvielfalt zu erleichtern.
 
