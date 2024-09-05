@@ -28,6 +28,8 @@ import {
 import CheckboxFilterInput from "@/components/ProductTable/FilterInputs/CheckboxFilterInput"
 import SwitchFilterInput from "@/components/ProductTable/FilterInputs/SwitchFilterInput"
 
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 export const WalletFilters = (): FilterOption[] => {
   const { t } = useTranslation("page-wallets-find-wallet")
   return [
@@ -292,7 +294,7 @@ export const WalletFilters = (): FilterOption[] => {
           filterKey: "languages",
           filterLabel: t("page-find-wallet-languages-supported"),
           description: "",
-          inputState: "en",
+          inputState: DEFAULT_LOCALE,
           ignoreFilterReset: true,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (

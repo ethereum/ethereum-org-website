@@ -28,6 +28,7 @@ interface ProductTableProps<TData, TValue, TPreset> {
   data: TData[]
   filters: FilterOption[]
   presetFilters: TPresetFilters<TPreset>[]
+  resetFilters: () => void
   setFilters: Dispatch<SetStateAction<FilterOption[]>>
   subComponent?: FC<TData>
 }
@@ -37,6 +38,7 @@ const ProductTable = ({
   data,
   filters,
   presetFilters,
+  resetFilters,
   setFilters,
   subComponent,
 }: ProductTableProps<
@@ -206,22 +208,6 @@ const ProductTable = ({
       )
     }, 0)
   }, [filters])
-
-  // Reset filters
-  const resetFilters = () => {
-    const resetFilters = filters.map((filter) => ({
-      ...filter,
-      items: filter.items.map((item) => ({
-        ...item,
-        inputState: false,
-        options: item.options.map((option) => ({
-          ...option,
-          inputState: false,
-        })),
-      })),
-    }))
-    setFilters(resetFilters)
-  }
 
   return (
     <div className="px-0 lg:px-4">
