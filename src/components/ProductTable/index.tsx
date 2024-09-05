@@ -1,4 +1,11 @@
-import { FC, useEffect, useMemo, useState } from "react"
+import {
+  Dispatch,
+  FC,
+  SetStateAction,
+  useEffect,
+  useMemo,
+  useState,
+} from "react"
 import { useRouter } from "next/router"
 import { ColumnDef } from "@tanstack/react-table"
 
@@ -19,16 +26,18 @@ import { Button } from "@/components/ui/buttons/Button"
 interface ProductTableProps<TData, TValue, TPreset> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
-  filterOptions: FilterOption[]
+  filters: FilterOption[]
   presetFilters: TPresetFilters<TPreset>[]
+  setFilters: Dispatch<SetStateAction<FilterOption[]>>
   subComponent?: FC<TData>
 }
 
 const ProductTable = ({
   columns,
   data,
-  filterOptions,
+  filters,
   presetFilters,
+  setFilters,
   subComponent,
 }: ProductTableProps<
   ProductTableRow,
@@ -37,7 +46,6 @@ const ProductTable = ({
 >) => {
   const router = useRouter()
   const [activePresets, setActivePresets] = useState<number[]>([])
-  const [filters, setFilters] = useState<FilterOption[]>(filterOptions)
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
   // Update filters based on router query
@@ -215,34 +223,6 @@ const ProductTable = ({
     setFilters(resetFilters)
   }
 
-  const filteredData = useMemo(() => {
-    const activeFilterKeys: string[] = []
-
-    filters.forEach((filter) => {
-      filter.items.forEach((item) => {
-        if (item.inputState === true) {
-          activeFilterKeys.push(item.filterKey)
-        }
-
-        if (item.options && item.options.length > 0) {
-          item.options.forEach((option) => {
-            if (option.inputState === true) {
-              activeFilterKeys.push(option.filterKey)
-            }
-          })
-        }
-      })
-    })
-
-    if (activeFilterKeys.length === 0) {
-      return data
-    }
-
-    return data.filter((item) => {
-      return activeFilterKeys.every((key) => item[key])
-    })
-  }, [data, filters])
-
   return (
     <div className="px-0 lg:px-4">
       {presetFilters.length ? (
@@ -287,12 +267,12 @@ const ProductTable = ({
               <p className="text-md">{`Filters (${activeFiltersCount})`}</p>
             </Button>
             <p>
-              Showing all wallets (<b>{filteredData.length}</b>)
+              Showing all wallets (<b>{data.length}</b>)
             </p>
           </div>
           <Table
             columns={columns}
-            data={filteredData}
+            data={data}
             subComponent={subComponent}
             resetFilters={resetFilters}
           />
