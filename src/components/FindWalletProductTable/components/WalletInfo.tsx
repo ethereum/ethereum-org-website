@@ -33,7 +33,7 @@ const WalletInfo = ({ wallet }) => {
         <div className="flex flex-col gap-2">
           <p className="text-xl font-bold">{wallet.name}</p>
           {walletPersonas.length > 0 && (
-            <div className="flex flex-row gap-1">
+            <div className="flex flex-row flex-wrap gap-1">
               {walletPersonas.map((persona) => (
                 <Badge key={persona} variant="productTable">
                   {t(persona)}
