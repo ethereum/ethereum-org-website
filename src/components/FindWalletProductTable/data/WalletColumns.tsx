@@ -22,7 +22,9 @@ export const WalletColumns: ColumnDef<WalletColumns>[] = [
     accessorKey: "information",
     header: () => <TableHead className="h-0" />,
     cell: ({ row }) => {
-      return <WalletInfo wallet={row.original} />
+      return (
+        <WalletInfo wallet={row.original} isExpanded={row.getIsExpanded()} />
+      )
     },
   },
   {

@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next"
 
+import { WalletData } from "@/lib/types"
+
 import { ButtonLink } from "@/components/Buttons"
 import { SupportedLanguagesTooltip } from "@/components/FindWalletProductTable/components/SupportedLanguagesTooltip"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
@@ -8,7 +10,12 @@ import { Badge } from "@/components/ui/badge"
 
 import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"
 
-const WalletInfo = ({ wallet }) => {
+interface WalletInfoProps {
+  wallet: WalletData & { supportedLanguages: string[] }
+  isExpanded: boolean
+}
+
+const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
   const walletPersonas = getWalletPersonas(wallet)
   const deviceLabels: Array<string> = []
@@ -43,35 +50,42 @@ const WalletInfo = ({ wallet }) => {
           )}
         </div>
       </div>
-      <div className="flex flex-col gap-2">
-        {deviceLabels.length > 0 && (
-          <div className="flex flex-row gap-2">
-            <DevicesIcon />
-            {deviceLabels.join(" · ")}
-          </div>
-        )}
-        <div className="flex flex-row gap-2">
-          <LanguagesIcon />
-          {formatStringList(wallet.supportedLanguages, 5)}{" "}
-          <SupportedLanguagesTooltip
-            supportedLanguages={wallet.supportedLanguages}
+      <div className="flex flex-row gap-2">
+        <div className="relative hidden w-14 md:block">
+          <div
+            className={`${isExpanded ? "block" : "hidden"} absolute -bottom-9 -top-0 w-1 ${wallet.color}`}
           />
         </div>
-        <div>
-          <ButtonLink
-            href={wallet.url}
-            variant="outline"
-            w={{ base: "full", lg: "auto" }}
-            isExternal
-            size="sm"
-            customEventOptions={{
-              eventCategory: "WalletExternalLinkList",
-              eventAction: "Tap main button",
-              eventName: `${wallet.name}`,
-            }}
-          >
-            {t("page-find-wallet-visit-website")}
-          </ButtonLink>
+        <div className="flex flex-col gap-2">
+          {deviceLabels.length > 0 && (
+            <div className="flex flex-row gap-2">
+              <DevicesIcon />
+              {deviceLabels.join(" · ")}
+            </div>
+          )}
+          <div className="flex flex-row gap-2">
+            <LanguagesIcon />
+            {formatStringList(wallet.supportedLanguages, 5)}{" "}
+            <SupportedLanguagesTooltip
+              supportedLanguages={wallet.supportedLanguages}
+            />
+          </div>
+          <div>
+            <ButtonLink
+              href={wallet.url}
+              variant="outline"
+              w={{ base: "full", lg: "auto" }}
+              isExternal
+              size="sm"
+              customEventOptions={{
+                eventCategory: "WalletExternalLinkList",
+                eventAction: "Tap main button",
+                eventName: `${wallet.name}`,
+              }}
+            >
+              {t("page-find-wallet-visit-website")}
+            </ButtonLink>
+          </div>
         </div>
       </div>
     </div>
