@@ -239,7 +239,7 @@ const HomePage = ({
 
           {/* Mobile */}
           <Swiper
-            options={{ effect: "cards", createElements: true }}
+            options={{ effect: "cards" }}
             className={cn(
               "lg:hidden", // Mobile only
               "[&_.swiper-slide]:overflow-visible [&_.swiper-slide]:rounded-2xl [&_.swiper-slide]:shadow-card-hover",
