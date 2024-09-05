@@ -424,7 +424,7 @@ const LearningToolsPage = () => {
           "page-developers-learning-tools:page-learning-tools-meta-desc"
         )}
       />
-      <MainArticle w="full">
+      <MainArticle className="w-full">
         <Box w="full">
           <Header>
             <H1>
