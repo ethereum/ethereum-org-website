@@ -59,24 +59,22 @@ const PageHero = ({
       )}
     >
       <div
-        // TODO: container.sm width unavailable
         className={cn(
           "max-w-full lg:max-w-[640px]",
-
           isReverse ? "pb-8 pt-0" : "pb-0 pt-8",
           "lg:pb-32 lg:pt-16",
           "ps-0 lg:ps-8",
           "me-0 lg:me-4"
         )}
       >
-        <h1 className="mb-4 mt-0 text-md font-normal uppercase !leading-[1.4] text-text-300 lg:mt-8">
+        <h1 className="mb-4 mt-0 text-md font-normal uppercase !leading-[1.4] lg:mt-8">
           {title}
         </h1>
 
         <h2 className="mb-0 mt-8 max-w-full text-[2.5rem] font-bold !leading-[1.4] lg:mt-12 lg:text-5xl">
           {header}
         </h2>
-        <p className="mb-8 mt-4 text-xl !leading-[1.4] text-text-200 lg:text-2xl">
+        <p className="mb-8 mt-4 text-xl !leading-[1.4] lg:text-2xl">
           {subtitle}
         </p>
 
