@@ -803,21 +803,21 @@ export type RSSResult = {
   }
 }
 
-export type AtomItem = {
-  _?: string
-  $: {
-    type?: string
-    href?: string
-    rel?: string
-  }
-}
+export type AtomElement =
+  | string
+  | {
+      _?: string // children
+      $: {
+        href?: string
+      }
+    }
 export type AtomEntry = {
   id: string[]
-  title: (AtomItem | string)[]
+  title: AtomElement[]
   updated: string[]
-  content?: AtomItem[]
-  link?: (AtomItem | string)[]
-  summary?: AtomItem[]
+  content?: AtomElement[]
+  link?: AtomElement[]
+  summary?: AtomElement[]
 }
 
 export type AtomResult = {

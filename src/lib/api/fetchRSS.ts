@@ -1,6 +1,12 @@
 import { parseString } from "xml2js"
 
-import type { AtomResult, RSSChannel, RSSItem, RSSResult } from "../types"
+import type {
+  AtomElement,
+  AtomResult,
+  RSSChannel,
+  RSSItem,
+  RSSResult,
+} from "../types"
 import { isValidDate } from "../utils/date"
 
 /**
@@ -71,17 +77,13 @@ export const fetchRSS = async (xmlUrl: string | string[]) => {
         })
         // Map to RSSItem object
         .map((entry) => {
-          const getImgSrc = (): string => {
-            const imgRegEx = /https?:\/\/[^"]*?\.(jpe?g|png|webp)/g
-            const content = entry.content?.[0]?._ || ""
-            const summary = entry.summary?.[0]?._ || ""
-            const contentMatch = content.match(imgRegEx)
-            const summaryMatch = summary.match(imgRegEx)
-            if (contentMatch) return contentMatch[0]
-            if (summaryMatch) return summaryMatch[0]
-            return feedImage || ""
+          const getString = (el?: AtomElement[]): string => {
+            if (!el) return ""
+            const [firstEl] = el
+            if (typeof firstEl === "string") return firstEl
+            return firstEl._ || ""
           }
-          const getLink = (): string => {
+          const getHref = (): string => {
             if (!entry.link) {
               console.warn(`No link found for RSS url: ${url}`)
               return ""
@@ -90,15 +92,18 @@ export const fetchRSS = async (xmlUrl: string | string[]) => {
             if (typeof link === "string") return link
             return link.$.href || ""
           }
-          const getTitle = (): string => {
-            const title = entry.title[0]
-            if (typeof title === "string") return title
-            return title._ || ""
+          const getImgSrc = (): string => {
+            const imgRegEx = /https?:\/\/[^"]*?\.(jpe?g|png|webp)/g
+            const contentMatch = getString(entry.content).match(imgRegEx)
+            if (contentMatch) return contentMatch[0]
+            const summaryMatch = getString(entry.summary).match(imgRegEx)
+            if (summaryMatch) return summaryMatch[0]
+            return feedImage || ""
           }
           return {
             pubDate: entry.updated[0],
-            title: getTitle(),
-            link: getLink(),
+            title: getString(entry.title),
+            link: getHref(),
             imgSrc: getImgSrc(),
             source,
             sourceUrl,
