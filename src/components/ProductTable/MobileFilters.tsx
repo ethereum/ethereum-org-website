@@ -99,11 +99,11 @@ const MobileFilters = ({
                   onClick={resetFilters}
                 >
                   <BsArrowCounterclockwise size={16} />
-                  Reset
+                  {t("page-find-wallet-reset-filters")}
                 </Button>
               </div>
               <DrawerClose className="w-1/2 text-center">
-                <Button width="100%">{`See wallets (${dataCount})`}</Button>
+                <Button width="100%">{`${t("page-find-wallet-see-wallets")} (${dataCount})`}</Button>
               </DrawerClose>
             </div>
           </DrawerFooter>

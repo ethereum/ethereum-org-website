@@ -7,6 +7,7 @@ import {
   useState,
 } from "react"
 import { useRouter } from "next/router"
+import { useTranslation } from "react-i18next"
 import { ColumnDef } from "@tanstack/react-table"
 
 import type {
@@ -47,6 +48,7 @@ const ProductTable = ({
   ProductTablePresetFilters
 >) => {
   const router = useRouter()
+  const { t } = useTranslation("page-wallets-find-wallet")
   const [activePresets, setActivePresets] = useState<number[]>([])
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
@@ -250,10 +252,10 @@ const ProductTable = ({
               className="block p-0 lg:hidden"
               onClick={() => setMobileFiltersOpen(true)}
             >
-              <p className="text-md">{`Filters (${activeFiltersCount})`}</p>
+              <p className="text-md">{`${t("page-find-wallet-filters")} (${activeFiltersCount})`}</p>
             </Button>
             <p>
-              Showing all wallets (<b>{data.length}</b>)
+              {t("page-find-wallet-showing")} (<b>{data.length}</b>)
             </p>
           </div>
           <Table

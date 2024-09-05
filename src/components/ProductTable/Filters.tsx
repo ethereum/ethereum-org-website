@@ -72,7 +72,9 @@ const Filters = ({
   return (
     <div className={`w-full lg:w-80`}>
       <div className="width-full flex flex-row items-center justify-between border-b border-b-primary px-2 py-1.5 lg:px-6">
-        <p className="text-md font-bold">Filters ({activeFiltersCount})</p>
+        <p className="text-md font-bold">
+          {t("page-find-wallet-filters")} ({activeFiltersCount})
+        </p>
         <Button
           variant="ghost"
           className="min-h-0 gap-1 p-0"
