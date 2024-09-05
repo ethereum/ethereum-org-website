@@ -104,10 +104,11 @@ Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型
 - [Bio.xyz：為你的生物技術去中心化自治組織或去中心化科研專案募資](https://www.bio.xyz/)
 - [Fleming Protocol：推動協作生物醫學發現的開源式資料經濟](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
-- [CureDAO：社群所有的精準健康平台](https://docs.curedao.org/)
 - [IdeaMarkets：實現去中心化的科學可信度](https://ideamarket.io/)
 - [去中心化科研實驗室](https://www.desci.com/)
 - [ValleyDAO：開放的全球社群，為合成生物學研究提供資金和轉譯支援](https://www.valleydao.bio)
+- [Cerebrum DAO：尋找和培育解決方案以促進大腦健康並預防神經退化性疾病](https://www.cerebrumdao.com/)
+- [CryoDAO：資助深低溫保存領域的「登月」研究](https://www.cryodao.org)
 
 歡迎建議上架新專案 - 請由查看我們的[上架政策](/contributing/adding-desci-projects/)開始！
 
