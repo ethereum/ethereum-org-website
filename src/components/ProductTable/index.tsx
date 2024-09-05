@@ -61,7 +61,7 @@ const ProductTable = ({
       setFilters(updatedFilters)
       router.replace(router.pathname, undefined, { shallow: true })
     }
-  }, [router, filters])
+  }, [router])
 
   // Update or remove preset filters
   const handleSelectPreset = (idx: number) => {
@@ -216,13 +216,30 @@ const ProductTable = ({
   }
 
   const filteredData = useMemo(() => {
-    return data.filter((item) => {
-      console.log(item)
-      return filters.every((filter) => {
-        return filter.items.every((item) => {
-          return item.inputState === true
-        })
+    const activeFilterKeys: string[] = []
+
+    filters.forEach((filter) => {
+      filter.items.forEach((item) => {
+        if (item.inputState === true) {
+          activeFilterKeys.push(item.filterKey)
+        }
+
+        if (item.options && item.options.length > 0) {
+          item.options.forEach((option) => {
+            if (option.inputState === true) {
+              activeFilterKeys.push(option.filterKey)
+            }
+          })
+        }
       })
+    })
+
+    if (activeFilterKeys.length === 0) {
+      return data
+    }
+
+    return data.filter((item) => {
+      return activeFilterKeys.every((key) => item[key])
     })
   }, [data, filters])
 
