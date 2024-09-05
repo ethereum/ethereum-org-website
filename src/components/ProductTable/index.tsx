@@ -212,7 +212,7 @@ const ProductTable = ({
   }, [filters])
 
   return (
-    <div className="px-0 lg:px-4">
+    <div className="px-4">
       {presetFilters.length ? (
         <PresetFilters
           presets={presetFilters}
