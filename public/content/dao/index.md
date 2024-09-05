@@ -1,5 +1,5 @@
 ---
-title: Decentralized autonomous organizations (DAOs)
+title: What is a DAO? | Decentralized Autonomous Organization
 description: An overview of DAOs on Ethereum
 lang: en
 template: use-cases
