@@ -1,6 +1,6 @@
 import React from "react"
 import { useRouter } from "next/router"
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "next-i18next"
 import { BsCalendar3 } from "react-icons/bs"
 import { Box, Flex, Heading, Icon } from "@chakra-ui/react"
 import { Image } from "@chakra-ui/react"
