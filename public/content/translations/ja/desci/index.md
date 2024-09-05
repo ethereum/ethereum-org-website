@@ -104,10 +104,11 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 - [Bio.xyz: バイオテクノロジーDAOや分散型サイエンスプロジェクトのための資金獲得](https://www.bio.xyz/)
 - [Flemingプロトコル: 共同のバイオメディカルの発見を促進するオープンソースのデータエコノミー](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
-- [CureDAO: コミュニティ所有のプレシジョンヘルスプラットフォーム](https://docs.curedao.org/)
 - [IdeaMarkets: 分散型科学の信ぴょう性の有効化](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
 - [ValleyDAO: オープンなグローバルコミュニティで合成生物学研究のファンディングおよび翻訳に関するサポートを提供](https://www.valleydao.bio)
+- [Cerebrum DAO: 脳の健康と神経変性を防ぐためのソリューションの調達と育成](https://www.cerebrumdao.com/)
+- [CryoDAO: 冷凍保存分野におけるムーンショット型研究へのファンディング](https://www.cryodao.org)
 
 新しいプロジェクトを提案する際には[ポリシー一覧](/contributing/adding-desci-projects/)をご覧ください。
 

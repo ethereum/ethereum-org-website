@@ -13,6 +13,7 @@ import {
 
 import { BaseLink } from "@/components/Link"
 
+import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 import * as url from "@/lib/utils/url"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
@@ -102,12 +103,14 @@ export type CardListProps = BoxProps & {
   items: CardProps[]
   imageWidth?: number
   clickHandler?: (idx: string | number) => void
+  customEventOptions?: MatomoEventOptions
 }
 
 const CardList = ({
   items,
   imageWidth,
   clickHandler = () => null,
+  customEventOptions,
   ...props
 }: CardListProps) => (
   <Box bg="background.base" w="full" {...props}>
@@ -122,7 +125,10 @@ const CardList = ({
       ) : (
         <Card
           key={idx}
-          onClick={() => clickHandler(idx)}
+          onClick={() => {
+            customEventOptions && trackCustomEvent(customEventOptions)
+            clickHandler(idx)
+          }}
           mb={4}
           {...listItem}
         />
