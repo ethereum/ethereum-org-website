@@ -18,7 +18,7 @@ const variants = cva("flex items-center gap-3.5", {
   variants: {
     variant: {
       col: "flex-col text-center [&_.body]:text-center",
-      row: "flex-row text-start [&_.body]:text-left [&_.header]:self-start",
+      row: "flex-row text-start [&_.body]:text-start [&_.header]:self-start",
     },
   },
   defaultVariants: {

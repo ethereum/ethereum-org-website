@@ -1,10 +1,10 @@
 import type { Options } from "mdast-util-toc"
 import type { NextPage } from "next"
 import type { AppProps } from "next/app"
-import { StaticImageData } from "next/image"
-import { SSRConfig } from "next-i18next"
+import type { StaticImageData } from "next/image"
+import type { SSRConfig } from "next-i18next"
 import type { ReactElement, ReactNode } from "react"
-import { Icon } from "@chakra-ui/react"
+import type { Icon } from "@chakra-ui/react"
 
 import type {
   DocsFrontmatter,
@@ -18,7 +18,7 @@ import type {
 
 import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
-import { SimulatorNav } from "@/components/Simulator/interfaces"
+import type { SimulatorNav } from "@/components/Simulator/interfaces"
 
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
@@ -26,6 +26,7 @@ import allQuestionData from "@/data/quizzes/questionBank"
 import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
 import { layoutMapping } from "@/pages/[...slug]"
+import twConfig from "@/styles/config"
 
 // Credit: https://stackoverflow.com/a/52331580
 export type Unpacked<T> = T extends (infer U)[] ? U : T
@@ -826,3 +827,5 @@ export type EventCardProps = {
   location: string
   imageUrl?: string
 }
+
+export type BreakpointKey = keyof typeof twConfig.theme.screens

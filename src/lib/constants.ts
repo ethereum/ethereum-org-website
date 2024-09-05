@@ -108,6 +108,7 @@ export const WALLETS_FILTERS_DEFAULT = {
   withdraw_crypto: false,
   multisig: false,
   social_recovery: false,
+  new_to_crypto: false,
 }
 
 export const NEW_TO_CRYPTO_FEATURES = ["new_to_crypto"]
@@ -159,8 +160,11 @@ export const DESKTOP_LANGUAGE_BUTTON_NAME = "desktop-language-button"
 // Codeblock
 export const LINES_BEFORE_COLLAPSABLE = 8
 
+// Ethereum.org community
+export const CALENDAR_DISPLAY_COUNT = 4
+
 // RSS Feeds
-export const RSS_DISPLAY_COUNT = 3
+export const RSS_DISPLAY_COUNT = 6
 
 export const VITALIK_FEED = "https://vitalik.eth.limo/feed.xml"
 export const SOLIDITY_FEED = "https://soliditylang.org/feed.xml"
@@ -201,6 +205,11 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     href: "https://mirror.xyz/privacy-scaling-explorations.eth",
     // feed: "https://mirror.xyz/privacy-scaling-explorations.eth/feed/atom", // Old xml format
   },
+  // {
+  //   href: "https://stark.mirror.xyz/",
+  //   feed: "https://stark.mirror.xyz/feed/atom", // Old xml format
+  // },
+  // TODO: Add support for old xml format, re-enable above when ready
 ]
 
 export const BLOG_FEEDS = COMMUNITY_BLOGS.map(({ feed }) => feed).filter(

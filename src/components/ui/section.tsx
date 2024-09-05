@@ -1,14 +1,24 @@
 import * as React from "react"
+import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils/cn"
 
+// TODO: Add to design system
+const variants = cva("w-full scroll-mt-24", {
+  variants: {
+    variant: {
+      responsiveFlex: "flex flex-col gap-8 md:flex-row lg:gap-16",
+    },
+  },
+})
+
 const Section = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
+  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof variants>
+>(({ className, variant, ...props }, ref) => (
+  <section
     ref={ref}
-    className={cn("flex flex-col gap-8 md:flex-row lg:gap-16", className)}
+    className={cn(variants({ variant, className }))}
     {...props}
   />
 ))
@@ -31,7 +41,7 @@ const SectionBanner = React.forwardRef<
 ))
 SectionBanner.displayName = "SectionBanner"
 
-const SectionTitle = React.forwardRef<
+const SectionHeader = React.forwardRef<
   HTMLHeadingElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
@@ -44,7 +54,7 @@ const SectionTitle = React.forwardRef<
     {...props}
   />
 ))
-SectionTitle.displayName = "SectionTitle"
+SectionHeader.displayName = "SectionHeader"
 
 const SectionTag = React.forwardRef<
   HTMLDivElement,
@@ -69,4 +79,4 @@ const SectionContent = React.forwardRef<
 ))
 SectionContent.displayName = "SectionContent"
 
-export { Section, SectionBanner, SectionContent, SectionTag, SectionTitle }
+export { Section, SectionBanner, SectionContent, SectionHeader, SectionTag }

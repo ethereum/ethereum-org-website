@@ -1,43 +1,29 @@
-import { Fragment, lazy, Suspense, useState } from "react"
+import { Fragment, lazy, Suspense } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
-import { MdChevronRight } from "react-icons/md"
-import { Flex, Skeleton } from "@chakra-ui/react"
+import { FaDiscord, FaGithub } from "react-icons/fa6"
 
 import type {
   AllMetricData,
   BasePageProps,
   CommunityBlog,
-  EventCardProps,
   Lang,
   RSSItem,
 } from "@/lib/types"
-import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
 
-import BentoBox from "@/components/BentoBox"
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
+import { ChevronNext } from "@/components/Chevron"
 import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
-import PostPreviewCard from "@/components/Homepage/PostPreviewCard"
+import BentoCard from "@/components/Homepage/BentoCard"
+import { useHome } from "@/components/Homepage/useHome"
 import AngleBrackets from "@/components/icons/angle-brackets.svg"
-import BlockHeap from "@/components/icons/block-heap.svg"
 import Calendar from "@/components/icons/calendar.svg"
 import CalendarAdd from "@/components/icons/calendar-add.svg"
-import EthTokenIcon from "@/components/icons/eth-token.svg"
-import PickWalletIcon from "@/components/icons/eth-wallet.svg"
-import Layer2Icon from "@/components/icons/layer-2.svg"
-import ChooseNetworkIcon from "@/components/icons/network-layers.svg"
-import TryAppsIcon from "@/components/icons/phone-homescreen.svg"
-import RoadmapSign from "@/components/icons/roadmap-sign.svg"
-import Whitepaper from "@/components/icons/whitepaper.svg"
 import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
-import PostsSwiper from "@/components/PostsSwiper"
-import SwiperCards from "@/components/SwiperCards"
+import Swiper from "@/components/Swiper"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
@@ -53,9 +39,10 @@ import {
   Section,
   SectionBanner,
   SectionContent,
+  SectionHeader,
   SectionTag,
-  SectionTitle,
 } from "@/components/ui/section"
+import { SkeletonLines } from "@/components/ui/skeleton"
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
@@ -64,26 +51,19 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { polishRSSList } from "@/lib/utils/rss"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { breakpointAsNumber } from "@/lib/utils/screen"
 import { getLocaleTimestamp } from "@/lib/utils/time"
-import {
-  getRequiredNamespacesForPage,
-  isLangRightToLeft,
-} from "@/lib/utils/translations"
-
-import events from "@/data/community-events.json"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import {
   BASE_TIME_UNIT,
   BLOG_FEEDS,
   BLOGS_WITHOUT_FEED,
+  CALENDAR_DISPLAY_COUNT,
   GITHUB_REPO_URL,
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
-import CreateWalletContent from "!!raw-loader!@/data/CreateWallet.js"
-import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
-import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
-import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -118,7 +98,6 @@ const cachedGrowThePieData = runOnlyOnce(fetchGrowThePie)
 const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
 
 type Props = BasePageProps & {
-  communityEvents: CommunityEventsReturnType
   metricResults: AllMetricData
   rssData: { rssItems: RSSItem[]; blogLinks: CommunityBlog[] }
 }
@@ -134,6 +113,13 @@ export const getStaticProps = (async ({ locale }) => {
   }
 
   const communityEvents = await cachedFetchCommunityEvents()
+  const calendar = communityEvents.upcomingEventData
+    .sort((a, b) => {
+      const dateA = isValidDate(a.date) ? new Date(a.date).getTime() : -Infinity
+      const dateB = isValidDate(b.date) ? new Date(b.date).getTime() : -Infinity
+      return dateA - dateB
+    })
+    .slice(0, CALENDAR_DISPLAY_COUNT)
 
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage("/")
@@ -163,7 +149,7 @@ export const getStaticProps = (async ({ locale }) => {
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
-      communityEvents,
+      calendar,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
       metricResults,
@@ -174,184 +160,36 @@ export const getStaticProps = (async ({ locale }) => {
 }) satisfies GetStaticProps<Props>
 
 const HomePage = ({
-  communityEvents,
+  calendar,
   metricResults,
   rssData: { rssItems, blogLinks },
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { t } = useTranslation(["common", "page-index"])
-  const { locale, asPath } = useRouter()
-  const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
-
-  const [isModalOpen, setModalOpen] = useState(false)
-  const [activeCode, setActiveCode] = useState(0)
-
-  const toggleCodeExample = (id: number): void => {
-    setActiveCode(id)
-    setModalOpen(true)
-  }
-
-  const codeExamples: CodeExample[] = [
-    {
-      title: t("page-index:page-index-developers-code-example-title-0"),
-      description: t(
-        "page-index:page-index-developers-code-example-description-0"
-      ),
-      codeLanguage: "language-solidity",
-      code: SimpleWalletContent,
-    },
-    {
-      title: t("page-index:page-index-developers-code-example-title-1"),
-      description: t(
-        "page-index:page-index-developers-code-example-description-1"
-      ),
-      codeLanguage: "language-solidity",
-      code: SimpleTokenContent,
-    },
-    {
-      title: t("page-index:page-index-developers-code-example-title-2"),
-      description: t(
-        "page-index:page-index-developers-code-example-description-2"
-      ),
-      codeLanguage: "language-javascript",
-      code: CreateWalletContent,
-    },
-    {
-      title: t("page-index:page-index-developers-code-example-title-3"),
-      description: t(
-        "page-index:page-index-developers-code-example-description-3"
-      ),
-      codeLanguage: "language-solidity",
-      code: SimpleDomainRegistryContent,
-    },
-  ]
-
-  const subHeroCTAs = [
-    {
-      label: t("page-index:page-index-cta-wallet-label"),
-      description: t("page-index:page-index-cta-wallet-description"),
-      href: "/wallets/find-wallet/",
-      Svg: PickWalletIcon,
-      className: "text-primary hover:text-primary-hover", // TODO: Confirm hover style
-    },
-    {
-      label: t("page-index:page-index-cta-get-eth-label"),
-      description: t("page-index:page-index-cta-get-eth-description"),
-      href: "/get-eth/",
-      Svg: EthTokenIcon,
-      className: "text-accent-a hover:text-accent-a-hover",
-    },
-    {
-      label: t("page-index:page-index-cta-networks-label"),
-      description: t("page-index:page-index-cta-networks-description"),
-      href: "/layer-2/", // TODO: Update with new networks page when ready
-      Svg: ChooseNetworkIcon,
-      className: "text-accent-b hover:text-accent-b-hover",
-    },
-    {
-      label: t("page-index:page-index-cta-dapps-label"),
-      description: t("page-index:page-index-cta-dapps-description"),
-      href: "/dapps/",
-      Svg: TryAppsIcon,
-      className: "text-accent-c hover:text-accent-c-hover",
-    },
-  ]
-
-  const popularTopics = [
-    {
-      label: t("page-index:page-index-popular-topics-ethereum"),
-      Svg: EthTokenIcon,
-      href: "/what-is-ethereum/",
-    },
-    {
-      label: t("page-index:page-index-popular-topics-wallets"),
-      Svg: PickWalletIcon,
-      href: "/wallets/",
-    },
-    {
-      label: t("page-index:page-index-popular-topics-start"),
-      Svg: BlockHeap,
-      href: "/guides/",
-    },
-    {
-      label: t("page-index:page-index-popular-topics-whitepaper"),
-      Svg: Whitepaper,
-      href: "/whitepaper/",
-    },
-    {
-      label: t("page-index:page-index-popular-topics-roadmap"),
-      Svg: RoadmapSign,
-      href: "/roadmap/",
-    },
-  ]
-
-  const upcomingEvents = events
-    .filter((event) => {
-      const isValid = isValidDate(event.endDate)
-      const isUpcoming =
-        new Date(event.endDate).getTime() > new Date().getTime()
-      return isValid && isUpcoming
-    })
-    .sort(
-      (a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime()
-    )
-    .slice(0, 3) as EventCardProps[] // Show 3 events ending soonest
-
-  const calendar = communityEvents.upcomingEventData
-    .sort((a, b) => {
-      const dateA = isValidDate(a.date) ? new Date(a.date).getTime() : -Infinity
-      const dateB = isValidDate(b.date) ? new Date(b.date).getTime() : -Infinity
-      return dateA - dateB
-    })
-    .slice(0, 4) // Show next 4 events on the calendar
-
-  const joinActions = [
-    {
-      Svg: Layer2Icon,
-      label: t("page-index:page-index-join-action-contribute-label"),
-      href: "/contributing/",
-      className: "text-accent-c hover:text-accent-c-hover",
-      description: t(
-        "page-index:page-index-join-action-contribute-description"
-      ),
-    },
-    {
-      Svg: FaGithub,
-      label: "GitHub",
-      href: GITHUB_REPO_URL,
-      className: "text-accent-a hover:text-accent-a-hover",
-      description: t("page-index:page-index-join-action-github-description"),
-    },
-    {
-      Svg: FaDiscord,
-      label: "Discord",
-      href: "/discord/",
-      className: "text-primary hover:text-primary-hover",
-      description: t("page-index:page-index-join-action-discord-description"),
-    },
-    {
-      Svg: FaXTwitter,
-      label: "X",
-      href: "https://x.com/EthDotOrg",
-      className: "text-accent-b hover:text-accent-b-hover",
-      description: t("page-index:page-index-join-action-twitter-description"),
-    },
-  ]
+  const {
+    t,
+    locale,
+    asPath,
+    dir,
+    isModalOpen,
+    setModalOpen,
+    activeCode,
+    toggleCodeExample,
+    codeExamples,
+    subHeroCTAs,
+    popularTopics,
+    upcomingEvents,
+    joinActions,
+    bentoItems,
+  } = useHome()
 
   return (
-    <Flex
-      as={MainArticle}
-      flexDirection="column"
-      alignItems="center"
-      dir={dir}
-      width="full"
-    >
+    <MainArticle className="flex w-full flex-col items-center" dir={dir}>
       <PageMetadata
         title={t("page-index:page-index-meta-title")}
         description={t("page-index:page-index-meta-description")}
       />
       <TranslatathonBanner pathname={asPath} />
       <HomeHero heroImg={Hero} className="w-full" />
-      <div className="w-full space-y-16 px-4 sm:px-6 md:space-y-32">
+      <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
           {subHeroCTAs.map(({ label, description, href, className, Svg }) => (
             <Fragment key={label}>
@@ -377,41 +215,95 @@ const HomePage = ({
           ))}
         </div>
 
-        {/* Mobile */}
-        <SwiperCards className="lg:hidden" />
+        {/* Use Cases - A new way to use the internet */}
+        <Section
+          id="use"
+          className={cn(
+            "max-lg:-mx-4 max-lg:flex max-lg:w-[100vw] max-lg:flex-col max-lg:overflow-hidden max-lg:px-4 sm:max-lg:-mx-6 sm:max-lg:px-6", // Mobile: Swiper cards
+            "lg:grid lg:grid-cols-bento lg:gap-4" // Desktop: BentoBox grid
+          )}
+        >
+          <div
+            className={cn(
+              "flex flex-col",
+              "lg:col-span-12 xl:col-span-3 xl:col-start-2"
+            )}
+          >
+            <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
+              {t("common:nav-use-cases-label")}
+            </div>
+            <h2 className="mb-4 me-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
+              {t("page-index:page-index-bento-header")}
+            </h2>
+          </div>
 
-        {/* Desktop */}
-        <BentoBox className="hidden lg:block" />
+          {/* Mobile */}
+          <Swiper
+            options={{ effect: "cards", createElements: true }}
+            className={cn(
+              "lg:hidden", // Mobile only
+              "[&_.swiper-slide]:overflow-visible [&_.swiper-slide]:rounded-2xl [&_.swiper-slide]:shadow-card-hover",
+              "[&_.swiper]:mx-auto [&_.swiper]:mt-4 [&_.swiper]:!flex [&_.swiper]:h-fit [&_.swiper]:max-w-128 [&_.swiper]:flex-col [&_.swiper]:items-center"
+            )}
+          >
+            {bentoItems.map(({ className, ...item }) => (
+              <BentoCard
+                key={item.title}
+                imgHeight={220}
+                {...item}
+                className={cn(className, "bg-background text-body")}
+                imgWidth={undefined} // Intentionally last to override box
+              />
+            ))}
+          </Swiper>
 
-        <Section>
+          {/* Desktop */}
+          {bentoItems.map(({ className, ...item }) => (
+            <BentoCard
+              key={item.title}
+              {...item}
+              className={cn(className, "max-lg:hidden")} // Desktop only
+            />
+          ))}
+        </Section>
+
+        {/* Activity - The strongest ecosystem */}
+        <Section id="activity" variant="responsiveFlex">
           <SectionBanner>
             <TwImage src={ActivityImage} alt="" />
           </SectionBanner>
 
           <SectionContent>
             <SectionTag>{t("page-index:page-index-activity-tag")}</SectionTag>
-            <SectionTitle>
-              {t("page-index:page-index-activity-title")}
-            </SectionTitle>
+            <SectionHeader>
+              {t("page-index:page-index-activity-header")}
+            </SectionHeader>
             <div className="py-16 lg:py-32">
               <p className="mt-8 text-xl font-bold">
                 {t("page-index:page-index-activity-description")}
               </p>
-              <StatsBoxGrid metricResults={metricResults} />
+              <Suspense fallback={<SkeletonLines noOfLines={10} />}>
+                <StatsBoxGrid metricResults={metricResults} />
+              </Suspense>
             </div>
           </SectionContent>
         </Section>
 
-        <Section className="md:flex-row-reverse">
+        {/* Learn - Understand Ethereum */}
+        <Section
+          id="learn"
+          variant="responsiveFlex"
+          className="md:flex-row-reverse"
+        >
           <SectionBanner>
             <TwImage src={LearnImage} alt="" />
           </SectionBanner>
 
           <SectionContent>
             <SectionTag>{t("page-index:page-index-learn-tag")}</SectionTag>
-            <SectionTitle>
-              {t("page-index:page-index-learn-title")}
-            </SectionTitle>
+            <SectionHeader>
+              {t("page-index:page-index-learn-header")}
+            </SectionHeader>
             <div className="flex flex-col gap-y-16 lg:gap-y-32">
               <p className="text-lg">
                 {t("page-index:page-index-learn-description")}
@@ -435,9 +327,9 @@ const HomePage = ({
                   ))}
                 </div>
                 <div className="flex justify-center py-8 md:justify-start">
-                  <ButtonLink href="/learn/" size="lg">
+                  <ButtonLink href="/learn/" size="lg" variant="outline">
                     {t("page-index:page-index-popular-topics-action")}{" "}
-                    <MdChevronRight />
+                    <ChevronNext />
                   </ButtonLink>
                 </div>
               </div>
@@ -447,23 +339,24 @@ const HomePage = ({
 
         {/* TODO: Add "The Internet Is Changing" section */}
 
-        <Section>
+        {/* Builders - Blockchain's biggest builder community */}
+        <Section id="builders" variant="responsiveFlex">
           <SectionBanner>
             <TwImage src={BuildersImage} alt="" />
           </SectionBanner>
 
           <SectionContent>
             <SectionTag>{t("page-index:page-index-builders-tag")}</SectionTag>
-            <SectionTitle>
-              {t("page-index:page-index-builders-title")}
-            </SectionTitle>
+            <SectionHeader>
+              {t("page-index:page-index-builders-header")}
+            </SectionHeader>
             <p className="text-lg">
               {t("page-index:page-index-builders-description")}
             </p>
             <div className="flex flex-wrap gap-6 py-8">
               <ButtonLink href="/developers/" size="lg" className="w-fit">
                 {t("page-index:page-index-builders-action-primary")}{" "}
-                <MdChevronRight />
+                <ChevronNext />
               </ButtonLink>
               <ButtonLink
                 href="/developers/docs/"
@@ -495,13 +388,13 @@ const HomePage = ({
             </div>
 
             {isModalOpen && (
-              // TODO: Migrate CodeModal, CodeBlock, Skeleton from Chakra-UI to tailwind/shad-cn
+              // TODO: Migrate CodeModal, CodeBlock from Chakra-UI to tailwind/shad-cn
               <CodeModal
                 isOpen={isModalOpen}
                 setIsOpen={setModalOpen}
                 title={codeExamples[activeCode].title}
               >
-                <Suspense fallback={<Skeleton />}>
+                <Suspense fallback={<SkeletonLines noOfLines={16} />}>
                   <Codeblock
                     codeLanguage={codeExamples[activeCode].codeLanguage}
                     allowCollapse={false}
@@ -515,16 +408,21 @@ const HomePage = ({
           </SectionContent>
         </Section>
 
-        <Section className="md:flex-row-reverse">
+        {/* Ethereum.org community - Built by the community */}
+        <Section
+          id="community"
+          variant="responsiveFlex"
+          className="md:flex-row-reverse"
+        >
           <SectionBanner>
             <TwImage src={CommunityImage} alt="" />
           </SectionBanner>
 
           <SectionContent>
             <SectionTag>{t("page-index:page-index-community-tag")}</SectionTag>
-            <SectionTitle>
-              {t("page-index:page-index-community-title")}
-            </SectionTitle>
+            <SectionHeader>
+              {t("page-index:page-index-community-header")}
+            </SectionHeader>
             <div className="mt-8 flex flex-col gap-8 text-lg">
               <p>{t("page-index:page-index-community-description-1")}</p>
               <p>{t("page-index:page-index-community-description-2")}</p>
@@ -532,7 +430,7 @@ const HomePage = ({
             </div>
             <div className="flex flex-wrap gap-3 py-8">
               <ButtonLink href="/community/" size="lg">
-                {t("page-index:page-index-community-action")} <MdChevronRight />
+                {t("page-index:page-index-community-action")} <ChevronNext />
               </ButtonLink>
               <div className="flex gap-3">
                 <ButtonLink
@@ -584,7 +482,7 @@ const HomePage = ({
                       <ButtonLink
                         className="h-fit w-full text-nowrap px-5 sm:w-fit xl:self-center"
                         size="md"
-                        variant="outline"
+                        variant="ghost"
                         href={calendarLink}
                         hideArrow
                       >
@@ -603,20 +501,51 @@ const HomePage = ({
           </SectionContent>
         </Section>
 
-        <div className="w-full">
+        {/* Recent posts */}
+        <Section id="recent">
           <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
             {t("page-index:page-index-posts-header")}
           </h3>
           <p>{t("page-index:page-index-posts-subtitle")}</p>
-          {/* Mobile */}
-          <PostsSwiper items={rssItems} className="mt-4 md:hidden" />
 
-          {/* Desktop */}
-          <div className="hidden gap-8 md:mt-16 md:grid md:grid-cols-3">
-            {rssItems.map((post) => (
-              <PostPreviewCard key={post.title} {...post} />
+          <Swiper
+            className="mt-4 md:mt-16"
+            options={{
+              spaceBetween: 32,
+              breakpoints: {
+                [breakpointAsNumber.sm]: {
+                  slidesPerView: 2,
+                  slidesPerGroup: 2,
+                },
+                [breakpointAsNumber.lg]: {
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                },
+              },
+            }}
+          >
+            {rssItems.map(({ pubDate, title, source, link, imgSrc }) => (
+              <Card key={title} href={link}>
+                <CardBanner>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={imgSrc} alt="" />
+                </CardBanner>
+                <CardContent>
+                  <CardTitle>{title}</CardTitle>
+                  {isValidDate(pubDate) && (
+                    <CardSubTitle>
+                      {new Intl.DateTimeFormat(locale, {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric",
+                      }).format(new Date(pubDate))}
+                    </CardSubTitle>
+                  )}
+                  <CardHighlight>{source}</CardHighlight>
+                </CardContent>
+              </Card>
             ))}
-          </div>
+          </Swiper>
 
           <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
             <p className="text-lg">{t("page-index:page-index-posts-action")}</p>
@@ -628,9 +557,10 @@ const HomePage = ({
               ))}
             </div>
           </div>
-        </div>
+        </Section>
 
-        <div className="w-full">
+        {/* Events */}
+        <Section id="events">
           <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
             {t("page-index:page-index-events-header")}
           </h3>
@@ -693,24 +623,26 @@ const HomePage = ({
           </div>
           <div className="flex justify-center py-8 md:justify-start">
             <ButtonLink href="/community/events/" size="lg" className="mx-auto">
-              {t("page-index:page-index-events-action")} <MdChevronRight />
+              {t("page-index:page-index-events-action")} <ChevronNext />
             </ButtonLink>
           </div>
-        </div>
+        </Section>
 
-        <div
+        {/* Join ethereum.org */}
+        <Section
+          id="join"
           className={cn(
-            "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-4xl before:content-['']", // Border/gradient positioning
+            "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(theme(borderRadius.4xl)+1px)] before:content-['']", // Border/gradient positioning
             "before:bg-gradient-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
             "relative inset-0 rounded-4xl bg-background" // Paint background color over card portion
           )}
         >
-          <div className="mb-12 flex flex-col gap-y-8 rounded-4xl bg-radial-a px-4 py-8 lg:mb-32 xl:mb-36">
+          <div className="mb-12 flex flex-col gap-y-8 rounded-4xl bg-radial-a px-8 py-12 lg:mb-32 xl:mb-36">
             <div className="flex flex-col gap-y-4 text-center">
               <h2>{t("page-index:page-index-join-header")}</h2>
               <p>{t("page-index:page-index-join-description")}</p>
             </div>
-            <div className="mx-auto grid grid-cols-1 gap-16 md:max-w-screen-md md:grid-cols-2">
+            <div className="mx-auto grid grid-cols-1 gap-16 md:grid-cols-2">
               {joinActions.map(
                 ({ Svg, label, href, className, description }) => (
                   <SvgButtonLink
@@ -727,9 +659,9 @@ const HomePage = ({
               )}
             </div>
           </div>
-        </div>
+        </Section>
       </div>
-    </Flex>
+    </MainArticle>
   )
 }
 

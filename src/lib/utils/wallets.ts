@@ -95,8 +95,11 @@ export const formatStringList = (strings: string[], sliceSize?: number) => {
 }
 
 // Get border custom color for Persona filter
-export const getPersonaBorderColor = (selectedPersona: number, idx: number) => {
-  return selectedPersona === idx ? "primary.base" : "transparent"
+export const getPersonaBorderColor = (
+  selectedPersona: number[],
+  idx: number
+) => {
+  return selectedPersona.includes(idx) ? "primary.base" : "transparent"
 }
 
 // Get total count of wallets that support a language
