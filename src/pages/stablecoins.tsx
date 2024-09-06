@@ -394,7 +394,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       {
         content: t("page-stablecoins-how-they-work-button"),
         toId: "how",
-        variant: "outline",
+        variant: "outline" as const,
         matomo: {
           eventCategory: "stablecoins hero buttons",
           eventAction: "click",

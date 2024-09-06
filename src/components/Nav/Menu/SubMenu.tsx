@@ -19,6 +19,7 @@ import {
 } from "@radix-ui/react-navigation-menu"
 
 import { ButtonProps } from "@/components/Buttons"
+import { ChevronNext } from "@/components/Chevron"
 import Link from "@/components/Link"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -27,7 +28,6 @@ import { cleanPath } from "@/lib/utils/url"
 import type { Level, NavItem, NavSectionKey } from "../types"
 
 import ItemContent from "./ItemContent"
-import NextChevron from "./NextChevron"
 import { useSubMenu } from "./useSubMenu"
 
 type LvlContentProps = {
@@ -83,7 +83,7 @@ const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
                 const buttonProps: ButtonProps = {
                   color: menuColors.body,
                   leftIcon: lvl === 1 && icon ? <Icon as={icon} /> : undefined,
-                  rightIcon: isLink ? undefined : <NextChevron />,
+                  rightIcon: isLink ? undefined : <ChevronNext />,
                   position: "relative",
                   w: "full",
                   me: -PADDING,
