@@ -17,7 +17,7 @@ export type WalletColumns = {
 
 export const WalletColumns: ColumnDef<Wallet>[] = [
   {
-    accessorKey: "information",
+    id: "walletInfo",
     header: () => <TableHead className="h-0" />,
     cell: ({ row }) => {
       return (
