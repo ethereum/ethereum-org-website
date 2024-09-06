@@ -154,7 +154,7 @@ All translations will also be subject to a thorough review before being added to
 </ExpandableCard>
 
 <ExpandableCard title="Which languages can I translate into?">
-    <p>You can translate into any language! It is recommended to only translate into your native language to ensure sufficient quality, but in short, all language available in Crowdin are in scope for the Translatathon.</p>
+    <p>You can translate into any language! It is recommended to only translate into your native language to ensure sufficient quality, but in short, all languages available in Crowdin are in scope for the Translatathon.</p>
     <p>If you want to translate into a language that isn't available in Crowdin, reach out to us and we will add any language per request.</p>
 </ExpandableCard>
 

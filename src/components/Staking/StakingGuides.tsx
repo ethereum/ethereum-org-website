@@ -19,8 +19,13 @@ const StakingGuides = () => {
     },
     {
       title: t("page-staking-guide-title-rocket-pool"),
-      link: "https://rocketpool.net/node-operators",
+      link: "https://docs.rocketpool.net/guides/node/responsibilities",
       description: t("page-staking-guide-description-mac-linux"),
+    },
+    {
+      title: t("page-staking-guide-title-stakewise"),
+      link: "https://docs.stakewise.io/guides/staking#liquid-solo-staking",
+      description: t("page-staking-guide-description-mac-linux-windows"),
     },
   ]
 

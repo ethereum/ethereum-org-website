@@ -49,7 +49,7 @@ import {
   getRequiredNamespacesForPage,
 } from "@/lib/utils/translations"
 
-import { fetchTxCount } from "@/lib/api/fetchTxCount"
+import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import dogeComputerImg from "@/public/images/doge-computer.png"
 import ethImg from "@/public/images/eth.png"
 import diffEthAndBtc from "@/public/images/eth.png"
@@ -157,7 +157,7 @@ const Image400 = ({ src }: Pick<ImageProps, "src">) => (
   <TwImage src={src} alt="" width={400} />
 )
 
-const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
+const cachedFetchTxCount = runOnlyOnce(fetchGrowThePie)
 
 type Props = BasePageProps & {
   data: MetricReturnData
@@ -181,7 +181,7 @@ export const getStaticProps = (async ({ locale }) => {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       lastDeployLocaleTimestamp,
-      data,
+      data: data.txCount,
     },
   }
 }) satisfies GetStaticProps<Props>
@@ -650,13 +650,7 @@ const WhatIsEthereumPage = ({
                     <ButtonLink href="/smart-contracts/">
                       {t("page-what-is-ethereum-more-on-smart-contracts")}
                     </ButtonLink>
-                    <ButtonLink
-                      href="/dapps/"
-                      buttonProps={{
-                        variant: "outline",
-                        isSecondary: true,
-                      }}
-                    >
+                    <ButtonLink href="/dapps/" variant="outline" isSecondary>
                       {t("page-what-is-ethereum-explore-dapps")}
                     </ButtonLink>
                   </ButtonRow>
@@ -679,13 +673,7 @@ const WhatIsEthereumPage = ({
                     <ButtonLink href="/eth/">
                       {t("page-what-is-ethereum-what-is-ether")}
                     </ButtonLink>
-                    <ButtonLink
-                      href="/get-eth/"
-                      buttonProps={{
-                        variant: "outline",
-                        isSecondary: true,
-                      }}
-                    >
+                    <ButtonLink href="/get-eth/" variant="outline" isSecondary>
                       {t("page-what-is-ethereum-get-eth")}
                     </ButtonLink>
                   </ButtonRow>
@@ -714,10 +702,8 @@ const WhatIsEthereumPage = ({
                     </ButtonLink>
                     <ButtonLink
                       href="/roadmap/merge/"
-                      buttonProps={{
-                        variant: "outline",
-                        isSecondary: true,
-                      }}
+                      variant="outline"
+                      isSecondary
                     >
                       {t("page-what-is-ethereum-the-merge-update")}
                     </ButtonLink>
