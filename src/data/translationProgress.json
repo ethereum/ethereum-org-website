@@ -9,7 +9,7 @@
   {
     "languageId": "am",
     "words": {
-      "approved": 9519,
+      "approved": 9516,
       "total": 277336
     }
   },
@@ -79,7 +79,7 @@
   {
     "languageId": "cs",
     "words": {
-      "approved": 50585,
+      "approved": 50584,
       "total": 277336
     }
   },
@@ -436,14 +436,14 @@
   {
     "languageId": "pcm",
     "words": {
-      "approved": 15375,
+      "approved": 15374,
       "total": 277336
     }
   },
   {
     "languageId": "pl",
     "words": {
-      "approved": 75401,
+      "approved": 75398,
       "total": 277336
     }
   },
@@ -563,7 +563,7 @@
     "languageId": "te",
     "words": {
       "approved": 8486,
-      "total": 277399
+      "total": 277336
     }
   },
   {
@@ -618,7 +618,7 @@
   {
     "languageId": "uk",
     "words": {
-      "approved": 89566,
+      "approved": 89563,
       "total": 277336
     }
   },
