@@ -7,7 +7,7 @@ import { WalletFilters } from "@/components/FindWalletProductTable/data/WalletFi
 import { WalletPersonaPresets } from "@/components/FindWalletProductTable/data/WalletPersonaPresets"
 import ProductTable from "@/components/ProductTable"
 
-import WalletSubComponent from "./components/WalletSubComponent"
+import WalletSubComponent from "./WalletSubComponent"
 
 const FindWalletProductTable = ({ wallets }) => {
   const walletPersonas = WalletPersonaPresets()

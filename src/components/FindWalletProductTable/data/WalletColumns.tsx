@@ -5,7 +5,7 @@ import { ColumnDef } from "@tanstack/react-table"
 
 import { Wallet } from "@/lib/types"
 
-import WalletInfo from "@/components/FindWalletProductTable/components/WalletInfo"
+import WalletInfo from "@/components/FindWalletProductTable/WalletInfo"
 import { TableHead } from "@/components/ui/table"
 
 // This type is used to define the shape of our data.

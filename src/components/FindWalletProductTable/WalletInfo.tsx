@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next"
 import { Wallet } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
-import { SupportedLanguagesTooltip } from "@/components/FindWalletProductTable/components/SupportedLanguagesTooltip"
+import { SupportedLanguagesTooltip } from "@/components/FindWalletProductTable/SupportedLanguagesTooltip"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { TwImage } from "@/components/Image"
 import { Badge } from "@/components/ui/badge"

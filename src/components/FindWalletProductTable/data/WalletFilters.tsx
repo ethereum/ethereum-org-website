@@ -2,7 +2,7 @@ import { useTranslation } from "next-i18next"
 
 import { FilterOption } from "@/lib/types"
 
-import FindWalletLanguageSelectInput from "@/components/FindWalletProductTable/components/FindWalletLanguageSelectInput"
+import FindWalletLanguageSelectInput from "@/components/FindWalletProductTable/FindWalletLanguageSelectInput"
 import {
   BrowserIcon,
   BuyCryptoIcon,

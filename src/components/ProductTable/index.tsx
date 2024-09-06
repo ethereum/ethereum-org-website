@@ -43,7 +43,7 @@ const ProductTable = ({
   subComponent,
 }: ProductTableProps<ProductTableRow, ProductTableColumnDefs>) => {
   const router = useRouter()
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const { t } = useTranslation("table")
   const [activePresets, setActivePresets] = useState<number[]>([])
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
@@ -247,10 +247,10 @@ const ProductTable = ({
               className="block p-0 lg:hidden"
               onClick={() => setMobileFiltersOpen(true)}
             >
-              <p className="text-md">{`${t("page-find-wallet-filters")} (${activeFiltersCount})`}</p>
+              <p className="text-md">{`${t("table-filters")} (${activeFiltersCount})`}</p>
             </Button>
             <p>
-              {t("page-find-wallet-showing")} (<b>{data.length}</b>)
+              {t("table-showing")} (<b>{data.length}</b>)
             </p>
           </div>
           <Table

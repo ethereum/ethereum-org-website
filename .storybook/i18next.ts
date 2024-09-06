@@ -24,6 +24,7 @@ export const ns = [
   "page-upgrades-index",
   "page-wallets-find-wallet",
   "page-developers-docs",
+  "table",
 ] as const
 const supportedLngs = Object.keys(baseLocales)
 
