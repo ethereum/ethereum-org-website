@@ -7,6 +7,7 @@ import { WalletFilters } from "@/components/FindWalletProductTable/data/WalletFi
 import { WalletPersonaPresets } from "@/components/FindWalletProductTable/data/WalletPersonaPresets"
 import ProductTable from "@/components/ProductTable"
 
+import FindWalletsNoResults from "./FindWalletsNoResults"
 import WalletSubComponent from "./WalletSubComponent"
 
 const FindWalletProductTable = ({ wallets }) => {
@@ -59,6 +60,9 @@ const FindWalletProductTable = ({ wallets }) => {
       resetFilters={resetFilters}
       setFilters={setFilters}
       subComponent={(wallet) => <WalletSubComponent wallet={wallet} />}
+      noResultsComponent={() => (
+        <FindWalletsNoResults resetFilters={resetFilters} />
+      )}
     />
   )
 }

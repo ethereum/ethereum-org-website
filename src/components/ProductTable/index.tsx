@@ -31,6 +31,7 @@ interface ProductTableProps<TData, TValue> {
   resetFilters: () => void
   setFilters: Dispatch<SetStateAction<FilterOption[]>>
   subComponent?: FC<TData>
+  noResultsComponent?: React.FC
 }
 
 const ProductTable = ({
@@ -41,6 +42,7 @@ const ProductTable = ({
   resetFilters,
   setFilters,
   subComponent,
+  noResultsComponent,
 }: ProductTableProps<ProductTableRow, ProductTableColumnDefs>) => {
   const router = useRouter()
   const { t } = useTranslation("table")
@@ -257,7 +259,7 @@ const ProductTable = ({
             columns={columns}
             data={data}
             subComponent={subComponent}
-            resetFilters={resetFilters}
+            noResultsComponent={noResultsComponent}
           />
         </div>
       </div>
