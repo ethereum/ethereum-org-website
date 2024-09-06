@@ -8,8 +8,6 @@ import { WalletFilters } from "@/components/FindWalletProductTable/data/WalletFi
 import { WalletPersonaPresets } from "@/components/FindWalletProductTable/data/WalletPersonaPresets"
 import ProductTable from "@/components/ProductTable"
 
-import { DEFAULT_LOCALE } from "@/lib/constants"
-
 const FindWalletProductTable = ({ wallets }) => {
   const walletPersonas = WalletPersonaPresets()
   const walletFilterOptions = WalletFilters()
@@ -48,18 +46,7 @@ const FindWalletProductTable = ({ wallets }) => {
 
   // Reset filters
   const resetFilters = () => {
-    const resetFilters = filters.map((filter) => ({
-      ...filter,
-      items: filter.items.map((item) => ({
-        ...item,
-        inputState: item.filterKey === "languages" ? DEFAULT_LOCALE : false,
-        options: item.options.map((option) => ({
-          ...option,
-          inputState: false,
-        })),
-      })),
-    }))
-    setFilters(resetFilters as FilterOption[])
+    setFilters(walletFilterOptions)
   }
 
   return (
