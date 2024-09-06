@@ -25,7 +25,7 @@ const Filters = ({
   resetFilters,
   activeFiltersCount,
 }: PresetFiltersProps) => {
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const { t } = useTranslation("table")
 
   const updateFilterState = (
     filterIndex: number,
@@ -73,7 +73,7 @@ const Filters = ({
     <div className={`w-full lg:w-80`}>
       <div className="width-full flex flex-row items-center justify-between border-b border-b-primary px-2 py-1.5 lg:px-6">
         <p className="text-md font-bold">
-          {t("page-find-wallet-filters")} ({activeFiltersCount})
+          {t("table-filters")} ({activeFiltersCount})
         </p>
         <Button
           variant="ghost"
@@ -81,7 +81,7 @@ const Filters = ({
           onClick={resetFilters}
         >
           <BsArrowCounterclockwise size={16} />
-          {t("page-find-wallet-reset-filters")}
+          {t("table-reset-filters")}
         </Button>
       </div>
       <Accordion

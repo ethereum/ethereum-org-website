@@ -32,6 +32,7 @@ interface ProductTableProps<TData, TValue> {
   setFilters: Dispatch<SetStateAction<FilterOption[]>>
   subComponent?: FC<TData>
   noResultsComponent?: React.FC
+  mobileFiltersLabel: string
 }
 
 const ProductTable = ({
@@ -43,6 +44,7 @@ const ProductTable = ({
   setFilters,
   subComponent,
   noResultsComponent,
+  mobileFiltersLabel,
 }: ProductTableProps<ProductTableRow, ProductTableColumnDefs>) => {
   const router = useRouter()
   const { t } = useTranslation("table")
@@ -232,6 +234,7 @@ const ProductTable = ({
             mobileFiltersOpen={mobileFiltersOpen}
             setMobileFiltersOpen={setMobileFiltersOpen}
             resetFilters={resetFilters}
+            mobileFiltersLabel={mobileFiltersLabel}
           />
         </div>
         <div className="hidden lg:block">

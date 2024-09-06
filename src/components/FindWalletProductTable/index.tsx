@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react"
+import { useTranslation } from "react-i18next"
 
 import { FilterOption } from "@/lib/types"
 
@@ -11,6 +12,7 @@ import FindWalletsNoResults from "./FindWalletsNoResults"
 import WalletSubComponent from "./WalletSubComponent"
 
 const FindWalletProductTable = ({ wallets }) => {
+  const { t } = useTranslation("page-wallets-find-wallet")
   const walletPersonas = WalletPersonaPresets()
   const walletFilterOptions = WalletFilters()
   const [filters, setFilters] = useState<FilterOption[]>(walletFilterOptions)
@@ -63,6 +65,7 @@ const FindWalletProductTable = ({ wallets }) => {
       noResultsComponent={() => (
         <FindWalletsNoResults resetFilters={resetFilters} />
       )}
+      mobileFiltersLabel={t("page-find-wallet-see-wallets")}
     />
   )
 }

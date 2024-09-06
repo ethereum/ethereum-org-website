@@ -15,12 +15,12 @@ const PresetFilters = ({
   handleSelectPreset,
   showMobileSidebar = false,
 }: PresetFiltersProps) => {
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const { t } = useTranslation("table")
 
   return (
     <div>
       <h3 className="mb-3 text-xl font-bold">
-        {t("page-find-wallet-personas-title")}
+        {t("table-what-are-you-looking-for")}
       </h3>
       <div
         className={`mb-2 ${

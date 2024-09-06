@@ -27,6 +27,7 @@ interface MobileFiltersProps {
   mobileFiltersOpen: boolean
   setMobileFiltersOpen: React.Dispatch<React.SetStateAction<boolean>>
   resetFilters: () => void
+  mobileFiltersLabel: string
 }
 
 const MobileFilters = ({
@@ -40,8 +41,9 @@ const MobileFilters = ({
   mobileFiltersOpen,
   setMobileFiltersOpen,
   resetFilters,
+  mobileFiltersLabel,
 }: MobileFiltersProps) => {
-  const { t } = useTranslation("page-wallets-find-wallet")
+  const { t } = useTranslation("table")
 
   return (
     <>
@@ -66,8 +68,8 @@ const MobileFilters = ({
             }}
           >
             <div className="flex flex-col text-left">
-              <p>{t("page-find-wallet-filters")}</p>
-              <p className="text-body-medium">{` ${activeFiltersCount} ${t("page-find-wallet-active")}`}</p>
+              <p>{t("table-filters")}</p>
+              <p className="text-body-medium">{` ${activeFiltersCount} ${t("table-active")}`}</p>
             </div>
           </Button>
         </DrawerTrigger>
@@ -95,11 +97,11 @@ const MobileFilters = ({
                   onClick={resetFilters}
                 >
                   <BsArrowCounterclockwise size={16} />
-                  {t("page-find-wallet-reset-filters")}
+                  {t("table-reset-filters")}
                 </Button>
               </div>
               <DrawerClose className="w-1/2 text-center">
-                <Button width="100%">{`${t("page-find-wallet-see-wallets")} (${dataCount})`}</Button>
+                <Button width="100%">{`${mobileFiltersLabel} (${dataCount})`}</Button>
               </DrawerClose>
             </div>
           </DrawerFooter>
