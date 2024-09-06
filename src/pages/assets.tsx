@@ -104,6 +104,7 @@ const H2 = (props: ChildOnlyProp & HeadingProps) => (
     lineHeight={1.4}
     mt={16}
     mb="6"
+    scrollMarginTop={24}
     {...props}
   />
 )
