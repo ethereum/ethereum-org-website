@@ -145,6 +145,7 @@ const config = {
           DEFAULT: "hsla(var(--body))",
           medium: "hsla(var(--body-medium))",
           light: "hsla(var(--body-light))",
+          inverse: "hsla(var(--body-inverse))",
         },
         background: {
           DEFAULT: "hsla(var(--background))",
