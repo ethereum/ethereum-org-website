@@ -1,9 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react"
 
 import FindWalletProductTable from "@/components/FindWalletProductTable"
-// import { columns } from "@/components/ProductTable/FindWallet/WalletColumns"
 
-// import walletsData from "@/data/wallets/wallet-data"
+import walletsData from "@/data/wallets/wallet-data"
 
 const meta = {
   title: "Pages / Special cases / Find Wallet Product Table",
@@ -23,9 +22,9 @@ type Story = StoryObj<typeof meta>
 
 export const WalletProductTableStory: Story = {
   args: {
-    // columns: columns,
-    // data: walletsData,
-    // getRowCanExpand: () => true,
+    wallets: walletsData.map((wallet) => {
+      return { ...wallet, supportedLanguages: wallet.languages_supported }
+    }),
   },
   render: (args) => {
     return <FindWalletProductTable {...args} />
