@@ -7,6 +7,8 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
+import { renderGlossaryTooltipContent } from "@/components/TooltipLink"
+
 import Emoji from "../components/Emoji"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import Link from "../components/Link"
@@ -217,10 +219,21 @@ export const walletOnboardingSimData: SimulatorData = {
           <>
             <Text>
               Your wallet helps you manage your funds,{" "}
-              <GlossaryTooltip termKey="nft">NFTs</GlossaryTooltip>,{" "}
-              <GlossaryTooltip termKey="web3">Web3</GlossaryTooltip> identity
-              and more. Here we&apos;ll go over how to receive and send some
-              tokens on Ethereum.
+              <GlossaryTooltip
+                termKey="nft"
+                renderContent={renderGlossaryTooltipContent}
+              >
+                NFTs
+              </GlossaryTooltip>
+              ,{" "}
+              <GlossaryTooltip
+                termKey="web3"
+                renderContent={renderGlossaryTooltipContent}
+              >
+                Web3
+              </GlossaryTooltip>{" "}
+              identity and more. Here we&apos;ll go over how to receive and send
+              some tokens on Ethereum.
             </Text>
             <Text>
               Let&apos;s first look at how to receive ether (ETH),

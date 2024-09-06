@@ -1,6 +1,8 @@
 import { Center } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
+import { renderGlossaryTooltipContent } from "@/components/TooltipLink"
+
 import GlossaryTooltipComponent from "."
 
 const meta = {
@@ -9,6 +11,7 @@ const meta = {
   args: {
     termKey: "bridge",
     children: "bridge",
+    renderContent: renderGlossaryTooltipContent,
   },
   decorators: [
     (Story) => (
