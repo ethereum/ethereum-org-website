@@ -97,7 +97,7 @@ const Filters = ({
                 value={`item ${filterIndex}`}
                 className="bg-background-highlight p-6"
               >
-                <AccordionTrigger className="border-b border-b-border-accordion">
+                <AccordionTrigger className="border-b">
                   <p className="text-base text-primary-high-contrast">
                     {filter.title}
                   </p>

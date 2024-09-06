@@ -6,9 +6,9 @@
   :root {
     --white: 0, 0%, 100%; /* #ffffff */
     --gray-50: 0, 0%, 97%; /* #f7f7f7 */
-    --gray-100: 0, 0%, 93%; /* #eeeeee */
-    --gray-150: 0, 0%, 93%; /* #ececec */ /* TODO: Confirm this shade, used in nav menu */
-    --gray-200: 0, 0%, 81%; /*#cecece */
+    --gray-100: 0, 0%, 93%; /* #ededed 0xEC-0xEE */ /* TODO: Confirm */
+    --gray-150: 0, 0%, 87%; /* #dedede */ /*  TODO: Confirm */
+    --gray-200: 0, 0%, 81%; /* #cecece */
     --gray-300: 0, 0%, 67%; /* #acacac */
     --gray-400: 0, 0%, 55%; /* #8C8C8C */
     --gray-500: 0, 0%, 38%; /* #616161 */
@@ -82,6 +82,5 @@
     --green-900: 140, 37%, 6%; /* #0a160e */
     --yellow-200: 47, 100%, 94%; /* #fff8df */
     --yellow-500: 42, 100%, 37%; /* #bd8400 */
-
   }
 }

@@ -29,7 +29,7 @@ const SwitchFilterInput = ({
 }: SwitchFilterInputProps) => {
   return (
     <>
-      <div className="flex flex-row items-center justify-between gap-2 border-t border-t-border-accordion py-4">
+      <div className="flex flex-row items-center justify-between gap-2 border-t py-4">
         <div className="flex flex-row items-center">
           <div className="h-8 w-8">
             {icon && <Icon as={icon} boxSize={7} mt={0.5} aria-hidden />}

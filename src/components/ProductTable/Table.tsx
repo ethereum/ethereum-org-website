@@ -67,7 +67,7 @@ const Table = ({
               <TableRow
                 key={row.id}
                 data-state={row.getIsSelected() && "selected"}
-                className={`${row.getIsExpanded() ? "cursor-pointer border-b-body-inverted bg-body-inverted" : "cursor-pointer"}`}
+                className={`${row.getIsExpanded() ? "cursor-pointer border-b-body-inverse bg-body-inverse" : "cursor-pointer"}`}
                 onClick={(e) => {
                   // Prevent expanding the wallet more info section when clicking on the "Visit website" button
                   if (!(e.target as Element).matches("a, a svg")) {
@@ -82,7 +82,7 @@ const Table = ({
                 ))}
               </TableRow>
               {row.getIsExpanded() && (
-                <TableRow className={`bg-body-inverted`}>
+                <TableRow className={`bg-body-inverse`}>
                   <TableCell colSpan={row.getAllCells().length}>
                     {subComponent && subComponent(row.original)}
                   </TableCell>
