@@ -102,7 +102,6 @@ const config = {
           800: "var(--orange-800)",
           900: "var(--orange-900)",
         },
-
         primary: {
           DEFAULT: "var(--primary)",
           "high-contrast": "var(--primary-high-contrast)",
