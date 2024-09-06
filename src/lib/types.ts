@@ -639,7 +639,7 @@ export interface WalletFilterData {
   description: TranslationKey | ""
 }
 
-export type FilterInputState = boolean | Lang | null
+export type FilterInputState = boolean | Lang | string | null
 
 export type FilterOption = {
   title: string
@@ -726,11 +726,11 @@ export interface WalletPersonas {
   }
 }
 
-export type ProductTablePresetFilters = WalletPersonas
+export type ProductTablePresetFilters = WalletPersonas[]
 
-export type ProductTableColumnDefs = ColumnDef<WalletData>
+export type ProductTableColumnDefs = ColumnDef<Wallet>
 
-export type ProductTableRow = WalletData
+export type ProductTableRow = Wallet
 
 export interface DropdownOption {
   label: string

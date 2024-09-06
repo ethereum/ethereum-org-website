@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 
-import { WalletData } from "@/lib/types"
+import { Wallet } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import { SupportedLanguagesTooltip } from "@/components/FindWalletProductTable/components/SupportedLanguagesTooltip"
@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge"
 import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"
 
 interface WalletInfoProps {
-  wallet: WalletData & { supportedLanguages: string[] }
+  wallet: Wallet
   isExpanded: boolean
 }
 

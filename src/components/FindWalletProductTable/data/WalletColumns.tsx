@@ -1,10 +1,9 @@
 "use client"
 
-import { StaticImageData } from "next/image"
 import { IoChevronDownSharp, IoChevronUpSharp } from "react-icons/io5"
 import { ColumnDef } from "@tanstack/react-table"
 
-import { WalletData } from "@/lib/types"
+import { Wallet } from "@/lib/types"
 
 import WalletInfo from "@/components/FindWalletProductTable/components/WalletInfo"
 import { TableHead } from "@/components/ui/table"
@@ -13,11 +12,10 @@ import { TableHead } from "@/components/ui/table"
 // You can use a Zod schema here if you want.
 export type WalletColumns = {
   id: string
-  logo: StaticImageData
-  walletInfo: WalletData
+  walletInfo: Wallet
 }
 
-export const WalletColumns: ColumnDef<WalletColumns>[] = [
+export const WalletColumns: ColumnDef<Wallet>[] = [
   {
     accessorKey: "information",
     header: () => <TableHead className="h-0" />,

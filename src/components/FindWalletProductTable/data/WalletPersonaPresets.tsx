@@ -2,7 +2,7 @@ import { useTranslation } from "next-i18next"
 
 import { WalletPersonas } from "@/lib/types"
 
-export const WalletPersonaPresets = () => {
+export const WalletPersonaPresets = (): WalletPersonas[] => {
   const { t } = useTranslation("page-wallets-find-wallet")
   const personas: WalletPersonas[] = [
     {

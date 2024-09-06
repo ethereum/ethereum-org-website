@@ -20,7 +20,7 @@ interface FindWalletLanguageSelectInputProps {
   updateFilterState: (
     filterIndex: number,
     itemIndex: number,
-    newInputState: boolean
+    newInputState: FilterInputState
   ) => void
 }
 
