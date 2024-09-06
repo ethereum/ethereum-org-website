@@ -201,15 +201,13 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     feed: SOLIDITY_FEED,
   },
   {
-    name: "Privacy and Scaling Explorations",
     href: "https://mirror.xyz/privacy-scaling-explorations.eth",
-    // feed: "https://mirror.xyz/privacy-scaling-explorations.eth/feed/atom", // Old xml format
+    feed: "https://mirror.xyz/privacy-scaling-explorations.eth/feed/atom",
   },
-  // {
-  //   href: "https://stark.mirror.xyz/",
-  //   feed: "https://stark.mirror.xyz/feed/atom", // Old xml format
-  // },
-  // TODO: Add support for old xml format, re-enable above when ready
+  {
+    href: "https://stark.mirror.xyz/",
+    feed: "https://stark.mirror.xyz/feed/atom",
+  },
 ]
 
 export const BLOG_FEEDS = COMMUNITY_BLOGS.map(({ feed }) => feed).filter(

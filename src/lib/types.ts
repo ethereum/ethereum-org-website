@@ -803,6 +803,36 @@ export type RSSResult = {
   }
 }
 
+export type AtomElement =
+  | string
+  | {
+      _?: string // children
+      $: {
+        href?: string
+      }
+    }
+export type AtomEntry = {
+  id: string[]
+  title: AtomElement[]
+  updated: string[]
+  content?: AtomElement[]
+  link?: AtomElement[]
+  summary?: AtomElement[]
+}
+
+export type AtomResult = {
+  feed: {
+    id: string[]
+    title: string[]
+    updated: string[]
+    generator: string[]
+    link: string[]
+    subtitle: string[]
+    icon?: string[]
+    entry: AtomEntry[]
+  }
+}
+
 export type CommunityBlog = {
   href: string
 } & ({ name: string; feed?: string } | { name?: string; feed: string })
