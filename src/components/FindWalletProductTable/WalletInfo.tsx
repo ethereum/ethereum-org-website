@@ -53,7 +53,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
       <div className="flex flex-row gap-2">
         <div className="relative hidden w-14 md:block">
           <div
-            className={`${isExpanded ? "block" : "hidden"} absolute -bottom-9 -top-0 w-1 ${wallet.color}`}
+            className={`${isExpanded ? "block" : "hidden"} absolute -bottom-9 -top-0 left-1/2 w-1 -translate-x-1/2 transform ${wallet.color}`}
           />
         </div>
         <div className="flex flex-col gap-2">
