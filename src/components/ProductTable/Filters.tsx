@@ -34,37 +34,36 @@ const Filters = ({
     optionIndex?: number
   ) => {
     const updatedFilters = filters.map((filter, idx) => {
-      if (idx === filterIndex) {
-        const updatedItems = filter.items.map((item, i) => {
-          if (i === itemIndex) {
-            if (typeof optionIndex !== "undefined") {
-              const updatedOptions = item.options.map((option, j) => {
-                if (j === optionIndex) {
-                  return {
-                    ...option,
-                    inputState: newInputState,
-                  }
+      if (idx !== filterIndex) return filter
+
+      const updatedItems = filter.items.map((item, i) => {
+        if (i === itemIndex) {
+          if (typeof optionIndex !== "undefined") {
+            const updatedOptions = item.options.map((option, j) => {
+              if (j === optionIndex) {
+                return {
+                  ...option,
+                  inputState: newInputState,
                 }
-                return option
-              })
-              return {
-                ...item,
-                options: updatedOptions,
               }
-            }
+              return option
+            })
             return {
               ...item,
-              inputState: newInputState,
+              options: updatedOptions,
             }
           }
-          return item
-        })
-        return {
-          ...filter,
-          items: updatedItems,
+          return {
+            ...item,
+            inputState: newInputState,
+          }
         }
+        return item
+      })
+      return {
+        ...filter,
+        items: updatedItems,
       }
-      return filter
     })
     setFilters(updatedFilters)
   }
