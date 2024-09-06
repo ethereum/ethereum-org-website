@@ -2,15 +2,16 @@ import { useMemo, useState } from "react"
 
 import { FilterOption } from "@/lib/types"
 
-import WalletSubComponent from "./components/WalletSubComponent"
 import { WalletColumns } from "@/components/FindWalletProductTable/data/WalletColumns"
 import { WalletFilters } from "@/components/FindWalletProductTable/data/WalletFilters"
 import { WalletPersonaPresets } from "@/components/FindWalletProductTable/data/WalletPersonaPresets"
 import ProductTable from "@/components/ProductTable"
 
+import WalletSubComponent from "./components/WalletSubComponent"
+
 const FindWalletProductTable = ({ wallets }) => {
-  const walletPersonas = getWalletPersonaPresets()
-  const walletFilterOptions = getWalletFilters()
+  const walletPersonas = WalletPersonaPresets()
+  const walletFilterOptions = WalletFilters()
   const [filters, setFilters] = useState<FilterOption[]>(walletFilterOptions)
 
   const filteredData = useMemo(() => {
