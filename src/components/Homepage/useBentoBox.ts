@@ -105,23 +105,23 @@ export const useBentoBox = () => {
   return [
     {
       ...getCopy("stablecoins", "/stablecoins/"),
-      imgSrc: ImpactImage,
-      imgWidth: 400,
+      imgSrc: ManAndDogImage,
       className: cn(colorOptions["primary"], getPosition(0)),
     },
     {
       ...getCopy("defi", "/defi/"),
-      imgSrc: ManAndDogImage,
+      imgSrc: ImpactImage,
+      imgWidth: 400,
       className: cn(colorOptions["accent-c"], getPosition(1)),
     },
     {
-      ...getCopy("dapps", "/dapps/"),
+      ...getCopy("networks", "/layer-2/"),
       imgSrc: MergeImage,
       imgWidth: 320,
       className: cn(colorOptions["accent-b"], getPosition(2)),
     },
     {
-      ...getCopy("networks", "/layer-2/"),
+      ...getCopy("dapps", "/dapps/"),
       imgSrc: ManBabyWomanImage,
       imgWidth: 324,
       className: cn(colorOptions["accent-a"], getPosition(3)),
