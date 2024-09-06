@@ -9,8 +9,8 @@ import { WalletPersonaPresets } from "@/components/FindWalletProductTable/data/W
 import ProductTable from "@/components/ProductTable"
 
 const FindWalletProductTable = ({ wallets }) => {
-  const walletPersonas = WalletPersonaPresets()
-  const walletFilterOptions = WalletFilters()
+  const walletPersonas = getWalletPersonaPresets()
+  const walletFilterOptions = getWalletFilters()
   const [filters, setFilters] = useState<FilterOption[]>(walletFilterOptions)
 
   const filteredData = useMemo(() => {
