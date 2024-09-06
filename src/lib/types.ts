@@ -688,12 +688,6 @@ type UpdateFilterState = (
   optionIndex?: number
 ) => void
 
-export interface TPresetFilters<TPreset> {
-  title: string
-  description: string
-  presetFilters: TPreset
-}
-
 export interface WalletPersonas {
   title: string
   description: string
@@ -725,6 +719,8 @@ export interface WalletPersonas {
     new_to_crypto?: boolean
   }
 }
+
+export type TPresetFilters = WalletPersonas[]
 
 export type ProductTablePresetFilters = WalletPersonas[]
 

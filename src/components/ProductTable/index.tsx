@@ -13,7 +13,6 @@ import { ColumnDef } from "@tanstack/react-table"
 import type {
   FilterOption,
   ProductTableColumnDefs,
-  ProductTablePresetFilters,
   ProductTableRow,
   TPresetFilters,
 } from "@/lib/types"
@@ -24,11 +23,11 @@ import PresetFilters from "@/components/ProductTable/PresetFilters"
 import Table from "@/components/ProductTable/Table"
 import { Button } from "@/components/ui/buttons/Button"
 
-interface ProductTableProps<TData, TValue, TPreset> {
+interface ProductTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
   filters: FilterOption[]
-  presetFilters: TPresetFilters<TPreset>[]
+  presetFilters: TPresetFilters
   resetFilters: () => void
   setFilters: Dispatch<SetStateAction<FilterOption[]>>
   subComponent?: FC<TData>
@@ -42,11 +41,7 @@ const ProductTable = ({
   resetFilters,
   setFilters,
   subComponent,
-}: ProductTableProps<
-  ProductTableRow,
-  ProductTableColumnDefs,
-  ProductTablePresetFilters
->) => {
+}: ProductTableProps<ProductTableRow, ProductTableColumnDefs>) => {
   const router = useRouter()
   const { t } = useTranslation("page-wallets-find-wallet")
   const [activePresets, setActivePresets] = useState<number[]>([])
@@ -212,7 +207,7 @@ const ProductTable = ({
   }, [filters])
 
   return (
-    <div className="px-4">
+    <div className="ppx-4">
       {presetFilters.length ? (
         <PresetFilters
           presets={presetFilters}

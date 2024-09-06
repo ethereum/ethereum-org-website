@@ -2,11 +2,7 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 import { BsArrowCounterclockwise } from "react-icons/bs"
 
-import {
-  FilterOption,
-  ProductTablePresetFilters,
-  TPresetFilters,
-} from "@/lib/types"
+import { FilterOption, TPresetFilters } from "@/lib/types"
 
 import Button from "@/components/Buttons/Button"
 import { FilterBurgerIcon } from "@/components/icons/wallets"
@@ -20,10 +16,10 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer"
 
-interface MobileFiltersProps<TPreset> {
+interface MobileFiltersProps {
   filters: FilterOption[]
   setFilters: React.Dispatch<React.SetStateAction<FilterOption[]>>
-  presets: TPresetFilters<TPreset>[]
+  presets: TPresetFilters
   activePresets: number[]
   handleSelectPreset: (index: number) => void
   dataCount: number
@@ -44,7 +40,7 @@ const MobileFilters = ({
   mobileFiltersOpen,
   setMobileFiltersOpen,
   resetFilters,
-}: MobileFiltersProps<ProductTablePresetFilters>) => {
+}: MobileFiltersProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
 
   return (

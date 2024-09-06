@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next"
 
-import type { ProductTablePresetFilters, TPresetFilters } from "@/lib/types"
+import type { TPresetFilters } from "@/lib/types"
 
-export interface PresetFiltersProps<TPreset> {
-  presets: TPresetFilters<TPreset>[]
+export interface PresetFiltersProps {
+  presets: TPresetFilters
   activePresets: number[]
   handleSelectPreset: (index: number) => void
   showMobileSidebar?: boolean
@@ -14,7 +14,7 @@ const PresetFilters = ({
   activePresets,
   handleSelectPreset,
   showMobileSidebar = false,
-}: PresetFiltersProps<ProductTablePresetFilters>) => {
+}: PresetFiltersProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
 
   return (

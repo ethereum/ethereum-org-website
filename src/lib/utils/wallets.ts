@@ -12,16 +12,20 @@ import {
   NEW_TO_CRYPTO_FEATURES,
   NFTS_FEATURES,
 } from "../constants"
-import type { WalletData, WalletFilter } from "../types"
+import type { Lang, WalletData, WalletFilter } from "../types"
 
 export const getSupportedLocaleWallets = (locale: string) =>
   shuffle(
-    walletsData.filter((wallet) => wallet.languages_supported.includes(locale))
+    walletsData.filter((wallet) =>
+      wallet.languages_supported.includes(locale as Lang)
+    )
   )
 
 export const getNonSupportedLocaleWallets = (locale: string) =>
   shuffle(
-    walletsData.filter((wallet) => !wallet.languages_supported.includes(locale))
+    walletsData.filter(
+      (wallet) => !wallet.languages_supported.includes(locale as Lang)
+    )
   )
 
 // Get a list of a wallet supported Personas (new to crypto, nfts, long term, finance, developer)
@@ -98,7 +102,7 @@ export const formatStringList = (strings: string[], sliceSize?: number) => {
 const getLanguageTotalCount = (languageCode: string) => {
   return walletsData.reduce(
     (total, currentWallet) =>
-      currentWallet.languages_supported.includes(languageCode)
+      currentWallet.languages_supported.includes(languageCode as Lang)
         ? (total = total + 1)
         : total,
     0
