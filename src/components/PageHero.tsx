@@ -67,16 +67,14 @@ const PageHero = ({
           "me-0 lg:me-4"
         )}
       >
-        <h1 className="mb-4 mt-0 text-md font-normal uppercase !leading-[1.4] lg:mt-8">
+        <h1 className="mb-4 mt-0 text-md font-normal uppercase !leading-xs lg:mt-8">
           {title}
         </h1>
 
-        <h2 className="mb-0 mt-8 max-w-full text-[2.5rem] font-bold !leading-[1.4] lg:mt-12 lg:text-5xl">
+        <h2 className="mb-0 mt-8 max-w-full text-[2.5rem] font-bold !leading-xs lg:mt-12 lg:text-5xl">
           {header}
         </h2>
-        <p className="mb-8 mt-4 text-xl !leading-[1.4] lg:text-2xl">
-          {subtitle}
-        </p>
+        <p className="mb-8 mt-4 text-xl !leading-xs lg:text-2xl">{subtitle}</p>
 
         {buttons && (
           <Flex className="gap-2 overflow-visible [&_ul]:m-0">
