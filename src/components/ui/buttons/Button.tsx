@@ -108,21 +108,40 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 Button.displayName = "Button"
 
-type ButtonLinkProps = Omit<LinkProps, "onClick"> & {
-  buttonProps?: ButtonProps
-  customEventOptions?: MatomoEventOptions
-}
+type ButtonLinkProps = Omit<LinkProps, "onClick"> &
+  Pick<ButtonProps, "size" | "variant" | "isSecondary"> & {
+    buttonProps?: Omit<ButtonProps, "size" | "variant">
+    customEventOptions?: MatomoEventOptions
+  }
 
 const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
-  ({ buttonProps, customEventOptions, children, ...linkProps }, ref) => {
+  (
+    {
+      size,
+      variant,
+      isSecondary,
+      buttonProps,
+      customEventOptions,
+      children,
+      className,
+      ...linkProps
+    },
+    ref
+  ) => {
     const handleClick = () => {
       customEventOptions && trackCustomEvent(customEventOptions)
     }
     return (
-      <Button asChild {...buttonProps}>
+      <Button
+        asChild
+        size={size}
+        variant={variant}
+        isSecondary={isSecondary}
+        {...buttonProps}
+      >
         <BaseLink
           ref={ref}
-          className="no-underline hover:no-underline"
+          className={cn("no-underline hover:no-underline", className)}
           activeClassName=""
           {...linkProps}
           onClick={handleClick}

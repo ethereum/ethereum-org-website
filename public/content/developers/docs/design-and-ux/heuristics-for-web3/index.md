@@ -5,7 +5,7 @@ lang: en
 ---
 
 Usability heuristics are broad “rules of thumb” that you can use to measure the usability of your site.
-These heuristics are specifically tailored for Web3 and should be used alongside Jakob Nielsen's [10 general principles for interaction design](https://www.nngroup.com/articles/ten-usability-heuristics/).
+The 7 heuristics here are specifically tailored for Web3 and should be used alongside Jakob Nielsen's [10 general principles for interaction design](https://www.nngroup.com/articles/ten-usability-heuristics/).
 
 ## Seven usability heuristics for web3 {#seven-usability-heuristics-for-web3}
 
