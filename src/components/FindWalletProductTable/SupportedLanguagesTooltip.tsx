@@ -1,5 +1,3 @@
-import { Text } from "@chakra-ui/react"
-
 import Tooltip from "@/components/Tooltip"
 
 import { formatStringList } from "@/lib/utils/wallets"
@@ -27,14 +25,7 @@ export const SupportedLanguagesTooltip = ({
 
   return (
     <Tooltip content={tooltipContent}>
-      <Text
-        as="span"
-        color="primary.base"
-        fontSize="md !important"
-        fontWeight="normal !important"
-      >
-        + {rest}
-      </Text>
+      <span className="text-md font-normal text-primary">+ {rest}</span>
     </Tooltip>
   )
 }
