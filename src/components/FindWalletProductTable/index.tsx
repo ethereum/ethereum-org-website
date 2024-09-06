@@ -2,7 +2,7 @@ import { useMemo, useState } from "react"
 
 import { FilterOption } from "@/lib/types"
 
-import WalletSubComponent from "@/components/FindWalletProductTable/components/WalletSubComponent"
+import WalletSubComponent from "./components/WalletSubComponent"
 import { WalletColumns } from "@/components/FindWalletProductTable/data/WalletColumns"
 import { WalletFilters } from "@/components/FindWalletProductTable/data/WalletFilters"
 import { WalletPersonaPresets } from "@/components/FindWalletProductTable/data/WalletPersonaPresets"
