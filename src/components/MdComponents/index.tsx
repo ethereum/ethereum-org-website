@@ -181,7 +181,7 @@ export const MobileButtonDropdown = ({
 )
 
 export const Divider = () => (
-  <div className="my-16 h-1 w-[10%] bg-[#a4a4f3] dark:bg-[#ffc7a7]" />
+  <div className="my-16 h-1 w-[10%] bg-primary-high-contrast" />
 )
 
 // All custom React components
