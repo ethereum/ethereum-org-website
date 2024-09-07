@@ -9,7 +9,6 @@ import {
   Highlight,
   HStack,
   ListItem,
-  Progress,
   SimpleGrid,
   Stack,
   Text,
@@ -24,6 +23,7 @@ import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
 import { Button } from "../Buttons"
 import { TrophyIcon } from "../icons/quiz"
 import Translation from "../Translation"
+import { Progress } from "../ui/progress"
 
 import {
   getFormattedStats,
@@ -131,6 +131,7 @@ const QuizzesStats = ({
 
               <Progress
                 value={(totalCorrectAnswers / totalQuizzesPoints) * 100}
+                className="h-2.5 bg-primary-low-contrast [&>div]:bg-primary"
               />
 
               <Flex columnGap="10" direction={{ base: "column", lg: "row" }}>
