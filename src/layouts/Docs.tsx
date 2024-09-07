@@ -94,7 +94,7 @@ const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading2
     className={cn(
       baseHeadingClasses,
-      "mt-12 border-b-[1px] border-[#e5e5e5] pb-2 text-2xl max-md:leading-4xs dark:border-[#333]"
+      "mt-12 border-b border-[#e5e5e5] pb-2 text-2xl max-md:leading-4xs dark:border-[#333]"
     )}
     {...props}
   />
