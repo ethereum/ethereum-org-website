@@ -22,7 +22,7 @@ export const selectVariants = tv({
     indicatorIcon:
       "text-sm leading-none transition-transform [*[data-expanded=true]_&]:rotate-180",
     menuList:
-      "overflow-y-auto bg-background-highlight w-full max-h-xs border-x-[length:--border-base-width] border-b-[length:--border-base-width] rounded-b",
+      "overflow-y-auto bg-background-highlight w-full max-h-80 border-x-[length:--border-base-width] border-b-[length:--border-base-width] rounded-b",
     option:
       "text-body p-2 [&[data-focused=true]]:bg-primary-low-contrast [&[data-focused=true]]:text-primary [&[data-active=true]]:bg-body-light [&[data-active=true]]:text-primary-visited",
     groupHeading: "text-body-medium text-xs",
