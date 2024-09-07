@@ -67,7 +67,7 @@ const ContentContainer = (props: ContentContainerProps) => {
 
 const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading1
-    className="my-8 font-monospace uppercase max-lg:text-[1.75rem]"
+    className="font-monospace uppercase max-lg:text-[1.75rem]"
     {...props}
   />
 )
