@@ -334,7 +334,7 @@ La DeFi è un movimento open source. I protocolli e le applicazioni della DeFi s
   Di più sulla creazione di dapp
 </ButtonLink>
 
-## Ulteriori letture {#futher-reading}
+## Letture consigliate {#further-reading}
 
 ### Dati sulla DeFi {#defi-data}
 

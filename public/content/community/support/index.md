@@ -100,5 +100,6 @@ Most of the teams building Ethereum clients also have dedicated, public-facing, 
 - [Lighthouse](https://discord.gg/cyAszAh)
 - [Teku](https://discord.gg/7hPv2T6)
 - [Lodestar](https://discord.gg/aMxzVcr)
+- [Grandine](https://discord.gg/H9XCdUSyZd)
 
 You can also [learn how to run a node here](/developers/docs/nodes-and-clients/run-a-node/).

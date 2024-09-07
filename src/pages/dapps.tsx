@@ -1343,7 +1343,7 @@ const DappsPage = () => {
       {
         content: t("page-dapps-what-are-dapps"),
         href: "#what-are-dapps",
-        variant: "outline",
+        variant: "outline" as const,
         matomo: {
           eventCategory: "dapp hero buttons",
           eventAction: "click",

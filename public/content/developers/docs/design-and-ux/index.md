@@ -23,11 +23,13 @@ This is a curated list of user research done in web3 that may help with design a
 
 | Area of focus                                           | Name                                                                                                                                                                               |
 | :------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |                                         
+| <Badge colorScheme="green">Crypto onboarding</Badge>    | [The WalletConnect Pulse 2024: Crypto Consumer Sentiment & Usage](https://walletconnect.com/pulse-2024-crypto-consumer-report)                                                |
 | <Badge colorScheme="green">Crypto onboarding</Badge>    | [CRADL: UX in Cryptocurrency](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                                                |
 | <Badge colorScheme="green">Crypto onboarding</Badge>    | [CRADL: Onboarding to Cryptocurrency](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                        |
 | <Badge colorScheme="green">Crypto onboarding</Badge>    | [Bitcoin UX report](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                                          |
 | <Badge colorScheme="green">Crypto onboarding</Badge>    | [ConSensys: The State of Web3 perception around the world 2023](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                                            |
 | <Badge colorScheme="green">Crypto onboarding</Badge>    | [NEAR: Accelerating the journey towards adoption](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                          |
+| <Badge colorScheme="purple">Staking</Badge>             | [OpenUX: Rocket Pool Node Operator UX](https://storage.googleapis.com/rocketpool/RocketPool-NodeOperator-UX-Report-Jan-2024.pdf)         |
 | <Badge colorScheme="purple">Staking</Badge>             | [Staking: Key trends, takeaways, and predictions - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo) |
 | <Badge colorScheme="purple">Staking</Badge>             | [Multi App Staking](<https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf>)         |
 | <Badge colorScheme="red">DAO</Badge>                    | [2022 DAO Research Update: What do DAO Builders Need?](https://blog.aragon.org/2022-dao-research-update/)                                                                          |
@@ -47,6 +49,11 @@ This is a curated list of user research done in web3 that may help with design a
 - [W3design.io](https://w3design.io/) - A curated library of UI flows of different projects in the ecosystem
 - [Neueux.com](https://neueux.com/apps) - UI library of user flows with diverse filtering options
 - [Web3's Usability Crisis: What You NEED to Know!](https://www.youtube.com/watch?v=oBSXT_6YDzg) - A panel discussion on pitfalls of developer focused project building (video, 34 min)
+
+## Getting Started {#getting-started}
+
+- [Heuristics for Web3](/developers/docs/design-and-ux/heuristics-for-web3/) - 7 heuristics for Web3 interface design
+- [DEX Design Best Practices](/developers/docs/design-and-ux/dex-design-best-practice/) - A guide to designing Decentralized Exchanges
 
 ## Web3 Design Case Studies {#design-case-studies}
 

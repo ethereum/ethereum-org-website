@@ -14,14 +14,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         solid:
-          "text-background bg-primary border-transparent disabled:bg-disabled disabled:text-background hover:text-background hover:bg-primary-hover hover:shadow-button-hover active:shadow-none",
-        outline: "hover:shadow-button-hover active:shadow-none",
+          "text-white bg-primary-action border-transparent disabled:bg-disabled disabled:text-background hover:text-white hover:bg-primary-action-hover hover:shadow-button-hover active:shadow-none",
+        outline: "hover:shadow-button-hover active:shadow-none text-body",
         "outline-color":
           "hover:shadow-button-hover active:shadow-none border-primary",
         ghost: "border-transparent",
         link: "border-transparent font-bold underline py-0 px-1 active:text-primary",
       },
       size: {
+        lg: "text-lg py-3 px-8 [&>svg]:text-2xl rounded-lg",
         md: "min-h-10.5 px-4 py-2 [&>svg]:text-2xl",
         sm: "text-xs min-h-[31px] py-1.5 px-2 [&>svg]:text-md",
       },
@@ -108,21 +109,40 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 Button.displayName = "Button"
 
-type ButtonLinkProps = Omit<LinkProps, "onClick"> & {
-  buttonProps?: ButtonProps
-  customEventOptions?: MatomoEventOptions
-}
+type ButtonLinkProps = Omit<LinkProps, "onClick"> &
+  Pick<ButtonProps, "size" | "variant" | "isSecondary"> & {
+    buttonProps?: Omit<ButtonProps, "size" | "variant">
+    customEventOptions?: MatomoEventOptions
+  }
 
 const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
-  ({ buttonProps, customEventOptions, children, ...linkProps }, ref) => {
+  (
+    {
+      size,
+      variant,
+      isSecondary,
+      buttonProps,
+      customEventOptions,
+      children,
+      className,
+      ...linkProps
+    },
+    ref
+  ) => {
     const handleClick = () => {
       customEventOptions && trackCustomEvent(customEventOptions)
     }
     return (
-      <Button asChild {...buttonProps}>
+      <Button
+        asChild
+        size={size}
+        variant={variant}
+        isSecondary={isSecondary}
+        {...buttonProps}
+      >
         <BaseLink
           ref={ref}
-          className="no-underline hover:no-underline"
+          className={cn("no-underline hover:no-underline", className)}
           activeClassName=""
           {...linkProps}
           onClick={handleClick}
