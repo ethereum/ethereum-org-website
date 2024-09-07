@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils/cn"
+
 export type BannerNotificationProps = React.HTMLAttributes<HTMLDivElement> & {
   shouldShow?: boolean
 }
@@ -5,12 +7,16 @@ export type BannerNotificationProps = React.HTMLAttributes<HTMLDivElement> & {
 const BannerNotification = ({
   children,
   shouldShow,
+  className,
   ...props
 }: BannerNotificationProps) => {
   if (!shouldShow) return <></>
   return (
     <aside
-      className="flex items-center justify-center gap-2 bg-primary-action px-8 py-4 text-white [&_a]:text-white [&_a]:hover:text-white/80"
+      className={cn(
+        "flex items-center justify-center gap-2 bg-primary-action px-8 py-4 text-white ring [&_a]:text-white [&_a]:hover:text-white/80",
+        className
+      )}
       {...props}
     >
       {children}

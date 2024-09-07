@@ -4,16 +4,18 @@ import { MdClose } from "react-icons/md"
 import { Button } from "@/components/ui/buttons/Button"
 import { Center } from "@/components/ui/flex"
 
+import { cn } from "@/lib/utils/cn"
+
 import BannerNotification from "../BannerNotification"
 
-export type DismissableBannerProps = {
-  children: JSX.Element
+type DismissableBannerProps = React.HTMLAttributes<HTMLDivElement> & {
   storageKey: string
 }
 
 const DismissableBanner = ({
   children,
   storageKey,
+  className,
 }: DismissableBannerProps) => {
   const [show, setShow] = useState<boolean>(false)
 
@@ -28,9 +30,14 @@ const DismissableBanner = ({
   }
 
   return (
-    <BannerNotification shouldShow={show} className="gap-8">
+    <BannerNotification shouldShow={show} className={cn("gap-8", className)}>
       <Center className="ms-auto">{children}</Center>
-      <Button className="ms-auto" onClick={onClose} aria-label="Close Banner">
+      <Button
+        className="ms-auto"
+        onClick={onClose}
+        aria-label="Close Banner"
+        variant="ghost"
+      >
         <MdClose />
       </Button>
     </BannerNotification>
