@@ -1,11 +1,11 @@
-// Libraries
-import React, { useEffect, useState } from "react"
-import { Center, CloseButton } from "@chakra-ui/react"
+import { useEffect, useState } from "react"
+import { MdClose } from "react-icons/md"
 
-// Components
+import { Button } from "@/components/ui/buttons/Button"
+import { Center } from "@/components/ui/flex"
+
 import BannerNotification from "../BannerNotification"
 
-// Interface
 export type DismissableBannerProps = {
   children: JSX.Element
   storageKey: string
@@ -28,13 +28,11 @@ const DismissableBanner = ({
   }
 
   return (
-    <BannerNotification shouldShow={show} gap="8">
-      <Center marginInlineStart="auto">{children}</Center>
-      <CloseButton
-        marginInlineStart="auto"
-        onClick={onClose}
-        aria-label="Close Banner"
-      />
+    <BannerNotification shouldShow={show} className="gap-8">
+      <Center className="ms-auto">{children}</Center>
+      <Button className="ms-auto" onClick={onClose} aria-label="Close Banner">
+        <MdClose />
+      </Button>
     </BannerNotification>
   )
 }
