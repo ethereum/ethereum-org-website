@@ -327,7 +327,12 @@ const HomePage = ({
                   ))}
                 </div>
                 <div className="flex justify-center py-8 md:justify-start">
-                  <ButtonLink href="/learn/" size="lg" variant="outline">
+                  <ButtonLink
+                    href="/learn/"
+                    size="lg"
+                    variant="outline"
+                    isSecondary
+                  >
                     {t("page-index:page-index-popular-topics-action")}{" "}
                     <ChevronNext />
                   </ButtonLink>
@@ -362,6 +367,7 @@ const HomePage = ({
                 href="/developers/docs/"
                 size="lg"
                 variant="outline"
+                isSecondary
                 className="w-fit"
               >
                 {t("page-index:page-index-builders-action-secondary")}
@@ -437,6 +443,7 @@ const HomePage = ({
                   href="/discord/"
                   size="lg"
                   variant="outline"
+                  isSecondary
                   hideArrow
                 >
                   <FaDiscord />
@@ -445,6 +452,7 @@ const HomePage = ({
                   href={GITHUB_REPO_URL}
                   size="lg"
                   variant="outline"
+                  isSecondary
                   hideArrow
                 >
                   <FaGithub />
