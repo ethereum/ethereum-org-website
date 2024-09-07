@@ -7,6 +7,7 @@ import type {
   GroupBase,
   GroupProps,
   MenuListProps,
+  MenuProps,
   OptionProps,
 } from "react-select"
 import { tv, type VariantProps } from "tailwind-variants"
@@ -16,11 +17,12 @@ import { cn } from "@/lib/utils/cn"
 export const selectVariants = tv({
   slots: {
     container:
-      "w-full min-h-10.5 [--border-base-width:1px] relative z-[1] [&_>_.react-select\\_\\_menu]:-z-[1] cursor-pointer",
+      "w-full min-h-10.5 [--border-base-width:1px] relative z-[1] cursor-pointer",
     control:
       "p-2 flex items-center gap-4 border-[length:var(--border-base-width)] border-current text-[color:var(--my-var)] not-[[data-expanded=true]]:focus-within:outline-3 not-[[data-expanded=true]]:focus-within:outline-primary-hover not-[[data-expanded=true]]:focus-within:outline -outline-offset-2 [&[data-expanded=true]]:bg-background-highlight [&[data-expanded=true]]:text-primary [&[data-expanded=true]]:border-primary-low-contrast hover:text-primary hover:border-primary-low-contrast",
     indicatorIcon:
       "text-sm leading-none transition-transform [*[data-expanded=true]_&]:rotate-180",
+    menu: "-z-[1] relative",
     menuList:
       "overflow-y-auto bg-background-highlight w-full max-h-80 border-x-[length:--border-base-width] border-b-[length:--border-base-width] rounded-b",
     option:
@@ -129,6 +131,29 @@ const DropdownIndicator = <
     </div>
   )
 }
+
+const Menu = <
+  Option,
+  IsMulti extends boolean,
+  Group extends GroupBase<Option>,
+>({
+  children,
+  innerProps,
+  innerRef,
+}: MenuProps<Option, IsMulti, Group>) => {
+  const { menu } = useSelectStyles()
+  return (
+    <div
+      ref={innerRef}
+      className={menu()}
+      id="react-select-menu"
+      {...innerProps}
+    >
+      {children}
+    </div>
+  )
+}
+
 const MenuList = <
   Option,
   IsMulti extends boolean,
@@ -216,6 +241,7 @@ export const components = {
   // Essentially removes this component from default render
   IndicatorSeparator: nullop,
   DropdownIndicator,
+  Menu,
   MenuList,
   Option,
   Group,

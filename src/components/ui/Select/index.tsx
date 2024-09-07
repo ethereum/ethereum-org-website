@@ -1,4 +1,8 @@
-import ReactSelect, { ActionMeta, GroupBase, Props } from "react-select"
+import ReactSelect, {
+  type ActionMeta,
+  type GroupBase,
+  type Props,
+} from "react-select"
 
 import {
   components,
