@@ -22,6 +22,7 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
 
   const ThemeIcon = useColorModeValue(<MdBrightness2 />, <MdWbSunny />)
   const themeIconAriaLabel = useColorModeValue(
+    // TODO: add i18n support
     "Switch to Dark Theme",
     "Switch to Light Theme"
   )
@@ -65,7 +66,6 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
           },
         }}
         _hover={desktopHoverFocusStyles}
-        _focus={desktopHoverFocusStyles}
         onClick={toggleColorMode}
       />
 
