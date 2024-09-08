@@ -103,19 +103,54 @@ const config = {
           900: "hsla(var(--blue-900))",
         },
 
+        pink: {
+          50: "hsla(var(--pink-50))",
+          100: "hsla(var(--pink-100))",
+          200: "hsla(var(--pink-200))",
+          300: "hsla(var(--pink-300))",
+          400: "hsla(var(--pink-400))",
+          500: "hsla(var(--pink-500))",
+          600: "hsla(var(--pink-600))",
+          700: "hsla(var(--pink-700))",
+          800: "hsla(var(--pink-800))",
+          900: "hsla(var(--pink-900))",
+        },
+
+        teal: {
+          50: "hsla(var(--teal-50))",
+          100: "hsla(var(--teal-100))",
+          200: "hsla(var(--teal-200))",
+          300: "hsla(var(--teal-300))",
+          400: "hsla(var(--teal-400))",
+          500: "hsla(var(--teal-500))",
+          600: "hsla(var(--teal-600))",
+          700: "hsla(var(--teal-700))",
+          800: "hsla(var(--teal-800))",
+          900: "hsla(var(--teal-900))",
+        },
+
         orange: {
-          50: "hsla(var(--orange-50))",
           100: "hsla(var(--orange-100))",
-          200: "hsla(var(--orange-200))",
-          300: "hsla(var(--orange-300))",
-          400: "hsla(var(--orange-400))",
-          500: "hsla(var(--orange-500))",
-          550: "hsla(var(--orange-550))",
-          600: "hsla(var(--orange-600))",
-          700: "hsla(var(--orange-700))",
           800: "hsla(var(--orange-800))",
           900: "hsla(var(--orange-900))",
         },
+
+        body: {
+          DEFAULT: "hsla(var(--body))",
+          medium: "hsla(var(--body-medium))",
+          light: "hsla(var(--body-light))",
+          inverse: "hsla(var(--body-inverse))",
+        },
+
+        disabled: "hsla(var(--disabled))",
+
+        background: {
+          DEFAULT: "hsla(var(--background))",
+          highlight: "hsla(var(--background-highlight))",
+        },
+
+        // TODO: Add border color tokens to match DS
+
         primary: {
           DEFAULT: "hsla(var(--primary))",
           "high-contrast": "hsla(var(--primary-high-contrast))",
@@ -124,9 +159,12 @@ const config = {
           visited: "hsla(var(--primary-visited))",
           action: "hsla(var(--primary-action))",
           "action-hover": "hsla(var(--primary-action-hover))",
-          light: "hsla(var(--primary-light))" /* TODO: Migrate/deprecate */,
-          dark: "hsla(var(--primary-dark))" /* TODO: Migrate/deprecate */,
+          /** @deprecated */
+          light: "hsla(var(--primary-light))",
+          /** @deprecated */
+          dark: "hsla(var(--primary-dark))",
         },
+
         accent: {
           a: {
             DEFAULT: "hsla(var(--accent-a))",
@@ -141,41 +179,27 @@ const config = {
             hover: "hsla(var(--accent-c-hover))",
           },
         },
-        body: {
-          DEFAULT: "hsla(var(--body))",
-          medium: "hsla(var(--body-medium))",
-          light: "hsla(var(--body-light))",
-          inverse: "hsla(var(--body-inverse))",
-        },
-        background: {
-          DEFAULT: "hsla(var(--background))",
-          highlight: "hsla(var(--background-highlight))",
-        },
-        /** @deprecated */
-        neutral: "hsla(var(--neutral))", // TODO: Migrate
-        /** @deprecated */
-        "switch-background": "hsla(var(--switch-background))", // TODO: Migrate
-        disabled: "hsla(var(--disabled))",
-        "tooltip-shadow": "var(--tooltip-shadow)",
-        "hub-hero-content-bg": "var(--hub-hero-content-bg)",
-        "search-background": "var(--search-background)",
-        warning: {
-          DEFAULT: "hsla(var(--warning))",
-          light: "hsla(var(--warning-light))",
-          outline: "hsla(var(--warning-outline))",
-        },
-        error: {
-          DEFAULT: "hsla(var(--error))",
-          light: "hsla(var(--error-light))",
-          outline: "hsla(var(--error-outline))",
-          neutral: "hsla(var(--error-neutral))",
-        },
+
         success: {
           DEFAULT: "hsla(var(--success))",
           light: "hsla(var(--success-light))",
-          outline: "hsla(var(--success-outline))",
-          neutral: "hsla(var(--success-neutral))",
         },
+
+        error: {
+          DEFAULT: "hsla(var(--error))",
+          light: "hsla(var(--error-light))",
+        },
+
+        warning: {
+          DEFAULT: "hsla(var(--warning))",
+          light: "hsla(var(--warning-light))",
+        },
+
+        /** @deprecated */
+        "switch-background": "hsla(var(--switch-background))", // TODO: Migrate
+        "tooltip-shadow": "var(--tooltip-shadow)",
+        "hub-hero-content-bg": "var(--hub-hero-content-bg)",
+        "search-background": "var(--search-background)",
       },
       backgroundImage: {
         "gradient-main": "var(--gradient-main)",
