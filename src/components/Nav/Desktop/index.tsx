@@ -5,9 +5,10 @@ import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdWbSunny } from "react-icons/md"
 import { HStack, useColorModeValue, useEventListener } from "@chakra-ui/react"
 
-import { IconButton } from "@/components/Buttons"
 import LanguagePicker from "@/components/LanguagePicker"
 import { Button } from "@/components/ui/buttons/Button"
+
+import { cn } from "@/lib/utils/cn"
 
 import { DESKTOP_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
 
@@ -20,20 +21,11 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
   const { locale } = useRouter()
   const languagePickerRef = useRef<HTMLButtonElement>(null)
 
-  const ThemeIcon = useColorModeValue(<MdBrightness2 />, <MdWbSunny />)
   const themeIconAriaLabel = useColorModeValue(
-    // TODO: add i18n support
+    // TODO: Add i18n support
     "Switch to Dark Theme",
     "Switch to Light Theme"
   )
-
-  const desktopHoverFocusStyles = {
-    "& > svg": {
-      transform: "rotate(10deg)",
-      color: "primary.hover",
-      transition: "transform 0.5s, color 0.2s",
-    },
-  }
 
   /**
    * Adds a keydown event listener to toggle color mode (ctrl|cmd + \)
@@ -54,20 +46,26 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
 
   return (
     <HStack hideBelow="md" gap="0">
-      <IconButton
-        icon={ThemeIcon}
-        aria-label={themeIconAriaLabel}
+      <Button
         variant="ghost"
         isSecondary
-        px={{ base: "2", xl: "3" }}
-        sx={{
-          "& > svg": {
-            transition: "transform 0.5s, color 0.2s",
-          },
-        }}
-        _hover={desktopHoverFocusStyles}
+        className="group p-2 hover:!text-primary-hover xl:p-3"
         onClick={toggleColorMode}
-      />
+        aria-label={themeIconAriaLabel}
+      >
+        <MdBrightness2
+          className={cn(
+            "dark:hidden",
+            "transform-transform duration-500 group-hover:rotate-12 group-hover:transition-transform group-hover:duration-500"
+          )}
+        />
+        <MdWbSunny
+          className={cn(
+            "hidden dark:block",
+            "transform-transform duration-500 group-hover:rotate-12 group-hover:transition-transform group-hover:duration-500"
+          )}
+        />
+      </Button>
 
       {/* Locale-picker menu */}
       <LanguagePicker>
@@ -75,7 +73,7 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
           name={DESKTOP_LANGUAGE_BUTTON_NAME}
           ref={languagePickerRef}
           variant="ghost"
-          className="gap-0 px-2 text-body transition-colors duration-200 active:bg-primary-low-contrast active:text-primary-hover data-[state='open']:bg-primary-low-contrast data-[state='open']:text-primary-hover xl:px-3 [&>svg]:transition-transform [&>svg]:duration-500 [&_svg]:hover:rotate-12"
+          className="gap-0 px-2 text-body transition-colors duration-500 active:bg-primary-low-contrast active:text-primary-hover data-[state='open']:bg-primary-low-contrast data-[state='open']:text-primary-hover xl:px-3 [&_svg]:transition-transform [&_svg]:duration-500 [&_svg]:hover:rotate-12"
         >
           <BsTranslate className="me-2 align-middle text-2xl" />
           <span className="hidden lg:inline-block">

@@ -7,12 +7,12 @@
 }
 
 .DocSearch-Button-Container svg {
-  @apply size-3.5;
+  @apply size-3.5 group-hover:rotate-12 transition-transform duration-500 group-hover:transition-transform group-hover:duration-500;
 }
 
 .DocSearch-Search-Icon,
 .DocSearch-Button-Placeholder {
-  @apply text-body;
+  @apply text-body group-hover:text-primary-hover;
 }
 
 .DocSearch-Button-Placeholder {
