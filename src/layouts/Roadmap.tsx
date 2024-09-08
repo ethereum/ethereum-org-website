@@ -1,8 +1,6 @@
 import {
   Box,
   Center,
-  Flex,
-  type FlexProps,
   SimpleGrid,
   useToken,
   Wrap,
@@ -31,6 +29,9 @@ import Pill from "@/components/Pill"
 import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
 import TableOfContents from "@/components/TableOfContents"
+import { Flex } from "@/components/ui/flex"
+
+import { cn } from "@/lib/utils/cn"
 
 import RoadmapHubHeroImage from "@/public/images/heroes/roadmap-hub-hero.jpg"
 
@@ -38,24 +39,20 @@ const CardGrid = (props: ChildOnlyProp) => (
   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
 )
 
-type HeroContainerProps = Pick<FlexProps, "children" | "dir">
-
-const HeroContainer = (props: HeroContainerProps) => (
+const HeroContainer = (
+  props: Pick<React.HTMLAttributes<HTMLDivElement>, "children" | "dir">
+) => (
   <Flex
-    flexDirection={{ base: "column", lg: "row" }}
-    align="center"
-    bg="layer2Gradient"
-    py={12}
-    px={{ base: 0, lg: 8 }}
-    mb={{ base: 8, lg: 0 }}
-    maxH={{ base: "100%", lg: "none" }}
+    className={cn(
+      "mb-8 max-h-full flex-col items-center justify-between px-0 py-12 lg:mb-0 lg:max-h-none lg:flex-row lg:px-8",
+      "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+    )}
     {...props}
-    justify="space-between"
   />
 )
 
 const TitleCard = (props: ChildOnlyProp) => (
-  <Flex w="full" p={8} direction="column" justify="flex-start" {...props} />
+  <Flex className="w-full flex-col justify-start p-8" {...props} />
 )
 
 // Roadmap layout components

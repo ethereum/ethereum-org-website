@@ -1,5 +1,5 @@
 import { useTranslation } from "next-i18next"
-import { Flex, type FlexProps } from "@chakra-ui/react"
+import { Flex } from "@chakra-ui/react"
 
 import type { TranslationKey } from "@/lib/types"
 
@@ -7,8 +7,9 @@ import { Image, type ImageProps } from "@/components/Image"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 
-export type CalloutBannerProps = FlexProps & {
-  children?: React.ReactNode
+import { cn } from "@/lib/utils/cn"
+
+export type CalloutBannerProps = React.HTMLAttributes<HTMLDivElement> & {
   image: ImageProps["src"]
   imageWidth?: number
   titleKey: TranslationKey
@@ -28,12 +29,11 @@ const CalloutBanner = ({
   const { t } = useTranslation("page-staking")
 
   return (
-    <Flex
-      as="aside"
-      direction={{ base: "column", lg: "row-reverse" }}
-      bg="layer2Gradient"
-      p={{ base: 8, sm: 12 }}
-      borderRadius="base"
+    <aside
+      className={cn(
+        "flex flex-col rounded p-8 sm:p-12 lg:flex-row-reverse",
+        "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+      )}
       {...props}
     >
       {image && (
@@ -73,7 +73,7 @@ const CalloutBanner = ({
         </Text>
         {children}
       </Flex>
-    </Flex>
+    </aside>
   )
 }
 

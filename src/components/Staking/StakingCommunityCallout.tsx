@@ -1,5 +1,6 @@
+import React from "react"
 import { useTranslation } from "next-i18next"
-import { Flex, type FlexProps } from "@chakra-ui/react"
+import { Flex } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
 import CalloutBanner from "@/components/CalloutBanner"
@@ -8,9 +9,10 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import image from "@/public/images/enterprise-eth.png"
 
-export type StakingCommunityCalloutProps = FlexProps & {
-  id?: string
-}
+export type StakingCommunityCalloutProps =
+  React.HTMLAttributes<HTMLDivElement> & {
+    id?: string
+  }
 
 const StakingCommunityCallout = (props: StakingCommunityCalloutProps) => {
   const { t } = useTranslation("page-staking")

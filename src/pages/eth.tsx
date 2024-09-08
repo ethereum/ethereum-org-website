@@ -513,8 +513,7 @@ const EthPage = () => {
           <Divider />
         </CentralColumn>
         <CalloutBanner
-          my={20}
-          mx={0}
+          className="mx-0 my-20"
           titleKey={"page-eth:page-eth-where-to-buy"}
           descriptionKey={"page-eth:page-eth-where-to-buy-desc"}
           image={ethCat}

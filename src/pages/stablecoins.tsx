@@ -651,9 +651,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       <Divider />
       <Content>
         <CalloutBanner
-          mt={8}
-          mb={16}
-          mx={0}
+          className="mx-0 mb-16 mt-8"
           titleKey={t("page-stablecoins-stablecoins-dapp-callout-title")}
           descriptionKey={t(
             "page-stablecoins-stablecoins-dapp-callout-description"
