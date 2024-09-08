@@ -44,16 +44,16 @@ const baseStyle = defineStyle({
 })
 
 const variantSolid = defineStyle({
-  color: "background.base",
-  bg: "primary.base",
+  color: "white",
+  bg: "primary.action",
   borderColor: "transparent",
   _disabled: {
     bg: "disabled",
     color: "background.base",
   },
   _hover: {
-    color: "background.base",
-    bg: "primary.hover",
+    color: "white",
+    bg: "primary.actionHover",
     boxShadow: "buttonHover",
   },
   _active: {

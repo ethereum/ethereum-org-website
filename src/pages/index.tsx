@@ -1,76 +1,82 @@
-import { lazy, ReactNode, Suspense, useState } from "react"
+import { Fragment, lazy, Suspense } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { FaGithub } from "react-icons/fa"
-import {
-  Box,
-  chakra,
-  Divider,
-  Flex,
-  FlexProps,
-  Heading,
-  HeadingProps,
-  Icon,
-  SimpleGridProps,
-  SkeletonText,
-  Stack,
-  useToken,
-} from "@chakra-ui/react"
+import { FaDiscord, FaGithub } from "react-icons/fa6"
 
-import { AllMetricData, BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
-import type { CodeExample, CommunityEventsReturnType } from "@/lib/interfaces"
+import type {
+  AllMetricData,
+  BasePageProps,
+  CommunityBlog,
+  Lang,
+  RSSItem,
+} from "@/lib/types"
 
-import ActionCard from "@/components/ActionCard"
-import ButtonLink from "@/components/Buttons/ButtonLink"
-import CalloutBanner from "@/components/CalloutBanner"
+import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
+import { ChevronNext } from "@/components/Chevron"
 import CodeModal from "@/components/CodeModal"
-import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
-import { Image } from "@/components/Image"
-import LazyLoadComponent from "@/components/LazyLoadComponent"
+import BentoCard from "@/components/Homepage/BentoCard"
+import { useHome } from "@/components/Homepage/useHome"
+import AngleBrackets from "@/components/icons/angle-brackets.svg"
+import Calendar from "@/components/icons/calendar.svg"
+import CalendarAdd from "@/components/icons/calendar-add.svg"
+import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
-import TitleCardList from "@/components/TitleCardList"
+import Swiper from "@/components/Swiper"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
-import Translation from "@/components/Translation"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import {
+  Card,
+  CardBanner,
+  CardContent,
+  CardHighlight,
+  CardSubTitle,
+  CardTitle,
+} from "@/components/ui/card"
+import Link from "@/components/ui/Link"
+import {
+  Section,
+  SectionBanner,
+  SectionContent,
+  SectionHeader,
+  SectionTag,
+} from "@/components/ui/section"
+import { SkeletonLines } from "@/components/ui/skeleton"
+import WindowBox from "@/components/WindowBox"
 
+import { cn } from "@/lib/utils/cn"
+import { isValidDate } from "@/lib/utils/date"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { polishRSSList } from "@/lib/utils/rss"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { breakpointAsNumber } from "@/lib/utils/screen"
 import { getLocaleTimestamp } from "@/lib/utils/time"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
 import {
-  getRequiredNamespacesForPage,
-  isLangRightToLeft,
-} from "@/lib/utils/translations"
+  BASE_TIME_UNIT,
+  BLOG_FEEDS,
+  BLOGS_WITHOUT_FEED,
+  CALENDAR_DISPLAY_COUNT,
+  GITHUB_REPO_URL,
+  RSS_DISPLAY_COUNT,
+} from "@/lib/constants"
 
-import CreateWalletContent from "@/data/CreateWallet"
-
-import { BASE_TIME_UNIT } from "@/lib/constants"
-
-import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
-import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
-import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
-import { fetchNodes } from "@/lib/api/fetchNodes"
+import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
+import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
+import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
+import { fetchRSS } from "@/lib/api/fetchRSS"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
-import { fetchTxCount } from "@/lib/api/fetchTxCount"
-import devfixed from "@/public/images/developers-eth-blocks.png"
-import dogefixed from "@/public/images/doge-computer.png"
-import enterprise from "@/public/images/enterprise-eth.png"
-import ethfixed from "@/public/images/eth.png"
-import finance from "@/public/images/finance_transparent.png"
-import future from "@/public/images/future_transparent.png"
-import hackathon from "@/public/images/hackathon_transparent.png"
-import hero from "@/public/images/home/hero.png"
-import impact from "@/public/images/impact_transparent.png"
-import infrastructure from "@/public/images/infrastructure_transparent.png"
-import infrastructurefixed from "@/public/images/infrastructure_transparent.png"
-import merge from "@/public/images/upgrades/merge.png"
-import robotfixed from "@/public/images/wallet-cropped.png"
-import ethereum from "@/public/images/what-is-ethereum.png"
+import EventFallback from "@/public/images/events/event-placeholder.png"
+import BuildersImage from "@/public/images/heroes/developers-hub-hero.jpg"
+import ActivityImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
+import LearnImage from "@/public/images/heroes/learn-hub-hero.png"
+import CommunityImage from "@/public/images/heroes/quizzes-hub-hero.png"
+import Hero from "@/public/images/home/hero.png"
 
 // lazy loaded components
 const Codeblock = lazy(() =>
@@ -80,150 +86,40 @@ const Codeblock = lazy(() =>
     new Promise((resolve) => setTimeout(resolve, 1000)),
   ]).then(([module]) => module)
 )
+
 const StatsBoxGrid = lazy(() => import("@/components/StatsBoxGrid"))
 
-const Skeleton = () => (
-  <Stack px={6} pt="2.75rem" h="50vh">
-    <SkeletonText
-      mt="4"
-      noOfLines={6}
-      spacing={4}
-      skeletonHeight="1.4rem"
-      startColor="body.medium"
-      opacity={0.2}
-    />
-  </Stack>
-)
-
-const SectionHeading = (props: HeadingProps) => (
-  <Heading
-    lineHeight={1.4}
-    fontFamily="sans-serif"
-    fontSize={{ base: "2xl", sm: "2rem" }}
-    fontWeight={600}
-    mb={2}
-    {...props}
-  />
-)
-
-const SectionDecription = (props: ChildOnlyProp) => (
-  <Box mb={8} fontSize={{ base: "md", sm: "xl" }} lineHeight={1.4} {...props} />
-)
-
-const ImageContainer = (props: FlexProps & { children: ReactNode }) => (
-  <Flex width={{ base: "75%", lg: "full" }} height="full" {...props} />
-)
-
-const CardContainer = (props: {
-  children: ReactNode
-  minChildWidth: SimpleGridProps["minChildWidth"]
-}) => (
-  <Flex
-    flexWrap="wrap"
-    gap={8}
-    p={{ lg: 4 }}
-    width="full"
-    sx={{
-      "& > *": {
-        minW: props.minChildWidth,
-      },
-    }}
-  >
-    {props.children}
-  </Flex>
-)
-
-const ContentBox = (props: ChildOnlyProp) => (
-  <Box py={4} px={{ base: 4, lg: 8 }} {...props} />
-)
-
-const StyledActionCard = chakra(ActionCard, {
-  baseStyle: {
-    background: "background.base",
-    borderRadius: "sm",
-    border: "1px",
-    borderColor: "text",
-    margin: 0,
-  },
-})
-
-const StyledTitleCardList = chakra(TitleCardList)
-
-const GrayContainer = (props: ChildOnlyProp) => (
-  <Box width="full" pb={16} background="grayBackground" {...props} />
-)
-
-const MainSectionContainer = (props: {
-  children: ReactNode
-  containerBg: FlexProps["bg"]
-}) => (
-  <Flex
-    alignItems="center"
-    background={props.containerBg}
-    borderBlock="1px"
-    borderColor="text"
-    height={{ base: "100%", lg: "720px" }}
-    mt="-1px"
-    py={{ base: 8, lg: 0 }}
-    width="full"
-  >
-    {props.children}
-  </Flex>
-)
-
-const FeatureContent = (props: ChildOnlyProp) => (
-  <Flex
-    flex="0 0 50%"
-    flexDirection="column"
-    justifyContent="center"
-    boxSize="full"
-    maxWidth={{ lg: "75%" }}
-    p={{ base: 8, lg: 24 }}
-    {...props}
-  />
-)
-
-const Row = (props: { children: ReactNode; isReversed?: boolean }) => (
-  <Flex
-    alignItems="center"
-    flexDirection={{
-      base: "column-reverse",
-      lg: props.isReversed ? "row-reverse" : "row",
-    }}
-  >
-    {props.children}
-  </Flex>
-)
-
-const ButtonLinkRow = (props: ChildOnlyProp) => (
-  <Stack
-    alignItems="flex-start"
-    direction={{ base: "column", md: "row" }}
-    spacing={{ base: 6, md: 2 }}
-    {...props}
-  />
-)
-
-const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
+const cachedEthPrice = runOnlyOnce(fetchEthPrice)
 const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
-const cachedFetchNodes = runOnlyOnce(fetchNodes)
 const cachedFetchTotalValueLocked = runOnlyOnce(fetchTotalValueLocked)
-const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
+const cachedXmlBlogFeeds = runOnlyOnce(async () => await fetchRSS(BLOG_FEEDS))
+const cachedAttestantBlog = runOnlyOnce(fetchAttestantPosts)
+const cachedGrowThePieData = runOnlyOnce(fetchGrowThePie)
+const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
 
 type Props = BasePageProps & {
-  communityEvents: CommunityEventsReturnType
   metricResults: AllMetricData
+  rssData: { rssItems: RSSItem[]; blogLinks: CommunityBlog[] }
 }
 
 export const getStaticProps = (async ({ locale }) => {
+  const growThePieData = await cachedGrowThePieData()
   const metricResults: AllMetricData = {
+    ethPrice: await cachedEthPrice(),
     totalEthStaked: await cachedFetchTotalEthStaked(),
-    nodeCount: await cachedFetchNodes(),
     totalValueLocked: await cachedFetchTotalValueLocked(),
-    txCount: await cachedFetchTxCount(),
+    txCount: growThePieData.txCount,
+    txCostsMedianUsd: growThePieData.txCostsMedianUsd,
   }
 
   const communityEvents = await cachedFetchCommunityEvents()
+  const calendar = communityEvents.upcomingEventData
+    .sort((a, b) => {
+      const dateA = isValidDate(a.date) ? new Date(a.date).getTime() : -Infinity
+      const dateB = isValidDate(b.date) ? new Date(b.date).getTime() : -Infinity
+      return dateA - dateB
+    })
+    .slice(0, CALENDAR_DISPLAY_COUNT)
 
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage("/")
@@ -238,422 +134,534 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  // load RSS feed items
+  const xmlBlogs = await cachedXmlBlogFeeds()
+  const attestantBlog = await cachedAttestantBlog()
+  const polishedRssItems = polishRSSList(attestantBlog, ...xmlBlogs)
+  const rssItems = polishedRssItems.slice(0, RSS_DISPLAY_COUNT)
+
+  const blogLinks = polishedRssItems.map(({ source, sourceUrl }) => ({
+    name: source,
+    href: sourceUrl,
+  })) as CommunityBlog[]
+  blogLinks.push(...BLOGS_WITHOUT_FEED)
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
-      communityEvents,
+      calendar,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
       metricResults,
+      rssData: { rssItems, blogLinks },
     },
     revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
 const HomePage = ({
-  communityEvents,
+  calendar,
   metricResults,
+  rssData: { rssItems, blogLinks },
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { t } = useTranslation(["common", "page-index"])
-  const { locale, asPath } = useRouter()
-  const [isModalOpen, setModalOpen] = useState(false)
-  const [activeCode, setActiveCode] = useState(0)
-  const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
-
-  const toggleCodeExample = (id: number): void => {
-    setActiveCode(id)
-    setModalOpen(true)
-  }
-
-  const cards = [
-    {
-      image: robotfixed,
-      title: t("page-index:page-index-get-started-wallet-title"),
-      description: t("page-index:page-index-get-started-wallet-description"),
-      alt: t("page-index:page-index-get-started-wallet-image-alt"),
-      href: "/wallets/find-wallet/",
-    },
-    {
-      image: ethfixed,
-      title: t("page-index:page-index-get-started-eth-title"),
-      description: t("page-index:page-index-get-started-eth-description"),
-      alt: t("page-index:page-index-get-started-eth-image-alt"),
-      href: "/get-eth/",
-    },
-    {
-      image: dogefixed,
-      title: t("page-index:page-index-get-started-dapps-title"),
-      description: t("page-index:page-index-get-started-dapps-description"),
-      alt: t("page-index:page-index-get-started-dapps-image-alt"),
-      href: "/dapps/",
-    },
-    {
-      image: devfixed,
-      title: t("page-index:page-index-get-started-devs-title"),
-      description: t("page-index:page-index-get-started-devs-description"),
-      alt: t("page-index:page-index-get-started-devs-image-alt"),
-      href: "/developers/",
-    },
-  ]
-
-  const touts = [
-    {
-      image: merge,
-      alt: t("page-index:page-index-tout-upgrades-image-alt"),
-      title: t("page-index:page-index-tout-upgrades-title"),
-      description: t("page-index:page-index-tout-upgrades-description"),
-      href: "/roadmap/",
-    },
-    {
-      image: infrastructurefixed,
-      alt: t("page-index:page-index-tout-enterprise-image-alt"),
-      title: t("page-index:page-index-tout-enterprise-title"),
-      description: t("page-index:page-index-tout-enterprise-description"),
-      href: "/enterprise/",
-    },
-    {
-      image: enterprise,
-      alt: t("page-index:page-index-tout-community-image-alt"),
-      title: t("page-index:page-index-tout-community-title"),
-      description: t("page-index:page-index-tout-community-description"),
-      href: "/community/",
-    },
-  ]
-
-  const codeExamples: Array<CodeExample> = [
-    {
-      title: t("page-index:page-index-developers-code-example-title-0"),
-      description: t(
-        "page-index:page-index-developers-code-example-description-0"
-      ),
-      codeLanguage: "language-solidity",
-      code: SimpleWalletContent,
-    },
-    {
-      title: t("page-index:page-index-developers-code-example-title-1"),
-      description: t(
-        "page-index:page-index-developers-code-example-description-1"
-      ),
-      codeLanguage: "language-solidity",
-      code: SimpleTokenContent,
-    },
-    {
-      title: t("page-index:page-index-developers-code-example-title-2"),
-      description: t(
-        "page-index:page-index-developers-code-example-description-2"
-      ),
-      codeLanguage: "language-javascript",
-      code: CreateWalletContent,
-    },
-    {
-      title: t("page-index:page-index-developers-code-example-title-3"),
-      description: t(
-        "page-index:page-index-developers-code-example-description-3"
-      ),
-      codeLanguage: "language-solidity",
-      code: SimpleDomainRegistryContent,
-    },
-  ]
-
-  const cardBoxShadow = useToken("colors", "cardBoxShadow")
+  const {
+    t,
+    locale,
+    asPath,
+    dir,
+    isModalOpen,
+    setModalOpen,
+    activeCode,
+    toggleCodeExample,
+    codeExamples,
+    subHeroCTAs,
+    popularTopics,
+    upcomingEvents,
+    joinActions,
+    bentoItems,
+  } = useHome()
 
   return (
-    <Flex
-      as={MainArticle}
-      flexDirection="column"
-      alignItems="center"
-      dir={dir}
-      width="full"
-    >
+    <MainArticle className="flex w-full flex-col items-center" dir={dir}>
       <PageMetadata
         title={t("page-index:page-index-meta-title")}
         description={t("page-index:page-index-meta-description")}
       />
       <TranslatathonBanner pathname={asPath} />
-      <Box w="full">
-        <HomeHero heroImg={hero} />
-      </Box>
-      {/* Getting Started Section */}
-      <GrayContainer>
-        <ContentBox>
-          <Flex
-            alignItems="center"
-            flexDirection={{ base: "column-reverse", md: "row" }}
-            mt={{ md: 4 }}
-            mb={{ md: 12 }}
+      <HomeHero heroImg={Hero} className="w-full" />
+      <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
+        <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
+          {subHeroCTAs.map(({ label, description, href, className, Svg }) => (
+            <Fragment key={label}>
+              <SvgButtonLink
+                Svg={Svg}
+                href={href}
+                label={label}
+                className={cn("xl:hidden", className)}
+                variant="col"
+              >
+                <p className="text-body">{description}</p>
+              </SvgButtonLink>
+              <SvgButtonLink
+                Svg={Svg}
+                href={href}
+                label={label}
+                className={cn("hidden xl:block", className)}
+                variant="row"
+              >
+                <p className="text-body">{description}</p>
+              </SvgButtonLink>
+            </Fragment>
+          ))}
+        </div>
+
+        {/* Use Cases - A new way to use the internet */}
+        <Section
+          id="use"
+          className={cn(
+            "max-lg:-mx-4 max-lg:flex max-lg:w-[100vw] max-lg:flex-col max-lg:overflow-hidden max-lg:px-4 sm:max-lg:-mx-6 sm:max-lg:px-6", // Mobile: Swiper cards
+            "lg:grid lg:grid-cols-bento lg:gap-4" // Desktop: BentoBox grid
+          )}
+        >
+          <div
+            className={cn(
+              "flex flex-col",
+              "lg:col-span-12 xl:col-span-3 xl:col-start-2"
+            )}
           >
-            <Box
-              flex="0 0 50%"
-              maxW={{ lg: "75%" }}
-              p={{ sm: 8, lg: 24 }}
-              boxSize="full"
-            >
-              <SectionHeading fontFamily="inherit" mb={6}>
-                <Translation id="page-index:page-index-get-started" />
-              </SectionHeading>
-              <SectionDecription>
-                <Translation id="page-index:page-index-get-started-description" />
-              </SectionDecription>
-            </Box>
-            <ImageContainer>
-              <Image
-                src={hackathon}
-                alt={t("page-index:page-index-get-started-image-alt")}
-                width={720}
-                backgroundSize="cover"
-                background="no-repeat 50px"
-              />
-            </ImageContainer>
-          </Flex>
-          <CardContainer minChildWidth={{ lg: "480px" }}>
-            {cards.map((card, idx) => (
-              <StyledActionCard
-                key={idx}
-                boxShadow={cardBoxShadow}
-                m={0}
-                title={card.title}
-                description={card.description}
-                alt={card.alt}
-                href={card.href}
-                image={card.image}
-                imageWidth={320}
+            <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
+              {t("common:nav-use-cases-label")}
+            </div>
+            <h2 className="mb-4 me-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
+              {t("page-index:page-index-bento-header")}
+            </h2>
+          </div>
+
+          {/* Mobile */}
+          <Swiper
+            options={{ effect: "cards" }}
+            className={cn(
+              "lg:hidden", // Mobile only
+              "[&_.swiper-slide]:overflow-visible [&_.swiper-slide]:rounded-2xl [&_.swiper-slide]:shadow-card-hover",
+              "[&_.swiper]:mx-auto [&_.swiper]:mt-4 [&_.swiper]:!flex [&_.swiper]:h-fit [&_.swiper]:max-w-128 [&_.swiper]:flex-col [&_.swiper]:items-center"
+            )}
+          >
+            {bentoItems.map(({ className, ...item }) => (
+              <BentoCard
+                key={item.title}
+                imgHeight={220}
+                {...item}
+                className={cn(className, "bg-background text-body")}
+                imgWidth={undefined} // Intentionally last to override box
               />
             ))}
-          </CardContainer>
-        </ContentBox>
-      </GrayContainer>
-      {/* What is Eth Section */}
-      <MainSectionContainer containerBg="homeBoxTurquoise">
-        <Row isReversed>
-          <FeatureContent>
-            <SectionHeading>
-              <Translation id="page-index:page-index-what-is-ethereum" />
-            </SectionHeading>
-            <SectionDecription>
-              <Translation id="page-index:page-index-what-is-ethereum-description" />
-            </SectionDecription>
-            <ButtonLinkRow>
-              <ButtonLink href="/what-is-ethereum/">
-                <Translation id="page-index:page-index-what-is-ethereum-button" />
-              </ButtonLink>
-              <ButtonLink href="/eth/" variant="outline" isSecondary>
-                <Translation id="page-index:page-index-what-is-ethereum-secondary-button" />
-              </ButtonLink>
-            </ButtonLinkRow>
-          </FeatureContent>
-          <ImageContainer ps={{ lg: 8 }}>
-            <Image
-              src={ethereum}
-              alt={t("page-index:page-index-what-is-ethereum-image-alt")}
-              width={700}
-            />
-          </ImageContainer>
-        </Row>
-      </MainSectionContainer>
-      {/* Finance Section */}
-      <MainSectionContainer containerBg="homeBoxOrange">
-        <Row>
-          <FeatureContent>
-            <SectionHeading>
-              <Translation id="page-index:page-index-defi" />
-            </SectionHeading>
-            <SectionDecription>
-              <Translation id="page-index:page-index-defi-description" />
-            </SectionDecription>
-            <ButtonLinkRow>
-              <ButtonLink href="/defi/">
-                <Translation id="page-index:page-index-defi-button" />
-              </ButtonLink>
-            </ButtonLinkRow>
-          </FeatureContent>
-          <ImageContainer>
-            <Image
-              src={impact}
-              alt={t("page-index:page-index-defi-image-alt")}
-              width={700}
-            />
-          </ImageContainer>
-        </Row>
-      </MainSectionContainer>
-      {/* NFT Section */}
-      <MainSectionContainer containerBg="homeBoxMint">
-        <Row isReversed>
-          <FeatureContent>
-            <SectionHeading>
-              <Translation id="page-index:page-index-nft" />
-            </SectionHeading>
-            <SectionDecription>
-              <Translation id="page-index:page-index-nft-description" />
-            </SectionDecription>
-            <ButtonLinkRow>
-              <ButtonLink href="/nft/">
-                <Translation id="page-index:page-index-nft-button" />
-              </ButtonLink>
-            </ButtonLinkRow>
-          </FeatureContent>
-          <ImageContainer>
-            <Image
-              src={infrastructure}
-              alt={t("page-index:page-index-nft-alt")}
-              width={700}
-            />
-          </ImageContainer>
-        </Row>
-      </MainSectionContainer>
-      {/* Internet Section */}
-      <MainSectionContainer containerBg="homeBoxPink">
-        <Box ps={{ lg: 8 }}>
-          <Row>
-            <FeatureContent>
-              <SectionHeading>
-                <Translation id="page-index:page-index-internet" />
-              </SectionHeading>
-              <SectionDecription>
-                <Translation id="page-index:page-index-internet-description" />
-              </SectionDecription>
-              <ButtonLinkRow>
-                <ButtonLink href="/dapps/?category=technology">
-                  <Translation id="page-index:page-index-internet-button" />
-                </ButtonLink>
-                <ButtonLink href="/wallets/" variant="outline" isSecondary>
-                  <Translation id="page-index:page-index-internet-secondary-button" />
-                </ButtonLink>
-              </ButtonLinkRow>
-            </FeatureContent>
-            <ImageContainer>
-              <Image
-                src={future}
-                alt={t("page-index:page-index-internet-image-alt")}
-                width={700}
-              />
-            </ImageContainer>
-          </Row>
-        </Box>
-      </MainSectionContainer>
-      {/* Developer Section */}
-      <MainSectionContainer containerBg="homeBoxPurple">
-        <Row>
-          <Box py={4} px={{ base: 4, sm: 8 }} width="full">
-            <StyledTitleCardList
-              content={codeExamples}
-              clickHandler={toggleCodeExample}
-              headerKey="page-index:page-index-developers-code-examples"
-              isCode
-              border="1px"
-              borderColor="text"
-              boxShadow={cardBoxShadow}
-              maxWidth={{ lg: "624px" }}
-              ms={{ lg: 16 }}
-            />
-          </Box>
-          <FeatureContent>
-            <SectionHeading>
-              <Translation id="page-index:page-index-developers" />
-            </SectionHeading>
-            <SectionDecription>
-              <Translation id="page-index:page-index-developers-description" />
-            </SectionDecription>
-            <ButtonLinkRow>
-              <ButtonLink href="/developers/">
-                <Translation id="page-index:page-index-developers-button" />
-              </ButtonLink>
-            </ButtonLinkRow>
-          </FeatureContent>
-          {/* Render CodeModal & Codeblock conditionally */}
-          {isModalOpen && (
-            <CodeModal
-              isOpen={isModalOpen}
-              setIsOpen={setModalOpen}
-              title={codeExamples[activeCode].title}
-            >
-              <Suspense fallback={<Skeleton />}>
-                <Codeblock
-                  codeLanguage={codeExamples[activeCode].codeLanguage}
-                  allowCollapse={false}
-                  fromHomepage
-                >
-                  {codeExamples[activeCode].code}
-                </Codeblock>
-              </Suspense>
-            </CodeModal>
-          )}
-        </Row>
-      </MainSectionContainer>
-      {/* Eth Today Section */}
-      <GrayContainer>
-        <ContentBox>
-          <SectionHeading mt={12} mb={8} fontFamily="heading">
-            <Translation id="page-index:page-index-network-stats-title" />
-          </SectionHeading>
-          <SectionDecription>
-            <Translation id="page-index:page-index-network-stats-subtitle" />
-          </SectionDecription>
-        </ContentBox>
+          </Swiper>
 
-        <LazyLoadComponent
-          component={StatsBoxGrid}
-          fallback={<Skeleton />}
-          componentProps={{ data: metricResults }}
-          intersectionOptions={{
-            root: null,
-            rootMargin: "500px",
-            threshold: 0,
-          }}
-        />
-      </GrayContainer>
-      <Divider mb={16} mt={16} w="10%" height="0.25rem" bgColor="homeDivider" />
-      <CommunityEvents events={communityEvents} />
-      {/* Explore Section */}
-      <ContentBox>
-        <Box pb={4}>
-          <SectionHeading mt={12} mb={8} fontFamily="heading">
-            <Translation id="page-index:page-index-touts-header" />
-          </SectionHeading>
-        </Box>
-        <CardContainer minChildWidth={{ lg: "400px" }}>
-          {touts.map((tout, idx) => {
-            return (
-              <StyledActionCard
-                key={idx}
-                title={tout.title}
-                description={tout.description}
-                alt={tout.alt}
-                href={tout.href}
-                image={tout.image}
-                imageWidth={320}
-                boxShadow={cardBoxShadow}
-              />
-            )
-          })}
-        </CardContainer>
-        <CalloutBanner
-          titleKey={"page-index:page-index-contribution-banner-title"}
-          descriptionKey={
-            "page-index:page-index-contribution-banner-description"
-          }
-          image={finance}
-          imageWidth={600}
-          alt={t("page-index:page-index-contribution-banner-image-alt")}
-          mt={32}
-          mb={16}
-          mx={0}
+          {/* Desktop */}
+          {bentoItems.map(({ className, ...item }) => (
+            <BentoCard
+              key={item.title}
+              {...item}
+              className={cn(className, "max-lg:hidden")} // Desktop only
+            />
+          ))}
+        </Section>
+
+        {/* Activity - The strongest ecosystem */}
+        <Section id="activity" variant="responsiveFlex">
+          <SectionBanner>
+            <TwImage src={ActivityImage} alt="" />
+          </SectionBanner>
+
+          <SectionContent>
+            <SectionTag>{t("page-index:page-index-activity-tag")}</SectionTag>
+            <SectionHeader>
+              {t("page-index:page-index-activity-header")}
+            </SectionHeader>
+            <div className="py-16 lg:py-32">
+              <p className="mt-8 text-xl font-bold">
+                {t("page-index:page-index-activity-description")}
+              </p>
+              <Suspense fallback={<SkeletonLines noOfLines={10} />}>
+                <StatsBoxGrid metricResults={metricResults} />
+              </Suspense>
+            </div>
+          </SectionContent>
+        </Section>
+
+        {/* Learn - Understand Ethereum */}
+        <Section
+          id="learn"
+          variant="responsiveFlex"
+          className="md:flex-row-reverse"
         >
-          <ButtonLinkRow>
-            <ButtonLink href="/contributing/">
-              <Translation id="page-index:page-index-contribution-banner-button" />
+          <SectionBanner>
+            <TwImage src={LearnImage} alt="" />
+          </SectionBanner>
+
+          <SectionContent>
+            <SectionTag>{t("page-index:page-index-learn-tag")}</SectionTag>
+            <SectionHeader>
+              {t("page-index:page-index-learn-header")}
+            </SectionHeader>
+            <div className="flex flex-col gap-y-16 lg:gap-y-32">
+              <p className="text-lg">
+                {t("page-index:page-index-learn-description")}
+              </p>
+              <div className="flex flex-col gap-y-8">
+                <h3 className="text-xl font-bold">
+                  {t("page-index:page-index-popular-topics-header")}
+                </h3>
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+                  {popularTopics.map(({ label, Svg, href }) => (
+                    <SvgButtonLink
+                      key={label}
+                      Svg={Svg}
+                      href={href}
+                      className="text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row"
+                    >
+                      <p className="text-start text-xl font-bold text-body group-hover:underline">
+                        {label}
+                      </p>
+                    </SvgButtonLink>
+                  ))}
+                </div>
+                <div className="flex justify-center py-8 md:justify-start">
+                  <ButtonLink href="/learn/" size="lg" variant="outline">
+                    {t("page-index:page-index-popular-topics-action")}{" "}
+                    <ChevronNext />
+                  </ButtonLink>
+                </div>
+              </div>
+            </div>{" "}
+          </SectionContent>
+        </Section>
+
+        {/* TODO: Add "The Internet Is Changing" section */}
+
+        {/* Builders - Blockchain's biggest builder community */}
+        <Section id="builders" variant="responsiveFlex">
+          <SectionBanner>
+            <TwImage src={BuildersImage} alt="" />
+          </SectionBanner>
+
+          <SectionContent>
+            <SectionTag>{t("page-index:page-index-builders-tag")}</SectionTag>
+            <SectionHeader>
+              {t("page-index:page-index-builders-header")}
+            </SectionHeader>
+            <p className="text-lg">
+              {t("page-index:page-index-builders-description")}
+            </p>
+            <div className="flex flex-wrap gap-6 py-8">
+              <ButtonLink href="/developers/" size="lg" className="w-fit">
+                {t("page-index:page-index-builders-action-primary")}{" "}
+                <ChevronNext />
+              </ButtonLink>
+              <ButtonLink
+                href="/developers/docs/"
+                size="lg"
+                variant="outline"
+                className="w-fit"
+              >
+                {t("page-index:page-index-builders-action-secondary")}
+              </ButtonLink>
+            </div>
+            <div className="py-8 md:pb-16 md:pt-8 lg:pb-32 lg:pt-16">
+              <WindowBox
+                title={t("page-index:page-index-developers-code-examples")}
+                Svg={AngleBrackets}
+              >
+                {codeExamples.map(({ title, description }, idx) => (
+                  <button
+                    key={title}
+                    className="flex flex-col gap-y-0.5 border-t px-6 py-4 hover:bg-background-highlight"
+                    onClick={() => toggleCodeExample(idx)}
+                  >
+                    <p className="font-bold">{title}</p>
+                    <p className="text-start text-sm text-body-medium">
+                      {description}
+                    </p>
+                  </button>
+                ))}
+              </WindowBox>
+            </div>
+
+            {isModalOpen && (
+              // TODO: Migrate CodeModal, CodeBlock from Chakra-UI to tailwind/shad-cn
+              <CodeModal
+                isOpen={isModalOpen}
+                setIsOpen={setModalOpen}
+                title={codeExamples[activeCode].title}
+              >
+                <Suspense fallback={<SkeletonLines noOfLines={16} />}>
+                  <Codeblock
+                    codeLanguage={codeExamples[activeCode].codeLanguage}
+                    allowCollapse={false}
+                    fromHomepage
+                  >
+                    {codeExamples[activeCode].code}
+                  </Codeblock>
+                </Suspense>
+              </CodeModal>
+            )}
+          </SectionContent>
+        </Section>
+
+        {/* Ethereum.org community - Built by the community */}
+        <Section
+          id="community"
+          variant="responsiveFlex"
+          className="md:flex-row-reverse"
+        >
+          <SectionBanner>
+            <TwImage src={CommunityImage} alt="" />
+          </SectionBanner>
+
+          <SectionContent>
+            <SectionTag>{t("page-index:page-index-community-tag")}</SectionTag>
+            <SectionHeader>
+              {t("page-index:page-index-community-header")}
+            </SectionHeader>
+            <div className="mt-8 flex flex-col gap-8 text-lg">
+              <p>{t("page-index:page-index-community-description-1")}</p>
+              <p>{t("page-index:page-index-community-description-2")}</p>
+              <p>{t("page-index:page-index-community-description-3")}</p>
+            </div>
+            <div className="flex flex-wrap gap-3 py-8">
+              <ButtonLink href="/community/" size="lg">
+                {t("page-index:page-index-community-action")} <ChevronNext />
+              </ButtonLink>
+              <div className="flex gap-3">
+                <ButtonLink
+                  href="/discord/"
+                  size="lg"
+                  variant="outline"
+                  hideArrow
+                >
+                  <FaDiscord />
+                </ButtonLink>
+                <ButtonLink
+                  href={GITHUB_REPO_URL}
+                  size="lg"
+                  variant="outline"
+                  hideArrow
+                >
+                  <FaGithub />
+                </ButtonLink>
+              </div>
+            </div>
+            <div className="py-8 md:pt-8 lg:pt-16">
+              <WindowBox
+                title={t("page-index:page-index-calendar-title")}
+                Svg={Calendar}
+              >
+                {calendar.length > 0 ? (
+                  calendar.map(({ date, title, calendarLink }) => (
+                    <div
+                      key={title}
+                      className="flex flex-col justify-between gap-6 border-t px-6 py-4 xl:flex-row"
+                    >
+                      <div className="flex flex-col gap-y-0.5 text-center text-base sm:text-start">
+                        <a
+                          href={calendarLink}
+                          className="text-sm font-bold text-body no-underline hover:underline"
+                        >
+                          {title}
+                        </a>
+                        <p className="italic text-body-medium">
+                          {new Intl.DateTimeFormat(locale, {
+                            month: "long",
+                            day: "2-digit",
+                            year: "numeric",
+                            hour: "numeric",
+                            minute: "numeric",
+                          }).format(new Date(date))}
+                        </p>
+                      </div>
+                      <ButtonLink
+                        className="h-fit w-full text-nowrap px-5 sm:w-fit xl:self-center"
+                        size="md"
+                        variant="ghost"
+                        href={calendarLink}
+                        hideArrow
+                      >
+                        <CalendarAdd />{" "}
+                        {t("page-index:page-index-calendar-add")}
+                      </ButtonLink>
+                    </div>
+                  ))
+                ) : (
+                  <div className="flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row">
+                    {t("page-index:page-index-calendar-fallback")}
+                  </div>
+                )}
+              </WindowBox>
+            </div>{" "}
+          </SectionContent>
+        </Section>
+
+        {/* Recent posts */}
+        <Section id="recent">
+          <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
+            {t("page-index:page-index-posts-header")}
+          </h3>
+          <p>{t("page-index:page-index-posts-subtitle")}</p>
+
+          <Swiper
+            className="mt-4 md:mt-16"
+            options={{
+              spaceBetween: 32,
+              breakpoints: {
+                [breakpointAsNumber.sm]: {
+                  slidesPerView: 2,
+                  slidesPerGroup: 2,
+                },
+                [breakpointAsNumber.lg]: {
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                },
+              },
+            }}
+          >
+            {rssItems.map(({ pubDate, title, source, link, imgSrc }) => (
+              <Card key={title} href={link}>
+                <CardBanner>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={imgSrc} alt="" />
+                </CardBanner>
+                <CardContent>
+                  <CardTitle>{title}</CardTitle>
+                  {isValidDate(pubDate) && (
+                    <CardSubTitle>
+                      {new Intl.DateTimeFormat(locale, {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric",
+                      }).format(new Date(pubDate))}
+                    </CardSubTitle>
+                  )}
+                  <CardHighlight>{source}</CardHighlight>
+                </CardContent>
+              </Card>
+            ))}
+          </Swiper>
+
+          <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
+            <p className="text-lg">{t("page-index:page-index-posts-action")}</p>
+            <div className="flex flex-wrap gap-x-6 gap-y-4">
+              {blogLinks.map(({ name, href }) => (
+                <Link href={href} key={name}>
+                  {name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </Section>
+
+        {/* Events */}
+        <Section id="events">
+          <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
+            {t("page-index:page-index-events-header")}
+          </h3>
+          <p>{t("page-index:page-index-events-subtitle")}</p>
+          <div className="mt-4 md:mt-16">
+            <div className="grid grid-cols-1 gap-8 self-stretch sm:grid-cols-2 md:grid-cols-3">
+              {upcomingEvents.map(
+                (
+                  {
+                    title,
+                    href,
+                    location,
+                    description,
+                    startDate,
+                    endDate,
+                    imageUrl,
+                  },
+                  idx
+                ) => (
+                  <Card
+                    key={title + description}
+                    href={href}
+                    className={cn(
+                      idx === 0 && "col-span-1 sm:col-span-2 md:col-span-1"
+                    )}
+                  >
+                    <CardBanner>
+                      {imageUrl ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={imageUrl}
+                          alt=""
+                          className="max-w-full object-cover object-center"
+                        />
+                      ) : (
+                        <TwImage src={EventFallback} alt="" />
+                      )}
+                    </CardBanner>
+                    <CardContent>
+                      <CardTitle>{title}</CardTitle>
+                      <CardSubTitle>
+                        {(isValidDate(startDate) || isValidDate(endDate)) &&
+                          new Intl.DateTimeFormat(locale, {
+                            month: "long",
+                            day: "numeric",
+                            year: "numeric",
+                          }).formatRange(
+                            new Date(
+                              isValidDate(startDate) ? startDate : endDate
+                            ),
+                            new Date(isValidDate(endDate) ? endDate : startDate)
+                          )}
+                      </CardSubTitle>
+                      <CardHighlight>{location}</CardHighlight>
+                    </CardContent>
+                  </Card>
+                )
+              )}
+            </div>
+          </div>
+          <div className="flex justify-center py-8 md:justify-start">
+            <ButtonLink href="/community/events/" size="lg" className="mx-auto">
+              {t("page-index:page-index-events-action")} <ChevronNext />
             </ButtonLink>
-            <ButtonLink
-              href="https://github.com/ethereum/ethereum-org-website"
-              leftIcon={<Icon as={FaGithub} fontSize="2xl" />}
-              variant="outline"
-              isSecondary
-            >
-              GitHub
-            </ButtonLink>
-          </ButtonLinkRow>
-        </CalloutBanner>
-      </ContentBox>
-    </Flex>
+          </div>
+        </Section>
+
+        {/* Join ethereum.org */}
+        <Section
+          id="join"
+          className={cn(
+            "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(theme(borderRadius.4xl)+1px)] before:content-['']", // Border/gradient positioning
+            "before:bg-gradient-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
+            "relative inset-0 rounded-4xl bg-background" // Paint background color over card portion
+          )}
+        >
+          <div className="mb-12 flex flex-col gap-y-8 rounded-4xl bg-radial-a px-8 py-12 lg:mb-32 xl:mb-36">
+            <div className="flex flex-col gap-y-4 text-center">
+              <h2>{t("page-index:page-index-join-header")}</h2>
+              <p>{t("page-index:page-index-join-description")}</p>
+            </div>
+            <div className="mx-auto grid grid-cols-1 gap-16 md:grid-cols-2">
+              {joinActions.map(
+                ({ Svg, label, href, className, description }) => (
+                  <SvgButtonLink
+                    key={label}
+                    Svg={Svg}
+                    label={label}
+                    href={href}
+                    className={cn("max-w-screen-sm", className)}
+                    variant="row"
+                  >
+                    <p className="text-body">{description}</p>
+                  </SvgButtonLink>
+                )
+              )}
+            </div>
+          </div>
+        </Section>
+      </div>
+    </MainArticle>
   )
 }
 
