@@ -147,8 +147,7 @@ const baseColors = {
 // TODO replace random variables w/ baseColor variables
 const lightColors = {
   buttonColor: white,
-  runNodeGradient:
-    "linear-gradient(0deg, rgba(153, 157, 244, 0.1) 0%, rgba(153, 157, 244, 0) 100%), linear-gradient(270.72deg, #FDF0FF 0.62%, rgba(236, 195, 195, 0.557292) 32.61%, rgba(207, 189, 230, 0.296875) 49.67%, rgba(196, 196, 196, 0) 72.88%);",
+  /** @deprecated */
   runNodeGradient2:
     "linear-gradient(135deg, rgba(79, 113, 235, 0.2) 9.8%, rgba(232, 79, 235, 0.2) 92.84%);",
   ghostCardBackground: white,
@@ -262,8 +261,7 @@ const lightColors = {
 // TODO replace random variables w/ baseColor variables
 const darkColors = {
   buttonColor: black300,
-  runNodeGradient:
-    "linear-gradient(0deg, rgba(153, 157, 244, 0.35) 0%, rgba(153, 157, 244, 0) 100%), linear-gradient(89.24deg, rgba(253, 240, 255, 0.7) -64.3%, rgba(212, 119, 119, 0.390104) -7.43%, rgba(188, 163, 220, 0.207813) 46.66%, rgba(196, 196, 196, 0) 99.16%);",
+  /** @deprecated */
   runNodeGradient2:
     "linear-gradient(135deg, rgba(79, 113, 235, 0.2) 9.8%, rgba(232, 79, 235, 0.2) 92.84%);",
   primaryHover: primaryDark400,

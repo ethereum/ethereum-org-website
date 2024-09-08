@@ -87,10 +87,6 @@ const GappedContent = (props: ChildOnlyProp) => (
   />
 )
 
-const HeroContainer = (props: ChildOnlyProp) => (
-  <Box w="full" bg="runNodeGradient" {...props} />
-)
-
 const Content = (props: BoxProps) => <Box w="full" py="4" px="8" {...props} />
 
 const TwoColumnContent = (props: ChildOnlyProp) => (
@@ -443,11 +439,11 @@ const RunANodePage = () => {
         description={t("page-run-a-node-meta-description")}
         image="/images/run-a-node/ethereum-inside.png"
       />
-      <HeroContainer>
-        <Box pb="8">
+      <div className="w-full bg-gradient-to-br from-accent-b/5 via-primary/10 to-accent-b/15 dark:from-accent-b/20 dark:via-primary/15 dark:to-accent-a/20">
+        <div className="pb-8">
           <PageHero content={heroContent} isReverse />
-        </Box>
-      </HeroContainer>
+        </div>
+      </div>
 
       <Content id="what-is-a-node">
         <TwoColumnContent>
@@ -483,6 +479,7 @@ const RunANodePage = () => {
           contentPreview={
             <Translation id="page-run-a-node:page-run-a-node-who-preview" />
           }
+          // TODO: Replace "runNodeGradient2" with classes "bg-gradient-to-br from-blue-500/20 from-10% to-pink-600/20 to-90%" once component supports, and then remove token from src/theme.ts
           background="runNodeGradient2"
           forceOpen
         >
