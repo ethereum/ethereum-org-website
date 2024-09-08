@@ -4,7 +4,7 @@ import { HStack } from "../flex"
 import Select from "../Select"
 
 const meta = {
-  title: "Atoms / Form / ShadCN Dropdown",
+  title: "Atoms / Form / Dropdown",
   component: Select,
   parameters: {
     // TODO: Remove this when this story file becomes the primary one
