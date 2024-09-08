@@ -8,8 +8,6 @@ import Search from "@/components/Search"
 
 import { isDesktop } from "@/lib/utils/isDesktop"
 
-import { NAV_PY } from "@/lib/constants"
-
 import DesktopNavMenu from "./Desktop"
 import Menu from "./Menu"
 import { useNav } from "./useNav"
@@ -30,17 +28,10 @@ const Nav = () => {
 
   return (
     <Box position="sticky" top={0} zIndex="sticky" width="full">
-      <Flex
+      <nav
+        className="flex h-19 justify-center border-b border-b-disabled bg-background p-4 xl:px-8"
         ref={navWrapperRef}
-        as="nav"
         aria-label={t("nav-primary")}
-        bg="background.base"
-        borderBottom="1px"
-        borderColor="rgba(0, 0, 0, 0.1)"
-        height="4.75rem"
-        justifyContent="center"
-        py={NAV_PY}
-        px={{ base: 4, xl: 8 }}
       >
         <Flex
           alignItems={{ base: "center", md: "normal" }}
@@ -94,7 +85,7 @@ const Nav = () => {
             </Flex>
           </Flex>
         </Flex>
-      </Flex>
+      </nav>
     </Box>
   )
 }
