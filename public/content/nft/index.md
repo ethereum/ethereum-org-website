@@ -75,7 +75,7 @@ This website also has an alternative domain name powered by NFTs, **ethereum.eth
 
 ## How do NFTs work? {#how-nfts-work}
 
-NFTs, like any digital items on the Ethereum blockchain, are created through a special Ethereum based computer program called a "smart contract." These contracts follow certain rules, like the [ERC-721](/glossary/#erc-721) or [ERC-1155](/glossary/#erc-1155) standards, which determine what the contract can do.
+NFTs, like any digital items on the Ethereum blockchain, are created through a special Ethereum based computer program called a "smart contract". These contracts follow certain rules, like the [ERC-721](/glossary/#erc-721) or [ERC-1155](/glossary/#erc-1155) standards, which determine what the contract can do.
 
 The NFT smart contract can do a few key things:
 

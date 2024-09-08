@@ -282,7 +282,7 @@ const GasPage = () => {
             alignSelf="center"
             mt={{ base: 16, lg: 2 }}
           >
-            <Emoji text=":cat:" fontSize="5xl" />
+            <Emoji text=":cat:" className="text-5xl" />
             <H3>{t("page-gas-attack-of-the-cryptokitties-header")}</H3>
             <Text>{t("page-gas-attack-of-the-cryptokitties-text")}</Text>
           </GhostCard>
@@ -306,7 +306,7 @@ const GasPage = () => {
                   key={benefit.emoji}
                   emoji={benefit.emoji}
                   description={benefit.description}
-                  emojiSize={3}
+                  className="text-5xl"
                   align="center"
                 />
               </Box>

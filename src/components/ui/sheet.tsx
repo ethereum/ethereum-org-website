@@ -4,7 +4,7 @@ import * as SheetPrimitive from "@radix-ui/react-dialog"
 
 import { cn } from "@/lib/utils/cn"
 
-import { Button } from "../../../tailwind/ui/buttons/Button"
+import { Button } from "./buttons/Button"
 
 const Sheet = SheetPrimitive.Root
 

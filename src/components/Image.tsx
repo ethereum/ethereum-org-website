@@ -41,8 +41,18 @@ const DefaultNextImage = (props: ImageProps) => {
 }
 
 /**
- * TODO: replace this component with import { Image } from "@chakra-ui/next-js"
- * once https://github.com/vercel/next.js/issues/52216 is fixed
+ * TODO: Rename this component to `Image` once all components are using Tailwind
+ */
+export const TwImage = (props: NextImageProps) => (
+  <DefaultNextImage {...props} />
+)
+
+/**
+ * DEPRECATED: Use `TWImage` instead
+ *
+ * TODO: Remove this component once all components are using Tailwind
+ *
+ * @deprecated
  */
 export const Image: ChakraComponent<"img", NextImageProps> = chakra(
   DefaultNextImage,

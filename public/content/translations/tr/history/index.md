@@ -150,7 +150,7 @@ Altair yükseltmesi, [İşaret Zinciri](/roadmap/beacon-chain) için planlanmı�
 
 - [Altair güncelleme spesifikasyonunu okuyun](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />İlginç bir bilgi! {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} className="me-2" />İlginç bir bilgi! {#altair-fun-fact}
 
 Altair, kesin bir kullanıma sunma süresi olan ilk büyük ağ yükseltmesiydi. Önceden her yükseltme, blok sürelerinin değiştiği iş ispatı zincirinde beyan edilen bir blok numarasına dayanıyordu. İşaret Zinciri, iş ispatı için çözüm gerektirmez ve bunun yerine, doğrulayıcıların blok önerebileceği 32 tane on iki saniyelik "yuva"dan oluşan zamana dayalı bir dönem sistemi üzerinde çalışır. Bu yüzden 74.240 numaralı döneme ne zaman ulaşacağımızı tam olarak biliyorduk ve Altair hayat buldu!
 

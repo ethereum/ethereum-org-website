@@ -133,7 +133,7 @@ const published = (locale: string, published: string) => {
 
   return localeTimestamp !== "Invalid Date" ? (
     <span>
-      <Emoji text=":calendar:" fontSize="sm" ms={2} me={2} />
+      <Emoji text=":calendar:" className="me-2 ms-2 text-sm" />
       {localeTimestamp}
     </span>
   ) : null
@@ -409,7 +409,7 @@ const TutorialPage = ({
         </Flex>
         {filteredTutorials.length === 0 && (
           <Box mt={0} textAlign="center" padding={12}>
-            <Emoji text=":crying_face:" fontSize="5xl" mb={8} mt={8} />
+            <Emoji text=":crying_face:" className="my-8 text-5xl" />
             <OldHeading>
               <Translation id="page-developers-tutorials:page-tutorial-tags-error" />
             </OldHeading>
@@ -471,7 +471,7 @@ const TutorialPage = ({
                 </Badge>
               </Flex>
               <Text color="text200" fontSize="sm" textTransform="uppercase">
-                <Emoji text=":writing_hand:" fontSize="sm" me={2} />
+                <Emoji text=":writing_hand:" className="me-2 text-sm" />
                 {tutorial.author}
                 {tutorial.published ? (
                   <> •{published(locale!, tutorial.published!)}</>
@@ -480,7 +480,7 @@ const TutorialPage = ({
                   <>
                     {" "}
                     •
-                    <Emoji text=":stopwatch:" fontSize="sm" mx={2} />
+                    <Emoji text=":stopwatch:" className="mx-2 text-sm" />
                     {tutorial.timeToRead}{" "}
                     <Translation id="page-developers-tutorials:page-tutorial-read-time" />
                   </>
@@ -488,7 +488,7 @@ const TutorialPage = ({
                 {tutorial.isExternal && (
                   <>
                     {" "}
-                    •<Emoji text=":link:" fontSize="sm" mx={2} />
+                    •<Emoji text=":link:" className="mx-2 text-sm" />
                     <Box as="span" color="primary.base" cursor="pointer">
                       <Translation id="page-developers-tutorials:page-tutorial-external-link" />
                     </Box>

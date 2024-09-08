@@ -115,6 +115,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/programming-languages/dart",
     "/developers/docs/programming-languages/delphi",
     "/developers/docs/programming-languages/dot-net",
+    "/developers/docs/programming-languages/elixir",
     "/developers/docs/programming-languages/golang",
     "/developers/docs/programming-languages/java",
     "/developers/docs/programming-languages/javascript",

@@ -1,10 +1,7 @@
 import { forwardRef } from "react"
 import type { IconType } from "react-icons"
 
-import {
-  Button,
-  type ButtonProps,
-} from "../../../../tailwind/ui/buttons/Button"
+import { Button, type ButtonProps } from "../../ui/buttons/Button"
 
 type FooterButtonProps = ButtonProps & {
   icon: IconType

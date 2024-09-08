@@ -79,9 +79,7 @@ const TranslationBanner = ({
             </Heading>
             <Emoji
               text=":globe_showing_asia_australia:"
-              fontSize="2xl"
-              ms={2}
-              mb={{ base: 4, sm: "auto" }}
+              className="mb-4 ms-2 text-2xl sm:mb-auto"
             />
           </Flex>
           <p>{t(bodyTextId)}</p>

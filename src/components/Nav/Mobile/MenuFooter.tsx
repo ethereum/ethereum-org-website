@@ -1,7 +1,6 @@
 import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdSearch, MdWbSunny } from "react-icons/md"
-import { Button, ButtonProps, Icon, MenuButton } from "@chakra-ui/react"
 
 import LanguagePicker from "@/components/LanguagePicker"
 
@@ -11,17 +10,6 @@ import FooterButton from "./FooterButton"
 import FooterItemText from "./FooterItemText"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
-
-/**
- * This is necessary to be backwards compatible with the old FooterButton
- * component where the ref was NOT passed to the Button component in order to
- * render the MenuList with an undefined position (not relative to the button).
- *
- * TODO: remove this component once the LanguagePicker component is migrated
- */
-function ButtonWORef(props: ButtonProps) {
-  return <Button {...props} />
-}
 
 type MenuFooterProps = {
   onToggle: () => void
@@ -55,33 +43,10 @@ const MenuFooter = ({
         <FooterItemText>{t(themeLabelKey)}</FooterItemText>
       </FooterButton>
 
-      <LanguagePicker
-        hideFrom="md"
-        position="fixed"
-        w="calc(100vw - var(--eth-sizes-8))"
-        inset="4"
-        handleClose={onToggle}
-        _before={{
-          content: '""',
-          position: "fixed",
-          inset: 0,
-          bg: "black",
-          opacity: 0.4,
-        }} // TODO: Replace with overlay component
-      >
-        <MenuButton
-          as={ButtonWORef}
-          name={MOBILE_LANGUAGE_BUTTON_NAME}
-          leftIcon={<Icon as={BsTranslate} />}
-          sx={{ span: { m: 0 } }}
-          variant="ghost"
-          flexDir="column"
-          alignItems="center"
-          color="body.base"
-          px="1"
-        >
+      <LanguagePicker dialog handleClose={onToggle}>
+        <FooterButton icon={BsTranslate} name={MOBILE_LANGUAGE_BUTTON_NAME}>
           <FooterItemText>{t("languages")}</FooterItemText>
-        </MenuButton>
+        </FooterButton>
       </LanguagePicker>
     </div>
   )

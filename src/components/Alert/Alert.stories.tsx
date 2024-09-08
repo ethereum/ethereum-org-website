@@ -5,7 +5,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import Alert from "."
 
 const meta = {
-  title: "Molecules / Action Feedback / Alerts",
+  title: "Molecules / Action Feedback / Old Alerts",
   component: Alert,
   decorators: [
     (Story) => (
