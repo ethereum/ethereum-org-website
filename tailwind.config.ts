@@ -159,10 +159,10 @@ const config = {
         "tooltip-shadow": "var(--tooltip-shadow)",
         "hub-hero-content-bg": "var(--hub-hero-content-bg)",
         "search-background": "var(--search-background)",
-        attention: {
-          DEFAULT: "hsla(var(--attention))",
-          light: "hsla(var(--attention-light))",
-          outline: "hsla(var(--attention-outline))",
+        warning: {
+          DEFAULT: "hsla(var(--warning))",
+          light: "hsla(var(--warning-light))",
+          outline: "hsla(var(--warning-outline))",
         },
         error: {
           DEFAULT: "hsla(var(--error))",

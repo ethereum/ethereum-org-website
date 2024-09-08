@@ -22,9 +22,9 @@
     --neutral: var(--white);
 
     /* Complementary Set */
-    --attention: var(--yellow-500);
-    --attention-light: var(--yellow-200);
-    --attention-outline: var(--attention);
+    --warning: var(--yellow-500);
+    --warning-light: var(--yellow-200);
+    --warning-outline: var(--warning);
 
     /* ? Keep "error" or rename to "fail" ? */
     --error: var(--red-500);
@@ -82,7 +82,7 @@
     --neutral: var(--gray-900);
 
     /* Complementary Set */
-    --attention-outline: var(--attention-light);
+    --warning-outline: var(--warning-light);
 
     --error: var(--red-500);
     --error-light: var(--red-100);
