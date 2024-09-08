@@ -58,7 +58,7 @@
 .DocSearch-SearchBar form {
   --docsearch-searchbox-shadow: inset 0 0 0 1px
     theme(colors.primary.high-contrast);
-  @apply bg-neutral py-3;
+  @apply bg-body-inverse py-3;
 }
 .DocSearch-SearchBar label,
 .DocSearch-SearchBar input {
