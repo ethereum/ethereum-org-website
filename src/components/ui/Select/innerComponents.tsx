@@ -22,7 +22,7 @@ export const selectVariants = tv({
       "p-2 flex items-center gap-4 border-[length:var(--border-base-width)] border-current text-[color:var(--my-var)] not-[[data-expanded=true]]:focus-within:outline-3 not-[[data-expanded=true]]:focus-within:outline-primary-hover not-[[data-expanded=true]]:focus-within:outline -outline-offset-2 [&[data-expanded=true]]:bg-background-highlight [&[data-expanded=true]]:text-primary [&[data-expanded=true]]:border-primary-low-contrast hover:text-primary hover:border-primary-low-contrast",
     indicatorIcon:
       "text-sm leading-none transition-transform [*[data-expanded=true]_&]:rotate-180",
-    menu: "-z-[1] relative",
+    menu: "-z-[1] absolute w-full",
     menuList:
       "overflow-y-auto bg-background-highlight w-full max-h-80 border-x-[length:--border-base-width] border-b-[length:--border-base-width] rounded-b",
     option:
