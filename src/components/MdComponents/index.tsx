@@ -70,7 +70,10 @@ export const Heading3 = ({
   className,
   ...rest
 }: HeadingProps) => (
-  <h3 {...commonHeadingAttributes(cn("text-2xl", className), id)} {...rest}>
+  <h3
+    {...commonHeadingAttributes(cn("text-2xl mt-10", className), id)}
+    {...rest}
+  >
     <IdAnchor id={id} />
     {children}
   </h3>
