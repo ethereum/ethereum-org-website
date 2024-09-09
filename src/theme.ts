@@ -205,6 +205,7 @@ const lightColors = {
   displayLight: "block",
   grayBackground: "#fcfcfc",
   cardGradient:
+    // Migrate to: "bg-gradient-to-r from-accent-a/10 to-accent-c/10"
     "radial-gradient(46.28% 66.31% at 66.95% 58.35%, #e6e6f7 0%, #e7edfa 50%, #e9fbfa 100%)",
   warning: primaryDark100,
   warningLink: primaryDark700,
@@ -333,6 +334,7 @@ const darkColors = {
   rollupDevDocList: "#4c4c4c",
   beta: "background: radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(255, 143, 80, 0.72) 0%, rgba(255, 143, 80, 0.22) 100%)",
   cardGradient:
+    // Migrate to: "dark:bg-gradient-to-tr dark:from-primary/20 dark:from-20% dark:via-accent-a/20 dark:via-60% dark:to-accent-c/20 dark:to-95%"
     "linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05% )",
   offBackground: "#181818",
   stakingPillPlatform: "#cd9df3",
