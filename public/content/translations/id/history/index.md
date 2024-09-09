@@ -150,7 +150,7 @@ Peningkatan Altair adalah peningkatan pertama yang terjadwal untuk [Rantai Suar]
 
 - [Baca spesifikasi peningkatan Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <Emoji text=":tada:" size={1} me="0.5rem" />Fakta menyenangkan! {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} className="me-2" />Fakta menyenangkan! {#altair-fun-fact}
 
 Altair adalah peningkatan besar dan pertama untuk jaringan yang memiliki waktu rollout yang pasti. Setiap peningkatan sebelumnya telah berdasarkan pada suatu nomor blok yang dideklarasikan pada rantai bukti kerja, dengan waktu blok yang bervariasi. Rantai Suar tidak mengharuskan penyelesaian bukti kerja, dan sebagai gantinya berfungsi pada sistem jangka waktu berbasis waktu yang terdiri dari 32 "slot" waktu dua belas detik di mana para validator dapat mengusulkan blok. Inilah alasan kami mengetahui secara pasti kapan kami akan mencapai jangka waktu 74.240 dan Altair mulai beroperasi!
 

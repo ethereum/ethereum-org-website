@@ -223,7 +223,7 @@ const TranslationLeaderboard = ({
                 <Flex>
                   {emoji ? (
                     <Box w={10}>
-                      <Emoji me={4} fontSize="2rem" text={emoji} />
+                      <Emoji className="me-4 text-[2rem]" text={emoji} />
                     </Box>
                   ) : (
                     <Box w={10} opacity="0.4">
@@ -254,10 +254,8 @@ const TranslationLeaderboard = ({
                 </Flex>
                 <Flex minW="20%" flexDirection="row" alignItems="start">
                   <Emoji
-                    display={{ base: "none", sm: "block" }}
-                    me={2}
-                    fontSize="2xl"
-                    text={":writing:"}
+                    text=":writing:"
+                    className="me-2 hidden text-2xl sm:block"
                   />
                   {totalCosts}
                 </Flex>

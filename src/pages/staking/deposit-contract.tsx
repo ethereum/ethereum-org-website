@@ -428,7 +428,7 @@ const DepositContractPage = () => {
                   </Checkbox>
                   <CopyButton
                     isDisabled={!isButtonEnabled}
-                    leftIcon={<Emoji text=":eyes:" boxSize={4} />}
+                    leftIcon={<Emoji text=":eyes:" className="text-md" />}
                     onClick={() =>
                       setState({ ...state, showAddress: !state.showAddress })
                     }
@@ -455,7 +455,7 @@ const DepositContractPage = () => {
                       <StyledFakeLink onClick={handleTextToSpeech}>
                         <Translation id={textToSpeechText as TranslationKey} />
                       </StyledFakeLink>{" "}
-                      <Emoji text={textToSpeechEmoji} boxSize={4} />
+                      <Emoji text={textToSpeechEmoji} className="text-md" />
                     </Flex>
                   )}
                   <Tooltip content={t("page-staking-deposit-contract-warning")}>
@@ -467,9 +467,12 @@ const DepositContractPage = () => {
                         <CopyButton
                           leftIcon={
                             isCopied ? (
-                              <Emoji text=":white_check_mark:" boxSize={4} />
+                              <Emoji
+                                text=":white_check_mark:"
+                                className="text-md"
+                              />
                             ) : (
-                              <Emoji text=":clipboard:" boxSize={4} />
+                              <Emoji text=":clipboard:" className="text-md" />
                             )
                           }
                         >

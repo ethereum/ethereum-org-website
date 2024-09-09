@@ -141,7 +141,7 @@ A Altair foi a primeira implementação programada para a [Beacon Chain](/roadma
 
 - [Leia a especificação de melhoria da Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />Fato engraçado! {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} className="me-2" />Fato engraçado! {#altair-fun-fact}
 
 Altair foi a primeira grande atualização de rede que teve um tempo exato de implantação. Todas as atualizações anteriores eram baseadas em um número de bloco declarado na cadeia de prova de trabalho, na qual o tempo de mineração de cada bloco varia. A Beacon Chain não requer resolver a prova de trabalho, em vez disso, ela funciona segundo um sistema de tempo em épocas, composto de 32 “intervalos” de 12 segundos cada, durante os quais os validadores podem propor blocos. É por isso que sabíamos exatamente quando atingiríamos a época 74.240 e a data de lançamento da Altair!
 

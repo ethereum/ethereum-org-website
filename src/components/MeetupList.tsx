@@ -124,9 +124,7 @@ const MeetupList = () => {
             >
               <Emoji
                 text={meetup.emoji}
-                boxSize={4}
-                me={2}
-                lineHeight="unset"
+                className="me-2 text-md leading-none"
               />
               <Text mb={0} opacity={"0.6"}>
                 {meetup.location}

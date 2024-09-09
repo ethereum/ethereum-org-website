@@ -8,7 +8,7 @@ const TranslatathonPrizes = () => {
         <div className="flex flex-row gap-4">
           <div className="flex h-32 w-32 items-center justify-center rounded-lg p-1 shadow-md">
             <div className="h-16 w-16 items-center justify-center">
-              <Emoji text="🥇" fontSize={64} />
+              <Emoji text="🥇" className="text-[64px]" />
             </div>
           </div>
           <div className="flex max-w-48 flex-col items-center justify-center text-center">
@@ -24,9 +24,7 @@ const TranslatathonPrizes = () => {
             <div className="h-11 w-11">
               <Emoji
                 text="🥈"
-                fontSize={44}
-                alignContent="center"
-                justifyItems="center"
+                className="content-center items-center text-[44px]"
               />
             </div>
           </div>
@@ -39,7 +37,7 @@ const TranslatathonPrizes = () => {
         <div className="justify-left flex flex-1 items-center gap-4 sm:justify-center">
           <div className="flex h-24 w-24 items-center justify-center rounded-lg p-1 shadow-md">
             <div className="h-11 w-11">
-              <Emoji text="🥉" fontSize={44} />
+              <Emoji text="🥉" className="text-[44px]" />
             </div>
           </div>
           <div className="flex max-w-48 flex-col items-center justify-center text-center">
@@ -53,7 +51,7 @@ const TranslatathonPrizes = () => {
         <div className="justify-left flex flex-1 items-center gap-4 sm:justify-center">
           <div className="flex h-16 w-16 items-center justify-center rounded-lg p-1 shadow-md">
             <div className="h-9 w-9">
-              <Emoji text="🌟" fontSize={36} />
+              <Emoji text="🌟" className="text-[36px]" />
             </div>
           </div>
           <div className="flex max-w-48 flex-col items-center justify-center text-center">
@@ -67,7 +65,7 @@ const TranslatathonPrizes = () => {
         <div className="justify-left flex flex-1 items-center gap-4 sm:justify-center">
           <div className="flex h-16 w-16 items-center justify-center rounded-lg p-1 shadow-md">
             <div className="h-9 w-9">
-              <Emoji text=":scroll:" fontSize={36} />
+              <Emoji text=":scroll:" className="text-[36px]" />
             </div>
           </div>
           <div className="flex max-w-48 flex-col items-center justify-center text-center">

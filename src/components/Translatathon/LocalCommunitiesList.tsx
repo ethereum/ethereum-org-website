@@ -111,7 +111,7 @@ export const LocalCommunitiesList = () => {
             </Flex>
           </Flex>
           <Flex minW="90">
-            <Emoji fontSize={90} text={community.emojiString} />
+            <Emoji className="text-[90px]" text={community.emojiString} />
           </Flex>
         </Flex>
       ))}

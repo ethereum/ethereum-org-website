@@ -178,6 +178,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Programming languages](/developers/docs/programming-languages/)
 - [Delphi](/developers/docs/programming-languages/delphi/)
 - [.NET](/developers/docs/programming-languages/dot-net/)
+- [Elixir](/developers/docs/programming-languages/elixir/)
 - [Golang](/developers/docs/programming-languages/golang/)
 - [Java](/developers/docs/programming-languages/java/)
 - [JavaScript](/developers/docs/programming-languages/javascript/)

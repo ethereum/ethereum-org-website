@@ -49,7 +49,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
     return (
       <Flex whiteSpace="pre-wrap">
-        <Emoji fontSize="sm" me={2} text=":bricks:" />
+        <Emoji className="me-2 text-sm" text=":bricks:" />
         {t(translationKey)}:{" "}
         <InlineLink href={`${explorerUrl}${number}`}>
           {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
@@ -62,7 +62,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
     <Stack>
       {dateTimeAsString && (
         <Flex>
-          <Emoji fontSize="sm" me={2} text=":calendar:" />
+          <Emoji className="me-2 text-sm" text=":calendar:" />
           <Text fontFamily="monospace">{formattedUTC}</Text>
         </Flex>
       )}
@@ -86,7 +86,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
         )}
       {ethPriceInUSD && (
         <Flex>
-          <Emoji fontSize="sm" me={2} text=":money_bag:" />
+          <Emoji className="me-2 text-sm" text=":money_bag:" />
           {t("page-history:page-history-eth-price")}:{" "}
           {new Intl.NumberFormat(localeForStatsBoxNumbers, {
             style: "currency",
@@ -96,7 +96,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
       )}
       {waybackLink && (
         <Flex>
-          <Emoji fontSize="sm" me={2} text=":desktop_computer:" />
+          <Emoji className="me-2 text-sm" text=":desktop_computer:" />
           <InlineLink href={waybackLink}>
             {t("page-history:page-history-ethereum-org-wayback")}
           </InlineLink>
