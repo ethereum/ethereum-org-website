@@ -201,9 +201,6 @@ const config = {
         "menu-accordion": `
           0px 2px 2px 0px rgba(0, 0, 0, 0.12) inset,
           0px -3px 2px 0px rgba(0, 0, 0, 0.14) inset`,
-        // TODO: From current theme. Deprecate for 'button-hover'
-        primary: "4px 4px 0px 0px hsla(var(--primary))",
-        "button-hover": "4px 4px 0 0 hsla(var(--orange-900))",
         tooltip: "0 0 16px var(--tooltip-shadow)",
         "svg-button-link": `
           var(--shadow-svg-button-link-1), var(--shadow-svg-button-link-2),
