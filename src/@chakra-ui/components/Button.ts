@@ -23,7 +23,7 @@ const baseStyle = defineStyle({
   // Base default styling is "outline" pattern, primary color for text, border matches, no bg
   borderColor: "currentColor",
   color: "primary.base",
-  // Hover: Default hover adds button-hover shadow, text (border) to --primary-hover
+  // Hover: Default hover adds box-shadow, text (border) to --primary-hover
   _hover: {
     color: "primary.hover",
     boxShadow: "buttonHover",

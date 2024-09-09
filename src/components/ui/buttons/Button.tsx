@@ -14,8 +14,8 @@ const buttonVariants = cva(
     "inline-flex gap-2 items-center justify-center rounded border border-solid transition [&>svg]:flex-shrink-0",
     // Base default styling is "outline" pattern, primary color for text, border matches, no bg
     "text-primary border-current",
-    // Hover: Default hover adds button-hover shadow, text (border) to --primary-hover
-    "hover:!text-primary-hover hover:shadow-button-hover",
+    // Hover: Default hover adds box-shadow, text (border) to --primary-hover
+    "hover:!text-primary-hover hover:shadow-[4px_4px_theme('colors.primary.low-contrast')]",
     // Focus: Add 4px outline to all buttons, --primary-hover
     "focus-visible:outline focus-visible:outline-primary-hover focus-visible:outline-4 focus-visible:-outline-offset-1",
     // Active: text (border) to --primary-hover instead of primary, hide shadow
