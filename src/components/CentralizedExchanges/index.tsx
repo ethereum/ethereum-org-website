@@ -52,7 +52,7 @@ const EmptyStateText = (props: ChildOnlyProp) => (
 
 const NoResults = ({ children }) => (
   <EmptyStateContainer>
-    <Emoji text=":crying_face:" fontSize="80px" />
+    <Emoji text=":crying_face:" className="text-[80px]" />
     <EmptyStateText>
       {/* TODO: Fix `children` structure to include email link within i18n string */}
       {children}{" "}
@@ -68,7 +68,7 @@ const NoResultsSingle = ({ children }) => (
       {children}{" "}
       <InlineLink href={`mailto:${WEBSITE_EMAIL}`}>{WEBSITE_EMAIL}</InlineLink>.
     </Text>
-    <Emoji text=":crying_face:" fontSize="80px" />
+    <Emoji text=":crying_face:" className="text-[80px]" />
   </Center>
 )
 
@@ -115,7 +115,7 @@ const CentralizedExchanges = ({
       </Box>
       {!hasSelectedCountry && (
         <EmptyStateContainer>
-          <Emoji text=":world_map:" fontSize="80px" />
+          <Emoji text=":world_map:" className="text-[80px]" />
           <EmptyStateText>
             {t("page-get-eth-exchanges-empty-state-text")}
           </EmptyStateText>

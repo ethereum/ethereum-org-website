@@ -535,7 +535,7 @@ const RunANodePage = () => {
               </Text>
               <Text>
                 <Text as="code">
-                  <Emoji text=":warning:" fontSize="md" me="4" />
+                  <Emoji text=":warning:" className="me-4 text-md" />
                   {t(
                     "page-run-a-node-getting-started-software-section-1-alert"
                   )}
@@ -600,7 +600,7 @@ const RunANodePage = () => {
           <FullyLoaded>
             <Box>
               <H3>
-                <Emoji text=":shopping_cart:" fontSize="2em" me="4" />
+                <Emoji text=":shopping_cart:" className="me-4 text-[2rem]" />
                 {t("page-run-a-node-buy-fully-loaded-title")}
               </H3>
               <Text>{t("page-run-a-node-buy-fully-loaded-description")}</Text>
@@ -627,7 +627,10 @@ const RunANodePage = () => {
           <FullyLoaded>
             <Box>
               <H3>
-                <Emoji text=":building_construction:" fontSize="2em" me="4" />
+                <Emoji
+                  text=":building_construction:"
+                  className="me-4 text-[2rem]"
+                />
                 {t("page-run-a-node-build-your-own-title")}
               </H3>
               <Text>{t("page-run-a-node-choose-your-adventure-build-1")}</Text>
@@ -872,7 +875,7 @@ const RunANodePage = () => {
       </StakingCalloutContainer>
       <Content>
         <H3 id="plan-on-staking" display="flex" alignItems="center">
-          <Emoji text=":cut_of_meat:" fontSize="2em" me="4" />
+          <Emoji text=":cut_of_meat:" className="me-4 text-[2rem]" />
           {t("page-run-a-node-staking-plans-title")}
         </H3>
         <Text>
@@ -885,7 +888,7 @@ const RunANodePage = () => {
           </InlineLink>
         </Text>
         <H3 id="rasp-pi" display="flex" alignItems="center">
-          <Emoji text=":pie:" fontSize="2em" me="4" />
+          <Emoji text=":pie:" className="me-4 text-[2rem]" />
           {t("page-run-a-node-rasp-pi-title")}
         </H3>
         <Text>{t("page-run-a-node-rasp-pi-description")}</Text>

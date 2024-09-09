@@ -558,7 +558,7 @@ const EthPage = () => {
               emoji={token.emoji}
               title={token.title}
               description={token.description}
-              emojiSize={5}
+              className="text-[5rem]"
             />
           ))}
         </RightColumn>

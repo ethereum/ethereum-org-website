@@ -1,7 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e8f2e766-888b-4954-8500-1b647d84db99/deploy-status)](https://app.netlify.com/sites/ethereumorg/deploys)
 [![All Contributors](https://img.shields.io/github/all-contributors/ethereum/ethereum-org-website?color=orange&style=flat-square)](#contributors-)
 [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=ethereum.org%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat-square)](https://discord.gg/ethereum-org)
-[![Twitter Follow](https://img.shields.io/twitter/follow/ethdotorg.svg?style=social)](https://twitter.com/ethdotorg)
+[![Twitter Follow](https://img.shields.io/twitter/follow/ethdotorg.svg?style=social)](https://x.com/ethdotorg)
 [![Crowdin](https://badges.crowdin.net/ethereum-org/localized.svg)](https://crowdin.com/project/ethereum-org)
 [![gitpoap badge](https://public-api.gitpoap.io/v1/repo/ethereum/ethereum-org-website/badge)](https://www.gitpoap.io/gh/ethereum/ethereum-org-website)
 
@@ -1895,6 +1895,19 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Baystef"><img src="https://avatars.githubusercontent.com/u/36106823?v=4?s=100" width="100px;" alt="Adebayo Steve"/><br /><sub><b>Adebayo Steve</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Baystef" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/sanjanaynvsdl"><img src="https://avatars.githubusercontent.com/u/142678317?v=4?s=100" width="100px;" alt="Sanjana"/><br /><sub><b>Sanjana</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asanjanaynvsdl" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.zaryabs.com/"><img src="https://avatars.githubusercontent.com/u/42082608?v=4?s=100" width="100px;" alt="Zaryab"/><br /><sub><b>Zaryab</b></sub></a><br /><a href="#content-zaryab2000" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.mtpelerin.com"><img src="https://avatars.githubusercontent.com/u/29145014?v=4?s=100" width="100px;" alt="Yann Gerardi"/><br /><sub><b>Yann Gerardi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yannggg" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/panditdhamdhere"><img src="https://avatars.githubusercontent.com/u/85685981?v=4?s=100" width="100px;" alt="Pandit Dhamdhere"/><br /><sub><b>Pandit Dhamdhere</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=panditdhamdhere" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://linkedin.com/in/fmarcelo"><img src="https://avatars.githubusercontent.com/u/11818521?v=4?s=100" width="100px;" alt="M@rC3L0"/><br /><sub><b>M@rC3L0</b></sub></a><br /><a href="#ideas-ferreiramarcelo" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Refdeveloper"><img src="https://avatars.githubusercontent.com/u/87125773?v=4?s=100" width="100px;" alt="DevOFtoken"/><br /><sub><b>DevOFtoken</b></sub></a><br /><a href="#ideas-Refdeveloper" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/vvvvvv1vvvvvv"><img src="https://avatars.githubusercontent.com/u/86296331?v=4?s=100" width="100px;" alt="vvvvvv1vvvvvv"/><br /><sub><b>vvvvvv1vvvvvv</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vvvvvv1vvvvvv" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://raj.me"><img src="https://avatars.githubusercontent.com/u/8170980?v=4?s=100" width="100px;" alt="Abhishek Raj"/><br /><sub><b>Abhishek Raj</b></sub></a><br /><a href="#content-abraj" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/p1kalys"><img src="https://avatars.githubusercontent.com/u/85685112?v=4?s=100" width="100px;" alt="Pavan Emani"/><br /><sub><b>Pavan Emani</b></sub></a><br /><a href="#content-p1kalys" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://v2eth.com/"><img src="https://avatars.githubusercontent.com/u/7024451?v=4?s=100" width="100px;" alt="Mako Shan"/><br /><sub><b>Mako Shan</b></sub></a><br /><a href="#content-makoshan" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/cratiu222"><img src="https://avatars.githubusercontent.com/u/156356273?v=4?s=100" width="100px;" alt="Christina"/><br /><sub><b>Christina</b></sub></a><br /><a href="#content-cratiu222" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

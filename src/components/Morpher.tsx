@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import { useBreakpointValue } from "@chakra-ui/react"
+import { useMediaQuery } from "usehooks-ts"
 
-import { Button } from "@/components/Buttons"
+import { Button } from "@/components/ui/buttons/Button"
 
 import {
   DESKTOP_LANGUAGE_BUTTON_NAME,
@@ -125,6 +125,8 @@ const Morpher = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  const isLarge = useMediaQuery("(min-width: 48rem)") // TW md breakpoint, 768px
+
   const handleMobileClick = () => {
     if (!document) return
     ;(document.getElementById(HAMBURGER_BUTTON_ID) as HTMLButtonElement).click()
@@ -147,25 +149,16 @@ const Morpher = () => {
     ).click()
   }
 
-  const handleClick =
-    useBreakpointValue({
-      base: handleMobileClick,
-      md: handleDesktopClick,
-    }) || handleDesktopClick
-
   return (
-    <Button
-      w="fit-content"
-      mx="auto"
-      variant="ghost"
-      textDecor="none"
-      fontSize="md"
-      color="body.medium"
-      _hover={{ color: "primary.base" }}
-      onClick={handleClick}
-    >
-      {state.text}
-    </Button>
+    <>
+      <Button
+        className="mx-auto w-fit text-md text-primary no-underline"
+        onClick={isLarge ? handleDesktopClick : handleMobileClick}
+        variant="ghost"
+      >
+        {state.text}
+      </Button>
+    </>
   )
 }
 

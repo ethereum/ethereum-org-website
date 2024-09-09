@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "next-i18next"
 import { DocSearchButton } from "@docsearch/react"
 
 import { Button, type ButtonProps } from "../ui/buttons/Button"

@@ -7,7 +7,7 @@ import BannerNotification from "./BannerNotification"
 
 const UpgradeBannerNotification = () => (
   <BannerNotification shouldShow>
-    <Emoji text=":megaphone:" me={4} fontSize="2xl" flexShrink="0" />
+    <Emoji text=":megaphone:" className="me-4 flex-shrink-0 text-2xl" />
     <Box>
       <b>
         We&apos;ve deprecated our use of &apos;Eth1&apos; and &apos;Eth2&apos;

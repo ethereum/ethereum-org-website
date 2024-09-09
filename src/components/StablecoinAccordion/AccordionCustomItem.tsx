@@ -73,9 +73,7 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
             >
               <Emoji
                 text={contentObj.emoji}
-                me={6}
-                mb={{ base: 2, md: 0 }}
-                fontSize={{ base: "3rem", md: "4rem" }}
+                className="mb-2 me-6 text-[3rem] md:mb-0 md:text-[4rem]"
               />
               <Box>
                 <Flex alignItems="center" mb={2}>

@@ -95,6 +95,15 @@ Many bridging solutions adopt models between these two extremes with varying deg
 
 <Divider />
 
+## Use bridge {#use-bridge}
+
+Using bridges allows you to move your assets across different blockchains. Here are some resources that can help you find and use bridges:
+
+- **[L2BEAT Bridges Summary](https://l2beat.com/bridges/summary) & [L2BEAT Bridges Risk Analysis](https://l2beat.com/bridges/risk)**: A comprehensive summary of various bridges, including details on market share, bridge type, and destination chains. L2BEAT also has a risk analysis for bridges, helping users make informed decisions when selecting a bridge.
+- **[DefiLlama Bridge Summary](https://defillama.com/bridges/Ethereum)**: A summary of bridge volumes across Ethereum networks.
+
+<Divider />
+
 ## Risk using bridges {#bridge-risk}
 
 Bridges are in the early stages of development. It is likely that the optimal bridge design has not yet been discovered. Interacting with any type of bridge carries risk:
