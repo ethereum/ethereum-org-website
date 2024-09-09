@@ -10,6 +10,7 @@ import {
   Viewport,
 } from "@radix-ui/react-navigation-menu"
 
+import { ChevronNext } from "@/components/Chevron"
 import { Button } from "@/components/ui/buttons/Button"
 import { BaseLink } from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
@@ -22,7 +23,6 @@ import type { Level, NavItem, NavSectionKey } from "../types"
 
 import ItemContent from "./ItemContent"
 import { navMenuVariants } from "./MenuContent"
-import NextChevron from "./NextChevron"
 import { useSubMenu } from "./useSubMenu"
 
 type LvlContentProps = {
@@ -106,7 +106,7 @@ const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
                               ) : null}
 
                               <ItemContent item={item} lvl={lvl} />
-                              <NextChevron />
+                              <ChevronNext />
                             </Button>
                           </Trigger>
                           <Content asChild>
