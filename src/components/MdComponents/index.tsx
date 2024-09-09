@@ -96,7 +96,7 @@ export const Heading4 = ({
 
 export const Pre = (props: ChildOnlyProp) => (
   <pre
-    className="max-w-full overflow-x-scroll whitespace-pre-wrap rounded border-[1px] border-[rgba(0,0,0,.05)] bg-[#f2f2f2] p-4 dark:border-[hsla(0,0%,100%,.05)] dark:bg-[#191919]"
+    className="max-w-full overflow-x-scroll whitespace-pre-wrap rounded border bg-background-highlight p-4"
     {...props}
   />
 )
