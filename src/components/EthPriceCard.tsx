@@ -110,7 +110,6 @@ const EthPriceCard = ({
         isNegativeChange
           ? "bg-gradient-to-b from-error/10 dark:border-error/50"
           : "bg-gradient-to-t from-success/20 dark:border-success/50",
-        "dark:from-transparent",
         className
       )}
       {...props}
