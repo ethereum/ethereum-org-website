@@ -30,7 +30,7 @@ const items: Item[] = [
   },
   {
     oldLabel: "Censored",
-    newLabel: "Resistant",
+    newLabel: "Censorship Resistant",
     explanation: [
       "Services decide who gets to speak or participate online, which can silence voices unfairly.",
       "It also means you can lose access to your following or communities without any say or way to appeal.",
