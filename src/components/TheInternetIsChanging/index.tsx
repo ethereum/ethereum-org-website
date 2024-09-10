@@ -83,7 +83,7 @@ const TheInternetIsChanging = () => {
 
   return (
     <Section id="values">
-      <SectionContent className="flex flex-col items-center">
+      <SectionContent className="flex flex-col items-center text-center">
         <SectionTag>{t("page-index:page-index-values-tag")}</SectionTag>
         <SectionHeader>
           {t("page-index:page-index-values-header")}
@@ -93,7 +93,7 @@ const TheInternetIsChanging = () => {
         </p>
       </SectionContent>
       {/* // TODO: Add tooltip popups */}
-      <div className="mt-19 overflow-hidden rounded-2xl">
+      <div className="mt-19 overflow-hidden max-lg:-mx-4 lg:rounded-2xl">
         <div className="group bg-accent-a-low-contrast">
           <div
             className="flex max-w-full overflow-hidden motion-reduce:justify-center motion-reduce:overflow-auto"
