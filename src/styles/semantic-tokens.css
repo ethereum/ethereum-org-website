@@ -12,6 +12,7 @@
     --disabled: var(--gray-400);
     --background: var(--white);
     --background-highlight: var(--gray-50);
+    --background-medium: var(--gray-200); /* TODO: VERIFY */
 
     --primary: var(--purple-600);
     --primary-high-contrast: var(--purple-800);
@@ -23,6 +24,7 @@
 
     --accent-a: var(--blue-600);
     --accent-a-hover: var(--blue-500);
+    --accent-a-low-contrast: var(--blue-50); /* TODO: VERIFY */
 
     --accent-b: var(--pink-600);
     --accent-b-hover: var(--pink-500);
@@ -88,6 +90,7 @@
 
     --background: var(--black);
     --background-highlight: var(--gray-900);
+    --background-medium: var(--gray-950); /* TODO: VERIFY */
 
     --primary: var(--purple-400);
     --primary-high-contrast: var(--purple-200);
@@ -98,6 +101,7 @@
 
     --accent-a: var(--blue-400);
     --accent-a-hover: var(--blue-300);
+    --accent-a-low-contrast: var(--blue-900); /* TODO: VERIFY */
 
     --accent-b: var(--pink-400);
     --accent-b-hover: var(--pink-300);

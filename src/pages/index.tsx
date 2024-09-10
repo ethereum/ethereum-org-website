@@ -24,6 +24,7 @@ import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import Swiper from "@/components/Swiper"
+import TheInternetIsChanging from "@/components/TheInternetIsChanging"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
@@ -337,7 +338,8 @@ const HomePage = ({
           </SectionContent>
         </Section>
 
-        {/* TODO: Add "The Internet Is Changing" section */}
+        {/* Values - The Internet Is Changing */}
+        <TheInternetIsChanging />
 
         {/* Builders - Blockchain's biggest builder community */}
         <Section id="builders" variant="responsiveFlex">
