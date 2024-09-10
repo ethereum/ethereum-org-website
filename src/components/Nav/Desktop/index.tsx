@@ -3,14 +3,15 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdWbSunny } from "react-icons/md"
-import { HStack, useColorModeValue, useEventListener } from "@chakra-ui/react"
 
 import LanguagePicker from "@/components/LanguagePicker"
 import { Button } from "@/components/ui/buttons/Button"
-
-import { cn } from "@/lib/utils/cn"
+import { HStack } from "@/components/ui/flex"
 
 import { DESKTOP_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
+
+import useColorModeValue from "@/hooks/useColorModeValue"
+import { useEventListener } from "@/hooks/useEventListener"
 
 type DesktopNavMenuProps = {
   toggleColorMode: () => void
@@ -21,6 +22,7 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
   const { locale } = useRouter()
   const languagePickerRef = useRef<HTMLButtonElement>(null)
 
+  const ThemeIcon = useColorModeValue(MdBrightness2, MdWbSunny)
   const themeIconAriaLabel = useColorModeValue(
     // TODO: Add i18n support
     "Switch to Dark Theme",
@@ -45,26 +47,15 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
   })
 
   return (
-    <HStack hideBelow="md" gap="0">
+    <HStack className="hidden gap-0 md:flex">
       <Button
+        aria-label={themeIconAriaLabel}
         variant="ghost"
         isSecondary
-        className="group p-2 hover:!text-primary-hover xl:p-3"
+        className="group px-2 xl:px-3 [&>svg]:transition-all [&>svg]:duration-500 [&>svg]:hover:rotate-12 [&>svg]:hover:text-primary-hover"
         onClick={toggleColorMode}
-        aria-label={themeIconAriaLabel}
       >
-        <MdBrightness2
-          className={cn(
-            "dark:hidden",
-            "transform-transform duration-500 group-hover:rotate-12 group-hover:transition-transform group-hover:duration-500"
-          )}
-        />
-        <MdWbSunny
-          className={cn(
-            "hidden dark:block",
-            "transform-transform duration-500 group-hover:rotate-12 group-hover:transition-transform group-hover:duration-500"
-          )}
-        />
+        <ThemeIcon className="transform-transform duration-500 group-hover:rotate-12 group-hover:transition-transform group-hover:duration-500" />
       </Button>
 
       {/* Locale-picker menu */}

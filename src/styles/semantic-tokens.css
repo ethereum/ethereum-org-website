@@ -89,6 +89,24 @@
     --shadow-window-box-3: 0px 32px 24px -6px hsla(var(--purple-800), var(--shadow-window-box-3-opacity));
     --shadow-window-box-4: 0px 40px 40px -12px hsla(var(--purple-700), var(--shadow-window-box-4-opacity));
     --shadow-window-box-5: 0px -64px 120px 80px hsla(var(--purple-100), var(--shadow-window-box-5-opacity));
+
+    /* Menu colors */
+    --menu: var(--body);
+    --menu-hover: var(--gray-200);
+    --menu-active: var(--primary);
+    --menu-active-background: var(--primary-high-contrast);
+    --menu-1-subtext: var(--gray-400);
+    --menu-1-background: var(--white);
+    --menu-1-active-background: var(--gray-150);
+    --menu-2-subtext: var(--gray-400);
+    --menu-2-background: var(--gray-150);
+    --menu-2-active-background: var(--gray-200);
+    --menu-3-subtext: var(--gray-500);
+    --menu-3-background: var(--gray-200);
+    --menu-3-active-background: var(--gray-100);
+    --menu-4-subtext: var(--gray-700);
+    --menu-4-background: var(--gray-300);
+    --menu-4-active-background: var(--gray-200);
   }
 
   /* Dark mode token declarations */
@@ -145,5 +163,23 @@
     --shadow-window-box-3-opacity: 0.16;
     --shadow-window-box-4-opacity: 0.06;
     --shadow-window-box-5-opacity: 0.06;
+
+    /* Menu colors */
+    --menu: var(--body);
+    --menu-hover: var(--gray-200);
+    --menu-active: var(--primary);
+    --menu-active-background: var(--primary-high-contrast);
+    --menu-1-subtext: var(--gray-400);
+    --menu-1-background: var(--black);
+    --menu-1-active-background: var(--gray-700);
+    --menu-2-subtext: var(--gray-300);
+    --menu-2-background: var(--gray-700);
+    --menu-2-active-background: var(--gray-600);
+    --menu-3-subtext: var(--gray-300);
+    --menu-3-background: var(--gray-600);
+    --menu-3-active-background: var(--gray-700);
+    --menu-4-subtext: var(--gray-300);
+    --menu-4-background: var(--gray-700);
+    --menu-4-active-background: var(--gray-800);
   }
 }
