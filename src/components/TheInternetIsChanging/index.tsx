@@ -9,6 +9,8 @@ import {
   SectionTag,
 } from "../ui/section"
 
+import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
+
 type Item = {
   oldLabel: string
   newLabel: string
@@ -74,6 +76,11 @@ const items: Item[] = [
 
 const TheInternetIsChanging = () => {
   const { t } = useTranslation("page-index")
+  const { prefersReducedMotion } = usePrefersReducedMotion()
+  const fadeEdges = {
+    mask: `linear-gradient(to right, transparent, white 15%, white 85%, transparent)`,
+  }
+
   return (
     <Section id="values">
       <SectionContent className="flex flex-col items-center">
@@ -87,43 +94,54 @@ const TheInternetIsChanging = () => {
       </SectionContent>
       {/* // TODO: Add tooltip popups */}
       <div className="mt-19 overflow-hidden rounded-2xl">
-        <div className="group/new flex max-w-full overflow-hidden bg-accent-a-low-contrast">
-          {Array(3)
-            .fill(0)
-            .map((_, idx) => (
-              <div
-                key={idx}
-                className="group-hover/new:animate-pause flex animate-scroll-left items-center space-x-10 py-6 ps-10"
-              >
-                {items.map(({ newLabel }) => (
-                  <Fragment key={newLabel}>
-                    <button className="flex h-fit items-center gap-x-1 text-nowrap rounded-full bg-blue-200/20 px-4 py-1 font-bold uppercase text-accent-a dark:bg-blue-400/20">
-                      <FaCheck className="text-success" /> {newLabel}
-                    </button>
-                    <div className="h-1.5 min-w-1.5 rounded-full bg-accent-a" />
-                  </Fragment>
-                ))}
-              </div>
-            ))}
+        <div className="group bg-accent-a-low-contrast">
+          <div
+            className="flex max-w-full overflow-hidden motion-reduce:justify-center motion-reduce:overflow-auto"
+            style={prefersReducedMotion ? {} : fadeEdges}
+          >
+            {Array(prefersReducedMotion ? 1 : 3)
+              .fill(0)
+              .map((_, idx) => (
+                <div
+                  key={idx}
+                  className="group-hover:animate-pause flex animate-scroll-left items-center space-x-10 p-6 motion-reduce:animate-none"
+                >
+                  {items.map(({ newLabel }) => (
+                    <Fragment key={newLabel}>
+                      <button className="flex h-fit items-center gap-x-1 text-nowrap rounded-full bg-blue-200/20 px-4 py-1 font-bold uppercase text-accent-a dark:bg-blue-400/20">
+                        <FaCheck className="text-success" /> {newLabel}
+                      </button>
+                      <div className="h-1.5 min-w-1.5 rounded-full bg-accent-a motion-reduce:last:hidden" />
+                    </Fragment>
+                  ))}
+                </div>
+              ))}
+          </div>
         </div>
-        <div className="group/old flex max-w-full overflow-hidden bg-background-highlight">
-          {Array(3)
-            .fill(0)
-            .map((_, idx) => (
-              <div
-                key={idx}
-                className="group-hover/old:animate-pause flex animate-scroll-right items-center space-x-10 py-6 pe-10"
-              >
-                {items.map(({ oldLabel }) => (
-                  <Fragment key={oldLabel}>
-                    <button className="h-fit text-nowrap rounded-full bg-gray-200/20 px-4 py-1 font-bold uppercase text-disabled dark:bg-gray-950">
-                      {oldLabel}
-                    </button>
-                    <div className="h-1.5 min-w-1.5 rounded-full bg-accent-a"></div>
-                  </Fragment>
-                ))}
-              </div>
-            ))}
+
+        <div className="group bg-background-highlight">
+          <div
+            className="flex max-w-full overflow-hidden motion-reduce:justify-center motion-reduce:overflow-auto"
+            style={prefersReducedMotion ? {} : fadeEdges}
+          >
+            {Array(prefersReducedMotion ? 1 : 3)
+              .fill(0)
+              .map((_, idx) => (
+                <div
+                  key={idx}
+                  className="group-hover:animate-pause flex animate-scroll-right items-center space-x-10 p-6 motion-reduce:animate-none"
+                >
+                  {items.map(({ oldLabel }) => (
+                    <Fragment key={oldLabel}>
+                      <button className="flex h-fit items-center gap-x-1 text-nowrap rounded-full bg-gray-200/20 px-4 py-1 font-bold uppercase text-disabled dark:bg-gray-950">
+                        {oldLabel}
+                      </button>
+                      <div className="h-1.5 min-w-1.5 rounded-full bg-disabled motion-reduce:last:hidden" />
+                    </Fragment>
+                  ))}
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     </Section>
