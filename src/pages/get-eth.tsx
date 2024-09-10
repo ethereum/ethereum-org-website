@@ -15,7 +15,7 @@ import EthPriceCard from "@/components/EthPriceCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import { TwImage as Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
-import { TWMainArticle as MainArticle } from "@/components/MainArticle"
+import MainArticle from "@/components/MainArticle"
 import { Divider } from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
@@ -54,7 +54,7 @@ type CardProps = {
 const StyledCard = ({ children, emoji, title, description }: CardProps) => (
   <Card className="flex flex-col rounded-sm">
     <CardHeader className="space-y-4">
-      <Emoji fontSize="5xl" lineHeight={0} text={emoji} />
+      <Emoji text={emoji} className="text-5xl leading-none" />
       <CardTitle>{title}</CardTitle>
     </CardHeader>
     <CardContent className="flex-1">
