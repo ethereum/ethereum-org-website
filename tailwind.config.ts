@@ -171,6 +171,32 @@ const config = {
           outline: "hsla(var(--success-outline))",
           neutral: "hsla(var(--success-neutral))",
         },
+        menu: {
+          DEFAULT: "hsla(var(--menu))",
+          hover: "hsla(var(--menu-hover))",
+          active: "hsla(var(--menu-active))",
+          "active-background": "hsla(var(--menu-active-background))",
+          1: {
+            subtext: "hsla(var(--menu-1-subtext))",
+            background: "hsla(var(--menu-1-background))",
+            "active-background": "hsla(var(--menu-1-active-background))",
+          },
+          2: {
+            subtext: "hsla(var(--menu-2-subtext))",
+            background: "hsla(var(--menu-2-background))",
+            "active-background": "hsla(var(--menu-2-active-background))",
+          },
+          3: {
+            subtext: "hsla(var(--menu-3-subtext))",
+            background: "hsla(var(--menu-3-background))",
+            "active-background": "hsla(var(--menu-3-active-background))",
+          },
+          4: {
+            subtext: "hsla(var(--menu-4-subtext))",
+            background: "hsla(var(--menu-4-background))",
+            "active-background": "hsla(var(--menu-4-active-background))",
+          },
+        },
       },
       backgroundImage: {
         "gradient-main": "var(--gradient-main)",
