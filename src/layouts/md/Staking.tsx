@@ -210,6 +210,9 @@ export const StakingLayout = ({
   return (
     <ContentLayout
       dir={contentNotTranslated ? "ltr" : "unset"}
+      tocItems={tocItems}
+      dropdownLinks={dropdownLinks}
+      maxDepth={frontmatter.sidebarDepth}
       heroProps={{
         ...frontmatter,
         breadcrumbs: { slug, startDepth: 1 },
@@ -226,9 +229,6 @@ export const StakingLayout = ({
           </>
         ),
       }}
-      tocItems={tocItems}
-      dropdownLinks={dropdownLinks}
-      maxDepth={frontmatter.sidebarDepth}
     >
       {children}
       <StakingCommunityCallout my={16} />

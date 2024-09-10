@@ -187,6 +187,8 @@ export const TranslatathonLayout = ({
   return (
     <ContentLayout
       dir="ltr"
+      tocItems={tocItems}
+      dropdownLinks={dropdownLinks}
       heroProps={{
         ...frontmatter,
         breadcrumbs: { slug, startDepth: 1 },
@@ -209,10 +211,7 @@ export const TranslatathonLayout = ({
           },
         ],
       }}
-      tocItems={tocItems}
-      dropdownLinks={dropdownLinks}
     >
-      {/* <CountdownBanner /> */}
       {children}
     </ContentLayout>
   )

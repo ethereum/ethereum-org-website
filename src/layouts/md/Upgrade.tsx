@@ -69,6 +69,8 @@ export const UpgradeLayout = ({
   return (
     <ContentLayout
       dir={contentNotTranslated ? "ltr" : "unset"}
+      tocItems={tocItems}
+      dropdownLinks={dropdownLinks}
       heroProps={{
         ...frontmatter,
         breadcrumbs: { slug, startDepth: 1 },
@@ -89,8 +91,6 @@ export const UpgradeLayout = ({
           </>
         ),
       }}
-      tocItems={tocItems}
-      dropdownLinks={dropdownLinks}
     >
       {children}
     </ContentLayout>

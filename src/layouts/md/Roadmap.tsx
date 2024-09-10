@@ -88,14 +88,14 @@ export const RoadmapLayout = ({
   return (
     <ContentLayout
       dir={contentNotTranslated ? "ltr" : "unset"}
+      tocItems={tocItems}
+      dropdownLinks={dropdownLinks}
+      maxDepth={frontmatter.sidebarDepth}
       heroProps={{
         ...frontmatter,
         breadcrumbs: { slug, startDepth: 1 },
         heroImg: frontmatter.image,
       }}
-      tocItems={tocItems}
-      dropdownLinks={dropdownLinks}
-      maxDepth={frontmatter.sidebarDepth}
     >
       {children}
     </ContentLayout>
