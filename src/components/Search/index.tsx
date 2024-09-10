@@ -59,7 +59,7 @@ const Search = forwardRef<HTMLButtonElement, Props>(
         <div className="block xl:hidden">
           <Button
             ref={mergedButtonRefs}
-            className="px-2 transition-transform duration-200 ease-in-out hover:rotate-6 hover:text-primary"
+            className="px-2 transition-transform duration-200 hover:rotate-12 hover:!text-primary focus:text-primary"
             variant="ghost"
             isSecondary
             onClick={() => {

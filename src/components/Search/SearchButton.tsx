@@ -12,7 +12,7 @@ const SearchButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <Button
         ref={ref}
         variant="ghost"
-        className="me-3 border border-disabled hover:border-primary-hover"
+        className="group me-3 border border-disabled hover:border-primary-hover"
         {...props}
         asChild
       >
