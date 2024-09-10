@@ -2,34 +2,21 @@ import { useTranslation } from "next-i18next"
 import {
   Box,
   type BoxProps,
-  chakra,
-  Flex,
   Grid,
   type HeadingProps,
   SimpleGrid,
   Text,
-  UnorderedList,
-  useToken,
 } from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
 
-import Breadcrumbs from "@/components/Breadcrumbs"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import DocLink from "@/components/DocLink"
-import FeedbackCard from "@/components/FeedbackCard"
-import { Image } from "@/components/Image"
-import LeftNavBar from "@/components/LeftNavBar"
 import {
-  ContentContainer,
   Heading1 as MdHeading1,
   Heading4 as MdHeading4,
-  MobileButton,
-  MobileButtonDropdown,
-  Page,
 } from "@/components/MdComponents"
-import OldHeading from "@/components/OldHeading"
 import ProductDisclaimer from "@/components/ProductDisclaimer"
 import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
 import StakingComparison from "@/components/Staking/StakingComparison"
@@ -40,8 +27,10 @@ import StakingLaunchpadWidget from "@/components/Staking/StakingLaunchpadWidget"
 import StakingProductsCardGrid from "@/components/Staking/StakingProductsCardGrid"
 import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
-import TableOfContents from "@/components/TableOfContents"
+import { List, ListItem } from "@/components/ui/list"
 import UpgradeStatus from "@/components/UpgradeStatus"
+
+import { ContentLayout } from "../ContentLayout"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />
@@ -110,36 +99,6 @@ const CardGrid = (props: ChildOnlyProp) => (
   />
 )
 
-const Title = (props: ChildOnlyProp) => (
-  <OldHeading
-    as="h1"
-    fontSize="2.5rem"
-    lineHeight={1.4}
-    fontWeight="bold"
-    mt={4}
-    {...props}
-  />
-)
-
-const SummaryPoint = (props: ChildOnlyProp) => (
-  <chakra.li color="text300" {...props} />
-)
-
-const HeroContainer = (props: ChildOnlyProp) => {
-  return (
-    <Flex
-      direction={{ base: "column", lg: "row" }}
-      align="center"
-      py={8}
-      px={{ base: 0, lg: 8 }}
-      maxH={{ base: "full", lg: "500px" }}
-      minH="500px"
-      bg="layer2Gradient"
-      {...props}
-    />
-  )
-}
-
 const TableContainer = (props: BoxProps) => (
   <Box
     w="fit-content"
@@ -193,8 +152,6 @@ export const StakingLayout = ({
   contentNotTranslated,
 }: StakingLayoutProps) => {
   const { t } = useTranslation("page-staking")
-  // TODO: Replace with direct token implementation after UI migration is completed
-  const lgBp = useToken("breakpoints", "lg")
 
   const { summaryPoints } = frontmatter
 
@@ -251,55 +208,30 @@ export const StakingLayout = ({
   }
 
   return (
-    <Box
-      position="relative"
-      width="full"
+    <ContentLayout
       dir={contentNotTranslated ? "ltr" : "unset"}
+      heroProps={{
+        ...frontmatter,
+        breadcrumbs: { slug, startDepth: 1 },
+        heroImg: frontmatter.image,
+        description: (
+          <>
+            <div>
+              <List>
+                {summaryPoints.map((point, idx) => (
+                  <ListItem key={idx}>{point}</ListItem>
+                ))}
+              </List>
+            </div>
+          </>
+        ),
+      }}
+      tocItems={tocItems}
+      dropdownLinks={dropdownLinks}
+      maxDepth={frontmatter.sidebarDepth}
     >
-      <HeroContainer>
-        <Flex direction="column" justify="flex-start" w="full" p={8}>
-          <Breadcrumbs slug={slug} mb="8" />
-          <Title>{frontmatter.title}</Title>
-          <UnorderedList>
-            {(summaryPoints || []).map((point, idx) => (
-              <SummaryPoint key={idx}>{point}</SummaryPoint>
-            ))}
-          </UnorderedList>
-          <TableOfContents
-            position="relative"
-            zIndex={2}
-            items={tocItems}
-            maxDepth={frontmatter.sidebarDepth!}
-            isMobile
-          />
-        </Flex>
-        <Image
-          src={frontmatter.image}
-          blurDataURL={frontmatter.blurDataURL}
-          alt={frontmatter.alt || ""}
-          style={{ objectFit: "contain" }}
-          width={400}
-          height={340}
-          priority
-        />
-      </HeroContainer>
-      <Page>
-        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
-        <LeftNavBar
-          hideBelow={lgBp}
-          dropdownLinks={dropdownLinks}
-          tocItems={tocItems}
-          maxDepth={frontmatter.sidebarDepth!}
-        />
-        <ContentContainer>
-          {children}
-          <StakingCommunityCallout my={16} />
-          <FeedbackCard />
-        </ContentContainer>
-        <MobileButton>
-          <MobileButtonDropdown list={dropdownLinks} />
-        </MobileButton>
-      </Page>
-    </Box>
+      {children}
+      <StakingCommunityCallout my={16} />
+    </ContentLayout>
   )
 }

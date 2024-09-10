@@ -47,7 +47,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { InfoGrid } from "@/layouts/Staking"
+import { InfoGrid } from "@/layouts/md/Staking"
 import community from "@/public/images/enterprise-eth.png"
 import hackathon from "@/public/images/hackathon_transparent.png"
 import impact from "@/public/images/impact_transparent.png"

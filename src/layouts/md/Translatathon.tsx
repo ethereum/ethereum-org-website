@@ -1,23 +1,13 @@
-import { Box, Flex, Grid, Text, useToken } from "@chakra-ui/react"
+import { Box, Flex, Grid, Text } from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, SharedFrontmatter } from "@/lib/interfaces"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import { ButtonLink } from "@/components/Buttons"
 import Card from "@/components/Card"
-import { ContentHero } from "@/components/Hero"
 import { Image } from "@/components/Image"
-import LeftNavBar from "@/components/LeftNavBar"
-import {
-  ContentContainer,
-  MobileButton,
-  MobileButtonDropdown,
-  Page,
-} from "@/components/MdComponents"
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
 import { APPLICATION_URL } from "@/components/Translatathon/constants"
-import { CountdownBanner } from "@/components/Translatathon/CountdownBanner"
 import { DatesAndTimeline } from "@/components/Translatathon/DatesAndTimeline"
 import { LocalCommunitiesList } from "@/components/Translatathon/LocalCommunitiesList"
 import { StepByStepInstructions } from "@/components/Translatathon/StepByStepInstructions"
@@ -25,6 +15,8 @@ import { TranslatathonCalendar } from "@/components/Translatathon/TranslatathonC
 import { TranslatathonInANutshell } from "@/components/Translatathon/TranslatathonInANutshell"
 import TranslatathonPrizes from "@/components/Translatathon/TranslatathonPrizes"
 import { TranslationHubCallout } from "@/components/Translatathon/TranslationHubCallout"
+
+import { ContentLayout } from "../ContentLayout"
 
 import WhyWeDoItImage from "@/public/images/translatathon/man-baby-woman.png"
 import HowDoesItWorkImage from "@/public/images/translatathon/round-table.png"
@@ -149,8 +141,6 @@ export const TranslatathonLayout = ({
   slug,
   tocItems,
 }: TranslatathonLayoutProps) => {
-  const lgBp = useToken("breakpoints", "lg")
-
   const dropdownLinks: ButtonDropdownList = {
     text: "Translatathon menu",
     ariaLabel: "Translatathon menu",
@@ -195,13 +185,14 @@ export const TranslatathonLayout = ({
   }
 
   return (
-    <Box position="relative" width="full" dir={"ltr"}>
-      <CountdownBanner />
-      <ContentHero
-        breadcrumbs={{ slug, startDepth: 1 }}
-        title={frontmatter.title}
-        maxHeight={"400px"}
-        description={
+    <ContentLayout
+      dir="ltr"
+      heroProps={{
+        ...frontmatter,
+        breadcrumbs: { slug, startDepth: 1 },
+        heroImg: "/images/heroes/translatathon-hero.svg",
+        blurDataURL: "",
+        description: (
           <>
             <Text>Welcome to the ethereum.org Translatathon!</Text>
             <Text>
@@ -209,25 +200,20 @@ export const TranslatathonLayout = ({
               can compete for prizes by translating ethereum.org content into
               different languages.
             </Text>
-            <Flex>
-              <ButtonLink href={APPLICATION_URL}>Apply to translate</ButtonLink>
-            </Flex>
           </>
-        }
-        heroImg={"/images/heroes/translatathon-hero.svg"}
-        blurDataURL={""}
-      />
-      <Page>
-        <LeftNavBar
-          hideBelow={lgBp}
-          dropdownLinks={dropdownLinks}
-          tocItems={tocItems}
-        />
-        <ContentContainer id="content">{children}</ContentContainer>
-        <MobileButton>
-          <MobileButtonDropdown list={dropdownLinks} />
-        </MobileButton>
-      </Page>
-    </Box>
+        ),
+        buttons: [
+          {
+            content: "Apply to translate",
+            href: APPLICATION_URL,
+          },
+        ],
+      }}
+      tocItems={tocItems}
+      dropdownLinks={dropdownLinks}
+    >
+      {/* <CountdownBanner /> */}
+      {children}
+    </ContentLayout>
   )
 }

@@ -86,7 +86,6 @@ export const UseCasesLayout = ({
 }: UseCasesLayoutProps) => {
   const { asPath: relativePath } = useRouter()
   const { t } = useTranslation("template-usecase")
-  const lgBp = useToken("breakpoints", "lg")
 
   const summaryPoints = getSummaryPoints(frontmatter)
 
@@ -233,9 +232,8 @@ export const UseCasesLayout = ({
         />
       </HeroContainer>
       <Page>
-        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <LeftNavBar
-          hideBelow={lgBp}
+          className="max-lg:hidden"
           dropdownLinks={dropdownLinks}
           tocItems={tocItems}
           maxDepth={frontmatter.sidebarDepth!}
