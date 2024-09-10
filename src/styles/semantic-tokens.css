@@ -9,9 +9,13 @@
     --body-medium: var(--gray-500);
     --body-light: var(--gray-200);
     --body-inverse: var(--white);
+
     --disabled: var(--gray-400);
+
     --background: var(--white);
     --background-highlight: var(--gray-50);
+
+    /* TODO: Add border color tokens to match DS */
 
     --primary: var(--purple-600);
     --primary-high-contrast: var(--purple-800);
@@ -29,6 +33,15 @@
 
     --accent-c: var(--teal-700);
     --accent-c-hover: var(--teal-600);
+
+    --success: var(--green-600);
+    --success-light: var(--green-100);
+
+    --error: var(--red-700);
+    --error-light: var(--red-100);
+
+    --warning: var(--yellow-400);
+    --warning-light: var(--yellow-100);
 
     /**
     /* Gradients (radial, conic)
@@ -84,10 +97,13 @@
     --body-medium: var(--gray-400);
     --body-light: var(--gray-600);
     --body-inverse: var(--black);
+
     --disabled: var(--gray-500);
 
     --background: var(--black);
     --background-highlight: var(--gray-900);
+
+    /* TODO: Add border color tokens to match DS */
 
     --primary: var(--purple-400);
     --primary-high-contrast: var(--purple-200);
@@ -104,6 +120,8 @@
 
     --accent-c: var(--teal-400);
     --accent-c-hover: var(--teal-300);
+
+    --warning: var(--yellow-300);
 
     /* Gradients (dark mode adjustments) */
     --radial-a-opacity-1: 0.16;
