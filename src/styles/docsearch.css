@@ -112,11 +112,6 @@
   @apply text-body;
 }
 
-.DocSearch-Hit-Select-Icon:focus,
-.DocSearch-Hit-Select-Icon:hover {
-  @apply text-switch-background;
-}
-
 .DocSearch-Footer {
   --docsearch-footer-height: theme(spacing.10);
   --docsearch-logo-color: theme(textColor.body.light);
