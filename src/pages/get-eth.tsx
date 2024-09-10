@@ -52,12 +52,12 @@ type CardProps = {
 }
 
 const StyledCard = ({ children, emoji, title, description }: CardProps) => (
-  <Card className="flex flex-col rounded-sm">
+  <Card className="flex flex-col rounded-sm border">
     <CardHeader className="space-y-4">
       <Emoji text={emoji} className="text-5xl leading-none" />
       <CardTitle>{title}</CardTitle>
     </CardHeader>
-    <CardContent className="flex-1">
+    <CardContent className="flex-1 px-6">
       <p>{description}</p>
     </CardContent>
     <CardFooter>{children}</CardFooter>
