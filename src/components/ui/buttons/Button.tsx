@@ -9,7 +9,7 @@ import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 import { BaseLink, type LinkProps } from "../Link"
 
 const buttonVariants = cva(
-  "pointer inline-flex gap-2 items-center justify-center rounded border border-solid border-current text-primary transition focus-visible:outline focus-visible:outline-4 focus-visible:outline-primary-hover focus-visible:-outline-offset-1 disabled:text-disabled disabled:pointer-events-none hover:text-primary-hover [&[data-secondary='true']]:text-body [&>svg]:flex-shrink-0",
+  "inline-flex gap-2 items-center justify-center rounded border border-solid border-current text-primary transition focus-visible:outline focus-visible:outline-4 focus-visible:outline-primary-hover focus-visible:-outline-offset-1 disabled:text-disabled disabled:pointer-events-none hover:text-primary-hover [&[data-secondary='true']]:text-body [&>svg]:flex-shrink-0",
   {
     variants: {
       variant: {

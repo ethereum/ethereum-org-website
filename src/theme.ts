@@ -147,9 +147,6 @@ const baseColors = {
 // TODO replace random variables w/ baseColor variables
 const lightColors = {
   buttonColor: white,
-  /** @deprecated */
-  runNodeGradient2:
-    "linear-gradient(135deg, rgba(79, 113, 235, 0.2) 9.8%, rgba(232, 79, 235, 0.2) 92.84%);",
   ghostCardBackground: white,
   ghostCardGhost: white600,
   secondaryButtonBackgroundActive: white700,
@@ -256,9 +253,6 @@ const lightColors = {
 // TODO replace random variables w/ baseColor variables
 const darkColors = {
   buttonColor: black300,
-  /** @deprecated */
-  runNodeGradient2:
-    "linear-gradient(135deg, rgba(79, 113, 235, 0.2) 9.8%, rgba(232, 79, 235, 0.2) 92.84%);",
   primaryHover: primaryDark400,
   primaryActive: primaryDark200,
   ghostCardBackground: black300,

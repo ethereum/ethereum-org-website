@@ -19,7 +19,6 @@ import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 import { Button, ButtonLink } from "@/components/Buttons"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
-import ExpandableInfo from "@/components/ExpandableInfo"
 import FeedbackCard from "@/components/FeedbackCard"
 import {
   DecentralizationGlyphIcon,
@@ -31,7 +30,7 @@ import {
   SovereigntyGlyphIcon,
   VoteGlyphIcon,
 } from "@/components/icons/run-a-node"
-import { Image } from "@/components/Image"
+import { Image, TwImage } from "@/components/Image"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
@@ -40,7 +39,9 @@ import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget as QuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
+import { Stack, VStack } from "@/components/ui/flex"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -280,10 +281,6 @@ const StakingCalloutContainer = (props: ChildOnlyProp) => (
   />
 )
 
-const StrongParagraph = (props: BoxProps) => (
-  <Text fontSize="150%" fontWeight="semibold" {...props} />
-)
-
 const H2 = (props: HeadingProps) => (
   <OldHeading
     fontSize={{ base: "2xl", md: "2rem" }}
@@ -470,28 +467,39 @@ const RunANodePage = () => {
       </Content>
 
       <FlexContent>
-        <ExpandableInfo
-          alignSelf="center"
-          width={{ base: "full", md: "90%" }}
-          mb={{ base: 0, md: 4 }}
-          image={impact}
-          title={<Translation id="page-run-a-node:page-run-a-node-who-title" />}
-          contentPreview={
-            <Translation id="page-run-a-node:page-run-a-node-who-preview" />
-          }
-          // TODO: Replace "runNodeGradient2" with classes "bg-gradient-to-br from-blue-500/20 from-10% to-pink-600/20 to-90%" once component supports, and then remove token from src/theme.ts
-          background="runNodeGradient2"
-          forceOpen
+        <VStack
+          className={cn(
+            "relative mb-0 w-full gap-0 self-center rounded-sm border p-6 md:mb-4 md:w-[90%]",
+            "bg-gradient-to-br from-blue-500/20 from-10% to-pink-600/20 to-90%"
+          )}
         >
-          <Text>
-            <Translation id="page-run-a-node:page-run-a-node-who-copy-1" />
-          </Text>
-          <Text>{t("page-run-a-node-who-copy-2")}</Text>
-          <Text>{t("page-run-a-node-who-copy-3")}</Text>
-          <StrongParagraph>
-            {t("page-run-a-node-who-copy-bold")}
-          </StrongParagraph>
-        </ExpandableInfo>
+          <Stack className="flex-col items-center justify-between gap-8 md:flex-row md:gap-12">
+            <TwImage
+              src={impact}
+              alt=""
+              sizes="300px"
+              style={{ width: "300px", height: "auto" }}
+            />
+            <div className="me-4">
+              <h2 className="mb-5 mt-4 text-2xl font-semibold leading-[1.4] md:text-[2rem]">
+                <Translation id="page-run-a-node:page-run-a-node-who-title" />
+              </h2>
+              <p className="body-medium mb-0">
+                <Translation id="page-run-a-node:page-run-a-node-who-preview" />
+              </p>
+            </div>
+          </Stack>
+          <div className="mt-8 border-t pt-6">
+            <p className="mb-6">
+              <Translation id="page-run-a-node:page-run-a-node-who-copy-1" />
+            </p>
+            <p className="mb-6">{t("page-run-a-node-who-copy-2")}</p>
+            <p className="mb-6">{t("page-run-a-node-who-copy-3")}</p>
+            <p className="mb-6 text-[150%] font-semibold leading-none">
+              {t("page-run-a-node-who-copy-bold")}
+            </p>
+          </div>
+        </VStack>
       </FlexContent>
 
       <Content>
