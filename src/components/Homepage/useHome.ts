@@ -3,7 +3,7 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
 
-import type { EventCardProps, Lang } from "@/lib/types"
+import type { EventCardProps } from "@/lib/types"
 import type { CodeExample } from "@/lib/interfaces"
 
 import { useBentoBox } from "@/components/Homepage/useBentoBox"
@@ -16,8 +16,8 @@ import TryAppsIcon from "@/components/icons/phone-homescreen.svg"
 import RoadmapSign from "@/components/icons/roadmap-sign.svg"
 import Whitepaper from "@/components/icons/whitepaper.svg"
 
+import { cn } from "@/lib/utils/cn"
 import { isValidDate } from "@/lib/utils/date"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import events from "@/data/community-events.json"
 import CreateWalletContent from "@/data/CreateWallet"
@@ -27,6 +27,7 @@ import { GITHUB_REPO_URL } from "@/lib/constants"
 import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
 import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export const useHome = () => {
   const { t } = useTranslation(["common", "page-index"])
@@ -37,7 +38,7 @@ export const useHome = () => {
 
   const bentoItems = useBentoBox()
 
-  const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
+  const { direction, isRtl } = useRtlFlip()
 
   const toggleCodeExample = (id: number): void => {
     setActiveCode(id)
@@ -106,7 +107,10 @@ export const useHome = () => {
       description: t("page-index:page-index-cta-dapps-description"),
       href: "/dapps/",
       Svg: TryAppsIcon,
-      className: "text-accent-c hover:text-accent-c-hover",
+      className: cn(
+        "text-accent-c hover:text-accent-c-hover",
+        isRtl && "[&_svg]:-scale-x-100"
+      ),
     },
   ]
 
@@ -129,11 +133,13 @@ export const useHome = () => {
     {
       label: t("page-index:page-index-popular-topics-whitepaper"),
       Svg: Whitepaper,
+      className: cn(isRtl && "[&_svg]:-scale-x-100"),
       href: "/whitepaper/",
     },
     {
       label: t("page-index:page-index-popular-topics-roadmap"),
       Svg: RoadmapSign,
+      className: cn(isRtl && "[&_svg]:-scale-x-100"),
       href: "/roadmap/",
     },
   ]
@@ -188,7 +194,7 @@ export const useHome = () => {
     t,
     locale,
     asPath,
-    dir,
+    dir: direction,
     isModalOpen,
     setModalOpen,
     activeCode,
