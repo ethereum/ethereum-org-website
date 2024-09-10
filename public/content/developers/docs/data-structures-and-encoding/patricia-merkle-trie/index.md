@@ -180,7 +180,7 @@ Now, we build such a trie with the following key/value pairs in the underlying D
     hashA:    [ <>, <>, <>, <>, hashB, <>, <>, <>, [ <20 6f 72 73 65>, 'stallion' //Leaf Node], <>, <>, <>, <>, <>, <>, <>, <> ] //Branch Node
     hashB:    [ <00 6f>, hashC ] //Extension Node
     hashC:    [ <>, <>, <>, <>, <>, <>, hashD, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ] //Branch Node
-    hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' //Leaf Node], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ] //Branch Node
+    hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' //Leaf Node], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' //Branch Node] //Extension Node] 
 ```
 
 When one node is referenced inside another node, what is included is `H(rlp.encode(node))`, where `H(x) = keccak256(x) if len(x) >= 32 else x` and `rlp.encode` is the [RLP](/developers/docs/data-structures-and-encoding/rlp) encoding function.
