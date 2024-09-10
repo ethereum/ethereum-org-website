@@ -100,6 +100,10 @@ export const usingEthereumQuizzes: QuizzesSection[] = [
     level: "intermediate",
     next: "scaling",
   },
+     {
+    id: "merge",
+    level: "intermediate",
+  },
   {
     id: "scaling",
     level: "advanced",
@@ -108,10 +112,6 @@ export const usingEthereumQuizzes: QuizzesSection[] = [
   {
     id: "solo-staking",
     level: "advanced",
-  },
-    {
-    id: "merge",
-    level: "intermediate",
   },
 ]
 
