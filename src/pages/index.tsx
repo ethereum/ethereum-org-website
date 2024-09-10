@@ -13,7 +13,6 @@ import type {
 
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import { ChevronNext } from "@/components/Chevron"
-import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import { useHome } from "@/components/Homepage/useHome"
@@ -25,7 +24,7 @@ import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import Swiper from "@/components/Swiper"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
-import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardBanner,
@@ -63,6 +62,13 @@ import {
   GITHUB_REPO_URL,
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../../tailwind/ui/accordion"
 
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
@@ -341,8 +347,31 @@ const HomePage = ({
 
         {/* Builders - Blockchain's biggest builder community */}
         <Section id="builders" variant="responsiveFlex">
-          <SectionBanner>
+          <SectionBanner className="relative">
             <TwImage src={BuildersImage} alt="" />
+            {isModalOpen && (
+              <div className="absolute inset-0.5 h-fit max-h-full overflow-y-auto rounded-4xl bg-background-highlight pb-0.5 transition-all">
+                <Suspense fallback={<SkeletonLines noOfLines={16} />}>
+                  <Codeblock
+                    codeLanguage={codeExamples[activeCode].codeLanguage}
+                    allowCollapse={false}
+                    fromHomepage
+                    className="max-md:hidden [&>div]:mb-0 [&>div]:max-h-[calc(100%_-_140px)] [&>div]:rounded-[calc(theme('borderRadius.4xl')_-_2px)] [&>div]:border [&>div]:p-2 [&_*]:!text-sm"
+                  >
+                    {codeExamples[activeCode].code}
+                  </Codeblock>
+                </Suspense>
+              </div>
+            )}
+            {isModalOpen && (
+              <Button
+                onClick={() => setModalOpen(false)}
+                className="absolute end-4 top-4"
+                variant="ghost"
+              >
+                {t("close")}
+              </Button>
+            )}
           </SectionBanner>
 
           <SectionContent>
@@ -372,10 +401,11 @@ const HomePage = ({
                 title={t("page-index:page-index-developers-code-examples")}
                 Svg={AngleBrackets}
               >
+                {/* Desktop */}
                 {codeExamples.map(({ title, description }, idx) => (
                   <button
                     key={title}
-                    className="flex flex-col gap-y-0.5 border-t px-6 py-4 hover:bg-background-highlight"
+                    className="flex flex-col gap-y-0.5 border-t px-6 py-4 hover:bg-background-highlight max-md:hidden"
                     onClick={() => toggleCodeExample(idx)}
                   >
                     <p className="font-bold">{title}</p>
@@ -384,27 +414,39 @@ const HomePage = ({
                     </p>
                   </button>
                 ))}
+                {/* Mobile */}
+                <Accordion type="single" collapsible className="md:hidden">
+                  {codeExamples.map(
+                    ({ title, description, code, codeLanguage }) => (
+                      <AccordionItem key={title} value={title}>
+                        <AccordionTrigger className="flex border-t px-6 py-4 hover:bg-background-highlight">
+                          <div className="flex flex-col items-start gap-y-0.5">
+                            <p className="text-md font-bold text-body">
+                              {title}
+                            </p>
+                            <p className="text-start text-sm text-body-medium">
+                              {description}
+                            </p>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent>
+                          <Suspense fallback={<SkeletonLines noOfLines={16} />}>
+                            <Codeblock
+                              codeLanguage={codeLanguage}
+                              allowCollapse={false}
+                              className="[&>div]:-m-2 [&>div]:rounded-none [&>div]:border-t [&_*]:!text-xs [&_pre]:p-4"
+                              fromHomepage
+                            >
+                              {code}
+                            </Codeblock>
+                          </Suspense>
+                        </AccordionContent>
+                      </AccordionItem>
+                    )
+                  )}
+                </Accordion>
               </WindowBox>
             </div>
-
-            {isModalOpen && (
-              // TODO: Migrate CodeModal, CodeBlock from Chakra-UI to tailwind/shad-cn
-              <CodeModal
-                isOpen={isModalOpen}
-                setIsOpen={setModalOpen}
-                title={codeExamples[activeCode].title}
-              >
-                <Suspense fallback={<SkeletonLines noOfLines={16} />}>
-                  <Codeblock
-                    codeLanguage={codeExamples[activeCode].codeLanguage}
-                    allowCollapse={false}
-                    fromHomepage
-                  >
-                    {codeExamples[activeCode].code}
-                  </Codeblock>
-                </Suspense>
-              </CodeModal>
-            )}
           </SectionContent>
         </Section>
 
