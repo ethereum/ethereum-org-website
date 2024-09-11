@@ -1,11 +1,6 @@
-import { useRouter } from "next/router"
-
-import { cn } from "@/lib/utils/cn"
-import { cleanPath } from "@/lib/utils/url"
-
 import type { Level, NavItem } from "../types"
 
-import { useNavMenuColorsTw } from "@/hooks/useNavMenuColorsTw"
+import { navMenuVariants } from "./MenuContent"
 
 type ItemProps = {
   item: NavItem
@@ -13,24 +8,13 @@ type ItemProps = {
 }
 
 const ItemContent = ({ item, lvl }: ItemProps) => {
-  const { label, description, ...action } = item
-  const { asPath } = useRouter()
-  const menuColors = useNavMenuColorsTw()
-
-  const isLink = "href" in action
-  const isActivePage = isLink && cleanPath(asPath) === action.href
+  const { label, description } = item
+  const { linkSubtext } = navMenuVariants({ level: lvl })
 
   return (
     <div className="relative me-auto text-start">
-      <p className={cn("font-bold text-body", menuColors.body)}>{label}</p>
-      <p
-        className={cn(
-          "text-sm",
-          isActivePage ? menuColors.body : menuColors.lvl[lvl].subtext
-        )}
-      >
-        {description}
-      </p>
+      <p className="font-bold">{label}</p>
+      <p className={linkSubtext()}>{description}</p>
     </div>
   )
 }
