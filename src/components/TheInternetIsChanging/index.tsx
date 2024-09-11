@@ -1,6 +1,8 @@
-import { Fragment } from "react"
 import { useTranslation } from "next-i18next"
 import { FaCheck } from "react-icons/fa"
+import { Portal } from "@radix-ui/react-portal"
+
+import { cn } from "@/lib/utils/cn"
 
 import {
   Section,
@@ -8,13 +10,14 @@ import {
   SectionHeader,
   SectionTag,
 } from "../ui/section"
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip"
 
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
 
 type Item = {
   oldLabel: string
   newLabel: string
-  explanation: (string | React.ReactNode)[]
+  explanation: string[]
 }
 
 // TODO: Extract strings for intl
@@ -74,6 +77,46 @@ const items: Item[] = [
   },
 ]
 
+type ItemProps = React.HTMLAttributes<HTMLButtonElement> & {
+  explanation: string[]
+  separatorClass: string
+}
+
+const Item = ({
+  children,
+  explanation,
+  className,
+  separatorClass,
+}: ItemProps) => (
+  <>
+    <Tooltip>
+      <TooltipTrigger>
+        <button
+          className={cn(
+            "flex h-fit items-center gap-x-1 text-nowrap rounded-full px-4 py-1 font-bold uppercase",
+            className
+          )}
+        >
+          {children}
+        </button>
+      </TooltipTrigger>
+      <Portal>
+        <TooltipContent className="max-w-sm space-y-2">
+          {explanation.map((line) => (
+            <p key={line}>{line}</p>
+          ))}
+        </TooltipContent>
+      </Portal>
+    </Tooltip>
+    <div
+      className={cn(
+        "h-1.5 min-w-1.5 rounded-full motion-reduce:last:hidden",
+        separatorClass
+      )}
+    />
+  </>
+)
+
 const TheInternetIsChanging = () => {
   const { t } = useTranslation("page-index")
   const { prefersReducedMotion } = usePrefersReducedMotion()
@@ -92,9 +135,8 @@ const TheInternetIsChanging = () => {
           {t("page-index:page-index-values-description")}
         </p>
       </SectionContent>
-      {/* // TODO: Add tooltip popups */}
       <div className="mt-19 overflow-hidden max-lg:-mx-4 lg:rounded-2xl">
-        <div className="group bg-accent-a-low-contrast">
+        <div className="group bg-blue-50 dark:bg-blue-600">
           <div
             className="flex max-w-full overflow-hidden motion-reduce:justify-center motion-reduce:overflow-auto"
             style={prefersReducedMotion ? {} : fadeEdges}
@@ -106,20 +148,23 @@ const TheInternetIsChanging = () => {
                   key={idx}
                   className="group-hover:animate-pause flex animate-scroll-left items-center space-x-10 p-6 motion-reduce:animate-none"
                 >
-                  {items.map(({ newLabel }) => (
-                    <Fragment key={newLabel}>
-                      <button className="flex h-fit items-center gap-x-1 text-nowrap rounded-full bg-blue-200/20 px-4 py-1 font-bold uppercase text-accent-a dark:bg-blue-400/20">
-                        <FaCheck className="text-success" /> {newLabel}
-                      </button>
-                      <div className="h-1.5 min-w-1.5 rounded-full bg-accent-a motion-reduce:last:hidden" />
-                    </Fragment>
+                  {items.map(({ newLabel: label, explanation }) => (
+                    <Item
+                      key={label}
+                      explanation={explanation}
+                      separatorClass="bg-accent-a"
+                      className="group/item bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-700"
+                    >
+                      <FaCheck className="text-success group-hover/item:text-white" />{" "}
+                      {label}
+                    </Item>
                   ))}
                 </div>
               ))}
           </div>
         </div>
 
-        <div className="group bg-background-highlight">
+        <div className="group bg-gray-50 dark:bg-gray-800">
           <div
             className="flex max-w-full overflow-hidden motion-reduce:justify-center motion-reduce:overflow-auto"
             style={prefersReducedMotion ? {} : fadeEdges}
@@ -131,13 +176,15 @@ const TheInternetIsChanging = () => {
                   key={idx}
                   className="group-hover:animate-pause flex animate-scroll-right items-center space-x-10 p-6 motion-reduce:animate-none"
                 >
-                  {items.map(({ oldLabel }) => (
-                    <Fragment key={oldLabel}>
-                      <button className="flex h-fit items-center gap-x-1 text-nowrap rounded-full bg-gray-200/20 px-4 py-1 font-bold uppercase text-disabled dark:bg-gray-950">
-                        {oldLabel}
-                      </button>
-                      <div className="h-1.5 min-w-1.5 rounded-full bg-disabled motion-reduce:last:hidden" />
-                    </Fragment>
+                  {items.map(({ oldLabel: label, explanation }) => (
+                    <Item
+                      key={label}
+                      explanation={explanation}
+                      className="bg-gray-200/20 text-body-medium hover:bg-gray-600 hover:text-white dark:bg-gray-950 dark:text-body"
+                      separatorClass="bg-gray-200 dark:bg-gray-950"
+                    >
+                      {label}
+                    </Item>
                   ))}
                 </div>
               ))}
