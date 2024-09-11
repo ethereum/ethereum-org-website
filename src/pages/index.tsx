@@ -437,12 +437,12 @@ const HomePage = ({
                             </p>
                           </div>
                         </AccordionTrigger>
-                        <AccordionContent>
+                        <AccordionContent className="max-h-[50vh] overflow-auto border-t">
                           <Suspense fallback={<SkeletonLines noOfLines={16} />}>
                             <Codeblock
                               codeLanguage={codeLanguage}
                               allowCollapse={false}
-                              className="[&>div]:-m-2 [&>div]:rounded-none [&>div]:border-t [&_*]:!text-xs [&_pre]:p-4"
+                              className="[&>div]:-m-2 [&>div]:rounded-none [&_*]:!text-xs [&_pre]:p-4"
                               fromHomepage
                             >
                               {code}
