@@ -13,6 +13,7 @@ import type {
 
 import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
 import { ChevronNext } from "@/components/Chevron"
+import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import { useHome } from "@/components/Homepage/useHome"
@@ -24,7 +25,7 @@ import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import Swiper from "@/components/Swiper"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
-import { Button, ButtonLink } from "@/components/ui/buttons/Button"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardBanner,
@@ -355,44 +356,8 @@ const HomePage = ({
 
         {/* Builders - Blockchain's biggest builder community */}
         <Section id="builders" variant="responsiveFlex">
-          <SectionBanner
-            className={cn(
-              "relative transition-[max-width] duration-500 ease-linear md:max-w-96 lg:max-w-128",
-              isModalOpen && "duration-300 md:max-w-[50%] lg:max-w-[50%]"
-            )}
-          >
+          <SectionBanner className="relative">
             <TwImage src={BuildersImage} alt="" />
-
-            {isModalOpen && (
-              <div className="absolute inset-0.5 my-auto h-fit max-h-[75%] overflow-y-auto rounded-4xl bg-background-highlight pb-0.5 transition-all max-md:hidden">
-                <div
-                  className="sticky top-0 z-10 bg-background-highlight py-1"
-                  style={{
-                    mask: "linear-gradient(to bottom, white 90%, transparent)",
-                  }}
-                >
-                  <Button
-                    onClick={() => setModalOpen(false)}
-                    className="me-4 ms-auto block"
-                    variant="ghost"
-                  >
-                    {t("close")}
-                  </Button>
-                </div>
-                <div className="z-0 max-h-[calc(100%_-_128px)] overflow-auto">
-                  <Suspense fallback={<SkeletonLines noOfLines={32} />}>
-                    <Codeblock
-                      codeLanguage={codeExamples[activeCode].codeLanguage}
-                      allowCollapse={false}
-                      fromHomepage
-                      className="[&>div]:mb-0 [&>div]:max-h-[calc(100%_-_128px)] [&>div]:rounded-[calc(theme('borderRadius.4xl')_-_2px)] [&>div]:p-2 [&_*]:!text-sm [&_pre]:py-2"
-                    >
-                      {codeExamples[activeCode].code}
-                    </Codeblock>
-                  </Suspense>
-                </div>
-              </div>
-            )}
           </SectionBanner>
 
           <SectionContent>
@@ -473,6 +438,25 @@ const HomePage = ({
                   )}
                 </Accordion>
               </WindowBox>
+              {isModalOpen && (
+                // TODO: Migrate CodeModal, CodeBlock from Chakra-UI to tailwind/shad-cn
+                <CodeModal
+                  isOpen={isModalOpen}
+                  setIsOpen={setModalOpen}
+                  title={codeExamples[activeCode].title}
+                >
+                  <Suspense fallback={<SkeletonLines noOfLines={16} />}>
+                    <Codeblock
+                      codeLanguage={codeExamples[activeCode].codeLanguage}
+                      allowCollapse={false}
+                      className="[&_pre]:p-6"
+                      fromHomepage
+                    >
+                      {codeExamples[activeCode].code}
+                    </Codeblock>
+                  </Suspense>
+                </CodeModal>
+              )}
             </div>
           </SectionContent>
         </Section>
