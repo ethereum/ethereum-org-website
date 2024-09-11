@@ -313,12 +313,15 @@ const HomePage = ({
                   {t("page-index:page-index-popular-topics-header")}
                 </h3>
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
-                  {popularTopics.map(({ label, Svg, href }) => (
+                  {popularTopics.map(({ label, Svg, href, className }) => (
                     <SvgButtonLink
                       key={label}
                       Svg={Svg}
                       href={href}
-                      className="text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row"
+                      className={cn(
+                        "text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row",
+                        className
+                      )}
                     >
                       <p className="text-start text-xl font-bold text-body group-hover:underline">
                         {label}
@@ -327,7 +330,12 @@ const HomePage = ({
                   ))}
                 </div>
                 <div className="flex justify-center py-8 md:justify-start">
-                  <ButtonLink href="/learn/" size="lg" variant="outline">
+                  <ButtonLink
+                    href="/learn/"
+                    size="lg"
+                    variant="outline"
+                    isSecondary
+                  >
                     {t("page-index:page-index-popular-topics-action")}{" "}
                     <ChevronNext />
                   </ButtonLink>
@@ -362,6 +370,7 @@ const HomePage = ({
                 href="/developers/docs/"
                 size="lg"
                 variant="outline"
+                isSecondary
                 className="w-fit"
               >
                 {t("page-index:page-index-builders-action-secondary")}
@@ -437,6 +446,7 @@ const HomePage = ({
                   href="/discord/"
                   size="lg"
                   variant="outline"
+                  isSecondary
                   hideArrow
                 >
                   <FaDiscord />
@@ -445,6 +455,7 @@ const HomePage = ({
                   href={GITHUB_REPO_URL}
                   size="lg"
                   variant="outline"
+                  isSecondary
                   hideArrow
                 >
                   <FaGithub />
