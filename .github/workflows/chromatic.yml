@@ -1,45 +1,41 @@
 # .github/workflows/chromatic.yml
-
-# Workflow name
 name: Chromatic Publish and Testing
 
-# Event for the workflow
-on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - ready_for_review
-    paths:
-      # Only run on file changes in any of these paths
-      - "src/components/**/*"
-      - "src/pages/**/*"
-      - "src/layouts/**/*"
-      - "src/@chakra-ui/**/*"
-      - ".storybook/**/*"
-      - "tailwind.config.ts"
-      - "src/styles/**/*"
+on: workflow_call
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}-chromatic
+  cancel-in-progress: true
+
+permissions:
+  actions: write
+  contents: read
 
 # List of jobs
 jobs:
-  chromatic-deployment:
-    # Operating System
+  chromatic:
+    name: Chromatic
     runs-on: ubuntu-latest
-    # Job steps
     steps:
-      # 👇 Version 2 of the action
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0 # 👈 Required to retrieve git history
-      - name: Install deps
-        # 👇 Install dependencies with the same package manager used in the project (replace it as needed), e.g. yarn, npm, pnpm
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v4
+        with:
+          cache: npm
+          cache-dependency-path: ./package.json
+          node-version: 20
+      - name: 📥 Install deps
         run: yarn
-      - name: Publish to Chromatic
-        # 👇 Adds Chromatic as a step in the workflow
-        uses: chromaui/action@v1
+      - name: Build Storybook
+        run: npm run build-storybook
+      - name: ⚡ Run chromatic
+        uses: chromaui/action@latest
         # Options required for Chromatic's GitHub Action
         with:
           projectToken: fee8e66c9916
+          onlyChanged: true
           # 👇 Only fail if Storybook contains stories that error
           exitZeroOnChanges: true
