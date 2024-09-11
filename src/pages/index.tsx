@@ -347,7 +347,12 @@ const HomePage = ({
 
         {/* Builders - Blockchain's biggest builder community */}
         <Section id="builders" variant="responsiveFlex">
-          <SectionBanner className="relative md:max-w-[50%] lg:max-w-[50%]">
+          <SectionBanner
+            className={cn(
+              "relative transition-[max-width] duration-500 ease-linear md:max-w-96 lg:max-w-128",
+              isModalOpen && "duration-300 md:max-w-[50%] lg:max-w-[50%]"
+            )}
+          >
             <TwImage src={BuildersImage} alt="" />
 
             {isModalOpen && (
@@ -366,13 +371,13 @@ const HomePage = ({
                     {t("close")}
                   </Button>
                 </div>
-                <div className="z-0 max-h-full overflow-auto">
-                  <Suspense fallback={<SkeletonLines noOfLines={20} />}>
+                <div className="z-0 max-h-[calc(100%_-_128px)] overflow-auto">
+                  <Suspense fallback={<SkeletonLines noOfLines={32} />}>
                     <Codeblock
                       codeLanguage={codeExamples[activeCode].codeLanguage}
                       allowCollapse={false}
                       fromHomepage
-                      className="[&>div]:mb-0 [&>div]:max-h-[calc(100%_-_140px)] [&>div]:rounded-[calc(theme('borderRadius.4xl')_-_2px)] [&>div]:p-2 [&_*]:!text-sm [&_pre]:py-2"
+                      className="[&>div]:mb-0 [&>div]:max-h-[calc(100%_-_128px)] [&>div]:rounded-[calc(theme('borderRadius.4xl')_-_2px)] [&>div]:p-2 [&_*]:!text-sm [&_pre]:py-2"
                     >
                       {codeExamples[activeCode].code}
                     </Codeblock>
