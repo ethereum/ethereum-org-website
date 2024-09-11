@@ -1,18 +1,28 @@
+import { Children, type ReactElement } from "react"
 import { useTranslation } from "next-i18next"
-import type { ReactNode } from "react"
+import { IoMdCopy } from "react-icons/io"
+import { MdCheck } from "react-icons/md"
 import { Modal, ModalBody, ModalContent, ModalOverlay } from "@chakra-ui/react"
 
 import { Button } from "./ui/buttons/Button"
 
+import { useClipboard } from "@/hooks/useClipboard"
+
 type CodeModalProps = {
   title: string
-  children: ReactNode
+  children?: ReactElement
   isOpen: boolean
   setIsOpen: (isOpen: boolean) => void
 }
 
 const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
   const { t } = useTranslation()
+  const codeSnippet = (Children.toArray(children)[0] as ReactElement).props
+    .children.props.children
+
+  const { onCopy, hasCopied } = useClipboard(codeSnippet, {
+    timeout: 1500,
+  })
 
   return (
     <Modal
@@ -44,6 +54,21 @@ const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
           </Button>
         </div>
         <ModalBody p="0">{children}</ModalBody>
+        <Button
+          variant="outline"
+          onClick={onCopy}
+          className="absolute end-4 top-20"
+        >
+          {hasCopied ? (
+            <>
+              <MdCheck /> {t("copied")}
+            </>
+          ) : (
+            <>
+              <IoMdCopy /> {t("copy")}
+            </>
+          )}
+        </Button>
       </ModalContent>
     </Modal>
   )
