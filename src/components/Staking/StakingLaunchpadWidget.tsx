@@ -9,7 +9,7 @@ import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import Select, { type SelectOnChange } from "../Select"
+import Select, { type SelectOnChange } from "../ui/Select"
 
 type StakingDataOption = { label: string; value: string }
 
