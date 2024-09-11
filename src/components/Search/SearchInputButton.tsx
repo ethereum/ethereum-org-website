@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils/cn"
 
 import { Button, type ButtonProps } from "../ui/buttons/Button"
 
-const SearchButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const SearchInputButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, ...props }, ref) => {
     const { t } = useTranslation("common")
 
@@ -16,7 +16,7 @@ const SearchButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
         aria-label={t("aria-toggle-search-button")}
         variant="ghost"
         className={cn(
-          "me-3 border border-disabled hover:border-primary-hover",
+          "group me-3 border border-disabled hover:border-primary-hover",
           className
         )}
         {...props}
@@ -33,6 +33,6 @@ const SearchButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   }
 )
 
-SearchButton.displayName = "SearchButton"
+SearchInputButton.displayName = "SearchButton"
 
-export default SearchButton
+export default SearchInputButton
