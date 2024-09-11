@@ -1,14 +1,14 @@
 import { useState } from "react"
 import { useCopyToClipboard } from "usehooks-ts"
 
-type UseClipboardOptions = {
+export type UseClipboardOptions = {
   /**
    * timeout delay (in ms) to switch back to initial state once copied.
    */
   timeout?: number
 }
 
-type UseClipboardReturn = {
+export type UseClipboardReturn = {
   value: string
   setValue: React.Dispatch<React.SetStateAction<string>>
   onCopy: () => void

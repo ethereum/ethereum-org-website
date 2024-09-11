@@ -2,6 +2,8 @@ import { Fragment, lazy, Suspense } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaDiscord, FaGithub } from "react-icons/fa6"
+import { IoMdCopy } from "react-icons/io"
+import { MdCheck } from "react-icons/md"
 
 import type {
   AllMetricData,
@@ -25,7 +27,7 @@ import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import Swiper from "@/components/Swiper"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
-import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardBanner,
@@ -409,8 +411,12 @@ const HomePage = ({
                 {/* Mobile */}
                 <Accordion type="single" collapsible className="md:hidden">
                   {codeExamples.map(
-                    ({ title, description, code, codeLanguage }) => (
-                      <AccordionItem key={title} value={title}>
+                    ({ title, description, code, codeLanguage, clipboard }) => (
+                      <AccordionItem
+                        key={title}
+                        value={title}
+                        className="relative"
+                      >
                         <AccordionTrigger className="flex border-t px-6 py-4 hover:bg-background-highlight">
                           <div className="flex flex-col items-start gap-y-0.5">
                             <p className="text-md font-bold text-body">
@@ -431,6 +437,12 @@ const HomePage = ({
                             >
                               {code}
                             </Codeblock>
+                            <Button
+                              onClick={clipboard.onCopy}
+                              className="absolute end-4 top-24"
+                            >
+                              {clipboard.hasCopied ? <MdCheck /> : <IoMdCopy />}
+                            </Button>
                           </Suspense>
                         </AccordionContent>
                       </AccordionItem>

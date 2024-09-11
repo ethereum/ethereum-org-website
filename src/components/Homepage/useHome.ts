@@ -27,6 +27,7 @@ import { GITHUB_REPO_URL } from "@/lib/constants"
 import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
 import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
+import { useClipboard, type UseClipboardReturn } from "@/hooks/useClipboard"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export const useHome = () => {
@@ -45,7 +46,7 @@ export const useHome = () => {
     setModalOpen(true)
   }
 
-  const codeExamples: CodeExample[] = [
+  const codeExamples: (CodeExample & { clipboard: UseClipboardReturn })[] = [
     {
       title: t("page-index:page-index-developers-code-example-title-0"),
       description: t(
@@ -53,6 +54,7 @@ export const useHome = () => {
       ),
       codeLanguage: "language-solidity",
       code: SimpleWalletContent,
+      clipboard: useClipboard(SimpleWalletContent),
     },
     {
       title: t("page-index:page-index-developers-code-example-title-1"),
@@ -61,6 +63,7 @@ export const useHome = () => {
       ),
       codeLanguage: "language-solidity",
       code: SimpleTokenContent,
+      clipboard: useClipboard(SimpleTokenContent),
     },
     {
       title: t("page-index:page-index-developers-code-example-title-2"),
@@ -69,6 +72,7 @@ export const useHome = () => {
       ),
       codeLanguage: "language-javascript",
       code: CreateWalletContent,
+      clipboard: useClipboard(CreateWalletContent),
     },
     {
       title: t("page-index:page-index-developers-code-example-title-3"),
@@ -77,6 +81,7 @@ export const useHome = () => {
       ),
       codeLanguage: "language-solidity",
       code: SimpleDomainRegistryContent,
+      clipboard: useClipboard(SimpleDomainRegistryContent),
     },
   ]
 
