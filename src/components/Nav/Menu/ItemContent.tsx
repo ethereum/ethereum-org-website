@@ -1,11 +1,11 @@
 import { useRouter } from "next/router"
-import { Box, Text } from "@chakra-ui/react"
 
+import { cn } from "@/lib/utils/cn"
 import { cleanPath } from "@/lib/utils/url"
 
 import type { Level, NavItem } from "../types"
 
-import { useNavMenuColors } from "@/hooks/useNavMenuColors"
+import { useNavMenuColorsTw } from "@/hooks/useNavMenuColorsTw"
 
 type ItemProps = {
   item: NavItem
@@ -15,23 +15,23 @@ type ItemProps = {
 const ItemContent = ({ item, lvl }: ItemProps) => {
   const { label, description, ...action } = item
   const { asPath } = useRouter()
-  const menuColors = useNavMenuColors()
+  const menuColors = useNavMenuColorsTw()
 
   const isLink = "href" in action
   const isActivePage = isLink && cleanPath(asPath) === action.href
 
   return (
-    <Box me="auto" textAlign="start" position="relative">
-      <Text fontWeight="bold" color={menuColors.body}>
-        {label}
-      </Text>
-      <Text
-        fontSize="sm"
-        color={isActivePage ? menuColors.body : menuColors.lvl[lvl].subtext}
+    <div className="relative me-auto text-start">
+      <p className={cn("font-bold text-body", menuColors.body)}>{label}</p>
+      <p
+        className={cn(
+          "text-sm",
+          isActivePage ? menuColors.body : menuColors.lvl[lvl].subtext
+        )}
       >
         {description}
-      </Text>
-    </Box>
+      </p>
+    </div>
   )
 }
 
