@@ -347,30 +347,38 @@ const HomePage = ({
 
         {/* Builders - Blockchain's biggest builder community */}
         <Section id="builders" variant="responsiveFlex">
-          <SectionBanner className="relative">
+          <SectionBanner className="relative md:max-w-[50%] lg:max-w-[50%]">
             <TwImage src={BuildersImage} alt="" />
+
             {isModalOpen && (
-              <div className="absolute inset-0.5 h-fit max-h-full overflow-y-auto rounded-4xl bg-background-highlight pb-0.5 transition-all">
-                <Suspense fallback={<SkeletonLines noOfLines={16} />}>
-                  <Codeblock
-                    codeLanguage={codeExamples[activeCode].codeLanguage}
-                    allowCollapse={false}
-                    fromHomepage
-                    className="max-md:hidden [&>div]:mb-0 [&>div]:max-h-[calc(100%_-_140px)] [&>div]:rounded-[calc(theme('borderRadius.4xl')_-_2px)] [&>div]:border [&>div]:p-2 [&_*]:!text-sm"
+              <div className="absolute inset-0.5 my-auto h-fit max-h-[75%] overflow-y-auto rounded-4xl bg-background-highlight pb-0.5 transition-all max-md:hidden">
+                <div
+                  className="sticky top-0 z-10 bg-background-highlight py-1"
+                  style={{
+                    mask: "linear-gradient(to bottom, white 90%, transparent)",
+                  }}
+                >
+                  <Button
+                    onClick={() => setModalOpen(false)}
+                    className="me-4 ms-auto block"
+                    variant="ghost"
                   >
-                    {codeExamples[activeCode].code}
-                  </Codeblock>
-                </Suspense>
+                    {t("close")}
+                  </Button>
+                </div>
+                <div className="z-0 max-h-full overflow-auto">
+                  <Suspense fallback={<SkeletonLines noOfLines={20} />}>
+                    <Codeblock
+                      codeLanguage={codeExamples[activeCode].codeLanguage}
+                      allowCollapse={false}
+                      fromHomepage
+                      className="[&>div]:mb-0 [&>div]:max-h-[calc(100%_-_140px)] [&>div]:rounded-[calc(theme('borderRadius.4xl')_-_2px)] [&>div]:p-2 [&_*]:!text-sm [&_pre]:py-2"
+                    >
+                      {codeExamples[activeCode].code}
+                    </Codeblock>
+                  </Suspense>
+                </div>
               </div>
-            )}
-            {isModalOpen && (
-              <Button
-                onClick={() => setModalOpen(false)}
-                className="absolute end-4 top-4"
-                variant="ghost"
-              >
-                {t("close")}
-              </Button>
             )}
           </SectionBanner>
 
