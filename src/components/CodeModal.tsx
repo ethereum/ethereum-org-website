@@ -1,13 +1,8 @@
+import { useTranslation } from "next-i18next"
 import type { ReactNode } from "react"
-import {
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalHeader,
-  ModalOverlay,
-  useColorModeValue,
-} from "@chakra-ui/react"
+import { Modal, ModalBody, ModalContent, ModalOverlay } from "@chakra-ui/react"
+
+import { Button } from "./ui/buttons/Button"
 
 type CodeModalProps = {
   title: string
@@ -17,8 +12,7 @@ type CodeModalProps = {
 }
 
 const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
-  const bgColor = useColorModeValue("rgb(247, 247, 247)", "rgb(25, 25, 25)")
-  const borderColor = useColorModeValue("rgb(51, 51, 51)", "rgb(242, 242, 242)")
+  const { t } = useTranslation()
 
   return (
     <Modal
@@ -26,8 +20,9 @@ const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
       scrollBehavior="inside"
       onClose={() => setIsOpen(false)}
     >
-      <ModalOverlay />
+      <ModalOverlay hideBelow="md" />
       <ModalContent
+        hideBelow="md"
         maxW="100vw"
         marginTop="auto"
         marginBottom="0"
@@ -36,34 +31,18 @@ const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
         p={{ base: "0", md: "0" }}
         gap="0"
       >
-        <ModalHeader
-          bg={bgColor}
-          borderColor={borderColor}
-          borderTop="1px solid"
-          borderBottom="1px solid"
-          textTransform="uppercase"
-          fontWeight="normal"
-          fontSize="md"
-          fontFamily="monospace"
-          px="6"
-          py="4"
-          me="0"
-        >
-          {title}
-        </ModalHeader>
-        <ModalCloseButton
-          position="absolute"
-          padding="0"
-          width="24px"
-          height="24px"
-          borderRadius="0"
-          color="rgb(178, 178, 178)"
-          fontSize="sm"
-          margin="0"
-          top="4"
-          insetInlineEnd="4"
-          bottom="4"
-        />
+        <div className="flex items-center border-y bg-background px-6 py-3 font-monospace uppercase">
+          <h2 className="text-md font-normal">{title}</h2>
+          <Button
+            variant="ghost"
+            className="ms-auto text-sm"
+            size="sm"
+            isSecondary
+            onClick={() => setIsOpen(false)}
+          >
+            {t("close")}
+          </Button>
+        </div>
         <ModalBody p="0">{children}</ModalBody>
       </ModalContent>
     </Modal>
