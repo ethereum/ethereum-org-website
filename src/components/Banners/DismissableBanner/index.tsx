@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useTranslation } from "next-i18next"
 import { MdClose } from "react-icons/md"
 
 import { Button } from "@/components/ui/buttons/Button"
@@ -17,6 +18,7 @@ const DismissableBanner = ({
   storageKey,
   className,
 }: DismissableBannerProps) => {
+  const { t } = useTranslation("common")
   const [show, setShow] = useState<boolean>(false)
 
   useEffect(() => {
@@ -33,10 +35,10 @@ const DismissableBanner = ({
     <BannerNotification shouldShow={show} className={cn("gap-8", className)}>
       <Center className="ms-auto">{children}</Center>
       <Button
-        className="ms-auto"
+        className="ms-auto hover:shadow-none"
         onClick={onClose}
-        aria-label="Close Banner"
-        variant="ghost"
+        aria-label={t("close")}
+        size="sm"
       >
         <MdClose />
       </Button>

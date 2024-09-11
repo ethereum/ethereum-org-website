@@ -24,6 +24,7 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
 
   const ThemeIcon = useColorModeValue(MdBrightness2, MdWbSunny)
   const themeIconAriaLabel = useColorModeValue(
+    // TODO: Add i18n support
     "Switch to Dark Theme",
     "Switch to Light Theme"
   )
@@ -51,10 +52,10 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
         aria-label={themeIconAriaLabel}
         variant="ghost"
         isSecondary
-        className="px-2 xl:px-3 [&>svg]:transition-all [&>svg]:duration-500 [&>svg]:hover:rotate-12 [&>svg]:hover:text-primary-hover"
+        className="group px-2 xl:px-3 [&>svg]:transition-all [&>svg]:duration-500 [&>svg]:hover:rotate-12 [&>svg]:hover:text-primary-hover"
         onClick={toggleColorMode}
       >
-        <ThemeIcon />
+        <ThemeIcon className="transform-transform duration-500 group-hover:rotate-12 group-hover:transition-transform group-hover:duration-500" />
       </Button>
 
       {/* Locale-picker menu */}
@@ -63,7 +64,7 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
           name={DESKTOP_LANGUAGE_BUTTON_NAME}
           ref={languagePickerRef}
           variant="ghost"
-          className="gap-0 px-2 text-body transition-colors duration-200 active:bg-primary-low-contrast active:text-primary-hover data-[state='open']:bg-primary-low-contrast data-[state='open']:text-primary-hover xl:px-3 [&>svg]:transition-transform [&>svg]:duration-500 [&_svg]:hover:rotate-12"
+          className="gap-0 px-2 text-body transition-colors duration-500 active:bg-primary-low-contrast active:text-primary-hover data-[state='open']:bg-primary-low-contrast data-[state='open']:text-primary-hover xl:px-3 [&_svg]:transition-transform [&_svg]:duration-500 [&_svg]:hover:rotate-12"
         >
           <BsTranslate className="me-2 align-middle text-2xl" />
           <span className="hidden lg:inline-block">

@@ -16,6 +16,7 @@ const SearchButton = forwardRef<HTMLButtonElement, ButtonProps>(
         aria-label={t("aria-toggle-search-button")}
         className={cn(
           "px-2 ease-in-out [&>svg]:transition-all [&>svg]:duration-500 [&>svg]:hover:rotate-12 [&>svg]:hover:text-primary-hover",
+          "group me-3 border border-disabled hover:border-primary-hover",
           className
         )}
         variant="ghost"

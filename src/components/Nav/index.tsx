@@ -30,7 +30,7 @@ const Nav = () => {
     <div className="sticky top-0 z-sticky w-full">
       <nav
         ref={navWrapperRef}
-        className="flex h-19 justify-center border-b border-background-highlight bg-background px-4 py-4 xl:px-8"
+        className="flex h-19 justify-center border-b border-b-disabled bg-background p-4 xl:px-8"
         aria-label={t("nav-primary")}
       >
         <div className="flex w-full max-w-screen-2xl items-center justify-between md:items-stretch md:justify-normal">
