@@ -418,7 +418,12 @@ const HomePage = ({
                 {codeExamples.map(({ title, description }, idx) => (
                   <button
                     key={title}
-                    className="flex flex-col gap-y-0.5 border-t px-6 py-4 hover:bg-background-highlight max-md:hidden"
+                    className={cn(
+                      "flex flex-col gap-y-0.5 border-t px-6 py-4 hover:bg-background-highlight max-md:hidden",
+                      isModalOpen &&
+                        idx === activeCode &&
+                        "bg-background-highlight"
+                    )}
                     onClick={() => toggleCodeExample(idx)}
                   >
                     <p className="font-bold">{title}</p>
