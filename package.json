@@ -84,6 +84,7 @@
     "remark-gfm": "^3.0.1",
     "swiper": "^11.1.10",
     "tailwind-merge": "^2.3.0",
+    "tailwind-variants": "^0.2.1",
     "tailwindcss-animate": "^1.0.7",
     "usehooks-ts": "^3.1.0",
     "yaml-loader": "^0.8.0"
