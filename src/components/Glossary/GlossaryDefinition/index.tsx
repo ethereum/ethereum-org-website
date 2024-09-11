@@ -42,13 +42,13 @@ const GlossaryDefinition = ({
         />
       </h4>
 
-      <span className={cn(textClasses)}>
+      <div className={cn("inline-block", textClasses)}>
         <Translation
           id={term + "-definition"}
           options={options}
           transform={components}
         />
-      </span>
+      </div>
     </Stack>
   )
 }
