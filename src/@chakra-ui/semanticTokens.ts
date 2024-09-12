@@ -40,7 +40,7 @@ const semanticTokens = {
       base: { _light: "purple.600", _dark: "purple.400" },
       highContrast: { _light: "purple.800", _dark: "purple.200" },
       lowContrast: { _light: "purple.100", _dark: "purple.900" },
-      hover: { _light: "purple.500", _dark: "purple.500" },
+      hover: { _light: "purple.500", _dark: "purple.300" },
       visited: { _light: "purple.700", _dark: "purple.300" },
       action: { _light: "purple.600", _dark: "purple.600" },
       actionHover: { _light: "purple.500", _dark: "purple.500" },
@@ -55,11 +55,9 @@ const semanticTokens = {
       base: { _light: "gray.800", _dark: "gray.100" },
       medium: { _light: "gray.500", _dark: "gray.400" },
       light: { _light: "gray.200", _dark: "gray.600" },
-      // ! Deprecating body.inverted
-      inverted: { _light: "gray.100", _dark: "gray.800" },
     },
     background: {
-      base: { _light: "white", _dark: "gray.950" },
+      base: { _light: "white", _dark: "black" },
       highlight: { _light: "gray.100", _dark: "gray.900" },
     },
     disabled: { _light: "gray.400", _dark: "gray.500" },
