@@ -106,7 +106,7 @@ export const Paragraph = (props: ChildOnlyProp) => (
 )
 
 export const HR = () => (
-  <hr className="mb-4 mt-8 inline-block w-full bg-[#e5e5e5] opacity-60 dark:bg-[#333]" />
+  <hr className="mb-4 mt-8 inline-block w-full border-body-medium opacity-60" />
 )
 
 // All base html element components
@@ -150,17 +150,14 @@ export const Title = (props: ChildOnlyProp) => (
 
 export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   return (
-    <MainArticle
-      className="relative flex-[1_1_992px] px-8 pb-8 [&_.citation_p]:text-[#666] dark:[&_.citation_p]:text-[#080808]"
-      {...props}
-    />
+    <MainArticle className="relative flex-[1_1_992px] px-8 pb-8" {...props} />
   )
 }
 
 export const MobileButton = (props: ChildOnlyProp) => {
   return (
     <div
-      className="sticky bottom-0 z-sticky w-full bg-background p-8 shadow-[0_-1px_0_#e5e5e5] lg:hidden dark:shadow-[0_-1px_0_#333]"
+      className="sticky bottom-0 z-sticky w-full bg-background p-8 shadow-md lg:hidden"
       {...props}
     />
   )
