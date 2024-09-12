@@ -85,7 +85,7 @@ const Breadcrumbs = ({
           <div
             key={fullPath}
             className={cn(
-              "inline-flex items-center",
+              "inline-flex items-center tracking-wider",
               dir === "rtl" ? "flex-row-reverse" : ""
             )}
           >
