@@ -4,12 +4,14 @@ import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import { ContentHero } from "@/components/Hero"
+import { ContentHero, HubHero } from "@/components/Hero"
 import Pill from "@/components/Pill"
 import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
 
 import { ContentLayout } from "../ContentLayout"
+
+import RoadmapHubHeroImage from "@/public/images/heroes/roadmap-hub-hero.jpg"
 
 const CardGrid = (props: ChildOnlyProp) => (
   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
@@ -98,7 +100,18 @@ export const RoadmapLayout = ({
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
       maxDepth={frontmatter.sidebarDepth}
-      heroSection={<ContentHero {...heroProps} />}
+      heroSection={
+        slug === "/roadmap/" ? (
+          <HubHero
+            heroImg={RoadmapHubHeroImage}
+            header={frontmatter.title}
+            title=""
+            description={frontmatter.description}
+          />
+        ) : (
+          <ContentHero {...heroProps} />
+        )
+      }
     >
       {children}
     </ContentLayout>
