@@ -145,7 +145,7 @@ export const RoadmapLayout = ({
         <HeroContainer>
           <TitleCard>
             {/* TODO: Double check this slug works */}
-            <Breadcrumbs slug={slug} mb="8" />
+            <Breadcrumbs slug={slug} className="mb-8" />
             <Title>{frontmatter.title}</Title>
             <OldText>{frontmatter.description}</OldText>
             {frontmatter?.buttons && (

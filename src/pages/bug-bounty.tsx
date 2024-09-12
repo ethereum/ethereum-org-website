@@ -491,7 +491,7 @@ const BugBountiesPage = () => {
       <Content>
         <HeroCard>
           <HeroContainer>
-            <Breadcrumbs slug={pathname} mb="8" />
+            <Breadcrumbs slug={pathname} className="mb-8" />
             <Row>
               <On />
               <Title>{t("page-upgrades-bug-bounty-title")}</Title>

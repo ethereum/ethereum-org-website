@@ -258,7 +258,7 @@ export const StakingLayout = ({
     >
       <HeroContainer>
         <Flex direction="column" justify="flex-start" w="full" p={8}>
-          <Breadcrumbs slug={slug} mb="8" />
+          <Breadcrumbs slug={slug} className="mb-8" />
           <Title>{frontmatter.title}</Title>
           <UnorderedList>
             {(summaryPoints || []).map((point, idx) => (

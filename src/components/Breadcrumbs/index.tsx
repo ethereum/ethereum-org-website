@@ -75,7 +75,7 @@ const Breadcrumbs = ({
 
   return (
     <Breadcrumb
-      className={cn("flex items-center justify-start space-x-2", className)}
+      className={cn("flex flex-wrap items-center justify-start", className)}
       {...props}
     >
       {crumbs.map(({ fullPath, text }) => {
