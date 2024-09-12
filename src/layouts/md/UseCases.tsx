@@ -1,13 +1,17 @@
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
-// import BannerNotification from "@/components/Banners/BannerNotification"
+import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
+import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
+import InlineLink from "@/components/Link"
 import { List, ListItem } from "@/components/ui/list"
 
+import { getEditPath } from "@/lib/utils/editPath"
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 
 import { ContentLayout } from "../ContentLayout"
@@ -28,12 +32,12 @@ export const UseCasesLayout = ({
   tocItems,
   contentNotTranslated,
 }: UseCasesLayoutProps) => {
-  // const { asPath: relativePath } = useRouter()
+  const { asPath: relativePath } = useRouter()
   const { t } = useTranslation("template-usecase")
 
   const summaryPoints = getSummaryPoints(frontmatter)
 
-  // const absoluteEditPath = getEditPath(relativePath)
+  const absoluteEditPath = getEditPath(relativePath)
 
   const dropdownLinks: ButtonDropdownList = {
     text: t("template-usecase:template-usecase-dropdown"),
@@ -121,24 +125,25 @@ export const UseCasesLayout = ({
   }
 
   return (
-    <ContentLayout
-      dir={contentNotTranslated ? "ltr" : "unset"}
-      tocItems={tocItems}
-      dropdownLinks={dropdownLinks}
-      maxDepth={frontmatter.sidebarDepth}
-      heroSection={<ContentHero {...heroProps} />}
-    >
-      {/* TODO: Add back in when we figure out how to handle this case inside the ContentLayout */}
-      {/* <BannerNotification shouldShow className="z-sticky max-lg:hidden">
+    <div dir={contentNotTranslated ? "ltr" : "unset"}>
+      <BannerNotification shouldShow className="z-sticky max-lg:hidden">
         <Emoji text=":pencil:" className="me-4 shrink-0 text-2xl" />
-        <Text m={0}>
+        <p>
           {t("template-usecase:template-usecase-banner")}{" "}
           <InlineLink href={absoluteEditPath}>
             {t("template-usecase-edit-link")}
           </InlineLink>
-        </Text>
-      </BannerNotification> */}
-      {children}
-    </ContentLayout>
+        </p>
+      </BannerNotification>
+
+      <ContentLayout
+        tocItems={tocItems}
+        dropdownLinks={dropdownLinks}
+        maxDepth={frontmatter.sidebarDepth}
+        heroSection={<ContentHero {...heroProps} />}
+      >
+        {children}
+      </ContentLayout>
+    </div>
   )
 }
