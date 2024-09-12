@@ -160,7 +160,7 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
 export const MobileButton = (props: ChildOnlyProp) => {
   return (
     <div
-      className="sticky bottom-0 z-[99] w-full bg-background p-8 shadow-[0_-1px_0_#e5e5e5] lg:hidden dark:shadow-[0_-1px_0_#333]"
+      className="sticky bottom-0 z-sticky w-full bg-background p-8 shadow-[0_-1px_0_#e5e5e5] lg:hidden dark:shadow-[0_-1px_0_#333]"
       {...props}
     />
   )
