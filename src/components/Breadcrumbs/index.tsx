@@ -1,19 +1,18 @@
+import React from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  type BreadcrumbProps as ChakraBreadcrumbProps,
-} from "@chakra-ui/react"
 
 import type { Lang } from "@/lib/types"
 
-import { BaseLink } from "@/components/Link"
-
+import { cn } from "@/lib/utils/cn"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-export type BreadcrumbsProps = ChakraBreadcrumbProps & {
+import { BaseLink } from "../ui/Link"
+
+// Ref: https://ui.shadcn.com/docs/components/breadcrumb
+type RootBreadcrumbProps = React.ComponentPropsWithoutRef<"nav">
+
+export type BreadcrumbsProps = RootBreadcrumbProps & {
   slug: string
   startDepth?: number
 }
@@ -22,6 +21,11 @@ type Crumb = {
   fullPath: string
   text: string
 }
+
+const Breadcrumb = React.forwardRef<HTMLElement, RootBreadcrumbProps>(
+  ({ ...props }, ref) => <nav ref={ref} aria-label="breadcrumb" {...props} />
+)
+Breadcrumb.displayName = "Breadcrumb"
 
 // Generate crumbs from slug
 // e.g. "/en/eth2/proof-of-stake/" will generate:
@@ -36,7 +40,13 @@ type Crumb = {
 //   { fullPath: "/en/eth2/", text: "ETH2" },
 //   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
-const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
+
+const Breadcrumbs = ({
+  slug,
+  startDepth = 0,
+  className = "",
+  ...props
+}: BreadcrumbsProps) => {
   const { t } = useTranslation("common")
   const { locale, asPath } = useRouter()
   const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
@@ -64,22 +74,38 @@ const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
     .slice(startDepth)
 
   return (
-    <Breadcrumb {...props} dir={dir}>
+    <Breadcrumb
+      className={cn("flex items-center justify-start space-x-2", className)}
+      {...props}
+    >
       {crumbs.map(({ fullPath, text }) => {
-        const isCurrentPage = slug === fullPath
+        const normalizePath = (path) => path.replace(/\/$/, "") // Remove trailing slash
+        const isCurrentPage = normalizePath(slug) === normalizePath(fullPath)
         return (
-          <BreadcrumbItem key={fullPath} isCurrentPage={isCurrentPage}>
-            <BreadcrumbLink
-              // If current page, render as span since the `href` will not be
-              // passed down to the child
-              // ref: https://github.com/chakra-ui/chakra-ui/blob/v2/packages/components/src/breadcrumb/breadcrumb-link.tsx#L32
-              as={isCurrentPage ? "span" : BaseLink}
-              href={fullPath}
-              textTransform="uppercase"
-            >
-              {text}
-            </BreadcrumbLink>
-          </BreadcrumbItem>
+          <div
+            key={fullPath}
+            className={cn(
+              "inline-flex items-center",
+              dir === "rtl" ? "flex-row-reverse" : ""
+            )}
+          >
+            {!isCurrentPage && dir === "rtl" && (
+              <span className="mx-2 text-gray-400">/</span>
+            )}
+            {isCurrentPage ? (
+              <span className="uppercase text-primary">{text}</span>
+            ) : (
+              <BaseLink
+                href={fullPath}
+                className="uppercase !text-body-medium no-underline hover:!text-primary"
+              >
+                {text}
+              </BaseLink>
+            )}
+            {!isCurrentPage && dir === "ltr" && (
+              <span className="mx-2 text-gray-400">/</span>
+            )}
+          </div>
         )
       })}
     </Breadcrumb>
