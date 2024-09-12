@@ -90,7 +90,9 @@ const Breadcrumbs = ({
             )}
           >
             {!isCurrentPage && dir === "rtl" && (
-              <span className="mx-2 text-gray-400">/</span>
+              <span className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                /
+              </span>
             )}
             {isCurrentPage ? (
               <span className="uppercase text-primary">{text}</span>
@@ -103,7 +105,9 @@ const Breadcrumbs = ({
               </BaseLink>
             )}
             {!isCurrentPage && dir === "ltr" && (
-              <span className="mx-2 text-gray-400">/</span>
+              <span className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                /
+              </span>
             )}
           </div>
         )
