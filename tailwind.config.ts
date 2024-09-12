@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss"
 import plugin from "tailwindcss/plugin"
 
-import { screens } from "./tailwind/screens"
+import { screens } from "./src/lib/utils/screen"
 
 const config = {
   // TODO: Move to "class" strategy after removing Chakra
