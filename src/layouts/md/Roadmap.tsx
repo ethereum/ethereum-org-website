@@ -4,6 +4,7 @@ import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
+import { ContentHero } from "@/components/Hero"
 import Pill from "@/components/Pill"
 import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
@@ -85,17 +86,19 @@ export const RoadmapLayout = ({
     ],
   }
 
+  const heroProps = {
+    ...frontmatter,
+    breadcrumbs: { slug, startDepth: 1 },
+    heroImg: frontmatter.image,
+  }
+
   return (
     <ContentLayout
       dir={contentNotTranslated ? "ltr" : "unset"}
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
       maxDepth={frontmatter.sidebarDepth}
-      heroProps={{
-        ...frontmatter,
-        breadcrumbs: { slug, startDepth: 1 },
-        heroImg: frontmatter.image,
-      }}
+      heroSection={<ContentHero {...heroProps} />}
     >
       {children}
     </ContentLayout>

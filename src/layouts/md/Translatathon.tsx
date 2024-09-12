@@ -5,6 +5,7 @@ import type { MdPageContent, SharedFrontmatter } from "@/lib/interfaces"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Card from "@/components/Card"
+import { ContentHero, ContentHeroProps } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
 import { APPLICATION_URL } from "@/components/Translatathon/constants"
@@ -184,33 +185,35 @@ export const TranslatathonLayout = ({
     ],
   }
 
+  const heroProps = {
+    ...frontmatter,
+    breadcrumbs: { slug, startDepth: 1 },
+    heroImg: "/images/heroes/translatathon-hero.svg",
+    blurDataURL: "",
+    description: (
+      <>
+        <Text>Welcome to the ethereum.org Translatathon!</Text>
+        <Text>
+          The translatathon is a competitive hackathon-style event where you can
+          compete for prizes by translating ethereum.org content into different
+          languages.
+        </Text>
+      </>
+    ),
+    buttons: [
+      {
+        content: "Apply to translate",
+        href: APPLICATION_URL,
+      },
+    ],
+  } satisfies ContentHeroProps
+
   return (
     <ContentLayout
       dir="ltr"
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
-      heroProps={{
-        ...frontmatter,
-        breadcrumbs: { slug, startDepth: 1 },
-        heroImg: "/images/heroes/translatathon-hero.svg",
-        blurDataURL: "",
-        description: (
-          <>
-            <Text>Welcome to the ethereum.org Translatathon!</Text>
-            <Text>
-              The translatathon is a competitive hackathon-style event where you
-              can compete for prizes by translating ethereum.org content into
-              different languages.
-            </Text>
-          </>
-        ),
-        buttons: [
-          {
-            content: "Apply to translate",
-            href: APPLICATION_URL,
-          },
-        ],
-      }}
+      heroSection={<ContentHero {...heroProps} />}
     >
       {children}
     </ContentLayout>

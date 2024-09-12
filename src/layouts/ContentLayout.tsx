@@ -1,7 +1,6 @@
 import type { HTMLAttributes } from "react"
 
 import FeedbackCard from "@/components/FeedbackCard"
-import { ContentHero, type ContentHeroProps } from "@/components/Hero"
 import LeftNavBar, { LeftNavBarProps } from "@/components/LeftNavBar"
 import {
   ContentContainer,
@@ -13,7 +12,7 @@ import {
 type ContentLayoutProps = HTMLAttributes<HTMLDivElement> &
   Pick<LeftNavBarProps, "dropdownLinks" | "tocItems" | "maxDepth"> & {
     children: React.ReactNode
-    heroProps: ContentHeroProps
+    heroSection: React.ReactNode
   }
 
 export const ContentLayout = ({
@@ -21,12 +20,12 @@ export const ContentLayout = ({
   dropdownLinks,
   tocItems,
   maxDepth,
-  heroProps,
+  heroSection,
   ...props
 }: ContentLayoutProps) => {
   return (
     <div {...props}>
-      <ContentHero {...heroProps} />
+      {heroSection}
 
       <Page>
         <LeftNavBar

@@ -5,6 +5,7 @@ import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
 
 import BeaconChainActions from "@/components/BeaconChainActions"
 import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
+import { ContentHero } from "@/components/Hero"
 import MergeArticleList from "@/components/MergeArticleList"
 import MergeInfographic from "@/components/MergeInfographic"
 import { List, ListItem } from "@/components/ui/list"
@@ -66,31 +67,33 @@ export const UpgradeLayout = ({
     ],
   }
 
+  const heroProps = {
+    ...frontmatter,
+    breadcrumbs: { slug, startDepth: 1 },
+    heroImg: frontmatter.image,
+    description: (
+      <>
+        <div>
+          <List>
+            {summaryPoints.map((point, idx) => (
+              <ListItem key={idx}>{point}</ListItem>
+            ))}
+          </List>
+        </div>
+
+        <p className="border-t pt-4 italic">
+          {t("common:page-last-updated")}: {lastEditLocaleTimestamp}
+        </p>
+      </>
+    ),
+  }
+
   return (
     <ContentLayout
       dir={contentNotTranslated ? "ltr" : "unset"}
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
-      heroProps={{
-        ...frontmatter,
-        breadcrumbs: { slug, startDepth: 1 },
-        heroImg: frontmatter.image,
-        description: (
-          <>
-            <div>
-              <List>
-                {summaryPoints.map((point, idx) => (
-                  <ListItem key={idx}>{point}</ListItem>
-                ))}
-              </List>
-            </div>
-
-            <p className="border-t pt-4 italic">
-              {t("common:page-last-updated")}: {lastEditLocaleTimestamp}
-            </p>
-          </>
-        ),
-      }}
+      heroSection={<ContentHero {...heroProps} />}
     >
       {children}
     </ContentLayout>

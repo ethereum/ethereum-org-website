@@ -5,6 +5,7 @@ import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
 // import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
+import { ContentHero } from "@/components/Hero"
 import { List, ListItem } from "@/components/ui/list"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
@@ -104,26 +105,28 @@ export const UseCasesLayout = ({
     ],
   }
 
+  const heroProps = {
+    ...frontmatter,
+    breadcrumbs: { slug, startDepth: 1 },
+    heroImg: frontmatter.image,
+    description: (
+      <div>
+        <List>
+          {summaryPoints.map((point, idx) => (
+            <ListItem key={idx}>{point}</ListItem>
+          ))}
+        </List>
+      </div>
+    ),
+  }
+
   return (
     <ContentLayout
       dir={contentNotTranslated ? "ltr" : "unset"}
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
       maxDepth={frontmatter.sidebarDepth}
-      heroProps={{
-        ...frontmatter,
-        breadcrumbs: { slug, startDepth: 1 },
-        heroImg: frontmatter.image,
-        description: (
-          <div>
-            <List>
-              {summaryPoints.map((point, idx) => (
-                <ListItem key={idx}>{point}</ListItem>
-              ))}
-            </List>
-          </div>
-        ),
-      }}
+      heroSection={<ContentHero {...heroProps} />}
     >
       {/* TODO: Add back in when we figure out how to handle this case inside the ContentLayout */}
       {/* <BannerNotification shouldShow className="z-sticky max-lg:hidden">

@@ -13,6 +13,7 @@ import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import DocLink from "@/components/DocLink"
+import { ContentHero } from "@/components/Hero"
 import {
   Heading1 as MdHeading1,
   Heading4 as MdHeading4,
@@ -207,28 +208,30 @@ export const StakingLayout = ({
     ],
   }
 
+  const heroProps = {
+    ...frontmatter,
+    breadcrumbs: { slug, startDepth: 1 },
+    heroImg: frontmatter.image,
+    description: (
+      <>
+        <div>
+          <List>
+            {summaryPoints.map((point, idx) => (
+              <ListItem key={idx}>{point}</ListItem>
+            ))}
+          </List>
+        </div>
+      </>
+    ),
+  }
+
   return (
     <ContentLayout
       dir={contentNotTranslated ? "ltr" : "unset"}
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
       maxDepth={frontmatter.sidebarDepth}
-      heroProps={{
-        ...frontmatter,
-        breadcrumbs: { slug, startDepth: 1 },
-        heroImg: frontmatter.image,
-        description: (
-          <>
-            <div>
-              <List>
-                {summaryPoints.map((point, idx) => (
-                  <ListItem key={idx}>{point}</ListItem>
-                ))}
-              </List>
-            </div>
-          </>
-        ),
-      }}
+      heroSection={<ContentHero {...heroProps} />}
     >
       {children}
       <StakingCommunityCallout my={16} />
