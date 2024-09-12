@@ -144,7 +144,7 @@ const TheInternetIsChanging = () => {
       <div className="mt-19 overflow-hidden max-xl:-mx-4 xl:rounded-2xl">
         <div className="group bg-blue-50 dark:bg-blue-600">
           <div
-            className="flex max-w-full overflow-hidden motion-reduce:justify-center motion-reduce:overflow-auto"
+            className="flex max-w-full overflow-hidden motion-reduce:overflow-auto"
             style={prefersReducedMotion ? {} : fadeEdges}
           >
             {Array(prefersReducedMotion ? 1 : 3)
@@ -152,7 +152,7 @@ const TheInternetIsChanging = () => {
               .map((_, idx) => (
                 <div
                   key={idx}
-                  className="group-hover:animate-pause flex animate-scroll-left items-center space-x-10 p-6 motion-reduce:animate-none"
+                  className="group-hover:animate-pause flex min-w-fit animate-scroll-left items-center space-x-10 p-6 motion-reduce:w-full motion-reduce:animate-none motion-reduce:justify-center"
                 >
                   {items.map(({ newLabel: label, explanation }) => (
                     <Item
@@ -174,7 +174,7 @@ const TheInternetIsChanging = () => {
 
         <div className="group bg-gray-50 dark:bg-gray-800">
           <div
-            className="flex max-w-full overflow-hidden motion-reduce:justify-center motion-reduce:overflow-auto"
+            className="flex max-w-full overflow-hidden motion-reduce:overflow-auto"
             style={prefersReducedMotion ? {} : fadeEdges}
           >
             {Array(prefersReducedMotion ? 1 : 3)
@@ -182,7 +182,7 @@ const TheInternetIsChanging = () => {
               .map((_, idx) => (
                 <div
                   key={idx}
-                  className="group-hover:animate-pause flex animate-scroll-right items-center space-x-10 p-6 motion-reduce:animate-none"
+                  className="group-hover:animate-pause flex animate-scroll-right items-center space-x-10 p-6 motion-reduce:w-full motion-reduce:animate-none motion-reduce:justify-center"
                 >
                   {items.map(({ oldLabel: label, explanation }) => (
                     <Item
