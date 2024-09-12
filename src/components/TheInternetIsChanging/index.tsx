@@ -80,6 +80,7 @@ const items: Item[] = [
 type ItemProps = React.HTMLAttributes<HTMLButtonElement> & {
   explanation: string[]
   separatorClass: string
+  icon?: React.ReactNode
 }
 
 const Item = ({
@@ -87,23 +88,28 @@ const Item = ({
   explanation,
   className,
   separatorClass,
+  icon,
 }: ItemProps) => (
   <>
     <Tooltip>
       <TooltipTrigger>
         <button
           className={cn(
-            "flex h-fit items-center gap-x-1 text-nowrap rounded-full px-4 py-1 font-bold uppercase",
+            "flex h-fit items-center gap-x-1 text-nowrap rounded-full px-4 py-1 text-xs font-bold uppercase md:text-md",
             className
           )}
         >
+          {icon}
           {children}
         </button>
       </TooltipTrigger>
       <Portal>
-        <TooltipContent className="max-w-sm space-y-2">
+        <TooltipContent className="max-w-sm space-y-2 rounded-lg border-body-light text-sm md:text-md">
+          <h3 className="text-md uppercase text-body-medium">{children}</h3>
           {explanation.map((line) => (
-            <p key={line}>{line}</p>
+            <p key={line} className="text-sm">
+              {line}
+            </p>
           ))}
         </TooltipContent>
       </Portal>
@@ -135,7 +141,7 @@ const TheInternetIsChanging = () => {
           {t("page-index:page-index-values-description")}
         </p>
       </SectionContent>
-      <div className="mt-19 overflow-hidden max-lg:-mx-4 lg:rounded-2xl">
+      <div className="mt-19 overflow-hidden max-xl:-mx-4 xl:rounded-2xl">
         <div className="group bg-blue-50 dark:bg-blue-600">
           <div
             className="flex max-w-full overflow-hidden motion-reduce:justify-center motion-reduce:overflow-auto"
@@ -154,8 +160,10 @@ const TheInternetIsChanging = () => {
                       explanation={explanation}
                       separatorClass="bg-accent-a"
                       className="group/item bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-700"
+                      icon={
+                        <FaCheck className="me-1 text-success group-hover/item:text-white" />
+                      }
                     >
-                      <FaCheck className="text-success group-hover/item:text-white" />{" "}
                       {label}
                     </Item>
                   ))}
