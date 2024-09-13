@@ -49,6 +49,8 @@
       rgba(145, 234, 228, 0.2) 100%
     );
     --search-background: var(--background);
+    --off-background: #f7f7f7;
+    --table-background-hover: #f2f2f2;
   }
 
   .dark {
@@ -83,6 +85,8 @@
       rgba(134, 253, 232, 0.08) 100%
     );
     --search-background: #4c4c4c;
+    --off-background: #181818;
+    --table-background-hover: rgba(255,115,36,.013);
   }
 }
 

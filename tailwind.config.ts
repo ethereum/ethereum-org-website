@@ -217,6 +217,8 @@ const config = {
             "active-background": "hsla(var(--menu-4-active-background))",
           },
         },
+        "off-background": "var(--off-background)",
+        "table-background-hover": "var(--table-background-hover)",
       },
 
       /** @deprecated */
