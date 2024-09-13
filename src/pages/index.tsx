@@ -329,12 +329,13 @@ const HomePage = ({
                     </SvgButtonLink>
                   ))}
                 </div>
-                <div className="flex justify-center py-8 md:justify-start">
+                <div className="flex py-8 sm:justify-center">
                   <ButtonLink
                     href="/learn/"
                     size="lg"
                     variant="outline"
                     isSecondary
+                    className="max-sm:self-start"
                   >
                     {t("page-index:page-index-popular-topics-action")}{" "}
                     <ChevronNext />
@@ -632,7 +633,7 @@ const HomePage = ({
               )}
             </div>
           </div>
-          <div className="flex justify-center py-8 md:justify-start">
+          <div className="flex justify-start py-8">
             <ButtonLink href="/community/events/" size="lg" className="mx-auto">
               {t("page-index:page-index-events-action")} <ChevronNext />
             </ButtonLink>
