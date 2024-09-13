@@ -177,7 +177,7 @@ export const UseCasesLayout = ({
       width="full"
       dir={contentNotTranslated ? "ltr" : "unset"}
     >
-      <BannerNotification shouldShow zIndex="sticky" hideBelow={lgBp}>
+      <BannerNotification shouldShow className="z-sticky max-lg:hidden">
         <Emoji text=":pencil:" className="me-4 shrink-0 text-2xl" />
         <Text m={0}>
           {t("template-usecase:template-usecase-banner")}{" "}
