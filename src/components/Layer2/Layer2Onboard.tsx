@@ -13,6 +13,7 @@ import type { ChildOnlyProp } from "@/lib/types"
 
 import { Image } from "@/components/Image"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 // Data
@@ -213,7 +214,12 @@ const Layer2Onboard = ({
   }
 
   return (
-    <Box bg="layer2Gradient" borderRadius="sm" p={10}>
+    <div
+      className={cn(
+        "rounded-sm p-10",
+        "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+      )}
+    >
       <Box textAlign="center" maxW="75ch" m="auto">
         <OldHeading
           fontSize={{ base: "2xl", md: "2rem" }}
@@ -347,7 +353,7 @@ const Layer2Onboard = ({
           />
         </Box>
       </SimpleGrid>
-    </Box>
+    </div>
   )
 }
 

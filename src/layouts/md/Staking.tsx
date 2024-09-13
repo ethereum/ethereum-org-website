@@ -224,7 +224,7 @@ export const StakingLayout = ({
       heroSection={<ContentHero {...heroProps} />}
     >
       {children}
-      <StakingCommunityCallout my={16} />
+      <StakingCommunityCallout className="my-16" />
     </ContentLayout>
   )
 }
