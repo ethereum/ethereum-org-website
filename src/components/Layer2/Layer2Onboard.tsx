@@ -27,7 +27,7 @@ import { ButtonLink } from "../Buttons"
 import InlineLink from "../Link"
 import OldHeading from "../OldHeading"
 import Text from "../OldText"
-import Select, { SelectOnChange } from "../Select"
+import Select, { SelectOnChange } from "../ui/Select"
 
 const Flex50 = (props: ChildOnlyProp) => (
   <Box flex={{ base: "100%", md: "50%" }} {...props} />

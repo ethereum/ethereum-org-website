@@ -1,20 +1,19 @@
 import { lazy, Suspense, useRef } from "react"
 import { useTranslation } from "next-i18next"
-import { Box, Flex, Hide, Show } from "@chakra-ui/react"
 
 import { EthHomeIcon } from "@/components/icons"
-import { BaseLink } from "@/components/Link"
 import Search from "@/components/Search"
 
 import { isDesktop } from "@/lib/utils/isDesktop"
 
-import { NAV_PY } from "@/lib/constants"
+import SearchButton from "../Search/SearchButton"
+import SearchInputButton from "../Search/SearchInputButton"
+import { BaseLink } from "../ui/Link"
 
 import DesktopNavMenu from "./Desktop"
 import Menu from "./Menu"
 import { useNav } from "./useNav"
 
-import { useDisclosure } from "@/hooks/useDisclosure"
 import { useIsClient } from "@/hooks/useIsClient"
 
 const MobileNavMenu = lazy(() => import("./Mobile"))
@@ -23,79 +22,66 @@ const MobileNavMenu = lazy(() => import("./Mobile"))
 const Nav = () => {
   const { toggleColorMode, linkSections } = useNav()
   const { t } = useTranslation("common")
-  const searchModalDisclosure = useDisclosure()
   const navWrapperRef = useRef(null)
   const isClient = useIsClient()
   const isDesktopFlag = isDesktop()
 
   return (
-    <Box position="sticky" top={0} zIndex="sticky" width="full">
-      <Flex
+    <div className="sticky top-0 z-sticky w-full">
+      <nav
         ref={navWrapperRef}
-        as="nav"
+        className="flex h-19 justify-center border-b border-b-disabled bg-background p-4 xl:px-8"
         aria-label={t("nav-primary")}
-        bg="background.base"
-        borderBottom="1px"
-        borderColor="rgba(0, 0, 0, 0.1)"
-        height="4.75rem"
-        justifyContent="center"
-        py={NAV_PY}
-        px={{ base: 4, xl: 8 }}
       >
-        <Flex
-          alignItems={{ base: "center", md: "normal" }}
-          justifyContent={{ base: "space-between", md: "normal" }}
-          width="full"
-          maxW="container.2xl"
-        >
+        <div className="flex w-full max-w-screen-2xl items-center justify-between md:items-stretch md:justify-normal">
           <BaseLink
             href="/"
             aria-label={t("home")}
-            display="inline-flex"
-            alignItems="center"
-            textDecor="none"
+            className="inline-flex items-center no-underline"
           >
-            <EthHomeIcon opacity={0.85} _hover={{ opacity: 1 }} />
+            <EthHomeIcon className="h-[35px] w-[22px] opacity-85 hover:opacity-100" />
           </BaseLink>
           {/* Desktop */}
-          <Flex
-            w="full"
-            justifyContent={{ base: "flex-end", md: "space-between" }}
-            ms={{ base: 3, xl: 8 }}
-          >
+          <div className="ms-3 flex w-full justify-end md:justify-between xl:ms-8">
             {/* avoid rendering desktop Menu version on mobile */}
-
             {isClient && isDesktopFlag ? (
               <Menu className="hidden md:block" sections={linkSections} />
             ) : (
-              <Box />
+              <div />
             )}
 
-            <Flex alignItems="center" /*  justifyContent="space-between" */>
-              {/* Desktop */}
-              {/* avoid rendering desktop menu version on mobile */}
-              <Show above="md">
-                <Search {...searchModalDisclosure} />
-                <DesktopNavMenu toggleColorMode={toggleColorMode} />
-              </Show>
+            <Search>
+              {({ onOpen }) => (
+                <div className="flex items-center">
+                  {/* Desktop */}
+                  <div className="hidden md:flex">
+                    <SearchButton className="xl:hidden" onClick={onOpen} />
+                    <SearchInputButton
+                      className="hidden xl:flex"
+                      onClick={onOpen}
+                    />
+                    <DesktopNavMenu toggleColorMode={toggleColorMode} />
+                  </div>
 
-              <Hide above="md">
-                {/* Mobile */}
-                {/* use Suspense to display the Search & the Menu at the same time */}
-                <Suspense>
-                  <Search {...searchModalDisclosure} />
-                  <MobileNavMenu
-                    toggleColorMode={toggleColorMode}
-                    linkSections={linkSections}
-                    toggleSearch={searchModalDisclosure.onOpen}
-                  />
-                </Suspense>
-              </Hide>
-            </Flex>
-          </Flex>
-        </Flex>
-      </Flex>
-    </Box>
+                  <div className="flex md:hidden">
+                    {/* Mobile */}
+                    {/* use Suspense to display the Search & the Menu at the same time */}
+                    <Suspense>
+                      <SearchButton onClick={onOpen} />
+                      <MobileNavMenu
+                        toggleColorMode={toggleColorMode}
+                        linkSections={linkSections}
+                        toggleSearch={onOpen}
+                      />
+                    </Suspense>
+                  </div>
+                </div>
+              )}
+            </Search>
+          </div>
+        </div>
+      </nav>
+    </div>
   )
 }
 
