@@ -5,7 +5,7 @@ import type { ChildOnlyProp, Lang } from "@/lib/types"
 
 import CardList from "@/components/CardList"
 import Emoji from "@/components/Emoji"
-import Select from "@/components/Select"
+import Select from "@/components/ui/Select"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
 

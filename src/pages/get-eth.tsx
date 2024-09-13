@@ -365,21 +365,20 @@ const GetEthPage = ({
 
       <Divider className="mx-auto my-16 md:my-32" />
 
-      <div className="mb-20 md:mb-40">
-        <CalloutBanner
-          titleKey="page-get-eth:page-get-eth-use-your-eth"
-          descriptionKey="page-get-eth:page-get-eth-use-your-eth-dapps"
-          image={dapps}
-          alt={t("page-index:page-index-sections-individuals-image-alt")}
-          imageWidth={600}
-        >
-          <div>
-            <ButtonLink href="/dapps/">
-              {t("page-get-eth-checkout-dapps-btn")}
-            </ButtonLink>
-          </div>
-        </CalloutBanner>
-      </div>
+      <CalloutBanner
+        className="mx-4 mb-40 mt-24"
+        titleKey="page-get-eth:page-get-eth-use-your-eth"
+        descriptionKey="page-get-eth:page-get-eth-use-your-eth-dapps"
+        image={dapps}
+        alt={t("page-index:page-index-sections-individuals-image-alt")}
+        imageWidth={600}
+      >
+        <div>
+          <ButtonLink href="/dapps/">
+            {t("page-get-eth-checkout-dapps-btn")}
+          </ButtonLink>
+        </div>
+      </CalloutBanner>
 
       <FeedbackCard />
     </MainArticle>

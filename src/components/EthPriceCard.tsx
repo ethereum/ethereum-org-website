@@ -6,10 +6,11 @@ import { MdInfoOutline } from "react-icons/md"
 import type { LoadingState } from "@/lib/types"
 
 import Tooltip from "@/components/Tooltip"
+import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 
-import InlineLink from "./ui/Link"
+import { Flex } from "./ui/flex"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
@@ -25,15 +26,10 @@ type EthPriceState = {
   percentChangeUSD: number
 }
 
-export type EthPriceCardProps = {
-  isLeftAlign?: boolean
-  className?: string
-}
-
 const EthPriceCard = ({
-  isLeftAlign = false,
   className,
-}: EthPriceCardProps) => {
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => {
   const { locale } = useRouter()
   const { t } = useTranslation()
   const [state, setState] = useState<LoadingState<EthPriceState>>({
@@ -108,62 +104,58 @@ const EthPriceCard = ({
   )
 
   return (
-    <div
+    <Flex
       className={cn(
-        "flex max-h-[192px] w-full max-w-[420px] flex-col justify-between rounded border border-solid p-6",
-        isLeftAlign ? "items-start" : "items-center",
+        "max-h-48 w-full max-w-[420px] flex-col items-center justify-between rounded border p-6",
         isNegativeChange
-          ? "border-body-light dark:border-error"
-          : "border-body-light dark:border-success",
-        isNegativeChange
-          ? "bg-gradient-to-b from-error-light to-transparent dark:bg-none"
-          : "bg-gradient-to-t from-success-light to-transparent dark:bg-none",
+          ? "bg-gradient-to-b from-error/10 dark:border-error/50"
+          : "bg-gradient-to-t from-success/20 dark:border-success/50",
         className
       )}
+      {...props}
     >
-      <h4 className="text-sm font-medium uppercase tracking-wider text-body-medium">
+      <h4 className="m-0 flex items-center text-sm font-medium uppercase leading-xs tracking-wider">
         {t("eth-current-price")}
         <Tooltip content={tooltipContent}>
-          <span className="ms-2 inline-block">
-            <MdInfoOutline className="h-4 w-4" />
-          </span>
+          <MdInfoOutline className="ms-2 size-[14px]" />
         </Tooltip>
       </h4>
 
       <div
         className={cn(
-          hasError ? "my-4" : "my-0",
-          hasError ? "text-md" : "text-5xl",
-          hasError ? "text-error" : "text-body"
+          "text-5xl leading-xs",
+          hasError && "my-4 text-md text-error"
         )}
       >
         {price}
       </div>
-      <div
-        className={cn(
-          "flex min-h-[33px] w-full flex-row items-center gap-4",
-          isLeftAlign ? "justify-start" : "justify-center"
-        )}
-      >
-        <div>
+
+      {/* min-h-[33px] prevents jump when price loads */}
+      <Flex className="min-h-[33px] w-full items-center justify-center">
+        <div
+          className={cn(
+            "me-4 text-2xl leading-xs",
+            isNegativeChange ? "text-error" : "text-success"
+          )}
+        >
           <span
             className={cn(
-              "text-2xl after:inline-block",
-              isNegativeChange ? "text-error" : "text-success",
               isNegativeChange
                 ? "after:content-['↘']"
                 : "after:content-['↗']",
-              isRtl ? "transform-[scaleX(-1)]" : ""
+              "after:inline-block",
+              /* Cannot string-interpolate 'after:', using isRtl instead */
+              isRtl ? "after:-scale-x-100" : ""
             )}
           >
             {change}
           </span>
         </div>
-        <div className="text-sm uppercase text-body-medium">
+        <div className="text-sm uppercase leading-xs tracking-wider text-body-medium">
           ({t("last-24-hrs")})
         </div>
-      </div>
-    </div>
+      </Flex>
+    </Flex>
   )
 }
 

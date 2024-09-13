@@ -12,7 +12,7 @@ import { useTranslation } from "next-i18next"
 // import squarelink from "@/public/images/wallets/squarelink.png"
 // import trust from "@/public/images/wallets/trust.png"
 import type { ImageProps } from "@/components/Image"
-import { SelectOnChange } from "@/components/Select"
+import { SelectOnChange } from "@/components/ui/Select"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
