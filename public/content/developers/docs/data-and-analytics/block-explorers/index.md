@@ -26,6 +26,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Rantom](https://rantom.app/)
+- [Txain](https://www.txain.com/)
 
 ## Open source tools {#open-source-tools}
 
@@ -245,6 +246,7 @@ The consensus layer top-level data includes the following:
 - [Ethplorer](https://ethplorer.io/) - a block explorer with a focus on tokens for the Ethereum Mainnet and the Kovan testnet
 - [Rantom](https://rantom.app/) - A user-friendly open-source DeFi & NFT transaction viewer for detailed insights
 - [Ethernow](https://www.ethernow.xyz/) - a real-time transaction explorer that enables you to see the Ethereum Mainnet pre-chain layer
+- [Txain](https://www.txain.com/) - a lightning-fast, real-time explorer offering detailed insights for Ethereum Mainnet and Sepolia Testnet.
 
 ## Further reading {#further-reading}
 
