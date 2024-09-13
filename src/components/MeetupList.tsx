@@ -71,7 +71,6 @@ const MeetupList = () => {
           <BaseLink
             href={meetup.link}
             hideArrow
-            // TODO: create custom class text-decoration-none
             className={cn(
               "group mb-[0.25px] flex w-full justify-between p-4 text-current no-underline",
               "hover:rounded hover:bg-table-background-hover hover:text-current hover:no-underline hover:shadow-[0_0_1px] hover:shadow-primary",
@@ -82,10 +81,7 @@ const MeetupList = () => {
             <Flex className="me-4 flex-[1_1_75%]">
               <div className="me-4 opacity-40">{idx + 1}</div>
               <div>
-                <p
-                  // TODO: create custom class text-decoration-none
-                  className="no-underline group-hover:text-primary-hover group-hover:underline"
-                >
+                <p className="no-underline group-hover:text-primary-hover group-hover:underline">
                   {meetup.title}
                 </p>
               </div>
