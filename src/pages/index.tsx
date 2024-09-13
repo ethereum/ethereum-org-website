@@ -73,6 +73,7 @@ import {
   AccordionTrigger,
 } from "../../tailwind/ui/accordion"
 
+import { useClipboard } from "@/hooks/useClipboard"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -189,6 +190,8 @@ const HomePage = ({
     joinActions,
     bentoItems,
   } = useHome()
+
+  const { onCopy, hasCopied } = useClipboard()
 
   return (
     <MainArticle className="flex w-full flex-col items-center" dir={dir}>
@@ -411,7 +414,7 @@ const HomePage = ({
                 {/* Mobile */}
                 <Accordion type="single" collapsible className="md:hidden">
                   {codeExamples.map(
-                    ({ title, description, code, codeLanguage, clipboard }) => (
+                    ({ title, description, code, codeLanguage }) => (
                       <AccordionItem
                         key={title}
                         value={title}
@@ -438,10 +441,10 @@ const HomePage = ({
                               {code}
                             </Codeblock>
                             <Button
-                              onClick={clipboard.onCopy}
+                              onClick={() => onCopy(code)}
                               className="absolute end-4 top-24"
                             >
-                              {clipboard.hasCopied ? <MdCheck /> : <IoMdCopy />}
+                              {hasCopied ? <MdCheck /> : <IoMdCopy />}
                             </Button>
                           </Suspense>
                         </AccordionContent>
