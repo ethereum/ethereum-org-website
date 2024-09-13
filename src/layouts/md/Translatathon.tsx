@@ -1,12 +1,10 @@
-import { Box, Flex, Grid, Text } from "@chakra-ui/react"
-
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, SharedFrontmatter } from "@/lib/interfaces"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Card from "@/components/Card"
 import { ContentHero, ContentHeroProps } from "@/components/Hero"
-import { Image } from "@/components/Image"
+import { TwImage as Image } from "@/components/Image"
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
 import { APPLICATION_URL } from "@/components/Translatathon/constants"
 import { DatesAndTimeline } from "@/components/Translatathon/DatesAndTimeline"
@@ -16,6 +14,7 @@ import { TranslatathonCalendar } from "@/components/Translatathon/TranslatathonC
 import { TranslatathonInANutshell } from "@/components/Translatathon/TranslatathonInANutshell"
 import TranslatathonPrizes from "@/components/Translatathon/TranslatathonPrizes"
 import { TranslationHubCallout } from "@/components/Translatathon/TranslationHubCallout"
+import { Flex } from "@/components/ui/flex"
 
 import { ContentLayout } from "../ContentLayout"
 
@@ -25,10 +24,10 @@ import robotImage from "@/public/images/wallet.png"
 
 const ContentSplit = ({ children }) => {
   return (
-    <Flex w="full" direction={{ base: "column", md: "row" }}>
-      <Box>{children}</Box>
-      <Flex maxHeight="300px">
-        <Image src={robotImage} alt="robot" style={{ objectFit: "contain" }} />
+    <Flex className="w-full flex-col md:flex-row">
+      <div>{children}</div>
+      <Flex className="max-h-[300px]">
+        <Image src={robotImage} alt="robot" className="object-contain" />
       </Flex>
     </Flex>
   )
@@ -36,69 +35,39 @@ const ContentSplit = ({ children }) => {
 
 const TwoColumnContent = (props: ChildOnlyProp) => (
   <Flex
-    w="full"
-    direction={{ base: "column", md: "row" }}
-    align="stretch"
-    me={{ lg: 8 }}
-    mt={8}
-    gap={8}
+    className="mt-8 w-full flex-col items-stretch gap-8 md:flex-row lg:me-8"
     {...props}
   />
 )
 
 const WhyWeDoItColumn = (props: ChildOnlyProp) => (
-  <Flex
-    w="full"
-    m={{ base: "auto 0", lg: 0 }}
-    me={{ lg: 8 }}
-    direction="column"
-  >
-    <Box mx="auto" height="272">
-      <Image src={WhyWeDoItImage} alt="" height="272" />
-    </Box>
-    <Box>{props.children}</Box>
+  <Flex className="my-auto w-full flex-col lg:m-0 lg:me-8">
+    <div className="mx-auto h-[272px]">
+      <Image src={WhyWeDoItImage} alt="" className="h-[272px]" />
+    </div>
+    <div>{props.children}</div>
   </Flex>
 )
 
 const HowDoesItWorkColumn = (props: ChildOnlyProp) => (
-  <Flex
-    w="full"
-    m={{ base: "auto 0", lg: 0 }}
-    ms={{ lg: 8 }}
-    direction="column"
-  >
-    <Box mx="auto" height="272">
-      <Image src={HowDoesItWorkImage} alt="" maxHeight="272" />
-    </Box>
-    <Box>{props.children}</Box>
+  <Flex className="my-auto w-full flex-col lg:m-0 lg:ms-8">
+    <div className="mx-auto h-[272px]">
+      <Image src={HowDoesItWorkImage} alt="" className="h-[272px]" />
+    </div>
+    <div>{props.children}</div>
   </Flex>
 )
 
 const CardContent = (props: ChildOnlyProp) => (
-  <Flex
-    w="full"
-    m={{ base: "auto 0", lg: 0 }}
-    borderRadius={4}
-    border="1px solid"
-    borderColor="body.light"
-    direction="column"
-    px={8}
-    pb={8}
-    flex="1"
-  >
+  <Flex className="my-auto w-full flex-1 flex-col rounded border border-body-light px-8 pb-8 lg:m-0">
     {props.children}
   </Flex>
 )
 
 const CardContainer = (props: ChildOnlyProp) => (
-  <Grid
-    templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
-    gap={8}
-    mb={20}
-    mt={{ base: 8, lg: 0 }}
-  >
+  <div className="mb-20 mt-8 grid grid-cols-[repeat(auto-fill,_minmax(100%,_280px),_1fr)] gap-8 lg:mt-0">
     {props.children}
-  </Grid>
+  </div>
 )
 
 const EmojiCard = ({ emoji, title, description }) => (
@@ -192,12 +161,12 @@ export const TranslatathonLayout = ({
     blurDataURL: "",
     description: (
       <>
-        <Text>Welcome to the ethereum.org Translatathon!</Text>
-        <Text>
+        <p>Welcome to the ethereum.org Translatathon!</p>
+        <p>
           The translatathon is a competitive hackathon-style event where you can
           compete for prizes by translating ethereum.org content into different
           languages.
-        </Text>
+        </p>
       </>
     ),
     buttons: [

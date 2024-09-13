@@ -1,5 +1,3 @@
-import { SimpleGrid } from "@chakra-ui/react"
-
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 
@@ -14,7 +12,7 @@ import { ContentLayout } from "../ContentLayout"
 import RoadmapHubHeroImage from "@/public/images/heroes/roadmap-hub-hero.jpg"
 
 const CardGrid = (props: ChildOnlyProp) => (
-  <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
+  <div className="grid grid-cols-1 gap-8 md:grid-cols-2" {...props} />
 )
 
 // Roadmap layout components

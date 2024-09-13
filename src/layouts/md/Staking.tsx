@@ -1,6 +1,5 @@
 import { HTMLAttributes } from "react"
 import { useTranslation } from "next-i18next"
-import { Box, type BoxProps, Grid, SimpleGrid, Text } from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
@@ -35,85 +34,28 @@ const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading4 className="font-semibold max-md:text-md" {...props} />
 )
 
-const Paragraph = (props: ChildOnlyProp) => (
-  <Text fontSize="md" mt={8} mb={4} color="text300" {...props} />
-)
-
-const Pre = (props: ChildOnlyProp) => (
-  <Text
-    as="pre"
-    maxW="full"
-    overflowX="scroll"
-    bgColor="preBackground"
-    borderRadius="base"
-    p={4}
-    border="1px solid"
-    borderColor="preBorder"
-    whiteSpace="pre-wrap"
-    {...props}
-  />
-)
-
 export const InfoGrid = (props: ChildOnlyProp) => (
-  <Grid
-    templateColumns="repeat(auto-fill, minmax(min(100%, 340px), 1fr))"
-    gap={8}
-    sx={{
-      "& > div": {
-        h: "fit-content",
-        m: 0,
-        "&:hover": {
-          transition: "0.1s",
-          transform: "scale(1.01)",
-          svg: {
-            transition: "0.1s",
-            transform: "scale(1.1)",
-          },
-        },
-      },
-    }}
+  <div
+    className="grid grid-cols-[repeat(auto-fill,_minmax(100%,_340px),_1fr)] gap-8"
     {...props}
   />
 )
 
 const CardGrid = (props: ChildOnlyProp) => (
-  <SimpleGrid
-    columns={{ base: 1, md: 3 }}
-    spacing={8}
-    m={{ base: "auto", md: 0 }}
-    sx={{
-      h3: {
-        mt: 0,
-      },
-    }}
+  <div
+    className="m-auto grid grid-cols-1 gap-8 md:m-0 md:grid-cols-3 [&_h3]:mt-0"
     {...props}
   />
 )
 
-const TableContainer = (props: BoxProps) => (
-  <Box
-    w="fit-content"
-    mx={["auto", null, null, 0]}
-    sx={{
-      table: {
-        borderCollapse: "separate",
-        borderSpacing: "1rem 0",
-      },
-      th: {
-        whiteSpace: "break-spaces !important",
-        textAlign: "center",
-      },
-    }}
-    {...props}
-  />
+const TableContainer = (props: ChildOnlyProp) => (
+  <div className="mx-auto w-fit lg:mx-0" {...props} />
 )
 
 // Staking layout components
 export const stakingComponents = {
   h1: Heading1,
   h4: Heading4,
-  p: Paragraph,
-  pre: Pre,
   CardGrid,
   DocLink,
   InfoGrid,
