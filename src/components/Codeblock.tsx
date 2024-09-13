@@ -251,7 +251,7 @@ const Codeblock = ({
     /* Context: https://github.com/ethereum/ethereum-org-website/issues/6202 */
     <div className={cn("relative", className)} dir="ltr">
       <div
-        className="mb-4 overflow-scroll rounded"
+        className="overflow-scroll rounded"
         style={{
           maxHeight: isCollapsed
             ? `calc((1.2rem * ${LINES_BEFORE_COLLAPSABLE}) + 4.185rem)`

@@ -431,22 +431,24 @@ const HomePage = ({
                             </p>
                           </div>
                         </AccordionTrigger>
-                        <AccordionContent className="max-h-[50vh] overflow-auto border-t">
+                        <AccordionContent className="relative border-t">
                           <Suspense fallback={<SkeletonLines noOfLines={16} />}>
-                            <Codeblock
-                              codeLanguage={codeLanguage}
-                              allowCollapse={false}
-                              className="[&>div]:-m-2 [&>div]:rounded-none [&_*]:!text-xs [&_pre]:p-4"
-                              fromHomepage
-                            >
-                              {code}
-                            </Codeblock>
-                            <Button
-                              onClick={() => onCopy(code)}
-                              className="absolute end-4 top-24"
-                            >
-                              {hasCopied ? <MdCheck /> : <IoMdCopy />}
-                            </Button>
+                            <div className="-m-2 max-h-[50vh] overflow-auto">
+                              <Codeblock
+                                codeLanguage={codeLanguage}
+                                allowCollapse={false}
+                                className="[&>div]:-m-//2 [&>div]:rounded-none [&_*]:!text-xs [&_pre]:p-4"
+                                fromHomepage
+                              >
+                                {code}
+                              </Codeblock>
+                              <Button
+                                onClick={() => onCopy(code)}
+                                className="absolute end-4 top-4"
+                              >
+                                {hasCopied ? <MdCheck /> : <IoMdCopy />}
+                              </Button>
+                            </div>
                           </Suspense>
                         </AccordionContent>
                       </AccordionItem>
