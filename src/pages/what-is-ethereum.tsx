@@ -83,7 +83,14 @@ const Hero = (props: ChildOnlyProp) => (
 )
 
 const Summary = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn("rounded bg-main-gradient p-4", className)} {...rest} />
+  <div
+    className={cn(
+      "rounded p-4",
+      "border-accent-c/10 bg-gradient-to-t from-accent-c/10 from-20% to-accent-c/5 to-60% dark:from-accent-c/20 dark:to-accent-c/10",
+      className
+    )}
+    {...rest}
+  />
 )
 
 const Content = (props: ChildOnlyProp) => (

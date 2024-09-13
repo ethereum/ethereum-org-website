@@ -467,9 +467,7 @@ const LearningToolsPage = () => {
         </StackContainer>
         <ContentBox>
           <CalloutBanner
-            mx={4}
-            mt={24}
-            mb={40}
+            className="mx-4 mb-40 mt-24"
             image={EnterpriseEth}
             alt={t(
               "page-developers-learning-tools:page-index-tout-enterprise-image-alt"
