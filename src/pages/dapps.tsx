@@ -1584,9 +1584,7 @@ const DappsPage = () => {
               </Text>
             </Box>
             <CalloutBanner
-              mt={32}
-              mx={0}
-              mb={{ base: 0, lg: 16 }}
+              className="m-0 mx-0 mt-32 lg:mb-16"
               titleKey={"page-dapps:page-dapps-wallet-callout-title"}
               descriptionKey={
                 "page-dapps:page-dapps-wallet-callout-description"

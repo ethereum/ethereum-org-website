@@ -1,8 +1,8 @@
 import { useTranslation } from "next-i18next"
+import type { HTMLAttributes } from "react"
 import {
   Box,
   type BoxProps,
-  type FlexProps,
   List,
   ListItem,
   Text,
@@ -29,7 +29,9 @@ import UpgradeStatus from "@/components/UpgradeStatus"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 
-const Page = (props: FlexProps) => <MdPage sx={{}} {...props} />
+const Page = (props: HTMLAttributes<HTMLDivElement>) => (
+  <MdPage className="lg:first-of-type:[&_h2]:mt-16" {...props} />
+)
 
 type ContainerProps = Pick<BoxProps, "children" | "dir">
 
