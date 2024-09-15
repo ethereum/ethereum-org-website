@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils/cn"
 const tableVariants = tv({
   slots: {
     table: "w-full",
-    th: "text-start border-b-[1px] border-body text-body normal-case align-bottom p-4",
+    th: "text-start border-b border-body text-body normal-case align-bottom p-4",
     tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
     td: "p-4",
     tbody: "[&_tr]:align-top hover:[&_tr]:bg-background-highlight",
