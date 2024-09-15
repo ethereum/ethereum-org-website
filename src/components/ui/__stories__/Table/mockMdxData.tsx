@@ -1,6 +1,7 @@
 import * as React from "react"
 
-import InlineLink from "../../../../../tailwind/ui/Link"
+import InlineLink from "@/components/ui/Link"
+
 import {
   TableBody,
   TableCell,
