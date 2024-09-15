@@ -11,12 +11,8 @@ import {
 } from "./mockMdxData"
 
 const meta = {
-  title: "Molecules / Display Content / ShadCN Tables",
+  title: "Molecules / Display Content / Tables",
   component: TableComponent,
-  parameters: {
-    // TODO: Remove this when this story file becomes the primary one
-    chromatic: { disableSnapshot: true },
-  },
   decorators: [
     (Story) => (
       <Flex flexDir="column" gap={16} maxW="container.md">
