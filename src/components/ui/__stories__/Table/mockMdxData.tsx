@@ -1,8 +1,13 @@
 import * as React from "react"
 
 import InlineLink from "../../../../../tailwind/ui/Link"
-
-import { TableBody, TableCell, TableHead, TableHeader, TableRow } from "./Table"
+import {
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "../../Table"
 
 /*
  * Note on the Chakra Table components:
