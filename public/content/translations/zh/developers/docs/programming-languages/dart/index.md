@@ -10,9 +10,8 @@ incomplete: true
 ## 教程 {#tutorials}
 
 - [Flutter 和区块链 – Hello World 去中心化应用程序](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/)带你了解所有步骤，内容包括：
-  1.  安装 [Truffle 开发套件](https://www.trufflesuite.com/)
-  2.  使用 [Solidity](https://soliditylang.org/) 编写一个智能合约
-  3.  使用 Dart 编写一个用户界面
+  1.  使用 [Solidity](https://soliditylang.org/) 编写一个智能合约
+  2.  使用 Dart 编写一个用户界面
 - 如果你已经了解基础知识，[使用 Flutter 构建移动去中心化应用程序](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a)的篇幅要短得多，效果可能更好
 - 如果你喜欢通过观看视频来学习，可以观看[构建你的第一个区块链 Flutter 应用程序](https://www.youtube.com/watch?v=3Eeh3pJ6PeA)，时长大约一个小时
 - 如果你不想花这么多时间，你可能喜欢[在以太坊上使用 Flutter 和 Dart 创建去中心化的区块链应用](https://www.youtube.com/watch?v=jaMFEOCq_1s)，时长仅约 20 分钟

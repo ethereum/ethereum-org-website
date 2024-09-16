@@ -27,7 +27,7 @@ Zu guter letzt muss ein Vertrag vor der Bereitstellung kompiliert werden. Lesen 
 
 ### Schritte zur Bereitstellung eines Smart Contracts {#steps-to-deploy}
 
-Die einzelnen Schritte hängen von den verwendeten Tools ab. Ein Beispiel dafür finden Sie in der [Hardhat-Dokumentation über die Bereitstellung Ihrer Verträge](https://hardhat.org/guides/deploying.html) oder in der [Truffle-Dokumentation über Netzwerke und die Bereitstellung von Anwendungen](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment). Das sind zwei der beliebtesten Tools für die Bereitstellung von Smart Contracts, bei denen ein Skript geschrieben werden muss, um die Bereitstellungsschritte durchzuführen.
+Die einzelnen Schritte hängen von den verwendeten Tools ab. Ein Beispiel dafür finden Sie in der [Hardhat-Dokumentation über die Bereitstellung Ihrer Verträge](https://hardhat.org/guides/deploying.html). Das sind zwei der beliebtesten Tools für die Bereitstellung von Smart Contracts, bei denen ein Skript geschrieben werden muss, um die Bereitstellungsschritte durchzuführen.
 
 Sobald Ihr Smart Contract integriert ist, hat er eine Ethereum-Adresse, wie andere [-Konten](/developers/docs/accounts/).
 
@@ -50,12 +50,6 @@ Sobald Ihr Smart Contract integriert ist, hat er eine Ethereum-Adresse, wie ande
 - [Dokumente zur Bereitstellung Ihrer Verträge](https://hardhat.org/guides/deploying.html)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
-
-**Truffle –** **_Entwicklungsumgebung, Test-Framework, Build-Pipeline und weitere Tools_**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [Dokumente über Netzwerke und Anwendungsbereitstellung](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
-- [GitHub](https://github.com/trufflesuite/truffle)
 
 **thirdweb - _Einfache Bereitstellung eines beliebigen Vertrags für eine EVM-kompatible Blockchain mit einem einzigen Befehl_**
 

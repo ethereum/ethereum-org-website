@@ -75,7 +75,6 @@ Julkiset ja yksityiset Ethereum-verkot saattavat tarvita tiettyjä ominaisuuksia
 
 - [Alethio](https://explorer.aleth.io/) _Ethereumin data-analytiikka-alusta_
 - [Treum](https://treum.io/) _tuo läpinäkyvyyttä, jäljitettävyyttä ja vaihdettavuutta toimitusketjuille lohkoketjuteknologiaa hyödyntäen_
-- [Truffle Suite](https://trufflesuite.com) _lohkoketjujen kehityskokoelma (Truffle, Ganache, Drizzle)_
 
 ## Yrityskehitysyhteisö {#enterprise-developer-community}
 

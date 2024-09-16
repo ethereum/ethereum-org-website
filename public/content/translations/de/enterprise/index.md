@@ -68,7 +68,6 @@ Verschiedene Organisationen unternahmen gemeinsame Anstrengungen, um Ethereum un
 - [Ernst & Youngs 'Nightfall'](https://github.com/EYBlockchain/nightfall) _ein Toolkit für private Transaktionen_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _eine Transaktionssignierungsanwendung zur Verwendung mit einem Web3-Anbieter_
 - [Tenderly](https://tenderly.co/) _, eine Datenplattform, die Echtzeit-Analysen, Alarmierung und Überwachung mit Unterstützung für private Netzwerke bereitstellt_
-- [Truffle Suite](https://trufflesuite.com) _Blockchain Development Suite (Truffle, Ganache, Drizzle)_
 
 ### Skalierungslösungen {#scalability-solutions}
 
