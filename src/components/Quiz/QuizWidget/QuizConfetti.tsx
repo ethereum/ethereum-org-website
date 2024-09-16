@@ -2,7 +2,7 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils/cn"
 
-import { StarConfettiIcon } from "../../icons/quiz/StarConfettiIcon"
+import { StarConfettiIcon } from "../../icons/quiz"
 
 export const QuizConfetti = () => {
   const commonClasses = "absolute"

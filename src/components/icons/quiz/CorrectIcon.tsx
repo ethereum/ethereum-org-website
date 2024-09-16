@@ -1,11 +1,9 @@
-import { createIcon } from "@chakra-ui/react"
+import { IconBase, type IconType } from "react-icons/lib"
 
-export const CorrectIcon = createIcon({
-  displayName: "CorrectIcon",
-  viewBox: "0 0 20 16",
-  defaultProps: {
-    width: "20px",
-    height: "16px",
-  },
-  d: "M8 16L0 9.05375L2.75437 7.06313L7.49875 11.4325L16.8531 0L20 2L8 16Z",
-})
+import { cn } from "@/lib/utils/cn"
+
+export const CorrectIcon: IconType = ({ className, ...props }) => (
+  <IconBase viewBox="0 0 20 16" className={cn(className, "h-4 w-5")} {...props}>
+    <path d="M8 16L0 9.05375L2.75437 7.06313L7.49875 11.4325L16.8531 0L20 2L8 16Z" />
+  </IconBase>
+)

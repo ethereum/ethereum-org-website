@@ -1,7 +1,5 @@
-import { IconProps } from "@chakra-ui/react"
-
-export const commonIconDefaultProps: IconProps = {
+export const commonIconDefaultProps = {
   fillRule: "evenodd",
   clipRule: "evenodd",
-  fill: "currentColor",
-}
+  fill: "current",
+} as const
