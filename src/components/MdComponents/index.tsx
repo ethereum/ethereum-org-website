@@ -8,7 +8,6 @@ import ButtonDropdown, {
 } from "@/components/ButtonDropdown"
 import Contributors from "@/components/Contributors"
 import MarkdownImage from "@/components/MarkdownImage"
-import { mdxTableComponents } from "@/components/Table"
 import TooltipLink from "@/components/TooltipLink"
 import YouTube from "@/components/YouTube"
 
@@ -30,6 +29,7 @@ import { StandaloneQuizWidget } from "../Quiz/QuizWidget"
 import { ButtonLink } from "../ui/buttons/Button"
 import { Flex } from "../ui/flex"
 import { ListItem, OrderedList, UnorderedList } from "../ui/list"
+import { mdxTableComponents } from "../ui/Table"
 
 export const commonHeadingAttributes = (className: string, id?: string) => ({
   id,

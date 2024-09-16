@@ -40,9 +40,9 @@ import {
 import RollupProductDevDoc from "@/components/RollupProductDevDoc"
 import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
-import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
+import { mdxTableComponents } from "@/components/ui/Table"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
