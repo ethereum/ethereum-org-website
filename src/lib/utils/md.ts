@@ -195,7 +195,6 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript",
     "/developers/tutorials/short-abi",
     "/developers/tutorials/smart-contract-security-guidelines",
-    "/developers/tutorials/solidity-and-truffle-continuous-integration-setup",
     "/developers/tutorials/testing-erc-20-tokens-with-waffle",
     "/developers/tutorials/the-graph-fixing-web3-data-querying",
     "/developers/tutorials/token-integration-checklist",

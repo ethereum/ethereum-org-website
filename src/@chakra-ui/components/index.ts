@@ -22,7 +22,6 @@ import { Modal } from "./Modal"
 import { Popover } from "./Popover"
 import { Progress } from "./Progress"
 import { Radio } from "./Radio"
-import { ReactSelect } from "./ReactSelect"
 import { Switch } from "./Switch"
 import { Table } from "./Table"
 import { Tabs } from "./Tabs"
@@ -52,7 +51,6 @@ export default {
   Popover,
   Progress,
   Radio,
-  ReactSelect,
   Spinner: spinnerDefaultTheme,
   Switch,
   Table,

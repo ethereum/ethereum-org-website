@@ -67,7 +67,6 @@ Beberapa usaha kolaboratif untuk membuat Ethereum ramah bagi perusahaan telah di
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _sebuah kotak peralatan untuk transaksi privat_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _sebuah aplikasi penandatanganan transaksi untuk digunakan dengan penyedia web3_
 - [Tenderly](https://tenderly.co/) _sebuah Platform Data yang menyediakan analitik, peringatan, dan pengawasan dalam waktu sebenarnya dengan dukungan untuk jaringan privat._
-- [Truffle Suite](https://trufflesuite.com) _rangkaian pengembangan blockchain (Truffle, Ganache, Drizzle)_
 
 ### Solusi skalabilitas {#scalability-solutions}
 
