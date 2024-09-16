@@ -36,9 +36,13 @@
 
     --success: var(--green-600);
     --success-light: var(--green-100);
+    /* Deprecated */
+    --success-neutral: var(--green-100);
 
     --error: var(--red-700);
     --error-light: var(--red-100);
+    /* Deprecated */
+    --error-neutral: var(--red-100);
 
     --warning: var(--yellow-400);
     --warning-light: var(--yellow-100);
@@ -148,6 +152,12 @@
 
     --accent-c: var(--teal-400);
     --accent-c-hover: var(--teal-300);
+
+    /* Deprecated */
+    --success-neutral: var(--green-900);
+
+    /* Deprecated */
+    --error-neutral: var(--red-900);
 
     --warning: var(--yellow-300);
 

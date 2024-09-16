@@ -179,6 +179,7 @@ const config = {
         success: {
           DEFAULT: "hsla(var(--success))",
           light: "hsla(var(--success-light))",
+          neutral: "hsla(var(--success-neutral))",
         },
 
         error: {
