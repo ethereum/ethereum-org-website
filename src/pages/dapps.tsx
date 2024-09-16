@@ -68,12 +68,12 @@ import balancer from "@/public/images/dapps/balancer.png"
 import brave from "@/public/images/dapps/brave.png"
 import compound from "@/public/images/dapps/compound.png"
 import convex from "@/public/images/dapps/convex.png"
+import crackAndStack from "@/public/images/dapps/crackandstack.png"
 import cryptopunks from "@/public/images/dapps/cryptopunks.png"
 import cryptovoxels from "@/public/images/dapps/cryptovoxels.png"
 import curve from "@/public/images/dapps/curve.png"
 import cyberconnect from "@/public/images/dapps/cyberconnect.png"
 import darkforest from "@/public/images/dapps/darkforest.png"
-import crackAndStack from "@/public/images/dapps/crackandstack.png"
 import decentraland from "@/public/images/dapps/decentraland.png"
 import dodo from "@/public/images/dapps/dodo.png"
 import ens from "@/public/images/dapps/ens.png"
@@ -1120,7 +1120,7 @@ const DappsPage = () => {
       link: "https://crackandstack.com/",
       image: crackAndStack,
       alt: t("page-dapps-crack-and-stack-logo-alt"),
-    }
+    },
   ]
 
   const social = [
