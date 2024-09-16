@@ -73,6 +73,7 @@ import cryptovoxels from "@/public/images/dapps/cryptovoxels.png"
 import curve from "@/public/images/dapps/curve.png"
 import cyberconnect from "@/public/images/dapps/cyberconnect.png"
 import darkforest from "@/public/images/dapps/darkforest.png"
+import crackAndStack from "@/public/images/dapps/crackandstack.png"
 import decentraland from "@/public/images/dapps/decentraland.png"
 import dodo from "@/public/images/dapps/dodo.png"
 import ens from "@/public/images/dapps/ens.png"
@@ -1113,6 +1114,13 @@ const DappsPage = () => {
       image: darkforest,
       alt: t("page-dapps-dark-forest-logo-alt"),
     },
+    {
+      title: "Crack & Stack",
+      description: t("page-dapps-dapp-description-crack-and-stack"),
+      link: "https://crackandstack.com/",
+      image: crackAndStack,
+      alt: t("page-dapps-crack-and-stack-logo-alt"),
+    }
   ]
 
   const social = [
