@@ -71,8 +71,6 @@ The vast majority of the program is contained in [`src/app.ts`](https://github.c
 
 ##### Creating the prerequisite objects
 
-Before we can do anything we need to create a 
-
 ```typescript
 import { createPublicClient, createWalletClient, getContract, http, Address } from 'viem'
 ```
