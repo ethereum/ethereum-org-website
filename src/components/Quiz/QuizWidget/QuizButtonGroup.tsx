@@ -143,8 +143,10 @@ export const QuizButtonGroup = ({
         <>
           <Center className="w-full gap-4 max-md:flex-col md:gap-2">
             <Button variant="outline" onClick={handleShare}>
-              <FaXTwitter />
-              <Translation id="learn-quizzes:share-results" />
+              <>
+                <FaXTwitter />
+                <Translation id="learn-quizzes:share-results" />
+              </>
             </Button>
 
             {/* Show `Next Quiz` button if quiz is opened from hub page */}
