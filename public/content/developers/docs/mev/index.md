@@ -136,7 +136,7 @@ In response to sandwiching and frontrunning attacks, traders may start conductin
 
 Permissioned mempools would also accelerate the centralization risks described in the previous section. Large pools running multiple validators will likely benefit from offering transaction privacy to traders and users, increasing their MEV revenues.
 
-Combating these MEV-related problems in post-Merge Ethereum is a core area of research. To date, two solutions proposed to reduce the negative impact of MEV on Ethereum’s decentralization and security after The Merge are [**Proposer-Builder Separation (PBS)**](https://ethereum.org/en/roadmap/pbs/) and the [**Builder API**](https://github.com/ethereum/builder-specs).
+Combating these MEV-related problems in post-Merge Ethereum is a core area of research. To date, two solutions proposed to reduce the negative impact of MEV on Ethereum’s decentralization and security after The Merge are [**Proposer-Builder Separation (PBS)**](/roadmap/pbs/) and the [**Builder API**](https://github.com/ethereum/builder-specs).
 
 ### Proposer-Builder Separation {#proposer-builder-separation}
 
