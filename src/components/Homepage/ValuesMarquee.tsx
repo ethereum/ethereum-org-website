@@ -80,7 +80,7 @@ const Row = ({ className, children, toRight }: RowProps) => {
   )
 }
 
-const TheInternetIsChanging = () => {
+const ValuesMarquee = () => {
   const { t, pairings } = useValuesMarquee()
   return (
     <Section id="values" className="!my-64">
@@ -126,4 +126,4 @@ const TheInternetIsChanging = () => {
   )
 }
 
-export default TheInternetIsChanging
+export default ValuesMarquee

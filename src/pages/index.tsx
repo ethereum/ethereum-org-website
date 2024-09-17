@@ -17,6 +17,7 @@ import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import { useHome } from "@/components/Homepage/useHome"
+import ValuesMarquee from "@/components/Homepage/ValuesMarquee"
 import AngleBrackets from "@/components/icons/angle-brackets.svg"
 import Calendar from "@/components/icons/calendar.svg"
 import CalendarAdd from "@/components/icons/calendar-add.svg"
@@ -24,7 +25,6 @@ import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import Swiper from "@/components/Swiper"
-import TheInternetIsChanging from "@/components/TheInternetIsChanging"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
@@ -347,7 +347,7 @@ const HomePage = ({
         </Section>
 
         {/* Values - The Internet Is Changing */}
-        <TheInternetIsChanging />
+        <ValuesMarquee />
 
         {/* Builders - Blockchain's biggest builder community */}
         <Section id="builders" variant="responsiveFlex">
