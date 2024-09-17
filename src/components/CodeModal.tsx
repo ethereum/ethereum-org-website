@@ -20,9 +20,7 @@ const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
   const codeSnippet = (Children.toArray(children)[0] as ReactElement).props
     .children.props.children
 
-  const { onCopy, hasCopied } = useClipboard(codeSnippet, {
-    timeout: 1500,
-  })
+  const { onCopy, hasCopied } = useClipboard()
 
   return (
     <Modal
@@ -56,7 +54,7 @@ const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
         <ModalBody p="0">{children}</ModalBody>
         <Button
           variant="outline"
-          onClick={onCopy}
+          onClick={() => onCopy(codeSnippet)}
           className="absolute end-4 top-20"
         >
           {hasCopied ? (
