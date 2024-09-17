@@ -13,7 +13,7 @@
   "page-index-bento-defi-content": "Billions can't open bank accounts or freely use their money. Ethereum's financial system is always open and unbiased.",
   "page-index-bento-defi-title": "A fairer financial system",
   "page-index-bento-networks-action": "Explore benefits",
-  "page-index-bento-networks-content": "Ethereum is the hub for blockchain innovation. The best project are built on Ethereum.",
+  "page-index-bento-networks-content": "Ethereum is the hub for blockchain innovation. The best projects are built on Ethereum.",
   "page-index-bento-networks-title": "The network of networks",
   "page-index-bento-stablecoins-action": "Learn more",
   "page-index-bento-stablecoins-content": "Stablecoins are currencies that maintain stable value. Their price matches the U.S. dollar or other steady assets.",
@@ -44,7 +44,7 @@
   "page-index-developers-code-example-description-0": "Build a bank powered by logic you've programmed",
   "page-index-developers-code-example-description-1": "Create tokens that you can transfer and use across applications",
   "page-index-developers-code-example-description-2": "Use existing languages to interact with Ethereum and other applications",
-  "page-index-developers-code-example-description-3": "Reimagine existing services as decentralized, open applications",
+  "page-index-developers-code-example-description-3": "Re-imagine existing services as decentralized, open applications",
   "page-index-developers-code-example-title-0": "Your own bank",
   "page-index-developers-code-example-title-1": "Your own currency",
   "page-index-developers-code-example-title-2": "A JavaScript Ethereum wallet",
@@ -57,7 +57,7 @@
   "page-index-join-action-contribute-description": "Find out all the different ways you can help ethereum.org grow and be better.",
   "page-index-join-action-contribute-label": "How to contribute",
   "page-index-join-action-discord-description": "To ask questions, coordinate contribution and join community calls.",
-  "page-index-join-action-github-description": "Contribute to code, content, articles, etc.",
+  "page-index-join-action-github-description": "Contribute to code, design, articles, etc.",
   "page-index-join-action-twitter-description": "To keep up with our updates and important news.",
   "page-index-join-description": "This website is open source with hundreds of community contributors. You can propose edits to any of the content on this site.",
   "page-index-join-header": "Join ethereum.org",
@@ -83,3 +83,4 @@
   "page-index-posts-subtitle": "The latest blog posts and updates from the community",
   "page-index-title": "Welcome to Ethereum"
 }
+ 
