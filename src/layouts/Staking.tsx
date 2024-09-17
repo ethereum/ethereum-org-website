@@ -4,7 +4,6 @@ import {
   Box,
   type BoxProps,
   chakra,
-  Flex,
   Grid,
   SimpleGrid,
   Text,
@@ -41,7 +40,10 @@ import StakingProductsCardGrid from "@/components/Staking/StakingProductsCardGri
 import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
 import TableOfContents from "@/components/TableOfContents"
+import { Flex } from "@/components/ui/flex"
 import UpgradeStatus from "@/components/UpgradeStatus"
+
+import { cn } from "@/lib/utils/cn"
 
 const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading1 className="md:text-5xl" {...props} />
@@ -121,20 +123,15 @@ const SummaryPoint = (props: ChildOnlyProp) => (
   <chakra.li color="text300" {...props} />
 )
 
-const HeroContainer = (props: ChildOnlyProp) => {
-  return (
-    <Flex
-      direction={{ base: "column", lg: "row" }}
-      align="center"
-      py={8}
-      px={{ base: 0, lg: 8 }}
-      maxH={{ base: "full", lg: "500px" }}
-      minH="500px"
-      bg="layer2Gradient"
-      {...props}
-    />
-  )
-}
+const HeroContainer = (props: ChildOnlyProp) => (
+  <Flex
+    className={cn(
+      "max-h-full min-h-[500px] flex-col items-center px-0 py-8 lg:max-h-[500px] lg:flex-row lg:px-8",
+      "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+    )}
+    {...props}
+  />
+)
 
 const TableContainer = (props: BoxProps) => (
   <Box
@@ -253,7 +250,7 @@ export const StakingLayout = ({
       dir={contentNotTranslated ? "ltr" : "unset"}
     >
       <HeroContainer>
-        <Flex direction="column" justify="flex-start" w="full" p={8}>
+        <Flex className="flex-col p-8">
           <Breadcrumbs slug={slug} mb="8" />
           <Title>{frontmatter.title}</Title>
           <UnorderedList>
@@ -289,7 +286,7 @@ export const StakingLayout = ({
         />
         <ContentContainer>
           {children}
-          <StakingCommunityCallout my={16} />
+          <StakingCommunityCallout className="my-16" />
           <FeedbackCard />
         </ContentContainer>
         <MobileButton>

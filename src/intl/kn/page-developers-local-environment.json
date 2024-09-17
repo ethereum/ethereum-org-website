@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "ನಿಮ್ಮ ಸ್ಥಳೀಯ ಅಭಿವೃದ್ಧಿ ಪರಿಸರವನ್ನು ಹೊಂದಿಸಿ",
   "page-local-environment-solidity-template-desc": "ನಿಮ್ಮ ಸಾಲಿಡಿಟಿ ಸ್ಮಾರ್ಟ್ ಒಪ್ಪಂದಗಳಿಗೆ ಪೂರ್ವ-ನಿರ್ಮಿತ ಸೆಟಪ್‌ಗಾಗಿ GitHub ಟೆಂಪ್ಲೇಟ್. ಹರ್ಧತ್ ಸ್ಥಳೀಯ ನೆಟ್‌ವರ್ಕ್, ಪರೀಕ್ಷೆಗಳಿಗಾಗಿ ದೋಸೆ, ವ್ಯಾಲೆಟ್ ಅನುಷ್ಠಾನಕ್ಕಾಗಿ ಈಥರ್‌ಗಳು ಮತ್ತು ಹೆಚ್ಚಿನದನ್ನು ಒಳಗೊಂಡಿದೆ.",
   "page-local-environment-solidity-template-logo-alt": "ಘನತೆ ಟೆಂಪ್ಲೇಟ್ ಲೋಗೋ",
-  "page-local-environment-truffle-desc": "ಟ್ರಫಲ್ ಸೂಟ್ ಡೆವಲಪರ್‌ಗಳನ್ನು ಕಲ್ಪನೆಯಿಂದ ಡ್ಯಾಪ್‌ಗೆ ಸಾಧ್ಯವಾದಷ್ಟು ಆರಾಮದಾಯಕವಾಗಿ ಪಡೆಯುತ್ತದೆ.",
-  "page-local-environment-truffle-logo-alt": "ಟ್ರಫಲ್ ಲೋಗೋ",
   "page-local-environment-waffle-desc": "ಸ್ಮಾರ್ಟ್ ಒಪ್ಪಂದಗಳಿಗಾಗಿ ಅತ್ಯಂತ ಮುಂದುವರಿದ ಟೆಸ್ಟಿಂಗ್ ಲೈಬ್ರರಿ. ಸ್ಕ್ಯಾಫೋಲ್ಡ್-ಎಥ್ ಅಥವಾ ಹಾರ್ಡ್ಹ್ಯಾಟ್‌ನೊಂದಿಗೆ ಒಂಟಿಯಾಗಿ ಅಥವಾ ಬಳಸಿ.",
   "page-local-environment-waffle-logo-alt": "ವ್ಯಾಫ್ಲ್ ಲೋಗೋ"
 }

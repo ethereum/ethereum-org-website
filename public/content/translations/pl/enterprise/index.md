@@ -66,7 +66,6 @@ Różne organizacje podjęły pewne wspólne działania, aby uczynić Ethereum p
 - [Ernst & „Nightfall” firmy Young](https://github.com/EYBlockchain/nightfall) _zestaw narzędzi do prywatnych transakcji_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _aplikacja do podpisywania transakcji do użytku z dostawcą web3_
 - [Tenderly](https://tenderly.co/) _platforma danych zapewniająca analizy w czasie rzeczywistym, alerty i monitorowanie z obsługą sieci prywatnych._
-- [Truffle Suite](https://trufflesuite.com) _blockchain development suite (Truffle, Ganache, Drizzle)_
 
 ### Rozwiązania skalowalne {#scalability-solutions}
 

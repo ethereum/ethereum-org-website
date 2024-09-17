@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "Yerli inkişaf mühitinizi qurun",
   "page-local-environment-solidity-template-desc": "Solidity ağıllı müqavilələriniz üçün əvvəlcədən qurulmuş quraşdırma üçün GitHub şablonu. Hardhat yerli şəbəkəsi, testlər üçün Waffle, pulqabının tətbiqi üçün Ether-lər və s. daxildir.",
   "page-local-environment-solidity-template-logo-alt": "Solidity şablon loqosu",
-  "page-local-environment-truffle-desc": "Truffle Suite, tərtibatçıları ideyadan dapp-ə mümkün qədər rahat çatdırır.",
-  "page-local-environment-truffle-logo-alt": "Truffle loqosu",
   "page-local-environment-waffle-desc": "Ağıllı müqavilələr üçün ən qabaqcıl sınaq kitabxanası. Tək və ya Scaffold-eth və ya Hardhat ilə istifadə edin.",
   "page-local-environment-waffle-logo-alt": "Waffle loqosu"
 }

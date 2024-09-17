@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss"
 import plugin from "tailwindcss/plugin"
 
-import { screens } from "./tailwind/screens"
+import { screens } from "./src/lib/utils/screen"
 
 const config = {
   // TODO: Move to "class" strategy after removing Chakra
@@ -234,6 +234,7 @@ const config = {
         "feedback-gradient": "var(--feedback-gradient)",
         "banner-grid-gradient": "var(--banner-grid-gradient)",
         "radial-a": "var(--radial-a)",
+        "linear-bug-bounty-title": "var(--linear-bug-bounty-title)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",

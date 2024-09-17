@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "আপনার স্থানীয় উন্নয়ন পরিবেশ সেট আপ করুন",
   "page-local-environment-solidity-template-desc": "আপনার সলিডিটি স্মার্ট কনট্র্যাক্টের একটি পূর্ব-নির্মিত সেটআপের জন্য একটি GitHub টেমপ্লেট। একটি Hardhat স্থানীয় নেটওয়ার্ক, পরীক্ষার জন্য Waffle, ওয়ালেট বাস্তবায়নের জন্য Ethers এবং আরও অনেক কিছু অন্তর্ভুক্ত।",
   "page-local-environment-solidity-template-logo-alt": "Solidity template লোগো",
-  "page-local-environment-truffle-desc": "Turffle Suite ডেভেলপারদের ধারণা থেকে যতটা সম্ভব আরামে ততটা dapp তৈরি করতে পারে।",
-  "page-local-environment-truffle-logo-alt": "Turffle লোগো",
   "page-local-environment-waffle-desc": "স্মার্ট কনট্র্যাক্টের জন্য সবচেয়ে উন্নত পরীক্ষার লাইব্রেরি। একা অথবা Scaffold-eth বা Hardhat সাথে নিয়ে ব্যবহার করুন।",
   "page-local-environment-waffle-logo-alt": "Waffle লোগো"
 }

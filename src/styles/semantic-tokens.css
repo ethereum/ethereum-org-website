@@ -44,8 +44,8 @@
     --warning-light: var(--yellow-100);
 
     /**
-    /* Gradients (radial, conic)
-    /* For linear-gradient, Tailwind classes preferred
+    /* Gradients (radial, conic, or linear over 3 stops)
+    /* For linear-gradient up to 3 stops, use Tailwind classes
     /* https://tailwindcss.com/docs/background-image#linear-gradients
     */
     --radial-a-opacity-1: 0.08;
@@ -56,6 +56,16 @@
       hsla(var(--purple-500), var(--radial-a-opacity-2)) 33%,
       hsla(var(--blue-500), var(--radial-a-opacity-1)) 66%,
       transparent 100%
+    );
+
+    --linear-bug-bounty-title: linear-gradient(
+      to left,
+      #f7cbc0 0%,
+      #f4b1ab 29.8%,
+      #8476d9 49.78%,
+      #85acf9 54.14%,
+      #1c1ce1 61.77%,
+      #000000 69.77%
     );
 
     /* Shadows */
@@ -144,6 +154,15 @@
     /* Gradients (dark mode adjustments) */
     --radial-a-opacity-1: 0.16;
     --radial-a-opacity-2: 0.48;
+
+    --linear-bug-bounty-title: linear-gradient(
+      to left,
+      hsl(12, 77%, 86%) 0%,
+      #fbeae3 17.81%,
+      #f4b1ab 29.8%,
+      #8476d9 49.78%,
+      #8db4ff 69.77%
+    );
 
     /* Shadows (dark mode adjustments) */
     --shadow-color: hsla(var(--white), 0.04);

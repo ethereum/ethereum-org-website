@@ -470,6 +470,15 @@
     "imageUrl": "https://ethglobal.com/og.png"
   },
   {
+    "title": "ETHSydney Hackathon",
+    "href": "https://2024.ethsydney.net/",
+    "location": "Sydney, Australia",
+    "description": "ETHSydney is focusing on Ethereum ecosystem, and learning about Ethereum technologies and usage.",
+    "startDate": "2024-10-25",
+    "endDate": "2024-10-27",
+    "imageUrl": "https://ethsydney.net/img/ethsydney_logo.jpeg"
+  },
+  {
     "title": "Devcon 7 - Southeast Asia",
     "href": "https://devcon.org/",
     "location": "Bangkok, Thailand",
