@@ -470,9 +470,7 @@ const GetEthPage = ({
       </TwoColumnContent>
       <Divider />
       <CalloutBanner
-        mx={4}
-        mt={24}
-        mb={40}
+        className="mx-4 mb-40 mt-24"
         titleKey="page-get-eth:page-get-eth-use-your-eth"
         descriptionKey="page-get-eth:page-get-eth-use-your-eth-dapps"
         image={dapps}

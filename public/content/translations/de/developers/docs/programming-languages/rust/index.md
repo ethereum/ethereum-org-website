@@ -22,7 +22,6 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 
 ## Informationen für Einsteiger {#beginner-articles}
 
-- [Einen Ethereum-Client wählen](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Der Rust-Ethereum-Client](https://openethereum.github.io/) \* **Beachten Sie, dass OpenEthereum [veraltet](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) ist und nicht mehr gepflegt wird.** Nutzen Sie es mit Vorsicht und wechseln Sie besser zu einer anderen Client-Implementierung.
 - [Transaktion mit Rust an Ethereum senden](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Eine Einführung in Smart Contracts mit dem Parity-Ethereum-Client](https://wiki.parity.io/Smart-Contracts)

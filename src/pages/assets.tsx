@@ -104,6 +104,7 @@ const H2 = (props: ChildOnlyProp & HeadingProps) => (
     lineHeight={1.4}
     mt={16}
     mb="6"
+    scrollMarginTop={24}
     {...props}
   />
 )
@@ -165,17 +166,17 @@ const AssetsPage = () => {
             </Heading>
           </Center>
           <Center>
-            <InlineLink href="/images/assets/#illustrations">
+            <InlineLink href="/assets/#illustrations">
               {t("page-assets-illustrations")}
             </InlineLink>
           </Center>
           <Center>
-            <InlineLink href="/images/assets/#historical">
+            <InlineLink href="/assets/#historical">
               {t("page-assets-historical-artwork")}
             </InlineLink>
           </Center>
           <Center>
-            <InlineLink href="/images/assets/#brand">
+            <InlineLink href="/assets/#brand">
               {t("page-assets-ethereum-brand-assets")}
             </InlineLink>
           </Center>

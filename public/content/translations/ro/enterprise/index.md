@@ -67,7 +67,6 @@ Diverse organizații au depus eforturi comune pentru a creşte uşurinţa de uti
 - [Ernst & Young's „Nightfall”](https://github.com/EYBlockchain/nightfall) _un set de instrumente pentru tranzacții private_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _o aplicație de semnare a tranzacțiilor de utilizat cu un furnizor web3_
 - [Tenderly](https://tenderly.co/) _o platformă de date care oferă analize, alerte și monitorizare în timp real, ce acceptă rețelele private._
-- [Truffle Suite](https://trufflesuite.com) _ suită de blockchain-uri pentru dezvoltare (Truffle, Ganache, Drizzle)_
 
 ### Soluții de scalabilitate {#scalability-solutions}
 

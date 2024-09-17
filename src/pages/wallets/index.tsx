@@ -183,7 +183,7 @@ const WalletsPage = () => {
                 eventAction: "click",
                 eventName: "How_to_use_wallet",
               },
-              variant: "outline",
+              variant: "outline" as const,
             },
           ]
         : [

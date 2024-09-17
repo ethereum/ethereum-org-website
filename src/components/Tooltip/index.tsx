@@ -78,14 +78,19 @@ const Tooltip = ({
   const Content = isMobile() ? PopoverContent : TooltipContent
 
   return (
-    <Component open={isOpen} onOpenChange={handleOpenChange} {...props}>
+    <Component
+      open={isOpen}
+      onOpenChange={handleOpenChange}
+      delayDuration={200}
+      {...props}
+    >
       <Trigger className="focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover">
         {children}
       </Trigger>
       <Content
         side="top"
         sideOffset={2}
-        className="w-80 px-5 text-sm"
+        className="max-w-80 px-5 text-sm"
         data-testid="tooltip-popover"
       >
         {content}
