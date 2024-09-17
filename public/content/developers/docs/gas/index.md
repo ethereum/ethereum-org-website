@@ -1,5 +1,5 @@
 ---
-title: Ethereum gas and fees: technical overview
+title: "Ethereum gas and fees: technical overview"
 description:
 lang: en
 ---
