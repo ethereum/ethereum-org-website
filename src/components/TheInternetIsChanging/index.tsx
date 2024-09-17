@@ -168,7 +168,7 @@ const TheInternetIsChanging = () => {
               .map((_, idx) => (
                 <div
                   key={idx}
-                  className="group-hover:animate-pause flex min-w-fit animate-scroll-left items-center space-x-10 p-6 ring motion-reduce:w-full motion-reduce:animate-none motion-reduce:justify-center"
+                  className="group-hover:animate-pause flex min-w-fit animate-scroll-left items-center space-x-10 p-6 motion-reduce:w-full motion-reduce:animate-none motion-reduce:justify-center"
                 >
                   {pairings.map(({ ethereum: { label, content } }) => (
                     <Item
