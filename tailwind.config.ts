@@ -217,13 +217,13 @@ const config = {
             "active-background": "hsla(var(--menu-4-active-background))",
           },
         },
-      },
 
-      /** @deprecated */
-      "switch-background": "hsla(var(--switch-background))", // TODO: Migrate
-      "tooltip-shadow": "var(--tooltip-shadow)",
-      "hub-hero-content-bg": "var(--hub-hero-content-bg)",
-      "search-background": "var(--search-background)",
+        /** @deprecated */
+        "switch-background": "hsla(var(--switch-background))", // TODO: Migrate
+        "tooltip-shadow": "var(--tooltip-shadow)",
+        "hub-hero-content": "var(--hub-hero-content)",
+        "search-background": "var(--search-background)",
+      },
 
       backgroundImage: {
         "gradient-main": "var(--gradient-main)",
