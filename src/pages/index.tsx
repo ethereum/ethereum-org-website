@@ -540,7 +540,7 @@ const HomePage = ({
               <Card key={title} href={link}>
                 <CardBanner>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={imgSrc} alt="" />
+                  <img src={imgSrc} alt="" loading="lazy" />
                 </CardBanner>
                 <CardContent>
                   <CardTitle>{title}</CardTitle>
@@ -606,6 +606,7 @@ const HomePage = ({
                           src={imageUrl}
                           alt=""
                           className="max-w-full object-cover object-center"
+                          loading="lazy"
                         />
                       ) : (
                         <TwImage src={EventFallback} alt="" />
