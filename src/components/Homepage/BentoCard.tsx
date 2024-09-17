@@ -31,11 +31,16 @@ const BentoCard = ({
 }: BentoCardProps) => (
   <Card
     className={cn(
-      "bg-gradient-to-right flex items-center justify-evenly gap-4 border p-8 lg:gap-16",
+      "bg-gradient-to-right group flex items-center justify-evenly gap-4 border p-8 lg:gap-16",
       className
     )}
   >
-    <Center>
+    <Center
+      className={cn(
+        "[&_img]:duration-200",
+        "group-hover:[&_img]:scale-105 group-hover:[&_img]:duration-200"
+      )}
+    >
       <TwImage src={imgSrc} alt="" width={imgWidth} height={imgHeight} />
     </Center>
     <div>
@@ -44,7 +49,8 @@ const BentoCard = ({
       </CardTitle>
       <p className="mb-8 text-md">{children}</p>
       <ButtonLink href={href} variant="outline" isSecondary>
-        {action} <ChevronNext />
+        {action}
+        <ChevronNext />
       </ButtonLink>
     </div>
   </Card>
