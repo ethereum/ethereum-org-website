@@ -20,7 +20,13 @@ type ItemProps = React.HTMLAttributes<HTMLButtonElement> & {
   icon?: React.ReactNode
 }
 
-const Item = ({ children, explanation, separatorClass, icon }: ItemProps) => (
+const Item = ({
+  children,
+  className,
+  explanation,
+  separatorClass,
+  icon,
+}: ItemProps) => (
   <>
     <Tooltip
       content={
@@ -34,8 +40,15 @@ const Item = ({ children, explanation, separatorClass, icon }: ItemProps) => (
         </>
       }
     >
-      {icon}
-      {children}
+      <div
+        className={cn(
+          "flex flex-nowrap items-center text-nowrap rounded-full px-4 py-1 font-bold uppercase",
+          className
+        )}
+      >
+        {icon}
+        {children}
+      </div>
     </Tooltip>
     <div
       className={cn(
@@ -53,7 +66,7 @@ type RowProps = React.HTMLAttributes<HTMLDivElement> & {
 const Row = ({ className, children, toRight }: RowProps) => {
   const { prefersReducedMotion } = usePrefersReducedMotion()
   const fadeEdges = {
-    mask: `linear-gradient(to right, transparent, white 15%, white 85%, transparent)`,
+    mask: `linear-gradient(to right, transparent 1rem, white 15%, white 85%, transparent calc(100% - 1rem))`,
   }
 
   return (
@@ -93,8 +106,8 @@ const ValuesMarquee = () => {
           {t("page-index:page-index-values-description")}
         </p>
       </SectionContent>
-      <div className="mt-19 overflow-hidden max-2xl:-mx-4 2xl:rounded-2xl">
-        <Row className="bg-blue-50 dark:bg-blue-600">
+      <div className="relative mt-19 overflow-hidden max-2xl:-mx-4 2xl:rounded-2xl">
+        <Row className="border-b border-background bg-blue-50 dark:bg-blue-600">
           {pairings.map(({ ethereum: { label, content } }) => (
             <Item
               key={label}
@@ -109,7 +122,10 @@ const ValuesMarquee = () => {
             </Item>
           ))}
         </Row>
-        <Row className="bg-gray-50 dark:bg-gray-800" toRight>
+        <Row
+          className="border-t border-background bg-gray-50 dark:bg-gray-800"
+          toRight
+        >
           {pairings.map(({ legacy: { label, content } }) => (
             <Item
               key={label}
@@ -121,6 +137,25 @@ const ValuesMarquee = () => {
             </Item>
           ))}
         </Row>
+
+        <div className="absolute start-[50%] top-[50%] flex -translate-x-[50%] -translate-y-[50%] items-center overflow-hidden rounded-lg text-xs font-bold">
+          <p className="bg-gray-50 px-4 py-1 text-body-medium dark:bg-gray-800 dark:text-gray-200">
+            {t("page-index-values-legacy")}
+          </p>
+
+          <div
+            className={cn(
+              "border-t-[13px] border-t-blue-50 dark:border-t-blue-600",
+              "border-r-8 border-r-blue-50 dark:border-r-blue-600",
+              "border-b-[13px] border-b-gray-50 dark:border-b-gray-800",
+              "border-l-8 border-l-gray-50 dark:border-l-gray-800"
+            )}
+          />
+
+          <p className="bg-blue-50 px-4 py-1 text-accent-a dark:bg-blue-600 dark:text-white">
+            {t("common:ethereum")}
+          </p>
+        </div>
       </div>
     </Section>
   )
