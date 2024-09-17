@@ -64,7 +64,7 @@ const MeetupList = () => {
         results update as you type
       </span>
       <ul
-        className="m-0 border-2 border-off-background"
+        className="m-0 border-2 border-body-light"
         aria-label="Event meetup results"
       >
         {filteredMeetups.map((meetup, idx) => (
@@ -73,8 +73,8 @@ const MeetupList = () => {
             hideArrow
             className={cn(
               "group mb-[0.25px] flex w-full justify-between p-4 text-current no-underline",
-              "hover:rounded hover:bg-table-background-hover hover:text-current hover:no-underline hover:shadow-[0_0_1px] hover:shadow-primary",
-              "border-b-2 border-off-background"
+              "hover:bg-background-highlight hover:text-current hover:no-underline hover:shadow-[0_0_1px] hover:shadow-primary",
+              "border-b-2 border-body-light"
             )}
             key={idx}
           >
