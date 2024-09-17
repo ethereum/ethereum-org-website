@@ -37,8 +37,8 @@ const BentoCard = ({
   >
     <Center
       className={cn(
-        "[&_img]:duration-200",
-        "group-hover:[&_img]:scale-105 group-hover:[&_img]:duration-200"
+        "[&_img]:duration-500",
+        "group-hover:[&_img]:scale-105 group-hover:[&_img]:duration-500"
       )}
     >
       <TwImage src={imgSrc} alt="" width={imgWidth} height={imgHeight} />
