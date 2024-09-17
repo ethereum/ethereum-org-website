@@ -25,109 +25,6 @@ type Pairing = {
 }
 
 // TODO: Extract strings for intl
-const pairings: Pairing[] = [
-  {
-    legacy: {
-      label: "Restricted ownership",
-      content: [
-        "With a regular bank or social media platform, your assets and data are managed by the organization. You rely on them for access and control.",
-        "They may use your data in ways you might not agree with, based on their policies.",
-      ],
-    },
-    ethereum: {
-      label: "Direct ownership",
-      content: [
-        "With Ethereum, only you have access and control. Nobody else should ever be able to use your assets. You can decide who to grant that permission.",
-      ],
-    },
-  },
-  {
-    legacy: {
-      label: "Discriminatory",
-      content: [
-        "Today, not everyone has the same access to financial services. Some people may face barriers to access due to their location or nationality.",
-      ],
-    },
-    ethereum: {
-      label: "Equal Access",
-      content: [
-        "We believe everyone should be allowed to benefit from a global system. That is why Ethereum grants equal access to all worldwide, regardless of who you are or where you come from.",
-      ],
-    },
-  },
-  {
-    legacy: {
-      label: "No privacy",
-      content: [
-        "We cannot expect governments, corporations, or other large, faceless organizations to grant us privacy out of their beneficence.",
-        "Most apps gather as much of your personal information as possible so that they can target you with tailored marketing.",
-      ],
-    },
-    ethereum: {
-      label: "Privacy oriented",
-      content: [
-        "Ethereum community respects privacy. You you have the right to use apps without revealing yourself or your contact information.",
-      ],
-    },
-  },
-  {
-    legacy: {
-      label: "Integrated",
-      content: [
-        "Most apps push you to create separate accounts, making it hard to remember all your login details and registrations.",
-      ],
-    },
-    ethereum: {
-      label: "Fragmented",
-      content: [
-        "With Ethereum you can reuse one account in all apps instead. No individual registrations are needed.",
-      ],
-    },
-  },
-  {
-    legacy: {
-      label: "Centralized",
-      content: [
-        "Companies are owned by private entrepreneurs and shareholders. They alone exert control over the company and benefit the most from its success.",
-      ],
-    },
-    ethereum: {
-      label: "Decentralized",
-      content: [
-        "Just like the internet itself, Ethereum doesn't belong to anyone. It’s shared and shaped equally with all. There is no single owner who could control it.",
-      ],
-    },
-  },
-  {
-    legacy: {
-      label: "Censorable",
-      content: [
-        "Modern platforms and its rules often change. They can be influenced by stakeholders, company management or even oppressive regimes.",
-      ],
-    },
-    ethereum: {
-      label: "Censorship resistant",
-      content: [
-        "Resistance to oppression is key principal of Ethereum. Its functionality should always stay fair and impartial.",
-        "Ethereum cannot be controlled by any nation state, company or individual.",
-      ],
-    },
-  },
-  {
-    legacy: {
-      label: "Closed to most",
-      content: [
-        "Companies protect their intellectual property and don’t share. No one outside the company can see how things work, fix problems, or make improvements. Its hard for people to create new tools or customize.",
-      ],
-    },
-    ethereum: {
-      label: "Open to all",
-      content: [
-        "Ethereum is public to all. Anyone can see, use, and improve the code, making it better for everyone.",
-      ],
-    },
-  },
-]
 
 type ItemProps = React.HTMLAttributes<HTMLButtonElement> & {
   explanation: string[]
@@ -168,6 +65,87 @@ const TheInternetIsChanging = () => {
     mask: `linear-gradient(to right, transparent, white 15%, white 85%, transparent)`,
   }
 
+  const pairings: Pairing[] = [
+    {
+      legacy: {
+        label: t("page-index-values-ownership-legacy-label"),
+        content: [
+          t("page-index-values-ownership-legacy-content-0"),
+          t("page-index-values-ownership-legacy-content-1"),
+        ],
+      },
+      ethereum: {
+        label: t("page-index-values-ownership-ethereum-label"),
+        content: [t("page-index-values-ownership-ethereum-content-0")],
+      },
+    },
+    {
+      legacy: {
+        label: t("page-index-values-fairness-legacy-label"),
+        content: [t("page-index-values-fairness-legacy-content-0")],
+      },
+      ethereum: {
+        label: t("page-index-values-fairness-ethereum-label"),
+        content: [t("page-index-values-fairness-ethereum-content-0")],
+      },
+    },
+    {
+      legacy: {
+        label: t("page-index-values-privacy-legacy-label"),
+        content: [
+          t("page-index-values-privacy-legacy-content-0"),
+          t("page-index-values-privacy-legacy-content-1"),
+        ],
+      },
+      ethereum: {
+        label: t("page-index-values-privacy-ethereum-label"),
+        content: [t("page-index-values-privacy-ethereum-content-0")],
+      },
+    },
+    {
+      legacy: {
+        label: t("page-index-values-integration-legacy-label"),
+        content: [t("page-index-values-integration-legacy-content-0")],
+      },
+      ethereum: {
+        label: t("page-index-values-integration-ethereum-label"),
+        content: [t("page-index-values-integration-ethereum-content-0")],
+      },
+    },
+    {
+      legacy: {
+        label: t("page-index-values-decentralization-legacy-label"),
+        content: [t("page-index-values-decentralization-legacy-content-0")],
+      },
+      ethereum: {
+        label: t("page-index-values-decentralization-ethereum-label"),
+        content: [t("page-index-values-decentralization-ethereum-content-0")],
+      },
+    },
+    {
+      legacy: {
+        label: t("page-index-values-censorship-legacy-label"),
+        content: [t("page-index-values-censorship-legacy-content-0")],
+      },
+      ethereum: {
+        label: t("page-index-values-censorship-ethereum-label"),
+        content: [
+          t("page-index-values-censorship-ethereum-content-0"),
+          t("page-index-values-censorship-ethereum-content-1"),
+        ],
+      },
+    },
+    {
+      legacy: {
+        label: t("page-index-values-open-legacy-label"),
+        content: [t("page-index-values-open-legacy-content-0")],
+      },
+      ethereum: {
+        label: t("page-index-values-open-ethereum-label"),
+        content: [t("page-index-values-open-ethereum-content-0")],
+      },
+    },
+  ]
   return (
     <Section id="values" className="!my-64">
       <SectionContent className="flex flex-col items-center text-center">
