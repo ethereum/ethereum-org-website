@@ -2,6 +2,8 @@ import { Fragment, lazy, Suspense } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaDiscord, FaGithub } from "react-icons/fa6"
+import { IoMdCopy } from "react-icons/io"
+import { MdCheck } from "react-icons/md"
 
 import type {
   AllMetricData,
@@ -25,7 +27,7 @@ import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import Swiper from "@/components/Swiper"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
-import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardBanner,
@@ -64,6 +66,14 @@ import {
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../../tailwind/ui/accordion"
+
+import { useClipboard } from "@/hooks/useClipboard"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -180,6 +190,8 @@ const HomePage = ({
     joinActions,
     bentoItems,
   } = useHome()
+
+  const { onCopy, hasCopied } = useClipboard()
 
   return (
     <MainArticle className="flex w-full flex-col items-center" dir={dir}>
@@ -350,7 +362,7 @@ const HomePage = ({
 
         {/* Builders - Blockchain's biggest builder community */}
         <Section id="builders" variant="responsiveFlex">
-          <SectionBanner>
+          <SectionBanner className="relative">
             <TwImage src={BuildersImage} alt="" />
           </SectionBanner>
 
@@ -382,10 +394,16 @@ const HomePage = ({
                 title={t("page-index:page-index-developers-code-examples")}
                 Svg={AngleBrackets}
               >
+                {/* Desktop */}
                 {codeExamples.map(({ title, description }, idx) => (
                   <button
                     key={title}
-                    className="flex flex-col gap-y-0.5 border-t px-6 py-4 hover:bg-background-highlight"
+                    className={cn(
+                      "flex flex-col gap-y-0.5 border-t px-6 py-4 hover:bg-background-highlight max-md:hidden",
+                      isModalOpen &&
+                        idx === activeCode &&
+                        "bg-background-highlight"
+                    )}
                     onClick={() => toggleCodeExample(idx)}
                   >
                     <p className="font-bold">{title}</p>
@@ -394,27 +412,70 @@ const HomePage = ({
                     </p>
                   </button>
                 ))}
+                {/* Mobile */}
+                <Accordion type="single" collapsible className="md:hidden">
+                  {codeExamples.map(
+                    ({ title, description, code, codeLanguage }) => (
+                      <AccordionItem
+                        key={title}
+                        value={title}
+                        className="relative"
+                      >
+                        <AccordionTrigger className="flex border-t px-6 py-4 hover:bg-background-highlight">
+                          <div className="flex flex-col items-start gap-y-0.5">
+                            <p className="text-md font-bold text-body">
+                              {title}
+                            </p>
+                            <p className="text-start text-sm text-body-medium">
+                              {description}
+                            </p>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="relative border-t">
+                          <Suspense fallback={<SkeletonLines noOfLines={16} />}>
+                            <div className="-m-2 max-h-[50vh] overflow-auto">
+                              <Codeblock
+                                codeLanguage={codeLanguage}
+                                allowCollapse={false}
+                                className="[&>div]:-m-//2 [&>div]:rounded-none [&_*]:!text-xs [&_pre]:p-4"
+                                fromHomepage
+                              >
+                                {code}
+                              </Codeblock>
+                              <Button
+                                onClick={() => onCopy(code)}
+                                className="absolute end-4 top-4"
+                              >
+                                {hasCopied ? <MdCheck /> : <IoMdCopy />}
+                              </Button>
+                            </div>
+                          </Suspense>
+                        </AccordionContent>
+                      </AccordionItem>
+                    )
+                  )}
+                </Accordion>
               </WindowBox>
+              {isModalOpen && (
+                // TODO: Migrate CodeModal, CodeBlock from Chakra-UI to tailwind/shad-cn
+                <CodeModal
+                  isOpen={isModalOpen}
+                  setIsOpen={setModalOpen}
+                  title={codeExamples[activeCode].title}
+                >
+                  <Suspense fallback={<SkeletonLines noOfLines={16} />}>
+                    <Codeblock
+                      codeLanguage={codeExamples[activeCode].codeLanguage}
+                      allowCollapse={false}
+                      className="[&_pre]:p-6"
+                      fromHomepage
+                    >
+                      {codeExamples[activeCode].code}
+                    </Codeblock>
+                  </Suspense>
+                </CodeModal>
+              )}
             </div>
-
-            {isModalOpen && (
-              // TODO: Migrate CodeModal, CodeBlock from Chakra-UI to tailwind/shad-cn
-              <CodeModal
-                isOpen={isModalOpen}
-                setIsOpen={setModalOpen}
-                title={codeExamples[activeCode].title}
-              >
-                <Suspense fallback={<SkeletonLines noOfLines={16} />}>
-                  <Codeblock
-                    codeLanguage={codeExamples[activeCode].codeLanguage}
-                    allowCollapse={false}
-                    fromHomepage
-                  >
-                    {codeExamples[activeCode].code}
-                  </Codeblock>
-                </Suspense>
-              </CodeModal>
-            )}
           </SectionContent>
         </Section>
 
