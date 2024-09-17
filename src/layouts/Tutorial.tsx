@@ -32,10 +32,10 @@ import {
   Heading3 as MdHeading3,
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
-import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
 import TooltipLink from "@/components/TooltipLink"
 import TutorialMetadata from "@/components/TutorialMetadata"
+import { mdxTableComponents } from "@/components/ui/Table"
 import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"

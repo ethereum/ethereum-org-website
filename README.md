@@ -1908,6 +1908,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://v2eth.com/"><img src="https://avatars.githubusercontent.com/u/7024451?v=4?s=100" width="100px;" alt="Mako Shan"/><br /><sub><b>Mako Shan</b></sub></a><br /><a href="#content-makoshan" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/cratiu222"><img src="https://avatars.githubusercontent.com/u/156356273?v=4?s=100" width="100px;" alt="Christina"/><br /><sub><b>Christina</b></sub></a><br /><a href="#content-cratiu222" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/nipunh"><img src="https://avatars.githubusercontent.com/u/26524611?v=4?s=100" width="100px;" alt="Nipun Hedaoo"/><br /><sub><b>Nipun Hedaoo</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=nipunh" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

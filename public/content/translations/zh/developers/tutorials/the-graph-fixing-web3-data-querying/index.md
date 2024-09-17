@@ -120,7 +120,7 @@ GameContract.events.BetPlaced({
 - 其他要侦听的东西，如函数调用或区块
 - 被调用的映射函数（参见下面的 `mapping.ts`）
 
-您可以在此处定义多个智能合约和处理程序。 典型的设置在 Truffle/Hardhat 项目中会有一个子图文件夹，它有自己的存储库。 然后您可以轻松引用 ABI。
+您可以在此处定义多个智能合约和处理程序。 典型的设置在 Hardhat 项目中会有一个子图文件夹，它有自己的存储库。 然后您可以轻松引用 ABI。
 
 为方便起见，您可能还想使用像 mustache 这样的模板工具。 然后创建一个 `subgraph.template.yaml` 并根据最新部署插入地址。 有关更高级的示例设置，请参阅这个 [Aave subgraph repo](https://github.com/aave/aave-protocol/tree/master/thegraph) 示例。
 

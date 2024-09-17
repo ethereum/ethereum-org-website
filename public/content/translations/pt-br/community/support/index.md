@@ -57,7 +57,6 @@ Aqui estão alguns exemplos populares:
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 
