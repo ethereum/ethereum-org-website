@@ -70,6 +70,7 @@
   "page-index-network-stats-tx-cost-description": "Average transaction cost",
   "page-index-network-stats-tx-day-description": "Transactions in the last 24h",
   "page-index-network-stats-value-defi-description": "Value locked in DeFi",
+  "page-index-network-stats-total-value-held": "Total value held on Ethereum",
   "page-index-popular-topics-ethereum": "What is Ethereum?",
   "page-index-popular-topics-header": "Popular topics",
   "page-index-popular-topics-action": "Other topics",
