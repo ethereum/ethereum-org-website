@@ -211,7 +211,7 @@ const ProductTable = ({
   }, [filters])
 
   return (
-    <div className="px-4">
+    <div>
       {presetFilters.length ? (
         <PresetFilters
           presets={presetFilters}
@@ -221,49 +221,53 @@ const ProductTable = ({
       ) : (
         <></>
       )}
-      <div className="flex flex-col gap-4 pb-6 pt-4 lg:flex-row lg:gap-6 2xl:px-0">
-        <div className="block lg:hidden">
-          <MobileFilters
-            filters={filters}
-            setFilters={setFilters}
-            presets={presetFilters}
-            activePresets={activePresets}
-            handleSelectPreset={handleSelectPreset}
-            dataCount={data.length}
-            activeFiltersCount={activeFiltersCount}
-            mobileFiltersOpen={mobileFiltersOpen}
-            setMobileFiltersOpen={setMobileFiltersOpen}
-            resetFilters={resetFilters}
-            mobileFiltersLabel={mobileFiltersLabel}
-          />
-        </div>
-        <div className="hidden lg:block">
-          <Filters
-            filters={filters}
-            setFilters={setFilters}
-            resetFilters={resetFilters}
-            activeFiltersCount={activeFiltersCount}
-          />
-        </div>
-        <div className="flex-1">
-          <div className="flex flex-row items-center justify-between px-2 py-1">
-            <Button
-              variant="ghost"
-              className="block p-0 lg:hidden"
-              onClick={() => setMobileFiltersOpen(true)}
-            >
-              <p className="text-md">{`${t("table-filters")} (${activeFiltersCount})`}</p>
-            </Button>
-            <p>
-              {t("table-showing")} (<b>{data.length}</b>)
-            </p>
+      <div className="px-4">
+        <div className="flex flex-col gap-4 pb-6 pt-4 lg:flex-row lg:gap-6 2xl:px-0">
+          <div className="block lg:hidden">
+            <MobileFilters
+              filters={filters}
+              setFilters={setFilters}
+              presets={presetFilters}
+              activePresets={activePresets}
+              handleSelectPreset={handleSelectPreset}
+              dataCount={data.length}
+              activeFiltersCount={activeFiltersCount}
+              mobileFiltersOpen={mobileFiltersOpen}
+              setMobileFiltersOpen={setMobileFiltersOpen}
+              resetFilters={resetFilters}
+              mobileFiltersLabel={mobileFiltersLabel}
+            />
           </div>
-          <Table
-            columns={columns}
-            data={data}
-            subComponent={subComponent}
-            noResultsComponent={noResultsComponent}
-          />
+          <div className="hidden lg:block">
+            <Filters
+              filters={filters}
+              setFilters={setFilters}
+              resetFilters={resetFilters}
+              activeFiltersCount={activeFiltersCount}
+            />
+          </div>
+          <div className="flex-1">
+            <div className="flex flex-row items-center justify-between px-2 py-1">
+              <Button
+                variant="ghost"
+                className="block p-0 lg:hidden"
+                onClick={() => setMobileFiltersOpen(true)}
+              >
+                <p className="text-md">
+                  {`${t("table-filters")} (${activeFiltersCount})`}
+                </p>
+              </Button>
+              <p>
+                {t("table-showing")} (<b>{data.length}</b>)
+              </p>
+            </div>
+            <Table
+              columns={columns}
+              data={data}
+              subComponent={subComponent}
+              noResultsComponent={noResultsComponent}
+            />
+          </div>
         </div>
       </div>
     </div>

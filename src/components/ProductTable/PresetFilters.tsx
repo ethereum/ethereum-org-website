@@ -19,14 +19,16 @@ const PresetFilters = ({
 
   return (
     <div>
-      <h3 className="mb-3 text-xl font-bold">
+      <h3
+        className={`mb-3 text-xl font-bold ${showMobileSidebar ? "" : "px-4"}`}
+      >
         {t("table-what-are-you-looking-for")}
       </h3>
       <div
         className={`mb-2 ${
           showMobileSidebar
             ? "grid grid-cols-2 gap-2"
-            : "grid auto-cols-[200px] grid-flow-col gap-4 overflow-x-auto lg:auto-cols-fr"
+            : "grid auto-cols-[200px] grid-flow-col gap-4 overflow-x-auto px-4 lg:auto-cols-fr"
         }`}
       >
         {presets.map((preset, idx) => {
