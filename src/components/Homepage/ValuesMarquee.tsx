@@ -1,11 +1,14 @@
 import { forwardRef, useEffect, useRef, useState } from "react"
 import { FaCheck } from "react-icons/fa"
+import { MdClose } from "react-icons/md"
 
+import EthGlyphSolid from "@/components/icons/eth-glyph-solid.svg"
 import Tooltip from "@/components/Tooltip"
 
 import { cn } from "@/lib/utils/cn"
 
-import { useValuesMarquee } from "../Homepage/useValuesMarquee"
+import { type Pairing, useValuesMarquee } from "../Homepage/useValuesMarquee"
+import { Stack } from "../ui/flex"
 import {
   Section,
   SectionContent,
@@ -16,32 +19,53 @@ import {
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
 
 type ItemProps = React.HTMLAttributes<HTMLButtonElement> & {
-  explanation: string[]
+  pairing: Pairing
   separatorClass: string
-  icon?: React.ReactNode
   container?: HTMLElement | null
 }
 
 const Item = ({
   children,
   className,
-  explanation,
+  pairing,
   separatorClass,
-  icon,
   container,
 }: ItemProps) => (
   <>
     <Tooltip
       container={container}
       content={
-        <>
-          <h3 className="text-md uppercase text-body-medium">{children}</h3>
-          {explanation.map((line) => (
-            <p key={line} className="text-sm">
-              {line}
-            </p>
-          ))}
-        </>
+        <Stack>
+          <h3 className="text-md text-body-medium dark:text-gray-300">
+            {pairing.ethereum.label} x {pairing.legacy.label}
+          </h3>
+          <div className="flex flex-col gap-4">
+            <div className="flex gap-2 text-body-medium">
+              <div className="p-1 text-lg">
+                <MdClose />
+              </div>
+              <div>
+                {pairing.legacy.content.map((line) => (
+                  <p key={line} className="text-sm">
+                    {line}
+                  </p>
+                ))}
+              </div>
+            </div>
+            <div className="flex gap-2 text-body">
+              <div className="p-1 text-lg">
+                <EthGlyphSolid />
+              </div>
+              <div className="space-y-2">
+                {pairing.ethereum.content.map((line) => (
+                  <p key={line} className="text-sm">
+                    {line}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Stack>
       }
     >
       <div
@@ -50,7 +74,6 @@ const Item = ({
           className
         )}
       >
-        {icon}
         {children}
       </div>
     </Tooltip>
@@ -122,7 +145,7 @@ const ValuesMarquee = () => {
   }, [])
 
   return (
-    <Section id="values" className="!my-64">
+    <Section id="values" className="!sm:my-64 !my-48">
       <SectionContent className="flex flex-col items-center text-center">
         <SectionTag>{t("page-index:page-index-values-tag")}</SectionTag>
         <SectionHeader>
@@ -137,35 +160,34 @@ const ValuesMarquee = () => {
           ref={containerFirstRef}
           className="border-b border-background bg-blue-50 dark:bg-blue-600"
         >
-          {pairings.map(({ ethereum: { label, content } }) => (
+          {pairings.map((pairing) => (
             <Item
-              key={label}
-              explanation={content}
+              key={pairing.ethereum.label}
               container={containerFirst}
+              pairing={pairing}
               separatorClass="bg-accent-a"
               className="group/item bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-700"
-              icon={
-                <FaCheck className="me-1 text-success group-hover/item:text-white" />
-              }
             >
-              {label}
+              <FaCheck className="me-1 text-success group-hover/item:text-white" />
+              {pairing.ethereum.label}
             </Item>
           ))}
         </Row>
+
         <Row
           ref={containerSecondRef}
           className="border-t border-background bg-gray-50 dark:bg-gray-800"
           toRight
         >
-          {pairings.map(({ legacy: { label, content } }) => (
+          {pairings.map((pairing) => (
             <Item
-              key={label}
+              key={pairing.legacy.label}
               container={containerSecond}
-              explanation={content}
+              pairing={pairing}
               className="bg-gray-200/20 text-body-medium hover:bg-gray-600 hover:text-white dark:bg-gray-950 dark:text-body"
               separatorClass="bg-gray-200 dark:bg-gray-950"
             >
-              {label}
+              {pairing.legacy.label}
             </Item>
           ))}
         </Row>

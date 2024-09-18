@@ -5,7 +5,7 @@ type Item = {
   content: string[]
 }
 
-type Pairing = {
+export type Pairing = {
   legacy: Item
   ethereum: Item
 }
