@@ -8,7 +8,6 @@ import { Checkbox } from "./Checkbox"
 import {
   closeButtonDefaultTheme,
   codeDefaultTheme,
-  dividerDefaultTheme,
   drawerDefaultTheme,
   formDefaultTheme,
   formLabelDefaultTheme,
@@ -39,7 +38,6 @@ export default {
   Checkbox,
   CloseButton: closeButtonDefaultTheme,
   Code: codeDefaultTheme,
-  Divider: dividerDefaultTheme,
   Drawer: drawerDefaultTheme,
   Form: formDefaultTheme,
   FormLabel: formLabelDefaultTheme,
