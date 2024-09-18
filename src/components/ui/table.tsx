@@ -13,26 +13,46 @@ import { cn } from "@/lib/utils/cn"
 const tableVariants = tv({
   slots: {
     table: "w-full",
-    th: "text-start border-b border-body text-body normal-case align-bottom p-4",
-    tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
-    td: "p-4",
-    tbody: "[&_tr]:align-top hover:[&_tr]:bg-background-highlight",
     // slot key with empty string to establish the key name for variants (TypeScript)
+    th: "",
+    tr: "",
+    td: "",
+    tbody: "",
     thead: "",
   },
   variants: {
     variant: {
       simple: {
         thead: "bg-background-highlight",
+        th: "text-start border-b border-body text-body normal-case align-bottom p-4",
+        tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
+        td: "p-4",
+        tbody: "[&_tr]:align-top hover:[&_tr]:bg-background-highlight",
       },
       "minimal-striped": {
-        tbody: "even:[&_tr]:bg-background-highlight",
+        tbody:
+          "[&_tr]:align-top hover:[&_tr]:bg-background-highlight even:[&_tr]:bg-background-highlight",
+        th: "text-start border-b border-body text-body normal-case align-bottom p-4",
+        tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
+        td: "p-4",
       },
       "simple-striped": {
         thead: "bg-background-highlight",
-        tbody: "even:[&_tr]:bg-background-highlight",
+        tbody:
+          "[&_tr]:align-top hover:[&_tr]:bg-background-highlight even:[&_tr]:bg-background-highlight",
+        th: "text-start border-b border-body text-body normal-case align-bottom p-4",
+        tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
+        td: "p-4",
       },
       minimal: {},
+      product: {
+        table: "caption-bottom text-sm",
+        thead: "[&-tr:last-child]:border-0",
+        tbody: "&_tr:last-child]:border-0",
+        tr: "hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors",
+        th: "text-muted-foreground h-12 px-4 text-left align-middle font-medium [&:has([role=checkbox])]:pr-0",
+        td: "align-middle p-4 [&:has([role=checkbox])]:pr-0",
+      },
     },
   },
   defaultVariants: {
