@@ -1,3 +1,4 @@
+import { forwardRef, useEffect, useRef, useState } from "react"
 import { FaCheck } from "react-icons/fa"
 
 import Tooltip from "@/components/Tooltip"
@@ -18,6 +19,7 @@ type ItemProps = React.HTMLAttributes<HTMLButtonElement> & {
   explanation: string[]
   separatorClass: string
   icon?: React.ReactNode
+  container?: HTMLElement | null
 }
 
 const Item = ({
@@ -26,9 +28,11 @@ const Item = ({
   explanation,
   separatorClass,
   icon,
+  container,
 }: ItemProps) => (
   <>
     <Tooltip
+      container={container}
       content={
         <>
           <h3 className="text-md uppercase text-body-medium">{children}</h3>
@@ -63,38 +67,60 @@ type RowProps = React.HTMLAttributes<HTMLDivElement> & {
   toRight?: boolean
 }
 
-const Row = ({ className, children, toRight }: RowProps) => {
-  const { prefersReducedMotion } = usePrefersReducedMotion()
-  const fadeEdges = {
-    mask: `linear-gradient(to right, transparent 1rem, white 15%, white 85%, transparent calc(100% - 1rem))`,
-  }
+const Row = forwardRef<HTMLDivElement, RowProps>(
+  ({ className, children, toRight }, ref) => {
+    const { prefersReducedMotion } = usePrefersReducedMotion()
+    const fadeEdges = {
+      mask: `linear-gradient(to right, transparent 1rem, white 15%, white 85%, transparent calc(100% - 1rem))`,
+    }
 
-  return (
-    <div className={cn("group", className)}>
-      <div
-        className="flex max-w-full overflow-hidden motion-reduce:overflow-auto"
-        style={prefersReducedMotion ? {} : fadeEdges}
-      >
-        {Array(prefersReducedMotion ? 1 : 3)
-          .fill(0)
-          .map((_, idx) => (
-            <div
-              key={idx}
-              className={cn(
-                "group-hover:animate-pause flex min-w-fit items-center space-x-10 p-6 motion-reduce:w-full motion-reduce:animate-none motion-reduce:justify-center",
-                toRight ? "animate-scroll-right" : "animate-scroll-left"
-              )}
-            >
-              {children}
-            </div>
-          ))}
+    return (
+      <div ref={ref} className={cn("group", className)}>
+        <div
+          className="flex max-w-full overflow-hidden motion-reduce:overflow-auto"
+          style={prefersReducedMotion ? {} : fadeEdges}
+        >
+          {Array(prefersReducedMotion ? 1 : 3)
+            .fill(0)
+            .map((_, idx) => (
+              <div
+                key={idx}
+                className={cn(
+                  "group-hover:animate-pause flex min-w-fit items-center space-x-10 p-6 motion-reduce:w-full motion-reduce:animate-none motion-reduce:justify-center",
+                  toRight ? "animate-scroll-right" : "animate-scroll-left"
+                )}
+              >
+                {children}
+              </div>
+            ))}
+        </div>
       </div>
-    </div>
-  )
-}
+    )
+  }
+)
+Row.displayName = "Row"
 
 const ValuesMarquee = () => {
   const { t, pairings } = useValuesMarquee()
+  const containerFirstRef = useRef<HTMLDivElement>(null)
+  const containerSecondRef = useRef<HTMLDivElement>(null)
+
+  const [containerFirst, setContainerFirst] = useState<HTMLDivElement | null>(
+    null
+  )
+  const [containerSecond, setContainerSecond] = useState<HTMLDivElement | null>(
+    null
+  )
+
+  useEffect(() => {
+    if (containerFirstRef.current) {
+      setContainerFirst(containerFirstRef.current)
+    }
+    if (containerSecondRef.current) {
+      setContainerSecond(containerSecondRef.current)
+    }
+  }, [])
+
   return (
     <Section id="values" className="!my-64">
       <SectionContent className="flex flex-col items-center text-center">
@@ -107,11 +133,15 @@ const ValuesMarquee = () => {
         </p>
       </SectionContent>
       <div className="relative mt-19 overflow-hidden max-2xl:-mx-4 2xl:rounded-2xl">
-        <Row className="border-b border-background bg-blue-50 dark:bg-blue-600">
+        <Row
+          ref={containerFirstRef}
+          className="border-b border-background bg-blue-50 dark:bg-blue-600"
+        >
           {pairings.map(({ ethereum: { label, content } }) => (
             <Item
               key={label}
               explanation={content}
+              container={containerFirst}
               separatorClass="bg-accent-a"
               className="group/item bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-700"
               icon={
@@ -123,12 +153,14 @@ const ValuesMarquee = () => {
           ))}
         </Row>
         <Row
+          ref={containerSecondRef}
           className="border-t border-background bg-gray-50 dark:bg-gray-800"
           toRight
         >
           {pairings.map(({ legacy: { label, content } }) => (
             <Item
               key={label}
+              container={containerSecond}
               explanation={content}
               className="bg-gray-200/20 text-body-medium hover:bg-gray-600 hover:text-white dark:bg-gray-950 dark:text-body"
               separatorClass="bg-gray-200 dark:bg-gray-950"
