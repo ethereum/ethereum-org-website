@@ -423,7 +423,7 @@ const HomePage = ({
                       >
                         <AccordionTrigger className="flex border-t px-6 py-4 hover:bg-background-highlight">
                           <div className="flex flex-col items-start gap-y-0.5">
-                            <p className="text-md font-bold text-body">
+                            <p className="text-start text-md font-bold text-body">
                               {title}
                             </p>
                             <p className="text-start text-sm text-body-medium">

@@ -20,6 +20,7 @@ export const postProcess = (rssItems: RSSItem[]) =>
           ...item,
           imgSrc: "/images/vitalik-blog-banner.svg",
           link: item.link.replace(".ca", ".eth.limo"),
+          sourceUrl: item.sourceUrl.replace(".ca", ".eth.limo"),
         }
       case SOLIDITY_FEED:
         return {
