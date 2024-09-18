@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react"
 
 import { HStack } from "../flex"
-import Select from "../Select"
+import { Select } from "../Select"
 
 const meta = {
   title: "Atoms / Form / Dropdown",
