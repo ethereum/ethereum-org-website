@@ -124,9 +124,9 @@ git push
 
 ### 6. Wait for review
 
-- The website team reviews every PR
-- See [how decisions are made on content changes](https://ethereum.org/en/contributing/#how-decisions-about-the-site-are-made)
-- Acceptable PRs will be approved & merged into the `dev` branch
+- The website team reviews every PR.
+- See [how decisions are made on content changes](https://ethereum.org/en/contributing/#how-decisions-about-the-site-are-made).
+- Acceptable PRs will be approved and merged into the `dev` branch
 
 Learn more about how we review pull requests [here](docs/review-process.md).
 
