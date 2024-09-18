@@ -40,6 +40,7 @@ import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import Pill from "@/components/Pill"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -54,10 +55,6 @@ import walletImg from "@/public/images/wallet.png"
 import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
-
-const Divider = (props: BoxProps) => (
-  <Box my={16} w="10%" h={1} bg="homeDivider" {...props} />
-)
 
 const Page = (props: FlexProps) => (
   <Flex
