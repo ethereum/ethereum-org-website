@@ -1,5 +1,5 @@
 ---
-title: What is DeFi? | Benefits and Use of Decentralised Finance
+title: Decentralized finance (DeFi)
 description: An overview of DeFi on Ethereum
 lang: en
 template: use-cases
