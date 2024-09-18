@@ -168,9 +168,7 @@ const Image400 = ({ src }: Pick<ImageProps, "src">) => (
 )
 
 const Slide = ({ children }: ChildOnlyProp) => (
-  <div className="[&_h2,&_h3]:mt-0 relative min-w-full">
-    <Stack className="space-x-8 space-y-8">{children}</Stack>
-  </div>
+  <div className="space-y-8">{children}</div>
 )
 
 const cachedFetchTxCount = runOnlyOnce(fetchGrowThePie)
@@ -412,7 +410,7 @@ const WhatIsEthereumPage = ({
 
                   <div className="max-w-full">
                     <Swiper
-                      containerClassName="p-8 border rounded"
+                      containerClassName="p-8 border rounded bg-background"
                       onSlideChange={({ activeIndex }) => {
                         trackCustomEvent({
                           eventCategory: `What is Ethereum - Slider`,
@@ -423,36 +421,36 @@ const WhatIsEthereumPage = ({
                     >
                       <Slide>
                         <H3>{t("page-what-is-ethereum-slide-1-title")}</H3>
-                        <Stack className="mb-4 gap-6">
+                        <div className="mb-4 flex flex-col gap-6">
                           <p>
                             <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-1-desc-1" />
                           </p>
                           <p>{t("page-what-is-ethereum-slide-1-desc-2")}</p>
-                        </Stack>
+                        </div>
                       </Slide>
                       <Slide>
                         <H3>{t("page-what-is-ethereum-slide-2-title")}</H3>
-                        <Stack className="mb-4 gap-6">
+                        <div className="mb-4 flex flex-col gap-6">
                           <p>{t("page-what-is-ethereum-slide-2-desc-1")}</p>
                           <p>
                             <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-2-desc-2" />
                           </p>
-                        </Stack>
+                        </div>
                       </Slide>
                       <Slide>
                         <H3>{t("page-what-is-ethereum-slide-3-title")}</H3>
-                        <Stack className="mb-4 gap-6">
+                        <div className="mb-4 flex flex-col gap-6">
                           <p>
                             <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-3-desc-1" />
                           </p>
-                        </Stack>
+                        </div>
                       </Slide>
                       <Slide>
                         <H3>{t("page-what-is-ethereum-slide-4-title")}</H3>
-                        <Stack className="mb-4 gap-6">
+                        <div className="mb-4 flex flex-col gap-6">
                           <p>{t("page-what-is-ethereum-slide-4-desc-1")}</p>
                           <p>{t("page-what-is-ethereum-slide-4-desc-2")}</p>
-                        </Stack>
+                        </div>
                       </Slide>
                     </Swiper>
                   </div>
