@@ -104,7 +104,7 @@ const Filters = ({
                 <AccordionContent className="p-0 md:p-0">
                   {filter.items.map((item, itemIndex) => {
                     return (
-                      <>
+                      <div key={itemIndex} className="pb-4">
                         {item.input(
                           filterIndex,
                           itemIndex,
@@ -124,7 +124,7 @@ const Filters = ({
                             })}
                           </div>
                         ) : null}
-                      </>
+                      </div>
                     )
                   })}
                 </AccordionContent>

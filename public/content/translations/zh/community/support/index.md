@@ -57,7 +57,6 @@ _这并不是完整的列表。 需要帮助寻找特定钱包的支持？ 加�
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [安全帽](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 

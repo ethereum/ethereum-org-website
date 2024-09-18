@@ -54,15 +54,15 @@ const WalletSubComponent = ({ wallet }: WalletSubComponentProps) => {
   )
 
   return (
-    <div className="flex flex-row gap-2 lg:gap-4">
-      <div className="w-1 lg:w-14">
+    <div className="flex flex-row gap-2">
+      <div className="w-1 md:w-14">
         <div
           className={cn(
             `m-auto h-full w-1 bg-gradient-to-b ${wallet.brand_color} to-[rgba(217, 217, 217, 0)] to-97%`
           )}
         />
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="flex w-full flex-1 flex-col gap-4">
         <div className="flex w-full flex-col justify-between xl:flex-row">
           {walletFilterDisplayOrder.map((filterHeader, idx) => {
             const filterItem = walletFiltersOptions.find(

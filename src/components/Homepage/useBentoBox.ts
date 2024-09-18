@@ -11,6 +11,13 @@ import MergeImage from "@/public/images/upgrades/merge.png"
 type Breakpoint = "mobile" | "lg" | "xl"
 type Direction = "down" | "up" | "right" | "left"
 type Color = "primary" | "accent-a" | "accent-b" | "accent-c"
+type Category = "stablecoins" | "defi" | "dapps" | "networks" | "assets"
+type CopyDetails = {
+  title: string
+  children: string
+  action: string
+  href: string
+}
 
 const gradientStops = "from-20% to-60%"
 
@@ -88,47 +95,39 @@ const getPosition = (position: number): string =>
 export const useBentoBox = () => {
   const { t } = useTranslation("page-index")
 
+  const getCopy = (category: Category, href: string): CopyDetails => ({
+    title: t(`page-index:page-index-bento-${category}-title`),
+    children: t(`page-index:page-index-bento-${category}-content`),
+    action: t(`page-index:page-index-bento-${category}-action`),
+    href,
+  })
+
   return [
     {
-      title: t("page-index-bento-stablecoins-title"),
-      children: t("page-index:page-index-bento-stablecoins-content"),
-      action: t("page-index:page-index-bento-stablecoins-action"),
-      href: "/stablecoins/",
-      imgSrc: ImpactImage,
-      imgWidth: 400,
+      ...getCopy("stablecoins", "/stablecoins/"),
+      imgSrc: ManAndDogImage,
       className: cn(colorOptions["primary"], getPosition(0)),
     },
     {
-      title: t("page-index:page-index-bento-defi-title"),
-      children: t("page-index:page-index-bento-defi-content"),
-      action: t("page-index:page-index-bento-defi-action"),
-      href: "/defi/",
-      imgSrc: ManAndDogImage,
+      ...getCopy("defi", "/defi/"),
+      imgSrc: ImpactImage,
+      imgWidth: 400,
       className: cn(colorOptions["accent-c"], getPosition(1)),
     },
     {
-      title: t("page-index:page-index-bento-dapps-title"),
-      children: t("page-index:page-index-bento-dapps-content"),
-      action: t("page-index:page-index-bento-dapps-action"),
-      href: "/dapps/",
+      ...getCopy("networks", "/layer-2/"),
       imgSrc: MergeImage,
       imgWidth: 320,
       className: cn(colorOptions["accent-b"], getPosition(2)),
     },
     {
-      title: t("page-index:page-index-bento-networks-title"),
-      children: t("page-index:page-index-bento-networks-content"),
-      action: t("page-index:page-index-bento-networks-action"),
-      href: "/layer-2/",
+      ...getCopy("dapps", "/dapps/"),
       imgSrc: ManBabyWomanImage,
       imgWidth: 324,
       className: cn(colorOptions["accent-a"], getPosition(3)),
     },
     {
-      title: t("page-index:page-index-bento-assets-title"),
-      children: t("page-index:page-index-bento-assets-content"),
-      action: t("page-index:page-index-bento-assets-action"),
-      href: "/nft/",
+      ...getCopy("assets", "/nft/"),
       imgSrc: RobotBarImage,
       imgWidth: 324,
       className: cn(colorOptions["primary"], getPosition(4)),

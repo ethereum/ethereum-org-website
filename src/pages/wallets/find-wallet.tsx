@@ -2,7 +2,7 @@ import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box, Center, Flex, Text } from "@chakra-ui/react"
+import { Box, Center, Text } from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang, Wallet } from "@/lib/types"
 
@@ -14,7 +14,9 @@ import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
+import { Flex } from "@/components/ui/flex"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -89,7 +91,7 @@ const FindWalletPage = ({
   const { t } = useTranslation("page-wallets-find-wallet")
 
   return (
-    <Flex as={MainArticle} direction="column" position="relative" w="full">
+    <MainArticle className="relative flex flex-col">
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
@@ -101,12 +103,10 @@ const FindWalletPage = ({
       </BannerNotification>
 
       <Flex
-        direction={{ base: "column", sm: "row" }}
-        position="relative"
-        w="full"
-        p={12}
-        bg="layer2Gradient"
-        mb="44px"
+        className={cn(
+          "relative mb-[44px] w-full flex-col p-12 sm:flex-row",
+          "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+        )}
       >
         <Box w={{ base: "full", sm: "50%" }} mt={{ base: 8, sm: 0 }}>
           <Breadcrumbs slug={pathname} />
@@ -139,7 +139,7 @@ const FindWalletPage = ({
         </Center>
       </Flex>
       <FindWalletProductTable wallets={wallets} />
-    </Flex>
+    </MainArticle>
   )
 }
 

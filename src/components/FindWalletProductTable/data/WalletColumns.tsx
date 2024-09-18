@@ -6,7 +6,7 @@ import { ColumnDef } from "@tanstack/react-table"
 import { Wallet } from "@/lib/types"
 
 import WalletInfo from "@/components/FindWalletProductTable/WalletInfo"
-import { TableHead } from "@/components/ui/table"
+import { TableHead } from "@/components/ui/Table"
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
@@ -18,7 +18,7 @@ export type WalletColumns = {
 export const WalletColumns: ColumnDef<Wallet>[] = [
   {
     id: "walletInfo",
-    header: () => <TableHead className="h-0" />,
+    header: () => <TableHead className="hidden" />,
     cell: ({ row }) => {
       return (
         <WalletInfo wallet={row.original} isExpanded={row.getIsExpanded()} />
@@ -27,7 +27,7 @@ export const WalletColumns: ColumnDef<Wallet>[] = [
   },
   {
     id: "expander",
-    header: () => <TableHead className="h-0" />,
+    header: () => <TableHead className="hidden" />,
     cell: ({ row }) => {
       return (
         <div>

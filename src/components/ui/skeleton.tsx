@@ -48,7 +48,10 @@ const SkeletonLines = ({
     {Array(noOfLines)
       .fill(0)
       .map((_, idx) => (
-        <Skeleton key={idx} className={cn("h-3", widths[idx])} />
+        <Skeleton
+          key={idx}
+          className={cn("h-3", widths[idx % widths.length])}
+        />
       ))}
   </div>
 )

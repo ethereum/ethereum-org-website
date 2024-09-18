@@ -1149,7 +1149,7 @@
       "isTrustless": true,
       "hasPermissionlessNodes": false,
       "pctMajorityExecutionClient": 50,
-      "pctMajorityConsensusClient": 100,
+      "pctMajorityConsensusClient": 50,
       "platforms": ["Browser", "Wallet"],
       "ui": ["GUI"],
       "socials": {

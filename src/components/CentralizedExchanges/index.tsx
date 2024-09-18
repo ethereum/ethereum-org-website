@@ -9,7 +9,7 @@ import Emoji from "@/components/Emoji"
 import InlineLink from "@/components/Link"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
-import Select from "@/components/Select"
+import Select from "@/components/ui/Select"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
 

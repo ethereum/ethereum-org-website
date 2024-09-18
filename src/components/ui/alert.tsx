@@ -17,7 +17,7 @@ const alertVariants = cva(
         success:
           "border-success bg-success-light [&_h6]:text-success [&_svg]:text-success text-gray-800",
         warning:
-          "border-attention-outline bg-attention-light [&_h6]:text-attention [&_svg]:text-attention text-gray-800",
+          "border-warning bg-warning-light [&_h6]:text-warning [&_svg]:text-warning text-gray-800",
         update:
           "bg-primary-low-contrast border-primary-high-contrast [&_h6]:text-primary-high-contrast [&_svg]:text-primary-high-contrast",
       },

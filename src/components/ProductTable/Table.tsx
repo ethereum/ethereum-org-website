@@ -14,7 +14,7 @@ import {
   TableCell,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
+} from "@/components/ui/Table"
 
 interface TableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -38,13 +38,13 @@ const Table = ({
   })
 
   return (
-    <TanStackTable>
+    <TanStackTable variant="product">
       <TableHeader>
         {table.getHeaderGroups().map((headerGroup) => (
           <TableRow key={headerGroup.id} className="border-primary">
             {headerGroup.headers.map((header) => {
               return (
-                <div key={header.id}>
+                <div key={header.id} className="p-0.5">
                   {header.isPlaceholder
                     ? null
                     : flexRender(
