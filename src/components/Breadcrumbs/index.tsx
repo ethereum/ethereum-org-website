@@ -1,18 +1,21 @@
-import React from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
 import type { Lang } from "@/lib/types"
 
-import { cn } from "@/lib/utils/cn"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import { BaseLink } from "../ui/Link"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbProps,
+  BreadcrumbSeparator,
+} from "../ui/breadcrumb"
 
-// Ref: https://ui.shadcn.com/docs/components/breadcrumb
-type RootBreadcrumbProps = React.ComponentPropsWithoutRef<"nav">
-
-export type BreadcrumbsProps = RootBreadcrumbProps & {
+export type BreadcrumbsProps = BreadcrumbProps & {
   slug: string
   startDepth?: number
 }
@@ -21,11 +24,6 @@ type Crumb = {
   fullPath: string
   text: string
 }
-
-const Breadcrumb = React.forwardRef<HTMLElement, RootBreadcrumbProps>(
-  ({ ...props }, ref) => <nav ref={ref} aria-label="breadcrumb" {...props} />
-)
-Breadcrumb.displayName = "Breadcrumb"
 
 // Generate crumbs from slug
 // e.g. "/en/eth2/proof-of-stake/" will generate:
@@ -40,13 +38,7 @@ Breadcrumb.displayName = "Breadcrumb"
 //   { fullPath: "/en/eth2/", text: "ETH2" },
 //   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
-
-const Breadcrumbs = ({
-  slug,
-  startDepth = 0,
-  className = "",
-  ...props
-}: BreadcrumbsProps) => {
+const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
   const { t } = useTranslation("common")
   const { locale, asPath } = useRouter()
   const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
@@ -74,44 +66,29 @@ const Breadcrumbs = ({
     .slice(startDepth)
 
   return (
-    <Breadcrumb
-      className={cn("flex flex-wrap items-center justify-start", className)}
-      {...props}
-    >
-      {crumbs.map(({ fullPath, text }) => {
-        const normalizePath = (path) => path.replace(/\/$/, "") // Remove trailing slash
-        const isCurrentPage = normalizePath(slug) === normalizePath(fullPath)
-        return (
-          <div
-            key={fullPath}
-            className={cn(
-              "inline-flex items-center tracking-wider",
-              dir === "rtl" ? "flex-row-reverse" : ""
-            )}
-          >
-            {!isCurrentPage && dir === "rtl" && (
-              <span className="me-[0.625rem] ms-[0.625rem] text-gray-400">
-                /
-              </span>
-            )}
-            {isCurrentPage ? (
-              <span className="uppercase text-primary">{text}</span>
-            ) : (
-              <BaseLink
-                href={fullPath}
-                className="uppercase !text-body-medium no-underline hover:!text-primary"
-              >
-                {text}
-              </BaseLink>
-            )}
-            {!isCurrentPage && dir === "ltr" && (
-              <span className="me-[0.625rem] ms-[0.625rem] text-gray-400">
-                /
-              </span>
-            )}
-          </div>
-        )
-      })}
+    <Breadcrumb {...props} dir={dir}>
+      <BreadcrumbList>
+        {crumbs.map(({ fullPath, text }) => {
+          const normalizePath = (path) => path.replace(/\/$/, "") // Remove trailing slash
+          const isCurrentPage = normalizePath(slug) === normalizePath(fullPath)
+          return (
+            <>
+              <BreadcrumbItem key={fullPath}>
+                {isCurrentPage ? (
+                  <BreadcrumbPage>{text}</BreadcrumbPage>
+                ) : (
+                  <BreadcrumbLink href={fullPath}>{text}</BreadcrumbLink>
+                )}
+              </BreadcrumbItem>
+              {!isCurrentPage && (
+                <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                  /
+                </BreadcrumbSeparator>
+              )}
+            </>
+          )
+        })}
+      </BreadcrumbList>
     </Breadcrumb>
   )
 }
