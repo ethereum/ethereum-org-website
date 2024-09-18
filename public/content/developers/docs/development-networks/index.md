@@ -28,16 +28,6 @@ You _could_ [run a node](/developers/docs/nodes-and-clients/#running-your-own-no
 
 **Note**: Most [development frameworks](/developers/docs/frameworks/) include a built-in development network. We recommend starting with a framework to [set up your local development environment](/developers/local-environment/).
 
-### Ganache {#ganache}
-
-Quickly fire up a personal Ethereum blockchain which you can use to run tests, execute commands, and inspect state while controlling how the chain operates.
-
-Ganache provides both a desktop application (Ganache UI), as well as a command-line tool (`ganache-cli`). It is part of the Truffle suite of tools.
-
-- [Website](https://www.trufflesuite.com/ganache)
-- [GitHub](https://github.com/trufflesuite/ganache)
-- [Documentation](https://www.trufflesuite.com/docs/ganache/overview)
-
 ### Hardhat Network {#hardhat-network}
 
 A local Ethereum network designed for development. It allows you to deploy your contracts, run your tests and debug your code.

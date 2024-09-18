@@ -572,7 +572,8 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
-    onboard_documentation: "https://support.token.im/hc/categories/360000925393",
+    onboard_documentation:
+      "https://support.token.im/hc/categories/360000925393",
     documentation: "https://support.token.im/hc/en-us",
   },
   {
@@ -1259,7 +1260,19 @@ export const walletsData: WalletData[] = [
     brand_color: "#FFFFFF",
     url: "https://rabby.io",
     active_development_team: true,
-    languages_supported: ["en", "de", "es", "fr", "ja", "pt", "ru", "tr", "ua", "zh", "zh-hk"],
+    languages_supported: [
+      "en",
+      "de",
+      "es",
+      "fr",
+      "ja",
+      "pt",
+      "ru",
+      "tr",
+      "ua",
+      "zh",
+      "zh-hk",
+    ],
     twitter: "https://twitter.com/Rabby_io",
     discord: "https://discord.com/invite/seFBCWmUre",
     reddit: "",
@@ -1278,7 +1291,7 @@ export const walletsData: WalletData[] = [
     security_audit: [
       "https://github.com/RabbyHub/Rabby/blob/develop/docs/SlowMist%20Audit%20Report%20-%20Rabby%20Wallet-2023.07.20.pdf",
       "https://github.com/RabbyHub/Rabby/blob/develop/docs/SlowMist%20Audit%20Report%20-%20Rabby%20browser%20extension%20wallet-2022.03.18.pdf",
-      "https://github.com/RabbyHub/Rabby/blob/develop/docs/Rabby%20chrome%20extension%20Penetration%20Testing%20Report.pdf"
+      "https://github.com/RabbyHub/Rabby/blob/develop/docs/Rabby%20chrome%20extension%20Penetration%20Testing%20Report.pdf",
     ],
     scam_protection: true,
     hardware_support: true,
@@ -1298,7 +1311,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "",
-    new_to_crypto: true,
+    new_to_crypto: false,
   },
   {
     last_updated: "2022-08-31",

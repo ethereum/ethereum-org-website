@@ -10,9 +10,8 @@ incomplete: true
 ## Tutorials {#tutorials}
 
 - [Flutter und Blockchain – Hello World Dapp](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/) führt Sie durch die ersten Schritte:
-  1.  [Truffle-Entwicklungssuite](https://www.trufflesuite.com/) installieren
-  2.  Smart Contract in [Solidity](https://soliditylang.org/) schreiben
-  3.  Benutzeroberfläche in Dart schreiben
+  1.  Smart Contract in [Solidity](https://soliditylang.org/) schreiben
+  2.  Benutzeroberfläche in Dart schreiben
 - Eine [mobile dApp mit Flutter zu erstellen](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) ist wesentlich kürzer und empfehlenswert für alle, die mit den Grundlagen bereits vertraut sind
 - Wenn Sie Erklärungsvideos bevorzugen, ist [Ihre erste Blockchain-Flutter-App erstellen](https://www.youtube.com/watch?v=3Eeh3pJ6PeA) empfehlenswert. Die Dauer beträgt etwa eine Stunde.
 - Für Ungeduldige ist [Bau einer dezentralen Blockchain-Anwendung mit Flutter und Dart auf Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s) empfehlenswert, denn die Dauer beträgt nur etwa zwanzig Minuten.

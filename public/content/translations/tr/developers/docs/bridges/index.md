@@ -103,7 +103,7 @@ Bir merkeziyetsiz uygulama, bir köprü veya birleştirici entegrasyonu yolunu s
 
 ### Bir merkeziyetsiz uygulamayı birden fazla zincire dağıtma {#deploying-a-dapp-on-multiple-chains}
 
-Geliştiriciler, bir merkeziyetsiz uygulamayı birden fazla zincire dağıtmak için [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Truffle](https://trufflesuite.com/), [Moralis](https://moralis.io/) gibi geliştirme platformlarından yararlanabilir. Genellikle bu platformlar, merkeziyetsiz uygulamaların zincirler arası işlem yapmasını sağlayabilecek birleştirilebilir eklentilere sahiptir. Örneğin, geliştiriciler [hardhat-dağıtım eklentisi](https://github.com/wighawag/hardhat-deploy) tarafından sunulan belirleyici dağıtım vekilini kullanabilir.
+Geliştiriciler, bir merkeziyetsiz uygulamayı birden fazla zincire dağıtmak için [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/) gibi geliştirme platformlarından yararlanabilir. Genellikle bu platformlar, merkeziyetsiz uygulamaların zincirler arası işlem yapmasını sağlayabilecek birleştirilebilir eklentilere sahiptir. Örneğin, geliştiriciler [hardhat-dağıtım eklentisi](https://github.com/wighawag/hardhat-deploy) tarafından sunulan belirleyici dağıtım vekilini kullanabilir.
 
 #### Örnekler:
 

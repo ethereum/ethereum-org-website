@@ -1,6 +1,7 @@
 import type { StaticImageData } from "next/image"
 
 import type {
+  CommonHeroProps,
   FileContributor,
   Frontmatter,
   Lang,
@@ -61,12 +62,7 @@ export interface UpgradeFrontmatter
     ImageInfo {}
 
 export interface RoadmapFrontmatter extends SharedFrontmatter, ImageInfo {
-  buttons: {
-    label: string
-    toId?: string
-    href?: string
-    variant?: string
-  }[]
+  buttons: CommonHeroProps["buttons"]
 }
 
 export interface UseCasesFrontmatter

@@ -10,14 +10,12 @@ incomplete: true
 ## Oktatóanyagok {#tutorials}
 
 - [Flutter és blokklánc – Hello World Dapp](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/) átvezeti Önt a kezdeti lépéseken:
-  1.  A [Truffle fejlesztői környezet](https://www.trufflesuite.com/) telepítése
-  2.  Okosszerződés megírása [Solidity](https://soliditylang.org/) nyelven
-  3.  Felhasználói felület megírása Dart nyelven
+  1.  Okosszerződés megírása [Solidity](https://soliditylang.org/) nyelven
+  2.  Felhasználói felület megírása Dart nyelven
 - A [mobilalkalmazások építése a Flutterrel](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) sokkal rövidebb, amely jobb lehet, ha már ismeri az alapokat
 - Ha videók segítségével jobban szeret tanulni, akkor nézze meg az [Építse meg első blokkláncos Flutter alkalmazását](https://www.youtube.com/watch?v=3Eeh3pJ6PeA) videót, amely nagyjából egy óra hosszú
 - Ha ennél kevesebb ideje van, akkor talán tetszeni fog az [Egy blokklánc decentralizált alkalmazás építése a Flutterrel és a Darttal az Ethereumon](https://www.youtube.com/watch?v=jaMFEOCq_1s) videó, amely csak húsz percet veszi igénybe
 - [A MetaMask integrációja a Flutter alkalmazásban](https://youtu.be/8qzVDje3IWk) – ez a rövid videó bemutatja, hogyan kell a MetaMaskot beintegrálni a Flutter alkalmazásokba
-- [Flutter Dapp egyszerű tárca](https://youtu.be/JMfIBpuAhKA) és [Az első Flutter DApp – Solidity, Truffle, Ganache](https://youtu.be/bHw2gQZxJ_s) – ezek a videók megmutatják, hogyan lehet egyszerű dappokat készíteni Flutterben a Truffle és Ganache segítségével
 - [Mobil blokkláncfejlesztői képzés Solidity-val és Flutterrel](https://youtube.com/playlist?list=PL4V4Unlk5luhQ26ERO6hWEbcUwHDSSmVH) – mobil blokkláncfejlesztői tanfolyam a teljes stack-kel (lejátszási lista)
 
 ## Az Ethereum-kliensek használata {#working-with-ethereum-clients}

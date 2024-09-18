@@ -27,7 +27,7 @@ const ThemeProvider = ({ children }: Pick<ThemeProviderProps, "children">) => {
   const theme = useMemo(() => merge(customTheme, { direction }), [direction])
   return (
     <NextThemesProvider
-      attribute="data-theme"
+      attribute="class"
       defaultTheme="system"
       enableSystem
       disableTransitionOnChange
@@ -38,16 +38,6 @@ const ThemeProvider = ({ children }: Pick<ThemeProviderProps, "children">) => {
         colorModeManager={colorModeManager}
         resetCSS={false}
       >
-        {/* TODO: Can these CSS Vars be moved to `global.css`? */}
-        <style jsx global>
-          {`
-            :root {
-              --font-inter: Inter, sans-serif;
-              --font-mono: "IBM Plex Mono", Courier, monospace;
-            }
-          `}
-        </style>
-
         {children}
       </ChakraBaseProvider>
     </NextThemesProvider>

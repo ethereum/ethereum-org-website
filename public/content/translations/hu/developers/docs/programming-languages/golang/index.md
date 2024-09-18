@@ -23,7 +23,6 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintse meg az [
 
 ## Cikkek és könyvek kezdőknek {#beginner-articles-and-books}
 
-- [Ethereum kliens kiválasztása](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Kezdő lépések Geth-tel](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
 - [Golang használata Ethereumra való kapcsolódásra](https://www.youtube.com/watch?v=-7uChuO_VzM)
 - [Ethereum okosszerződések telepítése Golang használatával](https://www.youtube.com/watch?v=pytGqQmDslE)

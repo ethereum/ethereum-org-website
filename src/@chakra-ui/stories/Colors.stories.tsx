@@ -113,7 +113,7 @@ export const SemanticScheme: StoryObj = {
     ] as const
     const deprecatedTokens: Record<(typeof tokenNames)[number], string[]> = {
       primary: ["light", "dark", "pressed"],
-      body: ["inverted"],
+      body: [],
       background: [],
       disabled: [],
       success: ["neutral", "outline"],

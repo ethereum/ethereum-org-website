@@ -138,7 +138,6 @@ Akıllı sözleşmeniz için birim testleri çalıştırmada kullanılan araçla
 
 Solidity akıllı sözleşmeleri için birim testi çerçeveleri farklı dillerde (çoğunlukla JavaScript, Python ve Rust) sunulur. Farklı test çerçeveleri ile birim testleri çalıştırmaya başlamak hakkında bilgi almak için aşağıdaki rehberlere başvurun:
 
-- **[Truffle ile birim testleri çalıştırma](https://trufflesuite.com/docs/truffle/testing/testing-your-contracts/)**
 - **[Brownie ile birim testleri çalıştırma](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)**
 - **[Foundry ile birim testleri çalıştırma](https://book.getfoundry.sh/forge/writing-tests)**
 - **[Waffle ile birim testleri çalıştırma](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)**
@@ -150,7 +149,7 @@ Solidity akıllı sözleşmeleri için birim testi çerçeveleri farklı dillerd
 
 Birim testi izole edilmiş sözleşme işlevlerinde hata ayıklarken, entegrasyon testleri bir akıllı sözleşmenin tüm bileşenlerini bir bütün olarak değerlendirir. Entegrasyon testi, sözleşmeler arası çağrılardan veya aynı akıllı sözleşmedeki farklı işlevler arasındaki etkileşimlerden kaynaklanan sorunları tespit edebilir. Örneğin, entegrasyon testleri [kalıtım](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) ve bağımlılık enjeksiyonu gibi şeylerin doğru çalışıp çalışmadığını kontrol etmeye yardımcı olabilir.
 
-Entegrasyon testi, sözleşmenizin modüler bir mimariyi benimsemesi ya da yürütülmesi sırasında diğer zincir içi sözleşmelerle arayüz oluşturması açısından kullanışlıdır. Entegrasyon testlerini yürütmenin bir yolu, blok zincirini belirli bir yükseklikte ([Ganache](https://trufflesuite.com/docs/ganache/) veya [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks) gibi bir araç kullanarak) [çatallamak](/glossary/#fork) ve sözleşmeniz ile dağıtılmış sözleşmeler arasındaki etkileşimleri simüle etmektir.
+Entegrasyon testi, sözleşmenizin modüler bir mimariyi benimsemesi ya da yürütülmesi sırasında diğer zincir içi sözleşmelerle arayüz oluşturması açısından kullanışlıdır. Entegrasyon testlerini yürütmenin bir yolu, blok zincirini belirli bir yükseklikte veya [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks) gibi bir araç kullanarak) [çatallamak](/glossary/#fork) ve sözleşmeniz ile dağıtılmış sözleşmeler arasındaki etkileşimleri simüle etmektir.
 
 Çatallanmış blokzincir, ana ağa benzer şekilde davranır ve ilişkili durumları ve bakiyeleri bulunan hesaplara sahiptir. Ancak yalnızca ayrıştırılmış bir yerel geliştirme ortamı olarak işlev görür, yani işlemler için gerçek Ether'e ihtiyacınız olmaz ve yaptığınız değişiklikler gerçek Ethereum ağını etkilemez.
 
@@ -255,8 +254,6 @@ En önemli fark, hata ödül programlarının daha geniş bir geliştirici/hacke
 
 - **[OpenZeppelin Test Yardımcıları](https://github.com/OpenZeppelin/openzeppelin-test-helpers)** - _Ethereum akıllı sözleşme testi için sav kütüphanesi. Sözleşmelerinizin beklendiği gibi davrandığından emin olun!_
 
-- **[Truffle Testleri](https://hardhat.org/hardhat-runner/docs/guides/test-contracts#testing-contracts)** - _Sözleşmelerinizi test etmeyi kolaylaştıran, otomatikleştirilmiş bir test çerçevesi._
-
 - **[Brownie birim test çerçevesi](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Brownie, minimum kodla küçük testler yazmanıza olanak tanıyan, büyük projeler için iyi ölçeklenen ve oldukça genişletilebilir, zengin özelliklere sahip bir test çerçevesi olan Pytest'i kullanır._
 
 - **[Foundry Testleri](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry, basit birim testleri, gaz optimizasyon kontrolleri ve sözleşme bulanıklaştırma gerçekleştirebilen hızlı ve esnek bir Ethereum test çerçevesi olan Forge'u barındırır._
@@ -287,13 +284,11 @@ En önemli fark, hata ödül programlarının daha geniş bir geliştirici/hacke
 
 ## İlgili öğreticiler {#related-tutorials}
 
-- [Truffle testleri için Travis veya Circle Continuous Integration (CI) nasıl kurulur?](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/)
 - [Farklı test ürünlerine genel bakış ve ürünlerin karşılaştırılması](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Akıllı sözleşmeleri test etmek için Echidna nasıl kullanılır](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [Manticore kullanarak akıllı sözleşme hataları nasıl bulunur?](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Akıllı sözleşme hatalarını bulmak için Slither nasıl kullanılır](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Solidity sözleşmeleri test etmek için nasıl taklit edilir?](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [Truffle Testlerinden OpenZeppelin Test Ortamı'na nasıl geçiş yapılır?](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
 - [Sözleşmeler ağa dağıtıldıktan sonra nasıl test edilir?](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
 
 ## Daha fazla bilgi {#further-reading}

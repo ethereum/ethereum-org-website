@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 @import "@docsearch/css";
+@import "@/styles/colors.css";
+@import "@/styles/semantic-tokens.css";
 @import "@/styles/fonts.css";
 @import "@/styles/docsearch.css";
 
@@ -11,115 +13,35 @@
     --font-inter: Inter, sans-serif;
     --font-mono: "IBM Plex Mono", Courier, monospace;
 
-    /* Primitive Color Scheme */
-    --gray-100: #f7f7f7;
-    --gray-150: #f2f2f2;
-    --gray-200: #e7e7e7;
-    --gray-300: #c8c8c8;
-    --gray-400: #8c8c8c;
-    --gray-500: #616161;
-    --gray-600: #333333;
-    --gray-700: #222222;
-    --gray-800: #1b1b1b;
-    --gray-900: #141414;
-
-    --blue-50: #f6f6ff;
-    --blue-100: #ebebff;
-    --blue-200: #d6d6ff;
-    --blue-300: #9999ff;
-    --blue-400: #5555ff;
-    --blue-500: #1c1cff;
-    --blue-600: #000066;
-    --blue-700: #0000a3;
-    --blue-800: #000066;
-    --blue-900: #000029;
-
-    --orange-50: #fff3ed;
-    --orange-100: #ffe5d6;
-    --orange-200: #ffcbad;
-    --orange-300: #ffb18f;
-    --orange-400: #ff985c;
-    --orange-500: #ff7324;
-    --orange-550: #df5a0e;
-    --orange-600: #b84300;
-    --orange-700: #7a2d00;
-    --orange-800: #521e00;
-    --orange-900: #2f1000;
-
-    --red-100: #f7c8c8;
-    --red-500: #b80000;
-    /* ! Deprecating 900 */
-    --red-900: #180c0c;
-
-    --green-100: #ddf4e4;
-    /* ! Deprecating 400 */
-    --green-400: #48bb78;
-    --green-500: #0a7146;
-    /* ! Deprecating 900 */
-    --green-900: #0a160e;
-
-    --yellow-200: #fff8df;
-    --yellow-500: #bd8400;
-
     /* Semantic Colors: Light mode */
-    --primary: var(--blue-500);
-    --primary-high-contrast: var(--blue-800);
-    --primary-low-contrast: var(--blue-100);
-    --primary-hover: var(--blue-400);
-    --primary-visited: var(--blue-700);
     /* ! Deprecating primary-light */
     --primary-light: var(--blue-100);
     /* ! Deprecating primary-dark */
     --primary-dark: var(--blue-700);
-    /* ! Deprecating primary-pressed */
-    --primary-pressed: var(--blue-400);
-
-    --body: var(--gray-800);
-    --body-medium: var(--gray-500);
-    --body-light: var(--gray-200);
-    /* ! Deprecating body-inverted */
-    --body-inverted: var(--gray-100);
-
-    --background: white;
-    --background-highlight: var(--gray-100);
-
-    --disabled: var(--gray-400);
-
-    /* ! Deprecating neutral */
-    --neutral: white;
-
-    /* Complementary Set */
-    --attention: var(--yellow-500);
-    --attention-light: var(--yellow-200);
-    --attention-outline: var(--attention);
-
-    /* ? Keep "error" or rename to "fail" ? */
-    --error: var(--red-500);
-    --error-light: var(--red-100);
-    --error-outline: var(--error);
-    /* ! Deprecating error-neutral */
-    --error-neutral: var(--red-100);
-
-    --success: var(--green-500);
-    --success-light: var(--green-100);
-    --success-outline: var(--success);
-    /* ! Deprecating success-neutral */
-    --success-neutral: var(--green-100);
 
     /* Misc sematics: light mode */
     --tooltip-shadow: rgba(0, 0, 0, 0.24);
     --switch-background: var(--gray-300);
-    --hub-hero-content-bg: rgba(255, 255, 255, 0.8);
-    --main-gradient: linear-gradient(
+    --hub-hero-content: rgba(255, 255, 255, 0.8);
+    --gradient-main: linear-gradient(
       102.7deg,
       rgba(185, 185, 241, 0.2) 0%,
       rgba(84, 132, 234, 0.2) 51.56%,
       rgba(58, 142, 137, 0.2) 100%
     );
-    --feedback-gradient: var(--main-gradient);
+    --feedback-gradient: var(--gradient-main);
     --table-box-shadow: 0 14px 66px rgba(0, 0, 0, 0.07),
       0 10px 17px rgba(0, 0, 0, 0.03), 0 4px 7px rgba(0, 0, 0, 0.05);
     --table-item-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+    --gradient-banner: radial-gradient(
+      155% 100% at 50% 0%,
+      rgba(201, 179, 245, 0.16) 0%,
+      rgba(201, 179, 245, 0.48) 33%,
+      rgba(136, 170, 241, 0.16) 66%,
+      rgba(255, 255, 255, 0) 100%
+    );
+
     --banner-grid-gradient: linear-gradient(
       90deg,
       rgba(127, 127, 213, 0.2) 0%,
@@ -129,52 +51,18 @@
     --search-background: var(--background);
   }
 
-  [data-theme="dark"] {
+  .dark {
     /* Semantic Colors: Dark mode */
-    --primary: var(--orange-500);
-    --primary-high-contrast: var(--orange-100);
-    --primary-low-contrast: var(--orange-800);
-    --primary-hover: var(--orange-400);
-    --primary-visited: var(--orange-550);
     /* ! Deprecating primary-light */
-    --primary-light: var(--orange-100);
+    --primary-light: hsla(var(--orange-100));
     /* ! Deprecating primary-dark */
-    --primary-dark: var(--orange-800);
-    /* ! Deprecating primary-pressed */
-    --primary-pressed: var(--orange-800);
-
-    --body: var(--gray-100);
-    --body-medium: var(--gray-400);
-    --body-light: var(--gray-600);
-    /* ! Deprecating body-inverted */
-    --body-inverted: var(--gray-800);
-
-    --background: var(--gray-800);
-    --background-highlight: var(--gray-900);
-
-    --disabled: var(--gray-500);
-
-    /* ! Deprecating neutral */
-    --neutral: var(--gray-900);
-
-    /* Complementary Set */
-    --attention-outline: var(--attention-light);
-
-    --error: var(--red-500);
-    --error-light: var(--red-100);
-    --error-outline: var(--error);
-    /* ! Deprecating error-neutral */
-    --error-netural: var(--red-900);
-
-    --success-outline: var(--success-light);
-    /* ! Deprecating success-neutral */
-    --success-neutral: var(--green-900);
+    --primary-dark: hsla(var(--orange-800));
 
     /* Misc sematics: dark mode */
     --tooltip-shadow: rgba(255, 255, 255, 0.24);
     --switch-background: rgba(255, 255, 255, 0.24);
-    --hub-hero-content-bg: rgba(34, 34, 34, 0.8);
-    --main-gradient: linear-gradient(
+    --hub-hero-content: rgba(34, 34, 34, 0.8);
+    --gradient-main: linear-gradient(
       102.7deg,
       rgba(185, 185, 241, 0.2) 0%,
       rgba(84, 132, 234, 0.2) 51.56%,
@@ -200,11 +88,11 @@
 
 @layer base {
   body {
-    @apply bg-background font-body text-sm text-body lg:text-md;
+    @apply !bg-background font-body text-sm !text-body lg:text-md;
   }
 
   a {
-    @apply underline-offset-3 text-primary underline hover:text-primary-hover focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover;
+    @apply text-primary underline underline-offset-3 hover:text-primary-hover focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover;
   }
 
   h1,
@@ -277,4 +165,71 @@
       margin-bottom: calc(1.45rem / 2);
     }
   }
+}
+
+@layer components {
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    @apply bg-background-highlight;
+  }
+
+  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    @apply !relative;
+  }
+
+  .swiper-pagination {
+    @apply relative mx-auto mt-8 flex h-[26px] max-w-48 items-center justify-center rounded-full bg-background-highlight;
+  }
+
+  .css-posts-swiper .swiper-pagination {
+    @apply max-w-52 sm:max-w-40 lg:max-w-36;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet {
+    @apply bg-primary-high-contrast;
+  }
+
+  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
+    .swiper-pagination-bullet-active {
+    @apply bg-primary-hover;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply !h-6 !w-fit fill-primary px-2;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: calc(100% - 11px) !important;
+  --nav-inset: calc(50% - 6.5rem);
+}
+
+@media (min-width: theme("screens.sm")) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    --nav-inset: calc(50% - 5rem);
+  }
+}
+
+@media (min-width: theme("screens.lg")) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    --nav-inset: calc(50% - 4.5rem);
+  }
+}
+
+.swiper-button-next {
+  inset-inline-end: var(--nav-inset) !important;
+  inset-inline-start: auto !important;
+}
+
+.swiper-button-prev {
+  inset-inline-end: auto !important;
+  inset-inline-start: var(--nav-inset) !important;
+}
+
+.swiper-slide-shadow {
+  background: transparent !important;
 }

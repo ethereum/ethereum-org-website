@@ -7,12 +7,12 @@
 }
 
 .DocSearch-Button-Container svg {
-  @apply size-3.5;
+  @apply size-3.5 group-hover:rotate-12 transition-transform duration-500 group-hover:transition-transform group-hover:duration-500;
 }
 
 .DocSearch-Search-Icon,
 .DocSearch-Button-Placeholder {
-  @apply text-body;
+  @apply text-body group-hover:text-primary-hover;
 }
 
 .DocSearch-Button-Placeholder {
@@ -38,7 +38,8 @@
   --docsearch-modal-width: 650px;
   --docsearch-hit-height: fit-content;
 }
-html[data-theme="dark"] {
+
+.dark {
   --docsearch-modal-background: theme(backgroundColor.background.DEFAULT);
   --docsearch-highlight-color: theme(colors.primary.hover);
 }
@@ -57,7 +58,7 @@ html[data-theme="dark"] {
 .DocSearch-SearchBar form {
   --docsearch-searchbox-shadow: inset 0 0 0 1px
     theme(colors.primary.high-contrast);
-  @apply bg-neutral py-3;
+  @apply bg-body-inverse py-3;
 }
 .DocSearch-SearchBar label,
 .DocSearch-SearchBar input {
@@ -109,11 +110,6 @@ html[data-theme="dark"] {
 
 .DocSearch-Hit-icon {
   @apply text-body;
-}
-
-.DocSearch-Hit-Select-Icon:focus,
-.DocSearch-Hit-Select-Icon:hover {
-  @apply text-switch-background;
 }
 
 .DocSearch-Footer {

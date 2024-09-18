@@ -75,23 +75,17 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
         <div className="flex gap-4">
           {!feedbackSubmitted ? (
             <>
-              <Button
-                variant="outline-color"
-                onClick={() => handleSubmit(true)}
-              >
+              <Button variant="outline" onClick={() => handleSubmit(true)}>
                 <FeedbackThumbsUpIcon className="h-6 w-6" />
                 {t("yes")}
               </Button>
-              <Button
-                variant="outline-color"
-                onClick={() => handleSubmit(false)}
-              >
+              <Button variant="outline" onClick={() => handleSubmit(false)}>
                 <FeedbackThumbsUpIcon className="-scale-y-100" />
                 {t("no")}
               </Button>
             </>
           ) : (
-            <Button variant="outline-color" onClick={handleSurveyOpen}>
+            <Button variant="outline" onClick={handleSurveyOpen}>
               {t("feedback-widget-thank-you-cta")}
             </Button>
           )}
