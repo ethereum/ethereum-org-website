@@ -34,7 +34,7 @@ This project follows the [all-contributors](https://allcontributors.org/docs/en/
 ### 1. Submit an issue
 
 - Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
-- Comment on the issue (if you'd like to be assigned to it) - that way [our team can assign the issue to you](https://github.blog/2019-06-25-assign-issues-to-issue-commenters/).
+- Comment on the issue (if you'd like to be assigned to it) - this way [our team can assign the issue to you](https://github.blog/2019-06-25-assign-issues-to-issue-commenters/).
 
 More information on the issue creation process, and expectations around creating issues can be [found here](docs/github-issue-triage-process.md).
 
@@ -97,7 +97,7 @@ yarn dev
   - Explore scripts within `package.json` for more build options
   - Get **faster** production builds by building only one language. E.g. in your `.env` file, set `BUILD_LOCALES=en` to build the content only in English
   - To build the site in other selected languages too, you need to set them in `BUILD_LOCALES`, eg: `BUILD_LOCALES=en,es` if you also want to build only English (required) and Spanish.
-  - To build all languages, simply comment this line out with a hash mark, eg: `# BUILD_LOCALES=`
+  - To build all languages, simply comment out this line with a hash mark, eg: `# BUILD_LOCALES=`
 
 By default the script will build all the languages (complete list in `i18n.config.json`).
 
