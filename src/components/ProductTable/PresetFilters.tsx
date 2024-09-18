@@ -41,7 +41,9 @@ const PresetFilters = ({
                     ? "border-primary"
                     : "border-transparent"
                 } duration-50 group cursor-pointer rounded bg-background-highlight transition-all hover:border-primary-hover`}
-                onClick={() => handleSelectPreset(idx)}
+                onClick={() => {
+                  handleSelectPreset(idx)
+                }}
                 onKeyUp={(e) => {
                   if (e.key === "Enter") {
                     handleSelectPreset(idx)
@@ -55,7 +57,7 @@ const PresetFilters = ({
                     aria-label={`${preset.title} filter`}
                     className="hidden"
                     checked={activePresets.includes(idx)}
-                    onChange={() => handleSelectPreset(idx)}
+                    onClick={(e) => e.stopPropagation()}
                   />
                   <label
                     htmlFor={`radio-${idx}`}
