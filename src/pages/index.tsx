@@ -251,8 +251,8 @@ const HomePage = ({
 
           {/* Mobile */}
           <Swiper
-            options={{ effect: "cards" }}
-            className={cn(
+            effect="cards"
+            containerClassName={cn(
               "lg:hidden", // Mobile only
               "[&_.swiper-slide]:overflow-visible [&_.swiper-slide]:rounded-2xl [&_.swiper-slide]:shadow-card-hover",
               "[&_.swiper]:mx-auto [&_.swiper]:mt-4 [&_.swiper]:!flex [&_.swiper]:h-fit [&_.swiper]:max-w-128 [&_.swiper]:flex-col [&_.swiper]:items-center"
@@ -582,18 +582,16 @@ const HomePage = ({
           <p>{t("page-index:page-index-posts-subtitle")}</p>
 
           <Swiper
-            className="mt-4 md:mt-16"
-            options={{
-              spaceBetween: 32,
-              breakpoints: {
-                [breakpointAsNumber.sm]: {
-                  slidesPerView: 2,
-                  slidesPerGroup: 2,
-                },
-                [breakpointAsNumber.lg]: {
-                  slidesPerView: 3,
-                  slidesPerGroup: 3,
-                },
+            containerClassName="mt-4 md:mt-16"
+            spaceBetween={32}
+            breakpoints={{
+              [breakpointAsNumber.sm]: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+              },
+              [breakpointAsNumber.lg]: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
               },
             }}
           >
