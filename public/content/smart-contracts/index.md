@@ -1,5 +1,5 @@
 ---
-title: "Smart contracts: What are they and benefits"
+title: Smart contracts
 description: A non-technical introduction to smart contracts
 lang: en
 ---
