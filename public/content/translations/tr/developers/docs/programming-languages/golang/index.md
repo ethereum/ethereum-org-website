@@ -23,7 +23,6 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 
 ## Başlangıç Seviyesi Makaleler ve Kitaplar {#beginner-articles-and-books}
 
-- [Ethereum İstemcinizi Seçmek](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Geth ile Başlarken](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
 - [Ethereum'a bağlanmak için Golang kullanmak](https://www.youtube.com/watch?v=-7uChuO_VzM)
 - [Golang Kullanarak Ethereum Akıllı Sözleşmeleri Dağıtmak](https://www.youtube.com/watch?v=pytGqQmDslE)

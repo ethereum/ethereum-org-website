@@ -10,7 +10,7 @@ lang: en
 
 Are you looking for the official Ethereum support? The first thing you should know is that Ethereum is decentralized. This means no central organization, entity, or person owns Ethereum, and because of this, no official support channels exist.
 
-Understanding the decentralized nature of Ethereum is vital because anyone claiming to be official support for Ethereum is probably trying to scam you! The best protection against scammers is educating yourself and taking security seriously.
+Understanding the decentralized nature of Ethereum is vital because **anyone claiming to be official support for Ethereum is probably trying to scam you!** The best protection against scammers is educating yourself and taking security seriously.
 
 <DocLink href="/security/">
   Ethereum security and scam prevention

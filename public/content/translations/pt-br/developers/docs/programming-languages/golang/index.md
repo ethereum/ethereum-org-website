@@ -23,7 +23,6 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 ## Artigos e livros para iniciantes {#beginner-articles-and-books}
 
-- [Escolhendo um Cliente Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Introdução ao Geth](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
 - [Use Golang para conectar à Ethereum](https://www.youtube.com/watch?v=-7uChuO_VzM)
 - [Implantar Contratos Inteligentes Ethereum Usando Golang](https://www.youtube.com/watch?v=pytGqQmDslE)

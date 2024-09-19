@@ -7,7 +7,6 @@ tags:
   - "solidity"
   - "kontrak pintar"
   - "penyimpanan"
-  - "truffle"
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com
@@ -23,16 +22,6 @@ Pada tanggal [22 November 2016](https://blog.ethereum.org/2016/11/18/hard-fork-n
 Batasan ini diperkenalkan untuk mencegah serangan layanan penolakan (DOS). Setiap pemanggilan terhadap kontrak relatif berbiaya gas murah. Namun, dampak pemanggilan kontrak bagi node Ethereum meningkat secara tidak proporsional bergantung pada ukuran kode kontrak yang dipanggil (pembacaan kode dari disk, pemrosesan kode sebelumnya, penambahan data ke bukti Merkle). Setiap kali Anda berhadapan dengan situasi semacam itu, di mana penyerang membutuhkan sedikit sumber daya untuk menghasilkan banyak pekerjaan bagi yang lain, Anda berpotensi menghadapi serangan DOS.
 
 Pada awalnya ini tidak menjadi masalah, karena batasan ukuran kontrak dasar seseorang adalah batasan gas blok. Jelas sebuah kontrak perlu digunakan dalam transaksi yang menampung semua kode bita kontrak. Jika Anda kemudian memasukkan hanya satu transaksi tersebut ke dalam sebuah blok, Anda dapat menggunakan semua gas tersebut, tapi itu tak terbatas. Namun, masalah dalam kasus ini adalah bahwa batasan gas blok berubah dari waktu ke waktu dan secara teori tidak terbatas. Saat peluncuran EIP-170, batasan gas blok hanya 4,7 juta. Sekarang batasan gas blok baru [meningkat lagi](https://etherscan.io/chart/gaslimit) pada bulan lalu ke angka 11,9 juta.
-
-## Menghadapi pertempuran {#taking-on-the-fight}
-
-Sayangnya, tidak ada cara mudah untuk mendapatkan ukuran kode bita kontrak Anda. Sebuat peralatan hebat yang dapat membantu Anda untuk ini adalah plugin [truffle-contract-size](https://github.com/IoBuilders/truffle-contract-size) jika Anda menggunakan Truffle.
-
-1. `npm install truffle-contract-size`
-2. Tambahkan plugin ke _truffle-config.js_: `plugins: ["truffle-contract-size"]`
-3. Jalankan `truffle run contract-size`
-
-Ini akan membantu Anda menemukan bagaimana perubahan Anda berdampak terhadap ukuran kontrak total.
 
 Berikutnya kita akan melihat beberapa metode yang diurutkan berdasarkan potensi dampaknya. Bayangkan ini seperti upaya mengurangi berat badan. Strategi terbaik bagi seseorang untuk mencapai berat badan idealnya (dalam kasus kita 24kb) adalah memusatkan perhatian pada metode yang berdampak besar terlebih dahulu. Dalam kebanyakan kasus, hanya memperbaiki pola makan Anda akan membawa Anda pada sasaran, tetapi terkadang Anda memerlukan upaya yang sedikit lebih banyak. Lalu Anda mungkin menambahkan beberapa jenis latihan (dampak sedang) atau bahkan mengonsumsi suplemen (dampak kecil).
 

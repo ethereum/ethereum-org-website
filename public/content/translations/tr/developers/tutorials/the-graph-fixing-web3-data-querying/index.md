@@ -120,7 +120,7 @@ Manifesto, yapılandırma dosyamızdır ve şunları tanımlar:
 - fonksiyon çağrıları veya bloklar gibi dinlenecek diğer şeyler
 - çağrılan eşleştirme fonksiyonları (aşağıdaki `mapping.ts`'e bakın)
 
-Burada birden fazla sözleşme ve işleyici tanımlayabilirsiniz. Tipik bir kurulum, Truffle/Hardhat projesinin içinde kendi deposuna sahip bir alt grafik klasörüne sahip olacaktır. Ardından ABI'ye kolayca başvurabilirsiniz.
+Burada birden fazla sözleşme ve işleyici tanımlayabilirsiniz. Tipik bir kurulum, Hardhat projesinin içinde kendi deposuna sahip bir alt grafik klasörüne sahip olacaktır. Ardından ABI'ye kolayca başvurabilirsiniz.
 
 Kolaylık sağlamak için mustache gibi bir şablon aracı da kullanmak isteyebilirsiniz. Ardından bir `subgraph.template.yaml` oluşturur ve en son dağıtımlara göre adresleri eklersiniz. Daha gelişmiş örnek bir kurulum için, örnek olarak [Aave alt grafik deposuna](https://github.com/aave/aave-protocol/tree/master/thegraph) bakınız.
 

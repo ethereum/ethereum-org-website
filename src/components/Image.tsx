@@ -33,10 +33,16 @@ const imageProps: (keyof NextImageProps)[] = [
   "useMap",
 ]
 
+const isStaticImageData = (src: ImageProps["src"]): src is StaticImageData => {
+  return typeof src === "object" && "blurDataURL" in src
+}
+
 const DefaultNextImage = (props: ImageProps) => {
-  const hasBlurData = !!(
-    (props.src as StaticImageData).blurDataURL || props.blurDataURL
-  )
+  if (isStaticImageData(props.src)) {
+    return <NextImage placeholder="blur" {...props} />
+  }
+
+  const hasBlurData = !!props.blurDataURL
   return <NextImage placeholder={hasBlurData ? "blur" : "empty"} {...props} />
 }
 

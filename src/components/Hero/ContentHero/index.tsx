@@ -29,6 +29,7 @@ const ContentHero = (props: ContentHeroProps) => {
       >
         <Box
           order={{ lg: 1 }}
+          py={{ base: 0, lg: 12 }}
           height={{
             base: "300px",
             md: "400px",
@@ -47,6 +48,7 @@ const ContentHero = (props: ContentHeroProps) => {
             boxSize="full"
             style={{ objectFit: "contain" }}
             flex={{ base: "1 1 100%", md: "none" }}
+            maxHeight={451}
           />
         </Box>
         <Stack p={{ base: "8", lg: "16" }} spacing="9" justify="center">

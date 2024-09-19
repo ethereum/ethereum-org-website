@@ -162,7 +162,7 @@ const GasPage = () => {
         title={t("page-gas-meta-title")}
         description={t("page-gas-meta-description")}
       />
-      <Box background="layer2Gradient" width="full">
+      <div className="w-full bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20">
         <Box pb={8}>
           <PageHero
             content={{
@@ -177,7 +177,7 @@ const GasPage = () => {
             }}
           />
         </Box>
-      </Box>
+      </div>
       <Content mb={{ base: 16, lg: 32 }} mt={16}>
         <Flex
           direction={{ base: "column", lg: "row" }}

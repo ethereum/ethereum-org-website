@@ -120,7 +120,7 @@ El manifiesto es nuestro archivo de configuración y define:
 - otros aspectos a escuchar, como llamadas a funciones o bloques
 - las funciones de mapeo invocadas (ver `mapping.ts` abajo)
 
-Puede definir múltiples contratos y manejadores (handlers) aquí. Una configuración típica tendría una carpeta de subgraphs dentro del proyecto Truffle/Hardhat con su propio repositorio. Luego puede referenciar fácilmente el ABI.
+Puede definir múltiples contratos y manejadores (handlers) aquí. Una configuración típica tendría una carpeta de subgraphs dentro del proyecto Hardhat con su propio repositorio. Luego puede referenciar fácilmente el ABI.
 
 Por razones de conveniencia también puede querer usar una herramienta de plantillas como mustache. Luego creará un `subgraph.template.yaml` e insertará las direcciones con base en las últimas implementaciones. Para una configuración de ejemplo más avanzada, vea por ejemplo el [repositorio de subgraphs de Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 

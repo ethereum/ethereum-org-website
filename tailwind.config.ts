@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss"
 import plugin from "tailwindcss/plugin"
 
-import { screens } from "./tailwind/screens"
+import { screens } from "./src/lib/utils/screen"
 
 const config = {
   // TODO: Move to "class" strategy after removing Chakra
@@ -218,13 +218,13 @@ const config = {
             "active-background": "hsla(var(--menu-4-active-background))",
           },
         },
-      },
 
-      /** @deprecated */
-      "switch-background": "hsla(var(--switch-background))", // TODO: Migrate
-      "tooltip-shadow": "var(--tooltip-shadow)",
-      "hub-hero-content-bg": "var(--hub-hero-content-bg)",
-      "search-background": "var(--search-background)",
+        /** @deprecated */
+        "switch-background": "hsla(var(--switch-background))", // TODO: Migrate
+        "tooltip-shadow": "var(--tooltip-shadow)",
+        "hub-hero-content": "var(--hub-hero-content)",
+        "search-background": "var(--search-background)",
+      },
 
       backgroundImage: {
         "gradient-main": "var(--gradient-main)",
@@ -233,6 +233,7 @@ const config = {
         "feedback-gradient": "var(--feedback-gradient)",
         "banner-grid-gradient": "var(--banner-grid-gradient)",
         "radial-a": "var(--radial-a)",
+        "linear-bug-bounty-title": "var(--linear-bug-bounty-title)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",

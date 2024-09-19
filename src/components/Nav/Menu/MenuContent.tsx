@@ -13,7 +13,8 @@ export const navMenuVariants = tv({
   slots: {
     base: "text-body",
     item: "has-[button[data-state=open]]:rounded-s-md has-[button[data-state=open]]:rounded-e-none has-[button[data-state=open]]:-me-2 has-[button[data-state=open]]:pe-2",
-    link: "w-full relative py-4 hover:text-menu-active [&:hover_p]:text-menu-active focus-visible:text-menu-active [&:focus-visible_p]:text-menu-active hover:outline-0 rounded-md hover:shadow-none focus-visible:outline-0 focus-visible:rounded-md focus-visible:shadow-none",
+    link: "group w-full relative py-4 hover:text-menu-active [&:hover_p]:text-menu-active focus-visible:text-menu-active [&:focus-visible_p]:text-menu-active hover:outline-0 rounded-md hover:shadow-none focus-visible:outline-0 focus-visible:rounded-md focus-visible:shadow-none",
+    linkSubtext: "text-sm",
     submenu: "grid h-full w-full grid-cols-1",
   },
   variants: {
@@ -22,21 +23,25 @@ export const navMenuVariants = tv({
         submenu: "grid-cols-3 bg-menu-1-background",
         item: "has-[button[data-state=open]]:bg-menu-1-active-background",
         link: "data-[active=true]:bg-menu-1-active-background hover:bg-menu-1-active-background focus-visible:bg-menu-1-active-background",
+        linkSubtext: "group-[data-active=true]:text-menu-1-subtext",
       },
       2: {
         submenu: "grid-cols-2 bg-menu-2-background",
         item: "has-[button[data-state=open]]:bg-menu-2-active-background",
         link: "hover:bg-menu-2-active-background focus-visible:bg-menu-2-active-background data-[active=true]:bg-menu-2-active-background",
+        linkSubtext: "group-[data-active=true]:text-menu-2-subtext",
       },
       3: {
         submenu: "grid-cols-1 bg-menu-3-background",
         item: "has-[button[data-state=open]]:bg-menu-3-active-background",
         link: "data-[active=true]:bg-menu-3-active-background hover:bg-menu-3-active-background",
+        linkSubtext: "group-[data-active=true]:text-menu-3-subtext",
       },
       4: {
         submenu: "grid-cols-1 bg-menu-4-background",
         item: "has-[button[data-state=open]]:bg-menu-4-active-background",
         link: "data-[active=true]:bg-menu-4-active-background hover:bg-menu-4-active-background",
+        linkSubtext: "group-[data-active=true]:text-menu-4-subtext",
       },
     },
   },

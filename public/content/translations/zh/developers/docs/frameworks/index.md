@@ -93,12 +93,6 @@ lang: zh
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie 当前未维护**
 
-**Truffle -** **_开发环境、测试框架、构建管道及其他工具。_**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-- **Truffle 开发已结束** - [了解更多](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
-
 **OpenZeppelin SDK -** **_终极智能合约工具包：一套帮助你开发、编译、升级、部署智能合约并与之交互的工具。_**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
