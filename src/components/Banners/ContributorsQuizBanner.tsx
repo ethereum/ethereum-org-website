@@ -1,19 +1,21 @@
-import { Box, Flex, FlexProps, Heading, Text } from "@chakra-ui/react"
+import { Box, Flex, Heading, Text } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
+
+import { cn } from "@/lib/utils/cn"
 
 import { ButtonLink } from "../Buttons"
 
 import PeopleLearning from "@/public/images/people-learning.png"
 
 // TODO: refactor to use CalloutBanner component
-function ContributorsQuizBanner(props: FlexProps) {
+function ContributorsQuizBanner(props: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <Flex
-      as="aside"
-      flexDir={{ base: "column", md: "row-reverse" }}
-      bg="layer2Gradient"
-      borderRadius="base"
+    <aside
+      className={cn(
+        "flex flex-col rounded md:flex-row",
+        "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+      )}
       {...props}
     >
       <Flex
@@ -57,7 +59,7 @@ function ContributorsQuizBanner(props: FlexProps) {
           </ButtonLink>
         </Box>
       </Flex>
-    </Flex>
+    </aside>
   )
 }
 

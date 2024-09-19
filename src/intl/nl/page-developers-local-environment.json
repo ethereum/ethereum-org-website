@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "Stel u lokale ontwikkelingsomgeving in",
   "page-local-environment-solidity-template-desc": "Een GitHub-template voor vooraf gebouwde instellingen voor uw Solidity slimme contracten. Bevat een lokaal Hardhat-netwerk, Waffle voor tests, Ethers voor portemonnee-implementaties, en meer.",
   "page-local-environment-solidity-template-logo-alt": "Logo van Solidity-template",
-  "page-local-environment-truffle-desc": "De Truffle Suite helpt ontwikkelaars op de meest comfortabele manier ideeën om te zetten in dapps.",
-  "page-local-environment-truffle-logo-alt": "Truffle logo",
   "page-local-environment-waffle-desc": "De meest geavanceerde testbibliotheek voor slimme contracten. Gebruik alleen of met Scaffold-eth of Hardhat.",
   "page-local-environment-waffle-logo-alt": "Waffle logo"
 }

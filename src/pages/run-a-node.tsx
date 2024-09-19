@@ -19,7 +19,6 @@ import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 import { Button, ButtonLink } from "@/components/Buttons"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
-import ExpandableInfo from "@/components/ExpandableInfo"
 import FeedbackCard from "@/components/FeedbackCard"
 import {
   DecentralizationGlyphIcon,
@@ -31,7 +30,7 @@ import {
   SovereigntyGlyphIcon,
   VoteGlyphIcon,
 } from "@/components/icons/run-a-node"
-import { Image } from "@/components/Image"
+import { Image, TwImage } from "@/components/Image"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
@@ -40,13 +39,16 @@ import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget as QuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
+import { Stack, VStack } from "@/components/ui/flex"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { InfoGrid } from "@/layouts/Staking"
+import { InfoGrid } from "@/layouts/md/Staking"
 import community from "@/public/images/enterprise-eth.png"
 import hackathon from "@/public/images/hackathon_transparent.png"
 import impact from "@/public/images/impact_transparent.png"
@@ -55,8 +57,6 @@ import Dapptap from "@/public/images/run-a-node/dapptap.svg"
 import ethereumInside from "@/public/images/run-a-node/ethereum-inside.png"
 import Terminal from "@/public/images/run-a-node/terminal.svg"
 import leslie from "@/public/images/upgrades/upgrade_rhino.png"
-
-const Divider = () => <Box my="16" w="10%" h="1" bg="homeDivider" />
 
 const GappedPage = (props: ChildOnlyProp) => (
   <Flex
@@ -85,10 +85,6 @@ const GappedContent = (props: ChildOnlyProp) => (
     py="4"
     {...props}
   />
-)
-
-const HeroContainer = (props: ChildOnlyProp) => (
-  <Box w="full" bg="runNodeGradient" {...props} />
 )
 
 const Content = (props: BoxProps) => <Box w="full" py="4" px="8" {...props} />
@@ -284,10 +280,6 @@ const StakingCalloutContainer = (props: ChildOnlyProp) => (
   />
 )
 
-const StrongParagraph = (props: BoxProps) => (
-  <Text fontSize="150%" fontWeight="semibold" {...props} />
-)
-
 const H2 = (props: HeadingProps) => (
   <OldHeading
     fontSize={{ base: "2xl", md: "2rem" }}
@@ -443,11 +435,11 @@ const RunANodePage = () => {
         description={t("page-run-a-node-meta-description")}
         image="/images/run-a-node/ethereum-inside.png"
       />
-      <HeroContainer>
-        <Box pb="8">
+      <div className="w-full bg-gradient-to-br from-accent-b/5 via-primary/10 to-accent-b/15 dark:from-accent-b/20 dark:via-primary/15 dark:to-accent-a/20">
+        <div className="pb-8">
           <PageHero content={heroContent} isReverse />
-        </Box>
-      </HeroContainer>
+        </div>
+      </div>
 
       <Content id="what-is-a-node">
         <TwoColumnContent>
@@ -474,27 +466,39 @@ const RunANodePage = () => {
       </Content>
 
       <FlexContent>
-        <ExpandableInfo
-          alignSelf="center"
-          width={{ base: "full", md: "90%" }}
-          mb={{ base: 0, md: 4 }}
-          image={impact}
-          title={<Translation id="page-run-a-node:page-run-a-node-who-title" />}
-          contentPreview={
-            <Translation id="page-run-a-node:page-run-a-node-who-preview" />
-          }
-          background="runNodeGradient2"
-          forceOpen
+        <VStack
+          className={cn(
+            "relative mb-0 w-full gap-0 self-center rounded-sm border p-6 md:mb-4 md:w-[90%]",
+            "bg-gradient-to-br from-blue-500/20 from-10% to-pink-600/20 to-90%"
+          )}
         >
-          <Text>
-            <Translation id="page-run-a-node:page-run-a-node-who-copy-1" />
-          </Text>
-          <Text>{t("page-run-a-node-who-copy-2")}</Text>
-          <Text>{t("page-run-a-node-who-copy-3")}</Text>
-          <StrongParagraph>
-            {t("page-run-a-node-who-copy-bold")}
-          </StrongParagraph>
-        </ExpandableInfo>
+          <Stack className="flex-col items-center justify-between gap-8 md:flex-row md:gap-12">
+            <TwImage
+              src={impact}
+              alt=""
+              sizes="300px"
+              style={{ width: "300px", height: "auto" }}
+            />
+            <div className="me-4">
+              <h2 className="mb-5 mt-4 text-2xl font-semibold leading-[1.4] md:text-[2rem]">
+                <Translation id="page-run-a-node:page-run-a-node-who-title" />
+              </h2>
+              <p className="body-medium mb-0">
+                <Translation id="page-run-a-node:page-run-a-node-who-preview" />
+              </p>
+            </div>
+          </Stack>
+          <div className="mt-8 border-t pt-6">
+            <p className="mb-6">
+              <Translation id="page-run-a-node:page-run-a-node-who-copy-1" />
+            </p>
+            <p className="mb-6">{t("page-run-a-node-who-copy-2")}</p>
+            <p className="mb-6">{t("page-run-a-node-who-copy-3")}</p>
+            <p className="mb-6 text-[150%] font-semibold leading-none">
+              {t("page-run-a-node-who-copy-bold")}
+            </p>
+          </div>
+        </VStack>
       </FlexContent>
 
       <Content>

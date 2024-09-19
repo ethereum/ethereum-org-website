@@ -32,6 +32,7 @@ import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallou
 import StakingHierarchy from "@/components/Staking/StakingHierarchy"
 import StakingStatsBox from "@/components/Staking/StakingStatsBox"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 import { Flex, Stack, VStack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
@@ -57,10 +58,6 @@ type BenefitsType = {
 
 const PageContainer = (props: ChildOnlyProp) => (
   <VStack className="mx-auto w-full gap-0" {...props} />
-)
-
-const Divider = () => (
-  <div className="my-8 h-1 w-[10%] self-center bg-primary-high-contrast" />
 )
 
 const HeroStatsWrapper = (props: ChildOnlyProp) => (

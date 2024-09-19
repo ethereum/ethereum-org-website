@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "अपना स्थानीय डेवलपमेंट परिवेश स्थापित करें",
   "page-local-environment-solidity-template-desc": "आपके Solidity स्मार्ट अनुबंधों के लिए प्री-बिल्ट सेटअप के लिए GitHub टेम्पलेट। एक Hardhat स्थानीय नेटवर्क, परीक्षण के लिए Waffle, वॉलेट कार्यान्वयन के लिए Ethers, और भी बहुत कुछ शामिल है।",
   "page-local-environment-solidity-template-logo-alt": "Solidity टेम्पलेट का लोगो",
-  "page-local-environment-truffle-desc": "Truffle सुइट डेवलपर को विचार से लेकर डेप को यथासंभव सहजता से प्रदान करता है।",
-  "page-local-environment-truffle-logo-alt": "Truffle का लोगो",
   "page-local-environment-waffle-desc": "स्मार्ट अनुबंध के लिए सबसे उन्नत परीक्षण लाइब्रेरी। अकेले या स्कैफोल्ड-ETH या Hardhat के साथ उपयोग करें।",
   "page-local-environment-waffle-logo-alt": "Waffle का लोगो"
 }

@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "Hazie gburugburu mpaghara obodo gị",
   "page-local-environment-solidity-template-desc": "Ihe nlere GitHub maka ntọlitela mbụ maka nkwekọrịta smart Solidity gị. Gụnyere netwọk mpaghara Hardhat, Waffle maka ule, Ethers maka mmejuputa obere akpa, na ndị ọzọ.",
   "page-local-environment-solidity-template-logo-alt": "Akara ngosi Solidity template",
-  "page-local-environment-truffle-desc": "Truffle Suite na-enweta ndị mmepe site na echiche ruo dapp dị ka ntụsara ahụ dị ka o kwere mee.",
-  "page-local-environment-truffle-logo-alt": "Akara ngosi Truffle",
   "page-local-environment-waffle-desc": "Ule lib kacha elu maka smart contracts. Jiri naanị ya ma ọ bụ Scaffold-eth ma ọ bụ Hardhat.",
   "page-local-environment-waffle-logo-alt": "Akara ngosi Waffle"
 }

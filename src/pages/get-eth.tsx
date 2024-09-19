@@ -24,11 +24,11 @@ import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
-import { Divider } from "@/components/MdComponents"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -470,9 +470,7 @@ const GetEthPage = ({
       </TwoColumnContent>
       <Divider />
       <CalloutBanner
-        mx={4}
-        mt={24}
-        mb={40}
+        className="mx-4 mb-40 mt-24"
         titleKey="page-get-eth:page-get-eth-use-your-eth"
         descriptionKey="page-get-eth:page-get-eth-use-your-eth-dapps"
         image={dapps}
