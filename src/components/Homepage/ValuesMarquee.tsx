@@ -7,6 +7,7 @@ import Tooltip from "@/components/Tooltip"
 
 import { cn } from "@/lib/utils/cn"
 import { isMobile } from "@/lib/utils/isMobile"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { type Pairing, useValuesMarquee } from "../Homepage/useValuesMarquee"
 import { Stack } from "../ui/flex"
@@ -37,6 +38,13 @@ const Item = ({
   <>
     <Tooltip
       container={container}
+      onBeforeOpen={() => {
+        trackCustomEvent({
+          eventCategory: "Homepage",
+          eventAction: "internet_changing",
+          eventName: label,
+        })
+      }}
       content={
         <Stack>
           <h3 className="text-md text-body-medium dark:text-gray-300">
