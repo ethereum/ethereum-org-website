@@ -593,7 +593,7 @@ const HomePage = ({
                   </div>
                 )}
               </WindowBox>
-            </div>{" "}
+            </div>
           </SectionContent>
         </Section>
 
@@ -619,7 +619,15 @@ const HomePage = ({
             }}
           >
             {rssItems.map(({ pubDate, title, source, link, imgSrc }) => (
-              <Card key={title} href={link}>
+              <Card
+                key={title}
+                href={link}
+                customEventOptions={{
+                  eventCategory: "Homepage",
+                  eventAction: "blogs_posts",
+                  eventName: source,
+                }}
+              >
                 <CardBanner>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={imgSrc} alt="" loading="lazy" />
@@ -645,7 +653,15 @@ const HomePage = ({
             <p className="text-lg">{t("page-index:page-index-posts-action")}</p>
             <div className="flex flex-wrap gap-x-6 gap-y-4">
               {blogLinks.map(({ name, href }) => (
-                <Link href={href} key={name}>
+                <Link
+                  href={href}
+                  key={name}
+                  customEventOptions={{
+                    eventCategory: "Homepage",
+                    eventAction: "blogs_read_more",
+                    eventName: name!,
+                  }}
+                >
                   {name}
                 </Link>
               ))}
