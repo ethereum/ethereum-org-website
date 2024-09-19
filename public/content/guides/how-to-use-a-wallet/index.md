@@ -1,5 +1,5 @@
 ---
-title: How to use Ethereum Wallets | Step by Step
+title: How to use a wallet
 description: A guide explaining how to send, receive tokens and connect to web3 projects.
 lang: en
 ---
