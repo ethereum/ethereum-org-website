@@ -1,18 +1,9 @@
 import { cva, VariantProps } from "class-variance-authority"
-import type { FC, ReactNode, SVGProps } from "react"
+import type { FC, SVGProps } from "react"
 
 import { cn } from "@/lib/utils/cn"
 
-import { BaseLink } from "../ui/Link"
-
-type SvgButtonLinkProps = {
-  Svg: FC<SVGProps<SVGElement>>
-  label?: string
-  children: ReactNode
-  href: string
-  className?: string
-  size?: number
-}
+import { BaseLink, LinkProps } from "../ui/Link"
 
 const variants = cva("flex items-center gap-3.5", {
   variants: {
@@ -28,6 +19,12 @@ const variants = cva("flex items-center gap-3.5", {
 
 type Variants = VariantProps<typeof variants>
 
+export type SvgButtonLinkProps = LinkProps & {
+  Svg: FC<SVGProps<SVGElement>>
+  label?: string
+  size?: number
+} & Variants
+
 const SvgButtonLink = ({
   label,
   children,
@@ -35,7 +32,7 @@ const SvgButtonLink = ({
   className,
   variant,
   ...props
-}: SvgButtonLinkProps & Variants) => (
+}: SvgButtonLinkProps) => (
   <BaseLink
     className={cn(
       "group rounded-2xl no-underline focus:outline focus:outline-4 focus:outline-offset-8",

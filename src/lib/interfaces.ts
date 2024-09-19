@@ -181,4 +181,5 @@ export interface ITitleCardItem {
 export interface CodeExample extends ITitleCardItem {
   codeLanguage: string
   code: string
+  eventName: string
 }
