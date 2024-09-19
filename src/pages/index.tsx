@@ -13,7 +13,9 @@ import type {
   RSSItem,
 } from "@/lib/types"
 
-import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
+import SvgButtonLink, {
+  type SvgButtonLinkProps,
+} from "@/components/Buttons/SvgButtonLink"
 import { ChevronNext } from "@/components/Chevron"
 import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
@@ -203,28 +205,27 @@ const HomePage = ({
       <HomeHero heroImg={Hero} className="w-full" />
       <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
-          {subHeroCTAs.map(({ label, description, href, className, Svg }) => (
-            <Fragment key={label}>
-              <SvgButtonLink
-                Svg={Svg}
-                href={href}
-                label={label}
-                className={cn("xl:hidden", className)}
-                variant="col"
+          {subHeroCTAs.map(({ label, description, href, className, Svg }) => {
+            const Link = (
+              props: Omit<
+                SvgButtonLinkProps,
+                "Svg" | "href" | "label" | "children"
               >
+            ) => (
+              <SvgButtonLink Svg={Svg} href={href} label={label} {...props}>
                 <p className="text-body">{description}</p>
               </SvgButtonLink>
-              <SvgButtonLink
-                Svg={Svg}
-                href={href}
-                label={label}
-                className={cn("hidden xl:block", className)}
-                variant="row"
-              >
-                <p className="text-body">{description}</p>
-              </SvgButtonLink>
-            </Fragment>
-          ))}
+            )
+            return (
+              <Fragment key={label}>
+                <Link className={cn("xl:hidden", className)} variant="col" />
+                <Link
+                  className={cn("hidden xl:block", className)}
+                  variant="row"
+                />
+              </Fragment>
+            )
+          })}
         </div>
 
         {/* Use Cases - A new way to use the internet */}
