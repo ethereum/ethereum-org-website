@@ -1,6 +1,5 @@
 import { BaseHTMLAttributes } from "react"
 import { motion } from "framer-motion"
-import dynamic from "next/dynamic"
 import {
   Item,
   List,
@@ -16,6 +15,7 @@ import { MAIN_NAV_ID, SECTION_LABELS } from "@/lib/constants"
 import { Button } from "../../ui/buttons/Button"
 import type { NavSections } from "../types"
 
+import MenuContent from "./MenuContent"
 import { useNavMenu } from "./useNavMenu"
 
 type NavMenuProps = BaseHTMLAttributes<HTMLDivElement> & {
@@ -25,8 +25,6 @@ type NavMenuProps = BaseHTMLAttributes<HTMLDivElement> & {
 const Menu = ({ sections, ...props }: NavMenuProps) => {
   const { activeSection, direction, handleSectionChange, isOpen } =
     useNavMenu(sections)
-
-  const MenuContent = dynamic(() => import("./MenuContent"))
 
   return (
     <div {...props}>

@@ -31,6 +31,7 @@ import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import { Simulator } from "@/components/Simulator"
 import { SIMULATOR_ID } from "@/components/Simulator/constants"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -123,9 +124,6 @@ const ChecklistItem = (props: HorizontalCardProps) => (
     mb={4}
     {...props}
   />
-)
-const Divider = (props: BoxProps) => (
-  <Box my={16} w="10%" h="0.25rem" bgColor="homeDivider" {...props} />
 )
 
 const CalloutCardContainer = (props: ChildOnlyProp) => (
@@ -494,6 +492,7 @@ const WalletsPage = () => {
       </TwoColumnContent>
       <Content>
         <Divider />
+
         <H2>{t("page-wallets-explore")}</H2>
         <CalloutCardContainer>
           <Callout

@@ -1,11 +1,10 @@
 import { useRouter } from "next/router"
+import type { HTMLAttributes } from "react"
 import {
   Badge,
   Box,
   type BoxProps,
-  Divider,
   Flex,
-  type HeadingProps,
   Kbd,
   Text,
   type TextProps,
@@ -32,10 +31,11 @@ import {
   Heading3 as MdHeading3,
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
-import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
 import TooltipLink from "@/components/TooltipLink"
 import TutorialMetadata from "@/components/TutorialMetadata"
+import { Divider } from "@/components/ui/divider"
+import { mdxTableComponents } from "@/components/ui/Table"
 import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"
@@ -65,54 +65,35 @@ const ContentContainer = (props: ContentContainerProps) => {
   )
 }
 
-const Heading1 = (props: HeadingProps) => (
+const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading1
-    fontSize={{ base: "1.75rem", lg: "2.5rem" }}
-    fontFamily="monospace"
-    textTransform="uppercase"
+    className="font-monospace uppercase max-lg:text-[1.75rem]"
     {...props}
   />
 )
 
-const Heading2 = (props: HeadingProps) => (
+const Heading2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading2
-    fontSize={{ base: "2xl", md: "2rem" }}
-    fontFamily="monospace"
-    textTransform="uppercase"
-    scrollMarginTop={40}
-    mt={12}
+    className="mt-12 scroll-mt-40 font-monospace uppercase max-md:text-2xl"
     {...props}
   />
 )
 
-const Heading3 = (props: HeadingProps) => (
+const Heading3 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading3
-    fontWeight={{ base: "semibold" }}
-    fontSize={{ base: "1rem", md: "1.5rem" }}
-    scrollMarginTop={40}
+    className="scroll-mt-40 font-semibold max-md:text-md"
     {...props}
   />
 )
 
-const Heading4 = (props: HeadingProps) => (
+const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading4
-    fontWeight={{ base: "semibold" }}
-    fontSize={{ base: "1rem", md: "1.25rem" }}
-    scrollMarginTop={40}
+    className="scroll-mt-40 font-semibold max-md:text-md"
     {...props}
   />
 )
 
-const StyledDivider = (props) => (
-  <Divider
-    my={16}
-    w="10%"
-    h="1"
-    opacity="1"
-    backgroundColor="homeDivider"
-    {...props}
-  />
-)
+const StyledDivider = (props) => <Divider {...props} />
 
 const Paragraph = (props: TextProps) => (
   <Text as="p" mt={8} mb={4} mx={0} color="text300" fontSize="md" {...props} />

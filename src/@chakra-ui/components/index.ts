@@ -8,7 +8,6 @@ import { Checkbox } from "./Checkbox"
 import {
   closeButtonDefaultTheme,
   codeDefaultTheme,
-  dividerDefaultTheme,
   drawerDefaultTheme,
   formDefaultTheme,
   formLabelDefaultTheme,
@@ -22,7 +21,6 @@ import { Modal } from "./Modal"
 import { Popover } from "./Popover"
 import { Progress } from "./Progress"
 import { Radio } from "./Radio"
-import { ReactSelect } from "./ReactSelect"
 import { Switch } from "./Switch"
 import { Table } from "./Table"
 import { Tabs } from "./Tabs"
@@ -40,7 +38,6 @@ export default {
   Checkbox,
   CloseButton: closeButtonDefaultTheme,
   Code: codeDefaultTheme,
-  Divider: dividerDefaultTheme,
   Drawer: drawerDefaultTheme,
   Form: formDefaultTheme,
   FormLabel: formLabelDefaultTheme,
@@ -52,7 +49,6 @@ export default {
   Popover,
   Progress,
   Radio,
-  ReactSelect,
   Spinner: spinnerDefaultTheme,
   Switch,
   Table,

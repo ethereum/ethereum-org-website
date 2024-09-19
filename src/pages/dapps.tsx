@@ -14,8 +14,6 @@ import {
   Box,
   Button,
   type ButtonProps,
-  Divider as ChakraDivider,
-  type DividerProps,
   Flex,
   type FlexProps,
   Heading,
@@ -48,6 +46,7 @@ import ProductListComponent, {
   type ProductListProps,
 } from "@/components/ProductList"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -136,19 +135,6 @@ const Page = (props: ChildOnlyProp & FlexProps) => (
     {...props}
   />
 )
-
-const Divider = (props: DividerProps) => (
-  <ChakraDivider
-    opacity={1}
-    my={16}
-    w="10%"
-    borderBottomWidth="0.25rem"
-    borderColor="homeDivider"
-    {...props}
-  />
-)
-
-const CenterDivider = () => <Divider display="flex" justifyContent="center" />
 
 const Content = (props: ChildOnlyProp) => (
   <Box py={4} px={8} w="full" {...props} />
@@ -1584,9 +1570,7 @@ const DappsPage = () => {
               </Text>
             </Box>
             <CalloutBanner
-              mt={32}
-              mx={0}
-              mb={{ base: 0, lg: 16 }}
+              className="m-0 mx-0 mt-32 lg:mb-16"
               titleKey={"page-dapps:page-dapps-wallet-callout-title"}
               descriptionKey={
                 "page-dapps:page-dapps-wallet-callout-description"
@@ -1828,7 +1812,7 @@ const DappsPage = () => {
         )}
         {/* General content for all categories */}
         <Content>
-          <CenterDivider />
+          <Divider />
           {categories[selectedCategory].benefits && (
             <Box mt={12}>
               <H2>

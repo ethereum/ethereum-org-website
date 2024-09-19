@@ -22,7 +22,6 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 ## Artículos para principiantes {#beginner-articles}
 
-- [Seleccionar a un cliente de Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [El cliente Ethereum de Rust](https://openethereum.github.io/)\***Note que OpenEthereum [ha quedado obsoleto](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) y no se mantiene.** Úselo con precaución y preferiblemente cambie a otro cliente.
 - [Enviar una transacción a Ethereum mediante Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Tutorial paso a paso sobre cómo escribir contratos en Rust Wasm para Kovan](https://github.com/paritytech/pwasm-tutorial)
