@@ -21,6 +21,7 @@ import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import { useHome } from "@/components/Homepage/useHome"
+import ValuesMarquee from "@/components/Homepage/ValuesMarquee"
 import AngleBrackets from "@/components/icons/angle-brackets.svg"
 import Calendar from "@/components/icons/calendar.svg"
 import CalendarAdd from "@/components/icons/calendar-add.svg"
@@ -384,7 +385,8 @@ const HomePage = ({
           </SectionContent>
         </Section>
 
-        {/* TODO: Add "The Internet Is Changing" section */}
+        {/* Values - The Internet Is Changing */}
+        <ValuesMarquee />
 
         {/* Builders - Blockchain's biggest builder community */}
         <Section id="builders" variant="responsiveFlex">
@@ -789,11 +791,10 @@ const HomePage = ({
               )}
             </div>
           </div>
-          <div className="flex justify-start py-8">
+          <div className="flex py-8 sm:justify-center">
             <ButtonLink
               href="/community/events/"
               size="lg"
-              className="mx-auto"
               customEventOptions={{
                 eventCategory: "Homepage",
                 eventAction: "events",

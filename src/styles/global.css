@@ -233,3 +233,9 @@
 .swiper-slide-shadow {
   background: transparent !important;
 }
+
+@layer utilities {
+  .animate-pause {
+    animation-play-state: paused;
+  }
+}
