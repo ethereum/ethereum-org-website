@@ -369,6 +369,11 @@ const HomePage = ({
                     variant="outline"
                     isSecondary
                     className="max-sm:self-start"
+                    customEventOptions={{
+                      eventCategory: "Homepage",
+                      eventAction: "learn",
+                      eventName: "learn",
+                    }}
                   >
                     {t("page-index:page-index-popular-topics-action")}{" "}
                     <ChevronNext />
@@ -396,7 +401,16 @@ const HomePage = ({
               {t("page-index:page-index-builders-description")}
             </p>
             <div className="flex flex-wrap gap-6 py-8">
-              <ButtonLink href="/developers/" size="lg" className="w-fit">
+              <ButtonLink
+                href="/developers/"
+                size="lg"
+                className="w-fit"
+                customEventOptions={{
+                  eventCategory: "Homepage",
+                  eventAction: "builders",
+                  eventName: "developers",
+                }}
+              >
                 {t("page-index:page-index-builders-action-primary")}{" "}
                 <ChevronNext />
               </ButtonLink>
@@ -406,6 +420,11 @@ const HomePage = ({
                 variant="outline"
                 isSecondary
                 className="w-fit"
+                customEventOptions={{
+                  eventCategory: "Homepage",
+                  eventAction: "builders",
+                  eventName: "dev docs",
+                }}
               >
                 {t("page-index:page-index-builders-action-secondary")}
               </ButtonLink>
@@ -528,7 +547,15 @@ const HomePage = ({
               <p>{t("page-index:page-index-community-description-3")}</p>
             </div>
             <div className="flex flex-wrap gap-3 py-8">
-              <ButtonLink href="/community/" size="lg">
+              <ButtonLink
+                href="/community/"
+                size="lg"
+                customEventOptions={{
+                  eventCategory: "Homepage",
+                  eventAction: "community",
+                  eventName: "community",
+                }}
+              >
                 {t("page-index:page-index-community-action")} <ChevronNext />
               </ButtonLink>
               <div className="flex gap-3">
@@ -538,6 +565,11 @@ const HomePage = ({
                   variant="outline"
                   isSecondary
                   hideArrow
+                  customEventOptions={{
+                    eventCategory: "Homepage",
+                    eventAction: "community",
+                    eventName: "discord",
+                  }}
                 >
                   <FaDiscord />
                 </ButtonLink>
@@ -547,6 +579,11 @@ const HomePage = ({
                   variant="outline"
                   isSecondary
                   hideArrow
+                  customEventOptions={{
+                    eventCategory: "Homepage",
+                    eventAction: "community",
+                    eventName: "github",
+                  }}
                 >
                   <FaGithub />
                 </ButtonLink>
@@ -711,6 +748,11 @@ const HomePage = ({
                     className={cn(
                       idx === 0 && "col-span-1 sm:col-span-2 md:col-span-1"
                     )}
+                    customEventOptions={{
+                      eventCategory: "Homepage",
+                      eventAction: "posts",
+                      eventName: title,
+                    }}
                   >
                     <CardBanner>
                       {imageUrl ? (
@@ -748,7 +790,16 @@ const HomePage = ({
             </div>
           </div>
           <div className="flex justify-start py-8">
-            <ButtonLink href="/community/events/" size="lg" className="mx-auto">
+            <ButtonLink
+              href="/community/events/"
+              size="lg"
+              className="mx-auto"
+              customEventOptions={{
+                eventCategory: "Homepage",
+                eventAction: "events",
+                eventName: "community events",
+              }}
+            >
               {t("page-index:page-index-events-action")} <ChevronNext />
             </ButtonLink>
           </div>
