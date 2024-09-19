@@ -6,6 +6,7 @@ import EthGlyphSolid from "@/components/icons/eth-glyph-solid.svg"
 import Tooltip from "@/components/Tooltip"
 
 import { cn } from "@/lib/utils/cn"
+import { isMobile } from "@/lib/utils/isMobile"
 
 import { type Pairing, useValuesMarquee } from "../Homepage/useValuesMarquee"
 import { Stack } from "../ui/flex"
@@ -109,7 +110,10 @@ const Row = forwardRef<HTMLDivElement, RowProps>(
               <div
                 key={idx}
                 className={cn(
-                  "group-hover:animate-pause flex min-w-fit items-center space-x-10 p-6 motion-reduce:w-full motion-reduce:animate-none motion-reduce:justify-center",
+                  "flex min-w-fit items-center space-x-10 p-6 motion-reduce:w-full motion-reduce:animate-none motion-reduce:justify-center",
+                  isMobile()
+                    ? "group-has-[button:hover]:animate-pause"
+                    : "group-hover:animate-pause",
                   toRight ? "animate-scroll-right" : "animate-scroll-left"
                 )}
               >
