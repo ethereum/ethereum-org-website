@@ -53,6 +53,7 @@ import { cn } from "@/lib/utils/cn"
 import { isValidDate } from "@/lib/utils/date"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { polishRSSList } from "@/lib/utils/rss"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { breakpointAsNumber } from "@/lib/utils/screen"
@@ -408,7 +409,7 @@ const HomePage = ({
                 Svg={AngleBrackets}
               >
                 {/* Desktop */}
-                {codeExamples.map(({ title, description }, idx) => (
+                {codeExamples.map(({ title, description, eventName }, idx) => (
                   <button
                     key={title}
                     className={cn(
@@ -417,7 +418,14 @@ const HomePage = ({
                         idx === activeCode &&
                         "bg-background-highlight"
                     )}
-                    onClick={() => toggleCodeExample(idx)}
+                    onClick={() => {
+                      toggleCodeExample(idx)
+                      trackCustomEvent({
+                        eventCategory: "Homepage",
+                        eventAction: "Code Examples",
+                        eventName,
+                      })
+                    }}
                   >
                     <p className="font-bold">{title}</p>
                     <p className="text-start text-sm text-body-medium">

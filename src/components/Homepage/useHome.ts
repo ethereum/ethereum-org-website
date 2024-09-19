@@ -53,6 +53,7 @@ export const useHome = () => {
       ),
       codeLanguage: "language-solidity",
       code: SimpleWalletContent,
+      eventName: "bank",
     },
     {
       title: t("page-index:page-index-developers-code-example-title-1"),
@@ -61,6 +62,7 @@ export const useHome = () => {
       ),
       codeLanguage: "language-solidity",
       code: SimpleTokenContent,
+      eventName: "token",
     },
     {
       title: t("page-index:page-index-developers-code-example-title-2"),
@@ -69,6 +71,7 @@ export const useHome = () => {
       ),
       codeLanguage: "language-javascript",
       code: CreateWalletContent,
+      eventName: "wallet",
     },
     {
       title: t("page-index:page-index-developers-code-example-title-3"),
@@ -77,6 +80,7 @@ export const useHome = () => {
       ),
       codeLanguage: "language-solidity",
       code: SimpleDomainRegistryContent,
+      eventName: "dns",
     },
   ]
 
