@@ -149,7 +149,7 @@ const ValuesMarquee = () => {
   }, [])
 
   return (
-    <Section id="values" className="!sm:my-64 !my-48">
+    <Section id="values" className="!sm:my-64 !my-48 scroll-m-48">
       <SectionContent className="flex flex-col items-center text-center">
         <SectionTag>{t("page-index:page-index-values-tag")}</SectionTag>
         <SectionHeader>
