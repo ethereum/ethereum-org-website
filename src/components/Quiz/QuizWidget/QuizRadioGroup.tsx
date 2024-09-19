@@ -159,14 +159,20 @@ const CustomRadio = ({
             buttonBg,
             "hover:outline hover:outline-1 hover:outline-primary hover:data-[answer-visible]:outline-none",
             // TODO: Upon removing custom radio props, flip remove `data` for checked
-            "data-[checked]:data-[answer-visible]:bg-error data-[checked]:data-[answer-visible]:data-[selected-correct]:bg-success data-[checked]:text-white data-[checked]:not-[data-answer-visible]:bg-primary"
+            "data-[checked]:data-[answer-visible]:bg-error",
+            "data-[checked]:data-[answer-visible]:data-[selected-correct]:bg-success",
+            "data-[checked]:text-white",
+            "data-[checked]:not-[data-answer-visible]:bg-primary"
           )}
         >
           <Center
             className={cn(
               "size-6 flex-shrink-0 flex-grow-0 rounded-full bg-disabled text-white",
               // TODO: Upon removing custom radio props, flip remove `data` for checked
-              "[:is([data-checked],:hover)>&]:bg-purple-500 [:is([data-checked],:hover)[data-answer-visible]>&]:bg-white [:is([data-checked],:hover)[data-answer-visible]>&]:text-error [:is([data-checked],:hover)[data-answer-visible][data-selected-correct]>&]:text-success"
+              "[:is([data-checked],:hover)_>_&]:bg-purple-500",
+              "[:is([data-checked],:hover)[data-answer-visible]_>_&]:bg-white",
+              "[:is([data-checked],:hover)[data-answer-visible]_>_&]:text-error",
+              "[:is([data-checked],:hover)[data-answer-visible][data-selected-correct]_>_&]:text-success"
             )}
           >
             <p className="text-lg font-bold leading-none">
