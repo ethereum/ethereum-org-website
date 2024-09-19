@@ -543,40 +543,50 @@ const HomePage = ({
                 Svg={Calendar}
               >
                 {calendar.length > 0 ? (
-                  calendar.map(({ date, title, calendarLink }) => (
-                    <div
-                      key={title}
-                      className="flex flex-col justify-between gap-6 border-t px-6 py-4 xl:flex-row"
-                    >
-                      <div className="flex flex-col gap-y-0.5 text-center text-base sm:text-start">
-                        <a
-                          href={calendarLink}
-                          className="text-sm font-bold text-body no-underline hover:underline"
-                        >
-                          {title}
-                        </a>
-                        <p className="italic text-body-medium">
-                          {new Intl.DateTimeFormat(locale, {
-                            month: "long",
-                            day: "2-digit",
-                            year: "numeric",
-                            hour: "numeric",
-                            minute: "numeric",
-                          }).format(new Date(date))}
-                        </p>
-                      </div>
-                      <ButtonLink
-                        className="h-fit w-full text-nowrap px-5 sm:w-fit xl:self-center"
-                        size="md"
-                        variant="ghost"
-                        href={calendarLink}
-                        hideArrow
+                  calendar.map(({ date, title, calendarLink }) => {
+                    const customEventOptions = {
+                      eventCategory: "Homepage",
+                      eventAction: "Community Events Widget",
+                      eventName: "upcoming",
+                    }
+                    return (
+                      <div
+                        key={title}
+                        className="flex flex-col justify-between gap-6 border-t px-6 py-4 xl:flex-row"
                       >
-                        <CalendarAdd />{" "}
-                        {t("page-index:page-index-calendar-add")}
-                      </ButtonLink>
-                    </div>
-                  ))
+                        <div className="flex flex-col gap-y-0.5 text-center text-base sm:text-start">
+                          <Link
+                            href={calendarLink}
+                            className="text-sm font-bold text-body no-underline hover:underline"
+                            customEventOptions={customEventOptions}
+                            hideArrow
+                          >
+                            {title}
+                          </Link>
+                          <p className="italic text-body-medium">
+                            {new Intl.DateTimeFormat(locale, {
+                              month: "long",
+                              day: "2-digit",
+                              year: "numeric",
+                              hour: "numeric",
+                              minute: "numeric",
+                            }).format(new Date(date))}
+                          </p>
+                        </div>
+                        <ButtonLink
+                          className="h-fit w-full text-nowrap px-5 sm:w-fit xl:self-center"
+                          size="md"
+                          variant="ghost"
+                          href={calendarLink}
+                          hideArrow
+                          customEventOptions={customEventOptions}
+                        >
+                          <CalendarAdd />{" "}
+                          {t("page-index:page-index-calendar-add")}
+                        </ButtonLink>
+                      </div>
+                    )
+                  })
                 ) : (
                   <div className="flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row">
                     {t("page-index:page-index-calendar-fallback")}
