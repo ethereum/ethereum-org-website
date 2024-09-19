@@ -1,7 +1,10 @@
 import { useTranslation } from "next-i18next"
 import { EffectCards, Keyboard, Navigation, Pagination } from "swiper/modules"
-import { Swiper as SwiperParent, SwiperSlide } from "swiper/react"
-import type { SwiperOptions } from "swiper/types"
+import {
+  Swiper as SwiperParent,
+  type SwiperProps as SwiperParentProps,
+  SwiperSlide,
+} from "swiper/react"
 
 import { ChevronNext, ChevronPrev } from "@/components/Chevron"
 
@@ -12,23 +15,27 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/effect-cards"
 
-type SwiperProps = {
+type SwiperProps = SwiperParentProps & {
   children: React.ReactNode[]
-  options?: SwiperOptions
-  className?: string
-  swiperClass?: string
+  /**
+   * Additional class names for the container element.
+   */
+  containerClassName?: string
+  /**
+   * Additional class names for the slider element.
+   */
   sliderClass?: string
 }
+
 const Swiper = ({
   children,
-  className,
-  swiperClass,
+  containerClassName,
   sliderClass,
-  options,
+  ...props
 }: SwiperProps) => {
   const { t } = useTranslation("common")
   return (
-    <div className={cn("h-fit", className)}>
+    <div className={cn("h-fit", containerClassName)}>
       <SwiperParent
         navigation={{
           nextEl: ".swiper-button-next",
@@ -43,8 +50,7 @@ const Swiper = ({
         modules={[Navigation, Pagination, Keyboard, EffectCards]}
         slidesPerView={1}
         slidesPerGroup={1}
-        className={swiperClass}
-        {...options}
+        {...props}
       >
         {children.map((child, index) => (
           <SwiperSlide className={sliderClass} key={index}>
