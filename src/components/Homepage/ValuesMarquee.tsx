@@ -23,6 +23,7 @@ type ItemProps = React.HTMLAttributes<HTMLButtonElement> & {
   pairing: Pairing
   separatorClass: string
   container?: HTMLElement | null
+  label: string
 }
 
 const Item = ({
@@ -31,6 +32,7 @@ const Item = ({
   pairing,
   separatorClass,
   container,
+  label,
 }: ItemProps) => (
   <>
     <Tooltip
@@ -38,7 +40,7 @@ const Item = ({
       content={
         <Stack>
           <h3 className="text-md text-body-medium dark:text-gray-300">
-            {pairing.ethereum.label} x {pairing.legacy.label}
+            {label}
           </h3>
           <div className="flex flex-col gap-4">
             <div className="flex gap-2 text-body-medium">
@@ -57,7 +59,7 @@ const Item = ({
               <div className="p-1 text-lg">
                 <EthGlyphSolid />
               </div>
-              <div className="space-y-2">
+              <div className="flex flex-col gap-2">
                 {pairing.ethereum.content.map((line) => (
                   <p key={line} className="text-sm">
                     {line}
@@ -110,7 +112,7 @@ const Row = forwardRef<HTMLDivElement, RowProps>(
               <div
                 key={idx}
                 className={cn(
-                  "flex min-w-fit items-center space-x-10 p-6 motion-reduce:w-full motion-reduce:animate-none motion-reduce:justify-center",
+                  "flex min-w-fit items-center space-x-10 px-6 py-8 motion-reduce:w-full motion-reduce:animate-none motion-reduce:justify-center",
                   isMobile()
                     ? "group-has-[button:hover]:animate-pause"
                     : "group-hover:animate-pause",
@@ -167,6 +169,7 @@ const ValuesMarquee = () => {
           {pairings.map((pairing) => (
             <Item
               key={pairing.ethereum.label}
+              label={pairing.ethereum.label}
               container={containerFirst}
               pairing={pairing}
               separatorClass="bg-accent-a"
@@ -186,6 +189,7 @@ const ValuesMarquee = () => {
           {pairings.map((pairing) => (
             <Item
               key={pairing.legacy.label}
+              label={pairing.legacy.label}
               container={containerSecond}
               pairing={pairing}
               className="bg-gray-200/20 text-body-medium hover:bg-gray-600 hover:text-white dark:bg-gray-950 dark:text-body"
@@ -196,16 +200,16 @@ const ValuesMarquee = () => {
           ))}
         </Row>
 
-        <div className="absolute start-[50%] top-[50%] flex -translate-x-[50%] -translate-y-[50%] items-center overflow-hidden rounded-lg text-xs font-bold">
+        <div className="absolute start-[50%] top-[50%] flex -translate-x-[50%] -translate-y-[50%] items-center overflow-hidden rounded-lg text-sm font-bold">
           <p className="bg-gray-50 px-4 py-1 text-body-medium dark:bg-gray-800 dark:text-gray-200">
             {t("page-index-values-legacy")}
           </p>
 
           <div
             className={cn(
-              "border-t-[13px] border-t-blue-50 dark:border-t-blue-600",
+              "border-t-[15px] border-t-blue-50 dark:border-t-blue-600",
               "border-r-8 border-r-blue-50 dark:border-r-blue-600",
-              "border-b-[13px] border-b-gray-50 dark:border-b-gray-800",
+              "border-b-[15px] border-b-gray-50 dark:border-b-gray-800",
               "border-l-8 border-l-gray-50 dark:border-l-gray-800"
             )}
           />

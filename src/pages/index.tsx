@@ -697,8 +697,8 @@ const HomePage = ({
               )}
             </div>
           </div>
-          <div className="flex justify-start py-8">
-            <ButtonLink href="/community/events/" size="lg" className="mx-auto">
+          <div className="flex py-8 sm:justify-center">
+            <ButtonLink href="/community/events/" size="lg">
               {t("page-index:page-index-events-action")} <ChevronNext />
             </ButtonLink>
           </div>
