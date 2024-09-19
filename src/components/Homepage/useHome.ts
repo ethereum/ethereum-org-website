@@ -86,7 +86,8 @@ export const useHome = () => {
       description: t("page-index:page-index-cta-wallet-description"),
       href: "/wallets/find-wallet/",
       Svg: PickWalletIcon,
-      className: "text-primary hover:text-primary-hover", // TODO: Confirm hover style
+      className: "text-primary hover:text-primary-hover",
+      eventName: "find wallet",
     },
     {
       label: t("page-index:page-index-cta-get-eth-label"),
@@ -94,6 +95,7 @@ export const useHome = () => {
       href: "/get-eth/",
       Svg: EthTokenIcon,
       className: "text-accent-a hover:text-accent-a-hover",
+      eventName: "get eth",
     },
     {
       label: t("page-index:page-index-cta-networks-label"),
@@ -101,6 +103,7 @@ export const useHome = () => {
       href: "/layer-2/", // TODO: Update with new networks page when ready
       Svg: ChooseNetworkIcon,
       className: "text-accent-b hover:text-accent-b-hover",
+      eventName: "L2",
     },
     {
       label: t("page-index:page-index-cta-dapps-label"),
@@ -111,6 +114,7 @@ export const useHome = () => {
         "text-accent-c hover:text-accent-c-hover",
         isRtl && "[&_svg]:-scale-x-100"
       ),
+      eventName: "dapps",
     },
   ]
 

@@ -205,27 +205,39 @@ const HomePage = ({
       <HomeHero heroImg={Hero} className="w-full" />
       <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
-          {subHeroCTAs.map(({ label, description, href, className, Svg }) => {
-            const Link = (
-              props: Omit<
-                SvgButtonLinkProps,
-                "Svg" | "href" | "label" | "children"
-              >
-            ) => (
-              <SvgButtonLink Svg={Svg} href={href} label={label} {...props}>
-                <p className="text-body">{description}</p>
-              </SvgButtonLink>
-            )
-            return (
-              <Fragment key={label}>
-                <Link className={cn("xl:hidden", className)} variant="col" />
-                <Link
-                  className={cn("hidden xl:block", className)}
-                  variant="row"
-                />
-              </Fragment>
-            )
-          })}
+          {subHeroCTAs.map(
+            ({ label, description, href, className, Svg }, idx) => {
+              const Link = (
+                props: Omit<
+                  SvgButtonLinkProps,
+                  "Svg" | "href" | "label" | "children"
+                >
+              ) => (
+                <SvgButtonLink
+                  Svg={Svg}
+                  href={href}
+                  label={label}
+                  customEventOptions={{
+                    eventCategory: "Homepage",
+                    eventAction: "Top 4 CTAs",
+                    eventName: subHeroCTAs[idx].eventName,
+                  }}
+                  {...props}
+                >
+                  <p className="text-body">{description}</p>
+                </SvgButtonLink>
+              )
+              return (
+                <Fragment key={label}>
+                  <Link className={cn("xl:hidden", className)} variant="col" />
+                  <Link
+                    className={cn("hidden xl:block", className)}
+                    variant="row"
+                  />
+                </Fragment>
+              )
+            }
+          )}
         </div>
 
         {/* Use Cases - A new way to use the internet */}
