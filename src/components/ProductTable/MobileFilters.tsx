@@ -16,6 +16,8 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 interface MobileFiltersProps {
   filters: FilterOption[]
   setFilters: React.Dispatch<React.SetStateAction<FilterOption[]>>
@@ -50,7 +52,14 @@ const MobileFilters = ({
       <Drawer
         direction="left"
         open={mobileFiltersOpen}
-        onOpenChange={setMobileFiltersOpen}
+        onOpenChange={(open) => {
+          setMobileFiltersOpen(open)
+          trackCustomEvent({
+            eventCategory: "MobileFilterToggle",
+            eventAction: "Tap MobileFilterToggle",
+            eventName: `show mobile filters ${open}`,
+          })
+        }}
       >
         <DrawerTrigger className="px-4">
           <Button

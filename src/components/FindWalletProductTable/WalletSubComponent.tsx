@@ -14,6 +14,7 @@ import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
 
 import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleFormattedDate } from "@/lib/utils/time"
 
 const SocialLink = (props) => (
@@ -33,9 +34,15 @@ const SocialLink = (props) => (
 
 interface WalletSubComponentProps {
   wallet: WalletData
+  filters: FilterOption[]
+  listIdx: number
 }
 
-const WalletSubComponent = ({ wallet }: WalletSubComponentProps) => {
+const WalletSubComponent = ({
+  wallet,
+  filters,
+  listIdx,
+}: WalletSubComponentProps) => {
   const { locale } = useRouter()
   const { t } = useTranslation("page-wallets-find-wallet")
   const walletFiltersOptions: FilterOption[] = WalletFilters()
@@ -52,6 +59,12 @@ const WalletSubComponent = ({ wallet }: WalletSubComponentProps) => {
     locale as Lang,
     wallet.last_updated
   )
+
+  trackCustomEvent({
+    eventCategory: "WalletMoreInfo",
+    eventAction: "More info wallet",
+    eventName: `More info ${wallet.name}`,
+  })
 
   return (
     <div className="flex flex-row gap-2">
@@ -103,10 +116,7 @@ const WalletSubComponent = ({ wallet }: WalletSubComponentProps) => {
                             {item.filterLabel}{" "}
                             <Tooltip
                               content={
-                                <p className="text-body">
-                                  {/* TODO: Add filter description */}
-                                  {item.description}
-                                </p>
+                                <p className="text-body">{item.description}</p>
                               }
                             >
                               <span className="whitespace-nowrap">
@@ -127,16 +137,43 @@ const WalletSubComponent = ({ wallet }: WalletSubComponentProps) => {
             {t("page-find-wallet-social-links")}
           </h4>
           <div className="flex flex-row gap-4">
-            <SocialLink href={wallet.url} hideArrow>
+            <SocialLink
+              href={wallet.url}
+              hideArrow
+              customEventOptions={{
+                eventCategory: "WalletExternalLinkList",
+                eventAction: "Go to wallet",
+                eventName: `Website: ${wallet.name} ${listIdx}`,
+                eventValue: JSON.stringify(filters),
+              }}
+            >
               <FaGlobe size="2xl" />
             </SocialLink>
             {wallet.discord && (
-              <SocialLink href={wallet.discord} hideArrow>
+              <SocialLink
+                href={wallet.discord}
+                hideArrow
+                customEventOptions={{
+                  eventCategory: "WalletExternalLinkList",
+                  eventAction: "Go to wallet",
+                  eventName: `Discord: ${wallet.name} ${listIdx}`,
+                  eventValue: JSON.stringify(filters),
+                }}
+              >
                 <FaDiscord color="#7289da" size="2xl" />
               </SocialLink>
             )}
             {wallet.twitter && (
-              <SocialLink href={wallet.twitter} hideArrow>
+              <SocialLink
+                href={wallet.twitter}
+                hideArrow
+                customEventOptions={{
+                  eventCategory: "WalletExternalLinkList",
+                  eventAction: "Go to wallet",
+                  eventName: `Twitter: ${wallet.name} ${listIdx}`,
+                  eventValue: JSON.stringify(filters),
+                }}
+              >
                 <FaXTwitter color="#1da1f2" size="2xl" />
               </SocialLink>
             )}

@@ -28,6 +28,8 @@ import {
 import CheckboxFilterInput from "@/components/ProductTable/FilterInputs/CheckboxFilterInput"
 import SwitchFilterInput from "@/components/ProductTable/FilterInputs/SwitchFilterInput"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
 export const WalletFilters = (): FilterOption[] => {
@@ -50,7 +52,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-mobile")}`,
+                    eventName: `mobile ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -74,7 +83,24 @@ export const WalletFilters = (): FilterOption[] => {
                     itemIndex={itemIndex}
                     optionIndex={optionIndex}
                     inputState={inputState}
-                    updateFilterState={updateFilterState}
+                    updateFilterState={(
+                      filterIndex,
+                      itemIndex,
+                      newInputState,
+                      optionIndex
+                    ) => {
+                      trackCustomEvent({
+                        eventCategory: "WalletFilterSidebar",
+                        eventAction: `${t("page-find-wallet-android")}`,
+                        eventName: `android ${newInputState}`,
+                      })
+                      updateFilterState(
+                        filterIndex,
+                        itemIndex,
+                        newInputState,
+                        optionIndex
+                      )
+                    }}
                   />
                 )
               },
@@ -98,7 +124,24 @@ export const WalletFilters = (): FilterOption[] => {
                     itemIndex={itemIndex}
                     optionIndex={optionIndex}
                     inputState={inputState}
-                    updateFilterState={updateFilterState}
+                    updateFilterState={(
+                      filterIndex,
+                      itemIndex,
+                      newInputState,
+                      optionIndex
+                    ) => {
+                      trackCustomEvent({
+                        eventCategory: "WalletFilterSidebar",
+                        eventAction: `${t("page-find-wallet-iOS")}`,
+                        eventName: `iOS ${newInputState}`,
+                      })
+                      updateFilterState(
+                        filterIndex,
+                        itemIndex,
+                        newInputState,
+                        optionIndex
+                      )
+                    }}
                   />
                 )
               },
@@ -118,7 +161,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-desktop")}`,
+                    eventName: `desktop ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -142,7 +192,24 @@ export const WalletFilters = (): FilterOption[] => {
                     itemIndex={itemIndex}
                     optionIndex={optionIndex}
                     inputState={inputState}
-                    updateFilterState={updateFilterState}
+                    updateFilterState={(
+                      filterIndex,
+                      itemIndex,
+                      newInputState,
+                      optionIndex
+                    ) => {
+                      trackCustomEvent({
+                        eventCategory: "WalletFilterSidebar",
+                        eventAction: `${t("page-find-wallet-linux")}`,
+                        eventName: `linux ${newInputState}`,
+                      })
+                      updateFilterState(
+                        filterIndex,
+                        itemIndex,
+                        newInputState,
+                        optionIndex
+                      )
+                    }}
                   />
                 )
               },
@@ -166,7 +233,24 @@ export const WalletFilters = (): FilterOption[] => {
                     itemIndex={itemIndex}
                     optionIndex={optionIndex}
                     inputState={inputState}
-                    updateFilterState={updateFilterState}
+                    updateFilterState={(
+                      filterIndex,
+                      itemIndex,
+                      newInputState,
+                      optionIndex
+                    ) => {
+                      trackCustomEvent({
+                        eventCategory: "WalletFilterSidebar",
+                        eventAction: `${t("page-find-wallet-windows")}`,
+                        eventName: `windows ${newInputState}`,
+                      })
+                      updateFilterState(
+                        filterIndex,
+                        itemIndex,
+                        newInputState,
+                        optionIndex
+                      )
+                    }}
                   />
                 )
               },
@@ -190,7 +274,24 @@ export const WalletFilters = (): FilterOption[] => {
                     itemIndex={itemIndex}
                     optionIndex={optionIndex}
                     inputState={inputState}
-                    updateFilterState={updateFilterState}
+                    updateFilterState={(
+                      filterIndex,
+                      itemIndex,
+                      newInputState,
+                      optionIndex
+                    ) => {
+                      trackCustomEvent({
+                        eventCategory: "WalletFilterSidebar",
+                        eventAction: `${t("page-find-wallet-macOS")}`,
+                        eventName: `macOS ${newInputState}`,
+                      })
+                      updateFilterState(
+                        filterIndex,
+                        itemIndex,
+                        newInputState,
+                        optionIndex
+                      )
+                    }}
                   />
                 )
               },
@@ -210,7 +311,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-browser")}`,
+                    eventName: `browser ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -234,7 +342,24 @@ export const WalletFilters = (): FilterOption[] => {
                     itemIndex={itemIndex}
                     optionIndex={optionIndex}
                     inputState={inputState}
-                    updateFilterState={updateFilterState}
+                    updateFilterState={(
+                      filterIndex,
+                      itemIndex,
+                      newInputState,
+                      optionIndex
+                    ) => {
+                      trackCustomEvent({
+                        eventCategory: "WalletFilterSidebar",
+                        eventAction: `${t("page-find-wallet-chromium")}`,
+                        eventName: `chromium ${newInputState}`,
+                      })
+                      updateFilterState(
+                        filterIndex,
+                        itemIndex,
+                        newInputState,
+                        optionIndex
+                      )
+                    }}
                   />
                 )
               },
@@ -258,7 +383,24 @@ export const WalletFilters = (): FilterOption[] => {
                     itemIndex={itemIndex}
                     optionIndex={optionIndex}
                     inputState={inputState}
-                    updateFilterState={updateFilterState}
+                    updateFilterState={(
+                      filterIndex,
+                      itemIndex,
+                      newInputState,
+                      optionIndex
+                    ) => {
+                      trackCustomEvent({
+                        eventCategory: "WalletFilterSidebar",
+                        eventAction: `${t("page-find-wallet-firefox")}`,
+                        eventName: `firefox ${newInputState}`,
+                      })
+                      updateFilterState(
+                        filterIndex,
+                        itemIndex,
+                        newInputState,
+                        optionIndex
+                      )
+                    }}
                   />
                 )
               },
@@ -278,7 +420,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-hardware")}`,
+                    eventName: `hardware ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -330,7 +479,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-buy-crypto")}`,
+                    eventName: `buy_crypto ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -350,7 +506,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-sell-for-fiat")}`,
+                    eventName: `withdraw_crypto ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -376,7 +539,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-connect-to-dapps")}`,
+                    eventName: `connect_to_dapps ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -396,7 +566,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-nft-support")}`,
+                    eventName: `nft_support ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -416,7 +593,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-staking")}`,
+                    eventName: `staking ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -436,7 +620,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-layer-2")}`,
+                    eventName: `layer_2 ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -456,7 +647,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-swaps")}`,
+                    eventName: `swaps ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -476,7 +674,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-hardware-wallet-support")}`,
+                    eventName: `hardware_support ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -496,7 +701,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-ens-support")}`,
+                    eventName: `ens_support ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -522,7 +734,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-open-source")}`,
+                    eventName: `open_source ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -542,7 +761,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-non-custodial")}`,
+                    eventName: `non_custodial ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -568,7 +794,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-multisig")}`,
+                    eventName: `multisig ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -588,7 +821,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-social-recovery")}`,
+                    eventName: `social_recovery ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -614,7 +854,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-rpc-importing")}`,
+                    eventName: `rpc_importing ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -634,7 +881,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-token-importing")}`,
+                    eventName: `erc_20_support ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -654,7 +908,14 @@ export const WalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `advanced_features`,
+                    eventName: `gas_fee_customization ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },

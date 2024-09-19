@@ -23,6 +23,8 @@ import PresetFilters from "@/components/ProductTable/PresetFilters"
 import Table from "@/components/ProductTable/Table"
 import { Button } from "@/components/ui/buttons/Button"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 interface ProductTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
@@ -77,6 +79,11 @@ const ProductTable = ({
   // Update or remove preset filters
   const handleSelectPreset = (idx: number) => {
     if (activePresets.includes(idx)) {
+      trackCustomEvent({
+        eventCategory: "UserPersona",
+        eventAction: `${presetFilters[idx].title}`,
+        eventName: `${presetFilters[idx].title} false`,
+      })
       // Get filters that are true for the preset being removed
       const presetToRemove = presetFilters[idx].presetFilters
       const filtersToRemove = Object.keys(presetToRemove).filter(
@@ -104,6 +111,11 @@ const ProductTable = ({
       setActivePresets(activePresets.filter((item) => item !== idx))
     } else {
       const newActivePresets = activePresets.concat(idx)
+      trackCustomEvent({
+        eventCategory: "UserPersona",
+        eventAction: `${presetFilters[idx].title}`,
+        eventName: `${presetFilters[idx].title} true`,
+      })
       setActivePresets(newActivePresets)
 
       // Apply the filters for the selected preset
@@ -251,7 +263,14 @@ const ProductTable = ({
               <Button
                 variant="ghost"
                 className="block p-0 lg:hidden"
-                onClick={() => setMobileFiltersOpen(true)}
+                onClick={() => {
+                  trackCustomEvent({
+                    eventCategory: "MobileFilterToggle",
+                    eventAction: "Tap MobileFilterToggle - sticky",
+                    eventName: "show mobile filters true",
+                  })
+                  setMobileFiltersOpen(true)
+                }}
               >
                 <p className="text-md">
                   {`${t("table-filters")} (${activeFiltersCount})`}

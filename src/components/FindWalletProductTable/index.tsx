@@ -8,6 +8,8 @@ import { WalletFilters } from "@/components/FindWalletProductTable/data/WalletFi
 import { WalletPersonaPresets } from "@/components/FindWalletProductTable/data/WalletPersonaPresets"
 import ProductTable from "@/components/ProductTable"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import FindWalletsNoResults from "./FindWalletsNoResults"
 import WalletSubComponent from "./WalletSubComponent"
 
@@ -51,6 +53,11 @@ const FindWalletProductTable = ({ wallets }) => {
   // Reset filters
   const resetFilters = () => {
     setFilters(walletFilterOptions)
+    trackCustomEvent({
+      eventCategory: "WalletFilterSidebar",
+      eventAction: "Reset button",
+      eventName: "reset_click",
+    })
   }
 
   return (
@@ -61,7 +68,13 @@ const FindWalletProductTable = ({ wallets }) => {
       presetFilters={walletPersonas}
       resetFilters={resetFilters}
       setFilters={setFilters}
-      subComponent={(wallet) => <WalletSubComponent wallet={wallet} />}
+      subComponent={(wallet, listIdx) => (
+        <WalletSubComponent
+          wallet={wallet}
+          filters={filters}
+          listIdx={listIdx}
+        />
+      )}
       noResultsComponent={() => (
         <FindWalletsNoResults resetFilters={resetFilters} />
       )}

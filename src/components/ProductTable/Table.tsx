@@ -59,7 +59,7 @@ const Table = ({
       </TableHeader>
       <TableBody>
         {table.getRowModel().rows?.length ? (
-          table.getRowModel().rows.map((row) => (
+          table.getRowModel().rows.map((row, idx) => (
             <>
               <TableRow
                 key={row.id}
@@ -81,7 +81,7 @@ const Table = ({
               {row.getIsExpanded() && (
                 <TableRow className={`bg-body-inverse`}>
                   <TableCell colSpan={row.getAllCells().length}>
-                    {subComponent && subComponent(row.original)}
+                    {subComponent && subComponent(row.original, idx)}
                   </TableCell>
                 </TableRow>
               )}

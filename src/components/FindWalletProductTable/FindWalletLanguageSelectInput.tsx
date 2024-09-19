@@ -9,8 +9,10 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@/components/ui/Select"
 
+import { getLanguageCodeName } from "@/lib/utils/intl"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLanguageCountWalletsData } from "@/lib/utils/wallets"
 
 interface FindWalletLanguageSelectInputProps {
@@ -42,6 +44,11 @@ const FindWalletLanguageSelectInput = ({
       <Select
         value={inputState as string}
         onValueChange={(e: Lang) => {
+          trackCustomEvent({
+            eventCategory: "WalletFilterSidebar",
+            eventAction: "Language search",
+            eventName: getLanguageCodeName(e, locale!),
+          })
           updateFilterState(filterIndex, itemIndex, e)
         }}
       >
@@ -68,6 +75,11 @@ const FindWalletLanguageSelectInput = ({
               key={language.langCode}
               className="cursor-pointer text-sm text-primary"
               onClick={() => {
+                trackCustomEvent({
+                  eventCategory: "WalletFilterSidebar",
+                  eventAction: "Language search",
+                  eventName: getLanguageCodeName(language.langCode, locale!),
+                })
                 updateFilterState(filterIndex, itemIndex, language.langCode)
               }}
             >
