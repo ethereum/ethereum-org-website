@@ -28,6 +28,7 @@ import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -167,10 +168,6 @@ const FullLeaderboardContainer = (props: ChildOnlyProp) => (
 )
 
 const On = () => <Box w="8px" h="8px" bg="success400" borderRadius="64px" />
-
-const Divider = () => (
-  <Box my="16" mx="0" w="10%" h="1" backgroundColor="homeDivider" />
-)
 
 const Contact = (props: ChildOnlyProp) => (
   <Box

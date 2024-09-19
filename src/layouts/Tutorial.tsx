@@ -4,7 +4,6 @@ import {
   Badge,
   Box,
   type BoxProps,
-  Divider,
   Flex,
   Kbd,
   Text,
@@ -35,6 +34,7 @@ import {
 import TableOfContents from "@/components/TableOfContents"
 import TooltipLink from "@/components/TooltipLink"
 import TutorialMetadata from "@/components/TutorialMetadata"
+import { Divider } from "@/components/ui/divider"
 import { mdxTableComponents } from "@/components/ui/Table"
 import YouTube from "@/components/YouTube"
 
@@ -93,16 +93,7 @@ const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   />
 )
 
-const StyledDivider = (props) => (
-  <Divider
-    my={16}
-    w="10%"
-    h="1"
-    opacity="1"
-    backgroundColor="homeDivider"
-    {...props}
-  />
-)
+const StyledDivider = (props) => <Divider {...props} />
 
 const Paragraph = (props: TextProps) => (
   <Text as="p" mt={8} mb={4} mx={0} color="text300" fontSize="md" {...props} />

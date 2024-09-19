@@ -32,6 +32,7 @@ import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -57,10 +58,6 @@ const Page = (props: ChildOnlyProp) => (
 
 const Content = (props: ChildOnlyProp) => (
   <Box w="full" px={8} py={4} {...props} />
-)
-
-const Divider = () => (
-  <Box my={16} mx={0} w="10%" h={1} backgroundColor="homeDivider" />
 )
 
 const GrayContainer = (props: ChildOnlyProp) => (

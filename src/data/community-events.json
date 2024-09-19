@@ -405,6 +405,7 @@
     "startDate": "2024-09-16",
     "endDate": "2024-09-22",
     "href": "https://ethereumsingapore.com/",
+    "imageUrl": "https://ethereumsingapore.com/wp-content/uploads/2024/09/KV-1920-X-1080.jpg",
     "location": "Singapore, SG",
     "description": "Ethereum Singapore is back for its second year and we are excited to host the global Ethereum community once more! This time we have put together a festival, titled “IN THE ETHER” from 16-22 September 2024, at the iconic Artscience Museum in Singapore. Join us for an exciting calendar of events with our co-hosts right at the heart of Marina Bay!"
   },
@@ -413,6 +414,7 @@
     "startDate": "2024-09-18",
     "endDate": "2024-09-19",
     "href": "https://token2049.com",
+    "imageUrl": "https://static.wixstatic.com/media/df5f7a_8ec2fa25938e484a8cc2dc11ef6ed2f7~mv2.png/v1/fill/w_2500,h_1352,al_c/df5f7a_8ec2fa25938e484a8cc2dc11ef6ed2f7~mv2.png",
     "location": "Singapore, SG",
     "description": "TOKEN2049 is organized annually in Dubai and Singapore, where founders and executives in the web3 industry share their view on the industry"
   },
@@ -439,6 +441,7 @@
     "startDate": "2024-10-04",
     "endDate": "2024-10-06",
     "href": "https://www.2024.ethkl.org/",
+    "imageUrl": "https://framerusercontent.com/images/XiF4efXc2UzYVEdJlKmuywNnEE.png",
     "location": "Kuala Lumpur, Malaysia",
     "description": "Returning bigger from last year success, this time at Malaysia's most iconic landmark KLCC. ETHKL24 is a 3 days Conference & Hackathon event to promote the growth and adoption of Ethereum and related technology, and gathering industry experts to explore the latest advancements in Ethereum."
   },
@@ -546,7 +549,7 @@
     "endDate": "2024-05-11",
     "href": "https://ethbratislava.com/",
     "location": "Bratislava, Slovakia",
-    "description": "Join the 1st #ETH hackathon &amp; conference in Bratislava empowering local communities &amp; sustainability on Ethereum. Follow us for more updates 🔜",
+    "description": "Join the 1st #ETH hackathon & conference in Bratislava empowering local communities & sustainability on Ethereum. Follow us for more updates 🔜",
     "imageUrl": "https://framerusercontent.com/images/wx8uSNTYpgWtsrSN5A2dkD0F4.png"
   },
   {
@@ -555,7 +558,7 @@
     "endDate": "2024-08-26",
     "href": "https://ethtokyo.com",
     "location": "Tokyo, JPN",
-    "description": "ETHTokyo 2024 is a Ethereum hackathon &amp; conference organized by Japanese Ethereum enthusiasts.",
+    "description": "ETHTokyo 2024 is a Ethereum hackathon & conference organized by Japanese Ethereum enthusiasts.",
     "imageUrl": "https://www.ethtokyo.com/images/thumbnail.jpg"
   },
   {
@@ -592,7 +595,7 @@
     "href": "https://ethrome.org",
     "location": "Rome, ITA",
     "description": "The 1st International Web3 Hackathon in Italy focusing on Governance and Privacy-preserving technologies.",
-    "imageUrl": "https://ethrome.org/social-img01.png"
+    "imageUrl": "https://ethrome.org/opengraph-image.png"
   },
   {
     "title": "Permissionless III",
@@ -601,7 +604,7 @@
     "href": "https://blockworks.co/event/permissionless-iii",
     "location": "Salt Lake City, Utah, US",
     "description": "Pack your bags, anon — we&#x27;re heading west! Join us in the beautiful Salt Lake City for the third installment of Permissionless. Come for the alpha, stay for the fresh air. Permissionless III promises unforgettable panels, killer networking opportunities, and mountains of fun!",
-    "imageUrl": "https://blockworks.co/_next/image?url=https://blockworks-co.imgix.net/wp-content/uploads/2023/11/PMLS_Website_Banner_20240226a-1.png&amp;w=1920&amp;q=75&amp;webp=false"
+    "imageUrl": "https://blockworks-co.imgix.net/wp-content/uploads/2023/11/PMLS_Website_Banner_20240226a-1.png"
   },
   {
     "title": "ETHGlobal Bangkok",
@@ -644,6 +647,6 @@
     "description": "Join the second edition of the event in the center of Venice, to learn more about Blockchain, Technology and with an eye towards art.",
     "startDate": "2024-12-02",
     "endDate": "2024-12-03",
-    "imageUrl": "https://www.ethvenice.com/images/logo.png"
+    "imageUrl": "https://ethvenice.com/images/banner.jpg"
   }
 ]
