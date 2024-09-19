@@ -821,7 +821,7 @@ const HomePage = ({
             </div>
             <div className="mx-auto grid grid-cols-1 gap-16 md:grid-cols-2">
               {joinActions.map(
-                ({ Svg, label, href, className, description }) => (
+                ({ Svg, label, href, className, description, eventName }) => (
                   <SvgButtonLink
                     key={label}
                     Svg={Svg}
@@ -829,6 +829,11 @@ const HomePage = ({
                     href={href}
                     className={cn("max-w-screen-sm", className)}
                     variant="row"
+                    customEventOptions={{
+                      eventCategory: "Homepage",
+                      eventAction: "join",
+                      eventName,
+                    }}
                   >
                     <p className="text-body">{description}</p>
                   </SvgButtonLink>

@@ -174,6 +174,7 @@ export const useHome = () => {
       description: t(
         "page-index:page-index-join-action-contribute-description"
       ),
+      eventName: "contribute",
     },
     {
       Svg: FaGithub,
@@ -181,6 +182,7 @@ export const useHome = () => {
       href: GITHUB_REPO_URL,
       className: "text-accent-a hover:text-accent-a-hover",
       description: t("page-index:page-index-join-action-github-description"),
+      eventName: "GitHub",
     },
     {
       Svg: FaDiscord,
@@ -188,6 +190,7 @@ export const useHome = () => {
       href: "/discord/",
       className: "text-primary hover:text-primary-hover",
       description: t("page-index:page-index-join-action-discord-description"),
+      eventName: "Discord",
     },
     {
       Svg: FaXTwitter,
@@ -195,6 +198,7 @@ export const useHome = () => {
       href: "https://x.com/EthDotOrg",
       className: "text-accent-b hover:text-accent-b-hover",
       description: t("page-index:page-index-join-action-twitter-description"),
+      eventName: "Twitter",
     },
   ]
 
