@@ -605,7 +605,7 @@ const HomePage = ({
                     }
                     return (
                       <div
-                        key={title}
+                        key={title + date}
                         className="flex flex-col justify-between gap-6 border-t px-6 py-4 xl:flex-row"
                       >
                         <div className="flex flex-col gap-y-0.5 text-center text-base sm:text-start">
