@@ -51,7 +51,7 @@
     --search-background: var(--background);
   }
 
-  .dark {
+  [data-theme="dark"] {
     /* Semantic Colors: Dark mode */
     /* ! Deprecating primary-light */
     --primary-light: hsla(var(--orange-100));
@@ -232,4 +232,10 @@
 
 .swiper-slide-shadow {
   background: transparent !important;
+}
+
+@layer utilities {
+  .animate-pause {
+    animation-play-state: paused;
+  }
 }

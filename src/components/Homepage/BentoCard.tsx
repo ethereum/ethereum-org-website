@@ -17,6 +17,7 @@ export type BentoCardProps = HTMLAttributes<HTMLDivElement> & {
   imgWidth?: number
   imgHeight?: number
   title: string
+  eventName: string
 }
 
 const BentoCard = ({
@@ -28,6 +29,7 @@ const BentoCard = ({
   imgWidth,
   imgHeight,
   title,
+  eventName,
 }: BentoCardProps) => (
   <Card
     className={cn(
@@ -43,7 +45,16 @@ const BentoCard = ({
         {title}
       </CardTitle>
       <p className="mb-8 text-md">{children}</p>
-      <ButtonLink href={href} variant="outline" isSecondary>
+      <ButtonLink
+        href={href}
+        variant="outline"
+        isSecondary
+        customEventOptions={{
+          eventCategory: "Homepage",
+          eventAction: "use cases",
+          eventName,
+        }}
+      >
         {action} <ChevronNext />
       </ButtonLink>
     </div>

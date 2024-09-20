@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { useTranslation } from "next-i18next"
 import { useTheme } from "next-themes"
 import {
@@ -29,7 +28,7 @@ import type { NavSections } from "./types"
 
 export const useNav = () => {
   const { t } = useTranslation("common")
-  const { setTheme, resolvedTheme, systemTheme } = useTheme()
+  const { setTheme, resolvedTheme } = useTheme()
   const { setColorMode } = useColorMode()
 
   const linkSections: NavSections = {
@@ -462,23 +461,12 @@ export const useNav = () => {
     },
   }
 
-  // Listen for changes to systemTheme and update theme accordingly
-  // Important if the user has not engaged the color mode toggle yet, and
-  // toggles system color preferences
-  useEffect(() => {
-    setTheme("system")
-    setColorMode(systemTheme)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [systemTheme])
-
   const toggleColorMode = () => {
-    // resolvedTheme: "light" | "dark" = Current resolved color mode from useTheme
     const targetTheme = resolvedTheme === "dark" ? "light" : "dark"
-    // If target theme matches the users system pref, set ls theme to "system"
-    const lsTheme = targetTheme === systemTheme ? "system" : targetTheme
 
-    setTheme(lsTheme)
+    setTheme(targetTheme)
     setColorMode(targetTheme)
+
     trackCustomEvent({
       eventCategory: "nav bar",
       eventAction: "click",
