@@ -40,6 +40,12 @@ const EventCard = ({
     new Date(endDate?.replace(/-/g, "/"))
   )
 
+  const MAX_DESCRIPTION_CHARS = 230
+  const truncatedDescription =
+    description.length > MAX_DESCRIPTION_CHARS
+      ? `${description.slice(0, MAX_DESCRIPTION_CHARS)}...`
+      : description
+
   return (
     <Box
       className={className}
@@ -108,7 +114,7 @@ const EventCard = ({
               </Text>
             </Box>
             <Box>
-              <Text fontSize="sm">{description}</Text>
+              <Text fontSize="sm">{truncatedDescription}</Text>
             </Box>
           </Box>
         </Box>
