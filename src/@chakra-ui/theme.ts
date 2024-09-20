@@ -6,7 +6,7 @@ import semanticTokens from "./semanticTokens"
 
 const config: ThemeConfig = {
   cssVarPrefix: "eth",
-  initialColorMode: "system",
+  initialColorMode: "light",
   /**
    * Disable Chakra's system color subscription, as it works differently from
    * `next-themes` and causes a desync with it.
