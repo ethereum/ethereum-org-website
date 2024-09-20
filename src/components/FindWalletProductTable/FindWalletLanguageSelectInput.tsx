@@ -9,7 +9,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/Select"
+} from "@/components/ui/select"
 
 import { getLanguageCodeName } from "@/lib/utils/intl"
 import { trackCustomEvent } from "@/lib/utils/matomo"
