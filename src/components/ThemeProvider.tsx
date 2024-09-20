@@ -27,7 +27,7 @@ const ThemeProvider = ({ children }: Pick<ThemeProviderProps, "children">) => {
   const theme = useMemo(() => merge(customTheme, { direction }), [direction])
   return (
     <NextThemesProvider
-      attribute="class"
+      attribute="data-theme"
       defaultTheme="light"
       enableSystem={false}
       disableTransitionOnChange
