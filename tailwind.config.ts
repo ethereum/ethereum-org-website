@@ -136,6 +136,14 @@ const config = {
           medium: "hsla(var(--body-medium))",
           light: "hsla(var(--body-light))",
           inverse: "hsla(var(--body-inverse))",
+
+          // TODO: Add "body-menu" to design system
+          menu: {
+            DEFAULT: "hsla(var(--body-menu))",
+            low: "hsla(var(--body-menu-low))",
+            medium: "hsla(var(--body-menu-medium))",
+            high: "hsla(var(--body-menu-high))",
+          },
         },
 
         disabled: "hsla(var(--disabled))",
@@ -143,6 +151,10 @@ const config = {
         background: {
           DEFAULT: "hsla(var(--background))",
           highlight: "hsla(var(--background-highlight))",
+          // TODO : Add "low" "medium" and "high" to design system
+          low: "hsla(var(--background-low))",
+          medium: "hsla(var(--background-medium))",
+          high: "hsla(var(--background-high))",
         },
 
         // TODO: Add border color tokens to match DS
@@ -190,33 +202,6 @@ const config = {
         warning: {
           DEFAULT: "hsla(var(--warning))",
           light: "hsla(var(--warning-light))",
-        },
-
-        menu: {
-          DEFAULT: "hsla(var(--menu))",
-          hover: "hsla(var(--menu-hover))",
-          active: "hsla(var(--menu-active))",
-          "active-background": "hsla(var(--menu-active-background))",
-          1: {
-            subtext: "hsla(var(--menu-1-subtext))",
-            background: "hsla(var(--menu-1-background))",
-            "active-background": "hsla(var(--menu-1-active-background))",
-          },
-          2: {
-            subtext: "hsla(var(--menu-2-subtext))",
-            background: "hsla(var(--menu-2-background))",
-            "active-background": "hsla(var(--menu-2-active-background))",
-          },
-          3: {
-            subtext: "hsla(var(--menu-3-subtext))",
-            background: "hsla(var(--menu-3-background))",
-            "active-background": "hsla(var(--menu-3-active-background))",
-          },
-          4: {
-            subtext: "hsla(var(--menu-4-subtext))",
-            background: "hsla(var(--menu-4-background))",
-            "active-background": "hsla(var(--menu-4-active-background))",
-          },
         },
 
         /** @deprecated */

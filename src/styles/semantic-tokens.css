@@ -14,7 +14,10 @@
 
     --background: var(--white);
     --background-highlight: var(--gray-50);
-    --background-medium: var(--gray-200); /* TODO: VERIFY */
+    /* TODO: Add "low" "medium" and "high" to design system */
+    --background-low: var(--gray-100);
+    --background-medium: var(--gray-200);
+    --background-high: var(--gray-300);
 
     /* TODO: Add border color tokens to match DS */
 
@@ -103,22 +106,10 @@
     --shadow-window-box-5: 0px -64px 120px 80px hsla(var(--purple-100), var(--shadow-window-box-5-opacity));
 
     /* Menu colors */
-    --menu: var(--body);
-    --menu-hover: var(--gray-200);
-    --menu-active: var(--primary);
-    --menu-active-background: var(--primary-high-contrast);
-    --menu-1-subtext: var(--gray-400);
-    --menu-1-background: var(--white);
-    --menu-1-active-background: var(--gray-150);
-    --menu-2-subtext: var(--gray-400);
-    --menu-2-background: var(--gray-150);
-    --menu-2-active-background: var(--gray-200);
-    --menu-3-subtext: var(--gray-500);
-    --menu-3-background: var(--gray-200);
-    --menu-3-active-background: var(--gray-100);
-    --menu-4-subtext: var(--gray-700);
-    --menu-4-background: var(--gray-300);
-    --menu-4-active-background: var(--gray-200);
+    --body-menu: var(--gray-400);
+    --body-menu-low: var(--gray-400);
+    --body-menu-medium: var(--gray-500);
+    --body-menu-high: var(--gray-700);
   }
 
   /* Dark mode token declarations */
@@ -132,7 +123,11 @@
 
     --background: var(--black);
     --background-highlight: var(--gray-900);
-    --background-medium: var(--gray-950); /* TODO: VERIFY */
+
+    /* TODO: Add "low" "medium" and "high" to design system */
+    --background-low: var(--gray-700);
+    --background-medium: var(--gray-600);
+    --background-high: var(--gray-800);
 
     /* TODO: Add border color tokens to match DS */
 
@@ -188,21 +183,9 @@
     --shadow-window-box-5-opacity: 0.06;
 
     /* Menu colors */
-    --menu: var(--body);
-    --menu-hover: var(--gray-200);
-    --menu-active: var(--primary);
-    --menu-active-background: var(--primary-high-contrast);
-    --menu-1-subtext: var(--gray-400);
-    --menu-1-background: var(--black);
-    --menu-1-active-background: var(--gray-700);
-    --menu-2-subtext: var(--gray-300);
-    --menu-2-background: var(--gray-700);
-    --menu-2-active-background: var(--gray-600);
-    --menu-3-subtext: var(--gray-300);
-    --menu-3-background: var(--gray-600);
-    --menu-3-active-background: var(--gray-700);
-    --menu-4-subtext: var(--gray-300);
-    --menu-4-background: var(--gray-700);
-    --menu-4-active-background: var(--gray-800);
+    --body-menu: var(--gray-400);
+    --body-menu-low: var(--gray-300);
+    --body-menu-medium: var(--gray-300);
+    --body-menu-high: var(--gray-300);
   }
 }
