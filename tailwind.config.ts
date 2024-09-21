@@ -155,10 +155,6 @@ const config = {
           visited: "hsla(var(--primary-visited))",
           action: "hsla(var(--primary-action))",
           "action-hover": "hsla(var(--primary-action-hover))",
-          /** @deprecated */
-          light: "hsla(var(--primary-light))",
-          /** @deprecated */
-          dark: "hsla(var(--primary-dark))",
         },
 
         accent: {
