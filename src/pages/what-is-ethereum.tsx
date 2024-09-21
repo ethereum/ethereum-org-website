@@ -30,13 +30,13 @@ import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import StatErrorMessage from "@/components/StatErrorMessage"
-import Swiper from "@/components/Swiper"
 import Tabs from "@/components/Tabs"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import { Center, Flex, HStack, Stack, VStack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
+import { Swiper, SwiperContainer } from "@/components/ui/swiper"
 
 import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -409,50 +409,51 @@ const WhatIsEthereumPage = ({
                   <p>{t("page-what-is-ethereum-why-would-i-use-ethereum-2")}</p>
 
                   <div className="max-w-full">
-                    <Swiper
-                      containerClassName="p-8 border rounded bg-background"
-                      onSlideChange={({ activeIndex }) => {
-                        trackCustomEvent({
-                          eventCategory: `What is Ethereum - Slider`,
-                          eventAction: `Clicked`,
-                          eventName: slides[activeIndex].eventName,
-                        })
-                      }}
-                    >
-                      <Slide>
-                        <H3>{t("page-what-is-ethereum-slide-1-title")}</H3>
-                        <div className="mb-4 flex flex-col gap-6">
-                          <p>
-                            <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-1-desc-1" />
-                          </p>
-                          <p>{t("page-what-is-ethereum-slide-1-desc-2")}</p>
-                        </div>
-                      </Slide>
-                      <Slide>
-                        <H3>{t("page-what-is-ethereum-slide-2-title")}</H3>
-                        <div className="mb-4 flex flex-col gap-6">
-                          <p>{t("page-what-is-ethereum-slide-2-desc-1")}</p>
-                          <p>
-                            <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-2-desc-2" />
-                          </p>
-                        </div>
-                      </Slide>
-                      <Slide>
-                        <H3>{t("page-what-is-ethereum-slide-3-title")}</H3>
-                        <div className="mb-4 flex flex-col gap-6">
-                          <p>
-                            <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-3-desc-1" />
-                          </p>
-                        </div>
-                      </Slide>
-                      <Slide>
-                        <H3>{t("page-what-is-ethereum-slide-4-title")}</H3>
-                        <div className="mb-4 flex flex-col gap-6">
-                          <p>{t("page-what-is-ethereum-slide-4-desc-1")}</p>
-                          <p>{t("page-what-is-ethereum-slide-4-desc-2")}</p>
-                        </div>
-                      </Slide>
-                    </Swiper>
+                    <SwiperContainer className="rounded border bg-background p-8">
+                      <Swiper
+                        onSlideChange={({ activeIndex }) => {
+                          trackCustomEvent({
+                            eventCategory: `What is Ethereum - Slider`,
+                            eventAction: `Clicked`,
+                            eventName: slides[activeIndex].eventName,
+                          })
+                        }}
+                      >
+                        <Slide>
+                          <H3>{t("page-what-is-ethereum-slide-1-title")}</H3>
+                          <div className="mb-4 flex flex-col gap-6">
+                            <p>
+                              <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-1-desc-1" />
+                            </p>
+                            <p>{t("page-what-is-ethereum-slide-1-desc-2")}</p>
+                          </div>
+                        </Slide>
+                        <Slide>
+                          <H3>{t("page-what-is-ethereum-slide-2-title")}</H3>
+                          <div className="mb-4 flex flex-col gap-6">
+                            <p>{t("page-what-is-ethereum-slide-2-desc-1")}</p>
+                            <p>
+                              <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-2-desc-2" />
+                            </p>
+                          </div>
+                        </Slide>
+                        <Slide>
+                          <H3>{t("page-what-is-ethereum-slide-3-title")}</H3>
+                          <div className="mb-4 flex flex-col gap-6">
+                            <p>
+                              <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-3-desc-1" />
+                            </p>
+                          </div>
+                        </Slide>
+                        <Slide>
+                          <H3>{t("page-what-is-ethereum-slide-4-title")}</H3>
+                          <div className="mb-4 flex flex-col gap-6">
+                            <p>{t("page-what-is-ethereum-slide-4-desc-1")}</p>
+                            <p>{t("page-what-is-ethereum-slide-4-desc-2")}</p>
+                          </div>
+                        </Slide>
+                      </Swiper>
+                    </SwiperContainer>
                   </div>
                 </Stack>
               </Width60>

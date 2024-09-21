@@ -28,7 +28,6 @@ import CalendarAdd from "@/components/icons/calendar-add.svg"
 import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
-import Swiper from "@/components/Swiper"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import {
@@ -48,6 +47,7 @@ import {
   SectionTag,
 } from "@/components/ui/section"
 import { SkeletonLines } from "@/components/ui/skeleton"
+import { Swiper, SwiperContainer } from "@/components/ui/swiper"
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
@@ -265,32 +265,34 @@ const HomePage = ({
           </div>
 
           {/* Mobile */}
-          <Swiper
-            effect="cards"
-            containerClassName={cn(
+          <SwiperContainer
+            className={cn(
               "lg:hidden", // Mobile only
               "[&_.swiper-slide]:overflow-visible [&_.swiper-slide]:rounded-2xl [&_.swiper-slide]:shadow-card-hover",
               "[&_.swiper]:mx-auto [&_.swiper]:mt-4 [&_.swiper]:!flex [&_.swiper]:h-fit [&_.swiper]:max-w-128 [&_.swiper]:flex-col [&_.swiper]:items-center"
             )}
-            onSlideChange={({ activeIndex }) => {
-              trackCustomEvent({
-                eventCategory: "Homepage",
-                eventAction: "mobile use cases",
-                eventName: `swipe to card ${activeIndex + 1}`,
-              })
-            }}
           >
-            {bentoItems.map(({ className, ...item }) => (
-              <BentoCard
-                key={item.title}
-                imgHeight={220}
-                {...item}
-                className={cn(className, "bg-background text-body")}
-                imgWidth={undefined} // Intentionally last to override box
-              />
-            ))}
-          </Swiper>
-
+            <Swiper
+              effect="cards"
+              onSlideChange={({ activeIndex }) => {
+                trackCustomEvent({
+                  eventCategory: "Homepage",
+                  eventAction: "mobile use cases",
+                  eventName: `swipe to card ${activeIndex + 1}`,
+                })
+              }}
+            >
+              {bentoItems.map(({ className, ...item }) => (
+                <BentoCard
+                  key={item.title}
+                  imgHeight={220}
+                  {...item}
+                  className={cn(className, "bg-background text-body")}
+                  imgWidth={undefined} // Intentionally last to override box
+                />
+              ))}
+            </Swiper>
+          </SwiperContainer>
           {/* Desktop */}
           {bentoItems.map(({ className, ...item }) => (
             <BentoCard
@@ -658,50 +660,51 @@ const HomePage = ({
           </h3>
           <p>{t("page-index:page-index-posts-subtitle")}</p>
 
-          <Swiper
-            containerClassName="mt-4 md:mt-16"
-            spaceBetween={32}
-            breakpoints={{
-              [breakpointAsNumber.sm]: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-              },
-              [breakpointAsNumber.lg]: {
-                slidesPerView: 3,
-                slidesPerGroup: 3,
-              },
-            }}
-          >
-            {rssItems.map(({ pubDate, title, source, link, imgSrc }) => (
-              <Card
-                key={title}
-                href={link}
-                customEventOptions={{
-                  eventCategory: "Homepage",
-                  eventAction: "blogs_posts",
-                  eventName: source,
-                }}
-              >
-                <CardBanner>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={imgSrc} alt="" loading="lazy" />
-                </CardBanner>
-                <CardContent>
-                  <CardTitle>{title}</CardTitle>
-                  {isValidDate(pubDate) && (
-                    <CardSubTitle>
-                      {new Intl.DateTimeFormat(locale, {
-                        month: "long",
-                        day: "numeric",
-                        year: "numeric",
-                      }).format(new Date(pubDate))}
-                    </CardSubTitle>
-                  )}
-                  <CardHighlight>{source}</CardHighlight>
-                </CardContent>
-              </Card>
-            ))}
-          </Swiper>
+          <SwiperContainer className="mt-4 md:mt-16">
+            <Swiper
+              spaceBetween={32}
+              breakpoints={{
+                [breakpointAsNumber.sm]: {
+                  slidesPerView: 2,
+                  slidesPerGroup: 2,
+                },
+                [breakpointAsNumber.lg]: {
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                },
+              }}
+            >
+              {rssItems.map(({ pubDate, title, source, link, imgSrc }) => (
+                <Card
+                  key={title}
+                  href={link}
+                  customEventOptions={{
+                    eventCategory: "Homepage",
+                    eventAction: "blogs_posts",
+                    eventName: source,
+                  }}
+                >
+                  <CardBanner>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={imgSrc} alt="" loading="lazy" />
+                  </CardBanner>
+                  <CardContent>
+                    <CardTitle>{title}</CardTitle>
+                    {isValidDate(pubDate) && (
+                      <CardSubTitle>
+                        {new Intl.DateTimeFormat(locale, {
+                          month: "long",
+                          day: "numeric",
+                          year: "numeric",
+                        }).format(new Date(pubDate))}
+                      </CardSubTitle>
+                    )}
+                    <CardHighlight>{source}</CardHighlight>
+                  </CardContent>
+                </Card>
+              ))}
+            </Swiper>
+          </SwiperContainer>
 
           <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
             <p className="text-lg">{t("page-index:page-index-posts-action")}</p>
