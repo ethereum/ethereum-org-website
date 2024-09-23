@@ -98,11 +98,12 @@ export const usingEthereumQuizzes: QuizzesSection[] = [
   {
     id: "run-a-node",
     level: "intermediate",
-    next: "scaling",
+    next: "merge",
   },
-     {
+  {
     id: "merge",
     level: "intermediate",
+    next: "scaling",
   },
   {
     id: "scaling",
