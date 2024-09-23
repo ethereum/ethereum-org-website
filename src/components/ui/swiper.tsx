@@ -1,4 +1,5 @@
 import * as React from "react"
+import { cva, VariantProps } from "class-variance-authority"
 import { useTranslation } from "next-i18next"
 import { EffectCards, Keyboard, Navigation, Pagination } from "swiper/modules"
 import {
@@ -91,7 +92,7 @@ const SwiperNavContainer = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "mx-auto mt-6 flex h-6 w-fit items-center gap-4 rounded-full bg-background-highlight",
+      "mx-auto flex h-6 w-fit items-center gap-4 rounded-full bg-background-highlight",
       className
     )}
     {...props}
@@ -111,8 +112,21 @@ const SwiperNavigation = React.forwardRef<
 ))
 SwiperNavigation.displayName = "SwiperNavigation"
 
-const Swiper = React.forwardRef<SwiperRef, SwiperReactProps>(
-  ({ children, ...props }, ref) => {
+const variants = cva("!flex gap-y-6", {
+  variants: {
+    navigationPlacement: {
+      top: "flex-col-reverse",
+      bottom: "flex-col",
+    },
+  },
+  defaultVariants: {
+    navigationPlacement: "bottom",
+  },
+})
+
+export type SwiperProps = SwiperReactProps & VariantProps<typeof variants>
+const Swiper = React.forwardRef<SwiperRef, SwiperProps>(
+  ({ className, children, navigationPlacement, ...props }, ref) => {
     const { t } = useTranslation("common")
     return (
       <SwiperReact
@@ -135,6 +149,7 @@ const Swiper = React.forwardRef<SwiperRef, SwiperReactProps>(
         slidesPerGroup={1}
         lazyPreloadPrevNext={0}
         slideClass="swiper-slide"
+        className={cn(variants({ navigationPlacement, className }))}
         {...props}
       >
         {children}
