@@ -99,12 +99,20 @@ const SwiperNavContainer = React.forwardRef<
 ))
 SwiperNavContainer.displayName = "SwiperNavContainer"
 
-type SwiperProps = SwiperReactProps & {
-  navigation?: React.ReactNode
-  children: React.ReactNode[]
-}
-const Swiper = React.forwardRef<SwiperRef, SwiperProps>(
-  ({ children, navigation, ...props }, ref) => {
+const SwiperNavigation = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>((props, ref) => (
+  <SwiperNavContainer ref={ref} {...props}>
+    <SwiperPrevButton />
+    <SwiperPaginationDots />
+    <SwiperNextButton />
+  </SwiperNavContainer>
+))
+SwiperNavigation.displayName = "SwiperNavigation"
+
+const Swiper = React.forwardRef<SwiperRef, SwiperReactProps>(
+  ({ children, ...props }, ref) => {
     const { t } = useTranslation("common")
     return (
       <SwiperReact
@@ -129,16 +137,7 @@ const Swiper = React.forwardRef<SwiperRef, SwiperProps>(
         slideClass="swiper-slide"
         {...props}
       >
-        {children.map((child, index) => (
-          <SwiperSlide key={index}>{child}</SwiperSlide>
-        ))}
-        {navigation || (
-          <SwiperNavContainer>
-            <SwiperPrevButton />
-            <SwiperPaginationDots />
-            <SwiperNextButton />
-          </SwiperNavContainer>
-        )}
+        {children}
       </SwiperReact>
     )
   }
@@ -150,7 +149,9 @@ export {
   SwiperContainer,
   SwiperNavButton,
   SwiperNavContainer,
+  SwiperNavigation,
   SwiperNextButton,
   SwiperPaginationDots,
   SwiperPrevButton,
+  SwiperSlide,
 }

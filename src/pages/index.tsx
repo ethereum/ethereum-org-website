@@ -47,7 +47,12 @@ import {
   SectionTag,
 } from "@/components/ui/section"
 import { SkeletonLines } from "@/components/ui/skeleton"
-import { Swiper, SwiperContainer } from "@/components/ui/swiper"
+import {
+  Swiper,
+  SwiperContainer,
+  SwiperNavigation,
+  SwiperSlide,
+} from "@/components/ui/swiper"
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
@@ -283,14 +288,16 @@ const HomePage = ({
               }}
             >
               {bentoItems.map(({ className, ...item }) => (
-                <BentoCard
-                  key={item.title}
-                  imgHeight={220}
-                  {...item}
-                  className={cn(className, "bg-background text-body")}
-                  imgWidth={undefined} // Intentionally last to override box
-                />
+                <SwiperSlide key={item.title}>
+                  <BentoCard
+                    imgHeight={220}
+                    {...item}
+                    className={cn(className, "bg-background text-body")}
+                    imgWidth={undefined} // Intentionally last to override box
+                  />
+                </SwiperSlide>
               ))}
+              <SwiperNavigation />
             </Swiper>
           </SwiperContainer>
           {/* Desktop */}
@@ -675,34 +682,36 @@ const HomePage = ({
               }}
             >
               {rssItems.map(({ pubDate, title, source, link, imgSrc }) => (
-                <Card
-                  key={title}
-                  href={link}
-                  customEventOptions={{
-                    eventCategory: "Homepage",
-                    eventAction: "blogs_posts",
-                    eventName: source,
-                  }}
-                >
-                  <CardBanner>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={imgSrc} alt="" loading="lazy" />
-                  </CardBanner>
-                  <CardContent>
-                    <CardTitle>{title}</CardTitle>
-                    {isValidDate(pubDate) && (
-                      <CardSubTitle>
-                        {new Intl.DateTimeFormat(locale, {
-                          month: "long",
-                          day: "numeric",
-                          year: "numeric",
-                        }).format(new Date(pubDate))}
-                      </CardSubTitle>
-                    )}
-                    <CardHighlight>{source}</CardHighlight>
-                  </CardContent>
-                </Card>
+                <SwiperSlide key={title}>
+                  <Card
+                    href={link}
+                    customEventOptions={{
+                      eventCategory: "Homepage",
+                      eventAction: "blogs_posts",
+                      eventName: source,
+                    }}
+                  >
+                    <CardBanner>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={imgSrc} alt="" loading="lazy" />
+                    </CardBanner>
+                    <CardContent>
+                      <CardTitle>{title}</CardTitle>
+                      {isValidDate(pubDate) && (
+                        <CardSubTitle>
+                          {new Intl.DateTimeFormat(locale, {
+                            month: "long",
+                            day: "numeric",
+                            year: "numeric",
+                          }).format(new Date(pubDate))}
+                        </CardSubTitle>
+                      )}
+                      <CardHighlight>{source}</CardHighlight>
+                    </CardContent>
+                  </Card>
+                </SwiperSlide>
               ))}
+              <SwiperNavigation />
             </Swiper>
           </SwiperContainer>
 
