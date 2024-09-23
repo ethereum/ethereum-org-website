@@ -13,12 +13,6 @@
     --font-inter: Inter, sans-serif;
     --font-mono: "IBM Plex Mono", Courier, monospace;
 
-    /* Semantic Colors: Light mode */
-    /* ! Deprecating primary-light */
-    --primary-light: var(--blue-100);
-    /* ! Deprecating primary-dark */
-    --primary-dark: var(--blue-700);
-
     /* Misc sematics: light mode */
     --tooltip-shadow: rgba(0, 0, 0, 0.24);
     --switch-background: var(--gray-300);
@@ -52,12 +46,6 @@
   }
 
   [data-theme="dark"] {
-    /* Semantic Colors: Dark mode */
-    /* ! Deprecating primary-light */
-    --primary-light: hsla(var(--orange-100));
-    /* ! Deprecating primary-dark */
-    --primary-dark: hsla(var(--orange-800));
-
     /* Misc sematics: dark mode */
     --tooltip-shadow: rgba(255, 255, 255, 0.24);
     --switch-background: rgba(255, 255, 255, 0.24);
