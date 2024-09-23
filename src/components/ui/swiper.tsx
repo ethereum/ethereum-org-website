@@ -12,6 +12,8 @@ import { ChevronNext, ChevronPrev } from "@/components/Chevron"
 
 import { cn } from "@/lib/utils/cn"
 
+import { Button, type ButtonProps } from "./buttons/Button"
+
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
@@ -25,24 +27,100 @@ const SwiperContainer = React.forwardRef<
 ))
 SwiperContainer.displayName = "SwiperContainer"
 
+const SwiperNavButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ children, className, ...props }, ref) => (
+    <Button
+      ref={ref}
+      variant="ghost"
+      className={cn("px-2", className)}
+      {...props}
+    >
+      {children}
+    </Button>
+  )
+)
+SwiperNavButton.displayName = "SwiperNavButton"
+
+const SwiperNextButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ children, className, ...props }, ref) => (
+    <SwiperNavButton
+      ref={ref}
+      className={cn("ui-swiper-button-next", className)}
+      {...props}
+    >
+      {children || <ChevronNext />}
+    </SwiperNavButton>
+  )
+)
+SwiperNextButton.displayName = "SwiperNextButton"
+
+const SwiperPrevButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ children, className, ...props }, ref) => (
+    <SwiperNavButton
+      ref={ref}
+      className={cn("ui-swiper-button-prev", className)}
+      {...props}
+    >
+      {children || <ChevronPrev />}
+    </SwiperNavButton>
+  )
+)
+SwiperPrevButton.displayName = "SwiperPrevButton"
+
+const SwiperPaginationDots = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "ui-swiper-pagination flex w-fit flex-row",
+      "[&_.swiper-pagination-bullet]:bg-primary-high-contrast",
+      "[&_.swiper-pagination-bullet-active]:bg-primary-hover",
+      className
+    )}
+    {...props}
+  />
+))
+SwiperPaginationDots.displayName = "SwiperPaginationDots"
+
+const SwiperNavContainer = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "mx-auto mt-6 flex h-6 w-fit items-center gap-4 rounded-full bg-background-highlight",
+      className
+    )}
+    {...props}
+  />
+))
+SwiperNavContainer.displayName = "SwiperNavContainer"
+
 type SwiperProps = SwiperReactProps & {
+  navigation?: React.ReactNode
   children: React.ReactNode[]
 }
 const Swiper = React.forwardRef<SwiperRef, SwiperProps>(
-  ({ children, ...props }, ref) => {
+  ({ children, navigation, ...props }, ref) => {
     const { t } = useTranslation("common")
     return (
       <SwiperReact
         ref={ref}
         navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".ui-swiper-button-next",
+          prevEl: ".ui-swiper-button-prev",
         }}
         a11y={{
           prevSlideMessage: t("previous"),
           nextSlideMessage: t("next"),
         }}
-        pagination={{ clickable: true, el: ".swiper-pagination" }}
+        pagination={{
+          clickable: true,
+          el: ".ui-swiper-pagination",
+        }}
         keyboard
         modules={[Navigation, Pagination, Keyboard, EffectCards]}
         slidesPerView={1}
@@ -54,14 +132,25 @@ const Swiper = React.forwardRef<SwiperRef, SwiperProps>(
         {children.map((child, index) => (
           <SwiperSlide key={index}>{child}</SwiperSlide>
         ))}
-
-        <ChevronPrev className="swiper-button-prev" />
-        <div className="swiper-pagination" />
-        <ChevronNext className="swiper-button-next" />
+        {navigation || (
+          <SwiperNavContainer>
+            <SwiperPrevButton />
+            <SwiperPaginationDots />
+            <SwiperNextButton />
+          </SwiperNavContainer>
+        )}
       </SwiperReact>
     )
   }
 )
 Swiper.displayName = "Swiper"
 
-export { Swiper, SwiperContainer }
+export {
+  Swiper,
+  SwiperContainer,
+  SwiperNavButton,
+  SwiperNavContainer,
+  SwiperNextButton,
+  SwiperPaginationDots,
+  SwiperPrevButton,
+}
