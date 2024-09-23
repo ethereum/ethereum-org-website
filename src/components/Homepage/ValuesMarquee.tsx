@@ -25,6 +25,8 @@ type ItemProps = React.HTMLAttributes<HTMLButtonElement> & {
   separatorClass: string
   container?: HTMLElement | null
   label: string
+  key: string
+  locale: string
 }
 
 const Item = ({
@@ -34,7 +36,9 @@ const Item = ({
   separatorClass,
   container,
   label,
-}: ItemProps) => (
+  key,
+  locale,
+}: ItemProps & { locale: string }) => (
   <>
     <Tooltip
       container={container}
@@ -42,7 +46,7 @@ const Item = ({
         trackCustomEvent({
           eventCategory: "Homepage",
           eventAction: "internet_changing",
-          eventName: label,
+          eventName: `${key} (${locale})`,
         })
       }}
       content={
@@ -138,7 +142,7 @@ const Row = forwardRef<HTMLDivElement, RowProps>(
 Row.displayName = "Row"
 
 const ValuesMarquee = () => {
-  const { t, pairings } = useValuesMarquee()
+  const { t, pairings, locale } = useValuesMarquee()
   const containerFirstRef = useRef<HTMLDivElement>(null)
   const containerSecondRef = useRef<HTMLDivElement>(null)
 
@@ -176,12 +180,13 @@ const ValuesMarquee = () => {
         >
           {pairings.map((pairing) => (
             <Item
-              key={pairing.ethereum.label}
+              key={pairing.ethereum.key}
               label={pairing.ethereum.label}
               container={containerFirst}
               pairing={pairing}
               separatorClass="bg-accent-a"
               className="group/item bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-700"
+              locale={locale}
             >
               <FaCheck className="me-1 text-success group-hover/item:text-white" />
               {pairing.ethereum.label}
@@ -196,12 +201,13 @@ const ValuesMarquee = () => {
         >
           {pairings.map((pairing) => (
             <Item
-              key={pairing.legacy.label}
+              key={pairing.legacy.key}
               label={pairing.legacy.label}
               container={containerSecond}
               pairing={pairing}
               className="bg-gray-200/20 text-body-medium hover:bg-gray-600 hover:text-white dark:bg-gray-950 dark:text-body"
               separatorClass="bg-gray-200 dark:bg-gray-950"
+              locale={locale}
             >
               {pairing.legacy.label}
             </Item>
