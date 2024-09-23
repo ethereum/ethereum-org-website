@@ -68,7 +68,9 @@ const BigNumber = ({
           </div>
         </>
       ) : (
-        <span className="text-3xl">{t("loading-error-refresh")}</span>
+        <span className="pt-4 text-md text-body-medium">
+          {t("loading-error-refresh")}
+        </span>
       )}
     </div>
   )
