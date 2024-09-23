@@ -23,7 +23,6 @@ incomplete: true
 
 ## 初学者文章和书籍 {#beginner-articles-and-books}
 
-- [选择以太坊客户端](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [开始使用 Geth](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
 - [使用 Golang 连接到以太坊](https://www.youtube.com/watch?v=-7uChuO_VzM)
 - [使用 Golang 部署以太坊智能合约](https://www.youtube.com/watch?v=pytGqQmDslE)

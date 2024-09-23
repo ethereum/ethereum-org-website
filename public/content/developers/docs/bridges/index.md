@@ -103,7 +103,7 @@ If a dapp goes down the route of integrating a bridge or an aggregator, there ar
 
 ### Deploying a dapp on multiple chains {#deploying-a-dapp-on-multiple-chains}
 
-To deploy a dapp on multiple chains, developers can use development platforms like [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Truffle](https://trufflesuite.com/), [Moralis](https://moralis.io/), etc. Typically, these platforms come with composable plugins that can enable dapps to go cross-chain. For instance, developers can use a deterministic deployment proxy offered by the [hardhat-deploy plugin](https://github.com/wighawag/hardhat-deploy).
+To deploy a dapp on multiple chains, developers can use development platforms like [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/), etc. Typically, these platforms come with composable plugins that can enable dapps to go cross-chain. For instance, developers can use a deterministic deployment proxy offered by the [hardhat-deploy plugin](https://github.com/wighawag/hardhat-deploy).
 
 #### Examples:
 

@@ -93,12 +93,6 @@ Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezet
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **A Brownie karbantartása jelenleg szünetel**
 
-**Truffle -** **_Fejlesztői környezet, tesztelési keretrendszer, folyamatépítő és további eszközök._**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-- **A Truffle fejlesztése befejeződött** – [további információk](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
-
 **OpenZeppelin SDK -** **_The Ultimate Smart Contract Toolkit: egy eszköztár okosszerződések fejlesztéséhez, összeállításához, továbbfejlesztéséhez, telepítéséhez és az okosszerződésekkel való interakciókhoz._**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)

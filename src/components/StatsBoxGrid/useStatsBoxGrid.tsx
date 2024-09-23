@@ -25,7 +25,7 @@ const formatSmallUSD = (value: number, locale: string): string => {
     currency: "USD",
     notation: "compact",
     minimumSignificantDigits: 2,
-    maximumSignificantDigits: 3,
+    maximumSignificantDigits: 2,
   }).format(value)
 }
 
@@ -101,10 +101,10 @@ export const useStatsBoxGrid = ({
       state: valueLocked,
     },
     {
-      apiProvider: "GrowThePie",
-      apiUrl: "https://growthepie.xyz/",
-      label: t("page-index-network-stats-tx-day-description"),
-      state: txs,
+      apiProvider: "Dune Analytics",
+      apiUrl: "https://dune.com/",
+      label: t("page-index-network-stats-total-eth-staked"),
+      state: totalEtherStaked,
     },
     {
       apiProvider: "GrowThePie",
@@ -113,10 +113,10 @@ export const useStatsBoxGrid = ({
       state: medianTxCost,
     },
     {
-      apiProvider: "Dune Analytics",
-      apiUrl: "https://dune.com/",
-      label: t("page-index-network-stats-total-eth-staked"),
-      state: totalEtherStaked,
+      apiProvider: "GrowThePie",
+      apiUrl: "https://growthepie.xyz/",
+      label: t("page-index-network-stats-tx-day-description"),
+      state: txs,
     },
   ]
 

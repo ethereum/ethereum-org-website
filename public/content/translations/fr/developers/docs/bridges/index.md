@@ -103,7 +103,7 @@ Si une dapp emprunte la voie de l'intégration d'un pont ou d'un agrégateur, il
 
 ### Déploiement d'une dApp sur plusieurs chaînes {#deploying-a-dapp-on-multiple-chains}
 
-Pour déployer une dApp sur plusieurs chaînes, les développeurs peuvent utiliser des plateformes de développement telles que [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Truffle](https://trufflesuite.com/), [Moralis](https://moralis.io/), etc. En général, ces plateformes sont fournies avec des plugins composables qui permettent aux dApps de passer d'une chaîne à l'autre. Par exemple, les développeurs peuvent utiliser un proxy de déploiement déterministe proposé par le plugin [hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
+Pour déployer une dApp sur plusieurs chaînes, les développeurs peuvent utiliser des plateformes de développement telles que [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/), etc. En général, ces plateformes sont fournies avec des plugins composables qui permettent aux dApps de passer d'une chaîne à l'autre. Par exemple, les développeurs peuvent utiliser un proxy de déploiement déterministe proposé par le plugin [hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
 
 #### Exemples :
 

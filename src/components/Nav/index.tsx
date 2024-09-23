@@ -1,22 +1,25 @@
-import { lazy, Suspense, useRef } from "react"
+import { useRef } from "react"
+import dynamic from "next/dynamic"
 import { useTranslation } from "next-i18next"
 
 import { EthHomeIcon } from "@/components/icons"
 import Search from "@/components/Search"
-
-import { isDesktop } from "@/lib/utils/isDesktop"
 
 import SearchButton from "../Search/SearchButton"
 import SearchInputButton from "../Search/SearchInputButton"
 import { BaseLink } from "../ui/Link"
 
 import DesktopNavMenu from "./Desktop"
-import Menu from "./Menu"
 import { useNav } from "./useNav"
 
+import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { useIsClient } from "@/hooks/useIsClient"
 
-const MobileNavMenu = lazy(() => import("./Mobile"))
+const Menu = dynamic(() => import("./Menu"), {
+  ssr: false,
+  loading: () => <div />,
+})
+const MobileNavMenu = dynamic(() => import("./Mobile"), { ssr: false })
 
 // TODO display page title on mobile
 const Nav = () => {
@@ -24,7 +27,7 @@ const Nav = () => {
   const { t } = useTranslation("common")
   const navWrapperRef = useRef(null)
   const isClient = useIsClient()
-  const isDesktopFlag = isDesktop()
+  const desktopScreen = useBreakpointValue({ base: false, md: true })
 
   return (
     <div className="sticky top-0 z-sticky w-full">
@@ -44,39 +47,40 @@ const Nav = () => {
           {/* Desktop */}
           <div className="ms-3 flex w-full justify-end md:justify-between xl:ms-8">
             {/* avoid rendering desktop Menu version on mobile */}
-            {isClient && isDesktopFlag ? (
+            {isClient && desktopScreen ? (
               <Menu className="hidden md:block" sections={linkSections} />
             ) : (
               <div />
             )}
 
             <Search>
-              {({ onOpen }) => (
-                <div className="flex items-center">
-                  {/* Desktop */}
-                  <div className="hidden md:flex">
-                    <SearchButton className="xl:hidden" onClick={onOpen} />
-                    <SearchInputButton
-                      className="hidden xl:flex"
-                      onClick={onOpen}
-                    />
-                    <DesktopNavMenu toggleColorMode={toggleColorMode} />
-                  </div>
+              {({ onOpen }) => {
+                if (!isClient) return null
 
-                  <div className="flex md:hidden">
-                    {/* Mobile */}
-                    {/* use Suspense to display the Search & the Menu at the same time */}
-                    <Suspense>
+                return (
+                  <div className="flex items-center">
+                    {/* Desktop */}
+                    <div className="hidden md:flex">
+                      <SearchButton className="xl:hidden" onClick={onOpen} />
+                      <SearchInputButton
+                        className="hidden xl:flex"
+                        onClick={onOpen}
+                      />
+                      <DesktopNavMenu toggleColorMode={toggleColorMode} />
+                    </div>
+
+                    <div className="flex md:hidden">
+                      {/* Mobile */}
                       <SearchButton onClick={onOpen} />
                       <MobileNavMenu
                         toggleColorMode={toggleColorMode}
                         linkSections={linkSections}
                         toggleSearch={onOpen}
                       />
-                    </Suspense>
+                    </div>
                   </div>
-                </div>
-              )}
+                )
+              }}
             </Search>
           </div>
         </div>
