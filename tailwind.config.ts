@@ -136,8 +136,6 @@ const config = {
           medium: "hsla(var(--body-medium))",
           light: "hsla(var(--body-light))",
           inverse: "hsla(var(--body-inverse))",
-
-          // TODO: Add "body-menu" to design system
           menu: {
             DEFAULT: "hsla(var(--body-menu))",
             low: "hsla(var(--body-menu-low))",
@@ -151,7 +149,6 @@ const config = {
         background: {
           DEFAULT: "hsla(var(--background))",
           highlight: "hsla(var(--background-highlight))",
-          // TODO : Add "low" "medium" and "high" to design system
           low: "hsla(var(--background-low))",
           medium: "hsla(var(--background-medium))",
           high: "hsla(var(--background-high))",

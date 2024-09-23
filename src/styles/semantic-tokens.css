@@ -10,11 +10,15 @@
     --body-light: var(--gray-200);
     --body-inverse: var(--white);
 
+    --body-menu: var(--gray-400);
+    --body-menu-low: var(--gray-400);
+    --body-menu-medium: var(--gray-500);
+    --body-menu-high: var(--gray-700);
+
     --disabled: var(--gray-400);
 
     --background: var(--white);
     --background-highlight: var(--gray-50);
-    /* TODO: Add "low" "medium" and "high" to design system */
     --background-low: var(--gray-100);
     --background-medium: var(--gray-200);
     --background-high: var(--gray-300);
@@ -104,12 +108,6 @@
     --shadow-window-box-3: 0px 32px 24px -6px hsla(var(--purple-800), var(--shadow-window-box-3-opacity));
     --shadow-window-box-4: 0px 40px 40px -12px hsla(var(--purple-700), var(--shadow-window-box-4-opacity));
     --shadow-window-box-5: 0px -64px 120px 80px hsla(var(--purple-100), var(--shadow-window-box-5-opacity));
-
-    /* Menu colors */
-    --body-menu: var(--gray-400);
-    --body-menu-low: var(--gray-400);
-    --body-menu-medium: var(--gray-500);
-    --body-menu-high: var(--gray-700);
   }
 
   /* Dark mode token declarations */
@@ -119,12 +117,15 @@
     --body-light: var(--gray-600);
     --body-inverse: var(--black);
 
+    --body-menu: var(--gray-400);
+    --body-menu-low: var(--gray-300);
+    --body-menu-medium: var(--gray-300);
+    --body-menu-high: var(--gray-300);
+
     --disabled: var(--gray-500);
 
     --background: var(--black);
     --background-highlight: var(--gray-900);
-
-    /* TODO: Add "low" "medium" and "high" to design system */
     --background-low: var(--gray-700);
     --background-medium: var(--gray-600);
     --background-high: var(--gray-800);
@@ -181,11 +182,5 @@
     --shadow-window-box-3-opacity: 0.16;
     --shadow-window-box-4-opacity: 0.06;
     --shadow-window-box-5-opacity: 0.06;
-
-    /* Menu colors */
-    --body-menu: var(--gray-400);
-    --body-menu-low: var(--gray-300);
-    --body-menu-medium: var(--gray-300);
-    --body-menu-high: var(--gray-300);
   }
 }
