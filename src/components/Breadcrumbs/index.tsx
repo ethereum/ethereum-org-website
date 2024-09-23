@@ -1,3 +1,4 @@
+import { Fragment } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
@@ -72,8 +73,8 @@ const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
           const normalizePath = (path) => path.replace(/\/$/, "") // Remove trailing slash
           const isCurrentPage = normalizePath(slug) === normalizePath(fullPath)
           return (
-            <>
-              <BreadcrumbItem key={fullPath}>
+            <Fragment key={fullPath}>
+              <BreadcrumbItem>
                 {isCurrentPage ? (
                   <BreadcrumbPage>{text}</BreadcrumbPage>
                 ) : (
@@ -85,7 +86,7 @@ const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
                   /
                 </BreadcrumbSeparator>
               )}
-            </>
+            </Fragment>
           )
         })}
       </BreadcrumbList>
