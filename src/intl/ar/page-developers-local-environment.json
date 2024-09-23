@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "إعداد بيئة التنمية المحلية الخاصة بك",
   "page-local-environment-solidity-template-desc": "قالب GitHub للإعداد المسبق البناء للعقود الذكية للغة Solidity الخاصة بك. يشمل شبكة Hardhat المحلية، ووافل للاختبارات، وعملات إثير لتنفيذ المحفظة، وأكثر من ذلك.",
   "page-local-environment-solidity-template-logo-alt": "شعار قالب Solidity",
-  "page-local-environment-truffle-desc": "تنقل مجموعة Truffle المبرمجين من مرحلة الأفكار إلى التطبيق اللامركزي بأكثر سبل الراحة الممكنة.",
-  "page-local-environment-truffle-logo-alt": "شعار Truffle",
   "page-local-environment-waffle-desc": "مكتبة الاختبار الأكثر تقدمًا للعقود الذكية. استخدمها بمفردها أو مع Scaffold-eth أو Hardhat.",
   "page-local-environment-waffle-logo-alt": "شعار Waffle"
 }

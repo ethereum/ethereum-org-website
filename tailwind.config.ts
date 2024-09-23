@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss"
 import plugin from "tailwindcss/plugin"
 
-import { screens } from "./tailwind/screens"
+import { screens } from "./src/lib/utils/screen"
 
 const config = {
   // TODO: Move to "class" strategy after removing Chakra
@@ -165,6 +165,7 @@ const config = {
           a: {
             DEFAULT: "hsla(var(--accent-a))",
             hover: "hsla(var(--accent-a-hover))",
+            "low-contrast": "hsla(var(--accent-a-low-contrast))", // TODO: VERIFY
           },
           b: {
             DEFAULT: "hsla(var(--accent-b))",
@@ -217,13 +218,13 @@ const config = {
             "active-background": "hsla(var(--menu-4-active-background))",
           },
         },
-      },
 
-      /** @deprecated */
-      "switch-background": "hsla(var(--switch-background))", // TODO: Migrate
-      "tooltip-shadow": "var(--tooltip-shadow)",
-      "hub-hero-content-bg": "var(--hub-hero-content-bg)",
-      "search-background": "var(--search-background)",
+        /** @deprecated */
+        "switch-background": "hsla(var(--switch-background))", // TODO: Migrate
+        "tooltip-shadow": "var(--tooltip-shadow)",
+        "hub-hero-content": "var(--hub-hero-content)",
+        "search-background": "var(--search-background)",
+      },
 
       backgroundImage: {
         "gradient-main": "var(--gradient-main)",
@@ -232,6 +233,7 @@ const config = {
         "feedback-gradient": "var(--feedback-gradient)",
         "banner-grid-gradient": "var(--banner-grid-gradient)",
         "radial-a": "var(--radial-a)",
+        "linear-bug-bounty-title": "var(--linear-bug-bounty-title)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
@@ -280,10 +282,21 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+
+        "scroll-left": {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        "scroll-right": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "scroll-left": "scroll-left 30s linear infinite",
+        "scroll-right": "scroll-right 30s linear infinite",
       },
       // Add custom border-radius tailwinds extension for "4xl" as "2rem"
       borderRadius: {

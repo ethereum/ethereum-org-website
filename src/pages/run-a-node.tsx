@@ -39,6 +39,7 @@ import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget as QuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 import { Stack, VStack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
@@ -47,7 +48,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { InfoGrid } from "@/layouts/Staking"
+import { InfoGrid } from "@/layouts/md/Staking"
 import community from "@/public/images/enterprise-eth.png"
 import hackathon from "@/public/images/hackathon_transparent.png"
 import impact from "@/public/images/impact_transparent.png"
@@ -56,8 +57,6 @@ import Dapptap from "@/public/images/run-a-node/dapptap.svg"
 import ethereumInside from "@/public/images/run-a-node/ethereum-inside.png"
 import Terminal from "@/public/images/run-a-node/terminal.svg"
 import leslie from "@/public/images/upgrades/upgrade_rhino.png"
-
-const Divider = () => <Box my="16" w="10%" h="1" bg="homeDivider" />
 
 const GappedPage = (props: ChildOnlyProp) => (
   <Flex
@@ -86,10 +85,6 @@ const GappedContent = (props: ChildOnlyProp) => (
     py="4"
     {...props}
   />
-)
-
-const HeroContainer = (props: ChildOnlyProp) => (
-  <Box w="full" bg="runNodeGradient" {...props} />
 )
 
 const Content = (props: BoxProps) => <Box w="full" py="4" px="8" {...props} />
@@ -440,11 +435,11 @@ const RunANodePage = () => {
         description={t("page-run-a-node-meta-description")}
         image="/images/run-a-node/ethereum-inside.png"
       />
-      <HeroContainer>
-        <Box pb="8">
+      <div className="w-full bg-gradient-to-br from-accent-b/5 via-primary/10 to-accent-b/15 dark:from-accent-b/20 dark:via-primary/15 dark:to-accent-a/20">
+        <div className="pb-8">
           <PageHero content={heroContent} isReverse />
-        </Box>
-      </HeroContainer>
+        </div>
+      </div>
 
       <Content id="what-is-a-node">
         <TwoColumnContent>

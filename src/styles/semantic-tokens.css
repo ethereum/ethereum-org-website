@@ -14,6 +14,7 @@
 
     --background: var(--white);
     --background-highlight: var(--gray-50);
+    --background-medium: var(--gray-200); /* TODO: VERIFY */
 
     /* TODO: Add border color tokens to match DS */
 
@@ -27,6 +28,7 @@
 
     --accent-a: var(--blue-600);
     --accent-a-hover: var(--blue-500);
+    --accent-a-low-contrast: var(--blue-50); /* TODO: VERIFY */
 
     --accent-b: var(--pink-600);
     --accent-b-hover: var(--pink-500);
@@ -44,8 +46,8 @@
     --warning-light: var(--yellow-100);
 
     /**
-    /* Gradients (radial, conic)
-    /* For linear-gradient, Tailwind classes preferred
+    /* Gradients (radial, conic, or linear over 3 stops)
+    /* For linear-gradient up to 3 stops, use Tailwind classes
     /* https://tailwindcss.com/docs/background-image#linear-gradients
     */
     --radial-a-opacity-1: 0.08;
@@ -56,6 +58,16 @@
       hsla(var(--purple-500), var(--radial-a-opacity-2)) 33%,
       hsla(var(--blue-500), var(--radial-a-opacity-1)) 66%,
       transparent 100%
+    );
+
+    --linear-bug-bounty-title: linear-gradient(
+      to left,
+      #f7cbc0 0%,
+      #f4b1ab 29.8%,
+      #8476d9 49.78%,
+      #85acf9 54.14%,
+      #1c1ce1 61.77%,
+      #000000 69.77%
     );
 
     /* Shadows */
@@ -110,7 +122,7 @@
   }
 
   /* Dark mode token declarations */
-  .dark {
+  [data-theme="dark"] {
     --body: var(--gray-100);
     --body-medium: var(--gray-400);
     --body-light: var(--gray-600);
@@ -120,6 +132,7 @@
 
     --background: var(--black);
     --background-highlight: var(--gray-900);
+    --background-medium: var(--gray-950); /* TODO: VERIFY */
 
     /* TODO: Add border color tokens to match DS */
 
@@ -132,6 +145,7 @@
 
     --accent-a: var(--blue-400);
     --accent-a-hover: var(--blue-300);
+    --accent-a-low-contrast: var(--blue-900); /* TODO: VERIFY */
 
     --accent-b: var(--pink-400);
     --accent-b-hover: var(--pink-300);
@@ -144,6 +158,15 @@
     /* Gradients (dark mode adjustments) */
     --radial-a-opacity-1: 0.16;
     --radial-a-opacity-2: 0.48;
+
+    --linear-bug-bounty-title: linear-gradient(
+      to left,
+      hsl(12, 77%, 86%) 0%,
+      #fbeae3 17.81%,
+      #f4b1ab 29.8%,
+      #8476d9 49.78%,
+      #8db4ff 69.77%
+    );
 
     /* Shadows (dark mode adjustments) */
     --shadow-color: hsla(var(--white), 0.04);

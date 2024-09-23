@@ -1,4 +1,4 @@
-import { screens } from "../../tailwind/screens"
+import { screens } from "@/lib/utils/screen"
 
 import { useMediaQuery } from "./useMediaQuery"
 
