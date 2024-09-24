@@ -25,6 +25,7 @@ type ItemProps = React.HTMLAttributes<HTMLButtonElement> & {
   separatorClass: string
   container?: HTMLElement | null
   label: string
+  eventCategory: string
 }
 
 const Item = ({
@@ -34,13 +35,14 @@ const Item = ({
   separatorClass,
   container,
   label,
+  eventCategory,
 }: ItemProps) => (
   <>
     <Tooltip
       container={container}
       onBeforeOpen={() => {
         trackCustomEvent({
-          eventCategory: "Homepage",
+          eventCategory,
           eventAction: "internet_changing",
           eventName: label,
         })
@@ -138,7 +140,7 @@ const Row = forwardRef<HTMLDivElement, RowProps>(
 Row.displayName = "Row"
 
 const ValuesMarquee = () => {
-  const { t, pairings } = useValuesMarquee()
+  const { t, pairings, eventCategory } = useValuesMarquee()
   const containerFirstRef = useRef<HTMLDivElement>(null)
   const containerSecondRef = useRef<HTMLDivElement>(null)
 
@@ -182,6 +184,7 @@ const ValuesMarquee = () => {
               pairing={pairing}
               separatorClass="bg-accent-a"
               className="group/item bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-700"
+              eventCategory={eventCategory}
             >
               <FaCheck className="me-1 text-success group-hover/item:text-white" />
               {pairing.ethereum.label}
@@ -202,6 +205,7 @@ const ValuesMarquee = () => {
               pairing={pairing}
               className="bg-gray-200/20 text-body-medium hover:bg-gray-600 hover:text-white dark:bg-gray-950 dark:text-body"
               separatorClass="bg-gray-200 dark:bg-gray-950"
+              eventCategory={eventCategory}
             >
               {pairing.legacy.label}
             </Item>

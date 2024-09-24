@@ -40,6 +40,8 @@ export const useHome = () => {
 
   const { direction, isRtl } = useRtlFlip()
 
+  const eventCategory = `Homepage - ${locale}`
+
   const toggleCodeExample = (id: number): void => {
     setActiveCode(id)
     setModalOpen(true)
@@ -222,5 +224,6 @@ export const useHome = () => {
     upcomingEvents,
     joinActions,
     bentoItems,
+    eventCategory,
   }
 }

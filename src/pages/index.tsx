@@ -198,6 +198,7 @@ const HomePage = ({
     upcomingEvents,
     joinActions,
     bentoItems,
+    eventCategory,
   } = useHome()
 
   const { onCopy, hasCopied } = useClipboard()
@@ -225,7 +226,7 @@ const HomePage = ({
                   href={href}
                   label={label}
                   customEventOptions={{
-                    eventCategory: "Homepage",
+                    eventCategory,
                     eventAction: "Top 4 CTAs",
                     eventName: subHeroCTAs[idx].eventName,
                   }}
@@ -282,7 +283,7 @@ const HomePage = ({
               effect="cards"
               onSlideChange={({ activeIndex }) => {
                 trackCustomEvent({
-                  eventCategory: "Homepage",
+                  eventCategory,
                   eventAction: "mobile use cases",
                   eventName: `swipe to card ${activeIndex + 1}`,
                 })
@@ -295,6 +296,7 @@ const HomePage = ({
                     {...item}
                     className={cn(className, "bg-background text-body")}
                     imgWidth={undefined} // Intentionally last to override box
+                    eventCategory={eventCategory}
                   />
                 </SwiperSlide>
               ))}
@@ -307,6 +309,7 @@ const HomePage = ({
               key={item.title}
               {...item}
               className={cn(className, "max-lg:hidden")} // Desktop only
+              eventCategory={eventCategory}
             />
           ))}
         </Section>
@@ -368,7 +371,7 @@ const HomePage = ({
                           className
                         )}
                         customEventOptions={{
-                          eventCategory: "Homepage",
+                          eventCategory,
                           eventAction: "popular topics",
                           eventName,
                         }}
@@ -388,7 +391,7 @@ const HomePage = ({
                     isSecondary
                     className="max-sm:self-start"
                     customEventOptions={{
-                      eventCategory: "Homepage",
+                      eventCategory,
                       eventAction: "learn",
                       eventName: "learn",
                     }}
@@ -425,7 +428,7 @@ const HomePage = ({
                 size="lg"
                 className="w-fit"
                 customEventOptions={{
-                  eventCategory: "Homepage",
+                  eventCategory,
                   eventAction: "builders",
                   eventName: "developers",
                 }}
@@ -440,7 +443,7 @@ const HomePage = ({
                 isSecondary
                 className="w-fit"
                 customEventOptions={{
-                  eventCategory: "Homepage",
+                  eventCategory,
                   eventAction: "builders",
                   eventName: "dev docs",
                 }}
@@ -466,7 +469,7 @@ const HomePage = ({
                     onClick={() => {
                       toggleCodeExample(idx)
                       trackCustomEvent({
-                        eventCategory: "Homepage",
+                        eventCategory,
                         eventAction: "Code Examples",
                         eventName,
                       })
@@ -570,7 +573,7 @@ const HomePage = ({
                 href="/community/"
                 size="lg"
                 customEventOptions={{
-                  eventCategory: "Homepage",
+                  eventCategory,
                   eventAction: "community",
                   eventName: "community",
                 }}
@@ -585,7 +588,7 @@ const HomePage = ({
                   isSecondary
                   hideArrow
                   customEventOptions={{
-                    eventCategory: "Homepage",
+                    eventCategory,
                     eventAction: "community",
                     eventName: "discord",
                   }}
@@ -599,7 +602,7 @@ const HomePage = ({
                   isSecondary
                   hideArrow
                   customEventOptions={{
-                    eventCategory: "Homepage",
+                    eventCategory,
                     eventAction: "community",
                     eventName: "github",
                   }}
@@ -616,7 +619,7 @@ const HomePage = ({
                 {calendar.length > 0 ? (
                   calendar.map(({ date, title, calendarLink }) => {
                     const customEventOptions = {
-                      eventCategory: "Homepage",
+                      eventCategory,
                       eventAction: "Community Events Widget",
                       eventName: "upcoming",
                     }
@@ -694,7 +697,7 @@ const HomePage = ({
                   <Card
                     href={link}
                     customEventOptions={{
-                      eventCategory: "Homepage",
+                      eventCategory,
                       eventAction: "blogs_posts",
                       eventName: source,
                     }}
@@ -731,7 +734,7 @@ const HomePage = ({
                   href={href}
                   key={name}
                   customEventOptions={{
-                    eventCategory: "Homepage",
+                    eventCategory,
                     eventAction: "blogs_read_more",
                     eventName: name!,
                   }}
@@ -771,7 +774,7 @@ const HomePage = ({
                       idx === 0 && "col-span-1 sm:col-span-2 md:col-span-1"
                     )}
                     customEventOptions={{
-                      eventCategory: "Homepage",
+                      eventCategory,
                       eventAction: "posts",
                       eventName: title,
                     }}
@@ -816,7 +819,7 @@ const HomePage = ({
               href="/community/events/"
               size="lg"
               customEventOptions={{
-                eventCategory: "Homepage",
+                eventCategory,
                 eventAction: "events",
                 eventName: "community events",
               }}
@@ -851,7 +854,7 @@ const HomePage = ({
                     className={cn("max-w-screen-sm", className)}
                     variant="row"
                     customEventOptions={{
-                      eventCategory: "Homepage",
+                      eventCategory,
                       eventAction: "join",
                       eventName,
                     }}
