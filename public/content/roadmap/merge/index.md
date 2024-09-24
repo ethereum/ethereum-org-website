@@ -108,7 +108,7 @@ For more information, check out this blog post by Tim Beiko on <a href="https://
 
 ## The Merge and energy consumption {#merge-and-energy}
 
-The Merge marked the end of proof-of-work for Ethereum and start the era of a more sustainable, eco-friendly Ethereum. Ethereum's energy consumption dropped by an estimated 99.95%, making Ethereum a green blockchain. Learn more about [Ethereum energy consumption](/energy-consumption/).
+The Merge marked the end of proof-of-work for Ethereum and started the era of a more sustainable, eco-friendly Ethereum. Ethereum's energy consumption dropped by an estimated 99.95%, making Ethereum a green blockchain. Learn more about [Ethereum energy consumption](/energy-consumption/).
 
 ## The Merge and scaling {#merge-and-scaling}
 

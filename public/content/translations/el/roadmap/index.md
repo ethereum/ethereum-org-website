@@ -12,7 +12,7 @@ buttons:
     toId: ποιές-αλλαγές-έρχονται
   - 
     label: Προηγούμενες αναβαθμίσεις
-    to: /history/
+    href: /history/
     variant: περίγραμμα
 ---
 

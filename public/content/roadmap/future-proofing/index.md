@@ -29,7 +29,7 @@ Similarly, there are updates that can be made to other parts of present-day Ethe
 
 ## Current progress {#current-progress}
 
-Most of the upgrades required for future-proofing Ethereum are **still in the research phase and may be several years away** from being implemented. Upgrades such as removing SELF-DESTRUCT and harmonizing the compression scheme used in the execution and consensus clients are likely to come sooner than quantum resistant cryptography.
+Most of the upgrades required for future-proofing Ethereum are **still in the research phase and may be several years away** from being implemented. Upgrades such as removing SELFDESTRUCT and harmonizing the compression scheme used in the execution and consensus clients are likely to come sooner than quantum resistant cryptography.
 
 **Further reading**
 

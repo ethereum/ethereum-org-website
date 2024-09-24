@@ -14,8 +14,6 @@ import {
   Box,
   Button,
   type ButtonProps,
-  Divider as ChakraDivider,
-  type DividerProps,
   Flex,
   type FlexProps,
   Heading,
@@ -48,6 +46,7 @@ import ProductListComponent, {
   type ProductListProps,
 } from "@/components/ProductList"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -136,19 +135,6 @@ const Page = (props: ChildOnlyProp & FlexProps) => (
     {...props}
   />
 )
-
-const Divider = (props: DividerProps) => (
-  <ChakraDivider
-    opacity={1}
-    my={16}
-    w="10%"
-    borderBottomWidth="0.25rem"
-    borderColor="homeDivider"
-    {...props}
-  />
-)
-
-const CenterDivider = () => <Divider display="flex" justifyContent="center" />
 
 const Content = (props: ChildOnlyProp) => (
   <Box py={4} px={8} w="full" {...props} />
@@ -1333,7 +1319,7 @@ const DappsPage = () => {
     buttons: [
       {
         content: t("page-dapps-explore-dapps-title"),
-        to: "#beginner",
+        href: "#beginner",
         matomo: {
           eventCategory: "dapp hero buttons",
           eventAction: "click",
@@ -1342,8 +1328,8 @@ const DappsPage = () => {
       },
       {
         content: t("page-dapps-what-are-dapps"),
-        to: "#what-are-dapps",
-        variant: "outline",
+        href: "#what-are-dapps",
+        variant: "outline" as const,
         matomo: {
           eventCategory: "dapp hero buttons",
           eventAction: "click",
@@ -1467,7 +1453,7 @@ const DappsPage = () => {
                   })
                 }}
               >
-                <Emoji fontSize="2xl" me={`1rem`} text={category.emoji} />
+                <Emoji className="me-4 text-2xl" text={category.emoji} />
                 <OptionText>{category.title}</OptionText>
               </Option>
             )
@@ -1480,7 +1466,7 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-finance-title")}{" "}
-                  <Emoji fontSize="5xl" ms="2" text=":money_with_wings:" />
+                  <Emoji className="ms-2 text-5xl" text=":money_with_wings:" />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-finance-description")}</Subtitle>
               </Column>
@@ -1584,9 +1570,7 @@ const DappsPage = () => {
               </Text>
             </Box>
             <CalloutBanner
-              mt={32}
-              mx={0}
-              mb={{ base: 0, lg: 16 }}
+              className="m-0 mx-0 mt-32 lg:mb-16"
               titleKey={"page-dapps:page-dapps-wallet-callout-title"}
               descriptionKey={
                 "page-dapps:page-dapps-wallet-callout-description"
@@ -1609,7 +1593,7 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-gaming-title")}{" "}
-                  <Emoji fontSize="5xl" ms="2" text=":video_game:" />
+                  <Emoji className="ms-2 text-5xl" text=":video_game:" />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-gaming-description")}</Subtitle>
               </Column>
@@ -1635,7 +1619,7 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-technology-title")}{" "}
-                  <Emoji fontSize="5xl" ms="2" text=":keyboard:" />
+                  <Emoji className="ms-2 text-5xl" text=":keyboard:" />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-technology-description")}</Subtitle>
               </Column>
@@ -1680,7 +1664,10 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-collectibles-title")}{" "}
-                  <Emoji fontSize="5xl" ms={2} text=":frame_with_picture:" />
+                  <Emoji
+                    className="ms-2 text-5xl"
+                    text=":frame_with_picture:"
+                  />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-collectibles-description")}</Subtitle>
               </Column>
@@ -1729,7 +1716,10 @@ const DappsPage = () => {
               <Column>
                 <H2>
                   {t("page-dapps-metaverse-title")}{" "}
-                  <Emoji fontSize="5xl" ms="2" text=":globe_with_meridians:" />
+                  <Emoji
+                    className="ms-2 text-5xl"
+                    text=":globe_with_meridians:"
+                  />
                 </H2>
                 <Subtitle>{t("page-dapps-metaverse-description")}</Subtitle>
               </Column>
@@ -1760,7 +1750,7 @@ const DappsPage = () => {
               <Column>
                 <H2>
                   {t("page-dapps-social-title")}{" "}
-                  <Emoji fontSize="5xl" ms="2" text=":incoming_envelope:" />
+                  <Emoji className="ms-2 text-5xl" text=":incoming_envelope:" />
                 </H2>
                 <Subtitle>{t("page-dapps-social-description")}</Subtitle>
               </Column>
@@ -1822,12 +1812,12 @@ const DappsPage = () => {
         )}
         {/* General content for all categories */}
         <Content>
-          <CenterDivider />
+          <Divider />
           {categories[selectedCategory].benefits && (
             <Box mt={12}>
               <H2>
                 {t("page-dapps-magic-title-1")}{" "}
-                <Emoji fontSize="2rem" text=":sparkles:" />{" "}
+                <Emoji className="text-[2rem]" text=":sparkles:" />{" "}
                 {t("page-dapps-magic-title-2")}{" "}
                 {categories[selectedCategory].benefitsTitle}
               </H2>
@@ -1918,10 +1908,10 @@ const DappsPage = () => {
             </Text>
             <Text>{t("page-dapps-how-dapps-work-p2")}</Text>
             <Text>{t("page-dapps-how-dapps-work-p3")}</Text>
-            <DocLink to="/developers/docs/dapps/">
+            <DocLink href="/developers/docs/dapps/">
               {t("page-dapps-docklink-dapps")}
             </DocLink>
-            <DocLink to="/developers/docs/smart-contracts/">
+            <DocLink href="/developers/docs/smart-contracts/">
               {t("page-dapps-docklink-smart-contracts")}
             </DocLink>
           </LeftColumn>

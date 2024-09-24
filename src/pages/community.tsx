@@ -24,6 +24,7 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
+import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -77,10 +78,6 @@ const Content = ({ children }: ChildOnlyProp) => {
       {children}
     </Box>
   )
-}
-
-const Divider = () => {
-  return <Box my={16} w="10%" h={1} bgColor="homeDivider" />
 }
 
 const Page = ({ children }: ChildOnlyProp) => {
@@ -177,28 +174,28 @@ const CommunityPage = () => {
       title: t("page-community-card-1-title"),
       description: t("page-community-card-1-description"),
       alt: t("page-index-get-started-wallet-image-alt"),
-      to: "/community/online/",
+      href: "/community/online/",
     },
     {
       image: ethImg,
       title: t("page-community-card-2-title"),
       description: t("page-community-card-2-description"),
       alt: t("page-index-get-started-eth-image-alt"),
-      to: "/community/events/",
+      href: "/community/events/",
     },
     {
       image: dogeComputerImg,
       title: t("page-community-card-3-title"),
       description: t("page-community-card-3-description"),
       alt: t("page-index-get-started-dapps-image-alt"),
-      to: "/community/get-involved/",
+      href: "/community/get-involved/",
     },
     {
       image: futureTransparentImg,
       title: t("page-community-card-4-title"),
       description: t("page-community-card-4-description"),
       alt: t("page-index-get-started-dapps-image-alt"),
-      to: "/community/grants/",
+      href: "/community/grants/",
     },
   ]
 
@@ -314,7 +311,7 @@ const CommunityPage = () => {
                 key={idx}
                 title={card.title}
                 description={card.description}
-                to={card.to}
+                href={card.href}
                 image={card.image}
                 imageWidth={320}
                 alt={card.alt}

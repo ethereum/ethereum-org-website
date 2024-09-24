@@ -6,10 +6,10 @@ const { defineMultiStyleConfig, definePartsStyle } =
 
 const baseStyle = definePartsStyle({
   container: {
-    '& > :is(h2, h3)': {
+    "& > :is(h2, h3)": {
       fontSize: "initial",
-      fontWeight: 'initial'
-    }
+      fontWeight: "initial",
+    },
   },
   button: {
     py: "2",

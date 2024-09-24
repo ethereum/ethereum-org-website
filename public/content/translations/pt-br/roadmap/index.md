@@ -10,7 +10,7 @@ buttons:
   - label: Melhorias adicionais
     toId: próximas-alterações
   - label: Melhorias anteriores
-    to: /history/
+    href: /history/
     variant: descrição
 ---
 

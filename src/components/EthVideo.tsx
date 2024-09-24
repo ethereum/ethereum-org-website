@@ -1,6 +1,5 @@
 import { Box } from "@chakra-ui/react"
-
-import useColorModeValue from "@/hooks/useColorModeValue"
+import { useColorModeValue } from "@chakra-ui/react"
 
 const EthVideo = () => {
   const src = useColorModeValue(

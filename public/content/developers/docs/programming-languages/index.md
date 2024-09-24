@@ -16,6 +16,7 @@ Select your programming language of choice to find projects, resources, and virt
 - [Ethereum for Dart developers](/developers/docs/programming-languages/dart/)
 - [Ethereum for Delphi developers](/developers/docs/programming-languages/delphi/)
 - [Ethereum for .NET developers](/developers/docs/programming-languages/dot-net/)
+- [Ethereum for Elixir developers](/developers/docs/programming-languages/elixir/)
 - [Ethereum for Go developers](/developers/docs/programming-languages/golang/)
 - [Ethereum for Java developers](/developers/docs/programming-languages/java/)
 - [Ethereum for JavaScript developers](/developers/docs/programming-languages/javascript/)

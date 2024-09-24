@@ -1,5 +1,5 @@
 import { useTranslation } from "next-i18next"
-import { Box, Flex, Heading, useTheme } from "@chakra-ui/react"
+import { Box, Heading, useTheme } from "@chakra-ui/react"
 
 import type { StakingPage, TranslationKey } from "@/lib/types"
 
@@ -12,12 +12,15 @@ import InlineLink from "@/components/Link"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 
+import { cn } from "@/lib/utils/cn"
 import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+
+import { Flex } from "../ui/flex"
 
 interface DataType {
   title: TranslationKey
   linkText: TranslationKey
-  to: string
+  href: string
   matomo: MatomoEventOptions
   color: string
   glyph: JSX.Element
@@ -36,7 +39,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
   const solo: DataType = {
     title: "page-staking-dropdown-solo",
     linkText: "page-staking-learn-more-solo",
-    to: "/staking/solo/",
+    href: "/staking/solo/",
     matomo: {
       eventCategory: `StakingComparison`,
       eventAction: `Clicked`,
@@ -48,7 +51,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
   const saas: DataType = {
     title: "page-staking-saas-with-abbrev",
     linkText: "page-staking-learn-more-saas",
-    to: "/staking/saas/",
+    href: "/staking/saas/",
     matomo: {
       eventCategory: `StakingComparison`,
       eventAction: `Clicked`,
@@ -60,7 +63,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
   const pools: DataType = {
     title: "page-staking-dropdown-pools",
     linkText: "page-staking-learn-more-pools",
-    to: "/staking/pools/",
+    href: "/staking/pools/",
     matomo: {
       eventCategory: `StakingComparison`,
       eventAction: `Clicked`,
@@ -112,33 +115,20 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
 
   return (
     <Flex
-      direction="column"
-      gap={8}
-      bg="linear-gradient(
-      83.46deg,
-      rgba(127, 127, 213, 0.2) 7.03%,
-      rgba(138, 168, 231, 0.2) 52.42%,
-      rgba(145, 234, 228, 0.2) 98.77%
-    )"
-      py={8}
-      px={{ base: 6, md: 8 }}
-      mt={16}
-      className={className}
+      className={cn(
+        "mt-16 flex-col gap-8 px-6 py-8 md:px-8",
+        "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20",
+        className
+      )}
     >
       <OldHeading fontSize="2rem">
         {t("page-staking-comparison-with-other-options")}
       </OldHeading>
       {selectedData.map(
-        ({ title, linkText, to, color, content, glyph, matomo }, idx) => (
-          <Flex gap={6} direction={{ base: "column", md: "row" }} key={idx}>
+        ({ title, linkText, href, color, content, glyph, matomo }, idx) => (
+          <Flex className="flex-col gap-6 md:flex-row" key={idx}>
             {!!glyph && (
-              <Flex
-                direction="column"
-                justify="flex-start"
-                align="center"
-                w={12}
-                maxH={12}
-              >
+              <Flex className="max-h-12 w-12 flex-col items-center justify-start">
                 {glyph}
               </Flex>
             )}
@@ -151,7 +141,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
                 onClick={() => {
                   trackCustomEvent(matomo)
                 }}
-                href={to}
+                href={href}
               >
                 {t(linkText)}
               </InlineLink>

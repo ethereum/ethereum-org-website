@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { shuffle } from "lodash"
+import { useColorModeValue } from "@chakra-ui/react"
 
 import stakingProducts from "@/data/staking-products.json"
 
@@ -19,8 +20,6 @@ import {
   getSharedSecurityProperties,
   getTagProperties,
 } from "./utils"
-
-import useColorModeValue from "@/hooks/useColorModeValue"
 
 export const useStakingProductsCardGrid = ({
   category,

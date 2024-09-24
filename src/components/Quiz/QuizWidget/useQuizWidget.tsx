@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
+import isChromatic from "chromatic"
 import shuffle from "lodash/shuffle"
 import { useTranslation } from "next-i18next"
 
@@ -51,7 +52,9 @@ export const useQuizWidget = ({
       const rawQuestion: RawQuestion = questionBank[id]
       return { id, ...rawQuestion }
     })
-    const shuffledQuestions = shuffle(questions)
+
+    // ! Do not shuffle questions in Chromatic to keep the modal story snapshot stable
+    const shuffledQuestions = isChromatic() ? questions : shuffle(questions)
     const quiz: Quiz = {
       title: t(rawQuiz.title),
       questions: shuffledQuestions,

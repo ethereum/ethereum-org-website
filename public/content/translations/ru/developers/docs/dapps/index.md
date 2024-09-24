@@ -74,6 +74,12 @@ lang: ru
 - [Документация](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
+**Crossmint _— платформа разработки Web3 корпоративного уровня для развертывания смарт-контрактов, платежей по кредитным картам и кроссчейн-платежей, а также создания, распространения, продажи, хранения и редактирования NFT посредством API._**
+
+- [crossmint.com](https://www.crossmint.com)
+- [Документация](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+
 ## Дополнительные ресурсы {#further-reading}
 
 - [Просмотреть децентрализованные приложения](/dapps)

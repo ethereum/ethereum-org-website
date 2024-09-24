@@ -10,7 +10,7 @@ buttons:
   - label: Actualizaciones futuras
     toId: '¿Qué cambios están pendientes?'
   - label: Actualizaciones anteriores
-    to: /history/
+    href: /history/
     variant: borrador
 ---
 

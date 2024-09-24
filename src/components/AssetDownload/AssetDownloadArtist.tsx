@@ -26,7 +26,7 @@ const AssetDownloadArtist = ({
       borderRadius="0 0 4px 4px"
     >
       <Flex me="2" fontSize="md" textColor="text300">
-        <Emoji text=":artist_palette:" me="2" fontSize="2xl" />
+        <Emoji text=":artist_palette:" className="me-2 text-2xl" />
         {t("page-assets-download-artist")}
       </Flex>
       {artistUrl && <Link href={artistUrl}>{artistName}</Link>}

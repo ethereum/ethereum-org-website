@@ -41,6 +41,7 @@
   "page-dapps-choose-category": "Выберите категорию",
   "page-dapps-category-social": "Социальные сети",
   "page-dapps-category-content": "Контент",
+  "page-dapps-category-community": "Сообщество",
   "page-dapps-category-messaging": "Обмен сообщениями",
   "page-dapps-category-identity": "Идентичность",
   "page-dapps-collectibles-benefits-1-description": "Когда предмет искусства токенизируется на Ethereum, право собственности может быть доказано и доступно всем для просмотра. Вы можете проследить процесс от создания предмета искусства до его текущего владельца. Это предотвращает подделки.",
@@ -95,6 +96,7 @@
   "page-dapps-dapp-description-loopring": "Одноранговая торговая платформа, созданная для скорости.",
   "page-dapps-dapp-description-marble-cards": "Создавайте и торгуйте уникальными цифровыми картами на основе URL-адресов.",
   "page-dapps-dapp-description-matcha": "Проверяет цены на ряде бирж, чтобы помочь вам найти лучший вариант.",
+  "page-dapps-dapp-description-meeds": "Центры сообществ Web3 для эры децентрализованной работы. Справедливое и прозрачное вознаграждение важного содействия.",
   "page-dapps-dapp-description-mirror": "Надежная издательская платформа от Mirror, созданная на базе web3 для web3, расширяет границы создания письменных работ в Интернете",
   "page-dapps-dapp-description-multichain": "Лучший маршрутизатор для web3. Это инфраструктура, разработанная для произвольных взаимодействий между сетями.",
   "page-dapps-dapp-description-nifty-gateway": "Покупайте работы от лучших художников, спортсменов, брендов и создателей непосредственно в блокчейне.",
@@ -217,6 +219,7 @@
   "page-dapps-marble-cards-logo-alt": "логотип marble.cards",
   "page-dapps-async-logo-alt": "Логотип Async",
   "page-dapps-matcha-logo-alt": "Логотип Matcha",
+  "page-dapps-meeds-logo-alt": "Логотип Meeds",
   "page-dapps-metaverse-benefits-title": "метавселенная",
   "page-dapps-metaverse-benefits-description": "Что способствует успеху метавселенных на Ethereum?",
   "page-dapps-metaverse-benefits-1-title": "NFT",
@@ -281,5 +284,7 @@
   "page-dapps-dapp-description-dodo": "DODO — это поставщик ликвидности ончейн, который использует алгоритм Proactive Market Maker (PMM)",
   "page-dapps-dodo-image-alt": "Логотип DODO",
   "page-dapps-dapp-description-artblocks": "Цель Art Blocks — показать публике захватывающие произведения современного генеративного искусства",
-  "page-dapps-artblocks-image-alt": "Логотип Art Blocks"
+  "page-dapps-artblocks-image-alt": "Логотип Art Blocks",
+  "page-dapps-explore-title": "Хотите просмотреть другие приложения?",
+  "page-dapps-explore": "Откройте для себя сотни децентрализованных приложений"
 }

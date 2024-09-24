@@ -12,7 +12,7 @@ buttons:
     toId: what-changes-are-coming
   - 
     label: Améliorations antérieures
-    to: /history/
+    hrf: /history/
     variant: outline
 ---
 

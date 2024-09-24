@@ -12,7 +12,7 @@ buttons:
     toId: 予定されている変更
   - 
     label: 過去のアップグレード
-    to: /history/
+    href: /history/
     variant: 概要
 ---
 

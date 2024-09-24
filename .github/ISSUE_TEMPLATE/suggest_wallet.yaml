@@ -264,7 +264,7 @@ body:
   - type: input
     id: wallet_l2_support
     attributes:
-      label: Does the wallet support Ethereum layer 2 networks?
+      label: Which Ethereum Layer 2 networks does the wallet support?
       description: Please provide documentation on Ethereum layer 2 networks this wallet supports.
     validations:
       required: true

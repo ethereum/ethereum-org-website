@@ -48,6 +48,8 @@ import {
   StakingLayout,
   staticComponents,
   StaticLayout,
+  translatathonComponents,
+  TranslatathonLayout,
   TutorialLayout,
   tutorialsComponents,
   upgradeComponents,
@@ -71,6 +73,7 @@ export const layoutMapping = {
   roadmap: RoadmapLayout,
   upgrade: UpgradeLayout,
   docs: DocsLayout,
+  translatathon: TranslatathonLayout,
   tutorial: TutorialLayout,
 }
 
@@ -81,6 +84,7 @@ const componentsMapping = {
   roadmap: roadmapComponents,
   upgrade: upgradeComponents,
   docs: docsComponents,
+  translatathon: translatathonComponents,
   tutorial: tutorialsComponents,
 } as const
 

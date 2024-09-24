@@ -14,17 +14,19 @@ summaryPoint3: Ein Instrument zur drastischen Skalierung von Gütern für ökolo
 
 ## Was ist ReFi? {#what-is-refi}
 
-**Regenerative Finanzen (ReFi)** ist eine Reihe von Instrumenten und Ideen, die auf Blockchains aufbauen und darauf abzielen, eine Wirtschaft zu schaffen, die regenerativ ist und nicht extraktiv oder ausbeuterisch. Schließlich erschöpfen extraktive Systeme die verfügbaren Ressourcen und brechen irgendwann zusammen. Ohne Regenerationsmechanismen fehlt ihnen die Widerstandsfähigkeit. ReFi geht von der Annahme aus, dass die Schaffung von Geldwerten entkoppelt werden muss von einer nicht nachhaltigen Entnahme von Ressourcen aus unserem Planeten und unseren Gemeinschaften.
+**Regenerative Finanzen (ReFi)** sind auf [Blockchains](/glossary/#blockchain) gebaute Instrumentarien und Ideen, die das Ziel haben, Wirtschaften zu schaffen, die eher regenerativ, als extraktiv oder ausbeuterisch sind. Schließlich erschöpfen extraktive Systeme die verfügbaren Ressourcen und brechen irgendwann zusammen. Ohne Regenerationsmechanismen fehlt ihnen die Widerstandsfähigkeit. ReFi geht von der Annahme aus, dass die Schaffung von Geldwerten entkoppelt werden muss von einer nicht nachhaltigen Entnahme von Ressourcen aus unserem Planeten und unseren Gemeinschaften.
 
 Stattdessen zielt ReFi darauf ab, ökologische, kommunale oder soziale Probleme zu lösen, indem es regenerative Kreisläufe schafft. Diese Systeme schaffen Werte für die Teilnehmer und kommen gleichzeitig den Ökosystemen und Gemeinschaften zugute.
 
 Eine der Grundlagen von ReFi ist das Konzept der regenerativen Wirtschaft, das von John Fullerton vom Capital Institute erdacht wurde. Er schlug [acht miteinander verknüpfte Grundsätze](https://capitalinstitute.org/8-principles-regenerative-economy/) vor, die der systemischen Gesundheit zugrunde liegen:
 
-![Acht miteinander verknüpfte Grundsätze](./refi-regenerative-economy-diagram.png)
+![Acht miteinander verknüpfte Grundsätze](refi-regenerative-economy-diagram.png)
 
-ReFi-Projekte verwirklichen diese Prinzipien mithilfe von [Smart Contracts](/developers/docs/smart-contracts/) und [dezentralen Finanzen (DeFi)](/defi/), um Anreize für regenerative Verhaltensweisen zu schaffen, z. B. für die Wiederherstellung geschädigter Ökosysteme, und die Zusammenarbeit in großem Maßstab bei globalen Problemen wie Klimawandel und Verlust der Artenvielfalt zu erleichtern.
+ReFi-Projekte verwirklichen diese Prinzipien mithilfe von [Smart Contracts](/glossary/#smart-contract) und [dezentralen Finanzen (DeFi)](/glossary/#defi), um Anreize für regenerative Verhaltensweisen zu schaffen, z. B. für die Wiederherstellung geschädigter Ökosysteme, und die Zusammenarbeit in großem Maßstab bei globalen Problemen wie Klimawandel und Verlust der Artenvielfalt zu erleichtern.
 
 ReFi überschneidet sich auch mit der Bewegung der [dezentralen Wissenschaft (DeSci)](/desci/), die Ethereum als Plattform für die Finanzierung, Erstellung, Überprüfung, Gutschrift, Speicherung und Verbreitung wissenschaftlicher Erkenntnisse nutzt. DeSci-Instrumente könnten sich als nützlich erweisen, um überprüfbare Standards und Praktiken für die Umsetzung und Überwachung regenerativer Aktivitäten wie das Pflanzen von Bäumen, die Entfernung von Plastik aus den Ozeanen oder die Wiederherstellung eines geschädigten Ökosystems zu entwickeln.
+
+<YouTube id="La52dDzBt2k" />
 
 ## Tokenisierung von Kohlenstoffgutschriften {#tokenization-of-carbon-credits}
 
@@ -47,7 +49,7 @@ Bei ReFi-Projekten wird die Blockchain-Technologie eingesetzt, um viele der Prob
 - **Die Liquidität konzentriert sich in einer kleinen Anzahl von Liquiditätspools**, die von jedem frei gehandelt werden können. Sowohl große Organisationen als auch einzelne Nutzer können diese Pools ohne manuelle Suche nach Verkäufern/Käufern, Teilnahmegebühren oder vorherige Registrierung nutzen.
 - **Alle Transaktionen werden auf öffentlichen Blockchains aufgezeichnet**. Der Weg, den jede Emissionsgutschrift aufgrund von Handelsaktivitäten nimmt, ist für immer nachvollziehbar, sobald sie im DCM zur Verfügung gestellt wird.
 - **Die Transaktionsgeschwindigkeit ist nahezu unmittelbar**. Die Beschaffung großer Mengen an Emissionsgutschriften über die herkömmlichen Märkte kann Tage oder Wochen dauern, während dies im DCM in wenigen Sekunden möglich ist.
-- **Die Handelstätigkeit erfolgt ohne Zwischenhändler**, die hohe Gebühren verlangen. Digitale Emissionsgutschriften stellen eine [62%ige Kostenverbesserung im Vergleich zu entsprechenden traditionellen Gutschriften](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne) dar, so die Daten eines Analyseunternehmens.
+- **Die Handelstätigkeit erfolgt ohne Zwischenhändler**, die hohe Gebühren verlangen. Digitale Carbon Credits repräsentieren eine signifikante Kostenreduzierung im Vergleich zu traditionellen Credits.
 - **Das DCM ist skalierbar** und kann die Anforderungen von Einzelpersonen und multinationalen Unternehmen gleichermaßen erfüllen.
 
 ### Hauptbestandteile des DCM {#key-components-dcm}

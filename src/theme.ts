@@ -147,12 +147,6 @@ const baseColors = {
 // TODO replace random variables w/ baseColor variables
 const lightColors = {
   buttonColor: white,
-  upgradesGradient:
-    "linear-gradient(285.24deg, #F7CBC0 0%, #F4B1AB 29.8%, #8476D9 49.78%, #85ACF9 54.14%, #1C1CE1 61.77%, #000000 69.77%)",
-  runNodeGradient:
-    "linear-gradient(0deg, rgba(153, 157, 244, 0.1) 0%, rgba(153, 157, 244, 0) 100%), linear-gradient(270.72deg, #FDF0FF 0.62%, rgba(236, 195, 195, 0.557292) 32.61%, rgba(207, 189, 230, 0.296875) 49.67%, rgba(196, 196, 196, 0) 72.88%);",
-  runNodeGradient2:
-    "linear-gradient(135deg, rgba(79, 113, 235, 0.2) 9.8%, rgba(232, 79, 235, 0.2) 92.84%);",
   ghostCardBackground: white,
   ghostCardGhost: white600,
   secondaryButtonBackgroundActive: white700,
@@ -170,12 +164,6 @@ const lightColors = {
   primaryHover: "rgba(28, 28, 225, 0.8)",
   primaryActive: primaryLight600,
   lightBorder: "#ececec",
-  priceCardBackgroundPositive:
-    "linear-gradient( 0, rgba(207, 236, 224, 0.6) 0%, rgba(207, 236, 224, 0) 100%)",
-  priceCardBackgroundNegative:
-    "linear-gradient(180deg, rgba(241, 204, 204, 0.4) 0%, rgba(241, 204, 204, 0) 100%)",
-  priceCardBorder: "#ececec",
-  priceCardBorderNegative: "#ececec",
   searchBorder: "#7f7f7f",
   searchBackground: white,
   searchBackgroundEmpty: "#f2f2f2",
@@ -208,13 +196,8 @@ const lightColors = {
   displayLight: "block",
   grayBackground: "#fcfcfc",
   cardGradient:
+    // Migrate to: "bg-gradient-to-r from-accent-a/10 to-accent-c/10"
     "radial-gradient(46.28% 66.31% at 66.95% 58.35%, #e6e6f7 0%, #e7edfa 50%, #e9fbfa 100%)",
-  upgradeStatusBackground:
-    "linear-gradient(180deg, rgba(0, 240, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #1c1ce1",
-  upgradeStatusShippedBackground:
-    "linear-gradient(180deg, rgba(0, 240, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #109e62",
-  upgradeStatusBorder: "none",
-  upgradeStatusShippedBorder: "none",
   warning: primaryDark100,
   warningLink: primaryDark700,
   warningLinkHover: primaryDark900,
@@ -247,8 +230,6 @@ const lightColors = {
   stakingBlueFill: "#f1fcf5",
   stakingRed: "#a0524c",
   stakingRedFill: "#f8fbf9",
-  layer2Gradient:
-    "linear-gradient(85.12deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 56.29%, rgba(58, 142, 137, 0.2) 99.99%)",
   feedbackGradient:
     "linear-gradient(102.7deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 51.56%, rgba(58, 142, 137, 0.2) 100%)",
   bannerGridGradient:
@@ -266,12 +247,6 @@ const lightColors = {
 // TODO replace random variables w/ baseColor variables
 const darkColors = {
   buttonColor: black300,
-  upgradesGradient:
-    "linear-gradient(285.24deg, #f7cbc0 0%, #fbeae3 17.81%, #f4b1ab 29.8%, #8476d9 49.78%, #8db4ff 69.77%);",
-  runNodeGradient:
-    "linear-gradient(0deg, rgba(153, 157, 244, 0.35) 0%, rgba(153, 157, 244, 0) 100%), linear-gradient(89.24deg, rgba(253, 240, 255, 0.7) -64.3%, rgba(212, 119, 119, 0.390104) -7.43%, rgba(188, 163, 220, 0.207813) 46.66%, rgba(196, 196, 196, 0) 99.16%);",
-  runNodeGradient2:
-    "linear-gradient(135deg, rgba(79, 113, 235, 0.2) 9.8%, rgba(232, 79, 235, 0.2) 92.84%);",
   primaryHover: primaryDark400,
   primaryActive: primaryDark200,
   ghostCardBackground: black300,
@@ -289,11 +264,6 @@ const darkColors = {
   primary200: primaryDark200,
   primary100: primaryDark100,
   lightBorder: "#404040",
-  priceCardBackgroundPositive: "transparent",
-  priceCardBackgroundNegative: "transparent",
-  priceCardBackground: "transparent",
-  priceCardBorder: success700,
-  priceCardBorderNegative: fail300,
   searchBorder: "#b2b2b2",
   searchBackground: "#4c4c4c",
   searchBackgroundEmpty: "#333333",
@@ -325,10 +295,6 @@ const darkColors = {
   displayDark: "block",
   displayLight: "none",
   grayBackground: "#272627",
-  upgradeStatusBackground: "#222222",
-  upgradeStatusShippedBackground: "#222222",
-  upgradeStatusBorder: `${primaryLight200} solid 2px`,
-  upgradeStatusShippedBorder: `${success400} solid 2px`,
   warning: primaryDark100,
   warningLink: primaryDark700,
   warningLinkHover: primaryDark900,
@@ -351,6 +317,7 @@ const darkColors = {
   rollupDevDocList: "#4c4c4c",
   beta: "background: radial-gradient(25.56% 133.51% at 28.36% 45.54%, rgba(255, 143, 80, 0.72) 0%, rgba(255, 143, 80, 0.22) 100%)",
   cardGradient:
+    // Migrate to: "dark:bg-gradient-to-tr dark:from-primary/20 dark:from-20% dark:via-accent-a/20 dark:via-60% dark:to-accent-c/20 dark:to-95%"
     "linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05% )",
   offBackground: "#181818",
   stakingPillPlatform: "#cd9df3",
@@ -363,8 +330,6 @@ const darkColors = {
   stakingBlueFill: "#2b352f",
   stakingRed: "#D6BBB9",
   stakingRedFill: "#313432",
-  layer2Gradient:
-    "linear-gradient(83.46deg, rgba(127, 127, 213, 0.2) 7.03%, rgba(138, 168, 231, 0.2) 52.42%, rgba(145, 234, 228, 0.2) 98.77%), #1E1E1E",
   feedbackGradient:
     "linear-gradient(83.46deg, #2C2C32 7.03%, #44404D 52.42%, #303038 98.77%)",
   bannerGridGradient:

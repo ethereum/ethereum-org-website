@@ -1,8 +1,6 @@
 import { Box, SimpleGrid } from "@chakra-ui/react"
 import type { Meta, StoryObj } from "@storybook/react"
 
-import { ContentContainer } from "@/components/MdComponents"
-
 import RoadmapActionCardComponent from "."
 
 const meta = {
@@ -11,11 +9,11 @@ const meta = {
   decorators: [
     (Story) => (
       <Box maxW="1008px">
-        <ContentContainer>
+        <div>
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
             <Story />
           </SimpleGrid>
-        </ContentContainer>
+        </div>
       </Box>
     ),
   ],
@@ -26,7 +24,7 @@ export default meta
 export const RoadmapActionCard: StoryObj<typeof meta> = {
   args: {
     alt: "",
-    to: "/roadmap/scaling",
+    href: "/roadmap/scaling",
     title: "Cheaper transactions",
     image: "scaling",
     description:

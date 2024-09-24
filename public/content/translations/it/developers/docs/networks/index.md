@@ -64,7 +64,7 @@ Le due reti di prova pubbliche che gli sviluppatori di client stanno mantenendo 
 
 #### Goerli _(supporto a lungo termine)_ {#goerli}
 
-_Nota: [la rete di prova Goerli è obsoleta ](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) e sarà sostituita da [Holesovice](https://github.com/eth-clients/holesovice) nel 2023. Sei pregato di considerare la migrazione delle tue applicazioni a Sepolia._
+_Nota: [la rete di prova Goerli è obsoleta](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) e sarà sostituita da [Holesovice](https://github.com/eth-clients/holesovice) nel 2023. Sei pregato di considerare la migrazione delle tue applicazioni a Sepolia._
 
 Goerli è una rete di prova per testare la convalida e lo staking. La rete Goerli è aperta per gli utenti che vogliono eseguire un validatore della rete di prova. Gli staker che desiderano testare gli aggiornamenti del protocollo prima che siano distribuiti sulla rete principale dovrebbero quindi utilizzare Goerli.
 

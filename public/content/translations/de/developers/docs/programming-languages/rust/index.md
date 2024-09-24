@@ -22,7 +22,6 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 
 ## Informationen für Einsteiger {#beginner-articles}
 
-- [Einen Ethereum-Client wählen](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Der Rust-Ethereum-Client](https://openethereum.github.io/) \* **Beachten Sie, dass OpenEthereum [veraltet](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) ist und nicht mehr gepflegt wird.** Nutzen Sie es mit Vorsicht und wechseln Sie besser zu einer anderen Client-Implementierung.
 - [Transaktion mit Rust an Ethereum senden](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Eine Einführung in Smart Contracts mit dem Parity-Ethereum-Client](https://wiki.parity.io/Smart-Contracts)
@@ -48,8 +47,9 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 - [Solaris](https://github.com/paritytech/sol-rs) - _Testumgebung für Solidity Smart Contracts Einheitstests unter Verwendung der nativen Parity Client EVM._
 - [SputnikVM](https://github.com/rust-blockchain/evm) – _Implementierung der virtuellen Maschine von Rust Ethereum_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet Smart Contract in Rust_
-- [Foundry](https://github.com/gakonst/foundry) – _Toolkit für die Entwicklung von Ethereum-Anwendungen_
-- [Ethers_rs](https://github.com/gakonst/ethers-rs) – _Ethereum-Bibliothek und Wallet-Implementierung_
+- [Foundry](https://github.com/foundry-rs/foundry) - _Toolkit für die Entwicklung von Ethereum-Anwendungen_
+- [Alloy](https://alloy.rs) - _Leistungsstarke, gut getestete und dokumentierte Bibliotheken für die Interaktion mit Ethereum und anderen EVM-basierten Ketten._
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Ethereum-Bibliothek und Wallet-Implementierung_
 - [SewUp](https://github.com/second-state/SewUp) – _Eine Bibliothek, die Ihnen hilft, Ihren Ethereum-Webassembly-Vertrag mit Rust zu erstellen und genau wie in einem gemeinsamen Backend zu entwickeln_
 - [Substreams](https://github.com/streamingfast/substreams) - _Indexierungstechnologie für parallele Blockchain-Daten_
 - [Reth](https://github.com/paradigmxyz/reth) Reth (kurz für Rust Ethereum) ist eine neue Implementierung eines vollständigen Knotens auf Ethereum

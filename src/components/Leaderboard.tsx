@@ -7,6 +7,7 @@ import {
   LinkOverlay,
   List,
   ListItem,
+  useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react"
 
@@ -15,7 +16,6 @@ import { BaseLink } from "@/components/Link"
 
 import { GITHUB_URL } from "@/lib/constants"
 
-import useColorModeValue from "@/hooks/useColorModeValue"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type Person = {
@@ -121,7 +121,7 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
                     {score} {t("page-upgrades-bug-bounty-leaderboard-points")}
                   </Box>
                 </Flex>
-                {emoji && <Emoji me={8} fontSize="2xl" text={emoji} />}
+                {emoji && <Emoji className="me-8 text-2xl" text={emoji} />}
                 <Box
                   as="span"
                   _after={{

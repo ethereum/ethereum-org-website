@@ -103,6 +103,11 @@ NFT, как и любые цифровые элементы в блокчейн�
 - [Трекер EtherscanNFT](https://etherscan.io/nft-top-contracts)
 - [Стандарт токенов ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Стандарт токенов ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [Популярные приложения и инструменты для работы с NFT](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Прочие ресурсы {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

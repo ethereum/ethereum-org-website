@@ -292,6 +292,8 @@ lang: en
 
 <GlossaryDefinition term="message-call" />
 
+<GlossaryDefinition term="mev" />
+
 <GlossaryDefinition term="mining" />
 
 <GlossaryDefinition term="miner" />

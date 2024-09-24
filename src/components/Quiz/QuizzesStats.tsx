@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { FaTwitter } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 import {
   Box,
   Circle,
@@ -9,7 +9,6 @@ import {
   Highlight,
   HStack,
   ListItem,
-  Progress,
   SimpleGrid,
   Stack,
   Text,
@@ -24,6 +23,7 @@ import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
 import { Button } from "../Buttons"
 import { TrophyIcon } from "../icons/quiz"
 import Translation from "../Translation"
+import { Progress } from "../ui/progress"
 
 import {
   getFormattedStats,
@@ -97,7 +97,7 @@ const QuizzesStats = ({
           <GridItem justifySelf={{ lg: "end" }} order={{ base: 3, lg: 2 }}>
             <Button
               variant="outline"
-              leftIcon={<FaTwitter />}
+              leftIcon={<FaXTwitter />}
               onClick={() =>
                 handleShare({
                   score: totalCorrectAnswers,
@@ -131,6 +131,7 @@ const QuizzesStats = ({
 
               <Progress
                 value={(totalCorrectAnswers / totalQuizzesPoints) * 100}
+                className="h-2.5 bg-primary-low-contrast [&>div]:bg-primary"
               />
 
               <Flex columnGap="10" direction={{ base: "column", lg: "row" }}>

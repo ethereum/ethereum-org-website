@@ -74,13 +74,13 @@ const TutorialMetadata = ({
       >
         {author && (
           <Box>
-            <Emoji fontSize="sm" me={2} text=":writing_hand:" />
+            <Emoji className="me-2 text-sm" text=":writing_hand:" />
             {author}
           </Box>
         )}
         {hasSource && (
           <Box>
-            <Emoji fontSize="sm" me={2} text=":books:" />
+            <Emoji className="me-2 text-sm" text=":books:" />
             <InlineLink href={frontmatter.sourceUrl}>
               {frontmatter.source}
             </InlineLink>
@@ -88,12 +88,12 @@ const TutorialMetadata = ({
         )}
         {published && (
           <Box>
-            <Emoji fontSize="sm" me={2} text=":calendar:" />{" "}
+            <Emoji className="me-2 text-sm" text=":calendar:" />{" "}
             {getLocaleTimestamp(locale! as Lang, published)}
           </Box>
         )}
         <Box>
-          <Emoji fontSize="sm" me={2} text=":stopwatch:" />
+          <Emoji className="me-2 text-sm" text=":stopwatch:" />
           {timeToRead} {t("comp-tutorial-metadata-minute-read")} minute read
         </Box>
       </HStack>
@@ -129,7 +129,7 @@ const TutorialMetadata = ({
                   />{" "}
                   {address} {isCopied && <Translation id="copied" />}
                   {isCopied && (
-                    <Emoji fontSize="sm" mx={2} text=":white_check_mark:" />
+                    <Emoji className="me-2 text-sm" text=":white_check_mark:" />
                   )}
                 </Box>
               )}

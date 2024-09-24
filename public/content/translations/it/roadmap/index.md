@@ -12,7 +12,7 @@ buttons:
     toId: what-changes-are-coming
   - 
     label: Aggiornamenti precedenti
-    to: /history/
+    href: /history/
     variant: delineazione
 ---
 

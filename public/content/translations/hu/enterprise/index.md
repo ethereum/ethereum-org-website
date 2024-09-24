@@ -81,7 +81,6 @@ Különféle szervezetek számtalan együttműködésen alapuló erőfeszítést
 - [Baseline Project](https://www.baseline-protocol.org/) - _A Baseline Protocol egy olyan eszköz- és könyvtárkészlet, amely segít a vállalatoknak az összetett, többszereplős üzleti folyamatok és munkafolyamatok adatvédelmi szempontból történő koordinálásában, miközben az adatok a megfelelő nyilvántartási rendszerekben maradnak. A szabvány lehetővé teszi, hogy két vagy több állapotgép elérje és fenntartsa az adatok konzisztenciáját és a munkafolyamatok folytonosságát a hálózat közös referenciakeretként való használatával._
 - [Chainlens](https://www.chainlens.com/) - _SaaS és on-prem blokklánc adat- és elemzési platform a Web3 Labs-től_
 - [Ernst & Young 'Nightfall'](https://github.com/EYBlockchain/nightfall_3) - _egy alkalmazás az ERC-20, ERC-721 és ERC-1155 alkalmazások átvitelére zero-knowledge módon, optimista összesítés használatával_
-- [Truffle Suite](https://trufflesuite.com) - _blokkláncfejlesztési csomag (Truffle, Ganache, Drizzle)_
 
 ### Skálázási megoldások {#scalability-solutions}
 

@@ -15,10 +15,6 @@ Le blockchain pubbliche, come Ethereum, affrontano sfide di scalabilità dovute 
 
 I canali sono semplici protocolli peer-to-peer che consentono a due parti di effettuare molte transazioni tra loro e poi di pubblicare solo i risultati finali nella blockchain. Il canale usa la crittografia per dimostrare che i dati sommari che generano sono davvero il risultato di una serie valida di transazioni intermedie. Un contratto intelligente ["multifirma"](/developers/docs/smart-contracts/#multisig) assicura che le transazioni siano firmate dalle parti corrette.
 
-- []()
-- []()
--
-
 Con i canali, i cambiamenti di stato sono eseguiti e convalidati dalle parti interessate, riducendo al minimo il calcolo sul livello di esecuzione di Ethereum. Questo riduce la congestione su Ethereum e, inoltre, aumenta le velocità di elaborazione delle transazioni per gli utenti.
 
 ####  {#block-parameters}
@@ -42,26 +38,3 @@ Oltre a supportare i pagamenti off-chain, i canali di pagamento non si sono dimo
 ###  {#asset-movement}
 
 I canali di stato hanno comunque molto in comune con i canali di pagamento. Ad esempio, gli utenti interagiscono scambiandosi messaggi firmati crittograficamente (transazioni), che devono esser firmati anche dagli altri partecipanti del canale. Se un aggiornamento di stato proposto non è firmato da tutti i partecipanti, non è considerato valido.
-
-##  {#pros-and-cons-of-sidechains}
-
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-
-###  {#use-sidechains}
-
-- []()
-- []()
-- []()
-- []()
-- []()
-
-##  {#further-reading}
-
--
-
-_ _

@@ -92,7 +92,7 @@ const TranslatorAcknowledgements = () => {
       />
 
       <Content>
-        <Breadcrumbs slug={router.asPath} mt={12} />
+        <Breadcrumbs slug={router.asPath} className="mt-12" />
         <ContentHeading
           as="h1"
           fontSize={{ base: "2rem", sm: "2.5rem", md: "5xl" }}
@@ -200,7 +200,7 @@ const TranslatorAcknowledgements = () => {
         </Text>
         <Box
           as={ActionCard}
-          to="/contributing/translation-program/contributors/"
+          href="/contributing/translation-program/contributors/"
           title={t(
             "page-contributing-translation-program-acknowledgements-our-translators-view-all"
           )}

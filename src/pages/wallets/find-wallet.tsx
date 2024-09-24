@@ -3,15 +3,7 @@ import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  calc,
-  Center,
-  Flex,
-  Show,
-  Text,
-  useDisclosure,
-} from "@chakra-ui/react"
+import { Box, calc, Center, Show, Text, useDisclosure } from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang, Wallet } from "@/lib/types"
 
@@ -26,7 +18,9 @@ import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
+import { Flex } from "@/components/ui/flex"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -43,6 +37,8 @@ import {
   NAV_BAR_PX_HEIGHT,
   WALLETS_FILTERS_DEFAULT,
 } from "@/lib/constants"
+
+import { useWalletPersonas } from "../../hooks/useWalletPersonas"
 
 import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
 import { useWalletTable } from "@/hooks/useWalletTable"
@@ -106,11 +102,11 @@ const FindWalletPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { pathname } = useRouter()
   const { t } = useTranslation("page-wallets-find-wallet")
-
+  const personas = useWalletPersonas()
   const resetWalletFilter = useRef(() => {})
 
   const [filters, setFilters] = useState(WALLETS_FILTERS_DEFAULT)
-  const [selectedPersona, setSelectedPersona] = useState(NaN)
+  const [selectedPersona, setSelectedPersona] = useState<number[]>([])
   const [supportedLanguage, setSupportedLanguage] = useState(DEFAULT_LOCALE)
 
   const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
@@ -122,10 +118,36 @@ const FindWalletPage = ({
     walletCardData,
   } = useWalletTable({ filters, supportedLanguage, t, walletData: wallets })
 
+  const updatePersonaUponFilterChange = (filters) => {
+    const newSelectedPersona: number[] = []
+    const trueFilters = Object.fromEntries(
+      Object.entries(filters).filter(([_, value]) => value)
+    )
+    if (Object.keys(trueFilters).length === 0) {
+      setSelectedPersona([])
+      return
+    }
+
+    for (let i = 0; i < personas.length; i++) {
+      const truePresetFilters = Object.fromEntries(
+        Object.entries(personas[i].presetFilters).filter(([_, value]) => value)
+      )
+      const isPersonaSelected = Object.entries(truePresetFilters).every(
+        ([key, value]) => trueFilters[key] === value
+      )
+      if (isPersonaSelected) {
+        newSelectedPersona.push(i)
+      }
+    }
+
+    setSelectedPersona(newSelectedPersona)
+  }
+
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
     updatedFilters[key] = !updatedFilters[key]
     setFilters(updatedFilters)
+    updatePersonaUponFilterChange(updatedFilters)
   }
 
   const updateFilterOptions = (keys, value) => {
@@ -134,16 +156,17 @@ const FindWalletPage = ({
       updatedFilters[key] = value
     }
     setFilters(updatedFilters)
+    updatePersonaUponFilterChange(updatedFilters)
   }
 
   const resetFilters = () => {
-    setSelectedPersona(NaN)
+    setSelectedPersona([])
     setFilters(WALLETS_FILTERS_DEFAULT)
     setSupportedLanguage(DEFAULT_LOCALE)
   }
 
   return (
-    <Flex as={MainArticle} direction="column" position="relative" w="full">
+    <MainArticle className="relative flex flex-col">
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
@@ -155,12 +178,10 @@ const FindWalletPage = ({
       </BannerNotification>
 
       <Flex
-        direction={{ base: "column", sm: "row" }}
-        position="relative"
-        w="full"
-        p={12}
-        bg="layer2Gradient"
-        mb="44px"
+        className={cn(
+          "relative mb-[44px] w-full flex-col p-12 sm:flex-row",
+          "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+        )}
       >
         <Box w={{ base: "full", sm: "50%" }} mt={{ base: 8, sm: 0 }}>
           <Breadcrumbs slug={pathname} />
@@ -212,6 +233,7 @@ const FindWalletPage = ({
           selectedPersona={selectedPersona}
           setSelectedPersona={setSelectedPersona}
           showMobileSidebar={showMobileSidebar}
+          resetWalletFilter={resetWalletFilter}
         />
       </Box>
 
@@ -238,7 +260,7 @@ const FindWalletPage = ({
         </Box>
 
         <Box px={{ md: 4, "2xl": 0 }}>
-          <Flex pt={4} pb={6} gap={6}>
+          <Flex className="gap-6 pb-6 pt-4">
             {/* Filters sidebar */}
             {/* Use `Show` instead of `hideBelow` prop to avoid rendering the sidebar on mobile */}
             <Show above="lg">
@@ -273,7 +295,7 @@ const FindWalletPage = ({
           </Flex>
         </Box>
       </WalletSupportedLanguageContext.Provider>
-    </Flex>
+    </MainArticle>
   )
 }
 

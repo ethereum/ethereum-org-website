@@ -53,11 +53,11 @@ export const BaseLink = forwardRef(function Link(
   }: LinkProps,
   ref
 ) {
-  const { asPath } = useRouter()
+  const { locale, asPath } = useRouter()
   const { flipForRtl } = useRtlFlip()
 
   if (!href) {
-    console.warn("Link component is missing href prop")
+    console.warn("Link component is missing href prop:", asPath, locale)
     return <ChakraLink {...props} />
   }
 

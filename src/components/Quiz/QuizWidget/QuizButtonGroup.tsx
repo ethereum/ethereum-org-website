@@ -1,5 +1,5 @@
 import { type Dispatch, type SetStateAction, useMemo } from "react"
-import { FaTwitter } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6"
 import { Center, Icon } from "@chakra-ui/react"
 
 import type { AnswerChoice, Question, QuizKey, QuizStatus } from "@/lib/types"
@@ -148,7 +148,7 @@ export const QuizButtonGroup = ({
           >
             <Button
               variant="outline-color"
-              leftIcon={<Icon as={FaTwitter} />}
+              leftIcon={<Icon as={FaXTwitter} />}
               onClick={handleShare}
             >
               <Translation id="learn-quizzes:share-results" />
