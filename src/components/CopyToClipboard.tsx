@@ -1,4 +1,6 @@
-import { Box, useClipboard } from "@chakra-ui/react"
+import { cn } from "@/lib/utils/cn"
+
+import { useClipboard } from "@/hooks/useClipboard"
 
 export type CopyToClipboardProps = {
   text: string
@@ -11,16 +13,15 @@ const CopyToClipboard = ({
   text,
   inline = false,
 }: CopyToClipboardProps) => {
-  const { onCopy, hasCopied } = useClipboard(text, { timeout: 1500 })
+  const { onCopy, hasCopied } = useClipboard({ timeout: 1500 })
 
   return (
-    <Box
-      cursor="pointer"
-      onClick={onCopy}
-      display={inline ? "inline" : "block"}
+    <div
+      className={cn("cursor-pointer", inline ? "inline" : "block")}
+      onClick={() => onCopy(text)}
     >
       {children(hasCopied)}
-    </Box>
+    </div>
   )
 }
 
