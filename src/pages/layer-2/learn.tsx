@@ -355,6 +355,38 @@ const Layer2Learn = () => {
           </div>
         </div>
       </div>
+
+      {/* TODO: setup translations */}
+      <div
+        id="a-not-on-alt-l1s"
+        className="flex w-full flex-col gap-8 px-8 py-9"
+      >
+        <h2>A note on alt L1s, sidechains, and validiums</h2>
+        <div className="flex flex-col gap-8 md:flex-row">
+          <div>
+            <p>
+              Alternative layer 1s have higher throughput and lower transaction
+              fees than Ethereum. These alt L1s have had to sacrifice on
+              security or decentralization in order to achieve higher
+              transactions per second and lower fees. The Ethereum ecosystem is
+              firmly aligned that layer 2 scaling is the only way to solve the
+              scalability trilemma and remain decentralized and secure
+            </p>
+          </div>
+          <div>
+            <p>
+              Sidechains and validiums are blockchains that allow assets from
+              one blockchain to be bridged over and used on another blockchain.
+              Sidechains and validiums run in parallel with the main chain, and
+              interact with the main chain through bridges, but they do not
+              derive their security or data availability from the main chain.
+              They scale similarly to layer 2s, but have different trust
+              assumptions. They offer lower transaction fees, and higher
+              transaction throughput. More on sidechains and validiums.
+            </p>
+          </div>
+        </div>
+      </div>
     </MainArticle>
   )
 }
