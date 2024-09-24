@@ -5,7 +5,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ComponentPropsWithRef } from "react"
 import {
   Box,
-  Divider,
   Flex,
   type FlexProps,
   Heading,
@@ -32,6 +31,7 @@ import PageHero, {
 } from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import Trilemma from "@/components/Trilemma"
+import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -47,15 +47,6 @@ const Page = (props: ChildOnlyProp) => (
     align="center"
     w="full"
     {...props}
-  />
-)
-
-const PageDivider = () => (
-  <Divider
-    my={16}
-    w="10%"
-    borderBottomWidth="0.25rem"
-    borderColor="homeDivider"
   />
 )
 
@@ -169,7 +160,7 @@ const VisionPage = () => {
         description={t("page-roadmap-vision-meta-desc")}
       />
       <PageHero content={heroContent} />
-      <PageDivider />
+      <Divider />
       <PageContent>
         <Breadcrumbs slug={pathname} startDepth={1} />
         <CentralContent>
@@ -208,7 +199,7 @@ const VisionPage = () => {
           <Text>{t("page-roadmap-vision-upgrade-needs-desc-6")}</Text>
         </CentralContent>
       </PageContent>
-      <PageDivider />
+      <Divider />
       <PageContent>
         <CenterH2>{t("page-roadmap-vision-problems")}</CenterH2>
         <ProblemCardContainer>
@@ -225,7 +216,7 @@ const VisionPage = () => {
       <TrilemmaContent>
         <Trilemma />
       </TrilemmaContent>
-      <PageDivider />
+      <Divider />
       <PageContent>
         <CentralContent>
           <CenterH2>{t("page-roadmap-vision-understanding")}</CenterH2>
@@ -292,7 +283,7 @@ const VisionPage = () => {
           </InfoBanner>
         </CentralContent>
       </PageContent>
-      <PageDivider />
+      <Divider />
       <FeedbackCard />
     </Page>
   )

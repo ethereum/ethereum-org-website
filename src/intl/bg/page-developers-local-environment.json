@@ -26,8 +26,6 @@
   "page-local-environment-setup-title": "Настройте своята локална среда за развитие",
   "page-local-environment-solidity-template-desc": "GitHub шаблон за предварителна настройка за вашите умни договори в Solidity. Това включва местната мрежа Hardhat, Waffle за тестове, Ethers за изпълнение на портфейли и други.",
   "page-local-environment-solidity-template-logo-alt": "Лого на шаблона на Solidity",
-  "page-local-environment-truffle-desc": "Пакетът Truffle Suite извършва прехода за разработчиците от една идея до dapp възможно най-удобно.",
-  "page-local-environment-truffle-logo-alt": "Лого на Truffle",
   "page-local-environment-waffle-desc": "Най-напредналият lib за тестване на умни договори. Използвайте самостоятелно или със Scaffold-eth или Hardhat.",
   "page-local-environment-waffle-logo-alt": "Лого на Waffle"
 }

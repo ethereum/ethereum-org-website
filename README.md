@@ -119,7 +119,7 @@ git push
 - In your PR description, reference the issue it resolves (see [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword))
   - ex. `Updates out of date content [Fixes #1234]`
 - Netlify (our hosting service for build previews) deploys all PRs to a publicly accessible preview URL, e.g.: ![Netlify deploy preview](public/images/preview-deploy.png)
-- _Confirm your Netlify preview deploy looks & functions as expected_
+- _Confirm that your Netlify preview deploy looks and functions as expected_
 - Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/ethereum-org)?
 
 ### 6. Wait for review
@@ -1908,6 +1908,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://v2eth.com/"><img src="https://avatars.githubusercontent.com/u/7024451?v=4?s=100" width="100px;" alt="Mako Shan"/><br /><sub><b>Mako Shan</b></sub></a><br /><a href="#content-makoshan" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/cratiu222"><img src="https://avatars.githubusercontent.com/u/156356273?v=4?s=100" width="100px;" alt="Christina"/><br /><sub><b>Christina</b></sub></a><br /><a href="#content-cratiu222" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/nipunh"><img src="https://avatars.githubusercontent.com/u/26524611?v=4?s=100" width="100px;" alt="Nipun Hedaoo"/><br /><sub><b>Nipun Hedaoo</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=nipunh" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/chenjiali-april"><img src="https://avatars.githubusercontent.com/u/132745538?v=4?s=100" width="100px;" alt="april"/><br /><sub><b>april</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=chenjiali-april" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>

@@ -4,7 +4,6 @@ import {
   Badge,
   Box,
   type BoxProps,
-  Divider as ChakraDivider,
   Flex,
   type FlexProps,
   type ListProps,
@@ -40,9 +39,10 @@ import {
 import RollupProductDevDoc from "@/components/RollupProductDevDoc"
 import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
-import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
+import { mdxTableComponents } from "@/components/ui/Table"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
@@ -55,15 +55,6 @@ const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
     borderBottom="1px"
     borderColor="border"
     {...props}
-  />
-)
-
-const Divider = () => (
-  <ChakraDivider
-    my={16}
-    w="10%"
-    borderBottomWidth={1}
-    borderColor="homeDivider"
   />
 )
 

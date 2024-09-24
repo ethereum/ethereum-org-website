@@ -27,7 +27,7 @@ Infine, dovrai compilare il tuo contratto prima di distribuirlo, quindi, assicur
 
 ### Passaggi per distribuire un contratto intelligente {#steps-to-deploy}
 
-I passaggi specifici dipenderanno dagli strumenti utilizzati. Per esempio, dai un'occhiata alla [documentazione di Hardhat sulla distribuzione dei tuoi contratti](https://hardhat.org/guides/deploying.html) o alla [documentazione di Truffle su reti e distribuzione delle app](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment). Questi sono due degli strumenti più popolari per la distribuzione dei contratti intelligenti, che coinvolgono la scrittura di uno script per gestire i passaggi di distribuzione.
+I passaggi specifici dipenderanno dagli strumenti utilizzati. Per esempio, dai un'occhiata alla [documentazione di Hardhat sulla distribuzione dei tuoi contratti](https://hardhat.org/guides/deploying.html). Questi sono due degli strumenti più popolari per la distribuzione dei contratti intelligenti, che coinvolgono la scrittura di uno script per gestire i passaggi di distribuzione.
 
 Una volta distribuito, il contratto avrà un indirizzo Ethereum come gli altri [conti](/developers/docs/accounts/).
 
@@ -50,12 +50,6 @@ Una volta distribuito, il contratto avrà un indirizzo Ethereum come gli altri [
 - [Documentazione sulla distribuzione dei tuoi contratti](https://hardhat.org/guides/deploying.html)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
-
-**Truffle:** **_ ambiente di sviluppo, framework di test, pipeline di sviluppo e altri strumenti_**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [Documentazione sulle reti e la distribuzione delle app](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
-- [GitHub](https://github.com/trufflesuite/truffle)
 
 **thirdweb - _Distribuisci con facilità qualsiasi contratto a qualsiasi catena che sia compatibile con EVM, utilizzando un singolo comando_**
 

@@ -7,9 +7,9 @@ image: /images/heroes/roadmap-hub-hero.jpg
 alt: "Ethereum roadmap"
 summaryPoints:
 buttons:
-  - label: Further upgrades
+  - content: Further upgrades
     toId: what-changes-are-coming
-  - label: Past upgrades
+  - content: Past upgrades
     href: /history/
     variant: outline
 ---

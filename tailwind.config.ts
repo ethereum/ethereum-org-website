@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss"
 import plugin from "tailwindcss/plugin"
 
-import { screens } from "./tailwind/screens"
+import { screens } from "./src/lib/utils/screen"
 
 const config = {
   // TODO: Move to "class" strategy after removing Chakra
@@ -136,6 +136,12 @@ const config = {
           medium: "hsla(var(--body-medium))",
           light: "hsla(var(--body-light))",
           inverse: "hsla(var(--body-inverse))",
+          menu: {
+            DEFAULT: "hsla(var(--body-menu))",
+            low: "hsla(var(--body-menu-low))",
+            medium: "hsla(var(--body-menu-medium))",
+            high: "hsla(var(--body-menu-high))",
+          },
         },
 
         disabled: "hsla(var(--disabled))",
@@ -143,6 +149,9 @@ const config = {
         background: {
           DEFAULT: "hsla(var(--background))",
           highlight: "hsla(var(--background-highlight))",
+          low: "hsla(var(--background-low))",
+          medium: "hsla(var(--background-medium))",
+          high: "hsla(var(--background-high))",
         },
 
         // TODO: Add border color tokens to match DS
@@ -155,16 +164,13 @@ const config = {
           visited: "hsla(var(--primary-visited))",
           action: "hsla(var(--primary-action))",
           "action-hover": "hsla(var(--primary-action-hover))",
-          /** @deprecated */
-          light: "hsla(var(--primary-light))",
-          /** @deprecated */
-          dark: "hsla(var(--primary-dark))",
         },
 
         accent: {
           a: {
             DEFAULT: "hsla(var(--accent-a))",
             hover: "hsla(var(--accent-a-hover))",
+            "low-contrast": "hsla(var(--accent-a-low-contrast))", // TODO: VERIFY
           },
           b: {
             DEFAULT: "hsla(var(--accent-b))",
@@ -191,39 +197,12 @@ const config = {
           light: "hsla(var(--warning-light))",
         },
 
-        menu: {
-          DEFAULT: "hsla(var(--menu))",
-          hover: "hsla(var(--menu-hover))",
-          active: "hsla(var(--menu-active))",
-          "active-background": "hsla(var(--menu-active-background))",
-          1: {
-            subtext: "hsla(var(--menu-1-subtext))",
-            background: "hsla(var(--menu-1-background))",
-            "active-background": "hsla(var(--menu-1-active-background))",
-          },
-          2: {
-            subtext: "hsla(var(--menu-2-subtext))",
-            background: "hsla(var(--menu-2-background))",
-            "active-background": "hsla(var(--menu-2-active-background))",
-          },
-          3: {
-            subtext: "hsla(var(--menu-3-subtext))",
-            background: "hsla(var(--menu-3-background))",
-            "active-background": "hsla(var(--menu-3-active-background))",
-          },
-          4: {
-            subtext: "hsla(var(--menu-4-subtext))",
-            background: "hsla(var(--menu-4-background))",
-            "active-background": "hsla(var(--menu-4-active-background))",
-          },
-        },
+        /** @deprecated */
+        "switch-background": "hsla(var(--switch-background))", // TODO: Migrate
+        "tooltip-shadow": "var(--tooltip-shadow)",
+        "hub-hero-content": "var(--hub-hero-content)",
+        "search-background": "var(--search-background)",
       },
-
-      /** @deprecated */
-      "switch-background": "hsla(var(--switch-background))", // TODO: Migrate
-      "tooltip-shadow": "var(--tooltip-shadow)",
-      "hub-hero-content-bg": "var(--hub-hero-content-bg)",
-      "search-background": "var(--search-background)",
 
       backgroundImage: {
         "gradient-main": "var(--gradient-main)",
@@ -282,10 +261,21 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+
+        "scroll-left": {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        "scroll-right": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "scroll-left": "scroll-left 30s linear infinite",
+        "scroll-right": "scroll-right 30s linear infinite",
       },
       // Add custom border-radius tailwinds extension for "4xl" as "2rem"
       borderRadius: {

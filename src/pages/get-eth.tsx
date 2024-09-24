@@ -16,7 +16,6 @@ import FeedbackCard from "@/components/FeedbackCard"
 import { TwImage as Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
-import { Divider } from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -27,6 +26,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Divider } from "@/components/ui/divider"
 import { Stack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 
@@ -351,7 +351,7 @@ const GetEthPage = ({
                   <p className="mb-0 font-monospace text-xs text-white">
                     0x0125e2478d69eXaMpLe81766fef5c120d30fb53f
                   </p>
-                  <p className="text-error mx-4 mb-0 text-sm uppercase">
+                  <p className="mx-4 mb-0 text-sm uppercase text-error">
                     {t("page-get-eth-do-not-copy")}
                   </p>
                 </div>

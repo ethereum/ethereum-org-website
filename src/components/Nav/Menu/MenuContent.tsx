@@ -13,30 +13,35 @@ export const navMenuVariants = tv({
   slots: {
     base: "text-body",
     item: "has-[button[data-state=open]]:rounded-s-md has-[button[data-state=open]]:rounded-e-none has-[button[data-state=open]]:-me-2 has-[button[data-state=open]]:pe-2",
-    link: "w-full relative py-4 hover:text-menu-active [&:hover_p]:text-menu-active focus-visible:text-menu-active [&:focus-visible_p]:text-menu-active hover:outline-0 rounded-md hover:shadow-none focus-visible:outline-0 focus-visible:rounded-md focus-visible:shadow-none",
+    link: "group w-full relative py-4 hover:text-primary [&:hover_p]:text-primary focus-visible:text-primary [&:focus-visible_p]:text-primary hover:outline-0 rounded-md hover:shadow-none focus-visible:outline-0 focus-visible:rounded-md focus-visible:shadow-none",
+    linkSubtext: "text-sm",
     submenu: "grid h-full w-full grid-cols-1",
   },
   variants: {
     level: {
       1: {
-        submenu: "grid-cols-3 bg-menu-1-background",
-        item: "has-[button[data-state=open]]:bg-menu-1-active-background",
-        link: "data-[active=true]:bg-menu-1-active-background hover:bg-menu-1-active-background focus-visible:bg-menu-1-active-background",
+        submenu: "grid-cols-3 bg-background",
+        item: "has-[button[data-state=open]]:bg-background-low",
+        link: "data-[active=true]:bg-background-low hover:bg-background-low focus-visible:bg-background-low",
+        linkSubtext: "group-[data-active=true]:text-body-menu",
       },
       2: {
-        submenu: "grid-cols-2 bg-menu-2-background",
-        item: "has-[button[data-state=open]]:bg-menu-2-active-background",
-        link: "hover:bg-menu-2-active-background focus-visible:bg-menu-2-active-background data-[active=true]:bg-menu-2-active-background",
+        submenu: "grid-cols-2 bg-background-low",
+        item: "has-[button[data-state=open]]:bg-background-medium",
+        link: "hover:bg-background-medium focus-visible:bg-background-medium data-[active=true]:bg-background-medium",
+        linkSubtext: "group-[data-active=true]:text-body-menu-low",
       },
       3: {
-        submenu: "grid-cols-1 bg-menu-3-background",
-        item: "has-[button[data-state=open]]:bg-menu-3-active-background",
-        link: "data-[active=true]:bg-menu-3-active-background hover:bg-menu-3-active-background",
+        submenu: "grid-cols-1 bg-background-medium",
+        item: "has-[button[data-state=open]]:bg-background-low`",
+        link: "data-[active=true]:bg-background-low hover:bg-background-low",
+        linkSubtext: "group-[data-active=true]:text-body-menu-medium",
       },
       4: {
-        submenu: "grid-cols-1 bg-menu-4-background",
-        item: "has-[button[data-state=open]]:bg-menu-4-active-background",
-        link: "data-[active=true]:bg-menu-4-active-background hover:bg-menu-4-active-background",
+        submenu: "grid-cols-1 bg-background-high",
+        item: "has-[button[data-state=open]]:bg-background-medium",
+        link: "data-[active=true]:bg-background-medium hover:bg-background-medium",
+        linkSubtext: "group-[data-active=true]:text-body-menu-high",
       },
     },
   },
@@ -57,7 +62,7 @@ const MenuContent = ({ items, isOpen, sections }: MenuContentProps) => {
     <Content asChild>
       <motion.div
         className={cn(
-          "absolute inset-x-0 top-19 border border-body-light bg-menu-1-background shadow-md",
+          "absolute inset-x-0 top-19 border border-body-light bg-background shadow-md",
           base()
         )}
         variants={containerVariants}
