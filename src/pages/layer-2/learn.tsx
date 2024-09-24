@@ -15,6 +15,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import DAOImage from "@/public/images/use-cases/dao-2.png"
 import WhatIsEthereumImage from "@/public/images/what-is-ethereum.png"
 
 export const getStaticProps = (async ({ locale }) => {
@@ -150,6 +151,50 @@ const Layer2Learn = () => {
               </li>
             </ol>
           </div>
+        </div>
+      </div>
+
+      <div
+        id="why-do-we-need-layer-2"
+        className="flex w-full flex-col gap-16 px-8 py-9 md:flex-row"
+      >
+        <div className="w-full items-center justify-center md:w-[50%]">
+          <TwImage src={DAOImage} alt="" />
+        </div>
+
+        <div className="flex w-full flex-col gap-4 md:w-[50%]">
+          <h2>Why do we need layer 2?</h2>
+          <p>
+            The three desirable properties of a blockchain are that it is
+            decentralized, secure, and scalable. The blockchain trilemma states
+            that a simple blockchain architecture can only achieve two out of
+            three. Want a secure and decentralized blockchain? You need to
+            sacrifice scalability. This is where layer 2 networks come in.
+          </p>
+          <p>
+            Ethereum has reached the network&apos;s current capacity with 1+
+            million transactions per day, with high demand for each of these
+            transactions. The success of Ethereum and the demand to use it has
+            caused gas prices to rise substantially. Therefore the need for
+            scaling solutions has peaked as well.
+          </p>
+          <h3>Scalability</h3>
+          <p>
+            The main goal of scalability is to increase transaction speed
+            (faster finality), and transaction throughput (high transactions per
+            second), without sacrificing decentralization or security (more on
+            the Ethereum vision).
+          </p>
+          <p>
+            The Ethereum community has taken a strong stance that it would not
+            throw out decentralization or security in order to scale. Until
+            sharding, Ethereum Mainnet (layer 1) will only be able to process
+            roughly 15 transactions per second. When demand to use Ethereum is
+            high this causes network congestion, increasing transaction fees,
+            and pricing out those who cannot afford it from using Ethereum until
+            the fees reduce. That is where layer 2 comes in to scale Ethereum
+            today.
+          </p>
         </div>
       </div>
     </MainArticle>
