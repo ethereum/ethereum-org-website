@@ -30,6 +30,7 @@ import { Divider } from "@/components/ui/divider"
 import { Stack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDateByPath } from "@/lib/utils/gh"
@@ -270,7 +271,10 @@ const GetEthPage = ({
 
         <div
           id="country-picker"
-          className="-mx-8 my-0 flex flex-col items-center bg-radial-gradient px-8 py-16 sm:p-16 md:my-16 lg:mx-0"
+          className={cn(
+            "-mx-8 my-0 flex flex-col items-center px-8 py-16 sm:p-16 md:my-16 lg:mx-0",
+            "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+          )}
         >
           <CentralizedExchanges lastDataUpdateDate={lastDataUpdateDate} />
         </div>

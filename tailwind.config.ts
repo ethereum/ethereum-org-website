@@ -212,7 +212,6 @@ const config = {
         "banner-grid-gradient": "var(--banner-grid-gradient)",
         "radial-a": "var(--radial-a)",
         "linear-bug-bounty-title": "var(--linear-bug-bounty-title)",
-        "radial-gradient": "var(--radial-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
