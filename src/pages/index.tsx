@@ -357,21 +357,28 @@ const HomePage = ({
                   {t("page-index:page-index-popular-topics-header")}
                 </h3>
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
-                  {popularTopics.map(({ label, Svg, href, className }) => (
-                    <SvgButtonLink
-                      key={label}
-                      Svg={Svg}
-                      href={href}
-                      className={cn(
-                        "text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row",
-                        className
-                      )}
-                    >
-                      <p className="text-start text-xl font-bold text-body group-hover:underline">
-                        {label}
-                      </p>
-                    </SvgButtonLink>
-                  ))}
+                  {popularTopics.map(
+                    ({ label, Svg, href, eventName, className }) => (
+                      <SvgButtonLink
+                        key={label}
+                        Svg={Svg}
+                        href={href}
+                        className={cn(
+                          "text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row",
+                          className
+                        )}
+                        customEventOptions={{
+                          eventCategory: "Homepage",
+                          eventAction: "popular topics",
+                          eventName,
+                        }}
+                      >
+                        <p className="text-start text-xl font-bold text-body group-hover:underline">
+                          {label}
+                        </p>
+                      </SvgButtonLink>
+                    )
+                  )}
                 </div>
                 <div className="flex py-8 sm:justify-center">
                   <ButtonLink
