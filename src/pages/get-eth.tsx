@@ -288,7 +288,7 @@ const GetEthPage = ({
               </p>
               <p>{t("page-get-eth-dexs-desc-3")}</p>
               <p>{t("page-get-eth-need-wallet")}</p>
-              <ButtonLink href="/wallets/find-wallet/">
+              <ButtonLink href="/wallets/find-wallet/" className="w-fit">
                 {t("page-get-eth-get-wallet-btn")}
               </ButtonLink>
               <InfoBanner isWarning>
@@ -351,7 +351,7 @@ const GetEthPage = ({
                   <p className="mb-0 font-monospace text-xs text-white">
                     0x0125e2478d69eXaMpLe81766fef5c120d30fb53f
                   </p>
-                  <p className="text-fail300 mx-4 mb-0 text-sm uppercase">
+                  <p className="text-error mx-4 mb-0 text-sm uppercase">
                     {t("page-get-eth-do-not-copy")}
                   </p>
                 </div>
