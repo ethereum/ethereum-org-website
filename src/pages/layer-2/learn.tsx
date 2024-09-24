@@ -16,7 +16,9 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import OptimisticRollupImage from "@/public/images/layer-2/optimistic_rollup.png"
 import RollupImage from "@/public/images/layer-2/rollup-2.png"
+import ZKRollupImage from "@/public/images/layer-2/zk_rollup.png"
 import DAOImage from "@/public/images/use-cases/dao-2.png"
 import WhatIsEthereumImage from "@/public/images/what-is-ethereum.png"
 
@@ -92,6 +94,26 @@ const Layer2Learn = () => {
       title: "Expand Use Cases",
       description:
         "With higher transactions per second, lower fees, and new technology, projects will expand into new applications with improved user experience.",
+    },
+  ]
+
+  // TODO: Setup translation
+  const rollupCards = [
+    {
+      image: OptimisticRollupImage,
+      title: "Optimistic Rollups",
+      description:
+        "Optimistic rollups use fault proofs where transactions are assumed to be valid, but can be challenged if an invalid transaction is suspected. If an invalid tranaction is suspected, a fault proof is ran to see if this has taken place. ",
+      childSentence: "More on optimistic rollups",
+      childLink: "/developers/docs/scaling/optimistic-rollups/",
+    },
+    {
+      image: ZKRollupImage,
+      title: "Zero Knowledge Rollups",
+      description:
+        "Zero Knowledge rollups use validity proofs where transactions calculations are computed off-chain, and then this data is then supplied to Ethereum Mainnet with a proof of their validity.",
+      childSentence: "More on zk-rollups",
+      childLink: "/developers/docs/scaling/zk-rollups/",
     },
   ]
 
@@ -281,6 +303,26 @@ const Layer2Learn = () => {
         <div className="flex w-full md:w-[50%]">
           <TwImage src={RollupImage} alt={""} />
         </div>
+      </div>
+
+      {/* TODO: Finish styling */}
+      <div
+        id="rollup-cards"
+        className="flex w-full flex-col gap-8 px-8 py-9 md:flex-row"
+      >
+        {rollupCards.map((card, idx) => {
+          return (
+            <div
+              key={idx}
+              className="flex w-full flex-col gap-4 rounded-sm border border-solid border-body-light bg-background-highlight p-6 md:w-[50%]"
+            >
+              <TwImage src={card.image} alt={""} />
+              <h3>{card.title}</h3>
+              <p>{card.description}</p>
+              <a href={card.childLink}>{card.childSentence}</a>
+            </div>
+          )
+        })}
       </div>
     </MainArticle>
   )
