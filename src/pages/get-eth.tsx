@@ -14,10 +14,10 @@ import Emoji from "@/components/Emoji"
 import EthPriceCard from "@/components/EthPriceCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import { TwImage as Image } from "@/components/Image"
-import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
+import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
@@ -246,7 +246,7 @@ const GetEthPage = ({
           </StyledCard>
         </div>
 
-        <div className="mb-8">
+        <Stack className="gap-16">
           <p>
             <em>
               {t("common:listing-policy-disclaimer")}{" "}
@@ -255,13 +255,18 @@ const GetEthPage = ({
               </InlineLink>
             </em>
           </p>
-          <InfoBanner emoji=":wave:" shouldCenter mt={8}>
-            {t("page-get-eth-new-to-eth")}{" "}
-            <InlineLink href="/eth/">
-              {t("page-get-eth-whats-eth-link")}
-            </InlineLink>
-          </InfoBanner>
-        </div>
+          <Alert className="mx-auto w-fit" variant="update">
+            <AlertContent className="flex flex-row items-center gap-4">
+              <Emoji className="text-4xl" text=":wave:" />
+              <AlertDescription>
+                {t("page-get-eth-new-to-eth")}{" "}
+                <InlineLink href="/eth/">
+                  {t("page-get-eth-whats-eth-link")}
+                </InlineLink>
+              </AlertDescription>
+            </AlertContent>
+          </Alert>
+        </Stack>
 
         <div
           id="country-picker"
@@ -291,9 +296,13 @@ const GetEthPage = ({
               <ButtonLink href="/wallets/find-wallet/" className="w-fit">
                 {t("page-get-eth-get-wallet-btn")}
               </ButtonLink>
-              <InfoBanner isWarning>
-                <Translation id="page-get-eth:page-get-eth-dexs-desc-4" />
-              </InfoBanner>
+              <Alert variant="warning">
+                <AlertContent>
+                  <AlertDescription>
+                    <Translation id="page-get-eth:page-get-eth-dexs-desc-4" />
+                  </AlertDescription>
+                </AlertContent>
+              </Alert>
             </Stack>
 
             <Stack className="gap-4">
@@ -302,7 +311,13 @@ const GetEthPage = ({
               </h3>
               <p>{t("page-get-eth-swapping")}</p>
               <CardList items={tokenSwaps} />
-              <InfoBanner isWarning>{t("page-get-eth-warning")}</InfoBanner>
+              <Alert variant="warning">
+                <AlertContent>
+                  <AlertDescription>
+                    <Translation id="page-get-eth:page-get-eth-warning" />
+                  </AlertDescription>
+                </AlertContent>
+              </Alert>
             </Stack>
           </TwoColumnContent>
         </Stack>
