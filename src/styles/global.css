@@ -88,7 +88,7 @@
 
 @layer base {
   body {
-    @apply !bg-background font-body text-sm !text-body lg:text-md;
+    @apply !bg-background font-body !text-body;
   }
 
   a {
