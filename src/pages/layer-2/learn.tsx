@@ -12,6 +12,7 @@ import { ContentHero, type ContentHeroProps } from "@/components/Hero"
 import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -417,6 +418,10 @@ const Layer2Learn = () => {
             </div>
           </Callout>
         </div>
+      </div>
+
+      <div id="quiz" className="px-8 py-9">
+        <StandaloneQuizWidget quizKey="layer-2" />
       </div>
     </MainArticle>
   )
