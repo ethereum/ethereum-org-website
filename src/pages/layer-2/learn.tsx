@@ -16,6 +16,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import RollupImage from "@/public/images/layer-2/rollup-2.png"
 import DAOImage from "@/public/images/use-cases/dao-2.png"
 import WhatIsEthereumImage from "@/public/images/what-is-ethereum.png"
 
@@ -238,6 +239,47 @@ const Layer2Learn = () => {
               </div>
             )
           })}
+        </div>
+      </div>
+
+      <div
+        id="how-does-layer-2-work"
+        className="flex w-full flex-col gap-16 px-8 py-9 md:flex-row"
+      >
+        <div className="flex w-full flex-col gap-4 md:w-[50%]">
+          <h2>How does layer 2 work?</h2>
+          <p>
+            As we mentioned above, layer 2 is a collective term for Ethereum
+            scaling solutions that handle transactions off Ethereum layer 1
+            while still taking advantage of the robust decentralized security of
+            Ethereum layer 1. A layer 2 is a separate blockchain that extends
+            Ethereum. How does that work?
+          </p>
+          <p>
+            There are several different types of layer 2, each having their own
+            trade-offs and security models. Layer 2s take the transactional
+            burden away from the layer 1 allowing it to become less congested,
+            and everything becomes more scalable.
+          </p>
+          <h3>Rollups</h3>
+          <p>
+            Rollups bundle (or ’roll up’) hundreds of transactions into a single
+            transaction on layer 1. This distributes the L1 transaction fees
+            across everyone in the rollup, making it cheaper for each user.
+          </p>
+          <p>
+            The transaction data in the rollup is submitted to layer 1, but the
+            execution is done separately by the rollup. By submitting
+            transaction data onto layer 1, rollups inherit the security of
+            Ethereum. This is because once the data is uploaded to layer 1,
+            reverting a rollup transaction requires reverting Ethereum. There
+            are two different approaches to rollups: optimistic and
+            zero-knowledge - they differ primarily on how this transaction data
+            is submitted to L1.
+          </p>
+        </div>
+        <div className="flex w-full md:w-[50%]">
+          <TwImage src={RollupImage} alt={""} />
         </div>
       </div>
     </MainArticle>
