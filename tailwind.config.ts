@@ -170,7 +170,6 @@ const config = {
           a: {
             DEFAULT: "hsla(var(--accent-a))",
             hover: "hsla(var(--accent-a-hover))",
-            "low-contrast": "hsla(var(--accent-a-low-contrast))", // TODO: VERIFY
           },
           b: {
             DEFAULT: "hsla(var(--accent-b))",
