@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next"
 import type { BasePageProps, Lang } from "@/lib/types"
 
 import { ContentHero, type ContentHeroProps } from "@/components/Hero"
+import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 
@@ -13,6 +14,8 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import WhatIsEthereumImage from "@/public/images/what-is-ethereum.png"
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
@@ -47,7 +50,7 @@ const Layer2Learn = () => {
     // TODO: Check matomo event information to implementc
     buttons: [
       {
-        content: "",
+        content: "What is layer 2",
         href: "/layer-2/",
         matomo: {
           eventCategory: "",
@@ -56,7 +59,7 @@ const Layer2Learn = () => {
         },
       },
       {
-        content: "",
+        content: "Use layer 2",
         href: "/layer-2/networks",
         matomo: {
           eventCategory: "",
@@ -76,6 +79,79 @@ const Layer2Learn = () => {
       />
 
       <ContentHero {...heroProps} />
+
+      <div
+        id="what-is-layer-2"
+        className="flex w-full flex-col items-center gap-4 px-8 py-9 md:flex-row"
+      >
+        <div className="flex w-full flex-col gap-4 md:w-[70%]">
+          <h2>What is layer-2?</h2>
+          <p>
+            Layer 2 (L2) is a collective term to describe a specific set of
+            Ethereum scaling solutions. A layer 2 is separate blockchain that
+            extends Ethereum and inherits the security guarantees of Ethereum.
+          </p>
+          <p>
+            Now let’s dig into it a bit more, and to do this we need to explain
+            layer 1 (L1).
+          </p>
+        </div>
+        <div className="w-full md:w-[30%]">
+          <TwImage
+            src={WhatIsEthereumImage}
+            alt="What is Ethereum"
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+
+      <div
+        id="what-is-layer-1"
+        className="flex w-full flex-col gap-4 bg-body-light px-8 py-9"
+      >
+        <h2>What is layer 1?</h2>
+        <div className="flex flex-col justify-between gap-16 md:flex-row">
+          <div className="flex w-full flex-col justify-between gap-4 md:w-[50%]">
+            <p>
+              Layer 1 blockchains, such as Ethereum and Bitcoin, are the
+              underlying foundation that layer 2 projects build on top of.
+              Examples of layer 2 projects include zero-knowledge rollups and
+              optimistic rollups on Ethereum and the Lighting Network on top of
+              Bitcoin.
+            </p>
+            <p>
+              Ethereum also functions as a data availability layer for Layer 2s,
+              and if there are any disputes on previous transactions data is
+              provided from Ethereum for these disputes.
+            </p>
+          </div>
+          <div className="flex w-full flex-col gap-4 md:w-[50%]">
+            <p>Ethereum as the layer 1 includes:</p>
+            <ol className="list-none space-y-2 pl-0 [counter-reset:item]">
+              <li className="flex items-center space-x-3">
+                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
+                <span>
+                  a network of node operators to secure and validate the network
+                </span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
+                <span>a network of block producers</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
+                <span>
+                  the blockchain itself and the history of transaction data
+                </span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
+                <span>the consensus mechanism for the network</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
     </MainArticle>
   )
 }
