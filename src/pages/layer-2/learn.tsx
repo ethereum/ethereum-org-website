@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next"
 
 import type { BasePageProps, Lang } from "@/lib/types"
 
+import Card from "@/components/Card"
 import { ContentHero, type ContentHeroProps } from "@/components/Hero"
 import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -71,6 +72,28 @@ const Layer2Learn = () => {
     ],
   }
 
+  // TODO: Setup translation
+  const layer2Cards = [
+    {
+      emoji: ":money_with_wings:",
+      title: "Lower Fees",
+      description:
+        "By combining multiple transactions into a single transaction on layer 1, transaction fees are massively reduced, making Ethereum more accessible for all.",
+    },
+    {
+      emoji: ":closed_lock_with_key:",
+      title: "Maintain Security",
+      description:
+        "Layer 2 blockchains settle their transactions on the Ethereum Mainnet, allowing users who use them to benefit from the security of the Ethereum network.",
+    },
+    {
+      emoji: ":hammer_and_wrench:",
+      title: "Expand Use Cases",
+      description:
+        "With higher transactions per second, lower fees, and new technology, projects will expand into new applications with improved user experience.",
+    },
+  ]
+
   return (
     <MainArticle className="relative flex flex-col">
       <PageMetadata
@@ -85,6 +108,7 @@ const Layer2Learn = () => {
         id="what-is-layer-2"
         className="flex w-full flex-col items-center gap-4 px-8 py-9 md:flex-row"
       >
+        {/* TODO: Setup translation */}
         <div className="flex w-full flex-col gap-4 md:w-[70%]">
           <h2>What is layer-2?</h2>
           <p>
@@ -110,6 +134,7 @@ const Layer2Learn = () => {
         id="what-is-layer-1"
         className="flex w-full flex-col gap-4 bg-body-light px-8 py-9"
       >
+        {/* TODO: Setup translation */}
         <h2>What is layer 1?</h2>
         <div className="flex flex-col justify-between gap-16 md:flex-row">
           <div className="flex w-full flex-col justify-between gap-4 md:w-[50%]">
@@ -162,6 +187,7 @@ const Layer2Learn = () => {
           <TwImage src={DAOImage} alt="" />
         </div>
 
+        {/* TODO: setup translation  */}
         <div className="flex w-full flex-col gap-4 md:w-[50%]">
           <h2>Why do we need layer 2?</h2>
           <p>
@@ -195,6 +221,23 @@ const Layer2Learn = () => {
             the fees reduce. That is where layer 2 comes in to scale Ethereum
             today.
           </p>
+        </div>
+      </div>
+
+      <div id="layer-2-cards" className="w-full px-8 py-9">
+        <div className="flex flex-col gap-9 md:flex-row">
+          {layer2Cards.map((card, idx) => {
+            return (
+              <div key={idx} className="flex flex-1">
+                <Card
+                  description={card.description}
+                  title={card.title}
+                  emoji={card.emoji}
+                  className="flex flex-1 flex-col"
+                />
+              </div>
+            )
+          })}
         </div>
       </div>
     </MainArticle>
