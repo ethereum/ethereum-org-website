@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next"
 
 import type { BasePageProps, Lang } from "@/lib/types"
 
+import { ButtonLink } from "@/components/Buttons"
 import Card from "@/components/Card"
 import { ContentHero, type ContentHeroProps } from "@/components/Hero"
 import { TwImage } from "@/components/Image"
@@ -42,6 +43,7 @@ export const getStaticProps = (async ({ locale }) => {
   }
 }) satisfies GetStaticProps<BasePageProps>
 
+// TODO: Add matomo events
 const Layer2Learn = () => {
   const { t } = useTranslation("page-layer-2-learn")
   const { pathname } = useRouter()
@@ -140,8 +142,8 @@ const Layer2Learn = () => {
             extends Ethereum and inherits the security guarantees of Ethereum.
           </p>
           <p>
-            Now let’s dig into it a bit more, and to do this we need to explain
-            layer 1 (L1).
+            Now let&apos;s dig into it a bit more, and to do this we need to
+            explain layer 1 (L1).
           </p>
         </div>
         <div className="w-full md:w-[30%]">
@@ -264,6 +266,7 @@ const Layer2Learn = () => {
         </div>
       </div>
 
+      {/* TODO: setup translation  */}
       <div
         id="how-does-layer-2-work"
         className="flex w-full flex-col gap-16 px-8 py-9 md:flex-row"
@@ -285,9 +288,10 @@ const Layer2Learn = () => {
           </p>
           <h3>Rollups</h3>
           <p>
-            Rollups bundle (or ’roll up’) hundreds of transactions into a single
-            transaction on layer 1. This distributes the L1 transaction fees
-            across everyone in the rollup, making it cheaper for each user.
+            Rollups bundle (or &apos;roll up&apos;) hundreds of transactions
+            into a single transaction on layer 1. This distributes the L1
+            transaction fees across everyone in the rollup, making it cheaper
+            for each user.
           </p>
           <p>
             The transaction data in the rollup is submitted to layer 1, but the
@@ -305,7 +309,6 @@ const Layer2Learn = () => {
         </div>
       </div>
 
-      {/* TODO: Finish styling */}
       <div
         id="rollup-cards"
         className="flex w-full flex-col gap-8 px-8 py-9 md:flex-row"
@@ -323,6 +326,34 @@ const Layer2Learn = () => {
             </div>
           )
         })}
+      </div>
+
+      {/* TODO: Setup translations */}
+      <div id="dyor-risks" className="w-full px-8 py-9">
+        <div className="flex flex-col gap-8 bg-orange-100 px-12 py-12 text-gray-900">
+          <h2>Do your own research: Risks of layer 2</h2>
+          <div className="flex flex-col gap-4">
+            <p>
+              Because layer 2 chains inherit security from Ethereum, in an ideal
+              world, they are as safe as L1 Ethereum. However, many of the
+              projects are still young and somewhat experimental. After years of
+              R&D, many of the L2 technologies that will scale Ethereum went
+              live in 2021. This is not to say these L2s are not secure, only
+              that no layer 2 is as battle tested as Ethereum Mainnet. Always do
+              your own research and decide if you&apos;re comfortable with any
+              risks involved.
+            </p>
+            <p>
+              For more information on the technology, risks and trust
+              assumptions of layer 2s, we recommend checking out L2BEAT, which
+              provides a comprehensive risk assessment framework of each
+              project.
+            </p>
+          </div>
+          <div>
+            <ButtonLink href="https://l2beat.com">Go to L2BEAT</ButtonLink>
+          </div>
+        </div>
       </div>
     </MainArticle>
   )
