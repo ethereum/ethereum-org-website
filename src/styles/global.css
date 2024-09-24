@@ -76,7 +76,7 @@
 
 @layer base {
   body {
-    @apply !bg-background font-body text-md !text-body;
+    @apply !bg-background font-body !text-body;
   }
 
   a {
