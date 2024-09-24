@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next"
 import type { BasePageProps, Lang } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
+import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import { ContentHero, type ContentHeroProps } from "@/components/Hero"
 import { TwImage } from "@/components/Image"
@@ -17,9 +18,11 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import Callout2Image from "@/public/images/layer-2/learn-hero.png"
 import OptimisticRollupImage from "@/public/images/layer-2/optimistic_rollup.png"
 import RollupImage from "@/public/images/layer-2/rollup-2.png"
 import ZKRollupImage from "@/public/images/layer-2/zk_rollup.png"
+import Callout1Image from "@/public/images/man-and-dog-playing.png"
 import DAOImage from "@/public/images/use-cases/dao-2.png"
 import WhatIsEthereumImage from "@/public/images/what-is-ethereum.png"
 
@@ -385,6 +388,34 @@ const Layer2Learn = () => {
               transaction throughput. More on sidechains and validiums.
             </p>
           </div>
+        </div>
+
+        <div
+          id="callout-cards"
+          className="flex w-full flex-col lg:flex-row lg:gap-16"
+        >
+          <Callout
+            image={Callout1Image}
+            title={"What are the benefits?"}
+            description={
+              "Explore what is the practical impact of layer 2 solutions on user experience."
+            }
+          >
+            <div>
+              <ButtonLink href="/layer-2">Learn more</ButtonLink>
+            </div>
+          </Callout>
+          <Callout
+            image={Callout2Image}
+            title={"Explore different networks"}
+            description={
+              "Learn how networks differ form each other and how far they have gotten in their development."
+            }
+          >
+            <div>
+              <ButtonLink href="/layer-2/networks">Explore networks</ButtonLink>
+            </div>
+          </Callout>
         </div>
       </div>
     </MainArticle>
