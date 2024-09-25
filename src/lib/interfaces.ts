@@ -161,20 +161,6 @@ export interface IGetInvolvedCard {
 }
 
 /**
- * TitleCardList
- */
-
-export interface ITitleCardItem {
-  title: string
-  description: string
-  caption?: string
-  link?: string
-  image?: string
-  alt?: string
-  id?: number
-}
-
-/**
  * Codeblock
  */
 
