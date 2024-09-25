@@ -26,11 +26,6 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof QuizzesListComponent>
-
-export default meta
-
-export const QuizzesList: StoryObj<typeof meta> = {
   args: {
     content: ethereumBasicsQuizzes,
     headingId: "basics",
@@ -43,7 +38,32 @@ export const QuizzesList: StoryObj<typeof meta> = {
     quizHandler: fn(),
     modalHandler: fn(),
   },
+} satisfies Meta<typeof QuizzesListComponent>
 
+export default meta
+
+export const Default: StoryObj<typeof meta> = {
+  render: ({ headingId, descriptionId, ...args }) => (
+    <QuizzesListComponent
+      {...args}
+      headingId={getTranslation(headingId, "learn-quizzes")}
+      descriptionId={getTranslation(descriptionId, "learn-quizzes")}
+    />
+  ),
+}
+
+export const OneCompletedQuiz: StoryObj<typeof meta> = {
+  args: {
+    ...meta.args,
+    userStats: {
+      average: [100],
+      score: 4,
+      completed: {
+        ...meta.args.userStats.completed,
+        "what-is-ethereum": [true, 5],
+      },
+    },
+  },
   render: ({ headingId, descriptionId, ...args }) => (
     <QuizzesListComponent
       {...args}
