@@ -1,12 +1,7 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react"
-
-import { Image } from "@/components/Image"
-
 import { cn } from "@/lib/utils/cn"
 
 import { ButtonLink } from "../Buttons"
-
-import PeopleLearning from "@/public/images/people-learning.png"
+import { Stack } from "../ui/flex"
 
 // TODO: refactor to use CalloutBanner component
 function ContributorsQuizBanner(props: React.HTMLAttributes<HTMLDivElement>) {
@@ -18,47 +13,40 @@ function ContributorsQuizBanner(props: React.HTMLAttributes<HTMLDivElement>) {
       )}
       {...props}
     >
-      <Flex
-        flex="1 1 50%"
-        position="relative"
-        justify={{ base: "center", md: "end" }}
-        align="end"
-        minH={{ base: 200, md: "auto" }}
-        px={{ base: 8, md: 0 }}
+      {/* TODO: fix image */}
+      {/* <Flex
+        className={cn(
+          "relative flex-[1_1_50%]",
+          "justify-center md:justify-end",
+          "items-end",
+          "md:min-h-auto min-h-[100px]",
+          "px-8 md:px-0",
+          "w-20"
+        )}
       >
-        <Image
-          position="absolute"
+        <TwImage
           src={PeopleLearning}
           alt="People learning about Ethereum"
-          w="full"
-          maxH="120%"
-          style={{
-            objectFit: "contain",
-          }}
+          className="absolute max-h-[120%] w-full object-contain"
         />
-        <Box hideFrom="md" borderBottom="1px solid #D3C5F1" w="full" />
-      </Flex>
-      <Flex
-        flex="1 1 50%"
-        flexDir="column"
-        gap="8"
-        py="8"
-        ps="8"
-        pe={{ base: 8, lg: 0 }}
+        <div className="w-full border-b border-[#D3C5F1] md:hidden" />
+      </Flex> */}
+      <Stack
+        className={cn("flex-[1_1_50%]", "gap-8 py-8 ps-8", "pe-8 lg:pe-0")}
       >
-        <Flex gap="2" flexDir="column">
-          <Heading size="lg">Unsure where to start?</Heading>
-          <Text size="lg" color="body.base">
+        <Stack>
+          <h2>Unsure where to start?</h2>
+          <p className="text-lg text-body">
             Take a quick quiz and find out how you can contribute on
             ethereum.org.
-          </Text>
-        </Flex>
-        <Box>
+          </p>
+        </Stack>
+        <div>
           <ButtonLink href="https://ethdotorg.typeform.com/contributor">
             Take a quiz
           </ButtonLink>
-        </Box>
-      </Flex>
+        </div>
+      </Stack>
     </aside>
   )
 }
