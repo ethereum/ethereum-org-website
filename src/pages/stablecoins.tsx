@@ -619,7 +619,8 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
               <Icon ms={2} fill="'text" name="info" boxSize={4} />
             </Tooltip>
           </H3>
-          <Alert variant="warning" className="mb-4">
+          <Alert className="mb-4" variant="error">
+            <AlertEmoji text="⚠️" />
             {t("page-stablecoins-algorithmic-disclaimer")}
           </Alert>
           <Text>
@@ -740,9 +741,9 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
         <Alert variant="error">
           <AlertEmoji text="⚠️" />
           <AlertContent>
-            <H3 mt={0} mb={4}>
+            <h3 className="text-xl md:text-2xl">
               {t("page-stablecoins-research-warning-title")}
-            </H3>
+            </h3>
             {t("page-stablecoins-algorithmic-disclaimer")}
           </AlertContent>
         </Alert>
