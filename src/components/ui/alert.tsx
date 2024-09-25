@@ -4,6 +4,8 @@ import { MdClose } from "react-icons/md"
 
 import { cn } from "@/lib/utils/cn"
 
+import Emoji, { type EmojiProps } from "../Emoji"
+
 import { Button } from "./buttons/Button"
 
 const alertVariants = cva(
@@ -89,4 +91,24 @@ const AlertCloseButton = React.forwardRef<
 ))
 AlertCloseButton.displayName = "AlertCloseButton"
 
-export { Alert, AlertCloseButton, AlertContent, AlertDescription, AlertTitle }
+const AlertEmoji = React.forwardRef<SVGElement, EmojiProps>(
+  ({ className, ...props }) => (
+    <Emoji
+      className={cn(
+        "flex-shrink-0 flex-grow-0 self-start text-4xl sm:self-auto",
+        className
+      )}
+      {...props}
+    />
+  )
+)
+AlertEmoji.displayName = "AlertEmoji"
+
+export {
+  Alert,
+  AlertCloseButton,
+  AlertContent,
+  AlertDescription,
+  AlertEmoji,
+  AlertTitle,
+}

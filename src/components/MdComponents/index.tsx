@@ -26,6 +26,7 @@ import IssuesList from "../IssuesList"
 import LocaleDateTime from "../LocaleDateTime"
 import MainArticle from "../MainArticle"
 import { StandaloneQuizWidget } from "../Quiz/QuizWidget"
+import { Alert, AlertEmoji, AlertTitle } from "../ui/alert"
 import { ButtonLink } from "../ui/buttons/Button"
 import { Divider } from "../ui/divider"
 import { Flex } from "../ui/flex"
@@ -196,6 +197,9 @@ export const reactComponents = {
   FeaturedText,
   GlossaryTooltip,
   InfoBanner,
+  Alert,
+  AlertTitle,
+  AlertEmoji,
   MobileButton,
   MobileButtonDropdown,
   Page,
