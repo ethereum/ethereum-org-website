@@ -67,12 +67,14 @@ buttons:
 
 </RoadmapImageContent>
 
-<InfoBanner mb={8}>
+<Alert className="mb-8">
+<AlertContent>
   <h4 style={{ marginTop: 0 }}>ETH2 是什么？</h4>
 
-  <p>在以太坊过渡到<a href="/glossary/#pos">权益证明</a>之前，“Eth2”（以太坊 2）一词通常用于描述以太坊的未来，但它已<strong>被逐步淘汰，取而代之的是更准确的术语</strong>。该术语最初被用于区分过渡到权益证明之前和之后的以太坊网络，有时也用于指代不同的以太坊客户端（<a href="/glossary/#execution-client">执行客户端</a>有时称为以太坊 1 客户端，而<a href="/glossary/#consensus-client">共识客户端</a>有时称为以太坊 2 客户端）。</p>
+  <p className="mb-0">在以太坊过渡到<a href="/glossary/#pos">权益证明</a>之前，“Eth2”（以太坊 2）一词通常用于描述以太坊的未来，但它已<strong>被逐步淘汰，取而代之的是更准确的术语</strong>。该术语最初被用于区分过渡到权益证明之前和之后的以太坊网络，有时也用于指代不同的以太坊客户端（<a href="/glossary/#execution-client">执行客户端</a>有时称为以太坊 1 客户端，而<a href="/glossary/#consensus-client">共识客户端</a>有时称为以太坊 2 客户端）。</p>
 
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## 以太坊路线图是否会随着时间的推移而改变？ {#will-ethereums-roadmap-change-over-time}
 

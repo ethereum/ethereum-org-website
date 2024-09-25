@@ -67,12 +67,14 @@ Ethereum регулярно отримує оновлення, які підви
 
 </RoadmapImageContent>
 
-<InfoBanner mb={8}>
+<Alert className="mb-8">
+<AlertContent>
   <h4 style={{ marginTop: 0 }}>Що таке ETH2?</h4>
 
-  <p>Термін Eth2 зазвичай використовувався для опису майбутнього Ethereum до переходу на <a href="/glossary/#pos">доказ частки володіння</a>, але від нього <strong>поступово відмовилися на користь точнішої термінології.</strong> Спочатку він використовувався для того, щоб розрізняти мережу Ethereum до та після переходу на доказ частки володіння, а іноді для позначення різних клієнтів Ethereum (<a href="/glossary/#execution-client">клієнти виконання</a> іноді називалися клієнтами ETH1, а <a href="/glossary/#consensus-client">клієнти консенсусу</a> — клієнтами ETH2).</p>
+  <p className="mb-0">Термін Eth2 зазвичай використовувався для опису майбутнього Ethereum до переходу на <a href="/glossary/#pos">доказ частки володіння</a>, але від нього <strong>поступово відмовилися на користь точнішої термінології.</strong> Спочатку він використовувався для того, щоб розрізняти мережу Ethereum до та після переходу на доказ частки володіння, а іноді для позначення різних клієнтів Ethereum (<a href="/glossary/#execution-client">клієнти виконання</a> іноді називалися клієнтами ETH1, а <a href="/glossary/#consensus-client">клієнти консенсусу</a> — клієнтами ETH2).</p>
 
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Чи змінюватиметься план розвитку Ethereum із часом? {#will-ethereums-roadmap-change-over-time}
 
