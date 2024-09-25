@@ -23,7 +23,6 @@ import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
-import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import {
   Heading1 as MdHeading1,
@@ -130,7 +129,6 @@ export const tutorialsComponents = {
   Emoji,
   EnvWarningBanner,
   GlossaryTooltip,
-  InfoBanner,
   StyledDivider,
   YouTube,
 }

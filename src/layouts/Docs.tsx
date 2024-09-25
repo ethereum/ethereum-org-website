@@ -26,7 +26,6 @@ import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
-import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import {
@@ -166,7 +165,6 @@ export const docsComponents = {
   Divider,
   Emoji,
   GlossaryTooltip,
-  InfoBanner,
   RollupProductDevDoc,
   YouTube,
 }

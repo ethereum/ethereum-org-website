@@ -21,7 +21,6 @@ import ExpandableCard from "../ExpandableCard"
 import FeaturedText from "../FeaturedText"
 import GlossaryTooltip from "../Glossary/GlossaryTooltip"
 import IdAnchor from "../IdAnchor"
-import InfoBanner from "../InfoBanner"
 import IssuesList from "../IssuesList"
 import LocaleDateTime from "../LocaleDateTime"
 import MainArticle from "../MainArticle"
@@ -196,7 +195,6 @@ export const reactComponents = {
   ExpandableCard,
   FeaturedText,
   GlossaryTooltip,
-  InfoBanner,
   Alert,
   AlertTitle,
   AlertEmoji,
