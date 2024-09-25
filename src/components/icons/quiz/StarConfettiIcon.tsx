@@ -1,10 +1,11 @@
 /* eslint-disable react/jsx-key */
 import React from "react"
-import { IconBase, type IconType } from "react-icons"
+import { IconBase } from "react-icons"
+import type { IconBaseProps } from "react-icons/lib"
 
 import { cn } from "@/lib/utils/cn"
 
-export const StarConfettiIcon: IconType = ({ className, ...props }) => (
+export const StarConfettiIcon = ({ className, ...props }: IconBaseProps) => (
   <IconBase
     viewBox="0 0 185 119"
     className={cn(className, "h-[119px] w-[185px]")}
@@ -104,3 +105,5 @@ export const StarConfettiIcon: IconType = ({ className, ...props }) => (
     />
   </IconBase>
 )
+
+StarConfettiIcon.displayName = "StarConfettiIcon"
