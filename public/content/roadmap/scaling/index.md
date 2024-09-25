@@ -9,14 +9,17 @@ template: roadmap
 
 Ethereum is scaled using [layer 2s](/layer-2/#rollups) (also known as rollups), which batch transactions together and send the output to Ethereum. Even though rollups are up to eight times less expensive than Ethereum Mainnet, it's possible to optimize rollups further to reduce costs for end users. Rollups also rely on some centralized components that developers can remove as the rollups mature.
 
-<InfoBanner mb={8} title="Transaction costs">
+<Alert className="mb-8">
+<AlertContent>
+  <AlertTitle>Transaction costs</AlertTitle>
   <ul style={{ marginBottom: 0 }}>
     <li>Today’s rollups are <strong>~5-20x</strong> cheaper than Ethereum layer 1</li>
     <li>ZK-rollups will soon lower fees by <strong>~40-100x</strong></li>
     <li>Upcoming changes to Ethereum will provide another <strong>~100-1000x</strong> of scaling</li>
     <li style={{ marginBottom: 0 }}>Users should benefit from transactions <strong>costing less than $0.001</strong></li>
   </ul>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Making data cheaper {#making-data-cheaper}
 
@@ -44,7 +47,7 @@ This second step is known as [“Danksharding”](/roadmap/danksharding/). **It 
 
 ## Current progress {#current-progress}
 
-Proto-Danksharding is the first of these roadmap items to be implemented as part of the Cancun-Deneb ("Dencun") network upgrade in March of 2024. 
+Proto-Danksharding is the first of these roadmap items to be implemented as part of the Cancun-Deneb ("Dencun") network upgrade in March of 2024.
 **Full Danksharding is likely several years away**, as it relies upon several other roadmap items being completed first. Decentralizing rollup infrastructure is likely to be a gradual process - there are many different rollups that are building slightly different systems and will fully decentralize at different rates.
 
 [More on the Dencun network upgrade](/roadmap/dencun/)
