@@ -8,9 +8,12 @@ lang: fr
 
 Le site ethereum.org, comme Ethereum plus largement, est un projet open source. Donc, si vous voulez aider à améliorer [notre portail sur Ethereum](/about/), voici comment vous pouvez contribuer.
 
-<InfoBanner shouldCenter emoji=":tada:">
+<Alert className="max-w-[55rem] mx-auto">
+<AlertEmoji text=":tada:"/>
+<AlertContent>
   Demandez votre jeton POAP ! Si vous avez contribué à ethereum.org en 2022, un POAP unique vous attend.{" "} <a href="#poap">En savoir plus sur les POAP</a>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Comment contribuer {#ways-to-contribute}
 

@@ -8,10 +8,13 @@ lang: zh
 
 Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 如果你想帮助改进[我们介绍以太坊的门户网站](/about/)，你可以通过以下方式提供帮助。
 
-<InfoBanner shouldCenter emoji=":tada:">
+<Alert className="max-w-[55rem] mx-auto">
+<AlertEmoji text=":tada:"/>
+<AlertContent>
   领取你的 POAP 代币！ 如果你在 2022 年为 ethereum.org 做出了贡献，我们会给你发放一个独特的 POAP 徽章。{" "}
 <a href="#poap">关于 POAP 徽章的更多信息</a>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## 如何做出贡献 {#ways-to-contribute}
 

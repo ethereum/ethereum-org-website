@@ -59,9 +59,12 @@ Wenn Sie ETH auf dem Ethereum-Hauptnetzwerk haben und ein alternatives L1 erkund
 
 Nehmen wir an, Sie möchten native Bitcoin (BTC) besitzen, aber Sie haben nur Geld auf dem Ethereum-Hauptnetzwerk. Um Bitcoin auf Ethereum zu besitzen, können Sie Wrapped Bitcoin (WBTC) kaufen. WBTC ist ein ERC-20 Token, der auf dem Netzwerk von Ethereum zu Hause ist, damit sozusagen eine Ethereum-Version von Bitcoin. WBTC ist aber nicht der ursprüngliche Bitcoin auf der Bitcoin-Blockchain. Um ursprüngliche BTC zu besitzen, muss eine Brücke zwischen Ethereum und Bitcoin genutzt werden. Mit dieser Brücke lässt sich WBTC in ursprüngliche BTC umwandeln. Nehmen wir an, Sie besitzen BTC und möchten Defi-Protokolle in Ethereum nutzen. Dann müssten Sie Ihre BTC in WBTC umwandeln, welche Sie dann als Vermögenswert in Ethereum nutzen können.
 
-<InfoBanner shouldCenter emoji=":bulb:">
+<Alert className="max-w-[55rem] mx-auto">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
   Sie können all dies auch mit <a href="/get-eth/">zentralisierten Krypto-Börsen</a> tun. Wenn Ihr Guthaben jedoch nicht bereits auf einer Krypto-Börse ist, würde dies mehrere Schritte erfordern, und es wäre wahrscheinlich besser, eine Brücke zu benutzen.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 <Divider />
 

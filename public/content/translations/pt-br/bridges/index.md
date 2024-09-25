@@ -59,9 +59,12 @@ Se você tiver o ETH na Ethereum Mainnet e quiser explorar um alt L1 para experi
 
 Digamos que você queira possuir Bitcoin nativo (BTC), mas você só tem fundos na rede principal Ethereum. Para ganhar exposição à BTC na Ethereum, você pode comprar Bitcoin Envolvido (WBTC). Entretanto, o WBTC é um token ERC-20 nativo da rede Ethereum, o que significa que é uma versão Ethereum do Bitcoin e não o ativo original do blockchain do Bitcoin. Para possuir BTC nativa, você teria que ligar os seus ativos do Ethereum para Bitcoin usando uma ponte. Isso converter suas WBTC em BTC nativa, por meio da ponte. Como alternativa, você pode possuir BTC e querer usá-la em protocolos de DeFi no Ethereum. Isso exigiria fazer uma ponte no caminho inverso, de BTC para WBTC, que podem ser usados como ativos no Ethereum.
 
-<InfoBanner shouldCenter emoji=":bulb:">
+<Alert className="max-w-[55rem] mx-auto">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
   Você também pode fazer tudo acima usando uma <a href="/get-eth/">exchange centralizada</a>. No entanto, a menos que seus fundos já estejam em uma exchange (corretora), isso envolveria vários passos, e você provavelmente estaria melhor usando uma ponte.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 <Divider />
 

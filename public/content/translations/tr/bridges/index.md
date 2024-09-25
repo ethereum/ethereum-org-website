@@ -59,9 +59,12 @@ Ethereum Ana Ağı'nda ETH'niz varsa ve diğer bir L1'i keşfedip yerel merkeziy
 
 Diyelim ki yerel zincirde Bitcoin'e (BTC) sahip olmak istiyorsunuz ama sadece Ethereum Ana Ağı'nda varlıklarınız var. Ethereum'da BTC sahibi olmak için Wrapped Bitcoin (WBTC) satın alabilirsiniz. Ancak WBTC, bir Ethereum ağına özgü bir ERC-20 token'ıdır. Bu da Bitcoin blok zincirindeki orijinal varlık değil, Bitcoin'in Ethereum versiyonu olduğu anlamına gelir. Yerel BTC'ye sahip olmak için varlıklarınızı Ethereum'dan Bitcoin'e bir köprü aracılığı ile aktarmanız gerekir. Bu WBTC'nizi köprüleyecek ve yerel BTC'ye dönüştürecektir. Alternatif olarak, BTC sahibi olabilir ve Ethereum DeFi protokolleinde kullanmak istiyor olabilirsiniz. Bu da tersi yönünde, BTC'yi WBTC'ye köprülemeyi gerektirir. Bu şekide Ethereum'da bir varlık olarak kullanılabilir.
 
-<InfoBanner shouldCenter emoji=":bulb:">
+<Alert className="max-w-[55rem] mx-auto">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
   Ayrıca yukarıdaki her şeyi bir <a href="/get-eth/">merkezi borsa</a> aracılığıyla da yapabilirsiniz. Ancak varlıklarınız hali hazırda borsada değilse, birden çok adım gerektirecektir ve köprü kullanmanız daha iyi olacaktır.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 <Divider />
 

@@ -8,10 +8,13 @@ lang: pt-br
 
 O site ethereum.org, como o Ethereum de forma mais ampla, é um projeto de código aberto. Então, se você quiser ajudar a melhorar [o nosso portal para o Ethereum](/about/), veja aqui como pode ajudar.
 
-<InfoBanner shouldCenter emoji=":tada:">
+<Alert className="max-w-[55rem] mx-auto">
+<AlertEmoji text=":tada:"/>
+<AlertContent>
   Solicite seu token POAP! Se você contribuiu para o ethereum.org em 2022, há um POAP exclusivo esperando por você.{" "}
   <a href="#poap">Saiba mais sobre POAPs</a>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Formas de contribuir {#ways-to-contribute}
 

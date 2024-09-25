@@ -47,10 +47,13 @@ Program Terjemahan ethereum.org bertujuan untuk membuat Ethereum dapat diakses o
 
 ## Cara menerjemahkan {#how-to-translate}
 
-<InfoBanner shouldCenter emoji=":light_bulb:">
+<Alert className="max-w-[55rem] mx-auto">
+<AlertEmoji text=":light_bulb:"/>
+<AlertContent>
   Kami menyarankan Anda untuk melihat Panduan Gaya Penerjemahan ethereum.org. Ini berisi beberapa panduan, instruksi, dan tips yang paling penting bagi para penerjemah dan bisa menjadi rujukan saat melokalkan situs web.
   {" "}<Link href="/contributing/translation-program/translators-guide/">Lihat Panduan Gaya Penerjemahan</Link>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 1. **[Bergabung dengan projek kami di Crowdin](https://crowdin.com/project/ethereum-org/)**  
    Anda harus masuk ke akun Crowdin atau mendaftar jika belum memilikinya. Yang diperlukan untuk mendaftar hanyalah akun email dan kata sandi.
@@ -98,9 +101,12 @@ Program Terjemahan ethereum.org bertujuan untuk membuat Ethereum dapat diakses o
 4. **Proses peninjauan**  
    Setelah Anda menyelesaikan terjemahan (yaitu semua file untuk tampilan versi konten sudah 100%), layanan terjemahan profesional kami akan meninjau (dan berpotensi mengedit) konten. Setelah peninjauan selesai (yaitu kemajuan peninjauan sudah 100%), kami akan menambahkannya ke situs web.
 
-<InfoBanner shouldCenter emoji=":warning:">
+<Alert className="max-w-[55rem] mx-auto">
+<AlertEmoji text=":warning:"/>
+<AlertContent>
   Harap tdak menggunakan terjemahan mesin untuk menerjemahkan proyek tersebut. Semua terjemahan akan diulas sebelum ditambahkan ke situs web. Jika terjemahan usulan Anda didapati sebagai diterjemahkan mesin, terjemahan akan ditolak dan para kontributor yang sering menggunakan terjemahan mesin akan dikeluarkan dari proyek.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Ada pertanyaan? Atau ingin kolaborasi dengan tim kami atau penerjemah lainnya? Silakan posting di kanal #translations dari server [Discord ethereum.org](https://discord.gg/ethereum-org) kami
 
@@ -116,10 +122,13 @@ Tujuan dari jam kerja adalah untuk memungkinkan para penerjemah kami menanyakan 
 
 Jika Anda adalah seorang penerjemah ethereum.org atau ingin menjadi salah satunya, silakan bergabung dengan kami dalam salah satu sesi ini.
 
-<InfoBanner shouldCenter emoji=":information_source:">
+<Alert className="max-w-[55rem] mx-auto">
+<AlertEmoji text=":information_source:"/>
+<AlertContent>
   Jika Anda membantu kami dengan terjemahan, Anda mungkin menemukan beberapa informasi yang berguna dalam Pertanyaan yang Sering Diajukan tentang terjemahan kami.
   {" "}<Link href="/contributing/translation-program/faq/">Pertanyaan yang Sering Diajukan tentang menerjemahkan ethereum.org</Link>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Sumber Daya {#resources}
 

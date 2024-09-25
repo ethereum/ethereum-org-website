@@ -59,9 +59,12 @@ Jeśli posiadasz ETH w sieci głównej Ethereum i chcesz odkryć alternatywną w
 
 Załóżmy, że chcesz posiadać natywny Bitcoin (BTC), ale masz środki tylko w sieci głównej Ethereum. Aby uzyskać ekspozycję na BTC na Ethereum, możesz kupić Wrapped Bitcoin (WBTC). WBTC jest jednak tokenem ERC-20 natywnym dla sieci Ethereum, co oznacza, że jest to wersja Bitcoina w Ethereum, a nie oryginalne aktywo w blockchainie Bitcoina. Aby posiadać natywne BTC, musiałbyś połączyć swoje aktywa z Ethereum do Bitcoina za pomocą mostu. Spowoduje to zmostkowanie WBTC i przekształcenie go w natywny BTC. Alternatywnie, możesz posiadać BTC i chcieć wykorzystać go w protokołach DeFi Ethereum. Wymagałoby to mostkowania w drugą stronę, z BTC do WBTC, który można następnie wykorzystać jako aktywa na Ethereum.
 
-<InfoBanner shouldCenter emoji=":bulb:">
+<Alert className="max-w-[55rem] mx-auto">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
   Wszystkie powyższe czynności można również wykonać za pomocą <a href="/get-eth/">scentralizowanej giełdy</a>. Jeśli jednak Twoje środki nie znajdują się już na giełdzie, wymagałoby to wielu kroków i prawdopodobnie lepiej byłoby skorzystać z mostu.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 <Divider />
 
