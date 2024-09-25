@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react"
 
-import Text from "@/components/OldText"
-
 import { MATOMO_LS_KEY } from "@/lib/utils/matomo"
 
 import Checkbox from "../../tailwind/ui/Checkbox"
@@ -32,12 +30,12 @@ const MatomoOptOut = () => {
   }
   return (
     <div className="mb-4 mt-8 flex flex-col rounded border border-body-light bg-background p-6">
-      <Text color="fail">
+      <p className="mb-5 text-error">
         You can opt out of being tracked by Matomo Analytics and prevent the
         website from analysing the actions you take using the website. This will
         prevent us from learning from your actions and creating a better website
         experience for you and other users.
-      </Text>
+      </p>
       {loading ? (
         "Loading preferences..."
       ) : (
