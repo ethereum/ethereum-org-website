@@ -1,36 +1,41 @@
 import { cn } from "@/lib/utils/cn"
 
 import { ButtonLink } from "../Buttons"
-import { Stack } from "../ui/flex"
+import { TwImage } from "../Image"
+import { Flex, Stack } from "../ui/flex"
+
+import PeopleLearning from "@/public/images/people-learning.png"
 
 // TODO: refactor to use CalloutBanner component
-function ContributorsQuizBanner(props: React.HTMLAttributes<HTMLDivElement>) {
+function ContributorsQuizBanner({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <aside
       className={cn(
         "flex flex-col rounded md:flex-row",
-        "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+        "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20",
+        className
       )}
       {...props}
     >
-      {/* TODO: fix image */}
-      {/* <Flex
+      <Flex
         className={cn(
           "relative flex-[1_1_50%]",
           "justify-center md:justify-end",
           "items-end",
-          "md:min-h-auto min-h-[100px]",
-          "px-8 md:px-0",
-          "w-20"
+          "md:min-h-auto min-h-[200px]",
+          "px-8 md:px-0"
         )}
       >
         <TwImage
+          className="absolute max-h-[120%] w-full object-contain"
           src={PeopleLearning}
           alt="People learning about Ethereum"
-          className="absolute max-h-[120%] w-full object-contain"
         />
         <div className="w-full border-b border-[#D3C5F1] md:hidden" />
-      </Flex> */}
+      </Flex>
       <Stack
         className={cn("flex-[1_1_50%]", "gap-8 py-8 ps-8", "pe-8 lg:pe-0")}
       >
