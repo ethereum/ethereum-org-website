@@ -24,7 +24,6 @@ import EthVideo from "@/components/EthVideo"
 import FeedbackCard from "@/components/FeedbackCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
-import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
@@ -32,7 +31,7 @@ import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
-import { Alert, AlertEmoji } from "@/components/ui/alert"
+import { Alert, AlertContent, AlertEmoji } from "@/components/ui/alert"
 import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -475,9 +474,11 @@ const EthPage = () => {
               description={t("page-eth-whats-defi-description")}
               image={defi}
             />
-            <InfoBanner isWarning>
-              <Translation id="page-eth:page-eth-weth" />
-            </InfoBanner>
+            <Alert variant="error">
+              <AlertContent>
+                <Translation id="page-eth:page-eth-weth" />
+              </AlertContent>
+            </Alert>
           </Box>
           <TextDivider />
           <Box>

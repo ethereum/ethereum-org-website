@@ -14,7 +14,6 @@ import { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
 import { ButtonLink } from "../Buttons"
 import CardList from "../CardList"
-import InfoBanner from "../InfoBanner"
 import InlineLink, { BaseLink } from "../Link"
 import OldHeading from "../OldHeading"
 import Text from "../OldText"
@@ -167,9 +166,11 @@ const StablecoinAccordion = () => {
               descId="page-stablecoins-accordion-buy-requirement-1-description"
             />
           </StepBoxContainer>
-          <InfoBanner isWarning>
-            {t("page-stablecoins-accordion-buy-warning")}
-          </InfoBanner>
+          <Alert variant="error">
+            <AlertContent>
+              {t("page-stablecoins-accordion-buy-warning")}
+            </AlertContent>
+          </Alert>
         </LeftColumnPanel>
         <RightColumnPanel>
           <SectionTitle>

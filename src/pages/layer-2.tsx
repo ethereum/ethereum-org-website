@@ -24,7 +24,6 @@ import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
-import InfoBanner from "@/components/InfoBanner"
 import Layer2ProductCard from "@/components/Layer2ProductCard"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
@@ -34,6 +33,7 @@ import OrderedList from "@/components/OrderedList"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
+import { Alert, AlertContent } from "@/components/ui/alert"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -456,18 +456,20 @@ const Layer2Page = () => {
       </ContentBox>
       {/* DYOR Section */}
       <ContentBox>
-        <InfoBanner isWarning>
-          <SectionHeading>{t("layer-2-dyor-title")}</SectionHeading>
-          <Text>{t("layer-2-dyor-1")}</Text>
-          <Text>
-            <Translation id="page-layer-2:layer-2-dyor-2" />
-          </Text>
-          <Text>
-            <ButtonLink href="https://l2beat.com/scaling/risk">
-              {t("layer-2-dyor-3")}
-            </ButtonLink>
-          </Text>
-        </InfoBanner>
+        <Alert variant="error">
+          <AlertContent>
+            <SectionHeading>{t("layer-2-dyor-title")}</SectionHeading>
+            <Text>{t("layer-2-dyor-1")}</Text>
+            <Text>
+              <Translation id="page-layer-2:layer-2-dyor-2" />
+            </Text>
+            <Text>
+              <ButtonLink href="https://l2beat.com/scaling/risk">
+                {t("layer-2-dyor-3")}
+              </ButtonLink>
+            </Text>
+          </AlertContent>
+        </Alert>
       </ContentBox>
       {/* Use Layer 2 Section */}
       <ContentBox id="use-layer-2">
