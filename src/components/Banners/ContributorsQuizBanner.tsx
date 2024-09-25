@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils/cn"
 
-import { ButtonLink } from "../Buttons"
 import { TwImage } from "../Image"
+import { ButtonLink } from "../ui/buttons/Button"
 import { Flex, Stack } from "../ui/flex"
 
 import PeopleLearning from "@/public/images/people-learning.png"
