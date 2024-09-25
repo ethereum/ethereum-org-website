@@ -37,9 +37,11 @@ summaryPoint4: Злиття знизило енергоспоживання Ethe
 
 Під час The Merge не було втрачено жодної частини історії. Під час об’єднання головної мережі та Beacon Chain відбулося також об’єднання всієї історії транзакцій Ethereum.
 
-<InfoBanner>
+<Alert>
+<AlertContent>
 Перехід до proof-of-stake змінив спосіб випуску ether. Дізнайтеся більше про <a href="/roadmap/merge/issuance/">випуск ефіру до та після злиття</a>.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Користувачі та власники {#users-holders}
 

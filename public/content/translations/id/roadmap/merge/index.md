@@ -37,9 +37,11 @@ Penggabungan ini merupakan peralihan resmi untuk menggunakan Rantai Suar sebagai
 
 Tidak ada sejarah yang hilang dalam Penggabungan. Ketika Jaringan Utama bergabung dengan Rantai Suar, Jaringan Utama juga menggabungkan seluruh sejarah transaksi Ethereum.
 
-<InfoBanner>
+<Alert>
+<AlertContent>
 Transisi ke bukti taruhan ini mengubah cara penerbitan ether. Pelajari lebih lanjut tentang <a href="/roadmap/merge/issuance/">pengeluaran ether sebelum dan setelah Penggabungan</a>.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Pengguna dan pemegang {#users-holders}
 
