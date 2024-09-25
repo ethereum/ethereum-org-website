@@ -76,7 +76,7 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
 
   return (
     <Flex flexDir={{ base: "column", md: "row" }}>
-      <ButtonDropdown list={dropdownLinks} hideFrom={mdBp} />
+      <ButtonDropdown list={dropdownLinks} className="md:hidden" />
       {/* TODO: Improve a11y */}
       <Box flex={1} hideBelow={mdBp}>
         {!!pageData && (

@@ -1,13 +1,9 @@
 import type { HTMLAttributes } from "react"
 
+import ButtonDropdown from "@/components/ButtonDropdown"
 import FeedbackCard from "@/components/FeedbackCard"
 import LeftNavBar, { LeftNavBarProps } from "@/components/LeftNavBar"
-import {
-  ContentContainer,
-  MobileButton,
-  MobileButtonDropdown,
-  Page,
-} from "@/components/MdComponents"
+import { ContentContainer, MobileButton, Page } from "@/components/MdComponents"
 
 type ContentLayoutProps = HTMLAttributes<HTMLDivElement> &
   Pick<LeftNavBarProps, "dropdownLinks" | "tocItems" | "maxDepth"> & {
@@ -42,7 +38,7 @@ export const ContentLayout = ({
 
         {dropdownLinks && (
           <MobileButton>
-            <MobileButtonDropdown list={dropdownLinks} />
+            <ButtonDropdown list={dropdownLinks} />
           </MobileButton>
         )}
       </Page>
