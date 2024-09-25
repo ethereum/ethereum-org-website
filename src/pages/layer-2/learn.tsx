@@ -58,7 +58,6 @@ const Layer2Learn = () => {
     blurDataURL: "/images/layer-2/learn-hero.png",
     title: t("page-layer-2-learn-title"),
     description: t("page-layer-2-learn-description"),
-    // TODO: Check matomo event information to implementc
     buttons: [
       {
         content: "What is layer 2",
