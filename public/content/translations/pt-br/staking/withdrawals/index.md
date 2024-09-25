@@ -43,7 +43,7 @@ Antes da atualização Shanghai/Capella, não era possível usar ou acessar seu 
 
 Fornecer um endereço de saque é uma etapa necessária para qualquer conta de validador, antes que ele seja elegível para sacar ETH de seu saldo.
 
-<Alert variant="warning">
+<Alert variant="error">
 <AlertEmoji text="⚠️" />
 <AlertContent>
   <strong>Cada conta de validador pode ser atribuída a um único endereço de saque, uma única vez.</strong> Após a seleção e envio do endereço à camada de consenso, isso não pode ser desfeito ou alterado novamente. Verifique a propriedade e a precisão do endereço fornecido antes de enviar.

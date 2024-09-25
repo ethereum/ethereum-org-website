@@ -43,7 +43,7 @@ Antes de la actualización Shanghai/Capella, no se podía usar o acceder a sus E
 
 Proporcionar una dirección de retirada es un paso obligatorio para cualquier cuenta de validdor antes de que sea elegible para que se retiren ETH de su saldo.
 
-<Alert variant="warning">
+<Alert variant="error">
 <AlertEmoji text="⚠️" />
 <AlertContent>
   <strong>A cada cuenta de validador sólo se le puede asignar una dirección de retirada, una vez.</strong> Cuando se elige una dirección y se envía a la capa de consenso, no puede deshacerse ni cambiarse nuevamente. Vuelva a verificar la propiedad y la precisión de la dirección proporcionada antes de enviarla.

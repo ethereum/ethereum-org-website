@@ -737,7 +737,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       <Divider />
       <Content id="how">
         <H2 mt={0}>{t("page-stablecoins-types-of-stablecoin")}</H2>
-        <Alert variant="warning">
+        <Alert variant="error">
           <AlertEmoji text="⚠️" />
           <AlertContent>
             <H3 mt={0} mb={4}>

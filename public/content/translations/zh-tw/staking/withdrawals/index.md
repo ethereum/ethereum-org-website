@@ -43,7 +43,7 @@ summaryPoints:
 
 對於任何驗證者帳戶來說，提供提款地址是必要的步驟，然後才有資格從其餘額中提取以太幣。
 
-<Alert variant="warning">
+<Alert variant="error">
 <AlertEmoji text="⚠️" />
 <AlertContent>
   <strong>每個驗證者帳戶一次只能分配一個提款地址。</strong>一旦選好地址並提交到共識層，就無法撤消或再次更改。 提交前請再次檢查所提供地址的所有權和正確性。

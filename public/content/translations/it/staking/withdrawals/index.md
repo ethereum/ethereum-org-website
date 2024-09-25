@@ -43,7 +43,7 @@ Prima dell'aggiornamento di Shanghai/Capella, non era possibile utilizzare i pro
 
 Fornire un indirizzo di prelievo è un passaggio necessario per qualsiasi conto del validatore affinché sia idoneo per il prelievo di ETH dal suo saldo.
 
-<Alert variant="warning">
+<Alert variant="error">
 <AlertEmoji text="⚠️" />
 <AlertContent>
   <strong>Ogni account validatore è assegnabile esclusivamente a un singolo indirizzo di prelievo, una sola volta.</strong> Una volta che un indirizzo è scelto e inviato al livello del consenso, ciò non è annullabile o nuovamente modificabile. Ricontrolla la proprietà e l'accuratezza dell'indirizzo fornito prima di inviarlo.

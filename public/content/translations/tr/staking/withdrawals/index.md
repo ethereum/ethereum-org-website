@@ -43,7 +43,7 @@ Shanghai/Capella yükseltmesinden önce hisselenmiş ETH'lerinizi kullanamaz vey
 
 Herhangi bir doğrulayıcı hesabının kendi bakiyesinden ETH çekebilir durumuna erişmesi için bir çekim adresi belirtmesi, gerekli adımdır.
 
-<Alert variant="warning">
+<Alert variant="error">
 <AlertEmoji text="⚠️" />
 <AlertContent>
   <strong>Her bir doğrulayıcı hesabı bir seferde yalnızca bir çekim adresi atayabilir.</strong> Bir adres seçilip fikir birliği katmanına kaydedildiğinde bu, geri alınamaz veya tekrardan değiştirilemez. Kaydetmeden önce sahipliği ve bildirilen adresin doğruluğunu iki defa kontrol edin.

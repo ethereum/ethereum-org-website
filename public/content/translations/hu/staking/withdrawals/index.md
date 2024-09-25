@@ -43,7 +43,7 @@ A Shanghai/Capella frissítés előtt nem lehetett használni vagy elérni ezt a
 
 A visszavonási cím megadása szükséges ahhoz, hogy a validátorszámla egyenlegéből ETH visszavonás történjen.
 
-<Alert variant="warning">
+<Alert variant="error">
 <AlertEmoji text="⚠️" />
 <AlertContent>
   <strong>Minden validátorszámlához egyszer, egyetlen visszavonási cím adható meg.</strong> Amint ezt a címet kiválasztották és elküldték a konszenzus rétegnek, nem lehet visszahívni vagy megváltoztatni. Ellenőrizze le a cím tulajdonosát és pontosságát, mielőtt elküldi azt.

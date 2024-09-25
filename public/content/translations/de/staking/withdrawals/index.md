@@ -43,7 +43,7 @@ Vor dem Shanghai/Capella-Upgrade konnten Sie Ihr gestaktes ETH nicht verwenden o
 
 Die Angabe einer Auszahlungsadresse ist ein erforderlicher Schritt für jedes Validator-Konto, bevor es für die Abhebung von ETH aus seinem Guthaben infrage kommt.
 
-<Alert variant="warning">
+<Alert variant="error">
 <AlertEmoji text="⚠️" />
 <AlertContent>
   <strong>Jedem Validatoren-Konto kann nur eine einzige Abhebungsadresse zugewiesen werden, und zwar nur einmal.</strong> Sobald eine Adresse ausgewählt und an die Konsensus-Ebene übermittelt wurde, lässt sich dieser Vorgang nicht mehr rückgängig machen. Überprüfen Sie die Besitzverhältnisse und die Richtigkeit der angegebenen Adresse, bevor Sie sie einreichen.

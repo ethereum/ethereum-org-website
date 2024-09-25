@@ -43,10 +43,10 @@ Before the Shanghai/Capella upgrade, you couldn't use or access your staked ETH.
 
 Providing a withdrawal address is a required step for any validator account before it will be eligible to have ETH withdrawn from its balance.
 
-<Alert variant="warning">
+<Alert variant="error">
 <AlertEmoji text="⚠️" />
 <AlertContent>
-  <strong>Each validator account can only be assigned a single withdrawal address, one time.</strong> Once an address is chosen and submitted to the consensus layer, this cannot be undone or changed again. Double-check ownership and accuracy of the address provided before submitting.
+<strong>Each validator account can only be assigned a single withdrawal address, one time.</strong> Once an address is chosen and submitted to the consensus layer, this cannot be undone or changed again. Double-check ownership and accuracy of the address provided before submitting.
 </AlertContent>
 </Alert>
 

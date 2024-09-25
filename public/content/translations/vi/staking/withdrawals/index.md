@@ -43,7 +43,7 @@ Trước bản nâng cấp Shanghai/Capella, bạn không thể sử dụng ho�
 
 Cung cấp địa chỉ rút tiền là bước bắt buộc đối với tất cả tài khoản nút xác thực trước khi có thể rút ETH từ số dư của tài khoản đó.
 
-<Alert variant="warning">
+<Alert variant="error">
 <AlertEmoji text="⚠️" />
 <AlertContent>
   <strong>Mỗi tài khoản nút xác thực chỉ có một địa chỉ rút tiền duy nhất, vào một thời điểm.</strong> Sau khi chọn và gửi địa chỉ lên lớp đồng thuận, bạn sẽ không thể hoàn tác hoặc thay đổi lại. Hãy kiểm tra thật kỹ quyền sở hữu và độ chính xác của địa chỉ được cung cấp trước khi nộp.
