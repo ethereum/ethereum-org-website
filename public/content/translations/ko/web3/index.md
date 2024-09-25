@@ -67,7 +67,7 @@ lang: ko
   <ButtonLink href="/nft/">
     NFT 이해하기
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 #### 검열 저항력 {#censorship-resistance}
 
@@ -87,7 +87,8 @@ DAO는 리소스 풀(토큰)을 이용한 자동화된 분산형 의사 결정�
 
 하지만 사람들은 많은 웹3 커뮤니티를 DAO라고 정의합니다. 이러한 커뮤니티의 탈중앙화 및 코드 자동화가 이루어지는 정도는 서로 다릅니다. 현재 우리는 DAO가 무엇이며 미래에 어떻게 진화해 나갈지 논의하고 있습니다.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>DAO에 대해 자세히 알아보기</div>
   <ButtonLink href="/dao/">
     DAO 이해하기

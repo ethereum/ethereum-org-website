@@ -43,9 +43,12 @@ Před upgradem Shanghai/Capella jste nemohli používat svůj vsazený ETH ani k
 
 Poskytnutí adresy pro výběr je povinným krokem pro jakýkoli účet validátoru, než bude mít nárok na výběr ETH ze svého zůstatku.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️" />
+<AlertContent>
   <strong>Každému účtu validátoru lze přiřadit pouze jednu adresu pro výběr, a to jednou.</strong> Jakmile je adresa vybrána a odeslána do konsensuální vrstvy, nelze to vrátit zpět ani znovu změnit. Před odesláním znovu zkontrolujte vlastnictví a správnost poskytnuté adresy.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Pokud adresu mezitím neposkytnete, <strong>nehrozí vašim finančním prostředkům žádné ohrožení</strong>, za předpokladu, že vaše mnemotechnická pomůcka nebo fráze zůstala v bezpečí offline a nebyla žádným způsobem kompromitována. Nepřidání přihlašovacích údajů pro výběr jednoduše ponechá ETH uzamčené v účtu validátoru tak, jak bylo, dokud nebyla poskytnuta adresa pro výběr.
 

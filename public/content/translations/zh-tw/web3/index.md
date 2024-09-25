@@ -67,7 +67,7 @@ Web3 允許透過[非同質化代幣 (NFT) ](/glossary/#nft)實現直接所有�
   <ButtonLink href="/nft/">
     更多非同質化代幣相關資訊
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 #### 抗審查性 {#censorship-resistance}
 
@@ -87,7 +87,8 @@ Web 2.0 要求內容製作者相信平台不會更改規則，但抗審查是 We
 
 然而，許多 Web3 社群都被定義為去中心化自治組織。 這些社群都透過程式碼實現了不同程度的去中心化和自動化。 目前，我們仍在探索去中心化自治組織是什麼，以及其未來可能如何發展。
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>了解更多關於去中心化自治組織</div>
   <ButtonLink href="/dao/">
     更多關於DAOs

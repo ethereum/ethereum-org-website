@@ -43,9 +43,12 @@ Bago ang Shanghai/Capella upgrade, hindi mo magamit o ma-access ang iyong staked
 
 Ang pagbibigay ng withdrawal address ay isang kinakailangang hakbang para sa anumang validator account bago ito maging eligible na mag-withdraw ng ETH mula sa balanse nito.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️" />
+<AlertContent>
   <strong>Ang bawat validator account ay maaari lang magkaroon ng isang withdrawal address, nang isang beses lang.</strong> Kapag nakapili na ng address at naisumite na ito sa consensus layer, hindi na ito maaaring bawiin o baguhin ulit. I-double check ang pagmamay-ari at katumpakan ng address na ibinigay bago ito isumite.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Sa ngayon, <strong>walang banta sa pondo mo</strong> kung hindi mo ito ibibigay, basta't nananatiling ligtas offline ang iyong mnemonic/seed phrase, at hindi ito nakompromiso sa anumang paraan. Kung hindi maipapakita ang mga kredensyal sa pag-withdraw, hindi makukuha ang ETH sa validator account hangga't hindi nagbibigay ng withdrawal address.
 

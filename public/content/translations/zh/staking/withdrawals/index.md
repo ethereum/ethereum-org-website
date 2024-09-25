@@ -43,9 +43,12 @@ summaryPoints:
 
 为任何验证器帐户提供提款地址是一个必需的步骤，否则无法从其余额中提取以太币。
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️" />
+<AlertContent>
   <strong>每个验证者帐户一次只能分配一个提款地址。</strong>一旦选择地址并提交到共识层，就无法撤消或再次更改。 在提交前，请仔细检查所提供地址的所有权和准确性。
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 同时，如果你的助记符/助记词在离线时一直保持安全，没有受到任何损害。不提供提款地址<strong>不会给你的资金带来任何威胁</strong>。 未添加提款凭据只会将以太币保持锁定在验证者帐户中，直到提供提款地址为止。
 

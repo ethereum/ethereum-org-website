@@ -67,7 +67,7 @@ Pinapayagan ng Web3 ang pagmamay-ari sa pamamagitan ng [mga non-fungible token (
   <ButtonLink href="/nft/">
     Iba pang detalye tungkol sa NFTs
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 #### Paglaban sa censorship {#censorship-resistance}
 
@@ -87,7 +87,8 @@ Ang DAOs ay tinutukoy bilang mga agreed-upon smart contract na ino-automate ang 
 
 Gayunpaman, itinuturing na DAOs ng mga tao ang maraming komunidad sa Web3. May iba't ibang antas ng decentralization at automation ayon sa code ang mga komunidad na ito. Kasalukuyan naming tinitingnan kung ano ang DAOs at kung paano maaaring magbago ang mga ito sa hinaharap.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Magkaroon ng higit pang kaalaman tungkol sa DAOs</div>
   <ButtonLink href="/dao/">
     Iba pang kaalaman ukol sa DAOs

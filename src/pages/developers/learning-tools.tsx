@@ -9,13 +9,14 @@ import { BasePageProps, ChildOnlyProp, Lang, LearningTool } from "@/lib/types"
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
 import FeedbackCard from "@/components/FeedbackCard"
-import InfoBanner from "@/components/InfoBanner"
 import LearningToolsCardGrid from "@/components/LearningToolsCardGrid"
 import MainArticle from "@/components/MainArticle"
 import Heading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
+import { Alert, AlertContent, AlertEmoji } from "@/components/ui/alert"
+import { HStack } from "@/components/ui/flex"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -443,9 +444,14 @@ const LearningToolsPage = () => {
             <Translation id="page-developers-learning-tools:page-learning-tools-sandbox-desc" />
           </Text>
           <LearningToolsCardGrid category={randomizedSandboxes} />
-          <InfoBanner emoji=":point_up:" shouldCenter>
-            <Translation id="page-developers-learning-tools:page-learning-tools-remix-description-2" />
-          </InfoBanner>
+          <HStack>
+            <Alert variant="warning">
+              <AlertEmoji text=":point_up:" />
+              <AlertContent>
+                <Translation id="page-developers-learning-tools:page-learning-tools-remix-description-2" />
+              </AlertContent>
+            </Alert>
+          </HStack>
         </StackContainer>
         <StackContainer>
           <SubtitleTwo>

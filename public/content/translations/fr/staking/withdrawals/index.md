@@ -43,9 +43,12 @@ Avant la mise à niveau de Shanghai/Capella, vous ne pouviez pas utiliser l'ETH 
 
 Fournir une adresse de retrait est une étape requise pour tout compte de validateur avant d'être admissible à un retrait d'ETH sur son solde.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️" />
+<AlertContent>
   <strong>Chaque compte de validateur ne peut se voir attribué qu'une seule adresse de retrait.</strong> Une fois qu'une adresse est choisie et soumise à la couche de consensus, elle ne peut pas être annulée ou modifiée à nouveau. Vérifiez la propriété et l'exactitude de l'adresse fournie avant de la soumettre.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Le fait de ne pas fournir cette adresse ne pose <strong>aucun danger pour vos fonds pendant ce temps</strong>, à condition que votre phrase mnémonique/de récupération soit restée en sécurité hors-ligne, et n'ait été compromise d'aucune façon. Ne pas ajouter d’identifiants de retrait laissera simplement l’ETH verrouillé sur le compte du validateur tel qu'il était jusqu'à jusqu’à ce qu’une adresse de retrait soit fournie.
 

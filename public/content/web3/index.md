@@ -68,7 +68,7 @@ Web3 allows for direct ownership through [non-fungible tokens (NFTs)](/glossary/
   <ButtonLink href="/nft/">
     More on NFTs
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 #### Censorship resistance {#censorship-resistance}
 
@@ -88,7 +88,8 @@ DAOs are defined technically as agreed-upon [smart contracts](/glossary/#smart-c
 
 However, people define many Web3 communities as DAOs. These communities all have different levels of decentralization and automation by code. Currently, we are exploring what DAOs are and how they might evolve in the future.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Learn more about DAOs</div>
   <ButtonLink href="/dao/">
     More on DAOs

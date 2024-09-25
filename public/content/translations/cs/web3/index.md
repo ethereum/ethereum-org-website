@@ -67,7 +67,7 @@ Web3 umožňuje přímé vlastnictví prostřednictvím [nezaměnitelných token
   <ButtonLink href="/nft/">
     Více o NFT
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 #### Odolnost proti cenzuře {#censorship-resistance}
 
@@ -87,7 +87,8 @@ DAO jsou technicky definovány jako [chytré kontrakty](/glossary/#smart-contrac
 
 Lidé definují spoustu Web3 komunit jako DAO. Všechny tyto komunity mají různé úrovně decentralizace a automatizace v závislosti na kódu. V současné době jsme ve fázi výzkumu, co DAO jsou a jak by se mohly v budoucnu vyvíjet.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Learn more about DAOs</div>
   <ButtonLink href="/dao/">
     Více o DAO

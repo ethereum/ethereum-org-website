@@ -22,7 +22,6 @@ import FeedbackCard from "@/components/FeedbackCard"
 import GhostCard from "@/components/GhostCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
-import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
@@ -35,6 +34,7 @@ import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
+import { Alert, AlertContent, AlertEmoji } from "@/components/ui/alert"
 import { Divider } from "@/components/ui/divider"
 
 import { cn } from "@/lib/utils/cn"
@@ -619,9 +619,9 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
               <Icon ms={2} fill="'text" name="info" boxSize={4} />
             </Tooltip>
           </H3>
-          <InfoBanner emoji="⚠️" isWarning mb="4">
+          <Alert variant="warning" className="mb-4">
             {t("page-stablecoins-algorithmic-disclaimer")}
-          </InfoBanner>
+          </Alert>
           <Text>
             {t("page-stablecoins-top-coins-intro")}{" "}
             {t("page-stablecoins-top-coins-intro-code")}
@@ -737,12 +737,15 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       <Divider />
       <Content id="how">
         <H2 mt={0}>{t("page-stablecoins-types-of-stablecoin")}</H2>
-        <InfoBanner emoji="⚠️" isWarning>
-          <H3 mt={0} mb={4}>
-            {t("page-stablecoins-research-warning-title")}
-          </H3>
-          {t("page-stablecoins-algorithmic-disclaimer")}
-        </InfoBanner>
+        <Alert variant="warning">
+          <AlertEmoji text="⚠️" />
+          <AlertContent>
+            <H3 mt={0} mb={4}>
+              {t("page-stablecoins-research-warning-title")}
+            </H3>
+            {t("page-stablecoins-algorithmic-disclaimer")}
+          </AlertContent>
+        </Alert>
         <StablecoinBoxGrid items={features} />
       </Content>
       <Box id="tools" py={12} px={8} w="full">

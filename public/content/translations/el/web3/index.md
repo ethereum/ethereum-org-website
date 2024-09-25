@@ -67,7 +67,7 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
   <ButtonLink href="/nft/">
     Περισσότερα για τα NFT
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 #### Αντίσταση στη Λογοκρισία {#censorship-resistance}
 
@@ -87,7 +87,8 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 Ωστόσο, αρκετοί ορίζουν πολλές κοινότητες Web3 ως DAO. Όλες αυτές οι κοινότητες έχουν διαφορετικά επίπεδα αποκέντρωσης και αυτοματοποίησης με κώδικα. Επί τους παρόντος, διερευνούμε τι είναι οι DAO και πως μπορούν να εξελιχθούν στο μέλλον.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Μάθετε περισσότερα για τους DAO</div>
   <ButtonLink href="/dao/">
     Περισσότερα για τους DAO

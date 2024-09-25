@@ -43,9 +43,12 @@ Przed aktualizacją Shanghai/Capella nie można było używać ani uzyskiwać do
 
 Podanie adresu wypłaty jest wymaganym krokiem dla każdego konta walidatora, zanim będzie ono uprawnione do wypłaty ETH ze swojego salda.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️" />
+<AlertContent>
   <strong>Każde konto walidatora może mieć przypisany tylko jeden adres wypłaty, jeden raz.</strong> Po wybraniu adresu i przesłaniu go do warstwy konsensusu nie można tego cofnąć ani zmienić ponownie. Przed wysłaniem sprawdź dwukrotnie własność i poprawność podanego adresu.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Nie ma <strong>żadnego zagrożenia dla twoich funduszy w międzyczasie</strong> za niedostarczenie tego, zakładając, że twoja fraza mnemoniczna/odzyskiwania pozostała bezpieczna offline i nie została w żaden sposób naruszona. Brak dodania danych uwierzytelniających do wypłaty spowoduje po prostu zablokowanie ETH na koncie walidatora do czasu podania adresu do wypłaty.
 

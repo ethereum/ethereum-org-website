@@ -32,7 +32,9 @@ import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
+import { Alert, AlertContent, AlertEmoji } from "@/components/ui/alert"
 import { Divider } from "@/components/ui/divider"
+import { HStack } from "@/components/ui/flex"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -421,14 +423,19 @@ const EthPage = () => {
               />
             ))}
           </CardContainer>
-          <InfoBanner emoji=":wave:" shouldCenter>
-            <Text as="b">{t("page-eth-buy-some")}</Text>{" "}
-            <Translation id="page-eth:page-eth-buy-some-desc" />{" "}
-            <InlineLink href="/what-is-ethereum/">
-              {t("page-eth-more-on-ethereum-link")}
-            </InlineLink>
-            {t("page-eth-period")}
-          </InfoBanner>
+          <HStack>
+            <Alert variant="warning">
+              <AlertEmoji text=":wave:" />
+              <AlertContent>
+                <b>{t("page-eth-buy-some")}</b>{" "}
+                <Translation id="page-eth:page-eth-buy-some-desc" />{" "}
+                <InlineLink href="/what-is-ethereum/">
+                  {t("page-eth-more-on-ethereum-link")}
+                </InlineLink>
+                {t("page-eth-period")}
+              </AlertContent>
+            </Alert>
+          </HStack>
         </Content>
       </GrayContainer>
       <Content>

@@ -67,7 +67,7 @@ Le Web3 permet la propriété directe via les [jetons non-fongibles (NFT)](/glos
   <ButtonLink href="/nft/">
     Plus d'infos sur les NTF
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 #### Résistance à la censure {#censorship-resistance}
 
@@ -87,7 +87,8 @@ Les DAO sont définies techniquement comme des [contrats intelligents](/glossary
 
 Le fait est toutefois que les gens définissent de nombreuses communautés Web3 comme étant des DAO. Ces communautés ont toutes des niveaux différents de décentralisation et d'automatisation par code. Actuellement, nous explorons ce que sont les DAO et comment elles pourraient évoluer à l'avenir.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>En savoir plus sur les DAO</div>
   <ButtonLink href="/dao/">
     En savoir plus sur les DAO

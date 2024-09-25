@@ -67,7 +67,7 @@ A Web3 közvetlen tulajdonjogot ad [nem helyettesíthető tokenek (NFT)](/glossa
   <ButtonLink href="/nft/">
     Bővebben az NFT-kről
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 #### Cenzúraálló kialakítás {#censorship-resistance}
 
@@ -87,7 +87,8 @@ A DAO-kat technikailag úgy határozzák meg, mint megállapodás szerinti [inte
 
 Ugyanakkor számos Web3-közösséget is DAO-ként definiálnak. Ezek a közösségek más-más szintű decentralizációval és automatizációval rendelkeznek. Jelenleg még vizsgáljuk, hogy mi is az a DAO és hova fejlődik a jövőben.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Tudjon meg többet a DAO-król</div>
   <ButtonLink href="/dao/">
     További információk a DAO-król

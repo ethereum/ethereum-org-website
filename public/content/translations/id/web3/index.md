@@ -67,7 +67,7 @@ Web3 memperbolehkan kepemilikan langsung melalui [Token yang tidak dapat dipertu
   <ButtonLink href="/nft/">
     Selengkapnya tentang NFT
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 #### Tahan Penyensoran {#censorship-resistance}
 
@@ -87,7 +87,8 @@ DAO secara teknis didefinisikan sebagai kontrak pintar yang disepakati yang meng
 
 Namun, orang-orang mendefinisikan banyak komunitas Web3 sebagai DAO. Semua komunitas-komunitas ini memiliki tingkat desentralisasi dan otomatisasi yang berbeda berdasarkan kode. Saat ini, kami sedang mengeksplorasi apa itu DAO dan bagaimana mereka dapat berkembang di masa depan.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Pelajari lebih lanjut tentang DAO</div>
   <ButtonLink href="/dao/">
     Pelajari lebih lanjut tentang DAO

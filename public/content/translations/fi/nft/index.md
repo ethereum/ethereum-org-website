@@ -173,7 +173,7 @@ Kun sisältöä myydään, ansainta ohjautuu suoraan luojalle. Jos uusi sisäll�
   <ButtonLink href="/dapps/?category=collectibles">
     Tutustu NFT-taiteeseen
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 #### Copy-paste-ongelma {#nfts-copy-paste}
 
@@ -201,7 +201,8 @@ Pelin kohteet pysyvät olemassa, vaikka itse peli päättyisi. Vaikka peliä ei 
 
 Decentraland, virtuaalinen reality-peli, jossa NFTt edustavat tontteja tai kiinteistöjä, joita voit käyttää tarpeesi mukaan.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Tutustu Ethereum-peleihin, joita NFTt boostaavat...</div>
   <ButtonLink href="/dapps/?category=gaming">
     Tutki NFT-pelejä

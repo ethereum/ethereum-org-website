@@ -51,9 +51,12 @@ Hieronder zijn attribuutindicatoren gebruikt om opmerkelijke sterke of zwakke pu
 
 Er zijn verschillende opties beschikbaar om u te helpen met uw installatie. Gebruik de bovenstaande indicatoren om u te helpen de onderstaande tools door te nemen.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️" />
+<AlertContent>
 Houd rekening met het belang van het kiezen van een service die de <a href="/developers/docs/nodes-and-clients/client-diversity/">diversiteit van clients</a> serieus neemt, omdat dit de veiligheid van het netwerk verbetert en uw risico's beperkt. Services die bewijs hebben van het beperken van het gebruik van meerderheid-clients, zijn gemarkeerd als <em style={{ textTransform: "uppercase" }}>"diverse clients."</em>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 <StakingProductsCardGrid category="pools" />
 

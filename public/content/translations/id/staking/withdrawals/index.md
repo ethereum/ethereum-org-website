@@ -43,9 +43,12 @@ Sebelum peningkatan Shanghai/Capella, Anda tidak dapat menggunakan atau mengakse
 
 Memberikan alamat penarikan adalah langkah yang diperlukan untuk setiap akun validator sebelum akun tersebut memenuhi syarat untuk menarik ETH dari saldonya.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️" />
+<AlertContent>
   <strong>Setiap akun validator hanya dapat diberikan satu alamat penarikan, satu kali.</strong> Setelah alamat dipilih dan dikirimkan ke lapisan konsensus, alamat tersebut tidak dapat dibatalkan atau diubah lagi. Periksa kembali kepemilikan dan keakuratan alamat yang diberikan sebelum mengirim.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Tidak ada <strong>tidak ada ancaman terhadap dana Anda untuk sementara waktu</strong> karena tidak menyediakan ini, dengan asumsi mnemonik/frase benih Anda tetap aman secara offline, dan tidak dikompromikan dengan cara apa pun. Kegagalan untuk menambahkan kredensial penarikan hanya akan membuat ETH terkunci di akun validator seperti sebelumnya sampai alamat penarikan diberikan.
 

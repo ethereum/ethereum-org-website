@@ -173,7 +173,7 @@ När de säljer sitt innehåll går pengarna direkt till dem. Om den nya ägaren
   <ButtonLink href="/dapps/?category=collectibles">
     Utforska NFT-konst
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 #### Problemet med att kopiera/klistra in {#nfts-copy-paste}
 
@@ -201,7 +201,8 @@ I slutändan kan de föremål som du svettas för i spelet alltid finnas kvar, �
 
 Decentraland, ett virtuell verklighetsspel, låter dig till och med köpa NFT:er som representerar virtuella tomter som du kan använda hur du vill.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Kolla in Ethereum-spel, som drivs med hjälp av NFT:er ...</div>
   <ButtonLink href="/dapps/?category=gaming">
     Utforska NFT-spel
