@@ -43,6 +43,7 @@
       rgba(145, 234, 228, 0.2) 100%
     );
     --search-background: var(--background);
+    --text-300: #4c4c4c;
   }
 
   [data-theme="dark"] {
@@ -71,6 +72,7 @@
       rgba(134, 253, 232, 0.08) 100%
     );
     --search-background: #4c4c4c;
+    --text-300: #cccccc;
   }
 }
 
