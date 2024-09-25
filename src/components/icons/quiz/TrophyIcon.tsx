@@ -6,7 +6,7 @@ import { commonIconDefaultProps } from "../utils"
 
 export const TrophyIcon: IconType = ({ className, ...props }) => (
   <IconBase
-    className={cn(className, "size-7")}
+    className={cn("size-7", className)}
     viewBox="0 0 28 28"
     {...commonIconDefaultProps}
     {...props}
