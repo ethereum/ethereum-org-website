@@ -164,7 +164,14 @@ export interface IGetInvolvedCard {
  * Codeblock
  */
 
-export interface CodeExample extends ITitleCardItem {
+export interface CodeExample {
+  title: string
+  description: string
+  caption?: string
+  link?: string
+  image?: string
+  alt?: string
+  id?: number
   codeLanguage: string
   code: string
   eventName: string
