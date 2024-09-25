@@ -15,8 +15,7 @@ import Heading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
-import { Alert, AlertContent, AlertEmoji } from "@/components/ui/alert"
-import { HStack } from "@/components/ui/flex"
+import { Alert, AlertEmoji } from "@/components/ui/alert"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -444,14 +443,10 @@ const LearningToolsPage = () => {
             <Translation id="page-developers-learning-tools:page-learning-tools-sandbox-desc" />
           </Text>
           <LearningToolsCardGrid category={randomizedSandboxes} />
-          <HStack>
-            <Alert variant="warning">
-              <AlertEmoji text=":point_up:" />
-              <AlertContent>
-                <Translation id="page-developers-learning-tools:page-learning-tools-remix-description-2" />
-              </AlertContent>
-            </Alert>
-          </HStack>
+          <Alert className="mx-auto max-w-[55rem]">
+            <AlertEmoji text=":point_up:" />
+            <Translation id="page-developers-learning-tools:page-learning-tools-remix-description-2" />
+          </Alert>
         </StackContainer>
         <StackContainer>
           <SubtitleTwo>
