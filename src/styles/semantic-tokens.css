@@ -35,7 +35,6 @@
 
     --accent-a: var(--blue-600);
     --accent-a-hover: var(--blue-500);
-    --accent-a-low-contrast: var(--blue-50); /* TODO: VERIFY */
 
     --accent-b: var(--pink-600);
     --accent-b-hover: var(--pink-500);
@@ -137,11 +136,9 @@
     --primary-low-contrast: var(--purple-900);
     --primary-hover: var(--purple-300);
     --primary-visited: var(--purple-500);
-    /* TODO: hover same as action in dark mode: */
 
     --accent-a: var(--blue-400);
     --accent-a-hover: var(--blue-300);
-    --accent-a-low-contrast: var(--blue-900); /* TODO: VERIFY */
 
     --accent-b: var(--pink-400);
     --accent-b-hover: var(--pink-300);
