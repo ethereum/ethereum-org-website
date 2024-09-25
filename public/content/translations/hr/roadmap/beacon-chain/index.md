@@ -36,9 +36,12 @@ Ulaganje ima sličnu ulogu kao i [rudarenje](/developers/docs/consensus-mechanis
 
 Prijelazom na dokaz uloga Ethereum je postao sigurniji i manje centraliziran u odnosu na dokaz rada. Što više ljudi sudjeluje u mreži, to će ona biti decentraliziranija i sigurnija od napada.
 
-<InfoBanner emoji=":money_bag:">
+<Alert>
+<AlertEmoji text=":money_bag:" />
+<AlertContent>
   Ako želite postati validator i pomoći u zaštiti Ethereuma, <a href="/staking/">ovdje saznajte više o ulaganju</a>.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Postavljanje razdjeljivanja {#setting-up-for-sharding}
 

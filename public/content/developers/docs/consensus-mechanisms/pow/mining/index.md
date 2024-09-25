@@ -4,9 +4,12 @@ description: An explanation of how mining worked on Ethereum.
 lang: en
 ---
 
-<InfoBanner emoji=":wave:">
+<Alert>
+<AlertEmoji text=":wave:" />
+<AlertContent>
 Proof-of-work is no longer underlying Ethereum's consensus mechanism, meaning mining has been switched off. Instead, Ethereum is secured by validators who stake ETH. You can start staking your ETH today. Read more on <a href='/roadmap/merge/'>The Merge</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>proof-of-stake</a>, and <a href='/staking/'>staking</a>. This page is for historical interest only.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Prerequisites {#prerequisites}
 

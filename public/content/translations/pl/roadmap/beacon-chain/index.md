@@ -36,9 +36,12 @@ Staking służy podobnym celom, co kiedyś [wydobywanie](/developers/docs/consen
 
 Przejście na proof-of-stake sprawiło, że sieć Ethereum stała się znacznie bezpieczniejsza i zdecentralizowana w porównaniu z proof-of-work. Im więcej osób uczestniczy w sieci, tym staje się ona bardziej zdecentralizowana i lepiej zabezpieczona przed atakami.
 
-<InfoBanner emoji=":money_bag:">
+<Alert>
+<AlertEmoji text=":money_bag:" />
+<AlertContent>
   Jeśli chcesz zostać walidatorem i pomóc w zabezpieczaniu Ethereum, <a href="/staking/">dowiedz się więcej o stakingu</a>.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Przygotowanie do shardingu {#setting-up-for-sharding}
 

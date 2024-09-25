@@ -41,11 +41,14 @@ Kata sandi yang kuat tidak akan memberikan perlindungan yang kuat ketika diretas
 
 ### Menggunakan pengelola kata sandi {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
+<Alert>
+<AlertEmoji text=":bulb:" />
+<AlertContent>
   <div>
     Menggunakan pengelola kata sandi akan membantu Anda membuat kata sandi yang kuat dan unik serta mengingatnya! Kami <strong>sangat</strong> menyarankan untuk menggunakannya, dan sebagian besar dari mereka gratis!
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Mengingat kata sandi yang kuat dan unik untuk setiap akun tidaklah ideal. Pengatur kata sandi memberikan tempat yang terenkripsi dan aman untuk setiap kata sandi Anda. Mereka juga menyarankan kata sandi yang kuat saat mendaftar ke layanan baru, jadi Anda tidak perlu membuatnya sendiri. Banyak pengelola kata sandi akan memberitahukan Anda jika kata sandi Anda diretas, sehingga memberikan Anda kesemaptan untuk mengubah kata sandi Anda sebelum serangan yang berbahaya.
 
@@ -68,7 +71,9 @@ Untuk memastikan diri Anda yang sebenarnya, terdapat berabgai bukti yang dapat d
 
 Menggunakan **Autentikasi Dua Faktor (2FA)** menambahkan *faktor keamanan* pada akun daring Anda sehingga mengetahui kata sandi akun (sesuatu yang anda ketahui) tidak cukup untuk mengakses akun tersebut. Umumnya, faktor autentikasi kedua adalah 6 digit kode yang dikenal sebagai **kata sandi satu kali berbais waktu (TOTP)**, yang Anda dapat akses dengan sebuah aplikasi autentikasi seperti Google Authenticator atau Authy. Ini berfungsi sebagai faktor "sesuatu yang Anda miliki" karena benih yang menghasilkan kode waktunya disimpan di perangkat Anda.
 
-<InfoBanner emoji=":lock:">
+<Alert>
+<AlertEmoji text=":lock:" />
+<AlertContent>
   <div>
     Catatan: Menggunakan 2FA berbasis SMS rentan terhadap 
     <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
@@ -80,7 +85,8 @@ Menggunakan **Autentikasi Dua Faktor (2FA)** menambahkan *faktor keamanan* p
     </a>
     atau <a href="https://authy.com/">Authy</a>.
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Kunci keamanan {#security-keys}
 
@@ -206,11 +212,14 @@ Sebagai aturan umum, staf tidak akan pernah berkomunikasi dengan Anda melalui sa
 - Jangan pernah izinkan siapa pun mengakses komputer Anda dari jarak jauh
 - Jangan pernah berkomunikasi di luar kanal yang ditunjuk organisasi
 
-<InfoBanner emoji=":lock:">
+<Alert>
+<AlertEmoji text=":lock:" />
+<AlertContent>
   <div>
     Hati-hati: meskipun penipuan gaya dukungan biasanya terjadi di Discord, penipuan ini juga dapat terjadi pada aplikasi obrolan tempat diskusi kripto berlangsung, termasuk email.
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Penipuan token 'Eth2' {#eth2-token-scam}
 

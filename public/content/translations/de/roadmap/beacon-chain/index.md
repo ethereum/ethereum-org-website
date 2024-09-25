@@ -34,9 +34,12 @@ Der Wechsel zu Proof-of-Stake machte Ethereum wesentlich sicherer und dezentrali
 
 Und die Verwendung von Proof-of-Stake als Konsensmechanismus ist eine grundlegende Komponente für [das sichere, umweltfreundliche und skalierbare Ethereum, das wir jetzt haben](/roadmap/vision/).
 
-<InfoBanner emoji=":money_bag:">
+<Alert>
+<AlertEmoji text=":money_bag:" />
+<AlertContent>
   Wenn Sie Interesse daran haben ein Validator zu werden und bei der Sicherung von Ethereum mitwirken wollen können Sie hier mehr über das <a href="/staking/">Staking</a> erfahren.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Vorbereitung für Sharding {#setting-up-for-sharding}
 

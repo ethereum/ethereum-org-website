@@ -41,11 +41,14 @@ Een sterk wachtwoord biedt niet zoveel bescherming als het wachtwoord in een geg
 
 ### Gebruik een wachtwoordbeheerder {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
+<Alert>
+<AlertEmoji text=":bulb:" />
+<AlertContent>
   <div>
     Het gebruik van een wachtwoordbeheerder zorgt voor het maken van sterke, unieke wachtwoorden en het onthouden van deze wachtwoorden! Wij raden <strong>sterk</strong> aan om er een te gebruiken, de meeste zijn gratis!
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Het onthouden van sterke, unieke wachtwoorden voor elk account dat u heeft is niet ideaal. Een wachtwoordbeheerder biedt een veilige en versleutelde opslag voor al uw wachtwoorden waartoe u via één sterk hoofdwachtwoord toegang kunt verkrijgen. Ze suggereren ook sterke wachtwoorden bij het aanmelden voor een nieuwe service, zodat u uw eigen wachtwoord niet hoeft te maken. Veel wachtwoordbeheerders zullen u ook vertellen of u betrokken bent geweest bij een gegevenslek, waarna ze u uw wachtwoord laten wijzigen voordat er kwaadwillige aanvallen kunnen plaatsvinden.
 
@@ -68,7 +71,9 @@ Om te bewijzen dat u werkelijk u bent, zijn er verschillende unieke bewijzen die
 
 Het gebruik van**tweefactorverificatie (2FA)**biedt een extra*beveiligingsfactor*voor uw online accounts zodat het kennen van uw wachtwoord alleen (iets dat u kent) niet genoeg is om toegang te krijgen tot een account. Meest gebruikelijk is de tweede factor een willekeurige 6-cijferige code, bekend als een **tijdsgebaseerd eenmalig wachtwoord (TOTP)**, waartoe u toegang heeft via een verificatie-app zoals Google Authenticator of Authy. Deze werken als een "iets dat u bezit"-factor, omdat de seed die de tijdcode genereert op uw apparaat is opgeslagen.
 
-<InfoBanner emoji=":lock:">
+<Alert>
+<AlertEmoji text=":lock:" />
+<AlertContent>
   <div>
     Opmerking: het gebruik van SMS-gebaseerde 2FA is vatbaar voor
     <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
@@ -80,7 +85,8 @@ Het gebruik van**tweefactorverificatie (2FA)**biedt een extra*beveiligingsfactor
     </a>
     of <a href="https://authy.com/">Authy</a>.
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Beveiligingssleutels {#security-keys}
 
@@ -204,11 +210,14 @@ Als algemene regel zal het personeel nooit met u communiceren via privé- en nie
 - Sta nooit iemand op afstand toegang toe tot uw computer
 - Communiceer nooit buiten de aangewezen kanalen van een organisatie
 
-<InfoBanner emoji=":lock:">
+<Alert>
+<AlertEmoji text=":lock:" />
+<AlertContent>
   <div>
     Pas op: hoewel support scams vaak gebeuren op Discord, kunnen ze ook voorkomen in chatprogramma's waar discussie over crypto plaatsvindt, inclusief e-mail.
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Phishing scams {#phishing-scams}
 

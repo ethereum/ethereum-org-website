@@ -82,11 +82,14 @@ Sprawdź to wyjaśnienie dotyczące wypłat ze stakingu Ethereum przez Finematic
 
 Gdy walidator ma zaproponować następny blok, musi utworzyć kolejkę wypłat, składającą się z maksymalnie 16 kwalifikujących się wypłat. Odbywa się to poprzez pierwotne rozpoczęcie od indeksu walidatora 0, określając, czy istnieje kwalifikująca się wypłata dla tego konta zgodnie z zasadami protokołu i dodanie jej do kolejki, jeśli tak. Walidator ustawiony na proponowanie następnego bloku będzie kontynuował w miejscu, w którym poprzedni został pozostawiony, postępując w kolejności w nieskończoność.
 
-<InfoBanner emoji="🕛">
+<Alert>
+<AlertEmoji text="🕛" />
+<AlertContent>
 Pomyśl o zegarku analogowym. Wskazówka na zegarze wskazuje godzinę, przesuwa się w jednym kierunku, nie pomija żadnych godzin i ostatecznie zawija się do początku po osiągnięciu ostatniej liczby.<br/><br/>
 Teraz zamiast od 1 do 12, wyobraź sobie, że zegar ma od 0 do N <em>(całkowita liczba kont walidatorów, które kiedykolwiek zostały zarejestrowane w warstwie konsensusu, ponad 500 000 — stan na styczeń 2023 r.).</em><br/><br/>
 Wskazówka na zegarze wskazuje następny walidator, który należy sprawdzić pod kątem kwalifikujących się wypłat. Zaczyna od 0 i postępuje dookoła, nie pomijając żadnego konta. Po osiągnięciu ostatniego walidatora cykl jest kontynuowany od początku.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Sprawdzanie konta pod kątem wypłat {#checking-an-account-for-withdrawals}
 

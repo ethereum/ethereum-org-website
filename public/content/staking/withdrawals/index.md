@@ -82,11 +82,14 @@ Check out this explanation of Ethereum staking withdrawals by Finematics:
 
 When a validator is scheduled to propose the next block, it is required to build a withdrawal queue, of up to 16 eligible withdrawals. This is done by originally starting with validator index 0, determining if there is an eligible withdrawal for this account per the rules of the protocol, and adding it to the queue if there is. The validator set to propose the following block will pick up where the last one left off, progressing in order indefinitely.
 
-<InfoBanner emoji="🕛">
+<Alert>
+<AlertEmoji text="🕛" />
+<AlertContent>
 Think about an analogue clock. The hand on the clock points to the hour, progresses in one direction, doesn’t skip any hours, and eventually wraps around to the beginning again after the last number is reached.<br/><br/>
 Now instead of 1 through 12, imagine the clock has 0 through N <em>(the total number of validator accounts that have ever been registered on the consensus layer, over 500,000 as of Jan 2023).</em><br/><br/>
 The hand on the clock points to the next validator that needs to be checked for eligible withdrawals. It starts at 0, and progresses all the way around without skipping any accounts. When the last validator is reached, the cycle continues back at the beginning.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Checking an account for withdrawals {#checking-an-account-for-withdrawals}
 

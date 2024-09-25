@@ -82,11 +82,14 @@ Confira esta explicação sobre saques de staking do Ethereum pela Finematics:
 
 Quando um validador está agendado para propor o próximo bloco, ele é necessário para construir uma fila de saque de até 16 saques elegíveis. Isso é feito originalmente começando com o validador de índice 0, determinando se há um saque elegível para essa conta, conforme as regras do protocolo, e adicionando-o à fila, se houver. O validador definido para propor o bloco seguinte continuará de onde o último parou, progredindo em ordem indefinidamente.
 
-<InfoBanner emoji="🕛">
+<Alert>
+<AlertEmoji text="🕛" />
+<AlertContent>
 Pense em um relógio analógico. O ponteiro no relógio aponta para a hora, avança em uma direção, não pula nenhuma hora e, por fim, volta ao início após alcançar o último número.<br/><br/>
 Agora, em vez de 1 a 12, imagine que o relógio é de 0 a N <em>(o total de números de contas de validador que foram registradas na camada de consenso, mais de 500 mil em janeiro de 2023).</em><br/><br/>
 O ponteiro do relógio aponta para o próximo validador que precisa ser verificado quanto a saques elegíveis. Começa em 0 e avança ao longo de todo o caminho sem pular nenhuma conta. Quando o último validador é alcançado, o ciclo continua de volta ao início.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Verificando os saques de uma conta {#checking-an-account-for-withdrawals}
 

@@ -82,11 +82,14 @@ Nézze meg az Ethereum letétvisszavonásról szóló magyarázatát a Finematic
 
 Amikor egy adott validátor be van ütemezve, hogy a következő blokkot ő fogja javasolni, akkor készítenie kell egy 16 tételből álló visszavonási listát. Kezdve a 0 validátorindexel, meghatározza, hogy az adott számla a protokoll szabályai szerint visszavonásra jogosult-e, és ha igen, akkor beteszi a listába. A validátorcsoport ott száll be, ahol az előző abbahagyta és a végtelenségig folytatja.
 
-<InfoBanner emoji="🕛">
+<Alert>
+<AlertEmoji text="🕛" />
+<AlertContent>
 Képzeljen el egy analóg módon működő órát. Az óramutató egy irányba halad és sorban végigmegy minden számon, majd miután elérte az utolsó számot, visszaér a kezdőpontra. <br/><br/>
 Tegyük fel 1–12 helyett 0-n található <em>(ahol n a validátor számlák teljes száma, amelyek a konszenzus rétegen regisztrálva lettek; több mint 500 000 2023. januárjában).</em><br/><br/>
 Az óramutató a következő validátorra mutat, hogy leellenőrizze azt visszavonás szempontjából. A 0-nál kezdi és végigmegy az összes számlán. Amikor eléri az utolsó validátort, akkor a ciklus újra elindul.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### A számlák ellenőrzése visszavonási szempontból {#checking-an-account-for-withdrawals}
 

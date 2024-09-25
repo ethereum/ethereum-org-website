@@ -34,9 +34,12 @@ summaryPoint3: С Beacon Chain в системе появился протоко
 
 Использование доказательства владения как механизма консенсуса — это базовый компонент для [безопасного, экологически чистого и масштабируемого Ethereum, который мы сейчас имеем](/roadmap/vision/).
 
-<InfoBanner emoji=":money_bag:">
+<Alert>
+<AlertEmoji text=":money_bag:" />
+<AlertContent>
   Если вы хотите стать валидатором и принять участие в защите Ethereum, <a href="/staking/">узнайте больше о стейкинге</a>.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Настройка шардинга {#setting-up-for-sharding}
 

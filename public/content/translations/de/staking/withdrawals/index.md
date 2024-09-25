@@ -82,11 +82,14 @@ Sehen Sie sich diese Erklärung für die Abhebungen von Ethereum von Finematics 
 
 Es ist notwendig, dass ein Validator, der den nächsten Block vorschlagen soll, eine Warteschlange mit bis zu 16 zugelassenen Auszahlungen erstellt. Ursprünglich beginnt man mit dem Validator-Index 0 und prüft, ob es gemäß den Protokollregeln eine berechtigte Auszahlung für dieses Konto gibt. Ist dies der Fall, wird sie zur Warteschlange hinzugefügt. Der für den nächsten Block vorgesehene Validator knüpft ununterbrochen dort an, wo der vorherige aufgehört hat, und verfährt dabei in stetiger Reihenfolge.
 
-<InfoBanner emoji="🕛">
+<Alert>
+<AlertEmoji text="🕛" />
+<AlertContent>
 Stellen Sie sich eine analoge Uhr vor. Der Zeiger der Uhr zeigt auf die Stunde, bewegt sich in eine Richtung, lässt keine Stunden aus und kehrt schließlich nach Erreichen der letzten Zahl wieder an den Anfang zurück.<br/><br/>
 Stellen Sie sich nun vor, dass die Uhr statt 1 bis 12 die Zahlen 0 bis N hat <em>(die Gesamtzahl der jemals auf der Konsensus-Ebene registrierten Validatoren-Konten, über 500.000 im Januar 2023).</em><br/><br/>
 Der Zeiger auf der Uhr zeigt auf den nächstenValidator, der auf zulässige Abhebungen geprüft werden muss. Es beginnt bei 0 und schreitet rundherum fort, ohne irgendwelche Konten zu überspringen. Wenn der letzte Validator erreicht ist, beginnt der Zyklus von vorne.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Überprüfung eines Kontos auf Auszahlungen {#checking-an-account-for-withdrawals}
 

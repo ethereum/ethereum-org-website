@@ -29,9 +29,12 @@ De Beacon Chain zal [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/)
 
 Sstaken en een validator worden is makkelijker dan [mining](/developers/docs/consensus-mechanisms/pow/mining/) (hoe het huidige netwerk nu beveiligd wordt). Hopelijk zal dit helpen om Ethereum op langere termijn veilig te maken. Hoe meer mensen meewerken aan het netwerk, hoe meer het zal decentraliseren en hoe veiliger het zal worden.
 
-<InfoBanner emoji=":money_bag:">
+<Alert>
+<AlertEmoji text=":money_bag:" />
+<AlertContent>
 Als u geïnteresseerd bent om een validator te worden en de Beacon Chain te beveiligen, <a href="/staking/">hier vindt u meer informatie over staken</a>.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Dit is ook een belangrijke verandering voor een andere upgrade: [shardketens](/roadmap/danksharding/).
 

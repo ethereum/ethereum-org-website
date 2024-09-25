@@ -82,11 +82,14 @@ Consultez cette explication de Finematics sur les retraits de staking d'Ethereum
 
 Lorsqu'un validateur doit proposer le bloc suivant, il est tenu de constituer une file d'attente de retraits, pouvant aller jusqu'à 16 retraits éligibles. Pour ce faire, on commence par l'index 0 du validateur, on détermine s'il existe un retrait éligible pour ce compte selon les règles du protocole et on l'ajoute à la file d'attente si tel est le cas. Le validateur configuré pour proposer le bloc suivant reprendra là où le précédent s'est arrêté, progressant dans l'ordre indéfiniment.
 
-<InfoBanner emoji="🕛">
+<Alert>
+<AlertEmoji text="🕛" />
+<AlertContent>
 Pensez à une horloge analogique. L'aiguille de l’horloge pointe vers l’heure, progresse dans une direction, ne saute pas d’heures, et finit par revenir au début après que le dernier nombre est atteint.<br/><br/>
 Maintenant au lieu de 1 à 12, imaginez que l'horloge a 0 à N <em>(le nombre total de comptes de validateur qui ont déjà été enregistrés sur la couche de consensus, plus de 500 000 en janvier 2023).</em><br/><br/>
 L'aiguille de l’horloge pointe vers le prochain validateur qui doit être vérifié pour les retraits éligibles. Il commence à 0 et progresse tout autour sans sauter de compte. Lorsque le dernier validateur est atteint, le cycle reprend au début.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Vérification des retraits sur un compte {#checking-an-account-for-withdrawals}
 

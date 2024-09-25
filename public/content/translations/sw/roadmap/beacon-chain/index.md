@@ -29,9 +29,12 @@ Mnyororo wa Kioleza utaingiza [uthibitisho-wa-hisa](/developers/docs/consensus-m
 
 Kuweka hisa na kua mt hibitishaji ni rahisi kuliko [kuchimba](/developers/docs/consensus-mechanisms/pow/mining/)(jinsi ambavyo mtandao ni saklama kwa sasa). Mwishowe hii inamatumaini itasaidia Ethereum kua salama zaidi. Jinsi watu wengi wanavyoshiriki katika mtandao, ndivyo unavyozodi kujitegemea na salama kutoka kwa shambulio litakalokuja.
 
-<InfoBanner emoji=":money_bag:">
+<Alert>
+<AlertEmoji text=":money_bag:" />
+<AlertContent>
 Kama ungependa kua mthibitishaji na kusaidia kulinda mnyororo wa Kioleza, <a href="/staking/">jifunze zaidi jinsi ya kuweka hisa</a>.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Hili pia ni badiliko muhumu kwa ajili ya uboreshaji wa Eth2:[minyororo ya vigae](/roadmap/danksharding/).
 

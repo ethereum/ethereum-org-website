@@ -82,11 +82,14 @@ Tingnan ang paliwanag ng Finematics tungkol sa mga pag-withdraw sa staking ng Et
 
 Kapag nakaiskedyul ang isang validator na magmungkahi ng susunod na block, kailangan nitong gumawa ng withdrawal queue ng hanggang 16 na eligible withdrawal. Ito ay ginagawa sa pamamagitan ng pagsisimula sa validator index 0, pagtukoy kung may eligible withdrawal para sa account na ito batay sa mga panuntunan ng protocol, at pagdadagdag nito sa queue kung mayroon man. Ang validator na nakatakda na mag-propose ng susunod na bloke ay magpapatuloy kung saan iniwan ng huling bloke, at magpapatuloy ito nang sunod-sunod ng walang katapusan.
 
-<InfoBanner emoji="🕛">
+<Alert>
+<AlertEmoji text="🕛" />
+<AlertContent>
 Para lang itong analog na orasan. Itinuturo ng kamay sa orasan ang oras, umuusad ito sa isang direksyon, wala itong nilalaktawang anumang oras, at sa huli ay bumabalik ito sa simula kapag naabot na nito ang huling numero.<br/><br/>
 Ngayon, sa halip na 1 hanggang 12, isipin na may 0 hanggang N <em>(ang kabuuang bilang ng mga validator account na nairehistro sa consensus layer, na mahigit 500,000 mula noong Enero 2023).</em><br/><br/>
 Ituturo ng kamay sa orasan ang susunod na validator na kailangang tingnan kung may mga eligible withdrawal. Nagsisimula ito sa, at umuusad paikot nang hindi nilalaktawan ang anumang account. Kapag naabot na ang huling validator, babalik ang sa simula ang cycle.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Pagtingin kung may mga withdrawal ang account {#checking-an-account-for-withdrawals}
 

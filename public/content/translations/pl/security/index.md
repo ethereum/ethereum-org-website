@@ -41,11 +41,14 @@ Silne hasło nie zapewnia tak dużej ochrony, jeśli hasło zostanie ujawnione w
 
 ### Używaj menedżera haseł {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
+<Alert>
+<AlertEmoji text=":bulb:" />
+<AlertContent>
   <div>
     Korzystanie z menedżera haseł umożliwia tworzenie silnych, unikalnych haseł i ich zapamiętywanie! <strong>Zdecydowanie zalecamy</strong> korzystać z jednego z nich, a większość z nich jest bezpłatna!
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Zapamiętywanie silnych, unikalnych haseł do każdego posiadanego konta nie jest idealnym rozwiązaniem. Menedżer haseł oferuje bezpieczny, zaszyfrowany magazyn dla wszystkich Twoich haseł, do którego można uzyskać dostęp za pomocą jednego silnego hasła głównego. Sugerują również silne hasła podczas rejestracji w nowym serwisie, aby nie trzeba było tworzyć własnych. Wiele menedżerów haseł poinformuje cię również, gdy Twoje dane znajdą się w wycieku danych, umożliwiając zmianę haseł, zanim dojdzie do jakichkolwiek złośliwych ataków.
 
@@ -68,7 +71,9 @@ Aby potwierdzić swoją tożsamość, można użyć różnych unikalnych dowodó
 
 Korzystanie z **uwierzytelniania dwuskładnikowego (2FA)** zapewnia dodatkowy *czynnik bezpieczeństwa* dla Twoich kont online, dzięki czemu sama znajomość hasła (coś, co znasz) nie wystarczy, aby uzyskać dostęp do konta. Najczęściej drugim czynnikiem jest losowy 6-cyfrowy kod, znany jako **jednorazowe hasło czasowe (TOTP)**, do którego można uzyskać dostęp za pośrednictwem aplikacji uwierzytelniającej, takiej jak Google Authenticator lub Authy. Działają one jako „coś, co posiadasz”, ponieważ ziarno, które generuje kod czasowy, jest przechowywane na twoim urządzeniu.
 
-<InfoBanner emoji=":lock:">
+<Alert>
+<AlertEmoji text=":lock:" />
+<AlertContent>
   <div>
     Uwaga: Korzystanie z 2FA opartego na wiadomościach SMS jest podatne na tzw. 
     <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
@@ -80,7 +85,8 @@ Korzystanie z **uwierzytelniania dwuskładnikowego (2FA)** zapewnia dodatkowy�
     </a>
      lub <a href="https://authy.com/">Authy</a>.
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Klucze bezpieczeństwa {#security-keys}
 
@@ -206,11 +212,14 @@ Zasadniczo pracownicy nigdy nie będą komunikować się z użytkownikiem za po�
 - Nigdy nie zezwalaj nikomu na zdalny dostęp do Twojego komputera
 - Nigdy nie komunikuj się poza określonymi kanałami organizacji
 
-<InfoBanner emoji=":lock:">
+<Alert>
+<AlertEmoji text=":lock:" />
+<AlertContent>
   <div>
     Uwaga: chociaż oszustwa w stylu wsparcia technicznego często zdarzają się na Discordzie, mogą one również występować w innych aplikacjach komunikacyjnych, w których odbywają się dyskusje na temat kryptowalut, w tym w wiadomościach e-mail.
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Oszustwo na token „Eth2” {#eth2-token-scam}
 

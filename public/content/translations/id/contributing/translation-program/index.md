@@ -16,11 +16,14 @@ Kemajuan kami sejauh ini:
 
 Jika Anda ingin terlibat dan membantu kami mengembangkan komunitas Ethereum global dengan menerjemahkan situs web ke dalam bahasa Anda, ikuti langkah-langkah di bawah ini!
 
-<InfoBanner emoji=":tada:">
+<Alert>
+<AlertEmoji text=":tada:" />
+<AlertContent>
   Lihat halaman <Link href="/contributing/translation-program/acknowledgements/">Penghargaan Penerjemah</Link> kami, dan{" "}
   ambil token POAP Anda! Jika Anda menerjemahkan ethereum.org pada tahun 2021, ada POAP unik yang menunggu Anda.{" "}
   <Link href="/contributing/translation-program/acknowledgements/#poap">Selengkapnya tentang POAP</Link>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Misi dan visi {#mission-and-vision}
 

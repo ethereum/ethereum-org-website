@@ -82,11 +82,14 @@ Dai un'occhiata a questa spiegazione dei prelievi di staking di Ethereum, di Fin
 
 Quando è pianificato che un validatore proponga il prossimo blocco, è necessario costruire una coda di prelievo, composta da un massimo di 16 prelievi idonei. Ciò avviene iniziando originariamente dall'indice 0 del validatore, determinando se esista un prelievo idoneo per questo conto secondo le regole del protocollo e, in tal caso, aggiungendolo alla coda. Il validatore impostato per proporre il blocco successivo riprenderà da dove si è fermato il precedente, procedendo indefinitamente in ordine.
 
-<InfoBanner emoji="🕛">
+<Alert>
+<AlertEmoji text="🕛" />
+<AlertContent>
 Pensa a un orologio analogico. La lancetta dell'orologio indica l'ora, si muove in una direzione, non salta alcuna ora e, infine, torna nuovamente all'inizio, dopo aver raggiunto l'ultimo numero.<br/><br/>
 Ora, invece che da 1 a 12, immagina che l'orologio vada da 0 a N <em>(il numero totale di account validatore registrati sul livello del consenso, oltre 500.000 a gennaio 2023).</em><br/><br/>
 La lancetta dell'orologio punta al validatore successivo, che dev'essere controllato per verificare la presenza di prelievi idonei. Inizia a 0 e procede controllando tutti i conti, senza saltarne nessuno. Quando viene raggiunto l'ultimo validatore, il ciclo continua ricominciando dall'inizio.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Verificare un conto per i prelievi {#checking-an-account-for-withdrawals}
 

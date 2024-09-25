@@ -41,11 +41,14 @@ Uma senha forte não fornece muita proteção se a senha for revelada em uma vio
 
 ### Use um gerenciador de senhas {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
+<Alert>
+<AlertEmoji text=":bulb:" />
+<AlertContent>
   <div>
     Usar um gerenciador de senhas faz com que ele crie senhas fortes, únicas e que sejam lembradas! Nós <strong>fortemente</strong> recomendamos usar um, e a maioria deles é gratuita!
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Lembrar de senhas fortes e exclusivas para cada conta que você possui não é o ideal. Um gerenciador de senhas oferece um cofre seguro e criptografado para todas as suas senhas que você pode acessar por meio de uma senha mestra forte. Eles também sugerem senhas fortes quando você se inscreve em um novo serviço, para que você não precise criar as suas próprias. Muitos gerenciadores de senhas também irão informar se você esteve envolvido em uma violação de dados, permitindo que você altere as senhas antes de qualquer ataque malicioso.
 
@@ -68,7 +71,9 @@ Para provar que você é realmente você, existem diferentes provas únicas que 
 
 Usar **a autenticação de dois fatores (2FA)** fornece um _fator de segurança_ adicional para suas contas online, então saber apenas a sua senha (algo que você conhece) não é o suficiente para acessar uma conta. Mais comumente, o segundo fator é um código de 6 dígitos aleatórios, conhecido como **uma senha de uso único (TOTP, na sigla em inglês)**, que você pode acessar através de um aplicativo de autenticação, como o Google Authenticator ou Authy. Estes funcionam como um fator de "algo que você possui" porque a seed que gera o código temporizado é armazenado em seu dispositivo.
 
-<InfoBanner emoji=":lock:">
+<Alert>
+<AlertEmoji text=":lock:" />
+<AlertContent>
   <div>
     Nota: Usar a 2FA baseada em SMS é suscetível ao 
       <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
@@ -80,7 +85,8 @@ Usar **a autenticação de dois fatores (2FA)** fornece um _fator de segurança_
     </a>
     ou <a href="https://authy.com/">Authy</a>.
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Chaves de segurança {#security-keys}
 
@@ -206,11 +212,14 @@ Como regra geral, o pessoal de suporte nunca se comunicará com você por meio d
 - Nunca permita que alguém acesse remotamente o seu computador
 - Nunca comunicar fora dos canais designados por uma organização
 
-<InfoBanner emoji=":lock:">
+<Alert>
+<AlertEmoji text=":lock:" />
+<AlertContent>
   <div>
     Cuidado: embora fraudes ao estilo de suporte ocorram normalmente no Discord, elas também podem acontecer em qualquer aplicativo de bate-papo onde ocorram discussões sobre criptomoedas, incluindo e-mail.
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Golpe com o token 'Eth2' {#eth2-token-scam}
 

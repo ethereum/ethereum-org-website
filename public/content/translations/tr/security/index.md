@@ -41,11 +41,14 @@ Güçlü bir şifre, bir veri ihlali sırasında parolanın açığa çıkması 
 
 ### Bir şifre yöneticisi kullanın {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
+<Alert>
+<AlertEmoji text=":bulb:" />
+<AlertContent>
   <div>
     Bir şifre yöneticisi kullanmak; güçlü, benzersiz şifreler oluşturmak ve bunları hatırlama işini sizin için çözer! Bunlardan birini kullanmanızı <strong>şiddetle</strong> öneririz ve çoğu ücretsizdir!
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Sahip olduğunuz her hesap için güçlü, benzersiz şifreleri ezberlemeye çalışmak pek kolay değildir. Bir şifre yöneticisi, tek bir güçlü ana şifre aracılığıyla erişebileceğiniz tüm şifreleriniz için güvenli, şifrelenmiş bir depo sunar. Ayrıca, yeni bir hizmete kaydolurken güçlü şifreler önerirler, böylece kendinizinkini oluşturmak zorunda kalmazsınız. Birçok şifre yöneticisi, herhangi bir kötü niyetli saldırıdan önce şifreleri değiştirmenize izin vererek, bir veri ihlaline karışıp karışmadığınızı da size söyler.
 
@@ -68,7 +71,9 @@ Gerçekten siz olduğunuzu kanıtlamak için, kimlik doğrulama için kullanıla
 
 **İki Faktörlü Doğrulama (2FA)** kullanmak çevrimiçi hesaplarınız için ek bir *güvenlik faktörü* sağlar; böylece sadece şifrenizi bilmek (bildiğiniz bir şey) bir hesaba erişmek için yeterli değildir. En yaygın olarak, ikinci faktör **zaman esaslı tek seferlik şifre (TOTP)** olarak bilinen, Google Authenticator veya Authy gibi bir doğrulayıcı uygulamadan ulaşabileceğiniz rastgele seçilmiş 6 haneli bir koddur. Bunlar "senin sahip olduğun bir şey" faktörü ile çalışırlar çünkü zamanlı kodu oluşturan tohum, sizin aygıtınızda depolanır.
 
-<InfoBanner emoji=":lock:">
+<Alert>
+<AlertEmoji text=":lock:" />
+<AlertContent>
   <div>
     Not: SMS tabanlı 2FA'nın kullanılması 
     <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
@@ -80,7 +85,8 @@ Gerçekten siz olduğunuzu kanıtlamak için, kimlik doğrulama için kullanıla
     </a>
      yada <a href="https://authy.com/">Authy</a>.
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Güvenlik anahtarları {#security-keys}
 
@@ -206,11 +212,14 @@ Genel bir kural olarak, ekip sizinle asla özel ve resmi olmayan kanallar aracı
 - Asla kimsenin bilgisayarınıza uzaktan erişmesine izin vermeyin
 - Asla bir kuruluşun belirlenmiş kanalları dışında iletişim kurmayın
 
-<InfoBanner emoji=":lock:">
+<Alert>
+<AlertEmoji text=":lock:" />
+<AlertContent>
   <div>
     Dikkat: Destek tarzı dolandırıcılıklar genellikle Discord'da gerçekleşse de, e-posta da dahil olmak üzere kripto tartışmalarının gerçekleştiği herhangi bir sohbet uygulamasında da yaygın olabilir.
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### "Eth2" token dolandırıcılığı {#eth2-token-scam}
 
