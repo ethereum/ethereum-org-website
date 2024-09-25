@@ -13,6 +13,7 @@ import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
+import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -47,7 +48,6 @@ export const getStaticProps = (async ({ locale }) => {
   }
 }) satisfies GetStaticProps<BasePageProps>
 
-// TODO: Add matomo events
 const Layer2Learn = () => {
   const { t } = useTranslation("page-layer-2-learn")
   const { pathname } = useRouter()
@@ -60,7 +60,7 @@ const Layer2Learn = () => {
     description: t("page-layer-2-learn-description"),
     buttons: [
       {
-        content: "What is layer 2",
+        content: t("page-layer-2-learn-button-1-label"),
         href: "/layer-2/",
         matomo: {
           eventCategory: "l2_learn",
@@ -69,7 +69,7 @@ const Layer2Learn = () => {
         },
       },
       {
-        content: "Use layer 2",
+        content: t("page-layer-2-learn-button-2-label"),
         href: "/layer-2/networks",
         matomo: {
           eventCategory: "l2_learn",
@@ -80,44 +80,39 @@ const Layer2Learn = () => {
     ],
   }
 
-  // TODO: Setup translation
   const layer2Cards = [
     {
       emoji: ":money_with_wings:",
-      title: "Lower Fees",
-      description:
-        "By combining multiple transactions into a single transaction on layer 1, transaction fees are massively reduced, making Ethereum more accessible for all.",
+      title: t("page-layer-2-learn-layer2Cards-1-title"),
+      description: t("page-layer-2-learn-layer2Cards-1-description"),
     },
     {
       emoji: ":closed_lock_with_key:",
-      title: "Maintain Security",
-      description:
-        "Layer 2 blockchains settle their transactions on the Ethereum Mainnet, allowing users who use them to benefit from the security of the Ethereum network.",
+      title: t("page-layer-2-learn-layer2Cards-2-title"),
+      description: t("page-layer-2-learn-layer2Cards-2-description"),
     },
     {
       emoji: ":hammer_and_wrench:",
-      title: "Expand Use Cases",
-      description:
-        "With higher transactions per second, lower fees, and new technology, projects will expand into new applications with improved user experience.",
+      title: t("page-layer-2-learn-layer2Cards-3-title"),
+      description: t("page-layer-2-learn-layer2Cards-3-description"),
     },
   ]
 
-  // TODO: Setup translation
   const rollupCards = [
     {
       image: OptimisticRollupImage,
-      title: "Optimistic Rollups",
-      description:
-        "Optimistic rollups use fault proofs where transactions are assumed to be valid, but can be challenged if an invalid transaction is suspected. If an invalid tranaction is suspected, a fault proof is ran to see if this has taken place. ",
-      childSentence: "More on optimistic rollups",
+      title: t("page-layer-2-learn-rollupCards-optimistic-title"),
+      description: t("page-layer-2-learn-rollupCards-optimistic-description"),
+      childSentence: t(
+        "page-layer-2-learn-rollupCards-optimistic-childSentence"
+      ),
       childLink: "/developers/docs/scaling/optimistic-rollups/",
     },
     {
       image: ZKRollupImage,
-      title: "Zero Knowledge Rollups",
-      description:
-        "Zero Knowledge rollups use validity proofs where transactions calculations are computed off-chain, and then this data is then supplied to Ethereum Mainnet with a proof of their validity.",
-      childSentence: "More on zk-rollups",
+      title: t("page-layer-2-learn-rollupCards-zk-title"),
+      description: t("page-layer-2-learn-rollupCards-zk-description"),
+      childSentence: t("page-layer-2-learn-rollupCards-zk-childSentence"),
       childLink: "/developers/docs/scaling/zk-rollups/",
     },
   ]
@@ -136,17 +131,13 @@ const Layer2Learn = () => {
         id="what-is-layer-2"
         className="flex w-full flex-col items-center gap-4 px-8 py-9 md:flex-row"
       >
-        {/* TODO: Setup translation */}
         <div className="flex w-full flex-col gap-4 md:w-[70%]">
-          <h2>What is layer-2?</h2>
+          <h2>{t("page-layer-2-learn-what-is-layer-2-title")}</h2>
           <p>
-            Layer 2 (L2) is a collective term to describe a specific set of
-            Ethereum scaling solutions. A layer 2 is separate blockchain that
-            extends Ethereum and inherits the security guarantees of Ethereum.
+            <Translation id="page-layer-2-learn:page-layer-2-learn-what-is-layer-2-1" />
           </p>
           <p>
-            Now let&apos;s dig into it a bit more, and to do this we need to
-            explain layer 1 (L1).
+            <Translation id="page-layer-2-learn:page-layer-2-learn-what-is-layer-2-2" />
           </p>
         </div>
         <div className="w-full md:w-[30%]">
@@ -162,45 +153,44 @@ const Layer2Learn = () => {
         id="what-is-layer-1"
         className="flex w-full flex-col gap-4 bg-body-light px-8 py-9"
       >
-        {/* TODO: Setup translation */}
-        <h2>What is layer 1?</h2>
+        <h2>{t("page-layer-2-learn-what-is-layer-1-title")}</h2>
         <div className="flex flex-col justify-between gap-16 md:flex-row">
           <div className="flex w-full flex-col justify-between gap-4 md:w-[50%]">
             <p>
-              Layer 1 blockchains, such as Ethereum and Bitcoin, are the
-              underlying foundation that layer 2 projects build on top of.
-              Examples of layer 2 projects include zero-knowledge rollups and
-              optimistic rollups on Ethereum and the Lighting Network on top of
-              Bitcoin.
+              <Translation id="page-layer-2-learn:page-layer-2-learn-what-is-layer-1-1" />
             </p>
             <p>
-              Ethereum also functions as a data availability layer for Layer 2s,
-              and if there are any disputes on previous transactions data is
-              provided from Ethereum for these disputes.
+              <Translation id="page-layer-2-learn:page-layer-2-learn-what-is-layer-1-2" />
             </p>
           </div>
           <div className="flex w-full flex-col gap-4 md:w-[50%]">
-            <p>Ethereum as the layer 1 includes:</p>
+            <p>
+              <strong>{t("page-layer-2-learn-layer-1-list-title")}</strong>
+            </p>
             <ol className="list-none space-y-2 pl-0 [counter-reset:item]">
               <li className="flex items-center space-x-3">
                 <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
                 <span>
-                  a network of node operators to secure and validate the network
+                  <Translation id="page-layer-2-learn:page-layer-2-learn-layer-1-list-1" />
                 </span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
-                <span>a network of block producers</span>
               </li>
               <li className="flex items-center space-x-3">
                 <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
                 <span>
-                  the blockchain itself and the history of transaction data
+                  <Translation id="page-layer-2-learn:page-layer-2-learn-layer-1-list-2" />
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
-                <span>the consensus mechanism for the network</span>
+                <span>
+                  <Translation id="page-layer-2-learn:page-layer-2-learn-layer-1-list-3" />
+                </span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-body-inverse text-sm font-medium [counter-increment:item] before:content-[counter(item)]"></span>
+                <span>
+                  <Translation id="page-layer-2-learn:page-layer-2-learn-layer-1-list-4" />
+                </span>
               </li>
             </ol>
           </div>
@@ -215,40 +205,15 @@ const Layer2Learn = () => {
           <TwImage src={DAOImage} alt="" />
         </div>
 
-        {/* TODO: setup translation  */}
         <div className="flex w-full flex-col gap-4 md:w-[50%]">
-          <h2>Why do we need layer 2?</h2>
+          <h2>{t("page-layer-2-learn-why-do-we-need-layer-2-title")}</h2>
+          <p>{t("page-layer-2-learn-why-do-we-need-layer-2-1")}</p>
+          <p>{t("page-layer-2-learn-why-do-we-need-layer-2-2")}</p>
+          <h3>{t("page-layer-2-learn-why-do-we-need-layer-2-scalability")}</h3>
           <p>
-            The three desirable properties of a blockchain are that it is
-            decentralized, secure, and scalable. The blockchain trilemma states
-            that a simple blockchain architecture can only achieve two out of
-            three. Want a secure and decentralized blockchain? You need to
-            sacrifice scalability. This is where layer 2 networks come in.
+            <Translation id="page-layer-2-learn:page-layer-2-learn-why-do-we-need-layer-2-scalability-1" />
           </p>
-          <p>
-            Ethereum has reached the network&apos;s current capacity with 1+
-            million transactions per day, with high demand for each of these
-            transactions. The success of Ethereum and the demand to use it has
-            caused gas prices to rise substantially. Therefore the need for
-            scaling solutions has peaked as well.
-          </p>
-          <h3>Scalability</h3>
-          <p>
-            The main goal of scalability is to increase transaction speed
-            (faster finality), and transaction throughput (high transactions per
-            second), without sacrificing decentralization or security (more on
-            the Ethereum vision).
-          </p>
-          <p>
-            The Ethereum community has taken a strong stance that it would not
-            throw out decentralization or security in order to scale. Until
-            sharding, Ethereum Mainnet (layer 1) will only be able to process
-            roughly 15 transactions per second. When demand to use Ethereum is
-            high this causes network congestion, increasing transaction fees,
-            and pricing out those who cannot afford it from using Ethereum until
-            the fees reduce. That is where layer 2 comes in to scale Ethereum
-            today.
-          </p>
+          <p>{t("page-layer-2-learn-why-do-we-need-layer-2-scalability-2")}</p>
         </div>
       </div>
 
@@ -269,46 +234,20 @@ const Layer2Learn = () => {
         </div>
       </div>
 
-      {/* TODO: setup translation  */}
       <div
         id="how-does-layer-2-work"
         className="flex w-full flex-col gap-16 px-8 py-9 md:flex-row"
       >
         <div className="flex w-full flex-col gap-4 md:w-[50%]">
-          <h2>How does layer 2 work?</h2>
-          <p>
-            As we mentioned above, layer 2 is a collective term for Ethereum
-            scaling solutions that handle transactions off Ethereum layer 1
-            while still taking advantage of the robust decentralized security of
-            Ethereum layer 1. A layer 2 is a separate blockchain that extends
-            Ethereum. How does that work?
-          </p>
-          <p>
-            There are several different types of layer 2, each having their own
-            trade-offs and security models. Layer 2s take the transactional
-            burden away from the layer 1 allowing it to become less congested,
-            and everything becomes more scalable.
-          </p>
-          <h3>Rollups</h3>
-          <p>
-            Rollups bundle (or &apos;roll up&apos;) hundreds of transactions
-            into a single transaction on layer 1. This distributes the L1
-            transaction fees across everyone in the rollup, making it cheaper
-            for each user.
-          </p>
-          <p>
-            The transaction data in the rollup is submitted to layer 1, but the
-            execution is done separately by the rollup. By submitting
-            transaction data onto layer 1, rollups inherit the security of
-            Ethereum. This is because once the data is uploaded to layer 1,
-            reverting a rollup transaction requires reverting Ethereum. There
-            are two different approaches to rollups: optimistic and
-            zero-knowledge - they differ primarily on how this transaction data
-            is submitted to L1.
-          </p>
+          <h2>{t("page-layer-2-learn-how-does-layer-2-work-title")}</h2>
+          <p>{t("page-layer-2-learn-how-does-layer-2-work-1")}</p>
+          <p>{t("page-layer-2-learn-how-does-layer-2-work-2")}</p>
+          <h3>{t("page-layer-2-learn-how-does-layer-2-work-rollups-title")}</h3>
+          <p>{t("page-layer-2-learn-how-does-layer-2-work-rollups-1")}</p>
+          <p>{t("page-layer-2-learn-how-does-layer-2-work-rollups-2")}</p>
         </div>
         <div className="flex w-full md:w-[50%]">
-          <TwImage src={RollupImage} alt={""} />
+          <TwImage src={RollupImage} alt={""} className="object-contain" />
         </div>
       </div>
 
@@ -331,61 +270,35 @@ const Layer2Learn = () => {
         })}
       </div>
 
-      {/* TODO: Setup translations */}
       <div id="dyor-risks" className="w-full px-8 py-9">
         <div className="flex flex-col gap-8 bg-orange-100 px-12 py-12 text-gray-900">
-          <h2>Do your own research: Risks of layer 2</h2>
+          <h2>{t("page-layer-2-learn-dyor-title")}</h2>
           <div className="flex flex-col gap-4">
             <p>
-              Because layer 2 chains inherit security from Ethereum, in an ideal
-              world, they are as safe as L1 Ethereum. However, many of the
-              projects are still young and somewhat experimental. After years of
-              R&D, many of the L2 technologies that will scale Ethereum went
-              live in 2021. This is not to say these L2s are not secure, only
-              that no layer 2 is as battle tested as Ethereum Mainnet. Always do
-              your own research and decide if you&apos;re comfortable with any
-              risks involved.
+              <Translation id="page-layer-2-learn:page-layer-2-learn-dyor-1" />
             </p>
-            <p>
-              For more information on the technology, risks and trust
-              assumptions of layer 2s, we recommend checking out L2BEAT, which
-              provides a comprehensive risk assessment framework of each
-              project.
-            </p>
+            <p>{t("page-layer-2-learn-dyor-2")}</p>
           </div>
           <div>
-            <ButtonLink href="https://l2beat.com">Go to L2BEAT</ButtonLink>
+            <ButtonLink href="https://l2beat.com">
+              {t("page-layer-2-learn-dyor-link")}
+            </ButtonLink>
           </div>
         </div>
       </div>
 
-      {/* TODO: setup translations */}
       <div
         id="a-not-on-alt-l1s"
         className="flex w-full flex-col gap-8 px-8 py-9"
       >
-        <h2>A note on alt L1s, sidechains, and validiums</h2>
+        <h2>{t("page-layer-2-learn-note-on-alt-l1-title")}</h2>
         <div className="flex flex-col gap-8 md:flex-row">
           <div>
-            <p>
-              Alternative layer 1s have higher throughput and lower transaction
-              fees than Ethereum. These alt L1s have had to sacrifice on
-              security or decentralization in order to achieve higher
-              transactions per second and lower fees. The Ethereum ecosystem is
-              firmly aligned that layer 2 scaling is the only way to solve the
-              scalability trilemma and remain decentralized and secure
-            </p>
+            <p>{t("page-layer-2-learn-note-on-alt-l1-1")}</p>
           </div>
           <div>
             <p>
-              Sidechains and validiums are blockchains that allow assets from
-              one blockchain to be bridged over and used on another blockchain.
-              Sidechains and validiums run in parallel with the main chain, and
-              interact with the main chain through bridges, but they do not
-              derive their security or data availability from the main chain.
-              They scale similarly to layer 2s, but have different trust
-              assumptions. They offer lower transaction fees, and higher
-              transaction throughput. More on sidechains and validiums.
+              <Translation id="page-layer-2-learn:page-layer-2-learn-note-on-alt-l1-2" />
             </p>
           </div>
         </div>
@@ -396,24 +309,24 @@ const Layer2Learn = () => {
         >
           <Callout
             image={Callout1Image}
-            title={"What are the benefits?"}
-            description={
-              "Explore what is the practical impact of layer 2 solutions on user experience."
-            }
+            title={t("page-layer-2-learn-callout-1-title")}
+            description={t("page-layer-2-learn-callout-1-description")}
           >
             <div>
-              <ButtonLink href="/layer-2">Learn more</ButtonLink>
+              <ButtonLink href="/layer-2">
+                {t("page-layer-2-learn-learn-more")}
+              </ButtonLink>
             </div>
           </Callout>
           <Callout
             image={Callout2Image}
-            title={"Explore different networks"}
-            description={
-              "Learn how networks differ form each other and how far they have gotten in their development."
-            }
+            title={t("page-layer-2-learn-callout-2-title")}
+            description={t("page-layer-2-learn-callout-2-description")}
           >
             <div>
-              <ButtonLink href="/layer-2/networks">Explore networks</ButtonLink>
+              <ButtonLink href="/layer-2/networks">
+                {t("page-layer-2-learn-explore-networks")}
+              </ButtonLink>
             </div>
           </Callout>
         </div>
