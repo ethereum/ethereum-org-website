@@ -61,7 +61,8 @@ Web3 以前所未有的方式赋予你数字资产的所有权。 例如，假�
 
 Web3 允许通过[非同质化代币 (NFT)](/glossary/#nft) 直接拥有所有权。 任何人甚至是游戏创作者，都没有权力剥夺你的所有权。 而且，如果你停止玩这个游戏，你可以在公开市场上出售或交易你的游戏内物品并收回它们的价值。
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>了解更多有关非同质化代币的更多信息</div>
   <ButtonLink href="/nft/">
     关于非同质化代币的更多信息
@@ -91,7 +92,7 @@ Web 2.0 需要内容创作者信任平台不会更改规则，但抗审查则是
   <ButtonLink href="/dao/">
     关于去中心化自治组织的更多信息
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ### 身份 {#identity}
 

@@ -47,12 +47,13 @@ Le aconsejamos que actualice la herramienta de revocación transcurridos unos mi
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>¿Quiere saber más?</div>
   <ButtonLink href="/guides/">
     Consulte nuestras demás guias
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Preguntas más frecuentes
 

@@ -61,7 +61,8 @@ Web3 vám umožňuje vlastnit vaše digitální aktiva dosud nevídaným způsob
 
 Web3 umožňuje přímé vlastnictví prostřednictvím [nezaměnitelných tokenů (NFT)](/glossary/#nft). Nikdo, ani tvůrci hry, nemají moc vás vlastnictví zbavit. A pokud přestanete hrát, můžete své herní předměty prodat nebo vyměnit na veřejně přístupných tržištíích a získat tak zpět prostředky, které jste vynaložili na jejich pořízení.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Další informace o NFT</div>
   <ButtonLink href="/nft/">
     Více o NFT
@@ -91,7 +92,7 @@ Lidé definují spoustu Web3 komunit jako DAO. Všechny tyto komunity mají růz
   <ButtonLink href="/dao/">
     Více o DAO
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ### Identita {#identity}
 

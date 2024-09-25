@@ -52,12 +52,13 @@ This process should not take more than 10 minutes.
 You can use [chainlist.org](http://chainlist.org) to find the network's RPC details. Once the network is added and transaction finished, you should see the tokens in your wallet.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Want to learn more?</div>
   <ButtonLink href="/guides/">
     See our other guides
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Frequently asked questions
 

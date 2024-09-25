@@ -47,12 +47,13 @@ Ipinapayo naming i-refresh mo ang tool para sa pagbawi pagkalipas ng ilang minut
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Gusto mong magbasa pa?</div>
   <ButtonLink href="/guides/">
     Tingnan ang iba pa naming gabay
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Mga karaniwang itanong
 

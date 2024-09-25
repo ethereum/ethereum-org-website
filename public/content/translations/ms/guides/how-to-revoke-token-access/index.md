@@ -47,12 +47,13 @@ Kami menasihatkan anda supaya menyegarkan semula alat pembatalan selepas beberap
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Mahu belajar lebih lanjut?</div>
   <ButtonLink href="/guides/">
     Lihat panduan-panduan lain kami
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Soalan yang kerap ditanya
 

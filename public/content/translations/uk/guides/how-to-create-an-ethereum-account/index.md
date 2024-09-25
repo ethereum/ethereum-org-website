@@ -40,12 +40,13 @@ lang: uk
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Потрібно більше інформації?</div>
   <ButtonLink href="/guides/">
     Перегляньте наші інші посібники
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Поширені запитання
 

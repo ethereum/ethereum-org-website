@@ -47,12 +47,13 @@ lang: hi
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>और अधिक सीखना चाहते है?</div>
   <ButtonLink href="/guides/">
     हमारी अन्य गाइडें देखें
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## अक्सर पूछे जाने वाले सवाल
 

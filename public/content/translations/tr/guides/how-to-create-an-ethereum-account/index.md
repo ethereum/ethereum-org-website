@@ -40,12 +40,13 @@ Güvenlik kelimelerinizi kaydettiğiniz andan itibaren bakiyenizle birlikte cüz
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Dahasını mı öğrenmek istiyorsunuz?</div>
   <ButtonLink href="/guides/">
     Diğer rehberlerimizi inceleyin
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Sıkça sorulan sorular
 

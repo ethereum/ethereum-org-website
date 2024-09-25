@@ -61,7 +61,8 @@ Web3 memberikan Anda kepemilikan atas aset digital dengan cara yang belum pernah
 
 Web3 memperbolehkan kepemilikan langsung melalui [Token yang tidak dapat dipertukarkan (NFTs)](/nft/). Tidak ada satu pun, bahkan pembuat game, mempunyai kekuatan untuk mengambil kepemilikan Anda. Dan, jika Anda berhenti bermain, Anda dapat menjual atau memperdagangkan barang in-game di pasar terbuka dan menurunkan nilainya.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Pelajari lebih lanjut tentang NFT</div>
   <ButtonLink href="/nft/">
     Selengkapnya tentang NFT
@@ -91,7 +92,7 @@ Namun, orang-orang mendefinisikan banyak komunitas Web3 sebagai DAO. Semua komun
   <ButtonLink href="/dao/">
     Pelajari lebih lanjut tentang DAO
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ### Identitas {#identity}
 

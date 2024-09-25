@@ -61,7 +61,8 @@ Web3 以前所未有的方式讓你擁有數位資產的所有權。 例如，�
 
 Web3 允許透過[非同質化代幣 (NFT) ](/glossary/#nft)實現直接所有權。 沒有人有權剝奪你的所有權，即使是遊戲的創作者亦然。 而且，如果不再玩遊戲，你可以在公開市場上出售或交易遊戲內的物品，並收回其價值。
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>深入了解非同質化代幣</div>
   <ButtonLink href="/nft/">
     更多非同質化代幣相關資訊
@@ -91,7 +92,7 @@ Web 2.0 要求內容製作者相信平台不會更改規則，但抗審查是 We
   <ButtonLink href="/dao/">
     更多關於DAOs
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ### 身份 {#identity}
 

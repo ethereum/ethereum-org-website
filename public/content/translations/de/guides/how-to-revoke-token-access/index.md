@@ -47,12 +47,13 @@ Wir empfehlen Ihnen, das Widerrufs-Tool nach einigen Minuten zu aktualisieren un
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Möchten Sie mehr erfahren?</div>
   <ButtonLink href="/guides/">
     Sehen Sie unsere anderen Anleitungen
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Häufig gestellte Fragen
 

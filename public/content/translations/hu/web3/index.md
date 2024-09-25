@@ -61,7 +61,8 @@ A Web3 sosem látott módon ad a felhasználóknak képességet arra, hogy digit
 
 A Web3 közvetlen tulajdonjogot ad [nem helyettesíthető tokenek (NFT)](/glossary/#nft) révén. Senki, még a játék készítői sem tudják elvenni ezt a jogot. Ha abbahagyja a játékot, akkor el tudja adni, kereskedni tud azokkal a nyitott piacokon és visszaszerezni az értékét.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Tudjon meg többet az NFT-kről</div>
   <ButtonLink href="/nft/">
     Bővebben az NFT-kről
@@ -91,7 +92,7 @@ Ugyanakkor számos Web3-közösséget is DAO-ként definiálnak. Ezek a közöss
   <ButtonLink href="/dao/">
     További információk a DAO-król
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ### Identitás {#identity}
 

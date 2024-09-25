@@ -52,12 +52,13 @@ lang: ru
 Можно использовать [chainlist.org](http://chainlist.org) для получения информации об удаленном вызове процедур (Remote Procedure Call, RPC) сети. После добавления сети и завершения транзакции вы увидите токены в своем кошельке.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Хотите узнать больше?</div>
   <ButtonLink href="/guides/">
     Посмотрите другие наши руководства
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Часто задаваемые вопросы
 

@@ -167,7 +167,8 @@ NFT: s driver en ny skaparekonomi där kreatörer inte lämnar över ägandet av
 
 När de säljer sitt innehåll går pengarna direkt till dem. Om den nya ägaren sedan säljer NFT, kan den ursprungliga skaparen till och med automatiskt få royalties. Detta garanteras varje gång den säljs eftersom skaparens adress är en del av pollettens metadata – metadata som inte kan ändras.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Utforska, köp eller skapa din egen NFT-konst/dina egna NFT-samlarföremål ...</div>
   <ButtonLink href="/dapps/?category=collectibles">
     Utforska NFT-konst
@@ -205,7 +206,7 @@ Decentraland, ett virtuell verklighetsspel, låter dig till och med köpa NFT:er
   <ButtonLink href="/dapps/?category=gaming">
     Utforska NFT-spel
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 <Divider />
 

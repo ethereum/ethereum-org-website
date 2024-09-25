@@ -49,12 +49,13 @@ lang: zh-tw
 交易處理完成後，你的錢包中將自動收到所兌換的代幣。
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>想要學習更多功能嗎？</div>
   <ButtonLink href="/guides/">
     查看我們的其他指南
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## 常見問題
 

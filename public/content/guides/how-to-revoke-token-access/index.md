@@ -47,12 +47,13 @@ We advise you to refresh the revoking tool after a few minutes and connect your 
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Want to learn more?</div>
   <ButtonLink href="/guides/">
     See our other guides
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Frequently asked questions
 

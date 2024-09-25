@@ -47,12 +47,13 @@ Javasoljuk, hogy néhány perc múlva frissítse a visszavonási eszközt, és n
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Szeretne többet megtudni?</div>
   <ButtonLink href="/guides/">
     Tekintse meg a további útmutatóinkat
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Gyakran ismételt kérdések
 

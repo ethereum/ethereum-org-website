@@ -52,12 +52,13 @@ Este proceso no debería tardar más de 10 minutos.
 Puede utilizar [chainlist.org](http://chainlist.org) para encontrar los detalles RPC de la red. Una vez que se añada la red y la transacción haya finalizado, deberían aparecer los tókenes en su cartera.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>¿Quiere saber más?</div>
   <ButtonLink href="/guides/">
     Consulte nuestras demás guias
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Preguntas más frecuentes
 

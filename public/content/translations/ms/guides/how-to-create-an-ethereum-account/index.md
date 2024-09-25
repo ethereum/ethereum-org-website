@@ -40,12 +40,13 @@ Setelah anda menyimpan frasa benih anda, anda sepatutnya melihat papan pemuka do
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Mahu belajar lebih lanjut?</div>
   <ButtonLink href="/guides/">
     Lihat panduan-panduan lain kami
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Soalan yang kerap ditanya
 

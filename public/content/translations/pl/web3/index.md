@@ -61,7 +61,8 @@ Web3 daje Ci prawo własności do Twoich zasobów cyfrowych w bezprecedensowy sp
 
 Web3 pozwala na bezpośrednią własność poprzez [niewymienialne tokeny (NFT)](/nft/). Nikt, nawet twórcy gry, nie ma prawa odebrać ci Twoich własności. A jeśli przestaniesz grać, możesz sprzedać lub wymienić swoje przedmioty w grze na otwartych rynkach i odzyskać ich wartość.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Dowiedz się więcej o NFT</div>
   <ButtonLink href="/nft/">
     Więcej o NFT
@@ -91,7 +92,7 @@ Ludzie jednak definiują wiele społeczności Web3 jako DAO. Wszystkie te społe
   <ButtonLink href="/dao/">
     Więcej informacji o: DAO
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ### Tożsamość {#identity}
 

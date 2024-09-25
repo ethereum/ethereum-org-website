@@ -40,12 +40,13 @@ Após salvar a frase semente, você verá o painel da carteira com o saldo. Conf
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Quer saber mais?</div>
   <ButtonLink href="/guides/">
     Veja nossos outros guias
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Perguntas frequentes
 

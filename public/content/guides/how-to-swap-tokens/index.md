@@ -50,12 +50,13 @@ You can view the progress of the transaction on any blockchain explorer. This pr
 You will automatically receive the swapped tokens in your wallet once the transaction is processed.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Want to learn more?</div>
   <ButtonLink href="/guides/">
     See our other guides
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Frequently asked questions
 

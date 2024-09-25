@@ -63,12 +63,13 @@ Ethereum dibangun di atas ini. Seperti Bitcoin, aturannya tidak dapat berubah te
 
 Ini terdengar aneh... "mengapa saya ingin memrogram uang saya"? Namun, ini lebih dari sekadar sebuah fitur default dari token di Ethereum. Siapa pun dapat memrogram logika ke dalam proses pembayaran. Sehingga Anda dapat memiliki kontrol dan keamanan Bitcoin yang digabungkan dengan layanan yang disediakan oleh lembaga keuangan. Ini memungkinkan Anda melakukan berbagai hal dengan mata uang kripto yang tidak dapat Anda lakukan dengan Bitcoin seperti memberi pinjaman dan mendapatkan pinjaman, menjadwalkan pembayaran, berinvestasi dalam reksadana indeks, dan banyak lagi.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Jelajahi saran kami untuk aplikasi DeFi yang dapat dicoba jika Anda baru mengenal Ethereum.</div>
   <ButtonLink href="/dapps/?category=finance#explore">
     Jelajahi aplikasi DeFi
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Apa yang dapat Anda lakukan dengan DeFi? {#defi-use-cases}
 

@@ -61,7 +61,8 @@ La Web3 le otorga la propiedad de sus activos digitales de una manera sin preced
 
 Web3 permite la propiedad directa a través de [tókenes no fungibles (NFT)](/nft/). Nadie, ni siquiera los creadores del juego, tienen el poder de quitarle la propiedad. Y, si deja de jugar, puede vender o intercambiar sus objetos del juego en mercados abiertos y recuperar su valor.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Saber más sobre NFT</div>
   <ButtonLink href="/nft/">
     Más información sobre NFT
@@ -91,7 +92,7 @@ Sin embargo, las personas definen muchas comunidades Web3 como si fueran DAO. To
   <ButtonLink href="/dao/">
     Claves sobre las DAO
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ### Identidad {#identity}
 

@@ -40,12 +40,13 @@ lang: ja
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>さらに詳しく知りたいですか？</div>
   <ButtonLink href="/guides/">
     他のガイドを参照する
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## よくある質問
 

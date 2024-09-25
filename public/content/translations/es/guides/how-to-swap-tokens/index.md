@@ -49,12 +49,13 @@ Puede seguir el progreso de la transacción en cualquier navegador de cadena de 
 Recibirá automáticamente los tókenes intercambiados en su cartera una vez que la transacción sea procesada.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>¿Quiere saber más?</div>
   <ButtonLink href="/guides/">
     Consulte nuestras demás guias
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Preguntas más frecuentes
 

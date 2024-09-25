@@ -40,12 +40,13 @@ lang: zh-tw
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>想要學習更多功能嗎？</div>
   <ButtonLink href="/guides/">
     查看我們的其他指南
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## 常見問題
 

@@ -40,12 +40,13 @@ A kulcsmondat eltárolása után láthatja a tárca irányítópultját az Ön e
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Szeretne többet megtudni?</div>
   <ButtonLink href="/guides/">
     Tekintse meg a további útmutatóinkat
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Gyakran ismételt kérdések
 

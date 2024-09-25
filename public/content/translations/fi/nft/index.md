@@ -167,7 +167,8 @@ NFTin voima on uudenlaisessa alustataloudessa, jossa teoksen omistajuus pysyy te
 
 Kun sisältöä myydään, ansainta ohjautuu suoraan luojalle. Jos uusi sisällön tai teoksen omistaja myy NFTin, alkuperäinen teoksen luoja saa automaattisesti rojaltit itselleen. Tämä on varmistettu teoksen sisältämässä metadatassa, jota ei voi muokata. Data sisältää alkuperäisen luojan osoitteen.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Tutki, osta tai luo omia NFT-toteutuksia</div>
   <ButtonLink href="/dapps/?category=collectibles">
     Tutustu NFT-taiteeseen
@@ -205,7 +206,7 @@ Decentraland, virtuaalinen reality-peli, jossa NFTt edustavat tontteja tai kiint
   <ButtonLink href="/dapps/?category=gaming">
     Tutki NFT-pelejä
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 <Divider />
 

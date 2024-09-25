@@ -61,7 +61,8 @@ lang: ko
 
 웹3는 [대체 불가 토큰(NFT)](/nft/)을 통해 직접적인 소유가 가능하게 합니다. 아무도, 설령 게임 창작자일지라도, 귀하의 소유권을 가져갈 수 없습니다. 또한 게임을 더 이상 안 하더라도 게임 상의 아이템들을 오픈마켓에서 판매하거나 교환함으로써 가치를 활용할 수 있습니다.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>NFT에 대해 자세히 알아보기</div>
   <ButtonLink href="/nft/">
     NFT 이해하기
@@ -91,7 +92,7 @@ DAO는 리소스 풀(토큰)을 이용한 자동화된 분산형 의사 결정�
   <ButtonLink href="/dao/">
     DAO 이해하기
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ### 신원 증명 {#identity}
 

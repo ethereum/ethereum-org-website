@@ -160,7 +160,8 @@ NFT-urile acționează o nouă economie, în care creatorii nu cedează propriet
 
 Odată ce conținutul este vândut, fondurile le revin în mod direct. Și chiar atunci când noul proprietar ar revinde NTF-urile, creatorul original poate primi în mod automat redevențe. Garanția acestui lucru este asigurată prin faptul că, la orice vânzare a sa, adresa creatorului este integrată în metadatele tokenului – iar metadatele nu pot fi modificate.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Explorați, cumpărați sau creați-vă propriile NFT-uri de artă/de colecție...</div>
   <ButtonLink href="/dapps/?category=collectibles">
     Explorați arta NFT
@@ -430,4 +431,4 @@ Cu alte cuvinte, dacă Visa procesează 140.839.000.000 de tranzacții ce costă
 
 <InfoBanner emoji=":evergreen_tree:">
   În cazul în care considerați că aceste statistici sunt incorecte sau se poate crește precizia lor, vă rugăm să semnalați o problemă sau să creați un PR. Acestea sunt estimări făcute de echipa ethereum.org utilizând informații accesibile publicului și ce este în faza de proiect pentru Ethereum. Aceasta nu reprezintă o promisiune oficială din partea Fundației Ethereum.
-</InfoBanner>
+</Alert>

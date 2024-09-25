@@ -49,12 +49,13 @@ lang: ru
 Как только транзакция будет обработана, вы автоматически получите в свой кошелек обменянные токены.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Хотите узнать больше?</div>
   <ButtonLink href="/guides/">
     Посмотрите другие наши руководства
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Часто задаваемые вопросы
 
