@@ -43,7 +43,7 @@ const tagVariants = cva(
       {
         variant: "solid",
         status: "warning",
-        className: "bg-warning text-warning-light",
+        className: "bg-warning text-warning-dark",
       },
       {
         variant: "outline",
