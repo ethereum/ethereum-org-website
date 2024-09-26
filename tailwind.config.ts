@@ -154,7 +154,10 @@ const config = {
           high: "hsla(var(--background-high))",
         },
 
-        // TODO: Add border color tokens to match DS
+        // TODO: Add all border color tokens to match DS
+        border: {
+          DEFAULT: "hsla(var(--border))",
+        },
 
         primary: {
           DEFAULT: "hsla(var(--primary))",
