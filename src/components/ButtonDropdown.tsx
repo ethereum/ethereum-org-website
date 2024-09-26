@@ -1,4 +1,4 @@
-import React, { MouseEvent, useState } from "react"
+import React, { useState } from "react"
 import { MdMenu } from "react-icons/md"
 
 import { cn } from "@/lib/utils/cn"
@@ -37,11 +37,7 @@ export type ButtonDropdownProps = {
 
 const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
   const [selectedItem, setSelectedItem] = useState(list.text)
-  const handleClick = (
-    e: MouseEvent<HTMLElement>,
-    item: ListItem,
-    idx: number
-  ) => {
+  const handleClick = (item: ListItem, idx: number) => {
     const { matomo, callback } = item
 
     if (matomo) {
@@ -49,7 +45,6 @@ const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
     }
 
     if (callback) {
-      e.preventDefault()
       callback(idx)
     }
     setSelectedItem(item.text)
@@ -75,7 +70,7 @@ const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
               <DropdownMenuItem
                 key={item.text}
                 className="justify-center"
-                onClick={(e) => handleClick(e, item, idx)}
+                onClick={() => handleClick(item, idx)}
                 asChild
               >
                 <BaseLink
@@ -92,7 +87,7 @@ const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
             <DropdownMenuItem
               key={item.text}
               className="justify-center"
-              onClick={(e) => handleClick(e, item, idx)}
+              onClick={() => handleClick(item, idx)}
             >
               <span>{text}</span>
             </DropdownMenuItem>
