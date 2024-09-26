@@ -1,4 +1,5 @@
 import { cva, VariantProps } from "class-variance-authority"
+import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -70,11 +71,14 @@ const tagVariants = cva(
 
 export interface TagProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof tagVariants> {}
+    VariantProps<typeof tagVariants> {
+  asChild?: boolean
+}
 
-function Tag({ className, variant, status, ...props }: TagProps) {
+function Tag({ className, asChild, variant, status, ...props }: TagProps) {
+  const Comp = asChild ? Slot : "div"
   return (
-    <div
+    <Comp
       className={cn(tagVariants({ variant, status }), className)}
       {...props}
     />
