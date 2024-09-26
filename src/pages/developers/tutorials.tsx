@@ -5,7 +5,6 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
 import {
-  Badge,
   Box,
   chakra,
   Flex,
@@ -28,6 +27,7 @@ import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 import { getSkillTranslationId, Skill } from "@/components/TutorialMetadata"
 import TutorialTags from "@/components/TutorialTags"
+import { Tag } from "@/components/ui/tag"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -466,9 +466,9 @@ const TutorialPage = ({
                 >
                   {tutorial.title}
                 </Text>
-                <Badge variant="secondary">
+                <Tag variant="outline">
                   <Translation id={getSkillTranslationId(tutorial.skill!)} />
-                </Badge>
+                </Tag>
               </Flex>
               <Text color="text200" fontSize="sm" textTransform="uppercase">
                 <Emoji text=":writing_hand:" className="me-2 text-sm" />

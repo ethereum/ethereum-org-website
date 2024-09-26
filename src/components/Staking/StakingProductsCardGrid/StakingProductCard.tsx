@@ -1,7 +1,6 @@
 import { useTranslation } from "next-i18next"
 import type { ComponentType, ReactNode, SVGProps } from "react"
 import {
-  Badge,
   Box,
   BoxProps,
   Center,
@@ -21,6 +20,7 @@ import {
   UnknownProductGlyphIcon,
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
+import { Tag } from "@/components/ui/tag"
 
 import { FlagType, Product } from "./types"
 
@@ -58,17 +58,16 @@ const StakingBadge = ({
   type: "ui" | "platform"
   children: ReactNode
 }) => {
-  const uiTypeColor = type === "ui" && "stakingPillUI"
-  const platformTypeColor = type === "platform" && "stakingPillPlatform"
+  const uiTypeStatus = type === "ui" && "warning"
+  const platformTypeStatus = type === "platform" && "error"
 
   return (
-    <Badge
-      size="lg"
-      background={uiTypeColor || platformTypeColor || undefined}
-      textTransform="initial"
+    <Tag
+      variant="solid"
+      status={uiTypeStatus || platformTypeStatus || undefined}
     >
       {children}
-    </Badge>
+    </Tag>
   )
 }
 
