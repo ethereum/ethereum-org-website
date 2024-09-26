@@ -9,9 +9,9 @@ const tagVariants = cva(
       status: {
         normal: "bg-background-highlight text-body-medium border-body-medium",
         tag: "bg-primary-low-contrast text-primary border-primary",
-        success: "bg-success-light text-success border-success",
-        error: "bg-error-light text-error border-error",
-        warning: "bg-warning-light text-warning border-warning",
+        success: "bg-success-light text-success border-success-border",
+        error: "bg-error-light text-error border-error-border",
+        warning: "bg-warning-light text-warning-dark border-warning-border",
       },
       variant: {
         subtle: "border-transparent",
@@ -33,17 +33,32 @@ const tagVariants = cva(
       {
         variant: "solid",
         status: "success",
-        className: "bg-success",
+        className: "bg-success text-success-light",
       },
       {
         variant: "solid",
         status: "error",
-        className: "bg-error",
+        className: "bg-error text-error-light",
       },
       {
         variant: "solid",
         status: "warning",
-        className: "bg-warning",
+        className: "bg-warning text-warning-light",
+      },
+      {
+        variant: "outline",
+        status: "success",
+        className: "text-success-border",
+      },
+      {
+        variant: "outline",
+        status: "error",
+        className: "text-error-border",
+      },
+      {
+        variant: "outline",
+        status: "warning",
+        className: "text-warning-border",
       },
     ],
     defaultVariants: {
