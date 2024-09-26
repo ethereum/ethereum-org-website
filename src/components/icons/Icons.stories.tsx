@@ -189,7 +189,12 @@ const items = iconsDefinitions.map((IconDef) => (
     borderColor="background.highlight"
   >
     <Center>
-      <IconDef w="50px" h="50px" />
+      <IconDef
+        className="h-[50px] w-[50px]"
+        // TODO: remove the following two props when migrations are complete
+        w="50px"
+        h="50px"
+      />
     </Center>
     <Center>{IconDef.displayName}</Center>
   </Flex>
