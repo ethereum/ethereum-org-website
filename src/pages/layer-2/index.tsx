@@ -3,6 +3,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import type { BasePageProps, Lang } from "@/lib/types"
 
+import HubHero, { HubHeroProps } from "@/components/Hero/HubHero"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 
@@ -10,6 +11,8 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import HeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
@@ -32,6 +35,34 @@ export const getStaticProps = (async ({ locale }) => {
 }) satisfies GetStaticProps<BasePageProps>
 
 const Layer2Hub = () => {
+  // TODO: setup translation
+  const heroContent: HubHeroProps = {
+    title: "Layer 2",
+    header: "Ethereum networks",
+    description: "Use Ethereum for a fraction of the cost.",
+    heroImg: HeroImage,
+    buttons: [
+      {
+        content: "Learn more",
+        href: "/layer-2/learn",
+        matomo: {
+          eventCategory: "layer 2 hub hero buttons",
+          eventAction: "click",
+          eventName: "/layer-2/learn clicked",
+        },
+      },
+      {
+        content: "Choose network",
+        href: "/layer-2/networks",
+        matomo: {
+          eventCategory: "layer 2 hub hero buttons",
+          eventAction: "click",
+          eventName: "/layer-2/networks clicked",
+        },
+      },
+    ],
+  }
+
   return (
     <MainArticle className="relative flex flex-col">
       {/* TODO: Clarify title and description here */}
@@ -41,6 +72,8 @@ const Layer2Hub = () => {
         description={"Learn about Ethereum layer 2 networks"}
         image="/images/layer-2/learn-hero.png"
       />
+
+      <HubHero {...heroContent} />
     </MainArticle>
   )
 }
