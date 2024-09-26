@@ -3,7 +3,6 @@ import { GetStaticProps } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
-  Badge,
   Box,
   BoxProps,
   Center,
@@ -34,6 +33,7 @@ import OrderedList from "@/components/OrderedList"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
+import { Tag } from "@/components/ui/tag"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -515,9 +515,9 @@ const Layer2Page = () => {
                     tokenLists={tokenLists}
                   >
                     {purpose.map((purpose, index) => (
-                      <Badge key={index} me={2}>
+                      <Tag key={index} className="me-2">
                         {purpose}
-                      </Badge>
+                      </Tag>
                     ))}
                   </Layer2ProductCard>
                 )
@@ -564,9 +564,9 @@ const Layer2Page = () => {
                     tokenLists={tokenLists}
                   >
                     {purpose.map((purpose, index) => (
-                      <Badge key={index} me={2}>
+                      <Tag key={index} className="me-2">
                         {purpose}
-                      </Badge>
+                      </Tag>
                     ))}
                   </Layer2ProductCard>
                 )

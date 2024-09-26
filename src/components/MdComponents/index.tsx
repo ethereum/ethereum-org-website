@@ -1,5 +1,5 @@
 import { ComponentProps, type HTMLAttributes } from "react"
-import { Badge, Box, type BoxProps } from "@chakra-ui/react"
+import { Box, type BoxProps } from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
@@ -31,6 +31,7 @@ import { Divider } from "../ui/divider"
 import { Flex } from "../ui/flex"
 import { ListItem, OrderedList, UnorderedList } from "../ui/list"
 import { mdxTableComponents } from "../ui/Table"
+import { Tag } from "../ui/tag"
 
 export const commonHeadingAttributes = (className: string, id?: string) => ({
   id,
@@ -183,7 +184,6 @@ export const MobileButtonDropdown = ({
 
 // All custom React components
 export const reactComponents = {
-  Badge,
   ButtonLink,
   Card,
   ContentContainer,
@@ -202,6 +202,7 @@ export const reactComponents = {
   QuizWidget: StandaloneQuizWidget,
   StyledButtonDropdown,
   IssuesList,
+  Tag,
   Title,
   YouTube,
 }

@@ -10,7 +10,6 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
-  Badge,
   Box,
   Button,
   type ButtonProps,
@@ -47,6 +46,7 @@ import ProductListComponent, {
 } from "@/components/ProductList"
 import Translation from "@/components/Translation"
 import { Divider } from "@/components/ui/divider"
+import { Tag, TagProps } from "@/components/ui/tag"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -1276,7 +1276,7 @@ const DappsPage = () => {
       alt: t("page-dapps-uniswap-logo-alt"),
       background: "#212f46",
       type: CategoryType.FINANCE,
-      pillColor: "tagMint",
+      tagStatus: "success",
     },
     {
       name: "OpenSea",
@@ -1286,7 +1286,7 @@ const DappsPage = () => {
       alt: t("page-dapps-opensea-logo-alt"),
       background: "#181b21",
       type: CategoryType.COLLECTIBLES,
-      pillColor: "tagBlue",
+      tagStatus: "tag",
     },
     {
       name: "Gods Unchained",
@@ -1296,7 +1296,7 @@ const DappsPage = () => {
       alt: t("page-dapps-gods-unchained-logo-alt"),
       background: "#111c25",
       type: CategoryType.GAMING,
-      pillColor: "tagOrange",
+      tagStatus: "warning",
     },
     {
       name: "Ethereum Name Service",
@@ -1306,7 +1306,7 @@ const DappsPage = () => {
       alt: t("page-dapps-ens-logo-alt"),
       background: "#fff",
       type: CategoryType.SOCIAL,
-      pillColor: "tagMint",
+      tagStatus: "success",
     },
   ]
 
@@ -1425,9 +1425,9 @@ const DappsPage = () => {
               image={choice.image}
               name={choice.name}
             >
-              <Badge size="sm" background={choice.pillColor}>
+              <Tag status={choice.tagStatus as TagProps["status"]}>
                 {choice.type}
-              </Badge>
+              </Tag>
             </ProductCard>
           ))}
         </StyledCardGrid>
