@@ -108,7 +108,7 @@ const EventCard = ({
               </Text>
             </Box>
             <Box>
-              <Text fontSize="sm">{truncatedDescription}</Text>
+              <p className="text-sm line-clamp-6">{description}</p>
             </Box>
           </Box>
         </Box>
