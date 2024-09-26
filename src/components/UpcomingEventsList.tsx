@@ -104,14 +104,14 @@ const UpcomingEventsList = () => {
   }
 
   return (
-    <div className="">
+    <div>
       {Object.keys(monthGroupedEvents)
         ?.slice(0, maxRange)
         ?.map((month) => {
           const events = monthGroupedEvents[month]
           return (
             <div key={`events_in_${month}`}>
-              <h3 className="py-8 text-2xl font-semibold">{month}</h3>
+              <h3 className="py-8">{month}</h3>
               <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                 {events.map(
                   (
