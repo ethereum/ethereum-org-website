@@ -630,7 +630,7 @@ const StakingPage = ({
           </Flex>
         </ContentContainer>
         <MobileButton>
-          <ButtonDropdown list={dropdownLinks} />
+          <ButtonDropdown list={dropdownLinks} className="w-full lg:w-auto" />
         </MobileButton>
       </Page>
     </PageContainer>

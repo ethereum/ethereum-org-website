@@ -38,7 +38,7 @@ export const ContentLayout = ({
 
         {dropdownLinks && (
           <MobileButton>
-            <ButtonDropdown list={dropdownLinks} />
+            <ButtonDropdown list={dropdownLinks} className="w-full lg:w-auto" />
           </MobileButton>
         )}
       </Page>
