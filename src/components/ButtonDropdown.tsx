@@ -61,7 +61,10 @@ const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
           <span className="flex-1 text-center">{selectedItem}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-full" sideOffset={10}>
+      <DropdownMenuContent
+        className="w-[var(--radix-dropdown-menu-trigger-width)]"
+        sideOffset={8}
+      >
         {list.items.map((item, idx) => {
           const { text, href } = item
 
