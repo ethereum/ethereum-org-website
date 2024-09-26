@@ -3,12 +3,12 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { BsCalendar3 } from "react-icons/bs"
 
-import { cn } from "@/lib/utils/cn"
-
 import type { EventCardProps } from "@/lib/types"
 
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+
+import { cn } from "@/lib/utils/cn"
 
 import { TwImage } from "./Image"
 
@@ -36,9 +36,7 @@ const EventCard: React.FC<EventCardProps> = ({
   )
 
   return (
-    <Card
-      className={cn("flex h-full flex-col rounded-md border", className)}
-    >
+    <Card className={cn("flex h-full flex-col rounded-md border", className)}>
       <CardHeader className="flex flex-row items-center justify-center rounded-t-md border-b border-primary bg-[#FCFCFC] p-2 dark:bg-[#272627]">
         <BsCalendar3 className="mr-2 h-6 w-6 text-primary" />
         <span className="!mt-0 text-right text-sm text-primary">
