@@ -59,7 +59,7 @@ const EventCard: React.FC<EventCardProps> = ({
           <h3 className="text-xl font-bold md:text-2xl">{title}</h3>
           <span className="text-sm opacity-60">{location}</span>
         </div>
-        <p className="text-sm leading-[1.6rem]">{description}</p>
+        <p className="md:text-sm md:leading-[1.6rem]">{description}</p>
       </CardContent>
       <CardFooter className="p-4 pt-0">
         <ButtonLink href={href} variant="outline" className="w-full text-sm">
