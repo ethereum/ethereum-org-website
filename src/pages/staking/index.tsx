@@ -12,9 +12,7 @@ import type {
   StakingStatsData,
 } from "@/lib/types"
 
-import ButtonDropdown, {
-  List as ButtonDropdownList,
-} from "@/components/ButtonDropdown"
+import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import ButtonLink, {
   type ButtonLinkProps,
 } from "@/components/Buttons/ButtonLink"
@@ -22,7 +20,8 @@ import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import LeftNavBar from "@/components/LeftNavBar"
-import { ContentContainer, MobileButton, Page } from "@/components/MdComponents"
+import { ContentContainer, Page } from "@/components/MdComponents"
+import MobileButtonDropdown from "@/components/MobileButtonDropdown"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
@@ -629,9 +628,7 @@ const StakingPage = ({
             </div>
           </Flex>
         </ContentContainer>
-        <MobileButton>
-          <ButtonDropdown list={dropdownLinks} className="w-full lg:w-auto" />
-        </MobileButton>
+        <MobileButtonDropdown list={dropdownLinks} />
       </Page>
     </PageContainer>
   )

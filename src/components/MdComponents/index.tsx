@@ -152,15 +152,6 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   )
 }
 
-export const MobileButton = (props: ChildOnlyProp) => {
-  return (
-    <div
-      className="sticky bottom-0 z-sticky w-full bg-background p-8 shadow-md lg:hidden"
-      {...props}
-    />
-  )
-}
-
 // All custom React components
 export const reactComponents = {
   Badge,
@@ -176,7 +167,6 @@ export const reactComponents = {
   FeaturedText,
   GlossaryTooltip,
   InfoBanner,
-  MobileButton,
   Page,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,
