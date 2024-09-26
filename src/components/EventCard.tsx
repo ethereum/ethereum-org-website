@@ -35,7 +35,7 @@ const EventCard: React.FC<EventCardProps> = ({
 
   return (
     <Card
-      className={`border-lightBorder flex h-full flex-col rounded-md border ${className}`}
+      className={cn("border-lightBorder flex h-full flex-col rounded-md border", className)}
     >
       <CardHeader className="flex flex-row items-center justify-center rounded-t-md border-b border-primary bg-[#FCFCFC] p-2 dark:bg-[#272627]">
         <BsCalendar3 className="mr-2 h-6 w-6 text-primary" />
