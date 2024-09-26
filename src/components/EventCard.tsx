@@ -3,6 +3,8 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { BsCalendar3 } from "react-icons/bs"
 
+import { cn } from "@/lib/utils/cn"
+
 import type { EventCardProps } from "@/lib/types"
 
 import { ButtonLink } from "@/components/ui/buttons/Button"
