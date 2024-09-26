@@ -17,6 +17,7 @@ const statusArray = ["normal", "tag", "success", "error", "warning"] as const
 
 // "subtle" is default variant
 const variantArray = ["subtle", "solid", "outline"] as const
+const sizeArray = ["small", "medium"] as const
 
 const StyleVariantList = () => (
   <HStack>
@@ -34,4 +35,16 @@ const StyleVariantList = () => (
 
 export const StyleVariantsBasic: Story = {
   render: (args) => <StyleVariantList {...args} />,
+}
+
+export const StyleVariantsSize: Story = {
+  render: () => (
+    <VStack>
+      {sizeArray.map((size) => (
+        <Tag key={size} status="tag" variant="subtle" size={size}>
+          Tag Name
+        </Tag>
+      ))}
+    </VStack>
+  ),
 }
