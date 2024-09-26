@@ -14,7 +14,7 @@ import {
 import type { ChildOnlyProp } from "@/lib/types"
 
 import Emoji from "../Emoji"
-import Pill from "../Pill"
+import { Tag, TagProps } from "../ui/tag"
 
 import { accordionButtonContent, CategoryNameType } from "./utils"
 
@@ -84,10 +84,13 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
                   >
                     {t(contentObj.title)}
                   </Heading>
-                  {!!contentObj.pill && (
-                    <Pill ms={4} background={contentObj.pill.color}>
-                      {t(contentObj.pill.name)}
-                    </Pill>
+                  {!!contentObj.tag && (
+                    <Tag
+                      status={contentObj.tag.status as TagProps["status"]}
+                      className="ms-4"
+                    >
+                      {t(contentObj.tag.name)}
+                    </Tag>
                   )}
                 </Flex>
                 <Text color="text200" textAlign="start">
