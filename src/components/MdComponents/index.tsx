@@ -36,7 +36,7 @@ export const commonHeadingAttributes = (className: string, id?: string) => ({
   id,
   className: cn(
     "font-bold leading-xs my-8",
-    id && "scroll-mt-28 relative",
+    id && "scroll-mt-28 relative group",
     className
   ),
   "data-group": !!id || undefined,
