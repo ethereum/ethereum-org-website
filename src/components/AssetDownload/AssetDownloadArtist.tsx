@@ -18,13 +18,8 @@ const AssetDownloadArtist = ({
 }: AssetDownloadArtistProps) => {
   const { t } = useTranslation("page-assets")
   return (
-    <Flex
-      className={cn(
-        "mb-4 border border-t-0 border-[#e5e5e5]",
-        "rounded-b-[4px] px-4 py-2"
-      )}
-    >
-      <Flex className="me-2 text-md text-text-300">
+    <Flex className={cn("mb-4 border border-t-0", "rounded-b px-4 py-2")}>
+      <Flex className="me-2">
         <Emoji text=":artist_palette:" className="me-2 text-2xl" />
         {t("page-assets-download-artist")}
       </Flex>

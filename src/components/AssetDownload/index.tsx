@@ -20,7 +20,7 @@ type AssetDownloadProps = {
   artistUrl?: string
   image: ImageProps["src"]
   svgUrl?: string
-} & BaseHTMLAttributes<HTMLDivElement> & { asChild?: boolean }
+} & BaseHTMLAttributes<HTMLDivElement>
 
 const AssetDownload = ({
   alt,

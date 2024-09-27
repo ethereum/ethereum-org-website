@@ -9,7 +9,7 @@ interface AssetDownloadImageProps {
 }
 
 const AssetDownloadImage = ({ image, alt }: AssetDownloadImageProps) => (
-  <Center className="w-full border border-[#e5e5e5] p-8">
+  <Center className="w-full border p-8">
     <TwImage src={image} alt={alt} className="w-full self-center" />
   </Center>
 )

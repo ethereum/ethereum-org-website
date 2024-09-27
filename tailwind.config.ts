@@ -202,7 +202,6 @@ const config = {
         "tooltip-shadow": "var(--tooltip-shadow)",
         "hub-hero-content": "var(--hub-hero-content)",
         "search-background": "var(--search-background)",
-        "text-300": "var(--text-300)",
       },
 
       backgroundImage: {
