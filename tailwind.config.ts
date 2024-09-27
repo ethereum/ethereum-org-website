@@ -157,7 +157,12 @@ const config = {
           },
         },
 
-        // TODO: Add border color tokens to match DS
+        border: {
+          DEFAULT: "hsla(var(--border))",
+          "high-contrast": "hsla(var(--border-high-contrast))",
+          "low-contrast": "hsla(var(--border-low-contrast))",
+          hover: "hsla(var(--border-hover))",
+        },
 
         primary: {
           DEFAULT: "hsla(var(--primary))",

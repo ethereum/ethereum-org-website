@@ -23,7 +23,10 @@
     --background-medium: var(--gray-200);
     --background-high: var(--gray-300);
 
-    /* TODO: Add border color tokens to match DS */
+    --border: var(--gray-200);
+    --border-high-contrast: var(--gray-400);
+    --border-low-contrast: var(--gray-50);
+    --border-hover: var(--gray-300);
 
     --primary: var(--purple-600);
     --primary-high-contrast: var(--purple-800);
@@ -129,7 +132,10 @@
     --background-medium: var(--gray-600);
     --background-high: var(--gray-800);
 
-    /* TODO: Add border color tokens to match DS */
+    --border: var(--gray-600);
+    --border-high-contrast: var(--gray-300);
+    --border-low-contrast: var(--black);
+    --border-hover: var(--gray-500);
 
     --primary: var(--purple-400);
     --primary-high-contrast: var(--purple-200);
