@@ -23,7 +23,8 @@
     --background-medium: var(--gray-200);
     --background-high: var(--gray-300);
 
-    /* TODO: Add border color tokens to match DS */
+    /* TODO: Add all border color tokens to match DS */
+    --border: var(--gray-200);
 
     --primary: var(--purple-600);
     --primary-high-contrast: var(--purple-800);
@@ -129,7 +130,8 @@
     --background-medium: var(--gray-600);
     --background-high: var(--gray-800);
 
-    /* TODO: Add border color tokens to match DS */
+    /* TODO: Add all border color tokens to match DS */
+    --border: var(--gray-600);
 
     --primary: var(--purple-400);
     --primary-high-contrast: var(--purple-200);
