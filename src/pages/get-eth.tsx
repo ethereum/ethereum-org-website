@@ -2,7 +2,6 @@ import type { GetStaticProps, InferGetStaticPropsType } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ReactNode } from "react"
-import { useBreakpointValue } from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
@@ -38,6 +37,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import uniswap from "@/public/images/dapps/uni.png"
 import dapps from "@/public/images/doge-computer.png"
 import oneinch from "@/public/images/exchanges/1inch.png"
@@ -104,6 +104,12 @@ const GetEthPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation("page-get-eth")
 
+  const walletImageWidth = useBreakpointValue({
+    base: "full",
+    sm: "60%",
+    md: "50%",
+  })
+
   const tokenSwaps: CardListItem[] = [
     {
       title: "Uniswap",
@@ -143,12 +149,6 @@ const GetEthPage = ({
       description: t("page-get-eth-article-keeping-crypto-safe-desc"),
     },
   ]
-
-  const walletImageWidth = useBreakpointValue({
-    base: "full",
-    sm: "60%",
-    md: "50%",
-  })
 
   return (
     <MainArticle>
