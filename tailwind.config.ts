@@ -152,6 +152,9 @@ const config = {
           low: "hsla(var(--background-low))",
           medium: "hsla(var(--background-medium))",
           high: "hsla(var(--background-high))",
+          table: {
+            hover: "var(--table-background-hover)",
+          },
         },
 
         // TODO: Add border color tokens to match DS

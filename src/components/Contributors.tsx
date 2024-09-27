@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react"
 import shuffle from "lodash/shuffle"
-import { Box, Flex, Image, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
-import InlineLink from "@/components/Link"
-import Text from "@/components/OldText"
+import { Flex } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
 
 import data from "!!raw-loader!@/../.all-contributorsrc"
 
@@ -31,53 +30,27 @@ const Contributors = () => {
         have contributed so far!
       </p>
 
-      <Flex flexWrap="wrap">
+      <Flex className="flex-wrap">
         {contributorsList.map((contributor) => (
-          <LinkBox
+          <Flex
+            className="m-2 max-w-[132px] transform flex-col shadow-table transition-transform duration-100 hover:scale-[1.02] hover:rounded hover:bg-background-table-hover hover:no-underline hover:shadow-table-box-hover focus:scale-[1.02] focus:rounded focus:no-underline focus:shadow-table-box-hover"
             key={contributor.login}
-            as="div"
-            maxWidth="132px"
-            margin="2"
-            boxShadow="0px 14px 66px rgba(0, 0, 0, 0.07), 0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05)"
-            _hover={{
-              textDecoration: "none",
-              borderRadius: "base",
-              boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
-              background: "tableBackgroundHover",
-              transition: "transform 0.1s",
-              transform: "scale(1.02)",
-            }}
-            _focus={{
-              textDecoration: "none",
-              borderRadius: "base",
-              boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
-              background: "tableBackgroundHover",
-              transition: "transform 0.1s",
-              transform: "scale(1.02)",
-            }}
           >
-            <Image
-              width="132px"
-              height="132px"
-              src={contributor.avatar_url}
-              alt={contributor.name}
-            />
-            <Box padding="1rem">
-              <Text as="h3" fontSize="md" marginTop="2" marginBottom="4">
-                <LinkOverlay
-                  as={InlineLink}
-                  href={contributor.profile}
-                  hideArrow
-                  color="text"
-                  textDecoration="none"
-                  _hover={{ textDecoration: "none" }}
-                  isExternal
-                >
-                  {contributor.name}
-                </LinkOverlay>
-              </Text>
-            </Box>
-          </LinkBox>
+            <InlineLink
+              className="block flex-grow text-body no-underline hover:no-underline"
+              href={contributor.profile}
+              hideArrow
+            >
+              <img
+                className="h-[132px] w-[132px]"
+                src={contributor.avatar_url}
+                alt={contributor.name}
+              />
+              <div className="p-4">
+                <h3 className="mb-4 mt-2 text-md">{contributor.name}</h3>
+              </div>
+            </InlineLink>
+          </Flex>
         ))}
       </Flex>
     </>
