@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "Set up ya local development environment",
   "page-local-environment-solidity-template-desc": "GitHub template wey dem don pre built the setup ffor your solidity smart contracts. E include hardhat loca network, waffle for tests, Ethers for wallet implementation, and more.",
   "page-local-environment-solidity-template-logo-alt": "Solidity template logo",
-  "page-local-environment-truffle-desc": "The truffle suite get developers from idea reach dapp as possible.",
-  "page-local-environment-truffle-logo-alt": "Truffle logo",
   "page-local-environment-waffle-desc": "Library wey advance pass if you dey test smart contracts. Use alone abi scaffold-eth abi Hardhat.",
   "page-local-environment-waffle-logo-alt": "Waffle logo"
 }

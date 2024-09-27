@@ -12,7 +12,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 
-import Select from "@/components/Select"
+import Select from "@/components/ui/Select"
 
 import { getLanguageCodeName } from "@/lib/utils/intl"
 import { trackCustomEvent } from "@/lib/utils/matomo"

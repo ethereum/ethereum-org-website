@@ -83,7 +83,6 @@ Sono stati compiuti degli sforzi collaborativi per rendere Ethereum accessibile 
 - [Baseline Project](https://www.baseline-protocol.org/): _Il Protocollo di Baseline è una serie di strumenti e librerie che aiutano le aziende a coordinare processi aziendali e flussi di lavoro complessi e multiparte nel rispetto della privacy, mantenendo i dati nei rispettivi sistemi di registrazione. Lo standard consente a due o più macchine di stato di ottenere e mantenere la coerenza dei dati e la continuità del flusso di lavoro, utilizzando una rete come un quadro di riferimento comune._
 - [Chainlens](https://www.chainlens.com/): _Piattaforma analitica e di dati sulla blockchain SaaS e locale da Web3 Labs_
 - [Ernst & Young's 'Nightfall'](https://github.com/EYBlockchain/nightfall_3): _un'applcazione per trasferire applcazoni ERC20, ERC721 ed ERC1155 sotto Conoscenza Zero, utilizzando un Rollup Ottimistico_
-- [Truffle Suite](https://trufflesuite.com) _è una suite di sviluppo della blockchain (Truffle, Ganache, Drizzle)_
 
 ### Soluzioni di scalabilità {#scalability-solutions}
 

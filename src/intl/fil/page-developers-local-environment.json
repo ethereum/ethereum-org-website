@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "I-set up ang iyong lokal na development environment",
   "page-local-environment-solidity-template-desc": "Isang GitHub template para sa pre-built setup ng iyong mga smart contract sa Solidity. May Hardhat local network, Waffle para sa mga test, Ethers para sa implementation ng wallet, at marami pa.",
   "page-local-environment-solidity-template-logo-alt": "Logo ng Solidity template",
-  "page-local-environment-truffle-desc": "Tinutulungan ng Truffle Suite ang mga developer simula sa pagbuo ng ideya hanggang sa paggawa ng dapp sa pinakakumportableng paraan.",
-  "page-local-environment-truffle-logo-alt": "Logo ng Truffle",
   "page-local-environment-waffle-desc": "Ang pinaka-advanced na testing lib para sa mga smart contract. Gamitin mag-isa o kasama ang Scaffold-eth o Hardhat.",
   "page-local-environment-waffle-logo-alt": "Logo ng Waffle"
 }

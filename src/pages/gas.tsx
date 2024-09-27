@@ -40,6 +40,7 @@ import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import Pill from "@/components/Pill"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -54,10 +55,6 @@ import walletImg from "@/public/images/wallet.png"
 import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
-
-const Divider = (props: BoxProps) => (
-  <Box my={16} w="10%" h={1} bg="homeDivider" {...props} />
-)
 
 const Page = (props: FlexProps) => (
   <Flex
@@ -162,7 +159,7 @@ const GasPage = () => {
         title={t("page-gas-meta-title")}
         description={t("page-gas-meta-description")}
       />
-      <Box background="layer2Gradient" width="full">
+      <div className="w-full bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20">
         <Box pb={8}>
           <PageHero
             content={{
@@ -177,7 +174,7 @@ const GasPage = () => {
             }}
           />
         </Box>
-      </Box>
+      </div>
       <Content mb={{ base: 16, lg: 32 }} mt={16}>
         <Flex
           direction={{ base: "column", lg: "row" }}

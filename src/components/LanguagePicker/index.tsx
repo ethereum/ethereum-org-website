@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "next-i18next"
 
 import { BaseLink } from "@/components/Link"
 
@@ -125,7 +125,7 @@ const LanguagePickerMenu = ({ languages, onClose, onSelect }) => {
 
   return (
     <Command
-      className="gap-2 p-4"
+      className="max-h-[calc(100vh-12rem)] gap-2 p-4"
       filter={(value: string, search: string) => {
         const item = languages.find((name) => name.localeOption === value)
 
@@ -157,7 +157,7 @@ const LanguagePickerMenu = ({ languages, onClose, onSelect }) => {
         kbdShortcut="\"
       />
 
-      <CommandList className="max-h-[75vh]">
+      <CommandList className="max-h-full">
         <CommandEmpty className="py-0 text-left text-base">
           <NoResultsCallout onClose={onClose} />
         </CommandEmpty>

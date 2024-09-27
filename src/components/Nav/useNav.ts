@@ -20,20 +20,16 @@ import {
 import { PiFlask, PiUsersFourLight } from "react-icons/pi"
 import { useColorMode } from "@chakra-ui/react"
 
-import { EthereumIcon } from "@/components/icons/EthereumIcon"
+import EthereumIcon from "@/components/icons/ethereum-icon.svg"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import type { NavSections } from "./types"
 
-import useColorModeValue from "@/hooks/useColorModeValue"
-
 export const useNav = () => {
   const { t } = useTranslation("common")
-  const { resolvedTheme, setTheme } = useTheme()
+  const { setTheme, resolvedTheme } = useTheme()
   const { setColorMode } = useColorMode()
-
-  const colorToggleEvent = useColorModeValue("dark mode", "light mode") // This will be inverted as the state is changing
 
   const linkSections: NavSections = {
     learn: {
@@ -466,12 +462,15 @@ export const useNav = () => {
   }
 
   const toggleColorMode = () => {
-    setTheme(resolvedTheme === "dark" ? "light" : "dark")
-    setColorMode(resolvedTheme === "dark" ? "light" : "dark")
+    const targetTheme = resolvedTheme === "dark" ? "light" : "dark"
+
+    setTheme(targetTheme)
+    setColorMode(targetTheme)
+
     trackCustomEvent({
       eventCategory: "nav bar",
       eventAction: "click",
-      eventName: colorToggleEvent,
+      eventName: `${targetTheme} mode`,
     })
   }
 
