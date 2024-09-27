@@ -84,6 +84,7 @@
   "page-index-title": "Üdvözli az Ethereum",
   "page-index-values-description": "Legyen részese a digitális forradalomnak",
   "page-index-values-header": "Az internet változik",
+  "page-index-values-legacy": "Örökség",
   "page-index-values-tag": "Értékek",
   "page-index-values-ownership-legacy-label": "Korlátozott tulajdonjog",
   "page-index-values-ownership-legacy-content-0": "A hagyományos banki vagy közösségi médiaplatformokon az Ön eszközeit és adatait az adott szervezet kezeli. Rájuk bízza a hozzáférhetőségüket és az irányításukat.",
@@ -115,6 +116,5 @@
   "page-index-values-open-legacy-label": "A legtöbbek számára zárt",
   "page-index-values-open-legacy-content-0": "A vállalatok védik szellemi tulajdonukat, és nem osztoznak rajtuk. A vállalaton kívül senki sem láthatja, hogyan működnek a dolgok, nem javíthatja ki a problémákat és nem hajthat végre fejlesztéseket. Nehéz új eszközöket létrehozni vagy bármit személyre szabni.",
   "page-index-values-open-ethereum-label": "Mindenki számára nyitott",
-  "page-index-values-legacy": "Örökség",
   "page-index-values-open-ethereum-content-0": "Az Ethereum mindenki számára nyilvános. Bárki láthatja, használhatja és javíthatja a kódot, így az mindenki számára jobbá válik."
 }

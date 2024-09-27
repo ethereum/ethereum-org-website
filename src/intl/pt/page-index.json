@@ -84,7 +84,7 @@
   "page-index-title": "Bem-vindo ao Ethereum",
   "page-index-values-description": "Faça parte da revolução digital",
   "page-index-values-header": "A Internet está a mudar",
-  "page-index-values-tag": "Values",
+  "page-index-values-legacy": "Legado",
   "page-index-values-ownership-legacy-label": "Propriedade restrita",
   "page-index-values-ownership-legacy-content-0": "Com um banco ou plataforma de rede social comum, os seus ativos e dados são geridos pela organização. Confia na organização em termos de acesso e controlo.",
   "page-index-values-ownership-legacy-content-1": "Pode utilizar os seus dados de formas com as quais possa não concordar, com base nas suas políticas.",
@@ -115,6 +115,5 @@
   "page-index-values-open-legacy-label": "Fechada à maioria",
   "page-index-values-open-legacy-content-0": "As empresas protegem a sua propriedade intelectual e não partilham. Ninguém fora da empresa pode ver como as coisas funcionam, resolver p+roblemas ou fazer melhorias. É difícil às pessoas criar novas ferramentas ou personalizar.",
   "page-index-values-open-ethereum-label": "Aberta a todos",
-  "page-index-values-legacy": "Legado",
   "page-index-values-open-ethereum-content-0": "A Ethereum é pública. Qualquer pessoa pode ver, utilizar e melhorar o código, tornando-a melhor para todos."
 }

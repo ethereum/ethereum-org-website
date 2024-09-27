@@ -84,6 +84,7 @@
   "page-index-title": "Willkommen bei Ethereum",
   "page-index-values-description": "Werden Sie Teil der digitalen Revolution",
   "page-index-values-header": "Das Internet verändert sich",
+  "page-index-values-legacy": "Legacy",
   "page-index-values-tag": "Werte",
   "page-index-values-ownership-legacy-label": "Eingeschränkters Eigentum",
   "page-index-values-ownership-legacy-content-0": "Bei einem regulären Bankkonto und einer regulären Social-Media-Plattform werden Ihre Assets und Daten von der entsprechenden Organisation verwaltet. Sie müssen sich auf diese hinsichtlich Zugang und Kontrolle verlassen.",
@@ -115,6 +116,5 @@
   "page-index-values-open-legacy-label": "Für die meisten unzugänglich",
   "page-index-values-open-legacy-content-0": "Unternehmen schützen ihr intellektuelles Eigentum und teilen nicht. Niemand außerhalb des Unternehmens kann sehen, wie die Dinge funktionieren, niemand kann Probleme lösen oder Verbesserungen vornehmen. Es ist für Personen schwierig, neue Tools zu erstellen oder individuelle Änderungen vorzunehmen.",
   "page-index-values-open-ethereum-label": "Offen für alle",
-  "page-index-values-legacy": "Legacy",
   "page-index-values-open-ethereum-content-0": "Ethereum ist allen zugänglich. Jeder kann den Code sehen, verwenden und verbessern, wodurch die Plattform für alle besser wird."
 }
