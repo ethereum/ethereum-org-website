@@ -1,27 +1,19 @@
 import { useTranslation } from "next-i18next"
-import { Box, Flex } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
 import Card from "@/components/Card"
 import CardList, { type CardListItem } from "@/components/CardList"
-import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
+
+import { ButtonLink } from "./ui/buttons/Button"
+import { Flex } from "./ui/flex"
 
 import beaconchain from "@/public/images/upgrades/beaconchainemoji.png"
 import beaconscan from "@/public/images/upgrades/etherscan.png"
 
 const H3 = ({ children }: ChildOnlyProp) => (
-  <OldHeading
-    as="h3"
-    fontSize="2xl"
-    fontWeight="bold"
-    mb={8}
-    sx={{ a: { display: "none" } }}
-  >
-    {children}
-  </OldHeading>
+  <h3 className="mb-8 mt-10 text-2xl font-bold [&_a]:hidden">{children}</h3>
 )
 
 const BeaconChainActions = () => {
@@ -64,8 +56,8 @@ const BeaconChainActions = () => {
   ]
 
   return (
-    <Box mb={16}>
-      <Flex flexDir={{ base: "column", md: "row" }} pt={4}>
+    <div className="mb-16">
+      <Flex className="flex-col pt-4 md:flex-row">
         <Card
           w="full"
           ms={0}
@@ -92,7 +84,7 @@ const BeaconChainActions = () => {
         <Translation id="read-more" />
       </H3>
       <CardList items={reads} />
-    </Box>
+    </div>
   )
 }
 
