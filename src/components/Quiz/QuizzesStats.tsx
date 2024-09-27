@@ -1,7 +1,6 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaXTwitter } from "react-icons/fa6"
-import { Highlight } from "@chakra-ui/react"
 
 import { CompletedQuizzes, QuizShareStats } from "@/lib/types"
 
@@ -96,12 +95,10 @@ const QuizzesStats = ({
                   <TrophyIcon className="size-[35.62px] fill-background" />
                 </Center>
                 <span className="text-5xl font-bold">
-                  <Highlight
-                    query={`/${totalQuizzesPoints}`}
-                    styles={{ color: "body.medium" }}
-                  >
-                    {totalCorrectAnswers + "/" + totalQuizzesPoints}
-                  </Highlight>
+                  {totalCorrectAnswers}
+                  <span className="text-body-medium">
+                    /{totalQuizzesPoints}
+                  </span>
                 </span>
               </HStack>
 
