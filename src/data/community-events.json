@@ -657,5 +657,13 @@
     "startDate": "2024-12-1",
     "endDate": "2024-12-3",
     "imageUrl": "https://ethriyadh.com/banner.jpg"
-  }
+  },
+{
+    "title": "ETH Pura Vida 2024",
+    "href": "https://ethereum.cr/",
+    "location": "San Jose, Costa Rica",
+    "description": "ETH Pura Vida 2024 brings together developers, entrepreneurs, innovators, and enthusiasts from Latin America and around the world to dive deep into all things Ethereum. Set against the vibrant backdrop of Costa Rica, this hackathon and conference will inspire collaboration and groundbreaking advancements in the ecosystem. Be part of a dynamic event fostering innovation, sustainability, and community in the world of Web3.",
+    "startDate": "2024-10-19",
+    "endDate": "2024-10-26",
+    "imageUrl": "https://ethereum.cr/assets/eth-pura-vida/eth-pura-vida-desktop-graphic.svg"
 ]
