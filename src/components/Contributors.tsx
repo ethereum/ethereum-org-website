@@ -33,19 +33,19 @@ const Contributors = () => {
       <Flex className="flex-wrap">
         {contributorsList.map((contributor) => (
           <Flex
-            className="m-2 max-w-[132px] transform flex-col shadow-table transition-transform duration-100 hover:scale-[1.02] hover:rounded hover:bg-background-table-hover hover:no-underline hover:shadow-table-box-hover focus:scale-[1.02] focus:rounded focus:no-underline focus:shadow-table-box-hover"
+            className="relative z-10 m-2 max-w-[132px] transform flex-col shadow-table transition-transform duration-100 hover:scale-[1.02] hover:rounded hover:bg-background-table-hover hover:no-underline hover:shadow-table-box-hover focus:scale-[1.02] focus:rounded focus:no-underline focus:shadow-table-box-hover"
             key={contributor.login}
           >
+            <img
+              className="h-[132px] w-[132px]"
+              src={contributor.avatar_url}
+              alt={contributor.name}
+            />
             <InlineLink
-              className="block flex-grow text-body no-underline hover:no-underline"
+              className="static flex-grow text-body no-underline before:absolute before:left-0 before:top-0 before:z-0 before:block before:h-full before:w-full before:cursor-pointer before:content-[''] hover:no-underline"
               href={contributor.profile}
               hideArrow
             >
-              <img
-                className="h-[132px] w-[132px]"
-                src={contributor.avatar_url}
-                alt={contributor.name}
-              />
               <div className="p-4">
                 <h3 className="mb-4 mt-2 text-md">{contributor.name}</h3>
               </div>
