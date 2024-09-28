@@ -84,6 +84,7 @@
   "page-index-title": "Раді вітати в Ethereum",
   "page-index-values-description": "Станьте частиною цифрової революції",
   "page-index-values-header": "Інтернет змінюється",
+  "page-index-values-legacy": "Спадок",
   "page-index-values-tag": "Цінності",
   "page-index-values-ownership-legacy-label": "Обмежене володіння",
   "page-index-values-ownership-legacy-content-0": "На традиційних платформах банку чи в соціальних мережах вашими активами й даними керує організація. Ви покладаєтеся на них у питаннях доступу та контролю.",
@@ -115,6 +116,5 @@
   "page-index-values-open-legacy-label": "Закритість для більшості людей",
   "page-index-values-open-legacy-content-0": "Компанії захищають власну інтелектуальну власність, не ділячись нею. Жодна людина поза межами компанії не може дізнатися, як функціонує система, не може розв’язати проблеми чи внести покращення. Людям стає важко створювати нові інструменти й налаштовувати їх під себе.",
   "page-index-values-open-ethereum-label": "Відкритість для всіх",
-  "page-index-values-legacy": "Спадок",
   "page-index-values-open-ethereum-content-0": "Мережа Ethereum відкрита для всіх. Будь-хто може бачити, використовувати й покращувати код, щоб зробити систему зручнішою для людей."
 }
