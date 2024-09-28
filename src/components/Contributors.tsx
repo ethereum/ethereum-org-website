@@ -41,15 +41,15 @@ const Contributors = () => {
               src={contributor.avatar_url}
               alt={contributor.name}
             />
-            <InlineLink
-              className="static flex-grow text-body no-underline before:absolute before:left-0 before:top-0 before:z-0 before:block before:h-full before:w-full before:cursor-pointer before:content-[''] hover:no-underline"
-              href={contributor.profile}
-              hideArrow
-            >
-              <div className="p-4">
+            <div className="p-4">
+              <InlineLink
+                className="static flex-grow text-body no-underline before:absolute before:left-0 before:top-0 before:z-0 before:block before:h-full before:w-full before:cursor-pointer before:content-[''] hover:no-underline"
+                href={contributor.profile}
+                hideArrow
+              >
                 <h3 className="mb-4 mt-2 text-md">{contributor.name}</h3>
-              </div>
-            </InlineLink>
+              </InlineLink>
+            </div>
           </Flex>
         ))}
       </Flex>
