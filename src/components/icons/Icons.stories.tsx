@@ -8,6 +8,7 @@ import { HighlightDarkIcon } from "./HighlightDarkIcon"
 import { HighlightIcon } from "./HighlightIcon"
 import {
   CorrectIcon,
+  GreenTickIcon,
   IncorrectIcon,
   StarConfettiIcon,
   TrophyIcon,
@@ -98,6 +99,7 @@ export default meta
 const iconsDefinitions = [
   CorrectIcon,
   IncorrectIcon,
+  GreenTickIcon,
   StarConfettiIcon,
   TrophyIcon,
   DappnodeIcon,
