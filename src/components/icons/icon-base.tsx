@@ -1,4 +1,7 @@
-import { IconBase as ReactIconBase, type IconBaseProps } from "react-icons/lib"
+import {
+  IconBase as ReactIconBase,
+  type IconBaseProps,
+} from "react-icons/lib/esm/iconBase"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -20,20 +23,24 @@ export const createIconBase = (
     ...defaultProps
   } = options
 
-  const Comp = ({ className, ...props }: IconBaseProps) => (
-    <ReactIconBase
-      className={cn(defaultClassName, className)}
-      // Remove default props that come from `ReactIconBase` with `undefined`
-      strokeWidth={undefined}
-      stroke={undefined}
-      {...defaultProps}
-      {...props}
-    >
-      {children}
-    </ReactIconBase>
-  )
+  const Comp = ({ className, ...props }: IconBaseProps) => {
+    return (
+      <ReactIconBase
+        className={cn(defaultClassName, className)}
+        // Remove default props that come from `ReactIconBase` with `undefined`
+        strokeWidth={undefined}
+        stroke={undefined}
+        {...defaultProps}
+        {...props}
+      >
+        {children}
+      </ReactIconBase>
+    )
+  }
 
   Comp.displayName = displayName
 
   return Comp
 }
+
+export type IconBaseType = ReturnType<typeof createIconBase>

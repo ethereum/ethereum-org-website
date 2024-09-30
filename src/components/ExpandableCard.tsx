@@ -7,18 +7,19 @@ import {
   AccordionPanel,
   Box,
   Heading,
-  type Icon as ChakraIcon,
 } from "@chakra-ui/react"
 
 import Text from "@/components/OldText"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import type { IconBaseType } from "./icons/icon-base"
+
 export type ExpandableCardProps = {
   children?: ReactNode
   contentPreview?: ReactNode
   title: ReactNode
-  svg?: typeof ChakraIcon
+  svg?: IconBaseType
   eventAction?: string
   eventCategory?: string
   eventName?: string
