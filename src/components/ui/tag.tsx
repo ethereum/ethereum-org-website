@@ -9,13 +9,14 @@ const tagVariants = cva(
     variants: {
       status: {
         normal: "bg-background-highlight text-body-medium border-body-medium",
-        tag: "bg-primary-low-contrast text-primary border-primary",
+        tag: "bg-primary-low-contrast text-primary-high-contrast border-primary",
         success: "bg-success-light text-success border-success-border",
         error: "bg-error-light text-error border-error-border",
         warning: "bg-warning-light text-warning-dark border-warning-border",
       },
       variant: {
         subtle: "border-transparent",
+        highContrast: "border-transparent",
         solid: "border-transparent text-body-inverse",
         outline: "bg-transparent",
       },
@@ -45,6 +46,26 @@ const tagVariants = cva(
         variant: "solid",
         status: "warning",
         className: "bg-warning text-warning-dark",
+      },
+      {
+        variant: "highContrast",
+        status: "normal",
+        className: "bg-body-light text-body",
+      },
+      {
+        variant: "highContrast",
+        status: "tag",
+        className: "bg-background-highlight",
+      },
+      {
+        variant: "highContrast",
+        status: "success",
+        className: "text-success-dark",
+      },
+      {
+        variant: "highContrast",
+        status: "error",
+        className: "text-error-dark",
       },
       {
         variant: "outline",

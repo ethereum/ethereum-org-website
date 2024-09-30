@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>
 const statusArray = ["normal", "tag", "success", "error", "warning"] as const
 
 // "subtle" is default variant
-const variantArray = ["subtle", "solid", "outline"] as const
+const variantArray = ["subtle", "highContrast", "solid", "outline"] as const
 
 const StyleVariantList = () => (
   <HStack>
