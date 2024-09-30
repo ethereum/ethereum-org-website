@@ -3,6 +3,7 @@ import shuffle from "lodash/shuffle"
 
 import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
+import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import data from "!!raw-loader!@/../.all-contributorsrc"
 
@@ -32,8 +33,9 @@ const Contributors = () => {
 
       <Flex className="flex-wrap">
         {contributorsList.map((contributor) => (
-          <Flex
-            className="relative z-10 m-2 max-w-[132px] transform flex-col shadow-table transition-transform duration-100 hover:scale-[1.02] hover:rounded hover:bg-background-table-hover hover:no-underline hover:shadow-table-box-hover focus:scale-[1.02] focus:rounded focus:no-underline focus:shadow-table-box-hover"
+          <LinkBox
+            as="div"
+            className="m-2 max-w-[132px] transform shadow-table transition-transform duration-100 hover:scale-[1.02] hover:rounded hover:bg-background-table-hover hover:no-underline hover:shadow-table-box-hover focus:scale-[1.02] focus:rounded focus:no-underline focus:shadow-table-box-hover"
             key={contributor.login}
           >
             <img
@@ -43,16 +45,18 @@ const Contributors = () => {
             />
             <div className="p-4">
               <h3 className="mb-4 mt-2 text-md">
-                <InlineLink
-                  className="static flex-grow text-body no-underline before:absolute before:left-0 before:top-0 before:z-0 before:block before:h-full before:w-full before:cursor-pointer before:content-[''] hover:no-underline"
-                  href={contributor.profile}
-                  hideArrow
-                >
-                  {contributor.name}
-                </InlineLink>
+                <LinkOverlay asChild>
+                  <InlineLink
+                    className="text-body no-underline hover:no-underline"
+                    href={contributor.profile}
+                    hideArrow
+                  >
+                    {contributor.name}
+                  </InlineLink>
+                </LinkOverlay>
               </h3>
             </div>
-          </Flex>
+          </LinkBox>
         ))}
       </Flex>
     </>
