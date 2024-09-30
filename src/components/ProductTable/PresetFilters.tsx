@@ -54,19 +54,34 @@ const PresetFilters = ({
               >
                 <div className="flex items-center gap-2 px-1.5">
                   <input
-                    type="radio"
-                    id={`radio-${idx}`}
+                    type="checkbox"
+                    id={`checkbox-${idx}`}
                     aria-label={`${preset.title} filter`}
                     className="hidden"
                     checked={activePresets.includes(idx)}
-                    onClick={(e) => e.stopPropagation()}
+                    onChange={() => handleSelectPreset(idx)}
                   />
                   <label
-                    htmlFor={`radio-${idx}`}
-                    className={`custom-radio h-5 w-5 ${
-                      activePresets.includes(idx) ? "bg-primary" : ""
-                    } rounded-full border-4 border-background-highlight outline outline-1 outline-primary`}
-                  />
+                    htmlFor={`checkbox-${idx}`}
+                    className={`custom-checkbox h-5 w-5 ${
+                      activePresets.includes(idx) ? "" : ""
+                    } flex items-center justify-center rounded border-2 border-primary`}
+                  >
+                    {activePresets.includes(idx) && (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-4 w-4 text-primary"
+                      >
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    )}
+                  </label>
                   <h3 className="duration-50 text-xl text-primary transition-all group-hover:text-primary-hover">
                     {preset.title}
                   </h3>
