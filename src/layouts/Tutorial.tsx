@@ -29,15 +29,6 @@ import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"
 
-const ContentContainer = (props: HTMLAttributes<HTMLDivElement>) => {
-  return (
-    <MainArticle
-      className="min-w-0 max-w-[1000px] rounded bg-background p-0 lg:p-16 lg:shadow"
-      {...props}
-    />
-  )
-}
-
 const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading1
     className="font-monospace uppercase max-lg:text-[1.75rem]"
@@ -117,7 +108,10 @@ export const TutorialLayout = ({
 
   return (
     <div className="flex w-full gap-8 border-b bg-background p-8 lg:mx-auto lg:bg-background-highlight lg:shadow">
-      <ContentContainer dir={contentNotTranslated ? "ltr" : "unset"}>
+      <MainArticle
+        className="min-w-0 max-w-[1000px] rounded bg-background p-0 lg:p-16 lg:shadow"
+        dir={contentNotTranslated ? "ltr" : "unset"}
+      >
         <Heading1>{frontmatter.title}</Heading1>
         <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
         <TableOfContents
@@ -133,7 +127,7 @@ export const TutorialLayout = ({
           lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         />
         <FeedbackCard />
-      </ContentContainer>
+      </MainArticle>
       {tocItems && (
         <TableOfContents
           items={tocItems}
