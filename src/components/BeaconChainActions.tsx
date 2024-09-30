@@ -21,18 +21,18 @@ const BeaconChainActions = () => {
 
   const datapoints: CardListItem[] = [
     {
-      title: t("consensus-beaconscan-title"),
+      title: t("page-upgrades:consensus-beaconscan-title"),
       image: beaconscan,
       alt: "",
       link: "https://beaconscan.com",
-      description: t("consensus-beaconscan-desc"),
+      description: t("page-upgrades:consensus-beaconscan-desc"),
     },
     {
-      title: t("consensus-beaconscan-in-title"),
+      title: t("page-upgrades:consensus-beaconscan-in-title"),
       image: beaconchain,
       alt: "",
       link: "https://beaconcha.in",
-      description: t("consensus-beaconcha-in-desc"),
+      description: t("page-upgrades:consensus-beaconcha-in-desc"),
     },
   ]
 
@@ -64,24 +64,24 @@ const BeaconChainActions = () => {
           me={{ base: 0, md: 4 }}
           mb={{ base: 8, md: 0 }}
           emoji=":money_with_wings:"
-          title={t("consensus-become-staker")}
-          description={t("consensus-become-staker-desc")}
+          title={t("page-upgrades:consensus-become-staker")}
+          description={t("page-upgrades:consensus-become-staker-desc")}
         >
           <ButtonLink className="mb-3" href="https://launchpad.ethereum.org">
             <Translation id="get-started" />
           </ButtonLink>
           <ButtonLink variant="outline" href="/staking/">
-            <Translation id="page-upgrades-index-staking-learn" />
+            <Translation id="page-upgrades-index:page-upgrades-index-staking-learn" />
           </ButtonLink>
         </Card>
       </Flex>
       <H3>
-        <Translation id="consensus-explore" />
+        <Translation id="page-upgrades:consensus-explore" />
       </H3>
 
       <CardList items={datapoints} />
       <H3>
-        <Translation id="read-more" />
+        <Translation id="page-upgrades:read-more" />
       </H3>
       <CardList items={reads} />
     </div>
