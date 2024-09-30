@@ -55,7 +55,7 @@ export const WalletFilters = (): FilterOption[] => {
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
                   trackCustomEvent({
                     eventCategory: "WalletFilterSidebar",
-                    eventAction: `${t("page-find-wallet-mobile")}`,
+                    eventAction: "mobile",
                     eventName: `mobile ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
