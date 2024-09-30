@@ -433,4 +433,5 @@ Cu alte cuvinte, dacă Visa procesează 140.839.000.000 de tranzacții ce costă
 <Alert>
   <AlertEmoji text=":evergreen_tree:">
   În cazul în care considerați că aceste statistici sunt incorecte sau se poate crește precizia lor, vă rugăm să semnalați o problemă sau să creați un PR. Acestea sunt estimări făcute de echipa ethereum.org utilizând informații accesibile publicului și ce este în faza de proiect pentru Ethereum. Aceasta nu reprezintă o promisiune oficială din partea Fundației Ethereum.
-</AlertEmoji>
+  </AlertEmoji>
+</Alert>
