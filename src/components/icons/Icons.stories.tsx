@@ -180,9 +180,9 @@ const iconsDefinitions = [
 iconsDefinitions.sort((a, b) =>
   (a?.displayName || "") > (b?.displayName || "") ? 1 : -1
 )
-const items = iconsDefinitions.map((IconDef) => (
+const items = iconsDefinitions.map((IconDef, idx) => (
   <Flex
-    key={IconDef.displayName}
+    key={idx}
     direction="column"
     gap={4}
     p={4}
