@@ -60,12 +60,14 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
           {deviceLabels.length > 0 && (
             <div className="flex flex-row gap-2">
               <DevicesIcon />
-              {deviceLabels.join(" · ")}
+              <p className="text-md">{deviceLabels.join(" · ")}</p>
             </div>
           )}
           <div className="flex flex-row gap-2">
             <LanguagesIcon />
-            {formatStringList(wallet.supportedLanguages, 5)}{" "}
+            <p className="text-md">
+              {formatStringList(wallet.supportedLanguages, 5)}{" "}
+            </p>
             <SupportedLanguagesTooltip
               supportedLanguages={wallet.supportedLanguages}
             />
