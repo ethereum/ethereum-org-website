@@ -56,11 +56,13 @@ Total ETH supply: **~120,520,000 ETH** (at time of The Merge in September 2022)
 
 <Alert>
 <AlertContent>
+<AlertDescription>
 <strong>Total annualized issuance rate (pre-merge): ~4.61%</strong> (4.09% + 0.52%)<br/><br/>
 <strong>~88.7%</strong> of the issuance was going to miners on the execution layer (4.09 / 4.61 * 100)<br/><br/>
 <strong>~11.3%</strong> was being issued to stakers on the consensus layer (0.52 / 4.61 * 100)
+</AlertDescription>
 </AlertContent>
-</AlertContent>
+</Alert>
 
 ## Post-merge (present day) {#post-merge}
 
