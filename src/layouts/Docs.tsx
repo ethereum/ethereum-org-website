@@ -37,17 +37,6 @@ import YouTube from "@/components/YouTube"
 import { cn } from "@/lib/utils/cn"
 import { getEditPath } from "@/lib/utils/editPath"
 
-const Page = (props: HTMLAttributes<HTMLDivElement>) => (
-  <div className="flex w-full flex-col border-b" {...props} />
-)
-
-const ContentContainer = (props: HTMLAttributes<HTMLDivElement>) => (
-  <div
-    className="flex justify-between bg-background-highlight lg:pe-8"
-    {...props}
-  />
-)
-
 const baseHeadingClasses = "font-mono uppercase font-bold scroll-mt-40"
 
 const H1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
@@ -76,15 +65,6 @@ const H3 = (props: HTMLAttributes<HTMLHeadingElement>) => (
 const H4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading4 className={baseSubHeadingClasses} {...props} />
 )
-
-const Content = (props: ChildOnlyProp) => {
-  return (
-    <MainArticle
-      className="min-w-0 flex-1 px-8 pb-8 pt-8 md:px-16 md:pb-16 md:pt-12"
-      {...props}
-    />
-  )
-}
 
 const BackToTop = (props: ChildOnlyProp) => (
   <div className="display-none mt-12 flex border-t pt-8" {...props}>
@@ -140,16 +120,19 @@ export const DocsLayout = ({
   const absoluteEditPath = getEditPath(relativePath)
 
   return (
-    <Page>
+    <div className="flex w-full flex-col border-b">
       <SideNavMobile path={relativePath} />
       {isPageIncomplete && (
         <BannerNotification shouldShow={isPageIncomplete}>
           <Translation id="page-developers-docs:banner-page-incomplete" />
         </BannerNotification>
       )}
-      <ContentContainer dir={contentNotTranslated ? "ltr" : "unset"}>
+      <div
+        className="flex justify-between bg-background-highlight lg:pe-8"
+        dir={contentNotTranslated ? "ltr" : "unset"}
+      >
         <SideNav path={relativePath} />
-        <Content>
+        <MainArticle className="min-w-0 flex-1 px-8 pb-8 pt-8 md:px-16 md:pb-16 md:pt-12">
           <H1 id="top">{frontmatter.title}</H1>
           <FileContributors
             contributors={contributors}
@@ -167,7 +150,7 @@ export const DocsLayout = ({
           <BackToTop />
           <FeedbackCard isArticle />
           <DocsNav contentNotTranslated={contentNotTranslated} />
-        </Content>
+        </MainArticle>
         {tocItems && (
           <TableOfContents
             editPath={absoluteEditPath}
@@ -177,7 +160,7 @@ export const DocsLayout = ({
             pt={isPageIncomplete ? "5rem" : "3rem"}
           />
         )}
-      </ContentContainer>
-    </Page>
+      </div>
+    </div>
   )
 }
