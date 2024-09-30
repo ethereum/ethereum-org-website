@@ -72,7 +72,9 @@ const PresetFilters = ({
                   </h3>
                 </div>
                 {!showMobileSidebar && (
-                  <p className="p-2 text-sm">{preset.description}</p>
+                  <p className="p-2 text-sm text-body-medium">
+                    {preset.description}
+                  </p>
                 )}
               </div>
             </div>
