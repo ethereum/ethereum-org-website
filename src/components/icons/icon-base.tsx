@@ -25,6 +25,9 @@ export const createIconBase = (
   const Comp = ({ className, ...props }: IconBaseProps) => (
     <ReactIconBase
       className={cn(defaultClassName, className)}
+      // Remove default props that come from `ReactIconBase` with `undefined`
+      strokeWidth={undefined}
+      stroke={undefined}
       {...defaultProps}
       {...props}
     >
