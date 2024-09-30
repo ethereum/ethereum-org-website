@@ -9,7 +9,9 @@ Le réseau Ethereum a commencé par utiliser un mécanisme de consensus basé su
 <Alert>
 <AlertEmoji text=":wave:" />
 <AlertContent>
+<AlertDescription>
     La preuve de travail est maintenant obsolète. Ethereum n'utilise plus la preuve de travail dans le cadre de son mécanisme de consensus. En lieu et place, Ethereum utilise la preuve d'enjeu. En savoir plus sur la <a href="/developers/docs/consensus-mechanisms/pos/">preuve d'enjeu</a> et le <a href="/staking/">staking</a>.
+</AlertDescription>
 </AlertContent>
 </Alert>
 

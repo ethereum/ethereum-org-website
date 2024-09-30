@@ -9,7 +9,9 @@ Ethereum ağı, **[İş İspatı (PoW)](/developers/docs/consensus-mechanisms/po
 <Alert>
 <AlertEmoji text=":wave:" />
 <AlertContent>
+<AlertDescription>
     İş ispatı artık kullanımdan kaldırılmıştır. Ethereum artık mutabakat mekanizmasının bir parçası olan iş ispatını kullanmamaktadır. Bunun yerine hisse ispatı kullanılmaktadır. <a href="/developers/docs/consensus-mechanisms/pos/">Hisse ispatı</a> ve <a href="/staking/">hisseleme</a> hakkında daha fazla bilgi edinin.
+</AlertDescription>
 </AlertContent>
 </Alert>
 

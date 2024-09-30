@@ -9,7 +9,9 @@ lang: zh-tw
 <Alert>
 <AlertEmoji text=":wave:" />
 <AlertContent>
+<AlertDescription>
     現在，業界普遍都已棄用工作量證明。 以太坊亦不在其共識機制內使用工作量證明。 取而代之的，是權益證明。 閱讀更多關於<a href="/developers/docs/consensus-mechanisms/pos/">權益證明</a>和<a href="/staking/">質押</a>的資訊。
+</AlertDescription>
 </AlertContent>
 </Alert>
 

@@ -7,7 +7,9 @@ lang: hu
 <Alert>
 <AlertEmoji text=":wave:" />
 <AlertContent>
+<AlertDescription>
    Az Ethash volt az Ethereum proof-of-work (munkaigazolás) bányászati algoritmusa. A proof-of-work jelenleg **teljesen ki van kapcsolva**, az Ethereumot pedig a <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake</a> mechanizmus biztosítja. Tudjon meg többet az <a href="/roadmap/merge/">egyesítés (Merge)</a>, <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake (letéti igazolás)</a> és <a href="/staking/">letétbe helyezés</a> témákról. Ez az oldal elavult témákat tartalmaz!  
+</AlertDescription>
 </AlertContent>
 </Alert>
 

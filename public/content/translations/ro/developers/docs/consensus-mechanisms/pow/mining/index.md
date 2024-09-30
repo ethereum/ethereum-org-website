@@ -18,7 +18,9 @@ Ethereum, la fel ca Bitcoin, utilizează în prezent un mecanism de consens prin
 <Alert>
 <AlertEmoji text=":wave:" />
 <AlertContent>
+<AlertDescription>
    Dovada-mizei va înlocui minarea și dovada-muncii în cursul anului viitor. Puteți începe de astăzi să vă mizați ETH-ul. <a href="/staking/">Aflați mai multe despre mizare</a>    
+</AlertDescription>
 </AlertContent>
 </Alert>
 

@@ -7,7 +7,9 @@ lang: tr
 <Alert>
 <AlertEmoji text=":wave:" />
 <AlertContent>
+<AlertDescription>
    Ethash, Ethereum'un iş ispatı madencilik algoritmasıydı. İş ispatı tamamen durdurulmuş ve Ethereum, <a href="/developers/docs/consensus-mechanisms/pos/">hisse ispatı</a> ile güvence altına alınmıştır. <a href="/roadmap/merge/">Birleşim</a>, <a href="/developers/docs/consensus-mechanisms/pos/">hisse ispatı</a>ve <a href="/staking/">hisseleme</a> hakkında daha fazla bilgi edinin. Bu sayfa sadece tarihsel ilgi içindir!  
+</AlertDescription>
 </AlertContent>
 </Alert>
 

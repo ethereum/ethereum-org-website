@@ -9,7 +9,9 @@ Az Ethereum-hálózat kezdetben egy olyan konszenzusmechanizmust használt, amel
 <Alert>
 <AlertEmoji text=":wave:" />
 <AlertContent>
+<AlertDescription>
     A proof-of-work ezzel kivezetésre került. A konszenzusmechanizmusnak többé nem része a proof-of-work az Ethereumon. Ehelyett a proof-of-stake mechanizmus működik. Tudjon meg többet a <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake-ről</a> és a <a href="/staking/">letétbe helyezésről</a>.
+</AlertDescription>
 </AlertContent>
 </Alert>
 

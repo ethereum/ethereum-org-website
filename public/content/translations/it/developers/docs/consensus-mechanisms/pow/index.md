@@ -9,7 +9,9 @@ La rete Ethereum venne avviata usando un meccanismo di consenso che utilizzava i
 <Alert>
 <AlertEmoji text=":wave:" />
 <AlertContent>
+<AlertDescription>
     Il Proof of Work è diventato ormai obsoleto. Ethereum non usa più il Proof of Work come parte del suo meccanismo di consenso, e usa invece il Proof of Stake. Leggi di più sul <a href="/developers/docs/consensus-mechanisms/pos/">Proof of Stake</a> e sullo <a href="/staking/">staking</a>.
+</AlertDescription>
 </AlertContent>
 </Alert>
 

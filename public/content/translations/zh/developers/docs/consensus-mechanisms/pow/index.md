@@ -9,7 +9,9 @@ lang: zh
 <Alert>
 <AlertEmoji text=":wave:" />
 <AlertContent>
+<AlertDescription>
     工作量证明现已弃用。 以太坊不再使用工作量证明作为其部分共识机制。 它改用权益证明。 阅读有关<a href="/developers/docs/consensus-mechanisms/pos/">权益证明</a>和<a href="/staking/">质押</a>的更多信息。
+</AlertDescription>
 </AlertContent>
 </Alert>
 

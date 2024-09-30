@@ -18,7 +18,9 @@ incomplete: true
 <Alert>
 <AlertEmoji text=":wave:" />
 <AlertContent>
+<AlertDescription>
    Доказательство владения заменит майнинг и доказательство работы в течение следующего года. Вы можете начать ставить свои ETH уже сегодня. <a href="/staking/">Подробнее о стейкинге</a>    
+</AlertDescription>
 </AlertContent>
 </Alert>
 

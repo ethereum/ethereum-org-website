@@ -7,7 +7,9 @@ lang: ja
 <Alert>
 <AlertEmoji text=":wave:" />
 <AlertContent>
+<AlertDescription>
    Ethashは、イーサリアムのプルーフ・オブ・ワークのマイニングアルゴリズムでした。 プルーフ・オブ・ワークは、今『完全に廃止』されており、イーサリアムは現在<a href="/developers/docs/consensus-mechanisms/pos/">プルーフ・オブ・ステーク</a>により安全が確保されています。 詳細については、<a href="/roadmap/merge/">マージ</a>、<a href="/developers/docs/consensus-mechanisms/pos/">プルーフ・オブ・ステーク</a>および<a href="/staking/">ステーキング</a>を参照してください。 このページについては、これまでのイーサリアムの歩みを学ぶための参考としてお読みください。  
+</AlertDescription>
 </AlertContent>
 </Alert>
 

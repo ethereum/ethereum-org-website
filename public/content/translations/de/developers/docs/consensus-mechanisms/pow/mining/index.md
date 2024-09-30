@@ -18,7 +18,9 @@ Ethereum verwendet derzeit, genau wie Bitcoin, einen [Proof-of-Work (PoW)](/deve
 <Alert>
 <AlertEmoji text=":wave:" />
 <AlertContent>
+<AlertDescription>
    Proof-of-Stake wird im Laufe des nächsten Jahres Mining und Proof-of-Work ersetzen. Du kannst schon heute mit dem Staking deiner ETH beginnen. <a href="/staking/">Mehr zum Staking</a>    
+</AlertDescription>
 </AlertContent>
 </Alert>
 

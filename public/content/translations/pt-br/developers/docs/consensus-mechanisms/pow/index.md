@@ -9,7 +9,9 @@ A rede Ethereum começou usando um mecanismo de consenso que envolvia **[Prova d
 <Alert>
 <AlertEmoji text=":wave:" />
 <AlertContent>
+<AlertDescription>
     A prova de trabalho agora está obsoleta. O Ethereum não usa mais a prova de trabalho como parte de seu mecanismo de consenso. Em vez disso, ele usa a prova de participação. Leia mais sobre <a href="/developers/docs/consensus-mechanisms/pos/">prova de participação</a> e <a href="/staking/">participação</a>.
+</AlertDescription>
 </AlertContent>
 </Alert>
 

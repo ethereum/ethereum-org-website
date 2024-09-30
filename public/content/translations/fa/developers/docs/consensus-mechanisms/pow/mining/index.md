@@ -18,7 +18,9 @@ incomplete: true
 <Alert>
 <AlertEmoji text=":wave:" />
 <AlertContent>
+<AlertDescription>
    اثبات سهام در سال آینده جایگزین استخراج و اثبات کار خواهد شد. شما می‌توانید از امروز شروع به سهام‌گذاری اتر خود کنید. <a href="/staking/">اطلاعات بیشتر در مورد سهام‌گذاری</a>    
+</AlertDescription>
 </AlertContent>
 </Alert>
 
