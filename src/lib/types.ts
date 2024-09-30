@@ -458,10 +458,6 @@ export type CommonHeroProps<
    * Preface text about the content in the given page
    */
   description: ReactNode
-  /**
-   * The maximum height of the image in the hero
-   */
-  maxHeight?: string
 }
 
 // Learning Tools

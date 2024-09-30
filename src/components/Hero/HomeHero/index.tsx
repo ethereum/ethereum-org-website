@@ -26,7 +26,7 @@ const HomeHero = ({ heroImg, className }: HomeHeroProps) => {
         <Morpher />
         <div className="flex flex-col items-center gap-y-5 lg:max-w-2xl">
           <h1 className="font-black">{t("page-index:page-index-title")}</h1>
-          <p className="max-w-96 text-body-medium">
+          <p className="max-w-96 text-md text-body-medium lg:text-lg">
             {t("page-index:page-index-description")}
           </p>
         </div>

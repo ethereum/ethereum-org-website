@@ -161,10 +161,10 @@ export interface IGetInvolvedCard {
 }
 
 /**
- * TitleCardList
+ * Codeblock
  */
 
-export interface ITitleCardItem {
+export interface CodeExample {
   title: string
   description: string
   caption?: string
@@ -172,13 +172,7 @@ export interface ITitleCardItem {
   image?: string
   alt?: string
   id?: number
-}
-
-/**
- * Codeblock
- */
-
-export interface CodeExample extends ITitleCardItem {
   codeLanguage: string
   code: string
+  eventName: string
 }
