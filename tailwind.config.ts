@@ -309,6 +309,25 @@ const config = {
         }
       )
     }),
+    plugin(function ({ matchUtilities, theme }) {
+      /**
+       * Extend the `inset` utility by including `inset-start` and `inset-end`.
+       *
+       * This allows the ability to strictly declare a left or right value that
+       * is i18n aware.
+       */
+      matchUtilities(
+        {
+          "inset-start": (value) => ({
+            "inset-inline-start": value,
+          }),
+          "inset-end": (value) => ({
+            "inset-inline-end": value,
+          }),
+        },
+        { values: theme("inset") }
+      )
+    }),
   ],
 } satisfies Config
 
