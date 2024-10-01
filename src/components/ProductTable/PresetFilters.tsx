@@ -2,6 +2,8 @@ import { useTranslation } from "react-i18next"
 
 import type { TPresetFilters } from "@/lib/types"
 
+import { cn } from "@/lib/utils/cn"
+
 export interface PresetFiltersProps {
   presets: TPresetFilters
   activePresets: number[]
@@ -19,9 +21,7 @@ const PresetFilters = ({
 
   return (
     <div>
-      <h3
-        className={`mb-3 text-xl font-bold ${showMobileSidebar ? "" : "px-4"}`}
-      >
+      <h3 className={cn("mb-3 text-xl font-bold", showMobileSidebar && "px-4")}>
         {t("table-what-are-you-looking-for")}
       </h3>
       <div
@@ -38,11 +38,12 @@ const PresetFilters = ({
               className={showMobileSidebar ? "w-full" : "grid-rows-1"}
             >
               <button
-                className={`flex h-full w-full flex-col items-start border-2 p-2 ${
+                className={cn(
+                  "duration-50 group flex h-full w-full cursor-pointer flex-col items-start rounded border-2 bg-background-highlight p-2 transition-all hover:border-primary-hover",
                   activePresets.includes(idx)
                     ? "border-primary"
                     : "border-transparent"
-                } duration-50 group cursor-pointer rounded bg-background-highlight transition-all hover:border-primary-hover`}
+                )}
                 onClick={() => handleSelectPreset(idx)}
               >
                 <div className="flex items-center gap-2 px-1.5">
@@ -56,9 +57,7 @@ const PresetFilters = ({
                   />
                   <label
                     htmlFor={`checkbox-${idx}`}
-                    className={`custom-checkbox h-5 w-5 ${
-                      activePresets.includes(idx) ? "" : ""
-                    } flex items-center justify-center rounded border-2 border-primary`}
+                    className="custom-checkbox flex h-5 w-5 items-center justify-center rounded border-2 border-primary"
                   >
                     {activePresets.includes(idx) && (
                       <svg
