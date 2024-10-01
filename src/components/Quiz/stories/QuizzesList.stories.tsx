@@ -20,8 +20,8 @@ const meta = {
   component: QuizzesListComponent,
   args: {
     content: ethereumBasicsQuizzes,
-    headingId: "basics",
-    descriptionId: "basics-description",
+    headingId: getTranslation("basics", "learn-quizzes"),
+    descriptionId: getTranslation("basics-description", "learn-quizzes"),
     userStats: {
       score: 0,
       average: [],
@@ -35,13 +35,7 @@ const meta = {
 export default meta
 
 export const Default: StoryObj<typeof meta> = {
-  render: ({ headingId, descriptionId, ...args }) => (
-    <QuizzesListComponent
-      {...args}
-      headingId={getTranslation(headingId, "learn-quizzes")}
-      descriptionId={getTranslation(descriptionId, "learn-quizzes")}
-    />
-  ),
+  render: (args) => <QuizzesListComponent {...args} />,
 }
 
 export const OneCompletedQuiz: StoryObj<typeof meta> = {
@@ -56,11 +50,5 @@ export const OneCompletedQuiz: StoryObj<typeof meta> = {
       },
     },
   },
-  render: ({ headingId, descriptionId, ...args }) => (
-    <QuizzesListComponent
-      {...args}
-      headingId={getTranslation(headingId, "learn-quizzes")}
-      descriptionId={getTranslation(descriptionId, "learn-quizzes")}
-    />
-  ),
+  render: (args) => <QuizzesListComponent {...args} />,
 }
