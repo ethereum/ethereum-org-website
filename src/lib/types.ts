@@ -580,8 +580,8 @@ export interface WalletData {
   last_updated: string
   name: string
   image: StaticImageData
-  color: string
-  brand_color: string
+  twBackgroundColor: string
+  twGradiantBrandColor: string
   url: string
   active_development_team: boolean
   languages_supported: Lang[]
