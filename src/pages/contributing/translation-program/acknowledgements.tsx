@@ -92,7 +92,7 @@ const TranslatorAcknowledgements = () => {
       />
 
       <Content>
-        <Breadcrumbs slug={router.asPath} mt={12} />
+        <Breadcrumbs slug={router.asPath} className="mt-12" />
         <ContentHeading
           as="h1"
           fontSize={{ base: "2rem", sm: "2.5rem", md: "5xl" }}

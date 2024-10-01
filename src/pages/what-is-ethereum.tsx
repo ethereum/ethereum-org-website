@@ -29,14 +29,19 @@ import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
-import Slider, { EmblaSlide } from "@/components/Slider"
 import StatErrorMessage from "@/components/StatErrorMessage"
-import Tabs from "@/components/Tabs"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import { Center, Flex, HStack, Stack, VStack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
+import {
+  Swiper,
+  SwiperContainer,
+  SwiperNavigation,
+  SwiperSlide,
+} from "@/components/ui/swiper"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -114,8 +119,11 @@ const Section = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => (
   <section className={cn("w-full px-8 py-12", className)} {...rest} />
 )
 
-export const Width60 = (props: ChildOnlyProp) => (
-  <div className="w-full flex-[3]" {...props} />
+export const Width60 = ({
+  className,
+  children,
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div className={cn("w-full flex-[3]", className)}>{children}</div>
 )
 
 export const Width40 = (props: ChildOnlyProp) => (
@@ -280,7 +288,7 @@ const WhatIsEthereumPage = ({
         </Stack>
       ),
     },
-  ]
+  ] as const
 
   const slides = [
     { eventName: "Payments slide" },
@@ -375,15 +383,28 @@ const WhatIsEthereumPage = ({
                 <TwoColumnContent>
                   <Width60>
                     <Tabs
-                      onTabClick={(index) => {
+                      defaultValue="0"
+                      onValueChange={(index) => {
                         trackCustomEvent({
                           eventCategory: `Blockchain/crypto tab`,
                           eventAction: `Clicked`,
                           eventName: tabs[index].eventName,
                         })
                       }}
-                      tabs={tabs}
-                    />
+                    >
+                      <TabsList>
+                        {tabs.map((tab, index) => (
+                          <TabsTrigger key={index} value={index.toString()}>
+                            {tab.title}
+                          </TabsTrigger>
+                        ))}
+                      </TabsList>
+                      {tabs.map((tab, index) => (
+                        <TabsContent key={index} value={index.toString()}>
+                          {tab.content}
+                        </TabsContent>
+                      ))}
+                    </Tabs>
                   </Width60>
                   <Width40 />
                 </TwoColumnContent>
@@ -393,57 +414,70 @@ const WhatIsEthereumPage = ({
 
           <Section>
             <TwoColumnContent>
-              <Width60>
+              <Width60 className="lg:max-w-[60%]">
                 <H2>
                   {t("page-what-is-ethereum-why-would-i-use-ethereum-title")}
                 </H2>
-                <Stack className="gap-6">
+                <Stack className="max-w-full gap-6">
                   <p>{t("page-what-is-ethereum-why-would-i-use-ethereum-1")}</p>
                   <p>{t("page-what-is-ethereum-why-would-i-use-ethereum-2")}</p>
 
-                  <Slider
-                    onSlideChange={(index) => {
-                      trackCustomEvent({
-                        eventCategory: `What is Ethereum - Slider`,
-                        eventAction: `Clicked`,
-                        eventName: slides[index].eventName,
-                      })
-                    }}
-                  >
-                    <EmblaSlide>
-                      <H3>{t("page-what-is-ethereum-slide-1-title")}</H3>
-                      <Stack className="mb-4 gap-6">
-                        <p>
-                          <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-1-desc-1" />
-                        </p>
-                        <p>{t("page-what-is-ethereum-slide-1-desc-2")}</p>
-                      </Stack>
-                    </EmblaSlide>
-                    <EmblaSlide>
-                      <H3>{t("page-what-is-ethereum-slide-2-title")}</H3>
-                      <Stack className="mb-4 gap-6">
-                        <p>{t("page-what-is-ethereum-slide-2-desc-1")}</p>
-                        <p>
-                          <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-2-desc-2" />
-                        </p>
-                      </Stack>
-                    </EmblaSlide>
-                    <EmblaSlide>
-                      <H3>{t("page-what-is-ethereum-slide-3-title")}</H3>
-                      <Stack className="mb-4 gap-6">
-                        <p>
-                          <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-3-desc-1" />
-                        </p>
-                      </Stack>
-                    </EmblaSlide>
-                    <EmblaSlide>
-                      <H3>{t("page-what-is-ethereum-slide-4-title")}</H3>
-                      <Stack className="mb-4 gap-6">
-                        <p>{t("page-what-is-ethereum-slide-4-desc-1")}</p>
-                        <p>{t("page-what-is-ethereum-slide-4-desc-2")}</p>
-                      </Stack>
-                    </EmblaSlide>
-                  </Slider>
+                  <div className="max-w-full">
+                    <SwiperContainer className="rounded border bg-background p-8">
+                      <Swiper
+                        onSlideChange={({ activeIndex }) => {
+                          trackCustomEvent({
+                            eventCategory: `What is Ethereum - Slider`,
+                            eventAction: `Clicked`,
+                            eventName: slides[activeIndex].eventName,
+                          })
+                        }}
+                      >
+                        <SwiperSlide>
+                          <div className="space-y-8">
+                            <H3>{t("page-what-is-ethereum-slide-1-title")}</H3>
+                            <div className="mb-4 flex flex-col gap-6">
+                              <p>
+                                <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-1-desc-1" />
+                              </p>
+                              <p>{t("page-what-is-ethereum-slide-1-desc-2")}</p>
+                            </div>
+                          </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <div className="space-y-8">
+                            <H3>{t("page-what-is-ethereum-slide-2-title")}</H3>
+                            <div className="mb-4 flex flex-col gap-6">
+                              <p>{t("page-what-is-ethereum-slide-2-desc-1")}</p>
+                              <p>
+                                <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-2-desc-2" />
+                              </p>
+                            </div>
+                          </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <div className="space-y-8">
+                            <H3>{t("page-what-is-ethereum-slide-3-title")}</H3>
+                            <div className="mb-4 flex flex-col gap-6">
+                              <p>
+                                <Translation id="page-what-is-ethereum:page-what-is-ethereum-slide-3-desc-1" />
+                              </p>
+                            </div>
+                          </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <div className="space-y-8">
+                            <H3>{t("page-what-is-ethereum-slide-4-title")}</H3>
+                            <div className="mb-4 flex flex-col gap-6">
+                              <p>{t("page-what-is-ethereum-slide-4-desc-1")}</p>
+                              <p>{t("page-what-is-ethereum-slide-4-desc-2")}</p>
+                            </div>
+                          </div>
+                        </SwiperSlide>
+                        <SwiperNavigation />
+                      </Swiper>
+                    </SwiperContainer>
+                  </div>
                 </Stack>
               </Width60>
               <Width40>

@@ -35,6 +35,7 @@ import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 
 import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -193,8 +194,6 @@ export const getStaticProps = (async ({ locale }) => {
 }) satisfies GetStaticProps<Props>
 
 const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
-
-const Divider = () => <Box my={16} w="10%" h={1} bg="homeDivider" />
 
 const EditorsChoice = (props: FlexProps) => (
   <Flex

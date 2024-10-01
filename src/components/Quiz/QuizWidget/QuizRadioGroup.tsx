@@ -67,9 +67,9 @@ export const QuizRadioGroup = ({
   return (
     <fieldset className="w-full" {...getRootProps()}>
       <legend className="mb-6 w-full text-center text-2xl font-bold">
-        <div className="sr-only">
+        <span className="sr-only">
           {t("question-number", { number: currentQuestionIndex + 1 })}
-        </div>
+        </span>
         {t(prompt)}
       </legend>
 

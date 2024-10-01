@@ -20,18 +20,15 @@ import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import LeftNavBar from "@/components/LeftNavBar"
-import {
-  ContentContainer,
-  MobileButton,
-  MobileButtonDropdown,
-  Page,
-} from "@/components/MdComponents"
+import { ContentContainer, Page } from "@/components/MdComponents"
+import MobileButtonDropdown from "@/components/MobileButtonDropdown"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
 import StakingHierarchy from "@/components/Staking/StakingHierarchy"
 import StakingStatsBox from "@/components/Staking/StakingStatsBox"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 import { Flex, Stack, VStack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
@@ -57,10 +54,6 @@ type BenefitsType = {
 
 const PageContainer = (props: ChildOnlyProp) => (
   <VStack className="mx-auto w-full gap-0" {...props} />
-)
-
-const Divider = () => (
-  <div className="my-8 h-1 w-[10%] self-center bg-primary-high-contrast" />
 )
 
 const HeroStatsWrapper = (props: ChildOnlyProp) => (
@@ -635,9 +628,7 @@ const StakingPage = ({
             </div>
           </Flex>
         </ContentContainer>
-        <MobileButton>
-          <MobileButtonDropdown list={dropdownLinks} />
-        </MobileButton>
+        <MobileButtonDropdown list={dropdownLinks} />
       </Page>
     </PageContainer>
   )

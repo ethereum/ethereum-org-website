@@ -24,6 +24,7 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
+import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -77,10 +78,6 @@ const Content = ({ children }: ChildOnlyProp) => {
       {children}
     </Box>
   )
-}
-
-const Divider = () => {
-  return <Box my={16} w="10%" h={1} bgColor="homeDivider" />
 }
 
 const Page = ({ children }: ChildOnlyProp) => {

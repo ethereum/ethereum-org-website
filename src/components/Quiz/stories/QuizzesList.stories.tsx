@@ -7,7 +7,6 @@ import { ethereumBasicsQuizzes } from "@/data/quizzes"
 
 import { getTranslation } from "@/storybook-utils"
 
-import { langViewportModes } from "../../../../.storybook/modes"
 import QuizzesListComponent from "../QuizzesList"
 
 /**
@@ -19,13 +18,6 @@ import QuizzesListComponent from "../QuizzesList"
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizzesList",
   component: QuizzesListComponent,
-  parameters: {
-    chromatic: {
-      modes: {
-        ...langViewportModes,
-      },
-    },
-  },
   args: {
     content: ethereumBasicsQuizzes,
     headingId: "basics",

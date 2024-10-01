@@ -1,11 +1,8 @@
-import { ComponentProps, type HTMLAttributes } from "react"
+import { type HTMLAttributes } from "react"
 import { Badge, Box, type BoxProps } from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
-import ButtonDropdown, {
-  type ButtonDropdownProps,
-} from "@/components/ButtonDropdown"
 import Contributors from "@/components/Contributors"
 import MarkdownImage from "@/components/MarkdownImage"
 import TooltipLink from "@/components/TooltipLink"
@@ -27,6 +24,7 @@ import LocaleDateTime from "../LocaleDateTime"
 import MainArticle from "../MainArticle"
 import { StandaloneQuizWidget } from "../Quiz/QuizWidget"
 import { ButtonLink } from "../ui/buttons/Button"
+import { Divider } from "../ui/divider"
 import { Flex } from "../ui/flex"
 import { ListItem, OrderedList, UnorderedList } from "../ui/list"
 import { mdxTableComponents } from "../ui/Table"
@@ -154,36 +152,6 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   )
 }
 
-export const MobileButton = (props: ChildOnlyProp) => {
-  return (
-    <div
-      className="sticky bottom-0 z-sticky w-full bg-background p-8 shadow-md lg:hidden"
-      {...props}
-    />
-  )
-}
-
-export const StyledButtonDropdown = ({
-  list,
-  className,
-  ...rest
-}: HTMLAttributes<HTMLDivElement> & Pick<ButtonDropdownProps, "list">) => (
-  <Flex className={cn("mb-8 items-end justify-end", className)} {...rest}>
-    <ButtonDropdown list={list} w={{ base: "full", lg: "auto" }} minW="240px" />
-  </Flex>
-)
-
-export const MobileButtonDropdown = ({
-  className,
-  ...props
-}: ComponentProps<typeof StyledButtonDropdown>) => (
-  <StyledButtonDropdown className={cn("mb-0", className)} {...props} />
-)
-
-export const Divider = () => (
-  <div className="my-16 h-1 w-[10%] bg-primary-high-contrast" />
-)
-
 // All custom React components
 export const reactComponents = {
   Badge,
@@ -199,11 +167,8 @@ export const reactComponents = {
   FeaturedText,
   GlossaryTooltip,
   InfoBanner,
-  MobileButton,
-  MobileButtonDropdown,
   Page,
   QuizWidget: StandaloneQuizWidget,
-  StyledButtonDropdown,
   IssuesList,
   Title,
   YouTube,
