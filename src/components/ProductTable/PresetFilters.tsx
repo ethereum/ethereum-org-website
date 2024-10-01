@@ -37,20 +37,13 @@ const PresetFilters = ({
               key={idx}
               className={showMobileSidebar ? "w-full" : "grid-rows-1"}
             >
-              <div
-                className={`flex h-full flex-col items-start border-2 p-2 ${
+              <button
+                className={`flex h-full w-full flex-col items-start border-2 p-2 ${
                   activePresets.includes(idx)
                     ? "border-primary"
                     : "border-transparent"
                 } duration-50 group cursor-pointer rounded bg-background-highlight transition-all hover:border-primary-hover`}
-                onClick={() => {
-                  handleSelectPreset(idx)
-                }}
-                onKeyUp={(e) => {
-                  if (e.key === "Enter") {
-                    handleSelectPreset(idx)
-                  }
-                }}
+                onClick={() => handleSelectPreset(idx)}
               >
                 <div className="flex items-center gap-2 px-1.5">
                   <input
@@ -87,11 +80,11 @@ const PresetFilters = ({
                   </h3>
                 </div>
                 {!showMobileSidebar && (
-                  <p className="p-2 text-sm text-body-medium">
+                  <p className="p-2 text-left text-sm text-body-medium">
                     {preset.description}
                   </p>
                 )}
-              </div>
+              </button>
             </div>
           )
         })}
