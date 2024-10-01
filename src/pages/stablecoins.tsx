@@ -35,7 +35,9 @@ import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
@@ -192,8 +194,6 @@ export const getStaticProps = (async ({ locale }) => {
 }) satisfies GetStaticProps<Props>
 
 const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
-
-const Divider = () => <Box my={16} w="10%" h={1} bg="homeDivider" />
 
 const EditorsChoice = (props: FlexProps) => (
   <Flex
@@ -394,7 +394,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       {
         content: t("page-stablecoins-how-they-work-button"),
         toId: "how",
-        variant: "outline",
+        variant: "outline" as const,
         matomo: {
           eventCategory: "stablecoins hero buttons",
           eventAction: "click",
@@ -458,7 +458,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                 <HorizontalCard
                   emoji={token.emoji}
                   description={token.description}
-                  emojiSize={3}
+                  className="text-5xl"
                 />
               </Box>
             ))}
@@ -468,19 +468,18 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             me={{ base: 0, lg: 8 }}
             mt={{ base: 16, lg: 2 }}
           >
-            <Emoji text=":pizza:" fontSize="5xl" />
+            <Emoji text=":pizza:" className="text-5xl" />
             <H3>{t("page-stablecoins-bitcoin-pizza")}</H3>
             <Text>{t("page-stablecoins-bitcoin-pizza-body")} </Text>
           </GhostCard>
         </Flex>
       </Content>
-      <Box
-        w="full"
-        py={16}
-        mt={8}
-        mb={8}
-        background="cardGradient"
-        boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
+      <div
+        className={cn(
+          "my-8 w-full py-16 shadow-inner",
+          "bg-gradient-to-r from-accent-a/10 to-accent-c/10",
+          "dark:bg-gradient-to-tr dark:from-primary/20 dark:from-20% dark:via-accent-a/20 dark:via-60% dark:to-accent-c/20 dark:to-95%"
+        )}
       >
         <Box mb={-8} py={4} px={8} w="full">
           <H2 mt={0}>{t("page-stablecoins-find-stablecoin")}</H2>
@@ -635,7 +634,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             hasError={marketsHasError}
           />
         </Box>
-      </Box>
+      </div>
       <Content id="explore">
         <H2>{t("page-stablecoins-get-stablecoins")}</H2>
       </Content>
@@ -651,9 +650,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       <Divider />
       <Content>
         <CalloutBanner
-          mt={8}
-          mb={16}
-          mx={0}
+          className="mx-0 mb-16 mt-8"
           titleKey={t("page-stablecoins-stablecoins-dapp-callout-title")}
           descriptionKey={t(
             "page-stablecoins-stablecoins-dapp-callout-description"
@@ -662,7 +659,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           imageWidth={600}
           alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
         >
-          <Flex flexFlow="wrap" gap="1em">
+          <div className="flex flex-wrap gap-4">
             <ButtonLink href="/dapps/">
               {t("page-stablecoins-explore-dapps")}
             </ButtonLink>
@@ -674,7 +671,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             >
               {t("page-stablecoins-more-defi-button")}
             </ButtonLink>
-          </Flex>
+          </div>
         </CalloutBanner>
         <H2>{t("page-stablecoins-save-stablecoins")}</H2>
         <Flex
@@ -706,7 +703,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             p={8}
             mx={{ base: "auto", lg: 0 }}
           >
-            <Emoji mb={4} text=":bank:" fontSize="5rem" />
+            <Emoji className="mb-4 text-[5rem]" text=":bank:" />
             <Text as="p" fontSize="64px" lineHeight="100%">
               {t("page-stablecoins-bank-apy")}
             </Text>

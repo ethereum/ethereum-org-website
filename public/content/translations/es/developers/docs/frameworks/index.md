@@ -93,12 +93,6 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie se encuentra actualmente en mantenimiento**
 
-**Truffle:** **_Un entorno de desarrollo y de pruebas, un proceso de creación y otras herramientas._**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-- **El desarrollo de Truffle ha finalizado** - [leer más](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
-
 **OpenZeppelin SDK: ****_El kit definitivo de herramientas para contratos inteligentes; una serie de herramientas que lo ayuda a desarrollar, compilar, actualizar, implementar e interactuar con contratos inteligentes._**
 
 - [SDK de OpenZeppelin](https://openzeppelin.com/sdk/)

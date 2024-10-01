@@ -1,5 +1,5 @@
 export * from "./AbyssGlyphIcon"
-export * from "./AlllnodesGlyphIcon"
+export * from "./AllnodesGlyphIcon"
 export * from "./AnkrGlyphIcon"
 export * from "./AuditedIcon"
 export * from "./AvadoGlyphIcon"

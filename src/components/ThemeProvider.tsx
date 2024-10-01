@@ -28,8 +28,8 @@ const ThemeProvider = ({ children }: Pick<ThemeProviderProps, "children">) => {
   return (
     <NextThemesProvider
       attribute="data-theme"
-      defaultTheme="system"
-      enableSystem
+      defaultTheme="light"
+      enableSystem={false}
       disableTransitionOnChange
       storageKey={COLOR_MODE_STORAGE_KEY}
     >
@@ -38,16 +38,6 @@ const ThemeProvider = ({ children }: Pick<ThemeProviderProps, "children">) => {
         colorModeManager={colorModeManager}
         resetCSS={false}
       >
-        {/* TODO: Can these CSS Vars be moved to `global.css`? */}
-        <style jsx global>
-          {`
-            :root {
-              --font-inter: Inter, sans-serif;
-              --font-mono: "IBM Plex Mono", Courier, monospace;
-            }
-          `}
-        </style>
-
         {children}
       </ChakraBaseProvider>
     </NextThemesProvider>

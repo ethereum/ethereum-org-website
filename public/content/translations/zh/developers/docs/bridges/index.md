@@ -104,7 +104,7 @@ lang: zh
 
 ### 在多条链上部署去中心化应用程序 {#deploying-a-dapp-on-multiple-chains}
 
-要在多条链上部署去中心化应用程序，开发者可以使用 [Alchemy](https://www.alchemy.com/)、[安全帽](https://hardhat.org/)、[Truffle](https://trufflesuite.com/)、[Moralis](https://moralis.io/) 等开发平台。 这些平台通常提供可组合的插件，能够支持去中心化应用程序跨链。 例如，开发者可以使用[安全帽部署插件](https://github.com/wighawag/hardhat-deploy)提供的确定性部署代理。
+要在多条链上部署去中心化应用程序，开发者可以使用 [Alchemy](https://www.alchemy.com/)、[安全帽](https://hardhat.org/)、[Moralis](https://moralis.io/) 等开发平台。 这些平台通常提供可组合的插件，能够支持去中心化应用程序跨链。 例如，开发者可以使用[安全帽部署插件](https://github.com/wighawag/hardhat-deploy)提供的确定性部署代理。
 
 #### 例子：
 

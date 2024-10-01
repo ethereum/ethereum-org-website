@@ -23,7 +23,7 @@ const Card = ({ emoji, title, description, children, ...props }: CardProps) => (
     {...props}
   >
     <Stack spacing="4">
-      {emoji && <Emoji fontSize="5xl" lineHeight={0} text={emoji} />}
+      {emoji && <Emoji className="text-5xl leading-none" text={emoji} />}
       <Stack spacing="8">
         {title && (
           <Heading as="h3" fontSize="2xl">

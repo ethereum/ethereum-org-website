@@ -50,7 +50,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   ref
 ) {
   const { asPath } = useRouter()
-  const { flipForRtl } = useRtlFlip()
+  const { twFlipForRtl } = useRtlFlip()
 
   if (!href) {
     console.warn("Link component is missing href prop")
@@ -102,9 +102,10 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
         {!hideArrow && (
           <RxExternalLink
-            className={cn("-me-1 inline h-6 w-6 p-1 align-middle", {
-              transform: flipForRtl,
-            })}
+            className={cn(
+              "-me-1 inline h-6 w-6 p-1 align-middle",
+              twFlipForRtl
+            )}
           />
         )}
       </a>

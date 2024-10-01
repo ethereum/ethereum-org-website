@@ -4,7 +4,6 @@ import {
   Box,
   chakra,
   ChakraProps,
-  Circle,
   HStack,
   Stack,
   Text,
@@ -21,6 +20,8 @@ import type {
   Question,
   TranslationKey,
 } from "@/lib/types"
+
+import { cn } from "@/lib/utils/cn"
 
 import type { AnswerStatus } from "./useQuizWidget"
 
@@ -157,11 +158,6 @@ const CustomRadio = ({
   const getAnswerColor = (): ChakraProps["bg"] =>
     isSelectedCorrect ? "success.base" : "error.base"
 
-  const controlFocusProps: ChakraProps = {
-    bg: isAnswerVisible ? "white" : "primary.pressed",
-    color: isAnswerVisible ? getAnswerColor() : undefined,
-  }
-
   const radioInputProps = getInputProps({ id: INPUT_ID })
 
   return (
@@ -188,22 +184,24 @@ const CustomRadio = ({
             outline: isAnswerVisible ? "none" : `1px solid ${primaryBaseColor}`,
           }}
           _checked={{
-            bg: !isAnswerVisible ? "primary.base" : getAnswerColor(),
+            bg: !isAnswerVisible ? "primary.action" : getAnswerColor(),
             color: "white",
           }}
           data-group
+          className="group"
         >
-          <Circle
-            size="6"
-            bg="disabled"
-            color="white"
-            _groupHover={controlFocusProps}
-            _groupChecked={controlFocusProps}
+          <div
+            className={cn(
+              "grid aspect-square size-6 place-items-center rounded-full bg-disabled text-white group-hover:bg-primary-action",
+              "group-data-[checked]:bg-white group-data-[checked]:text-primary-action",
+              isAnswerVisible &&
+                (isSelectedCorrect ? "!text-success" : "!text-error")
+            )}
           >
-            <Text fontWeight="700" fontSize="lg" lineHeight="none">
+            <p className="text-lg font-bold leading-none">
               {String.fromCharCode(97 + index).toUpperCase()}
-            </Text>
-          </Circle>
+            </p>
+          </div>
           <span>{label}</span>
         </HStack>
       </chakra.label>

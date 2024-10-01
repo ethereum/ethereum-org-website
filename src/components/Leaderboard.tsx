@@ -121,7 +121,7 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
                     {score} {t("page-upgrades-bug-bounty-leaderboard-points")}
                   </Box>
                 </Flex>
-                {emoji && <Emoji me={8} fontSize="2xl" text={emoji} />}
+                {emoji && <Emoji className="me-8 text-2xl" text={emoji} />}
                 <Box
                   as="span"
                   _after={{

@@ -42,7 +42,7 @@
           // Other relative imports. Put same-folder imports and `.` last.
           ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
           // Style imports.
-          ["^.+s?css$"],
+          ["^.+\\.s?css$"],
           // Side effect imports.
           ["^\\u0000"]
         ]
