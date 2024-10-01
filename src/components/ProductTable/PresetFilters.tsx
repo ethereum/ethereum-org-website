@@ -70,7 +70,12 @@ const PresetFilters = ({
                 </div>
                 {!showMobileSidebar && (
                   <p
-                    className={`p-2 text-left text-sm ${activePresets.includes(idx) ? "text-body" : "text-body-medium"}`}
+                    className={cn(
+                      "p-2 text-left text-sm transition-colors duration-500",
+                      activePresets.includes(idx)
+                        ? "text-body"
+                        : "text-body-medium"
+                    )}
                   >
                     {preset.description}
                   </p>
