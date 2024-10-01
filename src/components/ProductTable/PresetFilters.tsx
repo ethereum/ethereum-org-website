@@ -69,7 +69,9 @@ const PresetFilters = ({
                   </h3>
                 </div>
                 {!showMobileSidebar && (
-                  <p className="p-2 text-left text-sm text-body-medium">
+                  <p
+                    className={`p-2 text-left text-sm ${activePresets.includes(idx) ? "text-body" : "text-body-medium"}`}
+                  >
                     {preset.description}
                   </p>
                 )}
