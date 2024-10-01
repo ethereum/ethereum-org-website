@@ -41,10 +41,10 @@ const Table = ({
     <TanStackTable variant="product">
       <TableHeader>
         {table.getHeaderGroups().map((headerGroup) => (
-          <TableRow key={headerGroup.id} className="border-primary">
+          <TableRow key={headerGroup.id}>
             {headerGroup.headers.map((header) => {
               return (
-                <div key={header.id} className="p-0.5">
+                <div key={header.id}>
                   {header.isPlaceholder
                     ? null
                     : flexRender(

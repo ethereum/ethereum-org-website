@@ -259,7 +259,7 @@ const ProductTable = ({
             />
           </div>
           <div className="flex-1">
-            <div className="flex flex-row items-center justify-between px-2 py-1">
+            <div className="sticky top-[76px] z-10 flex flex-row items-center justify-between border-b border-b-primary bg-body-inverse px-2 py-2">
               <Button
                 variant="ghost"
                 className="block p-0 lg:hidden"
