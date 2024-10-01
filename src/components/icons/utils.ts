@@ -7,8 +7,8 @@ export const commonIconDefaultProps: IconProps = {
   fill: "currentColor",
 }
 
-export const commonIconDefaultAttrs: SVGAttributes<SVGElement> = {
+export const commonIconDefaultAttrs = {
   fill: "currentColor",
   fillRule: "evenodd",
   clipRule: "evenodd",
-}
+} satisfies SVGAttributes<SVGElement>
