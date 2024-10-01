@@ -10,8 +10,8 @@ import {
   GreenCheckProductGlyphIcon,
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
-import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
+import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -19,15 +19,7 @@ import { getLocaleFormattedDate } from "@/lib/utils/time"
 
 const SocialLink = (props) => (
   <InlineLink
-    display="flex"
-    height={6}
-    alignItems="center"
-    verticalAlign="middle"
-    transform="scale(1)"
-    transition="transform 0.1s"
-    _hover={{
-      transform: "scale(1.15)",
-    }}
+    className="hover:scale-1.1 flex h-6 scale-100 items-center align-middle transition-transform duration-100"
     {...props}
   />
 )
