@@ -10,6 +10,15 @@ import { cn } from "@/lib/utils/cn"
  * to provide equal cell widths.
  */
 
+const baseStyles = {
+  th: "text-start border-b border-body text-body normal-case align-bottom p-4",
+  tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
+  td: "p-4",
+  tbody: "[&_tr]:align-top hover:[&_tr]:bg-background-highlight",
+}
+
+const stripedTbody = "even:[&_tr]:bg-background-highlight"
+
 const tableVariants = tv({
   slots: {
     table: "w-full",
@@ -24,25 +33,16 @@ const tableVariants = tv({
     variant: {
       simple: {
         thead: "bg-background-highlight",
-        th: "text-start border-b border-body text-body normal-case align-bottom p-4",
-        tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
-        td: "p-4",
-        tbody: "[&_tr]:align-top hover:[&_tr]:bg-background-highlight",
+        ...baseStyles,
       },
       "minimal-striped": {
-        tbody:
-          "[&_tr]:align-top hover:[&_tr]:bg-background-highlight even:[&_tr]:bg-background-highlight",
-        th: "text-start border-b border-body text-body normal-case align-bottom p-4",
-        tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
-        td: "p-4",
+        ...baseStyles,
+        tbody: `${baseStyles.tbody} ${stripedTbody}`,
       },
       "simple-striped": {
+        ...baseStyles,
         thead: "bg-background-highlight",
-        tbody:
-          "[&_tr]:align-top hover:[&_tr]:bg-background-highlight even:[&_tr]:bg-background-highlight",
-        th: "text-start border-b border-body text-body normal-case align-bottom p-4",
-        tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
-        td: "p-4",
+        tbody: `${baseStyles.tbody} ${stripedTbody}`,
       },
       minimal: {},
       product: {
