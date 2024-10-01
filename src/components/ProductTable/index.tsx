@@ -28,6 +28,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 interface ProductTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
+  allDataLength: number
   filters: FilterOption[]
   presetFilters: TPresetFilters
   resetFilters: () => void
@@ -40,6 +41,7 @@ interface ProductTableProps<TData, TValue> {
 const ProductTable = ({
   columns,
   data,
+  allDataLength,
   filters,
   presetFilters,
   resetFilters,
@@ -277,7 +279,14 @@ const ProductTable = ({
                 </p>
               </Button>
               <p>
-                {t("table-showing")} (<b>{data.length}</b>)
+                {t("table-showing")}{" "}
+                {data.length === allDataLength ? (
+                  <b>{data.length}</b>
+                ) : (
+                  <b>
+                    {data.length}/{allDataLength}
+                  </b>
+                )}
               </p>
             </div>
             <Table

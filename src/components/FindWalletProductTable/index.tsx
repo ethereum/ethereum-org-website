@@ -64,6 +64,7 @@ const FindWalletProductTable = ({ wallets }) => {
     <ProductTable
       columns={useWalletColumns}
       data={filteredData}
+      allDataLength={wallets.length}
       filters={filters}
       presetFilters={walletPersonas}
       resetFilters={resetFilters}
