@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next"
 
 import { FilterOption } from "@/lib/types"
 
-import { WalletColumns } from "@/components/FindWalletProductTable/data/WalletColumns"
-import { WalletFilters } from "@/components/FindWalletProductTable/data/WalletFilters"
-import { WalletPersonaPresets } from "@/components/FindWalletProductTable/data/WalletPersonaPresets"
+import { useWalletColumns } from "@/components/FindWalletProductTable/hooks/useWalletColumns"
+import { useWalletFilters } from "@/components/FindWalletProductTable/hooks/useWalletFilters"
+import { useWalletPersonaPresets } from "@/components/FindWalletProductTable/hooks/useWalletPersonaPresets"
 import ProductTable from "@/components/ProductTable"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -15,8 +15,8 @@ import WalletSubComponent from "./WalletSubComponent"
 
 const FindWalletProductTable = ({ wallets }) => {
   const { t } = useTranslation("page-wallets-find-wallet")
-  const walletPersonas = WalletPersonaPresets()
-  const walletFilterOptions = WalletFilters()
+  const walletPersonas = useWalletPersonaPresets()
+  const walletFilterOptions = useWalletFilters()
   const [filters, setFilters] = useState<FilterOption[]>(walletFilterOptions)
 
   const filteredData = useMemo(() => {
@@ -62,7 +62,7 @@ const FindWalletProductTable = ({ wallets }) => {
 
   return (
     <ProductTable
-      columns={WalletColumns}
+      columns={useWalletColumns}
       data={filteredData}
       filters={filters}
       presetFilters={walletPersonas}

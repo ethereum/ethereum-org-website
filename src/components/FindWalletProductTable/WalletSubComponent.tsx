@@ -5,7 +5,7 @@ import { MdInfoOutline } from "react-icons/md"
 
 import { FilterOption, Lang, WalletData } from "@/lib/types"
 
-import { WalletFilters } from "@/components/FindWalletProductTable/data/WalletFilters"
+import { useWalletFilters } from "@/components/FindWalletProductTable/hooks/useWalletFilters"
 import {
   GreenCheckProductGlyphIcon,
   WarningProductGlyphIcon,
@@ -45,7 +45,7 @@ const WalletSubComponent = ({
 }: WalletSubComponentProps) => {
   const { locale } = useRouter()
   const { t } = useTranslation("page-wallets-find-wallet")
-  const walletFiltersOptions: FilterOption[] = WalletFilters()
+  const walletFiltersOptions: FilterOption[] = useWalletFilters()
 
   const walletFilterDisplayOrder = [
     t("page-find-wallet-features"),
@@ -71,7 +71,7 @@ const WalletSubComponent = ({
       <div className="w-1 md:w-14">
         <div
           className={cn(
-            "m-auto h-full w-1 bg-gradient-to-b to-97%",
+            "to-97% m-auto h-full w-1 bg-gradient-to-b",
             wallet.brand_color
           )}
         />

@@ -32,7 +32,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-export const WalletFilters = (): FilterOption[] => {
+export const useWalletFilters = (): FilterOption[] => {
   const { t } = useTranslation("page-wallets-find-wallet")
   return [
     {

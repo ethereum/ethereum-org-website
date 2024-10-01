@@ -15,7 +15,7 @@ export type WalletColumns = {
   walletInfo: Wallet
 }
 
-export const WalletColumns: ColumnDef<Wallet>[] = [
+export const useWalletColumns: ColumnDef<Wallet>[] = [
   {
     id: "walletInfo",
     header: () => <TableHead className="hidden" />,
