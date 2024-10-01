@@ -1,6 +1,7 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
 import { BsArrowCounterclockwise } from "react-icons/bs"
+import { IoClose } from "react-icons/io5" // Add this import
 
 import { FilterOption, TPresetFilters } from "@/lib/types"
 
@@ -83,7 +84,14 @@ const MobileFilters = ({
           </Button>
         </DrawerTrigger>
         <DrawerContent className="flex h-full flex-col p-2">
-          <div className="mt-12 flex-1 overflow-y-auto">
+          <div className="sticky top-0 mt-12 flex items-center justify-end p-2">
+            <DrawerClose>
+              <Button variant="ghost" size="icon">
+                <IoClose size={24} />
+              </Button>
+            </DrawerClose>
+          </div>
+          <div className="flex-1 overflow-y-auto">
             <PresetFilters
               presets={presets}
               activePresets={activePresets}
