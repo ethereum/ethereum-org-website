@@ -92,17 +92,24 @@ const ProductTable = ({
         (key) => presetToRemove[key]
       )
 
+      // Filter out keys that are present in other active presets
+      const finalFiltersToRemove = filtersToRemove.filter((key) => {
+        return !activePresets
+          .filter((preset) => preset !== idx)
+          .some((preset) => presetFilters[preset].presetFilters[key])
+      })
+
       // Set inputState of filters to false for the filters being removed
       const updatedFilters = filters.map((filter) => ({
         ...filter,
         items: filter.items.map((item) => ({
           ...item,
-          inputState: filtersToRemove.includes(item.filterKey)
+          inputState: finalFiltersToRemove.includes(item.filterKey)
             ? false
             : item.inputState,
           options: item.options.map((option) => ({
             ...option,
-            inputState: filtersToRemove.includes(option.filterKey)
+            inputState: finalFiltersToRemove.includes(option.filterKey)
               ? false
               : option.inputState,
           })),
