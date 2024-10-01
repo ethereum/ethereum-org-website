@@ -40,6 +40,7 @@ const PresetFilters = ({
               <button
                 className={cn(
                   "duration-50 group flex h-full w-full cursor-pointer flex-col items-start rounded border-2 bg-background-highlight p-2 transition-all hover:border-primary-hover",
+                  "focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-primary-hover",
                   activePresets.includes(idx)
                     ? "border-primary"
                     : "border-transparent"
@@ -47,18 +48,7 @@ const PresetFilters = ({
                 onClick={() => handleSelectPreset(idx)}
               >
                 <div className="flex items-center gap-2 px-1.5">
-                  <input
-                    type="checkbox"
-                    id={`checkbox-${idx}`}
-                    aria-label={`${preset.title} filter`}
-                    className="hidden"
-                    checked={activePresets.includes(idx)}
-                    onChange={() => handleSelectPreset(idx)}
-                  />
-                  <label
-                    htmlFor={`checkbox-${idx}`}
-                    className="custom-checkbox flex h-5 w-5 items-center justify-center rounded border-2 border-primary"
-                  >
+                  <div className="flex h-5 w-5 items-center justify-center rounded border-2 border-primary">
                     {activePresets.includes(idx) && (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +63,7 @@ const PresetFilters = ({
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                     )}
-                  </label>
+                  </div>
                   <h3 className="duration-50 text-xl text-primary transition-all group-hover:text-primary-hover">
                     {preset.title}
                   </h3>
