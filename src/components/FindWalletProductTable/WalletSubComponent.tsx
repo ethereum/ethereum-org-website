@@ -71,7 +71,8 @@ const WalletSubComponent = ({
       <div className="w-1 md:w-14">
         <div
           className={cn(
-            `m-auto h-full w-1 bg-gradient-to-b ${wallet.brand_color} to-[rgba(217, 217, 217, 0)] to-97%`
+            "m-auto h-full w-1 bg-gradient-to-b to-97%",
+            wallet.brand_color
           )}
         />
       </div>
