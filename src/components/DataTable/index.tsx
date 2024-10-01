@@ -6,29 +6,29 @@ import {
   useReactTable,
 } from "@tanstack/react-table"
 
-import type { ProductTableColumnDefs, ProductTableRow } from "@/lib/types"
-
 import {
-  Table as TanStackTable,
+  Table,
   TableBody,
   TableCell,
   TableHeader,
+  TableProps,
   TableRow,
 } from "@/components/ui/Table"
 
-interface TableProps<TData, TValue> {
+type DataTableProps<TData, TValue> = TableProps & {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
   subComponent?: React.FC<TData>
   noResultsComponent?: React.FC
 }
 
-const DataTable = ({
+const DataTable = <TData, TValue>({
   columns,
   data,
   subComponent,
   noResultsComponent,
-}: TableProps<ProductTableRow, ProductTableColumnDefs>) => {
+  ...props
+}: DataTableProps<TData, TValue>) => {
   const table = useReactTable({
     data,
     columns,
@@ -38,7 +38,7 @@ const DataTable = ({
   })
 
   return (
-    <TanStackTable variant="product">
+    <Table {...props}>
       <TableHeader>
         {table.getHeaderGroups().map((headerGroup) => (
           <TableRow key={headerGroup.id}>
@@ -95,7 +95,7 @@ const DataTable = ({
           </TableRow>
         )}
       </TableBody>
-    </TanStackTable>
+    </Table>
   )
 }
 

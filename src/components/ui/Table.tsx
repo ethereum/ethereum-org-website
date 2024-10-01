@@ -80,24 +80,25 @@ const TableStylesContext = createContext<{
 
 const useTableStyles = () => useContext(TableStylesContext)
 
-const Table = React.forwardRef<
-  HTMLTableElement,
-  React.HTMLAttributes<HTMLTableElement> & TableVariants
->(({ className, variant, ...props }, ref) => {
-  const tableVariantStyles = tableVariants({ variant })
+export type TableProps = React.HTMLAttributes<HTMLTableElement> & TableVariants
 
-  return (
-    <TableStylesContext.Provider value={tableVariantStyles}>
-      <div className="relative w-full overflow-auto whitespace-normal">
-        <table
-          ref={ref}
-          className={cn(tableVariantStyles.table(), className)}
-          {...props}
-        />
-      </div>
-    </TableStylesContext.Provider>
-  )
-})
+const Table = React.forwardRef<HTMLTableElement, TableProps>(
+  ({ className, variant, ...props }, ref) => {
+    const tableVariantStyles = tableVariants({ variant })
+
+    return (
+      <TableStylesContext.Provider value={tableVariantStyles}>
+        <div className="relative w-full overflow-auto whitespace-normal">
+          <table
+            ref={ref}
+            className={cn(tableVariantStyles.table(), className)}
+            {...props}
+          />
+        </div>
+      </TableStylesContext.Provider>
+    )
+  }
+)
 Table.displayName = "Table"
 
 const TableHeader = React.forwardRef<

@@ -281,6 +281,7 @@ const ProductTable = ({
               </p>
             </div>
             <Table
+              variant="product"
               columns={columns}
               data={data}
               subComponent={subComponent}
