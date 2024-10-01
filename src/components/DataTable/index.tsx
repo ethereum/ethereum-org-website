@@ -23,7 +23,7 @@ interface TableProps<TData, TValue> {
   noResultsComponent?: React.FC
 }
 
-const Table = ({
+const DataTable = ({
   columns,
   data,
   subComponent,
@@ -99,4 +99,4 @@ const Table = ({
   )
 }
 
-export default Table
+export default DataTable

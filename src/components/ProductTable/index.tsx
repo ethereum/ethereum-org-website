@@ -17,10 +17,10 @@ import type {
   TPresetFilters,
 } from "@/lib/types"
 
+import Table from "@/components/DataTable"
 import Filters from "@/components/ProductTable/Filters"
 import MobileFilters from "@/components/ProductTable/MobileFilters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
-import Table from "@/components/ProductTable/Table"
 import { Button } from "@/components/ui/buttons/Button"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
