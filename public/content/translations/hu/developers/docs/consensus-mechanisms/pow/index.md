@@ -29,7 +29,7 @@ A proof-of-work a mögöttes algoritmus, amely a nehézséget és a szabályokat
 Az Ethereum-tranzakciókat blokkokba dolgozzák fel. A már kivezetett proof-of-work-alapú Ethereumon minden blokkban volt:
 
 - blokk nehézsége – például: 3,324,092,183,262,715
-- mixHash-e – például: `0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`
+- mixHash-e – például: <span class="long-ethereum-address">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
 - nonce-a – például: `0xd3ee432b4fb3d26b`
 
 Ezek a blokkadatok közvetlen kapcsolatban álltak a proof-of-work mechanizmussal.

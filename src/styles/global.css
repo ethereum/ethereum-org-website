@@ -160,3 +160,8 @@
     animation-play-state: paused;
   }
 }
+
+
+.long-ethereum-address {
+  word-break: break-all;
+}

@@ -28,7 +28,7 @@ Proof-of-Work ist der grundlegende Algorithmus, der den Schwierigkeitsgrad und d
 Ethereums Transaktionen werden zu Blöcken verarbeitet. Jeder Block hat
 
 - einen Block-Schwierigkeitsgrad – zum Beispiel: 3.324.092.183.262.715,
-- einen mixHash – zum Beispiel, `0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`,
+- einen mixHash – zum Beispiel, <span class="long-ethereum-address">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>,
 - eine Nonce – zum Beispiel: `0xd3ee432b4fb3d26b`.
 
 Diese Blockdaten sind direkt mit dem Proof-of-Work verbunden.

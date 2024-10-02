@@ -29,7 +29,7 @@ Iş ispatı, madencilerin iş ispatı blok zincirlerinde yaptıkları işin zorl
 Ethereum işlemleri bloklar halinde işlenir. Artık kullanımda olmayan Ethereum iş ispatındaki her bir blok, şunları içeriyordu:
 
 - blok zorluğu – örneğin: 3.324.092.183.262.715
-- mixHash – örneğin: `0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`
+- mixHash – örneğin: <span class="long-ethereum-address">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
 - nonce – örneğin: `0xd3ee432b4fb3d26b`
 
 Bu blok verisi doğrudan iş ispatı ile alakalıydı.
