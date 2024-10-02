@@ -13,13 +13,13 @@ const alertVariants = cva(
   {
     variants: {
       variant: {
-        info: "bg-background-highlight border",
         error:
           "border-error bg-error-light [&_h6]:text-error [&_svg]:text-error text-gray-800",
         success:
           "border-success bg-success-light [&_h6]:text-success [&_svg]:text-success text-gray-800",
         warning:
           "border-warning bg-warning-light [&_h6]:text-warning [&_svg]:text-warning text-gray-800",
+        info: "bg-accent-a/10 dark:bg-accent-a/20 border-accent-a/20 dark:border-accent-a/30 [&_h6]:text-accent-a [&_svg]:text-accent-a",
         update:
           "bg-primary-low-contrast border-primary-high-contrast [&_h6]:text-primary-high-contrast [&_svg]:text-primary-high-contrast",
       },
