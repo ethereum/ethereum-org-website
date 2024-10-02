@@ -1,28 +1,16 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaXTwitter } from "react-icons/fa6"
-import {
-  Box,
-  Circle,
-  Flex,
-  GridItem,
-  Highlight,
-  HStack,
-  ListItem,
-  SimpleGrid,
-  Stack,
-  Text,
-  UnorderedList,
-} from "@chakra-ui/react"
 
-import { CompletedQuizzes, QuizShareStats } from "@/lib/types"
+import type { CompletedQuizzes, QuizShareStats } from "@/lib/types"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
-import { Button } from "../Buttons"
-import { TrophyIcon } from "../icons/quiz"
+import TrophyIcon from "../icons/quiz/trophy-icon.svg"
 import Translation from "../Translation"
+import { Button } from "../ui/buttons/Button"
+import { HStack, Stack } from "../ui/flex"
 import { Progress } from "../ui/progress"
 
 import {
@@ -73,60 +61,44 @@ const QuizzesStats = ({
   } = getFormattedStats(locale!, averageScoresArray)
 
   return (
-    <Box>
-      <Stack mt={{ base: 0, lg: "12" }} spacing={{ base: "4", lg: "2" }}>
+    <div>
+      <Stack className="space-y-4 lg:mt-12 lg:space-y-2">
         {/* user stats */}
-        <SimpleGrid
-          columns={{ base: 1, lg: 2 }}
-          gap={{ base: "6", lg: "4" }}
-          bg="background.highlight"
-          borderRadius={{ base: "none", lg: "lg" }}
-          border="none"
-          p="8"
-        >
-          <GridItem alignSelf="center" order={1}>
-            <Text
-              fontWeight="bold"
-              size="xl"
-              textAlign={{ base: "center", lg: "left" }}
-            >
+        <div className="grid grid-cols-1 gap-6 bg-background-highlight p-8 lg:grid-cols-2 lg:gap-4 lg:rounded-lg">
+          <div className="self-center lg:order-1">
+            <p className="max-lg:align-center text-xl font-bold">
               {t("your-total")}
-            </Text>
-          </GridItem>
+            </p>
+          </div>
 
-          <GridItem justifySelf={{ lg: "end" }} order={{ base: 3, lg: 2 }}>
+          <div className="lg:order-2 lg:justify-self-end">
             <Button
               variant="outline"
-              leftIcon={<FaXTwitter />}
               onClick={() =>
                 handleShare({
                   score: totalCorrectAnswers,
                   total: totalQuizzesPoints,
                 })
               }
-              w={{ base: "full", lg: "auto" }}
+              className="w-full lg:w-auto"
             >
+              <FaXTwitter />
               {t("share-results")}
             </Button>
-          </GridItem>
+          </div>
 
-          <GridItem colSpan={{ lg: 2 }} order={{ base: 2, lg: 3 }}>
-            <Stack spacing="2">
-              <HStack
-                spacing="4"
-                justify={{ base: "center", lg: "flex-start" }}
-              >
-                <Circle size="64px" bg="primary.base">
-                  <TrophyIcon color="neutral" w="35.62px" h="35.62px" />
-                </Circle>
-                <Text as="span" fontWeight="bold" fontSize="5xl">
-                  <Highlight
-                    query={`/${totalQuizzesPoints}`}
-                    styles={{ color: "body.medium" }}
-                  >
-                    {totalCorrectAnswers + "/" + totalQuizzesPoints}
-                  </Highlight>
-                </Text>
+          <div className="order-2 lg:order-3 lg:col-span-2">
+            <Stack className="space-y-2">
+              <HStack className="space-x-4 max-lg:justify-center">
+                <div className="grid size-16 place-items-center rounded-full bg-primary">
+                  <TrophyIcon className="size-9 text-background-highlight" />
+                </div>
+                <span className="text-5xl font-bold">
+                  {totalCorrectAnswers}
+                  <span className="text-body-medium">
+                    / {totalQuizzesPoints}
+                  </span>
+                </span>
               </HStack>
 
               <Progress
@@ -134,42 +106,27 @@ const QuizzesStats = ({
                 className="h-2.5 bg-primary-low-contrast [&>div]:bg-primary"
               />
 
-              <Flex columnGap="10" direction={{ base: "column", lg: "row" }}>
-                <Text mt={{ base: "2", lg: 0 }} color="body.medium">
-                  {t("average-score")}{" "}
-                  <Text as="span">{formattedUserAverageScore}</Text>
-                </Text>
+              <div className="flex flex-col gap-x-10 lg:flex-row">
+                <p className="mt-2 text-body-medium lg:mt-0">
+                  {t("average-score")} <span>{formattedUserAverageScore}</span>
+                </p>
 
-                <Text color="body.medium">
+                <p className="text-body-medium">
                   {t("completed")}{" "}
-                  <Text as="span">
+                  <span>
                     {numberOfCompletedQuizzes}/{totalQuizzesNumber}
-                  </Text>
-                </Text>
-              </Flex>
+                  </span>
+                </p>
+              </div>
             </Stack>
-          </GridItem>
-        </SimpleGrid>
+          </div>
+        </div>
 
         {/* community stats */}
-        <Stack
-          gap="6"
-          bg="background.highlight"
-          borderRadius={{ lg: "lg" }}
-          border="none"
-          p="8"
-        >
-          <Text fontWeight="bold" fontSize="xl">
-            {t("community-stats")}
-          </Text>
+        <Stack className="bg-backgroung-highlight gap-6 p-8 lg:rounded-lg">
+          <p className="text-xl font-bold">{t("community-stats")}</p>
 
-          <Flex
-            as={UnorderedList}
-            direction={{ base: "column", md: "row" }}
-            columnGap="20"
-            rowGap="6"
-            m={0}
-          >
+          <ul className="m-0 flex flex-col gap-x-20 gap-y-6 md:flex-row">
             {(
               [
                 {
@@ -186,18 +143,18 @@ const QuizzesStats = ({
                 },
               ] satisfies Array<{ labelId: string; value: string }>
             ).map(({ labelId, value }) => (
-              <Stack as={ListItem} key={labelId} spacing={0} m={0}>
-                <Text as="span" color="body.medium">
+              <li className="m-0 flex flex-col space-y-0" key={labelId}>
+                <span className="text-body-medium">
                   <Translation id={labelId} options={{ ns: "learn-quizzes" }} />
-                </Text>
+                </span>
                 {/* Data from Matomo, manually updated */}
-                <Text as="span">{value}</Text>
-              </Stack>
+                <span>{value}</span>
+              </li>
             ))}
-          </Flex>
+          </ul>
         </Stack>
       </Stack>
-    </Box>
+    </div>
   )
 }
 
