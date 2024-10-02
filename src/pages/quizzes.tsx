@@ -1,13 +1,11 @@
 import { useMemo, useState } from "react"
-import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
+import type { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
-import { Box, Flex, Icon, Stack, Text, useDisclosure } from "@chakra-ui/react"
 
-import { BasePageProps, Lang, QuizKey, QuizStatus } from "@/lib/types"
+import type { BasePageProps, Lang, QuizKey, QuizStatus } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
@@ -17,6 +15,8 @@ import QuizzesList from "@/components/Quiz/QuizzesList"
 import QuizzesModal from "@/components/Quiz/QuizzesModal"
 import QuizzesStats from "@/components/Quiz/QuizzesStats"
 import { useLocalQuizData } from "@/components/Quiz/useLocalQuizData"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Stack } from "@/components/ui/flex"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -28,6 +28,7 @@ import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "@/data/quizzes"
 
 import { INITIAL_QUIZ } from "@/lib/constants"
 
+import { useDisclosure } from "@/hooks/useDisclosure"
 import HeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
 
 const handleGHAdd = () =>
@@ -77,7 +78,7 @@ const QuizzesHubPage: NextPage<
   )
 
   return (
-    <Box as={MainArticle}>
+    <MainArticle>
       <PageMetadata
         title={t("common:quizzes-title")}
         description={t("quizzes-subtitle")}
@@ -101,10 +102,10 @@ const QuizzesHubPage: NextPage<
           updateUserStats={updateUserStats}
         />
       </QuizzesModal>
-      <Box px={{ base: 0, lg: "8" }} py={{ base: 0, lg: "4" }} mb="12">
-        <Flex direction={{ base: "column-reverse", lg: "row" }} columnGap="20">
-          <Stack spacing="10" flex="1">
-            <Box>
+      <div className="mb-12 lg:px-8 lg:py-4">
+        <div className="flex flex-col-reverse gap-x-20 lg:flex-row">
+          <Stack className="flex-1 space-y-10">
+            <div>
               <QuizzesList
                 content={ethereumBasicsQuizzes}
                 headingId={t("basics")}
@@ -117,51 +118,41 @@ const QuizzesHubPage: NextPage<
                 descriptionId={t("using-ethereum-description")}
                 {...commonQuizListProps}
               />
-            </Box>
-            <Flex
-              direction={{ base: "column", xl: "row" }}
-              justify="space-between"
-              align="center"
-              bg="background.highlight"
-              borderRadius={{ lg: "lg" }}
-              p="8"
-              gap={{ base: "4", xl: 0 }}
-            >
-              <Box>
-                <Text align={{ base: "center", xl: "left" }} fontWeight="bold">
+            </div>
+            <div className="flex flex-col items-center justify-between bg-background-highlight p-8 max-xl:gap-4 lg:rounded-lg xl:flex-row">
+              <div>
+                <p className="font-bold max-xl:text-center">
                   {t("want-more-quizzes")}
-                </Text>
+                </p>
 
-                <Text align={{ base: "center", xl: "left" }}>
-                  {t("contribute")}
-                </Text>
-              </Box>
+                <p className="max-xl:text-center">{t("contribute")}</p>
+              </div>
               <ButtonLink
                 href="/contributing/quizzes/"
                 variant="outline"
                 hideArrow
                 onClick={handleGHAdd}
               >
-                <Flex alignItems="center">
-                  <Icon as={FaGithub} color="text" boxSize={6} me={2} />
+                <div className="items-cernter flex">
+                  <FaGithub className="me-2 text-body" />
                   {t("add-quiz")}
-                </Flex>
+                </div>
               </ButtonLink>
-            </Flex>
+            </div>
           </Stack>
-          <Box flex="1">
+          <div className="flex-1">
             <QuizzesStats
               averageScoresArray={userStats.average}
               completedQuizzes={userStats.completed}
               totalCorrectAnswers={userStats.score}
             />
-          </Box>
-        </Flex>
-      </Box>
-      <Box w="full" py="4" px="8">
+          </div>
+        </div>
+      </div>
+      <div className="w-full px-8 py-4">
         <FeedbackCard />
-      </Box>
-    </Box>
+      </div>
+    </MainArticle>
   )
 }
 
