@@ -5,6 +5,7 @@ import Translation from "@/components/Translation"
 import docLinks from "@/data/developer-docs-links.yaml"
 
 import InlineLink from "./ui/Link"
+import { ListItem, UnorderedList } from "./ui/list"
 
 export type DeveloperDocsLinksProps = {
   headerId: string
@@ -15,10 +16,10 @@ const DeveloperDocsLinks = ({ headerId }: DeveloperDocsLinksProps) => (
     {docLinks
       .filter(({ id }) => id.includes(headerId))
       .map(({ items, id }) => (
-        <ul className="ms-6 space-y-3" key={id}>
+        <UnorderedList className="ms-6 space-y-3" key={id}>
           {items &&
             items.map(({ id, href, path, description, items }) => (
-              <li key={id}>
+              <ListItem key={id}>
                 {href || path ? (
                   <InlineLink href={href || path}>
                     <Translation id={`page-developers-docs:${id}`} />
@@ -30,19 +31,19 @@ const DeveloperDocsLinks = ({ headerId }: DeveloperDocsLinksProps) => (
                   {" – "}
                   <Translation id={`page-developers-docs:${description}`} />
                 </i>
-                <ul className="ms-6 mt-3 list-[circle] space-y-3">
+                <UnorderedList className="ms-6 mt-3 list-[circle] space-y-3">
                   {items &&
                     items.map(({ id, href, path }) => (
-                      <li key={id}>
+                      <ListItem key={id}>
                         <InlineLink href={href || path}>
                           <Translation id={`page-developers-docs:${id}`} />
                         </InlineLink>
-                      </li>
+                      </ListItem>
                     ))}
-                </ul>
-              </li>
+                </UnorderedList>
+              </ListItem>
             ))}
-        </ul>
+        </UnorderedList>
       ))}
   </React.Fragment>
 )
