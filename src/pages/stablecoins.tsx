@@ -38,9 +38,9 @@ import Translation from "@/components/Translation"
 import { Divider } from "@/components/ui/divider"
 
 import { cn } from "@/lib/utils/cn"
+import { dataLoader } from "@/lib/utils/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -90,10 +90,6 @@ type Props = BasePageProps & {
   marketsHasError: boolean
 }
 
-// Fetch external API data once to avoid hitting rate limit
-const ethereumEcosystemDataFetch = runOnlyOnce(fetchEthereumEcosystemData)
-const ethereumStablecoinsDataFetch = runOnlyOnce(fetchEthereumStablecoinsData)
-
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
@@ -139,12 +135,12 @@ export const getStaticProps = (async ({ locale }) => {
   }
 
   try {
-    // Fetch token data in the Ethereum ecosystem
-    const ethereumEcosystemData: EthereumDataResponse =
-      await ethereumEcosystemDataFetch()
-    // Fetch token data for stablecoins
-    const stablecoinsData: StablecoinDataResponse =
-      await ethereumStablecoinsDataFetch()
+    const [ethereumEcosystemData, stablecoinsData] = await dataLoader<
+      [EthereumDataResponse, StablecoinDataResponse]
+    >([
+      ["ethereumEcosystemData", fetchEthereumEcosystemData],
+      ["ethereumStablecoinsData", fetchEthereumStablecoinsData],
+    ])
 
     // Get the intersection of stablecoins and Ethereum tokens to only have a list of data for stablecoins in the Ethereum ecosystem
     const ethereumStablecoinData = stablecoinsData.filter(

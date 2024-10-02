@@ -28,10 +28,10 @@ import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
 
 import { getFileContributorInfo } from "@/lib/utils/contributors"
+import { dataLoader } from "@/lib/utils/dataLoader"
 import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { remapTableOfContents } from "@/lib/utils/toc"
 import {
@@ -114,11 +114,6 @@ type Props = Omit<Parameters<LayoutMappingType[Layout]>[0], "children"> &
     gfissues: Awaited<ReturnType<typeof fetchGFIs>>
   }
 
-// Fetch external API data once to avoid hitting rate limit
-const gfIssuesDataFetch = runOnlyOnce(async () => {
-  return await fetchGFIs()
-})
-
 const commitHistoryCache: CommitHistory = {}
 
 export const getStaticProps = (async (context) => {
@@ -199,7 +194,7 @@ export const getStaticProps = (async (context) => {
     lastDeployDate
   )
 
-  const gfissues = await gfIssuesDataFetch()
+  const [gfissues] = await dataLoader([["gfissues", fetchGFIs]])
 
   return {
     props: {

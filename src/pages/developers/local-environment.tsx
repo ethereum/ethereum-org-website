@@ -21,9 +21,9 @@ import PageMetadata from "@/components/PageMetadata"
 import ProductCard from "@/components/ProductCard"
 import Translation from "@/components/Translation"
 
+import { dataLoader } from "@/lib/utils/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -57,10 +57,6 @@ type Props = BasePageProps & {
   frameworksList: Framework[]
 }
 
-const cachedFetchLocalEnvironmentFrameworkData = runOnlyOnce(
-  getLocalEnvironmentFrameworkData
-)
-
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/developers/local-environment"
@@ -68,7 +64,9 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
-  const frameworksListData = await cachedFetchLocalEnvironmentFrameworkData()
+  const [frameworksListData] = await dataLoader([
+    ["frameworksListData", getLocalEnvironmentFrameworkData],
+  ])
 
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
