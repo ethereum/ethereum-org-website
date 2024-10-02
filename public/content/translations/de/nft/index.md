@@ -56,7 +56,7 @@ Vielleicht sind Sie ein Künstler, der seine Werke mithilfe von NFTs verbreiten 
 
 <Alert className="justify-between mt-8">
   <AlertEmoji text=":eyes:"/>
-  <AlertContent>Entdecken, kaufen oder erstellen Sie Ihre eigene(n) NFT-Kunst/Sammelgegenstände ...</div>
+  <AlertContent>Entdecken, kaufen oder erstellen Sie Ihre eigene(n) NFT-Kunst/Sammelgegenstände ...</AlertContent>
   <ButtonLink href="/dapps/?category=collectibles#explore">
     NFT-Kunst entdecken
   </ButtonLink>

@@ -162,7 +162,7 @@ Odată ce conținutul este vândut, fondurile le revin în mod direct. Și chiar
 
 <Alert className="justify-between">
   <AlertEmoji text=":eyes:" />
-  <AlertContent>Explorați, cumpărați sau creați-vă propriile NFT-uri de artă/de colecție...</div>
+  <AlertContent>Explorați, cumpărați sau creați-vă propriile NFT-uri de artă/de colecție...</AlertContent>
   <ButtonLink href="/dapps/?category=collectibles">
     Explorați arta NFT
   </ButtonLink>
@@ -196,7 +196,7 @@ Jocul de realitate virtuală Decentraland vă oferă chiar posibilitatea să cum
 
 <Alert className="justify-between">
   <AlertEmoji text=":eyes:" />
-  <AlertContent>Aruncați o privire asupra jocurilor Ethereum, alimentate de NFT-uri...</div>
+  <AlertContent>Aruncați o privire asupra jocurilor Ethereum, alimentate de NFT-uri...</AlertContent>
   <ButtonLink href="/dapps/?category=gaming">
     Explorați jocurile NFT
   </ButtonLink>
