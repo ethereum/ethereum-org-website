@@ -72,7 +72,7 @@ const MobileFilters = ({
         </Button>
       </DrawerTrigger>
       <DrawerContent className="flex h-full flex-col p-2">
-        <div className="sticky top-0 mt-12 flex items-center justify-end p-2">
+        <div className="sticky top-0 flex items-center justify-end p-2">
           <DrawerClose asChild>
             <Button variant="ghost">
               <IoClose className="text-2xl" />
