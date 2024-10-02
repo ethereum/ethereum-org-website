@@ -1,4 +1,7 @@
 import { cacheAsyncFn } from "./cacheAsyncFn"
+import { loadMockData } from "./loadMockData"
+
+const USE_MOCK_DATA = process.env.USE_MOCK_DATA === "true"
 
 type DataLoaderFunction<T> = () => Promise<T>
 
@@ -28,6 +31,10 @@ export async function dataLoader<T extends unknown[]>(
     })
     return async () => {
       try {
+        if (USE_MOCK_DATA) {
+          return await loadMockData(key)
+        }
+
         return await cachedLoader()
       } catch (error) {
         console.error(`Error in dataLoader for key "${key}":`, error)

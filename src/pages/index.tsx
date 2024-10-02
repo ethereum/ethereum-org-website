@@ -56,7 +56,7 @@ import {
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
-import { dataLoader } from "@/lib/utils/dataLoader"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"

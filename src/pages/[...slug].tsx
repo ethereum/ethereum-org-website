@@ -28,7 +28,7 @@ import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
 
 import { getFileContributorInfo } from "@/lib/utils/contributors"
-import { dataLoader } from "@/lib/utils/dataLoader"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getContent, getContentBySlug } from "@/lib/utils/md"

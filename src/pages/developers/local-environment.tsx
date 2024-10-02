@@ -21,7 +21,7 @@ import PageMetadata from "@/components/PageMetadata"
 import ProductCard from "@/components/ProductCard"
 import Translation from "@/components/Translation"
 
-import { dataLoader } from "@/lib/utils/dataLoader"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"

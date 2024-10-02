@@ -38,7 +38,7 @@ import Translation from "@/components/Translation"
 import { Divider } from "@/components/ui/divider"
 
 import { cn } from "@/lib/utils/cn"
-import { dataLoader } from "@/lib/utils/dataLoader"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
