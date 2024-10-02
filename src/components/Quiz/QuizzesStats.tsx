@@ -96,7 +96,7 @@ const QuizzesStats = ({
                 <span className="text-5xl font-bold">
                   {totalCorrectAnswers}
                   <span className="text-body-medium">
-                    / {totalQuizzesPoints}
+                    /{totalQuizzesPoints}
                   </span>
                 </span>
               </HStack>
