@@ -1,3 +1,4 @@
+import { Fragment } from "react"
 import {
   ColumnDef,
   flexRender,
@@ -60,9 +61,8 @@ const DataTable = <TData, TValue>({
       <TableBody>
         {table.getRowModel().rows?.length ? (
           table.getRowModel().rows.map((row, idx) => (
-            <>
+            <Fragment key={row.id}>
               <TableRow
-                key={row.id}
                 data-state={row.getIsSelected() && "selected"}
                 className={`${row.getIsExpanded() ? "cursor-pointer border-b-background-highlight bg-background-highlight" : "cursor-pointer"} hover:bg-background-highlight`}
                 onClick={(e) => {
@@ -85,7 +85,7 @@ const DataTable = <TData, TValue>({
                   </TableCell>
                 </TableRow>
               )}
-            </>
+            </Fragment>
           ))
         ) : (
           <TableRow>
