@@ -23,7 +23,7 @@ export async function dataLoader<T extends unknown[]>(
   loaders: {
     [K in keyof T]: [string, DataLoaderFunction<T[K]>]
   },
-  cacheTimeout: number = 1000 * 60 * 60 // 1 hour
+  cacheTimeout?: number
 ): Promise<T> {
   const cachedLoaders = loaders.map(([key, loader]) => {
     const cachedLoader = cacheAsyncFn(key, loader, {

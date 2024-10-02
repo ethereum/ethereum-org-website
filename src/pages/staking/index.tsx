@@ -153,6 +153,9 @@ type Props = BasePageProps & {
   data: StakingStatsData
 }
 
+// In seconds
+const REVALIDATE_TIME = BASE_TIME_UNIT * 24
+
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
@@ -164,7 +167,10 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
-  const [data] = await dataLoader([["stakingStatsData", fetchBeaconchainData]])
+  const [data] = await dataLoader(
+    [["stakingStatsData", fetchBeaconchainData]],
+    REVALIDATE_TIME * 1000
+  )
 
   return {
     props: {
@@ -174,7 +180,7 @@ export const getStaticProps = (async ({ locale }) => {
       lastDeployLocaleTimestamp,
     },
     // Updated once a day
-    revalidate: BASE_TIME_UNIT * 24,
+    revalidate: REVALIDATE_TIME,
   }
 }) satisfies GetStaticProps<Props>
 

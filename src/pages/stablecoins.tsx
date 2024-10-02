@@ -90,6 +90,9 @@ type Props = BasePageProps & {
   marketsHasError: boolean
 }
 
+// In seconds
+const REVALIDATE_TIME = BASE_TIME_UNIT * 24 * 7
+
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
@@ -137,10 +140,13 @@ export const getStaticProps = (async ({ locale }) => {
   try {
     const [ethereumEcosystemData, stablecoinsData] = await dataLoader<
       [EthereumDataResponse, StablecoinDataResponse]
-    >([
-      ["ethereumEcosystemData", fetchEthereumEcosystemData],
-      ["ethereumStablecoinsData", fetchEthereumStablecoinsData],
-    ])
+    >(
+      [
+        ["ethereumEcosystemData", fetchEthereumEcosystemData],
+        ["ethereumStablecoinsData", fetchEthereumStablecoinsData],
+      ],
+      REVALIDATE_TIME * 1000
+    )
 
     // Get the intersection of stablecoins and Ethereum tokens to only have a list of data for stablecoins in the Ethereum ecosystem
     const ethereumStablecoinData = stablecoinsData.filter(
@@ -185,7 +191,7 @@ export const getStaticProps = (async ({ locale }) => {
       marketsHasError,
     },
     // Updated once a week
-    revalidate: BASE_TIME_UNIT * 24 * 7,
+    revalidate: REVALIDATE_TIME,
   }
 }) satisfies GetStaticProps<Props>
 
