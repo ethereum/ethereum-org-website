@@ -6,6 +6,8 @@ import type { ToCItem } from "@/lib/types"
 import ItemsList from "@/components/TableOfContents/ItemsList"
 import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
 
+import { cn } from "@/lib/utils/cn"
+
 import { ButtonLink } from "../ui/buttons/Button"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
@@ -16,6 +18,7 @@ export type TableOfContentsProps = {
   editPath?: string
   hideEditButton?: boolean
   isMobile?: boolean
+  className?: string
 }
 
 const TableOfContents = ({
@@ -24,6 +27,7 @@ const TableOfContents = ({
   editPath,
   hideEditButton = false,
   isMobile = false,
+  className,
   ...rest
 }: TableOfContentsProps) => {
   const { t } = useTranslation("common")
@@ -54,7 +58,10 @@ const TableOfContents = ({
 
   return (
     <aside
-      className="sticky top-19 hidden h-[calc(100vh-80px)] min-w-48 max-w-[25%] flex-col items-start gap-4 overflow-y-auto p-4 pe-0 lg:flex"
+      className={cn(
+        "sticky top-19 hidden h-[calc(100vh-80px)] min-w-48 max-w-[25%] flex-col items-start gap-4 overflow-y-auto p-4 pe-0 lg:flex",
+        className
+      )}
       {...rest}
     >
       {!hideEditButton && editPath && (

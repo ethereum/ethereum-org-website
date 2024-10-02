@@ -168,11 +168,11 @@ export const TutorialLayout = ({
           <Heading1>{frontmatter.title}</Heading1>
           <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
           <TableOfContents
+            className="pt-8"
             items={tocItems}
             maxDepth={frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
             isMobile
-            pt={8}
           />
           {children}
           <FileContributors
@@ -183,11 +183,11 @@ export const TutorialLayout = ({
         </ContentContainer>
         {tocItems && (
           <TableOfContents
+            className="pt-16"
             items={tocItems}
             maxDepth={frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
             hideEditButton={!!frontmatter.hideEditButton}
-            pt={16}
           />
         )}
       </Flex>
