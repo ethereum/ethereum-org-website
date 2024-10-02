@@ -155,6 +155,10 @@ const config = {
         },
 
         // TODO: Add border color tokens to match DS
+        border: {
+          // To be reviewed
+          light: "var(--light-border)",
+        },
 
         primary: {
           DEFAULT: "hsla(var(--primary))",
