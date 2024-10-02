@@ -45,14 +45,14 @@ const DataTable = <TData, TValue>({
           <TableRow key={headerGroup.id}>
             {headerGroup.headers.map((header) => {
               return (
-                <div key={header.id}>
+                <Fragment key={header.id}>
                   {header.isPlaceholder
                     ? null
                     : flexRender(
                         header.column.columnDef.header,
                         header.getContext()
                       )}
-                </div>
+                </Fragment>
               )
             })}
           </TableRow>
