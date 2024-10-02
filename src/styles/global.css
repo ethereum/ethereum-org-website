@@ -43,8 +43,6 @@
       rgba(145, 234, 228, 0.2) 100%
     );
     --search-background: var(--background);
-    /* To be reviewed */
-    --light-border: #ececec;
   }
 
   [data-theme="dark"] {
@@ -73,8 +71,6 @@
       rgba(134, 253, 232, 0.08) 100%
     );
     --search-background: #4c4c4c;
-  /* To be reviewed */
-  --light-border: #404040;
   }
 }
 

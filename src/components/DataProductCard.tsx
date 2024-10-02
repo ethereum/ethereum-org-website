@@ -75,11 +75,11 @@ const DataProductCard = ({
           <p className="mx-4 mb-4 text-sm leading-[140%]">{description}</p>
         </div>
         {data && (
-          <div className="mb-4 max-h-[160px] overflow-y-scroll border-t border-border-light">
+          <div className="mb-4 max-h-[160px] overflow-y-scroll border-t border-border">
             {data.map(({ logo, coin, apy }, idx) => (
               <Flex
                 key={idx}
-                className="flex justify-between border border-x-0 border-border-light p-4 text-sm uppercase"
+                className="flex justify-between border border-x-0 border-border p-4 text-sm uppercase"
                 // color="text300"
               >
                 <Flex className="items-center">
