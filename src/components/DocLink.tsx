@@ -42,7 +42,7 @@ const DocLink = ({ href, children, isExternal = false }: DocLinkProps) => {
             "transition-transform duration-100 group-hover:scale-[1.2] group-hover:fill-primary",
             isExternal ? "-rotate-45" : "rotate-0",
             isRtl && isExternal ? "-rotate-[135deg]" : "",
-            isRtl ? "-rotate-[180deg]" : ""
+            isRtl && !isExternal ? "-rotate-[180deg]" : ""
           )}
         />
       </Flex>
