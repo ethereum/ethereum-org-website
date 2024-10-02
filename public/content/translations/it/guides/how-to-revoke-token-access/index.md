@@ -43,7 +43,10 @@ Una volta fatto clic su revoca, dovresti visualizzare un nuovo suggerimento di t
 
 Ti consigliamo di ricaricare lo strumento di revoca dopo qualche minuto e di riconnettere il tuo portafoglio, per ricontrollare se il contratto revocato è scomparso dall'elenco.
 
-<mark>Ti consigliamo di non consentire mai l'accesso illimitato ai tuoi token ai progetti e di revocare regolarmente gli accessi di allowance a tutti i token. Revocare l'accesso al token non dovrebbe mai risultare in una perdita di fondi, specialmente se utilizzi i suddetti strumenti.</mark>
+<div className="space-y-8">
+<Alert variant="error">
+Ti consigliamo di non consentire mai l'accesso illimitato ai tuoi token ai progetti e di revocare regolarmente gli accessi di allowance a tutti i token. Revocare l'accesso al token non dovrebbe mai risultare in una perdita di fondi, specialmente se utilizzi i suddetti strumenti.
+</Alert>
 
  <br />
 
@@ -54,6 +57,7 @@ Ti consigliamo di ricaricare lo strumento di revoca dopo qualche minuto e di ric
     Visualizza le altre guide
   </ButtonLink>
 </Alert>
+</div>
 
 ## Domande frequenti
 

@@ -43,7 +43,10 @@ A lezárásra kattintva egy új tranzakció jelentik meg a tárcájában. Ez vá
 
 Javasoljuk, hogy néhány perc múlva frissítse a visszavonási eszközt, és nézze meg a tárcájában, hogy valóban eltűnt-e a törölt kapcsolat a listáról.
 
-<mark>Sose adjon a projekteknek korlátlan hozzáférést a tokenjeihez, valamint törölje rendszeresen a hozzáféréseket. A tokenekhez való hozzáférés leállítása nem jár eszközvesztéssel, ha a fenti eszközöket használja.</mark>
+<div className="space-y-8">
+<Alert variant="error">
+Sose adjon a projekteknek korlátlan hozzáférést a tokenjeihez, valamint törölje rendszeresen a hozzáféréseket. A tokenekhez való hozzáférés leállítása nem jár eszközvesztéssel, ha a fenti eszközöket használja.
+</Alert>
 
  <br />
 
@@ -54,6 +57,7 @@ Javasoljuk, hogy néhány perc múlva frissítse a visszavonási eszközt, és n
     Tekintse meg a további útmutatóinkat
   </ButtonLink>
 </Alert>
+</div>
 
 ## Gyakran ismételt kérdések
 

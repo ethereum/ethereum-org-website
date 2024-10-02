@@ -43,7 +43,10 @@ Sebaik sahaja anda mengklik pada batal, anda harus melihat cadangan transaksi ba
 
 Kami menasihatkan anda supaya menyegarkan semula alat pembatalan selepas beberapa minit dan sambungkan dompet anda sekali lagi untuk menyemak kembali sama ada kontrak yang dibatalkan telah hilang daripada senarai.
 
-<mark>Kami mengesyorkan anda jangan sekali-kali membenarkan projek mengakses tanpa had kepada token anda dan membatalkan semua akses peruntukan token dengan kerap. Membatalkan akses token tidak harus sekali-kali mengakibatkan hilang dana, terutamanya jika anda menggunakan alat-alat yang disenaraikan di atas.</mark>
+<div className="space-y-8">
+<Alert variant="error">
+Kami mengesyorkan anda jangan sekali-kali membenarkan projek mengakses tanpa had kepada token anda dan membatalkan semua akses peruntukan token dengan kerap. Membatalkan akses token tidak harus sekali-kali mengakibatkan hilang dana, terutamanya jika anda menggunakan alat-alat yang disenaraikan di atas.
+</Alert>
 
  <br />
 
@@ -54,6 +57,7 @@ Kami menasihatkan anda supaya menyegarkan semula alat pembatalan selepas beberap
     Lihat panduan-panduan lain kami
   </ButtonLink>
 </Alert>
+</div>
 
 ## Soalan yang kerap ditanya
 

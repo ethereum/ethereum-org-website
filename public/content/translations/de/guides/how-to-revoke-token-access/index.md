@@ -43,7 +43,10 @@ Sobald Sie auf Widerrufen klicken, sollten Sie einen neuen Transaktionsvorschlag
 
 Wir empfehlen Ihnen, das Widerrufs-Tool nach einigen Minuten zu aktualisieren und Ihre Wallet erneut zu verbinden, um doppelt zu prüfen, ob der widerrufene Vertrag aus der Liste verschwunden ist.
 
-<mark>Wir empfehlen Ihnen, Projekten niemals uneingeschränkten Zugriff auf Ihre Token zu gewähren und regelmäßig alle Token-Erlaubniszugriffe zu widerrufen. Das Widerrufen des Token-Zugriffs sollte niemals zu einem Verlust von Geldmitteln führen, insbesondere wenn Sie die oben aufgeführten Tools verwenden.</mark>
+<div className="space-y-8">
+<Alert variant="error">
+Wir empfehlen Ihnen, Projekten niemals uneingeschränkten Zugriff auf Ihre Token zu gewähren und regelmäßig alle Token-Erlaubniszugriffe zu widerrufen. Das Widerrufen des Token-Zugriffs sollte niemals zu einem Verlust von Geldmitteln führen, insbesondere wenn Sie die oben aufgeführten Tools verwenden.
+</Alert>
 
  <br />
 
@@ -54,6 +57,7 @@ Wir empfehlen Ihnen, das Widerrufs-Tool nach einigen Minuten zu aktualisieren un
     Sehen Sie unsere anderen Anleitungen
   </ButtonLink>
 </Alert>
+</div>
 
 ## Häufig gestellte Fragen
 

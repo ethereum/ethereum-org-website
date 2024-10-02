@@ -43,7 +43,10 @@ Ozugbo ị pịrị aka na kagbuo, ị ga-ahụ ntụnye aro azụmahịa ọh�
 
 Anyị na-adụ ọdụ ka i megharịa akụrụngwa i ji eme nkagbu mgbe nkeji ole na ole gara ma jikọọ akpa ego ịntanetị gị ọzọ ka ịlelee ugboro abụọ ma ọ bụrụ na ngwa a kagburu apụọla na ndekọ ahụ.
 
-<mark>Anyị na-akwado ka ị ghara ikwe ka ọrụ nweta ikike na-akparaghị ókè na tokin gị ma kagbuo ikike tokin mgbe niile. Ị kagbu ikike token ekwesịghị ịkpata mfu ego, ọkachasị ma ọ bụrụ na ị na-eji ngwaọrụ ndị e depụtara n'elu.</mark>
+<div className="space-y-8">
+<Alert variant="error">
+Anyị na-akwado ka ị ghara ikwe ka ọrụ nweta ikike na-akparaghị ókè na tokin gị ma kagbuo ikike tokin mgbe niile. Ị kagbu ikike token ekwesịghị ịkpata mfu ego, ọkachasị ma ọ bụrụ na ị na-eji ngwaọrụ ndị e depụtara n'elu.
+</Alert>
 
  <br />
 
@@ -54,6 +57,7 @@ Anyị na-adụ ọdụ ka i megharịa akụrụngwa i ji eme nkagbu mgbe nkeji
     Hụ ntuziaka anyị ndị ọzọ
   </ButtonLink>
 </Alert>
+</div>
 
 ## Frequently asked questions
 

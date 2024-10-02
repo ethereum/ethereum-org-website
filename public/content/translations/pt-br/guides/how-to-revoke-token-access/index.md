@@ -43,7 +43,10 @@ Ao clicar em revogar, você verá uma nova sugestão de transação na sua carte
 
 Aconselhamos que você atualize a ferramenta de revogação após alguns minutos e conecte sua carteira novamente para ter certeza de que o contrato revogado desapareceu da lista.
 
-<mark>Recomendamos que você nunca permita que seus projetos tenham acesso ilimitado aos seus tokens e revogue toda permissão de acesso aos seus tokens regularmente. Revogar o acesso ao token nunca deve resultar na perda de fundos, especialmente se você usar as ferramentas listadas acima.</mark>
+<div className="space-y-8">
+<Alert variant="error">
+Recomendamos que você nunca permita que seus projetos tenham acesso ilimitado aos seus tokens e revogue toda permissão de acesso aos seus tokens regularmente. Revogar o acesso ao token nunca deve resultar na perda de fundos, especialmente se você usar as ferramentas listadas acima.
+</Alert>
 
  <br />
 
@@ -54,6 +57,7 @@ Aconselhamos que você atualize a ferramenta de revogação após alguns minutos
     Veja nossos outros guias
   </ButtonLink>
 </Alert>
+</div>
 
 ## Perguntas frequentes
 

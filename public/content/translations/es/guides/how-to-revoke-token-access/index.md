@@ -43,7 +43,10 @@ Una vez que haga clic en revocar, debería ver una nueva sugerencia de transacci
 
 Le aconsejamos que actualice la herramienta de revocación transcurridos unos minutos y vuelva a conectar su cartera de nuevo para asegurarse de que el contrato revocado haya desaparecido de la lista.
 
-<mark>Le recomendamos que nunca permita que los proyectos tengan acceso ilimitado a sus tókenes y que revoque regularmente todos los permisos de acceso a tókenes. Revocar el acceso a un token nunca debería provocar una pérdida de fondos, especialmente si utiliza la lista de herramientas mencionadas anteriormente.</mark>
+<div className="space-y-8">
+<Alert variant="error">
+Le recomendamos que nunca permita que los proyectos tengan acceso ilimitado a sus tókenes y que revoque regularmente todos los permisos de acceso a tókenes. Revocar el acceso a un token nunca debería provocar una pérdida de fondos, especialmente si utiliza la lista de herramientas mencionadas anteriormente.
+</Alert>
 
  <br />
 
@@ -54,6 +57,7 @@ Le aconsejamos que actualice la herramienta de revocación transcurridos unos mi
     Consulte nuestras demás guias
   </ButtonLink>
 </Alert>
+</div>
 
 ## Preguntas más frecuentes
 

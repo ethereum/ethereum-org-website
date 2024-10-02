@@ -43,17 +43,19 @@ Once you click on revoke, you should see a new transaction suggestion in your wa
 
 We advise you to refresh the revoking tool after a few minutes and connect your wallet again to double check if the revoked contract has disappeared from the list.
 
-<mark>We recommend you never allow projects unlimited access to your tokens and revoke all token allowance access regularly. Revoking token access should never result in a loss of funds, especially if you use the tools listed above.</mark>
+<div className="space-y-8">
+<Alert variant="error">
+We recommend you never allow projects unlimited access to your tokens and revoke all token allowance access regularly. Revoking token access should never result in a loss of funds, especially if you use the tools listed above.
+</Alert>
 
- <br />
-
-<Alert className="justify-between">
+<Alert>
   <AlertEmoji text=":eyes:" />
-  <div>Want to learn more?</div>
+  <AlertContent>Want to learn more?</AlertContent>
   <ButtonLink href="/guides/">
     See our other guides
   </ButtonLink>
 </Alert>
+</div>
 
 ## Frequently asked questions
 
