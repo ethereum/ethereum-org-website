@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "next-i18next"
 
 import { FilterInputState, Lang } from "@/lib/types"
 

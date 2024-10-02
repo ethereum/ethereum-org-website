@@ -7,7 +7,7 @@ import {
   useState,
 } from "react"
 import { useRouter } from "next/router"
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "next-i18next"
 import { ColumnDef } from "@tanstack/react-table"
 
 import type {
