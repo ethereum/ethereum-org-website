@@ -15,7 +15,7 @@ export type DocLinkProps = {
 }
 
 const DocLink = ({ href, children, isExternal = false }: DocLinkProps) => {
-  const { flipForRtl } = useRtlFlip()
+  const { isRtl } = useRtlFlip()
 
   return (
     <BaseLink
@@ -41,7 +41,8 @@ const DocLink = ({ href, children, isExternal = false }: DocLinkProps) => {
             "mx-6 h-6 w-6 self-center",
             "transition-transform duration-100 group-hover:scale-[1.2] group-hover:fill-primary",
             isExternal ? "-rotate-45" : "rotate-0",
-            flipForRtl && isExternal ? "-rotate-[135deg]" : ""
+            isRtl && isExternal ? "-rotate-[135deg]" : "",
+            isRtl ? "-rotate-[180deg]" : ""
           )}
         />
       </Flex>
