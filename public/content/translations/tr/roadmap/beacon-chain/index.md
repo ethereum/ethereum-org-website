@@ -36,9 +36,9 @@ Ve hisse ispatını mutabakat mekanizması olarak kullanmak, [ şuan sahip oldu�
 
 <Alert>
 <AlertEmoji text=":money_bag:" />
-<AlertContent>
+<AlertDescription>
   Eğer doğrulayıcı olmakla ve Ethereum'un güvenliğini sağlamaya yardımcı olmakla ilgileniyorsanız, <a href="/staking/">hisseleme ile ilgili daha fazla şey öğrenin</a>.
-</AlertContent>
+</AlertDescription>
 </Alert>
 
 ### Parçalama için ayarlamalar {#setting-up-for-sharding}

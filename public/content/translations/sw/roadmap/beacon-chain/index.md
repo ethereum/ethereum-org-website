@@ -31,9 +31,9 @@ Kuweka hisa na kua mt hibitishaji ni rahisi kuliko [kuchimba](/developers/docs/c
 
 <Alert>
 <AlertEmoji text=":money_bag:" />
-<AlertContent>
+<AlertDescription>
 Kama ungependa kua mthibitishaji na kusaidia kulinda mnyororo wa Kioleza, <a href="/staking/">jifunze zaidi jinsi ya kuweka hisa</a>.
-</AlertContent>
+</AlertDescription>
 </Alert>
 
 Hili pia ni badiliko muhumu kwa ajili ya uboreshaji wa Eth2:[minyororo ya vigae](/roadmap/danksharding/).

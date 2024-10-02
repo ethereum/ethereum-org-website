@@ -38,9 +38,9 @@ summaryPoint3: बीकन चेन ने सहमति तर्क और
 
 <Alert>
 <AlertEmoji text=":money_bag:" />
-<AlertContent>
+<AlertDescription>
   यदि आप एक सत्यापनकर्ता बनने में रुचि रखते हैं और एथेरियम को सुरक्षित करने में मदद करते हैं, तो <a href="/staking/">स्टेकिंग के बारे में और जानें</a>।
-</AlertContent>
+</AlertDescription>
 </Alert>
 
 ### शार्डिंग सेट करना {#setting-up-for-sharding}

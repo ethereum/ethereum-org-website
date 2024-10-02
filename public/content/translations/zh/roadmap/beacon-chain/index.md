@@ -36,9 +36,9 @@ summaryPoint3: 信标链引入了共识逻辑和区块广播协议，为当前�
 
 <Alert>
 <AlertEmoji text=":money_bag:" />
-<AlertContent>
+<AlertDescription>
   如果你有兴趣成为验证者并帮助保护以太坊，请点击此处<a href="/staking/">了解更多关于质押的信息</a>。
-</AlertContent>
+</AlertDescription>
 </Alert>
 
 ### 设置分片 {#setting-up-for-sharding}

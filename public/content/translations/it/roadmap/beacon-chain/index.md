@@ -36,9 +36,9 @@ E l'utilizzo del proof of stake come meccanismo di consenso è un componente fon
 
 <Alert>
 <AlertEmoji text=":money_bag:" />
-<AlertContent>
+<AlertDescription>
   Se sei interessato a diventare un validatore e contribuire a proteggere Ethereum, <a href="/staking/">scopri di più sullo staking</a>.
-</AlertContent>
+</AlertDescription>
 </Alert>
 
 ### Prepararsi allo sharding {#setting-up-for-sharding}

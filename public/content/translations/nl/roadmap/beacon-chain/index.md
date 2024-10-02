@@ -31,9 +31,9 @@ Sstaken en een validator worden is makkelijker dan [mining](/developers/docs/con
 
 <Alert>
 <AlertEmoji text=":money_bag:" />
-<AlertContent>
+<AlertDescription>
 Als u geïnteresseerd bent om een validator te worden en de Beacon Chain te beveiligen, <a href="/staking/">hier vindt u meer informatie over staken</a>.
-</AlertContent>
+</AlertDescription>
 </Alert>
 
 Dit is ook een belangrijke verandering voor een andere upgrade: [shardketens](/roadmap/danksharding/).

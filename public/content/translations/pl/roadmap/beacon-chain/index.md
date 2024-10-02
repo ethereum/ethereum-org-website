@@ -38,9 +38,9 @@ Przejście na proof-of-stake sprawiło, że sieć Ethereum stała się znacznie 
 
 <Alert>
 <AlertEmoji text=":money_bag:" />
-<AlertContent>
+<AlertDescription>
   Jeśli chcesz zostać walidatorem i pomóc w zabezpieczaniu Ethereum, <a href="/staking/">dowiedz się więcej o stakingu</a>.
-</AlertContent>
+</AlertDescription>
 </Alert>
 
 ### Przygotowanie do shardingu {#setting-up-for-sharding}

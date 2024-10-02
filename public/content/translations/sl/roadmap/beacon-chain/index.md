@@ -38,9 +38,9 @@ S prehodom na mehanizem dokaza o deležu je Ethereum postal občutno varnejši i
 
 <Alert>
 <AlertEmoji text=":money_bag:" />
-<AlertContent>
+<AlertDescription>
   Če želite postati validator in pomagati pri zaščiti Ethereuma, <a href="/staking/">preberite več o zastavljanju</a>.
-</AlertContent>
+</AlertDescription>
 </Alert>
 
 ### Priprava na razdrobitev {#setting-up-for-sharding}

@@ -36,9 +36,9 @@ summaryPoint3: Η Κύρια Αλυσίδα εισήγαγε τη λογική �
 
 <Alert>
 <AlertEmoji text=":money_bag:" />
-<AlertContent>
+<AlertDescription>
   Αν ενδιαφέρεστε να γίνετε επικυρωτής και να συμβάλετε στην ενίσχυση της ασφάλειας του Ethereum, <a href="/staking/">μάθετε περισσότερα για την αποθήκευση (staking)</a>.
-</AlertContent>
+</AlertDescription>
 </Alert>
 
 ### Ρυθμίζοντας την τμηματοποίηση (sharding) {#setting-up-for-sharding}

@@ -38,9 +38,9 @@ summaryPoint3: Бийкън чейн въведе логиката на конс
 
 <Alert>
 <AlertEmoji text=":money_bag:" />
-<AlertContent>
+<AlertDescription>
   Ако се интересувате от това да станете валидатор и да помогнете за защитата на Eтереум, <a href="/staking/">научете повече за залагането</a>.
-</AlertContent>
+</AlertDescription>
 </Alert>
 
 ### Настройки за фрагментиране {#setting-up-for-sharding}

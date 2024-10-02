@@ -36,9 +36,9 @@ Y usando la prueba de participación como un mecanismo de consenso es un compone
 
 <Alert>
 <AlertEmoji text=":money_bag:" />
-<AlertContent>
+<AlertDescription>
   Si le interesa convertirse en validador y contribuir con la seguridad de Ethereum, <a href="/staking/"> obtenga más información sobre la participación</a>.
-</AlertContent>
+</AlertDescription>
 </Alert>
 
 ### Preparación para la fragmentación {#setting-up-for-sharding}

@@ -36,9 +36,9 @@ summaryPoint3: С Beacon Chain в системе появился протоко
 
 <Alert>
 <AlertEmoji text=":money_bag:" />
-<AlertContent>
+<AlertDescription>
   Если вы хотите стать валидатором и принять участие в защите Ethereum, <a href="/staking/">узнайте больше о стейкинге</a>.
-</AlertContent>
+</AlertDescription>
 </Alert>
 
 ### Настройка шардинга {#setting-up-for-sharding}

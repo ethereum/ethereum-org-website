@@ -31,9 +31,9 @@ Apostar i convertir-se en validador és més senzill que [minar](/developers/doc
 
 <Alert>
 <AlertEmoji text=":money_bag:" />
-<AlertContent>
+<AlertDescription>
 Si us interessa ser validador i contribuir a protegir la cadena de balisa, <a href="/staking/">aquí podeu aprendre més sobre les apostes</a>.
-</AlertContent>
+</AlertDescription>
 </Alert>
 
 Això és un canvi important per una altra millora:[les cadenes de fragments](/roadmap/danksharding/).
