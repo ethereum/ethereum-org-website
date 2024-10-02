@@ -118,11 +118,7 @@ API_URL = "your-api-url"
 PRIVATE_KEY = "your-private-key"
 ```
 
-<Alert variant="error">
-<AlertContent>
-不要提交 <code>.env</code>！ 请确保永远不要与任何人共享或公开你的 <code>.env</code> 文件，因为这样做会泄露你的私钥。 如果你使用版本控制，请将你的 <code>.env</code> 添加到 <a href="https://git-scm.com/docs/gitignore">gitignore</a> 文件中。
-</AlertContent>
-</Alert>
+<EnvWarningBanner />
 
 ### 7. 创建 `sendTx.js` 文件 {#create-sendtx-js}
 

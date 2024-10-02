@@ -14,6 +14,7 @@ import ContributorsQuizBanner from "../Banners/ContributorsQuizBanner"
 import Card from "../Card"
 import DocLink from "../DocLink"
 import Emoji from "../Emoji"
+import EnvWarningBanner from "../EnvWarningBanner"
 import ExpandableCard from "../ExpandableCard"
 import FeaturedText from "../FeaturedText"
 import GlossaryTooltip from "../Glossary/GlossaryTooltip"
@@ -164,6 +165,7 @@ export const reactComponents = {
   Divider,
   DocLink,
   Emoji,
+  EnvWarningBanner,
   ExpandableCard,
   FeaturedText,
   GlossaryTooltip,

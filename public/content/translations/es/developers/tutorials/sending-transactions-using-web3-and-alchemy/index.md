@@ -118,11 +118,7 @@ API_URL = "your-api-url"
 PRIVATE_KEY = "your-private-key"
 ```
 
-<Alert variant="error">
-<AlertContent>
-¡No exponga su <code>.env</code>! Asegúrese de que nunca comparte ni expone su archivo <code>.env</code> con nadie, si ello conlleva revelar sus secretos. Si está haciendo un control de la versión, añada <code>.env</code> a un archivo <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
-</AlertContent>
-</Alert>
+<EnvWarningBanner />
 
 ### 7\. Cree el archivo `sendTx.js` {#create-sendtx-js}
 

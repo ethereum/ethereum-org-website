@@ -1,9 +1,13 @@
-import { Alert } from "./ui/alert"
+import { Alert, AlertContent, AlertDescription } from "./ui/alert"
 import Translation from "./Translation"
 
 const EnvWarningBanner = (props: React.HTMLAttributes<HTMLDivElement>) => (
   <Alert variant="error" {...props}>
-    <Translation id="page-tutorials-env-banner" />
+    <AlertContent>
+      <AlertDescription>
+        <Translation id="page-developers-tutorials:page-tutorials-env-banner" />
+      </AlertDescription>
+    </AlertContent>
   </Alert>
 )
 
