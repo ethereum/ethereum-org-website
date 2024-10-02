@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-key */
+// TODO: Deprecate in favor of ./trophy-icon.svg
 import React from "react"
 import { createIcon } from "@chakra-ui/react"
 

@@ -1,9 +1,10 @@
-import * as React from "react"
-import { Circle, SquareProps } from "@chakra-ui/react"
+import type { ChildOnlyProp } from "@/lib/types"
 
-import { ChildOnlyProp } from "@/lib/types"
+import { cn } from "@/lib/utils/cn"
 
-import { CorrectIcon, IncorrectIcon, TrophyIcon } from "../../icons/quiz"
+import CorrectIcon from "../../icons/quiz/correct-icon.svg"
+import IncorrectIcon from "../../icons/quiz/incorrect-icon.svg"
+import TrophyIcon from "../../icons/quiz/trophy-icon.svg"
 
 import { AnswerStatus } from "./useQuizWidget"
 
@@ -18,21 +19,21 @@ type AnswerIconProps = {
  */
 export const AnswerIcon = ({ answerStatus }: AnswerIconProps) => {
   const commonProps = {
-    color: "neutral",
+    className: "text-background-highlight",
   }
 
-  const IconWrapper = (props: ChildOnlyProp) => {
-    const getWrapperBg = (): SquareProps["bg"] => {
-      if (!answerStatus) {
-        return "primary.base"
-      }
-      if (answerStatus === "correct") {
-        return "success.base"
-      }
-      return "error.base"
+  const IconWrapper = ({ children }: ChildOnlyProp) => {
+    const getWrapperBgClass = () => {
+      if (!answerStatus) return "bg-primary"
+      if (answerStatus === "correct") return "bg-success"
+      return "bg-error"
     }
 
-    return <Circle size="50px" bg={getWrapperBg()} {...props} />
+    return (
+      <div className={cn("size-[50px] rounded-full", getWrapperBgClass())}>
+        {children}
+      </div>
+    )
   }
 
   if (!answerStatus) {

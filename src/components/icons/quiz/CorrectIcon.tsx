@@ -1,3 +1,4 @@
+// TODO: Deprecate in favor of ./correct-icon.svg
 import { createIcon } from "@chakra-ui/react"
 
 export const CorrectIcon = createIcon({
