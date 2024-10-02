@@ -1,3 +1,4 @@
+// TODO: Deprecate in lieu of ./green-tick-icon.svg
 import * as React from "react"
 import { createIcon } from "@chakra-ui/react"
 

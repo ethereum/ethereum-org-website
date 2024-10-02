@@ -1,12 +1,14 @@
 import { useTranslation } from "next-i18next"
-import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
 
 import type { QuizzesSection } from "@/lib/types"
 
-import { Button } from "../Buttons"
-import { GreenTickIcon } from "../icons/quiz"
-import Tag from "../Tag"
+import { cn } from "@/lib/utils/cn"
+
+import GreenTickIcon from "../icons/quiz/green-tick-icon.svg"
 import Translation from "../Translation"
+import { Button } from "../ui/buttons/Button"
+import { Stack } from "../ui/flex"
+import { Tag } from "../ui/tag"
 
 export type QuizzesListItemProps = Omit<QuizzesSection, "id"> & {
   isCompleted: boolean
@@ -25,61 +27,53 @@ const QuizItem = ({
   const { t } = useTranslation("learn-quizzes")
 
   return (
-    <ListItem
-      color={isCompleted ? "body.medium" : "text"}
-      fontWeight="bold"
-      px={{ base: 0, lg: 4 }}
-      py={4}
-      borderBottom="1px solid"
-      borderColor="disabled"
-      mb={0}
-      sx={{ counterIncrement: "list-counter" }}
+    <li
+      className={cn(
+        "mb-0 border-b border-disabled px-0 py-4 font-bold text-body lg:px-4",
+        isCompleted && "text-body-medium"
+      )}
+      style={{ counterIncrement: "list-counter" }}
     >
-      <Flex
-        justifyContent="space-between"
-        alignItems={{ base: "flex-start", lg: "center" }}
-        direction={{ base: "column", lg: "row" }}
-      >
-        <Stack mb={{ base: 5, lg: 0 }}>
-          <Flex gap={2} alignItems="center">
-            <Text
-              color={isCompleted ? "body.medium" : "text"}
-              _before={{
-                content: 'counter(list-counter) ". "',
-              }}
+      <div className="flex flex-col justify-center lg:flex-row lg:items-center">
+        <Stack className="mb-5 lg:mb-0">
+          <div className="flex items-center gap-2">
+            <p
+              className={cn(
+                'text-body before:content-[counter(list-counter)_"._"]',
+                isCompleted && "text-body-medium"
+              )}
             >
               <Translation id={titleId} />
-            </Text>
+            </p>
 
             {/* Show green tick if quizz was completed only */}
             {isCompleted && <GreenTickIcon />}
-          </Flex>
+          </div>
 
           {/* Labels */}
-          <Flex gap={3}>
+          <div className="flex gap-3">
             {/* number of questions - label */}
-            <Tag
-              label={t(`${numberOfQuestions} ${t("questions")}`)}
-              ms={{ lg: -2 }}
-            />
+            <Tag className="lg:-ms-2">
+              t(`${numberOfQuestions} ${t("questions")}`)
+            </Tag>
 
             {/* difficulty - label */}
-            <Tag label={level.toUpperCase()} />
-          </Flex>
+            <Tag>{level.toUpperCase()}</Tag>
+          </div>
         </Stack>
 
         {/* Start Button */}
-        <Box w={{ base: "full", lg: "auto" }}>
+        <div className="w-full lg:w-auto">
           <Button
             variant="outline"
-            w={{ base: "full", lg: "auto" }}
+            className="w-full lg:w-auto"
             onClick={handleStart}
           >
             <Translation id="learn-quizzes:start" />
           </Button>
-        </Box>
-      </Flex>
-    </ListItem>
+        </div>
+      </div>
+    </li>
   )
 }
 
