@@ -31,7 +31,7 @@ const Mobile = ({ items, maxDepth }: TableOfContentsMobileProps) => {
         <Button
           isSecondary
           variant="outline"
-          className="flex w-full justify-between"
+          className="flex w-full justify-between lg:hidden"
         >
           <span className="flex-1 text-center">{t("on-this-page")}</span>
           <MdExpandMore />
