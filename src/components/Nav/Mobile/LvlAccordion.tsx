@@ -33,10 +33,10 @@ const subtextColorPerLevel = {
 }
 
 const backgroundColorPerLevel = {
-  1: "bg-menu-1-background",
-  2: "bg-menu-2-background",
-  3: "bg-menu-3-background",
-  4: "bg-menu-4-background",
+  1: "bg-background",
+  2: "bg-background-low",
+  3: "bg-background-medium",
+  4: "bg-background-high",
 }
 
 const LvlAccordion = ({

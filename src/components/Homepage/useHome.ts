@@ -40,6 +40,8 @@ export const useHome = () => {
 
   const { direction, isRtl } = useRtlFlip()
 
+  const eventCategory = `Homepage - ${locale}`
+
   const toggleCodeExample = (id: number): void => {
     setActiveCode(id)
     setModalOpen(true)
@@ -127,28 +129,33 @@ export const useHome = () => {
       label: t("page-index:page-index-popular-topics-ethereum"),
       Svg: EthTokenIcon,
       href: "/what-is-ethereum/",
+      eventName: "ethereum",
     },
     {
       label: t("page-index:page-index-popular-topics-wallets"),
       Svg: PickWalletIcon,
       href: "/wallets/",
+      eventName: "wallets",
     },
     {
       label: t("page-index:page-index-popular-topics-start"),
       Svg: BlockHeap,
       href: "/guides/",
+      eventName: "start guides",
     },
     {
       label: t("page-index:page-index-popular-topics-whitepaper"),
       Svg: Whitepaper,
-      className: cn(isRtl && "[&_svg]:-scale-x-100"),
+      className: cn(isRtl && "[&_div_div:has(svg)]:-scale-x-100"),
       href: "/whitepaper/",
+      eventName: "whitepaper",
     },
     {
       label: t("page-index:page-index-popular-topics-roadmap"),
       Svg: RoadmapSign,
-      className: cn(isRtl && "[&_svg]:-scale-x-100"),
+      className: cn(isRtl && "[&_div_div:has(svg)]:-scale-x-100 "),
       href: "/roadmap/",
+      eventName: "roadmap",
     },
   ]
 
@@ -217,5 +224,6 @@ export const useHome = () => {
     upcomingEvents,
     joinActions,
     bentoItems,
+    eventCategory,
   }
 }
