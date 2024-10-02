@@ -140,7 +140,7 @@ const WalletSubComponent = ({
                 eventValue: JSON.stringify(filters),
               }}
             >
-              <FaGlobe size="2xl" />
+              <FaGlobe className="text-2xl text-primary" />
             </SocialLink>
             {wallet.discord && (
               <SocialLink
@@ -153,7 +153,7 @@ const WalletSubComponent = ({
                   eventValue: JSON.stringify(filters),
                 }}
               >
-                <FaDiscord color="#7289da" size="2xl" />
+                <FaDiscord className="text-2xl text-[#7289da]" />
               </SocialLink>
             )}
             {wallet.twitter && (
@@ -167,7 +167,7 @@ const WalletSubComponent = ({
                   eventValue: JSON.stringify(filters),
                 }}
               >
-                <FaXTwitter color="#1da1f2" size="2xl" />
+                <FaXTwitter className="text-2xl text-[#1da1f2]" />
               </SocialLink>
             )}
           </div>
