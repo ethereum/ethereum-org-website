@@ -30,8 +30,8 @@ const Card = ({ children, ...props }: FlexProps) => {
       className={cn(
         "flex-[1_1_412px] gap-0 xl:flex-[1_1_216px]",
         "m-4 justify-between bg-background",
-        "rounded-sm border border-[#e5e5e5] shadow-table-box dark:border-[#333]",
-        "hover:scale-[1.02] hover:rounded hover:bg-[#f2f2f2] hover:shadow-table-box-hover hover:transition-transform hover:duration-100 dark:hover:bg-[rgba(255,115,36,.013)]"
+        "rounded-sm border shadow-table-box",
+        "hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:transition-transform hover:duration-100"
       )}
       {...props}
     >
@@ -59,7 +59,7 @@ const Label = ({ children, variant = "medium", ...props }: LabelProps) => {
   return (
     <Center
       className={cn(
-        "rounded-t-[1px] border-b border-[#e5e5e5] px-0 py-1 text-sm uppercase",
+        "rounded-t-[1px] border-b px-0 py-1 text-sm uppercase",
         variantClassName
       )}
       {...props}
@@ -71,10 +71,7 @@ const Label = ({ children, variant = "medium", ...props }: LabelProps) => {
 
 const H2 = ({ children, ...props }) => (
   <h2
-    className={cn(
-      "-mb-2 mt-2 p-4",
-      "text-start text-2xl font-bold leading-[22px]"
-    )}
+    className={cn("-mb-2 mt-2 p-4", "text-start text-2xl font-bold leading-6")}
     {...props}
   >
     {children}
