@@ -89,7 +89,7 @@
     "tailwind-variants": "^0.2.1",
     "tailwindcss-animate": "^1.0.7",
     "usehooks-ts": "^3.1.0",
-    "vaul": "^0.9.1",
+    "vaul": "^1.0.0",
     "yaml-loader": "^0.8.0"
   },
   "devDependencies": {
