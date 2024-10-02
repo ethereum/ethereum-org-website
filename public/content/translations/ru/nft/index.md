@@ -56,7 +56,7 @@ NFT используются для различных целей:
 
 <Alert className="justify-between mt-8">
   <AlertEmoji text=":eyes:"/>
-  <div>Ищите и покупайте произведения искусства и коллекционные предметы NFT или создавайте собственные…</div>
+  <AlertContent>Ищите и покупайте произведения искусства и коллекционные предметы NFT или создавайте собственные…</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">
     Узнать о произведениях NFT
   </ButtonLink>

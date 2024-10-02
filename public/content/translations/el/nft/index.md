@@ -56,7 +56,7 @@ summaryPoint3: Υποστηρίζονται από έξυπνα συμβόλαι
 
 <Alert className="justify-between mt-8">
   <AlertEmoji text=":eyes:"/>
-  <div>Εξερευνήστε, αγοράστε ή δημιουργήστε το δικό σας NFT τέχνη/συλλεκτικά...</div>
+  <AlertContent>Εξερευνήστε, αγοράστε ή δημιουργήστε το δικό σας NFT τέχνη/συλλεκτικά...</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">
     Εξερευνήστε NFT τέχνης
   </ButtonLink>

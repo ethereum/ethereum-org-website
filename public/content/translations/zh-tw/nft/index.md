@@ -56,7 +56,7 @@ summaryPoint3: 由建置於以太坊區塊鏈上的智慧型合約提供支援�
 
 <Alert className="justify-between mt-8">
   <AlertEmoji text=":eyes:"/>
-  <div>探索、購買或建立你個人的非同質化代幣藝術品/收藏品……</div>
+  <AlertContent>探索、購買或建立你個人的非同質化代幣藝術品/收藏品……</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">
     探索非同質化代幣藝術品
   </ButtonLink>

@@ -56,7 +56,7 @@ Maybe you are an artist that wants to share their work using NFTs, without losin
 
 <Alert className="justify-between mt-8">
   <AlertEmoji text=":eyes:"/>
-  <div>Explore, buy or create your own NFT art/collectibles...</div>
+  <AlertContent>Explore, buy or create your own NFT art/collectibles...</AlertContent>
   <ButtonLink href="/dapps/?category=collectibles#explore">
     Explore NFT art
   </ButtonLink>

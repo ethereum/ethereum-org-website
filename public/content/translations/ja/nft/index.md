@@ -56,7 +56,7 @@ NFTは以下のような多数の用途に使用されます。
 
 <Alert className="justify-between mt-8">
   <AlertEmoji text=":eyes:"/>
-  <div>非代替性トークン(NFT)アート/収集品を探す、買う、作る</div>
+  <AlertContent>非代替性トークン(NFT)アート/収集品を探す、買う、作る</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">
     非代替性トークン(NFT)アートを探す
   </ButtonLink>

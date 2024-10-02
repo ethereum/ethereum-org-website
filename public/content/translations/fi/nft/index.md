@@ -169,7 +169,7 @@ Kun sisältöä myydään, ansainta ohjautuu suoraan luojalle. Jos uusi sisäll�
 
 <Alert className="justify-between">
   <AlertEmoji text=":eyes:" />
-  <div>Tutki, osta tai luo omia NFT-toteutuksia</div>
+  <AlertContent>Tutki, osta tai luo omia NFT-toteutuksia</div>
   <ButtonLink href="/dapps/?category=collectibles">
     Tutustu NFT-taiteeseen
   </ButtonLink>
@@ -203,7 +203,7 @@ Decentraland, virtuaalinen reality-peli, jossa NFTt edustavat tontteja tai kiint
 
 <Alert className="justify-between">
   <AlertEmoji text=":eyes:" />
-  <div>Tutustu Ethereum-peleihin, joita NFTt boostaavat...</div>
+  <AlertContent>Tutustu Ethereum-peleihin, joita NFTt boostaavat...</div>
   <ButtonLink href="/dapps/?category=gaming">
     Tutki NFT-pelejä
   </ButtonLink>

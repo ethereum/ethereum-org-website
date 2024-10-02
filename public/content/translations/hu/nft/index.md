@@ -56,7 +56,7 @@ Tegyük fel, hogy Ön egy művész, aki szeretné NFT-ként megosztani az alkot�
 
 <Alert className="justify-between mt-8">
   <AlertEmoji text=":eyes:"/>
-  <div>Fedezzen fel, vásároljon vagy készítsen saját NFT-műalkotásokat/gyűjthető tárgyakat...</div>
+  <AlertContent>Fedezzen fel, vásároljon vagy készítsen saját NFT-műalkotásokat/gyűjthető tárgyakat...</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">
     Fedezzen fel NFT-műalkotásokat
   </ButtonLink>
