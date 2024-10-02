@@ -12,11 +12,11 @@ A escalabilidade do Ethereum é feita por meio de [camadas 2s](/layer-2/#rollups
 <Alert className="mb-8">
 <AlertContent>
   <AlertTitle>Custos de transação</AlertTitle>
-  <ul style={{ marginBottom: 0 }}>
+  <ul className="mb-0">
     <li>Os rollups atuais são <strong>~3-8x</strong> mais baratos do que a camada 1 da Ethereum</li>
     <li>ZK-rollups em breve reduzirão as taxas em <strong>~40-100x</strong></li>
     <li>As próximas alterações no Ethereum oferecerão <strong>~100-1000x</strong> a mais de escalabilidade</li>
-    <li style={{ marginBottom: 0 }}>Os usuários devem se beneficiar com transações <strong>que custam menos do que $0,001</strong></li>
+    <li className="mb-0">Os usuários devem se beneficiar com transações <strong>que custam menos do que $0,001</strong></li>
   </ul>
 </AlertContent>
 </Alert>

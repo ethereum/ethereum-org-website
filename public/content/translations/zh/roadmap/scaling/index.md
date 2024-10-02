@@ -12,11 +12,11 @@ template: roadmap
 <Alert className="mb-8">
 <AlertContent>
   <AlertTitle>交易费</AlertTitle>
-  <ul style={{ marginBottom: 0 }}>
+  <ul className="mb-0">
     <li>目前，卷叠比以太坊一层网络便宜大约 <strong>5-20 倍</strong></li>
     <li>零知识卷叠将很快把费用降低约 <strong>40-100 倍</strong></li>
     <li>即将进行的以太坊变更会再次扩容 <strong>100-1000 倍</strong></li>
-    <li style={{ marginBottom: 0 }}>用户将从中受益，<strong>交易成本降至不足 0.001 美元</strong></li>
+    <li className="mb-0">用户将从中受益，<strong>交易成本降至不足 0.001 美元</strong></li>
   </ul>
 </AlertContent>
 </Alert>

@@ -12,11 +12,11 @@ Ethereum wird mit Hilfe von [Layer 2s](/layer-2/#rollups) (auch bekannt als Roll
 <Alert className="mb-8">
 <AlertContent>
   <AlertTitle>Transaktionskosten</AlertTitle>
-  <ul style={{ marginBottom: 0 }}>
+  <ul className="mb-0">
     <li>Die heutigen Rollups sind <strong>~3-8x</strong> günstiger als die Ethereum Layer 1</li>
     <li>ZK-Rollups werden bald die Gebühren um <strong>~40-100x</strong> senken</li>
     <li>Bevorstehende Änderungen an Ethereum werden eine weitere <strong>~100-1000-fache</strong> Skalierung ermöglichen</li>
-    <li style={{ marginBottom: 0 }}>Benutzer könnten von Transaktionskosten <strong>unter $0.001 </strong>profitieren</li>
+    <li className="mb-0">Benutzer könnten von Transaktionskosten <strong>unter $0.001 </strong>profitieren</li>
   </ul>
 </AlertContent>
 </Alert>

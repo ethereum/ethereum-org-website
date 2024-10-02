@@ -12,11 +12,11 @@ template: roadmap
 <Alert className="mb-8">
 <AlertContent>
   <AlertTitle>トランザクションコスト</AlertTitle>
-  <ul style={{ marginBottom: 0 }}>
+  <ul className="mb-0">
     <li>今日のロールアップはイーサリアムレイヤー1よりも<strong>約5～20倍</strong>安価</li>
     <li>ゼロ知識ロールアップはまもなく、<strong>約40～100倍</strong>安くなる予定</li>
     <li>イーサリアムの今後の仕様変更により、さらに<strong>約100～1000倍</strong>のスケーリングが実現</li>
-    <li style={{ marginBottom: 0 }}>ユーザーは、トランザクションのコストが<strong>0.001ドル未満</strong>というメリットを享受</li>
+    <li className="mb-0">ユーザーは、トランザクションのコストが<strong>0.001ドル未満</strong>というメリットを享受</li>
   </ul>
 </AlertContent>
 </Alert>

@@ -12,11 +12,11 @@ template: roadmap
 <Alert className="mb-8">
 <AlertContent>
   <AlertTitle>交易成本</AlertTitle>
-  <ul style={{ marginBottom: 0 }}>
+  <ul className="mb-0">
     <li>現今卷軸的成本比以太坊一層網路便宜<strong>大約 5 - 20 倍</strong></li>
     <li>零知識卷軸很快會讓費用降低<strong>大約 40-100 倍</strong></li>
     <li>以太坊即將變更，會帶來<strong>大約 100-1000 倍</strong>的擴容</li>
-    <li style={{ marginBottom: 0 }}>使用者應該能夠從<strong>成本低於 $0.001</strong> 的交易中受益</li>
+    <li className="mb-0">使用者應該能夠從<strong>成本低於 $0.001</strong> 的交易中受益</li>
   </ul>
 </AlertContent>
 </Alert>

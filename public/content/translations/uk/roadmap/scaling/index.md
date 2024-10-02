@@ -12,11 +12,11 @@ Ethereum масштабується за допомогою рішень [дру
 <Alert className="mb-8">
 <AlertContent>
   <AlertTitle>Вартість транзакцій</AlertTitle>
-  <ul style={{ marginBottom: 0 }}>
+  <ul className="mb-0">
     <li>Сьогоднішні зведення в <strong>5–20</strong> разів дешевші за рівень 1 Ethereum</li>
     <li>ZK-зведення незабаром знизять комісію у <strong>40–100 разів</strong></li>
     <li>Майбутні зміни в Ethereum забезпечать масштабування ще в <strong>100–1000 разів</strong></li>
-    <li style={{ marginBottom: 0 }}>Користувачі мають виграти від транзакцій <strong>вартістю менш ніж $0,001</strong></li>
+    <li className="mb-0">Користувачі мають виграти від транзакцій <strong>вартістю менш ніж $0,001</strong></li>
   </ul>
 </AlertContent>
 </Alert>

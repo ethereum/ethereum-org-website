@@ -12,11 +12,11 @@ template: roadmap
 <Alert className="mb-8">
 <AlertContent>
   <AlertTitle>Κόστος συναλλαγής</AlertTitle>
-  <ul style={{ marginBottom: 0 }}>
+  <ul className="mb-0">
     <li>Σήμερα τα πακέτα συναλλαγών είναι <strong>~5-20x</strong> φορές φθηνότερα από το επίπεδο 1 του Ethereum.</li>
     <li>Τα πακέτα συναλλαγών ZK θα μειώσουν σύντομα τις κρατήσεις σε <strong>~40-100x</strong>.</li>
     <li>Οι επερχόμενες αλλαγές στο Ethereum θα παρέχουν μια άλλη κλιμάκωση περίπου <strong>~100-1000</strong> φορές.</li>
-    <li style={{ marginBottom: 0 }}>Οι χρήστες θα πρέπει να επωφεληθούν από συναλλαγές που <strong>κοστίζουν λιγότερο από $0.001</strong>.</li>
+    <li className="mb-0">Οι χρήστες θα πρέπει να επωφεληθούν από συναλλαγές που <strong>κοστίζουν λιγότερο από $0.001</strong>.</li>
   </ul>
 </AlertContent>
 </Alert>

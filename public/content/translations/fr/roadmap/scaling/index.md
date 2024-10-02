@@ -12,11 +12,11 @@ Ethereum est mis à l'échelle à l'aide de [couches 2](/layer-2/#rollups) (éga
 <Alert className="mb-8">
 <AlertContent>
   <AlertTitle>Frais de transaction</AlertTitle>
-  <ul style={{ marginBottom: 0 }}>
+  <ul className="mb-0">
     <li>Aujourd'hui, les rollups sont <strong> 5 à 20 fois</strong> moins coûteux que la couche 1 d'Ethereum</li>
     <li>Les rollups ZK réduiront bientôt de <strong> 40 à 100 fois moins </strong>ces coûts</li>
     <li>Les changements à venir apportés à Ethereum fourniront une mise à l'échelle <strong>~100-1000x</strong> supplémentaire</li>
-    <li style={{ marginBottom: 0 }}>Les utilisateurs bénéficieront de transactions<strong> à moins de 0,001 USD</strong></li>
+    <li className="mb-0">Les utilisateurs bénéficieront de transactions<strong> à moins de 0,001 USD</strong></li>
   </ul>
 </AlertContent>
 </Alert>

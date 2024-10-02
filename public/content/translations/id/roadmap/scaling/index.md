@@ -12,11 +12,11 @@ Ethereum diskalakan menggunakan [lapisan ke-2](/layer-2/#rollups) (juga dikenal 
 <Alert className="mb-8">
 <AlertContent>
   <AlertTitle>Biaya transaksi</AlertTitle>
-  <ul style={{ marginBottom: 0 }}>
+  <ul className="mb-0">
     <li>Rollup hari ini <strong>~3-8x</strong> lebih murah daripada lapisan 1 Ethereum</li>
     <li>Rollup ZK akan segera menurunkan biaya sebesar <strong>~40-100x</strong></li>
     <li>Perubahan yang akan datang pada Ethereum akan memberikan penskalaan <strong>~100-1000x</strong> lainnya</li>
-    <li style={{ marginBottom: 0 }}>Pengguna harus mendapatkan keuntungan dari transaksi <strong>berharga kurang dari $0,001</strong></li>
+    <li className="mb-0">Pengguna harus mendapatkan keuntungan dari transaksi <strong>berharga kurang dari $0,001</strong></li>
   </ul>
 </AlertContent>
 </Alert>

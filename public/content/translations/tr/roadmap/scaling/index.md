@@ -12,11 +12,11 @@ Ethereum, birlikte toplu işlemler yapan ve çıktıyı Ethereum'a gönderen [ka
 <Alert className="mb-8">
 <AlertContent>
   <AlertTitle>İşlem maliyetleri</AlertTitle>
-  <ul style={{ marginBottom: 0 }}>
+  <ul className="mb-0">
     <li>Günümüzün toplamaları Ethereum katman 1'den <strong>~3-8x</strong> daha ucuz</li>
     <li>ZK toplamaları yakında ücretleri <strong>~40-100x</strong> düşürecek</li>
     <li>Ethereum'da yapılacak değişiklikler <strong>~100-1000x</strong> daha fazla ölçeklendirme sağlayacak</li>
-    <li style={{ marginBottom: 0 }}>Kullanıcılar <strong> 0,001 dolardan daha az maliyetli</strong> işlemlerden yararlanmalıdır</li>
+    <li className="mb-0">Kullanıcılar <strong> 0,001 dolardan daha az maliyetli</strong> işlemlerden yararlanmalıdır</li>
   </ul>
 </AlertContent>
 </Alert>

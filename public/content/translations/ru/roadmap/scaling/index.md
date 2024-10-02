@@ -12,11 +12,11 @@ Ethereum масштабируется с помощью сетей [уровня
 <Alert className="mb-8">
 <AlertContent>
   <AlertTitle>Расходы на транзакции</AlertTitle>
-  <ul style={{ marginBottom: 0 }}>
+  <ul className="mb-0">
     <li>Сейчас свертки в <strong>5–20 раз</strong> дешевле уровня 1 Ethereum.</li>
     <li>ZK-свертки в скором времени снизят комиссию в <strong>~40–100 раз</strong>.</li>
     <li>Предстоящие изменения в Ethereum увеличат масштабирование еще в <strong>~100–1000 раз</strong>.</li>
-    <li style={{ marginBottom: 0 }}>Преимуществом для пользователей должны стать транзакции <strong>стоимостью менее 0,001 $</strong>.</li>
+    <li className="mb-0">Преимуществом для пользователей должны стать транзакции <strong>стоимостью менее 0,001 $</strong>.</li>
   </ul>
 </AlertContent>
 </Alert>

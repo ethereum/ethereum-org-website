@@ -12,11 +12,11 @@ template: roadmap
 <Alert className="mb-8">
 <AlertContent>
   <AlertTitle>هزینه‌های تراکنش</AlertTitle>
-  <ul style={{ marginBottom: 0 }}>
+  <ul className="mb-0">
     <li>در حال حاضر رول‌آپ‌ها <strong>تقریباً 3 تا 8 برابر</strong> ارزان‌تر از لایه 1 اتریوم هستند</li>
     <li>رول‌آپ‌های ZK به زودی کارمزدها را <strong>‏40 تا 100 برابر</strong> ارزان‌تر خواهد کرد</li>
     <li>تغییرات آتی اتریوم مقیاس‌پذیری را تقریباً بین <strong>‏100 تا 1000 برابر</strong> افزایش خواهد داد</li>
-    <li style={{ marginBottom: 0 }}>کاربران باید از تراکنش‌هایی <strong>با هزینه کمتر از 0.001 دلار</strong> بهره‌مند شوند</li>
+    <li className="mb-0">کاربران باید از تراکنش‌هایی <strong>با هزینه کمتر از 0.001 دلار</strong> بهره‌مند شوند</li>
   </ul>
 </AlertContent>
 </Alert>

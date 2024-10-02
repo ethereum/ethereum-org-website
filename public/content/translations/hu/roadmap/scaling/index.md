@@ -12,11 +12,11 @@ Az Ethereum skálázása a [layer 2s](/layer-2/#rollups) második blokkláncrét
 <Alert className="mb-8">
 <AlertContent>
   <AlertTitle>Tranzakciós költség</AlertTitle>
-  <ul style={{ marginBottom: 0 }}>
+  <ul className="mb-0">
     <li>Ma az összevont tranzakciók <strong>kb. 5–20×</strong> olcsóbbak, mint az Ethereum L1</li>
     <li>A ZK összevont tranzakciók esetében hamarosan <strong>~40–100×</strong> alacsonyabb lesz a díj</li>
     <li>Az eljövendő Ethereum-módosítások további <strong>~100–1000×</strong>-szoros skálázást tesznek lehetővé</li>
-    <li style={{ marginBottom: 0 }}>A felhasználók számára egy tranzakció <strong>kevesebb mint 0,001 $-ba</strong> fog kerülni</li>
+    <li className="mb-0">A felhasználók számára egy tranzakció <strong>kevesebb mint 0,001 $-ba</strong> fog kerülni</li>
   </ul>
 </AlertContent>
 </Alert>

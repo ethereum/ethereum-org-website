@@ -12,11 +12,11 @@ Ethereum escala utilizando las [capas 2](/layer-2/#rollups)(también conocidas c
 <Alert className="mb-8">
 <AlertContent>
   <AlertTitle>Costos de transacción</AlertTitle>
-  <ul style={{ marginBottom: 0 }}>
+  <ul className="mb-0">
     <li>Actualmente las acumulaciones son <strong>~3-8x</strong> más baratas que la capa 1 de Ethereum</li>
     <li>Las acumulaciones ZK pronto reducirán un <strong>~40-100</strong> las tarifas.</li>
     <li>Los próximos cambios en Ethereum traerán un incremento de <strong>~100-1.000</strong> en escalabilidad.</li>
-    <li style={{ marginBottom: 0 }}>Los usuarios deberían beneficiarse con transacciones <strong>que cuesten menos de 0,001 USD</strong>.</li>
+    <li className="mb-0">Los usuarios deberían beneficiarse con transacciones <strong>que cuesten menos de 0,001 USD</strong>.</li>
   </ul>
 </AlertContent>
 </Alert>

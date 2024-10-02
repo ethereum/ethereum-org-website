@@ -11,12 +11,12 @@ Ethereum is scaled using [layer 2s](/layer-2/#rollups) (also known as rollups), 
 
 <Alert className="mb-8">
 <AlertContent>
-  <AlertTitle>Transaction costs</AlertTitle>
-  <ul style={{ marginBottom: 0 }}>
+  <AlertTitle className="mb-4">Transaction costs</AlertTitle>
+  <ul className="mb-0">
     <li>Today’s rollups are <strong>~5-20x</strong> cheaper than Ethereum layer 1</li>
     <li>ZK-rollups will soon lower fees by <strong>~40-100x</strong></li>
     <li>Upcoming changes to Ethereum will provide another <strong>~100-1000x</strong> of scaling</li>
-    <li style={{ marginBottom: 0 }}>Users should benefit from transactions <strong>costing less than $0.001</strong></li>
+    <li className="mb-0">Users should benefit from transactions <strong>costing less than $0.001</strong></li>
   </ul>
 </AlertContent>
 </Alert>
