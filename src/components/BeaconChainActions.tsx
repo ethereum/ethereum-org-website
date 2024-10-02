@@ -1,27 +1,19 @@
 import { useTranslation } from "next-i18next"
-import { Box, Flex } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
 import Card from "@/components/Card"
 import CardList, { type CardListItem } from "@/components/CardList"
-import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
+
+import { ButtonLink } from "./ui/buttons/Button"
+import { Flex } from "./ui/flex"
 
 import beaconchain from "@/public/images/upgrades/beaconchainemoji.png"
 import beaconscan from "@/public/images/upgrades/etherscan.png"
 
 const H3 = ({ children }: ChildOnlyProp) => (
-  <OldHeading
-    as="h3"
-    fontSize="2xl"
-    fontWeight="bold"
-    mb={8}
-    sx={{ a: { display: "none" } }}
-  >
-    {children}
-  </OldHeading>
+  <h3 className="mb-8 mt-10 text-2xl font-bold [&_a]:hidden">{children}</h3>
 )
 
 const BeaconChainActions = () => {
@@ -29,18 +21,18 @@ const BeaconChainActions = () => {
 
   const datapoints: CardListItem[] = [
     {
-      title: t("consensus-beaconscan-title"),
+      title: t("page-upgrades:consensus-beaconscan-title"),
       image: beaconscan,
       alt: "",
       link: "https://beaconscan.com",
-      description: t("consensus-beaconscan-desc"),
+      description: t("page-upgrades:consensus-beaconscan-desc"),
     },
     {
-      title: t("consensus-beaconscan-in-title"),
+      title: t("page-upgrades:consensus-beaconscan-in-title"),
       image: beaconchain,
       alt: "",
       link: "https://beaconcha.in",
-      description: t("consensus-beaconcha-in-desc"),
+      description: t("page-upgrades:consensus-beaconcha-in-desc"),
     },
   ]
 
@@ -64,35 +56,35 @@ const BeaconChainActions = () => {
   ]
 
   return (
-    <Box mb={16}>
-      <Flex flexDir={{ base: "column", md: "row" }} pt={4}>
+    <div className="mb-16">
+      <Flex className="flex-col pt-4 md:flex-row">
         <Card
           w="full"
           ms={0}
           me={{ base: 0, md: 4 }}
           mb={{ base: 8, md: 0 }}
           emoji=":money_with_wings:"
-          title={t("consensus-become-staker")}
-          description={t("consensus-become-staker-desc")}
+          title={t("page-upgrades:consensus-become-staker")}
+          description={t("page-upgrades:consensus-become-staker-desc")}
         >
-          <ButtonLink mb={3} href="https://launchpad.ethereum.org">
+          <ButtonLink className="mb-3" href="https://launchpad.ethereum.org">
             <Translation id="get-started" />
           </ButtonLink>
           <ButtonLink variant="outline" href="/staking/">
-            <Translation id="page-upgrades-index-staking-learn" />
+            <Translation id="page-upgrades-index:page-upgrades-index-staking-learn" />
           </ButtonLink>
         </Card>
       </Flex>
       <H3>
-        <Translation id="consensus-explore" />
+        <Translation id="page-upgrades:consensus-explore" />
       </H3>
 
       <CardList items={datapoints} />
       <H3>
-        <Translation id="read-more" />
+        <Translation id="page-upgrades:read-more" />
       </H3>
       <CardList items={reads} />
-    </Box>
+    </div>
   )
 }
 

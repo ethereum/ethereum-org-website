@@ -61,7 +61,6 @@ import artblocks from "@/public/images/dapps/artblocks.png"
 import arweave from "@/public/images/dapps/arweave.png"
 import asyncart from "@/public/images/dapps/asyncart.png"
 import audius from "@/public/images/dapps/audius.png"
-import augur from "@/public/images/dapps/augur.png"
 import axie from "@/public/images/dapps/axie.png"
 import balancer from "@/public/images/dapps/balancer.png"
 import brave from "@/public/images/dapps/brave.png"
@@ -776,13 +775,6 @@ const DappsPage = () => {
       link: "https://polymarket.com",
       image: polymarket,
       alt: t("page-dapps-polymarket-logo-alt"),
-    },
-    {
-      title: "Augur",
-      description: t("page-dapps-dapp-description-augur"),
-      link: "https://augur.net",
-      image: augur,
-      alt: t("page-dapps-augur-logo-alt"),
     },
     {
       title: "Synthetix",
