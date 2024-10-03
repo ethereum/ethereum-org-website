@@ -3,10 +3,9 @@ import { useTranslation } from "next-i18next"
 import type { ReactNode } from "react"
 import { Badge } from "@chakra-ui/react"
 
-import { ButtonLink } from "@/components/Buttons"
-
 import { cn } from "@/lib/utils/cn"
 
+import { ButtonLink } from "./ui/buttons/Button"
 import { Center, Flex, HStack } from "./ui/flex"
 import GitStars from "./GitStars"
 import { TwImage } from "./Image"
@@ -135,7 +134,7 @@ const ProductCard = ({
             </SubjectBadge>
           ))}
       </HStack>
-      <ButtonLink href={url} m={4} height={20}>
+      <ButtonLink href={url} className="m-4 h-20">
         {t("open")} {name}
       </ButtonLink>
     </Flex>
