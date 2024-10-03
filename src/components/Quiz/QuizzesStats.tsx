@@ -94,7 +94,7 @@ const QuizzesStats = ({
                 <Center className="size-16 rounded-full bg-primary">
                   <TrophyIcon className="size-[35.62px] fill-background" />
                 </Center>
-                <span className="text-5xl font-bold">
+                <span className="text-5xl font-bold leading-base">
                   {totalCorrectAnswers}
                   <span className="text-body-medium">
                     /{totalQuizzesPoints}
