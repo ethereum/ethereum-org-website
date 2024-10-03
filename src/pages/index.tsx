@@ -504,7 +504,11 @@ const HomePage = ({
                           className="relative border-t"
                           dir="ltr"
                         >
-                          <Suspense fallback={<SkeletonLines noOfLines={16} />}>
+                          <Suspense
+                            fallback={
+                              <SkeletonLines noOfLines={16} dir="ltr" />
+                            }
+                          >
                             <div className="-m-2 max-h-[50vh] overflow-auto">
                               <Codeblock
                                 codeLanguage={codeLanguage}
