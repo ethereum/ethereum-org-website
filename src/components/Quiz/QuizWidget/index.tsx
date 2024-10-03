@@ -4,7 +4,7 @@ import type { QuizKey, QuizStatus, UserStats } from "@/lib/types"
 
 import Translation from "@/components/Translation"
 import { Center, Stack, VStack } from "@/components/ui/flex"
-import Spinner from "@/components/ui/Spinner"
+import { Spinner } from "@/components/ui/spinner"
 
 import { cn } from "@/lib/utils/cn"
 
