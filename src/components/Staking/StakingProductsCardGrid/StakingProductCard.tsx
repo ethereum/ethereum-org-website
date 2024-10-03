@@ -70,6 +70,7 @@ const StakingBadge = ({
       borderRadius={84}
       px={2}
       py={1}
+      color={uiTypeColor ? "success.base" : "primary.highContrast"}
       background={uiTypeColor || platformTypeColor || undefined}
       textTransform="initial"
     >
@@ -261,7 +262,13 @@ export const StakingProductCard = ({
         </List>
       </Box>
       <Box {...PADDED_DIV_STYLE}>
-        <ButtonLink href={url} customEventOptions={matomo} width="100%">
+        <ButtonLink
+          href={url}
+          customEventOptions={matomo}
+          width="100%"
+          variant={"outline-color"}
+          isSecondary={true}
+        >
           {t("page-staking-products-get-started")}
         </ButtonLink>
         <Center>
@@ -273,8 +280,16 @@ export const StakingProductCard = ({
             )}
 
             {validSocials.map(([platform, url], idx) => (
-              <Link key={idx} href={url} passHref>
+              <Link
+                key={idx}
+                href={url}
+                passHref
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <SocialListItem
+                  color="body.base"
+                  boxSize={8}
                   socialIcon={
                     platform as
                       | "twitter"
