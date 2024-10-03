@@ -7,9 +7,9 @@ import { CompletedQuizzes, QuizShareStats } from "@/lib/types"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
-import { Button } from "../Buttons"
 import { TrophyIcon } from "../icons/quiz"
 import Translation from "../Translation"
+import { Button } from "../ui/buttons/Button"
 import { Center, Flex, HStack, Stack } from "../ui/flex"
 import { ListItem, UnorderedList } from "../ui/list"
 import { Progress } from "../ui/progress"
@@ -75,15 +75,15 @@ const QuizzesStats = ({
           <div className="order-3 lg:order-2 lg:justify-self-end">
             <Button
               variant="outline"
-              leftIcon={<FaXTwitter />}
               onClick={() =>
                 handleShare({
                   score: totalCorrectAnswers,
                   total: totalQuizzesPoints,
                 })
               }
-              w={{ base: "full", lg: "auto" }}
+              className="max-lg:w-full"
             >
+              <FaXTwitter />
               {t("share-results")}
             </Button>
           </div>
