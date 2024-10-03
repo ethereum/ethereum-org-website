@@ -500,7 +500,10 @@ const HomePage = ({
                             </p>
                           </div>
                         </AccordionTrigger>
-                        <AccordionContent className="relative border-t">
+                        <AccordionContent
+                          className="relative border-t"
+                          dir="ltr"
+                        >
                           <Suspense fallback={<SkeletonLines noOfLines={16} />}>
                             <div className="-m-2 max-h-[50vh] overflow-auto">
                               <Codeblock
