@@ -1,41 +1,30 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import {
-  Box,
-  Flex,
-  FlexProps,
-  LinkBox,
-  LinkOverlay,
-  Spacer,
-} from "@chakra-ui/react"
 
 import { TranslationKey } from "@/lib/types"
 import type { DeveloperDocsLink } from "@/lib/interfaces"
 
 import Emoji from "@/components/Emoji"
-import { BaseLink } from "@/components/Link"
-import Text from "@/components/OldText"
 
 import { cn } from "@/lib/utils/cn"
-import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import docLinks from "@/data/developer-docs-links.yaml"
 
+import { Flex, Stack } from "./ui/flex"
+import { BaseLink } from "./ui/Link"
+
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-const TextDiv = ({ children, ...props }: FlexProps) => (
-  <Flex
-    direction="column"
-    justify="space-between"
-    maxW="166px"
-    h="100%"
-    wordwrap="break-word"
-    p={4}
-    lineHeight={4}
+const TextDiv = ({ children, className, ...props }) => (
+  <Stack
+    className={cn(
+      "h-full max-w-[166px] justify-between gap-0 break-words p-4",
+      className
+    )}
     {...props}
   >
     {children}
-  </Flex>
+  </Stack>
 )
 
 type DocsArrayProps = {
@@ -53,22 +42,24 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
   const { t } = useTranslation("page-developers-docs")
   const { isRtl } = useRtlFlip()
 
-  const xPadding = isPrev ? { ps: "0" } : { pe: 0 }
+  const xPaddingClass = isPrev ? "ps-0" : "pe-0"
 
   return (
-    <LinkBox
-      as={Flex}
-      alignItems="center"
-      w="full"
-      flex="1"
-      h="82px"
-      bg="background.base"
-      border="1px"
-      borderColor="border"
-      borderRadius={1}
-      justify={isPrev ? "flex-start" : "flex-end"}
+    <BaseLink
+      href={docData.href}
+      className={cn(
+        "flex w-full flex-1 items-center no-underline",
+        "h-[82px] rounded-[1px] border bg-background",
+        isPrev ? "justify-start" : "justify-end"
+      )}
+      rel={isPrev ? "prev" : "next"}
+      customEventOptions={{
+        eventCategory: "next/previous article DocsNav",
+        eventAction: "click",
+        eventName: isPrev ? "previous" : "next",
+      }}
     >
-      <Box textDecoration="none" p={4} h="100%" order={isPrev ? 0 : 1}>
+      <div className={cn("h-full p-4", isPrev ? "order-[0]" : "order-1")}>
         <Emoji
           text={isPrev ? ":point_left:" : ":point_right:"}
           className={cn(
@@ -76,28 +67,15 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
             !contentNotTranslated && isRtl ? "-scale-x-100" : ""
           )}
         />
-      </Box>
-      <TextDiv {...xPadding} {...(!isPrev && { textAlign: "end" })}>
-        <Text textTransform="uppercase" m="0">
-          {t(isPrev ? "previous" : "next")}
-        </Text>
-        <LinkOverlay
-          as={BaseLink}
-          href={docData.href}
-          textAlign={isPrev ? "start" : "end"}
-          rel={isPrev ? "prev" : "next"}
-          onClick={() => {
-            trackCustomEvent({
-              eventCategory: "next/previous article DocsNav",
-              eventAction: "click",
-              eventName: isPrev ? "previous" : "next",
-            })
-          }}
-        >
+      </div>
+      <TextDiv className={cn(xPaddingClass, !isPrev ? "text-end" : "")}>
+        <p className="uppercase text-body">{t(isPrev ? "previous" : "next")}</p>
+
+        <p className={cn("underline", isPrev ? "text-start" : "text-end")}>
           {t(docData.id)}
-        </LinkOverlay>
+        </p>
       </TextDiv>
-    </LinkBox>
+    </BaseLink>
   )
 }
 
@@ -146,18 +124,12 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
 
   return (
     <Flex
-      as="nav"
+      className={cn(
+        "flex-col-reverse md:flex-row lg:flex-col-reverse xl:flex-row",
+        "mt-8 justify-between gap-4",
+        "items-center md:items-start"
+      )}
       aria-label="Paginate to document"
-      direction={{
-        base: "column-reverse",
-        md: "row",
-        lg: "column-reverse",
-        xl: "row",
-      }}
-      mt="8"
-      gap="4"
-      justify="space-between"
-      alignItems={{ base: "center", md: "flex-start" }}
     >
       {previousDoc ? (
         <CardLink
@@ -166,7 +138,7 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
           isPrev
         />
       ) : (
-        <Spacer />
+        <div className="hidden flex-grow xl:block"></div>
       )}
       {nextDoc ? (
         <CardLink
@@ -174,7 +146,7 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
           contentNotTranslated={contentNotTranslated}
         />
       ) : (
-        <Spacer />
+        <div className="hidden flex-grow xl:block"></div>
       )}
     </Flex>
   )
