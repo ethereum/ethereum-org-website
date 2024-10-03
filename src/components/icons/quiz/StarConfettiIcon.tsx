@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils/cn"
 export const StarConfettiIcon = ({ className, ...props }: IconBaseProps) => (
   <IconBase
     viewBox="0 0 185 119"
-    className={cn(className, "h-[119px] w-[185px]")}
+    className={cn("h-[119px] w-[185px]", className)}
     {...props}
   >
     <path
