@@ -86,9 +86,9 @@ const ProductCard = ({
   return (
     <Flex
       className={cn(
-        "text-text bg-searchBackground flex-col justify-between",
+        "flex-col justify-between bg-background-highlight",
         "shadow-product-card",
-        "rounded-base border border-gray-100 no-underline",
+        "rounded-base border no-underline",
         "hover:scale-[1.02] hover:transition-transform"
       )}
     >
@@ -96,7 +96,7 @@ const ProductCard = ({
         className="min-h-[200px] shadow-product-card-img-container"
         style={{ backgroundColor: bgProp }}
       >
-        <TwImage src={image} alt={alt} className="w-[100px] self-center" />
+        <TwImage src={image} alt={alt} height="100" className="self-center" />
       </Center>
       <Flex className="h-full flex-col p-6 text-left">
         {githubRepoStars > 0 && (
