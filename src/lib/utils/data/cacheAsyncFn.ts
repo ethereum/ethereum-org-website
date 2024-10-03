@@ -20,7 +20,7 @@ import path from "path"
  */
 
 function getCacheDir() {
-  return path.resolve(process.cwd(), ".next/cache")
+  return process.cwd()
 }
 
 export function cacheAsyncFn<T>(
