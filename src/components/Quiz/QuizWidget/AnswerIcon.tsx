@@ -20,9 +20,7 @@ type AnswerIconProps = {
  * Defaults to the `TrophyIcon` prior to answering a question
  */
 export const AnswerIcon = ({ answerStatus }: AnswerIconProps) => {
-  const commonProps = {
-    color: "neutral",
-  }
+  const commonIconClasses = "fill-background"
 
   const IconWrapper = (props: ChildOnlyProp) => {
     const getWrapperBg = () => {
@@ -46,7 +44,7 @@ export const AnswerIcon = ({ answerStatus }: AnswerIconProps) => {
   if (!answerStatus) {
     return (
       <IconWrapper>
-        <TrophyIcon {...commonProps} />
+        <TrophyIcon className={commonIconClasses} />
       </IconWrapper>
     )
   }
@@ -54,14 +52,14 @@ export const AnswerIcon = ({ answerStatus }: AnswerIconProps) => {
   if (answerStatus === "correct") {
     return (
       <IconWrapper>
-        <CorrectIcon {...commonProps} />
+        <CorrectIcon className={commonIconClasses} />
       </IconWrapper>
     )
   }
 
   return (
     <IconWrapper>
-      <IncorrectIcon {...commonProps} />
+      <IncorrectIcon className={commonIconClasses} />
     </IconWrapper>
   )
 }
