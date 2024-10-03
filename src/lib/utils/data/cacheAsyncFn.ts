@@ -1,7 +1,7 @@
 import fs from "fs"
 import path from "path"
 
-const CACHE_FILE_DIR = path.resolve(process.cwd(), ".next/cache")
+const CACHE_FILE_DIR = path.resolve(".netlify/.next/cache")
 
 /**
  * Caches the result of an asynchronous function to avoid multiple calls during build time.
@@ -26,7 +26,7 @@ export function cacheAsyncFn<T>(
   fn: () => Promise<T>,
   options?: { cacheTimeout?: number }
 ) {
-  console.log("CACHE_FILE_DIR", CACHE_FILE_DIR)
+  // console.log("CACHE_FILE_DIR", CACHE_FILE_DIR)
 
   const cacheFilePath = path.resolve(CACHE_FILE_DIR, `${key}.json`)
 
