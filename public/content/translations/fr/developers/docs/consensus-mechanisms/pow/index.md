@@ -29,7 +29,7 @@ La preuve de travail est l'algorithme sous-jacent qui définit la difficulté et
 Les transactions Ethereum sont traitées en blocs. Avec le processus désormais obsolète de preuve de travail d'Ethereum, chaque bloc contenait :
 
 - une difficulté de bloc (par ex. : 3,324,092,183,262,715) ;
-- un mixHash (par ex. : <span class="long-ethereum-address">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>) ;
+- un mixHash (par ex. : <span class="break-words">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>) ;
 - un nonce (par ex. : `0xd3ee432b4fb3d26b`).
 
 Ces données de bloc étaient directement liées à la preuve de travail.

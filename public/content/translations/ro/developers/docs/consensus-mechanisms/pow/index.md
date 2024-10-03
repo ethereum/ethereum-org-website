@@ -28,7 +28,7 @@ Dovada-muncii este algoritmul de bază care stabilește dificultatea și regulil
 Tranzacțiile Ethereum sunt procesate în blocuri. Fiecare bloc are:
 
 - o dificultate de bloc – de exemplu: 3.324.092.183.262.715
-- un mixHash – de exemplu: <span class="long-ethereum-address">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
+- un mixHash – de exemplu: <span class="break-words">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
 - un nonce – de exemplu: `0xd3ee432b4fb3d26b`
 
 Aceste informații despre bloc sunt direct legate de dovada-muncii.

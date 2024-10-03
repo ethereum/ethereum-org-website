@@ -29,7 +29,7 @@ Proof-of-work is the underlying algorithm that sets the difficulty and rules for
 Ethereum transactions are processed into blocks. In the now-deprecated proof-of-work Ethereum, each block contained:
 
 - block difficulty – for example: 3,324,092,183,262,715
-- mixHash – for example: <span class="long-ethereum-address">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
+- mixHash – for example: <span class="break-words">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
 - nonce – for example: `0xd3ee432b4fb3d26b`
 
 This block data was directly related to proof-of-work.

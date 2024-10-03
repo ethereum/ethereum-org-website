@@ -28,7 +28,7 @@ Bukti kerja adalah algoritma dasar yang mengatur tingkat kesulitan dan aturan ba
 Transaksi Ethereum diproses ke dalam blok. Setiap blok mempunyai:
 
 - tingkat kesulitan blok - contohnya: 3.324.092.183.262.715
-- mixHash - contohnya: <span class="long-ethereum-address">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
+- mixHash - contohnya: <span class="break-words">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
 - nonce – contohnya: `0xd3ee432b4fb3d26b`
 
 Data blok ini terhubung langsung dengan bukti kerja.

@@ -29,7 +29,7 @@ Il Proof of Work è l'algoritmo sottostante che imposta la difficoltà e le rego
 Le transazioni di Ethereum vengono elaborate in blocchi. Nell'Ethereum Proof of Work ora obsoleto, ogni blocco conteneva:
 
 - difficoltà del blocco, ad esempio: 3.324.092.183.262.715
-- un mixHash, ad esempio: <span class="long-ethereum-address">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
+- un mixHash, ad esempio: <span class="break-words">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
 - nonce, ad esempio: `0xd3ee432b4fb3d26b`
 
 Questi dati del blocco erano correlati direttamente alla al Proof of Work

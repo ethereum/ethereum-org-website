@@ -28,7 +28,7 @@ incomplete: true
 تراکنش‌های اتریوم در بلوک‌ها پردازش می‌شوند. هر بلوک شامل چیزهای زیر است:
 
 - سختی بلوک - برای مثال: 3,324,092,183,262,715
-- mixHash - برای مثال: <span class="long-ethereum-address">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
+- mixHash - برای مثال: <span class="break-words">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
 - نانس (Nonce) - برای مثال: `0xd3ee432b4fb3d26b`
 
 این اطلاعات بلوک مستقیماً به اثبات کار مرتبط است.

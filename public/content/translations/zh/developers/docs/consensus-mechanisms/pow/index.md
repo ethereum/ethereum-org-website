@@ -29,7 +29,7 @@ lang: zh
 以太坊交易处理到区块中。 在现已弃用的工作量证明以太坊中，每个区块包含：
 
 - 区块的难度，例如：3,324,092,183,262,715
-- 混合哈希（mixHash），例如：<span class="long-ethereum-address">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
+- 混合哈希（mixHash），例如：<span class="break-words">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
 - nonce--例如：`0xd3ee432b4fb3d26b`
 
 这些区块数据与工作量证明直接相关。

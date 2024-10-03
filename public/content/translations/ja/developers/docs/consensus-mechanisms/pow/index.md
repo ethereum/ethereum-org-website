@@ -29,7 +29,7 @@ lang: ja
 イーサリアムトランザクションがブロックへと処理されます。 現在廃止されているプルーフ・オブ・ワークのイーサリアムでは、ブロックには以下の情報が含まれていました。
 
 - 難易度 - 例: 3,324,092,183,262,715
-- mixHash – 例: <span class="long-ethereum-address">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
+- mixHash – 例: <span class="break-words">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
 - nonce – 例: `0xd3ee432b4fb3d26b`
 
 このブロックデータは、プルーフ・オブ・ワーク(PoW)に直接由来していました。

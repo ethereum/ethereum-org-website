@@ -29,7 +29,7 @@ La prueba de trabajo es el algoritmo subyacente que establece la dificultad y la
 Las transacciones de Ethereum se procesan en bloques. En la prueba de trabajo de Ethereum que en la actualidad se considera obsoleta, cada bloque contenía:
 
 - Dificultad del bloque: p. ej., 3,324,092,183,262,715
-- mixHash: p. ej.: <span class="long-ethereum-address">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
+- mixHash: p. ej.: <span class="break-words">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
 - nonce: p. ej., `0xd3ee432b4fb3d26b`
 
 Los datos de este bloque estaban directamente relacionados con la prueba de trabajo.

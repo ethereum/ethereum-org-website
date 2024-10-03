@@ -26,7 +26,7 @@ Proof-of-work to podstawowy algorytm, który określa poziom trudności i zasady
 Transakcje Ethereum są przetwarzane w blokach. Każdy blok zawiera:
 
 - trudności bloku – na przykład: 3,324,092,183,262,715
-- mixHash – na przykład: <span class="long-ethereum-address">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
+- mixHash – na przykład: <span class="break-words">`0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`</span>
 - nonce – na przykład: `0xd3ee432b4fb3d26b`
 
 Te dane bloku są bezpośrednio związane z PoW.
