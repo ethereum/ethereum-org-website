@@ -1,8 +1,6 @@
 import fs from "fs"
 import path from "path"
 
-const CACHE_FILE_DIR = path.resolve(".netlify/.next/cache")
-
 /**
  * Caches the result of an asynchronous function to avoid multiple calls during build time.
  * This helps prevent hitting external API rate limits by storing the result in a file.
@@ -21,14 +19,19 @@ const CACHE_FILE_DIR = path.resolve(".netlify/.next/cache")
  * @note The cache is stored in the '.next/cache' directory and expires after the `cacheTimeout`
  */
 
+function getCacheDir() {
+  return path.resolve(process.cwd(), ".next/cache")
+}
+
 export function cacheAsyncFn<T>(
   key: string,
   fn: () => Promise<T>,
   options?: { cacheTimeout?: number }
 ) {
-  // console.log("CACHE_FILE_DIR", CACHE_FILE_DIR)
+  const cacheDir = getCacheDir()
+  console.log("cacheDir", cacheDir)
 
-  const cacheFilePath = path.resolve(CACHE_FILE_DIR, `${key}.json`)
+  const cacheFilePath = path.resolve(cacheDir, `${key}.json`)
 
   return async (): Promise<T> => {
     let value: T | undefined
@@ -61,7 +64,7 @@ export function cacheAsyncFn<T>(
       console.log("Function ran and cached", key)
 
       // Ensure cache folder exists
-      fs.mkdirSync(CACHE_FILE_DIR, { recursive: true })
+      fs.mkdirSync(cacheDir, { recursive: true })
 
       // Write data to cache file
       fs.writeFileSync(cacheFilePath, JSON.stringify(value), "utf-8")
