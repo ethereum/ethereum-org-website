@@ -1,3 +1,5 @@
+import { resolve } from "path"
+
 import { ReportsModel } from "@crowdin/crowdin-api-client"
 
 import { NavSectionKey } from "@/components/Nav/types"
@@ -12,6 +14,7 @@ export const TRANSLATIONS_DIR = "public/content/translations"
 export const TRANSLATED_IMAGES_DIR = "/content/translations"
 export const PLACEHOLDER_IMAGE_DIR = "src/data/placeholders"
 export const INTL_JSON_DIR = "src/intl"
+export const CACHE_FILE_DIR = resolve(".next/cache")
 
 export const NULL_VALUE = "—"
 

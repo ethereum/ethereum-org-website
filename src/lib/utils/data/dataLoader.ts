@@ -1,7 +1,16 @@
+import fs from "fs"
+
+import { CACHE_FILE_DIR } from "@/lib/constants"
+
 import { cacheAsyncFn } from "./cacheAsyncFn"
 import { loadMockData } from "./loadMockData"
 
 const USE_MOCK_DATA = process.env.USE_MOCK_DATA === "true"
+
+// Ensure the cache directory exists
+if (!fs.existsSync(CACHE_FILE_DIR)) {
+  fs.mkdirSync(CACHE_FILE_DIR, { recursive: true })
+}
 
 type DataLoaderFunction<T> = () => Promise<T>
 
