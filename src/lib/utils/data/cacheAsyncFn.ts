@@ -26,6 +26,8 @@ export function cacheAsyncFn<T>(
   fn: () => Promise<T>,
   options?: { cacheTimeout?: number }
 ) {
+  console.log("CACHE_FILE_DIR", CACHE_FILE_DIR)
+
   const cacheFilePath = path.resolve(CACHE_FILE_DIR, `${key}.json`)
 
   return async (): Promise<T> => {
