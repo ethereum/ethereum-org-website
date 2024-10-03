@@ -109,8 +109,7 @@ export const StakingProductCard = ({
   },
 }: StakingProductCardProps) => {
   const PADDED_DIV_STYLE: BoxProps = {
-    px: 6,
-    py: 6,
+    p: 6,
   }
 
   const validSocials = socials
@@ -200,7 +199,7 @@ export const StakingProductCard = ({
         {!!Svg && (
           <Icon
             as={Svg}
-            fontSize="3rem"
+            fontSize="6xl"
             color="base"
             background={"white"}
             borderRadius="base"
