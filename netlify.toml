@@ -19,9 +19,6 @@
     Access-Control-Allow-Origin = "https://esp.ethereum.foundation"
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-[[plugins]]
   package = "@netlify/plugin-lighthouse"
 
   [[plugins.inputs.audits]]
@@ -38,3 +35,6 @@
     path = "en/developers/docs/intro-to-ethereum/"
   [[plugins.inputs.audits]]
     path = "en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
