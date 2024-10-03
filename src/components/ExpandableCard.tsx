@@ -56,32 +56,30 @@ const ExpandableCard = ({
       <Accordion type="single" collapsible className="mb-4">
         <AccordionItem
           value="item-1"
-          className="rounded-sm border border-gray-200/50 hover:bg-gray-100/50 dark:border-gray-600 dark:hover:bg-gray-800"
+          className="rounded-sm border hover:bg-background-highlight"
         >
           <AccordionTrigger
             hideIcon
             onClick={onClick}
-            className="w-full p-6 transition-colors hover:bg-gray-50 hover:text-black md:p-6 dark:hover:bg-gray-800 dark:hover:text-white [&[data-state=open]]:bg-transparent [&[data-state=open]]:text-black dark:[&[data-state=open]]:text-white"
+            className="w-full p-6 transition-colors hover:bg-background-highlight hover:text-black md:p-6 dark:hover:text-white [&[data-state=open]]:bg-transparent [&[data-state=open]]:text-black dark:[&[data-state=open]]:text-white"
           >
             <Flex className="w-full flex-col items-center text-left sm:flex-row">
-              <VStack className="items-center">
+              <VStack className="items-center md:items-start">
                 <HStack className="mb-2 mt-4">
                   {Svg && <Svg className="mr-6" />}
                   <h3 className="text-xl font-semibold">{title}</h3>
                 </HStack>
-                <p className="mb-0 w-fit text-sm text-gray-600">
+                <p className="w-fit text-sm text-body-medium">
                   {contentPreview}
                 </p>
               </VStack>
-              <span className="my-auto text-md text-purple-600 sm:ml-auto dark:text-purple-400">
+              <span className="my-auto text-md text-primary sm:ml-auto">
                 {t(isVisible ? "less" : "more")}
               </span>
             </Flex>
           </AccordionTrigger>
-          <AccordionContent className="cursor-pointer p-6 pt-0 md:p-6 md:pt-0">
-            <div className="border-t border-gray-200 pt-6 text-md text-gray-800 dark:border-gray-600 dark:text-white">
-              {children}
-            </div>
+          <AccordionContent className="p-6 pt-0 md:p-6 md:pt-0">
+            <div className="border-t pt-6 text-md text-body">{children}</div>
           </AccordionContent>
         </AccordionItem>
       </Accordion>
