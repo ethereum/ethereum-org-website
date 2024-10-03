@@ -116,6 +116,8 @@ type Props = Omit<Parameters<LayoutMappingType[Layout]>[0], "children"> &
 
 const commitHistoryCache: CommitHistory = {}
 
+const loadData = dataLoader([["gfissues", fetchGFIs]])
+
 export const getStaticProps = (async (context) => {
   const params = context.params!
   const { locale } = context
@@ -194,7 +196,7 @@ export const getStaticProps = (async (context) => {
     lastDeployDate
   )
 
-  const [gfissues] = await dataLoader([["gfissues", fetchGFIs]])
+  const [gfissues] = await loadData()
 
   return {
     props: {

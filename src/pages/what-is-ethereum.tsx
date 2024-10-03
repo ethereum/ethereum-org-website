@@ -176,8 +176,10 @@ type Props = BasePageProps & {
   data: MetricReturnData
 }
 
+const loadData = dataLoader([["growThePieData", fetchGrowThePie]])
+
 export const getStaticProps = (async ({ locale }) => {
-  const [data] = await dataLoader([["growThePieData", fetchGrowThePie]])
+  const [data] = await loadData()
 
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(

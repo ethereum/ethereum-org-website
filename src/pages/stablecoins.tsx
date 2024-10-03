@@ -93,6 +93,14 @@ type Props = BasePageProps & {
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 24 * 7
 
+const loadData = dataLoader<[EthereumDataResponse, StablecoinDataResponse]>(
+  [
+    ["ethereumEcosystemData", fetchEthereumEcosystemData],
+    ["ethereumStablecoinsData", fetchEthereumStablecoinsData],
+  ],
+  REVALIDATE_TIME * 1000
+)
+
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
@@ -138,15 +146,7 @@ export const getStaticProps = (async ({ locale }) => {
   }
 
   try {
-    const [ethereumEcosystemData, stablecoinsData] = await dataLoader<
-      [EthereumDataResponse, StablecoinDataResponse]
-    >(
-      [
-        ["ethereumEcosystemData", fetchEthereumEcosystemData],
-        ["ethereumStablecoinsData", fetchEthereumStablecoinsData],
-      ],
-      REVALIDATE_TIME * 1000
-    )
+    const [ethereumEcosystemData, stablecoinsData] = await loadData()
 
     // Get the intersection of stablecoins and Ethereum tokens to only have a list of data for stablecoins in the Ethereum ecosystem
     const ethereumStablecoinData = stablecoinsData.filter(

@@ -6,25 +6,28 @@ const USE_MOCK_DATA = process.env.USE_MOCK_DATA === "true"
 type DataLoaderFunction<T> = () => Promise<T>
 
 /**
- * Loads data from multiple asynchronous functions and caches the results.
+ * Creates a function that loads data from multiple asynchronous functions and caches the results.
  *
  * @param loaders An array of tuples, each containing a unique identifier and the asynchronous function to be cached
- * @returns A promise that resolves to an array of the results from the cached functions
+ * @param cacheTimeout Optional cache timeout in milliseconds
+ * @returns A function that, when called, executes the loaders and returns a promise with the results
  *
  * @example
- * const [ethPrice, totalEthStaked, totalValueLocked] = await dataLoader([
+ * const loadData = dataLoader([
  *   ['ethPrice', fetchEthPrice],
  *   ['totalEthStaked', fetchTotalEthStaked],
  *   ['totalValueLocked', fetchTotalValueLocked],
  * ]);
+ *
+ * const [ethPrice, totalEthStaked, totalValueLocked] = await loadData();
  */
 
-export async function dataLoader<T extends unknown[]>(
+export function dataLoader<T extends unknown[]>(
   loaders: {
     [K in keyof T]: [string, DataLoaderFunction<T[K]>]
   },
   cacheTimeout?: number
-): Promise<T> {
+): () => Promise<T> {
   const cachedLoaders = loaders.map(([key, loader]) => {
     const cachedLoader = cacheAsyncFn(key, loader, {
       cacheTimeout,
@@ -32,6 +35,7 @@ export async function dataLoader<T extends unknown[]>(
     return async () => {
       try {
         if (USE_MOCK_DATA) {
+          console.log("Using mock data for", key)
           return await loadMockData(key)
         }
 
@@ -43,6 +47,8 @@ export async function dataLoader<T extends unknown[]>(
     }
   })
 
-  const results = await Promise.all(cachedLoaders.map((loader) => loader()))
-  return results as T
+  return async () => {
+    const results = await Promise.all(cachedLoaders.map((loader) => loader()))
+    return results as T
+  }
 }
