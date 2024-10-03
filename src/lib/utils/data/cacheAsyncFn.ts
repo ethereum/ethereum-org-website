@@ -1,7 +1,7 @@
 import fs from "fs"
 import path from "path"
 
-const CACHE_FILE_DIR = path.resolve(".next/cache")
+const CACHE_FILE_DIR = path.resolve(process.cwd(), ".next/cache")
 
 /**
  * Caches the result of an asynchronous function to avoid multiple calls during build time.
