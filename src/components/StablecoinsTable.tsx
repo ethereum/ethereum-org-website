@@ -53,7 +53,7 @@ const StablecoinsTable = ({
           ))}
 
           {content && content[0]?.url && (
-            <TableHead className="border-b border-white p-5 text-right text-md font-normal">
+            <TableHead className="p-5 text-right text-md font-normal">
               <span className="inline-block" style={{ transform: flipForRtl }}>
                 ↗
               </span>
