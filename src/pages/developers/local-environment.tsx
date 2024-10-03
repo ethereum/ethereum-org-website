@@ -53,6 +53,10 @@ const Column = ({ children }: ChildOnlyProp) => {
   )
 }
 
+const loadData = dataLoader([
+  ["frameworksListData", getLocalEnvironmentFrameworkData],
+])
+
 type Props = BasePageProps & {
   frameworksList: Framework[]
 }
@@ -64,9 +68,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
-  const [frameworksListData] = await dataLoader([
-    ["frameworksListData", getLocalEnvironmentFrameworkData],
-  ])
+  const [frameworksListData] = await loadData()
 
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(

@@ -121,6 +121,19 @@ type Props = BasePageProps & {
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 24
 
+const loadData = dataLoader(
+  [
+    ["ethPrice", fetchEthPrice],
+    ["totalEthStaked", fetchTotalEthStaked],
+    ["totalValueLocked", fetchTotalValueLocked],
+    ["growThePieData", fetchGrowThePie],
+    ["communityEvents", fetchCommunityEvents],
+    ["attestantPosts", fetchAttestantPosts],
+    ["rssData", fetchXmlBlogFeeds],
+  ],
+  REVALIDATE_TIME * 1000
+)
+
 export const getStaticProps = (async ({ locale }) => {
   const [
     ethPrice,
@@ -130,18 +143,7 @@ export const getStaticProps = (async ({ locale }) => {
     communityEvents,
     attestantPosts,
     xmlBlogs,
-  ] = await dataLoader(
-    [
-      ["ethPrice", fetchEthPrice],
-      ["totalEthStaked", fetchTotalEthStaked],
-      ["totalValueLocked", fetchTotalValueLocked],
-      ["growThePieData", fetchGrowThePie],
-      ["communityEvents", fetchCommunityEvents],
-      ["attestantPosts", fetchAttestantPosts],
-      ["rssData", fetchXmlBlogFeeds],
-    ],
-    REVALIDATE_TIME * 1000
-  )
+  ] = await loadData()
 
   const metricResults: AllMetricData = {
     ethPrice,
