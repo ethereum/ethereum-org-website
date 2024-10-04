@@ -1,7 +1,4 @@
-import {
-  IconBase as ReactIconBase,
-  type IconBaseProps,
-} from "react-icons/lib/esm/iconBase"
+import { IconBase as ReactIconBase, type IconBaseProps } from "react-icons"
 
 import { cn } from "@/lib/utils/cn"
 
