@@ -40,6 +40,8 @@ export const useHome = () => {
 
   const { direction, isRtl } = useRtlFlip()
 
+  const eventCategory = `Homepage - ${locale}`
+
   const toggleCodeExample = (id: number): void => {
     setActiveCode(id)
     setModalOpen(true)
@@ -53,6 +55,7 @@ export const useHome = () => {
       ),
       codeLanguage: "language-solidity",
       code: SimpleWalletContent,
+      eventName: "bank",
     },
     {
       title: t("page-index:page-index-developers-code-example-title-1"),
@@ -61,6 +64,7 @@ export const useHome = () => {
       ),
       codeLanguage: "language-solidity",
       code: SimpleTokenContent,
+      eventName: "token",
     },
     {
       title: t("page-index:page-index-developers-code-example-title-2"),
@@ -69,6 +73,7 @@ export const useHome = () => {
       ),
       codeLanguage: "language-javascript",
       code: CreateWalletContent,
+      eventName: "wallet",
     },
     {
       title: t("page-index:page-index-developers-code-example-title-3"),
@@ -77,6 +82,7 @@ export const useHome = () => {
       ),
       codeLanguage: "language-solidity",
       code: SimpleDomainRegistryContent,
+      eventName: "dns",
     },
   ]
 
@@ -86,7 +92,8 @@ export const useHome = () => {
       description: t("page-index:page-index-cta-wallet-description"),
       href: "/wallets/find-wallet/",
       Svg: PickWalletIcon,
-      className: "text-primary hover:text-primary-hover", // TODO: Confirm hover style
+      className: "text-primary hover:text-primary-hover",
+      eventName: "find wallet",
     },
     {
       label: t("page-index:page-index-cta-get-eth-label"),
@@ -94,6 +101,7 @@ export const useHome = () => {
       href: "/get-eth/",
       Svg: EthTokenIcon,
       className: "text-accent-a hover:text-accent-a-hover",
+      eventName: "get eth",
     },
     {
       label: t("page-index:page-index-cta-networks-label"),
@@ -101,6 +109,7 @@ export const useHome = () => {
       href: "/layer-2/", // TODO: Update with new networks page when ready
       Svg: ChooseNetworkIcon,
       className: "text-accent-b hover:text-accent-b-hover",
+      eventName: "L2",
     },
     {
       label: t("page-index:page-index-cta-dapps-label"),
@@ -111,6 +120,7 @@ export const useHome = () => {
         "text-accent-c hover:text-accent-c-hover",
         isRtl && "[&_svg]:-scale-x-100"
       ),
+      eventName: "dapps",
     },
   ]
 
@@ -119,28 +129,33 @@ export const useHome = () => {
       label: t("page-index:page-index-popular-topics-ethereum"),
       Svg: EthTokenIcon,
       href: "/what-is-ethereum/",
+      eventName: "ethereum",
     },
     {
       label: t("page-index:page-index-popular-topics-wallets"),
       Svg: PickWalletIcon,
       href: "/wallets/",
+      eventName: "wallets",
     },
     {
       label: t("page-index:page-index-popular-topics-start"),
       Svg: BlockHeap,
       href: "/guides/",
+      eventName: "start guides",
     },
     {
       label: t("page-index:page-index-popular-topics-whitepaper"),
       Svg: Whitepaper,
-      className: cn(isRtl && "[&_svg]:-scale-x-100"),
+      className: cn(isRtl && "[&_div_div:has(svg)]:-scale-x-100"),
       href: "/whitepaper/",
+      eventName: "whitepaper",
     },
     {
       label: t("page-index:page-index-popular-topics-roadmap"),
       Svg: RoadmapSign,
-      className: cn(isRtl && "[&_svg]:-scale-x-100"),
+      className: cn(isRtl && "[&_div_div:has(svg)]:-scale-x-100 "),
       href: "/roadmap/",
+      eventName: "roadmap",
     },
   ]
 
@@ -166,6 +181,7 @@ export const useHome = () => {
       description: t(
         "page-index:page-index-join-action-contribute-description"
       ),
+      eventName: "contribute",
     },
     {
       Svg: FaGithub,
@@ -173,6 +189,7 @@ export const useHome = () => {
       href: GITHUB_REPO_URL,
       className: "text-accent-a hover:text-accent-a-hover",
       description: t("page-index:page-index-join-action-github-description"),
+      eventName: "GitHub",
     },
     {
       Svg: FaDiscord,
@@ -180,6 +197,7 @@ export const useHome = () => {
       href: "/discord/",
       className: "text-primary hover:text-primary-hover",
       description: t("page-index:page-index-join-action-discord-description"),
+      eventName: "Discord",
     },
     {
       Svg: FaXTwitter,
@@ -187,6 +205,7 @@ export const useHome = () => {
       href: "https://x.com/EthDotOrg",
       className: "text-accent-b hover:text-accent-b-hover",
       description: t("page-index:page-index-join-action-twitter-description"),
+      eventName: "Twitter",
     },
   ]
 
@@ -205,5 +224,6 @@ export const useHome = () => {
     upcomingEvents,
     joinActions,
     bentoItems,
+    eventCategory,
   }
 }

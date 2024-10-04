@@ -100,9 +100,9 @@
   "page-index-values-privacy-legacy-content-1": "Most apps gather as much of your personal information as possible so that they can target you with tailored marketing.",
   "page-index-values-privacy-ethereum-label": "Privacy oriented",
   "page-index-values-privacy-ethereum-content-0": "Ethereum community respects privacy. You you have the right to use apps without revealing yourself or your contact information.",
-  "page-index-values-integration-legacy-label": "Integrated",
+  "page-index-values-integration-legacy-label": "Fragmented",
   "page-index-values-integration-legacy-content-0": "Most apps push you to create separate accounts, making it hard to remember all your login details and registrations.",
-  "page-index-values-integration-ethereum-label": "Fragmented",
+  "page-index-values-integration-ethereum-label": "Integrated",
   "page-index-values-integration-ethereum-content-0": "With Ethereum you can reuse one account in all apps instead. No individual registrations are needed.",
   "page-index-values-decentralization-legacy-label": "Centralized",
   "page-index-values-decentralization-legacy-content-0": "Companies are owned by private entrepreneurs and shareholders. They alone exert control over the company and benefit the most from its success.",
@@ -118,4 +118,3 @@
   "page-index-values-open-ethereum-label": "Open to all",
   "page-index-values-open-ethereum-content-0": "Ethereum is public to all. Anyone can see, use, and improve the code, making it better for everyone."
 }
- 

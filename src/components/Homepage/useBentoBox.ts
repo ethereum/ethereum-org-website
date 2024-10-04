@@ -17,6 +17,7 @@ type CopyDetails = {
   children: string
   action: string
   href: string
+  eventName: Category
 }
 
 const gradientStops = "from-20% to-60%"
@@ -100,6 +101,7 @@ export const useBentoBox = () => {
     children: t(`page-index:page-index-bento-${category}-content`),
     action: t(`page-index:page-index-bento-${category}-action`),
     href,
+    eventName: category,
   })
 
   return [
