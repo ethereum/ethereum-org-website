@@ -44,16 +44,14 @@ const StablecoinsTable = ({
 
   return (
     <Table className="my-8 mb-8 min-w-[720px] bg-background">
-      <TableHeader className="text-body-medium">
+      <TableHeader>
         <TableRow>
           {columns.map((column, idx) => (
-            <TableHead key={idx} className="p-4 text-start text-md font-bold">
-              {column}
-            </TableHead>
+            <TableHead key={idx}>{column}</TableHead>
           ))}
 
           {content && content[0]?.url && (
-            <TableHead className="p-5 text-right text-md font-normal">
+            <TableHead className="text-right font-normal">
               <span className="inline-block" style={{ transform: flipForRtl }}>
                 ↗
               </span>
@@ -71,22 +69,17 @@ const StablecoinsTable = ({
         )}
 
         {content.map(({ name, marketCap, image, type, url }, idx) => (
-          <TableRow
-            key={idx}
-            className="text focus:bg-background-base focus:text-body-base"
-          >
-            <TableCell className="p-4 align-middle">
+          <TableRow key={idx}>
+            <TableCell>
               <Flex>
                 {image && <img src={image} alt="" className="me-4 h-6 w-6" />}
                 <>{name}</>
               </Flex>
             </TableCell>
-            <TableCell className="p-4 align-middle">{marketCap}</TableCell>
-            <TableCell className="p-4 align-middle">
-              {stablecoinsType[type]}
-            </TableCell>
+            <TableCell>{marketCap}</TableCell>
+            <TableCell>{stablecoinsType[type]}</TableCell>
             {url && (
-              <TableCell className="p-4 text-right">
+              <TableCell className="text-right">
                 <ButtonLink href={url} size="sm">
                   {t("page-stablecoins-go-to")} {name}
                 </ButtonLink>
