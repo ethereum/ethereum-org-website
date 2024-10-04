@@ -69565,6 +69565,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14045960/medium/01a57dd06ba1a0e6203aff54f82e00f3.jpeg"
           },
           {
+            "id": 16597191,
+            "username": "tr.eternallove.nt20405",
+            "totalCosts": 35.35,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16597191/medium/d053f9e0e596c2557d05866013f64f4c.png"
+          },
+          {
             "id": 16373356,
             "username": "minhbom141",
             "totalCosts": 20.2,
@@ -83109,7 +83115,7 @@
           {
             "id": 13672373,
             "username": "comme.le.gnu",
-            "totalCosts": 609.03,
+            "totalCosts": 681.75,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13672373/medium/9921ca5aa36af788bfd5fc5a898fbf43.jpg"
           }
         ]

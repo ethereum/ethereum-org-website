@@ -131,7 +131,7 @@ const EthPriceCard = ({
       </div>
 
       {/* min-h-[33px] prevents jump when price loads */}
-      <Flex className="min-h-[33px] w-full items-center justify-center">
+      <Flex className="mt-2 min-h-[33px] w-full flex-col-reverse items-center justify-center sm:flex-row">
         <div
           className={cn(
             "me-4 text-2xl leading-xs",
