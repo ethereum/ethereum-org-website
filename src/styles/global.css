@@ -13,12 +13,6 @@
     --font-inter: Inter, sans-serif;
     --font-mono: "IBM Plex Mono", Courier, monospace;
 
-    /* Semantic Colors: Light mode */
-    /* ! Deprecating primary-light */
-    --primary-light: var(--blue-100);
-    /* ! Deprecating primary-dark */
-    --primary-dark: var(--blue-700);
-
     /* Misc sematics: light mode */
     --tooltip-shadow: rgba(0, 0, 0, 0.24);
     --switch-background: var(--gray-300);
@@ -52,12 +46,6 @@
   }
 
   [data-theme="dark"] {
-    /* Semantic Colors: Dark mode */
-    /* ! Deprecating primary-light */
-    --primary-light: hsla(var(--orange-100));
-    /* ! Deprecating primary-dark */
-    --primary-dark: hsla(var(--orange-800));
-
     /* Misc sematics: dark mode */
     --tooltip-shadow: rgba(255, 255, 255, 0.24);
     --switch-background: rgba(255, 255, 255, 0.24);
@@ -88,7 +76,7 @@
 
 @layer base {
   body {
-    @apply !bg-background font-body text-sm !text-body lg:text-md;
+    @apply !bg-background font-body !text-body;
   }
 
   a {
@@ -165,73 +153,6 @@
       margin-bottom: calc(1.45rem / 2);
     }
   }
-}
-
-@layer components {
-  .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
-    @apply bg-background-highlight;
-  }
-
-  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
-    @apply !relative;
-  }
-
-  .swiper-pagination {
-    @apply relative mx-auto mt-8 flex h-[26px] max-w-48 items-center justify-center rounded-full bg-background-highlight;
-  }
-
-  .css-posts-swiper .swiper-pagination {
-    @apply max-w-52 sm:max-w-40 lg:max-w-36;
-  }
-
-  .swiper-pagination .swiper-pagination-bullet {
-    @apply bg-primary-high-contrast;
-  }
-
-  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
-    .swiper-pagination-bullet-active {
-    @apply bg-primary-hover;
-  }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    @apply !h-6 !w-fit fill-primary px-2;
-  }
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  top: calc(100% - 11px) !important;
-  --nav-inset: calc(50% - 6.5rem);
-}
-
-@media (min-width: theme("screens.sm")) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    --nav-inset: calc(50% - 5rem);
-  }
-}
-
-@media (min-width: theme("screens.lg")) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    --nav-inset: calc(50% - 4.5rem);
-  }
-}
-
-.swiper-button-next {
-  inset-inline-end: var(--nav-inset) !important;
-  inset-inline-start: auto !important;
-}
-
-.swiper-button-prev {
-  inset-inline-end: auto !important;
-  inset-inline-start: var(--nav-inset) !important;
-}
-
-.swiper-slide-shadow {
-  background: transparent !important;
 }
 
 @layer utilities {

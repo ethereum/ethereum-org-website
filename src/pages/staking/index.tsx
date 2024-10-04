@@ -20,12 +20,8 @@ import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import LeftNavBar from "@/components/LeftNavBar"
-import {
-  ContentContainer,
-  MobileButton,
-  MobileButtonDropdown,
-  Page,
-} from "@/components/MdComponents"
+import { ContentContainer, Page } from "@/components/MdComponents"
+import MobileButtonDropdown from "@/components/MobileButtonDropdown"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
@@ -632,9 +628,7 @@ const StakingPage = ({
             </div>
           </Flex>
         </ContentContainer>
-        <MobileButton>
-          <MobileButtonDropdown list={dropdownLinks} />
-        </MobileButton>
+        <MobileButtonDropdown list={dropdownLinks} />
       </Page>
     </PageContainer>
   )

@@ -84,6 +84,7 @@
   "page-index-title": "イーサリアムへようこそ",
   "page-index-values-description": "デジタル革命に参加しよう",
   "page-index-values-header": "関心事は変化します",
+  "page-index-values-legacy": "レガシー",
   "page-index-values-tag": "バリュー",
   "page-index-values-ownership-legacy-label": "所有権の制限",
   "page-index-values-ownership-legacy-content-0": "通常の銀行やソーシャルメディアのプラットフォームでは、あなたの資産やデータは組織が管理しているため、アクサスや管理はその組織に依存しています。",
@@ -115,6 +116,5 @@
   "page-index-values-open-legacy-label": "ほぼ非公開",
   "page-index-values-open-legacy-content-0": "企業は自らの知的財産を保護しそれらを共有することはありません。そのため部外者はどのように機能するか、問題を解決するか、または改善するかを知ることはできません。ですから一般の人々が新しいツールを作ったり、カスタマイズしたりすることが難しいのです。",
   "page-index-values-open-ethereum-label": "全ての人に公開",
-  "page-index-values-legacy": "レガシー",
   "page-index-values-open-ethereum-content-0": "イーサリアムは全ての人に公開されています。全ての人がコードを見て、使って、改善することにより、全ての人にとってより良いものになるのです。"
 }

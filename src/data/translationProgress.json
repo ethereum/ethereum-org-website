@@ -2,42 +2,42 @@
   {
     "languageId": "af",
     "words": {
-      "approved": 2328,
+      "approved": 1562,
       "total": 277336
     }
   },
   {
     "languageId": "am",
     "words": {
-      "approved": 10735,
+      "approved": 10981,
       "total": 277336
     }
   },
   {
     "languageId": "ar",
     "words": {
-      "approved": 35856,
+      "approved": 39967,
       "total": 277336
     }
   },
   {
     "languageId": "az",
     "words": {
-      "approved": 24432,
+      "approved": 24535,
       "total": 277336
     }
   },
   {
     "languageId": "be",
     "words": {
-      "approved": 6360,
+      "approved": 6648,
       "total": 277336
     }
   },
   {
     "languageId": "bg",
     "words": {
-      "approved": 14381,
+      "approved": 13552,
       "total": 277336
     }
   },
@@ -51,49 +51,49 @@
   {
     "languageId": "bn",
     "words": {
-      "approved": 31901,
+      "approved": 32023,
       "total": 277336
     }
   },
   {
     "languageId": "br-FR",
     "words": {
-      "approved": 119,
+      "approved": 43,
       "total": 277336
     }
   },
   {
     "languageId": "bs",
     "words": {
-      "approved": 6101,
+      "approved": 6379,
       "total": 277336
     }
   },
   {
     "languageId": "ca",
     "words": {
-      "approved": 24434,
+      "approved": 24465,
       "total": 277336
     }
   },
   {
     "languageId": "cs",
     "words": {
-      "approved": 67901,
+      "approved": 84564,
       "total": 277336
     }
   },
   {
     "languageId": "da",
     "words": {
-      "approved": 2346,
+      "approved": 2538,
       "total": 277336
     }
   },
   {
     "languageId": "de",
     "words": {
-      "approved": 157093,
+      "approved": 181499,
       "total": 277336
     }
   },
@@ -101,83 +101,83 @@
     "languageId": "dv",
     "words": {
       "approved": 0,
-      "total": 277398
+      "total": 277336
     }
   },
   {
     "languageId": "ee",
     "words": {
-      "approved": 217,
-      "total": 277398
+      "approved": 2555,
+      "total": 277336
     }
   },
   {
     "languageId": "el",
     "words": {
-      "approved": 115087,
+      "approved": 121612,
       "total": 277336
     }
   },
   {
     "languageId": "eo",
     "words": {
-      "approved": 216,
+      "approved": 46,
       "total": 277336
     }
   },
   {
     "languageId": "es-EM",
     "words": {
-      "approved": 246939,
+      "approved": 255059,
       "total": 277336
     }
   },
   {
     "languageId": "et",
     "words": {
-      "approved": 91,
+      "approved": 19,
       "total": 277336
     }
   },
   {
     "languageId": "eu",
     "words": {
-      "approved": 43,
+      "approved": 10,
       "total": 277336
     }
   },
   {
     "languageId": "fa",
     "words": {
-      "approved": 90971,
+      "approved": 91220,
       "total": 277336
     }
   },
   {
     "languageId": "fa-AF",
     "words": {
-      "approved": 189,
+      "approved": 64,
       "total": 277336
     }
   },
   {
     "languageId": "fi",
     "words": {
-      "approved": 20595,
+      "approved": 20906,
       "total": 277336
     }
   },
   {
     "languageId": "fil",
     "words": {
-      "approved": 47832,
+      "approved": 47865,
       "total": 277336
     }
   },
   {
     "languageId": "fr",
     "words": {
-      "approved": 251135,
+      "approved": 263487,
       "total": 277336
     }
   },
@@ -191,119 +191,119 @@
   {
     "languageId": "gl",
     "words": {
-      "approved": 2204,
+      "approved": 2542,
       "total": 277336
     }
   },
   {
     "languageId": "gu-IN",
     "words": {
-      "approved": 2443,
+      "approved": 2652,
       "total": 277336
     }
   },
   {
     "languageId": "ha",
     "words": {
-      "approved": 4,
+      "approved": 4541,
       "total": 277336
     }
   },
   {
     "languageId": "he",
     "words": {
-      "approved": 2183,
+      "approved": 3259,
       "total": 277336
     }
   },
   {
     "languageId": "hi",
     "words": {
-      "approved": 50583,
+      "approved": 50634,
       "total": 277336
     }
   },
   {
     "languageId": "hr",
     "words": {
-      "approved": 13184,
+      "approved": 21121,
       "total": 277336
     }
   },
   {
     "languageId": "hu",
     "words": {
-      "approved": 244357,
+      "approved": 258323,
       "total": 277336
     }
   },
   {
     "languageId": "hy-AM",
     "words": {
-      "approved": 9527,
+      "approved": 9746,
       "total": 277336
     }
   },
   {
     "languageId": "id",
     "words": {
-      "approved": 112993,
+      "approved": 113017,
       "total": 277336
     }
   },
   {
     "languageId": "ig",
     "words": {
-      "approved": 21204,
+      "approved": 25849,
       "total": 277336
     }
   },
   {
     "languageId": "it",
     "words": {
-      "approved": 264617,
+      "approved": 264607,
       "total": 277336
     }
   },
   {
     "languageId": "ja",
     "words": {
-      "approved": 262149,
+      "approved": 262134,
       "total": 277336
     }
   },
   {
     "languageId": "ka",
     "words": {
-      "approved": 5427,
+      "approved": 5462,
       "total": 277336
     }
   },
   {
     "languageId": "kk",
     "words": {
-      "approved": 2381,
+      "approved": 2692,
       "total": 277336
     }
   },
   {
     "languageId": "km",
     "words": {
-      "approved": 13789,
+      "approved": 13805,
       "total": 277336
     }
   },
   {
     "languageId": "kn",
     "words": {
-      "approved": 30333,
+      "approved": 39661,
       "total": 277336
     }
   },
   {
     "languageId": "ko",
     "words": {
-      "approved": 47263,
+      "approved": 49245,
       "total": 277336
     }
   },
@@ -317,7 +317,7 @@
   {
     "languageId": "ky",
     "words": {
-      "approved": 13,
+      "approved": 72,
       "total": 277336
     }
   },
@@ -331,7 +331,7 @@
   {
     "languageId": "lt",
     "words": {
-      "approved": 2711,
+      "approved": 3032,
       "total": 277336
     }
   },
@@ -339,7 +339,7 @@
     "languageId": "lv",
     "words": {
       "approved": 0,
-      "total": 277398
+      "total": 277336
     }
   },
   {
@@ -352,63 +352,63 @@
   {
     "languageId": "mk",
     "words": {
-      "approved": 142,
+      "approved": 54,
       "total": 277336
     }
   },
   {
     "languageId": "ml-IN",
     "words": {
-      "approved": 11877,
+      "approved": 12088,
       "total": 277336
     }
   },
   {
     "languageId": "mn",
     "words": {
-      "approved": 99,
+      "approved": 46,
       "total": 277336
     }
   },
   {
     "languageId": "mr",
     "words": {
-      "approved": 22109,
+      "approved": 22331,
       "total": 277336
     }
   },
   {
     "languageId": "ms",
     "words": {
-      "approved": 38592,
+      "approved": 38612,
       "total": 277336
     }
   },
   {
     "languageId": "my",
     "words": {
-      "approved": 768,
+      "approved": 65,
       "total": 277336
     }
   },
   {
     "languageId": "ne-NP",
     "words": {
-      "approved": 2287,
+      "approved": 2551,
       "total": 277336
     }
   },
   {
     "languageId": "nl",
     "words": {
-      "approved": 33947,
+      "approved": 41446,
       "total": 277336
     }
   },
   {
     "languageId": "no",
     "words": {
-      "approved": 2997,
+      "approved": 3010,
       "total": 277336
     }
   },
@@ -416,34 +416,34 @@
     "languageId": "ny",
     "words": {
       "approved": 0,
-      "total": 277398
+      "total": 277336
     }
   },
   {
     "languageId": "or",
     "words": {
-      "approved": 1,
+      "approved": 0,
       "total": 277336
     }
   },
   {
     "languageId": "pa-IN",
     "words": {
-      "approved": 6,
+      "approved": 3,
       "total": 277336
     }
   },
   {
     "languageId": "pcm",
     "words": {
-      "approved": 18230,
+      "approved": 27745,
       "total": 277336
     }
   },
   {
     "languageId": "pl",
     "words": {
-      "approved": 75398,
+      "approved": 80927,
       "total": 277336
     }
   },
@@ -451,34 +451,34 @@
     "languageId": "ps",
     "words": {
       "approved": 0,
-      "total": 277398
+      "total": 277336
     }
   },
   {
     "languageId": "pt-BR",
     "words": {
-      "approved": 229653,
+      "approved": 238273,
       "total": 277336
     }
   },
   {
     "languageId": "pt-PT",
     "words": {
-      "approved": 22398,
+      "approved": 22419,
       "total": 277336
     }
   },
   {
     "languageId": "ro",
     "words": {
-      "approved": 40794,
+      "approved": 43696,
       "total": 277336
     }
   },
   {
     "languageId": "ru",
     "words": {
-      "approved": 99349,
+      "approved": 101751,
       "total": 277336
     }
   },
@@ -492,77 +492,77 @@
   {
     "languageId": "si-LK",
     "words": {
-      "approved": 774,
+      "approved": 65,
       "total": 277336
     }
   },
   {
     "languageId": "sk",
     "words": {
-      "approved": 6522,
+      "approved": 6561,
       "total": 277336
     }
   },
   {
     "languageId": "sl",
     "words": {
-      "approved": 26299,
+      "approved": 26522,
       "total": 277336
     }
   },
   {
     "languageId": "sn",
     "words": {
-      "approved": 513,
+      "approved": 5686,
       "total": 277336
     }
   },
   {
     "languageId": "so",
     "words": {
-      "approved": 547,
+      "approved": 62,
       "total": 277336
     }
   },
   {
     "languageId": "sq",
     "words": {
-      "approved": 761,
+      "approved": 67,
       "total": 277336
     }
   },
   {
     "languageId": "sr-CS",
     "words": {
-      "approved": 22293,
+      "approved": 22516,
       "total": 277336
     }
   },
   {
     "languageId": "sv-SE",
     "words": {
-      "approved": 10395,
+      "approved": 10412,
       "total": 277336
     }
   },
   {
     "languageId": "sw",
     "words": {
-      "approved": 16750,
+      "approved": 26695,
       "total": 277336
     }
   },
   {
     "languageId": "ta",
     "words": {
-      "approved": 2789,
+      "approved": 2817,
       "total": 277336
     }
   },
   {
     "languageId": "te",
     "words": {
-      "approved": 8486,
+      "approved": 26754,
       "total": 277336
     }
   },
@@ -576,7 +576,7 @@
   {
     "languageId": "th",
     "words": {
-      "approved": 6404,
+      "approved": 6421,
       "total": 277336
     }
   },
@@ -590,91 +590,91 @@
   {
     "languageId": "tk",
     "words": {
-      "approved": 6058,
+      "approved": 6309,
       "total": 277336
     }
   },
   {
     "languageId": "tl",
     "words": {
-      "approved": 124,
+      "approved": 885,
       "total": 277336
     }
   },
   {
     "languageId": "tr",
     "words": {
-      "approved": 225079,
+      "approved": 225300,
       "total": 277336
     }
   },
   {
     "languageId": "tw",
     "words": {
-      "approved": 0,
-      "total": 277398
+      "approved": 4828,
+      "total": 277336
     }
   },
   {
     "languageId": "uk",
     "words": {
-      "approved": 89563,
+      "approved": 90081,
       "total": 277336
     }
   },
   {
     "languageId": "ur-IN",
     "words": {
-      "approved": 2323,
+      "approved": 2531,
       "total": 277336
     }
   },
   {
     "languageId": "ur-PK",
     "words": {
-      "approved": 791,
+      "approved": 907,
       "total": 277336
     }
   },
   {
     "languageId": "uz",
     "words": {
-      "approved": 3255,
+      "approved": 3272,
       "total": 277336
     }
   },
   {
     "languageId": "vi",
     "words": {
-      "approved": 31777,
+      "approved": 38137,
       "total": 277336
     }
   },
   {
     "languageId": "yo",
     "words": {
-      "approved": 893,
+      "approved": 13240,
       "total": 277336
     }
   },
   {
     "languageId": "zh-CN",
     "words": {
-      "approved": 251485,
+      "approved": 277336,
       "total": 277336
     }
   },
   {
     "languageId": "zh-TW",
     "words": {
-      "approved": 152047,
+      "approved": 167107,
       "total": 277336
     }
   },
   {
     "languageId": "zu",
     "words": {
-      "approved": 146,
+      "approved": 43,
       "total": 277336
     }
   }

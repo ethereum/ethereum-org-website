@@ -1,11 +1,8 @@
-import { ComponentProps, type HTMLAttributes } from "react"
+import { type HTMLAttributes } from "react"
 import { Badge, Box, type BoxProps } from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
-import ButtonDropdown, {
-  type ButtonDropdownProps,
-} from "@/components/ButtonDropdown"
 import Contributors from "@/components/Contributors"
 import MarkdownImage from "@/components/MarkdownImage"
 import TooltipLink from "@/components/TooltipLink"
@@ -36,7 +33,7 @@ export const commonHeadingAttributes = (className: string, id?: string) => ({
   id,
   className: cn(
     "font-bold leading-xs my-8",
-    id && "scroll-mt-28 relative",
+    id && "scroll-mt-28 relative group",
     className
   ),
   "data-group": !!id || undefined,
@@ -155,32 +152,6 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   )
 }
 
-export const MobileButton = (props: ChildOnlyProp) => {
-  return (
-    <div
-      className="sticky bottom-0 z-sticky w-full bg-background p-8 shadow-md lg:hidden"
-      {...props}
-    />
-  )
-}
-
-export const StyledButtonDropdown = ({
-  list,
-  className,
-  ...rest
-}: HTMLAttributes<HTMLDivElement> & Pick<ButtonDropdownProps, "list">) => (
-  <Flex className={cn("mb-8 items-end justify-end", className)} {...rest}>
-    <ButtonDropdown list={list} w={{ base: "full", lg: "auto" }} minW="240px" />
-  </Flex>
-)
-
-export const MobileButtonDropdown = ({
-  className,
-  ...props
-}: ComponentProps<typeof StyledButtonDropdown>) => (
-  <StyledButtonDropdown className={cn("mb-0", className)} {...props} />
-)
-
 // All custom React components
 export const reactComponents = {
   Badge,
@@ -196,11 +167,8 @@ export const reactComponents = {
   FeaturedText,
   GlossaryTooltip,
   InfoBanner,
-  MobileButton,
-  MobileButtonDropdown,
   Page,
   QuizWidget: StandaloneQuizWidget,
-  StyledButtonDropdown,
   IssuesList,
   Title,
   YouTube,

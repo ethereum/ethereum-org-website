@@ -101,7 +101,7 @@
 }
 .DocSearch-Hit[aria-selected="true"] a {
   --docsearch-hit-active-color: theme(backgroundColor.background.DEFAULT);
-  @apply border-transparent bg-primary-hover shadow-[4px_4px_0_0_var(--primary-light)];
+  @apply border-transparent bg-primary-hover shadow-[4px_4px_0_0_var(--primary-visited)];
 }
 
 .DocSearch-Hit-content-wrapper {
