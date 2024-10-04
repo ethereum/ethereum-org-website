@@ -13,9 +13,9 @@ export const ApplyNow = () => {
   const dateToday = new Date()
   const deadline = new Date(APPLICATION_END_DATE)
 
-  if (dateToday || deadline) {
+  if (dateToday < deadline) {
     return (
-      <div className="pt-13">
+      <div className="pt-12">
         <Callout
           className="flex-1 flex-shrink basis-[416px]"
           image={DolphinImage}
