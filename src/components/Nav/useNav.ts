@@ -319,21 +319,13 @@ export const useNav = () => {
           ],
         },
         {
+          // TODO: Delete /enterprise/private-ethereum/ and the menu link to it
+          // Deleted items array and replaced it with href to lead to enterprise page
+          //Deleted "private-ethereum/index.md" at "./public/content/enterprise/"
           label: t("enterprise"),
           description: t("nav-enterprise-description"),
           icon: BsBuildings,
-          items: [
-            {
-              label: t("mainnet-ethereum"),
-              description: t("nav-mainnet-description"),
-              href: "/enterprise/",
-            },
-            {
-              label: t("private-ethereum"),
-              description: t("nav-private-description"),
-              href: "/enterprise/private-ethereum/",
-            },
-          ],
+          href: "/enterprise/",
         },
       ],
     },
