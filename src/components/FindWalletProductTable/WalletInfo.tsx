@@ -67,10 +67,10 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
             <LanguagesIcon />
             <p className="text-md">
               {formatStringList(wallet.supportedLanguages, 5)}{" "}
+              <SupportedLanguagesTooltip
+                supportedLanguages={wallet.supportedLanguages}
+              />
             </p>
-            <SupportedLanguagesTooltip
-              supportedLanguages={wallet.supportedLanguages}
-            />
           </div>
           <div>
             <ButtonLink
