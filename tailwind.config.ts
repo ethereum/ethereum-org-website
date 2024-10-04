@@ -152,9 +152,6 @@ const config = {
           low: "hsla(var(--background-low))",
           medium: "hsla(var(--background-medium))",
           high: "hsla(var(--background-high))",
-          table: {
-            hover: "var(--table-background-hover)",
-          },
         },
 
         border: {

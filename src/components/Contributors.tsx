@@ -35,7 +35,7 @@ const Contributors = () => {
         {contributorsList.map((contributor) => (
           <LinkBox
             as="div"
-            className="m-2 max-w-[132px] transform shadow-table transition-transform duration-100 hover:scale-[1.02] hover:rounded hover:bg-background-table-hover hover:no-underline hover:shadow-table-box-hover focus:scale-[1.02] focus:rounded focus:no-underline focus:shadow-table-box-hover"
+            className="m-2 max-w-[132px] transform shadow transition-transform duration-100 hover:scale-[1.02] hover:rounded hover:bg-background-highlight focus:scale-[1.02] focus:rounded"
             key={contributor.login}
           >
             <img
