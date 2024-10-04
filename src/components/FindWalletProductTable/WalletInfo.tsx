@@ -34,7 +34,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
     <div className="flex flex-col gap-4">
       <div className="flex flex-row items-center justify-between gap-4">
         <div className="flex flex-col gap-4">
-          <div className="flex flex-row gap-4">
+          <div className="hidden flex-row gap-4 lg:flex">
             <TwImage
               src={wallet.image}
               alt=""
@@ -42,6 +42,27 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
             />
             <div className="flex flex-col gap-2">
               <p className="text-xl font-bold">{wallet.name}</p>
+              {walletPersonas.length > 0 && (
+                <div className="flex flex-row flex-wrap gap-1">
+                  {walletPersonas.map((persona) => (
+                    <Badge key={persona} variant="productTable">
+                      {t(persona)}
+                    </Badge>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+          <div className="flex flex-col gap-4 lg:hidden">
+            <div className="flex flex-row items-center gap-4">
+              <TwImage
+                src={wallet.image}
+                alt=""
+                style={{ objectFit: "contain", width: "24px", height: "24px" }}
+              />
+              <p className="text-xl font-bold">{wallet.name}</p>
+            </div>
+            <div>
               {walletPersonas.length > 0 && (
                 <div className="flex flex-row flex-wrap gap-1">
                   {walletPersonas.map((persona) => (
