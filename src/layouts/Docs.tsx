@@ -133,30 +133,26 @@ export const DocsLayout = ({
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
         <SideNav path={relativePath} />
-        <MainArticle className="min-w-0 flex-1 overflow-hidden px-8 pb-8 pt-8 md:px-16 md:pb-16 md:pt-12">
-          <div className="max-w-full break-words">
-            <H1 id="top">{frontmatter.title}</H1>
-            <FileContributors
-              contributors={contributors}
-              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-            />
-            <TableOfContents
-              editPath={absoluteEditPath}
-              items={tocItems}
-              isMobile
-              maxDepth={frontmatter.sidebarDepth!}
-              hideEditButton={!!frontmatter.hideEditButton}
-            />
-            <div className="prose prose-lg max-w-none break-words">
-              {children}
-            </div>
-            {isPageIncomplete && (
-              <CallToContribute editPath={absoluteEditPath} />
-            )}
-            <BackToTop />
-            <FeedbackCard isArticle />
-            <DocsNav contentNotTranslated={contentNotTranslated} />
+        <MainArticle className="min-w-0 flex-1 px-8 pb-8 pt-8 md:px-16 md:pb-16 md:pt-12">
+          <H1 id="top">{frontmatter.title}</H1>
+          <FileContributors
+            contributors={contributors}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          />
+          <TableOfContents
+            editPath={absoluteEditPath}
+            items={tocItems}
+            isMobile
+            maxDepth={frontmatter.sidebarDepth!}
+            hideEditButton={!!frontmatter.hideEditButton}
+          />
+          <div className="prose prose-lg max-w-none break-words">
+            {children}
           </div>
+          {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
+          <BackToTop />
+          <FeedbackCard isArticle />
+          <DocsNav contentNotTranslated={contentNotTranslated} />
         </MainArticle>
         {tocItems && (
           <TableOfContents
