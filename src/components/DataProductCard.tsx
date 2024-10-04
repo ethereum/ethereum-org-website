@@ -1,9 +1,11 @@
 import React from "react"
 import { StaticImageData } from "next/image"
-import { LinkBox, LinkOverlay, useColorModeValue } from "@chakra-ui/react"
+import { LinkBox, LinkOverlay } from "@chakra-ui/react"
 
 import { TwImage } from "@/components/Image"
 import { Flex } from "@/components/ui/flex"
+
+import useColorModeValue from "@/hooks/useColorModeValue"
 
 export interface DataRow {
   logo: StaticImageData
