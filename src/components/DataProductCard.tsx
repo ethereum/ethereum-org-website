@@ -67,7 +67,7 @@ const DataProductCard = ({
       </Flex>
       <Flex className="flex-col justify-between text-left">
         <div>
-          <h3 className="mx-4 my-8 mb-4 text-2xl font-semibold leading-[1.4]">
+          <h3 className="mx-4 my-8 mb-4 text-2xl font-semibold">
             <LinkOverlay href={url} isExternal>
               {name}
             </LinkOverlay>
