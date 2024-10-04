@@ -496,12 +496,11 @@ const WalletsPage = () => {
         <H2>{t("page-wallets-explore")}</H2>
         <CalloutCardContainer>
           <Callout
-            flex="1 1 424px"
-            minH="full"
             image={ETHImage}
             titleKey="page-wallets:page-wallets-get-some"
             alt={t("page-wallets-get-some-alt")}
             descriptionKey="page-wallets:page-wallets-get-some-desc"
+            className="min-h-full flex-1 basis-[424px]"
           >
             <Box>
               <ButtonLink href="/get-eth/">
@@ -510,12 +509,11 @@ const WalletsPage = () => {
             </Box>
           </Callout>
           <Callout
-            flex="1 1 424px"
-            minH="full"
             image={DappsImage}
             titleKey="page-wallets:page-wallets-try-dapps"
             alt={t("page-wallets-try-dapps-alt")}
             descriptionKey="page-wallets:page-wallets-try-dapps-desc"
+            className="min-h-full flex-1 basis-[424px]"
           >
             <Box>
               <ButtonLink href="/dapps/">
