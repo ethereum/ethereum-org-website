@@ -1,6 +1,5 @@
 "use client"
 
-import { IoChevronDownSharp, IoChevronUpSharp } from "react-icons/io5"
 import { ColumnDef } from "@tanstack/react-table"
 
 import { Wallet } from "@/lib/types"
@@ -22,23 +21,6 @@ export const useWalletColumns: ColumnDef<Wallet>[] = [
     cell: ({ row }) => {
       return (
         <WalletInfo wallet={row.original} isExpanded={row.getIsExpanded()} />
-      )
-    },
-  },
-  {
-    id: "expander",
-    header: () => <TableHead className="hidden" />,
-    cell: ({ row }) => {
-      return (
-        <div>
-          <button className="text-primary">
-            {row.getIsExpanded() ? (
-              <IoChevronUpSharp size={24} />
-            ) : (
-              <IoChevronDownSharp size={24} />
-            )}
-          </button>
-        </div>
       )
     },
   },
