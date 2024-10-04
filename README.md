@@ -1914,6 +1914,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://preetjdp.dev/"><img src="https://avatars.githubusercontent.com/u/27439197?v=4?s=100" width="100px;" alt="Preet Parekh"/><br /><sub><b>Preet Parekh</b></sub></a><br /><a href="#content-preetjdp" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/adamdomurad/"><img src="https://avatars.githubusercontent.com/u/163993?v=4?s=100" width="100px;" alt="ludamad"/><br /><sub><b>ludamad</b></sub></a><br /><a href="#content-ludamad" title="Content">🖋</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/MaryNfs"><img src="https://avatars.githubusercontent.com/u/52598322?v=4?s=100" width="100px;" alt="MaryNfs"/><br /><sub><b>MaryNfs</b></sub></a><br /><a href="#content-MaryNfs" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AMaryNfs" title="Bug reports">🐛</a></td>
+    </tr>
   </tbody>
 </table>
 
