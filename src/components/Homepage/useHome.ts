@@ -146,14 +146,14 @@ export const useHome = () => {
     {
       label: t("page-index:page-index-popular-topics-whitepaper"),
       Svg: Whitepaper,
-      className: cn(isRtl && "[&_svg]:-scale-x-100"),
+      className: cn(isRtl && "[&_div_div:has(svg)]:-scale-x-100"),
       href: "/whitepaper/",
       eventName: "whitepaper",
     },
     {
       label: t("page-index:page-index-popular-topics-roadmap"),
       Svg: RoadmapSign,
-      className: cn(isRtl && "[&_svg]:-scale-x-100"),
+      className: cn(isRtl && "[&_div_div:has(svg)]:-scale-x-100 "),
       href: "/roadmap/",
       eventName: "roadmap",
     },

@@ -1,7 +1,6 @@
-import { useColorModeValue } from "@chakra-ui/react"
-
 import { TwImage } from "@/components/Image"
 
+import useColorModeValue from "@/hooks/useColorModeValue"
 import pageviewsDark from "@/public/images/translation-program/pageviews-dark.png"
 import pageviewsLight from "@/public/images/translation-program/pageviews-light.png"
 

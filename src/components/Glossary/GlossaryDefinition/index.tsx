@@ -31,7 +31,7 @@ const GlossaryDefinition = ({
   return (
     <Stack className="mb-8 items-stretch gap-4 text-start">
       <h4
-        className={term ? "relative scroll-mt-28" : ""}
+        className={term ? "group relative scroll-mt-28" : ""}
         {...(term ? { "data-group": true, id: term } : {})}
       >
         <IdAnchor id={term} />

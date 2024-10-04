@@ -192,16 +192,22 @@ const config = {
         success: {
           DEFAULT: "hsla(var(--success))",
           light: "hsla(var(--success-light))",
+          dark: "hsla(var(--success-dark))",
+          border: "hsla(var(--success-border))",
         },
 
         error: {
           DEFAULT: "hsla(var(--error))",
           light: "hsla(var(--error-light))",
+          dark: "hsla(var(--error-dark))",
+          border: "hsla(var(--error-border))",
         },
 
         warning: {
           DEFAULT: "hsla(var(--warning))",
           light: "hsla(var(--warning-light))",
+          dark: "hsla(var(--warning-dark))",
+          border: "hsla(var(--warning-border))",
         },
 
         /** @deprecated */
