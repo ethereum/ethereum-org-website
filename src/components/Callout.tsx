@@ -40,7 +40,7 @@ const Callout = ({
       )}
     >
       {image && (
-        <div className="mt-[-10rem] self-center">
+        <div className="-mt-40 self-center">
           <TwImage
             src={image}
             alt={alt || ""}
