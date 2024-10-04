@@ -167,7 +167,7 @@ const GetEthPage = ({
             priority
           />
           <div className="my-8 flex flex-col items-center text-center lg:mx-0 lg:mb-0 lg:mt-24">
-            <h1 className="my-8 text-4xl leading-6 md:text-5xl">
+            <h1 className="my-8 text-4xl md:text-5xl">
               {t("page-get-eth-where-to-buy-title")}
             </h1>
             <p className="mb-0 max-w-[45ch] text-center text-xl leading-snug text-body-medium">

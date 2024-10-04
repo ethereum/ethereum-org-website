@@ -12524,6 +12524,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "MaryNfs",
+      "name": "MaryNfs",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52598322?v=4",
+      "profile": "https://github.com/MaryNfs",
+      "contributions": [
+        "content",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
