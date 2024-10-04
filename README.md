@@ -1912,6 +1912,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/chenjiali-april"><img src="https://avatars.githubusercontent.com/u/132745538?v=4?s=100" width="100px;" alt="april"/><br /><sub><b>april</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=chenjiali-april" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/r4f4ss"><img src="https://avatars.githubusercontent.com/u/5679073?v=4?s=100" width="100px;" alt="rafaelss"/><br /><sub><b>rafaelss</b></sub></a><br /><a href="#content-r4f4ss" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://preetjdp.dev/"><img src="https://avatars.githubusercontent.com/u/27439197?v=4?s=100" width="100px;" alt="Preet Parekh"/><br /><sub><b>Preet Parekh</b></sub></a><br /><a href="#content-preetjdp" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/adamdomurad/"><img src="https://avatars.githubusercontent.com/u/163993?v=4?s=100" width="100px;" alt="ludamad"/><br /><sub><b>ludamad</b></sub></a><br /><a href="#content-ludamad" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
