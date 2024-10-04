@@ -1904,7 +1904,7 @@ export const walletsData: WalletData[] = [
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
   },
   {
-    last_updated: "2024-06-07",
+    last_updated: "2024-09-09",
     name: "ShapeShift Mobile",
     image: ShapeShiftImage,
     twBackgroundColor: "bg-[#386FF9]",
@@ -1953,7 +1953,7 @@ export const walletsData: WalletData[] = [
     layer_2: true,
     gas_fee_customization: true,
     ens_support: true,
-    erc_20_support: false,
+    erc_20_support: true,
     buy_crypto: true,
     withdraw_crypto: true,
     multisig: false,
