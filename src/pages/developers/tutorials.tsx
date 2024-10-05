@@ -313,7 +313,7 @@ const TutorialPage = ({
             <ButtonLink
               leftIcon={<FaGithub />}
               variant="outline"
-              href="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
+              href="https://github.com/ethereum/ethereum-org-website/pulls"
             >
               <Translation id="page-developers-tutorials:page-tutorial-pull-request-btn" />
             </ButtonLink>
