@@ -1916,6 +1916,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/MaryNfs"><img src="https://avatars.githubusercontent.com/u/52598322?v=4?s=100" width="100px;" alt="MaryNfs"/><br /><sub><b>MaryNfs</b></sub></a><br /><a href="#content-MaryNfs" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AMaryNfs" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://signor.vercel.app/"><img src="https://avatars.githubusercontent.com/u/94352660?v=4?s=100" width="100px;" alt="Signor Dev"/><br /><sub><b>Signor Dev</b></sub></a><br /><a href="#maintenance-Signor1" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
