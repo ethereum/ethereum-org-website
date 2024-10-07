@@ -675,5 +675,14 @@
     "startDate": "2024-12-6",
     "endDate": "2024-12-8",
     "imageUrl": "https://ethindia.co/assets/images/og-image.png"
+  },
+  {
+    "title": "ETHCluj",
+    "href": "https://ethcluj.org/",
+    "location": "Cluj-Napoca, Romania",
+    "description": "ETHCluj is the conference dedicated to on-boarding local companies, builders and enthusiasts to the Ethereum ecosystem.",
+    "startDate": "2025-06-19",
+    "endDate": "2025-06-21",
+    "imageUrl": "https://framerusercontent.com/images/aRUi5LwVfWm4n3EBJcJHJpWkVQ.svg"
   }
 ]
