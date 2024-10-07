@@ -12497,6 +12497,52 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "r4f4ss",
+      "name": "rafaelss",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5679073?v=4",
+      "profile": "https://github.com/r4f4ss",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "preetjdp",
+      "name": "Preet Parekh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/27439197?v=4",
+      "profile": "https://preetjdp.dev/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ludamad",
+      "name": "ludamad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/163993?v=4",
+      "profile": "https://www.linkedin.com/in/adamdomurad/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "MaryNfs",
+      "name": "MaryNfs",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52598322?v=4",
+      "profile": "https://github.com/MaryNfs",
+      "contributions": [
+        "content",
+        "bug"
+      ]
+    },
+    {
+      "login": "Signor1",
+      "name": "Signor Dev",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94352660?v=4",
+      "profile": "https://signor.vercel.app/",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
