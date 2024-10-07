@@ -30,6 +30,7 @@ import CaptureTheEtherImage from "@/public/images/dev-tools/capturetheether.png"
 import ChainIDEImage from "@/public/images/dev-tools/chainIDE.png"
 import ConsensysImage from "@/public/images/dev-tools/consensys.png"
 import CryptoZombieImage from "@/public/images/dev-tools/crypto-zombie.png"
+import CyfrinUpdraftImage from "@/public/images/dev-tools/cyfrin-updraft.png"
 import DappWorldImage from "@/public/images/dev-tools/dapp-world.png"
 import EthDotBuildImage from "@/public/images/dev-tools/eth-dot-build.png"
 import MetaschoolImage from "@/public/images/dev-tools/metaschool.png"
@@ -410,6 +411,19 @@ const LearningToolsPage = () => {
         "page-developers-learning-tools:page-learning-tools-alchemy-university-logo-alt"
       ),
       background: "#ffffff",
+      subjects: ["Solidity", "web3"],
+    },
+    {
+      name: "Cyfrin Updraft",
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-cyfrin-updraft-description"
+      ),
+      url: "https://updraft.cyfrin.io/",
+      image: CyfrinUpdraftImage,
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-cyfrin-updraft-logo-alt"
+      ),
+      background: "#000000",
       subjects: ["Solidity", "web3"],
     },
   ]
