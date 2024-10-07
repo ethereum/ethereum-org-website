@@ -29,7 +29,7 @@ import PillarImage from "@/public/images/wallets/pillar.png"
 import RabbyWalletImage from "@/public/images/wallets/rabbywallet.png"
 import RainbowImage from "@/public/images/wallets/rainbow.png"
 import SafeImage from "@/public/images/wallets/safe.png"
-import ShapeShiftImage from "@/public/images/wallets/shapeshift.png"
+import ShapeShiftImage from "@/public/images/wallets/shapeshift.svg"
 import TahoImage from "@/public/images/wallets/taho.png"
 import TokenPocketImage from "@/public/images/wallets/tokenpocket.png"
 import TorusImage from "@/public/images/wallets/torus.png"
@@ -1892,7 +1892,7 @@ export const walletsData: WalletData[] = [
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
   },
   {
-    last_updated: "2024-09-09",
+    last_updated: "2024-10-07",
     name: "ShapeShift Mobile",
     image: ShapeShiftImage,
     brand_color: "#386FF9",
