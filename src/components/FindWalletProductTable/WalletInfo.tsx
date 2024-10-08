@@ -74,13 +74,15 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
               )}
             </div>
           </div>
-          <div className="flex flex-row gap-2">
+          <div className="flex flex-row gap-4">
             <div className="relative hidden w-14 md:block">
               <div
                 className={`${isExpanded ? "block" : "hidden"} absolute -bottom-9 -top-0 left-1/2 w-1 -translate-x-1/2 transform ${wallet.twBackgroundColor}`}
               />
             </div>
-            <div className="flex flex-col gap-2">
+            <div
+              className={`flex flex-col gap-2 ${walletPersonas.length === 0 ? "-mt-9" : ""}`}
+            >
               {deviceLabels.length > 0 && (
                 <div className="flex flex-row gap-2">
                   <DevicesIcon />
@@ -109,7 +111,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
           </button>
         </div>
       </div>
-      <div className="flex flex-row gap-2">
+      <div className="flex flex-row gap-4">
         <div className="relative hidden w-14 md:block">
           <div
             className={`${isExpanded ? "block" : "hidden"} absolute -bottom-9 -top-0 left-1/2 w-1 -translate-x-1/2 transform ${wallet.twBackgroundColor}`}
