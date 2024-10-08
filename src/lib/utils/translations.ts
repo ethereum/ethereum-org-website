@@ -202,6 +202,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     path.startsWith("/roadmap/scaling/") ||
     path.startsWith("/run-a-node/") ||
     path.startsWith("/security/") ||
+    path.startsWith("/smart-contracts/") ||
     path.startsWith("/staking/solo/") ||
     path.startsWith("/wallets/") ||
     path.startsWith("/web3/") ||
