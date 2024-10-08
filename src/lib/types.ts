@@ -4,7 +4,6 @@ import type { AppProps } from "next/app"
 import type { StaticImageData } from "next/image"
 import type { SSRConfig } from "next-i18next"
 import type { ReactElement, ReactNode } from "react"
-import type { Icon } from "@chakra-ui/react"
 
 import type {
   DocsFrontmatter,
@@ -18,6 +17,7 @@ import type {
 
 import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
+import type { IconBaseType } from "@/components/icons/icon-base"
 import type { SimulatorNav } from "@/components/Simulator/interfaces"
 
 import allQuizData from "@/data/quizzes"
@@ -638,7 +638,7 @@ export type FilterOption = {
   title: string
   items: Array<{
     title: string
-    icon: typeof Icon
+    icon: IconBaseType
     description: string
     filterKey: string | undefined
     showOptions: boolean | undefined

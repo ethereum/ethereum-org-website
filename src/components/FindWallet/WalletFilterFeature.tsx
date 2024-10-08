@@ -182,7 +182,7 @@ const WalletFilterFeature = ({
                           }
                         >
                           <GridItem>
-                            <LabelIcon boxSize={7} mt={0.5} aria-hidden />
+                            <LabelIcon className="mt-0. size-7" aria-hidden />
                           </GridItem>
 
                           <GridItem as="span" lineHeight="1.1rem">

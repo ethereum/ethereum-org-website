@@ -12,11 +12,13 @@ import {
   AccordionTrigger,
 } from "../../tailwind/ui/accordion"
 
+import type { IconBaseType } from "./icons/icon-base"
+
 export type ExpandableCardProps = {
   children?: ReactNode
   contentPreview?: ReactNode
   title: ReactNode
-  svg?: React.ElementType
+  svg?: IconBaseType
   eventAction?: string
   eventCategory?: string
   eventName?: string
