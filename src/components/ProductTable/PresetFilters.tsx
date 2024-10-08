@@ -64,7 +64,7 @@ const PresetFilters = ({
                       </svg>
                     )}
                   </div>
-                  <h3 className="duration-50 break-all text-left text-xl text-primary transition-all group-hover:text-primary-hover">
+                  <h3 className="duration-50 hyphens-auto text-left text-xl text-primary transition-all group-hover:text-primary-hover">
                     {preset.title}
                   </h3>
                 </div>
