@@ -47,8 +47,8 @@ const PresetFilters = ({
                 )}
                 onClick={() => handleSelectPreset(idx)}
               >
-                <div className="flex items-center gap-2 px-1.5">
-                  <div className="flex h-5 w-5 items-center justify-center rounded border-2 border-primary">
+                <div className="items-top flex gap-2 px-1.5">
+                  <div className="relative mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2 border-primary">
                     {activePresets.includes(idx) && (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@ const PresetFilters = ({
                       </svg>
                     )}
                   </div>
-                  <h3 className="duration-50 text-xl text-primary transition-all group-hover:text-primary-hover">
+                  <h3 className="duration-50 break-all text-left text-xl text-primary transition-all group-hover:text-primary-hover">
                     {preset.title}
                   </h3>
                 </div>
