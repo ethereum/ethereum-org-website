@@ -110,7 +110,11 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
         </div>
       </div>
       <div className="flex flex-row gap-2">
-        <div className="relative hidden w-14 md:block" />
+        <div className="relative hidden w-14 md:block">
+          <div
+            className={`${isExpanded ? "block" : "hidden"} absolute -bottom-9 -top-0 left-1/2 w-1 -translate-x-1/2 transform ${wallet.twBackgroundColor}`}
+          />
+        </div>
         <ButtonLink
           href={wallet.url}
           variant="outline"
