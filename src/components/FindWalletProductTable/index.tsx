@@ -27,7 +27,7 @@ const FindWalletProductTable = ({ wallets }) => {
       filter.items.forEach((item) => {
         if (item.filterKey === "languages") {
           selectedLanguage = item.inputState as string
-        } else if (item.inputState === true) {
+        } else if (item.inputState === true && item.options.length === 0) {
           activeFilterKeys.push(item.filterKey)
         }
 
@@ -40,6 +40,8 @@ const FindWalletProductTable = ({ wallets }) => {
         }
       })
     })
+
+    console.log(activeFilterKeys)
 
     return wallets
       .filter((item) => {
