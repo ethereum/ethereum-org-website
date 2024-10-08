@@ -555,7 +555,7 @@
   "m004-a-label": "It is a token that is tied to an asset in the real world",
   "m004-a-explanation": "This is incorrect. While many stablecoins are pegged to real-world assets, this characteristic is not exclusive to stablecoins (e.g., ETH-collateralized tokens).",
   "m004-b-label": "It is a cryptocurrency token specifically designed to keep its value steady",
-  "m004-b-explanation": "Correct! Stablecoins are designed to keep their value relatively stable, typically pegged to assets like currencies (e.g., 1 USDC = 1 US dollar), but not all stablecoins follow this model (e.g., RAI or HAI).",
+  "m004-b-explanation": "Correct! Stablecoins are designed to keep their value relatively stable, typically pegged to assets like currencies (e.g., 1 USDC = 1 US dollar), but not all stablecoins follow this model (e.g., RAI).",
   "m004-c-label": "It is capable of being sent over the internet",
   "m004-c-explanation": "This is incorrect. While this is a capability, it is not unique to stablecoins.",
   "m004-d-label": "It can be used on the Ethereum network.",

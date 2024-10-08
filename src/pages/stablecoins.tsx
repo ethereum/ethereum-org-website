@@ -283,7 +283,10 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
         t("page-stablecoins-crypto-backed-con-1"),
         t("page-stablecoins-crypto-backed-con-2"),
       ],
-      links: [{ text: "Dai", url: "https://makerdao.com/en/" }],
+      links: [
+        { text: "DAI", url: "https://makerdao.com/en/" },
+        { text: "RAI", url: "https://reflexer.finance/" },
+      ],
     },
     {
       title: t("page-stablecoins-precious-metals"),
