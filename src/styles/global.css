@@ -43,8 +43,6 @@
       rgba(145, 234, 228, 0.2) 100%
     );
     --search-background: var(--background);
-    /* cant find new equivalent */
-    --table-background-hover: #f2f2f2; 
   }
 
   [data-theme="dark"] {
@@ -73,8 +71,6 @@
       rgba(134, 253, 232, 0.08) 100%
     );
     --search-background: #4c4c4c;
-    /* cant find new equivalent */
-    --table-background-hover: rgba(255,115,36,.013);
   }
 }
 
