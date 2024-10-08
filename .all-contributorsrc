@@ -12534,6 +12534,15 @@
         "content",
         "bug"
       ]
+    },
+    {
+      "login": "Signor1",
+      "name": "Signor Dev",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94352660?v=4",
+      "profile": "https://signor.vercel.app/",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
