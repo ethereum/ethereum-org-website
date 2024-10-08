@@ -21,7 +21,7 @@ const PresetFilters = ({
 
   return (
     <div>
-      <h3 className={cn("mb-3 text-xl font-bold", showMobileSidebar && "px-4")}>
+      <h3 className={cn("mb-3 text-xl font-bold", "px-4")}>
         {t("table-what-are-you-looking-for")}
       </h3>
       <div
