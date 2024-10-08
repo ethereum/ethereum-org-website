@@ -41,8 +41,6 @@ const FindWalletProductTable = ({ wallets }) => {
       })
     })
 
-    console.log(activeFilterKeys)
-
     return wallets
       .filter((item) => {
         return item.languages_supported.includes(selectedLanguage)

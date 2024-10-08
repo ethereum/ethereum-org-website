@@ -1,4 +1,4 @@
-import { Fragment } from "react"
+import { Fragment, useEffect, useRef, useState } from "react"
 import {
   ColumnDef,
   flexRender,
@@ -30,13 +30,30 @@ const DataTable = <TData, TValue>({
   noResultsComponent,
   ...props
 }: DataTableProps<TData, TValue>) => {
+  const [isVisible, setIsVisible] = useState(true)
+  const [currentData, setCurrentData] = useState(data)
+  const previousDataRef = useRef(data)
+
   const table = useReactTable({
-    data,
+    data: currentData,
     columns,
     getRowCanExpand: () => true,
     getCoreRowModel: getCoreRowModel(),
     getExpandedRowModel: getExpandedRowModel(),
   })
+
+  useEffect(() => {
+    if (JSON.stringify(data) !== JSON.stringify(previousDataRef.current)) {
+      setIsVisible(false)
+      const timer = setTimeout(() => {
+        setCurrentData(data)
+        setIsVisible(true)
+        previousDataRef.current = data
+      }, 25) // Adjust this value to match your CSS transition duration
+
+      return () => clearTimeout(timer)
+    }
+  }, [data])
 
   return (
     <Table {...props}>
@@ -58,7 +75,11 @@ const DataTable = <TData, TValue>({
           </TableRow>
         ))}
       </TableHeader>
-      <TableBody>
+      <TableBody
+        className={`duration-25 transition-opacity ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
+      >
         {table.getRowModel().rows?.length ? (
           table.getRowModel().rows.map((row, idx) => (
             <Fragment key={row.id}>
