@@ -1,11 +1,11 @@
 import React from "react"
 import { StaticImageData } from "next/image"
-import { LinkBox, LinkOverlay } from "@chakra-ui/react"
 
 import { TwImage } from "@/components/Image"
 import { Flex } from "@/components/ui/flex"
 
-import useColorModeValue from "@/hooks/useColorModeValue"
+import InlineLink from "./ui/Link"
+import { LinkBox, LinkOverlay } from "./ui/link-box"
 
 export interface DataRow {
   logo: StaticImageData
@@ -34,26 +34,8 @@ const DataProductCard = ({
   description,
   data,
 }: DataProductCardProps) => {
-  const boxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
-
   return (
-    <LinkBox
-      color="text"
-      background="searchBackground"
-      border="1px solid"
-      borderColor="lightBorder"
-      borderRadius="base"
-      overflow="hidden"
-      boxShadow={boxShadow}
-      display="flex"
-      flexDirection="column"
-      _hover={{
-        background: "tableBackgroundHover",
-        boxShadow: boxShadow,
-        transition: "transform 0.1s ease 0s",
-        transform: "scale(1.02)",
-      }}
-    >
+    <LinkBox className="flex flex-col overflow-hidden rounded border border-border shadow-table-box transition-transform duration-100 ease-linear hover:scale-[1.02] hover:bg-background-highlight focus:scale-[1.02] focus:bg-background-highlight">
       <Flex
         className={
           "min-h-[200px] items-center justify-center shadow-[rgb(0_0_0/_10%)_0px_-1px_0px_inset]"
@@ -70,8 +52,10 @@ const DataProductCard = ({
       <Flex className="flex-col justify-between text-left">
         <div>
           <h3 className="mx-4 my-8 mb-4 text-2xl font-semibold">
-            <LinkOverlay href={url} isExternal>
-              {name}
+            <LinkOverlay asChild>
+              <InlineLink href={url} hideArrow>
+                {name}
+              </InlineLink>
             </LinkOverlay>
           </h3>
           <p className="mx-4 mb-4 text-sm leading-[140%]">{description}</p>
@@ -81,8 +65,7 @@ const DataProductCard = ({
             {data.map(({ logo, coin, apy }, idx) => (
               <Flex
                 key={idx}
-                className="flex justify-between border border-x-0 border-border p-4 text-sm uppercase"
-                // color="text300"
+                className="justify-between border border-x-0 border-border p-4 text-sm uppercase"
               >
                 <Flex className="items-center">
                   {logo && (
