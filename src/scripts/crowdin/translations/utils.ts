@@ -58,8 +58,22 @@ export const createLocaleTranslationPR = (
   }).trim()
   execSync(`git checkout -b ${branchName}`)
   execSync("git reset .")
-  execSync(`git add ${TRANSLATIONS_DIR}/${locale}`)
-  execSync(`git add ${INTL_JSON_DIR}/${locale}`)
+
+  // Check if the translations directory exists and contains files
+  const translationsDir = path.join(TRANSLATIONS_DIR, locale)
+  if (
+    fs.existsSync(translationsDir) &&
+    fs.readdirSync(translationsDir).length > 0
+  ) {
+    execSync(`git add ${translationsDir}`)
+  }
+
+  // Check if the intl JSON directory exists and contains files
+  const intlJsonDir = path.join(INTL_JSON_DIR, locale)
+  if (fs.existsSync(intlJsonDir) && fs.readdirSync(intlJsonDir).length > 0) {
+    execSync(`git add ${intlJsonDir}`)
+  }
+
   execSync(`git commit -m "${message}"`)
   execSync(`git push origin ${branchName}`)
 
