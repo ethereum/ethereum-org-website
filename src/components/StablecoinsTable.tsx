@@ -43,7 +43,7 @@ const StablecoinsTable = ({
   }
 
   return (
-    <Table className="my-8 mb-8 min-w-[720px] bg-background">
+    <Table className="my-8 min-w-[720px] bg-background">
       <TableHeader>
         <TableRow>
           {columns.map((column, idx) => (
