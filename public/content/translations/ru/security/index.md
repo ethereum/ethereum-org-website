@@ -242,8 +242,7 @@ _Примечание. Существуют производные токены 
 
 <InfoBanner emoji=":lock:">
   <div>
-    Примечание: использование двухфакторной аутентификации на основе вашей
-<a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM-карты</a> ненадежно, так как она может быть взломана. Это небезопасно. Для максимальной безопасности используйте приложение вроде <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> или <a href="https://authy.com/">Authy</a>.
+    Примечание. Двухфакторная аутентификация на основе SMS уязвима к <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">переносу номера телефона на SIM-карту злоумышленника</a> и небезопасна. Для обеспечения максимальной безопасности используйте такой сервис, как <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> или <a href="https://authy.com/">Authy</a>.
   </div>
 </InfoBanner>
 
@@ -275,7 +274,7 @@ _Примечание. Существуют производные токены 
 
 - [До 3 миллионов устройств заражено вредоносными дополнениями для Chrome и Edge](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) — _Ден Гудин_
 - [Как создать надежный пароль, который вы не забудете](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) — _AVG_
-- [Что такое ключ безопасности?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) _Coinbase_
+- [Что такое ключ безопасности? ](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) _Coinbase_
 
 ### Безопасность криптовалюты {#reading-crypto-security}
 
