@@ -1371,7 +1371,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation:
       "https://help.zerion.io/en/collections/5525626-zerion-wallet",
     documentation: "https://help.zerion.io/en/",
-    new_to_crypto: false,
+    new_to_crypto: true,
   },
   {
     last_updated: "2022-08-31",
