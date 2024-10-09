@@ -7,11 +7,12 @@ import type { DeveloperDocsLink } from "@/lib/interfaces"
 import Emoji from "@/components/Emoji"
 
 import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import docLinks from "@/data/developer-docs-links.yaml"
 
 import { Flex, Stack } from "./ui/flex"
-import { BaseLink } from "./ui/Link"
+import { LinkBox, LinkOverlay } from "./ui/link-box"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
@@ -43,19 +44,12 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
   const { isRtl } = useRtlFlip()
 
   return (
-    <BaseLink
-      href={docData.href}
+    <LinkBox
       className={cn(
         "flex w-full flex-1 items-center no-underline",
         "h-[82px] rounded-sm border bg-background",
         isPrev ? "justify-start" : "justify-end"
       )}
-      rel={isPrev ? "prev" : "next"}
-      customEventOptions={{
-        eventCategory: "next/previous article DocsNav",
-        eventAction: "click",
-        eventName: isPrev ? "previous" : "next",
-      }}
     >
       <div className={cn("h-full p-4", isPrev ? "order-[0]" : "order-1")}>
         <Emoji
@@ -68,12 +62,22 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
       </div>
       <TextDiv className={cn(!isPrev ? "pe-0 text-end" : "ps-0")}>
         <p className="uppercase text-body">{t(isPrev ? "previous" : "next")}</p>
-
-        <p className={cn("underline", isPrev ? "text-start" : "text-end")}>
+        <LinkOverlay
+          href={docData.href}
+          onClick={() => {
+            trackCustomEvent({
+              eventCategory: "next/previous article DocsNav",
+              eventAction: "click",
+              eventName: isPrev ? "previous" : "next",
+            })
+          }}
+          className={cn("underline", isPrev ? "text-start" : "text-end")}
+          rel={isPrev ? "prev" : "next"}
+        >
           {t(docData.id)}
-        </p>
+        </LinkOverlay>
       </TextDiv>
-    </BaseLink>
+    </LinkBox>
   )
 }
 
