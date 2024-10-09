@@ -1893,7 +1893,7 @@ export const walletsData: WalletData[] = [
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
   },
   {
-    last_updated: "2024-09-09",
+    last_updated: "2024-10-07",
     name: "ShapeShift Mobile",
     image: ShapeShiftImage,
     brand_color: "#386FF9",
