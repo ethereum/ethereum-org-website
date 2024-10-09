@@ -30,6 +30,7 @@ import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import ProductList from "@/components/ProductList"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import StablecoinAccordion from "@/components/StablecoinAccordion"
 import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
@@ -282,7 +283,10 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
         t("page-stablecoins-crypto-backed-con-1"),
         t("page-stablecoins-crypto-backed-con-2"),
       ],
-      links: [{ text: "Dai", url: "https://makerdao.com/en/" }],
+      links: [
+        { text: "DAI", url: "https://makerdao.com/en/" },
+        { text: "RAI", url: "https://reflexer.finance/" },
+      ],
     },
     {
       title: t("page-stablecoins-precious-metals"),
@@ -773,6 +777,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
         </Flex>
       </Box>
       <Content>
+        <StandaloneQuizWidget quizKey="stablecoins" />
         <FeedbackCard />
       </Content>
     </Page>
