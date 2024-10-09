@@ -25,7 +25,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import AlchemyUniversityImage from "@/public/images/dev-tools/alchemyuniversity.png"
 import AtlasImage from "@/public/images/dev-tools/atlas.png"
 import BloomTechImage from "@/public/images/dev-tools/bloomtech.png"
-import BuildSpaceImage from "@/public/images/dev-tools/buildspace.png"
 import CaptureTheEtherImage from "@/public/images/dev-tools/capturetheether.png"
 import ChainIDEImage from "@/public/images/dev-tools/chainIDE.png"
 import ConsensysImage from "@/public/images/dev-tools/consensys.png"
@@ -318,19 +317,6 @@ const LearningToolsPage = () => {
         "page-developers-learning-tools:page-learning-tools-bloomtech-logo-alt"
       ),
       background: "#ffffff",
-      subjects: ["Solidity", "web3"],
-    },
-    {
-      name: "_buildspace",
-      description: t(
-        "page-developers-learning-tools:page-learning-tools-buildspace-description"
-      ),
-      url: "https://buildspace.so",
-      image: BuildSpaceImage,
-      alt: t(
-        "page-developers-learning-tools:page-learning-tools-buildspace-logo-alt"
-      ),
-      background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
     },
     {
