@@ -524,7 +524,7 @@
   "l006-a-label": "True",
   "l006-a-explanation": "Simply running client software does not earn you rewards. To earn rewards, you must also be staking.",
   "l006-b-label": "False",
-  "m001-prompt": "What are Stablecoins?",
+  "m001-prompt": "What are stablecoins?",
   "m001-a-label": "Cryptocurrencies with low price volatility, their value is steady and similar to traditional currencies",
   "m001-a-explanation": "Correct! Stablecoins are designed to address the volatility issue common in many cryptocurrencies.",
   "m001-b-label": "Digital representations of gold",
