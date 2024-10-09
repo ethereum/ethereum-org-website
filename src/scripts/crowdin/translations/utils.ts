@@ -1,5 +1,5 @@
 import { execSync } from "child_process"
-import fs, { readFileSync, unlinkSync, writeFileSync } from "fs"
+import fs, { unlinkSync, writeFileSync } from "fs"
 import path from "path"
 import { Readable } from "stream"
 import { finished } from "stream/promises"
@@ -8,9 +8,6 @@ import ReadableStream from "stream/web"
 import decompress from "decompress"
 
 import { INTL_JSON_DIR, TRANSLATIONS_DIR } from "../../../lib/constants"
-
-import { SUMMARY_PATH } from "./constants"
-import { QASummary } from "./types"
 
 export const downloadFile = async (url: string, writePath: string) => {
   // Get directory from writePath and ensure it exists
@@ -38,33 +35,6 @@ export const decompressFile = async (filePath: string, targetDir: string) => {
   console.log(`🥡 Decompressing ${filePath} to ${targetDir}`)
   await decompress(filePath, targetDir)
   console.log("✅ Decompression complete.")
-}
-
-const getQAMessage = (locale: string) => {
-  console.log("Checking summary path:", SUMMARY_PATH)
-  if (!fs.existsSync(SUMMARY_PATH)) {
-    console.error("Could not find summary path:", SUMMARY_PATH)
-    throw new Error("No summary file found.")
-  }
-
-  const summaryJson: QASummary = JSON.parse(readFileSync(SUMMARY_PATH, "utf-8"))
-  const qaResults = summaryJson[locale]
-    ? summaryJson[locale].map((s) => "- " + s).join("\n")
-    : null
-
-  if (!qaResults) return "No QA issues found"
-  return `
-\`\`\`shell
-yarn markdown-checker
-\`\`\`
-
-<details><summary>Unfold for ${summaryJson[locale].length} result(s)</summary>
-
-${qaResults}
-</details>
-
-@coderabbitai review
-`
 }
 
 export const createLocaleTranslationPR = (
@@ -101,9 +71,6 @@ export const createLocaleTranslationPR = (
 
   ## Content buckets imported
   ${buckets.sort((a, b) => a - b).join(", ")}
-
-  ## Markdown QA checker alerts
-  ${getQAMessage(locale)}
   `
 
   const bodyWritePath = path.resolve(process.cwd(), "body.txt")
