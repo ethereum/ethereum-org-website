@@ -14,17 +14,19 @@ summaryPoint3: Alat untuk meningkatkan skala aset manfaat ekologi secara drastis
 
 ## Apa itu ReFi? {#what-is-refi}
 
-**Keuangan Regeneratif (ReFi)** adalah seperangkat perangkat dan ide yang dibangun di atas rantai blok, yang bertujuan untuk menciptakan ekonomi yang regeneratif, bukan ekstraktif atau eksploitatif. Hasilnya, sistem ekstraktif menguras sumber daya yang tersedia dan runtuh; tanpa mekanisme regeneratif, sistem ini tidak memiliki ketahanan. ReFi beroperasi dengan asumsi bahwa penciptaan nilai moneter harus dipisahkan dari ekstraksi sumber daya yang tidak berkelanjutan dari planet dan masyarakat kita.
+**Regenerative finance (ReFi)** adalah sekumpulan perangkat dan ide yang dibangun di atas [rantai blok](/glossary/#blockchain), yang bertujuan untuk menciptakan ekonomi yang bersifat regeneratif, bukan yang bersifat ekstraktif atau eksploitatif. Hasilnya, sistem ekstraktif menguras sumber daya yang tersedia dan runtuh; tanpa mekanisme regeneratif, sistem ini tidak memiliki ketahanan. ReFi beroperasi dengan asumsi bahwa penciptaan nilai moneter harus dipisahkan dari ekstraksi sumber daya yang tidak berkelanjutan dari planet dan masyarakat kita.
 
 Sebaliknya, ReFi bertujuan untuk memecahkan masalah lingkungan, komunal, atau sosial dengan menciptakan siklus regeneratif. Sistem ini menciptakan nilai bagi para partisipan-partisipan sekaligus memberi manfaat bagi ekosistem dan masyarakat.
 
 Salah satu fondasi ReFi adalah konsep ekonomi regeneratif yang dirintis oleh John Fullerton dari Capital Institute. Ia mengusulkan [delapan prinsip saling terkait](https://capitalinstitute.org/8-principles-regenerative-economy/) yang melandasi kesehatan sistemis:
 
-![Delapan prinsip yang saling terhubung](./refi-regenerative-economy-diagram.png)
+![Delapan prinsip yang saling terhubung](refi-regenerative-economy-diagram.png)
 
-Proyek ReFi merealisasikan prinsip-prinsip ini dengan menggunakan [kontrak pintar](/developers/docs/smart-contracts/) dan aplikasi [keuangan terdesentralisasi (DeFi)](/defi/) untuk mendorong perilaku regeneratif, misalnya memulihkan ekosistem yang rusak, dan memfasilitasi kolaborasi berskala besar pada isu-isu global seperti perubahan iklim dan hilangnya keanekaragaman hayati.
+Proyek ReFi merealisasikan prinsip-prinsip ini dengan menggunakan [kontrak pintar](/glossary/#smart-contract) dan aplikasi [keuangan terdesentralisasi (DeFi)](/glossary/#defi) untuk mendorong perilaku regeneratif, misalnya memulihkan ekosistem yang rusak, dan memfasilitasi kolaborasi berskala besar pada isu-isu global seperti perubahan iklim dan hilangnya keanekaragaman hayati.
 
 ReFi juga meliputi gerakan [sains terdesentralisasi (DeSci)](/desci/), yang menggunakan Ethereum sebagai platform untuk membiayai, menciptakan, meninjau, kredit, menyimpan, dan menyebarkan pengetahuan ilmiah. Perangkat DeSci dapat berguna untuk mengembangkan standar dan praktik yang dapat diverifikasi untuk menerapkan dan memantau kegiatan regeneratif seperti menanam pohon, menghilangkan plastik dari lautan, atau memulihkan ekosistem yang rusak.
+
+<YouTube id="La52dDzBt2k" />
 
 ## Tokenisasi kredit karbon {#tokenization-of-carbon-credits}
 
@@ -47,7 +49,7 @@ Proyek ReFi menggunakan teknologi rantai blok untuk mengatasi banyak masalah pas
 - **Likuiditas terkonsentrasi dalam sejumlah kecil pool likuiditas** yang dapat diperdagangkan secara bebas oleh siapa pun. Organisasi besar serta pengguna individu dapat menggunakan pool ini tanpa perlu melakukan pencarian manual untuk penjual/pembeli, biaya partisipasi, atau registrasi sebelumnya.
 - **Semua transaksi dicatat di dalam rantai blok publik**. Jejak setiap kredit karbon yang dihasilkan oleh aktivitas perdagangan dapat dilacak selamanya begitu kredit tersebut tersedia dalam DCM.
 - **Kecepatan transaksi hampir instan**. Mengamankan sejumlah besar kredit karbon melalui pasar-pasar tradisional bisa memakan waktu berhari-hari atau berminggu-minggu, tetapi ini dapat dicapai dalam beberapa detik di DCM.
-- ** Aktivitas perdagangan terjadi tanpa perantara**, yang mengenakan biaya tinggi. Kredit karbon digital mewakili [peningkatan biaya sebesar 62% dibandingkan dengan kredit tradisional setara](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne), menurut data dari satu perusahaan analitik.
+- ** Aktivitas perdagangan terjadi tanpa perantara**, yang mengenakan biaya tinggi. Kredit karbon digital mewakili pengurangan biaya yang signifikan dibandingkan dengan kredit karbon tradisional.
 - ** DCM bersifat dapat diskalakan** dan dapat memenuhi permintaan baik dari individu maupun perusahaan multinasional.
 
 ### Komponen kunci dari DCM {#key-components-dcm}
@@ -69,7 +71,7 @@ Beberapa layanan seperti [Klima Infinity](https://www.klimadao.finance/infinity)
 
 Meskipun saat ini ada penekanan kuat pada pasar karbon secara umum dan khususnya pada peralihan dari VCM ke DCM di dalam ruang ini, istilah “ReFi” tidak secara ketat terbatas pada karbon. Aset lingkungan lainnya selain kredit karbon dapat dikembangkan dan di-tokenisasi, yang akan berarti eksternalitas negatif lainnya juga dapat dihargai dalam lapisan dasar dari sistem ekonomi di masa depan. Selain itu, aspek regeneratif dari model ekonomi ini dapat diterapkan pada bidang lain, seperti pendanaan barang publik melalui platform pendanaan kuadratik seperti [Gitcoin](https://gitcoin.co/). Organisasi yang dibangun berdasarkan gagasan partisipasi terbuka dan distribusi sumber daya yang adil memberdayakan semua orang untuk mengalirkan dana ke proyek perangkat lunak sumber terbuka, serta proyek pendidikan, lingkungan, dan berbasis komunitas.
 
-Dengan mengalihkan arah modal dari praktik ekstraktif ke aliran regeneratif, proyek dan perusahaan yang memberikan manfaat sosial, lingkungan, atau komunal - dan mungkin gagal mendapatkan pendanaan dalam keuangan tradisional - dapat dimulai dan menghasilkan dampak positif bagi masyarakat dengan lebih cepat dan mudah. Beralih ke model pendanaan ini juga membuka pintu menuju sistem ekonomi yang lebih inklusif, di mana orang dari berbagai latar belakang dapat menjadi peserta aktif daripada sekadar pengamat pasif. ReFi menawarkan visi tentang Ethereum sebagai mekanisme untuk mengkoordinasikan tindakan dalam menghadapi tantangan eksistensial yang dihadapi oleh spesies kita dan seluruh kehidupan di planet kita—sebagai lapisan dasar paradigma ekonomi baru, memungkinkan masa depan yang lebih inklusif dan berkelanjutan untuk berabad-abad yang akan datang.
+Dengan mengalihkan arah modal dari praktik ekstraktif ke aliran regeneratif, proyek dan perusahaan yang memberikan manfaat sosial, lingkungan, atau komunal—dan mungkin gagal mendapatkan pendanaan dalam keuangan tradisional—dapat dimulai dan menghasilkan dampak positif bagi masyarakat dengan lebih cepat dan mudah. Beralih ke model pendanaan ini juga membuka pintu menuju sistem ekonomi yang lebih inklusif, di mana orang dari berbagai latar belakang dapat menjadi peserta aktif daripada sekadar pengamat pasif. ReFi menawarkan visi tentang Ethereum sebagai mekanisme untuk mengoordinasikan tindakan dalam menghadapi tantangan eksistensial yang dihadapi oleh spesies kita dan seluruh kehidupan di planet kita—sebagai lapisan dasar paradigma ekonomi baru, memungkinkan masa depan yang lebih inklusif dan berkelanjutan untuk berabad-abad yang akan datang.
 
 ## Bacaan tambahan tentang ReFi
 
