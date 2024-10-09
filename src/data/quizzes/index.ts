@@ -52,6 +52,10 @@ const quizzes = {
     title: "run-a-node",
     questions: ["l001", "l002", "l003", "l004", "l005", "l006"],
   },
+  stablecoins: {
+    title: "stablecoins",
+    questions: ["m001", "m002", "m003", "m004", "m005"],
+  },
 } satisfies RawQuizzes
 
 const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
@@ -83,6 +87,10 @@ export const ethereumBasicsQuizzes: QuizzesSection[] = addNextQuiz(
 const usingEthereumQuizzesRaw: QuizzesSection[] = [
   {
     id: "nfts",
+    level: "beginner",
+  },
+  {
+    id: "stablecoins",
     level: "beginner",
   },
   {

@@ -18,6 +18,7 @@ export type BentoCardProps = HTMLAttributes<HTMLDivElement> & {
   imgHeight?: number
   title: string
   eventName: string
+  eventCategory: string
 }
 
 const BentoCard = ({
@@ -30,6 +31,7 @@ const BentoCard = ({
   imgHeight,
   title,
   eventName,
+  eventCategory,
 }: BentoCardProps) => (
   <Card
     className={cn(
@@ -50,7 +52,7 @@ const BentoCard = ({
         variant="outline"
         isSecondary
         customEventOptions={{
-          eventCategory: "Homepage",
+          eventCategory,
           eventAction: "use cases",
           eventName,
         }}

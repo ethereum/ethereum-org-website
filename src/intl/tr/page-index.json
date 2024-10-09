@@ -84,6 +84,7 @@
   "page-index-title": "Ethereum'a hoş geldiniz",
   "page-index-values-description": "Dijital devrimin bir parçası olun",
   "page-index-values-header": "İnternet değişiyor",
+  "page-index-values-legacy": "Eski",
   "page-index-values-tag": "Değerler",
   "page-index-values-ownership-legacy-label": "Kısıtlı sahiplik",
   "page-index-values-ownership-legacy-content-0": "Normal bir banka veya sosyal medya platformunda varlıklarınız ve verileriniz kuruluş tarafından yönetilir. Erişim ve kontrol için onlara güvenirsiniz.",
@@ -115,6 +116,5 @@
   "page-index-values-open-legacy-label": "Çoğu kişiye kapalı",
   "page-index-values-open-legacy-content-0": "Şirketler fikri mülkiyetlerini korur ve paylaşmaz. Şirket dışındaki hiç kimse işlerin nasıl yürüdüğünü göremez, sorunları çözemez veya iyileştirmeler yapamaz. İnsanların yeni araçlar yaratması veya özelleştirmesi zordur.",
   "page-index-values-open-ethereum-label": "Herkese açık",
-  "page-index-values-legacy": "Eski",
   "page-index-values-open-ethereum-content-0": "Ethereum herkese açıktır. Herkes kodu görebilir, kullanabilir ve geliştirebilir, böylece herkes için daha iyi hale getirebilir."
 }

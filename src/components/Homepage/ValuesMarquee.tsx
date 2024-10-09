@@ -19,12 +19,15 @@ import {
 } from "../ui/section"
 
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type ItemProps = React.HTMLAttributes<HTMLButtonElement> & {
   pairing: Pairing
   separatorClass: string
   container?: HTMLElement | null
   label: string
+  eventCategory: string
+  direction: HTMLDivElement["dir"]
 }
 
 const Item = ({
@@ -34,13 +37,15 @@ const Item = ({
   separatorClass,
   container,
   label,
+  eventCategory,
+  direction,
 }: ItemProps) => (
   <>
     <Tooltip
       container={container}
       onBeforeOpen={() => {
         trackCustomEvent({
-          eventCategory: "Homepage",
+          eventCategory,
           eventAction: "internet_changing",
           eventName: label,
         })
@@ -84,6 +89,7 @@ const Item = ({
           "flex flex-nowrap items-center text-nowrap rounded-full px-4 py-1 font-bold uppercase",
           className
         )}
+        dir={direction}
       >
         {children}
       </div>
@@ -96,6 +102,7 @@ const Item = ({
     />
   </>
 )
+Item.displayName = "MarqueeItem"
 
 type RowProps = React.HTMLAttributes<HTMLDivElement> & {
   toRight?: boolean
@@ -104,12 +111,15 @@ type RowProps = React.HTMLAttributes<HTMLDivElement> & {
 const Row = forwardRef<HTMLDivElement, RowProps>(
   ({ className, children, toRight }, ref) => {
     const { prefersReducedMotion } = usePrefersReducedMotion()
+
     const fadeEdges = {
       mask: `linear-gradient(to right, transparent 1rem, white 15%, white 85%, transparent calc(100% - 1rem))`,
     }
 
     return (
-      <div ref={ref} className={cn("group", className)}>
+      // Note: dir="ltr" forced on parent to prevent "translateX" animation bugs
+      // Locale "direction" passed to marquee Item for correction
+      <div ref={ref} className={cn("group", className)} dir="ltr">
         <div
           className="flex max-w-full overflow-hidden motion-reduce:overflow-auto"
           style={prefersReducedMotion ? {} : fadeEdges}
@@ -135,10 +145,10 @@ const Row = forwardRef<HTMLDivElement, RowProps>(
     )
   }
 )
-Row.displayName = "Row"
+Row.displayName = "MarqueeRow"
 
 const ValuesMarquee = () => {
-  const { t, pairings } = useValuesMarquee()
+  const { t, pairings, eventCategory } = useValuesMarquee()
   const containerFirstRef = useRef<HTMLDivElement>(null)
   const containerSecondRef = useRef<HTMLDivElement>(null)
 
@@ -157,6 +167,8 @@ const ValuesMarquee = () => {
       setContainerSecond(containerSecondRef.current)
     }
   }, [])
+
+  const { direction, isRtl, twFlipForRtl } = useRtlFlip()
 
   return (
     <Section id="values" className="!sm:my-64 !my-48 scroll-m-48">
@@ -182,6 +194,8 @@ const ValuesMarquee = () => {
               pairing={pairing}
               separatorClass="bg-accent-a"
               className="group/item bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-700"
+              eventCategory={eventCategory}
+              direction={direction}
             >
               <FaCheck className="me-1 text-success group-hover/item:text-white" />
               {pairing.ethereum.label}
@@ -202,13 +216,20 @@ const ValuesMarquee = () => {
               pairing={pairing}
               className="bg-gray-200/20 text-body-medium hover:bg-gray-600 hover:text-white dark:bg-gray-950 dark:text-body"
               separatorClass="bg-gray-200 dark:bg-gray-950"
+              eventCategory={eventCategory}
+              direction={direction}
             >
               {pairing.legacy.label}
             </Item>
           ))}
         </Row>
 
-        <div className="absolute start-[50%] top-[50%] flex -translate-x-[50%] -translate-y-[50%] items-center overflow-hidden rounded-lg text-sm font-bold">
+        <div
+          className={cn(
+            "absolute start-[50%] top-[50%] flex -translate-y-[50%] items-center overflow-hidden rounded-lg text-sm font-bold",
+            isRtl ? "translate-x-[50%]" : "-translate-x-[50%]"
+          )}
+        >
           <p className="bg-gray-50 px-4 py-1 text-body-medium dark:bg-gray-800 dark:text-gray-200">
             {t("page-index-values-legacy")}
           </p>
@@ -218,7 +239,8 @@ const ValuesMarquee = () => {
               "border-t-[15px] border-t-blue-50 dark:border-t-blue-600",
               "border-r-8 border-r-blue-50 dark:border-r-blue-600",
               "border-b-[15px] border-b-gray-50 dark:border-b-gray-800",
-              "border-l-8 border-l-gray-50 dark:border-l-gray-800"
+              "border-l-8 border-l-gray-50 dark:border-l-gray-800",
+              twFlipForRtl
             )}
           />
 
@@ -230,5 +252,6 @@ const ValuesMarquee = () => {
     </Section>
   )
 }
+ValuesMarquee.displayName = "ValuesMarquee"
 
 export default ValuesMarquee

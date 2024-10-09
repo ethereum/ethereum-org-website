@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
 type Item = {
@@ -12,6 +13,7 @@ export type Pairing = {
 
 export const useValuesMarquee = () => {
   const { t } = useTranslation("page-index")
+  const { locale } = useRouter()
   const pairings: Pairing[] = [
     {
       legacy: {
@@ -94,5 +96,7 @@ export const useValuesMarquee = () => {
     },
   ]
 
-  return { t, pairings }
+  const eventCategory = `Homepage - ${locale}`
+
+  return { t, pairings, eventCategory }
 }

@@ -28,7 +28,6 @@ import CalendarAdd from "@/components/icons/calendar-add.svg"
 import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
-import Swiper from "@/components/Swiper"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import {
@@ -48,6 +47,12 @@ import {
   SectionTag,
 } from "@/components/ui/section"
 import { SkeletonLines } from "@/components/ui/skeleton"
+import {
+  Swiper,
+  SwiperContainer,
+  SwiperNavigation,
+  SwiperSlide,
+} from "@/components/ui/swiper"
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
@@ -193,6 +198,7 @@ const HomePage = ({
     upcomingEvents,
     joinActions,
     bentoItems,
+    eventCategory,
   } = useHome()
 
   const { onCopy, hasCopied } = useClipboard()
@@ -220,7 +226,7 @@ const HomePage = ({
                   href={href}
                   label={label}
                   customEventOptions={{
-                    eventCategory: "Homepage",
+                    eventCategory,
                     eventAction: "Top 4 CTAs",
                     eventName: subHeroCTAs[idx].eventName,
                   }}
@@ -265,38 +271,45 @@ const HomePage = ({
           </div>
 
           {/* Mobile */}
-          <Swiper
-            effect="cards"
-            containerClassName={cn(
+          <SwiperContainer
+            className={cn(
               "lg:hidden", // Mobile only
               "[&_.swiper-slide]:overflow-visible [&_.swiper-slide]:rounded-2xl [&_.swiper-slide]:shadow-card-hover",
+              "[&_.swiper-slide-shadow]:!bg-transparent",
               "[&_.swiper]:mx-auto [&_.swiper]:mt-4 [&_.swiper]:!flex [&_.swiper]:h-fit [&_.swiper]:max-w-128 [&_.swiper]:flex-col [&_.swiper]:items-center"
             )}
-            onSlideChange={({ activeIndex }) => {
-              trackCustomEvent({
-                eventCategory: "Homepage",
-                eventAction: "mobile use cases",
-                eventName: `swipe to card ${activeIndex + 1}`,
-              })
-            }}
           >
-            {bentoItems.map(({ className, ...item }) => (
-              <BentoCard
-                key={item.title}
-                imgHeight={220}
-                {...item}
-                className={cn(className, "bg-background text-body")}
-                imgWidth={undefined} // Intentionally last to override box
-              />
-            ))}
-          </Swiper>
-
+            <Swiper
+              effect="cards"
+              onSlideChange={({ activeIndex }) => {
+                trackCustomEvent({
+                  eventCategory,
+                  eventAction: "mobile use cases",
+                  eventName: `swipe to card ${activeIndex + 1}`,
+                })
+              }}
+            >
+              {bentoItems.map(({ className, ...item }) => (
+                <SwiperSlide key={item.title}>
+                  <BentoCard
+                    imgHeight={220}
+                    {...item}
+                    className={cn(className, "bg-background text-body")}
+                    imgWidth={undefined} // Intentionally last to override box
+                    eventCategory={eventCategory}
+                  />
+                </SwiperSlide>
+              ))}
+              <SwiperNavigation />
+            </Swiper>
+          </SwiperContainer>
           {/* Desktop */}
           {bentoItems.map(({ className, ...item }) => (
             <BentoCard
               key={item.title}
               {...item}
               className={cn(className, "max-lg:hidden")} // Desktop only
+              eventCategory={eventCategory}
             />
           ))}
         </Section>
@@ -347,21 +360,28 @@ const HomePage = ({
                   {t("page-index:page-index-popular-topics-header")}
                 </h3>
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
-                  {popularTopics.map(({ label, Svg, href, className }) => (
-                    <SvgButtonLink
-                      key={label}
-                      Svg={Svg}
-                      href={href}
-                      className={cn(
-                        "text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row",
-                        className
-                      )}
-                    >
-                      <p className="text-start text-xl font-bold text-body group-hover:underline">
-                        {label}
-                      </p>
-                    </SvgButtonLink>
-                  ))}
+                  {popularTopics.map(
+                    ({ label, Svg, href, eventName, className }) => (
+                      <SvgButtonLink
+                        key={label}
+                        Svg={Svg}
+                        href={href}
+                        className={cn(
+                          "text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row",
+                          className
+                        )}
+                        customEventOptions={{
+                          eventCategory,
+                          eventAction: "popular topics",
+                          eventName,
+                        }}
+                      >
+                        <p className="text-start text-xl font-bold text-body group-hover:underline">
+                          {label}
+                        </p>
+                      </SvgButtonLink>
+                    )
+                  )}
                 </div>
                 <div className="flex py-8 sm:justify-center">
                   <ButtonLink
@@ -371,7 +391,7 @@ const HomePage = ({
                     isSecondary
                     className="max-sm:self-start"
                     customEventOptions={{
-                      eventCategory: "Homepage",
+                      eventCategory,
                       eventAction: "learn",
                       eventName: "learn",
                     }}
@@ -408,7 +428,7 @@ const HomePage = ({
                 size="lg"
                 className="w-fit"
                 customEventOptions={{
-                  eventCategory: "Homepage",
+                  eventCategory,
                   eventAction: "builders",
                   eventName: "developers",
                 }}
@@ -423,7 +443,7 @@ const HomePage = ({
                 isSecondary
                 className="w-fit"
                 customEventOptions={{
-                  eventCategory: "Homepage",
+                  eventCategory,
                   eventAction: "builders",
                   eventName: "dev docs",
                 }}
@@ -449,7 +469,7 @@ const HomePage = ({
                     onClick={() => {
                       toggleCodeExample(idx)
                       trackCustomEvent({
-                        eventCategory: "Homepage",
+                        eventCategory,
                         eventAction: "Code Examples",
                         eventName,
                       })
@@ -553,7 +573,7 @@ const HomePage = ({
                 href="/community/"
                 size="lg"
                 customEventOptions={{
-                  eventCategory: "Homepage",
+                  eventCategory,
                   eventAction: "community",
                   eventName: "community",
                 }}
@@ -568,7 +588,7 @@ const HomePage = ({
                   isSecondary
                   hideArrow
                   customEventOptions={{
-                    eventCategory: "Homepage",
+                    eventCategory,
                     eventAction: "community",
                     eventName: "discord",
                   }}
@@ -582,7 +602,7 @@ const HomePage = ({
                   isSecondary
                   hideArrow
                   customEventOptions={{
-                    eventCategory: "Homepage",
+                    eventCategory,
                     eventAction: "community",
                     eventName: "github",
                   }}
@@ -599,7 +619,7 @@ const HomePage = ({
                 {calendar.length > 0 ? (
                   calendar.map(({ date, title, calendarLink }) => {
                     const customEventOptions = {
-                      eventCategory: "Homepage",
+                      eventCategory,
                       eventAction: "Community Events Widget",
                       eventName: "upcoming",
                     }
@@ -658,50 +678,53 @@ const HomePage = ({
           </h3>
           <p>{t("page-index:page-index-posts-subtitle")}</p>
 
-          <Swiper
-            containerClassName="mt-4 md:mt-16"
-            spaceBetween={32}
-            breakpoints={{
-              [breakpointAsNumber.sm]: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-              },
-              [breakpointAsNumber.lg]: {
-                slidesPerView: 3,
-                slidesPerGroup: 3,
-              },
-            }}
-          >
-            {rssItems.map(({ pubDate, title, source, link, imgSrc }) => (
-              <Card
-                key={title}
-                href={link}
-                customEventOptions={{
-                  eventCategory: "Homepage",
-                  eventAction: "blogs_posts",
-                  eventName: source,
-                }}
-              >
-                <CardBanner>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={imgSrc} alt="" loading="lazy" />
-                </CardBanner>
-                <CardContent>
-                  <CardTitle>{title}</CardTitle>
-                  {isValidDate(pubDate) && (
-                    <CardSubTitle>
-                      {new Intl.DateTimeFormat(locale, {
-                        month: "long",
-                        day: "numeric",
-                        year: "numeric",
-                      }).format(new Date(pubDate))}
-                    </CardSubTitle>
-                  )}
-                  <CardHighlight>{source}</CardHighlight>
-                </CardContent>
-              </Card>
-            ))}
-          </Swiper>
+          <SwiperContainer className="mt-4 md:mt-16">
+            <Swiper
+              spaceBetween={32}
+              breakpoints={{
+                [breakpointAsNumber.sm]: {
+                  slidesPerView: 2,
+                  slidesPerGroup: 2,
+                },
+                [breakpointAsNumber.lg]: {
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                },
+              }}
+            >
+              {rssItems.map(({ pubDate, title, source, link, imgSrc }) => (
+                <SwiperSlide key={title}>
+                  <Card
+                    href={link}
+                    customEventOptions={{
+                      eventCategory,
+                      eventAction: "blogs_posts",
+                      eventName: source,
+                    }}
+                  >
+                    <CardBanner>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={imgSrc} alt="" loading="lazy" />
+                    </CardBanner>
+                    <CardContent>
+                      <CardTitle>{title}</CardTitle>
+                      {isValidDate(pubDate) && (
+                        <CardSubTitle>
+                          {new Intl.DateTimeFormat(locale, {
+                            month: "long",
+                            day: "numeric",
+                            year: "numeric",
+                          }).format(new Date(pubDate))}
+                        </CardSubTitle>
+                      )}
+                      <CardHighlight>{source}</CardHighlight>
+                    </CardContent>
+                  </Card>
+                </SwiperSlide>
+              ))}
+              <SwiperNavigation />
+            </Swiper>
+          </SwiperContainer>
 
           <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
             <p className="text-lg">{t("page-index:page-index-posts-action")}</p>
@@ -711,7 +734,7 @@ const HomePage = ({
                   href={href}
                   key={name}
                   customEventOptions={{
-                    eventCategory: "Homepage",
+                    eventCategory,
                     eventAction: "blogs_read_more",
                     eventName: name!,
                   }}
@@ -751,7 +774,7 @@ const HomePage = ({
                       idx === 0 && "col-span-1 sm:col-span-2 md:col-span-1"
                     )}
                     customEventOptions={{
-                      eventCategory: "Homepage",
+                      eventCategory,
                       eventAction: "posts",
                       eventName: title,
                     }}
@@ -796,7 +819,7 @@ const HomePage = ({
               href="/community/events/"
               size="lg"
               customEventOptions={{
-                eventCategory: "Homepage",
+                eventCategory,
                 eventAction: "events",
                 eventName: "community events",
               }}
@@ -831,7 +854,7 @@ const HomePage = ({
                     className={cn("max-w-screen-sm", className)}
                     variant="row"
                     customEventOptions={{
-                      eventCategory: "Homepage",
+                      eventCategory,
                       eventAction: "join",
                       eventName,
                     }}

@@ -64,7 +64,7 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
 
               <AccordionContent
                 className={cn(
-                  "mt-0 bg-menu-2-background p-0",
+                  "mt-0 bg-background-low p-0",
                   isExpanded && "border-t border-disabled"
                 )}
               >
