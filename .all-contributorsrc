@@ -12544,6 +12544,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "KatrixReloaded",
+      "name": "Kartikeya Sureka",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68804269?v=4",
+      "profile": "https://github.com/KatrixReloaded",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
