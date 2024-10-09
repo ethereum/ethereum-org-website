@@ -1919,6 +1919,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://signor.vercel.app/"><img src="https://avatars.githubusercontent.com/u/94352660?v=4?s=100" width="100px;" alt="Signor Dev"/><br /><sub><b>Signor Dev</b></sub></a><br /><a href="#maintenance-Signor1" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/KatrixReloaded"><img src="https://avatars.githubusercontent.com/u/68804269?v=4?s=100" width="100px;" alt="Kartikeya Sureka"/><br /><sub><b>Kartikeya Sureka</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=KatrixReloaded" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Piyush-Tilokani"><img src="https://avatars.githubusercontent.com/u/112542519?v=4?s=100" width="100px;" alt="Piyush Tilokani"/><br /><sub><b>Piyush Tilokani</b></sub></a><br /><a href="#content-Piyush-Tilokani" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/jacobourar"><img src="https://avatars.githubusercontent.com/u/109108267?v=4?s=100" width="100px;" alt="Jacobo Uribe"/><br /><sub><b>Jacobo Uribe</b></sub></a><br /><a href="#content-jacobourar" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
