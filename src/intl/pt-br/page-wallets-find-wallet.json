@@ -53,7 +53,6 @@
   "page-find-wallet-check-out": "Verificação",
   "page-find-wallet-info-updated-on": "informações atualizadas em",
   "page-find-wallet-showing-all-wallets": "Mostrando todas as carteiras",
-  "page-find-wallet-showing": "Exibindo ",
   "page-find-wallet-wallets": "carteiras",
   "page-find-wallet-iOS": "iOS",
   "page-find-wallet-android": "Android",
@@ -75,8 +74,6 @@
   "page-find-wallet-developer-title": "Desenvolvedor",
   "page-find-wallet-developer-desc": "Você é desenvolvedor e precisa de uma carteira para ajudar a desenvolver e testar dapps",
   "page-find-wallet-persona-desc": "Escolha o perfil que corresponde ao seu tipo de usuário e filtre a lista de carteiras",
-  "page-find-wallet-filters": "Filtros",
-  "page-find-wallet-active": "ativo",
   "page-find-wallet-profile-filters": "Filtros de perfil",
   "page-find-wallet-feature-filters": "Filtros de recursos",
   "page-find-wallet-footnote-1": "As carteiras listadas nesta página não são endossos oficiais e são fornecidas apenas a título informativo.",
@@ -90,6 +87,5 @@
   "page-find-wallet-browser-desc": "Carteiras com extensões de navegador",
   "page-find-wallet-device": "Dispositivo",
   "page-find-choose-to-compare": "Selecione para comparar",
-  "page-find-wallet-choose-features": "Escolher recursos",
-  "page-find-wallet-reset-filters": "Redefinir filtros"
+  "page-find-wallet-choose-features": "Escolher recursos"
 }

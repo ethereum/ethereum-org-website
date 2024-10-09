@@ -49,7 +49,6 @@
   "page-find-wallet-check-out": "తనిఖీ చేయండి",
   "page-find-wallet-info-updated-on": "సమాచారం అప్‌డేట్ చేయబడింది",
   "page-find-wallet-showing-all-wallets": "అన్ని వాలెట్లను చూపిస్తోంది",
-  "page-find-wallet-showing": "చూపుతోంది",
   "page-find-wallet-wallets": "వాలెట్‌లు",
   "page-find-wallet-iOS": "iOS",
   "page-find-wallet-android": "Android",
@@ -69,8 +68,6 @@
   "page-find-wallet-developer-title": "డెవలపర్",
   "page-find-wallet-developer-desc": "మీరు డెవలపర్ మరియు dappsను డెవలప్ చేయడం మరియు పరీక్షించడంలో సహాయపడటానికి వాలెట్ అవసరం",
   "page-find-wallet-persona-desc": "మీ యూజర్ రకానికి సరిపోయే ప్రొఫైల్‌ను ఎంచుకోండి మరియు వాలెట్ జాబితాను ఫిల్టర్ చేయండి",
-  "page-find-wallet-filters": "ఫిల్టర్లు",
-  "page-find-wallet-active": "యాక్టివ్",
   "page-find-wallet-profile-filters": "ప్రొఫైల్ ఫిల్టర్లు",
   "page-find-wallet-feature-filters": "ఫీచర్ ఫిల్టర్లు",
   "page-find-wallet-footnote-1": "ఈ పేజీలో జాబితా చేయబడిన వాలెట్లు అధికారిక ఆమోదాలు కావు మరియు సమాచార ప్రయోజనాల కోసం మాత్రమే అందించబడ్డాయి.",
@@ -84,6 +81,5 @@
   "page-find-wallet-browser-desc": "బ్రౌజర్ ఎక్స్ టెన్షన్ లతో వాలెట్ లు",
   "page-find-wallet-device": "పరికరం",
   "page-find-choose-to-compare": "పోల్చడానికి ఎంచుకోండి",
-  "page-find-wallet-choose-features": "ఫీచర్లు ఎంచుకోండి",
-  "page-find-wallet-reset-filters": "ఫిల్టర్‌లను రీసెట్ చేయండి"
+  "page-find-wallet-choose-features": "ఫీచర్లు ఎంచుకోండి"
 }

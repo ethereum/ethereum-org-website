@@ -50,7 +50,6 @@
   "page-find-wallet-check-out": "Bekijken",
   "page-find-wallet-info-updated-on": "informatie bijgewerkt op",
   "page-find-wallet-showing-all-wallets": "Alle portemonnees weergeven",
-  "page-find-wallet-showing": "Weergeven",
   "page-find-wallet-wallets": "portemonnees",
   "page-find-wallet-iOS": "iOS",
   "page-find-wallet-android": "Android",
@@ -67,8 +66,6 @@
   "page-find-wallet-developer-title": "Ontwikkelaar",
   "page-find-wallet-developer-desc": "Je bent ontwikkelaar en hebt een portemonnee nodig om te helpen met het ontwikkelen en testen van dapps",
   "page-find-wallet-persona-desc": "Kies het profiel dat overeenkomt met jouw type gebruiker en filter de portemonneelijst",
-  "page-find-wallet-filters": "Filters",
-  "page-find-wallet-active": "actief",
   "page-find-wallet-profile-filters": "Profiel filters",
   "page-find-wallet-feature-filters": "Functiefilters",
   "page-find-wallet-footnote-1": "Portemonnees op deze pagina zijn niet officiëel goedgekeurd en worden alleen ter informatie aangeboden.",
@@ -82,6 +79,5 @@
   "page-find-wallet-browser-desc": "Portemonnees met browserextensies",
   "page-find-wallet-device": "Apparaat",
   "page-find-choose-to-compare": "Kies om te vergelijken",
-  "page-find-wallet-choose-features": "Functies kiezen",
-  "page-find-wallet-reset-filters": "Filters resetten"
+  "page-find-wallet-choose-features": "Functies kiezen"
 }

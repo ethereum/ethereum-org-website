@@ -11,6 +11,5 @@
   "page-find-wallet-swaps": "Schimburi de tokenuri descentralizate",
   "page-find-wallet-swaps-desc": "Tranzacționează între ETH și alte token-uri direct din portofel.",
   "page-find-wallet-multisig": "Conturi cu multi-semnătură",
-  "page-find-wallet-multisig-desc": "Pentru o securitate suplimentară, portofelele cu multi-semnătură necesită mai multe conturi pentru a autoriza anumite tranzacții.",
-  "page-find-wallet-showing": "Se afișează "
+  "page-find-wallet-multisig-desc": "Pentru o securitate suplimentară, portofelele cu multi-semnătură necesită mai multe conturi pentru a autoriza anumite tranzacții."
 }
