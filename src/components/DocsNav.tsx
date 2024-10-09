@@ -42,14 +42,12 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
   const { t } = useTranslation("page-developers-docs")
   const { isRtl } = useRtlFlip()
 
-  const xPaddingClass = isPrev ? "ps-0" : "pe-0"
-
   return (
     <BaseLink
       href={docData.href}
       className={cn(
         "flex w-full flex-1 items-center no-underline",
-        "h-[82px] rounded-[1px] border bg-background",
+        "h-[82px] rounded-sm border bg-background",
         isPrev ? "justify-start" : "justify-end"
       )}
       rel={isPrev ? "prev" : "next"}
@@ -68,7 +66,7 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
           )}
         />
       </div>
-      <TextDiv className={cn(xPaddingClass, !isPrev ? "text-end" : "")}>
+      <TextDiv className={cn(!isPrev ? "pe-0 text-end" : "ps-0")}>
         <p className="uppercase text-body">{t(isPrev ? "previous" : "next")}</p>
 
         <p className={cn("underline", isPrev ? "text-start" : "text-end")}>
