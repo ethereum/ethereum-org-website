@@ -3,7 +3,7 @@ title: Uzamčení výběrů
 description: Stránka shrnující, co jsou výběry push, jak fungují a co musí stakeři udělat, aby získali své odměny
 lang: cs
 template: staking
-image: ../../images/staking/leslie-withdrawal.png
+image: /images/staking/leslie-withdrawal.png
 alt: Nosorožec Leslie se svými vkladovými odměnami
 sidebarDepth: 2
 summaryPoints:
