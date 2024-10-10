@@ -1610,7 +1610,7 @@ const questionBank = {
     ],
     correctAnswerId: "m005-d",
   },
-  // DEFI
+  // DeFi
   n001: {
     prompt: "n001-prompt",
     answers: [
