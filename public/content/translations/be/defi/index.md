@@ -347,7 +347,7 @@ DeFi — рух з адкрытым зыходным кодам. Усе прат
 
 ### Videos {#videos}
 
-- [Finematics — адукацыя ў галіне дэцэнтралізаваных фінансаў ](https://finematics.com/) — _Відэа аб DeFi_
+- [Finematics — адукацыя ў галіне дэцэнтралізаваных фінансаў](https://finematics.com/) — _Відэа аб DeFi_
 - [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) — _Асновы DeFi: усё, што трэба ведаць, каб пачаць працу ў гэтай, часам незразумелай, прасторы._
 - [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) — _Што такое DeFi?_
 
