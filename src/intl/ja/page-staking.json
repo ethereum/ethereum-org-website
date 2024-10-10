@@ -13,10 +13,10 @@
   "comp-withdrawal-credentials-upgraded-1": "{{validatorIndex}}",
   "comp-withdrawal-credentials-upgraded-2": "実行アドレスにリンクされている引き出し資格情報:",
   "comp-withdrawal-credentials-not-upgraded-1": "このバリデータをアップグレードする必要があります",
-  "comp-withdrawal-credentials-not-upgraded-1-testnet": "この Holesky testnet バリデータはアップグレードが必要です。",
+  "comp-withdrawal-credentials-not-upgraded-1-testnet": "このHoleskyのテストネットのバリデータはアップグレードが必要です。",
   "comp-withdrawal-credentials-not-upgraded-2": "アップグレード方法については、 <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a> にてご覧いただけます。",
   "comp-withdrawal-credentials-verify-mainnet": "メインネット上で認証",
-  "comp-withdrawal-credentials-verify-holesky": "Holeskyで認証",
+  "comp-withdrawal-credentials-verify-holesky": "Holeskyで検証",
   "page-staking-withdrawals-when": "リリース!",
   "page-staking-image-alt": "ステーキングランチパッドのサイマスコット画像",
   "page-staking-benefits-1-title": "報酬の獲得",
@@ -152,7 +152,7 @@
   "page-staking-launchpad-widget-mainnet-label": "メインネット",
   "page-staking-launchpad-widget-mainnet-start": "メインネットでステーキングを開始",
   "page-staking-launchpad-widget-span": "ネットワークを選択",
-  "page-staking-launchpad-widget-p1": "ソロステーキングを行うバリデータは、ご自身の資金をリスクにさらす前に、Holeskyテストネットで操作のスキルと<strong>セットアップをテスト</strong>してください。ネットワークのセキュリティを向上させ、リスクを制限するために、<a href=\"/developers/docs/nodes-and-clients/client-diversity/\">マイノリティのクライアント</a>を選択することが重要であることをご留意ください。",
+  "page-staking-launchpad-widget-p1": "ソロステーキングを行うバリデータは、ご自身の資金をリスクにさらす前に、Holeskyテストネットで操作のスキルと<strong>セットアップをテスト</strong>してください。ネットワークのセキュリティを向上させ、リスクを制限するために、<a href=\"/developers/docs/nodes-and-clients/client-diversity/\">マイノリティのクライアント</a>を選択することが重要であることにご留意ください。",
   "page-staking-launchpad-widget-p2": "コマンドラインに慣れている場合は、ステーキングランチパッドだけを使ってコマンドラインですべてをセットアップすることも可能です。",
   "page-staking-launchpad-widget-p3": "クライアントを簡単にセットアップするには、ステーキングローンチパッドと合わせて、以下のツールやガイドを利用してみてください。",
   "page-staking-launchpad-widget-link": "ソフトウェアツールとガイド",
@@ -229,5 +229,8 @@
   "page-staking-withdrawals-important-notices": "ご確認ください",
   "page-staking-withdrawals-important-notices-desc": "引き出しはまだ利用できません。詳細については、<a href=\"https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/\" target=\"_blank\">Eth2マージおよびマージ後の FAQをお読みください</a>。",
   "page-upgrades-merge-btn": "マージの詳細",
-  "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">EFのブログを購読すると</a>、最新のプロトコル発表に関する電子メール通知を受けとることができます。"
+  "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">EFのブログを購読すると</a>、最新のプロトコル発表に関する電子メール通知を受けとることができます。",
+  "page-staking-comparison-with-other-options": "他の選択肢との比較",
+  "page-staking-any-amount": "任意の金額",
+  "page-staking-testnet": "テストネット"
 }
