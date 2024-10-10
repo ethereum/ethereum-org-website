@@ -159,6 +159,9 @@ const config = {
           "high-contrast": "hsla(var(--border-high-contrast))",
           "low-contrast": "hsla(var(--border-low-contrast))",
           hover: "hsla(var(--border-hover))",
+
+          // To be reviewed
+          preBorder: "var(--pre-border)",
         },
 
         primary: {
