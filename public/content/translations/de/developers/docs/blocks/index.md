@@ -55,7 +55,7 @@ Der `Body` eines Blocks enthält selbst mehrere Felder:
 | `eth1_data`          | Informationen zum Einzahlungsvertrag                                             |
 | `graffiti`           | Beliebige Daten, die zum Markieren von Blöcken verwendet werden                  |
 | `proposer_slashings` | Liste der zu streichenden Validatoren                                            |
-| `attester_slashings` | Liste der zu streichenden Validatoren                                            |
+| `attester_slashings` | Liste der Attestierer für Slashing                                               |
 | `beglaubigungen`     | Liste der Bescheinigungen zugunsten des aktuellen Blocks                         |
 | `einzahlungen`       | Liste der neuen Einlagen zum Einzahlungsvertrag                                  |
 | `voluntary_exits`    | Liste der Validatoren, die das Netzwerk verlassen                                |
@@ -127,7 +127,7 @@ Die Liste `withdrawals` enthält `withdrawal`-Objekte, die wie folgt strukturier
 | Feld             | Beschreibung                                   |
 |:---------------- |:---------------------------------------------- |
 | `address`        | Kontoadresse, für die die Abhebung erfolgt ist |
-| `amount`         | Abgehobener Betrag                             |
+| `Betrag`         | Abgehobener Betrag                             |
 | `Index`          | Abhebungsindexwert                             |
 | `validatorIndex` | Validatorindexwert                             |
 
@@ -139,7 +139,7 @@ Diese Implementierung unterscheidet sich von PoW-basierten Blockchain-Systemen, 
 
 ## Blockgröße {#block-size}
 
-Ein finaler, wichtiger Hinweis ist, dass Blöcke selbst in ihrer Größe begrenzt sind. Jeder Block hat eine Zielgröße von 15 Millionen Gas, aber die Größe der Blöcke wird entsprechend der Netznachfrage erhöht oder verringert, bis zur Blockgrenze von 30 Millionen Gas (doppelte Zielblockgröße). Die Gesamtmenge des von allen Transaktionen im Block verbrauchten Gases muss unter dem Blockgaslimit liegen. Das ist wichtig, weil dadurch sichergestellt wird, dass Blöcke nicht willkürlich groß sein können. Wenn Blöcke beliebig groß sein könnten, würden weniger leistungsstarke Knoten aufgrund von Platz- und Geschwindigkeitsanforderungen allmählich nicht mehr mit dem Netzwerk Schritt halten können. Je größer der Block, desto höher ist die erforderliche Verarbeitungsleistung, um den Block rechtzeitig für das nächste Zeitintervall zu berechnen. Das ist ein ganz zentraler Aspekt, der durch die Begrenzung der Blockgröße umgangen wird.
+Ein finaler, wichtiger Hinweis ist, dass Blöcke selbst in ihrer Größe begrenzt sind. Jeder Block hat eine Zielgröße von 15 Millionen Gas, aber die Größe der Blöcke wird entsprechend der Netznachfrage erhöht oder verringert, bis zur Blockgrenze von 30 Millionen Gas (doppelte Zielblockgröße). Das Gas-Limit eines Blocks kann um den Faktor 1/1024 vom Gas-Limit des vorangegangenen Blocks nach oben oder unten justiert werden. Dadurch können Validatoren das Gas-Limit eines Blocks durch Konsens verändern. Die Gesamtmenge des von allen Transaktionen im Block verbrauchten Gases muss unter dem Blockgaslimit liegen. Das ist wichtig, weil dadurch sichergestellt wird, dass Blöcke nicht willkürlich groß sein können. Wenn Blöcke beliebig groß sein könnten, würden weniger leistungsstarke Knoten aufgrund von Platz- und Geschwindigkeitsanforderungen allmählich nicht mehr mit dem Netzwerk Schritt halten können. Je größer der Block, desto höher ist die erforderliche Verarbeitungsleistung, um den Block rechtzeitig für das nächste Zeitintervall zu berechnen. Das ist ein ganz zentraler Aspekt, der durch die Begrenzung der Blockgröße umgangen wird.
 
 ## Weiterführende Informationen {#further-reading}
 

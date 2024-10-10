@@ -2,80 +2,77 @@
 title: Konsensmechanismus
 description: Eine Erklärung von Konsensprotokollen in verteilten Systemen und die Rolle, die sie in Ethereum spielen.
 lang: de
-incomplete: true
 ---
 
-Bei Blockchains wie Ethereum, die im Grunde verteilte Datenbanken sind, müssen sich die Nodes des Netzwerks über den aktuellen Zustand des Netzwerks einigen. Diese Einigung wird durch Konsensmechanismen erreicht.
-
-Auch wenn die Konsensmechanismen nicht direkt mit der Entwicklung einer App zu tun haben, wird das Verständnis dieser Mechanismen dir und deinen Nutzern/Nutzerinnen helfen, Konzepte wie Gaspreise und Transaktionszeiten zu verstehen.
+Der Begriff „Konsensmechanismus“ wird oft umgangssprachlich verwendet, um „Proof-of-Stake“-, „Proof-of-Work“- oder „Proof-of-Authority“-Protokolle zu beschreiben. Dies sind jedoch nur Komponenten in Konsensmechanismen, die vor [Sybil-Angriffen](/glossary/#sybil-attack) schützen. Konsensmechanismen sind der komplette Stack von Ideen, Protokollen und Anreizen, die es einer verteilten Reihe von Nodes ermöglichen, sich über den Zustand einer Blockchain zu einigen.
 
 ## Voraussetzungen {#prerequisites}
 
-Um diese Seite besser zu verstehen, empfehlen wir dir, zuerst unsere [Einführung in Ethereum](/developers/docs/intro-to-ethereum/) zu lesen.
+Um diese Seite besser zu verstehen, empfehlen wir dir, zuerst unsere [Einleitung zu Ethereum](/developers/docs/intro-to-ethereum/) zu lesen.
 
 ## Was ist ein Konsens? {#what-is-consensus}
 
-Unter einem Konsens verstehen wir, dass eine allgemeine Einigung erzielt wurde. Stell dir vor, eine Gruppe von Menschen geht ins Kino. Wenn es keine Meinungsverschiedenheiten über eine vorgeschlagene Filmauswahl gibt, wird ein Konsens erzielt. Im Extremfall wird sich die Gruppe ohne Konsens aufspalten.
+Unter einem Konsens verstehen wir, dass eine allgemeine Einigung erzielt wurde. Stellen Sie sich vor, eine Gruppe von Menschen geht ins Kino. Wenn es keine Meinungsverschiedenheiten über einen vorgeschlagenen Film gibt, dann besteht Konsens. Wenn es zu Uneinigkeiten kommt, muss die Gruppe über die Mittel verfügen, um zu entscheiden, welchen Film sie sehen möchte. In extremen Fällen wird die Gruppe sich irgendwann aufteilen.
 
-In Bezug auf die Blockchain ist der Prozess formalisiert und das Erreichen eines Konsenses bedeutet, dass sich mindestens 51 % der Nodes im Netzwerk über den nächsten globalen Zustand des Netzwerks einig sind.
+Im Zusammenhang mit der Ethereum-Blockchain ist der Prozess formalisiert. Das Erreichen von Konsens bedeutet, dass mindestens 66 % der Nodes im Netzwerk sich auf den globalen Zustand des Netzwerks einigen.
 
 ## Was ist ein Konsensmechanismus? {#what-is-a-consensus-mechanism}
 
-Konsensmechanismen (auch bekannt als Konsensprotokolle oder Konsensalgorithmen) ermöglichen, dass verteilte Systeme (Computernetzwerke) zusammenarbeiten und sicher bleiben.
+Der Begriff „Konsensmechanismus“ bezieht sich auf den gesamten Stack von Protokollen, Anreizen und Ideen, die es einem Netzwerk von Nodes ermöglichen, sich auf den Zustand einer Blockchain zu einigen.
 
-Seit Jahrzehnten werden Mechanismen genutzt, um einen Konsens zwischen Datenbank-Nodes, Anwendungsservern und anderen Unternehmensinfrastrukturen herzustellen. In den letzten Jahren wurden neue Konsensmechanismen erfunden, die es kryptoökonomischen Systemen wie Ethereum ermöglichen, sich über den Zustand des Netzwerks zu einigen.
+Ethereum verwendet einen auf Proof-of-Stake basierenden Konsensmechanismus, der seine kryptoökonomische Sicherheit aus einer Reihe von Belohnungen und Strafen ableitet, die auf das von Stakern gesperrte Kapital angewendet werden. Diese Anreizstruktur ermutigt einzelne Staker dazu, ehrliche Validatoren zu betreiben, bestraft diejenigen, die dies nicht tun, und schafft extrem hohe Kosten für Angriffe auf das Netzwerk.
 
-Ein Konsensmechanismus in einem kryptoökonomisches System hilft auch bestimmte Arten von wirtschaftlichen Angriffen zu verhindern. Theoretisch kann ein Angreifer den Konsens erreichen, indem er 51 % des Netzwerks kontrolliert. Konsensmechanismen sollen diesen "51-%-Angriff" unmöglich zu machen. Verschiedene Mechanismen werden entwickelt, um dieses Sicherheitsproblem auf unterschiedliche Weise zu lösen.
+Es existiert darüber hinaus ein Protokoll, das den Auswahlprozess ehrlicher Validatoren bestimmt, die Blöcke vorschlagen oder validieren, Transaktionen verarbeiten und ihre Stimme bezüglich ihrer Sicht auf die Spitze der Chain abgeben. In den seltenen Situationen, in denen mehrere Blöcke sich in der gleichen Position nahe der Spitze der Chain befinden, kommt ein Abspaltungs-Wahl-Mechanismus zum Tragen. Hierbei werden die Blöcke auswählt, die die „schwerste“ Kette bilden, und zwar gemessen an der Anzahl der Validatoren, die für die Blöcke gestimmt haben, gewichtet nach ihrem eingesetzten Ether-Guthaben.
 
-<YouTube id="dylgwcPH4EA" />
+Einige Konzepte, die für den Konsens wichtig sind, sind nicht explizit im Code definiert. Dazu gehört etwa die zusätzliche Sicherheit, die durch potenzielle soziale Koordination außerhalb des Bands als letzte Verteidigungslinie gegen Angriffe auf das Netzwerk geboten wird.
+
+Diese Komponenten bilden zusammen den Konsensmechanismus.
 
 ## Arten von Konsensmechanismen {#types-of-consensus-mechanisms}
 
-### Proof-of-Work {#proof-of-work}
+### Proof-of-Work-basiert {#proof-of-work}
 
-Ethereum verwendet, wie Bitcoin, derzeit ein **Proof-of-Work(PoW)**-Konsensprotokoll.
+Wie Bitcoin nutzte auch Ethereum früher ein auf **Proof-of-Work (PoW)** basierendes Konsensprotokoll.
 
 #### Blockerstellung {#pow-block-creation}
 
-Der Proof-of-Work wird durch [Miner](/developers/docs/consensus-mechanisms/pow/mining/) erledigt, die um die Erstellung eines neuen Blocks voller verarbeiteter Transaktionen konkurrieren. Der Gewinner teilt den neuen Block mit dem Rest des Netzwerks und verdient einige frisch geminte ETH. Es gewinnt derjenige, dessen Computer am schnellsten ein mathematisches Rätsel lösen kann. Dadurch wird die kryptographische Verbindung zwischen dem aktuellen Block und dem vorherigen Block hergestellt. Die Lösung dieses Rätsels ist die Arbeit ("Work") im "Proof-of-Work".
+Miner konkurrieren darum, neue Blöcke voll mit verarbeiteten Transaktionen zu erstellen. Der Gewinner teilt den neuen Block mit dem Rest des Netzwerks und verdient einige frisch geprägte ETH. Das Rennen wird von dem Computer gewonnen, der ein mathematisches Rätsel am schnellsten lösen kann. Dies erzeugt die kryptografische Verbindung zwischen dem aktuellen Block und dem vorherigen Block. Die Lösung dieses Rätsels ist die Arbeit („Work“) in „Proof-of-Work“. Die kanonische Chain wird dann durch eine Abspaltungs-Wahl-Regel bestimmt, bei der die Reihe von Blöcken ausgewählt wird, für deren Mining die meiste Arbeit geleistet wurde.
 
 #### Sicherheit {#pow-security}
 
-Die Sicherheit des Netzwerks wird dadurch gewährleistet, dass du 51 % der Rechenleistung des Netzwerks brauchst, um die Kette zu betrügen. Das würde so große Investitionen in Ausrüstung und Energie erfordern, dass du wahrscheinlich mehr ausgibst, als du gewinnst.
+Die Sicherheit des Netzwerks wird dadurch gewährleistet, dass Sie 51 % der Rechenleistung des Netzwerks brauchen, um die Chain zu betrügen. Das würde so große Investitionen in Ausrüstung und Energie erfordern, dass Sie wahrscheinlich mehr ausgeben würden, als Sie einnehmen.
 
 Mehr über [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/)
 
-### Proof-of-Stake {#proof-of-stake}
+### Proof-of-Stake-basiert {#proof-of-stake}
 
-Ethereum plant ein Upgrade zum **Proof-of-Stake(PoS)**-Konsensprotokoll.
+Ethereum verwendet jetzt ein auf **Proof-of-Stake (PoS)** basierendes Konsensprotokoll.
 
 #### Blockerstellung {#pos-block-creation}
 
-Der Proof-of-Stake wird durch Validatoren vollzogen, welche ihre ETH für die Teilnahme im System eingesetzt haben. Ein Validator wird nach dem Zufallsprinzip ausgewählt, um neue Blöcke zu erstellen, sie mit dem Netzwerk zu teilen und Belohnungen zu verdienen. Anstatt intensive Rechenarbeit leisten zu müssen, musst du einfach deine ETH ins Netzwerk gesteckt haben. Das schafft Anreize für ein gesundes Netzwerkverhalten.
+Validatoren erstellen Blöcke. In jedem Slot wird zufällig ein Validator als Block-Proposer ausgewählt. Ihr Konsens-Client fordert ein Bündel von Transaktionen als „Ausführungsnutzlast“ von ihrem gekoppelten Ausführungs-Client an. Sie verpacken dies in Konsensdaten, um einen Block zu bilden, den sie an andere Nodes im Ethereum-Netzwerk senden. Diese Blockproduktion wird mit ETH belohnt. In seltenen Fällen, wenn für einen einzigen Slot mehrere mögliche Blöcke existieren oder Nodes zu unterschiedlichen Zeiten von Blöcken erfahren, wählt der Abspaltungs-Wahl-Algorithmus den Block aus, der die Chain mit dem größten Gewicht an Attestierungen bildet (wobei das Gewicht die Anzahl der attestierenden Validatoren ist, skaliert nach ihrem ETH-Guthaben).
 
 #### Sicherheit {#pos-security}
 
-Ein Proof-of-Stake-System wird durch die Tatsache gesichert, dass man 51 % der gesamten eingesetzten ETH benötigt, um die Kette zu betrügen, und dass dein Einsatz für böswilliges Verhalten gekürzt wird.
+Ein Proof-of-Stake-System ist kryptoökonomisch sicher, weil ein Angreifer, der versucht, die Kontrolle über die Chain zu übernehmen, eine massive Menge an ETH zerstören muss. Ein Belohnungssystem setzt Anreize für einzelne Staker, ehrlich zu handeln, und Strafen halten Staker davon ab, mit böswilliger Absicht zu handeln.
 
 Mehr zu [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/)
 
 ### Ein visueller Leitfaden {#types-of-consensus-video}
 
-Erfahre mehr über die verschiedenen Arten von Konsensmechanismen, die auf Ethereum verwendet werden:
+Erfahren Sie mehr über die verschiedenen Arten von Konsensmechanismen, die auf Ethereum verwendet werden:
 
 <YouTube id="ojxfbN78WFQ" />
 
 ### Sybil: Widerstand & Kettenauswahl {#sybil-chain}
 
-Technisch gesehen sind Proof-of-Work und Proof-of-Stake keine Konsensprotokolle, aber der Einfachheit halber werden sie oft als solche bezeichnet. Sie sind eigentlich Sybil-Widerstandsmechanismen und Blockautor-Selektoren; sie sind ein Weg, um zu entscheiden, wer der Autor des letzten Blocks ist. Dieser Sybil-Widerstandsmechanismus in Kombination mit einer Kettenauswahlregel macht einen echten Konsensmechanismus aus.
+Proof-of-Work und Proof-of-Stake sind für sich genommen keine Konsensprotokolle, aber sie werden oft der Einfachheit halber als solche bezeichnet. Sie sind eigentlich Sybil-Widerstandsmechanismen und Blockautor-Selektoren; sie bieten eine Möglichkeit, zu entscheiden, wer der Autor des letzten Blocks ist. Eine weitere wichtige Komponente ist der Chain-Auswahl-(auch Abspaltungs-Wahl-)Algorithmus. Er ermöglicht es Nodes, in Szenarien, bei denen mehrere Blöcke in der gleichen Position existieren, einen einzigen korrekten Block an der Spitze der Chain auszuwählen.
 
-Der **Sybil-Widerstand** misst, wie ein Protokoll gegen einen [Sybil-Angriff](https://wikipedia.org/wiki/Sybil_attack) abschneidet. Bei Sybil-Angriffen gibt sich ein Nutzer oder eine Gruppe als viele Nutzer aus. Der Widerstand gegen diese Art von Angriffen ist für eine dezentrale Blockchain unerlässlich und ermöglicht es Minern und Validatoren, auf der Grundlage der eingesetzten Ressourcen gleichermaßen belohnt zu werden. Proof-of-Work und Proof-of-Stake schützen davor, indem sie die Nutzer/Nutzerinnen dazu bringen, viel Energie aufzuwenden oder eine Menge Sicherheiten zu stellen. Diese Schutzmaßnahmen sind eine wirtschaftliche Abschreckung gegen Sybil-Angriffe.
+Mit dem **Sybil-Widerstand** wird gemessen, wie ein Protokoll gegen einen Sybil-Angriff abschneidet. Der Widerstand gegen diese Art von Angriffen ist für eine dezentrale Blockchain unerlässlich und ermöglicht es Minern und Validatoren, gleichermaßen entsprechend der eingesetzten Ressourcen belohnt zu werden. Proof-of-Work und Proof-of-Stake schützen davor, indem sie die Benutzer dazu bringen, viel Energie aufzuwenden oder viele Sicherheiten bereitzustellen. Diese Schutzmaßnahmen sind eine wirtschaftliche Abschreckung gegen Sybil-Angriffe.
 
-Eine **Kettenauswahlregel** wird verwendet, um zu entscheiden, welche Kette die "richtige" ist. Ethereum und Bitcoin verwenden derzeit die "Longest-Chain"-Regel, was bedeutet, dass die Blockchain, die am längsten ist, von den anderen Nodes als gültig akzeptiert wird und mit ihr arbeitet. Bei Proof-of-Work-Ketten wird die längste Kette durch die gesamte kumulative Proof-of-Work-Schwierigkeit der Kette bestimmt.
+Eine **Chain-Auswahlregel** wird verwendet, um zu entscheiden, welche Chain die „richtige“ ist. Bitcoin verwendet die „längste Chain“-Regel. Das bedeutet, dass die Blockchain, die am längsten ist, von den restlichen Nodes als gültig akzeptiert wird, sodass sie mit ihr arbeiten. Bei Proof-of-Work-Chains wird die längste Chain auf Basis der gesamten kumulativen Proof-of-Work-Schwierigkeit der Chain bestimmt. Bei Ethereum kam früher auch die „längste Chain“-Regel zur Anwendung; jetzt, da Ethereum auf Proof-of-Stake läuft, hat es jedoch einen aktualisierten Abspaltungs-Wahl-Algorithmus übernommen, der das „Gewicht“ der Kette bestimmt. Das Gewicht entspricht der kumulierten Summe der Validatorenstimmen, gewichtet nach den in Ether eingesetzten Beträgen der Validatoren.
 
-Die Kombination aus Proof-of-Work und Longest-Chain-Regel ist als "Nakamoto-Konsens" bekannt.
-
-Die [Beacon Chain](/roadmap/beacon-chain/) verwendet einen Konsensmechanismus namens [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), der auf einem Proof-of-Stake basiert.
+Ethereum verwendet einen Konsensmechanismus, bekannt als [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/), der [Casper FFG-Proof-of-Stake](https://arxiv.org/abs/1710.09437) mit der [GHOST-Abspaltungs-Wahl-Regel](https://arxiv.org/abs/2003.03052) kombiniert.
 
 ## Weiterführende Informationen {#further-reading}
 
@@ -83,11 +80,13 @@ Die [Beacon Chain](/roadmap/beacon-chain/) verwendet einen Konsensmechanismus na
 - [Was ist der Nakamoto-Konsens? Vollständiger Leitfaden für Anfänger](https://blockonomi.com/nakamoto-consensus/)
 - [Wie funktioniert Casper?](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Über die Sicherheit und Leistungsfähigkeit von Proof-of-Work-Blockchains](https://eprint.iacr.org/2016/555.pdf)
+- [Byzantinischer Fehler](https://en.wikipedia.org/wiki/Byzantine_fault)
 
-_Kennst du eine Community-Ressource, die dir geholfen hat? Bearbeite diese Seite und füge sie hinzu!_
+_Gibt es Community-Resourcen, die Sie hilfreich fanden? Bearbeiten Sie diese Seite und fügen Sie sie hinzu._
 
 ## Verwandte Themen {#related-topics}
 
 - [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/)
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/)
+- [Proof-of-authority](/developers/docs/consensus-mechanisms/poa/)

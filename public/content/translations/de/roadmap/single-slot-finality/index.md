@@ -8,7 +8,7 @@ lang: de
 
 Es braucht ungefähr 15 Minuten einen Ethereum Block zu finalisieren. Jedoch können wir Ethereums Konsensmechanismus Blöcke effizienter validieren lassen und dadurch die Zeit, die für das Finalisieren benötigt wird, dramatisch verringern. Statt für 15 Minuten zu warten, könnten Blöcke im selben Platz (slot) vorgeschlagen und finalisiert werden. Dieses Konzept nennt sich **Einzelplatzfinalität (SSF)**.
 
-## Was ist die Endlichkeit? {#what-is-finality}
+## Was ist Endgültigkeit? {#what-is-finality}
 
 In Ethereums auf Proof-of-Stake basierenden Konsensmechanismus bezieht sich die Endlichkeit auf die Garantie, dass ein Block nicht mehr verändert oder von der Blockchain entfernt werden kann, ohne mindestens 33 % der gesamten staked Ether zu entfernen. Dies ist "krypto-wirtschaftliche" Sicherheit, da das Selbstvertrauen von den extrem hohen Kosten, welche mit dem Verändern der Reihenfolge von Inhalten der Kette assoziiert werden, welche jeden rationalen wirtschaftlichen Akteur davon abhalten würde, es auszuprobieren.
 
@@ -58,7 +58,7 @@ Das Problem mit dem Skalieren von Aggregationen mit einer Erhöhung der Validato
 
 ## Aktueller Fortschritt {#current-progress}
 
-SSF ist in der Forschungsphase. Es ist nicht zu erwarten, dass es in den nächsten Jahren entsendet werden kann, wahrscheinlich wird dies erst nach anderen wesentlichen Verbesserungen wie [Verkle Bäumen](/roadmap/verkle-trees/) und [Danksharding](/roadmap/danksharding/) passieren können.
+SSF ist in der Forschungsphase. Es ist davon auszugehen, dass ihre Veröffentlichung noch einige Jahre auf sich warten lässt. Wahrscheinlich wird es erst nach anderen wesentlichen Upgrades wie [Verkle Trees](/roadmap/verkle-trees/) und [Danksharding](/roadmap/danksharding/) dazu kommen.
 
 ## Weiterführende Informationen {#further-reading}
 

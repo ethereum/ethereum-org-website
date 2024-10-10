@@ -16,7 +16,7 @@ Das könnte eine Gelegenheit erzeugen, aus der der Angreifer profitieren könnte
 
 Es gibt mehrere Lösungsansätze für dieses Problem. Eines ist die [Verteilte Validatoren Technologie](https://github.com/ethereum/distributed-validator-specs) welche versucht mehrere Aufgaben, die für den Betrieb von Validatoren wichtig sind, auf mehrere Maschinen mit Redundanz zu verteilen. Dadurch wird es für einen Angreifer viel schwerer einem Block zu verhindern in einem bestimmten Slot vorgeschlagen zu werden. Jedoch ist die robusteste Lösung die **Einzelne geheime Führungswahl (SSLE)**.
 
-## Einzelne geheime Führungswahl {#secret-leader-election}
+## Geheime Einzelwahl des Leiters {#secret-leader-election}
 
 In der SSLE wird kluge Kryptographie genutzt, um sicherzustellen, dass nur der gewählte Validator weiß, dass er gewählt wurde. Dies funktioniert, indem jeder Validator eine Verpflichtung zu einem gemeinsamen Geheimnis abgibt. Die Verpflichtungen werden gemischt und neu konfiguriert, sodass niemand die einzelnen Verpflichtungen zu Validatoren herausfinden kann. Jeder Validator weiß jedoch welche Verpflichtung zu ihm gehört. Dann wird eine Verpflichtung zufällig ausgewählt. Wenn der Validator bemerkt, dass seine Verpflichtung gewählt wurde, weiß er, dass er einen Block vorschlagen darf.
 
