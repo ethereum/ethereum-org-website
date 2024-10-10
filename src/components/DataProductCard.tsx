@@ -35,7 +35,7 @@ const DataProductCard = ({
   data,
 }: DataProductCardProps) => {
   return (
-    <LinkBox className="flex flex-col overflow-hidden rounded border border-border shadow-table-box transition-transform duration-100 ease-linear hover:scale-[1.02] hover:bg-background-highlight focus:scale-[1.02] focus:bg-background-highlight">
+    <LinkBox className="flex flex-col overflow-hidden rounded border shadow-table-box transition-transform duration-100 ease-linear hover:scale-[1.02] hover:bg-background-highlight focus:scale-[1.02] focus:bg-background-highlight">
       <Flex
         className={
           "min-h-[200px] items-center justify-center shadow-[rgb(0_0_0/_10%)_0px_-1px_0px_inset]"
@@ -61,11 +61,11 @@ const DataProductCard = ({
           <p className="mx-4 mb-4 text-sm leading-[140%]">{description}</p>
         </div>
         {data && (
-          <div className="mb-4 max-h-[160px] overflow-y-scroll border-t border-border">
+          <div className="mb-4 max-h-[160px] overflow-y-scroll border-t">
             {data.map(({ logo, coin, apy }, idx) => (
               <Flex
                 key={idx}
-                className="justify-between border border-x-0 border-border p-4 text-sm uppercase"
+                className="justify-between border border-x-0 p-4 text-sm uppercase"
               >
                 <Flex className="items-center">
                   {logo && (
