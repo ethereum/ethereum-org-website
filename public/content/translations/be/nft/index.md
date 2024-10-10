@@ -1,7 +1,7 @@
 ---
 title: Нятоесныя токены (NFT)
 description: Агляд NFT на Ethereum
-lang: by
+lang: be
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2

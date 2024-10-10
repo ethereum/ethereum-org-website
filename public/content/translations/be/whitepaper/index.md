@@ -1,7 +1,7 @@
 ---
 title: Тэхнічная дакументацыя Ethereum
 description: Уступны артыкул дакументацыі Ethereum, апублікаваны да яго запуску ў 2013 годзе.
-lang: by
+lang: be
 sidebarDepth: 2
 hideEditButton: true
 ---

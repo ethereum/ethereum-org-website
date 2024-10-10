@@ -1,7 +1,7 @@
 ---
 title: Дэцэнтралізаваныя фінансы (DeFi)
 description: Агляд DeFi у Ethereum
-lang: by
+lang: be
 template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png

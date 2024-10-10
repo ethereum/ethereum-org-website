@@ -1,7 +1,7 @@
 ---
 title: Разумныя кантракты
 description: Нетэхнічныя ўводзіны ў разумныя кантракты
-lang: by
+lang: be
 ---
 
 # Introduction to smart contracts {#introduction-to-smart-contracts}
