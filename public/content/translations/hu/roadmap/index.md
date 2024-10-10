@@ -12,7 +12,7 @@ buttons:
     toId: what-changes-are-coming
   - 
     label: Korábbi fejlesztések
-    to: /history/
+    href: /history/
     variant: vázlat
 ---
 

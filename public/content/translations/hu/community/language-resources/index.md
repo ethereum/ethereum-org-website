@@ -32,6 +32,7 @@ Ha Ön kétnyelvű és segítene nekünk, hogy több embert érjünk el, akkor k
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) – brazil verzió a főbb kriptovalutával kapcsolatos hírekkel
 - [Livecoins](http://www.livecoins.com.br/ethereum) – kriptovalutával kapcsolatos hírek és eszközök
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) – kriptovalutával kapcsolatos hírek és riportok
+- [Modular Crypto](https://modularcrypto.xyz/) - kriptovalutával kapcsolatos hírek és oktatási cikkek
 
 **Oktatás**
 
@@ -90,6 +91,24 @@ Ha Ön kétnyelvű és segítene nekünk, hogy több embert érjünk el, akkor k
 - [Microsoft Learn (Ethereum networks)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) – az Ethereum-hálózatokhoz való kapcsolódás és azok telepítése
 - [Microsoft Learn (blockchains)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) – a blokkláncfejlesztés első lépései
 
+### Héber {#he}
+
+- [Udi Wertheimer – Amit a bitcoin használók tanulhatnak az Ethereumtól](https://www.cryptojungle.co.il/udi-wertheimer-what-bitcoiners-can-learn-from-ethereum/)
+- [Omer Greismen (OpenZeppelin) - Hogyan akadályoztunk meg egy 15 milliárd dolláros okosszerződés meghackelését](https://www.cryptojungle.co.il/omer-greisman-openzeppelin/)
+- [Shy Datika (INX) - Tokenizálás és a kötvények jövője, beleértve azt, hogy vajon az Ethereum egy kötvény](https://www.cryptojungle.co.il/shy-datika-tokenization/)
+- [Roy Confino (Lemonade) - Biztosítás az Ethereumon](https://www.cryptojungle.co.il/roy-confino-insurance/)
+- [Idan Ofrat (Fireblocks) - Intézményi bevezetés](https://www.cryptojungle.co.il/idan-ofrat-fireblocks/)
+- [Gal Weizman (MetaMask) - Mi az a MetaMask](https://www.cryptojungle.co.il/gal-weizman-metamask/)
+- [Dror Aviely (Consensys) - Az Ethereum központja](https://www.cryptojungle.co.il/dror-aviely-ethereum-center/)
+- [Nir Rozin - Egy kriptopunk élete](https://www.cryptojungle.co.il/nir-rozin-cryptopunk/)
+- [Adan Kedem - Játékok és a metaverzum](https://www.cryptojungle.co.il/adan-kedem-web3-gaming/)
+- [Uri Kolodny (Starkware) - Ethereum és a blokkláncrétegek](https://www.cryptojungle.co.il/uri-kolodny-starkware/)
+- [Udi Wertheimer - Ethereum 2.0 vs. versenyzés](https://www.cryptojungle.co.il/udi-on-eth2/)
+- [Ben Samocha (myself) - Ethereum 2.0 - egy lehetőség?](https://www.cryptojungle.co.il/etherurm2-week-summary/)
+- [Alon Muroch (Bloxstaking) - Mi az Ethereum 2.0?](https://www.cryptojungle.co.il/alon-moroch-eth2/)
+- [Eilon Aviv (Collider Ventures) - Mi sülhet el rosszul az Ethereum 2.0-val](https://www.cryptojungle.co.il/eilon-aviv-eth2-0/)
+- [Eilon Aviv (Collider Ventures) - Miért van szükség Ethereum 2.0-ra](https://www.cryptojungle.co.il/eilon-aviv-ethereum-2-0/)
+
 ### Olasz {#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) – Ethereummal kapcsolatos oktatás, események és hírek, főleg az okosszerződésekről és a blokklánc-technológiáról
@@ -98,9 +117,19 @@ Ha Ön kétnyelvű és segítene nekünk, hogy több embert érjünk el, akkor k
 - [Microsoft Learn (Smart contracts)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) – Okosszerződések írása a Solidity-val
 - [Microsoft Learn (dapps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) – felhasználói felület létrehozása decentralizált alkalmazásokkal
 
+### Japán {#ja}
+
+- [Japán virtuális és kriptoeszközök tőzsdei szövetsége](https://jvcea.or.jp/)
+- [Japán kriptoeszközök üzleti szövetsége](https://cryptocurrency-association.org/)
+- [A blokkláncfejlesztés első lépései – Oktatási anyagok | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) – a blokkláncba és fejlesztésbe való bevezetés az Ethereum platformon
+- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) – Az Ethereum elsajátítása, japán verzió
+- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) – okosszerződés fejlesztés Solidity-val az Ethereumon japánul
+
 ### Orosz {#ru}
 
 - [Cyber Academy](https://cyberacademy.dev) – Oktatási anyagok web3-fejlesztők számára
+- [Forklog](https://forklog.com) - hírek és oktatási cikkek a kriptóról általában, a különféle blokkláncok létező technológiáiról és a jövőbeli fejlesztéseiről
+- [BeInCrypto](https://ru.beincrypto.com) - hírek, kriptoárelemzések és nem technikai cikkek egyszerű magyarázatokkal mindenről, ami kripto
 
 ### Spanyol {#es}
 
@@ -122,11 +151,3 @@ Ha Ön kétnyelvű és segítene nekünk, hogy több embert érjünk el, akkor k
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) – Ethereum, dapp-ok, tárcák áttekintése és gyakran ismételt kérdések
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) – webplatform Ethereummal kapcsolatos hírekkel és oktatással
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) – kriptovaluta-portál Ethereummel kapcsolatos hírekkel és oktatási anyagokkal
-
-### Japán {#ja}
-
-- [Japán virtuális és kriptoeszközök tőzsdei szövetsége](https://jvcea.or.jp/)
-- [Japán kriptoeszközök üzleti szövetsége](https://cryptocurrency-association.org/)
-- [A blokkláncfejlesztés első lépései – Oktatási anyagok | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) – a blokkláncba és fejlesztésbe való bevezetés az Ethereum platformon
-- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) – Az Ethereum elsajátítása, japán verzió
-- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) – okosszerződés fejlesztés Solidity-val az Ethereumon japánul

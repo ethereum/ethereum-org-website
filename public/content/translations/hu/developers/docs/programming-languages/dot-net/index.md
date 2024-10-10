@@ -15,7 +15,7 @@ Használj Ethereumot decentralizált alkalmazások (avagy "dappok") fejlesztés�
 
 **Tegye meg az első lépést, hogy integrálja a .NET-et az Ethereummal**
 
-Szükséged van egy még kezdetlegesebb alapozóra? Tekintse meg az [ethereum.org/learn](/learn/) vagy az [ethereum.org/developers](/developers/) oldalt.
+Szükséged van egy még kezdetlegesebb alapozóra? Tekintsd meg az [ethereum.org/learn](/learn/) oldalt vagy az [ethereum.org/developers](/developers/) oldalt.
 
 - [Blokklánc ismertetése](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Okosszerződések értelmezése](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -72,7 +72,7 @@ Szükséged van egy még kezdetlegesebb alapozóra? Tekintse meg az [ethereum.or
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _használati funkciók Ethereumhoz kapcsolódó kódbázisokkal való munkához_
 - [TestChains](https://github.com/Nethereum/TestChains) - _Előre konfigurált .NET fejlesztői láncok gyors válaszra (PoA)_
 
-Még több anyagot keresel? Tekintse meg az [ethereum.org/developers](/developers/) oldalt.
+Még több anyagot keresel? Tekintsd meg az [ethereum.org/developers](/developers/) oldalt.
 
 ## .NET közösségi közreműködők {#dot-net-community-contributors}
 

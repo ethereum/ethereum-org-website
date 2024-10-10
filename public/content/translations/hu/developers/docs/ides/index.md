@@ -68,4 +68,4 @@ A legtöbb megalapozott IDE-nek vannak beépített pluginjai, amelyek tovább fo
 
 - [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _ – Alchemy listája az Ethereum IDE-okról_
 
-_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
+_Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_

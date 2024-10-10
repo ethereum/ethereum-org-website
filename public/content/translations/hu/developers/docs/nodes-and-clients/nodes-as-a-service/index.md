@@ -63,19 +63,20 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Irányítópult, melynek része a Request Explorer, Mempool Watcher és a Composer
     - Integrált teszthálózati csaphozzáférés
     - Aktív Discord építőközösség 18 000 felhasználóval
+
 - [**All That Node**](https://allthatnode.com/)
   - [Dokumentáció](https://docs.allthatnode.com/)
   - Jellemzők
-    - Legnagyobb ingyenes opció 150 000 napi lekérdezéssel
-    - Hozzáférés több mint 24 blokklánc-csomóponthoz
-    - RPC, HTTPS és WSS végpontok
+    - Napi 50 000 kérés az ingyenes opcióban
+    - Több mint 40 protokoll támogatása
+    - JSON-RPC (EVM, Tendermint), REST és Websocket API-ok támogatása
     - Korlátlan hozzáférés az archív adatokhoz
-    - Napi 24 órás támogatás a hét minden napján és több mint 99,9%-ban elérhető rendszer
+    - A hét minden napján, napi 24 órában rendelkezésre álló technikai támogatás és 99,9%-nál nagyobb rendelkezésre állás
     - Elérhető csap több láncon is
     - Korlátlan végponthozzáférés korlátlan számú API-kulccsal
-    - Elérhető trace/debug namespace
+    - Trace/Debug API támogatás
     - Automatikus frissítések
-    - Technikai támogatás
+
 - [**Amazon Managed Blockchain**](https://aws.amazon.com/managed-blockchain/)
   - [Dokumentáció](https://aws.amazon.com/managed-blockchain/resources/)
   - Jellemzők
@@ -85,6 +86,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Három láncot támogat
     - SLA-k, AWS támogatás 24/7
     - Go-ethereum és Lighthouse
+
 - [**Ankr**](https://www.ankr.com/)
   - [Dokumentáció](https://docs.ankr.com/)
   - Jellemzők
@@ -97,6 +99,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Irányítópult (dashboard)
     - RPC, HTTPS és WSS végpontok
     - Közvetlen támogatás
+
 - [**Blast**](https://blastapi.io/)
   - [Dokumentáció](https://docs.blastapi.io/)
   - Jellemzők
@@ -111,12 +114,14 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Napi 24 órás felügyelet és riasztások a hét minden napján
     - Összességében 99,9% SLA
     - Fizetési lehetőség kriptóban
+
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [Dokumentáció](https://ubiquity.docs.blockdaemon.com/)
   - Előnyök
-    - Irányítópult (dashboard)
+    - Vezérlőpult
     - Csomópontként
     - Elemzések
+
 - [**BlockPI**](https://blockpi.io/)
   - [Dokumentáció](https://docs.blockpi.io/)
   - Jellemzők
@@ -128,6 +133,16 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Személyre szabott csomag és menet közbeni fizetés
     - Fizetési lehetőség kriptóban
     - Közvetlen és technikai támogatás
+
+- [**Chainbase**](https://www.chainbase.com/)
+  - [Dokumentáció](https://docs.chainbase.com)
+  - Jellemzők
+    - Elérhető, gyors és skálázható RPC szolgáltatás
+    - Több láncot lefedő támogatás
+    - Ingyenes díjszabások
+    - Felhasználó barát irányítópult
+    - Blokklánc-adatszolgáltatás az RPC-n túl
+
 - [**Chainstack**](https://chainstack.com/)
   - [Dokumentáció](https://docs.chainstack.com/)
   - Jellemzők
@@ -140,6 +155,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Saját felhőt hozhat
     - Óránkénti árazás
     - Közvetlen, napi 24 órás támogatás a hét minden napján
+
 - [**DataHub**](https://datahub.figment.io)
   - [Dokumentáció](https://docs.figment.io/)
   - Jellemzők
@@ -149,10 +165,11 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Automatikus méretezhetőség (mennyiségi kedvezmények)
     - Ingyenes archív adatok
     - Szolgáltatáselemzések
-    - Irányítópult (dashboard)
+    - Vezérlőpult
     - Közvetlen, napi 24 órás támogatás a hét minden napján
     - Fizetési lehetőség kriptóban (vállalat)
-- [DRPC](https://drpc.org/)
+
+- [**DRPC**](https://drpc.org/)
   - [Dokumentáció](https://docs.drpc.org/)
   - Jellemzők
     - Decentralizált RPC-csomópontok
@@ -161,11 +178,12 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Korlátlan számítási egység havonta az ingyenes opcióban
     - Adatellenőrzés
     - Személyre szabott végpontok
-    - http és WSS-végpontok
+    - Http és WSS-végpontok
     - Korlátlan mennyiségű kulcs (ingyenes és fizetett opcióban)
     - Rugalmas fallback opciók
     - [Publikus végpont](https://eth.drpc.org)
     - Ingyenes, megosztott archív csomópontok
+
 - [**GetBlock**](https://getblock.io/)
   - [Dokumentáció](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Jellemzők
@@ -177,6 +195,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Korszerű elemzések
     - Automatikus frissítések
     - Technikai támogatás
+
 - [**InfStones**](https://infstones.com/)
   - Jellemzők
     - Ingyenes opció
@@ -188,6 +207,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Gyors szinkronizálási idő a dedikált bevezetésekre
     - Közvetlen, napi 24 órás támogatás a hét minden napján
     - Hozzáférés több mint 50 blokklánc-csomóponthoz
+
 - [**Infura**](https://infura.io/)
   - [Dokumentáció](https://infura.io/docs)
   - Jellemzők
@@ -196,6 +216,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Fizetős archív adatok
     - Közvetlen támogatás
     - Irányítópult (dashboard)
+
 - [**Kaleido**](https://kaleido.io/)
   - [Dokumentáció](https://docs.kaleido.io/)
   - Jellemzők
@@ -216,6 +237,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Támogatja a többfelhős, többrégiós és hibrid telepítési beállításokat
     - Egyszerű, óránkénti SaaS-alapú árazás
     - SLA-k és napi 24 órás támogatás a hét minden napján
+
 - [**Lava-hálózat**](https://www.lavanet.xyz/)
   - [Dokumentáció](https://docs.lavanet.xyz/)
   - Jellemzők
@@ -227,6 +249,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Intuitív projektmenedzsment interfész
     - Konszenzusalapú adatintegritás
     - Több láncot lefedő támogatás
+
 - [**Moralis**](https://moralis.io/)
   - [Dokumentáció](https://docs.moralis.io/)
   - Jellemzők
@@ -239,6 +262,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Egyedi Ethereum SDK
     - Egyedi API-végpontok
     - Közvetlen, technikai támogatás
+
 - [**NodeReal MegaNode**](https://nodereal.io/)
   - [Dokumentáció](https://docs.nodereal.io/nodereal/meganode/introduction)
   - Jellemzők
@@ -246,6 +270,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Továbbfejlesztett API a web3-fejlesztőknek
     - Több láncot lefedő támogatás
     - Ingyenes kezdési lehetőség
+
 - [**NOWNodes**](https://nownodes.io/)
   - [Dokumentáció](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Jellemzők
@@ -256,6 +281,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - A hét minden napján, napi 24 órában rendelkezésre álló támogató csapat
     - Személyes számlakezelő
     - Megosztott, archív, biztonsági és dedikált csomópontok
+
 - [**Pocket Network**](https://www.pokt.network/)
   - [Dokumentáció](https://docs.pokt.network/home/)
   - Jellemzők
@@ -276,6 +302,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - A leginkább privát, cenzúrának ellenálló opció
     - Gyakorlati fejlesztőtámogatás
     - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) irányítópult és elemzések
+
 - [**QuickNode**](https://www.quicknode.com)
   - [Dokumentáció](https://www.quicknode.com/docs/)
   - Jellemzők
@@ -289,11 +316,13 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - NFT-adatok és elemzési API
     - [SOC2-tanúsítvánnyal](https://www.quicknode.com/security)
     - Bárki számára alkalmas, legyen szó fejlesztőkről vagy nagyvállalatokról
+
 - [**Rivet**](https://rivet.cloud/)
   - [Dokumentáció](https://rivet.readthedocs.io/en/latest/)
   - Jellemzők
     - Ingyenes opció
     - Menet közbeni méretezés
+
 - [**SenseiNode**](https://senseinode.com)
   - [Dokumentáció](https://docs.senseinode.com/)
   - Jellemzők
@@ -301,6 +330,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Irányítópult (dashboard)
     - Az AWS-en kívüli több szolgáltató biztosítja több helyen Latin-Amerikában
     - Prysm és Lighthouse kliensek
+
 - [**SettleMint**](https://console.settlemint.com/)
   - [Dokumentáció](https://docs.settlemint.com/)
   - Jellemzők
@@ -314,6 +344,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Irányítópult (dashboard)
     - Óránkénti árazás
     - Közvetlen támogatás
+
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [Dokumentáció](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - Jellemzők
@@ -321,13 +352,26 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Ingyenes hozzáférés az előzményadatokhoz
     - 8-szor gyorsabb olvasásintenzív terhelés
     - 100%-ban konzisztens olvasási hozzáférés
-    - JSON RPC-végpontok
+    - JSON-RPC-végpontok
     - UI-alapú RPC lekérdezésépítő és lekérdezés-előnézet
     - Szorosan integrált a Tenderly fejlesztéssel, hibajavítással és tesztelőeszközökkel
     - Tranzakciószimulációk
     - Használatelemzés és szűrés
     - Könnyű hozzáférésikulcs-kezelés
     - Dedikált programozói támogatás csevegés, e-mail és Discord által
+
+- [**Tokenview**](https://services.tokenview.io/)
+  - [Dokumentáció](https://services.tokenview.io/docs?type=nodeService)
+  - Jellemzők
+    - A hét minden napján, napi 24 órában rendelkezésre álló technikai támogatás és fejlesztői Telegram-közösség
+    - Több láncot támogat (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
+    - RPC- és WSS-végpontok nyitott használata
+    - Korlátlan hozzáférés az archív adatot szolgáltató API-hoz
+    - Dashboard Request Explorer és Mempool Watcher funkcióval
+    - NFT-adatszolgáltató API és Webhook figyelmeztetés
+    - Fizetési lehetőség kriptóban
+    - Külső támogatás az extra funkcionális igényekhez
+
 - [**Watchdata**](https://watchdata.io/)
   - [Dokumentáció](https://docs.watchdata.io/)
   - Jellemzők
@@ -339,6 +383,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Támogatás a különféle csomópontok számára
     - Erőforrás-méretezhetőség
     - Gyors feldolgozási sebesség
+
 - [**ZMOK**](https://zmok.io/)
   - [Dokumentáció](https://docs.zmok.io/)
   - Jellemzők
@@ -347,39 +392,18 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Korlátlan TX díj és végtelen gáz a tranzakcióküldéshez
     - A leggyorsabban szerzi meg az új blokkot és olvassa a blokkláncot
     - Az API hívásonkénti legjobb ár garantált
-- [**Chainbase**](https://www.chainbase.com/)
-  - [Dokumentáció](https://docs.chainbase.com)
+
+- [**Zeeve**](https://www.zeeve.io/)
+  - [Dokumentáció](https://www.zeeve.io/docs/)
   - Jellemzők
-    - Elérhető, gyors és skálázható RPC szolgáltatás
-    - Több láncot lefedő támogatás
-    - Ingyenes díjszabások
-    - Felhasználó barát irányítópult
-    - Blokklánc-adatszolgáltatás az RPC-n túl
+    - Vállalatszintű, kódnélküli automatizációs platform, ami a blokklánc-csomópontok és hálózatok telepítését, felügyeletét és menedzselését biztosítja
+    - Több mint 30 támogatott protokoll és integráció, és még több jön
+    - Értékes web3-infrastruktúraszolgáltatások, mint a decentralizált tárhely, decentralizált identitás és a blokkláncfőkönyv-adatszolgáltató API-k valódi felhasználási módokra
+    - A hét minden napján, napi 24 órában rendelkezésre álló támogatás és proaktív felügyelet, amely mindenkor biztosítja a csomópontok egészségét.
+    - RPC-végpontok, melyek hitelesített hozzáférést kínálnak az API-okhoz, valamint problémamentes kezelést biztosítanak az intuitív irányítópultokkal és elemzésekkel.
+    - Egyaránt biztosít a cég által adott felhő és a felhasználó saját felhőjével működő opciókat, és támogatja a legtöbb felhőszolgáltatót, mint AWS, Azure, Google Cloud, Digital Ocean és a helyszíni megoldásokat.
+    - Intelligens routing, hogy a felhasználóhoz legközelebbi csomópontot tudja használni
 
-[**Zeeve**](https://www.zeeve.io/)
-
-- [Dokumentáció](https://www.zeeve.io/docs/)
-- Jellemzők
-  - Vállalatszintű, kódnélküli automatizációs platform, ami a blokklánc-csomópontok és hálózatok telepítését, felügyeletét és menedzselését biztosítja
-  - Több mint 30 támogatott protokoll és integráció, és még több jön
-  - Értékes web3-infrastruktúraszolgáltatások, mint a decentralizált tárhely, decentralizált identitás és a blokkláncfőkönyv-adatszolgáltató API-k valódi felhasználási módokra
-  - A hét minden napján, napi 24 órában rendelkezésre álló támogatás és proaktív felügyelet, amely mindenkor biztosítja a csomópontok egészségét.
-  - RPC-végpontok, melyek hitelesített hozzáférést kínálnak az API-khoz, valamint problémamentes kezelést biztosítanak az intuitív irányítópultokkal és elemzésekkel.
-  - Egyaránt biztosít a cég által adott felhő és a felhasználó saját felhőjével működő opciókat, és támogatja a legtöbb felhőszolgáltatót, mint AWS, Azure, Google Cloud, Digital Ocean és a helyszíni megoldásokat.
-  - Intelligens routing, hogy a felhasználóhoz legközelebbi csomópontot tudja használni
-
-[**Tokenview**](https://services.tokenview.io/)
-
-- [Dokumentáció](https://services.tokeniew/docs?type=nodeService)
-- Jellemzők
-  - A hét minden napján, napi 24 órában rendelkezésre álló technikai támogatás és fejlesztői Telegram-közösség
-  - Több láncot támogat (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
-  - RPC- és WSS-végpontokat egyaránt használ
-  - Korlátlan hozzáférés az archív adatot szolgáltató API-hoz
-  - Dashboard Request Explorer és Mempool Watcher funkcióval
-  - NFT-adatszolgáltató API és Webhook figyelmeztetés
-  - Fizetési lehetőség kriptóban
-  - Külső támogatás az extra funkcionális igényekhez
 
 ## További olvasnivaló {#further-reading}
 
@@ -391,5 +415,5 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
 
 ## Kapcsolódó útmutatók {#related-tutorials}
 
-- [Bevezetés az Ethereum fejlesztésbe az Alchemy-vel](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
-- [Útmutató a tranzakciók küldéséhez a web3 és az Alchemy használatával](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Bevezetés az Ethereum fejlesztésbe Alchemy-vel](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
+- [Útmutató tranzakció küldéshez a web3 és az Alchemy használatával](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
