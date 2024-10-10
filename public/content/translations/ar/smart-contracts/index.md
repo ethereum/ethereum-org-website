@@ -8,7 +8,7 @@ lang: ar
 
 العقود الذكية هي عبارة عن كتل بناء أساسية في طبقة تطبيق الإيثريوم. وهي عبارة عن برامج كمبيوتر مخزنة على [سلسلة البلوكتشين](/glossary/#blockchain) التي تتبع منطق "إذا كان هذا فسيحدث ذاك"، وهي مضمونة التنفيذ وفقًا للقواعد المحددة في النصوص البرمجية الخاصة بها، والتي لا يمكن تغييرها بمجرد إنشائها.
 
-وقد صاغ Nick Szabo مصطلح "العقد الذكي". ففي عام 1994، كتب [مقدمة للمفهوم ](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)ثم كتب في عام 1996 [استكشاف لما يمكن أن تفعله العقود الذكية](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+وقد صاغ Nick Szabo مصطلح "العقد الذكي". ففي عام 1994، كتب [مقدمة للمفهوم](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)ثم كتب في عام 1996 [استكشاف لما يمكن أن تفعله العقود الذكية](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
 تصوَّر Szabo سوقاً رقمية تتيح فيها العمليات التلقائية [الآمنة من حيث العملات الرقمية](/glossary/#cryptography) إجراء المعاملات ووظائف الأعمال التجارية دون وسطاء موثوق بهم. وقد وُجدت العقود الذكية على إيثريوم لجعل هذه الفكرة قابلة للتطبيق.
 
