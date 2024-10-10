@@ -22,7 +22,7 @@ Ang Staking as a Service (“SaaS") ay kumakatawan sa kategorya ng mga serbisyo 
 Hindi native na sinusuportahan ng Ethereum protocol ang pagtatalaga ng stake, kaya ginawa ang mga serbisyong ito para punan ang demand na ito. Kung mayroon kang 32 ETH na ise-stake, pero hindi ka kumportableng mangasiwa ng hardware, binibigyang-daan ka ng mga serbisyong SaaS na italaga ang mahirap na trabaho habang nakakakuha ka ng mga native na block reward.
 
 <CardGrid>
-  <Card title="Sarili mong validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
+  <Card title="Sarili mong validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
   <Card title="Madaling magsimula" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
   <Card title="Limitahan ang iyong panganib" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
@@ -39,7 +39,7 @@ Ang mga attribute indicator ay ginagamit sa ibaba para ipakita ang mga kapansin-
 
 ## Tingnan ang mga staking service provider {#saas-providers}
 
-Nasa ibaba ang ilang available na SaaS provider. Gamitin ang mga indicator sa itaas upang tulungan kang gamitin ang mga serbisyong ito
+Nasa ibaba ang ilang available na mga SaaS provider. Gamitin ang mga indicator sa itaas upang tulungan kang gamitin ang mga serbisyong ito
 
 <ProductDisclaimer />
 
@@ -47,7 +47,7 @@ Nasa ibaba ang ilang available na SaaS provider. Gamitin ang mga indicator sa it
 
 <StakingProductsCardGrid category="saas" />
 
-Tandaan ang kahalagahan ng pagsuporta sa [client diversity](/developers/docs/nodes-and-clients/client-diversity/) dahil pinapaigting nito ang seguridad ng network, at nililimitahan nito ang iyong panganib. Matutukoy ang mga serbisyo na may patunay ng paglilimita ng pangunahing paggamit ng client sa pamamagitan ng <em style={{ textTransform: "uppercase" }}>"execution client diversity"</em> at <em style={{ textTransform: "uppercase" }}>"consensus client diversity."</em>
+Tandaan ang kahalagahan ng pagsuporta sa [client diversity](/developers/docs/nodes-and-clients/client-diversity/) dahil pinapaigting nito ang seguridad ng network, at nililimitahan nito ang iyong panganib. Matutukoy ang mga serbisyo na may patunay ng paglilimita ng pangunahing paggamit ng kliyente sa pamamagitan ng <em style={{ textTransform: "uppercase" }}>"execution client diversity"</em> at <em style={{ textTransform: "uppercase" }}>"consensus client diversity."</em>
 
 ### Mga Generator ng Key
 
@@ -91,4 +91,5 @@ Makipag-ugnayan sa indibidwal na SaaS provider para sa iba pang detalye tungkol 
 
 ## Karagdagang pagbabasa {#further-reading}
 
+- [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian at Spacesider_
 - [Pagsusuri sa Mga Serbisyo sa Staking](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_
