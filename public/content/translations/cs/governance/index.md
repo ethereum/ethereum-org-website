@@ -70,7 +70,7 @@ Formální proces zavádění změn do protokolu Ethereum je následující:
 
 1. **Navrhněte základní EIP**: Jak je popsáno v [EIP- 1](https://eips.ethereum.org/EIPS/eip-1#core-eips), prvním krokem k formálnímu navržení změny Etherea je její podrobný popis v Core EIP. Ten bude sloužit jako oficiální specifikace pro EIP, kterou budou vývojáři protokolů implementovat, pokud bude přijata.
 
-2. **Představte své EIP vývojářům protokolu**: Jakmile budete mít základní EIP, pro které jste dostali zpětnou vazbu od komunity, měli byste je předložit vývojářům protokolu. To uděláte tak, že ho navrhnete k diskusi na [AllCoreDevs callu](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi- status). Je pravděpodobné, že některé diskuze již proběhly asynchronně na [fóru Ethereum Magicians](https://ethereum-magicians.org/) nebo na [Ethereum R&D Discordu](https://discord.gg/mncqtgVSVw).
+2. **Představte své EIP vývojářům protokolu**: Jakmile budete mít základní EIP, pro které jste dostali zpětnou vazbu od komunity, měli byste je předložit vývojářům protokolu. To uděláte tak, že ho navrhnete k diskusi na [AllCoreDevs callu](https://github.com/ethereum/execution-specs/tree/master/network-upgrades#getting-the-considered-for-inclusion-cfi-status). Je pravděpodobné, že některé diskuze již proběhly asynchronně na [fóru Ethereum Magicians](https://ethereum-magicians.org/) nebo na [Ethereum R&D Discordu](https://discord.gg/mncqtgVSVw).
 
 > Potenciální výsledky této fáze jsou:
 
