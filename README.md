@@ -119,7 +119,7 @@ git push
 - In your PR description, reference the issue it resolves (see [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword))
   - ex. `Updates out of date content [Fixes #1234]`
 - Netlify (our hosting service for build previews) deploys all PRs to a publicly accessible preview URL, e.g.: ![Netlify deploy preview](public/images/preview-deploy.png)
-- _Confirm your Netlify preview deploy looks & functions as expected_
+- _Confirm that your Netlify preview deploy looks and functions as expected_
 - Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/ethereum-org)?
 
 ### 6. Wait for review
@@ -1875,7 +1875,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/abonnaudet-ledger"><img src="https://avatars.githubusercontent.com/u/71646516?v=4?s=100" width="100px;" alt="abonnaudet-ledger"/><br /><sub><b>abonnaudet-ledger</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aabonnaudet-ledger" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/JacobSharples"><img src="https://avatars.githubusercontent.com/u/45126111?v=4?s=100" width="100px;" alt="Jacob Sharples"/><br /><sub><b>Jacob Sharples</b></sub></a><br /><a href="#content-JacobSharples" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/omahs"><img src="https://avatars.githubusercontent.com/u/73983677?v=4?s=100" width="100px;" alt="omahs"/><br /><sub><b>omahs</b></sub></a><br /><a href="#translation-omahs" title="Translation">🌍</a> <a href="#maintenance-omahs" title="Maintenance">🚧</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Shiva-Sai-ssb"><img src="https://avatars.githubusercontent.com/u/112751524?v=4?s=100" width="100px;" alt="Shiva Sai"/><br /><sub><b>Shiva Sai</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AShiva-Sai-ssb" title="Bug reports">🐛</a> <a href="#maintenance-Shiva-Sai-ssb" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Shiva-Sai-ssb"><img src="https://avatars.githubusercontent.com/u/112751524?v=4?s=100" width="100px;" alt="Shiva Sai"/><br /><sub><b>Shiva Sai</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AShiva-Sai-ssb" title="Bug reports">🐛</a> <a href="#maintenance-Shiva-Sai-ssb" title="Maintenance">🚧</a> <a href="#content-Shiva-Sai-ssb" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://bsaurabh.xyz/"><img src="https://avatars.githubusercontent.com/u/39492927?v=4?s=100" width="100px;" alt="Saurabh Burade"/><br /><sub><b>Saurabh Burade</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=saurabhburade" title="Code">💻</a></td>
     </tr>
     <tr>
@@ -1908,6 +1908,18 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://v2eth.com/"><img src="https://avatars.githubusercontent.com/u/7024451?v=4?s=100" width="100px;" alt="Mako Shan"/><br /><sub><b>Mako Shan</b></sub></a><br /><a href="#content-makoshan" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/cratiu222"><img src="https://avatars.githubusercontent.com/u/156356273?v=4?s=100" width="100px;" alt="Christina"/><br /><sub><b>Christina</b></sub></a><br /><a href="#content-cratiu222" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/nipunh"><img src="https://avatars.githubusercontent.com/u/26524611?v=4?s=100" width="100px;" alt="Nipun Hedaoo"/><br /><sub><b>Nipun Hedaoo</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=nipunh" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/chenjiali-april"><img src="https://avatars.githubusercontent.com/u/132745538?v=4?s=100" width="100px;" alt="april"/><br /><sub><b>april</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=chenjiali-april" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/r4f4ss"><img src="https://avatars.githubusercontent.com/u/5679073?v=4?s=100" width="100px;" alt="rafaelss"/><br /><sub><b>rafaelss</b></sub></a><br /><a href="#content-r4f4ss" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://preetjdp.dev/"><img src="https://avatars.githubusercontent.com/u/27439197?v=4?s=100" width="100px;" alt="Preet Parekh"/><br /><sub><b>Preet Parekh</b></sub></a><br /><a href="#content-preetjdp" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/adamdomurad/"><img src="https://avatars.githubusercontent.com/u/163993?v=4?s=100" width="100px;" alt="ludamad"/><br /><sub><b>ludamad</b></sub></a><br /><a href="#content-ludamad" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/MaryNfs"><img src="https://avatars.githubusercontent.com/u/52598322?v=4?s=100" width="100px;" alt="MaryNfs"/><br /><sub><b>MaryNfs</b></sub></a><br /><a href="#content-MaryNfs" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AMaryNfs" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://signor.vercel.app/"><img src="https://avatars.githubusercontent.com/u/94352660?v=4?s=100" width="100px;" alt="Signor Dev"/><br /><sub><b>Signor Dev</b></sub></a><br /><a href="#maintenance-Signor1" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/KatrixReloaded"><img src="https://avatars.githubusercontent.com/u/68804269?v=4?s=100" width="100px;" alt="Kartikeya Sureka"/><br /><sub><b>Kartikeya Sureka</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=KatrixReloaded" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Piyush-Tilokani"><img src="https://avatars.githubusercontent.com/u/112542519?v=4?s=100" width="100px;" alt="Piyush Tilokani"/><br /><sub><b>Piyush Tilokani</b></sub></a><br /><a href="#content-Piyush-Tilokani" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/jacobourar"><img src="https://avatars.githubusercontent.com/u/109108267?v=4?s=100" width="100px;" alt="Jacobo Uribe"/><br /><sub><b>Jacobo Uribe</b></sub></a><br /><a href="#content-jacobourar" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

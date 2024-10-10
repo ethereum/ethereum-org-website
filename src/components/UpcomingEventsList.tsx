@@ -2,14 +2,13 @@ import { useEffect, useState } from "react"
 import _ from "lodash"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { Box, Grid, Heading } from "@chakra-ui/react"
 
 import type { CommunityConference, Lang } from "@/lib/types"
 
-import { Button } from "@/components/Buttons"
 import EventCard from "@/components/EventCard"
 import InfoBanner from "@/components/InfoBanner"
-import InlineLink from "@/components/Link"
+import { Button } from "@/components/ui/buttons/Button"
+import Link from "@/components/ui/Link"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -22,7 +21,6 @@ const UpcomingEventsList = () => {
   const monthsPerLoad = 2
 
   const [monthGroupedEvents, setMonthGroupedEvents] = useState({})
-
   const [maxRange, setMaxRange] = useState<number>(monthsPerLoad)
 
   // Create Date object from each YYYY-MM-DD JSON date string
@@ -70,7 +68,6 @@ const UpcomingEventsList = () => {
       }
     })
     const groupedEvents = _.groupBy(formattedEvents, ({ startDate }) => {
-      // .replace(/-/g, "/") ==> Fixes Safari Invalid date
       const start = new Date(startDate.replace(/-/g, "/"))
       const formatYearMonth = new Intl.DateTimeFormat(locale, {
         month: "short",
@@ -80,9 +77,7 @@ const UpcomingEventsList = () => {
     })
 
     setMonthGroupedEvents(groupedEvents)
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [locale])
 
   const loadMoreEvents = () => {
     setMaxRange((counter) => {
@@ -101,43 +96,23 @@ const UpcomingEventsList = () => {
     return (
       <InfoBanner emoji=":information_source:">
         {t("page-community-upcoming-events-no-events")}{" "}
-        <InlineLink href="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
+        <Link href="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
           {t("page-community-please-add-to-page")}
-        </InlineLink>
+        </Link>
       </InfoBanner>
     )
   }
 
   return (
-    <>
+    <div>
       {Object.keys(monthGroupedEvents)
         ?.slice(0, maxRange)
         ?.map((month) => {
           const events = monthGroupedEvents[month]
           return (
-            <Box key={`events_in_${month}`}>
-              <Heading
-                as="h3"
-                fontSize={{ base: "xl", md: "2xl" }}
-                py={8}
-                fontWeight="semibold"
-                lineHeight={1.4}
-              >
-                {month}
-              </Heading>
-              <Grid
-                width={{ base: "100%" }}
-                templateColumns={{
-                  base: "repeat(1,1fr)",
-                  md: "repeat(2,1fr)",
-                  lg: "repeat(3,1fr)",
-                }}
-                justifyContent={"center"}
-                alignItems={"center"}
-                alignSelf={"center"}
-                gap={5}
-                overflow={"hidden"}
-              >
+            <div key={`events_in_${month}`}>
+              <h3 className="py-8">{month}</h3>
+              <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
                 {events.map(
                   (
                     {
@@ -145,7 +120,6 @@ const UpcomingEventsList = () => {
                       to,
                       href,
                       formattedDetails,
-                      date,
                       location,
                       imageUrl,
                       startDate,
@@ -157,7 +131,6 @@ const UpcomingEventsList = () => {
                       key={idx}
                       title={title}
                       href={to || href}
-                      date={date}
                       description={formattedDetails}
                       location={location}
                       imageUrl={imageUrl}
@@ -166,32 +139,19 @@ const UpcomingEventsList = () => {
                     />
                   )
                 )}
-              </Grid>
-            </Box>
+              </div>
+            </div>
           )
         })}
 
-      <Box
-        width="100%"
-        margin="30px auto"
-        position="relative"
-        padding="0 10px"
-        transition="all 0.4s ease"
-      ></Box>
       {Object.keys(monthGroupedEvents)?.length !== maxRange && (
-        <Box
-          display="flex"
-          justifyContent="center"
-          maxWidth="620px"
-          marginTop="5"
-          paddingY="8"
-        >
+        <div className="flex justify-center py-8">
           <Button onClick={loadMoreEvents}>
             {t("page-community-upcoming-events-load-more")}
           </Button>
-        </Box>
+        </div>
       )}
-    </>
+    </div>
   )
 }
 
