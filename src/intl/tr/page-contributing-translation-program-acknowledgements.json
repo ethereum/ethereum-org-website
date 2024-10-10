@@ -28,15 +28,15 @@
   "page-contributing-translation-program-acknowledgements-translator": "Çevirmen",
   "page-contributing-translation-program-acknowledgements-language": "Dil",
   "page-contributing-translation-program-acknowledgements-total-words": "Toplam Kelime",
-  "page-contributing-translation-program-acknowledgements-oats-title": "POAP'ler",
-  "page-contributing-translation-program-acknowledgements-1": "Tüm çevirmenlerimiz, ethereum.org Çeviri Programına katılımlarını kanıtlayan, değiştirilemez bir token olan POAP (Katılım İspatı Protokolü) almaya hak kazanır.",
-  "page-contributing-translation-program-acknowledgements-2": "Faaliyetlerine göre çevirmenler için bir dizi farklı POAP'miz bulunuyor",
-  "page-contributing-translation-program-acknowledgements-3": "Crowdin'deki çeviri çalışmasına katkıda bulunduysanız, sizi bekleyen bir POAP bulunuyor!",
+  "page-contributing-translation-program-acknowledgements-oats-title": "OAT'ler",
+  "page-contributing-translation-program-acknowledgements-1": "Çeviri Programı'na katkıda bulunan kişiler, ethereum.org Çeviri Programı'na katıldıklarını kanıtlayan ve eşsiz jetonlar olan farklı OAT'ler (zincir üstünde başarı jetonu) almaya hak kazanır.",
+  "page-contributing-translation-program-acknowledgements-2": "Faaliyetlerine göre çevirmenler için bir dizi farklı OAT'miz bulunuyor",
+  "page-contributing-translation-program-acknowledgements-3": "Crowdin'deki çeviri çalışmasına katkıda bulunduysanız, sizi bekleyen bir OAT bulunuyor!",
   "page-contributing-translation-program-acknowledgements-how-to-claim-title": "Nasıl talep edilir?",
   "page-contributing-translation-program-acknowledgements-how-to-claim-1": "Katılın:",
   "page-contributing-translation-program-acknowledgements-how-to-claim-1-discord": "Discord sunucusu",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-2": "#🥇 | poaps kanalında Crowdin hesabınıza yönlendiren bir bağlantı yapıştırın.",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-3": "Ekibimizin bir üyesinin size POAP'nize yönlendiren bir bağlantı göndermesini bekleyin.",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-4": "POAP'nizi talep edin!",
-  "page-contributing-translation-program-acknowledgements-4": "POAP'leri talep etmek için yalnızca öz gözetimli cüzdanları kullanmalısınız. Özel anahtarlara sahip olmadığınız borsa hesapları veya diğer hesapları kullanmayın, çünkü bunlar POAP'lerinize erişmenize ve bunları yönetmenize izin vermez."
+  "page-contributing-translation-program-acknowledgements-how-to-claim-2": "Crowdin hesabınıza ait yönlendirme bağlantısını #🥇 | proof-of-contribution kanalına gönderin.",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-3": "Ekibimizden bir üyenin, OAT'lerinizi talep edebilmeniz için gereken rolleri size atamasını bekleyin.",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-4": "OAT'lerinizi talep edin!",
+  "page-contributing-translation-program-acknowledgements-4": "OAT'leri talep etmek için yalnızca öz gözetimli cüzdanları kullanmalısınız. Özel anahtarlarına sahip olmadığınız borsa hesaplarını veya diğer hesapları kullanmayın, çünkü bunlar OAT'lerinize erişmenize ve bunları yönetmenize izin vermez."
 }
