@@ -42,29 +42,33 @@ export const decompressFile = async (filePath: string, targetDir: string) => {
 
 const getQAMessage = (locale: string) => {
   console.log("Checking summary path:", SUMMARY_PATH)
-  if (!fs.existsSync(SUMMARY_PATH)) {
-    console.error("Could not find summary path:", SUMMARY_PATH)
-    throw new Error("No summary file found.")
+  try {
+    if (!fs.existsSync(SUMMARY_PATH)) {
+      console.error("Could not find summary path:", SUMMARY_PATH)
+      throw new Error("No summary file found.")
+    }
+
+    const summaryJson: QASummary = JSON.parse(
+      readFileSync(SUMMARY_PATH, "utf-8")
+    )
+    const qaResults = summaryJson[locale]
+      ? summaryJson[locale].map((s) => "- " + s).join("\n")
+      : null
+
+    if (!qaResults) return "No QA issues found"
+    return `
+    \`\`\`shell
+    yarn markdown-checker
+    \`\`\`
+    
+    <details><summary>Unfold for ${summaryJson[locale].length} result(s)</summary>
+    
+    ${qaResults}
+    </details>
+    `
+  } catch (error) {
+    return `Unable to run QA checks. Review manually.`
   }
-
-  const summaryJson: QASummary = JSON.parse(readFileSync(SUMMARY_PATH, "utf-8"))
-  const qaResults = summaryJson[locale]
-    ? summaryJson[locale].map((s) => "- " + s).join("\n")
-    : null
-
-  if (!qaResults) return "No QA issues found"
-  return `
-\`\`\`shell
-yarn markdown-checker
-\`\`\`
-
-<details><summary>Unfold for ${summaryJson[locale].length} result(s)</summary>
-
-${qaResults}
-</details>
-
-@coderabbitai review
-`
 }
 
 export const createLocaleTranslationPR = (
