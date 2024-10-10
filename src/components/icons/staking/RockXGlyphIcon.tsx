@@ -7,11 +7,11 @@ export const RockXGlyphIcon = createIcon({
   displayName: "RockXGlyphIcon",
   viewBox: "0 0 32 32",
   defaultProps: {
+    ...commonIconDefaultProps,
     width: "32px",
     height: "32px",
     fillRule: "evenodd",
     clipRule: "evenodd",
-    ...commonIconDefaultProps,
   },
   path: [
     <path
