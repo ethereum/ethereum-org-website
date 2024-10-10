@@ -5,7 +5,7 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
 import {
-  Badge,
+  Badge, 
   Box,
   chakra,
   Flex,
@@ -313,7 +313,7 @@ const TutorialPage = ({
             <ButtonLink
               leftIcon={<FaGithub />}
               variant="outline"
-              href="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
+              href="https://github.com/ethereum/ethereum-org-website/pulls"
             >
               <Translation id="page-developers-tutorials:page-tutorial-pull-request-btn" />
             </ButtonLink>
