@@ -1,9 +1,10 @@
 import { useRouter } from "next/router"
 import { FaGithub } from "react-icons/fa"
 
-import { Center, Flex } from "./ui/flex"
+import { Center, Flex } from "@/components/ui/flex"
+import { BaseLink, LinkProps } from "@/components/ui/Link"
+
 import Emoji from "./Emoji"
-import { BaseLink, LinkProps } from "./Link"
 
 type GitHubRepo = {
   stargazerCount: number
@@ -24,13 +25,12 @@ const GitStars = ({ gitHubRepo, hideStars, ...props }: GitStarsProps) => {
 
   return (
     <BaseLink
+      className="text-decoration-none ms-auto"
       href={gitHubRepo.url}
       hideArrow
-      ms="auto"
-      textDecoration="none"
       {...props}
     >
-      <Flex className="rounded border border-border bg-background-medium no-underline hover:fill-primary hover:shadow-table-item-box-hover">
+      <Flex className="rounded border bg-background-medium no-underline hover:fill-primary hover:shadow-table-item-box-hover">
         {hideStars ? (
           <FaGithub className="m-1 text-2xl" />
         ) : (
