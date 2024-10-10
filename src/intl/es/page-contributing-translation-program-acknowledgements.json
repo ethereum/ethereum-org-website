@@ -28,15 +28,15 @@
   "page-contributing-translation-program-acknowledgements-translator": "Traductor",
   "page-contributing-translation-program-acknowledgements-language": "Idioma",
   "page-contributing-translation-program-acknowledgements-total-words": "Total de palabras",
-  "page-contributing-translation-program-acknowledgements-oats-title": "POAPs",
-  "page-contributing-translation-program-acknowledgements-1": "Todos nuestros traductores pueden optar a una POAP (siglas en inglés de prueba de protocolo de asistencia), es decir, un token no fungible que certifica su aportación al Programa de traduccion de ethereum.org.",
-  "page-contributing-translation-program-acknowledgements-2": "Tenemos un número diferente de POAP disponibles para los traductores, en función su actividad",
-  "page-contributing-translation-program-acknowledgements-3": "Si ha colaborado con la traducción en Crowdin, ¡tiene un POAP esperándole!",
+  "page-contributing-translation-program-acknowledgements-oats-title": "OAT",
+  "page-contributing-translation-program-acknowledgements-1": "Los contribuyentes al Programa de Traducción son elegibles para diferentes OAT (tokens de logro en cadena, On-Chain Achievement Token), tokens no fungibles que prueban su participación en el Programa de Tradución de euthereum.org.",
+  "page-contributing-translation-program-acknowledgements-2": "Tenemos una cantidad de OAT diferentes disponibles para traductores en función de su actividad",
+  "page-contributing-translation-program-acknowledgements-3": "Si ha contribuido a la traducción en Crowdin, ¡tenemos un OAT para usted!",
   "page-contributing-translation-program-acknowledgements-how-to-claim-title": "Cómo reclamarlo",
   "page-contributing-translation-program-acknowledgements-how-to-claim-1": "Únase a nuestro",
   "page-contributing-translation-program-acknowledgements-how-to-claim-1-discord": "Servidor Discord",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-2": "Pegue un enlace a su cuenta de Crowdin en el canal #🥇 | poaps.",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-3": "Espere a que un miembro de nuestro equipo le envíe un enlace a su POAP.",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-4": "¡Reclame su POAP!",
-  "page-contributing-translation-program-acknowledgements-4": "Debe utilizar solamente carteras de autocustodia para reclamar POAP. No use cuentas en divisas u otras cuentas de las que no posea claves privadas, ya que estas no le permitirán acceder y manejar sus POAP."
+  "page-contributing-translation-program-acknowledgements-how-to-claim-2": "Pegue un enlace en su cuenta de Crowdin en el canal #🥇 | proof-of-contribution.",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-3": "Espere a que un miembro del equipo le asgine los roles necesarios para reclamar sus OAT.",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-4": "¡Reclame sus OAT!",
+  "page-contributing-translation-program-acknowledgements-4": "Debe utilizar únicamente billeteras autocustodiadas para reclamar OAT. No utilice cuentas de exchanges ni otras cuentas de las cuales no tenga la llave privada, ya que no le permitirán acceder y administrar sus OAT."
 }
