@@ -4,7 +4,7 @@ description: Podstawowe standardy, do których dążymy w przestrzeniach ethereu
 lang: pl
 ---
 
-# Kodeks postępowania {#conduct-intro}
+# Kodeks postępowania {#code-of-conduct}
 
 ## Misja {#mission}
 
