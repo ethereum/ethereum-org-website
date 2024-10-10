@@ -467,11 +467,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
               </Box>
             ))}
           </Box>
-          <GhostCard
-            maxW="640px"
-            me={{ base: 0, lg: 8 }}
-            mt={{ base: 16, lg: 2 }}
-          >
+          <GhostCard className="me-0 mt-16 max-w-[640px] lg:me-8 lg:mt-2">
             <Emoji text=":pizza:" className="text-5xl" />
             <H3>{t("page-stablecoins-bitcoin-pizza")}</H3>
             <Text>{t("page-stablecoins-bitcoin-pizza-body")} </Text>
