@@ -229,5 +229,8 @@
   "page-staking-withdrawals-important-notices": "Informations importantes",
   "page-staking-withdrawals-important-notices-desc": "Les retraits ne sont pas encore disponibles. Veuillez lire la <a href=\"https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/\" target=\"_blank\">FAQ de Merge Eth2 et post-merge</a> pour plus d'informations.",
   "page-upgrades-merge-btn": "Plus d'infos sur la fusion",
-  "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Abonnez-vous au Blog EF</a> pour recevoir des notifications par e-mail pour les dernières annonces de protocole."
+  "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Abonnez-vous au Blog EF</a> pour recevoir des notifications par e-mail pour les dernières annonces de protocole.",
+  "page-staking-comparison-with-other-options": "Comparaison avec d'autres options",
+  "page-staking-any-amount": "Tout montant",
+  "page-staking-testnet": "réseau de test"
 }
