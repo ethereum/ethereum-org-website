@@ -160,12 +160,13 @@ NFT-urile acționează o nouă economie, în care creatorii nu cedează propriet
 
 Odată ce conținutul este vândut, fondurile le revin în mod direct. Și chiar atunci când noul proprietar ar revinde NTF-urile, creatorul original poate primi în mod automat redevențe. Garanția acestui lucru este asigurată prin faptul că, la orice vânzare a sa, adresa creatorului este integrată în metadatele tokenului – iar metadatele nu pot fi modificate.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div>Explorați, cumpărați sau creați-vă propriile NFT-uri de artă/de colecție...</div>
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
+  <AlertContent>Explorați, cumpărați sau creați-vă propriile NFT-uri de artă/de colecție...</AlertContent>
   <ButtonLink href="/dapps/?category=collectibles">
     Explorați arta NFT
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 #### Problema copierii/inserării {#nfts-copy-paste}
 
@@ -193,12 +194,13 @@ Acest lucru mai înseamnă că atunci când un joc nu mai este întreținut de d
 
 Jocul de realitate virtuală Decentraland vă oferă chiar posibilitatea să cumpărați NFT-uri care reprezintă parcele virtuale de teren pe care le puteți folosi după bunul plac.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div>Aruncați o privire asupra jocurilor Ethereum, alimentate de NFT-uri...</div>
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
+  <AlertContent>Aruncați o privire asupra jocurilor Ethereum, alimentate de NFT-uri...</AlertContent>
   <ButtonLink href="/dapps/?category=gaming">
     Explorați jocurile NFT
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 <Divider />
 
@@ -428,6 +430,8 @@ Cu alte cuvinte, dacă Visa procesează 140.839.000.000 de tranzacții ce costă
 
 Într-un singur an, Ethereum va consuma 5.256.000 kWh. Cu un potențial de 788.940.000.000.000 - 3.153.600.000.000.000 de tranzacții procesate în această perioadă.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert>
+  <AlertEmoji text=":evergreen_tree:">
   În cazul în care considerați că aceste statistici sunt incorecte sau se poate crește precizia lor, vă rugăm să semnalați o problemă sau să creați un PR. Acestea sunt estimări făcute de echipa ethereum.org utilizând informații accesibile publicului și ce este în faza de proiect pentru Ethereum. Aceasta nu reprezintă o promisiune oficială din partea Fundației Ethereum.
-</InfoBanner>
+  </AlertEmoji>
+</Alert>

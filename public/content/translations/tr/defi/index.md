@@ -63,12 +63,13 @@ Ethereum bunun üzerine kurulu. Bitcoin gibi, kurallar sizin aleyhinize değişe
 
 Bu kulağa tuhaf geliyor... "Neden paramı programlamak isteyeyim ki"? Bununla birlikte, bu daha çok Ethereum'daki token'ların varsayılan bir özelliğidir. Herkes ödemelerin içine mantık programlayabilir. Böylece Bitcoin'in kontrolünü ve güvenliğini finans kurumlarının sunduğu hizmetler ile karıştırarak elde edebilirsiniz. Bu, borç verme ve borç alma, ödemeleri planlama, endeks fonlarına yatırım yapma ve daha fazlası gibi Bitcoin ile yapamayacağınız şeyleri kripto para birimleriyle yapmanızı sağlar.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Ethereum'da yeniyseniz denemek için DeFi uygulamalarına yönelik önerilerimizi keşfedin.</div>
   <ButtonLink href="/dapps/?category=finance#explore">
     DeFi uygulamalarını keşfet
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## DeFi ile ne yapabilirsiniz? {#defi-use-cases}
 

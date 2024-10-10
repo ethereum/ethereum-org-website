@@ -122,11 +122,14 @@ Az interakciók többsége Discordon történik. A támogatást színlelő csal�
 - Sose engedje, hogy bárki távolról hozzáférjen a gépéhez
 - Sose kommunikáljon senkivel a szervezet dedikált csatornáin kívül
 
-<InfoBanner emoji=":lock:">
+<Alert>
+<AlertEmoji text=":lock:" />
+<AlertContent>
   <div>
     Legyen tudatában: hogy a támogatást ajánló csalók gyakran a Discordon jelennek meg, de bármilyen kommunikációs formában ott lehetnek, legyen az chat vagy email.
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### „ETH2” hamis token {#eth2-token-scam}
 
@@ -213,11 +216,14 @@ Az erős jelszó sem véd meg akkor, ha kiszivárog egy adatvédelmi incidens so
 
 ### Használjon jelszókezelőt {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
+<Alert>
+<AlertEmoji text=":bulb:" />
+<AlertContent>
   <div>
     A jelszókezelő erős, egyedi jelszavakat hoz létre és meg is jegyzi azokat! <strong>Erősen</strong> ajánljuk, hogy használjon ilyet, és a legtöbb ingyen van!
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Az erős, egyedi jelszavakat nem túl ideális megjegyezni az összes számlához. A jelszókezelő egy biztonságos, titkosított tárhelyet biztosít az összes jelszónak, amit egy erős mesterjelszóval tud elérni. Az új szolgáltatásokra való bejelentkezéseknél is erős jelszavakat ajánl, így Önnek nem kell kitalálnia azt. Számos jelszókezelő azt is megmondja, hogy Ön érintett-e adatszivárgásban, így lecserélheti a jelszavait, mielőtt támadás érné.
 
@@ -240,7 +246,9 @@ Különböző egyedi bizonyítékok bemutatásával igazolhatja, hogy Ön valób
 
 A **kéttényezős azonosítás (2FA)** egy plusz *biztonsági tényezőt* ad az online számlákhoz, így a jelszó (amit Ön tud) önmagában nem elég annak eléréséhez. Általában a második tényező egy véletlenszerű hatjegyű kód, ami egy **időzített egyszeri jelszó (TOTP)**, amit egy azonosítási alkalmazással ér el, mint a Google Authenticator vagy Authy. Ez az a tényező, ami az Ön birtokában van, mert a kódot adó mag az Ön eszközén található.
 
-<InfoBanner emoji=":lock:">
+<Alert>
+<AlertEmoji text=":lock:" />
+<AlertContent>
   <div>
     Megjegyzés: az SMS-alapú 2FA azonosítás ki van téve a 
     <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
@@ -252,7 +260,8 @@ A **kéttényezős azonosítás (2FA)** egy plusz *biztonsági tényezőt* ad a
     </a>
      vagy az <a href="https://authy.com/">Authy</a>.
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Biztonsági kulcsok {#security-keys}
 

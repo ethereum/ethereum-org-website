@@ -49,12 +49,13 @@ Anda boleh melihat perkembangan transaksi tersebut pada mana-mana peneroka blok 
 Anda akan secara automatik menerima token yang ditukar dalam dompet anda sebaik sahaja transaksi diproses.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Mahu belajar lebih lanjut?</div>
   <ButtonLink href="/guides/">
     Lihat panduan-panduan lain kami
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Soalan yang kerap ditanya
 

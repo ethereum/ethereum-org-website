@@ -38,12 +38,13 @@ Depois de salvar sua frase de recuperação, você verá o painel da sua carteir
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Quer saber mais?</div>
   <ButtonLink href="/guides/">
     Veja nossos outros guias
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Perguntas frequentes
 

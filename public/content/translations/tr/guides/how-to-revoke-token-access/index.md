@@ -43,16 +43,21 @@ Kaldırdığınızda, cüzdanınızda yeni bir işlem önerisi görmelisiniz. Bu
 
 Kaldırılmış sözleşmenin listeden gidip gitmediğini kontrol etmek için birkaç dakika sonra kaldırma aracını yenilemenizi öneririz.
 
-<mark>Asla projelere token'larınıza sınırsız erişim vermemenizi ve tüm token izinlerini düzenli olarak kaldırmanızı öneririz. Token erişimini kaldırmak asla bir fon kaybına sebep olmamalı, özellikle de yukarıda listelenmiş araçları kullanırsanız.</mark>
+<div className="space-y-8">
+<Alert variant="error">
+Asla projelere token'larınıza sınırsız erişim vermemenizi ve tüm token izinlerini düzenli olarak kaldırmanızı öneririz. Token erişimini kaldırmak asla bir fon kaybına sebep olmamalı, özellikle de yukarıda listelenmiş araçları kullanırsanız.
+</Alert>
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>
   <ButtonLink href="/guides/">
     Diğer rehberlerimizi inceleyin
   </ButtonLink>
-</InfoBanner>
+</Alert>
+</div>
 
 ## Sıkça sorulan sorular
 

@@ -8,9 +8,12 @@ lang: tr
 
 Ethereum.org web sitesi, daha geniş anlamda Ethereum gibi açık kaynaklı bir projedir. Bu nedenle, [Ethereum portalımızı](/about/) geliştirmeye yardımcı olmak istiyorsanız, bunu nasıl yapabileceğinizi gösterelim.
 
-<InfoBanner shouldCenter emoji=":tada:">
+<Alert className="max-w-[55rem] mx-auto">
+<AlertEmoji text=":tada:"/>
+<AlertContent>
   POAP token'ınızı talep edin! 2022'de ethereum.org'a katkıda bulunduysanız, sizi bekleyen benzersiz bir POAP bulunuyor.{" "} <a href="#poap">POAP'ler hakkında daha fazla bilgi</a>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Katkıda bulunma yolları {#ways-to-contribute}
 

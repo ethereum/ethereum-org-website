@@ -49,12 +49,13 @@ Bármelyik blokkláncböngészővel megtekintheti a tranzakció állapotát. Ez 
 A tranzakció végrehajtása után automatikusan megkapja a tárcájába a beszerzett tokent.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Szeretne többet megtudni?</div>
   <ButtonLink href="/guides/">
     Tekintse meg a további útmutatóinkat
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Gyakran ismételt kérdések
 

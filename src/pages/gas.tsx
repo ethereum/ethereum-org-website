@@ -31,7 +31,6 @@ import FeedbackCard from "@/components/FeedbackCard"
 import GhostCard from "@/components/GhostCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
-import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
@@ -40,6 +39,7 @@ import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import Pill from "@/components/Pill"
 import Translation from "@/components/Translation"
+import { Alert, AlertContent, AlertTitle } from "@/components/ui/alert"
 import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -182,13 +182,18 @@ const GasPage = () => {
           w="full"
         >
           <Box flex="60%" w="full" me={{ base: "auto", lg: 2 }}>
-            <InfoBanner mb={8} title={t("page-gas-summary-title")}>
-              <UnorderedList>
-                <ListItem>{t("page-gas-summary-item-1")}</ListItem>
-                <ListItem>{t("page-gas-summary-item-2")}</ListItem>
-                <ListItem>{t("page-gas-summary-item-3")}</ListItem>
-              </UnorderedList>
-            </InfoBanner>
+            <Alert className="mb-8">
+              <AlertContent>
+                <AlertTitle className="mb-6">
+                  {t("page-gas-summary-title")}
+                </AlertTitle>
+                <ul className="mb-0">
+                  <li>{t("page-gas-summary-item-1")}</li>
+                  <li>{t("page-gas-summary-item-2")}</li>
+                  <li>{t("page-gas-summary-item-3")}</li>
+                </ul>
+              </AlertContent>
+            </Alert>
             <H2 id="what-is-gas" mt={0}>
               {t("page-gas-what-are-gas-fees-header")}
             </H2>

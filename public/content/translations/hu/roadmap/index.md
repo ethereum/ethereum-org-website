@@ -67,12 +67,14 @@ Az ütemterv a kutatók és fejlesztők több évnyi munkájának eredménye, mi
 
 </RoadmapImageContent>
 
-<InfoBanner mb={8}>
+<Alert className="mb-8">
+<AlertContent>
   <h4 style={{ marginTop: 0 }}>Mi volt az ETH2?</h4>
 
-  <p>Az „Eth2” kifejezéssel az Ethereum jövőjére hivatkoztak, mielőtt még áttért volna a <a href="/glossary/#pos">proof-of-stake</a> mechanizmusra, de <strong>elhagyták ezt a kifejezést, hogy sokkal pontosabb terminológiát használjanak helyette</strong>. Eredetileg az átállás előtti és utáni állapot megkülönböztetésére használták, vagy néha a különböző Ethereum-kliensekre (a <a href="/glossary/#execution-client">végrehajtási kliensek</a> néha ETH1-kliensként, a <a href="/glossary/#consensus-client">konszenzuskliensek</a> pedig ETH2-kliensként jelentek meg).</p>
+  <p className="mb-0">Az „Eth2” kifejezéssel az Ethereum jövőjére hivatkoztak, mielőtt még áttért volna a <a href="/glossary/#pos">proof-of-stake</a> mechanizmusra, de <strong>elhagyták ezt a kifejezést, hogy sokkal pontosabb terminológiát használjanak helyette</strong>. Eredetileg az átállás előtti és utáni állapot megkülönböztetésére használták, vagy néha a különböző Ethereum-kliensekre (a <a href="/glossary/#execution-client">végrehajtási kliensek</a> néha ETH1-kliensként, a <a href="/glossary/#consensus-client">konszenzuskliensek</a> pedig ETH2-kliensként jelentek meg).</p>
 
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Fog változni az Ethereum ütemterve? {#will-ethereums-roadmap-change-over-time}
 

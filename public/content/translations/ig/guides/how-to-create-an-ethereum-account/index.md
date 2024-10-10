@@ -40,12 +40,13 @@ Ozugbo i chekwachara mkpụrụ nkebi ahịrịokwu gị, ị ga-ahụ dashbọ�
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Chọrọ ịmụtakwu?</div>
   <ButtonLink href="/guides/">
     Hụ ntuziaka anyị ndị ọzọ
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Frequently asked questions
 

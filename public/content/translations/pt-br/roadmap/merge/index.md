@@ -37,9 +37,11 @@ A integração representou a mudança oficial para o uso da Beacon Chain como o 
 
 Nenhuma história foi perdida na Fusão. À medida que a Rede principal se uniu com a Beacon Chain, ela também integrou todo o histórico transacional do Ethereum.
 
-<InfoBanner>
+<Alert>
+<AlertContent>
 Essa transição para a prova de participação mudou o modo como o ether é emitido. Saiba mais sobre <a href="/roadmap/merge/issuance/">Emissão de ether antes de depois do The Merge</a>.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Usuários e titulares {#users-holders}
 

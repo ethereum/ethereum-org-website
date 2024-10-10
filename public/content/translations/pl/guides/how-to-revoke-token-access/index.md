@@ -43,16 +43,21 @@ Po kliknięciu przycisku unieważnienia, w portfelu powinna pojawić się sugest
 
 Zalecamy odświeżenie narzędzia do unieważniania po kilku minutach i ponowne podłączenie portfela, aby dwukrotnie sprawdzić, czy unieważniony kontrakt zniknął z listy.
 
-<mark>Zalecamy, aby nigdy nie zezwalać projektom na nieograniczony dostęp do tokenów i regularnie unieważniać wszystkie uprawnienia do tokenów. Unieważnienie dostępu do tokenów nigdy nie powinno skutkować utratą środków, zwłaszcza jeśli korzystasz z narzędzi wymienionych powyżej.</mark>
+<div className="space-y-8">
+<Alert variant="error">
+Zalecamy, aby nigdy nie zezwalać projektom na nieograniczony dostęp do tokenów i regularnie unieważniać wszystkie uprawnienia do tokenów. Unieważnienie dostępu do tokenów nigdy nie powinno skutkować utratą środków, zwłaszcza jeśli korzystasz z narzędzi wymienionych powyżej.
+</Alert>
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Chcesz dowiedzieć się więcej?</div>
   <ButtonLink href="/guides/">
     Zobacz nasze inne przewodniki
   </ButtonLink>
-</InfoBanner>
+</Alert>
+</div>
 
 ## Często zadawane pytania
 

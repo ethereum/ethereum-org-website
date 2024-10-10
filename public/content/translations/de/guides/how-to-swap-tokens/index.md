@@ -49,12 +49,13 @@ Sie können den Fortschritt der Transaktion auf jedem Blockchain-Explorer ansehe
 Sie werden die getauschten Token automatisch in Ihrer Krypto-Wallet erhalten, wenn die Transaktion verarbeitet wurde.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Möchten Sie mehr erfahren?</div>
   <ButtonLink href="/guides/">
     Sehen Sie unsere anderen Anleitungen
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Häufig gestellte Fragen
 

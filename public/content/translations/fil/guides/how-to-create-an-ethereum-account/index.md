@@ -40,12 +40,13 @@ Kapag na-save mo na ang iyong seed phrase, makikita mo ang iyong balanse sa dash
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Gusto mong magbasa pa?</div>
   <ButtonLink href="/guides/">
     Tingnan ang iba pa naming gabay
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Mga karaniwang itanong
 

@@ -43,16 +43,21 @@ Lorsque vous cliquez sur révoquer, vous devriez voir une nouvelle proposition d
 
 Nous vous conseillons de rafraîchir l'outil de révocation après quelques minutes et de reconnecter votre portefeuille pour vérifier à nouveau si le contrat révoqué a disparu de la liste.
 
-<mark>Nous vous recommandons de ne jamais autoriser de projets ayant un accès illimité à vos fonds et de révoquer régulièrement l'intégralité des droits de vos contrats intelligents. La révocation de l'accès aux jetons ne devrait jamais entraîner une perte de fonds, surtout si vous utilisez les outils mentionnés ci-dessus.</mark>
+<div className="space-y-8">
+<Alert variant="error">
+Nous vous recommandons de ne jamais autoriser de projets ayant un accès illimité à vos fonds et de révoquer régulièrement l'intégralité des droits de vos contrats intelligents. La révocation de l'accès aux jetons ne devrait jamais entraîner une perte de fonds, surtout si vous utilisez les outils mentionnés ci-dessus.
+</Alert>
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Vous voulez en savoir plus ?</div>
   <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>
-</InfoBanner>
+</Alert>
+</div>
 
 ## Questions fréquemment posées
 

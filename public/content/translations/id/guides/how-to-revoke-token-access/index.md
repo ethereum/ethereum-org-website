@@ -43,16 +43,21 @@ Setelah mengklik cabut, Anda akan melihat saran transaksi baru di dompet Anda. H
 
 Kami menyarankan Anda untuk menyegarkan alat pencabutan setelah beberapa menit dan menghubungkan dompet Anda lagi untuk memeriksa apakah kontrak yang dicabut sudah hilang dari daftar.
 
-<mark>Kami menyarankan Anda untuk tidak pernah mengizinkan proyek memiliki akses tanpa batas ke token Anda dan mencabut semua akses token secara teratur. Mencabut akses token tidak akan pernah mengakibatkan hilangnya dana, terutama jika Anda menggunakan perangkat yang tercantum di atas.</mark>
+<div className="space-y-8">
+<Alert variant="error">
+Kami menyarankan Anda untuk tidak pernah mengizinkan proyek memiliki akses tanpa batas ke token Anda dan mencabut semua akses token secara teratur. Mencabut akses token tidak akan pernah mengakibatkan hilangnya dana, terutama jika Anda menggunakan perangkat yang tercantum di atas.
+</Alert>
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Ingin mempelajari selengkapnya?</div>
   <ButtonLink href="/guides/">
     Lihat panduan lainnya
   </ButtonLink>
-</InfoBanner>
+</Alert>
+</div>
 
 ## Pertanyaan yang sering diajukan
 

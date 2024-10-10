@@ -37,9 +37,11 @@ Fuziunea a reprezentat trecerea oficială la folosirea Lanțului Beacon drept mo
 
 Niciun istoric nu a fost pierdut în Fuziune. Când Rețeaua principală a fuzionat cu Lanțul Beacon, a fuzionat cu întregul istoric al tranzacțiilor Ethereum.
 
-<InfoBanner>
+<Alert>
+<AlertContent>
 Această tranziție la dovada mizei a schimbat felul în care este emis eterul. Aflați mai multe despre <a href="/roadmap/merge/issuance/">emiterea de eter înainte și după Fuziune</a>.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Utilizatori și deținători {#users-holders}
 

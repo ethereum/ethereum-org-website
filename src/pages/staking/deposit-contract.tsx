@@ -33,13 +33,13 @@ import CardList from "@/components/CardList"
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
-import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
+import { Alert, AlertEmoji } from "@/components/ui/alert"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -490,14 +490,15 @@ const DepositContractPage = () => {
                   </ButtonRow>
                 </>
               )}
-              <InfoBanner isWarning emoji=":warning:">
+              <Alert variant="error">
+                <AlertEmoji text=":warning:" />
                 <div>
                   {t("page-staking-deposit-contract-warning-2")}{" "}
                   <InlineLink href="https://launchpad.ethereum.org">
                     {t("page-staking-deposit-contract-launchpad-2")}
                   </InlineLink>
                 </div>
-              </InfoBanner>
+              </Alert>
             </Box>
           </AddressCard>
         </RightColumn>

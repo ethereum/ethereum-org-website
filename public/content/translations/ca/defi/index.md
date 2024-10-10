@@ -63,12 +63,13 @@ Ethereum desenvolupa tot això. Com Bitcoin, les regles no es poden canviar i to
 
 Sona estrany... «per què he de voler programar els meus diners»? En tot cas, aquesta és una característica per defecte dels tókens a Ethereum. Tothom pot programar lògica en els pagaments. Així teniu el control i la seguretat de Bitcoin juntament amb els serveis que proporcionen les institucions financeres. Això permet que feu coses amb criptomonedes que no podeu fer amb Bitcoin, com prestar i endeutar-te, programar pagaments, invertir en índexs, fons i altres.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Exploreu els nostres suggeriments d'aplicacions DeFi per provar-les, si sou novells a Ethereum.</div>
   <ButtonLink href="/dapps/?category=finance#explore">
     Exploreu aplicacions DeFi
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Què podeu fer amb DeFi? {#defi-use-cases}
 

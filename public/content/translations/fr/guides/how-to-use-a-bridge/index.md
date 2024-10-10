@@ -52,12 +52,13 @@ Cette opération ne devrait pas prendre plus de 10 minutes.
 Vous pouvez utiliser chainlist.org pour trouver les détails RPC du réseau. Une fois le réseau ajouté et la transaction terminée, vous devriez voir les jetons dans votre portefeuille.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Vous voulez en savoir plus ?</div>
   <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Questions fréquemment posées
 

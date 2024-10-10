@@ -62,12 +62,13 @@ Votre adresse sera la même pour tous les projets Ethereum. Vous n'avez pas beso
 5. Confirmez la demande de signature dans votre portefeuille pour établir la connexion. **La signature de ce message ne devrait pas nécessiter de dépenser des ETH**.
 6. C’est tout! Commencez à utiliser l'application. Vous pouvez trouver des projets intéressants sur notre page [dApps](/dapps/#explore). <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Vous voulez en savoir plus ?</div>
   <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Questions fréquemment posées
 

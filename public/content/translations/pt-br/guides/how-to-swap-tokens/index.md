@@ -49,12 +49,13 @@ Você pode ver o progresso da transação em qualquer explorador de blockchain. 
 Você receberá automaticamente os tokens trocados em sua carteira assim que a transação for processada.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Quer saber mais?</div>
   <ButtonLink href="/guides/">
     Veja nossos outros guias
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Perguntas frequentes
 

@@ -14,15 +14,16 @@ import ContributorsQuizBanner from "../Banners/ContributorsQuizBanner"
 import Card from "../Card"
 import DocLink from "../DocLink"
 import Emoji from "../Emoji"
+import EnvWarningBanner from "../EnvWarningBanner"
 import ExpandableCard from "../ExpandableCard"
 import FeaturedText from "../FeaturedText"
 import GlossaryTooltip from "../Glossary/GlossaryTooltip"
 import IdAnchor from "../IdAnchor"
-import InfoBanner from "../InfoBanner"
 import IssuesList from "../IssuesList"
 import LocaleDateTime from "../LocaleDateTime"
 import MainArticle from "../MainArticle"
 import { StandaloneQuizWidget } from "../Quiz/QuizWidget"
+import * as AlertComponents from "../ui/alert"
 import { ButtonLink } from "../ui/buttons/Button"
 import { Divider } from "../ui/divider"
 import { Flex } from "../ui/flex"
@@ -154,6 +155,7 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
 
 // All custom React components
 export const reactComponents = {
+  ...AlertComponents,
   Badge,
   ButtonLink,
   Card,
@@ -163,10 +165,10 @@ export const reactComponents = {
   Divider,
   DocLink,
   Emoji,
+  EnvWarningBanner,
   ExpandableCard,
   FeaturedText,
   GlossaryTooltip,
-  InfoBanner,
   Page,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,

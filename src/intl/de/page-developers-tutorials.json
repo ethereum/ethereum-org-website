@@ -21,5 +21,6 @@
   "page-tutorial-external-link": "Extern",
   "page-tutorials-meta-title": "Ethereum Community-Tutorials",
   "page-find-wallet-try-removing": "Versuchen Sie ein oder zwei Funktionen zu entfernen",
-  "page-find-wallet-clear": "Filter aufheben"
+  "page-find-wallet-clear": "Filter aufheben",
+  "page-tutorials-env-banner": "Führen Sie keinen Commit für <code>.env</code> aus. Stellen Sie sicher, dass Sie Ihre <code>.env</code>-Datei niemals an andere weitergeben, denn damit würden Sie Ihre geheimen Daten weitergeben. Wenn Sie die Versionskontrolle verwenden, fügen Sie Ihre <code>Env-Datei</code> zu einer Datei <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> hinzu."
 }

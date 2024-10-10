@@ -37,9 +37,11 @@ summaryPoint4: 合併將以太坊的能源消耗降低了約 99.95%。
 
 合併中，歷史記錄不會丟失。 隨著主網與信標鏈合併，以太坊的所有交易記錄也已一併整合。
 
-<InfoBanner>
+<Alert>
+<AlertContent>
 這種向權益證明的過渡改變了以太幣的發行方式。 瞭解<a href="/roadmap/merge/issuance/">合併前後的以太幣發行</a>的更多相關資訊。
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### 使用者及持有者 {#users-holders}
 

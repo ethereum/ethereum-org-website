@@ -1,6 +1,6 @@
 ---
 title: Cos'è Web3 e perché è importante?
-description: 'Un''introduzione al Web3: la prossima evoluzione del World Wide Web e perché conta.'
+description: "Un'introduzione al Web3: la prossima evoluzione del World Wide Web e perché conta."
 lang: it
 ---
 
@@ -61,12 +61,13 @@ Il Web3 ti dà la proprietà delle tue risorse digitali in un modo senza precede
 
 Il Web3 consente la proprietà diretta tramite i [token non fungibili (NFT)](/glossary/#nft). Nessuno, nemmeno i creatori del gioco, ha il potere di toglierti la proprietà. E, se smetti di giocare, puoi vendere o scambiare i tuoi oggetti di gioco sui mercati aperti e recuperarne il valore.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Maggiori informazioni sugli NFT</div>
   <ButtonLink href="/nft/">
     Maggiori informazioni sui NFT
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 #### Resistenza alla censura {#censorship-resistance}
 
@@ -86,12 +87,13 @@ Le DAO sono tecnicamente definite come [contratti intelligenti](/glossary/#smart
 
 Tuttavia, le persone definiscono molte community del Web3 come DAO. Queste community hanno tutte diversi livelli di decentralizzazione e automatizzazzione per codice. Correntemente, stiamo esplorando cosa sono le DAO e come potrebbero evolversi in futuro.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Impara di più sulle DAO</div>
   <ButtonLink href="/dao/">
     Di più sulle DAO
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ### Identità {#identity}
 

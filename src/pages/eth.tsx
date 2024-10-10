@@ -24,7 +24,6 @@ import EthVideo from "@/components/EthVideo"
 import FeedbackCard from "@/components/FeedbackCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
-import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
@@ -32,6 +31,7 @@ import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
+import { Alert, AlertContent, AlertEmoji } from "@/components/ui/alert"
 import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -421,14 +421,17 @@ const EthPage = () => {
               />
             ))}
           </CardContainer>
-          <InfoBanner emoji=":wave:" shouldCenter>
-            <Text as="b">{t("page-eth-buy-some")}</Text>{" "}
-            <Translation id="page-eth:page-eth-buy-some-desc" />{" "}
-            <InlineLink href="/what-is-ethereum/">
-              {t("page-eth-more-on-ethereum-link")}
-            </InlineLink>
-            {t("page-eth-period")}
-          </InfoBanner>
+          <Alert variant="warning" className="mx-auto max-w-[55rem]">
+            <AlertEmoji text=":wave:" />
+            <div>
+              <b>{t("page-eth-buy-some")}</b>{" "}
+              <Translation id="page-eth:page-eth-buy-some-desc" />{" "}
+              <InlineLink href="/what-is-ethereum/">
+                {t("page-eth-more-on-ethereum-link")}
+              </InlineLink>
+              {t("page-eth-period")}
+            </div>
+          </Alert>
         </Content>
       </GrayContainer>
       <Content>
@@ -471,9 +474,11 @@ const EthPage = () => {
               description={t("page-eth-whats-defi-description")}
               image={defi}
             />
-            <InfoBanner isWarning>
-              <Translation id="page-eth:page-eth-weth" />
-            </InfoBanner>
+            <Alert variant="error">
+              <AlertContent>
+                <Translation id="page-eth:page-eth-weth" />
+              </AlertContent>
+            </Alert>
           </Box>
           <TextDivider />
           <Box>

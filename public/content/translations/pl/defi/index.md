@@ -63,12 +63,13 @@ Ethereum opiera się na tych zasadach. Podobnie jak w przypadku Bitcoin, są one
 
 To brzmi dziwnie... „Dlaczego mam programować moje pieniądze?” W ekosystemie Ethereum jest to jednak domyślna cecha wszystkich tokenów. Każdy może wprowadzić do systemu płatności dowolną logikę. Takie rozwiązanie nie tylko zapewnia bezpieczeństwo środków i ich kontrolę, jak w przypadku Bitcoin, ale także dostęp do usług finansowych. Umożliwia również używanie kryptowalut do działań niemożliwych w przypadku Bitcoin: pożyczania i bycia pożyczkodawcą, planowania płatności w czasie, inwestowania w fundusze i znacznie więcej.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Zobacz nasze sugerowane aplikacje DeFi i przetestuj je, jeśli nie znasz jeszcze ekosystemu Ethereum.</div>
   <ButtonLink href="/dapps/?category=finance">
     Eksploruj aplikacje DeFi
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Co mogę robić w DeFi? {#defi-use-cases}
 

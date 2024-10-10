@@ -43,16 +43,21 @@ Kapag na-click mo na ang bawiin, may makikita kang suhestyon sa bagong transaksy
 
 Ipinapayo naming i-refresh mo ang tool para sa pagbawi pagkalipas ng ilang minuto at ikonekta ulit ang iyong wallet para i-double check kung nawala na sa listahan ang binawing contract.
 
-<mark>Inirerekomenda rin naming huwag mong bigyan ng walang limitasyong access sa iyong mga token ang mga proyekto at regular na bawiin ang lahat ng access sa token allowance. Hindi ka dapat mawalan ng pondo kapag binawi mo ang access sa token, lalo na kung ginamit mo ang mga tool na nakalista sa itaas.</mark>
+<div className="space-y-8">
+<Alert variant="error">
+Inirerekomenda rin naming huwag mong bigyan ng walang limitasyong access sa iyong mga token ang mga proyekto at regular na bawiin ang lahat ng access sa token allowance. Hindi ka dapat mawalan ng pondo kapag binawi mo ang access sa token, lalo na kung ginamit mo ang mga tool na nakalista sa itaas.
+</Alert>
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Gusto mong magbasa pa?</div>
   <ButtonLink href="/guides/">
     Tingnan ang iba pa naming gabay
   </ButtonLink>
-</InfoBanner>
+</Alert>
+</div>
 
 ## Mga karaniwang itanong
 

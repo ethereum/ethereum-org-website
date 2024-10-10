@@ -14,11 +14,11 @@ import { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
 import { ButtonLink } from "../Buttons"
 import CardList from "../CardList"
-import InfoBanner from "../InfoBanner"
 import InlineLink, { BaseLink } from "../Link"
 import OldHeading from "../OldHeading"
 import Text from "../OldText"
 import Translation from "../Translation"
+import { Alert, AlertContent, AlertEmoji } from "../ui/alert"
 
 import {
   AccordionCustomItem,
@@ -122,13 +122,18 @@ const StablecoinAccordion = () => {
               descId="page-stablecoins-accordion-swap-requirement-2-description"
             />
           </StepBoxContainer>
-          <InfoBanner emoji=":light_bulb:">
-            <H4>{t("page-stablecoins-accordion-swap-editors-tip")}</H4>
-            <Text>{t("page-stablecoins-accordion-swap-editors-tip-copy")}</Text>
-            <ButtonLink href="/wallets/find-wallet/">
-              {t("page-stablecoins-accordion-swap-editors-tip-button")}
-            </ButtonLink>
-          </InfoBanner>
+          <Alert>
+            <AlertEmoji text=":light_bulb:" />
+            <AlertContent>
+              <H4>{t("page-stablecoins-accordion-swap-editors-tip")}</H4>
+              <Text>
+                {t("page-stablecoins-accordion-swap-editors-tip-copy")}
+              </Text>
+              <ButtonLink href="/wallets/find-wallet/">
+                {t("page-stablecoins-accordion-swap-editors-tip-button")}
+              </ButtonLink>
+            </AlertContent>
+          </Alert>
         </LeftColumnPanel>
         <RightColumnPanel>
           <SectionTitle>
@@ -161,9 +166,11 @@ const StablecoinAccordion = () => {
               descId="page-stablecoins-accordion-buy-requirement-1-description"
             />
           </StepBoxContainer>
-          <InfoBanner isWarning>
-            {t("page-stablecoins-accordion-buy-warning")}
-          </InfoBanner>
+          <Alert variant="error">
+            <AlertContent>
+              {t("page-stablecoins-accordion-buy-warning")}
+            </AlertContent>
+          </Alert>
         </LeftColumnPanel>
         <RightColumnPanel>
           <SectionTitle>

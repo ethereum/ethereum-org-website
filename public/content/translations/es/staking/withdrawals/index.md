@@ -43,9 +43,12 @@ Antes de la actualización Shanghai/Capella, no se podía usar o acceder a sus E
 
 Proporcionar una dirección de retirada es un paso obligatorio para cualquier cuenta de validdor antes de que sea elegible para que se retiren ETH de su saldo.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="error">
+<AlertEmoji text="⚠️" />
+<AlertContent>
   <strong>A cada cuenta de validador sólo se le puede asignar una dirección de retirada, una vez.</strong> Cuando se elige una dirección y se envía a la capa de consenso, no puede deshacerse ni cambiarse nuevamente. Vuelva a verificar la propiedad y la precisión de la dirección proporcionada antes de enviarla.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Mientras tanto <strong>no hay ninguna amenaza para sus fondos</strong> por no proporcionar esto, asumiendo que su frase mnemónica/de recuperación esté segura fuera de línea, y no se vea afectada de ninguna manera. Si no agrega las credenciales de retirada, simplemente dejará los ETH bloqueados en la cuenta del validador como ha estado hasta que se proporcione una dirección de retirada.
 
@@ -82,11 +85,14 @@ Lea la explicación sobre retirads de apuestas en Ethereum hecha por Finematics:
 
 Cuando un validador está programado para proponer el siguiente bloque, se requiere construir una cola de retirada, de hasta 16 retiradas elegibles. Para ello se empieza originariamente con el índice del validador 0, que determina si hay una retirada elegible para esta cuenta según las reglas del protocolo y se añade a la cola, si existe. El validador establecido para proponer el siguiente bloque lo tomará ahí donde el último lo haya dejado y irá procesando las órdenes de manera indefinida.
 
-<InfoBanner emoji="🕛">
+<Alert>
+<AlertEmoji text="🕛" />
+<AlertContent>
 Piense en un reloj analógico. La manecilla en el reloj marca la hora, avanza en un sentido, no se salta ninguna hora y, al alcanzar el último número, vuelve nuevamente al punto de inicio.<br/><br/>
 Ahora en lugar del 1 al 12, imagine que el reloj tiene de 0 hasta N <em>(el número total de cuentas validadoras que alguna vez se registraron en la capa de consenso, más de 500.000 en enero de 2023).</em><br/><br/>
 La manecilla en el reloj apunta hacia el siguiente validador que necesita ser verificado antes de permitirle retiradas. Empieza a partir de 0, y avanza todo el camino alrededor sin saltarse ninguna cuenta. Cuando se alcance el último validador, el ciclo continúa volviendo al principio.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Cómo comprobar si una cuenta es elegible para retirada {#checking-an-account-for-withdrawals}
 

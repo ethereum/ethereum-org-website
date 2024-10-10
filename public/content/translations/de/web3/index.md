@@ -61,12 +61,13 @@ Web3 verschafft Ihnen auf eine beispiellose Weise das Eigentum an Ihren digitale
 
 Web3 ermöglicht direktes Eigentum durch [nicht-austauschbare Token (NFTs)](/glossary/#nft). Niemand, nicht einmal die Macher des Spiels, hat die Macht, Ihnen Ihr Eigentum wegzunehmen. Und sollten Sie mit dem Spielen aufhören, können Sie Ihre Spielgegenstände auf offenen Märkten verkaufen oder tauschen und so ihren Wert zurückerlangen.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Mehr über NFTs erfahren</div>
   <ButtonLink href="/nft/">
     Mehr zu NFTs
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 #### Resistent gegenüber Zensur {#censorship-resistance}
 
@@ -86,12 +87,13 @@ DAOs werden technisch definiert als vereinbarte [Smart Contracts](/glossary/#sma
 
 Allerdings definieren Menschen viele Web3-Communities als DAOs. Diese Gemeinschaften haben alle unterschiedliche Ebenen der Dezentralisierung und Automatisierung per Code. Derzeit untersuchen wir, was DAOs sind und wie sie sich in Zukunft entwickeln könnten.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Erfahren Sie mehr über DAOs</div>
   <ButtonLink href="/dao/">
     Mehr über DAOs
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ### Identität {#identity}
 

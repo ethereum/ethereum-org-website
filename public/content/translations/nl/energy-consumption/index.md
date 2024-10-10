@@ -61,9 +61,12 @@ _We moeten ook bedenken dat Ethereum niet beperkt is tot eenvoudige financiële 
 
 Hoewel het energieverbruik van Ethereum historisch aanzienlijk is, is er veel tijd en intellect van ontwikkelaars geïnvesteerd in de overgang van energiehongerige naar energie-efficiënte blokvalidatie. Om [Bankless](http://podcast.banklesshq.com/)te citeren: de beste manier om de energie te verminderen die door proof-of-work wordt verbruikt, is door het simpelweg "uit te schakelen", wat de aanpak is die Ethereum heeft aangenomen.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert>
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
   Als u denkt dat deze statistieken onjuist zijn of nauwkeuriger kunnen worden gemaakt, meld dan een probleem of PR. Dit zijn schattingen van het ethereum.org team die zijn gemaakt met publiek toegankelijke informatie en het huidige Ethereum-stappenplan. Deze verklaringen vertegenwoordigen geen officiële belofte van de Ethereum Foundation.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Verder lezen {#further-reading}
 

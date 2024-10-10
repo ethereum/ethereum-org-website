@@ -65,12 +65,14 @@ O planejamento é, em grande parte, o resultado de anos de trabalho de pesquisad
 
 </RoadmapImageContent>
 
-<InfoBanner mb={8}>
+<Alert className="mb-8">
+<AlertContent>
   <h4 style={{ marginTop: 0 }}>O que era ETH2?</h4>
 
-  <p>O termo "Eth2" era normalmente usado para descrever o futuro do Ethereum antes da mudança para a prova de participação, mas foi <strong>eliminado em favor de uma terminologia mais exata.</strong> Originalmente, era utilizado para diferenciar a rede Ethereum antes da mudança para a prova de participação e a rede depois, ou às vezes para se referir aos diferentes clientes Ethereum (os clientes de execução eram às vezes chamados de clientes ETH1 e os clientes de consenso eram às vezes chamados de clientes ETH2).</p>
+  <p className="mb-0">O termo "Eth2" era normalmente usado para descrever o futuro do Ethereum antes da mudança para a prova de participação, mas foi <strong>eliminado em favor de uma terminologia mais exata.</strong> Originalmente, era utilizado para diferenciar a rede Ethereum antes da mudança para a prova de participação e a rede depois, ou às vezes para se referir aos diferentes clientes Ethereum (os clientes de execução eram às vezes chamados de clientes ETH1 e os clientes de consenso eram às vezes chamados de clientes ETH2).</p>
 
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## O planejamento do Ethereum mudará ao longo do tempo? {#will-ethereums-roadmap-change-over-time}
 

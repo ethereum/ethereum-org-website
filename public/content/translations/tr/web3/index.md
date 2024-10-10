@@ -61,12 +61,13 @@ Web3, dijital varlıklarınızın mülkiyet hakkını benzeri görülmemiş bir 
 
 Web3, [eşsiz jetonlar (NFT'ler)](/nft/) aracılığıyla doğrudan mülkiyete izin verir. Hiç kimse, hatta oyunun yaratıcıları bile, mülkiyetinizi elinizden alma gücüne sahip değildir. Oyunu oynamayı bırakırsanız da oyun içi öğelerinizi açık pazarlarda satabilir veya takas edebilir ve değerini geri alabilirsiniz.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>NFT’ler hakkında daha fazlasını öğrenin</div>
   <ButtonLink href="/nft/">
     NFT'ler hakkında daha fazlası
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 #### Sansüre dayanıklılık {#censorship-resistance}
 
@@ -86,12 +87,13 @@ DAO'lar teknik olarak, bir kaynak havuzu (tokenler) üzerinde merkeziyetsiz kara
 
 Ancak, insanlar birçok Web3 topluluğunu DAO olarak tanımlar. Bu toplulukların tümü, koda göre farklı merkeziyetsizlik ve otomasyon seviyelerine sahiptir. Şu anda DAO'ların neler olduğunu ve gelecekte nasıl gelişebileceklerini araştırıyoruz.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>DAO’lar hakkında daha fazlasını öğrenin</div>
   <ButtonLink href="/dao/">
     DAO'lar hakkında daha fazlası
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ### Kimlik {#identity}
 

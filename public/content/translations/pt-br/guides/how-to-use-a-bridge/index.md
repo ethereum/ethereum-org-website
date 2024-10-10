@@ -52,12 +52,13 @@ Esse processo não deve demorar mais do que 10 minutos.
 Você pode usar [chainlist.org](http://chainlist.org) para encontrar os detalhes do RPC da rede. Quando a rede for adicionada e a transação terminada, você deverá ver os tokens na sua carteira.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Quer saber mais?</div>
   <ButtonLink href="/guides/">
     Veja nossos outros guias
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Perguntas frequentes
 

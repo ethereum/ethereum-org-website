@@ -53,9 +53,9 @@ Se alguém souber os locais aleatórios utilizados no compromisso, será fácil 
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="error" className="mb-8">
   Nem o Danksharding nem o Proto-Danksharding seguem o modelo tradicional de "fragmentação", que tinha como objetivo dividir o blockchain em várias partes. As cadeias de fragmentos não fazem mais parte do planejamento. Em vez disso, o Danksharding utiliza amostragem de dados distribuídos em blobs para dimensionar o Ethereum. Isso é muito mais simples de implementar. Às vezes, esse modelo é chamado de "fragmentação de dados".
-</InfoBanner>
+</Alert>
 
 ## O que é Danksharding? {#what-is-danksharding}
 

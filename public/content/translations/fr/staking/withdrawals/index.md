@@ -43,9 +43,12 @@ Avant la mise à niveau de Shanghai/Capella, vous ne pouviez pas utiliser l'ETH 
 
 Fournir une adresse de retrait est une étape requise pour tout compte de validateur avant d'être admissible à un retrait d'ETH sur son solde.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="error">
+<AlertEmoji text="⚠️" />
+<AlertContent>
   <strong>Chaque compte de validateur ne peut se voir attribué qu'une seule adresse de retrait.</strong> Une fois qu'une adresse est choisie et soumise à la couche de consensus, elle ne peut pas être annulée ou modifiée à nouveau. Vérifiez la propriété et l'exactitude de l'adresse fournie avant de la soumettre.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 Le fait de ne pas fournir cette adresse ne pose <strong>aucun danger pour vos fonds pendant ce temps</strong>, à condition que votre phrase mnémonique/de récupération soit restée en sécurité hors-ligne, et n'ait été compromise d'aucune façon. Ne pas ajouter d’identifiants de retrait laissera simplement l’ETH verrouillé sur le compte du validateur tel qu'il était jusqu'à jusqu’à ce qu’une adresse de retrait soit fournie.
 
@@ -82,11 +85,14 @@ Consultez cette explication de Finematics sur les retraits de staking d'Ethereum
 
 Lorsqu'un validateur doit proposer le bloc suivant, il est tenu de constituer une file d'attente de retraits, pouvant aller jusqu'à 16 retraits éligibles. Pour ce faire, on commence par l'index 0 du validateur, on détermine s'il existe un retrait éligible pour ce compte selon les règles du protocole et on l'ajoute à la file d'attente si tel est le cas. Le validateur configuré pour proposer le bloc suivant reprendra là où le précédent s'est arrêté, progressant dans l'ordre indéfiniment.
 
-<InfoBanner emoji="🕛">
+<Alert>
+<AlertEmoji text="🕛" />
+<AlertContent>
 Pensez à une horloge analogique. L'aiguille de l’horloge pointe vers l’heure, progresse dans une direction, ne saute pas d’heures, et finit par revenir au début après que le dernier nombre est atteint.<br/><br/>
 Maintenant au lieu de 1 à 12, imaginez que l'horloge a 0 à N <em>(le nombre total de comptes de validateur qui ont déjà été enregistrés sur la couche de consensus, plus de 500 000 en janvier 2023).</em><br/><br/>
 L'aiguille de l’horloge pointe vers le prochain validateur qui doit être vérifié pour les retraits éligibles. Il commence à 0 et progresse tout autour sans sauter de compte. Lorsque le dernier validateur est atteint, le cycle reprend au début.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### Vérification des retraits sur un compte {#checking-an-account-for-withdrawals}
 

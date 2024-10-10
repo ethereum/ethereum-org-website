@@ -62,12 +62,13 @@ Adreesị gị ga-abụ otu na nkwekọrịta Ethereum niile. I kwesighị ịde
 5. Kwado arịrịọ nke mbinye aka n'akpa ego ịntanetị gị iji guzobe njikọ ahụ. **Ibinye aka n'ozi a ekwesịghị iwe ETH ọbụla**.
 6. Ọ bụ ya! Malitezie iji ngwa ahụ. I nwere ike ịhụ ụfọdụ ọrụ dị mma na [peeji Ngwa nbipu anyị](/dapps/#explore). <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Chọrọ ịmụtakwu?</div>
   <ButtonLink href="/guides/">
     Hụ ntuziaka anyị ndị ọzọ
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Frequently asked questions
 

@@ -67,12 +67,14 @@ La tabella di marcia è principalmente il risultato di anni di lavoro da parte d
 
 </RoadmapImageContent>
 
-<InfoBanner mb={8}>
+<Alert className="mb-8">
+<AlertContent>
   <h4 style={{ marginTop: 0 }}>Cos'è stato l'ETH?</h4>
 
-  <p>Il termine 'Eth2' era utilizzato comunemente per descrivere il futuro di Ethereum prima del passaggio al <a href="/glossary/#pos">proof-of-stake</a>, ma è stato <strong>gradualmente eliminato in favore di una terminologia più precisa.</strong> Era originariamente utilizzato per differenziare la rete di Ethereum prima e dopo il passaggio al proof-of-stake, o talvolta per riferirsi a client di Ethereum differenti (i <a href="/glossary/#execution-client">client d'esecuzione</a> erano talvolta definiti come client ETH1 e i <a href="/glossary/#consensus-client">client di consenso</a> come client ETH2).</p>
+  <p className="mb-0">Il termine 'Eth2' era utilizzato comunemente per descrivere il futuro di Ethereum prima del passaggio al <a href="/glossary/#pos">proof-of-stake</a>, ma è stato <strong>gradualmente eliminato in favore di una terminologia più precisa.</strong> Era originariamente utilizzato per differenziare la rete di Ethereum prima e dopo il passaggio al proof-of-stake, o talvolta per riferirsi a client di Ethereum differenti (i <a href="/glossary/#execution-client">client d'esecuzione</a> erano talvolta definiti come client ETH1 e i <a href="/glossary/#consensus-client">client di consenso</a> come client ETH2).</p>
 
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## La tabella di marcia di Ethereum cambierà nel tempo? {#will-ethereums-roadmap-change-over-time}
 

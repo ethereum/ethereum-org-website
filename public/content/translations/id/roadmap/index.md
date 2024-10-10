@@ -65,12 +65,14 @@ Peta jalan ini sebagian besar adalah hasil kerja bertahun-tahun dari para peneli
 
 </RoadmapImageContent>
 
-<InfoBanner mb={8}>
+<Alert className="mb-8">
+<AlertContent>
   <h4 style={{ marginTop: 0 }}>Apa itu ETH2?</h4>
 
-  <p>Istilah 'Eth2' sebelumnya digunakan untuk menggambarkan masa depan Ethereum sebelum beralih ke konsep bukti kepemilikan, tetapi istilah ini <strong>kemudian perlahan ditinggalkan karena ada terminologi lain yang lebih tepat.</strong> Istilah ini pada awalnya digunakan untuk membedakan jaringan Ethereum sebelum beralih ke konsep bukti kepemilikan dan jaringan setelahnya, atau terkadang digunakan untuk menyebut klien Ethereum yang lain (klien eksekusi terkadang disebut sebagai klien ETH1 dan klien konsensus terkadang disebut sebagai klien ETH2).</p>
+  <p className="mb-0">Istilah 'Eth2' sebelumnya digunakan untuk menggambarkan masa depan Ethereum sebelum beralih ke konsep bukti kepemilikan, tetapi istilah ini <strong>kemudian perlahan ditinggalkan karena ada terminologi lain yang lebih tepat.</strong> Istilah ini pada awalnya digunakan untuk membedakan jaringan Ethereum sebelum beralih ke konsep bukti kepemilikan dan jaringan setelahnya, atau terkadang digunakan untuk menyebut klien Ethereum yang lain (klien eksekusi terkadang disebut sebagai klien ETH1 dan klien konsensus terkadang disebut sebagai klien ETH2).</p>
 
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Apakah peta jalan Ethereum akan berubah seiring dengan waktu? {#will-ethereums-roadmap-change-over-time}
 

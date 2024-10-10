@@ -62,12 +62,13 @@ Az Ön címe minden Ethereum-projekt esetében azonos. Nem kell regisztrálnia k
 5. Erősítse meg az aláírási kérést a tárcájában ahhoz, hogy a kapcsolat létrejöjjön. **Az üzenet aláírása nem kerül ETH-pénzeszközbe**.
 6. Készen is van! Kezdje el használni az alkalmazást. Számos érdekes projektet találhat a [dapp oldalunkon](/dapps/#explore). <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Szeretne többet megtudni?</div>
   <ButtonLink href="/guides/">
     Tekintse meg a további útmutatóinkat
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Gyakran ismételt kérdések
 

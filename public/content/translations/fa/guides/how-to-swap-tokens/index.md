@@ -49,12 +49,13 @@ lang: fa
 به محض تکمیل پردازش تراکنش، به صورت خودکار توکن‌های تعویض شده را در کیف پول خود دریافت خواهید کرد.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>می‌خواهید بیشتر بدانید؟</div>
   <ButtonLink href="/guides/">
     راهنماهای دیگر ما را ببینید
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## پرسش‌های متداول
 

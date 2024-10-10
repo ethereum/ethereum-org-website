@@ -67,12 +67,14 @@ buttons:
 
 </RoadmapImageContent>
 
-<InfoBanner mb={8}>
+<Alert className="mb-8">
+<AlertContent>
   <h4 style={{ marginTop: 0 }}>ETH2とは何ですか？</h4>
 
-  <p>「Eth2」という用語は、<a href="/glossary/#pos">プルーフ・オブ・ステーク</a>へ移行する前、イーサリアムの今後を説明するために広く使用されていましたが、<strong>より正確な用語の方が好ましいということで段階的に廃止されました</strong>。元々は、プルーフ・オブ・ステークへの移行前のネットワークと移行後のネットワークを区別するために使われていました。また、異なるイーサリアムクライアントを指す場合もありました。具体的には、<a href="/glossary/#execution-client">実行クライアント</a>をETH1クライアント、<a href="/glossary/#consensus-client">コンセンサスクライアント</a>をETH2クライアントと呼んでいました。</p>
+  <p className="mb-0">「Eth2」という用語は、<a href="/glossary/#pos">プルーフ・オブ・ステーク</a>へ移行する前、イーサリアムの今後を説明するために広く使用されていましたが、<strong>より正確な用語の方が好ましいということで段階的に廃止されました</strong>。元々は、プルーフ・オブ・ステークへの移行前のネットワークと移行後のネットワークを区別するために使われていました。また、異なるイーサリアムクライアントを指す場合もありました。具体的には、<a href="/glossary/#execution-client">実行クライアント</a>をETH1クライアント、<a href="/glossary/#consensus-client">コンセンサスクライアント</a>をETH2クライアントと呼んでいました。</p>
 
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## イーサリアムのロードマップは時間とともに変化しますか？ {#will-ethereums-roadmap-change-over-time}
 

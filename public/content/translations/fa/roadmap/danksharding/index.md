@@ -53,9 +53,9 @@ KZG مخفف نام سه [نویسنده اصلی](https://link.springer.com/cha
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="error" className="mb-8">
   Danksharding و Proto-Danksharding هیچ‌کدام از مدل سنتی «شاردینگ» (زنجیره‌ای‌سازی) پیروی نمی‌کنند، مدلی که هدف آن تقسیم زنجیره بلوکی به چندین بخش بود. زنجیره‌های شارد (خرده‌زنجیره‌ها) دیگر بخشی از نقشه راه نیستند. در عوض، Danksharding از نمونه‌گیری داده‌های توزیع‌شده در توده‌ها برای مقیاس‌بندی اتریوم استفاده می‌کند. اجرای این بسیار ساده‌تر است. گاهی اوقات، از این مدل تحت عنوان «شاردینگ داده‌ها» یاد می‌شود.
-</InfoBanner>
+</Alert>
 
 ## Danksharding چیست؟ {#what-is-danksharding}
 

@@ -65,12 +65,14 @@ La hoja de ruta es principalmente el resultado de años de trabajo de investigad
 
 </RoadmapImageContent>
 
-<InfoBanner mb={8}>
+<Alert className="mb-8">
+<AlertContent>
   <h4 style={{ marginTop: 0 }}>¿Qué era ETH2?</h4>
 
-  <p>El término Eth2 se usaba comúnmente para describir el futuro de Ethereum antes del cambio a la prueba de participación, pero se <strong>eliminó gradualmente a favor de una terminología más precisa.</strong>Originalmente se usó para diferenciar la red Ethereum antes del cambio a la prueba de participación y la red después, o a veces para referirse a los diferentes clientes de Ethereum (los clientes de ejecución a veces se denominaban clientes ETH1 y los clientes de consenso a veces se denominaban clientes ETH2).</p>
+  <p className="mb-0">El término Eth2 se usaba comúnmente para describir el futuro de Ethereum antes del cambio a la prueba de participación, pero se <strong>eliminó gradualmente a favor de una terminología más precisa.</strong>Originalmente se usó para diferenciar la red Ethereum antes del cambio a la prueba de participación y la red después, o a veces para referirse a los diferentes clientes de Ethereum (los clientes de ejecución a veces se denominaban clientes ETH1 y los clientes de consenso a veces se denominaban clientes ETH2).</p>
 
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## ¿Cambiará la hoja de ruta de Ethereum con el tiempo? {#will-ethereums-roadmap-change-over-time}
 

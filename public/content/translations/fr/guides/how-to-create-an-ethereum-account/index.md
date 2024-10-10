@@ -40,12 +40,13 @@ Une fois votre phrase de récupération enregistrée, vous pourrez consulter le 
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Vous voulez en savoir plus ?</div>
   <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Questions fréquemment posées
 

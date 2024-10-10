@@ -59,9 +59,12 @@ Si tiene ETH en la Red principal de Ethereum y quiere explorar una alternativa L
 
 Digamos que quiere tener Bitcoin (BTC), pero solo tiene fondos en la Red principal de Ethereum. Para obtener exposición a BTC en Ethereum, puede comprar Wrapped Bitcoin (WBTC). Sin embargo, WBTC es un token ERC-20 nativo de la red Ethereum, lo que significa que es una versión Ethereum de Bitcoin y no el activo original de la cadena de bloques de Bitcoin. Para tener BTC nativo, usted tendría que trasladar sus activos de Ethereum a Bitcoin usando un puente. Esto trasladará entre redes su WBTC y lo convertirá en BTC nativo. También podría poseer BTC y querer usarlo en los protocolos DeFi de Ethereum. Esto requeriría un puente pero al revés, desde el BTC hasta WBTC, que luego puede ser utilizado como un activo en Ethereum.
 
-<InfoBanner shouldCenter emoji=":bulb:">
+<Alert className="max-w-[55rem] mx-auto">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
   También puede hacer todo lo anterior usando un <a href="/get-eth/">exchange centralizado</a>. Sin embargo, a menos que sus fondos ya estén en un exchange, esto implicaría varios pasos y probablemente sería mejor usar un puente.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 <Divider />
 

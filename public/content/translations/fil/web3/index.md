@@ -61,12 +61,13 @@ Ibinibigay ng Web3 sa iyo ang pagmamay-ari ng ng iyong mga digital asset sa kaka
 
 Pinapayagan ng Web3 ang pagmamay-ari sa pamamagitan ng [mga non-fungible token (NFTs)](/nft/). Walang sinuman, kahit ang mga game creator, ang may kapangyarihang bawiin ang iyong pagmamay-ari. At, kung hihinto ka sa paglalaro, maaari mong ibenta o i-trade ang iyong mga in-game item sa mga open market at mabawi ang iyong ipinuhunan.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Magbasa pa tungkol sa NFTs</div>
   <ButtonLink href="/nft/">
     Iba pang detalye tungkol sa NFTs
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 #### Paglaban sa censorship {#censorship-resistance}
 
@@ -86,12 +87,13 @@ Ang DAOs ay tinutukoy bilang mga agreed-upon smart contract na ino-automate ang 
 
 Gayunpaman, itinuturing na DAOs ng mga tao ang maraming komunidad sa Web3. May iba't ibang antas ng decentralization at automation ayon sa code ang mga komunidad na ito. Kasalukuyan naming tinitingnan kung ano ang DAOs at kung paano maaaring magbago ang mga ito sa hinaharap.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Magkaroon ng higit pang kaalaman tungkol sa DAOs</div>
   <ButtonLink href="/dao/">
     Iba pang kaalaman ukol sa DAOs
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ### Identity {#identity}
 

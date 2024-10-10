@@ -37,9 +37,11 @@ A beolvadás jelentette a hivatalos váltást, amely után a Beacon lánc tölti
 
 Az előzmények nem vesztek el a beolvadással. Ahogy a fő hálózat egyesült a Beacon lánccal, az Ethereum összes tranzakcióelőzményét is magával vitte.
 
-<InfoBanner>
+<Alert>
+<AlertContent>
 A proof-of-stake mechanizmus átvétele megváltoztatta az Ether kibocsátásának módját. Tudjon meg többet: <a href="/roadmap/merge/issuance/">Ether-kibocsátás a beolvadás előtt és után</a>.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Felhasználók és tulajdonosok {#users-holders}
 

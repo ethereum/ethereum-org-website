@@ -41,11 +41,14 @@ lang: zh
 
 ### 使用密码管理器 {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
+<Alert>
+<AlertEmoji text=":bulb:" />
+<AlertContent>
   <div>
     使用密码管理器可以创建唯一的强密码并记住它们！ 我们<strong>强烈</strong>推荐使用它，而且它们大部分是免费的。
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 记住为每个帐户设置的唯一强密码并不现实。 密码管理器为你的所有密码提供了一个安全、加密的存储空间，你可以通过一个强主密码进行访问。 他们还在注册新服务时生成建议使用的强密码，这样你就不必自行创建密码了。 许多密码管理器也会告诉你是否涉及数据泄露，让你在任何恶意攻击之前更改密码。
 
@@ -68,7 +71,9 @@ lang: zh
 
 使用**双重身份验证 (2FA)** 为你的在线帐户提供额外的*安全因素*，因此仅知道你的密码（你知道的信息）不足以访问一个帐户。 最常见的是，双重验证是一个随机的6位数代码，被称为**基于时间的一次性密码（TOTP）**，你可以通过身份验证程序应用程序（如Google authenticator或Authy）生成。 这是一种“你私有的”，因为生成随机时间密码的种子文件存储在你的设备上。
 
-<InfoBanner emoji=":lock:">
+<Alert>
+<AlertEmoji text=":lock:" />
+<AlertContent>
   <div>
     注意：使用基于短信的 2FA 很容易遭受
     <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
@@ -80,7 +85,8 @@ lang: zh
     </a>
      或 <a href="https://authy.com/">Authy</a> 之类的服务。
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 #### 安全密钥 {#security-keys}
 
@@ -206,11 +212,14 @@ Chrome 扩展程序或 Firefox 插件等浏览器扩展程序可以增强浏览�
 - 绝不允许任何人远程访问你的电脑
 - 切勿通过官方指定以外的渠道沟通
 
-<InfoBanner emoji=":lock:">
+<Alert>
+<AlertEmoji text=":lock:" />
+<AlertContent>
   <div>
     请注意：尽管支持类型的骗局通常发生在 Discord 上，但它们也在任何讨论加密货币聊天应用程序（包括电子邮件）上普遍存在。
   </div>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### “以太坊 2”代币骗局 {#eth2-token-scam}
 

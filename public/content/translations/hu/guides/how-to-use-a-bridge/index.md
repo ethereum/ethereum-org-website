@@ -52,12 +52,13 @@ Ennek 10 perc alatt meg kell történnie.
 A [chainlist.org](http://chainlist.org) segít az adott hálózat RPC-adatait megtalálni. Amint a hálózat hozzáadásra kerül és a tranzakció végbemegy, a tokenek megjelennek a tárcájában.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Szeretne többet megtudni?</div>
   <ButtonLink href="/guides/">
     Tekintse meg a további útmutatóinkat
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Gyakran ismételt kérdések
 

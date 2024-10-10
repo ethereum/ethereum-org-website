@@ -21,7 +21,6 @@ import ButtonLink from "@/components/Buttons/ButtonLink"
 import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
-import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
@@ -31,6 +30,7 @@ import PageHero, {
 } from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import Trilemma from "@/components/Trilemma"
+import { Alert, AlertContent } from "@/components/ui/alert"
 import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -275,12 +275,14 @@ const VisionPage = () => {
             </InlineLink>
           </Text>
           <Text>{t("page-roadmap-vision-sustainability-desc-3")}</Text>
-          <InfoBanner>
-            <Text>{t("page-roadmap-vision-sustainability-desc-8")}</Text>
-            <ButtonLink href="/roadmap/merge/">
-              {t("page-upgrades-index:page-upgrades-merge-btn")}
-            </ButtonLink>
-          </InfoBanner>
+          <Alert>
+            <AlertContent>
+              <Text>{t("page-roadmap-vision-sustainability-desc-8")}</Text>
+              <ButtonLink href="/roadmap/merge/">
+                {t("page-upgrades-index:page-upgrades-merge-btn")}
+              </ButtonLink>
+            </AlertContent>
+          </Alert>
         </CentralContent>
       </PageContent>
       <Divider />

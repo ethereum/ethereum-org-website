@@ -40,12 +40,13 @@ Una volta salvata la frase di seed, si dovrebbe vedere il pannello di controllo 
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert className="justify-between">
+  <AlertEmoji text=":eyes:" />
   <div>Vuoi saperne di più?</div>
   <ButtonLink href="/guides/">
     Visualizza le altre guide
   </ButtonLink>
-</InfoBanner>
+</Alert>
 
 ## Domande frequenti
 
