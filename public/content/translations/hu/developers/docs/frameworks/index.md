@@ -45,7 +45,7 @@ Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezet
 - [Dokumentáció](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-<strong x-id=„1”>ethers-kt –</strong> **_Async, nagy teljesítményű Kotlin/Java/Android könyvtár EVM-alapú blokkláncokhoz._**
+**ethers-kt –** **_Async, nagy teljesítményű Kotlin/Java/Android könyvtár EVM-alapú blokkláncokhoz._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Példák](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
