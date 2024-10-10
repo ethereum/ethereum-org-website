@@ -16,7 +16,7 @@ const StakingProductsCardGrid = ({
   return (
     <SimpleGrid
       templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
-      gap={8}
+      gap={6}
       my={12}
       mx={0}
     >
