@@ -42,13 +42,13 @@ Les portefeuilles évoluent rapidement sur Ethereum. Nous avons tenté de créer
 - **WalletConnect** - les utilisateurs doivent pouvoir se connecter aux DApps en utilisant WalletConnect.
 - **Importation des points de terminaison RPC d'Ethereum** - les utilisateurs peuvent importer les données RPC d'un nœud, leur permettant de se connecter à un nœud de leur choix, ou à d'autres réseaux compatibles EVM.
 - **NFTs** - les utilisateurs sont en mesure de visualiser et d'interagir avec leurs NFTs dans le portefeuille.
-- <strong x-id="1"">Connexion aux applications Ethereum</strong> - les utilisateurs sont en mesure de se connecter à des applications Ethereum et de les utiliser.
+- **Connexion aux applications Ethereum** - les utilisateurs sont en mesure de se connecter à des applications Ethereum et de les utiliser.
 - **Mise en jeu** - les utilisateurs peuvent mettre en jeu directement via le portefeuille.
 - **Échanges** - les utilisateurs peuvent échanger des tokens directement via le portefeuille.
 - **Réseaux multichaînes** - votre portefeuille prend en charge par défaut l'accès à plusieurs réseaux blockchain.
 - **Réseaux de couche 2** - votre portefeuille prend en charge par défaut l'accès aux réseaux de seconde couche par défaut.
 - **Personnalisation des frais de gaz** - votre portefeuille permet aux utilisateurs de personnaliser les frais de gaz pour leurs transactions (frais de base, frais prioritaires, frais maximum).
-- <strong x-id="1"">Support ENS</strong> - votre portefeuille permet aux utilisateurs d'envoyer des transactions à des noms ENS.
+- **Support ENS** - votre portefeuille permet aux utilisateurs d'envoyer des transactions à des noms ENS.
 - **Support ERC-20** - votre portefeuille permet aux utilisateurs d'importer des contrats de jetons ERC-20 ou d'afficher automatiquement les jetons ERC-20.
 - **Acheter de la crypto** - votre portefeuille permet aux utilisateurs d'acheter directement de la crypto.
 - **Vente en fiat** - votre portefeuille permet aux utilisateurs de vendre et de retirer en fiat directement sur une carte ou un compte bancaire.
