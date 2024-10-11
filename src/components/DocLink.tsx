@@ -3,7 +3,7 @@ import { AiOutlineArrowRight } from "react-icons/ai"
 import { cn } from "@/lib/utils/cn"
 
 import { Center, Flex, Stack } from "./ui/flex"
-import { BaseLink } from "./ui/Link"
+import { LinkBox, LinkOverlay } from "./ui/link-box"
 import Emoji from "./Emoji"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
@@ -18,22 +18,24 @@ const DocLink = ({ href, children, isExternal = false }: DocLinkProps) => {
   const { isRtl } = useRtlFlip()
 
   return (
-    <BaseLink
+    <LinkBox
       className={cn(
         "flex rounded-sm border p-4 text-current no-underline",
         "hover:rounded hover:bg-background-highlight hover:no-underline",
         "group hover:shadow-[0_0_1px] hover:shadow-primary"
       )}
-      href={href}
     >
       <Flex className="flex-1 justify-between">
         <Center>
           <Emoji className="me-4 text-md" text=":page_with_curl:" />
         </Center>
         <Stack className="flex-1">
-          <p className="font-semibold text-[#4c4c4c] dark:text-[#cccccc]">
-            {children}
-          </p>
+          <LinkOverlay href={href} className="no-underline">
+            {" "}
+            <p className="font-semibold text-[#4c4c4c] dark:text-[#cccccc]">
+              {children}
+            </p>
+          </LinkOverlay>
         </Stack>
 
         <AiOutlineArrowRight
@@ -46,7 +48,7 @@ const DocLink = ({ href, children, isExternal = false }: DocLinkProps) => {
           )}
         />
       </Flex>
-    </BaseLink>
+    </LinkBox>
   )
 }
 
