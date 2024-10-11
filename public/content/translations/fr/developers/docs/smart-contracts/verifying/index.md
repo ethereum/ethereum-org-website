@@ -70,7 +70,7 @@ Le processus traditionnel de vérification des contrats peut être complexe. C'e
 
 ### Etherscan {#etherscan}
 
-Bien que principalement connu comme un [explorateur de la blockchain Ethereum](/developers/docs/data-and-analytics/block-explorers/), Etherscan propose également un [service de vérification de source code ](https://etherscan.io/verifyContract) pour les développeurs et les utilisateurs de contrats intelligents.
+Bien que principalement connu comme un [explorateur de la blockchain Ethereum](/developers/docs/data-and-analytics/block-explorers/), Etherscan propose également un [service de vérification de source code](https://etherscan.io/verifyContract) pour les développeurs et les utilisateurs de contrats intelligents.
 
 Etherscan vous permet de recompiler le bytecode du contrat à partir de la charge utile des données originales (code source, adresse de la bibliothèque, paramètres du compilateur, adresse du contrat, etc.) Si le bytecode recompilé est identifié comme étant identique au bytecode (et les paramètres du constructeur) du contrat en chaîne, alors [le contrat est vérifié](https://info.etherscan.com/types-of-contract-verification/).
 

@@ -56,13 +56,13 @@ Avant de démarrer votre propre nœud d'archive, renseignez-vous sur les différ
 
 ## Pratiques recommandées
 
-Outre les [recommandations générales pour l'exécution d'un nœud](/developers/docs/nodes-and-clients/run-a-node/), un nœud d'archive peut être plus exigeant en termes de matériel et de maintenance. Compte tenu des [fonctionnalités clés](https://github.com/ledgerwatch/erigon#key-features) d'Erigon, l'approche la plus pratique consiste à utiliser l'implémentation client [Erigon](/developers/docs/nodes- and-clients/#erigon).
+Outre les [recommandations générales pour l'exécution d'un nœud](/developers/docs/nodes-and-clients/run-a-node/), un nœud d'archive peut être plus exigeant en termes de matériel et de maintenance. Compte tenu des [fonctionnalités clés](https://github.com/ledgerwatch/erigon#key-features) d'Erigon, l'approche la plus pratique consiste à utiliser l'implémentation client [Erigon](/developers/docs/nodes-and-clients/#erigon).
 
 ### Matériel
 
 Assurez-vous toujours de vérifier les exigences matérielles pour un mode spécifique dans la documentation du client. L'espace disque est la principale exigence pour les nœuds d'archive. Selon le client, cela varie de 3 To à 12 To. Même si le disque dur peut être considéré comme une meilleure solution pour de grandes quantités de données, sa synchronisation et la mise à jour constante de la tête de chaîne nécessiteront des disques SSD. Les disques [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) sont assez bons mais ils doivent être d'une qualité fiable, au moins [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Les disques peuvent être installés dans un ordinateur de bureau ou un serveur avec suffisamment d'emplacements. Ces appareils dédiés sont idéaux pour exécuter un nœud à haute disponibilité. Il est tout à fait possible de l'exécuter sur un ordinateur portable, mais la portabilité entraînera un coût supplémentaire.
 
-Toutes les données doivent tenir dans un seul volume, donc les disques doivent être joints, par ex. avec [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) ou [LVM](https://web.mit.edu/rhel-doc/5/ RHEL-5-manual/Deployment_Guide-en-US/ch-lvm.html). Il pourrait également être utile d'envisager d'utiliser [ZFS](https://en.wikipedia.org/wiki/ZFS) car il prend en charge « Copy-on-write » qui garantit que les données sont correctement écrites sur le disque sans aucune erreur de bas niveau.
+Toutes les données doivent tenir dans un seul volume, donc les disques doivent être joints, par ex. avec [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) ou [LVM](https://web.mit.edu/rhel-doc/5/RHEL-5-manual/Deployment_Guide-en-US/ch-lvm.html). Il pourrait également être utile d'envisager d'utiliser [ZFS](https://en.wikipedia.org/wiki/ZFS) car il prend en charge « Copy-on-write » qui garantit que les données sont correctement écrites sur le disque sans aucune erreur de bas niveau.
 
 Pour plus de stabilité et de sécurité dans la prévention de la corruption accidentelle de la base de données, en particulier dans une configuration professionnelle, envisagez d'utiliser la [mémoire ECC](https://en.wikipedia.org/wiki/ECC_memory) si votre système le prend en charge. Il est généralement conseillé d'avoir la même quantité de RAM que pour un nœud complet, mais davantage de RAM peut accélérer la synchronisation.
 
@@ -72,7 +72,7 @@ Lors de la synchronisation initiale, les clients en mode archive exécuteront ch
 
 - [Nœud complet Ethereum vs Nœud d'archive Ethereum](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node) - _QuickNode, septembre 2022_
 - [Construire votre propre nœud d'archive Ethereum.](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09) - _par Thomas Jay Rush, août 2021_
-- [Comment configurer Erigon, le RPC d'Erigon et TrueBlocks (scraping et API) en tant que services ](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _– Magnus Hansson, mis à jour en septembre 2022_
+- [Comment configurer Erigon, le RPC d'Erigon et TrueBlocks (scraping et API) en tant que services](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _– Magnus Hansson, mis à jour en septembre 2022_
 
 ## Sujets connexes {#related-topics}
 

@@ -19,7 +19,7 @@ La transition de la [preuve de travail](/glossary/#pow) à la preuve d'enjeu a c
 
 ## Se défendre contre les attaques {#defending-against-attacks}
 
-Il existe un certain nombre d'améliorations qui peuvent être apportées au protocole de preuve d'enjeu d'Ethereum. L'une est connue sous le nom de [agrégation de points de vue ](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739) - un algorithme de choix de [bifurcation](/glossary/#fork) plus sécurisé qui rend certains types d'attaques sophistiquées plus difficiles.
+Il existe un certain nombre d'améliorations qui peuvent être apportées au protocole de preuve d'enjeu d'Ethereum. L'une est connue sous le nom de [agrégation de points de vue](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739) - un algorithme de choix de [bifurcation](/glossary/#fork) plus sécurisé qui rend certains types d'attaques sophistiquées plus difficiles.
 
 Réduire le temps que prend Ethereum pour [finaliser](/glossary/#finality) les blocs offrirait une meilleure expérience utilisateur et empêcherait les attaques sophistiquées de « reorg » où les attaquants essaient de réorganiser les blocs très récents pour en tirer profit ou censurer certaines transactions. [**La finalité à créneau unique (SSF)**](/roadmap/single-slot-finality/) est un **moyen de minimiser le délai de finalisation**. Actuellement, il y a l'équivalent de 15 minutes de blocs qu'un attaquant pourrait théoriquement convaincre d'autres validateurs de reconfigurer. Avec SSF, il y en aurait 0. Les utilisateurs, des individus aux applications jusqu'aux échanges, bénéficient d'une assurance rapide que leurs transactions ne seront pas annulées, et le réseau bénéficie lui de l'élimination d'une catégorie entière d'attaques.
 

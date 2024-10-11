@@ -91,7 +91,7 @@ Goerli est un réseau de test qui permet de tester, de valider et de mettre en j
 - [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Robinet Goerli Chainstack](https://faucet.chainstack.com/goerli-faucet)
 
-Pour lancer un validateur sur le réseau de test Goerli, utilisez la [plateforme de lancement "validateur goerli bon marché"](https://goerli. launchpad. ethstaker. cc/en/) d'ethstaker.
+Pour lancer un validateur sur le réseau de test Goerli, utilisez la [plateforme de lancement "validateur goerli bon marché"](https://goerli.launchpad.ethstaker.cc/en/) d'ethstaker.
 
 ### Réseaux de test de Couche 2 {#layer-2-testnets}
 

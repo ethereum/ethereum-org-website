@@ -73,7 +73,7 @@ Votre adresse sera la même pour tous les projets Ethereum. Vous n'avez pas beso
 
 ### Si je possède une adresse ETH, est-ce que je peux l'utiliser sur d'autres blockchains ?
 
-Vous pouvez utiliser la même adresse sur toutes les blockchains compatibles EVM (si vous utilisez un portefeuille avec une phrase de récupération). Cette [liste ](https://chainlist.org/) vous présente les blockchains que vous pouvez utiliser avec la même adresse. Certaines blockchains, comme Bitcoin, utilisent un ensemble de règles de réseau totalement différentes et vous aurez donc besoin d'une adresse différente fonctionnant sous un autre format. Si vous utilisez un portefeuille de contrats intelligents, vous pouvez consulter son site web pour plus d'informations sur les blockchains pris en charge.
+Vous pouvez utiliser la même adresse sur toutes les blockchains compatibles EVM (si vous utilisez un portefeuille avec une phrase de récupération). Cette [liste](https://chainlist.org/) vous présente les blockchains que vous pouvez utiliser avec la même adresse. Certaines blockchains, comme Bitcoin, utilisent un ensemble de règles de réseau totalement différentes et vous aurez donc besoin d'une adresse différente fonctionnant sous un autre format. Si vous utilisez un portefeuille de contrats intelligents, vous pouvez consulter son site web pour plus d'informations sur les blockchains pris en charge.
 
 ### Puis-je utiliser la même adresse sur plusieurs appareils ?
 

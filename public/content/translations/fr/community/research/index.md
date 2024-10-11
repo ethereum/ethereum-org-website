@@ -14,7 +14,7 @@ La recherche sur Ethereum est ouverte et transparente et incarne les principes d
 
 ## Ressources de recherche générales {#general-research-resources}
 
-Quel que soit le sujet spécifique, vous trouverez une multitude d'informations sur la recherche Ethereum sur [ethresear.ch](https://ethresear.ch) et sur la [chaîne Discord Eth R&D](https://discord.gg/ qGpsxSA). Ce sont les principaux endroits où les chercheurs d’Ethereum discutent des dernières idées et opportunités de développement.
+Quel que soit le sujet spécifique, vous trouverez une multitude d'informations sur la recherche Ethereum sur [ethresear.ch](https://ethresear.ch) et sur la [chaîne Discord Eth R&D](https://discord.gg/qGpsxSA). Ce sont les principaux endroits où les chercheurs d’Ethereum discutent des dernières idées et opportunités de développement.
 
 Ce rapport publié en mai 2022 par [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) donne un bon aperçu de la feuille de route d'Ethereum.
 
@@ -277,7 +277,7 @@ La mise en jeu libre permet aux utilisateurs possédant moins de 32 ETH de recev
 #### Recherche récente {#recent-research-12}
 
 - [Gestion des retraits de Lido](https://ethresear.ch/t/handling-withdrawals-in-lidos-eth-liquid-staking-protocol/8873)
-- [Identifiants de retrait ](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
+- [Identifiants de retrait](https://ethresear.ch/t/withdrawal-credential-rotation-from-bls-to-eth1/8722)
 - [Les risques des dérivés de la mise en jeu libre](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
 
 ## Tester {#testing}

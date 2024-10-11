@@ -13,7 +13,7 @@ Pour que les données fournies par un explorateur de blocs aient du sens, vous d
 
 ## Services {#services}
 
-- [Etherscan](https://etherscan. io/) - _Également disponible en chinois, coréen, russe et japonais_
+- [Etherscan](https://etherscan.io/) - _Également disponible en chinois, coréen, russe et japonais_
 - [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) - _Également disponible en espagnol, français, italien, néerlandais, portugais, russe, chinois et Farsi_

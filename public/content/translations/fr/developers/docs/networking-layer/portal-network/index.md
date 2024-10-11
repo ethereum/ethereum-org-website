@@ -70,7 +70,7 @@ Les clients du Portal Network sont :
 - [Trin](https://github.com/ethereum/trin) : écrit en Rust
 - [Fluffy](https://nimbus.team/docs/fluffy.html) : écrit en Nim
 - [Ultralight](https://github.com/ethereumjs/ultralight) : écrit en Typescript
-- [Shisui ](https://github.com/GrapeBaBa/shisui): écrit en Go
+- [Shisui](https://github.com/GrapeBaBa/shisui) : écrit en Go
 
 Avoir plusieurs implémentations de clients indépendants renforce la résilience et la décentralisation du réseau Ethereum.
 

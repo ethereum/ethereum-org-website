@@ -248,13 +248,13 @@ else:
   value = TxType | encode(tx)
 ```
 
-Plus d'informations à ce sujet peuvent être trouvées dans la documentation [EIP 2718](https://eips. ethereum. org/EIPS/eip-2718).
+Plus d'informations à ce sujet peuvent être trouvées dans la documentation [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
 
 ### Arbre de reçus {#receipts-trie}
 
 Chaque bloc a son propre arbre de reçus. Un `path` ici est : `rlp(transactionIndex)`. `transactionIndex` est son indice dans le bloc dans lequel il est inclus. Les arbres de reçus ne sont jamais mis à jour. De la même manière que pour les arbres de transactions, il existe des reçus actuels et des reçus hérités. Pour interroger un reçu spécifique dans la liste des reçus, l'indice de la transaction dans son bloc, les charges du reçu et le type de transaction sont nécessaires. Le reçu retourné peut être de type `Reçu` qui est défini comme la concaténation de `TransactionType` et `ReceiptPayload` ou il peut être de type `LegacyReceipt` qui est défini comme `rlp([statut, cumulativeGasUsed, logsBloom, logs])`.
 
-Plus d'informations à ce sujet peuvent être trouvées dans la documentation [EIP 2718](https://eips. ethereum. org/EIPS/eip-2718).
+Plus d'informations à ce sujet peuvent être trouvées dans la documentation [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
 
 ## Complément d'information {#further-reading}
 

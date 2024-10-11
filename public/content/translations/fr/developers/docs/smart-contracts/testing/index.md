@@ -126,7 +126,7 @@ De nombreux frameworks de tests unitaires vous permettent de créer des assertio
 
 - Les utilisateurs qui ne gagnent pas l'enchère sont crédités de leurs fonds
 
-**Remarque** : Une autre façon de tester les hypothèses consiste à écrire des tests qui déclenchent des [modificateurs de fonction](https://docs.soliditylang.org/en/v0.8.16/contracts. html#function-modifiers) dans un contrat, en particulier les instructions `require`, `assert` et `if…else`.
+**Remarque** : Une autre façon de tester les hypothèses consiste à écrire des tests qui déclenchent des [modificateurs de fonction](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers) dans un contrat, en particulier les instructions `require`, `assert` et `if…else`.
 
 ##### 3. Mesurer la couverture du code
 
