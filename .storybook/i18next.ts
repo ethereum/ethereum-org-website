@@ -1,4 +1,5 @@
 import i18n, { Resource } from "i18next"
+// eslint-disable-next-line no-restricted-imports
 import { initReactI18next } from "react-i18next"
 
 export const baseLocales = {
