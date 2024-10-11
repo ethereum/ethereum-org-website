@@ -17,7 +17,7 @@
   "page-index-bento-networks-title": "Το δίκτυο των δικτύων",
   "page-index-bento-stablecoins-action": "Μάθετε περισσότερα",
   "page-index-bento-stablecoins-content": "Τα κρυπτονομίσματα σταθερής αξίας είναι νομίσματα που διατηρούν σταθερή αξία. Η τιμή τους αντιστοιχεί στην τιμή του δολαρίου Αμερικής ή άλλων σταθερών περιουσιακών στοιχείων.",
-  "page-index-bento-stablecoins-title": "Κρυπτονομίσματα χωρίς αστάθεια",
+  "page-index-bento-stablecoins-title": "Κρυπτονομίσματα χωρίς μεταβλητότητα",
   "page-index-builders-action-primary": "Πύλη κατασκευαστή",
   "page-index-builders-action-secondary": "Τεκμηρίωση",
   "page-index-builders-description": "Το Ethereum φιλοξενεί το μεγαλύτερο και πιο ζωντανό οικοσύστημα προγραμματιστών Web3. Χρησιμοποιήστε JavaScript και Python, ή μάθετε μια γλώσσα έξυπνων συμβολαίων, όπως η Solidity ή η Vyper, για να γράψετε τη δική σας εφαρμογή.",
@@ -84,6 +84,7 @@
   "page-index-title": "Καλώς ορίσατε στο Ethereum",
   "page-index-values-description": "Γίνετε μέρος της ψηφιακής επανάστασης",
   "page-index-values-header": "Το διαδίκτυο αλλάζει",
+  "page-index-values-legacy": "Κληροδοσία",
   "page-index-values-tag": "Αξίες",
   "page-index-values-ownership-legacy-label": "Περιορισμένη ιδιοκτησία",
   "page-index-values-ownership-legacy-content-0": "Σε μια συνηθισμένη τράπεζα, ή πλατφόρμα κοινωνικής δικτύωσης, η διαχείριση των περιουσιακών σας στοιχείων και των δεδομένων σας γίνεται από τον οργανισμό. Η πρόσβαση και ο έλεγχός σας εξαρτώνται από αυτές.",
@@ -115,6 +116,5 @@
   "page-index-values-open-legacy-label": "Κλειστό στους περισσότερους",
   "page-index-values-open-legacy-content-0": "Οι εταιρείες προστατεύουν τη διανοητική τους ιδιοκτησία και δεν τη μοιράζονται. Κανένας εκτός της εταιρείας δεν μπορεί να δει πώς λειτουργούν τα πράγματα, να διορθώσει προβλήματα ή να κάνει βελτιώσεις. Οι άνθρωποι είναι δύσκολο να δημιουργήσουν νέα εργαλεία ή να τα εξατομικεύσουν.",
   "page-index-values-open-ethereum-label": "Ανοικτό σε όλους",
-  "page-index-values-legacy": "Κληροδοσία",
   "page-index-values-open-ethereum-content-0": "Το Ethereum είναι δημόσιο για όλους. Ο καθένας μπορεί να δει, να χρησιμοποιεί και να βελτιώνει τον κώδικα, κάνοντάς τον καλύτερο για όλους."
 }

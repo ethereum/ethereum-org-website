@@ -33,7 +33,7 @@
   "page-index-community-tag": "Сообщество Ethereum.org",
   "page-index-community-header": "Создано сообществом",
   "page-index-cta-dapps-description": "Финансовые, игровые, социальные",
-  "page-index-cta-dapps-label": "Попробовать",
+  "page-index-cta-dapps-label": "Попробуйте приложения",
   "page-index-cta-get-eth-description": "Валюта Ethereum",
   "page-index-cta-get-eth-label": "Получить ETH",
   "page-index-cta-networks-description": "Самые низкие комиссии",
@@ -84,6 +84,7 @@
   "page-index-title": "Добро пожаловать в Ethereum",
   "page-index-values-description": "Станьте частью цифровой революции",
   "page-index-values-header": "Интернет меняет свой облик",
+  "page-index-values-legacy": "История",
   "page-index-values-tag": "Ценности",
   "page-index-values-ownership-legacy-label": "Ограниченное владение",
   "page-index-values-ownership-legacy-content-0": "В обычном банке или на социальной платформе вашими активами и данными управляет организация. Вы полагаетесь на них в получении доступа и управлении.",
@@ -115,6 +116,5 @@
   "page-index-values-open-legacy-label": "Закрытость от большинства",
   "page-index-values-open-legacy-content-0": "Компании защищают свою интеллектуальную собственность и не делятся ей. Никто извне не может узнать, как они выполняют работу, устраняют проблемы и внедряют улучшения. Людям сложно создавать новые инструменты или настраивать существующие.",
   "page-index-values-open-ethereum-label": "Открытость для всех",
-  "page-index-values-legacy": "История",
   "page-index-values-open-ethereum-content-0": "Ethereum открыта для всех. Любой человек может просмотреть, использовать и обновить код, сделав платформу лучше для всех."
 }
