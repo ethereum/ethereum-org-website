@@ -54,6 +54,10 @@ const quizzes = {
     title: "stablecoins",
     questions: ["m001", "m002", "m003", "m004", "m005"],
   },
+  "smart-contracts": {
+    title: "smart-contracts",
+    questions: ["n001", "n002", "n003", "n004", "n005"],
+  },
 } satisfies RawQuizzes
 
 export const ethereumBasicsQuizzes: QuizzesSection[] = [
@@ -79,6 +83,10 @@ export const ethereumBasicsQuizzes: QuizzesSection[] = [
   },
   {
     id: "security",
+    level: "beginner",
+  },
+  {
+    id: "smart-contracts",
     level: "beginner",
   },
 ]
