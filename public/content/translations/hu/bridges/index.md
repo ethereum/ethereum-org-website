@@ -87,7 +87,7 @@ Tegyük fel, hogy Ön a reptéren a check-in előtt áll. Kétféle ellenőrzés
 1. Manuális chek-in – ahol a hivatalnokok manuálisan ellenőrzik a jegyét és a személyazonosságát, mielőtt a belépőkártyát átadnák.
 2. Self check-In – ahol egy gép ellenőrzi ezeket és adja ki a belépőkártyát, ha mindent rendben talál.
 
-A manuális ellenőrzés hasonló a bizalmat igénylő modellhez, mert egy harmadik félen múlik a működése, mint a hivatalnokok. Felhasználóként abban bízunk, hogy a hivatalnokok a megfelelő döntést hozzák és helyesen kezelik a privát információkat.
+A manuális ellenőrzés hasonló a bizalmat igénylő modellhez, mert egy harmadik félen múlik a működése, például a hivatalnokokon. Felhasználóként abban bízunk, hogy a hivatalnokok a megfelelő döntést hozzák és helyesen kezelik a privát információkat.
 
 A self check-in hasonlít a bizalomigénytől mentes modellhez, mivel kiveszi az operátor szerepét, és a technológia működteti. A felhasználónak mindvégig megmarad a kontroll az adatai felett, és nem kell azokat egy harmadik félre bíznia.
 
