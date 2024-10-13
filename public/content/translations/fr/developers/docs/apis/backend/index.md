@@ -66,7 +66,7 @@ Les bibliothèques suppriment une grande partie de la complexité de l'interacti
 - [Documentation](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - <em x-id=« 4 »>Fournisseur EVM JSON-RPC rentable</em>**
+**Node RPC - _Fournisseur EVM JSON-RPC rentable_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Documentation](https://docs.noderpc.xyz/node-rpc)
