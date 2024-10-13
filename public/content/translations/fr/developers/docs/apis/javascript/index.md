@@ -4,9 +4,9 @@ description: Introduction aux bibliothèques clientes JavaScript, qui vous perme
 lang: fr
 ---
 
-Pour qu'une application Web puisse interagir avec la blockchain Ethereum (c'est-à-dire lire les données de la blockchain et/ou envoyer des transactions sur le réseau), elle doit se connecter à un nœud  Ethereum.
+Pour qu'une application Web puisse interagir avec la blockchain Ethereum (c'est-à-dire lire les données de la blockchain et/ou envoyer des transactions sur le réseau), elle doit se connecter à un nœud Ethereum.
 
-À cette fin, chaque client Ethereum met en œuvre la spécification <a href=« /developers/docs/apis/json-rpc/ »>JSON-RPC</a>, de sorte qu'il existe un ensemble uniforme de <a href=« /developers/docs/apis/json-rpc/#json-rpc-methods »>méthodes</a> sur lesquelles les applications peuvent s'appuyer.
+À cette fin, chaque client Ethereum met en œuvre la spécification [JSON-RPC](/developers/docs/apis/json-rpc/), de sorte qu'il existe un ensemble uniforme de [méthodes](/developers/docs/apis/json-rpc/#json-rpc-methods) sur lesquelles les applications peuvent s'appuyer.
 
 Si vous voulez utiliser JavaScript pour vous connecter à un nœud Ethereum, il est possible d'avoir recours à Vanilla JavaScript, mais plusieurs bibliothèques de commodité existent à l'intérieur même de l'écosystème, ce qui rend les choses beaucoup plus simples. Grâce à ces bibliothèques, les développeurs peuvent rédiger des méthodes intuitives d'une seule ligne pour initialiser des demandes RPC JSON (sous le capot) qui interagissent avec Ethereum.
 

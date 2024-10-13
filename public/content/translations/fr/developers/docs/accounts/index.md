@@ -92,7 +92,7 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 [Documentation Geth](https://geth.ethereum.org/docs)
 
-Il est possible de dériver de nouvelles clés publiques à partir de votre clé privée, mais pas l'inverse. Il est impératif de conserver vos clés privées en sécurité. Comme leur nom l'indique, elles sont <strong x-id=« 1 »>PRIVÉES</strong>.
+Il est possible de dériver de nouvelles clés publiques à partir de votre clé privée, mais pas l'inverse. Il est impératif de conserver vos clés privées en sécurité. Comme leur nom l'indique, elles sont **PRIVÉES**.
 
 Vous avez besoin d'une clé privée pour signer les messages et les transactions produisant une signature. Les autres peuvent alors prendre la signature pour dériver votre clé publique, prouvant l'auteur du message. Dans votre application, vous pouvez utiliser une bibliothèque JavaScript pour envoyer des transactions au réseau.
 

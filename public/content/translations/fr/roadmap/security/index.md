@@ -39,7 +39,7 @@ Il existe des ajouts potentiels à PBS, tels que les transactions chiffrées et 
 
 ## Protéger les validateurs {#protecting-validators}
 
-Il est possible qu'un attaquant sophistiqué puisse identifier les validateurs imminents et les spammer pour les empêcher de proposer des blocs ; cela s'appelle une **attaque par déni de service (DoS)**. Implémenter [<strong x-id="1")>l'élection secrète du leader (SLE)</strong>](/roadmap/secret-leader-election) protégera contre ce type d'attaque en empêchant les proposants de bloc d'être connus à l'avance. Cela fonctionne en mélangeant continuellement un ensemble d'engagements cryptographiques représentant les candidats proposeurs de blocs et en utilisant leur ordre pour déterminer quel validateur est sélectionné de telle manière que seuls les validateurs eux-mêmes connaissent leur ordre à l'avance.
+Il est possible qu'un attaquant sophistiqué puisse identifier les validateurs imminents et les spammer pour les empêcher de proposer des blocs ; cela s'appelle une **attaque par déni de service (DoS)**. Implémenter [**l'élection secrète du leader (SLE)**](/roadmap/secret-leader-election) protégera contre ce type d'attaque en empêchant les proposants de bloc d'être connus à l'avance. Cela fonctionne en mélangeant continuellement un ensemble d'engagements cryptographiques représentant les candidats proposeurs de blocs et en utilisant leur ordre pour déterminer quel validateur est sélectionné de telle manière que seuls les validateurs eux-mêmes connaissent leur ordre à l'avance.
 
 <ButtonLink variant="outline-color" href="/roadmap/secret-leader-election">En apprendre plus à propos de l'élection d'un leader secret</ButtonLink>
 

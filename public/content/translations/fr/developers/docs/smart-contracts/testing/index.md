@@ -265,7 +265,7 @@ La principale différence est que les programmes de primes aux bogues sont ouver
 
 - **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _framework de développement et de test basé sur Python pour les contrats intelligents ciblant la Machine virtuelle Ethereum._
 
-- <strong x-id=« 1 »><a href=« https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/ »>Wake</a></strong> - <em x-id=« 4 »>Cadre basé sur Python pour les tests unitaires et le fuzzing avec de fortes capacités de débogage et la prise en charge des tests inter-chaînes, utilisant pytest et Anvil pour une meilleure expérience utilisateur et de meilleures performances.</em>
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _Cadre basé sur Python pour les tests unitaires et le fuzzing avec de fortes capacités de débogage et la prise en charge des tests inter-chaînes, utilisant pytest et Anvil pour une meilleure expérience utilisateur et de meilleures performances._
 
 ### Outils de test fondés sur les propriétés {#property-based-testing-tools}
 
