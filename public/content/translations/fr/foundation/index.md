@@ -27,7 +27,7 @@ Depuis 2014, l'Ethereum Foundation organise Devcon, la conférence annuelle pour
 
 Les vidéos des présentations qui ont eu lieu chaque année à la conférence depuis sa création sont disponibles à l'adresse [archive.devcon.org](https://archive.devcon.org/).
 
-Pour en savoir plus, visitez [devcon.org](https://devcon.org/), consultez le [blog Devcon](https://devcon.org/en/blogs/), ou suivez le compte Twitter [@efdevcon](https://twitter.com/EFDevcon) pour les dernières actualités.
+Pour en savoir plus, consultez le site [devcon.org](https://devcon.org/), le [Blog Devcon](https://devcon.org/en/blogs/) ou suivez [@efdevcon](https://twitter.com/EFDevcon) pour les dernières annonces.
 
 ### Programme de bourses {#fellowship-program}
 
