@@ -208,9 +208,6 @@ ZK-STARK gilt als immun gegen die Bedrohung durch Quantencomputer, da es für se
 - [SNARKs vs. STARKS vs. Rekursive SNARKs](https://www.alchemy.com/overviews/snarks-vs-starks) – _Alchemy-Übersichten_
 - [Ein Null-Wissen-Beweis: Verbesserung des Datenschutzes auf einer Blockchain](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitri Lawrenow_
 - [zk-SNARKs – Ein realistisches Null-Wissen-Beispiel mit Tiefgang](https://medium.com/coinmonks/zk-snarks-ein-realistisches-Zero-Knowledge-Beispiel-und-Deep-Dive-c5e6eaa7131c) – _Adam Luciano_
--
-ZK-STARKs – Schaffen Sie verifizierbares Vertrauen, sogar gegenüber Quantencomputern</ a> – _Adam Luciano_</li> 
-  
-  - [An approximate introduction to how zk-SNARKs are possible (Eine Näherungseinführung in die Realisierbarkeit von zk-SNARKs](https://vitalik.eth.limo/general/2021/01/26/snarks.html) – _Vitalik Buterin_
-- [Warum Null-Wissen-Beweise (Zero Knowledge Proofs, ZKPs) eine bahnbrechende Neuerung für die selbstbestimmte Identität sind](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_</ul>
-
+- [ZK-STARKs – Schaffen Sie verifizierbares Vertrauen, sogar gegenüber Quantencomputern](https://medium.com/coinmonks/zk-starks-schaffen-verifizierbares-Vertrauen-selbst-gegen-Quantencomputer-dd9c6a2bb13d) — _Adam Luciano_
+- [An approximate introduction to how zk-SNARKs are possible (Eine Näherungseinführung in die Realisierbarkeit von zk-SNARKs](https://vitalik.eth.limo/general/2021/01/26/snarks.html) – _Vitalik Buterin_
+- [Warum Null-Wissen-Beweise (Zero Knowledge Proofs, ZKPs) eine bahnbrechende Neuerung für die selbstbestimmte Identität sind](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
