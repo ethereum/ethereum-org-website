@@ -90,7 +90,7 @@ Goerli es una red de prueba para probar la validación y la participación. La r
 - [Faucet Chainstack Goerli](https://faucet.chainstack.com/goerli-faucet)
 - [Blockscout](https://eth-goerli.blockscout.com/)
 
-Para iniciar un validador en la red de prueba de Goerli, utilice la plataforma de lanzamiento de [«cheap goerli validator»](https://goerli.launchpad.ethstaker.cc/en/) de ethstaker.
+Para iniciar un validador en la red de prueba de Goerli, utilice la plataforma de lanzamiento de [«cheap goerli validator»](https://holesky.launchpad.ethstaker.cc/en/) de ethstaker.
 
 ### Redes de pruebas de Capa 2 {#layer-2-testnets}
 
