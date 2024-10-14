@@ -298,7 +298,7 @@
   "recovery-phrase-term": "Seed phrase/recovery phrase",
   "recovery-phrase-definition": "A list of words given to you when you create a digital wallet. It acts like a  password that can help you get back into your wallet if you lose access, making sure you don't lose your digital money or tokens.",
   "re-entrancy-attack-term": "Re-entrancy attack",
-  "re-entrancy-attack-definition": "An attack that consists of an attacker contract calling a victim contract function in such a way that during execution the victim calls the attacker contract again, recursively. This can result, for example, in the theft of funds by skipping parts of the victim contract that update balances or count withdrawal amounts.<a href=\"/developers/docs/smart-contracts/security/#reentrancy\">More on re-entrancy</a>.",
+  "re-entrancy-attack-definition": "An attack that consists of an attacker contract calling a victim contract function in such a way that during execution the victim calls the attacker contract again, recursively. This can result, for example, in the theft of funds by skipping parts of the victim contract that update balances or count withdrawal amounts. <a href=\"/developers/docs/smart-contracts/security/#reentrancy\">More on re-entrancy</a>.",
   "reward-term": "Reward",
   "reward-definition": "An amount of ether <a href=\"/developers/docs/consensus-mechanisms/pos/rewards-and-penalties\">awarded to validators</a> that perform certain functions, including proposing a block or participating in a sync-committee, in each slot.",
   "rlp-term": "Recursive Length Prefix (RLP)",
