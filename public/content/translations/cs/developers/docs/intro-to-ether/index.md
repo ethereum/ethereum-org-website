@@ -22,7 +22,7 @@ První kryptoměnou byl Bitcoin, který vytvořil Satoshi Nakamoto. Od spuštěn
 
 Ethereum umožňuje vývojářům vytvářet [**decentralizované aplikace (dappky)**](/developers/docs/dapps), které sdílejí společný fond výpočetního výkonu. Tento sdílený fond je omezený, takže Ethereum potřebuje mechanismus, který určí, kdo ho může používat. Jinak by mohla dappka omylem nebo záměrně spotřebovat všechny síťové zdroje, což by znemožnilo přístup ostatním.
 
-Kryptoměna ether podporuje mechanismus stanovení cen pro výpočetní výkon Etherea. Když uživatelé chtějí provést transakci, musí zaplatit ethereum, aby byla jejich transakce na blockchainu uznána. Tyto náklady jsou známé jako [poplatky za palivo](/developers/docs/gas/) a výše poplatku závisí na množství výpočetního výkonu potřebného k provedení transakce a na celosíťové poptávce po výpočetním výkonu v daném okamžiku.
+Kryptoměna ether podporuje mechanismus stanovení cen pro výpočetní výkon Etherea. Když uživatelé chtějí provést transakci, musí zaplatit etherem, aby byla jejich transakce na blockchainu uznána. Tyto náklady jsou známé jako [poplatky za palivo](/developers/docs/gas/) a výše poplatku závisí na množství výpočetního výkonu potřebného k provedení transakce a na celosíťové poptávce po výpočetním výkonu v daném okamžiku.
 
 Proto, i když by škodlivá dappka odeslala nekonečnou smyčku, transakci by nakonec došel ether a byla by ukončena, což by umožnilo síti vrátit se do normálu.
 
@@ -73,6 +73,6 @@ Uživatelé mohou zjistit zůstatek etheru na jakémkoliv [účtu](/developers/d
 
 - [Definování Etheru a Etherea](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
 - [Ethereum Whitepaper](/whitepaper/): Původní návrh Etherea. Tento dokument obsahuje popis etheru a motivaci za jeho vytvořením.
-- [Kalkulačka gwei](https://www.alchemy.com/gwei-calculator): Použijte tuto kalkulačku gwei pro snadnou konverzi mezi wei, gwei a ethereum. Stačí zadat jakoukoliv částku ve wei, gwei nebo ETH a automaticky vypočítat konverzi.
+- [Kalkulačka gwei](https://www.alchemy.com/gwei-calculator): Použijte tuto kalkulačku gwei pro snadnou konverzi mezi wei, gwei a etherem. Stačí zadat jakoukoliv částku ve wei, gwei nebo ETH a automaticky vypočítat konverzi.
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_
