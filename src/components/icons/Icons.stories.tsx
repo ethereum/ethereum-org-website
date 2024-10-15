@@ -189,7 +189,7 @@ const items = iconsDefinitions.map((IconDef) => (
     borderColor="background.highlight"
   >
     <Center>
-      <IconDef w="50px" h="50px" />
+      <IconDef className="h-[50px] w-[50px]" w="50px" h="50px" />
     </Center>
     <Center>{IconDef.displayName}</Center>
   </Flex>

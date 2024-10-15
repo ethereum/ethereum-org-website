@@ -189,6 +189,7 @@ const config = {
         success: {
           DEFAULT: "hsla(var(--success))",
           light: "hsla(var(--success-light))",
+          neutral: "hsla(var(--success-neutral))",
           dark: "hsla(var(--success-dark))",
           border: "hsla(var(--success-border))",
         },
@@ -198,6 +199,7 @@ const config = {
           light: "hsla(var(--error-light))",
           dark: "hsla(var(--error-dark))",
           border: "hsla(var(--error-border))",
+          neutral: "hsla(var(--error-neutral))",
         },
 
         warning: {
