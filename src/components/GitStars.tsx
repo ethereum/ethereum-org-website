@@ -25,23 +25,23 @@ const GitStars = ({ gitHubRepo, hideStars, ...props }: GitStarsProps) => {
 
   return (
     <BaseLink
-      className="text-decoration-none ms-auto"
+      className="ms-auto text-body no-underline hover:underline"
       href={gitHubRepo.url}
       hideArrow
       {...props}
     >
-      <Flex className="rounded border bg-background-medium no-underline hover:fill-primary hover:shadow-table-item-box-hover">
+      <Flex className="items-stretch overflow-hidden rounded bg-background-medium">
         {hideStars ? (
           <FaGithub className="m-1 text-2xl" />
         ) : (
           <>
-            <Center className="mx-1.5 w-9 justify-between text-sm">
-              <FaGithub className="text-2xl" />
+            <Center className="mx-1.5 w-9 justify-between text-2xl">
+              <FaGithub />
               <Emoji text=":star:" />
             </Center>
-            <p className="my-0 bg-background-medium px-1.5 text-sm">
-              {starsString}
-            </p>
+            <Flex className="items-center bg-background-highlight px-1.5">
+              <p className="my-0 text-xs text-body">{starsString}</p>
+            </Flex>
           </>
         )}
       </Flex>
