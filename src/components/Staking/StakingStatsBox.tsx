@@ -11,25 +11,27 @@ import { Flex, VStack } from "@/components/ui/flex"
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 const Cell = ({ children }: ChildOnlyProp) => (
-  <VStack className="space-y-2 border-t border-t-border-preBorder px-8 py-4 first:border-l-0 first:border-t-0 md:border-l md:border-t-0 md:border-l-border-preBorder">
+  <VStack className="gap-2 border-t border-t-border-preBorder px-8 py-4 first:border-t-0 md:border-t-0">
     {children}
   </VStack>
 )
 
 const Value = ({ children }: ChildOnlyProp) => (
-  <code className="inline-block bg-none p-0 pe-1 font-monospace text-4xl font-bold text-primary">
+  <code className="inline-block bg-none p-0 pe-1 font-monospace text-3xl font-bold text-primary">
     {children}
   </code>
 )
 
 const Label = ({ children }: ChildOnlyProp) => (
-  <Flex className="items-center text-sm uppercase">{children}</Flex>
+  <Flex className="items-center justify-center gap-2 text-sm uppercase">
+    {children}
+  </Flex>
 )
 
 // BeaconchainTooltip component
 const BeaconchainTooltip = ({ children }: ChildOnlyProp) => (
   <Tooltip content={children}>
-    <MdInfoOutline className="active:primary focus:primary ml-2 h-4 w-4 align-middle hover:text-primary" />
+    <MdInfoOutline className="active:primary focus:primary h-4 w-4 align-middle hover:text-primary" />
   </Tooltip>
 )
 
