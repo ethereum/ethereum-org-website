@@ -11,9 +11,7 @@ import { Flex, VStack } from "@/components/ui/flex"
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 const Cell = ({ children }: ChildOnlyProp) => (
-  <VStack className="gap-2 border-t border-t-border-preBorder px-8 py-4 first:border-t-0 md:border-t-0">
-    {children}
-  </VStack>
+  <VStack className="gap-2 px-8 py-4">{children}</VStack>
 )
 
 const Value = ({ children }: ChildOnlyProp) => (
