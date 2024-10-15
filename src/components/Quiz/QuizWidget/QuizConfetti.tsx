@@ -3,7 +3,7 @@ import { StarConfettiIcon } from "@/components/icons/quiz/StarConfettiIcon"
 import { cn } from "@/lib/utils/cn"
 
 export const QuizConfetti = () => {
-  const commonClasses = "text-[184px] absolute top-0"
+  const commonClasses = "h-[119px] absolute top-0"
   return (
     <>
       <StarConfettiIcon className={cn(commonClasses, "left-0")} />
