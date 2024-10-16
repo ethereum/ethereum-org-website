@@ -4,7 +4,7 @@ description: Pengenalan bukan teknikal kepada kontrak pintar
 lang: ms
 ---
 
-# Introduction to smart contracts {#introduction-to-smart-contracts}
+# Pengenalan kepada kontrak pintar {#introduction-to-smart-contracts}
 
 Kontrak pintar ialah blok asas bagi lapisan aplikasi Ethereum. Ia adalah program komputer yang disimpan pada [blok rantai](/glossary/#blockchain) yang mengikut logik "jika ini maka itu" dan dijamin untuk dilaksanakan mengikut peraturan yang ditakrifkan oleh kodnya, yang tidak boleh diubah setelah dibuat.
 
@@ -26,7 +26,7 @@ Alice dan Bob sedang berlumba basikal. Katakan Alice mempertaruhkan Bob $10 baha
 
 Contoh bodoh ini menggambarkan masalah dengan mana-mana perjanjian bukan kontrak pintar. Walaupun syarat perjanjian dipenuhi (iaitu anda adalah pemenang perlumbaan), anda masih mesti mempercayai orang lain untuk memenuhi perjanjian (iaitu pembayaran pada pertaruhan).
 
-## A digital vending machine {#vending-machine}
+## Mesin layan diri digital {#vending-machine}
 
 Metafora mudah untuk kontrak pintar ialah mesin layan diri, yang berfungsi agak serupa dengan kontrak pintar - input khusus menjamin output yang telah ditetapkan.
 
