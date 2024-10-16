@@ -19,10 +19,11 @@ Sok Ethereum fejlesztési szabvány a tokeninterfészekre összpontosít. Ezek a
 Itt van néhány az Ethereum legnépszerűbb tokenszabványaiból:
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) – Egy sztenderd interfész a helyettesíthető (cserélhető) tokenekhez, például a szavazási és letéti tokenekhez vagy a virtuális valutákhoz.
+
+### NFT szabványok {#nft-standards}
+
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) – Egy sztenderd interfész a nem helyettesíthető tokenekhez, például egy műalkotásról szóló okirathoz vagy egy dalhoz.
-- [ERC-777](/developers/docs/standards/tokens/erc-777/) – Az ERC-777 lehetővé teszi, hogy a felhasználók extra funkciókat építsenek a tokenekre, például egy mixer-szerződést a jobb tranzakciós adatvédelem érdekében, vagy egy vészhelyzeti helyreállítási funkciót a privát kulcsok elvesztése esetére.
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) – Az ERC-1155 hatékonyabb kereskedést és tranzakciókötést tesz lehetővé, ami költségmegtakarítást eredményez. Ez a tokenszabvány lehetővé teszi mind a közüzemi tokenek (például $BNB vagy $BAT), mind pedig a CryptoPunks-hoz hasonló, nem helyettesíthető tokenek létrehozását.
-- [ERC-4626](/developers/docs/standards/tokens/erc-4626/) – A tokenizált trezorok technikai paramétereinek optimalizálására és egységesítésére tervezett tokenizált trezorszabvány.
 
 Az [ERC](https://eips.ethereum.org/erc) javaslatok teljes listája.
 
