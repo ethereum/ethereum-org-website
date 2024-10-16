@@ -18,7 +18,7 @@ Većina ljudi doživljava veb kao stalni stub modernog života – on je izmišl
 
 ### Web 1.0: Samo za čitanje (1990–2004) {#web1}
 
-1989. godine, u CERN-u u Ženevi, Tim Berners-Li je bio zauzet razvijanjem protokola koji će postati svetska mreža (World Wide Web). Njegova ideja? Kreiranje otvorenih, decentralizovanih protokola koji bi omogućili deljenje informacija s bilo kog mesta na zemlji.
+1989\. godine, u CERN-u u Ženevi, Tim Berners-Li je bio zauzet razvijanjem protokola koji će postati svetska mreža (World Wide Web). Njegova ideja? Kreiranje otvorenih, decentralizovanih protokola koji bi omogućili deljenje informacija s bilo kog mesta na zemlji.
 
 Prva verzija Berners-Lijeve kreacije, sada poznata kao „Web 1.0“, nastala je otprilike između 1990. i 2004. godine. Web 1.0 je uglavnom bio sastavljen od statičnih veb-stranica u vlasništvu kompanija, sa skoro nultom interakcijom između korisnika – pojedinci su retko proizvodili sadržaj – što je dovelo do toga da se naziva vebom samo za čitanje.
 
