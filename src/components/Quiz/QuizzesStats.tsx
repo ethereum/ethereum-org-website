@@ -117,7 +117,7 @@ const QuizzesStats = ({
                 justify={{ base: "center", lg: "flex-start" }}
               >
                 <Circle size="64px" bg="primary.base">
-                  <TrophyIcon color="neutral" w="35.62px" h="35.62px" />
+                  <TrophyIcon className="w-[35.62px] text-body-inverse" />
                 </Circle>
                 <Text as="span" fontWeight="bold" fontSize="5xl">
                   <Highlight

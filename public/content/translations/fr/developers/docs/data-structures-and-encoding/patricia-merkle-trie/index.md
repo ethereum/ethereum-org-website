@@ -5,13 +5,17 @@ lang: fr
 sidebarDepth: 2
 ---
 
-Un arbre de Merkle Patricia produit une structure des données cryptographiquement authentifiée pouvant être utilisée pour sauvegarder toutes les paires `(key, value)`.
+L'état d'Ethereum (l'ensemble des comptes, des soldes et des contrats intelligents) est codé dans une version spéciale de la structure de données couramment connue en informatique sous le nom d'arbre de Merkle. Cette structure est utile pour de nombreuses applications en cryptographie, car elle crée une relation vérifiable entre toutes les pièces de données individuelles entrelacées dans l'arbre, aboutissant à une seule valeur **racine** qui peut être utilisée pour prouver des éléments relatifs aux données.
 
-Les arbres de Merkle Patricia sont entièrement déterministes, ce qui signifie que deux arbres possédant la même paire `(clé, valeur)` sont garantis identiques -- jusqu'au dernier octet. Cela signifie également qu'ils ont le même hachage racine, ce qui permet d'atteindre le "Graal" de l'efficacité `O(log(n))` pour les insertions, les consultations et les suppressions. Enfin, ils sont plus simples à appréhender ainsi qu'à coder que les alternatives basées sur les comparaisons, comme les arbres rouge-noir.
+La structure de données d'Ethereum est un arbre de Patricia Merkle modifié, nommé ainsi parce qu'il emprunte certaines caractéristiques de PATRICIA (ou Practical Algorithm To Retrieve Information Coded in Alphanumeric), et parce qu'il est conçu pour récupérer efficacement les données (re**trie**val) des éléments qui composent l'état Ethereum.
+
+Un arbre de Patricia Merkle est déterministe et cryptographiquement vérifiable : la seule façon de générer une racine d'état est de la calculer à partir de chaque morceau individuel de l'état, et deux états qui sont identiques peuvent être facilement prouvés en comparant le hash de racine et les hashes qui y ont conduit (_a Merkle proof_). Inversement, il n'est pas possible de créer deux états différents avec le même hachage de racine, et toute tentative de modifier l'état avec différentes valeurs donnera lieu à un hachage de racine d'état différent. Théoriquement, cette structure fournit le sacré Graal de l'efficacité `O(log(n))` pour les inserts, les recherches et les suppressions.
+
+Dans un avenir proche, Ethereum prévoit de migrer vers une structure en [arbre de Verkle](https://ethereum.org/en/roadmap/verkle-trees), ce qui ouvrira de nombreuses possibilités d'amélioration du protocole.
 
 ## Prérequis {#prerequisites}
 
-Pour mieux comprendre cette page, il serait utile d'avoir des connaissances de base sur les [hachages](https://en.wikipedia.org/wiki/Hash_function), les [arbres de Merkle](https://en.wikipedia.org/wiki/Merkle_tree), les [arbres](https://en.wikipedia.org/wiki/Trie) et la [sérialisation](https://en.wikipedia.org/wiki/Serialization).
+Pour mieux comprendre cette page, il serait utile d'avoir des connaissances de base sur les [hachages](https://en.wikipedia.org/wiki/Hash_function), les [arbres de Merkle](https://en.wikipedia.org/wiki/Merkle_tree), les [arbres](https://en.wikipedia.org/wiki/Trie) et la [sérialisation](https://en.wikipedia.org/wiki/Serialization). Cet article commence par une description d'un [arbre radix](https://en.wikipedia.org/wiki/Radix_tree) de base, puis introduit progressivement les modifications nécessaires pour la construction d'une structure de données plus optimisée d'Ethereum.
 
 ## Arbres radix de base {#basic-radix-tries}
 
@@ -31,13 +35,11 @@ Les opérations de mise à jour et de suppression pour les arbres radix peuvent 
 
 ```
     def update(node,path,value):
+        curnode = db.get(node) if node else [ NULL ] * 17
+        newnode = curnode.copy()
         if path == '':
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newnode[-1] = value
         else:
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newindex = update(curnode[path[0]],path[1:],value)
             newnode[path[0]] = newindex
         db.put(hash(newnode),newnode)
@@ -160,7 +162,7 @@ Voici le code étendu pour obtenir un nœud dans l'arbre de Merkle Patricia :
 
 ### Exemple d'arbre {#example-trie}
 
-Supposons que nous voulions un tableau contenant quatre couples chemin/valeur `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
+Supposons que nous voulions un tableau contenant quatre paires chemin/valeur `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
 
 Tout d'abord, nous convertissons les chemins et les valeurs en `bytes` (octets). Ci-dessous, les représentations réelles d'octets pour les _chemins_ sont désignées par `<>`, bien que les _valeurs_ soient toujours représentées sous forme de chaînes, désignées par `''`, pour une compréhension plus facile (elles aussi seraient en fait des `octets`) :
 
@@ -250,7 +252,7 @@ Plus d'informations à ce sujet peuvent être trouvées dans la documentation [E
 
 ### Arbre de reçus {#receipts-trie}
 
-Chaque bloc a son propre arbre de reçus. Un `path` ici est : `rlp(transactionIndex)`. `transactionIndex` est son indice dans le bloc qu'il a miné. Les arbres de reçus ne sont jamais mis à jour. De la même manière que pour les arbres de transactions, il existe des reçus actuels et des reçus hérités. Pour interroger un reçu spécifique dans la liste des reçus, l'indice de la transaction dans son bloc, les charges du reçu et le type de transaction sont nécessaires. Le reçu retourné peut être de type `Reçu` qui est défini comme la concaténation de `TransactionType` et `ReceiptPayload` ou il peut être de type `LegacyReceipt` qui est défini comme `rlp([statut, cumulativeGasUsed, logsBloom, logs])`.
+Chaque bloc a son propre arbre de reçus. Un `path` ici est : `rlp(transactionIndex)`. `transactionIndex` est son indice dans le bloc dans lequel il est inclus. Les arbres de reçus ne sont jamais mis à jour. De la même manière que pour les arbres de transactions, il existe des reçus actuels et des reçus hérités. Pour interroger un reçu spécifique dans la liste des reçus, l'indice de la transaction dans son bloc, les charges du reçu et le type de transaction sont nécessaires. Le reçu retourné peut être de type `Reçu` qui est défini comme la concaténation de `TransactionType` et `ReceiptPayload` ou il peut être de type `LegacyReceipt` qui est défini comme `rlp([statut, cumulativeGasUsed, logsBloom, logs])`.
 
 Plus d'informations à ce sujet peuvent être trouvées dans la documentation [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
 

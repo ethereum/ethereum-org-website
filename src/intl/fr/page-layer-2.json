@@ -125,7 +125,7 @@
   "boba-description": "Boba est un rollup optimiste initialement dérivé de Optimism qui est une solution de mise à l'échelle qui vise à réduire les frais de gaz, améliorer le débit des transactions et étendre les capacités des contrats intelligents.",
   "base-description": "Base est un L2 Ethereum sécurisé, bon marché et facile à utiliser pour les développeurs conçu pour apporter le prochain milliard d'utilisateur au web3. C'est un L2 Ethereum, incubé par Coinbase et conçu sur le projet open source OP Stack.",
   "loopring-description": "La solution de rollup ZK L2 de Loopring vise à offrir les mêmes garanties de sécurité que le réseau principal Ethereum, avec une grande montée en charge : vitesse multipliée par 1000, et coût réduit à seulement 0,1 % du L1.",
-  "zksync-description": "zkSync est un ZK Rollup qui vise à mettre à l'échelle Ethereum et ses valeurs vers une adoption grand public, sans compromettre la sécurité ou la décentralisation.",
+  "zksync-description": "ZKsync est un ZK Rollup qui vise à faire évoluer Ethereum et ses valeurs vers une adoption grand public, sans compromettre la sécurité ou la décentralisation.",
   "zkspace-description": "La plateforme ZKSpace est constituée de 3 parties : un DEX AMM de couche 1 qui utiliser la technologie des ZK Rollups appelé ZKSwap, un service de paiement appelé ZKSquare, et une place de marche de NFTs appelée ZKSea.",
   "aztec-description": "Aztec Network est le premier zk-rollup privé sur Ethereum,. Il permet aux applications décentralisées d'accéder à la confidentialité et de se développer.",
   "starknet-description": "Starknet est un Validity Rollup de seconde couche. Il offre un débit élevé, des coûts de gaz faibles et conserve les niveaux de sécurité de la couche principale d'Ethereum.",
@@ -133,5 +133,7 @@
   "layer-2-ecosystem-portal": "Portail de l'écosystème",
   "layer-2-token-lists": "Listes de jetons",
   "layer-2-explore": "Explorer",
-  "page-dapps-ready-button": "Aller"
+  "page-dapps-ready-button": "Aller",
+  "layer-2-information": "Information",
+  "layer-2-wallet-managers": "Gestionnaires de portefeuille"
 }

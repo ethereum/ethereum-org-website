@@ -196,7 +196,7 @@ eventName="read more">
 
 Se recomienda a los operadores validadores visitar la página <a href="https://launchpad.ethereum.org/withdrawals/">Retiradas del lanzador de apuestas</a> donde encontrará más detalles sobre cómo preparar su validador para las retiradas, la sincronización de los eventos y más detalles sobre cómo funcionan las retiradas.
 
-Para probar primero su configuración en una red de pruebas, visite el <a href="https://holesky.launchpad.ethereum.org">Lanzador de apuestas de red de prueba Holesky</a> para empezar.
+Para probar primero su configuración en una red de pruebas, visite el <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> para comenzar.
 
 </ExpandableCard>
 
