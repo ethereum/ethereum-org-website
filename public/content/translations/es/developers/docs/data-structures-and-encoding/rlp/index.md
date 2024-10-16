@@ -5,9 +5,9 @@ lang: es
 sidebarDepth: 2
 ---
 
-La serialización de prefijo de longitud recursiva (RLP) se utiliza ampliamente en los clientes de ejecución de Ethereum. El RLP estandariza la transferencia de datos entre nodos en un formato de uso de espacio eficiente. El propósito de RLP es codificar matrices anidadas arbitrariamente de datos binarios, y RLP es el método de codificación principal utilizado para serializar objetos en la capa de ejecución de Ethereum. El único propósito del RLP es codificar la estructura; la codificación de tipos de datos específicos (por ejemplo, cadenas, flotantes) se deja a los protocolos de orden superior; pero los enteros RLP positivos deben representarse en forma binaria big-endian sin ceros a la izquierda (lo que hace que el valor entero cero sea equivalente a la matriz de bytes vacía). Los enteros positivos deserializados con ceros iniciales se tratan como no válidos. La representación de enteros de la longitud de la cadena también debe codificarse de esta manera, así como los enteros en la carga útil.
+La serialización de prefijo de longitud recursiva (RLP) se utiliza ampliamente en los clientes de ejecución de Ethereum. El RLP estandariza la transferencia de datos entre nodos en un formato de uso de espacio eficiente. El propósito de RLP es codificar matrices anidadas arbitrariamente de datos binarios, y RLP es el método de codificación principal utilizado para serializar objetos en la capa de ejecución de Ethereum. El propósito principal de RLP es codificar estructuras, con la excepción de enteros positivos, RLP delega la codificación de tipos de datos específicos (p. ej., strings, floats) a protocolos de mayor orden. Los enteros positivos deben representarse en forma binaria big-endian sin ceros iniciales (lo que hace que el valor entero cero sea equivalente a la matriz de bytes vacía). Los enteros positivos deserializados con ceros iniciales deben ser tratados como no válidos por cualquier protocolo de alto orden que utilice RLP.
 
-Más información en [La hoja amarilla de Ethereum (Apéndice B)](https://ethereum.github.io/yellowpaper/paper.pdf#page=19).
+Consulte más información en [La hoja amarilla de Ethereum (Apéndice B)](https://ethereum.github.io/yellowpaper/paper.pdf#page=19).
 
 Para usar RLP para codificar un diccionario, las dos formas canónicas sugeridas son:
 
@@ -20,6 +20,7 @@ La función de codificación RLP toma un elemento. Un elemento se define de la s
 
 - una cadena (es decir, una matriz de bytes) es un elemento
 - una lista de elementos es un elemento
+- un entero positivo es un elemento
 
 Por ejemplo, todos los siguientes son elementos:
 
@@ -27,14 +28,17 @@ Por ejemplo, todos los siguientes son elementos:
 - la cadena que contiene la palabra "gato";
 - una lista que contiene cualquier número de cadenas;
 - y estructuras de datos más complejas como `["gato", ["cachorro", "vaca"], "caballo", [[]], "cerdo", [""], "oveja"]`.
+- el número `100`
 
-Tenga en cuenta que en el contexto del resto de esta página, "cadena" significa "un cierto número de bytes de datos binarios"; no se utilizan codificaciones especiales, y no se implica ningún conocimiento sobre el contenido de las cadenas.
+Nótese que, en el contexto del resto de esta página, "string" se refiere a "cierta cantidad de bytes de datos binarios"; no se usan codificaciones especiales ni se implica conocimiento del contenido de las strings (excepto según lo requiera la regla contra enteros positivos no mínimos).
 
 La codificación RLP se define de la siguiente manera:
 
+- En el caso de un entero positivo, se lo convierte al array de bytes más corto cuya interpretación big endian es el entero y luego se codifica como una string según las reglas siguientes.
 - Para un solo byte cuyo valor esté en el rango `[0x00, 0x7f]` (decimal `[0, 127]`), ese byte es su propia codificación RLP.
 - De lo contrario, si una cadena tiene una longitud de 0-55 bytes, la codificación RLP consta de un solo byte con el valor **0x80** (dec. 128) más la longitud de la cadena seguida de la cadena. Por lo tanto, el rango del primer byte es `[0x80, 0xb7]` (dec. `[128, 183]`).
 - Si una cadena tiene más de 55 bytes de largo, la codificación RLP consta de un solo byte con el valor **0xb7** (dec. 183) más la longitud en bytes de la longitud de la cadena en forma binaria, seguida de la longitud de la cadena, seguida de la cadena. Por ejemplo, una cadena de 1024 bytes de largo se codificaría como `\xb9\x04\x00` (dec. `185, 4, 0`) seguido de la cadena. Aquí, `0xb9` (183 + 2 = 185) como el primer byte, seguido de los 2 bytes `0x0400` (dec. 1024) que denotan la longitud de la cadena real. El rango del primer byte es, por lo tanto, `[0xb8, 0xbf]` (dec. `[184, 191]`).
+- Si una string tiene una longitud mayor o igual a 2^64 bytes, no puede ser codificada.
 - Si la carga útil total de una lista (es decir, la longitud combinada de todos sus elementos codificados con RLP) es de 0-55 bytes, la codificación RLP consta de un solo byte con un valor **0xc0** más la longitud de la lista, seguida de la concatenación de las codificaciones RLP de los elementos. Por lo tanto, el rango del primer byte es `[0xc0, 0xf7]` (dec. `[192, 247]`).
 - Si la carga útil total de una lista tiene más de 55 bytes de longitud, la codificación RLP consta de un solo byte con un valor **0xf7** más la longitud en bytes de la longitud de la carga útil en forma binaria, seguida de la longitud de la carga útil, seguida de la concatenación de las codificaciones RLP de los elementos. Por lo tanto, el rango del primer byte es `[0xf8, 0xff]` (dec. `[248, 255]`).
 
@@ -73,9 +77,9 @@ def to_binary(x):
 - la cadena vacía ("null") = `[ 0x80 ]`
 - la lista vacía = `[ 0xc0 ]`
 - el entero 0 = `[ 0x80 ]`
-- el entero codificado 0 ('\\x00') = `[ 0x00 ]`
-- el entero codificado 15 ('\\x0f') = `[ 0x0f ]`
-- el entero codificado 1024 ('\\x04\\x00') = `[ 0x82, 0x04, 0x00 ]`
+- el byte '\\x00' = `[ 0x00 ]`
+- el byte '\\x0f' = `[ 0x0f ]`
+- los bytes '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
 - la [representación teórica de conjunto](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) de tres, `[ [], [[]], [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - la cadena "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
@@ -85,9 +89,9 @@ De acuerdo con las reglas y el proceso de codificación RLP, la entrada de la de
 
 1.  de acuerdo con el primer byte (es decir, el prefijo) de los datos de entrada y la decodificación del tipo de datos, la longitud de los datos reales y el desplazamiento;
 
-2.  de acuerdo con el tipo y el desplazamiento de los datos, decodificar los datos en consecuencia;
+2.  de acuerdo con el tipo y offset de datos, decodificar los datos según corresponda, respetando la regla de codificación mínima para enteros positivos;
 
-3.  continuar decodificando el resto de la entrada;
+3.  continuar decodificando el resto de la entrada.
 
 Entre ellos, las reglas de decodificación de tipos de datos y desplazamiento son las siguientes:
 

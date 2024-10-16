@@ -96,25 +96,25 @@ export const useStatsBoxGrid = ({
   const metrics: StatsBoxMetric[] = [
     {
       apiProvider: "DeFi Llama",
-      apiUrl: "https://defillama.com/",
+      apiUrl: "https://defillama.com/chain/Ethereum",
       label: t("page-index-network-stats-value-defi-description"),
       state: valueLocked,
     },
     {
       apiProvider: "Dune Analytics",
-      apiUrl: "https://dune.com/",
+      apiUrl: "https://dune.com/hildobby/eth2-staking",
       label: t("page-index-network-stats-total-eth-staked"),
       state: totalEtherStaked,
     },
     {
       apiProvider: "GrowThePie",
-      apiUrl: "https://growthepie.xyz/",
+      apiUrl: "https://www.growthepie.xyz/fundamentals/transaction-costs",
       label: t("page-index-network-stats-tx-cost-description"),
       state: medianTxCost,
     },
     {
       apiProvider: "GrowThePie",
-      apiUrl: "https://growthepie.xyz/",
+      apiUrl: "https://www.growthepie.xyz/fundamentals/transaction-count",
       label: t("page-index-network-stats-tx-day-description"),
       state: txs,
     },
