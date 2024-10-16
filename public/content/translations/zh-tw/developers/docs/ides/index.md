@@ -61,7 +61,7 @@ lang: zh-tw
 ## 外掛程式和擴充功能 {#plugins-extensions}
 
 - [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - 支援 Visual Studio Code 的以太坊 Solidity 語言
-- [支援 VS Code 的 Solidity + Hardhat ](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - Hardhat 團隊提供 Solidity 和 Hardhat 支援
+- [支援 VS Code 的 Solidity + Hardhat](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - Hardhat 團隊提供 Solidity 和 Hardhat 支援
 - [Prettier Soliditty](https://github.com/prettier-solidity/prettier-plugin-solidity) - 使用 prettier 的程式碼格式器
 
 ## 衍生閱讀 {#further-reading}

@@ -14,11 +14,11 @@ lang: zh-tw
 
 你應該瞭解[區塊瀏覽器](/developers/docs/data-and-analytics/block-explorers/)的基本概念，以便更好地理解在資料分析背景中如何使用它們。 此外，熟悉[索引](/glossary/#index)的概念以瞭解它們對系統設計所帶來的好處。
 
-在架構基礎方面，瞭解[應用程式介面](https://www.wikipedia.org/wiki/API)和 [ REST ](https://www.wikipedia.org/wiki/Representational_state_transfer) 的基本概念，即使只是理論上的也很重要。
+在架構基礎方面，瞭解[應用程式介面](https://www.wikipedia.org/wiki/API)和 [REST](https://www.wikipedia.org/wiki/Representational_state_transfer) 的基本概念，即使只是理論上的也很重要。
 
 ## 區塊瀏覽器 {#block-explorers}
 
-許多[區塊瀏覽器](/developers/docs/data-and-analytics/block-explorers/)提供 [RESTful ](https://www.wikipedia.org/wiki/Representational_state_transfer) [應用程式介面](https://www.wikipedia.org/wiki/API)閘道，這些閘道能夠讓開發者查看區塊、交易、驗證者、帳戶及其他鏈上活動的即時資料。
+許多[區塊瀏覽器](/developers/docs/data-and-analytics/block-explorers/)提供 [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [應用程式介面](https://www.wikipedia.org/wiki/API)閘道，這些閘道能夠讓開發者查看區塊、交易、驗證者、帳戶及其他鏈上活動的即時資料。
 
 開發者可以進一步處理和轉換這些資料，以提供使用者獨特的見解和與[區塊鏈](/glossary/#blockchain)的互動。 例如，[Etherscan](https://etherscan.io) 在每個 12 秒時隙都提供執行和共識資料。
 
