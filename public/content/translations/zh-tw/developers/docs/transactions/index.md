@@ -200,7 +200,7 @@ Alice 的帳戶將存入 **+1.0 以太幣**
 
 根據 `TransactionType` 值，交易可以分類為
 
-1. **類型 0（傳統）交易：**自以太坊推出以來使用的原始交易格式。 它們不包括 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 的功能，例如動態燃料費計算或智慧型合約的存取清單。 傳統交易缺少在序列化形式中指示交易類型的特定前綴，在使用[遞迴長度前綴 (RLP) ](/developers/docs/data-structures-and-encoding/rlp)編碼時，該前綴以位元組 `0xf8` 開始。 這些交易的 TransactionType 值為 `0x0`。
+1. **類型 0（傳統）交易：**自以太坊推出以來使用的原始交易格式。 它們不包括 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 的功能，例如動態燃料費計算或智慧型合約的存取清單。 傳統交易缺少在序列化形式中指示交易類型的特定前綴，在使用[遞迴長度前綴 (RLP)](/developers/docs/data-structures-and-encoding/rlp) 編碼時，該前綴以位元組 `0xf8` 開始。 這些交易的 TransactionType 值為 `0x0`。
 
 2. **類型 1 交易：**在 [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) 中引入作為以太坊[柏林升級](/history/#berlin)的一部分，這些交易包含一個 `accessList` 參數。 此清單指定了交易期望存取的地址和儲存金鑰，有助於潛在降低涉及智慧型合約的複雜交易的[燃料](/developers/docs/gas/)成本。 EIP-1559 的費用市場變化不會包含在類型 1 交易中。 類型 1 交易也包含一個 `yParity` 參數，該參數可以是 `0x0` 或 `0x1`，表示 secp256k1 簽章的 y 值的奇偶性。 此類交易透過開頭的位元組 `0x01` 開頭辨識，其 TransactionType 值為 `0x1`。
 

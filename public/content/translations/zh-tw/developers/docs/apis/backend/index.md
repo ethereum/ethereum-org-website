@@ -204,4 +204,4 @@ _知道對你有幫助的社群資源嗎？ 請編輯此頁面並新增資源！
 ## 相關教學影片 {#related-tutorials}
 
 - [設定 Web3js 以在 Javascript 中使用以太坊區塊鏈](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 在專案中設定 web3.js 的說明。_
-- [從 JavaScript 呼叫智慧型合約](/developers/tutorials/calling-a-smart-contract-from-javascript/) _ – 使用 DAI 代幣，瞭解如何使用 JavaScript 呼叫合約函式。</li> </ul>
+- [從 JavaScript 呼叫智慧型合約](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– 使用 DAI 代幣，瞭解如何使用 JavaScript 呼叫合約函式。_
