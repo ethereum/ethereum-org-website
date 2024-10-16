@@ -5,7 +5,9 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 })
 
-const { i18n } = require("./next-i18next.config")
+const { i18n } = require("./next-i18next.config.cjs")
+
+process.env.I18NEXT_DEFAULT_CONFIG_PATH = "./next-i18next.config.cjs"
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
 
