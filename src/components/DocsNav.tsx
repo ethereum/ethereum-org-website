@@ -11,7 +11,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import docLinks from "@/data/developer-docs-links.yaml"
 
-import { Flex, Stack } from "./ui/flex"
+import { Stack } from "./ui/flex"
 import { LinkBox, LinkOverlay } from "./ui/link-box"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
@@ -125,9 +125,9 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
     currentIndex + 1 < docsArray.length ? docsArray[currentIndex + 1] : null
 
   return (
-    <Flex
+    <nav
       className={cn(
-        "flex-col-reverse md:flex-row lg:flex-col-reverse xl:flex-row",
+        "flex flex-col-reverse md:flex-row lg:flex-col-reverse xl:flex-row",
         "mt-8 justify-between gap-4",
         "items-center md:items-start"
       )}
@@ -150,7 +150,7 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
       ) : (
         <div className="hidden flex-grow xl:block"></div>
       )}
-    </Flex>
+    </nav>
   )
 }
 
