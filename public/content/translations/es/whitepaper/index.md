@@ -374,7 +374,7 @@ Sin embargo, resulta que este fallo en el mecanismo basado en el mercado, cuando
 3. Hay `N` nodos de minado, cada uno con exactamente la misma potencia de procesamiento (es decir, `1/N` del total)
 4. No existen nodos completos que no minen.
 
-Un minero estaría dispuesto a procesar una transacción si la recompensa esperada es mayor que el coste. Por lo tanto, la recompensa esperada es `kR/N` ya que el minero tiene una </code>1/N</code> probabilidad de procesar el siguiente bloque, y el coste del procesamiento para el minero es simplemente`kC`. Por lo tanto, los mineros incluirán transacciones en las que `kR/N> kC`, o `R> NC`. Tenga en cuenta que `R` es la tarifa por operación facilitada por el remitente, y es un límite inferior del beneficio que obtiene el remitente de la transacción, y `NC` es el coste de toda la red en conjunto para procesar una operación. Por eso, los mineros tienen el incentivo de incluir solo aquellas transacciones cuyo beneficio utilitario total exceda el coste.
+Un minero estaría dispuesto a procesar una transacción si la recompensa esperada es mayor que el coste. Por lo tanto, la recompensa esperada es `kR/N` ya que el minero tiene una `1/N` probabilidad de procesar el siguiente bloque, y el coste del procesamiento para el minero es simplemente `kC`. Por lo tanto, los mineros incluirán transacciones en las que `kR/N> kC`, o `R> NC`. Tenga en cuenta que `R` es la tarifa por operación facilitada por el remitente, y es un límite inferior del beneficio que obtiene el remitente de la transacción, y `NC` es el coste de toda la red en conjunto para procesar una operación. Por eso, los mineros tienen el incentivo de incluir solo aquellas transacciones cuyo beneficio utilitario total exceda el coste.
 
 No obstante, hay varias desviaciones de esos supuestos en la realidad:
 
@@ -383,7 +383,7 @@ No obstante, hay varias desviaciones de esos supuestos en la realidad:
 3. La distribución de potencia de minado puede acabar siendo radicalmente desigualitaria en la práctica.
 4. Los especuladores, enemigos políticos y dementes, cuya función de utilidad incluye causar daño a la red, existen y pueden establecer hábilmente contratos cuyo coste es mucho menor que el coste pagado por otros nodos de verificación.
 
-(1) proporciona una tendencia al minero a que incluya menos transacciones, e (2) incrementa `NC`; por lo tanto, estos dos efectos al menos parcialmente se cancelan entre sí.<sup>[¿Cómo?](https://github. om/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) y (4) son el principal problema; para resolverlos, simplemente fijamos un límite reajustable: ningún bloque puede tener más operaciones que `BLK_LIMIT_FACTOR` veces el promedio de la media móvil exponencial a largo plazo. Específicamente:
+(1) proporciona una tendencia al minero a que incluya menos transacciones, e (2) incrementa `NC`; por lo tanto, estos dos efectos al menos parcialmente se cancelan entre sí.<sup>[¿Cómo?](https://github.com/ethereum/wiki/issues/447#issuecomment-316972260)</sup> (3) y (4) son el principal problema; para resolverlos, simplemente fijamos un límite reajustable: ningún bloque puede tener más operaciones que `BLK_LIMIT_FACTOR` veces el promedio de la media móvil exponencial a largo plazo. Específicamente:
 
 ```js
 blk.oplimit = floor((blk.parent.oplimit \* (EMAFACTOR - 1) +

@@ -24,7 +24,7 @@ Recursos no técnicos para poder entender cómo los negocios se pueden beneficia
 
 - [¿Por qué las cadenas de bloques son útiles para los negocios?](https://entethalliance.org/why-are-blockchains-useful-for-business/)_: Analiza el valor de las cadenas de bloques a través de la lente de la previsibilidad_.
 - [Informe de preparación de las empresas 2023 de Enterprise Ethereum Alliance](https://entethalliance.org/eea-ethereum-business-readiness-report-2023/)_: Encuesta sobre el potencial y las capacidades de Ethereum público y el ecosistema más amplio de Ethereum para los negocios_.
-- [_Ethereum for Business_ (por Paul Brody) ](https://www.uapress.com/product/ethereum-for-business/)_es una guía en inglés simple sobre los casos de uso que generan retornos, del manejo de activos a los pagos o las cadenas de suministro_.
+- [_Ethereum for Business_ (por Paul Brody)](https://www.uapress.com/product/ethereum-for-business/) _es una guía en inglés simple sobre los casos de uso que generan retornos, del manejo de activos a los pagos o las cadenas de suministro_.
 
 ### Organizaciones {#organizations}
 
@@ -44,7 +44,7 @@ Diferentes organizaciones han colaborado para que Ethereum sea fácil de usar pa
 - [Blockapps](https://blockapps.net/)_: Implementación del protocolo, las herramientas y las API de Enterprise Ethereum que forman la plataforma STRATO_.
 - [Chainstack](https://chainstack.com/)_: Infraestructura de red principal y red de prueba de Ethereum alojada en nubes de clientes públicas y aisladas_.
 - [ConsenSys](https://consensys.io/)_: Ofrece una gama de productos y herramientas para desarrollar en Ethereum, así como servicios de consultoría y desarrollo personalizados_.
-- [Crossmint](http://crossmint.com/)_: Plataforma de desarrollo web3 de nivel empresarial para implementar contratos inteligentes, habilitar pagos con tarjetas de crédito y entre cadenas, y usar API para crear, distribuir, vender, almacenar y editar NFT.</ 1></li>
+- [Crossmint](http://crossmint.com/)_: Plataforma de desarrollo web3 de nivel empresarial para implementar contratos inteligentes, habilitar pagos con tarjetas de crédito y entre cadenas, y usar API para crear, distribuir, vender, almacenar y editar NFT._
 - [Envision Blockchain](https://envisionblockchain.com/)_: Ofrece servicios de consultoría y desarrollo enfocados en la empresa especializados en la red principal de Ethereum_.
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager)_: Ofrece un flujo de trabajo de adquisiciones mediante la emisión de solicitudes de cotización, contratos, órdenes de compra y facturas a través de su red de socios comerciales de confianza_.
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu)_: Un cliente Ethereum de código abierto enfocado en la empresa, desarrollado bajo la licencia Apache 2.0 y escrito en Java_.
@@ -56,7 +56,7 @@ Diferentes organizaciones han colaborado para que Ethereum sea fácil de usar pa
 - [QuickNode](https://www.quicknode.com/)_: Proporciona nodos confiables y rápidos con API de alto nivel como NFT API, Token API, etc., al tiempo que ofrece un conjunto unificado de productos y soluciones de nivel empresarial_.
 - [Tenderly](https://tenderly.co)_: Una plataforma de desarrollo web3 que proporciona bloques construcción de infraestructura, depuración y observabilidad para desarrollar, probar, supervisar y operar contratos inteligentes_.
 - [Unibright](https://unibright.io/)_: Un equipo de especialistas, arquitectos, desarrolladores y consultores de cadena de bloques con más de 20 años de experiencia en procesos e integraciones empresariales_.
-- [Zeeve](https://www.zeeve.io/)_: Proporciona una gama de productos y herramientas para construir en Ethereum, así como infraestructura y API para aplicaciones web3 empresariales_.</ul>
+- [Zeeve](https://www.zeeve.io/)_: Proporciona una gama de productos y herramientas para construir en Ethereum, así como infraestructura y API para aplicaciones web3 empresariales_.
 
 ### Herramientas y bibliotecas {#tooling-and-libraries}
 

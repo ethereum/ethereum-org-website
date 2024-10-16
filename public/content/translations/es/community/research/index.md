@@ -271,7 +271,7 @@ El staking líquido permite a los usuarios con menos de 32 ETH recibir rendimien
 
 #### Lectura de fondo {#background-reading-12}
 
-- [Ethresear.ch staking líquido](https://ethresear.ch/search? Q=liquid%20staking)
+- [Ethresear.ch staking líquido](https://ethresear.ch/search?Q=liquid%20staking)
 - [Lido: El camino hacia el staking en Ethereum sin confianza](https://blog.lido.fi/the-road-to-trustless-ethereum-staking/)
 - [Rocket Pool: Introducción al protocolo de staking](https://medium.com/rocket-pool/rocket-pool-staking-protocol-part-1-8be4859e5fbd)
 

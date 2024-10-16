@@ -35,7 +35,7 @@ Las soluciones diferentes presentadas tienen todas una excelente integridad, dad
 
 ## Requisitos previos {#prerequisites}
 
-Para continuar leyendo, debería tener un buen entendimiento de [los fundamentos de la cadena de bloques](es/developers/docs/intro-to-ethereum/). Esta página asume también que el lector tiene familiaridad con los [bloques](/developers/docs/blocks/), las [transacciones](/developers/docs/transactions/) y otros temas relevantes.
+Para continuar leyendo, debería tener un buen entendimiento de [los fundamentos de la cadena de bloques](/developers/docs/intro-to-ethereum/). Esta página asume también que el lector tiene familiaridad con los [bloques](/developers/docs/blocks/), las [transacciones](/developers/docs/transactions/) y otros temas relevantes.
 
 ## Blobs EIP-4844 {#eip-4844-blobs}
 

@@ -4,7 +4,7 @@ description: Una visión general para reducir la brecha a los desarrolladores
 lang: es
 ---
 
-Con la proliferación de las cadenas de bloques L1 y las soluciones de [escalamiento ](/developers/docs/scaling/) L2, junto con el gran crecimiento del número de aplicaciones descentralizadas operando en varias cadenas o pasando a la modalidad multicadena, la necesidad por establecer comunicación y de poder mover activos a través de estás cadenas se han convertido en una parte esencial de la infraestructura de red. Existen diferentes tipos de puentes que hacen esto posible.
+Con la proliferación de las cadenas de bloques L1 y las soluciones de [escalamiento](/developers/docs/scaling/) L2, junto con el gran crecimiento del número de aplicaciones descentralizadas operando en varias cadenas o pasando a la modalidad multicadena, la necesidad por establecer comunicación y de poder mover activos a través de estás cadenas se han convertido en una parte esencial de la infraestructura de red. Existen diferentes tipos de puentes que hacen esto posible.
 
 ## La necesidad de puentes {#need-for-bridges}
 
