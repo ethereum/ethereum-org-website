@@ -88,7 +88,6 @@ import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
 import { fetchRSS } from "@/lib/api/fetchRSS"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
-import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 import BuildersImage from "@/public/images/heroes/developers-hub-hero.jpg"
 import ActivityImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
@@ -124,7 +123,7 @@ const loadData = dataLoader(
   [
     ["ethPrice", fetchEthPrice],
     ["totalEthStaked", fetchTotalEthStaked],
-    ["totalValueLocked", fetchTotalValueLocked],
+    // ["totalValueLocked", fetchTotalValueLocked],
     ["growThePieData", fetchGrowThePie],
     ["communityEvents", fetchCommunityEvents],
     ["attestantPosts", fetchAttestantPosts],
@@ -137,7 +136,7 @@ export const getStaticProps = (async ({ locale }) => {
   const [
     ethPrice,
     totalEthStaked,
-    totalValueLocked,
+    // totalValueLocked,
     growThePieData,
     communityEvents,
     attestantPosts,
@@ -147,7 +146,7 @@ export const getStaticProps = (async ({ locale }) => {
   const metricResults: AllMetricData = {
     ethPrice,
     totalEthStaked,
-    totalValueLocked,
+    totalValueLocked: { value: 123, timestamp: Date.now() },
     txCount: growThePieData.txCount,
     txCostsMedianUsd: growThePieData.txCostsMedianUsd,
   }
