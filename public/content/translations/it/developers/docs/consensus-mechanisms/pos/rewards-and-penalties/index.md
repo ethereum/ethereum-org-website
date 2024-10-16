@@ -4,7 +4,7 @@ description: Scopri di più sugli incentivi del protocollo nel proof-of-stake di
 lang: it
 ---
 
-Ethereum è protetta utilizzando la sua criptovaluta nativa, ether (ETH). Gli operatori dei nodi che desiderano partecipare alla convalida dei blocchi e all'identificazione della testa della catena depositano ether in un contratto intelligente su Ethereum. Quindi sono pagati in ether per eseguire il software del validatore, che verifica la validità dei nuovi blocchi ricevuti tramite la rete peer-to-peer e applica l'algoritmo di scelta della diramazione per identificare la testa della catena.
+Ethereum è protetta utilizzando la sua criptovaluta nativa, ether (ETH). Gli operatori del nodo che desiderano partecipare alla convalida dei blocchi e all'identificazione della testa della catena, depositano dell'ether nel [contratto di deposito](/staking/deposit-contract/) su Ethereum. Quindi sono pagati in ether per eseguire il software del validatore, che verifica la validità dei nuovi blocchi ricevuti tramite la rete peer-to-peer e applica l'algoritmo di scelta della diramazione per identificare la testa della catena.
 
 Esistono due ruoli principali per un validatore: 1) controllare i nuovi blocchi e "attestarne" la validità, 2) proporre nuovi blocchi quando selezionati casualmente dal gruppo totale di validatori. Se il validatore non riesce a svolgere una di queste mansioni quando richiesto, perde un pagamento di ether. Talvolta, inoltre, i validatori sono incaricati di aggregare le firme e partecipare alle commissioni di sincronizzazione.
 

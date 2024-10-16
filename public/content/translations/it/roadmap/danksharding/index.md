@@ -43,7 +43,7 @@ KZG sta per Kate-Zaverucha-Goldberg, i nomi dei tre [autori originali](https://l
 
 La cerimonia KZG era un metodo, per molte persone da tutta la community di Ethereum, di generare collettivamente una stringa casuale segreta di numeri, utilizzabile per verificare dei dati. È molto importante che tale stringa di numeri non sia nota e non possa essere ricreata da nessuno. Per assicurarlo, ogni partecipante alla cerimonia ha ricevuto una stringa dal partecipante precedente. Quindi, creava dei nuovi valori casuali (ad esempio, consentendo al proprio browser di misurare il movimento del proprio mouse) e li mischiava con il valore precedente. Poi, inviava il valore al partecipante successivo e lo eliminava dalla propria macchina locale. Finché una persona nella cerimonia lo faceva onestamente, il valore finale non poteva essere noto a un utente malevolo.
 
-La cerimonia KZG dell'EIP-4844 era aperta al pubblico e decine di migliaia di persone hanno partecipato per aggiungere la propria entropia (casualità). In totale, vi sono stati oltre 140.000 contributi, rendendola la più grande cerimonia al mondo del suo tipo. Affinché la cerimonia sia compromessa, il 100% di questi partecipanti avrebbe dovuto essere attivamente disonesto. Dalla prospettiva dei partecipanti, se sanno di essere onesti, non è necessario fidarsi di nessun altro, poiché sanno di aver protetto la cerimonia (soddisfacendo individualmente il requisito del partecipante onesto "1 di N").
+La cerimonia KZG dell'EIP-4844 era aperta al pubblico e decine di migliaia di persone hanno partecipato per aggiungere la propria entropia (casualità). In totale ci sono stati oltre 140.000 contributi, rendendola la più grande cerimonia al mondo nel suo genere. Affinché la cerimonia sia compromessa, il 100% di questi partecipanti avrebbe dovuto essere attivamente disonesto. Dalla prospettiva dei partecipanti, se sanno di essere onesti, non è necessario fidarsi di nessun altro, poiché sanno di aver protetto la cerimonia (soddisfacendo individualmente il requisito del partecipante onesto "1 di N").
 
 <ExpandableCard title="Per cosa si utilizza il numero casuale dalla cerimonia KZG?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
@@ -58,7 +58,7 @@ Se qualcuno conoscesse le posizioni casuali utilizzate per l'impegno, sarebbe fa
 </ExpandableCard>
 
 <InfoBanner isWarning mb={8}>
-  Né il Danksharding, né il Proto-Danksharding seguono il modello di "frammentazione" tradizionale, che mirava alla divisione della blockchain in più parti. Le catene di frammenti non fanno più parte della tabella di marcia. Invece, il Danksharding utilizza il campionamento dei dati distribuiti tra blob, per ridimensionare Ethereum. Ciò è molto più semplice da implementare. Questo modello, talvolta, è stato indicato come "frammentazione dei dati".
+  Né il Danksharding né il Proto-Danksharding seguono il tradizionale modello di “frammentazione” (sharding) che mira a dividere la blockchain in più parti. Le catene di frammenti non fanno più parte della tabella di marcia. Invece, il Danksharding utilizza il campionamento dei dati distribuiti tra blob, per ridimensionare Ethereum. Ciò è molto più semplice da implementare. Questo modello, talvolta, è stato indicato come "frammentazione dei dati".
 </InfoBanner>
 
 ## Cos'è il Danksharding? {#what-is-danksharding}

@@ -6,9 +6,9 @@ lang: cs
 
 # Energetické náklady Etherea {#proof-of-stake-energy}
 
-Ethereum je "zelený" blockchain. Mechanismus konsenzu [proof-of-stake](/developers/docs/consensus-mechanisms/pos) Etherea používá ETH místo [ energie k zabezpečení sítě](/developers/docs/consensus-mechanisms/pow). Spotřeba energie Etherea je v celé globální síti přibližně [~0,0026 TWh/rok](https://carbon-ratings.com/eth-report-2022).
+Ethereum je "zelený" blockchain. Mechanismus konsenzu [důkazu podílem](/developers/docs/consensus-mechanisms/pos) Etherea používá ETH místo [ energie k zabezpečení sítě](/developers/docs/consensus-mechanisms/pow). Spotřeba energie Etherea je v celé globální síti přibližně [~0,0026 TWh/rok](https://carbon-ratings.com/eth-report-2022).
 
-Odhad spotřeby energie pro Ethereum pochází ze studie [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Ta obsahovala celkové odhady spotřeby elektřiny a uhlíkové stopy sítě Ethereum ([viz zpráva](https://carbon-ratings.com/eth-report-2022)). Měřili spotřebu elektřiny různých síťových uzlů s různými konfiguracemi hardwaru a softwaru. Odhadovaných **2,601 MWh** (0.0026 TWh) pro roční spotřebu elektřiny sítě odpovídá ročním emisím uhlíku **870 tun CO2e** při použití regionálních faktorů intenzity uhlíku. Tato hodnota se mění, když se síťové uzly připojí nebo odpojí od sítě – můžete ji sledovat pomocí klouzavého sedmidenního průměrného odhadu podle [Cambridge Blockchain network Sustainability indexu](https://ccaf.io/cbnsi/ethereum) (všimněte si, že pro své odhady používají trochu jinou metodu – podrobnosti jsou k dispozici na jejich webu).
+Odhad spotřeby energie pro Ethereum pochází ze studie [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Ta obsahovala celkové odhady spotřeby elektřiny a uhlíkové stopy sítě Ethereum ([viz zpráva](https://carbon-ratings.com/eth-report-2022)). Měřili spotřebu elektřiny různých uzlů s různými konfiguracemi hardwaru a klientského softwaru. Odhadovaných **2,601 MWh** (0.0026 TWh) pro roční spotřebu elektřiny sítě odpovídá ročním emisím uhlíku **870 tun CO2e** při použití regionálních faktorů intenzity uhlíku. Tato hodnota se mění, když se síťové uzly připojí nebo odpojí od sítě – můžete ji sledovat pomocí klouzavého sedmidenního průměrného odhadu podle [Cambridge Blockchain network Sustainability indexu](https://ccaf.io/cbnsi/ethereum) (všimněte si, že pro své odhady používají trochu jinou metodu – podrobnosti jsou k dispozici na jejich webu).
 
 Abychom uvedli spotřebu energie Etherea do kontextu, můžeme porovnat roční odhady pro některá další průmyslová odvětví. To nám pomůže lépe pochopit, zda je odhad pro Ethereum vysoký nebo nízký.
 
@@ -35,7 +35,7 @@ Je složité získat přesné odhady spotřeby energie, obzvláště když zde e
 
 Tyto výše uvedené odhady nejsou dokonalým srovnáním. Výše nepřímých výdajů, které se započítávají, se liší podle zdroje a zřídkakdy zahrnuje energii ze zařízení koncových uživatelů. Každý podkladový zdroj obsahuje podrobnější informace o tom, co se měří.
 
-Tabulka a graf výše také obsahují srovnání s Bitcoinem a proof-of-work Ethereem. Je důležité si uvědomit, že spotřeba energie v proof-of-work sítích není statická a mění se ze dne na den. Odhady se mohou mezi jednotlivými zdroji značně lišit. Toto téma přitahuje různorodé [debaty](https://www.coindesk.com/business/2020/05/19/the-last-word-on-bitcoins-energy-consumption/), nejen o množství spotřebované energie, ale také o jejích zdrojích a souvisejících etických otázkách. Spotřeba energie nemusí nutně přesně odpovídat ekologické stopě, protože různé projekty mohou využívat různé zdroje energie, včetně menšího či většího podílu obnovitelných zdrojů. Například [Cambridge Bitcoin Electricity Consumption Index](https://ccaf.io/cbnsi/cbeci/comparisons) ukazuje, že poptávka po síti Bitcoin by teoreticky mohla být napájena spalováním plynu nebo elektřinou, která by se jinak ztratila při přenosu a distribuci. Cesta Etherea k udržitelnosti spočívala v nahrazení energeticky náročné části sítě zelenou alternativou.
+Tabulka a graf výše také obsahují srovnání s Bitcoinem a Ethereem důkazu prací. Je důležité si uvědomit, že spotřeba energie v sítích důkazu prací není statická a mění se ze dne na den. Odhady se mohou mezi jednotlivými zdroji značně lišit. Toto téma přitahuje různorodé [debaty](https://www.coindesk.com/business/2020/05/19/the-last-word-on-bitcoins-energy-consumption/), nejen o množství spotřebované energie, ale také o jejích zdrojích a souvisejících etických otázkách. Spotřeba energie nemusí nutně přesně odpovídat ekologické stopě, protože různé projekty mohou využívat různé zdroje energie, včetně menšího či většího podílu obnovitelných zdrojů. Například [Cambridge Bitcoin Electricity Consumption Index](https://ccaf.io/cbnsi/cbeci/comparisons) ukazuje, že poptávka po síti Bitcoin by teoreticky mohla být napájena spalováním plynu nebo elektřinou, která by se jinak ztratila při přenosu a distribuci. Cesta Etherea k udržitelnosti spočívala v nahrazení energeticky náročné části sítě zelenou alternativou.
 
 Na [stránce Cambridge Blockchain Network Sustainability indexu](https://ccaf.io/cbnsi/ethereum) si můžete prohlédnout odhady spotřeby energie a uhlíkových emisí pro spoustu průmyslových odvětví.
 
@@ -47,9 +47,9 @@ Například u Etherea není transakční propustnost pouze propustností základ
 
 ## Uhlíkový dluh Etherea {#carbon-debt}
 
-Energetický výdej Etherea je velmi nízký, ale ne vždy tomu tak bylo. Ethereum původně používalo machanismus proof-of-work, který měl mnohem vyšší ekologické náklady než současný proof-of-stake.
+Energetický výdej Etherea je velmi nízký, ale ne vždy tomu tak bylo. Ethereum původně používalo machanismus důkazu prací, který měl mnohem vyšší ekologické náklady než současný důkaz podílem.
 
-Od samého začátku Ethereum plánovalo implementovat mechanismus konsensu založený na proof-of-stake, ale aby to bylo možné uskutečnit bez snížení bezpečnosti a decentralizace, si vyžádalo roky soustředěného výzkumu a vývoje. Proto byl ke spuštění sítě použit mechanismus proof-of-work. Ten vyžaduje, aby těžaři k výpočtu hodnoty použili svůj hardware, a tím spotřebovali energii.
+Od samého začátku Ethereum plánovalo implementovat mechanismus konsensu založený na důkazu podílem, ale aby to bylo možné uskutečnit bez snížení bezpečnosti a decentralizace, si vyžádalo roky soustředěného výzkumu a vývoje. Proto byl ke spuštění sítě použit mechanismus důkazu prací. Ten vyžaduje, aby těžaři k výpočtu hodnoty použili svůj hardware, a tím spotřebovali energii.
 
 ![Porovnání spotřeby energie Etherea před a po mergi s použitím Eiffelovky (330 metrů vysoké) nalevo, která představuje vysokou spotřebu energie před mergem, a malé 4 cm vysoké figurky Lego napravo, která představuje dramatické snížení spotřeby energie po mergi](energy_consumption_pre_post_merge.png)
 
@@ -68,7 +68,7 @@ Nativní platformy pro financování veřejných statků fungujících na princi
 ## Další informace {#further-reading}
 
 - [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum)
-- [Zpráva Bílého domu o proof-of-work blockchainech](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Zpráva Bílého domu o blockchainech důkazu prací](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Emise Etherea: Souhrnný odhad](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_
