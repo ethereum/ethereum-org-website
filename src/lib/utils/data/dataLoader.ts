@@ -1,7 +1,6 @@
 import { cacheAsyncFn } from "./cacheAsyncFn"
-import { loadMockData } from "./loadMockData"
 
-const USE_MOCK_DATA = process.env.USE_MOCK_DATA === "true"
+// const USE_MOCK_DATA = process.env.USE_MOCK_DATA === "true"
 
 type DataLoaderFunction<T> = () => Promise<T>
 
@@ -32,19 +31,21 @@ export function dataLoader<T extends unknown[]>(
     const cachedLoader = cacheAsyncFn(key, loader, {
       cacheTimeout,
     })
-    return async () => {
-      try {
-        if (USE_MOCK_DATA) {
-          console.log("Using mock data for", key)
-          return await loadMockData(key)
-        }
 
-        return await cachedLoader()
-      } catch (error) {
-        console.error(`Error in dataLoader for key "${key}":`, error)
-        throw error
-      }
-    }
+    return cachedLoader
+    // return async () => {
+    //   try {
+    //     if (USE_MOCK_DATA) {
+    //       console.log("Using mock data for", key)
+    //       return await loadMockData(key)
+    //     }
+
+    //     return await cachedLoader()
+    //   } catch (error) {
+    //     console.error(`Error in dataLoader for key "${key}":`, error)
+    //     throw error
+    //   }
+    // }
   })
 
   return async () => {

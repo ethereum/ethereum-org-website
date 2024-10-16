@@ -45,7 +45,7 @@ export function cacheAsyncFn<T>(
     const value = await fn()
 
     // Store in memory cache
-    memoryCache[key] = { value: value, timestamp: now }
+    memoryCache[key] = { value, timestamp: now }
     console.log("Function result cached", key)
 
     return value as T

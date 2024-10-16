@@ -1,10 +1,8 @@
 import { type ReactNode } from "react"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
 
 import { cn } from "@/lib/utils/cn"
-import { isValidDate } from "@/lib/utils/date"
 
 import Tooltip from "../Tooltip"
 import Link from "../ui/Link"
@@ -27,13 +25,13 @@ const BigNumber = ({
   className,
 }: BigNumberProps) => {
   const { t } = useTranslation("common")
-  const { locale } = useRouter()
-  const lastUpdatedDisplay =
-    lastUpdated && isValidDate(lastUpdated)
-      ? new Intl.DateTimeFormat(locale, {
-          dateStyle: "medium",
-        }).format(new Date(lastUpdated))
-      : ""
+  // const { locale } = useRouter()
+  // // const lastUpdatedDisplay =
+  // //   lastUpdated && isValidDate(lastUpdated)
+  // //     ? new Intl.DateTimeFormat(locale, {
+  // //         dateStyle: "medium",
+  // //       }).format(new Date(lastUpdated))
+  // //     : ""
   return (
     <div
       className={cn(
@@ -56,7 +54,8 @@ const BigNumber = ({
                     </p>
                     {lastUpdated && (
                       <p className="mt-2">
-                        {t("last-updated")}: {lastUpdatedDisplay}
+                        {t("last-updated")}:{" "}
+                        {new Date(lastUpdated).toISOString()}
                       </p>
                     )}
                   </>
