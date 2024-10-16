@@ -74,7 +74,7 @@ Vekil modellerin kullanılması için **delegatecall** fonksiyonuna hakim olmak 
 
 [Solidy belgelerinden](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries):
 
-> _Mesaj çağrısının **delegatecall** adında özel bir varyantı vardır ve bu varyant, hedef adresteki kodun, çağıran sözleşme bağlamında (yani adreste) yürütülmesi gerçeği dışında bir mesaj çağrısı ile aynıdır; `msg.sender` ve `msg.value` değerleri değişmez.\_\_Bu, bir sözleşmenin çalışma zamanında farklı bir adresten dinamik olarak kod yükleyebilmesi anlamına gelir. Depolama, geçerli adres ve bakiye, hala çağırana başvuruda bulunur, çağrılan adresten sadece kod alınır._
+> _Mesaj çağrısının **delegatecall** adında özel bir varyantı vardır ve bu varyant, hedef adresteki kodun, çağıran sözleşme bağlamında (yani adreste) yürütülmesi gerçeği dışında bir mesaj çağrısı ile aynıdır; `msg.sender` ve `msg.value` değerleri değişmez.__Bu, bir sözleşmenin çalışma zamanında farklı bir adresten dinamik olarak kod yükleyebilmesi anlamına gelir. Depolama, geçerli adres ve bakiye, hala çağırana başvuruda bulunur, çağrılan adresten sadece kod alınır._
 
 Vekil sözleşme, bir kullanıcı bir fonksiyonu her çağırdığında `delegatecall` çağrısı yapması gerektiğini bilir. Çünkü yerleşik bir `fallback` fonksiyonuna sahiptir. Solidity programlamada, bir fonksiyon çağrısı sözleşmede belirtilmiş olan fonksiyonlarla eşleşmediğinde [geri dönüş işlevi](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) çalıştırılır.
 

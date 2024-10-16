@@ -20,7 +20,7 @@ Bu bağlamdan dolayı, bir borsa önerdiğinizde bazı özel bilgilere ihtiyacı
 
 ## İhtiyacımız olanlar {#what-we-need}
 
-- Borsa için geçerli olan coğrafi kısıtlamalar
+- Borsa için geçerli olan coğrafi kısıtlamalar. Borsayla ilişkili coğrafi kısıtlamalar, borsanın web sitesinin özel bir sayfasında veya bölümünde ayrıntılı olarak açıklanmalıdır.
 - Kullanıcıların ETH satın almak için kullanabileceği para birimleri
 - Borsanın meşru bir ticaret şirketi olduğunun kanıtı
 - Sahip olabileceğiniz herhangi bir ek bilgi: Bu, şirket hakkında faaliyet yılları, finansal destek vb. gibi bilgiler olabilir.
