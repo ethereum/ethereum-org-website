@@ -6,7 +6,7 @@ lang: es
 
 Los ladrones y saboteadores buscan constantemente oportunidades para atacar el software cliente de Ethereum. Esta página describe los vectores de ataque conocidos en la capa de consenso de Ethereum y describe cómo se pueden defender esos ataques. La información de esta página está resumida de una [versión más larga](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs).
 
-## Requisitos previos {#prerequisites}
+## Prerrequisitos {#prerequisites}
 
 Se requieren algunos conocimientos básicos de la[prueba de participación](/developers/docs/consensus-mechanisms/pos/). Además, será útil tener una comprensión básica de la [capa de incentivos](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) y del algoritmo de elección de bifurcación de Ethereum, [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper).
 

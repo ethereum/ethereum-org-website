@@ -183,10 +183,12 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     href: "https://ethpandaops.io/posts/",
     feed: "https://ethpandaops.io/posts/index.xml",
   },
-  {
-    href: "https://ethstaker.cc/blog",
-    feed: "https://paragraph.xyz/api/blogs/rss/@ethstaker",
-  },
+  // TODO: The endpoint is behind Vercel security checkpoint. Add back when
+  // we can fetch the xml feed without hitting the checkpoint.
+  // {
+  //   href: "https://ethstaker.cc/blog",
+  //   feed: "https://paragraph.xyz/api/blogs/rss/@ethstaker",
+  // },
   {
     href: "https://0xparc.org/blog",
     feed: _0X_PARC_FEED,

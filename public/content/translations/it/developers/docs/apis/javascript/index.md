@@ -29,12 +29,12 @@ Utilizzando i provider, queste librerie consentono di connettersi a Ethereum e l
 **Esempio da Ethers**
 
 ```js
-// Un Web3Provider avvolge un fornitore standard di Web3, che è
-// ciò che MetaMask inseriscie come window.ethereum in ogni pagina
-const provider = new ethers.providers.Web3Provider(window.ethereum)
+// Un BrowserProvider avvolge un fornitore Web3 standard, ciò
+// che MetaMask inietta come window.ethereum in ogni pagina
+const provider = new ethers.BrowserProvider(window.ethereum)
 
-// Il plugin di MetaMask consente anche di firmare le transazioni per
-// inviare ether e pagare per modificare lo stato nella blockchain.
+// Anche il plugin di MetaMask consente la firma delle transazioni per
+// inviare ether e pagare per cambiare lo stato nella blockchain.
 // Per questo, abbiamo bisogno del firmatario dell'account...
 const signer = provider.getSigner()
 ```
@@ -80,19 +80,19 @@ Ecco un esempio da Ethers
 // Creazione di un'istanza di portafoglio da un mnemonico...
 mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
-walletMnemonic = Wallet.fromMnemonic(mnemonic)
+walletMnemonic = Wallet.fromPhrase(mnemonic)
 
-// ...oppure da una chiave privata
+// ...o da una chiave privata
 walletPrivateKey = new Wallet(walletMnemonic.privateKey)
 
 walletMnemonic.address === walletPrivateKey.address
 // true
 
-// L'indirizzo come promessa per l'API del firmatario
+// L'indirizzo come una Promise per l'API del Firmatario
 walletMnemonic.getAddress()
 // { Promise: '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1' }
 
-// Un indirizzo di pPortafoglio è disponibile anche in modo sincrono
+// L'indirizzo di un Portafoglio è anche disponibile sincronicamente
 walletMnemonic.address
 // '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1'
 
@@ -102,7 +102,7 @@ walletMnemonic.privateKey
 walletMnemonic.publicKey
 // '0x04b9e72dfd423bcf95b3801ac93f4392be5ff22143f9980eb78b3a860c4843bfd04829ae61cdba4b3b1978ac5fc64f5cc2f4350e35a108a9c9a92a81200a60cd64'
 
-// Il mnemonico del portafoglio
+// La frase mnemonica del portafoglio
 walletMnemonic.mnemonic
 // {
 //   locale: 'en',
@@ -110,12 +110,12 @@ walletMnemonic.mnemonic
 //   phrase: 'announce room limb pattern dry unit scale effort smooth jazz weasel alcohol'
 // }
 
-//Nota: un portafoglio creato con una chiave personale
-//       non ha un mnemonico (la derivazione lo impedisce)
+// Nota: Un portafoglio creato con una chiave privata non
+//       dispone di una frase mnemonica (la derivazione la previene)
 walletPrivateKey.mnemonic
 // null
 
-// Firma di un messaggio
+// Firmare un messaggio
 walletMnemonic.signMessage("Hello World")
 // { Promise: '0x14280e5885a19f60e536de50097e96e3738c7acae4e9e62d67272d794b8127d31c03d9cd59781d4ee31fb4e1b893bd9b020ec67dfa65cfb51e2bdadbb1de26d91c' }
 
@@ -124,23 +124,22 @@ tx = {
   value: utils.parseEther("1.0"),
 }
 
-// Firma di una transazione
+// Firmare una transazione
 walletMnemonic.signTransaction(tx)
 // { Promise: '0xf865808080948ba1f109551bd432803012645ac136ddd64dba72880de0b6b3a7640000801ca0918e294306d177ab7bd664f5e141436563854ebe0a3e523b9690b4922bbb52b8a01181612cec9c431c4257a79b8c9f0c980a2c49bb5a0e6ac52949163eeb565dfc' }
 
-// Il metodo di connessione restituisce una nuova istanza del
-// portafoglio  connesso a un provider
+// Il metodo connect restituisce una nuova istanza del
+// Portafoglio connesso a un fornitore
 wallet = walletMnemonic.connect(provider)
 
-// Query sulla rete
+// Interrogare la rete
 wallet.getBalance()
 // { Promise: { BigNumber: "42" } }
 wallet.getTransactionCount()
 // { Promise: 0 }
 
-// Invio di ether
+// Inviare ether
 wallet.sendTransaction(tx)
-CONTEXTREQUEST
 ```
 
 [Consulta la documentazione completa](https://docs.ethers.io/v5/api/signer/#Wallet)
