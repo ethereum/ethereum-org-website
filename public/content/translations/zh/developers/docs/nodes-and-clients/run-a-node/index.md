@@ -353,7 +353,7 @@ lodestar beacon \
 
 ##### 运行 Nimbus
 
-Nimbus 包括共识客户端和执行客户端。 它也可以在各种设备上运行，甚至可以在算力很一般的设备上运行。 [安装依赖项和 Nimbus ](https://nimbus.guide/quick-start.html)后，你可以运行它的共识客户端：
+Nimbus 包括共识客户端和执行客户端。 它也可以在各种设备上运行，甚至可以在算力很一般的设备上运行。 [安装依赖项和 Nimbus](https://nimbus.guide/quick-start.html) 后，你可以运行它的共识客户端：
 
 ```sh
 nimbus_beacon_node \

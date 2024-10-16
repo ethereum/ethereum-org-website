@@ -75,7 +75,7 @@ lang: zh
 ### 支付 {#payments}
 
 - [Brave Browser](https://basicattentiontoken.org/) - _向用户支付其对广告的关注，并且用户可以通过基本注意力代币向发布商付费以获得支持_
-- [瑞士卢加诺市](https://bitcoinsuisse.com/news/city-of-lugano-accepts-crypto- payments) - _税收和其他市政服务付款_
+- [瑞士卢加诺市](https://bitcoinsuisse.com/news/city-of-lugano-accepts-crypto-payments) - _税收和其他市政服务付款_
 - [EthereumAds](https://ethereumads.com/) - _让网站运营商出售广告空间并通过以太坊获得报酬_
 - [hCaptcha](https://www.hcaptcha.com/) - _预防机器人验证码系统，其根据用户完成的工作（标记数据以用于机器学习）向网站运营商付费。 现在由 Cloudflare 部署_
 - [Opera MiniPay](https://www.opera.com/products/minipay) - _利用非保管钱包让非洲人更方便、更安全地使用移动支付，以及利用电话号码轻松进行交易_
