@@ -3,6 +3,8 @@ import { createIcon } from "@chakra-ui/react"
 
 import { commonIconDefaultProps } from "@/components/icons/utils"
 
+// TODO: migrate with StakingHierarchy
+
 export const StakingGlyphTokenWalletIcon = createIcon({
   displayName: "StakingGlyphTokenWalletIcon",
   viewBox: "0 0 50 39",

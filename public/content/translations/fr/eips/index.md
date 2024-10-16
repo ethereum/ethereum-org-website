@@ -54,9 +54,17 @@ Le processus complet de normalisation ainsi que la charte sont détaillés dans 
 
 Si vous souhaitez en savoir plus sur les EIP, consultez le site [EIPs](https://eips.ethereum.org/) et [EIP-1](https://eips.ethereum.org/EIPS/eip-1). Voici quelques liens utiles :
 
-- [Une liste de chaque EIP](https://eips.ethereum.org/all)
+- [Une liste de toutes les propositions d'amélioration d'Ethereum (EIP)](https://eips.ethereum.org/all)
 - [Une description de tous les types d'EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [Une description de tous les statuts EIP](https://eips.ethereum.org/EIPS/eip-1#eip-process)
+
+### Projets éducatifs communautaires {#community-projects}
+
+- [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) — *PEEPanEIP est une série de vidéos éducatives qui traite des propositions d'amélioration d'Ethereum (EIP) et des fonctionnalités clés des prochaines mises à niveau.*
+- [EIPs For Nerds](https://ethereum2077.substack.com/t/eip-research) — *EIPs For Nerds propose des aperçus complets, de style ELI5, de diverses propositions d'amélioration d'Ethereum (EIP), y compris les EIP de base et les EIP de la couche application/infrastructure (ERC), pour éduquer les lecteurs et façonner le consensus autour des changements proposés au protocole Ethereum.*
+- [EIPs.wtf](https://www.eips.wtf/) — *EIPs.wtf fournit des informations supplémentaires sur les propositions d'amélioration d'Ethereum (EIP), y compris leur statut, les détails de leur mise en œuvre, les pull requests associées et les retours de la communauté.*
+- [EIP.Fun](https://eipfun.substack.com/) — *EIP.Fun fournit les dernières nouvelles sur les propositions d'amélioration d'Ethereum (EIP), des mises à jour sur les réunions EIP, et plus encore.*
+- [EIPs Insight](https://eipsinsight.com/) — *EIPs Insight représente l'état du processus des propositions d'amélioration d'Ethereum (EIP) et des statistiques, selon les informations collectées auprès de différentes sources.*
 
 ## Participer {#participate}
 
