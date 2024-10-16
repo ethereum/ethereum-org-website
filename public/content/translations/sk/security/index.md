@@ -272,7 +272,7 @@ Rozšírenia pre prehliadače, ako sú rozšírenia pre Chrome alebo doplnky pre
 
 ### Bezpečnosť na internete {#reading-web-security}
 
-- [Až 3 milióny zariadení infikovaných doplnkami pre Chrome a Edge ](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) – _Dan Goodin_
+- [Až 3 milióny zariadení infikovaných doplnkami pre Chrome a Edge](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) – _Dan Goodin_
 - [Ako vytvoriť silné heslo, ktoré nezabudnete](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) – _AVG_
 - [Čo je bezpečnostný kľúč?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) – _Coinbase_
 

@@ -68,9 +68,9 @@ Používatelia používajú na platbu za položky natívny token platformy [ERC-
 ## Používajte decentralizované sociálne siete {#use-decentralized-social-networks}
 
 - **[Status.im](https://status.im/)** – _Status je bezpečná aplikácia na odosielanie správ, ktorá na ochranu využíva open source protokol peer-to-peer a end-to-end šifrovanie vašich správy od tretích strán._
-- **[Mirror.xyz](https://mirror.xyz/)** – _Mirror je decentralizovaná publikačná platforma vlastnená používateľmi postavená na platforme Ethereum, ktorá používateľom umožňuje crowdfundovať nápady, monetizovať obsah a budovať vysokohodnotných komunít. _
-- **[Lens Protocol](https://lens.xyz/)** – _Lens Protocol je zostaviteľný a decentralizovaný sociálny graf, ktorý pomáha tvorcom prevziať zodpovednosť za svoj obsah v digitálnej záhrade decentralizovaného internetu kamkoľvek idú.</ 2></li>
-- **[Farcaster](https://farcaster.xyz/)** – _Farcaster je dostatočne decentralizovaná sociálna sieť. Otvorený protokol, ktorý môže podporovať mnoho klientov rovnako ako aj e-mail._</ul>
+- **[Mirror.xyz](https://mirror.xyz/)** – _Mirror je decentralizovaná publikačná platforma vlastnená používateľmi postavená na platforme Ethereum, ktorá používateľom umožňuje crowdfundovať nápady, monetizovať obsah a budovať vysokohodnotných komunít._
+- **[Lens Protocol](https://lens.xyz/)** – _Lens Protocol je zostaviteľný a decentralizovaný sociálny graf, ktorý pomáha tvorcom prevziať zodpovednosť za svoj obsah v digitálnej záhrade decentralizovaného internetu kamkoľvek idú._
+- **[Farcaster](https://farcaster.xyz/)** – _Farcaster je dostatočne decentralizovaná sociálna sieť. Otvorený protokol, ktorý môže podporovať mnoho klientov rovnako ako aj e-mail._
 
 ## Web2 sociálne siete na Ethereu {#web2-social-networks-and-ethereum}
 

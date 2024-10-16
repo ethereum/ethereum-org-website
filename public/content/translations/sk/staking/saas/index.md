@@ -68,9 +68,9 @@ Výberové kľúče BLS sa používajú na podpísanie jednorazovej správy, kto
 
 Aktualizácia prihlasovacích údajov pre výber je nevyhnutným krokom na povolenie výberov\*. Tento proces zahŕňa generovanie kľúčov pre výber pomocou vašej mnemotechnickej počiatočnej frázy.
 
-<strong>Uistite sa, že túto počiatočnú frázu bezpečne zálohujete, inak nebudete môcť vygenerovať kľúče pre výber, až príde čas.
+<strong>Uistite sa, že túto počiatočnú frázu bezpečne zálohujete, inak nebudete môcť vygenerovať kľúče pre výber, až príde čas.</strong>
 
-\*Vkladatelia, ktorí poskytli adresu pre výber s počiatočným vkladom, toto nastavovať nemusia</strong>. Overte si u svojho poskytovateľa SaaS podporu ohľadom prípravy validátora.
+\*Vkladatelia, ktorí poskytli adresu pre výber s počiatočným vkladom, toto nastavovať nemusia. Overte si u svojho poskytovateľa SaaS podporu ohľadom prípravy validátora.
 </ExpandableCard>
 
 <ExpandableCard title="Kedy môžem urobiť výber?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
