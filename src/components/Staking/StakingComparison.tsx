@@ -46,7 +46,9 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
       eventName: "clicked solo staking",
     },
     color: stakingGold,
-    glyph: <StakingGlyphCPUIcon color="stakingGold" boxSize="50px" />,
+    glyph: (
+      <StakingGlyphCPUIcon className="h-[50px] w-[50px]" color="stakingGold" />
+    ),
   }
   const saas: DataType = {
     title: "page-staking-saas-with-abbrev",
@@ -58,7 +60,12 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
       eventName: "clicked staking as a service",
     },
     color: stakingGreen,
-    glyph: <StakingGlyphCloudIcon color="stakingGreen" w="50px" h="28px" />,
+    glyph: (
+      <StakingGlyphCloudIcon
+        className="h-[28px] w-[50px]"
+        color="stakingGreen"
+      />
+    ),
   }
   const pools: DataType = {
     title: "page-staking-dropdown-pools",
@@ -71,7 +78,10 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
     },
     color: stakingBlue,
     glyph: (
-      <StakingGlyphTokenWalletIcon color="stakingBlue" w="50px" h="39px" />
+      <StakingGlyphTokenWalletIcon
+        className="h-[39px] w-[50px]"
+        color="stakingBlue"
+      />
     ),
   }
   const data: {

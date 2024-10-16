@@ -53,9 +53,9 @@ El objetivo es permitir que una red descentralizada de clientes ligeros del port
 Los beneficios de este diseño de red son:
 
 - reducir la dependencia de los proveedores centralizados
-- Reducir el uso del ancho de banda de Internet
-- Sincronización minimizada o cero
-- Accesible para dispositivos con recursos limitados (<1GB de Ram, <100mB de disco, 1CPU)
+- reducir el uso del ancho de banda de Internet
+- sincronización minimizada o cero
+- accesible a dispositivos con recursos limitados (<1 GB de RAM, <100 MB de espacio en disco, 1 CPU)
 
 El siguiente diagrama muestra las funciones de los clientes existentes que Portal Network puede entregar, lo que permite a los usuarios acceder a estas funciones en dispositivos de muy pocos recursos.
 
@@ -70,6 +70,7 @@ Los clientes de Portal Network son:
 - [Trin](https://github.com/ethereum/trin): escrito en Rust
 - [Fluffy](https://nimbus.team/docs/fluffy.html): escrito en Nim
 - [Ultralight](https://github.com/ethereumjs/ultralight): escrito en Typescript
+- [Shisui](https://github.com/GrapeBaBa/shisui): escrito en Go
 
 Tener múltiples implementaciones de clientes independientes mejora la resiliencia y la descentralización de la red Ethereum.
 

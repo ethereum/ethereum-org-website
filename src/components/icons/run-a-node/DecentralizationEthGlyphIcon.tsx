@@ -1,14 +1,10 @@
-/* eslint-disable react/jsx-key */
-import { createIcon } from "@chakra-ui/react"
+import { createIconBase } from "../icon-base"
 
-export const DecentralizationEthGlyphIcon = createIcon({
+export const DecentralizationEthGlyphIcon = createIconBase({
   displayName: "DecentralizationEthGlyphIcon",
   viewBox: "0 0 64 64",
-  defaultProps: {
-    width: "64px",
-    height: "64px",
-  },
-  path: [
+  className: "h-auto w-[64px]",
+  children: (
     <g opacity="0.9">
       <path
         d="M32.0911 61.5697V43.7519L48.9417 34.0676L32.0911 61.5697Z"
@@ -94,6 +90,6 @@ export const DecentralizationEthGlyphIcon = createIcon({
         fill="#E8E1BA"
         stroke="black"
       />
-    </g>,
-  ],
+    </g>
+  ),
 })
