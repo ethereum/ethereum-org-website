@@ -50,7 +50,7 @@ Düğümler, Ethereum ağına bağlı bilgisayarlardır. İstemciler, bilgisayar
 
 ## Hisse ispatı yeni bir fikir midir? {#is-pos-new}
 
-Hayır. Bir kullanıcı, BitcoinTalk [ forumunda 2011 yılında Bitcoin'e bir yükseltme olarak hisse ispatının ](https://bitcointalk.org/index.php?topic=27787.0) temel fikrini önerdi. Bu, Ethereum Ana Ağı'na yerleştirmeye hazır olmasından 11 yıl önceydi. Bazı diğer zincirler hisse ispatını Ethereum'dan önce yerleştirdi ancak Ethereum'un özgül mekanizmasını (Gasper olarak bilinen) yerleştiremedi.
+Hayır. Bir kullanıcı, BitcoinTalk [forumunda 2011 yılında Bitcoin'e bir yükseltme olarak hisse ispatının](https://bitcointalk.org/index.php?topic=27787.0) temel fikrini önerdi. Bu, Ethereum Ana Ağı'na yerleştirmeye hazır olmasından 11 yıl önceydi. Bazı diğer zincirler hisse ispatını Ethereum'dan önce yerleştirdi ancak Ethereum'un özgül mekanizmasını (Gasper olarak bilinen) yerleştiremedi.
 
 ## Ethereum'un hisse ispatıyla ilgili özel olan nedir? {#why-is-ethereum-pos-special}
 

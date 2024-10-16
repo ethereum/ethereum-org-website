@@ -14,7 +14,7 @@ Ethereum topluluğu içindeki herkes bir EIP oluşturma kabiliyetine sahiptir. E
 
 ## EIP'ler neden önemlidir? {#why-do-eips-matter}
 
-EIP'ler, değişikliklerin nasıl gerçekleştiği konusunda merkezi bir rol oynar ve Ethereum'da belgelenir. İnsanların değişiklikleri önerme, tartışma ve benimseme yollarıdır. Mutabakatı etkileyen ve ağ yükseltmesi gerektiren düşük düzeyli protokol değişiklikleri için temel EIP'ler, örneğin [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) ve uygulama standartları için ERCler, örneğin [EIP-20](https://eips.ethereum.org/EIPS/eip-20) ve [EIP-721](https://eips.ethereum.org/EIPS/eip-721) gibi [farklı EIP türleri ](https://eips.ethereum.org/EIPS/eip-1#eip-types) bulunmaktadır.
+EIP'ler, değişikliklerin nasıl gerçekleştiği konusunda merkezi bir rol oynar ve Ethereum'da belgelenir. İnsanların değişiklikleri önerme, tartışma ve benimseme yollarıdır. Mutabakatı etkileyen ve ağ yükseltmesi gerektiren düşük düzeyli protokol değişiklikleri için temel EIP'ler, örneğin [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) ve uygulama standartları için ERCler, örneğin [EIP-20](https://eips.ethereum.org/EIPS/eip-20) ve [EIP-721](https://eips.ethereum.org/EIPS/eip-721) gibi [farklı EIP türleri](https://eips.ethereum.org/EIPS/eip-1#eip-types) bulunmaktadır.
 
 Her ağ yükseltmesi, ağdaki her [Ethereum istemcisi](/learn/#clients-and-nodes) tarafından uygulanması gereken bir dizi EIP'lerden oluşur. Bu, istemci geliştiricilerinin Ethereum ana ağındaki diğer istemcilerle mutabık olmak için gerekli EIP'leri uyguladıklarından emin olmaları gerektiği anlamına gelir.
 

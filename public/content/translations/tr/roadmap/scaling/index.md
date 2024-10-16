@@ -32,7 +32,7 @@ Proto-Danksharding ile çok sayıda geçici bloğu Ethereum bloklarında depolam
 
 Geçici blok verilerini ilerletmenin ikinci aşaması karmaşıktır çünkü toplamaların verilerinin ağ üzerinde erişilebilir olup olmadığını kontrol eden yeni yöntemlere ve [doğrulayıcıların](/glossary/#validator) [blok](/glossary/#block) üretimi ile blok teklifi sorumluluklarını ayrıştırmalarına gerek duyar. Aynı zamanda, doğrulayıcıların blob verisinin küçük alt kümelerini doğruladıklarını kriptografik olarak kanıtlamak için bir yol gerekir.
 
-İkinci adım [“Danksharding”](/roadmap/danksharding/) olarak bilinir. Tamamen uygulanması için **daha en az birkaç yıl** vardır. Danksharding [blok oluşturma ve blok önermenin yanında,](/roadmap/pbs) [veri kullanılabilirliği örneklendirmesi (DAS) ](/developers/docs/data-availability) şeklinde adlandırılan, her seferinde rastgele birkaç kilobayt örneklendirme ile verilerin kullanılabildiği ve kullanılabilirliği verimli bir şekilde doğrulayan yeni ağ tasarımlarına dayanır.
+İkinci adım [“Danksharding”](/roadmap/danksharding/) olarak bilinir. Tamamen uygulanması için **daha en az birkaç yıl** vardır. Danksharding [blok oluşturma ve blok önermenin yanında,](/roadmap/pbs) [veri kullanılabilirliği örneklendirmesi (DAS)](/developers/docs/data-availability) şeklinde adlandırılan, her seferinde rastgele birkaç kilobayt örneklendirme ile verilerin kullanılabildiği ve kullanılabilirliği verimli bir şekilde doğrulayan yeni ağ tasarımlarına dayanır.
 
 <ButtonLink variant="outline-color" href="/roadmap/danksharding/">Danksharding hakkında daha fazlası</ButtonLink>
 

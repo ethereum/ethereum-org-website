@@ -42,7 +42,7 @@ Ethereum'da cüzdanlar çok hızlı bir biçimde değişiyor. Ethereum.org'da de
 - **WalletConnect** - kullanıcılar, WalletConnect'i kullanarak merkeziyetsiz uygulamalara bağlanabilir.
 - **Ethereum RPC uç noktalarını içe aktarma** - kullanıcılar, düğüm RPC verilerini içe aktararak kendi seçtikleri bir düğüme veya EVM uyumlu diğer ağlara bağlanmalarına olanak tanır.
 - **NFT'ler** - kullanıcılar, cüzdanlarındaki NFT'leri görebilir ve onlarla etkileşime girebilir.
-- **Ethereum uygulamalarına bağlanma** - kullanıcılar, Etherum uygulamalarına bağlanabilir ve onları kullanabilir.
+- **Ethereum uygulamalarına bağlanma** - kullanıcılar, Ethereum uygulamalarına bağlanabilir ve onları kullanabilir.
 - **Hisseleme** - kullanıcılar, cüzdan aracılığıyla doğrudan hisseleme yapabilir.
 - **Takaslar** - kullanıcılar, cüzdan aracılığıyla jeton takas edebilir.
 - **Çok zincirli ağlar** - cüzdanınız, varsayılan olarak kullanıcıların çoklu blokzincir ağlarına erişimini destekler.

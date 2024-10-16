@@ -20,7 +20,7 @@ Yürütüm istemcisi, işlem işleme, işlem dedikodusu, durum yönetimi ve Ethe
 
 Yürütüm istemcisi, işlem listesi, güncellenmiş durum ağacı ve diğer yürütümle ilgili veriler gibi yürütüm yüklerini oluşturur. Fikir birliği istemcileri, her bloktaki yürütme yüklerini içerir. Yürütüm istemcisi, geçerli olduklarından emin olmak için yeni bloklarda işlemlerin yeniden yürütülmesinden sorumludur. İşlemleri yürütme, yürütüm istemcisinin [Ethereum Sanal Makinesi (EVM)](/developers/docs/evm) olarak bilinen gömülü bilgisayarından yapılır.
 
-Yürütüm istemcisi ayrıca Ethereum'a [RPC yöntemleri ](/developers/docs/apis/json-rpc)aracılığıyla kullanıcıların Ethereum blok zincirini sorgulamasını, işlemleri göndermelerini ve akıllı sözleşmeler dağıtmalarını sağlayan bir arayüz sunar. RPC çağrılarının bir [Web3js](https://docs.web3js.org/)veya [Web3py](https://web3py.readthedocs.io/en/v5/) kütüphanesi ya da tarayıcı cüzdanı gibi bir kullanıcı arayüzü tarafından işlenmesi yaygın bir durumdur.
+Yürütüm istemcisi ayrıca Ethereum'a [RPC yöntemleri](/developers/docs/apis/json-rpc) aracılığıyla kullanıcıların Ethereum blok zincirini sorgulamasını, işlemleri göndermelerini ve akıllı sözleşmeler dağıtmalarını sağlayan bir arayüz sunar. RPC çağrılarının bir [Web3js](https://docs.web3js.org/)veya [Web3py](https://web3py.readthedocs.io/en/v5/) kütüphanesi ya da tarayıcı cüzdanı gibi bir kullanıcı arayüzü tarafından işlenmesi yaygın bir durumdur.
 
 Özetle, yürütüm istemcisi:
 

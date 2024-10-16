@@ -40,7 +40,7 @@ Ve hisse ispatını mutabakat mekanizması olarak kullanmak, [ şuan sahip oldu�
 
 ### Parçalama için ayarlamalar {#setting-up-for-sharding}
 
-İşaret Zinciri, Ethreum Ana Ağı ile birleştiğinden beri, Ethereum topluluğu ağı ölçeklendirmeye başladı.
+İşaret Zinciri, Ethereum Ana Ağı ile birleştiğinden beri, Ethereum topluluğu ağı ölçeklendirmeye başladı.
 
 Hisse İspatı, herhangi bir zamanda, her biri ETH'nin söz konusu olduğu tüm onaylanmış blok üreticilerinin kaydına sahip olma avantajına sahiptir. Bu kayıt defteri, bölme ve fethetme yeteneği için zemin hazırlar, ancak belirli ağ sorumluluklarını güvenilir bir şekilde böler.
 

@@ -11,7 +11,7 @@ summaryPoints:
 
 # Danksharding {#danksharding}
 
-**Danksharding** Etherum'un nasıl tamamen ölçeklendirebilir bir blok zincire dönüşebilir sorusunun cevabı, ancak o noktaya gelebilmek için yapılması gereken birkaç protokol yükseltmesi var. **Proto-Danksharding** de bu yolun ortalarında bulunan bir adım. İkisi de Katman 2'deki işlemleri kullanıcılar için mümkün olduğu kadar ucuz tutmaya ve Ethereumu >saniyede 100.000 işleme kadar ölçeklendirebilmeyi hedefliyor.
+**Danksharding** Ethereum'un nasıl tamamen ölçeklendirebilir bir blok zincire dönüşebilir sorusunun cevabı, ancak o noktaya gelebilmek için yapılması gereken birkaç protokol yükseltmesi var. **Proto-Danksharding** de bu yolun ortalarında bulunan bir adım. İkisi de Katman 2'deki işlemleri kullanıcılar için mümkün olduğu kadar ucuz tutmaya ve Ethereumu >saniyede 100.000 işleme kadar ölçeklendirebilmeyi hedefliyor.
 
 ## Proto-Danksharding nedir? {#what-is-protodanksharding}
 
