@@ -3,7 +3,6 @@
   "version": "9.0.1",
   "license": "MIT",
   "private": true,
-  "type": "commonjs",
   "scripts": {
     "dev": "next dev",
     "postinstall": "yarn theme",
