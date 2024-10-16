@@ -277,7 +277,7 @@ function auctionEnd() external {
 
 - **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _基于 Rust 的静态分析器，专为 Web3 智能合约安全和开发而设计。_
 
-- **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using- detectors/)** - < em x-id="4">基于 Python 的静态分析框架，具有漏洞和代码质量检测器，用于从代码中提取有用信息的打印机以及对编写自定义子模块的支持。</em>
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _基于 Python 的静态分析框架，具有漏洞和代码质量检测器，用于从代码中提取有用信息的打印机以及对编写自定义子模块的支持。_
 
 #### 动态分析工具 {#dynamic-analysis-tools}
 

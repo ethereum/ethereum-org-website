@@ -63,7 +63,6 @@ lang: zh
 - [Baseline 项目](https://www.baseline-protocol.org/) - _Baseline 协议是一组工具和库，可帮助企业协调复杂的多方业务流程和工作流程并保持隐私性，同时将数据保存在各自的记录系统中。 该标准使两个或多个状态机能够通过使用网络作为公用参考框架来实现和维护数据一致性和工作流程连续性。_
 - [Chainlens](https://www.chainlens.com/) - _来自 Web3 Labs 的质押即服务和本地区块链数据与分析平台_
 - [Ernst & Young's 'Nightfall'](https://github.com/EYBlockchain/nightfall_3) - _该应用程序用于通过乐观卷叠转移零知识下的 ERC20、ERC721 和 ERC1155 应用程序_
-- [Truffle Suite](https://trufflesuite.com) - _区块链开发套件（Truffle、Ganache、Drizzle）_
 
 ### 可扩展性解决方案 {#scalability-solutions}
 
@@ -147,9 +146,9 @@ lang: zh
 
 - [BCdiploma](https://www.bcdiploma.com/) - _文凭、证书和微证书的数字化和验证_
 - [Hyland Credentials](https://www.hylandcredentials.com) - _数字文凭和其他教育凭证、执照和证书_
-- [帕劳数字居住计划](https://rns.id/) - _让全球公民能够拥有帕劳政府颁发的合法身份证</ EM></li>
+- [帕劳数字居住计划](https://rns.id/) - _让全球公民能够拥有帕劳政府颁发的合法身份证_
 - [Spherity](https://www.spherity.com/) - _提供数字身份管理解决方案，以在生态系统中建立数字信任，专注于去中心化身份和可验证的凭证_
-- [Zug Digital ID](https://ezug.ch/en/) - _位于瑞士的基于区块链的身份系统，让居民能够以数字方式访问政府服务和支持功能，例如借用电动自行车和市政投票_</ul>
+- [Zug Digital ID](https://ezug.ch/en/) - _位于瑞士的基于区块链的身份系统，让居民能够以数字方式访问政府服务和支持功能，例如借用电动自行车和市政投票_
 
 ### 娱乐、非同质化代币和客户忠诚计划
 
