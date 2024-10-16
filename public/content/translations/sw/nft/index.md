@@ -81,15 +81,15 @@ Mikataba erevu ya NFT zinaweza kufanya vitu vichache:
 
 - **Unda NFT**: Inaweza kuunda NFTs.
 - **Weka umiliki:** Itaendelea kufuatilia mtu anayemiliki NFT kwa kuunganisha na anwani maalumu ya Ethereum.
-- **Ipe kila NFT namba ya utambulisho: NFT ina namba ambayo inaifanya kuwa ya kipeee. Cha ziada, kikawaida kuna kuwa na baadhi ya taarifa (metadata) zinazo ambatanishwa nayo, inaelezea kitu kinachoiwakilisha tokeni isiyojirudia.</li> </ul>
+- **Ipe kila NFT namba ya utambulisho:** NFT ina namba ambayo inaifanya kuwa ya kipeee. Cha ziada, kikawaida kuna kuwa na baadhi ya taarifa (metadata) zinazo ambatanishwa nayo, inaelezea kitu kinachoiwakilisha tokeni isiyojirudia.
 
-Wakati mtu "anatengeneza" au "kuunda' NFT, kimsingi wanaiambia mkataba erevu kuwapa wao umiliki wa NFT husika. Taarifa hii inalindwa kwa usalama na kuhifadiwa na umma kwenye blockchain.
+Wakati mtu "anatengeneza" au "kuunda" NFT, kimsingi wanaiambia mkataba erevu kuwapa wao umiliki wa NFT husika. Taarifa hii inalindwa kwa usalama na kuhifadiwa na umma kwenye blockchain.
 
 Zaidi, muundaji wa mkataba anaweza ongeza sheria nyingine za ziada. Wanaweza dhibiti kiasi cha NFT kuweza kuundwa au kuamaua kwamba wanaweza pata ada ya mrabaha pale ambapo NFT inabadilisha mmiliki.
 
 ### Usalama wa NFT {#nft-security}
 
-Usalama wa Ethereum unakuja kutokana na [uthibitisho-wa-dhamana](/glossary/#pos). Mfumo huu umebuniwa ili uweze kuondoa vitendo ya kihasidi kiuchumi na basi kuifanya Ethereum sugu kwa uharibifu. Hii ndiyo inayofanya NFT kuwezekana. Mara tu [bloku ](/glossary/#block)yenye muamala wako wa NFT [napokamilika](/glossary/#finality), inaweza kugharimu mshambulizi mamilioni ya ETH kuibadilisha. Mtu yeyote anayetumia programu ya Ethereum anaweza kujua haraka mambo yasiyofaa ya kuhitilafiana na NFT, na mtu huyu mbaya atatozwa malipo na kuondolewa.
+Usalama wa Ethereum unakuja kutokana na [uthibitisho-wa-dhamana](/glossary/#pos). Mfumo huu umebuniwa ili uweze kuondoa vitendo ya kihasidi kiuchumi na basi kuifanya Ethereum sugu kwa uharibifu. Hii ndiyo inayofanya NFT kuwezekana. Mara tu [bloku](/glossary/#block) yenye muamala wako wa NFT [napokamilika](/glossary/#finality), inaweza kugharimu mshambulizi mamilioni ya ETH kuibadilisha. Mtu yeyote anayetumia programu ya Ethereum anaweza kujua haraka mambo yasiyofaa ya kuhitilafiana na NFT, na mtu huyu mbaya atatozwa malipo na kuondolewa.
 
 Maswala ya usalama yanayohusiana na NFT sana sana yanahusiana na utapeli wa kutumia barua pepe, hatari za mkataba-erevu au makosa ya mtumiaji (kama vile kuweka wazi funguo za siri) na hivyo kufanya usalam bora wa pochi uwe muhimu sana kwa wamiliki NFT.
 
