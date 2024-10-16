@@ -1,23 +1,17 @@
 import { CiLink } from "react-icons/ci"
-import { Icon } from "@chakra-ui/react"
 
-import Link from "@/components/Link"
+import { BaseLink } from "@/components/ui/Link"
 
 const IdAnchor = ({ id }: { id?: string }) => {
   if (!id) return null
   return (
-    <Link
-      href={"#" + id}
-      position="absolute"
-      insetInlineEnd="100%"
+    <BaseLink
+      className="absolute end-full flex h-full items-center opacity-0 transition-opacity duration-100 ease-in-out focus:opacity-100 group-hover:opacity-100"
       aria-label={id.replaceAll("-", " ") + " permalink"}
-      opacity={0}
-      _groupHover={{ opacity: 1 }}
-      _focus={{ opacity: 1 }}
-      transition="opacity 0.1s ease-in-out"
+      href={"#" + id}
     >
-      <Icon as={CiLink} fontSize="xl" me="1" />
-    </Link>
+      <CiLink className="me-1 text-xl" />
+    </BaseLink>
   )
 }
 

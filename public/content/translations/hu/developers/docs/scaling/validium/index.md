@@ -157,7 +157,7 @@ Több projekt is kínál olyan validium- és volitionimplementációkat, amelyek
 - [Dokumentáció](https://docs.zksync.io/zk-stack/concepts/data-availability)
 - [Honlap](https://zksync.io/)
 
-## További olvasnivaló {#further-reading}
+## További információ {#further-reading}
 
 - [A validium és az L2 összevetése – 99. szám](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [A ZK összevont tranzakciók és a validium összehasonlítása](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
