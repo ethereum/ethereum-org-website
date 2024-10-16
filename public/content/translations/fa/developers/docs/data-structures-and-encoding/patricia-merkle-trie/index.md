@@ -16,7 +16,7 @@ sidebarDepth: 2
 ## موارد مورد نیاز {#prerequisites}
 
 برای درک بهتر این صفحه، داشتن دانش اولیه در مورد [هش](https://en.wikipedia.org/wiki/Hash_function)، [درخت مرکل](https://en.wikipedia.org/wiki/Merkle_tree)، [درخت ها](https://en.wikipedia.org/wiki/Trie) و
-سریال سازی</3 مفید خواهد بود. >. این مقاله با توضیح یک [درخت ریشه](https://en.wikipedia.org/wiki/Radix_tree) اصلی آغاز می‌شود، سپس به تدریج تغییرات لازم برای ساختار داده بهینه‌تر اتریوم را معرفی می‌کند. </p> 
+سریال سازی مفید خواهد بود. . این مقاله با توضیح یک [درخت ریشه](https://en.wikipedia.org/wiki/Radix_tree) اصلی آغاز می‌شود، سپس به تدریج تغییرات لازم برای ساختار داده بهینه‌تر اتریوم را معرفی می‌کند.
 
 
 

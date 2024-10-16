@@ -8,7 +8,7 @@ lang: fa
 
 ## پیش‌نیازها {#prerequisites}
 
-برای درک EVM آشنایی اولیه با اصطلاحات رایج در علوم کامپیوتر مانند [بایت](https://wikipedia.org/wiki/Byte)،‏ [حافظه](https://wikipedia.org/wiki/ Computer_memory) و یک [پشته](https://wikipedia.org/wiki/Stack_(abstract_data_type)) ضروری است. همچنین راحت بودن با مفاهیم رمزنگاری/بلاکچین مانند [توابع هش](https://wikipedia.org/wiki/Cryptographic_hash_function) و <a href="https://wikipedia" مفید خواهد بود..org/wiki/Merkle_tree">درخت مرکل</a>.
+برای درک EVM آشنایی اولیه با اصطلاحات رایج در علوم کامپیوتر مانند [بایت](https://wikipedia.org/wiki/Byte)،‏ [حافظه](https://wikipedia.org/wiki/Computer_memory) و یک [پشته](https://wikipedia.org/wiki/Stack_(abstract_data_type)) ضروری است. همچنین راحت بودن با مفاهیم رمزنگاری/بلاکچین مانند [توابع هش](https://wikipedia.org/wiki/Cryptographic_hash_function) و <a href="https://wikipedia.org/wiki/Merkle_tree">درخت مرکل</a>.
 
 ## از دفتر کل تا ماشین حالات متناهی {#from-ledger-to-state-machine}
 
@@ -16,7 +16,7 @@ lang: fa
 
 در حالی که اتریوم دارای رمزارز بومی خود (اتر) است که تقریباً به‌طور کامل از قوانین شهودی مشابهی پیروی می‌کند، کارکرد بسیار قدرتمندتری را نیز ممکن می‌سازد: [قراردادهای هوشمند](/developers/docs/smart-contracts/). برای این ویژگی پیچیده‌تر، قیاس پیچیده‌تری نیز لازم است. به جای یک دفتر کل توزیع شده، اتریوم یک [ماشین حالات متناهی](https://wikipedia.org/wiki/Finite-state_machine) توزیع‌شده است. وضعیت اتریوم یک ساختار داده‌ی بزرگ است که نه‌تنها همه حساب‌ها و موجودی‌ها را در خود نگه می‌دارد، بلکه _وضعیت ماشین_ را نیز در خود جای می‌دهد که می‌تواند طبق مجموعه‌ای از قوانین از پیش تعریف‌شده از بلوکی به بلوک دیگر تغییر کند و کد ماشینی دلخواه را اجرا کند. قوانین خاص تغییر حالت از بلوک به بلوک توسط EVM تعریف شده است.
 
-![نموداری که ساختار EVM را نشان می‌دهد](./evm.png) _نمودار برگرفته از[‏Ethereum EVM illustrated‏](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![نموداری که ساختار EVM را نشان می‌دهد](./evm.png) _نمودار برگرفته از [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## تابع گذار حالت اتریوم {#the-ethereum-state-transition-function}
 

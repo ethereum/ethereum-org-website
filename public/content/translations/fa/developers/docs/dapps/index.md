@@ -59,7 +59,7 @@ lang: fa
 - [گیت‌هاب](https://github.com/paulrberg/create-eth-app)
 
 **One Click Dapp _- ابزار FOSS برای تولید صفحات فرانت dapp از
-‏ABI‏</a‏>.</em></strong></p> 
+‏ABI‏‏>. 
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [گیت هاب](https://github.com/oneclickdapp/oneclickdapp-v1)

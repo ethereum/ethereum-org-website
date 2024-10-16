@@ -358,7 +358,7 @@ contract PriceConsumerV3 {
 
 برخی از برنامه‌های بلاک‌چین، مانند بازی‌های مبتنی بر بلاک‌چین یا طرح‌های بخت‌آزمایی، به سطح بالایی از غیرقابل پیش‌بینی و تصادفی بودن نیاز دارند تا به طور مؤثر کار کنند. با این حال، اجرای قطعی بلاک‌چین‌ها تصادفی بودن را از بین می‌برد.
 
-رویکرد اولیه استفاده از توابع رمزنگاری شبه تصادفی، مانند `بلاک هش` بود، اما اینها ممکن [توسط ماینرها](https://ethereum.stackexchange.com/questions/3140/risk-of-using-  blockhash-other-miners-preventing-attack#:~:text=است%20که%20the%20miners%20can,to%20one%20of%20the%20players.) برای حل مشکل الگوریتم اثبات کار دستکاری شوند. همچنین، [تغییر به اثبات سهام](/roadmap/merge/) اتریوم به این معنی است که توسعه‌دهندگان دیگر نمی‌توانند برای تصادفی بودن روی زنجیره به `بلاک هش` اعتماد کنند. در عوض، [مکانیزم RANDAO](https://eth2book.info/altair/part2/building_blocks/randomness) بیکون چین یک منبع جایگزین برای تصادفی بودن فراهم می‌کند.
+رویکرد اولیه استفاده از توابع رمزنگاری شبه تصادفی، مانند `بلاک هش` بود، اما اینها ممکن [توسط ماینرها](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=است%20که%20the%20miners%20can,to%20one%20of%20the%20players.) برای حل مشکل الگوریتم اثبات کار دستکاری شوند. همچنین، [تغییر به اثبات سهام](/roadmap/merge/) اتریوم به این معنی است که توسعه‌دهندگان دیگر نمی‌توانند برای تصادفی بودن روی زنجیره به `بلاک هش` اعتماد کنند. در عوض، [مکانیزم RANDAO](https://eth2book.info/altair/part2/building_blocks/randomness) بیکون چین یک منبع جایگزین برای تصادفی بودن فراهم می‌کند.
 
 امکان تولید ارزش تصادفی خارج از زنجیره و ارسال آن در زنجیره وجود دارد، اما انجام این کار الزامات اعتماد بالایی را به کاربران تحمیل می‌کند. آنها باید باور داشته باشند که ارزش واقعی از طریق مکانیسم‌های غیرقابل پیش‌بینی ایجاد شده است و در حمل و نقل تغییر نکرده است.
 
@@ -380,7 +380,7 @@ contract PriceConsumerV3 {
 
 برخی از شبکه‌های اوراکل غیرمتمرکز خدمات اتوماسیون را ارائه می‌کنند که به گره‌های اوراکل خارج از زنجیره اجازه می‌دهد تا عملکردهای قرارداد هوشمند را بر اساس پارامترهای تعریف شده توسط کاربر فعال کنند. به طور معمول، این امر مستلزم «ثبت» قرارداد هدف با سرویس اوراکل، تأمین بودجه برای پرداخت به اپراتور اوراکل و مشخص کردن شرایط یا زمان‌های شروع قرارداد است.
 
-[شبکه کیپر](https://chain.link/keepers) چین لینک گزینه‌هایی را برای قراردادهای هوشمند برای برون‌سپاری وظایف تعمیر و نگهداری منظم به روشی به حداقل رسیده و غیرمتمرکز ارائه می‌دهد. [داکیومنت کیپر ](https://docs.chain.link/docs/chainlink-keepers/introduction/) را برای اطلاعات در مورد سازگار کردن قرارداد خود با کیپر و استفاده از سرویس Upkeep بخوانید.
+[شبکه کیپر](https://chain.link/keepers) چین لینک گزینه‌هایی را برای قراردادهای هوشمند برای برون‌سپاری وظایف تعمیر و نگهداری منظم به روشی به حداقل رسیده و غیرمتمرکز ارائه می‌دهد. [داکیومنت کیپر](https://docs.chain.link/docs/chainlink-keepers/introduction/) را برای اطلاعات در مورد سازگار کردن قرارداد خود با کیپر و استفاده از سرویس Upkeep بخوانید.
 
 ## نحوه استفاده از اوراکل‌های بلاک چین {#use-blockchain-oracles}
 
@@ -411,12 +411,12 @@ contract PriceConsumerV3 {
 **مقالات**
 
 - [اوراکل بلاک چین چیست؟](https://chain.link/education/blockchain-oracles) — _چین لینک_
-- [اوراکل بلاک چین چیست؟](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) — _پاتریک کالینز< /em></li>
+- [اوراکل بلاک چین چیست؟](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) — _پاتریک کالینز_
 - [اوراکل‌های غیرمتمرکز: مروری جامع](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) — _ژولین تیونارد_
 - [اجرای اوراکل بلاک چین در اتریوم](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) - *پدرو کاستا*
 - [چرا قراردادهای هوشمند نمی‌توانند تماس‌های API برقرار کنند؟](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) — _StackExchange_
-- [چرا به اوراکل‌های غیرمتمرکز نیاز داریم](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) — _Bankless< /em></li>
-- [پس می‌خواهید از اوراکل قیمت استفاده کنید](https://samczsun.com/so-you-want-to-use-a-price-oracle/) — _samczsun_</ul>
+- [چرا به اوراکل‌های غیرمتمرکز نیاز داریم](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) — _Bankless_
+- [پس می‌خواهید از اوراکل قیمت استفاده کنید](https://samczsun.com/so-you-want-to-use-a-price-oracle/) — _samczsun_
 
 **ویدیوها**
 

@@ -20,10 +20,10 @@ ERC-223 به یک سری از محدودیت‌های استاندارد ERC-20 
 
 ## پیش نیازها {#prerequisites}
 
-- [حساب‌ها](/توسعه‌دهنده‌ها/اسناد/حساب)
-- [قراردادهای هوشمند](/توسعه‌دهنده‌ها/اسناد/قراردادهای هوشمند/)
+- [حساب‌ها](/developers/docs/accounts)
+- [قراردادهای هوشمند](/developers/docs/smart-contracts/)
 - [Token standards](/developers/docs/standards/tokens/)
-- [ERC-20](/توسعه‌دهنده‌ها/اسناد/استانداردها/توکن‌ها/erc-20/)
+- [ERC-20](/developers/docs/standards/tokens/erc-20/)
 
 ## ساختار{#body}
 
