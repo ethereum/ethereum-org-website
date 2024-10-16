@@ -119,7 +119,7 @@ Jeśli jesteś dwujęzyczny i chcesz pomóc nam dotrzeć do większej liczby os�
 
 ### Japoński {#ja}
 
-- [Japońskie Stowarzyszenie Wymiany Wirtualnych i Kryptowalutowych aktywów ](https://jvcea.or.jp/)
+- [Japońskie Stowarzyszenie Wymiany Wirtualnych i Kryptowalutowych aktywów](https://jvcea.or.jp/)
 - [Japońskie stowarzyszenie biznesowe kryptoaktywów](https://cryptocurrency-association.org/)
 - [Rozpocznij z rozwojem technologii blockchain — Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) — Ta ścieżka szkoleniowa wprowadza do technologii blockchain i rozwoju na platformie Ethereum
 - [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) — doskonalenie Ethereum po japońsku
