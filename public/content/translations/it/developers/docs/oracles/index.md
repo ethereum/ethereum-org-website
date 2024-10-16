@@ -22,7 +22,7 @@ Gli oracoli differiscono in base alla fonte di dati (una o più fonti), ai model
 
 ## Perché i contratti intelligenti hanno bisogno degli oracoli? {#why-do-smart-contracts-need-oracles}
 
-Molti sviluppatori vedono i contratti intelligenti come del codice in esecuzione in determinati indirizzi sulla blockchain. Tuttavia, una [ visione più generale dei contratti intelligenti ](/smart-contracts/) è che siano programmi software autoeseguibili in grado di far rispettare gli accordi tra le parti una volta soddisfatte determinate condizioni, da qui il termine “contratti intelligenti”.
+Molti sviluppatori vedono i contratti intelligenti come del codice in esecuzione in determinati indirizzi sulla blockchain. Tuttavia, una [visione più generale dei contratti intelligenti](/smart-contracts/) è che siano programmi software autoeseguibili in grado di far rispettare gli accordi tra le parti una volta soddisfatte determinate condizioni, da qui il termine “contratti intelligenti”.
 
 Ma utilizzare contratti intelligenti per far rispettare gli accordi tra le persone non è semplice, dato che Ethereum è deterministico. Un [sistema deterministico](https://en.wikipedia.org/wiki/Deterministic_algorithm) è un sistema che produce sempre gli stessi risultati dato uno stato iniziale ed un input specifico, il che significa che non c'è casualità o variazione nel processo di calcolo degli output dagli input.
 

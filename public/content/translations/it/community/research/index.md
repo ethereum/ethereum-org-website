@@ -14,7 +14,7 @@ La ricerca su Ethereum è aperta e trasparente e incarna i principi della [Scien
 
 ## Risorse generali per la ricerca {#general-research-resources}
 
-Indipendentemente dall'argomento specifico, numerose informazioni sulla ricerca su Ethereum sono disponibili su [ethresear.ch](https://ethresear.ch) e sul [canale Discord Eth R&D](https://discord.gg/ qGpsxSA). Questi sono i luoghi principali in cui i ricercatori di Ethereum discutono le idee e le opportunità di sviluppo più recenti.
+Indipendentemente dall'argomento specifico, numerose informazioni sulla ricerca su Ethereum sono disponibili su [ethresear.ch](https://ethresear.ch) e sul [canale Discord Eth R&D](https://discord.gg/qGpsxSA). Questi sono i luoghi principali in cui i ricercatori di Ethereum discutono le idee e le opportunità di sviluppo più recenti.
 
 Questa relazione pubblicata nel maggio 2022 da [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) fornisce una buona panoramica della tabella di marcia di Ethereum.
 
