@@ -24,7 +24,7 @@ type Story = StoryObj<typeof meta>
 
 export const Modal: Story = {}
 
-export const Full: Story = {
+export const Xl: Story = {
   args: {
     contentProps: {
       size: "xl",
