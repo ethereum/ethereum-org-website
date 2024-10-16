@@ -54,9 +54,17 @@ A teljes szabványosítási folyamat diagrammal együtt megtalálható az [EIP-1
 
 Ha szeretne többet olvasni az EIP-kről, akkor tekintse meg az [EIP-k weboldalát](https://eips.ethereum.org/) és az [EIP-1](https://eips.ethereum.org/EIPS/eip-1) frissítést. További hasznos linkek:
 
-- [Az összes EIP listája](https://eips.ethereum.org/all)
+- [Az összes Ethereum-fejlesztési javaslat (EIP) listája](https://eips.ethereum.org/all)
 - [Az összes EIP-típus leírása](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [Az összes EIP-állapot leírása](https://eips.ethereum.org/EIPS/eip-1#eip-process)
+
+### Közösségi oktatási projektek {#community-projects}
+
+- [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) — *PEEPanEIP egy oktatási videosorozat, amely megtárgyalja az Ethereum-fejlesztési javaslatokat (EIP) és a következő frissítések főbb jellemzőit.*
+- [EIPs For Nerds](https://ethereum2077.substack.com/t/eip-research) — *Az EIPs For Nerds átfogó, egyszerűen megfogalmazott áttekintést nyújt az Ethereum-fejlesztési javaslatokról (EIP), beleértve a főbb javaslatokat, az alkalmazás-/infrastruktúra-rétegre vonatkozókat (ERC), hogy tájékoztatást nyújtson és konszenzust teremtsen a Ethereum-protokoll javasolt változásai kapcsán.*
+- [EIPs.wtf](https://www.eips.wtf/) — *Az EIPs.wtf további információkat ad az Ethereum-fejlesztési javaslatokról (EIP), beleértve azok státuszát, bevezetési részleteit, a kapcsolódó pull request-eket (PR) és a közösség visszajelzéseit.*
+- [EIP.Fun](https://eipfun.substack.com/) — *Az EIP.Fun az Ethereum-fejlesztési javaslatokról (EIP) ad friss híreket, a kapcsolódó EIP megbeszélésekről és más dolgokról tudósít.*
+- [EIPs Insight](https://eipsinsight.com/) — *Az EIPs Insight az Ethereum-fejlesztési javaslatok (EIP) státuszáról ad folyamatjellegű és statisztikai adatokat különböző forrásokból.*
 
 ## Részvétel {#participate}
 

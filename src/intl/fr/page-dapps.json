@@ -41,6 +41,7 @@
   "page-dapps-choose-category": "Choisir une catégorie",
   "page-dapps-category-social": "Réseaux sociaux",
   "page-dapps-category-content": "Contenu",
+  "page-dapps-category-community": "Communauté",
   "page-dapps-category-messaging": "Messagerie",
   "page-dapps-category-identity": "Identité",
   "page-dapps-collectibles-benefits-1-description": "Lorsque de l'art est tokenisé sur Ethereum, la propriété peut être prouvée à tout le monde. Vous pouvez tracer le parcours de l'œuvre depuis sa création à son possesseur actuel. Cela empêche les contrefaçons.",
@@ -95,6 +96,7 @@
   "page-dapps-dapp-description-loopring": "Plateforme de trading Peer-to-peer conçue pour la vitesse.",
   "page-dapps-dapp-description-marble-cards": "Créez et échangez des cartes numériques uniques basées sur des URL.",
   "page-dapps-dapp-description-matcha": "Analyse plusieurs marchés pour vous aider à trouver les meilleurs prix.",
+  "page-dapps-dapp-description-meeds": "Hubs de communautés Web3 à l'ère du travail décentralisé. Récompensez les contributions qui le méritent de manière juste et transparente.",
   "page-dapps-dapp-description-mirror": "Construit sur web3 pour web3, la solide plateforme de publication de Mirror repousse les limites de l'écriture en ligne",
   "page-dapps-dapp-description-multichain": "Le routeur ultime pour web3. Il s'agit d'une infrastructure développée pour des interactions arbitraires entre chaînes.",
   "page-dapps-dapp-description-nifty-gateway": "Achetez des œuvres sur la chaîne auprès des meilleurs artistes, athlètes, marques et créateurs.",
@@ -113,6 +115,7 @@
   "page-dapps-dapp-description-rotki": "Logiciel libre pour effectuer le suivi, l'analyse, la comptabilité et la fiscalité de votre portefeuille en respectant votre confidentialité.",
   "page-dapps-dapp-description-krystal": "Une plateforme à guichet unique pour accéder à tous vos services DeFi préférés.",
   "page-dapps-dapp-description-rarible": "Créez, vendez et achetez des objets de collection tokenisés.",
+  "page-dapps-dapp-description-request-finance": "Une gamme d'outils financiers pour les factures, les salaires et les dépenses en cryptomonnaie.",
   "page-dapps-dapp-description-rubic": "Agrégateur de technologie Inter-Chain pour les utilisateurs et les dApps.",
   "page-dapps-dapp-description-sablier": "Diffusez de l'argent en temps réel.",
   "page-dapps-dapp-description-spatial": "Créez votre propre avatar personnalisé et des mondes 3D",
@@ -217,6 +220,7 @@
   "page-dapps-marble-cards-logo-alt": "Logo marble.cards",
   "page-dapps-async-logo-alt": "Logo d'Async",
   "page-dapps-matcha-logo-alt": "Logo Matcha",
+  "page-dapps-meeds-logo-alt": "Logo Meeds",
   "page-dapps-metaverse-benefits-title": "métavers",
   "page-dapps-metaverse-benefits-description": "Qu'est-ce qui, dans Ethereum, permet au métavers de prospérer ?",
   "page-dapps-metaverse-benefits-1-title": "NFTs",
@@ -241,6 +245,7 @@
   "page-dapps-ready-button": "Aller",
   "page-dapps-ready-description": "Choisissez une DApp à essayer",
   "page-dapps-ready-title": "Prêt ?",
+  "page-dapps-request-finance-logo-alt": "Logo de Request Finance",
   "page-dapps-rubic-logo-alt": "Logo Rubic",
   "page-dapps-sablier-logo-alt": "Logo Sablier",
   "page-dapps-set-up-a-wallet-button": "Trouver un portefeuille",
@@ -281,5 +286,7 @@
   "page-dapps-dapp-description-dodo": "DODO est un fournisseur de liquidités on-chain, qui s'appuie sur l'algorithme Proactive Market Maker (PMM).",
   "page-dapps-dodo-image-alt": "Logo de DODO",
   "page-dapps-dapp-description-artblocks": "Art Blocks est dédié à donner vie à des œuvres captivantes d'art génératif contemporain",
-  "page-dapps-artblocks-image-alt": "Logo Art Blocks"
+  "page-dapps-artblocks-image-alt": "Logo Art Blocks",
+  "page-dapps-explore-title": "Voulez-vous explorer d'autres applications ?",
+  "page-dapps-explore": "Consultez des centaines de dApps"
 }
