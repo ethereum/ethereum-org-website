@@ -115,7 +115,7 @@ Gebruikersfondsen zijn in gevaar als:
 - de brug-operators kwaadaardige bedoelingen in een vertrouwde brug hebben
 - de brug gehackt word
 
-Een recente hack was de brug van Solana’s Wormhole [waarbij 120.000 wETH ($ 325 miljoen USD) werd gestolen tijdens de hack](https://rekt.news/wormhole-rekt/). Vele van de [top hacks in blockchains betroffen bridges](https://rekt. news/leaderboard/).
+Een recente hack was de brug van Solana’s Wormhole [waarbij 120.000 wETH ($ 325 miljoen USD) werd gestolen tijdens de hack](https://rekt.news/wormhole-rekt/). Vele van de [top hacks in blockchains betroffen bridges](https://rekt.news/leaderboard/).
 
 Bruggen zijn cruciaal voor gebruikers van Ethereum L2's, en zelfs voor gebruikers die verschillende ecosystemen willen verkennen. Gezien de risico's van interactie met bruggen moeten gebruikers echter de afwegingen begrijpen die door de bruggen gemaakt worden. Dit zijn enkele [strategieën voor cross-chain beveiliging](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 

@@ -105,7 +105,7 @@ _Meestal gebruikt om brede gedecentraliseerde protocollen en/of tokens zelf te b
 
 #### Een goed voorbeeld {#token-example}
 
-[MakerDAO](https://makerdao. com) – De token MKR van MakerDAO is breed beschikbaar op gedecentraliseerde exchanges en iedereen kan hem kopen om een stem te hebben in de toekomst van het Maker-protocol.
+[MakerDAO](https://makerdao.com) – De token MKR van MakerDAO is breed beschikbaar op gedecentraliseerde exchanges en iedereen kan hem kopen om een stem te hebben in de toekomst van het Maker-protocol.
 
 ### Op aandelen gebaseerd lidmaatschap {#share-based-membership}
 
@@ -152,7 +152,7 @@ _Typisch gebruikt voor gedecentraliseerde ontwikkeling en bestuur van protocolle
 - [Wat is een DAO en waar is het voor?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Hoe een door een DAO mogelijk gemaakte digitale gemeenschap te starten](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) - [DAOhaus](https://daohaus.club/)
 - [Wat is een DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
-- [Wat is holografische consensus?](https://medium. com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack. io/)
+- [Wat is holografische consensus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
 - [DAOs are not corporations: where decentralization in autonomous organizations matters, van Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO's, DAC's, DA's en meer: een onvolledige terminologiegids](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.ethereum.org)
 
