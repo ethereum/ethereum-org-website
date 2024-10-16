@@ -10,15 +10,11 @@ lang: tr
 
 ## Kaynak kodu doğrulaması nedir? {#what-is-source-code-verification}
 
-Geliştiriciler, bir akıllı sözleşmeyi [Ethereum Sanal Makinesi'ne (ESM)](/developers/docs/evm/)dağıtmadan önce, sözleşmenin Solidity</a>'de veya başka bir yüksek seviye programlama dilinde yazılan talimatları
-
-olan kaynak kodunu bit koduna [derler.](/developers/docs/smart-contracts/compiling/) Ethereum Sanal Makinesi yüksek seviye talimatları yorumlayamayacağı için kaynak kodunu bit koduna (yani düşük seviye, makine talimatları) derlemek, sözleşme mantığını Ethereum Sanal Makinesi'nde yürütmek için şarttır.</p> 
+Geliştiriciler, bir akıllı sözleşmeyi [Ethereum Sanal Makinesi'ne (EVM)](/developers/docs/evm/) dağıtmadan önce, [sözleşmenin Solidity'de](/developers/docs/smart-contracts/languages/) veya başka bir yüksek seviye programlama dilinde yazılan talimatları olan kaynak kodunu bit koduna [derler](/developers/docs/smart-contracts/compiling/). Ethereum Sanal Makinesi yüksek seviye talimatları yorumlayamayacağı için kaynak kodunu bit koduna (yani düşük seviye, makine talimatları) derlemek, sözleşme mantığını Ethereum Sanal Makinesi'nde yürütmek için şarttır.
 
 Kaynak kodu doğrulaması, sözleşme oluşturma sırasında farklılıkları ortaya çıkarmak için kullanmak üzere sözleşmenin kaynak kodu ile derlenmiş bit kodunu karşılaştırmaktır. Akıllı sözleşmeleri doğrulamak, reklamı yapılan sözleşme kodu blokzincirde çalışmakta olandan farklı olabileceği için önemlidir.
 
 Akıllı sözleşme doğrulaması, bir sözleşmenin yazıldığı yüksek seviye dilde ne yaptığını, makine kodunu okumadan incelemeye olanak sağlar. Fonksiyonlar, değerler ve genelde değişken adları ile yorumlar, derlenen ve dağıtılan orijinal kaynak koduyla aynı kalır. Bu, kodu okumayı çok daha kolay kılar. Kaynak doğrulaması, kod dokümanları için de hazırlık yapar, bu sayede son kullanıcılar bir akıllı sözleşmenin ne yapmak üzere tasarlandığını bilir.
-
-
 
 ### Tam doğrulama nedir? {#full-verification}
 
@@ -30,11 +26,7 @@ Meta veri dosyası, sözleşmenin derlemesiyle ilgili kaynak kodları ve bu kodl
 
 Meta veri karmasından yararlanan bu tür doğrulamaya **"[tam doğrulama](https://docs.sourcify.dev/docs/full-vs-partial-match/)"** ("mükemmel doğrulama") adı verilir. Meta veri karmaları eşleşmiyorsa ya da doğrulamada dikkate alınmıyorsa buna, şu anda sözleşmeleri doğrulamanın daha yaygın yolu olan "kısmi eşleşme" denir. Tam doğrulama olmadan doğrulanmış kaynak kodun içinde görünmeyecek [kötü niyetli kod eklemek](https://samczsun.com/hiding-in-plain-sight/) mümkündür. Çoğu geliştirici tam doğrulamadan haberdar değildir ve derlemelerinin meta veri dosyasını tutmaz; bu yüzden kısmi doğrulama şimdiye kadar sözleşmeleri doğrulamada kullanılan genel geçer yöntem olmuştur.
 
-
-
 ## Kaynak kodu doğrulaması neden önemlidir? {#importance-of-source-code-verification}
-
-
 
 ### Güven gerektirmezlik {#trustlessness}
 
@@ -46,15 +38,11 @@ Projeler, sözleşmelerinin kaynak kodunu yayımlayarak güven varsayımlarını
 
 Kaynak kodu doğrulama araçları, bir akıllı sözleşmenin kaynak kodunun derleme koduyla eşleştiğine dair güvenceler sağlar. Sonuç, kullanıcıların üçüncü taraflara körü körüne güvenmediği ve bunun yerine bir sözleşmeye para yatırmadan önce kodu doğruladıkları güven gerektirmez bir ekosistemdir.
 
-
-
 ### Kullanıcı Güvenliği {#user-safety}
 
 Akıllı sözleşmeler söz konusu olduğunda ortadaki para miktarı oldukça yüksektir. Bu, daha yüksek güvenlik garantileri ve kullanmadan önce akıllı sözleşmenin mantığının doğrulanmasını gerektirir. Sorun şu ki, ahlaki endişelere sahip olmayan bazı geliştiriciler akıllı sözleşmelerin içine kötü niyetli kod ekleyerek kullanıcıları kandırabilirler. Doğrulama yapılmadığında kötü niyetli akıllı sözleşmelerin [arka kapıları](https://www.trustnodes.com/2018/11/10/concerns-rise-over-backdoored-smart-contracts) olabilir ve tartışmalı erişim kontrol mekanizmaları, kötüye kullanılabilir zayıflıklar ve kullanıcının güvenliğini tehlikeye atan diğer şeyler fark edilemez.
 
 Bir akıllı sözleşmenin kaynak kod dosyalarının yayımlanması, denetçiler gibi konuyla ilgili olanların sözleşmeyi potansiyel saldırı vektörleri açısından değerlendirmesini daha kolay hale getirir. Bir akıllı sözleşmeyi birden fazla tarafın doğrulaması sayesinde kullanıcılar daha güçlü güvencelere sahip olur.
-
-
 
 ## Ethereum akıllı sözleşmelerinde kaynak kodu doğrulaması {#source-code-verification-for-ethereum-smart-contracts}
 
@@ -76,13 +64,9 @@ Akıllı sözleşmeyi doğrulamanın temel adımları aşağıdaki gibidir:
 
 Bunun, doğrulamanın basitleştirilmiş bir açıklaması olduğunu ve bununla çalışmayan [değişmez değişkenlere](https://docs.sourcify.dev/docs/immutables/) sahip olmak gibi birçok istisna olduğunu unutmayın.
 
-
-
 ## Kaynak kodu doğrulama araçları {#source-code-verification-tools}
 
 Sözleşme doğrulamanın geleneksel süreci karmaşık olabilir. İşte bu nedenle, Ethereum'da dağıtılmış akıllı sözleşmelerin kaynak kodunu doğrulamaya yarayan araçlara sahibiz. Bu araçlar, kullanıcı yararına kaynak kodu doğrulamasının büyük kısmını otomatikleştirir ve doğrulanmış sözleşmeleri derler.
-
-
 
 ### Etherscan {#etherscan}
 
@@ -96,8 +80,6 @@ Etherscan, sözleşmeleri doğrulamak için en çok kullanılan araçtır. Fakat
 
 [Etherscan'de sözleşme doğrulama hakkında daha fazla bilgi](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
 
-
-
 ### Sourcify {#sourcify}
 
 [Sourcify](https://sourcify.dev/#/verifier), açık kaynaklı ve merkeziyetsiz sözleşmeleri onaylamak için kullanılan bir başka araçtır. Bir blok arayıcı değildir ve sadece [Ethereum Sanal Makinesi tabanlı farklı ağlarda](https://docs.sourcify.dev/docs/chains) bulunan sözleşmeleri doğrular. Diğer araçların üzerine geliştirileceği herkese açık bir altyapı görevi görür ve meta veri dosyasında bulunan [ABI](/developers/docs/smart-contracts/compiling/#web-applications) ve [NatSpec](https://docs.soliditylang.org/en/v0.8.15/natspec-format.html) yorumlarını kullanarak daha insan dostu sözleşme etkileşimleri sağlamayı amaçlar.
@@ -107,8 +89,6 @@ Sourcify, Etherscan'den farklı olarak meta veri karmasıyla tam eşleşmeleri d
 Ek olarak, bu dosyaların IPFS karmaları meta veride de bulunduğu için kaynak kod dosyaları IPFS üzerinden de alınabilir. Bir sözleşme, API veya [UI](https://sourcify.dev/#/verifier) üzerinden meta veri dosyası ve kaynak dosyaları temin edilerek ya da eklentiler kullanılarak doğrulanabilir. Sourcify izleme aracı, yeni bloklar üzerinde oluşturulan sözleşmeleri de dinler ve meta verileri ile kaynak dosyaları IPFS üzerinde yayımlanmış sözleşmeleri de doğrulamaya çalışır.
 
 [Sourcify'da sözleşme doğrulama üzerine daha fazla bilgi](https://blog.soliditylang.org/2020/06/25/sourcify-faq/).
-
-
 
 ### Tenderly {#tenderly}
 
@@ -121,8 +101,6 @@ Sözleşmelerinizi [Gösterge Paneli](https://docs.tenderly.co/monitoring/smart-
 Gösterge Paneli aracılığıyla sözleşme doğrularken Solidity derleyicisi tarafından üretilen kaynak dosyasını ya da meta veri dosyasını, adresi/ağı ve derleyici ayarlarını içe aktarmanız gerekir.
 
 Tenderly Hardhat eklentisini kullanmak, otomatik (kodsuz) ve manuel (kod tabanlı) doğrulama arasında seçim yapmanıza olanak tanıyarak doğrulama işlemi üzerinde daha az çabayla daha fazla kontrole sahip olmanızı sağlar.
-
-
 
 ## Daha fazla bilgi {#further-reading}
 

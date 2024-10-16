@@ -44,9 +44,7 @@ Ağ talebi nedeniyle gerekenden daha düşük bir işlem ücreti gönderdiyseniz
 
 ### Ethereum madenciliği nasıl yapılır? {#mining-ethereum}
 
-Ethereum madenciliği artık mümkün değildir. Ethereum
-
-iş ispatından<0> hisse ispatına<1> geçtiğinde madencilik kapatılmıştı. Artık madenciler yerine Ethereum'un doğrulayıcıları var. Herkes ETH [hisseleme](/glossary/#staking) yapabilir ve ağı güvence altına almak için doğrulayıcı yazılımı çalıştırarak hisseleme ödülleri alabilir.</p> 
+Ethereum madenciliği artık mümkün değildir. Ethereum [iş ispatından](/glossary/#pow) [hisse ispatına](/glossary/#pos) geçtiğinde madencilik kapatılmıştı. Artık madenciler yerine Ethereum'un doğrulayıcıları var. Herkes ETH [hisseleme](/glossary/#staking) yapabilir ve ağı güvence altına almak için doğrulayıcı yazılımı çalıştırarak hisseleme ödülleri alabilir.
 
 
 
