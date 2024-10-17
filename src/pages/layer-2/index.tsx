@@ -99,6 +99,18 @@ const Layer2Hub = () => {
 
       <HubHero {...heroContent} />
 
+      <div id="layer-2-powered-by-ethereum" className="w-full px-8 py-9">
+        <h2>Powered by Ethereum</h2>
+      </div>
+
+      <div id="layer-2-stats-box" className="w-full px-8 py-9">
+        <h2>Stats box</h2>
+      </div>
+
+      <div id="layer-2-the-network-of-networks" className="w-full px-8 py-9">
+        <h2>The network of networks</h2>
+      </div>
+
       <div id="layer-2-callout-cards" className="w-full px-8 py-9">
         <div className="flex flex-col gap-9 md:flex-row">
           {calloutCards.map((card, idx) => {
@@ -127,6 +139,25 @@ const Layer2Hub = () => {
             <ButtonLink href="/layer-2/networks">Explore networks</ButtonLink>
           </div>
         </div>
+      </div>
+
+      <div id="layer-2-cta" className="w-full px-8 py-9">
+        <h2>Call to action</h2>
+      </div>
+
+      <div
+        id="layer-2-why-do-we-need-multiple-networks"
+        className="w-full px-8 py-9"
+      >
+        <h2>Why do we need multiple networks on Ethereum?</h2>
+      </div>
+
+      <div id="layer-2-faq" className="w-full px-8 py-9">
+        <h2>FAQ</h2>
+      </div>
+
+      <div id="layer-2-bottom-cta" className="w-full px-8 py-9">
+        <h2>Bottom call to action</h2>
       </div>
     </MainArticle>
   )
