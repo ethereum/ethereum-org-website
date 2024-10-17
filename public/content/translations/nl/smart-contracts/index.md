@@ -6,11 +6,15 @@ lang: nl
 
 # Inleiding tot smart contracts {#introduction-to-smart-contracts}
 
-Slimme contracten zijn de fundamentele bouwstenen van de applicatielaag van Ethereum. Het zijn computerprogramma's die zijn opgeslagen op de blockchain en die "als dit dan dat"-logica volgen en gegarandeerd worden uitgevoerd volgens de regels die zijn gedefinieerd in de code, die niet kan worden gewijzigd zodra deze is aangemaakt.
+Slimme contracten zijn de fundamentele bouwstenen van de applicatielaag van Ethereum. Het zijn computerprogramma's die zijn opgeslagen op de [blockchain](/glossary/#blockchain) die de "als dit dan dat"-logica volgen en gegarandeerd worden uitgevoerd volgens de regels die zijn gedefinieerd in de code, die niet kan worden gewijzigd zodra deze is aangemaakt.
 
 Nick Szabo heeft de term "smart contract" bedacht. In 1994 schreef hij [een inleiding tot het concept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), en in 1996 schreef hij [een onderzoek van wat slimme contracten zouden kunnen doen](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Szabo had een digitale marktplaats voor ogen waar automatische, cryptografisch beveiligde processen transacties en bedrijfsfuncties mogelijk maken zonder vertrouwde tussenpersonen. Slimme contracten op Ethereum brengen deze visie in de praktijk.
+Szabo had een digitale marktplaats voor ogen waar automatische, [cryptografisch beveiligde](/glossary/#cryptography) processen transacties en bedrijfsfuncties mogelijk maken zonder vertrouwde tussenpersonen. Slimme contracten op Ethereum brengen deze visie in de praktijk.
+
+Bekijk slimme contracten uitgelegd door Finematics:
+
+<YouTube id="pWGLtjG-F5c" />
 
 ## Vertrouwen in traditionele contracten {#trust-and-contracts}
 
@@ -22,7 +26,7 @@ Alice en Bob houden een fietsrace. Laten we zeggen dat Alice $ 10 wed dat ze de 
 
 Dit dwaze voorbeeld illustreert het probleem van een niet-slimme overeenkomst. Zelfs als aan de voorwaarden van de overeenkomst wordt voldaan (d.w.z. je bent de winnaar van de race), moet je nog steeds een ander persoon vertrouwen om de overeenkomst uit te voeren (d.w.z. de uitbetaling van de weddenschap).
 
-## Een digitale verkoopautomaat {#vending-machine}
+## Een digitale automaat {#vending-machine}
 
 Een eenvoudige metafoor voor een slim contract is een verkoopautomaat die op ongeveer dezelfde manier werkt als een slim contract: specifieke inputs garanderen een vooraf bepaalde output.
 
@@ -60,7 +64,7 @@ Tot slot kun je, net als bij traditionele contracten, controleren wat er in een 
 
 Slimme contracten kunnen in wezen alles doen wat computerprogramma's kunnen doen.
 
-Ze kunnen berekeningen uitvoeren, valuta creëren, gegevens opslaan, NFT's minten, communicatie uitzenden en zelfs afbeeldingen genereren. Hier zijn enkele populaire praktijkvoorbeelden:
+Ze kunnen berekeningen uitvoeren, valuta creëren, gegevens opslaan, [NFT's](/glossary/#nft) minten, communicatie verzenden en zelfs afbeeldingen genereren. Hier zijn enkele populaire praktijkvoorbeelden:
 
 - [Stablecoins](/stablecoins/)
 - [Creëren en distribueren van unieke digitale activa](/nft/)
@@ -68,12 +72,6 @@ Ze kunnen berekeningen uitvoeren, valuta creëren, gegevens opslaan, NFT's minte
 - [Gedecentraliseerde gaming](/dapps/?category=gaming#explore)
 - [Een verzekeringsbeleid dat automatisch uitbetaalt](https://etherisc.com/)
 - [Een standaard waarmee mensen aangepaste, interoperabele valuta's kunnen maken](/developers/docs/standards/tokens/)
-
-## Leer je liever visueel? {#visual-learner}
-
-Bekijk slimme contracten uitgelegd door Finematics:
-
-<YouTube id="pWGLtjG-F5c" />
 
 ## Verder lezen {#further-reading}
 
