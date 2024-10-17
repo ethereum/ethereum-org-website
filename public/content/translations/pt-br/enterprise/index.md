@@ -83,7 +83,7 @@ Aqui estão alguns dos aplicativos empresariais criados com base na rede princip
 - [Roxpay](https://www.roxpay.ch/) - _automatiza a faturação e os pagamentos por uso de ativos_
 - [SAP Digital Currency Hub](https://community.sap.com/t5/technology-blogs-by-sap/cross-border-payments-made-easy-with-digital-money-experience-the-future/ba-p/13560384) - _pagamentos transfronteiriços com stablecoins_
 - [Toku](https://www.toku.com/) - _folha de pagamento, administração de concessões de tokens, conformidade fiscal, emprego local, benefícios e soluções de RH distribuídas_
-- [Xerof](https://www.xerof.com/) - _ facilita pagamentos internacionais B2B, rápido, fácil e barato</li> </ul>
+- [Xerof](https://www.xerof.com/) - _facilita pagamentos internacionais B2B, rápido, fácil e barato_
 
 ### Finanças {#finance}
 
