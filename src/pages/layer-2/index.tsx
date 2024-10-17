@@ -5,6 +5,7 @@ import type { BasePageProps, Lang } from "@/lib/types"
 
 import Card from "@/components/Card"
 import HubHero, { HubHeroProps } from "@/components/Hero/HubHero"
+import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -15,6 +16,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import HeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
+import WalkingImage from "@/public/images/layer-2/layer-2-walking.png"
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
@@ -145,11 +147,31 @@ const Layer2Hub = () => {
         <h2>Call to action</h2>
       </div>
 
+      {/* TODO: Setup for translation */}
       <div
         id="layer-2-why-do-we-need-multiple-networks"
         className="w-full px-8 py-9"
       >
-        <h2>Why do we need multiple networks on Ethereum?</h2>
+        <div className="flex flex-col gap-8 bg-background-highlight px-12 py-12 md:flex-row">
+          <div className="flex flex-1 items-center justify-center">
+            <TwImage
+              src={WalkingImage}
+              alt="Walking"
+              height={345}
+              width={264}
+            />
+          </div>
+          <div className="flex flex-1 flex-col justify-center gap-6">
+            <h2>Why do we need multiple networks on Ethereum?</h2>
+            <p>
+              Why are there all these networks and not just one Ethereum
+              network?
+            </p>
+            <div>
+              <ButtonLink href="/layer-2/learn">Learn more</ButtonLink>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="layer-2-faq" className="w-full px-8 py-9">
