@@ -4,55 +4,88 @@ import type { QuizzesSection, RawQuizzes } from "@/lib/types"
 const quizzes = {
   "what-is-ethereum": {
     title: "what-is-ethereum",
-    questions: ["a001", "a002", "a003", "a004", "a005"],
+    questions: [
+      "ethereum-1",
+      "ethereum-2",
+      "ethereum-3",
+      "ethereum-4",
+      "ethereum-5",
+    ],
   },
   "what-is-ether": {
     title: "what-is-ether",
-    questions: ["b001", "b002", "b003", "b004"],
+    questions: ["ether-1", "ether-2", "ether-3", "ether-4"],
   },
   web3: {
     title: "web3",
-    questions: ["c001", "c002", "c003", "c004", "c005"],
+    questions: ["web3-1", "web3-2", "web3-3", "web3-4", "web3-5"],
   },
   wallets: {
     title: "wallets",
-    questions: ["d001", "d002", "d003", "d004"],
+    questions: ["wallets-1", "wallets-2", "wallets-3", "wallets-4"],
   },
   security: {
     title: "ethereum-security",
-    questions: ["e001", "e002", "e003", "e004", "d003"],
+    questions: [
+      "security-1",
+      "security-2",
+      "security-3",
+      "security-4",
+      "wallets-3",
+    ],
   },
   nfts: {
     title: "nft-page",
-    questions: ["f001", "f002", "f003", "f004", "f005"],
+    questions: ["nfts-1", "nfts-2", "nfts-3", "nfts-4", "nfts-5"],
   },
   "layer-2": {
     title: "layer-2",
-    questions: ["g001", "g002", "g003", "g004"],
+    questions: ["rollups-1", "rollups-2", "rollups-3", "rollups-4"],
   },
   merge: {
     title: "learn-quizzes:page-assets-merge",
-    questions: ["h001", "h002", "h003", "h004", "h005"],
+    questions: ["merge-1", "merge-2", "merge-3", "merge-4", "merge-5"],
   },
   daos: {
     title: "DAOs",
-    questions: ["i001", "i002", "i003", "i004", "i005"],
+    questions: ["daos-1", "daos-2", "daos-3", "daos-4", "daos-5"],
   },
   "solo-staking": {
     title: "solo",
-    questions: ["j001", "j002", "j004", "j005", "j006", "j007", "j008"],
+    questions: [
+      "staking-1",
+      "staking-2",
+      "staking-4",
+      "staking-5",
+      "staking-6",
+      "staking-7",
+      "staking-8",
+    ],
   },
   scaling: {
     title: "scaling",
-    questions: ["k001", "k002", "k003", "k004"],
+    questions: ["scaling-1", "scaling-2", "scaling-3", "scaling-4"],
   },
   "run-a-node": {
     title: "run-a-node",
-    questions: ["l001", "l002", "l003", "l004", "l005", "l006"],
+    questions: [
+      "run-a-node-1",
+      "run-a-node-2",
+      "run-a-node-3",
+      "run-a-node-4",
+      "run-a-node-5",
+      "run-a-node-6",
+    ],
   },
   stablecoins: {
     title: "stablecoins",
-    questions: ["m001", "m002", "m003", "m004", "m005"],
+    questions: [
+      "stablecoins-1",
+      "stablecoins-2",
+      "stablecoins-3",
+      "stablecoins-4",
+      "stablecoins-5",
+    ],
   },
 } satisfies RawQuizzes
 
