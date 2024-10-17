@@ -4,7 +4,7 @@ description: Ethereum.org alanlarında ulaşmaya çalıştığımız basit stand
 lang: tr
 ---
 
-# Davranış kuralları {#conduct-intro}
+# Davranış kuralları {#code-of-conduct}
 
 ## Misyon {#mission}
 

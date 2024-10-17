@@ -252,7 +252,7 @@ else:
 
 ### レシートツリー {#receipts-trie}
 
-すべてのブロックは、それぞれのレシートツリーを持っています。 ここでの`path`は、`rlp(transactionIndex)`です。 `transactionIndex`は、マイニングされたブロックのインデックスです。 レシートツリーは更新されることはありません。 トランザクションと同様に、現在のレシートとレガシーのレシートがあります。 レシートツリーで特定のレシートをクエリーするには、ブロックのトランザクションのインデックス、レシートのペイロード、トランザクションタイプが必要となります。 返されるレシートは、`TransactionType`と`ReceiptPayload`の集まったものとして定義される`Receipt`タイプまたは、`rlp([status, cumulativeGasUsed, logsBloom, logs])`として定義される`LegacyReceipt`タイプとなります。
+すべてのブロックは、それぞれのレシートツリーを持っています。 ここでの`path`は、`rlp(transactionIndex)`です。 `transactionIndex`は、そのトランザクションが含まれたブロック内でのインデックスです。 レシートツリーは更新されることはありません。 トランザクションと同様に、現在のレシートとレガシーのレシートがあります。 レシートツリーで特定のレシートをクエリーするには、ブロックのトランザクションのインデックス、レシートのペイロード、トランザクションタイプが必要となります。 返されるレシートは、`TransactionType`と`ReceiptPayload`の集まったものとして定義される`Receipt`タイプまたは、`rlp([status, cumulativeGasUsed, logsBloom, logs])`として定義される`LegacyReceipt`タイプとなります。
 
 詳細については、[EIP 2718](https://eips.ethereum.org/EIPS/eip-2718)のドキュメントを参照してください。
 
