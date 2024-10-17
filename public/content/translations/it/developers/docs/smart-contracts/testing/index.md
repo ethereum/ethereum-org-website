@@ -110,7 +110,7 @@ function auctionEnd() external {
 
 Questo è un semplice contratto d'asta, progettato per ricevere offerte durante il periodo d'offerta. Se `highestBid` aumenta, l'offerente maggiore precedente riceve il denaro; una volta terminato il periodo di offerta, il `beneficiary` chiama il contratto per ricevere il denaro.
 
-I test unitari per un contratto simile coprirebbero diverse funzioni che un utente potrebbe chiamare quando interagisce con esso. Un esempio sarebbe un test unitario che controlla se un utente può presentare un'offerta durante l'asta (cioè, le chiamate a `bid()` hanno esito positivo) o uno che controlli se un utente può presentare un'offerta maggiore dell'attuale `highestBid`.
+I test unitari per un contratto simile coprirebbero diverse funzioni che un utente potrebbe chiamare quando interagisce con esso. Un esempio sarebbe un test unitario che controlli se un utente può presentare un'offerta durante l'asta (cioè, le chiamate a `bid()` hanno esito positivo) o uno che controlli se un utente può presentare un'offerta maggiore dell'attuale `highestBid`.
 
 Comprendere il flusso di lavoro operativo di un contratto aiuta anche a scrivere test unitari che verificano se l'esecuzione soddisfa i requisiti. Ad esempio, il contratto d'asta specifica che gli utenti non possono presentare offerte al termine dell'asta (cioè, quando `auctionEndTime` è inferiore a `block.timestamp`). Dunque, uno sviluppatore potrebbe eseguire un test unitario che verifichi se le chiamate alla funzione `bid()` hanno esito positivo o negativo al termine dell'asta (cioè, quando `auctionEndTime` > `block.timestamp`).
 
