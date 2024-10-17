@@ -28,16 +28,6 @@ lang: zh
 
 **注意**：大多数[开发框架](/developers/docs/frameworks/)包含一个内置的开发网络。 我们建议从一个框架开始[设置你的本地开发环境](/developers/local-environment/)。
 
-### Ganache {#ganache}
-
-快速构建一个个人的以太坊区块链，你可以用它来运行测试，执行命令，并在控制链的运行方式时检查状态。
-
-Ganache提供了一个桌面应用程序 (Ganache UI) 以及一个命令行工具 (`ganache-cli`)。 它是 Truffle 工具套装的一部分。
-
-- [网站](https://www.trufflesuite.com/ganache)
-- [GitHub](https://github.com/trufflesuite/ganache)
-- [相关文档](https://www.trufflesuite.com/docs/ganache/overview)
-
 ### 安全帽网络 {#hardhat-network}
 
 一个专门用于开发的本地以太坊网络。 该网络允许你部署合约，运行测试并调试代码。
