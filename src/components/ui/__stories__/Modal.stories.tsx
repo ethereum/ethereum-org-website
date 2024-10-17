@@ -26,8 +26,6 @@ export const Modal: Story = {}
 
 export const Xl: Story = {
   args: {
-    contentProps: {
-      size: "xl",
-    },
+    size: "xl",
   },
 }

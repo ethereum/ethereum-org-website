@@ -29,13 +29,31 @@ const dialogVariant = tv({
         content: "max-w-[1004px]",
       },
     },
+    isSimulator: {
+      true: {},
+    },
   },
   defaultVariants: {
     size: "md",
   },
 })
 
-const Dialog = DialogPrimitive.Root
+type DialogVariants = VariantProps<typeof dialogVariant>
+
+const DialogStylesContext = React.createContext(dialogVariant())
+
+const useDialogStyles = () => React.useContext(DialogStylesContext)
+
+type DialogProps = DialogPrimitive.DialogProps & DialogVariants
+
+const Dialog = ({ size, isSimulator, ...props }: DialogProps) => {
+  const styles = dialogVariant({ size, isSimulator })
+  return (
+    <DialogStylesContext.Provider value={styles}>
+      <DialogPrimitive.Root {...props} />
+    </DialogStylesContext.Provider>
+  )
+}
 
 const DialogTrigger = DialogPrimitive.Trigger
 
@@ -46,72 +64,84 @@ const DialogClose = DialogPrimitive.Close
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
->(({ className, ...props }, ref) => (
-  <DialogPrimitive.Overlay
-    ref={ref}
-    className={cn(dialogVariant().overlay(), className)}
-    {...props}
-  />
-))
+>(({ className, ...props }, ref) => {
+  const { overlay } = useDialogStyles()
+  return (
+    <DialogPrimitive.Overlay
+      ref={ref}
+      className={cn(overlay(), className)}
+      {...props}
+    />
+  )
+})
 DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
 
 type DialogContentProps = React.ComponentPropsWithoutRef<
   typeof DialogPrimitive.Content
-> &
-  VariantProps<typeof dialogVariant>
+>
 
 const DialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
   DialogContentProps
->(({ className, children, size, ...props }, ref) => (
-  <DialogPortal>
-    <DialogOverlay className={dialogVariant().overlay()} />
-    <DialogPrimitive.Content
-      ref={ref}
-      className={cn(dialogVariant().content({ size }), className)}
-      {...props}
-    >
-      {children}
-    </DialogPrimitive.Content>
-  </DialogPortal>
-))
+>(({ className, children, ...props }, ref) => {
+  const { content } = useDialogStyles()
+  return (
+    <DialogPortal>
+      <DialogOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        className={cn(content(), className)}
+        {...props}
+      >
+        {children}
+      </DialogPrimitive.Content>
+    </DialogPortal>
+  )
+})
 DialogContent.displayName = DialogPrimitive.Content.displayName
 
 const DialogHeader = ({
   className,
   children,
   ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn(dialogVariant().header(), className)} {...props}>
-    {children}
-    <Center className="absolute end-0 top-0" asChild>
-      <DialogPrimitive.Close className={dialogVariant().close()}>
-        <MdClose />
-        <span className="sr-only">Close</span>
-      </DialogPrimitive.Close>
-    </Center>
-  </div>
-)
+}: React.HTMLAttributes<HTMLDivElement>) => {
+  const { header, close } = useDialogStyles()
+  return (
+    <div className={cn(header(), className)} {...props}>
+      {children}
+      <Center className="absolute end-0 top-0" asChild>
+        <DialogPrimitive.Close className={close()}>
+          <MdClose />
+          <span className="sr-only">Close</span>
+        </DialogPrimitive.Close>
+      </Center>
+    </div>
+  )
+}
 DialogHeader.displayName = "DialogHeader"
 
 const DialogFooter = ({
   className,
   ...props
-}: React.HTMLAttributes<HTMLDivElement>) => (
-  <div className={cn(dialogVariant().footer(), className)} {...props} />
-)
+}: React.HTMLAttributes<HTMLDivElement>) => {
+  const { footer } = useDialogStyles()
+  return <div className={cn(footer(), className)} {...props} />
+}
 DialogFooter.displayName = "DialogFooter"
 
 const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
->(({ className, ...props }, ref) => (
-  <DialogPrimitive.Title
-    ref={ref}
-    className={cn(dialogVariant().title(), className)}
-    {...props}
-  />
-))
+>(({ className, ...props }, ref) => {
+  const { title } = useDialogStyles()
+  return (
+    <DialogPrimitive.Title
+      ref={ref}
+      className={cn(title(), className)}
+      {...props}
+    />
+  )
+})
 DialogTitle.displayName = DialogPrimitive.Title.displayName
 
 const DialogDescription = React.forwardRef<
@@ -126,9 +156,10 @@ const DialogDescription = React.forwardRef<
 ))
 DialogDescription.displayName = DialogPrimitive.Description.displayName
 
-export type ModalProps = Omit<DialogPrimitive.DialogProps, "open"> & {
+export type ModalProps = Omit<DialogProps, "open"> & {
   children?: React.ReactNode
   title?: React.ReactNode
+  onClose?: () => void
   actionButton?: {
     label: string
     onClick: () => void
@@ -142,9 +173,19 @@ const Modal = ({
   actionButton,
   contentProps,
   defaultOpen,
+  onClose,
   ...restProps
 }: ModalProps) => {
-  const { onClose, isOpen, setValue } = useDisclosure(defaultOpen)
+  const {
+    onClose: onDisclosureClose,
+    isOpen,
+    setValue,
+  } = useDisclosure(defaultOpen)
+
+  const handleClose = () => {
+    onClose?.()
+    onDisclosureClose()
+  }
 
   return (
     <Dialog open={isOpen} onOpenChange={setValue} {...restProps}>
@@ -156,7 +197,7 @@ const Modal = ({
         {actionButton && (
           <DialogFooter>
             <Flex className="justify-end gap-2">
-              <Button onClick={onClose} variant="outline" isSecondary>
+              <Button onClick={handleClose} variant="outline" isSecondary>
                 Cancel
               </Button>
               <Button onClick={actionButton.onClick}>
