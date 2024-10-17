@@ -12,8 +12,6 @@ Aşağıdaki şema iki Ethereum istemcisi arasındaki ilişkiyi göstermekte. İ
 
 ![](node-architecture-text-background.png)
 
-_Bu görsel, geth.ethereum.org'dan alınmıştır ve yürütüm istemcilerini temsilen Geth logosu kullanmaktadır - yürütüm istemcisi için Erigon, Nethermind ve Besu gibi başka seçenekler de vardır._
-
 Bu çift istemcili yapının çalışması için, fikir birliği istemcilerinin yürütüm istemcisine işlem paketlerini iletebilmesi gerekir. İstemcinin herhangi bir Ethereum kuralını çiğnemediğinden ve Ethereum'un durumu için önerilen güncellemenin doğru olduğundan emin olmanın yolu işlemleri yerel olarak yürütmektir. Benzer olarak, düğüm bir blok üreticisi olmak için seçildiğinde, fikir birliği istemcisi yeni bloka dahil etmek ve küresel durumu güncellemek için Geth üzerinden işlem paketleri talep edebilmelidir. İstemciler arası gerçekleşen bu iletişim [motor API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)'sını kullanan yerel bir RPC bağlantısı tarafından sağlanır.
 
 ## Yürütüm istemcisi ne yapar? {#execution-client}
@@ -22,7 +20,7 @@ Yürütüm istemcisi, işlem işleme, işlem dedikodusu, durum yönetimi ve Ethe
 
 Yürütüm istemcisi, işlem listesi, güncellenmiş durum ağacı ve diğer yürütümle ilgili veriler gibi yürütüm yüklerini oluşturur. Fikir birliği istemcileri, her bloktaki yürütme yüklerini içerir. Yürütüm istemcisi, geçerli olduklarından emin olmak için yeni bloklarda işlemlerin yeniden yürütülmesinden sorumludur. İşlemleri yürütme, yürütüm istemcisinin [Ethereum Sanal Makinesi (EVM)](/developers/docs/evm) olarak bilinen gömülü bilgisayarından yapılır.
 
-Yürütüm istemcisi ayrıca Ethereum'a [RPC yöntemleri](/developers/docs/apis/json-rpc)aracılığıyla kullanıcıların Ethereum blok zincirini sorgulamasını, işlemleri göndermelerini ve akıllı sözleşmeler dağıtmalarını sağlayan bir arayüz sunar. RPC çağrılarının bir [Web3js](https://docs.web3js.org/)veya [Web3py](https://web3py.readthedocs.io/en/v5/) kütüphanesi ya da tarayıcı cüzdanı gibi bir kullanıcı arayüzü tarafından işlenmesi yaygın bir durumdur.
+Yürütüm istemcisi ayrıca Ethereum'a [RPC yöntemleri](/developers/docs/apis/json-rpc) aracılığıyla kullanıcıların Ethereum blok zincirini sorgulamasını, işlemleri göndermelerini ve akıllı sözleşmeler dağıtmalarını sağlayan bir arayüz sunar. RPC çağrılarının bir [Web3js](https://docs.web3js.org/)veya [Web3py](https://web3py.readthedocs.io/en/v5/) kütüphanesi ya da tarayıcı cüzdanı gibi bir kullanıcı arayüzü tarafından işlenmesi yaygın bir durumdur.
 
 Özetle, yürütüm istemcisi:
 

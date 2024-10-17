@@ -103,6 +103,11 @@ Az NFT-kkel kapcsolatos biztonsági problémák leggyakrabban adathalász csalá
 - [EtherscanNFT trekker](https://etherscan.io/nft-top-contracts)
 - [ERC-721 tokenszabvány](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 tokenszabvány](/developers/docs/standards/tokens/erc-1155/)
+- [Népszerű NFT-applikációk és -eszközök](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Egyéb források {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

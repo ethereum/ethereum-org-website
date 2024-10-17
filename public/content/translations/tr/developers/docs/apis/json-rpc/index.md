@@ -6,7 +6,7 @@ lang: tr
 
 Bir yazılım uygulamasının Ethereum blok zinciriyle etkileşimde bulunabilmesi - blok zincir verilerini okuma ya da ağa işlemler gönderme yoluyla - bir Ethereum düğümüne bağlanmasını gerektirmektedir.
 
-Bu amaçla, her [Ethereum müşterisi](/developers/docs/nodes-and-clients/#execution-clients), belirli bir düğüm veya istemci uygulamasından bağımsız olarak uygulamaların güvendikleri bir yöntem seti olması için bir [JSON-RPC spesifikasyonu](https://github.com/ethereum/execution-apis) uygular.
+Bu amaçla, her [Ethereum müşterisi](/developers/docs/nodes-and-clients/#execution-clients), belirli bir düğüm veya istemci uygulamasından bağımsız olarak uygulamaların güvendikleri bir yöntem seti olması için bir [JSON-RPC özellikleri](https://github.com/ethereum/execution-apis) uygular.
 
 [JSON-RPC](https://www.jsonrpc.org/specification) durumsuz, hafifliği özel bir uzaktan prosedür çağrısı (RPC) protokolüdür. Birkaç veri yapısını ve bunların işlenmesiyle ilgili kuralları tanımlar. Kavramların aynı süreç içinde, soketler üzerinden, HTTP üzerinden veya birçok farklı mesaj geçiş ortamında kullanılabilir olması açısından aktarımdan bağımsızdır. Veri formatı olarak JSON (RFC 4627) kullanır.
 
@@ -26,7 +26,7 @@ Bir düğüm içinde müşteri veya istemci arası iletişim için dahili bir AP
 
 ## Yürütüm istemcisi özellikleri {#spec}
 
-[GitHub'da tam JSON-RPC API özelliklerini okuyun](https://github.com/ethereum/execution-apis).
+[GitHub'da tam JSON-RPC API özelliklerini okuyun](https://github.com/ethereum/execution-apis). Bu API, [Yürütme API'si web sayfasında](https://ethereum.github.io/execution-apis/api-documentation/) belgelenmiştir ve mevcut tüm yöntemleri denemek için bir Denetçi içerir.
 
 ## Konvansiyonlar {#conventions}
 
@@ -53,7 +53,7 @@ Biçimlendirilmemiş verileri kodlarken (bayt dizileri, hesap adresleri, karmala
 İşte bazı örnekler:
 
 - 0x41 (size 1, "A")
-- 0x004200 (size 3, "\0B\0")
+- 0x004200 (boyut 3, "0B0")
 - 0x (size 0, "")
 - YANLIŞ: 0xf0f0f (hane sayısı çift olmalıdır)
 - YANLIŞ: 004200 (0x ön eki olmalıdır)
@@ -74,9 +74,9 @@ DefaultBlock parametresi için aşağıdaki seçenekler mümkündür:
 
 - `HEX String` - bir tamsayı blok numarası
 - `String "earliest"` en erken/genesis bloğu için
-- `"En son" dizesi` - en son çıkmış blok için
+- `String "latest"` - önerilen son blok için
 - `"Güvenli" dizesi` - en son güvenli baş blok için
-- `"Sonlanmış" dizesi` - kesinleşmiş en son blok için
+- `"Kesinleşmiş" dizesi` - kesinleşmiş en son blok için
 - `"Bekleyen" dizesi` - bekleyen durum/işlemler için
 
 ## Örnekler
@@ -132,6 +132,10 @@ Bir avuç temel JSON-RPC yöntemi, Ethereum ağından veri gerektirir ve düzgü
 - [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
 - [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
 
+## JSON-RPC API Deneme Alanı
+
+API yöntemlerini denemek ve yeni yöntemler keşfetmek için [deneme alanı aracını](https://ethereum-json-rpc.com) kullanabilirsiniz. Ayrıca, çeşitli düğüm sağlayıcıları tarafından hangi yöntemlerin ve ağların desteklendiğini de gösterir.
+
 ## JSON-RPC API Yöntemleri {#json-rpc-methods}
 
 ### web3_clientVersion {#web3_clientversion}
@@ -155,7 +159,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],
 {
   "id":67,
   "jsonrpc":"2.0",
-  "result": "Mist/v0.9.3/darwin/go1.4.1"
+  "result": "Geth/v1.12.1-stable/linux-amd64/go1.19.1"
 }
 ```
 
@@ -165,7 +169,7 @@ Verilen verilerin Keccak-256'sını (standartlaştırılmış SHA3-256 _olmayan_
 
 **Parametreler**
 
-1. `DATA` - SHA3 şifresine dönüştürülecek veri
+1. `DATA` - SHA3 karmasına dönüştürülecek veriler
 
 ```js
 params: ["0x68656c6c6f20776f726c64"]
@@ -304,11 +308,56 @@ Hiçbiri
 
 **Dönüşler**
 
+Kesin dönüş verileri, istemci uygulamaları arasında farklılık gösterir. Tüm istemciler düğüm eşitlenmediğinde `False` değerini döndürür aynı zamanda da tüm istemciler aşağıdaki alanları döndürür.
+
 `Nesne|Boolean`, Senkronizasyon durumu verisi olan veya senkronize edilmediğinde `FALSE` olan bir nesne:
 
 - `startingBlock`: `QUANTITY` - İçe aktarmanın başladığı blok (yalnızca senkronizasyon kafasına ulaştıktan sonra sıfırlanır)
 - `currentBlock`: `QUANTITY` - Geçerli blok, eth_blockNumber ile aynı
 - `highestBlock`: `QUANTITY` - Tahmini en yüksek blok
+
+Ancak, bireysel istemciler ek veriler de sağlayabilir. Örneğin Geth aşağıdakileri döndürür:
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "currentBlock": "0x3cf522",
+    "healedBytecodeBytes": "0x0",
+    "healedBytecodes": "0x0",
+    "healedTrienodes": "0x0",
+    "healingBytecode": "0x0",
+    "healingTrienodes": "0x0",
+    "highestBlock": "0x3e0e41",
+    "startingBlock": "0x3cbed5",
+    "syncedAccountBytes": "0x0",
+    "syncedAccounts": "0x0",
+    "syncedBytecodeBytes": "0x0",
+    "syncedBytecodes": "0x0",
+    "syncedStorage": "0x0",
+    "syncedStorageBytes": "0x0"
+  }
+}
+```
+
+Oysa Besu bunları döndürür:
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 51,
+  "result": {
+    "startingBlock": "0x0",
+    "currentBlock": "0x1518",
+    "highestBlock": "0x9567a3",
+    "pulledStates": "0x203ca",
+    "knownStates": "0x200636"
+  }
+}
+```
+
+Daha fazla ayrıntı için bakmak istediğiniz spesifik istemcinin dokümanlarına göz atın.
 
 **Örnek**
 
@@ -385,7 +434,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 
 ### eth_mining {#eth_mining}
 
-Müşteri aktif olarak yeni bloklar kazıyorsa `true` değerini döndürür.
+İstemci aktif olarak yeni bloklar basıyorsa `true` değerini döndürür. Bu, yalnızca iş ispatı kullanan ağlar için `true` değerini döndürebilir ancak [Birleşim](/roadmap/merge/) gerçekleştiğinden beri bazı istemcilerde kullanılamıyor olabilir.
 
 **Parametreler**
 
@@ -410,7 +459,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 
 ### eth_hashrate {#eth_hashrate}
 
-Düğümün madencilik yaptığı saniye başına karma sayısını döndürür.
+Düğümün madencilik yaptığı saniye başına karma sayısını döndürür. Bu, yalnızca iş ispatı kullanan ağlar için `true` değerini döndürebilir ancak [Birleşim](/roadmap/merge/) gerçekleştiğinden beri bazı istemcilerde kullanılamıyor olabilir.
 
 **Parametreler**
 
@@ -435,7 +484,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 
 ### eth_gasPrice {#eth_gasprice}
 
-Wei cinsinden gaz başına geçerli fiyatı döndürür.
+Wei cinsinden gaz başına mevcut fiyatın bir tahminini döndürür. Örneğin, Besu istemcisi son 100 bloğu inceler ve varsayılan medyan gaz birim fiyatını döndürür.
 
 **Parametreler**
 
@@ -443,7 +492,7 @@ Hiçbiri
 
 **Dönüşler**
 
-`QUANTITY` - wei cinsinden mevcut gaz fiyatının tam sayısı.
+`QUANTITY` - wei cinsinden mevcut gaz fiyatının tam sayısıdır.
 
 **Örnek**
 
@@ -468,7 +517,7 @@ Hiçbiri
 
 **Dönüşler**
 
-`Array of DATA`, 20 Bayt, Müşteriye ait adresler.
+`Array of DATA`, 20 Bayt, istemciye ait adresler.
 
 **Örnek**
 
@@ -485,7 +534,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 
 ### eth_blockNumber {#eth_blocknumber}
 
-En son blokun numarasını döndürür.
+En son bloğun numarasını döndürür.
 
 **Parametreler**
 
@@ -493,7 +542,7 @@ Hiçbiri
 
 **Dönüşler**
 
-`QUANTITY` - istemcinin açık olduğu mevcut blok numarasının tam sayısı.
+`QUANTITY` - istemcinin açık olduğu mevcut blok numarasının tam sayısıdır.
 
 **Örnek**
 
@@ -515,7 +564,7 @@ Verilen adresin hesabının bakiyesini döndürür.
 **Parametreler**
 
 1. `DATA`, 20 Bayt - bakiye için bakılması gereken adres.
-2. `QUANTITY|TAG`- bir blok numarasının tam sayısı veya [varsayılan blok parametresi](/developers/docs/apis/json-rpc/#default-block)nde olduğu gibi `"earliest"`, `"latest"` veya `"pending"` dizesi
+2. `QUANTITY|TAG` - tamsayı blok numarası veya `"latest"`,`"earliest"`,`"pending"`,`"safe"` veya `"finalized"` dizesi, [default block parameter](/developers/docs/apis/json-rpc/#default-block) kısmına göz atabilirsiniz
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
@@ -523,7 +572,7 @@ params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
 
 **Dönüşler**
 
-`QUANTITY` - mevcut bakiyenin wei cinsinden tam sayısı.
+`QUANTITY` - mevcut bakiyenin wei cinsinden tam sayısıdır.
 
 **Örnek**
 
@@ -546,13 +595,13 @@ Belirli bir adresteki bir depolama konumundan değeri döndürür.
 
 1. `DATA`, 20 Bayt - depolamanın adresi.
 2. `QUANTITY` - depolamadaki pozisyonun sayısı.
-3. `QUANTITY|TAG`- bir blok numarasının tam sayısı veya [varsayılan blok parametresi](/developers/docs/apis/json-rpc/#default-block)nde olduğu gibi `"earliest"`, `"latest"` veya `"pending"` dizesi
+3. `QUANTITY|TAG`- tamsayı blok numarası veya `"latest"`,`"earliest"`,`"pending"`,`"safe"` veya `"finalized"` dizesi, [default block parameter](/developers/docs/apis/json-rpc/#default-block) kısmına göz atabilirsiniz
 
 **Dönüşler**
 
-`DATA` - bu depolama konumundaki değer.
+`DATA` - bu depolama konumundaki değerdir.
 
-**Örnek** Doğru konumun hesaplanması, alınacak depolamaya bağlıdır. `0x295a70b2de5e3953354a6a8344e616ed314d7251`, `0x391694e7e0b0cce554cb130d723a9d27458f9298` adresinde dağıtılan aşağıdaki sözleşmeyi göz önünde bulundurun.
+**Örnek** Doğru konumun hesaplanması, alınacak depolamaya bağlıdır. `0x295a70b2de5e3953354a6a8344e616ed314d7251`, `0x391694e7e0b0cce554cb130d723a9d27458f9298` adresinde dağıtılan aşağıdaki sözleşmeyi dikkate alın.
 
 ```
 contract Storage {
@@ -565,7 +614,7 @@ contract Storage {
 }
 ```
 
-Pos0 değerini almak doğrudandır:
+Pos0 değerini almak basittir:
 
 ```js
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
@@ -589,7 +638,7 @@ keccak(
 )
 ```
 
-Web3 kütüphanesi ile birlikte gelen geth konsolu hesaplama yapmak için kullanılabilir:
+Web3 kütüphanesi ile birlikte gelen geth konsolu, hesaplama yapmak için kullanılabilir:
 
 ```js
 > var key = "000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"
@@ -612,7 +661,7 @@ Bir adresten _gönderilen_ işlem sayısını döndürür.
 **Parametreler**
 
 1. `DATA`, 20 Bayt - adres.
-2. `QUANTITY|TAG`- bir blok numarasının tam sayısı veya [varsayılan blok parametresi](/developers/docs/apis/json-rpc/#default-block)nde olduğu gibi `"earliest"`, `"latest"` veya `"pending"` dizesi
+2. `QUANTITY|TAG`- tamsayı blok numarası veya `"latest"`,`earliest"`,`"pending"`,`"safe"` veya `"finalized"` dizesi, [default block parameter](/developers/docs/apis/json-rpc/#default-block) kısmına göz atabilirsiniz
 
 ```js
 params: [
@@ -623,7 +672,7 @@ params: [
 
 **Dönüşler**
 
-`QUANTITY` - bu adresten gönderilen işlem sayısının tam sayısı.
+`QUANTITY` - bu adresten gönderilen işlem sayısının tamsayısıdır.
 
 **Örnek**
 
@@ -640,85 +689,85 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 
 ### eth_getBlockTransactionCountByHash {#eth_getblocktransactioncountbyhash}
 
-Verilen blok karması ile eşleşen bir bloktan olan bir bloktaki işlem sayısını döndürür.
+Verilen blok karması ile eşleşen bir bloktaki işlem sayısını döndürür.
 
 **Parametreler**
 
 1. `DATA`, 32 Bayt - bir blokun karması
 
 ```js
-params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
+params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
 ```
 
 **Dönüşler**
 
-`QUANTITY` - bu bloktaki işlem sayısının tam sayısı.
+`QUANTITY` - bu bloktaki işlem sayısının tamsayısıdır.
 
 **Örnek**
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHash","params":["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHash","params":["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"],"id":1}'
 // Result
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0xb" // 11
+  "result": "0x8b" // 139
 }
 ```
 
 ### eth_getBlockTransactionCountByNumber {#eth_getblocktransactioncountbynumber}
 
-Verilen blok numarasıyla eşleşen bir bloktaki işlem sayısını döndürür.
+Verilen blok numarasıyla eşleşen bloktaki işlem sayısını döndürür.
 
 **Parametreler**
 
-1. `QUANTITY|TAG`- bir blok numarasının tam sayısı veya [varsayılan blok parametresi](/developers/docs/apis/json-rpc/#default-block)nde olduğu gibi `"earliest"`, `"latest"` veya `"pending"` dizesi.
+1. `QUANTITY|TAG`- tamsayı blok numarası veya `"latest"`,`earliest"`,`"pending"`,`"safe"` veya `"finalized"` dizesi, [default block parameter](/developers/docs/apis/json-rpc/#default-block) kısmına göz atabilirsiniz.
 
 ```js
 params: [
-  "0xe8", // 232
+  "0x13738ca", // 20396234
 ]
 ```
 
 **Dönüşler**
 
-`QUANTITY` - bu bloktaki işlem sayısının tam sayısı.
+`QUANTITY` - bu bloktaki işlem sayısının tamsayısıdır.
 
 **Örnek**
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["0xe8"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["0x13738ca"],"id":1}'
 // Result
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0xa" // 10
+  "result": "0x8b" // 139
 }
 ```
 
 ### eth_getUncleCountByBlockHash {#eth_getunclecountbyblockhash}
 
-Verilen blok karması ile eşleşen bir bloktan olan bir bloktaki amcaların sayısını döndürür.
+Verilen blok karması ile eşleşen bir bloktaki amcaların sayısını döndürür.
 
 **Parametreler**
 
 1. `VERİ`, 32 Bayt - bir bloğun karması
 
 ```js
-params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
+params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
 ```
 
 **Dönüşler**
 
-`QUANTITY` - bu bloktaki amcaların sayısının tam sayısı.
+`QUANTITY` - bu bloktaki amcaların sayısının tamsayısıdır.
 
 **Örnek**
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","params":["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"],"id":1}'
 // Result
 {
   "id":1,
@@ -733,7 +782,7 @@ Verilen blok numarası ile eşleşen bir bloktan olan bir bloktaki amcaların sa
 
 **Parametreler**
 
-1. `QUANTITY|TAG` - bir blok numarasının tam sayısı veya "latest", "earliest" veya "pending" metinlerinden biri, [varsayılan blok parametresine](/developers/docs/apis/json-rpc/#default-block) bakın
+1. `QUANTITY|TAG`- tamsayı blok numarası veya `"latest"`,`earliest"`,`"pending"`,`"safe"` veya `"finalized"` dizesi, [default block parameter](/developers/docs/apis/json-rpc/#default-block) kısmına göz atabilirsiniz
 
 ```js
 params: [
@@ -743,7 +792,7 @@ params: [
 
 **Dönüşler**
 
-`QUANTITY` - bu bloktaki amcaların sayısının tam sayısı.
+`QUANTITY` - bu bloktaki amcaların sayısının tamsayısıdır.
 
 **Örnek**
 
@@ -754,23 +803,23 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x1" // 1
+  "result": "0x0" // 0
 }
 ```
 
 ### eth_getCode {#eth_getcode}
 
-Belirli bir adresteki kodu döndürür.
+Belirli bir adreste kod döndürür.
 
 **Parametreler**
 
 1. `DATA`, 20 Bayt - adres
-2. `QUANTITY|TAG`- bir blok numarasının tam sayısı veya [varsayılan blok parametresi](/developers/docs/apis/json-rpc/#default-block)nde olduğu gibi `"earliest"`, `"latest"` veya `"pending"` dizesi
+2. `QUANTITY|TAG`- tamsayı blok numarası veya `"latest"`,`earliest"`,`"pending"`,`"safe"` veya `"finalized"` dizesi, [default block parameter](/developers/docs/apis/json-rpc/#default-block) kısmına göz atabilirsiniz
 
 ```js
 params: [
-  "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
-  "0x2", // 2
+  "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  "0x5daf3b", // 6139707
 ]
 ```
 
@@ -782,12 +831,12 @@ params: [
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b", "0x2"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", "0x5daf3b"],"id":1}'
 // Result
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x600160008035811a818181146012578301005b601b6001356025565b8060005260206000f25b600060078202905091905056"
+  "result": "0x6060604052600436106100af576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde03146100b9578063095ea7b31461014757806318160ddd146101a157806323b872dd146101ca5780632e1a7d4d14610243578063313ce5671461026657806370a082311461029557806395d89b41146102e2578063a9059cbb14610370578063d0e30db0146103ca578063dd62ed3e146103d4575b6100b7610440565b005b34156100c457600080fd5b6100cc6104dd565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561010c5780820151818401526020810190506100f1565b50505050905090810190601f1680156101395780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561015257600080fd5b610187600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061057b565b604051808215151515815260200191505060405180910390f35b34156101ac57600080fd5b6101b461066d565b6040518082815260200191505060405180910390f35b34156101d557600080fd5b610229600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061068c565b604051808215151515815260200191505060405180910390f35b341561024e57600080fd5b61026460048080359060200190919050506109d9565b005b341561027157600080fd5b610279610b05565b604051808260ff1660ff16815260200191505060405180910390f35b34156102a057600080fd5b6102cc600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610b18565b6040518082815260200191505060405180910390f35b34156102ed57600080fd5b6102f5610b30565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561033557808201518184015260208101905061031a565b50505050905090810190601f1680156103625780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561037b57600080fd5b6103b0600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091908035906020019091905050610bce565b604051808215151515815260200191505060405180910390f35b6103d2610440565b005b34156103df57600080fd5b61042a600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610be3565b6040518082815260200191505060405180910390f35b34600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055503373ffffffffffffffffffffffffffffffffffffffff167fe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c346040518082815260200191505060405180910390a2565b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105735780601f1061054857610100808354040283529160200191610573565b820191906000526020600020905b81548152906001019060200180831161055657829003601f168201915b505050505081565b600081600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925846040518082815260200191505060405180910390a36001905092915050565b60003073ffffffffffffffffffffffffffffffffffffffff1631905090565b600081600360008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054101515156106dc57600080fd5b3373ffffffffffffffffffffffffffffffffffffffff168473ffffffffffffffffffffffffffffffffffffffff16141580156107b457507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205414155b156108cf5781600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541015151561084457600080fd5b81600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055505b81600360008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254039250508190555081600360008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055508273ffffffffffffffffffffffffffffffffffffffff168473ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040518082815260200191505060405180910390a3600190509392505050565b80600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205410151515610a2757600080fd5b80600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055503373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f193505050501515610ab457600080fd5b3373ffffffffffffffffffffffffffffffffffffffff167f7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65826040518082815260200191505060405180910390a250565b600260009054906101000a900460ff1681565b60036020528060005260406000206000915090505481565b60018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610bc65780601f10610b9b57610100808354040283529160200191610bc6565b820191906000526020600020905b815481529060010190602001808311610ba957829003601f168201915b505050505081565b6000610bdb33848461068c565b905092915050565b60046020528160005260406000206020528060005260406000206000915091505054815600a165627a7a72305820deb4c2ccab3c2fdca32ab3f46728389c2fe2c165d5fafa07661e4e004f6c344a0029"
 }
 ```
 
@@ -795,7 +844,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xa94f53
 
 İmza yöntemi, Ethereum'a özel bir imzayı şu şekilde hesaplar: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
 
-Mesaja bir önek ekleyerek hesaplanan imzanın Ethereum'a özel bir imza olarak tanınmasını sağlar. Bu, kötü niyetli bir dapp'ın keyfi verileri imzalayabildiği (ör. işlem) ve imzayı kurbanın kimliğine bürünmek için kullandığı durumlarda kötüye kullanımı önler.
+Mesaja bir önek ekleyerek hesaplanan imzanın Ethereum'a özel bir imza olarak tanınmasını sağlar. Bu, kötü niyetli bir merkeziyetsiz uygulamanın keyfi verileri imzalayabildiği (ör. işlem) ve imzayı kurbanın kimliğine bürünmek için kullandığı durumlarda kötüye kullanımı önler.
 
 Not: İmzalanacak adresin kilidi açık olmalıdır.
 
@@ -829,17 +878,18 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d37
 
 1. `Object` - İşlem nesnesi
 
+- `type`:
 - `from`: `DATA`, 20 Bayt - İşlemin gönderildiği adres.
 - `to`: `DATA`, 20 Bayt - (yeni sözleşme oluştururken isteğe bağlı) İşlemin yönlendirildiği adres.
-- `gas`: `QUANTITY` - (isteğe bağlı, varsayılan: 90000) İşlemin yürütülmesi için sağlanan gazın tamsayı. Kullanılmayan gazı geri verecektir.
-- `gasPrice`: `QUANTITY` - (isteğe bağlı, varsayılan: Belirlenecek) Wei'de her ücretli gaz için kullanılan gasPrice'ın tam sayısı.
-- `value`: `QUANTITY` - (isteğe bağlı) Wei cinsinden bu işlemle gönderilen değerin tam sayısı.
+- `gas`: `QUANTITY` - (isteğe bağlı, varsayılan: 90000) İşlemin yürütülmesi için sağlanan gazın tam sayısı. Kullanılmayan gazı geri verecektir.
+- `gasPrice`: `QUANTITY` - (isteğe bağlı, varsayılan: Belirlenecek) Wei'de her ücretli gaz için kullanılan gasPrice'ın tamsayısıdır.
+- `value`: `QUANTITY` - (isteğe bağlı) Wei cinsinden bu işlemle gönderilen değerin tamsayısıdır.
 - `data`: `DATA` - Bir sözleşmenin derlenmiş kodu VEYA çağrılan yöntem imzasının ve kodlanmış parametrelerin karması.
-- `nonce`: `QUANTITY` - (isteğe bağlı) nonce tamsayı. Bu, aynı nonce'yi kullanan kendi bekleyen işlemlerinizin üzerine yazmanıza izin verir.
+- `nonce`: `QUANTITY` - (isteğe bağlı) nonce tam sayısı. Bu, aynı nonce'yi kullanan kendi bekleyen işlemlerinizin üzerine yazmanıza izin verir.
 
 **Dönüşler**
 
-`DATA`, İmzalı işlem nesnesi.
+`DATA`, Belirtilen hesap tarafından imzalanan RLP kodlu işlem nesnesidir.
 
 **Örnek**
 
@@ -856,7 +906,7 @@ curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","
 
 ### eth_sendTransaction {#eth_sendtransaction}
 
-Veri alanı kod içeriyorsa, yeni mesaj çağrısı işlemi veya sözleşme oluşturma gerçekleşir.
+Veri alanı kod içeriyorsa, yeni bir mesaj çağrı işlemi veya sözleşme oluşturma işlemi oluşturur ve `from` alanında belirtilen hesabı kullanarak imzalar.
 
 **Parametreler**
 
@@ -867,7 +917,7 @@ Veri alanı kod içeriyorsa, yeni mesaj çağrısı işlemi veya sözleşme olu�
 - `gas`: `QUANTITY` - (isteğe bağlı, varsayılan: 90000) İşlemin yürütülmesi için sağlanan gazın tam sayısı. Kullanılmayan gazı geri verecektir.
 - `gasPrice`: `QUANTITY` - (isteğe bağlı, varsayılan: Belirlenecek) Ücretli her gaz için kullanılan gasPrice'ın tam sayısı.
 - `değer`: `QUANTITY` - (isteğe bağlı) Bu işlemle gönderilen değerin tam sayısı.
-- `data`: `DATA` - Bir sözleşmenin derlenmiş kodu VEYA çağrılan yöntem imzasının ve kodlanmış parametrelerin karması.
+- `input`: `DATA` - Bir sözleşmenin derlenmiş kodu VEYA çağrılan yöntem imzasının ve kodlanmış parametrelerin karmasıdır.
 - `nonce`: `QUANTITY` - (isteğe bağlı) nonce tam sayısı. Bu, aynı nonce'yi kullanan kendi bekleyen işlemlerinizin üzerine yazmanıza izin verir.
 
 ```js
@@ -878,16 +928,17 @@ params: [
     gas: "0x76c0", // 30400
     gasPrice: "0x9184e72a000", // 10000000000000
     value: "0x9184e72a", // 2441406250
-    data: "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675",
+    input:
+      "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675",
   },
 ]
 ```
 
 **Dönüşler**
 
-`VERİ`, 32 Bayt - işlem karması veya işlem henüz mevcut değilse sıfır karma.
+`DATA`, 32 Bayt - işlem karması veya işlem henüz mevcut değilse sıfır karma.
 
-Bir sözleşme oluşturduğunuzda, işlem çıkarıldıktan sonra sözleşme adresini almak için [eth_getTransactionReceipt](#eth_gettransactionreceipt) kullanın.
+Bir sözleşme oluşturduğunuzda, işlem bir blokta önerildikten sonra sözleşme adresini almak için [eth_getTransactionReceipt](#eth_gettransactionreceipt) öğesini kullanın.
 
 **Örnek**
 
@@ -918,9 +969,9 @@ params: [
 
 **Dönüşler**
 
-`VERİ`, 32 Bayt - işlem karması veya işlem henüz mevcut değilse sıfır karma.
+`DATA`, 32 Bayt - işlem karması veya işlem henüz mevcut değilse sıfır karma.
 
-Bir sözleşme oluşturduğunuzda, işlem çıkarıldıktan sonra sözleşme adresini almak için [eth_getTransactionReceipt](#eth_gettransactionreceipt) kullanın.
+Bir sözleşme oluşturduğunuzda, işlem bir blokta önerildikten sonra sözleşme adresini almak için [eth_getTransactionReceipt](#eth_gettransactionreceipt) öğesini kullanın.
 
 **Örnek**
 
@@ -937,7 +988,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 
 ### eth_call {#eth_call}
 
-Blok zincirde bir işlem oluşturmadan hemen yeni bir mesaj çağrısı yürütür.
+Blokzincirde bir işlem oluşturmadan hemen yeni bir mesaj çağrısı yürütür. Genellikle yalnızca okuma işlemi yapan akıllı sözleşme fonksiyonlarını çalıştırmak için kullanılır, örneğin bir ERC-20 sözleşmesi için `balanceOf` fonksiyonu.
 
 **Parametreler**
 
@@ -948,13 +999,13 @@ Blok zincirde bir işlem oluşturmadan hemen yeni bir mesaj çağrısı yürüt�
 - `gas`: `QUANTITY` - (isteğe bağlı) İşlemin yürütülmesi için sağlanan gazın tam sayısı. eth_call sıfır gaz tüketir, ancak bazı uygulamalarda bu parametreye ihtiyaç duyulabilir.
 - `gasPrice`: `QUANTITY` - (isteğe bağlı) Ücretli her gaz için kullanılan gasPrice'ın tam sayısı
 - `değer`: `QUANTITY` - (isteğe bağlı) Bu işlemle gönderilen değerin tam sayısı
-- `data`: `DATA` - (isteğe bağlı) Yöntem imzasının ve kodlanmış parametrelerin karma değeri. Ayrıntılar için [Solidity belgelerindeki Ethereum Sözleşmesi ABI'sına bakın](https://docs.soliditylang.org/en/latest/abi-spec.html)
+- `input`: `DATA` - (isteğe bağlı) Yöntem imzasının ve kodlanmış parametrelerin karmasıdır. Ayrıntılar için [Solidity dokümanlarındaki Ethereum Sözleşmesi ABI'sine bakın](https://docs.soliditylang.org/en/latest/abi-spec.html).
 
-2. `QUANTITY|TAG`- bir blok numarasının tam sayısı veya [varsayılan blok parametresi](/developers/docs/apis/json-rpc/#default-block)nde olduğu gibi `"earliest"`, `"latest"` veya `"pending"` dizesi
+2. `QUANTITY|TAG`- tamsayı blok numarası veya `"latest"`,`earliest"`,`"pending"`,`"safe"` veya `"finalized"` dizesi, [default block parameter](/developers/docs/apis/json-rpc/#default-block) kısmına göz atabilirsiniz
 
 **Dönüşler**
 
-`DATA` - yürütülen sözleşmenin dönüş değeri.
+`DATA` - yürütülen sözleşmenin dönüş değeridir.
 
 **Örnek**
 
@@ -971,15 +1022,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 
 ### eth_estimateGas {#eth_estimategas}
 
-İşlemin tamamlanmasına izin vermek için ne kadar gazın gerekli olduğuna dair bir tahmin oluşturur ve döndürür. İşlem blok zincire eklenmez. Tahminin, ESM mekaniği ve düğüm performansı dahil olmak üzere çeşitli nedenlerle işlem tarafından fiilen kullanılan gaz miktarından önemli ölçüde daha fazla olabileceğini unutmayın.
+İşlemin tamamlanmasına izin vermek için ne kadar gazın gerekli olduğuna dair bir tahmin oluşturur ve döndürür. İşlem, blokzincire eklenmez. Tahminin, ESM mekaniği ve düğüm performansı dahil olmak üzere çeşitli nedenlerle işlem tarafından fiilen kullanılan gaz miktarından önemli ölçüde daha fazla olabileceğini unutmayın.
 
 **Parametreler**
 
-[eth_call](#eth_call) parameterlerine bakın, tüm seçeneklerin isteğe bağlı olması hariç. Gaz limiti belirtilmemişse geth, bekleyen bloktan gelen blok gaz limitini üst sınır olarak kullanır. Sonuç olarak, gaz miktarı bekleyen blok gaz limitinden daha yüksek olduğunda, döndürülen tahmin çağrıyı/işlemi gerçekleştirmek için yeterli olmayabilir.
+[eth_call](#eth_call) parametrelerine bakın, tüm seçeneklerin isteğe bağlı olması hariç. Gaz limiti belirtilmemişse geth, bekleyen bloktan gelen blok gaz limitini üst sınır olarak kullanır. Sonuç olarak, gaz miktarı bekleyen blok gaz limitinden daha yüksek olduğunda, döndürülen tahmin çağrıyı/işlemi gerçekleştirmek için yeterli olmayabilir.
 
 **Dönüşler**
 
-`QUANTITY` - kullanılan gaz miktarı.
+`QUANTITY` - kullanılan gaz miktarıdır.
 
 **Örnek**
 
@@ -1073,11 +1124,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 
 ### eth_getBlockByNumber {#eth_getblockbynumber}
 
-Blok numarasına göre bir blok hakkında bilgi verir.
+Blok numarasına göre bir blok hakkında bilgi döndürür.
 
 **Parametreler**
 
-1. `QUANTITY|TAG`- bir blok numarasının tam sayısı veya [varsayılan blok parametresi](/developers/docs/apis/json-rpc/#default-block)nde olduğu gibi `"earliest"`, `"latest"` veya `"pending"` dizesi.
+1. `QUANTITY|TAG`- tamsayı blok numarası veya `"latest"`,`earliest"`,`"pending"`,`"safe"` veya `"finalized"` dizesi, [default block parameter](/developers/docs/apis/json-rpc/#default-block) kısmına göz atabilirsiniz.
 2. `Boolean` - `true` ise tam işlem nesnelerini döndürür, `false` ise yalnızca işlemlerin karmalarını döndürür.
 
 ```js
@@ -1168,29 +1219,29 @@ Blok karması ve işlem dizini konumuna göre bir işlem hakkındaki bilgileri d
 
 ```js
 params: [
-  "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331",
+  "0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
   "0x0", // 0
 ]
 ```
 
-**İadeler** Bkz. [eth_getTransactionByHash](#eth_gettransactionbyhash)
+**Dönüşler** Bkz. [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
 **Örnek**
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b", "0x0"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
 Sonuç bkz. [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
 ### eth_getTransactionByBlockNumberAndIndex {#eth_gettransactionbyblocknumberandindex}
 
-Blok numarasına ve işlem dizini konumuna göre bir işlem hakkında bilgi verir.
+Blok numarasına ve işlem dizini konumuna göre bir işlem hakkında bilgi döndürür.
 
 **Parametreler**
 
-1. `QUANTITY|TAG` - bir blok numarası veya `"earliest"`, `"latest"` veya `"pending"` dizesi, [varsayılan blok parametresinde](/developers/docs/apis/json-rpc/#default-block) olduğu gibi.
+1. `QUANTITY|TAG`- tamsayı blok numarası veya `"earliest"`,`"latest""`,`"pending"`,`"safe"` veya `"finalized"` dizesi, [default block parameter](/developers/docs/apis/json-rpc/#default-block) kısmına göz atabilirsiniz.
 2. `QUANTITY` - işlem endeks pozisyonu.
 
 ```js
@@ -1200,7 +1251,7 @@ params: [
 ]
 ```
 
-**İadeler** Bkz. [eth_getTransactionByHash](#eth_gettransactionbyhash)
+**Dönüşler** Bkz. [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
 **Örnek**
 
@@ -1215,7 +1266,7 @@ Sonuç bkz. [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
 İşlem karmasına göre bir işlemin makbuzunu döndürür.
 
-**Not** Makbuzun bekleyen işlemler için mevcut olmadığına.
+**Not** Makbuzun bekleyen işlemler için mevcut olmadığına dikkat edin.
 
 **Parametreler**
 
@@ -1225,7 +1276,7 @@ Sonuç bkz. [eth_getTransactionByHash](#eth_gettransactionbyhash)
 params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 ```
 
-**İadeler** `Object` - Bir işlem makbuzu nesnesi veya makbuz bulunamadığında `null`:
+**Dönüşler** `Object` - Bir işlem makbuzu nesnesi veya makbuz bulunamadığında `null`:
 
 - `transactionHash`: `DATA`, 32 Bayt - işlemin özeti.
 - `transactionIndex`: `QUANTITY` - bloktaki işlem endeksi pozisyonunun tam sayısı.
@@ -1280,7 +1331,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 
 ### eth_getUncleByBlockHashAndIndex {#eth_getunclebyblockhashandindex}
 
-Karma ve amca dizin konumuna göre bir blokun amcası hakkında bilgi verir.
+Karma ve amca dizin konumuna göre bir bloğun amcası hakkında bilgi verir.
 
 **Parametreler**
 
@@ -1289,7 +1340,7 @@ Karma ve amca dizin konumuna göre bir blokun amcası hakkında bilgi verir.
 
 ```js
 params: [
-  "0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b",
+  "0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
   "0x0", // 0
 ]
 ```
@@ -1300,20 +1351,20 @@ params: [
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b", "0x0"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
 Sonuç bkz. [eth_getBlockByHash](#eth_getblockbyhash)
 
-**Not**: Bir amca, bireysel işlemleri içermez.
+**Not**: Bir amca, bireysel işlemler içermez.
 
 ### eth_getUncleByBlockNumberAndIndex {#eth_getunclebyblocknumberandindex}
 
-Sayıya ve amca dizin konumuna göre bir blokun amcası hakkında bilgi verir.
+Sayıya ve amca dizin konumuna göre bir bloğun amcası hakkında bilgi verir.
 
 **Parametreler**
 
-1. `QUANTITY|TAG` - bir blok numarası veya `"earliest"`, `"latest"` veya `"pending"` dizesi, [varsayılan blok parametresinde](/developers/docs/apis/json-rpc/#default-block) olduğu gibi.
+1. `QUANTITY|TAG`- tamsayı blok numarası veya `"earliest"`,`"latest""`,`"pending"`,`"safe"`, `"finalized"` dizesi, [default block parameter](/developers/docs/apis/json-rpc/#default-block) kısmına göz atabilirsiniz.
 2. `QUANTITY` - amcanın endeks pozisyonu.
 
 ```js
@@ -1325,7 +1376,7 @@ params: [
 
 **İadeler** Bkz. [eth_getBlockByHash](#eth_getblockbyhash)
 
-**Not**: Bir amca, bireysel işlemleri içermez.
+**Not**: Bir amca, bireysel işlemler içermez.
 
 **Örnek**
 
@@ -1335,142 +1386,6 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndInde
 ```
 
 Sonuç bkz. [eth_getBlockByHash](#eth_getblockbyhash)
-
-### eth_getCompilers {#eth_getcompilers}
-
-İstemcideki kullanılabilir derleyicilerin bir listesini döndürür.
-
-**Parametreler** Hiçbiri
-
-**İadeler** `Array` - Kullanılabilir derleyiciler dizisi.
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCompilers","params":[],"id":1}'
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": ["solidity", "lll", "serpent"]
-}
-```
-
-### eth_compileSolidity {#eth_compile_solidity}
-
-Derlenmiş Solidity kodunu döndürür.
-
-**Parametreler**
-
-1. `String` - Kaynak kodu.
-
-```js
-params: [
-  "contract test { function multiply(uint a) returns(uint d) {   return a * 7;   } }",
-]
-```
-
-**İadeler** `DATA` - Derlenmiş kaynak kodu.
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_compileSolidity","params":["contract test { function multiply(uint a) returns(uint d) {   return a * 7;   } }"],"id":1}'
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": {
-      "code": "0x605880600c6000396000f3006000357c010000000000000000000000000000000000000000000000000000000090048063c6888fa114602e57005b603d6004803590602001506047565b8060005260206000f35b60006007820290506053565b91905056",
-      "info": {
-        "source": "contract test {\n   function multiply(uint a) constant returns(uint d) {\n       return a * 7;\n   }\n}\n",
-        "language": "Solidity",
-        "languageVersion": "0",
-        "compilerVersion": "0.9.19",
-        "abiDefinition": [
-          {
-            "constant": true,
-            "inputs": [
-              {
-                "name": "a",
-                "type": "uint256"
-              }
-            ],
-            "name": "multiply",
-            "outputs": [
-              {
-                "name": "d",
-                "type": "uint256"
-              }
-            ],
-            "type": "function"
-          }
-        ],
-        "userDoc": {
-          "methods": {}
-        },
-        "developerDoc": {
-          "methods": {}
-        }
-      }
-}
-```
-
-### eth_compileLLL {#eth_compileLLL}
-
-Derlenmiş LLL kodunu döndürür.
-
-**Parametreler**
-
-1. `Dize` - Kaynak kodu.
-
-```js
-params: ["(returnlll (suicide (caller)))"]
-```
-
-**İadeler** `DATA` - Derlenmiş kaynak kodu.
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_compileLLL","params":["(returnlll (suicide (caller)))"],"id":1}'
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": "0x603880600c6000396000f3006001600060e060020a600035048063c6888fa114601857005b6021600435602b565b8060005260206000f35b600081600702905091905056" // the compiled source code
-}
-```
-
-### eth_compileSerpent {#eth_compileserpent}
-
-Derlenmiş serpent kodunu döndürür.
-
-**Parametreler**
-
-1. `Dize` - Kaynak kodu.
-
-```js
-params: ["/* some serpent */"]
-```
-
-**İadeler** `DATA` - Derlenmiş kaynak kodu.
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_compileSerpent","params":["/* some serpent */"],"id":1}'
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": "0x603880600c6000396000f3006001600060e060020a600035048063c6888fa114601857005b6021600435602b565b8060005260206000f35b600081600702905091905056" // the compiled source code
-}
-```
 
 ### eth_newFilter {#eth_newfilter}
 
@@ -1487,8 +1402,8 @@ Durum değiştiğinde (günlükler) bildirimde bulunmak için filtre seçenekler
 
 1. `Object` - Filtre seçenekleri:
 
-- `fromBlock`: `QUANTITY|TAG` - (isteğe bağlı, varsayılan: `"latest"`) Tam sayı blok numarası veya `"latest"` son çıkarılan blok için veya henüz çıkarılmamış işlemler için `"pending"`, `"earliest"`.
-- `toBlock`: `QUANTITY|TAG` - (isteğe bağlı, varsayılan: `"latest"`) Tam sayı blok numarası veya `"latest"` son çıkarılan blok için veya henüz çıkarılmamış işlemler için `"pending"`, `"earliest"`.
+- `fromBlock`: `QUANTITY|TAG` - (isteğe bağlı, default: `"latest"`) Tamsayı blok numarası veya son önerilen blok için `"latest"`, en son güvenli blok için `"safe"`, en son sonlandırılmış blok için `"finalized"`, henüz bir blokta olmayan işlemler için `"pending"` ve `"earliest"`.
+- `toBlock`: `QUANTITY|TAG` - (isteğe bağlı, default: `"latest"`) Tamsayı blok numarası veya son önerilen blok için `"latest"`, en son güvenli blok için `"safe"`, en son sonlandırılmış blok için `"finalized"`, henüz bir blokta olmayan işlemler için `"pending"` ve `"earliest"`.
 - `address`: `DATA|Array`, 20 Bayt - (isteğe bağlı) Sözleşme adresi veya günlüklerin kaynaklanması gereken adreslerin listesi.
 - `topics`: `Array of DATA`, - (isteğe bağlı) 32 Baytlık dizi `DATA` konu. Konular sıraya bağlıdır. Her konu, "veya" seçenekleriyle birlikte bir VERİ dizisi de olabilir.
 
@@ -1510,7 +1425,7 @@ params: [
 ]
 ```
 
-**İadeler** `QUANTITY` - Bir filtre kimliği.
+**Dönüşler** `QUANTITY` - Bir filtre kimliğidir.
 
 **Örnek**
 
@@ -1531,7 +1446,7 @@ Yeni bir blok geldiğinde bildirimde bulunmak için düğümde bir filtre oluşt
 
 **Parametreler** Hiçbiri
 
-**İadeler** `QUANTITY` - Bir filtre kimliği.
+**Dönüşler** `QUANTITY` - Bir filtre kimliğidir.
 
 **Örnek**
 
@@ -1552,7 +1467,7 @@ Yeni bekleyen işlemler geldiğinde bildirimde bulunmak için düğümde bir fil
 
 **Parametreler** Hiçbiri
 
-**İadeler** `QUANTITY` - Bir filtre kimliği.
+**Dönüşler** `QUANTITY` - Bir filtre kimliğidir.
 
 **Örnek**
 
@@ -1569,11 +1484,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter"
 
 ### eth_uninstallFilter {#eth_uninstallfilter}
 
-Verilen kimliğe sahip bir filtreyi kaldırır. Saate artık ihtiyaç duyulmadığında her zaman çağrılmalıdır. Ek olarak Filtreler, belirli bir süre için [eth_getFilterChanges](#eth_getfilterchanges) ile istenmediğinde zaman aşımına uğrar.
+Verilen kimliğe sahip bir filtreyi kaldırır. Saate artık ihtiyaç duyulmadığında daima çağrılmalıdır. Ek olarak Filtreler, belirli bir süre için [eth_getFilterChanges](#eth_getfilterchanges) ile istenmediğinde zaman aşımına uğrar.
 
 **Parametreler**
 
-1. `QUANTITY` - Filtre kimliği.
+1. `QUANTITY` - Filtre kimliğidir.
 
 ```js
 params: [
@@ -1581,7 +1496,7 @@ params: [
 ]
 ```
 
-**İadeler** `Boolean` - Filtre başarıyla kaldırıldıysa `true`, aksi takdirde `false`.
+**Dönüşler** `Boolean` - Filtre başarıyla kaldırıldıysa `true`, aksi takdirde `false`.
 
 **Örnek**
 
@@ -1598,11 +1513,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["
 
 ### eth_getFilterChanges {#eth_getfilterchanges}
 
-Son yoklamadan bu yana oluşan günlüklerin bir dizisini döndüren bir filtre için yoklama yöntemi.
+Son yoklamadan bu yana oluşan günlüklerin bir dizisini döndüren bir filtre için yoklama yöntemidir.
 
 **Parametreler**
 
-1. `QUANTITY` - the filtre kimliği.
+1. `QUANTITY` - filtre kimliğidir.
 
 ```js
 params: [
@@ -1610,7 +1525,7 @@ params: [
 ]
 ```
 
-**İadeler** `Array` - Günlük nesneleri dizisi veya son anketten bu yana hiçbir şey değişmediyse boş bir dizi.
+**Dönüşler** `Array` - Günlük nesneleri dizisi veya son anketten bu yana hiçbir şey değişmediyse boş bir dizi.
 
 - `eth_newBlockFilter` ile oluşturulan filtreler için dönüş, blok karmalarıdır (`DATA`, 32 Bayt), ör. `["0x345464563453..."]`.
 - `eth_newPendingTransactionFilter` ile oluşturulan filtreler için dönüş, işlem karmalarıdır (`DATA`, 32 Bayt), ör. `["0x6345343454645..."]`.
@@ -1622,7 +1537,7 @@ params: [
   - `blockHash`: `DATA`, 32 Bayt - bu günlüğün bulunduğu blokun karması. `null` beklediğinde. `null` Bekleyen kayıt defteri olduğunda.
   - `blockNumber`: `QUANTITY` - bu günlüğün bulunduğu blok numarası. `null` beklediğinde. `null` Bekleyen kayıt defteri olduğunda.
   - `address`: `DATA`, 20 Bayt - bu günlüğün kaynaklandığı adres.
-  - `data`: `DATA` - günlüğün bir veya daha fazla 32 Bayt dizine eklenmemiş bağımsız değişkenini içerir.
+  - `data`: `DATA` - günlüğün sıfır veya daha fazla sayıda 32 Baytlık dizine eklenmemiş bağımsız değişkenlerini içerir.
   - `topics`: `Array of DATA` - 0 ila 4 arası dizi 32 Bayt `DATA` dizine alınmış günlük bağımsız değişkenleri. (_solidity_'de: İlk konu, olayın imzasının _karma değeridir_ (ör. `Deposit(address,bytes32,uint256)`), ancak olayı `anonymous` belirteci ile bildirmeniz dışında.)
 - **Örnek**
 
@@ -1654,7 +1569,7 @@ Verilen kimliğe sahip filtreyle eşleşen tüm günlüklerin bir dizisini dönd
 
 **Parametreler**
 
-1. `QUANTITY` - Filtre kimliği.
+1. `QUANTITY` - Filtre kimliğidir.
 
 ```js
 params: [
@@ -1662,7 +1577,7 @@ params: [
 ]
 ```
 
-**İadeler** Bkz. [eth_getFilterChanges](#eth_getfilterchanges)
+**Dönüşler** Bkz. [eth_getFilterChanges](#eth_getfilterchanges)
 
 **Örnek**
 
@@ -1679,10 +1594,10 @@ Belirli bir filtre nesnesiyle eşleşen tüm günlüklerin bir dizisini döndür
 
 **Parametreler**
 
-1. `Nesne` - Filtre seçenekleri:
+1. `Object` - Filtre seçenekleri:
 
-- `fromBlock`: `QUANTITY|TAG` - (isteğe bağlı, varsayılan: `"latest"`) Tam sayı blok numarası veya `"latest"` son çıkarılan blok için veya henüz çıkarılmamış işlemler için `"pending"`, `"earliest"`.
-- `toBlock`: `QUANTITY|TAG` - (isteğe bağlı, varsayılan: `"latest"`) Tam sayı blok numarası veya `"latest"` son çıkarılan blok için veya henüz çıkarılmamış işlemler için `"pending"`, `"earliest"`.
+- `fromBlock`: `QUANTITY|TAG` - (isteğe bağlı, default: `"latest"`) Tamsayı blok numarası veya son önerilen blok için `"latest"`, en son güvenli blok için `"safe"`, en son sonlandırılmış blok için `"finalized"`, henüz bir blokta olmayan işlemler için `"pending"` ve `"earliest"`.
+- `toBlock`: `QUANTITY|TAG` - (isteğe bağlı, default: `"latest"`) Tamsayı blok numarası veya son önerilen blok için `"latest"`, en son güvenli blok için `"safe"`, en son sonlandırılmış blok için `"finalized"`, henüz bir blokta olmayan işlemler için `"pending"` ve `"earliest"`.
 - `address`: `DATA|Array`, 20 Bayt - (isteğe bağlı) Sözleşme adresi veya günlüklerin kaynaklanması gereken adreslerin listesi.
 - `topics`: `Array of DATA`, - (isteğe bağlı) 32 Baytlık dizi `DATA` konu. Konular sıraya bağlıdır. Her konu, "veya" seçenekleriyle birlikte bir VERİ dizisi de olabilir.
 - `blockhash`: `DATA`, 32 Bayt - (isteğe bağlı, **gelecek**) EIP-234 eklenmesiyle, `blockHash`, 32 baytlık `blockHash` ile tek bloka döndürülen günlükleri kısıtlayan yeni bir filtre seçeneği olacaktır. `blockHash` kullanımı, `fromBlock` ile eş değerdir = `toBlock` = `blockHash` karmalı blok numarası. Filtre ölçütlerinde `blockHash` varsa, ne `fromBlock` ne de `toBlock`'a izin verilmez.
@@ -1697,7 +1612,7 @@ params: [
 ]
 ```
 
-**İadeler** Bkz. [eth_getFilterChanges](#eth_getfilterchanges)
+**Dönüşler** Bkz. [eth_getFilterChanges](#eth_getfilterchanges)
 
 **Örnek**
 
@@ -1708,542 +1623,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics"
 
 Sonuç, bkz. [eth_getFilterChanges](#eth_getfilterchanges)
 
-### eth_getWork {#eth_getwork}
-
-Geçerli blokun, seedHash'in ve karşılanacak sınır koşulunun ("hedef") karmasını döndürür.
-
-**Parametreler** Hiçbiri
-
-**İadeler** `Array` - Aşağıdaki özelliklere sahip dizi:
-
-1. `DATA`, 32 Bayt - mevcut blok başlığı iş ispatı karması
-2. `DATA`, 32 Bayt - DAG için kullanılan tohum şifre.
-3. `DATA`, 32 Bayt - sınır durum ("hedef"), 2^256/zorluk.
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getWork","params":[],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": [
-      "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
-      "0x5EED00000000000000000000000000005EED0000000000000000000000000000",
-      "0xd1ff1c01710000000000000000000000d1ff1c01710000000000000000000000"
-    ]
-}
-```
-
-### eth_submitWork {#eth_submitwork}
-
-İş ispatı çözümü göndermek için kullanılır.
-
-**Parametreler**
-
-1. `DATA`, 8 Bayt - Bulunan tek seferlik sayı (64 bit)
-2. `DATA`, 32 Bayt - Başlığın iş ispatı karması (256 bit)
-3. `DATA`, 32 Bayt - Karışım özeti (256 bit)
-
-```js
-params: [
-  "0x0000000000000001",
-  "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
-  "0xD1FE5700000000000000000000000000D1FE5700000000000000000000000000",
-]
-```
-
-**İadeler** `Boolean` - sağlanan çözüm geçerliyse `true`, aksi takdirde `false` değerini döndürür.
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0", "method":"eth_submitWork", "params":["0x0000000000000001", "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef", "0xD1GE5700000000000000000000000000D1GE5700000000000000000000000000"],"id":73}'
-// Result
-{
-  "id":73,
-  "jsonrpc":"2.0",
-  "result": true
-}
-```
-
-### eth_submitHashrate {#eth_submithashrate}
-
-Madencilik karma oranı göndermek için kullanılır.
-
-**Parametreler**
-
-1. `Hashrate`, karma hızının on altılık metin (32 bit) olarak bir temsili
-2. `ID`, Metin - istemciyi tanımlayan rastgele on altılık (32 bit) bir kimlik
-
-```js
-params: [
-  "0x0000000000000000000000000000000000000000000000000000000000500000",
-  "0x59daa26581d0acd1fce254fb7e85952f4c09d0915afd33d3886cd914bc7d283c",
-]
-```
-
-**İadeler** `Boolean` - Gönderim başarıyla tamamlandıysa `true`, aksi takdirde `false` değerini döndürür.
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0", "method":"eth_submitHashrate", "params":["0x0000000000000000000000000000000000000000000000000000000000500000", "0x59daa26581d0acd1fce254fb7e85952f4c09d0915afd33d3886cd914bc7d283c"],"id":73}'
-// Result
-{
-  "id":73,
-  "jsonrpc":"2.0",
-  "result": true
-}
-```
-
-### db_putString (kullanımdan kalkmış) {#db_putstring}
-
-Yerel veritabanında bir dize depolar.
-
-**Not** bu işlev kullanımdan kaldırılmıştır.
-
-**Parametreler**
-
-1. `String` - Veritabanı adı.
-2. `String` - Anahtar adı.
-3. `String` - Depolanacak metin.
-
-```js
-params: ["testDB", "myKey", "myString"]
-```
-
-**İadeler** `Boolean` - değer depolanmışsa `true` değerini, değilse `false` değerini döndürür.
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"db_putString","params":["testDB","myKey","myString"],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": true
-}
-```
-
-### db_getString (kullanımdan kalkmış) {#db_getstring}
-
-Yerel veritabanından dize döndürür. **Not** bu işlev kullanımdan kaldırılmıştır.
-
-**Parametreler**
-
-1. `Dize` - Veritabanı adı.
-2. `Dize` - Anahtar adı.
-
-```js
-params: ["testDB", "myKey"]
-```
-
-**İadeler** `Dize` - Önceden saklanan dize.
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"db_getString","params":["testDB","myKey"],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": "myString"
-}
-```
-
-### db_putHex (kullanımdan kalkmış) {#db_puthex}
-
-İkili verileri yerel veritabanında depolar. **Not** bu işlev kullanımdan kaldırılmıştır.
-
-**Parametreler**
-
-1. `Dize` - Veritabanı adı.
-2. `Dize` - Anahtar adı.
-3. `DATA` - Depolanacak veri.
-
-```js
-params: ["testDB", "myKey", "0x68656c6c6f20776f726c64"]
-```
-
-**İadeler** `Boolean` - değer depolanmışsa `true` değerini, değilse `false` değerini döndürür.
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"db_putHex","params":["testDB","myKey","0x68656c6c6f20776f726c64"],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": true
-}
-```
-
-### db_getHex (kullanımdan kalkmış) {#db_gethex}
-
-Yerel veritabanından ikili verileri döndürür. **Not** bu işlev kullanımdan kaldırılmıştır.
-
-**Parametreler**
-
-1. `Dize` - Veritabanı adı.
-2. `Dize` - Anahtar adı.
-
-```js
-params: ["testDB", "myKey"]
-```
-
-**İadeler** `DATA` - Daha önce depolanan veriler.
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"db_getHex","params":["testDB","myKey"],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": "0x68656c6c6f20776f726c64"
-}
-```
-
-### shh_version (kullanımdan kalkmış) {#shh_post}
-
-Geçerli fısıltı protokolü sürümünü döndürür.
-
-**Not** bu işlev kullanımdan kaldırılmıştır.
-
-**Parametreler** Hiçbiri
-
-**İadeler** `String` - Geçerli fısıltı protokolü sürümü
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_version","params":[],"id":67}'
-// Result
-{
-  "id":67,
-  "jsonrpc": "2.0",
-  "result": "2"
-}
-```
-
-### shh_post (kullanımdan kalkmış) {#shh_version}
-
-Fısıltı mesajı gönderir.
-
-**Not** bu işlev kullanımdan kaldırılmıştır.
-
-**Parametreler**
-
-1. `Object` - Fısıltı gönderi nesnesi:
-
-- `from`: `DATA`, 60 Bayt - (isteğe bağlı) Gönderenin kimliği.
-- `to`: `DATA`, 60 Bayt - (isteğe bağlı) Alıcının kimliği. Mevcut olduğunda fısıltı mesajını şifreler, böylece sadece alıcı şifreyi çözebilir.
-- `topics`: `Array of DATA` - Alıcının mesajları tanımlaması için `DATA` konu dizisi.
-- `payload`: `DATA` - Mesajın yükü.
-- `priority`: `QUANTITY` - Bir aralıktaki önceliğin tam sayısı ... (?).
-- `ttl`: `QUANTITY` - saniye cinsinden yaşanacak zamanın tam sayısı.
-
-```js
-params: [
-  {
-    from: "0x04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a03e245533f97284d442460f2998cd41858798ddfd4d661997d3940272b717b1",
-    to: "0x3e245533f97284d442460f2998cd41858798ddf04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a0d4d661997d3940272b717b1",
-    topics: [
-      "0x776869737065722d636861742d636c69656e74",
-      "0x4d5a695276454c39425154466b61693532",
-    ],
-    payload: "0x7b2274797065223a226d6",
-    priority: "0x64",
-    ttl: "0x64",
-  },
-]
-```
-
-**İadeler** `Boolean` - İleti gönderildiyse `true`, değilse `false` değerini döndürür.
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_post","params":[{"from":"0xc931d93e97ab07fe42d923478ba2465f2..","topics": ["0x68656c6c6f20776f726c64"],"payload":"0x68656c6c6f20776f726c64","ttl":0x64,"priority":0x64}],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": true
-}
-```
-
-### shh_newIdentity (kullanımdan kalkmış){#shh_newidentity}
-
-İstemcide yeni fısıltı kimliği oluşturur.
-
-**Not** bu işlev kullanımdan kaldırılmıştır.
-
-**Parametreler** Hiçbiri
-
-**İadeler** `DATA`, 60 Bayt - yeni kimliğin adresi.
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_newIdentity","params":[],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": "0xc931d93e97ab07fe42d923478ba2465f283f440fd6cabea4dd7a2c807108f651b7135d1d6ca9007d5b68aa497e4619ac10aa3b27726e1863c1fd9b570d99bbaf"
-}
-```
-
-### shh_hasIdentity (kullanımdan kalkmış){#shh_hasidentity}
-
-İstemcinin belirli bir kimlik için özel anahtarları elinde tutup tutmadığını kontrol eder.
-
-**Not** bu işlev kullanımdan kaldırılmıştır.
-
-**Parametreler**
-
-1. `DATA`, 60 Bayt - Kontrol edilecek bir kimlik adresi.
-
-```js
-params: [
-  "0x04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a03e245533f97284d442460f2998cd41858798ddfd4d661997d3940272b717b1",
-]
-```
-
-**İadeler** `Boolean` - istemci bu kimlik için özel anahtarı elinde tutuyorsa `true` değerini döndürür, aksi takdirde `false` değerini döndürür.
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_hasIdentity","params":["0x04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a03e245533f97284d442460f2998cd41858798ddfd4d661997d3940272b717b1"],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": true
-}
-```
-
-### shh_newGroup (kullanımdan kalkmış){#shh_newgroup}
-
-**Not** bu işlev kullanımdan kaldırılmıştır.
-
-**Parametreler** Hiçbiri
-
-**İadeler** `DATA`, 60 Bayt - yeni grubun adresi. (?)
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_newGroup","params":[],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": "0xc65f283f440fd6cabea4dd7a2c807108f651b7135d1d6ca90931d93e97ab07fe42d923478ba2407d5b68aa497e4619ac10aa3b27726e1863c1fd9b570d99bbaf"
-}
-```
-
-### shh_addToGroup (kullanımdan kalkmış){#shh_addtogroup}
-
-**Not** bu işlev kullanımdan kaldırılmıştır.
-
-**Parametreler**
-
-1. `DATA`, 60 Bayt - Bir gruba eklenecek kimlik adresi (?).
-
-```js
-params: [
-  "0x04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a03e245533f97284d442460f2998cd41858798ddfd4d661997d3940272b717b1",
-]
-```
-
-**İadeler** `Boolean` - kimlik gruba başarıyla eklendiyse `true` döndürür, aksi takdirde `false` (?).
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_addToGroup","params":["0x04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a03e245533f97284d442460f2998cd41858798ddfd4d661997d3940272b717b1"],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": true
-}
-```
-
-### shh_newFilter (kullanımdan kalkmış){#shh_newfilter}
-
-İstemci, filtre seçenekleriyle eşleşen fısıltı mesajı aldığında bilgilendirmek için filtre oluşturur. **Not** bu işlev kullanımdan kaldırılmıştır.
-
-**Parametreler**
-
-1. `Nesne` - Filtre seçenekleri:
-
-- `to`: `DATA`, 60 Bayt - (isteğe bağlı) Alıcının kimliği. _Mevcut olduğunda, istemci bu kimliğin özel anahtarını elinde tutuyorsa, gelen tüm mesajların şifresini çözmeye çalışır._
-- `topics`: `Array of DATA` - gelen mesajın konularının uyuşması gereken `DATA` konularının dizisi. Aşağıdaki kombinasyonları kullanabilirsiniz:
-  - `[A, B] = A && B`
-  - `[A, [B, C]] = A && (B || C)`
-  - `[null, A, B] = HERHANGİ BİR ŞEY && Bir && B` `null` joker karakter olarak çalışır
-  -
-
-```js
-params: [
-  {
-    topics: ["0x12341234bf4b564f"],
-    to: "0x04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a03e245533f97284d442460f2998cd41858798ddfd4d661997d3940272b717b1",
-  },
-]
-```
-
-**İadeler** `QUANTITY` - Yeni oluşturulan filtre.
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_newFilter","params":[{"topics": ['0x12341234bf4b564f'],"to": "0x2341234bf4b2341234bf4b564f..."}],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": "0x7" // 7
-}
-```
-
-### shh_uninstallFilter (kullanımdan kalkmış){#shh_uninstallfilter}
-
-Verilen kimliğe sahip bir filtreyi kaldırır. Saate artık ihtiyaç duyulmadığında her zaman çağrılmalıdır. Ek olarak Filtreler, belirli bir süre için [shh_getFilterChanges](#shh_getfilterchanges) ile istenmediğinde zaman aşımına uğrar. **Not** bu işlev kullanımdan kaldırılmıştır.
-
-**Parametreler**
-
-1. `QUANTITY` - Filtre kimliği.
-
-```js
-params: [
-  "0x7", // 7
-]
-```
-
-**İadeler** `Boolean` - Filtre başarıyla kaldırıldıysa `true`, aksi takdirde `false`.
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_uninstallFilter","params":["0x7"],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": true
-}
-```
-
-### shh_getFilterChanges (kullanımdan kalkmış){#shh_getfilterchanges}
-
-Fısıltı filtreleri için yoklama yöntemi. Bu yöntemin son çağrısından bu yana yeni mesajları döndürür. **Not**, [shh_getMessages](#shh_getmessages) yönteminin çağrılması, bu yöntemin arabelleğini sıfırlar, böylece yinelenen mesajlar almazsınız. **Not** bu işlev kullanımdan kaldırılmıştır.
-
-**Parametreler**
-
-1. `QUANTITY` - Filtre kimliği.
-
-```js
-params: [
-  "0x7", // 7
-]
-```
-
-**İadeler** `Dizi` - Son anketten bu yana alınan mesaj dizisi:
-
-- `hash`: `DATA`, 32 Bayt (?) - Mesajın karması.
-- `from`: `DATA`, 60 Bayt - Bir gönderen belirtilmişse, mesajın göndericisi.
-- `to`: `DATA`, 60 Bayt - Bir alıcı belirtilmişse mesajın alıcısı.
-- `expiry`: `QUANTITY` - Bu mesajın süresinin dolması gereken saniye cinsinden tam sayısı (?).
-- `ttl`: `QUANTITY` - Mesajın sistemde gezinmesi gereken sürenin saniye cinsinden tam sayısı (?).
-- `sent`: `QUANTITY` - Mesajın gönderildiği zamandaki unix zaman damgasının tam sayısı.
-- `topics`: `Array of DATA` - İletinin içerdiği `DATA` konu dizisi.
-- `payload`: `DATA` - Mesajın yükü.
-- `workProved`: `QUANTITY` - Bu mesajın gönderilmeden önce gereken işin tam sayısı (?).
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_getFilterChanges","params":["0x7"],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": [{
-    "hash": "0x33eb2da77bf3527e28f8bf493650b1879b08c4f2a362beae4ba2f71bafcd91f9",
-    "from": "0x3ec052fc33..",
-    "to": "0x87gdf76g8d7fgdfg...",
-    "expiry": "0x54caa50a", // 1422566666
-    "sent": "0x54ca9ea2", // 1422565026
-    "ttl": "0x64", // 100
-    "topics": ["0x6578616d"],
-    "payload": "0x7b2274797065223a226d657373616765222c2263686...",
-    "workProved": "0x0"
-    }]
-}
-```
-
-### shh_getMessages (kullanımdan kalkmış) {#shh_getmessages}
-
-Bir filtreyle eşleşen tüm mesajları alın. `shh_getFilterChanges`'in aksine bu, tüm mesajları döndürür.
-
-**Not** bu işlev kullanımdan kaldırılmıştır.
-
-**Parametreler**
-
-1. `QUANTITY` - Filtre kimliği.
-
-```js
-params: [
-  "0x7", // 7
-]
-```
-
-**İadeler** Bkz. [shh_getFilterChanges](#shh_getfilterchanges)
-
-**Örnek**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_getMessages","params":["0x7"
-],"id":73}'
-```
-
-Sonuç, bkz. [shh_getFilterChanges](#shh_getfilterchanges)
-
 ## Kullanım Örneği {#usage-example}
 
 ### JSON_RPC kullanarak bir sözleşmeyi dağıtma {#deploying-contract}
 
-Bu bölüm, yalnızca RPC arayüzünü kullanarak bir sözleşmenin nasıl dağıtılacağının bir gösterimini içerir. Bu karmaşıklığın ortadan kaldırıldığı sözleşmeleri dağıtmanın alternatif yolları vardır; örneğin, [web3.js](https://web3js.readthedocs.io/) ve [web3.py](https://github.com/ethereum/web3.py) gibi RPC arayüzünün üzerine kurulmuş kitaplıkları kullanmak gibi. Bu soyutlamaların anlaşılması genellikle daha kolaydır ve hataya karşı daha korumalıdır, ancak kaputun altında neler oldup bittiğini anlamak yine de yardımcı olur.
+Bu bölüm, yalnızca RPC arayüzünü kullanarak bir sözleşmenin nasıl dağıtılacağının gösterimini içerir. Bu karmaşıklığın ortadan kaldırıldığı sözleşmeleri dağıtmanın alternatif yolları vardır; örneğin, [web3.js](https://web3js.readthedocs.io/) ve [web3.py](https://github.com/ethereum/web3.py) gibi RPC arayüzünün üzerine kurulmuş kitaplıkları kullanmak gibi. Bu soyutlamaların anlaşılması genellikle daha kolaydır ve hataya karşı daha korumalıdır, ancak kaputun altında neler oldup bittiğini anlamak yine de yardımcı olur.
 
-Aşağıdaki, JSON-RPC arabirimi kullanılarak bir Ethereum düğümüne dağıtılacak olan `Multiply7` adlı basit bir akıllı sözleşmedir. Bu öğretici, okuyucunun zaten bir Geth düğümü çalıştırdığını varsayar. Düğümler ve istemciler hakkında daha fazla bilgiyi [burada](/developers/docs/nodes-and-clients/run-a-node) bulabilirsiniz. Geth olmayan istemciler için HTTP JSON-RPC'nin nasıl başlatılacağını görmek için lütfen bireysel [istemci](/developers/docs/nodes-and-clients/) dokümanlarına bakın. Çoğu istemci varsayılan olarak `localhost:8545` üzerinde hizmet verir.
+JSON-RPC arabirimi kullanılarak bir Ethereum düğümüne dağıtılacak olan `Multiply7` adlı basit bir akıllı sözleşmeyi aşağıda görebilirsiniz. Bu öğretici, okuyucunun zaten bir Geth düğümü çalıştırdığını varsayar. Düğümler ve istemciler hakkında daha fazla bilgiyi [burada](/developers/docs/nodes-and-clients/run-a-node) bulabilirsiniz. Geth olmayan istemciler için HTTP JSON-RPC'nin nasıl başlatılacağını görmek için lütfen bireysel [istemci](/developers/docs/nodes-and-clients/) dokümanlarına bakın. Çoğu istemci, varsayılan olarak `localhost:8545` üzerinde hizmet verir.
 
 ```javascript
 contract Multiply7 {
@@ -2255,7 +1641,7 @@ contract Multiply7 {
 }
 ```
 
-Yapılacak ilk şey, HTTP RPC arayüzünün etkinleştirildiğinden emin olmaktır. Bu, Geth'e başlangıçta `--http` bayrağını sağladığımız anlamına gelir. Bu örnekte, özel bir geliştirme zincirinde Geth düğümünü kullanıyoruz. Bu yaklaşımı kullanarak gerçek ağda ethere ihtiyacımız yok.
+Yapılacak ilk şey, HTTP RPC arayüzünün etkinleştirilmesini sağlamaktır. Bu, Geth'e başlangıçta `--http` bayrağını sağladığımız anlamına gelir. Bu örnekte, özel bir geliştirme zincirinde Geth düğümünü kullanıyoruz. Bu yaklaşımı kullandığımızda gerçek ağda ether'e ihtiyacımız olmaz.
 
 ```bash
 geth --http --dev console 2>>geth.log
@@ -2280,9 +1666,9 @@ web3.fromWei("0x1639e49bba16280000", "ether")
 // "410"
 ```
 
-Artık özel geliştirme zincirimizde bir miktar ether olduğuna göre, sözleşmeyi uygulayabiliriz. İlk adım, Multiply7 sözleşmesini EVM'ye gönderilebilecek bayt koduna derlemektir. Solidity derleyicisi olan solc'u kurmak için [Solidity dokümanlarını](https://docs.soliditylang.org/en/latest/installing-solidity.html) izleyin. ([Örneğimizde kullanılan derleyici sürümüyle](https://github.com/ethereum/solidity/releases/tag/v0.4.20) eşleşmesi için daha eski bir `solc` sürümü kullanmak isteyebilirsiniz.)
+Artık özel geliştirme zincirimizde bir miktar ether olduğuna göre sözleşmeyi dağıtabiliriz. İlk adım, Multiply7 sözleşmesini EVM'ye gönderilebilecek bayt kodunu derlemektir. Solidity derleyicisi olan solc'yi kurmak için [Solidity dokümanlarını](https://docs.soliditylang.org/en/latest/installing-solidity.html) izleyin. (Örneğimizde kullanılan derleyici sürümüyle eşleşmesi için [daha eski bir `solc` sürümü kullanmak isteyebilirsiniz](https://github.com/ethereum/solidity/releases/tag/v0.4.20).)
 
-Bir sonraki adım, Multiply7 sözleşmesini EVM'ye gönderilebilecek bayt koduna derlemektir.
+Bir sonraki adım, Multiply7 sözleşmesini EVM'ye gönderilebilecek bayt kodunu derlemektir.
 
 ```bash
 echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
@@ -2292,7 +1678,7 @@ Binary:
 6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029
 ```
 
-Artık derlenmiş koda sahip olduğumuza göre, onu dağıtmanın ne kadar gaza mal olacağını belirlememiz gerekiyor. RPC arayüzünde bize bir tahmin verecek bir `eth_estimateGas` yöntemi vardır.
+Artık derlenmiş koda sahip olduğumuza göre, onu dağıtmanın ne kadar gaza mal olacağını belirlememiz gerekiyor. RPC arayüzünde bize bir tahmin verecek bir `eth_estimateGas` yöntemi mevcuttur.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_estimateGas", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 5}' -H "Content-Type: application/json" localhost:8545
@@ -2306,14 +1692,14 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 {"id":6,"jsonrpc":"2.0","result":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"}
 ```
 
-İşlem düğüm tarafından kabul edilir ve bir işlem karması döndürülür. Bu karma, işlemi takip etmek için kullanılabilir. Bir sonraki adım, sözleşmemizin dağıtıldığı adresi belirlemektir. Gerçekleştirilen her işlem bir makbuz oluşturacaktır. Bu makbuz, işlemin hangi bloka dahil olduğu ve ESM tarafından ne kadar gaz kullanıldığı gibi işlemle ilgili çeşitli bilgileri içerir. Bir işlem bir sözleşme oluşturuyorsa, sözleşme adresini de içerecektir. `eth_getTransactionReceipt` RPC yöntemiyle makbuzu alabiliriz.
+İşlem, düğüm tarafından kabul edilir ve bir işlem karması döndürülür. Bu karma, işlemi takip etmek için kullanılabilir. Bir sonraki adım, sözleşmemizin dağıtıldığı adresi belirlemektir. Gerçekleştirilen her işlemi bir makbuz oluşturacaktır. Bu makbuz, işlemin hangi bloğa dahil olduğu ve ESM tarafından ne kadar gaz kullanıldığı gibi işlemle ilgili çeşitli bilgileri içerir. Bir işlem bir sözleşme oluşturuyorsa, sözleşme adresini de içerecektir. `eth_getTransactionReceipt` RPC yöntemiyle makbuzu alabiliriz.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": ["0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"], "id": 7}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":7,"result":{"blockHash":"0x77b1a4f6872b9066312de3744f60020cbd8102af68b1f6512a05b7619d527a4f","blockNumber":"0x1","contractAddress":"0x4d03d617d700cf81935d7f797f4e2ae719648262","cumulativeGasUsed":"0x1c31e","from":"0x9b1d35635cc34752ca54713bb99d38614f63c955","gasUsed":"0x1c31e","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":null,"transactionHash":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf","transactionIndex":"0x0"}}
 ```
 
-Sözleşmemiz `0x4d03d617d700cf81935d7f797f4e2ae719648262` üzerinde oluşturuldu. Makbuz yerine boş bir sonuç, işlemin henüz bir bloka dahil edilmediği anlamına gelir. Bir dakika bekleyin ve madencinizin çalışıp çalışmadığını kontrol edip yeniden deneyin.
+Sözleşmemiz `0x4d03d617d700cf81935d7f797f4e2ae719648262` üzerinde oluşturuldu. Makbuz yerine boş bir sonuç, işlemin henüz bir bloğa dahil edilmediği anlamına gelir. Bir dakika bekleyin ve fikir birliği istemcinizin çalışıp çalışmadığını kontrol edip tekrar deneyin.
 
 #### Akıllı sözleşmelerle etkileşim {#interacting-with-smart-contract}
 
@@ -2321,7 +1707,7 @@ Bu örnekte, sözleşmenin `multiply` yöntemine, `eth_sendTransaction` kullanar
 
 `eth_sendTransaction`, özellikle `from`, `to` ve `data` olmak üzere birkaç bağımsız değişken gerektirir. `From` hesabımızın genel adresidir ve `to` da sözleşme adresidir. `Data` bağımsız değişkeni, hangi yöntemin hangi bağımsız değişkenlerle çağrılması gerektiğini tanımlayan bir yük içerir. Burada [ABI (uygulama ikili arayüzü)](https://docs.soliditylang.org/en/latest/abi-spec.html) devreye girer. ABI, EVM için verilerin nasıl tanımlanacağını ve kodlanacağını tanımlayan bir JSON dosyasıdır.
 
-Yükün baytları, sözleşmedeki hangi yöntemin çağrılacağını tanımlar. Bu, Keccak karmasından işlev adı ve on altılık kodlu argüman türleri üzerindeki ilk 4 bayttır. Çarpma işlevi, uint256 için bir diğer ad olan bir uint'i kabul eder. Bu bize şunu bırakır:
+Yükün baytları, sözleşmedeki hangi yöntemin çağrılacağını tanımlar. Bu, fonksiyon adı ve argüman türleri üzerindeki Keccak karma değerinin ilk 4 baytıdır ve on altılık şekilde kodlanmıştır. Çarpma fonksiyonu, uint256 için bir takma ad olan uint'i kabul eder. Bu, bize şunu bırakır:
 
 ```javascript
 web3.sha3("multiply(uint256)").substring(0, 10)
@@ -2332,18 +1718,18 @@ Bir sonraki adım, argümanları kodlamaktır. Yalnızca bir uint256 var, diyeli
 
 `int<M>: enc(X)`, yüksek dereceden (sol) tarafta negatif X için 0xff ve sıfır > Uzunluk 32 baytın katı olacak şekilde pozitif X için baytlardan oluşan X'in büyük endian ikinin tümleyeni kodlamasıdır.
 
-Bu `0000000000000000000000000000000000000000000000000000000000000006` olarak kodlar.
+Bu, `0000000000000000000000000000000000000000000000000000000000000006` olarak kodlar.
 
-İşlev seçiciyi ve kodlanmış argümanı birleştirerek verilerimiz `0xc6888fa1000000000000000000000000000000000000000000000000000000000000000` olacaktır.
+Fonksiyon seçiciyi ve kodlanmış argümanı birleştirdiğimizde verilerimiz `0xc6888fa1000000000000000000000000000000000000000000000000000000000000000` olur.
 
-Bu şimdi düğüme gönderilebilir:
+Bu, artık düğüme gönderilebilir:
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from": "0xeb85a5557e5bdc18ee1934a89d8bb402398ee26a", "to": "0x6ff93b4b46b41c0c3c9baee01c255d3b4675963d", "data": "0xc6888fa10000000000000000000000000000000000000000000000000000000000000006"}], "id": 8}' -H "Content-Type: application/json" localhost:8545
 {"id":8,"jsonrpc":"2.0","result":"0x759cf065cbc22e9d779748dc53763854e5376eea07409e590c990eafc0869d74"}
 ```
 
-Bir işlem gönderildiğinden, bir işlem karması döndürüldü. Makbuzun alınması şunları sağlar:
+Bir işlem gönderildiğinden, bir işlem karması döndürülmüştür. Makbuzun alınması şunları sağlar:
 
 ```javascript
 {
@@ -2367,7 +1753,7 @@ Bir işlem gönderildiğinden, bir işlem karması döndürüldü. Makbuzun alı
 }
 ```
 
-Makbuz bir günlük içerir. Bu günlük, işlem yürütülürken EVM tarafından oluşturulur ve makbuza dahil edilir. `multiply` işlevi, `Print` olayının giriş sürelerinin 7 ile başlatıldığını gösterir. `Print` olayının argümanı bir uint256 olduğundan bunun kodunu, bizi beklenen ondalık 42 ile bırakacak olan ABI kurallarına göre çözebiliriz. Verilerin yanı sıra, günlüğü hangi olayın oluşturduğunu belirlemek için konuların kullanılabileceğini belirtmekte fayda var:
+Makbuz, bir günlük içerir. Bu günlük, işlem yürütülürken EVM tarafından oluşturulur ve makbuza dahil edilir. `multiply` işlevi, `Print` olayının 7 giriş değeriyle tetiklendiğini gösterir. `Print` olayının argümanı uint256 olduğundan, bunu ABI kurallarına göre çözebiliriz ve bu da bize beklenen ondalık sayı 42'yi bırakır. Verilerin yanı sıra, günlüğü hangi olayın oluşturduğunu belirlemek için konuların kullanılabileceğini belirtmekte fayda vardır:
 
 ```javascript
 web3.sha3("Print(uint256)")
@@ -2378,7 +1764,7 @@ Bu, JSON-RPC'nin doğrudan kullanımını gösteren en yaygın görevlerden baz�
 
 ## İlgili konular {#related-topics}
 
-- [JSON-RPC özellikleri](http://www.jsonrpc.org/specification)
+- [JSON-RPC spesifikasyonu](http://www.jsonrpc.org/specification)
 - [ Düğümler ve İstemciler](/developers/docs/nodes-and-clients/)
 - [JavaScript API'ları](/developers/docs/apis/javascript/)
 - [Arka Uç API'ları](/developers/docs/apis/backend/)

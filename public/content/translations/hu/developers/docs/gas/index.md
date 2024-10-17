@@ -117,7 +117,7 @@ Az Ethereum [skálázhatósági fejlesztései](/roadmap/) meg fogják oldani a g
 
 A második blokkláncréteggel (L2) kialakított skálázás a fő kezdeményezés arra, hogy nagy mértékben javuljanak a gázköltségek, a felhasználói élmény és a skálázhatóság. [Bővebben az L2 skálázásról](/developers/docs/scaling/#layer-2-scaling).
 
-## A gázdíjak felügyelete {#moitoring-gas-fees}
+## A gázdíjak felügyelete {#monitoring-gas-fees}
 
 Ha Ön szeretné felügyelni a gázdíjakat azért, hogy kevesebbet kelljen fizetnie az ETH-tranzakciókért, akkor számos eszköz áll rendelkezésre:
 

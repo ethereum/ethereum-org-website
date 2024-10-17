@@ -33,7 +33,7 @@ lang: zh-tw
 - [SKALE 網路資助計劃](https://skale.space/developers#grants) - _[SKALE 網路](https://skale.space/)生態系統_
 - [Swarm 基金會資助計劃](https://my.ethswarm.org/grants) - _[Swarm 基金會](https://www.ethswarm.org/)生態系統_
 - [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/) 生態系統_
-- [Uniswap 資助計劃](https://www.uniswapfoundation.org/grants) – _[Uniswap](https://uniswap.org/) 社群_
+- [Uniswap 資助計劃](https://www.uniswapfoundation.org/approach) – _[Uniswap](https://uniswap.org/) 社群_
 
 ## 二次融資 {#quadratic-funding}
 
