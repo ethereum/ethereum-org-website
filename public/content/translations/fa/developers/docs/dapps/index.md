@@ -58,8 +58,7 @@ lang: fa
 
 - [گیت‌هاب](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _- ابزار FOSS برای تولید صفحات فرانت dapp از
-‏ABI‏‏>. 
+**One Click Dapp _- ابزار FOSS برای تولید صفحات فرانت dapp از [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [گیت هاب](https://github.com/oneclickdapp/oneclickdapp-v1)
@@ -81,8 +80,6 @@ lang: fa
 - [اسناد](https://docs.crossmint.com)
 - [دیسکورد](https://discord.com/invite/crossmint)
 
-
-
 ## بیشتر بخوانید {#further-reading}
 
 - [کاوش در برنامه‌های غیرمتمرکز](/dapps)
@@ -92,8 +89,6 @@ lang: fa
 - [اپلیکیشن‌های غیرمتمرکز پرطرفدار](https://www.alchemy.com/dapps) - _Alchemy_
 
 _می‌خواهید در مورد منابع جامعه که به شما کمک کرده بدانید؟ این صفحه را ویرایش و اضافه کنید!_
-
-
 
 ## موضوعات مرتبط {#related-topics}
 
