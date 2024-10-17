@@ -36,7 +36,7 @@ A kriptográfiai mechanizmusok biztosítják, hogy az ellenőrzött és a blokkl
 
 **Ether (ETH)** az Ethereum saját kriptovalutája. Az ETH célja, hogy a számítási kapacitásért fizetni lehessen. Egy ilyen piac gazdasági ösztönzőt biztosít a résztvevőknek, hogy hitelesítsék/végrehajtsák a tranzakciós kérelmeket és, hogy számítási kapacitást szolgáltassanak a hálózatnak.
 
-A résztvevők a tranzakcióért jutalomként felajánlanak ETH-t a hálózatnak. A hálózat jutalmat ad annak, aki végül elvégzi a tranzakció ellenőrzését, végrehajtását, a blokkláncba való bekerülését és a hálózatba történő közvetítését.
+A résztvevők a tranzakcióért jutalomként felajánlanak ETH-t a hálózatnak. A hálózat elégeti a jutalom egy részét és díjazza azokat, akik végül elvégzik a tranzakció ellenőrzését, végrehajtását, a blokkláncba való beillesztését és a hálózatba történő közvetítését.
 
 Az ETH összege a számítási kapacitáshoz kapcsolódik. Ezek a jutalmak megakadályozzák a rosszindulatú résztvevőket is abban, hogy szándékosan eltömítsék a hálózatot azzal, hogy végtelen ciklusokat vagy erőforrásigényes szkriptek végrehajtását kérik, mivel ezeknek a szereplőknek fizetni kell a kalkulációért.
 
@@ -107,7 +107,7 @@ Egy újra felhasználható kódrészlet (egy program), amelyet egy fejlesztő pu
 ## További olvasnivaló {#further-reading}
 
 - [Ethereum fehérkönyv](/whitepaper/)
-- [Amúgy hogyan működik az Ethereum?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**Megjegyzés:** bár ez a forrás még mindig értékes, de a [Beolvadás](/roadmap/merge) előtti, és ezért az említett proof-of-work mechanizmus helyett az Ethereum már [proof-of-stake](/developers/docs/consensus-mechanisms/pos)-et használ)
+- [Amúgy hogyan működik az Ethereum?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**Megjegyzés:** bár ez a forrás még mindig értékes, de a [Beolvadás](/roadmap/merge) előtti, és ezért az említett proof-of-work mechanizmus helyett az Ethereum már [proof-of-stake](/developers/docs/consensus-mechanisms/pos)-et használ)
 
 _Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_
 

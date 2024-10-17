@@ -6,7 +6,7 @@ lang: zh-tw
 
 # 為 ethereum.org 作出設計貢獻 {#design-contributions}
 
-設計是任何專案的關鍵組成部分，把你的時間和設計技能投入到 ethereum.org，有助替我們的訪客改善使用者體驗。 替開源專案做出貢獻，會為你提供機會以獲取相關經驗，並在協作環境中發展技能。 你有機會與其他擁有獨特觀點和見解的設計師、開發者和社群成員合作。
+設計是任何專案的關鍵組成部分，把你的時間和設計技能投入到 Ethereum.org，有助替我們的訪客改善使用者體驗。 替開源專案做出貢獻，會為你提供機會以獲取相關經驗，並在協作環境中發展技能。 你有機會與其他擁有獨特觀點和見解的設計師、開發者和社群成員合作。
 
 最後，這是建立多元且令人印象深刻的作品集，以展示你設計技能的好方式。
 
@@ -18,7 +18,7 @@ lang: zh-tw
 
 1. 設計團隊會在 [Discord](https://discord.com/invite/ethereum-org) 和 [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) 上分享模型設計。
 2. 你會在指導下熟悉這些設計，並透過評論功能提供意見回饋。
-3. 結果將在 GitHub 提議中分享，然後由團隊關閉。
+3. 結果將在 GitHub 議題中分享，然後由團隊關閉。
 
 ### <Emoji text=":two:" size={1} /> &nbsp;參與調查研究 {#answer-surveys}
 
@@ -30,7 +30,7 @@ lang: zh-tw
 
 ### <Emoji text=":three:" size={1} /> &nbsp;尋找網站上與設計相關的問題並回報 {#report-design-issues}
 
-ethereum.org 是個擁有許多功能和內容，而且快速發展的網站。 某些使用者介面很容易過時或需要改進。 如果你遇到這類情況，請報告以讓我們注意。
+Ethereum.org 是個擁有許多功能和內容，而且快速發展的網站。 某些使用者介面很容易過時或需要改進。 如果你遇到這類情況，請報告以讓我們注意。
 
 1. 瀏覽網站並注意其設計。
 2. 如果你發現任何視覺或使用者體驗方面問題，請取得螢幕擷取畫面並記錄下來。
@@ -51,7 +51,7 @@ ethereum.org 是個擁有許多功能和內容，而且快速發展的網站。 
 
 1. 從 GitHub 上的[設計系統板](https://github.com/ethereum/ethereum-org-website/labels/design%20system)選擇要處理的議題，或建立一個新的議題。
 2. 請求將選定的議題分配給你。
-3. 開始在 Figma 中設計所需組件。
+3. 開始在 figma 中設計要求的元件。
 4. 需要審核或指導時，請在 GitHub 上將組件分享給設計團隊。
 5. 設計團隊將進行審核。
 6. 設計團隊會將變更合併到主檔案中，並將它發佈到社群。
@@ -64,7 +64,7 @@ ethereum.org 是個擁有許多功能和內容，而且快速發展的網站。 
 2. 前往我們的 GitHub 儲存庫，[發起議題](https://github.com/ethereum/ethereum-org-website/issues/new)來建議主題（先不要寫內容）。
 3. 等待設計團隊核准。
 4. 一旦核准，開始撰寫內容。
-5. 在相應的 GitHub 議題中提交。
+5. 在相應的 GH 議題中提交。
 
 ### <Emoji text=":seven:" size={1} /> &nbsp;繪製新插圖 {#prepare-illustrations}
 
@@ -74,4 +74,4 @@ ethereum.org 是個擁有許多功能和內容，而且快速發展的網站。 
 2. 確保插圖風格與我們的[網站](/assets/)相對應。
 3. 前往我們的 GitHub 儲存庫並[發起議題](https://github.com/ethereum/ethereum-org-website/issues/new)來建議插圖。
 4. 設計團隊將會審核。
-5. 我們建議一個新議題，邀請開發者來實作該新圖像。
+5. 我們建立一個新議題，並邀請開發者來實作該新圖像。

@@ -206,7 +206,8 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     path.startsWith("/wallets/") ||
     path.startsWith("/web3/") ||
     path.startsWith("/what-is-ethereum/") ||
-    path.startsWith("/quizzes/")
+    path.startsWith("/quizzes/") ||
+    path.startsWith("/stablecoins/")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }

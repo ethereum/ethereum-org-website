@@ -92,12 +92,13 @@ Seçtiğiniz senkronizasyon modu ve istemci alan gereksinimlerini etkileyecektir
 
 | İstemci    | Disk boyutu (anlık senkronizasyon) | Disk boyutu (tam arşiv) |
 | ---------- | ---------------------------------- | ----------------------- |
-| Geth       | 500GB+                             | 12TB+                   |
-| Nethermind | 500GB+                             | 12TB+                   |
 | Besu       | 800GB+                             | 12TB+                   |
 | Erigon     | Yok                                | 2.5TB+                  |
+| Geth       | 500GB+                             | 12TB+                   |
+| Nethermind | 500GB+                             | 12TB+                   |
+| Reth       | Yok                                | 2,2 TB veya fazlası     |
 
-- Not: Erigon anlık senkronizasyon sunmaz, ancak Tam Budama mümkündür (yaklaşık 500 GB)
+- Not: Erigon ve Reth anlık senkronizasyon sunmaz, ancak tam temizleme mümkündür ( Erigon için ~2TB, Reth için ~1,2TB)
 
 Fikir birliği istemcileri için, alan gereksinimi ayrıca istemci uygulaması ve açık olan özelliklere (ör. doğrulayıcı kesici) de bağlıdır ancak genel olarak işaret verisi için gereken ilave bir 200 GB ekleyin. Büyük bir doğrulayıcı sayısı ile bant genişliği yükü de artmaktadır. [Bu analizde fikir birliği istemcileri gereksinimleri hakkında detaylar](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc) bulabilirsiniz.
 
@@ -126,7 +127,7 @@ Birden fazla kullanıcı dostu proje, istemci kurulum deneyimini geliştirmeyi h
 
 Aşağıda birkaç tıklamayla istemci kurmanıza ve yönetmenize yardımcı olacak birkaç proje bulunmaktadır:
 
-- [DappNode](https://docs.dappnode.io/user/quick-start/first-steps/) - DappNode sadece bir satıcıdan gelecek bir makine ile gelmez. Yazılım, asıl düğüm başlatıcısı ve birçok özelliği olan kontrol merkezi herhangi bir donanımda kullanılabilir.
+- [DappNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) - DappNode sadece bir satıcıdan gelecek bir makine ile gelmez. Yazılım, asıl düğüm başlatıcısı ve birçok özelliği olan kontrol merkezi herhangi bir donanımda kullanılabilir.
 - [eth-docker](https://eth-docker.net/) - Basit ve güvenli kilitlemeye odaklı, Docker ile otomatik kurulum, temel terminal ve Docker bilgisi gerektirir, biraz daha gelişmiş kullanıcılara önerilir.
 - [Stereum](https://stereum.net/ethereum-node-setup/) - Uzak bir sunucuya SSH bağlantısı aracılığıyla istemci kurulumu için GUI kurulum kılavuzu, kontrol merkezi ve daha birçok özelliği bulunan bir başlatıcı.
 - [NiceNode](https://www.nicenode.xyz/) - Bilgisayarınızda bir düğüm çalıştırmak için basit bir kullanıcı deneyimi olan başlatıcı. Sadece istemciler seçin ve birkaç tıkta bunları başlatın. Hâlâ geliştirilmektedir.
@@ -151,9 +152,10 @@ Her bir istemcinin kurulumu için yönergeler yukarıdaki istemci listelerinde b
 ##### Yürütüm istemcileri
 
 - [Besu](https://github.com/hyperledger/besu/releases)
-- [Erigon](https://github.com/ledgerwatch/erigon#usage) (önceden inşa edilmiş bir kütüphane sağlamaz, derlenmesi gerekir)
+- [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
+- [Reth](https://reth.rs/installation/installation.html)
 
 Ayrıca istemci çeşitliliğinin [yürütüm katmanında bir sorun](/developers/docs/nodes-and-clients/client-diversity/#execution-layer) olduğundan da bahsetmeye değer. Okurların azınlık bir yürütüm istemcisi çalıştırması önerilir.
 
@@ -165,7 +167,7 @@ Ayrıca istemci çeşitliliğinin [yürütüm katmanında bir sorun](/developers
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
 
-[İstemci çeşitliliği](/developers/docs/nodes-and-clients/client-diversity/) doğrulayıcılar çalıştıran fikir birliği düğümleri için önemlidir. Eğer doğrulayıcıların çoğunluğu tek bir istemci uygulaması kullanıyorsa, ağ güvenliği risktedir. Bundan dolayı azınlık bir istemci seçiminin düşünülmesi önerilir.
+[İstemci çeşitliliği](/developers/docs/nodes-and-clients/client-diversity/) doğrulayıcılar çalıştıran fikir birliği düğümleri için önemlidir. Eğer doğrulayıcıların çoğunluğu tek bir istemci uygulaması kullanıyorsa, ağ güvenliği risk altındadır. Bundan dolayı azınlık bir istemci seçiminin düşünülmesi önerilir.
 
 [Güncel ağ istemci kullanımını görün](https://clientdiversity.org/) ve [istemci çeşitliliği](/developers/docs/nodes-and-clients/client-diversity) hakkında dahasını öğrenin.
 
@@ -177,7 +179,7 @@ Geliştiriciler yayınlanmış dosyaları kendi PGP anahtarları ile imzalarlar 
 
 Başka bir doğrulama yöntemi ise geliştiriciler tarafından sağlanan karmanın, yani eşsiz kriptografik bir parmak izinin, indirdiğiniz yazılımınki ile uyup uymadığından emin olmaktır. Bu PGP kullanmaktan bile daha kolaydır ve bazı istemciler sadece bu seçeneği sunar. Sadece karma fonksiyonunu indirilen yazılım üzerinde çalıştırın ve sürüm notu sayfasındaki ile karşılaştırın. Örneğin:
 
-```
+```sh
 sha256sum teku-22.6.1.tar.gz
 
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
@@ -213,7 +215,7 @@ Yürütüm ve fikir birliği istemcileri [Motor API](https://github.com/ethereum
 
 Bu token istemci yazılmı tarafından otomatik olarak oluşturulur ama bazı durumlar kendiniz yapmanız gerekebilir. [OpenSSL](https://www.openssl.org/) kullanarak oluşturabilirsiniz:
 
-```
+```sh
 openssl rand -hex 32 > jwtsecret
 ```
 
@@ -221,12 +223,12 @@ openssl rand -hex 32 > jwtsecret
 
 Bu bölüm size yürütüm istemcileri başlatmada rehberlik edecektir. Sadece istemciyi şu ayarlarla başlatacak temel bir yapılandırma örneği olarak görev yapmaktadır:
 
-- Bağlanılacak ağı belirler, bizim örneklerimizde ana ağ
+- Bağlanılacak ağı belirler, bizim örneklerimizde Ana ağ
   - Kurulumunuzun ön hazırlığı için [test ağlarından birini](/developers/docs/networks/) seçebilirsiniz
 - Blok zincir dahil tüm verinin depolanacağı veri klasörünü belirtir
   - Yolu gerçek bir versiyonu ile değiştirdiğinizden emin olun, örneğin harici diskinize işaret edecek şekilde
 - İstemci ile iletişim için arayüzleri aktif eder
-  - Fikir birliği istemcisi ile iletişim için Motor API ve JSON RPC dahil
+  - Fikir birliği istemcisiyle iletişim için JSON-RPC ve Engine API'si içerir
 - Doğrulanmış API için `jwtsecret` yolunu belirler
   - Örnek yolu istemciler tarafından erişilebilecek gerçek bir versiyonu ile değiştirdiğinizden emin olun, ör. `/tmp/jwtsecret`
 
@@ -236,9 +238,9 @@ Bunun temel bir örnek olduğunu aklınızda tutun, diğer tüm ayarlar varsayı
 
 ##### Besu'yu Çalıştırmak
 
-Bu örnek Besu'yu ana ağda başlatır, blok zincir verisini varsayılan biçimde `/veri/ethereum` lokasyonunda tutar, JSON RPC ve Motor RPC'yi fikir birliği istemcisini bağlamak için etkinleştirir. Motor API `jwtsecret` ile doğrulanmıştır ve sadece `localhost` tarafından gelen çağrılara izin verilir.
+Bu örnek Besu'yu Ana Ağda başlatır, blokzincir verisini varsayılan biçimde `/data/ethereum` lokasyonunda tutar, JSON RPC ve Motor RPC'yi fikir birliği istemcisini bağlamak için etkinleştirir. Motor API `jwtsecret` ile doğrulanmıştır ve sadece `localhost` tarafından gelen çağrılara izin verilir.
 
-```
+```sh
 besu --network=mainnet \
     --data-path=/data/ethereum \
     --rpc-http-enabled=true \
@@ -250,7 +252,7 @@ besu --network=mainnet \
 
 Besu aynı zamanda birtakım sorular soran ve yapılandırma dosyasını oluşturan bir başlatıcı seçeneği ile beraber gelir. Etkileşimli başlatıcıyı şunu kullanarak çalıştırın:
 
-```
+```sh
 besu --Xlauncher
 ```
 
@@ -258,9 +260,9 @@ besu --Xlauncher
 
 ##### Erigon'u Çalıştırmak
 
-Bu örnek Erigon'u ana ağda başlatır, blok zincir verisini `/data/ethereum` lokasyonunda depolar, JSON RPC'yi etkinleştirir, hangi isim alanlarına izin verildiğini belirler ve `jwtsecret` yolu tarafından belirlenen mutabakat mekanizmasının bağlanması için doğrulamayı etkinleştirir.
+Bu örnek Erigon'u Ana Ağda başlatır, blokzincir verisini `/data/ethereum` lokasyonunda depolar, JSON RPC'yi etkinleştirir, hangi isim alanlarına izin verildiğini belirler ve `jwtsecret` yolu tarafından belirlenen fikir birliği istemcisinin bağlanması için doğrulamayı etkinleştirir.
 
-```
+```sh
 erigon --chain mainnet \
     --datadir /data/ethereum  \
     --http --http.api=engine,eth,web3,net \
@@ -271,9 +273,9 @@ Erigon varsayılan olarak 8 GB bir HDD ile tam senkronizasyon gerçekleştirir, 
 
 ##### Geth'i Çalıştırmak
 
-Bu örnek Geth'i ana ağda başlatır, blok zincir verisini `/data/ethereum` lokasyonunda depolar, JSON RPC'yi etkinleştirir ve hangi isim alanlarına izin verildiğini belirler. Aynı zamanda `jwtsecret` yolu gereken bağlanan fikir birliği istemcisi için doğrulamayı ve hangi bağlantılara izin verildiğini belirlemeyi etkinleştirir, bizim örneğimizde bu sadece `localhost` tarafından gelenlerdir.
+Bu örnek Geth'i Ana Ağda başlatır, blokzincir verisini `/data/ethereum` lokasyonunda depolar, JSON RPC'yi etkinleştirir ve hangi isim alanlarına izin verildiğini belirler. Aynı zamanda `jwtsecret` yolu gereken bağlanan fikir birliği istemcisi için doğrulamayı ve hangi bağlantılara izin verildiğini belirlemeyi etkinleştirir, bizim örneğimizde bu sadece `localhost` tarafından gelenlerdir.
 
-```
+```sh
 geth --mainnet \
     --datadir "/data/ethereum" \
     --http --authrpc.addr localhost \
@@ -286,9 +288,9 @@ geth --mainnet \
 
 ##### Nethermind'ı Çalıştırmak
 
-Nethermind çeşitli [kurulum seçenekleri](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) sunar. Paket çeşitli dosyalarla gelir, bunlara yapılandırmayı etkileşimli bir şekilde oluşturmanıza yardımcı olacak kılavuzlu kurulumu olan bir Başlatıcı dahildir. Alternatif olarak, çalıştırılabilir dosyanın kendisi olan Çalıştırıcı'yı bulacaksınız ve bunu sadece yapılandırma bayrakları ile çalıştırabilirsiniz. JSON RPC varsayılan olarak etkinleştirilir.
+Nethermind çeşitli [kurulum seçenekleri](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) sunar. Paket çeşitli dosyalarla gelir, bunlara yapılandırmayı etkileşimli bir şekilde oluşturmanıza yardımcı olacak kılavuzlu kurulumu olan bir Başlatıcı dahildir. Alternatif olarak, çalıştırılabilir dosyanın kendisi olan Çalıştırıcı'yı bulacaksınız ve bunu sadece yapılandırma bayrakları ile çalıştırabilirsiniz. JSON-RPC varsayılan olarak etkindir.
 
-```
+```sh
 Nethermind.Runner --config mainnet \
     --datadir /data/ethereum \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
@@ -297,6 +299,19 @@ Nethermind.Runner --config mainnet \
 Nethermind dokümanları Nethermind'ı bir fikir birliği istemcisi ile çalıştırmak üzerine [tam bir kılavuz](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) sunar.
 
 Bir yürütüm istemcisi çekirdek fonksiyonlarını ve seçili uç noktalarını başlatacak ve eşleri aramaya başlayacaktır. İstemci, eşlerini başarılı bir şekilde bulduktan sonra senkronizasyonu başlatır. Yürütüm istemcisi fikir birliği istemcisinden bir bağlantı bekleyecektir. İstemci mevcut duruma başarılı şekilde senkronize edildiğinde mevcut blok zincir verisi mevcut olacaktır.
+
+##### Reth'i Çalıştırma
+
+Bu örnek Reth'i Ana Ağda, varsayılan depolama lokasyonunu kullanarak başlatır. `jwtsecret` yoluyla tanımlanan fikir birliği istemcisine bağlanmak için JSON-RPC ve Engine RPC kimlik doğrulamasını etkinleştirir ve yalnızca `localhost`'tan yapılan çağrılara izin verir.
+
+```sh
+reth node \
+    --authrpc.jwtsecret /path/to/jwtsecret \
+    --authrpc.addr 127.0.0.1 \
+    --authrpc.port 8551
+```
+
+Varsayılan veri dizinlerine dair daha fazla bilgi edinmek için [Reth'i Yapılandırma](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) bölümüne bakın. [Reth dokümanları](https://reth.rs/run/mainnet.html), ek seçenekleri ve yapılandırma ayrıntılarını içerir.
 
 #### Fikir birliği istemcisini başlatmak {#starting-the-consensus-client}
 
@@ -308,13 +323,13 @@ Bir doğrulayıcı çalıştırmayı planlıyorsanız, alıcının Ethereum adre
 
 Bir test ağı üzerinde İşaret Düğümü başlatırken, [kontrol noktası senkronizasyonu](https://notes.ethereum.org/@launchpad/checkpoint-sync) için herkese açık bir uç noktası kullanarak senkronizasyon süresinden önemli oranda zaman kazanabilirsiniz.
 
-#### Bir fikir birliği istemcisi çalıştırmak
+#### Bir fikir birliği istemcisi çalıştırmak {#running-a-consensus-client}
 
 ##### Lighthouse'u Çalıştırmak
 
 Lighthouse'u çalıştırmadan önce, nasıl kurulacağı ve yapılandırılacağıyla ilgili dahasını [Lighthouse Kitabı](https://lighthouse-book.sigmaprime.io/installation.html)'ndan öğrenin.
 
-```
+```sh
 lighthouse beacon_node \
     --network mainnet \
     --datadir /data/ethereum \
@@ -327,7 +342,7 @@ lighthouse beacon_node \
 
 Lodestar yazılımını derleyerek veya Docker görüntüsünü indirerek kurun. Dahasını [dokümanlarda](https://chainsafe.github.io/lodestar/) ve daha detaylı [kurulum rehberinde](https://hackmd.io/@philknows/rk5cDvKmK) öğrenin.
 
-```
+```sh
 lodestar beacon \
     --rootDir="/data/ethereum" \
     --network=mainnet \
@@ -340,7 +355,7 @@ lodestar beacon \
 
 Nimbus hem yürütüm hem de fikir birliği istemcileriyle gelir. En makul hesaplama gücüne sahip olan çeşitli cihazlarda bile çalıştırılabilir. [Nimbus'un kendisini ve bağımlılıklarını indirdikten](https://nimbus.guide/quick-start.html) sonra, fiklir birliği istemcisini çalıştırabilirsiniz:
 
-```
+```sh
 nimbus_beacon_node \
     --network=mainnet \
     --web3-url=http://127.0.0.1:8551 \
@@ -352,7 +367,7 @@ nimbus_beacon_node \
 
 Prysm kolay otomatik kurulum sağlayan bir betikle gelir. Detaylar [Prysm dokümanlarında](https://docs.prylabs.network/docs/install/install-with-script) bulunabilir.
 
-```
+```sh
 ./prysm.sh beacon-chain \
     --mainnet \
     --datadir /data/ethereum  \
@@ -362,7 +377,7 @@ Prysm kolay otomatik kurulum sağlayan bir betikle gelir. Detaylar [Prysm doküm
 
 ##### Teku'yu Çalıştırmak
 
-```
+```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \
     --ee-endpoint http://localhost:8551 \
@@ -377,7 +392,7 @@ Bir fikir birliği istemcisi, doğrulayıcıların bağlanması için bir İşar
 
 Kendi doğrulayıcınızı çalıştırmak Ethereum ağını desteklemek için en etkili ve güven gerektirmeyen yöntem olan [solo hisseleme](/staking/solo/) ön ayak olur. Ancak bunun için 32 ETH'lik bir yatırım gerekir. Kendi düğümünüzde daha az bir miktarlar doğrulayıcı çalıştırmak için, [Rocket Pool](https://rocketpool.net/node-operators) gibi izin gerektirmeyen düğüm operatörleri olan merkeziyetsiz bir havuz ilginizi çekebilir.
 
-Kilitleme ve doğrulayıcı anahtar oluşumuna başlamak için en kolay yol olan [Goerli Test Ağı Hisseleme Başlama Noktası](https://goerli.launchpad.ethereum.org/) kurulumunuzu [Goerli üzerinde düğümler çalıştırarak](https://notes.ethereum.org/@launchpad/goerli) test etmenizi sağlar. Ana ağ için hazır olduğunuzda, [Ana Ağ Hisseleme Başlama Noktasını](https://launchpad.ethereum.org/) kullanarak bu adımları tekrarlayabilirsiniz.
+Hisseleme ve doğrulayıcı anahtar üretmeye başlamanın en kolay yolu, kurulumunuzu [Holesky'de düğüm çalıştırarak](https://holesky.launchpad.ethereum.org/) test etmenize izin veren [Holesky Test Ağı Hisseleme Başlama Noktası](https://notes.ethereum.org/@launchpad/holesky)'dır. Ana ağ için hazır olduğunuzda, [Ana Ağ Hisseleme Başlama Noktasını](https://launchpad.ethereum.org/) kullanarak bu adımları tekrarlayabilirsiniz.
 
 Hisseleme seçeneklerine genel bir bakış için [hisseleme sayfasını](/staking) ziyaret edin.
 
@@ -431,7 +446,7 @@ _Bu, fikir birliği katmanı doğrulayıcı düğümleri için geçerli değildi
 
 İstemci yazılımınızı en son güvenlik yamaları, özellikler ve [EIP'ler](/eips/) ile güncel tutmalısınız. Özellikle [sert çatallanmalardan](/history/) önce, doğru istemci sürümlerini çalıştırdığınızdan emin olun.
 
-> Önemli ağ güncellemelerinden önce, EF [blogunda](https://blog.ethereum.org) bir gönderi yayınlar. Düğümünüz güncellemeye ihtiyaç duyduğunda postanıza bir bildirim almak için [bu duyurulara abone olabilirsiniz](https://groups.google.com/a/ethereum.org/g/announcements).
+> Önemli ağ güncellemelerinden önce, EF [blogunda](https://blog.ethereum.org) bir gönderi yayınlar. Düğümünüz güncellemeye ihtiyaç duyduğunda postanıza bir bildirim almak için [bu duyurulara abone olabilirsiniz](https://blog.ethereum.org/category/protocol#subscribe).
 
 İstemcileri güncellemek çok basittir. Her istemcinin dokümanlarında belirli yönergeler vardır, ancak süreç genellikle en güncel sürümü indirmek ve istemciyi yeni çalıştırılabilir dosya ile yeniden başlatmaktır. İstemci kaldığı yerden ancak uygulanan güncellemelerle devam etmelidir.
 

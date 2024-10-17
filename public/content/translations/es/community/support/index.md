@@ -22,24 +22,40 @@ Comprender la naturaleza descentralizada de Ethereum es vital, ya que todo aquel
 
 A pesar de la falta de apoyo oficial, muchos grupos, comunidades y proyectos en todo el ecosistema Ethereum están deseosos de ayudar, y puede encontrar mucha información y recursos útiles en esta página. ¿Todavía le surgen algunas preguntas? Entonces, únase al chat [Discord de Ethereum.org](/discord/) e intentaremos ayudarle.
 
-## Soporte para la cartera {#wallet-support}
+## Preguntas más frecuentes {#faq}
 
-¿Tiene problemas con su cartera? La mayoría de las carteras tienen equipos de soporte asignados que le pueden ayudar:
+### Envié ETH a una billetera equivocada {#wrong-wallet}
 
-- [MetaMask](https://metamask.zendesk.com/hc/)
-- [Argent](https://support.argent.xyz/hc/)
-- [MyEtherWallet](https://help.myetherwallet.com/)
+Una transacción enviada en Ethereum es irreversible. Desafortunadamente, si ha enviado ETH a la cartera equivocada, no hay forma de recuperar esos fondos. Debido a que no existe organización central, ni ninguna entidad ni persona al frente de Ethereum, nadie puede revertir las transacciones. Por lo tanto, es vital comprobar siempre sus transacciones antes de enviarlas.
 
-_Esta lista no es exhaustiva. ¿Necesita ayuda para encontrar soporte sobre una cartera específica? Únase al Discord de [ethereum.org](https://discord.gg/ethereum-org) e intentaremos ayudarle._
+### ¿Cómo puedo reclamar mi regalo en Ethereum? {#giveaway-scam}
 
-¿Busca una cartera de Ethereum? [Explore nuestra lista completa de carteras Ethereum](/wallets/find-wallet/).
+Los regalos de Ethereum son estafas diseñadas para robarle ETH. No se deje tentar por ofertas que parezcan demasiado buenas para ser verdad, si envía ETH a una dirección de regalo, no recibirá ningún ningún regalo, ni tampoco podrá recuperar sus fondos.
+
+[Más información acerca de la prevención de fraudes.](/security/#common-scams)
+
+### Mi transacción está estancada {#stuck-transaction}
+
+Debido a la demanda de la red, las transacciones en Ethereum pueden a veces estancarse si ha pagado una comisión de la transacción inferior a la requerida. Muchas carteras proporcionan una opción para volver a enviar la misma transacción con una comisión de transacción más elevada y así poder procesar la transacción. Otra alternativa es cancelar una transacción pendiente enviando una transacción a su propia dirección y utilizando el mismo nonce que la transacción pendiente.
+
+[Cómo acelerar o cancelar una transacción pendiente en MetaMask.](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
+
+[Cómo cancelar las transacciones pendientes de Ethereum.](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
+
+### ¿Cómo puedo minar Ethereum? {#mining-ethereum}
+
+Ya no se puede minar en Ethereum. La minería se desactivó cuando Ethereum pasó de [prueba de trabajo](/glossary/#pow) a [prueba de participación](/glossary/#pos). Ahora, en lugar de mineros, Ethereum tiene validadores. Cualquiera puede [hacer staking](/glossary/#staking) de ETH y recibir recompensas de staking por ejecutar el software de validación para asegurar la red.
+
+### ¿Cómo me convierto en staker/ejecuto un validador? {#how-to-stake}
+
+Para convertirse en validador, debe apostar 32 ETH en el contrato de depósito de Ethereum y configurar un nodo de validación. Hay más información disponible en nuestras [páginas de participación](/staking) y en [la plataforma de lanzamiento de participación](https://launchpad.ethereum.org/).
 
 ## Creación de DApps {#building-support}
 
 Crear puede ser difícil. A continuación, le indicamos algunos espacios centrados en el desarrollo con experimentados desarrolladores de Ethereum que estarán dispuestos a ayudarle.
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
-- [Discord de CryptoDevs](https://discord.gg/Z9TA39m8Yu)
+- [Discord de CryptoDevs](https://discord.com/invite/5W5tVb3)
 - [Ethereum Stackexchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
@@ -75,6 +91,7 @@ La mayoría de los equipos que se encargan de la creación de clientes de Ethere
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### Clientes de consenso {#consensus-clients}
 
@@ -85,31 +102,3 @@ La mayoría de los equipos que se encargan de la creación de clientes de Ethere
 - [Lodestar](https://discord.gg/aMxzVcr)
 
 También puede [aprender aquí a ejecutar su propio nodo](/developers/docs/nodes-and-clients/run-a-node/).
-
-## Preguntas más frecuentes {#faq}
-
-### He enviado ETH a una cartera equivocada {#wrong-wallet}
-
-Una transacción enviada en Ethereum es irreversible. Desafortunadamente, si ha enviado ETH a la cartera equivocada, no hay forma de recuperar esos fondos. Debido a que no existe organización central, ni ninguna entidad ni persona al frente de Ethereum, nadie puede revertir las transacciones. Por lo tanto, es vital comprobar siempre sus transacciones antes de enviarlas.
-
-### ¿Cómo puedo reclamar mi regalo en Ethereum? {#giveaway-scam}
-
-Los regalos de Ethereum son estafas diseñadas para robarle ETH. No se deje tentar por ofertas que parezcan demasiado buenas para ser verdad, si envía ETH a una dirección de regalo, no recibirá ningún ningún regalo, ni tampoco podrá recuperar sus fondos.
-
-[Más información acerca de la prevención de fraudes.](/security/#common-scams)
-
-### Mi transacción está estancada {#stuck-transaction}
-
-Debido a la demanda de la red, las transacciones en Ethereum pueden a veces estancarse si ha pagado una comisión de la transacción inferior a la requerida. Muchas carteras proporcionan una opción para volver a enviar la misma transacción con una comisión de transacción más elevada y así poder procesar la transacción. Otra alternativa es cancelar una transacción pendiente enviando una transacción a su propia dirección y utilizando el mismo nonce que la transacción pendiente.
-
-[Cómo acelerar o cancelar una transacción pendiente en MetaMask.](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
-
-[Cómo cancelar las transacciones pendientes de Ethereum.](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
-
-### ¿Cómo puedo minar Ethereum? {#mining-ethereum}
-
-Ya no se puede minar en Ethereum. La minería se desactivó cuando Ethereum pasó de la prueba de trabajo a la prueba de participación. Ahora, en lugar de mineros, Ethereum tiene validadores. Los validadores apuestan ETH y reciben recompensas por asegurar la red.
-
-### ¿Cómo puedo convertirme en participante/validador? {#become-validator}
-
-Para convertirse en validador, debe apostar 32 ETH en el contrato de depósito de Ethereum y configurar un nodo de validación. Hay más información disponible en nuestras [páginas de participación](/staking) y en [la plataforma de lanzamiento de participación](https://launchpad.ethereum.org/).

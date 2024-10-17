@@ -117,7 +117,7 @@ Gli [aggiornamenti di scalabilità](/roadmap/) di Ethereum dovrebbero infine ris
 
 Il ridimensionamento del Livello 2 è un'iniziativa fondamentale per migliorare notevolmente i costi del gas, l'esperienza utente e il ridimensionamento. [Maggiori informazioni sul ridimensionamento del Livello 2](/developers/docs/scaling/#layer-2-scaling).
 
-## Monitoraggio delle commissioni del gas {#moitoring-gas-fees}
+## Monitoraggio delle commissioni del gas {#monitoring-gas-fees}
 
 Se desideri monitorare i prezzi del gas, così da poter inviare i tuoi ETH a un costo inferiore, puoi usare molti strumenti differenti, come:
 

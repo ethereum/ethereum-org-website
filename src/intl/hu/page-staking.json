@@ -16,7 +16,7 @@
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "Ezt a Holesky-teszthálózat-validátort frissíteni kell.",
   "comp-withdrawal-credentials-not-upgraded-2": "A frissítésről szóló útmutatót megtalálja a <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a> oldalon",
   "comp-withdrawal-credentials-verify-mainnet": "Ellenőrzés a főhálózaton",
-  "comp-withdrawal-credentials-verify-holesky": "Ellenőrzés a Holesky teszthálózaton",
+  "comp-withdrawal-credentials-verify-holesky": "Ellenőrzés a Holesky-teszthálózaton",
   "page-staking-withdrawals-when": "Megvalósítva!",
   "page-staking-image-alt": "A képen a letétbe helyezés indítóállásának kabala rinocérosza látható.",
   "page-staking-benefits-1-title": "Jutalmak szerzése",
@@ -35,6 +35,7 @@
   "page-staking-more-on-solo": "Bővebben az önálló letétbe helyezésről",
   "page-staking-learn-more-solo": "Tudjon meg többet az önálló letétbe helyezésről",
   "page-staking-dropdown-saas": "Staking, mint szolgáltatás",
+  "page-staking-saas-with-abbrev": "Letétbe helyezés mint szolgáltatás (SaaS)",
   "page-staking-more-on-saas": "Bővebben a letétbe helyezésről, mint szolgáltatásról",
   "page-staking-learn-more-saas": "Tudjon meg többet a letétbe helyezésről, mint szolgáltatásról",
   "page-staking-dropdown-pools": "Pooled staking",
@@ -186,7 +187,7 @@
   "page-staking-section-comparison-solo-requirements-li1": "Letétbe kell helyezzen 32 ETH-t",
   "page-staking-section-comparison-solo-requirements-li2": "Rendelkezésre kell állnia egy olyan hardvernek, ami egyaránt futtat Ethereum <a href=\"/glossary/#execution-client\">végrehajtási klienst</a> és <a href=\"/glossary/#consensus-client\">konszenzusklienst</a>, miközben az internethez csatlakozik",
   "page-staking-section-comparison-solo-requirements-li3": "A <a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> végigvezeti Önt a folyamat lépésein és a hardverigényeken",
-  "page-staking-section-comparison-saas-requirements-li1": "Letétbe kell helyezzen 32 ETH-t és létrehoznia a kulcsokat, melyben a szolgáltató is segíti Önt",
+  "page-staking-section-comparison-saas-requirements-li1": "Letétbe kell helyezzen 32 ETH-t, és létre kell hoznia a kulcsokat, melyben a szolgáltató is segíti Önt",
   "page-staking-section-comparison-saas-requirements-li2": "A kulcsait biztonságosan kell tárolnia",
   "page-staking-section-comparison-saas-requirements-li3": "A többiről a szolgáltató gondoskodik, bár a szolgáltatási módok eltérők lehetnek",
   "page-staking-section-comparison-pools-requirements-li1": "Kevesebb ETH kell hozzá, bizonyos projekteket már 0.01 ETH-szel is lehet használni",
@@ -228,5 +229,8 @@
   "page-staking-withdrawals-important-notices": "Fontos figyelmeztetések",
   "page-staking-withdrawals-important-notices-desc": "A visszavonás még nem elérhető. További információkért olvassa el az <a href=\"https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/\" target=\"_blank\">Eth2 egyesítés (The Merge) és az egyesítés utáni helyzetre vonatkozó gyakori kérdéseket és válaszokat</a>.",
   "page-upgrades-merge-btn": "A beolvadásról bővebben",
-  "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Iratkozzon fel az EF blogjára</a>, hogy e-mail-értesítéseket kapjon a legfrissebb protokollról szóló bejelentésekről."
+  "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Iratkozzon fel az EF blogjára</a>, hogy e-mail-értesítéseket kapjon a legfrissebb protokollról szóló bejelentésekről.",
+  "page-staking-comparison-with-other-options": "A letétbe helyezési opciók összehasonlítása",
+  "page-staking-any-amount": "Bármekkora összeg",
+  "page-staking-testnet": "tesztelő hálózat"
 }

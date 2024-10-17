@@ -33,6 +33,11 @@ Aprende cómo usar [Web3J](https://github.com/web3j/web3j) y Hyperledger Besu, d
 - [Ejecución de un nodo Besu (Pantheon) de Hyperledger en las pruebas de integración de Java](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
 - [Hoja de Cheat Web3j](https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c)
 
+Aprenda a usar [ethers-kt](https://github.com/Kr1ptal/ethers-kt), una biblioteca Kotlin asíncrona y de alto rendimiento para interactuar con cadenas de bloques basadas en EVM. Dirigido a las plataformas JVM y Android.
+- [Transferencia de tokens ERC20](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/abi/TransferERC20.kt)
+- [Intercambio UniswapV2 con escucha de eventos](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/tokenswapwitheventlistening/TokenSwapWithEventListening.kt)
+- [Rastreador de saldo ETH/ERC20](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/balancetracker/BalanceTracker.kt)
+
 ## Artículos intermedios {#intermediate-articles}
 
 - [Gestión del almacenamiento en una aplicación de Java con IPFS](https://kauri.io/article/3e8494f4f56f48c4bb77f1f925c6d926/managing-storage-in-a-java-application-with-ipfs)
@@ -47,6 +52,7 @@ Aprende cómo usar [Web3J](https://github.com/web3j/web3j) y Hyperledger Besu, d
 
 - [Besu de Hiperledger (Pantheon) (cliente de Ethereum)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (biblioteca para interactuar con los clientes de Ethereum)](https://github.com/web3j/web3j)
+- [ethers-kt (biblioteca Kotlin/Java/Android asíncrona y de alto rendimiento para cadenas de bloques basadas en EVM)](https://github.com/Kr1ptal/ethers-kt)
 - [Evento (Event Listener)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (herramientas de Dev para IPFS)](https://github.com/ConsenSys/mahuta)
 

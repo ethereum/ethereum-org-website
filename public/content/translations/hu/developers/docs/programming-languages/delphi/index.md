@@ -19,7 +19,7 @@ Fejlesszen decentralizált alkalmazásokat Ethereumra, és lépjen interakcióba
 
 **Tegye meg az első lépést, hogy integrálja a Delphi-t az Ethereummal**
 
-Szükséged van egy még kezdetlegesebb alapozóra? Tekintse meg az [ethereum.org/learn](/learn/) vagy az [ethereum.org/developers](/developers/) oldalt.
+Szükséged van egy még kezdetlegesebb alapozóra? Tekintsd meg az [ethereum.org/learn](/learn/) oldalt vagy az [ethereum.org/developers](/developers/) oldalt.
 
 - [Blokklánc ismertetése](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Okosszerződések értelmezése](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -53,4 +53,4 @@ Szükséged van egy még kezdetlegesebb alapozóra? Tekintse meg az [ethereum.or
 - [Delphi és az Ethereumi sötét erdő](https://svanas.medium.com/delphi-and-the-ethereum-dark-forest-5b430da3ad93)
 - [Tokenátváltás a Delphiben](https://svanas.medium.com/swap-one-token-for-another-in-delphi-bcb999c47f7)
 
-Még több anyagot keresel? Tekintse meg az [ethereum.org/developers](/developers/) oldalt.
+Még több anyagot keresel? Tekintsd meg az [ethereum.org/developers](/developers/) oldalt.

@@ -27,7 +27,7 @@ Pour mieux comprendre cette page, nous vous recommandons de commencer par lire c
 #### asset {#asset}
 
 ```solidity
-function asset() public view returns (address)
+function asset() public view returns (address assetTokenAddress)
 ```
 
 Cette fonction retourne l'adresse du jeton sous-jacent utilisé pour le coffre pour la comptabilité, le dépôt, le retrait.
@@ -59,7 +59,7 @@ Cette fonction retourne le montant d'`assets` qui seraient échangés par le cof
 #### maxDeposit {#maxdeposit}
 
 ```solidity
-function maxDeposit(address receiver) public view returns (uint256)
+function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
 Cette fonction retourne le montant maximal des actifs sous-jacents qui peuvent être déposés en un seul appel de [`deposit`](#deposit) par le `receiver`.
@@ -67,7 +67,7 @@ Cette fonction retourne le montant maximal des actifs sous-jacents qui peuvent �
 #### previewDeposit {#previewdeposit}
 
 ```solidity
-function previewDeposit(uint256 assets) public view returns (uint256)
+function previewDeposit(uint256 assets) public view returns (uint256 shares)
 ```
 
 Cette fonction permet aux utilisateurs de simuler les effets de leur dépôt sur le bloc actuel.
@@ -83,7 +83,7 @@ Cette fonction dépose les `assets` de jetons sous-jacents dans le coffre et acc
 #### maxMint {#maxmint}
 
 ```solidity
-function maxMint(address receiver) public view returns (uint256)
+function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
 Cette fonction retourne le nombre maximum d'actions qui peuvent être produites en un seul appel [`mint`](#mint) par le `receiver`.
@@ -91,7 +91,7 @@ Cette fonction retourne le nombre maximum d'actions qui peuvent être produites 
 #### previewMint {#previewmint}
 
 ```solidity
-function previewMint(uint256 shares) public view returns (uint256)
+function previewMint(uint256 shares) public view returns (uint256 assets)
 ```
 
 Cette fonction permet aux utilisateurs de simuler les effets de leur frappe sur le bloc actuel.
@@ -107,7 +107,7 @@ Cette fonction produit exactement `shares` actions du coffre au `receiver` en d�
 #### maxWithdraw {#maxwithdraw}
 
 ```solidity
-function maxWithdraw(address owner) public view returns (uint256)
+function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
 Cette fonction retourne le montant maximal des actifs sous-jacents qui peuvent être retirés du solde de l'`owner` en un seul appel à la fonction [`withdraw`](#withdraw).
@@ -115,7 +115,7 @@ Cette fonction retourne le montant maximal des actifs sous-jacents qui peuvent �
 #### previewWithdraw {#previewwithdraw}
 
 ```solidity
-function previewWithdraw(uint256 assets) public view returns (uint256)
+function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 ```
 
 Cette fonction permet aux utilisateurs de simuler les effets de leur retrait sur le bloc actuel.
@@ -131,7 +131,7 @@ Cette fonction détruit `shares` de l'`owner` et envoie exactement `assets` jeto
 #### maxRedeem {#maxredeem}
 
 ```solidity
-function maxRedeem(address owner) public view returns (uint256)
+function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
 Cette fonction retourne le montant maximum d'actions qui peuvent être rachetées du solde de l'`orner` par un appel à la fonction [`redeem`](#redeem).
@@ -139,7 +139,7 @@ Cette fonction retourne le montant maximum d'actions qui peuvent être rachetée
 #### previewRedeem {#previewredeem}
 
 ```solidity
-function previewRedeem(uint256 shares) public view returns (uint256)
+function previewRedeem(uint256 shares) public view returns (uint256 assets)
 ```
 
 Cette fonction permet aux utilisateurs de simuler les effets de leur rachat sur le bloc actuel.
@@ -168,6 +168,10 @@ function balanceOf(address owner) public view returns (uint256)
 
 Renvoie le nombre total d'actions détenues par l'`owner`.
 
+### Plan de l'interface {#mapOfTheInterface}
+
+![Plan de l'interface ERC-4626](./map-of-erc-4626.png)
+
 ### Évènements {#events}
 
 #### Événement de dépôt
@@ -195,7 +199,7 @@ event Withdraw(
     address indexed receiver,
     address indexed owner,
     uint256 assets,
-    uint256 share
+    uint256 shares
 )
 ```
 

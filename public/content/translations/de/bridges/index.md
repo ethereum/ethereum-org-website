@@ -6,32 +6,32 @@ lang: de
 
 # Blockchain-Brücken {#prerequisites}
 
-_Web3 hat sich zu einem Ökosystem von L1 Blockchains und L2 Skalierungslösungen entwickelt, die jeweils mit einzigartigen Fähigkeiten und Gegenleistungen entwickelt wurden. Mit dem Anstieg der Anzahl der Blockchain-Protokolle erhöht sich auch [das Bedürfnis, Vermögenswerte über Blockchains hinweg verschieben zu können](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)). Um diesem Bedürfnis gerecht zu werden, brauchen wir Brücken._
+_Web3 hat sich zu einem Ökosystem von L1 Blockchains und L2 Skalierungslösungen entwickelt, die jeweils mit einzigartigen Fähigkeiten und Gegenleistungen entwickelt wurden. Mit zunehmender Zahl der Blockchain-Protokolle steigt auch das Bedürfnis danach, Assets über Blockchains hinweg zu verschieben. Um diesem Bedürfnis gerecht zu werden, brauchen wir Brücken._
 
 <Divider />
 
 ## Was sind Brücken? {#what-are-bridges}
 
-Blockchain-Brücken funktionieren genau wie Brücken in der realen Welt. Genau wie eine Brücke zwei Orte in der realen Welt verbindet, verbindet eine Blockchain-Brücke zwei Blockchain-Ökosysteme. Blockchain-Brücken erleichtern die Kommunikation zwischen Blockchains. Dies wird durch den Austausch von Informationen und Vermögenswerten erreicht.
+Blockchain-Brücken funktionieren genau wie Brücken in der realen Welt. Genau wie eine Brücke zwei Orte in der realen Welt verbindet, verbindet eine Blockchain-Brücke zwei Blockchain-Ökosysteme. **Brücken vereinfachen die Kommunikation zwischen Blockchains durch die Übertragung von Informationen und Assets**.
 
 Sehen wir uns ein Beispiel an:
 
 Sie kommen aus den USA und planen eine Reise nach Europa. Sie haben USD aber benötigen zum Bezahlen EUR. Um Ihre USD in EUR umzutauschen, können Sie gegen eine geringe Gebühr einen Währungstausch durchführen.
 
-Aber was machen Sie, wenn Sie einen ähnlichen Umtausch durchführen möchten, um eine andere Blockchain zu benutzen? Angenommen, Sie möchten ETH auf dem Ethereum-Hauptnetzwerk in ETH auf [Arbitrum](https://arbitrum.io/) umtauschen. Genau wie der Währungstausch, den wir bei EUR durchgeführt haben, brauchen wir einen Mechanismus, um ETH von Ethereum zu Arbitrum umzutauschen. Brücken machen so eine Transaktion möglich. In diesem Fall hat [Arbitrum eine lokale Brücke](https://bridge.arbitrum.io/), welche ETH vom Hauptnetzwerk zu Arbitrum transferieren kann.
+Aber was tun Sie, wenn Sie einen ähnlichen Austausch durchführen möchten, um eine andere [Blockchain](/glossary/#blockchain) zu benutzen? Angenommen, Sie möchten [ETH](/glossary/#ether) auf dem Ethereum Mainnet gegen ETH auf [Arbitrum](https://arbitrum.io/) tauschen. Genau wie der Währungstausch, den wir bei EUR durchgeführt haben, brauchen wir einen Mechanismus, um ETH von Ethereum zu Arbitrum umzutauschen. Brücken machen so eine Transaktion möglich. In diesem Fall hat [Arbitrum eine lokale Brücke](https://bridge.arbitrum.io/), welche ETH vom Hauptnetzwerk zu Arbitrum transferieren kann.
 
 ## Warum brauchen wir Brücken? {#why-do-we-need-bridges}
 
-Alle Blockchains haben ihre Grenzen. Damit Ethereum skalieren und mit der Nachfrage Schritt halten kann, benötigt es Rollups. Alternativ sind L1s wie Solana und Avalanche anders konzipiert worden, um einen höheren Durchsatz zu ermöglichen. Dies geschieht aber auf Kosten der Dezentralität.
+Alle Blockchains haben ihre Grenzen. Damit Ethereum mit der Nachfrage mithalten und skalieren kann, sind [Rollups](/glossary/#rollups) erforderlich. Alternativ sind L1s wie Solana und Avalanche anders konzipiert worden, um einen höheren Durchsatz zu ermöglichen. Dies geschieht aber auf Kosten der Dezentralität.
 
-Allerdings entwickeln sich alle Blockchains in isolierten Umgebungen und haben unterschiedliche Regeln und Konsensmechanismen. Das bedeutet, dass sie in Ihrer Urform nicht miteinander kommunizieren können, und Token können sich nicht frei zwischen den Blockchains bewegen.
+Jedoch entwickeln sich alle Blockchains in isolierten Umgebungen und haben verschiedene Regeln und [Konsens](/glossary/#consensus)-Mechanismen. Das bedeutet, dass sie in Ihrer Urform nicht miteinander kommunizieren können, und Token können sich nicht frei zwischen den Blockchains bewegen.
 
 Brücken existieren, um Blockchains miteinander zu verbinden. Sie erlauben den Transfer von Informationen und Token zwischen den Blockchains.
 
-Folgendes wird durch Brücken ermöglicht:
+**Brücken ermöglichen**:
 
 - der Chain-übergreifende Transfer von Assets und Informationen.
-- dApps können auf die Stärken verschiedener Blockchains zugreifen und so ihre Fähigkeiten erweitern (da die Protokolle nun mehr Gestaltungsmöglichkeiten für Innovationen haben).
+- den Zugriff auf die Stärken verschiedener Blockchains durch [DApps](/glossary/#dapp) – wodurch sich ihre Fähigkeiten verbessern (da Protokolle nun mehr Gestaltungsspielraum für Innovationen haben).
 - Benutzer können auf neue Plattformen zugreifen, und die Vorteile verschiedener Blockchains zu nutzen.
 - Entwickler aus verschiedenen Blockchain-Ökosystemen können zusammenarbeiten, um neue Plattformen für die Benutzer zu erschaffen.
 
@@ -57,7 +57,7 @@ Wenn Sie ETH auf dem Ethereum-Hauptnetzwerk haben und ein alternatives L1 erkund
 
 ### Erhalten Sie native Krypto-Vermögenswerte {#own-native}
 
-Nehmen wir an, Sie möchten native Bitcoin (BTC) besitzen, aber Sie haben nur Geld auf dem Ethereum-Hauptnetzwerk. Um Bitcoin auf Ethereum zu besitzen, können Sie Wrapped Bitcoin (WBTC) kaufen. WBTC ist ein ERC-20 Token, der auf dem Netzwerk von Ethereum zu Hause ist, damit sozusagen eine Ethereum-Version von Bitcoin. WBTC ist aber nicht der ursprüngliche Bitcoin auf der Bitcoin-Blockchain. Um ursprüngliche BTC zu besitzen, muss eine Brücke zwischen Ethereum und Bitcoin genutzt werden. Mit dieser Brücke lässt sich WBTC in ursprüngliche BTC umwandeln. Nehmen wir an, Sie besitzen BTC und möchten Defi-Protokolle in Ethereum nutzen. Dann müssten Sie Ihre BTC in WBTC umwandeln, welche Sie dann als Vermögenswert in Ethereum nutzen können.
+Nehmen wir an, Sie möchten native Bitcoin (BTC) besitzen, aber Sie haben nur Geld auf dem Ethereum-Hauptnetzwerk. Um Bitcoin auf Ethereum zu besitzen, können Sie Wrapped Bitcoin (WBTC) kaufen. Jedoch ist WBTC ein [ERC-20](/glossary/#erc-20)-Token, das im Ethereum-Netzwerk nativ ist, d. h. es ist eine Ethereum-Version von Bitcoin und nicht das originale Asset auf der Bitcoin-Blockchain. Um ursprüngliche BTC zu besitzen, muss eine Brücke zwischen Ethereum und Bitcoin genutzt werden. Mit dieser Brücke lässt sich WBTC in ursprüngliche BTC umwandeln. Alternativ besitzen Sie vielleicht BTC und möchten diese in Ethereum-[DeFi](/glossary/#defi)-Protokollen nutzen. Dann müssten Sie Ihre BTC in WBTC umwandeln, welche Sie dann als Vermögenswert in Ethereum nutzen können.
 
 <InfoBanner shouldCenter emoji=":bulb:">
   Sie können all dies auch mit <a href="/get-eth/">zentralisierten Krypto-Börsen</a> tun. Wenn Ihr Guthaben jedoch nicht bereits auf einer Krypto-Börse ist, würde dies mehrere Schritte erfordern, und es wäre wahrscheinlich besser, eine Brücke zu benutzen.
@@ -69,11 +69,11 @@ Nehmen wir an, Sie möchten native Bitcoin (BTC) besitzen, aber Sie haben nur Ge
 
 Brücken haben viele Arten von Entwürfen und Verkomplizierungen. Im Allgemeinen fallen Brücken in zwei Kategorien: vertrauenswürdige und vertrauenslose Brücken.
 
-| Vertrauenswürdige Brücken                                                                                                                             | Vertrauenslose Brücken                                                                                                  |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Vertrauenswürdige Brücken sind für ihre Operationen von einer zentralen Einheit oder einem zentralen System abhängig.                                 | Vertrauenslose Brücken arbeiten mit intelligenten Verträgen und Algorithmen.                                            |
-| Sie haben Vertrauen in die Verwahrung der Mittel und die Sicherheit der Brücke. Die Benutzer sind meist auf den Ruf des Brückenbetreibers angewiesen. | Sie sind vertrauenslos, d. h. die Sicherheit der Brücke ist die gleiche wie die der zugrunde liegenden Blockchain.      |
-| Benutzer müssen die Kontrolle über ihre Krypto-Assets aufgeben.                                                                                       | Durch intelligente Verträge ermöglichen vertrauenslose Brücken den Nutzern, die Kontrolle über ihre Gelder zu behalten. |
+| Vertrauenswürdige Brücken                                                                                                                             | Vertrauenslose Brücken                                                                                                                            |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Vertrauenswürdige Brücken sind für ihre Operationen von einer zentralen Einheit oder einem zentralen System abhängig.                                 | Vertrauenslose Brücken arbeiten mit intelligenten Verträgen und Algorithmen.                                                                      |
+| Sie haben Vertrauen in die Verwahrung der Mittel und die Sicherheit der Brücke. Die Benutzer sind meist auf den Ruf des Brückenbetreibers angewiesen. | Sie sind vertrauenslos, d. h. die Sicherheit der Brücke ist die gleiche wie die der zugrunde liegenden Blockchain.                                |
+| Benutzer müssen die Kontrolle über ihre Krypto-Assets aufgeben.                                                                                       | Vertrauenslose Brücken ermögliches es Nutzern via [Smart Contracts](/glossary/#smart-contract), die Kontrolle über ihre Finanzmittel zu behalten. |
 
 Kurz gesagt, wir können sagen, dass vertrauenswürdige Brücken auf Vertrauensannahmen beruhen, während vertrauenslose Brücken vertraulich minimiert werden und keine neuen Vertrauensannahmen treffen, die über die der zugrunde liegenden Domain hinausgehen. So können diese Begriffe beschrieben werden:
 
@@ -87,7 +87,7 @@ Stellen Sie sich vor, Sie sind am Sicherheitskontrollpunkt eines Flughafens. Es 
 1. Manuelle Checkpoints – betrieben von Beamten, die alle Details Ihres Tickets und Ihrer Identität vor der Übergabe der Bordkarte manuell überprüfen.
 2. Self Check-In — betrieben von einer Maschine, in der Sie Ihre Flugdaten eintragen und die Bordkarte erhalten, wenn alles korrekt ist.
 
-Manuelle Kontrollpunkte sind ähnlich wie ein vertrauenswürdiges Modell, da es von einem Dritten, d. h. den Beamten, für seine Operationen abhängt. Als Benutzer vertrauen Sie den Beamten, die richtigen Entscheidungen zu treffen und Ihre persönlichen Daten korrekt zu verwenden.
+Ein manueller Checkpoint ist ähnlich wie ein vertrauenswürdiges Modell, da sein Funktionieren von einer Drittpartei, z. B. den Officials, abhängig ist. Als Benutzer vertrauen Sie den Beamten, die richtigen Entscheidungen zu treffen und Ihre persönlichen Daten korrekt zu verwenden.
 
 Self Check-in ist ähnlich einem vertrauenslosen Modell, da es die Rolle des Betreibers entfernt und die Technologie für seine Operationen verwendet. Benutzer behalten immer die Kontrolle über ihre Daten und müssen Dritten keine privaten Informationen anvertrauen.
 
@@ -126,9 +126,3 @@ Brücken sind von entscheidender Bedeutung für Benutzer, die Ethereum L2s und s
 - [EIP-5164: Cross-Chain-Ausführung](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18. Juni 2022 - Brendan Asselstine_
 - [L2Bridge Risiko-Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5. Juli 2022 - Bartek Kiepuszewski_
 - [„Warum die Zukunft eine Multi-Chain, aber keine Cross-Chain sein wird."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _8. Januar 2022 - Vitalik Buterin_
-- [Was sind Blockchain-Brücken und wie können wir sie klassifizieren?](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _18. Februar 2021 - Arjun Chand_
-- [Was sind Cross-Chain-Brücken?](https://www.alchemy.com/overviews/cross-chain-bridges) _10. Mai 2022 - Alchemy_
-- [Blockchain-Brücken: Netzwerke von Kryptonetzwerken bauen](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _8. September 2021 - Dmitriy Berenzon_
-- [Brücken im Krypto-Raum](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _23. August 2021 - Ben Adar Hyman_
-- [Das Trilemma der Interoperabilität](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _1. Oktober 2021 - Arjun Bhuptani_
-- [Die Brücke sichern: Cross-Chain-Kommunikation richtig durchgeführt](https://medium.com/dragonfly-research/secure-the-bridge-cross-chain-communication-done-right-part-i-993f76ffed5d) _23. August 2021 - Celia Wan_

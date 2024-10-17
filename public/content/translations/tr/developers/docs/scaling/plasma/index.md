@@ -162,10 +162,7 @@ Ethereum blokzincirini parçalamanın artık yol haritasında yer almadığını
 
 Birden çok proje, merkeziyetsiz uygulamalarınıza entegre edebileceğiniz Plazma uygulamaları sağlar:
 
-- [OMG Network](https://omg.network/)
-- [Polygon](https://polygon.technology/) (eskiden Matic Network)
-- [Gluon](https://gluon.network/)
-- [LeapDAO](https://ipfs.leapdao.org/)
+- [Polygon](https://polygon.technology/) (önceden Matic Network)
 
 ## Daha fazla okuma {#further-reading}
 

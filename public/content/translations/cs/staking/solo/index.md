@@ -4,7 +4,7 @@ description: Přehled toho, jak začít samostatně vkládat ETH
 lang: cs
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-saas.png
 alt: Nosorožec Leslie na svém vlastním počítačovém čipu.
 sidebarDepth: 2
 summaryPoints:
@@ -19,7 +19,7 @@ Samostatný vklad je akt [spuštění uzlu Ethereum](/run-a-node/) připojeného
 
 **Samostatný vklad zvyšuje decentralizaci sítě Ethereum**, díky čemuž je Ethereum odolnější vůči cenzuře a odolnější vůči útokům. Jiné metody vkladů nemusí síti pomoci stejným způsobem. Samostatný vklad je nejlepší možností vkládání pro zajištění Etherea.
 
-Uzel Ethereum se skládá jak z klienta prováděcí vrstvy (EL), tak z klienta konsensuální vrstvy (CL). Tito klienti jsou software, který společně s platnou sadou podpisových klíčů ověřuje transakce a bloky, osvědčuje správnému vedoucímu řetězce, shromažďuje atestace a navrhuje bloky.
+Uzel Ethereum se skládá jak z klienta prováděcí vrstvy (EL), tak z klienta konsensuální vrstvy (CL). Tyto klienty jsou software, který společně s platnou sadou podpisových klíčů ověřuje transakce a bloky, osvědčuje správnému vedoucímu řetězce, shromažďuje atestace a navrhuje bloky.
 
 Samostatní vkladatelé jsou zodpovědní za provoz hardwaru potřebného ke spuštění těchto klientů. Důrazně se doporučuje používat k tomu vyhrazený počítač, který obsluhujete z domova – to je mimořádně prospěšné pro zdraví sítě.
 
@@ -53,7 +53,7 @@ Vyžaduje také velmi základní nastavení hardwaru a určité porozumění min
 </ExpandableCard>
 
 <ExpandableCard title="Bezpečná správa klíčů" eventCategory="SoloStaking" eventName="clicked secure key management">
-Stejně jako soukromé klíče zajišťují vaši adresu Ethereum, budete muset vygenerovat klíče speciálně pro váš validátor. Musíte rozumět tomu, jak uchovat všechny počáteční fráze nebo soukromé klíče v bezpečí.{' '}
+Stejně jako privátní klíče zajišťují vaši adresu Ethereum, budete muset vygenerovat klíče speciálně pro váš validátor. Musíte rozumět tomu, jak uchovat všechny počáteční fráze nebo privátní klíče v bezpečí.{' '}
 
 <a href="/security/">Zabezpečení Etherea a prevence podvodů</a>
 </ExpandableCard>
@@ -123,13 +123,13 @@ Máte návrh na vkladový nástroj, který nám chyběl? Podívejte se na naše 
 
 <StakingGuides />
 
-## Často kladené otázky {#faq}
+## Často kladené dotazy {#faq}
 
 Toto je několik nejčastějších otázek týkajících se vkládání, které stojí za to vědět.
 
 <ExpandableCard title="Co je to validátor?">
 
-<em>Validátor</em> je virtuální entita, která žije na Ethereu a účastní se konsenzu protokolu Ethereum. Validátory jsou reprezentovány zůstatkem, veřejným klíčem a dalšími vlastnostmi. <em>Klient validátoru</em> je software, který jedná jménem validátoru tím, že drží a používá jeho soukromý klíč. Jeden klient validátoru může pojmout mnoho párů klíčů a ovládat mnoho validátorů.
+<em>Validátor</em> je virtuální entita, která žije na Ethereu a účastní se konsenzu protokolu Ethereum. Validátory jsou reprezentovány zůstatkem, veřejným klíčem a dalšími vlastnostmi. <em>Klient validátoru</em> je software, který jedná jménem validátoru tím, že drží a používá jeho privátní klíč. Jeden klient validátoru může pojmout mnoho párů klíčů a ovládat mnoho validátorů.
 
 </ExpandableCard>
 
@@ -156,7 +156,7 @@ Existuje jen několik konkrétních způsobů, které mohou vést k tomu, že va
 
 Provozování supervětšinového klienta (jakéhokoli klienta používaného více než 2/3 sítě) také nese riziko potenciálního trestu v případě, že tento klient má chybu, která vede k rozvětvení řetězce. To může mít za následek vadnou vidlici, která se finalizuje. Oprava zpět na zamýšlený řetězec by vyžadovala odeslání <em>prostorového hlasování</em> pokusem o vrácení dokončeného bloku. Za to můžete být také potrestáni. Lze se tomu vyhnout tím, že místo toho spustíte menšinového klienta.
 
-Ekvivalentní chyby v <em>menšinovém klientovi by se nikdy nedokončily</em>, a proto by nikdy nevedly k prostorovému hlasování a jednoduše by vedly k penalizaci za nečinnost, <em>nikoli trestu</em>.
+Ekvivalentní chyby v <em>menšinovém klientu by se nikdy nedokončily</em>, a proto by nikdy nevedly k prostorovému hlasování a jednoduše by vedly k penalizaci za nečinnost, <em>nikoli trestu</em>.
 
 <ul>
   <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">Zjistěte více o důležitosti provozování menšinového klienta.</a></li>
@@ -164,10 +164,10 @@ Ekvivalentní chyby v <em>menšinovém klientovi by se nikdy nedokončily</em>, 
 </ul>
 </ExpandableCard>
 
-<ExpandableCard title="Který směr je lepší?">
-Jednotliví klienti se mohou mírně lišit, pokud jde o výkon a uživatelské rozhraní, protože každý je vyvíjen různými týmy pomocí různých programovacích jazyků. Jak již bylo řečeno, žádný z nich není „nejlepší“ Všichni produkční klienti jsou vynikající softwary, které všechny provádějí stejné základní funkce pro synchronizaci a interakci s blockchainem.
+<ExpandableCard title="Který klient je lepší?">
+Jednotlivé klienty se mohou mírně lišit, pokud jde o výkon a uživatelské rozhraní, protože každý je vyvíjen různými týmy pomocí různých programovacích jazyků. Jak již bylo řečeno, žádný z nich není „nejlepší“ Všechny produkční klienty jsou vynikající softwary, které všechny provádějí stejné základní funkce pro synchronizaci a interakci s blockchainem.
 
-Protože všichni produkční klienti poskytují stejnou základní funkcionalitu, je ve skutečnosti velmi důležité, abyste si vybrali <strong>menšinového klienta</strong>, což znamená jakéhokoli klienta, kterého momentálně NEPOUŽÍVÁ většina validátorů v síti. Může to znít neintuitivně, ale provozování většinového nebo supervětšinového klienta vás vystavuje zvýšenému riziku trestu v případě chyby v tomto klientovi. Provozování menšinového klienta tato rizika drasticky omezuje.
+Protože všechny produkční klienty poskytují stejnou základní funkcionalitu, je ve skutečnosti velmi důležité, abyste si vybrali <strong>menšinového klienta</strong>, což znamená jakéhokoli klienta, kterého momentálně NEPOUŽÍVÁ většina validátorů v síti. Může to znít neintuitivně, ale provozování většinového nebo supervětšinového klienta vás vystavuje zvýšenému riziku trestu v případě chyby v tomto klientu. Provozování menšinového klienta tato rizika drasticky omezuje.
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Další informace o tom, proč je rozmanitost klientů kritická</a>
 </ExpandableCard>

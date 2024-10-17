@@ -116,4 +116,4 @@ Tenemos previsto ampliar la funcionalidad próximamente para añadir contenido e
 
 ## Contáctenos {#contact}
 
-Gracias por leer esta explicación. Esperemos que le sea de ayuda para colaborar con nuestro programa. No dude en unirse a nuestro [canal de traducción de Discord](https://discord.gg/XVepFu7sqR) para hacer preguntas y colaborar con otros traductores, o escríbanos a translations@ethereum.org.
+Gracias por leer esta explicación. Esperemos que le sea de ayuda para colaborar con nuestro programa. ¡Siéntase libre de unirse a nuestro [canal de traducción de Discord](https://discord.gg/ethereum-org) para hacer preguntas y colaborar con otros traductores, o escríbanos a translations@ethereum.org!

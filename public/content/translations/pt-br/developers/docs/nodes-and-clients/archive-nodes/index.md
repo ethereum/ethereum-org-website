@@ -56,7 +56,7 @@ Antes de iniciar seu próprio nó de arquivo, aprenda sobre as diferenças entre
 
 ## Práticas recomendadas
 
-Além das [recomendações gerais para executar um nó](/developers/docs/nodes-and-clients/run-a-node/), um nó de arquivo pode demandar mais hardware e manutenção. Considerando as [principais funcionalidades](https://github.com/ledgerwatch/erigon#key-features) do Erigon, a abordagem mais prática é usar a implementação cliente do [Erigon](/developers/docs/nodes-and-clients/#erigon).
+Além das [recomendações gerais para executar um nó](/developers/docs/nodes-and-clients/run-a-node/), um nó de arquivo pode exigir mais hardware e manutenção. Considerando as [principais funcionalidades](https://github.com/ledgerwatch/erigon#key-features) do Erigon, a abordagem mais prática é usar a implementação cliente do [Erigon](/developers/docs/nodes-and-clients/#erigon).
 
 ### Hardware
 

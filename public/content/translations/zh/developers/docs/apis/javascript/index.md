@@ -8,7 +8,7 @@ lang: zh
 
 为此，每种以太坊客户端都实现了 [JSON-RPC](/developers/docs/apis/json-rpc/) 规范，因而应用程序可以依赖一组统一的[方法](/developers/docs/apis/json-rpc/#json-rpc-methods)。
 
-如果你想要用 JavaScript 连接到一个以太坊节点， 可以使用原生 JavaScript，不过生态系统中存在一些方便的库，使得这个事情变得更加容易。 通过这些库，开发者可以写下直观易懂甚至单行的代码就能初始化与以太坊的互动（背后使用 JSON RPC 请求）。
+如果你想要用 JavaScript 连接到一个以太坊节点， 可以使用原生 JavaScript，不过生态系统中存在一些方便的库，使得这个事情变得更加容易。 通过这些库，开发者可以方便地写下直观的一行函数来初始化（后端的）JSON RPC 请求并用于与以太坊进行交互。
 
 请注意，[合并](/roadmap/merge/)后，运行节点需要两种互联的以太坊软件 - 执行客户端和共识客户端。 请确保你的节点同时包含执行客户端和共识客户端。 如果你的节点不在本地计算机上（例如，你的节点在 AWS 实例上运行），请相应地更新教程中的 IP 地址。 有关更多信息，请参阅我们关于[运行节点](/developers/docs/nodes-and-clients/run-a-node/)的页面。
 
@@ -29,12 +29,12 @@ lang: zh
 **Ethers 示例**
 
 ```js
-// A Web3Provider wraps a standard Web3 provider, which is
-// what MetaMask injects as window.ethereum into each page
-const provider = new ethers.providers.Web3Provider(window.ethereum)
+// 一个浏览器提供程序包装了一个标准 Web3 提供程序，后者由
+// MetaMask 作为 window.ethereum 注入每个页面
+const provider = new ethers.BrowserProvider(window.ethereum)
 
-// The MetaMask plugin also allows signing transactions to
-// send ether and pay to change state within the blockchain.
+// MetaMask 插件还允许为交易签名，
+// 以发送以太币并付款改变区块链内的状态。
 // 为此，我们需要帐户签名者...
 const signer = provider.getSigner()
 ```
@@ -80,19 +80,19 @@ var web3 = new Web3(
 // 从助记符创建一个钱包实例...
 mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
-walletMnemonic = Wallet.fromMnemonic(mnemonic)
+walletMnemonic = Wallet.fromPhrase(mnemonic)
 
-// ...或者从一个私有密匙中创建
+// ...或者来自一个私钥
 walletPrivateKey = new Wallet(walletMnemonic.privateKey)
 
 walletMnemonic.address === walletPrivateKey.address
 // true
 
-// 每个签署 API 都是一个异步操作地址
+// 根据签名者应用程序接口，该地址为 Promise
 walletMnemonic.getAddress()
 // { Promise: '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1' }
 
-// 每个钱包地址同时也可以是同步的
+// 钱包地址也可同步使用
 walletMnemonic.address
 // '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1'
 
@@ -102,7 +102,7 @@ walletMnemonic.privateKey
 walletMnemonic.publicKey
 // '0x04b9e72dfd423bcf95b3801ac93f4392be5ff22143f9980eb78b3a860c4843bfd04829ae61cdba4b3b1978ac5fc64f5cc2f4350e35a108a9c9a92a81200a60cd64'
 
-// 钱包的助记符（mnemonic）
+// 钱包助记词
 walletMnemonic.mnemonic
 // {
 //   locale: 'en',
@@ -110,12 +110,12 @@ walletMnemonic.mnemonic
 //   phrase: 'announce room limb pattern dry unit scale effort smooth jazz weasel alcohol'
 // }
 
-// 注意：使用私有密匙创建的钱包没有
-//       从助记符（被原生屏蔽）
+// 注意：使用私钥创建的钱包
+//       没有助记词（派生阻止了它）
 walletPrivateKey.mnemonic
 // null
 
-// 签署一个信息
+// 为信息签名
 walletMnemonic.signMessage("Hello World")
 // { Promise: '0x14280e5885a19f60e536de50097e96e3738c7acae4e9e62d67272d794b8127d31c03d9cd59781d4ee31fb4e1b893bd9b020ec67dfa65cfb51e2bdadbb1de26d91c' }
 
@@ -124,20 +124,21 @@ tx = {
   value: utils.parseEther("1.0"),
 }
 
-// 签署一笔交易
+// 为交易签名
 walletMnemonic.signTransaction(tx)
 // { Promise: '0xf865808080948ba1f109551bd432803012645ac136ddd64dba72880de0b6b3a7640000801ca0918e294306d177ab7bd664f5e141436563854ebe0a3e523b9690b4922bbb52b8a01181612cec9c431c4257a79b8c9f0c980a2c49bb5a0e6ac52949163eeb565dfc' }
 
-// 这个连接方法会返回一个新的连接到提供者的钱包实例
+// connect 方法返回连接到提供程序
+// 的 Wallet 的新实例
 wallet = walletMnemonic.connect(provider)
 
-// 查询以太坊网络
+// 查询网络
 wallet.getBalance()
 // { Promise: { BigNumber: "42" } }
 wallet.getTransactionCount()
 // { Promise: 0 }
 
-// 发送 Ether
+// 发送以太币
 wallet.sendTransaction(tx)
 ```
 

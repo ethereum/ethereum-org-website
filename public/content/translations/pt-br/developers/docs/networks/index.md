@@ -50,6 +50,7 @@ As duas redes de testes públicas que os desenvolvedores dos clientes estão atu
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Faucets
 
@@ -60,6 +61,7 @@ As duas redes de testes públicas que os desenvolvedores dos clientes estão atu
 - [Faucet do Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Faucet do Infura Sepolia](https://www.infura.io/faucet)
 - [Faucet da Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [Faucet do ecossistema Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli _(suporte a longo prazo)_ {#goerli}
 
@@ -76,6 +78,7 @@ Goerli é a rede de testes usada para testar a validação e staking. A rede Goe
 - [Site](https://goerli.net/)
 - [GitHub](https://github.com/eth-clients/goerli)
 - [Etherscan](https://goerli.etherscan.io)
+- [Blockscout](https://eth-goerli.blockscout.com/)
 
 ##### Faucets
 

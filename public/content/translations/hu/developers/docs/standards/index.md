@@ -40,6 +40,7 @@ A különböző típusokról és kategóriákról részletesebb információ az 
 ### Token szabványok {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) – Egy sztenderd interfész a helyettesíthető (cserélhető) tokenekhez, például a szavazási és letéti tokenekhez vagy a virtuális valutákhoz.
+  - [ERC-223](/developers/docs/standards/tokens/erc-223/) - Egy helyettesíthető tokenszabvány, melynek révén a tokenek az etherrel azonosan működnek, és támogatja a tokenküldés kezelését a fogadó oldalán.
   - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) – Egy tokeninterfészt határoz meg az ERC-20 tokenek számára, amely támogatja a címzett kód végrehajtását a transfer vagy transferFrom után, illetve a feladó kódját a jóváhagyás után.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) – Egy sztenderd interfész a nem helyettesíthető tokenekhez, például egy műalkotásról szóló okirathoz vagy egy dalhoz.
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) – Egy szabványosított esemény, amelyet egy vagy több, egymást követő tokenazonosítókat használó, nem helyettesítő token létrehozásakor/átadásakor bocsátanak ki.
@@ -55,4 +56,4 @@ Tudjon meg többet a [tokenszabványokról](/developers/docs/standards/tokens/).
 
 - [Ethereum Fejlesztési Javaslatok (EIP-k)](/eips/)
 
-_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
+_Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_

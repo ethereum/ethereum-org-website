@@ -5,7 +5,7 @@ lang: hu
 sidebarDepth: 3
 ---
 
-A blokkfelfedezők a portálod az Ethereum adataihoz. Használatukkal valós idejű adatokat kaphatsz blokkokról, tranzakciókról, bányászokról, számlákról és más on-chain tevékenységről.
+A blokkfelfedezők a portálod az Ethereum adataihoz. Használatukkal valós idejű adatokat kaphat a blokkokról, tranzakciókról, validátorokról, számlákról és más on-chain tevékenységekről.
 
 ## Előfeltételek {#prerequisites}
 
@@ -25,8 +25,12 @@ Először meg kellene értened az Ethereum alapvető fogalmait ahhoz, hogy érte
 - [Ethplorer](https://ethplorer.io/) –_Kínai, spanyol, francia, török, orosz, koreai és vietnámi nyelven is elérhető_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Otterscan](https://otterscan.io/)
 - [Rantom](https://rantom.app/)
+
+## Nyílt forráskódú eszközök {#open-source-tools}
+
+- [Otterscan](https://otterscan.io/)
+- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 
 ## Adat {#data}
 
@@ -50,7 +54,7 @@ Az Ethereum hálózata minden 12 másodpercben új blokkal bővül (kivéve, ha 
 - Gaskorlátozás – a blokkban foglalt tranzakciók által beállított teljes gaskorlátozás.
 - Alapdíj/gas – az a minimumszorzó, amely egy tranzakció felvételéhez szükséges az adott blokkba.
 - Elégetett díjak – a blokkban elégetett ETH mennyisége.
-- Extra adat – Bármely extra adat, amelyet a bányász belefoglalt a blokkba.
+- Extra adat – Bármely extra adat, amelyet a blokképítő belefoglalt a blokkba
 
 **Haladó adat**
 
@@ -78,12 +82,12 @@ A blokkfelfedezők bevett eszközzé váltak az emberek kezében, hogy nyomon k�
 - Tranzakcióhash – a tranzakció elküldésekor a rendszer által generált hashérték.
 - Állapot – jelzés arról, hogy a tranzakció függőben van, meghiúsult vagy sikeres volt.
 - Blokk – a blokk, amely a tranzakciót tartalmazza.
-- Időbélyegző – az időpont, amikor egy bányász kibányászta a tranzakciót.
+- Időbélyegző – Annak időpontja, amikor a tranzakció bekerült a blokkba, melyet a validátor javasolt
 - Feladó (From) – a tranzakciót elküldő számla címe.
 - Címzett (To) – a fogadó fél vagy az okosszerződés címe, amellyel a tranzakció interakcióba lép.
 - Átutalt tokenek – olyan tokenekből álló lista, amelyek át lettek utalva a tranzakcióban.
 - Érték – Az átutalt ETH összértéke.
-- Tranzakciós illeték – A bányásznak fizetett összeg, hogy feldolgozza a tranzakciót (számítása: gasár × felhasznált gas).
+- Tranzakciós díj – A validátornak fizetett összeg, hogy feldolgozza a tranzakciót (számítása: gázár * felhasznált gáz)
 
 **Részletes adatok**
 

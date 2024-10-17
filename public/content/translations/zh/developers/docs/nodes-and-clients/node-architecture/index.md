@@ -12,8 +12,6 @@ lang: zh
 
 ![](node-architecture-text-background.png)
 
-_这张图借用自 geth.ethereum.org，因此它使用 Geth 徽标来表示执行客户端，其他执行客户端选项还包括 Erigon、Nethermind 和 Besu_
-
 要使这种双客户端结构发挥作用，共识客户端必须能够将大量交易传递给执行客户端。 在本地执行交易是客户端验证交易未违反任何以太坊规则的方式，并确保提议的以太坊状态更新是正确的。 同样，当节点被选为区块生产者时，共识客户端必须能够从 Geth 请求各种交易，以便将它们添加到新的区块，并通过执行它们来更新全局状态。 本地远程过程调用连接使用[引擎应用程序接口](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)处理这种跨客户端通信。
 
 ## 执行客户端的作用是什么？ {#execution-client}

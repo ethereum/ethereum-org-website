@@ -69,10 +69,11 @@ Si vous souhaitez ajouter un portefeuille sur ethereum.org, créez un ticket sur
 
 Ethereum étant flexible par nature, les équipes et les produits vont et viennent et l'innovation est quotidienne. Nous procéderons donc à des vérifications de routine de notre contenu pour :
 
-- nous assurer que tous les portefeuilles et DApps répertoriés répondent toujours à nos critères ;
+- s'assurer que tous les portefeuilles et dapps listés répondent toujours à nos critères
 - vérifier qu'aucun produit suggéré ne répond à plus de nos critères que ceux actuellement répertoriés
 
 Ethereum.org est maintenu par la communauté open source & nous comptons sur la communauté pour nous aider à tenir le site à jour. Si vous remarquez que des informations sur les portefeuilles listés doivent être mises à jour, veuillez [ouvrir un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) ou une [pull request](https://github.com/ethereum/ethereum-org-website/pulls) !
+
 
 ## Conditions d'utilisation {#terms-of-use}
 

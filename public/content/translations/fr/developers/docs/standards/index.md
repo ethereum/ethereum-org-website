@@ -18,7 +18,7 @@ Ces normes sont généralement présentées via les [propositions d'amélioratio
 - [Introduction à la gouvernance d'Ethereum](/governance/)
 - [Ethereum Governance Overview](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _- Boris Mann, 31 mars 2019_
 - [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _- Hudson Jameson, 23 mars 2020_
-- [Playlist de toutes les rencontres de l'équipe de développement clé Ethereum](https://www.youtube.com/@EthereumProtocol) _(YouTube Playlist)_
+- [Playlist de toutes les rencontres de l'équipe de développement de base Ethereum](https://www.youtube.com/@EthereumProtocol) _(YouTube Playlist)_
 
 ## Types de normes {#types-of-standards}
 
@@ -40,6 +40,7 @@ Des informations plus détaillées sur ces différents types et catégories peuv
 ### Normes de jetons {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - Une interface type pour les jetons fongibles (interchangeables) comme les jetons de vote, les jetons d'enjeu ou les monnaies virtuelles.
+  - [ERC-223](/developers/docs/standards/tokens/erc-223/) - Une norme de jetons fongibles qui rend les jetons identiques à l'éther et prend en charge la gestion des transferts de jetons du côté des destinataires.
   - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - Définit une interface de jeton pour les jetons ERC-20 qui prend en charge l'exécution du code du destinataire après transfert ou transferFrom, ou du code de l'expéditeur après approbation.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - Une interface type pour les jetons non fongibles, comme ceux requis pour les œuvres d'art ou une chanson.
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - Événement normalisé émis lors de la création/du transfert d'un, ou de plusieurs jetons non fongibles à l'aide d'identifiants de jetons consécutifs.

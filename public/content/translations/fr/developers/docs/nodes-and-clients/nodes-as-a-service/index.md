@@ -63,19 +63,30 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Tableau de bord avec explorateur de requêtes, Observateur de Mempool et Composer
     - Accès aux robinets testnet intégré
     - Communauté Discord active de constructeurs avec 18 k utilisateurs
+
 - [**All That Node**](https://allthatnode.com/)
   - [Documentation](https://docs.allthatnode.com/)
   - Fonctionnalités
-    - Le plus haut niveau gratuit avec 150 000 demandes par jour
-    - Accès à plus de 24 nœuds blockchain
-    - Points de terminaison WSS, HTTPS et RPC
-    - Accès illimité aux données des archives
-    - Support 24/7 et disponibilité superieur à 99,9 %
+    - 50 000 requêtes par jour avec le niveau gratuit
+    - Support pour plus de 40 protocoles
+    - Prise en charge des APIs JSON-RPC (EVM, Tendermint), REST, et Websocket
+    - Accès illimité aux données d'archive
+    - Assistance technique 24h/24 et 7j/7 et temps de disponibilité de 99,9 %
     - Robinet disponible sur plusieurs chaînes
     - Accès illimité au point de terminaison avec un nombre illimité de clés API
-    - Espace de noms Trace/Debug disponible
+    - Prise en charge de l'API de traçage/débogage
     - Mises à jour automatisées
-    - Support technique
+
+- [**Amazon Managed Blockchain**](https://aws.amazon.com/managed-blockchain/)
+  - [Documentation](https://aws.amazon.com/managed-blockchain/resources/)
+  - Fonctionnalités
+    - Nœuds Ethereum gérés intégralement
+    - Disponible dans six régions
+    - JSON-RPC sur HTTP et des WebSockets sécurisé
+    - Prise en charge de 3 chaînes
+    - Contrats de niveau de service (SLA), prise en charge AWS 24 heures sur 24, 7 jours sur 7
+    - Go-ethereum et Lighthouse
+
 - [**Ankr**](https://www.ankr.com/)
   - [Documentation](https://docs.ankr.com/)
   - Fonctionnalités
@@ -88,6 +99,7 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Tableau de bord
     - Points de terminaison WSS, HTTPS et RPC
     - Assistance directe
+
 - [**Blast**](https://blastapi.io/)
   - [Documentation](https://docs.blastapi.io/)
   - Fonctionnalités
@@ -102,13 +114,15 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Surveillance et alertes 24h/24 et 7j/7
     - Un SLA général de 99,9 %
     - Payer en crypto-monnaie
+
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [Documentation](https://ubiquity.docs.blockdaemon.com/)
   - Avantages
     - Tableau de bord
     - Base par nœud
     - Analyses
-- [**Bloquer PI**](https://blockpi.io/)
+
+- [**BlockPI**](https://blockpi.io/)
   - [Documentation](https://docs.blockpi.io/)
   - Fonctionnalités
     - Structure de nœuds robuste & distribuée
@@ -119,6 +133,16 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Abonnement personnalisé et paiement à l'usage
     - Payer en crypto-monnaie
     - Assistance directe & support technique
+
+- [**Chainbase**](https://www.chainbase.com/)
+  - [Documentation](https://docs.chainbase.com)
+  - Fonctionnalités
+    - Service RPC hautement disponible, rapide et évolutif
+    - Support multi-chaîne
+    - Exonéré de droits
+    - Tableau de bord ergonomique
+    - Fournit des services de données blockchain au-delà du RPC
+
 - [**Chainstack**](https://chainstack.com/)
   - [Documentation](https://docs.chainstack.com/)
   - Fonctionnalités
@@ -131,8 +155,9 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Pensez à votre cloud
     - Tarification à l'heure
     - Assistance directe 24h/24 et 7j/7
+
 - [**DataHub**](https://datahub.figment.io)
-  - [Documentation](https://docs.figment.io/)
+  - [Docs](https://docs.figment.io/)
   - Fonctionnalités
     - Option multi-niveaux avec 3 000 000 de requêtes/mois
     - Points de terminaison WSS et RPC
@@ -143,7 +168,8 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Tableau de bord
     - Assistance directe 24h/24 et 7j/7
     - Payer en cryptomonnaie (entreprise)
-- [DRPC](https://drpc.org/)
+
+- [**DRPC**](https://drpc.org/)
   - [Documentation](https://docs.drpc.org/)
   - Fonctionnalités
     - Nœuds RPC décentralisés
@@ -152,13 +178,14 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Unités de calcul illimitées par mois sur le niveau gratuit
     - Vérification des données
     - Points de terminaison personnalisés
-    - http et points de terminaison WSS
+    - Points de terminaison HTTP et WSS
     - Clés illimitées (niveau gratuit ou payant)
     - Options de paiement flexible
     - [Point de terminaison public](https://eth.drpc.org)
     - Nœuds d'archives partagés gratuits
+
 - [**GetBlock**](https://getblock.io/)
-  - [Docs](https://getblock.io/docs/get-started/authentication-with-api-key/)
+  - [Documentation](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Fonctionnalités
     - Accès à plus de 40 nœuds blockchain
     - 40 000 requêtes quotidiennes gratuites
@@ -168,6 +195,7 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Analyses avancées
     - Mises à jour automatisées
     - Support technique
+
 - [**InfStones**](https://infstones.com/)
   - Fonctionnalités
     - Option de niveau gratuite
@@ -179,6 +207,7 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Temps de synchronisation rapide pour les déploiements dédiés
     - Assistance directe 24h/24 et 7j/7
     - Accès à plus de 50 nœuds de blockchain
+
 - [**Infura**](https://infura.io/)
   - [Documentation](https://infura.io/docs)
   - Fonctionnalités
@@ -187,6 +216,7 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Données d'archivage payantes
     - Assistance directe
     - Tableau de bord
+
 - [**Kaleido**](https://kaleido.io/)
   - [Documentation](https://docs.kaleido.io/)
   - Fonctionnalités
@@ -207,6 +237,7 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Prise en charge des orchestrations de déploiement multi-cloud, multi-région et hybride
     - Tarification à l'heure basée sur le modèle SaaS
     - Contrats SLA et support 24h/24 et 7j/7
+
 - [**Lava Network**](https://www.lavanet.xyz/)
   - [Documentation](https://docs.lavanet.xyz/)
   - Fonctionnalités
@@ -218,6 +249,7 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Interface intuitive de gestion de projet
     - Intégrité des Données Reposant sur des Consensus
     - Support multi-chaîne
+
 - [**Moralis**](https://moralis.io/)
   - [Documentation](https://docs.moralis.io/)
   - Fonctionnalités
@@ -230,6 +262,7 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - SDK Ethereum unique
     - Points de terminaison d'API uniques
     - Assistance technique directe
+
 - [**NodeReal MegaNode**](https://nodereal.io/)
   - [Documentation](https://docs.nodereal.io/nodereal/meganode/introduction)
   - Fonctionnalités
@@ -237,6 +270,7 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - API améliorée pour les développeurs web3
     - Support multi-chaîne
     - Essayez gratuitement
+
 - [**NOWNodes**](https://nownodes.io/)
   - [Documentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Fonctionnalités
@@ -247,8 +281,9 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Une équipe d'assistance 24h/24 et 7j/7
     - Gestionnaire de compte personnel
     - Archives, sauvegardes et nœuds dédiés partagés
+
 - [**Réseau Pocket**](https://www.pokt.network/)
-  - [Documentation](https://docs.pokt.network/home/)
+  - [Documents](https://docs.pokt.network/home/)
   - Fonctionnalités
     - Protocole RPC décentralisé et marketplace
     - 1 million de requêtes gratuites par jour (par point de terminaison, max 2)
@@ -267,8 +302,9 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Solution la plus confidentielle et la plus résistante à la censure
     - Support pratique pour les développeurs
     - Tableau de bord et outils d'analyse [Pocket Portal](https://bit.ly/ETHorg_POKTportal)
+
 - [**QuickNode**](https://www.quicknode.com)
-  - [Documentation](https://www.quicknode.com/docs/)
+  - [Documents](https://www.quicknode.com/docs/)
   - Fonctionnalités
     - Support technique 24h/24 et 7j/7 & communauté de développeurs Discord
     - Réseau à faible latence, géographiquement équilibré, multi-cloud/métal
@@ -280,11 +316,13 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - API de données et d'analyses NFT
     - [Certifié SOC2](https://www.quicknode.com/security)
     - Convient aux développeurs et aux entreprises
+
 - [**Rivet**](https://rivet.cloud/)
   - [Documents](https://rivet.readthedocs.io/en/latest/)
   - Fonctionnalités
     - Option de niveau gratuite
     - Évolutivité progressive
+
 - [**SenseiNode**](https://senseinode.com)
   - [Documents](https://docs.senseinode.com/)
   - Fonctionnalités
@@ -292,8 +330,9 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Tableau de bord
     - Hébergement AWS sur plusieurs fournisseurs d'hébergement en différents endroits d'Amérique Latine
     - Clients Prysm et Lighthouse
+
 - [**SettleMint**](https://console.settlemint.com/)
-  - [Documents](https://docs.settlemint.com/)
+  - [Docs](https://docs.settlemint.com/)
   - Fonctionnalités
     - Essai gratuit
     - Évolutivité progressive
@@ -305,20 +344,34 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Tableau de bord
     - Tarification à l'heure
     - Assistance directe
+
 - [**Tenderly**](https://tenderly.co/web3-gateway)
-  - [Documents](https://docs.tenderly.co/web3-gateway/web3-gateway)
+  - [Docs](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - Fonctionnalités
     - Niveau gratuit incluant 25 millions d'unités Tenderly par mois
     - Accès gratuit aux données historiques
     - Jusqu'à 8 fois plus de charges de travail lourdes en lecture rapide
     - Accès en lecture 100 % cohérent
-    - Points de terminaison RPC JSON
+    - Points de terminaison JSON-RPC
     - Générateur de requête RPC basé sur IU et prévisualisation des requêtes
     - Étroitement intégré aux outils de développement, de débogage et de test de Tenderly
     - Simulations de transaction
     - Analyses d'utilisation et filtrage
     - Gestion des clés d'accès facile
     - Support technique dédié par chat, email et Discord
+
+- [**Tokenview**](https://services.tokenview.io/)
+  - [Docs](https://services.tokenview.io/docs?type=nodeService)
+  - Fonctionnalités
+    - Assistance technique 24h/24 et 7j/7 & communauté Dev Telegram
+    - Compatible multichaîne (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
+    - Les points de terminaison RPC et WSS sont tous deux ouverts à l'utilisation
+    - Accès illimité à l'API des données archivées
+    - Tableau de bord avec explorateur de requêtes et observateur de Emploi
+    - API de données NFT et notifications via Westhoek
+    - Paiements en crypto
+    - Assistance externe pour les besoins comportementaux additionnels
+
 - [**Watchdata**](https://watchdata.io/)
   - [Docs](https://docs.watchdata.io/)
   - Fonctionnalités
@@ -330,6 +383,7 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Prise en charge de différents nœuds
     - Évolutivité des ressources
     - Vitesses de traitement élevées
+
 - [**ZMOK**](https://zmok.io/)
   - [Docs](https://docs.zmok.io/)
   - Fonctionnalités
@@ -338,39 +392,18 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Frais de transactions illimités et Gaz infini pour l'envoi de transactions
     - Récupération la plus rapide du nouveau bloc et lecture de la blockchain
     - Le meilleur prix garanti par appel API
-- [**Chainbase**](https://www.chainbase.com/)
-  - [Docs](https://docs.chainbase.com)
+
+- [**Zeeve**](https://www.zeeve.io/)
+  - [Docs](https://www.zeeve.io/docs/)
   - Fonctionnalités
-    - Service RPC hautement disponible, rapide et évolutif
-    - Support multi-chaîne
-    - Exonéré de droits
-    - Tableau de bord ergonomique
-    - Fournit des services de données blockchain au-delà du RPC
+    - Plateforme d'automatisation no code avec laquelle l'entreprise s'intègre, permettant le déploiement, la surveillance et la gestion de nœuds et de réseaux de la blockchain
+    - Plus de 30 protocoles supportés & Intégrations, avec ajouts en cours
+    - Services d'infrastructure web3 à valeur ajoutée tels que stockage décentralisé, identité décentralisée et API de données Blockchain Ledger pour les cas d'utilisation dans le monde réel
+    - Le support 24/7 et le suivi proactif assurent la santé des nœuds en permanence.
+    - Les points de terminaison RPC offrent un accès authentifié aux API, une gestion simplifiée avec un tableau de bord intuitif et des analyses.
+    - Fournit à la fois un cloud géré et apporte vos propres options de cloud parmi lesquelles choisir et prend en charge tous les principaux fournisseurs de cloud tels qu'AWS, Azure, Google Cloud, Digital Ocean et sur site.
+    - Nous utilisons le routage intelligent pour toujours atteindre le nœud le plus proche de votre utilisateur
 
-[**Zeeve**](https://www.zeeve.io/)
-
-- [Docs](https://www.zeeve.io/docs/)
-- Fonctionnalités
-  - Plateforme d'automatisation no code avec laquelle l'entreprise s'intègre, permettant le déploiement, la surveillance et la gestion de nœuds et de réseaux de la blockchain
-  - Plus de 30 protocoles supportés & Intégrations, avec ajouts en cours
-  - Services d'infrastructure web3 à valeur ajoutée tels que stockage décentralisé, identité décentralisée et API de données Blockchain Ledger pour les cas d'utilisation dans le monde réel
-  - Le support 24/7 et le suivi proactif assurent la santé des nœuds en permanence.
-  - Les points de terminaison RPC offrent un accès authentifié aux API, une gestion sans tracas avec un tableau de bord et des analyses intuitifs.
-  - Fournit à la fois un cloud géré et apporte vos propres options de cloud parmi lesquelles choisir et prend en charge tous les principaux fournisseurs de cloud tels qu'AWS, Azure, Google Cloud, Digital Ocean et sur site.
-  - Nous utilisons le routage intelligent pour toujours atteindre le nœud le plus proche de votre utilisateur
-
-[**Tokenview**](https://services.tokenview.io/)
-
-- [Docs](https://services.tokeniew/docs?type=nodeService)
-- Fonctionnalités
-  - Assistance technique 24h/24 et 7j/7 & communauté Dev Telegram
-  - Compatible multichaîne (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
-  - Les points de terminaison RPC et WSS sont disponibles
-  - Accès illimité à l'API des données archivées
-  - Tableau de bord avec explorateur de requêtes et observateur de Emploi
-  - API de données NFT et notifications via Westhoek
-  - Paiements en crypto
-  - Assistance externe pour les besoins comportementaux additionnels
 
 ## Complément d'information {#further-reading}
 
@@ -382,5 +415,5 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
 
 ## Tutoriels connexes {#related-tutorials}
 
-- [Commencer le développement Ethereum avec Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
+- [Commencer le développement d'Ethereum avec Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Guide pour envoyer des transactions avec Web3 et Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

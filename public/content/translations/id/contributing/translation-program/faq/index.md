@@ -6,7 +6,19 @@ description: Pertanyaan yang paling sering diajukan tentang Program Penerjemahan
 
 # Panduan menerjemahkan ethereum.org {#translating-ethereum-guide}
 
-Jika Anda baru mengenal Program Penerjemahan dan ragu-ragu untuk memulai, berikut adalah beberapa Pertanyaan yang Sering Diajukan yang dapat membantu Anda memulai. Gunakan panduan ini untuk menemukan jawaban atas pertanyaan yang paling umum.
+Jika Anda baru mengenal Program Terjemahan dan ragu-ragu untuk memulai, berikut adalah beberapa SSD yang dapat membantu Anda memulai. Gunakan panduan ini untuk menemukan jawaban atas pertanyaan yang paling umum.
+
+## Apakah saya mendapatkan kompensasi dari menerjemahkan ethereum.org? {#compensation}
+
+Ethereum.org adalah situs web sumber terbuka, di mana setiap orang dapat terlibat dan berkontribusi.
+
+Program penerjemahan ethereum.org adalah perpanjangan dari hal tersebut dan mempunyai pemikiran filosofi yang sama.
+
+Tujuan dari Program Penerjemahan adalah membuat konten Ethereum dapat dijangkau oleh semua orang, terlepas dari bahasa yang mereka gunakan. Ini juga memungkinkan dwibahasawan mana pun untuk terlibat dalam ekosistem Ethereum dan berkontribusi dalam cara yang mungkin.
+
+Karena alasan ini, Program Penerjemahan bersifat terbuka dan sukarela, dan partisipasi tidak mendapat kompensasi. Jika kami harus mengompensasi penerjemah berdasarkan jumlah kata yang mereka terjemahkan, kami hanya dapat mengundang mereka dengan pengalaman penerjemahan yang cukup (penerjemah profesional) untuk bergabung dalam Program Penerjemahan. Ini akan membuat Program Penerjemahan menjadi ekslusif dan mencegah kami mencapai tujuan yang telah ditetapkan, secara khusus: memungkinkan semua orang berpartisipasi dan terlibat dalam ekosistem.
+
+Kami berusaha sebaik mungkin untuk memungkinkan para kontributor kami berhasil dalam ekosistem Ethereum; banyak insentif non-moneter diberikan seperti: [menawarkan POAP](/contributing/translation-program/acknowledgements/#poap) dan [sertifikat penerjemah](/contributing/translation-program/acknowledgements/#certificate), maupun mengelola [Papan Peringkat Penerjemahan](/contributing/translation-program/acknowledgements/) dan [mendaftar semua penerjemah kami di situs](/contributing/translation-program/contributors/).
 
 ## Bagiamana cara menerjemahkan string dengan `<HTML tags>`? {#tags}
 
@@ -18,6 +30,8 @@ Tidak setiap string ditulis dalam bentuk teks murni. Ada beberapa string yang te
 ![Antarmuka Crowdin dengan tombol salin sumber disorot](./html-tag-strings.png)
 
 Anda dapat memindahkan posisi tag yang ada di dalam string untuk membuatnya lebih natural dalam bahasa Anda – pastikan untuk memindahkan seluruh tag.
+
+Untuk informasi lebih lengkap tentang menangani tag dan cuplikan kode, silakan lihat [Panduan Gaya Penerjemahan ethereum.org](/contributing/translation-program/translators-guide/#dealing-with-tags).
 
 ## Di mana posisi string? {#strings}
 
@@ -38,9 +52,9 @@ Jika Anda ingin menaikkan bendera pada string tertentu yang memerlukan perhatian
 - Setelah terkirim, akan dilaporkan ke tim kami. Kami akan memperbaiki masalah tersebut dan memberi tahu Anda dengan membalas komentar Anda dan menutup masalah tersebut.
 - Jika Anda melaporkan terjemahan yang salah, terjemahannya dan alternatif yang diusulkan akan ditinjau oleh penutur asli pada ulasan berikutnya.
 
-![Menampilkan cara membuat komentar dan masalah](./comment-issue.png)
+![Menampilkan cara membuat komentar dan isu](./comment-issue.png)
 
-## Apa Itu Translation Memory (TM)? {#translation-memory}
+## Apa itu Memori Terjemahan (TM)? {#translation-memory}
 
 Translation Memory (TM) adalah sebuah fitur Crowdin yang menyimpan semua string yang telah diterjemahkan sebelumnya di [ethereum.org](http://ethereum.org/). Ketika sebuah string diterjemahkan, maka string tersebut akan otomatis disimpan ke dalam TM proyek kami. Ini bisa menjadi alat yang berguna untuk membantu Anda menghemat waktu!
 
@@ -69,9 +83,9 @@ Glosarium Crowdin adalah tempat terbaik untuk klarifikasi istilah dan definisi. 
 
 ### Kebijakan terjemahan terminologi {#terminology}
 
-_Untuk nama (merek, perusahaan, orang) dan istilah teknologi baru (Eth2, rantai suar, dll.)_
+_Untuk nama (merek, perusahaan, orang) dan istilah teknologi baru (Beacon Chain, shard chains, dll.)_
 
-Ethereum menghadirkan banyak istilah baru yang telah ditemukan baru-baru ini. Beberapa istilah akan berbeda dari penerjemah ke penerjemah karena tidak ada terjemahan resmi dalam bahasa masing-masing. Inkonsistensi seperti itu dapat menyebabkan kesalahpahaman dan mengurangi keterbacaan.
+Ethereum menghadirkan banyak istilah baru yang telah ditemukan baru-baru ini. Beberapa istilah akan berbeda dari penerjemah satu ke penerjemah lainnya karena tidak ada terjemahan resmi dalam bahasa masing-masing. Inkonsistensi seperti itu dapat menyebabkan kesalahpahaman dan mengurangi keterbacaan.
 
 Karena keragaman linguistik dan standarisasi yang berbeda dalam setiap bahasa, hampir tidak mungkin untuk menghasilkan kebijakan terjemahan terminologi terpadu yang dapat diadaptasikan dalam semua bahasa yang didukung.
 
@@ -86,11 +100,17 @@ Inilah yang kami sarankan, ketika menemukan istilah yang tidak Anda kenal:
 
 Kami menyarankan agar Anda membiarkan nama merek, perusahaan, dan personel tidak diterjemahkan karena terjemahannya dapat menyebabkan kebingungan yang tidak perlu dan kesulitan SEO.
 
+## Bagaimana cara kerja proses pengulasan? {#review-process}
+
+Untuk memastikan tingkat kualitas dan konsistensi tertentu dalam penerjemahan kami, kami bekerja dengan [Acolad](https://www.acolad.com/), salah satu penyedia layanan bahasa terbesar di dunia. Acolad memiliki 20.000 ahli bahasa profesional, yang memungkinkan mereka untuk menyediakan peninjau ahli untuk setiap bahasa dan jenis konten yang kami perlukan.
+
+Proses peninjauannya sederhana; setelah beberapa [ember konten](/contributing/translation-program/content-buckets) telah diterjemahkan 100%, kami meminta peninjauan untuk bagian tersebut. Proses pengulasan terjadi secara langsung di Crowdin. Setelah pengulasan selesai, kami memperbarui situs web dengan konten yang diterjemahkan.
+
 ## Bagaimana cara saya menambahkan konten dalam bahasa saya? {#adding-foreign-language-content}
 
 Saat ini, semua konten selain bahasa Inggris diterjemahkan secara langsung dari konten sumber bahasa Inggris, dan konten mana pun yang tidak ada dalam bahasa Inggris tidak dapat ditambahkan ke bahasa lainnya.
 
-Untuk mengusulkan konten baru ke ethereum.org, Anda dapat [membuat masalah](https://github.com/ethereum/ethereum-org-website/issues) di GitHub. Jika ditambahkan, konten akan ditulis dalam bahasa Inggris dan diterjemahkan ke bahasa lainnya dengan menggunakan Crowdin.
+Untuk mengusulkan konten baru ke ethereum.org, Anda dapat [membuat isu](https://github.com/ethereum/ethereum-org-website/issues) di GitHub. Jika ditambahkan, konten akan ditulis dalam bahasa Inggris dan diterjemahkan ke bahasa lainnya dengan menggunakan Crowdin.
 
 Kami berencana menambahkan dukungan untuk konten selain bahasa Inggris dalam waktu dekat ini.
 

@@ -210,7 +210,7 @@ Proof-of-stake-alapú:
 - [Mi az a decentralizált tárhely?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) – _CoinMarketCap_
 - [Öt gyakori mítosz lerombolása a decentralizált tárhelyről](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) – _Storj_
 
-_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
+_Ismer olyan közösségi információforrást, amely a hasznára vált? Módosítsa az oldalt, és adja hozzá!_
 
 ## Kapcsolódó témák {#related-topics}
 

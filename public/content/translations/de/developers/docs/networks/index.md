@@ -50,6 +50,7 @@ Die beiden öffentlichen Testnets, die die Client-Entwickler derzeit betreiben, 
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Faucets
 
@@ -60,6 +61,7 @@ Die beiden öffentlichen Testnets, die die Client-Entwickler derzeit betreiben, 
 - [Faucet für Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Faucet für Infura Sepolia](https://www.infura.io/faucet)
 - [Faucet für Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [Ethereum-Ökosystem-Faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli _(Langzeit-Support)_ {#goerli}
 
@@ -76,6 +78,7 @@ Goerli ist ein Testnet zum Testen, Validieren und Staking. Das Goerli-Netzwerk i
 - [Website](https://goerli.net/)
 - [GitHub](https://github.com/eth-clients/goerli)
 - [Etherscan](https://goerli.etherscan.io)
+- [Blockscout](https://eth-goerli.blockscout.com/)
 
 ##### Faucets
 

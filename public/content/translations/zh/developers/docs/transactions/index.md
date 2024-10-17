@@ -153,11 +153,18 @@ Alice 的帐户将会增加 **+1.0 ETH**
 
 验证者获得 **0.000210 个以太币**的小费
 
-任何智能合约交互也需要燃料。
 
 ![未使用燃料退还示意图](./gas-tx.png) _示意图节选自[以太坊虚拟机图解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 任何未用于交易的燃料都会退还给用户帐户。
+
+### 智能合约交互 {#smart-contract-interactions}
+
+任何涉及智能合约的交易都需要燃料。
+
+智能合约还可以包含被称为 [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) 或 [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) 的函数，这不会改变合约的状态。 像这样，从外部帐户调用这些函数不需要任何燃料。 这种情况下的 RPC 底层调用为 [`eth_call`](/developers/docs/apis/json-rpc#eth_call)。
+
+不同于使用 `eth_call` 进行访问，`view` 或 `pure` 函数通常也在内部（即从合约自身或其他合约）调用并消耗燃料。
 
 ## 交易生命周期 {#transaction-lifecycle}
 
@@ -190,6 +197,16 @@ Alice 的帐户将会增加 **+1.0 ETH**
 
 - `TransactionType` - 一个在 0 到 0x7f 之间的数字，总共为 128 种可能的交易类型。
 - `TransactionPayload` - 由交易类型定义的任意字节数组。
+
+基于 `TransactionType` 值，交易可被分为以下几类：
+
+1. **Type 0（传统）交易：**自以太坊推出以来使用的原始交易格式。 它们不包含 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 中的功能，例如动态燃料费计算或智能合约访问列表。 传统交易缺少以序列化形式表明其类型的特定前缀，在使用[递归长度前缀编码 (RLP)](/developers/docs/data-structures-and-encoding/rlp) 时以 `0xf8` 字节开头。 这些交易的 TransactionType 值为 `0x0`。
+
+2. **Type 1 交易：** 作为以太坊[柏林升级](/history/#berlin)的一部分在 [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) 中引入，这些交易包含一个 `accessList` 参数。 该列表指定了交易预期访问的地址和存储密钥，有助于降低涉及智能合约的复杂交易的潜在[燃料](/developers/docs/gas/)花费。 EIP-1559 的费用市场变化不包含在 Type 1 交易中。 Type 1 交易还包括一个 `yParity` 参数，它可以是 `0x0` 或 `0x1`，表示 secp256k1 签名的 y 值奇偶性。 它们以字节 `0x01` 开头进行标识，其交易类型 (TransactionType) 值为 `0x1`。
+
+3. **Type 2 交易**通常称为 EIP-1559 交易，是在以太坊[伦敦升级](/history/#london)的 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 中引入的。 它们已成为以太坊网络上的标准交易类型。 这些交易引入了一种新的费用市场机制，通过将交易费分为基础费用和优先费用来提高可预测性。 它们以字节 `0x02` 开头，并包括 `maxPriorityFeePerGas` 和 `maxFeePerGas` 的字段。 Type 2 交易因其灵活性和效率，现已成为默认选择，特别是在网络严重拥堵期间，由于它能够帮助用户提高管理交易费用的可预测性，因此特别受到青睐。 这些交易的 TransactionType 值为 `0x2`。
+
+
 
 ## 延伸阅读 {#further-reading}
 

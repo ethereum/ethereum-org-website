@@ -4,7 +4,7 @@ description: O algoritmo Dagger-Hashimoto em detalhes
 lang: pt-br
 ---
 
-Dagger-Hashimoto foi a implementação original de pesquisa e especificação para o algoritmo de mineração do Ethereum. Dagger-Hashimoto foi substituído por [Ethash](#ethash). A mineração foi completamente desligada na [Fusão](/roadmap/merge/) no dia 15 de setembro de 2022. Desde então, o Ethereum foi protegido usando um mecanismo [prova de participação](/developers/docs/consensus-mechanisms/pos). Esta página é para fins históricos. As informações aqui não são mais relevantes para o Ethereum posterior à Fusão.
+Dagger-Hashimoto foi a implementação original de pesquisa e especificação para o algoritmo de mineração do Ethereum. Dagger-Hashimoto foi substituído por [Ethash](#ethash). A mineração foi completamente interrompida na [Fusão](/roadmap/merge/) no dia 15 de setembro de 2022. Desde então, o Ethereum foi protegido usando um mecanismo [prova de participação](/developers/docs/consensus-mechanisms/pos). Esta página é para fins históricos. As informações aqui não são mais relevantes para o Ethereum posterior à Fusão.
 
 ## Pré-Requisitos {#prerequisites}
 
@@ -281,7 +281,7 @@ Daí `x` deve ser uma identidade multiplicadora de `Z/nZ`, que é única. Como p
 
 A ordem de `x` não pode ser `2` a menos que `x = P-1`, já que isso violaria o princípio de que `P` é primo.
 
-A partir da proposta acima, podemos reconhecer que a iteração `(picker * init) % P` terá um ciclo de comprimento de pelo menos `(P-1)/2`. Isso acontece porque selecionamos `P` para ser um primo seguro aproximadamente igual a uma potência de dois mais alta, e `init` está no intervalo `[2,2**256+1]`. Dada a magnitude de `P`, nunca devemos esperar um ciclo da exponenciação modular.
+A partir da proposta acima, podemos reconhecer que a iteração `(picker * init) % P` terá um ciclo de comprimento de pelo menos `(P-1)/2`. Isso acontece porque selecionamos `P` para ser um primo seguro aproximadamente igual a uma potência de dois mais alta, e `init` está no intervalo `[2,2**256+1]`. Dada a magnitude de `P`, nunca deveríamos esperar um ciclo da exponenciação modular.
 
 Quando estamos atribuindo a primeira célula no DAG (a variável rotulada como `init`), nós computamos `pow (sha3(seed) + 2, 3, P)`. À primeira vista, isso não garante que o resultado não é `1` nem `P-1`. No entanto, como `P-1` é um primo seguro, temos a seguinte garantia adicional, que é uma afirmação deduzida da Observação 1:
 

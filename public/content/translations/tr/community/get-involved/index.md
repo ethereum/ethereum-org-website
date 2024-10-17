@@ -15,15 +15,17 @@ Ethereum topluluğu, birçok farklı geçmişe ve beceriye sahip insanları içe
 - [ethereum.org/developers/](/developers/) adresinden Ethereum hakkında bilgi edinin ve Ethereum'u deneyin
 - Yakınınızdaki bir [ETHGlobal](http://ethglobal.co/) hackathon'una katılın!
 - Uzmanlık alanınızla veya seçtiğiniz programlama diliyle ilgili [projeleri inceleyin](/developers/docs/programming-languages/)
-- [Core Dev çağrılarını](https://www.youtube.com/@EthereumProtocol) izleyin veya bunlara katılın
+- [Mutabakat ve Yürütüm Katmanı çağrılarını](https://www.youtube.com/@EthereumProtocol/streams) izleyin ya da bunlara katılın
 - [Ekosistem Destek Programının istek listesi](https://esp.ethereum.foundation/wishlist/) - Ethereum Ekosistem Destek Programının aktif olarak hibe başvuruları aradığı araçlar, belgeler ve altyapı alanları
 - [Web3Bridge](https://www.web3bridge.com/) - Afrika genelinde yüzlerce geliştiriciyi ve topluluk üyesini belirleme, eğitme ve destekleme girişimlerinde hevesli web3 topluluğuna katılın
-- [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) grubuna katılın
+- [Eth R&D Discord'a](https://discord.com/invite/VmG7Uxc) katılın
+- [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu) grubuna katılın
 
 ## Araştırmacılar ve Akademisyenler <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
 Matematik, kriptografi ya da ekonomi alanlarında bir geçmişiniz var mı? Ethereum ekosisteminde yapılan en son işlerin bazıları ilginizi çekebilir:
 
+- [Eth R&D Discord'a](https://discord.com/invite/VmG7Uxc) katılın
 - Bir Ethereum Geliştirme Önerisini yazın veya revize edin
   - Bir EIP yazın
     1. Fikrinizi [Ethereum Magicians](https://ethereum-magicians.org)'a gönderin
@@ -32,12 +34,13 @@ Matematik, kriptografi ya da ekonomi alanlarında bir geçmişiniz var mı? Ethe
   - Nasıl bir [EIP Editörü](https://eips.ethereum.org/EIPS/eip-5069) olacağınızı öğrenin
     - Siz de şu anda EIP'leri gözden geçirebilirsiniz! [Açılan PR taleplerini `e-inceleme`etikeyiyle görebilirsiniz](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Teknik geri bildirimlerinizi `tartışmalar` bağlantısına bırakın.
   - [EIP yönetişimine](https://github.com/ethereum-cat-herders/EIPIP) katılın
-    - [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) grubuna katılın
+    - [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu) grubuna katılın
   - [EIP'ler hakkında daha fazla bilgi](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - >100.000 ABD Doları kazanabileceğiniz, bir dizi yüksek değerli araştırma ödülü
 - [Ethresear.ch](https://ethresear.ch) - Ethereum'un birincil araştırma forumu ve kriptoekonomi alanında dünyanın en etkili forumu
 - [Ethereum Vakfı Araştırma Soru-Cevap Paneli (AMA)](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - Araştırmacılara istenilen soruların sorulduğu ve cevaplandırıldığı bir etkinlik. Etkinliğin her adımı açıldığında, herkes sorularını sorabilecektir.
 - [Ekosistem Destek Programının istek listesi](https://esp.ethereum.foundation/wishlist/) - Ethereum Ekosistem Destek Programının aktif olarak hibe başvuruları aradığı araştırma alanları
+- [AllWalletDevs](https://allwallet.dev) - Ethereum geliştiricilerinin, tasarımcılarının ve ilgili kullanıcıların düzenli olarak bir araya geldiği ve cüzdanlar hakkında tartıştığı bir forum
 
 [Daha fazla aktif araştırma alanı keşfedin](/community/research/).
 
@@ -102,12 +105,11 @@ Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etme misyonuna
 - [ethereum.org işleri](/about/#open-jobs)
 - [Ethereum Vakfı iş ilanları (Lever)](https://jobs.lever.co/ethereumfoundation)
 - [Ethereum Vakfı iş ilanları (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [JobStash](https://jobstash.xyz)
 - [Kripto Para İşleri](https://cryptocurrencyjobs.co/ethereum/)
-- [Crypto.jobs](https://crypto.jobs/)
 - [ConsenSys'de Kariyer](https://consensys.net/careers/)
 - [Kripto İş Listesi](https://cryptojobslist.com/ethereum-jobs)
 - [Bankless iş ilanları](https://pallet.xyz/list/bankless/jobs)
-- [useWeb3 İşleri](https://www.useweb3.xyz/jobs)
 - [Web3 İşleri](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley İşleri](https://cryptovalley.jobs/)
@@ -118,13 +120,12 @@ Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etme misyonuna
 
 "DAO'lar", merkeziyetsiz otonom organizasyonlardır. Bu gruplar, organizasyonu ve iş birliğini kolaylaştırmak için Ethereum teknolojisinden yararlanır. Örneğin; üyeliği kontrol etmek, teklifleri oylamak veya havuza alınan varlıkları yönetmek için. DAO'lar hâlâ deneysel olsalar da aynı fikirde olduğunuz gruplar ile iş ortakları bulmanız ve Ethereum topluluğu üzerindeki etkinizi artırmanız için fırsatlar sunar. [DAO'lar hakkında daha fazlası](/dao/)
 
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _DAO konseptinin teknoloji harici alanlarda tanıtılması ve insanların DAO aracılığıyla değer yaratmalarına yardım edilmesi_
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) - _DAO konseptinin teknoloji harici alanlarda tanıtılması ve insanların DAO aracılığıyla değer yaratmalarına yardım edilmesi_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _İnternetin ortaklaşa sahipliğine inanan yapımcıların topluluğu_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _DAO olarak çalışan bir freelancer Web3 geliştirme kolektifi_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOHaus'un topluluk yönetimi_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Hukuk mühendisliği_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Sanat topluluğu_
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _DAO kuluçkası_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Başlangıç öncesi kripto projeleri için girişimler_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Gerçek Hayat için MMORPG Oyun Mekanikleri_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Dijifiziksel Giyim Firmaları_

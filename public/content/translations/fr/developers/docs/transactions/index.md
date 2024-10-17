@@ -99,7 +99,7 @@ Exemple de réponse :
 }
 ```
 
-- dans la Structure de Données Récursives (SDR), la transaction signée prend essentiellement la forme d'une séquence d'instructions codées`` [rlp](/developers/docs/data-structures-and-encoding/rlp)
+- `raw` est la transaction signée sous forme de [préfixe de longueur récursive (RLP)](/developers/docs/data-structures-and-encoding/rlp)
 - `tx` est la transaction signée sous la forme JSON
 
 Grâce au hachage de la signature, il est possible de prouver de façon cryptographique que la transaction provient de l'expéditeur et qu'elle a été soumise au réseau.
@@ -153,11 +153,18 @@ Les frais de base seront brûlés **-0.00399 ETH**
 
 Le validateur conserve le pourboire de **+0,000210 ETH**
 
-Du gaz est également requis pour toute interaction avec un contrat intelligent.
 
 ![Diagramme montrant comment le gaz non utilisé est remboursé](./gas-tx.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Tout gaz non utilisé dans une transaction est remboursé sur le compte de l'utilisateur.
+
+### Interactions avec des contracts intelligents {#smart-contract-interactions}
+
+Du gaz est nécessaire pour toute transaction qui implique un contrat intelligent.
+
+Les contrats intelligents peuvent également contenir des fonctions connues sous le nom de fonctions [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) ou [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), qui n'altèrent pas l'état du contrat. Ainsi, appeler ces fonctions à partir d'un EOA ne nécessitera aucun gaz. L'appel RPC sous-jacent pour ce scénario est [`eth_call`](/developers/docs/apis/json-rpc#eth_call)
+
+Contrairement à l'utilisation de `eth_call`, ces fonctions `view` ou `pure` sont également fréquemment appelées en interne (c'est-à-dire à partir du contrat lui-même ou d'un autre contrat), ce qui entraîne un coût en gaz.
 
 ## Cycle de vie des transactions {#transaction-lifecycle}
 
@@ -190,6 +197,16 @@ Où les champs sont définis comme :
 
 - `TransactionType` : un nombre compris entre 0 et 0x7f, pour un total de 128 types de transactions possibles.
 - `TransactionPayload` : une table arbitraire d'octets définie par le type de transaction.
+
+En fonction de la valeur `TransactionType`, une transaction peut être classée comme
+
+1. **Transactions de type 0 (Legacy) :** Le format de transaction original utilisé depuis le lancement d'Ethereum. Ils n'incluent pas les fonctionnalités de l'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), telles que les calculs dynamiques des frais de gaz ou les listes d'accès pour les contrats intelligents. Les transactions originelles n'ont pas de préfixe spécifique indiquant leur type dans leur forme sérialisée, et commencent par l'octet `0xf8` lorsqu'elles utilisent le codage [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp). La valeur TransactionType pour ces transactions est `0x0`.
+
+2. **Transactions de type 1 :** Introduites dans [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) dans le cadre de la [mise à jour Berlin](/history/#berlin) d'Ethereum, ces transactions incluent un paramètre `accessList`. Cette liste spécifie les adresses et les clés de stockage auxquelles la transaction s'attend à accéder, contribuant ainsi potentiellement à réduire les coûts de [gaz](/developers/docs/gas/) pour les transactions complexes impliquant des contrats intelligents. Les variations du marché des frais EIP-1559 ne sont pas incluses dans les transactions de type 1. Les transactions de type 1 incluent également un paramètre `yParity`, qui peut être soit `0x0`, soit `0x1`, indiquant la parité de la valeur y de la signature secp256k1. Elles sont identifiées en commençant par l'octet `0x01`, et leur valeur TransactionType est `0x1`.
+
+3. **Transactions de type 2**, communément appelées transactions EIP-1559, sont des transactions introduites dans [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), lors de la [mise à jour London](/history/#london) d'Ethereum. Elles sont devenues le type de transaction standard sur le réseau Ethereum. Ces transactions introduisent un nouveau mécanisme de marché des frais qui améliore la prévisibilité en séparant les frais de transaction en frais de base et en frais prioritaires. Elles commencent par l'octet `0x02` et incluent des champs tels que `maxPriorityFeePerGas` et `maxFeePerGas`. Les transactions de Type 2 sont désormais la norme en raison de leur flexibilité et de leur efficacité. Elles sont particulièrement appréciées pendant les périodes de forte congestion du réseau car elles permettent aux utilisateurs de gérer les frais de transaction de manière plus prévisible. La valeur TransactionType pour ces transactions est `0x02`.
+
+
 
 ## Complément d'information {#further-reading}
 

@@ -25,7 +25,7 @@ Obtén más información sobre el Programa de apoyo al ecosistema, los beneficia
 
 Desde 2014, Ethereum Foundation ha organizado Devcon, la conferencia anual para todos los desarrolladores, investigadores, pensadores y creadores de Ethereum.
 
-Puede acceder al contenido en vídeo de las presentaciones de la conferencia para cada año desde su inicio en el [sitio](https://archive.devcon.org/).
+Puede acceder al contenido en vídeo de las presentaciones de la conferencia para cada año desde su inicio en el sitio [archive.devcon.org](https://archive.devcon.org/).
 
 Obtenga más información en [devcon.org](https://devcon.org/), eche un vistazo al [Blog de Devcon](https://devcon.org/en/blogs/), o siga [@efdevcon](https://twitter.com/EFDevcon) para ver las últimas notificaciones.
 

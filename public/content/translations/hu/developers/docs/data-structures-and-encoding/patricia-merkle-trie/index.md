@@ -35,13 +35,11 @@ A radix-fák frissítési és törlési műveletei a következőképpen definiá
 
 ```
     def update(node,path,value):
+        curnode = db.get(node) if node else [ NULL ] * 17
+        newnode = curnode.copy()
         if path == '':
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newnode[-1] = value
         else:
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newindex = update(curnode[path[0]],path[1:],value)
             newnode[path[0]] = newindex
         db.put(hash(newnode),newnode)
@@ -164,14 +162,14 @@ Ez a Merkle Patricia-fa egy csomópontjának megadásához szükséges bővítet
 
 ### Példa fa {#example-trie}
 
-Tegyük fel, hogy egy olyan fát szeretnénk, amely négy út-érték párt tartalmaz `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coin')`, `('horse', 'stallion')`.
+Tegyük fel, hogy egy olyan fát szeretnénk, amely négy út-érték párt tartalmaz `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
 
 Először az elérési utakat és az értékeket `bytes` formába alakítjuk át. Az alábbiakban a _útvonalak_ tényleges bájt ábrázolását `<>` jelöli, bár a _values_ a könnyebb érthetőség érdekében továbbra is sztringként jelennek meg, `''` jelöléssel (ezek is `bytes` formában lennének):
 
 ```
     <64 6f> : 'verb'
     <64 6f 67> : 'puppy'
-    <64 6f 67 65> : 'coin'
+    <64 6f 67 65> : 'coins'
     <68 6f 72 73 65> : 'stallion'
 ```
 
@@ -180,12 +178,12 @@ Most létrehozunk egy ilyen fát a következő kulcs-érték párokkal a mögöt
 ```
     rootHash: [ <16>, hashA ]
     hashA:    [ <>, <>, <>, <>, hashB, <>, <>, <>, [ <20 6f 72 73 65>, 'stallion' ], <>, <>, <>, <>, <>, <>, <>, <> ]
-    hashB:    [ <00 6f>, hashD ]
-    hashD:    [ <>, <>, <>, <>, <>, <>, hashE, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
-    hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
+    hashB:    [ <00 6f>, hashC ]
+    hashC:    [ <>, <>, <>, <>, <>, <>, hashD, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
+    hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-Amikor egy csomópontra egy másik csomóponton belül hivatkozunk, akkor a `H(rlp.encode(x))` szerepel, ahol `H(x) = keccak256(x) if len(x) >= 32 else x` és `rlp.encode` az [RLP](/developers/docs/data-structures-and-encoding/rlp) kódolási függvény.
+Amikor egy csomópontra egy másik csomóponton belül hivatkozunk, akkor a `H(rlp.encode(node))` szerepel, ahol `H(x) = keccak256(x) if len(x) >= 32 else x` és `rlp.encode` az [RLP](/developers/docs/data-structures-and-encoding/rlp) kódolási függvény.
 
 Vegyük észre, hogy egy fa frissítésekor a kulcs-érték párt `(keccak256(x), x)` egy állandó keresőtáblában kell tárolni, _ha_ az újonnan létrehozott csomópont hossza >= 32. Ha a csomópont ennél rövidebb, nem kell tárolni, mivel az f(x) = x függvény megfordítható.
 
@@ -254,7 +252,7 @@ Bővebb információt az [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) dok
 
 ### Visszaigazolásfa {#receipts-trie}
 
-Minden blokknak saját visszaigazolásfája van. A `path` (útvonal): `rlp(transactionIndex)`. A `transactionIndex` az indexe a kialakított blokkban. A visszaigazolásfát sosem frissítik. A tranzakciófához hasonlóan vannak jelenlegi és régi visszaigazolások. Egy adott visszaigazolás lekérdezéséhez visszaigazolásfából szükség van a blokkban lévő tranzakció indexére, a visszaigazoláscsomagra (payload) és a tranzakciótípusra. A visszaigazolás lehet `Receipt` típusú, amely a `TransactionType` és a `ReceiptPayload` összeadása, vagy lehet `LegacyReceipt` típusú, amely `rlp([status, cumulativeGasUsed, logsBloom, logs])` kódként van meghatározva.
+Minden blokknak saját visszaigazolásfája van. A `path` (útvonal): `rlp(transactionIndex)`. A `transactionIndex` az indexe a blokkban, melybe bekerült. A visszaigazolásfát sosem frissítik. A tranzakciófához hasonlóan vannak jelenlegi és régi visszaigazolások. Egy adott visszaigazolás lekérdezéséhez visszaigazolásfából szükség van a blokkban lévő tranzakció indexére, a visszaigazoláscsomagra (payload) és a tranzakciótípusra. A visszaigazolás lehet `Receipt` típusú, amely a `TransactionType` és a `ReceiptPayload` összeadása, vagy lehet `LegacyReceipt` típusú, amely `rlp([status, cumulativeGasUsed, logsBloom, logs])` kódként van meghatározva.
 
 Bővebb információt az [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) dokumentációban talál.
 

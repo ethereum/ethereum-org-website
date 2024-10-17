@@ -6,11 +6,15 @@ lang: es
 
 # Introducción a los contratos inteligentes {#introduction-to-smart-contracts}
 
-Los contratos inteligentes son los bloques de construcción fundamentales de la capa de aplicación de Ethereum. Son programas informáticos almacenados en la cadena de bloques que siguen la lógica «si ocurre esto, entonces se produce aquello» y garantizan ejecutarse siguiendo las reglas definidas por su código, que no se puede cambiar una vez creado.
+Los contratos inteligentes son los bloques de construcción fundamentales de la capa de aplicación de Ethereum. Se trata de programas computacionales almacenados en la [cadena de bloques](/glossary/#blockchain) que siguen la lógica "si ocurre esto, entonces ocurre aquello". Los programas garantizan ejecutarse siguiendo las reglas definidas por su propio código, las cuales no se pueden cambiar una vez que fueron creadas.
 
 Nick Szabo acuñó el término «contrato inteligente». En 1994, escribió [una introducción al concepto](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), y en 1996 escribió [una exploración de lo que podrían hacer los contratos inteligentes](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Szaba visualizó una plataforma intermediaria digital donde los procesos automáticos y criptográficamente seguros permitieran que transacciones y funciones de negocios se llevaran a cabo sin intermediarios de confianza. Los contratos inteligentes en Ethereum ponen esta visión en práctica.
+Szabo imaginó un mercado digital donde procesos autómaticos y [criptográficamente seguros](/glossary/#cryptography) permitieran realizar transacciones y negocios sin la necesidad de intermediarios de confianza. Los contratos inteligentes en Ethereum ponen esta visión en práctica.
+
+Mire en este vídeo cómo Finematics explica los contratos inteligentes:
+
+<YouTube id="pWGLtjG-F5c" />
 
 ## Confianza en los contratos convencionales {#trust-and-contracts}
 
@@ -60,20 +64,14 @@ Finalmente, así como con los contratos tradicionales, usted puede verificar el 
 
 Los contratos inteligentes básicamente pueden hacer lo mismo que otros programas informáticos.
 
-Se pueden realizar cálculos, crear una divisa, almacenar datos, acuñar NFT, enviar comunicaciones e incluso generar gráficos. He aquí algunos ejemplos populares sacados del mundo real:
+Pueden realizar cómputos, crear divisas, almacenar datos, mintear [NFT](/glossary/#nft), enviar comunicaciones e incluso generar gráficos. He aquí algunos ejemplos populares sacados del mundo real:
 
 - [Monedas estables](/stablecoins/)
 - [Crear y distribuir activos digitales únicos](/nft/)
 - [Un cambio de divisas automático y abierto](/get-eth/#dex)
-- [Juegos descentralizados](/dapps/?category=gaming)
+- [Juegos descentralizados](/dapps/?category=gaming#explore)
 - [Una póliza de seguro que paga automáticamente](https://etherisc.com/)
 - [Un estándar que permite a las personas crear divisas interoperables y personalizadas](/developers/docs/standards/tokens/)
-
-## ¿Es más bien de los que aprende viendo? {#visual-learner}
-
-Mire en este vídeo cómo Finematics explica los contratos inteligentes:
-
-<YouTube id="pWGLtjG-F5c" />
 
 ## Más información {#further-reading}
 

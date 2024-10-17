@@ -242,10 +242,7 @@ _注: ステークされたETHを表す、Rocket PoolのrETH、LidoのstETH、Co
 
 <InfoBanner emoji=":lock:">
   <div>
-    注: SMSベースの2FAを使用すると<a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIMハイジャック</a>に遭う恐れがあり、安全ではありません。 最大限に安全を確保するためには、{" "} 
-   <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator
-</a>
-または<a href="https://authy.com/">Authy</a> のようなサービスを利用してください。
+    注意: SMSベースの二要素認証は、<a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud"> SIMジャッキング</a> のリスクがあり、安全ではありません。 最高のセキュリティを確保するために、<a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> や<a href="https://authy.com/">Authy</a>のようなサービスを使用することをお勧めします。
   </div>
 </InfoBanner>
 

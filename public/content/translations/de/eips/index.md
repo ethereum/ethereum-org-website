@@ -54,9 +54,17 @@ Die vollständige Standardisierung neben einem Diagramm ist in [EIP-1](https://e
 
 Wenn Sie mehr über EIPs erfahren möchten, besuchen Sie die [EIPs Website](https://eips.ethereum.org/) und [EIP-1](https://eips.ethereum.org/EIPS/eip-1). Hier sind einige hilfreiche Links:
 
-- [Eine Liste aller EIP](https://eips.ethereum.org/all)
+- [Eine Liste aller Ethereum Improvement Proposals](https://eips.ethereum.org/all)
 - [Eine Beschreibung aller EIP-Typen](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [Eine Beschreibung aller EIP-Zustände](https://eips.ethereum.org/EIPS/eip-1#eip-process)
+
+### Schulungsprojekte für die Community {#community-projects}
+
+- [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) - *PEEPanEIP ist eine Videoreihe zu Schulungszwecken, in der Ethereum Improvement Proposals (EIPs, „Vorschläge zur Verbesserung von Ethereum“) und die wichtigsten Funktionen der kommenden Upgrades besprochen werden.*
+- [EIPs For Nerds](https://ethereum2077.substack.com/t/eip-research) - *EIPs For Nerds bietet umfassende Übersichten über verschiedene Ethereum Improvement Proposals (EIPs), die im ELI5-Stil („Explain Like I‘m 5“, also „Erklär es mir, als wäre ich 5 Jahre alt“) gehalten sind. Dazu gehören die wichtigsten EIPs und EIPs zur Anwendungs-/Infrastruktur-Layer (ERCs). Ziel ist es, die Leser zu informieren und einen Konsens über vorgeschlagene Änderungen am Ethereum-Protokoll zu schaffen.*
+- [EIPs.wtf](https://www.eips.wtf/) - *EIPs.wtf bietet zusätzliche Informationen zu Ethereum Improvement Proposals (EIPs), einschließlich deren Status, Implementierungsdetails, zugehörige Pull-Requests und Community-Feedback.*
+- [EIP.Fun](https://eipfun.substack.com/) - *EIP.Fun liefert die neuesten Nachrichten zu Ethereum Improvement Proposals (EIPs), Updates zu EIP-Meetings und mehr.*
+- [EIPs Insight](https://eipsinsight.com/) - *EIPs Insight zeigt Darstellungen über den Stand von Prozessen und Statistiken zu Ethereum Improvement Proposals (EIPs), die aus verschiedenen Quellen stammen.*
 
 ## Mitmachen {#participate}
 

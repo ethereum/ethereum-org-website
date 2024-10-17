@@ -295,7 +295,7 @@ def register(name, value):
     self.storage[name] = value
 ```
 
-El contrato es muy simple: es una base de datos dentro de la red Ethereum que se puede añadir, pero no modificar ni eliminar. Cualquiera puede registrar un nombre con algún valor, y ese registro se mantiene para siempre. Un contrato de registro de nombres más sofisticado también tendrá una «cláusula de función» que permitirá que otros contratos lo consulten, así como un mecanismo para que el «propietario» (es decir, el primer registrador) de un nombre cambie los datos o transfiera la propiedad. Incluso se puede añadir la reputación y la funcionalidad web de confianza en la parte superior.
+El contrato es muy simple; es una base de datos dentro de la red Ethereum que se puede agregar, pero no modificar ni eliminar. Cualquiera puede registrar un nombre con algún valor, y ese registro se mantiene para siempre. Un contrato de registro de nombres más sofisticado también tendrá una «cláusula de función» que permitirá que otros contratos lo consulten, así como un mecanismo para que el «propietario» (es decir, el primer registrador) de un nombre cambie los datos o transfiera la propiedad. Incluso se puede añadir la reputación y la funcionalidad web de confianza en la parte superior.
 
 ### Almacenamiento de archivos descentralizado {#decentralized-file-storage}
 
@@ -355,7 +355,7 @@ En Ethereum, se emplea una versión simplificada de GHOST que se solo extiende h
 
 - Un bloque debe especificar un padre, y debe especificar 0 o más tíos.
 - Un bloque tío incluido en el bloque B debe tener las siguientes propiedades:
-  - Debe ser un hijo directo del ancestro de la generación k de B, donde 2 ≤ k ≤ 7
+  - Debe ser un hijo directo del antepasado de la generación kth, donde `2 <= k <= 7`.
   - No puede ser ancestro de B
   - Un tío debe ser una cabecera de bloque válida, pero no necesita ser un bloque previamente verificado, ni siquiera válido.
   - Un tío debe ser distinto de todos los tíos incluidos en bloques anteriores y de todos los otros tíos incluidos en el mismo bloque (no debe haber doble inclusión).
@@ -374,7 +374,7 @@ Sin embargo, resulta que este fallo en el mecanismo basado en el mercado, cuando
 3. Hay `N` nodos de minado, cada uno con exactamente la misma potencia de procesamiento (es decir, `1/N` del total)
 4. No existen nodos completos que no minen.
 
-Un minero estaría dispuesto a procesar una transacción si la recompensa esperada es mayor que el coste. Por lo tanto, la recompensa esperada es `kR/N` ya que el minero tiene una `1/N` probabilidad de procesar el siguiente bloque, y el coste del procesamiento para el minero es simplemente`kC`. Por lo tanto, los mineros incluirán transacciones en las que `kR/N> kC`, o `R> NC`. Tenga en cuenta que `R` es la tarifa por operación facilitada por el remitente, y es un límite inferior del beneficio que obtiene el remitente de la transacción, y `NC` es el coste de toda la red en conjunto para procesar una operación. Por eso, los mineros tienen el incentivo de incluir solo aquellas transacciones cuyo beneficio utilitario total exceda el coste.
+Un minero estaría dispuesto a procesar una transacción si la recompensa esperada es mayor que el coste. Por lo tanto, la recompensa esperada es `kR/N` ya que el minero tiene una `1/N` probabilidad de procesar el siguiente bloque, y el coste del procesamiento para el minero es simplemente `kC`. Por lo tanto, los mineros incluirán transacciones en las que `kR/N> kC`, o `R> NC`. Tenga en cuenta que `R` es la tarifa por operación facilitada por el remitente, y es un límite inferior del beneficio que obtiene el remitente de la transacción, y `NC` es el coste de toda la red en conjunto para procesar una operación. Por eso, los mineros tienen el incentivo de incluir solo aquellas transacciones cuyo beneficio utilitario total exceda el coste.
 
 No obstante, hay varias desviaciones de esos supuestos en la realidad:
 

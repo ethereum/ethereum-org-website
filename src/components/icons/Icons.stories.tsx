@@ -8,6 +8,7 @@ import { HighlightDarkIcon } from "./HighlightDarkIcon"
 import { HighlightIcon } from "./HighlightIcon"
 import {
   CorrectIcon,
+  GreenTickIcon,
   IncorrectIcon,
   StarConfettiIcon,
   TrophyIcon,
@@ -31,15 +32,20 @@ import {
   AuditedIcon,
   AvadoGlyphIcon,
   BattleTestedIcon,
+  BedrockGlyphIcon,
   BugBountyIcon,
   CautionProductGlyphIcon,
+  ChainLaboGlyphIcon,
+  ConsensysStakingGlyphIcon,
   DefaultOpenSourceGlyphIcon,
   DockerGlyphIcon,
   EconomicalIcon,
   EthpoolGlyphIcon,
+  EverstakeGlyphIcon,
   FigmentGlyphIcon,
   GreenCheckProductGlyphIcon,
   KilnGlyphIcon,
+  LaunchnodesGlyphIcon,
   LidoGlyphIcon,
   LiquidityTokenIcon,
   MultiClientIcon,
@@ -49,6 +55,8 @@ import {
   RocketPoolGlyphIcon,
   RockXGlyphIcon,
   SelfCustodyIcon,
+  SenseiNodeGlyphIcon,
+  SquidGlyphIcon,
   StafiGlyphIcon,
   StakefishGlyphIcon,
   StakewiseGlyphIcon,
@@ -98,6 +106,7 @@ export default meta
 const iconsDefinitions = [
   CorrectIcon,
   IncorrectIcon,
+  GreenTickIcon,
   StarConfettiIcon,
   TrophyIcon,
   DappnodeIcon,
@@ -116,17 +125,22 @@ const iconsDefinitions = [
   AuditedIcon,
   AvadoGlyphIcon,
   BattleTestedIcon,
+  BedrockGlyphIcon,
   BugBountyIcon,
   CautionProductGlyphIcon,
+  ChainLaboGlyphIcon,
+  ConsensysStakingGlyphIcon,
   StakingDappnodeGlyphIcon,
   DefaultOpenSourceGlyphIcon,
   DockerGlyphIcon,
   EconomicalIcon,
   EthpoolGlyphIcon,
+  EverstakeGlyphIcon,
   FigmentGlyphIcon,
   GreenCheckProductGlyphIcon,
   P2PGlyphIcon,
   KilnGlyphIcon,
+  LaunchnodesGlyphIcon,
   LidoGlyphIcon,
   LiquidityTokenIcon,
   MultiClientIcon,
@@ -135,6 +149,7 @@ const iconsDefinitions = [
   RocketPoolGlyphIcon,
   RockXGlyphIcon,
   SelfCustodyIcon,
+  SenseiNodeGlyphIcon,
   StafiGlyphIcon,
   StakefishGlyphIcon,
   StakewiseGlyphIcon,
@@ -144,6 +159,7 @@ const iconsDefinitions = [
   StakingGlyphEtherCircleIcon,
   StakingGlyphTokenWalletIcon,
   StereumGlyphIcon,
+  SquidGlyphIcon,
   TrustlessIcon,
   UnknownProductGlyphIcon,
   WagyuGlyphIcon,
@@ -178,9 +194,9 @@ const iconsDefinitions = [
 iconsDefinitions.sort((a, b) =>
   (a?.displayName || "") > (b?.displayName || "") ? 1 : -1
 )
-const items = iconsDefinitions.map((IconDef) => (
+const items = iconsDefinitions.map((IconDef, idx) => (
   <Flex
-    key={IconDef.displayName}
+    key={idx}
     direction="column"
     gap={4}
     p={4}
@@ -189,7 +205,12 @@ const items = iconsDefinitions.map((IconDef) => (
     borderColor="background.highlight"
   >
     <Center>
-      <IconDef w="50px" h="50px" />
+      <IconDef
+        className="h-[50px] w-[50px]"
+        // TODO: remove the following two props when migrations are complete
+        w="50px"
+        h="50px"
+      />
     </Center>
     <Center>{IconDef.displayName}</Center>
   </Flex>

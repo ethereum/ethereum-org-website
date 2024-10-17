@@ -61,6 +61,7 @@ lang: zh
 - [IPFS Scan](https://ipfs-scan.io) _（星际文件系统固定浏览器）_
 - [4EVERLAND](https://www.4everland.org/)_（星际文件系统固定服务）_
 - [Filebase](https://filebase.com)_（星际文件系统固定服务）_
+- [Spheron Network](https://spheron.network/)_（星际文件系统/菲乐币固定服务）_
 
 SWARM 是一种去中心化的数据存储和分发技术，具有存储激励系统和存储空间租金价格预言机。
 
@@ -197,6 +198,12 @@ SWARM 是一种去中心化的数据存储和分发技术，具有存储激励�
 - [Kaleido](https://kaleido.io/)
 - [相关文档](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
+
+**Spheron Network - _Spheron 是一项平台即服务 (PaaS)，专为希望在去中心化基础设施上启动其应用程序并获得最佳性能的去中心化应用程序而设计。 它提供开箱即用的计算、去中心化存储、内容分发网络和虚拟主机。_**
+
+- [spheron.network](https://spheron.network/)
+- [相关文档](https://docs.spheron.network/)
+- [GitHub](https://github.com/spheronFdn)
 
 ## 延伸阅读 {#further-reading}
 

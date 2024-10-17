@@ -30,7 +30,7 @@ Pokud některá z komponent počítače v klastru selže (například pokud jsou
 
 Ideálním scénářem pro Ethereum je existence co nejvíce nezávisle provozovaných validátorů. Nicméně několik poskytovatelů vkládání je v současné době velmi populárních a spravuje značnou část celkově vložených ETH. DVT umožňuje provoz těchto validátorů, aniž by utrpěla decentralizace vloženého kapitálu. A to díky tomu, že klíče každého validátoru jsou distribuovány mezi více počítačů a bylo by třeba, aby se na případné podvodné aktivitě validátoru shodlo mnohem větší množství držitelů těchto částí klíče.
 
-Bez DVT je snazší, aby poskytovatelé vkládání používali pouze jednu nebo dvě konfigurace klienta pro všechny své validátory, což zvyšuje dopad případné chyby v klientovi. DVT lze použít k rozložení rizika mezi různé konfigurace klienta a různý hardware a díky této rozmanitosti se zvyšuje odolnost.
+Bez DVT je snazší, aby poskytovatelé vkládání používali pouze jednu nebo dvě konfigurace klienta pro všechny své validátory, což zvyšuje dopad případné chyby v klientu. DVT lze použít k rozložení rizika mezi různé konfigurace klienta a různý hardware a díky této rozmanitosti se zvyšuje odolnost.
 
 **DVT poskytuje Ethereu tyto výhody:**
 

@@ -106,3 +106,4 @@ A un alto nivel, la prueba de participación tiene el mismo objetivo final que l
 
 - [Minería](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Prueba de participación](/developers/docs/consensus-mechanisms/pos/)
+- [Prueba de autoridad](/developers/docs/consensus-mechanisms/poa/)

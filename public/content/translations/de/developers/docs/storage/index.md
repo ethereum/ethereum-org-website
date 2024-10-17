@@ -61,6 +61,7 @@ IPFS ist ein verteiltes System für die Speicherung und den Zugriff auf Dateien,
 - [IPFS Scan](https://ipfs-scan.io) _(IPFS Pinning Explorer)_
 - [4EVERLAND](https://www.4everland.org/)_（IPFS Pinning Service）_
 - [Filebase](https://filebase.com) _(IPFS Pinning Service)_
+- [Spheron Network](https://spheron.network/) _(IPFS-/Filecoin-Pinning-Dienst)_
 
 SWARM ist eine dezentrale Datenspeicherungs- und Datenverteilungstechnologie mit einem Speicher-Incentive-System und einem Speicher-Mietpreis-Orakel.
 
@@ -154,7 +155,7 @@ Basierend auf Proof-of-Stake:
 
 - [Crust.network](https://crust.network)
 - [Dokumentation](https://wiki.crust.network)
-- [Github](https://github.com/crustio)
+- [GitHub](https://github.com/crustio)
 
 **Swarm – _Ein verteiltes Speichersystem und Content-Verteilungs-Service für den Ethereum-Web3-Stack._**
 
@@ -197,6 +198,12 @@ Basierend auf Proof-of-Stake:
 - [Kaleido](https://kaleido.io/)
 - [Dokumentation](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
+
+**Spheron Network – _Spheron ist eine Platform-as-a-Service (PaaS), die für dApps entwickelt wurde, die ihre Anwendungen auf dezentraler Infrastruktur mit bester Leistung starten möchten. Sie bietet standardmäßig Rechenleistung, dezentrale Speicherung, CDN und Webhosting._**
+
+- [spheron.network](https://spheron.network/)
+- [Dokumentation](https://docs.spheron.network/)
+- [GitHub](https://github.com/spheronFdn)
 
 ## Weiterführende Informationen {#further-reading}
 

@@ -334,7 +334,7 @@ A DeFi egy nyílt forráskódú kezdeményezés. A kapcsolódó protokollok és 
   Bővebben a dappok építéséről
 </ButtonLink>
 
-## További olvasnivaló {#futher-reading}
+## További olvasnivaló {#further-reading}
 
 ### DeFi adatok {#defi-data}
 

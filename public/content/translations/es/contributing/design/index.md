@@ -16,7 +16,7 @@ Por último, esto es un buen camino para construir un diverso e impresionante po
 
 Algunas veces necesitamos ayuda para testear nuestras ideas crudas. Esto es un buen camino para saber cómo contribuir sin algunos conocimientos técnicos.
 
-1. El equipo de diseño compartirá una maqueta de diseño en [Discord](https://discord.com/invite/CetY6Y4) y en [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. El equipo de diseño compartirá una maqueta de diseño en [Discord](https://discord.com/invite/ethereum-org) y en [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Usted será guiado a través de diseños para proporcionar opiniones por comentarios de función.
 3. El resultado será compartido en el asunto GitHub y después será cerrado por el equipo.
 

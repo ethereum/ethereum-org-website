@@ -114,12 +114,12 @@ Expandindo esse cálculo, podemos estimar o tempo que levará para processar um 
 <TableContainer>
 
 | Número de saques | Tempo de execução |
-| :--------------: | :---------------: |
-|     400.000      |     3,5 dias      |
-|     500.000      |     4,3 dias      |
-|     600.000      |     5,2 dias      |
-|     700.000      |     6,1 dias      |
-|     800.000      |     7,0 dias      |
+| :-------------------: | :--------------: |
+|        400.000        |     3,5 dias     |
+|        500.000        |     4,3 dias     |
+|        600.000        |     5,2 dias     |
+|        700.000        |     6,1 dias     |
+|        800.000        |     7,0 dias     |
 
 </TableContainer>
 
@@ -194,9 +194,9 @@ eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
 
-Recomenda-se que os operadores do validador visitem a página <a href="https://launchpad.ethereum.org/withdrawals/">Plataforma de Saque de Stake</a>, na qual você encontrará mais detalhes sobre como preparar seu validador para saques. preparado, tempo de eventos e mais detalhes sobre como funcionam os saques.
+É recomendável que os operadores de validadores visitem a página <a href="https://launchpad.ethereum.org/withdrawals/">Retiradas do Staking Launchpad</a>, onde você encontrará mais detalhes sobre como preparar seu validador para retiradas, o momento dos eventos e mais detalhes sobre como as retiradas funcionam.
 
-Para testar a sua configuração numa rede de testes, primeiro visite o <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> para começar.
+Para testar sua configuração em uma rede de teste primeiro, visite o <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> para começar.
 
 </ExpandableCard>
 
@@ -214,5 +214,5 @@ Não. Uma vez que um validador tenha saído e seu saldo completo tenha sido saca
 - [EIP-4895: Saques por push da Beacon chain como operações](https://eips.ethereum.org/EIPS/eip-4895)
 - [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Saque de ETH em skate (teste) com Potus e Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
-- [PEEPanEIP#68: EIP-4895: Beacon chain envia por push saques como operações com Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
+- [PEEPanEIP#68: EIP-4895: Beacon chain envia as retiradas como operações com Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Compreendendo como o Saldo Efetivo do Validador funciona](https://www.attestant.io/posts/understanding-validator-effective-balance/)

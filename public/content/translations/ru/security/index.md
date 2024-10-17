@@ -242,8 +242,7 @@ _Примечание. Существуют производные токены 
 
 <InfoBanner emoji=":lock:">
   <div>
-    Примечание: использование двухфакторной аутентификации на основе вашей
-<a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM-карты</a> ненадежно, так как она может быть взломана. Это небезопасно. Для максимальной безопасности используйте приложение вроде <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> или <a href="https://authy.com/">Authy</a>.
+    Примечание. Двухфакторная аутентификация на основе SMS уязвима к <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">переносу номера телефона на SIM-карту злоумышленника</a> и небезопасна. Для обеспечения максимальной безопасности используйте такой сервис, как <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> или <a href="https://authy.com/">Authy</a>.
   </div>
 </InfoBanner>
 

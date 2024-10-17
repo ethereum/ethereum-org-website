@@ -6,13 +6,17 @@ lang: tr
 
 # Akıllı sözleşmelere giriş {#introduction-to-smart-contracts}
 
-Akıllı sözleşmeler, Ethereum'un uygulama katmanının temel taşlarıdır. "Eğer buysa o zaman şu" mantığını izleyen, kodunda tanımlanan kurallar çerçevesinde çalışacağı garantilenmiş olan, blok zincirde saklanan bilgisayar programlarıdır.
+Akıllı sözleşmeler, Ethereum'un uygulama katmanının temel taşlarıdır. Bunlar, "eğer buysa o zaman şu" mantığını izleyen, kodunda tanımlanan kurallar çerçevesinde çalışacağı garanti edilen ve [blokzincirde](/glossary/#blockchain) saklanan bilgisayar programlarıdır.
 
 "Akıllı sözleşme" terimini Nick Szabo ortaya atmıştır. 1994'te [akıllı sözleşme kavramına giriş](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), 1996'da ise [akıllı sözleşmelerin neler yapabileceğinin keşfi](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html) adlı iki yazısı vardır.
 
-Szabo; otomatik ve kriptografik açıdan güvenli işlemlerin ve işletme fonksiyonlarının, güvene dayalı aracılar olmadan gerçekleşebileceği dijital bir pazar öngörmüştür. Ethereum üzerindeki akıllı sözleşmeler bu vizyonu hayata geçirdi.
+Szabo; otomatik ve [kriptografik açıdan güvenli](/glossary/#cryptography) süreçlerin, işlem ve işletme fonksiyonlarının, güvenilir aracılar olmadan gerçekleşmesini mümkün kıldığı bir dijital pazar öngörmüştür. Ethereum üzerindeki akıllı sözleşmeler bu vizyonu hayata geçirdi.
 
-## Geleneksel sözleşmelerde güven {#trust-and-contracts}
+Finematics'in akıllı sözleşmeleri açıklamasını izleyin:
+
+<YouTube id="pWGLtjG-F5c" />
+
+## Geleneksel sözleşmelere güven {#trust-and-contracts}
 
 Geleneksel sözleşmelerle ilgili en büyük sıkıntılardan biri sözleşmenin sonuçlarını harfiyen gerçekleştirecek şahıslara duyulan ihtiyaçtır.
 
@@ -38,7 +42,7 @@ Otomat istediğiniz ürünü sadece tüm gereksinimler karşılandığında vere
 
 Akıllı sözleşmenin asıl yararı, belirli şartlar sağlandığında anlamı açık olmayan kodu kesin bir şekilde yürütmesidir. Bir insanın sonucu yorumlamasını veya sonucun sağlamasını yapmasına gerek yoktur. Bu, güvenilir aracılara olan ihtiyacı ortadan kaldırır.
 
-Örneğin, bir çocuk için fonu bloke altında tutan ve onun belirli bir tarih sonrasında fonu çekmesine izin veren bir akıllı sözleşme hazırlayabilirsiniz. Eğer bu tarihten önce çekim yapmaya çalışırlarsa, akıllı sözleşme yürütülmeyecektir. Yahut bir galericiye ödeme yaptığınızda arabanın tapusunun dijital halini size otomatik olarak veren bir sözleşme hazırlayabilirsiniz.
+Örneğin, bir çocuk için fonu bloke altında tutan ve onun belirli bir tarih sonrasında fonu çekmesine izin veren bir akıllı sözleşme hazırlayabilirsiniz. Eğer bu tarihten önce para çekmeye çalışırlarsa, akıllı sözleşme yürütülmeyecektir. Yahut bir galericiye ödeme yaptığınızda arabanın tapusunun dijital halini size otomatik olarak veren bir sözleşme hazırlayabilirsiniz.
 
 ## Tahmin edilebilir sonuçlar {#predictability}
 
@@ -56,11 +60,11 @@ Akıllı sözleşmeler ayrıca gizliliğinizi de korur. Ethereum takma adlı bir
 
 Son olarak, tıpkı geleneksel sözleşmelerde olduğu gibi bir akıllı sözleşmeyi imzalamadan (ya da etkileşime geçmeden) önce içinde ne olup olmadığını kontrol edebilirsiniz. Bir akıllı sözleşmenin şeffaflığı herhangi birinin onu inceleyebileceğini garanti eder.
 
-## Akıllı sözleşme kullanım durumları {#use-cases}
+## Akıllı sözleşme kullanım senaryoları {#use-cases}
 
 Akıllı sözleşmeler temel olarak bilgisayar programlarının yaptığı her şeyi yapabilir.
 
-Hesaplamalar gerçekleştirebilir, para birimleri oluşturabilir, veri tutabilir, NFT'ler basabilir, iletişim gönderebilir, hatta grafikler oluşturabilir. İşte gerçek dünyadan bazı popüler örnekler:
+Hesaplamalar gerçekleştirebilir, para birimleri yaratabilir, veri depolayabilir, [NFT](/glossary/#nft) basabilir, iletişim gönderebilir, hatta grafikler oluşturabilir. İşte gerçek dünyadan bazı popüler örnekler:
 
 - [Sabit coinler](/stablecoins/)
 - [Eşsiz dijital varlıkların oluşturulması ve dağıtılması](/nft/)
@@ -68,12 +72,6 @@ Hesaplamalar gerçekleştirebilir, para birimleri oluşturabilir, veri tutabilir
 - [Merkezi olmayan oyun](/dapps/?category=gaming#explore)
 - [Otomatik olarak ödeme yapan bir sigorta poliçesi](https://etherisc.com/)
 - [İnsanların özel, uyumlu para birimleri oluşturmasını sağlayan bir standart](/developers/docs/standards/tokens/)
-
-## Görsel olarak öğrenmeyi mi tercih ediyorsunuz? {#visual-learner}
-
-Finematics'in akıllı sözleşmeleri açıklamasını izleyin:
-
-<YouTube id="pWGLtjG-F5c" />
 
 ## Daha fazla bilgi {#further-reading}
 

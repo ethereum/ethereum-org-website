@@ -58,7 +58,7 @@ La agregación de escalabilidad aumentando el número de validadores por subred 
 
 ## Progreso actual {#current-progress}
 
-SSF está en su fase de investigación. No se espera que se lance en varios años, probablemente después de mejoras sustanciales como [árboles de Verkle](/roadmap/verkle-trees/)y[Danksharding](/roadmap/danksharding/).
+SSF está en su fase de investigación. No se espera que se lance durante varios años, probablemente después de otras mejoras sustanciales como los [árboles de Verkle](/roadmap/verkle-trees/) y [Danksharding](/roadmap/danksharding/).
 
 ## Más información {#further-reading}
 

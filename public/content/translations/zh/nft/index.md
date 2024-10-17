@@ -103,6 +103,11 @@ summaryPoint3: 由以太坊区块链上的智能合约提供支持
 - [EtherscanNFT 跟踪器](https://etherscan.io/nft-top-contracts)
 - [ERC-721 代币标准](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 代币标准](/developers/docs/standards/tokens/erc-1155/)
+- [热门非同质化代币应用和工具](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## 其他资源 {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

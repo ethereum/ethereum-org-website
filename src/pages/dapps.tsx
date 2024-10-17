@@ -1854,15 +1854,7 @@ const DappsPage = () => {
       </FullWidthContainer>
       <Content>
         <ImageContainer id="what-are-dapps">
-          <GhostCard
-            mt={2}
-            sx={{
-              ".ghost-card-base": {
-                display: "flex",
-                justifyContent: "center",
-              },
-            }}
-          >
+          <GhostCard className="mt-2 flex items-center">
             <Image
               bgSize="cover"
               bgRepeat="no-repeat"

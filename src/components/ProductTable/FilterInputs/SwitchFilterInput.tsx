@@ -1,3 +1,4 @@
+import type { IconType } from "react-icons"
 import { Icon } from "@chakra-ui/react"
 
 import { FilterInputState } from "@/lib/types"
@@ -5,7 +6,7 @@ import { FilterInputState } from "@/lib/types"
 import Switch from "@/../tailwind/ui/Switch"
 
 interface SwitchFilterInputProps {
-  icon?: typeof Icon
+  icon?: IconType
   label: string
   description?: string
   filterIndex: number

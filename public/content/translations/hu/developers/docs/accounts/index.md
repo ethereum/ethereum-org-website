@@ -69,6 +69,12 @@ Példa:
 
 A nyilvános kulcsot a privát kulcsból generálják az [Elliptic Curve Digital Signature Algorithm](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) segítségével. A számla publikus címét úgy lehet megkapni, ha elvesszük a legutolsó 20 bájtot a Keccak-256 hash nyilvános kulcsából és hozzáadunk egy `0x` előtagot az elejére.
 
+Ez azt jelenti, hogy egy külső tulajdonú számla (EOA) 42 karakter hosszú címmel bír (20 bájtnyi szegmens, ami 40 hexadecimális karakter, plusz a `0x` előtag).
+
+Példa:
+
+`0x5e97870f263700f46aa00d967821199b9bc5a120`
+
 A következő példa megmutatja, hogyan lehet a [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) nevű aláíró eszközzel egy új számlát létrehozni. A Clef egy számlakezelő és -aláíró eszköz, amely az Ethereum klienssel, a [Geth-szel](https://geth.ethereum.org) van egybecsomagolva. A `clef newaccount` parancs egy új kulcspárt hoz létre, és egy titkosított kulcstárolóba menti el.
 
 ```
@@ -86,9 +92,9 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 [Geth-dokumentáció](https://geth.ethereum.org/docs)
 
-Lehetséges új publikus kulcsokat származtatni a privát kulcsodból, de nem tudsz publikus kulcsokból privát kulcsot származtatni. Ez azt jelenti, hogy létfontosságú a privát kulcs biztonságban tartása, és ahogy a neve is sugallja: **PRIVÁT**.
+Lehetséges új publikus kulcsokat származtatni a privát kulcsodból, de nem tudsz publikus kulcsokból privát kulcsot származtatni. Létfontosságú a privát kulcs biztonságban tartása, mert ahogy a neve is sugallja, ez  **PRIVÁT**.
 
-Egy privát kulcsra van szükséged, hogy üzeneteket és tranzakciókat tudj aláírni, mely egy aláírást hoz létre. Ezáltal mások az aláírásodból leszármaztathatják a publikus kulcsodat, amely az üzenet feladójának kilétét bizonyítja. Az alkalmazásodban használhatsz egy javascript könyvtárat, hogy tranzakciókat küldj a hálózatra.
+Egy privát kulcsra van szükséged, hogy üzeneteket és tranzakciókat tudj aláírni, mely egy aláírást hoz létre. Ezáltal mások az aláírásodból leszármaztathatják a publikus kulcsodat, amely az üzenet feladójának kilétét bizonyítja. Az alkalmazásában használhat javascript könyvtárat, hogy tranzakciókat küldjön a hálózatra.
 
 ## Szerződéses számlák {#contract-accounts}
 
@@ -108,7 +114,7 @@ Az Ethereumon létezik egy másik típusú kulcs is, amelyet a proof-of-work-ala
 
 ## Megjegyzés a tárcákkal kapcsolatban {#a-note-on-wallets}
 
-A számla nem egyenlő a tárcával. A számla az a kulcspár, amely a felhasználó Ethereum számlájához tartozik. A tárca egy olyan interfész vagy alkalmazás, amely lehetővé teszi az Ethereum számlával való interakciót.
+A számla nem egyenlő a tárcával. A tárca egy olyan interfész vagy alkalmazás, amely lehetővé teszi az Ethereum-számlával való interakciót, legyen az külső tulajdonú számla vagy szerződéses számla.
 
 ## Egy vizuális bemutató {#a-visual-demo}
 

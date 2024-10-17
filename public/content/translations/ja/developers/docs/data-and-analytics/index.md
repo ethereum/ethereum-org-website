@@ -18,7 +18,7 @@ lang: ja
 
 ## ブロックエクスプローラー {#block-explorers}
 
-多くの[ブロックエクスプローラー](/developers/docs/data-and-analytics/block-explorers/)は、[RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API)ゲートウェイを提供しています。このゲートウェイにより、デベロッパーは、ブロック、トランザクション、マイナー、アカウント、およびその他のオンチェーンアクティビティについて、リアルタイムのデータを可視化できるようになります。
+多くの[ブロックエクスプローラー](/developers/docs/data-and-analytics/block-explorers/)は、[RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer)な[API](https://www.wikipedia.org/wiki/API)ゲートウェイを提供しており、デベロッパーはブロック、トランザクション、バリデータ、アカウント、その他のオンチェーン活動に関するリアルタイムデータを確認できます。
 
 デベロッパーはこうしたデータを処理して変換することで、[ブロックチェーン](/glossary/#blockchain)についての独自のインサイトおよびやり取りをユーザーに提供できます。 たとえば、[Etherscan](https://etherscan.io)は、12秒のスロットごとに実行データとコンセンサスデータを提供します。
 

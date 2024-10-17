@@ -10,7 +10,7 @@ Ethereum.org çeviri stili rehberi, web sitesini yerelleştirmemize yardımcı o
 
 Bu belge, genel bir rehber görevi görür ve herhangi bir dile özgü değildir.
 
-Herhangi bir sorunuz, öneriniz veya geri bildiriminiz varsa lütfen bize translations@ethereum.org adresinden bize ulaşın, Crowdin'de @ethdotorg'a bir mesaj gönderin veya #translations kanalından bize mesaj gönderebileceğiniz veya ekip üyelerinden herhangi birine ulaşabileceğiniz [Discord](https://discord.gg/ethereum-org)'umuza katılın.
+Herhangi bir sorunuz, öneriniz veya geri bildiriminiz varsa lütfen translations@ethereum.org adresinden bize ulaşın, Crowdin'de @ethdotorg'a bir mesaj gönderin veya #translations kanalından bize mesaj gönderebileceğiniz veya ekip üyelerinden herhangi birine ulaşabileceğiniz [Discord](https://discord.gg/ethereum-org)'umuza katılın.
 
 ## Crowdin kullanma {#using-crowdin}
 
@@ -18,7 +18,7 @@ Herhangi bir sorunuz, öneriniz veya geri bildiriminiz varsa lütfen bize transl
 
 Crowdin hakkında daha fazla bilgi edinmek ve gelişmiş özelliklerinden bazılarını kullanmak istiyorsanız, [Crowdin bilgi bankası](https://support.crowdin.com/online-editor/) birçok kapsamlı kılavuz ve tüm Crowdin işlevlerine genel bakış içerir.
 
-## Mesajın özünü yakalamak {#capturing-the-essence}
+## Mesajın özünü yakalama {#capturing-the-essence}
 
 Ethereum.org içeriğini çevirirken, kelimenin tam anlamıyla çeviri yapmaktan kaçının.
 
@@ -36,7 +36,7 @@ Resmi hitap biçimini kullanmak, günlük veya saldırgan görünmekten kaçınm
 
 Hint-Avrupa ve Afro-Asya dillerinin çoğu, eril ve dişil kelimeler arasında ayrım yapan cinsiyete özgü ikinci şahıs zamirlerini kullanır. Kullanıcıya hitap ederken veya iyelik zamirlerini kullanırken, resmi hitap şekli genellikle nasıl tanımlandıklarına bakılmaksızın uygulanabilir ve tutarlı olduğundan, ziyaretçinin cinsiyetini varsaymaktan kaçınabiliriz.
 
-## Basit ve net olan kelime hazinesi ve anlam {#simple-vocabulary}
+## Basit ve net kelime haznesi ve anlam {#simple-vocabulary}
 
 Amacımız, web sitesindeki içeriği mümkün olduğunca çok kişi için anlaşılır kılmaktır.
 
@@ -180,7 +180,7 @@ Bunları çevirirken yaratıcı ve açıklayıcı çeviriler kullanmaktan çekin
 
 **Bazı terimleri İngilizce bırakmak yerine çoğu terimin çevrilmesinin nedeni, Ethereum ve ilgili teknolojileri daha fazla insan kullanmaya başladıkça, bu yeni terminolojinin gelecekte daha yaygın hâle geleceği gerçeğidir. Dünyanın her yerinden daha fazla insanı bu alana dahil etmek istiyorsak, kendimiz oluşturmamız gerekse bile mümkün olduğunca çok dilde anlaşılır terminoloji sağlamamız gerekir.**
 
-## Düğmeler ve CTA'lar {#buttons-and-ctas}
+## Butonlar ve CTA'lar {#buttons-and-ctas}
 
 Web sitesi, diğer içeriklerden farklı şekilde çevrilmesi gereken çok sayıda düğme içerir.
 
@@ -190,7 +190,7 @@ Biçimlendirme uyumsuzluklarını önlemek için düğmelerin çevirileri mümk�
 
 ![Bir düğme nasıl bulunur.png](./how-to-find-a-button.png)
 
-## Kapsayıcılık için çevirme {#translating-for-inclusivity}
+## Kapsayıcılık için çeviri {#translating-for-inclusivity}
 
 Ethereum.org'un ziyaretçileri, dünyanın farklı bölgelerindendir ve farklı geçmişlere sahiptir. Bu nedenle web sitesindeki dil; tarafsız, herkese açık ve kapsayıcı olmalıdır.
 
@@ -208,7 +208,7 @@ Dilinizin kurallarını bilmeli ve buna göre çeviri yapmalısınız. Yardıma 
 
 Özellikle nelere dikkat edilmesi gerektiğine dair bazı örnekler:
 
-### Noktalama, düzenleme {#punctuation-and-formatting}
+### Noktalama, biçimlendirme {#punctuation-and-formatting}
 
 **Büyük/Küçük Harf**
 
@@ -247,7 +247,7 @@ Dilinizin kurallarını bilmeli ve buna göre çeviri yapmalısınız. Yardıma 
 - İngilizce'de kısa çizgi (-) sözcükleri veya bir sözcüğün farklı bölümlerini birleştirmek için kullanılırken tire (–) bir aralığı veya duraklamayı belirtmek için kullanılır.
 - Birçok dilde, dikkat edilmesi gereken kısa çizgi ve tire kullanımı için farklı kurallar vardır.
 
-### Formatlar {#formats}
+### Biçimler {#formats}
 
 **Sayılar**
 

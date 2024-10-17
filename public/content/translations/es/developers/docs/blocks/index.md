@@ -33,7 +33,7 @@ La prueba de participación (PoS) consiste en lo siguiente:
 - Otros validadores enterados de la existencia de este nuevo bloque vuelven a ejecutar las transacciones con el fin de mostrar que están de acuerdo con los cambios propuestos a la red en general. Tras asumir el bloque como válido, se añade a sus propias bases de datos.
 - Cuando se informa a un validador sobre dos bloques que entran en conflicto para una misma ranura, entonces este ha de hacer uso del algoritmo de elección de bifurcación para elegir el bloque respaldado por los ETH más apostados.
 
-[Más sobre la prueba de participación](/developers/docs/consensus-mechanisms/pos)
+[Más información sobre la prueba de participación](/developers/docs/consensus-mechanisms/pos)
 
 ## ¿Qué hay en un bloque? {#block-anatomy}
 
@@ -41,11 +41,11 @@ Hay mucha información contenida en un bloque. En los niveles más altos, un blo
 
 | Campo            | Descripción                                                         |
 |:---------------- |:------------------------------------------------------------------- |
-| `slot`           | la ranura a la que pertenece el bloque                              |
+| `ranura`         | la ranura a la que pertenece el bloque                              |
 | `proposer_index` | la ID del validador que propone el bloque                           |
 | `parent_root`    | el hash del bloque anterior                                         |
 | `state_root`     | el hash raíz del objeto de estado                                   |
-| `body`           | un objeto que contiene varios campos, como se define a continuación |
+| `cuerpo`         | un objeto que contiene varios campos, como se define a continuación |
 
 El `cuerpo` del bloque contiene una serie de características:
 
@@ -53,11 +53,11 @@ El `cuerpo` del bloque contiene una serie de características:
 |:-------------------- |:-------------------------------------------------------------------- |
 | `randao_reveal`      | un valor utilizado para seleccionar el siguiente bloque propuesto    |
 | `eth1_data`          | información sobre el contrato de depósito                            |
-| `graffiti`           | datos arbitrarios usados para etiquetar bloques                      |
+| `grafiti`            | datos arbitrarios usados para etiquetar bloques                      |
 | `proposer_slashings` | lista de validadores por cortar                                      |
 | `attester_slashings` | lista de certificantes por recortar                                  |
-| `attestations`       | lista de certificaciones a favor del bloque actual                   |
-| `deposits`           | lista de nuevos depósitos en el contrato de depósito                 |
+| `certificaciones`    | lista de certificaciones a favor del bloque actual                   |
+| `depósitos`          | lista de nuevos depósitos en el contrato de depósito                 |
 | `voluntary_exits`    | lista de validadores que salen de la red                             |
 | `sync_aggregate`     | subconjunto de validadores utilizados para servir a clientes ligeros |
 | `execution_payload`  | transacciones pasadas desde el cliente de ejecución                  |
@@ -67,15 +67,15 @@ El campo `certificaciones` contiene una lista con todas las certificaciones del 
 | Campo              | Descripción                                                         |
 |:------------------ |:------------------------------------------------------------------- |
 | `aggregation_bits` | una lista de los validadores que participaron en esta certificación |
-| `data`             | una terminal con múltiples subcampos                                |
-| `signature`        | firma añadida de todos los validadores que certifican               |
+| `datos`            | una terminal con múltiples subcampos                                |
+| `firma`            | firma añadida de todos los validadores que certifican               |
 
 El campo `datos` en la `certificación` contiene lo siguiente:
 
 | Campo               | Descripción                                                |
 |:------------------- |:---------------------------------------------------------- |
-| `slot`              | el ranura a la que se refiere la certificación             |
-| `index`             | índices para certificar validadores                        |
+| `ranura`            | el ranura a la que se refiere la certificación             |
+| `índice`            | índices para certificar validadores                        |
 | `beacon_block_root` | el hash raíz del bloque de baliza que contiene este objeto |
 | `fuente`            | el último puesto de control justificado                    |
 | `target`            | el último bloque de límite de época                        |
@@ -106,29 +106,29 @@ El propio `execution_payload` contiene lo siguiente (observe que esto es idénti
 
 | Campo              | Descripción                                                               |
 |:------------------ |:------------------------------------------------------------------------- |
-| `parent_hash`      | hash del bloque principal                                                 |
-| `fee_recipient`    | dirección de cuenta para pagar comisiones de transacción a                |
+| `parent_hash`      | hash del bloque padre                                                     |
+| `fee_recipient`    | dirección de la cuenta para pagar las tarifas de transacción a            |
 | `state_root`       | hash raíz para el estado global después de aplicar cambios en este bloque |
 | `receipts_root`    | hash de los recibos de transacción trie                                   |
 | `logs_bloom`       | estructura de datos que contiene registros de eventos                     |
-| `prev_randao`      | valor usado en la selección aleatoria del validador                       |
+| `prev_randao`      | valor utilizado en la selección aleatoria del validador                   |
 | `block_number`     | el número del bloque actual                                               |
 | `gas_limit`        | gas máximo permitido en este bloque                                       |
 | `gas_used`         | la cantidad real de gas utilizada en este bloque                          |
-| `marca de tiempo`  | el tiempo del bloque                                                      |
+| `marca de tiempo`  | el tiempo de bloqueo                                                      |
 | `extra_data`       | datos adicionales arbitrarios como bytes sin procesar                     |
-| `base_fee_per_gas` | el valor de la tarifa de base                                             |
-| `block_hash`       | hash del bloque de ejecución                                              |
+| `base_fee_per_gas` | el valor de la tarifa base                                                |
+| `block_hash`       | Hash del bloque de ejecución                                              |
 | `transacciones`    | lista de transacciones por ejecutar                                       |
-| `withdrawals`      | lista de objetos de retiradas                                             |
+| `retiradas`        | lista de objetos de retiradas                                             |
 
 La lista de `retiradas` contiene objetos de `retirada` estructurados de la siguiente manera:
 
 | Campo            | Descripción                                          |
 |:---------------- |:---------------------------------------------------- |
 | `dirección`      | dirección de la cuenta que ha realizado una retirada |
-| `amount`         | cantidad de la retirada                              |
-| `index`          | valor del índice de la retirada                      |
+| `cantidad`       | cantidad de la retirada                              |
+| `índice`         | valor del índice de la retirada                      |
 | `validatorIndex` | valor del índice del validador                       |
 
 ## Tiempo del bloque {#block-time}
@@ -139,7 +139,7 @@ Esta implementación difiere de los sistemas basados en pruebas de trabajo cuyos
 
 ## Tamaño del bloque {#block-size}
 
-Un importante apunte final es que los bloques tienen limitaciones de tamaño. Cada bloque tiene un tamaño objetivo de 15 millones de gas, pero el tamaño de los bloques incrementará o disminuirá según las exigencias de la red, hasta el límite de 30 millones de gas por bloque (el doble del tamaño objetivo). La cantidad total de gas utilizada por todas las transacciones del bloque debe ser inferior al límite de gas del bloque. Esto es importante, porque garantiza que los bloques no pueden tener un tamaño arbitrario. Si los bloques pudieran ser del tamaño que quisiéramos, los nodos completos de menor rendimiento dejarían de adaptarse gradualmente a la red, debido a los requisitos de espacio y velocidad. Cuanto más grande sea el bloque, mayores serán los requerimientos de potencia informática para procesarlos a tiempo para la siguiente ranura. Esto constituye una fuerza centralizadora, limitada por el tamaño de los bloques.
+Un importante apunte final es que los bloques tienen limitaciones de tamaño. Cada bloque tiene un tamaño objetivo de 15 millones de gas, pero el tamaño de los bloques incrementará o disminuirá según las exigencias de la red, hasta el límite de 30 millones de gas por bloque (el doble del tamaño objetivo). El límite de gas del bloque se puede ajustar hacia arriba o hacia abajo por un factor de 1/1024 con respecto al límite de gas del bloque anterior. Como resultado, los validadores pueden cambiar el límite de gas de bloque a través del consenso. La cantidad total de gas utilizada por todas las transacciones del bloque debe ser inferior al límite de gas del bloque. Esto es importante, porque garantiza que los bloques no pueden tener un tamaño arbitrario. Si los bloques pudieran ser del tamaño que quisiéramos, los nodos completos de menor rendimiento dejarían de adaptarse gradualmente a la red, debido a los requisitos de espacio y velocidad. Cuanto más grande sea el bloque, mayores serán los requerimientos de potencia informática para procesarlos a tiempo para la siguiente ranura. Esto constituye una fuerza centralizadora, limitada por el tamaño de los bloques.
 
 ## Más información {#further-reading}
 

@@ -45,7 +45,6 @@ Vários rastreadores oferecem uma visão geral em tempo real dos nós na rede Et
 
 - Mapa de nós pela Etherscan
 - Ethernodes da Bitfly
-- [Rastreador de nós Ethereum](https://crawler.ethereum.org/)
 - [Nodewatch](https://www.nodewatch.io/) por Chainsafe, rastreando nós de consenso
 
 ## Tipos de nó {#node-types}
@@ -130,13 +129,14 @@ A comunidade do Ethereum mantém vários clientes de execução (previamente con
 
 Essa tabela resume os diferentes clientes. Todos eles passam por [testes de cliente](https://github.com/ethereum/tests) e são mantidos ativamente para ter as atualizações de rede em dia.
 
-| Client                                          | Linguagem de programação | Sistemas operacionais | Redes                                     | Estratégias de sincronização                 | Limpeza de estado |
-| ----------------------------------------------- | ------------------------ | --------------------- | ----------------------------------------- | -------------------------------------------- | ----------------- |
-| [Geth](https://geth.ethereum.org/)              | Go                       | Linux, Windows, macOS | Rede principal, Sepolia, Goerli           | Instantâneo, Completo                        | Arquivo, Removido |
-| [Nethermind](http://nethermind.io/)             | C#, .NET                 | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Instantâneo (sem servidor), Rápido, Completo | Arquivo, Removido |
-| [Besu](https://besu.hyperledger.org/en/stable/) | Java                     | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Instantâneo, Rápido, Completo                | Arquivo, Removido |
-| [Erigon](https://github.com/ledgerwatch/erigon) | Go                       | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Completo                                     | Arquivo, Removido |
-| [Reth](https://github.com/paradigmxyz/reth)     | Rust                     | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Completo                                     | Arquivo, Removido |
+| Client                                                                   | Linguagem de programação | Sistemas operacionais | Redes                            | Estratégias de sincronização                                            | Limpeza de estado |
+| ------------------------------------------------------------------------ | ------------------------ | --------------------- | -------------------------------- | ----------------------------------------------------------------------- | ----------------- |
+| [Geth](https://geth.ethereum.org/)                                       | Go                       | Linux, Windows, macOS | Rede principal, Sepolia, Holesky | [Instantânea](#snap-sync), [Completa](#full-sync)                       | Arquivo, Removido |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET                 | Linux, Windows, macOS | Rede principal, Sepolia, Holesky | [Instantânea](#snap-sync) (sem serviço), Rápida, [Completa](#full-sync) | Arquivo, Removido |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java                     | Linux, Windows, macOS | Rede principal, Sepolia, Holesky | [Instantânea](#snap-sync), [Rápida](#fast-sync), [Completa](#full-sync) | Arquivo, Removido |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go                       | Linux, Windows, macOS | Rede principal, Sepolia, Holesky | [Completo](#full-sync)                                                  | Arquivo, Removido |
+| [Reth](https://reth.rs/)                                                 | Rust                     | Linux, Windows, macOS | Rede principal, Sepolia, Holesky | [Completo](#full-sync)                                                  | Arquivo, Removido |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript               | Linux, Windows, macOS | Sepolia, Holesky                 | [Completo](#full-sync)                                                  | Removido          |
 
 Para saber mais sobre redes suportadas, leia sobre as [redes Ethereum](/developers/docs/networks/).
 
@@ -164,9 +164,27 @@ Nethermind é uma implementação do Ethereum criada com a pilha de tecnologia C
 
 - uma máquina virtual otimizada
 - acesso ao estado
-- rede e recursos ricos como painéis Prometheus/Graphana, suporte ao registro empresarial seq, rastreamento JSON RPC e plugins de análise.
+- rede e recursos avançados, como painéis Prometheus/Grafana, suporte a registro de logs com Seq. Enterprise, rastreamento JSON-RPC e plugins de análise.
 
 Nethermind também tem uma [documentação detalhada](https://docs.nethermind.io), um suporte eficaz ao desenvolvedor, uma comunidade online e suporte 24 horas por dia disponível para usuários Premium.
+
+### Reth {#reth}
+
+O Reth (abreviação de Rust Ethereum) é uma implementação de nó completo do Ethereum fácil de usar, altamente modular, rápida e eficiente. O Reth foi originalmente desenvolvido e impulsionado pela Paradigm e está sob as licenças Apache e MIT.
+
+O Reth está pronto para produção e é adequado para uso em ambientes de essenciais, como staking ou serviços que exigem um tempo de atividade alto. Apresenta bom desempenho em casos de uso em que é necessário alto desempenho com grandes margens, como RPC, MEV, indexação, simulações e atividades P2P.
+
+Para saber mais, consulte o [Reth Book](https://reth.rs/) ou o repositório [Reth GitHub](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
+
+### Em desenvolvimento {#execution-in-development}
+
+Esses clientes ainda estão em estágios iniciais de desenvolvimento e ainda não são recomendados para uso em produção.
+
+#### EthereumJS {#ethereumjs}
+
+O cliente de execução EthereumJS (EthereumJS) foi escrito em TypeScript e é composto de vários pacotes, incluindo os principais primitivos do Ethereum representados pelas classes Block, Transaction e Merkle-Patricia Trie e os principais componentes do cliente, incluindo uma implementação da Máquina Virtual do Ethereum (EVM), uma classe de blockchain, e a pilha de rede DevP2P.
+
+Saiba mais sobre ele lendo a [documentação](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master) correspondente
 
 ## Clientes de consenso {#consensus-clients}
 
@@ -220,21 +238,32 @@ Os modos de sincronização representam diferentes abordagens para esse processo
 
 ### Modos de sincronização na camada de execução {#execution-layer-sync-modes}
 
-#### Sincronização Full archive {#full-sync}
+A camada de execução pode ser executada em diferentes modos para se adequar a diferentes casos de uso, desde a reexecução do estado geral da blockchain até a sincronização apenas com a parte inicial da cadeia a partir de um ponto de verificação confiável.
 
-A sincronização completa baixa todos os blocos (incluindo cabeçalhos, transações e recibos) e gera o estado da cadeia de blocos de forma incremental, executando cada bloco desde a origem.
+#### Sincronização completa {#full-sync}
+
+Uma sincronização completa faz o download de todos os blocos (incluindo cabeçalhos e corpos de blocos) e regenera o estado da blockchain de forma incremental, executando cada bloco desde a gênese.
 
 - Minimiza a confiança e oferece a mais alta segurança, verificando cada transação.
 - Com um número crescente de transações, pode levar dias ou semanas para processar todas as transações.
 
-#### Sincronização Full snap {#snap-sync}
+Os [nós de arquivo](#archive-node) realizam uma sincronização completa para criar (e manter) um histórico completo das alterações de estado feitas por cada transação em cada bloco.
 
-A sincronização Snap verifica a cadeia bloco-a-bloco, exatamente como a sincronização full archive; entretanto, ao invés de iniciar no bloco gênese, ela começa em um ponto de checagem 'confiável' mais recente que é conhecido ser parte do blockchain real. O nó grava pontos de checagem periódicos enquanto exclui dados mais velhos que uma certa idade. Estas snapshots são usadas para gerar novamente dados de estado quando eles são necessários, ao invés de ter que armazená-los para sempre.
+#### Sincronização rápida {#fast-sync}
 
-- Estratégia de sincronização mais rápida, atualmente padrão na rede principal do Ethereum
-- Economiza muito uso de disco e largura de banda de rede sem sacrificar a segurança
+Assim como uma sincronização completa, uma sincronização rápida baixa todos os blocos (incluindo cabeçalhos, transações e recibos). No entanto, em vez de reprocessar as transações históricas, uma sincronização rápida se baseia nos recibos até chegar a um cabeçalho recente, quando passa a importar e processar blocos para fornecer um nó completo.
 
-[Mais sobre sincronização instantânea](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+- Estratégia de sincronização rápida.
+- Reduz a demanda de processamento em favor do uso da largura de banda.
+
+#### Sincronização instantânea {#snap-sync}
+
+As sincronizações instantâneas também verificam a cadeia bloco a bloco. No entanto, em vez de começar no bloco de gênese, uma sincronização instantânea começa em um ponto de verificação "confiável" mais recente conhecido por fazer parte da verdadeira blockchain. O nó grava pontos de checagem periódicos enquanto exclui dados mais velhos que uma certa idade. Esses instantâneos são usados para regenerar os dados de estado conforme necessário, em vez de armazená-los para sempre.
+
+- Estratégia de sincronização mais rápida, atualmente padrão na rede principal Ethereum.
+- Economiza muito uso de disco e largura de banda de rede sem sacrificar a segurança.
+
+[Mais sobre sincronização instantânea](https://github.com/ethereum/devp2p/blob/master/caps/snap.md).
 
 #### Sincronização leve {#light-sync}
 
@@ -257,15 +286,13 @@ A sincronização otimista é uma estratégia de sincronização pós-fusão pro
 
 #### Sincronização de ponto de verificação {#checkpoint-sync}
 
-A sincronização do ponto de verificação, também conhecida como sincronização de subjetividade fraca, cria uma experiência de usuário superior para sincronizar o Nó Beacon. Ela é baseada em suposições de [subjetividade fraca](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/), que permitem sincronizar a Beacon Chain de um ponto de verificação de subjetividade fraca recente em vez da origem. A sincronização do ponto de verificação torna o tempo de sincronização inicial significativamente mais rápido, com suposições de confiança semelhantes às da sincronização da [origem](/glossary/#genesis-block).
+Uma sincronização de ponto de verificação, também conhecida como sincronização de subjetividade fraca, cria uma experiência de usuário superior para a sincronização de um Beacon Node. Ela se baseia em suposições de [subjetividade fraca](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) que permitem a sincronização da Beacon Chain a partir de um ponto de verificação recente de subjetividade fraca em vez da gênese. As sincronizações de ponto de verificação tornam o tempo de sincronização inicial significativamente mais rápido com suposições de confiança semelhantes às da sincronização de [gênese](/glossary/#genesis-block).
 
-Na prática, isso significa que seu nó se conecta a um serviço remoto para baixar os estados finalizados recentes e continua verificando os dados a partir desse ponto. A terceira parte que fornece os dados é confiável e deve ser escolhida com cuidado.
+Na prática, isso significa que seu nó se conecta a um serviço remoto para baixar os estados finalizados recentes e continua verificando os dados a partir desse ponto. O terceiro que fornece os dados é confiável e deve ser escolhido com cuidado.
 
 Mais sobre [sincronização do ponto de verificação](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
 
 ## Leitura adicional {#further-reading}
-
-Há muitas informações sobre clientes Ethereum na Internet. Aqui estão alguns recursos que podem ser úteis.
 
 - [Ethereum 101 – Parte 2 – Entendendo os nós](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _–Wil Barnes, 13 de fevereiro de 2019_
 - [Executando nós completos do Ethereum: um guia para os pouco motivados](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _— Justin Leroux, 7 de novembro de 2019_

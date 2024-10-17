@@ -140,9 +140,33 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
+## Ismert problémák {#erc20-issues}
+
+### ERC-20-token-elfogadási problémák {#reception-issue}
+
+Amikor ERC-20 tokeneket küldenek olyan okosszerződésbe, amely nem tudja azokat kezelni, akkor ezek végleg elvesznek. Ennek az az oka, hogy a befogadó szerződésnek nincs olyan funkcionalitása, hogy felismerje vagy válaszoljon a bejövő tokenekre, és nincs olyan mechanizmus az ERC-20-szabványban, ami figyelmeztetné a szerződést az érkező tokenekről. Ez a probléma a következő módokon nyilvánul meg:
+
+1.  Tokenátviteli mechanizmus
+  - Az ERC-20 tokeneket a transfer vagy a transferFrom függvényekkel lehet küldeni
+    -   Amikor a felhasználó tokeneket küld egy szerződéscímre ezekkel a függvényekkel, a tokenek elmennek attól függetlenül, hogy a szerződés képes-e azokat fogadni
+2.  A figyelmeztetés hiánya
+    -   A befogadó szerződés nem kap figyelmeztetést vagy visszahívást, hogy tokenek érkeztek hozzá
+    -   Ha a befogadó szerződés nem tud tokeneket kezelni (például nincs egy fallback függvény vagy egy dedikált függvény, ami a tokent fogadná), akkor a tokenek beragadnak a szerződés címén
+3.  Nincs beépített kezelés
+    -   Az ERC-20 szabvány nem köti ki a kötelező funkciót a befogadó szerződésnek, ezért számos szerződés képtelen a beérkező tokenek megfelelő kezelésére
+
+Néhány alternatív szabvány létezik ennek a problémának a kezelésére, mint az [ERC-223](/developers/docs/standards/tokens/erc-223)
+
 ## További olvasnivaló {#further-reading}
 
 - [EIP-20: ERC-20 tokenszabvány](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin – Tokenek](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin – ERC-20-implementáció](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy – Útmutató a Solidity ERC-20 tokenekhez](https://www.alchemy.com/overviews/erc20-solidity)
+
+
+## További helyettesíthető tokenekről szóló szabványok {#fungible-token-standards}
+
+- [ERC-223](/developers/docs/standards/tokens/erc-223)
+- [ERC-777](/developers/docs/standards/tokens/erc-777)
+- [ERC-4626 - Tokenizált értékmegőrzőre vonatkozó szabvány](/developers/docs/standards/tokens/erc-4626)

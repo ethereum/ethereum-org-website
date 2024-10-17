@@ -320,20 +320,9 @@ export const useNav = () => {
         },
         {
           label: t("enterprise"),
-          description: t("nav-enterprise-description"),
+          description: t("nav-mainnet-description"),
           icon: BsBuildings,
-          items: [
-            {
-              label: t("mainnet-ethereum"),
-              description: t("nav-mainnet-description"),
-              href: "/enterprise/",
-            },
-            {
-              label: t("private-ethereum"),
-              description: t("nav-private-description"),
-              href: "/enterprise/private-ethereum/",
-            },
-          ],
+          href: "/enterprise/",
         },
       ],
     },

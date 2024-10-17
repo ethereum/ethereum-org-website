@@ -94,15 +94,9 @@ const WalletSubComponent = ({
                         <li key={idx} className="mb-2 flex flex-row gap-2">
                           <span>
                             {wallet[item.filterKey] ? (
-                              <GreenCheckProductGlyphIcon
-                                className="text-primary"
-                                boxSize={4}
-                              />
+                              <GreenCheckProductGlyphIcon className="size-4 text-primary" />
                             ) : (
-                              <WarningProductGlyphIcon
-                                className="text-secondary"
-                                boxSize={4}
-                              />
+                              <WarningProductGlyphIcon className="text-secondary size-4" />
                             )}
                           </span>
                           <p className={`leading-1 ${featureColor}`}>

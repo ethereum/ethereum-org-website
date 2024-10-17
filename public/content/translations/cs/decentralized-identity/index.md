@@ -73,7 +73,7 @@ Decentralizovaná identita může pomoci vytvořit online komunity, které jsou 
 
 ### 4. Ochrana proti Sybil útokům {#sybil-protection}
 
-Sybil útoky jsou útoky, kde se jednotlivci snaží přelstít systém, aby si myslel, že jsou více lidmi, aby zvyšili svůj vliv. Aplikace pro udělování grantů, které využívají [kvadratické hlasování](/glossary/#quadratic-voting), jsou zranitelné vůči Sybil útokům, protože hodnota grantu se zvýší, když pro něj hlasuje více jednotlivců, což podněcuje uživatele k tomu, aby své příspěvky rozdělili mezi více identit. Decentralizované identity tomu pomáhají zabránit tím, že zvyšují břemeno každého účastníka, aby dokázali, že jsou skutečně lidé, i když často aniž by bylo nutné zveřejnit konkrétní soukromé informace.
+Aplikace pro udělování grantů, které využívají [kvadratické hlasování](/glossary/#quadratic-voting), jsou zranitelné vůči [Sybil útokům](/glossary/#sybil-attack), protože hodnota grantu se zvýší, když pro něj hlasuje více jednotlivců, což podněcuje uživatele k tomu, aby své příspěvky rozdělili mezi více identit. Decentralizované identity tomu pomáhají zabránit tím, že zvyšují břemeno každého účastníka, aby dokázali, že jsou skutečně lidé, i když často aniž by bylo nutné zveřejnit konkrétní soukromé informace.
 
 ## Co jsou atestace? {#what-are-attestations}
 
@@ -139,7 +139,7 @@ Tento přístup umožňuje atestacím získat trvalost založenou na blockchainu
 
 ### Atestace na blockchainu {#onchain-attestations}
 
-Atestace na blockchainu jsou ukládány ve [smart kontaktech](/glossary/#smart-contract) na blockchainu Ethereum. Chytrý kontrakt (sloužící jako rejstřík) spojí atestaci k odpovídajícímu blockchainovému decentralizovanému identifikátoru (veřejnému klíči).
+Atestace na blockchainu jsou ukládány ve [chytrých kontaktech](/glossary/#smart-contract) na blockchainu Ethereum. Chytrý kontrakt (sloužící jako rejstřík) spojí atestaci k odpovídajícímu blockchainovému decentralizovanému identifikátoru (veřejnému klíči).
 
 Zde je příklad toho, jak by mohla fungovat blockchainová atestace v praxi:
 
@@ -163,7 +163,7 @@ Existuje mnoho ambiciózních projektů, které využívají Ethereum jako zákl
 - **[Proof of Humanity](https://www.proofofhumanity.id)** – _Proof of Humanity (nebo PoH) je systém pro ověřování sociální identity postavený na Ethereu._
 - **[BrightID](https://www.brightid.org/)** – _Decentralizovaná síť sociální identity s veřejně dostupným zdrojovým kódem usilující o reformu ověřování identity vytvořením a analýzou sociálního grafu._
 - **[walt.id](https://walt.id)** - _Open source decentralizovaná identita a peněženková infrastruktura, která umožňuje vývojářům a organizacím využívat vlastní suverénní identitu a NFT/SBT._
-- **[Masca](https://masca.io/)** — _Open source peněženka decentralizovaných identit implementovaná jako MetaMask Snap, která umožňuje uživatelům a vývojářům využívat DID a VC._
+- **[Veramo](https://veramo.io/)** – _Framework JavaScriptu, který každému usnadňuje používání kryptograficky ověřitelných dat v aplikacích._
 
 ## Další informace {#further-reading}
 

@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-key */
 import { createIcon } from "@chakra-ui/react"
 
+// TODO: migrate with StakingHierarchy
+
 export const StakingGlyphEtherCircleIcon = createIcon({
   displayName: "StakingGlyphEtherCircleIcon",
   viewBox: "0 0 32 32",

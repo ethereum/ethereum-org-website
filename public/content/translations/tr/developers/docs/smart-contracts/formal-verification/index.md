@@ -26,7 +26,7 @@ Akıllı sözleşmelerin resmi doğrulama modellemelerinde farklı teknikler kul
 
 Yüksek düzey modeller, akıllı sözleşmeler ile dışarıdan sahip olunan hesaplar (EOA'lar), sözleşme hesapları ve blokzincir çevresi gibi dış aracılar arasındaki ilişkiye odaklanır. Bunun gibi modeller, belirli kullanıcı etkileşimlerine cevaben bir sözleşmenin nasıl davranacağını belirleyen özellikleri tanımlamak açısından kullanışlıdır.
 
-Diğer resmi modeller, bunun aksine bir akıllı sözleşmenin düşük düzey davranışına odaklanır. Yüksek düzeyli modeller bir sözleşmenin işlevselliği hakkında akıl yürütülmesine yardım ederken, uygulamanın dahili çalışması hakkındaki detayları yakalamada hata yapabilirler. Düşük düzeyli modeller, program analizine beyaz kutu bakışı uygular ve sözleşmenin yürütülmesiyle ilgili özellikleri anlamak için program izleri ve [kontrol akım grafikleri](https://en.wikipedia.org/wiki/Control-flow_graph) gibi akıllı sözleşme uygulamalarının daha düşük düzeyli gösterimlerine dayanır.
+Diğer resmi modeller, bunun aksine bir akıllı sözleşmenin düşük düzey davranışına odaklanır. Üst düzey modeller bir sözleşmenin işlevselliği hakkında akıl yürütmeye yardımcı olabilirken, uygulamanın iç işleyişi ile ilgili ayrıntıları yakalamakta bazen başarısız olabilirler. Düşük düzeyli modeller, program analizine beyaz kutu bakışı uygular ve sözleşmenin yürütülmesiyle ilgili özellikleri anlamak için program izleri ve [kontrol akım grafikleri](https://en.wikipedia.org/wiki/Control-flow_graph) gibi akıllı sözleşme uygulamalarının daha düşük düzeyli gösterimlerine dayanır.
 
 Düşük düzeyli modeller, bir akıllı sözleşmenin Ethereum'un yürütme ortamındaki (örneğin [EVM](/developers/docs/evm/)) fiili yürütülmesini temsil ettiğinden ideal olarak kabul edilir. Düşük düzeyli modelleme teknikleri, özellikle akıllı sözleşmelerde kritik güvenlik özelliklerini tesis ederken ve olası güvenlik açıklarını tespit ederken kullanışlıdır.
 
@@ -78,7 +78,7 @@ Hoare-tarzı spesifikasyonlar, _kısmi doğruluğu_ ya da _tam doğruluğu_ gara
 
 Tam doğruluk kanıtı elde etmek, bazı yürütmelerin sonlanmadan önce gecikebileceği ya da hiç sonlanmayabileceği için zordur. Bununla birlikte, yürütmenin sona erip ermediği sorusu tartışmalı bir nokta olabilir, çünkü Ethereum'un gaz mekanizması sonsuz program döngülerini önler (yürütme ya başarılı bir şekilde ya da "gaz yeterli değil" hatası nedeniyle sona erer).
 
-Hoare mantığı kullanılarak oluşturulan akıllı sözleşme spesifikasyonları, bir sözleşmedeki fonksiyonların ve döngülerin yürütülmesi için tanımlanmış ön koşullara, art koşullara ve değişmezlere sahiptir. Ön koşullar sıklıkla fonksiyona hatalı girdi yapılması olasılığını beraberinde getirirken art koşullar da bu girdilere yönelik istenen yanıtları açıklar (örneğin, belirli bir istisna atılması). Bu bağlamda, Hoare tarzı özellikler sözleşme uygulamalarının doğruluğunu sağlama konusunda etkilidir.
+Hoare mantığı kullanılarak oluşturulan akıllı sözleşme spesifikasyonları, bir sözleşmedeki fonksiyonların ve döngülerin yürütülmesi için tanımlanmış ön koşullara, art koşullara ve değişmezlere sahiptir. Ön koşullar sıklıkla fonksiyona hatalı girdi yapılması olasılığını beraberinde getirirken art koşullar da bu girdilere yönelik istenen yanıtları açıklar (örneğin, belirli bir istisna atılması). Bu sebepten, Hoare tarzı özellikler sözleşme uygulamalarının doğruluğunu sağlama konusunda etkilidir.
 
 Çoğu resmi doğrulama taslağı, fonksiyonların anlamsal doğruluğunu kanıtlamak için Hoare tarzı spesifikasyonlar kullanır. Hoare tarzı özelliklerin (savlar olarak) Solidity'deki `require` ve `assert` ifadeleri kullanılarak sözleşme koduna doğrudan eklenmesi mümkündür.
 
@@ -212,16 +212,16 @@ Buna ek olarak, program asla sonlanmayabileceğinden program doğrulayıcıları
 
 ### Resmi spesifikasyonlar oluşturmaya yönelik spesifikasyon dilleri {#specification-languages}
 
-**Eylem**: \_\*Eylem, depolama spesifikasyonlarının, ön/art koşulların ve sözleşme değişmezlerinin spesifikasyonuna olanak tanır. Ayrıca, araç takımı Coq, SMT çözücüleri veya hevm üzerinden birçok özelliği kanıtlayabilen kanıt arka uçlarına sahiptir.\*\*
+**Eylem**: _*Eylem, depolama spesifikasyonlarının, ön/art koşulların ve sözleşme değişmezlerinin spesifikasyonuna olanak tanır. Ayrıca, araç takımı Coq, SMT çözücüleri veya hevm üzerinden birçok özelliği kanıtlayabilen kanıt arka uçlarına sahiptir.**
 
 - [GitHub](https://github.com/ethereum/act)
 - [Belgeler](https://ethereum.github.io/act/)
 
-**Scribble** - \_\*Scribble, Scribble spesifikasyon dili içindeki kod açıklamalarını spesifikasyonu kontrol eden somut savlara dönüştürür.\*\*
+**Scribble** - _*Scribble, Scribble spesifikasyon dili içindeki kod açıklamalarını spesifikasyonu kontrol eden somut savlara dönüştürür.**
 
 - [Belgeler](https://docs.scribble.codes/)
 
-**Dafny** - \_\*Dafny, kodun doğruluğunu gerekçelendirme ve kanıtlama konusunda yüksek düzeyli açıklamalara dayanan, doğrulama için hazır bir programlama dilidir.\*\*
+**Dafny** - _*Dafny, kodun doğruluğunu gerekçelendirme ve kanıtlama konusunda yüksek düzeyli açıklamalara dayanan, doğrulama için hazır bir programlama dilidir.**
 
 - [GitHub](https://github.com/dafny-lang/dafny)
 
@@ -232,15 +232,15 @@ Buna ek olarak, program asla sonlanmayabileceğinden program doğrulayıcıları
 - [Web sitesi](https://www.certora.com/)
 - [Belgeler](https://docs.certora.com/en/latest/index.html)
 
-**Solidity SMTChecker** - \_\*Solidity'nin SMTChecker'ı, SMT (Karşılanabilirlik Modüler Teorileri) ve Horn çözümlemesine dayalı yerleşik bir model denetleyicisidir. Derleme sırasında bir sözleşmenin kaynak kodunun spesifikasyonlarla uyumlu olduğunu onaylar ve güvenlik özelliklerinin ihlallerini statik olarak kontrol eder.\*\*
+**Solidity SMTChecker** - _*Solidity'nin SMTChecker'ı, SMT (Karşılanabilirlik Modüler Teorileri) ve Horn çözümlemesine dayalı yerleşik bir model denetleyicisidir. Derleme sırasında bir sözleşmenin kaynak kodunun spesifikasyonlarla uyumlu olduğunu onaylar ve güvenlik özelliklerinin ihlallerini statik olarak kontrol eder.**
 
 - [GitHub](https://github.com/ethereum/solidity)
 
-**solc-verify** - \_\*solc-verify, Solidity derleyicisinin açıklamaları ve modüler program doğrulamasını kullanarak Solidity kodu üzerinde otomatik resmi doğrulama yapabilen genişletilmiş bir sürümüdür.\*\*
+**solc-verify** - _*solc-verify, Solidity derleyicisinin açıklamaları ve modüler program doğrulamasını kullanarak Solidity kodu üzerinde otomatik resmi doğrulama yapabilen genişletilmiş bir sürümüdür.**
 
 - [GitHub](https://github.com/SRI-CSL/solidity)
 
-**KEVM** - \_\*KEVM, Ethereum Sanal Makinesi'nin (EVM) K çerçevesinde yazılmış resmi bir semantiğidir. KEVM, yürütülebilir özelliktedir ve ulaşılabilirlik mantığını kullanarak özellikle ilgili belirli savları kanıtlayabilir.\*\*
+**KEVM** - _*KEVM, Ethereum Sanal Makinesi'nin (EVM) K çerçevesinde yazılmış resmi bir semantiğidir. KEVM, yürütülebilir özelliktedir ve ulaşılabilirlik mantığını kullanarak özellikle ilgili belirli savları kanıtlayabilir.**
 
 - [GitHub](https://github.com/runtimeverification/evm-semantics)
 - [Belgeler](https://jellopaper.org/)
@@ -259,12 +259,12 @@ Buna ek olarak, program asla sonlanmayabileceğinden program doğrulayıcıları
 
 ### Akıllı sözleşmelerdeki güvenlik açığı modellerinin tespit edilmesine yarayan sembolik yürütme tabanlı araçlar {#symbolic-execution-tools}
 
-**Manticore** - \__EVM bit kodu analizi için sembolik yürütmeye dayalı bir analiz aracıdır_.\*
+**Manticore** - _*EVM bit kodu analizi için sembolik yürütmeye dayalı bir analiz aracıdır*.*
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [Belgeler](https://github.com/trailofbits/manticore/wiki)
 
-**hevm** - \_\*hevm, EVM bit kodu için bir sembolik yürütme motoru ve eşdeğerlik denetimcisidir.\*\*
+**hevm** - _*hevm, EVM bit kodu için bir sembolik yürütme motoru ve eşdeğerlik denetimcisidir.**
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 

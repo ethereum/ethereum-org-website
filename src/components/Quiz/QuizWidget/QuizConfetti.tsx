@@ -1,23 +1,14 @@
-import * as React from "react"
-import { IconProps } from "@chakra-ui/react"
+import { StarConfettiIcon } from "@/components/icons/quiz/StarConfettiIcon"
 
-import { StarConfettiIcon } from "../../icons/quiz"
+import { cn } from "@/lib/utils/cn"
 
 export const QuizConfetti = () => {
-  const commonProps: IconProps = {
-    fontSize: "184px",
-    position: "absolute",
-    top: 0,
-  }
+  const commonClasses = "h-[119px] absolute top-0"
   return (
     <>
-      <StarConfettiIcon {...commonProps} insetInlineStart={0} />
+      <StarConfettiIcon className={cn(commonClasses, "left-0")} />
 
-      <StarConfettiIcon
-        {...commonProps}
-        insetInlineEnd={0}
-        transform="scaleX(-100%)"
-      />
+      <StarConfettiIcon className={cn(commonClasses, "right-0 -scale-x-100")} />
     </>
   )
 }

@@ -7,7 +7,7 @@ sidebarDepth: 3
 
 Yan zincir, Ethereum'dan bağımsız çalışan ve Ethereum Ana Ağı'na bir köprü ile bağlı olan ayrı bir blokzincirdir. Yan zincirler farklı blok parametrelerine ve genellikle işlemlerin verimli işlenmesi için tasarlanmış [mutabakat algoritmalarına](/developers/docs/consensus-mechanisms/) sahip olabilirler. Ethereum'un güvenlik özelliklerini taşımadığı için yan zincir kullanmanın artıları ve eksileri vardır. [Katman 2 ölçeklendirme çözümlerinin](/layer-2/) aksine, yan zincirler işlem bilgilerini ve durum değişikliklerini Ethereum Ana Ağı'na göndermezler.
 
-Yan zincirler daha çok işlem hacmi için merkeziyetsizlikten veya güvenlikten de ödün verirler ([ölçeklendirme üçlü çelişmesi](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Bununla birlikte, yükseltmeler için [vizyon bildirisinde](/roadmap/vision/) özetlendiği üzere Ethereum, merkeziyetsizlikten ve güvenlikten ödün vermeyen ölçeklendirme amacıyla geliştirilmiştir.
+Yan zincirler, yüksek verim elde etmek için merkeziyetsizlik veya güvenlikten de bir miktar ödün verirler ([ölçeklendirme üçlü çelişmesi](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Bununla birlikte, yükseltmeler için [vizyon bildirisinde](/roadmap/vision/) özetlendiği üzere Ethereum, merkeziyetsizlikten ve güvenlikten ödün vermeyen ölçeklendirme amacıyla geliştirilmiştir.
 
 ## Yan zincirler nasıl çalışır? {#how-do-sidechains-work}
 
@@ -17,7 +17,7 @@ Yan zincirler farklı geçmişleri, geliştirme yol haritaları ve tasarım hass
 
 Yan zincirleri özel yapan niteliklerden biri (yani Ethereum'dan farklı) kullandığı mutabakat algoritmasıdır. Yan zincirler mutabakat konusunda Ethereum'a dayanmadıkları için kendi ihtiyaçlarını karşılayan alternatif mutabakat protokollerini seçebilirler. Yan zincirler tarafından kullanılan bazı mutabakat algoritmaları şunlardır:
 
-- [Yetki kanıtı](https://wikipedia.org/wiki/Proof_of_authority)
+- [Yetki kanıtı](/developers/docs/consensus-mechanisms/poa/)
 - [Yetkilendirilmiş hisse ispatı](https://en.bitcoin.it/wiki/Delegated_proof_of_stake)
 - [Bizans hata toleransı](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained).
 
@@ -51,7 +51,7 @@ Köprüler, kullanıcıların Ethereum ve yan zincir arasında fon taşımaları
 
 | Artıları                                                                                                                                     | Eksileri                                                                                                                                     |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Yan zincirlerin temelini oluşturan teknoloji köklüdür ve kapsamlı araştırmalar ile tasarım iyileştirmelerinden yararlanır.                   | Yan zincirler, ölçeklenebilirlik için bir miktar merkeziyetsizlik ve güvensizlik feda ederler.                                               |
+| Yan zincirlerin temelini oluşturan teknoloji köklüdür ve kapsamlı araştırmalar ile tasarım iyileştirmelerinden yararlanır.                   | Yan zincirler, ölçeklenebilirliğe karşılık merkeziyetsizlik ve güven gerektirmezlikten bir miktar feragat eder.                              |
 | Yan zincirler genel hesaplamayı destekler ve EVM uyumluluğu sunar (yan zincirler Ethereum'a özgü merkeziyetsiz uygulamaları çalıştırabilir). | Yan zincirler, ayrı bir mutabakat mekanizması kullanır ve Ethereum'un güvenlik garantilerinden yararlanamaz.                                 |
 | Yan zincirler, işlemleri etkin bir şekilde işlemek ve kullanıcılar için işlem ücretlerini azaltmak için farklı mutabakat modelleri kullanır. | Yan zincirler daha yüksek güven varsayımları gerektirir (örn. kötü niyetli yan zincir doğruyucularının bir çoğunluğu sahtekarlık yapabilir). |
 | EVM uyumlu yan zincirler, merkeziyetsiz uygulamaların ekosistemlerini genişletmelerine izin verirler.                                        |                                                                                                                                              |

@@ -117,23 +117,7 @@ Les frais élevés de gaz sont le fruit de la popularité d'Ethereum. Si la dema
 
 La mise à l'échelle de la couche 2 est une initiative primordiale pour améliorer considérablement les coûts de gaz, l'expérience utilisateur et l'évolutivité. [En savoir plus sur la mise à l'échelle de la couche 2](/developers/docs/scaling/#layer-2-scaling).
 
-## Que fut la mise à niveau London / EIP-1559 ? {#what-was-the-london-upgrade-eip-1559}
-
-Avant la mise à jour de Londres, Ethereum avait des blocs de taille fixe. En période de forte demande du réseau, ces blocs fonctionnaient au maximum de sa capacité En conséquence, les utilisateurs devaient souvent attendre que la demande diminue pour être inclus dans un bloc, ce qui entraînait une mauvaise expérience utilisateur. La mise à niveau de Londres a permis d'introduire des blocs de taille variable dans Ethereum.
-
-Sur le réseau Ethereum, la façon dont les frais de transaction sont calculés a été modifiée avec [la mise à jour de Londres](/history/#london) d'août 2021. Avant la mise à niveau de Londres, les frais étaient calculés sans distinguer les frais de `base` et de `priority`, comme suit :
-
-Disons qu'Alice devait payer à Marc la somme d'1 ETH. Dans la transaction, la limite de gaz est de 21 000 unités et le prix du gaz est de 200 gwei.
-
-Les frais totaux auraient été les suivants : `Gas units (limit) * Gas price per unit` (unités de gaz (limite) * Prix du gaz par unité) soit `21 000 * 200 = 4 200 000 gwei` ou 0,0042 ETH
-
-La mise en œuvre de [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) dans la mise à niveau de Londres a rendu le mécanisme de frais de transaction plus complexe, mais a rendu les frais de gaz plus prévisibles, ce qui s'est traduit par un marché des frais de transaction plus efficace. Les utilisateurs peuvent soumettre des transactions avec un`PrixMaximumParUnitéDeGaz`, ce que cela signifie c'est que les utilisateurs pourront eux-mêmes décider du montant qu'ils sont prêts à payer pour l'exécution de la transaction, et ce, en toute connaissance de cause du prix maximum de gaz à payer sur le marché. Un prix soumis supérieur à celui du marché, ne sera pas pris en compte, et le cas écheant, vous ne recevrez pas de communication ni de rémunération. (`PrixMinimumParUnitéDeGaz`).
-
-Cette vidéo explique l'EIP-1559 et les avantages qu'il procure :
-
-<YouTube id="MGemhK9t44Q" />
-
-## Suivi des frais de gaz {#moitoring-gas-fees}
+## Suivi des frais de gaz {#monitoring-gas-fees}
 
 Si vous voulez surveiller les prix du gaz et pouvoir envoyer votre ETH à moindre coût, vous pouvez utiliser différents outils comme :
 
