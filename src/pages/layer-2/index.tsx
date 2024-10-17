@@ -5,6 +5,7 @@ import type { BasePageProps, Lang } from "@/lib/types"
 
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
+import ExpandableCard from "@/components/ExpandableCard"
 import HubHero, { HubHeroProps } from "@/components/Hero/HubHero"
 import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -176,10 +177,98 @@ const Layer2Hub = () => {
         </div>
       </div>
 
-      <div id="layer-2-faq" className="w-full px-8 py-9">
-        <h2>FAQ</h2>
+      {/* TODO: Setup for translation */}
+      <div id="layer-2-faq" className="flex w-full flex-col gap-12 px-8 py-9">
+        <h2>Frequently asked questions</h2>
+        <div>
+          <ExpandableCard
+            title={"How do I know that a network is part of Ethereum?"}
+            eventCategory=""
+            eventAction=""
+            eventName=""
+            visible={true}
+          >
+            <div className="flex flex-col gap-8">
+              <p>
+                There are many different ways one can categorize networks in
+                relation to Ethereum. Many networks claim to be scaling Ethereum
+                to gather popularity. However, one clear perspective is whether
+                the network stores its data on the Ethereum main network. This
+                greatly enhances user security and Ethereum&apos;s
+                permissionless vision. Such projects are often called “rollups”.
+                If data is stored somewhere else, then the project is not a
+                direct Ethereum extension and is rather independent. Check out
+                some of the most popular <a href="">Ethereum networks</a>.
+              </p>
+              <p>
+                Some specific industries might not require such direct close
+                relationship such as gaming or non-financial applications where
+                different technologies are better fit.
+              </p>
+            </div>
+          </ExpandableCard>
+          <ExpandableCard
+            title={"Are all these networks safe?"}
+            eventCategory=""
+            eventAction=""
+            eventName=""
+            visible={true}
+          >
+            <div className="flex flex-col gap-8">
+              <p>
+                While generally designed with robust security features, their
+                safety depends on the underlying technology, smart contract
+                security, and <a href="">maturity of the network</a>.
+              </p>
+              <p>
+                Users should perform due diligence, starting with small
+                transactions and staying updated on developments to ensure
+                secure usage.
+              </p>
+            </div>
+          </ExpandableCard>
+          <ExpandableCard
+            title={
+              "Why can't Ethereum scale its own chain instead of relying on these networks?"
+            }
+            eventCategory=""
+            eventAction=""
+            eventName=""
+            visible={true}
+          >
+            <p>
+              Ethereum can&apos;t easily scale its own main chain because it
+              needs to stay secure and decentralized. Making the main chain
+              faster could make it less secure and more centralized. Ethereum
+              networks help by processing transactions off the main chain and
+              then using the main chain for security, allowing Ethereum to
+              handle more transactions without losing security or
+              decentralization.
+            </p>
+          </ExpandableCard>
+          <ExpandableCard
+            title={"Why is there no 'official' Ethereum networks?"}
+            eventCategory=""
+            eventAction=""
+            eventName=""
+            visible={true}
+          >
+            <p>
+              Just as there is no &apos;official&apos; Ethereum client, there is
+              no &apos;official&apos; Ethereum layer 2. Ethereum is
+              permissionless - technically anyone can create a layer 2! Multiple
+              teams will implement their version of a layer 2, and the ecosystem
+              as a whole will benefit from a diversity of design approaches that
+              are optimized for different use cases. Much like we have multiple
+              Ethereum clients developed by multiple teams in order to have
+              diversity in the network, this too will be how layer 2s develop in
+              the future.
+            </p>
+          </ExpandableCard>
+        </div>
       </div>
 
+      {/* TODO: Setup for translation */}
       <div
         id="layer-2-callout-cards"
         className="flex w-full flex-col gap-16 px-8 py-8 md:flex-row"
