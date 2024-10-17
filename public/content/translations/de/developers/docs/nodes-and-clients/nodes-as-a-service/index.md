@@ -63,19 +63,30 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Dashboard mit Request Explorer, Mempool Watcher und Composer
     - Integrierter Testnetz-Faucet-Zugang
     - Aktive Discord-Entwicklergemeinschaft mit 18.000 Nutzern
+
 - [**All diese Nodes**](https://allthatnode.com/)
   - [Dokumentation](https://docs.allthatnode.com/)
   - Eigenschaften
-    - Die größte kostenlose Stufe bietet 150.000 Anfragen pro Tag
-    - Zugang zu über 24 Blockchain-Nodes
-    - RPC-, HTTPS- und WSS-Endpunkte
-    - Unbegrenzter Zugriff auf Archivdaten
-    - Support rund um die Uhr und Serververfügbarkeit über 99,9 %
+    - 50,000 Anfragen pro Tag mit kostenloser Variante
+    - Unterstützung für über 40 Protokolle
+    - JSON-RPC(EVM, Tendermint)-, REST- und Websocket-API unterstützt
+    - Unbegrenzter Zugang zu Archivdaten
+    - Technischer Support rund um die Uhr und über 99,9 % Uptime
     - Ein Faucet ist auf mehreren Chains verfügbar
-    - Unbegrenzter Zugriff auf Endpunkte mit einer unbegrenzten Anzahl von API-Schlüsseln
-    - Trace-/Debug-Namespace ist verfügbar
+    - Unbegrenzter Endpunktzugang mit unbegrenzter Anzahl an API-Schlüsseln
+    - Trace-/Debug-API unterstützt
     - Automatisierte Updates
-    - Technischer Support
+
+- [**Amazon Managed Blockchain**](https://aws.amazon.com/managed-blockchain/)
+  - [Dokumentation](https://aws.amazon.com/managed-blockchain/resources/)
+  - Eigenschaften
+    - Vollständig verwaltete Ethereum-Nodes
+    - Verfügbar in sechs Regionen
+    - JSON-RPC über HTTP und sichere WebSockets
+    - Unterstützt 3 Chains
+    - SLAs, AWS-Support rund um die Uhr
+    - Go-Ethereum und Lighthouse
+
 - [**Ankr**](https://www.ankr.com/)
   - [Dokumentation](https://docs.ankr.com/)
   - Eigenschaften
@@ -88,6 +99,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Dashboard
     - RPC-, HTTPS- und WSS-Endpunkte
     - Direkter Support
+
 - [**Blast**](https://blastapi.io/)
   - [Dokumentation](https://docs.blastapi.io/)
   - Eigenschaften
@@ -102,15 +114,17 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Überwachung und Benachrichtigungen rund um die Uhr
     - Eine Gesamt-Service-Level-Vereinbarung (SLA) von 99,9 %
     - Mit Kryptowährungen bezahlen
+
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [Dokumentation](https://ubiquity.docs.blockdaemon.com/)
   - Vorteile
     - Dashboard
     - Pro-Node-Basis
     - Analysen
+
 - [**BlockPI**](https://blockpi.io/)
   - [Dokumentation](https://docs.blockpi.io/)
-  - Funktionen
+  - Eigenschaften
     - Robuste & verteilte Node-Struktur
     - Bis zu 40 HTTPS- und WSS-Endpunkte
     - Kostenloses Anmeldepaket und monatliches Paket
@@ -119,6 +133,16 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Individueller Plan und Zahlung nach Verbrauch (Pay-as-you-go)
     - Mit Kryptowährungen bezahlen
     - Direkte Unterstützung & technischer Support
+
+- [**Chainbase**](https://www.chainbase.com/)
+  - [Dokumentation](https://docs.chainbase.com)
+  - Eigenschaften
+    - Hochverfügbarer, schneller und skalierbarer RPC-Dienst
+    - Unterstützung für mehrere Blockchains
+    - Kostenlose Tarife
+    - Benutzerfreundliches Dashboard
+    - Bietet Blockchain-Datendienste über RPC hinaus
+
 - [**Chainstack**](https://chainstack.com/)
   - [Dokumentation](https://docs.chainstack.com/)
   - Eigenschaften
@@ -131,8 +155,9 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Bringen Sie Ihre Cloud mit
     - Bezahlung pro Stunde
     - Direkter Support rund um die Uhr
+
 - [**DataHub**](https://datahub.figment.io)
-  - [Dokumentation](https://docs.figment.io/)
+  - [Dokumente](https://docs.figment.io/)
   - Eigenschaften
     - Kostenlose Stufe mit 3.000.000 Anfragen pro Monat
     - RPC- und WSS-Endpunkte
@@ -143,7 +168,8 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Dashboard
     - Direkter Support rund um die Uhr
     - In Kryptowährung bezahlen (Unternehmen)
-- [DRPC](https://drpc.org/)
+
+- [**DRPC**](https://drpc.org/)
   - [Dokumentation](https://docs.drpc.org/)
   - Eigenschaften
     - Dezentralisierte RPC-Nodes
@@ -157,8 +183,9 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Flexible Ausweichoptionen
     - [Öffentlicher Endpunkt](https://eth.drpc.org)
     - Kostenlose gemeinsam genutzte Archiv-Nodes
+
 - [**GetBlock**](https://getblock.io/)
-  - [Dokumente](https://getblock.io/docs/get-started/authentication-with-api-key/)
+  - [Dokumentation](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Eigenschaften
     - Zugang zu über 40 Blockchain-Knoten
     - 40.000 kostenlose und tägliche Anfragen
@@ -168,6 +195,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Erweiterte Analysen
     - Automatisierte Updates
     - Technischer Support
+
 - [**InfStones**](https://infstones.com/)
   - Eigenschaften
     - Option für kostenlose Stufe
@@ -179,6 +207,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Schnelle Synchronisierungszeit für gezielte Einsätze
     - Direkter Support rund um die Uhr
     - Zugang zu mehr als 50 Blockchain-Nodes
+
 - [**Infura**](https://infura.io/)
   - [Dokumentation](https://infura.io/docs)
   - Eigenschaften
@@ -187,6 +216,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Kostenpflichtige Archivierungsdaten
     - Direkter Support
     - Dashboard
+
 - [**Kaleido**](https://kaleido.io/)
   - [Dokumentation](https://docs.kaleido.io/)
   - Eigenschaften
@@ -207,9 +237,10 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Unterstützung für Orchestrierungen von Multi-Cloud-, Multi-Region- und Hybrid-Bereitstellungen
     - Einfache SaaS-Preise auf Stundenbasis
     - SLA- und 24/7-Support
+
 - [**Lava Network**](https://www.lavanet.xyz/)
   - [Dokumentation](https://docs.lavanet.xyz/)
-  - Eigenschaften
+  - Features
     - Kostenlose Testnetz-Nutzung
     - Dezentrale Redundanz für hohe Verfügbarkeit
     - Open-Source
@@ -218,8 +249,9 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Intuitive Projektmanagement-Benutzeroberfläche
     - Konsensbasierte Datenintegrität
     - Unterstützung für mehrere Blockchains
+
 - [**Moralis**](https://moralis.io/)
-  - [Dokumentation](https://docs.moralis.io/)
+  - [Dokumente](https://docs.moralis.io/)
   - Eigenschaften
     - Kostenloses Teilen von Nodes
     - Kostenlose gemeinsam genutzte Archiv-Nodes
@@ -230,13 +262,15 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Einzigartiges Ethereum-SDK
     - Einzigartige API-Endpunkte
     - Direkter, technischer Support
+
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [Dokumentation](https://docs.nodereal.io/nodereal/meganode/introduction)
-  - Features
+  - [Dokumente](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - Eigenschaften
     - Zuverlässige, schnelle und skalierbare RPC-API-Services
     - Verbesserte API für Web3-Entwickler
     - Unterstützung für mehrere Blockchains
     - Kostenloser Einstieg
+
 - [**NOWNodes**](https://nownodes.io/)
   - [Dokumente](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Eigenschaften
@@ -247,6 +281,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Support-Team rund um die Uhr (24/7)
     - Persönlicher Account Manager
     - Geteilte, archivierte, Backup- und Spezial-Nodes
+
 - [**Pocket Network**](https://www.pokt.network/)
   - [Dokumente](https://docs.pokt.network/home/)
   - Eigenschaften
@@ -267,6 +302,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Die Option für höchste Privatsphäre und Zensurresistenz
     - Praktische Unterstützung für Entwickler
     - [Pocket Portal](https://bit.ly/ETHorg_POKTportal)-Dashboard und Analysen
+
 - [**QuickNode**](https://www.quicknode.com)
   - [Dokumente](https://www.quicknode.com/docs/)
   - Eigenschaften
@@ -280,11 +316,13 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - NFT-Daten- und Analyse-API
     - [SOC2-zertifiziert](https://www.quicknode.com/security)
     - Geeignet für Entwickler und Unternehmen
+
 - [**Rivet**](https://rivet.cloud/)
   - [Dokumente](https://rivet.readthedocs.io/en/latest/)
   - Eigenschaften
     - Option für kostenlose Stufe
     - Skalierung nach Bedarf
+
 - [**SenseiNode**](https://senseinode.com)
   - [Dokumente](https://docs.senseinode.com/)
   - Eigenschaften
@@ -292,6 +330,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Dashboard
     - Hosting außerhalb von AWS auf mehreren Hosting-Anbietern an verschiedenen Standorten in Lateinamerika
     - Prysm- und Lighthouse-Clients
+
 - [**SettleMint**](https://console.settlemint.com/)
   - [Dokumente](https://docs.settlemint.com/)
   - Eigenschaften
@@ -305,6 +344,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Dashboard
     - Bezahlung pro Stunde
     - Direkter Support
+
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [Dokumente](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - Eigenschaften
@@ -319,6 +359,19 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Nutzungsanalysen und Filterung
     - Einfache Zugriffsschlüssel-Verwaltung
     - Dedizierter technischer Support per Chat, E-Mail und Discord
+
+- [**Tokenview**](https://services.tokenview.io/)
+  - [Dokumente](https://services.tokenview.io/docs?type=nodeService)
+  - Eigenschaften
+    - Technische Unterstützung rund um die Uhr & Dev Telegram APP-Community
+    - Multichain-Unterstützung (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
+    - Sowohl RPC- als auch WSS-Endpunkte können verwendet werden
+    - Unbegrenzter Zugang zur Archivdaten-API
+    - Dashboard mit Request Explorer und Mempool Watcher
+    - NFT-Daten-API und Webhook-Benachrichtigung
+    - Mit Kryptowährung zahlen
+    - Externe Unterstützung für zusätzliche Verhaltenskriterien
+
 - [**Watchdata**](https://watchdata.io/)
   - [Dokumente](https://docs.watchdata.io/)
   - Eigenschaften
@@ -330,6 +383,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Unterstützung für unterschiedliche Nodes
     - Ressourcenskalierung
     - Hohe Verarbeitungsgeschwindigkeit
+
 - [**ZMOK**](https://zmok.io/)
   - [Dokumente](https://docs.zmok.io/)
   - Eigenschaften
@@ -338,39 +392,18 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
     - Unbegrenzte Transaktionsgebühr und unendliches Gas für den Versand von Transaktionen
     - Schnellster Zugriff auf den neuen Block und Lesen der Blockchain
     - Die beste Preisgarantie pro API-Aufruf
-- [**Chainbase**](https://www.chainbase.com/)
-  - [Dokumente](https://docs.chainbase.com)
+
+- [**Zeeve**](https://www.zeeve.io/)
+  - [Dokumente](https://www.zeeve.io/docs/)
   - Eigenschaften
-    - Hochverfügbarer, schneller und skalierbarer RPC-Dienst
-    - Unterstützung für mehrere Blockchains
-    - Kostenlose Tarife
-    - Benutzerfreundliches Dashboard
-    - Bietet Blockchain-Datendienste über RPC hinaus
+    - No-Code-Automatisierungsplattform auf Unternehmensebene, die die Bereitstellung, Überwachung und Verwaltung von Blockchain-Knoten und -Netzwerken ermöglicht
+    - Mind. 30 unterstützte Protokolle und Integrationen, mit der Möglichkeit weitere hinzuzufügen
+    - Wertsteigernde Web3-Infrastrukturdienste wie dezentraler Speicher, dezentrale Identität und Blockchain-Ledger-Daten-APIs für reale Anwendungsfälle
+    - Support und proaktives Monitoring rund um die Uhr stellen die Sicherheit der Knoten zu jeder Zeit sicher.
+    - RPC-Endpunkte bieten authentifizierten Zugriff auf APIs, eine unkomplizierte Verwaltung mit einem intuitiven Dashboard und Analysen.
+    - Bietet sowohl Optionen für verwaltete Clouds und Nutzung der eigenen Cloud und Support für die wichtigsten Cloud-Anbieter wie AWS, Azure, Google Cloud, Digital Ocean andere lokale Anbieter.
+    - Wir verwenden intelligentes Routing, um bei jeder Anfrage den dem Benutzer am nächsten gelegenen Knoten anzusteuern
 
-[**Zeeve**](https://www.zeeve.io/)
-
-- [Dokumente](https://www.zeeve.io/docs/)
-- Eigenschaften
-  - No-Code-Automatisierungsplattform auf Unternehmensebene, die die Bereitstellung, Überwachung und Verwaltung von Blockchain-Knoten und -Netzwerken ermöglicht
-  - Mind. 30 unterstützte Protokolle und Integrationen, mit der Möglichkeit weitere hinzuzufügen
-  - Wertsteigernde Web3-Infrastrukturdienste wie dezentraler Speicher, dezentrale Identität und Blockchain-Ledger-Daten-APIs für reale Anwendungsfälle
-  - Support und proaktives Monitoring rund um die Uhr stellen die Sicherheit der Knoten zu jeder Zeit sicher.
-  - RPC-Endpunkte bieten authentifizierten Zugang zu API, mühelose Verwaltung mit intuitiven Dashboards und Analysen.
-  - Bietet sowohl Optionen für verwaltete Clouds und Nutzung der eigenen Cloud und Support für die wichtigsten Cloud-Anbieter wie AWS, Azure, Google Cloud, Digital Ocean andere lokale Anbieter.
-  - Wir verwenden intelligentes Routing, um bei jeder Anfrage den dem Benutzer am nächsten gelegenen Knoten anzusteuern
-
-[**Tokenview**](https://services.tokenview.io/)
-
-- [Dokumente](https://services.tokeniew/docs?type=nodeService)
-- Eigenschaften
-  - Technische Unterstützung rund um die Uhr & Dev Telegram APP-Community
-  - Multichain-Unterstützung (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
-  - Sowohl die RPC- als auch die WSS-Endpunkte können genutzt werden
-  - Unbegrenzter Zugang zur Archivdaten-API
-  - Dashboard mit Request Explorer und Mempool Watcher
-  - NFT-Daten-API und Webhook-Benachrichtigung
-  - Mit Kryptowährung zahlen
-  - Externe Unterstützung für zusätzliche Verhaltenskriterien
 
 ## Weiterführende Informationen {#further-reading}
 

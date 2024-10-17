@@ -26,6 +26,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Rantom](https://rantom.app/)
+- [Ethseer](https://ethseer.io)
 
 ## Open source tools {#open-source-tools}
 

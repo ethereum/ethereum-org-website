@@ -29,10 +29,10 @@ template: roadmap
 
 ## 目前進度 {#current-progress}
 
-面向未來的以太坊所需的大部分升級**仍在研究階段，且距離實作還有數年時間**。 像移除 SELF-DESTRUCT 以及統一執行和共識用戶端中所用的壓縮方案這樣的升級，可能比引入抗量子密碼學更快實現。
+面向未來的以太坊所需的大部分升級**仍在研究階段，且距離實作還有數年時間**。 像移除 SELFDESTRUCT 和統一執行層與共識層用戶端使用的壓縮方案這樣的升級，可能會比抗量子密碼學更早實現。
 
 **了解更多**
 
 - [燃料](/developers/docs/gas)
 - [以太坊虛擬機](/developers/docs/evm)
-- [Data structures](/developers/docs/data-structures-and-encoding)
+- [資料結構](/developers/docs/data-structures-and-encoding)

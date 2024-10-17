@@ -91,6 +91,7 @@ La plupart des équipes qui créent des clients Ethereum disposent aussi d'espac
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### Clients de consensus {#consensus-clients}
 
