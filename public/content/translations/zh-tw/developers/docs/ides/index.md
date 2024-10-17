@@ -41,12 +41,6 @@ lang: zh-tw
 - [程式碼範例](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Atom -** **_21 世紀適用的可破解文字編輯器_**
-
-- [Atom](https://atom.io/)
-- [GitHub](https://github.com/atom)
-- [Ethereum 方案](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
-
 **JetBrains 整合開發環境（IntelliJ IDEA 等） -****_軟體開發者和團隊的必備工具_**
 
 - [JetBrains](https://www.jetbrains.com/)
