@@ -118,12 +118,12 @@ Ethereum может помочь многим видам бизнеса, в то
 
 - [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html) — _итальянское информационное агентство, которое борется с фейками и позволяет читателям проверять происхождение новостей, записывая их в основную сеть_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _записывает происхождение и историю ремонта часов в Ethereum_
-- [BRØK](https://www.xn--brk-1na.no/) — _платформа для таблиц капиталовложений для компаний, не зарегистрированных на бирже, предоставляемая правительством Норвегии.</li>
+- [BRØK](https://www.xn--brk-1na.no/) — _платформа для таблиц капиталовложений для компаний, не зарегистрированных на бирже, предоставляемая правительством Норвегии._
 - [Certifaction](https://certifaction.com/) — _юридически действительные электронные подписи, обеспечивающие конфиденциальность по принципу privacy-by-design_
 - [EthSign](https://ethsign.xyz/) _сохраняет подписанные электронные документы в блокчейне Ethereum_
 - [Stacktical](https://stacktical.com/) _позволяет разрабатывать программное обеспечение, выдавать и подписывать цифровой подписью соглашения об уровне обслуживания (SLA) с собственными возможностями депонирования_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _сохраняет пресс-релизы в Ethereum для обеспечения корпоративной ответственности и доверия_
-- [WolfTown](https://www.mef.net/edge-view-blog/automated-secure-timely-sla-reporting-is-finally-a-reality/) _от MEF и Sage Management автоматизирует отчетность по соглашениям об уровне обслуживания между операторами связи_</ul>
+- [WolfTown](https://www.mef.net/edge-view-blog/automated-secure-timely-sla-reporting-is-finally-a-reality/) _от MEF и Sage Management автоматизирует отчетность по соглашениям об уровне обслуживания между операторами связи_
 
 ### Цепочка поставок {#supply-chain}
 

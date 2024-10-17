@@ -274,7 +274,7 @@ _Примечание. Существуют производные токены 
 
 - [До 3 миллионов устройств заражено вредоносными дополнениями для Chrome и Edge](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) — _Ден Гудин_
 - [Как создать надежный пароль, который вы не забудете](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) — _AVG_
-- [Что такое ключ безопасности? ](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) _Coinbase_
+- [Что такое ключ безопасности?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) _Coinbase_
 
 ### Безопасность криптовалюты {#reading-crypto-security}
 
