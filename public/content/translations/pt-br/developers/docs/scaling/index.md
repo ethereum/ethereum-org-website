@@ -9,7 +9,7 @@ sidebarDepth: 3
 
 À medida que o número de usuários do Ethereum aumenta, a blockchain atinge certas limitações de capacidade. Isso tem elevado os custos de utilização da rede, criando a necessidade de "soluções de dimensionamento". Existem várias soluções sendo pesquisadas, testadas e implementadas que adotam diferentes abordagens para atingir metas semelhantes.
 
-O objetivo principal do dimensionamento é aumentar a velocidade das transações (finalidade mais rápida) e as taxas de transferência (mais transações por segundo), sem sacrificar a descentralização ou a segurança (veja mais em [visão do Ethereum](/roadmap/vision/)). Na camada 1 da blockchain de Ethereum, a alta demanda leva a transações mais lentas e a [preços de gás](/developers/docs/gas/) inviáveis. Aumentar a capacidade da rede em termos de velocidade e taxa de transferência é fundamental para uma adoção significativa e massiva do Ethereum.
+O principal objetivo da escalabilidade é aumentar a velocidade das transações (finalidade mais rápida) e a capacidade de transações (maior número de transações por segundo) sem sacrificar a descentralização ou a segurança (mais sobre a [visão do Ethereum](/roadmap/vision/)). Na camada 1 da blockchain de Ethereum, a alta demanda leva a transações mais lentas e a [preços de gás](/developers/docs/gas/) inviáveis. Aumentar a capacidade da rede em termos de velocidade e taxa de transferência é fundamental para uma adoção significativa e massiva do Ethereum.
 
 Embora a velocidade e a taxa de transferência sejam importantes, é essencial que tais soluções de dimensionamento habilitadas para tais fins permaneçam descentralizadas e seguras. Manter a barreira de entrada baixa para os operadores de nó é fundamental para prevenir uma progressão rumo a um poder de computação centralizado e inseguro.
 
@@ -109,5 +109,6 @@ _Observe que a explicação no vídeo usa o termo “Camada 2" para se referir a
 - [Dimensionamento blockchain de conhecimento zero](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Por que os rollups, junto com as fragmentações dos dados, são a única solução sustentável para atingir alto dimensionamento](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [Que tipo de camada 3 faz sentido?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
+- [Disponibilidade de dados ou: como os rollups aprenderam a parar de se preocupar e amar o Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)
 
 _Conhece um recurso da comunidade que te ajudou? Edite essa página e adicione!_
