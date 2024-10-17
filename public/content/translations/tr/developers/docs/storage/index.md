@@ -45,7 +45,7 @@ Sözleşme tabanlı kalıcılığa sahip platformlar:
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
-- [0Chain](https://0chain.net/)
+- [Züs](https://zus.network/)
 - [Crust Network](https://crust.network)
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
@@ -75,7 +75,7 @@ Verilerin tutulduğundan emin olmanın en popüler yollarından biri, hâlâ ver
 
 Bir meydan okuma mekanizmasına sahip dStorage türleri:
 
-- 0Chain
+- Züs
 - Skynet
 - Arweave
 - Filecoin
@@ -88,7 +88,7 @@ Platformların merkeziyetsizlik düzeyini ölçmek için pek iyi araçlar olmasa
 
 KYC'siz merkeziyetsiz araçlar:
 
-- 0Chain (KYC'siz bir sürüm kullanır)
+- Züs (KYC'siz bir sürüm kullanır)
 - Skynet
 - Arweave
 - Filecoin
@@ -110,7 +110,7 @@ Hisse ispatı tabanlı:
 
 - Ethereum
 - Filecoin
-- 0Chain
+- Züs
 - Crust Network
 
 ## İlgili araçlar {#related-tools}
@@ -145,10 +145,10 @@ Hisse ispatı tabanlı:
 - [Belgeler](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain - _0Chain, parçalama ve balonlayıcılara (blobber) sahip bir hisse ispatı dStorage platformudur._**
+**Züs - _Züs, parçalama ve balonlayıcılara (blobber) sahip bir hisse ispatı dStorage platformudur._**
 
-- [0Chain.net](https://0chain.net/)
-- [Belgeler](https://docs.0chain.net/0chain/)
+- [zus.network](https://zus.network/)
+- [Belgeler](https://0chaindocs.gitbook.io/zus-docs)
 - [GitHub](https://github.com/0chain/)
 
 **Crust Network - _Crust IPFS üzerine kurulmuş bir merkeziyetsiz depolama platformudur_**

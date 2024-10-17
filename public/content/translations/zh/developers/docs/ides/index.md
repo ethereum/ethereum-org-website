@@ -41,12 +41,6 @@ lang: zh
 - [代码示例](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Atom -** **_21 世纪可被黑客攻击的文本编辑器_**
-
-- [Atom](https://atom.io/)
-- [GitHub](https://github.com/atom)
-- [以太坊包](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
-
 **JetBrains 集成开发环境（IntelliJ IDEA 等） -** **_面向软件开发者和团队的基本工具_**
 
 - [JetBrains](https://www.jetbrains.com/)

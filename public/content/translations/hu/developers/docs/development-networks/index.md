@@ -28,16 +28,6 @@ _Akár _ [saját csomópontot is futtathat](/developers/docs/nodes-and-clients/#
 
 **Megjegyzés**: A legtöbb [fejlesztői keretrendszer](/developers/docs/frameworks/) egy beépített fejlesztői hálózatot tartalmaz. Ajánljuk, hogy egy keretrendszer segítségével [állítsa be a helyi fejlesztési környezetét](/developers/local-environment/).
 
-### Ganache {#ganache}
-
-Indítson be gyorsan egy személyes Ethereum blokkláncot, melyet tesztek futtatására, parancsok végrehajtására és az állapot megtekintésére használhat, mialatt a lánc működését irányítja.
-
-A Ganache-nak van asztali alkalmazása (Ganache UI) és parancssori alkalmazása is (`ganache-cli`). A Truffle eszközsorozat része.
-
-- [Honlap](https://www.trufflesuite.com/ganache)
-- [GitHub](https://github.com/trufflesuite/ganache)
-- [Dokumentáció](https://www.trufflesuite.com/docs/ganache/overview)
-
 ### Hardhat Network {#hardhat-network}
 
 Egy helyi Ethereum hálózat fejlesztésre tervezve. Szerződéseket telepíthet, teszteket futtathat, hibakeresést és javítást végezhet a kódján.

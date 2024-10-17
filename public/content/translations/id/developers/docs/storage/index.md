@@ -45,7 +45,7 @@ Platform dengan persistensi berbasis kontrak:
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
-- [0Chain](https://0chain.net/)
+- [Züs](https://zus.network/)
 
 ### Pertimbangan tambahan {#additional-consideration}
 
@@ -66,7 +66,7 @@ Salah satu cara populer untuk memastikan data dipertahankan, adalah dengan mengg
 
 Jenis dStorage dengan mekanisme tantangan:
 
-- 0Chain
+- Züs
 - Skynet
 - Arweave
 - Filecoin
@@ -77,7 +77,7 @@ Tidak ada peralatan yang bagus untuk mengukur tingkat desentralisasi platform, t
 
 Peralatan desentralisasi tanpa KYC:
 
-- 0Chain (mengimplementasikan sebuah edisi non-KYC)
+- Züs (mengimplementasikan sebuah edisi non-KYC)
 - Skynet
 - Arweave
 - Filecoin
@@ -98,7 +98,7 @@ Berbasis PoS:
 
 - [Rantai Suar](/eth2/beacon-chain/)
 - Filecoin
-- 0Chain
+- Züs
 
 ## Peralatan terkait {#related-tools}
 
@@ -131,10 +131,10 @@ Berbasis PoS:
 - [Dokumentasi](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain - _0Chain adalah sebuah platform dStorage bukti taruhan dengan sharding dan blobber._**
+**Züs - _Züs adalah sebuah platform dStorage bukti taruhan dengan sharding dan blobber._**
 
-- [0Chain.net](https://0chain.net/)
-- [Dokumentasi](https://docs.0chain.net/0chain/)
+- [zus.network](https://zus.network/)
+- [Dokumentasi](https://0chaindocs.gitbook.io/zus-docs)
 - [GitHub](https://github.com/0chain/)
 
 **Swarm - _Sebuah plaftorm penyimpanan terdistribusi dan layanan distribusi konten untuk tumpukan web3 Ethereum._**
