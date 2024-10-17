@@ -10,21 +10,109 @@ Sıfır bilgili ispat, ifadenin kendisini açığa çıkarmadan bir ifadenin ge�
 
 Sıfır bilgili ispatlardan, yaygın güncel tanımıyla birlikte ilk kez 1985 yılında yayınlanan "[İnteraktif kanıt sistemlerinde bilgi karmaşıklığı](http://people.csail.mit.edu/silvio/Selected%20Scientific%20Papers/Proof%20Systems/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)" başlıklı çalışmada bahsedilmiştir:
 
-> Sıfır bilgi protokolü, (kanıtlayıcı) tarafların açıkça beyan edilen bilgilerin doğruluğu dışında başka hiçbir veri paylaşmadan, bir şeyin doğru olduğunu karşı (doğrulayıcı) taraflara kanıtlayabildikleri yöntemdir.
+> Sıfır bilgi protokolü, bir tarafın (kanıtlayıcı) diğer bir tarafa (doğrulayıcı) bir şeyin **doğru olduğunu, bilginin doğruluğu dışında herhangi bir bilgi vermeden** **kanıtlayabildiği bir protokoldür**.
 
 Yıllar geçtikçe gelişen sıfır bilgili ispat günümüzde birçok gerçek dünya uygulamasında kullanılmaktadır.
 
+<YouTube id="fOGdb1CTu5c" />
+
 ## Neden sıfır bilgili ispatlara ihtiyacımız var? {#why-zero-knowledge-proofs-are-important}
 
-Sıfır bilgili ispatlar, bireyler özelinde bilgi güvenliğini taahhüt ettikleri için uygulamalı kriptografideki bir atılımı temsil etmektedir. Bir iddiayı (ör. "Şu ülkenin vatandaşıyım") karşı tarafa (ör. hizmet sağlayıcı) kanıtlamanın yollarını düşünün. İddianızı destekleyecek pasaport ya da sürücü belgesi gibi bir "delil" sunmak durumundasınız.
+Sıfır bilgili ispatlar, bireyler özelinde bilgi güvenliğini taahhüt ettikleri için uygulamalı kriptografide gerçekleşen bir atılımı ifade eder. Bir iddiayı (ör. "Şu ülkenin vatandaşıyım") karşı tarafa (ör. hizmet sağlayıcı) kanıtlamanın yollarını düşünün. İddianızı destekleyecek pasaport ya da sürücü belgesi gibi bir "delil" sunmak durumundasınız.
 
-Ancak bu tutum sorunları, başlıca da gizlilik noksanlığını, beraberinde getiriyor. Üçüncü şahıslara ait hizmetlerle paylaşılan Kimliği Tanımlayabilecek Bilgiler (PII) hacklenmeye karşı savunmasız olan merkezi veritabanlarında tutuluyor. Kimlik hırsızlıklarının kritik bir sorun haline gelmesiyle birlikte, hassas bilgilerin paylaşılabilmesi için daha fazla gizliliği koruyan araç ihtiyacı doğdu.
+Ancak bu yaklaşım, en önemlisi mahremiyet eksikliği olmak üzere bazı sorunları da beraberinde getirir. Üçüncü şahıslara ait hizmetlerle paylaşılan Kimliği Tanımlayabilecek Bilgiler (PII), bilgisayar saldırılarına karşı savunmasız olan merkezi veritabanlarında tutulur. Kimlik hırsızlıklarının kritik bir sorun haline gelmesiyle birlikte, hassas bilgilerin paylaşılabilmesi için daha fazla gizliliği koruyan araç ihtiyacı doğdu.
 
-Sıfır bilgi kanıtları bu problemi iddiaların doğruluğunu kanıtlamak için bilgileri açığa çıkarmadan çözer. Sıfır bilgi protokolü, doğruluğunun kısa ve öz bir kanıtını oluşturmak için girdi olarak ifadeyi (tanık) kullanır. Bu kanıt; oluşturulurken kullanılan bilgileri ifşa etmeden, bir ifadenin doğru olduğuna dair güçlü garantiler sağlar.
+Sıfır bilgili ispatlar, iddiaların geçerliliğini kanıtlamak için **bilgi açıklama ihtiyacını ortadan kaldırarak** bu sorunu çözer. Sıfır bilgi protokolü, doğruluğunun kısa ve öz bir kanıtını oluşturmak için girdi olarak ifadeyi ("tanık" olarak adlandırılır) kullanır. Bu kanıt; oluşturulurken kullanılan bilgileri ifşa etmeden, bir ifadenin doğru olduğuna dair güçlü garantiler sağlar.
 
 Daha önceki örneğimize dönecek olursak, vatandaşlık iddianızı kanıtlamak için ihtiyacınız olan tek kanıt bir sıfır bilgi kanıtıdır. Doğrulayıcı, esas ifadenin de doğru olduğuna ikna olmak için yalnızca kanıtın belirli özelliklerinin doğru olup olmadığını kontrol etmelidir.
 
-## Sıfır bilgi kanıtları nasıl çalışır? {#how-do-zero-knowledge-proofs-work}
+## Sıfır bilgili ispatlar için kullanım örnekleri {#use-cases-for-zero-knowledge-proofs}
+
+### Anonim ödemeler {#anonymous-payments}
+
+Kredi kartı ödemeleri, genellikle ödeme sağlayıcıları, bankalar ve ilgilenen diğer taraflar (ör. devlet yetkilileri) de dahil olmak üzere pek çok tarafça görüntülenebilir. Finansal gözlem, yasa dışı aktivite tespiti için fayda sağlasa da sıradan vatandaşların mahremiyetine zarar vermektedir.
+
+Kripto paralar; kullanıcıların, özel ve eşler arası işlem gerçekleştirebilmesi için bir araç sağlamayı amaçlıyordu. Fakat kripto para birimlerinin pek çoğunda, işlemler, halka açık blok zincirlerde açıkça görüntülenebilir. Kullanıcı kimlikleri genellikle takma isimlerden oluşur ve kullanıcıların isteği dahilinde gerçek kimlikleriyle bağlantılıdır (ör. Twitter veya GitHub profilindeki ETH adresleri) ya da bu takma isimler, zincir dışı veri analizi ile gerçek kimliklerle bağdaştırılabilir.
+
+Tamamen anonim işlemler için tasarlanmış "güvenlik paraları" mevcuttur. Zcash ve Monero gibi gizlilik odaklı blok zincirler, gönderici/alıcı adresi, varlık türü, miktarı ve işlem zamanı gibi işlem bilgilerini gizli tutar.
+
+Gizlilik odaklı [blokzincir](/glossary/#blockchain) ağları, protokollerine sıfır bilgi teknolojisini ekleyerek [düğümlerin](/glossary/#node) işlem verilerine erişmesine gerek kalmadan işlemleri doğrulamasına olanak tanır.
+
+**Sıfır bilgili ispatlar, herkese açık blokzincirlerde işlemleri anonimleştirmek için de kullanılabilir**. Merkeziyetsiz ve gözetimsiz bir servis olan ve kullanıcıların Ethereum üzerinde gizli bir şekilde işlem yapmasına olanak sağlayan Tornado Cash buna bir örnektir. Tornado Cash sıfır bilgili ispatları kullanarak işlem detaylarını gizler ve kullanıcılara finansal gizlilik garantisi verir. Maalesef bunlar "kayıtlı" gizlilik araçları olduğundan yasa dışı aktiviteler ile bağdaştırılmaktadır. Bunun üstesinden gelmek için gizlilik, herkese açık blok zincirlerde olağan bir özellik olmalıdır.
+
+### Kimlik koruması {#identity-protection}
+
+Günümüzdeki kimlik yönetimi sistemleri kişisel bilgileri riske atmaktadır. Sıfır bilgili ispatlar, kişilere ait hassas detayları koruyarak kişilerin kimliklerini kanıtlamasına olanak sağlar.
+
+Sıfır bilgili ispatlar özellikle [merkeziyetsiz kimlik](/decentralized-identity/) bağlamında çok kullanışlıdır. Merkeziyetsiz kimlik (ya da kendine egemen kimlik), bireylerin kendi kimlik bilgilerine erişimleri kontrol edebilme yeteneği sağlar. Vergi numaranızı ya da pasaport detaylarınızı açıkça söylemeden vatandaşlığınızı kanıtlamak, sıfır bilgi teknolojisinin merkeziyetsiz kimliği nasıl mümkün kıldığına bir örnektir.
+
+### Kimlik doğrulama {#authentication}
+
+Çevrimiçi hizmetleri kullanmak için, kimliğinizi ve bu platformlara erişiminizi kanıtlamanız gerekir. Genellikle isminiz, e-posta adresiniz, doğum tarihiniz gibi kişisel bilgilerinizi paylaşmanız gerekir. Hatta uzun parolaları ezberlemeniz ve erişimi kaybetme riskini almanız gerekir.
+
+Ancak sıfır bilgili ispatlar, kimlik doğrulama sürecini hem platformlar hem de kullanıcılar için kolaylaştırabilir. Sıfır bilgili ispatlar, herkese açık girdiler (kullanıcının platforma üyeliğini kanıtlayan veriler) ve gizli girdiler (kullanıcı bilgileri) kullanılarak oluşturulduktan sonra, kullanıcılar bu kanıtları kullanarak kimliklerini doğrulayabilir ve hizmetlere ulaşabilirler. Böylece kullanıcı deneyimi iyileşir ve kuruluşlar, yüksek miktarda kişisel bilgi depoloma ihtiyacından kurtulabilir.
+
+### Doğrulanabilir hesaplama {#verifiable-computation}
+
+Doğrulanabilir hesaplama, blok zincir tasarımlarını geliştirmek için sıfır bilgi teknolojisi kullanan başka bir uygulamadır. Doğrulanabilir hesaplama, doğrulanabilir sonuçları kendinde tutarken hesaplamaların başka bir varlık tarafından yapılmasına olanak verir. Hesaplamayı yapan varlık, programın doğru gerçekleştirildiğine dair bir kanıtla birlikte sonucu sunar.
+
+Doğrulanabilir hesaplama, blokzincirlerde güvenlikten ödün vermeden **süreci hızlandırmaya yarayan kritik bir iyileştirmedir**. Bunu anlamak için Ethereum'u ölçeklendirme adına önerilen çözümlerin farkı bilinmelidir.
+
+[Zincir üstü ölçeklendirme çözümleri](/developers/docs/scaling/#on-chain-scaling) (parçalama gibi), blok zincirin temel katmanında kapsamlı değişiklik gerektirir. Fakat bu bakış açısı fazlasıyla karmaşıktır ve uygulamadaki hatalar Ethereum'un güvenlik modeline zarar verebilir.
+
+[Zincir dışı ölçeklendirme çözümleri](/developers/docs/scaling/#off-chain-scaling) temel Ethereum protokolünün yeniden tasarlanmasını gerektirmez. Bunun yerine Ethereum'un temel katmanındaki verimi arttırmak için dış kaynaklı bir hesaplama modelini kullanır.
+
+Bunun pratikte nasıl işleyeceği aşağıdadır:
+
+- Ethereum, tüm işlemlerin işlemek yerine, yürütmeyi farklı bir zincire bırakır.
+
+- Tüm işlemler işlendikten sonra diğer zincir, sonuçları Ethereum'un durumuna uygulanmak üzere geri gönderir.
+
+Burdaki fayda, Ethereum'un hiçbir işlem yapmasına gerek kalmaması ve sadece dış kaynaklı hesaplama sonuçlarını kendi durumuna uygulaması gerekmesidir. Böylece ağ trafiği azalır ve işlem hızları artar (zincir dışı protokoller daha hızlı uygulanmak üzere optimize edilir).
+
+Zincir dışı işlemlerin, zincir tarafından doğrulanması için işlemi tekrar yürütmek dışında bir çözüm gereklidir. Aksi takdirde zincir dışı hesaplamalar değersiz olur.
+
+Tam bu noktada doğrulanabilir hesaplamalar devreye girer. Bir düğüm, Ethereum dışında bir işlem gerçekleştirdiğine, bu zincir dışı işlemin doğruluğunu kanıtlayan bir sıfır bilgili ispat sunar. [Doğruluk kanıtı](/glossary/#validity-proof) adı verilen bu kanıt işlemin geçerli olduğunu garanti eder ve kimsenin itiraz etmesini beklemeden sonucun Ethereum durumuna uygulanmasına izin verir.
+
+[Sıfır bilgi toplamaları](/developers/docs/scaling/zk-rollups) ve [Validium'lar](/developers/docs/scaling/validium/), doğruluk kanıtı kullanarak güvenli ölçeklendirme sağlayan iki zincir dışı ölçeklendirme çözümüdür. Bu protokoller zincir dışında binlerce işlem gerçekleştirir ve Ethereum üzerinde doğrulama için kanıtlar sunar. Bu sonuçlar kanıt doğrulanır doğrulanmaz Ethereum üzerine uygulanır. Böylece temel katmanındaki hesaplamaları arttırmadan Ethereum'un daha fazla işlem gerçekleştirmesine olanak sağlar.
+
+### Zincir üstündeki oylamalarda rüşvet ve gizli anlaşmaları azaltma {#secure-blockchain-voting}
+
+Blok zincir oylama şemalarının pek çok olumlu özelliği vardır: tamamen denetlenebilirlik, saldırılara karşı güvenlik, sansüre dayanıklılık ve coğrafi koşullardan bağımsızlık. Fakat zincir üstündeki çözümler bile **gizli anlaşma** sorununa karşı dirençli değildir.
+
+"Başkalarını aldatarak, dolandırarak veya yanıltarak rekabeti sınırlamak için iş birliği yapmak" şeklinde tanımlanan gizli anlaşmalar, kötü niyetli aktörlerin rüşvet teklif ederek oylamayı etkilemesi şeklinde gerçekleşebilir. Örneğin Alice `A seçeneğini` tercih ettiği halde Bob'un, `B seçeneğini` tercih etmesi için Alice'e rüşvet verebilir.
+
+Rüşvet ve gizli anlaşmalar, (özellikle kullanıcılar hangi oyu verdiklerini kanıtlayabildiğinde) oylamayı bir sinyal mekanizması olarak kullanan süreçlerin verimliliğini kısıtlar. Özellikle oyların sınırlı kaynak kullanımını etkilediği durumlarda, bu durum önemli sonuçlara yol açabilir.
+
+Örneğin, [kuadratik fonlama mekanizmaları](https://www.radicalxchange.org/concepts/plural-funding/) farklı kamu projeleri arasında tercihleri belirlemek üzere bağışları kullanır.  Her bağış, projeler için bir "oy" sayılır ve daha çok oy alan projeler eşleştirme havuzundan daha çok fon alır.
+
+Zincir üstü oylama kullanmak, kuadratik fonlamayı gizli anlaşmalara açık hale getirir: Blok zincir işlemleri herkese açıktır, yani rüşvet verenler zincir üstü aktiviteleri inceleyebilir ve rüşvet alanların "oylarını" görebilir. Bu şekilde kuadratik fonlama, topluluğun tercihlerine dayalı fonların kullanımı için etkili bir yöntem olmaktan çıkar.
+
+Neyse ki MACI (Minimum Gizli Anlaşma Önleme Altyapısı) gibi yeni çözümler, sıfır bilgili ispatları kullanarak rüşvet ve gizli anlaşmalara dirençli zincir üstü oylama sağlayabilirler (ör. kuadratik fonlama mekanizması). MACI, (koordinatör adı verilen) merkezi bir yöneticinin oyları toplamasına ve kişilerin nasıl oyladığından _bağımsız_ bir şekilde sonuçları saymasına olanak sağlayan akıllı sözleşmeler ve kodlar bütünüdür. Buna rağmen oyların doğru sayıldığını doğrulamak veya bireylerin oylama turuna katıldığını onaylamak mümkündür.
+
+#### MACI, sıfır bilgili ispat nasıl çalışır? {#how-maci-works-with-zk-proofs}
+
+İlk olarak koordinatör MACI sözleşmesini Ethereum'a dağıtır, sonrasında kullanıcılar (açık anahtarlarıyla akıllı sözleşmeye kayıt olarak) oylama için üye olabilir. Kullanıcılar akıllı sözleşmeye herkese açık anahtarlarıyla şifrelenen (diğer kriterlere ek, geçerli bir oy kullanıcının kimliği ile ilişkili olan en güncel herkese açık anahtarla imzalanmış olmalıdır) mesajlar göndererek oy verirler. Sonrasında, koordinatör oylama süreci bittiğinde tüm mesajları işler, oyların çetelesini tutar ve sonuçları zincir üzerinde doğrular.
+
+MACI'de sıfır bilgili ispatları koordinatörün hatalı biçimde oyları işlemesi ve sonuçların çetelesini tutmasını imkansızlaştırmak için hesaplamanın doğruluğundan emin olmak amaçlı sıfır bilgili ispatları kullanılır. Bunu başarmak koordinatörün a) tüm mesajların doğru işlendiğini b) sonucun tüm _geçerli_ oyların toplamına eşit olduğunu doğrulayan ZK-SNARK kanıtları oluşturmasını gerektirir.
+
+Böylece, kullanıcı başına oy hakkında bir analiz paylaşmadan bile (normalde olduğu gibi), MACI çetele sürecinde hesaplanan sonuçların bütünlüğünü garantiler. Bu temel çakışma şemalarının etkisini düşürmek için kullanışlıdır. Bu ihtimali daha önceki Bob'un Alice'e bir seçeneğe oy vermesi için rüşvet vermesi örneğinden yola çıkarak keşfedebiliriz:
+
+- Alice genel anahtarını akıllı sözleşmeye göndererek oy vermek üzere kaydolur.
+- Alice, Bob'dan aldığı rüşvet karşılığında `B seçeneğini` oylamayı kabul eder.
+- Alice `B seçeneğini` oylar.
+- Alice gizlice, kimliğiyle eşleştirilmiş açık anahtarını değiştirmek için şifrelenmiş bir işlem gönderir.
+- Alice akıllı sözleşmeye başka bir (şifrelenmiş) mesaj gönderir ve yeni açık anahtarını kullanarak ` A seçeneğini` oylar.
+- Alice, Bob'a `seçenek B` için oyladığı işlemi gösterir (bu işlem Alice'in eski açık anahtarı artık Alice'le eşleşmediği için geçersizdir)
+- Mesajları işleyen koordinatör Alice'in `B seçeneği` oyunu geçer ve `A seçeneği` oyunu hesaba katar. Bu nedenle Bob'un Alice ile gizli bir anlaşma yapma ve zincir üstü oyları etkileme girişimi başarısız olur.
+
+MACI kullanmak koordinatöre rüşvetçilerle tezgah çevirmemesi veya oy veren kimselere rüşvet vermemesi için güven _gerektirir_. Koordinatör kullanıcı mesajlarını deşifre edebilir (kanıtı oluşturmak için gereklidir), yani her kişinin nasıl oy verdiğini isabetli bir şekilde doğrulayabilir.
+
+Ancak koordinatörün dürüst olduğu durumlarda, MACI zincir üzerinde oylamaların doğruluğunu garantilemek için güçlü bir aracı temsil eder. Bu onun büyük miktarda her bir kişinin oy seçimlerinin bütünlüğüne dayanan ikinci dereceden finansman uygulamalar (ör. [clr.fund](https://clr.fund/#/about/maci)) arasındaki popülerliğini açıklar.
+
+[MACI hakkında daha fazla bilgi edinin](https://privacy-scaling-explorations.github.io/maci/).
+
+## Sıfır bilgili ispatlar nasıl çalışır? {#how-do-zero-knowledge-proofs-work}
 
 Bir sıfır bilgili ispat, bir ifadenin doğruluğunu, ifadenin içeriğini veya doğruluğa nasıl ulaştığınızı açıklamadan kanıtlamanızı sağlar. Bunu mümkün kılmak için sıfır bilgi protokolleri, girdi olarak bazı verileri alan ve çıktı olarak "doğru" veya "yanlış" olarak döndüren algoritmalara dayanır.
 
@@ -92,121 +180,35 @@ ZK-SNARK, **Sıfır Bilgi Ölçeklenebilir Şeffaf Bilgi Argümanları** için b
 
 ZK-STARK'lar daha büyük kanıtlar ürettikleri için ZK-SNARK'lardan daha yüksek doğrulama ek yüklerine sahiptir. Ancak, ZK-STARK'lar bazı durumlarda (büyük veri kümelerinin kanıtlanması gibi) ZK-SNARK'lardan daha uygun maliyetli olabilir.
 
-## Sıfır bilgili ispatlar için kullanım örnekleri {#use-cases-for-zero-knowledge-proofs}
-
-### Anonim ödemeler {#anonymous-payments}
-
-Kredi kartı ödemeleri, genellikle ödeme sağlayıcıları, bankalar ve ilgilenen diğer taraflar (ör. devlet yetkilileri) de dahil olmak üzere pek çok tarafça görüntülenebilir. Finansal gözlem, yasa dışı aktivite tespiti için fayda sağlasa da sıradan vatandaşların mahremiyetine zarar vermektedir.
-
-Kripto paralar; kullanıcıların, özel ve eşler arası işlem gerçekleştirebilmesi için bir araç sağlamayı amaçlıyordu. Fakat kripto para birimlerinin pek çoğunda, işlemler, halka açık blok zincirlerde açıkça görüntülenebilir. Kullanıcı kimlikleri genellikle takma isimlerden oluşur ve kullanıcıların isteği dahilinde gerçek kimlikleriyle bağlantılıdır (ör. Twitter veya GitHub profilindeki ETH adresleri) ya da bu takma isimler, zincir dışı veri analizi ile gerçek kimliklerle bağdaştırılabilir.
-
-Tamamen anonim işlemler için tasarlanmış "güvenlik paraları" mevcuttur. Zcash ve Monero gibi gizlilik odaklı blok zincirler, gönderici/alıcı adresi, varlık türü, miktarı ve işlem zamanı gibi işlem bilgilerini gizli tutar.
-
-Gizlilik odaklı blok zincir ağları, sıfır bilgi teknolojisini protokole dahil ederek, düğümlerin işlem bilgilerine ulaşma gereksinimi duymadan işlemleri doğrulamasına olanak sağlar.
-
-Ayrıca sıfır bilgili ispatlar, herkese açık blok zincirlerdeki işlemlerin anonimleştirilmesi için de kullanılmaktadır. Merkeziyetsiz ve gözetimsiz bir servis olan ve kullanıcıların Ethereum üzerinde gizli bir şekilde işlem yapmasına olanak sağlayan Tornado Cash buna bir örnektir. Tornado Cash sıfır bilgili ispatları kullanarak işlem detaylarını gizler ve kullanıcılara finansal gizlilik garantisi verir. Maalesef bunlar "kayıtlı" gizlilik araçları olduğundan yasa dışı aktiviteler ile bağdaştırılmaktadır. Bunun üstesinden gelmek için gizlilik, herkese açık blok zincirlerde olağan bir özellik olmalıdır.
-
-### Kimlik koruması {#identity-protection}
-
-Günümüzdeki kimlik yönetimi sistemleri kişisel bilgileri riske atmaktadır. Sıfır bilgili ispatlar, kişilere ait hassas detayları koruyarak kişilerin kimliklerini kanıtlamasına olanak sağlar.
-
-Sıfır bilgili ispatlar özellikle [merkeziyetsiz kimlik](/decentralized-identity/) bağlamında çok kullanışlıdır. Merkeziyetsiz kimlik (ya da kendine egemen kimlik), bireylerin kendi kimlik bilgilerine erişimleri kontrol edebilme yeteneği sağlar. Vergi numaranızı ya da pasaport detaylarınızı açıkça söylemeden vatandaşlığınızı kanıtlamak, sıfır bilgi teknolojisinin merkeziyetsiz kimliği nasıl mümkün kıldığına bir örnektir.
-
-### Kimlik doğrulama {#authentication}
-
-Çevrimiçi hizmetleri kullanmak için, kimliğinizi ve bu platformlara erişiminizi kanıtlamanız gerekir. Genellikle isminiz, e-posta adresiniz, doğum tarihiniz gibi kişisel bilgilerinizi paylaşmanız gerekir. Hatta uzun parolaları ezberlemeniz ve erişimi kaybetme riskini almanız gerekir.
-
-Ancak sıfır bilgili ispatlar, kimlik doğrulama sürecini hem platformlar hem de kullanıcılar için kolaylaştırabilir. Sıfır bilgili ispatlar, herkese açık girdiler (kullanıcının platforma üyeliğini kanıtlayan veriler) ve gizli girdiler (kullanıcı bilgileri) kullanılarak oluşturulduktan sonra, kullanıcılar bu kanıtları kullanarak kimliklerini doğrulayabilir ve hizmetlere ulaşabilirler. Böylece kullanıcı deneyimi iyileşir ve kuruluşlar, yüksek miktarda kişisel bilgi depoloma ihtiyacından kurtulabilir.
-
-### Doğrulanabilir hesaplama {#verifiable-computation}
-
-Doğrulanabilir hesaplama, blok zincir tasarımlarını geliştirmek için sıfır bilgi teknolojisi kullanan başka bir uygulamadır. Doğrulanabilir hesaplama, doğrulanabilir sonuçları kendinde tutarken hesaplamaların başka bir varlık tarafından yapılmasına olanak verir. Hesaplamayı yapan varlık, programın doğru gerçekleştirildiğine dair bir kanıtla birlikte sonucu sunar.
-
-Doğrulanabilir hesaplama, güvenlikten taviz vermeden blok zincirlerdeki işlem hızını arttırmak adına kritik bir role sahiptir. Bunu anlamak için Ethereum'u ölçeklendirme adına önerilen çözümlerin farkı bilinmelidir.
-
-[Zincir üstü ölçeklendirme çözümleri](/developers/docs/scaling/#on-chain-scaling) (parçalama gibi), blok zincirin temel katmanında kapsamlı değişiklik gerektirir. Fakat bu bakış açısı fazlasıyla karmaşıktır ve uygulamadaki hatalar Ethereum'un güvenlik modeline zarar verebilir.
-
-[Zincir dışı ölçeklendirme çözümleri](/developers/docs/scaling/#off-chain-scaling) temel Ethereum protokolünün yeniden tasarlanmasını gerektirmez. Bunun yerine Ethereum'un temel katmanındaki verimi arttırmak için dış kaynaklı bir hesaplama modelini kullanır.
-
-Bunun pratikte nasıl işleyeceği aşağıdadır:
-
-- Ethereum, tüm işlemlerin işlemek yerine, yürütmeyi farklı bir zincire bırakır.
-
-- Tüm işlemler işlendikten sonra diğer zincir, sonuçları Ethereum'un durumuna uygulanmak üzere geri gönderir.
-
-Burdaki fayda, Ethereum'un hiçbir işlem yapmasına gerek kalmaması ve sadece dış kaynaklı hesaplama sonuçlarını kendi durumuna uygulaması gerekmesidir. Böylece ağ trafiği azalır ve işlem hızları artar (zincir dışı protokoller daha hızlı uygulanmak üzere optimize edilir).
-
-Zincir dışı işlemlerin, zincir tarafından doğrulanması için işlemi tekrar yürütmek dışında bir çözüm gereklidir. Aksi takdirde zincir dışı hesaplamalar değersiz olur.
-
-Tam bu noktada doğrulanabilir hesaplamalar devreye girer. Bir düğüm, Ethereum dışında bir işlem gerçekleştirdiğine, bu zincir dışı işlemin doğruluğunu kanıtlayan bir sıfır bilgili ispat sunar. [Doğruluk kanıtı](/glossary/#validity-proof) adı verilen bu kanıt işlemin geçerli olduğunu garanti eder ve kimsenin itiraz etmesini beklemeden sonucun Ethereum durumuna uygulanmasına izin verir.
-
-[Sıfır bilgi toplamaları](/developers/docs/scaling/zk-rollups) ve [Validium'lar](/developers/docs/scaling/validium/), doğruluk kanıtı kullanarak güvenli ölçeklendirme sağlayan iki zincir dışı ölçeklendirme çözümüdür. Bu protokoller zincir dışında binlerce işlem gerçekleştirir ve Ethereum üzerinde doğrulama için kanıtlar sunar. Bu sonuçlar kanıt doğrulanır doğrulanmaz Ethereum üzerine uygulanır. Böylece temel katmanındaki hesaplamaları arttırmadan Ethereum'un daha fazla işlem gerçekleştirmesine olanak sağlar.
-
-### Zincir üstündeki oylamalarda rüşvet ve gizli anlaşmaları azaltma {#secure-blockchain-voting}
-
-Blok zincir oylama şemalarının pek çok olumlu özelliği vardır: tamamen denetlenebilirlik, saldırılara karşı güvenlik, sansüre dayanıklılık ve coğrafi koşullardan bağımsızlık. Fakat zincir üstündeki çözümler bile **gizli anlaşma** sorununa karşı dirençli değildir.
-
-"Başkalarını aldatarak, dolandırarak veya yanıltarak rekabeti sınırlamak için iş birliği yapmak" şeklinde tanımlanan gizli anlaşmalar, kötü niyetli aktörlerin rüşvet teklif ederek oylamayı etkilemesi şeklinde gerçekleşebilir. Örneğin Alice `A seçeneğini` tercih ettiği halde Bob'un, `B seçeneğini` tercih etmesi için Alice'e rüşvet verebilir.
-
-Rüşvet ve gizli anlaşmalar, (özellikle kullanıcılar hangi oyu verdiklerini kanıtlayabildiğinde) oylamayı bir sinyal mekanizması olarak kullanan süreçlerin verimliliğini kısıtlar. Özellikle oyların sınırlı kaynak kullanımını etkilediği durumlarda, bu durum önemli sonuçlara yol açabilir.
-
-Örneğin, [kuadratik fonlama mekanizmaları](https://www.radicalxchange.org/concepts/plural-funding/) farklı kamu projeleri arasında tercihleri belirlemek üzere bağışları kullanır.  Her bağış, projeler için bir "oy" sayılır ve daha çok oy alan projeler eşleştirme havuzundan daha çok fon alır.
-
-Zincir üstü oylama kullanmak, kuadratik fonlamayı gizli anlaşmalara açık hale getirir: Blok zincir işlemleri herkese açıktır, yani rüşvet verenler zincir üstü aktiviteleri inceleyebilir ve rüşvet alanların "oylarını" görebilir. Bu şekilde kuadratik fonlama, topluluğun tercihlerine dayalı fonların kullanımı için etkili bir yöntem olmaktan çıkar.
-
-Neyse ki MACI (Minimum Gizli Anlaşma Önleme Altyapısı) gibi yeni çözümler, sıfır bilgili ispatları kullanarak rüşvet ve gizli anlaşmalara dirençli zincir üstü oylama sağlayabilirler (ör. kuadratik fonlama mekanizması). MACI, (koordinatör adı verilen) merkezi bir yöneticinin oyları toplamasına ve kişilerin nasıl oyladığından _bağımsız_ bir şekilde sonuçları saymasına olanak sağlayan akıllı sözleşmeler ve kodlar bütünüdür. Buna rağmen oyların doğru sayıldığını doğrulamak veya bireylerin oylama turuna katıldığını onaylamak mümkündür.
-
-#### MACI, sıfır bilgili ispat nasıl çalışır? {#how-maci-works-with-zk-proofs}
-
-İlk olarak koordinatör MACI sözleşmesini Ethereum'a dağıtır, sonrasında kullanıcılar (açık anahtarlarıyla akıllı sözleşmeye kayıt olarak) oylama için üye olabilir. Kullanıcılar akıllı sözleşmeye herkese açık anahtarlarıyla şifrelenen (diğer kriterlere ek, geçerli bir oy kullanıcının kimliği ile ilişkili olan en güncel herkese açık anahtarla imzalanmış olmalıdır) mesajlar göndererek oy verirler. Sonrasında, koordinatör oylama süreci bittiğinde tüm mesajları işler, oyların çetelesini tutar ve sonuçları zincir üzerinde doğrular.
-
-MACI'de sıfır bilgili ispatları koordinatörün hatalı biçimde oyları işlemesi ve sonuçların çetelesini tutmasını imkansızlaştırmak için hesaplamanın doğruluğundan emin olmak amaçlı sıfır bilgili ispatları kullanılır. Bunu başarmak koordinatörün a) tüm mesajların doğru işlendiğini b) sonucun tüm _geçerli_ oyların toplamına eşit olduğunu doğrulayan ZK-SNARK kanıtları oluşturmasını gerektirir.
-
-Böylece, kullanıcı başına oy hakkında bir analiz paylaşmadan bile (normalde olduğu gibi), MACI çetele sürecinde hesaplanan sonuçların bütünlüğünü garantiler. Bu temel çakışma şemalarının etkisini düşürmek için kullanışlıdır. Bu ihtimali daha önceki Bob'un Alice'e bir seçeneğe oy vermesi için rüşvet vermesi örneğinden yola çıkarak keşfedebiliriz:
-
-- Alice genel anahtarını akıllı sözleşmeye göndererek oy vermek üzere kaydolur.
-- Alice, Bob'dan aldığı rüşvet karşılığında `B seçeneğini` oylamayı kabul eder.
-- Alice `B seçeneğini` oylar.
-- Alice gizlice, kimliğiyle eşleştirilmiş açık anahtarını değiştirmek için şifrelenmiş bir işlem gönderir.
-- Alice akıllı sözleşmeye başka bir (şifrelenmiş) mesaj gönderir ve yeni açık anahtarını kullanarak ` A seçeneğini` oylar.
-- Alice, Bob'a `seçenek B` için oyladığı işlemi gösterir (bu işlem Alice'in eski açık anahtarı artık Alice'le eşleşmediği için geçersizdir)
-- Mesajları işleyen koordinatör Alice'in `B seçeneği` oyunu geçer ve `A seçeneği` oyunu hesaba katar. Bu nedenle Bob'un Alice ile gizli bir anlaşma yapma ve zincir üstü oyları etkileme girişimi başarısız olur.
-
-MACI kullanmak koordinatöre rüşvetçilerle tezgah çevirmemesi veya oy veren kimselere rüşvet vermemesi için güven _gerektirir_. Koordinatör kullanıcı mesajlarını deşifre edebilir (kanıtı oluşturmak için gereklidir), yani her kişinin nasıl oy verdiğini isabetli bir şekilde doğrulayabilir.
-
-Ancak koordinatörün dürüst olduğu durumlarda, MACI zincir üzerinde oylamaların doğruluğunu garantilemek için güçlü bir aracı temsil eder. Bu onun büyük miktarda her bir kişinin oy seçimlerinin bütünlüğüne dayanan ikinci dereceden finansman uygulamalar (ör. [clr.fund](https://clr.fund/#/about/maci)) arasındaki popülerliğini açıklar.
-
-[MACI hakkında daha fazla bilgi edinin](https://privacy-scaling-explorations.github.io/maci/).
-
 ## Sıfır bilgili ispatları kullanmanın dezavantajları {#drawbacks-of-using-zero-knowledge-proofs}
 
 ### Donanım maliyetleri {#hardware-costs}
 
-Sıfır bilgili ispatlar üretmek, özel makinelerde en iyi şekilde gerçekleştirilen çok karmaşık hesaplamaları içerir. Bu makineler pahalı olduklarından dolayı, genellikle normal bireylerin erişimine uzak kalır. Ek olarak, sıfır bilgi teknolojisini kullanmak isteyen uygulamalar, donanım maliyetlerini de hesaba katmalıdır, ki bu da son kullanıcılar için maliyetleri artırabilir.
+Sıfır bilgili ispatlar üretmek, özel makinelerde en iyi şekilde gerçekleştirilen çok karmaşık hesaplamaları gerektirir. Bu makineler pahalı olduklarından dolayı, genellikle normal bireylerin erişimine uzaktır. Ek olarak, sıfır bilgi teknolojisini kullanmak isteyen uygulamalar, donanım maliyetlerini de hesaba katmalıdır, ki bu da son kullanıcılar için maliyetleri artırabilir.
 
 ### Kanıt doğrulama maliyetleri {#proof-verification-costs}
 
-Kanıtları doğrulamak ayrıca karışık hesaplama gerektirir ve uygulamalarda sıfır bilgi teknolojisinin uygulama maliyetlerini artırır. Bu maliyet, hesaplamanın kanıtlanması konusunda özellikle önemlidir. Örneğin, ZK-toplamalar, Ethereum üzerinde yalnız bir ZK-SNARK kanıtını doğrulamak için ~ 500.000 gaz öder, ZK-STARK'lar daha da yüksek ücretler gerektirir.
+Kanıtları doğrulamak ayrıca karışık hesaplamalar gerektirir ve uygulamalarda sıfır bilgi teknolojisinin uygulama maliyetlerini artırır. Bu maliyet, hesaplamanın kanıtlanması konusunda özellikle önemlidir. Örneğin, ZK toplamaları, Ethereum üzerinde yalnız bir ZK-SNARK kanıtını doğrulamak için ~ 500.000 gaz öder ve ZK-STARK'lar daha da yüksek ücretler gerektirir.
 
 ### Güven varsayımları {#trust-assumptions}
 
-ZK-SNARK'ta, Ortak Referans Dizisi (genel parametreler) bir kere oluşturulur ve sıfır bilgi protokolünde katılmak isteyen taraflarca yeniden kullanılabilir. Genel parametreler, katılımcıların dürüst olduğunun varsayıldığı güvenilir bir kurulum töreni ile oluşturulurlar.
+ZK-SNARK'ta, Ortak Referans Dizesi (genel parametreler) bir kere oluşturulur ve sıfır bilgi protokolüne katılmak isteyen taraflarca yeniden kullanılabilir. Genel parametreler, katılımcıların dürüst olduğunun varsayıldığı güvenilir bir kurulum töreni ile oluşturulurlar.
 
-Ancak kullanıcıların, katılımcıların dürüstlüğünü değerlendirmesinin hiçbir yolu yoktur ve kullanıcılar, geliştiricilerin sözlerine güvenmek mecburiyetindedirler. Rastgelelik, dizinin oluşturulmasında herkes tarafından doğrulanabilir olduğu için ZK-STARK'lar güven varsayımsızdır. Bu arada, araştırmacılar kanıtlama mekanizmalarının güvenliğini artırmak amacıyla ZK-SNARK'lar için güvenilir olmayan kurulumlar üzerine çalışıyorlar.
+Ancak kullanıcıların, katılımcıların dürüstlüğünü değerlendirmesinin hiçbir yolu yoktur ve kullanıcılar, geliştiricilerin sözlerine güvenmek mecburiyetindedirler. ZK-STARK'lar, dizenin üretilmesinde kullanılan rastgeleliğin herkes tarafından doğrulanabilir olması sayesinde güven varsayımlarından muaftır. Bu arada, araştırmacılar kanıtlama mekanizmalarının güvenliğini artırmak amacıyla ZK-SNARK'lar için güvenilir olmayan kurulumlar üzerine çalışıyorlar.
 
 ### Kuantum bilişim tehditleri {#quantum-computing-threats}
 
-ZK-SNARK şifreleme için eliptik eğri kriptografisi ([ECDSA](/glossary/#ecdsa)) kullanır. ECDSA algoritması şu an güvenli olsa da, gelecekte kuantum bilgisayarların gelişmesi ile güvenlik modeli bozulabilir.
+ZK-SNARK, şifreleme için eliptik eğri kriptografisi kullanır. Eliptik eğri ayrık logaritma probleminin şimdilik çözülemez olduğu varsayılırken, kuantum bilgisayarların geliştirilmesi ile gelecekte bu güvenlik modeli kırılabilir.
 
-ZK-STARK şifreleme için çarpışmaya direçli karmalar kullandığı için kuantum bilişim tehditine karşı bağışık olduğu düşünülür. Eliptik eğri kriptografisinde kullanılan genel-özel anahtar çiftlerinin aksine, kuantum hesaplama algoritmaların kırılması için çarğışmaya dirençli karma oluşturmak daha zordur.
+Güvenliği konusunda sadece çarpışmaya dirençli karma işlevlerine güvendiğinden ZK-STARK'ın kuantum bilişim tehdidine karşı bağışık olduğu düşünülüyor. Eliptik eğri kriptografisinde kullanılan genel-özel anahtar çiftlerinin aksine, kuantum hesaplama algoritmaların kırılması için çarpışmaya dirençli karma oluşturmak daha zordur.
 
 ## Daha fazla bilgi {#further-reading}
 
-- [Bilgisayar Bilimci Bir Konsepti 5 Zorluk Seviyesinde Açıklıyor | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Wired YouTube Kanalı_
-- [Sıfır bilgili ispatların kullanım alanlarına genel bakış](https://appliedzkp.org/#Projects) — _Gizlilik ve Ölçeklendirme Keşif Ekibi_
+- [Sıfır bilgili ispatların kullanım alanlarına genel bakış](https://pse.dev/projects) — _Gizlilik ve Ölçeklendirme Keşif Ekibi_
 - [SNARK'lar STARK'lar ve Tekrarlamalı SNARK'lar](https://www.alchemy.com/overviews/snarks-vs-starks) — _Alchemy Genel Bakış_
 - [Bir Sıfır Bilgili İspat: Blok Zincirde Gizliliği İyileştirmek](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARK'lar - Gerçekçi Bir Sıfır Bilgi Örneği ve Derinlemesine İnceleme](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARK'lar - Kuantum Bilgisayarlara Bile Karşı Doğrulanabilir Güven Oluşturmak](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) —_Adam Luciano_
 - [zk-SNARK'ların nasıl mümkün olduğuna ilişkin yaklaşık bir giriş](https://vitalik.eth.limo/general/2021/01/26/snarks.html) - _Vitalik Buterin_
-- [Sıfır Bilgili İspat ve Blok Zincirdeki Rolü Nedir?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) - _LeewayHertz_
+- [Sıfır Bilgili İspatlar (ZKP) Merkeziyetsiz Kimlikler Açısından Neden Çığır Açıcıdır?](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
+

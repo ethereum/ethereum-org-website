@@ -4,7 +4,7 @@ description: Uma explicação dos protocolos de consenso em sistemas distribuíd
 lang: pt-br
 ---
 
-O termo "mecanismo de consenso" é frequentemente usado de forma coloquial para se referir a protocolos de "prova de participação", "prova de trabalho" ou "prova de autoridade". No entanto, esses são apenas componentes em mecanismos de consenso que protegem contra os ataques Sybil. Mecanismos de consenso são a pilha completa de ideias, protocolos e incentivos que permitem que um conjunto distribuído de nós concorde com o estado da cadeia de blocos.
+O termo "mecanismo de consenso" é frequentemente usado de forma coloquial para se referir a protocolos de "prova de participação", "prova de trabalho" ou "prova de autoridade". No entanto, esses são apenas componentes nos mecanismos de consenso que protegem contra [ataques Sybil](/glossary/#sybil-attack). Mecanismos de consenso são a pilha completa de ideias, protocolos e incentivos que permitem que um conjunto distribuído de nós concorde com o estado da cadeia de blocos.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -68,7 +68,7 @@ Saiba mais sobre os diferentes tipos de mecanismos de consenso utilizados no Eth
 
 Prova de trabalho e prova de participação por si só não são protocolos de consenso, mas são frequentemente referidos como tal por simplicidade. Na verdade, são mecanismos de resistência a ataques Sybil e bloqueiam os seletores de autores; eles são uma maneira de decidir quem é o autor do bloco mais recente. Outro componente importante é o algoritmo de seleção de cadeia (também conhecido como escolha da bifurcação), o qual permite que os nós escolham um único bloco correto no início da cadeia em cenários em que existem vários blocos na mesma posição.
 
-**A resistência a ataques Sybil** mede como um protocolo varia contra um [ataque Sybil](https://wikipedia.org/wiki/Sybil_attack). Ataques Sybil são quando um usuário ou grupo finge ser muitos usuários. A resistência a esse tipo de ataque é essencial para uma cadeia de blocos descentralizada e permite que os mineradores e validadores sejam recompensados igualmente com base nos recursos colocados. A prova de trabalho e a prova de participação protegem contra isso fazendo os usuários gastarem muita energia ou colocarem muitas garantias. Essas proteções são um elemento econômico de dissuasão dos ataques Sybil.
+**A resistência a ataques Sybil** mede como um protocolo se comporta frente um ataque Sybil. A resistência a esse tipo de ataque é essencial para uma cadeia de blocos descentralizada e permite que os mineradores e validadores sejam recompensados igualmente com base nos recursos colocados. A prova de trabalho e a prova de participação protegem contra isso fazendo os usuários gastarem muita energia ou colocarem muitas garantias. Essas proteções são um elemento econômico de dissuasão dos ataques Sybil.
 
 Uma **regra de seleção de cadeia** é usada para decidir qual é a cadeia "correta". O Bitcoin usa a regra da "cadeia mais longa", o que significa que qualquer cadeia de blocos mais longa será aquela que o resto dos nós aceitam como válida e com a qual trabalha. Para as cadeias de prova de trabalho, a cadeia mais longa é determinada pela dificuldade cumulativa total da prova de trabalho. O Ethereum costumava usar a regra da cadeia mais longa também; no entanto, agora que o Ethereum é executado em prova de participação, ele adotou um algoritmo atualizado de escolha da bifurcação que mede o "peso" da cadeia. O peso é a soma acumulada dos votos do validador, ponderada pelos saldos de ether envolvidos do validador.
 
@@ -89,3 +89,4 @@ _Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione
 - [Prova de trabalho](/developers/docs/consensus-mechanisms/pow/)
 - [Mineração](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Prova de participação](/developers/docs/consensus-mechanisms/pos/)
+- [Prova de autoridade](/developers/docs/consensus-mechanisms/poa/)
