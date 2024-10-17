@@ -91,5 +91,5 @@ Contacte o seu fornecedor SaaS para obter mais informações sobre quaisquer gar
 
 ## Leitura adicional {#further-reading}
 
-- [O diretório de staking Ethereum ](https://www.staking.directory/) - _Eridian e Spacesider_
+- [O diretório de staking Ethereum](https://www.staking.directory/) - _Eridian e Spacesider_
 - [Avaliação dos serviços de staking](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

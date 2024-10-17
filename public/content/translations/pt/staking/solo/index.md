@@ -195,7 +195,7 @@ Para desbloquear e receber a totalidade do seu balanço, deve também concluir o
 
 ## Leitura adicional {#further-reading}
 
-- [O diretório de staking Ethereum ](https://www.staking.directory/) - _Eridian e Spacesider_
+- [O diretório de staking Ethereum](https://www.staking.directory/) - _Eridian e Spacesider_
 - [O problema da diversidade de clientes do Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [Ajuda à diversidade dos clientes](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Diversidade de clientes na camada de consenso do Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_

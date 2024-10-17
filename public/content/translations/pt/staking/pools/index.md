@@ -81,6 +81,6 @@ Algumas opções de pooling são mais descentralizadas do que outras no que diz 
 
 ## Leitura adicional {#further-reading}
 
-- [O diretório de staking Ethereum ](https://www.staking.directory/) - _Eridian e Spacesider_
+- [O diretório de staking Ethereum](https://www.staking.directory/) - _Eridian e Spacesider_
 - [Visão geral do staking com o Rocket Pool](https://docs.rocketpool.net/guides/staking/overview.html) - _Docs do RocketPool_
 - [Staking Ethereum em Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Docs de ajud do Lido_

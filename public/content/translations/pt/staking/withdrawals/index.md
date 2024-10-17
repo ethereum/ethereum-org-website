@@ -47,7 +47,7 @@ Fornecer um endereço de levantamento é um passo necessário para qualquer cont
   <strong>A cada conta de validador só pode ser atribuído um único endereço de levantamento e uma única vez.</strong> Uma vez escolhido e submetido à camada de consenso, o endereço não pode ser revogado ou alterado novamente. Verifique novamente a titularidade e a exatidão do endereço fornecido antes de o enviar.
 </InfoBanner>
 
-Não há <strong">qualquer ameaça aos seus fundos entretanto</strong> por não fornecer isto, assumindo que a sua frase mnemónica/semente permaneceu segura offline e não foi comprometida de forma alguma. Se as credenciais de levantamento não forem adicionadas, o ETH ficará simplesmente bloqueado na conta do validador até que um endereço de levantamento seja fornecido.
+Não há <strong>qualquer ameaça aos seus fundos entretanto</strong> por não fornecer isto, assumindo que a sua frase mnemónica/semente permaneceu segura offline e não foi comprometida de forma alguma. Se as credenciais de levantamento não forem adicionadas, o ETH ficará simplesmente bloqueado na conta do validador até que um endereço de levantamento seja fornecido.
 
 ## Sair totalmente do staking {#exiting-staking-entirely}
 
@@ -125,7 +125,7 @@ Se expandirmos este cálculo, podemos estimar o tempo que será necessário para
 
 Como se vê, este tempo abranda à medida que mais validadores entram na rede. Um aumento nas slots falhadas poderá abrandar este processamento proporcionalmente, mas, em geral, representa o lado mais lento de eventuais resultados.
 
-## Frequently asked questions {#faq}
+## Perguntas mais frequentes {#faq}
 
 <ExpandableCard
 title="Depois de fornecer um endereço de levantamento, posso alterar para um endereço de levantamento alternativo?"
