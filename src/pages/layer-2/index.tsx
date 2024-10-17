@@ -3,6 +3,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import type { BasePageProps, Lang } from "@/lib/types"
 
+import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import HubHero, { HubHeroProps } from "@/components/Hero/HubHero"
 import { TwImage } from "@/components/Image"
@@ -17,6 +18,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import HeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import WalkingImage from "@/public/images/layer-2/layer-2-walking.png"
+import ExploreImage from "@/public/images/layer-2/learn-hero.png"
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
@@ -178,8 +180,33 @@ const Layer2Hub = () => {
         <h2>FAQ</h2>
       </div>
 
-      <div id="layer-2-bottom-cta" className="w-full px-8 py-9">
-        <h2>Bottom call to action</h2>
+      <div
+        id="layer-2-callout-cards"
+        className="flex w-full flex-col gap-16 px-8 py-8 md:flex-row"
+      >
+        <Callout
+          image={ExploreImage}
+          title={"Explore different networks"}
+          description={
+            "Learn how networks differ from each other and how far have gotten in their development."
+          }
+        >
+          <div>
+            <ButtonLink href="/layer-2/networks">Explore networks</ButtonLink>
+          </div>
+        </Callout>
+        <Callout
+          image={WalkingImage}
+          title={"Interested in more details?"}
+          description={
+            "Curious about the technology and reasons for this scaling approach? Learn more about the thinking and different technological approaches."
+          }
+          headerClassName="-mt-6"
+        >
+          <div>
+            <ButtonLink href="/layer-2/learn">Learn more</ButtonLink>
+          </div>
+        </Callout>
       </div>
     </MainArticle>
   )
