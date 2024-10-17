@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "ローカル開発環境をセットアップする",
   "page-local-environment-solidity-template-desc": "Solidityスマートコントラクト用のビルド済みセットアップ用のGitHubテンプレート。 Hardhatローカルネットワーク、テストのためのワッフル、財布の実装のためのEtherなどが含まれています。",
   "page-local-environment-solidity-template-logo-alt": "Solidityテンプレートのロゴ",
-  "page-local-environment-truffle-desc": "Truffle Suiteは、デベロッパーがアイデアからdappにできるだけ快適にアクセスできるようにします。",
-  "page-local-environment-truffle-logo-alt": "Truffle ロゴ",
   "page-local-environment-waffle-desc": "スマートコントラクトのための最も高度なテストリブ。単独またはScaffoldethまたはHardhatで使用してください。",
   "page-local-environment-waffle-logo-alt": "Waffleロゴ"
 }
