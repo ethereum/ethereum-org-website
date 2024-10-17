@@ -94,23 +94,17 @@ ethereum.org یک منبع عمومی منبع باز برای جامعه اتر
 
 **چطور است؟** ما همیشه از بازخورد درباره نقشه راه مان قدردانی می کنیم - اگر چیزی وجود دارد که فکر می کنید باید روی آن کار کنیم، لطفاً به ما اطلاع دهید! ما از ایده‌ها و روابط عمومی هر کس در جامعه استقبال می‌کنیم.
 
-**می‌خواهید مشارکت کنید؟** [درباره مشارکت بیشتر بیاموزید](/contributing/)، [در توییتر با ما تماس بگیرید](https://twitter.com/ethdotorg)، یا به بحث‌های جامعه در
-
-سرور دیسکورد ما بپیوندید. 
+**می‌خواهید مشارکت کنید؟** [درباره مشارکت بیشتر بیاموزید](/contributing/)، [در توییتر با ما تماس بگیرید](https://twitter.com/ethdotorg)، یا به بحث‌های جامعه در [سرور دیسکورد ما بپیوندید](https://discord.gg/ethereum-org).
 
 ## اصول طراحی کنید {#design-principles}
 
 ما از مجموعه ای از [اصول طراحی](/contributing/design-principles/) برای پیشبرد محتوا و تصمیمات طراحی در وب‌سایت استفاده می کنیم.
-
-
 
 ## سیستم طراحی {#design-system}
 
 ما یک [سیستم طراحی](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) ساختیم و منتشر کردیم تا ویژگی‌ها را سریع‌تر ارسال کنیم و به اعضای انجمن اجازه دهیم در طراحی باز ethereum.org شرکت کنند.
 
 می خواهید شرکت کنید؟[در فیگما](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) بخش [مشکل گیت هاب](https://github.com/ethereum/ethereum-org-website/issues/6284) را دنبال کنید و به گفتگو در [ کانال دیسکورد ما بپیوندید](https://discord.gg/ethereum-org).
-
-
 
 ## راهنمای سبک {#style-guide}
 
@@ -120,13 +114,9 @@ ethereum.org یک منبع عمومی منبع باز برای جامعه اتر
 
 ما از بازخورد در مورد اصول طراحی، سیستم طراحی و راهنمای سبک‌مان استقبال می‌کنیم. به یاد داشته باشید، ethereum.org برای جامعه و از طرف جامعه است.
 
-
-
 ## مجوز {#license}
 
 وب سایت ethereum.org منبع باز است و تحت [مجوز MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) ساخته شده است، مگر اینکه خلاف آن مشخص شده باشد. اطلاعات بیشتر در مورد [شرایط استفاده](/terms-of-use/) از ethereum.org.
-
-
 
 ## شغل های موجود {#open-jobs}
 
