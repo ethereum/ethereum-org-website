@@ -67,7 +67,6 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import {
-  BASE_TIME_UNIT,
   BLOG_FEEDS,
   BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
@@ -119,7 +118,7 @@ type Props = BasePageProps & {
 }
 
 // In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 24
+const REVALIDATE_TIME = 60
 
 const loadData = dataLoader(
   [
