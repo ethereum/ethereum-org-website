@@ -834,8 +834,6 @@ const WhatIsEthereumPage = ({
           </Column>
           <CardContainer>
             <Callout
-              flex="1 1 416px"
-              minH="full"
               image={ethImg}
               titleKey="page-what-is-ethereum:page-what-is-ethereum-get-eth-title"
               alt={t("page-what-is-ethereum-get-eth-alt")}
@@ -848,12 +846,11 @@ const WhatIsEthereumPage = ({
               </div>
             </Callout>
             <Callout
-              flex="1 1 416px"
-              minH="full"
               image={dogeComputerImg}
               titleKey="page-what-is-ethereum:page-what-is-ethereum-explore-dapps-title"
               alt={t("page-what-is-ethereum-explore-dapps-alt")}
               descriptionKey="page-what-is-ethereum:page-what-is-ethereum-explore-dapps-description"
+              className="h-full"
             >
               <div>
                 <ButtonLink href="/dapps/">
