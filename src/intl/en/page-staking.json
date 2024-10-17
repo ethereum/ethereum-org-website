@@ -89,6 +89,8 @@
   "page-staking-comparison-saas-pools": "These are similar in that you're generally relying on someone else to run the validator client, but unlike SaaS, pooled staking allows you to participate with smaller amounts of ETH. If you're looking to stake with less than 32 ETH, consider checking these out.",
   "page-staking-comparison-pools-solo": "Pooled staking has a significantly lower barrier to entry when compared to home staking, but comes with additional risk by delegating all node operations to a third-party, and with a fee. Home staking gives full sovereignty and control over the choices that go into choosing a staking setup. Stakers never have to hand over their keys, and they earn full rewards without any middlemen taking a cut.",
   "page-staking-comparison-pools-saas": "These are similar in that stakers do not run the validator software themselves, but unlike pooling options, SaaS requires a full 32 ETH deposit to activate a validator. Rewards accumulate to the staker, and usually involve a monthly fee or other stake to use the service. If you'd prefer your own validator keys and are looking to stake at least 32 ETH, using a SaaS provider may be a good option for you.",
+  "page-staking-considerations-dropdown-text": "Staking Considerations",
+  "page-staking-considerations-dropdown-aria-label": "Dropdown menu for staking considerations",
   "page-staking-considerations-solo-1-title": "Open source",
   "page-staking-considerations-solo-1-description": "Essential code is 100% open source and available to the public to fork and use",
   "page-staking-considerations-solo-1-warning": "Closed source",

@@ -4,25 +4,113 @@ description: Pengenalan non-teknis tentang bukti nol pengetahuan untuk pemula.
 lang: id
 ---
 
-## Apa itu bukti nol pengetahuan? {#what-are-zk-proofs}
+# Apa itu bukti tanpa pengetahuan? {#what-are-zk-proofs}
 
 Bukti tanpa pengetahuan adalah cara untuk membuktikan keabsahan suatu pernyataan tanpa mengungkapkan pernyataan itu sendiri. 'Pembukti' adalah pihak yang mencoba membuktikan klaim, sedangkan 'pemeriksa' bertanggung jawab untuk memvalidasi klaim.
 
 Bukti tanpa pengetahuan pertama kali muncul dalam makalah tahun 1985, "[Kompleksitas pengetahuan dari sistem pembuktian interaktif](http://people.csail.mit.edu/silvio/Selected%20Scientific%20Papers/Proof%20Systems/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf)" yang memberikan definisi bukti nol pengetahuan yang banyak digunakan saat ini:
 
-> Protokol bukti tanpa pengetahuan adalah metode di mana satu pihak (pembukti) dapat membuktikan kepada pihak lain (verifikator) bahwa sesuatu benar, tanpa mengungkapkan informasi apa pun selain fakta bahwa pernyataan khusus ini benar.
+> Protokol bukti tanpa pengetahuan adalah metode di mana satu pihak (pembukti) **dapat membuktikan** kepada pihak lain (pemeriksa) **bahwa sesuatu adalah benar, tanpa mengungkapkan informasi apa pun** selain fakta bahwa pernyataan tersebut memang benar.
 
 Bukti tanpa pengetahuan telah mengalami perbaikan selama bertahun-tahun dan kini digunakan dalam beberapa aplikasi dunia nyata.
 
+<YouTube id="fOGdb1CTu5c" />
+
 ## Mengapa kita memerlukan bukti tanpa pengetahuan? {#why-zero-knowledge-proofs-are-important}
 
-Bukti tanpa pengetahuan mewakili terobosan dalam kriptografi terapan, karena mereka berjanji untuk meningkatkan keamanan informasi bagi individu. Pertimbangkan bagaimana Anda dapat membuktikan suatu klaim (misalnya, "Saya adalah warga negara X") kepada pihak lain (misalnya, penyedia layanan). Anda perlu menyediakan "bukti" untuk mendukung klaim Anda, seperti paspor nasional atau izin mengemudi.
+Bukti tanpa pengetahuan mewakili terobosan dalam kriptografi terapan, karena mereka berjanji untuk meningkatkan keamanan informasi bagi individu. Pertimbangkan bagaimana Anda dapat membuktikan suatu klaim (misalnya, "Saya adalah warga negara X") kepada pihak lain (misalnya, penyedia layanan). Anda perlu menyediakan "bukti" untuk mendukung klaim, seperti paspor nasional atau izin mengemudi.
 
 Namun, ada masalah dengan pendekatan ini, terutama kurangnya privasi. Informasi Identifikasi Pribadi (PII) yang dibagikan dengan layanan pihak ketiga disimpan dalam basis data pusat, yang rentan terhadap peretasan. Dengan pencurian identitas menjadi masalah yang kritis, ada panggilan untuk cara berbagi informasi sensitif yang lebih melindungi privasi.
 
-Bukti tanpa pengetahuan memecahkan masalah ini dengan menghilangkan kebutuhan untuk mengungkap informasi untuk membuktikan keabsahan klaim. Protokol bukti tanpa pengetahuan menggunakan pernyataan (yang disebut 'saksi') sebagai masukan untuk menghasilkan bukti singkat keabsahannya. Bukti ini memberikan jaminan kuat bahwa suatu pernyataan benar tanpa mengungkap informasi yang digunakan dalam pembuatannya.
+Bukti tanpa pengetahuan menyelesaikan masalah ini dengan **menghilangkan kebutuhan untuk mengungkapkan informasi guna membuktikan kebenaran klaim**. Protokol bukti tanpa pengetahuan menggunakan pernyataan (yang disebut 'saksi') sebagai masukan untuk menghasilkan bukti singkat keabsahannya. Bukti ini memberikan jaminan kuat bahwa suatu pernyataan benar tanpa mengungkap informasi yang digunakan dalam pembuatannya.
 
-Kembali ke contoh sebelumnya, satu-satunya bukti yang Anda butuhkan untuk membuktikan klaim kewarganegaraan Anda adalah bukti tanpa pengetahuan. Verifikator hanya perlu memeriksa apakah beberapa properti dari bukti tersebut benar agar meyakinkan bahwa pernyataan mendasar juga benar.
+Kembali ke contoh sebelumnya, satu-satunya bukti yang Anda butuhkan untuk membuktikan klaim kewarganegaraan adalah bukti tanpa pengetahuan. Verifikator hanya perlu memeriksa apakah beberapa properti dari bukti tersebut benar agar meyakinkan bahwa pernyataan mendasar juga benar.
+
+## Kasus penggunaan untuk bukti tanpa pengetahuan {#use-cases-for-zero-knowledge-proofs}
+
+### Pembayaran anonim {#anonymous-payments}
+
+Pembayaran kartu kredit sering kali terlihat oleh beberapa pihak, termasuk penyedia pembayaran, bank, dan pihak-pihak lain yang berkepentingan (misalnya, otoritas pemerintah). Meskipun pemantauan keuangan memiliki manfaat untuk mengidentifikasi aktivitas ilegal, hal tersebut juga merusak privasi seorang pengguna.
+
+Mata uang kripto dimaksudkan untuk memberikan sarana bagi pengguna untuk melakukan transaksi pribadi antar sesama tanpa perantara. Namun, sebagian besar transaksi mata uang kripto terlihat dengan terbuka pada rantai blok publik. Identitas pengguna sering kali pseudonim dan dapat disengaja dihubungkan dengan identitas dunia nyata (misalnya, dengan menyertakan alamat ETH di profil Twitter atau GitHub) atau dapat dikaitkan dengan identitas dunia nyata menggunakan analisis data dasar di rantai dan di luar rantai.
+
+Terdapat "mata uang privasi" khusus yang dirancang untuk transaksi yang benar-benar anonim. Rantai blok yang berfokus pada privasi, seperti Zcash dan Monero, melindungi detail transaksi, termasuk alamat pengirim/penerima, jenis aset, jumlah, dan jangka waktu transaksi.
+
+Dengan mengintegrasikan teknologi bukti tanpa pengetahuan ke dalam protokol, jaringan [rantai blok](/glossary/#blockchain) yang berfokus pada privasi memungkinkan [node](/glossary/#node) untuk memvalidasi transaksi tanpa perlu mengakses data transaksi.
+
+**Bukti tanpa pengetahuan juga diterapkan untuk menganonimkan transaksi di blockchain publik**. Contohnya adalah Tornado Cash, layanan terdesentralisasi dan non-kustodial yang memungkinkan pengguna untuk melakukan transaksi pribadi di Ethereum. Tornado Cash menggunakan bukti tanpa pengetahuan untuk menyembunyikan detail transaksi dan menjamin privasi finansial. Sayangnya, karena ini adalah perangkat privasi "opt-in," mereka seringkali dikaitkan dengan aktivitas ilegal. Untuk mengatasi hal ini, privasi pada akhirnya harus menjadi standar bawaan di rantai blok publik.
+
+### Perlindungan Identitas {#identity-protection}
+
+Sistem manajemen identitas saat ini mengancam informasi pribadi. Bukti tanpa pengetahuan dapat membantu individu memvalidasi identitas sambil melindungi detail sensitif.
+
+Bukti tanpa pengetahuan sangat berguna dalam konteks [identitas terdesentralisasi](/decentralized-identity/). Identitas terdesentralisasi (juga dikenal sebagai 'identitas berdaulat diri') memberikan individu kemampuan untuk mengontrol akses ke pengenal pribadi. Membuktikan kewarganegaraan Anda tanpa mengungkapkan detail nomor identifikasi pajak atau paspor adalah contoh bagus bagaimana teknologi bukti tanpa pengetahuan memungkinkan identitas terdesentralisasi.
+
+### Autentikasi {#authentication}
+
+Menggunakan layanan daring memerlukan pembuktian identitas dan hak Anda untuk mengakses platform-platform tersebut. Hal ini seringkali memerlukan penyediaan informasi pribadi, seperti nama, alamat email, tanggal lahir, dan sebagainya. Anda mungkin juga perlu menghafal kata sandi panjang atau berisiko kehilangan akses.
+
+Namun, bukti tanpa pengetahuan dapat menyederhanakan otentikasi baik untuk platform maupun pengguna. Setelah bukti ZK telah dihasilkan menggunakan input publik (misalnya, data yang membuktikan keanggotaan pengguna pada platform) dan input pribadi (misalnya, detail pengguna), pengguna dapat dengan mudah menyajikannya untuk mengotentikasi identitas mereka saat perlu mengakses layanan tersebut. Hal ini meningkatkan pengalaman bagi pengguna dan membebaskan organisasi dari kebutuhan untuk menyimpan sejumlah besar informasi pengguna.
+
+### Komputasi yang dapat diverifikasi {#verifiable-computation}
+
+Komputasi yang dapat diverifikasi adalah aplikasi lain dari teknologi bukti tanpa pengetahuan untuk meningkatkan desain rantai blok. Komputasi yang dapat diverifikasi memungkinkan kita untuk mengalihkan komputasi ke entitas lain sambil mempertahankan hasil yang dapat diverifikasi. Entitas tersebut mengirimkan hasil beserta bukti yang terverifikasi bahwa program dieksekusi dengan benar.
+
+Komputasi yang dapat diverifikasi **sangat penting untuk meningkatkan kecepatan pemrosesan di rantai blok** tanpa mengurangi keamanan. Untuk memahaminya memerlukan pengetahuan tentang perbedaan dalam solusi yang diusulkan untuk meningkatkan Penskalaan Ethereum.
+
+[Solusi penskalaan di dalam rantai](/developers/docs/scaling/#on-chain-scaling), seperti Pecahan, memerlukan modifikasi yang luas pada lapisan dasar rantai blok. Tetapi, pendekatan ini sangat kompleks dan kesalahan dalam implementasi dapat merusak model keamanan Ethereum.
+
+[Solusi penskalaan di luar rantai](/developers/docs/scaling/#off-chain-scaling) tidak memerlukan perancangan ulang protokol inti Ethereum. Sebaliknya, mereka mengandalkan model komputasi yang sementara untuk meningkatkan keluaran pada lapisan dasar Ethereum.
+
+Berikut adalah bagaimana hal tersebut bekerja dalam praktiknya:
+
+- Sebagai gantinya, Ethereum tidak memproses setiap transaksi secara langsung, melainkan memindahkan eksekusinya ke rantai terpisah.
+
+- Setelah melakukan transaksi, rantai lain mengembalikan hasilnya agar dapat diterapkan pada status Ethereum.
+
+Manfaatnya adalah Ethereum tidak perlu melakukan eksekusi apa pun dan hanya perlu menerapkan hasil dari komputasi yang dioutsourcing ke keadaannya. Hal ini mengurangi kepadatan jaringan dan juga meningkatkan kecepatan transaksi (protokol di luar rantai mengoptimalkan untuk eksekusi yang lebih cepat).
+
+Rantai ini memerlukan cara untuk memvalidasi transaksi di luar rantai tanpa harus menjalankan ulang, atau nilai dari eksekusi di luar rantai akan hilang.
+
+Di sinilah komputasi yang dapat diverifikasi berperan. Ketika sebuah simpul mengeksekusi transaksi di luar Ethereum, ia akan mengirimkan bukti tanpa pengetahuan untuk membuktikan kebenaran eksekusi rantai di luar. Bukti ini (disebut sebagai [bukti validitas](/glossary/#validity-proof)) menjamin bahwa sebuah transaksi valid, memungkinkan Ethereum untuk menerapkan hasilnya ke dalam keadaannya—tanpa harus menunggu ada sengketa.
+
+[Rollup tanpa pengetahuan](/developers/docs/scaling/zk-rollups) dan [validiums](/developers/docs/scaling/validium/) adalah dua solusi pengembangan di luar rantai yang menggunakan validitas untuk meningkatkan penskalaan dengan aman. Protokol-protokol ini menjalankan ribuan transaksi di luar rantai dan mengirimkan bukti untuk diverifikasi di Ethereum. Hasil-hasil tersebut dapat diterapkan segera setelah bukti diverifikasi, memungkinkan Ethereum memproses lebih banyak transaksi tanpa meningkatkan perhitungan pada lapisan dasar.
+
+### Mengurangi Suap dan Kolusi dalam Pemungutan suara di dalam rantai {#secure-blockchain-voting}
+
+Skema pemungutan suara rantai blok memiliki banyak karakteristik yang menguntungkan: mereka sepenuhnya dapat diaudit, aman terhadap serangan, tahan terhadap sensor, dan bebas dari pembatasan wilayah. Namun demikian, skema pemungutan suara di dalam rantai juga tidak kebal terhadap **masalah kolusi**.
+
+Didefinisikan sebagai "berkoordinasi untuk membatasi persaingan terbuka dengan memperdaya, menipu, dan mengelabui orang lain," kolusi dapat mengambil bentuk seorang aktor jahat yang memengaruhi pemungutan suara dengan menawarkan suap. Sebagai contoh, Alice mungkin menerima suap dari Bob untuk memilih `option B` pada suatu pemilihan meskipun sebenarnya dia lebih suka `option A`.
+
+Suap dan kolusi membatasi efektivitas dari setiap proses yang menggunakan pemungutan suara sebagai mekanisme penanda (terutama di mana pengguna dapat membuktikan bagaimana mereka memilih). Hal ini dapat memiliki konsekuensi yang signifikan, terutama di mana suara bertanggung jawab untuk mengalokasikan sumber daya yang langka.
+
+Sebagai contoh, mekanisme [pembiayaan kuadratik](https://www.radicalxchange.org/concepts/plural-funding/) mengandalkan pada sumbangan untuk mengukur preferensi terhadap opsi tertentu yang berbeda di antara berbagai proyek kebaikan publik. Setiap sumbangan dihitung sebagai "suara" untuk proyek tertentu, dengan proyek-proyek yang menerima lebih banyak suara mendapatkan lebih banyak dana dari pool pencocokan.
+
+Menggunakan pemungutan suara di dalam rantai membuat pendanaan kuadratik rentan terhadap kolusi: transaksi rantai blok bersifat publik, sehingga pemberi suap dapat memeriksa aktivitas on-chain seseorang yang menerima suap untuk melihat bagaimana mereka "memilih". Dengan cara ini, pendanaan kuadratik tidak lagi menjadi cara yang efektif untuk mengalokasikan dana berdasarkan preferensi yang terkumpul dari komunitas.
+
+Untungnya, solusi terbaru seperti MACI (Infrastruktur Anti-Kolusi Minimum) menggunakan bukti tanpa pengetahuan agar pemungutan suara di dalam rantai (misalnya, mekanisme pendanaan kuadratik) tetap tahan terhadap suap dan kolusi. MACI adalah kumpulan kontrak pintar dan skrip yang memungkinkan seorang administrator pusat (disebut "koordinator") untuk menggabungkan suara dan menghitung hasil _tanpa_ mengungkapkan rincian tentang bagaimana setiap individu memberikan suaranya. Meskipun begitu, masih memungkinkan untuk memverifikasi bahwa suara telah dihitung dengan benar, atau mengonfirmasi bahwa individu tertentu berpartisipasi dalam putaran pemungutan suara.
+
+#### Bagaimana cara kerja MACI dengan bukti tanpa pengetahuan? {#how-maci-works-with-zk-proofs}
+
+Pada awalnya, koordinator mendeploy kontrak MACI di Ethereum, setelah itu pengguna dapat mendaftar untuk memilih (dengan mendaftarkan kunci publik mereka dalam kontrak pintar tersebut). Pengguna memasukkan suara dengan mengirim pesan yang dienkripsi dengan kunci publik mereka ke kontrak pintar (suara yang sah harus ditandatangani dengan kunci publik terbaru yang terkait dengan identitas pengguna, di antara kriteria lainnya). Setelah itu, koordinator memproses semua pesan setelah periode pemungut di dalam rantai.
+
+Dalam MACI, bukti tanpa pengetahuan digunakan untuk memastikan kebenaran komputasi dengan membuatnya tidak mungkin bagi koordinator untuk salah memproses suara dan menghitung hasil. Ini dicapai dengan mengharuskan koordinator untuk menghasilkan bukti ZK-SNARK yang memverifikasi bahwa a) semua pesan diproses dengan benar b) hasil akhir sesuai dengan jumlah semua suara yang _valid_.
+
+Dengan demikian, bahkan tanpa membagikan rincian suara per pengguna (seperti biasanya), MACI menjamin integritas hasil yang dihitung selama proses penghitungan. Fitur ini berguna dalam mengurangi efektivitas skema kolusi dasar. Kita dapat menjelajahi kemungkinan ini dengan menggunakan contoh sebelumnya di mana Bob memberi suap kepada Alice agar memilih suatu opsi:
+
+- Alice mendaftar untuk memilih dengan mengirimkan kunci publik ke dalam kontrak pintar.
+- Alice setuju untuk memilih `option B` sebagai imbalan dari suap yang diberikan oleh Bob.
+- Alice memberikan suaranya untuk `option B`.
+- Alice secara rahasia mengirimkan transaksi terenkripsi untuk mengganti kunci publik yang terkait dengan identitasnya.
+- Alice mengirim pesan lain (terenkripsi) ke kontrak pintar untuk memilih `option A` menggunakan kunci publik yang baru.
+- Alice menunjukkan kepada Bob sebuah transaksi yang menunjukkan bahwa dia memilih untuk `option B` (yang tidak valid karena kunci publiknya tidak lagi terkait dengan identitas Alice dalam sistem)
+- Saat memproses pesan, koordinator mengabaikan suara pilihan Alice untuk `option B` dan hanya menghitung suara untuk `option A`. Oleh karena itu, upaya Bob untuk berkolusi dengan Alice dan memanipulasi suara di dalam rantai gagal.
+
+Menggunakan MACI _memerlukan_ kepercayaan pada koordinator untuk tidak berkolusi dengan pemberi suap atau mencoba memberi suap kepada para pemilih sendiri. Koordinator dapat mendekripsi pesan pengguna (yang diperlukan untuk membuat bukti), sehingga mereka dapat dengan akurat memverifikasi bagaimana setiap orang memberikan suaranya.
+
+Namun dalam kasus di mana koordinator tetap jujur, MACI menjadi alat yang kuat untuk menjamin keadilan pemungutan suara di dalam rantai. Hal ini menjelaskan popularitasnya di antara aplikasi pendanaan kuadratik seperti ([clr.fund](https://clr.fund/#/about/maci)) yang sangat mengandalkan integritas dari setiap pilihan suara individu.
+
+[Pelajari lebih lanjut tentang MACI](https://privacy-scaling-explorations.github.io/maci/).
 
 ## Bagaimana bukti tanpa pengetahuan bekerja? {#how-do-zero-knowledge-proofs-work}
 
@@ -92,92 +180,6 @@ ZK-STARK adalah singkatan dari **Argumen Pengetahuan yang Terukur dan Transparan
 
 ZK-STARK menghasilkan bukti yang lebih besar daripada ZK-SNARK, yang berarti umumnya memiliki beban verifikasi yang lebih tinggi. Namun, ada kasus (seperti membuktikan kumpulan data besar) di mana ZK-STARK mungkin lebih hemat biaya dibandingkan dengan ZK-SNARK.
 
-## Kasus penggunaan untuk bukti tanpa pengetahuan {#use-cases-for-zero-knowledge-proofs}
-
-### Pembayaran anonim {#anonymous-payments}
-
-Pembayaran kartu kredit sering kali terlihat oleh beberapa pihak, termasuk penyedia pembayaran, bank, dan pihak-pihak lain yang berkepentingan (misalnya, otoritas pemerintah). Meskipun pemantauan keuangan memiliki manfaat untuk mengidentifikasi aktivitas ilegal, hal tersebut juga merusak privasi seorang pengguna.
-
-Mata uang kripto dimaksudkan untuk memberikan sarana bagi pengguna untuk melakukan transaksi pribadi antar sesama tanpa perantara. Namun, sebagian besar transaksi mata uang kripto terlihat dengan terbuka pada rantai blok publik. Identitas pengguna sering kali pseudonim dan dapat disengaja dihubungkan dengan identitas dunia nyata (misalnya, dengan menyertakan alamat ETH di profil Twitter atau GitHub) atau dapat dikaitkan dengan identitas dunia nyata menggunakan analisis data dasar di rantai dan di luar rantai.
-
-Terdapat "mata uang privasi" khusus yang dirancang untuk transaksi yang benar-benar anonim. Rantai blok yang berfokus pada privasi, seperti Zcash dan Monero, melindungi detail transaksi, termasuk alamat pengirim/penerima, jenis aset, jumlah, dan jangka waktu transaksi.
-
-Dengan mengintegrasikan teknologi bukti tanpa pengetahuan ke dalam protokol, jaringan rantai blok yang berfokus pada privasi memungkinkan node untuk memvalidasi transaksi tanpa perlu mengakses data transaksi.
-
-Bukti tanpa pengetahuan juga diterapkan untuk membuat transaksi menjadi anonim pada rantai blok publik. Contohnya adalah Tornado Cash, layanan terdesentralisasi dan non-kustodial yang memungkinkan pengguna untuk melakukan transaksi pribadi di Ethereum. Tornado Cash menggunakan bukti tanpa pengetahuan untuk menyembunyikan detail transaksi dan menjamin privasi finansial. Sayangnya, karena ini adalah perangkat privasi "opt-in," mereka seringkali dikaitkan dengan aktivitas ilegal. Untuk mengatasi hal ini, privasi pada akhirnya harus menjadi standar bawaan di rantai blok publik.
-
-### Perlindungan Identitas {#identity-protection}
-
-Sistem manajemen identitas saat ini mengancam informasi pribadi. Bukti tanpa pengetahuan dapat membantu individu memvalidasi identitas sambil melindungi detail sensitif.
-
-Bukti tanpa pengetahuan sangat berguna dalam konteks [identitas terdesentralisasi](/decentralized-identity/). Identitas terdesentralisasi (juga dikenal sebagai 'identitas berdaulat diri') memberikan individu kemampuan untuk mengontrol akses ke pengenal pribadi. Membuktikan kewarganegaraan Anda tanpa mengungkapkan detail nomor identifikasi pajak atau paspor adalah contoh bagus bagaimana teknologi bukti tanpa pengetahuan memungkinkan identitas terdesentralisasi.
-
-### Autentikasi {#authentication}
-
-Menggunakan layanan daring memerlukan pembuktian identitas dan hak Anda untuk mengakses platform-platform tersebut. Hal ini seringkali memerlukan penyediaan informasi pribadi, seperti nama, alamat email, tanggal lahir, dan sebagainya. Anda mungkin juga perlu menghafal kata sandi panjang atau berisiko kehilangan akses.
-
-Namun, bukti tanpa pengetahuan dapat menyederhanakan otentikasi baik untuk platform maupun pengguna. Setelah bukti ZK telah dihasilkan menggunakan input publik (misalnya, data yang membuktikan keanggotaan pengguna pada platform) dan input pribadi (misalnya, detail pengguna), pengguna dapat dengan mudah menyajikannya untuk mengotentikasi identitas mereka saat perlu mengakses layanan tersebut. Hal ini meningkatkan pengalaman bagi pengguna dan membebaskan organisasi dari kebutuhan untuk menyimpan sejumlah besar informasi pengguna.
-
-### Komputasi yang dapat diverifikasi {#verifiable-computation}
-
-Komputasi yang dapat diverifikasi adalah aplikasi lain dari teknologi bukti tanpa pengetahuan untuk meningkatkan desain rantai blok. Komputasi yang dapat diverifikasi memungkinkan kita untuk mengalihkan komputasi ke entitas lain sambil mempertahankan hasil yang dapat diverifikasi. Entitas tersebut mengirimkan hasil beserta bukti yang terverifikasi bahwa program dieksekusi dengan benar.
-
-Komputasi yang dapat diverifikasi sangat penting untuk meningkatkan kecepatan pemrosesan pada rantai blok tanpa mengurangi keamanan. Untuk memahaminya memerlukan pengetahuan tentang perbedaan dalam solusi yang diusulkan untuk meningkatkan Penskalaan Ethereum.
-
-[Solusi penskalaan di dalam rantai](/developers/docs/scaling/#on-chain-scaling), seperti Pecahan, memerlukan modifikasi yang luas pada lapisan dasar rantai blok. Tetapi, pendekatan ini sangat kompleks dan kesalahan dalam implementasi dapat merusak model keamanan Ethereum.
-
-[Solusi penskalaan di luar rantai](/developers/docs/scaling/#off-chain-scaling) tidak memerlukan perancangan ulang protokol inti Ethereum. Sebaliknya, mereka mengandalkan model komputasi yang sementara untuk meningkatkan keluaran pada lapisan dasar Ethereum.
-
-Berikut adalah bagaimana hal tersebut bekerja dalam praktiknya:
-
-- Sebagai gantinya, Ethereum tidak memproses setiap transaksi secara langsung, melainkan memindahkan eksekusinya ke rantai terpisah.
-
-- Setelah melakukan transaksi, rantai lain mengembalikan hasilnya agar dapat diterapkan pada status Ethereum.
-
-Manfaatnya adalah Ethereum tidak perlu melakukan eksekusi apa pun dan hanya perlu menerapkan hasil dari komputasi yang dioutsourcing ke keadaannya. Hal ini mengurangi kepadatan jaringan dan juga meningkatkan kecepatan transaksi (protokol di luar rantai mengoptimalkan untuk eksekusi yang lebih cepat).
-
-Rantai ini memerlukan cara untuk memvalidasi transaksi di luar rantai tanpa harus menjalankan ulang, atau nilai dari eksekusi di luar rantai akan hilang.
-
-Di sinilah komputasi yang dapat diverifikasi berperan. Ketika sebuah simpul mengeksekusi transaksi di luar Ethereum, ia akan mengirimkan bukti tanpa pengetahuan untuk membuktikan kebenaran eksekusi rantai di luar. Bukti ini (disebut sebagai [bukti validitas](/glossary/#validity-proof)) menjamin bahwa sebuah transaksi valid, memungkinkan Ethereum untuk menerapkan hasilnya ke dalam keadaannya—tanpa harus menunggu ada sengketa.
-
-[Rollup tanpa pengetahuan](/developers/docs/scaling/zk-rollups) dan [validiums](/developers/docs/scaling/validium/) adalah dua solusi pengembangan di luar rantai yang menggunakan validitas untuk meningkatkan penskalaan dengan aman. Protokol-protokol ini menjalankan ribuan transaksi di luar rantai dan mengirimkan bukti untuk diverifikasi di Ethereum. Hasil-hasil tersebut dapat diterapkan segera setelah bukti diverifikasi, memungkinkan Ethereum memproses lebih banyak transaksi tanpa meningkatkan perhitungan pada lapisan dasar.
-
-### Mengurangi Suap dan Kolusi dalam Pemungutan suara di dalam rantai {#secure-blockchain-voting}
-
-Skema pemungutan suara rantai blok memiliki banyak karakteristik yang menguntungkan: mereka sepenuhnya dapat diaudit, aman terhadap serangan, tahan terhadap sensor, dan bebas dari pembatasan wilayah. Namun demikian, skema pemungutan suara di dalam rantai juga tidak kebal terhadap **masalah kolusi**.
-
-Didefinisikan sebagai "berkoordinasi untuk membatasi persaingan terbuka dengan memperdaya, menipu, dan mengelabui orang lain," kolusi dapat mengambil bentuk seorang aktor jahat yang memengaruhi pemungutan suara dengan menawarkan suap. Sebagai contoh, Alice mungkin menerima suap dari Bob untuk memilih `option B` pada suatu pemilihan meskipun sebenarnya dia lebih suka `option A`.
-
-Suap dan kolusi membatasi efektivitas dari setiap proses yang menggunakan pemungutan suara sebagai mekanisme penanda (terutama di mana pengguna dapat membuktikan bagaimana mereka memilih). Hal ini dapat memiliki konsekuensi yang signifikan, terutama di mana suara bertanggung jawab untuk mengalokasikan sumber daya yang langka.
-
-Sebagai contoh, mekanisme [pembiayaan kuadratik](https://www.radicalxchange.org/concepts/plural-funding/) mengandalkan pada sumbangan untuk mengukur preferensi terhadap opsi tertentu yang berbeda di antara berbagai proyek kebaikan publik. Setiap sumbangan dihitung sebagai "suara" untuk proyek tertentu, dengan proyek-proyek yang menerima lebih banyak suara mendapatkan lebih banyak dana dari pool pencocokan.
-
-Menggunakan pemungutan suara di dalam rantai membuat pendanaan kuadratik rentan terhadap kolusi: transaksi rantai blok bersifat publik, sehingga pemberi suap dapat memeriksa aktivitas on-chain seseorang yang menerima suap untuk melihat bagaimana mereka "memilih". Dengan cara ini, pendanaan kuadratik tidak lagi menjadi cara yang efektif untuk mengalokasikan dana berdasarkan preferensi yang terkumpul dari komunitas.
-
-Untungnya, solusi terbaru seperti MACI (Infrastruktur Anti-Kolusi Minimum) menggunakan bukti tanpa pengetahuan agar pemungutan suara di dalam rantai (misalnya, mekanisme pendanaan kuadratik) tetap tahan terhadap suap dan kolusi. MACI adalah kumpulan kontrak pintar dan skrip yang memungkinkan seorang administrator pusat (disebut "koordinator") untuk menggabungkan suara dan menghitung hasil _tanpa_ mengungkapkan rincian tentang bagaimana setiap individu memberikan suaranya. Meskipun begitu, masih memungkinkan untuk memverifikasi bahwa suara telah dihitung dengan benar, atau mengonfirmasi bahwa individu tertentu berpartisipasi dalam putaran pemungutan suara.
-
-#### Bagaimana cara kerja MACI dengan bukti tanpa pengetahuan? {#how-maci-works-with-zk-proofs}
-
-Pada awalnya, koordinator mendeploy kontrak MACI di Ethereum, setelah itu pengguna dapat mendaftar untuk memilih (dengan mendaftarkan kunci publik mereka dalam kontrak pintar tersebut). Pengguna memasukkan suara dengan mengirim pesan yang dienkripsi dengan kunci publik mereka ke kontrak pintar (suara yang sah harus ditandatangani dengan kunci publik terbaru yang terkait dengan identitas pengguna, di antara kriteria lainnya). Setelah itu, koordinator memproses semua pesan setelah periode pemungut di dalam rantai.
-
-Dalam MACI, bukti tanpa pengetahuan digunakan untuk memastikan kebenaran komputasi dengan membuatnya tidak mungkin bagi koordinator untuk salah memproses suara dan menghitung hasil. Ini dicapai dengan mengharuskan koordinator untuk menghasilkan bukti ZK-SNARK yang memverifikasi bahwa a) semua pesan diproses dengan benar b) hasil akhir sesuai dengan jumlah semua suara yang _valid_.
-
-Dengan demikian, bahkan tanpa membagikan rincian suara per pengguna (seperti biasanya), MACI menjamin integritas hasil yang dihitung selama proses penghitungan. Fitur ini berguna dalam mengurangi efektivitas skema kolusi dasar. Kita dapat menjelajahi kemungkinan ini dengan menggunakan contoh sebelumnya di mana Bob memberi suap kepada Alice agar memilih suatu opsi:
-
-- Alice mendaftar untuk memilih dengan mengirimkan kunci publik ke dalam kontrak pintar.
-- Alice setuju untuk memilih `option B` sebagai imbalan dari suap yang diberikan oleh Bob.
-- Alice memberikan suaranya untuk `option B`.
-- Alice secara rahasia mengirimkan transaksi terenkripsi untuk mengganti kunci publik yang terkait dengan identitasnya.
-- Alice mengirim pesan lain (terenkripsi) ke kontrak pintar untuk memilih `option A` menggunakan kunci publik yang baru.
-- Alice menunjukkan kepada Bob sebuah transaksi yang menunjukkan bahwa dia memilih untuk `option B` (yang tidak valid karena kunci publiknya tidak lagi terkait dengan identitas Alice dalam sistem)
-- Saat memproses pesan, koordinator mengabaikan suara pilihan Alice untuk `option B` dan hanya menghitung suara untuk `option A`. Oleh karena itu, upaya Bob untuk berkolusi dengan Alice dan memanipulasi suara di dalam rantai gagal.
-
-Menggunakan MACI _memerlukan_ kepercayaan pada koordinator untuk tidak berkolusi dengan pemberi suap atau mencoba memberi suap kepada para pemilih sendiri. Koordinator dapat mendekripsi pesan pengguna (yang diperlukan untuk membuat bukti), sehingga mereka dapat dengan akurat memverifikasi bagaimana setiap orang memberikan suaranya.
-
-Namun dalam kasus di mana koordinator tetap jujur, MACI menjadi alat yang kuat untuk menjamin keadilan pemungutan suara di dalam rantai. Hal ini menjelaskan popularitasnya di antara aplikasi pendanaan kuadratik seperti ([clr.fund](https://clr.fund/#/about/maci)) yang sangat mengandalkan integritas dari setiap pilihan suara individu.
-
-[Pelajari lebih lanjut tentang MACI](https://privacy-scaling-explorations.github.io/maci/).
-
 ## Kekurangan dalam menggunakan bukti tanpa pengetahuan {#drawbacks-of-using-zero-knowledge-proofs}
 
 ### Biaya perangkat keras {#hardware-costs}
@@ -192,21 +194,21 @@ Verifikasi bukti juga memerlukan perhitungan yang kompleks dan meningkatkan biay
 
 Dalam ZK-SNARK, String Referensi Umum (parameter publik) dihasilkan sekali dan tersedia untuk digunakan ulang oleh pihak-pihak yang ingin berpartisipasi dalam protokol tanpa pengetahuan. Parameter publik dihasilkan melalui sebuah acara pengaturan kepercayaan, di mana para peserta diasumsikan jujur.
 
-Namun pada kenyataannya, tidak ada cara bagi pengguna untuk menilai kejujuran para peserta dan pengguna harus mempercayai kata-kata para pengembang. ZK-STARK bebas dari asumsi kepercayaan karena pada dasarnya yang digunakan dalam menghasilkan string dapat diverifikasi secara publik. Sementara itu, para peneliti sedang bekerja pada pengaturan tanpa kepercayaan untuk ZK-SNARK guna meningkatkan keamanan mekanisme pembuktian.
+Namun pada kenyataannya, tidak ada cara bagi pengguna untuk menilai kejujuran para peserta dan pengguna harus memercayai kata-kata para pengembang. ZK-STARK bebas dari asumsi kepercayaan karena pada dasarnya yang digunakan dalam menghasilkan string dapat diverifikasi secara publik. Sementara itu, para peneliti sedang bekerja pada pengaturan tanpa kepercayaan untuk ZK-SNARK guna meningkatkan keamanan mekanisme pembuktian.
 
 ### Ancaman komputasi kuantum {#quantum-computing-threats}
 
-ZK-SNARK menggunakan kriptografi kurva eliptik ([ECDSA](/glossary/#ecdsa)) untuk enkripsi. Meskipun algoritma ECDSA saat ini aman, perkembangan komputer kuantum dapat mengancam model keamanannya di masa depan.
+ZK-SNARK menggunakan kriptografi kurva elips untuk enkripsi. Meskipun masalah logaritma diskrit kurva eliptik diasumsikan tidak dapat dipecahkan untuk saat ini, pengembangan komputer kuantum dapat mematahkan model keamanan ini di masa depan.
 
-ZK-STARK dianggap kebal terhadap ancaman komputer kuantum, karena menggunakan hash tahan tumbukan untuk enkripsi. Berbeda dengan pasangan kunci pribadi publik yang digunakan dalam kriptografi kurva eliptik, hash tahan tumbukan lebih sulit bagi algoritma komputasi kuantum untuk dipecahkan.
+ZK-STARK dianggap kebal terhadap ancaman komputasi kuantum, karena hanya mengandalkan fungsi hash yang tahan tabrakan untuk keamanannya. Berbeda dengan pasangan kunci pribadi publik yang digunakan dalam kriptografi kurva eliptik, hash tahan tumbukan lebih sulit bagi algoritma komputasi kuantum untuk dipecahkan.
 
 ## Bacaan lebih lanjut {#further-reading}
 
-- [Ilmuwan Komputer Menjelaskan Satu Konsep dalam 5 Tingkat Kesulitan | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Saluran YouTube Wired_
 - [Gambaran umum kasus penggunaan bukti tanpa pengetahuan](https://pse.dev/projects) — _Tim Eksplorasi Privasi dan Penskalaan_
 - [SNARK vs. STARK vs. Recursive SNARK](https://www.alchemy.com/overviews/snarks-vs-starks) — _Tinjauan Alkimia_
 - [Bukti tanpa Pengetahuan: Meningkatkan Privasi dalam sebuah Rantai blok](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARK — Contoh Bukti tanpa Pengetahuan yang Realistis dan Penjelasan Mendalam](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARK — Menciptakan Kepercayaan yang Dapat Diverifikasi, Bahkan Melawan Komputer Kuantum](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [Perkiraan pengantar tentang bagaimana zk-SNARK bisa dilakukan](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
-- [Apa Itu Bukti tanpa Pengetahuan dan Perannya dalam Rantai Blok?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_
+- [Mengapa Bukti Tanpa Pengetahuan (ZKP) adalah Pengubah Permainan untuk Identitas Berdaulat Mandiri](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
+
