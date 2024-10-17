@@ -23,7 +23,6 @@ incomplete: true
 
 ## 初心者向けの記事と書籍 {#beginner-articles-and-books}
 
-- [イーサリアムクライアントの選択](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Geth入門](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
 - [Golangを使用してイーサリアムに接続する](https://www.youtube.com/watch?v=-7uChuO_VzM)
 - [Golangを使用してイーサリアムスマートコントラクトをデプロイする](https://www.youtube.com/watch?v=pytGqQmDslE)

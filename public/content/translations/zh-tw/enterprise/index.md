@@ -63,7 +63,6 @@ lang: zh-tw
 - [Baseline 專案](https://www.baseline-protocol.org/) - _Baseline 協議是一組工具和程式庫，協助企業在隱私的情況下協調複雜的多方業務流程和工作流程，同時將資料保存在各自的記錄系統中。 此標準使兩個或多個狀態機器，透過使用網路作為公共參考框架，來實現和維護資料一致性和工作流程連續性。_
 - [Chainlens](https://www.chainlens.com/) - _來自 Web3 實驗室的質押即服務和本地區塊鏈數據及分析平台_
 - [Ernst & Young's 'Nightfall'](https://github.com/EYBlockchain/nightfall_3) - _使用樂觀卷軸的應用程式，在零知識下轉移 ERC20、ERC721 和 ERC1155 應用程式_
-- [Truffle 套件](https://trufflesuite.com) - _區塊鏈開發套件（Truffle、Ganache、Drizzle）_
 
 ### 可擴展性解決方案 {#scalability-solutions}
 

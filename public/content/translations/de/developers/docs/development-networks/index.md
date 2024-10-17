@@ -28,16 +28,6 @@ Sie _könnten_ [einen Knoten betreiben](/developers/docs/nodes-and-clients/#runn
 
 **Hinweis**: Die meisten [Entwicklerframeworks](/developers/docs/frameworks/) enthalten ein integriertes Entwicklungsnetzwerk. Wir empfehlen Ihnen, mit einem Framework für die Einrichtung [Ihrer lokalen Entwicklungsumgebung](/developers/local-environment/) zu beginnen.
 
-### Ganache {#ganache}
-
-Führen Sie kurzerhand eine persönliche Ethereum-Blockchain aus, die Sie zum Ausführen von Tests und Befehlen und zur Prüfung des Status verwenden können, während Sie die Funktionsweise der Chain kontrollieren.
-
-Ganache bietet sowohl eine Desktop-Anwendung (Ganache UI), als auch ein Befehlszeilentool (`ganache-cli`). Es ist Teil der Truffel-Toolsuite.
-
-- [Website](https://www.trufflesuite.com/ganache)
-- [GitHub](https://github.com/trufflesuite/ganache)
-- [Dokumentation](https://www.trufflesuite.com/docs/ganache/overview)
-
 ### Hardhat Network {#hardhat-network}
 
 Ein lokales Ethereum-Netzwerk, das für die Entwicklung konzipiert ist. Die können darin Ihre Contracts bereitstellen, Tests durchführen und Ihren Code debuggen.

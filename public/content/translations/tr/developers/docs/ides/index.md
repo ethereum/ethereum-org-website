@@ -41,12 +41,6 @@ Bir [tümleşik geliştirme ortamı (IDE)](https://wikipedia.org/wiki/Integrated
 - [Kod örnekleri](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Atom -** **_21'inci Yüzyıla uygun, düzenlenebilir bir metin editörü_**
-
-- [Atom](https://atom.io/)
-- [GitHub](https://github.com/atom)
-- [Ethereum paketleri](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
-
 **JetBrains IDE'leri (IntelliJ IDEA, vb.) -** **_Yazılım geliştiricileri ve ekipleri için temel araçlar_**
 
 - [JetBrains](https://www.jetbrains.com/)

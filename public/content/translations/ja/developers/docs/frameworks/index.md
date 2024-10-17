@@ -105,12 +105,6 @@ lang: ja
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownieのメンテナンス終了**
 
-**Truffle -** **_開発環境、テストフレームワーク、ビルドパイプライン、その他のツール。_**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-- **Truffle開発の終了** - [詳細について](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
-
 **OpenZeppelin SDK -** **_究極のスマートコントラクトツールキット。スマートコントラクトの開発、コンパイル、アップグレード、デプロイ、インタラクションを支援するツール群。_**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)

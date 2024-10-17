@@ -28,16 +28,6 @@ Siz [bir düğüm](/developers/docs/nodes-and-clients/#running-your-own-node) _�
 
 **Not**: Çoğu [geliştirme çerçevesi](/developers/docs/frameworks/) yerleşik bir geliştirme ağı içerir. [Yerel geliştirme ortamınızı kurmak](/developers/local-environment/) için bir çerçeve ile başlamanızı öneririz.
 
-### Ganache {#ganache}
-
-Test yapmak, komutları yürütmek ve zincirin nasıl çalıştığını kontrol ederken durumu incelemek için kullanabileceğiniz kişisel bir Ethereum blok zincirini hızla çalıştırın.
-
-Ganache, hem bir masaüstü uygulaması (Ganache UI) hem de bir komut satırı aracı (`ganache-cli`) sağlar. Truffle araç takımının bir parçasıdır.
-
-- [Web sitesi](https://www.trufflesuite.com/ganache)
-- [GitHub](https://github.com/trufflesuite/ganache)
-- [Belgeler](https://www.trufflesuite.com/docs/ganache/overview)
-
 ### Hardhat Ağı {#hardhat-network}
 
 Geliştirme için tasarlanmış yerel bir Ethereum ağı. Sözleşmelerinizi dağıtmanıza, testlerinizi çalıştırmanıza ve kodunuzda hata ayıklamanıza olanak tanır.
