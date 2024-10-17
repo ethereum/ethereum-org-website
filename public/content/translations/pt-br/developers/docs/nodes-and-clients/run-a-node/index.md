@@ -92,12 +92,13 @@ O modo de sincronização e o cliente que você escolher afetará os requisitos 
 
 | Cliente    | Tamanho do disco (sincronização rápida) | Tamanho do disco (arquivo completo) |
 | ---------- | --------------------------------------- | ----------------------------------- |
-| Geth       | + de 500 GB                             | + de 12 TB                          |
-| Nethermind | + de 500 GB                             | + 12 TB                             |
 | Besu       | + de 800 GB                             | + de 12 TB                          |
 | Erigon     | N/D                                     | + de 2,5 TB                         |
+| Geth       | + de 500 GB                             | + de 12 TB                          |
+| Nethermind | + de 500 GB                             | + 12 TB                             |
+| Reth       | N/D                                     | 2.2TB+                              |
 
-- Observação: O Erigon não oferece sincronização rápida, mas permite a remoção completa (~ 500 GB)
+- Nota: Erigon e Reth não oferecem sincronização instantânea, mas é possível fazer o Full Pruning (~2 Tb para Erigon, ~1,2 Tb para Reth)
 
 Para clientes de consenso, o requisito de espaço também depende da implementação do cliente e dos recursos habilitados (por exemplo, removedor de validador), mas geralmente contam com outros 200 GB necessários para dados do beacon. Com um grande número de validadores, a carga de largura de banda também aumenta. Você pode encontrar [detalhes sobre os requisitos do cliente de consenso nesta análise](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
@@ -126,7 +127,7 @@ Vários projetos de fácil utilização visam melhorar a experiência de configu
 
 Abaixo estão alguns projetos que podem ajudar você a instalar e controlar clientes com apenas alguns cliques:
 
-- [DappNode](https://docs.dappnode.io/user/quick-start/first-steps/) — O DappNode não vem apenas com o computador de um fornecedor. O software, o verdadeiro inicializador de nós e o centro de controle com muitos recursos podem ser usados em hardwares aleatórios.
+- [DappNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) — O DappNode não vem apenas com o computador de um fornecedor. O software, o verdadeiro inicializador de nós e o centro de controle com muitos recursos podem ser usados em hardwares aleatórios.
 - [eth-docker](https://eth-docker.net/) — Configuração automatizada usando o Docker, focada em participação (staking) fácil e segura. Requer conhecimento básico de terminal e Docker, sendo recomendada para usuários um pouco mais avançados.
 - [Stereum](https://stereum.net/ethereum-node-setup/) — Inicializador para instalar clientes em um servidor remoto via conexão SSH com um guia de configuração GUI, centro de controle e muitos outros recursos.
 - [NiceNode](https://www.nicenode.xyz/) — Programa com uma experiência de usuário simples para executar um nó em seu computador. Basta escolher os clientes e iniciá-los em alguns cliques. Ainda em desenvolvimento.
@@ -154,6 +155,7 @@ Aqui estão as páginas de lançamento dos clientes, nas quais você pode encont
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
+- [Reth](https://reth.rs/installation/installation.html)
 
 Também é relevante observar que a diversidade de clientes é um [problema na camada de execução](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). Recomenda-se que os leitores considerem a execução de um cliente de execução minoritário.
 
@@ -165,7 +167,7 @@ Também é relevante observar que a diversidade de clientes é um [problema na c
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
 
-A [diversidade de clientes](/developers/docs/nodes-and-clients/client-diversity/) é fundamental para nós de consenso executando validadores. Se a maioria dos validadores está executando a implementação de um único cliente, a segurança da rede está em risco. Portanto, é recomendável considerar a escolha de um cliente minoritário.
+A [diversidade de clientes](/developers/docs/nodes-and-clients/client-diversity/) é fundamental para nós de consenso executando validadores. Se a maioria dos validadores estiver executando uma única implementação do cliente, a segurança da rede estará em risco. Portanto, é recomendável considerar a escolha de um cliente minoritário.
 
 [Veja o uso mais recente do cliente de rede](https://clientdiversity.org/) e saiba mais sobre a [diversidade de clientes](/developers/docs/nodes-and-clients/client-diversity).
 
@@ -177,7 +179,7 @@ Os desenvolvedores assinam binários lançados com suas chaves PGP para que voc�
 
 Outra forma de verificação é garantir que o hash, uma impressão digital criptográfica exclusiva do software que você baixou, corresponde ao fornecido pelos desenvolvedores. Isso é ainda mais fácil do que usar o PGP, e alguns clientes oferecem apenas essa opção. Basta executar a função de hash no software baixado e compará-lo com o da página de lançamento. Por exemplo:
 
-```
+```sh
 sha256sum teku-22.6.1.tar.gz
 
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
@@ -213,7 +215,7 @@ Os clientes de execução e consenso se comunicam por meio de um terminal autent
 
 Esse token é gerado automaticamente pelo software cliente, mas, em alguns casos, talvez você precise fazer isso sozinho. Você pode gerá-lo usando o [OpenSSL](https://www.openssl.org/):
 
-```
+```sh
 openssl rand -hex 32 > jwtsecret
 ```
 
@@ -221,12 +223,12 @@ openssl rand -hex 32 > jwtsecret
 
 Esta seção guiará você na inicialização dos clientes de execução. Ela serve apenas como exemplo de configuração básica, que iniciará o cliente com estas configurações:
 
-- Especifica a rede à qual se conectar, a rede principal nos nossos exemplos
+- Especifica a rede para conectar. A rede principal, em nossos exemplos
   - Em vez disso, você pode escolher [uma das redes de teste](/developers/docs/networks/) para fazer um teste preliminar da sua configuração
 - Define o diretório de dados, no qual todos os dados, incluindo a blockchain, serão armazenados
   - Certifique-se de substituir o caminho por um real, por exemplo, apontando para sua unidade externa
 - Habilita interfaces para comunicação com o cliente
-  - Incluindo o RPC JSON e a API Engine para comunicação com o cliente de consenso
+  - Incluindo JSON-RPC e Engine API para comunicação com o cliente de consenso
 - Define o caminho até `jwtsecret` para a API autenticada
   - Certifique-se de substituir o caminho de exemplo por um real que possa ser acessado pelos clientes, por exemplo, `/tmp/jwtsecret`
 
@@ -236,9 +238,9 @@ Lembre-se de que este é apenas um exemplo básico, todas as outras configuraç�
 
 ##### Executando o Besu
 
-Este exemplo inicia o Besu na rede principal, armazena dados da cadeia de blocos no formato padrão em `/data/ethereum`, habilita o RPC JSON e o RPC Engine para conectar o cliente de consenso. A API Engine é autenticada com o token `jwtsecret` e somente chamadas de `localhost` são permitidas.
+Este exemplo inicia o Besu na rede principal, armazena dados da blockchain no formato padrão em `/data/ethereum` e habilita o RPC JSON e o RPC Engine para conectar o cliente de consenso. A API Engine é autenticada com o token `jwtsecret` e somente chamadas de `localhost` são permitidas.
 
-```
+```sh
 besu --network=mainnet \
     --data-path=/data/ethereum \
     --rpc-http-enabled=true \
@@ -250,7 +252,7 @@ besu --network=mainnet \
 
 O Besu também vem com uma opção de inicializador, que fará uma série de perguntas e gerará o arquivo de configuração. Execute o inicializador interativo usando:
 
-```
+```sh
 besu --Xlauncher
 ```
 
@@ -260,7 +262,7 @@ A [documentação do Besu](https://besu.hyperledger.org/en/latest/HowTo/Get-Star
 
 Este exemplo inicia o Erigon na rede principal, armazena dados da blockchain em `/data/ethereum`, habilita o RPC JSON, define quais namespaces são permitidos e habilita a autenticação para conectar o cliente de consenso, definido pelo caminho `jwtsecret`.
 
-```
+```sh
 erigon --chain mainnet \
     --datadir /data/ethereum \
     --http --http.api=engine,eth,web3,net \
@@ -271,9 +273,9 @@ O Erigon, por padrão, executa uma sincronização completa com um HDD de 8 GB, 
 
 ##### Executando o Geth
 
-Este exemplo inicia o Geth na rede principal, armazena os dados da cadeia de blocos em `/data/ethereum`, habilita o RPC JSON e define quais namespaces são permitidos. Ele também habilita a autenticação para conectar o cliente de consenso, que requer o caminho para `jwtsecret` e também a opção que define quais conexões são permitidas, em nosso exemplo apenas no `localhost`.
+Este exemplo inicia o Geth na rede principal, armazena os dados da blockchain em `/data/ethereum`, habilita o RPC JSON e define quais namespaces são permitidos. Ele também habilita a autenticação para conectar o cliente de consenso, que requer o caminho para `jwtsecret` e também a opção que define quais conexões são permitidas, em nosso exemplo apenas no `localhost`.
 
-```
+```sh
 geth --mainnet \
     --datadir "/data/ethereum" \
     --http --authrpc.addr localhost \
@@ -286,9 +288,9 @@ Confira a [documentação para todas as opções de configuração](https://geth
 
 ##### Executando o Nethermind
 
-O Nethermind oferece várias [opções de instalação](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). O pacote vem com vários binários, incluindo um Inicializador com configuração guiada, que ajudará você a criar a configuração interativamente. Como alternativa, você encontrará o Executor, que é o executável em si, que simplesmente pode ser executado com os sinalizadores de configuração. O RPC JSON é habilitado por padrão.
+O Nethermind oferece várias [opções de instalação](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). O pacote vem com vários binários, incluindo um Inicializador com configuração guiada, que ajudará você a criar a configuração interativamente. Como alternativa, você encontrará o Executor, que é o executável em si, que simplesmente pode ser executado com os sinalizadores de configuração. O RPC-JSON é habilitado por padrão.
 
-```
+```sh
 Nethermind.Runner --config mainnet \
     --datadir /data/ethereum \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
@@ -297,6 +299,19 @@ Nethermind.Runner --config mainnet \
 Os documentos do Nethermind oferecem um [guia completo](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) sobre como executar o Nethermind com o cliente de consenso.
 
 Um cliente de execução iniciará suas funções principais, pontos de extremidade escolhidos e começará a procurar por pares. Após conseguir descobrir os pares, o cliente inicia a sincronização. O cliente de execução aguardará uma conexão do cliente de consenso. Os dados atuais da cadeia de blocos estarão disponíveis assim que o cliente for sincronizado com sucesso com o estado atual.
+
+##### Executando o Reth
+
+Este exemplo inicia o Reth na rede principal, usando o local de dados padrão. Habilita a autenticação JSON-RPC e Engine RPC para conectar o cliente de consenso definido pelo caminho `jwtsecret`, permitindo chamadas somente de `localhost`.
+
+```sh
+reth node \
+    --authrpc.jwtsecret /path/to/jwtsecret \
+    --authrpc.addr 127.0.0.1 \
+    --authrpc.port 8551
+```
+
+Consulte [Configuração do Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) para saber mais sobre os diretórios de dados padrão. A [documentação do Reth](https://reth.rs/run/mainnet.html) contém opções adicionais e detalhes de configuração.
 
 #### Iniciando um cliente de consenso {#starting-the-consensus-client}
 
@@ -308,13 +323,13 @@ Se você planeja executar um validador, certifique-se de adicionar um marcador d
 
 Ao iniciar um Beacon Node em uma rede de testes, você pode economizar um tempo de sincronização significativo usando um ponto de extremidade público para [sincronização de ponto de verificação](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
-#### Executando um cliente de consenso
+#### Executando um cliente de consenso {#running-a-consensus-client}
 
 ##### Executando o Lighthouse
 
 Antes de executar o Lighthouse, saiba mais sobre como instalá-lo e configurá-lo na [Documentação do Lighthouse](https://lighthouse-book.sigmaprime.io/installation.html).
 
-```
+```sh
 lighthouse beacon_node \
     --network mainnet \
     --datadir /data/ethereum \
@@ -327,7 +342,7 @@ lighthouse beacon_node \
 
 Instale o software Lodestar compilando-o ou baixando a imagem do Docker. Saiba mais na [documentação](https://chainsafe.github.io/lodestar/) e no [guia de configuração](https://hackmd.io/@philknows/rk5cDvKmK) mais abrangente.
 
-```
+```sh
 lodestar beacon \
     --rootDir="/data/ethereum" \
     --network=mainnet \
@@ -340,7 +355,7 @@ lodestar beacon \
 
 O Nimbus vem com ambos os clientes de consenso e de execução. Ele pode ser executado em vários dispositivos, até mesmo com um poder de computação bem modesto. Após [instalar as dependências e o próprio Nimbus](https://nimbus.guide/quick-start.html), você pode executar seu cliente de consenso:
 
-```
+```sh
 nimbus_beacon_node \
     --network=mainnet \
     --web3-url=http://127.0.0.1:8551 \
@@ -352,7 +367,7 @@ nimbus_beacon_node \
 
 O Prysm vem com um script que permite uma instalação automática fácil. Os detalhes podem ser encontrados na [documentação do Prysm](https://docs.prylabs.network/docs/install/install-with-script).
 
-```
+```sh
 ./prysm.sh beacon-chain \
     --mainnet \
     --datadir /data/ethereum  \
@@ -362,7 +377,7 @@ O Prysm vem com um script que permite uma instalação automática fácil. Os de
 
 ##### Executando o Teku
 
-```
+```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \
     --ee-endpoint http://localhost:8551 \
@@ -377,7 +392,7 @@ Um cliente de consenso serve como um Beacon Node para os validadores se conectar
 
 Executar seu próprio validador permite a [participação individual](/staking/solo/), o método mais impactante e não confiável para dar suporte à rede Ethereum. No entanto, isso requer um depósito de 32 ETH. Para executar um validador em seu próprio nó com uma quantidade menor, um pool descentralizado com operadores de nós sem permissão, como [Rocket Pool](https://rocketpool.net/node-operators), poderá ser interessante.
 
-A maneira mais fácil de começar com a participação e a geração de chaves de validação é usar a [Plataforma de lançamento de participação da rede de testes Goerli](https://goerli.launchpad.ethereum.org/), que permite testar sua configuração [executando nós no Goerli](https://notes.ethereum.org/@launchpad/goerli). Quando você estiver pronto para a Mainnet (Rede principal), você poderá repetir essas etapas usando a [Plataforma de lançamento de participação da Mainnet](https://launchpad.ethereum.org/).
+A maneira mais fácil de começar a usar a geração de chaves de validação e staking é usar o [Holesky Testnet Staking Launchpad](https://holesky.launchpad.ethereum.org/), que permite testar sua configuração ao [executar nós no Holesky](https://notes.ethereum.org/@launchpad/holesky). Quando você estiver pronto para a Mainnet (Rede principal), você poderá repetir essas etapas usando a [Plataforma de lançamento de participação da Mainnet](https://launchpad.ethereum.org/).
 
 Consulte a [página de staking (participação)](/staking) para obter uma visão geral sobre as opções de participação.
 
@@ -431,7 +446,7 @@ Considere criar um serviço para executar seus clientes automaticamente na inici
 
 Você precisa manter seu software cliente atualizado com os patches de segurança, recursos e [EIPs](/eips/) mais recentes. Sobretudo antes das [bifurcações permanentes](/history/), verifique se você está executando as versões corretas do cliente.
 
-> Antes de atualizações importantes da rede, a EF publica uma postagem em seu [blog](https://blog.ethereum.org). Você pode [assinar esses anúncios](https://groups.google.com/a/ethereum.org/g/announcements) para receber uma notificação no seu e-mail quando o seu nó precisar de uma atualização.
+> Antes de atualizações importantes da rede, a EF publica uma postagem em seu [blog](https://blog.ethereum.org). Você pode [fazer a inscrição nesses anúncios](https://blog.ethereum.org/category/protocol#subscribe) para receber uma notificação no seu e-mail quando o seu nó precisar de uma atualização.
 
 Atualizar clientes é muito simples. Cada cliente tem instruções específicas em sua documentação, mas o processo geralmente é apenas baixar a versão mais recente e reiniciar o cliente com o novo executável. O cliente deve continuar de onde parou, mas com as atualizações aplicadas.
 

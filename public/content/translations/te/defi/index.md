@@ -1,7 +1,7 @@
 ---
 title: డిసెంట్రలైజ్డ్ ఫైనాన్స్ (DeFi)
 description: ఇతీరియములో DeFi యొక్క అవలోకనం
-lang: ఆంగ్లము
+lang: te
 template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png

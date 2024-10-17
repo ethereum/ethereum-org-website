@@ -61,6 +61,7 @@ IPFS; dosyaları, web sitelerini, uygulamaları ve verileri depolamaya ve bunlar
 - [IPFS Tarama](https://ipfs-scan.io) _(IPFS iliştime arayıcı)_
 - [4EVERLAND](https://www.4everland.org/) _ (IPFS iliştirme hizmeti）_
 - [Filebase](https://filebase.com) _(IPFS İliştirme Hizmeti)_
+- [Spheron Ağı](https://spheron.network/) _(IPFS/Filecoin pimleme servisi)_
 
 SWARM, bir depolama teşvik sistemi ve bir depolama fiyatı kahinine sahip merkeziyetsiz bir veri depolama dağıtım teknolojisidir.
 
@@ -197,6 +198,12 @@ Hisse ispatı tabanlı:
 - [Kaleido](https://kaleido.io/)
 - [Dokümanlar](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
+
+**Spheron Ağı- _Spheron, uygulamalarını merkeziyetsiz altyapı üzerinde en iyi performansla başlatmak isteyen merkeziyetsiz uygulamalar için tasarlanmış bir platform servisidir (PaaS). Anında hesaplama, merkeziyetsiz depolama, CDN ve web barındırma hizmeti sunar._**
+
+- [spheron.network](https://spheron.network/)
+- [Dokümanlar](https://docs.spheron.network/)
+- [GitHub](https://github.com/spheronFdn)
 
 ## Daha fazla bilgi {#further-reading}
 

@@ -8,9 +8,9 @@ lang: vi
 
 Các hợp đồng thông minh là các khối nền tảng cho các ứng dụng Ethereum. Chúng là những phần mềm máy tính được lưu trữ ở trên [chuỗi khối](/glossary/#blockchain) tuân theo quy luật logic "Nếu - thì", và chúng được đảm bảo rằng sẽ thực hiện theo Mã đã được lập trình, và những hợp đồng này sẽ không thể bị thay đổi một khi đã được tạo ra.
 
-Nick Szabo đã đề cập đến thuật ngữ "hợp đồng thông minh". Năm 1994, ông viết [giới thiệu khái niệm](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) và vào năm 1996, ông ta viết [khám phá những gì hợp đồng thông minh có thể thực hiện ](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+Nick Szabo đã đề cập đến thuật ngữ "hợp đồng thông minh". Năm 1994, ông viết [giới thiệu khái niệm](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) và vào năm 1996, ông ta viết [khám phá những gì hợp đồng thông minh có thể thực hiện](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Szabo đã có tầm nhìn về một siêu thị số, nơi mà những quy trình tự động & [ bảo mật được mã hóa ](/glossary/#cryptography) cho phép những giao dịch và kinh doanh diễn ra mà không cần các bên trung gian được ủy quyền. Các hợp đồng thông minh trên Ethereum đưa tầm nhìn này vào thực tế.
+Szabo đã có tầm nhìn về một siêu thị số, nơi mà những quy trình tự động & [bảo mật được mã hóa](/glossary/#cryptography) cho phép những giao dịch và kinh doanh diễn ra mà không cần các bên trung gian được ủy quyền. Các hợp đồng thông minh trên Ethereum đưa tầm nhìn này vào thực tế.
 
 Xem Finematics giải thích các hợp đồng thông minh:
 

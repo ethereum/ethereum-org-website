@@ -61,6 +61,7 @@ lang: zh
 - [Alchemy Sepolia 水龙头](https://sepoliafaucet.com/)
 - [Infura Sepolia 水龙头](https://www.infura.io/faucet)
 - [Chainstack Sepolia 水龙头](https://faucet.chainstack.com/sepolia-faucet)
+- [以太坊生态系统水龙头](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli _（长期支持）_ {#goerli}
 
