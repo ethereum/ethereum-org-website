@@ -3,6 +3,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import type { BasePageProps, Lang } from "@/lib/types"
 
+import Card from "@/components/Card"
 import HubHero, { HubHeroProps } from "@/components/Hero/HubHero"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
@@ -63,6 +64,28 @@ const Layer2Hub = () => {
     ],
   }
 
+  // TODO: Setup for translation
+  const calloutCards = [
+    {
+      title: "$0.01 fees",
+      description:
+        "You can trade, send money globally, or use  applications without worrying about high costs.",
+      emoji: ":money_with_wings:",
+    },
+    {
+      title: "Near instant transactions",
+      description:
+        "Whether you are making a quick payment or engaging in decentralized finance (DeFi), all transactions take only few seconds. ",
+      emoji: ":closed_lock_with_key:",
+    },
+    {
+      title: "Backed by Ethereum",
+      description:
+        "Ethereum’s time proven and decentralized blockchain functions as the settlement layer for other newer networks.",
+      emoji: ":hammer_and_wrench:",
+    },
+  ]
+
   return (
     <MainArticle className="relative flex flex-col">
       {/* TODO: Clarify title and description here */}
@@ -74,6 +97,23 @@ const Layer2Hub = () => {
       />
 
       <HubHero {...heroContent} />
+
+      <div id="layer-2-callout-cards" className="w-full px-8 py-9">
+        <div className="flex flex-col gap-9 md:flex-row">
+          {calloutCards.map((card, idx) => {
+            return (
+              <div key={idx} className="flex flex-1">
+                <Card
+                  description={card.description}
+                  title={card.title}
+                  emoji={card.emoji}
+                  className="flex flex-1 flex-col"
+                />
+              </div>
+            )
+          })}
+        </div>
+      </div>
     </MainArticle>
   )
 }
