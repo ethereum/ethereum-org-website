@@ -33,6 +33,11 @@ incomplete: true
 - [在 Java 集成测试中运行一个 Hyperledger Besu (Pantheon) 节点](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
 - [Web3j 备忘单](https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c)
 
+学习如何使用 [ethers-kt](https://github.com/Kr1ptal/ethers-kt)，一个用来同基于以太坊虚拟机的区块链互动的高性能异步 Kotlin 库。 面向 Java 虚拟机和 Android 平台。
+- [转移 ERC20 代币](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/abi/TransferERC20.kt)
+- [带事件监听的 UniswapV2 Swap](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/tokenswapwitheventlistening/TokenSwapWithEventListening.kt)
+- [以太币 / ERC20 余额追踪器](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/balancetracker/BalanceTracker.kt)
+
 ## 面向中等程度用户的文章 {#intermediate-articles}
 
 - [使用星际文件系统在 Java 应用程序中管理存储](https://kauri.io/article/3e8494f4f56f48c4bb77f1f925c6d926/managing-storage-in-a-java-application-with-ipfs)
@@ -47,6 +52,7 @@ incomplete: true
 
 - [Hyperledger Besu (Pantheon)（以太坊客户端）](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J（与以太坊客户端交互的库）](https://github.com/web3j/web3j)
+- [ethers-kt（面向基于以太坊虚拟机区块链的高性能异步 Kotlin/Java/Android 库）](https://github.com/Kr1ptal/ethers-kt)
 - [Eventeum（事件侦听器）](https://github.com/ConsenSys/eventeum)
 - [Mahuta（IPFS 开发者工具）](https://github.com/ConsenSys/mahuta)
 

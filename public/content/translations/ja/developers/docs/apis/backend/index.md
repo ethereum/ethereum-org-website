@@ -52,6 +52,9 @@ lang: ja
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
+**Etherscan - ブロックエクスプローラーおよびトランザクションAPI**
+- [ドキュメント](https://docs.etherscan.io/)
+
 **GetBlock-** **_Web3開発用のBlockchain-as-a-service_**
 
 - [GetBlock.io](https://getblock.io/)
@@ -63,7 +66,7 @@ lang: ja
 - [ドキュメント](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _費用効果の高いEVM JSON RPCプロバイダ_**
+**Node RPC - _コスト効率の高いEVM JSON-RPCプロバイダー_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [ドキュメント](https://docs.noderpc.xyz/node-rpc)
@@ -141,7 +144,7 @@ lang: ja
 **Chainstack -** **_柔軟性の高い、専用のアズ・ア・サービス型イーサリアムノード_**
 
 - [chainstack.com](https://chainstack.com)
-- [ドキュメント](https://docs.chainbase.com/docs)
+- [ドキュメンテーション](https://docs.chainbase.com/docs)
 - [イーサリアムAPIリファレンス](https://docs.chainstack.com/reference/ethereum-getting-started)
 
 **Coinbase Cloud Node -** **_ブロックチェーンインフラストラクチャAPI_**
@@ -152,7 +155,7 @@ lang: ja
 **Figment社が提供するDataHub -** **_イーサリアムプロトコル(メインネットとテストネット)を使用したWeb3 APIサービス_**
 
 - [DataHub](https://www.figment.io/)
-- [ドキュメンテーション](https://docs.figment.io/)
+- [ドキュメント](https://docs.figment.io/)
 
 **Moralis -** **_エンタープライズグレードのEVM APIプロバイダ_**
 
