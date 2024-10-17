@@ -1,7 +1,7 @@
+import Link from "next/link"
 import { useTranslation } from "next-i18next"
 import type { ComponentType, ReactNode, SVGProps } from "react"
 import {
-  Badge,
   Box,
   BoxProps,
   Center,
@@ -12,6 +12,8 @@ import {
   List,
   ListIcon,
   ListItem,
+  Text,
+  useColorModeValue,
 } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
@@ -21,6 +23,7 @@ import {
   UnknownProductGlyphIcon,
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
+import SocialListItem from "@/components/SocialListItem"
 
 import { FlagType, Product } from "./types"
 
@@ -37,7 +40,7 @@ const getIconFromName = (
 const Status = ({ status }: { status: FlagType | undefined }) => {
   if (!status) return null
 
-  const styles = { fontSize: "2xl", m: 0 }
+  const styles = { fontSize: "xl", m: 0 }
   switch (status) {
     case "green-check":
       return <ListIcon as={GreenCheckProductGlyphIcon} {...styles} />
@@ -58,17 +61,18 @@ const StakingBadge = ({
   type: "ui" | "platform"
   children: ReactNode
 }) => {
-  const uiTypeColor = type === "ui" && "stakingPillUI"
-  const platformTypeColor = type === "platform" && "stakingPillPlatform"
+  const uiTypeColor = type === "ui"
+  const bgTypeColor = useColorModeValue(
+    "bg-success-light text-success",
+    "bg-warning-light text-warning-dark"
+  )
 
   return (
-    <Badge
-      size="lg"
-      background={uiTypeColor || platformTypeColor || undefined}
-      textTransform="initial"
+    <span
+      className={`rounded-full ${uiTypeColor ? bgTypeColor : "bg-primary-low-contrast"} px-2 py-1 text-xs normal-case ${uiTypeColor ? "text-success" : "text-primary-high-contrast"}`}
     >
       {children}
-    </Badge>
+    </span>
   )
 }
 
@@ -80,7 +84,6 @@ export const StakingProductCard = ({
   product: {
     name,
     imageName,
-    color,
     url,
     platforms,
     ui,
@@ -98,13 +101,28 @@ export const StakingProductCard = ({
     consensusDiversity,
     executionDiversity,
     economical,
+    socials,
     matomo,
   },
 }: StakingProductCardProps) => {
   const PADDED_DIV_STYLE: BoxProps = {
-    px: 8,
-    py: 6,
+    p: 6,
   }
+
+  const validSocials = socials
+    ? Object.entries(socials).filter(
+        ([platform, url]) =>
+          url &&
+          [
+            "twitter",
+            "reddit",
+            "youtube",
+            "discord",
+            "stackExchange",
+            "webpage",
+          ].includes(platform)
+      )
+    : []
 
   const { t } = useTranslation("page-staking")
   const Svg = getIconFromName(imageName)
@@ -174,37 +192,36 @@ export const StakingProductCard = ({
         transform: "scale(1.01)",
       }}
     >
-      <HStack
-        {...PADDED_DIV_STYLE}
-        spacing={6}
-        background={color}
-        bgGradient="linear(0deg, rgba(0, 0, 0, 30%), rgba(0, 0, 0, 0))"
-        borderRadius="base"
-        maxH={24}
-      >
-        {!!Svg && <Icon as={Svg} fontSize="2rem" color="white" />}
-        <Heading as="h4" fontSize="2xl" color="white">
-          {name}
-        </Heading>
+      <HStack {...PADDED_DIV_STYLE} spacing={3} maxH={24}>
+        {!!Svg && (
+          <Icon
+            as={Svg}
+            fontSize="6xl"
+            color="base"
+            background={"offBackground"}
+            borderRadius="base"
+            p="2"
+          />
+        )}
+        <Box>
+          <Heading as="h4" fontSize="xl" color="base">
+            {name}
+          </Heading>
+          {typeof minEth !== "undefined" && (
+            <Text fontWeight={400} fontSize="sm" color="body.medium">
+              {minEth > 0
+                ? `${t("common:from")} ${minEth} ETH`
+                : t("page-staking-any-amount")}
+            </Text>
+          )}
+        </Box>
       </HStack>
-      {typeof minEth !== "undefined" && (
-        <Center
-          fontWeight={700}
-          fontSize="base"
-          color="textTableOfContents"
-          textTransform="uppercase"
-          pt={6}
-        >
-          {minEth > 0
-            ? `${t("common:from")} ${minEth} ETH`
-            : t("page-staking-any-amount")}
-        </Center>
-      )}
       <Flex
         {...PADDED_DIV_STYLE}
         flexWrap="wrap"
         gap={1}
-        flex={1}
+        pt={0}
+        minHeight={75}
         alignItems="flex-start"
       >
         {platforms.map((platform, idx) => (
@@ -224,14 +241,13 @@ export const StakingProductCard = ({
             <ListItem
               as={Flex}
               key={idx}
-              textTransform="uppercase"
-              fontSize="xs"
+              fontSize="md"
               lineHeight="0.875rem"
-              letterSpacing="wider"
               my="4"
               ms="auto"
               me={0}
               gap="1em"
+              color={status === "false" ? "body.medium" : "base"}
               alignItems="center"
             >
               <Status status={status} />
@@ -241,9 +257,48 @@ export const StakingProductCard = ({
         </List>
       </Box>
       <Box {...PADDED_DIV_STYLE}>
-        <ButtonLink href={url} customEventOptions={matomo} width="100%">
+        <ButtonLink
+          href={url}
+          customEventOptions={matomo}
+          width="100%"
+          variant={"outline-color"}
+          isSecondary={true}
+        >
           {t("page-staking-products-get-started")}
         </ButtonLink>
+        <Center>
+          <Flex alignItems="center">
+            {validSocials.length > 0 && (
+              <Text fontSize="sm" color="body.medium" mr={2}>
+                {t("page-staking-products-follow")}
+              </Text>
+            )}
+
+            {validSocials.map(([platform, url], idx) => (
+              <Link
+                key={idx}
+                href={url}
+                passHref
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SocialListItem
+                  color="body.base"
+                  boxSize={8}
+                  socialIcon={
+                    platform as
+                      | "twitter"
+                      | "reddit"
+                      | "youtube"
+                      | "discord"
+                      | "stackExchange"
+                      | "webpage"
+                  }
+                />
+              </Link>
+            ))}
+          </Flex>
+        </Center>
       </Box>
     </Flex>
   )
