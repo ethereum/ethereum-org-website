@@ -14,7 +14,7 @@ summaryPoints:
 ---
 
 <UpgradeStatus dateKey="page-staking-withdrawals-when">
-Ang pag-withdraw sa staking ay in-enable kasabay ng Shanghai/Capella ugrade na naganap noong Abril 12, 2023.<&nbsp;<a href="#when" customEventOptions={{ eventCategory: "Anchor link", eventAction: "When's it shipping?", eventName: "click" }}>Iba pang detalye tungkol sa Shanghai/Capella</a>
+Ang pag-withdraw sa staking ay in-enable kasabay ng Shanghai/Capella ugrade na naganap noong Abril 12, 2023.&nbsp;<a href="#when" customEventOptions={{ eventCategory: "Anchor link", eventAction: "When's it shipping?", eventName: "click" }}>Iba pang detalye tungkol sa Shanghai/Capella</a>
 </UpgradeStatus>
 
 Ang **mga pag-withdraw sa staking** ay tumutukoy sa mga pag-transfer ng ETH mula sa validator account na nasa consensus layer ng Ethereum (ang Beacon Chain), papunta sa execution layer kung saan ito magagamit sa mga transaksyon.
