@@ -2,7 +2,6 @@ import Link from "next/link"
 import { useTranslation } from "next-i18next"
 import type { ComponentType, ReactNode, SVGProps } from "react"
 import {
-  Badge,
   Box,
   BoxProps,
   Center,
@@ -14,6 +13,7 @@ import {
   ListIcon,
   ListItem,
   Text,
+  useColorModeValue,
 } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
@@ -40,7 +40,7 @@ const getIconFromName = (
 const Status = ({ status }: { status: FlagType | undefined }) => {
   if (!status) return null
 
-  const styles = { fontSize: "2xl", m: 0 }
+  const styles = { fontSize: "xl", m: 0 }
   switch (status) {
     case "green-check":
       return <ListIcon as={GreenCheckProductGlyphIcon} {...styles} />
@@ -61,21 +61,18 @@ const StakingBadge = ({
   type: "ui" | "platform"
   children: ReactNode
 }) => {
-  const uiTypeColor = type === "ui" && "stakingPillUI"
-  const platformTypeColor = type === "platform" && "stakingPillPlatform"
+  const uiTypeColor = type === "ui"
+  const bgTypeColor = useColorModeValue(
+    "bg-success-light text-success",
+    "bg-warning-light text-warning-dark"
+  )
 
   return (
-    <Badge
-      size="xs"
-      borderRadius={84}
-      px={2}
-      py={1}
-      color={uiTypeColor ? "success.base" : "primary.highContrast"}
-      background={uiTypeColor || platformTypeColor || undefined}
-      textTransform="initial"
+    <span
+      className={`rounded-full ${uiTypeColor ? bgTypeColor : "bg-primary-low-contrast"} px-2 py-1 text-xs normal-case ${uiTypeColor ? "text-success" : "text-primary-high-contrast"}`}
     >
       {children}
-    </Badge>
+    </span>
   )
 }
 
@@ -201,7 +198,7 @@ export const StakingProductCard = ({
             as={Svg}
             fontSize="6xl"
             color="base"
-            background={"white"}
+            background={"offBackground"}
             borderRadius="base"
             p="2"
           />
@@ -224,7 +221,7 @@ export const StakingProductCard = ({
         flexWrap="wrap"
         gap={1}
         pt={0}
-        minHeight={98}
+        minHeight={75}
         alignItems="flex-start"
       >
         {platforms.map((platform, idx) => (
@@ -246,7 +243,6 @@ export const StakingProductCard = ({
               key={idx}
               fontSize="md"
               lineHeight="0.875rem"
-              letterSpacing="wider"
               my="4"
               ms="auto"
               me={0}
