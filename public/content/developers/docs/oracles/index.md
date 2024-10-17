@@ -388,6 +388,8 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Chainlink](https://chain.link/)** - _Chainlink decentralized oracle networks provide tamper-proof inputs, outputs, and computations to support advanced smart contracts on any blockchain._
 
+**[RedStone Oracles](https://redstone.finance/)** - _RedStone is a decentralized modular oracle that provides gas-optimized data feeds. It specializes in offering price feeds for emerging assets, such as liquid staking tokens (LSTs), liquid restaking tokens (LRTs), and Bitcoin staking derivatives._
+
 **[Chronicle](https://chroniclelabs.org/)** - _Chronicle overcomes the current limitations of transferring data on-chain by developing truly scalable, cost-efficient, decentralized, and verifiable oracles._
 
 **[Witnet](https://witnet.io/)** - _Witnet is a permissionless, decentralized, and censorship-resistant oracle helping smart contracts to react to real world events with strong crypto-economic guarantees._
