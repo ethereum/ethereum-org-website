@@ -334,7 +334,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
   关于构建去中心化应用程序的更多信息
 </ButtonLink>
 
-## 延伸阅读 {#futher-reading}
+## 延伸阅读 {#further-reading}
 
 ### 去中心化金融数据 {#defi-data}
 

@@ -1,6 +1,7 @@
-import { Center } from "@chakra-ui/react"
+import { ImageProps } from "next/image"
 
-import { Image, type ImageProps } from "@/components/Image"
+import { TwImage } from "../Image"
+import { Center } from "../ui/flex"
 
 interface AssetDownloadImageProps {
   image: ImageProps["src"]
@@ -8,8 +9,8 @@ interface AssetDownloadImageProps {
 }
 
 const AssetDownloadImage = ({ image, alt }: AssetDownloadImageProps) => (
-  <Center border="1px" borderColor="white700" p="8" w="full">
-    <Image src={image} alt={alt} w="full" alignSelf="center" />
+  <Center className="w-full border p-8">
+    <TwImage src={image} alt={alt} className="w-full self-center" />
   </Center>
 )
 

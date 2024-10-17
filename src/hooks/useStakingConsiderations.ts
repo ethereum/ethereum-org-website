@@ -389,8 +389,8 @@ export const useStakingConsiderations = ({
     pageData[activeIndex]
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "Staking Considerations",
-    ariaLabel: "Dropdown menu for staking considerations",
+    text: t("page-staking-considerations-dropdown-text"),
+    ariaLabel: t("page-staking-considerations-dropdown-aria-label"),
     items: pageData.map(({ title, matomo }) => ({
       text: title,
       callback: setActiveIndex,

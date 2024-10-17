@@ -32,7 +32,10 @@ const LeftNavBar = ({
     >
       {dropdownLinks && (
         <div className="relative mb-8 flex items-end justify-end">
-          <ButtonDropdown list={dropdownLinks} w="full" minW="240px" />
+          <ButtonDropdown
+            list={dropdownLinks}
+            className="w-full min-w-[240px]"
+          />
         </div>
       )}
       <h2 className="mb-8 text-3xl leading-xs">

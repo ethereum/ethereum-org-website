@@ -13,18 +13,19 @@ Kezdje azzal, hogy elolvassa az ethereum.org misszióját és értékeit a [maga
 ## Fejlesztők <Emoji text=":computer:" size={1} /> {#developers}
 
 - Tanuljon az Ethereumról és próbálja ki az [ethereum.org/developers/](/developers/) oldalon
-- [Nyerjen jutalmat a Gitcoin-on](https://gitcoin.co/) azáltal, hogy kisebb-nagyobb technikai problémákon dolgozik, és kapjon érte kriptót!
 - Vegyen részt egy Önhöz közel eső [ETHGlobal](http://ethglobal.co/) hackathonon!
 - Nézze meg azokat a [projekteket, melyek a szakterületéhez vagy a választott programnyelvéhez kapcsolódnak](/developers/docs/programming-languages/)
-- Nézze meg a [fő protokollfejlesztők (core dev) beszélgetéseit](https://www.youtube.com/@EthereumProtocol) vagy vegyen részt azokon
+- Nézze meg a [Konszenzus- és végrehajtási réteg megbeszéléseket](https://www.youtube.com/@EthereumProtocol/streams) vagy vegyen részt rajtuk
 - [Ökoszisztémát támogató programok listája](https://esp.ethereum.foundation/wishlist/) – eszközök, dokumentáció és infrastruktúra, ahol az Ethereum-ökoszisztémát támogató programok aktívan várják a támogatásért jelentkezőket
 - [Web3Bridge](https://www.web3bridge.com/) – csatlakozzon az inspiráló web3-közösséghez, mely egész Afrikában fejlesztők és közösségi tagok százait választja ki, tanítja be és támogatja
+- Csatlakozzon az [Eth R&D Discord](https://discord.com/invite/VmG7Uxc) csatornához
 - Csatlakozzon az [Ethereum Cat Herders Discord csatornához](https://discord.com/invite/Nz6rtfJ8Cu)
 
 ## Kutatók és akadémikusok <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
 Ön matematikus, kriptográfus vagy közgazdász háttérrel rendelkezik? Érdeklik az élvonalbeli tevékenységek az Ethereum-ökoszisztéma kapcsán:
 
+- Csatlakozzon az [Eth R&D Discord](https://discord.com/invite/VmG7Uxc) csatornához
 - Írjon vagy véleményezzen egy Ethereum fejlesztési javaslatot (EIP)
   - Írjon EIP-t
     1. Adja be ötletét az [Ethereum Magicians csoportnak](https://ethereum-magicians.org)
@@ -39,6 +40,7 @@ Kezdje azzal, hogy elolvassa az ethereum.org misszióját és értékeit a [maga
 - [Ethresear.ch](https://ethresear.ch) – az Ethereum elsődleges kutatói fóruma, illetve a világ legbefolyásosabb fóruma a kriptogazdaság terén
 - [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) – egy folyamatos kérdés-válasz sorozat a kutatókkal. A következő részek megnyitásakor bárki feltehet kérdéseket.
 - [Ökoszisztémát támogató programok listája](https://esp.ethereum.foundation/wishlist/) – kutatási területek, ahol az Ethereum-ökoszisztémát támogató programok aktívan várják a támogatásért jelentkezőket
+- [AllWalletDevs](https://allwallet.dev) – fórum az Ethereum-fejlesztők, -tervezők és -érdeklődők számára, hogy rendszeresen összegyűljenek és megtárgyalják a tárcákat
 
 [Fedezzen fel még több kutatási területet](/community/research/).
 
@@ -118,13 +120,12 @@ Az Ethereum-ökoszisztéma missziója, hogy közjóval kapcsolatos és nagy hat�
 
 A DAO-k decentralizált autonóm szervezetek. Ezek az Ethereum technológiára építve működtetnek szerveződéseket és együttműködéseket. Például a tagság kezelése, a javaslatok megszavazása vagy összegyűjtött eszközök kezelése kapcsán. Bár kísérleti fázisban vannak, de rengeteg lehetőséget ajánlanak, hogy találjon egy hasonlóan gondolkodó csoportot, együttműködő partnereket és hatást gyakoroljon az Ethereum közösségre. [Bővebben a DAO-król](/dao/)
 
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) – _A DAO koncepció támogatása a nem technikai területeken, illetve hogy az emberek értéket teremtsenek a DAO által_
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) – _A DAO koncepció támogatása a nem technikai területeken, illetve hogy az emberek értéket teremtsenek a DAO által_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) – _Fejlesztők közössége, akik hisznek az internet közös tulajdonlásában_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) – _egy szabadúszó web3-fejlesztői csapat, amely DAO-ként működik_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) – _A DAOhaus közösségi irányítása_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) – _Jogi szerepkörök_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) – _Jogi szerepkörök_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Művészeti közösség_
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) – _DAO inkubátor_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) – _kockázati tőke a korai fázisban lévő kriptoprojektek számára_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) – _MMORPG játékmechanika a való élethez_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) – _Digifizikális ruházati márkák_

@@ -4,7 +4,7 @@ description: Découvrez les incitations intégrées au protocole dans la preuve 
 lang: fr
 ---
 
-Ethereum est sécurisé à l'aide de sa cryptomonnaie native, l'ether (ETH). Les opérateurs de nœuds qui souhaitent participer à la validation de blocs et identifier la tête de la chaîne de dépôt d'éther dans un contrat intelligent sur Ethereum. Ils sont ensuite payés en ether pour exécuter un logiciel de validateur qui vérifie la validité des nouveaux blocs reçus sur le réseau peer-to-peer et applique l'algorithme de choix de fourche pour identifier la tête de la chaîne.
+Ethereum est sécurisé à l'aide de sa cryptomonnaie native, l'ether (ETH). Les opérateurs de nœuds qui souhaitent participer à la validation de blocs et identifier la tête de la chaîne déposent de l'éther dans le [contrat de dépôt](/staking/deposit-contract/) sur Ethereum. Ils sont ensuite payés en ether pour exécuter un logiciel de validateur qui vérifie la validité des nouveaux blocs reçus sur le réseau peer-to-peer et applique l'algorithme de choix de fourche pour identifier la tête de la chaîne.
 
 Il y a deux rôles principaux pour un validateur : 1) vérifier les nouveaux blocs et les « attester » s'ils sont valides, 2) proposer de nouveaux blocs lorsqu'il est sélectionné au hasard dans la réserve de validateur totale. Si le validateur ne parvient pas à faire l'une de ces tâches quand il lui est demandé de ne pas recevoir un paiement par éther. Les validateurs sont aussi parfois chargés d'agréger les signatures et de participer à des comités de synchronisation.
 

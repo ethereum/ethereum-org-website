@@ -5,7 +5,7 @@ lang: hu
 sidebarDepth: 2
 ---
 
-A rekurzív hosszúságú prefixum (RLP) egy sorosítási módszer, melyet kiterjedten használnak az Ethereum végrehajtási rétegén. Az RLP a csomópontok közötti adatátvitelt szabványosítja helytakarékos formátumban. Az RLP célja a bináris adatok tetszőlegesen egymásba ágyazott tömbjeinek kódolása, és ez az elsődleges kódolási módszer, amelyet az Ethereum végrehajtási rétegén az objektumok sorosítására használnak. Az RLP célja a struktúra kódolása; bizonyos adattípusok (például sztring, float) kódolása a magasabb rendű protokollokra van bízva; de a pozitív RLP egész számokat big-endian bináris formában kell ábrázolni, vezető nullák nélkül (így a nulla integer ekvivalens az üres bájttömbbel). A vezető nullával rendelkező, deszerializált pozitív egész számokat érvénytelenként kezeli a rendszer. A sztring hosszának egészértékű ábrázolását is így kell kódolni, csakúgy, mint a payloadban lévő egész számokat.
+A rekurzív hosszúságú prefixum (RLP) egy sorosítási módszer, melyet kiterjedten használnak az Ethereum végrehajtási rétegén. Az RLP a csomópontok közötti adatátvitelt szabványosítja helytakarékos formátumban. Az RLP célja a bináris adatok tetszőlegesen egymásba ágyazott tömbjeinek kódolása, és ez az elsődleges kódolási módszer, amelyet az Ethereum végrehajtási rétegén az objektumok sorosítására használnak. Az RLP fő célja a struktúra kódolása; a pozitív egész számok kivételével az RLP az egyes adattípusok (pl. karakterláncok, lebegőszámok) kódolását magasabb rendű protokollokra bízza. A pozitív egész számokat nagy endián bináris formában kell ábrázolni, vezető nullák nélkül (így az egész szám értéke nulla, ami üres bájttömbnek felel meg). A vezető nullákat tartalmazó, sorosított, pozitív egész számokat az RLP-t használó magasabb rendű protokolloknak érvénytelennek kell tekinteniük.
 
 További információkat talál [az Ethereum Sárgakönyvben (B függelék)](https://ethereum.github.io/yellowpaper/paper.pdf#page=19).
 
@@ -20,6 +20,7 @@ Az RLP-kódolási funkció egy elemet vesz fel. Az elem a következő lehet：
 
 - egy sztring vagy karaktersorozat (bájttömb) az egy elem
 - az elemek listája is egy elem
+- egy pozitív egész szám egy tétel
 
 Például a következők mindegyike elem:
 
@@ -27,14 +28,17 @@ Például a következők mindegyike elem:
 - egy sztring, amely a „cat” (macska) szót tartalmazza;
 - egy lista, melyben bármennyi sztring található;
 - és az ennél bonyolultabb adatstruktúrák, mint `["cat", ["puppy", "cow"], "horse", [[]], "pig", [""], "sheep"]`.
+- a szám `100`
 
-Érdemes megjegyezni, hogy az oldal további részében a sztring kifejezés a „bináris adat bizonyos számú bájtját” jelenti; nem használunk speciális kódolást, és a sztringek tartalmát nem ismerjük.
+Érdemes megjegyezni, hogy az oldal további részében a sztring kifejezés a „bináris adat bizonyos számú bájtját” jelenti; nem használunk speciális kódolást, és a sztringek tartalmát nem ismerjük (kivéve a nem minimális pozitív egész számok elleni eseteknél).
 
 Az RPL kódolást a következő módon definiáljuk:
 
+- Pozitív egész szám esetén a legrövidebb bájttömbre konvertáljuk, amelynek nagy endián értelmezése az egész szám, majd az alábbi szabályok szerint sztringként kódoljuk.
 - Egy bájt, amelynek értéke a `[0x00, 0x7f]` (decimális `[0, 127]`) tartományban van, annak RLP-kódolása önmaga.
 - Máskülönben, ha a sztring 0–55 bájt hosszú, az RLP-kódolás egyetlen **0x80** (decimál 128) értékű bájtból és a sztring hosszából áll, amelyet a sztring követ. Az első bájt tartománya tehát `[0x80, 0xb7]` (dec. `[128, 183]`).
 - Ha a sztring több mint 55 bájt hosszú, az RLP-kódolás egyetlen bájtból áll, amelynek értéke **0xb7** (dec. 183), valamint a sztring hossza bájtokban kifejezve bináris formában, ezt követi a sztring hossza, majd a sztring. Például egy 1024 bájt hosszú sztring kódolása `\xb9\x04\x00` (dec. `185, 4, 0`), amelyet a sztring követ. Itt `0xb9` (183 + 2 = 185) az első bájt, majd az a 2 bájt `0x0400` (dec. 1024) jön, amely az aktuális sztring hosszát jelöli. Az első bájt tartománya tehát `[0xb8, 0xbf]` (dec. `[184, 191]`).
+- Ha egy sztring 2^64 bájt vagy hosszabb, akkor nem kódolható.
 - Ha egy lista teljes payload-ja (azaz az összes RLP-kódolt elemének együttes hossza) 0–55 bájt hosszú, az RLP-kódolás egyetlen **0xc0** értékű bájtból és a payload hosszából áll, amelyet az elemek RLP-kódolásainak összekapcsolása követ. Az első bájt tartománya tehát `[0xc0, 0xf7]` (dec. `[192, 247]`).
 - Ha egy lista teljes payload-ja több mint 55 bájt hosszú, az RLP-kódolás egyetlen **0xf7** értékű bájtból, valamint a payload hosszának bájtban kifejezett hosszából áll bináris formában, amelyet a payload hossza követ, majd az elemek RLP-kódolásainak összekapcsolása. Az első bájt tartománya tehát `[0xf8, 0xff]` (dec. `[248, 255]`).
 
@@ -73,9 +77,9 @@ def to_binary(x):
 - az üres sztring ('null') = `[ 0x80 ]`
 - az üres lista = `[ 0xc0 ]`
 - az integer 0 = `[ 0x80 ]`
-- a kódolt integer 0 ('\\x00') = `[ 0x00 ]`
-- a kódolt integer 15 ('\\x0f') = `[ 0x0f ]`
-- a kódolt integer 1024 ('\\x04\\x00') = `[ 0x82, 0x04, 0x00 ]`
+- a '\\x00' bájt = `[ 0x00 ]`
+- a '\\x0f' bájt = `[ 0x0f ]`
+- a '\\x04\\x00' bájt = `[ 0x82, 0x04, 0x00 ]`
 - a háromnak a [halmazelméleti ábrázolása](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - a „Lorem ipsum dolor sit amet, consectetur adipisicing elit” sztring = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
@@ -85,7 +89,7 @@ Az RLP-kódolás szabályai és folyamata szerint az RLP-dekódolás bemenete bi
 
 1.  a bemeneti adatok első bájtja (azaz előtagja) alapján dekódolja az adattípust, a tényleges adat hosszát és az eltolást;
 
-2.  az adatok típusának és eltolásának megfelelően dekódolja az adatokat;
+2.  az adatok típusának és eltolásának megfelelően dekódolja az adatokat, tiszteletben tartva a pozitív egész számokra vonatkozó minimális kódolási szabályt;
 
 3.  folytatja a bemenet többi részének dekódolását;
 

@@ -36,12 +36,12 @@ export const BannerGridCell = ({ children }: ChildOnlyProp) => {
       className={cn(
         "px-0 py-8 md:px-12",
         "flex-col",
-        "border-t-search-background border-t",
-        "md:border-s-search-background md:border-s",
+        "border-t border-t-search-background",
+        "md:border-s md:border-s-search-background",
         "first:border-t-0",
         "lg:[&:first-child]:border-s-0",
-        "lg:[&:nth-child(-n+2)]:border-t-search-background md:[&:nth-child(-n+2)]:border-t-0 lg:[&:nth-child(-n+2)]:border-t",
-        "lg:[&:nth-child(2n+1)]:border-s-search-background md:[&:nth-child(2n+1)]:border-s-0 lg:[&:nth-child(2n+1)]:border-s",
+        "md:[&:nth-child(-n+2)]:border-t-0 lg:[&:nth-child(-n+2)]:border-t lg:[&:nth-child(-n+2)]:border-t-search-background",
+        "md:[&:nth-child(2n+1)]:border-s-0 lg:[&:nth-child(2n+1)]:border-s lg:[&:nth-child(2n+1)]:border-s-search-background",
         "lg:[&:nth-child(-n+3)]:justify-start lg:[&:nth-child(-n+3)]:border-t-0 lg:[&:nth-child(-n+3)]:pt-0",
         "lg:[&:nth-child(3n+1)]:border-s-0 lg:[&:nth-child(3n+1)]:ps-0",
         "lg:[&:nth-child(n+4)]:justify-start lg:[&:nth-child(n+4)]:pb-0"
