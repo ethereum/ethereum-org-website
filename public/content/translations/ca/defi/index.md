@@ -255,7 +255,7 @@ Ethereum és una plataforma ideal per al crowfunding:
 
 #### Finançament quadràtic {#quadratic-funding}
 
-Ethereum és un sofware de codi obert i molta de la feina que s'ha fet fins ara l'ha finançada la comunitat. Això ha comportat el creixement d'un nou model de finançament interessant: el finançament quadràtic. Té el potencial de millorar la manera en què es subvenciona tot tipus de béns públics en un futur.
+Ethereum és un software de codi obert i molta de la feina que s'ha fet fins ara l'ha finançada la comunitat. Això ha comportat el creixement d'un nou model de finançament interessant: el finançament quadràtic. Té el potencial de millorar la manera en què es subvenciona tot tipus de béns públics en un futur.
 
 El finançament quadràtic assegura que els projectes que reben més finançament són aquells amb major demanda única. En altres paraules, projectes que pretenen millorar les vides del major nombre de persones. Funciona així:
 
