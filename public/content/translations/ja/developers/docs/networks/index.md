@@ -61,6 +61,7 @@ lang: ja
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
 - [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
+- [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli(ゴエリ) _(長期サポート)_ {#goerli}
 

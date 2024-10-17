@@ -50,6 +50,7 @@
   "layer-2-optimistic-rollups-title": "Πακέτα ενημέρωσης optimistic",
   "layer-2-optimistic-rollups-description": "Τα optimistic πακέτα συναλλαγών είναι «optimistic» υπό την έννοια ότι οι συναλλαγές θεωρούνται έγκυρες, αλλά μπορούν να αμφισβητηθούν εάν είναι απαραίτητο. Εάν υπάρχει υπόνοια μη έγκυρης συναλλαγής, μια απόδειξη σφάλματος θα εκτελεστεί για να ελέγξει αν έχει συμβεί.",
   "layer-2-optimistic-rollups-childSentance": "Περισσότερα για optimistic πακέτα συναλλαγών",
+  "layer-2-zk-rollups-title": "Rollup μηδενικής γνώσης",
   "layer-2-zk-rollups-description": "Τα πακέτα δεδομένων μηδενικής γνώσης χρησιμοποιούν τις αποδείξεις εγκυρότητας όπου οι συναλλαγές υπολογίζονται εκτός αλυσίδας και στη συνέχεια αυτά τα συμπιεσμένα δεδομένα παρέχονται στο Κεντρικό δίκτυο του Ethereum ως απόδειξη της εγκυρότητάς τους.",
   "layer-2-zk-rollups-childSentance": "Περισσότερα για τα ZK-rollups",
   "layer-2-dyor-title": "Κάντε τη δική σας έρευνα: κίνδυνοι του επιπέδου 2",
@@ -114,6 +115,7 @@
   "layer-2-faq-question-5-description-2": "Οποιοσδήποτε είναι ελεύθερος να προτείνει την προσθήκη ενός δικτύου επιπέδου 2 στο ethereum.org. Αν υπάρχει κάποιο δίκτυο επιπέδου 2 που μας έχει διαφύγει, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md\"> παρακαλούμε προτείνετε το</a>.",
   "layer-2-further-reading-title": "Περισσότερες πληροφορίες",
   "a-rollup-centric-ethereum-roadmap": "Ένας οδικός χάρτης του ethereum με επίκεντρο τα πακέτα ενημέρωσης",
+  "an-incomplete-guide-to-rollups": "Ένας ελλιπής οδηγός για τα rollup",
   "polygon-sidechain-vs-ethereum-rollups": "Πλευρική αλυσίδα Polygon ή πακέτα ενημέρωσης Ethereum: μια προσέγγιση των αναβαθμίσεων του επιπέδου 2 | Vitalik Buterin και Lex Fridman",
   "rollups-the-ultimate-ethereum-scaling-strategy": "ΠΑΚΕΤΑ ΕΝΗΜΕΡΩΣΗΣ - Η Απόλυτη Στρατηγική Επεκτασιμότητας του Ethereum; Εξήγηση της διαιτησίας & βελτιστοποίησης",
   "scaling-layer-1-with-shard-chains": "Επεκτασιμότητα επιπέδου 1 με τμηματοποίηση κρυπτοαλυσίδων",
@@ -131,5 +133,7 @@
   "layer-2-ecosystem-portal": "Πύλη Οικοσυστήματος",
   "layer-2-token-lists": "Κατάσταση ψηφιακών στοιχείων",
   "layer-2-explore": "Εξερευνήστε",
-  "page-dapps-ready-button": "Go"
+  "page-dapps-ready-button": "Go",
+  "layer-2-information": "Πληροφορίες",
+  "layer-2-wallet-managers": "Διαχειριστές πορτοφολιών"
 }

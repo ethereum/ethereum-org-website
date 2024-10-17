@@ -41,6 +41,7 @@
   "page-dapps-choose-category": "Оберіть категорію",
   "page-dapps-category-social": "Соціальні мережі",
   "page-dapps-category-content": "Вміст",
+  "page-dapps-category-community": "Спільнота",
   "page-dapps-category-messaging": "Обмін повідомленнями",
   "page-dapps-category-identity": "Ідентифікація",
   "page-dapps-collectibles-benefits-1-description": "Коли витвори мистецтва токенізуються в мережі Ethereum, ви можете підтвердити своє право власності на них. Шлях витворів мистецтва від створення до потрапляння в руки поточного власника можна відстежити. Це запобігає підробкам.",
@@ -95,6 +96,7 @@
   "page-dapps-dapp-description-loopring": "Торговельна платформа P2P для швидкої роботи.",
   "page-dapps-dapp-description-marble-cards": "Створюйте унікальні цифрові картки на основі посилань і торгуйте ними.",
   "page-dapps-dapp-description-matcha": "Перевіряє кілька бірж, щоб виявляти найкращі ціни.",
+  "page-dapps-dapp-description-meeds": "Центри спільнот Web3 для епохи децентралізованої роботи. Винагороджуйте важливі внески чесно та прозоро.",
   "page-dapps-dapp-description-mirror": "Створена на основі web3 для web3, надійна видавнича платформа Mirror розширює межі написання текстів онлайн",
   "page-dapps-dapp-description-multichain": "Найкращий маршрутизатор для web3. Це інфраструктура, розроблена для довільних міжланцюжкових взаємодій.",
   "page-dapps-dapp-description-nifty-gateway": "Купуйте роботи найпопулярніших митців, спортсменів, брендів і авторів прямо в мережі.",
@@ -113,6 +115,7 @@
   "page-dapps-dapp-description-rotki": "Інструмент для відстеження портфоліо з відкритим вихідним джерелом, аналітики, бухгалтерського обліку та податкових звітів, який поважає вашу конфіденційність.",
   "page-dapps-dapp-description-krystal": "Універсальна платформа з доступом до всіх ваших улюблених послуг DeFi.",
   "page-dapps-dapp-description-rarible": "Створюйте, продавайте й купуйте токенізовані колекційні предмети.",
+  "page-dapps-dapp-description-request-finance": "Набір фінансових інструментів для криптовалютних рахунків, заробітної плати та витрат.",
   "page-dapps-dapp-description-rubic": "Міжланцюжковий технологічний агрегатор для користувачів dApp.",
   "page-dapps-dapp-description-sablier": "Переказуйте гроші в режимі реального часу.",
   "page-dapps-dapp-description-spatial": "Створення власного аватара і 3D-світів",
@@ -217,6 +220,7 @@
   "page-dapps-marble-cards-logo-alt": "marble.cards logo",
   "page-dapps-async-logo-alt": "Логотип Async",
   "page-dapps-matcha-logo-alt": "Matcha logo",
+  "page-dapps-meeds-logo-alt": "Логотип Meeds",
   "page-dapps-metaverse-benefits-title": "метавсесвіт",
   "page-dapps-metaverse-benefits-description": "Що саме в мережі Ethereum дає змогу метавсесвіту процвітати?",
   "page-dapps-metaverse-benefits-1-title": "NFT",
@@ -241,6 +245,7 @@
   "page-dapps-ready-button": "ОК",
   "page-dapps-ready-description": "Виберіть потрібну децентралізовану програму",
   "page-dapps-ready-title": "Готові?",
+  "page-dapps-request-finance-logo-alt": "Логотип Request Finance",
   "page-dapps-rubic-logo-alt": "Логотип Rubic",
   "page-dapps-sablier-logo-alt": "Sablier logo",
   "page-dapps-set-up-a-wallet-button": "Знайти гаманець",
@@ -281,5 +286,7 @@
   "page-dapps-dapp-description-dodo": "DODO — це постачальник ліквідності в ланцюжку, який використовує алгоритм Proactive Market Maker (PMM)",
   "page-dapps-dodo-image-alt": "Логотип DODO",
   "page-dapps-dapp-description-artblocks": "Art Blocks створений, щоб постачати захопливі твори сучасного генеративного мистецтва",
-  "page-dapps-artblocks-image-alt": "Логотип Art Blocks"
+  "page-dapps-artblocks-image-alt": "Логотип Art Blocks",
+  "page-dapps-explore-title": "Переглянути більше програм?",
+  "page-dapps-explore": "Перегляньте сотні децентралізованих додатків"
 }

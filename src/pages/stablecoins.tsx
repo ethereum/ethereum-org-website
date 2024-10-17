@@ -349,7 +349,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       url: "https://aave.com",
       alt: t("aave-logo"),
       image: aaveImg,
-      width: "64px",
+      width: 64,
       name: "Aave",
       description: t("page-stablecoins-stablecoins-dapp-description-1"),
     },
@@ -358,7 +358,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       url: "https://compound.finance",
       alt: t("compound-logo"),
       image: compoundImg,
-      width: "160px",
+      width: 160,
       name: "Compound",
       description: t("page-stablecoins-stablecoins-dapp-description-2"),
     },
@@ -367,7 +367,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       url: "https://summer.fi/",
       alt: t("summerfi-logo"),
       image: summerfiImg,
-      width: "80px",
+      width: 80,
       name: "Summer.fi",
       description: t("page-stablecoins-stablecoins-dapp-description-4"),
     },
@@ -467,11 +467,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
               </Box>
             ))}
           </Box>
-          <GhostCard
-            maxW="640px"
-            me={{ base: 0, lg: 8 }}
-            mt={{ base: 16, lg: 2 }}
-          >
+          <GhostCard className="me-0 mt-16 max-w-[640px] lg:me-8 lg:mt-2">
             <Emoji text=":pizza:" className="text-5xl" />
             <H3>{t("page-stablecoins-bitcoin-pizza")}</H3>
             <Text>{t("page-stablecoins-bitcoin-pizza-body")} </Text>
