@@ -185,13 +185,7 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
   },
   {
     href: "https://ethstaker.cc/blog",
-    /**
-     * TODO: The endpoint is behind Vercel security checkpoint. Add "feed" field
-     * back when we can fetch the xml feed without hitting the checkpoint, and
-     * remove custom "name" field.
-     */
-    // feed: "https://paragraph.xyz/api/blogs/rss/@ethstaker",
-    name: "EthStaker Blog",
+    feed: "https://raw.githubusercontent.com/eth-educators/github-actions/refs/heads/main/_data/blog_data.xml",
   },
   {
     href: "https://0xparc.org/blog",
