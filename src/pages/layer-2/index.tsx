@@ -7,6 +7,7 @@ import Card from "@/components/Card"
 import HubHero, { HubHeroProps } from "@/components/Hero/HubHero"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -112,6 +113,19 @@ const Layer2Hub = () => {
               </div>
             )
           })}
+        </div>
+      </div>
+
+      {/* TODO: Setup for translation */}
+      <div id="layer-2-ready-to-start" className="w-full px-8 py-9">
+        <div className="flex flex-col items-center gap-8">
+          <h2>Ready to start?</h2>
+          <p>
+            Have a look at all the different networks that are available to you.
+          </p>
+          <div>
+            <ButtonLink href="/layer-2/networks">Explore networks</ButtonLink>
+          </div>
         </div>
       </div>
     </MainArticle>
