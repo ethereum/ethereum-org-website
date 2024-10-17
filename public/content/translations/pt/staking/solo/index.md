@@ -136,7 +136,7 @@ Um <em>validador</em> é uma entidade virtual que reside no Ethereum e participa
 <ExpandableCard title="Posso depositar mais de 32 ETH?">
 Cada par de chaves associado a um validador requer exatamente 32 ETH para ser ativado. Mais ETH depositados num único conjunto de chaves não aumenta o potencial de recompensas, uma vez que cada validador está limitado a um <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo efetivo</a> de 32 ETH. Isto significa que o staking é feito em incrementos de 32 ETH, cada um com o seu próprio conjunto de chaves e balanço.
 
-Nunca deposite mais de 32 ETH para um único validador. Não aumentará as recompensas. Se um endereço de saque tiver sido definido para o validador, os fundos em excesso acima de 32 ETH serão automaticamente transferidos para este endereço durante o próximo <a href="/staking/withdrawals/#validator-sweeping"">ciclo de validação do validador</a>.
+Nunca deposite mais de 32 ETH para um único validador. Não aumentará as recompensas. Se um endereço de saque tiver sido definido para o validador, os fundos em excesso acima de 32 ETH serão automaticamente transferidos para este endereço durante o próximo <a href="/staking/withdrawals/#validator-sweeping">ciclo de validação do validador</a>.
 
 Se o staking individual parecer demasiado exigente, considere a utilização de um fornecedor de <a href="/staking/saas/">staking-as-a-service</a>, ou se estiver a trabalhar com menos de 32 ETH, consulte os <a href="/staking/pools/">pools de staking</a>.
 </ExpandableCard>
