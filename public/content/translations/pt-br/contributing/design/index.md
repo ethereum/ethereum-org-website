@@ -40,9 +40,9 @@ O Ethereum.org é um site de rápido crescimento com muitos recursos e conteúdo
 
 Se você se sente à vontade para enfrentar desafios de design, visite nosso quadro de problemas do GitHub e filtre por [problemas relacionados ao design](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 
-1. Vá ao nosso site e preste atenção em seu design ou acesse nosso repositório GitHub e analise os problemas sinalizados com a [Etiqueta "Design necessário"](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20 %F0%9F%8E%A8).
+1. Vá ao nosso site e preste atenção em seu design ou acesse nosso repositório GitHub e analise os problemas sinalizados com a [Etiqueta "Design necessário"](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Idealize a solução e desenhe-a. (idealmente usando nosso [sistema de design](https://www.figma.com/community/file/1134414495420383395)).
-3. Proponha a solução no tíquete do GitHub correspondente ou [abra um novo.](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&template=feature_request. yaml&title=Feature+request)
+3. Proponha a solução no tíquete do GitHub correspondente ou [abra um novo.](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&template=feature_request.yaml&title=Feature+request)
 4. Aguarde a revisão do time de design.
 
 ### <Emoji text=":five:" size={1} /> &nbsp;Construir o Sistema de Design juntos {#Contribute-to-design-system}
