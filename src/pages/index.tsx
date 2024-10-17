@@ -182,9 +182,15 @@ export const getStaticProps = (async ({ locale }) => {
   })) as CommunityBlog[]
   blogLinks.push(...BLOGS_WITHOUT_FEED)
 
+  const i18nProps = await serverSideTranslations(
+    locale as Lang,
+    requiredNamespaces
+  )
+  console.log("i18nProps", JSON.stringify(i18nProps, null, 2))
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      ...i18nProps,
       calendar,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
