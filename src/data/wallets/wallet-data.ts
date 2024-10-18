@@ -39,6 +39,11 @@ import UnstoppableWalletImage from "@/public/images/wallets/unstoppable.png"
 import XDEFIImage from "@/public/images/wallets/xdefi.png"
 import ZerionImage from "@/public/images/wallets/zerion.png"
 
+/**
+ * See src/data/chains.ts for available chains and names for use within
+ * the optional `supported_chains` array.
+ */
+
 export const walletsData: WalletData[] = [
   {
     last_updated: "2022-06-22",
@@ -84,6 +89,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://support.keyst.one/",
     documentation: "",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2022-06-22",
@@ -130,6 +136,7 @@ export const walletsData: WalletData[] = [
     social_recovery: true,
     onboard_documentation: "",
     documentation: "",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2024-03-07",
@@ -175,6 +182,7 @@ export const walletsData: WalletData[] = [
     social_recovery: true,
     onboard_documentation: "https://www.argent.xyz/learn/",
     documentation: "",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2022-11-15",
@@ -231,6 +239,7 @@ export const walletsData: WalletData[] = [
     documentation: "",
     new_to_crypto: true,
     // note: "Community contribution, let's follow up with Coinbase",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2022-06-22",
@@ -274,6 +283,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation:
       "https://framelabs.notion.site/Getting-Started-Guide-775a95edec3244ce80e118ead8ea6516",
     documentation: "",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2022-06-22",
@@ -366,6 +376,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://support.metamask.io",
     documentation: "",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2023-01-25",
@@ -408,6 +419,7 @@ export const walletsData: WalletData[] = [
     social_recovery: true,
     onboard_documentation: "https://docs.safe.global/",
     documentation: "https://docs.safe.global/",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "May 10, 2024",
@@ -478,6 +490,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://coin.space/ethereum-wallet/",
     documentation: "https://support.coin.space/hc/en-us",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2023-08-23",
@@ -521,6 +534,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation:
       "https://help.ambire.com/hc/en-us/categories/4404980091538-Ambire-Wallet",
     documentation: "",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2024-08-31",
@@ -575,6 +589,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation:
       "https://support.token.im/hc/categories/360000925393",
     documentation: "https://support.token.im/hc/en-us",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2024-08-30",
@@ -634,6 +649,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation:
       "https://help.1inch.io/en/collections/2897068-1inch-wallet",
     documentation: "",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2022-06-24",
@@ -676,6 +692,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://hc.foxwallet.com/docs/",
     documentation: "https://hc.foxwallet.com/docs/faq",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2022-06-24",
@@ -721,6 +738,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://help.pillar.fi/en/",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2022-06-24",
@@ -765,6 +783,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://www.mewtopia.com/",
     documentation: "https://help.myetherwallet.com/en/",
     new_to_crypto: true,
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2022-06-24",
@@ -808,6 +827,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://unstoppable.money/faq",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
 
   {
@@ -852,6 +872,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://alphawallet.zendesk.com/hc/en-us",
     documentation: "",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2024-07-24",
@@ -895,6 +916,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://www.mtpelerin.com/learn",
     documentation: "https://www.mtpelerin.com/support",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2022-09-14",
@@ -939,6 +961,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://docs.tor.us/wallet/faq-1/users",
     documentation: "https://docs.tor.us/",
     mpc: true,
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2022-07-18",
@@ -1005,6 +1028,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://help.tokenpocket.pro/developer-en/",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2022-06-30",
@@ -1062,6 +1086,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://learn.rainbow.me/",
     documentation: "",
     new_to_crypto: true,
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2024-09-01",
@@ -1105,6 +1130,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://trezor.io/support",
     documentation: "https://trezor.io/learn",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2022-08-21",
@@ -1160,6 +1186,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "",
     documentation:
       "https://support.ledger.com/hc/en-us/categories/4404376139409?docs=true",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2024-08-16",
@@ -1203,6 +1230,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://docs.infinitywallet.io/",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2022-08-19",
@@ -1252,6 +1280,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://support.exodus.com/",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2024-07-24",
@@ -1311,7 +1340,27 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "",
-    new_to_crypto: false,
+    supported_chains: [
+      "Arbitrum One",
+      "Astar zkEVM",
+      "Aurora Mainnet",
+      "Base",
+      "Blast",
+      "Boba Network",
+      "Cyber Mainnet",
+      "DBK Chain",
+      "Fraxtal",
+      "Karak Mainnet",
+      "Metis Andromeda Mainnet",
+      "Mint Mainnet",
+      "Mode",
+      "Linea",
+      "OP Mainnet",
+      "Polygon zkEVM",
+      "Scroll",
+      "zkSync Mainnet",
+      "Zora",
+    ],
   },
   {
     last_updated: "2024-09-26",
@@ -1372,6 +1421,7 @@ export const walletsData: WalletData[] = [
       "https://help.zerion.io/en/collections/5525626-zerion-wallet",
     documentation: "https://help.zerion.io/en/",
     new_to_crypto: true,
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2022-08-31",
@@ -1415,6 +1465,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://www.mewtopia.com/",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2022-10-31",
@@ -1458,6 +1509,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://www.youtube.com/c/GridPlus",
     documentation: "https://docs.gridplus.io/",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2023-01-24",
@@ -1501,6 +1553,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://study.bitkeep.com/en/",
     documentation: "https://docs.bitkeep.com/guide/",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2023-11-21",
@@ -1550,6 +1603,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://blockwallet.io/docs",
     documentation: "https://github.com/block-wallet/extension",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2022-01-24",
@@ -1614,6 +1668,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://help.onekey.so/hc/en-us",
     documentation: "https://developer.onekey.so/guide/introduction",
     new_to_crypto: true,
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2023-04-21",
@@ -1662,6 +1717,7 @@ export const walletsData: WalletData[] = [
       "https://tahowallet.notion.site/Taho-Knowledge-Base-4d95ed5439c64d6db3d3d27abf1fdae5",
     documentation:
       "https://tahowallet.notion.site/Taho-Knowledge-Base-4d95ed5439c64d6db3d3d27abf1fdae5",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2023-07-19",
@@ -1737,6 +1793,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://phantom.app/learn",
     documentation: "https://docs.phantom.app/",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2023-08-29",
@@ -1783,6 +1840,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://www.xdefi.io/support/",
     documentation:
       "https://docs.xdefi.io/xdefi-wallet-v2-draft/technical-docs/extension-integration",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2023-11-02",
@@ -1846,6 +1904,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://community.trustwallet.com/",
     documentation: "https://developer.trustwallet.com/developer/",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2023-10-30",
@@ -1891,6 +1950,7 @@ export const walletsData: WalletData[] = [
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
     documentation:
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2024-10-07",
@@ -1948,6 +2008,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://docs.shapeshift.com/",
     documentation: "https://docs.shapeshift.com/",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
     last_updated: "2024-06-20",
@@ -2007,6 +2068,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://docs.gemwallet.com/",
     documentation: "https://docs.gemwallet.com/",
+    supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
 ]
 
