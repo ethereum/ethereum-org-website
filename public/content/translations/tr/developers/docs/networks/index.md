@@ -91,7 +91,7 @@ Goerli doğrulama ve hisselemeyi test etme amaçlı bir test ağıdır. Goerli a
 - [Coinbase Cüzdanı Musluğu | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Chainstack Goerli musluğu](https://faucet.chainstack.com/goerli-faucet)
 
-Goerli test ağında bir Doğrulayıcı başlatmak için, ethstaker'ın ["ucuz goerli doğrulayıcısı" başlama noktasını](https://goerli.launchpad.ethstaker.cc/en/) kullanın.
+Goerli test ağında bir Doğrulayıcı başlatmak için, ethstaker'ın ["ucuz goerli doğrulayıcısı" başlama noktasını](https://holesky.launchpad.ethstaker.cc/en/) kullanın.
 
 ### Katman 2 test ağları {#layer-2-testnets}
 
