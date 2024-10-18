@@ -6,7 +6,7 @@ import {
   FaXTwitter,
   FaYoutube,
 } from "react-icons/fa6"
-import { Box, Flex, Icon } from "@chakra-ui/react"
+import { Icon } from "@chakra-ui/react"
 
 const socialColors = {
   reddit: "#ff4301",
@@ -28,27 +28,25 @@ const icons = {
 type SocialListItemProps = {
   children?: React.ReactNode
   socialIcon: keyof typeof icons
+  color?: string
+  boxSize?: number
 }
 
-const SocialListItem = ({ children, socialIcon }: SocialListItemProps) => (
-  <Flex w="100%" py="2" px="0" align="center">
+const SocialListItem = ({
+  children,
+  socialIcon,
+  color,
+  boxSize = 10,
+}: SocialListItemProps) => (
+  <div className="flex w-full items-center px-0 py-2">
     <Icon
       as={icons[socialIcon]}
       pe={3}
-      boxSize={10}
-      color={socialColors[socialIcon]}
+      boxSize={boxSize}
+      color={color || socialColors[socialIcon]}
     />
-    <Box
-      fontStyle="italic"
-      sx={{
-        "> a": {
-          fontStyle: "normal",
-        },
-      }}
-    >
-      {children}
-    </Box>
-  </Flex>
+    <div className="font-normal italic">{children}</div>
+  </div>
 )
 
 export default SocialListItem

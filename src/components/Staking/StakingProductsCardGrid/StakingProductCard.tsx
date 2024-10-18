@@ -1,18 +1,6 @@
+import Link from "next/link"
 import { useTranslation } from "next-i18next"
 import type { ComponentType, ReactNode, SVGProps } from "react"
-import {
-  Badge,
-  Box,
-  BoxProps,
-  Center,
-  Flex,
-  Heading,
-  HStack,
-  Icon,
-  List,
-  ListIcon,
-  ListItem,
-} from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
 import {
@@ -21,6 +9,7 @@ import {
   UnknownProductGlyphIcon,
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
+import SocialListItem from "@/components/SocialListItem"
 
 import { FlagType, Product } from "./types"
 
@@ -37,17 +26,17 @@ const getIconFromName = (
 const Status = ({ status }: { status: FlagType | undefined }) => {
   if (!status) return null
 
-  const styles = { fontSize: "2xl", m: 0 }
+  const styles = "mr-2 w-5 h-5"
   switch (status) {
     case "green-check":
-      return <ListIcon as={GreenCheckProductGlyphIcon} {...styles} />
+      return <GreenCheckProductGlyphIcon className={styles} />
     case "caution":
-      return <ListIcon as={CautionProductGlyphIcon} {...styles} />
+      return <CautionProductGlyphIcon className={styles} />
     case "warning":
     case "false":
-      return <ListIcon as={WarningProductGlyphIcon} {...styles} />
+      return <WarningProductGlyphIcon className={styles} />
     default:
-      return <ListIcon as={UnknownProductGlyphIcon} {...styles} />
+      return <UnknownProductGlyphIcon className={styles} />
   }
 }
 
@@ -58,17 +47,13 @@ const StakingBadge = ({
   type: "ui" | "platform"
   children: ReactNode
 }) => {
-  const uiTypeColor = type === "ui" && "stakingPillUI"
-  const platformTypeColor = type === "platform" && "stakingPillPlatform"
-
+  const uiTypeColor = type === "ui"
   return (
-    <Badge
-      size="lg"
-      background={uiTypeColor || platformTypeColor || undefined}
-      textTransform="initial"
+    <span
+      className={`rounded-full ${uiTypeColor ? "bg-success-light text-success dark:bg-warning-light dark:text-warning-dark" : "bg-primary-low-contrast"} px-2 py-1 text-xs normal-case ${uiTypeColor ? "text-success" : "text-primary-high-contrast"}`}
     >
       {children}
-    </Badge>
+    </span>
   )
 }
 
@@ -80,7 +65,6 @@ export const StakingProductCard = ({
   product: {
     name,
     imageName,
-    color,
     url,
     platforms,
     ui,
@@ -98,13 +82,24 @@ export const StakingProductCard = ({
     consensusDiversity,
     executionDiversity,
     economical,
+    socials,
     matomo,
   },
 }: StakingProductCardProps) => {
-  const PADDED_DIV_STYLE: BoxProps = {
-    px: 8,
-    py: 6,
-  }
+  const validSocials = socials
+    ? Object.entries(socials).filter(
+        ([platform, url]) =>
+          url &&
+          [
+            "twitter",
+            "reddit",
+            "youtube",
+            "discord",
+            "stackExchange",
+            "webpage",
+          ].includes(platform)
+      )
+    : []
 
   const { t } = useTranslation("page-staking")
   const Svg = getIconFromName(imageName)
@@ -165,48 +160,21 @@ export const StakingProductCard = ({
   ].filter(({ status }) => !!status)
 
   return (
-    <Flex
-      direction="column"
-      background="offBackground"
-      borderRadius="base"
-      _hover={{
-        transition: "0.1s",
-        transform: "scale(1.01)",
-      }}
-    >
-      <HStack
-        {...PADDED_DIV_STYLE}
-        spacing={6}
-        background={color}
-        bgGradient="linear(0deg, rgba(0, 0, 0, 30%), rgba(0, 0, 0, 0))"
-        borderRadius="base"
-        maxH={24}
-      >
-        {!!Svg && <Icon as={Svg} fontSize="2rem" color="white" />}
-        <Heading as="h4" fontSize="2xl" color="white">
-          {name}
-        </Heading>
-      </HStack>
-      {typeof minEth !== "undefined" && (
-        <Center
-          fontWeight={700}
-          fontSize="base"
-          color="textTableOfContents"
-          textTransform="uppercase"
-          pt={6}
-        >
-          {minEth > 0
-            ? `${t("common:from")} ${minEth} ETH`
-            : t("page-staking-any-amount")}
-        </Center>
-      )}
-      <Flex
-        {...PADDED_DIV_STYLE}
-        flexWrap="wrap"
-        gap={1}
-        flex={1}
-        alignItems="flex-start"
-      >
+    <div className="rounded-base hover:scale-101 flex flex-col bg-background-highlight transition-transform">
+      <div className="flex max-h-24 space-x-3 p-6">
+        {!!Svg && <Svg className="rounded-md" width={48} height={48} />}
+        <div>
+          <h4 className="text-xl">{name}</h4>
+          {typeof minEth !== "undefined" && (
+            <p className="text-sm font-normal text-body-medium">
+              {minEth > 0
+                ? `${t("common:from")} ${minEth} ETH`
+                : t("page-staking-any-amount")}
+            </p>
+          )}
+        </div>
+      </div>
+      <div className="min-h-75 flex flex-wrap items-start gap-1 p-6 pt-0">
         {platforms.map((platform, idx) => (
           <StakingBadge type="platform" key={idx}>
             {platform}
@@ -217,34 +185,62 @@ export const StakingProductCard = ({
             {_ui}
           </StakingBadge>
         ))}
-      </Flex>
-      <Box {...PADDED_DIV_STYLE} py={0}>
-        <List m={0} gap={3}>
+      </div>
+      <div className="p-6 py-0">
+        <ul className="gap=3 m-0">
           {data.map(({ label, status }, idx) => (
-            <ListItem
-              as={Flex}
+            <li
               key={idx}
-              textTransform="uppercase"
-              fontSize="xs"
-              lineHeight="0.875rem"
-              letterSpacing="wider"
-              my="4"
-              ms="auto"
-              me={0}
-              gap="1em"
-              alignItems="center"
+              className={`my-4 me-0 ms-auto flex items-center gap-1 text-md leading-3 ${status === "false" && "text-body-medium"}`}
             >
               <Status status={status} />
               {label}
-            </ListItem>
+            </li>
           ))}
-        </List>
-      </Box>
-      <Box {...PADDED_DIV_STYLE}>
-        <ButtonLink href={url} customEventOptions={matomo} width="100%">
+        </ul>
+      </div>
+      <div className="mt-auto p-6">
+        <ButtonLink
+          href={url}
+          customEventOptions={matomo}
+          width="100%"
+          variant={"outline-color"}
+          isSecondary={true}
+        >
           {t("page-staking-products-get-started")}
         </ButtonLink>
-      </Box>
-    </Flex>
+        <div className="flex h-10 items-center justify-center">
+          {validSocials.length > 0 && (
+            <p className="mr-2 text-sm text-body-medium">
+              {t("page-staking-products-follow")}
+            </p>
+          )}
+
+          {validSocials.map(([platform, url], idx) => (
+            <Link
+              key={idx}
+              href={url}
+              passHref
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <SocialListItem
+                color="body.base"
+                boxSize={8}
+                socialIcon={
+                  platform as
+                    | "twitter"
+                    | "reddit"
+                    | "youtube"
+                    | "discord"
+                    | "stackExchange"
+                    | "webpage"
+                }
+              />
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
   )
 }
