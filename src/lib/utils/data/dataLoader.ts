@@ -28,16 +28,14 @@ export function dataLoader<T extends unknown[]>(
   },
   cacheTimeout?: number
 ): () => Promise<T> {
+  if (USE_MOCK_DATA) console.warn("Using mock data")
   const cachedLoaders = loaders.map(([key, loader]) => {
     const cachedLoader = cacheAsyncFn(key, loader, {
       cacheTimeout,
     })
     return async () => {
       try {
-        if (USE_MOCK_DATA) {
-          console.log("Using mock data for", key)
-          return await loadMockData(key)
-        }
+        if (USE_MOCK_DATA) return await loadMockData(key)
 
         return await cachedLoader()
       } catch (error) {
