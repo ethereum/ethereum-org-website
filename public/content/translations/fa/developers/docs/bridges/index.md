@@ -103,7 +103,7 @@ lang: fa
 
 ### استقرار یک dapp در چندین زنجیره {#deploying-a-dapp-on-multiple-chains}
 
-برای استقرار یک dapp در چندین زنجیره، توسعه‌دهندگان می‌توانند از پلتفرم‌های توسعه مانند [Alchemy](https://www.alchemy.com/)، [Hardhat](https://hardhat.org/)، [Truffle](https://trufflesuite.com/)، [Moralis](https://moralis.io/) ، و غیره استفاده کنند. به طور معمول، این پلتفرم‌ها با پلاگین‌های قابل ترکیبی عرضه می‌شوند که می‌توانند dapp‌ها را قادر به انجام فعالیت بین زنجیره‌ای کنند. به عنوان مثال، توسعه دهندگان می توانند از یک پراکسی استقرار قطعی ارائه شده توسط [افزونه hardhat-deploy](https://github.com/wighawag/hardhat-deploy) استفاده کنند.
+To deploy a dapp on multiple chains, developers can use development platforms like [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/), etc. به طور معمول، این پلتفرم‌ها با پلاگین‌های قابل ترکیبی عرضه می‌شوند که می‌توانند dapp‌ها را قادر به انجام فعالیت بین زنجیره‌ای کنند. به عنوان مثال، توسعه دهندگان می توانند از یک پراکسی استقرار قطعی ارائه شده توسط [افزونه hardhat-deploy](https://github.com/wighawag/hardhat-deploy) استفاده کنند.
 
 #### مثال ها:
 

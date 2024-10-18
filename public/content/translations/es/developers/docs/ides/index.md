@@ -41,12 +41,6 @@ La mayoría de los IDE establecidos han desarrollado complementos para mejorar l
 - [Muestras de código](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Atom****_: Un editor de texto hackeable para el siglo XXI_**
-
-- [Atom](https://atom.io/)
-- [GitHub](https://github.com/atom)
-- [Paquetes de Ethereum](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
-
 **IDE JetBrains (IntelliJ IDEA, etc.) ** **_Herramientas esenciales para desarrolladores y equipos de software_**
 
 - [JetBrains](https://www.jetbrains.com/)

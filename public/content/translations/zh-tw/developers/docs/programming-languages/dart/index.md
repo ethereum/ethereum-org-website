@@ -10,14 +10,12 @@ incomplete: true
 ## 指導手冊 {#tutorials}
 
 - [Flutter 與區塊鏈 – Hello World 去中心化應用程式](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/)帶您完成入門的所有步驟：
-  1.  安裝 [Truffle 開發套件](https://www.trufflesuite.com/)
-  2.  使用 [Solidity](https://soliditylang.org/) 編寫智慧型合約
-  3.  使用 Dart 編寫使用者介面
+  1.  使用 [Solidity](https://soliditylang.org/) 編寫智慧型合約
+  2.  使用 Dart 編寫使用者介面
 - 如果你已有基礎知識，[使用 Flutter 建立行動去中心化應用程式](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a)的篇幅要短很多， 可能是更好選擇
 - 如果你偏好透過觀看影片來學習，可以觀看[建立你的第一個區塊鏈 Flutter 應用程式](https://www.youtube.com/watch?v=3Eeh3pJ6PeA)，片長約一小時
 - 如果你時間不足，可能更喜歡[在以太坊上使用 Flutter 和 Dart 建立區塊鏈去中心化應用程式](https://www.youtube.com/watch?v=jaMFEOCq_1s)，只需大約二十分鐘
 - [透過 WalletConnect 的 Web3Modal 將 MetaMask 整合到 Flutter 應用程式](https://www.youtube.com/watch?v=v_M2buHCpc4) - 這段簡短影片會一步一步帶你使用 WalletConnect 的 [Web3Modal](https://pub.dev/packages/web3modal_flutter) 程式庫，將 MetaMask 整合到 Flutter 應用程式中
-- [Flutter 去中心化應用程式簡易錢包](https://youtu.be/JMfIBpuAhKA) 和[首個 Flutter 去中心化應用程式 - Solidity、Truffle、Ganache](https://youtu.be/bHw2gQZxJ_s) - 這些影片展示如何使用 Truffle 和 Ganache 在 Flutter 建立簡易的去中心化應用程式
 - [Solidity 和 Flutter 行動區塊鏈開發者訓練營課程](https://youtube.com/playlist?list=PL4V4Unlk5luhQ26ERO6hWEbcUwHDSSmVH) - 全端行動區塊鏈開發者課程播放列表
 
 ## 與以太坊客戶合作工作 {#working-with-ethereum-clients}

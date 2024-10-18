@@ -45,7 +45,7 @@ lang: zh-tw
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
-- [0Chain](https://0chain.net/)
+- [Züs](https://zus.network/)
 - [Crust Network](https://crust.network)
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
@@ -75,7 +75,7 @@ SWARM 是一種去中心化的資料儲存和分發技術，具有儲存激勵�
 
 具有查問機制的去中心化存儲類型：
 
-- 0Chain
+- Züs
 - Skynet
 - Arweave
 - Filecoin
@@ -88,7 +88,7 @@ SWARM 是一種去中心化的資料儲存和分發技術，具有儲存激勵�
 
 無「認識客戶」之去中心化工具：
 
-- 0Chain（實作非 KYC 版本）
+- Züs（實作非 KYC 版本）
 - Skynet
 - Arweave
 - Filecoin
@@ -110,7 +110,7 @@ SWARM 是一種去中心化的資料儲存和分發技術，具有儲存激勵�
 
 - 以太坊
 - Filecoin
-- 0Chain
+- Züs
 - Crust Network
 
 ## 相關工具 {#related-tools}
@@ -145,10 +145,10 @@ SWARM 是一種去中心化的資料儲存和分發技術，具有儲存激勵�
 - [文件](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain - _0Chain 是具有分片和 blobber 的權益證明去中心化存儲平台。_**
+**Züs - _Züs 是具有分片和 blobber 的權益證明去中心化存儲平台。_**
 
-- [0Chain.net](https://0chain.net/)
-- [文件](https://docs.0chain.net/0chain/)
+- [zus.network](https://zus.network/)
+- [文件](https://0chaindocs.gitbook.io/zus-docs)
 - [Github](https://github.com/0chain/)
 
 **Crust Network - _Crust 是基於星際檔案系統的去中心化存儲平台。_**

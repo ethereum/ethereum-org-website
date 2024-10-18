@@ -22,7 +22,6 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintse meg az [
 
 ## Cikkek kezdőknek {#beginner-articles}
 
-- [Ethereum kliens kiválasztása](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [A Rust Ethereum-kliens](https://openethereum.github.io/) \* **Felhívjuk figyelmét, hogy az OpenEthereum [támogatása megszűnt](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd), karbantartása nem biztosított.** Használja körültekintően, és inkább térjen át másik kliensimplementációra.
 - [Tranzakció küldése Ethereumra Rust használatával](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Részletes útmutató arról, hogyan lehet szerződéseket írni Rust Wasm nyelven Kovanra](https://github.com/paritytech/pwasm-tutorial)
