@@ -1,6 +1,7 @@
 import * as React from "react"
-import { MdChevronRight } from "react-icons/md"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
+
+import { ChevronNext } from "@/components/Chevron"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -24,14 +25,15 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between gap-2 px-2 py-2 font-medium transition-all hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover md:px-4 [&[data-state=open]>svg]:-rotate-90 [&[data-state=open]]:bg-background-highlight [&[data-state=open]]:text-primary-high-contrast",
+        "flex flex-1 items-center justify-between gap-2 px-2 py-2 font-medium transition-all hover:bg-background-highlight hover:text-primary-hover focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover md:px-4 [&[data-state=open]:dir(rtl)>svg]:rotate-90 [&[data-state=open]>svg]:-rotate-90 [&[data-state=open]]:bg-background-highlight [&[data-state=open]]:text-primary-high-contrast",
+
         className
       )}
       {...props}
     >
       {children}
       {!hideIcon && (
-        <MdChevronRight className="size-[1em] shrink-0 text-2xl transition-transform duration-200" />
+        <ChevronNext className="size-[1em] shrink-0 text-2xl transition-transform duration-200" />
       )}
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
