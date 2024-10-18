@@ -125,8 +125,7 @@ export const StaticLayout = ({
 
           <MainArticle className="max-w-3xl">
             <TableOfContents
-              position="relative"
-              zIndex={2}
+              className="relative"
               items={tocItems}
               isMobile
               maxDepth={frontmatter.sidebarDepth || 2}
