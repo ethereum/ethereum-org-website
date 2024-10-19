@@ -5,13 +5,17 @@ lang: pt-br
 sidebarDepth: 2
 ---
 
-Uma árvore Merkle Patricia fornece uma estrutura de dados criptograficamente autenticada que pode ser usada para armazenar todas as ligações `(key, value)`.
+O estado do Ethereum (a totalidade de todas as contas, saldos e contratos inteligentes) é codificado em uma versão especial da estrutura de dados conhecida geralmente na ciência da computação como Árvore Merkle. Essa estrutura é útil para muitas aplicações em criptografia porque cria um relacionamento verificável entre todos os dados individuais emaranhados na árvore, resultando em um único valor **raiz** que pode ser usado para provar coisas sobre os dados.
 
-A Merkle Patricia Tries é totalmente determinística, significando que Tries - testes - com a mesma ligação `(key, value)` são com certeza idênticas - até o último byte. Isto significa que elas têm o mesmo hash raiz, fornecendo a máxima eficiência `o(log(n))` para inserções, buscas e exclusões. Além disso, elas são mais simples de entender e codificar do que alternativas mais complexas baseadas em comparação, como as árvores vermelho-pretas.
+A estrutura de dados do Ethereum é uma 'Merkle-Patricia Trie modificada', assim chamada porque toma emprestados alguns recursos do PATRICIA (o Algoritmo Prático para Recuperar Informações Codificadas em Alfanumérico) e porque foi projetada para ser eficiente na **recuperação de dados** de itens que compõem o estado do Ethereum.
+
+Uma Merkle-Patricia é determinística e criptograficamente verificável: a única maneira de gerar uma raiz de estado é computando-a a partir de cada parte individual do estado, e dois estados que são idênticos podem ser facilmente provados comparando o hash raiz e os hashes que levaram a ele (_uma prova de Merkle_). Por outro lado, não há como criar dois estados diferentes com o mesmo hash raiz, e qualquer tentativa de modificar o estado com valores diferentes resultará em um hash raiz de estado diferente. Teoricamente, essa estrutura fornece o "Santo Graal" da eficiência `O(log(n))` para inserções, pesquisas e exclusões.
+
+Em um futuro próximo, o Ethereum planeja migrar para uma estrutura de [Verkle Tree](https://ethereum.org/en/roadmap/verkle-trees), o que abrirá muitas novas possibilidades para futuras melhorias de protocolo.
 
 ## Pré-requisitos {#prerequisites}
 
-Para entender melhor esta página, seria útil ter conhecimento básico sobre [hashes](https://en.wikipedia.org/wiki/Hash_function), [Árvores Merkle](https://en.wikipedia.org/wiki/Merkle_tree), [árvores](https://en.wikipedia.org/wiki/Trie) e [serialização](https://en.wikipedia.org/wiki/Serialization).
+Para entender melhor esta página, seria útil ter conhecimento básico sobre [hashes](https://en.wikipedia.org/wiki/Hash_function), [Árvores Merkle](https://en.wikipedia.org/wiki/Merkle_tree), [árvores](https://en.wikipedia.org/wiki/Trie) e [serialização](https://en.wikipedia.org/wiki/Serialization). Este artigo começa com uma descrição de uma [árvore radix](https://en.wikipedia.org/wiki/Radix_tree) básica e, em seguida, introduz gradualmente as modificações necessárias para a estrutura de dados mais otimizada do Ethereum.
 
 ## Árvores radix básicas {#basic-radix-tries}
 
@@ -31,13 +35,11 @@ As operações de atualização e exclusão em árvores radix são simples, e po
 
 ```
     def update(node,path,value):
+        curnode = db.get(node) if node else [ NULL ] * 17
+        newnode = curnode.copy()
         if path == '':
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newnode[-1] = value
         else:
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newindex = update(curnode[path[0]],path[1:],value)
             newnode[path[0]] = newindex
         db.put(hash(newnode),newnode)
@@ -160,7 +162,7 @@ Aqui está o código estendido para obter um nó na árvore Merkle Patricia:
 
 ### Árvore de exemplo {#example-trie}
 
-Suponha que nós queremos uma árvore contendo quatro pares de caminho/valor `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
+Suponha que queremos um trie contendo quatro pares de caminho/valor `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
 
 Primeiro, convertemos ambos caminhos e valores para `bytes`. Abaixo, representações reais em bytes para _caminhos_ são indicadas por `<>`, embora _valores_ ainda sejam mostrados como strings, denotado por `''`, para melhor compreensão (eles, também, seriam `bytes`):
 
@@ -181,7 +183,7 @@ Agora, construímos uma árvore com os seguintes pares chave/valor no banco de d
     hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-Quando um nó é referenciado dentro de outro nó, o que é incluído é `H(rlp. ncode(node))`, onde `H(x) = keccak256(x) if len(x) >= 32 else x` e `rlp. ncode` é a função de codificação [RLP](/developers/docs/data-structures-and-encoding/rlp).
+Quando um nó é referenciado dentro de outro nó, o que é incluído é `H(rlp.encode(node))`, onde `H(x) = keccak256(x) if len(x) >= 32 else x` e `rlp.encode` é a função de codificação [RLP](/developers/docs/data-structures-and-encoding/rlp).
 
 Observe que, ao atualizar uma árvore, é necessário armazenar o par chave/valor `(keccak256(x), x)` em uma tabela de pesquisa persistente _se_ o nó recém-criado tem comprimento >= 32. Entretanto, se o nó é menor do que isso, não é preciso armazenar nada, já que a função f(x) = x é reversível.
 
@@ -250,7 +252,7 @@ Mais informações sobre isso podem ser encontradas na documentação do [EIP 27
 
 ### Árvore de recibos {#receipts-trie}
 
-Cada bloco tem sua própria árvore de recibos. Um `path` aqui é: `rlp(transactionIndex)`. `transactionIndex` é seu índice dentro do bloco que é minerado. A árvore de recibos nunca é atualizada. De maneira similar à árvore de Transações, existem recibos atuais e legados. Para consultar um recibo específico na árvore de Recibos, o índice da transação em seu bloco, o payload do recibo e o tipo de transação são necessários. O recibo retornado pode ser do tipo `Receipt`, que é definido como a concentração de `TransactionType` e `ReceiptPayload`, ou pode ser do tipo `LegacyReceipt`, que é definido como `rlp([status, acumulativoGasUsed, logsBloom, logs])`.
+Cada bloco tem sua própria árvore de recibos. Um `path` aqui é: `rlp(transactionIndex)`. `transactionIndex` é seu índice dentro do bloco em que foi incluído. A árvore de recibos nunca é atualizada. De maneira similar à árvore de Transações, existem recibos atuais e legados. Para consultar um recibo específico na árvore de Recibos, o índice da transação em seu bloco, o payload do recibo e o tipo de transação são necessários. O recibo retornado pode ser do tipo `Receipt`, que é definido como a concentração de `TransactionType` e `ReceiptPayload`, ou pode ser do tipo `LegacyReceipt`, que é definido como `rlp([status, acumulativoGasUsed, logsBloom, logs])`.
 
 Mais informações sobre isso podem ser encontradas na documentação do [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
 

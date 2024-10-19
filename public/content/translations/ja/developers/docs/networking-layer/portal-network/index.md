@@ -55,7 +55,7 @@ JSON-RPC APIは、ライトクライアントのデータリクエストに理�
 - 集中化したプロバイダーへの依存が減る
 - インターネット帯域使用量が減る
 - 同期が短くなる、または同期が不要になる
-- リソースに制約のあるデバイスでもアクセスできる(1GB以下のメモリ、100MB以下のディスク、1CPU)
+- リソースが限られたデバイス (1GB未満のRAM、100MB未満のディスクスペース、1つのCPU) でもアクセス可能です。
 
 以下の図は、ポータルネットワークでやり取りできる現行のクライアントの機能を示しています。ユーザーは、非常に少ないリソースのデバイスでも、これらの機能にアクセスできます。
 
@@ -70,6 +70,7 @@ JSON-RPC APIは、ライトクライアントのデータリクエストに理�
 - [Trin](https://github.com/ethereum/trin): Rustで開発
 - [Fluffy](https://nimbus.team/docs/fluffy.html): Nimで開発
 - [Ultralight](https://github.com/ethereumjs/ultralight): Typescriptで開発
+- [Shisui](https://github.com/GrapeBaBa/shisui): Go言語で開発
 
 依存しないクライアント実装が複数存在することで、イーサリアムネットワークの回復力と分散化が強化されます。
 

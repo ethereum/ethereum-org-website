@@ -16,7 +16,7 @@ Bu olay saldırganların kâr sağlaması için bir fırsat. Örnek olarak `n+1`
 
 Bu sorun için birkaç çözüm var. Bunlardan biri farklı görevleri ilgili doğrulayıcıya çoklu makinelerden göndermek ve fazlalık yaratarak blokun önerilmesine yapılacak olası bir saldırıyı engellemeyi hedefleyen [Dağıtılmış Doğrulayıcı Teknolojisi](https://github.com/ethereum/distributed-validator-specs)'dir. Buna rağmen, en güçlü çözüm yolu **Gizli Tek Lider Seçimi'dir (SSLE)**.
 
-## Gizli tek lider seçimi {#secret-leader-election}
+## Tekli gizli lider seçimi {#secret-leader-election}
 
 SSLE'de, sadece doğrulayıcının kendisinin seçildiğini öğrendiğinden emin olan zeki bir kriptografi kullanılır. Bu her doğrulayıcının tuttuğu sır ile alakalı bir taahhüt göndermesi usülüyle çalışır. Kimsenin doğrulayıcılar ve taahhütlerden iz sürememesi için taahhütler karıştırılır ve tekrar onaylanır fakat her doğrulayıcı hangi taahhüdün kendisine ait olduğunu bilir. Sonra, bir taahhüt rasgele seçilir. Eğer bir doğrulayıcı kendi taahhütlerinin seçildiğini tespit ederse, blok önerisi sırasının kendisinde olduğunu bilir.
 

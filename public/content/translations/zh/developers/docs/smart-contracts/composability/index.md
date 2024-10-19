@@ -65,7 +65,6 @@ incomplete: true
 
 ## 相关教程 {#related-tutorials}
 
-- [合约的可组合性：以太坊智能合约开发的基石](https://www.decentlabs.io/blog/contract-composability-the-building-blocks-of-ethereum-smart-contract-development)
 - [使用 create-eth-app 启动去中心化应用程序前端开发](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– 概述如何使用 create-eth-app，借助开箱即用的热门智能合约创建应用程序。_
 
 ## 延伸阅读 {#further-reading}
