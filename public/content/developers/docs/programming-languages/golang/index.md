@@ -19,7 +19,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Understanding Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
 - [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
-- [Contract Tutorial](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
+- [Example dapp build in Go](https://github.com/tr1sm0s1n/go-dapp-example)
 
 ## Beginner articles and books {#beginner-articles-and-books}
 
@@ -35,7 +35,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Erigon Programmer's Guide](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _Illustrated guide including the state tree, multi-proofs, and transaction processing_
 - [Erigon and Stateless Ethereum](https://youtu.be/3-Mn7OckSus?t=394) - _2020 Ethereum Community Conference (EthCC 3)_
 - [Erigon: optimising Ethereum clients](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
-- [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
+- [Go Ethereum GoDoc](https://pkg.go.dev/github.com/ethereum/go-ethereum)
 - [Creating a dapp in Go with Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Work with Ethereum Private Network with Golang and Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Unit testing Solidity contracts on Ethereum with Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
@@ -46,8 +46,8 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [The GETH Simulated Backend](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Blockchain-as-a-Service Apps Using Ethereum and Quorum](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Distributed Storage IPFS and Swarm in Ethereum Blockchain Applications](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
-- [Mobile Clients: Libraries and Inproc Ethereum Nodes](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
-- [Native dapps: Go bindings to Ethereum contracts](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
+- [Mobile Clients: Libraries and Inproc Ethereum Nodes](https://geth.ethereum.org/docs/developers/dapp-developer/mobile)
+- [Native dapps: Go bindings to Ethereum contracts](https://geth.ethereum.org/docs/developers/dapp-developer/native-bindings)
 
 ## Go projects and tools {#go-projects-and-tools}
 
@@ -81,4 +81,4 @@ Looking for more resources? Check out [ethereum.org/developers](/developers/)
 ## Other aggregated lists {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
-- [Consensys: A Definitive List of Ethereum Developer Tools](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub source](https://github.com/ConsenSys/ethereum-developer-tools-list)
+- [Consensys: A Definitive List of Ethereum Developer Tools](https://github.com/ConsenSys/ethereum-developer-tools-list)
