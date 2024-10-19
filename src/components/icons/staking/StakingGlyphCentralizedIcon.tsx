@@ -1,5 +1,7 @@
 import { createIcon } from "@chakra-ui/react"
 
+// TODO: migrate with StakingHierarchy
+
 export const StakingGlyphCentralizedIcon = createIcon({
   displayName: "StakingGlyphCentralizedIcon",
   viewBox: "0 0 51 51",

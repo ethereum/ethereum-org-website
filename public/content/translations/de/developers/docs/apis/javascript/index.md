@@ -6,9 +6,9 @@ lang: de
 
 Damit eine Web-Anwendung mit der Ethereum-Blockchain interagieren kann (z. B. Auslesen von Blockchain-Daten und/oder Senden von Transaktionen an das Netzwerk), muss sie sich mit einem Ethereum-Node verbinden.
 
-Zu diesem Zweck implementiert jeder Ethereum-Client die [JSON-RPC](/developers/docs/apis/json-rpc/)-Spezifikation, damit es einen einheitlichen Satz von [Endpunkten](/developers/docs/apis/json-rpc/#json-rpc-methods) gibt, auf die sich Anwendungen verlassen können.
+Zu diesem Zweck implementiert jeder Ethereum-Client die [JSON-RPC](/developers/docs/apis/json-rpc/)-Spezifikation, damit es einen einheitlichen Satz von [Methoden](/developers/docs/apis/json-rpc/#json-rpc-methods) gibt, auf die sich Anwendungen verlassen können.
 
-Wenn Sie sich über JavaScript mit einem Ethereum-Node verbinden möchten, ist das auch über VanillaJavaScript möglich. Doch es existieren noch weitere Lösungen in Programmbibliotheken in diesem Ökosystem, die das alles viel einfacher machen. Mit diesen Programmbibliotheken können Entwickler intuitive, einzeilige Methoden schreiben, um JSON-RPC-Anfragen ("unter der Haube") zu initialisieren, die mit Ethereum interagieren.
+Wenn Sie sich über JavaScript mit einem Ethereum-Node verbinden möchten, ist das auch über VanillaJavaScript möglich. Doch es existieren noch weitere Lösungen in Programmbibliotheken in diesem Ökosystem, die das alles viel einfacher machen. Mit diesen Programmbibliotheken können Entwickler intuitive, einzeilige Methoden schreiben, um JSON-RPC-Anfragen („unter der Haube“) zu initialisieren, die mit Ethereum interagieren.
 
 Bitte beachten Sie, dass seit [der Zusammenführung](/roadmap/merge/) zwei verbundene Teile von Ethereum-Software benötigt werden, um einen Knoten zu betreiben. Ein Ausführungsclient und ein Konsensclient. Bitte stellen Sie sicher, dass Ihr Knoten sowohl über einen Ausführungs- als auch einen Konsensclient verfügt. Wenn sich Ihr Knoten nicht auf einem lokalen Rechner (Ihr Knoten läuft z. B. auf einer AWS-Instanz) befindet, müssen Sie die IP-Adressen im Tutorial entsprechend anpassen. Für weitere Informationen schauen Sie sich unsere Seite zum [Betreiben eines Knotens](/developers/docs/nodes-and-clients/run-a-node/) an.
 
@@ -29,12 +29,12 @@ Sie können sich über einen Provider und diese Bibliotheken mit Ethereum verbin
 **Ether-Beispiel**
 
 ```js
-// A Web3Provider wraps a standard Web3 provider, which is
-// what MetaMask injects as window.ethereum into each page
-const provider = new ethers.providers.Web3Provider(window.ethereum)
+// Ein BrowserProvider umschließt einen standardmäßigen Web3-Provider, der
+// von MetaMask als window.ethereum in jede Seite injiziert wird
+const provider = new ethers.BrowserProvider(window.ethereum)
 
-// The MetaMask plugin also allows signing transactions to
-// send ether and pay to change state within the blockchain.
+// Das MetaMask-Plugin ermöglicht auch das Signieren von Transaktionen, um
+// Ether zu senden und bezahlte Statusänderungen innerhalb der Blockchain vorzunehmen.
 // Dazu benötigen wir den Unterzeichner vom Konto...
 const signer = provider.getSigner()
 ```
@@ -78,31 +78,29 @@ Hier ist ein Beispiel von Ethers
 
 ```js
 // Erstelle eine Wallet-Instanz aus einem Mnemonik...
-Mnemonik =
+mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
-walletMnemonic = Wallet.fromMnemonic(mnemonic)
+walletMnemonic = Wallet.fromPhrase(mnemonic)
 
-//...oder aus einem privaten Schlüssel
-walletPrivateKey = new Wallet (walletMnemonic.pribvateKey)
+// ...oder aus einem privaten Schlüssel
+walletPrivateKey = new Wallet(walletMnemonic.privateKey)
 
-walletMnemonic.address === wallet PrivateKey.address
+walletMnemonic.address === walletPrivateKey.address
 // true
 
-// Die Adresse als Beweis vom Unterzeichner API
+// Die Adresse als Promise gemäß der Signer API
 walletMnemonic.getAddress()
-//{ Promise: '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1' }
+// { Promise: '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1' }
 
-// Eine Walltet-Adresse ist auch synchron verfügbar
+// Die Wallet-Adresse ist auch synchron verfügbar
 walletMnemonic.address
 // '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1'
 
-// Die internen Kryptographie-Komponenten
+// Die internen kryptographischen Komponenten
 walletMnemonic.privateKey
-//
-'0x1da6847600b0ee25e9ad9a52abbd786dd2502fa4005dd5af9310b7cc7a3b25db'
+// '0x1da6847600b0ee25e9ad9a52abbd786dd2502fa4005dd5af9310b7cc7a3b25db'
 walletMnemonic.publicKey
-//
-'0x04b9e72dfd423bcf95b3801ac93f4392be5ff22143f9980eb78b3a860c4843bfd04829ae61cdba4b3b1978ac5fc64f5cc2f4350e35a108a9c9a92a81200a60cd64'
+// '0x04b9e72dfd423bcf95b3801ac93f4392be5ff22143f9980eb78b3a860c4843bfd04829ae61cdba4b3b1978ac5fc64f5cc2f4350e35a108a9c9a92a81200a60cd64'
 
 // Die Wallet-Mnemonic
 walletMnemonic.mnemonic
@@ -112,12 +110,12 @@ walletMnemonic.mnemonic
 //   phrase: 'announce room limb pattern dry unit scale effort smooth jazz weasel alcohol'
 // }
 
-// Hinweis: Ein Wallet, welches mit einem privaten Schlüssel erstellt wurde
-//       hat kein Mnemonic (die Ableitung verhindert das)
+// Hinweis: Ein Wallet, das mit einem privaten Schlüssel erstellt wurde, hat keine
+//       Mnemonic (die Ableitung verhindert dies)
 walletPrivateKey.mnemonic
 // null
 
-// Eine Nachricht signieren
+// Signieren einer Nachricht
 walletMnemonic.signMessage("Hello World")
 // { Promise: '0x14280e5885a19f60e536de50097e96e3738c7acae4e9e62d67272d794b8127d31c03d9cd59781d4ee31fb4e1b893bd9b020ec67dfa65cfb51e2bdadbb1de26d91c' }
 
@@ -126,12 +124,12 @@ tx = {
   value: utils.parseEther("1.0"),
 }
 
-// Eine Transaktion signieren
-walletMnemonic.sign.Transaction(tx)
+// Signieren einer Transaktion
+walletMnemonic.signTransaction(tx)
 // { Promise: '0xf865808080948ba1f109551bd432803012645ac136ddd64dba72880de0b6b3a7640000801ca0918e294306d177ab7bd664f5e141436563854ebe0a3e523b9690b4922bbb52b8a01181612cec9c431c4257a79b8c9f0c980a2c49bb5a0e6ac52949163eeb565dfc' }
 
-// Die Verbindungsmethode gibt eine neue Instanz zurück
-// Wallet verbunden mit einem Provider
+// Die Connect-Methode gibt eine neue Instanz des
+// Wallets zurück, die mit einem Provider verbunden ist
 wallet = walletMnemonic.connect(provider)
 
 // Abfragen des Netzwerks
@@ -140,7 +138,7 @@ wallet.getBalance()
 wallet.getTransactionCount()
 // { Promise: 0 }
 
-// Ether übertragen
+// Ether senden
 wallet.sendTransaction(tx)
 ```
 

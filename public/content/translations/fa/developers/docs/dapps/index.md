@@ -58,8 +58,7 @@ lang: fa
 
 - [گیت‌هاب](https://github.com/paulrberg/create-eth-app)
 
-**One Click Dapp _- ابزار FOSS برای تولید صفحات فرانت dapp از
-ABI._**
+**One Click Dapp _- ابزار FOSS برای تولید صفحات فرانت dapp از [ABI](/glossary/#abi)._**
 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [گیت هاب](https://github.com/oneclickdapp/oneclickdapp-v1)
@@ -75,19 +74,21 @@ ABI._**
 - [اسناد](https://portal.thirdweb.com/)
 - [گیت هاب](https://github.com/thirdweb-dev/)
 
+**پلتفرم Crossmint _- پلتفرم توسعه Web3 در سطح سازمانی برای استقرار قراردادهای هوشمند، فعال کردن پرداخت‌های کارت اعتباری و زنجیره‌ای متقابل و استفاده از API برای ایجاد، توزیع، فروش، ذخیره و ویرایش NFTها است._**
 
+- [crossmint.com](https://www.crossmint.com)
+- [اسناد](https://docs.crossmint.com)
+- [دیسکورد](https://discord.com/invite/crossmint)
 
 ## بیشتر بخوانید {#further-reading}
 
-- [کاوش در صرافی‌های غیرمتمرکز](/dapps)
+- [کاوش در برنامه‌های غیرمتمرکز](/dapps)
 - [معماری یک اپلیکیشن Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _پریتی کسیردی_
 - [راهنمای 2021 برای اپلیکیشن‌های غیرمتمرکز](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) -‏ _LimeChain_
 - [اپلیکیشن‌های غیرمتمرکز چه هستند؟](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) -‏ _Gemini_
 - [اپلیکیشن‌های غیرمتمرکز پرطرفدار](https://www.alchemy.com/dapps) - _Alchemy_
 
-_آیا می‌خواهید در مورد منابع جامعه که به شما کمک کرده بدانید؟ این صفحه را ویرایش و اضافه کنید!_
-
-
+_می‌خواهید در مورد منابع جامعه که به شما کمک کرده بدانید؟ این صفحه را ویرایش و اضافه کنید!_
 
 ## موضوعات مرتبط {#related-topics}
 
