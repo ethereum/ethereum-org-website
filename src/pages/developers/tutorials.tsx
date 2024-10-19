@@ -5,7 +5,7 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
 import {
-  Badge, 
+  Badge,
   Box,
   chakra,
   Flex,
@@ -19,7 +19,7 @@ import { BasePageProps, Lang } from "@/lib/types"
 import { Button, ButtonLink } from "@/components/Buttons"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
-import InlineLink, { BaseLink } from "@/components/Link"
+import { BaseLink } from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import Modal from "@/components/Modal"
 import OldHeading from "@/components/OldHeading"
@@ -257,13 +257,7 @@ const TutorialPage = ({
         }
       >
         <Text>
-          <Translation id="page-developers-tutorials:page-tutorial-listing-policy-intro" />{" "}
-          <InlineLink href="/contributing/content-resources/">
-            <Translation id="page-developers-tutorials:page-tutorial-listing-policy" />
-          </InlineLink>
-        </Text>
-        <Text>
-          <Translation id="page-developers-tutorials:page-tutorial-submit-tutorial" />
+          <Translation id="page-developers-tutorials:page-tutorial-listing-policy-intro" />
         </Text>
         <Flex flexDirection={{ base: "column", md: "row" }} gap="2">
           <Flex
@@ -277,10 +271,10 @@ const TutorialPage = ({
             justifyContent="space-between"
           >
             <Text as="b">
-              <Translation id="page-developers-tutorials:page-tutorial-new-github" />
+              <Translation id="page-developers-tutorials:page-tutorial-create-an-issue" />
             </Text>
             <Text>
-              <Translation id="page-developers-tutorials:page-tutorial-new-github-desc" />
+              <Translation id="page-developers-tutorials:page-tutorial-create-an-issue-desc" />
             </Text>
             <ButtonLink
               leftIcon={<FaGithub />}
@@ -288,34 +282,6 @@ const TutorialPage = ({
               href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.yaml&title="
             >
               <Translation id="page-developers-tutorials:page-tutorial-raise-issue-btn" />
-            </ButtonLink>
-          </Flex>
-          <Flex
-            flex="1"
-            borderWidth="1px"
-            borderStyle="solid"
-            borderColor="border"
-            borderRadius="base"
-            p={4}
-            flexDirection="column"
-            justifyContent="space-between"
-          >
-            <Text as="b">
-              <Translation id="page-developers-tutorials:page-tutorial-pull-request" />
-            </Text>
-            <Text>
-              <Translation id="page-developers-tutorials:page-tutorial-pull-request-desc-1" />{" "}
-              <code>
-                <Translation id="page-developers-tutorials:page-tutorial-pull-request-desc-2" />
-              </code>{" "}
-              <Translation id="page-developers-tutorials:page-tutorial-pull-request-desc-3" />
-            </Text>
-            <ButtonLink
-              leftIcon={<FaGithub />}
-              variant="outline"
-              href="https://github.com/ethereum/ethereum-org-website/pulls"
-            >
-              <Translation id="page-developers-tutorials:page-tutorial-pull-request-btn" />
             </ButtonLink>
           </Flex>
         </Flex>
