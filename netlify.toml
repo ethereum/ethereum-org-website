@@ -11,7 +11,6 @@
 
 [build.environment]
   NEXT_FORCE_EDGE_IMAGES="true"
-  BUILD_LOCALES="en"
 
 [[headers]]
   for = "/*"
