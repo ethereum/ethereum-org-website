@@ -20,6 +20,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import HeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import WalkingImage from "@/public/images/layer-2/layer-2-walking.png"
 import ExploreImage from "@/public/images/layer-2/learn-hero.png"
+import ManDogCardImage from "@/public/images/man-and-dog-playing.png"
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
@@ -104,8 +105,36 @@ const Layer2Hub = () => {
 
       <HubHero {...heroContent} />
 
-      <div id="layer-2-powered-by-ethereum" className="w-full px-8 py-9">
-        <h2>Powered by Ethereum</h2>
+      <div
+        id="layer-2-powered-by-ethereum"
+        className="flex w-full flex-col gap-8 px-8 py-9"
+      >
+        <div className="flex flex-col-reverse gap-16 md:flex-row">
+          <div className="flex flex-1 flex-col gap-8">
+            <h2>Powered by Ethereum</h2>
+            <p>
+              <strong>Ethereum is no longer just a single network</strong>. With
+              hundreds of blockchains now built on top of it, Ethereum has
+              become more cost-effective, faster, and accessible for everyday
+              use.
+            </p>
+            <p>
+              Embrace the future by joining one of the many networks powered by
+              Ethereum!
+            </p>
+          </div>
+          <div className="flex flex-1">
+            <TwImage
+              src={ManDogCardImage}
+              alt="Man and dog playing"
+              style={{
+                width: "100%",
+                maxHeight: "240px",
+                objectFit: "contain",
+              }}
+            />
+          </div>
+        </div>
       </div>
 
       <div id="layer-2-stats-box" className="w-full px-8 py-9">
