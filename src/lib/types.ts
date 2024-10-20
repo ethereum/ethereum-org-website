@@ -158,6 +158,12 @@ export type LoadingState<T> =
 /**
  * Quiz data types
  */
+export type QuestionTemplate = {
+  totalAnswers: 2 | 3 | 4
+  correctAnswer: 1 | 2 | 3 | 4
+}
+export type QuestionBankConfig = Record<string, QuestionTemplate[]>
+
 export type Answer = {
   id: string
   label: TranslationKey
