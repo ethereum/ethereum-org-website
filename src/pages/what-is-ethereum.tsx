@@ -54,6 +54,8 @@ import {
   getRequiredNamespacesForPage,
 } from "@/lib/utils/translations"
 
+import { BASE_TIME_UNIT } from "@/lib/constants"
+
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import dogeComputerImg from "@/public/images/doge-computer.png"
 import ethImg from "@/public/images/eth.png"
@@ -198,6 +200,7 @@ export const getStaticProps = (async ({ locale }) => {
       lastDeployLocaleTimestamp,
       data: data.txCount,
     },
+    revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
