@@ -39,9 +39,9 @@ import Translation from "@/components/Translation"
 import { Divider } from "@/components/ui/divider"
 
 import { cn } from "@/lib/utils/cn"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -91,9 +91,16 @@ type Props = BasePageProps & {
   marketsHasError: boolean
 }
 
-// Fetch external API data once to avoid hitting rate limit
-const ethereumEcosystemDataFetch = runOnlyOnce(fetchEthereumEcosystemData)
-const ethereumStablecoinsDataFetch = runOnlyOnce(fetchEthereumStablecoinsData)
+// In seconds
+const REVALIDATE_TIME = BASE_TIME_UNIT * 24 * 7
+
+const loadData = dataLoader<[EthereumDataResponse, StablecoinDataResponse]>(
+  [
+    ["ethereumEcosystemData", fetchEthereumEcosystemData],
+    ["ethereumStablecoinsData", fetchEthereumStablecoinsData],
+  ],
+  REVALIDATE_TIME * 1000
+)
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
@@ -140,12 +147,7 @@ export const getStaticProps = (async ({ locale }) => {
   }
 
   try {
-    // Fetch token data in the Ethereum ecosystem
-    const ethereumEcosystemData: EthereumDataResponse =
-      await ethereumEcosystemDataFetch()
-    // Fetch token data for stablecoins
-    const stablecoinsData: StablecoinDataResponse =
-      await ethereumStablecoinsDataFetch()
+    const [ethereumEcosystemData, stablecoinsData] = await loadData()
 
     // Get the intersection of stablecoins and Ethereum tokens to only have a list of data for stablecoins in the Ethereum ecosystem
     const ethereumStablecoinData = stablecoinsData.filter(
@@ -190,7 +192,7 @@ export const getStaticProps = (async ({ locale }) => {
       marketsHasError,
     },
     // Updated once a week
-    revalidate: BASE_TIME_UNIT * 24 * 7,
+    revalidate: REVALIDATE_TIME,
   }
 }) satisfies GetStaticProps<Props>
 

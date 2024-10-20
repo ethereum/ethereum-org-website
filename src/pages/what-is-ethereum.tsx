@@ -44,10 +44,10 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import {
   getLocaleForNumberFormat,
@@ -172,13 +172,15 @@ const Image400 = ({ src }: Pick<ImageProps, "src">) => (
   <TwImage src={src} alt="" width={400} />
 )
 
-const cachedFetchTxCount = runOnlyOnce(fetchGrowThePie)
-
 type Props = BasePageProps & {
   data: MetricReturnData
 }
 
+const loadData = dataLoader([["growThePieData", fetchGrowThePie]])
+
 export const getStaticProps = (async ({ locale }) => {
+  const [data] = await loadData()
+
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
     locale as Lang,
@@ -188,8 +190,6 @@ export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/what-is-ethereum")
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
-
-  const data = await cachedFetchTxCount()
 
   return {
     props: {
