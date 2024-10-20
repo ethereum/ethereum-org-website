@@ -105,6 +105,7 @@ const Layer2Hub = () => {
 
       <HubHero {...heroContent} />
 
+      {/* TODO: Setup for translation */}
       <div
         id="layer-2-powered-by-ethereum"
         className="flex w-full flex-col gap-8 px-8 py-9"
