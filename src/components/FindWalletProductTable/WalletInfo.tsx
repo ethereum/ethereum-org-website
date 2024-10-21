@@ -121,7 +121,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
           <ButtonLink
             href={wallet.url}
             variant="outline"
-            w={{ base: "full", lg: "auto" }}
+            w={{ base: "full", sm: "auto" }}
             isExternal
             size="sm"
             customEventOptions={{
