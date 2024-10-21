@@ -140,31 +140,35 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 ![POAP Logo](public/images/poap-logo.svg)
 
-## Claim your POAP!
+## Claim your POAP and OATs!
 
-### What is POAP?
+### What is a POAP?
 
 > The Proof of Attendance Protocol is a dapp that distributes badges in the form of ERC-721 tokens to prove you participated in an event. [More on POAPs](https://www.poap.xyz/).
-
-### ethereum.org 2022 Contributor POAP
-
-- If you have committed any changes in 2022 so far that were merged into our repo, you have a POAP waiting!
-- This includes our dedicated translators on Crowdin
-
-  [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=Claim%20Your%20POAP!%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat)](https://discord.gg/ethereum-org)
-
-- 👆 To claim your Contributor POAP, join our Discord server and paste a link to your contribution in the `#🥇 | proof-of-contribution` [channel](https://discord.com/channels/714888181740339261/1212737737916948530)
-
-- A member of our team will verify the request and DM you with a personalized link to claim your own freshly minted POAP collectible!
-
-- To help with verification we request GitHub contributors connect their GitHub account with their Discord account (Discord > Settings > Connections > GitHub). Crowdin contributors will be verified directly through Crowdin by our team.
 
 ### GitPOAP
 
 - If you've made at least one contribution and that gets merged into ethereum.org, GitPOAP will also auto recognize it and let you mint a unique contributor POAP for the specific year.
   [More on GitPOAP](https://www.gitpoap.io).
 
-If you haven't contributed yet and would like to earn a POAP to show your loyalty to the Ethereum space, head over to the [issues](https://github.com/ethereum/ethereum-org-website/issues/) tab to get started!
+### What is an OAT?
+
+> An Onchain Achievement Token (OAT) is a special badge on [Galxe](https://app.galxe.com/quest/ethereumorg). It's a proof of your contribution to the ecosystem. [More on OATs](https://medium.com/galxe-news/introducing-galaxy-oat-on-chain-achievement-token-7e89779242b4).
+
+### ethereum.org 2024 Contributor OATs
+
+- If you have committed any changes in 2024 so far that were merged into our repo or if you have translated a certain amount of words, you can claim your OATs!
+- There are OATs for GitHub, content, design and translation contributions.
+
+  [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=Claim%20Your%20POAP!%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat)](https://discord.gg/ethereum-org)
+
+- 👆 To claim your Contributor OATs, join our Discord server, create a post and paste links to your contributions in the `#🥇 | proof-of-contribution` [channel](https://discord.com/channels/714888181740339261/1212737737916948530)
+
+- Wait for a member of our team to assign you a role on Discord and send you links to your OATs.
+
+- To help with verification we request GitHub contributors connect their GitHub account with their Discord account (Discord > Settings > Connections > GitHub). Crowdin contributors will be verified directly through Crowdin by our team.
+
+If you haven't contributed yet and would like to earn a POAP/OATs to show your loyalty to the Ethereum space, head over to the [issues](https://github.com/ethereum/ethereum-org-website/issues/) tab to get started! If you would like to contribute to translations check out our [Translation Program](https://ethereum.org/en/contributing/translation-program/). 
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
