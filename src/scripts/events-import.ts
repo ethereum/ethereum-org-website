@@ -12,8 +12,17 @@ import "dotenv/config"
   const communityEvents = localEvents as CommunityConference[]
 
   console.log("Community Events Import..")
-  const ethereumEvents = await EthereumEventsImport()
+  const year = new Date().getFullYear()
+  const ethereumEvents = await EthereumEventsImport(year)
   // Can add multiple event sources here in the future
+
+  // Try to fetch next year too, if page available
+  try {
+    const eventsNextYear = await EthereumEventsImport(year + 1)
+    ethereumEvents.push(...eventsNextYear)
+  } catch (error: unknown) {
+    console.error((error as Error).message)
+  }
 
   ethereumEvents.forEach((imported) => {
     const id = communityEvents.findIndex((local) =>
