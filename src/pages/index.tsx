@@ -56,12 +56,12 @@ import {
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { polishRSSList } from "@/lib/utils/rss"
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { breakpointAsNumber } from "@/lib/utils/screen"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -108,30 +108,51 @@ const Codeblock = lazy(() =>
 
 const StatsBoxGrid = lazy(() => import("@/components/StatsBoxGrid"))
 
-const cachedEthPrice = runOnlyOnce(fetchEthPrice)
-const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
-const cachedFetchTotalValueLocked = runOnlyOnce(fetchTotalValueLocked)
-const cachedXmlBlogFeeds = runOnlyOnce(async () => await fetchRSS(BLOG_FEEDS))
-const cachedAttestantBlog = runOnlyOnce(fetchAttestantPosts)
-const cachedGrowThePieData = runOnlyOnce(fetchGrowThePie)
-const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
+// API calls
+const fetchXmlBlogFeeds = async () => {
+  return await fetchRSS(BLOG_FEEDS)
+}
 
 type Props = BasePageProps & {
   metricResults: AllMetricData
   rssData: { rssItems: RSSItem[]; blogLinks: CommunityBlog[] }
 }
 
+// In seconds
+const REVALIDATE_TIME = BASE_TIME_UNIT * 24
+
+const loadData = dataLoader(
+  [
+    ["ethPrice", fetchEthPrice],
+    ["totalEthStaked", fetchTotalEthStaked],
+    ["totalValueLocked", fetchTotalValueLocked],
+    ["growThePieData", fetchGrowThePie],
+    ["communityEvents", fetchCommunityEvents],
+    ["attestantPosts", fetchAttestantPosts],
+    ["rssData", fetchXmlBlogFeeds],
+  ],
+  REVALIDATE_TIME * 1000
+)
+
 export const getStaticProps = (async ({ locale }) => {
-  const growThePieData = await cachedGrowThePieData()
+  const [
+    ethPrice,
+    totalEthStaked,
+    totalValueLocked,
+    growThePieData,
+    communityEvents,
+    attestantPosts,
+    xmlBlogs,
+  ] = await loadData()
+
   const metricResults: AllMetricData = {
-    ethPrice: await cachedEthPrice(),
-    totalEthStaked: await cachedFetchTotalEthStaked(),
-    totalValueLocked: await cachedFetchTotalValueLocked(),
+    ethPrice,
+    totalEthStaked,
+    totalValueLocked,
     txCount: growThePieData.txCount,
     txCostsMedianUsd: growThePieData.txCostsMedianUsd,
   }
 
-  const communityEvents = await cachedFetchCommunityEvents()
   const calendar = communityEvents.upcomingEventData
     .sort((a, b) => {
       const dateA = isValidDate(a.date) ? new Date(a.date).getTime() : -Infinity
@@ -153,10 +174,8 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
-  // load RSS feed items
-  const xmlBlogs = await cachedXmlBlogFeeds()
-  const attestantBlog = await cachedAttestantBlog()
-  const polishedRssItems = polishRSSList(attestantBlog, ...xmlBlogs)
+  // RSS feed items
+  const polishedRssItems = polishRSSList(attestantPosts, ...xmlBlogs)
   const rssItems = polishedRssItems.slice(0, RSS_DISPLAY_COUNT)
 
   const blogLinks = polishedRssItems.map(({ source, sourceUrl }) => ({
@@ -174,7 +193,7 @@ export const getStaticProps = (async ({ locale }) => {
       metricResults,
       rssData: { rssItems, blogLinks },
     },
-    revalidate: BASE_TIME_UNIT * 24,
+    revalidate: REVALIDATE_TIME,
   }
 }) satisfies GetStaticProps<Props>
 

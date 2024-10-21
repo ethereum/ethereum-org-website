@@ -92,12 +92,13 @@ A szinkronizálási mód és a kiválasztott kliens befolyásolja a lemezterüle
 
 | Kliens     | Lemezterület (snap szinkronizálás) | Lemezterület (teljes archívum) |
 | ---------- | ---------------------------------- | ------------------------------ |
-| Geth       | 500 GB+                            | 12 TB+                         |
-| Nethermind | 500 GB+                            | 12 TB+                         |
 | Besu       | 800 GB+                            | 12 TB+                         |
 | Erigon     | N.a.                               | 2,5 TB+                        |
+| Geth       | 500 GB+                            | 12 TB+                         |
+| Nethermind | 500 GB+                            | 12 TB+                         |
+| Reth       | N.a.                               | 2,2 TB+                        |
 
-- Megjegyzés: az Erigon nem ajánl snap szinkronizálási módot, de lehetséges a teljes adatmegvágás (kb. 500 GB)
+- Megjegyzés: az Erigon és a Reth nem ajánl snap szinkronizálási módot, de lehetséges a teljes adatmegvágás (kb. 2 TB az Erigonnál, 1,2 TB a Rethnél)
 
 A konszenzusos kliens esetében a lemezterület szintén függ a telepítéstől és a beállított jellemzőktől (pl. validátor büntető/kizáró funkció), de általánosságban egy újabb 200 GB-ra van szükség a beacon-adathoz. Sok validátorral a sávszélesség terhelése is növekszik. Ebben az elemzésben [megtalálja a konszenzuskliens követelmények részleteit](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
@@ -148,12 +149,13 @@ A telepítési utasításokat megtalálja a klienshez kapcsolódó dokumentáci�
 
 Ezek a kliensek kiadási oldalai, ahol az előre megépített binárisok vagy instrukciók találhatók:
 
-##### Végrehajtási kliensek
+##### Végrehajtásos kliensek
 
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
+- [Reth](https://reth.rs/installation/installation.html)
 
 Fontos tisztában lenni azzal is, hogy a kliensdiverzitás [problémát jelent a végrehajtási rétegen](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). Önnek is azt javasoljuk, hogy futtasson kisebbségi végrehajtási klienst.
 
@@ -175,9 +177,9 @@ A szoftver letöltése után érdemes ellenőrizni annak integritását. Ez opci
 
 A fejlesztők aláírják a kiadott binárisokat a PGP-kulcsokkal, így kriptográfiailag ellenőrizheti, hogy tényleg az a szoftver fut-e, amit ők hoztak létre. Ehhez a fejlesztők által használt publikus kulcsokra van szükség, melyeket a kliens kiadási oldalán vagy a dokumentációban megtalál. Miután letöltötte a kliensprogramot és az aláírást, használjon egy PGP-implementációt, pl. [GnuPG](https://gnupg.org/download/index.html), hogy könnyedén ellenőrizze ezeket. Tekintse meg ezt az útmutatót a nyílt forráskódú szoftver ellenőrzéséről a `gpg` használatával kapcsolatban [linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) vagy [Windows/MacOS](https://freedom.press/training/verifying-open-source-software/) operációs rendszeren.
 
-Egy másik ellenőrzési lehetőség az, hogy a letöltött szoftver hashe, vagyis egyedi kriptográfiai ujjlenyomata egyezik a fejlesztő által adottal. Ez még a PGP-nél is egyszerűbb, és néhány kliensnél csak ez a lehetőség érhető el. Csak futtassa le a hash funkciót a letöltött szoftverre, és hasonlítsa össze azzal, amit a kiadási oldalon talál. For example:
+Egy másik ellenőrzési lehetőség az, hogy a letöltött szoftver hashe, vagyis egyedi kriptográfiai ujjlenyomata egyezik a fejlesztő által adottal. Ez még a PGP-nél is egyszerűbb, és néhány kliensnél csak ez a lehetőség érhető el. Csak futtassa le a hash funkciót a letöltött szoftverre, és hasonlítsa össze azzal, amit a kiadási oldalon talál. Például:
 
-```
+```sh
 sha256sum teku-22.6.1.tar.gz
 
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
@@ -213,7 +215,7 @@ A végrehajtási és konszenzusos kliensek egy hitelesített végponton kereszt�
 
 Ezt a tokent a kliensszoftver automatikusan létrehozza, de ezt néha manuálisan kell megtenni. Az [OpenSSL](https://www.openssl.org/) révén Ön is létre tudja hozni:
 
-```
+```sh
 openssl rand -hex 32 > jwtsecret
 ```
 
@@ -226,7 +228,7 @@ Ez a rész a végrehajtási kliensek elindítását mutatja be. Csak példaként
 - Meghatározza az adatkönyvtárat, ahol az összes adat, beleértve a blokkláncot is, le lesz tárolva
   - Írja át az útvonalat egy valódira, pl. ami a külső meghajtójára mutat
 - Lehetővé teszi, hogy az interfészek kommunikáljanak a klienssel
-  - Beleértve a JSON RPC-t és az Engine API-t a konszenzusos klienssel való kommunikációhoz
+  - Beleértve a JSON-RPC-t és az Engine API-t a konszenzusos klienssel való kommunikációhoz
 - Meghatározza a `jwtsecret` kódhoz tartozó útvonalat a hitelesített API-hoz
   - Cserélje le a példát egy valódi útvonallal, amit elérnek a kliensek, pl. `/tmp/jwtsecret`
 
@@ -238,7 +240,7 @@ Ne feledje, hogy ez csak alappélda, az összes beállítás a kezdőértéken m
 
 Ez a példa a Besut a főhálózaton indítja el, a blokkláncadatokat az alapértelmezett formátumban tárolja a `/data/ethereum` alatt, engedélyezi a JSON RPC-t és Engine RPC-t a konszenzusos klienssel való kapcsolódáshoz. Az Engine API-t a `jwtsecret` token hitelesíti, és csak a `localhostból` jövő hívások vannak megengedve.
 
-```
+```sh
 besu --network=mainnet \
     --data-path=/data/ethereum \
     --rpc-http-enabled=true \
@@ -250,7 +252,7 @@ besu --network=mainnet \
 
 A Besu egy telepítő opcióval bír, mely egy sor kérdést tesz fel, majd legenerálja a konfigurációs fájlt. Indítsa el az interaktív telepítőt a következővel:
 
-```
+```sh
 besu --Xlauncher
 ```
 
@@ -258,9 +260,9 @@ A [Besu dokumentációja](https://besu.hyperledger.org/en/latest/HowTo/Get-Start
 
 ##### Az Erigon futtatása
 
-Ez a példa az Erigont a főhálózaton indítja el, a blokkláncadatot a `/data/ethereum` alatt tárolja, engedélyezi a JSON RPC-t, meghatározza a namespace-eket, és engedélyezi a hitelesítést a konszenzusos klienssel való kapcsolódáshoz, amit a `jwtsecret` útvonal határoz meg.
+Ez a példa az Erigont a főhálózaton indítja el, a blokkláncadatot a `/data/ethereum` alatt tárolja, engedélyezi a JSON-RPC-t, meghatározza a namespace-eket, és engedélyezi a hitelesítést a konszenzusos klienssel való kapcsolódáshoz, amit a `jwtsecret` útvonal határoz meg.
 
-```
+```sh
 erigon --chain mainnet \
     --datadir /data/ethereum  \
     --http --http.api=engine,eth,web3,net \
@@ -271,9 +273,9 @@ Az Erigon alapból teljes szinkronizálást végez 8 GB HDD-vel, ami több mint 
 
 ##### A Geth futtatása
 
-Ez a példa a Gethet a főhálózaton indítja el, a blokkláncadatokat a `/data/ethereum` alatt tárolja, engedélyezi a JSON RPC-t, és meghatározza a namespace-eket. Engedélyezi a hitelesítést, hogy a konszenzusos klienssel lehessen kapcsolódni, amihez a `jwtsecret` útvonal szükséges, és azt is megadja, hogy milyen kapcsolódások lehetségesek, jelen példánkban csak a `localhosttól` érkezők.
+Ez a példa a Gethet a főhálózaton indítja el, a blokkláncadatokat a `/data/ethereum` alatt tárolja, engedélyezi a JSON-RPC-t, és meghatározza a namespace-eket. Engedélyezi a hitelesítést, hogy a konszenzusos klienssel lehessen kapcsolódni, amihez a `jwtsecret` útvonal szükséges, és azt is megadja, hogy milyen kapcsolódások lehetségesek, jelen példánkban csak a `localhosttól` érkezők.
 
-```
+```sh
 geth --mainnet \
     --datadir "/data/ethereum" \
     --http --authrpc.addr localhost \
@@ -286,9 +288,9 @@ Tekintse meg a [dokumentációt az összes konfigurálási opcióhoz](https://ge
 
 ##### A Nethermind futtatása
 
-A Nethermind különféle [telepítési opciókat](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) kínál. A csomag számos binárist tartalmaz, beleértve egy Telepítőt, ami egy vezetett felállítást tesz lehetővé, így a konfigurációt interaktív módon lehet létrehozni. Másik megoldásként használhatja a Runner-t is, ami a végrehajtási program maga, és konfigurációs jelölőkkel futtathatja. A JSON RPC alapból engedélyezve van.
+A Nethermind különféle [telepítési opciókat](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) kínál. A csomag számos binárist tartalmaz, beleértve egy Telepítőt, ami egy vezetett felállítást tesz lehetővé, így a konfigurációt interaktív módon lehet létrehozni. Másik megoldásként használhatja a Runner-t is, ami a végrehajtási program maga, és konfigurációs jelölőkkel futtathatja. A JSON-RPC alapból engedélyezve van.
 
-```
+```sh
 Nethermind.Runner --config mainnet \
     --datadir /data/ethereum \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
@@ -297,6 +299,19 @@ Nethermind.Runner --config mainnet \
 A Nethermind dokumentációk egy [teljeskörű útmutatót](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) adnak arról, hogyan lehet a Nethermind-ot konszenzusos klienssel működtetni.
 
 A végrehajtási kliens elindítja a fő funkcióit, a kiválasztott végpontokat, és társakat keres. Miután sikeresen felfedezte a társait, elkezd szinkronizálni. A végrehajtási kliens kapcsolódásra vár a konszenzusos klienstől. A jelenlegi blokkláncadatok elérhetők lesznek, amint a kliens sikeresen szinkronizál a jelen státuszhoz.
+
+##### A Reth futtatása
+
+Ez a példa a Reth-et a főhálózaton indítja el az alapértelmezett adathelyet figyelembe véve. Engedélyezi a JSON-RPC-t és az Engine RPC hitelesítést a `jwtsecret` elérési útvonal által meghatározott konszenzusklienshez való csatlakozáshoz, és csak a `localhost`-ról érkező hívások engedélyezettek.
+
+```sh
+reth node \
+    --authrpc.jwtsecret /path/to/jwtsecret \
+    --authrpc.addr 127.0.0.1 \
+    --authrpc.port 8551
+```
+
+Tekintse meg a [Reth konfigurálást](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth), hogy többet megtudjon az alapértelmezett adatkönyvtárakról. [A Reth dokumentációja](https://reth.rs/run/mainnet.html) további opciókat és konfigurációs részleteket tartalmaz.
 
 #### A konszenzusos kliens elindítása {#starting-the-consensus-client}
 
@@ -308,13 +323,13 @@ Ha Ön validátort tervez majd futtatni, akkor be kell tennie egy konfiguráció
 
 Amikor egy Beacon-csomópontot indít a teszthálózaton, jelentős szinkronizálási időt takaríthat meg, ha egy publikus végpontot használ a [Checkpoint sync-re](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
-#### Konszenzusos kliens futtatása
+#### Konszenzusos kliens futtatása {#running-a-consensus-client}
 
 ##### A Lighthouse futtatása
 
 Mielőtt a Lighthouse-t futtatná, ismerje meg, hogyan kell telepíteni és konfigurálni azt a [Lighthouse Könyvből](https://lighthouse-book.sigmaprime.io/installation.html).
 
-```
+```sh
 lighthouse beacon_node \
     --network mainnet \
     --datadir /data/ethereum \
@@ -327,7 +342,7 @@ lighthouse beacon_node \
 
 Telepítse a Lodestar szoftvert összeállítva vagy a Docker-kép letöltésével. Tudjon meg többet a [dokumentációból](https://chainsafe.github.io/lodestar/) és a még részletesebb [felállítási útmutatóból](https://hackmd.io/@philknows/rk5cDvKmK).
 
-```
+```sh
 lodestar beacon \
     --rootDir="/data/ethereum" \
     --network=mainnet \
@@ -340,7 +355,7 @@ lodestar beacon \
 
 A Nimbus egyaránt tartalmaz konszenzusos és végrehajtási klienst. Különféle eszközökön lehet futtatni igen szerény számítási kapacitással. Miután [installálta a hozzá tartozó dolgokat és magát a Nimbust](https://nimbus.guide/quick-start.html), futtathatja a konszenzusos kliensét:
 
-```
+```sh
 nimbus_beacon_node \
     --network=mainnet \
     --web3-url=http://127.0.0.1:8551 \
@@ -352,7 +367,7 @@ nimbus_beacon_node \
 
 A Prysm egy szkripttel együtt elérhető, amely egyszerű, automatikus telepítést tesz lehetővé. A részleteket a [Prysm dokumentációban](https://docs.prylabs.network/docs/install/install-with-script) találja.
 
-```
+```sh
 ./prysm.sh beacon-chain \
     --mainnet \
     --datadir /data/ethereum  \
@@ -362,7 +377,7 @@ A Prysm egy szkripttel együtt elérhető, amely egyszerű, automatikus telepít
 
 ##### A Teku futtatása
 
-```
+```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \
     --ee-endpoint http://localhost:8551 \
@@ -377,7 +392,7 @@ A konszenzusos kliens Beacon-csomópontként működik a validátoroknak, hogy a
 
 A saját validátor futtatása lehetővé teszi az [önálló letétbe helyezést](/staking/solo/), a leginkább hatásos és bizalomigény nélküli módszert, mely az Ethereum hálózatát támogatja. Ehhez azonban szükség van 32 ETH letétre. Ha szeretne validátort futtatni a saját csomópontján egy kisebb összeggel, akkor Önt érdekelheti az engedélyhez nem kötött csomópontműködtetőkből álló decentralizált alapok, mint amilyen a [Rocket Pool](https://rocketpool.net/node-operators).
 
-A letétbe helyezéssel és a validátorkulcs-generálásával a legkönnyebben a [Goerli Testnet Staking Launchpad](https://goerli.launchpad.ethereum.org/) segítségével kezdhet foglalkozni, amellyel tesztelheti a beállítását a [csomópont futtatása a Goerli-n](https://notes.ethereum.org/@launchpad/goerli) útmutatóval. Amikor készen áll a főhálózatra, akkor ugyanezeket a lépéseket kell megismételnie a [Mainnet Staking Launchpad](https://launchpad.ethereum.org/) segítségével.
+A letétbe helyezéssel és a validátorkulcs-generálásával a legkönnyebben a [Holesky Testnet Staking Launchpad](https://holesky.launchpad.ethereum.org/) segítségével kezdhet foglalkozni, amellyel tesztelheti a beállítását a [csomópont futtatása a Holesky-n](https://notes.ethereum.org/@launchpad/holesky) útmutatóval. Amikor készen áll a főhálózatra, akkor ugyanezeket a lépéseket kell megismételnie a [Mainnet Staking Launchpad](https://launchpad.ethereum.org/) segítségével.
 
 Tekintse át a [letétbe helyezési oldalt](/staking), hogy a letéti opciókról tájékozódjon.
 

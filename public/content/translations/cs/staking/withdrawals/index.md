@@ -1,5 +1,5 @@
 ---
-title: Probíhají výběry
+title: Uzamčení výběrů
 description: Stránka shrnující, co jsou výběry push, jak fungují a co musí stakeři udělat, aby získali své odměny
 lang: cs
 template: staking
@@ -72,7 +72,7 @@ Upgrade Shanghai/Capella umožnil získat dříve vložené ETH zpět na běžn�
 
 O tom, zda má daný validátor nárok na výběr či nikoli, rozhoduje stav samotného účtu validátoru. K určení, zda má být u účtu zahájen výběr či nikoli, není v žádném okamžiku potřeba žádný uživatelský vstup – celý proces probíhá automaticky konsensuální vrstvou v nepřetržité smyčce.
 
-### More of a visual learner? {#visual-learner}
+### Učíte se spíše vizuálně? {#visual-learner}
 
 Podívejte se na toto vysvětlení výběrů z vkladů Ethereum od Finematics:
 
@@ -103,7 +103,7 @@ Operátoři validátoru v průběhu životního cyklu validátoru provádějí p
 
 ### Bez paliva {#gas-free}
 
-Tento přístup k výběrům vkladů zabraňuje tomu, aby satkeři museli ručně odeslat transakci požadující výběr konkrétní částky ETH. To znamená, že **není vyžadován žádný plyné palivo (transakční poplatek)** a výběry také nesoutěží o stávající blokový prostor prováděcí vrstvy.
+Tento přístup k výběrům vkladů zabraňuje tomu, aby satkeři museli ručně odeslat transakci požadující výběr konkrétní částky ETH. To znamená, že **není vyžadováno žádné palivo (transakční poplatek)** a výběry také nesoutěží o stávající blokový prostor prováděcí vrstvy.
 
 ### Jak často dostanu odměny za vklady? {#how-soon}
 
@@ -125,7 +125,7 @@ Po rozšíření tohoto výpočtu můžeme odhadnout dobu, kterou bude trvat zpr
 
 Jak vidíte, toto se zpomaluje, protože je v síti více validátorů. Nárůst vynechaných slotů by to mohl úměrně zpomalit, ale to bude obecně představovat pomalejší možné výsledky.
 
-## Často kladené otázky {#faq}
+## Často kladené dotazy {#faq}
 
 <ExpandableCard
 title="Mohu zadanou adresu pro výběr změnit na alternativní adresu pro výběr?"
@@ -142,9 +142,9 @@ eventAction="Why can a withdrawal address only be set once?"
 eventName="read more">
 Nastavením adresy pro stažení prováděcí vrstvy byly přihlašovací údaje pro tento validátor trvale změněny. To znamená, že staré přihlašovací údaje již nebudou fungovat a nové přihlašovací údaje budou přesměrovány na účet prováděcí vrstvy.
 
-Adresy pro výběr mohou být buď chytrá smlouva (řízená svým kódem), nebo externě vlastněný účet (EOA, řízený svým soukromým klíčem). V současné době tyto účty nemají žádný způsob, jak předat zprávu zpět do konsensuální vrstvy, která by signalizovala změnu pověření validátoru, a přidání této funkce by přidalo zbytečné složitosti protokolu.
+Adresy pro výběr mohou být buď chytrý kontrakt (řízený svým kódem), nebo externě vlastněný účet (EOA, řízený svým privátním klíčem). V současné době tyto účty nemají žádný způsob, jak předat zprávu zpět do konsensuální vrstvy, která by signalizovala změnu pověření validátoru, a přidání této funkce by přidalo zbytečné složitosti protokolu.
 
-Jako alternativu ke změně adresy pro výběr u konkrétního validátoru se uživatelé mohou rozhodnout nastavit jako adresu pro výběr chytrou smlouvu, která zvládne rotaci klíčů, jako je Trezor. Uživatelé, kteří nastaví své prostředky na vlastní EOA, mohou provést úplný odchod, aby mohli vybrat všechny své vložené prostředky, a poté znovu vložit pomocí nových pověření.
+Jako alternativu ke změně adresy pro výběr u konkrétního validátoru se uživatelé mohou rozhodnout nastavit jako adresu pro výběr chytrý kontrakt, který zvládne rotaci klíčů, jako je Trezor. Uživatelé, kteří nastaví své prostředky na vlastní EOA, mohou provést úplný odchod, aby mohli vybrat všechny své vložené prostředky, a poté znovu vložit pomocí nových pověření.
 </ExpandableCard>
 
 <ExpandableCard

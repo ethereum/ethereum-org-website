@@ -5,26 +5,32 @@ lang: es
 sidebarDepth: 3
 ---
 
-Los exploradores de bloques son tu portal de acceso a los datos de Ethereum. Puedes usarlos para ver datos de los bloques, las transacciones, loa mineros, las cuentas y otras actividades de la cadena en tiempo real.
+Los exploradores de bloques son tu portal de acceso a los datos de Ethereum. Puede usarlos para ver datos en tiempo real sobre bloques, transacciones, validadores, cuentas y otras actividades en la cadena.
 
 ## Requisitos previos {#prerequisites}
 
-Es necesario que comprendas los conceptos básicos de Ethereum para poder entender los datos que te ofrece un explorador de bloques. Empiece con [una introducción a Ethereum](/developers/docs/intro-to-ethereum/).
+Es necesario que comprenda los conceptos básicos de Ethereum para poder entender los datos que le ofrece un explorador de bloques. Empiece con [una introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Servicios {#services}
 
 - [Etherscan:](https://etherscan.io/) _También disponible en chino, coreano, ruso y japonés_
+- [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair:](https://blockchair.com/ethereum) _También disponible en inglés, francés, italiano, neerlandés, portugués, ruso, chino y farsi_
-- [Blockscout](https://blockscout.com/)
-- [Etherchain](https://www.etherchain.org/)
-- [Ethplorer:](https://ethplorer.io/) _También disponible en chino, español, francés, turco, ruso, coreano y vietnamita_
-- [OKLink](https://www.oklink.com/eth)
-- [Otterscan](https://otterscan.io/)
-- [Rantom](https://rantom.app/)
-- [Sirato](https://www.web3labs.com/sirato)
-- [EthVM](https://www.ethvm.com/)
+- [Blockscout](https://eth.blockscout.com/)
+- [Chainlens](https://www.chainlens.com/)
 - [Explorador de bloques DexGuru](https://ethereum.dex.guru/)
+- [Etherchain](https://www.etherchain.org/)
+- [Ethernow](https://www.ethernow.xyz/)
+- [Ethplorer:](https://ethplorer.io/) _También disponible en chino, español, francés, turco, ruso, coreano y vietnamita_
+- [EthVM](https://www.ethvm.com/)
+- [OKLink](https://www.oklink.com/eth)
+- [Rantom](https://rantom.app/)
+
+## Herramientas de código abierto {#open-source-tools}
+
+- [Otterscan](https://otterscan.io/)
+- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 
 ## Datos {#data}
 
@@ -48,7 +54,7 @@ Nuevos bloques se agregan cada 12 segundos a Ethereum (a menos que quien propone
 - Límite de gas: El límite total de gas establecido por las transacciones en el bloque
 - Tarifa base por gas: El multiplicador mínimo de gas requerido para que una transacción sea incluida en el bloque
 - Comisiones quemadas: Cuánto ETH se quema en el bloque
-- Datos extras: Cualquier dato extra que el minero incluyó en el bloque
+- Datos adicionales: Cualquier dato adicional que el constructor haya incluido en el bloque
 
 **Datos avanzados**
 
@@ -76,12 +82,12 @@ Los exploradores de bloques se han convertido en un lugar común para que las pe
 - Hash de la transacción: El hash generado cuando la transacción es enviada
 - Estado: El indicador que señala si la transacción está pendiente, falló o fue completada
 - Bloque: El bloque en el cual la transacción fue incluida
-- Marca de tiempo: Momento en el que el minero minó la transacción
+- Marca de tiempo: El momento en el que se incluyó una transacción en un bloque propuesto por un validador
 - Desde: La dirección de la cuenta que envió la transacción
 - Hacia: La dirección del receptor o contrato inteligente con el que interactúa la transacción
 - Tokens transferidos: Todos los tokens que fueron transferidos como parte de la transacción
 - Valor: El valor total de ETH transferidos
-- Comisión de transacción: La cantidad pagada para que el minero procese la transacción (precio del gas * gas usado)
+- Tarifa de transacción: La cantidad pagada al validador para procesar la transacción (calculada por el precio del gas\*gas utilizado)
 
 **Datos avanzados**
 
@@ -232,11 +238,13 @@ Los datos de nivel superior de la capa de consenso incluyen lo siguiente:
 ## Exploradores de bloques {#block-explorers}
 
 - [Etherscan](https://etherscan.io/): Un explorador de bloques que puede usar para buscar datos de la red principal de Ethereum y la red de pruebas Goerli
+- [3xpl](https://3xpl.com/ethereum): Un explorador de Ethereum de código abierto sin anuncios que permite descargar sus conjuntos de datos
 - [Beaconcha.in](https://beaconcha.in/): Un explorador de bloques de código abierto para la red principal de Ethereum y la red de pruebas Goerli
 - [Blockchair](https://blockchair.com/ethereum): El explorador de Ethereum más privado. También para clasificación y filtrado de datos (mempool)
 - [Etherchain](https://www.etherchain.org/): Un explorador de bloques para la red principal de Ethereum
 - [Ethplore](https://ethplorer.io/): Un explorador de bloques con enfoque en tokens para la red principal de Ethereum y la red de pruebas Kovan
 - [Rantom](https://rantom.app/): Un visor de código abierto y fácil de usar de información detallada de transaccinoes DeFI y NFT
+- [Ethernow](https://www.ethernow.xyz/): Un explorador de transacciones en tiempo real que le permite ver la capa previa a la cadena de la Red principal de Ethereum
 
 ## Para seguir leyendo {#further-reading}
 
