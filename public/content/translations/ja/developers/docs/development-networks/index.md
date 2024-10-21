@@ -28,16 +28,6 @@ lang: ja
 
 **注**: ほとんどの[開発フレームワーク](/developers/docs/frameworks/)には、組み込みの開発用ネットワークが含まれています。 フレームワークの[ローカル開発環境のセットアップ](/developers/local-environment/)から始めることをお勧めします。
 
-### Ganache {#ganache}
-
-テストの実行、コマンドの実行、状態の調査に使用できる専用のイーサリアムブロックチェーンを迅速に起動し、チェーンの動作を制御します。
-
-Ganacheは、デスクトップアプリケーション(Ganache UI)とコマンドラインツール(`ganache-cli`)の両方を提供しています。 Truffle Suiteというツールスイートに組み込まれています。
-
-- [ウェブサイト](https://www.trufflesuite.com/ganache)
-- [GitHub](https://github.com/trufflesuite/ganache)
-- [ドキュメント](https://www.trufflesuite.com/docs/ganache/overview)
-
 ### Hardhat Network {#hardhat-network}
 
 開発用に設計されたローカルイーサリアムネットワークです。 コントラクトのデプロイ、テストの実行、コードのデバッグを可能にします。

@@ -105,12 +105,6 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie non è al momento mantenuto**
 
-**Truffle -** **_ Ambiente di sviluppo, framework di test, pipeline di sviluppo e altri strumenti_**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-- **Lo sviluppo di Truffle è terminato**: [leggi di più](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
-
 **OpenZeppelin SDK -** **_Il kit di strumenti definitivo per i contratti intelligenti: una suite di strumenti per aiutarti a sviluppare, compilare, aggiornare, distribuire e interagire con i contratti intelligenti_**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)

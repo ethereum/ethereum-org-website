@@ -22,7 +22,6 @@ incomplete: true
 
 ## 初學者文章 {#beginner-articles}
 
-- [選擇以太坊用戶端](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Rust 以太坊用戶端](https://openethereum.github.io/) \* **請注意 OpenEthereum [已棄用](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)且不再維護。**如欲使用此用戶端，請小心謹慎，最好改用其他用戶端實作。
 - [使用 Rust 向以太坊傳送交易](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [使用 Rust 為 Kovan 編寫 Wasm 合約的逐步教學](https://github.com/paritytech/pwasm-tutorial)

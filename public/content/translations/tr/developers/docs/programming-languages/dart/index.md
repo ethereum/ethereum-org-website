@@ -10,14 +10,12 @@ incomplete: true
 ## Öğreticiler {#tutorials}
 
 - [Flutter ve Blok Zinciri – Hello World Dapp](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/) başlamanız için tüm adımlarda size yol gösterir:
-  1.  [Truffle geliştirme paketini](https://www.trufflesuite.com/) yükleme
-  2.  [Solidity](https://soliditylang.org/)'de akıllı sözleşme yazma
-  3.  Dart'ta bir kullanıcı arayüzü yazma
+  1.  [Solidity](https://soliditylang.org/)'de akıllı sözleşme yazma
+  2.  Dart'ta bir kullanıcı arayüzü yazma
 - Temel bilgileri hali hazırda biliyorsanız, [daha kısa olan Flutter ile Mobil bir dapp inşa etmek](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) daha iyi olabilir
 - Video izleyerek öğrenmeyi tercih ediyorsanız, yaklaşık bir saat uzunluğundaki [İlk Blok Zinciri Flutter Uygulamanızı Oluşturun](https://www.youtube.com/watch?v=3Eeh3pJ6PeA) videosunu izleyebilirsiniz
 - Sabırsızsanız, yaklaşık yirmi dakika uzunluğundaki [Flutter ve Dart ile Ethereum Üzerinde bir Blok Zinciri Merkeziyetsiz Uygulaması Oluşturma](https://www.youtube.com/watch?v=jaMFEOCq_1s) videosunu tercih edebilirsiniz
 - [WalletConnect'in Web3Modal'ini kullanarak Flutter uygulamanıza MetaMask'ı entegre etme](https://www.youtube.com/watch?v=v_M2buHCpc4) - bu kısa video size WalletConnect'in kütüphanesi [Web3Modal](https://pub.dev/packages/web3modal_flutter)'i kullanarak Flutter uygulamanıza MetaMask'ı entegre etmeye ilişkin adımları gösteriyor
-- [Flutter Dapp Simple Wallet](https://youtu.be/JMfIBpuAhKA) ve [First Flutter DApp - Solidity, Truffle, Ganache](https://youtu.be/bHw2gQZxJ_s) - bu videolar, Truffle ve Ganache kullanılarak Flutter'da nasıl basit merkeziyetsiz uygulamalar yapabileceğinizi gösteriyor
 - [Mobile Blockchain Developer Bootcamp Course With Solidity & Flutter](https://youtube.com/playlist?list=PL4V4Unlk5luhQ26ERO6hWEbcUwHDSSmVH) tam yığın mobil blokzincir geliştiricisi kurslarından oluşan bir oynatma listesi
 
 ## Ethereum istemcileri ile çalışma {#working-with-ethereum-clients}

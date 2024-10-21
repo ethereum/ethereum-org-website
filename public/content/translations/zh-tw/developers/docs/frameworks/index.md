@@ -105,12 +105,6 @@ lang: zh-tw
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie 目前未有維護**
 
-**Truffle -** **_開發環境、測試架構、部署通道及其他工具。 _**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-- **Truffle 開發已結束** - [瞭解更多](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
-
 **OpenZeppelin 軟體開發套件 -** **_終極智慧型合約工具組：一套幫助你開發、編譯、升級、部署智慧型合約以及與智慧型合約互動的工具。_**
 
 - [OpenZeppelin 軟體開發套件](https://openzeppelin.com/sdk/)

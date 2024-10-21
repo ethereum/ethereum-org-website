@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "یک محیط توسعه محلی راه اندازی کنید",
   "page-local-environment-solidity-template-desc": "یک الگوی GitHub برای راه اندازی از پیش ساخته شده برای قراردادهای هوشمند Solidity شما. شامل یک شبکه محلی Hardhat، Waffle برای آزمایش، Ethers برای اجرای کیف پول و موارد دیگر است.",
   "page-local-environment-solidity-template-logo-alt": "لوگوی الگوی Solidity",
-  "page-local-environment-truffle-desc": "Truffle Suite توسعه دهندگان را تا حد امکان راحت از ایده به دپ می‌رساند.",
-  "page-local-environment-truffle-logo-alt": "لوگوی Truffle",
   "page-local-environment-waffle-desc": "پیشرفته ترین کتاب تست قراردادهای هوشمند. به تنهایی یا با Scaffold-eth یا Hardhat استفاده کنید.",
   "page-local-environment-waffle-logo-alt": "لوگوی Waffle"
 }

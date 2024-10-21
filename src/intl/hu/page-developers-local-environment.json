@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "Állítsa fel a helyi fejlesztői környezetét",
   "page-local-environment-solidity-template-desc": "Egy GitHub sablon a Solidity okosszerződések előre elkészített beállítására. Tartalmazza a Hardhat helyi hálózatot, a Waffle-t tesztelésre, az Ethers-t tárcaimplementációra és még sok mást is.",
   "page-local-environment-solidity-template-logo-alt": "Solidity template logo",
-  "page-local-environment-truffle-desc": "A Truffle Suite lehetővé teszi a fejlesztőknek, hogy az ötletükből dapp legyen minél kényelmesebben.",
-  "page-local-environment-truffle-logo-alt": "Truffle logo",
   "page-local-environment-waffle-desc": "A legfejlettebb okosszerződés tesztelési könyvtár. Használja önmagában, a Scaffold-eth-szel vagy a Hardhat-tel.",
   "page-local-environment-waffle-logo-alt": "Waffle logo"
 }
