@@ -69,7 +69,7 @@ const WalletSubComponent = ({
         />
       </div>
       <div className="flex w-full flex-1 flex-col gap-4">
-        <div className="flex w-full flex-col justify-between xl:flex-row">
+        <div className="flex w-full flex-col justify-between gap-4 xl:flex-row">
           {walletFilterDisplayOrder.map((filterHeader, idx) => {
             const filterItem = walletFiltersOptions.find(
               (option) => option.title === filterHeader
