@@ -5,6 +5,7 @@ import { DEFAULT_LOCALE, FAKE_LOCALE, LOCALES_CODES } from "./lib/constants"
 const PUBLIC_FILE = /\.(.*)$/
 
 function detectLocale(acceptLanguage: string | null) {
+  console.log("acceptLanguage", acceptLanguage)
   if (!acceptLanguage) {
     return DEFAULT_LOCALE
   }
