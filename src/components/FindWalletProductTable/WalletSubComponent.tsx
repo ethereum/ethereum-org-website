@@ -91,26 +91,34 @@ const WalletSubComponent = ({
                       const featureColor = wallet[item.filterKey]
                         ? "text-body"
                         : "text-disabled"
+                      // Split last word off filterLabel to force non-wrapping
+                      // connection between the last word and info Tooltip icon
+                      const filterLabelSplit = item.filterLabel.split(" ")
+                      const filterLabelLastWord = filterLabelSplit.pop()
+                      const filterLabelRoot = filterLabelSplit.join(" ")
                       return (
                         <li key={idx} className="mb-2 flex flex-row gap-2">
-                          <span>
+                          <span className="translate-y-0.5">
                             {wallet[item.filterKey] ? (
-                              <GreenCheckProductGlyphIcon className="size-4 text-primary" />
+                              <GreenCheckProductGlyphIcon className="size-4" />
                             ) : (
-                              <WarningProductGlyphIcon className="text-secondary size-4" />
+                              <WarningProductGlyphIcon className="size-4" />
                             )}
                           </span>
-                          <p className={`leading-1 ${featureColor}`}>
-                            {item.filterLabel}{" "}
-                            <Tooltip
-                              content={
-                                <p className="text-body">{item.description}</p>
-                              }
-                            >
-                              <span className="whitespace-nowrap">
-                                <MdInfoOutline color={featureColor} />
-                              </span>
-                            </Tooltip>
+                          <p className={cn("leading-1", featureColor)}>
+                            {filterLabelRoot && `${filterLabelRoot} `}
+                            <span className="whitespace-nowrap">
+                              {filterLabelLastWord}
+                              <Tooltip
+                                content={
+                                  <p className="text-body">
+                                    {item.description}
+                                  </p>
+                                }
+                              >
+                                <MdInfoOutline className="ms-1 translate-y-0.5" />
+                              </Tooltip>
+                            </span>
                           </p>
                         </li>
                       )
