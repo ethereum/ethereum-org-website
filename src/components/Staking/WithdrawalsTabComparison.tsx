@@ -1,19 +1,10 @@
 import { useTranslation } from "next-i18next"
-import {
-  ListItem,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
-  UnorderedList,
-} from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import Translation from "@/components/Translation"
+import { ListItem, UnorderedList } from "@/components/ui/list"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -28,21 +19,28 @@ const WithdrawalsTabComparison = () => {
   }
 
   return (
-    <Tabs>
-      <TabList>
-        <Tab onClick={() => handleMatomoEvent("Current stakers")}>
+    <Tabs defaultValue="current">
+      <TabsList className="p-0">
+        <TabsTrigger
+          value="current"
+          onClick={() => handleMatomoEvent("Current stakers")}
+        >
           {t("comp-withdrawal-comparison-current-title")}
-        </Tab>
-        <Tab onClick={() => handleMatomoEvent("New stakers")}>
+        </TabsTrigger>
+        <TabsTrigger
+          value="new"
+          onClick={() => handleMatomoEvent("New stakers")}
+        >
           {t("comp-withdrawal-comparison-new-title")}
-        </Tab>
-      </TabList>
+        </TabsTrigger>
+      </TabsList>
 
-      <TabPanels>
-        <TabPanel>
-          <OldHeading as="h3">
-            {t("comp-withdrawal-comparison-current-title")}
-          </OldHeading>
+      <div>
+        <TabsContent
+          value="current"
+          className="space-y-4 bg-background-highlight"
+        >
+          <h3>{t("comp-withdrawal-comparison-current-title")}</h3>
           <UnorderedList>
             <ListItem>
               <Translation id="page-staking:comp-withdrawal-comparison-current-li-1" />{" "}
@@ -51,27 +49,25 @@ const WithdrawalsTabComparison = () => {
               <Translation id="page-staking:comp-withdrawal-comparison-current-li-2" />
             </ListItem>
           </UnorderedList>
-          <Text fontWeight="bold">
+          <p className="font-bold">
             <Translation id="page-staking:comp-withdrawal-comparison-current-p" />
-          </Text>
+          </p>
 
           <WithdrawalCredentials />
-        </TabPanel>
+        </TabsContent>
 
-        <TabPanel>
-          <OldHeading as="h3">
-            {t("comp-withdrawal-comparison-new-title")}
-          </OldHeading>
+        <TabsContent value="new" className="space-y-4 bg-background-highlight">
+          <h3>{t("comp-withdrawal-comparison-new-title")}</h3>
           <UnorderedList>
             <ListItem>{t("comp-withdrawal-comparison-new-li-1")}</ListItem>
             <ListItem>{t("comp-withdrawal-comparison-new-li-2")}</ListItem>
           </UnorderedList>
-          <Text fontWeight="bold">{t("comp-withdrawal-comparison-new-p")}</Text>
+          <p className="font-bold">{t("comp-withdrawal-comparison-new-p")}</p>
           <ButtonLink href="https://launchpad.ethereum.org/" hideArrow>
             {t("comp-withdrawal-comparison-new-link")}
           </ButtonLink>
-        </TabPanel>
-      </TabPanels>
+        </TabsContent>
+      </div>
     </Tabs>
   )
 }
