@@ -519,7 +519,10 @@ const HomePage = ({
                             </p>
                           </div>
                         </AccordionTrigger>
-                        <AccordionContent className="relative border-t">
+                        <AccordionContent
+                          className="relative border-t"
+                          dir="ltr"
+                        >
                           <Suspense fallback={<SkeletonLines noOfLines={16} />}>
                             <div className="-m-2 max-h-[50vh] overflow-auto">
                               <Codeblock
@@ -551,7 +554,9 @@ const HomePage = ({
                   setIsOpen={setModalOpen}
                   title={codeExamples[activeCode].title}
                 >
-                  <Suspense fallback={<SkeletonLines noOfLines={16} />}>
+                  <Suspense
+                    fallback={<SkeletonLines noOfLines={16} dir="ltr" />}
+                  >
                     <Codeblock
                       codeLanguage={codeExamples[activeCode].codeLanguage}
                       allowCollapse={false}
