@@ -12571,6 +12571,42 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Xcertik-Realist",
+      "name": "NilFoundation",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63165931?v=4",
+      "profile": "https://github.com/Xcertik-Realist",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "gconnect",
+      "name": "Glory Agatevure",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23031920?v=4",
+      "profile": "https://github.com/gconnect",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "emmanuellar",
+      "name": "Amarachi Johnson-Ubah",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41474439?v=4",
+      "profile": "http://amarachijohnson.com",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "sumitvekariya",
+      "name": "Sumit Vekariya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20764957?v=4",
+      "profile": "http://sumitvekariya.surge.sh",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
