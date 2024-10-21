@@ -91,7 +91,7 @@ Goerli ist ein Testnet zum Testen, Validieren und Staking. Das Goerli-Netzwerk i
 - [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Chainstack Goerli-Faucet](https://faucet.chainstack.com/goerli-faucet)
 
-Um einen Validator im Goerli-Testnet zu starten, verwenden Sie das [Launchpad "cheap goerli validator"](https://goerli.launchpad.ethstaker.cc/en/) von ethstaker.
+Um einen Validator im Goerli-Testnet zu starten, verwenden Sie das [Launchpad "cheap goerli validator"](https://holesky.launchpad.ethstaker.cc/en/) von ethstaker.
 
 ### Layer-2-Testnets {#layer-2-testnets}
 

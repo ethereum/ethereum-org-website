@@ -91,7 +91,7 @@ Goerliは、バリデーションやステーキングのテストを行うた�
 - [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Chainstack Goerli faucet](https://faucet.chainstack.com/goerli-faucet)
 
-Goerliテストネットでバリデータを起動するには、ethstakerの["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/)を使用してください。
+Goerliテストネットでバリデータを起動するには、ethstakerの["cheap goerli validator" launchpad](https://holesky.launchpad.ethstaker.cc/en/)を使用してください。
 
 ### レイヤー2テストネット {#layer-2-testnets}
 
