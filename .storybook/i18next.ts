@@ -23,7 +23,9 @@ export const ns = [
   "page-developers-index",
   "page-what-is-ethereum",
   "page-upgrades-index",
+  "page-wallets-find-wallet",
   "page-developers-docs",
+  "table",
 ] as const
 const supportedLngs = Object.keys(baseLocales)
 

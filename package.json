@@ -45,12 +45,14 @@
     "@radix-ui/react-portal": "^1.1.1",
     "@radix-ui/react-progress": "^1.1.0",
     "@radix-ui/react-radio-group": "^1.2.0",
+    "@radix-ui/react-select": "^2.1.1",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-switch": "^1.1.0",
     "@radix-ui/react-tabs": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.2",
     "@radix-ui/react-visually-hidden": "^1.1.0",
     "@socialgouv/matomo-next": "^1.8.0",
+    "@tanstack/react-table": "^8.19.3",
     "chart.js": "^4.4.2",
     "chartjs-plugin-datalabels": "^2.2.0",
     "class-variance-authority": "^0.7.0",
@@ -87,6 +89,7 @@
     "tailwind-variants": "^0.2.1",
     "tailwindcss-animate": "^1.0.7",
     "usehooks-ts": "^3.1.0",
+    "vaul": "^1.0.0",
     "yaml-loader": "^0.8.0"
   },
   "devDependencies": {
