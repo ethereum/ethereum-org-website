@@ -162,7 +162,7 @@ export const StakingProductCard = ({
   return (
     <div className="rounded-base hover:scale-101 flex flex-col bg-background-highlight transition-transform">
       <div className="flex max-h-24 space-x-3 p-6">
-        {!!Svg && <Svg className="rounded-md" width={48} height={48} />}
+        {!!Svg && <Svg className="size-12" />}
         <div>
           <h4 className="text-xl">{name}</h4>
           {typeof minEth !== "undefined" && (
