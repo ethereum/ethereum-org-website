@@ -42,7 +42,7 @@ export const NoSelectedAnswer: Story = {}
 
 export const SelectedAnswer: Story = {
   args: {
-    currentQuestionAnswerChoice: { answerId: "g001-a", isCorrect: true },
+    currentQuestionAnswerChoice: { answerId: "rollups-1-a", isCorrect: true },
   },
 }
 

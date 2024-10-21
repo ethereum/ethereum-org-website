@@ -32,7 +32,7 @@ export const StartQuestion: Story = {
 }
 
 const clickAnswer = async (
-  selectedId: `g001-${string}`,
+  selectedId: `rollups-1-${string}`,
   answers: HTMLElement[]
 ) => {
   const selectedAnswer = answers.find((answer) => answer.id === selectedId)
@@ -50,7 +50,7 @@ export const SelectedAnswer: Story = {
     const answers = canvas.getAllByTestId("quiz-question-answer")
 
     // Click the first answer ("which is the correct answer")
-    await clickAnswer("g001-a", answers)
+    await clickAnswer("rollups-1-a", answers)
   },
 }
 
@@ -73,6 +73,6 @@ export const SelectedIncorrectAnswer: Story = {
     const answers = canvas.getAllByTestId("quiz-question-answer")
 
     // Click the second answer ("which is the incorrect answer")
-    await clickAnswer("g001-b", answers)
+    await clickAnswer("rollups-1-b", answers)
   },
 }
