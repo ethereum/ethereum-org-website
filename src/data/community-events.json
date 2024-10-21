@@ -675,5 +675,14 @@
     "startDate": "2024-12-6",
     "endDate": "2024-12-8",
     "imageUrl": "https://ethindia.co/assets/images/og-image.png"
+  },
+  {
+    "title": "ETH Belgrade 3",
+    "href": "https://ethbelgrade.rs/",
+    "location": "Belgrade, Serbia",
+    "description": "The most welcoming ETH conference & hackathon in the heart of the Balkans. Part of Belgrade Blockchain Week. 30 May - 4 June 2025 - see you in Belgrade!",
+    "startDate": "2025-05-30",
+    "endDate": "2025-06-4",
+    "imageUrl": "https://ethbelgrade.rs/eth-belgrade-og-2025.jpg"
   }
 ]
