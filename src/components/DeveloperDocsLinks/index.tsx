@@ -4,8 +4,8 @@ import Translation from "@/components/Translation"
 
 import docLinks from "@/data/developer-docs-links.yaml"
 
-import InlineLink from "./ui/Link"
-import { ListItem, UnorderedList } from "./ui/list"
+import InlineLink from "../ui/Link"
+import { ListItem, UnorderedList } from "../ui/list"
 
 export type DeveloperDocsLinksProps = {
   headerId: string
