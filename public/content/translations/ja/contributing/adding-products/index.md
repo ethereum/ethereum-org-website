@@ -82,7 +82,7 @@ lang: ja
 
 イーサリアムの流動的な性質により、チームと製品が現れては消え、イノベーションは毎日起こっています。そのため、下記のようなコンテンツの定期的なチェックを実施しています。
 
-- 掲載されている分散型アプリ(Dapp)すべてが、引き続き基準を満たしているかどうかの確認
+- 掲載されている分散型アプリ(Dapp)のすべてが、引き続き基準を満たしているかどうかの確認
 - 現在掲載されている製品よりも、多くの基準を満たす製品の提案がないかの確認
 
 上記の確認にご協力ください。 [イシューを作成するか](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)[website@ethereum.org](mailto:website@ethereum.org)へメールでお知らせください。
