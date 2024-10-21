@@ -125,7 +125,7 @@ const WalletSubComponent = ({
             )
           })}
         </div>
-        <div>
+        <div className="ml-3">
           <h4 className="mb-2 text-md font-bold">
             {t("page-find-wallet-social-links")}
           </h4>
@@ -172,7 +172,7 @@ const WalletSubComponent = ({
             )}
           </div>
         </div>
-        <p className="italic">{`${wallet.name} ${t("page-find-wallet-info-updated-on")} ${walletLastUpdated}`}</p>
+        <p className="ml-3 italic">{`${wallet.name} ${t("page-find-wallet-info-updated-on")} ${walletLastUpdated}`}</p>
       </div>
     </div>
   )
