@@ -1,5 +1,3 @@
-import { ListProps } from "@chakra-ui/react"
-
 import type { ToCItem, TocNodeType } from "@/lib/types"
 
 // RegEx patterns
@@ -24,32 +22,6 @@ const slugify = (s: string): string =>
 export const parseHeadingId = (heading: string): string => {
   const match = customIdRegEx.exec(heading)
   return match ? match[2].toLowerCase() : slugify(heading)
-}
-
-/**
- * Common props used used for the outermost list element in the mobile and desktop renders
- */
-export const outerListProps: ListProps = {
-  borderStart: "1px solid",
-  borderStartColor: "body.medium",
-  borderTop: 0,
-  fontSize: "sm",
-  spacing: "2",
-  m: 0,
-  mt: 2,
-  mb: 2,
-  ps: 4,
-  pt: 0,
-  sx: {
-    // TODO: Flip to object syntax with `lg` token after completion of Chakra migration
-    "@media (max-width: var(--eth-breakpoints-lg))": {
-      borderStart: 0,
-      borderTop: "1px",
-      borderTopColor: "primary300",
-      ps: 0,
-      pt: 4,
-    },
-  },
 }
 
 /**
