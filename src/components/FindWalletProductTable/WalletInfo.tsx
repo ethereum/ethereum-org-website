@@ -117,20 +117,22 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
             className={`${isExpanded ? "block" : "hidden"} absolute -bottom-9 -top-0 left-1/2 w-1 -translate-x-1/2 transform ${wallet.twBackgroundColor}`}
           />
         </div>
-        <ButtonLink
-          href={wallet.url}
-          variant="outline"
-          w={{ base: "full", lg: "auto" }}
-          isExternal
-          size="sm"
-          customEventOptions={{
-            eventCategory: "WalletExternalLinkList",
-            eventAction: "Tap main button",
-            eventName: `${wallet.name}`,
-          }}
-        >
-          {t("page-find-wallet-visit-website")}
-        </ButtonLink>
+        <div className="flex flex-1">
+          <ButtonLink
+            href={wallet.url}
+            variant="outline"
+            w={{ base: "full", lg: "auto" }}
+            isExternal
+            size="sm"
+            customEventOptions={{
+              eventCategory: "WalletExternalLinkList",
+              eventAction: "Tap main button",
+              eventName: `${wallet.name}`,
+            }}
+          >
+            {t("page-find-wallet-visit-website")}
+          </ButtonLink>
+        </div>
       </div>
     </div>
   )
