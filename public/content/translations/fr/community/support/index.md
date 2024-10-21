@@ -73,7 +73,6 @@ Voici quelques exemples connus :
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 
@@ -92,6 +91,7 @@ La plupart des équipes qui créent des clients Ethereum disposent aussi d'espac
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### Clients de consensus {#consensus-clients}
 

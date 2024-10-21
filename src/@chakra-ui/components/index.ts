@@ -1,5 +1,4 @@
 import { Accordion } from "./Accordion"
-import { Alert } from "./Alert"
 import { Avatar } from "./Avatar"
 import { Badge } from "./Badge"
 import { Breadcrumb } from "./Breadcrumb"
@@ -8,7 +7,6 @@ import { Checkbox } from "./Checkbox"
 import {
   closeButtonDefaultTheme,
   codeDefaultTheme,
-  dividerDefaultTheme,
   drawerDefaultTheme,
   formDefaultTheme,
   formLabelDefaultTheme,
@@ -31,7 +29,6 @@ import { Text } from "./Text"
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   Accordion,
-  Alert,
   Avatar,
   Badge,
   Breadcrumb,
@@ -39,7 +36,6 @@ export default {
   Checkbox,
   CloseButton: closeButtonDefaultTheme,
   Code: codeDefaultTheme,
-  Divider: dividerDefaultTheme,
   Drawer: drawerDefaultTheme,
   Form: formDefaultTheme,
   FormLabel: formLabelDefaultTheme,

@@ -2,8 +2,6 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 
-import { langViewportModes } from "../../../.storybook/modes"
-
 import CallToContributeComponent from "."
 
 const meta = {
@@ -15,11 +13,6 @@ const meta = {
   },
   parameters: {
     layout: "fullscreen",
-    chromatic: {
-      modes: {
-        ...langViewportModes,
-      },
-    },
   },
   decorators: [
     (Story) => (

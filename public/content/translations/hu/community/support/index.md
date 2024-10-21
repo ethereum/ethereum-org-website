@@ -73,7 +73,6 @@ Néhány népszerű példa:
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 
@@ -92,6 +91,7 @@ Az Ethereum klienseket építő csapatok is dedikált, nyilvános fórumokkal re
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### Konszenzusos kliensek {#consensus-clients}
 

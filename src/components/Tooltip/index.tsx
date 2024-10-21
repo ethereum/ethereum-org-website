@@ -1,4 +1,5 @@
 import React, { ComponentProps, ReactNode, useEffect } from "react"
+import { Portal } from "@radix-ui/react-portal"
 
 import { isMobile } from "@/lib/utils/isMobile"
 
@@ -16,12 +17,14 @@ export type TooltipProps = ComponentProps<typeof Popover> & {
   content: ReactNode
   children?: ReactNode
   onBeforeOpen?: () => void
+  container?: HTMLElement | null
 }
 
 const Tooltip = ({
   content,
   children,
   onBeforeOpen,
+  container,
   ...props
 }: TooltipProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -87,14 +90,16 @@ const Tooltip = ({
       <Trigger className="focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover">
         {children}
       </Trigger>
-      <Content
-        side="top"
-        sideOffset={2}
-        className="max-w-80 px-5 text-sm"
-        data-testid="tooltip-popover"
-      >
-        {content}
-      </Content>
+      <Portal container={container}>
+        <Content
+          side="top"
+          sideOffset={2}
+          className="max-w-80 px-5 text-sm"
+          data-testid="tooltip-popover"
+        >
+          {content}
+        </Content>
+      </Portal>
     </Component>
   )
 }

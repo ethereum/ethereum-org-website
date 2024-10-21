@@ -66,9 +66,9 @@ También hay dos implantaciones de prueba públicas mantenidas de Ethereum: Goer
 
 Kurtosis es un sistema de construcción para entornos de prueba de múltiples contenedores que permite a los desarrolladores levantar localmente instancias reproducibles de redes de cadena de bloques.
 
-El paquete de Kurtosis de Ethereum crea una instancia local de una red de prueba de Ethereum contenedorizada y parametrizable, con soporte para múltiples clientes diferentes de capa de ejecución (EL) y capa de consenso (CL) y un número n de nodos. Kurtosis maneja con elegancia todas las asignaciones de puertos locales y las conexiones de servicio para facilitar la creación de prototipos y pruebas de dApp y contratos inteligentes.
+El paquete Ethereum Kurtosis se puede utilizar para instanciar rápidamente una red de pruebas de Ethereum parametrizable, altamente escalable y privada sobre Docker o Kubernetes. El paquete es compatible con los principales clientes de la Capa de Ejecución (EL) y la Capa de Consenso (CL). Kurtosis gestiona con elegancia todos los mapeos locales de puertos y conexiones de servicios para una red representativa que se utilizará en flujos de trabajo de validación y pruebas relacionados con la infraestructura básica de Ethereum.
 
-- [Paquete de red Ethereum](https://github.com/kurtosis-tech/eth-network-package)
+- [Paquete de red Ethereum](https://github.com/kurtosis-tech/ethereum-package)
 - [Sitio web](https://www.kurtosis.com/)
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Documentación](https://docs.kurtosis.com/)

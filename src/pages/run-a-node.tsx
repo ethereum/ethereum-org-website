@@ -11,7 +11,6 @@ import {
   Flex,
   type FlexProps,
   type HeadingProps,
-  type Icon as ChakraIcon,
 } from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
@@ -20,6 +19,7 @@ import { Button, ButtonLink } from "@/components/Buttons"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
+import type { IconBaseType } from "@/components/icons/icon-base"
 import {
   DecentralizationGlyphIcon,
   DownloadGlyphIcon,
@@ -39,6 +39,7 @@ import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget as QuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 import { Stack, VStack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
@@ -47,7 +48,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { InfoGrid } from "@/layouts/Staking"
+import { InfoGrid } from "@/layouts/md/Staking"
 import community from "@/public/images/enterprise-eth.png"
 import hackathon from "@/public/images/hackathon_transparent.png"
 import impact from "@/public/images/impact_transparent.png"
@@ -56,8 +57,6 @@ import Dapptap from "@/public/images/run-a-node/dapptap.svg"
 import ethereumInside from "@/public/images/run-a-node/ethereum-inside.png"
 import Terminal from "@/public/images/run-a-node/terminal.svg"
 import leslie from "@/public/images/upgrades/upgrade_rhino.png"
-
-const Divider = () => <Box my="16" w="10%" h="1" bg="homeDivider" />
 
 const GappedPage = (props: ChildOnlyProp) => (
   <Flex
@@ -315,7 +314,7 @@ const Width40 = (props: ChildOnlyProp) => (
 )
 
 type RunANodeCard = {
-  image: typeof ChakraIcon
+  image: IconBaseType
   title: string
   preview: ReactNode
   body: string[]

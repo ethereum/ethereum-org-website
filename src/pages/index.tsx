@@ -2,6 +2,8 @@ import { Fragment, lazy, Suspense } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaDiscord, FaGithub } from "react-icons/fa6"
+import { IoMdCopy } from "react-icons/io"
+import { MdCheck } from "react-icons/md"
 
 import type {
   AllMetricData,
@@ -11,21 +13,23 @@ import type {
   RSSItem,
 } from "@/lib/types"
 
-import SvgButtonLink from "@/components/Buttons/SvgButtonLink"
+import SvgButtonLink, {
+  type SvgButtonLinkProps,
+} from "@/components/Buttons/SvgButtonLink"
 import { ChevronNext } from "@/components/Chevron"
 import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import { useHome } from "@/components/Homepage/useHome"
+import ValuesMarquee from "@/components/Homepage/ValuesMarquee"
 import AngleBrackets from "@/components/icons/angle-brackets.svg"
 import Calendar from "@/components/icons/calendar.svg"
 import CalendarAdd from "@/components/icons/calendar-add.svg"
 import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
-import Swiper from "@/components/Swiper"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
-import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardBanner,
@@ -43,14 +47,21 @@ import {
   SectionTag,
 } from "@/components/ui/section"
 import { SkeletonLines } from "@/components/ui/skeleton"
+import {
+  Swiper,
+  SwiperContainer,
+  SwiperNavigation,
+  SwiperSlide,
+} from "@/components/ui/swiper"
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { polishRSSList } from "@/lib/utils/rss"
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { breakpointAsNumber } from "@/lib/utils/screen"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -64,6 +75,14 @@ import {
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../../tailwind/ui/accordion"
+
+import { useClipboard } from "@/hooks/useClipboard"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -89,30 +108,51 @@ const Codeblock = lazy(() =>
 
 const StatsBoxGrid = lazy(() => import("@/components/StatsBoxGrid"))
 
-const cachedEthPrice = runOnlyOnce(fetchEthPrice)
-const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
-const cachedFetchTotalValueLocked = runOnlyOnce(fetchTotalValueLocked)
-const cachedXmlBlogFeeds = runOnlyOnce(async () => await fetchRSS(BLOG_FEEDS))
-const cachedAttestantBlog = runOnlyOnce(fetchAttestantPosts)
-const cachedGrowThePieData = runOnlyOnce(fetchGrowThePie)
-const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
+// API calls
+const fetchXmlBlogFeeds = async () => {
+  return await fetchRSS(BLOG_FEEDS)
+}
 
 type Props = BasePageProps & {
   metricResults: AllMetricData
   rssData: { rssItems: RSSItem[]; blogLinks: CommunityBlog[] }
 }
 
+// In seconds
+const REVALIDATE_TIME = BASE_TIME_UNIT * 24
+
+const loadData = dataLoader(
+  [
+    ["ethPrice", fetchEthPrice],
+    ["totalEthStaked", fetchTotalEthStaked],
+    ["totalValueLocked", fetchTotalValueLocked],
+    ["growThePieData", fetchGrowThePie],
+    ["communityEvents", fetchCommunityEvents],
+    ["attestantPosts", fetchAttestantPosts],
+    ["rssData", fetchXmlBlogFeeds],
+  ],
+  REVALIDATE_TIME * 1000
+)
+
 export const getStaticProps = (async ({ locale }) => {
-  const growThePieData = await cachedGrowThePieData()
+  const [
+    ethPrice,
+    totalEthStaked,
+    totalValueLocked,
+    growThePieData,
+    communityEvents,
+    attestantPosts,
+    xmlBlogs,
+  ] = await loadData()
+
   const metricResults: AllMetricData = {
-    ethPrice: await cachedEthPrice(),
-    totalEthStaked: await cachedFetchTotalEthStaked(),
-    totalValueLocked: await cachedFetchTotalValueLocked(),
+    ethPrice,
+    totalEthStaked,
+    totalValueLocked,
     txCount: growThePieData.txCount,
     txCostsMedianUsd: growThePieData.txCostsMedianUsd,
   }
 
-  const communityEvents = await cachedFetchCommunityEvents()
   const calendar = communityEvents.upcomingEventData
     .sort((a, b) => {
       const dateA = isValidDate(a.date) ? new Date(a.date).getTime() : -Infinity
@@ -134,10 +174,8 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
-  // load RSS feed items
-  const xmlBlogs = await cachedXmlBlogFeeds()
-  const attestantBlog = await cachedAttestantBlog()
-  const polishedRssItems = polishRSSList(attestantBlog, ...xmlBlogs)
+  // RSS feed items
+  const polishedRssItems = polishRSSList(attestantPosts, ...xmlBlogs)
   const rssItems = polishedRssItems.slice(0, RSS_DISPLAY_COUNT)
 
   const blogLinks = polishedRssItems.map(({ source, sourceUrl }) => ({
@@ -155,7 +193,7 @@ export const getStaticProps = (async ({ locale }) => {
       metricResults,
       rssData: { rssItems, blogLinks },
     },
-    revalidate: BASE_TIME_UNIT * 24,
+    revalidate: REVALIDATE_TIME,
   }
 }) satisfies GetStaticProps<Props>
 
@@ -179,7 +217,10 @@ const HomePage = ({
     upcomingEvents,
     joinActions,
     bentoItems,
+    eventCategory,
   } = useHome()
+
+  const { onCopy, hasCopied } = useClipboard()
 
   return (
     <MainArticle className="flex w-full flex-col items-center" dir={dir}>
@@ -191,28 +232,39 @@ const HomePage = ({
       <HomeHero heroImg={Hero} className="w-full" />
       <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
-          {subHeroCTAs.map(({ label, description, href, className, Svg }) => (
-            <Fragment key={label}>
-              <SvgButtonLink
-                Svg={Svg}
-                href={href}
-                label={label}
-                className={cn("xl:hidden", className)}
-                variant="col"
-              >
-                <p className="text-body">{description}</p>
-              </SvgButtonLink>
-              <SvgButtonLink
-                Svg={Svg}
-                href={href}
-                label={label}
-                className={cn("hidden xl:block", className)}
-                variant="row"
-              >
-                <p className="text-body">{description}</p>
-              </SvgButtonLink>
-            </Fragment>
-          ))}
+          {subHeroCTAs.map(
+            ({ label, description, href, className, Svg }, idx) => {
+              const Link = (
+                props: Omit<
+                  SvgButtonLinkProps,
+                  "Svg" | "href" | "label" | "children"
+                >
+              ) => (
+                <SvgButtonLink
+                  Svg={Svg}
+                  href={href}
+                  label={label}
+                  customEventOptions={{
+                    eventCategory,
+                    eventAction: "Top 4 CTAs",
+                    eventName: subHeroCTAs[idx].eventName,
+                  }}
+                  {...props}
+                >
+                  <p className="text-body">{description}</p>
+                </SvgButtonLink>
+              )
+              return (
+                <Fragment key={label}>
+                  <Link className={cn("xl:hidden", className)} variant="col" />
+                  <Link
+                    className={cn("hidden xl:block", className)}
+                    variant="row"
+                  />
+                </Fragment>
+              )
+            }
+          )}
         </div>
 
         {/* Use Cases - A new way to use the internet */}
@@ -238,31 +290,45 @@ const HomePage = ({
           </div>
 
           {/* Mobile */}
-          <Swiper
-            options={{ effect: "cards" }}
+          <SwiperContainer
             className={cn(
               "lg:hidden", // Mobile only
               "[&_.swiper-slide]:overflow-visible [&_.swiper-slide]:rounded-2xl [&_.swiper-slide]:shadow-card-hover",
+              "[&_.swiper-slide-shadow]:!bg-transparent",
               "[&_.swiper]:mx-auto [&_.swiper]:mt-4 [&_.swiper]:!flex [&_.swiper]:h-fit [&_.swiper]:max-w-128 [&_.swiper]:flex-col [&_.swiper]:items-center"
             )}
           >
-            {bentoItems.map(({ className, ...item }) => (
-              <BentoCard
-                key={item.title}
-                imgHeight={220}
-                {...item}
-                className={cn(className, "bg-background text-body")}
-                imgWidth={undefined} // Intentionally last to override box
-              />
-            ))}
-          </Swiper>
-
+            <Swiper
+              effect="cards"
+              onSlideChange={({ activeIndex }) => {
+                trackCustomEvent({
+                  eventCategory,
+                  eventAction: "mobile use cases",
+                  eventName: `swipe to card ${activeIndex + 1}`,
+                })
+              }}
+            >
+              {bentoItems.map(({ className, ...item }) => (
+                <SwiperSlide key={item.title}>
+                  <BentoCard
+                    imgHeight={220}
+                    {...item}
+                    className={cn(className, "bg-background text-body")}
+                    imgWidth={undefined} // Intentionally last to override box
+                    eventCategory={eventCategory}
+                  />
+                </SwiperSlide>
+              ))}
+              <SwiperNavigation />
+            </Swiper>
+          </SwiperContainer>
           {/* Desktop */}
           {bentoItems.map(({ className, ...item }) => (
             <BentoCard
               key={item.title}
               {...item}
               className={cn(className, "max-lg:hidden")} // Desktop only
+              eventCategory={eventCategory}
             />
           ))}
         </Section>
@@ -313,21 +379,28 @@ const HomePage = ({
                   {t("page-index:page-index-popular-topics-header")}
                 </h3>
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
-                  {popularTopics.map(({ label, Svg, href, className }) => (
-                    <SvgButtonLink
-                      key={label}
-                      Svg={Svg}
-                      href={href}
-                      className={cn(
-                        "text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row",
-                        className
-                      )}
-                    >
-                      <p className="text-start text-xl font-bold text-body group-hover:underline">
-                        {label}
-                      </p>
-                    </SvgButtonLink>
-                  ))}
+                  {popularTopics.map(
+                    ({ label, Svg, href, eventName, className }) => (
+                      <SvgButtonLink
+                        key={label}
+                        Svg={Svg}
+                        href={href}
+                        className={cn(
+                          "text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row",
+                          className
+                        )}
+                        customEventOptions={{
+                          eventCategory,
+                          eventAction: "popular topics",
+                          eventName,
+                        }}
+                      >
+                        <p className="text-start text-xl font-bold text-body group-hover:underline">
+                          {label}
+                        </p>
+                      </SvgButtonLink>
+                    )
+                  )}
                 </div>
                 <div className="flex py-8 sm:justify-center">
                   <ButtonLink
@@ -336,6 +409,11 @@ const HomePage = ({
                     variant="outline"
                     isSecondary
                     className="max-sm:self-start"
+                    customEventOptions={{
+                      eventCategory,
+                      eventAction: "learn",
+                      eventName: "learn",
+                    }}
                   >
                     {t("page-index:page-index-popular-topics-action")}{" "}
                     <ChevronNext />
@@ -346,11 +424,12 @@ const HomePage = ({
           </SectionContent>
         </Section>
 
-        {/* TODO: Add "The Internet Is Changing" section */}
+        {/* Values - The Internet Is Changing */}
+        <ValuesMarquee />
 
         {/* Builders - Blockchain's biggest builder community */}
         <Section id="builders" variant="responsiveFlex">
-          <SectionBanner>
+          <SectionBanner className="relative">
             <TwImage src={BuildersImage} alt="" />
           </SectionBanner>
 
@@ -363,7 +442,16 @@ const HomePage = ({
               {t("page-index:page-index-builders-description")}
             </p>
             <div className="flex flex-wrap gap-6 py-8">
-              <ButtonLink href="/developers/" size="lg" className="w-fit">
+              <ButtonLink
+                href="/developers/"
+                size="lg"
+                className="w-fit"
+                customEventOptions={{
+                  eventCategory,
+                  eventAction: "builders",
+                  eventName: "developers",
+                }}
+              >
                 {t("page-index:page-index-builders-action-primary")}{" "}
                 <ChevronNext />
               </ButtonLink>
@@ -373,6 +461,11 @@ const HomePage = ({
                 variant="outline"
                 isSecondary
                 className="w-fit"
+                customEventOptions={{
+                  eventCategory,
+                  eventAction: "builders",
+                  eventName: "dev docs",
+                }}
               >
                 {t("page-index:page-index-builders-action-secondary")}
               </ButtonLink>
@@ -382,11 +475,24 @@ const HomePage = ({
                 title={t("page-index:page-index-developers-code-examples")}
                 Svg={AngleBrackets}
               >
-                {codeExamples.map(({ title, description }, idx) => (
+                {/* Desktop */}
+                {codeExamples.map(({ title, description, eventName }, idx) => (
                   <button
                     key={title}
-                    className="flex flex-col gap-y-0.5 border-t px-6 py-4 hover:bg-background-highlight"
-                    onClick={() => toggleCodeExample(idx)}
+                    className={cn(
+                      "flex flex-col gap-y-0.5 border-t px-6 py-4 hover:bg-background-highlight max-md:hidden",
+                      isModalOpen &&
+                        idx === activeCode &&
+                        "bg-background-highlight"
+                    )}
+                    onClick={() => {
+                      toggleCodeExample(idx)
+                      trackCustomEvent({
+                        eventCategory,
+                        eventAction: "Code Examples",
+                        eventName,
+                      })
+                    }}
                   >
                     <p className="font-bold">{title}</p>
                     <p className="text-start text-sm text-body-medium">
@@ -394,27 +500,70 @@ const HomePage = ({
                     </p>
                   </button>
                 ))}
+                {/* Mobile */}
+                <Accordion type="single" collapsible className="md:hidden">
+                  {codeExamples.map(
+                    ({ title, description, code, codeLanguage }) => (
+                      <AccordionItem
+                        key={title}
+                        value={title}
+                        className="relative"
+                      >
+                        <AccordionTrigger className="flex border-t px-6 py-4 hover:bg-background-highlight">
+                          <div className="flex flex-col items-start gap-y-0.5">
+                            <p className="text-start text-md font-bold text-body">
+                              {title}
+                            </p>
+                            <p className="text-start text-sm text-body-medium">
+                              {description}
+                            </p>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="relative border-t">
+                          <Suspense fallback={<SkeletonLines noOfLines={16} />}>
+                            <div className="-m-2 max-h-[50vh] overflow-auto">
+                              <Codeblock
+                                codeLanguage={codeLanguage}
+                                allowCollapse={false}
+                                className="[&>div]:-m-//2 [&>div]:rounded-none [&_*]:!text-xs [&_pre]:p-4"
+                                fromHomepage
+                              >
+                                {code}
+                              </Codeblock>
+                              <Button
+                                onClick={() => onCopy(code)}
+                                className="absolute end-4 top-4"
+                              >
+                                {hasCopied ? <MdCheck /> : <IoMdCopy />}
+                              </Button>
+                            </div>
+                          </Suspense>
+                        </AccordionContent>
+                      </AccordionItem>
+                    )
+                  )}
+                </Accordion>
               </WindowBox>
+              {isModalOpen && (
+                // TODO: Migrate CodeModal, CodeBlock from Chakra-UI to tailwind/shad-cn
+                <CodeModal
+                  isOpen={isModalOpen}
+                  setIsOpen={setModalOpen}
+                  title={codeExamples[activeCode].title}
+                >
+                  <Suspense fallback={<SkeletonLines noOfLines={16} />}>
+                    <Codeblock
+                      codeLanguage={codeExamples[activeCode].codeLanguage}
+                      allowCollapse={false}
+                      className="[&_pre]:p-6"
+                      fromHomepage
+                    >
+                      {codeExamples[activeCode].code}
+                    </Codeblock>
+                  </Suspense>
+                </CodeModal>
+              )}
             </div>
-
-            {isModalOpen && (
-              // TODO: Migrate CodeModal, CodeBlock from Chakra-UI to tailwind/shad-cn
-              <CodeModal
-                isOpen={isModalOpen}
-                setIsOpen={setModalOpen}
-                title={codeExamples[activeCode].title}
-              >
-                <Suspense fallback={<SkeletonLines noOfLines={16} />}>
-                  <Codeblock
-                    codeLanguage={codeExamples[activeCode].codeLanguage}
-                    allowCollapse={false}
-                    fromHomepage
-                  >
-                    {codeExamples[activeCode].code}
-                  </Codeblock>
-                </Suspense>
-              </CodeModal>
-            )}
           </SectionContent>
         </Section>
 
@@ -439,7 +588,15 @@ const HomePage = ({
               <p>{t("page-index:page-index-community-description-3")}</p>
             </div>
             <div className="flex flex-wrap gap-3 py-8">
-              <ButtonLink href="/community/" size="lg">
+              <ButtonLink
+                href="/community/"
+                size="lg"
+                customEventOptions={{
+                  eventCategory,
+                  eventAction: "community",
+                  eventName: "community",
+                }}
+              >
                 {t("page-index:page-index-community-action")} <ChevronNext />
               </ButtonLink>
               <div className="flex gap-3">
@@ -449,6 +606,11 @@ const HomePage = ({
                   variant="outline"
                   isSecondary
                   hideArrow
+                  customEventOptions={{
+                    eventCategory,
+                    eventAction: "community",
+                    eventName: "discord",
+                  }}
                 >
                   <FaDiscord />
                 </ButtonLink>
@@ -458,6 +620,11 @@ const HomePage = ({
                   variant="outline"
                   isSecondary
                   hideArrow
+                  customEventOptions={{
+                    eventCategory,
+                    eventAction: "community",
+                    eventName: "github",
+                  }}
                 >
                   <FaGithub />
                 </ButtonLink>
@@ -469,47 +636,57 @@ const HomePage = ({
                 Svg={Calendar}
               >
                 {calendar.length > 0 ? (
-                  calendar.map(({ date, title, calendarLink }) => (
-                    <div
-                      key={title}
-                      className="flex flex-col justify-between gap-6 border-t px-6 py-4 xl:flex-row"
-                    >
-                      <div className="flex flex-col gap-y-0.5 text-center text-base sm:text-start">
-                        <a
-                          href={calendarLink}
-                          className="text-sm font-bold text-body no-underline hover:underline"
-                        >
-                          {title}
-                        </a>
-                        <p className="italic text-body-medium">
-                          {new Intl.DateTimeFormat(locale, {
-                            month: "long",
-                            day: "2-digit",
-                            year: "numeric",
-                            hour: "numeric",
-                            minute: "numeric",
-                          }).format(new Date(date))}
-                        </p>
-                      </div>
-                      <ButtonLink
-                        className="h-fit w-full text-nowrap px-5 sm:w-fit xl:self-center"
-                        size="md"
-                        variant="ghost"
-                        href={calendarLink}
-                        hideArrow
+                  calendar.map(({ date, title, calendarLink }) => {
+                    const customEventOptions = {
+                      eventCategory,
+                      eventAction: "Community Events Widget",
+                      eventName: "upcoming",
+                    }
+                    return (
+                      <div
+                        key={title + date}
+                        className="flex flex-col justify-between gap-6 border-t px-6 py-4 xl:flex-row"
                       >
-                        <CalendarAdd />{" "}
-                        {t("page-index:page-index-calendar-add")}
-                      </ButtonLink>
-                    </div>
-                  ))
+                        <div className="flex flex-col gap-y-0.5 text-center text-base sm:text-start">
+                          <Link
+                            href={calendarLink}
+                            className="text-sm font-bold text-body no-underline hover:underline"
+                            customEventOptions={customEventOptions}
+                            hideArrow
+                          >
+                            {title}
+                          </Link>
+                          <p className="italic text-body-medium">
+                            {new Intl.DateTimeFormat(locale, {
+                              month: "long",
+                              day: "2-digit",
+                              year: "numeric",
+                              hour: "numeric",
+                              minute: "numeric",
+                            }).format(new Date(date))}
+                          </p>
+                        </div>
+                        <ButtonLink
+                          className="h-fit w-full text-nowrap px-5 sm:w-fit xl:self-center"
+                          size="md"
+                          variant="ghost"
+                          href={calendarLink}
+                          hideArrow
+                          customEventOptions={customEventOptions}
+                        >
+                          <CalendarAdd />{" "}
+                          {t("page-index:page-index-calendar-add")}
+                        </ButtonLink>
+                      </div>
+                    )
+                  })
                 ) : (
                   <div className="flex flex-col justify-between gap-6 border-t px-6 py-4 lg:flex-row">
                     {t("page-index:page-index-calendar-fallback")}
                   </div>
                 )}
               </WindowBox>
-            </div>{" "}
+            </div>
           </SectionContent>
         </Section>
 
@@ -520,11 +697,10 @@ const HomePage = ({
           </h3>
           <p>{t("page-index:page-index-posts-subtitle")}</p>
 
-          <Swiper
-            className="mt-4 md:mt-16"
-            options={{
-              spaceBetween: 32,
-              breakpoints: {
+          <SwiperContainer className="mt-4 md:mt-16">
+            <Swiper
+              spaceBetween={32}
+              breakpoints={{
                 [breakpointAsNumber.sm]: {
                   slidesPerView: 2,
                   slidesPerGroup: 2,
@@ -533,37 +709,55 @@ const HomePage = ({
                   slidesPerView: 3,
                   slidesPerGroup: 3,
                 },
-              },
-            }}
-          >
-            {rssItems.map(({ pubDate, title, source, link, imgSrc }) => (
-              <Card key={title} href={link}>
-                <CardBanner>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={imgSrc} alt="" />
-                </CardBanner>
-                <CardContent>
-                  <CardTitle>{title}</CardTitle>
-                  {isValidDate(pubDate) && (
-                    <CardSubTitle>
-                      {new Intl.DateTimeFormat(locale, {
-                        month: "long",
-                        day: "numeric",
-                        year: "numeric",
-                      }).format(new Date(pubDate))}
-                    </CardSubTitle>
-                  )}
-                  <CardHighlight>{source}</CardHighlight>
-                </CardContent>
-              </Card>
-            ))}
-          </Swiper>
+              }}
+            >
+              {rssItems.map(({ pubDate, title, source, link, imgSrc }) => (
+                <SwiperSlide key={title}>
+                  <Card
+                    href={link}
+                    customEventOptions={{
+                      eventCategory,
+                      eventAction: "blogs_posts",
+                      eventName: source,
+                    }}
+                  >
+                    <CardBanner>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={imgSrc} alt="" loading="lazy" />
+                    </CardBanner>
+                    <CardContent>
+                      <CardTitle>{title}</CardTitle>
+                      {isValidDate(pubDate) && (
+                        <CardSubTitle>
+                          {new Intl.DateTimeFormat(locale, {
+                            month: "long",
+                            day: "numeric",
+                            year: "numeric",
+                          }).format(new Date(pubDate))}
+                        </CardSubTitle>
+                      )}
+                      <CardHighlight>{source}</CardHighlight>
+                    </CardContent>
+                  </Card>
+                </SwiperSlide>
+              ))}
+              <SwiperNavigation />
+            </Swiper>
+          </SwiperContainer>
 
           <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
             <p className="text-lg">{t("page-index:page-index-posts-action")}</p>
             <div className="flex flex-wrap gap-x-6 gap-y-4">
               {blogLinks.map(({ name, href }) => (
-                <Link href={href} key={name}>
+                <Link
+                  href={href}
+                  key={name}
+                  customEventOptions={{
+                    eventCategory,
+                    eventAction: "blogs_read_more",
+                    eventName: name!,
+                  }}
+                >
                   {name}
                 </Link>
               ))}
@@ -598,6 +792,11 @@ const HomePage = ({
                     className={cn(
                       idx === 0 && "col-span-1 sm:col-span-2 md:col-span-1"
                     )}
+                    customEventOptions={{
+                      eventCategory,
+                      eventAction: "posts",
+                      eventName: title,
+                    }}
                   >
                     <CardBanner>
                       {imageUrl ? (
@@ -606,6 +805,7 @@ const HomePage = ({
                           src={imageUrl}
                           alt=""
                           className="max-w-full object-cover object-center"
+                          loading="lazy"
                         />
                       ) : (
                         <TwImage src={EventFallback} alt="" />
@@ -633,8 +833,16 @@ const HomePage = ({
               )}
             </div>
           </div>
-          <div className="flex justify-start py-8">
-            <ButtonLink href="/community/events/" size="lg" className="mx-auto">
+          <div className="flex py-8 sm:justify-center">
+            <ButtonLink
+              href="/community/events/"
+              size="lg"
+              customEventOptions={{
+                eventCategory,
+                eventAction: "events",
+                eventName: "community events",
+              }}
+            >
               {t("page-index:page-index-events-action")} <ChevronNext />
             </ButtonLink>
           </div>
@@ -656,7 +864,7 @@ const HomePage = ({
             </div>
             <div className="mx-auto grid grid-cols-1 gap-16 md:grid-cols-2">
               {joinActions.map(
-                ({ Svg, label, href, className, description }) => (
+                ({ Svg, label, href, className, description, eventName }) => (
                   <SvgButtonLink
                     key={label}
                     Svg={Svg}
@@ -664,6 +872,11 @@ const HomePage = ({
                     href={href}
                     className={cn("max-w-screen-sm", className)}
                     variant="row"
+                    customEventOptions={{
+                      eventCategory,
+                      eventAction: "join",
+                      eventName,
+                    }}
                   >
                     <p className="text-body">{description}</p>
                   </SvgButtonLink>

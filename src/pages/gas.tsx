@@ -40,6 +40,7 @@ import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import Pill from "@/components/Pill"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -54,10 +55,6 @@ import walletImg from "@/public/images/wallet.png"
 import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
-
-const Divider = (props: BoxProps) => (
-  <Box my={16} w="10%" h={1} bg="homeDivider" {...props} />
-)
 
 const Page = (props: FlexProps) => (
   <Flex
@@ -276,12 +273,7 @@ const GasPage = () => {
               </InlineLink>
             </Text>
           </Box>
-          <GhostCard
-            flex="40%"
-            maxW="640px"
-            alignSelf="center"
-            mt={{ base: 16, lg: 2 }}
-          >
+          <GhostCard className="mt-16 max-w-[640px] self-center md:w-2/5 lg:mt-2">
             <Emoji text=":cat:" className="text-5xl" />
             <H3>{t("page-gas-attack-of-the-cryptokitties-header")}</H3>
             <Text>{t("page-gas-attack-of-the-cryptokitties-text")}</Text>

@@ -75,4 +75,4 @@ Los usuarios pueden consultar el saldo en ether de cualquier [cuenta](/developer
 - [Informe de Ethereum](/whitepaper/): la propuesta original de Ethereum. En este documento se incluyen una descripción de ether y los motivos por los que se creó.
 - [Calculadora de gwei](https://www.alchemy.com/gwei-calculator): utilice esta calculadora gwei para convertir fácilmente wei, gwei y ether. Simplemente añada cualquier cantidad de wei, gwei o ETH y calcule automáticamente la conversión.
 
-_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
+_¿Conoce algún recurso en la comunidad que le haya servido de ayuda? Edite esta página y añádalo._

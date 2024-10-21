@@ -1,10 +1,12 @@
-import React from "react"
 import { PiMagnifyingGlass } from "react-icons/pi"
-import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 
-import { SimulatorNavProps } from "@/lib/types"
+import type { SimulatorNavProps } from "@/lib/types"
 
-import { EthTokenIconGrayscale, QrCodeIcon } from "../../icons"
+import EthTokenIconGrayscale from "@/components/Simulator/icons/eth-token-icon-grayscale.svg"
+import QrCodeIcon from "@/components/Simulator/icons/qr-code-icon.svg"
+import { Button } from "@/components/ui/buttons/Button"
+import { Stack } from "@/components/ui/flex"
+
 import { NotificationPopover } from "../../NotificationPopover"
 import { CategoryTabs } from "../../WalletHome/CategoryTabs"
 
@@ -23,85 +25,47 @@ export const SendFromContacts = ({
   }
   return (
     <>
-      <Box py={8} px={6}>
-        <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" mb={8}>
-          Choose recipient
-        </Text>
+      <div className="px-6 py-8">
+        <p className="mb-8 text-xl font-bold md:text-2xl">Choose recipient</p>
         <NotificationPopover
           title="Example walkthrough"
           content={`Choose ${CONTACTS[0].name} from recent contacts`}
         >
           <Button
             variant="outline"
-            leftIcon={<Icon as={PiMagnifyingGlass} />}
-            rightIcon={<Icon as={QrCodeIcon} />}
-            color="disabled"
-            py={4}
-            w="full"
-            _hover={{
-              color: "disabled",
-              borderColor: "disabled",
-            }}
-            cursor="auto"
+            className="w-full cursor-auto border-disabled py-4 text-disabled hover:!text-disabled hover:shadow-none"
           >
-            <Text as="span" me="auto">
-              Address or contacts
-            </Text>
+            <PiMagnifyingGlass />
+            <span className="me-auto">Address or contacts</span>
+            <QrCodeIcon className="text-lg text-disabled" />
           </Button>
         </NotificationPopover>
-      </Box>
-      <Box py={8} px={6} bg="background.highlight" h="full">
+      </div>
+      <div className="h-full bg-background-highlight px-6 py-8">
         <CategoryTabs
           categories={["My contacts", "Recent"]}
           activeIndex={1}
           mb={4}
         />
-        <Flex direction="column" gap={4}>
+        <Stack className="gap-4">
           {CONTACTS.map(({ name, lastAction }, i) => (
             <Button
               key={name + i}
-              leftIcon={
-                <Icon
-                  as={EthTokenIconGrayscale}
-                  fill="black"
-                  w="30px"
-                  h="30px"
-                />
-              }
-              isDisabled={i > 0}
-              gap={2}
-              _disabled={{
-                color: "body.base",
-                bg: "background.base",
-                pointerEvents: "none",
-              }}
-              data-group
+              disabled={i > 0}
+              className="group gap-2 disabled:bg-background disabled:text-body hover:[&_path]:fill-primary-hover"
               onClick={() => handleSelection(name)}
             >
-              <Box as="span" flex={1}>
-                <Text
-                  as="span"
-                  display="block"
-                  fontWeight="bold"
-                  textAlign="start"
-                >
-                  {name}
-                </Text>
-                <Text
-                  as="span"
-                  display="block"
-                  color="body.light"
-                  textAlign="start"
-                  _groupDisabled={{ color: "body.medium" }}
-                  fontSize="sm"
-                >
+              <EthTokenIconGrayscale className="text-[30px]" />
+              <span className="flex-1">
+                <span className="block text-start font-bold">{name}</span>
+                <span className="block text-start text-sm text-white group-disabled:text-body-medium">
                   {lastAction}
-                </Text>
-              </Box>
+                </span>
+              </span>
             </Button>
           ))}
-        </Flex>
-      </Box>
+        </Stack>
+      </div>
     </>
   )
 }

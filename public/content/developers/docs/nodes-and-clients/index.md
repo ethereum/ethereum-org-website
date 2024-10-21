@@ -48,6 +48,7 @@ Multiple trackers offer a real-time overview of nodes in the Ethereum network. N
 - [Map of nodes](https://etherscan.io/nodetracker) by Etherscan
 - [Ethernodes](https://ethernodes.org/) by Bitfly
 - [Nodewatch](https://www.nodewatch.io/) by Chainsafe, crawling consensus nodes
+- [Monitoreth](https://monitoreth.io/) - by MigaLabs, A distributed network monitoring tool
 
 ## Node types {#node-types}
 
@@ -201,7 +202,6 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 | [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten, and more |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Sepolia, Ropsten, and more          |
 | [Grandine](https://docs.grandine.io/) (beta)                  | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, and more                           |
-
 
 ### Lighthouse {#lighthouse}
 

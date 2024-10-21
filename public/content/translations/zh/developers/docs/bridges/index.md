@@ -42,7 +42,7 @@ lang: zh
 
 - **原生链桥 –** 这些链桥通常用于加强特定区块链上的流动性，使用户更容易将资金转移到生态系统。 例如，[Arbitrum 链桥](https://bridge.arbitrum.io/)的目的就是为了方便用户从以太坊主网桥接到 Arbitrum。 其他此链类桥包括 Polygon PoS 链桥、[Optimism 网关](https://app.optimism.io/bridge)等。
 - **基于验证者或预言机的链桥 –** 这些链桥依赖于外部验证者组或预言机来验证跨链转移。 例如：Multichain 与 Across。
-- **通用信息传递链桥 – **这些链桥可以跨链传输资产、信息和任意数据。 例如：Nomad 与 LayerZero。
+- **通用信息传递链桥 – **这些链桥可以跨链传输资产、信息和任意数据。 例如：Axelar、LayerZero 与 Nomad。
 - **流动性网络 –** 这些链桥主要是通过原子交换将资产从一条链转移到另一条链。 一般来讲，它们不支持跨链信息传递。 例如：Connext 与 Hop。
 
 ## 权衡利弊 {#trade-offs}
@@ -67,17 +67,20 @@ lang: zh
 
 ## 链桥相关风险 {#risk-with-bridges}
 
-去中心化金融领域中最大的三次黑客攻击
-都是链桥造成的，而且链桥目前仍处于开发阶段早期。 使用任何链桥都有以下风险：
+去中心化金融领域中[最大的三次黑客攻击](https://rekt.news/leaderboard/)都是链桥造成的，而且链桥目前仍处于开发阶段早期。 使用任何链桥都有以下风险
 
 - **智能合约风险 –** 虽然许多链桥已经成功通过了审计，但只需智能合约中的一个缺陷就会使资产暴露在黑客攻击中（例如：[Solana 的 Wormhole 链桥](https://rekt.news/wormhole-rekt/)）。
 - **系统性金融风险** – 许多链桥使用包装资产在新的链上铸造规范化的原始资产。 这使生态系统面临系统性风险，正如我们所看到的那样，包装代币遭到利用。
 - **交易对手风险 –** 一些链桥采用可信设计，这要求用户依靠一种假设，即验证者不会串通起来窃取用户的资金。 用户需要信任这些第三方参与者，这使他们面临一些风险，比如跑路、审查和其他恶意活动。
 - **未解决的问题 –** 考虑到链桥处于发展阶段初期，还有许多关于链桥在不同市场条件下如何表现的问题都尚未解决，如网络拥塞期和在发生网络级攻击或状态回滚等不可预见的事件时。 这种不确定性带来了一定的风险，且风险程度目前仍然未知。
 
+
+
 ## 去中心化应用程序如何使用链桥？ {#how-can-dapps-use-bridges}
 
 下面介绍一些实际应用，在这些应用中，开发者可以考虑链桥并让他们的去中心化应用程序跨链：
+
+
 
 ### 集成桥接 {#integrating-bridges}
 
@@ -102,9 +105,13 @@ lang: zh
 
 如果去中心化应用程序计划集成链桥或聚合器，那么根据集成的深度会有不同的选择。 例如，如果只是进行前端集成以改善用户上手体验，去中心化应用程序将集成小组件。 然而，如果整合是为了探索更深层次的跨链策略，如质押、流动性矿池等，去中心化应用程序就集成软件开发工具包或应用程序接口。
 
+
+
 ### 在多条链上部署去中心化应用程序 {#deploying-a-dapp-on-multiple-chains}
 
 要在多条链上部署去中心化应用程序，开发者可以使用 [Alchemy](https://www.alchemy.com/)、[安全帽](https://hardhat.org/)、[Truffle](https://trufflesuite.com/)、[Moralis](https://moralis.io/) 等开发平台。 这些平台通常提供可组合的插件，能够支持去中心化应用程序跨链。 例如，开发者可以使用[安全帽部署插件](https://github.com/wighawag/hardhat-deploy)提供的确定性部署代理。
+
+
 
 #### 例子：
 
@@ -112,14 +119,20 @@ lang: zh
 - [构建跨链非同质化代币市场](https://youtu.be/WZWCzsB1xUE)
 - [Moralis：构建跨链非同质化代币去中心化应用程序](https://www.youtube.com/watch?v=ehv70kE1QYo)
 
+
+
 ### 监控跨链合约活动 {#monitoring-contract-activity-across-chains}
 
 要监控跨链合约活动，开发者可以使用子图和 Tenderly 等开发者平台实时观察智能合约。 这类平台上还有一些工具，提供更强大的跨链活动数据监控功能，例如，检查有没有[合约触发的事件](https://docs.soliditylang.org/en/v0.8.14/contracts.html?highlight=events#events)等。
+
+
 
 #### 工具
 
 - [图表](https://thegraph.com/en/)
 - [Tenderly](https://tenderly.co/)
+
+
 
 ## 延伸阅读 {#further-reading}
 

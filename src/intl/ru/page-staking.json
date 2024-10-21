@@ -111,12 +111,12 @@
   "page-staking-considerations-solo-7-title": "Несколько клиентов",
   "page-staking-considerations-solo-7-description": "Программное обеспечение позволяет пользователям не менее двух клиентов-исполнителей и двух клиентов на слое консенсуса с возможностью переключения между ними.",
   "page-staking-considerations-solo-7-valid": "Простое переключение между клиентами",
-  "page-staking-considerations-solo-7-warning": "Ограничено мажоритарным клиентом",
+  "page-staking-considerations-solo-7-warning": "Доступны только мажоритарные клиенты",
   "page-staking-considerations-solo-8-title": "Самостоятельній контроль",
   "page-staking-considerations-solo-8-description": "Пользователь самостоятельно контролирует все учетные данные валидаторов, включая ключи для подписания и вывода средств.",
   "page-staking-considerations-solo-8-warning": "Сторонний контроль",
   "page-staking-considerations-solo-9-title": "Экономичность",
-  "page-staking-considerations-solo-9-description": "Пльзователи могут запускать валидаторы при ставке менее 32 ETH, объединяя средства с другими людьми.",
+  "page-staking-considerations-solo-9-description": "Пользователи могут запускать валидаторы при ставке менее 32 ETH, объединяя средства с другими людьми.",
   "page-staking-considerations-solo-9-valid": "< 32 ETH",
   "page-staking-considerations-solo-9-warning": "32 ETH",
   "page-staking-considerations-saas-4-description": "Услуга была доступна и использовалась общественностью в указанный период времени.",
@@ -208,7 +208,7 @@
   "page-staking-faq-5-answer-p2": "Участники также заработают вознаграждения в форме комиссий и MEV при предложении блоков, которые становятся доступными немедленно по указанному получателем адресу.",
   "page-staking-faq-5-answer-link": "More on staking withdrawals",
   "page-staking-further-reading-author-vitalik-buterin": "Виталик Бутерин",
-  "page-staking-further-reading-2-link": "Обоснование проекта Serenity",
+  "page-staking-further-reading-2-link": "Обоснование обновления Serenity",
   "page-staking-further-reading-4-link": "Новости Eth2",
   "page-staking-further-reading-4-author": "Бен Эджингтон",
   "page-staking-further-reading-5-link": "Завершена работа над № 33, уровнем консенсуса Ethereum (январь 2022 г.)",
@@ -229,5 +229,8 @@
   "page-staking-withdrawals-important-notices": "Важные уведомления",
   "page-staking-withdrawals-important-notices-desc": "Вывод средств еще не доступен. Чтобы узнать больше, прочитайте <a href=\"https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/\" target=\"_blank\">Частые вопросы о слиянии Eth2 и положение после слияния</a>.",
   "page-upgrades-merge-btn": "Подробнее о слиянии",
-  "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Подпишитесь на блог EF</a>, чтобы получать по электронной почте уведомления о последних объявлениях протоколов."
+  "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Подпишитесь на блог EF</a>, чтобы получать по электронной почте уведомления о последних объявлениях протоколов.",
+  "page-staking-comparison-with-other-options": "Сравнение с другими вариантами",
+  "page-staking-any-amount": "Любая сумма",
+  "page-staking-testnet": "тестовая сеть"
 }

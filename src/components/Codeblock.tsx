@@ -202,11 +202,10 @@ const getValidChildrenForCodeblock = (child) => {
   }
 }
 
-export type CodeblockProps = {
+export type CodeblockProps = React.HTMLAttributes<HTMLDivElement> & {
   allowCollapse?: boolean
   codeLanguage: string
   fromHomepage?: boolean
-  children: React.ReactNode
 }
 
 const Codeblock = ({
@@ -214,6 +213,7 @@ const Codeblock = ({
   allowCollapse = true,
   codeLanguage,
   fromHomepage = false,
+  className,
 }: CodeblockProps) => {
   const { t } = useTranslation("common")
   const selectedTheme = useColorModeValue(codeTheme.light, codeTheme.dark)
@@ -227,14 +227,14 @@ const Codeblock = ({
 
   const [isCollapsed, setIsCollapsed] = useState(allowCollapse)
 
-  let className: string
+  let langClass: string
   if (React.isValidElement(children)) {
-    className = children?.props?.className
+    langClass = children?.props?.className
   } else {
-    className = codeLanguage || ""
+    langClass = codeLanguage || ""
   }
 
-  const matches = className?.match(/language-(.*)/)
+  const matches = langClass?.match(/language-(.*)/)
   const language = matches?.[1] || ""
 
   const shouldShowCopyWidget = ["js", "json", "python", "solidity"].includes(
@@ -249,12 +249,9 @@ const Codeblock = ({
   return (
     /* Overwrites codeblocks inheriting RTL styling in Right-To-Left script languages (e.g. Arabic) */
     /* Context: https://github.com/ethereum/ethereum-org-website/issues/6202 */
-    <div className="relative" dir="ltr">
+    <div className={cn("relative", className)} dir="ltr">
       <div
-        className={cn(
-          "mb-4 overflow-scroll rounded",
-          fromHomepage && "mb-0 border"
-        )}
+        className="overflow-scroll rounded"
         style={{
           maxHeight: isCollapsed
             ? `calc((1.2rem * ${LINES_BEFORE_COLLAPSABLE}) + 4.185rem)`

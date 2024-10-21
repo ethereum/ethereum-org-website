@@ -66,9 +66,9 @@ Ayrıca Ethereum'un halka açık iki test uygulaması da bulunmaktadır: Goerli 
 
 Kurtosis, geliştiriciler için blok zincir ağlarının tekrarlanabilir örneklerini yerel olarak oluşturmalarını sağlayan çoklu konteyner test ortamlarının yapısal bir sistemidir.
 
-Ethereum Kurtosis paketi, birden fazla farklı Yürütüm Katmanı (EL) ve Fikir birliği Katmanı (CL) istemcisi ve n sayıda düğüm desteği ile kapsayıcılı ve parametrelendirilebilir bir Ethereum test ağını yerel olarak örneklendirecek biçimde konteyner haline getirilimiştir. Kurtosis, kolay dApp ve akıllı sözleşme prototipleme ve testi için tüm yerel bağlantı noktası eşlemelerini ve servis bağlantılarını zarif bir şekilde yönetir.
+Ethereum Kurtosis paketi, Docker veya Kubernetes üzerinde parametrelendirilebilir, yüksek oranda ölçeklenebilir ve özel bir Ethereum test ağını hızlı bir şekilde örneklendirmek için kullanılabilir. Paket, tüm büyük Yürütüm Katmanı (EL) ve Fikir Birliği Katmanı (CL) istemcilerini destekler. Kurtosis, Ethereum'un çekirdek altyapısıyla ilgili doğrulama ve test iş akışlarında kullanılacak temsili bir ağ için tüm yerel bağlantı noktası eşlemelerini ve hizmet bağlantılarını incelikli bir şekilde yönetir.
 
-- [Ethereum ağ paketi](https://github.com/kurtosis-tech/eth-network-package)
+- [Ethereum ağ paketi](https://github.com/kurtosis-tech/ethereum-package)
 - [Web sitesi](https://www.kurtosis.com/)
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Dokümanlar](https://docs.kurtosis.com/)
