@@ -12598,6 +12598,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "sumitvekariya",
+      "name": "Sumit Vekariya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20764957?v=4",
+      "profile": "http://sumitvekariya.surge.sh",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
