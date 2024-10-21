@@ -152,7 +152,7 @@
   "page-staking-launchpad-widget-mainnet-label": "主网",
   "page-staking-launchpad-widget-mainnet-start": "开始在主网上质押",
   "page-staking-launchpad-widget-span": "选择网络",
-  "page-staking-launchpad-widget-p1": "在承担资金风险之前，单独验证者可能会在 Holesky 测试网上<strong>测试他们的设置</strong>和操作技能。记住，请务必选择<a href=\"/developers/docs/nodes-and-clients/client-diversity/\">非主流客户端</a>，因为非主流客户端可以提高网络的安全性并限制你的风险。",
+  "page-staking-launchpad-widget-p1": "独立验证者在冒险投入资金之前，应该在 Holesky 测试网上<strong>测试其设置</strong>和运营技能。请记住选择<a href=\"/developers/docs/nodes-and-clients/client-diversity/\">非主流客户端</a>非常重要，因为它能提升网络的安全性并减少你的风险。",
   "page-staking-launchpad-widget-p2": "如果你熟悉相关技能，你可以独自使用 Staking Launchpad，通过命令行来设置所需要的一切。",
   "page-staking-launchpad-widget-p3": "为了让事情变得更简单，请查看下面的一些工具和指南，它们可以帮助你使用 Staking Launchpad 轻松设置客户端。",
   "page-staking-launchpad-widget-link": "软件工具和指南",
@@ -229,5 +229,8 @@
   "page-staking-withdrawals-important-notices": "重要通知",
   "page-staking-withdrawals-important-notices-desc": "目前还不能提款。请阅读<a href=\"https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/\" target=\"_blank\">以太坊 2 合并和合并后常见问题</a>，了解更多信息。",
   "page-upgrades-merge-btn": "关于合并的更多信息",
-  "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">订阅以太坊基金会博客</a>以接收最新协议公告的电子邮件通知。"
+  "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">订阅以太坊基金会博客</a>以接收最新协议公告的电子邮件通知。",
+  "page-staking-comparison-with-other-options": "与其他选项比较",
+  "page-staking-any-amount": "任意金额",
+  "page-staking-testnet": "测试网"
 }

@@ -92,14 +92,15 @@ sidebarDepth: 2
 
 | 客户端        | 磁盘大小（快照同步） | 磁盘大小（完整归档） |
 | ---------- | ---------- | ---------- |
-| Geth       | 500GB+     | 12TB 以上    |
-| Nethermind | 500GB+     | 12TB 以上    |
 | Besu       | 800GB 以上   | 12TB 以上    |
 | Erigon     | 未提供        | 2.5TB 以上   |
+| Geth       | 500GB+     | 12TB 以上    |
+| Nethermind | 500GB+     | 12TB 以上    |
+| Reth       | 未提供        | 2.2TB 以上   |
 
-- 注意：Erigon 未提供快照同步，但可以进行完全修剪 (~500GB)
+- 注意：Erigon 和 Reth 不支持快照同步，但能支持完全修剪（Erigon 约需 2TB，Reth 约需 1.2TB）
 
-对于共识客户端，空间要求也取决于客户端实现和启用的功能（例如验证者、罚没者），但通常需要另外 200GB 磁盘空间存储信标数据。 由于验证者数量巨大，带宽负载也会增加。 你可以[在此分析中找到关于共识客户端要求的详细信息](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e)。
+对于共识客户端，空间要求也取决于客户端实现和启用的功能（例如验证者、罚没者），但通常需要另外 200GB 磁盘空间存储信标数据。 由于验证者数量巨大，带宽负载也会增加。 你可以[在此分析中找到关于共识客户端要求的详细信息](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)。
 
 #### 即插即用解决方案 {#plug-and-play}
 
@@ -126,7 +127,7 @@ sidebarDepth: 2
 
 以下是一些可以帮助你安装和控制客户端的项目，只需单击几下即可：
 
-- [DappNode](https://docs.dappnode.io/user/quick-start/first-steps/) - DappNode 不仅仅可以在供应商提供的机器上安装。 该软件、实际的节点启动器和具有许多功能的控制中心可以在任意硬件上使用。
+- [DappNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) - DappNode 不仅仅可以在供应商提供的机器上安装。 该软件、实际的节点启动器和具有许多功能的控制中心可以在任意硬件上使用。
 - [eth-docker](https://eth-docker.net/) - 使用 Docker 进行的自动化设置专注于简便和安全的质押，它需要用户具备基本的终端和 Docker 知识。我们推荐进阶用户可以选择此项目。
 - [Stereum](https://stereum.net/ethereum-node-setup/) - 通过 SSH 连接在远程服务器上安装客户端的启动器，配备 GUI 设置指南、控制中心和许多其他功能。
 - [NiceNode](https://www.nicenode.xyz/) - 提供简便用户体验的启动器，可在你的计算机上运行节点。 只需选择客户端并单击几下即可启动它们。 仍在开发中。
@@ -154,6 +155,7 @@ sidebarDepth: 2
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
+- [Reth](https://reth.rs/installation/installation.html)
 
 另外值得注意的是，客户端多样性有关[执行层的问题](/developers/docs/nodes-and-clients/client-diversity/#execution-layer)之一。 我们建议读者考虑运行非主流执行客户端。
 
@@ -177,7 +179,7 @@ sidebarDepth: 2
 
 另一种验证方式是确保所下载软件的哈希（一种唯一的加密指纹）与开发者提供的哈希相符。 这种方式甚至比使用 PGP 更容易，并且一些客户端仅提供此选项。 只需在下载的软件上运行哈希函数并将其与发布页面中的哈希进行比较。 例如：
 
-```
+```sh
 sha256sum teku-22.6.1.tar.gz
 
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
@@ -213,7 +215,7 @@ sha256sum teku-22.6.1.tar.gz
 
 此令牌由客户端软件自动生成，但在某些情况下，你可能需要自己生成它。 你可以使用 [OpenSSL](https://www.openssl.org/) 生成该令牌：
 
-```
+```sh
 openssl rand -hex 32 > jwtsecret
 ```
 
@@ -226,7 +228,7 @@ openssl rand -hex 32 > jwtsecret
 - 定义数据目录，包括区块链在内的所有数据都将存储在其中
   - 确保用真实路径代替该路径，例如指向外置驱动器的路径
 - 启用与客户端通信的接口
-  - 包括用于与共识客户端通信的 JSON 远程过程调用和引擎应用程序接口
+  - 包括用于与共识客户端通信的 JSON-RPC 和引擎应用程序接口
 - 为经过身份验证的应用程序接口定义 `jwtsecret` 的路径
   - 确保将示例路径替换为客户端可以访问的真实路径，例如 `/tmp/jwtsecret`
 
@@ -236,9 +238,9 @@ openssl rand -hex 32 > jwtsecret
 
 ##### 运行 Besu
 
-此示例在主网上启动 Besu，将区块链数据以默认格式存储在 `/data/ethereum` 下，启用 JSON 远程过程调用和引擎应用程序接口以连接共识客户端。 使用令牌 `jwtsecret` 对引擎应用程序接口进行身份验证，并且只允许来自 `localhost` 的调用。
+此示例在主网上启动 Besu，将区块链数据以默认格式存储在 `/data/ethereum` 下，启用 JSON-RPC 和引擎远程过程调用以连接共识客户端。 使用令牌 `jwtsecret` 对引擎应用程序接口进行身份验证，并且只允许来自 `localhost` 的调用。
 
-```
+```sh
 besu --network=mainnet \
     --data-path=/data/ethereum \
     --rpc-http-enabled=true \
@@ -250,7 +252,7 @@ besu --network=mainnet \
 
 Besu 还带有一个启动器选项，它会询问一系列问题并生成配置文件。 使用以下命令运行交互式启动器：
 
-```
+```sh
 besu --Xlauncher
 ```
 
@@ -258,9 +260,9 @@ besu --Xlauncher
 
 ##### 运行 Erigon
 
-此示例在主网上启动 Erigon，将区块链数据存储在 `/data/ethereum` 下，启用 JSON 远程过程调用，定义允许的命名空间，并启用身份验证以连接由 `jwtsecret` 路径定义的共识客户端。
+此示例在主网上启动 Erigon，将区块链数据存储在 `/data/ethereum` 下，启用 JSON-RPC，定义允许的命名空间，并启用身份验证以连接由 `jwtsecret` 路径定义的共识客户端。
 
-```
+```sh
 erigon --chain mainnet \
     --datadir /data/ethereum  \
     --http --http.api=engine,eth,web3,net \
@@ -271,9 +273,9 @@ erigon --chain mainnet \
 
 ##### 运行 Geth
 
-此示例在主网上启动 Geth，将区块链数据存储在 `/data/ethereum` 下，启用 JSON 远程过程调用并定义允许的命名空间。 它还会启用身份验证（以便连接需要使用 `jwtsecret` 路径的共识客户端）以及定义允许哪些连接的选项，在我们的示例中仅允许来自 `localhost` 的连接。
+此示例在主网上启动 Geth，将区块链数据存储在 `/data/ethereum` 下，启用 JSON-RPC 并定义允许的命名空间。 它还会启用身份验证（以便连接需要使用 `jwtsecret` 路径的共识客户端）以及定义允许哪些连接的选项，在我们的示例中仅允许来自 `localhost` 的连接。
 
-```
+```sh
 geth --mainnet \
     --datadir "/data/ethereum" \
     --http --authrpc.addr localhost \
@@ -286,9 +288,9 @@ geth --mainnet \
 
 ##### 运行 Nethermind
 
-Nethermind 提供各种[安装选项](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)。 该软件包附带各种二进制文件，包括一个带有引导式设置的启动器，它将帮助你以交互方式创建配置。 或者，你会找到可执行文件 Runner，并且可以使用配置标记运行它。 默认情况下启用 JSON 远程过程调用。
+Nethermind 提供各种[安装选项](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)。 该软件包附带各种二进制文件，包括一个带有引导式设置的启动器，它将帮助你以交互方式创建配置。 或者，你会找到可执行文件 Runner，并且可以使用配置标记运行它。 默认情况下已启用 JSON-RPC。
 
-```
+```sh
 Nethermind.Runner --config mainnet \
     --datadir /data/ethereum \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
@@ -297,6 +299,19 @@ Nethermind.Runner --config mainnet \
 Nethermind 相关文档提供了有关运行 Nethermind 和共识客户端的[完整指南](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge)。
 
 执行客户端将启动其核心功能及所选端点，并开始寻找对等节点。 成功发现对等节点后，该客户端开始同步。 执行客户端将等待来自共识客户端的连接。 当客户端成功同步到最新状态时，最新的区块链数据将可用。
+
+##### 运行 Reth
+
+此示例使用默认数据位置在主网上启动 Reth。 启用 JSON-RPC 和引擎远程过程调用身份验证以连接由 `jwtsecret` 路径定义的共识客户端，并仅允许来自 `localhost` 的调用。
+
+```sh
+reth node \
+    --authrpc.jwtsecret /path/to/jwtsecret \
+    --authrpc.addr 127.0.0.1 \
+    --authrpc.port 8551
+```
+
+查看[配置 Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) 以了解更多关于默认数据目录的信息。 [Reth 的相关文档](https://reth.rs/run/mainnet.html)包含更多选项和配置详情。
 
 #### 启动共识客户端 {#starting-the-consensus-client}
 
@@ -308,13 +323,13 @@ Nethermind 相关文档提供了有关运行 Nethermind 和共识客户端的[�
 
 在测试网上启动信标节点时，可以使用公共端点进行[检查点同步](https://notes.ethereum.org/@launchpad/checkpoint-sync)，从而大大节省同步时间。
 
-#### 运行共识客户端
+#### 运行共识客户端 {#running-a-consensus-client}
 
 ##### 运行 Lighthouse
 
 在运行 Lighthouse 之前，请在 [Lighthouse 手册](https://lighthouse-book.sigmaprime.io/installation.html)中详细了解如何安装和配置它。
 
-```
+```sh
 lighthouse beacon_node \
     --network mainnet \
     --datadir /data/ethereum \
@@ -327,7 +342,7 @@ lighthouse beacon_node \
 
 通过编译或下载 Docker 映像来安装 Lodestar 软件。 在[相关文档](https://chainsafe.github.io/lodestar/)和更全面的[设置指南](https://hackmd.io/@philknows/rk5cDvKmK)中了解更多信息。
 
-```
+```sh
 lodestar beacon \
     --rootDir="/data/ethereum" \
     --network=mainnet \
@@ -338,9 +353,9 @@ lodestar beacon \
 
 ##### 运行 Nimbus
 
-Nimbus 包括共识客户端和执行客户端。 它也可以在各种设备上运行，甚至可以在算力很一般的设备上运行。 [安装依赖项和 Nimbus](https://nimbus.guide/quick-start.html)后，你可以运行它的共识客户端：
+Nimbus 包括共识客户端和执行客户端。 它也可以在各种设备上运行，甚至可以在算力很一般的设备上运行。 [安装依赖项和 Nimbus](https://nimbus.guide/quick-start.html) 后，你可以运行它的共识客户端：
 
-```
+```sh
 nimbus_beacon_node \
     --network=mainnet \
     --web3-url=http://127.0.0.1:8551 \
@@ -352,7 +367,7 @@ nimbus_beacon_node \
 
 Prysm 带有脚本，可实现轻松自动安装。 详细信息可以在 [Prysm 相关文档](https://docs.prylabs.network/docs/install/install-with-script)中找到。
 
-```
+```sh
 ./prysm.sh beacon-chain \
     --mainnet \
     --datadir /data/ethereum  \
@@ -362,7 +377,7 @@ Prysm 带有脚本，可实现轻松自动安装。 详细信息可以在 [Prysm
 
 ##### 运行 Teku
 
-```
+```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \
     --ee-endpoint http://localhost:8551 \
@@ -377,7 +392,7 @@ teku --network mainnet \
 
 运行自己的验证者便可以进行[单独质押](/staking/solo/)，这是支持以太坊网络的最有影响的去信任方法。 然而，单独质押需要存入 32 个以太币。 若想在自己的节点上运行验证者并质押较少数量的以太币，你可能会对由无需许可的节点运营商组成的去中心化池感兴趣，例如 [Rocket Pool](https://rocketpool.net/node-operators)。
 
-开始质押和生成验证者密钥的最简单方法是使用 [Goerli 测试网质押启动板](https://goerli.launchpad.ethereum.org/)，它允许你通过[在 Goerli 上运行节点](https://notes.ethereum.org/@launchpad/goerli)来测试你的设置。 当准备好使用主网时，你可以使用[主网质押启动板](https://launchpad.ethereum.org/)重复这些步骤。
+开始质押和生成验证者密钥的最简单方法是使用 [Holesky 测试网质押启动板](https://holesky.launchpad.ethereum.org/)，它允许你通过[在 Holesky 上运行节点](https://notes.ethereum.org/@launchpad/holesky)来测试你的设置。 当准备好使用主网时，你可以使用[主网质押启动板](https://launchpad.ethereum.org/)重复这些步骤。
 
 研读[质押页面](/staking)以了解质押选项概述。
 
@@ -431,7 +446,7 @@ _但是，共识层的验证者节点就需要一直在线。_验证者节点离
 
 你应该通过安装最新的安全补丁、功能和[以太坊改进提案](/eips/)，让客户端软件更新到最新版本。 特别是在[硬分叉](/history/)之前，确保运行正确的客户端版本。
 
-> 在重要的网络更新之前，以太坊基金会在其[博客](https://blog.ethereum.org)上发布相关文章。 你可以[订阅这些公告](https://groups.google.com/a/ethereum.org/g/announcements)，以便在你的节点需要更新时收到邮件通知。
+> 在重要的网络更新之前，以太坊基金会在其[博客](https://blog.ethereum.org)上发布相关文章。 你可以[订阅这些公告](https://blog.ethereum.org/category/protocol#subscribe)，以便在你的节点需要更新时收到邮件通知。
 
 更新客户端非常简单。 每种客户端在其相关文档中都有具体说明，但通常更新过程仅包括下载最新版本并使用正确的可执行文件重启而已。 客户端应该会从上一次中断的位置继续，但请应用所有更新。
 

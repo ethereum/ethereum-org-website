@@ -54,9 +54,17 @@ EIP 作为一个中心角色，记载以太坊的变化并且记载在以太坊�
 
 如果你有兴趣详细了解以太坊改进提案，请查看[以太坊改进提案网站](https://eips.ethereum.org/)和[ EIP-1](https://eips.ethereum.org/EIPS/eip-1)。 下面是一些有用的链接：
 
-- [以太坊改进提案完整列表](https://eips.ethereum.org/all)
+- [以太坊改进提案列表](https://eips.ethereum.org/all)
 - [所以太坊改进提案类型说明](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [所有以太坊改进提案状态说明](https://eips.ethereum.org/EIPS/eip-1#eip-process)
+
+### 社区教育项目 {#community-projects}
+
+- [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) — *PEEPanEIP 是一系列教学视频，讨论以太坊改进提案 (EIP) 和即将到来的升级中的关键特性。*
+- [EIPs For Nerds](https://ethereum2077.substack.com/t/eip-research) — *EIPs For Nerds 针对各种以太坊改进提案 (EIP)（包括核心以太坊改进提案以及应用程序/基础设施层以太坊改进提案 (ERC)）提供 ELI5 风格的全面概述，以教育读者并围绕以太坊协议的提议改进达成共识。*
+- [EIPs.wtf](https://www.eips.wtf/) — *EIPs.wtf 提供以太坊改进提议 (EIP) 的额外信息，包括它们的状态、实现细节、相关拉取请求，以及社区反馈。*
+- [EIP.Fun](https://eipfun.substack.com/) — *EIP.Fun 提供关于以太坊改进提议 (EIP)、以太坊改进提议会议更新等等的最新消息。*
+- [EIPs Insight](https://eipsinsight.com/) — *EIPs Insight 根据从不同来源收集的信息，表示以太坊改进提议 (EIP) 流程和统计数据的状态。*
 
 ## 参与 {#participate}
 

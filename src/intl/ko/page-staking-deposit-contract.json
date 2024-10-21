@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "읽기 중지",
   "page-staking-deposit-contract-subtitle": "다음은 이더리움 스테이킹 계약용 주소입니다. 스테이킹할 때 이 페이지를 참조하여 자금을 올바른 주소로 보내고 있는지 확인하세요.",
   "page-staking-deposit-contract-warning": "각 문자를 주의 깊게 확인하십시오.",
-  "page-staking-deposit-contract-warning-2": "이 주소로 자금을 보내는 작업은 작동하지 않으며 귀하를 스테이커로 만들지 않습니다. 런치패드 지침을 따르십시오."
+  "page-staking-deposit-contract-warning-2": "이 주소로 자금을 보내는 작업은 작동하지 않으며 귀하를 스테이커로 만들지 않습니다. 런치패드 지침을 따르십시오.",
+  "page-staking-deposit-contract-title": "입금 계약 주소 확인"
 }

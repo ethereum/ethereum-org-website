@@ -12261,7 +12261,8 @@
       "profile": "https://github.com/Shiva-Sai-ssb",
       "contributions": [
         "bug",
-        "maintenance"
+        "maintenance",
+        "content"
       ]
     },
     {
@@ -12533,6 +12534,51 @@
       "contributions": [
         "content",
         "bug"
+      ]
+    },
+    {
+      "login": "Signor1",
+      "name": "Signor Dev",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94352660?v=4",
+      "profile": "https://signor.vercel.app/",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "KatrixReloaded",
+      "name": "Kartikeya Sureka",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68804269?v=4",
+      "profile": "https://github.com/KatrixReloaded",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Piyush-Tilokani",
+      "name": "Piyush Tilokani",
+      "avatar_url": "https://avatars.githubusercontent.com/u/112542519?v=4",
+      "profile": "https://github.com/Piyush-Tilokani",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "jacobourar",
+      "name": "Jacobo Uribe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/109108267?v=4",
+      "profile": "https://github.com/jacobourar",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Xcertik-Realist",
+      "name": "NilFoundation",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63165931?v=4",
+      "profile": "https://github.com/Xcertik-Realist",
+      "contributions": [
+        "content"
       ]
     }
   ],
