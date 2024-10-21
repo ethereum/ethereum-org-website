@@ -36,6 +36,7 @@ const WalletSubComponent = ({
   listIdx,
 }: WalletSubComponentProps) => {
   const { locale } = useRouter()
+
   const { t } = useTranslation("page-wallets-find-wallet")
   const walletFiltersOptions: FilterOption[] = useWalletFilters()
 
