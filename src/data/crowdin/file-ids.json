@@ -140,6 +140,10 @@
     "path": "/developers/docs/programming-languages/ruby/index.md"
   },
   {
+    "id": 12422,
+    "path": "/developers/docs/programming-languages/elixir/index.md"
+  },
+  {
     "id": 2958,
     "path": "/whitepaper/index.md"
   },
@@ -610,10 +614,6 @@
   {
     "id": 2680,
     "path": "/enterprise/index.md"
-  },
-  {
-    "id": 2684,
-    "path": "/enterprise/private-ethereum/index.md"
   },
   {
     "id": 2962,
