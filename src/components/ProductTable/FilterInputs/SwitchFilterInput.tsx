@@ -1,11 +1,11 @@
-import { Icon } from "@chakra-ui/react"
+import type { IconType } from "react-icons"
 
 import { FilterInputState } from "@/lib/types"
 
 import Switch from "@/../tailwind/ui/Switch"
 
 interface SwitchFilterInputProps {
-  icon?: typeof Icon
+  Icon?: IconType
   label: string
   description?: string
   filterIndex: number
@@ -19,7 +19,7 @@ interface SwitchFilterInputProps {
 }
 
 const SwitchFilterInput = ({
-  icon,
+  Icon,
   label,
   description,
   filterIndex,
@@ -32,7 +32,7 @@ const SwitchFilterInput = ({
       <div className="flex flex-row items-center justify-between gap-2 border-t py-4">
         <div className="flex flex-row items-center">
           <div className="h-8 w-8">
-            {icon && <Icon as={icon} boxSize={7} mt={0.5} aria-hidden />}
+            {Icon && <Icon className="mt-0.5 size-7" aria-hidden />}
           </div>
           <p>{label}</p>
         </div>
