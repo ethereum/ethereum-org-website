@@ -5,7 +5,7 @@ import { createIconBase } from "../icon-base"
 export const RocketPoolGlyphIcon = createIconBase({
   displayName: "RocketPoolGlyphIcon",
   viewBox: "0 0 50 50",
-  className: "h-auto w-[50px]",
+  className: "size-[1em]",
   ...commonIconDefaultAttrs,
   children: (
     <>

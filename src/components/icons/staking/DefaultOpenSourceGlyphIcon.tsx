@@ -4,7 +4,7 @@ export const DefaultOpenSourceGlyphIcon = createIconBase({
   displayName: "DefaultOpenSourceGlyphIcon",
   viewBox: "0 0 32 32",
   fill: "none",
-  className: "h-auto w-[32px]",
+  className: "size-[1em]",
   children: (
     <>
       <mask id="path-1-inside-1_1413_8233" fill="currentColor">

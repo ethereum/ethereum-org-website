@@ -3,7 +3,7 @@ import { createIconBase } from "../icon-base"
 export const FigmentGlyphIcon = createIconBase({
   displayName: "FigmentGlyphIcon",
   viewBox: "0 0 32 32",
-  className: "h-auto w-[32px]",
+  className: "size-[1em]",
   fill: "none",
   children: (
     <>

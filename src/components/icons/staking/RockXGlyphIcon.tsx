@@ -5,7 +5,7 @@ import { createIconBase } from "../icon-base"
 export const RockXGlyphIcon = createIconBase({
   displayName: "RockXGlyphIcon",
   viewBox: "0 0 32 32",
-  className: "h-auto w-[32px]",
+  className: "size-[1em]",
   ...commonIconDefaultAttrs,
   children: (
     <>
