@@ -49,15 +49,11 @@
     --success-light: var(--green-100);
     --success-dark: var(--green-900);
     --success-border: var(--green-700);
-    /* Deprecated */
-    --success-neutral: var(--green-100);
     
     --error: var(--red-700);
     --error-light: var(--red-100);
     --error-dark: var(--red-900);
     --error-border: var(--red-800);
-    /* Deprecated */
-    --error-neutral: var(--red-100);
 
     --warning: var(--yellow-300);
     --warning-light: var(--yellow-100);
@@ -166,15 +162,11 @@
     --success-light: var(--green-100);
     --success-dark: var(--green-900);
     --success-border: var(--green-400);
-    /* Deprecated */
-    --success-neutral: var(--green-900);
     
     --error: var(--red-700);
     --error-light: var(--red-100);
     --error-dark: var(--red-900);
     --error-border: var(--red-300);
-    /* Deprecated */
-    --error-neutral: var(--red-900);
 
     --warning: var(--yellow-300);
     --warning-light: var(--yellow-100);
