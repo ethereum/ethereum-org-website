@@ -11,6 +11,8 @@ import SocialListItem from "@/components/SocialListItem"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
 
+import { cn } from "@/lib/utils/cn"
+
 import { FlagType, Product } from "./types"
 
 const getIconFromName = (
@@ -50,7 +52,12 @@ const StakingBadge = ({
   const uiTypeColor = type === "ui"
   return (
     <span
-      className={`rounded-full ${uiTypeColor ? "bg-success-light text-success dark:bg-warning-light dark:text-warning-dark" : "bg-primary-low-contrast"} px-2 py-1 text-xs normal-case ${uiTypeColor ? "text-success" : "text-primary-high-contrast"}`}
+      className={cn(
+        "rounded-full px-2 py-1 text-xs normal-case",
+        uiTypeColor
+          ? "bg-success-light text-success dark:bg-success-dark dark:text-success-light"
+          : "bg-primary-low-contrast text-primary-high-contrast"
+      )}
     >
       {children}
     </span>
@@ -163,7 +170,7 @@ export const StakingProductCard = ({
     <div className="rounded-base hover:scale-101 flex flex-col bg-background-highlight transition-transform">
       <div className="flex max-h-24 space-x-3 p-6">
         {!!Svg && <Svg className="size-12" />}
-        <div>
+        <div className="flex flex-col justify-center">
           <h4 className="text-xl">{name}</h4>
           {typeof minEth !== "undefined" && (
             <p className="text-sm font-normal text-body-medium">
