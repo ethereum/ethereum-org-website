@@ -96,15 +96,11 @@ const QuizWidget = ({
   }, [nextQuiz])
 
   const getMainContainerBg = () => {
-    if (!answerStatus) {
-      return isStandaloneQuiz ? "bg-background-highlight" : "bg-background"
-    }
-
-    if (answerStatus === "correct") {
-      return "bg-success-neutral"
-    }
-
-    return "bg-error-neutral"
+    if (!isStandaloneQuiz) return "bg-transparent"
+    if (!answerStatus) return "bg-background-highlight"
+    if (answerStatus === "correct")
+      return "!bg-success-light dark:!bg-success-dark"
+    return "!bg-error-light dark:!bg-error-dark"
   }
 
   return (

@@ -19,15 +19,10 @@ const QuizzesModal = ({
 }: QuizzesModalProps) => {
   // TODO: remove bang in utility class names when Modal is migrated
   const getStatusColorClass = () => {
-    if (quizStatus === "neutral") {
-      return "!bg-background"
-    }
-
-    if (quizStatus === "success") {
-      return "!bg-success-neutral"
-    }
-
-    return "!bg-error"
+    if (quizStatus === "neutral") return "!bg-background"
+    if (quizStatus === "success")
+      return "!bg-success-light dark:!bg-success-dark"
+    return "!bg-error-light dark:!bg-error-dark"
   }
 
   return (
@@ -38,7 +33,7 @@ const QuizzesModal = ({
       contentProps={{ className: getStatusColorClass() }}
       {...props}
     >
-      <Center className={getStatusColorClass()}>{children}</Center>
+      <Center>{children}</Center>
     </Modal>
   )
 }
