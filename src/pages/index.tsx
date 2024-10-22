@@ -193,7 +193,6 @@ export const getStaticProps = (async ({ locale }) => {
       metricResults,
       rssData: { rssItems, blogLinks },
     },
-    revalidate: REVALIDATE_TIME,
   }
 }) satisfies GetStaticProps<Props>
 
