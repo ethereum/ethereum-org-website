@@ -145,10 +145,10 @@ const questionBank = Object.entries(questionBankConfig).reduce(
               explanation: `${id}-explanation`,
             }
           }),
-        correctAnswerId: `${topicKey}-${charFromIdx(correctAnswer - 1)}`,
+        correctAnswerId: `${questionKey}-${charFromIdx(correctAnswer - 1)}`,
       }
       // Add question object to accumulator
-      acc[`${topicKey}-${idx + 1}`] = questionObject
+      acc[questionKey] = questionObject
     }
     return acc
   },
