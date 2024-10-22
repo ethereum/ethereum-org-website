@@ -1,8 +1,6 @@
-import Link from "next/link"
 import { useTranslation } from "next-i18next"
 import type { ComponentType, ReactNode, SVGProps } from "react"
 
-import { ButtonLink } from "@/components/Buttons"
 import {
   CautionProductGlyphIcon,
   GreenCheckProductGlyphIcon,
@@ -10,6 +8,8 @@ import {
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
 import SocialListItem from "@/components/SocialListItem"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import Link from "@/components/ui/Link"
 
 import { FlagType, Product } from "./types"
 
@@ -26,7 +26,7 @@ const getIconFromName = (
 const Status = ({ status }: { status: FlagType | undefined }) => {
   if (!status) return null
 
-  const styles = "mr-2 w-5 h-5"
+  const styles = "me-2 size-5"
   switch (status) {
     case "green-check":
       return <GreenCheckProductGlyphIcon className={styles} />
@@ -187,7 +187,7 @@ export const StakingProductCard = ({
         ))}
       </div>
       <div className="p-6 py-0">
-        <ul className="gap=3 m-0">
+        <ul className="m-0 gap-3">
           {data.map(({ label, status }, idx) => (
             <li
               key={idx}
@@ -199,34 +199,27 @@ export const StakingProductCard = ({
           ))}
         </ul>
       </div>
-      <div className="mt-auto p-6">
+      <div className="mt-auto flex flex-col gap-3 p-6">
         <ButtonLink
           href={url}
           customEventOptions={matomo}
-          width="100%"
-          variant={"outline-color"}
-          isSecondary={true}
+          className="w-full"
+          variant="outline"
+          isSecondary
         >
           {t("page-staking-products-get-started")}
         </ButtonLink>
-        <div className="flex h-10 items-center justify-center">
+        <div className="flex h-7.5 items-center justify-center">
           {validSocials.length > 0 && (
-            <p className="mr-2 text-sm text-body-medium">
+            <p className="me-2 text-body-medium">
               {t("page-staking-products-follow")}
             </p>
           )}
 
           {validSocials.map(([platform, url], idx) => (
-            <Link
-              key={idx}
-              href={url}
-              passHref
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link key={idx} href={url} hideArrow>
               <SocialListItem
-                color="body.base"
-                boxSize={8}
+                className="size-8 text-body"
                 socialIcon={
                   platform as
                     | "twitter"
