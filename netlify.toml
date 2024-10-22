@@ -12,6 +12,7 @@
 [build.environment]
   NEXT_FORCE_EDGE_IMAGES="true"
   BUILD_LOCALES="en,pl,es,it"
+  USE_MOCK_DATA="false"
 
 [functions]
   included_files = ["src/data/mocks/**/*"]
