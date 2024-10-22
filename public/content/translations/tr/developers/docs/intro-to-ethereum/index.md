@@ -36,7 +36,7 @@ Kriptografik mekanizmalar, işlemlerin geçerli olduğu doğrulandıktan ve blok
 
 **Ether (ETH)**, Ethereum'un ana kripto parasıdır. ETH'nin amacı bilgi işlem için bir piyasa oluşmasını sağlamaktır. Böyle bir piyasa, katılımcıların işlem taleplerini doğrulaması ve yürütmesi ve ağa bilgi işlem kaynakları sağlaması için ekonomik bir teşvik sağlar.
 
-Bir işlem talebini yayınlayan herhangi bir katılımcı, ödül olarak ağa bir miktar ETH de teklif etmelidir. Ağ bu ödülü eninde sonunda işlemi doğrulama, yürütme, blok zincire işleme ve ağa yayınlama işini gerçekleştiren herhangi birine verecektir.
+Bir işlem talebini yayınlayan herhangi bir katılımcı, ödül olarak ağa bir miktar ETH de teklif etmelidir. Ağ, ödülün bir kısmını yakacak ve geri kalanını nihayetinde işlemi doğrulama, yürütme, blokzincire işleme ve ağa gönderme işini gerçekleştirecek herhangi birine verecektir.
 
 Ödenen ETH miktarı hesaplamanın yapılması için gereken kaynaklara karşılıktır. Bu ödüller aynı zamanda katılmcıların hesaplama kaynakları için ödeme yapması gerektiğinden dolayı zararlı katılımcıların sonsuz hesaplama yürütümü veya diğer kaynak yükü oluşturan betikleri kullanarak kasten ağı tıkamasını engeller.
 
@@ -107,7 +107,7 @@ Bir geliştiricinin EVM durumuna yayınladığı yeniden kullanılabilir bir kod
 ## Daha fazla bilgi {#further-reading}
 
 - [Ethereum Teknik Raporu](/whitepaper/)
-- [Ethereum nasıl çalışır?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**bkz.** bu kaynak hâlâ değerli, ancak [Birleşim'den](/roadmap/merge) öncesine dayandığı ve bu nedenle Ethereum'un iş ispatı mekanizmasını referans gösterdiği unutulmamalı - Ethereum şu anda [hisse ispatı](/developers/docs/consensus-mechanisms/pos) kullanılarak güvence altına alınmıştır)
+- [Peki, Ethereum nasıl çalışır?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**bkz.** bu kaynak hâlâ değerlidir, ancak [Birleşim](/roadmap/merge) öncesine dayandığı ve bu nedenle Ethereum'un iş ispatı mekanizmasını referans gösterdiği unutulmamalıdır - Ethereum şu anda [hisse ispatı](/developers/docs/consensus-mechanisms/pos) kullanılarak güvence altına alınmıştır)
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
 

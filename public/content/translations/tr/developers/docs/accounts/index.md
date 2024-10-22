@@ -1,6 +1,6 @@
 ---
 title: Ethereum hesapları
-description: "Ethereum hesaplarının bir açıklaması: Hesapların veri yapıları ve anahtar çifti kriptografisi ile ilişkileri."
+description: 'Ethereum hesaplarının bir açıklaması: Hesapların veri yapıları ve anahtar çifti kriptografisi ile ilişkileri.'
 lang: tr
 ---
 
@@ -51,7 +51,7 @@ Ethereum hesaplarının dört alanı vardır:
 
 ## Harici olarak sahiplenilmiş hesaplar ve anahtar çiftleri {#externally-owned-accounts-and-key-pairs}
 
-Bir hesap, bir kriptografik anahtar çiftinden oluşur: açık ve özel anahtar. Bir işlemin gerçekten gönderen tarafından imzalandığını kanıtlamaya yardımcı olurlar ve sahteciliği önlerler. Özel anahtarınız, işlemleri imzalamak için kullandığınız anahtar olduğu için hesabınızla ilişkili fonların velayetini size verir. Kripto para aslında hiçbir zaman sizde durmaz, sizde özel anahtarlar bulunur: Fonlar her zaman Ethereum'un defterindedir.
+Bir hesap, genel ve özel olmak üzere bir çift kriptografik anahtardan oluşur. Bir işlemin gerçekten gönderen tarafından imzalandığını kanıtlamaya yardımcı olurlar ve sahteciliği önlerler. Özel anahtarınız, işlemleri imzalamak için kullandığınız anahtar olduğu için hesabınızla ilişkili fonların velayetini size verir. Kripto para aslında hiçbir zaman sizde durmaz, sizde özel anahtarlar bulunur: Fonlar her zaman Ethereum'un defterindedir.
 
 Bu, bir işlemin gönderenini her zaman doğrulayabileceğiniz için kötü niyetli kişilerin sahte işlemler yayınlamasını önler.
 
@@ -59,7 +59,7 @@ Alice, kendi hesabından Bob'un hesabına ether göndermek isterse, Alice'in bir
 
 ## Hesap oluşturma {#account-creation}
 
-Bir hesap oluşturmak istediğinizde çoğu kütüphane size rastgele bir özel anahtar üretecektir.
+Bir hesap oluşturmak istediğinizde, çoğu kütüphane sizin için rastgele bir özel anahtar üretir.
 
 Bir özel anahtar, 64 hex karakterinden oluşur ve şifrelenebilir.
 
@@ -68,6 +68,12 @@ Bir özel anahtar, 64 hex karakterinden oluşur ve şifrelenebilir.
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
 Açık anahtar, [Eliptik Eğri Dijital İmza Algoritması](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) kullanılarak özel anahtar ile oluşturulur. Açık anahtarın Keccak-256 hash değerinin son 20 baytını alarak ve başına `0x` ekleyerek hesabınız için genel bir adres alırsınız.
+
+Bu, Dışarıdan sahip olunan hesabın (EOA) 42 karakterlik bir adrese sahip olduğu anlamına gelir (40 onaltılık karaktere ve `0x` önekine sahip 20 baytlık segment).
+
+Örnek:
+
+`0x5e97870f263700f46aa00d967821199b9bc5a120`
 
 Aşağıdaki örnek bir [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) imzalama aracının yeni bir hesap oluşturmak için nasıl kullanılacağını gösteriyor. Clef bir Ethereum İstemcisi ile donatılmış bir hesap yönetimi ve imzalama aracıdır,[Geth](https://geth.ethereum.org). `Clef newaccount` komutu yeni bir anahtar çifti oluşturur ve bunları şifrelenmiş olan anahtar deposuna yerleştirir.
 
@@ -86,9 +92,9 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 [Geth dokümanları](https://geth.ethereum.org/docs)
 
-Özel anahtarınızdan yeni açık anahtarlar türetebilirsiniz, ancak açık anahtarlardan bir özel anahtar türetemezsiniz. Bu, özel bir anahtarı güvende ve adından da anlaşılacağı gibi **ÖZEL** tutmanın hayati önem taşıdığı anlamına gelir.
+Özel anahtarınızdan yeni açık anahtarlar türetebilirsiniz, ancak açık anahtarlardan bir özel anahtar türetemezsiniz. Özel anahtarlarınızı güvende ve adından da anlaşılacağı gibi **ÖZEL** tutmanız hayati önem taşır.
 
-Bir imza çıktısı veren mesajları ve işlemleri imzalamak için özel bir anahtara ihtiyacınız vardır. Diğerleri daha sonra ortak anahtarınızı türetmek için imzayı alabilir ve mesajın yazarını kanıtlayabilir. Uygulamanızda, işlemleri ağa göndermek için bir javascript kütüphanesi kullanabilirsiniz.
+Bir imza çıktısı veren mesajları ve işlemleri imzalamak için özel bir anahtara ihtiyacınız vardır. Diğerleri daha sonra ortak anahtarınızı türetmek için imzayı alabilir ve mesajın yazarını kanıtlayabilir. Uygulamanızda, ağa işlem göndermek için JavaScript kütüphanesini kullanabilirsiniz.
 
 ## Sözleşme hesapları {#contract-accounts}
 
@@ -108,7 +114,7 @@ Ethereumda bir anahtar türü daha var ve ilk kez Ethereum iş ispatından mutab
 
 ## Cüzdanlar hakkında bir not {#a-note-on-wallets}
 
-Hesap, cüzdan demek değildir. Hesap, kullanıcı tarafından sahip olunan bir Ethereum hesabının anahtar çiftidir. Cüzdan ise Ethereum hesabınızla etkileşime geçmenizi sağlayan bir arayüz veya uygulamadır.
+Hesap, cüzdan demek değildir. Cüzdan, ister harici olarak sahiplenilmiş bir hesap ister bir sözleşme hesabı olsun, Ethereum hesabınızla etkileşim kurmanıza olanak sağlayan bir arayüz veya uygulamadır.
 
 ## Görsel bir demo {#a-visual-demo}
 
