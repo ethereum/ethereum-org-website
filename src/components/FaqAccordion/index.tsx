@@ -6,16 +6,15 @@ import { cn } from "@/lib/utils/cn"
 
 import * as RootAccordion from "../../../tailwind/ui/accordion"
 
-const AccordionTrigger = React.forwardRef<
+const FaqAccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
-  // p-4 hover:bg-background-highlight
-  <AccordionPrimitive.Header className="flex w-full">
+  <AccordionPrimitive.Header>
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "px-4 py-3 md:px-8 md:py-6",
+        "w-full px-4 py-3 md:px-8 md:py-6",
         "flex flex-1 items-center justify-between gap-2",
         "border-t border-body-light",
         "focus-visible:outline-1 focus-visible:-outline-offset-1 focus-visible:outline-primary-hover",
@@ -38,17 +37,20 @@ const AccordionTrigger = React.forwardRef<
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
-AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
+FaqAccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
-// TODO: Prop types
-const Accordion = ({ children, ...props }) => {
+const FaqAccordion = ({
+  children,
+  type,
+  ...props
+}: AccordionPrimitive.AccordionSingleProps) => {
   return (
     <RootAccordion.Accordion
-      type="single"
+      type={type}
       collapsible
       className={cn(
         "rounded border border-body-light first:border-t-0",
-        "overflow-hidden bg-background",
+        "max-w-4xl overflow-hidden bg-background",
         props?.className
       )}
       {...props}
@@ -57,7 +59,7 @@ const Accordion = ({ children, ...props }) => {
     </RootAccordion.Accordion>
   )
 }
-const AccordionItem = React.forwardRef<
+const FaqAccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
@@ -67,16 +69,16 @@ const AccordionItem = React.forwardRef<
     {...props}
   />
 ))
-AccordionItem.displayName = "AccordionItem"
+FaqAccordionItem.displayName = "AccordionItem"
 
-const AccordionContent = React.forwardRef<
+const FaqAccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
     className={cn(
-      "overflow-hidden px-4 text-sm md:px-8",
+      "w-full overflow-hidden px-4 text-sm md:px-8",
       "transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     )}
     {...props}
@@ -87,6 +89,11 @@ const AccordionContent = React.forwardRef<
   </AccordionPrimitive.Content>
 ))
 
-AccordionContent.displayName = AccordionPrimitive.Content.displayName
+FaqAccordionContent.displayName = AccordionPrimitive.Content.displayName
 
-export { Accordion, AccordionContent, AccordionItem, AccordionTrigger }
+export {
+  FaqAccordion,
+  FaqAccordionContent,
+  FaqAccordionItem,
+  FaqAccordionTrigger,
+}
