@@ -42,10 +42,10 @@ export const QuizProgressBar = ({
       }
 
       if (index === currentQuestionIndex) {
-        return "bg-gray-400"
+        return "bg-body-medium"
       }
 
-      return "bg-gray-500"
+      return "bg-disabled"
     },
     [answerStatus, currentQuestionIndex, userQuizProgress]
   )
