@@ -226,7 +226,7 @@ export const StakingProductCard = ({
           {validSocials.map(([platform, url], idx) => (
             <Link key={idx} href={url} hideArrow>
               <SocialListItem
-                className="size-8 text-body"
+                className="size-8 text-body [&>svg]:text-body"
                 socialIcon={
                   platform as
                     | "twitter"
