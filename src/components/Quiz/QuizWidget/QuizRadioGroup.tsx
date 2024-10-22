@@ -171,6 +171,7 @@ const CustomRadio = ({
               // TODO: Upon removing custom radio props, flip remove `data` for checked
               "[:is([data-checked],:hover)_>_&]:text-white",
               "[:is([data-checked],:hover)_>_&]:bg-primary-action",
+              "[:is([data-checked],:hover)[data-answer-visible]_>_&]:bg-white",
               "[:is([data-checked],:hover)[data-answer-visible]_>_&]:text-error",
               "[:is([data-checked],:hover)[data-answer-visible][data-selected-correct]_>_&]:text-success"
             )}
