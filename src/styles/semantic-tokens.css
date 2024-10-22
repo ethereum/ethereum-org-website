@@ -49,7 +49,7 @@
     --success-light: var(--green-100);
     --success-dark: var(--green-900);
     --success-border: var(--green-700);
-    
+
     --error: var(--red-700);
     --error-light: var(--red-100);
     --error-dark: var(--red-900);
@@ -162,7 +162,7 @@
     --success-light: var(--green-100);
     --success-dark: var(--green-900);
     --success-border: var(--green-400);
-    
+
     --error: var(--red-700);
     --error-light: var(--red-100);
     --error-dark: var(--red-900);
