@@ -44,7 +44,9 @@ const tableVariants = tv({
         thead: "bg-background-highlight",
         tbody: `${baseStyles.tbody} ${stripedTbody}`,
       },
-      minimal: {},
+      minimal: {
+        ...baseStyles,
+      },
       product: {
         table: "caption-bottom text-sm",
         thead: "[&-tr:last-child]:border-0",
