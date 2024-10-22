@@ -85,7 +85,6 @@ import {
 import { useClipboard } from "@/hooks/useClipboard"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchAttestantPosts } from "@/lib/api/fetchPosts"
 import { fetchRSS } from "@/lib/api/fetchRSS"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
@@ -126,7 +125,7 @@ const loadData = dataLoader(
     ["ethPrice", fetchEthPrice],
     ["totalEthStaked", fetchTotalEthStaked],
     ["totalValueLocked", fetchTotalValueLocked],
-    ["growThePieData", fetchGrowThePie],
+    // ["growThePieData", fetchGrowThePie],
     ["communityEvents", fetchCommunityEvents],
     ["attestantPosts", fetchAttestantPosts],
     ["rssData", fetchXmlBlogFeeds],
@@ -139,7 +138,7 @@ export const getStaticProps = (async ({ locale }) => {
     ethPrice,
     totalEthStaked,
     totalValueLocked,
-    growThePieData,
+    // growThePieData,
     communityEvents,
     attestantPosts,
     xmlBlogs,
@@ -149,8 +148,8 @@ export const getStaticProps = (async ({ locale }) => {
     ethPrice,
     totalEthStaked,
     totalValueLocked,
-    txCount: growThePieData.txCount,
-    txCostsMedianUsd: growThePieData.txCostsMedianUsd,
+    txCount: { value: 1, timestamp: 1 },
+    txCostsMedianUsd: { value: 1, timestamp: 1 },
   }
 
   const calendar = communityEvents.upcomingEventData
