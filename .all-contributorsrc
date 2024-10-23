@@ -12607,6 +12607,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "rafagomes",
+      "name": "Rafa Gomes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/565337?v=4",
+      "profile": "https://github.com/rafagomes",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
