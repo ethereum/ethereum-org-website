@@ -1,0 +1,41 @@
+name: Update Chains
+
+on:
+  schedule:
+    - cron: '20 16 * * FRI' # Runs every Friday at 16:20 UTC
+  workflow_dispatch: # Can be dispatched manually
+
+jobs:
+  update-chains:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Install ts-node
+        run: yarn global add ts-node
+
+      - name: Update chains data
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/update-chains.ts
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: update-chains
+          branch-suffix: timestamp
+          commit-message: |
+            Update chains data
+          base: dev
+          title: Update chains data
+          body: Automated update of chains data from https://chainid.network/chains.json 
+          labels: update 🔄
