@@ -31,8 +31,7 @@ const DocLink = ({ href, children, isExternal = false }: DocLinkProps) => {
         </Center>
         <Stack className="flex-1">
           <LinkOverlay href={href} className="no-underline">
-            {" "}
-            <p className="font-semibold text-[#4c4c4c] dark:text-[#cccccc]">
+            <p className="font-bold text-gray-600 dark:text-gray-200">
               {children}
             </p>
           </LinkOverlay>
