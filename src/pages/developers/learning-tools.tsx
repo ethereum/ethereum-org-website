@@ -411,9 +411,9 @@ const LearningToolsPage = () => {
         "page-developers-learning-tools:page-learning-tools-learnweb3-logo-alt"
       ),
       background: "#ffffff",
-      subjects: ["Solidity", "web3"],  
+      subjects: ["Solidity", "web3"],
     },
-    {    
+    {
       name: "Cyfrin Updraft",
       description: t(
         "page-developers-learning-tools:page-learning-tools-cyfrin-updraft-description"
