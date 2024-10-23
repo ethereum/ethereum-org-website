@@ -1,16 +1,10 @@
 import { AiOutlineArrowRight } from "react-icons/ai"
-import {
-  Box,
-  Flex,
-  Icon,
-  LinkBox,
-  LinkOverlay,
-  useToken,
-} from "@chakra-ui/react"
 
+import { cn } from "@/lib/utils/cn"
+
+import { Center, Flex, Stack } from "./ui/flex"
+import { LinkBox, LinkOverlay } from "./ui/link-box"
 import Emoji from "./Emoji"
-import { BaseLink } from "./Link"
-import Text from "./OldText"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
@@ -21,61 +15,36 @@ export type DocLinkProps = {
 }
 
 const DocLink = ({ href, children, isExternal = false }: DocLinkProps) => {
-  const linkBoxShadowColor = useToken("colors", "primary.base")
-  const { flipForRtl } = useRtlFlip()
+  const { isRtl } = useRtlFlip()
 
   return (
     <LinkBox
-      padding={4}
-      borderRadius="sm"
-      color="text"
-      border="1px"
-      borderStyle="solid"
-      borderColor="border"
-      _hover={{
-        background: "tableBackgroundHover",
-        borderRadius: "base",
-        boxShadow: `0 0 1px ${linkBoxShadowColor}`,
-      }}
+      className={cn(
+        "flex rounded-sm border p-4 text-current no-underline",
+        "hover:rounded hover:bg-background-highlight hover:no-underline",
+        "group hover:shadow-[0_0_1px] hover:shadow-primary"
+      )}
     >
-      <Flex
-        zIndex={1}
-        display="flex"
-        flexDirection="row"
-        flex={1}
-        justifyContent="space-between"
-        data-group
-      >
-        <Flex align="center">
+      <Flex className="flex-1 justify-between">
+        <Center>
           <Emoji className="me-4 text-md" text=":page_with_curl:" />
-        </Flex>
-        <Box flex={1} flexDirection="column">
-          <LinkOverlay
-            href={href}
-            as={BaseLink}
-            isExternal={isExternal}
-            textDecoration="none"
-            _hover={{ textDecoration: "none" }}
-            hideArrow
-          >
-            <Text color="text300" fontWeight="semibold" margin={0}>
+        </Center>
+        <Stack className="flex-1">
+          <LinkOverlay href={href} className="no-underline">
+            <p className="font-bold text-gray-600 dark:text-gray-200">
               {children}
-            </Text>
+            </p>
           </LinkOverlay>
-        </Box>
-        <Icon
-          as={AiOutlineArrowRight}
-          alignSelf="center"
-          minWidth={8}
-          boxSize={6}
-          marginX={6}
-          _groupHover={{
-            fill: "primary.base",
-            transition: "transform 0.1s",
-            transform: `${flipForRtl} scale(1.2)`,
-            rotate: isExternal ? "-45deg" : "0",
-          }}
-          transform={flipForRtl}
+        </Stack>
+
+        <AiOutlineArrowRight
+          className={cn(
+            "mx-6 h-6 w-6 self-center",
+            "transition-transform duration-100 group-hover:scale-[1.2] group-hover:fill-primary",
+            isExternal ? "-rotate-45" : "rotate-0",
+            isRtl && isExternal ? "-rotate-[135deg]" : "",
+            isRtl && !isExternal ? "-rotate-[180deg]" : ""
+          )}
         />
       </Flex>
     </LinkBox>
