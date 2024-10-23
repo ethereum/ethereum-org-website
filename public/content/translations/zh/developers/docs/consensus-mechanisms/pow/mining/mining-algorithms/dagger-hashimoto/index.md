@@ -4,7 +4,7 @@ description: 详细了解 Dagger-Hashimoto 算法。
 lang: zh
 ---
 
-Dagger-Hashimoto 是以太坊挖矿算法的原始研究实现和规范。 但是，Dagger-Hashimoto 已被 [Ethash](#ethash) 取代。 在 2022 年 9 月 15 日实施的[合并](/roadmap/merge/)后，挖矿完全关闭。 此后，以太坊采用[权益证明](/developers/docs/consensus-mechanisms/pos)机制保护安全。 本页面展示与历史有关的内容，其中的信息不再与合并后的以太坊相关。
+Dagger-Hashimoto 是以太坊挖矿算法的原始研究实现和规范。 但是，Dagger-Hashimoto 已被 [Ethash](#ethash) 取代。 在 2022 年 9 月 15 日实施[合并](/roadmap/merge/)后，挖矿完全关闭。 此后，以太坊采用[权益证明](/developers/docs/consensus-mechanisms/pos)机制保护安全。 本页面展示与历史有关的内容，其中的信息不再与合并后的以太坊相关。
 
 ## 前提条件 {#prerequisites}
 
@@ -189,7 +189,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
     return txid_mix ^ (nonce << 192)
 ```
 
-不幸的是，虽然 Hashimoto 被视为 RAM 硬件，但它依靠的是 256 位计算，计算量非常之大。 然而，Dagger-Hashimoto 在索引其数据集时仅使用最低有效 64 位来解决此问题。
+不幸的是，虽然 Hashimoto 被视为内存硬件，但它依靠的是 256 位计算，计算量非常之大。 然而，Dagger-Hashimoto 在索引其数据集时仅使用最低有效 64 位来解决此问题。
 
 ```python
 def hashimoto(dag, dagsize, params, header, nonce):
@@ -256,7 +256,7 @@ def light_verify(params, header, nonce):
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
 ## 附录 {#appendix}
 
@@ -266,7 +266,7 @@ _还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
 
 虽然 `produce_dag` 函数不需要生成无偏随机数，但潜在的威胁是 `seed**i % P` 只取少数几个值。 这可以为矿工识别模式提供优势。
 
-为了避免这种情况，可采用数论结果。 [_安全素数_](https://en.wikipedia.org/wiki/Safe_prime)定义为素数 `P`，从而 `(P-1)/2` 也是素数。 [乘数组](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n)中 `x` 的*顺序* （乘数组 `ℤ/nℤ`）定义为最小 `m`，以使 <pre>xᵐ mod P ≡ 1</pre>
+为了避免这种情况，可采用数论结果。 [_安全素数_](https://en.wikipedia.org/wiki/Safe_prime)定义为素数 `P`，从而 `(P-1)/2` 也是素数。 [乘数组](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n)中 `x` 的_顺序_ （乘数组 `ℤ/nℤ`）定义为最小 `m`，以使 <pre>xᵐ mod P ≡ 1</pre>
 鉴于这些定义，我们得到：
 
 > 观察 1。 令 `x` 成为乘法组 `ℤ/Pℤ` 的一员，以获得安全素数 `P`。 如果 `x mod P ≠ 1 mod P` 和 `x mod P ≠ P-1 mod P`，那么 `x` 的顺序是 ` P-1` 或 `(P-1)/2`。
@@ -281,7 +281,7 @@ _证明_。 由于 `P` 是一个安全素数，那么根据 \[Lagrange's Theorem
 
 `x` 的顺序不能是 `2`，除非 `x = P-1`，因为这将违反 `P` 是素数的事实。
 
-从以上命题中，我们可以知道，迭代 `(picker * init) % P` 的循环长度至少为 `(P-1)/2`。 这是因为我们选择 `P` 作为安全素数，强度几乎翻倍，且 `init` 处于 `[2,2**256+1]` 区间内。 鉴于强度为 `P`，我们永远不应期待源自模幂运算的周期。
+从以上命题中，我们可以知道，迭代 `(picker * init) % P` 的循环长度至少为 `(P-1)/2`。 这是因为我们选择 `P` 作为安全素数，强度几乎翻倍，且 `init` 处于 `[2,2**256+1]` 区间内。 考虑到 `P` 的量级，我们不应期待模幂运算具有周期性。
 
 在有向无环图中分配第一个单元时（变量标签为 `init`），我们会计算 `pow(sha3(seed) + 2, 3, P)`。 初看起来，这并不能保证结果既不是 `1` 也不是 `P-1`。 然而，既然 `P-1` 是一个安全素数，我们还提供以下额外保证，这是观察 1 的必然结果：
 
@@ -294,7 +294,7 @@ _证明_。 由于 `P` 是一个安全素数，那么根据 \[Lagrange's Theorem
 鉴于 `P` 为素数，可以使用以下结果，选择一个用于模幂运算哈希函数的适当 `w` 值：
 
 > 观察 3。 令 `P` 为素数；当且仅当用于 `ℤ/Pℤ` 中所有 `a` 和 `b` 满足以下条件时，`w` 和 `P-1` 才能为互素。
->
+> 
 > <center>
 >   `aʷ mod P ≡ bʷ mod P`，当且仅当 `a mod P ≡ b mod P`
 > </center>

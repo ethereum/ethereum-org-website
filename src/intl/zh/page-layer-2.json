@@ -90,6 +90,7 @@
   "layer-2-tools-title": "助你提升二层网络效率的工具",
   "layer-2-tools-l2beat-description": "L2BEAT 是二层网络项目技术风险评估的一个重要资源。我们建议在研发特定的二层网络项目时查阅他们的资料。",
   "layer-2-tools-growthepie-description": "关于以太坊二层网络的精选分析",
+  "layer-2-tools-ethereumecosystem-description": "以太坊及其二层网络（包括 Base、Optimism 和 Starknet）的非官方生态系统页面，其中包含数百个去中心化应用程序和工具。",
   "layer-2-tools-l2fees-description": "二层网络费用使你能够看到当前在不同二层网络进行交易所需的费用（以美元计价）。",
   "layer-2-tools-chainlist-description": "区块链列表 (Chainlist) 是一个实用的资源，用于将网络远程过程调用 (RPC) 导入到支持的钱包中。你将在这里找到二层网络项目的远程过程调用，以帮助你建立连接。",
   "layer-2-tools-zapper-description": "从去中心化金融到非同质化代币以及任何未来的资产，全面管理你的整个 Web 3 资产组合。从一个便捷的位置投资于最新的商机。",
@@ -124,7 +125,7 @@
   "boba-description": "Boba 是最初从乐观卷叠分叉而来的乐观卷叠链，它是一种旨在降低铸币费用，提高交易吞吐量，并扩展智能合约能力的扩容解决方案。",
   "base-description": "Base 是一个安全、低成本、对开发者友好的以太坊二层网络，致力于把十亿新用户带入 web3。它是以太坊二层网络，由 Coinbase 孵化，建立在开源 OP 堆栈上。",
   "loopring-description": "Loopring 的零知识卷叠二层网络解决方案旨在提供与以太坊主链相同的安全保障，并大规模提升可扩展性：交易吞吐量增加 1000 倍，交易费用降至一层网络 0.1%。",
-  "zksync-description": "ZKsync 是由 Matter Labs 推出的以用户为中心的零知识卷叠平台。它是以太坊的扩容解决方案，已经在以太坊主链上线，支持付款、代币交换和非同质化代币挖矿。",
+  "zksync-description": "Zksync 是一个零知识卷叠，旨在将以太坊及其价值扩展到主流采用，而不削弱安全性或去中心化。",
   "zkspace-description": "ZKSpace 平台由三个主要部分组成：利用零知识卷叠技术建立的二层自动化做市商，名为 ZKSwap；名为 ZKSquare 的支付服务，以及名为 ZKSea 的非同质化代币市场。",
   "aztec-description": "Aztec Network 是以太坊上的第一个私有零知识卷叠，使去中心化应用程序能够访问隐私并扩展。",
   "starknet-description": "Starknet 是有效性卷叠二层网络。它提供高吞吐量、低燃料成本并保留以太坊一层网络的安全级别。",
@@ -132,5 +133,7 @@
   "layer-2-ecosystem-portal": "生态系统相关门户网站",
   "layer-2-token-lists": "代币列表",
   "layer-2-explore": "探索",
-  "page-dapps-ready-button": "出发"
+  "page-dapps-ready-button": "出发",
+  "layer-2-information": "信息",
+  "layer-2-wallet-managers": "钱包管理器"
 }

@@ -84,13 +84,13 @@ Ethereum ve topluluk, sürekli gelişmekte, olduğundan ethereum.org da gelişme
 
 ### 3. ethereum.org sıradan bir ürün web sitesi değildir 🦄 {#core-principles-3}
 
-Ethereum büyük bir olaydır: toplum, teknoloji, fikir ve ideoloji toplulukları ve daha da fazlasını içerir. Bu, web sitesinin ''belirli bir aracı isteyen bir geliştiriciden'' ''henüz ETH satın almış ve cüzdanın ne olduğunu bilmeyen bir acemiye'' kadar çok sayıda farklı kullanıcı macerasını kaldırmak zorunda olduğu anlamına gelir. ''Bir blokzincir platformu için en iyi web sitesi hangisidir?'' ise açık bir soru olarak kalmaya devam etmektedir; biz öncüleriz. Bunu inşa etmek, deney yapmayı gerektirir.
+Ethereum büyük bir olaydır: toplum, teknoloji, fikir ve ideoloji toplulukları ve daha da fazlasını içerir. Bu, web sitesinin "belirli bir araç isteyen bir geliştirici" ve "bir miktar ETH satın alan ve cüzdanın ne olduğunu bilmeyen bir yeni gelen" gibi birçok farklı kullanıcı yolculuğunu ele alması gerektiği anlamına gelir. "Blokzincir platformu için en iyi web sitesi nedir?" sorusu hâlâ cevapsızdır: Biz öncüleriz. Bunu inşa etmek, deney yapmayı gerektirir.
 
 ## Ürün yol haritası {#roadmap}
 
 İşimizi daha erişilebilir kılmak ve daha fazla topluluk iş birliğini teşvik etmek için ethereum.org ana ekibi, üç aylık yol haritası hedeflerimize bir genel bakış yayımlar.
 
-[2023 birinci çeyrek yol haritamızı görüntüleyin](https://github.com/ethereum/ethereum-org-website/issues/9090)
+[2024 üçüncü çeyrek yol haritamızı görüntüleyin](https://github.com/ethereum/ethereum-org-website/issues/13399)
 
 **Kulağa nasıl geliyor?** Yol haritamız hakkındaki geribildirimleri memnuniyetle karşılarız, üzerinde çalışmamız gerektiğini düşündüğünüz bir şey varsa lütfen bildirin! Topluluktaki herhangi birinden gelecek fikir ve PR'lere açığız.
 
@@ -113,6 +113,10 @@ Katkı sürecini daha sorunsuz hâle getirmek amacıyla içerik yazmanın belirl
 [Siteye katkıda bulunmak](/contributing/) istiyorsanız, [ilkelerimizi](/contributing/design-principles/) ve [stil rehberimizi](/contributing/style-guide/) mutlaka okuyun.
 
 Tasarım ilkelerimiz, tasarım sistemimiz ve stil rehberimiz ile ilgili geribildirimleri memnuniyetle karşılarız. Unutmayın, ethereum.org topluluk için, topluluk tarafından yönetilir.
+
+## Lisans {#license}
+
+Ethereum.org web sitesi açık kaynak kodludur ve aksi belirtilmediği sürece [MIT License](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) altında oluşturulmuştur. Ethereum.org'un [kullanım koşulları](/terms-of-use/) hakkında daha fazla bilgi edinin.
 
 ## İş imkanları {#open-jobs}
 

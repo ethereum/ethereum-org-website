@@ -25,14 +25,15 @@ Te programy wspierają rozległy ekosystem Ethereum, oferując granty dla wielu 
 Projekty te stworzyły własne granty dla projektów mających na celu rozwój i eksperymentowanie z własną technologią.
 
 - [Program grantów Aave](https://aavegrants.org/) — _DAO grantów [Aave](https://aave.com/)_
-- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) — _fundusz ekosystemu [Balancer](https://balancer.fi/)_
+- [Balancer](https://grants.balancer.community/) — _fundusz ekosystemu [Balancer](https://balancer.fi/)_
 - [Program grantów Chainlink](https://chain.link/community/grants) — _Granty społeczności [Chainlink](https://chain.link/)_
 - [Program grantów Decetraland](https://governance.decentraland.org/grants/) — _Metaverse DAO [Decentraland](https://decentraland.org/)_
 - [Organizacja grantów ekosystemu Lido (LEGO)](https://lido.fi/lego) — _ekosystem finansowy [Lido](https://lido.fi/)_
 - [Program MetaMask](https://metamaskgrants.org/) — _DAO prowadzonych przez pracowników grantów [MetaMask](https://metamask.io/)_
 - [Program grantów sieci SKALE](https://skale.space/developers#grants) — _ekosystem [sieci SKALE](https://skale.space/)_
-- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) — _ekosystem [The Graph](https://thegraph.com/)_
-- [Program grantów Uniswap](https://www.uniswapfoundation.org/apply-for-a-grant) — _społeczność [Uniswap](https://uniswap.org/)_
+- [Program grantów Swarm Foundation](https://my.ethswarm.org/grants) — _ekosystem [Swarm Foundation](https://www.ethswarm.org/)_
+- [The Graph](https://thegraph.com/ecosystem/grants/) — _ekosystem [The Graph](https://thegraph.com/)_
+- [Program grantów Uniswap](https://www.uniswapfoundation.org/approach) — _społeczność [Uniswap](https://uniswap.org/)_
 
 ## Quadratic funding {#quadratic-funding}
 

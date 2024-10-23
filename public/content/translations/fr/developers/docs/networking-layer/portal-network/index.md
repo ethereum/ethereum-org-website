@@ -55,7 +55,7 @@ Les avantages de cette conception de réseau sont :
 - réduire la dépendance vis-à-vis des fournisseurs centralisés
 - réduire l'utilisation de la bande passante Internet
 - synchronisation minimale ou nulle
-- accessible aux appareils à ressources limitées (<1Go de ram, <100mB de disque, 1CPU)
+- Accessible aux appareils à ressources limitées (<1 GB RAM, < 100 MB d'espace disque, 1 CPU)
 
 Le diagramme ci-dessous montre les fonctions des clients existants qui peuvent être fournies par le Portal Network, permettant aux utilisateurs d'accéder à ces fonctions sur des appareils à très faibles ressources.
 
@@ -70,6 +70,7 @@ Les clients du Portal Network sont :
 - [Trin](https://github.com/ethereum/trin) : écrit en Rust
 - [Fluffy](https://nimbus.team/docs/fluffy.html) : écrit en Nim
 - [Ultralight](https://github.com/ethereumjs/ultralight) : écrit en Typescript
+- [Shisui](https://github.com/GrapeBaBa/shisui) : écrit en Go
 
 Avoir plusieurs implémentations de clients indépendants renforce la résilience et la décentralisation du réseau Ethereum.
 
