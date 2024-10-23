@@ -91,7 +91,7 @@ Goerli 是測試驗證和質押的測試網。 Goerli 測試網對想要運行�
 - [Coinbase 錢包水龍頭 | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Chainstack Goerli 水龍頭](https://faucet.chainstack.com/goerli-faucet)
 
-要在 Goerli 測試網上啟動驗證者，請使用 ethstaker 的[「cheap goerli validator（實惠的 goerli 驗證者）」啟動面板](https://goerli.launchpad.ethstaker.cc/en/)。
+要在 Goerli 測試網上啟動驗證者，請使用 ethstaker 的[「cheap goerli validator（實惠的 goerli 驗證者）」啟動面板](https://holesky.launchpad.ethstaker.cc/en/)。
 
 ### 二層網路測試網 {#layer-2-testnets}
 
