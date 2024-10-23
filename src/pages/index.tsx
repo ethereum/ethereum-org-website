@@ -67,7 +67,6 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import {
-  BASE_TIME_UNIT,
   BLOG_FEEDS,
   BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
@@ -174,7 +173,8 @@ export const getStaticProps = (async ({ locale }) => {
       metricResults,
       rssData: { rssItems, blogLinks },
     },
-    revalidate: BASE_TIME_UNIT * 24,
+    // TODO: re-enable revalidation once we have a workaround for failing builds
+    // revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
