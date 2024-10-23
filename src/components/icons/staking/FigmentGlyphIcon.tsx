@@ -7,7 +7,7 @@ export const FigmentGlyphIcon = createIconBase({
   fill: "none",
   children: (
     <>
-      <rect width="32" height="32" fill="black" />
+      <rect width="32" height="32" fill="black" opacity={0.5} />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
