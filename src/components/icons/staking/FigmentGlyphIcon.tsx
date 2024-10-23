@@ -3,11 +3,11 @@ import { createIconBase } from "../icon-base"
 export const FigmentGlyphIcon = createIconBase({
   displayName: "FigmentGlyphIcon",
   viewBox: "0 0 32 32",
-  className: "size-[1em] bg-black",
+  className: "size-[1em]",
   fill: "none",
   children: (
     <>
-      <rect width="32" height="32" fill="currentColor" fillOpacity="0.2" />
+      <rect width="32" height="32" fill="black" />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
