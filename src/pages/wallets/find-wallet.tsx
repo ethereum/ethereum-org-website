@@ -27,8 +27,6 @@ import {
   getSupportedLocaleWallets,
 } from "@/lib/utils/wallets"
 
-import { useWalletPersonas } from "../../hooks/useWalletPersonas"
-
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
 const Subtitle = ({ children }: ChildOnlyProp) => (
