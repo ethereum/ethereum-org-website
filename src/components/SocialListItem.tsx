@@ -39,7 +39,7 @@ const SocialListItem = ({
   return (
     <div className={cn("flex w-full items-center px-0 py-2", className)}>
       <Icon
-        className={cn("size-10 shrink-0 pe-3", socialColorClasses[socialIcon])}
+        className={cn("size-8 shrink-0 pe-3", socialColorClasses[socialIcon])}
       />
       <div className="font-normal italic">{children}</div>
     </div>
