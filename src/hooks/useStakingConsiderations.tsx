@@ -1,6 +1,5 @@
 import { ElementType, useState } from "react"
 import { useTranslation } from "next-i18next"
-import { chakra } from "@chakra-ui/react"
 
 import type { StakingPage } from "@/lib/types"
 
@@ -403,19 +402,8 @@ export const useStakingConsiderations = ({
   }
 
   const indicatorSvgStyle = { width: 20, height: "auto" }
-  const StyledSvg = Svg
-    ? chakra(Svg, {
-        baseStyle: {
-          path: {
-            fill: "text",
-          },
-        },
-      })
-    : chakra("div", {
-        baseStyle: {
-          display: "none",
-        },
-      })
+  const StyledSvg = () =>
+    Svg ? <Svg className="size-[4.5rem]" /> : <div className="hidden" />
 
   return {
     title,
