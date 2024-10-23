@@ -1930,6 +1930,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://amarachijohnson.com"><img src="https://avatars.githubusercontent.com/u/41474439?v=4?s=100" width="100px;" alt="Amarachi Johnson-Ubah"/><br /><sub><b>Amarachi Johnson-Ubah</b></sub></a><br /><a href="#ideas-emmanuellar" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://sumitvekariya.surge.sh"><img src="https://avatars.githubusercontent.com/u/20764957?v=4?s=100" width="100px;" alt="Sumit Vekariya"/><br /><sub><b>Sumit Vekariya</b></sub></a><br /><a href="#maintenance-sumitvekariya" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/rafagomes"><img src="https://avatars.githubusercontent.com/u/565337?v=4?s=100" width="100px;" alt="Rafa Gomes"/><br /><sub><b>Rafa Gomes</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rafagomes" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
