@@ -56,6 +56,12 @@ const Filters = ({
           return {
             ...item,
             inputState: newInputState,
+            options: item.options.map((option) => {
+              return {
+                ...option,
+                inputState: newInputState,
+              }
+            }),
           }
         }
         return item
