@@ -55,7 +55,7 @@ const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
         <Button
           variant="outline"
           onClick={() => onCopy(codeSnippet)}
-          className="absolute end-4 top-20"
+          className="absolute right-4 top-20" // Force right, code always LTR
         >
           {hasCopied ? (
             <>
