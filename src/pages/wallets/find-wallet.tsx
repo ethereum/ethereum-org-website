@@ -27,7 +27,7 @@ import {
   getSupportedLocaleWallets,
 } from "@/lib/utils/wallets"
 
-import { BASE_TIME_UNIT } from "@/lib/constants"
+import { useWalletPersonas } from "../../hooks/useWalletPersonas"
 
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
@@ -80,7 +80,8 @@ export const getStaticProps = (async ({ locale }) => {
       wallets,
     },
     // Updated once a day
-    revalidate: BASE_TIME_UNIT * 24,
+    // TODO: re-enable revalidation once we have a workaround for failing builds
+    // revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
