@@ -91,7 +91,7 @@ Goerli é a rede de testes usada para testar a validação e staking. A rede Goe
 - [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Faucet Chainstack Goerli](https://faucet.chainstack.com/goerli-faucet)
 
-Para iniciar um Validador na rede de testes Goerli, use a barra de inicialização ["validador goerli barato"](https://goerli.launchpad.ethstaker.cc/en/) do ethstaker.
+Para iniciar um Validador na rede de testes Goerli, use a barra de inicialização ["validador goerli barato"](https://holesky.launchpad.ethstaker.cc/en/) do ethstaker.
 
 ### Redes de testes de camada 2 {#layer-2-testnets}
 
