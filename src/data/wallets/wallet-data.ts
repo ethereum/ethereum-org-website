@@ -23,6 +23,7 @@ import LedgerImage from "@/public/images/wallets/ledger.png"
 import LoopringImage from "@/public/images/wallets/loopring.png"
 import MetaMaskImage from "@/public/images/wallets/metamask.png"
 import MewImage from "@/public/images/wallets/mew.png"
+import OkxWalletImage from "@/public/images/wallets/okxwallet.png"
 import OneKeyImage from "@/public/images/wallets/onekey.png"
 import PhantomImage from "@/public/images/wallets/phantom.png"
 import PillarImage from "@/public/images/wallets/pillar.png"
@@ -40,6 +41,66 @@ import XDEFIImage from "@/public/images/wallets/xdefi.png"
 import ZerionImage from "@/public/images/wallets/zerion.png"
 
 export const walletsData: WalletData[] = [
+  {
+    last_updated: "2024-10-09",
+    name: "OKX Wallet",
+    image: OkxWalletImage,
+    brand_color: "#000000",
+    url: "https://www.okx.com/web3",
+    active_development_team: false,
+    languages_supported: [
+      "en",
+      "zh",
+      "zh-tw",
+      "fr",
+      "ru",
+      "vi",
+      "id",
+      "tr",
+      "de",
+      "it",
+      "pl",
+      "pt-br",
+      "pt",
+      "es",
+      "cs",
+      "ar",
+      "uk",
+    ],
+    twitter: "https://x.com/okxweb3",
+    discord: "https://discord.com/invite/okx",
+    reddit: "https://www.reddit.com/r/OKX",
+    telegram: "https://t.me/OKXOfficial_English",
+    ios: true,
+    android: true,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: true,
+    chromium: true,
+    hardware: false,
+    open_source: false,
+    repo_url: "",
+    non_custodial: true,
+    security_audit: [],
+    scam_protection: false,
+    hardware_support: true,
+    rpc_importing: true,
+    nft_support: true,
+    connect_to_dapps: true,
+    staking: true,
+    swaps: true,
+    layer_2: true,
+    gas_fee_customization: true,
+    ens_support: true,
+    erc_20_support: true,
+    buy_crypto: false,
+    withdraw_crypto: false,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation: "",
+    documentation: "",
+  },
   {
     last_updated: "2022-06-22",
     name: "Keystone",
