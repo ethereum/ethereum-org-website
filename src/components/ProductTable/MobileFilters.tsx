@@ -94,7 +94,7 @@ const MobileFilters = ({
           />
         </div>
         <DrawerFooter>
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-2 items-center">
             <div>
               <Button variant="ghost" className="gap-1" onClick={resetFilters}>
                 <BsArrowCounterclockwise />
