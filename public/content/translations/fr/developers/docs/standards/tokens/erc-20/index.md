@@ -6,19 +6,18 @@ lang: fr
 
 ## Introduction {#introduction}
 
-**Qu'est ce qu'un jeton ?**
+**Qu'est-ce qu'un jeton ?**
 
 Un jeton peut représenter à peu près n'importe quoi sur Ethereum :
 
 - Des points de réputation sur une plateforme en ligne
 - Les compétences d'un personnage de jeu
-- Un billet de loterie
 - Des actifs financiers, comme une action dans une société
 - Une monnaie fiduciaire comme l'EUR
 - Une once d'or
 - Et plus encore...
 
-Un écosystème aussi puissant qu'Ethereum doit être géré selon une norme robuste, non ? C'est exactement là que l'ERC-20 joue son rôle ! Cette norme permet aux développeurs de construire des applications de jetons interopérables avec d'autres produits et services.
+Un écosystème aussi puissant qu'Ethereum doit être géré selon une norme robuste, non ? C'est exactement là que l'ERC-20 joue son rôle ! Cette norme permet aux développeurs de construire des applications de jetons interopérables avec d'autres produits et services. La norme ERC-20 est également utilisée pour fournir des fonctionnalités supplémentaires à l'[ether](/glossary/#ether).
 
 **Qu'est-ce que l'ERC-20 ?**
 
@@ -59,7 +58,7 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-### Événements {#events}
+### Évènements {#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
@@ -70,7 +69,7 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 Voyons pourquoi une norme est importante et pourquoi elle nous facilite le contrôle de tout contrat de jeton ERC-20 sur Ethereum. Nous avons juste besoin de l'interface binaire-programme (ABI) du contrat pour créer une interface à n'importe quel jeton ERC-20. Comme vous pouvez le voir ci-dessous, nous utiliserons une ABI simplifiée, pour en faire un exemple facile à comprendre.
 
-#### Exempl Web3.py {#web3py-example}
+#### Exemple Web3.py {#web3py-example}
 
 Pour commencer, assurez-vous d'avoir installé la bibliothèque Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) :
 
@@ -141,9 +140,33 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
+## Problèmes connus {#erc20-issues}
+
+### Problème de réception de jeton ERC-20 {#reception-issue}
+
+Quand des jetons ERC-20 sont envoyés à un contrat intelligent qui n'est pas conçu pour traiter des jetons ERC-20, ces jetons peuvent être définitivement perdus. Cela se produit parce que le contrat destinataire n'a pas la fonctionnalité nécessaire pour reconnaître ou répondre aux jetons entrants, et il n'existe aucun mécanisme dans la norme ERC-20 pour informer le contrat destinataire des jetons entrants. Ce problème se manifeste à travers ces principaux cas :
+
+1.  Mécanisme de transfert de jetons
+  - Les jetons ERC-20 sont transférés en utilisant les fonctions transfer ou transferFrom
+    -   Lorsqu'un utilisateur envoie des jetons à une adresse de contrat en utilisant ces fonctions, les jetons sont transférés indépendamment du fait que le contrat récepteur soit conçu pour les gérer ou non
+2.  Manque de notification
+    -   Le contrat récepteur ne reçoit pas de notification ou de rappel indiquant que des jetons lui ont été envoyés
+    -   Si le contrat récepteur ne dispose pas d'un mécanisme destiné à gérer les jetons (par exemple, une fonction de rappel ou une fonction dédiée à la réception des jetons), les jetons restent effectivement bloqués à l'adresse du contrat
+3.  Aucune gestion intégrée
+    -   La norme ERC-20 n'inclut pas de fonction obligatoire à mettre en œuvre pour les contrats de réception, ce qui conduit à une situation où de nombreux contrats ne sont pas en mesure de gérer correctement l'arrivée de jetons
+
+Ce problème a donné naissance à des normes alternatives, telles que l'[ERC-223](/developers/docs/standards/tokens/erc-223)
+
 ## Complément d'information {#further-reading}
 
 - [EIP-20 : ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Tokens](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - Implémentation ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Guide des jetons ERC20 Solidity](https://www.alchemy.com/overviews/erc20-solidity)
+
+
+## Autres normes de jetons fongibles {#fungible-token-standards}
+
+- [ERC-223](/developers/docs/standards/tokens/erc-223)
+- [ERC-777](/developers/docs/standards/tokens/erc-777)
+- [ERC-4626 - Coffre-fort à jetons](/developers/docs/standards/tokens/erc-4626)

@@ -10,7 +10,7 @@ Las claves de Ethereum se generan utilizando [criptografía de curva elíptica](
 
 No obstante, cuando Ethereum cambió de [prueba de trabajo](/developers/docs/consensus-mechanisms/pow) a [prueba de participación](/developers/docs/consensus-mechanisms/pos), se añadió un nuevo tipo de clave a Ethereum. Las claves originales siguen funcionando exactamente igual que antes: no hubo cambios en las claves basadas en curvas elípticas que protegen las cuentas. No obstante, los usuarios necesitaban un nuevo tipo de clave para participar en la prueba de participación colocando ETH y ejecutando validadores. Esta necesidad surgió de los desafíos de escalabilidad asociados con muchos mensajes que pasaban entre un gran número de validadores que requerían un método criptográfico que se pudiera agregar fácilmente para reducir la cantidad de comunicación necesaria para que la red llegara a un consenso.
 
-Este nuevo tipo de clave utiliza el esquema de firma [**Boneh-Lyn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). BLS permite una agregación muy eficiente de firmas, pero también permite la ingeniería inversa de claves de validadores individuales añadidas y es perfecto para administrar acciones entre validadores.
+Este nuevo tipo de clave utiliza el esquema de firma [**Boneh-Lynn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). BLS permite una agregación muy eficiente de firmas, pero también permite la ingeniería inversa de claves de validadores individuales añadidas y es perfecto para administrar acciones entre validadores.
 
 ## Los dos tipos de claves de validación {#two-types-of-keys}
 
@@ -90,7 +90,7 @@ Cada rama está separada por un `/`, por lo que `m/2` significa comenzar con la 
 
 ![lógica de la clave del validador](multiple-keys.png)
 
-## Más información {#further-reading}
+## Más lecturas {#further-reading}
 
 - [Publicación en el blog de Ethereum Foundation por Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [Generación de claves EIP-2333 BLS12-381](https://eips.ethereum.org/EIPS/eip-2333)

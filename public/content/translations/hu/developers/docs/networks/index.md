@@ -61,6 +61,7 @@ A két nyilvános teszthálózat, amelyet a kliens fejlesztők jelenleg fenntart
 - [Alchemy Sepolia csap](https://sepoliafaucet.com/)
 - [Infura Sepolia csap](https://www.infura.io/faucet)
 - [Chainstack Sepolia csap](https://faucet.chainstack.com/sepolia-faucet)
+- [Ethereum-ökoszisztéma csap](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli _(hosszútávú támogatás)_ {#goerli}
 
@@ -90,7 +91,7 @@ A Goerli egy olyan teszthálózat, ahol a validálást és a letétbe helyezést
 - [Coinbase Wallet csap | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Chainstack Goerli csap](https://faucet.chainstack.com/goerli-faucet)
 
-Ha szeretne egy validátort indítani a Goerli teszthálózaton, akkor használja az ethstaker [olcsó goerli validátor launchpad-et](https://goerli.launchpad.ethstaker.cc/en/).
+Ha szeretne egy validátort indítani a Goerli teszthálózaton, akkor használja az ethstaker [olcsó goerli validátor launchpad-et](https://holesky.launchpad.ethstaker.cc/en/).
 
 ### Második blokkláncréteg (L2) teszthálózatok {#layer-2-testnets}
 

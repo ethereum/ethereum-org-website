@@ -108,7 +108,7 @@ Pour plus d'informations, consultez ce billet de blog de Tim Beiko sur <a href="
 
 ## La Fusion et la consommation énergétique {#merge-and-energy}
 
-La Fusion marque la fin de la preuve de travail pour Ethereum, et le début de l'ère d'un Ethereum plus durable et plus écologique. La consommation énergétique d'Ethereum a chuté d'environ 99,95 %, faisant de l'Ethereum une blockchain verte. Apprenez-en plus à propos de [la consommation énergétique d'Ethereum](/energy-consumption/).
+La Fusion marque la fin de la preuve de travail pour Ethereum, et le début d'un Ethereum plus durable et plus écologique. La consommation énergétique d'Ethereum a chuté d'environ 99,95 %, faisant de l'Ethereum une blockchain verte. Apprenez-en plus à propos de [la consommation énergétique d'Ethereum](/energy-consumption/).
 
 ## La Fusion et la fragmentation {#merge-and-scaling}
 

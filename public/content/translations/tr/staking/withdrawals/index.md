@@ -1,14 +1,14 @@
 ---
 title: Hisseden ödeme alma
-description: Hisseleme para çekimlerinin ne olduğu, nasıl çalıştıkları ve ödüllerini almak içn paydaşların ne yapmaları gerektiğini özetleyen sayfa
+description: Hisseleme çekimlerinin ne olduğu, nasıl çalıştıkları ve ödüllerini almak içn paydaşların ne yapmaları gerektiğini özetleyen sayfa
 lang: tr
 template: staking
 image: /images/staking/leslie-withdrawal.png
 alt: Hisseleme ödülleri ile gergedan Leslie
 sidebarDepth: 2
 summaryPoints:
-  - Şangay/Capella yükseltmesi Ethereum'da hisseleme içerisindeki para çekim işlemlerini mümkün kıldı
-  - Doğrulayıcı operatörler, etkinleştirmek için para çekim adresi sağlamalıdır
+  - Şangay/Capella yükseltmesi Ethereum'da hisseleme içerisindeki para çekme işlemlerini mümkün kıldı
+  - Doğrulayıcı operatörler, etkinleştirmek için para çekme adresi sağlamalıdır
   - Ödüller birkaç günde bir otomatik olarak dağıtılır
   - Hisselemeden tamamen çıkan doğrulayıcılar kalan bakiyelerini geri alacaklardır
 ---
@@ -19,7 +19,7 @@ summaryPoints:
 
 **Hisseleme çekimleri** Ethereum fikir birliği katmanındaki (İşaret Zinciri) bir doğrulayıcı hesabından, beraber işletilebileceği yürütüm katmanına ETH transferlerine karşılık gelir.
 
-32 ETH'den **fazla bakiyenin ödül ödemeleri** her bir doğrulayıcı ile ilişkilendirilmiş çekim adresine, her kullanıcı tarafından sağlanır sağlanmaz otomatik ve düzenli olarak gönderilir. Kullanıcılar ayrıca tüm doğrulayıcı bakiyesinin kilidini açarak **hisselemeden toptan çıkabilir**.
+32 ETH'den **fazla bakiyenin ödül ödemeleri** her bir doğrulayıcı ile ilişkilendirilmiş para çekme adresine, her kullanıcı tarafından sağlanır sağlanmaz otomatik ve düzenli olarak gönderilir. Kullanıcılar ayrıca tüm doğrulayıcı bakiyesinin kilidini açarak **hisselemeden toptan çıkabilir**.
 
 ## Hisseleme ödülleri {#staking-rewards}
 
@@ -44,10 +44,10 @@ Shanghai/Capella yükseltmesinden önce hisselenmiş ETH'lerinizi kullanamaz vey
 Herhangi bir doğrulayıcı hesabının kendi bakiyesinden ETH çekebilir durumuna erişmesi için bir çekim adresi belirtmesi, gerekli adımdır.
 
 <InfoBanner emoji="⚠️" isWarning>
-  <strong>Her bir doğrulayıcı hesabı bir seferde yalnızca bir çekim adresi atayabilir.</strong> Bir adres seçilip fikir birliği katmanına kaydedildiğinde bu, geri alınamaz veya tekrardan değiştirilemez. Kaydetmeden önce sahipliği ve bildirilen adresin doğruluğunu iki defa kontrol edin.
+  <strong>Her bir doğrulayıcı hesabı bir seferde yalnızca bir para çekme adresi atayabilir.</strong> Bir adres seçilip fikir birliği katmanına kaydedildiğinde bu, geri alınamaz veya tekrardan değiştirilemez. Kaydetmeden önce sahipliği ve bildirilen adresin doğruluğunu iki defa kontrol edin.
 </InfoBanner>
 
-Aksini belirtmediğiniz için güvenlik kelimelerinizin çevrimdışı ortamda güvende kaldığı ve herhangi bir yolla ele geçirilemeyeceği varsayıldığından <strong>aynı zamanda bakiyelerinize herhangi bir tehdit de bulunmamaktadır</strong>. Çekim kimliği ekleme başarısızlığı, çekim adresi belirtilene kadar ETH'nizi basit bir biçimde doğrulayıcı hesabında kilitli halde bırakacaktır.
+Aksini belirtmediğiniz için güvenlik kelimelerinizin çevrimdışı ortamda güvende kaldığı ve herhangi bir yolla ele geçirilemeyeceği varsayıldığından <strong>aynı zamanda bakiyelerinize herhangi bir tehdit de bulunmamaktadır</strong>. Para çekme kimliği ekleme başarısızlığı, çekim adresi belirtilene kadar ETH'nizi basit bir biçimde doğrulayıcı hesabında kilitli halde bırakacaktır.
 
 ## Hisselemeden tamamen çıkış {#exiting-staking-entirely}
 
@@ -55,13 +55,13 @@ Doğrulayıcı hesap bakiyesinin dışına _herhangi bir_ fon gönderilebilmesi 
 
 Hisselemeden tamamen çıkmak ve tüm bakiyelerini çekmek isteyen kullanıcılar, hisselemeden çıkış sürecini başlatacak ''gönüllü çıkış'' mesajını doğrulayıcı anahtarlarıyla birlikte imzalamak ve yayımlamak zorundadır. Bu, doğrulayıcı müşteriniz ile tamamlanır ve mutabakat düğümünüze kaydedilir, bundan ötürü herhangi bir gaz gerektirmez.
 
-Bir doğrulayıcının hisselemeden çıkma süreci, kaç tane diğer doğrulayıcının da aynı zamanda çıktığına bağlı olarak değişken vakit alır. Bir kez tamamlandığında bu hesap artık doğrulayıcı hesap görevlerinden sorumlu olmayacak, ödül kazanma hakkı olmayacak ve ETH'leri daha fazla ''hisselemede'' kalmaycaktır. Bu sürede hesap, tamamen ''çekilebilir'' olarak işaretlenecektir.
+Bir doğrulayıcının hisselemeden çıkma süreci, kaç tane diğer doğrulayıcının da aynı zamanda çıktığına bağlı olarak değişken vakit alır. Bir kez tamamlandığında bu hesap artık doğrulayıcı hesap görevlerinden sorumlu olmayacak, ödül kazanma hakkı olmayacak ve ETH'leri daha fazla ''hisselemede'' kalmaycaktır. Bu sürede hesap, tamamen ''para çekilebilir'' olarak işaretlenecektir.
 
-Bir hesap "para çekilebilir" olarak işaretlendikten ve de hesap para çekme bilgilerini sağladıktan sonra kullanıcın beklemekten başka yapması gereken bir şey yoktur. Hesaplar, uygun çıkış fonları için otomatik ve devamlı olarak blok teklif verenleri tarafından süpürülüyor ve hesap bakiyeniz bir sonraki <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>süpürülmede</a>tamamen süprülüyor (tam çekilme olarak da bilinir).
+Bir hesap "para çekilebilir" olarak işaretlendikten ve de hesap para çekme bilgilerini sağladıktan sonra kullanıcın beklemekten başka yapması gereken bir şey yoktur. Hesaplar, uygun çıkış fonları için otomatik ve devamlı olarak blok teklif verenleri tarafından süpürülüyor ve hesap bakiyeniz bir sonraki <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>süpürülmede</a>tamamen süprülüyor (tam para çekme olarak da bilinir).
 
-## Hisseleme para çekme işlemleri ne zaman aktifleşir? {#when}
+## Hisseleme çekim işlemleri ne zaman aktifleşir? {#when}
 
-Hisseleme para çekimleri aktif! Para çekebilme işlevi 12 Nisan 2023'te gerçekleşen Şangay/Capella yükseltmesinin bir kısmı sonucu aktifleştirildi.
+Hisseleme çekimleri aktif! Para çekebilme işlevi 12 Nisan 2023'te gerçekleşen Şangay/Capella yükseltmesinin bir kısmı sonucu aktifleştirildi.
 
 Şangay/Capella yükseltmesi, daha önceden hisselenmiş ETH'lerin normal Ethereum hesaplarına geri alınabilmesini sağladı. Bu da likidite hisseleme döngüsünü kapattı; Ethereum'u daha sürdürülebilir, ölçeklenebilir ve de merkeziyetsiz ekosistem oluşturma yolculuğuna bir adım daha yaklaştırdı.
 
@@ -85,41 +85,41 @@ Doğrulayıcının bir sonraki bloku önerebilmesi için 16 adede kadar uygun pa
 <InfoBanner emoji="🕛">
 Analog bir saat düşünün. Saatteki akrep saate işaret eder, bir yönde ilerler, herhangi bir saati atlamaz ve eninde sonunda son sayıya ulaşıldıktan sonra tekrardan başa sarar.<br/><br/>
 Şimdi 1 ile 12 arası yerine, saatin 0 ile N <em>(fikir birliği katmanına şimdiye kadar kayıt olmuş tüm doğrulayıcı hesaplarının sayısı, Ocak 2023 itibariyle 500.000) arasına sahip olduğunu düşünün.</em><br/><br/>
-Saatin akrebi çekim uygunluğu için kontrol edilmesi gereken sıradaki doğrulayıcıya işaret edecektir. 0 ile başlar ve hiçbir sayıyı atlamadan tüm yol boyunca devam eder. Son doğrulayıcıya ulaşıldığında döngü baştan başlayarak devam eder.
+Saatin akrebi para çekme uygunluğu için kontrol edilmesi gereken sıradaki doğrulayıcıya işaret edecektir. 0 ile başlar ve hiçbir sayıyı atlamadan tüm yol boyunca devam eder. Son doğrulayıcıya ulaşıldığında döngü baştan başlayarak devam eder.
 </InfoBanner>
 
-#### Çekimler için hesabı kontrol etme {#checking-an-account-for-withdrawals}
+#### Para çekme işlemleri için hesabı kontrol etme {#checking-an-account-for-withdrawals}
 
-Bir önerici muhtemel çekimler için doğrulayıcıları süpürürken, kontrol edilen her bir doğrulayıcı bir çekim gerçekleşip gerçekleşmediğini ve gerçekleşiyorsa ne kadar ETH'nin çekilmesi gerektiğini belirlemek için kısa bir soru serisi ile değerlendirilir.
+Bir önerici muhtemel para çekme işlemleri için doğrulayıcıları süpürürken, kontrol edilen her bir doğrulayıcı bir para çekme işlemi gerçekleşip gerçekleşmediğini ve gerçekleşiyorsa ne kadar ETH'nin çekilmesi gerektiğini belirlemek için kısa bir soru serisi ile değerlendirilir.
 
-1. **Bir çekim adresi sağlandı mı?** Eğer herhangi bir çekim adresi sağlanmadıysa hesap atlanır ve hiçbir çekim işlemi başlatılmaz.
-2. **Doğrulayıcı çıktı mı ve para çekilebilir mi?** Eğer doğrulayıcı tamamen çıkmış ve hesabın ''para çekilebilir'' olarak değerlendirildiği döneme ulaşmışsak tam para çekimi işletilir. Bu, kalan tüm bakiyeyi çekim adresine transfer eder.
-3. **İşlevsel bakiye 32'de azamiye ulaştı mı?** Eğer hesap para çekim kriterlerine ulaşmış, tamamen çıkmamış ve 32'den fazla ödüle sahipse yalnızca 32'nin üzerindeki ödülleri kullanıcıların çekim adreslerine transfer edecek kısmi bir para çekim işlemi sürdürülür.
+1. **Bir para çekme adresi sağlandı mı?** Eğer herhangi bir para çekme adresi sağlanmadıysa hesap atlanır ve hiçbir para çekme işlemi başlatılmaz.
+2. **Doğrulayıcı çıktı mı ve para çekilebilir mi?** Eğer doğrulayıcı tamamen çıkmış ve hesabın ''para çekilebilir'' olarak değerlendirildiği döneme ulaşmışsak tam para çekimi işletilir. Bu, kalan tüm bakiyeyi para çekme adresine transfer eder.
+3. **İşlevsel bakiye 32'de azamiye ulaştı mı?** Eğer hesap para çekme kriterlerine ulaşmış, tamamen çıkmamış ve 32'den fazla ödüle sahipse yalnızca 32'nin üzerindeki ödülleri kullanıcıların para çekme adreslerine transfer edecek kısmi bir para çekme işlemi sürdürülür.
 
 Bir doğrulayıcının hayat döngüsü boyunca doğrulayıcı operatörleri tarafından alınan ve bu akımı etkileyen yalnızca iki eylem vardır:
 
-- Herhangi bir para çekimi formunu etkinleştirmek için para çekim kimliği sağlayın
-- Tam para çekimi sağlayan işlem olan ağdan çıkın
+- Herhangi bir para çekme formunu etkinleştirmek için para çekme kimliği sağlayın
+- Tam para çekme sağlayan işlem olan ağdan çıkın
 
 ### Gazsız {#gas-free}
 
-Hisseleme çekimlerine bu yaklaşım, belirli miktarda ETH'nin çekilmesi istenen bir işlemin manuel olarak paydaşlar için gerekmesinden kaçınır. Bu, **herhangi bir gaz (işlem ücreti) gerektirmez** ve ayrıca para çekimleri, var olan yürütüm katmanı blok hacmi için yarışmaz.
+Hisseleme çekimlerine bu yaklaşım, belirli miktarda ETH'nin çekilmesi istenen bir işlemin manuel olarak paydaşlar için gerekmesinden kaçınır. Bu, **herhangi bir gaz (işlem ücreti) gerektirmez** ve ayrıca para çekme işlemleri, var olan yürütüm katmanı blok hacmi için yarışmaz.
 
 ### Hisseleme ödüllerimi ne sıklıkla alacağım? {#how-soon}
 
-Tek bir blokta en fazla 16 para çekimi gerçekleştirilebilir. Bu hızda, her gün 115.200 doğrulayıcı çekimi (herhangi bir kayıp yuva olmadığını varsayarsak) işlenebilir. Yukarıda da belirtildiği üzere, para çekimine uygun olmayan doğrulayıcılar süpürme süresini azaltarak atlanır.
+Tek bir blokta en fazla 16 para çekme işlemi gerçekleştirilebilir. Bu hızda, her gün 115.200 doğrulayıcı para çekme işlemi (herhangi bir kayıp yuva olmadığını varsayarsak) işlenebilir. Yukarıda da belirtildiği üzere, para çekmeye uygun olmayan doğrulayıcılar süpürme süresini azaltarak atlanır.
 
 Bu hesaplamayı genişleterek belirli sayıda para çekme işlemi için ne kadar süre gerektiğini tahmin edebiliriz:
 
 <TableContainer>
 
 | Para çekme sayısı | Tamamlanma zamanı |
-| :---------------: | :---------------: |
-|      400.000      |      3,5 gün      |
-|      500.000      |      4,3 gün      |
-|      600.000      |      5,2 gün      |
-|      700.000      |      6,1 gün      |
-|      800.000      |      7,0 gün      |
+| :-------------------: | :--------------: |
+| 400.000 | 3,5 gün |
+| 500.000 | 4,3 gün |
+| 600.000 | 5,2 gün |
+| 700.000 | 6,1 gün |
+| 800.000 | 7,0 gün |
 
 </TableContainer>
 
@@ -142,9 +142,9 @@ eventAction="Why can a withdrawal address only be set once?"
 eventName="read more">
 Bir yürütme katmanı para çekme adresi belirleyerek söz konusu doğrulayıcı için para çekme kimlik bilgileri kalıcı olarak değiştirilmiştir. Bunun anlamı da eski kimlik bilgilerinin artık çalışmayacağı ve yeni kimlik bilgilerinin doğrudan bir yürütme katmanı hesabına yönlendirileceğidir.
 
-Çekim adresleri ya akıllı sözleşme (kendi kodu ile kontrol edilen) ya da harici sahip olunan hesap (EOA, kendi özel anahtrarıyla kontrol edilen) olabilir. Şu anda bu hesapların doğrulayıcı kimlik bilgilerinde bir değişikliği işaret edecek bir fikir birliği katmanına geri iletme yolu yoktur ve bu işlevin eklenmesi de protokole gereksiz bir karmaşıklık katacaktır.
+Para çekme adresleri ya akıllı sözleşme (kendi kodu ile kontrol edilen) ya da harici sahip olunan hesap (EOA, kendi özel anahtrarıyla kontrol edilen) olabilir. Şu anda bu hesapların doğrulayıcı kimlik bilgilerinde bir değişikliği işaret edecek bir fikir birliği katmanına geri iletme yolu yoktur ve bu işlevin eklenmesi de protokole gereksiz bir karmaşıklık katacaktır.
 
-Belirli bir doğrulayıcı için çekim adresini değiştirmeye alternatif olarak, kullanıcılar anahtar döngüsünü yönetebilen, Safe gibi bir akıllı sözleşmeyi çekim adresi olarak kullanmayı seçebilirler. Fonlarını kendi EOA'larına göre ayarlayan kullanıcılar, tüm stake edilmiş fonlarını çekebilmek için tam bir çıkış gerçekleştirebilir ve ardından yeni kimlik bilgilerini sunarak yeniden hisseleyebilirler.
+Belirli bir doğrulayıcı için para çekmeadresini değiştirmeye alternatif olarak, kullanıcılar anahtar döngüsünü yönetebilen, Safe gibi bir akıllı sözleşmeyi para çekme adresi olarak kullanmayı seçebilirler. Fonlarını kendi EOA'larına göre ayarlayan kullanıcılar, tüm hisselenmiş fonlarını çekebilmek için tam bir çıkış gerçekleştirebilir ve ardından yeni kimlik bilgilerini sunarak yeniden hisseleyebilirler.
 </ExpandableCard>
 
 <ExpandableCard
@@ -160,22 +160,22 @@ Genel olarak kullanıcılar, temelde hisselenmiş ETH'lerini geri almakta veya k
 </ExpandableCard>
 
 <ExpandableCard
-title="Ödül ödemeleri (kısmi para çekimleri) otomatik olarak gerçekleşir mi?"
+title="Ödül ödemeleri (kısmi para çekme işlemleri) otomatik olarak gerçekleşir mi?"
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
-Evet, doğrulayıcınız bir çekim adresi sağladığı sürece. Bu herhangi bir çekimi etkinleştirmek için bir defa sağlanmalıdır, sonrasında ödül ödemeleri otomatik olarak birkaç günde bir her doğrulayıcı süpürmesinde çalışacaktır.
+Evet, doğrulayıcınız bir para çekme adresi sağladığı sürece. Bu herhangi bir para çekme işlemini etkinleştirmek için bir defa sağlanmalıdır, sonrasında ödül ödemeleri otomatik olarak birkaç günde bir her doğrulayıcı süpürmesinde çalışacaktır.
 </ExpandableCard>
 
 <ExpandableCard
-title="Tam para çekimleri otomatik olarak gerçekleşir mi?"
+title="Tam para çekme işlemleri otomatik olarak gerçekleşir mi?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">
 
-Hayır eğer doğrulayıcınız hâlâ ağda aktif ise otomatik olarak tam bir çekme gerçekleşmeyecektir. Bu, gönüllü çıkışı manuel olarak başlatmayı gerektirir.
+Hayır eğer doğrulayıcınız hâlâ ağda aktif ise otomatik olarak tam bir para çekme gerçekleşmeyecektir. Bu, gönüllü çıkışı manuel olarak başlatmayı gerektirir.
 
-Bir doğrulayıcı çıkış sürecini tamamladığında ve hesabın çekim kredilerinin olduğunu varsayarsak kalan bakiye, <em>sonrasında</em> sıradaki <a href="#validator-sweeping">doğrulayıcı süpürmesinde</a> çekilecektir.
+Bir doğrulayıcı çıkış sürecini tamamladığında ve hesabın para çekme kredilerinin olduğunu varsayarsak kalan bakiye, <em>sonrasında</em> sıradaki <a href="#validator-sweeping">doğrulayıcı süpürmesinde</a> çekilecektir.
 
 </ExpandableCard>
 
@@ -183,20 +183,20 @@ Bir doğrulayıcı çıkış sürecini tamamladığında ve hesabın çekim kred
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
-Çekimler otomatik olarak kilitlemeye katkısı olmayan herhangi bir ETH'yi atmaya yönelik düzenlenmiştir. Bu, çıkış sürecini tamamlamış olan hesaplar için tüm bakiyeleri de kapsar.
+Para çekme işlemleri otomatik olarak kilitlemeye katkısı olmayan herhangi bir ETH'yi atmaya yönelik düzenlenmiştir. Bu, çıkış sürecini tamamlamış olan hesaplar için tüm bakiyeleri de kapsar.
 
 Belirli miktarlarda ETH'nin çekilmesini manuel olarak talep etmek mümkün değildir.
 </ExpandableCard>
 
 <ExpandableCard
-title="Doğrulayıcı yürütüyorum. Para çekimlerini etkinleştirmek için daha fazla bilgiye nereden ulaşabilirim?"
+title="Doğrulayıcı yürütüyorum. Para çekme işlemlerini etkinleştirmek için daha fazla bilgiye nereden ulaşabilirim?"
 eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
 
-Doğrulayıcı operatörlerinin doğrulayıcıyı çekimler için nasıl hazırlayacağı hakkında daha fazla detay bulabilecekleri <a href="https://launchpad.ethereum.org/withdrawals/">Hisseleme Başlama Noktası Çekimleri</a> sayfasını ziyaret etmeleri önerilir. hazır, olayların gerçekleşme süreci ve çekimlerin nasıl çalıştığı ile ilgili daha fazla ayrıntı.
+Doğrulayıcı operatörlerin <a href="https://launchpad.ethereum.org/withdrawals/">Hisseleme Başlama Noktası Para Çekme İşlemleri</a> sayfasını ziyaret etmesi önerilir. Burada doğrulayıcınızı para çekme işlemleri için nasıl hazılayacağınız, olayların zamanlanması ve para çekme işlemlerinin nasıl işlediği hakkında daha fazla ayrıntı bulabilirsiniz.
 
-Kurulumunuzu ilk olarak bir test ağında denemek isterseniz, başlamak için <a href="https://holesky.launchpad.ethereum.org">Holesky Test Ağı Hisseleme Başlama Noktası</a> sayfasını ziyaret edin.
+Sisteminizi ilk olarak bir test ağında denemek için öncelikle <a href="https://holesky.launchpad.ethereum.org">Holesky Test Ağı Hisseleme Başlama Noktası</a>'nı ziyaret edin.
 
 </ExpandableCard>
 
@@ -205,14 +205,14 @@ title="Daha fazla ETH yatırarak çıktıktan sonra kendi doğrulayıcımı tekr
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
-Hayır. Bir doğrulayıcı çıktıktan ve tüm bakiyesi çekildikten sonra, bu doğrulayıcıya yatırılan tüm ek fonlar, bir sonraki doğrulayıcı süpürmesi sırasında otomatik olarak çekim adresine aktarılacaktır. ETH'yi tekrar hisselemek için yeni bir doğrulayıcı aktive olmalıdır.
+Hayır. Bir doğrulayıcı çıktıktan ve tüm bakiyesi çekildikten sonra, bu doğrulayıcıya yatırılan tüm ek fonlar, bir sonraki doğrulayıcı süpürmesi sırasında otomatik olarak para çekme adresine aktarılacaktır. ETH'yi tekrar hisselemek için yeni bir doğrulayıcı aktive olmalıdır.
 </ExpandableCard>
 
 ## Daha fazla bilgi {#further-reading}
 
-- [Hisseleme Başlama Noktası Para Çekimleri](https://launchpad.ethereum.org/withdrawals)
-- [EIP-4895: İşlem olarak işaret zinciri çekim işlemleri](https://eips.ethereum.org/EIPS/eip-4895)
+- [Hisseleme Başlama Noktası Para Çekme İşlemleri](https://launchpad.ethereum.org/withdrawals)
+- [EIP-4895: İşlem olarak işaret zinciri para çekme işlemleri](https://eips.ethereum.org/EIPS/eip-4895)
 - [Ethereum Kedi Çobanları - Şangay](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Potuz ve Hsiao-Wei Wang ile Kilitli ETH Çekimi (Test)](https://www.youtube.com/watch?v=G8UstwmGtyE)
-- [PEEPanEIP#68: EIP-4895: Alex stokes ile operasyonlar olarak işaret zinciri çekimleri](https://www.youtube.com/watch?v=CcL9RJBljUs)
+- [PEEPanEIP#68: EIP-4895: Operasyon olarak Alex Stokes ile işaret zincirinde zorla para çekme işlemleri](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Doğrulayıcının Geçerli Bakiyesini Anlamak](https://www.attestant.io/posts/understanding-validator-effective-balance/)

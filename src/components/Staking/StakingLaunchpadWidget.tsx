@@ -10,8 +10,8 @@ import Translation from "@/components/Translation"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import Select, { type SelectOnChange } from "../Select"
 import { Flex } from "../ui/flex"
-import Select, { type SelectOnChange } from "../ui/Select"
 
 type StakingDataOption = { label: string; value: string }
 

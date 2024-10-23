@@ -104,10 +104,11 @@ summaryPoint3: 它以开放科学运动为基础。
 - [Bio.xyz：为给你的生物技术去中心化自治组织或去中心化科学项目筹资](https://www.bio.xyz/)
 - [Fleming Protocol：推动协作式生物医学发现的开源数据经济](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
-- [CureDAO：由社区所有的精准健康平台](https://docs.curedao.org/)
 - [IdeaMarkets：实现去中心化科学的诚信](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
 - [ValleyDAO：一个开放的全球化社区，为合成生物学研究提供资金和转译支持](https://www.valleydao.bio)
+- [Cerebrum DAO：寻找和培育促进大脑健康和避免神经变性的解决方案](https://www.cerebrumdao.com/)
+- [CryoDAO：资助低温保存领域的登月研究](https://www.cryodao.org)
 
 我们欢迎提出新项目加入到列表中 - 开始前，请查看我们的[上架政策](/contributing/adding-desci-projects/)！
 

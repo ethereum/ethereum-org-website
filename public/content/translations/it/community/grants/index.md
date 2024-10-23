@@ -33,7 +33,7 @@ Questi progetti hanno creato le proprie sovvenzioni per progetti volti a svilupp
 - [SKALE Network Grants Program](https://skale.space/developers#grants): _ecosistema della [rete SKALE](https://skale.space/)_
 - [Programma di sovvenzioni della Swarm Foundation](https://my.ethswarm.org/grants): _Ecosistema di [Swarm Foundation](https://www.ethswarm.org/)_
 - [The Graph](https://thegraph.com/ecosystem/grants/): _Ecosistema di [The Graph](https://thegraph.com/)_
-- [Programma di sovvenzioni di Uniswap](https://www.uniswapfoundation.org/grants): _Community di [Uniswap](https://uniswap.org/)_
+- [Programma di sovvenzioni di Uniswap](https://www.uniswapfoundation.org/approach): _community di [Uniswap](https://uniswap.org/)_
 
 ## Finanziamento quadratico {#quadratic-funding}
 

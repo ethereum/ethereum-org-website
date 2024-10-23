@@ -4,7 +4,7 @@ description: Una explicación de los protocolos de consenso en los sistemas dist
 lang: es
 ---
 
-El término «mecanismo de consenso» a menudo se usa coloquialmente para referirse a los protocolos de «prueba de participación», «prueba de trabajo» o «prueba de autoridad». Sin embargo, estos son sólo componentes en los mecanismos de consenso que protegen contra ataques Sybil. Los mecanismos de consenso son el bloque de ideas completo, protocolos e incentivos que permiten que un conjunto distribuido de nodos acuerde el estado de una cadena de bloques.
+El término «mecanismo de consenso» a menudo se usa coloquialmente para referirse a los protocolos de «prueba de participación», «prueba de trabajo» o «prueba de autoridad». Sin embargo, estos son solo componentes de los mecanismos de consenso que protegen contra los [ataques Sybil](/glossary/#sybil-attack). Los mecanismos de consenso son el bloque de ideas completo, protocolos e incentivos que permiten que un conjunto distribuido de nodos acuerde el estado de una cadena de bloques.
 
 ## Requisitos previos {#prerequisites}
 
@@ -68,7 +68,7 @@ Obtenga más información sobre los diferentes tipos de mecanismos de consenso u
 
 Técnicamente, ni la prueba de trabajo ni la prueba de participación son protocolos de consenso de por sí, pero se les etiqueta de tal manera por simplicidad. En realidad son mecanismos de resistencia a Sybil y selectores de autor de bloque; son una manera de decidir quién es el autor del último bloque. Otro componente importante es el algoritmo de selección de cadena (también conocido como bifurcación) que permite a los nodos elegir un único bloque correcto en la cabeza de la cadena en escenarios donde existen múltiples bloques en la misma posición.
 
-La **resistencia a Sybil** mide cómo se comporta un protocolo frente a un [ataque Sybil](https://wikipedia.org/wiki/Sybil_attack). Los ataques Sybil son aquellos que se dan cuando un usuario o un grupo de usuarios fingen ser muchos usuarios. La resistencia a este tipo de ataques es esencial para una cadena de bloques descentralizada y permite a los mineros y validadores recibir una recompensa equitativa según los recursos que hayan invertido. La prueba de trabajo y la prueba de participación se protegen frente a esto haciendo que los usuarios tengan que gastar una gran cantidad de energía o entregar varias garantías. Estas protecciones son un elemento económico disuasorio frente a los ataques Sybil.
+La **resistencia a Sybil** mide cómo le va a un protocolo frente a un ataque Sybil. La resistencia a este tipo de ataques es esencial para una cadena de bloques descentralizada y permite a los mineros y validadores recibir una recompensa equitativa según los recursos que hayan invertido. La prueba de trabajo y la prueba de participación se protegen frente a esto haciendo que los usuarios tengan que gastar una gran cantidad de energía o entregar varias garantías. Estas protecciones son un elemento económico disuasorio frente a los ataques Sybil.
 
 Las **reglas de selección de cadena**se utilizan para decidir qué cadena es la cadena «correcta». Bitcoin utiliza la regla de la «cadena más larga», lo que significa que la cadena de bloques más larga será la que el resto de los nodos acepten como válida y con la que trabajen. Para las cadenas de prueba de trabajo, la cadena más larga viene determinada por la dificultad total de la prueba de trabajo acumulativa de las cadenas. Ethereum también solía usar la regla de la cadena más larga; sin embargo, ahora que Ethereum se ejecuta con prueba de participación, adoptó un algoritmo de elección de bifurcación actualizado que mide el «peso» de la cadena. El peso es la suma acumulada de los votos del validador, ponderada por los saldos de ether apostado del validador.
 
@@ -82,10 +82,11 @@ Ethereum utiliza un mecanismo de consenso conocido como [Gasper](/developers/doc
 - [Sobre la seguridad y el rendimiento de las cadenas de bloques de prueba de trabajo](https://eprint.iacr.org/2016/555.pdf)
 - [Fallo bizantino](https://en.wikipedia.org/wiki/Byzantine_fault)
 
-_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
+_¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite la página y añádalo._
 
 ## Temas relacionados {#related-topics}
 
 - [Prueba de trabajo](/developers/docs/consensus-mechanisms/pow/)
 - [Minado](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Prueba de participación](/developers/docs/consensus-mechanisms/pos/)
+- [Prueba de autoridad](/developers/docs/consensus-mechanisms/poa/)

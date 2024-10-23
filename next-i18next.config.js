@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require("path")
 const i18nConfig = require("./i18n.config.json")
 
 const BUILD_LOCALES = process.env.BUILD_LOCALES
@@ -17,7 +19,8 @@ module.exports = {
     localeDetection: false,
   },
   // define custom location for intl files, otherwise default to public/locales (https://github.com/i18next/next-i18next#2-translation-content)
-  localePath: "./src/intl",
+  // use path.resolve to work with Netlify (https://github.com/i18next/next-i18next/issues/1552#issuecomment-1538452722)
+  localePath: path.resolve("./src/intl"),
   // see updates to your translation JSON files without having to restart your development server each time
   reloadOnPrerender: true,
   // Language codes to lookup, given set language is 'en-US': 'all' --> ['en-US', 'en', 'dev'], 'currentOnly' --> 'en-US', 'languageOnly' --> 'en'

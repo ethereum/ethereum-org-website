@@ -8,7 +8,7 @@ When a new node joins the Ethereum network it needs to connect to nodes that are
 
 ## Connect to a bootnode {#connect-to-a-bootnode}
 
-Most clients have a list of bootnodes build in, but you might also want to run your own bootnode, or use one that is not part of the client's hardcoded list. In this case, you can specify them when starting your client, as follows (example is for Geth, please check your client's documentation):
+Most clients have a list of bootnodes builtin, but you might also want to run your own bootnode, or use one that is not part of the client's hardcoded list. In this case, you can specify them when starting your client, as follows (example is for Geth, please check your client's documentation):
 
 ```
 geth --bootnodes "enode://<node ID>@<IP address>:<port>"

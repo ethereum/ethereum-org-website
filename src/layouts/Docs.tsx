@@ -37,7 +37,8 @@ import YouTube from "@/components/YouTube"
 import { cn } from "@/lib/utils/cn"
 import { getEditPath } from "@/lib/utils/editPath"
 
-const baseHeadingClasses = "font-mono uppercase font-bold scroll-mt-40"
+const baseHeadingClasses =
+  "font-mono uppercase font-bold scroll-mt-40 break-words"
 
 const H1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading1
@@ -56,7 +57,7 @@ const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   />
 )
 
-const baseSubHeadingClasses = "leading-xs font-semibold"
+const baseSubHeadingClasses = "leading-xs font-semibold break-words"
 
 const H3 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading3 className={cn(baseSubHeadingClasses, "mt-12")} {...props} />
@@ -145,7 +146,9 @@ export const DocsLayout = ({
             maxDepth={frontmatter.sidebarDepth!}
             hideEditButton={!!frontmatter.hideEditButton}
           />
-          {children}
+          <div className="prose prose-lg max-w-none break-words">
+            {children}
+          </div>
           {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
           <BackToTop />
           <FeedbackCard isArticle />

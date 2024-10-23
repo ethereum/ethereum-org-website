@@ -73,7 +73,7 @@ Merhaba mesajları ile birlikte, kablo protokolü ayrıca bir eşe bağlantını
 
 #### Kablo protokolü {#wire-protocol}
 
-Eşler bağlandığında ve bir RLPx oturumu başlatıldığında, kablo protokolü eşlerin nasıl iletişim kurduğunu tanımlar. Kablo protokolü başlangıçta üç ana görevi tanımlıyordu: zincir senkronizasyonu, blok yayılımı ve işlem değişimi. Bununla birlikte, Ethereum hisse ispatına geçiş yaptıktan sonra blok yayılımı ve zincir senkronizasyonu, fikir birliği katmanının bir parçası haline geldi. İşlem borsası, hala yürütüm istemcilerinin faaliyet alanındadır. İşlem bilgisi değişimi, madencilerin bir sonraki bloğa dahil edilmek üzere bazılarını seçebilmeleri için düğümler arasında bekleyen işlemlerin değiş tokuşunu ifade eder. Bu görevlerle ilgili ayrıntılı bilgilere [buradan](https://github.com/ethereum/devp2p/blob/master/caps/eth.md) ulaşabilirsiniz. Bu alt protokolleri destekleyen istemciler, bunları [JSON-RPC](/developers/docs/apis/json-rpc/) aracılığıyla kullanıma sunar.
+Eşler bağlandığında ve bir RLPx oturumu başlatıldığında, kablo protokolü eşlerin nasıl iletişim kurduğunu tanımlar. Kablo protokolü başlangıçta üç ana görevi tanımlıyordu: zincir senkronizasyonu, blok yayılımı ve işlem değişimi. Bununla birlikte, Ethereum hisse ispatına geçiş yaptıktan sonra blok yayılımı ve zincir senkronizasyonu, fikir birliği katmanının bir parçası haline geldi. İşlem borsası, hala yürütüm istemcilerinin faaliyet alanındadır. İşlem takası, blok geliştiricilerin bir sonraki bloğa dahil etmek üzere bazılarını seçebilmeleri için düğümler arasında bekleyen işlemlerin takas edilmesini ifade eder. Bu görevlerle ilgili ayrıntılı bilgilere [buradan](https://github.com/ethereum/devp2p/blob/master/caps/eth.md) ulaşabilirsiniz. Bu alt protokolleri destekleyen istemciler, bunları [JSON-RPC](/developers/docs/apis/json-rpc/) aracılığıyla kullanıma sunar.
 
 #### les (hafif ethereum alt protokolü) {#les}
 
@@ -125,7 +125,7 @@ Fikir birliği ve yürütüm istemcileri paralel şekilde çalışır. Fikir bir
 
 İlgili ağ yığını parantez içinde olacak şekilde, kontrol akışının bir özeti aşağıda gösterilmiştir.
 
-### Fikir birliği istemcisi blok üreticisi olmadığında:
+### Fikir birliği istemcisi blok üreticisi olmadığında: {#when-consensus-client-is-not-block-producer}
 
 - Konsensus istemcisi, blok dedikodu protokolü aracılığıyla bir blok alır (konsensus p2p)
 - Konsensus istemcisi bloğu önceden doğrular, yani doğru meta verilerle geçerli bir göndericiden gelmesini sağlar
@@ -134,7 +134,7 @@ Fikir birliği ve yürütüm istemcileri paralel şekilde çalışır. Fikir bir
 - Yürütüm katmanı, doğrulama verilerini konsensus katmanına geri iletir, blok artık doğrulanmış olarak kabul edilir (yerel RPC bağlantısı)
 - Konsensus katmanı, kendi blok zincirinin başına blok ekler ve bunu onaylar, onaylamayı ağ üzerinden yayınlar (konsensus p2p)
 
-### Fikir birliği istemcisi blok üreticisi olduğunda:
+### Fikir birliği istemcisi blok üreticisi olduğunda: {#when-consensus-client-is-block-producer}
 
 - Konsensus istemcisi, bir sonraki blok üreticisi olduğuna dair bildirim alır (konsensus p2p)
 - Konsensus katmanı, yürütüm istemcisinde (yerel RPC) `create block` yöntemini çağırır

@@ -8,7 +8,7 @@ lang: zh
    Ethash 是以太坊的工作量证明挖矿算法。 工作量证明现在已经被**完全关闭**，取而代之，以太坊现在使用<a href="/developers/docs/consensus-mechanisms/pos/">权益证明</a>来保证安全。 阅读更多关于<a href="/roadmap/merge/">合并</a>、<a href="/developers/docs/consensus-mechanisms/pos/">权益证明</a>和<a href="/staking/">质押</a>的信息。 此页面是为了满足对历史的兴趣！  
 </InfoBanner>
 
-[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) 是 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) 算法的修改版。 Ethash 工作量证明是[内存密集型](https://wikipedia.org/wiki/Memory-hard_function)算法，这被认为使算法可抵御专用集成电路。 Ethash 专用集成电路最终被开发出来，但在工作量证明被关闭之前，图形处理单元挖矿仍然是一个可行的选择。 Ethash 仍然用于在其他非以太坊工作量证明网络上挖掘其他币。
+[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) 是 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) 算法的修改版本。 Ethash 工作量证明是[内存密集型](https://wikipedia.org/wiki/Memory-hard_function)算法，这被认为使算法可抵御专用集成电路。 Ethash 专用集成电路最终被开发出来，但在工作量证明被关闭之前，图形处理单元挖矿仍然是一个可行的选择。 Ethash 仍然用于在其他非以太坊工作量证明网络上挖掘其他币。
 
 ## Ethash 是如何工作的？ {#how-does-ethash-work}
 
@@ -19,7 +19,7 @@ lang: zh
 1. 有一个**种子**，可以通过扫描区块头直到该点来为每个区块计算种子。
 2. 从种子中可以计算出 **16 MB 的伪随机缓存**。 轻量级客户端存储缓存。
 3. 我们可以从缓存中生成一个 **1 GB 数据集**，数据集中每个项目仅依赖于一小部分缓存中的项目。 全客户端和矿工存储数据集。 数据集随着时间的流逝而呈线性增长。
-4. 采矿会抢走数据集的随机片段并将它们散列在一起。 可以通过使用缓存来重新生成您需要的数据集中的特定区块，以较低的内存进行验证，以使您只需要存储缓存。
+4. 采矿会抢走数据集的随机片段并将它们散列在一起。 可以通过使用缓存来重新生成你需要的数据集中的特定区块，以较低的内存进行验证，以使你只需要存储缓存。
 
 每隔 30000 个区块更新一次大数据集，因此，矿工的绝大部分工作都是读取数据集，而不是对其进行修改。
 
@@ -92,7 +92,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-缓存生成过程中，先按顺序填充 32 MB 内存，然后从[严格内存硬哈希函数 (2014)](http://www.hashcash.org/papers/memohash.pdf) 执行两次 Sergio Demian Lerner 的 _RandMemoHash_ 算法。 输出一组 524288 个 64 字节值。
+缓存生成过程中，先按顺序填充 32 MB 内存，然后从 [_严格内存硬哈希函数 _(2014)](http://www.hashcash.org/papers/memohash.pdf) 执行两次 Sergio Demian Lerner 的 _RandMemoHash_ 算法。 输出一组 524288 个 64 字节值。
 
 ## 数据聚合函数 {#date-aggregation-function}
 
@@ -135,7 +135,7 @@ def calc_dataset(full_size, cache):
 
 ## 主循环 {#main-loop}
 
-现在，我们指定了类似“hashimoto”的主要循环。在此循环中，我们聚合整个数据集的数据，以生成特定区块头和随机数的最终值。 在下面的代码中，`header` 代表一个*被截断*区块头的递归长度前缀表示的 SHA3-256 _哈希值_。被截断是指区块头被截去了 **mixHash** 和**随机数**字段。 `nonce` 是指一个 64 位无符号整数的八个字节，按大端序排列。 因此 `nonce[::-1]` 是上述值的八字节小端序表示：
+现在，我们指定了类似“hashimoto”的主要循环。在此循环中，我们聚合整个数据集的数据，以生成特定区块头和随机数的最终值。 在下面的代码中，`header` 代表一个_被截断_区块头的递归长度前缀表示的 SHA3-256 _哈希值_。被截断是指区块头被截去了 **mixHash** 和**随机数**字段。 `nonce` 是指一个 64 位无符号整数的八个字节，按大端序排列。 因此 `nonce[::-1]` 是上述值的八字节小端序表示：
 
 ```python
 def hashimoto(header, nonce, full_size, dataset_lookup):
@@ -206,11 +206,11 @@ def mine(full_size, dataset, header, difficulty):
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
 ## 附录 {#appendix}
 
-如果您有兴趣将上述 python spec 作为代码运行，则应在头部添加以下代码。
+如果你有兴趣将上述 python spec 作为代码运行，则应在头部添加以下代码。
 
 ```python
 import sha3, copy

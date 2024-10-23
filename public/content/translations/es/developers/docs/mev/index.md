@@ -6,7 +6,7 @@ lang: es
 
 El valor máximo extraíble (MEV) se refiere al valor máximo que se puede extraer de la producción de bloques por encima de la recompensa de bloques y las tarifas de gas estándares incluyendo, excluyendo y cambiando el orden de las transacciones en un bloque.
 
-## Valor extraíble del minero {#miner-extractable-value}
+## Valor máximo extraíble {#maximal-extractable-value}
 
 El valor máximo extraíble se aplicó por primera vez en el contexto de [prueba de trabajo](/developers/docs/consensus-mechanisms/pow/), e inicialmente se refería a él como "valor extraíble de minero". Esto es porque en la prueba de trabajo, los mineros controlan la inclusión, la exclusión y el orden de las transacciones. No obstante, desde la transición a la prueba de participación a través de [La Fusión](/roadmap/merge), los validadores han sido responsables de estas funciones, y la minería ya no forma parte del protocolo Ethereum. Como los métodos de extracción de valor todavía existen, se utiliza en su lugar el término "valor máximo extraíble" actualmente.
 
@@ -24,7 +24,7 @@ Con eso, para algunas oportunidades de MEV altamente competitivas, como [arbitra
 
 ### Gas golfing {#mev-extraction-gas-golfing}
 
-Está dinámica a hecho que ser bueno en el "gas golfing" —programar transacciones de manera que usen la menor cantidad de gas— sea una ventaja competitiva, pues permite a los buscadores fijar un precio de gas más alto, mientras mantienen sus tarifas de gas constantes (tarifas de gas = precio del gas \* gas usado).
+Está dinámica ha hecho que ser bueno en el "gas golfing" —programar transacciones de manera que usen la menor cantidad de gas— sea una ventaja competitiva, pues permite a los buscadores fijar un precio de gas más alto, mientras mantienen sus tarifas de gas constantes (tarifas de gas = precio del gas \* gas usado).
 
 Algunas de las técnicas más conocidas del gas golfing incluyen usar direcciones que comiencen con una larga cadena de ceros (p. ej., [0x0000000000C521824EaFf97Eac7B73B084ef9306](https://etherscan.io/address/0x0000000000c521824eaff97eac7b73b084ef9306)), ya que usan menos espacio (y por lo tanto menos gas) de almacenamiento; y dejar saldos de tokens [ERC-20](/developers/docs/standards/tokens/erc-20/) pequeños en los contratos, ya que cuesta más gas inicializar un espacio de almacenamiento (si el saldo es 0) que actualizar un espacio de almacenamiento. Encontrar más técnicas para reducir el uso de gas es un área de investigación muy activa entre los investigadores.
 
@@ -60,9 +60,9 @@ Como el valor del colateral de quien pide el préstamo fluctúa, también lo hac
 
 Los buscadores compiten para analizar datos de la cadena de bloques lo más rápido posible para determinar qué prestatarios pueden ser líquidados y ser los primeros en enviar una transacción de liquidación y hacerse de la tasa de liquidación.
 
-### Intercambio sándwich {#mev-examples-sandwich-trading}
+### Sandwich trading {#mev-examples-sandwich-trading}
 
-El intercambio sándwich es otro método común de extracción de MEV.
+El sandwich trading es otro método común de extracción de MEV.
 
 Para esta operación, un buscador intentará localizar operaciones grandes en DEX en la zona de espera. Por ejemplo, supongamos que alguien quiere comprar 10.000 UNI con DAI en Uniswap. Una operación de esta magnitud tendrá un efecto significativo en el par UNI/DAI, lo que podría aumentar significativamente el precio de UNI en relación con DAI.
 
@@ -90,13 +90,13 @@ Los buscadores que acaben de iniciarse pueden encontrar más éxito buscando MEV
 
 No todo sobre el MEV es malo: hay consecuencias tanto positivas como negativas para el MEV en Ethereum.
 
-### Lo positivo {#effects-of-mev-the-good}
+### Lo bueno {#effects-of-mev-the-good}
 
 Muchos proyectos DeFi dependen de actores económicamente racionales para asegurar la utilidad y la estabilidad de sus protocolos. Por ejemplo, el arbitraje en DEX asegura que los usuarios obtengan los mejores y más correctos precios para sus tokens, y los protocolos de préstamo dependen de liquidaciones rápidas cuando los prestatarios caen por debajo de los ratios de colateralización para garantizar que los prestamistas reciban el pago.
 
 Sin que los buscadores racionales busquen y corrijan ineficiencias económicas y aprovechen los incentivos económicos de los protocolos, los protocolos de DeFi y las dApps en general podrían no ser tan robustos como lo son hoy en día.
 
-### Lo negativo {#effects-of-mev-the-bad}
+### Lo malo {#effects-of-mev-the-bad}
 
 En la capa de aplicación, algunas formas de MEV, como las transacciones sándwich, dan como resultado una experiencia rotundamente peor para los usuarios. Los usuarios hechos sándwich se enfrentan a un aumento en los deslizamientos y a una peor ejecución de sus transacciones.
 
@@ -114,7 +114,7 @@ Si bien muchos buscadores todavía están ganando buen dinero con el MEV, a medi
 
 Por otro lado, la transición de prueba de trabajo a prueba de participación y el esfuerzo continuo para escalar Ethereum utilizando rollups cambian el panorama de MEV de maneras que todavía no están claras. Todavía no es bien sabido cómo tener proponentes de bloques garantizados conocidos ligeramente de antemano cambia la dinámica de extracción de MEV en comparación con el modelo probabilístico en la prueba de trabajo o cómo esto se alterará cuando se implementen la [elección de líder secreto único](https://ethresear.ch/t/secret-non-single-leader-election/11789) y [tecnología de validador distribuido](/staking/dvt/). Del mismo modo, queda por ver qué oportunidades de MEV existen cuando la mayor parte de la actividad de los usuarios se aleje de Ethereum y se lleve a sus rollups y shards de capa 2.
 
-## MEV en la prueba de participación (PoS) de Ethereum {#mev-in-ethereum-proof-of-stake}
+## MEV en la Prueba de Participación (PoS) de Ethereum {#mev-in-ethereum-proof-of-stake}
 
 Como se explicó, el MEV tiene implicaciones negativas para la experiencia general del usuario y la seguridad de la capa de consenso. Pero la transición de Ethereum a un consenso de prueba de participación (apodado "La Fusión") potencialmente introduce nuevos riesgos relacionados con el MEV:
 
@@ -122,13 +122,13 @@ Como se explicó, el MEV tiene implicaciones negativas para la experiencia gener
 
 En Ethereum posterior a la Fusión, los validadores (habiendo hecho depósitos de seguridad de 32 ETH) llegan a un consenso sobre la validez de los bloques añadidos a la cadena de Baliza. Dado que 32 ETH pueden estar fuera del alcance de muchos, [unirse a un grupo de staking o participación](/staking/pools/) puede ser una opción más factible. No obstante, una distribución saludable de [participantes en solitario](/staking/solo/) es ideal, ya que mitiga la centralización de los validadores y mejora la seguridad de Ethereum.
 
-Sin embargo, se cree que la extracción de MEV es capaz de acelerar la centralización de los validadores. Esto se debe en parte a que, como los validadores [ganan menos por proponer bloques](/roadmap/merge/issuance/#how-the-merge-impacts-ETH-supply) que los mineros actualmente, la extracción de MEV puede [influir en gran medida en las ganancias de los validadores](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb) después de La Fusión.
+Sin embargo, se cree que la extracción de MEV es capaz de acelerar la centralización de los validadores. Esto se debe en parte a que, como los validadores [ganan menos por proponer bloques](/roadmap/merge/issuance/#how-the-merge-impacts-ETH-supply) que los mineros anteriormente, la extracción de MEV ha [influido en gran medida en las ganancias de los validadores](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb) desde La Fusión.
 
 Es probable que los grupos de participación más grandes tengan más recursos para invertir en las optimizaciones necesarias para capturar oportunidades de MEV. Cuanto más MEV extraen estos grupos, más recursos tienen para mejorar sus capacidades de extracción de MEV (y aumentar los ingresos generales), esencialmente creando [economías de escala](https://www.investopedia.com/terms/e/economiesofscale.asp#).
 
 Con menos recursos a su disposición, los participantes en solitario pueden no poder beneficiarse de las oportunidades de MEV. Esto puede aumentar la presión sobre los validadores independientes para que se unan a poderosos grupos de participación para aumentar sus ganancias, reduciendo la descentralización en Ethereum.
 
-### Zonas de espera (mempools) con permisos {#permissioned-mempools}
+### Zonas de espera con permisos {#permissioned-mempools}
 
 En respuesta a los ataques de sandwiching y frontrunning, los operadores podrían comenzar a realizar acuerdos fuera de la cadena con validadores para la privacidad de las transacciones. En lugar de enviar una posible transacción de MEV a la zona de espera o mempool pública, el trader la envía directamente al validador, que la incluye en un bloque y divide las ganancias con el trader.
 
@@ -138,9 +138,9 @@ Las zonas de espera con permisos también acelerarían los riesgos de centraliza
 
 Combatir estos problemas relacionados con el MEV después de la Fusión de Ethereum es un área central de investigación. Hasta la fecha, dos soluciones propuestas para reducir el impacto negativo del MEV en la descentralización y la seguridad de Ethereum después de la Fusión son **Proposer-Builder Separation (PBS)** y la **Builder API**.
 
-### Separación proponente-constructor {#proposer-builder-separation}
+### Separación Proponente-Constructor {#proposer-builder-separation}
 
-Tanto en la prueba de trabajo como en la prueba de participación, un nodo que construye un bloque lo propone para su adición a la cadena a otros nodos que participan en el consenso. Un nuevo bloque se convierte en parte de la cadena canónica después de que otro minero construye sobre él (en PoW) o recibe certificaciones de la mayoría de los validadores (en Pos).
+Tanto en la prueba de trabajo como en la prueba de participación, un nodo que construye un bloque lo propone para su adición a la cadena a otros nodos que participan en el consenso. Un nuevo bloque se convierte en parte de la cadena canónica después de que otro minero construye sobre él (en PoW) o recibe certificaciones de la mayoría de los validadores (en PoS).
 
 La combinación de roles de productor de bloques y proponente de bloques es lo que introduce la mayoría de los problemas relacionados con el MEV descritos anteriormente. Por ejemplo, los nodos de consenso son incentivados a desencadenar reorganizaciones de la cadena en ataques de bandidos de tiempo (time-bandit) para maximizar las ganancias de MEV.
 
@@ -160,7 +160,7 @@ La separación entre proponentes y constructores también reduce los riesgos de 
 
 Del mismo modo, los validadores no tienen que confiar en los constructores para que no retengan cuerpos de bloques o publiquen bloques no válidos porque el pago es incondicional. La tarifa del validador todavía se procesa incluso si el bloque propuesto no está disponible o es declarado no válido por otros validadores. En este último caso, el bloque simplemente se descarta, lo que obliga al constructor de bloques a perder todas las tarifas de transacción y los ingresos de MEV.
 
-### Builer API {#builder-api}
+### Builder API {#builder-api}
 
 Si bien la separación proponente-constructor promete reducir los efectos de la extracción de MEV, su implementación requiere cambios en el protocolo de consenso. Específicamente, la regla de [elección de bifurcación](/developers/docs/consensus-mechanisms/pos/#fork-choice) en la Cadena de Baliza tendría que actualizarse. La [Builder API](https://github.com/ethereum/builder-specs), de constructor, es una solución temporal destinada a proporcionar una implementación que funcione de la separación proponente-constructor, aunque con mayores suposiciones de confianza.
 
@@ -180,9 +180,9 @@ A continuación se muestra una descripción general de cómo funciona la Builder
 
 5. Aún se espera que un validador que utilice la Builder API construya un bloque localmente en caso de que el constructor de bloques no responda con prontitud, para que no se pierdan las recompensas de la propuesta de bloque. Sin embargo, el validador no puede crear otro bloque utilizando las transacciones ahora reveladas u otro conjunto, ya que equivaldría a _equivocación_ (firmar dos bloques dentro de la misma ranura), lo que es una ofensa que se puede acuchillar.
 
-Un ejemplo de implementación de la Builder API es [MEV Boost](https://github.com/flashbots/mev-boost), una mejora del [mecanismo de subasta de Flashbots](https://docs.flashbots.net/Flashbots-auction/overview/) diseñado para reducir las externalidades negativas de MEV en Ethereum. La subasta de Flashbots permite a los mineros en prueba de trabajo subcontratar el trabajo de construcción de bloques rentables a partes especializadas llamadas **buscadores**.
+Un ejemplo de implementación de la Builder API es [MEV Boost](https://github.com/flashbots/mev-boost), una mejora del [mecanismo de subasta de Flashbots](https://docs.flashbots.net/Flashbots-auction/overview/) diseñado para reducir las externalidades negativas de MEV en Ethereum. La subasta de Flashbots permite a los validadores en prueba de participación subcontratar el trabajo de construcción de bloques rentables a terceros especializados llamados **buscadores**.
 
-Los buscadores buscan oportunidades lucrativas de MEV y envían paquetes de transacciones a los mineros junto con una [puja de precio sellado](https://en.wikipedia.org/wiki/First-price_sealed-bid_auction) para su inclusión en el bloque. El minero que ejecuta mev-geth, una versión bifurcada del cliente go-ethereum (Geth), solo tiene que elegir el paquete con más ganancias y minarlo como parte del nuevo bloque. Para proteger a los mineros del spam y las transacciones no válidas, los paquetes de transacciones pasan por **relayers** para su validación antes de llegar a los mineros.
+Los buscadores intentan dar con oportunidades lucrativas de MEV y envían paquetes de transacciones a los proponentes de bloques junto con una [oferta de precio sellado](https://en.wikipedia.org/wiki/First-price_sealed-bid_auction) para su inclusión en el bloque. El validador que ejecuta mev-geth, una versión bifurcada del cliente go-ethereum (Geth) solo tiene que elegir el paquete con más beneficios e incluirlo como parte del nuevo bloque. Para proteger a los proponentes de bloques (validadores) del spam y las transacciones no válidas, los paquetes de transacciones pasan por **relayers** para su validación antes de llegar al proponente.
 
 MEV Boost conserva el mismo funcionamiento de la subasta original de Flashbots, aunque con nuevas funciones diseñadas para el cambio de Ethereum a prueba de participación. Los buscadores todavía encuentran transacciones de MEV rentables para su inclusión en bloques, pero una nueva clase de partes especializadas, llamadas **constructores**, son responsables de agregar transacciones y paquetes en bloques. Un constructor acepta ofertas de precio sellado de los buscadores y ejecuta optimizaciones para encontrar la orden más rentable.
 

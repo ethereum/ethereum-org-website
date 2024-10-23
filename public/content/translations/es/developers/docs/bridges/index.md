@@ -42,7 +42,7 @@ Los puentes usualmente se clasifican en los siguientes tipos:
 
 - **Puentes nativos:** Estos puentes son típicamente creados para impulsar liquidez en una cadena de bloques en particular, haciendo que los usuarios puedan mover activos fácilmente al ecosistema. Por ejemplo, el [Arbitrum Bridge](https://bridge.arbitrum.io/) se creó para que los usuarios establezcan un puente entre la red principal de Ethereum y Arbitrum de forma práctica. Otros tipos de puentes incluyen Polygon PoS Bridge, [Optimism Getawat](https://app.optimism.io/bridge), etc.
 - **Puentes basados en validador u oráculos:** Estos puentes se apoyan en un conjunto de validadores u oráculos externos para validar las transferencias entre cadenas. Ejemplos: Multichain y Across.
-- **Puentes de pase de mensajes generalizados:** Estos puentes pueden transferir activos, junto con mensajes y datos arbitrarios entre cadenas. Ejemplos: Nomad y LayerZero.
+- **Puentes de pase de mensajes generalizados:** Estos puentes pueden transferir activos, junto con mensajes y datos arbitrarios entre cadenas. Ejemplos: Axelar, LayerZero y Nomad.
 - **Redes de liquidez:** Estos puentes principalmente se enfocan en la transferencia de activos desde una cadena de bloques a otra vía intercambios atómicos. Generalmente, no soportan el envío de mensajes entre cadenas. Ejemplos: Connext y Hop.
 
 ## Algunas compensaciones que debe considerar {#trade-offs}

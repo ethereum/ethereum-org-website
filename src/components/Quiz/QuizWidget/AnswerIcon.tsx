@@ -18,7 +18,7 @@ type AnswerIconProps = {
  */
 export const AnswerIcon = ({ answerStatus }: AnswerIconProps) => {
   const commonProps = {
-    color: "neutral",
+    className: "text-body-inverse",
   }
 
   const IconWrapper = (props: ChildOnlyProp) => {

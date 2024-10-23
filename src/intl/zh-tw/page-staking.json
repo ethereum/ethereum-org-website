@@ -13,10 +13,10 @@
   "comp-withdrawal-credentials-upgraded-1": "驗證者索引 {{validatorIndex}} 已準備開始接收酬勞！",
   "comp-withdrawal-credentials-upgraded-2": "鏈接至執行地址的提款憑證：",
   "comp-withdrawal-credentials-not-upgraded-1": "我們需要升級此驗證者。",
-  "comp-withdrawal-credentials-not-upgraded-1-testnet": "我們需要升級此 Holesky 測試網驗證者。",
+  "comp-withdrawal-credentials-not-upgraded-1-testnet": "這個 Holesky 測試網驗證者需要升級。",
   "comp-withdrawal-credentials-not-upgraded-2": "程式升級說明現已發佈於<a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">質押啟動面板</a>",
   "comp-withdrawal-credentials-verify-mainnet": "主網中驗證",
-  "comp-withdrawal-credentials-verify-holesky": "Holesky 中驗證",
+  "comp-withdrawal-credentials-verify-holesky": "在 Holesky 上進行驗證",
   "page-staking-withdrawals-when": "已上線！",
   "page-staking-image-alt": "質押啟動面板的 Rhino 吉祥物圖像。",
   "page-staking-benefits-1-title": "賺取酬勞",
@@ -152,7 +152,7 @@
   "page-staking-launchpad-widget-mainnet-label": "主網",
   "page-staking-launchpad-widget-mainnet-start": "開始在主網上質押",
   "page-staking-launchpad-widget-span": "選擇網路",
-  "page-staking-launchpad-widget-p1": "在冒資金風險之前，單獨驗證者應在 Holesky 測試網<strong>測試它們的設定</strong>和營運技能。記住，選擇<a href=\"/developers/docs/nodes-and-clients/client-diversity/\">非主流用戶端</a>非常重要，因為這可以改善網路的安全性並減低你的風險。",
+  "page-staking-launchpad-widget-p1": "單獨驗證者在冒險投入資金之前，應該在 Holesky 測試網上<strong>測試他們的設定</strong>和營運技能。請記得選擇一個<a href=\"/developers/docs/nodes-and-clients/client-diversity/\">非主流用戶端</a>非常重要，因為這樣能夠提升網路的安全性並減少你面臨的風險。",
   "page-staking-launchpad-widget-p2": "如果你熟悉相關技能，你可以單獨使用質押啓動面板，透過指令介面來設定所需要的一切。",
   "page-staking-launchpad-widget-p3": "為了讓事情變得更簡單，請查看下面的一些工具和指南，它們可以幫助你使用質押啓動面板來輕鬆設定你的用戶端。",
   "page-staking-launchpad-widget-link": "軟體工具和指南",
@@ -229,5 +229,8 @@
   "page-staking-withdrawals-important-notices": "重要通知",
   "page-staking-withdrawals-important-notices-desc": "現在尚未提供提款服務，如欲瞭解更多，請閲讀<a href=\"https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/\" target=\"_blank\">以太坊 2 合併及合併後階段的常見問題</a>。",
   "page-upgrades-merge-btn": "合併案的相關細節",
-  "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">訂閱以太坊基金會部落格</a>，接收最新協議公告的電子郵件通知。"
+  "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">訂閱以太坊基金會部落格</a>，接收最新協議公告的電子郵件通知。",
+  "page-staking-comparison-with-other-options": "與其他方案的比較",
+  "page-staking-any-amount": "任意數量",
+  "page-staking-testnet": "測試網"
 }

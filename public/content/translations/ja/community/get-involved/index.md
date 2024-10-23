@@ -15,15 +15,17 @@ lang: ja
 - [ethereum.org/developers/](/developers/) - イーサリアムについての学習
 - [ETHGlobal](http://ethglobal.co/) - お近くのETHGlobalハッカソンへの参加
 - [自分の専門分野や好きなプログラミング言語に関連するプロジェクト](/developers/docs/programming-languages/)の確認
-- [コアデベロッパーコール](https://www.youtube.com/@EthereumProtocol)の視聴または参加
+- [コンセンサスおよび実行レイヤーのコール](https://www.youtube.com/@EthereumProtocol/streams)の視聴、もしくは参加
 - [エコシステム・サポート・プログラムのウィッシュリスト](https://esp.ethereum.foundation/wishlist/) - イーサリアムのエコシステム・サポート・プログラムが助成金の申請を募集しているツール、ドキュメント、インフラストラクチャ分野
 - [Web3Bridge](https://www.web3bridge.com/) - アフリカ全土の何百人ものデベロッパーやコミュニティメンバーを特定し、トレーニングし、サポートする、意欲的なWeb3コミュニティの取り組み
+- [Eth R&D Discord](https://discord.com/invite/VmG7Uxc)への参加
 - [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)に加わりましょう。
 
 ## 研究者および学者<Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
 数学、暗号技術、または経済学に関する学術的なバックグランドを持っている方は、 イーサリアムのエコシステムで行われている最先端の取り組みをご覧ください。
 
+- [Eth R&D Discord](https://discord.com/invite/VmG7Uxc)への参加
 - イーサリアム改善提案の執筆およびレビュー
   - EIPの執筆
     1. [イーサリアム・マジシャンズ](https://ethereum-magicians.org)へアイデアの提出

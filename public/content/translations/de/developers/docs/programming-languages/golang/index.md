@@ -5,7 +5,7 @@ lang: de
 incomplete: true
 ---
 
-<FeaturedText>Erfahren Sie, wie Sie mit Go-basierten Projekten und Werkzeugen für Ethereum entwickeln können</FeaturedText>
+<FeaturedText>Lernen, wie Sie mit Go-basierten Projekten und Werkzeugen für Ethereum entwickeln können</FeaturedText>
 
 Verwenden Sie Ethereum, um dezentrale Anwendungen (oder "dApps") zu erstellen. Solche dApps sind vertrauenswürdig. Das bedeutet, dass sie, sobald sie auf Ethereum hochgeladen wurden, immer exakt wie programmiert ausgeführt werden. Sie sind dezentralisiert. Das bedeutet, dass sie auf einem Peer-to-Peer-Netzwerk laufen und es keine einzelne Fehlerquelle gibt. Keine einzelne Eintität oder Person kontrolliert sie und es ist fast unmöglich, sie zu zensieren. Sie können digitale Vermögenswerte kontrollieren, um neue Arten von Anwendungen zu erstellen.
 
@@ -64,6 +64,7 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 - [Multi Geth](https://github.com/multi-geth/multi-geth) – _Unterstützung für viele Arten von Ethereum-Netzwerken_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) – _Light Ethereum-Subprotokoll-Geth-Implementierung_
 - [Ethereum Golang SDK](https://github.com/everFinance/goether) - _Eine einfache Ethereum-Wallet-Implementierung und Hilfsprogramme in Golang_
+- [Covalent Golang SDK](https://github.com/covalenthq/covalent-api-sdk-go) – _effizienter Blockchain-Datenzugriff via Go SDK für über 200 Blockchains_
 
 Sind Sie an weiteren Informationen interessiert? Sehen Sie sich [ethereum.org/developers](/developers/) an.
 

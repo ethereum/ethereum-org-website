@@ -229,5 +229,8 @@
   "page-staking-withdrawals-important-notices": "Σημαντικές ανακοινώσεις",
   "page-staking-withdrawals-important-notices-desc": "Οι αναλήψεις δεν είναι ακόμη διαθέσιμες. Διαβάστε τις <a href=\"https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/\" target=\"_blank\">Συχνές ερωτήσεις για τη συγχώνευση και μετά τη συγχώνευση Eth2 </a> για περισσότερες πληροφορίες.",
   "page-upgrades-merge-btn": "Περισσότερα για τη συγχώνευση",
-  "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Εγγραφείτε στο ιστολόγιο EF</a> για να λαμβάνετε ειδοποιήσεις μέσω email για τις πιο πρόσφατες ανακοινώσεις πρωτοκόλλου."
+  "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Εγγραφείτε στο ιστολόγιο EF</a> για να λαμβάνετε ειδοποιήσεις μέσω email για τις πιο πρόσφατες ανακοινώσεις πρωτοκόλλου.",
+  "page-staking-comparison-with-other-options": "Σύγκριση με άλλες επιλογές",
+  "page-staking-any-amount": "Οποιοδήποτε ποσό",
+  "page-staking-testnet": "δίκτυο δοκιμών"
 }

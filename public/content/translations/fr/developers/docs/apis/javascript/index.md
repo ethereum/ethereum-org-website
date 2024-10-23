@@ -6,9 +6,9 @@ lang: fr
 
 Pour qu'une application Web puisse interagir avec la blockchain Ethereum (c'est-à-dire lire les données de la blockchain et/ou envoyer des transactions sur le réseau), elle doit se connecter à un nœud Ethereum.
 
-Dans cet objectif, chaque client Ethereum implémente la spécification [JSON-RPC](/developers/docs/apis/json-rpc/) pour former un ensemble uniforme de [méthodes](/developers/docs/apis/json-rpc/#json-rpc-methods) sur lesquelles les applications peuvent s'appuyer.
+À cette fin, chaque client Ethereum met en œuvre la spécification [JSON-RPC](/developers/docs/apis/json-rpc/), de sorte qu'il existe un ensemble uniforme de [méthodes](/developers/docs/apis/json-rpc/#json-rpc-methods) sur lesquelles les applications peuvent s'appuyer.
 
-Si vous voulez utiliser JavaScript pour vous connecter à un nœud Ethereum, il est possible d'avoir recours à Vanilla JavaScript, mais plusieurs bibliothèques de commodité existent à l'intérieur même de l'écosystème, ce qui rend les choses beaucoup plus simples. Avec ces bibliothèques, les développeurs peuvent rédiger des méthodes intuitives d'une seule ligne pour initialiser les demandes JSON RPC (pas directement visibles) qui interagissent avec Ethereum.
+Si vous voulez utiliser JavaScript pour vous connecter à un nœud Ethereum, il est possible d'avoir recours à Vanilla JavaScript, mais plusieurs bibliothèques de commodité existent à l'intérieur même de l'écosystème, ce qui rend les choses beaucoup plus simples. Grâce à ces bibliothèques, les développeurs peuvent rédiger des méthodes intuitives d'une seule ligne pour initialiser des demandes RPC JSON (sous le capot) qui interagissent avec Ethereum.
 
 Veuillez noter que depuis [La Fusion](/roadmap/merge/), deux parties de logiciels Ethereum connectés - un client d'exécution et un client de consensus - sont nécessaires pour exécuter un nœud. Veuillez vous assurer que votre nœud inclut à la fois un client d'exécution et un client de consensus. Si votre nœud n'est pas sur votre machine en local (par ex. votre nœud est exécuté sur une instance AWS), mettez à jour les adresses IP dans le tutoriel en conséquence. Pour plus d'informations, veuillez consulter notre page sur [l'exécution d'un noeud](/developers/docs/nodes-and-clients/run-a-node/).
 
@@ -29,12 +29,12 @@ En utilisant des fournisseurs, les bibliothèques vous permettent de vous connec
 **Exemple Ether**
 
 ```js
-// A Web3Provider wraps a standard Web3 provider, which is
-// what MetaMask injects as window.ethereum into each page
-const provider = new ethers.providers.Web3Provider(window.ethereum)
+// Un BrowserProvider enveloppe un fournisseur Web3 standard, qui est
+// ce que MetaMask injecte comme window.ethereum dans chaque page.
+const provider = new ethers.providers.BrowserProvider (window.ethereum)
 
-// The MetaMask plugin also allows signing transactions to
-// send ether and pay to change state within the blockchain.
+// Le plugin MetaMask permet également de signer des transactions pour
+// envoyer de l'ether et payer pour changer l'état de la blockchain.
 // Pour cela, nous avons besoin du signataire du compte...
 const signer = provider.getSigner()
 ```
@@ -80,29 +80,29 @@ Voici un exemple provenant de la bibliothèque Ethers
 // Créer une instance de portefeuille à partir d'un mnémonique...
 mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
-walletMnemonic = Wallet.fromMnemonic(mnemonic)
+walletMnemonic = Wallet.fromPhrase(mnemonic)
 
-// ...ou à partir d'une clé privée
+// ...or from a private key
 walletPrivateKey = new Wallet(walletMnemonic.privateKey)
 
 walletMnemonic.address === walletPrivateKey.address
 // true
 
-// Adresse Promise par le signataire de l'API
+// The address as a Promise per the Signer API
 walletMnemonic.getAddress()
 // { Promise: '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1' }
 
-// Une adresse de portefeuille est aussi disponible de façon synchrone
+// A Wallet address is also available synchronously
 walletMnemonic.address
 // '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1'
 
-// Composants cryptographiques internes
+// The internal cryptographic components
 walletMnemonic.privateKey
 // '0x1da6847600b0ee25e9ad9a52abbd786dd2502fa4005dd5af9310b7cc7a3b25db'
 walletMnemonic.publicKey
 // '0x04b9e72dfd423bcf95b3801ac93f4392be5ff22143f9980eb78b3a860c4843bfd04829ae61cdba4b3b1978ac5fc64f5cc2f4350e35a108a9c9a92a81200a60cd64'
 
-// Portefeuille mnémonique
+// The wallet mnemonic
 walletMnemonic.mnemonic
 // {
 //   locale: 'en',
@@ -110,12 +110,12 @@ walletMnemonic.mnemonic
 //   phrase: 'announce room limb pattern dry unit scale effort smooth jazz weasel alcohol'
 // }
 
-// Remarque : Un portefeuille créé avec une clé privée ne comporte pas
-//       de mnémonique (la dérivation l'empêche)
+// Note: A wallet created with a private key does not
+//       have a mnemonic (the derivation prevents it)
 walletPrivateKey.mnemonic
 // null
 
-// Signature d'un message
+// Signing a message
 walletMnemonic.signMessage("Hello World")
 // { Promise: '0x14280e5885a19f60e536de50097e96e3738c7acae4e9e62d67272d794b8127d31c03d9cd59781d4ee31fb4e1b893bd9b020ec67dfa65cfb51e2bdadbb1de26d91c' }
 
@@ -124,21 +124,21 @@ tx = {
   value: utils.parseEther("1.0"),
 }
 
-// Signature d'une transaction
+// Signing a transaction
 walletMnemonic.signTransaction(tx)
 // { Promise: '0xf865808080948ba1f109551bd432803012645ac136ddd64dba72880de0b6b3a7640000801ca0918e294306d177ab7bd664f5e141436563854ebe0a3e523b9690b4922bbb52b8a01181612cec9c431c4257a79b8c9f0c980a2c49bb5a0e6ac52949163eeb565dfc' }
 
-// La méthode de connexion retourne une nouvelle instance du
-// portefeuille connecté à un portefeuille du fournisseur
+// The connect method returns a new instance of the
+// Wallet connected to a provider
 wallet = walletMnemonic.connect(provider)
 
-// Interrogation du réseau
+// Querying the network
 wallet.getBalance()
 // { Promise: { BigNumber: "42" } }
 wallet.getTransactionCount()
 // { Promise: 0 }
 
-// Envoi d'Ether
+// Sending ether
 wallet.sendTransaction(tx)
 ```
 

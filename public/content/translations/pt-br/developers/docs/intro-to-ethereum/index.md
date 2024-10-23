@@ -16,7 +16,7 @@ Todos os computadores da rede têm de chegar a um acordo sobre cada novo bloco e
 
 O Ethereum utiliza um mecanismo de consenso baseado em [prova de participação](/developers/docs/consensus-mechanisms/pos/). Qualquer um que queira adicionar novos blocos à cadeia deve colocar ETH – a moeda nativa no Ethereum – como garantia e executar um software validador. Esses “validadores” podem então ser selecionados aleatoriamente para propor blocos que outros validadores verificam e adicionam à blockchain. Há um sistema de recompensas e penalidades que fortemente incentiva os participantes a serem honestos e estarem disponíveis online o máximo possível.
 
-Se você quiser ver como a cadeia de blocos faz hash dos dados e, subsequentemente, ao histórico de referência aos blocos, confira [esta demonstração](https://andersbrownworth.com/blockchain/blockchain) de Anders Brownworth e assista ao vídeo abaixo.
+Se você quiser ver como a cadeia de blocos faz hash dos dados e, subsequentemente, ao histórico de referência aos blocos, confira [esta demonstração](https://andersbrownworth. com/blockchain/blockchain) de Anders Brownworth e assista ao vídeo abaixo.
 
 Assista a Anders explicando hashes em cadeias de blocos:
 
@@ -36,7 +36,7 @@ Os mecanismos criptográficos garantem que, uma vez que as transações são ver
 
 **Ether (ETH)** é a criptomoeda nativa do Ethereum. O objetivo do ETH é possibilitar um mercado para cálculo. Tal mercado fornece um incentivo econômico para os participantes verificarem ou executarem solicitações de transação e fornecerem recursos computacionais para a rede.
 
-Qualquer participante que transmita uma solicitação de transação também deve oferecer alguma quantidade de ETH à rede como recompensa. A rede concederá essa recompensa a quem eventualmente fizer o trabalho de verificar a transação, executando-a, confirmando-a na cadeia de blocos e transmitindo-a para a rede.
+Qualquer participante que transmita uma solicitação de transação também deve oferecer alguma quantidade de ETH à rede como recompensa. A rede queimará parte da recompensa e concederá o restante a quem eventualmente fizer o trabalho de verificar a transação, executá-la, confirmá-la na blockchain e transmiti-la para a rede.
 
 O valor de ETH pago corresponde aos recursos necessários para fazer o cálculo. Essas recompensas também impedem que participantes mal-intencionados entupam intencionalmente a rede, ao solicitar a execução de computação infinita ou outros scripts com uso intensivo de recursos, pois esses participantes devem pagar pelos recursos de cálculo.
 
@@ -107,7 +107,7 @@ Um trecho de código reutilizável (um programa) que um desenvolvedor publica no
 ## Leitura adicional {#further-reading}
 
 - [Whitepaper do Ethereum](/whitepaper/)
-- [Afinal, como funciona o Ethereum?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**NB** este recurso ainda é valioso, mas esteja ciente de que é anterior à [Fusão](/roadmap/merge) (The Merge) e, portanto, ainda se refere ao mecanismo de prova de trabalho do Ethereum, que agora é protegido pelo uso da [prova de participação](/developers/docs/consensus-mechanisms/pos))
+- [Afinal, como funciona o Ethereum?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**NB** este recurso ainda é valioso, mas esteja ciente de que é anterior à [Fusão](/roadmap/merge) (The Merge) e, portanto, ainda se refere ao mecanismo de prova de trabalho do Ethereum, que agora é protegido pelo uso da [prova de participação](/developers/docs/consensus-mechanisms/pos))
 
 _Conhece um recurso da comunidade que ajudou você? Edite essa página e adicione-o!_
 

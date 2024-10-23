@@ -26,7 +26,7 @@ Die Kryptowährung Ether unterstützt einen Preismechanismus für die Rechenleis
 
 Selbst wenn eine böswillige Dapp eine Endlosschleife einreichen würde, ginge der Transaktion irgendwann der Ether aus und sie würde beendet, so dass das Netzwerk wieder zur Normalität zurückkehren könnte.
 
-Es ist [üblich](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=Preis%20von%20Ethereum), Ethereum und Ether [zu](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=Kryptowährungen%20inklusive%20Ethereum) [verwechseln](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=Preis%20von%20Ethereum); wenn Leute den "Preis von Ethereum" erwähnen, beschreiben sie den Preis von Ether.
+Es ist üblich, Ethereum und Ether [zu verwechseln](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845); wenn Leute den "Preis von Ethereum" erwähnen, beschreiben sie den Preis von Ether.
 
 ## Ether-Minting {#minting-ether}
 

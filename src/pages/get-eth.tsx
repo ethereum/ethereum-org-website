@@ -166,7 +166,7 @@ const GetEthPage = ({
             alt={t("page-get-eth-hero-image-alt")}
             priority
           />
-          <div className="mx-8 mb-8 mt-8 flex flex-col items-center text-center lg:mx-0 lg:mb-0 lg:mt-24">
+          <div className="my-8 flex flex-col items-center text-center lg:mx-0 lg:mb-0 lg:mt-24">
             <h1 className="my-8 text-4xl md:text-5xl">
               {t("page-get-eth-where-to-buy-title")}
             </h1>

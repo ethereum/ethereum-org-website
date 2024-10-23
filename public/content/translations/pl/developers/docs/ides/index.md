@@ -30,12 +30,6 @@ Większość utworzonych IDE ma wbudowane wtyczki, aby poprawić jakość pracy 
 - [Przykłady kodu](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Atom —** **_edytor tekstu na miarę XXI wieku_**
-
-- [Atom](https://atom.io/)
-- [GitHub](https://github.com/atom)
-- [Pakiety Ethereum](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
-
 ## Dalsza lektura {#further-reading}
 
 _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_

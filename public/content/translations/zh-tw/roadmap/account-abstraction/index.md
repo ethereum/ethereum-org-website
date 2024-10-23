@@ -1,5 +1,5 @@
 ---
-title: 帳戶抽象
+title: 帳戶摘要
 description: 以太坊讓使用者帳戶更簡潔、更安全的計劃概述
 lang: zh-tw
 summaryPoints:
@@ -8,7 +8,7 @@ summaryPoints:
   - 可以使用多個備份來恢復遺失和暴露的金鑰
 ---
 
-# 帳戶抽象 {#account-abstraction}
+# 帳戶摘要 {#account-abstraction}
 
 使用者使用**[外部帳戶 (EOA)](/glossary/#eoa)** 與以太坊互動。 這是開啟交易或執行智慧型合約的唯一方法， 限制了使用者與以太坊互動的方式。 舉例而言，它使得批次處理交易變得困難，並且要求使用者始終保持一定的以太幣餘額來支付燃料費用。
 

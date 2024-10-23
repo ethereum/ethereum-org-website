@@ -40,6 +40,7 @@ Bu farklı türler ve kategoriler daha fazla bilgi [EIP-1](https://eips.ethereum
 ### Token standartları {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - Oylama token'ları, stake etme token'ları veya sanal para birimleri gibi değiştirilebilir (birbirinin yerine geçebilir) token'lar için standart bir arayüz.
+  - [ERC-223](/developers/docs/standards/tokens/erc-223/) - Jetonların ether ile aynı şekilde davranmasını sağlayan ve alıcı tarafında jeton transferlerinin işlenmesini destekleyen bir değiştirilebilir jeton standardıdır.
   - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - ERC-20 jetonları için transfer veya transferFrom sonrası alıcı kodunun veya onaylandıktan sonra harcama kodunun yürütülmesini destekleyen bir jeton arayüzünü tanımlar.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - Bir şarkı veya sanat eserinin telif hakkı gibi değiştirilemez token'lar için standart bir arayüz.
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - Ardışık jeton tanımlayıcıları kullanarak bir veya çok sayıda değiştirilemez jeton oluştururken/transfer ederken yayımlanan standartlaştırılmış bir olay.

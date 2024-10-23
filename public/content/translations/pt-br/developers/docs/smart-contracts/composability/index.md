@@ -7,7 +7,7 @@ incomplete: true
 
 ## Uma breve introdução {#a-brief-introduction}
 
-Os contratos inteligentes são públicos na Ethereum e podem ser considerados como APIs abertas. Você não precisa escrever o seu próprio contrato inteligente para se tornar um desenvolvedor dapp, você só precisa saber como interagir com eles. Por exemplo, você pode usar os contratos inteligentes existentes do [Uniswap](https://uniswap.exchange/swap), uma troca descentralizada, para lidar com toda a lógica de troca de token em seu aplicativo - você não precisa começar do zero. Confira alguns de seus contratos [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts) e [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts).
+Os contratos inteligentes são públicos na Ethereum e podem ser considerados como APIs abertas. Você não precisa escrever o seu próprio contrato inteligente para se tornar um desenvolvedor dapp, você só precisa saber como interagir com eles. Por exemplo, você pode usar os contratos inteligentes existentes do [Uniswap](https://uniswap.exchange/swap), uma troca descentralizada, para lidar com toda a lógica de troca de token em seu aplicativo - você não precisa começar do zero. Confira alguns de seus contratos [v2](https://github. com/Uniswap/uniswap-v2-core/tree/master/contracts) e [v3](https://github. com/Uniswap/uniswap-v3-core/tree/main/contracts).
 
 ## O que é composabilidade? {#what-is-composability}
 
@@ -65,7 +65,6 @@ Em vez de criar um sistema de autenticação personalizado ou depender de proved
 
 ## Tutoriais relacionados {#related-tutorials}
 
-- [Composição do Contrato: Os Blocos de Construção do Desenvolvimento de Contrato Inteligente da Ethereum](https://www.decentlabs.io/blog/contract-composability-the-building-blocks-of-ethereum-smart-contract-development)
 - [Comece seu desenvolvimento de front-end dapp com create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– Uma visão geral de como usar o create-eth-app para criar apps com contratos inteligentes populares prontos para uso._
 
 ## Leitura adicional {#further-reading}

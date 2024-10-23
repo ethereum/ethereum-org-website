@@ -9,7 +9,7 @@ sidebarDepth: 3
 
 A medida que la cantidad de usuarios de Ethereum ha ido creciendo, la cadena de bloques alcanzó ciertos límites en su capacidad. Esto ha hecho que se incrementen los costos para utilizar la red, haciendo necesarias "soluciones de escalado". Actualmente se están investigando, testeando e implementando múltiples soluciones desde distintos enfoques para lograr objetivos similares.
 
-La meta principal del escalado es incrementar la velocidad de las transacciones (finalidad más rápida) y la capacidad de procesamiento de estas (más transacciones por segundo), sin sacrificar la descentralización o la seguridad de la red (más información sobre la [visión de Ethereum](/roadmap/vision/)). En la cadena de bloques de Ethereum de capa 1, una demanda alta lleva a transacciones más lentas y a [precios de gas](/developers/docs/gas/) inviables. El incremento de la capacidad de la red en términos de velocidad y capacidad de procesamiento es fundamental para la adopción masiva y significativa de Ethereum.
+El objetivo principal de la escalabilidad es aumentar la velocidad de las transacciones (finalidad más rápida) y el rendimiento de las transacciones (un mayor número de transacciones por segundo) sin sacrificar la descentralización ni la seguridad (más sobre la visión de [Ethereum](/roadmap/vision/)). En la cadena de bloques de Ethereum de capa 1, una demanda alta lleva a transacciones más lentas y a [precios de gas](/developers/docs/gas/) inviables. El incremento de la capacidad de la red en términos de velocidad y capacidad de procesamiento es fundamental para la adopción masiva y significativa de Ethereum.
 
 A pesar de que la velocidad y la capacidad de procesamiento son importantes, es esencial que las soluciones de escalado que permitan alcanzar estos objetivos sigan siendo descentralizadas y seguras. Para evitar una progresión hacia un poder de cómputo centralizado e inseguro, es crítico mantener baja la barrera de entrada a los operadores de nodos.
 
@@ -109,6 +109,6 @@ _Obsérvese que la explicación del video utiliza el término "Capa 2" para refe
 - [Escalabilidad de la cadena de bloques de conocimiento cero](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Por qué los rollups y los fragmentos de datos son la única solución sustentable para la alta escalabilidad](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [¿Qué tipo de capas 3 tienen sentido?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
-- [Disponibilidad De Datos O: Cómo Los Rollups Aprendieron A Dejar De Preocuparse Y Amar A Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)
+- [Disponibilidad de datos o: cómo los rollups aprendieron a dejar de preocuparse y amar a Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)
 
 _¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._

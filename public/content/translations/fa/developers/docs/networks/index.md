@@ -50,6 +50,7 @@ lang: fa
 - [گیت هاب](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### فاست ها
 
@@ -60,6 +61,7 @@ lang: fa
 - [فاست Alchemy Sepolia](https://sepoliafaucet.com/)
 - [فاست Infura Sepolia](https://www.infura.io/faucet)
 - [فاست Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [فاست اتریوم اکوسیستم](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli_(پشتیبانی طولانی مدت)_ {#goerli}
 
@@ -76,6 +78,7 @@ Goerli یک شبکه‌ تست برای آزمایش اعتبارسنجی و س�
 - [وب‌سایت](https://goerli.net/)
 - [گیت‌هاب](https://github.com/eth-clients/goerli)
 - [Etherscan](https://goerli.etherscan.io)
+- [Blockscout](https://eth-goerli.blockscout.com/)
 
 ##### فاست ها
 
@@ -88,7 +91,7 @@ Goerli یک شبکه‌ تست برای آزمایش اعتبارسنجی و س�
 - [فاست کیف پول Coinbase | Sepolia](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [فاست Chainstack Sepolia](https://faucet.chainstack.com/goerli-faucet)
 
-برای راه‌اندازی اعتبارسنج بر روی شبکه تست گورلی (Goerli)، از [سکوی پرتاپ"اعتبار سنج ارزان گورلی"](https://goerli.launchpad.ethstaker.cc/en/) که توسط جامعه Ethstaker ارائه میشود استفاده کنید.
+برای راه‌اندازی اعتبارسنج بر روی شبکه تست گورلی (Goerli)، از [سکوی پرتاپ"اعتبار سنج ارزان گورلی"](https://holesky.launchpad.ethstaker.cc/en/) که توسط جامعه Ethstaker ارائه میشود استفاده کنید.
 
 ### شبکه‌های تست لایه 2 {#layer-2-testnets}
 

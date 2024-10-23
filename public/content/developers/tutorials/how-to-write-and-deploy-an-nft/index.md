@@ -331,7 +331,7 @@ If we go to the [Sepolia etherscan](https://sepolia.etherscan.io/) and search fo
 
 ![View your transaction address on Etherscan](./etherscan-sepoila-contract-creation.png)
 
-The From address should match your MetaMask account address and the To address will say “Contract Creation.” If we click into the transaction, we’ll see our contract address in the To field:
+The From address should match your MetaMask account address and the To address will say “Contract Creation”. If we click into the transaction, we’ll see our contract address in the To field:
 
 ![View your contract address on Etherscan](./etherscan-sepolia-tx-details.png)
 

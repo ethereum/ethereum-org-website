@@ -4,7 +4,7 @@ description: Los oráculos proporcionan a los contratos inteligentes de Ethereum
 lang: es
 ---
 
-Los oráculos son fuentes de datos que hacen que las fuentes de datos fuera de la cadena estén disponibles en la cadena de bloques para los contratos inteligentes. Se necesitan, ya que los contratos inteligentes basados en Ethereum no pueden, por defecto, acceder a información almacenada fuera de la red de cadena de bloques.
+Los oráculos son aplicaciones que producen fuentes de datos que ponen a disposición de la cadena de bloques fuentes de datos fuera de cadena para contratos inteligentes. Se necesitan, ya que los contratos inteligentes basados en Ethereum no pueden, por defecto, acceder a información almacenada fuera de la red de cadena de bloques.
 
 Proporcionar a los contratos inteligentes la capacidad de ejecutarse usando datos de fuera de la cadena extiende la utilidad y el valor de las aplicaciones descentralizadas. Por ejemplo, los mercados de predicción en cadena dependen de los oráculos para proporcionar información sobre los resultados usados para validad las predicciones del usuario. Supongamos que Alice apuesta 20 ETH sobre quién será el próximo presidente de EE.UU. En ese caso, la dapp del mercado de predicciones necesita un oráculo para confirmar los resultados de las elecciones y determinar si Alice puede recibir el pago.
 
@@ -173,7 +173,7 @@ contract Oracle {
       uint currentQuorum = 0;
 
       //iterate through oracle list and check if enough oracles(minimum quorum)
-      //have voted the same answer has the current one
+      //have voted the same answer as the current one
       for(uint i = 0; i < totalOracleCount; i++){
         bytes memory a = bytes(currRequest.answers[i]);
         bytes memory b = bytes(_valueRetrieved);
@@ -236,7 +236,7 @@ No se garantiza que los oráculos centralizados siempre hagan que los datos fuer
 
 #### Mala compatibilidad con incentivos {#poor-incentive-compatibility}
 
-Los oráculos centralizados a menudo tienen incentivos mal diseñados o inexistentes para que el proveedor de datos envíe información precisa e inalterada. Pagar a un oráculo por la corrección no garantiza la honestidad. Este problema aumenta a medida que se incrementa la cantidad de valor que controlan los contratos inteligentes.
+Los oráculos centralizados a menudo tienen incentivos mal diseñados o inexistentes para que el proveedor de datos envíe información precisa e inalterada. Pagar a un oráculo por información precisa o correcta no garantiza honestidad. Este problema aumenta a medida que se incrementa la cantidad de valor que controlan los contratos inteligentes.
 
 ### Oráculos descentralizados {#decentralized-oracles}
 
@@ -274,7 +274,7 @@ Algunas redes de oráculos descentralizados requieren que los participantes vote
 
 Los nodos cuyas respuestas se desvían de la respuesta mayoritaria son penalizados con la distribución de sus tokens a otros que proporcionen valores más correctos. Obligar a los nodos a proporcionar un vínculo antes de proporcionar datos incentiva las respuestas honestas, ya que se supone que son actores económicos racionales que intentan maximizar los rendimientos.
 
-La apuesta/votacion también protege a los oráculos descentralizados de los "Sybil attacks", donde actores maliciosos crean múltiples identidades para jugar con el sistema de consenso. Sin embargo, apostar no puede prevenir "la carga gratuita" (nodos de oráculos que copian datos de otros) y "la validación diferida" (o "lazy validation", nodos de oráculos que siguen a la mayoría sin verificar la información ellos mismos).
+El staking/la votación también protegen a los oráculos descentralizados de los [ataques Sybil](/glossary/#sybil-attack) donde los actores maliciosos crean múltiples identidades para engañar al sistema de consenso. Sin embargo, apostar no puede prevenir "la carga gratuita" (nodos de oráculos que copian datos de otros) y "la validación diferida" (o "lazy validation", nodos de oráculos que siguen a la mayoría sin verificar la información ellos mismos).
 
 ##### Mecanismos de punto de Schelling
 
@@ -358,7 +358,7 @@ contract PriceConsumerV3 {
 
 Ciertas aplicaciones de cadena de bloques, como los juegos basados en la cadena de bloques o los esquemas de lotería, requieren un alto nivel de imprevisibilidad y aleatoriedad para funcionar de manera efectiva. No obstante, la ejecución determinista de las cadenas de bloques elimina cualquier aleatoriedad.
 
-El enfoque habitual es utilizar funciones criptográficas pseudoaleatorias, como `blockhash`, pero estas pueden ser [manipuladas por mineros](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.) resolviendo el algoritmo de prueba de trabajo. Además, el [cambio de Ethereum a prueba de participación](/roadmap/merge/) significa que los desarrolladores ya no pueden confiar en `blockhash` para la aleatoriedad en la cadena (sin embargo, el mecanismo [RANDAO](https://eth2book.info/altair/part2/building_blocks/randomness) de la cadena de baliza proporciona una fuente alternativa de aleatoriedad).
+El enfoque original era usar funciones criptográficas pseudoaleatorias, como `blockhash`, pero estas podían ser [manipuladas por los mineros](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.) resolviendo el algoritmo de prueba de trabajo. Además, el [cambio de Ethereum a la prueba de participación](/roadmap/merge/) significa que los desarrolladores ya no pueden depender del `blockhash` para la aleatoriedad en la cadena. El [mecanismo RANDAO](https://eth2book.info/altair/part2/building_blocks/randomness) de la cadena de Baliza proporciona una fuente alternativa de aleatoriedad.
 
 Es posible generar el valor aleatorio fuera de la cadena y enviarlo por la cadena, pero hacerlo impone altos requisitos de confianza a los usuarios. Deben creer que el valor se generó realmente a través de mecanismos impredecibles y no se alteró en el tránsito.
 
@@ -388,6 +388,8 @@ Hay múltiples aplicaciones de oráculo que puede integrar en su DApp de Ethereu
 
 **[Chainlink:](https://chain.link/)** _Las redes de oráculos descentralizadas de Chainlink proporcionan entradas, salidas y cálculos a prueba de manipulaciones para brindar respaldo a contratos inteligentes avanzados en cualquier cadena de bloques. _
 
+**[Chronicle](https://chroniclelabs.org/)**: _Chronicle supera las limitaciones actuales de la transferencia de datos en cadena mediante el desarrollo de óraculos verdaderamente escalables, rentables, descentralizados y verificables. _
+
 **[Witnet:](https://witnet.io/)** _Witnet es un oráculo sin permiso, descentralizado y resistente a la censura que ayuda a los contratos inteligentes a reaccionar ante eventos del mundo real con sólidas garantías criptoeconómicas. _
 
 **[UMA Oracle:](https://uma.xyz)** _el oráculo optimista de UMA permite que los contratos inteligentes envíen y reciban rápidamente cualquier tipo de datos para diferentes aplicaciones, incluidos los seguros, los derivados financieros y los mercados de predicción. _
@@ -401,6 +403,8 @@ Hay múltiples aplicaciones de oráculo que puede integrar en su DApp de Ethereu
 **[Pyth Network:](https://pyth.network/)** _la red Pyth es una red de oráculos financieros de primera parte diseñada para publicar datos continuos del mundo real en cadena en un entorno a prueba de manipulación, descentralizado y autosostenible. _
 
 **[DAO API3:](https://www.api3.org/)** _una DAO API3 ofrece soluciones de oráculo de primera parte que ofrecen mayor transparencia, seguridad y escalabilidad de la fuente en una solución descentralizada para contratos inteligentes._
+
+**[Supra](https://supra.com/)**: Un conjunto de herramientas integrado verticalmente de soluciones multicadena que interrelacionan todas las cadenas de bloques, públicas (L1 y L2) o privadas (empresas), proporcionando feeds de precios de oráculos descentralizados que se pueden utilizar para casos de uso en cadena y fuera de la cadena.
 
 ## Para profundizar sobre el tema {#further-reading}
 
@@ -422,6 +426,7 @@ Hay múltiples aplicaciones de oráculo que puede integrar en su DApp de Ethereu
 **Tutoriales**
 
 - [¿Cómo obtener el precio actual de Ethereum en Solidity?](https://blog.chain.link/fetch-current-crypto-price-data-solidity/), _Chainlink_
+- [Consumo de datos de oráculos](https://docs.chroniclelabs.org/Developers/tutorials/Remix): _Chronicle_
 
 **Proyectos de ejemplo**
 

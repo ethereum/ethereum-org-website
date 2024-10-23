@@ -51,7 +51,7 @@ Les comptes Ethereum comportent quatre champs :
 
 ## Comptes externes et paires de clés {#externally-owned-accounts-and-key-pairs}
 
-Un compte est composé d'une paire de clés cryptographiques : la clé publique et la clé privée. Celles-ci servent à prouver qu'une transaction a été signée par l'expéditeur et empêchent les contrefaçons. Votre clé privée vous sert à signer les transactions. Elle vous permet donc de gérer les fonds associés à votre compte. Vous ne détenez jamais vraiment de la cryptomonnaie, vous détenez des clés privées. Les fonds sont toujours dans le registre d'Ethereum.
+Un compte est constitué d'une paire de clés cryptographiques: la clé publique et la clé privée. Celles-ci servent à prouver qu'une transaction a été signée par l'expéditeur et empêchent les contrefaçons. Votre clé privée vous sert à signer les transactions. Elle vous permet donc de gérer les fonds associés à votre compte. Vous ne détenez jamais vraiment de la cryptomonnaie, vous détenez des clés privées. Les fonds sont toujours dans le registre d'Ethereum.
 
 Cela empêche les acteurs malveillants de diffuser de fausses transactions puisque vous pouvez toujours vérifier l'expéditeur d'une transaction.
 
@@ -59,7 +59,7 @@ Si Alice veut envoyer de l'ether de son propre compte à celui de Marc, elle doi
 
 ## Création de compte {#account-creation}
 
-Lorsque vous voulez créer un compte, la plupart des bibliothèques vous génèrent une clé privée aléatoire.
+Lorsque vous souhaitez créer un compte, la plupart des bibliothèques généreront une clé privée aléatoire à votre intention.
 
 Une clé privée est composée de 64 caractères hexadécimaux et peut être chiffrée avec un mot de passe.
 
@@ -68,6 +68,12 @@ Exemple :
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
 La clé publique est générée à partir de la clé privée à l'aide d'un [algorithme de signature numérique basé sur les courbes elliptiques](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). On obtient l'adresse d'un compte en concatenant `0x` suivi des 20 derniers octets du code de hashage Keccak-256 de la clé pubique.
+
+Cela signifie qu'un compte externe (EOA) possède une adresse de 42 caractères (un segment de 20 octets, soit 40 caractères hexadécimaux plus le préfixe `0x`).
+
+Exemple :
+
+`0x5e97870f263700f46aa00d967821199b9bc5a120`
 
 L'exemple suivant montre comment utiliser un outil de signature appelé [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) pour générer un nouveau compte. Clef est un outil de gestion de compte et de signature qui est fourni avec le client Ethereum [Geth](https://geth.ethereum.org). La commande `clef newaccount` crée une nouvelle paire de clés et les enregistre dans un magasin de clés chiffré.
 
@@ -86,9 +92,9 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 [Documentation Geth](https://geth.ethereum.org/docs)
 
-Il est possible de dériver de nouvelles clés publiques à partir de votre clé privée, mais pas l'inverse. Cela signifie qu'il est vital de garder votre clé privée en sécurité, et comme le nom l'indique, **PRIVÉE**.
+Il est possible de dériver de nouvelles clés publiques à partir de votre clé privée, mais pas l'inverse. Il est impératif de conserver vos clés privées en sécurité. Comme leur nom l'indique, elles sont **PRIVÉES**.
 
-Vous avez besoin d'une clé privée pour signer les messages et les transactions produisant une signature. Les autres peuvent alors prendre la signature pour dériver votre clé publique, prouvant l'auteur du message. Dans votre application, vous pouvez utiliser une bibliothèque javascript pour envoyer des transactions sur le réseau.
+Vous avez besoin d'une clé privée pour signer les messages et les transactions produisant une signature. Les autres peuvent alors prendre la signature pour dériver votre clé publique, prouvant l'auteur du message. Dans votre application, vous pouvez utiliser une bibliothèque JavaScript pour envoyer des transactions au réseau.
 
 ## Les comptes de contrats {#contract-accounts}
 
@@ -108,7 +114,7 @@ Il existe également un autre type de clé dans Ethereum, qui a été mis en pla
 
 ## Remarque sur les portefeuilles {#a-note-on-wallets}
 
-Un compte n'est pas un portefeuille. Un compte est une paire de clés d'un compte Ethereum appartenant à un utilisateur. Un portefeuille est une interface ou une application qui vous permet d'interagir avec votre compte Ethereum.
+Un compte n'est pas un portefeuille. Un portefeuille est une interface ou une application qui vous permet d'interagir avec votre compte Ethereum, qu'il s'agisse d'un compte externe ou d'un compte de contrat.
 
 ## Démonstration visuelle {#a-visual-demo}
 

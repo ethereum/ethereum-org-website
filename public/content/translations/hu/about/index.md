@@ -90,7 +90,7 @@ Az Ethereum egy nagy dolog: magában foglal egy közösséget, egy technológiá
 
 Az ethereum.org csapat negyedéves ütemtervet publikál az aktuális célokról, hogy a tevékenységét elérhetőbbé tegye és elősegítse a közösségi közreműködéseket.
 
-[Tekintse meg a 2024. 1. negyedévére vonatkozó ütemtervünket](https://github.com/ethereum/ethereum-org-website/issues/12005)
+[Tekintse meg a 2024. 3. negyedévére vonatkozó ütemtervünket](https://github.com/ethereum/ethereum-org-website/issues/13399)
 
 **Hogy hangzik?** Nagyra értékeljük, ha visszajelzést ad az ütemtervükkel kapcsolatban! Ha bármivel kapcsolatban úgy véli, hogy foglalkoznunk kellene vele, tudassa velünk! Szívesen fogadjuk a közösség bármelyik tagjától az ötleteket és a beadott kérvényeket (PR, mint pull request).
 
@@ -113,6 +113,10 @@ Elérhető egy [stílusútmutató](/contributing/style-guide/), hogy a tartalom�
 Kérjük, hogy tekintse át az [elveinket](/contributing/design-principles/) és a [stílusútmutatót](/contributing/style-guide/), ha szeretne [hozzájárulni a honlaphoz](/contributing/).
 
 Ha bármi észrevétele van a dizájnelvekkel, dizájnrendszerrel és a stílusútmutatóval kapcsolatban, azt jelezze felénk. Ne feledje, az ethereum.org a közösségért van a közösség által.
+
+## Licenc {#license}
+
+Az ethereum.org honlap nyílt forráskódú és az [MIT License](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) vonatkozik rá, hacsak másképp nincs megadva. Bővebben az ethereum.org [felhasználási feltételeiről](/terms-of-use/).
 
 ## Álláslehetőségek {#open-jobs}
 

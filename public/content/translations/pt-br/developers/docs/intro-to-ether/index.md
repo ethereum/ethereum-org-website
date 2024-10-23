@@ -26,7 +26,7 @@ A criptomoeda oferece suporte a um mecanismo de preços para o poder de computa�
 
 Portanto, mesmo que um aplicativo malicioso tenha enviado um ciclo infinito, a transação acabaria sem ether e terminaria, permitindo que a rede voltasse ao normal.
 
-[É](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [comum](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [confundir](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Ethereum e ether — quando as pessoas se referem ao "preço do Ethereum", estão descrevendo o preço do ether.
+É [comum confundir](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845) Ethereum e ether — quando as pessoas se referem ao "preço do Ethereum", estão descrevendo o preço do ether.
 
 ## Como cunhar ether {#minting-ether}
 

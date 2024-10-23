@@ -11,10 +11,10 @@
   "page-get-eth-community-safety": "보안에 대한 커뮤니티 게시물",
   "page-get-eth-description": "이더리움은 어떠한 단일 조직의 통제도 받지 않습니다. 탈중앙화되어 있기 때문입니다.",
   "page-get-eth-dex": "탈중앙화 거래소(DEX)",
-  "page-get-eth-dex-desc": "통제권을 더 확보하려면 스마트 계약을 사용하여 ETH를 매수하세요. DEX를 이용하면 보유한 자금의 통제권을 중앙화된 기업에 넘기지 않고도 디지털 자산을 거래할 수 있습니다.",
+  "page-get-eth-dex-desc": "통제권을 더 확보하려면 <a href=\"/glossary/#smart-contract\">스마트 계약</a>을 사용하여 ETH를 매수하세요. DEX에서는 보유한 자금의 통제권을 중앙화된 기업에 넘기지 않고도 디지털 자산을 거래할 수 있습니다.",
   "page-get-eth-peers": "다른 사람한테서 ETH 받기",
   "page-get-eth-peers-desc": "이더리움 계정을 개설하셨나요? 이제 주소를 공유하기만 하면 ETH(및 기타 토큰)를 P2P로 주고 받을 수 있습니다.",
-  "page-get-eth-staking": "보상 스테이크 중",
+  "page-get-eth-staking": "스테이킹 보상",
   "page-get-eth-staking-desc": "이미 ETH를 보유하고 있는 경우 검증자 노드를 실행하여 ETH를 추가로 획득할 수 있습니다. 이 검증 작업을 수행하여 ETH로 보상을 받습니다.",
   "page-get-eth-earn": "ETH 획득하기",
   "page-get-eth-earn-desc": "암호화폐로 급여를 지불하는 DAO 또는 회사에서 일하거나 바운티(보상)을 받거나 소프트웨어 버그 등을 찾아 ETH를 획득할 수 있습니다.",
@@ -25,6 +25,7 @@
   "page-get-eth-dexs-desc": "탈중앙화 거래소는 ETH 및 다른 토큰을 위한 오픈 마켓입니다. 해당 거래소는 구매자와 판매자를 직접 연결합니다.",
   "page-get-eth-dexs-desc-2": "거래소는 거래에서 재산을 보호할 때 신뢰받는 타사를 이용하는 대신, 코드를 사용합니다. 판매자의 ETH는 납부가 확인되었을 경우에만 이체됩니다. 이러한 유형의 코드를 스마트 계약이라고 합니다.",
   "page-get-eth-dexs-desc-3": "이는 중앙화 거래소에 비해 지리적 제약이 적다는 뜻입니다. 누군가가 내가 원하는 것을 팔고 있고 내가 사용할 수 있는 지불 수단을 받아들인다면 거래가 가능합니다.",
+  "page-get-eth-dexs-desc-4": "참고: 다양한 DEX에서 랩드이더(WETH)를 사용하여 운영합니다. <a href=\"/wrapped-eth\">랩드 이더에 대해 자세히 알아보세요</a>.",
   "page-get-eth-do-not-copy": "예제: 복사하지 마시오",
   "page-get-eth-exchanges-disclaimer": "이 정보는 저희가 직접 수집한 것입니다. 잘못된 부분이 있으면 이메일을 보내주세요.",
   "page-get-eth-exchanges-empty-state-text": "이용할 수 있는 거래소 목록을 보려면 거주 국가를 입력하세요.",
@@ -73,6 +74,6 @@
   "page-get-eth-your-address-desc": "지갑을 다운로드하시면 공공 ETH 주소가 만들어집니다. 예시는 다음과 같습니다.",
   "page-get-eth-your-address-desc-3": "이는 이메일 주소와 같은 것이지만, 메일 대신 ETH를 받을 수 있는 것이라고 생각해 보십시오. 거래소에서 지갑으로 ETH를 보내고 싶으시면 귀하의 주소를 도착지로 사용합니다. 보내기 전에 두 번 체크하는 거 잊지 마세요!",
   "page-get-eth-your-address-wallet-link": "지갑 확인하기",
-  "listing-policy-raise-issue-link": "이슈 올리기",
+  "listing-policy-raise-issue-link": "문제 제기",
   "page-find-wallet-last-updated": "마지막 업데이트"
 }

@@ -3,7 +3,6 @@ import { useTranslation } from "next-i18next"
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
 
-import BeaconChainActions from "@/components/BeaconChainActions"
 import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import { ContentHero } from "@/components/Hero"
 import MergeArticleList from "@/components/MergeArticleList"
@@ -20,7 +19,6 @@ export const upgradeComponents = {
   MergeArticleList,
   MergeInfographic,
   UpgradeStatus,
-  BeaconChainActions,
 }
 
 type UpgradeLayoutProps = ChildOnlyProp &

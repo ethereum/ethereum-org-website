@@ -4,7 +4,7 @@ description: Dağıtılmış sistemlerde bulunan mutabakat protokolleri ve bu pr
 lang: tr
 ---
 
-Fikir birliği katmanı terimi çoğunlukla "hisse ispatı", "iş ispatı" veya "yetki ispatı" protokollerine atıfta bulunmak için kullanılır. Bunlar aslında sadece Sybil saldırılarına karşın koruma sağlayan mutabakat mekanizmalarındaki parçalardır. Mutabakat mekanizmaları, dağıtılmış bir düğüm kümesinin blok zincirin durumu üzerinde anlaşmalarını sağlayan; eksiksiz fikir, protokoller ve teşvik etme sistemleridir.
+Fikir birliği katmanı terimi çoğunlukla "hisse ispatı", "iş ispatı" veya "yetki ispatı" protokollerine atıfta bulunmak için kullanılır. Ancak bunlar sadece [Sybil saldırılarına](/glossary/#sybil-attack) karşı koruma sağlayan mutabakat mekanizmalarının bileşenleridir. Mutabakat mekanizmaları, dağıtılmış bir düğüm kümesinin blok zincirin durumu üzerinde anlaşmalarını sağlayan; eksiksiz fikir, protokoller ve teşvik etme sistemleridir.
 
 ## Ön Koşullar {#prerequisites}
 
@@ -68,7 +68,7 @@ Ethereum üzerinde kullanılan farklı mutabakat mekanizması türleri hakkında
 
 İş ispatı ve hisse ispatı tek başlarına bir mutabakat protokolü değildir, ancak çoğunlukla daha basit olduğu için bu şekilde adlandırılırlar. Aslında bunlar Sybil direnç mekanizmaları ve blok yazarı seçicileridir; son blokun yazarının kim olduğuna karar vermenin bir yoludurlar. Bir diğer önemli bileşen, aynı konumda birden fazla blokun bulunduğu senaryolarda düğümlerin zincirin başında tek bir doğru bloku seçmesini sağlayan zincir seçimi (çatal seçimi olarak da bilinir) algoritmasıdır.
 
-**Sybil direnci**, bir protokolün [Sybil saldırısına](https://wikipedia.org/wiki/Sybil_attack) ne kadar dayanıklı olduğunu ölçer. Sybil saldırıları, bir kullanıcı veya grubun birçok kullanıcı gibi davranmasıdır. Bu tip bir saldırıya karşı direnç, merkeziyetsiz bir blok zincir için önemlidir ve madencilerle doğrulayıcıların ortaya konulan kaynaklar neticesinde eşit şekilde ödüllendirilmesini sağlar. İş ispatı ve hisse ispatı kullanıcıların fazla enerji tüketmesini veya yüksek teminatlar ortaya koymasını sağlayarak buna karşı koruma sağlar. Bu korumalar Sybil saldırılarına karşı ekonomik bir caydırıcıdır.
+**Sybil direnci**, bir protokolün Sybil saldırısına ne kadar dayanıklı olduğunu ölçer. Bu tip bir saldırıya karşı direnç, merkeziyetsiz bir blok zincir için önemlidir ve madencilerle doğrulayıcıların ortaya konulan kaynaklar neticesinde eşit şekilde ödüllendirilmesini sağlar. İş ispatı ve hisse ispatı kullanıcıların fazla enerji tüketmesini veya yüksek teminatlar ortaya koymasını sağlayarak buna karşı koruma sağlar. Bu korumalar Sybil saldırılarına karşı ekonomik bir caydırıcıdır.
 
 Bir **zincir seçim kuralı** hangi zincirin "doğru" zincir olduğuna karar verilmesinde kullanılır. Bitcoin şu anda "en uzun zincir" kuralını kullanmaktadır, bu da hangi blok zinciri en uzun ise düğümlerin o zinciri geçerli kabul edeceği ve içinde çalışacağı anlamına gelir. İş ispatı zincirleri kapsamında en uzun zincir, zincirin toplam birikmiş iş ispatı zorluğuna göre belirlenir. Ethereum da bir zamanlar en uzun zincir kuralını kullanıyordu, ancak Ethereum artık hisse ispatı kullandığı için zincirin "ağırlık" ölçümünü yapan yeni bir çatal seçim algoritması kullanıyor. Ağırlık, doğrulayıcıların hisselenmiş Ether bakiyeleri ile birikmiş oylarının toplamıdır.
 
@@ -89,3 +89,4 @@ _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düze
 - [İş ispatı](/developers/docs/consensus-mechanisms/pow/)
 - [Madencilik](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Hisse ispatı](/developers/docs/consensus-mechanisms/pos/)
+- [Yetki kanıtı](/developers/docs/consensus-mechanisms/poa/)

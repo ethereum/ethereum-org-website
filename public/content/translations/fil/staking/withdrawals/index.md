@@ -114,12 +114,12 @@ Kapag pinalawak ang kalkulasyong ito, matatantya natin ang oras na kakailanganin
 <TableContainer>
 
 | Bilang ng mga withdrawal | Tagal bago makumpleto |
-| :----------------------: | :-------------------: |
-|         400,000          |       3.5 araw        |
-|         500,000          |       4.3 araw        |
-|         600,000          |       5.2 araw        |
-|         700,000          |       6.1 araw        |
-|         800,000          |       7.0 araw        |
+| :-------------------: | :--------------: |
+|        400,000        |     3.5 araw     |
+|        500,000        |     4.3 araw     |
+|        600,000        |     5.2 araw     |
+|        700,000        |     6.1 araw     |
+|        800,000        |     7.0 araw     |
 
 </TableContainer>
 
@@ -194,9 +194,9 @@ eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
 
-Inirerekomenda sa mga operator ng validator na bisitahin ang page na <a href="https://launchpad.ethereum.org/withdrawals/">Mga Pag-withdraw sa Staking sa Launchpad</a> kung saan ka makakakita ng iba pang detalye tungkol sa kung paano ihanda ang iyong validator para sa mga withdrawal. pagiging handa, timing ng mga event, at iba pang detalye tungkol sa kung paano gumagana ang mga withdrawal.
+Ang mga operator ng validator ay inirerekomenda na bisitahin ang <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a>na pahina kung saan matatagpuan mo ang tungkol sa kung paano ihanda ang iyong validator para sa pag-withdraw, timing ng mga pangyayari, at higit pang mga detalye tungkol sa kung paano gumagana ang mga withdrawal.
 
-Upang subukan muna ang iyong setup sa isang testnet, bisitahin ang <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> para magsimula.
+Upang subukan muna ang iyong setup sa isang testnet, bisitahin ang <a href="http://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a> para magsimula.
 
 </ExpandableCard>
 
@@ -214,5 +214,5 @@ Hindi. Kapag umalis na ang isang validator at na-wtihdraw na ang kumpletong bala
 - [EIP-4895: Mga Beacon chain push withdrawal bilang mga operasyon](https://eips.ethereum.org/EIPS/eip-4895)
 - [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Pag-withdraw sa Staked ETH (Testing) kasama sina Potuz at Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
-- [PEEPanEIP#68: EIP-4895: Mga Beacon chain push withdrawal bilang mga operasyon kasama si Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
+- [PEEPanEIP#68: EIP-4895: Itinutulak ng beacon chain ang mga withdrawal bilang mga operasyon kasama si Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Pag-unawa sa Validator Effective Balance](https://www.attestant.io/posts/understanding-validator-effective-balance/)

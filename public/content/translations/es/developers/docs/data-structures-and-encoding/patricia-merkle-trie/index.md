@@ -35,13 +35,11 @@ Las operaciones de actualización y eliminación para los radix tries se pueden 
 
 ```
     def update(node,path,value):
+        curnode = db.get(node) if node else [ NULL ] * 17
+        newnode = curnode.copy()
         if path == '':
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newnode[-1] = value
         else:
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newindex = update(curnode[path[0]],path[1:],value)
             newnode[path[0]] = newindex
         db.put(hash(newnode),newnode)
@@ -164,7 +162,7 @@ Aquí está el código extendido para obtener un nodo en el Merkle Patricia trie
 
 ### Ejemplo de Trie {#example-trie}
 
-Supongamos que queremos un trie que contenga cuatro pares ruta/valor `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
+Supongamos que queremos un trie que contenga cuatro pares de ruta/valor `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
 
 En primer lugar, convertimos tanto las rutas como los valores en `bytes`. A continuación, las representaciones reales de bytes para _rutas_ se denotan con `<>`, aunque los _valores_ todavía se muestran como cadenas, denotadas por `''`, para facilitar la comprensión (estos también en realidad serían `bytes`):
 
@@ -185,7 +183,7 @@ Ahora, construimos un trie con los siguientes pares clave/valor en la base de da
     hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-Cuando se hace referencia a un nodo dentro de otro nodo, lo que se incluye es `H(rlp.encode(node))`, donde `H(x) = keccak256(x) if len(x) >= 32 else x` y `rlp.encode` es la función de codificación [RLP](/developers/docs/data-structures-and-encoding/rlp).
+Cuando un nodo es referenciado dentro de otro nodo, lo que se incluye es `H(rlp-encode(node))`, donde `H(x) = keccak256(x) if len(x) >= 32 else x` y `rlp.encode` es la función de codificación [RLP](/developers/docs/data-structures-and-encoding/rlp).
 
 Tenga en cuenta que al actualizar un trie, es necesario almacenar el par clave/valor `(keccak256(x), x)` en una tabla de búsqueda persistente _si_ el nodo recién creado tiene una longitud >= 32. Sin embargo, si el nodo es más corto, no es necesario almacenar nada, ya que la función f(x) = x es reversible.
 
@@ -254,7 +252,7 @@ Se puede encontrar más información sobre esto en la documentación [EIP 2718](
 
 ### Trie de recibos (receipts) {#receipts-trie}
 
-Cada bloque tiene su propio trie de recibos. Un `path` aquí es: `rlp(transactionIndex)`. `transactionIndex` es su índice dentro del bloque donde se mina. El trie de recibos nunca se actualiza. Al igual que en el trie de transacciones, hay recibos actuales y heredados. Para consultar un recibo específico en el trie de recibos, se requiere el índice de la transacción en su bloque, la carga útil del recibo y el tipo de transacción. El recibo devuelto puede ser de tipo `Receipt`, que se define como la concatenación de `TransactionType` y `ReceiptPayload`, o puede ser de tipo `LegacyReceipt`, que se define como `rlp([status, cumulativeGasUsed, logsBloom, logs])`.
+Cada bloque tiene su propio trie de recibos. Un `path` aquí es: `rlp(transactionIndex)`. `transactionIndex` es su índice dentro del bloque en el que se incluyó. El trie de recibos nunca se actualiza. Al igual que en el trie de transacciones, hay recibos actuales y heredados. Para consultar un recibo específico en el trie de recibos, se requiere el índice de la transacción en su bloque, la carga útil del recibo y el tipo de transacción. El recibo devuelto puede ser de tipo `Receipt`, que se define como la concatenación de `TransactionType` y `ReceiptPayload`, o puede ser de tipo `LegacyReceipt`, que se define como `rlp([status, cumulativeGasUsed, logsBloom, logs])`.
 
 Se puede encontrar más información sobre esto en la documentación [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
 

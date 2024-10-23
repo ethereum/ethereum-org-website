@@ -29,7 +29,7 @@ Ambas as pilhas funcionam em paralelo. A pilha de descoberta alimenta novos part
 
 Descoberta é o processo de encontrar outros nós na rede. Isso é inicializado usando um pequeno conjunto de bootnodes (nós cujos endereços são [hardcoded](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go) dentro do cliente para que possam ser encontrados imediatamente e conectar o cliente aos pares). Estes bootnodes (nós de inicialização) existem apenas para introduzir um novo nó a um conjunto de pares. Esse é o único objetivo deles; eles não participam de tarefas normais do cliente como sincronizar a cadeia e são usados somente na primeira vez que um cliente é ativado.
 
-O protocolo usado para as interações de node-bootnode (nós de inicialização) é uma forma modificada de [Kademlia](https://medium.com/coinmonks/a-brief-overview-of-kademlia-and-its-use-in-various-decentralized-platforms-da08a7f72b8f) que usa uma [tabela de hash distribuída](https://en.wikipedia.org/wiki/Distributed_hash_table) para compartilhar listas de nós. Cada nó tem uma versão desta tabela contendo as informações necessárias para se conectar aos seus pares mais próximos. Essa 'proximidade' não é geográfica. A distância é definida pela semelhança do ID de nós. A tabela de cada nó é atualizada regularmente como um recurso de segurança. Por exemplo, no [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5), os nós do protocolo de descoberta também podem enviar 'anúncios' que exibem os subprotocolos que o cliente suporta, permitindo que os pares negociem sobre os protocolos que ambos podem usar para se comunicar.
+O protocolo usado para as interações de node-bootnode (nós de inicialização) é uma forma modificada de [Kademlia](https://medium.com/coinmonks/a-brief-overview-of-kademlia-and-its-use-in-various-decentralized -platforms-da08a7f72b8f) que usa uma [tabela de hash distribuída](https://en.wikipedia.org/wiki/Distributed_hash_table) para compartilhar listas de nós. Cada nó tem uma versão desta tabela contendo as informações necessárias para se conectar aos seus pares mais próximos. Essa 'proximidade' não é geográfica. A distância é definida pela semelhança do ID de nós. A tabela de cada nó é atualizada regularmente como um recurso de segurança. Por exemplo, no [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5), os nós do protocolo de descoberta também podem enviar 'anúncios' que exibem os subprotocolos que o cliente suporta, permitindo que os pares negociem sobre os protocolos que ambos podem usar para se comunicar.
 
 A descoberta começa com um jogo de PING-PONG. Um PING-PONG bem-sucedido "liga" o novo nó a um bootnode (nó de inicialização). A mensagem inicial que alerta um bootnode sobre a existência de um novo nó entrando na rede é um `PING`. Este `PING` inclui informações em hash sobre o novo nó, o bootnode e um carimbo de data/hora de expiração. O bootnode recebe o `PING` e retorna um `PONG` contendo o hash `PING`. Se os hashes `PING` e `PONG` corresponderem, então a conexão entre o novo nó e o bootnode será verificada e diz-se que eles têm "vínculo".
 
@@ -73,7 +73,7 @@ Junto com as mensagens de saudação, o protocolo de transmissão também pode e
 
 #### Protocolo de transmissão {#wire-protocol}
 
-Uma vez que os pares estão conectados e uma sessão RLPx foi iniciada, o protocolo de transmissão define como os pares se comunicam. Inicialmente, o protocolo de transmissão definiu três tarefas principais: sincronização de cadeia, propagação de bloco e troca de transação. No entanto, uma vez que o Ethereum mudou para a prova de participação, a propagação do bloco e a sincronização da cadeia tornaram-se parte da camada de consenso. A troca de transações ainda é da responsabilidade dos clientes de execução. Troca de transações refere-se à troca de transações pendentes entre nós para que os mineradores possam selecionar algumas delas para inclusão no próximo bloco. Informações detalhadas sobre essas tarefas estão disponíveis [aqui](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Os clientes que oferecem suporte a esses subprotocolos os expõem por meio do [JSON-RPC](/developers/docs/apis/json-rpc/).
+Uma vez que os pares estão conectados e uma sessão RLPx foi iniciada, o protocolo de transmissão define como os pares se comunicam. Inicialmente, o protocolo de transmissão definiu três tarefas principais: sincronização de cadeia, propagação de bloco e troca de transação. No entanto, uma vez que o Ethereum mudou para a prova de participação, a propagação do bloco e a sincronização da cadeia tornaram-se parte da camada de consenso. A troca de transações ainda é da responsabilidade dos clientes de execução. A troca de transações refere-se à troca de transações pendentes entre nós para que os construtores de blocos possam selecionar algumas delas para inclusão no próximo bloco. Informações detalhadas sobre essas tarefas estão disponíveis [aqui](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Os clientes que oferecem suporte a esses subprotocolos os expõem por meio do [JSON-RPC](/developers/docs/apis/json-rpc/).
 
 #### les (subprotocolo ethereum leve) {#les}
 
@@ -125,7 +125,7 @@ Ambos os clientes de consenso e execução executam em paralelo. Eles precisam e
 
 Um resumo do fluxo de controle é mostrado abaixo, com a pilha de rede relevante entre colchetes.
 
-### Quando o cliente de consenso não é produtor de bloco:
+### Quando o cliente de consenso não é produtor de bloco: {#when-consensus-client-is-not-block-producer}
 
 - O cliente de consenso recebe um bloco através do protocolo gossip do bloco (consenso p2p)
 - O cliente de consenso pré-valida o bloco, ou seja, garante que chegou de um remetente válido com metadados corretos
@@ -134,7 +134,7 @@ Um resumo do fluxo de controle é mostrado abaixo, com a pilha de rede relevante
 - A camada de execução passa os dados de validação de volta para a camada de consenso, bloco agora considerado validado (conexão RPC local)
 - A camada de consenso adiciona bloco no nício de sua própria blockchain e o atesta, transmitindo o atestado pela rede (consenso p2p)
 
-### Quando o cliente de consenso é produtor de blocos:
+### Quando o cliente de consenso é produtor de blocos: {#when-consensus-client-is-block-producer}
 
 - O cliente de consenso recebe o aviso de que é o próximo produtor de bloco (consenso p2p)
 - A camada de consenso chama o método `create block` no cliente de execução (RPC local)

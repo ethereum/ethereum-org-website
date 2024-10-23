@@ -1,5 +1,5 @@
 ---
-title: Bridges
+title: Hidak
 description: Fejlesztőknek szóló áttekintés a hidakról
 lang: hu
 ---

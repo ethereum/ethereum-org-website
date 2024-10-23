@@ -63,19 +63,30 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - İstek Gezgini, Mempool İzleyicisi ve Composer ile Gösterge Tablosu
     - Entegre test ağı musluk erişimi
     - 18 bin kullanıcılı aktif Discord kurucu topluluğu
+
 - [**Düğüm ile İlgili Her Şey**](https://allthatnode.com/)
   - [Belgeler](https://docs.allthatnode.com/)
   - Özellikler
-    - Günlük 150.000 istekle birlikte en büyük kademe
-    - 24'ten fazla blok zincir düğümüne erişim
-    - RPC, HTTPS ve WSS uç noktaları
-    - Arşiv bilgilerine sınırsız erişim
-    - 7/24 destek ve %99,9'un üzerinde çalışma süresi
+    - Ücretsiz katman ile günde 50.000 istek
+    - 40'tan fazla protokol desteği
+    - JSON-RPC (Ethereum Sanal Makinesi, Tendermint), REST ve Websocket API'leri desteklenir
+    - Arşiv verilerine sınırsız erişim
+    - 7/24 teknik destek ve %99,9'un üzerinde çalışma süresi
     - Çoklu zincirlerde musluk erişilebilirliği
-    - Sınırsız uç nokta erişimi ve sınırsız sayıda API anahtarı
-    - İzleme/Hata Ayıklama isim alanı kullanılabilir
+    - Sınırsız sayıda API anahtarı ile sınırsız uç nokta erişimi
+    - İzleme/Hata Ayıklama API'si desteklenir
     - Otomatik güncellemeler
-    - Teknik destek
+
+- [**Amazon Yönetimli Blokzincir**](https://aws.amazon.com/managed-blockchain/)
+  - [Belgeler](https://aws.amazon.com/managed-blockchain/resources/)
+  - Özellikler
+    - Tamamen yönetilen Ethereum düğümleri
+    - Altı bölgede mevcut
+    - HTTP üzerinden JSON-RPC ve güvenli WebSockets
+    - 3 zinciri destekler
+    - SLA'lar, 7/24 AWS desteği
+    - Go-ethereum ve Lighthouse
+
 - [**Ankr**](https://www.ankr.com/)
   - [Belgeler](https://docs.ankr.com/)
   - Özellikler
@@ -88,7 +99,8 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Gösterge paneli
     - RPC, HTTPS ve WSS uç noktaları
     - Doğrudan destek
-- [**Patlama**](https://blastapi.io/)
+
+- [**Blast**](https://blastapi.io/)
   - [Belgeler](https://docs.blastapi.io/)
   - Özellikler
     - RPC ve WSS desteği
@@ -102,13 +114,15 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - 7/24 İzleme ve uyarılar
     - %99,9'luk genel SLA
     - Kripto ile ödeme
+
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [Belgeler](https://ubiquity.docs.blockdaemon.com/)
   - Faydalar
     - Gösterge Paneli
     - Düğüm bazında
     - Analitik
-- [**BlokPI**](https://blockpi.io/)
+
+- [**BlockPI**](https://blockpi.io/)
   - [Belgeler](https://docs.blockpi.io/)
   - Özellikler
     - Güçlü ve dağıtılmış düğüm yapısı
@@ -119,6 +133,16 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Özellleştirilmiş plan ve kullandıkça ödeme
     - Kripto ile ödeme
     - Doğrudan destek ve Teknik destek
+
+- [**Chainbase**](https://www.chainbase.com/)
+  - [Belgeler](https://docs.chainbase.com)
+  - Özellikler
+    - Çoğunlukla erişilebilir, hızlı ve ölçeklenebilir RPC servisi
+    - Çoklu zincir desteği
+    - Ücretsiz tarifeler
+    - Kullanıcı dostu kontrol paneli
+    - RPC'nin ötesinde blok zincir veri servisi sağlar
+
 - [**Chainstack**](https://chainstack.com/)
   - [Belgeler](https://docs.chainstack.com/)
   - Özellikler
@@ -131,6 +155,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Bulutunuzu getirin
     - Saat başına ödeme fiyatlandırması
     - Doğrudan 7/24 destek
+
 - [**DataHub**](https://datahub.figment.io)
   - [Belgeler](https://docs.figment.io/)
   - Özellikler
@@ -143,7 +168,8 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Gösterge Paneli
     - Doğrudan 24/7 Destek
     - Kripto ile Ödeme (İşletme)
-- [DRPC](https://drpc.org/)
+
+- [**DRPC**](https://drpc.org/)
   - [Belgeler](https://docs.drpc.org/)
   - Özellikler
     - Merkeziyetsiz RPC düğümleri
@@ -152,11 +178,12 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Ücretsiz katmanda aylık sınırsız işlem birimi
     - Veri doğrulama
     - Özel uç noktalar
-    - http ve WSS uç noktaları
+    - HTTP ve WSS uç noktaları
     - Sınırsız anahtarlar (ücretsiz ve ücretli kademe)
     - Esnek geri atım seçenekleri
     - [Genel Uç Nokta](https://eth.drpc.org)
     - Ücretsiz paylaşımlı arşiv düğümleri
+
 - [**GetBlock**](https://getblock.io/)
   - [Belgeler](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Özellikler
@@ -168,6 +195,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Gelişmiş analizler
     - Otomatik güncellemeler
     - Teknik destek
+
 - [**InfStones**](https://infstones.com/)
   - Özellikler
     - Ücretsiz katman seçeneği
@@ -179,6 +207,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Özel dağıtımlar için hızlı eşitleme süresi
     - Doğrudan 7/24 destek
     - 50'den fazla blok zincir düğümüne erişim
+
 - [**Infura**](https://infura.io/)
   - [Belgeler](https://infura.io/docs)
   - Özellikler
@@ -187,6 +216,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Ücretli arşiv verileri
     - Doğrudan Destek
     - Gösterge paneli
+
 - [**Kaleido**](https://kaleido.io/)
   - [Belgeler](https://docs.kaleido.io/)
   - Özellikler
@@ -207,6 +237,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Çoklu bulut, çoklu bölge ve hibrit dağıtım düzenlemeleri için destek
     - Basit saatlik SaaS tabanlı ücretlendirme
     - SLA'lar ve 7/24 destek
+
 - [**Lava Ağı**](https://www.lavanet.xyz/)
   - [Belgeler](https://docs.lavanet.xyz/)
   - Özellikler
@@ -218,6 +249,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Sezgisel Proje Yönetim Arayüzü
     - Mutabakat Tabanlı Veri Bütünlüğü
     - Çoklu Zincir Desteği
+
 - [**Moralis**](https://moralis.io/)
   - [Belgeler](https://docs.moralis.io/)
   - Özellikler
@@ -230,6 +262,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Benzersiz Ethereum SDK'si
     - Benzersiz API uç noktaları
     - Doğrudan teknik destek
+
 - [**NodeReal MegaNode**](https://nodereal.io/)
   - [Belgeler](https://docs.nodereal.io/nodereal/meganode/introduction)
   - Özellikler
@@ -237,6 +270,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Web3 geliştiricileri için gelişmiş API
     - Çoklu zincir desteği
     - Ücretsiz başlayın
+
 - [**NOWNode'lar**](https://nownodes.io/)
   - [Belgeler](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Özellikler
@@ -247,6 +281,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - 7/24 Destek Ekibi
     - Kişisel Hesap Yöneticisi
     - Paylaşılan, arşivlenen, yedeklenen ve özel düğümler
+
 - [**Pocket Ağı**](https://www.pokt.network/)
   - [Belgeler](https://docs.pokt.network/home/)
   - Özellikler
@@ -267,6 +302,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - En özel, sansüre dirençli seçenek
     - Uygulamalı geliştirici desteği
     - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) gösterge paneli ve analizleri
+
 - [**QuickNode**](https://www.quicknode.com)
   - [Belgeler](https://www.quicknode.com/docs/)
   - Özellikler
@@ -280,11 +316,13 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - NFT veri ve analiz API'sı
     - [SOC2 Sertifikalı](https://www.quicknode.com/security)
     - Geliştiricilerden İşletmelere Uygun
+
 - [**Rivet**](https://rivet.cloud/)
   - [Belgeler](https://rivet.readthedocs.io/en/latest/)
   - Özellikler
     - Ücretsiz katman seçeneği
     - Kullandıkça ölçeklendirin
+
 - [**SenseiNode**](https://senseinode.com)
   - [Belgeler](https://docs.senseinode.com/)
   - Özellikler
@@ -292,6 +330,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Gösterge paneli
     - Latin Amerika'daki farklı konumlarda birden fazla barındırma sağlayıcısında AWS'yi barındırma
     - Prysm ve Lighthouse istemcileri
+
 - [**SettleMint**](https://console.settlemint.com/)
   - [Belgeler](https://docs.settlemint.com/)
   - Özellikler
@@ -305,6 +344,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Gösterge paneli
     - Saat başına ödeme fiyatlandırması
     - Doğrudan destek
+
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [Belgeler](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - Özellikler
@@ -312,13 +352,26 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Geçmiş verilere ücretsiz erişim
     - 8 kata kadar daha hızlı okuma ağırlıklı iş yükü
     - %100 istikrarlı okuma erişimi
-    - JSON RPC uç noktaları
+    - JSON-RPC uç noktaları
     - UI temelli RPC istek inşacısı ve istek ön izlemesi
     - Tenderly'nin geliştirme, hata ayıklama ve test araçlarıyla sıkı şekilde entegre
     - İşlem simülasyonları
     - Kullanım analizleri ve filtreleme
     - Kolay erişim anahtarı yönetimi
     - Sohbet, e-posta ve Discord aracılığıyla özel mühendislik desteği
+
+- [**Tokenview**](https://services.tokenview.io/)
+  - [Belgeler](https://services.tokenview.io/docs?type=nodeService)
+  - Özellikler
+    - 7/24 teknik destek ve Telegram geliştiriciler topluluğu
+    - Çoklu zincir desteği (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
+    - Hem RPC hem WSS uç noktaları kullanıma açıktır
+    - Arşiv veri API'sına sınırsız erişim
+    - İstek Gezgini ve Bellek Havuzu İzleyicili Gösterge Tablosu
+    - NFT veri API'sı ve Web kancası bildirimi
+    - Kripto ile Ödeme
+    - Ekstra davranış gereksinimleri için harici destek
+
 - [**Watchdata**](https://watchdata.io/)
   - [Belgeler](https://docs.watchdata.io/)
   - Özellikler
@@ -330,6 +383,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Çeşitli düğümler için destek
     - Kaynak ölçeklendirme
     - Yüksek işlem hızları
+
 - [**ZMOK**](https://zmok.io/)
   - [Belgeler](https://docs.zmok.io/)
   - Özellikler
@@ -338,39 +392,18 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - İşlem göndermek için sınırsız TX ücreti ve sonsuz Gaz
     - Yeni blokun en hızlı şekilde alınması ve blok zincirin okunması
     - API çağrısı başına en iyi fiyat garantisi
-- [**Chainbase**](https://www.chainbase.com/)
-  - [Belgeler](https://docs.chainbase.com)
+
+- [**Zeeve**](https://www.zeeve.io/)
+  - [Belgeler](https://www.zeeve.io/docs/)
   - Özellikler
-    - Çoğunlukla erişilebilir, hızlı ve ölçeklenebilir RPC servisi
-    - Çoklu zincir desteği
-    - Ücretsiz tarifeler
-    - Kullanıcı dostu kontrol paneli
-    - RPC'nin ötesinde blok zincir veri servisi sağlar
+    - Blok zincir ağları ve düğümleri için dağıtım, izleme ve yönetim sağlayan kuruluş seviyesi kod gerektirmeyen bir otomasyon platformu
+    - 30'dan fazla Desteklenen Protokol, Entegreasyon ve daha fazlasını eklemek
+    - Merkeziyetsiz depolama, merkeziyetsiz kimlik ve Blok Zincir Cüzdanı veri API'ları gibi gerçek hayatta kullanım alanları olan değer atfedilmiş web3 altyapı servisleri
+    - 7/24 destek sunarak ve proaktif izleme yaparak düğümlerin iyi durumundan sürekli emin olma.
+    - RPC uç noktaları API'lere kimlik doğrulamalı erişim, sezgisel gösterge paneli ve analizlerle zahmetsiz bir yönetim sunar.
+    - Hem yönetilen bulut servisi sağlarken hem de kendi bulut servisinizi seçme şansı tanır; bunun için AWS, Azure, Google Cloud ve Digital Ocean gibi bütün büyük bulut sağlayıcılarını destekler.
+    - Kullanıcınıza en yakın düğümü sürekli hedef alabilmek için her seferinde akıllı yönlendirmeyi kullanıyoruz
 
-[**Zeeve**](https://www.zeeve.io/)
-
-- [Belgeler](https://www.zeeve.io/docs/)
-- Özellikler
-  - Blok zincir ağları ve düğümleri için dağıtım, izleme ve yönetim sağlayan kuruluş seviyesi kod gerektirmeyen bir otomasyon platformu
-  - 30'dan fazla Desteklenen Protokol, Entegreasyon ve daha fazlasını eklemek
-  - Merkeziyetsiz depolama, merkeziyetsiz kimlik ve Blok Zincir Cüzdanı veri API'ları gibi gerçek hayatta kullanım alanları olan değer atfedilmiş web3 altyapı servisleri
-  - 7/24 destek sunarak ve proaktif izleme yaparak düğümlerin iyi durumundan sürekli emin olma.
-  - RPC uç noktaları API'lara doğrulanmış erişim izni sunarak; zahmetsiz yönetim ve güçlü bir kullanıcı paneli ve analitik bilgiler sunar.
-  - Hem yönetilen bulut servisi sağlarken hem de kendi bulut servisinizi seçme şansı tanır; bunun için AWS, Azure, Google Cloud ve Digital Ocean gibi bütün büyük bulut sağlayıcılarını destekler.
-  - Kullanıcınıza en yakın düğümü sürekli hedef alabilmek için her seferinde akıllı yönlendirmeyi kullanıyoruz
-
-[**Tokenview**](https://services.tokenview.io/)
-
-- [Belgeler](https://services.tokeniew/docs?type=nodeService)
-- Özellikler
-  - 7/24 teknik destek ve Telegram geliştiriciler topluluğu
-  - Çoklu zincir desteği (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
-  - Hem rpc hem de wss uç noktaları kullanıma açıktır
-  - Arşiv veri API'sına sınırsız erişim
-  - İstek Gezgini ve Bellek Havuzu İzleyicili Gösterge Tablosu
-  - NFT veri API'sı ve Web kancası bildirimi
-  - Kripto ile Ödeme
-  - Ekstra davranış gereksinimleri için harici destek
 
 ## Daha fazla okuma {#further-reading}
 

@@ -4,7 +4,7 @@ description: Descubra más detalles sobre los incentivos en el protocolo en la p
 lang: es
 ---
 
-Ethereum está protegido gracias al uso de su criptomoneda nativa, el ether (ETH). Los operadores de nodos que deseen participar en la validación de bloques e identificación de la cabeza de la cadena depositan ether en un contrato inteligente en Ethereum. Luego se les paga en ether para ejecutar un software de validación que compruebe la validez de los nuevos bloques recibidos a través de la red entre pares y aplicar el algoritmo de elección de bifurcación para identificar la cabeza de la cadena.
+Ethereum está protegido gracias al uso de su criptomoneda nativa, el ether (ETH). Los operadores de nodos que deseen participar en la validación de los bloques e identificar al jefe de la cadena depositan ether en el [contrato de depósito](/staking/deposit-contract/) en Ethereum. Luego se les paga en ether para ejecutar un software de validación que compruebe la validez de los nuevos bloques recibidos a través de la red entre pares y aplicar el algoritmo de elección de bifurcación para identificar la cabeza de la cadena.
 
 Hay dos funciones principales para un validador: 1) comprobar los nuevos bloques y «certificar» si son válidos, 2) proponer nuevos bloques cuando se seleccionan al azar del grupo total de validadores. Si el validador no realiza ninguna de estas tareas cuando se le pide, pierde un pago de ether. A veces, los validadores también tienen la tarea de agregar firmas y participar en comités de sincronización.
 
@@ -78,7 +78,7 @@ Si la capa de consenso ha pasado más de cuatro épocas sin finalizar, se activa
 
 El diseño de recompensa, penalización y recorte del mecanismo de consenso anima a los validadores individuales a comportarse correctamente. No obstante, de estas opciones de diseño surge un sistema que incentiva poderosamente la distribución equitativa de validadores entre múltiples clientes, y debería desincentivar con ahínco el dominio de un solo cliente.
 
-## Más información {#further-reading}
+## Leer más {#further-reading}
 
 - [Actualización de Ethereum: la capa de incentivos](https://eth2book.info/altair/part2/incentives)
 - [Incentivos en el protocolo híbrido Casper de Ethereum](https://arxiv.org/pdf/1903.04205.pdf)

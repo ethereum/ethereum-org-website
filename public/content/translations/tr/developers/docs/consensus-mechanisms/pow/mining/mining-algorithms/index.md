@@ -24,11 +24,11 @@ Dagger Hashimoto, Ethash'ın yerini aldığı Ethereum madenciliği için öncü
 
 Dagger-Hashimoto, Dagger ve Hashimoto algoritmalarının değiştirilmiş versiyonlarını kullandı. Dagger Hashimoto ve Hashimoto arasındaki fark, veri kaynağı olarak blok zinciri kullanmak yerine Dagger Hashimoto'nun her N blokta blok verisine dayalı olarak güncellenen özel olarak oluşturulmuş bir veri seti kullanmasıdır. Veri kümesi, hafif istemci doğrulama algoritması için her nonce'ye özgü bir alt kümenin verimli bir şekilde hesaplanmasına olanak tanıyan Dagger algoritması kullanılarak oluşturulur. Dagger Hashimoto ve Dagger arasındaki fark, orijinal Dagger'dan farklı olarak, bloğu sorgulamak için kullanılan veri kümesinin yarı kalıcı olması ve yalnızca ara sıra (örneğin haftada bir) güncellenmesidir. Bu, veri kümesi oluşturma çabasının sıfıra yakın olduğu anlamına gelir, bu nedenle Sergio Lerner'in paylaşılan bellek hızlandırmalarıyla ilgili argümanları ihmal edilebilir hale gelir.
 
-[Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) hakkında daha fazlası.
+[Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto) hakkında daha fazla bilgi.
 
 ## Ethash {#ethash}
 
-Ethash, güncelde kullanımdan kalkmış bir iş ispatı mimarisinin altında gerçek Ethereum Ana Ağı'nda kullanılan madencilik algoritmasıydı. Ethash, algoritma önemli ölçüde güncellendikten sonra Dagger-Hashimoto'nun belirli bir versiyonuna verilen yeni bir isimdi, ancak yine de selefinin temel ilkelerini devraldı. Ethereum Ana Ağı yalnızca Ethash'ı kullandı - Dagger Hashimoto, Ethereum ana ağında madenciliğin başlamasından önce geçerliliğini yitirmiş madencilik algoritmasının bir ArGe sürümüydü.
+Ethash, güncelde kullanımdan kalkmış bir iş ispatı mimarisinin altında gerçek Ethereum Ana Ağı'nda kullanılan madencilik algoritmasıydı. Ethash, algoritma önemli ölçüde güncellendikten sonra Dagger-Hashimoto'nun belirli bir versiyonuna verilen yeni bir isimdi, ancak yine de selefinin temel ilkelerini devraldı. Ethereum Ana Ağı sadece Ethash'ı kullandı - Dagger Hashimoto, Ethereum ana ağında madenciliğin başlamasından önce geçerliliğini yitirmiş madencilik algoritmasının bir Ar-Ge sürümüydü.
 
 [Ethash hakkında daha fazla bilgi](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash).
 

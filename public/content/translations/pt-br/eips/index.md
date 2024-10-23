@@ -8,7 +8,7 @@ lang: pt-br
 
 ## O que são EIPs? {#what-are-eips}
 
-[Propostas de Melhorias do Ethereum (EIPs)](https://eips.ethereum.org/) são padrões especificando novos recursos ou processos potenciais para o Ethereum. As EIPs contêm especificações técnicas para as mudanças propostas e agem como a "fonte da verdade" para a comunidade. Atualizações de rede e padrões de aplicativos para Ethereum são discutidos e desenvolvidos através do processo EIP.
+[Propostas de Melhorias do Ethereum (EIPs)](https://eips.ethereum.org/) são padrões especificando novos potenciais recursos ou processos para o Ethereum. As EIPs contêm especificações técnicas para as mudanças propostas e agem como a "fonte da verdade" para a comunidade. Atualizações de rede e padrões de aplicativos para Ethereum são discutidos e desenvolvidos através do processo EIP.
 
 Qualquer um da comunidade Ethereum tem a capacidade de criar uma EIP. Diretrizes para escrever EIPs estão incluídas na [EIP 1](https://eips.ethereum.org/EIPS/eip-1). Uma EIP deve fornecer principalmente uma especificação técnica concisa com um pouco de motivação. O autor da EIP é responsável por obter consenso dentro da comunidade e documentar opiniões alternativas. Dada a alta barreira técnica para enviar uma EIP bem-elaborada, historicamente, a maioria dos autores de EIP são geralmente desenvolvedores de aplicativos ou protocolos.
 
@@ -54,9 +54,17 @@ O processo completo de padronização, juntamente com o gráfico, é descrito em
 
 Se você estiver interessado em ler mais sobre EIPs, confira o [site sobre EIPs](https://eips.ethereum.org/) e [EIP-1](https://eips.ethereum.org/EIPS/eip-1). Aqui estão alguns links úteis:
 
-- [Uma lista de cada EIP](https://eips.ethereum.org/all)
+- [Uma lista de todas as propostas de melhoria do Ethereum](https://eips.ethereum.org/all)
 - [Uma descrição de todos os tipos de EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [Uma descrição de todos os status de EIP](https://eips.ethereum.org/EIPS/eip-1#eip-process)
+
+### Projetos de educação comunitária {#community-projects}
+
+- [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) — *PEEPanEIP é uma série de vídeos educacionais que discute a Proposta de Melhoria do Ethereum (EIPs) e os principais recursos das próximas melhorias.*
+- [EIPs For Nerds](https://ethereum2077.substack.com/t/eip-research) — *EIPs For Nerds fornece visões gerais abrangentes no estilo ELI5 de várias Propostas de Melhoria do Ethereum (EIPs), incluindo EIPs principais e EIPs de camada de aplicativo/infraestrutura (ERCs), para educar os leitores e formar um consenso em torno das mudanças propostas no protocolo Ethereum.*
+- [EIPs.wtf](https://www.eips.wtf/) — *EIPs.wtf fornece informações extras para Propostas de Melhoria do Ethereum (EIPs), incluindo status, detalhes de implementação, solicitações de pull relacionadas e feedback da comunidade.*
+- [EIP.Fun](https://eipfun.substack.com/) — *EIP.Fun fornece as últimas notícias sobre Propostas de Melhoria do Ethereum (EIPs), atualizações sobre reuniões do EIP e muito mais.*
+- [EIPs Insight](https://eipsinsight.com/) — *EIPs Insight é uma representação do estado do processo e estatísticas das Propostas de Melhoria do Ethereum (EIPs) de acordo com informações coletadas de diferentes recursos.*
 
 ## Participar {#participate}
 

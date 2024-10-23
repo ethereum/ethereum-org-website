@@ -20,7 +20,7 @@ incomplete: true
 
 ## イーサリアムクライアントの操作 {#working-with-ethereum-clients}
 
-イーサリアムを使用して、仮想通貨とブロックチェーン技術の利点を活用した分散型アプリケーション (「dapp」) を作成します。 現在、少なくとも、Dartでイーサリムの[JSON RPC API](/developers/docs/apis/json-rpc/)が利用できるライブラリが2つメンテナンスされています。
+イーサリアムを使用して、仮想通貨とブロックチェーン技術の利点を活用した分散型アプリケーション (「dapp」) を作成します。 Dartでイーサリアムの[JSON-RPC API](/developers/docs/apis/json-rpc/)を使用するための、現在維持されているライブラリが少なくとも2つあります。
 
 1. [sionbutler.euのWeb3dart](https://pub.dev/packages/web3dart)
 1. [darticulate.comのEthereum 5.0.0](https://pub.dev/packages/ethereum)

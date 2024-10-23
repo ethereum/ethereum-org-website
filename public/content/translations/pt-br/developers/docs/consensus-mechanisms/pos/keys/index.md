@@ -10,7 +10,7 @@ As chaves do Ethereum são geradas usando a [criptografia de curva elíptica](ht
 
 No entanto, quando o Ethereum mudou de [prova de trabalho](/developers/docs/consensus-mechanisms/pow) para [prova de participação](/developers/docs/consensus-mechanisms/pos), um novo tipo de chave foi adicionado ao Ethereum. As chaves originais ainda funcionam exatamente como antes — não houve alterações nas chaves baseadas em curva elíptica que protegem as contas. No entanto, os usuários precisavam de um novo tipo de chave para participar da prova de participação colocando ETH em stake e executando validadores. Essa necessidade surgiu dos desafios de escalabilidade associados a muitas mensagens trocadas entre inúmeros validadores que exigiam um método criptográfico que pudesse ser agregado facilmente para reduzir a quantidade de comunicação necessária para a rede chegar a consenso.
 
-Este novo tipo de chave usa o [esquema de assinatura **Boneh-Lyn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). O BLS permite uma agregação de assinaturas muito eficiente, mas também permite a engenharia reversa de chaves agregadas de validadores individuais e é ideal para gerenciar ações entre validadores.
+Este novo tipo de chave usa o esquema de assinatura [**Boneh-Lynn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). O BLS permite uma agregação de assinaturas muito eficiente, mas também permite a engenharia reversa de chaves agregadas de validadores individuais e é ideal para gerenciar ações entre validadores.
 
 ## Os dois tipos de chaves de validação {#two-types-of-keys}
 

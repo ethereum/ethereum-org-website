@@ -74,7 +74,7 @@ Los validadores tienen que participar con ETH para tener algo que perder si se c
 
 ## ¿Cómo se selecciona a los validadores? {#how-are-validators-selected}
 
-Se elige de forma pseudoaleatoria a un solo validador para proponer un bloque en cada ranura utilizando un algoritmo llamado RANDAO, que mezcla un hash del proponente de bloques con una semilla que se actualiza a cada bloque. Este valor sirve para seleccionar un validador específico del conjunto de validadores totales. La selección del validador se fija con cuatro épocas de antelación.
+Se elige de forma pseudoaleatoria a un solo validador para proponer un bloque en cada ranura utilizando un algoritmo llamado RANDAO, que mezcla un hash del proponente de bloques con una semilla que se actualiza a cada bloque. Este valor sirve para seleccionar un validador específico del conjunto de validadores totales. La selección del validador se fija con una antelación de dos épocas.
 
 [Más información sobre la selección del validador](/developers/docs/consensus-mechanisms/pos/block-proposal)
 

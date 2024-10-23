@@ -45,7 +45,6 @@ Múltiples rastreadores ofrecen una visión general en tiempo real de los nodos 
 
 - [Mapa de nodos](https://etherscan.io/nodetracker) por Etherscan
 - [Nodos de Ether](https://ethernodes.org/) por Bitfly
-- [Ethereum de Nodos Crawler](https://crawler.ethereum.org/)
 - [Nodewatch](https://www.nodewatch.io/) de Chainsafe, nodos de consenso rastreados
 
 ## Tipos de nodos {#node-types}
@@ -130,13 +129,14 @@ La comunidad de Ethereum tiene múltiples clientes de ejecución de código abie
 
 En esta tabla se resumen los diferentes clientes. Todos ellos pasan [pruebas de cliente](https://github.com/ethereum/tests) y se gestionan de manera activa para mantenerse actualizados con actualizaciones de red.
 
-| Cliente                                         | Idioma   | Sistemas operativos   | Redes                                | Estrategias de sincronización              | Lima de estado  |
-| ----------------------------------------------- | -------- | --------------------- | ------------------------------------ | ------------------------------------------ | --------------- |
-| [Geth](https://geth.ethereum.org/)              | Go       | Linux, Windows, macOS | Red principal, Sepolia, Goerli       | Instantánea, completa                      | Archivo, podado |
-| [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Red principal, Sepolia, Goerli y más | Instantánea (sin servir), rápida, completa | Archivo, podado |
-| [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Sepolia, Goerli             | Instantánea, rápida, completa              | Archivo, podado |
-| [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Goerli             | Completa                                   | Archivo, podado |
-| [Reth](https://github.com/paradigmxyz/reth)     | Rust     | Linux, Windows, macOS | Red principal, Sepolia, Goerli y más | Completa                                   | Archivo, podado |
+| Cliente                                                                  | Idioma     | Sistemas operativos   | Redes                           | Estrategias de sincronización                                    | Lima de estado  |
+| ------------------------------------------------------------------------ | ---------- | --------------------- | ------------------------------- | ---------------------------------------------------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Red principal, Sepolia, Holesky | [Snap](#snap-sync), [Completa](#full-sync)                       | Archivo, podado |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Red principal, Sepolia, Holesky | [Snap](#snap-sync) (sin servir), Rápida, [Completa](#full-sync)  | Archivo, podado |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Red principal, Sepolia, Holesky | [Snap](#snap-sync), [Rápida](#fast-sync), [Completa](#full-sync) | Archivo, podado |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Red principal, Sepolia, Holesky | [Completa](#full-sync)                                           | Archivo, podado |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Red principal, Sepolia, Holesky | [Completa](#full-sync)                                           | Archivo, podado |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Holesky                | [Completa](#full-sync)                                           | Podado          |
 
 Si desea obtener más información sobre redes compatibles, puede leer el apartado de [Redes de Ethereum](/developers/docs/networks/).
 
@@ -164,9 +164,27 @@ Nethermind es una implementación de Ethereum diseñada con el bloque de C# .NET
 
 - una máquina virtual optimizada
 - acceso al estado
-- redes y características importantes, como paneles de control Prometheus/Graphana, asistencia de registro para empresas de seg, rastreo de JSON RPC y complementos de análisis.
+- redes y características ricas como paneles de control de Prometheus/Grafana, soporte de registro empresarial seq, rastreo JSON-RPC y complementos de análisis
 
 Además, Nethermind dispone de [documentación detallada](https://docs.nethermind.io), una sólido soporte para desarrolladores, una comunidad en línea y asistencia ininterrumpida disponible para usuarios premium.
+
+### Reth {#reth}
+
+Reth (abreviatura de Rust Ethereum) es una implementación de nodo completo de Ethereum que se centra en ser fácil de usar, altamente modular, rápida y eficiente. Reth fue originalmente construida e impulsada por Paradigm, y está licenciada bajo las licencias de Apache y MIT.
+
+Reth está listo para producción y es adecuado para su uso en entornos de misión crítica como staking o servicios de alto tiempo de actividad. Funciona bien en casos de uso donde se requiere alto rendimiento con grandes márgenes como RPC, MEV, indexación, simulaciones y actividades P2P.
+
+Obtenga más información en el [Reth Book](https://reth.rs/) o el [repositorio Reth GitHub](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
+
+### En desarrollo {#execution-in-development}
+
+Estos clientes están aún en etapas tempranas de desarrollo y aún no se recomienda su uso.
+
+#### EthereumJS {#ethereumjs}
+
+El cliente de ejecución EthereumJS (EthereumJS) está escrito en TypeScript y se compone de una serie de paquetes, incluidas las primitivas principales de Ethereum representadas por las clases Bloque, Transacción y Merkle-Patricia Trie y los componentes principales del cliente, incluida una implementación de la Máquina Virtual de Ethereum (EVM), una clase de cadena de bloques y la pila de red DevP2P.
+
+Obtenga más información al respecto leyendo su [documentación](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master).
 
 ## Clientes de consenso {#consensus-clients}
 
@@ -176,7 +194,7 @@ Existen múltiples clientes de consenso (antes conocidos como clientes Eth2) que
 | ------------------------------------------------------------- | ---------- | --------------------- | --------------------------------------------------------- |
 | [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
 | [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Goerli, Pyrmont, Sepolia, Ropsten y más     |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
 | [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont, Sepolia, Ropsten y más |
 
@@ -220,25 +238,36 @@ Los modos de sincronización representan diferentes enfoques de este proceso con
 
 ### Modos de sincronización de la capa de ejecución {#execution-layer-sync-modes}
 
-#### Sincronización completa del archivo {#full-sync}
+La capa de ejecución se puede ejecutar en diferentes modos para adaptarse a diferentes casos de uso, desde volver a ejecutar el estado mundial de la cadena de bloques hasta sincronizar solo con la punta de la cadena desde un punto de control de confianza.
 
-La sincronización total descarga todos los bloques (incluidos los encabezados, las transacciones y los recibos) y va generando de manera creciente el estado de la cadena de bloques al ejecutar cada bloque desde el principio.
+#### Sincronización completa {#full-sync}
+
+Una sincronización completa descarga todos los bloques (incluidos los encabezados y los cuerpos de bloque) y regenera el estado de la cadena de bloques de forma incremental ejecutando cada bloque desde la génesis.
 
 - Minimiza la confianza y ofrece la máxima seguridad al verificar cada transacción.
 - Debido al número creciente de transacciones, puede llevar de días a semanas procesar todas las transacciones.
 
-#### Sincronización instantánea completa {#snap-sync}
+Los [nodos de archivo](#archive-node) realizan una sincronización completa para crear (y retener) un historial completo de los cambios de estado realizados por cada transacción en cada bloque.
 
-La sincronización instantánea verifica la cadena bloque por bloque, al igual que una sincronización de archivo completa; sin embargo, en lugar de comenzar en el bloque inicial, comienza en el punto de control «de confianza» más reciente que se sabe que es parte de la verdadera cadena de bloques. El nodo guarda puntos de control periódicos mientras elimina datos con mayor antigüedad a partir de una fecha concreta. Esas instantáneas se utilizan para regenerar los datos de estado cuando se necesitan, en lugar de tener que almacenarlos todos para siempre.
+#### Sincronización rápida {#fast-sync}
 
-- Es la estrategia de sincronización más rápida, actualmente por defecto en la red principal de Ethereum.
-- Usa mucho menos espacio del disco y ancho de banda de red sin sacrificar la seguridad.
+Al igual que una sincronización completa, una sincronización rápida descarga todos los bloques (incluidos los encabezados, las transacciones y los recibos). Sin embargo, en vez de reprocesar las transacciones históricas, una sincronización rápida depende de los recibos hasta que alcanza una cabeza reciente, cuando cambia a importar y procesar bloques para proporcionar un nodo completo.
 
-[Más sobre la sincronización instantánea](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+- Estrategia de sincronización rápida.
+- Reduce la demanda del procesamiento en favor del uso de ancho de banda.
+
+#### Sincronización snap {#snap-sync}
+
+Las sincronizaciones snap también verifican la cadena bloque por bloque. Sin embargo, en lugar de comenzar en el bloque inicial, una sincronización snap comienza en el punto de verificación confiable más reciente que forma parte de la verdadera cadena de bloques. El nodo guarda puntos de control periódicos mientras elimina datos con mayor antigüedad a partir de una fecha concreta. Esas instantáneas se utilizan para regenerar los datos de estado cuando se necesitan, en lugar de tener que almacenarlos para siempre.
+
+- La estrategia de sincronización más rápida, actualmente la utilizada por defecto en la Red principal de Ethereum.
+- Ahorra mucho espacio en disco y ancho de banda de red sin sacrificar la seguridad.
+
+[Más sobre la sincronización snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md).
 
 #### Sincronización ligera {#light-sync}
 
-El modo de cliente ligero descarga todos los encabezados de los bloques, los datos de bloques y luego verifica algunos de manera aleatoria. Solamente sincroniza un extremo de la cadena desde el punto de control de confianza.
+El modo de cliente ligero descarga todos los encabezados de los bloques, datos de bloques y luego verifica algunos de manera aleatoria. Solamente sincroniza un extremo de la cadena desde el punto de control de confianza.
 
 - Obtiene solamente el último estado mientras confía en los desarrolladores y en el mecanismo de consenso.
 - Cliente listo para usar con el estado actual de la red en pocos minutos.
@@ -255,17 +284,15 @@ La sincronización óptima es una estrategia de sincronización después de La F
 
 [Más sobre la sincronización optimista](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
 
-#### Sincronización de punto de control {#checkpoint-sync}
+#### Sincronización de punto de verificación {#checkpoint-sync}
 
-La sincronización de punto de control, también conocida como sincronización de subjetividad débil, crea una experiencia de usuario superior para sincronizar el nodo de baliza. Se basa en supuestos de [subjetividad débil](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) que permiten la sincronización de la cadena de baliza desde un punto de control de la subjetividad débil reciente en lugar del origen. La sincronización de punto de control hace que el tiempo de sincronización inicial sea significativamente más rápido con supuestos de confianza similares como la sincronización desde su [origen](/glossary/#genesis-block).
+Una sincronización de punto de verificación o control, también conocida como sincronización de subjetividad débil, crea una experiencia de usuario superior para sincronizar un nodo de Baliza. Se basa en suposiciones de [subjetividad débil](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) que permite sincronizar la Cadena de Baliza desde un punto de verificación de subjetividad débil reciente en lugar del bloque inicial. Las sincronizaciones de punto de verificación hacen que el tiempo de sincronización inicial sea significativamente más rápido con suposiciones de confianza similares a la sincronización desde el [bloque inicial](/glossary/#genesis-block).
 
-En la práctica, esto significa que el nodo se conecta a un servicio remoto para descargar estados finalizados recientes y continúa verificando datos desde ese punto. Se confía en que terceros faciliten los datos y deben ser seleccionados con cuidado.
+En la práctica, esto significa que el nodo se conecta a un servicio remoto para descargar estados finalizados recientes y continúa verificando datos desde ese punto. El proveedor externo que proporciona los datos debe ser confiable y debe de ser elegido cautelosamente.
 
-Más en [punto de control sincronizado](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
+Más sobre la [sincronización de punto de verificación](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
 
 ## Más lectura {#further-reading}
-
-Existe mucha información acerca de los clientes de Ethereum en Internet. Estos son algunos de los recursos que le pueden resultar útiles.
 
 - [Ethereum 101 - Parte 2 - Explicación de los nodos](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 de febrero de 2019_
 - [Cómo ejecutar los nodos completos de Ethereum: una guía para aquellas personas que se encuentren desmotivadas](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _, Justin Leroux, 7 de noviembre de 2019_

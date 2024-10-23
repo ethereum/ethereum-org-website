@@ -33,7 +33,7 @@ Polinomik taahhüt şeması altında tanıklar, eşler arası ağda kolayca akta
 
 <ExpandableCard title="Verkle ağaçları tanık boyutunu ne kadar azaltabilir?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
-Tanık boyutu, içerdiği yaprak sayısına göre değişir. Tanığın 1000 yaprak kapsadığını varsayarsak, bir Merkle trie için bir tanık yaklaşık 3,5 MB olur (tablonun 7 seviye olduğu varsayılır). Bir Verkle ağacında (ağaçta 4 seviye olduğu varsayılarak) aynı veri için bir tanık yaklaşık 150 kB olacaktır - **yaklaşık 23 kat daha küçük**. Tanık boyutundaki bu azalma, vatansız müvekkil tanıklarının kabul edilebilir ölçüde küçük olmasını sağlayacaktır. Polinomik tanıklar 0,128 -1 kB'dir (hangi belirli polinom taahhüdünün kullanıldığına bağlı olarak).
+Tanık boyutu, içerdiği yaprak sayısına göre değişir. Tanığın 1000 yaprak kapsadığını varsayarsak, bir Merkle trie için bir tanık yaklaşık 3,5 MB olur (tablonun 7 seviye olduğu varsayılır). Bir Verkle ağacında (ağaçta 4 seviye olduğu varsayılarak) aynı veri için bir tanık yaklaşık 150 kB olacaktır - **yaklaşık 23 kat daha küçük**. Tanık boyutundaki bu azalma, vatansız müvekkil tanıklarının kabul edilebilir ölçüde küçük olmasını sağlayacaktır. Polinomik tanıklar, hangi özel polinom taahhüdünün kullanıldığına bağlı olarak 0,128 -1 kB arasındadır.
 
 </ExpandableCard>
 
@@ -49,12 +49,13 @@ Verkle ağaçları `(anahtar,değer)` çiftleridir; burada anahtarlar, 31 baytl�
 
 Verkle ağacı test ağları zaten aktif ve çalışıyor, ancak Verkle ağaçlarını desteklemek için gerekli olan istemciler için önemli güncellemeler hâlâ var. Test ağlarında sözleşme dağıtarak veya test ağı istemcilerini yürüterek gelişimin hızlanmasına yardımcı olabilirsiniz.
 
-[Beverly Hills Verkle test ağını incele](https://beverlyhills.ethpandaops.io)
+[Verkle Gen Devnet 2 test ağını keşfedin](https://verkle-gen-devnet-2.ethpandaops.io/)
 
-[Guillaume Ballet'in Condrieu Verkle test ağı açıklamasını izlemeyi unutmayın! ](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (Condrieu test ağının iş ispatı olduğunu ve [artık Kaustinen test ağının yerini aldığını unutmayın](https://kaustinen.ethdevops.io)).
+[Guillaume Ballet'yi Condrieu Verkle test ağını açıklarken izleyin](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (Condrieu test ağının iş ispatı olduğunu ve artık yerini Verkle Gen Devnet 2 test ağının aldığını unutmayın).
 
 ## Daha fazla bilgi {#further-reading}
 
+- [Durumsuzluk için Verkle Ağaçları](https://verkle.info/)
 - [Dankrad Feist PEEPanEIP'de Verkle ağaçlarını açıklıyor](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Guillaume Ballet ETHGlobal'de Verkle ağaçlarını açıklıyor](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["Verkle ağaçları Ethereum'u nasıl yalın ve anlamlı kılar", Devcon 6'da Guillaume Ballet](https://www.youtube.com/watch?v=Q7rStTKwuYs)

@@ -103,6 +103,11 @@ Las cuestiones de seguridad relativas a los NFT están casi siempre relacionadas
 - [Rastreador EtherscanNFT](https://etherscan.io/nft-top-contracts)
 - [Estándar de token ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Estándar de token ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [Aplicaciones y herramientas NFT populares](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Otros recursos {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

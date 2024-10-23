@@ -32,7 +32,7 @@ Son olarak, doğrulayıcı tasdiki imzalar ve ağa yayınlar.
 
 Bu veriyi ağ üzerinde her bir doğrulayıcı için dolaştırmanın önemli bir ek masrafı vardır. Sonuç olarak, tekil doğrulayıcılardan gelen tasdikler daha geniş olarak yayınlanmadan önce alt ağlar içerisinde toplanır. Bu, imzaların birlikte toplanmalarını içerir; bu sayede, yayınlanan bir tasdik, mutabakat `data`'sını ve tüm doğrulayıcıların `data` ile mutabakatta olduğu tüm imzaları birleştiren tek bir imzadan oluşur. Bu `aggregation_bits` kullanılarak kontrol edilebilir çünkü bu kendi komitesindeki (kimliği `data` içinde bulunur) her bir doğrulayıcının endeksini sağlar, bu da tekil imzaları sorgulamak için kullanılabilir.
 
-Her dönemde her bir alt ağdaki doğrulayıcı `aggregator` olarak seçilir. Toplayıcı dedikodu ağı üzerinde duyduğu kendininkine `data` bakımından eşit olan tüm tasdikleri toplar. Her uyumlu tasdikin göndericisi `aggregation_bits` içerisinde kaydedilir. Toplayıcı sonrasında tasdik toplamını daha geniş ağa yayınlar.
+Her dönemde her bir alt ağdaki 16 doğrulayıcı, `toplayıcı` olarak seçilir. Toplayıcılar dedikodu ağından duydukları ve kendi `verilerine` eşdeğer olan tüm tasdikleri toplar. Her uyumlu tasdikin göndericisi `aggregation_bits` içerisinde kaydedilir. Toplayıcılar sonrasında topladıkları tasdikleri daha geniş bir ağa yayımlar.
 
 Bir doğrulayıcı blok önericisi olmak için seçildiğinde yeni bloktaki en son yuvaya kadar alt ağlardaki tasdik toplamlarını paketler.
 
@@ -50,9 +50,15 @@ Tasdik yaşam döngüsü aşağıdaki şemada belirtilmiştir:
 
 ## Ödüller {#rewards}
 
-Doğrulayıcılar tasdikler bildirdikleri için ödül alırlar. Tasdik ödülü iki değişkene bağlıdır, `base reward` ve `inclusion delay`. Dahil etme gecikmesi için en iyi durum 1'e eşit olmasıdır.
+Doğrulayıcılar tasdikler bildirdikleri için ödül alırlar. Tasdik ödülü, katılım etiketlerine (kaynak, hedef ve baş), ana ödüle ve katılım oranına bağlıdır.
 
-`attestation reward = 7/8 x base reward x (1/inclusion delay)`
+Katılım etiketlerinin her biri gönderilen tasdiklere ve dahil etme gecikmesine bağlı olarak doğru ya da yanlış olabilir.
+
+En iyi senaryo, üç etiketin de doğru olduğu senaryodur; bu durumda da doğrulayıcının kazanacağı miktar şu şekildedir (doğru etiket başına):
+
+`ödül += ana ödül * etiket ağırlığı * etiket tasdikleme oranı / 64`
+
+Etiket tasdikleme oranı, belirlenmiş etiketi tasdikleyen tüm doğrulayıcıların toplam bakiyesinin toplam aktif bakiyeyle karşılaştırılmasıyla elde edilir.
 
 ### Ana ödül {#base-reward}
 
@@ -81,6 +87,6 @@ Bazı durumlarda şanslı bir toplayıcının aynı zamanda blok önericisi olab
 ## Daha fazla bilgi {#further-reading}
 
 - [Vitalik'in açıklamalı mutabakat özelliklerindeki tasdikler](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
-- [Eth2book.info içindeki tasdikler](https://eth2book.info/altair/part3/containers/dependencies#attestationdata)
+- [Eth2book.info içindeki tasdikler](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_

@@ -26,7 +26,7 @@ lang: zh
 
 高级模型侧重于智能合约和外部代理之间的关系，例如外部帐户 (EOA)、合约帐户和区块链环境。 这些模型有助于定义属性，这些属性规定了合约应该如何响应某些用户的交互行为。
 
-相反，其他一些形式化模型侧重于智能合约的低级行为。 虽然高级模型有助于推理合约的功能，但它们可能无法捕捉到实现的内部运作细节。 低级模型对程序分析应用了白盒视图并依赖于智能合约应用程序的低级表示，例如程序跟踪和[控制流程图](https://en.wikipedia.org/wiki/Control-flow_graph)，来推理与合约执行相关的属性。
+相反，其他一些形式化模型侧重于智能合约的低级行为。 虽然高级模型有助于论证合约的功能，但它们可能无法捕捉到实现的内部运作细节。 低级模型对程序分析应用了白盒视图并依赖于智能合约应用程序的低级表示，例如程序跟踪和[控制流程图](https://en.wikipedia.org/wiki/Control-flow_graph)，来推理与合约执行相关的属性。
 
 低级模型被视为理想模型，因为它们体现着智能合约在以太坊执行环境（即[以太坊虚拟机](/developers/docs/evm/)）中的实际执行。 低级建模技术在确立智能合约的重要安全属性和检测潜在漏洞方面特别有用。
 
@@ -78,7 +78,7 @@ lang: zh
 
 获得完全正确性的证明很难，因为有些执行在终止前可能会延迟，或者根本不会终止。 也就是说，执行是否终止可以说是一个有争议的问题，因为以太坊的燃料机制阻止程序无限循环（执行要么成功终止或者因为“燃料耗尽”错误而结束）。
 
-使用霍尔逻辑制定的智能合约规范需要为合约中函数和循环的执行定义前置条件、后置条件和不变量。 前置条件通常包括函数的输入有误的可能性，而后置条件描述了对于这些输入的预期响应（例如，抛出一个特定异常）。 用这种方式，霍尔式属性有效地保证合约实现的正确性。
+使用霍尔逻辑制定的智能合约规范需要为合约中函数和循环的执行定义前置条件、后置条件和不变量。 前置条件通常包括函数的输入有误的可能性，而后置条件描述了对于这些输入的预期响应（例如，抛出一个特定异常）。 霍尔式属性以这种方式有效地保证了合约实现的正确性。
 
 许多形式化验证框架使用霍尔式规范来证明函数的语义正确性。 也可以使用 Solidity 的 `require` 和 `assert` 语句直接向合约代码添加霍尔式属性并作为断言。
 
@@ -212,35 +212,35 @@ function safe_add(uint x, uint y) returns(uint z){
 
 ### 用于制定形式化规范的规范语言 {#specification-languages}
 
-**Act**：_Act 允许存储更新、前置条件/后置条件、合约不变量的规范。 其工具套件也具有证明后端，可通过 Coq、SMT 求解器或 hevm 证明许多属性。_
+**Act**：_*Act 允许存储更新、前置条件/后置条件、合约不变量的规范。 其工具套件也具有证明后端，可通过 Coq、SMT 求解器或 hevm 证明许多属性。**
 
 - [GitHub](https://github.com/ethereum/act)
 - [相关文档](https://ethereum.github.io/act/)
 
-**Scribble** - _Scribble 把 Scribble 规范语言中的代码注释转换为检查规范的具体断言。_
+**Scribble** - _*Scribble 把 Scribble 规范语言中的代码注释转换为检查规范的具体断言。**
 
 - [相关文档](https://docs.scribble.codes/)
 
-**Dafny** - _Dafny 是一种可直接验证的编程语言，依赖于高层次注释来推理和验证代码的正确性。_
+**Dafny** - _*Dafny 是一种可直接验证的编程语言，依赖于高层次注释来推理和验证代码的正确性。**
 
 - [GitHub](https://github.com/dafny-lang/dafny)
 
 ### 用于检查正确性的程序验证器 {#program-verifiers}
 
-**Certora Prover** - _Certora Prover 是一种检查智能合约代码正确性的自动形式化验证工具。 它使用 CVL（Certora 验证语言）编写规范，并组合使用静态分析和约束求解检测属性违反。_
+**Certora Prover** - _ Certora Prover 是一种检查智能合约代码正确性的自动形式化验证工具。 它使用 CVL（Certora 验证语言）编写规范，并组合使用静态分析和约束求解检测属性违反。_
 
 - [网站](https://www.certora.com/)
 - [相关文档](https://docs.certora.com/en/latest/index.html)
 
-**Solidity SMTChecker** - _Solidity 的SMTChecker 是一个基于 SMT（可满足性模理论）和 Horn 求解的内置模型检查器。 它在编译期间确认合约源代码是否符合规范并静态检查是否违反了安全属性。_
+**Solidity SMTChecker** - _*Solidity 的SMTChecker 是一个基于 SMT（可满足性模理论）和 Horn 求解的内置模型检查器。 它在编译期间确认合约源代码是否符合规范并静态检查是否违反了安全属性。**
 
 - [GitHub](https://github.com/ethereum/solidity)
 
-**solc-verify** - _solc-verify 是 Solidity 编译器的扩展版本，它可以使用注释和模块化程序验证对 Solidity 代码执行自动形式化验证。_
+**solc-verify** - _*solc-verify 是 Solidity 编译器的扩展版本，它可以使用注释和模块化程序验证对 Solidity 代码执行自动形式化验证。**
 
 - [GitHub](https://github.com/SRI-CSL/solidity)
 
-**KEVM** - _KEVM 是以太坊虚拟机 (EVM) 的形式化语义，用 K 框架编写。 KEVM 是可执行的，并且能够使用可达性逻辑证明某些与属性相关的断言。_
+**KEVM** - _*KEVM 是以太坊虚拟机 (EVM) 的形式化语义，用 K 框架编写。 KEVM 是可执行的，并且能够使用可达性逻辑证明某些与属性相关的断言。**
 
 - [GitHub](https://github.com/runtimeverification/evm-semantics)
 - [相关文档](https://jellopaper.org/)
@@ -259,12 +259,12 @@ function safe_add(uint x, uint y) returns(uint z){
 
 ### 用于检测智能合约中易受攻击模式的基于符号执行的工具 {#symbolic-execution-tools}
 
-**Manticore** - _种基于符号执行的工具，用于分析以太坊虚拟机的字节码分析工具。_
+**Manticore** - _*一种基于符号执行的工具，用于分析以太坊虚拟机的字节码分析工具*。*
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [相关文档](https://github.com/trailofbits/manticore/wiki)
 
-**hevm** - _hevm 是一种面向以太坊虚拟机字节码的符号执行引擎和等价性检查器。_
+**hevm** - _*hevm 是一种面向以太坊虚拟机字节码的符号执行引擎和等价性检查器。**
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 

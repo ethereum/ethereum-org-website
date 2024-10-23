@@ -15,15 +15,17 @@ lang: zh-tw
 - 造訪 [ethereum.org/developers/](/developers/)，瞭解和嘗試使用以太坊
 - 參加你附近的 [ETHGlobal](http://ethglobal.co/) 駭客松活動。
 - 留意[與你的專業領域或偏好的編程語言有關的專案](/developers/docs/programming-languages/)
-- 觀看或參與[核心開發者會議](https://www.youtube.com/@EthereumProtocol)
+- 觀看或參與[共識層與執行層的會議](https://www.youtube.com/@EthereumProtocol/streams)
 - [以太坊生態系統支持計劃願望清單](https://esp.ethereum.foundation/wishlist/) - 以太坊生態系統支持計劃正積極尋找工具、文件和基礎設施領域的資助申請
 - [Web3Bridge](https://www.web3bridge.com/) - 加入有抱負的 Web3 社群，一起積極尋找、培訓和支持整個非洲數百名開發人員和社群成員
+- 加入[以太坊研發 Discord](https://discord.com/invite/VmG7Uxc)
 - 加入[以太坊牧貓人組織的 Discord](https://discord.com/invite/Nz6rtfJ8Cu)
 
 ## 研究人員和學術工作者 <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
 你有數學、虛擬貨幣或者經濟學相關的學術背景嗎？ 你可能會對以太坊生態中的一些前線工作有興趣。
 
+- 加入[以太坊研發 Discord](https://discord.com/invite/VmG7Uxc)
 - 撰寫或審查以太坊改進提案
   - 撰寫以太坊改進提案
     1. 將你的想法提交至[以太坊魔法師協會](https://ethereum-magicians.org)
@@ -38,7 +40,7 @@ lang: zh-tw
 - [Ethresear.ch](https://ethresear.ch) - 以太坊為研究而設的主要論壇，同時也是加密貨幣經濟學在世界上最有影響力的論壇。
 - [以太坊基金會研究線上問答](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - 由研究人員提供的問答系列。 當下階段開放時，任何人都可以提出問題。
 - [生態系統支援計劃的願望清單](https://esp.ethereum.foundation/wishlist/) - 以太坊生態系統支援計劃正在積極籌備資助申請的領域
-- [AllWalletDevs](https://allwallet.dev) - 讓以太坊開發者、設計師和有興趣的使用者，定期聚到一起並討論錢包的論壇
+- [AllWalletDevs](https://allwallet.dev) - 讓以太坊開發者、設計師和有興趣的使用者，定期聚在一起並討論錢包的論壇
 
 [探索更多活躍的研究領域](/community/research/)。
 

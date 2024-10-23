@@ -19,7 +19,7 @@ Les arbres de Merkle Patricia sont des structures qui permettent d'encoder des p
 
 [En savoir plus sur les arbres de Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
 
-### Préfixe de longueur récursive (RLP) {#recursive-length-prefix}
+### Préfixe de longueur récursive (RLP)  {#recursive-length-prefix}
 
 Le préfixe de longueur récursive (RLP) est une méthode de sérialisation largement utilisée à travers la couche d'exécution d'Ethereum.
 

@@ -10,7 +10,7 @@ Ethereum'un anahtarları [eliptik eğri kriptografisi](https://en.wikipedia.org/
 
 Ancak Ethereum, [iş ispatından](/developers/docs/consensus-mechanisms/pow) [hisse ispatına](/developers/docs/consensus-mechanisms/pos) geçiş yaptığında Ethereum'a yeni bir tür anahtar eklenmiştir. Orijinal anahtarlar hâlâ tamamen önceki gibi çalışıyor, hesapları güvence altına alan eliptik eğri tabanlı anahtarlar üzerinde herhangi bir değişiklik yapılmadı. Ancak kullanıcıların, ETH hisseleyerek ve doğrulayıcıları çalıştırarak hisse ispatına katılmak için yeni bir anahtar türüne ihtiyacı vardı. Bu ihtiyaç, çok sayıda doğrulayıcı arasında geçen birçok mesaj dolayısıyla ortaya çıkan ölçeklenebilirlik zorluklarından kaynaklandı. Ağın mutabakata varması için gereken mesaj miktarını azaltmak için kolayca toplanabilecek bir kriptografik yöntem gerekiyordu.
 
-Bu yeni türdeki anahtar, [**Boneh-Lyn-Shacham (BLS)** imza şemasını kullanır](https://wikipedia.org/wiki/BLS_digital_signature). BLS, imzaların çok verimli bir şekilde toplanmasına imkân tanırken, aynı zamanda topplanmış bireysel doğrulayıcı anahtarlarının tersine mühendislik ile çözülmesine izin verir ve doğrulayıcılar arasındaki işlemleri yönetmek için idealdir.
+Bu yeni anahtar tipi [**Boneh-Lynn-Shacham (BLS)** imza şemasını](https://wikipedia.org/wiki/BLS_digital_signature) kullanır. BLS, imzaların çok verimli bir şekilde toplanmasına imkân tanırken, aynı zamanda topplanmış bireysel doğrulayıcı anahtarlarının tersine mühendislik ile çözülmesine izin verir ve doğrulayıcılar arasındaki işlemleri yönetmek için idealdir.
 
 ## Doğrulayıcı anahtarlarının iki türü {#two-types-of-keys}
 

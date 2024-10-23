@@ -6,32 +6,32 @@ lang: es
 
 # Puentes en el blockchain {#prerequisites}
 
-_La Web3 ha evolucionado a un ecosistema de cadenas de bloques L1 y soluciones de escalado L2, cada uno diseñado con capacidades y compensaciones particulares. A medida que aumenta el número de protocolos en las cadenas de bloques, también lo hace [la demanda de mover activos por las diferentes cadenas](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)). Para satisfacer esta demanda, necesitamos puentes (bridges)._
+_La Web3 ha evolucionado a un ecosistema de cadenas de bloques L1 y soluciones de escalado L2, cada uno diseñado con capacidades y compensaciones particulares. A medida que el número de protocolos de cadena de bloques aumenta, también aumenta la demanda de mover activos a través de las cadenas. Para satisfacer esta demanda, necesitamos puentes (bridges)._
 
 <Divider />
 
 ## ¿Qué son los puentes? {#what-are-bridges}
 
-Los puentes de las cadenas de bloques funcionan como los puentes que conocemos en el mundo físico. Así como un puente físico conecta dos ubicaciones físicas, un puente de cadena de bloques conecta dos ecosistemas de cadena de bloques. Los puentes facilitan la comunicación entre las cadenas de bloques a través de la transferencia de información y activos.
+Los puentes de las cadenas de bloques funcionan como los puentes que conocemos en el mundo físico. Así como un puente físico conecta dos ubicaciones físicas, un puente de cadena de bloques conecta dos ecosistemas de cadena de bloques. **Los puentes facilitan la comunicación entre las cadenas de bloques mediante la transferencia de información y activos**.
 
 Veamos un ejemplo:
 
 Usted es de los Estados Unidos y está planeando un viaje a Europa. Tiene dólares, pero necesita euros. Para cambiar sus dólares por euros, puede utilizar un cambio de divisa por una pequeña comisión.
 
-Pero, ¿qué hace si quiere realizar un intercambio similar para usar una cadena de bloques diferente? Digamos que quiere cambiar ETH de la Red principal de Ethereum por ETH en [Arbitrum](https://arbitrum.io/). Al igual que el cambio de divisas que hicimos para obtener euros, necesitamos un mecanismo para mover nuestro ETH de Ethereum a Arbitrum. Los puentes hacen posible tal transacción. En este caso, [Arbitrum tiene un puente nativo](https://bridge.arbitrum.io/) que puede transferir ETH de la Red principal a Arbitrum.
+Pero, ¿qué puede hacer si quiere realizar un intercambio similar para usar una [cadena de bloques](/glossary/#blockchain) diferente? Digamos que usted quiere cambiar [ETH](/glossary/#ether) en la red principal de Ethereum por ETH en [Arbitrum](https://arbitrum.io/). Al igual que el cambio de divisas que hicimos para obtener euros, necesitamos un mecanismo para mover nuestro ETH de Ethereum a Arbitrum. Los puentes hacen posible tal transacción. En este caso, [Arbitrum tiene un puente nativo](https://bridge.arbitrum.io/) que puede transferir ETH de la Red principal a Arbitrum.
 
 ## ¿Por qué necesitamos puentes? {#why-do-we-need-bridges}
 
-Todas las cadenas de bloques tienen sus limitaciones. Para que Ethereum escale y se mantenga al día con la demanda, ha requerido de rollups. Alternativamente, los L1 como Solana y Avalanche están diseñados de forma diferente para permitir una mayor velocidad en las transacciones, pero a costa de la descentralización.
+Todas las cadenas de bloques tienen sus limitaciones. Para que Ethereum escale y siga el ritmo de la demanda, ha requerido el uso de [rollups](/glossary/#rollups). Alternativamente, los L1 como Solana y Avalanche están diseñados de forma diferente para permitir una mayor velocidad en las transacciones, pero a costa de la descentralización.
 
-Sin embargo, todas las cadenas de bloques se desarrollan en entornos aislados y tienen diferentes reglas y mecanismos de consenso. Esto significa que no pueden comunicarse de forma nativa, y los tokens no pueden moverse libremente entre cadenas de bloques.
+Sin embargo, todas las cadenas de bloques se desarrollan en un entorno aislado y tienen diferentes reglas y mecanismos de [consenso](/glossary/#consensus). Esto significa que no pueden comunicarse de forma nativa, y los tokens no pueden moverse libremente entre cadenas de bloques.
 
 Los puentes existen para conectar cadenas de bloques, permitiendo la transferencia de información y tokens entre ellas.
 
-Los puentes permiten:
+**Los puentes permiten**:
 
-- la transferencia de activos e información entre cadenas.
-- acceso de las DApps a las fortalezas de varias cadenas de bloques, lo que mejora sus capacidades (ya que los protocolos ahora tienen más espacio para la innovación)
+- la transferencia de activos e información entre cadenas
+- que las [dapps](/glossary/#dapp) se beneficien de las fortalezas de varias cadenas de bloques, mejorando así sus capacidades (ya que los protocolos ahora tienen más espacio para la innovación)
 - el acceso a nuevas plataformas y el aprovechamiento de los beneficios de las diferentes cadenas
 - que los desarrolladores de diferentes ecosistemas de cadenas de bloques colaboren y creen nuevas plataformas para los usuarios
 
@@ -57,7 +57,7 @@ Si tiene ETH en la Red principal de Ethereum y quiere explorar una alternativa L
 
 ### Tener activos crypto nativos {#own-native}
 
-Digamos que quiere tener Bitcoin (BTC), pero solo tiene fondos en la Red principal de Ethereum. Para obtener exposición a BTC en Ethereum, puede comprar Wrapped Bitcoin (WBTC). Sin embargo, WBTC es un token ERC-20 nativo de la red Ethereum, lo que significa que es una versión Ethereum de Bitcoin y no el activo original de la cadena de bloques de Bitcoin. Para tener BTC nativo, usted tendría que trasladar sus activos de Ethereum a Bitcoin usando un puente. Esto trasladará entre redes su WBTC y lo convertirá en BTC nativo. También podría poseer BTC y querer usarlo en los protocolos DeFi de Ethereum. Esto requeriría un puente pero al revés, desde el BTC hasta WBTC, que luego puede ser utilizado como un activo en Ethereum.
+Digamos que quiere tener Bitcoin (BTC), pero solo tiene fondos en la Red principal de Ethereum. Para obtener exposición a BTC en Ethereum, puede comprar Wrapped Bitcoin (WBTC). Sin embargo, WBTC es un token [ERC-20](/glossary/#erc-20) nativo de la red de Ethereum, lo que significa que es una versión de Ethereum de Bitcoin y no el activo original en la cadena de bloques de Bitcoin. Para tener BTC nativo, usted tendría que trasladar sus activos de Ethereum a Bitcoin usando un puente. Esto trasladará entre redes su WBTC y lo convertirá en BTC nativo. De forma alternativa, podría tener BTC y querer usarlo en protocolos [DeFi](/glossary/#defi) de Ethereum. Esto requeriría un puente pero al revés, desde el BTC hasta WBTC, que luego puede ser utilizado como un activo en Ethereum.
 
 <InfoBanner shouldCenter emoji=":bulb:">
   También puede hacer todo lo anterior usando un <a href="/get-eth/">exchange centralizado</a>. Sin embargo, a menos que sus fondos ya estén en un exchange, esto implicaría varios pasos y probablemente sería mejor usar un puente.
@@ -69,11 +69,11 @@ Digamos que quiere tener Bitcoin (BTC), pero solo tiene fondos en la Red princip
 
 Los puentes tienen muchos tipos de diseños y complejidades. Generalmente encontramos dos categorías: puentes de confianza (trusted) y puentes sin confianza o que no la necesitan (trustless).
 
-| Puentes de confianza                                                                                                                                                      | Puentes sin confianza                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Los puentes de confianza dependen de una entidad o sistema central para sus operaciones.                                                                                  | Los puentes sin confianza operan usando contratos inteligentes y algoritmos.                                                      |
-| Se asume que son confiables con respecto a la custodia de los fondos y la seguridad del puente. Los usuarios confían mayormente en la reputación del operador del puente. | No es necesario que los usuarios confíen en ellos: la seguridad del puente es la misma que la de la cadena de bloques subyacente. |
-| Los usuarios deben renunciar al control de sus activos crypto.                                                                                                            | A través de contratos inteligentes, los puentes sin confianza permiten a los usuarios seguir controlando sus fondos.              |
+| Puentes de confianza                                                                                                                                                      | Puentes sin confianza                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Los puentes de confianza dependen de una entidad o sistema central para sus operaciones.                                                                                  | Los puentes sin confianza operan usando contratos inteligentes y algoritmos.                                                                          |
+| Se asume que son confiables con respecto a la custodia de los fondos y la seguridad del puente. Los usuarios confían mayormente en la reputación del operador del puente. | No es necesario que los usuarios confíen en ellos: la seguridad del puente es la misma que la de la cadena de bloques subyacente.                     |
+| Los usuarios deben renunciar al control de sus activos crypto.                                                                                                            | A través de [contratos inteligentes](/glossary/#smart-contract), los puentes "sin confianza" permiten a los usuarios seguir en control de sus fondos. |
 
 En pocas palabras, podemos decir que los puentes de confianza tienen acuerdos basados en la confianza, o hay presunciones de confianza, mientras que los puentes que no precisan confianza minimizan esta cuestión y se apoyan en la confianza que aportan los automatismos y procesos preestablecidos en los dominios subyacentes. Así es como se pueden describir estos términos:
 
@@ -87,7 +87,7 @@ Imagínese que está en el control de seguridad del aeropuerto. Existen dos tipo
 1. Puntos de control manuales, operados por funcionarios que revisan manualmente todos los detalles de su billete e identidad antes de entregarle la tarjeta de embarque.
 2. Auto Check-In, operado por una máquina en la que se incluyen los datos de su vuelo y se recibe el pase de embarque si todo está bien.
 
-Los puntos de control manuales son similares a un modelo de confianza, ya que dependen en sus operaciones de un tercero, es decir, los funcionarios. Como usuario, confía en que los funcionarios tomen las decisiones correctas y utilicen correctamente su información privada.
+Un punto de control manual es similar a un modelo de confianza, ya que depende de un tercero, por ejemplo, de funcionarios, para sus operaciones. Como usuario, confía en que los funcionarios tomen las decisiones correctas y utilicen correctamente su información privada.
 
 La autofacturación, o auto check-in, es similar a un modelo que no precisa confianza, ya que elimina el papel del operador y utiliza la tecnología para ejecutar las operaciones. Los usuarios siempre mantienen el control de sus datos y no tienen que confiar su información privada a terceros.
 
@@ -126,9 +126,3 @@ Los puentes son cruciales para incorporar a los usuarios a las L2 de Ethereum e 
 - [EIP-5164: Ejecución entre cadenas (cross-chain)](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 de junio de 2022 - Brendan Asselstine_
 - [Marco de riesgos L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 de julio de 2022 - Bartek Kiepuszewski_
 - ["Por qué el futuro será multicadena, pero no entre cadenas"](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _8 de enero de 2022 - Vitalik Buterin_
-- [¿Qué son los puentes de cadena de bloques y cómo podemos clasificarlos?](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _18 de febrero de 2021 - Arjun Chand_
-- [¿Qué son los puentes entre cadenas?](https://www.alchemy.com/overviews/cross-chain-bridges) _10 de mayo de 2022 - Alquimia_
-- [Puentes entre cadenas: crear redes de criptoredes](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _8 de septiembre de 2021 - Dmitriy Berenzon_
-- [Puentes en el criptoespacio](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _23 de agosto de 2021 - Ben Adar Hyman_
-- [El trilema de la interoperabilidad](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _1 de octubre de 2021 - Arjun Bhuptani_
-- [Puentes seguros: comunicación entre cadenas realizada correctamente](https://medium.com/dragonfly-research/secure-the-bridge-cross-chain-communication-done-right-part-i-993f76ffed5d) _23 de agosto de 2021 - Celia Wan_

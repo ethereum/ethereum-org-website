@@ -65,8 +65,7 @@ Bir [DAO](/dao/) için ısmarlama yönetim sistemleri oluşturmak pahalı ve zam
 
 ## İlgili öğreticiler {#related-tutorials}
 
-- [Sözleşme Birleştirilebilirliği: Ethereum Akıllı Sözleşme Geliştirmenin Yapı Taşları](https://www.decentlabs.io/blog/contract-composability-the-building-blocks-of-ethereum-smart-contract-development)
-- [create-eth-app ile dapp ön yüz geliştirmeye bir adım önde başlayın](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– Popüler akıllı sözleşmelerle uygulamalar oluşturmak için create-eth-app kullanımına genel bir bakış._
+- [create-eth-app ile merkeziyetsiz uygulama ön yüz geliştirmeye bir adım önde başlayın](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– Popüler akıllı sözleşmelerle uygulamalar oluşturmak için create-eth-app kullanımına genel bir bakış._
 
 ## Daha fazla okuma {#further-reading}
 

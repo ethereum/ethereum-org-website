@@ -1,5 +1,5 @@
 ---
-title: Skálázás
+title: Méretezés
 description: Bevezetés a különböző skálázási lehetőségekbe, melyet jelenleg az Ethereum közösség fejleszt.
 lang: hu
 sidebarDepth: 3
@@ -59,7 +59,7 @@ Kétfajta összevont tranzakció létezik különböző biztonsági modellekkel:
 - **Optimista összevont tranzakció**: alapértelmezésben érvényes tranzakciókat feltételez, és csak kétely esetén végez számításokat egy [**csalási bizonyíték**](/glossary/#fraud-proof) révén. [Bővebben az optimista összevont tranzakciókról](/developers/docs/scaling/optimistic-rollups/).
 - **Zero-knowledge összevont tranzakció**: számítást végez a láncon kívül, és [**érvényességi bizonyítékot**](/glossary/#validity-proof) ad a láncnak. [Bővebben a zero-knowledge összevont tranzakciókról](/developers/docs/scaling/zk-rollups/).
 
-#### Státuszcsatornák {#channels}
+#### Állapot csatornák {#channels}
 
 A státuszcsatornák többaláírásos szerződéseket használnak, hogy a résztvevők gyorsan és szabadon tudjanak tranzakciókat lebonyolítani a láncon kívül, majd a végleges elszámolást a főhálózattal végezzék. Ez minimalizálja a hálózati torlódásokat, díjakat és késedelmeket. Két típusa jelenleg a státuszcsatorna és a fizetési csatorna.
 

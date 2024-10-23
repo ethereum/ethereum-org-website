@@ -38,12 +38,6 @@ Majoritatea IDE-urilor consacrate au construit plug-inuri pentru creşterea sati
 - [Exemple de cod](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Atom -** **_Editor de text hackable pentru secolul 21_**
-
-- [Atom](https://atom.io/)
-- [GitHub](https://github.com/atom)
-- [Pachete Ethereum](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
-
 **JetBrains IDEs (IntelliJ IDEA etc.) -** **_Instrumente esențiale pentru dezvoltatorii și echipele de software_**
 
 - [JetBrains](https://www.jetbrains.com/)

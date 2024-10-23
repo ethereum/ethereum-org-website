@@ -51,21 +51,22 @@ incomplete: true
 - [Web3.py](https://github.com/ethereum/web3.py) - _用于与以太坊交互的 Python 库_
 - [Vyper](https://github.com/ethereum/vyper/) - _一种适用于以太坊虚拟机的 Python 智能合约语言_
 - [Ape](https://github.com/ApeWorX/ape) - _面向 Pythonista、数据科学家和安全专业人员的智能合约开发工具_
-- [Brownie](https://github.com/eth-brownie/brownie) - _一个用于部署、测试以太坊智能合约并与之交互的 Python 框架_
 - [py-evm](https://github.com/ethereum/py-evm) - _以太坊虚拟机的实现_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _用于测试以太坊应用程序的工具_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _使用以太坊相关代码库的实用程序函数_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _适用于 solc Solidity 编译器（支持 0.5.x）的 Python 装饰器_
-- [py-wasm](https://github.com/ethereum/py-wasm) - _使用 Python 实现的 Web 汇编解释器_
-- [pydevp2p](https://github.com/ethereum/pydevp2p) - _使用 Python 实现 P2P 协议栈_
 - [pymaker](https://github.com/makerdao/pymaker) - _面向 Maker 合约的 Python 应用程序接口_
 - [siwe](https://github.com/spruceid/siwe-py) - _面向 Python 的以太坊登录服务 (siwe)_
 - [用于以太坊集成的 Web3 去中心化金融](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _一个 Python 包，具有适用于 ERC-20、Uniswap 和其他流行项目的现成集成_
+- [Wake](https://getwake.io) - _用于合约测试、模糊测试、部署、漏洞扫描和代码导航的一体化 Python 框架（语言服务器 - [Solidity 工具](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)）_
 
 ### 已归档/不再维护： {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _以太坊的 Python 客户端_
 - [Mamba](https://github.com/arjunaskykok/mamba) - _一个用 Vyper 语言编写、编译和部署智能合约的框架_
+- [Brownie](https://github.com/eth-brownie/brownie) - _一个用于部署、测试以太坊智能合约并与之交互的 Python 框架_
+- [pydevp2p](https://github.com/ethereum/pydevp2p) - _使用 Python 实现 P2P 协议栈_
+- [py-wasm](https://github.com/ethereum/py-wasm) - _使用 Python 实现的 Web 汇编解释器_
 
 想要获取更多的资源？ 请查看 [ethereum.org/developers](/developers/)。
 
@@ -86,4 +87,4 @@ incomplete: true
 
 ## 其他汇总列表 {#other-aggregated-lists}
 
-Vyper 维基百科包含[丰富的 Vyper 资源列表](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)
+Vyper 维基百科包含[丰富的 Vyper 资源列表](https://github.com/vyperlang/vyper/wiki/Vyper-tools-and-resources)

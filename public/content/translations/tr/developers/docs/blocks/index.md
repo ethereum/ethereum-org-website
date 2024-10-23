@@ -40,7 +40,7 @@ Hisse ispatının anlamı aşağıdaki gibidir:
 Bir blok içinde barındırılan çok fazla bilgi vardır. En yüksek düzeyde, bir blok aşağıdaki alanları barındırır:
 
 | Alan             | Açıklama                                               |
-| :--------------- | :----------------------------------------------------- |
+|:---------------- |:------------------------------------------------------ |
 | `yuva`           | blokun ait olduğu yuva                                 |
 | `proposer_index` | bloku öneren doğrulayıcının kimliği                    |
 | `parent_root`    | önceki blokun karması                                  |
@@ -50,12 +50,12 @@ Bir blok içinde barındırılan çok fazla bilgi vardır. En yüksek düzeyde, 
 Blok `gövdesi` kendi başına birkaç alana sahiptir:
 
 | Alan                 | Açıklama                                                                   |
-| :------------------- | :------------------------------------------------------------------------- |
+|:-------------------- |:-------------------------------------------------------------------------- |
 | `randao_reveal`      | bir sonraki blok önericisini seçmek için kullanılan değer                  |
 | `eth1_data`          | depozito sözleşmesi hakkında bilgi                                         |
 | `graffiti`           | blokları etiketlemek için kullanılan keyfi veriler                         |
 | `proposer_slashings` | kesilecek doğrulayıcıların listesi                                         |
-| `attester_slashings` | kesilecek doğrulayıcıların listesi                                         |
+| `attester_slashings` | kesilecek tasdik edenlerin listesi                                         |
 | `tasdikler`          | mevcut blok lehine tasdik listesi                                          |
 | `depozitolar`        | depozito sözleşmesine yeni depozito listesi                                |
 | `voluntary_exits`    | ağdan çıkan doğrulayıcıların listesi                                       |
@@ -65,15 +65,15 @@ Blok `gövdesi` kendi başına birkaç alana sahiptir:
 `Tasdik` alanı, bloktaki tüm tasdiklerin bir listesini içerir. Tasdiklerin, birkaç veri parçası içeren kendi veri türleri vardır. Her tasdik şunları içerir:
 
 | Alan               | Açıklama                                                   |
-| :----------------- | :--------------------------------------------------------- |
+|:------------------ |:---------------------------------------------------------- |
 | `aggregation_bits` | bu tasdiğe hangi doğrulayıcıların katıldığının bir listesi |
 | `veri`             | birden çok alt alana sahip bir barındırıcı                 |
-| `i̇mza`             | tüm onaylayan doğrulayıcıların toplu imzası                |
+| `i̇mza`            | tüm onaylayan doğrulayıcıların toplu imzası                |
 
 `Tasdikteki` `veri` alanı şunları içerir:
 
 | Alan                | Açıklama                                     |
-| :------------------ | :------------------------------------------- |
+|:------------------- |:-------------------------------------------- |
 | `yuva`              | tasdiğe bağlı yuva alanı                     |
 | `indeks`            | tasdik eden doğrulayıcılar için endeksler    |
 | `beacon_block_root` | bu nesneyi içeren İşaret blokunun kök düğümü |
@@ -85,7 +85,7 @@ Bu işlemleri `execution_payload`'da yapmak global durumu günceller. Tüm istem
 `execution_payload_header` aşağıdaki alanları içerir:
 
 | Alan                | Açıklama                                                              |
-| :------------------ | :-------------------------------------------------------------------- |
+|:------------------- |:--------------------------------------------------------------------- |
 | `parent_hash`       | üst blokun karması                                                    |
 | `fee_recipient`     | işlem ücretlerinin ödeneceği hesap adresi                             |
 | `state_root`        | bloka değişimleri uyguladıktan sonraki küresel durum için kök karması |
@@ -96,16 +96,16 @@ Bu işlemleri `execution_payload`'da yapmak global durumu günceller. Tüm istem
 | `gas_limit`         | bu blokta izin verilen maksimum gaz                                   |
 | `gas_used`          | bu blokta kullanılan net gaz miktarı                                  |
 | `zaman damgası`     | blok süresi                                                           |
-| `extra_data`        | i̇steğe bağlı ham bayt olarak eklenen veri                             |
+| `extra_data`        | i̇steğe bağlı ham bayt olarak eklenen veri                            |
 | `base_fee_per_gas`  | ana ücret değeri                                                      |
 | `block_hash`        | Uygulama blokunun özeti                                               |
 | `transactions_root` | yükteki işlemlerin kök karması                                        |
 | `withdrawal_root`   | yükteki para çekme işlemlerinin kök karması                           |
 
-`execution_payload` ise aşağıdakileri kapsar (bunun başlık olanla aynı olduğuna dikkat edin, ancak işlemlerin kök karmaları yerine asıl işlem listesini ve çekim bilgisini kapsıyor):
+`execution_payload` ise aşağıdakileri kapsar (bunun başlık olanla aynı olduğuna dikkat edin, ancak işlemlerin kök karmaları yerine asıl işlem listesini ve para çekme bilgisini kapsıyor):
 
 | Alan               | Açıklama                                                              |
-| :----------------- | :-------------------------------------------------------------------- |
+|:------------------ |:--------------------------------------------------------------------- |
 | `parent_hash`      | üst blokun karması                                                    |
 | `fee_recipient`    | işlem ücretlerinin ödeneceği hesap adresi                             |
 | `state_root`       | bloka değişimleri uyguladıktan sonraki küresel durum için kök karması |
@@ -116,19 +116,19 @@ Bu işlemleri `execution_payload`'da yapmak global durumu günceller. Tüm istem
 | `gas_limit`        | bu blokta izin verilen maksimum gaz                                   |
 | `gas_used`         | bu blokta kullanılan net gaz miktarı                                  |
 | `zaman damgası`    | blok süresi                                                           |
-| `extra_data`       | i̇steğe bağlı ham bayt olarak eklenen veri                             |
+| `extra_data`       | i̇steğe bağlı ham bayt olarak eklenen veri                            |
 | `base_fee_per_gas` | ana ücret değeri                                                      |
 | `block_hash`       | Uygulama blokunun özeti                                               |
 | `İşlemler`         | yürütülecek işlemlerin listesi                                        |
-| `para çekimleri`   | para çekim nesnelerinin listesi                                       |
+| `para çekimleri`   | para çekme nesnelerinin listesi                                       |
 
-`Çekimlerin` listesi aşağıdaki gibi `çekilmiş` nesnelerden oluşur:
+`withdrawals` listesi aşağıdaki gibi `withdrawal` nesnelerinden oluşur:
 
 | Alan             | Açıklama                  |
-| :--------------- | :------------------------ |
+|:---------------- |:------------------------- |
 | `adres`          | para çekilen hesap adresi |
-| `amount`         | para çekim miktarı        |
-| `indeks`         | para çekim endeksi değeri |
+| `miktar`         | para çekme miktarı        |
+| `indeks`         | para çekme endeksi değeri |
 | `validatorIndex` | doğrulayıcı endeks değeri |
 
 ## Blok süresi {#block-time}
@@ -139,7 +139,7 @@ Bu uygulama; blok sürelerinin tahmin edilebilir olduğu ve protokolün hedef ma
 
 ## Blok boyutu {#block-size}
 
-Son olarak önemli bir not: Blokların kendileri de boyut olarak sınırlandırılmıştır. Her blokun hedef boyutu 15 milyon gazdır ama blok boyutu ağ isteklerine göre 30 milyon gaz olan blok limitine kadar (blok boyutu hedefinin 2 katı) artabilir veya azalabilir. Bloktaki işlemlerden kesilen toplam gaz miktarı, blokun gaz limitinden daha az olmalıdır. Bu, blok boyutunun keyfi olarak belirlenememesini sağladığı için önemlidir. Bloklar keyfi boyutlarda olabilseydi, daha az performans gösteren tam düğümler, alan ve hız gereksinimleri nedeniyle yavaş yavaş ağa ayak uyduramazlardı. Blok ne kadar büyük olursa onu bir sonraki yuvada zamanında işlemek için gereken işlemci gücü de o denli büyük olacaktır. Bu blok boyutlarına üst sınırlar koyarak direnen bir merkezileştirici kuvvet.
+Son olarak önemli bir not: Blokların kendileri de boyut olarak sınırlandırılmıştır. Her blokun hedef boyutu 15 milyon gazdır ama blok boyutu ağ isteklerine göre 30 milyon gaz olan blok limitine kadar (blok boyutu hedefinin 2 katı) artabilir veya azalabilir. Bloğun gaz limiti, önceki bloğun gaz limitine kıyasla 1/1024 oranında yukarı ya da aşağı yönde ayarlanabilir. Sonuç olarak, doğrulayıcılar bloğun gaz limitini mutabakat yoluyla değiştirebilir. Bloktaki işlemlerden kesilen toplam gaz miktarı, blokun gaz limitinden daha az olmalıdır. Bu, blok boyutunun keyfi olarak belirlenememesini sağladığı için önemlidir. Bloklar keyfi boyutlarda olabilseydi, daha az performans gösteren tam düğümler, alan ve hız gereksinimleri nedeniyle yavaş yavaş ağa ayak uyduramazlardı. Blok ne kadar büyük olursa onu bir sonraki yuvada zamanında işlemek için gereken işlemci gücü de o denli büyük olacaktır. Bu blok boyutlarına üst sınırlar koyarak direnen bir merkezileştirici kuvvet.
 
 ## Daha fazla bilgi {#further-reading}
 

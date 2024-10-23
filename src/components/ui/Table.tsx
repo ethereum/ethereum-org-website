@@ -10,29 +10,51 @@ import { cn } from "@/lib/utils/cn"
  * to provide equal cell widths.
  */
 
+const baseStyles = {
+  th: "text-start border-b border-body text-body normal-case align-bottom p-4",
+  tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
+  td: "p-4",
+  tbody: "[&_tr]:align-top hover:[&_tr]:bg-background-highlight",
+}
+
+const stripedTbody = "even:[&_tr]:bg-background-highlight"
+
 const tableVariants = tv({
   slots: {
     table: "w-full",
-    th: "text-start border-b border-body text-body normal-case align-bottom p-4",
-    tr: "not-[:last-of-type]:[&_th]:border-e-2 not-[:last-of-type]:[&_th]:border-e-background not-[:last-of-type]:[&_td]:border-e-2 not-[:last-of-type]:[&_td]:border-e-background",
-    td: "p-4",
-    tbody: "[&_tr]:align-top hover:[&_tr]:bg-background-highlight",
     // slot key with empty string to establish the key name for variants (TypeScript)
+    th: "",
+    tr: "",
+    td: "",
+    tbody: "",
     thead: "",
   },
   variants: {
     variant: {
       simple: {
         thead: "bg-background-highlight",
+        ...baseStyles,
       },
       "minimal-striped": {
-        tbody: "even:[&_tr]:bg-background-highlight",
+        ...baseStyles,
+        tbody: `${baseStyles.tbody} ${stripedTbody}`,
       },
       "simple-striped": {
+        ...baseStyles,
         thead: "bg-background-highlight",
-        tbody: "even:[&_tr]:bg-background-highlight",
+        tbody: `${baseStyles.tbody} ${stripedTbody}`,
       },
-      minimal: {},
+      minimal: {
+        ...baseStyles,
+      },
+      product: {
+        table: "caption-bottom text-sm",
+        thead: "[&-tr:last-child]:border-0",
+        tbody: "&_tr:last-child]:border-0",
+        tr: "hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors",
+        th: "text-muted-foreground h-12 px-4 text-left align-middle font-medium [&:has([role=checkbox])]:pr-0",
+        td: "align-middle p-4 [&:has([role=checkbox])]:pr-0",
+      },
     },
   },
   defaultVariants: {
@@ -60,24 +82,25 @@ const TableStylesContext = createContext<{
 
 const useTableStyles = () => useContext(TableStylesContext)
 
-const Table = React.forwardRef<
-  HTMLTableElement,
-  React.HTMLAttributes<HTMLTableElement> & TableVariants
->(({ className, variant, ...props }, ref) => {
-  const tableVariantStyles = tableVariants({ variant })
+export type TableProps = React.HTMLAttributes<HTMLTableElement> & TableVariants
 
-  return (
-    <TableStylesContext.Provider value={tableVariantStyles}>
-      <div className="relative w-full overflow-auto whitespace-normal">
-        <table
-          ref={ref}
-          className={cn(tableVariantStyles.table(), className)}
-          {...props}
-        />
-      </div>
-    </TableStylesContext.Provider>
-  )
-})
+const Table = React.forwardRef<HTMLTableElement, TableProps>(
+  ({ className, variant, ...props }, ref) => {
+    const tableVariantStyles = tableVariants({ variant })
+
+    return (
+      <TableStylesContext.Provider value={tableVariantStyles}>
+        <div className="relative w-full overflow-auto whitespace-normal">
+          <table
+            ref={ref}
+            className={cn(tableVariantStyles.table(), className)}
+            {...props}
+          />
+        </div>
+      </TableStylesContext.Provider>
+    )
+  }
+)
 Table.displayName = "Table"
 
 const TableHeader = React.forwardRef<

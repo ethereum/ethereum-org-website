@@ -48,7 +48,7 @@ lang: zh-tw
  <br />
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div>想要學習更多功能嗎？</div>
+  <div>想瞭解更多嗎？</div>
   <ButtonLink href="/guides/">
     查看我們的其他指南
   </ButtonLink>

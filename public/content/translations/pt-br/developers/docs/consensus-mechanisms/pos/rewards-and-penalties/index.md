@@ -4,7 +4,7 @@ description: Saiba mais sobre os incentivos no protocolo da prova de participaç
 lang: pt-br
 ---
 
-Ethereum é protegido usando sua criptomoeda nativa, ether (ETH). Operadores de nós que desejam participar na validação de blocos e na identificação do cabeçalho da cadeia depositam ether em um contrato inteligente no Ethereum. Eles são então pagos em ether para executar um software validador que verifica a validade de novos blocos recebidos pela rede ponto a ponto e aplicam o algoritmo de escolha de bifurcação para identificar o cabeçalho da cadeia.
+Ethereum é protegido usando sua criptomoeda nativa, ether (ETH). Os operadores de nós que desejam participar da validação de blocos e da identificação do cabeçalho da cadeia depositam ether no [contrato de depósito](/staking/deposit-contract/) do Ethereum. Eles são então pagos em ether para executar um software validador que verifica a validade de novos blocos recebidos pela rede ponto a ponto e aplicam o algoritmo de escolha de bifurcação para identificar o cabeçalho da cadeia.
 
 Existem duas funções principais para um validador: 1) verificar novos blocos e “atestar” se eles são válidos para eles, 2) propor novos blocos quando selecionados aleatoriamente a partir do pool total de validadores. Se o validador falhar em realizar qualquer uma dessas tarefas quando solicitado, eles perdem um pagamento em ether. Às vezes, os validadores também são encarregados de agregar assinaturas e participar dos comitês de sincronização.
 
@@ -50,9 +50,9 @@ PROPOSER_WEIGHT uint64(8)
 
 Esses pesos somam 64. A recompensa é calculada como a soma dos pesos aplicáveis dividido por 64. Um validador que tenha feito votos oportunos de origem, destino e cabeçalho propôs um bloco e participou de um comitê de sincronização poderá receber `64/64 * base_reward == base_reward`. No entanto, um validador geralmente não é um proponente de bloco, então sua recompensa máxima é `64-8 /64 * base_reward == 7/8 * base_reward`. Os validadores que não são proponentes de bloco nem estão em um comitê de sincronização podem receber `64-8-2 / 64 * base_reward == 6,75/8 * base_reward`.
 
-Uma recompensa adicional é incluída para incentivar atestações rápidas. Esse é o `inclusion_delay_reward`. Isso tem um valor igual a `base_reward` multiplicado por `1/delay`, no qual o `delay` é o número de slots que separam a proposta do bloco e a atestação. Por exemplo, se a atestação for enviada dentro de um slot da proposta do bloco, o atestante receberá `base_reward * 1/1 == base_reward`. Se a atestação chegar ao próximo slot, o atestante terá recebido `base_reward * 1/2` e assim por diante.
+Uma recompensa adicional é incluída para incentivar atestações rápidas. Esse é o `inclusion_delay_reward`. Isso tem um valor igual a `base_reward` multiplicado por `1/delay`, no qual o `delay` é o número de slots que separam a proposta do bloco e o atestado. Por exemplo, se o atestado for enviado dentro de um slot da proposta do bloco, o atestante receberá `base_reward * 1/1 == base_reward`. Se o atestado chegar no próximo slot, o atestador receberá `base_reward * 1/2` e assim por diante.
 
-Os proponentes de bloco recebem `8 / 64 * base_reward` para **cada atestação válida** incluída no bloco, logo, o valor real da recompensa varia com o número de validadores atestantes. Os proponentes de bloco também podem aumentar sua recompensa incluindo evidências de mau comportamento de outros validadores em seu bloco proposto. Essas recompensas são as “cenouras” que encorajam a honestidade do validador. Um proponente de bloco que inclui uma punição será recompensado com o `slashed_validators_effective_balance / 512`.
+Os proponentes de bloco recebem `8 / 64 * base_reward` para **cada atestado válido** incluída no bloco, logo, o valor real da recompensa varia com o número de validadores atestantes. Os proponentes de bloco também podem aumentar sua recompensa incluindo evidências de mau comportamento de outros validadores em seu bloco proposto. Essas recompensas são as “cenouras” que encorajam a honestidade do validador. Um proponente de bloco que inclui uma punição será recompensado com o `slashed_validators_effective_balance / 512`.
 
 ### Penalidades {#penalties}
 
@@ -64,7 +64,7 @@ Leia mais sobre recompensas e penalidades nas [especificações de consenso](htt
 
 ## Remoção {#slashing}
 
-Remoção é uma ação mais severa que resulta na remoção forçada de um validador da rede e na perda associada de seu ether em participação. Há três maneiras que um validador pode ser cortado, sendo que todas equivalem à proposta desonesta ou atestação de blocos:
+Remoção é uma ação mais severa que resulta na remoção forçada de um validador da rede e na perda associada de seu ether em participação. Há três maneiras que um validador pode ser removido: pela proposta ou atestação desonestas de blocos:
 
 - Ao propor e assinar dois blocos diferentes para o mesmo espaço
 - Ao confirmar um bloco “em volta” de outro (mudando efetivamente o histórico)
