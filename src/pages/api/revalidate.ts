@@ -1,5 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from "next"
 
+import i18nConfig from "../../../i18n.config.json"
+
+const BUILD_LOCALES = process.env.BUILD_LOCALES
+// Supported locales defined in `i18n.config.json`
+const locales = BUILD_LOCALES
+  ? BUILD_LOCALES.split(",")
+  : i18nConfig.map(({ code }) => code)
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -16,7 +24,20 @@ export default async function handler(
       return res.status(400).json({ message: "No path provided" })
     }
 
-    await res.revalidate(path)
+    const hasLocaleInPath = locales.some((locale) =>
+      path.startsWith(`/${locale}/`)
+    )
+
+    if (hasLocaleInPath) {
+      await res.revalidate(path)
+    } else {
+      await Promise.all(
+        locales.map(async (locale) => {
+          await res.revalidate(`/${locale}${path}`)
+        })
+      )
+    }
+
     return res.json({ revalidated: true })
   } catch (err) {
     // If there was an error, Next.js will continue
