@@ -204,7 +204,7 @@ const LearnPage = () => {
   return (
     <div className="relative w-full">
       <PageMetadata
-        title={t("common:learn-hub")}
+        title={t("page-learn-meta-title")}
         description={t("hero-subtitle")}
         image="/images/heroes/learn-hub-hero.png"
       />

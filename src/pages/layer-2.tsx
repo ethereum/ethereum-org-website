@@ -259,7 +259,7 @@ const Layer2Page = () => {
   return (
     <Flex as={MainArticle} flexDirection="column" alignItems="center">
       <PageMetadata
-        title={t("layer-2-hero-title")}
+        title={t("layer-2-hero-meta-title")}
         description={t("layer-2-metadata-description")}
         image="/images/heroes/layer-2-hub-hero.jpg"
       />

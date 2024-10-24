@@ -1,5 +1,6 @@
 ---
 title: Decentralized finance (DeFi)
+metaTitle: What is DeFi?
 description: An overview of DeFi on Ethereum
 lang: en
 template: use-cases
