@@ -14,6 +14,9 @@
   BUILD_LOCALES="en,pl,es,it"
   USE_MOCK_DATA="false"
 
+[functions]
+  included_files = [".cache/**/*"]
+
 [[headers]]
   for = "/*"
   [headers.values]
