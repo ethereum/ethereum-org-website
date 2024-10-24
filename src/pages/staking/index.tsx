@@ -181,9 +181,6 @@ export const getStaticProps = (async ({ locale }) => {
       data,
       lastDeployLocaleTimestamp,
     },
-    // Updated once a day
-    // TODO: re-enable revalidation once we have a workaround for failing builds
-    // revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
