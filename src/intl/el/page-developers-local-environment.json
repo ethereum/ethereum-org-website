@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "Εγκαταστήστε το τοπικό σας περιβάλλον ανάπτυξης",
   "page-local-environment-solidity-template-desc": "Ένα πρότυπο του GitHub με προρυθμισμένη εγκατάσταση έξυπνου συμβολαίου Solidity. Περιλαμβάνει ένα τοπικό δίκτυο Hardhat, Waffle για δοκιμές, Ethers για εφαρμογή πορτοφολιού και πολλά άλλα.",
   "page-local-environment-solidity-template-logo-alt": "Λογότυπο προτύπου Solidity",
-  "page-local-environment-truffle-desc": "Η σουίτα Truffle μεταφέρει την ιδέα των προγραμματιστών σε αποκεντρωμένη εφαρμογή όσο το δυνατόν πιο εύκολα.",
-  "page-local-environment-truffle-logo-alt": "Λογότυπο Truffle",
   "page-local-environment-waffle-desc": "Η πιο προηγμένη βιβλιοθήκη δοκιμών για έξυπνα συμβόλαια. Χρησιμοποιείστε το μόνο του ή με τα Scaffold-eth ή Hardhat.",
   "page-local-environment-waffle-logo-alt": "Λογότυπο Waffle"
 }

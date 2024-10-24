@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "設定你的本機開發環境",
   "page-local-environment-solidity-template-desc": "預先設置的 Solidity 智慧型合約 GitHub 模板。包括 Hardhat 本機網路、Waffle 測試、Ethers 錢包實作以及更多。",
   "page-local-environment-solidity-template-logo-alt": "Solidity 模板標誌",
-  "page-local-environment-truffle-desc": "Truffle 套件讓開發者能以輕鬆的方式將想法導入去中心化應用程式。",
-  "page-local-environment-truffle-logo-alt": "Truffle 標誌",
   "page-local-environment-waffle-desc": "最先進的智慧型合約測試區。可單獨使用，或是與 Scaffold-eth、Hardhat 一起使用。",
   "page-local-environment-waffle-logo-alt": "Waffle 標誌"
 }

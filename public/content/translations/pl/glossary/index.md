@@ -339,7 +339,7 @@ Go Ethereum. Jedno z najważniejszych wdrożeń protokołu Ethereum, napisanego 
 
 ### gwei {#gwei}
 
-Skrót od gigawei, nominał [etheru](#ether), powszechnie używany do ceny [gazu](#gas). 1 gwei = 10<sup>9</sup> [wei](#wei). 10<sup>9</sup> gwei = 1 ehter.
+Skrót od gigawei, nominał [etheru](#ether), powszechnie używany do ceny [gazu](#gas). 1 gwei = 10<sup>9</sup> [wei](#wei). 10<sup>9</sup> gwei = 1 ether.
 
 <Divider />
 

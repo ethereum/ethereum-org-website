@@ -25,7 +25,7 @@
   "page-what-is-ethereum-p2p-card-desc": "Ethereum omogućava da koordinišete digitalna sredstva i pravite dogovore direktno sa drugim ljudima ili da im ih prebacujete. Nema potrebe za oslanjanjem na posrednike.",
   "page-what-is-ethereum-start-building-btn": "Pokrenite gradnju",
   "page-what-is-ethereum-title": "Šta je Ethereum?",
-  "page-what-is-ethereum-subtitle": "Kompletni vodič za početnike o tome kako Etereum funkcioniše, prednosti koje donosi i kako ga koriste milioni ljudi širom sveta.",
+  "page-what-is-ethereum-subtitle": "Kompletni vodič za početnike o tome kako Ethereum funkcioniše, prednosti koje donosi i kako ga koriste milioni ljudi širom sveta.",
   "page-what-is-ethereum-button-lets-start": "Počnimo",
   "page-what-is-ethereum-blockchain-tab-title": "Šta je lanac blokova?",
   "page-what-is-ethereum-blockchain-tab-content": "<b>Lanac blokova je baza podataka o transakcijama</b> koju ažuriraju i dele brojni računari na mreži. Svaki put kada se desi nova transakcija dobijamo „blok” — pa otud potiče naziv lanac blokova. Javni lanci blokova kao što je Ethereum omogućavaju svakome da dodaje, ali ne i da ukloni, podatke. Ako neko želi da izmeni neku informaciju ili prevari sistem, morao bi to da uradi na većini računara na mreži. A to je mnogo posla! Ovo čini decentralizovane lance blokova kao što je Ethereum veoma bezbednim.",
