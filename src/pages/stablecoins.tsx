@@ -92,7 +92,7 @@ type Props = BasePageProps & {
 }
 
 // In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 24 * 7
+const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader<[EthereumDataResponse, StablecoinDataResponse]>(
   [
@@ -191,9 +191,6 @@ export const getStaticProps = (async ({ locale }) => {
       markets,
       marketsHasError,
     },
-    // Updated once a week
-    // TODO: re-enable revalidation once we have a workaround for failing builds
-    // revalidate: BASE_TIME_UNIT * 24 * 7,
   }
 }) satisfies GetStaticProps<Props>
 

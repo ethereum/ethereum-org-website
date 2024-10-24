@@ -44,7 +44,6 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -54,7 +53,6 @@ import {
   getRequiredNamespacesForPage,
 } from "@/lib/utils/translations"
 
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import dogeComputerImg from "@/public/images/doge-computer.png"
 import ethImg from "@/public/images/eth.png"
 import diffEthAndBtc from "@/public/images/eth.png"
@@ -176,10 +174,10 @@ type Props = BasePageProps & {
   data: MetricReturnData
 }
 
-const loadData = dataLoader([["growThePieData", fetchGrowThePie]])
+// const loadData = dataLoader([["growThePieData", fetchGrowThePie]])
 
 export const getStaticProps = (async ({ locale }) => {
-  const [data] = await loadData()
+  // const [data] = await loadData()
 
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
@@ -196,7 +194,7 @@ export const getStaticProps = (async ({ locale }) => {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       lastDeployLocaleTimestamp,
-      data: data.txCount,
+      data: { value: 1, timestamp: 1 },
     },
   }
 }) satisfies GetStaticProps<Props>
