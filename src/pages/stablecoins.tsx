@@ -424,7 +424,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
   return (
     <Page as={MainArticle}>
       <PageMetadata
-        title={t("page-stablecoins-title")}
+        title={t("page-stablecoins-meta-title")}
         description={t("page-stablecoins-meta-description")}
         image="/images/stablecoins/hero.png"
       />
