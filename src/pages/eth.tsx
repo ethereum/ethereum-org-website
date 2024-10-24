@@ -212,7 +212,7 @@ const CardContainer = (props: FlexProps) => (
 )
 
 const TokenCard = (props: ComponentProps<typeof HorizontalCard>) => (
-  <HorizontalCard minW="full" my={2} mx={0} borderRadius={0} {...props} />
+  <HorizontalCard {...props} className="mx-0 my-2 min-w-full rounded-none" />
 )
 
 const TextDivider = () => (

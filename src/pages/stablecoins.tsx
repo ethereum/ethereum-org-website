@@ -458,7 +458,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                 <HorizontalCard
                   emoji={token.emoji}
                   description={token.description}
-                  className="text-5xl"
+                  emojiClassName="text-5xl"
                 />
               </Box>
             ))}
