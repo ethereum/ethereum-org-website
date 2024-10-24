@@ -242,21 +242,6 @@ const CentralActionCard = (props: ComponentProps<typeof ActionCard>) => (
     flex="none"
     my={8}
     mx={0}
-    sx={{
-      ".action-card-image-wrapper": {
-        p: 4,
-        minW: { sm: "260px" },
-      },
-      ".action-card-content": {
-        display: { sm: "flex" },
-        justifyContent: { sm: "center" },
-        flexDirection: { sm: "column" },
-        ms: { sm: 4 },
-      },
-      p: {
-        mb: { sm: 0 },
-      },
-    }}
     {...props}
   />
 )
