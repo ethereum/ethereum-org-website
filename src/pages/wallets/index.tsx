@@ -117,11 +117,8 @@ export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
 )
 const ChecklistItem = (props: HorizontalCardProps) => (
   <HorizontalCard
-    border={0}
-    display="flex"
-    className="text-2xl"
-    alignItems="flex-start"
-    mb={4}
+    emojiClassName="text-2xl"
+    className="flex-start mb-4 flex border-0"
     {...props}
   />
 )
@@ -362,16 +359,11 @@ const WalletsPage = () => {
           <Box>
             {types.map((type, idx) => (
               <HorizontalCard
-                minWidth="100%"
-                marginTop={2}
-                marginBottom={2}
-                ms={0}
-                me={0}
                 key={idx}
                 emoji={type.emoji}
                 description={type.description}
-                className="text-[2.5rem]"
-                alignItems="center"
+                className="my-0.5 w-[100%] items-center"
+                emojiClassName={"text-[2.5rem]"}
               />
             ))}
           </Box>
