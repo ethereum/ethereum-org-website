@@ -1,214 +1,137 @@
 import { StaticImageData } from "next/image"
 
-import type { TranslationKey } from "@/lib/types"
-
-import ArbitrumImage from "@/public/images/layer-2/arbitrum.png"
-import AztecImage from "@/public/images/layer-2/aztec.png"
-import BaseImage from "@/public/images/layer-2/base.png"
-import BobaImage from "@/public/images/layer-2/boba.png"
-import LoopringImage from "@/public/images/layer-2/loopring.png"
-import OptimismImage from "@/public/images/layer-2/optimism.png"
-import StarknetImage from "@/public/images/layer-2/starknet.png"
-import ZKSpaceImage from "@/public/images/layer-2/zkspace.png"
-import zkSyncImage from "@/public/images/layer-2/zksync.png"
-
-export type RollupType = "optimistic" | "zk"
+import ArbitrumLogo from "@/public/images/layer-2/arbitrum.png"
+import BaseLogo from "@/public/images/layer-2/base.png"
+import BlastImage from "@/public/images/layer-2/blast.png"
+import LineaLogo from "@/public/images/layer-2/linea.png"
+import ModeLogo from "@/public/images/layer-2/mode.png"
+import OptimismLogo from "@/public/images/layer-2/optimism.png"
+import ScrollLogo from "@/public/images/layer-2/scroll.png"
+import StarknetLogo from "@/public/images/layer-2/starknet.png"
+import ZkSyncEraLogo from "@/public/images/layer-2/zksyncEra.jpg"
 
 export interface Rollup {
   name: string
+  logo: StaticImageData
+  networkType: "optimistic" | "zk"
   website: string
-  developerDocs: string
-  l2beat: string
-  bridge: string
-  bridgeWallets: Array<string>
-  blockExplorer: string
-  ecosystemPortal: string
-  tokenLists: string
-  noteKey: TranslationKey
-  purpose: Array<string>
-  descriptionKey: string
-  image: StaticImageData
-  background: string
+  applicationsLink: string
+  blockExplorerLink: string
+  bridgeLink: string
+  l2BeatLink: string
+  growThePieLink: string
+  feeToken: string[]
 }
 
-export type Rollups = { [type in RollupType]: Array<Rollup> }
+export type Rollups = Rollup[]
 
-export const layer2Data: Rollups = {
-  optimistic: [
-    {
-      name: "Arbitrum One",
-      website: "https://arbitrum.io/",
-      developerDocs: "https://docs.arbitrum.io/welcome/get-started",
-      l2beat: "https://l2beat.com/projects/arbitrum/",
-      bridge: "https://bridge.arbitrum.io/",
-      bridgeWallets: ["MetaMask", "WalletConnect", "Coinbase Wallet"],
-      blockExplorer: "https://arbiscan.io/",
-      ecosystemPortal: "https://portal.arbitrum.one/",
-      tokenLists: "https://www.coingecko.com/en/categories/arbitrum-ecosystem",
-      noteKey: "layer-2-arbitrum-note",
-      purpose: ["universal"],
-      descriptionKey: "arbitrum-description",
-      image: ArbitrumImage,
-      background: "white",
-    },
-    {
-      name: "Optimism",
-      website: "https://optimism.io/",
-      developerDocs: "https://docs.optimism.io/",
-      l2beat: "https://l2beat.com/projects/optimism/",
-      bridge: "https://app.optimism.io/bridge/deposit",
-      bridgeWallets: ["MetaMask", "WalletConnect", "Coinbase Wallet"],
-      blockExplorer: "https://optimistic.etherscan.io/",
-      ecosystemPortal: "https://www.optimism.io/apps",
-      tokenLists:
-        "https://tokenlists.org/token-list?url=https://static.optimism.io/optimism.tokenlist.json",
-      noteKey: "layer-2-optimism-note",
-      purpose: ["universal"],
-      descriptionKey: "optimism-description",
-      image: OptimismImage,
-      background: "white",
-    },
-    {
-      name: "Boba Network",
-      website: "https://boba.network/",
-      developerDocs: "https://docs.boba.network/",
-      l2beat: "https://l2beat.com/projects/bobanetwork/",
-      bridge: "https://gateway.boba.network/",
-      bridgeWallets: ["MetaMask"],
-      blockExplorer: "https://blockexplorer.boba.network/",
-      ecosystemPortal: "",
-      tokenLists: "",
-      noteKey: "layer-2-boba-note",
-      purpose: ["universal"],
-      descriptionKey: "boba-description",
-      image: BobaImage,
-      background: "black",
-    },
-    {
-      name: "Base",
-      website: "https://base.org/",
-      developerDocs: "https://docs.base.org/",
-      l2beat: "https://l2beat.com/scaling/projects/base",
-      bridge: "https://bridge.base.org/deposit",
-      bridgeWallets: ["MetaMask", "WalletConnect", "Coinbase Wallet"],
-      blockExplorer: "https://basescan.org/",
-      ecosystemPortal: "https://www.base.org/ecosystem",
-      tokenLists: "",
-      noteKey: "layer-2-base-note",
-      purpose: ["universal"],
-      descriptionKey: "base-description",
-      image: BaseImage,
-      background: "white",
-    },
-  ],
-  zk: [
-    {
-      name: "Loopring",
-      website: "https://loopring.org/#/",
-      developerDocs: "https://docs.loopring.io/",
-      l2beat: "https://l2beat.com/projects/loopring/",
-      bridge: "https://loopring.io/#/layer2",
-      bridgeWallets: ["MetaMask", "WalletConnect"],
-      blockExplorer: "https://explorer.loopring.io/",
-      ecosystemPortal: "",
-      tokenLists: "",
-      noteKey: "",
-      purpose: ["payments", "exchange"],
-      descriptionKey: "loopring-description",
-      image: LoopringImage,
-      background: "white",
-    },
-    {
-      name: "ZKsync",
-      website: "https://zksync.io/",
-      developerDocs: "https://docs.zksync.io/",
-      l2beat: "https://l2beat.com/projects/zksync/",
-      bridge: "https://portal.zksync.io/bridge/",
-      bridgeWallets: [
-        "MetaMask",
-        "WalletConnect",
-        "Formatic",
-        "Trezor",
-        "Ledger",
-        "Keystone",
-        "Lattice",
-        "Portis",
-        "Opera",
-        "Torus",
-        "Coinbase Wallet",
-      ],
-      blockExplorer: "https://explorer.zksync.io/",
-      ecosystemPortal: "https://zksync.io/ecosystem",
-      tokenLists: "https://explorer.zksync.io/tokens",
-      noteKey: "",
-      purpose: ["universal"],
-      descriptionKey: "zksync-description",
-      image: zkSyncImage,
-      background: "black",
-    },
-    {
-      name: "ZKSpace",
-      website: "https://zkbase.org/",
-      developerDocs: "https://en.wiki.zks.org/",
-      l2beat: "https://l2beat.com/projects/zkswap/",
-      bridge: "https://zks.app/wallet/token",
-      bridgeWallets: [
-        "MetaMask",
-        "WalletConnect",
-        "imToken",
-        "TokenPocket",
-        "MathWallet",
-        "Trust Wallet",
-      ],
-      blockExplorer: "",
-      ecosystemPortal: "",
-      tokenLists: "",
-      noteKey: "",
-      purpose: ["payments", "exchange"],
-      descriptionKey: "zkspace-description",
-      image: ZKSpaceImage,
-      background: "black",
-    },
-    {
-      name: "Aztec",
-      website: "https://aztec.network/",
-      developerDocs: "https://docs.aztec.network/",
-      l2beat: "https://l2beat.com/projects/aztec",
-      bridge: "https://zk.money/",
-      bridgeWallets: ["MetaMask", "WalletConnect"],
-      blockExplorer: "https://aztec-connect-prod-explorer.aztec.network/",
-      ecosystemPortal: "",
-      tokenLists: "",
-      noteKey: "",
-      purpose: ["payments", "integrations"],
-      descriptionKey: "aztec-description",
-      image: AztecImage,
-      background: "white",
-    },
-    {
-      name: "Starknet",
-      website: "https://www.starknet.io",
-      developerDocs: "https://docs.starknet.io/documentation/",
-      l2beat: "https://l2beat.com/scaling/projects/starknet",
-      bridge: "https://starkgate.starknet.io",
-      bridgeWallets: [
-        "MetaMask",
-        "Coinbase Wallet",
-        "WalletConnect",
-        "Trust Wallet",
-        "Rainbow",
-        "Argent X",
-        "Braavos",
-      ],
-      blockExplorer: "https://starkscan.co",
-      ecosystemPortal: "https://www.starknet-ecosystem.com",
-      tokenLists:
-        "https://github.com/starknet-io/starknet-addresses/blob/master/bridged_tokens/mainnet.json",
-      noteKey: "",
-      purpose: ["universal"],
-      descriptionKey: "starknet-description",
-      image: StarknetImage,
-      background: "white",
-    },
-  ],
-}
+export const layer2Data: Rollups = [
+  {
+    name: "Arbitrum One",
+    logo: ArbitrumLogo,
+    networkType: "optimistic",
+    website: "https://arbitrum.io/rollup",
+    applicationsLink: "https://portal.arbitrum.io/projects",
+    blockExplorerLink: "https://arbiscan.io/",
+    bridgeLink: "https://bridge.arbitrum.io/",
+    l2BeatLink: "https://l2beat.com/scaling/projects/arbitrum",
+    growThePieLink: "https://www.growthepie.com/chains/arbitrum",
+    feeToken: ["ETH"],
+  },
+  {
+    name: "Base",
+    logo: BaseLogo,
+    networkType: "optimistic",
+    website: "https://base.org/",
+    applicationsLink: "https://base.org/ecosystem",
+    blockExplorerLink: "https://basescan.org/",
+    bridgeLink: "https://bridge.base.org/deposit",
+    l2BeatLink: "https://l2beat.com/scaling/projects/base",
+    growThePieLink: "https://www.growthepie.com/chains/base",
+    feeToken: ["ETH"],
+  },
+  {
+    name: "Optimism",
+    logo: OptimismLogo,
+    networkType: "optimistic",
+    website: "https://optimism.io/",
+    applicationsLink: "https://optimism.io/apps",
+    blockExplorerLink: "https://optimistic.etherscan.io/",
+    bridgeLink: "https://app.optimism.io/",
+    l2BeatLink: "https://l2beat.com/scaling/projects/optimism",
+    growThePieLink: "https://www.growthepie.com/chains/optimism",
+    feeToken: ["ETH"],
+  },
+  {
+    name: "Blast",
+    logo: BlastImage,
+    networkType: "optimistic",
+    website: "https://blast.io/en",
+    applicationsLink: "https://www.ethereum-ecosystem.com/apps?filters=blast",
+    blockExplorerLink: "https://blastscan.io/",
+    bridgeLink: "https://blast.io/en/bridge",
+    l2BeatLink: "https://l2beat.com/scaling/projects/blast",
+    growThePieLink: "https://www.growthepie.xyz/chains/blast",
+    feeToken: ["ETH"],
+  },
+  {
+    name: "ZKSync Era",
+    logo: ZkSyncEraLogo,
+    networkType: "zk",
+    website: "https://zksync.io/",
+    applicationsLink: "https://zksync.io/ecosystem",
+    blockExplorerLink: "https://explorer.zksync.io/",
+    bridgeLink: "https://portal.zksync.io/bridge/",
+    l2BeatLink: "https://l2beat.com/scaling/projects/zksync-era",
+    growThePieLink: "https://www.growthepie.xyz/chains/zksync-era",
+    feeToken: ["ETH"],
+  },
+  {
+    name: "Linea",
+    logo: LineaLogo,
+    networkType: "zk",
+    website: "https://linea.build/",
+    applicationsLink: "https://linea.build/apps",
+    blockExplorerLink: "https://lineascan.build/",
+    bridgeLink: "https://bridge.linea.build/",
+    l2BeatLink: "https://l2beat.com/scaling/projects/linea",
+    growThePieLink: "https://www.growthepie.xyz/chains/linea",
+    feeToken: ["ETH"],
+  },
+  {
+    name: "Scroll",
+    logo: ScrollLogo,
+    networkType: "zk",
+    website: "https://scroll.io/",
+    applicationsLink: "https://scroll.io/ecosystem",
+    blockExplorerLink: "https://scrollscan.com",
+    bridgeLink: "https://scroll.io/bridge",
+    l2BeatLink: "https://l2beat.com/scaling/projects/scroll",
+    growThePieLink: "https://www.growthepie.xyz/chains/scroll",
+    feeToken: ["ETH"],
+  },
+  {
+    name: "Starknet",
+    logo: StarknetLogo,
+    networkType: "zk",
+    website: "https://starknet.io",
+    applicationsLink: "https://www.starknet-ecosystem.com/",
+    blockExplorerLink: "https://starkscan.co/",
+    bridgeLink: "https://starkgate.starknet.io/",
+    l2BeatLink: "https://l2beat.com/scaling/projects/starknet",
+    growThePieLink: "https://www.growthepie.xyz/chains/starknet",
+    feeToken: ["ETH", "STRK"],
+  },
+  {
+    name: "Mode",
+    logo: ModeLogo,
+    networkType: "optimistic",
+    website: "https://mode.network/",
+    applicationsLink: "https://mode.network/ecosystem",
+    blockExplorerLink: "https://explorer.mode.network/",
+    bridgeLink: "https://app.mode.network/",
+    l2BeatLink: "https://l2beat.com/scaling/projects/mode",
+    growThePieLink: "https://www.growthepie.xyz/chains/mode",
+    feeToken: ["ETH"],
+  },
+]

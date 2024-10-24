@@ -17,6 +17,8 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { layer2Data, Rollups } from "@/data/layer-2/layer-2"
+
 import HeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import WalkingImage from "@/public/images/layer-2/layer-2-walking.png"
 import ExploreImage from "@/public/images/layer-2/learn-hero.png"
@@ -36,13 +38,16 @@ export const getStaticProps = (async ({ locale }) => {
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      layer2Data,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
 
-const Layer2Hub = () => {
+const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
+  console.log(layer2Data)
+
   // TODO: setup translation
   const heroContent: HubHeroProps = {
     title: "Layer 2",
