@@ -154,7 +154,7 @@ type Props = BasePageProps & {
 }
 
 // In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 24
+const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader(
   [["stakingStatsData", fetchBeaconchainData]],
