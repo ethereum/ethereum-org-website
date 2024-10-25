@@ -488,6 +488,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "yo",
+    "crowdinCode": "yo",
+    "name": "Yoruba",
+    "localName": "Yorùbá",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "zh-tw",
     "crowdinCode": "zh-TW",
     "name": "Chinese Traditional",
