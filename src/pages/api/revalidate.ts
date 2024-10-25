@@ -28,6 +28,10 @@ export default async function handler(
     if (hasLocaleInPath) {
       await res.revalidate(path)
     } else {
+      // First revalidate the default locale to cache the results
+      await res.revalidate(`/en${path}`)
+
+      // Then revalidate all other locales
       await Promise.all(
         locales.map(async (locale) => {
           const localePath = `/${locale}${path}`
