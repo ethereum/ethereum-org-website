@@ -11,34 +11,31 @@ export async function fetchCommunityEvents(): Promise<CommunityEventsReturnType>
     `https://content.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&timeMin=${new Date().toISOString()}&maxResults=3&singleEvents=true&orderby=starttime`
   )
   const futureEvents = await futureEventsReq.json()
-  const futureEventsReqData: ReqCommunityEvent[] = futureEvents.items
+  const futureEventsReqData: ReqCommunityEvent[] = futureEvents?.items || []
 
   const pastEventsReq = await fetch(
     `https://content.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&timeMax=${new Date().toISOString()}&orderby=starttime`
   )
   const pastEvents = await pastEventsReq.json()
-  const pastEventsReqData: ReqCommunityEvent[] = pastEvents.items
+  const pastEventsReqData: ReqCommunityEvent[] = pastEvents?.items || []
 
   const pastEventData = pastEventsReqData
-    .filter((event) => event.start)
+    .filter((event) => event && event.start && event.start.dateTime)
     .slice(-4)
-    .map((event) => {
-      return {
-        date: event.start.dateTime,
-        title: event.summary,
-        calendarLink: event.htmlLink,
-      }
-    })
-  const upcomingEventData = futureEventsReqData
-    .filter((event) => event.start)
+    .map((event) => ({
+      date: event.start.dateTime,
+      title: event.summary,
+      calendarLink: event.htmlLink,
+    }))
+
+  const upcomingEventData = (futureEventsReqData || [])
+    .filter((event) => event && event.start && event.start.dateTime)
     .reverse()
-    .map((event) => {
-      return {
-        date: event.start.dateTime,
-        title: event.summary,
-        calendarLink: event.htmlLink,
-      }
-    })
+    .map((event) => ({
+      date: event.start.dateTime,
+      title: event.summary,
+      calendarLink: event.htmlLink,
+    }))
 
   return {
     pastEventData,
