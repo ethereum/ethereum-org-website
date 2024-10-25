@@ -2,13 +2,6 @@ import type { NextApiRequest, NextApiResponse } from "next"
 
 import i18nConfig from "../../../i18n.config.json"
 
-const BUILD_LOCALES = process.env.BUILD_LOCALES
-console.log("BUILD_LOCALES", BUILD_LOCALES)
-// Supported locales defined in `i18n.config.json`
-const locales = BUILD_LOCALES
-  ? BUILD_LOCALES.split(",")
-  : i18nConfig.map(({ code }) => code)
-
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -16,6 +9,12 @@ export default async function handler(
   if (req.query.secret !== process.env.REVALIDATE_SECRET) {
     return res.status(401).json({ message: "Invalid secret" })
   }
+
+  const BUILD_LOCALES = process.env.BUILD_LOCALES
+  // Supported locales defined in `i18n.config.json`
+  const locales = BUILD_LOCALES
+    ? BUILD_LOCALES.split(",")
+    : i18nConfig.map(({ code }) => code)
 
   const path = req.query.path as string
   console.log("Revalidating", path)
