@@ -456,6 +456,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "tw",
+    "crowdinCode": "tw",
+    "name": "Akan, Twi",
+    "localName": "Twi",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "uk",
     "crowdinCode": "uk",
     "name": "Ukrainian",
