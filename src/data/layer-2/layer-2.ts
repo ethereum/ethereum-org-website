@@ -14,6 +14,7 @@ export interface Rollup {
   name: string
   logo: StaticImageData
   networkType: "optimistic" | "zk"
+  description: string
   website: string
   applicationsLink: string
   blockExplorerLink: string
@@ -30,6 +31,8 @@ export const layer2Data: Rollups = [
     name: "Arbitrum One",
     logo: ArbitrumLogo,
     networkType: "optimistic",
+    description:
+      "Arbitrum One is a general-purpose Optimistic Rollup built by Offchain Labs and governed by the Arbitrum DAO.",
     website: "https://arbitrum.io/rollup",
     applicationsLink: "https://portal.arbitrum.io/projects",
     blockExplorerLink: "https://arbiscan.io/",
@@ -42,6 +45,8 @@ export const layer2Data: Rollups = [
     name: "Base",
     logo: BaseLogo,
     networkType: "optimistic",
+    description:
+      "Base is an Optimistic Rollup built with the OP Stack. It offers a low-cost and builder-friendly way for anyone, anywhere, to build onchain.",
     website: "https://base.org/",
     applicationsLink: "https://base.org/ecosystem",
     blockExplorerLink: "https://basescan.org/",
@@ -54,6 +59,8 @@ export const layer2Data: Rollups = [
     name: "Optimism",
     logo: OptimismLogo,
     networkType: "optimistic",
+    description:
+      "OP Mainnet is an EVM-equivalent Optimistic Rollup. It aims to be fast, simple, and secure.",
     website: "https://optimism.io/",
     applicationsLink: "https://optimism.io/apps",
     blockExplorerLink: "https://optimistic.etherscan.io/",
@@ -66,6 +73,8 @@ export const layer2Data: Rollups = [
     name: "Blast",
     logo: BlastImage,
     networkType: "optimistic",
+    description:
+      "Blast is an EVM-compatible Optimistic Rollup supporting native yield.",
     website: "https://blast.io/en",
     applicationsLink: "https://www.ethereum-ecosystem.com/apps?filters=blast",
     blockExplorerLink: "https://blastscan.io/",
@@ -78,6 +87,8 @@ export const layer2Data: Rollups = [
     name: "ZKSync Era",
     logo: ZkSyncEraLogo,
     networkType: "zk",
+    description:
+      "ZKsync Era is a general-purpose ZK Rollup with full EVM compatibility.",
     website: "https://zksync.io/",
     applicationsLink: "https://zksync.io/ecosystem",
     blockExplorerLink: "https://explorer.zksync.io/",
@@ -90,6 +101,8 @@ export const layer2Data: Rollups = [
     name: "Linea",
     logo: LineaLogo,
     networkType: "zk",
+    description:
+      "Linea is a ZK Rollup powered by Consensys zkEVM, designed to scale the Ethereum network.",
     website: "https://linea.build/",
     applicationsLink: "https://linea.build/apps",
     blockExplorerLink: "https://lineascan.build/",
@@ -102,6 +115,8 @@ export const layer2Data: Rollups = [
     name: "Scroll",
     logo: ScrollLogo,
     networkType: "zk",
+    description:
+      "Scroll is ZK Rollup that extends Ethereum’s capabilities through ZK tech and EVM compatibility.",
     website: "https://scroll.io/",
     applicationsLink: "https://scroll.io/ecosystem",
     blockExplorerLink: "https://scrollscan.com",
@@ -114,6 +129,8 @@ export const layer2Data: Rollups = [
     name: "Starknet",
     logo: StarknetLogo,
     networkType: "zk",
+    description:
+      "Starknet is a general purpose ZK Rollup based on STARKs and the Cairo VM.",
     website: "https://starknet.io",
     applicationsLink: "https://www.starknet-ecosystem.com/",
     blockExplorerLink: "https://starkscan.co/",
@@ -126,6 +143,8 @@ export const layer2Data: Rollups = [
     name: "Mode",
     logo: ModeLogo,
     networkType: "optimistic",
+    description:
+      "Mode is an OP stack Optimistic Rollup building the AIFi economy.",
     website: "https://mode.network/",
     applicationsLink: "https://mode.network/ecosystem",
     blockExplorerLink: "https://explorer.mode.network/",

@@ -20,6 +20,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { layer2Data, Rollups } from "@/data/layer-2/layer-2"
 
 import HeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
+import EthereumLogo from "@/public/images/layer-2/ethereum.png"
 import WalkingImage from "@/public/images/layer-2/layer-2-walking.png"
 import ExploreImage from "@/public/images/layer-2/learn-hero.png"
 import ManDogCardImage from "@/public/images/man-and-dog-playing.png"
@@ -46,7 +47,7 @@ export const getStaticProps = (async ({ locale }) => {
 }) satisfies GetStaticProps<BasePageProps>
 
 const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
-  console.log(layer2Data)
+  const randomL2s = layer2Data.sort(() => 0.5 - Math.random()).slice(0, 4)
 
   // TODO: setup translation
   const heroContent: HubHeroProps = {
@@ -181,8 +182,64 @@ const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
         </div>
       </div>
 
+      {/* TODO: Setup for translation */}
       <div id="layer-2-cta" className="w-full px-8 py-9">
-        <h2>Call to action</h2>
+        <div className="mx-auto flex max-w-[640px] flex-col gap-6 rounded bg-main-gradient p-8">
+          <div className="flex flex-col gap-6">
+            {randomL2s.slice(0, 3).map((l2, idx) => {
+              return (
+                <div
+                  key={idx}
+                  className={`flex flex-1 flex-col items-start gap-4 p-4 md:flex-row md:items-center ${
+                    idx < randomL2s.slice(0, 3).length - 1
+                      ? "border-b border-background"
+                      : ""
+                  }`}
+                >
+                  <div className="flex flex-1 flex-col items-start gap-4 md:flex-row md:items-center">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-md bg-background shadow-drop">
+                      <TwImage
+                        src={l2.logo}
+                        alt={l2.name}
+                        style={{
+                          width: "46px",
+                          height: "46px",
+                        }}
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col gap-1">
+                      <p className="text-xl font-bold">{l2.name}</p>
+                      <p className="text-body-medium">{l2.description}</p>
+                    </div>
+                  </div>
+                  <div className="flex w-full md:w-auto">
+                    <ButtonLink
+                      href={l2.website}
+                      variant="outline"
+                      className="w-full"
+                    >
+                      Go
+                    </ButtonLink>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+
+          <div className="flex justify-center">
+            <div className="mx-auto inline-flex items-center justify-center gap-2 rounded-full bg-background px-4 py-2 text-sm font-bold">
+              <TwImage
+                src={EthereumLogo}
+                alt="Ethereum"
+                style={{
+                  width: "24px",
+                  height: "24px",
+                }}
+              />
+              <p>Powered by Ethereum</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* TODO: Setup for translation */}
