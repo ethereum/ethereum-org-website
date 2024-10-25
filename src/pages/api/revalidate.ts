@@ -2,11 +2,8 @@ import type { NextApiRequest, NextApiResponse } from "next"
 
 import i18nConfig from "../../../i18n.config.json"
 
-const BUILD_LOCALES = process.env.BUILD_LOCALES
 // Supported locales defined in `i18n.config.json`
-const locales = BUILD_LOCALES
-  ? BUILD_LOCALES.split(",")
-  : i18nConfig.map(({ code }) => code)
+const locales = i18nConfig.map(({ code }) => code)
 
 export default async function handler(
   req: NextApiRequest,
@@ -33,8 +30,13 @@ export default async function handler(
     } else {
       await Promise.all(
         locales.map(async (locale) => {
-          console.log(`Revalidating /${locale}${path}`)
-          await res.revalidate(`/${locale}${path}`)
+          const localePath = `/${locale}${path}`
+          console.log(`Revalidating ${localePath}`)
+          try {
+            await res.revalidate(localePath)
+          } catch (error) {
+            console.error(`Error revalidating ${localePath}:`, error)
+          }
         })
       )
     }
