@@ -4,13 +4,11 @@ description: مقدمه‌ای بر ماشین مجازی اتریوم و نحو
 lang: fa
 ---
 
-نمونه‌سازی فیزیکی EVM را نمی‌توان مانند اشاره کردن به یک ابر یا یک موج اقیانوس توصیف کرد، اما به‌عنوان یک موجودیت واحد _وجود دارد_ که توسط هزاران رایانه متصل که یک کلاینت اتریوم را اجرا می‌کنند نگهداری می‌شود.
-
-خود پروتکل اتریوم صرفاً به منظور حفظ عملکرد مداوم، بدون وقفه و تغییر ناپذیر این ماشین حالت ویژه وجود دارد. این محیطی است که تمام حساب‌های اتریوم و قراردادهای هوشمند در آن زندگی می‌کنند. در هر بلوک معین در زنجیره، اتریوم یک و تنها یک حالت «متعارف» دارد، و EVM همان چیزی است که قوانین را برای محاسبه‌ یک حالت معتبر جدید از بلوکی به بلوک دیگر تعریف می‌کند.
+ماشین مجازی اتریوم (EVM) یک محیط مجازی غیرمتمرکز است که کد را به طور مداوم و ایمن در تمام گره‌های اتریوم اجرا می‌کند. گره‌ها، EVM را برای اجرای قراردادهای هوشمند، با استفاده از "[گس](/gas/)" برای اندازه گیری تلاش محاسباتی مورد نیاز برای [عملیات‌ها](/developers/docs/evm/opcodes/) اجرا می کنند و تخصیص کارآمد منابع و امنیت شبکه را تضمین می‌کنند.
 
 ## پیش‌نیازها {#prerequisites}
 
-برای درک EVM آشنایی اولیه با اصطلاحات رایج در علوم کامپیوتر مانند [بایت](https://wikipedia.org/wiki/Byte)،‏ [حافظه](https://wikipedia.org/wiki/Computer_memory) و یک [پشته](https://wikipedia.org/wiki/Stack_(abstract_data_type)) ضروری است. همچنین راحت بودن با مفاهیم رمزنگاری/بلاکچین مانند [توابع هش](https://wikipedia.org/wiki/Cryptographic_hash_function) و <a href="https://wikipedia.org/wiki/Merkle_tree"> مفید خواهد بود.درخت مرکل</a>.
+برای درک EVM آشنایی اولیه با اصطلاحات رایج در علوم کامپیوتر مانند [بایت](https://wikipedia.org/wiki/Byte)،‏ [حافظه](https://wikipedia.org/wiki/Computer_memory) و یک [پشته](https://wikipedia.org/wiki/Stack_(abstract_data_type)) ضروری است. همچنین راحت بودن با مفاهیم رمزنگاری/بلاکچین مانند [توابع هش](https://wikipedia.org/wiki/Cryptographic_hash_function) و مفید خواهد بود[درخت مرکل](https://wikipedia.org/wiki/Merkle_tree).
 
 ## از دفتر کل تا ماشین حالات متناهی {#from-ledger-to-state-machine}
 
@@ -73,6 +71,7 @@ EVM به صورت یک [ماشین پشته‌ای](https://wikipedia.org/wiki/S
 - [کدگذاری‌های ماشین مجازی اتریوم](https://www.ethervm.io/)
 - [مرجع تعاملی کدگذاری های ماشین مجازی اتریوم](https://www.evm.codes/)
 - [مقدمه‌ای کوتاه در مستندات Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
+- [تسلط بر اتریوم - ماشین مجازی اتریوم](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
 
 ## موضوعات مرتبط {#related-topics}
 

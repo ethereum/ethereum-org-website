@@ -30,6 +30,7 @@ import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import ProductList from "@/components/ProductList"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import StablecoinAccordion from "@/components/StablecoinAccordion"
 import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
@@ -38,11 +39,13 @@ import Translation from "@/components/Translation"
 import { Divider } from "@/components/ui/divider"
 
 import { cn } from "@/lib/utils/cn"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import {
   fetchEthereumEcosystemData,
@@ -88,9 +91,16 @@ type Props = BasePageProps & {
   marketsHasError: boolean
 }
 
-// Fetch external API data once to avoid hitting rate limit
-const ethereumEcosystemDataFetch = runOnlyOnce(fetchEthereumEcosystemData)
-const ethereumStablecoinsDataFetch = runOnlyOnce(fetchEthereumStablecoinsData)
+// In seconds
+const REVALIDATE_TIME = BASE_TIME_UNIT * 1
+
+const loadData = dataLoader<[EthereumDataResponse, StablecoinDataResponse]>(
+  [
+    ["ethereumEcosystemData", fetchEthereumEcosystemData],
+    ["ethereumStablecoinsData", fetchEthereumStablecoinsData],
+  ],
+  REVALIDATE_TIME * 1000
+)
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
@@ -137,12 +147,7 @@ export const getStaticProps = (async ({ locale }) => {
   }
 
   try {
-    // Fetch token data in the Ethereum ecosystem
-    const ethereumEcosystemData: EthereumDataResponse =
-      await ethereumEcosystemDataFetch()
-    // Fetch token data for stablecoins
-    const stablecoinsData: StablecoinDataResponse =
-      await ethereumStablecoinsDataFetch()
+    const [ethereumEcosystemData, stablecoinsData] = await loadData()
 
     // Get the intersection of stablecoins and Ethereum tokens to only have a list of data for stablecoins in the Ethereum ecosystem
     const ethereumStablecoinData = stablecoinsData.filter(
@@ -186,9 +191,6 @@ export const getStaticProps = (async ({ locale }) => {
       markets,
       marketsHasError,
     },
-    // Updated once a week
-    // TODO: re-enable revalidation once we have a workaround for failing builds
-    // revalidate: BASE_TIME_UNIT * 24 * 7,
   }
 }) satisfies GetStaticProps<Props>
 
@@ -281,7 +283,10 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
         t("page-stablecoins-crypto-backed-con-1"),
         t("page-stablecoins-crypto-backed-con-2"),
       ],
-      links: [{ text: "Dai", url: "https://makerdao.com/en/" }],
+      links: [
+        { text: "DAI", url: "https://makerdao.com/en/" },
+        { text: "RAI", url: "https://reflexer.finance/" },
+      ],
     },
     {
       title: t("page-stablecoins-precious-metals"),
@@ -344,7 +349,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       url: "https://aave.com",
       alt: t("aave-logo"),
       image: aaveImg,
-      width: "64px",
+      width: 64,
       name: "Aave",
       description: t("page-stablecoins-stablecoins-dapp-description-1"),
     },
@@ -353,7 +358,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       url: "https://compound.finance",
       alt: t("compound-logo"),
       image: compoundImg,
-      width: "160px",
+      width: 160,
       name: "Compound",
       description: t("page-stablecoins-stablecoins-dapp-description-2"),
     },
@@ -362,7 +367,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       url: "https://summer.fi/",
       alt: t("summerfi-logo"),
       image: summerfiImg,
-      width: "80px",
+      width: 80,
       name: "Summer.fi",
       description: t("page-stablecoins-stablecoins-dapp-description-4"),
     },
@@ -462,11 +467,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
               </Box>
             ))}
           </Box>
-          <GhostCard
-            maxW="640px"
-            me={{ base: 0, lg: 8 }}
-            mt={{ base: 16, lg: 2 }}
-          >
+          <GhostCard className="me-0 mt-16 max-w-[640px] lg:me-8 lg:mt-2">
             <Emoji text=":pizza:" className="text-5xl" />
             <H3>{t("page-stablecoins-bitcoin-pizza")}</H3>
             <Text>{t("page-stablecoins-bitcoin-pizza-body")} </Text>
@@ -772,6 +773,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
         </Flex>
       </Box>
       <Content>
+        <StandaloneQuizWidget quizKey="stablecoins" />
         <FeedbackCard />
       </Content>
     </Page>

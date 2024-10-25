@@ -104,9 +104,11 @@ Fedezze fel a projekteket és csatlakozzon a DeSci közösségéhez.
 - [Bio.xyz: finanszírozás szerzése a biotechnológiai DAO-jához vagy decentralizált tudományos projektjéhez](https://www.bio.xyz/)
 - [Fleming Protocol: nyílt forráskódú adatgazdaság, amely fűti a kollaboratív orvosbiológiai felfedezéseket](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
-- [CureDAO: közösség által irányított, precíziós egészségi platform](https://docs.curedao.org/)
 - [IdeaMarkets: decentralizált tudomány hitelességének támogatása](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
+- [ValleyDAO: egy nyitott, globális közösség, mely pénzügyi forrásokat és fordítási támogatást kínál a szintetikus biológiai kutatáshoz](https://www.valleydao.bio)
+- [Cerebrum DAO: pénzügyi támogatást és gondoskodást kínál olyan megoldásoknak, melyek fejlesztik az agyi egészséget és megakadályozzák az idegsorvadást](https://www.cerebrumdao.com/)
+- [CryoDAO: támogatást adnak a mélyhűtés területén működő innovatív kutatásoknak](https://www.cryodao.org)
 
 Örömmel vesszük, ha bárki új projektet javasol – kérjük, tekintsék meg a [listázási szabályzatot](/contributing/adding-desci-projects/)!
 

@@ -4,7 +4,7 @@ description: Les oracles permettent aux contrats intelligents d'Ethereum d'accé
 lang: fr
 ---
 
-Les oracles sont des flux de données qui rendent les sources de données hors chaîne accessibles à la blockchain pour les contrats intelligents. Cela est nécessaire car les contrats intelligents sur Ethereum, par défaut ne peuvent pas accéder aux informations stockées en dehors du réseau de la blockchain.
+Les oracles sont des applications qui produisent des flux de données qui rendent les sources de données hors chaîne accessibles à la blockchain pour les contrats intelligents. Cela est nécessaire car les contrats intelligents sur Ethereum, par défaut ne peuvent pas accéder aux informations stockées en dehors du réseau de la blockchain.
 
 En donnant aux contrats intelligents la possibilité de s'exécuter en utilisant des données hors chaîne, on étend la valeur et l'utilité des applications décentralisées. Par exemple, les marchés de prédiction sur la blockchain s'appuient sur des oracles pour fournir des informations sur les résultats avec lesquels ils peuvent valider les prédictions des utilisateurs. Supposons qu'Alice parie 20 ETH sur qui deviendra le prochain président des États-Unis . Dans ce cas, la dApp du marché prédictif a besoin d'un oracle pour confirmer les résultats des élections et déterminer si Alice a droit à un paiement.
 
@@ -173,7 +173,7 @@ contract Oracle {
       uint currentQuorum = 0;
 
       //iterate through oracle list and check if enough oracles(minimum quorum)
-      //have voted the same answer has the current one
+      //have voted the same answer as the current one
       for(uint i = 0; i < totalOracleCount; i++){
         bytes memory a = bytes(currRequest.answers[i]);
         bytes memory b = bytes(_valueRetrieved);
@@ -236,7 +236,7 @@ Les oracles centralisés ne sont pas garantis de toujours mettre les données ho
 
 #### Mauvaise compatibilité des incitations {#poor-incentive-compatibility}
 
-Les oracles centralisés ont souvent des incitations mal conçues ou inexistantes pour que le fournisseur de données envoie des informations exactes/altérées. Payer un oracle pour sa justesse ne garantit pas son honnêteté. Ce problème s'aggrave à mesure que la valeur contrôlée par les contrats intelligents augmente.
+Les oracles centralisés ont souvent des incitations mal conçues ou inexistantes pour que le fournisseur de données envoie des informations exactes/altérées. Payer un oracle pour son exactitude ne garantit pas l'honnêteté. Ce problème s'aggrave à mesure que la valeur contrôlée par les contrats intelligents augmente.
 
 ### Oracles décentralisés {#decentralized-oracles}
 
@@ -274,11 +274,11 @@ Certains réseaux d'oracles décentralisés demandent aux participants de voter 
 
 Les nœuds dont les réponses s'écartent de la réponse majoritaire sont pénalisés en voyant leurs jetons distribués à d'autres qui fournissent des valeurs plus correctes. Le fait d'obliger les nœuds à fournir une caution avant de fournir des données incite à des réponses honnêtes puisqu'on suppose qu'ils sont des acteurs économiques rationnels qui cherchent à maximiser les retours.
 
-Le staking/vote protège également les oracles décentralisés contre les « attaques Sybil », où des acteurs malveillants créent des identités multiples pour faire le jeu du système de consensus. Cependant, le staking ne peut empêcher le « freeloading » (les nœuds d'oracle copiant les informations des autres) et la « validation paresseuse » (les nœuds d'oracle suivant la majorité sans vérifier eux-mêmes les informations).
+La mise en jeu / le vote protège également les oracles décentralisés contre les [attaques Sybil](/glossary/#sybil-attack), où des acteurs malveillants créent des identités multiples pour déjouer le système de consensus. Cependant, le staking ne peut empêcher le « freeloading » (les nœuds d'oracle copiant les informations des autres) et la « validation paresseuse » (les nœuds d'oracle suivant la majorité sans vérifier eux-mêmes les informations).
 
 ##### Mécanismes du point de Schelling
 
-[Le point de Schelling](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) est un concept de la théorie des jeux qui suppose que plusieurs entités trouveront toujours par défaut une solution commune à un problème en l'absence de toute communication. Les mécanismes du point de Schelling sont souvent utilisés dans les réseaux d'oracles décentralisés pour permettre aux nœuds d'atteindre un consensus sur les réponses aux demandes de données.
+[Le point de Schelling](https://en.wikipedia.org/wiki/Focal_point_(game_theory)) est un concept de la théorie des jeux qui suppose que plusieurs entités trouveront toujours par défaut une solution commune à un problème en l'absence de toute communication. Les mécanismes du point de Schelling sont souvent utilisés dans les réseaux d'oracles décentralisés pour permettre aux nœuds d'atteindre un consensus sur les réponses aux demandes de données.
 
 Une première idée était le [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), une proposition de flux de données où les participants soumettent des réponses à des questions « scalaires » (questions dont les réponses sont décrites par une magnitude, par exemple « quel est le prix de l'ETH ? »), accompagnées d'un dépôt. Les utilisateurs qui fournissent des valeurs comprises entre le 25e et le 75e [percentile](https://en.wikipedia.org/wiki/Percentile) sont récompensés, tandis que ceux dont les valeurs s'écartent largement de la valeur médiane sont pénalisés.
 
@@ -358,7 +358,7 @@ contract PriceConsumerV3 {
 
 Certaines applications blockchain, telles que les jeux ou les systèmes de loterie basés sur la blockchain, nécessitent un niveau élevé d'imprévisibilité et de nature aléatoire pour fonctionner efficacement. Cependant, l'exécution déterministe des blockchains élimine l'aléa.
 
-L'approche habituelle consiste à utiliser des fonctions cryptographiques pseudo-aléatoires, telles que le `blockhash`, mais elles peuvent être [manipulées par des mineurs](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.), qui résolvent l'algorithme de preuve de travail. En outre, le [passage d'Ethereum à la preuve d'enjeu](/roadmap/merge/) signifie que les développeurs ne peuvent plus compter sur `blockhash` pour le caractère aléatoire sur la chaîne (le [mécanisme RANDAO](https://eth2book.info/altair/part2/building_blocks/randomness) de la chaîne Beacon fournit une source alternative de caractère aléatoire, cependant).
+L'approche initiale consistait à utiliser des fonctions cryptographiques pseudo-aléatoires, telles que le `blockhash`, mais elles pouvaient être [manipulées par des mineurs](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.) résolvant l'algorithme de preuve de travail. De plus, le [passage d'Ethereum à la preuve d'enjeu](/roadmap/merge/) signifie que les développeurs ne peuvent plus compter sur le `blockhash` pour obtenir des valeurs aléatoires sur la chaîne. Le [ mécanisme RANDAO](https://eth2book.info/altair/part2/building_blocks/randomness) de la chaîne phare fournit une autre source d'aléatoire.
 
 Il est possible de générer la valeur aléatoire hors chaîne et de l'envoyer en chaîne, mais cela impose des exigences de confiance élevées aux utilisateurs. Ils doivent croire que la valeur a réellement été générée par des mécanismes imprévisibles et qu'elle n'a pas été altérée en cours de route.
 
@@ -388,6 +388,8 @@ Il existe de multiples applications oracle que vous pouvez intégrer dans votre 
 
 **[Chainlink](https://chain.link/)** - _Les réseaux d'oracles décentralisés Chainlink fournissent des entrées, des sorties et des calculs inviolables pour prendre en charge des contrats intelligents avancés sur n'importe quelle blockchain._
 
+**[Chronicle](https://chroniclelabs.org/)** - _Chronicle surmonte les limitations actuelles du transfert de données sur la chaîne en développant des oracles véritablement évolutifs, rentables, décentralisés et vérifiables._
+
 **[Witnet](https://witnet.io/)** - _Witnet est un oracle sans permission, décentralisé et résistant à la censure, qui aide les contrats intelligents à réagir aux événements du monde réel avec de solides garanties crypto-économiques._
 
 **[UMA Oracle](https://uma.xyz)** - _L'oracle optimiste d'UMA permet aux contrats intelligents de recevoir rapidement tout type de données pour différentes applications, notamment les assurances, les produits dérivés financiers et les marchés prédictifs._
@@ -401,6 +403,8 @@ Il existe de multiples applications oracle que vous pouvez intégrer dans votre 
 **[Réseau Pyth](https://pyth.network/)** - _Pyth network est un réseau d'oracles novateur délivrant des données financières, mis au point pour relier en temps réel les données du monde réel à la blockchain dans un écosystème de blockchains autonomes, décentralisées, et résistantes aux attaques. _
 
 **[API3 DAO](https://www.api3.org/)** - _L'API3 DAO permet d'apporter des solutions de service d'oracle de premier plan, et d'optimiser la transparence, la fiabilité, la sécurité et la scalabilité des données, dans une solution décentralisée dédiée aux contrats intelligents._
+
+**[Supra](https://supra.com/)** - Un ensemble d'outils vertical intégré de solutions inter-chaînes qui relient toutes les blockchains, publiques (couche de niveau 1 et 2) ou privées (entreprises), fournissant des flux de prix oracles décentralisés pouvant être mis à profit dans des cas d'utilisation sur et hors chaîne.
 
 ## Lecture complémentaire {#further-reading}
 
@@ -422,6 +426,7 @@ Il existe de multiples applications oracle que vous pouvez intégrer dans votre 
 **Tutoriels**
 
 - [Comment obtenir le prix actuel d'Ethereum dans Solidity ?](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) — _Chainlink_
+- [Consommation de données d'oracle](https://docs.chroniclelabs.org/Developers/tutorials/Remix) — _Chronicle_
 
 **Exemples de projets**
 

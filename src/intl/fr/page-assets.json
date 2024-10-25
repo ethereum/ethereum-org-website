@@ -49,5 +49,13 @@
   "page-assets-page-assets-transparent-background": "Arrière-plan transparent",
   "page-assets-robot": "Portefeuille robot",
   "page-assets-sharding": "Fragmentation",
-  "page-assets-hackathon": "Hackathon"
+  "page-assets-hackathon": "Hackathon",
+  "page-assets-learn-hero-name": "Université futuriste",
+  "page-assets-community-hero-name": "Rassemblement communautaire",
+  "page-assets-quizzes-hero-name": "Terrain de jeu infini",
+  "page-assets-developers-hero-name": "Construire l'avenir",
+  "page-assets-garden-name": "Le jardin d'Ethereum",
+  "page-assets-roadmap-hero-name": "Route(s) vers l'avenir",
+  "page-assets-layer-2-hero-name": "Construire Ethereum",
+  "page-assets-guides-hero-name": "Laboratoire Ethereum"
 }

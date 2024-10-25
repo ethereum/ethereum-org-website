@@ -295,7 +295,7 @@ def register(name, value):
     self.storage[name] = value
 ```
 
-O contrato é muito simples. É apenas um banco de dados dentro da rede Ethereum que pode ser adicionado, mas não modificado ou removido. Qualquer um pode registrar um nome com algum valor, e esse registro então fica para sempre. Um contrato de registro de nome mais sofisticado também terá uma "cláusula de função" permitindo que outros contratos o consultem, bem como um mecanismo para o "proprietário" (por exemplo, o primeiro registrador) de um nome para alterar os dados ou transferir a propriedade. Pode-se até adicionar reputação e funcionalidade Web of Trust.
+O contrato é muito simples; é apenas um banco de dados dentro da rede Ethereum que pode ser adicionado, mas não modificado ou removido. Qualquer um pode registrar um nome com algum valor, e esse registro então fica para sempre. Um contrato de registro de nome mais sofisticado também terá uma "cláusula de função" permitindo que outros contratos o consultem, bem como um mecanismo para o "proprietário" (por exemplo, o primeiro registrador) de um nome para alterar os dados ou transferir a propriedade. Pode-se até adicionar reputação e funcionalidade Web of Trust.
 
 ### Armazenamento descentralizado de arquivo {#decentralized-file-storage}
 
@@ -355,7 +355,7 @@ O Ethereum implementa uma versão simplificada de GHOST que só desce sete níve
 
 - Um bloco deve especificar um pai, e deve especificar 0 ou mais tios
 - Um tio incluído em no bloco B deve ter as seguintes propriedades:
-  - Deve ser um filho direto do k-ésimo ancestral da última geração de B, onde 2 < = k <= 7
+  - Deve ser um filho direto do ancestral da k-ésima geração de B, onde `2 <= k <= 7`.
   - Não pode ser um ancestral de B
   - Um tio deve ser um cabeçalho de bloco válido, mas não precisa ser um bloco previamente verificado ou até mesmo válido
   - Um tio deve ser diferente de todos os tios incluídos nos blocos anteriores e de todos os outros tios incluídos no mesmo bloco (inclusão não dupla)

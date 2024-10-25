@@ -117,7 +117,7 @@ Las [mejoras de escalabilidad](/roadmap/) de Ethereum deberían abordar algunos 
 
 La escalabilidad de la capa 2 es una iniciativa primordial para mejorar de manera considerable los costes del gas, la experiencia de usuario y la escalabilidad. [Más información sobre la escalabilidad de la capa 2](/developers/docs/scaling/#layer-2-scaling).
 
-## Vigilar las tarifas de gas {#moitoring-gas-fees}
+## Vigilar las tarifas de gas {#monitoring-gas-fees}
 
 Si desea supervisar las tarifas de gas, para poder enviar sus ETH por menos, puede usar diferentes herramientas, como:
 

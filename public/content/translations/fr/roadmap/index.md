@@ -12,7 +12,7 @@ buttons:
     toId: what-changes-are-coming
   - 
     label: Améliorations antérieures
-    hrf: /history/
+    href: /history/
     variant: outline
 ---
 
@@ -78,7 +78,7 @@ La feuille de route est principalement le résultat d'années de travail des che
 
 **Oui, presque sans aucun doute**. La feuille de route est le plan actuel de mise à niveau d'Ethereum, couvrant à la fois les plans à court terme et les plans futurs. Nous nous attendons à ce que la feuille de route soit modifiée au fur et à mesure que de nouvelles informations et technologies seront disponibles.
 
-La feuille de route d'Ethereum est un ensemble d'intentions visant à améliorer Ethereum ; il s'agit de la meilleure hypothèse des chercheurs et des développeurs sur la voie optimale à suivre pour Ethereum.
+La feuille de route d'Ethereum est un ensemble d'intentions visant à améliorer Ethereum ; il s'agit des meilleures hypothèses des chercheurs et des développeurs sur la voie optimale à suivre pour Ethereum.
 
 ## Quand la feuille de route sera-t-elle terminée ? {#when-will-the-roadmap-be-finished}
 

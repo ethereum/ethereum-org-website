@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/13992",
+    "html_url": "https://github.com/ethereum/ethereum-org-website/issues/13992",
+    "title": "Bug report ...... PAGE NOT FOUND broken link",
+    "user": {
+      "login": "Xcertik-Realist",
+      "id": 63165931,
+      "avatar_url": "https://avatars.githubusercontent.com/u/63165931?v=4"
+    },
+    "labels": [
+      {
+        "id": 796509427,
+        "node_id": "MDU6TGFiZWw3OTY1MDk0Mjc=",
+        "url": "https://api.github.com/repos/ethereum/ethereum-org-website/labels/bug%20%F0%9F%90%9B",
+        "name": "bug 🐛",
+        "color": "ee0701",
+        "default": false,
+        "description": "Something isn't working"
+      },
+      {
+        "id": 2847180148,
+        "node_id": "MDU6TGFiZWwyODQ3MTgwMTQ4",
+        "url": "https://api.github.com/repos/ethereum/ethereum-org-website/labels/good%20first%20issue",
+        "name": "good first issue",
+        "color": "6C5DF6",
+        "default": true,
+        "description": "Good item to try if you're new to contributing"
+      },
+      {
+        "id": 7537785110,
+        "node_id": "LA_kwDOBvEA_s8AAAABwUl5Fg",
+        "url": "https://api.github.com/repos/ethereum/ethereum-org-website/labels/hacktoberfest",
+        "name": "hacktoberfest",
+        "color": "F2B767",
+        "default": false,
+        "description": "Track hacktoberfest activity"
+      },
+      {
+        "id": 7538280799,
+        "node_id": "LA_kwDOBvEA_s8AAAABwVEJXw",
+        "url": "https://api.github.com/repos/ethereum/ethereum-org-website/labels/hacktoberfest-beginner",
+        "name": "hacktoberfest-beginner",
+        "color": "F5D720",
+        "default": false,
+        "description": "GFI for hacktoberfest participants"
+      }
+    ]
+  },
+  {
+    "url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/13930",
+    "html_url": "https://github.com/ethereum/ethereum-org-website/issues/13930",
+    "title": "Bug in \"Merkle patricia trie\" page on mobile",
+    "user": {
+      "login": "UNOFFICIALbgd",
+      "id": 71248977,
+      "avatar_url": "https://avatars.githubusercontent.com/u/71248977?v=4"
+    },
+    "labels": [
+      {
+        "id": 796509427,
+        "node_id": "MDU6TGFiZWw3OTY1MDk0Mjc=",
+        "url": "https://api.github.com/repos/ethereum/ethereum-org-website/labels/bug%20%F0%9F%90%9B",
+        "name": "bug 🐛",
+        "color": "ee0701",
+        "default": false,
+        "description": "Something isn't working"
+      }
+    ]
+  },
+  {
+    "url": "https://api.github.com/repos/ethereum/ethereum-org-website/issues/13711",
+    "html_url": "https://github.com/ethereum/ethereum-org-website/issues/13711",
+    "title": "Remove Atom Editor from IDE List on Ethereum.org",
+    "user": {
+      "login": "Shiva-Sai-ssb",
+      "id": 112751524,
+      "avatar_url": "https://avatars.githubusercontent.com/u/112751524?v=4"
+    },
+    "labels": [
+      {
+        "id": 796509427,
+        "node_id": "MDU6TGFiZWw3OTY1MDk0Mjc=",
+        "url": "https://api.github.com/repos/ethereum/ethereum-org-website/labels/bug%20%F0%9F%90%9B",
+        "name": "bug 🐛",
+        "color": "ee0701",
+        "default": false,
+        "description": "Something isn't working"
+      }
+    ]
+  }
+]
