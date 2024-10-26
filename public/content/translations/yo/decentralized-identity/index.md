@@ -45,34 +45,25 @@ Aṣèdámọ̀ jẹ́ ǹkan ti àlàyé tí ó ṣiṣẹ́ bíi ìtọ́ka sí
 
 4. Ìdánimọ̀ tí kò ní àkóso jẹ́ kí dátà ṣe gbé kiri. Àwọn olùmúlò tọ́jú àwọn ìjẹ́ẹ̀rí àti àwọn ìdámò wọn sínú àpamọ́wọ́ alágbèéká àti wípé wón le pín wọn fún èyíkéyìí ẹgbẹ́ tí ó wù wọ́n. Àwọn ìdámò tí kò ní àkóso àti àwọn ìjẹ́ẹ̀rísí kò ní títìpa sínú ibi ìpamọ́ dátà àwọn àgbájọ tí ó fún ni.
 
-5. Ìdánimò tí kò ní àkóso yẹ kí o ṣiṣẹ́ dáradára pẹ̀lú àwọn ìmọ̀-ẹ̀rọ
- òdo-ìmọ̀</> tí ń yọ jáde tí yóò jékí àwọn ẹnìkọ̀ọ̀kan le ṣe àrídájú wípé àwọn ní tàbi àwọn ti ṣe ǹkan láìsí ìṣàfihàn kíni ǹkan náa ńṣe. Èyí le jẹ́ ọ̀nà tí ó lágbára láti ṣe àkópapọ̀ ìgbékẹ̀lé àti àṣírí fún àwọn ohun èlò bíi ìdìbò.</p></li> 
-   
-   6 Ìdánimò tí kò ní àkóso le jékí ó ṣeéṣe fún àwọn ìlànà  anti-Sybil </> sí ìdánimọ̀ nígbàtí ènìyàn kan bá ń díbọ́n wípé òún jẹ́ ènìyàn púpọ̀ sí èrè tàbí ṣe awúrúju ètò kan.</p></li> </ol> 
-  
-  
+5. Ìdánimò tí kò ní àkóso yẹ kí o ṣiṣẹ́ dáradára pẹ̀lú àwọn ìmọ̀-ẹ̀rọ [òdo-ìmọ̀](/glossary/#zk-proof) tí ń yọ jáde tí yóò jékí àwọn ẹnìkọ̀ọ̀kan le ṣe àrídájú wípé àwọn ní tàbi àwọn ti ṣe ǹkan láìsí ìṣàfihàn kíni ǹkan náa ńṣe. Èyí le jẹ́ ọ̀nà tí ó lágbára láti ṣe àkópapọ̀ ìgbékẹ̀lé àti àṣírí fún àwọn ohun èlò bíi ìdìbò.
+
+6. Ìdánimò tí kò ní àkóso le jékí ó ṣeéṣe fún àwọn ìlànà [anti-Sybil](/glossary/#anti-sybil) sí ìdánimọ̀ nígbàtí ènìyàn kan bá ń díbọ́n wípé òún jẹ́ ènìyàn púpọ̀ sí èrè tàbí ṣe awúrúju ètò kan.
 
 ## Lílò fún ìdánimò tí kò ní àkóso {#decentralized-identity-use-cases}
 
 Ìdánimò tí kò ní àkóso ní ìmúlò ọ̀nà tí ó pọ̀:
 
-
-
 ### 1. Àwọn ọ̀nà gbígbàwọlé káríayé {#universal-dapp-logins}
 
-Ìdánimò tí kò ní àkóso le ṣe ìrànlọ́wọ́ ìrọ́pò fún àwọn ìgbaniwọlé oní ọ̀rọ̀-aṣínà pẹ̀lú ìfàṣẹsí tí kò ní àkóso. Àwọn Olùpèsè iṣẹ́ le fún àwọn ìjẹ́ẹ̀rísí sí àwọn olùmúlò, èyí tí ó le wà ní ìpamọ́ sínú àpò àpamọ́wọ́ Ẹ̀tẹ́ríọ̀mù. Àpẹrẹ ìjẹ́ẹ̀rísí yóò jẹ́ [ NFT ](/glossary/#nft) fífún ẹni tí ó ni ààyè sí àgbègbè orí ayélujára.
+Ìdánimò tí kò ní àkóso le ṣe ìrànlọ́wọ́ ìrọ́pò fún àwọn ìgbaniwọlé oní ọ̀rọ̀-aṣínà pẹ̀lú ìfàṣẹsí tí kò ní àkóso. Àwọn Olùpèsè iṣẹ́ le fún àwọn ìjẹ́ẹ̀rísí sí àwọn olùmúlò, èyí tí ó le wà ní ìpamọ́ sínú àpò àpamọ́wọ́ Ẹ̀tẹ́ríọ̀mù. Àpẹrẹ ìjẹ́ẹ̀rísí yóò jẹ́ [NFT](/glossary/#nft) fífún ẹni tí ó ni ààyè sí àgbègbè orí ayélujára.
 
-Iṣẹ́  ìwọlé pẹ̀lú Ẹ̀tẹ́ríọ̀mù</> yóò jẹ́kí àwọn apèsè láti ṣe jẹ́ẹ̀rísí àkọ́ọ́lẹ̀ Ẹ̀tẹ́ríọ̀mù olùmúlò àti mú ẹ̀rí tí ò nílò láti inú àdírẹ́ẹ̀sì àkọ́ọ́lẹ̀ wọn. Èyí túmò sí pé àwọn olùmúlò le wọlé sí àwọn ojú ẹ̀rọ àti àwọn ojú òpó ayélujára láìsí níní láti ṣe àkọ́sórí àwọn ọ̀rọ̀ aṣínà gígùn àti ṣíṣe ìmúdárasí ìrírí orí ayélujára fún àwọn olùmúlò.</p> 
-
-
+Iṣẹ́ [ìwọlé pẹ̀lú Ẹ̀tẹ́ríọ̀mù](https://login.xyz/) yóò jẹ́kí àwọn apèsè láti ṣe jẹ́ẹ̀rísí àkọ́ọ́lẹ̀ Ẹ̀tẹ́ríọ̀mù olùmúlò àti mú ẹ̀rí tí ò nílò láti inú àdírẹ́ẹ̀sì àkọ́ọ́lẹ̀ wọn. Èyí túmò sí pé àwọn olùmúlò le wọlé sí àwọn ojú ẹ̀rọ àti àwọn ojú òpó ayélujára láìsí níní láti ṣe àkọ́sórí àwọn ọ̀rọ̀ aṣínà gígùn àti ṣíṣe ìmúdárasí ìrírí orí ayélujára fún àwọn olùmúlò.
 
 ### 2. Ìfàṣẹsí KYC {#kyc-authentication}
 
 Lílo ọ̀pọ̀lọpọ̀ àwọn iṣẹ́ orí ayélujára nílò àwọn ènìyàn láti pèsè àwọn ìjẹ́ẹ̀rísí àti àwọn ìwé-ẹ̀rí, gẹ́gẹ́bí ìwé-àṣẹ awakọ̀ tàbí ìwé ìrìnnà orílẹ̀-èdè. Lílo ọ̀pọ̀lọpọ̀ àwọn iṣẹ́ orí ayélujára nílò àwọn ènìyàn láti pèsè àwọn ìjẹ́ẹ̀rísí àti àwọn ìwé-ẹ̀rí, gẹ́gẹ́bí ìwé-àṣẹ awakọ̀ tàbí ìwé ìrìnnà orílẹ̀-èdè.
 
-Ìdánimọ̀ tí kò ní àkóso gba àwọn ilé-iṣẹ́ láàyè láti gbójú lórí ìlànà [ Mọ-Oníbárà-rẹ KYC ](https://en.wikipedia.org/wiki/Know_your_customer) àti ṣe ìjẹ́ẹ̀rísí àwọn ìdánimọ̀ olùmúlò nípa àwon ìwé-ẹ̀rí tí a le s'àrídájú. Èyí mú àdínkù bá ìdíyelé ti ìṣàkóso ìdánimọ̀ àti ìdílọ́wọ́ fún lílo àwọn ìwé-ẹ̀rí irọ́.
-
-
+Ìdánimọ̀ tí kò ní àkóso gba àwọn ilé-iṣẹ́ láàyè láti gbójú lórí ìlànà [Mọ-Oníbárà-rẹ KYC](https://en.wikipedia.org/wiki/Know_your_customer) àti ṣe ìjẹ́ẹ̀rísí àwọn ìdánimọ̀ olùmúlò nípa àwon ìwé-ẹ̀rí tí a le s'àrídájú. Èyí mú àdínkù bá ìdíyelé ti ìṣàkóso ìdánimọ̀ àti ìdílọ́wọ́ fún lílo àwọn ìwé-ẹ̀rí irọ́.
 
 ### 3. Ìdìbò àti àwùjọ orí afẹ́fẹ́ {#voting-and-online-communities}
 
@@ -80,21 +71,15 @@ Lílo ọ̀pọ̀lọpọ̀ àwọn iṣẹ́ orí ayélujára nílò àwọn è
 
 Ìdánimọ̀ tí kò ní àkóso le ṣe ìrànlọ́wọ́ ìṣẹ̀dá àwọn agbègbè orí ayélujára tí kò ní àwọn àkọọ́lẹ̀ iró. Fún àpẹẹrẹ, olùmúlò kọ̀ọ̀kan le ní láti ṣe ìjẹ́ẹ̀rísí ìdánimọ̀ wọn nípa lílo ètò ìdánimọ̀ orí-ẹ̀rọ, bíi Iṣẹ́ Orúkọ Ẹ̀tẹ́ríọ̀mù, mímú àdínkù bá ìṣeése àwọn rọ́bọ̀tì.
 
-
-
 ### 4. Ìdáàbòbò Anti-Sybil {#sybil-protection}
 
-Àwọn ohun èlò afúnni-láàyè tí ó ńlo [ìdìbò kọ̀dírátìkì ](/glossary/#quadratic-voting) ní ìfaragbá sí [ àwọn ìkọlù sybil ](/glossary/#sybil-attack) nítorí iye ẹ̀bùn ti pọ̀ si nígbàtí àwọn ènìyàn púpọ̀ bá dìbò fun, fífún àwọn olùmúlò ní ìwúrí láti pín àwọn ìpín wọn káàkiri ọ̀pọ̀lọpọ̀ ìdámò. Àwọn ìdámò tí kò ní àkóso ṣe ìrànlọ́wọ́ láti ṣe ìdíwọ́ èyí nípa gbígbé ẹrú lé orí olùkópa kọ̀ọ̀kan láti ṣe ìjẹ́ẹ̀rísí wípé àwọn jẹ́ ènìyàn nítòótó, bótilẹ̀jẹ́pé lọ́pọ̀ ìgbà láìsí níní láti ṣàfihàn àlàyé kan pàtó.
-
-
+Àwọn ohun èlò afúnni-láàyè tí ó ńlo [ìdìbò kọ̀dírátìkì](/glossary/#quadratic-voting) ní ìfaragbá sí [àwọn ìkọlù sybil](/glossary/#sybil-attack) nítorí iye ẹ̀bùn ti pọ̀ si nígbàtí àwọn ènìyàn púpọ̀ bá dìbò fun, fífún àwọn olùmúlò ní ìwúrí láti pín àwọn ìpín wọn káàkiri ọ̀pọ̀lọpọ̀ ìdámò. Àwọn ìdámò tí kò ní àkóso ṣe ìrànlọ́wọ́ láti ṣe ìdíwọ́ èyí nípa gbígbé ẹrú lé orí olùkópa kọ̀ọ̀kan láti ṣe ìjẹ́ẹ̀rísí wípé àwọn jẹ́ ènìyàn nítòótó, bótilẹ̀jẹ́pé lọ́pọ̀ ìgbà láìsí níní láti ṣàfihàn àlàyé kan pàtó.
 
 ## Kíni àwọn ìjẹ́ẹ̀rísí? {#what-are-attestations}
 
 Ìjẹ́ẹ̀rísí jé ẹ̀tọ́ tí ẹ̀dá kan ṣe nípa ẹ̀dá míìràn. Tí o bá ń gbé ní orílẹ̀-ẹ̀dẹ̀ Améríkà, ìwé àṣẹ awakọ̀ tí Ẹ̀ka Àwọn Ọkọ̀ Ayọ́kẹ́lẹ́ (ẹ̀dá kan) pín fún ọ ṣe ìjẹ́ẹ̀rí wípé ìwọ (ẹ̀dá míìràn) ní ìgbàláàyè láti wa ọkọ̀ kan.
 
-Àwọn ìjẹ́ẹ̀rísí yàtọ̀ sí àwọn ìdámọ̀. Ìjẹ́ẹ̀rísí _ ní _ àwọn olùdámọ̀ láti tọ́ka ìdánimọ̀ kan pàtó, ó sì ṣe ẹ̀tọ́ nípa àwòmọ́ tí ó ní ìbátan sí ìdánimọ̀ yìí. Nítorí náà, ìwé àṣẹ ìwakọ̀ rẹ ní àwọn àmì ìdánimọ̀ (orúkọ, ọjọ́ ìbí, àdírẹ́sì) àmọ́ ó tún jẹ́ ẹ̀rí tó fi hàn pé o lẹ́tọ̀ọ́ láti wakọ̀.
-
-
+Àwọn ìjẹ́ẹ̀rísí yàtọ̀ sí àwọn ìdámọ̀. Ìjẹ́ẹ̀rísí _ní_ àwọn olùdámọ̀ láti tọ́ka ìdánimọ̀ kan pàtó, ó sì ṣe ẹ̀tọ́ nípa àwòmọ́ tí ó ní ìbátan sí ìdánimọ̀ yìí. Nítorí náà, ìwé àṣẹ ìwakọ̀ rẹ ní àwọn àmì ìdánimọ̀ (orúkọ, ọjọ́ ìbí, àdírẹ́sì) àmọ́ ó tún jẹ́ ẹ̀rí tó fi hàn pé o lẹ́tọ̀ọ́ láti wakọ̀.
 
 ### Kí ni àwọn àmì ìdánimọ tí kò ní àkóso? {#what-are-decentralized-identifiers}
 
@@ -102,21 +87,15 @@ Lílo ọ̀pọ̀lọpọ̀ àwọn iṣẹ́ orí ayélujára nílò àwọn è
 
 Àwọn ìdámò tí a kò pín ní àtẹ̀jáde, dìmú, àti ìṣàkóso nípasẹ̀ àwọn ẹnì-kọ̀ọ̀kan. [Àkosílẹ̀ Ẹ̀tẹ́ríọ̀mù ](/glossary/#account) jẹ́ àpẹẹrẹ fún àwọn ìdánimọ̀ tí kò ní àkóso. O le ṣẹ̀dá iye àkọọ́lẹ̀ tóo bá fẹ́ láìsí ìgbàṣẹ lọ́wọ́ ẹnikẹ́ni àti láìsí ìdí láti fi wọ́n pamọ́ sínú ìwé ìforúkọsílẹ̀ ààrin-gbùngbùn.
 
-Àwọn ìdánimọ̀ tí kò ní àkóso ní àfipamọ́ lórí àwọn ìwé-ìpamọ́ pínpín ([blockchains](/glossary/#blockchain)) [ àwọn nẹ́tíwọ̀ọ̀kì ẹlẹ́gbẹ́-sí-ẹgbẹ́](/glossary/#peer-to-peer-network). Èyí jẹ́ kí àwọn DIDs [ jẹ́ aláìlẹ́gbẹ́ ní àgbáyé, tí o le yanjú pẹ̀lú wiwà tí ó ga, àti tí o le ìjẹ́ẹ̀rísí cryptographically ](https://w3c-ccg.github.io/did-primer/). Àmì ìdánimọ tí kò ní àkóso lè ní í ṣe pẹ̀lú àwọn ẹ̀dá tí ó yàtọ̀ síra, títí kan àwọn ènìyàn, àwọn àjọ, tàbí àwọn ilé-iṣẹ́ ìjọba.
-
-
+Àwọn ìdánimọ̀ tí kò ní àkóso ní àfipamọ́ lórí àwọn ìwé-ìpamọ́ pínpín ([blockchains](/glossary/#blockchain)) [àwọn nẹ́tíwọ̀ọ̀kì ẹlẹ́gbẹ́-sí-ẹgbẹ́](/glossary/#peer-to-peer-network). Èyí jẹ́ kí àwọn DIDs [jẹ́ aláìlẹ́gbẹ́ ní àgbáyé, tí o le yanjú pẹ̀lú wiwà tí ó ga, àti tí o le ìjẹ́ẹ̀rísí cryptographically](https://w3c-ccg.github.io/did-primer/). Àmì ìdánimọ tí kò ní àkóso lè ní í ṣe pẹ̀lú àwọn ẹ̀dá tí ó yàtọ̀ síra, títí kan àwọn ènìyàn, àwọn àjọ, tàbí àwọn ilé-iṣẹ́ ìjọba.
 
 ## Kini o mu ki awọn asedanimọ alailakoso ṣeeṣe? {#what-makes-decentralized-identifiers-possible}
-
-
 
 ### 1. Bọ́tìnì cryptography gbangba {#public-key-cryptography}
 
 Bọ́tìnì cryptography gbangba jẹ́ ìgbésẹ̀ ààbò àlàyé tí ó ṣe àgbéjáde [ bọ́tìnì gbangba ](/glossary/#public-key) àti [ bọ́tìnì ìkọ̀kọ̀](/glossary/#private-key) fún ẹ̀dá kan. Bọ́tìnì gbangba [ cryptography](/glossary/#cryptography) ni a nlo nínú àwọn nẹtiwọọki blockchain láti fi ìdánilójú ìdánimọ̀ àwọn olùmúlò hàn àti láti fi ẹ̀rí níní àwọn ohun-ìní oní-nóḿbà hàn.
 
-Díẹ̀ nínú àwọn ìdánimọ̀ tí kò ní àkóso, gẹ́gẹ́bí àkọọ́lẹ̀ Ẹ̀tẹ́ríọ̀mù, ní àwọn bọ́tìnì gbangba àti ìkọ̀kọ̀. Bọ́tìnì gbangba ń ṣe ìdánimọ̀ olùdarí, nígbà tí àwọn àkọọ́lẹ̀ àdáni lè fọwọ́ sí àti tú àwọn ìfiránsẹ́ fún àkọọ́lẹ̀ yìí. Bọ́tìnì cryptography gbangba ṣe ẹ̀rí tí ó nílò láti ṣe ìjẹ́ẹ̀rísí àwọn àjọ àti dènà afinipeni lọ́nà èrú àti lílo ìdánimọ̀ ayédèrú, lílo [ ìbuwọ́lù cryptographic ](https://andersbrownworth.com/blockchain/public-private-keys/) láti ṣe ìjẹ́ẹ̀rísí àwọn ẹ̀tọ́.
-
-
+Díẹ̀ nínú àwọn ìdánimọ̀ tí kò ní àkóso, gẹ́gẹ́bí àkọọ́lẹ̀ Ẹ̀tẹ́ríọ̀mù, ní àwọn bọ́tìnì gbangba àti ìkọ̀kọ̀. Bọ́tìnì gbangba ń ṣe ìdánimọ̀ olùdarí, nígbà tí àwọn àkọọ́lẹ̀ àdáni lè fọwọ́ sí àti tú àwọn ìfiránsẹ́ fún àkọọ́lẹ̀ yìí. Bọ́tìnì cryptography gbangba ṣe ẹ̀rí tí ó nílò láti ṣe ìjẹ́ẹ̀rísí àwọn àjọ àti dènà afinipeni lọ́nà èrú àti lílo ìdánimọ̀ ayédèrú, lílo [ìbuwọ́lù cryptographic](https://andersbrownworth.com/blockchain/public-private-keys/) láti ṣe ìjẹ́ẹ̀rísí àwọn ẹ̀tọ́.
 
 ### 2. Àwọn ibi ìpamọ́ ìsọfúnni tí a kò kò ní àkóso {#decentralized-datastores}
 
@@ -124,13 +103,11 @@ Blockchain ń ṣiṣẹ́ bí ìforúkọsílẹ̀ dátà tí a lè ṣàyẹ̀
 
 Bí ẹnikẹ́ni bá nílò láti jẹ́rìí sí ìwúlò àmì ìdánimọ̀ tí kò ní àkóso wọ́n le wo bọ́tìnì tí ó so mọ́ ọn lórí ẹ̀rọ blockchain. Èyí yàtọ̀ sí àwọn ìdánimọ̀ ìbílẹ̀ tí ó nílò àwọn ẹgbẹ́ kẹta láti jẹ́ẹ̀rísí.
 
-
-
 ## Báwo ni àwọn ìdámò àti àwọn ìjẹ́ẹ̀rísí tí kò ní àkóso ṣe gba ìdánimọ̀ tí kò ní àkóso láàyè? {#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
 
 Ìdánimọ̀ tí kò ní àkóso ni èrò náà wípé àlàyé tí ó ní í ṣe pẹ̀lú ìdánimọ̀ yẹ kí ó jẹ́ èyí tí yóò darí ara rẹ̀, tí ó jẹ́ ti àdáni, tí ó sì ṣeé gbé kiri, pẹ̀lú àwọn ààmọ̀ ìdánimọ̀ tí kò ní àkóso àti àwọn ìjẹ́ẹ̀rísí tí ó jẹ́ kókó pàtàkì.
 
-Ní àyíká ìdánimọ̀ tí kò ní àkóso àwọn ìjẹ́ẹ̀rí (tí a tún mọ̀ sí [ Àwọn ìwé-ẹ̀rí tí a le ríí dájú](https://www.w3.org/TR/vc-data-model/)) jẹ́ àwọn àléébù tí a kò lè yí padà, tí wọ́n ṣeé ṣàyẹ̀wò nípa ẹ̀rọ cryptography tí àwọn olùfúnni ní ẹ̀rí ṣe. Gbogbo ẹ̀rí tàbí ìwé-ẹ̀rí tí a le ríí dájú ti ẹ̀dá kan (fún àpẹẹrẹ, àgbárí kan) ṣe jáde ní nkan ṣe pẹ̀lú DID wọn.
+Ní àyíká ìdánimọ̀ tí kò ní àkóso àwọn ìjẹ́ẹ̀rí (tí a tún mọ̀ sí [Àwọn ìwé-ẹ̀rí tí a le ríí dájú](https://www.w3.org/TR/vc-data-model/)) jẹ́ àwọn àléébù tí a kò lè yí padà, tí wọ́n ṣeé ṣàyẹ̀wò nípa ẹ̀rọ cryptography tí àwọn olùfúnni ní ẹ̀rí ṣe. Gbogbo ẹ̀rí tàbí ìwé-ẹ̀rí tí a le ríí dájú ti ẹ̀dá kan (fún àpẹẹrẹ, àgbárí kan) ṣe jáde ní nkan ṣe pẹ̀lú DID wọn.
 
 Nítorípé àwọn DID wà ní ìfipamọ́ lórí blockchain, ẹnikẹ́ni le ṣàyẹ̀wò ìfẹsẹ̀rinlẹ̀ ti ìjẹ́ẹ̀rísí kan nipa ìṣàyẹ̀wò DID ti olùfínni lori Ẹ̀tẹ́ríọ̀mù. Ní pàtàkì blockchain Ẹ̀tẹ́ríọ̀mù ṣiṣẹ́ bí ìtọ́sọ́nà àgbáyé tí ó fún ìjẹ́ẹ̀rísí ti àwọn DID tí ó ní ǹkan ṣe pẹ̀lú àwọn ǹkan kan láàyè.
 
@@ -138,13 +115,9 @@ Nítorípé àwọn DID wà ní ìfipamọ́ lórí blockchain, ẹnikẹ́ni le
 
 Àwọn ohun ààmì ìdámọ̀ tí kò ní àkóso tún jẹ́ pàtàkì nínú dídá ààbò bo ìpamọ́ ìsọfúnni nípa ara ẹni nípa ìdánimọ̀ tí kò ní àkóso. Bí àpẹẹrẹ, bí ẹnìkan bá fi ẹ̀rí ti ìjẹ́ẹ̀rísí (ìwé-àṣe awakọ̀) sílẹ̀, ẹni tó ń ṣàyẹ̀wò kò ní láti ṣàyẹ̀wò bí ìsọfúnni tó wà nínú ẹ̀rí náà ṣe jẹ́ ojúlówó tó. Kàkà bẹ́ẹ̀, àwọn ìdánilójú tí wọ́n fi àwọn cryptography ṣe nìkan ni àwọn olùdánilójú nílò láti mọ bí ìwé ìdánilójú náà ṣe jẹ́ ojúlówó tó àti irú àjọ tó ṣe é kí ó tó lè mọ̀ bóyá ìwé ìdánilójú náà lẹ́sẹ̀ nílẹ̀.
 
-
-
 ## Àwọn oríṣi ti àwọn ẹ̀rí ìdánimọ̀ tí ó pín káàkiri {#types-of-attestations-in-decentralized-identity}
 
 Ọ̀nà tí a fi àlàyé ijẹrisi pamọ́ àti gbígba padà ní ètò-àyè ìdánimọ̀ tí ó dá l'órí Ẹ̀tẹ́ríọ̀mù yàtọ̀ pátápátá sí ìṣàkóso ìdánimọ̀ ìbílẹ̀. Èyí ní àwọn ọ̀nà oríṣiríṣi láti fúnni, tọ́jú, àti ṣ'ayẹwo àwọn ìjẹ́ẹ̀rísí àwọn ètò ìdánimọ̀ tí ó pín káàkiri:
-
-
 
 ### Àwọn ìjẹ́ẹ̀rísí tí kò ní í ṣe pẹ̀lú ẹ̀ka {#off-chain-attestations}
 
@@ -158,15 +131,11 @@ Nítorípé àwọn DID wà ní ìfipamọ́ lórí blockchain, ẹnikẹ́ni le
 
 2. Bob kọ̀wé fún iṣé, ó sì fẹ́ fi ẹ̀rí hàn pé òun ti kàwé tó bó ṣe yẹ fún ẹni tó fẹ́ gbà á síṣẹ́, torí náà, ó fi ìwé ẹ̀rí tó wà nínú àpamọ́wọ́ rẹ̀ tó wà lórí tẹlifóònù alágbèéká rẹ hàn wọ́n. Ilé iṣẹ́ náà (àwọn olùṣàyẹ̀wò) lẹ́hìnáà le ṣàyẹ̀wò ìfẹsẹ̀rinlẹ̀ ti ìjẹ́ẹ̀rísí nípa ṣíṣàyẹ̀wò DID ti olùfúnni (i.e., bọ́tìnnì tí óhàn sí gbogbo ènìyàn ní orí Ẹ̀tẹ́ríọ̀mù).
 
-
-
 ### Àwọn ìjẹ́ẹ̀rísí tí kò sí lórí ẹ̀rọ pẹ̀lú ìgbaniláàyè wíwọlé igbagbogbo {#offchain-attestations-with-persistent-access}
 
 Lábẹ́ ètò yií àwọn ìjẹ́ẹ̀rísí di yíyípadà sí àwọn fáìlì JSON àti fífipamọ́ lórí off-chain (ní bòjúmu lórí pẹpẹ[ìpamọ àwọsánmà tí kò ní àkóso](/developers/docs/storage/), bíi IPFS tàbí Swarm). Síbẹ̀síbẹ̀, [ hash ](/glossary/#hash) ti fáìlì JSON ti wà ní ìfipamọ́ lórí on-chain àti tí o sopọ̀ mọ́ DID nípasẹ̀ ìforúkọsílẹ on-chain kan. DID tí ó sopọ̀ le jẹ́ bóyá tí olùfúnni ní ìjẹ́ẹ̀rísí tàbí ti olùgbà.
 
 Ọ̀nà yìí jẹ́ kí àwọn ìwé-ẹ̀ri ó ní ìdúróṣinṣin tí ó dá l'órí blockchain, láàkókò tí a bá ń tọ́jú àlàyé ìpàrokò àwọn ẹ̀tọ́ àti tí ó ṣe ṣàyẹ̀wò. Ó tún jẹ́ kí yíyan ìṣàfihàn ṣeéṣe nítorípé olùdìmú bọ́tìnì ìkọ̀kọ̀ le tú àlàyé ìpàrokò náà.
-
-
 
 ### Àwọn ẹ̀rí orí on-chain {#onchain-attestations}
 
@@ -180,13 +149,9 @@ Lábẹ́ ètò yií àwọn ìjẹ́ẹ̀rísí di yíyípadà sí àwọn fá�
 
 3. Àdéhùn ọlọ́gbọ́n tó ń ta ìpín lè ṣàyẹ̀wò àdéhùn ìforúkọsílẹ̀ fún àwọn olùbárà tí wọ́n ti ṣàyẹ̀wò, èyí tó mú kó ṣeé ṣe fún àdéhùn ọlọ́gbọ́n láti mọ ẹni tí wọ́n gbà láyè láti ra ìpín tàbí tí wọn kò gbà.
 
-
-
 ### Àwọn tọ́kẹ̀n àti ìdánimọ̀ tí Soulbound {#soulbound}
 
 [ Àwọn tọ́kẹ̀n Soulbound ](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([NFTs tí kò ní gbígbé](/glossary/#nft)) le ṣeé lò láti gba àlàyé aláìlẹ́gbẹ́ sí àpamọ́wọ́ kan pàtó. Èyí ṣ'èdá ìdánimọ̀ on-chain aláìlẹ́gbẹ́ tí ó so pọ̀ sí àdírẹ́ẹ̀sì Ẹ̀tẹ́ríọ̀mù kan pàtó tí ó le kó àwọn tọ́kẹ̀n tí ó ṣe aṣojú fún àwọn àṣeyọrí (fún àpẹrẹ píparí díẹ̀ nínú àwọn ẹ̀kọ́ orí ayélujára kan pàtó tàbí yíyege kọjá ààlà kan nínú eré kan) tàbí ìkópa àgbègbè.
-
-
 
 ## Ìlò ìdánimọ̀ tí kò ní àkóso {#use-decentralized-identity}
 
@@ -200,11 +165,7 @@ Lábẹ́ ètò yií àwọn ìjẹ́ẹ̀rísí di yíyípadà sí àwọn fá�
 - **[walt.id](https://walt.id)** — _ìmọ̀-orísun ṣíṣí sílẹ̀ ìdánimọ̀ tí ó pín káàkiri àti ohun èèlò àpamọ́wọ́ tí ó fún olùgbeéjáde àti àwọn àjọ láàyè láti lo ìdánimọ̀ ti ara ẹni àti àwọn NFT / SBTs. _
 - **[Veramo](https://veramo.io/)** -_ Àwọn ìlànà JavaScript tí ó kí fú ẹnikẹni láti lo détà tó ṣeé ṣàyẹwò pẹ̀lú kírípítò nínú àwọn ohun èlò wọn._
 
-
-
 ## Kíkà síwájú síi {#further-reading}
-
-
 
 ### Awọn arokọ {#articles}
 
@@ -214,8 +175,6 @@ Lábẹ́ ètò yií àwọn ìjẹ́ẹ̀rísí di yíyípadà sí àwọn fá�
 - [ Kí Ni Ìdánimọ̀ Tí Kò Ní Àkóso, Ati Pé Kí Ni Ìdí Tó Fi Kàn Ọ́?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
 - [Ìfihàn sí ìdánimọ̀ tí kò ní àkóso ](https://walt.id/white-paper/digital-identity) — _Dominik Beron_
 
-
-
 ### Videos {#videos}
 
 - [Idanimọ Alailakoso (Bonus Livestrea)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _ fidio ti o ni alaye nla lori idanimọ alailakoso nipasẹ Andreas Andreas_
@@ -223,8 +182,6 @@ Lábẹ́ ètò yií àwọn ìjẹ́ẹ̀rísí di yíyípadà sí àwọn fá�
 - [BrightID - ìdánimọ̀ tí kò ní àkóso lórí Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) - _Àkọlé fídíò alágbèéká tí kò ní báńkì tí ó ń jíròrò BrightID, ojútùú ìdánimọ̀ tí kò ní ìdánimọ̀ fún Ethereum_
 - [Íńtánẹ́ẹ̀tì off chain: ìdánimọ̀ tí kò ní àkóso & Àwọn ẹ̀rí tó ṣeé wádìí](https://www.youtube.com/watch?v=EZ_Bb6j87mg) - ìfihàn EthDenver 2022 láti ọwọ́ Evin McMullen
 - [Ìṣàlàyé Àwọn Ìwé-Ẹ̀rí Tó Ṣeé Wádìí](https://www.youtube.com/watch?v=ce1IdSr-Kig) - Ìṣàlàyé fidio YouTube pẹ̀lú àfihàn láti ọwọ́ Tamino Baumann
-
-
 
 ### Àwọn àwùjọ {#communities}
 
