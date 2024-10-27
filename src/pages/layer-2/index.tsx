@@ -148,6 +148,7 @@ const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
         <h2>Stats box</h2>
       </div>
 
+      {/* TODO: Setup for translation */}
       <div id="layer-2-the-network-of-networks" className="w-full py-9 sm:px-8">
         <div className="flex flex-col gap-8 bg-[#B9B9F1] bg-opacity-20 px-4 py-10 text-center">
           <h2>The network of networks</h2>
