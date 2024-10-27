@@ -148,8 +148,78 @@ const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
         <h2>Stats box</h2>
       </div>
 
-      <div id="layer-2-the-network-of-networks" className="w-full px-8 py-9">
-        <h2>The network of networks</h2>
+      <div id="layer-2-the-network-of-networks" className="w-full py-9 sm:px-8">
+        <div className="flex flex-col gap-8 bg-[#B9B9F1] bg-opacity-20 px-4 py-10 text-center">
+          <h2>The network of networks</h2>
+          <p className="font-md">
+            Ethereum&apos;s strength and security provides a platform for other
+            networks to build upon. With a single account, everything is
+            compatible and connects seamlessly.
+          </p>
+          <div className="relative m-auto h-[375px] w-[375px]">
+            {/* Outer ring */}
+            <div className="absolute inset-0 rounded-full border border-dashed border-body-medium"></div>
+            <div className="absolute inset-0 animate-spin-slow rounded-full">
+              <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-slow rounded-full bg-primary">
+                <TwImage
+                  src={randomL2s[0].logo}
+                  alt="Ethereum"
+                  width={24}
+                  height={24}
+                />
+              </div>
+            </div>
+
+            {/* Second ring */}
+            <div className="absolute inset-[36px] rounded-full border border-dashed border-body-medium"></div>
+            <div className="absolute inset-[36px] animate-spin-slow rounded-full">
+              <div className="absolute -right-[12px] top-1/2 h-6 w-6 -translate-y-1/2 transform animate-counter-spin-slow rounded-full bg-primary">
+                <TwImage
+                  src={randomL2s[1].logo}
+                  alt="Ethereum"
+                  width={24}
+                  height={24}
+                />
+              </div>
+            </div>
+
+            {/* Third ring */}
+            <div className="absolute inset-[72px] rounded-full border border-dashed border-body-medium"></div>
+            <div className="absolute inset-[72px] animate-spin-slow rounded-full">
+              <div className="absolute -bottom-[12px] left-1/2 h-6 w-6 -translate-x-1/2 transform animate-counter-spin-slow rounded-full bg-primary">
+                <TwImage
+                  src={randomL2s[2].logo}
+                  alt="Ethereum"
+                  width={24}
+                  height={24}
+                />
+              </div>
+            </div>
+
+            {/* Fourth (innermost) ring */}
+            <div className="absolute inset-[108px] rounded-full border border-dashed border-body-medium"></div>
+            <div className="absolute inset-[108px] animate-spin-slow rounded-full">
+              <div className="absolute -left-[12px] top-1/2 h-6 w-6 -translate-y-1/2 transform animate-counter-spin-slow rounded-full bg-primary">
+                <TwImage
+                  src={randomL2s[3].logo}
+                  alt="Ethereum"
+                  width={24}
+                  height={24}
+                />
+              </div>
+            </div>
+
+            {/* Center Ethereum Logo */}
+            <div className="absolute left-1/2 top-1/2 h-12 w-12 -translate-x-1/2 -translate-y-1/2 transform">
+              <TwImage
+                src={EthereumLogo}
+                alt="Ethereum"
+                width={48}
+                height={48}
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="layer-2-callout-cards" className="w-full px-8 py-9">
