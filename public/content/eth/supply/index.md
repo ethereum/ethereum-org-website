@@ -31,11 +31,11 @@ Understanding the nuances of ETH supply has several implications and benefits fo
 - Network Security: The staking mechanism incentivizes validators to act honestly, enhancing the security and reliability of the Ethereum network.
 
 ### Benefits
-- Financial Empowerment
+**Financial Empowerment:**
 Ethereum enables individuals to have full control over their finances without relying on intermediaries, offering financial services to those underserved by traditional banking systems.
 
-- Innovation and DApp Development
+**Innovation and DApp Development:**
 The smart contract functionality of Ethereum allows for the development of a wide range of decentralized applications, fostering innovation beyond just digital currency.
 
-- Global Accessibility
+**Global Accessibility:**
 Anyone with an internet connection can participate in the Ethereum network, promoting global inclusivity and economic participation.
