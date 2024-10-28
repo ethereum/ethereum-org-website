@@ -148,9 +148,9 @@ const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
       {/* TODO: Setup responsive design */}
       {/* TODO: Setup data fetching */}
       <div id="layer-2-stats-box" className="w-full px-8 py-9">
-        <div className="px-28 py-9">
-          <div className="flex flex-row border border-body-light p-8">
-            <div className="flex-1 border-r border-body-light">
+        <div className="max-w-[992px] py-9">
+          <div className="flex flex-col gap-8 border border-body-light p-8 md:flex-row md:gap-14">
+            <div className="flex-1">
               <div className="max-w-[224px]">
                 <p className="text-5xl">$2.71</p>
                 <p className="text-body-medium">
@@ -158,7 +158,8 @@ const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
                 </p>
               </div>
             </div>
-            <div className="flex-1 pl-14">
+            <div className="h-auto w-auto self-stretch border-b border-body-light md:border-r" />
+            <div className="flex-1">
               <div className="max-w-[224px]">
                 <p className="text-5xl">12.34</p>
                 <p className="text-body-medium">
@@ -167,27 +168,27 @@ const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
               </div>
             </div>
 
-            <div className="absolute right-0 h-44 w-44 -translate-x-14 -translate-y-32 -rotate-12 rounded-full bg-primary">
+            {/* <div className="absolute right-0 h-44 w-44 -translate-x-14 -translate-y-32 -rotate-12 rounded-full bg-primary">
               <div className="flex h-full w-full flex-col items-center justify-center">
                 <p className="text-background">over</p>
                 <p className="text-5xl text-background">100x</p>
                 <p className="text-background">cheaper</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
 
       {/* TODO: Setup for translation */}
       <div id="layer-2-the-network-of-networks" className="w-full py-9 sm:px-8">
-        <div className="flex flex-col gap-8 bg-[#B9B9F1] bg-opacity-20 px-4 py-10 text-center">
+        <div className="flex flex-col gap-8 overflow-hidden bg-[#B9B9F1] bg-opacity-20 px-4 py-10 text-center">
           <h2>The network of networks</h2>
           <p className="font-md">
             Ethereum&apos;s strength and security provides a platform for other
             networks to build upon. With a single account, everything is
             compatible and connects seamlessly.
           </p>
-          <div className="relative m-auto h-[375px] w-[375px]">
+          <div className="relative m-auto h-[275px] w-[275px] sm:h-[375px] sm:w-[375px]">
             {/* Outer ring */}
             <div className="absolute inset-0 rounded-full border border-dashed border-body-medium"></div>
             <div className="absolute inset-0 animate-spin-slow rounded-full">
@@ -202,8 +203,8 @@ const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
             </div>
 
             {/* Second ring */}
-            <div className="absolute inset-[36px] rounded-full border border-dashed border-body-medium"></div>
-            <div className="absolute inset-[36px] animate-spin-slow rounded-full">
+            <div className="absolute inset-[20px] rounded-full border border-dashed border-body-medium sm:inset-[36px]"></div>
+            <div className="absolute inset-[20px] animate-spin-slow rounded-full sm:inset-[36px]">
               <div className="absolute -right-[12px] top-1/2 h-6 w-6 -translate-y-1/2 transform animate-counter-spin-slow rounded-full bg-primary">
                 <TwImage
                   src={randomL2s[1].logo}
@@ -215,8 +216,8 @@ const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
             </div>
 
             {/* Third ring */}
-            <div className="absolute inset-[72px] rounded-full border border-dashed border-body-medium"></div>
-            <div className="absolute inset-[72px] animate-spin-slow rounded-full">
+            <div className="absolute inset-[40px] rounded-full border border-dashed border-body-medium sm:inset-[72px]"></div>
+            <div className="absolute inset-[40px] animate-spin-slow rounded-full sm:inset-[72px]">
               <div className="absolute -bottom-[12px] left-1/2 h-6 w-6 -translate-x-1/2 transform animate-counter-spin-slow rounded-full bg-primary">
                 <TwImage
                   src={randomL2s[2].logo}
@@ -228,8 +229,8 @@ const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
             </div>
 
             {/* Fourth (innermost) ring */}
-            <div className="absolute inset-[108px] rounded-full border border-dashed border-body-medium"></div>
-            <div className="absolute inset-[108px] animate-spin-slow rounded-full">
+            <div className="absolute inset-[60px] rounded-full border border-dashed border-body-medium sm:inset-[108px]"></div>
+            <div className="absolute inset-[60px] animate-spin-slow rounded-full sm:inset-[108px]">
               <div className="absolute -left-[12px] top-1/2 h-6 w-6 -translate-y-1/2 transform animate-counter-spin-slow rounded-full bg-primary">
                 <TwImage
                   src={randomL2s[3].logo}
