@@ -144,8 +144,38 @@ const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
         </div>
       </div>
 
+      {/* TODO: Setup for translation */}
+      {/* TODO: Setup responsive design */}
+      {/* TODO: Setup data fetching */}
       <div id="layer-2-stats-box" className="w-full px-8 py-9">
-        <h2>Stats box</h2>
+        <div className="px-28 py-9">
+          <div className="flex flex-row border border-body-light p-8">
+            <div className="flex-1 border-r border-body-light">
+              <div className="max-w-[224px]">
+                <p className="text-5xl">$2.71</p>
+                <p className="text-body-medium">
+                  Average transaction cost on the Ethereum blockchain
+                </p>
+              </div>
+            </div>
+            <div className="flex-1 pl-14">
+              <div className="max-w-[224px]">
+                <p className="text-5xl">12.34</p>
+                <p className="text-body-medium">
+                  Average transaction cost on the Ethereum blockchain
+                </p>
+              </div>
+            </div>
+
+            <div className="absolute right-0 h-44 w-44 -translate-x-14 -translate-y-32 -rotate-12 rounded-full bg-primary">
+              <div className="flex h-full w-full flex-col items-center justify-center">
+                <p className="text-background">over</p>
+                <p className="text-5xl text-background">100x</p>
+                <p className="text-background">cheaper</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* TODO: Setup for translation */}
