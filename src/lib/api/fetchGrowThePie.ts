@@ -56,5 +56,9 @@ export const fetchGrowThePie = async (): Promise<GrowThePieData> => {
   return {
     txCount: { value: totalTxCount, timestamp },
     txCostsMedianUsd: { value: weightedAverage, timestamp },
+    dailyTxCosts: mostRecentData.reduce((acc, item) => {
+      acc[item.origin_key] = item.value
+      return acc
+    }, {}),
   }
 }

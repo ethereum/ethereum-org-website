@@ -1,7 +1,7 @@
 import type { GetStaticProps } from "next/types"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import type { BasePageProps, Lang } from "@/lib/types"
+import type { BasePageProps, GrowThePieData, Lang } from "@/lib/types"
 
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
@@ -12,6 +12,7 @@ import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -19,11 +20,22 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { layer2Data, Rollups } from "@/data/layer-2/layer-2"
 
+import { BASE_TIME_UNIT } from "@/lib/constants"
+
+import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import HeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import EthereumLogo from "@/public/images/layer-2/ethereum.png"
 import WalkingImage from "@/public/images/layer-2/layer-2-walking.png"
 import ExploreImage from "@/public/images/layer-2/learn-hero.png"
 import ManDogCardImage from "@/public/images/man-and-dog-playing.png"
+
+// In seconds
+const REVALIDATE_TIME = BASE_TIME_UNIT * 24
+
+const loadData = dataLoader(
+  [["fetchGrowThePieData", fetchGrowThePie]],
+  REVALIDATE_TIME * 1000
+)
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
@@ -36,17 +48,29 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
+  const [fetchGrowThePieData] = await loadData()
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       layer2Data,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
+      locale,
+      fetchGrowThePieData,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
 
-const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
+const Layer2Hub = ({
+  layer2Data,
+  fetchGrowThePieData,
+  locale,
+}: {
+  layer2Data: Rollups
+  fetchGrowThePieData: GrowThePieData
+  locale: Lang
+}) => {
   const randomL2s = layer2Data.sort(() => 0.5 - Math.random()).slice(0, 4)
 
   // TODO: setup translation
@@ -151,7 +175,13 @@ const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
           <div className="flex flex-col gap-8 border border-body-light p-8 md:flex-row md:gap-14">
             <div className="flex-1">
               <div className="max-w-[224px]">
-                <p className="text-5xl">$2.71</p>
+                <p className="text-5xl">
+                  $
+                  {fetchGrowThePieData.dailyTxCosts["ethereum"].toLocaleString(
+                    locale as Lang,
+                    { minimumFractionDigits: 2, maximumFractionDigits: 2 }
+                  )}
+                </p>
                 <p className="text-body-medium">
                   Average transaction cost on the Ethereum blockchain
                 </p>
@@ -160,9 +190,15 @@ const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
             <div className="h-auto w-auto self-stretch border-b border-body-light md:border-r" />
             <div className="flex-1">
               <div className="max-w-[224px]">
-                <p className="text-5xl">12.34</p>
+                <p className="text-5xl">
+                  $
+                  {fetchGrowThePieData.txCostsMedianUsd.value.toLocaleString(
+                    locale as Lang,
+                    { minimumFractionDigits: 2, maximumFractionDigits: 3 }
+                  )}
+                </p>
                 <p className="text-body-medium">
-                  Average transaction cost on the Ethereum blockchain
+                  Average transaction cost on Ethereum backed networks
                 </p>
               </div>
             </div>
