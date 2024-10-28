@@ -86,15 +86,11 @@ const ProductCard = ({
     <Flex
       className={cn(
         "flex-col justify-between bg-background-highlight",
-        "shadow-product-card",
         "rounded-base border no-underline",
         "hover:scale-[1.02] hover:transition-transform"
       )}
     >
-      <Center
-        className="min-h-[200px] shadow-product-card-img-container"
-        style={{ backgroundColor: bgProp }}
-      >
+      <Center className="min-h-[200px]" style={{ backgroundColor: bgProp }}>
         <TwImage src={image} alt={alt} height="100" className="self-center" />
       </Center>
       <Flex className="h-full flex-col p-6 text-left">

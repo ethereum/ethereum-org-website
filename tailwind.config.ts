@@ -253,8 +253,6 @@ const config = {
           var(--shadow-window-box-1), var(--shadow-window-box-2),
           var(--shadow-window-box-3), var(--shadow-window-box-4),
           var(--shadow-window-box-5)`,
-        "product-card": "0px 14px 66px rgba(0, 0, 0, 0.07)",
-        "product-card-img-container": "inset 0px -1px 0px rgba(0, 0, 0, 0.1)",
       },
       spacing: {
         7.5: "1.875rem",
