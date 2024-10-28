@@ -28,16 +28,6 @@ _Potresti_ [eseguire un nodo](/developers/docs/nodes-and-clients/#running-your-o
 
 **Nota**: la maggior parte dei [framework di sviluppo](/developers/docs/frameworks/) include una rete di sviluppo incorporata. Raccomandiamo di iniziare con un framework per [impostare l'ambiente di sviluppo locale](/developers/local-environment/).
 
-### Ganache {#ganache}
-
-Imposta rapidamente una blockchain Ethereum personale che permette di eseguire test, comandi e ispezionare lo stato durante il controllo del funzionamento della catena.
-
-Ganache offre sia un'applicazione desktop (Ganache UI) che uno strumento da riga di comando (`ganache-cli`). Fa parte della suite di strumenti Truffle.
-
-- [Sito Web](https://www.trufflesuite.com/ganache)
-- [GitHub](https://github.com/trufflesuite/ganache)
-- [Documentazione](https://www.trufflesuite.com/docs/ganache/overview)
-
 ### Rete Hardhat {#hardhat-network}
 
 Rete Ethereum locale progettata per lo sviluppo. Permette di distribuire contratti, eseguire test e il debug del codice.

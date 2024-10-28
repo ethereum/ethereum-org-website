@@ -5,13 +5,13 @@ import type { ChildOnlyProp, Lang } from "@/lib/types"
 
 import CardList from "@/components/CardList"
 import Emoji from "@/components/Emoji"
-import Select from "@/components/ui/Select"
+import InlineLink from "@/components/ui/Link"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { WEBSITE_EMAIL } from "@/lib/constants"
 
-import InlineLink from "../ui/Link"
+import Select from "../Select"
 
 import { useCentralizedExchanges } from "@/hooks/useCentralizedExchanges"
 
