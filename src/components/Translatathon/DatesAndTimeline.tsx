@@ -1,6 +1,8 @@
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 
+import { cn } from "@/lib/utils/cn"
+
 import { CROWDIN_PROJECT_URL } from "@/lib/constants"
 
 import {
@@ -69,14 +71,17 @@ export const DatesAndTimeline = () => {
         return (
           <Flex
             key={index}
-            className={`flex border-l ${index === dates.length - 1 ? "border-transparent" : "border-purple-600 dark:border-purple-400"} px-4 ${index === dates.length - 1 ? "pb-0" : "pb-16"} gap-4`}
+            className={cn(
+              "flex gap-4 border-l px-4",
+              index === dates.length - 1
+                ? "border-transparent pb-0"
+                : "border-primary pb-16"
+            )}
           >
             <Flex>
               <div
                 className={`-ml-8 h-8 w-8 rounded-full ${
-                  isLive
-                    ? "bg-purple-600 dark:bg-purple-400"
-                    : "bg-purple-100 dark:bg-purple-900"
+                  isLive ? "bg-primary" : "bg-primary-low-contrast"
                 }`}
               />
             </Flex>
@@ -101,7 +106,12 @@ export const DatesAndTimeline = () => {
                 <Flex>
                   <ButtonLink
                     href={date.link}
-                    className={`mt-2 ${date.link === APPLICATION_URL && !isLive ? "pointer-events-none text-disabled" : ""}`}
+                    className={cn(
+                      "mt-2",
+                      date.link === APPLICATION_URL && !isLive
+                        ? "pointer-events-none text-disabled"
+                        : ""
+                    )}
                     variant="outline"
                     aria-disabled={date.link === APPLICATION_URL && !isLive}
                   >
