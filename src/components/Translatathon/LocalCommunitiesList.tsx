@@ -77,7 +77,7 @@ export const LocalCommunitiesList = () => {
       {localCommunitiesData.map((community, index) => (
         <div
           key={index}
-          className="flex flex-col-reverse justify-between gap-8 bg-gray-100 p-6 md:flex-row dark:bg-gray-900"
+          className="flex flex-col-reverse justify-between gap-8 bg-background-highlight p-6 md:flex-row"
         >
           <div className="flex flex-col gap-6">
             <div className="flex w-fit items-center rounded-full bg-white px-5 py-1 dark:bg-black">
