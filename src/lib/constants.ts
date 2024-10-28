@@ -185,7 +185,7 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
   },
   {
     href: "https://ethstaker.cc/blog",
-    feed: "https://paragraph.xyz/api/blogs/rss/@ethstaker",
+    feed: "https://raw.githubusercontent.com/eth-educators/github-actions/refs/heads/main/_data/blog_data.xml",
   },
   {
     href: "https://0xparc.org/blog",

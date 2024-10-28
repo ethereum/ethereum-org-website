@@ -45,7 +45,7 @@ Plattformen mit vertragsbsierter Persistenz:
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
-- [0Chain](https://0chain.net/)
+- [Züs](https://zus.network/)
 - [Crust-Netzwerk](https://crust.network)
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
@@ -61,6 +61,7 @@ IPFS ist ein verteiltes System für die Speicherung und den Zugriff auf Dateien,
 - [IPFS Scan](https://ipfs-scan.io) _(IPFS Pinning Explorer)_
 - [4EVERLAND](https://www.4everland.org/)_（IPFS Pinning Service）_
 - [Filebase](https://filebase.com) _(IPFS Pinning Service)_
+- [Spheron Network](https://spheron.network/) _(IPFS-/Filecoin-Pinning-Dienst)_
 
 SWARM ist eine dezentrale Datenspeicherungs- und Datenverteilungstechnologie mit einem Speicher-Incentive-System und einem Speicher-Mietpreis-Orakel.
 
@@ -74,7 +75,7 @@ Einer der beliebtesten Wege zur Gewährleistung der Datenverfügbarkeit ist es, 
 
 Anbieter von dStorage mit einem Herausforderungsmechanismus:
 
-- 0Chain
+- Züs
 - Skynet
 - Arweave
 - Filecoin
@@ -87,7 +88,7 @@ Es gibt keine hervorragenden Tools, um den Grad der Dezentralität von Plattform
 
 Dezentrale Tools ohne KYC:
 
-- 0Chain (gerade erfolgt die Implementierung einer Version ohne KYC)
+- Züs (gerade erfolgt die Implementierung einer Version ohne KYC)
 - Skynet
 - Arweave
 - Filecoin
@@ -109,7 +110,7 @@ Basierend auf Proof-of-Stake:
 
 - Ethereum
 - Filecoin
-- 0Chain
+- Züs
 - Crust Netzwerk
 
 ## Verwandte Werkzeuge {#related-tools}
@@ -144,17 +145,17 @@ Basierend auf Proof-of-Stake:
 - [Dokumentation](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain – _0Chain ist eine Proof-of-Stake-dStorage-Plattform mit Sharding und Blobbers._**
+**Züs – _Züs ist eine Proof-of-Stake-dStorage-Plattform mit Sharding und Blobbers._**
 
-- [0Chain.net](https://0chain.net/)
-- [Dokumentation](https://docs.0chain.net/0chain/)
+- [zus.network](https://zus.network/)
+- [Documentation](https://0chaindocs.gitbook.io/zus-docs)
 - [GitHub](https://github.com/0chain/)
 
 **Crust Netzwerk – _Crust ist eine dStorage Plattform auf dem IPFS._**
 
 - [Crust.network](https://crust.network)
 - [Dokumentation](https://wiki.crust.network)
-- [Github](https://github.com/crustio)
+- [GitHub](https://github.com/crustio)
 
 **Swarm – _Ein verteiltes Speichersystem und Content-Verteilungs-Service für den Ethereum-Web3-Stack._**
 
@@ -197,6 +198,12 @@ Basierend auf Proof-of-Stake:
 - [Kaleido](https://kaleido.io/)
 - [Dokumentation](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
+
+**Spheron Network – _Spheron ist eine Platform-as-a-Service (PaaS), die für dApps entwickelt wurde, die ihre Anwendungen auf dezentraler Infrastruktur mit bester Leistung starten möchten. Sie bietet standardmäßig Rechenleistung, dezentrale Speicherung, CDN und Webhosting._**
+
+- [spheron.network](https://spheron.network/)
+- [Dokumentation](https://docs.spheron.network/)
+- [GitHub](https://github.com/spheronFdn)
 
 ## Weiterführende Informationen {#further-reading}
 

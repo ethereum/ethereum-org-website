@@ -1,48 +1,27 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
-import { Box, Code, Flex, Icon, VStack } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang, StakingStatsData } from "@/lib/types"
 
 import InlineLink from "@/components/Link"
-import Text from "@/components/OldText"
 import Tooltip from "@/components/Tooltip"
+import { Flex, VStack } from "@/components/ui/flex"
 
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 const Cell = ({ children }: ChildOnlyProp) => (
-  <VStack
-    spacing={2}
-    py={4}
-    px={8}
-    borderInlineStart={{ md: "1px" }}
-    borderTop={{ base: "1px", md: "none" }}
-    // `!important` needed to force an override of the user-agent
-    borderColor="preBorder !important"
-    _first={{
-      borderInlineStart: "none",
-      borderTop: "none",
-    }}
-  >
-    {children}
-  </VStack>
+  <VStack className="gap-2 px-8 py-4">{children}</VStack>
 )
 
 const Value = ({ children }: ChildOnlyProp) => (
-  <Code
-    fontWeight="bold"
-    fontSize="2rem"
-    background="none"
-    color="primary.base"
-    p={0}
-  >
+  <code className="inline-block bg-none p-0 pe-1 font-monospace text-3xl font-bold text-primary">
     {children}
-  </Code>
+  </code>
 )
 
 const Label = ({ children }: ChildOnlyProp) => (
-  <Flex alignItems="center" textTransform="uppercase" fontSize="sm">
+  <Flex className="items-center justify-center gap-2 text-sm uppercase">
     {children}
   </Flex>
 )
@@ -50,17 +29,7 @@ const Label = ({ children }: ChildOnlyProp) => (
 // BeaconchainTooltip component
 const BeaconchainTooltip = ({ children }: ChildOnlyProp) => (
   <Tooltip content={children}>
-    <Box as="span" marginInlineStart={2}>
-      <Icon
-        as={MdInfoOutline}
-        color="text"
-        _hover={{ color: "primary.base" }}
-        _active={{ color: "primary.base" }}
-        _focus={{ color: "primary.base" }}
-        boxSize={4}
-        verticalAlign="middle"
-      />
-    </Box>
+    <MdInfoOutline className="active:primary focus:primary h-4 w-4 align-middle hover:text-primary" />
   </Tooltip>
 )
 
@@ -90,17 +59,17 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
   const currentApr = formatPercentage(data.apr)
 
   return (
-    <Flex direction={{ base: "column", md: "row" }}>
+    <Flex className="flex-col md:flex-row">
       <Cell>
         <Value>{totalEth}</Value>
         <Label>
           {t("page-staking-stats-box-metric-1")}
           <BeaconchainTooltip>
-            <Box textTransform="none">
-              <Text>{t("page-staking-stats-box-metric-1-tooltip")}</Text>
+            <div className="normal-case">
+              <p>{t("page-staking-stats-box-metric-1-tooltip")}</p>
               {t("common:data-provided-by")}{" "}
               <InlineLink href="https://beaconcha.in/">Beaconcha.in</InlineLink>
-            </Box>
+            </div>
           </BeaconchainTooltip>
         </Label>
       </Cell>
@@ -109,11 +78,11 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
         <Label>
           {t("page-staking-stats-box-metric-2")}
           <BeaconchainTooltip>
-            <Box textTransform="none">
-              <Text>{t("page-staking-stats-box-metric-2-tooltip")}</Text>
+            <div className="normal-case">
+              <p>{t("page-staking-stats-box-metric-2-tooltip")}</p>
               {t("common:data-provided-by")}{" "}
               <InlineLink href="https://beaconcha.in/">Beaconcha.in</InlineLink>
-            </Box>
+            </div>
           </BeaconchainTooltip>
         </Label>
       </Cell>
@@ -122,13 +91,13 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
         <Label>
           {t("page-staking-stats-box-metric-3")}
           <BeaconchainTooltip>
-            <Box textTransform="none">
-              <Text>{t("page-staking-stats-box-metric-3-tooltip")}</Text>
+            <div className="normal-case">
+              <p>{t("page-staking-stats-box-metric-3-tooltip")}</p>
               {t("common:data-provided-by")}{" "}
               <InlineLink href="https://beaconcha.in/ethstore">
                 Beaconcha.in
               </InlineLink>
-            </Box>
+            </div>
           </BeaconchainTooltip>
         </Label>
       </Cell>

@@ -295,7 +295,7 @@ def register(name, value):
         self.storage[name] = value
 ```
 
-Sözleşme çok basit; hepsi, Ethereum ağı içinde eklenebilen, ancak değiştirilemeyen veya çıkarılamayan bir veri tabanıdır. Herkes bir değeri olan bir isim kaydedebilir ve bu kayıt sonsuza kadar kalır. Daha karmaşık bir isim kayıt sözleşmesi, diğer sözleşmelerin onu sorgulamasına izin veren bir "işlev maddesine" ve ayrıca bir adın "sahibinin" (yani ilk kaydediciye) verileri değiştirmesine veya mülkiyeti devretmesine izin veren bir mekanizmaya sahip olacaktır. Üstüne itibar ve güven ağı işlevselliği bile eklenebilir.
+Sözleşme çok basittir; Ethereum ağındaki, ekleme yapılabilen ancak değiştirilemeyen veya kaldırılamayan bir veritabanıdır. Herkes bir değeri olan bir isim kaydedebilir ve bu kayıt sonsuza kadar kalır. Daha karmaşık bir isim kayıt sözleşmesi, diğer sözleşmelerin onu sorgulamasına izin veren bir "işlev maddesine" ve ayrıca bir adın "sahibinin" (yani ilk kaydediciye) verileri değiştirmesine veya mülkiyeti devretmesine izin veren bir mekanizmaya sahip olacaktır. Üstüne itibar ve güven ağı işlevselliği bile eklenebilir.
 
 ### Merkeziyetsiz Dosya Depolama {#decentralized-file-storage}
 
@@ -355,7 +355,7 @@ Ethereum, yalnızca yedi seviye aşağı inen basitleştirilmiş bir GHOST sür�
 
 - Bir blok bir ebeveyn belirtmeli ve 0 veya daha fazla amca belirtmelidir
 - B bloğuna dahil olan bir amca aşağıdaki özelliklere sahip olmalıdır:
-  - 2 <= k <= 7 olmak üzere B'nin k nesli atasının doğrudan çocuğu olmalıdır.
+  - `2 <= k <= 7` olmak üzere B'nin k nesli atasının doğrudan çocuğu olmalıdır.
   - B'nin atası olamaz
   - Bir amca, geçerli bir blok başlığı olmalıdır ancak önceden doğrulanmış veya hatta geçerli bir blok olması gerekmez
   - Bir amca, önceki bloklarda yer alan tüm amcalardan ve aynı blokta yer alan diğer tüm amcalardan farklı olmalıdır (çift olmayan dahil etme)

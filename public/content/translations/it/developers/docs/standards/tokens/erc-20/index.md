@@ -155,6 +155,8 @@ Quando i token ERC-20 sono inviati a un contratto intelligente non progettato pe
 3.  Nessuna gestione integrata
     -   Lo standard ERC-20 non include una funzione obbligatoria che i contratti riceventi devono implementare, il che comporta situazioni in cui molti contratti non riescono a gestire adeguatamente i token in entrata
 
+Alcuni standard alternativi hanno risolto questo problema, come l'[ERC-223](/developers/docs/standards/tokens/erc-223)
+
 ## Letture consigliate {#further-reading}
 
 - [EIP-20: Standard dei token ERC-20](https://eips.ethereum.org/EIPS/eip-20)
@@ -165,5 +167,6 @@ Quando i token ERC-20 sono inviati a un contratto intelligente non progettato pe
 
 ## Altri standard di token fungibili {#fungible-token-standards}
 
+- [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Casseforti tokenizzate](/developers/docs/standards/tokens/erc-4626)
