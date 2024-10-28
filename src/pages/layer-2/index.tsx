@@ -1,4 +1,4 @@
-import { GetStaticProps } from "next"
+import type { GetStaticProps } from "next/types"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import type { BasePageProps, Lang } from "@/lib/types"
@@ -145,10 +145,9 @@ const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
       </div>
 
       {/* TODO: Setup for translation */}
-      {/* TODO: Setup responsive design */}
       {/* TODO: Setup data fetching */}
       <div id="layer-2-stats-box" className="w-full px-8 py-9">
-        <div className="max-w-[992px] py-9">
+        <div className="m-auto max-w-[992px] py-9">
           <div className="flex flex-col gap-8 border border-body-light p-8 md:flex-row md:gap-14">
             <div className="flex-1">
               <div className="max-w-[224px]">
@@ -167,14 +166,13 @@ const Layer2Hub = ({ layer2Data }: { layer2Data: Rollups }) => {
                 </p>
               </div>
             </div>
-
-            {/* <div className="absolute right-0 h-44 w-44 -translate-x-14 -translate-y-32 -rotate-12 rounded-full bg-primary">
-              <div className="flex h-full w-full flex-col items-center justify-center">
-                <p className="text-background">over</p>
-                <p className="text-5xl text-background">100x</p>
-                <p className="text-background">cheaper</p>
-              </div>
-            </div> */}
+          </div>
+        </div>
+        <div className="relative m-auto -mt-4 h-44 w-44 -rotate-12 rounded-full bg-primary sm:absolute sm:right-10 sm:-mt-28 md:-mt-80 xl:right-52">
+          <div className="flex h-full w-full flex-col items-center justify-center">
+            <p className="text-background">over</p>
+            <p className="text-5xl text-background">100x</p>
+            <p className="text-background">cheaper</p>
           </div>
         </div>
       </div>
