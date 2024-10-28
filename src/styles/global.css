@@ -160,3 +160,22 @@
     animation-play-state: paused;
   }
 }
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+    width: 6px; /* Width of the vertical scrollbar */
+    height: 100%; /* Height of the horizontal scrollbar */
+    background: #000; /* Background color of the scrollbar */
+    position: absolute; /* Positioning (may not be necessary) */
+}
+
+/* Customize the track (the area the thumb slides in) */
+::-webkit-scrollbar-track {
+    border-radius: 10px; /* Rounds the corners of the track */
+}
+
+/* Customize the thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px; /* Rounds the corners of the thumb */
+    background: #646464; /* Background color of the thumb */
+}
