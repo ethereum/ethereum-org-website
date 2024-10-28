@@ -193,7 +193,8 @@ export const getStaticProps = (async ({ locale }) => {
       metricResults,
       rssData: { rssItems, blogLinks },
     },
-    revalidate: REVALIDATE_TIME,
+    // TODO: re-enable revalidation once we have a workaround for failing builds
+    // revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
@@ -519,7 +520,10 @@ const HomePage = ({
                             </p>
                           </div>
                         </AccordionTrigger>
-                        <AccordionContent className="relative border-t">
+                        <AccordionContent
+                          className="relative border-t"
+                          dir="ltr"
+                        >
                           <Suspense fallback={<SkeletonLines noOfLines={16} />}>
                             <div className="-m-2 max-h-[50vh] overflow-auto">
                               <Codeblock
@@ -551,7 +555,9 @@ const HomePage = ({
                   setIsOpen={setModalOpen}
                   title={codeExamples[activeCode].title}
                 >
-                  <Suspense fallback={<SkeletonLines noOfLines={16} />}>
+                  <Suspense
+                    fallback={<SkeletonLines noOfLines={16} dir="ltr" />}
+                  >
                     <Codeblock
                       codeLanguage={codeExamples[activeCode].codeLanguage}
                       allowCollapse={false}

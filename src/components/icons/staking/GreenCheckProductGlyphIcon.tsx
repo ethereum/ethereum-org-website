@@ -3,7 +3,7 @@ import { createIconBase } from "../icon-base"
 export const GreenCheckProductGlyphIcon = createIconBase({
   displayName: "GreenCheckProductGlyphIcon",
   viewBox: "0 0 24 24",
-  className: "h-auto w-[24px]",
+  className: "size-[1em]",
   children: (
     <>
       <path

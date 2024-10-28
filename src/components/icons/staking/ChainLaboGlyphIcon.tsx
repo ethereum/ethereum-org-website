@@ -3,7 +3,7 @@ import { createIconBase } from "../icon-base"
 export const ChainLaboGlyphIcon = createIconBase({
   displayName: "ChainLaboGlyphIcon",
   viewBox: "0 0 32 32",
-  className: "h-auto w-[32px]",
+  className: "size-[1em]",
   children: (
     <path
       fill="currentColor"

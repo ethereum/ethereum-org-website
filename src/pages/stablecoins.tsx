@@ -192,7 +192,8 @@ export const getStaticProps = (async ({ locale }) => {
       marketsHasError,
     },
     // Updated once a week
-    revalidate: REVALIDATE_TIME,
+    // TODO: re-enable revalidation once we have a workaround for failing builds
+    // revalidate: BASE_TIME_UNIT * 24 * 7,
   }
 }) satisfies GetStaticProps<Props>
 
