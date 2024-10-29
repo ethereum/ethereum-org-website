@@ -169,7 +169,6 @@ const Layer2Hub = ({
       </div>
 
       {/* TODO: Setup for translation */}
-      {/* TODO: Setup data fetching */}
       <div id="layer-2-stats-box" className="w-full px-8 py-9">
         <div className="m-auto max-w-[992px] py-9">
           <div className="flex flex-col gap-8 border border-body-light p-8 md:flex-row md:gap-14">
