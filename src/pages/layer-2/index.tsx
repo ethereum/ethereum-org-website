@@ -84,18 +84,18 @@ const Layer2Hub = ({
         content: "Learn more",
         href: "/layer-2/learn",
         matomo: {
-          eventCategory: "layer 2 hub hero buttons",
-          eventAction: "click",
-          eventName: "/layer-2/learn clicked",
+          eventCategory: "l2_hub",
+          eventAction: "button_click",
+          eventName: "hero_get_started",
         },
       },
       {
         content: "Choose network",
         href: "/layer-2/networks",
         matomo: {
-          eventCategory: "layer 2 hub hero buttons",
-          eventAction: "click",
-          eventName: "/layer-2/networks clicked",
+          eventCategory: "l2_hub",
+          eventAction: "button_click",
+          eventName: "hero_choose_networks",
         },
       },
     ],
@@ -312,7 +312,16 @@ const Layer2Hub = ({
             Have a look at all the different networks that are available to you.
           </p>
           <div>
-            <ButtonLink href="/layer-2/networks">Explore networks</ButtonLink>
+            <ButtonLink
+              href="/layer-2/networks"
+              matomo={{
+                eventCategory: "l2_hub",
+                eventAction: "button_click",
+                eventName: "mid_choose_networks",
+              }}
+            >
+              Explore networks
+            </ButtonLink>
           </div>
         </div>
       </div>
@@ -352,6 +361,11 @@ const Layer2Hub = ({
                       href={l2.website}
                       variant="outline"
                       className="w-full"
+                      matomo={{
+                        eventCategory: "l2_hub",
+                        eventAction: "button_click",
+                        eventName: "mid_powered_by_ethereum",
+                      }}
                     >
                       Go
                     </ButtonLink>
@@ -398,7 +412,16 @@ const Layer2Hub = ({
               network?
             </p>
             <div>
-              <ButtonLink href="/layer-2/learn">Learn more</ButtonLink>
+              <ButtonLink
+                href="/layer-2/learn"
+                matomo={{
+                  eventCategory: "l2_hub",
+                  eventAction: "button_click",
+                  eventName: "mid_l2_learn",
+                }}
+              >
+                Learn more
+              </ButtonLink>
             </div>
           </div>
         </div>
@@ -508,7 +531,16 @@ const Layer2Hub = ({
           }
         >
           <div>
-            <ButtonLink href="/layer-2/networks">Explore networks</ButtonLink>
+            <ButtonLink
+              href="/layer-2/networks"
+              matomo={{
+                eventCategory: "l2_hub",
+                eventAction: "button_click",
+                eventName: "bottom_choose_networks",
+              }}
+            >
+              Explore networks
+            </ButtonLink>
           </div>
         </Callout>
         <Callout
@@ -520,7 +552,16 @@ const Layer2Hub = ({
           headerClassName="-mt-6"
         >
           <div>
-            <ButtonLink href="/layer-2/learn">Learn more</ButtonLink>
+            <ButtonLink
+              href="/layer-2/learn"
+              matomo={{
+                eventCategory: "l2_hub",
+                eventAction: "button_click",
+                eventName: "bottom_l2_learn",
+              }}
+            >
+              Learn more
+            </ButtonLink>
           </div>
         </Callout>
       </div>
