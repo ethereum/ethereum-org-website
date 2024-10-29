@@ -28,10 +28,10 @@ Bővebben a [Dagger-Hashimoto algoritmusról](/developers/docs/consensus-mechani
 
 ## Ethash {#ethash}
 
-Az Ethash az a bányászati algoritmus, melyet az Ethereum főhálózaton használtak a ma már kivezetett proof-of-work architektúrában. Az Ethash az új neve a Dagger-Hashimoto egy specifikus verziójának, mivel azt jelentősen megváltoztatták, de mégis megmaradtak az alapvető elvei az elődjének. Az Ethereum-főhálózat csak az Ethasht használta, mivel Dagger-Hashimoto a kutatás-fejlesztés idején működött, és még a bányászat megkezdése előtt lecserélték.
+Az Ethash az a bányászati algoritmus, melyet az Ethereum főhálózaton használtak a ma már kivezetett proof-of-work architektúrában. Az Ethash az új neve a Dagger-Hashimoto egy specifikus verziójának, mivel azt jelentősen megváltoztatták, de mégis megmaradtak az alapvető elvei az elődjének. Az Ethereum-főhálózat csak az Ethasht használta, mivel a Dagger-Hashimoto a kutatás-fejlesztés idején működött, és még a bányászat megkezdése előtt lecserélték.
 
 [Bővebben az Ethash-ről](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash).
 
 ## További olvasnivaló {#further-reading}
 
-_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
+_Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt és add hozzá!_

@@ -40,6 +40,7 @@ EIP 有 3 种类型：
 ### 代币标准 {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - 同质化（可互换）代币的标准接口，比如投票代币、质押代币或虚拟货币。
+  - [ERC-223](/developers/docs/standards/tokens/erc-223/) - 一个同质化代币标准，使代币的行为与以太币行为相同，并支持在接收方处理代币转账。
   - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - 为 ERC-20 代币定义一个代币接口，支持在转账函数或 transferFrom 函数后执行接收者代码，或在批准后执行消费者代码。
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - 非同质化代币的标准接口，比如艺术作品或歌曲的契约。
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - 使用连续的代币标识符创建/转移一个或多个非同质化代币时，触发的标准事件。

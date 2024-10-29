@@ -20,6 +20,8 @@ const meta = {
       wallets: [false, 0],
       web3: [false, 0],
       daos: [false, 0],
+      stablecoins: [false, 0],
+      defi: [false, 0],
     },
     totalCorrectAnswers: 0,
   },

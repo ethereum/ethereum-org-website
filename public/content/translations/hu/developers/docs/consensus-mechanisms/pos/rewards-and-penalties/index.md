@@ -4,7 +4,7 @@ description: Ismerje meg a protokollon belüli ösztönzőket a proof-of-stake E
 lang: hu
 ---
 
-Az Ethereumot a natív kriptovaluta, az ether (ETH) biztosítja. Azok a csomópont-üzemeltetők, akik részt kívánnak venni a blokkok validálásában és a lánc fejének azonosításában, ethert helyeznek el az Ethereumon egy okosszerződésben. Ezután etherben fizetnek nekik a validátorszoftver futtatásáért, amely ellenőrzi a peer-to-peer hálózaton keresztül érkező új blokkok érvényességét, és a lánc fejének azonosítására az elágazásválasztó-algoritmust alkalmazza.
+Az Ethereumot a natív kriptovaluta, az ether (ETH) biztosítja. Azok a csomópont-üzemeltetők, akik részt kívánnak venni a blokkok validálásában és a lánc fejének azonosításában, ethert helyeznek el az Ethereumon egy [letéti szerződésben](/staking/deposit-contract/). Ezután etherben fizetnek nekik a validátorszoftver futtatásáért, amely ellenőrzi a peer-to-peer hálózaton keresztül érkező új blokkok érvényességét, és a lánc fejének azonosítására az elágazásválasztó-algoritmust alkalmazza.
 
 A validátornak két fő szerepe van: 1) az új blokkok ellenőrzése és „tanúsítása”, hogy érvényesek-e, 2) új blokk előterjesztése, amikor véletlenszerűen kiválasztják a validátorállományból. Ha a validátor nem végzi el e feladatok egyikét sem, amikor erre felkérik, akkor lemarad az ether kifizetéséről. A validátorokat felkérhetik az aláírások összesítésére és a szinkronizáló bizottságokban való részvételre is.
 

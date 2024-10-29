@@ -90,7 +90,7 @@ ethereum.orgは、イーサリアムコミュニティのために公開され�
 
 ethereum.orgコアチームは、私たちの取り組みへのアクセスを簡素化し、より多くのコミュニティとのコラボレーションを促進するために、四半期ごとのロードマップ目標の概要を公開しています。
 
-[2024 Q1製品のロードマップについて](https://github.com/ethereum/ethereum-org-website/issues/12005)
+[2024年第3四半期のプロダクトロードマップをご覧ください。](https://github.com/ethereum/ethereum-org-website/issues/13399)
 
 **いかがでしょうか?**ロードマップに関するフィードバックをお待ちしております。私たちが取り組むべきことについてご意見があれば、お知らせください。 コミュニティからのアイデアやPRをお待ちしています。
 
@@ -113,6 +113,10 @@ ethereum.orgコアチームは、私たちの取り組みへのアクセスを�
 [イーサリアムのウェブサイト](/contributing/design-principles/)への貢献をご希望される場合は、最初に[原則](/contributing/style-guide/)と[スタイルガイド](/contributing/)をお読みください。
 
 デザインの原則、デザインシステム、スタイルガイドに関するフィードバックをお待ちしています。 ethereum.orgはコミュニティによるコミュニティのためのものであることを忘れないでください。
+
+## ライセンス {#license}
+
+Ethereum.orgのウェブサイトは、特に指定がない限り、[MITライセンス](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE)の下でオープンソースとして構築されています。 詳細は、ethereum.orgの[利用規約](/terms-of-use/)をご覧ください。
 
 ## 求人情報 {#open-jobs}
 

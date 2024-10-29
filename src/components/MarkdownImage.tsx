@@ -1,13 +1,12 @@
 import { extname } from "path"
 
-import { Flex } from "@chakra-ui/react"
-
-import { Image, type ImageProps } from "@/components/Image"
-import Link from "@/components/Link"
+import { type ImageProps, TwImage } from "@/components/Image"
 
 import { toPosixPath } from "@/lib/utils/relativePath"
 
 import { CONTENT_IMAGES_MAX_WIDTH } from "@/lib/constants"
+
+import InlineLink from "./ui/Link"
 
 interface MarkdownImageProps extends Omit<ImageProps, "width" | "height"> {
   width: string
@@ -42,20 +41,25 @@ const MarkdownImage = ({
   return (
     // display the wrapper as a `span` to avoid dom nesting warnings as mdx
     // sometimes wraps images in `p` tags
-    <Flex as="span" justify="center">
-      <Link href={transformedSrc} target="_blank" rel="noopener" locale={false}>
-        <Image
+    <span className="flex justify-center">
+      <InlineLink
+        href={transformedSrc}
+        target="_blank"
+        rel="noopener"
+        locale={false}
+      >
+        <TwImage
           alt={alt}
           width={imageWidth}
           height={imageHeight}
           loading="lazy"
           src={transformedSrc}
           unoptimized={isAnimated}
-          h="auto"
+          className="h-auto"
           {...rest}
         />
-      </Link>
-    </Flex>
+      </InlineLink>
+    </span>
   )
 }
 

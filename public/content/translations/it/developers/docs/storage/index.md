@@ -45,7 +45,7 @@ Le piattaforme con persistenza basata su contratto sono:
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
-- [0Chain](https://0chain.net/)
+- [Züs](https://zus.network/)
 - [Rete Crust](https://crust.network)
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
@@ -73,9 +73,9 @@ Per conservare i dati, i sistemi devono avere qualche tipo di meccanismo per ass
 
 Uno dei metodi più diffusi per verificare l'effettiva conservazione dei dati consiste nell'utilizzare qualche tipo di meccanismo di messa alla prova crittografica applicato ai nodi per accertare che contengano ancora i dati. Un esempio semplice è quello di verificare il proof-of-access di Arweave. I nodi vengono messi alla prova per vedere se contengono i dati sia sul blocco più recente sia su un blocco casuale in passato. Se il nodo non trova la risposta, viene penalizzato.
 
-Tipi di dStorage con meccanismo di messa alla prova:
+Tipi di Storage con meccanismo di messa alla prova:
 
-- 0Chain
+- Züs
 - Skynet
 - Arweave
 - Filecoin
@@ -88,7 +88,7 @@ Non esistono strumenti impeccabili per misurare il livello di decentralizzazione
 
 Strumenti decentralizzati senza KYC:
 
-- 0Chain (con implementazione di un'edizione non KYC)
+- Züs (con implementazione di un'edizione non KYC)
 - Skynet
 - Arweave
 - Filecoin
@@ -110,7 +110,7 @@ Basata sul proof-of-stake:
 
 - Ethereum
 - Filecoin
-- 0Chain
+- Züs
 - Rete Crust
 
 ## Strumenti correlati {#related-tools}
@@ -145,10 +145,10 @@ Basata sul proof-of-stake:
 - [Documentazione](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain - _0Chain è una piattaforma di dStorage in proof-of-stake con sharding e blobber._**
+**Züs - _Züs è una piattaforma di dStorage in proof-of-stake con sharding e blobber._**
 
-- [0Chain.net](https://0chain.net/)
-- [Documentazione](https://docs.0chain.net/0chain/)
+- [zus.network](https://zus.network/)
+- [Documentazione](https://0chaindocs.gitbook.io/zus-docs)
 - [GitHub](https://github.com/0chain/)
 
 **Rete Crust: _Crust è una piattaforma di dStorage basata su IPFS._**

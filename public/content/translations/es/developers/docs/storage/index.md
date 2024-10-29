@@ -45,7 +45,7 @@ Plataformas con persistencia basada en contratos:
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
-- [0Chain](https://0chain.net/)
+- [Züs](https://zus.network/)
 - [Crust Network](https://crust.network)
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
@@ -61,6 +61,7 @@ IPFS es un sistema distribuido para almacenar y acceder a archivos, sitios web, 
 - [IPFS Scan:](https://ipfs-scan.io) _Explorador de pinning de IPFS_
 - [4EVERLAND:](https://www.4everland.org/) Servicio de pinning de IPFS
 - [Filebase:](https://filebase.com) _Servicio de pinning de IPFS_
+- [Spheron Network](https://spheron.network/): _Servicio de pinning de IPFS/Filecoin_
 
 SWARM es una tecnología descentralizada de almacenamiento y distribución de datos con un sistema de incentivos de almacenamiento y un oráculo del precios de alquiler de almacenamiento.
 
@@ -74,7 +75,7 @@ Una de las formas más populares de aseguraese de que se están conservando los 
 
 Tipos de dStorage que utilizan un mecanismo de desafíos:
 
-- 0Chain
+- Züs
 - Skynet
 - Arweave
 - Filecoin
@@ -87,7 +88,7 @@ No existen buenas herramientas para medir el nivel de descentralización de las 
 
 Herramientas descentralizadas sin KYC:
 
-- 0Chain (implementando una edición sin KYC)
+- Züs (implementando una edición sin KYC)
 - Skynet
 - Arweave
 - Filecoin
@@ -109,7 +110,7 @@ Basado en prueba de participación:
 
 - Ethereum
 - Filecoin
-- 0Chain
+- Züs
 - Crust Network
 
 ## Herramientas relacionadas {#related-tools}
@@ -144,10 +145,10 @@ Basado en prueba de participación:
 - [Documentación](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain: _0Chain es una plataforma de dStorage de prueba de participación con sharding y blobbers._**
+**Züs: _Züs es una plataforma de dStorage de prueba de participación con sharding y blobbers._**
 
-- [0Chain.net](https://0chain.net/)
-- [Documentación](https://docs.0chain.net/0chain/)
+- [zus.network](https://zus.network/)
+- [Documentación](https://0chaindocs.gitbook.io/zus-docs)
 - [GitHub](https://github.com/0chain/)
 
 **Crust Network: _Crust es una plataforma de dStorage basada en IPFS._**
@@ -197,6 +198,12 @@ Basado en prueba de participación:
 - [Kaleido](https://kaleido.io/)
 - [Documentación](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
+
+**Spheron Network: _Spheron es una plataforma como servicio (PaaS) diseñada para dApps que buscan lanzar sus aplicaciones en infraestructura descentralizada con el mejor rendimiento. Proporciona cómputo, almacenamiento descentralizado, CDN y alojamiento web listo para usar._**
+
+- [spheron.network](https://spheron.network/)
+- [Documentación](https://docs.spheron.network/)
+- [GitHub](https://github.com/spheronFdn)
 
 ## Más información {#further-reading}
 

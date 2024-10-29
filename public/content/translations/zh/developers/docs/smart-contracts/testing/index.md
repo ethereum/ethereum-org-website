@@ -110,7 +110,7 @@ function auctionEnd() external {
 
 这是一个简单的拍卖合约，用于在竞标期间接收竞标。 如果 `highestBid` 增加，先前的最高出价者将收到他们的钱；一旦竞标期结束，`beneficiary` 调用合约以收取他们的钱。
 
-对这样的合约进行的单元测试将涵盖用户在与合约交互时可能调用的不同函数。 一个例子是进行单元测试，检查用户是否能够在拍卖进行期间出价（即调用 `bid()` 成功），或者检查用户是否能够出价高于当前的 `highestBid`。
+对这样的合约进行的单元测试将涵盖用户在与合约交互时可能调用的不同函数。 以单元测试为例，它会检查用户是否能够在拍卖进行期间出价（即调用 `bid()` 成功），或者检查用户是否能够出高于当前 `highestBid` 的价格。
 
 了解合约的运行流程还有助于编写单元测试，以检查执行是否满足要求。 例如，拍卖合约规定，在拍卖结束时（即当 `auctionEndTime` 小于 `block.timestamp` 时），用户无法进行竞标。 因此，开发者可能会运行一个单元测试，检查当拍卖结束时（即当 `auctionEndTime` > `block.timestamp` 时）对 `bid()` 函数的调用成功还是失败。
 
@@ -144,6 +144,7 @@ function auctionEnd() external {
 - **[使用 Remix 运行单元测试](https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests)**
 - **[使用 Ape 运行单元测试](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
 - **[使用安全帽运行单元测试](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
+- **[使用 Wake 运行单元测试](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
 ### 集成测试 {#integration-testing-for-smart-contracts}
 
@@ -188,9 +189,11 @@ function auctionEnd() external {
 配置正确后，属性测试工具将使用随机生成的输入执行你的智能合约函数。 如果存在任何断言违规情况，你应该获得一份报告，其中包含违反正在评估的属性的具体输入数据。 请参阅下面的指南，了解如何使用不同的工具开始运行基于属性的测试：
 
 - **[使用 Slither 进行智能合约静态分析](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither#slither)**
+- **[使用 Wake 进行智能合约静态分析](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**
 - **[使用 Brownie 进行基于属性的测试](https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html)**
 - **[使用 Foundry 进行合约模糊测试](https://book.getfoundry.sh/forge/fuzz-testing)**
 - **[使用 Echidna 进行合约模糊测试](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
+- **[使用 Wake 进行合约模糊测试](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[使用 Manticore 完成智能合约符号执行](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[使用 Mythril 完成智能合约符号执行](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
@@ -262,6 +265,8 @@ function auctionEnd() external {
 
 - **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _基于 Python 的智能合约开发和测试框架，针对太坊虚拟机。_
 
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _基于 Python 的单元测试和模糊测试框架，具有强大的调试功能和跨链测试支持，利用 pytest 和 Anvil 实现最佳用户体验和性能。_
+
 ### 基于属性测试的工具 {#property-based-testing-tools}
 
 #### 静态分析工具 {#static-analysis-tools}
@@ -269,6 +274,10 @@ function auctionEnd() external {
 - **[Slither](https://github.com/crytic/slither)** - _基于 Python 的 Solidity 静态分析框架，用于查找漏洞、增强代码理解以及为智能合约编写自定义分析。_
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _用于执行Solidity 智能合约编程语言的风格和安全最佳实践的 Linter。_
+
+- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _基于 Rust 的静态分析器，专为 Web3 智能合约安全和开发而设计。_
+
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _基于 Python 的静态分析框架，具有漏洞和代码质量检测器，用于从代码中提取有用信息的打印机以及对编写自定义子模块的支持。_
 
 #### 动态分析工具 {#dynamic-analysis-tools}
 
@@ -287,7 +296,7 @@ function auctionEnd() external {
 - [不同测试产品的概述和比较](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [如何使用 Echidna 测试智能合约](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [如何使用 Manticore 查找智能合约漏洞](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-- [如何使用Slither发现智能合约漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [如何使用 Slither 查找智能合约漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [如何模拟测试 Solidity 合约](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [如何利用 Foundry 在 Solidity 中运行单元测试](https://www.rareskills.io/post/foundry-testing-solidity)
 

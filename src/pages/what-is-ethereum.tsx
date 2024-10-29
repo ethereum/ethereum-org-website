@@ -30,7 +30,6 @@ import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import StatErrorMessage from "@/components/StatErrorMessage"
-import Tabs from "@/components/Tabs"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
@@ -42,12 +41,13 @@ import {
   SwiperNavigation,
   SwiperSlide,
 } from "@/components/ui/swiper"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import {
   getLocaleForNumberFormat,
@@ -172,13 +172,15 @@ const Image400 = ({ src }: Pick<ImageProps, "src">) => (
   <TwImage src={src} alt="" width={400} />
 )
 
-const cachedFetchTxCount = runOnlyOnce(fetchGrowThePie)
-
 type Props = BasePageProps & {
   data: MetricReturnData
 }
 
+const loadData = dataLoader([["growThePieData", fetchGrowThePie]])
+
 export const getStaticProps = (async ({ locale }) => {
+  const [data] = await loadData()
+
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
     locale as Lang,
@@ -188,8 +190,6 @@ export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/what-is-ethereum")
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
-
-  const data = await cachedFetchTxCount()
 
   return {
     props: {
@@ -288,7 +288,7 @@ const WhatIsEthereumPage = ({
         </Stack>
       ),
     },
-  ]
+  ] as const
 
   const slides = [
     { eventName: "Payments slide" },
@@ -383,15 +383,28 @@ const WhatIsEthereumPage = ({
                 <TwoColumnContent>
                   <Width60>
                     <Tabs
-                      onTabClick={(index) => {
+                      defaultValue="0"
+                      onValueChange={(index) => {
                         trackCustomEvent({
                           eventCategory: `Blockchain/crypto tab`,
                           eventAction: `Clicked`,
                           eventName: tabs[index].eventName,
                         })
                       }}
-                      tabs={tabs}
-                    />
+                    >
+                      <TabsList>
+                        {tabs.map((tab, index) => (
+                          <TabsTrigger key={index} value={index.toString()}>
+                            {tab.title}
+                          </TabsTrigger>
+                        ))}
+                      </TabsList>
+                      {tabs.map((tab, index) => (
+                        <TabsContent key={index} value={index.toString()}>
+                          {tab.content}
+                        </TabsContent>
+                      ))}
+                    </Tabs>
                   </Width60>
                   <Width40 />
                 </TwoColumnContent>
@@ -601,7 +614,7 @@ const WhatIsEthereumPage = ({
                   </BannerGridCell>
                   <BannerGridCell>
                     <StatPrimary>
-                      {txStat || <StatErrorMessage fontSize="md" />}
+                      {txStat || <StatErrorMessage className="text-md" />}
                     </StatPrimary>
                     {/* TODO: Extract strings for translation */}
                     <StatDescription>

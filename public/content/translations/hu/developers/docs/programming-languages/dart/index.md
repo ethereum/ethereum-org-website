@@ -15,12 +15,12 @@ incomplete: true
 - A [mobilalkalmazások építése a Flutterrel](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) sokkal rövidebb, amely jobb lehet, ha már ismeri az alapokat
 - Ha videók segítségével jobban szeret tanulni, akkor nézze meg az [Építse meg első blokkláncos Flutter alkalmazását](https://www.youtube.com/watch?v=3Eeh3pJ6PeA) videót, amely nagyjából egy óra hosszú
 - Ha ennél kevesebb ideje van, akkor talán tetszeni fog az [Egy blokklánc decentralizált alkalmazás építése a Flutterrel és a Darttal az Ethereumon](https://www.youtube.com/watch?v=jaMFEOCq_1s) videó, amely csak húsz percet veszi igénybe
-- [A MetaMask integrációja a Flutter alkalmazásban](https://youtu.be/8qzVDje3IWk) – ez a rövid videó bemutatja, hogyan kell a MetaMaskot beintegrálni a Flutter alkalmazásokba
+- [A MetaMask integrációja a Flutter alkalmazásban a WalletConnect által nyújtott Web3Modal használatával](https://www.youtube.com/watch?v=v_M2buHCpc4) – ez a rövid videó bemutatja, hogyan kell a MetaMaskot beintegrálni a Flutter alkalmazásokba a [Web3Modal](https://pub.dev/packages/web3modal_flutter) könyvtárral, melyet a WalletConnect biztosít
 - [Mobil blokkláncfejlesztői képzés Solidity-val és Flutterrel](https://youtube.com/playlist?list=PL4V4Unlk5luhQ26ERO6hWEbcUwHDSSmVH) – mobil blokkláncfejlesztői tanfolyam a teljes stack-kel (lejátszási lista)
 
-## Az Ethereum-kliensek használata {#working-with-ethereum-clients}
+## Munka Ethereum kliensekkel {#working-with-ethereum-clients}
 
-Az Ethereumot decentralizált alkalmazások (dappok) fejlesztésére használhatja, amelyek a kriptovaluták és a blokklánc-technológia nyújtotta összes előnyét kiélvezhetik. A Darthoz legalább két könyvtárat tartanak karban, hogy a [JSON RPC API-t](/developers/docs/apis/json-rpc/) használja az Ethereumra.
+Az Ethereumot decentralizált alkalmazások (dappok) fejlesztésére használhatja, amelyek a kriptovaluták és a blokklánc-technológia nyújtotta összes előnyét kiélvezhetik. A Darthoz legalább két könyvtárat tartanak karban, hogy a [JSON-RPC API-t](/developers/docs/apis/json-rpc/) használja az Ethereumra.
 
 1. [Web3dart a simonbutler.eu forrásból](https://pub.dev/packages/web3dart)
 1. [Ethereum 5.0.0 a darticulate.com forrásból](https://pub.dev/packages/ethereum)

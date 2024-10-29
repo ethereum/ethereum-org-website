@@ -5,7 +5,7 @@ lang: pt-br
 sidebarDepth: 2
 ---
 
-A Serialização do prefixo de comprimento recursivo (RLP) é usado extensivamente nos clientes de execução Ethereum. RLP padroniza a transferência de dados entre nós em um formato eficiente em espaço. O objetivo do RLP é codificar arbitrariamente arrays de dados binários aninhados, e o RLP é o principal método de codificação usado para serializar objetos na camada de execução do Ethereum. O único propósito de RLP é codificar estrutura; codificação de tipos de dados específicos (por exemplo: strings, floats) é deixado para protocolos de ordem superior; mas inteiros de RLP positivos devem ser representados em forma binária big-endian sem zeros à esquerda (tornando assim o valor inteiro zero equivalente ao array de bytes vazio). Inteiros positivos desserializados com zeros à esquerda são tratados como inválidos. A representação de números inteiros do comprimento da string também deve ser codificada desta forma, bem como inteiros no payload.
+A Serialização do prefixo de comprimento recursivo (RLP) é usado extensivamente nos clientes de execução Ethereum. RLP padroniza a transferência de dados entre nós em um formato eficiente em espaço. O objetivo do RLP é codificar arbitrariamente arrays de dados binários aninhados, e o RLP é o principal método de codificação usado para serializar objetos na camada de execução do Ethereum. O principal objetivo do RLP é codificar a estrutura; com exceção de números inteiros positivos, o RLP delega a codificação de tipos de dados específicos (por exemplo, strings, floats) para protocolos de ordem superior. Os inteiros positivos devem ser representados no formato binário big-endian, sem zeros à esquerda (tornando assim o valor inteiro zero equivalente ao array de bytes vazio). Inteiros positivos desserializados com zeros à esquerda devem ser tratados como inválidos por qualquer protocolo de ordem superior que use RLP.
 
 Mais informações nas [ páginas amarelas Ethereum (Apêndice B)](https://ethereum.github.io/yellowpaper/paper.pdf#page=19).
 
@@ -20,6 +20,7 @@ A função de codificação RLP recebe um item. Um item é definido como abaixo�
 
 - uma string (ou seja, um byte array) é um item
 - uma lista de itens é um item
+- um inteiro positivo é um item
 
 Por exemplo, todos os seguintes são itens:
 
@@ -27,14 +28,17 @@ Por exemplo, todos os seguintes são itens:
 - a string que contém a palavra "cat";
 - uma lista contendo qualquer número de strings;
 - e uma estrutura de dados mais complexa, como `["cat", ["puppy", "cow"], "horse", [[]], "pig", [""], "sheep"]`.
+- o número `100`
 
-Observe que, no contexto do resto desta página, "string" significa "um certo número de bytes de dados binários"; nenhuma codificação especial é usada e nenhum conhecimento sobre o conteúdo das strings está implícito.
+Observe que, no contexto do restante desta página, 'string' significa "um certo número de bytes de dados binários"; nenhuma codificação especial é usada, e nenhum conhecimento sobre o conteúdo das strings é implícito (exceto conforme exigido pela regra contra inteiros positivos não mínimos).
 
 A codificação RLP é definida da seguinte forma:
 
+- Para um número inteiro positivo, ele é convertido para o menor array de bytes cuja interpretação big-endian é o número inteiro e, então, codificado como uma string de acordo com as regras abaixo.
 - Para um único byte cujo valor está na faixa `[0x00, 0x7f]` (decimal `[0, 127]`), este byte é a sua própria codificação RLP.
 - Caso contrário, se uma string tem de 0 a 55 bytes de comprimento, a codificação RLP consiste em um único byte com valor **0x80** (dec. 128) mais o comprimento da string seguida pela string. O intervalo do primeiro byte é, portanto, `[0x80, 0xb7]` (dec. `[128, 183]`).
 - Se uma string tem mais de 55 bytes de comprimento, a codificação RLP consiste em um único byte com valor **0xb7** (dec. 183) mais o comprimento em bytes do comprimento da sequência de caracteres na forma binária, seguido pelo comprimento da string, seguido pela string. Por exemplo, uma string de 1024 bytes de comprimento seria codificada como `\xb9\x04\x00` (dec. `185, 4, 0`) seguida pela string. Aqui, `0xb9` (183 + 2 = 185) como o primeiro byte, seguido pelos 2 bytes `0x0400` (dec. 1024) que denotam o comprimento da string real. O intervalo do primeiro byte é, portanto, `[0x80, 0xb7]` (dec. `[184, 191]`).
+- Se uma string tiver 2^64 bytes de comprimento ou mais, ela poderá não ser codificada.
 - Se o total de carga de uma lista (ou seja, o comprimento combinado de totos os seus itens com codificação RLP) tiver 0 a 55 bytes de comprimento, a codificação RLP consiste em um único byte com valor **0xc0** mais o comprimento da carga seguido da concatenação das codificações dos itens. O intervalo do primeiro byte é, portanto, `[0x80, 0xb7]` (dec. `[192, 247]`).
 - Se o payload total de uma lista tem mais de 55 bytes de comprimento, a codificação RLP consiste em um único byte com valor **0xf7** mais o comprimento em bytes do payload na forma binária, seguida pelo comprimento do payload, seguido pela concatenação das codificações RLP dos itens. O intervalo do primeiro byte é, portanto, `[0x80, 0xb7]` (dec. `[248, 255]`).
 
@@ -73,9 +77,9 @@ def to_binary(x):
 - a string vazia ('null') = `[ 0x80 ]`
 - a lista vazia = `[ 0xc0 ]`
 - o inteiro 0 = `[ 0x80 ]`
-- o inteiro codificado 0 ('\\x00') = `[ 0x00 ]`
-- o inteiro codificado 15 ('\\x0f') = `[ 0x00 ]`
-- o inteiro codificado 1024 ('\\x04') =  `[ 0x82, 0x04, 0x00 ]`
+- o byte '\\x00' = `[ 0x00 ]`
+- o byte '\\x0f' = `[ 0x0f ]`
+- os bytes '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
 - [define a representação teórica](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) para três, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc0, 0xc1, 0xc0 ]`
 - a string "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
@@ -85,7 +89,7 @@ De acordo com as regras e o processo de codificação RLP, a entrada da decodifi
 
 1.  de acordo com o primeiro byte (ou seja, o prefixo) dos dados de entrada e a decodificação do tipo de dados, o comprimento do dado em si e deslocamento;
 
-2.  de acordo com o tipo e o deslocamento de dados, decodificar os dados correspondentemente;
+2.  de acordo com o tipo e deslocamento dos dados, decodificar os dados de maneira correspondente, respeitando a regra de codificação mínima para inteiros positivos;
 
 3.  continue a decodificar o resto da entrada;
 
