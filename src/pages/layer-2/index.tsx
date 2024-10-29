@@ -33,7 +33,7 @@ import ManDogCardImage from "@/public/images/man-and-dog-playing.png"
 const REVALIDATE_TIME = BASE_TIME_UNIT * 24
 
 const loadData = dataLoader(
-  [["fetchGrowThePieData", fetchGrowThePie]],
+  [["growThePieData", fetchGrowThePie]],
   REVALIDATE_TIME * 1000
 )
 
@@ -48,7 +48,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
-  const [fetchGrowThePieData] = await loadData()
+  const [growThePieData] = await loadData()
 
   return {
     props: {
@@ -57,25 +57,25 @@ export const getStaticProps = (async ({ locale }) => {
       contentNotTranslated,
       lastDeployLocaleTimestamp,
       locale,
-      fetchGrowThePieData,
+      growThePieData,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
 
 const Layer2Hub = ({
   layer2Data,
-  fetchGrowThePieData,
+  growThePieData,
   locale,
 }: {
   layer2Data: Rollups
-  fetchGrowThePieData: GrowThePieData
+  growThePieData: GrowThePieData
   locale: Lang
 }) => {
   const randomL2s = layer2Data.sort(() => 0.5 - Math.random()).slice(0, 4)
   const medianTxCost =
-    "error" in fetchGrowThePieData.txCostsMedianUsd
-      ? { error: fetchGrowThePieData.txCostsMedianUsd.error }
-      : fetchGrowThePieData.txCostsMedianUsd.value
+    "error" in growThePieData.txCostsMedianUsd
+      ? { error: growThePieData.txCostsMedianUsd.error }
+      : growThePieData.txCostsMedianUsd.value
 
   // TODO: setup translation
   const heroContent: HubHeroProps = {
@@ -180,7 +180,7 @@ const Layer2Hub = ({
               <div className="max-w-[224px]">
                 <p className="text-5xl">
                   $
-                  {fetchGrowThePieData.dailyTxCosts["ethereum"].toLocaleString(
+                  {growThePieData.dailyTxCosts["ethereum"].toLocaleString(
                     locale as Lang,
                     { minimumFractionDigits: 2, maximumFractionDigits: 2 }
                   )}
