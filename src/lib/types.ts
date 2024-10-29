@@ -540,7 +540,9 @@ export type StatsBoxState = ValueOrError<string>
 
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
-export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData>
+export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
+  dailyTxCosts: Record<string, number>
+}
 
 export type MetricName =
   | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD

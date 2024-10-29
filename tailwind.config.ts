@@ -279,12 +279,18 @@ const config = {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(0%)" },
         },
+        spin: {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "scroll-left": "scroll-left 30s linear infinite",
         "scroll-right": "scroll-right 30s linear infinite",
+        "spin-slow": "spin 10s linear infinite",
+        "counter-spin-slow": "spin 10s linear infinite reverse",
       },
       // Add custom border-radius tailwinds extension for "4xl" as "2rem"
       borderRadius: {

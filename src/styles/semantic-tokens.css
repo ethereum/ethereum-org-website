@@ -75,6 +75,12 @@
       transparent 100%
     );
 
+    --linear-gradient-step-1: linear-gradient(
+      to bottom,
+      #B9B9F1 0%,
+      rgba(185, 185, 241, 0.2) 100%
+    );
+
     --linear-bug-bounty-title: linear-gradient(
       to left,
       #f7cbc0 0%,

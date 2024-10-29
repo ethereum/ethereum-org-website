@@ -17,6 +17,7 @@ export type CalloutProps = {
   title?: string
   description?: string
   className?: string
+  headerClassName?: string
 }
 
 const Callout = ({
@@ -29,6 +30,7 @@ const Callout = ({
   description,
   children,
   className,
+  headerClassName,
 }: CalloutProps) => {
   const { t } = useTranslation("common")
 
@@ -44,7 +46,7 @@ const Callout = ({
           <TwImage
             src={image}
             alt={alt || ""}
-            className="min-h-[200px] max-w-[263px] object-contain"
+            className="max-h-[263px] min-h-[200px] max-w-[263px] object-contain"
           />
         </div>
       )}
@@ -52,10 +54,24 @@ const Callout = ({
         <div>
           {emoji && <Emoji text={emoji} className="text-5xl" />}
           {titleKey && (
-            <h3 className="mb-8 mt-10 text-2xl leading-[1.4]">{t(titleKey)}</h3>
+            <h3
+              className={cn(
+                "mb-8 mt-10 text-2xl leading-[1.4]",
+                headerClassName
+              )}
+            >
+              {t(titleKey)}
+            </h3>
           )}
           {title && (
-            <h3 className="mb-8 mt-10 text-2xl leading-[1.4]">{title}</h3>
+            <h3
+              className={cn(
+                "mb-8 mt-10 text-2xl leading-[1.4]",
+                headerClassName
+              )}
+            >
+              {title}
+            </h3>
           )}
           {descriptionKey && (
             <p className="mb-6 text-xl leading-[140%] text-body-medium">
