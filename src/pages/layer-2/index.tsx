@@ -72,6 +72,10 @@ const Layer2Hub = ({
   locale: Lang
 }) => {
   const randomL2s = layer2Data.sort(() => 0.5 - Math.random()).slice(0, 4)
+  const medianTxCost =
+    "error" in fetchGrowThePieData.txCostsMedianUsd
+      ? { error: fetchGrowThePieData.txCostsMedianUsd.error }
+      : fetchGrowThePieData.txCostsMedianUsd.value
 
   // TODO: setup translation
   const heroContent: HubHeroProps = {
@@ -191,10 +195,10 @@ const Layer2Hub = ({
               <div className="max-w-[224px]">
                 <p className="text-5xl">
                   $
-                  {fetchGrowThePieData.txCostsMedianUsd.value.toLocaleString(
-                    locale as Lang,
-                    { minimumFractionDigits: 2, maximumFractionDigits: 3 }
-                  )}
+                  {medianTxCost.toLocaleString(locale as Lang, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 3,
+                  })}
                 </p>
                 <p className="text-body-medium">
                   Average transaction cost on Ethereum backed networks
@@ -314,7 +318,7 @@ const Layer2Hub = ({
           <div>
             <ButtonLink
               href="/layer-2/networks"
-              matomo={{
+              customEventOptions={{
                 eventCategory: "l2_hub",
                 eventAction: "button_click",
                 eventName: "mid_choose_networks",
@@ -361,7 +365,7 @@ const Layer2Hub = ({
                       href={l2.website}
                       variant="outline"
                       className="w-full"
-                      matomo={{
+                      customEventOptions={{
                         eventCategory: "l2_hub",
                         eventAction: "button_click",
                         eventName: "mid_powered_by_ethereum",
@@ -414,7 +418,7 @@ const Layer2Hub = ({
             <div>
               <ButtonLink
                 href="/layer-2/learn"
-                matomo={{
+                customEventOptions={{
                   eventCategory: "l2_hub",
                   eventAction: "button_click",
                   eventName: "mid_l2_learn",
@@ -533,7 +537,7 @@ const Layer2Hub = ({
           <div>
             <ButtonLink
               href="/layer-2/networks"
-              matomo={{
+              customEventOptions={{
                 eventCategory: "l2_hub",
                 eventAction: "button_click",
                 eventName: "bottom_choose_networks",
@@ -554,7 +558,7 @@ const Layer2Hub = ({
           <div>
             <ButtonLink
               href="/layer-2/learn"
-              matomo={{
+              customEventOptions={{
                 eventCategory: "l2_hub",
                 eventAction: "button_click",
                 eventName: "bottom_l2_learn",
