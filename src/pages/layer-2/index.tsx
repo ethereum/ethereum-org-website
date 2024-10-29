@@ -410,9 +410,9 @@ const Layer2Hub = ({
         <div>
           <ExpandableCard
             title={"How do I know that a network is part of Ethereum?"}
-            eventCategory=""
-            eventAction=""
-            eventName=""
+            eventCategory="l2_hub"
+            eventAction="expand"
+            eventName="how do i know if a network is part of ethereum"
             visible={true}
           >
             <div className="flex flex-col gap-8">
@@ -436,9 +436,9 @@ const Layer2Hub = ({
           </ExpandableCard>
           <ExpandableCard
             title={"Are all these networks safe?"}
-            eventCategory=""
-            eventAction=""
-            eventName=""
+            eventCategory="l2_hub"
+            eventAction="expand"
+            eventName="are all these networks safe"
             visible={true}
           >
             <div className="flex flex-col gap-8">
@@ -458,9 +458,9 @@ const Layer2Hub = ({
             title={
               "Why can't Ethereum scale its own chain instead of relying on these networks?"
             }
-            eventCategory=""
-            eventAction=""
-            eventName=""
+            eventCategory="l2_hub"
+            eventAction="expand"
+            eventName="why can't ethereum scale its own chain instead of relying on these networks"
             visible={true}
           >
             <p>
@@ -475,9 +475,9 @@ const Layer2Hub = ({
           </ExpandableCard>
           <ExpandableCard
             title={"Why is there no 'official' Ethereum networks?"}
-            eventCategory=""
-            eventAction=""
-            eventName=""
+            eventCategory="l2_hub"
+            eventAction="expand"
+            eventName="why is there no official ethereum networks"
             visible={true}
           >
             <p>
