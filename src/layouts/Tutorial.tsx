@@ -58,7 +58,7 @@ const Heading4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
 )
 
 const Paragraph = (props: HTMLAttributes<HTMLParagraphElement>) => (
-  <p className="mx-0 mb-4 mt-8" {...props} />
+  <p className="mx-0 mb-4 mt-8 text-wrap" {...props} />
 )
 
 const KBD = (props: HTMLAttributes<HTMLElement>) => (
