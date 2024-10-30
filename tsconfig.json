@@ -21,6 +21,14 @@
       "@/storybook-utils": ["./.storybook/utils.ts"]
     }
   },
-  "include": ["./src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".storybook/**/*", "tailwind/ui"],
+  "include": [
+    "./src/**/*",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".storybook/**/*",
+    "tailwind/ui",
+    "trigger.config.ts"
+  ],
   "exclude": ["node_modules", "./public", "./src/intl"]
 }
