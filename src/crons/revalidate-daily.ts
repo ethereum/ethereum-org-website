@@ -1,6 +1,6 @@
 import { schedules } from "@trigger.dev/sdk/v3"
 
-import { revalidatePaths } from "./revalidate"
+import { revalidatePaths } from "./utils"
 
 const PATHS_TO_REVALIDATE = ["/", "/staking/", "/wallets/find-wallet/"]
 
