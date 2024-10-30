@@ -400,6 +400,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "sn",
+    "crowdinCode": "sn",
+    "name": "Shona",
+    "localName": "Shona",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "sr",
     "crowdinCode": "sr-CS",
     "name": "Serbian",
