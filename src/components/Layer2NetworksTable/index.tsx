@@ -2,19 +2,19 @@ import { useState } from "react"
 
 import { FilterOption } from "@/lib/types"
 
+import { useNetworkFilters } from "@/components/Layer2NetworksTable/hooks/useNetworkFilters"
 import ProductTable from "@/components/ProductTable"
 
 import type { Rollups } from "@/data/layer-2/layer-2"
 
 const Layer2NetworksTable = ({ layer2Data }: { layer2Data: Rollups }) => {
   // const walletPersonas = useWalletPersonaPresets()
-  // const walletFilterOptions = useWalletFilters()
+  // TODO: Implement
+  const networkFilterOptions = useNetworkFilters()
   const [filters, setFilters] = useState<FilterOption[]>([])
 
   const resetFilters = () => {
-    // TODO: Implement
-    // const networkFilterOptions = useNetworkFilters()
-    setFilters([]) // TODO: Make same as initial state for filters
+    setFilters(networkFilterOptions)
 
     // TODO: Add event tracking
     // trackCustomEvent({
