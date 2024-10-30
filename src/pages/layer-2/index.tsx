@@ -207,13 +207,14 @@ const Layer2Hub = ({
             </div>
           </div>
         </div>
-        <div className="relative m-auto -mt-4 h-44 w-44 -rotate-12 rounded-full bg-primary sm:absolute sm:right-10 sm:-mt-28 md:-mt-80 xl:right-52">
+        {/* TODO: Commented out for now, remove before release if we don't ship with it. */}
+        {/* <div className="relative m-auto -mt-4 h-44 w-44 -rotate-12 rounded-full bg-primary sm:absolute sm:right-10 sm:-mt-28 md:-mt-80 xl:right-52">
           <div className="flex h-full w-full flex-col items-center justify-center">
             <p className="text-background">over</p>
             <p className="text-5xl text-background">100x</p>
             <p className="text-background">cheaper</p>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* TODO: Setup for translation */}
