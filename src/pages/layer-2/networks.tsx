@@ -1,7 +1,12 @@
+import { useRouter } from "next/router"
 import type { GetStaticProps } from "next/types"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import type { BasePageProps, Lang } from "@/lib/types"
+
+import { ContentHero, ContentHeroProps } from "@/components/Hero"
+import MainArticle from "@/components/MainArticle"
+import PageMetadata from "@/components/PageMetadata"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -30,7 +35,28 @@ export const getStaticProps = (async ({ locale }) => {
 }) satisfies GetStaticProps<BasePageProps>
 
 const Layer2Networks = () => {
-  return <div>Layer2Networks</div>
+  const { pathname } = useRouter()
+
+  const heroProps: ContentHeroProps = {
+    breadcrumbs: { slug: pathname, startDepth: 1 },
+    heroImg: "/images/layer-2/learn-hero.png",
+    blurDataURL: "/images/layer-2/learn-hero.png",
+    title: "Choose network",
+    description:
+      "Using Ethereum today means interacting with hundreds of different networks and apps. All backed by Ethereum as the foundational backbone.",
+  }
+
+  return (
+    <MainArticle className="relative flex flex-col">
+      <PageMetadata
+        title="Choose network"
+        description="Using Ethereum today means interacting with hundreds of different networks and apps. All backed by Ethereum as the foundational backbone."
+        image="/images/layer-2/learn-hero.png"
+      />
+
+      <ContentHero {...heroProps} />
+    </MainArticle>
+  )
 }
 
 export default Layer2Networks
