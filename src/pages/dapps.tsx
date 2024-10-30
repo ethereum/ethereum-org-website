@@ -106,7 +106,6 @@ import requestFinance from "@/public/images/dapps/requestFinance.png"
 import rotki from "@/public/images/dapps/rotki.png"
 import rubic from "@/public/images/dapps/rubic.png"
 import sablier from "@/public/images/dapps/sablier.png"
-import set from "@/public/images/dapps/set.png"
 import spatial from "@/public/images/dapps/spatial.png"
 import spruce from "@/public/images/dapps/spruce.png"
 import status from "@/public/images/dapps/status.png"
@@ -817,13 +816,6 @@ const DappsPage = () => {
   ]
 
   const investments = [
-    {
-      title: "Token Sets",
-      description: t("page-dapps-dapp-description-token-sets"),
-      link: "https://www.tokensets.com/",
-      image: set,
-      alt: t("page-dapps-token-sets-logo-alt"),
-    },
     {
       title: "PoolTogether",
       description: t("page-dapps-dapp-description-pooltogether"),
