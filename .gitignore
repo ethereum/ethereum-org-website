@@ -60,5 +60,3 @@ src/data/crowdin/bucketsAwaitingReviewReport.csv
 # Storybook
 build-storybook.log
 storybook-static
-
-.trigger
