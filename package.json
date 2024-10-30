@@ -25,7 +25,9 @@
     "crowdin-needs-review": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/reports/generateReviewReport.ts",
     "theme": "chakra-cli tokens ./src/@chakra-ui/theme.ts",
     "theme:watch": "chakra-cli tokens ./src/@chakra-ui/theme.ts --watch",
-    "prepare": "husky"
+    "prepare": "husky",
+    "trigger:dev": "trigger dev",
+    "trigger:deploy": "trigger deploy"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.0",
