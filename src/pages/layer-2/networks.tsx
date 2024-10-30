@@ -23,7 +23,7 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
-  const requiredNamespaces = getRequiredNamespacesForPage("/layer-2")
+  const requiredNamespaces = getRequiredNamespacesForPage("/layer-2/networks")
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
