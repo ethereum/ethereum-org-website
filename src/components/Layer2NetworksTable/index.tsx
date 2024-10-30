@@ -11,7 +11,7 @@ const Layer2NetworksTable = ({ layer2Data }: { layer2Data: Rollups }) => {
   // const walletPersonas = useWalletPersonaPresets()
   // TODO: Implement
   const networkFilterOptions = useNetworkFilters()
-  const [filters, setFilters] = useState<FilterOption[]>([])
+  const [filters, setFilters] = useState<FilterOption[]>(networkFilterOptions)
 
   const resetFilters = () => {
     setFilters(networkFilterOptions)
@@ -27,7 +27,7 @@ const Layer2NetworksTable = ({ layer2Data }: { layer2Data: Rollups }) => {
   return (
     <ProductTable
       columns={[]}
-      data={layer2Data}
+      data={[]}
       allDataLength={layer2Data.length}
       filters={filters}
       presetFilters={[]}
