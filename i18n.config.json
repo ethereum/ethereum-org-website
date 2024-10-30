@@ -464,6 +464,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "tl",
+    "crowdinCode": "tl",
+    "name": "Tagalog",
+    "localName": "Tagalog",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "tr",
     "crowdinCode": "tr",
     "name": "Turkish",
