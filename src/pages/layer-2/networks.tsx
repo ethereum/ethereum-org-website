@@ -5,6 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { BasePageProps, Lang } from "@/lib/types"
 
 import { ContentHero, ContentHeroProps } from "@/components/Hero"
+import Layer2NetworksTable from "@/components/Layer2NetworksTable"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 
@@ -12,6 +13,8 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { layer2Data } from "@/data/layer-2/layer-2"
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
@@ -55,6 +58,8 @@ const Layer2Networks = () => {
       />
 
       <ContentHero {...heroProps} />
+
+      <Layer2NetworksTable layer2Data={layer2Data} />
     </MainArticle>
   )
 }
