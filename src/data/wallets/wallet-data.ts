@@ -1153,7 +1153,7 @@ export const walletsData: WalletData[] = [
     firefox: false,
     chromium: false,
     hardware: true,
-    open_source: true,
+    open_source: false,
     repo_url: " https://github.com/LedgerHQ",
     non_custodial: true,
     security_audit: [""],
