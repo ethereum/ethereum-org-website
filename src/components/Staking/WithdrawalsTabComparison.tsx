@@ -1,12 +1,13 @@
 import { useTranslation } from "next-i18next"
 
-import { ButtonLink } from "@/components/Buttons"
 import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import Translation from "@/components/Translation"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { ButtonLink } from "../ui/buttons/Button"
 
 const WithdrawalsTabComparison = () => {
   const { t } = useTranslation("page-staking")
@@ -35,39 +36,37 @@ const WithdrawalsTabComparison = () => {
         </TabsTrigger>
       </TabsList>
 
-      <div>
-        <TabsContent
-          value="current"
-          className="space-y-4 bg-background-highlight"
-        >
-          <h3>{t("comp-withdrawal-comparison-current-title")}</h3>
-          <UnorderedList>
-            <ListItem>
-              <Translation id="page-staking:comp-withdrawal-comparison-current-li-1" />{" "}
-            </ListItem>
-            <ListItem>
-              <Translation id="page-staking:comp-withdrawal-comparison-current-li-2" />
-            </ListItem>
-          </UnorderedList>
-          <p className="font-bold">
-            <Translation id="page-staking:comp-withdrawal-comparison-current-p" />
-          </p>
+      <TabsContent
+        value="current"
+        className="space-y-4 bg-background-highlight"
+      >
+        <h3>{t("comp-withdrawal-comparison-current-title")}</h3>
+        <UnorderedList>
+          <ListItem>
+            <Translation id="page-staking:comp-withdrawal-comparison-current-li-1" />{" "}
+          </ListItem>
+          <ListItem>
+            <Translation id="page-staking:comp-withdrawal-comparison-current-li-2" />
+          </ListItem>
+        </UnorderedList>
+        <p className="font-bold">
+          <Translation id="page-staking:comp-withdrawal-comparison-current-p" />
+        </p>
 
-          <WithdrawalCredentials />
-        </TabsContent>
+        <WithdrawalCredentials />
+      </TabsContent>
 
-        <TabsContent value="new" className="space-y-4 bg-background-highlight">
-          <h3>{t("comp-withdrawal-comparison-new-title")}</h3>
-          <UnorderedList>
-            <ListItem>{t("comp-withdrawal-comparison-new-li-1")}</ListItem>
-            <ListItem>{t("comp-withdrawal-comparison-new-li-2")}</ListItem>
-          </UnorderedList>
-          <p className="font-bold">{t("comp-withdrawal-comparison-new-p")}</p>
-          <ButtonLink href="https://launchpad.ethereum.org/" hideArrow>
-            {t("comp-withdrawal-comparison-new-link")}
-          </ButtonLink>
-        </TabsContent>
-      </div>
+      <TabsContent value="new" className="space-y-4 bg-background-highlight">
+        <h3>{t("comp-withdrawal-comparison-new-title")}</h3>
+        <UnorderedList>
+          <ListItem>{t("comp-withdrawal-comparison-new-li-1")}</ListItem>
+          <ListItem>{t("comp-withdrawal-comparison-new-li-2")}</ListItem>
+        </UnorderedList>
+        <p className="font-bold">{t("comp-withdrawal-comparison-new-p")}</p>
+        <ButtonLink href="https://launchpad.ethereum.org/" hideArrow>
+          {t("comp-withdrawal-comparison-new-link")}
+        </ButtonLink>
+      </TabsContent>
     </Tabs>
   )
 }
