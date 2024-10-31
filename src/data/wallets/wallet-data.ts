@@ -10,6 +10,7 @@ import BlockWalletImage from "@/public/images/wallets/blockwallet.png"
 import BridgeWalletImage from "@/public/images/wallets/bridge.png"
 import CoinbaseImage from "@/public/images/wallets/coinbase.png"
 import CoinWalletImage from "@/public/images/wallets/coinwallet.png"
+import CtrlWalletImage from "@/public/images/wallets/ctrl.png"
 import EnkryptImage from "@/public/images/wallets/enkrypt.png"
 import ExodusImage from "@/public/images/wallets/exodus.png"
 import FoxWalletImage from "@/public/images/wallets/foxwallet.png"
@@ -36,7 +37,6 @@ import TorusImage from "@/public/images/wallets/torus.png"
 import TrezorImage from "@/public/images/wallets/trezor.png"
 import TrustWalletImage from "@/public/images/wallets/trustwallet.png"
 import UnstoppableWalletImage from "@/public/images/wallets/unstoppable.png"
-import XDEFIImage from "@/public/images/wallets/xdefi.png"
 import ZerionImage from "@/public/images/wallets/zerion.png"
 
 export const walletsData: WalletData[] = [
@@ -1751,7 +1751,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2023-08-29",
     name: "Ctrl Wallet",
-    image: XDEFIImage,
+    image: CtrlWalletImage,
     twBackgroundColor: "bg-[#ffffff]",
     twGradiantBrandColor: "from-[#ffffff]",
     url: "https://ctrl.xyz/",
@@ -1792,8 +1792,7 @@ export const walletsData: WalletData[] = [
     multisig: false,
     social_recovery: true,
     onboard_documentation: "https://intercom.help/ctrlwallet/en/",
-    documentation:
-      "https://docs.xdefi.io/docs",
+    documentation: "https://docs.xdefi.io/docs",
   },
   {
     last_updated: "2023-11-02",
