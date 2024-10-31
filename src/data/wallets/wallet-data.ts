@@ -1589,8 +1589,7 @@ export const walletsData: WalletData[] = [
       "vi",
       "id",
       "pt-br",
-      "zh-hk",
-      "fr"
+      "fr",
     ],
     twitter: "https://x.com/onekeyhq",
     discord: "https://discord.gg/onekey",
