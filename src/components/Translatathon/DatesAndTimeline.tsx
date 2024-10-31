@@ -80,18 +80,19 @@ export const DatesAndTimeline = () => {
           >
             <Flex>
               <div
-                className={`-ml-8 h-8 w-8 rounded-full ${
+                className={cn(
+                  "-ml-8 h-8 w-8 rounded-full",
                   isLive ? "bg-primary" : "bg-primary-low-contrast"
-                }`}
+                )}
               />
             </Flex>
             <Flex className="flex flex-col gap-6">
               <Flex
-                className={`flex h-8 items-center rounded-full px-4 ${
-                  isLive
-                    ? "dark:text-ButtonLinkack bg-purple-600 text-white dark:bg-purple-400"
-                    : "bg-purple-100 text-gray-800 dark:bg-purple-900 dark:text-gray-100"
-                }`}
+                className={cn(
+                  "flex h-8 items-center rounded-full px-4",
+                  isLive && "text-body-inverse",
+                  isLive ? "bg-primary" : "bg-primary-low-contrast"
+                )}
               >
                 <p>
                   {date.startDate.toDateString()}{" "}
