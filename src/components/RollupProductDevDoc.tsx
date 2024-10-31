@@ -1,9 +1,6 @@
-import { Box, Flex, Heading, ListItem, UnorderedList } from "@chakra-ui/react"
-
 import { layer2Data, Rollups, RollupType } from "@/data/layer-2/layer-2"
 
 import InlineLink from "./Link"
-import Text from "./OldText"
 import Translation from "./Translation"
 
 const rollups = layer2Data as Rollups
@@ -14,51 +11,45 @@ export type RollupProductDevDocProps = {
 
 const RollupProductDevDoc = ({ rollupType }: RollupProductDevDocProps) => {
   return (
-    <Box>
+    <div>
       {rollups[rollupType].map(
         ({ name, noteKey, website, developerDocs, l2beat }, idx) => {
           return (
-            <Flex key={idx} my={4} background="rollupDevDocList">
-              <Box p={4} pb={0}>
-                <Box>
-                  <Heading
-                    as="h4"
-                    fontSize={{ base: "md", md: "xl" }}
-                    fontWeight="500"
-                    lineHeight="1.4"
-                    my={4}
-                  >
+            <div key={idx} className="bg-rollupDevDocList my-4">
+              <div className="p-4 pb-0">
+                <div>
+                  <h4 className="my-4 text-md font-medium leading-relaxed md:text-xl">
                     {name}
-                  </Heading>
+                  </h4>
                   {noteKey.length > 0 && (
-                    <Text>
+                    <p>
                       * <Translation id={`page-layer-2:${noteKey}`} />
-                    </Text>
+                    </p>
                   )}
-                  <UnorderedList>
-                    <ListItem>
+                  <ul className="list-disc pl-5">
+                    <li>
                       <InlineLink href={website}>
                         <Translation id="rollup-component-website" />
                       </InlineLink>
-                    </ListItem>
-                    <ListItem>
+                    </li>
+                    <li>
                       <InlineLink href={developerDocs}>
                         <Translation id="rollup-component-developer-docs" />
                       </InlineLink>
-                    </ListItem>
-                    <ListItem>
+                    </li>
+                    <li>
                       <InlineLink href={l2beat}>
                         <Translation id="rollup-component-technology-and-risk-summary" />
                       </InlineLink>
-                    </ListItem>
-                  </UnorderedList>
-                </Box>
-              </Box>
-            </Flex>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           )
         }
       )}
-    </Box>
+    </div>
   )
 }
 
