@@ -123,7 +123,7 @@ Tehnička barijera za ulazak u korišćenje Web3 trenutno je previsoka. Korisnic
 
 Web3 uvodi nove paradigme koje zahtevaju učenje različitih mentalnih modela u poređenju sa onima koji se koriste za Web2.0. Slična edukativna inicijativa dogodila se dok je Web1.0 sticao popularnost krajem 1990-ih; zagovornici svetske mreže koristili su brojne obrazovne tehnike kako bi obrazovali javnost, od jednostavnih metafora (informacijski autoput, pretraživači, surfovanje mrežom) do [televizijskih emisija](https://www.youtube.com/watch?v=SzQLI7BxfYI). Web3 nije težak, ali je drugačiji. Obrazovne inicijative koje informišu korisnike Web2 o ovim Web3 paradigmama ključne su za njegov uspeh.
 
-Ethereum.org doprinosi obrazovanju o platformi Web3 kroz [program prevođenja](/contributing/translation-program/), koji ima za cilj prevođenje važnog Etherum sadržaja na što više jezika.
+Ethereum.org doprinosi obrazovanju o platformi Web3 kroz [program prevođenja](/contributing/translation-program/), koji ima za cilj prevođenje važnog Ethereum sadržaja na što više jezika.
 
 ### Centralizovana infrastruktura {#centralized-infrastructure}
 

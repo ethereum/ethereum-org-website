@@ -194,9 +194,9 @@ const iconsDefinitions = [
 iconsDefinitions.sort((a, b) =>
   (a?.displayName || "") > (b?.displayName || "") ? 1 : -1
 )
-const items = iconsDefinitions.map((IconDef, idx) => (
+const items = iconsDefinitions.map((IconDef) => (
   <Flex
-    key={idx}
+    key={IconDef.displayName}
     direction="column"
     gap={4}
     p={4}
@@ -205,12 +205,7 @@ const items = iconsDefinitions.map((IconDef, idx) => (
     borderColor="background.highlight"
   >
     <Center>
-      <IconDef
-        className="h-[50px] w-[50px]"
-        // TODO: remove the following two props when migrations are complete
-        w="50px"
-        h="50px"
-      />
+      <IconDef className="h-[50px] w-[50px]" w="50px" h="50px" />
     </Center>
     <Center>{IconDef.displayName}</Center>
   </Flex>
