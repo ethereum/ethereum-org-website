@@ -45,6 +45,7 @@ What these implementations have in common is they all follow a single specificat
 
 Multiple trackers offer a real-time overview of nodes in the Ethereum network. Note that due to the nature of decentralized networks, these crawlers can only provide a limited view of the network and might report different results.
 
+- [Node Crawler](https://www.ethernets.io/) ([GitHub](https://github.com/ethereum/node-crawler)) a free and open source Ethereum network crawler
 - [Map of nodes](https://etherscan.io/nodetracker) by Etherscan
 - [Ethernodes](https://ethernodes.org/) by Bitfly
 - [Nodewatch](https://www.nodewatch.io/) by Chainsafe, crawling consensus nodes
