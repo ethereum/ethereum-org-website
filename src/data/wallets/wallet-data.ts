@@ -1515,11 +1515,11 @@ export const walletsData: WalletData[] = [
     documentation: "https://docs.bitkeep.com/guide/",
   },
   {
-    last_updated: "2023-11-21",
+    last_updated: "2024-10-31",
     name: "BlockWallet",
     image: BlockWalletImage,
     twBackgroundColor: "bg-[#52C200]",
-    twGradiantBrandColor: "from-[#52C200]",
+    twGradiantBrandColor: "from-[#08090A]",
     url: "https://blockwallet.io",
     active_development_team: true,
     languages_supported: ["en"],
