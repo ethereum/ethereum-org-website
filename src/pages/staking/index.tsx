@@ -154,7 +154,7 @@ type Props = BasePageProps & {
 }
 
 // In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 24
+const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader(
   [["stakingStatsData", fetchBeaconchainData]],
@@ -181,9 +181,6 @@ export const getStaticProps = (async ({ locale }) => {
       data,
       lastDeployLocaleTimestamp,
     },
-    // Updated once a day
-    // TODO: re-enable revalidation once we have a workaround for failing builds
-    // revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
