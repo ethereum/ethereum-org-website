@@ -1,11 +1,10 @@
 import type { SVGAttributes } from "react"
-import { IconProps } from "@chakra-ui/react"
 
-export const commonIconDefaultProps: IconProps = {
+export const commonIconDefaultProps = {
   fillRule: "evenodd",
   clipRule: "evenodd",
   fill: "currentColor",
-}
+} as const
 
 export const commonIconDefaultAttrs = {
   fill: "currentColor",
