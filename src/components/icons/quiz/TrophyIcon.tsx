@@ -1,9 +1,11 @@
 import { createIconBase } from "../icon-base"
+import { commonIconDefaultProps } from "../utils"
 
 export const TrophyIcon = createIconBase({
   displayName: "TrophyIcon",
   viewBox: "0 0 28 28",
   className: "h-auto w-7",
+  ...commonIconDefaultProps,
   children: (
     <>
       <path d="M19.23 27.07C19.7101 27.07 20.0996 26.6804 20.0996 26.2004C20.0996 25.7204 19.7101 25.3308 19.23 25.3308H8.79502C8.31501 25.3308 7.92543 25.7204 7.92543 26.2004C7.92543 26.6804 8.31501 27.07 8.79502 27.07H19.23Z" />
