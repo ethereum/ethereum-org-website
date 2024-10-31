@@ -41,12 +41,6 @@ Gli IDE più diffusi hanno plugin integrati che migliorano l'esperienza di svilu
 - [Esempi di codice](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Atom:** **_editor di testo personalizzabile per il XXI secolo_**
-
-- [Atom](https://atom.io/)
-- [GitHub](https://github.com/atom)
-- [Ethereum packages](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
-
 **JetBrains IDEs (IntelliJ IDEA, ecc.) -** **_Strumenti essenziali per sviluppatori di software e team_**
 
 - [JetBrains](https://www.jetbrains.com/)

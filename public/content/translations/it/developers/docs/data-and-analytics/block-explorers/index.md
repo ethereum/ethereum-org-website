@@ -5,7 +5,7 @@ lang: it
 sidebarDepth: 3
 ---
 
-I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per visualizzare i dati in tempo reale sui blocchi, le transazioni, i miner, i conti e altra attività sulla catena.
+I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per vedere in tempo reale dati su blocchi, transazioni, validatori, conti e altre attività on-chain.
 
 ## Prerequisiti {#prerequisites}
 
@@ -54,7 +54,7 @@ Ogni 12 secondi vengono aggiunti nuovi blocchi a Ethereum (a meno che un proposi
 - Limite di gas: I limiti totali di gas impostati dalle transazioni nel blocco
 - Commissione di base per il gas: Il moltiplicatore minimo necessario perché una transazione sia inclusa in un blocco
 - Commissioni bruciate - La quantità di ETH bruciati nel blocco
-- Dati aggiuntivi - Ogni dato aggiuntivo che il miner ha incluso nel blocco
+- Dati aggiuntivi - Eventuali dati aggiuntivi che il costruttore ha incluso nel blocco
 
 **Dati avanzati**
 
@@ -82,12 +82,12 @@ Gli esploratori di blocchi sono diventati un punto di riferimento comune per tra
 - Hash di transazione - Un hash generato all'invio della transazione
 - Stato - Un'indicazione del fatto che la transazione sia in sospeso, fallita o riuscita
 - Blocco - Il blocco in cui è stata inclusa la transazione
-- Marca oraria - L'ora in cui il miner ha minato la transazione
+- Timestamp - Il momento in cui una transazione è stata inclusa in un blocco proposto da un validatore
 - Mittente: L'indirizzo del conto che ha inviato la transazione
 - A - L'indirizzo del destinatario o del contratto intelligente con cui interagisce la transazione
 - Token trasferiti - Un elenco dei token trasferiti nell'ambito della transazione
 - Valore - Il valore totale degli ETH trasferiti
-- Commissione di transazione: L'importo pagato al miner per elaborare la transazione (calcolato dal prezzo del gas\*gas usato)
+- Commissione sulla transazione - L'importo pagato al validatore per elaborare la transazione (calcolato come prezzo del gas\*gas utilizzato).
 
 **Dati avanzati**
 

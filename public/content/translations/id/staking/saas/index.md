@@ -39,7 +39,7 @@ Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemaha
 
 ## Eksplorasi penyedia layanan penaruhan {#saas-providers}
 
-Berikut adalah beberapa penyedia layanan SaaS yang tersedia. Gunakan indikator-indikator di atas untuk membantu memandu Anda melalui layanan-layanan ini
+Berikut adalah beberapa penyedia SaaS yang tersedia. Gunakan indikator-indikator di atas untuk membantu memandu Anda melalui layanan-layanan ini
 
 <ProductDisclaimer />
 

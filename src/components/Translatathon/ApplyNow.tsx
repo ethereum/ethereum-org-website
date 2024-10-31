@@ -1,6 +1,6 @@
-import { ButtonLink } from "@/components/Buttons"
 import Callout from "@/components/Callout"
 
+import { ButtonLink } from "../ui/buttons/Button"
 import { Flex } from "../ui/flex"
 
 import { APPLICATION_END_DATE, APPLICATION_URL } from "./constants"
