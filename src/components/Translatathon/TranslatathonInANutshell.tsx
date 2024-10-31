@@ -15,7 +15,7 @@ export const TranslatathonInANutshell = () => {
       </Flex>
 
       <Flex className="w-full flex-col items-start gap-8 p-8 md:flex-row">
-        <Flex className="w-full flex-col justify-center gap-2">
+        <Flex className="w-full flex-col gap-2 self-center">
           <h3 className="text-2xl">Earn points</h3>
           <p>
             Translate ethereum.org and ecosystem content to earn points and
@@ -27,6 +27,7 @@ export const TranslatathonInANutshell = () => {
             src={settlementImage}
             alt=""
             width={327}
+            className="w-[327px]"
             style={{ objectFit: "contain" }}
           />
         </Flex>
@@ -38,10 +39,11 @@ export const TranslatathonInANutshell = () => {
             src={futureImage}
             alt=""
             width={327}
+            className="w-[327px]"
             style={{ objectFit: "contain" }}
           />
         </Flex>
-        <Flex className="w-full flex-col justify-center gap-2">
+        <Flex className="w-full flex-col gap-2 self-center">
           <h3 className="text-2xl">Human translations only</h3>
           <p>
             Using machine translation is forbidden! All translations will be
@@ -57,7 +59,7 @@ export const TranslatathonInANutshell = () => {
       </Flex>
 
       <Flex className="w-full flex-col items-start gap-8 p-8 md:flex-row">
-        <Flex className="w-full flex-col justify-center gap-2">
+        <Flex className="w-full flex-col gap-2 self-center">
           <h3 className="text-2xl">Focus on untranslated lines only</h3>
           <p>
             Translate strings that do not have any suggested translations yet.
@@ -70,6 +72,7 @@ export const TranslatathonInANutshell = () => {
             src={dogeImage}
             alt=""
             width={327}
+            className="w-[327px]"
             style={{ objectFit: "contain" }}
           />
         </Flex>
