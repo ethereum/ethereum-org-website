@@ -90,7 +90,7 @@ export const walletsData: WalletData[] = [
     last_updated: "2024-10-30",
     name: "Loopring wallet",
     image: LoopringImage,
-    twBackgroundColor: "bg-[#FFFFFF]",
+    twBackgroundColor: "bg-[#446EFF]",
     twGradiantBrandColor: "from-[#ffffff]",
     url: "https://wallet.loopring.io/",
     active_development_team: true,
