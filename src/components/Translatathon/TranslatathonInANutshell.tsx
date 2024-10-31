@@ -14,7 +14,7 @@ export const TranslatathonInANutshell = () => {
         <h2 className="mb-8 text-3xl">Translatathon essentials</h2>
       </Flex>
 
-      <Flex className="w-full flex-col items-start gap-8 p-8 md:flex-row">
+      <Flex className="w-full flex-col items-center gap-8 p-8 md:flex-row">
         <Flex className="w-full flex-col gap-2 self-center">
           <h3 className="text-2xl">Earn points</h3>
           <p>
