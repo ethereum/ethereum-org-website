@@ -10,6 +10,7 @@ import BlockWalletImage from "@/public/images/wallets/blockwallet.png"
 import BridgeWalletImage from "@/public/images/wallets/bridge.png"
 import CoinbaseImage from "@/public/images/wallets/coinbase.png"
 import CoinWalletImage from "@/public/images/wallets/coinwallet.png"
+import CtrlWalletImage from "@/public/images/wallets/ctrl.png"
 import EnkryptImage from "@/public/images/wallets/enkrypt.png"
 import ExodusImage from "@/public/images/wallets/exodus.png"
 import FoxWalletImage from "@/public/images/wallets/foxwallet.png"
@@ -36,7 +37,6 @@ import TorusImage from "@/public/images/wallets/torus.png"
 import TrezorImage from "@/public/images/wallets/trezor.png"
 import TrustWalletImage from "@/public/images/wallets/trustwallet.png"
 import UnstoppableWalletImage from "@/public/images/wallets/unstoppable.png"
-import XDEFIImage from "@/public/images/wallets/xdefi.png"
 import ZerionImage from "@/public/images/wallets/zerion.png"
 
 export const walletsData: WalletData[] = [
@@ -1751,17 +1751,17 @@ export const walletsData: WalletData[] = [
   },
   {
     last_updated: "2023-08-29",
-    name: "XDEFI Wallet",
-    image: XDEFIImage,
-    twBackgroundColor: "bg-[#2041E0]",
-    twGradiantBrandColor: "from-[#2041E0]",
-    url: "https://www.xdefi.io",
+    name: "Ctrl Wallet",
+    image: CtrlWalletImage,
+    twBackgroundColor: "bg-[#ffffff]",
+    twGradiantBrandColor: "from-[#ffffff]",
+    url: "https://ctrl.xyz/",
     active_development_team: true,
     languages_supported: ["en", "fr", "de", "ru"],
-    twitter: "https://twitter.com/xdefi_wallet",
-    discord: "https://discord.gg/xdefiwallet",
+    twitter: "https://x.com/ctrl_wallet",
+    discord: "https://discord.gg/ctrlwallet",
     reddit: "",
-    telegram: "https://t.me/xdefi_announcements",
+    telegram: "https://t.me/ctrl_wallet",
     ios: false,
     android: false,
     linux: false,
@@ -1776,7 +1776,7 @@ export const walletsData: WalletData[] = [
     security_audit: [
       "https://www.xdefi.io/wp-content/uploads/2021/07/XDEFI_Audit_Report_Kudelski.pdf",
     ],
-    scam_protection: false,
+    scam_protection: true,
     hardware_support: true,
     rpc_importing: true,
     nft_support: true,
@@ -1789,12 +1789,11 @@ export const walletsData: WalletData[] = [
     ens_support: true,
     erc_20_support: true,
     buy_crypto: true,
-    withdraw_crypto: false,
+    withdraw_crypto: true,
     multisig: false,
-    social_recovery: false,
-    onboard_documentation: "https://www.xdefi.io/support/",
-    documentation:
-      "https://docs.xdefi.io/xdefi-wallet-v2-draft/technical-docs/extension-integration",
+    social_recovery: true,
+    onboard_documentation: "https://intercom.help/ctrlwallet/en/",
+    documentation: "https://docs.xdefi.io/docs",
   },
   {
     last_updated: "2023-11-02",
