@@ -14,9 +14,9 @@ Bu sayfayı daha iyi anlamak için, önce [işlemleri](/developers/docs/transact
 
 ## Ethereum madenciliği nedir? {#what-is-ethereum-mining}
 
-Madencilik, Ethereum'un artık kullanımdan kaldırdığı iş ispatı mimarisinde Ethereum blok zincirine eklenecek bir işlem blokunu oluşturma sürecidir.
+Madencilik, Ethereum'un artık kullanımdan kaldırdığı iş ispatı mimarisinde Etherum blok zincirine eklenecek bir işlem blokunu oluşturma sürecidir.
 
-Madencilik kelimesi, kripto para birimleri için altın analojisinden gelmektedir. Dijital token'lar da tıpkı altın ya da diğer kıymetli metaller gibi sınırlı bulunur ve bir iş ispatı sistemindeki toplam hacmi artırmanın tek yolu madenciliktir. İş ispatına dayalı Ethereum'da tek ihraç şekli madencilik yoluyla yapıldı. Ancak altın analojisinden farklı olarak madencilik; blok zincirde bloklar oluşturarak, doğrulayarak, yayımlayarak ve yayarak ağı güvence altına almanın bir yoludur.
+Madencilik kelimesi, kripto para birimleri için altın analojisinden gelmektedir. Dijital token'lar da tıpkı altın ya da diğer kıymetli metaller gibi sınırlı bulunur ve bir iş ispatı sistemindeki toplam hacmi artırmanın tek yolu madenciliktir. İş ispatına dayalı Etherum'da tek ihraç şekli madencilik yoluyla yapıldı. Ancak altın analojisinden farklı olarak madencilik; blok zincirde bloklar oluşturarak, doğrulayarak, yayımlayarak ve yayarak ağı güvence altına almanın bir yoludur.
 
 Ether madenciliği = Ağ Güvenliği
 

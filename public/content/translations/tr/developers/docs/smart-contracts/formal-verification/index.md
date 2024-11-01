@@ -208,7 +208,7 @@ Resmi doğrulamada bir dizi performans sorunu ile karşılaşılır. Örneğin, 
 
 Buna ek olarak, program asla sonlanmayabileceğinden program doğrulayıcılarının bir özelliğin (mantıksal formül olarak belirtilen) karşılanabilip karşılanamayacağını ("[karar verilebilirlik sorunu](https://en.wikipedia.org/wiki/Decision_problem)") belirlemesi her zaman mümkün değildir. Bundan ötürü iyi belirtilmiş olsa bile bir sözleşme için bazı özellikleri kanıtlamak imkânsız olabilir.
 
-## Ethereum akıllı sözleşmeleri için resmi doğrulama araçları {#formal-verification-tools}
+## Etherum akıllı sözleşmeleri için resmi doğrulama araçları {#formal-verification-tools}
 
 ### Resmi spesifikasyonlar oluşturmaya yönelik spesifikasyon dilleri {#specification-languages}
 
