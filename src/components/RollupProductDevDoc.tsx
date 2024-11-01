@@ -15,7 +15,7 @@ const RollupProductDevDoc = ({ rollupType }: RollupProductDevDocProps) => {
       {rollups[rollupType].map(
         ({ name, noteKey, website, developerDocs, l2beat }, idx) => {
           return (
-            <div key={idx} className="bg-rollupDevDocList my-4">
+            <div key={idx} className="my-4 bg-background-highlight">
               <div className="p-4 pb-0">
                 <div>
                   <h4 className="my-4 text-md font-medium leading-relaxed md:text-xl">
@@ -26,7 +26,7 @@ const RollupProductDevDoc = ({ rollupType }: RollupProductDevDocProps) => {
                       * <Translation id={`page-layer-2:${noteKey}`} />
                     </p>
                   )}
-                  <ul className="list-disc pl-5">
+                  <ul className="list-disc">
                     <li>
                       <InlineLink href={website}>
                         <Translation id="rollup-component-website" />
