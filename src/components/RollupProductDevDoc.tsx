@@ -1,3 +1,5 @@
+import { ListItem, UnorderedList } from "@/components/ui/list"
+
 import { layer2Data, Rollups, RollupType } from "@/data/layer-2/layer-2"
 
 import InlineLink from "./Link"
@@ -26,23 +28,23 @@ const RollupProductDevDoc = ({ rollupType }: RollupProductDevDocProps) => {
                       * <Translation id={`page-layer-2:${noteKey}`} />
                     </p>
                   )}
-                  <ul className="list-disc">
-                    <li>
+                  <UnorderedList>
+                    <ListItem>
                       <InlineLink href={website}>
                         <Translation id="rollup-component-website" />
                       </InlineLink>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                       <InlineLink href={developerDocs}>
                         <Translation id="rollup-component-developer-docs" />
                       </InlineLink>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                       <InlineLink href={l2beat}>
                         <Translation id="rollup-component-technology-and-risk-summary" />
                       </InlineLink>
-                    </li>
-                  </ul>
+                    </ListItem>
+                  </UnorderedList>
                 </div>
               </div>
             </div>
