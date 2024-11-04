@@ -24,7 +24,7 @@ const RollupProductDevDoc = ({ rollupType }: RollupProductDevDocProps) => {
                     {name}
                   </h4>
                   {noteKey.length > 0 && (
-                    <p>
+                    <p className="mb-4">
                       * <Translation id={`page-layer-2:${noteKey}`} />
                     </p>
                   )}
