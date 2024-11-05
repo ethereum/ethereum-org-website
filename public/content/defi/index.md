@@ -178,12 +178,21 @@ To be able to do the above example in the traditional finance world, you'd need 
 
 #### Lending {#lending}
 
-You can earn interest on your crypto by lending it and see your funds grow in real time. Right now interest rates are much higher than what you're likely to get at your local bank (if you're lucky enough to be able to access one). Here's an example:
+You can earn interest on your crypto by lending it and see your funds grow in real time. Right now interest rates are much higher than what you're likely to get at your local bank (if you're lucky enough to be able to access one). 
+
+Here's a first example:
 
 - You lend your 100 Dai, a [stablecoin](/stablecoins/), to a product like Aave.
 - You receive 100 Aave Dai (aDai) which is a token that represents your loaned Dai.
-- Your aDai will increase based on the interest rates and you can see your balance growing in your wallet. Dependent on the [APR](/glossary/#apr), your wallet balance will read something like 100.1234 after a few days or even hours!
+- Your aDai will increase based on the interest rates and you can see your balance growing in your wallet. Dependent on the [APR](/glossary/#apr), your wallet balance will read something like 100.1234 after a few days!
 - You can withdraw an amount of regular Dai that's equal to your aDai balance at any time.
+
+Here's a second nuanced example:
+
+- You lend your 100 USDC to a product like a Morpho Vault.
+- You receive X units of a Morpho Vault USDC (mvUSDC) which is a token that represents your loaned USDC.
+- Your mvUSDC will will not increase in number directly in your wallet, but the value of it will grow based on the interest rates. Dependent on the [APR](/glossary/#apr), your wallet balance will read something like 100.1234 after a few days!
+- You can withdraw an amount of regular USDC that's equal to the value of your mvUSDC balance at any time.
 
 <ButtonLink href="/dapps/?category=finance#explore">
   See lending dapps
