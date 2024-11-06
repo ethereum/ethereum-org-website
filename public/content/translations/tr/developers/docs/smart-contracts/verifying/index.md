@@ -10,7 +10,7 @@ lang: tr
 
 ## Kaynak kodu doğrulaması nedir? {#what-is-source-code-verification}
 
-Geliştiriciler, bir akıllı sözleşmeyi [Ethereum Sanal Makinesi'ne (ESM)](/developers/docs/evm/) dağıtmadan önce, [sözleşmenin Solidity'de](/developers/docs/smart-contracts/languages/) veya başka bir yüksek seviye programlama dilinde yazılan talimatları olan kaynak kodunu bit koduna [derler](/developers/docs/smart-contracts/compiling/). Ethereum Sanal Makinesi yüksek seviye talimatları yorumlayamayacağı için kaynak kodunu bit koduna (yani düşük seviye, makine talimatları) derlemek, sözleşme mantığını Ethereum Sanal Makinesi'nde yürütmek için şarttır.
+Geliştiriciler, bir akıllı sözleşmeyi [Ethereum Sanal Makinesi'ne (EVM)](/developers/docs/evm/) dağıtmadan önce, [sözleşmenin Solidity'de](/developers/docs/smart-contracts/languages/) veya başka bir yüksek seviye programlama dilinde yazılan talimatları olan kaynak kodunu bit koduna [derler](/developers/docs/smart-contracts/compiling/). Ethereum Sanal Makinesi yüksek seviye talimatları yorumlayamayacağı için kaynak kodunu bit koduna (yani düşük seviye, makine talimatları) derlemek, sözleşme mantığını Ethereum Sanal Makinesi'nde yürütmek için şarttır.
 
 Kaynak kodu doğrulaması, sözleşme oluşturma sırasında farklılıkları ortaya çıkarmak için kullanmak üzere sözleşmenin kaynak kodu ile derlenmiş bit kodunu karşılaştırmaktır. Akıllı sözleşmeleri doğrulamak, reklamı yapılan sözleşme kodu blokzincirde çalışmakta olandan farklı olabileceği için önemlidir.
 
