@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react"
-import { MdInfoOutline, MdWarning } from "react-icons/md"
 import type { IconType } from "react-icons/lib"
-import { NULL_VALUE } from "@/lib/constants"
+import { MdInfoOutline, MdWarning } from "react-icons/md"
+
 import { Flex } from "@/components/ui/flex"
+
+import { NULL_VALUE } from "@/lib/constants"
+
 import Tooltip, { type TooltipProps } from "../Tooltip"
 
 const initialContent = {
