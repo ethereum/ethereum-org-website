@@ -7,14 +7,14 @@ import {
   FaYoutube,
 } from "react-icons/fa6"
 
-import { Flex } from "./ui/flex"
+import { cn } from "@/lib/utils/cn"
 
-const socialColors = {
-  reddit: "#ff4301",
-  twitter: "#1da1f2",
-  youtube: "#ff0000",
-  discord: "#7289da",
-  stackExchange: "#48a2da",
+const socialColorClasses = {
+  reddit: "text-[#ff4301]",
+  twitter: "text-[#1da1f2]",
+  youtube: "text-[#ff0000]",
+  discord: "text-[#7289da]",
+  stackExchange: "text-[#48a2da]",
 }
 
 const icons = {
@@ -26,22 +26,23 @@ const icons = {
   webpage: FaGlobe,
 }
 
-type SocialListItemProps = {
-  children?: React.ReactNode
+type SocialListItemProps = React.HTMLAttributes<HTMLDivElement> & {
   socialIcon: keyof typeof icons
 }
 
-const SocialListItem = ({ children, socialIcon }: SocialListItemProps) => {
-  const SocialIcon = icons[socialIcon]
-
+const SocialListItem = ({
+  children,
+  socialIcon,
+  className,
+}: SocialListItemProps) => {
+  const Icon = icons[socialIcon]
   return (
-    <Flex className="w-full items-center px-0 py-2">
-      <SocialIcon
-        className="size-10 shrink-0 pe-3"
-        style={{ color: socialColors[socialIcon] }}
+    <div className={cn("flex w-full items-center px-0 py-2", className)}>
+      <Icon
+        className={cn("size-8 shrink-0 pe-3", socialColorClasses[socialIcon])}
       />
-      <div className="italic [&>a]:not-italic">{children}</div>
-    </Flex>
+      <div className="font-normal italic">{children}</div>
+    </div>
   )
 }
 

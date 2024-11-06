@@ -8,10 +8,10 @@ alt: "イーサリアムロードマップ"
 summaryPoints:
 buttons:
   - 
-    label: 今後のアップグレード
+    content: 今後のアップグレード
     toId: 予定されている変更
   - 
-    label: 過去のアップグレード
+    content: 過去のアップグレード
     href: /history/
     variant: 概要
 ---
