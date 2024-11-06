@@ -20,7 +20,7 @@ By submitting the application form, applicants and participants confirm that the
 
 ## Translation Standards
 
-The use of machine translation tools, as determined by us in our sole discretion, may result in disqualification from the competition. In addition, the submission of incorrect and/or inaccurate translations, as determined by us in our sole discretion, may result in ineligibility for prize consideration. Further, any contributions towards strings that have already been translated or reviewed, as determined by us in our sole discretion, will not be included in the participants’ final score. We reserve the right to make such determinations, which shall be final and binding.
+The use of machine translation tools, as determined by us in our sole discretion, may result in disqualification from the competition. In addition, the submission of incorrect and/or inaccurate translations, as determined by us in our sole discretion, may result ineligibility for prize consideration. Further, any contributions towards strings that have already been translated or reviewed, as determined by us in our sole discretion, will not be included in the participants’ final score. We reserve the right to make such determinations, which shall be final and binding.
 
 ## Intellectual Property
 
