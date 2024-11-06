@@ -8,10 +8,10 @@ alt: "Planejamento Ethereum"
 summaryPoints:
 buttons:
   - 
-    label: Melhorias adicionais
+    content: Melhorias adicionais
     toId: próximas-alterações
   - 
-    label: Melhorias anteriores
+    content: Melhorias anteriores
     href: /history/
     variant: descrição
 ---
