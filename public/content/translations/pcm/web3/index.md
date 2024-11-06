@@ -89,7 +89,7 @@ Haueva, pipol difine many Web3 komunitis as DAOs. All dis komunitis dem get difr
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Una fit learn plenty about DAOs</div>
   <ButtonLink href="/dao/">
-    More Tori ontop DAOs
+    More on DAOs
   </ButtonLink>
 </InfoBanner>
 
@@ -145,11 +145,11 @@ Wi just dey start to dey kreate betta Web wit Web3, but as we kontinu to impruf 
 
 ## Further reading {#further-reading}
 
-Dem nor rily define Web3. Difrent pipol wey dey patisipate in Web3 get difrent opinion abou am. Na some of dem bi dis:
+Dem nor rily define Web3. Difrent pipol wey dey patisipate in Web3 get difrent opinion abou am. Hia na few of dem:
 
-- [Wetin bi Web3? Di disentralized intanet of di fushure wey dem Explain ](https://www.freecodecamp.org/news/what-is-web3/) – _ Nader Dabit _
-- [Hau pesi fit make sense of Web3 ](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _ Josh Stark_
-- [Why We3 Matta](https://future.a16z.com/why-web3-matters/) — _ Chris Dixon_
+- [Wetin bi Web3? Di disentralized intanet of di fushure wey dem Explain](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Hau pesi fit make sense of Web3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
+- [Why We3 Matta](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Why disentralizashon matta](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Di Web3 landscape](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [Di Web3 Debate](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
