@@ -5,7 +5,6 @@ import { NULL_VALUE } from "@/lib/constants"
 import { Flex } from "@/components/ui/flex"
 import Tooltip, { type TooltipProps } from "../Tooltip"
 
-
 const initialContent = {
   contentValue: NULL_VALUE,
   tooltipIcon: MdInfoOutline,
