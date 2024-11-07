@@ -170,7 +170,7 @@ Postoji mnogo ambicioznih projekata koji koriste Ethereum kao osnovu za rešenja
 ### Članci {#articles}
 
 - [Načini primene lanca blokova: Lanac blokova u digitalnom identitetu](https://consensys.net/blockchain-use-cases/digital-identity/) — _ConsenSys_
-- [Šta je Ethereum ERC725? Samoupravljanje suverenim identitetom na lancu blokova ](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _ Sem Taun_
+- [Šta je Ethereum ERC725? Samoupravljanje suverenim identitetom na lancu blokova](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _ Sem Taun_
 - [Kako lanac blokova može da reši problem digitalnog identiteta](https://time.com/6142810/proof-of-humanity/) — _Endru R. Ču_
 - [Šta je decentralizovani identitet i zašto bi trebalo da nam je važan?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emanuel Avosika_
 - [Uvod u decentralizovani identitet](https://walt.id/white-paper/digital-identity) – _Dominik Beron_
