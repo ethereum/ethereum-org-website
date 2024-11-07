@@ -21,6 +21,9 @@ type DataTableProps<TData, TValue> = TableProps & {
   data: TData[]
   subComponent?: React.FC<TData>
   noResultsComponent?: React.FC
+  allDataLength: number
+  setMobileFiltersOpen?: (open: boolean) => void
+  activeFiltersCount: number
 }
 
 const DataTable = <TData, TValue>({
@@ -28,6 +31,9 @@ const DataTable = <TData, TValue>({
   data,
   subComponent,
   noResultsComponent,
+  allDataLength,
+  setMobileFiltersOpen,
+  activeFiltersCount,
   ...props
 }: DataTableProps<TData, TValue>) => {
   const [isVisible, setIsVisible] = useState(true)
@@ -40,6 +46,12 @@ const DataTable = <TData, TValue>({
     getRowCanExpand: () => true,
     getCoreRowModel: getCoreRowModel(),
     getExpandedRowModel: getExpandedRowModel(),
+    meta: {
+      allDataLength,
+      dataLength: data.length,
+      setMobileFiltersOpen,
+      activeFiltersCount,
+    },
   })
 
   useEffect(() => {
@@ -56,67 +68,74 @@ const DataTable = <TData, TValue>({
   }, [data])
 
   return (
-    <Table {...props}>
-      <TableHeader>
-        {table.getHeaderGroups().map((headerGroup) => (
-          <TableRow key={headerGroup.id}>
-            {headerGroup.headers.map((header) => {
-              return (
-                <Fragment key={header.id}>
-                  {header.isPlaceholder
-                    ? null
-                    : flexRender(
-                        header.column.columnDef.header,
-                        header.getContext()
+    <div className="relative">
+      <div className="sticky top-[76px] z-10 w-full border-b border-primary bg-background">
+        <TableHeader className="bg-blue flex w-full">
+          {table.getHeaderGroups().map((headerGroup) => (
+            <TableRow key={headerGroup.id} className="w-full">
+              {headerGroup.headers.map((header) => {
+                return (
+                  <Fragment key={header.id}>
+                    {header.isPlaceholder
+                      ? null
+                      : flexRender(
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
+                  </Fragment>
+                )
+              })}
+            </TableRow>
+          ))}
+        </TableHeader>
+      </div>
+      <Table {...props}>
+        <TableBody
+          className={`duration-25 transition-opacity ${
+            isVisible ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          {table.getRowModel().rows?.length ? (
+            table.getRowModel().rows.map((row, idx) => (
+              <Fragment key={row.id}>
+                <TableRow
+                  data-state={row.getIsSelected() && "selected"}
+                  className={`${row.getIsExpanded() ? "cursor-pointer border-b-background-highlight bg-background-highlight" : "cursor-pointer"} hover:bg-background-highlight`}
+                  onClick={(e) => {
+                    // Prevent expanding the wallet more info section when clicking on the "Visit website" button
+                    if (!(e.target as Element).matches("a, a svg")) {
+                      row.getToggleExpandedHandler()()
+                    }
+                  }}
+                >
+                  {row.getVisibleCells().map((cell) => (
+                    <TableCell key={cell.id}>
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext()
                       )}
-                </Fragment>
-              )
-            })}
-          </TableRow>
-        ))}
-      </TableHeader>
-      <TableBody
-        className={`duration-25 transition-opacity ${
-          isVisible ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        {table.getRowModel().rows?.length ? (
-          table.getRowModel().rows.map((row, idx) => (
-            <Fragment key={row.id}>
-              <TableRow
-                data-state={row.getIsSelected() && "selected"}
-                className={`${row.getIsExpanded() ? "cursor-pointer border-b-background-highlight bg-background-highlight" : "cursor-pointer"} hover:bg-background-highlight`}
-                onClick={(e) => {
-                  // Prevent expanding the wallet more info section when clicking on the "Visit website" button
-                  if (!(e.target as Element).matches("a, a svg")) {
-                    row.getToggleExpandedHandler()()
-                  }
-                }}
-              >
-                {row.getVisibleCells().map((cell) => (
-                  <TableCell key={cell.id}>
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </TableCell>
-                ))}
-              </TableRow>
-              {row.getIsExpanded() && (
-                <TableRow className={`bg-background-highlight`}>
-                  <TableCell colSpan={row.getAllCells().length}>
-                    {subComponent && subComponent(row.original, idx)}
-                  </TableCell>
+                    </TableCell>
+                  ))}
                 </TableRow>
-              )}
-            </Fragment>
-          ))
-        ) : (
-          <TableRow>
-            <TableCell colSpan={columns.length} className="h-24 text-center">
-              {noResultsComponent && noResultsComponent({})}
-            </TableCell>
-          </TableRow>
-        )}
-      </TableBody>
-    </Table>
+                {row.getIsExpanded() && (
+                  <TableRow className={`bg-background-highlight`}>
+                    <TableCell colSpan={row.getAllCells().length}>
+                      {subComponent && subComponent(row.original, idx)}
+                    </TableCell>
+                  </TableRow>
+                )}
+              </Fragment>
+            ))
+          ) : (
+            <TableRow>
+              <TableCell colSpan={columns.length} className="h-24 text-center">
+                {noResultsComponent && noResultsComponent({})}
+              </TableCell>
+            </TableRow>
+          )}
+        </TableBody>
+      </Table>
+    </div>
   )
 }
 
