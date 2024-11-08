@@ -22,7 +22,7 @@ It's as easy as running `yarn storybook` to boot up a dedicated localhost to see
 
 A Storybook "story" is an instance of a component in a certain state or with certain parameters applied to show an alternative version of the component.
 
-There may be some exceptions, but generally each component should have only on story file.
+There may be some exceptions, but generally each component should have only one story file.
 
 The stories file will reside with each component. So the base folder structure in `src` will look like this:
 
