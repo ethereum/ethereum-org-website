@@ -1036,7 +1036,6 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "ttps://help.tokenpocket.pro/en",
     documentation: "https://help.tokenpocket.pro/developer-en/",
-    new_to_crypto: true,
   },
   {
     last_updated: "2022-06-30",
