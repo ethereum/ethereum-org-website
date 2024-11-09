@@ -4,6 +4,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import type { BasePageProps, Lang } from "@/lib/types"
 
+import { ButtonLink } from "@/components/Buttons"
+import Callout from "@/components/Callout"
 import { ContentHero, ContentHeroProps } from "@/components/Hero"
 import Layer2NetworksTable from "@/components/Layer2NetworksTable"
 import MainArticle from "@/components/MainArticle"
@@ -21,6 +23,8 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchL2beat } from "@/lib/api/fetchL2beat"
+import Callout2Image from "@/public/images/layer-2/layer-2-walking.png"
+import Callout1Image from "@/public/images/man-and-dog-playing.png"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
@@ -88,6 +92,34 @@ const Layer2Networks = ({ layer2Data, locale }) => {
       <ContentHero {...heroProps} />
 
       <Layer2NetworksTable layer2Data={layer2Data} locale={locale} />
+
+      <div
+        id="callout-cards"
+        className="flex w-full flex-col px-8 py-9 lg:flex-row lg:gap-16"
+      >
+        <Callout
+          image={Callout1Image}
+          title={"What are the benefits?"}
+          description={
+            "Ethereum's strength and security provides a platform for other networks to build upon."
+          }
+        >
+          <div>
+            <ButtonLink href="/layer-2/">Learn more</ButtonLink>
+          </div>
+        </Callout>
+        <Callout
+          image={Callout2Image}
+          title={"Interested in more details?"}
+          description={
+            "Curious about the technology and reasons for this scaling approach? Learn more about the thinking and different technological approaches."
+          }
+        >
+          <div>
+            <ButtonLink href="/layer-2/learn/">Learn more</ButtonLink>
+          </div>
+        </Callout>
+      </div>
     </MainArticle>
   )
 }
