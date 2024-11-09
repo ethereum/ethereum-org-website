@@ -6,7 +6,7 @@ import Tooltip from "@/components/Tooltip"
 
 const NetworkSubComponent = ({ network }) => {
   return (
-    <div className="flex w-full flex-col gap-4 px-6">
+    <div className="flex w-full flex-col gap-4 px-6 pb-4">
       <div className="flex flex-row gap-8">
         <div className="flex flex-1 flex-col gap-4 bg-background p-4">
           <div className="flex flex-row gap-4">
@@ -115,7 +115,7 @@ const NetworkSubComponent = ({ network }) => {
           <p>TODO: Chart</p>
         </div>
       </div>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 p-4">
         <div className="flex flex-col gap-1">
           <p className="text-xs text-body-medium">Links</p>
           <div className="flex flex-col gap-4">
