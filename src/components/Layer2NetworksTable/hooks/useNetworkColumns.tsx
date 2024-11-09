@@ -26,11 +26,59 @@ export const useNetworkColumns: ColumnDef<Rollup>[] = [
         </TableHead>
       )
     },
-    cell: ({ row }) => {
+    cell: ({ table, row }) => {
       return (
-        <TableCell className="flex flex-1 items-center gap-4">
-          <TwImage src={row.original.logo} width={40} height={40} />
-          <p className="text-xl font-bold">{row.original.name}</p>
+        <TableCell className="flex flex-1 flex-row items-center justify-between">
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-row items-center gap-4">
+              <TwImage
+                src={row.original.logo}
+                className="h-[24px] w-[24px] lg:h-[40px] lg:w-[40px]"
+              />
+              <p className="text-xl font-bold">{row.original.name}</p>
+            </div>
+            <div className="flex flex-row gap-4 lg:hidden">
+              <div className="w-[24px]" />
+              <Badge variant={row.original.networkMaturity}>
+                {row.original.networkMaturity.toUpperCase()}
+              </Badge>
+            </div>
+            <div className="flex flex-row gap-4 lg:hidden">
+              <div className="w-[24px]" />
+              <div>
+                <p className="text-xs text-body-medium">Avg. transaction fee</p>
+                <p>
+                  $
+                  {row.original.txCosts.toLocaleString(
+                    table.options.meta.locale as Lang,
+                    {
+                      minimumFractionDigits: 2,
+                      maximumFractionDigits: 3,
+                    }
+                  )}
+                </p>
+              </div>
+              <div>
+                <p className="text-xs text-body-medium">Market share</p>
+                <p>
+                  {new Intl.NumberFormat(table.options.meta.locale as Lang, {
+                    style: "currency",
+                    currency: "USD",
+                    notation: "compact",
+                    minimumSignificantDigits: 3,
+                    maximumSignificantDigits: 3,
+                  }).format(row.original.l2beatData.tvl.breakdown.total)}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:hidden">
+            {row.getIsExpanded() ? (
+              <IoChevronUpSharp />
+            ) : (
+              <IoChevronDownSharp />
+            )}
+          </div>
         </TableCell>
       )
     },
