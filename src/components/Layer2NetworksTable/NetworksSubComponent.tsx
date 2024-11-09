@@ -1,6 +1,153 @@
-const NetworkSubComponent = ({ network, listIdx }) => {
-  console.log(network, listIdx)
-  return <>test</>
+import { MdInfoOutline } from "react-icons/md"
+
+import { ButtonLink } from "@/components/Buttons"
+import InlineLink from "@/components/Link"
+import Tooltip from "@/components/Tooltip"
+
+const NetworkSubComponent = ({ network }) => {
+  return (
+    <div className="flex w-full flex-col gap-4 px-6">
+      <div className="flex flex-row gap-8">
+        <div className="flex flex-1 flex-col gap-4 bg-background p-4">
+          <div className="flex flex-row gap-4">
+            <div className="flex-1">
+              <div>
+                <p className="text-xs text-body-medium">
+                  Age{" "}
+                  <Tooltip
+                    content={
+                      <div className="flex flex-col gap-2">
+                        <p className="text-lg font-bold">Age</p>
+                        <p>Shows how long the networks has been operational.</p>
+                        <p>
+                          Data from{" "}
+                          <InlineLink href="https://growthepie.xyz">
+                            Growthepie
+                          </InlineLink>
+                          .
+                        </p>
+                      </div>
+                    }
+                  >
+                    <MdInfoOutline className="translate-y-0.5" />
+                  </Tooltip>
+                </p>
+                <p>TODO: stat</p>
+              </div>
+            </div>
+            <div className="flex-1">
+              <div>
+                <p className="text-xs text-body-medium">
+                  Wallet support{" "}
+                  <Tooltip
+                    content={
+                      <div className="flex flex-col gap-2">
+                        <p className="text-lg font-bold">Wallet support</p>
+                        <p>
+                          Indicates how many wallet apps support using the
+                          network.
+                        </p>
+                      </div>
+                    }
+                  >
+                    <MdInfoOutline className="translate-y-0.5" />
+                  </Tooltip>
+                </p>
+              </div>
+              <p>TODO: stat</p>
+            </div>
+          </div>
+          <div className="flex flex-row gap-4">
+            <div className="flex-1">
+              <div>
+                <p className="text-xs text-body-medium">
+                  Active addresses{" "}
+                  <Tooltip
+                    content={
+                      <div className="flex flex-col gap-2">
+                        <p className="text-lg font-bold">
+                          Active addresses (weekly)
+                        </p>
+                        <p>
+                          Number of active addresses on the network in the past
+                          7 days.
+                        </p>
+                        <p>
+                          Data from{" "}
+                          <InlineLink href="https://growthepie.xyz">
+                            Growthepie
+                          </InlineLink>
+                          .
+                        </p>
+                      </div>
+                    }
+                  >
+                    <MdInfoOutline className="translate-y-0.5" />
+                  </Tooltip>
+                </p>
+              </div>
+              <p>TODO: stat</p>
+            </div>
+            <div className="flex-1">
+              <div>
+                <p className="text-xs text-body-medium">
+                  Fee token{" "}
+                  <Tooltip
+                    content={
+                      <div className="flex flex-col gap-2">
+                        <p className="text-lg font-bold">Fee token</p>
+                        <p>
+                          The token that is used to pay for transactions and
+                          using the network.
+                        </p>
+                      </div>
+                    }
+                  >
+                    <MdInfoOutline className="translate-y-0.5" />
+                  </Tooltip>
+                </p>
+              </div>
+              <p>TODO: stat</p>
+            </div>
+          </div>
+        </div>
+        <div className="flex-1 gap-2">
+          <p>TODO: Chart</p>
+        </div>
+      </div>
+      <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-1">
+          <p className="text-xs text-body-medium">Links</p>
+          <div className="flex flex-col gap-4">
+            <InlineLink href={network.website}>Official website</InlineLink>
+            <div className="flex flex-col gap-0.5">
+              <InlineLink href={network.l2BeatLink}>Risk analysis</InlineLink>
+              <p className="text-xs text-body-medium">Assessment by L2BEAT</p>
+            </div>
+            <div className="flex flex-col gap-0.5">
+              <InlineLink href={network.growThePieLink}>
+                Detailed analytics
+              </InlineLink>
+              <p className="text-xs text-body-medium">
+                Assessment by growthepie
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-1">
+          <p className="text-xs text-body-medium">Actions</p>
+          <div className="flex flex-row gap-4">
+            <ButtonLink href={network.bridgeLink}>
+              Bridge to {network.name}
+            </ButtonLink>
+            <ButtonLink href={network.applicationsLink} variant="outline">
+              View apps
+            </ButtonLink>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default NetworkSubComponent

@@ -44,8 +44,8 @@ const Layer2NetworksTable = ({
       presetFilters={[]}
       resetFilters={resetFilters}
       setFilters={setFilters}
-      subComponent={(network, listIdx) => {
-        return <NetworkSubComponent network={network} listIdx={listIdx} />
+      subComponent={(network) => {
+        return <NetworkSubComponent network={network} />
       }}
       noResultsComponent={() => <></>}
       mobileFiltersLabel={"See networks"}
