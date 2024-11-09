@@ -8,6 +8,7 @@ import { Lang } from "@/lib/types"
 import { TwImage } from "@/components/Image"
 import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
+import { Badge } from "@/components/ui/badge"
 import { TableCell, TableHead } from "@/components/ui/Table"
 
 import { Rollup } from "@/data/layer-2/layer-2"
@@ -105,7 +106,6 @@ export const useNetworkColumns: ColumnDef<Rollup>[] = [
       </TableHead>
     ),
     cell: ({ table, row }) => {
-      console.log(row.original)
       return (
         <TableCell className="hidden w-[120px] px-0 text-end lg:table-cell">
           <p>
@@ -149,10 +149,12 @@ export const useNetworkColumns: ColumnDef<Rollup>[] = [
         </p>
       </TableHead>
     ),
-    cell: () => {
+    cell: ({ row }) => {
       return (
         <TableCell className="hidden w-[145px] px-0 text-end lg:table-cell">
-          <p>TODO</p>
+          <Badge variant={row.original.networkMaturity}>
+            {row.original.networkMaturity.toUpperCase()}
+          </Badge>
         </TableCell>
       )
     },

@@ -14,6 +14,7 @@ import PageMetadata from "@/components/PageMetadata"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { networkMaturity } from "@/lib/utils/networkMaturity"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -55,6 +56,9 @@ export const getStaticProps = (async ({ locale }) => {
       ...network,
       txCosts: growThePieData.dailyTxCosts[network.growthepieID],
       l2beatData: l2beatData.data.projects[network.l2beatID],
+      networkMaturity: networkMaturity(
+        l2beatData.data.projects[network.l2beatID]
+      ),
     }
   })
 
