@@ -24,6 +24,7 @@ type DataTableProps<TData, TValue> = TableProps & {
   allDataLength: number
   setMobileFiltersOpen?: (open: boolean) => void
   activeFiltersCount: number
+  meta?: Record<string, string | number>
 }
 
 const DataTable = <TData, TValue>({
@@ -34,6 +35,7 @@ const DataTable = <TData, TValue>({
   allDataLength,
   setMobileFiltersOpen,
   activeFiltersCount,
+  meta,
   ...props
 }: DataTableProps<TData, TValue>) => {
   const [isVisible, setIsVisible] = useState(true)
@@ -47,6 +49,7 @@ const DataTable = <TData, TValue>({
     getCoreRowModel: getCoreRowModel(),
     getExpandedRowModel: getExpandedRowModel(),
     meta: {
+      ...meta,
       allDataLength,
       dataLength: data.length,
       setMobileFiltersOpen,
@@ -109,12 +112,12 @@ const DataTable = <TData, TValue>({
                   }}
                 >
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
+                    <Fragment key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
                       )}
-                    </TableCell>
+                    </Fragment>
                   ))}
                 </TableRow>
                 {row.getIsExpanded() && (

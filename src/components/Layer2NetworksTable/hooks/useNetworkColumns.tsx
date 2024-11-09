@@ -3,9 +3,12 @@
 import { MdInfoOutline } from "react-icons/md"
 import { ColumnDef } from "@tanstack/react-table"
 
+import { Lang } from "@/lib/types"
+
+import { TwImage } from "@/components/Image"
 import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
-import { TableHead } from "@/components/ui/Table"
+import { TableCell, TableHead } from "@/components/ui/Table"
 
 import { Rollup } from "@/data/layer-2/layer-2"
 
@@ -19,6 +22,14 @@ export const useNetworkColumns: ColumnDef<Rollup>[] = [
             Networks showing <strong>({table.options.data.length})</strong>
           </p>
         </TableHead>
+      )
+    },
+    cell: ({ row }) => {
+      return (
+        <TableCell className="flex flex-1 items-center gap-4">
+          <TwImage src={row.original.logo} width={40} height={40} />
+          <p className="text-xl font-bold">{row.original.name}</p>
+        </TableCell>
       )
     },
   },
@@ -39,7 +50,10 @@ export const useNetworkColumns: ColumnDef<Rollup>[] = [
                   </p>
                   <p>
                     Data from{" "}
-                    <InlineLink href="https://l2beat.com">L2BEAT</InlineLink>.
+                    <InlineLink href="https://growthepie.xyz">
+                      GrowThePie
+                    </InlineLink>
+                    .
                   </p>
                 </div>
               }
@@ -50,6 +64,20 @@ export const useNetworkColumns: ColumnDef<Rollup>[] = [
         </p>
       </TableHead>
     ),
+    cell: ({ table, row }) => {
+      return (
+        <TableCell className="hidden w-[145px] px-0 text-end lg:table-cell">
+          $
+          {row.original.txCosts.toLocaleString(
+            table.options.meta.locale as Lang,
+            {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 3,
+            }
+          )}
+        </TableCell>
+      )
+    },
   },
   {
     id: "market_share",
@@ -76,6 +104,13 @@ export const useNetworkColumns: ColumnDef<Rollup>[] = [
         </p>
       </TableHead>
     ),
+    cell: () => {
+      return (
+        <TableCell className="hidden w-[120px] px-0 text-end lg:table-cell">
+          <p>TODO</p>
+        </TableCell>
+      )
+    },
   },
   {
     id: "network_maturity",
@@ -105,9 +140,17 @@ export const useNetworkColumns: ColumnDef<Rollup>[] = [
         </p>
       </TableHead>
     ),
+    cell: () => {
+      return (
+        <TableCell className="hidden w-[145px] px-0 text-end lg:table-cell">
+          <p>TODO</p>
+        </TableCell>
+      )
+    },
   },
   {
     id: "dropdown",
     header: () => <TableHead className="hidden w-10 lg:table-cell" />,
+    cell: () => <TableCell className="hidden w-10 lg:table-cell" />,
   },
 ]

@@ -9,6 +9,7 @@ import Layer2NetworksTable from "@/components/Layer2NetworksTable"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -16,7 +17,21 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { layer2Data } from "@/data/layer-2/layer-2"
 
+import { BASE_TIME_UNIT } from "@/lib/constants"
+
+import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
+
+// In seconds
+const REVALIDATE_TIME = BASE_TIME_UNIT * 1
+
+const loadData = dataLoader(
+  [["growThePieData", fetchGrowThePie]],
+  REVALIDATE_TIME * 1000
+)
+
 export const getStaticProps = (async ({ locale }) => {
+  const [growThePieData] = await loadData()
+
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
     locale as Lang,
@@ -27,17 +42,25 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
+  const layer2DataCompiled = layer2Data.map((network) => {
+    return {
+      ...network,
+      txCosts: growThePieData.dailyTxCosts[network.growthepieID],
+    }
+  })
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       lastDeployLocaleTimestamp,
       locale,
+      layer2Data: layer2DataCompiled,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
 
-const Layer2Networks = () => {
+const Layer2Networks = ({ layer2Data, locale }) => {
   const { pathname } = useRouter()
 
   const heroProps: ContentHeroProps = {
@@ -59,7 +82,7 @@ const Layer2Networks = () => {
 
       <ContentHero {...heroProps} />
 
-      <Layer2NetworksTable layer2Data={layer2Data} />
+      <Layer2NetworksTable layer2Data={layer2Data} locale={locale} />
     </MainArticle>
   )
 }

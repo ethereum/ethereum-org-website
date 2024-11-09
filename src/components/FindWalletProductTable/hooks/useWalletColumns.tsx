@@ -6,6 +6,7 @@ import { Wallet } from "@/lib/types"
 
 import WalletInfo from "@/components/FindWalletProductTable/WalletInfo"
 import { Button } from "@/components/ui/buttons/Button"
+import { TableCell } from "@/components/ui/Table"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -47,7 +48,9 @@ export const useWalletColumns: ColumnDef<Wallet>[] = [
     ),
     cell: ({ row }) => {
       return (
-        <WalletInfo wallet={row.original} isExpanded={row.getIsExpanded()} />
+        <TableCell>
+          <WalletInfo wallet={row.original} isExpanded={row.getIsExpanded()} />
+        </TableCell>
       )
     },
   },

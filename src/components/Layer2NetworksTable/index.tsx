@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-import { FilterOption } from "@/lib/types"
+import { FilterOption, Lang } from "@/lib/types"
 
 import { useNetworkColumns } from "@/components/Layer2NetworksTable/hooks/useNetworkColumns"
 import { useNetworkFilters } from "@/components/Layer2NetworksTable/hooks/useNetworkFilters"
@@ -8,7 +8,13 @@ import ProductTable from "@/components/ProductTable"
 
 import type { Rollups } from "@/data/layer-2/layer-2"
 
-const Layer2NetworksTable = ({ layer2Data }: { layer2Data: Rollups }) => {
+const Layer2NetworksTable = ({
+  layer2Data,
+  locale,
+}: {
+  layer2Data: Rollups
+  locale: Lang
+}) => {
   // const walletPersonas = useWalletPersonaPresets()
   // TODO: Implement
   const networkFilterOptions = useNetworkFilters()
@@ -27,6 +33,9 @@ const Layer2NetworksTable = ({ layer2Data }: { layer2Data: Rollups }) => {
 
   return (
     <ProductTable
+      meta={{
+        locale: locale,
+      }}
       columns={useNetworkColumns}
       data={layer2Data}
       allDataLength={layer2Data.length}
