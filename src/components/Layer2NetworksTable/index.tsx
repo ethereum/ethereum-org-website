@@ -28,7 +28,7 @@ const Layer2NetworksTable = ({ layer2Data }: { layer2Data: Rollups }) => {
   return (
     <ProductTable
       columns={useNetworkColumns}
-      data={[]}
+      data={layer2Data}
       allDataLength={layer2Data.length}
       filters={filters}
       presetFilters={[]}

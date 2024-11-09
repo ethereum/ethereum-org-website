@@ -20,7 +20,7 @@ import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import type { SimulatorNav } from "@/components/Simulator/interfaces"
 
-import { Rollups } from "@/data/layer-2/layer-2"
+import { Rollup, Rollups } from "@/data/layer-2/layer-2"
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
@@ -729,7 +729,7 @@ export type ProductTablePresetFilters = WalletPersonas[]
 
 export type ProductTableColumnDefs = ColumnDef<Wallet | Rollups>
 
-export type ProductTableRow = Wallet
+export type ProductTableRow = Wallet | Rollup
 
 export interface DropdownOption {
   label: string
