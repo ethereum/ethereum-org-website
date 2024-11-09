@@ -59,6 +59,7 @@ export const getStaticProps = (async ({ locale }) => {
       networkMaturity: networkMaturity(
         l2beatData.data.projects[network.l2beatID]
       ),
+      activeAddresses: growThePieData.activeAddresses[network.growthepieID],
     }
   })
 

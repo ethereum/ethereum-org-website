@@ -4,6 +4,19 @@ import { ButtonLink } from "@/components/Buttons"
 import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
 
+const formatNumber = (num: number): string => {
+  if (num >= 1e9) {
+    return (num / 1e9).toFixed(2) + "B"
+  }
+  if (num >= 1e6) {
+    return (num / 1e6).toFixed(2) + "M"
+  }
+  if (num >= 1e3) {
+    return (num / 1e3).toFixed(0) + "K"
+  }
+  return num.toString()
+}
+
 const NetworkSubComponent = ({ network }) => {
   return (
     <div className="flex w-full flex-col gap-4 px-6 pb-4">
@@ -86,7 +99,7 @@ const NetworkSubComponent = ({ network }) => {
                   </Tooltip>
                 </p>
               </div>
-              <p>TODO: stat</p>
+              <p>{formatNumber(network.activeAddresses)}</p>
             </div>
             <div className="flex-1">
               <div>
@@ -107,7 +120,7 @@ const NetworkSubComponent = ({ network }) => {
                   </Tooltip>
                 </p>
               </div>
-              <p>TODO: stat</p>
+              <p>{network.feeToken}</p>
             </div>
           </div>
         </div>

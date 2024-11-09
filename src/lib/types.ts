@@ -547,6 +547,7 @@ export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   dailyTxCosts: Record<string, number>
+  activeAddresses: Record<string, number>
 }
 
 export type MetricName =

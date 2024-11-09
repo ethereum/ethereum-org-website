@@ -25,6 +25,16 @@ export const fetchGrowThePie = async (): Promise<GrowThePieData> => {
     return itemDate > new Date(latest) ? item.date : latest
   }, data[0].date)
 
+  const activeAddresses = data
+    .filter((item) => item.date === mostRecentDate)
+    .filter((item) => item.metric_key === "daa")
+    .reduce((acc, item) => {
+      return {
+        ...acc,
+        [item.origin_key]: item.value,
+      }
+    }, {})
+
   const mostRecentData = data.filter(
     (item) =>
       item.date === mostRecentDate &&
@@ -60,5 +70,6 @@ export const fetchGrowThePie = async (): Promise<GrowThePieData> => {
       acc[item.origin_key] = item.value
       return acc
     }, {}),
+    activeAddresses: activeAddresses,
   }
 }
