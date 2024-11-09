@@ -23,6 +23,7 @@ import { layer2Data } from "@/data/layer-2/layer-2"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
+import { fetchGrowThePieMaster } from "@/lib/api/fetchGrowThePieMaster"
 import { fetchL2beat } from "@/lib/api/fetchL2beat"
 import Callout2Image from "@/public/images/layer-2/layer-2-walking.png"
 import Callout1Image from "@/public/images/man-and-dog-playing.png"
@@ -33,13 +34,14 @@ const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 const loadData = dataLoader(
   [
     ["growThePieData", fetchGrowThePie],
+    ["growThePieMasterData", fetchGrowThePieMaster],
     ["l2beatData", fetchL2beat],
   ],
   REVALIDATE_TIME * 1000
 )
 
 export const getStaticProps = (async ({ locale }) => {
-  const [growThePieData, l2beatData] = await loadData()
+  const [growThePieData, growThePieMaster, l2beatData] = await loadData()
 
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
@@ -60,6 +62,8 @@ export const getStaticProps = (async ({ locale }) => {
         l2beatData.data.projects[network.l2beatID]
       ),
       activeAddresses: growThePieData.activeAddresses[network.growthepieID],
+      launchDate:
+        growThePieMaster.launchDates[network.growthepieID.replace(/_/g, "-")],
     }
   })
 
