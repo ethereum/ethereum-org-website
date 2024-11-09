@@ -25,7 +25,7 @@ const NetworkSubComponent = ({ network }) => {
           <div className="flex flex-row gap-4">
             <div className="flex-1">
               <div>
-                <p className="text-xs text-body-medium">
+                <p className="text-xs font-bold text-body-medium">
                   Age{" "}
                   <Tooltip
                     content={
@@ -63,7 +63,7 @@ const NetworkSubComponent = ({ network }) => {
             </div>
             <div className="flex-1">
               <div>
-                <p className="text-xs text-body-medium">
+                <p className="text-xs font-bold text-body-medium">
                   Wallet support{" "}
                   <Tooltip
                     content={
@@ -86,7 +86,7 @@ const NetworkSubComponent = ({ network }) => {
           <div className="flex flex-row gap-4">
             <div className="flex-1">
               <div>
-                <p className="text-xs text-body-medium">
+                <p className="text-xs font-bold text-body-medium">
                   Active addresses{" "}
                   <Tooltip
                     content={
@@ -116,7 +116,7 @@ const NetworkSubComponent = ({ network }) => {
             </div>
             <div className="flex-1">
               <div>
-                <p className="text-xs text-body-medium">
+                <p className="text-xs font-bold text-body-medium">
                   Fee token{" "}
                   <Tooltip
                     content={
@@ -133,12 +133,34 @@ const NetworkSubComponent = ({ network }) => {
                   </Tooltip>
                 </p>
               </div>
-              <p>{network.feeToken}</p>
+              <p>{network.feeToken.join(", ")}</p>
             </div>
           </div>
         </div>
         <div className="flex-1 gap-2">
-          <p>TODO: Chart</p>
+          <p className="text-xs font-bold text-body-medium">
+            Network usage{" "}
+            <Tooltip
+              content={
+                <div className="flex flex-col gap-2">
+                  <p className="text-lg font-bold">Network usage</p>
+                  <p>
+                    An overview of network usage. Measures transaction count in
+                    respective areas within the last 30 days.
+                  </p>
+                  <p>
+                    Data from{" "}
+                    <InlineLink href="https://growthepie.xyz">
+                      Growthepie
+                    </InlineLink>
+                    .
+                  </p>
+                </div>
+              }
+            >
+              <MdInfoOutline className="translate-y-0.5" />
+            </Tooltip>
+          </p>
         </div>
       </div>
       <div className="flex flex-col gap-6 p-4">
