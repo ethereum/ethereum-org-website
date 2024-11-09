@@ -93,6 +93,30 @@ const Layer2Networks = ({ layer2Data, locale }) => {
 
       <Layer2NetworksTable layer2Data={layer2Data} locale={locale} />
 
+      <div id="more-advanced-cta" className="w-full px-8 py-9">
+        <div className="flex flex-col gap-8 bg-main-gradient px-12 py-14">
+          <h3>Looking for more advanced overview?</h3>
+          <div className="flex max-w-[768px] flex-col gap-8">
+            <p>
+              Many of the projects are{" "}
+              <strong>still young and somewhat experimental.</strong>
+            </p>
+            <p>
+              For more information on the technology, risks and trust
+              assumptions of these networks, we recommend checking out L2BEAT,
+              which provides a comprehensive risk assessment framework of each
+              project and Growthepie for general data analysis.
+            </p>
+          </div>
+          <div className="flex flex-col gap-6 sm:flex-row">
+            <ButtonLink href="https://l2beat.com">Visit l2beat.com</ButtonLink>
+            <ButtonLink href="https://growthepie.xyz">
+              Visit growthepie.xyz
+            </ButtonLink>
+          </div>
+        </div>
+      </div>
+
       <div
         id="callout-cards"
         className="flex w-full flex-col px-8 py-9 lg:flex-row lg:gap-16"
