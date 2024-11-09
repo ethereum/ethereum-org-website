@@ -1,5 +1,6 @@
 "use client"
 
+import { IoChevronDownSharp, IoChevronUpSharp } from "react-icons/io5"
 import { MdInfoOutline } from "react-icons/md"
 import { ColumnDef } from "@tanstack/react-table"
 
@@ -161,7 +162,13 @@ export const useNetworkColumns: ColumnDef<Rollup>[] = [
   },
   {
     id: "dropdown",
-    header: () => <TableHead className="hidden w-10 lg:table-cell" />,
-    cell: () => <TableCell className="hidden w-10 lg:table-cell" />,
+    header: () => <TableHead className="hidden w-12 lg:table-cell" />,
+    cell: ({ row }) => {
+      return (
+        <TableCell className="hidden w-12 lg:table-cell">
+          {row.getIsExpanded() ? <IoChevronUpSharp /> : <IoChevronDownSharp />}
+        </TableCell>
+      )
+    },
   },
 ]
