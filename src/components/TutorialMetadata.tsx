@@ -1,23 +1,24 @@
-import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
-import { Badge } from "@chakra-ui/react";
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { Badge } from "@chakra-ui/react"
 
-import type { Lang, TranslationKey } from "@/lib/types";
-import { TutorialFrontmatter } from "@/lib/interfaces";
+import type { Lang, TranslationKey } from "@/lib/types"
+import { TutorialFrontmatter } from "@/lib/interfaces"
 
-import CopyToClipboard from "@/components/CopyToClipboard";
-import Emoji from "@/components/Emoji";
-import InlineLink from "@/components/Link";
-import Translation from "@/components/Translation";
-import TutorialTags from "@/components/TutorialTags";
+import CopyToClipboard from "@/components/CopyToClipboard"
+import Emoji from "@/components/Emoji"
+import InlineLink from "@/components/Link"
+import Translation from "@/components/Translation"
+import TutorialTags from "@/components/TutorialTags"
 
-import { getLocaleTimestamp } from "@/lib/utils/time";
-import { Flex } from "./ui/flex";
+import { getLocaleTimestamp } from "@/lib/utils/time"
+
+import { Flex } from "./ui/flex"
 
 export type TutorialMetadataProps = {
-  frontmatter: TutorialFrontmatter;
-  timeToRead: number;
-};
+  frontmatter: TutorialFrontmatter
+  timeToRead: number
+}
 
 export enum Skill {
   BEGINNER = "beginner",
@@ -27,31 +28,34 @@ export enum Skill {
 
 export const getSkillTranslationId = (skill: Skill): TranslationKey =>
   `page-developers-tutorials:page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]
-  }`;
+  }`
 
 const TutorialMetadata = ({
   frontmatter,
   timeToRead,
 }: TutorialMetadataProps) => {
-  const { locale } = useRouter();
-  const { t } = useTranslation("page-developers-tutorials");
+  const { locale } = useRouter()
+  const { t } = useTranslation("page-developers-tutorials")
 
-  const hasSource = frontmatter.source && frontmatter.sourceUrl;
-  const published = frontmatter.published;
-  const author = frontmatter.author;
-  const address = frontmatter.address;
+  const hasSource = frontmatter.source && frontmatter.sourceUrl
+  const published = frontmatter.published
+  const author = frontmatter.author
+  const address = frontmatter.address
 
   return (
-    <Flex className=" flex-col justify-between pb-2  border-b-0 lg:border-b border-border">
-      <Flex className=" justify-between items-center w-full mb-8">
-        <div className="flex flex-wrap w-full">
+    <Flex className="flex-col justify-between border-b-0 border-border pb-2 lg:border-b">
+      <Flex className="mb-8 w-full items-center justify-between">
+        <Flex className="w-full flex-wrap">
           <TutorialTags tags={frontmatter.tags} />
-        </div>
-        <Badge variant="secondary" className="self-start mb-2 whitespace-nowrap">
+        </Flex>
+        <Badge
+          variant="secondary"
+          className="mb-2 self-start whitespace-nowrap"
+        >
           {t(getSkillTranslationId(frontmatter.skill as Skill))}
         </Badge>
       </Flex>
-      <div className="flex flex-wrap gap-4 mt-[-1rem] text-sm text-text300 mb-6">
+      <Flex className="text-text300 mb-6 mt-[-1rem] flex-wrap gap-4 text-sm">
         {author && (
           <div>
             <Emoji className="me-2 text-sm" text=":writing_hand:" />
@@ -59,7 +63,7 @@ const TutorialMetadata = ({
           </div>
         )}
         {hasSource && (
-          <div >
+          <div>
             <Emoji className="me-2 text-sm" text=":books:" />
             <InlineLink href={frontmatter.sourceUrl}>
               {frontmatter.source}
@@ -67,27 +71,23 @@ const TutorialMetadata = ({
           </div>
         )}
         {published && (
-          <div >
+          <div>
             <Emoji className="me-2 text-sm" text=":calendar:" />{" "}
             {getLocaleTimestamp(locale! as Lang, published)}
           </div>
         )}
-        <div >
-          <Emoji className="me-2  text-sm" text=":stopwatch:" />
+        <div>
+          <Emoji className="me-2 text-sm" text=":stopwatch:" />
           {timeToRead} {t("comp-tutorial-metadata-minute-read")} minute read
         </div>
-      </div>
+      </Flex>
       {address && (
-        <div className="flex flex-wrap mt-[-1rem] text-sm text-text300 mb-6">
+        <Flex className="text-text300 mb-6 mt-[-1rem] flex-wrap text-sm">
           <CopyToClipboard text={address}>
             {(isCopied) => (
-              <div
-                className="text-primary cursor-pointer overflow-hidden text-ellipsis font-mono bg-ednBackground px-1 text-sm hover:bg-primary100"
-              >
+              <div className="bg-ednBackground hover:bg-primary100 cursor-pointer overflow-hidden text-ellipsis px-1 font-mono text-sm text-primary">
                 <div className="uppercase">
-                  <Translation
-                    id="comp-tutorial-metadata-tip-author"
-                  />{" "}
+                  <Translation id="comp-tutorial-metadata-tip-author" />{" "}
                 </div>
                 {address} {isCopied && <Translation id="copied" />}
                 {isCopied && (
@@ -96,10 +96,10 @@ const TutorialMetadata = ({
               </div>
             )}
           </CopyToClipboard>
-        </div>
+        </Flex>
       )}
     </Flex>
-  );
-};
+  )
+}
 
-export default TutorialMetadata;
+export default TutorialMetadata
