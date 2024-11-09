@@ -94,7 +94,7 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
-    l2beatID: "zksync-era",
+    l2beatID: "zksync2",
     growthepieID: "zksync_era",
     name: "ZKSync Era",
     logo: ZkSyncEraLogo,

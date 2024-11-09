@@ -104,10 +104,19 @@ export const useNetworkColumns: ColumnDef<Rollup>[] = [
         </p>
       </TableHead>
     ),
-    cell: () => {
+    cell: ({ table, row }) => {
+      console.log(row.original)
       return (
         <TableCell className="hidden w-[120px] px-0 text-end lg:table-cell">
-          <p>TODO</p>
+          <p>
+            {new Intl.NumberFormat(table.options.meta.locale as Lang, {
+              style: "currency",
+              currency: "USD",
+              notation: "compact",
+              minimumSignificantDigits: 3,
+              maximumSignificantDigits: 3,
+            }).format(row.original.l2beatData.tvl.breakdown.total)}
+          </p>
         </TableCell>
       )
     },

@@ -20,17 +20,21 @@ import { layer2Data } from "@/data/layer-2/layer-2"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
+import { fetchL2beat } from "@/lib/api/fetchL2beat"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader(
-  [["growThePieData", fetchGrowThePie]],
+  [
+    ["growThePieData", fetchGrowThePie],
+    ["l2beatData", fetchL2beat],
+  ],
   REVALIDATE_TIME * 1000
 )
 
 export const getStaticProps = (async ({ locale }) => {
-  const [growThePieData] = await loadData()
+  const [growThePieData, l2beatData] = await loadData()
 
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
@@ -46,6 +50,7 @@ export const getStaticProps = (async ({ locale }) => {
     return {
       ...network,
       txCosts: growThePieData.dailyTxCosts[network.growthepieID],
+      l2beatData: l2beatData.data.projects[network.l2beatID],
     }
   })
 
