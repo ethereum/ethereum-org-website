@@ -2,6 +2,7 @@ import { useState } from "react"
 
 import { FilterOption } from "@/lib/types"
 
+import { useNetworkColumns } from "@/components/Layer2NetworksTable/hooks/useNetworkColumns"
 import { useNetworkFilters } from "@/components/Layer2NetworksTable/hooks/useNetworkFilters"
 import ProductTable from "@/components/ProductTable"
 
@@ -26,7 +27,7 @@ const Layer2NetworksTable = ({ layer2Data }: { layer2Data: Rollups }) => {
 
   return (
     <ProductTable
-      columns={[]}
+      columns={useNetworkColumns}
       data={[]}
       allDataLength={layer2Data.length}
       filters={filters}

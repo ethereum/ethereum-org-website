@@ -70,11 +70,11 @@ const DataTable = <TData, TValue>({
   return (
     <div className="relative">
       <div className="sticky top-[76px] z-10 w-full border-b border-primary bg-background">
-        <TableHeader className="bg-blue flex w-full">
-          {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id} className="w-full">
-              {headerGroup.headers.map((header) => {
-                return (
+        <Table {...props}>
+          <TableHeader>
+            {table.getHeaderGroups().map((headerGroup) => (
+              <TableRow key={headerGroup.id}>
+                {headerGroup.headers.map((header) => (
                   <Fragment key={header.id}>
                     {header.isPlaceholder
                       ? null
@@ -83,11 +83,11 @@ const DataTable = <TData, TValue>({
                           header.getContext()
                         )}
                   </Fragment>
-                )
-              })}
-            </TableRow>
-          ))}
-        </TableHeader>
+                ))}
+              </TableRow>
+            ))}
+          </TableHeader>
+        </Table>
       </div>
       <Table {...props}>
         <TableBody
