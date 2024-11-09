@@ -4,6 +4,7 @@ import { FilterOption, Lang } from "@/lib/types"
 
 import { useNetworkColumns } from "@/components/Layer2NetworksTable/hooks/useNetworkColumns"
 import { useNetworkFilters } from "@/components/Layer2NetworksTable/hooks/useNetworkFilters"
+import NetworkSubComponent from "@/components/Layer2NetworksTable/NetworksSubcomponent"
 import ProductTable from "@/components/ProductTable"
 
 import type { Rollups } from "@/data/layer-2/layer-2"
@@ -43,9 +44,8 @@ const Layer2NetworksTable = ({
       presetFilters={[]}
       resetFilters={resetFilters}
       setFilters={setFilters}
-      subComponent={(wallet, listIdx) => {
-        console.log(wallet, listIdx)
-        return <></>
+      subComponent={(network, listIdx) => {
+        return <NetworkSubComponent network={network} listIdx={listIdx} />
       }}
       noResultsComponent={() => <></>}
       mobileFiltersLabel={"See networks"}
