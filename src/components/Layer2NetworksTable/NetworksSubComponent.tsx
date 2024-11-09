@@ -45,7 +45,20 @@ const NetworkSubComponent = ({ network }) => {
                     <MdInfoOutline className="translate-y-0.5" />
                   </Tooltip>
                 </p>
-                <p>TODO: stat</p>
+                <p>
+                  {(() => {
+                    const launch = new Date(network.launchDate)
+                    const today = new Date()
+                    const yearDiff = today.getFullYear() - launch.getFullYear()
+                    const monthDiff = today.getMonth() - launch.getMonth()
+
+                    const totalMonths = yearDiff * 12 + monthDiff
+                    const years = Math.floor(totalMonths / 12)
+                    const months = totalMonths % 12
+
+                    return `${years ? years + " year" + (years > 1 ? "s" : "") : ""} ${months ? months + " month" + (months > 1 ? "s" : "") : ""}`.trim()
+                  })()}
+                </p>
               </div>
             </div>
             <div className="flex-1">
