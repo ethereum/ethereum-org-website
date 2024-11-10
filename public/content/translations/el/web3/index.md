@@ -147,11 +147,11 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 Το Web3 δεν είναι αυστηρά καθορισμένο. Διάφοροι συμμετέχοντες της κοινότητας έχουν διαφορετικές απόψεις για αυτό. Δείτε παρακάτω μερικές:
 
-- [Τι είναι το Web3; Το Αποκεντρωμένο Διαδίκτυο του Μέλλοντος Περιγράφηκε](https://www.freecodecamp.org/news/what-is-web3/) - _Nader Dabit_
+- [Τι είναι το Web3; Το Αποκεντρωμένο Διαδίκτυο του Μέλλοντος Περιγράφηκε ](https://www.freecodecamp.org/news/what-is-web3/) - _Nader Dabit_
 - [Κατανοώντας το Web3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) - _Josh Stark_
-- [Γιατί το Web3 έχει σημασία](https://future.a16z.com/why-web3-matters/) - _ Chris Dixon_
-- [Γιατί η αποκέντρωσης έχει σημασία](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _ Chris Dixon_
-- [Το τοπίο του Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) - _ a16z_
-- [Η συζήτηση για το Web3](https://www.notboring.co/p/the-web3-debate?s=r) - _ Packy McCormick_
+- [Γιατί το Web3 έχει σημασία](https://future.a16z.com/why-web3-matters/) - _Chris Dixon_
+- [Γιατί η αποκέντρωσης έχει σημασία](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
+- [Το τοπίο του Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) - _a16z_
+- [Η συζήτηση για το Web3](https://www.notboring.co/p/the-web3-debate?s=r) - _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

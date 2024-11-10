@@ -1,5 +1,3 @@
-import * as React from "react"
-
 import { createIconBase } from "../icon-base"
 
 export const GreenTickIcon = createIconBase({
