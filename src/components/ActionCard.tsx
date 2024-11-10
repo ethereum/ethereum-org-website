@@ -1,10 +1,11 @@
 import { StaticImageData } from "next/image"
 import type { BaseHTMLAttributes, ElementType, ReactNode } from "react"
-import { useColorModeValue } from "@chakra-ui/react"
 
 import { TwImage } from "@/components/Image"
 import InlineLink from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
+
+import { cn } from "@/lib/utils/cn"
 
 import { Flex } from "./ui/flex"
 export type ActionCardProps = Omit<
@@ -37,18 +38,20 @@ const ActionCard = ({
   isBottom = true,
   ...props
 }: ActionCardProps) => {
-  const descriptionColor = useColorModeValue(
-    "text-black opacity-65",
-    "text-white opacity-80"
-  )
-
   return (
     <LinkBox
-      className={`focus:bg-table-bg-hover m-4 flex flex-none shadow-table hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-table-box-hover focus:duration-100 ${className}`}
+      className={cn(
+        "focus:bg-table-bg-hover m-4 flex flex-none shadow-table hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-table-box-hover focus:duration-100",
+        className
+      )}
       {...props}
     >
       <Flex
-        className={`action-card-image-wrapper flex h-[260px] flex-row bg-gradient-to-r from-accent-a/10 to-accent-c/10 ${isBottom ? "items-end" : "items-center"} ${isRight ? "justify-end" : "justify-center"} shadow-[inset_0px_-1px_0px_rgba(0,0,0,0.1)]`}
+        className={cn(
+          "action-card-image-wrapper flex h-[260px] flex-row bg-gradient-to-r from-accent-a/10 to-accent-c/10 shadow-[inset_0px_-1px_0px_rgba(0,0,0,0.1)]",
+          isBottom ? "items-end" : "items-center",
+          isRight ? "justify-end" : "justify-center"
+        )}
       >
         <TwImage
           src={image}
@@ -69,7 +72,9 @@ const ActionCard = ({
             </InlineLink>
           </LinkOverlay>
         </h3>
-        <p className={`mb-0 ${descriptionColor}`}>{description}</p>
+        <p className={"mb-0 text-body opacity-65 dark:opacity-80"}>
+          {description}
+        </p>
         {children && <div className="mt-8">{children}</div>}
       </div>
     </LinkBox>
