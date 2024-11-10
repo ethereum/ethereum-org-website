@@ -147,7 +147,7 @@ Create a Viem [public client](https://viem.sh/docs/clients/public.html). Public 
 const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`)
 ```
 
-The environment variables are available in [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). However,  TypeScript is strongly typed. An environment variable can be be any string, or empty, so the type for an environment variable is `string | undefined`. However, a key is defined in Viem as `0x${string}` (`0x` followed by a string). Here we tell TypeScript that the `PRIVATE_KEY` environment variable will be of that type. If it isn't, we'll get a runtime error.
+The environment variables are available in [`process.env`](https://www.totaltypescript.com/how-to-strongly-type-process-env). However,  TypeScript is strongly typed. An environment variable can be any string, or empty, so the type for an environment variable is `string | undefined`. However, a key is defined in Viem as `0x${string}` (`0x` followed by a string). Here we tell TypeScript that the `PRIVATE_KEY` environment variable will be of that type. If it isn't, we'll get a runtime error.
 
 The [`privateKeyToAccount`](https://viem.sh/docs/accounts/privateKey) function then uses this private key to create a full account object.
 
