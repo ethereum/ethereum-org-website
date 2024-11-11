@@ -13,7 +13,7 @@ Használja az Ethereumot decentralizált alkalmazások (dappok) fejlesztésére.
 
 **Tegye meg az első lépést, hogy integrálja a Go-t az Ethereummal**
 
-Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintse meg az [ethereum.org/learn](/learn/) vagy az [ethereum.org/developers](/developers/) oldalt.
+Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [ethereum.org/learn](/learn/) oldalt vagy az [ethereum.org/developers](/developers/) oldalt.
 
 - [Blokklánc ismertetése](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Okosszerződések értelmezése](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -23,7 +23,6 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintse meg az [
 
 ## Cikkek és könyvek kezdőknek {#beginner-articles-and-books}
 
-- [Ethereum kliens kiválasztása](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Kezdő lépések Geth-tel](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
 - [Golang használata Ethereumra való kapcsolódásra](https://www.youtube.com/watch?v=-7uChuO_VzM)
 - [Ethereum okosszerződések telepítése Golang használatával](https://www.youtube.com/watch?v=pytGqQmDslE)

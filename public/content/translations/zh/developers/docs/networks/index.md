@@ -50,6 +50,7 @@ lang: zh
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan 区块浏览器](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### 水龙头
 
@@ -60,7 +61,7 @@ lang: zh
 - [Alchemy Sepolia 水龙头](https://sepoliafaucet.com/)
 - [Infura Sepolia 水龙头](https://www.infura.io/faucet)
 - [Chainstack Sepolia 水龙头](https://faucet.chainstack.com/sepolia-faucet)
-- [Testnet Faucet | Sepolia](https://testnet-faucet.com/sepolia/)
+- [以太坊生态系统水龙头](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli _（长期支持）_ {#goerli}
 
@@ -76,7 +77,8 @@ Goerli 是用于测试验证和质押的测试网。 Goerli 网络对想要运�
 
 - [网站](https://goerli.net/)
 - [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan 区块浏览器](https://goerli.etherscan.io)
+- [Etherscan](https://goerli.etherscan.io)
+- [Blockscout](https://eth-goerli.blockscout.com/)
 
 ##### 水龙头
 
@@ -89,7 +91,7 @@ Goerli 是用于测试验证和质押的测试网。 Goerli 网络对想要运�
 - [Coinbase Wallet 水龙头 | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Chainstack Goerli 水龙头](https://faucet.chainstack.com/goerli-faucet)
 
-要在 Goerli 测试网上启动验证者，请使用 ethstaker 的 ["cheap goerli validator" 启动板](https://goerli.launchpad.ethstaker.cc/en/)。
+要在 Goerli 测试网上启动验证者，请使用 ethstaker 的 ["cheap goerli validator" 启动板](https://holesky.launchpad.ethstaker.cc/en/)。
 
 ### 二层网络测试网 {#layer-2-testnets}
 

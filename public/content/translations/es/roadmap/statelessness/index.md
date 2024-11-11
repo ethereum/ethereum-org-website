@@ -14,7 +14,7 @@ Los discos duros más baratos se pueden usar para almacenar datos más antiguos,
 
 ## Reducción del almacenamiento para los nodos {#reducing-storage-for-nodes}
 
-Hay varias formas de reducir la cantidad de datos que cada nodo tiene que almacenar, cada una de las cuales requiere que el protocolo central de Ethereum se actualice hasta cierto punto:
+Hay varias formas de reducir la cantidad de datos que cada nodo tiene que almacenar, cada una de las cuales requiere que el protocolo principal de Ethereum se actualice en un grado diferente:
 
 - **El vencimiento del historial**: permite que los nodos descarten los datos de estado más antiguos que los bloques X, pero no cambia la forma en que el cliente de Ethereum gestiona los datos de estado.
 - **El vencimiento del estado**: permite que los datos de estado que no se utilizan con frecuencia se vuelvan inactivos. Los clientes pueden ignorar los datos inactivos hasta que se resuciten.
@@ -72,7 +72,7 @@ Para que esto suceda, deben haberse implementado en los clientes de Ethereum los
 
 El sin estado depende de que los constructores de bloques mantengan una copia de los datos del estado completos para que puedan generar testigos y que sirvan para verificar el bloque. Otros nodos no necesitan acceso a los datos del estado, toda la información necesaria para verificar el bloque está disponible en el testigo. Esto crea una situación en la que proponer un bloque es caro, pero verificar el bloque es barato, lo que implica que menos operadores ejecutarán un nodo de propuesta de bloque. Sin embargo, la descentralización de los proponentes de bloques no es crítica, siempre y cuando el mayor número posible de participantes puedan verificar de forma independiente que los bloques que proponen son válidos.
 
-<ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Más información sobre las notas de Dankrad.</ButtonLink>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Más información sobre las notas de Dankrad.</ButtonLink>
 </ExpandableCard>
 
 Los proponentes de bloques utilizan los datos del estado para crear «testigos», el conjunto mínimo de datos que prueban los valores del estado que las transacciones están cambiando en un bloque. Otros validadores no mantienen el estado, solo almacenan la raíz del estado (un hash de todo el estado). Reciben un bloqueo y un testigo y los usan para actualizar su raíz de estado. Esto hace que un nodo de validación sea extremadamente ligero.
@@ -81,7 +81,7 @@ El sin estado débil se encuentra en un estado avanzado de investigación, pero 
 
 ### Sin estado fuerte {#strong-statelessness}
 
-El sin estado fuerte elimina por completo la necesidad de que cualquier bloque almacene los datos completos del estado. En su lugar, las transacciones se envían con testigos que pueden añadir los productores de bloques. Los productores de bloques son entonces responsables de almacenar solo ese estado que se necesita para generar testigos para las cuentas pertinentes. La responsabilidad del estado se traslada casi en su totalidad a los usuarios, ya que envían testigos y «listas de acceso» para declarar con qué cuentas y claves de almacenamiento están interactuando. Esto permitiría nodos extremadamente ligeros, no obstante acarrea contrapartidas que pueden dificultar las transacciones con contratos inteligentes.
+La fuerte falta de estado elimina la necesidad de que cualquier nodo almacene datos de estado. En su lugar, las transacciones se envían con testigos que pueden añadir los productores de bloques. Los productores de bloques son entonces responsables de almacenar solo ese estado que se necesita para generar testigos para las cuentas pertinentes. La responsabilidad del estado se traslada casi en su totalidad a los usuarios, ya que envían testigos y «listas de acceso» para declarar con qué cuentas y claves de almacenamiento están interactuando. Esto permitiría nodos extremadamente ligeros, no obstante acarrea contrapartidas que pueden dificultar las transacciones con contratos inteligentes.
 
 Los investigadores han estudiado el sin estado fuerte, aunque actualmente no se espera que forme parte de la hoja de ruta de Ethereum; es más probable que con el sin estado débil sea suficiente para las necesidades de escalabilidad de Ethereum.
 

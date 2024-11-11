@@ -32,7 +32,7 @@ Sa kabaligtaran, ang off-chain governance ay kung saan nangyayari ang anumang pa
 
 _Kahit off-chain ang pamamahala ng Ethereum sa antas ng protocol, maraming use case na ginawa sa Ethereum, tulad ng DAOs, ang gumagamit ng on-chain na pamamahala._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Iba pang detalye tungkol sa DAOs
 </ButtonLink>
 
@@ -58,7 +58,7 @@ _Tandaan: maaaring hindi lang sa isa sa mga grupong ito napapabilang ang sinuman
 
 Isang mahalagang proseso na ginagamit sa pamamahala ng Ethereum ang pagmumungkahi ng **mga Ethereum Improvement Proposal (EIPs)**. Ang EIPs ay mga pamantayan na nagtatakda ng mga potensyal na bagong feature o proseso para sa Ethereum. Makakagawa ng EIP ang kahit sino sa komunidad ng Ethereum. Kung interesado kang magsulat ng EIP o lumahok sa peer-review at/o pamamahala, tingnan ang:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Iba pang detalye tungkol sa EIPs
 </ButtonLink>
 
@@ -154,7 +154,7 @@ Bagama't palaging ganap na open source ang specification at mga pagpapatupad ng 
 
 Noong mag-merge ang Beacon Chain at Ethereum execution layer noong ika-15 ng Setyembre, 2022, natapos ang The Merge bilang bahagi ng [Paris network upgrade](/history/#paris). Ang proposal na [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675)ay ginawang 'Final' mula sa 'Last Call', kaya nailipat ito sa patunay ng stake.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Iba pang detalye tungkol sa The Merge
 </ButtonLink>
 

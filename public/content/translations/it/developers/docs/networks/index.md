@@ -20,9 +20,9 @@ Le reti pubbliche sono accessibili da chiunque nel mondo abbia una connessione i
 
 La rete principale è la blockchain di produzione Ethereum pubblica primaria, dove le transazioni con valore reale vengono eseguite sul libro mastro distribuito.
 
-Quando per persone e scambi si parla di prezzi in ETH, si parla di ETH della rete principale.
+Quando le persone e le piattaforme centralizzate parlano dei prezzi di ETH, essi parlano di ETH della rete principale.
 
-### Rete di prova di Ethereum {#ethereum-testnets}
+### Reti di prova di Ethereum {#ethereum-testnets}
 
 Oltre alla rete principale, sono disponibili reti di prova pubbliche. Queste, sono reti usate dagli sviluppatori di protocolli o contratti intelligenti per testare sia gli aggiornamenti del protocollo che i potenziali contratti intelligenti, in un ambiente simile a quello di produzione prima della distribuzione alla Rete Principale. In pratica, è analogo ad ambiente di produzione rispetto a server di staging.
 
@@ -50,6 +50,7 @@ Le due reti di prova pubbliche che gli sviluppatori di client stanno mantenendo 
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Faucet
 
@@ -60,6 +61,7 @@ Le due reti di prova pubbliche che gli sviluppatori di client stanno mantenendo 
 - [Faucet Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Faucet Infura Sepolia](https://www.infura.io/faucet)
 - [Faucet Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [Faucet dell'ecosistema di Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli _(supporto a lungo termine)_ {#goerli}
 
@@ -76,6 +78,7 @@ Goerli è una rete di prova per testare la convalida e lo staking. La rete Goerl
 - [Sito web](https://goerli.net/)
 - [GitHub](https://github.com/eth-clients/goerli)
 - [Etherscan](https://goerli.etherscan.io)
+- [Blockscout](https://eth-goerli.blockscout.com/)
 
 ##### Faucet
 
@@ -88,7 +91,7 @@ Goerli è una rete di prova per testare la convalida e lo staking. La rete Goerl
 - [Faucet Coinbase Wallet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Faucet Gorli di Chainstack](https://faucet.chainstack.com/goerli-faucet)
 
-Per lanciare un Validatore sulla rete di prova Goerli, usa il ["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/) di ethstaker.
+Per lanciare un Validatore sulla rete di prova Goerli, usa il ["cheap goerli validator" launchpad](https://holesky.launchpad.ethstaker.cc/en/) di ethstaker.
 
 ### Rete di prova del livello 2 {#layer-2-testnets}
 

@@ -32,6 +32,7 @@ ethereum.orgは、40言語以上のネイティブに翻訳されており、各
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - ブラジル版Cointelegraph、主要な暗号通貨報道機関
 - [Livecoins](http://www.livecoins.com.br/ethereum) - 暗号通貨ニュースとツール
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - 暗号通貨ニュースとレポート
+- [Modular Crypto](https://modularcrypto.xyz/) - 暗号通貨ニュースおよび教育記事
 
 **教育**
 
@@ -90,6 +91,24 @@ ethereum.orgは、40言語以上のネイティブに翻訳されており、各
 - [Microsoft Learn (イーサリアムネットワーク)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - イーサリアムネットワークへの接続およびデプロイ
 - [Microsoft Learn (ブロックチェーン)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - ブロックチェーン開発入門
 
+### ヘブライ語 {#he}
+
+- [ウディ・ヴァルトハイマー - ビットコイナーがイーサリアムから学べること](https://www.cryptojungle.co.il/udi-wertheimer-what-bitcoiners-can-learn-from-ethereum/)
+- [オマー・グレイスマン (OpenZeppelin) - 150億ドルのスマートコントラクトハックを防いだ方法](https://www.cryptojungle.co.il/omer-greisman-openzeppelin/)
+- [シャイ・ダティカ (INX) - トークン化と証券の未来、そしてイーサリアムは証券かどうか](https://www.cryptojungle.co.il/shy-datika-tokenization/)
+- [ロイ・コンフィノ (Lemonade) - イーサリアムでの保険](https://www.cryptojungle.co.il/roy-confino-insurance/)
+- [イダン・オフラット (Fireblocks) - 機関投資家の採用](https://www.cryptojungle.co.il/idan-ofrat-fireblocks/)
+- [ガル・ワイズマン (MetaMask) - MetaMaskとは何か](https://www.cryptojungle.co.il/gal-weizman-metamask/)
+- [ドロール・アヴィエリ (Consensys) - イーサリアムの中心](https://www.cryptojungle.co.il/dror-aviely-ethereum-center/)
+- [ニル・ロジン - クリプトパンクであること](https://www.cryptojungle.co.il/nir-rozin-cryptopunk/)
+- [アダン・ケデム - ゲーミング & メタバース](https://www.cryptojungle.co.il/adan-kedem-web3-gaming/)
+- [ウリ・コロドニー (Starkware) - イーサリアムとブロックチェーンレイヤー](https://www.cryptojungle.co.il/uri-kolodny-starkware/)
+- [ウディ・ヴァルトハイマー - イーサリアム2.0と競合](https://www.cryptojungle.co.il/udi-on-eth2/)
+- [ベン・サモチャ (私自身) - イーサリアム2.0はチャンスか？](https://www.cryptojungle.co.il/etherurm2-week-summary/)
+- [アロン・ムロック (Bloxstaking) - イーサリアム2.0とは何か？](https://www.cryptojungle.co.il/alon-moroch-eth2/)
+- [エイロン・アヴィヴ (Collider Ventures) - イーサリアム2.0で起こりうる問題](https://www.cryptojungle.co.il/eilon-aviv-eth2-0/)
+- [エイロン・アヴィヴ (Collider Ventures) - なぜイーサリアム2.0が必要なのか](https://www.cryptojungle.co.il/eilon-aviv-ethereum-2-0/)
+
 ### イタリア語 {#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) - スマートコントラクトとブロックチェーン技術に焦点を置いたイーサリアムの教育、イベント、ニュース
@@ -98,9 +117,18 @@ ethereum.orgは、40言語以上のネイティブに翻訳されており、各
 - [Microsoft Learn (Smart contracts)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - Solidityを使ったイーサリアムのスマートコントラクトの書き方
 - [Microsoft Learn 分散型アプリ(Dapp)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - 分散型アプリでユーザーインターフェースを作成
 
+### 日本語 {#ja}
+
+- [一般社団法人日本暗号資産取引業協会](https://jvcea.or.jp/)
+- [一般社団法人日本暗号資産ビジネス協会](https://cryptocurrency-association.org/)
+- [ブロックチェーン開発の概要 - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - ブロックチェーンとイーサリアムプラットフォームでの開発に関する説明
+- [マスタリング・イーサリアム](https://www.oreilly.co.jp/books/9784873118963/) - スマートコントラクトと分散型アプリ(Dapp)の構築
+
 ### ロシア語 {#ru}
 
 - [Cyber Academy](https://cyberacademy.dev) - Web3ビルダーのための学習スペース
+- [Forklog](https://forklog.com) - 暗号資産全般に関するニュースや教育的な記事、既存技術やさまざまなブロックチェーンの将来のアップグレードについて
+- [BeInCrypto](https://ru.beincrypto.com) - ニュース、暗号資産の価格分析、そして暗号資産全般についての非技術的で簡単な説明を含む記事
 
 ### スペイン語 {#es}
 
@@ -122,11 +150,3 @@ ethereum.orgは、40言語以上のネイティブに翻訳されており、各
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - イーサリアム、分散型アプリ(Dapp)、ウォレットの概要、よくある質問
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - イーサリアムのニュースと教育のサブページがあるウェブプラットフォーム
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - イーサリアムのニュースと教育コンテンツを含む暗号通貨ポータル
-
-### 日本語 {#ja}
-
-- [一般社団法人日本暗号資産取引業協会](https://jvcea.or.jp/)
-- [一般社団法人日本暗号資産ビジネス協会](https://cryptocurrency-association.org/)
-- [ブロックチェーン開発の概要 - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - ブロックチェーンとイーサリアムプラットフォームでの開発に関する説明
-- [マスタリング・イーサリアム](https://www.oreilly.co.jp/books/9784873118963/) - スマートコントラクトと分散型アプリ(Dapp)の構築
-- [SolidityとEthereumによる実践スマートコントラクト開発](https://www.oreilly.co.jp/books/9784873119342/) - Truffle Suiteを用いた開発の基礎からデプロイまで

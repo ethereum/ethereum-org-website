@@ -11,7 +11,7 @@ hideEditButton: true
 
 <UpcomingEventsList/>
 
-Αυτή δεν είναι η πλήρη λίστα, η οποία διαχειρίζεται από την κοινότητά μας. Γνωρίζετε μια εκδήλωση του Ethereum που θα πραγματοποιηθεί για να την προσθέσετε στη λίστα; [Παρακαλούμε προσθέστε την](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.ts)!
+Αυτή δεν είναι η πλήρη λίστα, η οποία διαχειρίζεται από την κοινότητά μας. Γνωρίζετε μια εκδήλωση του Ethereum που θα πραγματοποιηθεί για να την προσθέσετε στη λίστα; [Παρακαλούμε προσθέστε την](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
 
 ## Συναντήσεις Ethereum {#meetups}
 

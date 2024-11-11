@@ -70,7 +70,7 @@ Qui puoi trovare i commenti, i suggerimenti della memoria di traduzione e le voc
 
 Usando i pulsanti in cima, puoi anche passare alla memoria di traduzione, dove puoi cercare le traduzioni esistenti, o al glossario, che contiene le descrizioni e le traduzioni standard dei termini chiave.
 
-Vuoi saperne di più? Sentiti libero di dare un'occhiata alla [documentazione sull'uso dell'editor online di Crowdin](https://support.crowdin.com/online-editor/)
+Vuoi scoprire di più? Sentiti libero di dare un'occhiata alla [documentazione sull'uso dell'editor online di Crowdin](https://support.crowdin.com/online-editor/)
 
 ### Processo di revisione {#review-process}
 

@@ -71,12 +71,12 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
   const activeStyles = {
     bg: "background.highlight",
     color: "body.base",
-    transition: "background 0.5s, color 0.5s"
+    transition: "background 0.5s, color 0.5s",
   }
 
   return (
     <Flex flexDir={{ base: "column", md: "row" }}>
-      <ButtonDropdown list={dropdownLinks} hideFrom={mdBp} />
+      <ButtonDropdown list={dropdownLinks} className="mb-4 md:hidden" />
       {/* TODO: Improve a11y */}
       <Box flex={1} hideBelow={mdBp}>
         {!!pageData && (

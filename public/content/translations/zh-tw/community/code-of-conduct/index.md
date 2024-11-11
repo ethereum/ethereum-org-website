@@ -4,7 +4,7 @@ description: 我們在 ethereum.org 努力追求的基本標準。
 lang: zh-tw
 ---
 
-# 行為守則 {#conduct-intro}
+# 行為守則 {#code-of-conduct}
 
 ## 使命 {#mission}
 

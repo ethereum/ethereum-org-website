@@ -12,11 +12,11 @@ Zoekt u de officiële Ethereum-ondersteuning? Het eerste wat u moet weten is dat
 
 Begrijpen van de gedecentraliseerde aard van Ethereum is van vitaal belang, omdat iedereen die beweert officiële steun voor Ethereum te zijn, waarschijnlijk probeert om u te bezwendelen! De beste bescherming tegen scammers is uzelf voor te lichten en veiligheid serieus te nemen.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Ethereum-beveiliging en -scampreventie
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Leer de Ethereum-basisprincipes
 </DocLink>
 
@@ -55,7 +55,6 @@ Hier zijn enkele populaire voorbeelden:
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 

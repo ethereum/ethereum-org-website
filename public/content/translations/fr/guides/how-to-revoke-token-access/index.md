@@ -1,16 +1,16 @@
 ---
 title: Comment révoquer l'accès des contrats intelligents à vos fonds crypto
-description: Un guide pour révoquer l'accès des contrats intelligents
+description: Un guide pratique sur la révocation de l'accès aux jetons de contrat intelligents exploiteurs
 lang: fr
 ---
 
 # Comment révoquer l'accès des contrats intelligents à vos fonds crypto
 
-Ce guide vous explique comment visualiser la liste de tous les contrats intelligents pour lesquels vous avez autorisé un accès à vos fonds et comment les révoquer.
+Ce guide va vous enseigner comment visualiser une liste de tous les [contrats intelligents](/glossary/#smart-contract) auxquels vous avez autorisé l'accès à vos fonds et comment les révoquer.
 
-Parfois, des développeurs malveillants installent des portes dérobées dans les contrats intelligents, leur permettant d'accéder aux fonds des utilisateurs à leur insu. Souvent, il s'agit de plateformes demandant la permission à l'utilisateur de dépenser un **nombre illimité de jetons** en vue d'économiser de petites quantités de gas à l'avenir, mais cela s'accompagne d'un risque accru.
+Parfois, des développeurs malveillants installent des portes dérobées dans les contrats intelligents, leur permettant d'accéder aux fonds des utilisateurs à leur insu. Souvent, il s'agit de plateformes demandant la permission à l'utilisateur de dépenser un **nombre illimité de jetons** en vue d'économiser de petites quantités de [gaz](/glossary/#gas) à l'avenir, mais cela s'accompagne d'un risque accru.
 
-Lorsque la plateforme possède un jeton de droit d'accès illimité à votre portefeuille, elle peut dépenser tous ces jetons, même si vous les avez rappatriés de la plateforme sur votre portefeuille. Une personne mal intentionnée peut accéder à vos fonds et les retirer, vous laissant sans possibilité de les récupérer.
+Une fois qu'une plateforme a un droit d'accès illimité à un jeton sur votre [portefeuille](/glossary/#wallet), ils peuvent dépenser tous ces jetons, même si vous avez retiré vos fonds de leur plateforme vers votre portefeuille. Une personne mal intentionnée peut accéder à vos fonds et les retirer, vous laissant sans possibilité de les récupérer.
 
 Vos options pour vous protéger sont de ne pas utiliser de ne pas utiliser de nouveaux projets non testés, de n'approuver que ce dont vous avez besoin et de régulièrement contrôler et révoquer les accès qui présentent un risque. Alors, comment fait-on ?
 
@@ -49,7 +49,7 @@ Nous vous conseillons de rafraîchir l'outil de révocation après quelques minu
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vous voulez en savoir plus ?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>
 </InfoBanner>
@@ -58,7 +58,7 @@ Nous vous conseillons de rafraîchir l'outil de révocation après quelques minu
 
 ### Est-ce que la révocation de l'accès aux jetons met également fin au staking, aux pools de liquidités, aux prêts, etc. ?
 
-Non, cela n'affectera aucune de vos stratégies DeFi. Vos positions et vos gains seront préservés.
+Non, cela n'affectera aucune de vos stratégies [DeFi](/glossary/#defi). Vos positions et vos gains seront préservés.
 
 ### Est-ce que déconnecter un portefeuille d'un projet équivaut à supprimer les permissions d'utilisation de mes fonds ?
 

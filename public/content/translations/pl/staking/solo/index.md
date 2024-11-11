@@ -190,7 +190,7 @@ Po ustawieniu poświadczeń wypłaty, płatności nagród (skumulowane ETH przez
 
 Aby odblokować i otrzymać całe saldo z powrotem, należy również zakończyć proces zamykania walidatora.
 
-<ButtonLink to="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
 </ExpandableCard>
 
 ## Dalsza lektura {#further-reading}

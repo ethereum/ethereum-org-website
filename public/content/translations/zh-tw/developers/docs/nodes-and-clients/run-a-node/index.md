@@ -92,14 +92,15 @@ sidebarDepth: 2
 
 | 客戶         | 磁碟空間（快速同步） | 磁碟空間（完整歸檔） |
 | ---------- | ---------- | ---------- |
-| Geth       | 500GB 以上   | 12TB 以上    |
-| Nethermind | 500GB 以上   | 12TB 以上    |
 | Besu       | 800GB 以上   | 12TB 以上    |
 | Erigon     | 不適用        | 2.5TB 以上   |
+| Geth       | 500GB 以上   | 12TB 以上    |
+| Nethermind | 500GB 以上   | 12TB 以上    |
+| Reth       | 不適用        | 2.2TB 以上   |
 
-- 注意：Erigon 並不提供快速同步，但有提供完整修剪（約 500GB）
+- 注意：Erigon 和 Reth 不提供快照同步，但支援完全修剪（Erigon 約 2TB，Reth 約 1.2TB）
 
-至於共識用戶端，所需硬碟容量也視用戶端實作及啟用的功能而定 (如罰沒驗證者的功能)，但通常還需要額外的 200G 以儲存信標資料。 由於龐大的驗證者數量，帶寬負載也隨之增長。 你可以在[此分析報告中查看共識用戶端的詳細硬體要求](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e)。
+至於共識用戶端，所需硬碟容量也視用戶端實作及啟用的功能而定 (如罰沒驗證者的功能)，但通常還需要額外的 200G 以儲存信標資料。 由於龐大的驗證者數量，帶寬負載也隨之增長。 你可以[在此分析中找到有關共識用戶端要求的詳細資料](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)。
 
 #### 隨插即用解決方案 {#plug-and-play}
 
@@ -126,7 +127,7 @@ sidebarDepth: 2
 
 以下是一些只要點按幾下就能幫助你安裝並控制用戶端的專案：
 
-- [DappNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) - DappNode 不僅僅是一個供應商提供的機器。 軟體、實際節點啟動器和擁有許多功能的控制中心可在任意硬體上使用。
+- [DappNode](https://docs.dappnode.io/docs/user/getting-started/choose-your-path) - DappNode 並非只能使用供應商提供的機器。 軟體、實際節點啟動器和擁有許多功能的控制中心可在任意硬體上使用。
 - [eth-docker](https://eth-docker.net/) - 使用 Docker 進行自動化設定，專注於打造輕鬆安全的質押體驗，需要對終端機和 Docker 有基本認識，適合較進階的使用者。
 - [Stereum](https://stereum.net/ethereum-node-setup/) - 該啟動器具有圖形化使用者介面設定指南、控制中心以及許多其他功能，可透過 SSH 連接在遠端伺服器上安裝用戶端。
 - [NiceNode](https://www.nicenode.xyz/) - 該啟動器提供直覺化使用者體驗，可在你的電腦上運行節點。 只要選擇用戶端並簡單點按幾下即可啟動。 仍在開發中。
@@ -154,6 +155,7 @@ sidebarDepth: 2
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
+- [Reth](https://reth.rs/installation/installation.html)
 
 值得注意的是，用戶端多樣性是[執行層上的一個問題](/developers/docs/nodes-and-clients/client-diversity/#execution-layer)。 建議讀者們考慮運行小眾執行用戶端。
 
@@ -175,9 +177,9 @@ sidebarDepth: 2
 
 開發者使用他們的 PGP 金鑰簽署發佈的二進位檔案，如此一來你就可以使用密碼學方式驗證你運行的是他們建立的軟體。 你只需要獲得開發者使用的公鑰，這些公鑰可以在用戶端發佈頁面或文件中找到。 在下載用戶端版本及其簽名後，你可以使用 PGP 實作，如 [GnuPG](https://gnupg.org/download/index.html) 來輕鬆驗證用戶端。 查看在 [linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) 或 [Windows/MacOS](https://freedom.press/training/verifying-open-source-software/) 上使用 `gpg` 驗證開源軟體的教學。
 
-另一種驗證方式是確定你下載軟體的雜湊（獨一無二的密碼學指紋）和開發者提供的雜湊相符。 這比使用 PGP 進行驗證更加容易，有些用戶端也只提供此選項。 只需對下載的軟體運行雜湊函數，並將其與軟體發佈頁面的雜湊比較即可。 例如:
+另一種驗證方式是確定你下載軟體的雜湊（獨一無二的密碼學指紋）和開發者提供的雜湊相符。 這比使用 PGP 進行驗證更加容易，有些用戶端也只提供此選項。 只需對下載的軟體運行雜湊函數，並將其與軟體發佈頁面的雜湊比較即可。 例如：
 
-```
+```sh
 sha256sum teku-22.6.1.tar.gz
 
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
@@ -213,7 +215,7 @@ sha256sum teku-22.6.1.tar.gz
 
 此驗證權杖由用戶端軟體自動產生，但某些情況下，你可能需要自行手動產生。 你可以透過 [OpenSSL](https://www.openssl.org/) 產生它：
 
-```
+```sh
 openssl rand -hex 32 > jwtsecret
 ```
 
@@ -221,12 +223,12 @@ openssl rand -hex 32 > jwtsecret
 
 此章節將引導你啟動執行用戶端。 它僅做為基本設定的範例，此範例會以下列設定啟動用戶端：
 
-- 指定欲連接的網路，在此例子中為主網
+- 指定欲連線的網路，在此例子中為主網
   - 你可以選擇[任意一個測試網](/developers/docs/networks/)，以初步測試你的設定
 - 定義資料目錄，用於儲存所有包含區塊鏈的資料
   - 請確保將預設路徑替換成真實路徑：如指向你外部硬碟的路徑
 - 啟用與用戶端通訊的介面
-  - 包括用於與共識用戶端通訊的 JSON RPC 和引擎應用程式介面
+  - 包括用於與共識用戶端通訊的 JSON-RPC 和引擎應用程式介面
 - 定義經過驗證的應用程式介面的 `jwtsecret` 路徑
   - 請確保將範例路徑替換成用戶端能夠存取的真實路徑，如：`/tmp/jwtsecret`
 
@@ -236,9 +238,9 @@ openssl rand -hex 32 > jwtsecret
 
 ##### 運行 Besu
 
-此範例在主網上運行 Besu，將區塊鏈資料以預設格式儲存在 `/data/ethereum`，啟用 JSON RPC 及引擎應用程式介面以連接至共識用戶端。 引擎應用程式介面使用 `jwtsecret` 權杖驗證，且只允許來自 `localhost` 的呼叫。
+此範例在主網上運行 Besu，將區塊鏈資料以預設格式儲存在 `/data/ethereum`，啟用 JSON-RPC 及引擎遠端程序呼叫以連線至共識用戶端。 引擎應用程式介面使用 `jwtsecret` 權杖驗證，且只允許來自 `localhost` 的呼叫。
 
-```
+```sh
 besu --network=mainnet \
     --data-path=/data/ethereum \
     --rpc-http-enabled=true \
@@ -250,7 +252,7 @@ besu --network=mainnet \
 
 Besu 還有個啟動器選項，會詢問一系列問題並產生設定檔案。 透過以下指令運行互動式啟動器：
 
-```
+```sh
 besu --Xlauncher
 ```
 
@@ -258,9 +260,9 @@ besu --Xlauncher
 
 ##### 運行 Erigon
 
-此範例在主網上運行 Erigon，將區塊鏈資料儲存在 `/data/ethereum`，啟用 JSON RPC，定義了哪些命名空間是允許的，並啟用由 `jwtsecret` 路徑定義的共識用戶端連接身份驗證。
+此範例在主網上運行 Erigon，將區塊鏈資料儲存在 `/data/ethereum`，啟用 JSON-RPC，定義了哪些命名空間是允許的，並啟用連線由 `jwtsecret` 路徑定義的共識用戶端時的身份驗證。
 
-```
+```sh
 erigon --chain mainnet \
     --datadir /data/ethereum  \
     --http --http.api=engine,eth,web3,net \
@@ -271,9 +273,9 @@ Erigon 預設與 8GB 的硬碟執行完整同步，這會產生超過 2TB 的歸
 
 ##### 運行 Geth
 
-此範例在主網上運行 Geth，將區塊鏈資料儲存在 `/data/ethereum`，啟用 JSON RPC 並定義了哪些命名空間是允許的。 它也啟用了連接至共識用戶端的身份驗證，這需要 `jwtsecrest` 路徑並可以選擇定義哪些連接是允許的，在這個例子中，只允許 `localhost`。
+此範例在主網上運行 Geth，將區塊鏈資料儲存在 `/data/ethereum`，啟用 JSON-RPC 並定義了哪些命名空間是允許的。 它也啟用了連接至共識用戶端的身份驗證，這需要 `jwtsecrest` 路徑並可以選擇定義哪些連接是允許的，在這個例子中，只允許 `localhost`。
 
-```
+```sh
 geth --mainnet \
     --datadir "/data/ethereum" \
     --http --authrpc.addr localhost \
@@ -286,9 +288,9 @@ geth --mainnet \
 
 ##### 運行 Nethermind
 
-Nethermind 提供多種 [安裝選項](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)。 此套件包含許多二進位檔案，包括有引導式設定的啟動器，可以互動式幫助你建立設定。 或者，你可以找到可執行執行器，並使用設定標記執行它。 預設啟用 JSON RPC。
+Nethermind 提供多種 [安裝選項](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)。 此套件包含許多二進位檔案，包括有引導式設定的啟動器，可以互動式幫助你建立設定。 或者，你可以找到可執行執行器，並使用設定標記執行它。 JSON-RPC 是預設啟用的。
 
-```
+```sh
 Nethermind.Runner --config mainnet \
     --datadir /data/ethereum \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
@@ -297,6 +299,19 @@ Nethermind.Runner --config mainnet \
 Nethermind 文檔提供了與共識用戶端一起運行 Nethermind 的 [完整指南](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge)。
 
 執行用戶端會啟用它的核心功能、選擇端點並開始尋找對等用戶端。 成功發現對等用戶端後，用戶端開始同步。 執行用戶端會等待來自共識用戶端的連接。 在用戶端成功與目前狀態同步以後，目前的區塊鏈資料就可以使用。
+
+##### 運行 Reth
+
+此範例在主網上運行 Reth，使用預設的資料儲存路徑。 啟用 JSON-RPC 和引擎遠端程序呼叫驗證，以連線由 `jwtsecret` 路徑定義的共識用戶端，並且僅允許來自 `localhost` 的調用。
+
+```sh
+reth node \
+    --authrpc.jwtsecret /path/to/jwtsecret \
+    --authrpc.addr 127.0.0.1 \
+    --authrpc.port 8551
+```
+
+請參閱[設定 Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) 以瞭解有關預設資料目錄的更多資訊。 [Besu 文件](https://reth.rs/run/mainnet.html)包含了額外的選項及設定細節。
 
 #### 啟動共識用戶端 {#starting-the-consensus-client}
 
@@ -308,13 +323,13 @@ Nethermind 文檔提供了與共識用戶端一起運行 Nethermind 的 [完整�
 
 當在測試網上開始運行信標節點時，藉由[檢查點同步](https://notes.ethereum.org/@launchpad/checkpoint-sync)的公共端點，可以大幅縮短同步時間。
 
-#### 運行共識用戶端
+#### 運行共識用戶端 {#running-a-consensus-client}
 
 ##### 運行 Lighthouse
 
 在運行 Lighthouse 前，請在 [Lighthouse 手冊](https://lighthouse-book.sigmaprime.io/installation.html)中了解如何安裝並設定。
 
-```
+```sh
 lighthouse beacon_node \
     --network mainnet \
     --datadir /data/ethereum \
@@ -327,7 +342,7 @@ lighthouse beacon_node \
 
 透過編譯 Lodestar 軟體或下載 Docker 映像檔來安裝 Lodestar 軟體。 在[文檔](https://chainsafe.github.io/lodestar/)中了解更多，在[設定指南](https://hackmd.io/@philknows/rk5cDvKmK)中獲得更完整的資訊。
 
-```
+```sh
 lodestar beacon \
     --rootDir="/data/ethereum" \
     --network=mainnet \
@@ -340,7 +355,7 @@ lodestar beacon \
 
 Nimbus 包括共識用戶端與執行用戶端。 它可在各種裝置上運行，即使是性能不高的裝置。 在[安裝依賴項和 Nimbus 本體](https://nimbus.guide/quick-start.html)後，你可以透過以下指令運行共識用戶端：
 
-```
+```sh
 nimbus_beacon_node \
     --network=mainnet \
     --web3-url=http://127.0.0.1:8551 \
@@ -352,7 +367,7 @@ nimbus_beacon_node \
 
 Prysm 有可以輕鬆自動安裝的腳本。 詳情請見 [Prysm 文檔](https://docs.prylabs.network/docs/install/install-with-script)。
 
-```
+```sh
 ./prysm.sh beacon-chain \
     --mainnet \
     --datadir /data/ethereum  \
@@ -362,7 +377,7 @@ Prysm 有可以輕鬆自動安裝的腳本。 詳情請見 [Prysm 文檔](https:
 
 ##### 運行 Teku
 
-```
+```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \
     --ee-endpoint http://localhost:8551 \
@@ -377,7 +392,7 @@ teku --network mainnet \
 
 運行自己的驗證者允許[單獨質押](/staking/solo/)，單獨質押是支援以太坊的最具影響且最去信任的方法。 然而，單獨質押要求存入 32 以太幣。 若要以較少的以太幣在你自己的節點上運行驗證者，你可能會對擁有無需許可的節點營運者的去中心化質押池 （如 [Rocket Pool](https://rocketpool.net/node-operators)）感興趣。
 
-開始質押和產生驗證者金鑰最簡單的方法就是使用 [Goerli 測試網質押啟動面板](https://goerli.launchpad.ethereum.org/)，這可讓你透過[在 Goerli 上運行節點](https://notes.ethereum.org/@launchpad/goerli)以測試你的設定。 當你準備好部署到主網時，即可使用[主網質押啟動面板](https://launchpad.ethereum.org/)重複這些步驟。
+開始質押和產生驗證者金鑰最簡單的方法就是使用 [Holesky 測試網質押啟動面板](https://holesky.launchpad.ethereum.org/)，這可讓你透過[在 Holesky 上運行節點](https://notes.ethereum.org/@launchpad/holesky)來測試你的設定。 當你準備好部署到主網時，即可使用[主網質押啟動面板](https://launchpad.ethereum.org/)重複這些步驟。
 
 請見[質押頁面](/staking)以查看質押選項概覽。
 
@@ -431,7 +446,7 @@ _這不適用於共識層驗證者節點。_節點離線將影響所有依賴節
 
 你需要確保透過安全補丁、功能與[以太坊改善提議](/eips/)讓你的用戶端軟體保持最新。 特別是[硬分叉](/history/)前，請確保你運行的是正確的用戶端版本。
 
-> 在重大的網路更新前，以太坊基金會在它們的[部落格](https://blog.ethereum.org)上發布貼文。 你可以[訂閱這些公告](https://groups.google.com/a/ethereum.org/g/announcements)，在你的節點需要升級時，透過電子郵件接收通知。
+> 在重大的網路更新前，以太坊基金會在它們的[部落格](https://blog.ethereum.org)上發布貼文。 你可以[訂閱這些公告](https://blog.ethereum.org/category/protocol#subscribe)，在你的節點需要更新時，透過電子郵件接收通知。
 
 更新用戶端非常簡單。 在每個用戶端的文檔中都有具體的說明，但實際上只要下載最新版的用戶端並透過最新的可執行檔重新啟動用戶端即可。 用戶端應從上次同步中斷的地方繼續同步，且完成用戶端更新。
 

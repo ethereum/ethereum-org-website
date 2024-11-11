@@ -88,7 +88,7 @@ weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Wrapped ethe
 
 acc_address = "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11"        # Uniswap V2: DAI 2
 
-# This is a simplified Contract Application Binary Interface (ABI) of an ERC-20 Token Contract.
+# これはERC-20トークンのコントラクトのアプリケーション・バイナリ・インターフェース（ABI）を簡略化したものです。
 # It will expose only the methods: balanceOf(address), decimals(), symbol() and totalSupply()
 simplified_abi = [
     {
@@ -140,9 +140,33 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
+## 既知の問題 {#erc20-issues}
+
+### ERC-20トークン受信問題 {#reception-issue}
+
+ERC-20トークンを扱えるように設計されていないスマートコントラクトにERC-20トークンが送信されると、送信されたトークンが永久的に失われる可能性があります。 これは、トークンを受け取るコントラクトに送られてきたトークンを認識したり応答する機能がないためです。また、ERC-20標準には、送られてきたトークンを、受け取るコントラクトに通知するメカニズムがありません。 これが問題となる主要な状態は、次になります。
+
+1.  トークン送信メカニズム
+  - ERC-20トークンは、transfer関数かtransferFrom関数を使って送信されます。
+    -   ユーザーがこれらの関数を使ってコントラクトアドレスにトークンを送信すると、受け取るコントラクトがトークンを扱えるように設計されているかにどうかに関わらずトークンが送信されてしまいます。
+2.  通知の欠如
+    -   トークンを受け取るコントラクトは、トークンが送られてきたことに関して通知やコールバックを受け取りません。
+    -   受け取るコントラクトにトークンを扱うメカニズム(例: フォールバック関数またはトークンを受信する専用の関数)が無い場合、トークンは実質的にコントラクトアドレスにスタックされます。
+3.  組み込まれた処理が無い
+    -   ERC-20標準では、受け取るコントラクが実装する必須関数が含まれていません。そのため、多くのコントラクトでは、送られてくるトークンを適切に扱うことができない状態が生じています。
+
+この問題から、[ERC-223](/developers/docs/standards/tokens/erc-223)などの代替規格が登場しています。
+
 ## 参考文献 {#further-reading}
 
 - [EIP-20：ERC-20トークン規格](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - トークン](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - ERC-20の実装](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - SolidityにおけるERC20トークンのガイド](https://www.alchemy.com/overviews/erc20-solidity)
+
+
+## その他の代替性トークン {#fungible-token-standards}
+
+- [ERC-223](/developers/docs/standards/tokens/erc-223)
+- [ERC-777](/developers/docs/standards/tokens/erc-777)
+- [ERC-4626 - トークン化ボールト](/developers/docs/standards/tokens/erc-4626)

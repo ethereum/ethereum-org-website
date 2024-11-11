@@ -1,36 +1,41 @@
-import { useCallback } from "react"
-import { Text, type TextProps, VStack } from "@chakra-ui/react"
+import { type ReactNode, useCallback } from "react"
 
-import { ChildOnlyProp } from "@/lib/types"
+import { VStack } from "@/components/ui/flex"
 
-import { useQuizWidgetContext } from "./context"
+import { cn } from "@/lib/utils/cn"
 
-type QuizContentProps = ChildOnlyProp
+import type { AnswerStatus } from "./useQuizWidget"
 
-export const QuizContent = ({ children }: QuizContentProps) => {
-  const { answerStatus, title } = useQuizWidgetContext()
+type QuizContentProps = {
+  answerStatus: AnswerStatus
+  title: string
+  children: ReactNode
+}
 
+export const QuizContent = ({
+  answerStatus,
+  title,
+  children,
+}: QuizContentProps) => {
   const getTitleContent = useCallback((): string => {
     if (!answerStatus) return title
 
     return answerStatus === "correct" ? "Correct!" : "Incorrect"
   }, [answerStatus, title])
 
-  const getTitleTextColor = (): TextProps["color"] => {
-    if (!answerStatus) return "primary.hover"
-    return answerStatus === "correct" ? "success.base" : "fail.base"
+  const getTitleTextColor = () => {
+    if (!answerStatus) return "text-primary-hover"
+    return answerStatus === "correct" ? "text-success" : "text-error"
   }
 
   return (
-    <VStack spacing="4">
-      <Text
-        fontWeight="bold"
-        textAlign="center"
+    <VStack className="gap-4">
+      <span
+        className={cn(getTitleTextColor(), "text-center font-bold")}
         data-testid={`answer-status-${answerStatus}`}
-        color={getTitleTextColor()}
       >
         {getTitleContent()}
-      </Text>
+      </span>
       {children}
     </VStack>
   )

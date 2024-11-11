@@ -1,6 +1,6 @@
 ---
 title: Consommation énergétique d'Ethereum
-description: Les informations de base dont vous avez besoin pour comprendre la consommation d'énergie d'Ethereum.
+description: L'information de base dont vous avez besoin pour comprendre la consommation énergétique d'Ethereum.
 lang: fr
 ---
 

@@ -4,7 +4,7 @@ description: Learn about the in-protocol incentives in proof-of-stake Ethereum.
 lang: en
 ---
 
-Ethereum is secured using its native cryptocurrency, ether (ETH). Node operators that wish to participate in validating blocks and identifying the head of the chain deposit ether into a smart contract on Ethereum. They are then paid in ether to run validator software that checks the validity of new blocks received over the peer-to-peer network and apply the fork-choice algorithm to identify the head of the chain.
+Ethereum is secured using its native cryptocurrency, ether (ETH). Node operators that wish to participate in validating blocks and identifying the head of the chain, deposit ether into the [deposit contract](/staking/deposit-contract/) on Ethereum. They are then paid in ether to run validator software that checks the validity of new blocks received over the peer-to-peer network and apply the fork-choice algorithm to identify the head of the chain.
 
 There are two primary roles for a validator: 1) checking new blocks and “attesting” to them if they are valid, 2) proposing new blocks when selected at random from the total validator pool. If the validator fails to do either of these tasks when asked they miss out on an ether payout. Validators are also sometimes tasked with signature aggregation and participating in sync committees.
 

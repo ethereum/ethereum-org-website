@@ -198,7 +198,7 @@ Spajanje predstavlja formalno usvajanje nadogradnje Beacon Chain kao novog sloja
 
 Blokove sada predlažu validirajući čvorovi s ulogom ETH-a u zamjenu za pravo da sudjeluju u konsenzusu. Te nadogradnje postavljaju temelj za buduće nadogradnje prilagođavanja, uključujući razdjeljivanje.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   Beacon Chain
 </ButtonLink>
 
@@ -214,7 +214,7 @@ Izvorni je plan bio razvijati razdjeljivanje prije spajanja kako bi se riješio 
 
 Planovi za razdjeljivanje brzo su se razvijali. Međutim, uzimajući u obzir rast i uspjeh tehnologija sloja 2 za skaliranje izvršavanja transakcija, planovi za razdjeljivanje prešli su u traženje najoptimalnijeg načina diobe opterećenja pohrane komprimiranih podataka iz poziva svih pametnih ugovora uz mogućnost eksponencijalnog rasta mrežnog kapaciteta. To ne bi bilo moguće bez prethodnog prelaska na koncept dokaza uloga.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Dijeljenje
 </ButtonLink>
 

@@ -1,7 +1,9 @@
-import { baseLocales } from "./i18next"
-import { chakraBreakpointArray } from "./preview"
+import pickBy from "lodash/pickBy"
 
-export const viewportModes = chakraBreakpointArray.reduce<{
+import { baseLocales } from "./i18next"
+import { breakpointSet } from "./preview"
+
+export const viewportModes = breakpointSet.reduce<{
   [mode: string]: { viewport: string }
 }>((arr, [token]) => {
   return {
@@ -12,7 +14,9 @@ export const viewportModes = chakraBreakpointArray.reduce<{
   }
 }, {})
 
-export const langModes = Object.keys(baseLocales).reduce<{
+const localesToTest = ["en", "fa"]
+const locales = pickBy(baseLocales, (_, key) => localesToTest.includes(key))
+export const langModes = Object.keys(locales).reduce<{
   [locale: string]: { locale: string }
 }>((arr, curr) => {
   return {

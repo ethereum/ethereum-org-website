@@ -8,6 +8,8 @@ lang: en
 
 ethereum.org is a public, open-source resource for the Ethereum community that anyone can contribute to. We have a small core team dedicated to maintaining and developing the site with contributions from thousands of community members across the globe.
 
+**Nobody from ethereum.org will ever contact you. Do not respond.**
+
 ## A note on names {#a-note-on-names}
 
 It's common for people to confuse names within the Ethereum landscape, which can lead to poor mental models about how Ethereum works. Here's a quick explainer to clear things up:
@@ -95,7 +97,7 @@ This means the website needs to handle many different user journeys, from “a d
 
 To make our work more accessible and to foster more community collaboration, the ethereum.org core team publishes an overview of our quarterly roadmap goals.
 
-[View our 2024 Q1 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/12005)
+[View our 2024 Q3 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/13399)
 
 **How's that sound?** We always appreciate feedback on our roadmap - if there's something you think we should work on, please let us know! We welcome ideas and PRs from anyone in the community.
 
@@ -118,6 +120,10 @@ We have a [style guide](/contributing/style-guide/) to standardize certain aspec
 Make sure you read [our principles](/contributing/design-principles/) and [our style guide](/contributing/style-guide/) if you'd like to [contribute to the site](/contributing/).
 
 We welcome feedback on our design principles, design system and the style guide. Remember, ethereum.org is for the community, by the community.
+
+## License {#license}
+
+The ethereum.org website is open source and built under an [MIT License](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE) unless otherwise specified. More on [terms of use](/terms-of-use/) of ethereum.org.
 
 ## Open jobs {#open-jobs}
 

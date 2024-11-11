@@ -16,9 +16,9 @@ lang: ru
 
 ## Ресурсы Ethereum.org {#ethereum-org}
 
-Проект Ethereum.org переведен носителями на более чем 40 языков, список которых вы найдете на нашей странице языков.
+Ethereum.org переведен на более чем 40 языков, которые вы можете найти с помощью меню выбора языков, расположенного вверху каждой страницы.
 
-![Language selector menu](./language-selector-menu.png)
+![Меню выбора языка](./language-selector-menu.png)
 
 Если вы говорите на двух языках и хотите помочь нам привлечь больше людей, вы также можете принять участие в [программе перевода ethereum.org](/contributing/translation-program/#translation-program) и помочь нам с переводом сайта.
 
@@ -32,6 +32,7 @@ lang: ru
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) — бразильская версия Cointelegraph, крупного новостного портала о криптовалютах
 - [Livecoins](http://www.livecoins.com.br/ethereum) — криптовалютные новости и инструменты
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) — новости и отчеты о криптовалютах
+- [Modular Crypto](https://modularcrypto.xyz/) — новости криптовалют и образовательные статьи
 
 **Обучение**
 
@@ -90,6 +91,24 @@ lang: ru
 - [Microsoft Learn (сети Ethereum)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) — подключение и развертывание сетей Ethereum
 - [Microsoft Learn (блокчейны)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) — введение в блокчейн-разработку
 
+### Иврит {#he}
+
+- [Уди Вертхаймер — Чему биткойнеры могут научиться у Ethereum](https://www.cryptojungle.co.il/udi-wertheimer-what-bitcoiners-can-learn-from-ethereum/)
+- [Омер Грэйсмен (OpenZeppelin) — Как мы предотвратили взлом смарт-контракта в 15 миллиардов долларов](https://www.cryptojungle.co.il/omer-greisman-openzeppelin/)
+- [Шай Датика (INX) — Токенизация и будущее ценных бумаг, в том числе является ли Ethereum ценной бумагой](https://www.cryptojungle.co.il/shy-datika-tokenization/)
+- [Рой Конфино (Lemonade) — Страхование в Ethereum](https://www.cryptojungle.co.il/roy-confino-insurance/)
+- [Идан Офрат (Fireblocks) — Институциональное усыновление](https://www.cryptojungle.co.il/idan-ofrat-fireblocks/)
+- [Гал Вейцман (MetaMask) — Что такое MetaMask](https://www.cryptojungle.co.il/gal-weizman-metamask/)
+- [Дрор Авиели (Consensys) — Центр Ethereum](https://www.cryptojungle.co.il/dror-aviely-ethereum-center/)
+- [Нир Розин — Быть криптопанком](https://www.cryptojungle.co.il/nir-rozin-cryptopunk/)
+- [Адан Кедем — Игры и метавселенная](https://www.cryptojungle.co.il/adan-kedem-web3-gaming/)
+- [Ури Колодны (Starkware) — Ethereum и уровни блокчейна](https://www.cryptojungle.co.il/uri-kolodny-starkware/)
+- [Уди Вертхаймер — Ethereum 2.0 против конкуренции](https://www.cryptojungle.co.il/udi-on-eth2/)
+- [Бен Самоча (я сам) — Ethereum 2.0 — это возможность?](https://www.cryptojungle.co.il/etherurm2-week-summary/)
+- [Алон Муроч (Bloxstaking) — Что такое Ethereum 2.0?](https://www.cryptojungle.co.il/alon-moroch-eth2/)
+- [Эйлон Авив (Collider Ventures) — Что может пойти не так с Ethereum 2.0](https://www.cryptojungle.co.il/eilon-aviv-eth2-0/)
+- [Эйлон Авив (Collider Ventures) — Почему нам нужен Ethereum 2.0](https://www.cryptojungle.co.il/eilon-aviv-ethereum-2-0/)
+
 ### Итальянский {#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) — обучение, мероприятия и новости Ethereum, посвященные умным контрактам и блокчейн-технологиям
@@ -98,9 +117,19 @@ lang: ru
 - [Microsoft Learn (смарт-контракты)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) — узнайте, как писать умные контракты с использованием Solidity
 - [Microsoft Learn (децентрализованные приложения)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) — создание пользовательского интерфейса с децентрализованными приложениями
 
+### Японский {#ja}
+
+- [Японская ассоциация обмена виртуальными и криптовалютными активами](https://jvcea.or.jp/)
+- [Японская бизнес-ассоциация криптовалютных активов](https://cryptocurrency-association.org/)
+- [Начало блокчейн-разработки — обучение | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) — данный учебный материал знакомит вас с блокчейном и разработкой на платформе Ethereum
+- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) — «Освоение Ethereum» (на японском языке)
+- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) — практическая разработка смарт-контрактов с Solidity и Ethereum (на японском языке)
+
 ### Русский {#ru}
 
 - [Cyber Academy](https://cyberacademy.dev) — образовательное пространство для разработчиков Web3
+- [Forklog](https://forklog.com) — новости и образовательные статьи о криптовалютах в целом, о существующих технологиях и будущих обновлениях различных блокчейнов
+- [BeInCrypto](https://ru.beincrypto.com) — новости, аналитика цен на криптовалюты и нетехнические статьи с простыми объяснениями обо всем в криптовалюте
 
 ### Испанский {#es}
 
@@ -122,11 +151,3 @@ lang: ru
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) — обзор Ethereum, децентрализованных приложений и кошельков, а также часто задаваемые вопросы
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) — веб-платформа, на которой есть образовательные и новостные подстраницы по Ethereum
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) — криптовалютный портал с новостями и образовательным контентом по Ethereum
-
-### Японский {#ja}
-
-- [Японская ассоциация обмена виртуальными и криптовалютными активами](https://jvcea.or.jp/)
-- [Японская бизнес-ассоциация криптовалютных активов](https://cryptocurrency-association.org/)
-- [Начало блокчейн-разработки — обучение | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) — данный учебный материал знакомит вас с блокчейном и разработкой на платформе Ethereum
-- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) — «Освоение Ethereum» (на японском языке)
-- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) — практическая разработка смарт-контрактов с Solidity и Ethereum (на японском языке)

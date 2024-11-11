@@ -55,11 +55,17 @@ The benefits of this network design are:
 - reduce dependence on centralized providers
 - Reduce Internet bandwidth usage
 - Minimized or zero syncing
-- Accessible to resource-constrained devices (<1GB ram, <100mB disk, 1CPU)
+- Accessible to resource-constrained devices (<1 GB RAM, <100 MB disk space, 1 CPU)
 
 The diagram below shows the functions of existing clients that can be delivered by the Portal Network, enabling users to access these functions on very low-resource devices.
 
-![portal network table](portal-network-table2.png)
+### The Portal Networks
+
+| Beacon light client | State network                | Transaction gossip  | History network |
+| ------------------- | ---------------------------- | ------------------- | --------------- |
+| Beacon chain light  | Account and contract storage | Lightweight mempool | Headers         |
+| Protocol data       |                              |                     | Block bodies    |
+|                     |                              |                     | Receipts        |
 
 ## Client diversity by default {#client-diversity-as-default}
 
@@ -70,7 +76,7 @@ The Portal Network clients are:
 - [Trin](https://github.com/ethereum/trin): written in Rust
 - [Fluffy](https://nimbus.team/docs/fluffy.html): written in Nim
 - [Ultralight](https://github.com/ethereumjs/ultralight): written in Typescript
-- [Shisui](https://github.com/GrapeBaBa/shisui): written in Go
+- [Shisui](https://github.com/optimism-java/shisui): written in Go
 
 Having multiple independent client implementations enhances the resilience and decentralization of the Ethereum network.
 

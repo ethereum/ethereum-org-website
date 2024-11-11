@@ -295,7 +295,7 @@ def register(name, value):
         self.storage[name] = value
 ```
 
-Le contrat est très simple : il ne s'agit que d'une base données au sein du réseau Ethereum, à laquelle on peut ajouter des données, mais dans laquelle on ne peut ni en modifier ni en supprimer. N'importe qui peut enregistrer un nom et une valeur, et cet enregistrement est inscrit pour toujours. Un contrat d’enregistrement de nom plus sophistiqué aura une « clause fonction » permettant à d'autres contrats de l'interroger, ainsi qu'un mécanisme autorisant le « propriétaire » (le premier déposant) d'un nom à en changer les données ou à en transférer la propriété. On peut même ajouter à cela une fonctionnalité de réputation et de réseau de confiance.
+Le contrat est très simple, il s’agit simplement d’une base de données au sein du réseau Ethereum qui peut être ajoutée, mais non modifiée ou supprimée. N'importe qui peut enregistrer un nom et une valeur, et cet enregistrement est inscrit pour toujours. Un contrat d’enregistrement de nom plus sophistiqué aura une « clause fonction » permettant à d'autres contrats de l'interroger, ainsi qu'un mécanisme autorisant le « propriétaire » (le premier déposant) d'un nom à en changer les données ou à en transférer la propriété. On peut même ajouter à cela une fonctionnalité de réputation et de réseau de confiance.
 
 ### Stockage décentralisé de fichiers {#decentralized-file-storage}
 
@@ -355,7 +355,7 @@ Ethereum implémente une version simplifiée de GHOST qui ne descend que sur sep
 
 - Un block doit spécifier un parent et 0 oncle ou plus.
 - Un oncle inclus dans un block B doit posséder les propriétés suivantes :
-  - Il doit être un enfant direct de l'ancêtre de kème génération de B, où 2 <= k <= 7.
+  - Il doit être un enfant direct de l'ancêtre de k-ième génération de B, où `2 <= k <= 7`.
   - Il ne peut pas être un ancêtre de B.
   - Un oncle doit être un en-tête de bloc valide, mais il n'est pas nécessaire qu'il soit un bloc précédemment vérifié ni même valide.
   - Un oncle doit être différent de tous les oncles inclus dans les blocs précédents et de tous les autres oncles inclus dans le même bloc (inclusion non double).

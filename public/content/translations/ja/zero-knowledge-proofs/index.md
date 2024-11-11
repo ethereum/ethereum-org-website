@@ -150,7 +150,7 @@ Jean-Jacques Quisquateの有名な[アリババの洞窟の物語](https://en.wi
 
 ### ゼロ知識証明の種類 {#types-of-zero-knowledge-proofs}
 
-#### ZK-SNARK {#zk-snarks}
+#### ZK-SNARKs {#zk-snarks}
 
 ZK-SNARKは、**Zero-Knowledge Succinct Non-Interactive Argument of Knowledge**の頭字語です。 ZK-SNARKプロトコルには、次の利点があります。
 
@@ -170,7 +170,7 @@ ZK-SNARKは、**Zero-Knowledge Succinct Non-Interactive Argument of Knowledge**�
 
 信頼されたセットアップは、ユーザーにパラメータ生成を担当する参加者を信頼するよう要求します。 しかし、ZK-STARKの開発により、信頼されていないセットアップでも証明プロトコルが有効となりました。
 
-#### ZK-STARK {#zk-starks}
+#### ZK-STARKs {#zk-starks}
 
 ZK-STARKは、**Zero-Knowledge Scalable Transparent Argument of Knowledge**の頭字語です。 ZK-STARKはZK-SNARKと似ていますが、以下の違いがあります。
 
@@ -198,9 +198,9 @@ ZK-SNARKでは、一旦生成されたCRS(公開パラメータ)は、ゼロ知�
 
 ### 量子計算による脅威 {#quantum-computing-threats}
 
-ZK-SNARKは、暗号化に楕円曲線暗号技術([ECDSA](/glossary/#ecdsa))を使用しています。 今のところECDSAアルゴリズムは安全ですが、量子コンピュータの発展により、将来的にセキュリティモデルが破綻する可能性があります。
+ZK-SNARKは、暗号化に楕円曲線暗号技術を使用しています。 楕円曲線上の離散対数問題は現在、解くことが困難とされています。しかし、量子コンピューターの開発により、このセキュリティモデルは、将来的に破られる可能性があります。
 
-ZK-STARKは、暗号化に耐衝突ハッシュを使用するため、量子計算による脅威に耐性があると考えられています。 楕円曲線暗号で使われている公開鍵と秘密鍵のペアリングとは異なり、衝突耐性ハッシュは量子アルゴリズムでも突破するのが困難です。
+ZK-STARKは、量子コンピューティングの脅威に耐性があると考えられています。そのセキュリティでは、衝突困難性ハッシュ関数のみに依存しているためです。 楕円曲線暗号で使われている公開鍵と秘密鍵のペアリングとは異なり、衝突困難性ハッシュは量子アルゴリズムでも突破するのが困難です。
 
 ## 参考文献 {#further-reading}
 
@@ -210,3 +210,5 @@ ZK-STARKは、暗号化に耐衝突ハッシュを使用するため、量子計
 - [zk-SNARKs — ゼロ知識の実例と深掘り](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARK: 検証可能な信頼の創造 量子コンピュータに対する備え](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [zk-SNARKがいかにして実現されるのかについての概要の紹介](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [ゼロ知識証明(ZKP)が自己主権型IDのゲームチェンジャーとなる理由](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
+

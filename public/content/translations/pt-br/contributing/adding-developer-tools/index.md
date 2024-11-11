@@ -56,6 +56,6 @@ A menos que os produtos sejam ordenados especificamente de outra forma, como em 
 
 Se você deseja adicionar uma ferramenta de desenvolvedor ao ethereum.org que atende aos critérios, crie um tíquete no GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
   Criar tíquete
 </ButtonLink>

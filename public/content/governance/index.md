@@ -32,7 +32,7 @@ The opposite approach, off-chain governance, is where any protocol change decisi
 
 _Whilst at the protocol level Ethereum governance is off-chain, many use cases built on top of Ethereum, such as DAOs, use on-chain governance._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   More on DAOs
 </ButtonLink>
 
@@ -48,7 +48,7 @@ There are various stakeholders in the [Ethereum community](/community/), each pl
 - **Node Operators**: these people run nodes that propagate blocks and transactions, rejecting any invalid transaction or block that they come across. [More on nodes](/developers/docs/nodes-and-clients/).
 - **EIP Authors**: these people propose changes to the Ethereum protocol, in the form of Ethereum Improvement Proposals (EIPs). [More on EIPs](/eips/).
 - **Validators**: these people run nodes that can add new blocks to the Ethereum blockchain.
-- **Protocol Developers** (a.k.a. "Core Developers" ): these people maintain the various Ethereum implementations (e.g. go-ethereum, Nethermind, Besu, Erigon at the execution layer or Prysm, Lighthouse, Nimbus, Teku, Lodestar at the consensus layer). [More on Ethereum clients](/developers/docs/nodes-and-clients/).
+- **Protocol Developers** (a.k.a. "Core Developers" ): these people maintain the various Ethereum implementations (e.g. go-ethereum, Nethermind, Besu, Erigon, Reth at the execution layer or Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine at the consensus layer). [More on Ethereum clients](/developers/docs/nodes-and-clients/).
 
 _Note: any individual can be part of multiple of these groups (e.g. a protocol developer could champion an EIP, and run a beacon chain validator, and use DeFi applications). For conceptual clarity, it is easiest to distinguish between them, though._
 
@@ -58,7 +58,7 @@ _Note: any individual can be part of multiple of these groups (e.g. a protocol d
 
 One important process used in Ethereum governance is the proposal of **Ethereum Improvement Proposals (EIPs)**. EIPs are standards specifying potential new features or processes for Ethereum. Anyone within the Ethereum community can create an EIP. If you're interested in writing an EIP or participating in peer-review and/or governance, see:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   More on EIPs
 </ButtonLink>
 
@@ -154,7 +154,7 @@ While the specification and development implementations have always been fully o
 
 When the Beacon Chain merged with the Ethereum execution layer on September 15th, 2022 The Merge was complete as part of the [Paris network upgrade](/history/#paris). The proposal [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) was changed from 'Last Call' to 'Final', completing the transition to proof-of-stake.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   More on The Merge
 </ButtonLink>
 

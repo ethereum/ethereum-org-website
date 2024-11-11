@@ -11,7 +11,7 @@ import TooltipComponent from "./index"
 const TooltipContent = () => (
   <div>
     <Translation id="data-provided-by" />{" "}
-    <InlineLink to="https://defillama.com/">defillama</InlineLink>
+    <InlineLink href="https://defillama.com/">defillama</InlineLink>
   </div>
 )
 
@@ -61,6 +61,6 @@ export const Basic: Story = {}
 // for chromatic story snapshot showing the rendered popover
 export const OnOpen: Story = {
   args: {
-    isOpen: true,
+    open: true,
   },
 }

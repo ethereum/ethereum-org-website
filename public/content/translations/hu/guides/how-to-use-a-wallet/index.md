@@ -64,7 +64,7 @@ Az Ön címe minden Ethereum-projekt esetében azonos. Nem kell regisztrálnia k
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Szeretne többet megtudni?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Tekintse meg a további útmutatóinkat
   </ButtonLink>
 </InfoBanner>

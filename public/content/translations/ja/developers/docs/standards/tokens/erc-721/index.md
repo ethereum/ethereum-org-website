@@ -56,11 +56,11 @@ ERC-721（Ethereum Request for Comments 721）は、ウィリアム・エント�
 
 ### 実例： {#web3py-example}
 
-イーサリアムネットワークにおけるERC-721トークンコントラクトを詳しく検討することで、ネットワークをシンプルにする上でこれらの規格がいかに重要であるかが理解できるでしょう。 ERC-721トークンを対象とするインターフェイスを開発するには、コントラクトのアブリケーション・バイナリ・インターフェイス（ABI）があれば十分です。 理解しやすいように、以下では簡略化したABIを用いています。
+イーサリアムネットワークにおけるERC-721トークンコントラクトを詳しく検討することで、ネットワークをシンプルにする上でこれらの規格がいかに重要であるかが理解できるでしょう。 ERC-721トークンを対象とするインターフェイスを開発するには、コントラクトのアブリケーション・バイナリ・インターフェイス（ABI）があれば十分です。 これからつまずかないように簡略化されたABIを使用した例をお見せします。
 
 #### Web3.pyの実例： {#web3py-example}
 
-まず、 Pythonのライブラリから[Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation)をインストール済みであることを確認してください:
+最初に、 Pythonライブラリの[Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation)がインストールされていることを確認してください:
 
 ```
 pip install web3
@@ -174,7 +174,7 @@ CryptoKittiesのコントラクトには、標準的なイベント以外にも�
 特に、`Pregnant`と `Birth`のイベントについて見てみましょう。
 
 ```python
-# Using the Pregnant and Birth Events ABI to get info about new Kitties.
+# 妊娠・出産イベントABIを利用して、新しいキティーの情報を得る。
 ck_extra_events_abi = [
     {
         'anonymous': False,

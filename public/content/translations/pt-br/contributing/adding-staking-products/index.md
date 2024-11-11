@@ -94,7 +94,7 @@ Para produtos de software relacionados à configuração de nó ou cliente, gere
 
 #### Participação sobre Serviço {#staking-as-a-service}
 
-Para [listagens de staking-as-a-service](/staking/saas/) (ou seja, operação de nó delegada):
+Para [listagens de staking-as-a-service ](/staking/saas/) (ou seja, operação de nó delegada):
 
 **Quais são as taxas associadas ao uso do serviço?**
 
@@ -171,6 +171,6 @@ Atualmente, a lógica e os valores do código para esses critérios estão conti
 
 Se você quiser adicionar uma participação (stake) de produto ou serviço ao ethereum.org, crie um tíquete no Github.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
   Crie um ticket
 </ButtonLink>

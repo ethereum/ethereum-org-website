@@ -44,7 +44,7 @@ const Stat = ({ tooltipProps, value, label, isError }: StatProps) => {
         <Text as="span">{label}</Text>
         {!!tooltipProps && (
           <Tooltip {...tooltipProps}>
-            <chakra.button display='flex' color="inherit">
+            <chakra.button display="flex" color="inherit">
               <Icon as={content.tooltipIcon} />
             </chakra.button>
           </Tooltip>

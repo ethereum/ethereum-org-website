@@ -8,6 +8,8 @@ lang: en
 
 Rising interest in cryptocurrency brings with it growing risk from scammers and hackers. This article lays out some best practices to mitigate these risks.
 
+**Remember: No one from ethereum.org will ever contact you. Don’t reply to emails saying they’re from official Ethereum support.**
+
 <Divider />
 
 ## Crypto security 101 {#crypto-security}
@@ -16,11 +18,11 @@ Rising interest in cryptocurrency brings with it growing risk from scammers and 
 
 Misunderstandings about how crypto works can lead to costly mistakes. For example, if someone pretends to be a customer service agent who can return lost ETH in exchange for your private keys, they are preying on people not understanding that Ethereum is a decentralized network lacking this kind of functionality. Educating yourself on how Ethereum works is a worthwhile investment.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   What is Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   What is ether?
 </DocLink>
 <Divider />
@@ -33,7 +35,7 @@ Misunderstandings about how crypto works can lead to costly mistakes. For exampl
 
 The private key to your wallet is a password to your Ethereum wallet. It is the only thing stopping someone who knows your wallet address from draining your account of all of its assets!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   What's an Ethereum wallet?
 </DocLink>
 
@@ -81,7 +83,7 @@ It is impossible to stop scammers completely, but we can make them less effectiv
 
 ![Twitter link phishing](./twitterPhishingScam.png)
 
-There is a method for spoofing Twitter's (also known as X) link preview feature (unfurling) to potentially deceive users into thinking they are visiting a legitimate website. This technique exploits Twitter's mechanism for generating previews of URLs shared in tweets, and shows _from ethereum.org_ for example (shown above), when in fact they are being redirected to a malicious site. 
+There is a method for spoofing Twitter's (also known as X) link preview feature (unfurling) to potentially deceive users into thinking they are visiting a legitimate website. This technique exploits Twitter's mechanism for generating previews of URLs shared in tweets, and shows _from ethereum.org_ for example (shown above), when in fact they are being redirected to a malicious site.
 
 Always check that you are on the right domain, especially after clicking a link.
 
@@ -243,15 +245,7 @@ Using **Two-Factor Authentication (2FA)** provides an additional *security fa
 
 <InfoBanner emoji=":lock:">
   <div>
-    Note: Using SMS-based 2FA is susceptible to 
-    <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
-      SIM jacking
-    </a>
-     and is not secure. For the best security, use a service like{" "}
-    <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
-      Google Authenticator
-    </a>
-     or <a href="https://authy.com/">Authy</a>.
+    Note: Using SMS-based 2FA is susceptible to <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> and is not secure. For the best security, use a service like <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> or <a href="https://authy.com/">Authy</a>.
   </div>
 </InfoBanner>
 

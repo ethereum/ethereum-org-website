@@ -23,7 +23,7 @@ lang: zh-tw
 提交的交易包括下列資訊：
 
 - `from` – 發送者（簽署交易者）的地址。 這會是外部帳戶，因為合約帳戶無法發送交易。
-- `recipient` – 接收地址（如果為外部帳戶，交易將傳輸值。 如果為合約帳戶，交易將執行合約程式碼）
+- `to` – 接收地址（若為外部帳戶，交易將會轉移金額。 如果為合約帳戶，交易將執行合約程式碼）
 - `signature` – 發送者的識別碼。 當發送者以私密金鑰簽署交易並確認發送者已授權此交易时，就會產生此簽章。
 - `nonce` - 用來表示帳戶中交易編號的按順序遞增計數器
 - `value` – 發送者轉帳至接收者的以太幣數量（面額為 WEI，1 以太幣等於 10 的 18 次方 wei）
@@ -153,11 +153,18 @@ Alice 的帳戶將存入 **+1.0 以太幣**
 
 驗證者將保留 **+0.000210 以太幣**的小費
 
-所有智慧型合約互動也需要燃料。
 
 ![顯示如何退還未使用燃料的圖表](./gas-tx.png) _此圖源於[以太坊EVM圖解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 任何交易中未使用的燃料都會退還給使用者帳戶。
+
+### 智慧型合約互動 {#smart-contract-interactions}
+
+任何涉及智慧型合約的交易都需要燃料。
+
+智慧型合約也可以包含稱為 [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) 或 [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) 的函數，而不會改變合約的狀態。 因此，從外部帳戶調用這些函數不需要任何燃料。 此場景的底層遠端程序調用 [`eth_call`](/developers/docs/apis/json-rpc#eth_call)
+
+與使用 `eth_call` 存取不同，這些 `view` 或 `pure` 函數也通常被內部調用（即從合約本身調用或從另一個合約調用），這會消耗燃料。
 
 ## 交易的生命週期 {#transaction-lifecycle}
 
@@ -190,6 +197,16 @@ Alice 的帳戶將存入 **+1.0 以太幣**
 
 - `TransactionType` - 介於 0 和 0x7f 之間的數字，代表總計 128 種可能的交易類型。
 - `TransactionPayload` - 由交易類型定義的任意字節位元組陣列。
+
+根據 `TransactionType` 值，交易可以分類為
+
+1. **類型 0（傳統）交易：**自以太坊推出以來使用的原始交易格式。 它們不包括 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 的功能，例如動態燃料費計算或智慧型合約的存取清單。 傳統交易缺少在序列化形式中指示交易類型的特定前綴，在使用[遞迴長度前綴 (RLP)](/developers/docs/data-structures-and-encoding/rlp) 編碼時，該前綴以位元組 `0xf8` 開始。 這些交易的 TransactionType 值為 `0x0`。
+
+2. **類型 1 交易：**在 [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) 中引入作為以太坊[柏林升級](/history/#berlin)的一部分，這些交易包含一個 `accessList` 參數。 此清單指定了交易期望存取的地址和儲存金鑰，有助於潛在降低涉及智慧型合約的複雜交易的[燃料](/developers/docs/gas/)成本。 EIP-1559 的費用市場變化不會包含在類型 1 交易中。 類型 1 交易也包含一個 `yParity` 參數，該參數可以是 `0x0` 或 `0x1`，表示 secp256k1 簽章的 y 值的奇偶性。 此類交易透過開頭的位元組 `0x01` 開頭辨識，其 TransactionType 值為 `0x1`。
+
+3. **類型 2 交易**，通常稱為 EIP-1559 交易，是以太坊[倫敦升級](/history/#london)裡 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 中引入的交易。 這類交易已成為以太坊網路上的標準交易類型。 這些交易引入了一種新的費用市場機制，透過將交易費用分為基本費用和優先費來提高可預測性。 這些交易的開頭為位元組 `0x02`，並包含 `maxPriorityFeePerGas` 和 `maxFeePerGas` 等欄位。 類型 2 交易因其靈活性和效率而成為預設交易，在網路高度擁塞期間尤其受到青睞，因為它們能夠幫助使用者更好地預測及管理交易費用。 這些交易的 TransactionType 值為 `0x2`。
+
+
 
 ## 衍生閱讀 {#further-reading}
 

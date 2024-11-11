@@ -13,6 +13,7 @@ import type { ChildOnlyProp } from "@/lib/types"
 
 import { Image } from "@/components/Image"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 // Data
@@ -213,7 +214,12 @@ const Layer2Onboard = ({
   }
 
   return (
-    <Box bg="layer2Gradient" borderRadius="sm" p={10}>
+    <div
+      className={cn(
+        "rounded-sm p-10",
+        "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+      )}
+    >
       <Box textAlign="center" maxW="75ch" m="auto">
         <OldHeading
           fontSize={{ base: "2xl", md: "2rem" }}
@@ -289,7 +295,7 @@ const Layer2Onboard = ({
                 } ${t("layer-2-onboard-wallet-selected-2")}`}</b>
               </Text>
               <Text>{selectedL2.bridgeWallets.join(", ")}</Text>
-              <ButtonLink to={selectedL2.bridge} mt={10}>
+              <ButtonLink href={selectedL2.bridge} mt={10}>
                 {`${selectedL2.name} ${t("layer-2-bridge")}`}
               </ButtonLink>
             </SelectedContainer>
@@ -317,7 +323,7 @@ const Layer2Onboard = ({
                   </UnorderedList>
                 </Flex50>
               </TwoColumnContent>
-              <ButtonLink to={selectedExchange.url}>
+              <ButtonLink href={selectedExchange.url}>
                 {`${t("layer-2-go-to")} ${selectedExchange.name}`}
               </ButtonLink>
             </SelectedContainer>
@@ -331,7 +337,7 @@ const Layer2Onboard = ({
               <Text>{selectedCexOnboard.cex_support.join(", ")}</Text>
               <H3>Supported layer 2s</H3>
               <Text>{selectedCexOnboard.network_support.join(", ")}</Text>
-              <ButtonLink to={selectedCexOnboard.url}>
+              <ButtonLink href={selectedCexOnboard.url}>
                 {`${t("layer-2-go-to")} ${selectedCexOnboard.name}`}
               </ButtonLink>
             </SelectedContainer>
@@ -347,7 +353,7 @@ const Layer2Onboard = ({
           />
         </Box>
       </SimpleGrid>
-    </Box>
+    </div>
   )
 }
 

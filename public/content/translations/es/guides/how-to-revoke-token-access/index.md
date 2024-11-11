@@ -6,13 +6,13 @@ lang: es
 
 # Cómo revocar el acceso al contrato inteligente a sus fondos en criptomonedas
 
-Esta guía le enseñará cómo ver una lista de todos los contratos inteligentes a los que haya permitido el acceso a sus fondos y cómo cancelarlos.
+Esta guía le enseñará cómo ver una lista de todos los [contratos inteligentes](/glossary/#smart-contract) a los que ha permitido acceder a sus fondos y cómo cancelarlos.
 
-En ocasiones, desarrolladores malintencionados crean puertas traseras en los contratos inteligentes que permiten acceder a los fondos de usuarios desprevenidos que interactúan con el contrato inteligente. Lo que a menudo sucede es que estas plataformas piden permiso al usuario para gastar un ** número ilimitado de tókenes** en un intento de ahorrar pequeñas cantidades de gas en el futuro, pero esto conlleva un mayor riesgo.
+En ocasiones, desarrolladores malintencionados crean puertas traseras en los contratos inteligentes que permiten acceder a los fondos de usuarios desprevenidos que interactúan con el contrato inteligente. Lo que a menudo sucede es que tales plataformas piden al usuario permiso para gastar un **número ilimitado de tokens** en un intento de ahorrar pequeñas cantidades de [gas](/glossary/#gas) en el futuro, pero esto conlleva un mayor riesgo.
 
-Una vez que una plataforma tiene derechos de acceso ilimitados a un token en su cartera, esta podrá gastar todos esos tókenes incluso si ha retirado sus fondos de su plataforma a su cartera. Los atacantes aun pueden seguir accediendo a sus fondos y retirarlos a sus carteras sin que le quede ninguna opción de recuperación.
+Una vez que una plataforma tiene derechos de acceso ilimitados a un token en su [billetera](/glossary/#wallet), puede gastar todos esos tokens incluso si ha retirado sus fondos de su plataforma a su billetera. Los atacantes aun pueden seguir accediendo a sus fondos y retirarlos a sus carteras sin que le quede ninguna opción de recuperación.
 
-Las únicas protecciones son abstenerse de utilizar nuevos proyectos no probados, aprobar sólo lo que se necesita o revocar regularmente el acceso. Pero, ¿cómo lo logramos hacer?
+Las únicas protecciones son abstenerse de utilizar nuevos proyectos no probados, aprobar sólo lo que se necesita o revocar regularmente el acceso. Pero, ¿cómo se logra hacer?
 
 ## Paso 1: Utilizar las herramientas de revocación de acceso
 
@@ -49,8 +49,8 @@ Le aconsejamos que actualice la herramienta de revocación transcurridos unos mi
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>¿Quiere saber más?</div>
-  <ButtonLink to="/guides/">
-    Consulte nuestras demás guias
+  <ButtonLink href="/guides/">
+    Consulte nuestras demás guías
   </ButtonLink>
 </InfoBanner>
 
@@ -58,7 +58,7 @@ Le aconsejamos que actualice la herramienta de revocación transcurridos unos mi
 
 ### ¿Revocar el acceso de tókenes también hace que se termine la apuesta, la reserva, el préstamo, etc?
 
-No, no afectará a ninguna de sus estrategias DeFi. Permanecerá en sus posiciones y seguirá obteniendo recompensas, etc.
+No, no afectará a ninguna de sus estrategias [DeFi](/glossary/#defi). Permanecerá en sus posiciones y seguirá obteniendo recompensas, etc.
 
 ### ¿Desconectar una cartera de un proyecto es lo mismo que quitar el permiso para usar mis fondos?
 

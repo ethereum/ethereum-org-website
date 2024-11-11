@@ -1,3 +1,4 @@
+import { useEffect, useMemo, useState } from "react"
 import {
   ChakraBaseProvider,
   extendBaseTheme,
@@ -6,7 +7,7 @@ import {
 import type { Decorator } from "@storybook/react"
 
 import theme from "../src/@chakra-ui/theme"
-import { useEffect, useMemo, useState } from "react"
+
 import i18n from "./i18next"
 
 type DecoratorProps = Parameters<Decorator>

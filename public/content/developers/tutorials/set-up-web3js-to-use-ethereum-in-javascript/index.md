@@ -68,7 +68,7 @@ getBlockNumber()
 
 You can see all the functions available on the Web3 instance in [the official web3.js documentation](https://docs.web3js.org/).
 
-Most of Web3 libraries are asynchronous because in the background the library makes JSON RPC calls to the node which send backs the result.
+Most of Web3 libraries are asynchronous because in the background the library makes JSON-RPC calls to the node which send backs the result.
 
 <Divider />
 

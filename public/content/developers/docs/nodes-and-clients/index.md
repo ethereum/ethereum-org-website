@@ -47,8 +47,8 @@ Multiple trackers offer a real-time overview of nodes in the Ethereum network. N
 
 - [Map of nodes](https://etherscan.io/nodetracker) by Etherscan
 - [Ethernodes](https://ethernodes.org/) by Bitfly
-- [Ethereum Node Crawler](https://crawler.ethereum.org/)
 - [Nodewatch](https://www.nodewatch.io/) by Chainsafe, crawling consensus nodes
+- [Monitoreth](https://monitoreth.io/) - by MigaLabs, A distributed network monitoring tool
 
 ## Node types {#node-types}
 
@@ -133,14 +133,14 @@ The Ethereum community maintains multiple open-source execution clients (previou
 
 This table summarizes the different clients. All of them pass [client tests](https://github.com/ethereum/tests) and are actively maintained to stay updated with network upgrades.
 
-| Client                                                                   | Language   | Operating systems     | Networks                  | Sync strategies                    | State pruning   |
-| ------------------------------------------------------------------------ | ---------- | --------------------- | ------------------------- | ---------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap, Full                         | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)                                      | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap (without serving), Fast, Full | Archive, Pruned |
-| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap, Fast, Full                   | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Full                               | Archive, Pruned |
-| [Reth](https://github.com/paradigmxyz/reth) _(beta)_                     | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Full                               | Archive, Pruned |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Holesky          | Full                               | Pruned          |
+| Client                                                                   | Language   | Operating systems     | Networks                  | Sync strategies                                                | State pruning   |
+| ------------------------------------------------------------------------ | ---------- | --------------------- | ------------------------- | -------------------------------------------------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync), [Full](#full-sync)                         | Archive, Pruned |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync) (without serving), Fast, [Full](#full-sync) | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync), [Fast](#fast-sync), [Full](#full-sync)     | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Full](#full-sync)                                             | Archive, Pruned |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Full](#full-sync)                                             | Archive, Pruned |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Holesky          | [Full](#full-sync)                                             | Pruned          |
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -168,9 +168,17 @@ Nethermind is an Ethereum implementation created with the C# .NET tech stack, li
 
 - an optimized virtual machine
 - state access
-- networking and rich features like Prometheus/Grafana dashboards, seq enterprise logging support, JSON RPC tracing, and analytics plugins.
+- networking and rich features like Prometheus/Grafana dashboards, seq enterprise logging support, JSON-RPC tracing, and analytics plugins.
 
 Nethermind also has [detailed documentation](https://docs.nethermind.io), strong dev support, an online community and 24/7 support available for premium users.
+
+### Reth {#reth}
+
+Reth (short for Rust Ethereum) is an Ethereum full node implementation that is focused on being user-friendly, highly modular, fast and efficient. Reth was originally built and driven forward by Paradigm, and is licensed under the Apache and MIT licenses.
+
+Reth is production ready, and suitable for usage in mission-critical environments such as staking or high-uptime services. Performs well in use cases where high performance with great margins is required such as RPC, MEV, indexing, simulations, and P2P activities.
+
+Learn more by checking out the [Reth Book](https://reth.rs/), or the [Reth GitHub repo](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
 
 ### In development {#execution-in-development}
 
@@ -193,6 +201,7 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten, and more                  |
 | [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten, and more |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Sepolia, Ropsten, and more          |
+| [Grandine](https://docs.grandine.io/) (beta)                  | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, and more                           |
 
 ### Lighthouse {#lighthouse}
 
@@ -226,6 +235,12 @@ Teku offers very flexible deployment options. The beacon node and validator clie
 
 Teku is written in Java and is Apache 2.0 licensed. It is developed by the Protocols team at ConsenSys that is also responsible for Besu and Web3Signer. Learn more in [Teku docs](https://docs.teku.consensys.net/en/latest/).
 
+### Grandine {#grandine}
+
+Grandine is a consensus client implementation, written in Rust under the GPL-3.0 license. It is maintained by the Grandine Core Team and is fast, high-performance and lightweight. It fits a wide range of stakers from solo stakers running on low-resource devices such as Raspberry Pi to large institutional stakers running tens of thousands of validators.
+
+Documentation can be found in the [Grandine Book](https://docs.grandine.io/)
+
 ## Synchronization modes {#sync-modes}
 
 To follow and verify current data in the network, the Ethereum client needs to sync with the latest network state. This is done by downloading data from peers, cryptographically verifying their integrity, and building a local blockchain database.
@@ -234,21 +249,32 @@ Synchronization modes represent different approaches to this process with variou
 
 ### Execution layer sync modes {#execution-layer-sync-modes}
 
-#### Full archive sync {#full-sync}
+The execution layer may be run in different modes to suit different use cases, from re-executing the blockchain's world state to only syncing with the tip of the chain from a trusted checkpoint.
 
-Full sync downloads all blocks (including headers, transactions, and receipts) and generates the state of the blockchain incrementally by executing every block from genesis.
+#### Full sync {#full-sync}
+
+A full sync downloads all blocks (including headers and block bodies) and regenerates the state of the blockchain incrementally by executing every block from genesis.
 
 - Minimizes trust and offers the highest security by verifying every transaction.
 - With an increasing number of transactions, it can take days to weeks to process all transactions.
 
-#### Full snap sync {#snap-sync}
+[Archive nodes](#archive-node) perform a full sync to build (and retain) a complete history of the state changes made by every transaction in every block.
 
-Snap sync verifies the chain block-by-block, just like a full archive sync; however, instead of starting at the genesis block, it starts at a more recent 'trusted' checkpoint that is known to be part of the true blockchain. The node saves periodic checkpoints while deleting data older than a certain age. Those snapshots are used to regenerate state data when it is needed, rather than having to store it all forever.
+#### Fast sync {#fast-sync}
 
-- Fastest sync strategy, currently default in Ethereum mainnet
-- Saves a lot of disk usage and network bandwidth without sacrificing security
+Like a full sync, a fast sync downloads all blocks (including headers, transactions, and receipts). However, instead of re-processing the historical transactions, a fast sync relies on the receipts until it reaches a recent head, when it switches to importing and processing blocks to provide a full node.
 
-[More on snap sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+- Fast sync strategy.
+- Reduces processing demand in favor of bandwidth usage.
+
+#### Snap sync {#snap-sync}
+
+Snap syncs also verify the chain block-by-block. However, instead of starting at the genesis block, a snap sync starts at a more recent 'trusted' checkpoint that is known to be part of the true blockchain. The node saves periodic checkpoints while deleting data older than a certain age. These snapshots are used to regenerate state data as needed, rather than storing it forever.
+
+- Fastest sync strategy, currently default in Ethereum Mainnet.
+- Saves a lot of disk usage and network bandwidth without sacrificing security.
+
+[More on snap sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md).
 
 #### Light sync {#light-sync}
 
@@ -271,15 +297,13 @@ Optimistic sync is a post-merge synchronization strategy designed to be opt-in a
 
 #### Checkpoint sync {#checkpoint-sync}
 
-Checkpoint sync, also known as weak subjectivity sync, creates a superior user experience for syncing Beacon Node. It's based on assumptions of [weak subjectivity](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) which enables syncing Beacon Chain from a recent weak subjectivity checkpoint instead of genesis. Checkpoint sync makes the initial sync time significantly faster with similar trust assumptions as syncing from [genesis](/glossary/#genesis-block).
+A checkpoint sync, also known as weak subjectivity sync, creates a superior user experience for syncing a Beacon Node. It's based on assumptions of [weak subjectivity](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) which enables syncing the Beacon Chain from a recent weak subjectivity checkpoint instead of genesis. Checkpoint syncs make the initial sync time significantly faster with similar trust assumptions as syncing from [genesis](/glossary/#genesis-block).
 
-In practice, this means your node connects to a remote service to download recent finalized states and continues verifying data from that point. Third party providing the data is trusted and should be picked carefully.
+In practice, this means your node connects to a remote service to download recent finalized states and continues verifying data from that point. The third party providing the data is trusted and should be picked carefully.
 
 More on [checkpoint sync](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
 
 ## Further reading {#further-reading}
-
-There is a lot of information about Ethereum clients on the internet. Here are few resources that might be helpful.
 
 - [Ethereum 101 - Part 2 - Understanding Nodes](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 February 2019_
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_

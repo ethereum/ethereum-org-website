@@ -190,7 +190,7 @@ summaryPoints:
 
 Чтобы разблокировать и получить весь баланс обратно, вы также должны завершить процесс выхода вашего валидатора.
 
-<ButtonLink to="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
 </ExpandableCard>
 
 ## Дополнительные ресурсы {#further-reading}

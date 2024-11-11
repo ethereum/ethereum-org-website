@@ -10,7 +10,7 @@ lang: zh
 
 然而，在以太坊从[工作量证明](/developers/docs/consensus-mechanisms/pow)转换到[权益证明](/developers/docs/consensus-mechanisms/pos)的时候，一种新类型的密钥被加入到以太坊。 原来的密钥仍然像之前那样工作—基于椭圆曲线的密钥确保帐户安全没有变化。 然而，通过质押以太币和运行验证者来参与权益证明时，用户需要一种新类型的密钥。 这一需求是由于扩容挑战带来的，信息需要在大量验证者之间传递，这些信息需要一种密码学方法来方便汇总，以减少网络达成共识所需的沟通数量。
 
-这种新型密钥使用 [**Boneh-Lyn-Shacham (BLS)** 签名方案](https://wikipedia.org/wiki/BLS_digital_signature)。 BLS 能够对签名进行高效聚合，同时允许对聚合的单个验证者密钥进行逆向工程，它对于管理验证者之间的行动非常理想。
+这种新型密钥采用[** Boneh-Lynn-Shacham (BLS) **签名方案](https://wikipedia.org/wiki/BLS_digital_signature)。 BLS 能够对签名进行高效聚合，同时允许对聚合的单个验证者密钥进行逆向工程，它对于管理验证者之间的行动非常理想。
 
 ## 两种类型的验证者密钥 {#two-types-of-keys}
 

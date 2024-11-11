@@ -12,7 +12,7 @@
   "page-gas-summary-item-3": "Phí gas không cố định, chúng thay đổi dựa trên tình trạng tắc nghẽn mạng lưới",
   "page-gas-what-are-gas-fees-header": "Phí gas là gì?",
   "page-gas-what-are-gas-fees-text-1": "Hãy xem Ethereum như một mạng máy tính lớn, trong đó mọi người có thể thực hiện các nhiệm vụ như gửi tin nhắn hoặc chạy chương trình. Giống như trong thế giới thực, những nhiệm vụ này đòi hỏi năng lượng để hoàn thành.",
-  "page-gas-what-are-gas-fees-text-2": "Trong Etherum, mỗi hành động tính toán đều đặt một giá \"gas\" cố định. <b>Phí gas của bạn là tổng giá những hành động trong giao dịch của bạn</b>. Khi bạn gửi một giáo dịch hoặc chạy một <a href=\"/glossary/#smart-contract\">hợp đồng thông minh</a>, bạn phải trả phí gas cho việc vận hành nó.",
+  "page-gas-what-are-gas-fees-text-2": "Trong Ethereum, mỗi hành động tính toán đều đặt một giá \"gas\" cố định. <b>Phí gas của bạn là tổng giá những hành động trong giao dịch của bạn</b>. Khi bạn gửi một giáo dịch hoặc chạy một <a href=\"/glossary/#smart-contract\">hợp đồng thông minh</a>, bạn phải trả phí gas cho việc vận hành nó.",
   "page-gas-how-do-i-pay-less-gas-header": "Làm thế nào để tôi tiết kiệm phí gas?",
   "page-gas-how-do-i-pay-less-gas-text": "Mặc dù mức phí cao hơn trên Ethereum đôi khi không thể tránh khỏi, nhưng bạn có thể sử dụng các chiến lược để giảm chi phí:",
   "page-gas-how-do-i-pay-less-gas-card-1-title": "Định thời điểm thực hiện giao dịch của bạn",

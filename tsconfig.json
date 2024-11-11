@@ -21,6 +21,6 @@
       "@/storybook-utils": ["./.storybook/utils.ts"]
     }
   },
-  "include": ["./src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".storybook/**/*"],
+  "include": ["./src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".storybook/**/*", "tailwind/ui"],
   "exclude": ["node_modules", "./public", "./src/intl"]
 }

@@ -90,13 +90,13 @@ Ingatlah bahwa Anda harus menyambungkan disk dengan porta USB 3.0 (biru)
 
 ### 1. Unduh gambar lapisan eksekusi dan konsensus {#1-download-execution-or-consensus-images}
 
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">
+<ButtonLink href="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">
   Unduh gambar lapisan eksekusi
 </ButtonLink>
 
 sha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c
 
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">
+<ButtonLink href="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">
   Unduh gambar lapisan konsensus
 </ButtonLink>
 

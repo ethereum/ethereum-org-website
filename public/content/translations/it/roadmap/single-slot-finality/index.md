@@ -58,7 +58,7 @@ Il problema con il ridimensionamento dell'aggregazione, aumentando il numero di 
 
 ## Stato attuale {#current-progress}
 
-Lo SSF è nella fase di ricerca. Non dovrebbe essere distribuito per svariati anni, possibilmente dopo altri aggiornamenti sostanziali come gli [alberi di Verkle](/roadmap/verkle-trees/) e il [Danksharding](/roadmap/danksharding/).
+Lo SSF è nella fase di ricerca. Non dovrebbe essere rilasciata per svariati anni, probabilmente dopo altri aggiornamenti sostanziali come gli [alberi di Verkle](/roadmap/verkle-trees/) e il [Danksharding](/roadmap/danksharding/).
 
 ## Letture consigliate {#further-reading}
 

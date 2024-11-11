@@ -49,7 +49,7 @@ lang: ja
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>さらに詳しく知りたいですか？</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     他のガイドを参照する
   </ButtonLink>
 </InfoBanner>

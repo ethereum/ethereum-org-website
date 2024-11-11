@@ -104,6 +104,7 @@ const H2 = (props: ChildOnlyProp & HeadingProps) => (
     lineHeight={1.4}
     mt={16}
     mb="6"
+    scrollMarginTop={24}
     {...props}
   />
 )
@@ -165,17 +166,17 @@ const AssetsPage = () => {
             </Heading>
           </Center>
           <Center>
-            <InlineLink href="/images/assets/#illustrations">
+            <InlineLink href="/assets/#illustrations">
               {t("page-assets-illustrations")}
             </InlineLink>
           </Center>
           <Center>
-            <InlineLink href="/images/assets/#historical">
+            <InlineLink href="/assets/#historical">
               {t("page-assets-historical-artwork")}
             </InlineLink>
           </Center>
           <Center>
-            <InlineLink href="/images/assets/#brand">
+            <InlineLink href="/assets/#brand">
               {t("page-assets-ethereum-brand-assets")}
             </InlineLink>
           </Center>
@@ -261,22 +262,19 @@ const AssetsPage = () => {
             title={t("page-assets-doge")}
             alt={t("page-assets-doge")}
             image={doge}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-blocks")}
             alt={t("page-assets-blocks")}
             image={developers}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-enterprise")}
             alt={t("page-assets-enterprise")}
             image={enterprise}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
         </Row>
         <Row>
@@ -284,22 +282,19 @@ const AssetsPage = () => {
             title={t("page-assets-infrastructure")}
             alt={t("page-assets-infrastructure")}
             image={infrastructure}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-finance")}
             alt={t("page-assets-finance")}
             image={finance}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-impact")}
             alt={t("page-assets-impact")}
             image={impact}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
         </Row>
         <Row>
@@ -307,22 +302,19 @@ const AssetsPage = () => {
             title={t("page-assets-future")}
             alt={t("page-assets-future")}
             image={future}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-hackathon")}
             alt={t("page-assets-hackathon")}
             image={hackathon}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-robot")}
             alt={t("page-assets-robot")}
             image={wallet}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
         </Row>
         <Row>

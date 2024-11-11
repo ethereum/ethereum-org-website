@@ -59,11 +59,11 @@ Chociaż zabójcze funkcje Web3 nie są odizolowane i nie pasują do oddzielnych
 
 Web3 daje Ci prawo własności do Twoich zasobów cyfrowych w bezprecedensowy sposób. Załóżmy na przykład, że grasz w grę web2. Jeśli kupisz przedmiot w grze, jest on powiązany bezpośrednio z Twoim kontem. Jeśli twórcy gry usuną Twoje konto, stracisz te przedmioty. Lub, jeśli przestaniesz grać w grę, stracisz wartość zainwestowaną w przedmioty w grze.
 
-Web3 pozwala na bezpośrednią własność poprzez [niewymienialne tokeny (NFT)](/nft/). Nikt, nawet twórcy gry, nie ma prawa odebrać ci Twoich własności. A jeśli przestaniesz grać, możesz sprzedać lub wymienić swoje przedmioty w grze na otwartych rynkach i odzyskać ich wartość.
+Web3 pozwala na bezpośrednią własność poprzez [niewymienialne tokeny (NFT)](/glossary/#nft). Nikt, nawet twórcy gry, nie ma prawa odebrać ci Twoich własności. A jeśli przestaniesz grać, możesz sprzedać lub wymienić swoje przedmioty w grze na otwartych rynkach i odzyskać ich wartość.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Dowiedz się więcej o NFT</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     Więcej o NFT
   </ButtonLink>
 </InfoBanner>
@@ -82,13 +82,13 @@ Web 2.0 wymaga od twórców treści zaufania platformom, że nie zmienią zasad,
 
 Oprócz posiadania swoich danych, w Web3 możesz być właścicielem platformy jako grupy, używając tokenów, które działają jak udziały w firmie. DAO pozwalają koordynować zdecentralizowaną własność platformy i podejmować decyzje dotyczące jej przyszłości.
 
-DAO są technicznie definiowane jako uzgodnione inteligentne kontrakty, które automatyzują zdecentralizowane podejmowanie decyzji w odniesieniu do puli zasobów (tokenów). Użytkownicy z tokenami głosują na sposób wydawania zasobów, a kod automatycznie wykonuje wynik głosowania.
+DAO są technicznie definiowane jako z góry uzgodnione [inteligentne kontrakty](/glossary/#smart-contract), które automatyzują zdecentralizowane podejmowanie decyzji w odniesieniu do puli zasobów (tokenów). Użytkownicy z tokenami głosują na sposób wydawania zasobów, a kod automatycznie wykonuje wynik głosowania.
 
 Ludzie jednak definiują wiele społeczności Web3 jako DAO. Wszystkie te społeczności mają różne poziomy decentralizacji i automatyzacji za pomocą kodu. Obecnie badamy, czym są DAO i jak mogą ewoluować w przyszłości.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Dowiedz się więcej o DAO</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     Więcej informacji o: DAO
   </ButtonLink>
 </InfoBanner>
@@ -97,27 +97,23 @@ Ludzie jednak definiują wiele społeczności Web3 jako DAO. Wszystkie te społe
 
 Tradycyjnie należałoby utworzyć konto dla każdej używanej platformy. Na przykład, możesz mieć konto na Twitterze, konto na YouTubie i konto na Reddit. Chcesz zmienić wyświetlaną nazwę lub zdjęcie profilowe? Musisz to zrobić na każdym koncie. W niektórych przypadkach można korzystać z logowania społecznościowego, ale wiąże się to z dobrze znanym problemem — cenzurą. Za pomocą jednego kliknięcia platformy te mogą zablokować dostęp do całego Twojego życia online. Co gorsza, wiele platform wymaga od użytkownika zaufania do nich i podania danych osobowych w celu utworzenia konta.
 
-Web3 rozwiązuje te problemy, umożliwiając kontrolowanie tożsamości cyfrowej za pomocą adresu Ethereum i profilu ENS. Korzystanie z adresu Ethereum zapewnia pojedynczy login na różnych platformach, który jest bezpieczny, odporny na cenzurę i anonimowy.
-
-<ButtonLink to="https://login.xyz/">
-  Zaloguj się za pomocą Ethereum
-</ButtonLink>
+Web3 rozwiązuje te problemy, umożliwiając kontrolowanie cyfrowej tożsamości za pomocą adresu Ethereum i profilu [Ethereum Name Service (ENS)](/glossary/#ens). Korzystanie z adresu Ethereum zapewnia pojedynczy login na różnych platformach, który jest bezpieczny, odporny na cenzurę i anonimowy.
 
 ### Natywne płatności {#native-payments}
 
-Infrastruktura płatności Web2 opiera się na bankach i przetwórcach płatności, wykluczając osoby bez kont bankowych lub te, które mieszkają w granicach niewłaściwego kraju. Web3 wykorzystuje tokeny takie jak [ETH](/eth/) do wysyłania pieniędzy bezpośrednio w przeglądarce i nie wymaga zaufanej strony trzeciej.
+Infrastruktura płatności Web2 opiera się na bankach i przetwórcach płatności, wykluczając osoby bez kont bankowych lub te, które mieszkają w granicach niewłaściwego kraju. Web3 wykorzystuje takie tokeny jak [ETH](/glossary/#ether) do wysyłania pieniędzy bezpośrednio w przeglądarce i nie wymaga zaufanej strony trzeciej.
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   Więcej na temat ETH
 </ButtonLink>
 
 ## Ograniczenia sieci Web3 {#web3-limitations}
 
-Pomimo licznych zalet Web3 w jego obecnej formie, nadal istnieje wiele ograniczeń, które ekosystem musi rozwiązać, aby mógł się rozwijać.
+Pomimo licznych zalet Web3 w jego obecnej formie, nadal istnieje wiele ograniczeń, które ekosystem musi rozwiązać, aby mógł on się rozwijać.
 
 ### Dostępność {#accessibility}
 
-Ważne funkcje Web3, takie jak logowanie za pomocą Ethereum, są już dostępne dla każdego bez ponoszenia żadnych kosztów. Jednak względny koszt transakcji jest nadal zbyt wysoki dla wielu osób. Jest mniej prawdopodobne, że Web3 będzie wykorzystywany w mniej zamożnych, rozwijających się krajach ze względu na wysokie opłaty transakcyjne. W Ethereum wyzwania te są rozwiązywane poprzez [plan działania](/roadmap/) i [rozwiązania skalowania warstwy 2](/developers/docs/scaling/). Technologia jest gotowa, ale potrzebujemy wyższego poziomu wykorzystania warstwy 2, aby Web3 był dostępny dla każdego.
+Ważne funkcje Web3, takie jak logowanie za pomocą Ethereum, są już dostępne dla każdego bez ponoszenia żadnych kosztów. Jednak względny koszt transakcji jest nadal zbyt wysoki dla wielu osób. Jest mniej prawdopodobne, że Web3 będzie wykorzystywany w mniej zamożnych, rozwijających się krajach ze względu na wysokie opłaty transakcyjne. W Ethereum wyzwania te rozwiązywane są poprzez [plan działania](/roadmap/) i [rozwiązania do skalowania warstwy 2](/glossary/#layer-2). Technologia jest gotowa, ale potrzebujemy wyższego poziomu wykorzystania warstwy 2, aby Web3 był dostępny dla każdego.
 
 ### Doświadczenie użytkownika {#user-experience}
 

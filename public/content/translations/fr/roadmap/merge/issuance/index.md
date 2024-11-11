@@ -10,7 +10,7 @@ La Fusion a marqué la transition du réseau Ethereum de la preuve de travail à
 
 ## La répartition de l'émission d'ETH {#components-of-eth-issuance}
 
-Nous pouvons diviser l'offre d'ETH en deux composantes principales : l'émission et la destruction en le brûlant.
+Nous pouvons diviser l'offre d'ETH en deux composantes principales : l'émission et la destruction en le brulant.
 
 **L'émission** d'ETH est le processus de création d'ETH qui n'existait pas auparavant. Le **brûlage** de l'ETH se produit lorsque l'ETH existant est détruit, le retirant de la circulation. Le taux d'émission et de destruction est calculé par plusieurs paramètres, et l'équilibre entre eux détermine le taux d'inflation/déflation résultant de l'éther.
 

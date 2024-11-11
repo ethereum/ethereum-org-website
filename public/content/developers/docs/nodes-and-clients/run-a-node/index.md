@@ -93,12 +93,13 @@ The sync mode and client you choose will affect space requirements, but we've es
 
 | Client     | Disk size (snap sync) | Disk size (full archive) |
 | ---------- | --------------------- | ------------------------ |
-| Geth       | 500GB+                | 12TB+                    |
-| Nethermind | 500GB+                | 12TB+                    |
 | Besu       | 800GB+                | 12TB+                    |
 | Erigon     | N/A                   | 2.5TB+                   |
+| Geth       | 500GB+                | 12TB+                    |
+| Nethermind | 500GB+                | 12TB+                    |
+| Reth       | N/A                   | 2.2TB+                   |
 
-- Note: Erigon does not offer snap sync, but Full Pruning is possible (~500GB)
+- Note: Erigon and Reth do not offer snap sync, but Full Pruning is possible (~2TB for Erigon, ~1.2TB for Reth)
 
 For consensus clients, space requirement also depends on client implementation and enabled features (e.g. validator slasher) but generally count with another 200GB needed for beacon data. With a large number of validators, the bandwidth load grows as well. You can find [details on consensus client requirements in this analysis](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
@@ -155,6 +156,7 @@ Here are the release pages of clients where you can find their pre-built binarie
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
+- [Reth](https://reth.rs/installation/installation.html)
 
 It is also worth noting that client diversity is an [issue on the execution layer](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). It is recommended that readers consider running a minority execution client.
 
@@ -178,7 +180,7 @@ Developers sign released binaries with their PGP keys so you can cryptographical
 
 Another form of verification is to make sure that the hash, a unique cryptographic fingerprint, of the software you downloaded matches the one provided by developers. This is even easier than using PGP, and some clients offer only this option. Just run the hash function on the downloaded software and compare it to the one from the release page. For example:
 
-```
+```sh
 sha256sum teku-22.6.1.tar.gz
 
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
@@ -214,7 +216,7 @@ Execution and consensus clients communicate via an authenticated endpoint specif
 
 This token is generated automatically by the client software, but in some cases, you might need to do it yourself. You can generate it using [OpenSSL](https://www.openssl.org/):
 
-```
+```sh
 openssl rand -hex 32 > jwtsecret
 ```
 
@@ -222,12 +224,12 @@ openssl rand -hex 32 > jwtsecret
 
 This section will guide you through starting execution clients. It only serves as an example of a basic configuration, which will start the client with these settings:
 
-- Specifies network to connect to, mainnet in our examples
+- Specifies network to connect to, Mainnet in our examples
   - You can instead choose [one of testnets](/developers/docs/networks/) for preliminary testing of your setup
 - Defines data directory, where all the data including blockchain will be stored
   - Make sure to substitute the path with a real one, e.g. pointing to your external drive
 - Enables interfaces for communicating with the client
-  - Including JSON RPC and Engine API for communication with consensus client
+  - Including JSON-RPC and Engine API for communication with consensus client
 - Defines path to `jwtsecret` for authenticated API
   - Make sure to substitute the example path with a real one which can be accessed by clients, e.g. `/tmp/jwtsecret`
 
@@ -237,9 +239,9 @@ Please keep in mind that this is just a basic example, all other settings will b
 
 ##### Running Besu
 
-This example starts Besu on mainnet, stores blockchain data in default format at `/data/ethereum`, enables JSON RPC and Engine RPC for connecting consensus client. Engine API is authenticated with token `jwtsecret` and only calls from `localhost` are allowed.
+This example starts Besu on Mainnet, stores blockchain data in default format at `/data/ethereum`, enables JSON-RPC and Engine RPC for connecting consensus client. Engine API is authenticated with token `jwtsecret` and only calls from `localhost` are allowed.
 
-```
+```sh
 besu --network=mainnet \
     --data-path=/data/ethereum \
     --rpc-http-enabled=true \
@@ -251,7 +253,7 @@ besu --network=mainnet \
 
 Besu also comes with a launcher option which will ask a series of questions and generate the config file. Run the interactive launcher using:
 
-```
+```sh
 besu --Xlauncher
 ```
 
@@ -259,9 +261,9 @@ besu --Xlauncher
 
 ##### Running Erigon
 
-This example starts Erigon on mainnet, stores blockchain data at `/data/ethereum`, enables JSON RPC, defines which namespaces are allowed and enables authentication for connecting the consensus client which is defined by the `jwtsecret` path.
+This example starts Erigon on Mainnet, stores blockchain data at `/data/ethereum`, enables JSON-RPC, defines which namespaces are allowed and enables authentication for connecting the consensus client which is defined by the `jwtsecret` path.
 
-```
+```sh
 erigon --chain mainnet \
     --datadir /data/ethereum  \
     --http --http.api=engine,eth,web3,net \
@@ -272,9 +274,9 @@ Erigon by default performs a full sync with 8GB HDD which will result in more th
 
 ##### Running Geth
 
-This example starts Geth on mainnet, stores blockchain data at `/data/ethereum`, enables JSON RPC and defines which namespaces are allowed. It also enables authentication for connecting consensus client which requires path to `jwtsecret` and also option defining which connections are allowed, in our example only from `localhost`.
+This example starts Geth on Mainnet, stores blockchain data at `/data/ethereum`, enables JSON-RPC and defines which namespaces are allowed. It also enables authentication for connecting consensus client which requires path to `jwtsecret` and also option defining which connections are allowed, in our example only from `localhost`.
 
-```
+```sh
 geth --mainnet \
     --datadir "/data/ethereum" \
     --http --authrpc.addr localhost \
@@ -287,9 +289,9 @@ Check [docs for all configuration options](https://geth.ethereum.org/docs/fundam
 
 ##### Running Nethermind
 
-Nethermind offers various [installation options](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). The package comes with various binaries, including a Launcher with a guided setup, which will help you to create the configuration interactively. Alternatively, you find Runner which is the executable itself and you can just run it with config flags. JSON RPC is enabled by default.
+Nethermind offers various [installation options](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). The package comes with various binaries, including a Launcher with a guided setup, which will help you to create the configuration interactively. Alternatively, you find Runner which is the executable itself and you can just run it with config flags. JSON-RPC is enabled by default.
 
-```
+```sh
 Nethermind.Runner --config mainnet \
     --datadir /data/ethereum \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
@@ -298,6 +300,19 @@ Nethermind.Runner --config mainnet \
 Nethermind docs offer a [complete guide](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) on running Nethermind with consensus client.
 
 An execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. The execution client will await a connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
+
+##### Running Reth
+
+This example starts Reth on Mainnet, using default data location. Enables JSON-RPC and Engine RPC authentication for connecting the consensus client which is defined by the `jwtsecret` path, with only calls from `localhost` are allowed.
+
+```sh
+reth node \
+    --authrpc.jwtsecret /path/to/jwtsecret \
+    --authrpc.addr 127.0.0.1 \
+    --authrpc.port 8551
+```
+
+See [Configuring Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) to learn more about data default data directories. [Reth's documentation](https://reth.rs/run/mainnet.html) contains additional options and configuration details.
 
 #### Starting the consensus client {#starting-the-consensus-client}
 
@@ -309,13 +324,13 @@ If you plan to run a validator, make sure to add a configuration flag specifying
 
 When starting a Beacon Node on a testnet, you can save significant syncing time by using a public endpoint for [Checkpoint sync](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
-#### Running a consensus client
+#### Running a consensus client {#running-a-consensus-client}
 
 ##### Running Lighthouse
 
 Before running Lighthouse, learn more on how to install and configure it in [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html).
 
-```
+```sh
 lighthouse beacon_node \
     --network mainnet \
     --datadir /data/ethereum \
@@ -328,7 +343,7 @@ lighthouse beacon_node \
 
 Install Lodestar software by compiling it or downloading the Docker image. Learn more in [docs](https://chainsafe.github.io/lodestar/) and more comprehensive [setup guide](https://hackmd.io/@philknows/rk5cDvKmK).
 
-```
+```sh
 lodestar beacon \
     --rootDir="/data/ethereum" \
     --network=mainnet \
@@ -342,7 +357,7 @@ lodestar beacon \
 Nimbus comes with both consensus and execution clients. It can be run on various devices even with very modest computing power.
 After [installing dependencies and Nimbus itself](https://nimbus.guide/quick-start.html), you can run its consensus client:
 
-```
+```sh
 nimbus_beacon_node \
     --network=mainnet \
     --web3-url=http://127.0.0.1:8551 \
@@ -354,7 +369,7 @@ nimbus_beacon_node \
 
 Prysm comes with script which allows easy automatic installation. Details can be found in the [Prysm docs](https://docs.prylabs.network/docs/install/install-with-script).
 
-```
+```sh
 ./prysm.sh beacon-chain \
     --mainnet \
     --datadir /data/ethereum  \
@@ -364,7 +379,7 @@ Prysm comes with script which allows easy automatic installation. Details can be
 
 ##### Running Teku
 
-```
+```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \
     --ee-endpoint http://localhost:8551 \
@@ -379,7 +394,7 @@ A consensus client serves as a Beacon Node for validators to connect. Each conse
 
 Running your own validator allows for [solo staking](/staking/solo/), the most impactful and trustless method to support the Ethereum network. However, this requires a deposit of 32 ETH. To run a validator on your own node with a smaller amount, a decentralized pool with permissionless node operators, such as [Rocket Pool](https://rocketpool.net/node-operators), might interest you.
 
-The easiest way to get started with staking and validator key generation is to use the [Goerli Testnet Staking Launchpad](https://goerli.launchpad.ethereum.org/), which allows you to test your setup by [running nodes on Goerli](https://notes.ethereum.org/@launchpad/goerli). When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/).
+The easiest way to get started with staking and validator key generation is to use the [Holesky Testnet Staking Launchpad](https://holesky.launchpad.ethereum.org/), which allows you to test your setup by [running nodes on Holesky](https://notes.ethereum.org/@launchpad/holesky). When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/).
 
 Look into [staking page](/staking) for an overview about staking options.
 

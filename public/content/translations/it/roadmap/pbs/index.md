@@ -20,7 +20,7 @@ I [mempool crittografati](https://www.youtube.com/watch?v=fHDjgFcha0M&list=PLpkt
 
 <ExpandableCard title="Che tipi di censura sono risolti dalla PBS?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
-Potenti organizzazioni possono spingere i validatori a censurare le transazioni da o verso certi indirizzi. I validatori si conformano alla sollecitazione, rilevando gli indirizzi nella blacklist nel gruppo di transazioni e omettendole dai blocchi che propongono. Dopo la PBS, non sarà più possibile poiché i propositori di blocchi non sapranno quali transazioni stanno trasmettendo nei propri blocchi. Potrebbe essere importante, per certi individui o app, conformarsi alle regole di censura, ad esempio, quando è emanata una legge nella loro regione. In tali casi, la conformità si verifica a livello di applicazione, mentre il protocolo rimane privo di permessi e di censura.
+Potenti organizzazioni possono spingere i validatori a censurare le transazioni da o verso certi indirizzi. I validatori si conformano a tale pressione rilevando gli indirizzi nella lista nera del proprio gruppo di transazioni e omettendoli dai blocchi che propongono. Dopo la PBS, non sarà più possibile poiché i propositori di blocchi non sapranno quali transazioni stanno trasmettendo nei propri blocchi. Potrebbe essere importante, per certi individui o app, conformarsi alle regole di censura, ad esempio, quando è emanata una legge nella loro regione. In tali casi, la conformità si verifica a livello di applicazione, mentre il protocolo rimane privo di permessi e di censura.
 
 </ExpandableCard>
 

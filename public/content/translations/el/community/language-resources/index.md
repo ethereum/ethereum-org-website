@@ -32,6 +32,7 @@ lang: el
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - έκδοση του Cointelegraph για τη Βραζιλία, ένας σημαντικός ιστότοπος με νέα για κρυπτονομίσματα
 - [Livecoins](http://www.livecoins.com.br/ethereum) - νέα κρυπτονομισμάτων και εργαλεία
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - νέα κρυπτονομισμάτων και αναφορές
+- [Modular Crypto](https://modularcrypto.xyz/) - ειδήσεις και εκπαιδευτικά άρθρα για κρυπτονομίσματα
 
 **Εκπαίδευση**
 
@@ -90,6 +91,24 @@ lang: el
 - [Εκπαίδευση Microsoft (δίκτυα Ethereum)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - σύνδεση και ανάπτυξη δικτύων Ethereum
 - [Εκπαίδευση Microsoft (blockchains)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - εισαγωγή στην ανάπτυξη blockchain
 
+### Εβραϊκά {#he}
+
+- [Udi Wertheimer - Τι μπορούν να μάθουν οι bitcoiners από το Ethereum](https://www.cryptojungle.co.il/udi-wertheimer-what-bitcoiners-can-learn-from-ethereum/)
+- [Omer Greismen (OpenZeppelin) - Πώς αποτρέψαμε παραβίαση 15 δις δολαρίων από έξυπνο συμβόλαιο](https://www.cryptojungle.co.il/omer-greisman-openzeppelin/)
+- [Shy Datika (INX) - Η δημιουργία token και το μέλλον της ασφάλειας, συμπεριλαμβάνονται στο Ethereum](https://www.cryptojungle.co.il/shy-datika-tokenization/)
+- [Roy Confino (Lemonade) - Ασφάλειες @ Ethereum](https://www.cryptojungle.co.il/roy-confino-insurance/)
+- [Idan Ofrat (Fireblocks) - Θεσμική Αποδοχή](https://www.cryptojungle.co.il/idan-ofrat-fireblocks/)
+- [Gal Weizman (MetaMask) - Τι είναι το MetaMask](https://www.cryptojungle.co.il/gal-weizman-metamask/)
+- [Dror Aviely (Consensys) - Το κέντρο του Ethereum](https://www.cryptojungle.co.il/dror-aviely-ethereum-center/)
+- [Nir Rozin - Γίνετε cryptopunk](https://www.cryptojungle.co.il/nir-rozin-cryptopunk/)
+- [Adan Kedem - Παιχνίδια & Metaverse](https://www.cryptojungle.co.il/adan-kedem-web3-gaming/)
+- [Uri Kolodny (Starkware) - Το Ethereum και τα επίπεδα blockchain](https://www.cryptojungle.co.il/uri-kolodny-starkware/)
+- [Udi Wertheimer - Ethereum 2.0 ή ανταγωνισμός](https://www.cryptojungle.co.il/udi-on-eth2/)
+- [Ben Samocha (myself) - Ethereum 2.0 - μια ευκαιρία;](https://www.cryptojungle.co.il/etherurm2-week-summary/)
+- [Alon Muroch (Bloxstaking) - Τι είναι το Ethereum 2.0;](https://www.cryptojungle.co.il/alon-moroch-eth2/)
+- [Eilon Aviv (Collider Ventures) - Τι μπορεί να πάει λάθος με το Ethereum 2.0](https://www.cryptojungle.co.il/eilon-aviv-eth2-0/)
+- [Eilon Aviv (Collider Ventures) - Γιατί χρειαζόμαστε το Ethereum 2.0](https://www.cryptojungle.co.il/eilon-aviv-ethereum-2-0/)
+
 ### Ιταλικά {#it}
 
 - [Ethereum Ιταλία](https://www.ethereum-italia.it/) - Εκπαίδευση του Ethereum, εκδηλώσεις και ειδήσεις, με επίκεντρο τα έξυπνα συμβόλαια και την τεχνολογία blockchain.
@@ -98,9 +117,19 @@ lang: el
 - [Microsoft Learn (Έξυπνα συμβόλαια)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - μάθετε πώς να συντάσσετε έξυπνα συμβόλαια που χρησιμοποιούν Solidity.
 - [Microsoft Learn (dapps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - δημιουργήστε μια διεπαφή χρήστη με αποκεντρωμένες εφαρμογές.
 
+### Ιαπωνικά {#ja}
+
+- [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
+- [Επιχειρηματική Ένωση Κρυπτονομισμάτων Ιαπωνίας](https://cryptocurrency-association.org/)
+- [Ξεκινήστε με την ανάπτυξη blockchain - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Αυτή η διαδρομή εκμάθησης σας εισάγει στο blockchain και στην ανάπτυξη στην πλατφόρμα Ethereum.
+- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Μαθαίνοντας το Ethereum στα Ιαπωνικά.
+- [Ανάπτυξη έξυπνων συμβολαίων Hands-On με Solidity και Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Ανάπτυξη έξυπνων συμβολαίων Hands-on με Solidity και Ethereum στα Ιαπωνικά.
+
 ### Ρωσικά {#ru}
 
 - [Ακαδημία Cyber](https://cyberacademy.dev) - εκπαιδευτικός χώρος για δημιουργούς web3
+- [Forklog](https://forklog.com) - ειδήσεις και εκπαιδευτικά άρθρα σχετικά με την κρυπτογράφηση γενικά, τις υπάρχουσες τεχνολογίες και τις μελλοντικές αναβαθμίσεις διαφορετικών blockchains
+- [BeInCrypto](https://ru.beincrypto.com) - ειδήσεις, ανάλυση τιμών κρυπτονομισμάτων και μη τεχνικά άρθρα με απλές επεξηγήσεις για τα πάντα σχετικά με τα κρύπτο
 
 ### Ισπανικά {#es}
 
@@ -122,11 +151,3 @@ lang: el
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - επισκόπηση του Ethereum, των dapps, των πορτοφολιών και των συχνών ερωτήσεων.
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - πλατφόρμα ιστού με υποσελίδες για ειδήσεις και εκπαίδευση για το Ethereum.
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - ιστότοπος κρυπτονομισμάτων με ειδήσεις και εκπαιδευτικό περιεχόμενο Ethereum.
-
-### Ιαπωνικά {#ja}
-
-- [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
-- [Επιχειρηματική Ένωση Κρυπτονομισμάτων Ιαπωνίας](https://cryptocurrency-association.org/)
-- [Ξεκινήστε με την ανάπτυξη blockchain - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Αυτή η διαδρομή εκμάθησης σας εισάγει στο blockchain και στην ανάπτυξη στην πλατφόρμα Ethereum.
-- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Μαθαίνοντας το Ethereum στα Ιαπωνικά.
-- [Ανάπτυξη έξυπνων συμβολαίων Hands-On με Solidity και Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Ανάπτυξη έξυπνων συμβολαίων Hands-on με Solidity και Ethereum στα Ιαπωνικά.

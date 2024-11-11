@@ -120,7 +120,7 @@ Le manifeste est notre fichier de configuration et définit :
 - d'autres éléments à prendre en compte comme des appels de fonction ou des blocs
 - les fonctions de mapping étant appelées (voir `mapping.ts` ci-dessous)
 
-Ici, vous pouvez définir plusieurs contrats et handlers. Une configuration typique a un dossier de sous-graphes à l'intérieur du projet Truffle/Hardhat avec son propre dépôt. Ensuite, vous pouvez facilement référencer l'ABI.
+Ici, vous pouvez définir plusieurs contrats et handlers. Une configuration typique a un dossier de sous-graphes à l'intérieur du projet Hardhat avec son propre dépôt. Ensuite, vous pouvez facilement référencer l'ABI.
 
 Pour des raisons de commodité, vous pouvez également utiliser un outil de template comme Mustache. Ensuite, vous allez créer un template `subgraph.template.yaml` et y insérez les adresses basées sur les derniers déploiements. Pour un exemple plus avancé, vous pouvez consulter le [répertoire de subgraphs Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 

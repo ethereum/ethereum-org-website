@@ -50,7 +50,7 @@ Di tori of any DAO na hin contract wey sharp. na him go tell us the matter wey g
 
 This one possible becasue of say our smart contract no fit shake once they don dey live on Ethereum. Yu nor fit edit di kode (DAO matter) make anybody nor sabi bikos na evrythin wi go dey si.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   More on smart kontracts
 </DocLink>
 

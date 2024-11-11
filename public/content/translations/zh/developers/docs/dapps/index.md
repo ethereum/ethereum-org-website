@@ -74,6 +74,12 @@ dapp 可以用任何语言编写（就像是一个 app）。它有前端代码�
 - [相关文档](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
+**Crossmint _- 企业级 Web3 开发平台，可用于部署智能合约，支持信用卡和跨链支付方式，可利用应用程序接口创建、分发、销售、存储、编辑非同质化代币。_**
+
+- [crossmint.com](https://www.crossmint.com)
+- [相关文档](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+
 ## 延伸阅读 {#further-reading}
 
 - [探索去中心化应用程序](/dapps)

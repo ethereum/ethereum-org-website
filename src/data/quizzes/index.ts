@@ -50,6 +50,14 @@ const quizzes = {
     title: "run-a-node",
     questions: ["l001", "l002", "l003", "l004", "l005", "l006"],
   },
+  stablecoins: {
+    title: "stablecoins",
+    questions: ["m001", "m002", "m003", "m004", "m005"],
+  },
+  defi: {
+    title: "DeFi",
+    questions: ["n001", "n002", "n003", "n004", "n005"],
+  },
 } satisfies RawQuizzes
 
 export const ethereumBasicsQuizzes: QuizzesSection[] = [
@@ -76,11 +84,6 @@ export const ethereumBasicsQuizzes: QuizzesSection[] = [
   {
     id: "security",
     level: "beginner",
-    next: "merge",
-  },
-  {
-    id: "merge",
-    level: "intermediate",
   },
 ]
 
@@ -88,11 +91,16 @@ export const usingEthereumQuizzes: QuizzesSection[] = [
   {
     id: "nfts",
     level: "beginner",
-    next: "scaling",
+    next: "stablecoins",
   },
   {
-    id: "scaling",
-    level: "intermediate",
+    id: "stablecoins",
+    level: "beginner",
+    next: "defi",
+  },
+  {
+    id: "defi",
+    level: "beginner",
     next: "layer-2",
   },
   {
@@ -108,6 +116,16 @@ export const usingEthereumQuizzes: QuizzesSection[] = [
   {
     id: "run-a-node",
     level: "intermediate",
+    next: "merge",
+  },
+  {
+    id: "merge",
+    level: "intermediate",
+    next: "scaling",
+  },
+  {
+    id: "scaling",
+    level: "advanced",
     next: "solo-staking",
   },
   {

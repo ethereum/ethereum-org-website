@@ -8,7 +8,6 @@ import localEvents from "../data/community-events.json"
 import { EthereumEventsImport } from "./events/ethereum-events-import"
 
 import "dotenv/config"
-
 ;(async () => {
   const communityEvents = localEvents as CommunityConference[]
 
@@ -44,11 +43,11 @@ function tryMatchEvent(
     return true
 
   if (
-    URL.canParse(imported.to) &&
-    URL.canParse(local.to) &&
-    new URL(imported.to).hostname.replace("www.", "") ===
-      new URL(local.to).hostname.replace("www.", "") &&
-    new URL(imported.to).pathname === new URL(local.to).pathname
+    URL.canParse(imported.href) &&
+    URL.canParse(local.href) &&
+    new URL(imported.href).hostname.replace("www.", "") ===
+      new URL(local.href).hostname.replace("www.", "") &&
+    new URL(imported.href).pathname === new URL(local.href).pathname
   ) {
     return true
   }

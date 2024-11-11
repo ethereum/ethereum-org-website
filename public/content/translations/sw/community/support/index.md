@@ -12,11 +12,11 @@ Je, unatafuta msaada rasmi wa Ethereum? Cha kwanza unachopaswa kujua ni kua Ethe
 
 Ufahamu wa asili ya ugatuzi wa Ethereum ni muhimu kwa kila mmoja maana yeyote anayedai kua mtu anaeweza kutoa msaada kuhusu Ethereum anaweza kukulaghai! Ulinzi thabiti dhidi ya walaghai na kujifunza na kua makini na ulinzi.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Usalama wa Ethereum na udhibiti wa matapeli
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Jifunze mambo ya msingi ya Ethereum
 </DocLink>
 
@@ -55,7 +55,6 @@ Hii ni baadhi ya mifano maalum:
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 
 ## Endesha nodi {#node-support}

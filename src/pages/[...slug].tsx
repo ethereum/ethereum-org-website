@@ -28,10 +28,10 @@ import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
 
 import { getFileContributorInfo } from "@/lib/utils/contributors"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { remapTableOfContents } from "@/lib/utils/toc"
 import {
@@ -48,6 +48,8 @@ import {
   StakingLayout,
   staticComponents,
   StaticLayout,
+  translatathonComponents,
+  TranslatathonLayout,
   TutorialLayout,
   tutorialsComponents,
   upgradeComponents,
@@ -71,6 +73,7 @@ export const layoutMapping = {
   roadmap: RoadmapLayout,
   upgrade: UpgradeLayout,
   docs: DocsLayout,
+  translatathon: TranslatathonLayout,
   tutorial: TutorialLayout,
 }
 
@@ -81,6 +84,7 @@ const componentsMapping = {
   roadmap: roadmapComponents,
   upgrade: upgradeComponents,
   docs: docsComponents,
+  translatathon: translatathonComponents,
   tutorial: tutorialsComponents,
 } as const
 
@@ -110,12 +114,9 @@ type Props = Omit<Parameters<LayoutMappingType[Layout]>[0], "children"> &
     gfissues: Awaited<ReturnType<typeof fetchGFIs>>
   }
 
-// Fetch external API data once to avoid hitting rate limit
-const gfIssuesDataFetch = runOnlyOnce(async () => {
-  return await fetchGFIs()
-})
-
 const commitHistoryCache: CommitHistory = {}
+
+const loadData = dataLoader([["gfissues", fetchGFIs]])
 
 export const getStaticProps = (async (context) => {
   const params = context.params!
@@ -195,7 +196,7 @@ export const getStaticProps = (async (context) => {
     lastDeployDate
   )
 
-  const gfissues = await gfIssuesDataFetch()
+  const [gfissues] = await loadData()
 
   return {
     props: {

@@ -18,7 +18,7 @@ La preuve d'enjeu nécessite que les nœuds, appelés validateurs, soumettent ex
 
 La preuve de travail est beaucoup plus gourmande en énergie car de l'électricité est consommée lors du processus de minage. La preuve d'enjeu, en revanche, ne nécessite qu'une très faible quantité d'énergie - les validateurs Ethereum peuvent même fonctionner sur un appareil à faible puissance tel qu'un Raspberry Pi. Le mécanisme de preuve d'enjeu d'Ethereum est considéré comme plus sûr que la preuve de travail car le coût d'une attaque est plus élevé et les conséquences pour un attaquant sont plus graves.
 
-La comparaison entre la preuve de travail et la preuve d'enjeu est un sujet controversé. Le blog de [Vitalik Buterin](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) ainsi que le débat entre Justin Drake et Lyn Alden offrent un bon résumé des arguments.
+La comparaison entre la preuve de travail et la preuve d'enjeu est un sujet controversé. Le blog de [Vitalik Buterin](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) et le débat entre Justin Drake et Lyn Alden offrent un bon résumé des arguments.
 
 <YouTube id="1m12zgJ42dI" />
 
@@ -74,7 +74,7 @@ Les validateurs doivent mettre en jeu des ETH afin d'avoir quelque chose à perd
 
 ## Comment les validateurs sont-ils sélectionnés ? {#how-are-validators-selected}
 
-Un seul validateur est choisi de manière pseudo-aléatoire pour proposer un bloc dans chaque créneau à l'aide d'un algorithme appelé RANDAO qui mélange un hash du proposeur de bloc avec une graine qui est mise à jour à chaque bloc. Cette valeur est utilisée pour sélectionner un validateur spécifique parmi l'ensemble total des validateurs. La sélection du validateur est fixée quatre époques à l'avance.
+Un seul validateur est choisi de manière pseudo-aléatoire pour proposer un bloc dans chaque créneau à l'aide d'un algorithme appelé RANDAO qui mélange un hash du proposeur de bloc avec une graine qui est mise à jour à chaque bloc. Cette valeur est utilisée pour sélectionner un validateur spécifique parmi l'ensemble total des validateurs. La sélection du validateur est fixée deux périodes à l'avance.
 
 [En savoir plus sur la sélection des validateurs](/developers/docs/consensus-mechanisms/pos/block-proposal)
 

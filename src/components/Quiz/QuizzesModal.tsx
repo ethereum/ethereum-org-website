@@ -1,8 +1,7 @@
-import { Center, ModalContentProps } from "@chakra-ui/react"
-
 import { QuizStatus } from "@/lib/types"
 
 import Modal from "../Modal"
+import { Center } from "../ui/flex"
 
 type QuizzesModalProps = {
   isQuizModalOpen: boolean
@@ -18,14 +17,12 @@ const QuizzesModal = ({
   onQuizModalClose,
   ...props
 }: QuizzesModalProps) => {
-  const getStatusColor = (): ModalContentProps["bg"] => {
-    if (quizStatus === "neutral") {
-      return "background.base"
-    }
-    if (quizStatus === "success") {
-      return "success.neutral"
-    }
-    return "error.neutral"
+  // TODO: remove bang in utility class names when Modal is migrated
+  const getStatusColorClass = () => {
+    if (quizStatus === "neutral") return "!bg-background"
+    if (quizStatus === "success")
+      return "!bg-success-light dark:!bg-success-dark"
+    return "!bg-error-light dark:!bg-error-dark"
   }
 
   return (
@@ -33,12 +30,10 @@ const QuizzesModal = ({
       isOpen={isQuizModalOpen}
       onClose={onQuizModalClose}
       size={{ base: "full", md: "xl" }}
-      contentProps={{ bg: getStatusColor() }}
+      contentProps={{ className: getStatusColorClass() }}
       {...props}
     >
-      <Center m={0} bg={getStatusColor()}>
-        {children}
-      </Center>
+      <Center>{children}</Center>
     </Modal>
   )
 }

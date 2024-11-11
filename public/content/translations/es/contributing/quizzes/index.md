@@ -13,7 +13,7 @@ Las preguntas son estructuras de la siguiente manera. La pregunta requiere, una 
 He aquí algunos ejemplos de los tests actuales:
 
 - [Capa 2](/layer-2)
-- [Token Irremplazable](/nft/)
+- [NFT](/nft/)
 - [¿Qué es Ethereum?](/what-is-ethereum/)
 - [¿Qué es el ETH?](/eth/)
 

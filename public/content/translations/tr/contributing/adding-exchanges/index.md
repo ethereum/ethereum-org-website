@@ -20,7 +20,7 @@ Bu bağlamdan dolayı, bir borsa önerdiğinizde bazı özel bilgilere ihtiyacı
 
 ## İhtiyacımız olanlar {#what-we-need}
 
-- Borsa için geçerli olan coğrafi kısıtlamalar
+- Borsa için geçerli olan coğrafi kısıtlamalar. Borsayla ilişkili coğrafi kısıtlamalar, borsanın web sitesinin özel bir sayfasında veya bölümünde ayrıntılı olarak açıklanmalıdır.
 - Kullanıcıların ETH satın almak için kullanabileceği para birimleri
 - Borsanın meşru bir ticaret şirketi olduğunun kanıtı
 - Sahip olabileceğiniz herhangi bir ek bilgi: Bu, şirket hakkında faaliyet yılları, finansal destek vb. gibi bilgiler olabilir.
@@ -35,6 +35,6 @@ Ve böylece ethereum.org, değişimin meşru ve güvenli bir hizmet olduğundan 
 
 Ethereum.org'a bir borsa eklemek istiyorsanız, GitHub'da bir konu oluşturun.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
   Bir konu oluştur
 </ButtonLink>

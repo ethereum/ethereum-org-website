@@ -3,7 +3,8 @@ title: La chaîne phare
 description: En savoir plus sur la chaîne phare - la mise à niveau qui a introduit la preuve d'enjeu d'Ethereum.
 lang: fr
 template: upgrade
-image: /images/upgrades/core.png
+image: /images/use-cases/defi.png
+alt:
 summaryPoint1: La Chaîne phare a introduit la preuve d'enjeu dans l'écosystème Ethereum.
 summaryPoint2: Elle a été fusionnée avec la chaîne originale de preuve de travail Ethereum en septembre 2022.
 summaryPoint3: La Chaîne phare a introduit la logique de consensus et le protocole de commutation de bloc qui sécurise désormais Ethereum.
@@ -55,7 +56,7 @@ Les mises à niveau d'Ethereum sont plus ou moins interdépendantes. Récapitulo
 
 Au début, la Chaîne phare existait séparément du réseau principal Ethereum, mais ils ont été fusionnés en 2022.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   La Fusion
 </ButtonLink>
 
@@ -63,7 +64,7 @@ Au début, la Chaîne phare existait séparément du réseau principal Ethereum,
 
 La fragmentation ne peut s'ajouter en toute sécurité dans l'écosystème Ethereum que s'il existe un mécanisme de consensus sur la preuve d'enjeu. La Chaîne phare a introduit la mise en jeu qui a « fusionné » avec le réseau principal et a ouvert la voie à la fragmentation pour favoriser une plus grande évolutivité d'Ethereum.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Chaînes de fragments
 </ButtonLink>
 

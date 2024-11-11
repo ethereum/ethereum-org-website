@@ -63,28 +63,30 @@ sidebarDepth: 2
     - 包含 Request Explorer、Mempool Watcher 和 Composer 的儀表板
     - 整合測試網水龍頭存取
     - 超過 1.8 萬使用者的活躍 Discord 建構者社群
+
 - [**All That Node**](https://allthatnode.com/)
   - [文件](https://docs.allthatnode.com/)
   - 特徵
-    - 最大的免費方案每天提供 15 萬次請求
-    - 存取超過 24 種區塊鏈節點
-    - 遠端程序呼叫、超文字安全傳輸通訊協定及 WSS 端點
-    - 無限制存取歸檔資料
-    - 全年無休支援且正常運行時間超過 99.9%
+    - 免費方案每天 50,000 個請求
+    - 支援 40 多種協定
+    - 支援 JSON-RPC（以太坊虛擬機、Tendermint）、具象狀態傳輸和 Websocket 應用程式介面
+    - 無限制存取歸檔日期
+    - 全年無休的技術支援和 99.9% 以上的正常運作時間
     - 支援多鏈的水龍頭
-    - 無限制存取端點，無限的應用程式介面金鑰數量
-    - 提供追蹤/除錯命名空間
+    - 使用不限數量的應用程式介面金鑰進行無限的端點存取
+    - 支援追蹤/除錯應用程式介面
     - 自動更新
-    - 技術支援
-- [**亞馬遜的託管區塊鏈**](https://aws.amazon.com/managed-blockchain/)
+
+- [**Amazon Managed Blockchain**](https://aws.amazon.com/managed-blockchain/)
   - [文件](https://aws.amazon.com/managed-blockchain/resources/)
   - 功能
     - 完全託管的以太坊節點
     - 在 6 個地區可用
-    - 基於 HTTP 的 JSON-RPC 和安全 WebSockets
-    - 支援 3 種鏈
-    - SLAs, AWS 全天客服支援
+    - 基於超文字傳輸協定的 JSON-RPC 和安全 WebSocket
+    - 支援 3 條鏈
+    - 服務等級協定，全年無休的 AWS 支援
     - Go-ethereum 及 Lighthouse
+
 - [**Ankr**](https://www.ankr.com/)
   - [文件](https://docs.ankr.com/)
   - 特徵
@@ -95,8 +97,9 @@ sidebarDepth: 2
     - 隨時擴容
     - 分析工具
     - 儀表板
-    - RPC, HTTPS 及 WSS 端點
+    - 遠端程序呼叫、超文字安全傳輸通訊協定及 WSS 端點
     - 直接支援
+
 - [**Blast**](https://blastapi.io/)
   - [文件](https://docs.blastapi.io/)
   - 功能
@@ -111,12 +114,14 @@ sidebarDepth: 2
     - 全年無休監控及通知
     - 總 SLA 達到 99.9%
     - 可使用加密貨幣付款
+
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [文件](https://ubiquity.docs.blockdaemon.com/)
   - 優點
     - 控制面板
     - 基於節點
     - 分析
+
 - [**BlockPI**](https://blockpi.io/)
   - [文件](https://docs.blockpi.io/)
   - 功能
@@ -128,9 +133,19 @@ sidebarDepth: 2
     - 自訂方案及隨用隨付方案
     - 可使用加密貨幣付款
     - 直接支援與技術支援
+
+- [**Chainbase**](https://www.chainbase.com/)
+  - [文件](https://docs.chainbase.com)
+  - 功能
+    - 高可用性、快速及可擴容的遠端程序呼叫服務
+    - 多鏈支援
+    - 免關稅
+    - 使用者友善的儀表板
+    - 提供遠端程序呼叫以外的區塊鏈資料服務
+
 - [**Chainstack**](https://chainstack.com/)
   - [文件](https://docs.chainstack.com/)
-  - 功能
+  - 特徵
     - 免費共享節點
     - 共享歸檔節點
     - GraphQL 支援
@@ -140,9 +155,10 @@ sidebarDepth: 2
     - 自攜雲端
     - 按小時付費定價
     - 全年無休直接支援
+
 - [**DataHub**](https://datahub.figment.io)
   - [文件](https://docs.figment.io/)
-  - 特徵
+  - 功能
     - 免費方案 3,000,000 次請求/月
     - RPC 及 WSS 末端
     - 專用之全及歸檔節點
@@ -152,7 +168,8 @@ sidebarDepth: 2
     - 控制面板
     - 全年無休直接支援
     - 可用加密貨幣付款（企業）
-- [DRPC](https://drpc.org/)
+
+- [**DRPC**](https://drpc.org/)
   - [文件](https://docs.drpc.org/)
   - 功能
     - 去中心化遠端程序呼叫節點
@@ -161,11 +178,12 @@ sidebarDepth: 2
     - 免費方案每個月擁有無上限的運算單元
     - 資料驗證
     - 自訂端點
-    - 超文字傳輸協定及 WSS 端點
+    - 超文字安全傳輸通訊協定與 WSS 端點
     - 不限數量的金鑰（免費和付費方案）
     - 彈性的備援選項
     - [公共端點](https://eth.drpc.org)
     - 免費共享歸檔節點
+
 - [**GetBlock**](https://getblock.io/)
   - [文件](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - 功能
@@ -177,8 +195,9 @@ sidebarDepth: 2
     - 進階分析
     - 自動更新
     - 技術支援
+
 - [**InfStones**](https://infstones.com/)
-  - 功能
+  - 特色功能
     - 免費方案選項
     - 隨時擴容
     - 分析
@@ -188,6 +207,7 @@ sidebarDepth: 2
     - 針對專門部署的快速同步時間
     - 全年無休直接支援
     - 存取超過 50 個區塊鏈節點
+
 - [**Infura**](https://infura.io/)
   - [文件](https://infura.io/docs)
   - 特色功能
@@ -196,9 +216,10 @@ sidebarDepth: 2
     - 付費歸檔資料
     - 直接支援
     - 儀表板
+
 - [**Kaleido**](https://kaleido.io/)
   - [文件](https://docs.kaleido.io/)
-  - 特色功能
+  - 特徵
     - 免費新手方案
     - 一鍵部署以太坊節點
     - 可自訂的用戶端與演算法（Geth、 Quorum 和 Besu || PoA、IBFT 和 Raft）
@@ -212,10 +233,11 @@ sidebarDepth: 2
     - 雲端 HSM 私密金鑰管理
     - 以太坊主網繫連
     - ISO 27k 與 SOC 2、Type 2 驗證
-    - 動態運行時間配置（例如新增雲端整合、變更節點入口等等）
+    - 動態執行階段配置（例如新增雲端整合、變更節點入口等等）
     - 支援多雲端、多區域和混合部署編排
     - 單純按小時的基於 SaaS 的定價
     - SLA 與全年無休支援
+
 - [**Lava Network**](https://www.lavanet.xyz/)
   - [文件](https://docs.lavanet.xyz/)
   - 特徵
@@ -227,9 +249,10 @@ sidebarDepth: 2
     - 直覺化的專案管理介面
     - 以共識為基礎的資料整合
     - 支援多鏈
+
 - [**Moralis**](https://moralis.io/)
   - [文件](https://docs.moralis.io/)
-  - 特徵
+  - 功能
     - 免費共享節點
     - 免費共享歸檔節點
     - 注重隱私（無日誌政策）
@@ -239,6 +262,7 @@ sidebarDepth: 2
     - 獨特的以太坊軟體開發套件
     - 獨特應用程式介面端點
     - 直接技術支援
+
 - [**NodeReal MegaNode**](https://nodereal.io/)
   - [文件](https://docs.nodereal.io/nodereal/meganode/introduction)
   - 功能
@@ -246,6 +270,7 @@ sidebarDepth: 2
     - 專為 Web3 開發者打造的增強版應用程式介面
     - 多鏈支援
     - 免費開始試用
+
 - [**NOWNodes**](https://nownodes.io/)
   - [文件](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - 功能
@@ -256,12 +281,13 @@ sidebarDepth: 2
     - 全年無休支援團隊
     - 個人帳戶管理器
     - 共享、歸檔、備份和專用節點
+
 - [**Pocket Network**](https://www.pokt.network/)
   - [文件](https://docs.pokt.network/home/)
   - 功能
     - 去中央化遠端程序中呼叫協定與市場
     - 免費方案每天 100 萬個請求（每個端點，最大為 2）
-    - [公共端點](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - [公共端點](https://docs.pokt.network/developers/public-endpoints)
     - Pre-Stake+ 計畫（如果你每天需要超過 100 萬個請求）
     - 支援超過 15 條區塊鏈
     - 6400+ 節點透過服務應用程式賺取 POKT 幣
@@ -276,6 +302,7 @@ sidebarDepth: 2
     - 最私密、抗審查之選項
     - 實際開發者支援
     - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) 儀表板和分析
+
 - [**QuickNode**](https://www.quicknode.com)
   - [文件](https://www.quicknode.com/docs/)
   - 功能
@@ -289,11 +316,13 @@ sidebarDepth: 2
     - 非同質化代幣資料及分析應用程式介面
     - [已獲得 SOC2 認證](https://www.quicknode.com/security)
     - 適合開發者和企業
+
 - [**Rivet**](https://rivet.cloud/)
   - [文件](https://rivet.readthedocs.io/en/latest/)
   - 功能
     - 免費方案選項
     - 隨時擴容
+
 - [**SenseiNode**](https://senseinode.com)
   - [文件](https://docs.senseinode.com/)
   - 功能
@@ -301,6 +330,7 @@ sidebarDepth: 2
     - 儀表板
     - 在拉丁美洲不同地點的多個託管商上託管 AWS
     - Prysm 和 Lighthouse 用戶端
+
 - [**SettleMint**](https://console.settlemint.com/)
   - [文件](https://docs.settlemint.com/)
   - 功能
@@ -314,6 +344,7 @@ sidebarDepth: 2
     - 儀表板
     - 按小時付費定價
     - 直接支援
+
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [文件](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - 功能
@@ -321,13 +352,26 @@ sidebarDepth: 2
     - 免費存取歷史資料
     - 讀取密集型工作負載速度高達 8 倍
     - 100% 一致的讀取存取
-    - JSON RPC 端點
+    - JSON-RPC 端點
     - 基於使用者介面的遠端程序呼叫請求建構器和請求預覽
     - 與 Tenderly 的開發、除錯及測試工具緊密整合
     - 模擬交易
     - 使用情況分析和過濾
     - 可輕鬆存取的金鑰管理
     - 透過聊天、電子郵件和 Discord 的專門工程支援
+
+- [**Tokenview**](https://services.tokenview.io/)
+  - [文件](https://services.tokenview.io/docs?type=nodeService)
+  - 功能
+    - 全年無休技術支援和 Telegram 開發者社群
+    - 支援多鏈（比特幣、以太坊、波場、BNB 智能鏈、以太坊經典）
+    - 遠端程序呼叫和 WSS 端點均開放使用
+    - 無限制存取歸檔資料應用程式介面
+    - 有 Request Explorer 和 Mempool Watcher 的儀表板
+    - 非同質化代幣資料應用程式介面和 Webhook 通知
+    - 使用加密貨幣付款
+    - 對額外行為要求的外部支援
+
 - [**Watchdata**](https://watchdata.io/)
   - [文件](https://docs.watchdata.io/)
   - 功能
@@ -339,6 +383,7 @@ sidebarDepth: 2
     - 支援多種節點
     - 資源擴充
     - 高處理速度
+
 - [**ZMOK**](https://zmok.io/)
   - [文件](https://docs.zmok.io/)
   - 功能
@@ -347,39 +392,18 @@ sidebarDepth: 2
     - 發送交易時，手續費和燃料費皆無限制
     - 可最快取得新區塊及讀取區塊鏈
     - 單個應用程序介面呼叫的最佳價格保證
-- [**Chainbase**](https://www.chainbase.com/)
-  - [文件](https://docs.chainbase.com)
+
+- [**Zeeve**](https://www.zeeve.io/)
+  - [文件](https://www.zeeve.io/docs/)
   - 功能
-    - 高可用性、快速及可擴容的遠端程序呼叫服務
-    - 多鏈支援
-    - 免關稅
-    - 使用者友善的儀表板
-    - 提供遠端程序呼叫以外的區塊鏈資料服務
+    - 企業級的無程式碼自動化平臺，提供了部署、監測和管理區塊鏈節點和網路的功能
+    - 支援及整合超過 30 個以上協定，持續增加中
+    - 增值 Web3 基礎設施服務，如去中心化儲存、去中心化身份和用於現實世界的區塊鏈帳本資料應用程度介面
+    - 全年無休支援和主動監控以確保節點健康。
+    - 遠端程序呼叫端點提供了經驗證的應用程式介面存取，透過直覺式的儀表板和分析輕鬆愉快地進行管理。
+    - 提供託管雲端服務和使用自己的雲端服務兩種選項，支援所有主流的雲端提供商，如 AWS、Azure、Google Cloud、Digital Ocean 和本地部署雲端。
+    - 我們總是使用智慧路由以連接最靠近你的使用者的節點
 
-[**Zeeve**](https://www.zeeve.io/)
-
-- [文件](https://www.zeeve.io/docs/)
-- 功能
-  - 企業級的無程式碼自動化平臺，提供了部署、監測和管理區塊鏈節點和網路的功能
-  - 支援及整合超過 30 個以上協定，持續增加中
-  - 增值 Web3 基礎設施服務，如去中心化儲存、去中心化身份和用於現實世界的區塊鏈帳本資料應用程度介面
-  - 全年無休支援和主動監控以確保節點健康。
-  - 遠端程序呼叫端點提供了經驗證的應用程度介面存取，透過直覺式的儀表板和分析輕鬆愉快的進行管理。
-  - 提供託管雲端服務和使用自己的雲端服務兩種選項，支援所有主流的雲端提供商，如 AWS、Azure、Google Cloud、Digital Ocean 和本地部署雲端。
-  - 我們總是使用智慧路由以連接最靠近你的使用者的節點
-
-[**Tokenview**](https://services.tokenview.io/)
-
-- [文件](https://services.tokeniew/docs?type=nodeService)
-- 功能
-  - 全年無休技術支援和 Telegram 開發者社群
-  - 支援多鏈（比特幣、以太坊、波場、BNB 智能鏈、以太坊經典）
-  - 遠端程序呼叫和 WSS 端點均開放使用
-  - 無限制存取歸檔資料應用程式介面
-  - 有 Request Explorer 和 Mempool Watcher 的儀表板
-  - 非同質化代幣資料應用程式介面和 Webhook 通知
-  - 使用加密貨幣付款
-  - 對額外行為要求的外部支援
 
 ## 延伸閱讀 {#further-reading}
 
@@ -392,4 +416,4 @@ sidebarDepth: 2
 ## 相關教程 {#related-tutorials}
 
 - [使用 Alchemy 開始以太坊開發](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
-- [使用 web3 和 Alchmey 傳送交易的指南](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [使用 web3 和 Alchemy 發送交易的指南](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

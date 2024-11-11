@@ -35,6 +35,6 @@ Außerdem sind diese Informationen die Grundlage, dass ethereum.org darauf vertr
 
 Wenn Sie eine Börse zu ethereum.org hinzufügen möchten, erstellen Sie einen Eintrag auf GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
   Ein Thema erstellen
 </ButtonLink>

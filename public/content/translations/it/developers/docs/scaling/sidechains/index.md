@@ -17,7 +17,7 @@ Le sidechain sono blockchain indipendenti, con cronologie, tabelle di marcia di 
 
 Una delle qualità che rendono uniche le sidechain (ossia diverse da Ethereum), è l'algoritmo di consenso utilizzato. Le sidechain non si affidano a Ethereum per il consenso e possono scegliere protocolli di consenso alternativi adatti alle loro esigenze. Alcuni esempi di algoritmi di consenso usati sulle sidechain includono:
 
-- [Proof of Authority](https://wikipedia.org/wiki/Proof_of_authority)
+- [Proof of Authority](/developers/docs/consensus-mechanisms/poa/)
 - [proof-of-stake delegato](https://en.bitcoin.it/wiki/Delegated_proof_of_stake)
 - [Tolleranza ai guasti bizantini](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained).
 
@@ -51,7 +51,7 @@ Sebbene i ponti aiutino gli utenti a spostare fondi tra Ethereum e la sidechain,
 
 | Pro                                                                                                                                                    | Contro                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| La tecnologia sottostante le sidechain è consolidata e beneficia dell'ampia ricerca e dai miglioramenti nella progettazione.                           | Le sidechain rinunciano a una certa misura di decentralizzazione e mancanza di fiducia in cambio della scalabilità.                    |
+| La tecnologia sottostante le sidechain è consolidata e beneficia dell'ampia ricerca e dai miglioramenti nella progettazione.                           | Le sidechain rinunciano a una certa misura di decentralizzazione e assenza di fiducia in cambio della scalabilità.                     |
 | Le sidechain supportano il calcolo generale e offrono compatibilità con l'EVM (possono eseguire dapp native di Ethereum).                              | Una sidechainusa un meccanismo di consenso e non beneficia delle garanzie di sicurezza di Ethereum.                                    |
 | Le sidechain usano modelli di consenso differenti per elaborare efficientemente le transazioni e ridurre le commissioni di transazione per gli utenti. | Le sidechain richiedono ipotesi di fiducia più elevata (ad es. un quorum di validatori malevoli della sidechain può commettere frode). |
 | Le sidechain compatibili con l'EVM consentono alle dapp di espandere il proprio ecosistema.                                                            |                                                                                                                                        |

@@ -27,6 +27,6 @@ Die Lernressourcen werden anhand der folgenden Kriterien bewertet:
 
 Wenn Sie eine Inhaltsressource zu ethereum.org hinzufügen möchten und diese die Kriterien erfüllt, erstellen Sie einen Eintrag auf GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
   Eintrag erstellen
 </ButtonLink>

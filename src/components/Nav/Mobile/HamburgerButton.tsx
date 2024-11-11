@@ -1,10 +1,12 @@
+import { forwardRef } from "react"
 import { motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
-import { type ButtonProps, Icon } from "@chakra-ui/react"
 
-import { IconButton } from "@/components/Buttons"
+import { cn } from "@/lib/utils/cn"
 
 import { HAMBURGER_BUTTON_ID } from "@/lib/constants"
+
+import { Button, type ButtonProps } from "../../ui/buttons/Button"
 
 const hamburgerSvg =
   "M 2 13 l 10 0 l 0 0 l 10 0 M 4 19 l 8 0 M 12 19 l 8 0 M 2 25 l 10 0 l 0 0 l 10 0"
@@ -18,57 +20,36 @@ const hamburgerVariants = {
 
 type HamburgerProps = ButtonProps & {
   isMenuOpen: boolean
-  onToggle: () => void
 }
 
-const HamburgerButton = ({
-  isMenuOpen,
-  onToggle,
-  ...props
-}: HamburgerProps) => {
-  const { t } = useTranslation("common")
+const HamburgerButton = forwardRef<HTMLButtonElement, HamburgerProps>(
+  ({ isMenuOpen, className, ...props }, ref) => {
+    const { t } = useTranslation("common")
 
-  return (
-    <IconButton
-      id={HAMBURGER_BUTTON_ID}
-      onClick={onToggle}
-      aria-label={t("aria-toggle-search-button")}
-      variant="ghost"
-      isSecondary
-      px={0}
-      color="body.base"
-      icon={
-        <Icon
+    return (
+      <Button
+        ref={ref}
+        id={HAMBURGER_BUTTON_ID}
+        aria-label={t("aria-toggle-search-button")}
+        className={cn("px-2 py-0 text-body", className)}
+        variant="ghost"
+        {...props}
+      >
+        <svg
           viewBox="0 0 24 40"
-          pointerEvents={isMenuOpen ? "none" : "auto"}
-          mx={0.5}
-          width={6}
-          height={10}
-          position="relative"
-          strokeWidth="2px"
-          _hover={{
-            color: "primary.base",
-            "& > path": {
-              stroke: "primary.base",
-            },
-          }}
-          sx={{
-            "& > path": {
-              stroke: "text",
-              fill: "none",
-            },
-          }}
+          className="relative h-10 w-6 stroke-body stroke-2 hover:stroke-primary-hover hover:text-primary-hover [&>path]:fill-none hover:[&>path]:stroke-primary-hover"
         >
           <motion.path
             variants={hamburgerVariants}
             initial={false}
             animate={isMenuOpen ? "open" : "closed"}
           />
-        </Icon>
-      }
-      {...props}
-    />
-  )
-}
+        </svg>
+      </Button>
+    )
+  }
+)
+
+HamburgerButton.displayName = "HamburgerButton"
 
 export default HamburgerButton

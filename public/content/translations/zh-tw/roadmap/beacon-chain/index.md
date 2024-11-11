@@ -4,8 +4,9 @@ description: 瞭解信標鍊 - 將權益證明引入以太坊的升級。
 lang: zh-tw
 template: upgrade
 image: /images/upgrades/core.png
+alt:
 summaryPoint1: 信標鏈將權益證明引入以太坊生態系統。
-summaryPoint2: 信標鏈已於 2022 年 9 月與原先的以太坊工作量證明鏈合併。
+summaryPoint2: 信標鏈於 2022 年 9 月與原先的以太坊工作量證明鏈合併。
 summaryPoint3: 信標鏈引入共識邏輯和區塊廣播協定，現在可保護以太坊安全。
 ---
 
@@ -27,7 +28,7 @@ summaryPoint3: 信標鏈引入共識邏輯和區塊廣播協定，現在可保�
 
 信標鏈將[權益證明](/developers/docs/consensus-mechanisms/pos/)引入以太坊。 這可以保證以太坊的安全，驗證者可以在此過程中賺取更多以太幣。 實際上，你需要使用質押以太幣來啟用驗證者軟體。 身為質押者，你將執行在鏈中建立及驗證新區塊的軟體。
 
-質押的目的與[挖礦](/developers/docs/consensus-mechanisms/pow/mining/)相似，但在很多方面有所不同。 挖礦需要大量的前期支出，包括強大的硬體和高能耗，從而產生規模經濟並促進中心化。 挖礦也不要求將任何資產鎖定以作為抵押品，這限制了協定在攻擊發生後懲罰作惡者的能力。
+質押的目的與[挖礦](/developers/docs/consensus-mechanisms/pow/mining/)相似，但在很多方面有所差異。 挖礦需要大量的前期支出，包括強大的硬體和高能耗，從而產生規模經濟並促進中心化。 挖礦也不要求將任何資產鎖定以作為抵押品，這限制了協定在攻擊發生後懲罰作惡者的能力。
 
 相較於工作量證明，過渡到權益證明後，以太坊的安全性和去中心化程度大幅提升。 參與網路的人越多，去中心化程度和安全性越高，抵禦攻擊的能力也越強。
 
@@ -55,7 +56,7 @@ summaryPoint3: 信標鏈引入共識邏輯和區塊廣播協定，現在可保�
 
 起初，信標鏈獨立於以太坊主網存在，但兩者已於 2022 年合併。
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   合併
 </ButtonLink>
 
@@ -63,7 +64,7 @@ summaryPoint3: 信標鏈引入共識邏輯和區塊廣播協定，現在可保�
 
 僅當採用權益證明共識機制時，分片才能安全地進入以太坊生態系統。 已與主網「合併」的信標鏈引入了質押，為未來進一步擴展以太坊所需的分片機制鋪平道路。
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   分片鏈
 </ButtonLink>
 

@@ -45,12 +45,12 @@ export const WordList = ({ words, wordsSelected }: WordListProps) => {
     const variant: WordStyleVariant = initialWordDisplay
       ? "initial"
       : index === wordsSelected
-      ? "active"
-      : index < wordsSelected
-      ? "complete"
-      : index < 2
-      ? "incomplete"
-      : "disabled"
+        ? "active"
+        : index < wordsSelected
+          ? "complete"
+          : index < 2
+            ? "incomplete"
+            : "disabled"
     const showLabel = initialWordDisplay || variant === "complete"
 
     const getDelayFromIndex = (index: number, isInitial?: boolean): number => {

@@ -1,13 +1,10 @@
-import { createIcon } from "@chakra-ui/react"
+import { createIconBase } from "../icon-base"
 
-export const EthpoolGlyphIcon = createIcon({
+export const EthpoolGlyphIcon = createIconBase({
   displayName: "EthpoolGlyphIcon",
   viewBox: "0 0 33 33",
-  defaultProps: {
-    width: "33px",
-    height: "33px",
-  },
-  path: (
+  className: "size-[1em]",
+  children: (
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"

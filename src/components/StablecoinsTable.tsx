@@ -1,17 +1,15 @@
 import { useTranslation } from "next-i18next"
-import {
-  Flex,
-  Image,
-  Table,
-  Tbody,
-  Td,
-  Text,
-  Th,
-  Thead,
-  Tr,
-} from "@chakra-ui/react"
 
-import { ButtonLink } from "./Buttons"
+import { ButtonLink } from "./ui/buttons/Button"
+import { Flex } from "./ui/flex"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "./ui/Table"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
@@ -45,68 +43,51 @@ const StablecoinsTable = ({
   }
 
   return (
-    <Table variant="unstyled" my={8} bg="background.base" mb={8} minW="720px">
-      <Thead bg="background.highlight" color="body.medium">
-        <Tr>
+    <Table className="my-8 min-w-[720px] bg-background">
+      <TableHeader>
+        <TableRow>
           {columns.map((column, idx) => (
-            <Th
-              key={idx}
-              fontWeight="bold"
-              fontSize="md"
-              verticalAlign="inherit"
-              letterSpacing="normal"
-            >
-              {column}
-            </Th>
+            <TableHead key={idx}>{column}</TableHead>
           ))}
 
           {content && content[0]?.url && (
-            <Th p={5} fontSize="md" fontWeight="normal" textAlign="end">
-              <Text as="span" display="inline-block" transform={flipForRtl}>
+            <TableHead className="text-right font-normal">
+              <span className="inline-block" style={{ transform: flipForRtl }}>
                 ↗
-              </Text>
-            </Th>
+              </span>
+            </TableHead>
           )}
-        </Tr>
-      </Thead>
-      <Tbody>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
         {hasError && (
-          <Tr p={4}>
-            <Td colSpan={4}>{t("page-stablecoins-table-error")}</Td>
-          </Tr>
+          <TableRow className="p-4">
+            <TableCell colSpan={4}>
+              {t("page-stablecoins-table-error")}
+            </TableCell>
+          </TableRow>
         )}
 
         {content.map(({ name, marketCap, image, type, url }, idx) => (
-          <Tr
-            key={idx}
-            color="text"
-            _hover={{
-              textDecoration: "none",
-              bg: "background.highlight",
-            }}
-            _focus={{
-              bg: "background.base",
-              color: "body.base",
-            }}
-          >
-            <Td verticalAlign="middle">
+          <TableRow key={idx}>
+            <TableCell>
               <Flex>
-                {image && <Image src={image} alt="" me={4} boxSize={6} />}
+                {image && <img src={image} alt="" className="me-4 h-6 w-6" />}
                 <>{name}</>
               </Flex>
-            </Td>
-            <Td verticalAlign="middle">{marketCap}</Td>
-            <Td verticalAlign="middle">{stablecoinsType[type]}</Td>
+            </TableCell>
+            <TableCell>{marketCap}</TableCell>
+            <TableCell>{stablecoinsType[type]}</TableCell>
             {url && (
-              <Td textAlign="end">
-                <ButtonLink to={url} size="sm">
-                  Go to {name}
+              <TableCell className="text-right">
+                <ButtonLink href={url} size="sm">
+                  {t("page-stablecoins-go-to")} {name}
                 </ButtonLink>
-              </Td>
+              </TableCell>
             )}
-          </Tr>
+          </TableRow>
         ))}
-      </Tbody>
+      </TableBody>
     </Table>
   )
 }

@@ -52,6 +52,9 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
+**Etherscan - Block Explorer and Transaction APIs**
+- [Documentation](https://docs.etherscan.io/)
+
 **GetBlock-** **_Blockchain-as-a-service for Web3 development_**
 
 - [GetBlock.io](https://getblock.io/)
@@ -63,7 +66,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _Cost-effective EVM JSON RPC provider_**
+**Node RPC - _Cost-effective EVM JSON-RPC provider_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Documentation](https://docs.noderpc.xyz/node-rpc)

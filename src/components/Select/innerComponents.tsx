@@ -1,4 +1,4 @@
-import * as React from "react"
+import { createContext, useContext } from "react"
 import { FaChevronDown } from "react-icons/fa"
 import type {
   ContainerProps,
@@ -7,20 +7,55 @@ import type {
   GroupBase,
   GroupProps,
   MenuListProps,
+  MenuProps,
   OptionProps,
 } from "react-select"
-import { Box, Center, HStack, Icon } from "@chakra-ui/react"
+import { tv, type VariantProps } from "tailwind-variants"
 
-import { useSelectStyles } from "./context"
+import { cn } from "@/lib/utils/cn"
 
-export const reactSelectAnatomyKeys = [
-  "container",
-  "control",
-  "indicatorIcon",
-  "menuList",
-  "option",
-  "groupHeading",
-] as const
+export const selectVariants = tv({
+  slots: {
+    container:
+      "w-full min-h-10.5 [--border-base-width:1px] relative z-[1] cursor-pointer",
+    control:
+      "p-2 flex items-center gap-4 border-[length:var(--border-base-width)] border-current text-[color:var(--my-var)] not-[[data-expanded=true]]:focus-within:outline-3 not-[[data-expanded=true]]:focus-within:outline-primary-hover not-[[data-expanded=true]]:focus-within:outline -outline-offset-2 [&[data-expanded=true]]:bg-background-highlight [&[data-expanded=true]]:text-primary [&[data-expanded=true]]:border-primary-low-contrast hover:text-primary hover:border-primary-high-contrast",
+    indicatorIcon:
+      "text-sm leading-none transition-transform [*[data-expanded=true]_&]:rotate-180",
+    menu: "-z-[1] absolute w-full",
+    menuList:
+      "overflow-y-auto bg-background-highlight w-full max-h-80 border-x-[length:--border-base-width] border-b-[length:--border-base-width] rounded-b",
+    option:
+      "text-body p-2 [&[data-focused=true]]:bg-primary-low-contrast [&[data-focused=true]]:text-primary [&[data-active=true]]:bg-body-light [&[data-active=true]]:text-primary-visited",
+    groupHeading: "text-body-medium text-xs",
+  },
+  variants: {
+    variant: {
+      flushed: {
+        container: "[--border-top-radius:4px] rounded-t-[--border-top-radius]",
+        control:
+          "border-t-transparent border-x-transparent rounded-t-[--border-top-radius] hover:border-t-transparent hover:border-x-transparent [&[data-expanded=true]]:border-body-light [&[data-expanded=true]]:border-b-primary",
+        menuList: "border-body-light",
+      },
+      outline: {
+        container:
+          "[--border-outline-radius:4px] rounded-[--border-outline-radius]",
+        control:
+          "rounded-[--border-outline-radius] [&[data-expanded=true]]:border-b-transparent [&[data-expanded=true]]:rounded-b-none",
+        menuList: "border-primary-low-contrast",
+      },
+    },
+  },
+  defaultVariants: {
+    variant: "flushed",
+  },
+})
+
+export type SelectVariants = VariantProps<typeof selectVariants>
+
+export const SelectStylesContext = createContext(selectVariants())
+
+const useSelectStyles = () => useContext(SelectStylesContext)
 
 export const nullop = () => null
 
@@ -34,151 +69,169 @@ export const nullop = () => null
 const SelectContainer = <
   Option,
   IsMulti extends boolean,
-  Group extends GroupBase<Option>
+  Group extends GroupBase<Option>,
 >(
   props: ContainerProps<Option, IsMulti, Group>
 ) => {
   const { innerProps, children, className, selectProps } = props
   const { menuIsOpen } = selectProps
 
-  const styles = useSelectStyles()
+  const { container } = useSelectStyles()
   return (
-    <Box
-      className={className}
+    <div
+      className={cn(container(), className)}
       data-expanded={menuIsOpen}
       {...innerProps}
       id="react-select-container"
-      sx={styles.container}
     >
       {children}
-    </Box>
+    </div>
   )
 }
 
 const Control = <
   Option,
   IsMulti extends boolean,
-  Group extends GroupBase<Option>
+  Group extends GroupBase<Option>,
 >(
   props: ControlProps<Option, IsMulti, Group>
 ) => {
   const { innerProps, innerRef, children, menuIsOpen } = props
 
-  const styles = useSelectStyles()
+  const { control } = useSelectStyles()
   return (
-    <HStack
+    <div
       ref={innerRef}
+      className={control()}
       data-expanded={menuIsOpen}
-      sx={styles.control}
       {...innerProps}
       id="react-select-control"
     >
       {children}
-    </HStack>
+    </div>
   )
 }
 
 const DropdownIndicator = <
   Option,
   IsMulti extends boolean,
-  Group extends GroupBase<Option>
+  Group extends GroupBase<Option>,
 >(
   props: DropdownIndicatorProps<Option, IsMulti, Group>
 ) => {
   const { innerProps } = props
-  const styles = useSelectStyles()
+  const { indicatorIcon } = useSelectStyles()
   return (
-    <Center
+    <div
       {...innerProps}
+      className={indicatorIcon()}
       id="react-select-dropdown-indicator"
-      sx={styles.indicatorIcon}
     >
-      <Icon as={FaChevronDown} />
-    </Center>
+      <FaChevronDown />
+    </div>
   )
 }
+
+const Menu = <
+  Option,
+  IsMulti extends boolean,
+  Group extends GroupBase<Option>,
+>({
+  children,
+  innerProps,
+  innerRef,
+}: MenuProps<Option, IsMulti, Group>) => {
+  const { menu } = useSelectStyles()
+  return (
+    <div
+      ref={innerRef}
+      className={menu()}
+      id="react-select-menu"
+      {...innerProps}
+    >
+      {children}
+    </div>
+  )
+}
+
 const MenuList = <
   Option,
   IsMulti extends boolean,
-  Group extends GroupBase<Option>
+  Group extends GroupBase<Option>,
 >(
   props: MenuListProps<Option, IsMulti, Group>
 ) => {
   const { innerProps, innerRef, children } = props
-  const styles = useSelectStyles()
+  const { menuList } = useSelectStyles()
   return (
-    <Box
+    <div
       ref={innerRef}
       {...innerProps}
+      className={menuList()}
       id="react-select-menu-list"
-      sx={styles.menuList}
     >
       {children}
-    </Box>
+    </div>
   )
 }
 
 const Option = <
   Option,
   IsMulti extends boolean,
-  Group extends GroupBase<Option>
+  Group extends GroupBase<Option>,
 >(
   props: OptionProps<Option, IsMulti, Group>
 ) => {
   const { innerProps, innerRef, children, isSelected, isFocused } = props
 
-  const styles = useSelectStyles()
+  const { option } = useSelectStyles()
   return (
-    <Box
+    <div
       ref={innerRef}
       data-focused={isFocused}
       data-active={isSelected}
       {...innerProps}
+      className={option()}
       id="react-select-option"
-      sx={styles.option}
     >
       {children}
-    </Box>
+    </div>
   )
 }
 
 const Group = <
   Option,
   IsMulti extends boolean,
-  Group extends GroupBase<Option>
+  Group extends GroupBase<Option>,
 >(
   props: GroupProps<Option, IsMulti, Group>
 ) => {
   const { children, headingProps, label } = props
 
-  const styles = useSelectStyles()
+  const { groupHeading } = useSelectStyles()
 
-  const notFirstGroupStyles = {
-    _notFirst: {
-      borderTop: "1px",
-      borderColor: "primary.lowContrast",
-    },
-  }
+  const notFirstGroupClasses =
+    "not-[:first-of-type]:border-t-[1px] not-[:first-of-type]:border-primary-low-contrast"
 
   const PARENT_ID = "react-select-group"
 
   if (!label) {
     return (
-      <Box id={PARENT_ID} {...notFirstGroupStyles}>
+      <div id={PARENT_ID} className={notFirstGroupClasses}>
         {children}
-      </Box>
+      </div>
     )
   }
 
   return (
-    <Box id={PARENT_ID} p={2} {...notFirstGroupStyles}>
-      <Box fontSize="sm">
-        <Box id={headingProps.id} sx={styles.groupHeading}>
+    <div id={PARENT_ID} className={cn("p-2", notFirstGroupClasses)}>
+      <div className="text-sm">
+        <div id={headingProps.id} className={groupHeading()}>
           {label}
-        </Box>
-      </Box>
+        </div>
+      </div>
       {children}
-    </Box>
+    </div>
   )
 }
 
@@ -188,6 +241,7 @@ export const components = {
   // Essentially removes this component from default render
   IndicatorSeparator: nullop,
   DropdownIndicator,
+  Menu,
   MenuList,
   Option,
   Group,

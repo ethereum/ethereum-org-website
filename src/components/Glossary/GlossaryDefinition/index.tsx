@@ -1,10 +1,11 @@
 import { ComponentProps } from "react"
-import { Box, type HeadingProps, Text } from "@chakra-ui/react"
 
 import IdAnchor from "@/components/IdAnchor"
-import InlineLink from "@/components/Link"
-import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
+import { Stack } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
+
+import { cn } from "@/lib/utils/cn"
 
 import { DEFAULT_GLOSSARY_NS } from "@/lib/constants"
 
@@ -25,52 +26,30 @@ const GlossaryDefinition = ({
   size = "md",
   options = { ns: DEFAULT_GLOSSARY_NS },
 }: GlossaryDefinitionProps) => {
-  const textStyles = size === "sm" ? { mb: 0 } : {}
-
-  const headingPropsForAnchor = (id?: string): HeadingProps => {
-    if (!id) return {}
-    return {
-      scrollMarginTop: 28,
-      id,
-      "data-group": true,
-      position: "relative",
-    } as HeadingProps
-  }
-  const commonHeadingProps = (id?: string): HeadingProps => ({
-    fontWeight: 700,
-    lineHeight: 1.4,
-    ...headingPropsForAnchor(id),
-  })
-  const Heading3 = ({ id, children, ...rest }: HeadingProps) => (
-    <OldHeading as="h3" {...commonHeadingProps(id)} fontSize="2xl" {...rest}>
-      <IdAnchor id={id} />
-      {children}
-    </OldHeading>
-  )
+  const textClasses = size === "sm" ? "mb-0" : ""
 
   return (
-    <Box textAlign="start">
-      <Heading3 id={term}>
+    <Stack className="mb-8 items-stretch gap-4 text-start">
+      <h4
+        className={term ? "group relative scroll-mt-28" : ""}
+        {...(term ? { "data-group": true, id: term } : {})}
+      >
+        <IdAnchor id={term} />
         <Translation
           id={term + "-term"}
           options={options}
           transform={components}
         />
-      </Heading3>
-      {/**
-       * `as="span"` prevents hydration warnings for strings that contain
-       * elements that cannot be nested inside `p` tags, like `ul` tags
-       * (found in some Glossary definition).
-       * TODO: Develop a better solution to handle this case.
-       */}
-      <Text as="span" {...textStyles}>
+      </h4>
+
+      <div className={cn("inline-block", textClasses)}>
         <Translation
           id={term + "-definition"}
           options={options}
           transform={components}
         />
-      </Text>
-    </Box>
+      </div>
+    </Stack>
   )
 }
 

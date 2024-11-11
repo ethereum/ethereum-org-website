@@ -14,7 +14,7 @@ Dischi rigidi più economici sono utilizzabili per memorizzare i dati più vecch
 
 ## Ridurre l'archiviazione per i nodi {#reducing-storage-for-nodes}
 
-Esistono vari metodi per ridurre la quantità di dati che ogni nodo deve memorizzare, ognuno richiedente l'aggiornamento del protocollo principale di Ethereum, in misure diverse:
+Esistono diversi modi per ridurre la quantità di dati che ciascun nodo deve archiviare, ciascuno dei quali richiede che il protocollo principale di Ethereum venga aggiornato in misura diversa:
 
 - **Scadenza dello storico**: consente ai nodi di scartare i dati di stato precedenti a X blocchi, senza modificare la gestione dei dati di stato del client di Ethereum
 - **Scadenza di stato**: consente ai dati di staato non utilizzati di frequente di divenire inattivi. I dati inattivi sono ignorabili dai client, finché non sono "resuscitati".
@@ -72,7 +72,7 @@ Perché ciò si verifichi, gli [alberi di Verkle](/roadmap/verkle-trees/) devono
 
 L'assenza di stato si affida ai costruttori di blocchi che mantengono una copia dei dati di stato completi, così che possano generare testimoni utilizzabili per verificare il blocco. Gli altri nodi non necessitano di accedere ai dati di stato, tutte le informazioni necessarie per verificare il blocco sono disponibili nel testimone. Ciò crea una situazione in cui proporre un blocco è costoso, ma verificarlo è economico, implicando che meno operatori eseguiranno un nodo di proposta dei blocchi. Tuttavia, la decentralizzazione dei propositori di blocchi non è fondamentale, finché quanti più partecipanti possibili possono verificare indipendentemente che i blocchi proposti siano validi.
 
-<ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Leggi di più sulle note di Dankrad</ButtonLink>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Leggi di più sulle note di Dankrad</ButtonLink>
 </ExpandableCard>
 
 I propositori di blocchi utilizzano i dati di stato per creare dei "testimoni": la serie minima di dati che prova i valori dello stato modificati dalle transazioni in un blocco. Gli altri validatori non detengono lo stato, memorizzano semplicemente la radice di stato (un hash dell'intero stato). Ricevono un blocco e un testimone e li utilizzano per aggiornare la radice di stato. Questo rende un nodo di convalida estremamente leggero.
@@ -81,7 +81,7 @@ L'assenza di stato debole è in uno stato avanzato di ricerca, ma si affida all'
 
 ### Assenza di stato forte {#strong-statelessness}
 
-L'assenza di stato forte rimuove il bisogno di qualsiasi blocco, di memorizzare i dati di stato. Invece, le transazioni sono inviate con i testimoni, aggregabili dai produttori di blocchi. I produttori di blocchi sono quindi responsabili della memorizzazione di soltanto quello stato, necessario per generare testimoni per i conti rilevanti. La responsabilità per lo stato è quasi interamente trasferita agli utenti, poiché inviano i testimoni e 'accedono agli elenchi' per dichiarare con quali conti e quali chiavi d'archiviazione stanno interagendo. Questo consentirebbe la presenza di nodi estremamente leggeri, ma esistono dei compromessi, incluso il rendere più difficili le transazioni con i contratti intelligenti.
+L'assenza di stato forte rimuove l'esigenza per qualsiasi nodo di memorizzare i dati di stato. Invece, le transazioni sono inviate con i testimoni, aggregabili dai produttori di blocchi. I produttori di blocchi sono quindi responsabili della memorizzazione di soltanto quello stato, necessario per generare testimoni per i conti rilevanti. La responsabilità per lo stato è quasi interamente trasferita agli utenti, poiché inviano i testimoni e 'accedono agli elenchi' per dichiarare con quali conti e quali chiavi d'archiviazione stanno interagendo. Questo consentirebbe la presenza di nodi estremamente leggeri, ma esistono dei compromessi, incluso il rendere più difficili le transazioni con i contratti intelligenti.
 
 L'assenza di stato forte è stata investigata dai ricercatori, ma non è correntemente previsto che diventi parte della tabella di marcia di Ethereum: è più probabile che l'assenza di stato debole sia sufficiente per le esigenze di ridimensionamento di Ethereum.
 

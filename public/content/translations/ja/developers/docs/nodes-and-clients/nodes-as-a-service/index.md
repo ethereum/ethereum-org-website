@@ -63,19 +63,20 @@ sidebarDepth: 2
     - リクエストエクスプローラー、メンプールウォッチャー、および コンポーザーを備えたダッシュボード
     - 統合されたテストネットフォーセットのアクセス
     - 18,000人のアクティブユーザーを持つ開発者のためのDiscordコミュニティ
+
 - [**All That Node**](https://allthatnode.com/)
   - [ドキュメント](https://docs.allthatnode.com/)
   - 機能
-    - 1日あたり15万リクエストの最大の無料ティア
-    - 24以上のブロックチェーンノードへのアクセス
-    - RPC、HTTPS、WSSエンドポイント
+    - 5万リクエスト/日と無料ティア
+    - 40以上のプロトコルのサポート
+    - JSON-RPC(EVM、Tendermint)、REST、Websocket APIのサポート
     - アーカイブデータへの無制限アクセス
     - 24時間年中無休のサポートと99.9%超の稼働時間
     - 複数のチェーンで利用可能なフォーセット
     - 無制限のAPIキー数でエンドポイントに無制限アクセス
-    - トレース/デバッグ名前空間が利用可能
+    - トレース/デバックAPIのサポート
     - 自動アップデート
-    - 技術サポート
+
 - [**Amazon Managed Blockchain**](https://aws.amazon.com/managed-blockchain/)
   - [ドキュメント](https://aws.amazon.com/managed-blockchain/resources/)
   - 機能
@@ -85,6 +86,7 @@ sidebarDepth: 2
     - 3つのチェーンのサポート
     - 年中無休のSLA、AWSサポート
     - Go-ethereumおよびLighthouse
+
 - [**Ankr**](https://www.ankr.com/)
   - [ドキュメント](https://docs.ankr.com/)
   - 機能
@@ -97,6 +99,7 @@ sidebarDepth: 2
     - ダッシュボード
     - RPC、HTTPS、WSSエンドポイント
     - ダイレクトサポート
+
 - [**Blast**](https://blastapi.io/)
   - [ドキュメント](https://docs.blastapi.io/)
   - 機能
@@ -111,12 +114,14 @@ sidebarDepth: 2
     - 年中無休のモニタリングとアラート
     - 全体的なSLAは99.9%
     - 暗号資産での支払い
+
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [ドキュメント](https://ubiquity.docs.blockdaemon.com/)
   - 利点
     - ダッシュボード
     - ノード単位ごと
     - 分析
+
 - [**BlockPI**](https://blockpi.io/)
   - [ドキュメント](https://docs.blockpi.io/)
   - 機能
@@ -128,6 +133,16 @@ sidebarDepth: 2
     - カスタムプランおよび従量課金制
     - 暗号資産での支払い
     - ダイレクトサポートおよび技術サポート
+
+- [**Chainbase**](https://www.chainbase.com/)
+  - [ドキュメント](https://docs.chainbase.com)
+  - 機能
+    - 高可用性、高速、スケーラブルなRPCサービス
+    - マルチチェーンサポート
+    - 無料プラン
+    - ユーザーフレンドリーなダッシュボード
+    - RPCを超えたブロックチェーンデータサービスの提供
+
 - [**Chainstack**](https://chainstack.com/)
   - [ドキュメント](https://docs.chainstack.com/)
   - 機能
@@ -140,6 +155,7 @@ sidebarDepth: 2
     - BYOC(Bring your own cloud、クラウド持ち込み)
     - 時間課金制
     - 24時間年中無休のダイレクトサポート
+
 - [**DataHub**](https://datahub.figment.io)
   - [ドキュメント](https://docs.figment.io/)
   - 機能
@@ -152,7 +168,8 @@ sidebarDepth: 2
     - ダッシュボード
     - 24時間年中無休のダイレクトサポート
     - 暗号通貨での支払い(エンタープライズ)
-- [DRPC](https://drpc.org/)
+
+- [**DRPC**](https://drpc.org/)
   - [ドキュメント](https://docs.drpc.org/)
   - 機能
     - 分散型RPCノード
@@ -161,11 +178,12 @@ sidebarDepth: 2
     - 無料ティアで毎月無制限のコンピューティングユニット
     - データ検証
     - カスタムエンドポイント
-    - httpおよびWSSエンドポイント
+    - HTTPとWSSエンドポイント
     - キー無制限(無料および有料ティア)
     - 柔軟なフォールバックオプション
     - [公開エンドポイント](https://eth.drpc.org)
     - 無料共有アーカイブノード
+
 - [**GetBlock**](https://getblock.io/)
   - [ドキュメント](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - 機能
@@ -177,6 +195,7 @@ sidebarDepth: 2
     - 高度な解析
     - 自動アップデート
     - 技術サポート
+
 - [**InfStones**](https://infstones.com/)
   - 機能
     - 無料ティアオプション
@@ -188,6 +207,7 @@ sidebarDepth: 2
     - 専用デプロイの高速同期
     - 24時間年中無休のダイレクトサポート
     - 50以上のブロックチェーンノードへのアクセス
+
 - [**Infura**](https://infura.io/)
   - [ドキュメント](https://infura.io/docs)
   - 機能
@@ -196,6 +216,7 @@ sidebarDepth: 2
     - 有料のアーカイブデータ
     - ダイレクトサポート
     - ダッシュボード
+
 - [**Kaleido**](https://kaleido.io/)
   - [ドキュメント](https://docs.kaleido.io/)
   - 機能
@@ -216,6 +237,7 @@ sidebarDepth: 2
     - マルチクラウド、マルチリージョン、ハイブリッド・デプロイ・オーケストレーションのサポート
     - SaaSベースのシンプルな価格設定(時間単位)
     - SLAと24時間年中無休のサポート
+
 - [**Lava Network**](https://www.lavanet.xyz/)
   - [ドキュメント](https://docs.lavanet.xyz/)
   - 機能
@@ -227,6 +249,7 @@ sidebarDepth: 2
     - 直観的なプロジェクト・マネージメント・インターフェース
     - コンセンサスベースのデータ整合性
     - マルチチェーンサポート
+
 - [**Moralis**](https://moralis.io/)
   - [ドキュメント](https://docs.moralis.io/)
   - 機能
@@ -239,6 +262,7 @@ sidebarDepth: 2
     - 独自のイーサリアムSDK
     - 独自のAPIエンドポイント
     - ダイレクト技術サポート
+
 - [**NodeReal MegaNode**](https://nodereal.io/)
   - [ドキュメント](https://docs.nodereal.io/nodereal/meganode/introduction)
   - 機能
@@ -246,8 +270,9 @@ sidebarDepth: 2
     - Web3デベロッパー向けに改良されたAPI
     - マルチチェーンサポート
     - 無料で開始
+
 - [**NOWNodes**](https://nownodes.io/)
-  - [ドキュメント](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
+  - [ドキュメンテーション](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - 機能
     - 50以上のブロックチェーンノードへのアクセス
     - APIキー無料
@@ -256,8 +281,9 @@ sidebarDepth: 2
     - 24時間年中無休のサポートチーム
     - パーソナルアカウントマネージャー
     - 共有、アーカイブ、バックアップ、専用ノード
+
 - [**Pocket Network**](https://www.pokt.network/)
-  - [ドキュメント](https://docs.pokt.network/home/)
+  - [ドキュメンテーション](https://docs.pokt.network/home/)
   - 機能
     - 分散型RPCプロトコルとマーケットプレイス
     - 1日あたり100万件のリクエストができる無料ティア(エンドポイントあたり最大2件)
@@ -276,8 +302,9 @@ sidebarDepth: 2
     - 最もプライベートで検閲耐性のあるオプション
     - ハンズオンデベロッパーサポート
     - [Pocket Portal](https://bit.ly/ETHorg_POKTportal)ダッシュボードと分析
+
 - [**QuickNode**](https://www.quicknode.com)
-  - [ドキュメント](https://www.quicknode.com/docs/)
+  - [ドキュメンテーション](https://www.quicknode.com/docs/)
   - 機能
     - 24時間年中無休の技術サポートとデベロッパーのDiscordコミュニティ
     - 地理的なバランスを考慮した、マルチクラウド/メタルの低遅延ネットワーク
@@ -289,18 +316,21 @@ sidebarDepth: 2
     - NFTデータと分析API
     - [SOC2認証](https://www.quicknode.com/security)
     - デベロッパーからエンタープライズまで幅広く対応
+
 - [**Rivet**](https://rivet.cloud/)
-  - [ドキュメント](https://rivet.readthedocs.io/en/latest/)
+  - [ドキュメンテーション](https://rivet.readthedocs.io/en/latest/)
   - 機能
     - 無料ティアオプション
     - 従量課金制
+
 - [**SenseiNode**](https://senseinode.com)
-  - [ドキュメント](https://docs.senseinode.com/)
+  - [ドキュメンテーション](https://docs.senseinode.com/)
   - 機能
     - 専用ノードと共有ノード
     - ダッシュボード
     - ラテンアメリカの様々な地域に拠点を置く複数のホスティングプロバイダーを利用して、AWS外部でホスティング
     - PrysmとLighthouseクライアント
+
 - [**SettleMint**](https://console.settlemint.com/)
   - [ドキュメント](https://docs.settlemint.com/)
   - 機能
@@ -314,6 +344,7 @@ sidebarDepth: 2
     - ダッシュボード
     - 時間課金制
     - ダイレクトサポート
+
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [ドキュメント](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - 機能
@@ -321,13 +352,26 @@ sidebarDepth: 2
     - 履歴データへの無料アクセス
     - 読込負荷の高いワークロードの処理速度を最大で8倍に高速化
     - 100%一貫性のある読み取りアクセス
-    - JSON RPCエンドポイント
+    - JSONｰRPCエンドポイント
     - UIベースのRPCリクエストビルダーおよびリクエストプレビュー
     - 密接に統合されたTenderly開発、デバック、テストツール
     - トランザクションのシミュレーション
     - 使用量分析およびフィルタリング
     - 鍵管理への簡単なアクセス
     - チャット、メール、Discordによる専用エンジニアリングサポート
+
+- [**Tokenview**](https://services.tokenview.io/)
+  - [ドキュメント](https://services.tokenview.io/docs?type=nodeService)
+  - 機能
+    - 年中無休の技術サポートおよび開発者向けテレグラムコミュニティ
+    - マルチチェーンサポート(ビットコイン、イーサリアム、トロン、BNBスマートチェーン、イーサリアムクラシック)
+    - RPCとWSSの両方のエンドポイントが利用可能
+    - アーカイブデータAPIへの無制限アクセス
+    - リクエストエクスプローラーとメンプールウォッチャーを備えたダッシュボード
+    - NFTデータAPIおよびウェブフック通知
+    - 暗号資産での支払い
+    - 追加の動作要件のための外部支援
+
 - [**Watchdata**](https://watchdata.io/)
   - [ドキュメント](https://docs.watchdata.io/)
   - 機能
@@ -339,6 +383,7 @@ sidebarDepth: 2
     - さまざまなノードに対応
     - リソーススケーリング
     - 高速処理速度
+
 - [**ZMOK**](https://zmok.io/)
   - [ドキュメント](https://docs.zmok.io/)
   - 機能
@@ -347,39 +392,18 @@ sidebarDepth: 2
     - トランザクション送信時のトランザクションフィーとガス代が無制限
     - 新規ブロックの最速の取得とブロックチェーンの読み取り
     - API呼び出しあたりのベストプライス保証
-- [**Chainbase**](https://www.chainbase.com/)
-  - [ドキュメント](https://docs.chainbase.com)
+
+- [**Zeeve**](https://www.zeeve.io/)
+  - [ドキュメント](https://www.zeeve.io/docs/)
   - 機能
-    - 高可用性、高速、スケーラブルなRPCサービス
-    - マルチチェーンサポート
-    - 無料プラン
-    - ユーザーフレンドリーなダッシュボード
-    - RPCを超えたブロックチェーンデータサービスの提供
+    - エンタープライズグレードのノーコード自動化プラットフォームで、デプロイメント、モニタリング、ブロックチェーンノードの管理、ネットワークを提供
+    - 30以上のプロトコルと統合をサポート、さらに追加中
+    - 実世界のユースケースに合わせた分散型ストレージ、分散型ID、ブロックチェーンレジャーデータAPIなどの付加価値のあるWeb3インフラストラクチャサービス
+    - 年中無休のサポートとプロアクティブなモニタリングにより、ノードの正常性を常に確保
+    - RPCエンドポイントでは、APIへのアクセス認証、直感的なダッシュボードと分析機能により手間をかけずに管理
+    - マネージドクラウドおよび、自身のクラウドオプションを持ち込み両方を提供します。メジャーなプロバイダーであるAWS、Azure、Google Cloud、Digital Ocean、およびオンプレミスなどすべてをサポート
+    - 常にユーザーに最も近いノードに接続するために、インテリジェントルーティングを利用
 
-[**Zeeve**](https://www.zeeve.io/)
-
-- [ドキュメント](https://www.zeeve.io/docs/)
-- 機能
-  - エンタープライズグレードのノーコード自動化プラットフォームで、デプロイメント、モニタリング、ブロックチェーンノードの管理、ネットワークを提供
-  - 30以上のプロトコルと統合をサポート、さらに追加中
-  - 実世界のユースケースに合わせた分散型ストレージ、分散型ID、ブロックチェーンレジャーデータAPIなどの付加価値のあるWeb3インフラストラクチャサービス
-  - 年中無休のサポートとプロアクティブなモニタリングにより、ノードの正常性を常に確保
-  - RPCエンドポイントでは、APIへのアクセス認証、直感的なダッシュボードと分析機能により手間をかけずに管理
-  - マネージドクラウドおよび、自身のクラウドオプションを持ち込み両方を提供します。メジャーなプロバイダーであるAWS、Azure、Google Cloud、Digital Ocean、およびオンプレミスなどすべてをサポート
-  - 常にユーザーに最も近いノードに接続するために、インテリジェントルーティングを利用
-
-[**Tokenview**](https://services.tokenview.io/)
-
-- [ドキュメント](https://services.tokeniew/docs?type=nodeService)
-- 機能
-  - 年中無休の技術サポートおよび開発者向けテレグラムコミュニティ
-  - マルチチェーンサポート(ビットコイン、イーサリアム、トロン、BNBスマートチェーン、イーサリアムクラシック)
-  - RPCおよびWSSの両方のエンドポイントが利用可能
-  - アーカイブデータAPIへの無制限アクセス
-  - リクエストエクスプローラーとメンプールウォッチャーを備えたダッシュボード
-  - NFTデータAPIおよびウェブフック通知
-  - 暗号資産での支払い
-  - 追加の動作要件のための外部支援
 
 ## 参考文献 {#further-reading}
 

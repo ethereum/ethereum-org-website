@@ -1,55 +1,45 @@
 import { useTranslation } from "next-i18next"
-import { Box, type BoxProps, Flex, useColorMode } from "@chakra-ui/react"
+import { useTheme } from "next-themes"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
+import { cn } from "@/lib/utils/cn"
+
+import { Flex } from "./ui/flex"
+
+type CellProps = ChildOnlyProp & {
+  color?: string
+  className?: string
+}
+
 const Column = ({ children }: ChildOnlyProp) => (
-  <Flex
-    flexDirection="column-reverse"
-    ms={{ base: 2, md: 4 }}
-    _first={{ ms: 0 }}
-  >
-    {children}
-  </Flex>
+  <Flex className="ms-2 flex-col-reverse first:ms-0 md:ms-4">{children}</Flex>
 )
 
-const Cell = ({ children, color, ...props }: BoxProps) => (
-  <Box
-    border="1px solid"
-    borderColor={color || "text"}
-    color={color || "text"}
-    py="0.8rem"
-    px={{ base: 2, md: "1.2rem" }}
-    fontSize="0.9rem"
-    fontWeight="bold"
-    lineHeight="none"
-    textAlign="center"
-    _last={{
-      borderTopStartRadius: "2xl",
-      borderTopEndRadius: "2xl",
-    }}
-    sx={{
-      "&:nth-child(-n + 2)": {
-        borderBottomStartRadius: "2xl",
-        borderBottomEndRadius: "2xl",
-      },
+const Cell = ({ children, color, className, ...props }: CellProps) => (
+  <div
+    className={cn(
+      "border border-solid px-2 py-[0.8rem] text-center text-[0.9rem] font-bold leading-none last:rounded-t-2xl md:px-[1.2rem] [&:nth-child(-n+2)]:rounded-bl-2xl [&:nth-child(-n+2)]:rounded-br-2xl",
+      className
+    )}
+    style={{
+      borderColor: color || "currentcolor",
+      color: color || "currentcolor",
     }}
     {...props}
   >
     {children}
-  </Box>
+  </div>
 )
 
 const ColumnName = ({ children }: ChildOnlyProp) => (
-  <Cell border="none" pt={6}>
-    {children}
-  </Cell>
+  <Cell className="border-none pt-6">{children}</Cell>
 )
 
 const AdoptionChart = () => {
   const { t } = useTranslation("page-what-is-ethereum")
-  const { colorMode } = useColorMode()
-  const isDark = colorMode === "dark"
+  const { resolvedTheme } = useTheme()
+  const isDark = resolvedTheme === "dark"
 
   return (
     <Flex>

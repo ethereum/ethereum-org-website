@@ -463,7 +463,7 @@ const Layer2Page = () => {
             <Translation id="page-layer-2:layer-2-dyor-2" />
           </Text>
           <Text>
-            <ButtonLink to="https://l2beat.com/scaling/risk">
+            <ButtonLink href="https://l2beat.com/scaling/risk">
               {t("layer-2-dyor-3")}
             </ButtonLink>
           </Text>
@@ -615,14 +615,14 @@ const Layer2Page = () => {
         <TwoColumnContent>
           <Box flex="50%">
             <ProductList
-              category="Information"
+              category={t("layer-2-information")}
               content={toolsData.information}
               actionLabel={t("page-dapps-ready-button")}
             />
           </Box>
           <Box flex="50%">
             <ProductList
-              category="Wallet managers"
+              category={t("layer-2-wallet-managers")}
               content={toolsData.walletManagers}
               actionLabel={t("page-dapps-ready-button")}
             />

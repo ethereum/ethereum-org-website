@@ -1,23 +1,18 @@
-import React, { ReactNode } from "react"
-import {
-  Badge,
-  Box,
-  Center,
-  Flex,
-  Heading,
-  HStack,
-  TextProps,
-} from "@chakra-ui/react"
+import type { ImageProps } from "next/image"
+import { useTranslation } from "next-i18next"
+import type { ReactNode } from "react"
+import { Badge } from "@chakra-ui/react"
 
-import { ButtonLink } from "@/components/Buttons"
-import { Image, type ImageProps } from "@/components/Image"
-import Text from "@/components/OldText"
+import { cn } from "@/lib/utils/cn"
 
+import { ButtonLink } from "./ui/buttons/Button"
+import { Center, Flex, HStack } from "./ui/flex"
 import GitStars from "./GitStars"
+import { TwImage } from "./Image"
 
 type SubjectBadgeProps = {
   subject: string
-  children: React.ReactNode
+  children: ReactNode
 }
 
 const SubjectBadge = ({ subject, children }: SubjectBadgeProps) => {
@@ -55,7 +50,7 @@ const SubjectBadge = ({ subject, children }: SubjectBadgeProps) => {
 }
 
 export type ProductCardProps = {
-  children?: React.ReactNode
+  children?: ReactNode
   url: string
   background: string
   image: ImageProps["src"]
@@ -85,79 +80,58 @@ const ProductCard = ({
   githubRepoLanguages = [],
   hideStars = false,
 }: ProductCardProps) => {
-  const DESCRIPTION_STYLES: TextProps = {
-    opacity: 0.8,
-    fontSize: "sm",
-    mb: 2,
-    lineHeight: "140%",
-  }
+  const { t } = useTranslation("common")
 
   return (
     <Flex
-      flexDirection="column"
-      justifyContent="space-between"
-      color="text"
-      background="searchBackground"
-      boxShadow="0px 14px 66px rgba(0, 0, 0, 0.07)"
-      borderRadius="base"
-      border="1px"
-      borderColor="lightBorder"
-      textDecoration="none"
-      _hover={{
-        transition: "transform 0.1s",
-        transform: "scale(1.02)",
-      }}
+      className={cn(
+        "flex-col justify-between bg-background-highlight",
+        "rounded-base border no-underline",
+        "hover:scale-[1.02] hover:transition-transform"
+      )}
     >
-      <Center
-        background={bgProp}
-        boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
-        minH="200px"
-      >
-        <Image
-          src={image}
-          alt={alt}
-          height="100"
-          alignSelf="center"
-          maxW={{ base: "311px", sm: "372px" }}
-          maxH="257px"
-        />
+      <Center className="min-h-[200px]" style={{ backgroundColor: bgProp }}>
+        <TwImage src={image} alt={alt} height="100" className="self-center" />
       </Center>
-      <Flex flexDirection="column" p={6} textAlign="start" height="100%">
+      <Flex className="h-full flex-col p-6 text-left">
         {githubRepoStars > 0 && (
           <GitStars
             gitHubRepo={{ url: githubUrl, stargazerCount: githubRepoStars }}
             hideStars={hideStars}
           />
         )}
-        <Heading
-          as="h3"
-          fontSize="2xl"
-          fontWeight={600}
-          mt={githubRepoStars > 0 ? 8 : 12}
-          mb={3}
+        <h3
+          className={cn(
+            "mb-3 text-2xl font-semibold",
+            githubRepoStars > 0 ? "mt-8" : "mt-12"
+          )}
         >
           {name}
-        </Heading>
-        {description && <Text {...DESCRIPTION_STYLES}>{description}</Text>}
-        {note.length > 0 && <Text {...DESCRIPTION_STYLES}>Note: {note}</Text>}
-        {children && <Box mt={4}>{children}</Box>}
+        </h3>
+        {description && (
+          <p className="mb-2 text-sm leading-xs opacity-80">{description}</p>
+        )}
+        {note.length > 0 && (
+          <p className="mb-2 text-sm leading-xs opacity-80">Note: {note}</p>
+        )}
+        {children && <div className="mt-4">{children}</div>}
       </Flex>
-      <HStack mt={5} mb={2} px={6} spacing={3}>
+      <HStack className="mb-2 mt-5 gap-3 px-6">
         {subjects &&
           subjects.map((subject, idx) => (
             <SubjectBadge key={idx} subject={subject}>
               {subject}
             </SubjectBadge>
           ))}
-        {githubRepoLanguages.length &&
+        {githubRepoLanguages.length > 0 &&
           githubRepoLanguages.map((name, idx: number) => (
             <SubjectBadge key={idx} subject={name}>
               {name.toUpperCase()}
             </SubjectBadge>
           ))}
       </HStack>
-      <ButtonLink to={url} m={4} height={20}>
-        Open {name}
+      <ButtonLink href={url} className="m-4 h-20">
+        {t("open")} {name}
       </ButtonLink>
     </Flex>
   )

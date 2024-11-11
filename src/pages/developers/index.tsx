@@ -280,7 +280,7 @@ const DevelopersPage = () => {
               title={path.title}
               description={path.description}
             >
-              <ButtonLink to={path.url}>{path.button}</ButtonLink>
+              <ButtonLink href={path.url}>{path.button}</ButtonLink>
             </StyledCard>
           ))}
         </StyledCardContainer>
@@ -317,7 +317,7 @@ const DevelopersPage = () => {
             alt={t("page-developers-index:alt-eth-blocks")}
           >
             <div>
-              <ButtonLink to="https://github.com/ethereum/ethereum-org-website">
+              <ButtonLink href="https://github.com/ethereum/ethereum-org-website">
                 <Translation id="page-developers-index:page-developers-contribute" />
               </ButtonLink>
             </div>

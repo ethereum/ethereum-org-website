@@ -51,7 +51,7 @@ Las cuentas Ethereum tienen cuatro campos:
 
 ## Cuentas de titularidad externa y pares de claves {#externally-owned-accounts-and-key-pairs}
 
-Una cuenta está formada por un par criptográfico de claves: pública y privada. Estas claves ayudan a probar que una transacción fue realmente firmada por el remitente y prevenir falsificaciones. Tu clave privada es lo que utilizas para firmar transacciones, así que garantiza la custodia de los fondos relacionados con tu cuenta. Realmente nunca se almacenan criptomonedas, sino que se dispone de claves privadas: los fondos están siempre en la cadena de bloques de Ethereum.
+Una cuenta se compone de un par de claves criptográficas: pública y privada. Estas claves ayudan a probar que una transacción fue realmente firmada por el remitente y prevenir falsificaciones. Tu clave privada es lo que utilizas para firmar transacciones, así que garantiza la custodia de los fondos relacionados con tu cuenta. Realmente nunca se almacenan criptomonedas, sino que se dispone de claves privadas: los fondos están siempre en la cadena de bloques de Ethereum.
 
 Esto evita que actores maliciosos difundan transacciones falsas a la red, ya que siempre se puede verificar el remitente de una transacción.
 
@@ -59,7 +59,7 @@ Si Alice quiere enviar ether desde su propia cuenta a la cuenta de Bob, Alice ne
 
 ## Creación de una cuenta {#account-creation}
 
-Cuando se quiere crear una cuenta, la mayoría de las bibliotecas generan una clave privada aleatoria.
+Cuando quiera crear una cuenta, la mayoría de las bibliotecas le generarán una clave privada aleatoria.
 
 Una clave privada consta de 64 caracteres hexadecimales y se puede cifrar con una contraseña.
 
@@ -68,6 +68,12 @@ Ejemplo:
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
 La clave pública se genera a partir de una clave privada mediante el uso del [algoritmo de firma digital de curva elíptica](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). Obtendrá una dirección pública para su cuenta al tomar los últimos 20 bytes del hash Keccak-256 de la clave pública, añadiéndole `0x` al principio.
+
+Esto significa que una cuenta de propiedad externa (EOA) tiene una dirección de 42 caracteres (segmento de 20 bytes, que es de 40 caracteres hexadecimales más el prefijo `0x`).
+
+Ejemplo:
+
+`0x5e97870f263700f46aa00d967821199b9bc5a120`
 
 El siguiente ejemplo muestra cómo utilizar una herramienta de firma llamada [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) para generar una nueva cuenta. Clef es una herramienta de gestión y firma de cuentas que viene con el cliente de Ethereum, [Geth](https://geth.ethereum.org). El comando `clef newaccount` crea un nuevo par de claves y las guarda en un archivo de claves cifrado.
 
@@ -86,9 +92,9 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 [Documentación de Geth](https://geth.ethereum.org/docs)
 
-Es posible obtener nuevas claves públicas a partir de nuestra clave privada, pero no podemos obtener la clave privada a partir de las claves públicas. Esto significa que es vital mantener una clave privada segura y, como su nombre sugiere, cerciorase de que sea **PRIVADA**.
+Es posible obtener nuevas claves públicas a partir de nuestra clave privada, pero no podemos obtener la clave privada a partir de las claves públicas. Es vital mantener sus claves privadas seguras y, como su nombre indica, **PRIVADAS**.
 
-Necesitas una clave privada para firmar mensajes y transacciones, lo que genera una firma. A continuación, otros pueden utilizar la firma para derivar la clave pública y autenticar así al autor del mensaje. En tu aplicación, puedes utilizar una biblioteca javascript para enviar transacciones a la red.
+Necesitas una clave privada para firmar mensajes y transacciones, lo que genera una firma. A continuación, otros pueden utilizar la firma para derivar la clave pública y autenticar así al autor del mensaje. En su aplicación, puede utilizar una biblioteca de JavaScript para enviar transacciones a la red.
 
 ## Cuentas de contrato {#contract-accounts}
 
@@ -108,7 +114,7 @@ También hay otro tipo de clave en Ethereum, introducida cuando Ethereum cambió
 
 ## Una nota sobre las carteras {#a-note-on-wallets}
 
-Una cuenta no es una cartera. Una cuenta consiste en un par de claves para una cuenta de Ethereum que pertenece a un usuario. Una cartera es una interfaz o aplicación que le permite interactuar con su cuenta de Ethereum.
+Una cuenta no es una cartera. Una billetera es una interfaz o aplicación que le permite interactuar con su cuenta de Ethereum, ya sea una cuenta de propiedad externa o una dirección de contrato.
 
 ## Una demostración visual {#a-visual-demo}
 
@@ -118,11 +124,11 @@ En el siguiente vídeo Austin le guiará por las funciones hash y los pares de c
 
 <YouTube id="9LtBDy67Tho" />
 
-## Más información {#further-reading}
+## Para seguir leyendo {#further-reading}
 
 - [Claves para entender las cuentas de Ethereum](https://info.etherscan.com/understanding-ethereum-accounts/)-etherscan
 
-_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
+_¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite la página y añádalo._
 
 ## Temas relacionados {#related-topics}
 

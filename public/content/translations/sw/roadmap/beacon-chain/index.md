@@ -49,7 +49,7 @@ Visasisho vyote vya Eth2 vinahusiana kwa kiasi fulani. Basi hebu tukumbushe jins
 
 Mnyororo Kioleza, mwanzoni, itakuwa imetengana na Mtandao mkuu wa Ethereum tunaotumia leo hii. Lakini mwishowe vitaunganishwa. Mpango ni "kuunganisha" Mtandao Mkuu kwenye mfumo wa uthibitisho-wa-hisa amabao Mnyororo Kioleza unaudhibiti na kuuratibu.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
     Unganisha
 </ButtonLink>
 
@@ -57,12 +57,8 @@ Mnyororo Kioleza, mwanzoni, itakuwa imetengana na Mtandao mkuu wa Ethereum tunao
 
 Minyororo ya Vigae itakua salama kuingia katika ikolojia ya Ethereum pale tu utaratibu wa makubaliano kwenye uthibitisho-wa-hisa utakapochukua nafasi. Mnyororo Kioleza utaanzisha hisa, ikitengeneza njia ili uboreshwaji wa mnyororo-kigae ufuate.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
     Minyororo ya Kigae
 </ButtonLink>
 
 <Divider />
-
-## Ingiliana na Mnyororo Kioleza {#interact-with-beacon-chain}
-
-<BeaconChainActions />

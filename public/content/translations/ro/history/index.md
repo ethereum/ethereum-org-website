@@ -42,7 +42,7 @@ Actualizarea Arrow Glacier a amânat [bomba de dificultate](/glossary/#difficult
 
 </ExpandableCard>
 
-#### <Emoji text=":police_car_light:" size={1} me="0.5rem" />Operatorii de noduri {#arrow-glacier-node-operators}
+#### <Emoji text=":police_car_light:" size={1} className="me-2" />Operatorii de noduri {#arrow-glacier-node-operators}
 
 Aveţi grijă să vă actualizați software-ul client la versiunea cea mai recentă înainte de 5 decembrie 2021, pentru a justifica timpii de bloc variabili. Aceasta va evita sincronizarea clientului dvs. cu un lanț pre-fork, care va avea ca rezultat imposibilitatea de a trimite fonduri sau de a verifica în mod corect tranzacțiile.
 
@@ -58,7 +58,7 @@ Actualizarea Altair a fost prima actualizare programată pentru [Lanțul Beacon]
 
 - [Citiţi specificaţiile actualizărilor Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <Emoji text=":tada:" size={1} me="0.5rem" />Un fapt amuzant! {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} className="me-2" />Un fapt amuzant! {#altair-fun-fact}
 
 Altair a fost prima actualizare majoră a rețelei care a avut o dată exactă de lansare. Toate actualizările anterioare s-au bazat pe un număr de bloc declarat pe lanțul dovezii-muncii (PoW), unde timpii de bloc variază. Lanțul Beacon nu necesită rezolvarea de calcule ca dovadă-a-muncii (PoW), ci funcționează pe un sistem de epoci bazate pe timp, sistem care constă din 32 de „sloturi” de timp de 12 secunde în care validatorii pot propune blocuri. Acesta este motivul pentru care am știut exact când vom atinge epoca 74.240 și Altair va deveni funcțional!
 
@@ -124,7 +124,7 @@ Actualizarea Berlin a optimizat costul gazului pentru anumite acțiuni EVM și c
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   Lanțul Beacon
 </DocLink>
 
@@ -140,7 +140,7 @@ Contractul de depunere a mizei a introdus [mizarea](/glossary/#staking) în ecos
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Mizarea
 </DocLink>
 
@@ -394,6 +394,6 @@ Cartea galbenă, scrisă de Dr. Gavin Wood, este o definiție tehnică a protoco
 
 Lucrarea introductivă, publicată în 2013 de Vitalik Buterin, fondatorul lui Ethereum, înainte de lansarea proiectului în 2015.
 
-<DocLink to="/whitepaper/">
+<DocLink href="/whitepaper/">
   Cartea albă
 </DocLink>

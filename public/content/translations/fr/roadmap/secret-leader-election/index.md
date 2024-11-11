@@ -16,7 +16,7 @@ Cela pourrait créer des opportunités de profit pour un attaquant. Ainsi, un pr
 
 Il y a plusieurs solutions à ce problème. L'une est la [Technologie des Validateurs Distribués](https://github.com/ethereum/distributed-validator-specs) qui vise à répartir plusieurs tâches nécessaires pour faire fonctionner un validateur sur plusieurs machines, avec de la redondance, de sorte qu'il soit bien plus difficile pour un attaquant d'empêcher un bloc d'être proposé sur un créneau particulier. Toutefois, la solution la plus robuste est **L'Élection d'un Leader Secret Unique (SSLE)**.
 
-## Élection d'un leader secret unique {#secret-leader-election}
+## Élection d'un leader en secret unique {#secret-leader-election}
 
 Dans le SSLE, la cryptographie est utilisée de manière astucieuse pour assurer que seul le validateur sélectionné sache qu'il a été sélectionné. Pour que cela fonctionne, chaque validateur doit soumettre un engagement pour un secret qu'ils partagent tous. Les engagements sont mélangés et reconfigurés de sorte que personne ne puisse remonter aux validateurs à partir des engagements mais chaque validateur sait quel engagement lui appartient. Un engagement est alors choisi au hasard. Si un validateur détecte que leur engagement a été choisi, il sait que c'est à son tour de proposer un bloc.
 

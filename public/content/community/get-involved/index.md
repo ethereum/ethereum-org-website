@@ -15,15 +15,17 @@ Start by reading about the ethereum.org mission and values in our [code of condu
 - Learn about and try Ethereum at [ethereum.org/developers/](/developers/)
 - Attend an [ETHGlobal](http://ethglobal.co/) hackathon near you!
 - Check out [projects related to your area of expertise or programming language of choice](/developers/docs/programming-languages/)
-- Watch or participate in the [Core Dev calls](https://www.youtube.com/@EthereumProtocol)
+- Watch or participate in the [Consensus and Execution Layer calls](https://www.youtube.com/@EthereumProtocol/streams)
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 - [Web3Bridge](https://www.web3bridge.com/) - join the aspiring web3 community in their initiative to identify, train, and support hundreds of developers and community members throughout Africa
+- Join the [Eth R&D Discord](https://discord.com/invite/VmG7Uxc)
 - Join the [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
 
 ## Researchers & Academics <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
 Do you have a background in mathematics, cryptography, or economics? You might be interested in some of the cutting-edge work being done within the Ethereum ecosystem:
 
+- Join the [Eth R&D Discord](https://discord.com/invite/VmG7Uxc)
 - Write or review an Ethereum Improvement Proposal
   - Write an EIP
     1. Submit your idea on [Ethereum Magicians](https://ethereum-magicians.org)
@@ -38,7 +40,7 @@ Do you have a background in mathematics, cryptography, or economics? You might b
 - [Ethresear.ch](https://ethresear.ch) - Ethereum’s primary forum for research, and the world’s most influential forum for cryptoeconomics
 - [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - An ongoing Q&A series with researchers. As each next part opens, anyone can post questions.
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - research areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
-- [AllWalletDevs](allwallet.dev) - a forum for Ethereum developers, designers, and interested users to come together regularly and discuss wallets
+- [AllWalletDevs](https://allwallet.dev) - a forum for Ethereum developers, designers, and interested users to come together regularly and discuss wallets
 
 [Explore more active areas of research](/community/research/).
 

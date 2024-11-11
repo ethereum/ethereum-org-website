@@ -150,7 +150,7 @@ L'aggiornamento Altair è stato il primo aggiornamento pianificato per la [Beaco
 
 - [Leggi le specifiche dell'aggiornamento di Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />Curiosità! {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} className="me-2" />Curiosità! {#altair-fun-fact}
 
 Altair è stato il primo importante aggiornamento di rete che ha avuto un tempo di rollout esatto. Tutti gli aggiornamenti precedenti erano basati su un numero di blocco dichiarato su una catena proof-of-work, dove i tempi del blocco variavano. La Beacon Chain non richiede la risoluzione del proof-of-work e funziona invece su un sistema di epoche basato sul tempo che consiste in 32 "slot" di dodici secondi in cui i validatori possono proporre dei blocchi. Questo è il motivo per cui sapevamo esattamente quando avremmo raggiunto l'epoca 74.240 e Altair sarebbe diventato operativo!
 
@@ -220,7 +220,7 @@ La [Beacon Chain](/roadmap/beacon-chain/) necessita di 16384 depositi da 32 ETH 
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   La beacon chain
 </DocLink>
 
@@ -236,7 +236,7 @@ Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#stakin
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Staking
 </DocLink>
 
@@ -506,6 +506,6 @@ Lo Yellow Paper, redatto dal dott. Gavin Wood, è una definizione tecnica del pr
 
 Il documento introduttivo, pubblicato nel 2013 da Vitalik Buterin, fondatore di Ethereum, prima del lancio del progetto nel 2015.
 
-<DocLink to="/whitepaper/">
+<DocLink href="/whitepaper/">
   Whitepaper
 </DocLink>

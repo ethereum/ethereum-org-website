@@ -190,7 +190,7 @@ Una volta impostate le credenziali di prelievo, i pagamenti delle ricompense (gl
 
 Per sbloccare e ricevere il tuo intero saldo, devi inoltre completare il processo di uscita dal tuo validatore.
 
-<ButtonLink to="/staking/withdrawals/">Di più sulle ricompense di staking</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Di più sulle ricompense di staking</ButtonLink>
 </ExpandableCard>
 
 ## Approfondimenti {#further-reading}

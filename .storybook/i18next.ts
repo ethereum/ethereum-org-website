@@ -1,4 +1,5 @@
 import i18n, { Resource } from "i18next"
+// eslint-disable-next-line no-restricted-imports
 import { initReactI18next } from "react-i18next"
 
 export const baseLocales = {
@@ -13,6 +14,7 @@ export const baseLocales = {
 export const ns = [
   "common",
   "glossary",
+  "glossary-tooltip",
   "learn-quizzes",
   "page-about",
   "page-index",
@@ -20,6 +22,10 @@ export const ns = [
   "page-upgrades",
   "page-developers-index",
   "page-what-is-ethereum",
+  "page-upgrades-index",
+  "page-wallets-find-wallet",
+  "page-developers-docs",
+  "table",
 ] as const
 const supportedLngs = Object.keys(baseLocales)
 

@@ -51,7 +51,7 @@ lang: ja
 
 **Scaffold-ETH _ - 自分のスマートコントラクトに適応するフロントエンドを使用して、Solidityを手軽に試す。_**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [分散型アプリ(Dapp)の例](https://punkwallet.io/)
 
 **Create Eth App _-1つのコマンドでイーサリアムアプリを作成_**
@@ -73,6 +73,12 @@ lang: ja
 - [ホームページ](https://thirdweb.com/)
 - [ドキュメント](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
+
+**Crossmint _- エンタープライズグレードのweb3開発プラットフォームで、スマートコントラクトのデプロイ、クレジットカードの有効化、クロスチェーン支払いが可能です。また、NFTの作成、配布、売却、保存では、APIが使用可能です。_**
+
+- [crossmint.com](https://www.crossmint.com)
+- [ドキュメント](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
 
 ## 参考文献 {#further-reading}
 

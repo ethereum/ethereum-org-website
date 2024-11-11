@@ -45,7 +45,7 @@ lang: ja
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
-- [0Chain](https://0chain.net/)
+- [Züs](https://zus.network/)
 - [Crust Network](https://crust.network)
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
@@ -75,7 +75,7 @@ SWARMは、ストレージインセンティブシステムとストレージレ
 
 チャレンジメカニズムを備えた分散型ストレージ(dStorage)のタイプ:
 
-- 0Chain
+- Züs
 - Skynet
 - Arweave
 - Filecoin
@@ -88,7 +88,7 @@ SWARMは、ストレージインセンティブシステムとストレージレ
 
 KYCなしの分散型ツール
 
-- 0Chain(KYCなし版を実装)
+- Züs(KYCなし版を実装)
 - Skynet
 - Arweave
 - Filecoin
@@ -110,7 +110,7 @@ KYCなしの分散型ツール
 
 - イーサリアム
 - Filecoin
-- 0Chain
+- Züs
 - Crust Network
 
 ## 関連ツール {#related-tools}
@@ -145,10 +145,10 @@ KYCなしの分散型ツール
 - [ドキュメント](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain - _0Chainは、シャーディングとブロバーを備えたプルーフ・オブ・ステークの分散型ストレージ(dStorage)プラットフォームです。_**
+**Züs - _Züsは、シャーディングとブロバーを備えたプルーフ・オブ・ステークの分散型ストレージ(dStorage)プラットフォームです。_**
 
-- [0Chain.net](https://0chain.net/)
-- [ドキュメント](https://docs.0chain.net/0chain/)
+- [zus.network](https://zus.network/)
+- [ドキュメント](https://0chaindocs.gitbook.io/zus-docs)
 - [GitHub](https://github.com/0chain/)
 
 **Crust Network - _Crustは、IPFSベースの分散型ストレージ(dStorage)プラットフォームです。_**
@@ -210,7 +210,7 @@ KYCなしの分散型ツール
 - [分散型ストレージとは](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [分散型ストレージに関する5つの一般的な通念を覆す](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
-_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
+_役に立つコミュニティリソースをご存知の場合は、 ページを編集して追加してください。_
 
 ## 関連トピック {#related-topics}
 

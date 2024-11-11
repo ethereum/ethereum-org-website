@@ -54,7 +54,7 @@ Puoi utilizzare [chainlist.org](http://chainlist.org) per trovare i dettagli RPC
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vuoi scoprire di più?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Visualizza le altre guide
   </ButtonLink>
 </InfoBanner>

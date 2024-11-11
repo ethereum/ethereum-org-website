@@ -56,7 +56,7 @@ Tegyük fel, hogy Ön egy művész, aki szeretné NFT-ként megosztani az alkot�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Fedezzen fel, vásároljon vagy készítsen saját NFT-műalkotásokat/gyűjthető tárgyakat...</div>
-  <ButtonLink to="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/dapps/?category=collectibles#explore">
     Fedezzen fel NFT-műalkotásokat
   </ButtonLink>
 </InfoBanner>
@@ -93,7 +93,7 @@ Az Ethereum biztonsága a [tét igazolásából](/glossary/#pos) származik. A r
 
 Az NFT-kkel kapcsolatos biztonsági problémák leggyakrabban adathalász csalásokhoz, az okosszerződések sebezhetőségéhez vagy felhasználói hibákhoz (például a privát kulcsok véletlen felfedéséhez) kapcsolódnak, így a megfelelő tárcabiztonság kritikus fontosságú az NFT-tulajdonosok számára.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Bővebben a biztonságról
 </ButtonLink>
 
@@ -103,6 +103,11 @@ Az NFT-kkel kapcsolatos biztonsági problémák leggyakrabban adathalász csalá
 - [EtherscanNFT trekker](https://etherscan.io/nft-top-contracts)
 - [ERC-721 tokenszabvány](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 tokenszabvány](/developers/docs/standards/tokens/erc-1155/)
+- [Népszerű NFT-applikációk és -eszközök](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Egyéb források {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

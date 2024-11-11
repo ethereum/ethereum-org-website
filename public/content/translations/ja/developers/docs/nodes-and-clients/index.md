@@ -45,7 +45,6 @@ sidebarDepth: 2
 
 - Etherscanによる[ノードのマップ](https://etherscan.io/nodetracker)
 - Bitflyによる[Ethernodes](https://ethernodes.org/)
-- [イーサリアムノードクローラー](https://crawler.ethereum.org/)
 - [Nodewatch](https://www.nodewatch.io/): Chainsafeによるコンセンサスノードのクローリング
 
 ## ノードの類型 {#node-types}
@@ -130,15 +129,14 @@ sidebarDepth: 2
 
 この表は、いくつかのクライアントの情報をまとめたものです。 これらのクライアントはすべて、[クライアントテスト](https://github.com/ethereum/tests)に合格しており、ネットワークのアップグレードによって最新の状態に維持されています。
 
-| クライアント                                                                  | 言語         | オペレーティングシステム        | ネットワーク                    | 同期戦略              | 状態剪定       |
-| ----------------------------------------------------------------------- | ---------- | ------------------- | ------------------------- | ----------------- | ---------- |
-| [Geth](https://geth.ethereum.org/)                                      | Go         | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | スナップ、フル           | アーカイブ、プルーン |
-| [Nethermind](http://nethermind.io/)                                     | C#、.NET    | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | スナップ(配信なし) 、高速、フル | アーカイブ、プルーン |
-| [Besu](https://besu.hyperledger.org/en/stable/)                         | Java       | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | スナップ、高速、フル        | アーカイブ、プルーン |
-| [Erigon](https://github.com/ledgerwatch/erigon)                         | Go         | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | フル                | アーカイブ、プルーン |
-| [Reth](https://github.com/paradigmxyz/reth) _(ベータ)_                     | Rust       | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | フル                | アーカイブ、プルーン |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(ベータ)_ | TypeScript | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | スナップ、フル、ライト       |            |
-
+| クライアント                                                                  | 言語         | オペレーティングシステム        | ネットワーク                    | 同期戦略                                                     | 状態剪定       |
+| ----------------------------------------------------------------------- | ---------- | ------------------- | ------------------------- | -------------------------------------------------------- | ---------- |
+| [Geth](https://geth.ethereum.org/)                                      | Go         | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | [スナップ](#snap-sync)、[フル](#full-sync)                      | アーカイブ、プルーン |
+| [Nethermind](https://www.nethermind.io/)                                | C#、.NET    | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | [スナップ](#snap-sync) (without serving)、高速、[フル](#full-sync) | アーカイブ、プルーン |
+| [Besu](https://besu.hyperledger.org/en/stable/)                         | Java       | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | [スナップ](#snap-sync)、[高速](#fast-sync)、[フル](#full-sync)     | アーカイブ、プルーン |
+| [Erigon](https://github.com/ledgerwatch/erigon)                         | Go         | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | [フル](#full-sync)                                         | アーカイブ、プルーン |
+| [Reth](https://reth.rs/)                                                | Rust       | Linux、Windows、macOS | Mainnet, Sepolia, Holesky | [フル](#full-sync)                                         | アーカイブ、プルーン |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(ベータ)_ | TypeScript | Linux、Windows、macOS | Sepolia, Holesky          | [フル](#full-sync)                                         | プルーン       |
 
 サポートされているネットワークの詳細については、[イーサリアムネットワーク](/developers/docs/networks/)をご覧ください。
 
@@ -166,9 +164,27 @@ Nethermindは、C# .NETの技術スタックで開発されたイーサリアム
 
 - 最適化された仮想マシン
 - 状態アクセス
-- ネットワーク機能と、Prometheus/Grafanaダッシュボード、シークエンス・エンタープライズ・ロギング・サポート、JSON RPCトレース、分析プラグインなどの豊富な機能
+- ネットワーキングや、Prometheus/Grafanaダッシュボード、Seqエンタープライズロギングサポート、JSON-RPCトレーシング、分析プラグインなどの豊富な機能
 
 また、Nethermindは、[詳細なドキュメント](https://docs.nethermind.io)、強力な開発サポート、オンラインコミュニティ、プレミアムユーザー向けの24時間年中無休のサポートなど、充実したサポート体制を整えています。
+
+### Reth {#reth}
+
+Reth (Rust Ethereumの略) は、使いやすさ、高度なモジュール化、速さ、効率性を重視したイーサリアムフルノード実装です。 Rethは元々Paradigmによって開発・推進されており、ApacheおよびMITライセンスの下で提供されています。
+
+Rethは本番環境での利用が可能で、ステーキングや高稼働サービスなどのミッションクリティカルな環境での使用に適しています。 また、RPC、MEV、インデックス作成、シミュレーション、P2P活動など、高いパフォーマンスと大きなマージンが求められるユースケースでも優れた性能を発揮します。
+
+詳細は[Reth Book](https://reth.rs/)や[Reth GitHubリポジトリ](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth)をご覧ください。
+
+### 開発中 {#execution-in-development}
+
+これらのクライアントはまだ開発の初期段階であるため、今のところ本番環境での使用は推奨されていません。
+
+#### EthereumJS {#ethereumjs}
+
+EthereumJS実行クライアント(EthereumJS)は、TypeScriptで書かれ、いくつかのパッケージで構成されています。ブロック、トランザクション、マークルパトリシアツリークラスで表すコアイーサリアムプリミティブや、イーサリアム仮想マシン(EVM)、ブロックチェーンクラス、DevP2Pネットワークスタックの実装などのコアクライアントコンポーネントを含みます。
+
+詳細については、EthereumJSの[ドキュメント](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)を参照してください。
 
 ## コンセンサスクライアント {#consensus-clients}
 
@@ -222,21 +238,32 @@ Tekuは、Javaで実装されており、Apache 2.0でライセンスされて�
 
 ### 実行レイヤーの同期モード {#execution-layer-sync-modes}
 
-#### フルアーカイブ同期 {#full-sync}
+実行レイヤーは、ブロックチェーンのワールドステートを再実行するモードから、信頼できるチェックポイントからチェーンの最新部分にのみ同期するモードまで、さまざまなユースケースに合わせて異なるモードで実行できます。
 
-フル同期は、ヘッダー、トランザクション、レシートを含むすべてのブロックをダウンロードし、最初のジェネシス(誕生)からの全ブロックを実行することで、ブロックチェーンの状態を段階的に生成します。
+#### フル同期(Full sync) {#full-sync}
+
+フル同期では、すべてのブロック (ヘッダーとブロックボディを含む) をダウンロードし、ジェネシスブロックからすべてのブロックを実行することで、ブロックチェーンの状態を段階的に再生成します。
 
 - すべてのトランザクションを検証することにより、信用する必要性を最小限に抑え、最高のセキュリティを提供
 - トランザクション数が増えると、全トランザクションを処理するのに数日から数週間かかることがある
 
-#### フルスナップ同期 {#snap-sync}
+[アーカイブノード](#archive-node)は、フル同期を実行して、すべてのブロック内のすべてのトランザクションによって行われた状態変化の完全な履歴を構築し、保持します。
 
-スナップ同期は、フルアーカイブ同期と同様に、ブロックごとにチェーンを検証します。ただし、ジェネシスブロックからではなく、本物のブロックチェーンの一部であることが確認されている、より直近の「信頼できる」チェックポイントから始めます。 ノードは、一定期間を経過したデータを削除しますが、定期的にチェックポイントを保存します。 これらのスナップショットは、すべての状態データを永久に保存するのではなく、必要なときに再生成するために使用されます。
+#### 高速同期(Fast sync) {#fast-sync}
 
-- 現在イーサリアムメインネットでデフォルトとなっている最速の同期戦略
-- セキュリティを損なうことなく、ディスク使用量とネットワーク帯域幅を大幅に節約可能
+フル同期と同様に、高速同期もすべてのブロック (ヘッダー、トランザクション、レシートを含む) をダウンロードします。 しかし、高速同期は過去のトランザクションを再処理する代わりに、レシートに依存し、最新のヘッドに到達するとフルノードを提供するためにブロックのインポートと処理に切り替わります。
 
-[スナップ同期の詳細](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+- 高速同期戦略
+- 帯域幅の使用を優先した処理負荷の軽減
+
+#### スナップ同期(Snap sync) {#snap-sync}
+
+スナップ同期もチェーンをブロックごとに検証します。 ただし、ジェネシスブロックからではなく、「信頼できる」最新のチェックポイントから開始します。このチェックポイントは、正しいブロックチェーンの一部であることが確認されています。 ノードは、一定期間を経過したデータを削除しますが、定期的にチェックポイントを保存します。 これらのスナップショットは、データを永続的に保存するのではなく、必要に応じてステートデータを再生成するために使用されます。
+
+- 最速の同期戦略で、現在のイーサリアムメインネットのデフォルトです。
+- セキュリティを犠牲にすることなく、多くのディスク使用量とネットワーク帯域幅を節約できます。
+
+[スナップ同期の詳細はこちら](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
 #### 軽量同期(Light sync) {#light-sync}
 
@@ -259,15 +286,13 @@ Tekuは、Javaで実装されており、Apache 2.0でライセンスされて�
 
 #### チェックポイント同期 {#checkpoint-sync}
 
-チェックポイント同期は、弱い主観性同期とも呼ばれ、ビーコンノードの同期において優れたユーザーエクスペリエンスを実現します。 これは[弱い主観性](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/)の前提に基づいており、最初のジェネシスブロックからではなく、最新の「弱い主観性チェックポイント」からビーコンチェーンを同期します。 [ジェネシスブロック](/glossary/#genesis-block)からの同期と同様の信頼性を保ちつつ、初期同期の時間を大幅に短縮できます。
+チェックポイント同期は、弱い主観性の同期とも呼ばれ、ビーコンノードの同期において優れたユーザーエクスペリエンスを提供します。 これは、ジェネシスではなく、最近の弱い主観性チェックポイントからビーコンチェーンを同期できるようにする[弱い主観性](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/)の前提に基づいています。 チェックポイント同期は、[ジェネシス](/glossary/#genesis-block)からの同期と同様の信頼性の前提を保ちながら、初期同期時間を大幅に短縮します。
 
-実運用では、ノードがリモートサービスに接続して最新のファイナライズされた状態をダウンロードし、その時点からデータの検証を続けます。 データ提供元のサードパーティは信頼できるものである必要があるため、慎重に選ぶ必要があります。
+実運用では、ノードがリモートサービスに接続して最新のファイナライズされた状態をダウンロードし、その時点からデータの検証を続けます。 データを提供する第三者は信頼されるべき存在であり、慎重に選ぶ必要があります。
 
 [チェックポイント同期](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)の詳細
 
 ## 参考文献 {#further-reading}
-
-インターネット上には、イーサリアムクライアントに関する情報がたくさんあります。 その中から、特に参考になりそうなリソースをいくつか紹介します。
 
 - [イーサリアム101 - パート2 - ノードについての理解](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– 2019年2月13日 - Wil Barnes_
 - [イーサリアムフルノードの運用: 手間を省きたい人向けのガイド](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _2019年11月7日 - Justin Leroux_

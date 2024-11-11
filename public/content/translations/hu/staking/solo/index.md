@@ -58,7 +58,7 @@ Ahogy a privát kulcs biztosítja az Ethereum-címet, úgy a validátorhoz is l�
 <a href="/security/">Ethereum biztonság és csalásmegelőzés</a>
 </ExpandableCard>
 
-<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
+<ExpandableCard title="Karbantartás" eventCategory="SoloStaking" eventName="clicked maintenance">
 A hardver néha leáll, a hálózati kapcsolat hibára fut, a kliensszoftvert néha frissíteni kell. A csomópont karbantartása elkerülhetetlen, ezzel foglalkozni kell. Muszáj naprakésznek lennie minden várható hálózati frissítésről vagy más kritikus kliensfrissítésről.
 </ExpandableCard>
 
@@ -190,7 +190,7 @@ Amint a visszavonási adatok be vannak állítva, a jutalmak (a 32 ETH-en felül
 
 A teljes egyenleg visszavonásához végig kell menni a validátorkiléptetési folyamaton.
 
-<ButtonLink to="/staking/withdrawals/">Bővebben a letétbe helyezés visszavonásáról</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Bővebben a letétbe helyezés visszavonásáról</ButtonLink>
 </ExpandableCard>
 
 ## További olvasnivaló {#further-reading}

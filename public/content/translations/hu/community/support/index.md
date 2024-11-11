@@ -12,11 +12,11 @@ Egy hivatalos Ethereum ügyfélszolgálatot keres? Tudnia kell, hogy az Ethereum
 
 Ezt azért is fontos megérteni, mert bárki jelentkezik Önnél, mint hivatalos ügyfélszolgálatos, az csak csaló lehet! A csalók ellen a legjobb védekezés az ismeretek szerzése és a biztonság komolyan vétele.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Ethereum-biztonság és átverés elleni védelem
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Ismerje meg az Ethereum alapjait
 </DocLink>
 
@@ -73,7 +73,6 @@ Néhány népszerű példa:
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 
@@ -92,6 +91,7 @@ Az Ethereum klienseket építő csapatok is dedikált, nyilvános fórumokkal re
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### Konszenzusos kliensek {#consensus-clients}
 

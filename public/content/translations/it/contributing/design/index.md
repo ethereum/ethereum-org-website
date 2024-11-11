@@ -16,7 +16,7 @@ Infine, questo è un ottimo modo per creare un portafoglio diversificato e sugge
 
 Talvolta, necessitiamo di aiuto nel testare le nostre idee abbozzate. Questo è un ottimo modo per contribuire senza alcuna conoscenza tecnica.
 
-1. Il team di progettazione condividerà un design di prova su [Discord](https://discord.com/invite/CetY6Y4) e su [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. Il team di progettazione condividerà un design di prova su [Discord](https://discord.com/invite/ethereum-org) e su [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Sarai guidato attraverso i design per fornire feedback tramite la funzionalità dei commenti.
 3. Il risultato sarà condiviso nel ticket di GitHub e quindi sarà chiuso dal team.
 

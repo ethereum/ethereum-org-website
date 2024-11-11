@@ -43,7 +43,7 @@ Alle Ethereum-upgrades zijn ietwat met elkaar verbonden. Laten we daarom samenva
 
 Zodra de merge plaatsvindt, zullen stakers worden toegewezen om het Ethereum-hoofdnet te valideren. [Mining](/developers/docs/consensus-mechanisms/pow/mining/) zal niet langer nodig zijn, dus miners zullen waarschijnlijk hun inkomsten investeren in het staken in het nieuwe proof-of-stake systeem.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   De Baken Ketting
 </ButtonLink>
 
@@ -59,7 +59,7 @@ Oorspronkelijk was het plan om aan shardketens te werken voor de merge, om de sc
 
 Dit zal een voortdurende beoordeling zijn van de gemeenschap over de noodzaak van mogelijk meerdere rondes van shardketens om eindeloze schaalbaarheid mogelijk te maken.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Shardketens
 </ButtonLink>
 

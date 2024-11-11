@@ -1,30 +1,56 @@
 import React, { ReactNode } from "react"
 import { useRouter } from "next/router"
-import { Box, Text } from "@chakra-ui/react"
 
-import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
-import Tooltip from "@/components/Tooltip"
+import InlineLink from "@/components/Link"
+import Tooltip, { type TooltipProps } from "@/components/Tooltip"
+import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { cleanPath } from "@/lib/utils/url"
 
-type GlossaryTooltipProps = {
+type GlossaryTooltipProps = Omit<TooltipProps, "content"> & {
   children: ReactNode
   termKey: string
 }
 
-const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
+const GlossaryTooltip = ({
+  children,
+  termKey,
+  ...props
+}: GlossaryTooltipProps) => {
   const { asPath } = useRouter()
 
   return (
-    <Box as="span" display="inline-block">
+    <span className="inline-block">
       <Tooltip
+        {...props}
         content={
-          <GlossaryDefinition
-            term={termKey}
-            size="sm"
-            options={{ ns: "glossary-tooltip" }}
-          />
+          <div className="flex flex-col items-stretch gap-2 text-start">
+            <h6>
+              <Translation
+                id={termKey + "-term"}
+                options={{ ns: "glossary-tooltip" }}
+                // Override the default `a` tag transformation to avoid circular
+                // dependency issues
+                transform={{ a: InlineLink }}
+              />
+            </h6>
+            {/**
+             * `as="span"` prevents hydration warnings for strings that contain
+             * elements that cannot be nested inside `p` tags, like `ul` tags
+             * (found in some Glossary definition).
+             * TODO: Develop a better solution to handle this case.
+             */}
+            <span>
+              <Translation
+                id={termKey + "-definition"}
+                options={{ ns: "glossary-tooltip" }}
+                // Override the default `a` tag transformation to avoid circular
+                // dependency issues
+                transform={{ a: InlineLink }}
+              />
+            </span>
+          </div>
         }
         onBeforeOpen={() => {
           trackCustomEvent({
@@ -34,20 +60,11 @@ const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
           })
         }}
       >
-        <Text
-          as="u"
-          textDecorationStyle="dotted"
-          textUnderlineOffset="3px"
-          _hover={{
-            textDecorationColor: "primary.hover",
-            color: "primary.hover",
-          }}
-          cursor="help"
-        >
+        <u className="cursor-help decoration-dotted underline-offset-3 hover:text-primary-hover hover:decoration-primary-hover">
           {children}
-        </Text>
+        </u>
       </Tooltip>
-    </Box>
+    </span>
   )
 }
 

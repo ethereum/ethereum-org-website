@@ -50,8 +50,8 @@ L'esempio seguente illustra come funziona l'offset per un contenitore con elemen
 [37, 0, 0, 0, 55, 0, 0, 0, 16, 0, 0, 0, 22, 0, 0, 0, 1, 2, 3, 4]
 ------------  -----------  -----------  -----------  ----------
       |             |            |           |            |
-   number1       number2    offset for    number 3    value for
-                              vector                   vector
+   number1       number2    offset per    number 3    valore per
+                              vettore                   vettore
 
 ```
 
@@ -59,11 +59,11 @@ diviso su righe per chiarezza:
 
 ```
 [
-  37, 0, 0, 0,  # little-endian encoding of `number1`.
-  55, 0, 0, 0,  # little-endian encoding of `number2`.
-  16, 0, 0, 0,  # The "offset" that indicates where the value of `vector` starts (little-endian 16).
-  22, 0, 0, 0,  # little-endian encoding of `number3`.
-  1, 2, 3, 4,   # The actual values in `vector`.
+  37, 0, 0, 0,  # codifica endiana piccola di `number1`.
+  55, 0, 0, 0,  # codifica endiana piccola di `number2`.
+  16, 0, 0, 0,  # Lo "offset" che indica dove inizia il valore di `vector` (16 endiano piccolo).
+  22, 0, 0, 0,  # codifica endiana piccola di `number3`.
+  1, 2, 3, 4,   # I valori reali in `vector`.
 ]
 ```
 
@@ -71,11 +71,11 @@ Questa è comunque una semplificazione: gli interi e gli zeri negli schemi di cu
 
 ```
 [
-  10100101000000000000000000000000  # little-endian encoding of `number1`
-  10110111000000000000000000000000  # little-endian encoding of `number2`.
-  10010000000000000000000000000000  # The "offset" that indicates where the value of `vector` starts (little-endian 16).
-  10010110000000000000000000000000  # little-endian encoding of `number3`.
-  10000001100000101000001110000100   # The actual value of the `bytes` field.
+  10100101000000000000000000000000  # codifica endiana piccola di `number1`
+  10110111000000000000000000000000  # codifica endiana piccola di `number2`.
+  10010000000000000000000000000000  # Lo "offset" che indica dove inizia il valore di `vector` (16 endiano piccolo).
+  10010110000000000000000000000000  # codifica endiana piccola di `number3`.
+  10000001100000101000001110000100   # Il valore reale del campo `bytes`.
 ]
 ```
 
@@ -94,13 +94,13 @@ Vedi [ssz.dev](https://www.ssz.dev/overview) per una spiegazione interattiva a r
 L’oggetto serializzato SSZ può essere poi merkle-zzato, ovvero trasformato in una rappresentazione dell'albero di Merkle di alcuni dati. Per prima cosa, è determinato il numero di blocchi da 32 byte nell'oggetto serializzato. Queste sono le "foglie" dell'albero. Il numero totale di foglie deve essere una potenza di 2, così che l'hashing delle foglie produca infine un albero-radice con un unico hash. Se questo non avviene naturalmente, sono aggiunte delle foglie aggiuntive contenenti 32 byte di zeri. In diagramma:
 
 ```
-        hash tree root
+        hash albero radice
             /     \
            /       \
           /         \
          /           \
-   hash of leaves  hash of leaves
-     1 and 2         3 and 4
+   hash delle foglie hash delle foglie
+     1 e 2         3 e 4
       /   \            /  \
      /     \          /    \
     /       \        /      \
@@ -131,7 +131,7 @@ Fornire l'elenco di indici generalizzati rappresentanti un elemento specifico ci
 Ad esempio, per verificare i dati nell'indice 9 nell'albero seguente, abbiamo bisogno dell'hash dei dati agli indici 8, 9, 5, 3, 1. L'hash di (8,9) dovrebbe equivalere all'hash (4), il cui hash con 5 produce 2, il cui hash con 3 produce la radice dell'albero 1. Se venissero forniti dei dati errati per 9, la radice cambierebbe: lo rileveremmo e renderemmo impossibile verificare il ramo.
 
 ```
-* = data required to generate proof
+* = dati necessari per generare la prova
 
                     1*
           2                      3*

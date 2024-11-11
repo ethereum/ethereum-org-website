@@ -31,7 +31,7 @@ async function main() {
             approved: data.words.approved,
             total: data.words.total,
           },
-        } as ProjectProgressData)
+        }) as ProjectProgressData
     )
 
     fs.writeFileSync(

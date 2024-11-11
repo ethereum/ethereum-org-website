@@ -52,7 +52,7 @@ It works like this: if two DEXes are offering a token at two different prices, s
 
 Lending protocol liquidations present another well-known MEV opportunity.
 
-Lending protocols like Maker and Aave require users to deposit some collateral (e.g. ETH). This deposited collateral is then used to then lend out to other users.
+Lending protocols like Maker and Aave require users to deposit some collateral (e.g. ETH). This deposited collateral is then used to lend out to other users.
 
 Users can then borrow assets and tokens from others depending on what they need (e.g. you might borrow MKR if you want to vote in a MakerDAO governance proposal) up to a certain percentage of their deposited collateral. For example, if the borrowing amount is a maximum of 30%, a user who deposits 100 DAI into the protocol can borrow up to 30 DAI worth of another asset. The protocol determines the exact borrowing power percentage.
 
@@ -122,7 +122,7 @@ As explained, MEV has negative implications for overall user experience and cons
 
 In post-Merge Ethereum, validators (having made security deposits of 32 ETH) come to consensus on the validity of blocks added to the Beacon Chain. Since 32 ETH may be out of the reach of many, [joining a staking pool](/staking/pools/) may be a more feasible option. Nevertheless, a healthy distribution of [solo stakers](/staking/solo/) is ideal, as it mitigates the centralization of validators and improves Ethereum’s security.
 
-However, MEV extraction is believed to be capable of accelerating validator centralization. This is partly because, as validators [earn less for proposing blocks](/roadmap/merge/issuance/#how-the-merge-impacts-ETH-supply) than miners currently do, MEV extraction may greatly [influence validator earnings](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb) after The Merge.
+However, MEV extraction is believed to be capable of accelerating validator centralization. This is partly because, as validators [earn less for proposing blocks](/roadmap/merge/issuance/#how-the-merge-impacts-ETH-supply) than miners previously did, MEV extraction has greatly [influenced validator earnings](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb) since [The Merge](/roadmap/merge/).
 
 Larger staking pools will likely have more resources to invest in necessary optimizations to capture MEV opportunities. The more MEV these pools extract, the more resources they have to improve their MEV-extraction capabilities (and increase overall revenue), essentially creating [economies of scale](https://www.investopedia.com/terms/e/economiesofscale.asp#).
 
@@ -136,13 +136,13 @@ In response to sandwiching and frontrunning attacks, traders may start conductin
 
 Permissioned mempools would also accelerate the centralization risks described in the previous section. Large pools running multiple validators will likely benefit from offering transaction privacy to traders and users, increasing their MEV revenues.
 
-Combating these MEV-related problems in post-Merge Ethereum is a core area of research. To date, two solutions proposed to reduce the negative impact of MEV on Ethereum’s decentralization and security after The Merge are **Proposer-Builder Separation (PBS)** and the **Builder API**.
+Combating these MEV-related problems in post-Merge Ethereum is a core area of research. To date, two solutions proposed to reduce the negative impact of MEV on Ethereum’s decentralization and security after The Merge are [**Proposer-Builder Separation (PBS)**](/roadmap/pbs/) and the [**Builder API**](https://github.com/ethereum/builder-specs).
 
 ### Proposer-Builder Separation {#proposer-builder-separation}
 
-In both proof-of-work and proof-of-stake, a node that builds a block proposes it for addition to the chain to other nodes participating in consensus. A new block becomes part of the canonical chain after another miner builds on top of it (in PoW) or it receives attestations from the majority of validators (in Pos).
+In both proof-of-work and proof-of-stake, a node that builds a block proposes it for addition to the chain to other nodes participating in consensus. A new block becomes part of the canonical chain after another miner builds on top of it (in PoW) or it receives attestations from the majority of validators (in PoS).
 
-The combination of block producer and block proposer roles is what introduces most of the MEV-related problems described previously. For example, consensus nodes are incentivized to trigger chain reorganizations in time-bandit attacks to maximize MEV earnings.
+The combination of block producer and block proposer roles is what introduces most of the MEV-related problems described previously. For example, consensus nodes are incentivized to trigger chain reorganizations in [time-bandit attacks](https://www.mev.wiki/attack-examples/time-bandit-attack) to maximize MEV earnings.
 
 [Proposer-builder separation](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725) (PBS) is designed to mitigate the impact of MEV, especially at the consensus layer. PBS’ major feature is the separation of block producer and block proposer rules. Validators are still responsible for proposing and voting on blocks, but a new class of specialized entities, called **block builders**, are tasked with ordering transactions and building blocks.
 
@@ -180,9 +180,10 @@ Below is an overview of how the Builder API works:
 
 5. A validator using the Builder API is still expected to build a block locally in case the block builder fails to respond promptly, so they don't miss out on block proposal rewards. However, validator cannot create another block using either the now-revealed transactions or another set, as it would amount to _equivocation_ (signing two blocks within the same slot), which is a slashable offense.
 
-An example implementation of the Builder API is [MEV Boost](https://github.com/flashbots/mev-boost), an improvement on the [Flashbots auction mechanism](https://docs.flashbots.net/Flashbots-auction/overview/) designed to curb the negative externalities of MEV on Ethereum. Flashbots auction allows miners in proof-of-work to outsource the work of building profitable blocks to specialized parties called **searchers**.
+An example implementation of the Builder API is [MEV Boost](https://github.com/flashbots/mev-boost), an improvement on the [Flashbots auction mechanism](https://docs.flashbots.net/Flashbots-auction/overview/) designed to curb the negative externalities of MEV on Ethereum. Flashbots auction allows validators in proof-of-stake to outsource the work of building profitable blocks to specialized parties called **searchers**.
+![A diagram showing the MEV flow in detail](./mev.png)
 
-Searchers look for lucrative MEV opportunities and send transaction bundles to miners along with a [sealed-price bid](https://en.wikipedia.org/wiki/First-price_sealed-bid_auction) for inclusion in the block. The miner running mev-geth, a forked version of the go-ethereum (Geth) client only has to choose the bundle with the most profit and mine it as part of the new block. To protect miners from spam and invalid transactions, transaction bundles pass through **relayers** for validation before getting to miners.
+Searchers look for lucrative MEV opportunities and send transaction bundles to block proposers along with a [sealed-price bid](https://en.wikipedia.org/wiki/First-price_sealed-bid_auction) for inclusion in the block. The validator running mev-geth, a forked version of the go-ethereum (Geth) client only has to choose the bundle with the most profit and include it as part of the new block. To protect block proposers (validators) from spam and invalid transactions, transaction bundles pass through **relayers** for validation before getting to the proposer.
 
 MEV Boost retains the same workings of the original Flashbots auction, albeit with new features designed for Ethereum’s switch to proof-of-stake. Searchers still find profitable MEV transactions for inclusion in blocks, but a new class of specialized parties, called **builders**, are responsible for aggregating transactions and bundles into blocks. A builder accepts sealed-price bids from searchers and runs optimizations to find the most profitable ordering.
 

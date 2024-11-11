@@ -23,7 +23,7 @@ Le transazioni richiedono una commissione e devono essere incluse in un blocco v
 Una transazione inviata contiene le seguenti informazioni:
 
 - `from` – indirizzo del mittente che firmerà la transazione. Questo sarà un conto posseduto esternamente, in quanto i conti di contratti non possono inviare transazioni.
-- `recipient` – l'indirizzo ricevente (se è un conto posseduto esternamente, la transazione trasferirà valore. Se è un conto di contratto, la transazione eseguirà il codice del contratto)
+- `to`: l'indirizzo del destinatario (se è un conto posseduto esternamente, la transazione trasferirà il valore. Se è un conto di contratto, la transazione eseguirà il codice del contratto)
 - `signature` – l'identificativo del mittente. Viene generata quando la chiave privata del mittente firma la transazione e conferma che il mittente ha autorizzato la transazione
 - `nonce` – un contatore con incremento sequenziale, che indica il numero della transazione dal conto
 - `value` – quantità di ETH da trasferire dal mittente al destinatario (denominata in WEI, dove 1 ETH corrisponde a 1e+18wei)
@@ -153,11 +153,18 @@ La commissione base brucerà **-0,00399 ETH**
 
 Il validatore riceve la mancia di **oltre 0,000210 ETH**
 
-Il gas è anche necessario per qualsiasi interazione del contratto intelligente.
 
 ![Diagramma che mostra come è rimborsato il gas inutilizzato](./gas-tx.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Il gas non utilizzato, viene rimborsato al conto dell'utente.
+
+### Interazioni con i contratti intelligenti {#smart-contract-interactions}
+
+Il gas è necessario per qualsiasi transazione riguardi un contratto intelligente.
+
+Inoltre, i contratti intelligenti possono contenere delle funzioni note come [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) o [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), che non alterano lo stato del contratto. Per questo, chiamare tali funzioni da un EOA non richiederà alcun gas. La chiamata RPC sottostante per questo scenario è [`eth_call`](/developers/docs/apis/json-rpc#eth_call)
+
+A differenza di quando si accede utilizzando `eth_call`, queste funzioni `view` o `pure` sono comunemente chiamate anche internamente (cioè dal contratto stesso o da un altro contratto) e questo costa gas.
 
 ## Ciclo di vita delle transazioni {#transaction-lifecycle}
 
@@ -190,6 +197,16 @@ Dove i campi sono definiti come:
 
 - `TransactionType` - un numero tra 0 e 0x7f, per un totale di 128 tipi di transazione possibili.
 - `TransactionPayload` - un insieme arbitrario di byte definito dal tipo di transazione.
+
+A seconda del valore di `TransactionType`, una transazione è classificabile come
+
+1. **Transazioni di Tipo 0 (Ereditarie):** Il formato della transazione originale utilizzato dal lancio di Ethereum. Non includono le funzionalità dall'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), come il calcolo dinamico delle commissioni sul gas o gli elenchi di accesso per i contratti intelligenti. Le transazioni ereditarie mancano di un prefisso specifico che ne indichi il tipo nella loro forma serializzata, che parte dal byte `0xf8` utilizzando la codifica a [Prefisso di Lunghezza Ricorsiva (RLP)](/developers/docs/data-structures-and-encoding/rlp). Il valore TransactionType per queste transazioni è `0x0`.
+
+2. **Transazioni di Tipo 1:** introdotte nell'[EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) come parte dell'[Aggiornamento Berlino](/history/#berlin) di Ethereum, queste transazioni includono un parametro `accessList`. Questo elenco specifica gli indirizzi e le chiavi di memorizzazione a cui la transazione prevede di accedere, contribuendo potenzialmente a ridurre i costi del [gas](/developers/docs/gas/) per le transazioni complesse che comportano contratti intelligenti. Le modifiche al mercato delle commissioni dell'EIP-1559 non sono incluse nelle transazioni di Tipo 1. Le transazioni di Tipo 1 includono anche un parametro `yParity`, che può essere `0x0` o `0x1`, indicando la parità del valore y della firma secp256k1. Sono identificate perché iniziano con il byte `0x01` e il loro valore di TransactionType è `0x1`.
+
+3. Le **transazioni di Tipo 2**, comunemente note come transazioni EIP-1559, sono transazioni introdotte nell'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), nell'[Aggiornamento Londra](/history/#london) di Ethereum. Sono diventate il tipo di transazione standard sulla rete di Ethereum. Queste transazioni introducono un nuovo meccanismo del mercato delle commissioni che ne migliora la prevedibilità, separando la commissione sulla transazione in una commissione di base e una di priorità. Iniziano con il byte `0x02` e includono campi come `maxPriorityFeePerGas` e `maxFeePerGas`. Le transazioni di Tipo 2 sono ora le predefinite a causa della loro flessibilità ed efficienza, favorite specialmente durante i periodi di elevata congestione della rete per la loro capacità di aiutare gli utenti a gestire le commissioni sulle transazioni in maniera più prevedibile. Il valore di TransactionType per queste transazioni è `0x2`.
+
+
 
 ## Letture consigliate {#further-reading}
 

@@ -40,6 +40,7 @@ import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import Pill from "@/components/Pill"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -54,10 +55,6 @@ import walletImg from "@/public/images/wallet.png"
 import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
-
-const Divider = (props: BoxProps) => (
-  <Box my={16} w="10%" h={1} bg="homeDivider" {...props} />
-)
 
 const Page = (props: FlexProps) => (
   <Flex
@@ -162,7 +159,7 @@ const GasPage = () => {
         title={t("page-gas-meta-title")}
         description={t("page-gas-meta-description")}
       />
-      <Box background="layer2Gradient" width="full">
+      <div className="w-full bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20">
         <Box pb={8}>
           <PageHero
             content={{
@@ -177,7 +174,7 @@ const GasPage = () => {
             }}
           />
         </Box>
-      </Box>
+      </div>
       <Content mb={{ base: 16, lg: 32 }} mt={16}>
         <Flex
           direction={{ base: "column", lg: "row" }}
@@ -243,7 +240,7 @@ const GasPage = () => {
                   "page-gas-how-do-i-pay-less-gas-card-3-description"
                 )}
               >
-                <ButtonLink w="fit-content" to="/layer-2/">
+                <ButtonLink w="fit-content" href="/layer-2/">
                   {t("page-gas-try-layer-2")}
                 </ButtonLink>
               </StyledCard>
@@ -276,13 +273,8 @@ const GasPage = () => {
               </InlineLink>
             </Text>
           </Box>
-          <GhostCard
-            flex="40%"
-            maxW="640px"
-            alignSelf="center"
-            mt={{ base: 16, lg: 2 }}
-          >
-            <Emoji text=":cat:" fontSize="5xl" />
+          <GhostCard className="mt-16 max-w-[640px] self-center md:w-2/5 lg:mt-2">
+            <Emoji text=":cat:" className="text-5xl" />
             <H3>{t("page-gas-attack-of-the-cryptokitties-header")}</H3>
             <Text>{t("page-gas-attack-of-the-cryptokitties-text")}</Text>
           </GhostCard>
@@ -306,7 +298,7 @@ const GasPage = () => {
                   key={benefit.emoji}
                   emoji={benefit.emoji}
                   description={benefit.description}
-                  emojiSize={3}
+                  className="text-5xl"
                   align="center"
                 />
               </Box>
@@ -427,7 +419,7 @@ const GasPage = () => {
             )}
           >
             <Box>
-              <ButtonLink to="/layer-2/">
+              <ButtonLink href="/layer-2/">
                 {t("page-gas-use-layer-2")}
               </ButtonLink>
             </Box>
@@ -444,7 +436,7 @@ const GasPage = () => {
             )}
           >
             <Box>
-              <ButtonLink to="/dapps/">
+              <ButtonLink href="/dapps/">
                 {t("page-community:page-community-explore-dapps")}
               </ButtonLink>
             </Box>

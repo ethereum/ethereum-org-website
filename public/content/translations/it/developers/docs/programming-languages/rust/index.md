@@ -5,7 +5,7 @@ lang: it
 incomplete: true
 ---
 
-<FeaturedText>Impara a sviluppare per Ethereum usando progetti e strumenti basati su Rust</FeaturedText>
+<FeaturedText>Impara a sviluppare per Ehereum, utilizzando progetti e strumenti basati su Rust</FeaturedText>
 
 Usa Ethereum per creare applicazioni decentralizzate (dette "dapp") che sfruttano i vantaggi delle criptovalute e della tecnologia blockchain. Queste dapp sono attendibili perché, una volta "caricate" su Ethereum, vengono eseguite sempre come sono state programmate. Possono controllare risorse digitali per creare nuove tipologie di applicazioni finanziarie. Possono essere decentralizzate, il che significa che nessuna singola entità o persona le controlla e sono quasi impossibile da censurare.
 
@@ -22,7 +22,6 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 
 ## Articoli per chi inizia ora {#beginner-articles}
 
-- [Choosing an Ethereum Client](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [The Rust Ethereum Client](https://openethereum.github.io/) \* **Notare che OpenEthereum [è ormai superato](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e non viene più mantenuto.** Usalo con cautela e preferibilmente passa a un'altra implementazione client.
 - [Sending Transaction to Ethereum Using Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Tutorial passo-passo per scrivere contratti in rust Wasm per Kovan (in inglese)](https://github.com/paritytech/pwasm-tutorial)
@@ -46,11 +45,13 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [Solaris](https://github.com/paritytech/sol-rs) - _Test unitario dei contratti intelligenti in Solidity che sfrutta l'utilizzo dell'EVM nativa del Client di Parity._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Implementazione della Macchina Virtuale di Ethereum in Rust_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Smart Contract Wavelet in Rust_
-- [Foundry](https://github.com/gakonst/foundry)- _Toolkit per lo sviluppo di applicazioni Ethereum_
-- [Ethers_rs](https://github.com/gakonst/ethers-rs)- _Implementazione di librerie e portafogli di Ethereum_
+- [Foundry](https://github.com/foundry-rs/foundry) - _Kit di strumenti per lo sviluppo di applicazioni Ethereum_
+- [Alloy](https://alloy.rs) - _Librerie ad alte prestazioni, ben testate e documentate per interagire con Ethereum e altre catene basate su EVM._
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Libreria di Ethereum e implementazione di portafogli_
 - [SewUp](https://github.com/second-state/SewUp) - _Una libreria per aiutarti a creare il tuo contratto webassembly di Ethereum con Rust e sviluppare in un backend comune_
 - [Substreams](https://github.com/streamingfast/substreams): _tecnologia d'indicizzazione parallelizzata dei dati della blockchain_
-- [Reth](https://github.com/paradigmxyz/reth) Reth (abbreviazione di Rust Ethereum, pronuncia) è una nuova implementazione a nodo completo su Ethereum
+- [Reth](https://github.com/paradigmxyz/reth) Reth (abbreviazione di Rust Ethereum) è una nuova implementazione a nodo completo su Ethereum
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust): _Una raccolta curata di progetti nell'ecosistema di Ethereum, scritta in Rust_
 
 Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers.](/developers/)
 

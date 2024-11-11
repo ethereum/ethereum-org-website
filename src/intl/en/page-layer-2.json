@@ -134,5 +134,7 @@
   "layer-2-ecosystem-portal": "Ecosystem Portal",
   "layer-2-token-lists": "Token Lists",
   "layer-2-explore": "Explore",
-  "page-dapps-ready-button": "Go"
+  "page-dapps-ready-button": "Go",
+  "layer-2-information": "Information",
+  "layer-2-wallet-managers": "Wallet managers"
 }

@@ -6,14 +6,10 @@
   "page-learning-tools-browse-docs": "Cerqueu documents",
   "page-learning-tools-capture-the-ether-description": "Capture the Ether és un joc en què pirateja els contractes intel·ligents d'Ethereum per aprendre més sobre la seva seguretat.",
   "page-learning-tools-capture-the-ether-logo-alt": "Logotip de Capture the Ether",
-  "page-learning-tools-chainshot-description": "Bootcamp i cursos addicionals a distància amb instructor per a desenvolupadors d'Ethereum.",
-  "page-learning-tools-chainshot-logo-alt": "Logotip de ChainShot",
   "page-learning-tools-coding": "Apreneu programant",
   "page-learning-tools-coding-subtitle": "Aquestes eines us ajudaran a experimentar amb Ethereum si us ve de gust una experiència d'aprenentatge més interactiva.",
   "page-learning-tools-consensys-academy-description": "Bootcamp en línia per a desenvolupadors d'Ethereum.",
   "page-learning-tools-consensys-academy-logo-alt": "Logotip de ConsenSys Academy",
-  "page-learning-tools-buildspace-description": "Apreneu sobre criptografia creant projectes fantàstics.",
-  "page-learning-tools-buildspace-logo-alt": "Logotip de _buildspace",
   "page-learning-tools-cryptozombies-description": "Apreneu Solidity construint el vostre propi joc de zombis.",
   "page-learning-tools-cryptozombies-logo-alt": "Logotip de CryptoZombies",
   "page-learning-tools-documentation": "Apreneu amb documentació",
@@ -40,7 +36,5 @@
   "page-learning-tools-vyperfun-logo-alt": "Logotip de Vyper.fun",
   "page-learning-tools-nftschool-description": "Exploreu què passa amb tokens no fungibles o NFT des del costat tècnic.",
   "page-learning-tools-nftschool-logo-alt": "Logotip de NFT school",
-  "page-learning-tools-pointer-description": "Apreneu habilitats de desenvolupador web3 amb tutorials divertits i interactius. Guanyeu recompenses en criptoactius mentre apreneu",
-  "page-learning-tools-pointer-logo-alt": "Logotip de Pointer",
   "alt-eth-blocks": "Il·lustració d'uns blocs que s’organitzen com un símbol ETH"
 }

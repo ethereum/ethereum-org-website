@@ -19,7 +19,7 @@ lang: zh
 title="什么是 ARB？"
 contentPreview=''>
 
-Arbitrum 是一个开发和管理 <a href="/developers/docs/scaling/optimistic-rollups/">乐观卷叠</a> 的组织。 最初，Arbitrum 是一家以营利为目的的公司，但后来采取了去中心化步骤。 在这一过程中，他们发行了可交易的<a href="/dao/#token-based-membership">治理代币</a>。
+Arbitrum 是一个开发和管理 <a href="/developers/docs/scaling/optimistic-rollup/">乐观卷叠</a> 的组织。 最初，Arbitrum 是一家以营利为目的的公司，但后来采取了去中心化步骤。 在这一过程中，他们发行了可交易的<a href="/dao/#token-based-membership">治理代币</a>。
 
 </ExpandableCard>
 
@@ -55,7 +55,7 @@ contentPreview=''>
 
 - **合法的所有者**。 骗局代币经常向那些可能被认为是真实代币的合法持有人的地址空投大量代币余额。
 
-  再我们以 `wARB` 为例。 [大约 16% 的代币](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f)由一个公开标签为[ Arbitrum 基金会：部署人](https://etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) 的地址持有。 这*不是*假地址，它确实是[在以太坊主网上部署真正 ARB 合约的地址](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670)。
+  再我们以 `wARB` 为例。 [大约 16% 的代币](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f)由一个公开标签为[ Arbitrum 基金会：部署人](https://etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) 的地址持有。 这_不是_假地址，它确实是[在以太坊主网上部署真正 ARB 合约的地址](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670)。
 
   因为地址的 ERC-20 余额是 ERC-20 合约的存储空间的一部分，合约开发者可以根据需要指定其余额为任何值。 合约也可以禁止转账，让合法用户无法消除这些骗局代币。
 
@@ -92,6 +92,6 @@ contentPreview=''>
 只要世界上有价值，就会有骗子试图将其窃为己有，而在一个去中心化的世界里，除了你自己，没人能保护你。 请记住以下几点，它们可以帮助你区分合法代币和骗局代币：
 
 - 骗局代币会伪装成合法代币，它们会使用相同的名称、符号等。
-- 骗局代币与合法代币*不会*使用相同的合约地址。
+- 骗局代币与合法代币_不会_使用相同的合约地址。
 - 获取合法代币地址的最佳渠道是该代币所属的发行机构。
 - 如果联系不到该机构，可以使用知名可信的应用程序，如 [Uniswap](https://app.uniswap.org/#/swap) 和 [Etherscan](https://etherscan.io/)。

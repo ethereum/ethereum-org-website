@@ -28,16 +28,6 @@ _Potresti_ [eseguire un nodo](/developers/docs/nodes-and-clients/#running-your-o
 
 **Nota**: la maggior parte dei [framework di sviluppo](/developers/docs/frameworks/) include una rete di sviluppo incorporata. Raccomandiamo di iniziare con un framework per [impostare l'ambiente di sviluppo locale](/developers/local-environment/).
 
-### Ganache {#ganache}
-
-Imposta rapidamente una blockchain Ethereum personale che permette di eseguire test, comandi e ispezionare lo stato durante il controllo del funzionamento della catena.
-
-Ganache offre sia un'applicazione desktop (Ganache UI) che uno strumento da riga di comando (`ganache-cli`). Fa parte della suite di strumenti Truffle.
-
-- [Sito Web](https://www.trufflesuite.com/ganache)
-- [GitHub](https://github.com/trufflesuite/ganache)
-- [Documentazione](https://www.trufflesuite.com/docs/ganache/overview)
-
 ### Rete Hardhat {#hardhat-network}
 
 Rete Ethereum locale progettata per lo sviluppo. Permette di distribuire contratti, eseguire test e il debug del codice.
@@ -66,9 +56,9 @@ Esistono anche due implementazioni di prova pubbliche e mantenute di Ethereum: G
 
 Kurtosis è un sistema di produzione per ambienti di prova multi-contenitore che consente agli sviluppatori di avviare localmente istanze riproducibili di reti blockchain.
 
-Il pacchetto Ethereum di Kurtosis istanzia localmente una rete di prova di Ethereum containerizzata e parametrizzabile, con il supporto di diversi client del Livello di esecuzione (EL) e del Livello di consenso (CL) e un numero n di nodi. Kurtosis gestisce elegantemente tutte le mappature delle porte locali e le connessioni ai servizi per facilitare la prototipazione e il testing di dApp e contratti intelligenti.
+Il pacchetto Kurtosis di Ethereum è utilizzabile per istanziare rapidamente una rete di prova di Ethereum parametrizzabile, altamente scalabile e privata, su Docker o Kubernetes. Il pacchetto supporta tutti i clienti principali dei Livelli d'Esecuzione (EL) e del Consenso (CL). Kurtosis gestisce comodamente tutte le mappature delle porte locali e le connessioni del servizio per una rete rappresentativa da utilizzare nei flussi di lavoro di convalida e test, relativamente all'infrastruttura principale di Ethereum.
 
-- [Pacchetto rete Ethereum](https://github.com/kurtosis-tech/eth-network-package)
+- [Pacchetto rete Ethereum](https://github.com/kurtosis-tech/ethereum-package)
 - [Sito Web](https://www.kurtosis.com/)
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Documentazione](https://docs.kurtosis.com/)

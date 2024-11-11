@@ -169,7 +169,7 @@ Kun sis채lt철채 myyd채채n, ansainta ohjautuu suoraan luojalle. Jos uusi sis채ll�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tutki, osta tai luo omia NFT-toteutuksia</div>
-  <ButtonLink to="/dapps/?category=collectibles">
+  <ButtonLink href="/dapps/?category=collectibles">
     Tutustu NFT-taiteeseen
   </ButtonLink>
 </InfoBanner>
@@ -202,7 +202,7 @@ Decentraland, virtuaalinen reality-peli, jossa NFTt edustavat tontteja tai kiint
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tutustu Ethereum-peleihin, joita NFTt boostaavat...</div>
-  <ButtonLink to="/dapps/?category=gaming">
+  <ButtonLink href="/dapps/?category=gaming">
     Tutki NFT-pelej채
   </ButtonLink>
 </InfoBanner>
@@ -335,7 +335,7 @@ Ethereumin turvallisuus syntyy hajautetusta sijoittamisesta siihen. J채rjestelm�
 
 Turvallisuushaasteet, jotka liittyv채t NFTeihin, ovat monesti kalasteluyrityksi채, 채lysopimuksen haavoittuvuuksia tai k채ytt채jien virheit채 (kuten yksityisavaimen paljastaminen). Lompakkojen suojaus on keskeist채 NFTen omistajille.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Lis채채 tietoturvasta ja suojauksesta
 </ButtonLink>
 

@@ -1,14 +1,12 @@
 import { useTranslation } from "next-i18next"
-import { Flex, type FlexProps } from "@chakra-ui/react"
 
 import type { TranslationKey } from "@/lib/types"
 
-import { Image, type ImageProps } from "@/components/Image"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
+import { type ImageProps, TwImage } from "@/components/Image"
 
-export type CalloutBannerProps = FlexProps & {
-  children?: React.ReactNode
+import { cn } from "@/lib/utils/cn"
+
+export type CalloutBannerProps = React.HTMLAttributes<HTMLDivElement> & {
   image: ImageProps["src"]
   imageWidth?: number
   titleKey: TranslationKey
@@ -23,57 +21,39 @@ const CalloutBanner = ({
   descriptionKey,
   alt,
   children,
+  className,
   ...props
 }: CalloutBannerProps) => {
   const { t } = useTranslation("page-staking")
 
   return (
-    <Flex
-      as="aside"
-      direction={{ base: "column", lg: "row-reverse" }}
-      bg="layer2Gradient"
-      p={{ base: 8, sm: 12 }}
-      borderRadius="base"
+    <aside
+      className={cn(
+        "flex flex-col rounded p-8 sm:p-12 lg:flex-row-reverse",
+        "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20",
+        className
+      )}
       {...props}
     >
-      {image && (
-        <Flex>
-          <Image
-            src={image}
-            alt={alt}
-            width={imageWidth}
-            style={{
-              objectFit: "contain",
-            }}
-            mx="auto"
-            mt={-24}
-            mb={{ base: 0, lg: -24 }}
-          />
-        </Flex>
-      )}
-      <Flex
-        flexGrow={1}
-        flexShrink={0}
-        flexBasis="50%"
-        direction="column"
-        justifyContent="center"
-        ps={{ base: 0, sm: 4, lg: 8 }}
-        w={{ base: "full", lg: "inherit" }}
-      >
-        <OldHeading
-          as="h2"
-          mt={0}
-          fontSize={{ base: "2xl", sm: "2rem" }}
-          lineHeight="1.4"
-        >
+      <div className="flex">
+        <TwImage
+          src={image}
+          alt={alt}
+          width={imageWidth}
+          className="-my-24 mx-auto object-contain max-lg:mb-0"
+        />
+      </div>
+
+      <div className="flex w-full flex-shrink-0 flex-grow basis-1/2 flex-col justify-center sm:ps-4 lg:w-[inherit] lg:ps-8">
+        <h2 className="mb-8 text-2xl leading-xs sm:text-[2rem]">
           {t(titleKey)}
-        </OldHeading>
-        <Text fontSize="xl" w="90%" lineHeight="140%" mb={8} color="text200">
+        </h2>
+        <p className="mb-8 w-[90%] text-xl text-body-medium">
           {t(descriptionKey)}
-        </Text>
+        </p>
         {children}
-      </Flex>
-    </Flex>
+      </div>
+    </aside>
   )
 }
 

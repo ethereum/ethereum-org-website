@@ -55,7 +55,7 @@ Il blocco `body` contiene a sua volta diversi campi:
 | `et1_data`           | informazioni sul contratto di deposito                                 |
 | `graffiti`           | dati arbitrari utilizzati per contrassegnare blocchi                   |
 | `proposer_slashings` | elenco di validatori da tagliare                                       |
-| `taglio_attestatori` | elenco di validatori da tagliare                                       |
+| `taglio_attestatori` | elenco di attestatori da tagliare                                      |
 | `attestazioni`       | elenco di attestazioni a favore del blocco corrente                    |
 | `depositi`           | elenco dei nuovi depositi nel contratto di deposito                    |
 | `uscite_volontarie`  | elenco di validatori che escono dalla rete                             |
@@ -127,7 +127,7 @@ L'elenco dei `withdrawals` contiene oggetti `withdrawal` strutturati nel modo se
 | Campo            | Descrizione                          |
 |:---------------- |:------------------------------------ |
 | `address`        | indirizzo del conto che ha prelevato |
-| `amount`         | importo del prelievo                 |
+| `importo`        | importo del prelievo                 |
 | `indice`         | valore dell'indice di prelievo       |
 | `validatorIndex` | valore dell'indice del validatore    |
 
@@ -139,7 +139,7 @@ Questa implementazione differisce dai sistemi basati sul proof-of-work, in cui i
 
 ## Dimensioni del blocco {#block-size}
 
-Un'ultima nota importante: i blocchi stessi sono limitati in termini di dimensioni. Ogni blocco ha una dimensione prevista di 15 milioni di gas, ma la dimensione dei blocchi aumenterà o diminuirà in base alle esigenze della rete, fino al limite di 30 milioni di gas (2x dimensioni del blocco previste). La quantità totale di carburante usato da tutte le transazioni nel blocco deve essere inferiore al limite di carburante del blocco. Ciò è importante perché evita che i blocchi siano arbitrariamente grandi. Se i blocchi potessero essere arbitrariamente grandi, i nodi completi meno performanti, gradualmente, non riuscirebbero più stare al passo con la rete per via dei requisiti di spazio e velocità. Più grande è il blocco, maggiore sarà la potenza di calcolo richiesta per elaborarlo in tempo per il prossimo slot. Questa è una forza centralizzante, a cui si resiste limitando le dimensioni dei blocchi.
+Un'ultima nota importante: i blocchi stessi sono limitati in termini di dimensioni. Ogni blocco ha una dimensione prevista di 15 milioni di gas, ma la dimensione dei blocchi aumenterà o diminuirà in base alle esigenze della rete, fino al limite di 30 milioni di gas (2x dimensioni del blocco previste). Il limite di gas del blocco è regolabile per eccesso o per difetto con un fattore di 1/1024 rispetto al limite di gas del blocco precedente. Di conseguenza, i validatori possono modificare il limite di gas del blocco tramite il consenso. La quantità totale di carburante usato da tutte le transazioni nel blocco deve essere inferiore al limite di carburante del blocco. Ciò è importante perché evita che i blocchi siano arbitrariamente grandi. Se i blocchi potessero essere arbitrariamente grandi, i nodi completi meno performanti, gradualmente, non riuscirebbero più stare al passo con la rete per via dei requisiti di spazio e velocità. Più grande è il blocco, maggiore sarà la potenza di calcolo richiesta per elaborarlo in tempo per il prossimo slot. Questa è una forza centralizzante, a cui si resiste limitando le dimensioni dei blocchi.
 
 ## Letture consigliate {#further-reading}
 
