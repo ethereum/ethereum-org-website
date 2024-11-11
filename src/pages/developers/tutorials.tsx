@@ -21,13 +21,13 @@ import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import InlineLink, { BaseLink } from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
-import Modal from "@/components/Modal"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 import { getSkillTranslationId, Skill } from "@/components/TutorialMetadata"
 import TutorialTags from "@/components/TutorialTags"
+import Modal from "@/components/ui/dialog-modal"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -42,6 +42,7 @@ import {
 
 import externalTutorials from "@/data/externalTutorials.json"
 
+import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
@@ -205,6 +206,8 @@ const TutorialPage = ({
   }
 
   const dir = contentNotTranslated ? "ltr" : "unset"
+
+  const modalSize = useBreakpointValue({ base: "xl", md: "md" } as const)
   return (
     <Flex
       as={MainArticle}
@@ -248,9 +251,9 @@ const TutorialPage = ({
       </Text>
 
       <Modal
-        isOpen={isModalOpen}
-        onClose={() => setModalOpen(false)}
-        size={{ base: "full", md: "xl" }}
+        open={isModalOpen}
+        onOpenChange={(open) => setModalOpen(open)}
+        size={modalSize}
         contentProps={{ dir }}
         title={
           <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
