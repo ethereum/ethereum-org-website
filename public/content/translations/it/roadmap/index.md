@@ -8,10 +8,10 @@ alt: "Roadmap di Ethereum"
 summaryPoints:
 buttons:
   - 
-    label: Ulteriori aggiornamenti
+    content: Ulteriori aggiornamenti
     toId: what-changes-are-coming
   - 
-    label: Aggiornamenti precedenti
+    content: Aggiornamenti precedenti
     href: /history/
     variant: delineazione
 ---

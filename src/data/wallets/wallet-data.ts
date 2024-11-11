@@ -8,6 +8,7 @@ import AuroxImage from "@/public/images/wallets/aurox.png"
 import BitkeepImage from "@/public/images/wallets/bitkeep.png"
 import BlockWalletImage from "@/public/images/wallets/blockwallet.png"
 import BridgeWalletImage from "@/public/images/wallets/bridge.png"
+import ClearWallet from "@/public/images/wallets/clearwallet.png"
 import CoinbaseImage from "@/public/images/wallets/coinbase.png"
 import CoinWalletImage from "@/public/images/wallets/coinwallet.png"
 import CtrlWalletImage from "@/public/images/wallets/ctrl.png"
@@ -86,6 +87,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://support.keyst.one/",
     documentation: "https://guide.keyst.one/",
+    networks_supported: ["mainnet", "evm"],
   },
   {
     last_updated: "2024-10-30",
@@ -133,6 +135,7 @@ export const walletsData: WalletData[] = [
     social_recovery: true,
     onboard_documentation: "https://docs-wallet.loopring.io/",
     documentation: "",
+    networks_supported: ["mainnet"],
   },
   {
     last_updated: "2024-03-07",
@@ -179,6 +182,7 @@ export const walletsData: WalletData[] = [
     social_recovery: true,
     onboard_documentation: "https://www.argent.xyz/learn/",
     documentation: "",
+    networks_supported: ["starknet"],
   },
   {
     last_updated: "2022-11-15",
@@ -235,7 +239,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://www.coinbase.com/wallet/tutorials",
     documentation: "",
     new_to_crypto: true,
-    // note: "Community contribution, let's follow up with Coinbase",
+    networks_supported: ["mainnet", "optimism", "base", "arbitrum", "blast"],
   },
   {
     last_updated: "2022-06-22",
@@ -280,6 +284,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation:
       "https://framelabs.notion.site/Getting-Started-Guide-775a95edec3244ce80e118ead8ea6516",
     documentation: "",
+    networks_supported: ["mainnet"],
   },
   {
     last_updated: "2022-06-22",
@@ -368,6 +373,14 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://support.metamask.io",
     documentation: "",
+    networks_supported: [
+      "mainnet",
+      "linea",
+      "optimism",
+      "arbitrum",
+      "zksync_era",
+      "base",
+    ],
   },
   {
     last_updated: "2023-01-25",
@@ -411,6 +424,16 @@ export const walletsData: WalletData[] = [
     social_recovery: true,
     onboard_documentation: "https://docs.safe.global/",
     documentation: "https://docs.safe.global/",
+    networks_supported: [
+      "mainnet",
+      "arbitrum",
+      "base",
+      "blast",
+      "linea",
+      "optimism",
+      "zksync_era",
+      "scroll",
+    ],
   },
   {
     last_updated: "May 10, 2024",
@@ -481,6 +504,17 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://coin.space/ethereum-wallet/",
     documentation: "https://support.coin.space/hc/en-us",
+    networks_supported: [
+      "mainnet",
+      "arbitrum",
+      "optimism",
+      "base",
+      "zksync_era",
+      "scroll",
+      "linea",
+      "mode",
+      "blast",
+    ],
   },
   {
     last_updated: "2024-10-30",
@@ -525,6 +559,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation:
       "https://help.ambire.com/hc/en-us/categories/4404980091538-Ambire-Wallet",
     documentation: "",
+    networks_supported: ["mainnet", "optimism", "base", "arbitrum", "scroll"],
   },
   {
     last_updated: "2024-08-31",
@@ -580,6 +615,15 @@ export const walletsData: WalletData[] = [
     onboard_documentation:
       "https://support.token.im/hc/categories/360000925393",
     documentation: "https://support.token.im/hc/en-us",
+    networks_supported: [
+      "mainnet",
+      "arbitrum",
+      "optimism",
+      "base",
+      "linea",
+      "scroll",
+      "zksync_era",
+    ],
   },
   {
     last_updated: "2024-08-30",
@@ -640,6 +684,13 @@ export const walletsData: WalletData[] = [
     onboard_documentation:
       "https://help.1inch.io/en/collections/2897068-1inch-wallet",
     documentation: "",
+    networks_supported: [
+      "mainnet",
+      "optimism",
+      "arbitrum",
+      "zksync_era",
+      "base",
+    ],
   },
   {
     last_updated: "2024-10-30",
@@ -649,7 +700,22 @@ export const walletsData: WalletData[] = [
     twGradiantBrandColor: "from-[#ffffff]",
     url: "https://foxwallet.com/en",
     active_development_team: true,
-    languages_supported: ["en", "zh", "uk", "ru", "es", "id", "ja", "es", "hi", "vi", "tr", "ar", "bn", "th"],
+    languages_supported: [
+      "en",
+      "zh",
+      "uk",
+      "ru",
+      "es",
+      "id",
+      "ja",
+      "es",
+      "hi",
+      "vi",
+      "tr",
+      "ar",
+      "bn",
+      "th",
+    ],
     twitter: "https://twitter.com/FoxWallet",
     discord: "https://discord.com/invite/JVjVbe3Zth",
     reddit: "",
@@ -683,6 +749,14 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://hc.foxwallet.com/docs/",
     documentation: "https://hc.foxwallet.com/docs/faq",
+    networks_supported: [
+      "mainnet",
+      "arbitrum",
+      "linea",
+      "optimism",
+      "scroll",
+      "zksync_era",
+    ],
   },
   {
     last_updated: "2022-06-24",
@@ -729,6 +803,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://help.pillar.fi/en/",
+    networks_supported: ["mainnet"],
   },
   {
     last_updated: "2022-06-24",
@@ -774,6 +849,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://www.mewtopia.com/",
     documentation: "https://help.myetherwallet.com/en/",
     new_to_crypto: true,
+    networks_supported: ["mainnet", "zksync_era"],
   },
   {
     last_updated: "2022-06-24",
@@ -818,6 +894,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://unstoppable.money/faq",
+    networks_supported: ["mainnet"],
   },
 
   {
@@ -863,6 +940,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://alphawallet.zendesk.com/hc/en-us",
     documentation: "",
+    networks_supported: ["mainnet"],
   },
   {
     last_updated: "2024-07-24",
@@ -907,6 +985,13 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://www.mtpelerin.com/learn",
     documentation: "https://www.mtpelerin.com/support",
+    networks_supported: [
+      "mainnet",
+      "arbitrum",
+      "base",
+      "optimism",
+      "zksync_era",
+    ],
   },
   {
     last_updated: "2022-09-14",
@@ -952,6 +1037,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://docs.tor.us/wallet/faq-1/users",
     documentation: "https://docs.tor.us/",
     mpc: true,
+    networks_supported: ["mainnet"],
   },
   {
     last_updated: "2022-07-18",
@@ -1019,6 +1105,17 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://help.tokenpocket.pro/developer-en/",
+    networks_supported: [
+      "mainnet",
+      "arbitrum",
+      "optimism",
+      "base",
+      "blast",
+      "scroll",
+      "linea",
+      "zksync_era",
+      "evm",
+    ],
   },
   {
     last_updated: "2022-06-30",
@@ -1077,6 +1174,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://learn.rainbow.me/",
     documentation: "",
     new_to_crypto: true,
+    networks_supported: ["mainnet", "base", "optimism", "arbitrum", "blast"],
   },
   {
     last_updated: "2024-09-01",
@@ -1121,6 +1219,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://trezor.io/support",
     documentation: "https://trezor.io/learn",
+    networks_supported: ["mainnet"],
   },
   {
     last_updated: "2022-08-21",
@@ -1177,6 +1276,7 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "",
     documentation:
       "https://support.ledger.com/hc/en-us/categories/4404376139409?docs=true",
+    networks_supported: ["mainnet"],
   },
   {
     last_updated: "2024-08-16",
@@ -1221,6 +1321,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://docs.infinitywallet.io/",
+    networks_supported: ["mainnet", "arbitrum", "optimism", "base"],
   },
   {
     last_updated: "2022-08-19",
@@ -1271,6 +1372,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://support.exodus.com/",
+    networks_supported: ["mainnet"],
   },
   {
     last_updated: "2024-07-24",
@@ -1320,6 +1422,17 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "",
     documentation: "",
     new_to_crypto: false,
+    networks_supported: [
+      "mainnet",
+      "arbitrum",
+      "base",
+      "blast",
+      "mode",
+      "linea",
+      "optimism",
+      "scroll",
+      "zksync_era",
+    ],
   },
   {
     last_updated: "2024-09-26",
@@ -1381,6 +1494,16 @@ export const walletsData: WalletData[] = [
       "https://help.zerion.io/en/collections/5525626-zerion-wallet",
     documentation: "https://help.zerion.io/en/",
     new_to_crypto: true,
+    networks_supported: [
+      "mainnet",
+      "arbitrum",
+      "base",
+      "blast",
+      "linea",
+      "optimism",
+      "scroll",
+      "zksync_era",
+    ],
   },
   {
     last_updated: "2022-08-31",
@@ -1425,6 +1548,14 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://www.mewtopia.com/",
+    networks_supported: [
+      "mainnet",
+      "arbitrum",
+      "optimism",
+      "base",
+      "zksync_era",
+      "blast",
+    ],
   },
   {
     last_updated: "2022-10-31",
@@ -1469,6 +1600,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://www.youtube.com/c/GridPlus",
     documentation: "https://docs.gridplus.io/",
+    networks_supported: ["mainnet"],
   },
   {
     last_updated: "2023-01-24",
@@ -1513,6 +1645,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://study.bitkeep.com/en/",
     documentation: "https://docs.bitkeep.com/guide/",
+    networks_supported: ["mainnet"],
   },
   {
     last_updated: "2024-10-31",
@@ -1563,6 +1696,13 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://blockwallet.io/docs",
     documentation: "https://github.com/block-wallet/extension",
+    networks_supported: [
+      "mainnet",
+      "arbitrum",
+      "optimism",
+      "zksync_era",
+      "scroll",
+    ],
   },
   {
     last_updated: "2024-10-30",
@@ -1627,6 +1767,15 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://help.onekey.so/hc/en-us",
     documentation: "https://developer.onekey.so/guide/introduction",
     new_to_crypto: true,
+    networks_supported: [
+      "mainnet",
+      "optimism",
+      "zksync_era",
+      "arbitrum",
+      "linea",
+      "base",
+      "blast",
+    ],
   },
   {
     last_updated: "2023-04-21",
@@ -1676,6 +1825,7 @@ export const walletsData: WalletData[] = [
       "https://tahowallet.notion.site/Taho-Knowledge-Base-4d95ed5439c64d6db3d3d27abf1fdae5",
     documentation:
       "https://tahowallet.notion.site/Taho-Knowledge-Base-4d95ed5439c64d6db3d3d27abf1fdae5",
+    networks_supported: ["mainnet"],
   },
   {
     last_updated: "2024-10-30",
@@ -1729,9 +1879,7 @@ export const walletsData: WalletData[] = [
     open_source: false,
     repo_url: "https://github.com/phantom",
     non_custodial: true,
-    security_audit: [
-      "https://github.com/phantom/audit-reports",
-    ],
+    security_audit: ["https://github.com/phantom/audit-reports"],
     scam_protection: true,
     hardware_support: true,
     rpc_importing: false,
@@ -1750,6 +1898,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://phantom.app/learn",
     documentation: "https://docs.phantom.app/",
+    networks_supported: ["mainnet"],
   },
   {
     last_updated: "2023-08-29",
@@ -1796,6 +1945,7 @@ export const walletsData: WalletData[] = [
     social_recovery: true,
     onboard_documentation: "https://intercom.help/ctrlwallet/en/",
     documentation: "https://docs.xdefi.io/docs",
+    networks_supported: ["mainnet", "arbitrum", "optimism", "evm"],
   },
   {
     last_updated: "2023-11-02",
@@ -1859,6 +2009,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://community.trustwallet.com/",
     documentation: "https://developer.trustwallet.com/developer/",
+    networks_supported: ["mainnet"],
   },
   {
     last_updated: "2023-10-30",
@@ -1905,6 +2056,7 @@ export const walletsData: WalletData[] = [
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
     documentation:
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
+    networks_supported: ["mainnet"],
   },
   {
     last_updated: "2024-10-07",
@@ -1963,6 +2115,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://docs.shapeshift.com/",
     documentation: "https://docs.shapeshift.com/",
+    networks_supported: ["mainnet"],
   },
   {
     last_updated: "2024-06-20",
@@ -2022,6 +2175,51 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://docs.gemwallet.com/",
     documentation: "https://docs.gemwallet.com/",
+    networks_supported: ["mainnet"],
+  },
+  {
+    last_updated: "2024-10-31",
+    name: "Clear Wallet",
+    image: ClearWallet,
+    twBackgroundColor: "bg-[#0500FF]",
+    twGradiantBrandColor: "from-[#0500FF]",
+    url: "https://clear-wallet.flashsoft.eu/",
+    active_development_team: true,
+    languages_supported: ["en"],
+    twitter: "https://x.com/clear_wallet_",
+    discord: "https://discord.gg/wHaXy6nx",
+    reddit: "",
+    telegram: "https://t.me/evm_clear_wallet",
+    ios: false,
+    android: false,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: false,
+    chromium: true,
+    hardware: false,
+    open_source: true,
+    repo_url: "https://github.com/andrei0x309/clear-wallet",
+    non_custodial: true,
+    security_audit: [],
+    scam_protection: false,
+    hardware_support: false,
+    rpc_importing: true,
+    nft_support: false,
+    connect_to_dapps: true,
+    staking: false,
+    swaps: false,
+    multichain: true,
+    layer_2: true,
+    gas_fee_customization: true,
+    ens_support: false,
+    erc_20_support: true,
+    buy_crypto: false,
+    withdraw_crypto: false,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation: "https://clear-wallet.flashsoft.eu/",
+    documentation: "https://clear-wallet.flashsoft.eu/docs/",
   },
 ]
 

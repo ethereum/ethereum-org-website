@@ -7,7 +7,6 @@ import {
   useState,
 } from "react"
 import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
 import { ColumnDef } from "@tanstack/react-table"
 
 import type {
@@ -21,7 +20,6 @@ import Table from "@/components/DataTable"
 import Filters from "@/components/ProductTable/Filters"
 import MobileFilters from "@/components/ProductTable/MobileFilters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
-import { Button } from "@/components/ui/buttons/Button"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -51,7 +49,6 @@ const ProductTable = ({
   mobileFiltersLabel,
 }: ProductTableProps<ProductTableRow, ProductTableColumnDefs>) => {
   const router = useRouter()
-  const { t } = useTranslation("table")
   const [activePresets, setActivePresets] = useState<number[]>([])
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
@@ -268,40 +265,15 @@ const ProductTable = ({
             />
           </div>
           <div className="flex-1">
-            <div className="sticky top-[76px] z-10 flex flex-row items-center justify-between border-b border-b-primary bg-body-inverse px-2 py-2">
-              <Button
-                variant="ghost"
-                className="block p-0 lg:hidden"
-                onClick={() => {
-                  trackCustomEvent({
-                    eventCategory: "MobileFilterToggle",
-                    eventAction: "Tap MobileFilterToggle - sticky",
-                    eventName: "show mobile filters true",
-                  })
-                  setMobileFiltersOpen(true)
-                }}
-              >
-                <p className="text-md">
-                  {`${t("table-filters")} (${activeFiltersCount})`}
-                </p>
-              </Button>
-              <p>
-                {t("table-showing")}{" "}
-                {data.length === allDataLength ? (
-                  <b>{data.length}</b>
-                ) : (
-                  <b>
-                    {data.length}/{allDataLength}
-                  </b>
-                )}
-              </p>
-            </div>
             <Table
               variant="product"
               columns={columns}
               data={data}
               subComponent={subComponent}
               noResultsComponent={noResultsComponent}
+              allDataLength={allDataLength}
+              setMobileFiltersOpen={setMobileFiltersOpen}
+              activeFiltersCount={activeFiltersCount}
             />
           </div>
         </div>

@@ -20,6 +20,7 @@ import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import type { SimulatorNav } from "@/components/Simulator/interfaces"
 
+import { Rollup, Rollups } from "@/data/layer-2/layer-2"
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
@@ -546,6 +547,7 @@ export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   dailyTxCosts: Record<string, number>
+  activeAddresses: Record<string, number>
 }
 
 export type MetricName =
@@ -627,6 +629,7 @@ export interface WalletData {
   documentation: string
   mpc?: boolean
   new_to_crypto?: boolean
+  networks_supported: string[]
 }
 
 export type Wallet = WalletData & {
@@ -726,9 +729,9 @@ export type TPresetFilters = WalletPersonas[]
 
 export type ProductTablePresetFilters = WalletPersonas[]
 
-export type ProductTableColumnDefs = ColumnDef<Wallet>
+export type ProductTableColumnDefs = ColumnDef<Wallet | Rollups>
 
-export type ProductTableRow = Wallet
+export type ProductTableRow = Wallet | Rollup
 
 export interface DropdownOption {
   label: string

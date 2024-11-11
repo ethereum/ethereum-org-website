@@ -11,6 +11,8 @@ import StarknetLogo from "@/public/images/layer-2/starknet.png"
 import ZkSyncEraLogo from "@/public/images/layer-2/zksyncEra.jpg"
 
 export interface Rollup {
+  l2beatID: string
+  growthepieID: string
   name: string
   logo: StaticImageData
   networkType: "optimistic" | "zk"
@@ -28,6 +30,8 @@ export type Rollups = Rollup[]
 
 export const layer2Data: Rollups = [
   {
+    l2beatID: "arbitrum",
+    growthepieID: "arbitrum",
     name: "Arbitrum One",
     logo: ArbitrumLogo,
     networkType: "optimistic",
@@ -42,6 +46,8 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
+    l2beatID: "base",
+    growthepieID: "base",
     name: "Base",
     logo: BaseLogo,
     networkType: "optimistic",
@@ -56,6 +62,8 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
+    l2beatID: "optimism",
+    growthepieID: "optimism",
     name: "Optimism",
     logo: OptimismLogo,
     networkType: "optimistic",
@@ -70,6 +78,8 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
+    l2beatID: "blast",
+    growthepieID: "blast",
     name: "Blast",
     logo: BlastImage,
     networkType: "optimistic",
@@ -84,6 +94,8 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
+    l2beatID: "zksync2",
+    growthepieID: "zksync_era",
     name: "ZKSync Era",
     logo: ZkSyncEraLogo,
     networkType: "zk",
@@ -98,6 +110,8 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
+    l2beatID: "linea",
+    growthepieID: "linea",
     name: "Linea",
     logo: LineaLogo,
     networkType: "zk",
@@ -112,6 +126,8 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
+    l2beatID: "scroll",
+    growthepieID: "scroll",
     name: "Scroll",
     logo: ScrollLogo,
     networkType: "zk",
@@ -126,6 +142,8 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH"],
   },
   {
+    l2beatID: "starknet",
+    growthepieID: "starknet",
     name: "Starknet",
     logo: StarknetLogo,
     networkType: "zk",
@@ -140,6 +158,8 @@ export const layer2Data: Rollups = [
     feeToken: ["ETH", "STRK"],
   },
   {
+    l2beatID: "mode",
+    growthepieID: "mode",
     name: "Mode",
     logo: ModeLogo,
     networkType: "optimistic",
