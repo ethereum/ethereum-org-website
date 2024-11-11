@@ -19,7 +19,7 @@ export async function fetchCommunityEvents(): Promise<CommunityEventsReturnType>
   const pastEvents = await pastEventsReq.json()
   const pastEventsReqData: ReqCommunityEvent[] = pastEvents.items
 
-  const pastEventData = pastEventsReqData
+  const pastEventData = (pastEventsReqData ?? [])
     .filter((event) => event.start)
     .slice(-4)
     .map((event) => {
@@ -29,7 +29,7 @@ export async function fetchCommunityEvents(): Promise<CommunityEventsReturnType>
         calendarLink: event.htmlLink,
       }
     })
-  const upcomingEventData = futureEventsReqData
+  const upcomingEventData = (futureEventsReqData ?? [])
     .filter((event) => event.start)
     .reverse()
     .map((event) => {
