@@ -1,6 +1,7 @@
 import { MdInfoOutline } from "react-icons/md"
 
 import { ButtonLink } from "@/components/Buttons"
+import NetworkUsageChart from "@/components/Layer2NetworksTable/NetworkUsageChart"
 import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
 
@@ -20,8 +21,8 @@ const formatNumber = (num: number): string => {
 const NetworkSubComponent = ({ network }) => {
   return (
     <div className="flex w-full flex-col gap-4 px-6 pb-4">
-      <div className="flex flex-row gap-8">
-        <div className="flex flex-1 flex-col gap-4 bg-background p-4">
+      <div className="flex flex-col gap-8 md:flex-row">
+        <div className="flex h-fit flex-1 flex-col gap-4 bg-background p-4">
           <div className="flex flex-row gap-4">
             <div className="flex-1">
               <div>
@@ -138,29 +139,41 @@ const NetworkSubComponent = ({ network }) => {
           </div>
         </div>
         <div className="flex-1 gap-2">
-          <p className="text-xs font-bold text-body-medium">
-            Network usage{" "}
-            <Tooltip
-              content={
-                <div className="flex flex-col gap-2">
-                  <p className="text-lg font-bold">Network usage</p>
-                  <p>
-                    An overview of network usage. Measures transaction count in
-                    respective areas within the last 30 days.
-                  </p>
-                  <p>
-                    Data from{" "}
-                    <InlineLink href="https://growthepie.xyz">
-                      Growthepie
-                    </InlineLink>
-                    .
-                  </p>
+          <div>
+            <p className="text-xs font-bold text-body-medium">
+              Network usage{" "}
+              <Tooltip
+                content={
+                  <div className="flex flex-col gap-2">
+                    <p className="text-lg font-bold">Network usage</p>
+                    <p>
+                      An overview of network usage. Measures transaction count
+                      in respective areas within the last 30 days.
+                    </p>
+                    <p>
+                      Data from{" "}
+                      <InlineLink href="https://growthepie.xyz">
+                        Growthepie
+                      </InlineLink>
+                      .
+                    </p>
+                  </div>
+                }
+              >
+                <MdInfoOutline className="translate-y-0.5" />
+              </Tooltip>
+            </p>
+            <div className="w-full">
+              {network.blockspaceData && (
+                <NetworkUsageChart usageData={network.blockspaceData} />
+              )}
+              {network.blockspaceData === null && (
+                <div className="flex h-20 w-full items-center justify-center">
+                  <p>No data available</p>
                 </div>
-              }
-            >
-              <MdInfoOutline className="translate-y-0.5" />
-            </Tooltip>
-          </p>
+              )}
+            </div>
+          </div>
         </div>
       </div>
       <div className="flex flex-col gap-6 p-4">
