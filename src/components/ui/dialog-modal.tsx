@@ -19,7 +19,7 @@ const dialogVariant = tv({
     header: "relative pe-12",
     title: "text-2xl",
     footer: "pt-8",
-    close: "text-md size-8 z-10",
+    close: "text-md size-8 z-10 absolute end-0 top-0",
   },
   variants: {
     size: {
@@ -31,7 +31,10 @@ const dialogVariant = tv({
       },
     },
     isSimulator: {
-      true: {},
+      true: {
+        close: "static ms-auto",
+        header: "pe-0",
+      },
     },
   },
   defaultVariants: {
@@ -110,8 +113,8 @@ const DialogHeader = ({
   return (
     <div className={cn(header(), className)} {...props}>
       {children}
-      <Center className="absolute end-0 top-0" asChild>
-        <DialogPrimitive.Close className={close()}>
+      <Center className={close()} asChild>
+        <DialogPrimitive.Close>
           <MdClose />
           <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
