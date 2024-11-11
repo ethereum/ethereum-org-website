@@ -629,6 +629,7 @@ export interface WalletData {
   documentation: string
   mpc?: boolean
   new_to_crypto?: boolean
+  networks_supported: string[]
 }
 
 export type Wallet = WalletData & {
