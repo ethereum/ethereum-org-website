@@ -8,6 +8,7 @@ import AuroxImage from "@/public/images/wallets/aurox.png"
 import BitkeepImage from "@/public/images/wallets/bitkeep.png"
 import BlockWalletImage from "@/public/images/wallets/blockwallet.png"
 import BridgeWalletImage from "@/public/images/wallets/bridge.png"
+import ClearWallet from "@/public/images/wallets/clearwallet.png"
 import CoinbaseImage from "@/public/images/wallets/coinbase.png"
 import CoinWalletImage from "@/public/images/wallets/coinwallet.png"
 import CtrlWalletImage from "@/public/images/wallets/ctrl.png"
@@ -2175,6 +2176,50 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://docs.gemwallet.com/",
     documentation: "https://docs.gemwallet.com/",
     networks_supported: ["mainnet"],
+  },
+  {
+    last_updated: "2024-10-31",
+    name: "Clear Wallet",
+    image: ClearWallet,
+    twBackgroundColor: "bg-[#0500FF]",
+    twGradiantBrandColor: "from-[#0500FF]",
+    url: "https://clear-wallet.flashsoft.eu/",
+    active_development_team: true,
+    languages_supported: ["en"],
+    twitter: "https://x.com/clear_wallet_",
+    discord: "https://discord.gg/wHaXy6nx",
+    reddit: "",
+    telegram: "https://t.me/evm_clear_wallet",
+    ios: false,
+    android: false,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: false,
+    chromium: true,
+    hardware: false,
+    open_source: true,
+    repo_url: "https://github.com/andrei0x309/clear-wallet",
+    non_custodial: true,
+    security_audit: [],
+    scam_protection: false,
+    hardware_support: false,
+    rpc_importing: true,
+    nft_support: false,
+    connect_to_dapps: true,
+    staking: false,
+    swaps: false,
+    multichain: true,
+    layer_2: true,
+    gas_fee_customization: true,
+    ens_support: false,
+    erc_20_support: true,
+    buy_crypto: false,
+    withdraw_crypto: false,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation: "https://clear-wallet.flashsoft.eu/",
+    documentation: "https://clear-wallet.flashsoft.eu/docs/",
   },
 ]
 
