@@ -8,10 +8,10 @@ alt: "Ethereum-ütemterv"
 summaryPoints:
 buttons:
   - 
-    label: Várható fejlesztések
+    content: Várható fejlesztések
     toId: what-changes-are-coming
   - 
-    label: Korábbi fejlesztések
+    content: Korábbi fejlesztések
     href: /history/
     variant: vázlat
 ---

@@ -8,10 +8,10 @@ alt: "Feuille de route d'Ethereum"
 summaryPoints:
 buttons:
   - 
-    label: Améliorations ultérieures
+    content: Améliorations ultérieures
     toId: what-changes-are-coming
   - 
-    label: Améliorations antérieures
+    content: Améliorations antérieures
     href: /history/
     variant: outline
 ---

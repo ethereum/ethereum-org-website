@@ -12,7 +12,7 @@ summaryPoint2: Produkte, mit denen Sie sich Geld leihen, sparen, investieren sow
 summaryPoint3: Die Grundlage bildet Open-Source-Technologie, mit der jeder programmieren kann.
 ---
 
-DeFi ist ein offenes und globales Finanzsystem für das Zeitalter des Internets und bietet eine Alternative zu dem undurchsichtigen und streng kontrollierten System, das durch jahrzehntealte Infrastruktur und Prozesse zusammengehalten wird. Es gibt Ihnen Kontrollmöglichkeiten und Transparenz über Ihr Geld zurück. Zudem ermöglicht es Ihnen den Zugang zu globalen Märkten und Alternativen zu lokalen Währungs- oder Banksystemen. DeFi-Produkte ermöglichen jedem mit einer Internetverbindung den Zugang zu Finanzdienstleistungen. Sie sind zudem größtenteils im Besitz der eigenen Nutzer, die auch die Verwaltung übernehmen. Bis dato sind viele Milliarden Dollar an Kryptowährungen durch DeFi-Anwendungen geflossen und jeden Tag wird die Summe mehr.
+DeFi ist ein offenes und globales Finanzsystem für das Zeitalter des Internets und bietet eine Alternative zu dem undurchsichtigen und streng kontrollierten System, das durch jahrzehntealte Infrastruktur und Prozesse zusammengehalten wird. Es gibt Ihnen Kontrollmöglichkeiten und Transparenz über Ihr Geld zurück. Zudem ermöglicht es Ihnen den Zugang zu globalen Märkten und Alternativen zu lokalen Währungs- oder Banksystemen. DeFi-Produkte ermöglichen jedem mit einer Internetverbindung den Zugang zu Finanzdienstleistungen. Sie sind zudem größtenteils im Besitz der eigenen Benutzer, die auch die Verwaltung übernehmen. Bis dato sind viele Milliarden Dollar an Kryptowährungen durch DeFi-Anwendungen geflossen und jeden Tag wird die Summe mehr.
 
 ## Was ist DeFi? {#what-is-defi}
 
