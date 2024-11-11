@@ -13,7 +13,7 @@ import { useDisclosure } from "@/hooks/useDisclosure"
 const dialogVariant = tv({
   slots: {
     content:
-      "data-[state=open]:animate-contentShow w-full fixed left-1/2 top-1/2 grid -translate-x-1/2 -translate-y-1/2 gap-4 rounded-md bg-white p-8 shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none z-modal",
+      "data-[state=open]:animate-contentShow w-full fixed left-1/2 top-1/2 grid -translate-x-1/2 -translate-y-1/2 gap-4 rounded-md bg-background p-8 shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none z-modal",
     overlay:
       "data-[state=open]:animate-overlayShow fixed inset-0 bg-black/70 z-overlay",
     header: "relative pe-12",
