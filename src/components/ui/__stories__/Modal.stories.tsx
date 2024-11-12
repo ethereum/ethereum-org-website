@@ -4,7 +4,7 @@ import { fn } from "@storybook/test"
 import ModalComponent from "../dialog-modal"
 
 const meta = {
-  title: "Molecules/Overlay Content/ShadCN Modal",
+  title: "Molecules/Overlay Content/Modal",
   component: ModalComponent,
   args: {
     defaultOpen: true,
