@@ -39,9 +39,9 @@ import Translation from "@/components/Translation"
 import { Divider } from "@/components/ui/divider"
 
 import { cn } from "@/lib/utils/cn"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -91,9 +91,16 @@ type Props = BasePageProps & {
   marketsHasError: boolean
 }
 
-// Fetch external API data once to avoid hitting rate limit
-const ethereumEcosystemDataFetch = runOnlyOnce(fetchEthereumEcosystemData)
-const ethereumStablecoinsDataFetch = runOnlyOnce(fetchEthereumStablecoinsData)
+// In seconds
+const REVALIDATE_TIME = BASE_TIME_UNIT * 1
+
+const loadData = dataLoader<[EthereumDataResponse, StablecoinDataResponse]>(
+  [
+    ["ethereumEcosystemData", fetchEthereumEcosystemData],
+    ["ethereumStablecoinsData", fetchEthereumStablecoinsData],
+  ],
+  REVALIDATE_TIME * 1000
+)
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
@@ -140,12 +147,7 @@ export const getStaticProps = (async ({ locale }) => {
   }
 
   try {
-    // Fetch token data in the Ethereum ecosystem
-    const ethereumEcosystemData: EthereumDataResponse =
-      await ethereumEcosystemDataFetch()
-    // Fetch token data for stablecoins
-    const stablecoinsData: StablecoinDataResponse =
-      await ethereumStablecoinsDataFetch()
+    const [ethereumEcosystemData, stablecoinsData] = await loadData()
 
     // Get the intersection of stablecoins and Ethereum tokens to only have a list of data for stablecoins in the Ethereum ecosystem
     const ethereumStablecoinData = stablecoinsData.filter(
@@ -189,8 +191,6 @@ export const getStaticProps = (async ({ locale }) => {
       markets,
       marketsHasError,
     },
-    // Updated once a week
-    revalidate: BASE_TIME_UNIT * 24 * 7,
   }
 }) satisfies GetStaticProps<Props>
 
@@ -349,7 +349,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       url: "https://aave.com",
       alt: t("aave-logo"),
       image: aaveImg,
-      width: "64px",
+      width: 64,
       name: "Aave",
       description: t("page-stablecoins-stablecoins-dapp-description-1"),
     },
@@ -358,7 +358,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       url: "https://compound.finance",
       alt: t("compound-logo"),
       image: compoundImg,
-      width: "160px",
+      width: 160,
       name: "Compound",
       description: t("page-stablecoins-stablecoins-dapp-description-2"),
     },
@@ -367,7 +367,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       url: "https://summer.fi/",
       alt: t("summerfi-logo"),
       image: summerfiImg,
-      width: "80px",
+      width: 80,
       name: "Summer.fi",
       description: t("page-stablecoins-stablecoins-dapp-description-4"),
     },

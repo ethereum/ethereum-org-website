@@ -54,6 +54,10 @@ const quizzes = {
     title: "stablecoins",
     questions: ["m001", "m002", "m003", "m004", "m005"],
   },
+  defi: {
+    title: "DeFi",
+    questions: ["n001", "n002", "n003", "n004", "n005"],
+  },
 } satisfies RawQuizzes
 
 export const ethereumBasicsQuizzes: QuizzesSection[] = [
@@ -91,6 +95,11 @@ export const usingEthereumQuizzes: QuizzesSection[] = [
   },
   {
     id: "stablecoins",
+    level: "beginner",
+    next: "defi",
+  },
+  {
+    id: "defi",
     level: "beginner",
     next: "layer-2",
   },

@@ -1,7 +1,5 @@
 import { QuizStatus } from "@/lib/types"
 
-import { cn } from "@/lib/utils/cn"
-
 import Modal, { type ModalProps } from "../ui/dialog-modal"
 import { Center } from "../ui/flex"
 
@@ -21,14 +19,12 @@ const QuizzesModal = ({
   onQuizModalOpenChange,
   ...props
 }: QuizzesModalProps) => {
-  const getStatusClass = () => {
-    if (quizStatus === "neutral") {
-      return "bg-background"
-    }
-    if (quizStatus === "success") {
-      return "bg-success"
-    }
-    return "bg-error"
+  // TODO: remove bang in utility class names when Modal is migrated
+  const getStatusColorClass = () => {
+    if (quizStatus === "neutral") return "!bg-background"
+    if (quizStatus === "success")
+      return "!bg-success-light dark:!bg-success-dark"
+    return "!bg-error-light dark:!bg-error-dark"
   }
 
   const size = useBreakpointValue<ModalProps["size"]>({ base: "xl", md: "md" })!
@@ -38,12 +34,10 @@ const QuizzesModal = ({
       open={isQuizModalOpen}
       onOpenChange={onQuizModalOpenChange}
       size={size}
-      contentProps={{
-        className: getStatusClass(),
-      }}
+      contentProps={{ className: getStatusColorClass() }}
       {...props}
     >
-      <Center className={cn("m-0", getStatusClass())}>{children}</Center>
+      <Center>{children}</Center>
     </Modal>
   )
 }

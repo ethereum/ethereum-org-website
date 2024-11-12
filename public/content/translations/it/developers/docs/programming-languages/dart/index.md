@@ -20,7 +20,7 @@ incomplete: true
 
 ## Lavorare con i client di Ethereum {#working-with-ethereum-clients}
 
-Puoi usare Ethereum per creare applicazioni decentralizzate (o "dapp") che utilizzano i benefici delle criptovalute e la tecnologia della blockchain. Esistono almeno due librerie che vengono attualmente mantenute per Dart per poter usare l'[API RPC di JSON](/developers/docs/apis/json-rpc/) per Ethereum.
+Puoi usare Ethereum per creare applicazioni decentralizzate (o "dapp") che utilizzano i benefici delle criptovalute e la tecnologia della blockchain. Esistono almeno due librerie attualmente mantenute per Dart per utilizzare l'[API di JSON-RPC](/developers/docs/apis/json-rpc/) per Ethereum.
 
 1. [Web3dart da simonbutler.eu](https://pub.dev/packages/web3dart)
 1. [Ethereum 5.0.0 da darticulate.com](https://pub.dev/packages/ethereum)
