@@ -64,7 +64,7 @@ La arquitectura del código base debería hacer que el código sea fácil de rev
 
 ### Evite inconvenientes conocidos {#avoid-known-pitfalls}
 
-- **Tenga presente los problemas de seguridad más comunes.** Hay muchos recursos en línea para aprender sobre problemas comunes, tales como [Ethernaut CTF](https://ethernaut.openzeppelin.com/), [Capture the Ether](https://capturetheether.com/) o [Not so smart contracts](https://github.com/crytic/not-so-smart-contracts/).
+- **Tenga presente los problemas de seguridad más comunes.** Hay muchos recursos en línea para aprender sobre problemas comunes, tales como [Ethernaut CTF](https://ethernaut.openzeppelin.com/) o [Not so smart contracts](https://github.com/crytic/not-so-smart-contracts/).
 - **Tenga en cuenta las secciones de advertencias de la [documentación de Solidity](https://solidity.readthedocs.io/en/latest/).** Las secciones de advertencias lo informarán sobre el comportamiento no obvio del lenguaje.
 
 ### Dependencias {#dependencies}

@@ -25,7 +25,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import AlchemyUniversityImage from "@/public/images/dev-tools/alchemyuniversity.png"
 import AtlasImage from "@/public/images/dev-tools/atlas.png"
 import BloomTechImage from "@/public/images/dev-tools/bloomtech.png"
-import CaptureTheEtherImage from "@/public/images/dev-tools/capturetheether.png"
 import ChainIDEImage from "@/public/images/dev-tools/chainIDE.png"
 import ConsensysImage from "@/public/images/dev-tools/consensys.png"
 import CryptoZombieImage from "@/public/images/dev-tools/crypto-zombie.png"
@@ -264,19 +263,6 @@ const LearningToolsPage = () => {
         "page-developers-learning-tools:page-learning-tools-ethernauts-logo-alt"
       ),
       background: "#4f62dc",
-      subjects: ["Solidity"],
-    },
-    {
-      name: "Capture The Ether",
-      description: t(
-        "page-developers-learning-tools:page-learning-tools-capture-the-ether-description"
-      ),
-      url: "https://capturetheether.com/",
-      image: CaptureTheEtherImage,
-      alt: t(
-        "page-developers-learning-tools:page-learning-tools-capture-the-ether-logo-alt"
-      ),
-      background: "#1b9aaa",
       subjects: ["Solidity"],
     },
     {
