@@ -8,8 +8,6 @@ import { cn } from "@/lib/utils/cn"
 import { Button } from "./buttons/Button"
 import { Center, Flex } from "./flex"
 
-import { useDisclosure } from "@/hooks/useDisclosure"
-
 const dialogVariant = tv({
   slots: {
     content:
@@ -163,7 +161,6 @@ DialogDescription.displayName = DialogPrimitive.Description.displayName
 export type ModalProps = DialogProps & {
   children?: React.ReactNode
   title?: React.ReactNode
-  onClose?: () => void
   actionButton?: {
     label: string
     onClick: () => void
@@ -176,23 +173,10 @@ const Modal = ({
   title,
   actionButton,
   contentProps,
-  defaultOpen,
-  onClose,
   ...restProps
 }: ModalProps) => {
-  const {
-    onClose: onDisclosureClose,
-    isOpen,
-    setValue,
-  } = useDisclosure(defaultOpen)
-
-  const handleClose = () => {
-    onClose?.()
-    onDisclosureClose()
-  }
-
   return (
-    <Dialog open={isOpen} onOpenChange={setValue} {...restProps}>
+    <Dialog {...restProps}>
       <DialogContent {...contentProps}>
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
@@ -202,7 +186,7 @@ const Modal = ({
           <DialogFooter>
             <Flex className="justify-end gap-2">
               <DialogClose asChild>
-                <Button onClick={handleClose} variant="outline" isSecondary>
+                <Button variant="outline" isSecondary>
                   Cancel
                 </Button>
               </DialogClose>
