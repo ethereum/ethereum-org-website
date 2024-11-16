@@ -34,7 +34,7 @@ Die [Client-Vielfalt](/developers/docs/nodes-and-clients/client-diversity/) ist 
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/) verarbeitet Blockchain-Daten in relationalen Datenbanktabellen (PostgreSQL und DatabricksSQL) vor, ermöglicht Benutzern die Abfrage von Blockchain-Daten mit SQL und die Erstellung von Dashboards auf der Grundlage der Abfrageergebnisse. Die On-Chain-Daten sind in 4 Rohtabellen organisiert: `Blöcke`, `Transaktionen`, (Event) `Logs` und (Call) `Traces`. Beliebte Verträge und Protokolle liegen entschlüsselt vor und jedes hat seinen eigenen Satz von Event- und Call-Tabellen. Diese Event- und Call-Tabellen werden weiterverarbeitet und in Abstraktionstabellen nach der Art der Protokolle organisiert, z. B. Dex, Lending, Stablecoins usw.
+[Dune Analytics](https://dune.com/) verarbeitet Blockchain-Daten in relationalen Datenbanktabellen (DuneSQL) vor, ermöglicht Benutzern die Abfrage von Blockchain-Daten mit SQL und die Erstellung von Dashboards auf der Grundlage der Abfrageergebnisse. Die On-Chain-Daten sind in 4 Rohtabellen organisiert: `Blöcke`, `Transaktionen`, (Event) `Logs` und (Call) `Traces`. Beliebte Verträge und Protokolle liegen entschlüsselt vor und jedes hat seinen eigenen Satz von Event- und Call-Tabellen. Diese Event- und Call-Tabellen werden weiterverarbeitet und in Abstraktionstabellen nach der Art der Protokolle organisiert, z. B. Dex, Lending, Stablecoins usw.
 
 ## SubQuery Network {#subquery-network}
 
