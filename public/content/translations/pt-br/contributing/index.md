@@ -19,7 +19,7 @@ Nós somos uma comunidade de braços abertos que irá ajudá-lo a crescer e se i
 - [Trabalhe em um problema aberto](https://github.com/ethereum/ethereum-org-website/issues) – Trabalho que nós identificamos que deve ser feito
 
 **Visual**
-- [Ajude a estruturar o site ](/contributing/design/) Profissionais de design de todos os níveis podem contribuir para melhorar o site
+- [Ajude a estruturar o site](/contributing/design/) Profissionais de design de todos os níveis podem contribuir para melhorar o site
 
 **Conteúdo**
 - [Criar/editar conteúdo](/contributing/#how-to-update-content) – Sugira novas páginas ou ajustes para o que já existe aqui
