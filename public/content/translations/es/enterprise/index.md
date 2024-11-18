@@ -63,7 +63,6 @@ Diferentes organizaciones han colaborado para que Ethereum sea fácil de usar pa
 - [Baseline Project](https://www.baseline-protocol.org/)_: El Baseline Project es un conjunto de herramientas y bibliotecas que ayuda a las empresas a coordinar procesos y flujos de trabajo complejos y multipartitos con privacidad mientras se mantienen los datos en los respectivos sistemas de registro. El estándar permite que dos o más máquinas de estado logren y mantengan la consistencia de los datos y la continuidad del flujo de trabajo mediante el uso de una red como marco de referencia común._
 - [Chainlens](https://www.chainlens.com/)_: Plataforma de análisis y datos de cadena de bloques local y SaaS de Web3 Labs_.
 - [Ernst &Young's 'Nightfall'](https://github.com/EYBlockchain/nightfall_3)_: Aplicación para transferir aplicaciones ERC20, ERC721 y ERC1155 bajo Conocimiento Cero utilizando un rollup optimista_.
-- [Truffle Suite](https://trufflesuite.com)_: Suite de desarrollo de la cadena de bloques (Truffle, Ganache, Drizzle)_.
 
 ### Soluciones de escalabilidad {#scalability-solutions}
 

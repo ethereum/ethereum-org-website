@@ -63,7 +63,6 @@ Diversas organizações trabalharam juntas para tornar o Ethereum amigável para
 - [Baseline Project](https://www.baseline-protocol.org/) - _O Baseline Protocol é um conjunto de ferramentas e bibliotecas que ajuda empresas a coordenar processos e fluxos de trabalho complexos entre múltiplas partes com privacidade, mantendo os dados nos sistemas de registro respectivos. O padrão permite que duas ou mais máquinas de estado alcancem e mantenham a consistência dos dados e a continuidade do fluxo de trabalho, usando uma rede como uma estrutura de referência comum._
 - [Chainlens](https://www.chainlens.com/) - _Plataforma de dados e análises blockchain SaaS e on-premises da Web3 Labs_
 - [Ernst & Young's 'Nightfall'](https://github.com/EYBlockchain/nightfall_3) - _App para transferir aplicativos ERC20, ERC721 e ERC1155 sob Zero Knowledge, utilizando um Optimistic Rollup_
-- [Truffle Suite](https://trufflesuite.com) - _conjunto de desenvolvimento de blockchain (Truffle, Ganache, Drizzle)_
 
 ### Soluções de dimensionamento {#scalability-solutions}
 

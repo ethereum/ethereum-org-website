@@ -5,7 +5,7 @@ import { createIconBase } from "../icon-base"
 export const SenseiNodeGlyphIcon = createIconBase({
   displayName: "SenseiNodeGlyphIcon",
   viewBox: "0 0 23 32",
-  className: "h-auto w-[32px]",
+  className: "size-[1em]",
   ...commonIconDefaultAttrs,
   children: (
     <>

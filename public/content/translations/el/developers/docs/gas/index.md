@@ -122,6 +122,7 @@ lang: el
 Εάν θέλετε να παρακολουθείτε τις τιμές του gas, ώστε να μπορείτε να στείλετε τα ETH σας για λιγότερα, μπορείτε να χρησιμοποιήσετε πολλά διαφορετικά εργαλεία όπως:
 
 - [Etherscan](https://etherscan.io/gastracker) _Εκτιμητής τιμής gas συναλλαγής_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Παρακολουθήστε και ελέγξτε το Ethereum και τις τιμές gas L2 για να μειώσετε τα τέλη συναλλαγής και να εξοικονομήσετε χρήματα_
 - [Εκτιμητής ETH Gas Blocknative](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Επέκταση Chrome εκτίμησης gas που υποστηρίζει συναλλαγές παλαιού τύπου 0 και συναλλαγές τύπου 2 EIP-1559._
 - [Υπολογιστής τελών Gas Cryptoneur](https://www.cryptoneur.xyz/gas-fees-calculator) _Υπολογίστε τις χρεώσεις gas στο τοπικό σας νόμισμα για διαφορετικούς τύπους συναλλαγών σε Mainnet, Arbitrum και Polygon._
 
