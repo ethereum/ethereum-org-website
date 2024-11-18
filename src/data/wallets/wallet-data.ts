@@ -1555,7 +1555,7 @@ export const walletsData: WalletData[] = [
     repo_url: "https://github.com/block-wallet/extension",
     non_custodial: true,
     security_audit: [
-      "https://github.com/block-wallet/block-wallet/blob/a0a2396f0f0a3c17629e87c7fb000eb539dacb3f/audits/%5BKALOS%5D%20BlockWallet%20Audit%20Report%20v1.1.pdf",
+      "https://github.com/block-wallet/block-wallet/blob/a0a2396f0f0a3c17629e87c7fether-0eb539dacb3f/audits/%5BKALOS%5D%20BlockWallet%20Audit%20Report%20v1.1.pdf",
       "https://github.com/block-wallet/block-wallet/blob/main/audits/Least%20Authority%201.pdf",
       "https://github.com/block-wallet/block-wallet/blob/main/audits/BLW-01-report.v3.pdf",
       "https://immunefi.com/bounty/blockwallet/",
