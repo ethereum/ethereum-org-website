@@ -1,7 +1,7 @@
 ---
 title: Non-fungible tokens (NFT)
 description: Ethereumʼdagi NFTʼlar haqida umumiy ko‘rinish
-lang: en
+lang: uz
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2

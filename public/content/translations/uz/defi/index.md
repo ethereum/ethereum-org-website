@@ -1,7 +1,7 @@
 ---
 title: Markazlashmagan moliyaviy tizimlar (DeFi)
 description: Ethereumʼda DeFi haqida umumiy ma’lumot
-lang: en
+lang: uz
 template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png

@@ -1,7 +1,7 @@
 ---
 title: Markazlashtirilmagan avtonom tashkilotlar (DAO)
 description: Ethereumʼdagi DAOlar haqida umumiy ma’lumot
-lang: en
+lang: uz
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2

@@ -1,7 +1,7 @@
 ---
 title: Staking yechib olish
 description: Steyking push yechimlarining mohiyati, ishlash jarayoni va stavka qo‘yuvchilarning o‘z mukofotlarini olish uchun bajarishi lozim bo‘lgan harakatlar haqidagi ma’lumotlarni umumlashtiruvchi sahifa
-lang: en
+lang: uz
 template: staking
 image: /images/staking/leslie-withdrawal.png
 alt: Leslie the rhino with her staking rewards

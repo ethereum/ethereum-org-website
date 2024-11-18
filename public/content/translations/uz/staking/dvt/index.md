@@ -1,7 +1,7 @@
 ---
 title: Taqsimlangan validator texnologiyasi
 description: Taqsimlangan validator texnologiyasi Ethereum validatorining bir nechta tomonlar tomonidan taqsimlangan ishlashini ta’minlaydi.
-lang: en
+lang: uz
 ---
 
 # Taqsimlangan validator texnologiyasi {#distributed-validator-technology}
