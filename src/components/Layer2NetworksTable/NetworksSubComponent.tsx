@@ -180,15 +180,21 @@ const NetworkSubComponent = ({ network }) => {
         <div className="flex flex-col gap-1">
           <p className="text-xs text-body-medium">Links</p>
           <div className="flex flex-col gap-4">
-            <InlineLink href={network.website}>Official website</InlineLink>
+            <div>
+              <InlineLink href={network.website}>Official website</InlineLink>
+            </div>
             <div className="flex flex-col gap-0.5">
-              <InlineLink href={network.l2BeatLink}>Risk analysis</InlineLink>
+              <div>
+                <InlineLink href={network.l2BeatLink}>Risk analysis</InlineLink>
+              </div>
               <p className="text-xs text-body-medium">Assessment by L2BEAT</p>
             </div>
             <div className="flex flex-col gap-0.5">
-              <InlineLink href={network.growThePieLink}>
-                Detailed analytics
-              </InlineLink>
+              <div>
+                <InlineLink href={network.growThePieLink}>
+                  Detailed analytics
+                </InlineLink>
+              </div>
               <p className="text-xs text-body-medium">
                 Assessment by growthepie
               </p>
