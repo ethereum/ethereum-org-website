@@ -5,7 +5,7 @@ import { createIconBase } from "../icon-base"
 export const LaunchnodesGlyphIcon = createIconBase({
   displayName: "LaunchnodesGlyphIcon",
   viewBox: "0 0 44 44",
-  className: "h-auto w-[44px]",
+  className: "size-[1em]",
   ...commonIconDefaultAttrs,
   children: (
     <>

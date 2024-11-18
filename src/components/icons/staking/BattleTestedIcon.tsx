@@ -5,7 +5,7 @@ import { createIconBase } from "../icon-base"
 export const BattleTestedIcon = createIconBase({
   displayName: "BattleTestedIcon",
   viewBox: "0 0 72 72",
-  className: "h-auto w-[72px]",
+  className: "size-[1em]",
   ...commonIconDefaultAttrs,
   children: (
     <>

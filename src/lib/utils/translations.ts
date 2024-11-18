@@ -165,7 +165,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   if (path.endsWith("/wallets/find-wallet/")) {
     primaryNamespace = "page-wallets-find-wallet"
-    requiredNamespaces = [...requiredNamespaces, "page-wallets"]
+    requiredNamespaces = [...requiredNamespaces, "page-wallets", "table"]
   }
 
   if (path.startsWith("/layer-2/")) {
@@ -207,7 +207,8 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     path.startsWith("/web3/") ||
     path.startsWith("/what-is-ethereum/") ||
     path.startsWith("/quizzes/") ||
-    path.startsWith("/stablecoins/")
+    path.startsWith("/stablecoins/") ||
+    path.startsWith("/defi/")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }

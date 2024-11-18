@@ -34,7 +34,7 @@ La [diversidad de clientes](/developers/docs/nodes-and-clients/client-diversity/
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/) preprocesa los datos de la cadena de bloques y los integra en tablas de bases de datos relacionales (PostgreSQL y DatabricksSQL), permitiendo a los usuarios consultar los datos de la cadena usando SQL y crear paneles de control con los resultados de dichas consultas. Los datos en cadena son organizados en 4 categorías: `bloques`, `transacciones`, `registros` (de eventos) y `rastreos` (de llamadas). Se decodificaron contratos y protocolos populares, y cada uno de ellos tiene sus propios conjuntos de llamadas y eventos. Estas tablas de eventos y llamadas son procesadas y organizadas en tablas abstractas ordenadas por el tipo de protocolo, por ejemplo: dex, préstamos, monedas estables, etc.
+[Dune Analytics](https://dune.com/) preprocesa los datos de la cadena de bloques y los integra en tablas de bases de datos relacionales (DuneSQL), permitiendo a los usuarios consultar los datos de la cadena usando SQL y crear paneles de control con los resultados de dichas consultas. Los datos en cadena son organizados en 4 categorías: `bloques`, `transacciones`, `registros` (de eventos) y `rastreos` (de llamadas). Se decodificaron contratos y protocolos populares, y cada uno de ellos tiene sus propios conjuntos de llamadas y eventos. Estas tablas de eventos y llamadas son procesadas y organizadas en tablas abstractas ordenadas por el tipo de protocolo, por ejemplo: dex, préstamos, monedas estables, etc.
 
 ## SubQuery Network {#subquery-network}
 

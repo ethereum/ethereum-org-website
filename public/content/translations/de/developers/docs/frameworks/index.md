@@ -105,12 +105,6 @@ Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit de
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie wird derzeit nicht gewartet**
 
-**Truffle –** **_Entwicklungsumgebung, Test-Framework, Build-Pipeline und weitere Tools._**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-- **Die Entwicklung von Truffle ist beendet** – [mehr erfahren](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
-
 **OpenZeppelin SDK –** **_das ultimative Smart-Contract-Toolkit: eine Suite an Tools, die Ihnen helfen, zu entwickeln, zu kompilieren, zu aktualisieren, bereitzustellen und mit Smart Contracts zu interagieren._**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)

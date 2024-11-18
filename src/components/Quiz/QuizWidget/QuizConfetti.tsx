@@ -1,14 +1,16 @@
-import { StarConfettiIcon } from "@/components/icons/quiz/StarConfettiIcon"
+import * as React from "react"
 
 import { cn } from "@/lib/utils/cn"
 
-export const QuizConfetti = () => {
-  const commonClasses = "h-[119px] absolute top-0"
-  return (
-    <>
-      <StarConfettiIcon className={cn(commonClasses, "left-0")} />
+import { StarConfettiIcon } from "../../icons/quiz"
 
-      <StarConfettiIcon className={cn(commonClasses, "right-0 -scale-x-100")} />
-    </>
+export const QuizConfetti = () => {
+  const commonClasses = "absolute"
+  return (
+    <div className="relative">
+      <StarConfettiIcon className={cn(commonClasses, "start-0")} />
+
+      <StarConfettiIcon className={cn(commonClasses, "end-0 -scale-x-100")} />
+    </div>
   )
 }

@@ -32,6 +32,7 @@ import CryptoZombieImage from "@/public/images/dev-tools/crypto-zombie.png"
 import CyfrinUpdraftImage from "@/public/images/dev-tools/cyfrin-updraft.png"
 import DappWorldImage from "@/public/images/dev-tools/dapp-world.png"
 import EthDotBuildImage from "@/public/images/dev-tools/eth-dot-build.png"
+import LearnWeb3Image from "@/public/images/dev-tools/learnweb3.png"
 import MetaschoolImage from "@/public/images/dev-tools/metaschool.png"
 import NFTSchoolImage from "@/public/images/dev-tools/nftschool.png"
 import NodeGuardiansImage from "@/public/images/dev-tools/node-guardians.jpg"
@@ -395,6 +396,19 @@ const LearningToolsPage = () => {
       image: AlchemyUniversityImage,
       alt: t(
         "page-developers-learning-tools:page-learning-tools-alchemy-university-logo-alt"
+      ),
+      background: "#ffffff",
+      subjects: ["Solidity", "web3"],
+    },
+    {
+      name: "LearnWeb3",
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-learnweb3-description"
+      ),
+      url: "https://www.learnweb3.io/",
+      image: LearnWeb3Image,
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-learnweb3-logo-alt"
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],

@@ -1,6 +1,7 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Flex } from "@/components/ui/flex"
 
-import { ButtonLink } from "@/components/Buttons"
+import { cn } from "@/lib/utils/cn"
 
 import { CROWDIN_PROJECT_URL } from "@/lib/constants"
 
@@ -62,7 +63,7 @@ export const DatesAndTimeline = () => {
   const todaysDate = new Date()
 
   return (
-    <Flex direction="column" p={4} mb={16}>
+    <Flex className="mb-16 flex flex-col p-4">
       {dates.map((date, index) => {
         const isLive =
           todaysDate >= date.startDate &&
@@ -70,50 +71,50 @@ export const DatesAndTimeline = () => {
         return (
           <Flex
             key={index}
-            borderLeft={"1px solid"}
-            borderColor={
-              index === dates.length - 1 ? "transparent" : "primary.base"
-            }
-            px={4}
-            pb={index === dates.length - 1 ? 0 : 16}
-            gap={4}
+            className={cn(
+              "flex gap-4 border-l px-4",
+              index === dates.length - 1
+                ? "border-transparent pb-0"
+                : "border-primary pb-16"
+            )}
           >
             <Flex>
-              <Box
-                w={8}
-                h={8}
-                bg={isLive ? "primary.base" : "primary.lowContrast"}
-                borderRadius="full"
-                ml={-8}
+              <div
+                className={cn(
+                  "-ml-8 h-8 w-8 rounded-full",
+                  isLive ? "bg-primary" : "bg-primary-low-contrast"
+                )}
               />
             </Flex>
-            <Flex direction="column" gap={6}>
+            <Flex className="flex flex-col gap-6">
               <Flex
-                h={8}
-                bg={isLive ? "primary.base" : "primary.lowContrast"}
-                borderRadius="full"
-                px={4}
-                alignItems="center"
-                color={isLive ? "background.base" : "body.base"}
+                className={cn(
+                  "flex h-8 items-center rounded-full px-4",
+                  isLive && "text-body-inverse",
+                  isLive ? "bg-primary" : "bg-primary-low-contrast"
+                )}
               >
-                <Text>
+                <p>
                   {date.startDate.toDateString()}{" "}
                   {date.endDate ? `- ${date.endDate.toDateString()}` : ""}
-                </Text>
+                </p>
               </Flex>
-              <Flex direction="column">
-                <Heading as="h3" fontSize="2xl">
-                  {date.title}
-                </Heading>
-                <Text>{date.description}</Text>
+              <Flex className="flex flex-col">
+                <h3 className="text-2xl">{date.title}</h3>
+                <p>{date.description}</p>
               </Flex>
               {date.link && (
                 <Flex>
                   <ButtonLink
                     href={date.link}
-                    mt={2}
+                    className={cn(
+                      "mt-2",
+                      date.link === APPLICATION_URL && !isLive
+                        ? "pointer-events-none text-disabled"
+                        : ""
+                    )}
                     variant="outline"
-                    isDisabled={date.link === APPLICATION_URL && !isLive} // Application only
+                    aria-disabled={date.link === APPLICATION_URL && !isLive}
                   >
                     {date.linkText}
                   </ButtonLink>

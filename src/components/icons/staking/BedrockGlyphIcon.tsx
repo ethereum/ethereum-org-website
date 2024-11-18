@@ -5,7 +5,7 @@ import { createIconBase } from "../icon-base"
 export const BedrockGlyphIcon = createIconBase({
   displayName: "BedrockGlyphIcon",
   viewBox: "0 0 33 32",
-  className: "h-auto w-[33px]",
+  className: "size-[1em]",
   ...commonIconDefaultAttrs,
   children: (
     <path
