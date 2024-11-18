@@ -91,7 +91,7 @@ const quizzes = {
   },
   defi: {
     title: "DeFi",
-    questions: ["n001", "n002", "n003", "n004", "n005"],
+    questions: ["defi-1", "defi-2", "defi-3", "defi-4", "defi-5"],
   },
 } satisfies RawQuizzes
 
