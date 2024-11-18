@@ -7,16 +7,21 @@ const quizzes = {
   "what-is-ethereum": {
     title: "what-is-ethereum",
     questions: [
-      "ethereum-1",
-      "ethereum-2",
-      "ethereum-3",
-      "ethereum-4",
-      "ethereum-5",
+      "what-is-ethereum-1",
+      "what-is-ethereum-2",
+      "what-is-ethereum-3",
+      "what-is-ethereum-4",
+      "what-is-ethereum-5",
     ],
   },
   "what-is-ether": {
     title: "what-is-ether",
-    questions: ["ether-1", "ether-2", "ether-3", "ether-4"],
+    questions: [
+      "what-is-ether-1",
+      "what-is-ether-2",
+      "what-is-ether-3",
+      "what-is-ether-4",
+    ],
   },
   web3: {
     title: "web3",
@@ -52,16 +57,16 @@ const quizzes = {
     title: "DAOs",
     questions: ["daos-1", "daos-2", "daos-3", "daos-4", "daos-5"],
   },
-  "solo-staking": {
+  "staking-solo": {
     title: "solo",
     questions: [
-      "staking-1",
-      "staking-2",
-      "staking-4",
-      "staking-5",
-      "staking-6",
-      "staking-7",
-      "staking-8",
+      "staking-solo-1",
+      "staking-solo-2",
+      "staking-solo-4",
+      "staking-solo-5",
+      "staking-solo-6",
+      "staking-solo-7",
+      "staking-solo-8",
     ],
   },
   scaling: {
@@ -155,7 +160,7 @@ const usingEthereumQuizzesRaw: QuizzesSection[] = [
     level: "advanced",
   },
   {
-    id: "solo-staking",
+    id: "staking-solo",
     level: "advanced",
   },
 ]
