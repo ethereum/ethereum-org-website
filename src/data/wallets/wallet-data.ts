@@ -1,5 +1,7 @@
 import { WalletData } from "@/lib/types"
 
+import { newToCrypto } from "./new-to-crypto"
+
 import OneInchWalletImage from "@/public/images/wallets/1inch.png"
 import AlphaWalletImage from "@/public/images/wallets/alpha.png"
 import AmbireImage from "@/public/images/wallets/ambire.png"
@@ -40,7 +42,7 @@ import TrustWalletImage from "@/public/images/wallets/trustwallet.png"
 import UnstoppableWalletImage from "@/public/images/wallets/unstoppable.png"
 import ZerionImage from "@/public/images/wallets/zerion.png"
 
-export const walletsData: WalletData[] = [
+const walletsData = [
   {
     last_updated: "2024-10-30",
     name: "Keystone",
@@ -235,7 +237,6 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://www.coinbase.com/wallet/tutorials",
     documentation: "",
-    new_to_crypto: true,
     // note: "Community contribution, let's follow up with Coinbase",
   },
   {
@@ -789,7 +790,6 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://www.mewtopia.com/",
     documentation: "https://help.myetherwallet.com/en/",
-    new_to_crypto: true,
   },
   {
     last_updated: "2022-06-24",
@@ -1092,7 +1092,6 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://learn.rainbow.me/",
     documentation: "",
-    new_to_crypto: true,
   },
   {
     last_updated: "2024-09-01",
@@ -1335,7 +1334,6 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "",
-    new_to_crypto: false,
   },
   {
     last_updated: "2024-09-26",
@@ -1396,7 +1394,6 @@ export const walletsData: WalletData[] = [
     onboard_documentation:
       "https://help.zerion.io/en/collections/5525626-zerion-wallet",
     documentation: "https://help.zerion.io/en/",
-    new_to_crypto: true,
   },
   {
     last_updated: "2022-08-31",
@@ -1642,7 +1639,6 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://help.onekey.so/hc/en-us",
     documentation: "https://developer.onekey.so/guide/introduction",
-    new_to_crypto: true,
   },
   {
     last_updated: "2023-04-21",
@@ -2081,6 +2077,13 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://clear-wallet.flashsoft.eu/",
     documentation: "https://clear-wallet.flashsoft.eu/docs/",
   },
-]
+] as const satisfies Omit<WalletData, "new_to_crypto">[]
 
-export default walletsData
+export type WalletName = (typeof walletsData)[number]["name"]
+
+const allWalletData = walletsData.map((wallet) => ({
+  ...wallet,
+  new_to_crypto: newToCrypto.includes(wallet.name),
+})) as WalletData[]
+
+export default allWalletData
