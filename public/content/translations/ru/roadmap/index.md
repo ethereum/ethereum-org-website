@@ -8,10 +8,10 @@ alt: "Дорожная карта Ethereum"
 summaryPoints:
 buttons:
   - 
-    label: Будущие обновления
+    content: Будущие обновления
     toId: what-changes-are-coming
   - 
-    label: Прошлые обновления
+    content: Прошлые обновления
     href: /history/
     variant: план
 ---
