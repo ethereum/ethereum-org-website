@@ -34,7 +34,7 @@ lang: zh-tw
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/) 將區塊鏈資料預處理成關聯資料庫（PostgreSQL 和 DatabricksSQL）表格，允許使用者使用 SQL 查詢區塊鏈資料並根據查詢結果建立儀表板。 鏈上資料組織成 4 個原始表格：`blocks`、`transactions`、（事件）`logs` 和（呼叫）`traces`。 常見的合約和協定已被解碼，而每個合約和協定都有自己的事件和呼叫表格集。 這些事件和呼叫表格被進一步處理並按協定類型組織成抽象表格，例如去中心化交易所、借貸、穩定幣等。
+[Dune Analytics](https://dune.com/) 將區塊鏈資料預處理成關聯資料庫（DuneSQL）表格，允許使用者使用 SQL 查詢區塊鏈資料並根據查詢結果建立儀表板。 鏈上資料組織成 4 個原始表格：`blocks`、`transactions`、（事件）`logs` 和（呼叫）`traces`。 常見的合約和協定已被解碼，而每個合約和協定都有自己的事件和呼叫表格集。 這些事件和呼叫表格被進一步處理並按協定類型組織成抽象表格，例如去中心化交易所、借貸、穩定幣等。
 
 ## SubQuery 網路 {#subquery-network}
 
