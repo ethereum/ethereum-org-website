@@ -59,7 +59,7 @@ Web3ning killer funksiyalari alohida emas va aniq turkumlarga mos kelmasa-da, so
 
 Web3 sizga raqamli aktivlaringizga misli koʻrilmagan tarzda egalik qilish imkonini beradi. Masalan, siz web2 oʻyinini oʻynayapsiz deylik. Agar o‘yin ichidagi buyumni xarid qilsangiz, u bevosita hisobingizga bog‘lanadi. Agar o‘yin ijodkorlari hisobingizni o‘chirib tashlasa, siz bu elementlarni yo‘qotasiz. Yoki agar o‘yinni to‘xtatsangiz, o‘yin ichidagi buyumlarga kiritgan qiymatingizni yo‘qotasiz.
 
-Web3 [o‘zgarmas tokenlar (NFTlar) ](/glossary/#nft) orqali to‘g‘ridan-to‘g‘ri egalik qilish imkonini beradi. Hech kim, hatto o‘yin yaratuvchilari ham sizning mulkingizni tortib olish huquqiga ega emas. Agar o‘ynashni to‘xtatsangiz, o‘yin ichidagi buyumlarni ochiq bozorlarda sotish yoki ayirboshlashingiz va ularning qiymatini to‘ldirishingiz mumkin.
+Web3 [o‘zgarmas tokenlar (NFTlar)](/glossary/#nft) orqali to‘g‘ridan-to‘g‘ri egalik qilish imkonini beradi. Hech kim, hatto o‘yin yaratuvchilari ham sizning mulkingizni tortib olish huquqiga ega emas. Agar o‘ynashni to‘xtatsangiz, o‘yin ichidagi buyumlarni ochiq bozorlarda sotish yoki ayirboshlashingiz va ularning qiymatini to‘ldirishingiz mumkin.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>NFTlar haqida batafsil</div>
@@ -97,7 +97,7 @@ Biroq, odamlar ko‘plab Web3 hamjamiyatlarini DAO deb ta’riflaydilar. Ushbu j
 
 An’anaga ko‘ra, siz foydalanadigan har bir platforma uchun hisob yaratasiz. Masalan, sizda Twitter hisobi, YouTube hisobi va Reddit hisobi bo‘lishi mumkin. Ekran nomi yoki profil rasmi o‘zgartirilsinmi? Buni har bir hisobda bajarishingiz kerak. Ba’zi hollarda ijtimoiy tizimga kirishdan foydalanish mumkin, ammo bu tanish muammo — senzurani keltirib chiqaradi. Bitta bosish bilan bu platformalar sizni butun onlayn hayotingizdan bloklashi mumkin. Bundan ham yomoni, ko‘plab platformalar hisob yaratish uchun shaxsiy ma’lumotlaringizni ishonib topshirishingizni talab qiladi.
 
-Web3 sizga Ethereum manzili va [Ethereum Name Service (ENS) ](/glossary/#ens) profili yordamida raqamli identifikatoringizni boshqarish imkonini berish orqali ushbu muammolarni hal qiladi. Ethereum manzilidan foydalanish xavfsiz, senzuraga chidamli va anonim platformalarda yagona kirishni ta’minlaydi.
+Web3 sizga Ethereum manzili va [Ethereum Name Service (ENS)](/glossary/#ens) profili yordamida raqamli identifikatoringizni boshqarish imkonini berish orqali ushbu muammolarni hal qiladi. Ethereum manzilidan foydalanish xavfsiz, senzuraga chidamli va anonim platformalarda yagona kirishni ta’minlaydi.
 
 ### Mahalliy toʻlovlar {#native-payments}
 
