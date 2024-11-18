@@ -1745,9 +1745,7 @@ export const walletsData: WalletData[] = [
     open_source: false,
     repo_url: "https://github.com/phantom",
     non_custodial: true,
-    security_audit: [
-      "https://github.com/phantom/audit-reports",
-    ],
+    security_audit: ["https://github.com/phantom/audit-reports"],
     scam_protection: true,
     hardware_support: true,
     rpc_importing: false,
