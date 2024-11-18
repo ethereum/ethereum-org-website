@@ -63,7 +63,6 @@ Différentes organisations sont à l'origine d'initiatives collaboratives afin d
 - [Projet Baseline](https://www.baseline-protocol.org/) - _Le protocole Baseline est un ensemble d'outils et de bibliothèques qui aide les entreprises à coordonner des processus commerciaux et des flux de travail complexes impliquant plusieurs parties tout en préservant la confidentialité des données dans leurs systèmes d'enregistrement respectifs. La norme permet à deux machines d'état ou plus d'atteindre et de maintenir la cohérence des données et la continuité des flux de travail en utilisant un réseau comme cadre de référence commun._
 - [Chainlens](https://www.chainlens.com/) - _SaaS et plateforme d'analyse et de données blockchain sur site de Web3 Labs_
 - [Nightfall d'Ernst & Young](https://github.com/EYBlockchain/nightfall_3) - _Une application pour transférer des applications ERC20, ERC721 et ERC1155 avec Zéro Connaissance, en utilisant un Rollup Optimiste_
-- [Truffle Suite](https://trufflesuite.com) - _Suite de développement de blockchain (Truffle, Ganache, Drizzle)_
 
 ### Solutions d'évolutivité {#scalability-solutions}
 

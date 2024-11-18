@@ -1,5 +1,7 @@
 import type { QuizzesSection, RawQuizzes } from "@/lib/types"
 
+import { addNextQuiz } from "@/components/Quiz/utils"
+
 // Declare hash-map of quizzes based on slug key
 const quizzes = {
   "what-is-ethereum": {
@@ -87,75 +89,79 @@ const quizzes = {
       "stablecoins-5",
     ],
   },
+  defi: {
+    title: "DeFi",
+    questions: ["n001", "n002", "n003", "n004", "n005"],
+  },
 } satisfies RawQuizzes
 
-export const ethereumBasicsQuizzes: QuizzesSection[] = [
+const ethereumBasicsQuizzesRaw: QuizzesSection[] = [
   {
     id: "what-is-ethereum",
     level: "beginner",
-    next: "what-is-ether",
   },
   {
     id: "what-is-ether",
     level: "beginner",
-    next: "wallets",
   },
   {
     id: "wallets",
     level: "beginner",
-    next: "web3",
   },
   {
     id: "web3",
     level: "beginner",
-    next: "security",
   },
   {
     id: "security",
     level: "beginner",
   },
 ]
+export const ethereumBasicsQuizzes: QuizzesSection[] = addNextQuiz(
+  ethereumBasicsQuizzesRaw
+)
 
-export const usingEthereumQuizzes: QuizzesSection[] = [
+const usingEthereumQuizzesRaw: QuizzesSection[] = [
   {
     id: "nfts",
     level: "beginner",
-    next: "stablecoins",
   },
   {
     id: "stablecoins",
     level: "beginner",
-    next: "layer-2",
+  },
+  {
+    id: "defi",
+    level: "beginner",
   },
   {
     id: "layer-2",
     level: "intermediate",
-    next: "daos",
   },
   {
     id: "daos",
     level: "intermediate",
-    next: "run-a-node",
   },
   {
     id: "run-a-node",
     level: "intermediate",
-    next: "merge",
   },
   {
     id: "merge",
     level: "intermediate",
-    next: "scaling",
   },
   {
     id: "scaling",
     level: "advanced",
-    next: "solo-staking",
   },
   {
     id: "solo-staking",
     level: "advanced",
   },
 ]
+
+export const usingEthereumQuizzes: QuizzesSection[] = addNextQuiz(
+  usingEthereumQuizzesRaw
+)
 
 export default quizzes

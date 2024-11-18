@@ -3,7 +3,7 @@ import { createIconBase } from "../icon-base"
 export const StakewiseGlyphIcon = createIconBase({
   displayName: "StakewiseGlyphIcon",
   viewBox: "0 0 32 38",
-  className: "h-auto w-[32px]",
+  className: "size-[1em]",
   children: (
     <>
       <path

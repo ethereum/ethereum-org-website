@@ -154,15 +154,11 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 
 フォークされたブロックチェーンは、メインネットと同様の仕組みで動作し、アカウントに状態と残高が関連付けられています。 しかし、サンドボックス化されたローカル開発環境としてのみ機能します。例えば、トランザクションに実際のETHは必要なく、変更しても実際のイーサリアムプロトコルに影響することはありません。
 
-
-
 ### プロパティベースのテスト {#property-based-testing-for-smart-contracts}
 
 プロパティベースのテストは、スマートコントラクトが定義されたプロパティを満たしていることを確認するプロセスです。 プロパティは、コントラクトの行動に関する事実をアサーションします。この事実は、さまざまなシナリオにおいて真であることが期待されるものです。スマートコントラクトプロパティの例としては、「コントラクト内の算術演算は、オーバーフローもアンダーフローもしない」などがあります。
 
 プロパティベースのテストを実行する方法には、**静的分析**と**動的分析**の2つの一般的な手法があります。どちらの手法でも、 プログラムのコード(この場合は、スマートコントラクト)が、事前に定義されたプロパティを満たしていることを検証できます。 プロパティベースのテストツールには、予期されるコントラクトプロパティに対する事前定義されたルールが備えてあり、コードがそれらのルールに違反しているかチェックするものや、スマートコントラクトのカスタムプロパティを作成できるものがあります。
-
-
 
 #### 静的解析 {#static-analysis}
 
@@ -171,8 +167,6 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 コントラクトで静的解析を実行する一般的な手法として、[リンティング](https://www.perforce.com/blog/qac/what-lint-code-and-why-linting-important)と[静的テスト](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis)があります。 どちらの手法も、コンパイラによって出力された[抽象構文木](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree)や[制御フローグラフ](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/)など、コントラクト実行における低レベル表現の解析が必要です。
 
 静的解析は、安全でない構造の使用や構文エラー、コントラクトコード内のコーディング規約違反などの安全性の問題を検出するには有効です。 しかし、より深い脆弱性の検出が不得意であることが知られており、過剰な誤検出が生じる可能性があります。
-
-
 
 #### 動的解析 {#dynamic-analysis}
 
@@ -187,8 +181,6 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 2. **テストスイートがプログラム内のすべての実行パスを十分にカバーしていないことがある。**100%のカバレッジであっても、エッジケースを見逃す可能性があります。
 
 3. **単体テストでは、コントラクトがサンプルデータに対して正しく実行されることを証明できるが、サンプル外の入力に対して正しく実行されるかどうかは未確認のままである。**プロパティテストでは、ターゲットコントラクトを複数のバリエーションで実行します。 指定された入力値を使用して、アサーションの失敗を引き起こす実行トレースを見つけます。 そのため、プロパティテストでは、広範なクラスの入力データに対してコントラクトが正しく実行されることを、より確実に保証することができます。
-
-
 
 ### スマートコントラクトでプロパティベースのテストを実行する際のガイドライン {#running-property-based-tests}
 
@@ -205,13 +197,9 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 - **[Manticoreを使ったスマートコントラクトのシンボリック実行](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[Mythrilを使ったスマートコントラクトのシンボリック実行](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
-
-
 ## スマートコントラクトの手動テスト {#manual-testing-for-smart-contracts}
 
 スマートコントラクトの手動テストは、通常、自動テストを行った後の開発サイクルの後半で行われます。 この手動テストでは、スマートコントラクトを完全に統合された1つの製品として評価し、技術要件で指定されたとおりの性能を発揮するかどうかを確認します。
-
-
 
 ### ローカルブロックチェーンでのコントラクトのテスト {#testing-on-local-blockchain}
 
@@ -223,8 +211,6 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 
 [開発用ネットワークの詳細](/developers/docs/development-networks/)
 
-
-
 ### テストネットでのスマートコントラクトのテスト {#testing-contracts-on-testnets}
 
 テストネットワークすなわちテストネットは、イーサリアムメインネットとまったく同じ仕様で動作するネットワークです。ただし、テストネットで使用されるイーサ(ETH)は、現実世界で価値がありません。 コントラクトを[テストネット](/developers/docs/networks/#ethereum-testnets)にデプロイすると、資金を失うリスクはありません。また、Dappのフロントエンドなどを介して、誰でもコントラクトとやり取りできるようになります。
@@ -234,8 +220,6 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 テストネットの方がイーサリアム仮想マシンの動作に近いため、ローカルブロックチェーンでテストした後にテストネットにデプロイすることが理想です。 そのため、多くのイーサリアムを使うプロジェクトでは、テストネットにDappをデプロイし、現実世界の条件下でスマートコントラクトの操作を評価するのが一般的です。
 
 [イーサリアムテストネットの詳細](/developers/docs/development-networks/#public-beacon-testchains)
-
-
 
 ## テストと形式検証の比較 {#testing-vs-formal-verification}
 
@@ -249,8 +233,6 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 
 [スマートコントラクトの形式検証の詳細](/developers/docs/smart-contracts/formal-verification)
 
-
-
 ## テストと監査およびバグ報奨金の比較 {#testing-vs-audits-bug-bounties}
 
 上記のように、厳密なテストをしても、コントラクトにバグがないとは言い切れません。 形式検証によるアプローチは、正確性をより強力に保証できますが、現時点では使用が難しく、かなりのコストがかかります。
@@ -263,11 +245,7 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 
 主な違いとしては、バグ報奨金プログラムは、より広範なデベロッパーやハッカーコミュニティを対象としているため、ユニークなスキルや経験を持つ幅広いクラスの倫理的なハッカーや独立したセキュリティ専門家を引きつけることができます。 これは、限られた専門知識を持つチームに依存するスマートコントラクト監査では得られない利点と言えるでしょう。
 
-
-
 ## テストツールとライブラリ {#testing-tools-and-libraries}
-
-
 
 ### 単体テストツール {#unit-testing-tools}
 
@@ -289,11 +267,7 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _Pythonベースの単体テストとファジングのフレームワークで、強力なデバック機能とクロスチェーンテストをサポートしており、pytestおよびAnvilを生かした最高のユーザーエクスペリエンスとパフォーマンスを実現。_
 
-
-
 ### プロパティベースのテストツール {#property-based-testing-tools}
-
-
 
 #### 静的解析ツール {#static-analysis-tools}
 
@@ -304,8 +278,6 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 - **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Rustベースの静的解析ツールで、特にWeb3スマートコントラクトのセキュリティと開発のために設計されています。_
 
 - **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Pythonベースの静的解析フレームワークで、脆弱性とコード品質の検出器、コードから有用な情報を抽出するプリンター、カスタムサブモジュールの作成をサポート。_
-
-
 
 #### 動的解析ツール {#dynamic-analysis-tools}
 
@@ -319,8 +291,6 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribbleは、仕様記述言語およびランタイム検証ツールでスマートコントラクトのプロパティにアノテーションを付けることができます。これにより、Diligence FuzzingやMythXなどのツールを使用してコントラクトを自動的にテストできます。_
 
-
-
 ## 関連チュートリアル {#related-tutorials}
 
 - [さまざまな製品テストの概要と比較](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
@@ -329,8 +299,6 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 - [Slitherを使用してスマートコントラクトのバグを見つける方法](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Solidityコントラクトのテスト用モックの作成方法](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Foundryを使ったSolidityの単体テストの実行方法](https://www.rareskills.io/post/foundry-testing-solidity)
-
-
 
 ## 参考文献 {#further-reading}
 

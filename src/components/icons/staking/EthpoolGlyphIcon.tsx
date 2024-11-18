@@ -3,7 +3,7 @@ import { createIconBase } from "../icon-base"
 export const EthpoolGlyphIcon = createIconBase({
   displayName: "EthpoolGlyphIcon",
   viewBox: "0 0 33 33",
-  className: "h-auto w-[33px]",
+  className: "size-[1em]",
   children: (
     <path
       fill-rule="evenodd"

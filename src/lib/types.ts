@@ -4,6 +4,7 @@ import type { AppProps } from "next/app"
 import type { StaticImageData } from "next/image"
 import type { SSRConfig } from "next-i18next"
 import type { ReactElement, ReactNode } from "react"
+import type { ColumnDef } from "@tanstack/react-table"
 
 import type {
   DocsFrontmatter,
@@ -17,7 +18,6 @@ import type {
 
 import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
-import type { IconBaseType } from "@/components/icons/icon-base"
 import type { SimulatorNav } from "@/components/Simulator/interfaces"
 
 import allQuizData from "@/data/quizzes"
@@ -88,6 +88,7 @@ export type Lang =
   | "fr"
   | "gl"
   | "gu"
+  | "ha"
   | "he"
   | "hi"
   | "hr"
@@ -110,28 +111,31 @@ export type Lang =
   | "ne-np"
   | "nl"
   | "pcm"
-  | "ph"
   | "pl"
-  | "pt"
   | "pt-br"
+  | "pt"
   | "ro"
   | "ru"
   | "se"
   | "sk"
   | "sl"
+  | "sn"
   | "sr"
   | "sw"
   | "ta"
   | "te"
   | "th"
   | "tk"
+  | "tl"
   | "tr"
+  | "tw"
   | "uk"
   | "ur"
   | "uz"
   | "vi"
-  | "zh"
+  | "yo"
   | "zh-tw"
+  | "zh"
 
 export type Direction = "rtl" | "ltr" | "auto"
 
@@ -580,10 +584,11 @@ export interface WalletData {
   last_updated: string
   name: string
   image: StaticImageData
-  brand_color: string
+  twBackgroundColor: string
+  twGradiantBrandColor: string
   url: string
   active_development_team: boolean
-  languages_supported: string[]
+  languages_supported: Lang[]
   twitter: string
   discord: string
   reddit: string
@@ -634,23 +639,54 @@ export interface WalletFilterData {
   description: TranslationKey | ""
 }
 
+export type FilterInputState = boolean | Lang | string | null
+
 export type FilterOption = {
   title: string
-  items: Array<{
-    title: string
-    icon: IconBaseType
-    description: string
-    filterKey: string | undefined
-    showOptions: boolean | undefined
-    options:
-      | Array<{
-          name: string
-          filterKey?: string
-          inputType: "checkbox"
-        }>
-      | []
-  }>
+  showFilterOption: boolean
+  items: Array<FilterItem>
 }
+
+type FilterItem = {
+  filterKey: string
+  filterLabel: string
+  description: string
+  inputState: FilterInputState
+  ignoreFilterReset?: boolean
+  input: FilterInput
+  options: Array<FilterOptionItem>
+}
+
+type FilterInput = (
+  filterIndex: number,
+  itemIndex: number,
+  state: FilterInputState,
+  updateFilterState: UpdateFilterState
+) => ReactElement
+
+type FilterOptionItem = {
+  filterKey: string
+  filterLabel: string
+  description: string
+  ignoreFilterReset?: boolean
+  inputState: FilterInputState
+  input: FilterOptionInput
+}
+
+type FilterOptionInput = (
+  filterIndex: number,
+  itemIndex: number,
+  optionIndex: number,
+  state: FilterInputState,
+  updateFilterState: UpdateFilterState
+) => ReactElement
+
+type UpdateFilterState = (
+  filterIndex: number,
+  itemIndex: number,
+  inputState: FilterInputState,
+  optionIndex?: number
+) => void
 
 export interface WalletPersonas {
   title: string
@@ -683,6 +719,14 @@ export interface WalletPersonas {
     new_to_crypto?: boolean
   }
 }
+
+export type TPresetFilters = WalletPersonas[]
+
+export type ProductTablePresetFilters = WalletPersonas[]
+
+export type ProductTableColumnDefs = ColumnDef<Wallet>
+
+export type ProductTableRow = Wallet
 
 export interface DropdownOption {
   label: string

@@ -5,7 +5,7 @@ import { createIconBase } from "../icon-base"
 export const StakefishGlyphIcon = createIconBase({
   displayName: "StakefishGlyphIcon",
   viewBox: "0 0 40 24",
-  className: "h-auto w-[40px]",
+  className: "size-[1em]",
   ...commonIconDefaultAttrs,
   children: (
     <>
