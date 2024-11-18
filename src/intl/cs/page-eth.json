@@ -15,9 +15,9 @@
   "page-eth-fuels": "ETH pohání a zabezpečuje Ethereum",
   "page-eth-fuels-desc": "ETH je krev Etherea. Když posíláš ETH nebo používáš Ethereum aplikaci, zaplatíš poplatek v ETH za využívání sítě Ethereum. Tento poplatek je pobídkou pro výrobce bloků aby zpracoval a ověřil to, co se snažíš dělat.",
   "page-eth-fuels-desc-2": "Validátoři fungují jako dozorčí Etherea. Kontrolují a dokazují, že nikdo nepodvadí. Jsou náhodně vybíráni pro tvorbu bloku transakcí. Validátoři, kteří vykonají tuto práci, jsou následně odměněni malou částí nově vygenerovaného ETH.",
-  "page-eth-fuels-desc-3": "Práce validátorů a kapitál, který <a href=\"/glossary/#staking\">vkládají</a>, udržuje Ethereum v bezpečí a bez centralizované kontroly.",
-  "page-eth-fuels-staking": "Stakingem svého ETH pomáháte zabezpečit síť Ethereum, a tím získáváte odměny. V tomto systému hrozba ztráty ETH odrazuje útočníky.",
-  "page-eth-fuels-more-staking": "Další informace o investicích",
+  "page-eth-fuels-desc-3": "Práce validátorů a kapitál, který <a href=\"/glossary/#staking\">uzamykají</a>, udržuje Ethereum v bezpečí a bez centralizované kontroly.",
+  "page-eth-fuels-staking": "Uzamčením svého ETH pomáháte zabezpečit síť Ethereum, a tím získáváte odměny. V tomto systému hrozba ztráty ETH odrazuje útočníky.",
+  "page-eth-fuels-more-staking": "Další informace o uzamčení",
   "page-eth-get-eth-btn": "Získat ETH",
   "page-eth-gov-tokens": "Správní tokeny",
   "page-eth-gov-tokens-desc": "Tokeny reprezentující volební sílu v decentralizovaných organizacích.",
@@ -76,7 +76,7 @@
   "page-eth-where-to-buy": "Kde získat ETH",
   "page-eth-where-to-buy-desc": "ETH můžete získat na burze nebo v peněžence, ale různé země mají ke kryptoměnám jiný přístup. Zaškrtněte a zobrazte si služby, které vám umožní koupit ETH.",
   "page-eth-yours": "Je opravdu vaše",
-  "page-eth-yours-desc": "ETH vám umožňuje být vlastní bankou. Své vlastní prostředky můžete ovládat pomocí své <a href=\"/glossary/#wallet\">peněženky</a> jako dokladu o vlastnictví – žádné třetí strany nejsou potřeba.",
+  "page-eth-yours-desc": "ETH vám umožňuje být vlastní bankou. Své vlastní prostředky můžete ovládat pomocí své <a href=\"/glossary/#wallet\">peněženky</a> jako důkazu vlastnictví – žádné třetí strany nejsou potřeba.",
   "page-eth-more-on-tokens": "Další informace o tokenech a jejich použití",
   "page-eth-button-buy-eth": "Získat ETH",
   "page-eth-tokens-stablecoins": "Stabilní kryptoměny (stablecoins)",
@@ -89,5 +89,5 @@
   "page-eth-tokens-dao-description": "Internetové komunity často spravované držiteli tokenů.",
   "page-eth-whats-defi": "Další informace o DeFi",
   "page-eth-whats-defi-description": "DeFi je decentralizovaný finanční systém postavený na Ethereu. Tento přehled vysvětluje, co tento systém umožňuje provést.",
-  "page-what-is-ethereum-what-is-ether": "Co je Ether?"
+  "page-what-is-ethereum-what-is-ether": "Co je ether?"
 }

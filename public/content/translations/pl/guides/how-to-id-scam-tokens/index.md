@@ -6,7 +6,7 @@ lang: pl
 
 # Jak zidentyfikować fałszywe tokeny {#identify-scam-tokens}
 
-One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. Te tokeny zwykle używają standardu [ERC-20](/developers/docs/standards/tokens/erc-20/). Jednak wszędzie tam, gdzie istnieją uzasadnione przypadki użycia, które przynoszą wartość, są też przestępcy, którzy próbują ukraść tę wartość dla siebie.
+Jednym z najczęstszych zastosowań Ethereum jest tworzenie przez grupę wymienialnych tokenów, w pewnym sensie własnej waluty. Te tokeny zwykle używają standardu [ERC-20](/developers/docs/standards/tokens/erc-20/). Jednak wszędzie tam, gdzie istnieją uzasadnione przypadki użycia, które przynoszą wartość, są też przestępcy, którzy próbują ukraść tę wartość dla siebie.
 
 Istnieją dwa sposoby, którymi będą próbowali Cię oszukać:
 

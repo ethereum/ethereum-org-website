@@ -18,7 +18,7 @@ En termes de fondamentaux architecturaux, comprendre ce qu'est une [API](https:/
 
 ## Explorateurs de bloc {#block-explorers}
 
-De nombreux [Explorateurs de bloc](/developers/docs/data-and-analytics/block-explorers/) offrent des passerelles [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) qui fournissent une visibilité aux développeurs sur les données en temps réel sur les blocs, les transactions, les mineurs, les comptes et autres activités sur la blockchain.
+De nombreux [Explorateurs de bloc](/developers/docs/data-and-analytics/block-explorers/) offrent des passerelles [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) qui fournissent une visibilité aux développeurs sur les données en temps réel sur les blocs, les transactions, les validateurs, les comptes et autres activités sur la chaîne.
 
 Les développeurs peuvent alors traiter et transformer ces données afin de leur donner leurs informations d'utilisateurs uniques et leurs interactions avec la [blockchain](/glossary/#blockchain). Par exemple, [Etherscan](https://etherscan.io) fournit des données d'exécution et de consensus pour chaque créneau de 12 secondes.
 
@@ -30,11 +30,20 @@ En utilisant [GraphQL](https://graphql.org/), les développeurs peuvent interrog
 
 ## Diversité des clients
 
-[La diversité du client](/developers/docs/nodes-and-clients/client-diversity/) est importante pour la santé globale du réseau Ethereum, car elle fournit de la résilience aux bogues et aux exploitations. Il y a maintenant plusieurs tableaux de bord de la diversité de clients dont [clientdiversity.org](https://clientdiversity.org/), [rated.etwork](https://www.rated.network), [supermajority.info](https://supermajority.info//), [et Ethernodes](https://ethernodes.org/).
+[La diversité du client](/developers/docs/nodes-and-clients/client-diversity/) est importante pour la santé globale du réseau Ethereum, car elle fournit de la résilience aux bogues et aux exploitations. Il existe désormais plusieurs tableaux de bord sur la diversité des clients, notamment [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://www.rated.network), [supermajority.info](https://supermajority.info//) and [Ethernodes](https://ethernodes.org/).
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/) prétraite les données de la blockchain en tables de base de données relationnelles (PostgreSQL et DatabricksSQL), permet aux utilisateurs d'interroger les données de la blockchain en utilisant SQL et de construire des tableaux de bord basés sur les résultats des requêtes. Les données sur la chaîne sont réparties en 4 tables brutes : `blocs`, `transactions`, (événement) `logs` et (appel) `traces`. Les contrats et protocoles populaires ont été décodés et chacun a son propre ensemble de tables d'événements et d'appels. Ces tables d'événements et d'appels sont traitées et organisées en tables d'abstraction par le type de protocoles, par exemple, dex, prêt, stablecoins, etc.
+[Dune Analytics](https://dune.com/) prétraite les données de la blockchain en tables de base de données relationnelles (DuneSQL), permet aux utilisateurs d'interroger les données de la blockchain en utilisant SQL et de construire des tableaux de bord basés sur les résultats des requêtes. Les données sur la chaîne sont réparties en 4 tables brutes : `blocs`, `transactions`, (événement) `logs` et (appel) `traces`. Les contrats et protocoles populaires ont été décodés et chacun a son propre ensemble de tables d'événements et d'appels. Ces tables d'événements et d'appels sont traitées et organisées en tables d'abstraction par le type de protocoles, par exemple, dex, prêt, stablecoins, etc.
+
+## Réseau SubQuery {#subquery-network}
+
+[SubQuery](https://subquery.network/) est un indexeur de données de premier plan qui offre aux développeurs des API rapides, fiables, décentralisées et personnalisées pour leurs projets web3. Suber permet aux développeurs de plus de 165+ écosystèmes (y compris Ethereum) de disposer de riches données indexées pour construire des expériences intuitives et immersives pour leurs utilisateurs. Le réseau SubQuery alimente votre application inarrêtable avec un réseau d'infrastructures résiliant et décentralisé. Utilisez la boite à outils de développeur blockchain de SubQuery pour construire les applications Web3 du futur, sans passer de temps à concevoir un backend personnalisé pour les activités de traitement de données.
+
+Pour commencer, consultez le [guide de démarrage rapide Ethereum](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html) pour commencer à indexer les données de la blockchain Ethereum en quelques minutes dans un environnement Docker local à des fins de test avant de mettre en ligne sur un [service géré de SubQuery](https://managedservice.subquery.network/) ou sur le [réseau décentralisé de SubQuery](https://app.subquery.network/dashboard).
+
+## Ethernow - Le programme de données de la mempool {#ethernow}
+[Blocknative](https://www.blocknative.com/) offre un accès ouvert à son [archive de données historique de la mempool](https://www.ethernow.xyz/mempool-data-archive) Ethereum. Cela permet aux chercheurs et aux bons projets communautaires d'explorer la couche pré-chaîne du réseau principal Ethereum. L'ensemble de données est activement maintenu et constitue l'enregistrement historique le plus complet des événements de transaction de la mempool au sein de l'écosystème Ethereum. En savoir plus sur [Ethernow](https://www.ethernow.xyz/).
 
 ## Complément d'information {#further-reading}
 
@@ -43,3 +52,4 @@ En utilisant [GraphQL](https://graphql.org/), les développeurs peuvent interrog
 - [Examples de code d'APIs sur EtherScan](https://etherscan.io/apis#contracts)
 - [Explorateur de Beacon Chain](https://beaconcha.in)
 - [Basiques de Dune](https://docs.dune.com/#dune-basics)
+- [Guide de démarrage rapide de SubQuery Ethereum](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)

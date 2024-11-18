@@ -18,7 +18,7 @@ Mimari kurulum temelleri açısından, teoride olsa bile [API](https://www.wikip
 
 ## Blok arayıcıları {#block-explorers}
 
-Birçok [Blok Arayıcısı](/developers/docs/data-and-analytics/block-explorers/), geliştiricilere bloklar, işlemler, madenciler, hesaplar ve diğer zincir üstü etkinlikler hakkında gerçek zamanlı verilere görünürlük sağlayacak [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API)'sı ağ geçitleri sunar.
+Çoğu [Block Arayıcısı](/developers/docs/data-and-analytics/block-explorers/) geliştiricilere bloklar, işlemler, doğrulayıcılar, hesaplar ve zincir üstündeki diğer aktiviteler hakkında gerçek zamanlı verilerin görünürlüğünü sağlamak için [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) ağ geçitleri sunar.
 
 Geliştiriciler daha sonra, kullanıcılarına [blok zincir](/glossary/#blockchain) ile benzersiz içgörüler ve etkileşimler sağlamak için bu verileri işleyebilir ve dönüştürebilir. Örneğin [Etherscan](https://etherscan.io) her 12 saniyelik aralıkta, yuvalar için yürütme ve mutabakat verileri sağlar.
 
@@ -30,11 +30,20 @@ Geliştiriciler, [GraphQL](https://graphql.org/)'u kullanarak, alt grafikler ola
 
 ## İstemci çeşitliliği
 
-[İstemci çeşitliliği](/developers/docs/nodes-and-clients/client-diversity/), Ethereum ağı için genel sağlık açısından önemlidir çünkü hatalara veya açıklardan kaynaklanabilecek istismar ve sorunlara karşı esneklik veya direnç sağlar. Şu anda [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://rated.network/), [supermajority.info](https://supermajority.info//) ve [Ethernodes](https://ethernodes.org/) dahil olmak üzere çeşitli istemci çeşitliliği gösterge panelleri bulunmaktadır.
+[İstemci çeşitliliği](/developers/docs/nodes-and-clients/client-diversity/), Ethereum ağı için genel sağlık açısından önemlidir çünkü hatalara veya açıklardan kaynaklanabilecek istismar ve sorunlara karşı esneklik veya direnç sağlar. Şu anda [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://www.rated.network), [supermajority.info](https://supermajority.info//) ve [Ethernodes](https://ethernodes.org/) dahil olmak üzere çeşitli istemci çeşitliliği gösterge panelleri bulunmaktadır.
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/), blok zincir verilerini ilişkisel veritabanı (PostgreSQL ve DatabricksSQL) tablolarına önceden işler, kullanıcıların SQL kullanarak blok zincir verilerini sorgulaması ve sorgu sonuçlarına dayalı panolar oluşturmasına olanak tanır. Zincir üzerindeki veriler 4 ham tablo halinde düzenlenmektedir: `bloklar`, `işlemler`, (olay/faaliyet) `günlükler` ve (çağrı) `izler`. Popüler sözleşmeler ve protokoller çözümlenmiş yani deşifre edilmiş ve her birinin kendi olay ve çağrı tablo seti bulunmaktadır. Bu olay ve çağrı tabloları daha fazla işlenmiş ve protokol türlerine göre soyutlama tabloları olarak organize edilmiştir; örneğin, dex, borç verme, sabit paralar vb.
+[Dune Analytics](https://dune.com/), blok zincir verilerini ilişkisel veritabanı (DuneSQL) tablolarına önceden işler, kullanıcıların SQL kullanarak blok zincir verilerini sorgulaması ve sorgu sonuçlarına dayalı panolar oluşturmasına olanak tanır. Zincir üzerindeki veriler 4 ham tablo halinde düzenlenmektedir: `bloklar`, `işlemler`, (olay/faaliyet) `günlükler` ve (çağrı) `izler`. Popüler sözleşmeler ve protokoller çözümlenmiş yani deşifre edilmiş ve her birinin kendi olay ve çağrı tablo seti bulunmaktadır. Bu olay ve çağrı tabloları daha fazla işlenmiş ve protokol türlerine göre soyutlama tabloları olarak organize edilmiştir; örneğin, dex, borç verme, sabit paralar vb.
+
+## SubQuery Ağı {#subquery-network}
+
+[SubQuery](https://subquery.network/), geliştiricilere Web3 projeleri için hızlı, güvenilir, merkeziyetsiz ve kişiselleştirilmiş API'ler sağlayan öncü veri indeksleyicisidir. SubQuery, 165'ten fazla ekosistemden (Ethereum dahil) geliştiricilerin, kullanıcıları için sezgisel ve sürükleyici deneyimler oluşturmalarını sağlayan zengin indeksli veriler sağlar. SubQuery ağı, durdurulamaz uygulamalarınızı dirençli ve merkeziyetsiz altyapı ağıyla güçlendirir. Veri işleme faaliyetleri için özel bir arka uç oluşturmaya zaman harcamak yerine geleceğin web3 uygulamalarını oluşturmak için SubQuery'nin blokzincir geliştirici araç setini kullanın.
+
+Başlarken, Ethereum blokzinciri verilerini yerel bir Docker ortamında dakikalar içinde indekslemeye başlamak ve ardından [SubQuery'nin yönetilen hizmetinde](https://managedservice.subquery.network/) veya [SubQuery'nin merkeziyetsiz ağında](https://app.subquery.network/dashboard) kullanıma sunmadan önce test etmek için [Ethereum hızlı başlangıç ​​kılavuzunu](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html) ziyaret edin.
+
+## Ethernow - Bellek Havuzu Veri Programı {#ethernow}
+[Blocknative](https://www.blocknative.com/), Ethereum'un geçmiş [bellek havuzu veri arşivine](https://www.ethernow.xyz/mempool-data-archive) açık erişim sunar. Bu, araştırmacıların ve topluluk yararına projelerin Ethereum Ana Ağının zincir öncesi katmanını keşfetmesini mümkün kılar. Bu veri grubu aktif olarak yönetilmektedir ve Ethereum ekosistemindeki bellek havuzu işlem etkinliklerinin en kapsayıcı kaydıdır. [Ethernow](https://www.ethernow.xyz/)'dan daha fazla bilgi edinin.
 
 ## Daha Fazla Okuma {#further-reading}
 
@@ -43,3 +52,4 @@ Geliştiriciler, [GraphQL](https://graphql.org/)'u kullanarak, alt grafikler ola
 - [EtherScan'deki API kodu örnekleri](https://etherscan.io/apis#contracts)
 - [Beaconcha.in İçaret Zincir'i keşif aracı](https://beaconcha.in)
 - [Dune Temelleri](https://docs.dune.com/#dune-basics)
+- [SubQuery Ethereum Hızlı Başlangıç Kılavuzu](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
