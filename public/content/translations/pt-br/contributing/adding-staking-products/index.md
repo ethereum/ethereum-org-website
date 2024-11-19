@@ -94,7 +94,7 @@ Para produtos de software relacionados à configuração de nó ou cliente, gere
 
 #### Participação sobre Serviço {#staking-as-a-service}
 
-Para [listagens de staking-as-a-service ](/staking/saas/) (ou seja, operação de nó delegada):
+Para [listagens de staking-as-a-service](/staking/saas/) (ou seja, operação de nó delegada):
 
 **Quais são as taxas associadas ao uso do serviço?**
 

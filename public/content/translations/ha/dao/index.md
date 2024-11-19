@@ -148,7 +148,7 @@ _Yawanci ana amfani da shi don ingantawa da ƙa'idodin gwamnati da [dapps](/glos
 ### Maƙalun DAO {#dao-articles}
 
 - [Menene DAO?](https://aragon.org/dao) - [Aragon](https://aragon.org/)
-- [Gidan DAOs](https://wiki.metagame.wtf/docs /great-houses/ houses-of-daos) - [Metagame](https://wiki.metagame.wtf] /)
+- [Gidan DAOs](https://wiki.metagame.wtf/docs/great-houses/houses-of-daos) - [Metagame](https://wiki.metagame.wtf/)
 - [Menene DAO kuma menene don haka?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) - [DAOhaus](https://daohaus.club/)
 - [Yadda Ake Fara DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) - [DAOhaus](https://daohaus.club/)
 - [Menene DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) - [ Coinmarketcap](https://coinmarketcap.com)
