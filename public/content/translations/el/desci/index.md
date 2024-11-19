@@ -126,6 +126,7 @@ summaryPoint3: Δημιουργία πάνω στο ανοιχτό επιστη�
 - [DeSci: Το μέλλον της έρευνας από τον Samuel Akinosho.](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Χρηματοδότηση επιστήμης (Επίλογος: Η DeSci και οι νέες μεθόδοι κρύπτο) από την Nadia.](https://nadia.xyz/science-funding)
 - [Η αποκέντρωση διακόπτει την ανάπτυξη των ναρκωτικών.](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [Τι είναι το DeSci - Αποκεντρωμένη επιστήμη;](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Βίντεο {#videos}
 
@@ -134,3 +135,4 @@ summaryPoint3: Δημιουργία πάνω στο ανοιχτό επιστη�
 - [Η επιστημονική δημοσίευση είναι προβληματική. Μπορεί το Web3 να το διορθώσει;](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet - DeSci, Ανεξάρτητα εργαστήρια & η Επιστήμη των δεδομένων μεγάλης κλίμακας.](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier - Πώς η DeSci μπορεί να τροποποιήσει τη Βιοϊατρική έρευνα & τα Επιχειρηματικά κεφάλαια.](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
+- [Paige Donner - Εργαλεία Open Science με Web3 & Το Blockchain](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)

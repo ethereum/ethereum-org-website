@@ -8,10 +8,10 @@ alt: "以太坊路线图"
 summaryPoints:
 buttons:
   - 
-    label: 进一步升级
+    content: 进一步升级
     toId: 即将发生什么变化
   - 
-    label: 以往升级
+    content: 以往升级
     href: /history/
     variant: 简要
 ---
