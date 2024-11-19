@@ -54,7 +54,7 @@ Merk op dat dit algemene patronen zijn die misschien niet voor elk netwerk gelde
 
 ## Verder lezen {#further-reading}
 
-- [Wat is Web3? ](/web3/) - _ethereum.org_
+- [Wat is Web3?](/web3/) - _ethereum.org_
 - [De architectuur van een Web 3.0 applicatie](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [De betekenis van decentralisatie](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _6 februari 2017 - Vitalik Buterin_
 - [Waarom decentralisatie belangrijk is](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _18 februari 2018 - Chris Dixon_
