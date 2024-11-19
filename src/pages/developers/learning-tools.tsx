@@ -32,6 +32,7 @@ import CyfrinUpdraftImage from "@/public/images/dev-tools/cyfrin-updraft.png"
 import DappWorldImage from "@/public/images/dev-tools/dapp-world.png"
 import EthDotBuildImage from "@/public/images/dev-tools/eth-dot-build.png"
 import LearnWeb3Image from "@/public/images/dev-tools/learnweb3.png"
+import MetanaImage from "@/public/images/dev-tools/metana.png"
 import MetaschoolImage from "@/public/images/dev-tools/metaschool.png"
 import NFTSchoolImage from "@/public/images/dev-tools/nftschool.png"
 import NodeGuardiansImage from "@/public/images/dev-tools/node-guardians.jpg"
@@ -306,6 +307,19 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
+    },
+    {
+      name: "Metana",
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-metana-description"
+      ),
+      url: "https://metana.io/web3-solidity-bootcamp-ethereum-blockchain/",
+      image: MetanaImage,
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-metana-logo-alt"
+      ),
+      background: "#ffffff",
+      subjects: ["Solidity", "web3", "Smart Contracts"],
     },
     {
       name: "Questbook",
