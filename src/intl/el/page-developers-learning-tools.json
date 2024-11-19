@@ -8,8 +8,6 @@
   "page-learning-tools-capture-the-ether-logo-alt": "Λογότυπο Capture the Ether",
   "page-learning-tools-node-guardians-description": "Ο κόμβος «Guardians» είναι μια παιχνιδοποιημένη εκπαιδευτική πλατφόρμα που βυθίζει τους προγραμματιστές web3 σε φανταστικές θεματικές αποστολές, για να γίνουν καλύτεροι στον προγραμματισμό με Solidity, με Cairo, με Noir και με Huff.",
   "page-learning-tools-node-guardians-logo-alt": "Λογότυπο κόμβου Guardians",
-  "page-learning-tools-chainshot-description": "Δικτυακά, με επικεφαλή προγραμματιστή εκπαιδευτή του Ethereum και επιπλέον μαθήματα.",
-  "page-learning-tools-chainshot-logo-alt": "ChainShot λογότυπο",
   "page-learning-tools-coding": "Μάθετε προγραμματίζοντας",
   "page-learning-tools-coding-subtitle": "Αυτά τα εργαλεία θα σας βοηθήσουν να πειραματιστείτε με το Ethereum αν προτιμάτε μια πιο διαδραστική εμπειρία μάθησης.",
   "page-learning-tools-consensys-academy-description": "Ζωντανή συνάντηση προγραμματισμού Ethereum.",
@@ -52,11 +50,11 @@
   "page-learning-tools-vyperfun-logo-alt": "Λογότυπο Vyper.fun",
   "page-learning-tools-nftschool-description": "Μάθετε τι συμβαίνει με τα μη εναλλάξιμα κρυπτοπαραστατικά ή αλλιώς NFT με τεχνικούς όρους.",
   "page-learning-tools-nftschool-logo-alt": "Λογότυπο NFT school",
-  "page-learning-tools-pointer-description": "Μάθετε προγραμματισμό web3 με διασκεδαστικά διαδραστικά μαθήματα. Κατά τη διάρκεια, κερδίστε ανταμοιβές σε κρυπτο",
-  "page-learning-tools-pointer-logo-alt": "Λογότυπο Pointer",
   "page-learning-tools-platzi-description": "Μάθετε πώς να δημιουργείτε dapps στο Web3 και να εξειδικεύσετε όλες τις δεξιότητες που απαιτούνται για να γίνετε προγραμματιστής blockchain.",
   "page-learning-tools-platzi-logo-alt": "Λογότυπο Platzi",
   "page-learning-tools-alchemy-university-description": "Αναπτύξτε την καριέρα σας στο web3 μέσα από μαθήματα, έργα και κωδικοποίηση.",
   "page-learning-tools-alchemy-university-logo-alt": "Λογότυπο του Πανεπιστημίου Alchemy",
+  "page-learning-tools-cyfrin-updraft-description": "Μάθετε ανάπτυξη έξυπνων συμβολαίων για όλα τα επίπεδα δεξιοτήτων και ελέγχους ασφαλείας.",
+  "page-learning-tools-cyfrin-updraft-logo-alt": "Λογότυπο Cyfrin Updraft",
   "alt-eth-blocks": "Απεικόνιση των μπλοκ που οργανώνονται σαν ένα σύμβολο ETH"
 }
