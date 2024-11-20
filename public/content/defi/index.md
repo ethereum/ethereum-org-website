@@ -180,7 +180,6 @@ To be able to do the above example in the traditional finance world, you'd need 
 
 You can earn interest on your crypto by lending it and see your funds grow in real time. Right now interest rates are much higher than what you're likely to get at your local bank (if you're lucky enough to be able to access one). 
 
-Here's a first example:
 
 - You lend your 100 Dai, a [stablecoin](/stablecoins/), to a product like Aave.
 - You receive 100 Aave Dai (aDai) which is a token that represents your loaned Dai.
