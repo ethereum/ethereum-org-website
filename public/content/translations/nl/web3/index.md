@@ -42,7 +42,7 @@ Het uitgangspunt van 'Web 3.0' werd bedacht door Ethereums medeoprichter Gavin W
 
 Web3 is een veelomvattende term geworden voor de visie van een nieuw, beter internet. In de kern maakt Web3 gebruik van blockchains, cryptovaluta's en NFT's om de macht terug te geven aan de gebruikers in de vorm van eigendom.
 
-Een bericht uit 2020 op Twitter zei het het beste: Web1 was alleen-lezen, Web2 is lezen-schrijven, Web3 wordt lezen-schrijven-bezitten.
+Een bericht uit 2020 op Twitter zei het het beste: Web1 was alleen-lezen, Web2 is lezen-schrijven, Web3 wordt lezen-schrijven-bezitten. 
 
 #### Kernideeën van Web3 {#core-ideas}
 
