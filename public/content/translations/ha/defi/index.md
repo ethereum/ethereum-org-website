@@ -1,7 +1,7 @@
 ---
 title: Kuɗaɗe masu cin gashin kansu (DeFi)
 description: Bayanai na sama game da DeFi akan Ethereum
-lang: en
+lang: ha
 template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png

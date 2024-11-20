@@ -1,7 +1,7 @@
 ---
 title: Adashe
 description: Bayani sama-sama na yadda za a fara da tafkin saka hannun jari ETH
-lang: en
+lang: ha
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-pool.png
@@ -21,7 +21,7 @@ Wasu tafkan suna aiki ta amfani da kwangila masu wayo, inda za a iya saka kuɗi 
 
 ## Me yasa saka hannun jari ta tafkin kuɗi? {#why-stake-with-a-pool}
 
-Ƙari ga amfani da muka kayyade a cikin [ gabatarwa ta saka hannun jari ](/staking/), saka hannun jari ta tafki na zuwa da wasu fa'idodi daban-daban.
+Ƙari ga amfani da muka kayyade a cikin [gabatarwa ta saka hannun jari](/staking/), saka hannun jari ta tafki na zuwa da wasu fa'idodi daban-daban.
 
 <CardGrid>
   <Card title="Ƙananan shamaki domin shigarwa" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />

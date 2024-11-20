@@ -1,7 +1,7 @@
 ---
 title: Ajiya a matsayin aiki
 description: Bayani sama-sama na yadda za a fara da tafkin saka hannun jari ETH
-lang: en
+lang: ha
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png

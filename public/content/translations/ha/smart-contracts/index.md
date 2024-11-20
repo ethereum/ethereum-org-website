@@ -1,7 +1,7 @@
 ---
 title: Smart contracts
 description: Gabatarwa mara fasaha ga kwangilolin fasaha
-lang: en
+lang: ha
 ---
 
 # Gabatarwa zuwa smart contracts {#introduction-to-smart-contracts}

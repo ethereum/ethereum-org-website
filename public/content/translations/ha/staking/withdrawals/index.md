@@ -1,7 +1,7 @@
 ---
 title: Cire Ajiya
 description: Wannan shafin yana taƙaita bayani ne akan tura cire hannun jari, yanda suke aiki, da abinda masu ajiya suke buƙata su samu a masayin lada
-lang: en
+lang: ha
 template: staking
 image: /images/staking/leslie-withdrawal.png
 alt: Leslie rhino da ribar ta na hannun jari
