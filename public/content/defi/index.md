@@ -187,12 +187,6 @@ Here's a first example:
 - Your aDai will increase based on the interest rates and you can see your balance growing in your wallet. Dependent on the [APR](/glossary/#apr), your wallet balance will read something like 100.1234 after a few days!
 - You can withdraw an amount of regular Dai that's equal to your aDai balance at any time.
 
-Here's a second nuanced example:
-
-- You lend your 100 USDC to a product like a Morpho Vault.
-- You receive X units of a Morpho Vault USDC (mvUSDC) which is a token that represents your loaned USDC.
-- Your mvUSDC will will not increase in number directly in your wallet, but the value of it will grow based on the interest rates. Dependent on the [APR](/glossary/#apr), your wallet balance will read something like 100.1234 after a few days!
-- You can withdraw an amount of regular USDC that's equal to the value of your mvUSDC balance at any time.
 
 <ButtonLink href="/dapps/?category=finance#explore">
   See lending dapps
