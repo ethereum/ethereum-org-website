@@ -1,5 +1,7 @@
 import { WalletData } from "@/lib/types"
 
+import { newToCrypto } from "./new-to-crypto"
+
 import OneInchWalletImage from "@/public/images/wallets/1inch.png"
 import AlphaWalletImage from "@/public/images/wallets/alpha.png"
 import AmbireImage from "@/public/images/wallets/ambire.png"
@@ -8,6 +10,7 @@ import AuroxImage from "@/public/images/wallets/aurox.png"
 import BitkeepImage from "@/public/images/wallets/bitkeep.png"
 import BlockWalletImage from "@/public/images/wallets/blockwallet.png"
 import BridgeWalletImage from "@/public/images/wallets/bridge.png"
+import ClearWallet from "@/public/images/wallets/clearwallet.png"
 import CoinbaseImage from "@/public/images/wallets/coinbase.png"
 import CoinWalletImage from "@/public/images/wallets/coinwallet.png"
 import CtrlWalletImage from "@/public/images/wallets/ctrl.png"
@@ -39,7 +42,7 @@ import TrustWalletImage from "@/public/images/wallets/trustwallet.png"
 import UnstoppableWalletImage from "@/public/images/wallets/unstoppable.png"
 import ZerionImage from "@/public/images/wallets/zerion.png"
 
-export const walletsData: WalletData[] = [
+const walletsData = [
   {
     last_updated: "2024-10-30",
     name: "Keystone",
@@ -234,7 +237,6 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://www.coinbase.com/wallet/tutorials",
     documentation: "",
-    new_to_crypto: true,
     // note: "Community contribution, let's follow up with Coinbase",
   },
   {
@@ -649,7 +651,22 @@ export const walletsData: WalletData[] = [
     twGradiantBrandColor: "from-[#ffffff]",
     url: "https://foxwallet.com/en",
     active_development_team: true,
-    languages_supported: ["en", "zh", "uk", "ru", "es", "id", "ja", "es", "hi", "vi", "tr", "ar", "bn", "th"],
+    languages_supported: [
+      "en",
+      "zh",
+      "uk",
+      "ru",
+      "es",
+      "id",
+      "ja",
+      "es",
+      "hi",
+      "vi",
+      "tr",
+      "ar",
+      "bn",
+      "th",
+    ],
     twitter: "https://twitter.com/FoxWallet",
     discord: "https://discord.com/invite/JVjVbe3Zth",
     reddit: "",
@@ -773,7 +790,6 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://www.mewtopia.com/",
     documentation: "https://help.myetherwallet.com/en/",
-    new_to_crypto: true,
   },
   {
     last_updated: "2022-06-24",
@@ -1076,7 +1092,6 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://learn.rainbow.me/",
     documentation: "",
-    new_to_crypto: true,
   },
   {
     last_updated: "2024-09-01",
@@ -1319,7 +1334,6 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "",
-    new_to_crypto: false,
   },
   {
     last_updated: "2024-09-26",
@@ -1380,7 +1394,6 @@ export const walletsData: WalletData[] = [
     onboard_documentation:
       "https://help.zerion.io/en/collections/5525626-zerion-wallet",
     documentation: "https://help.zerion.io/en/",
-    new_to_crypto: true,
   },
   {
     last_updated: "2022-08-31",
@@ -1539,7 +1552,7 @@ export const walletsData: WalletData[] = [
     repo_url: "https://github.com/block-wallet/extension",
     non_custodial: true,
     security_audit: [
-      "https://github.com/block-wallet/block-wallet/blob/a0a2396f0f0a3c17629e87c7fb000eb539dacb3f/audits/%5BKALOS%5D%20BlockWallet%20Audit%20Report%20v1.1.pdf",
+      "https://github.com/block-wallet/block-wallet/blob/a0a2396f0f0a3c17629e87c7fether-0eb539dacb3f/audits/%5BKALOS%5D%20BlockWallet%20Audit%20Report%20v1.1.pdf",
       "https://github.com/block-wallet/block-wallet/blob/main/audits/Least%20Authority%201.pdf",
       "https://github.com/block-wallet/block-wallet/blob/main/audits/BLW-01-report.v3.pdf",
       "https://immunefi.com/bounty/blockwallet/",
@@ -1626,7 +1639,6 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://help.onekey.so/hc/en-us",
     documentation: "https://developer.onekey.so/guide/introduction",
-    new_to_crypto: true,
   },
   {
     last_updated: "2023-04-21",
@@ -1729,9 +1741,7 @@ export const walletsData: WalletData[] = [
     open_source: false,
     repo_url: "https://github.com/phantom",
     non_custodial: true,
-    security_audit: [
-      "https://github.com/phantom/audit-reports",
-    ],
+    security_audit: ["https://github.com/phantom/audit-reports"],
     scam_protection: true,
     hardware_support: true,
     rpc_importing: false,
@@ -2023,6 +2033,57 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://docs.gemwallet.com/",
     documentation: "https://docs.gemwallet.com/",
   },
-]
+  {
+    last_updated: "2024-10-31",
+    name: "Clear Wallet",
+    image: ClearWallet,
+    twBackgroundColor: "bg-[#0500FF]",
+    twGradiantBrandColor: "from-[#0500FF]",
+    url: "https://clear-wallet.flashsoft.eu/",
+    active_development_team: true,
+    languages_supported: ["en"],
+    twitter: "https://x.com/clear_wallet_",
+    discord: "https://discord.gg/wHaXy6nx",
+    reddit: "",
+    telegram: "https://t.me/evm_clear_wallet",
+    ios: false,
+    android: false,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: false,
+    chromium: true,
+    hardware: false,
+    open_source: true,
+    repo_url: "https://github.com/andrei0x309/clear-wallet",
+    non_custodial: true,
+    security_audit: [],
+    scam_protection: false,
+    hardware_support: false,
+    rpc_importing: true,
+    nft_support: false,
+    connect_to_dapps: true,
+    staking: false,
+    swaps: false,
+    multichain: true,
+    layer_2: true,
+    gas_fee_customization: true,
+    ens_support: false,
+    erc_20_support: true,
+    buy_crypto: false,
+    withdraw_crypto: false,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation: "https://clear-wallet.flashsoft.eu/",
+    documentation: "https://clear-wallet.flashsoft.eu/docs/",
+  },
+] as const satisfies Omit<WalletData, "new_to_crypto">[]
 
-export default walletsData
+export type WalletName = (typeof walletsData)[number]["name"]
+
+const allWalletData = walletsData.map((wallet) => ({
+  ...wallet,
+  new_to_crypto: newToCrypto.includes(wallet.name),
+})) as WalletData[]
+
+export default allWalletData

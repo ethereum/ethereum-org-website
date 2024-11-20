@@ -11,7 +11,7 @@ const meta = {
       "layer-2": [false, 0],
       "run-a-node": [false, 0],
       merge: [false, 0],
-      "solo-staking": [false, 0],
+      "staking-solo": [false, 0],
       "what-is-ether": [false, 0],
       "what-is-ethereum": [false, 0],
       nfts: [false, 0],

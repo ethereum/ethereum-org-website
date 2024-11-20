@@ -34,7 +34,7 @@ A [kliensdiverzitás](/developers/docs/nodes-and-clients/client-diversity/) rend
 
 ## Dune-elemzések {#dune-analytics}
 
-A [Dune-elemzések](https://dune.com/) előre feldolgozzák a blokkláncadatokat relációs adatbázistáblákba (PostgreSQL és DatabricksSQL), hogy a felhasználók lekérdezhessék a blokklánc adatait SQL segítségével és ennek eredményéből további kimutatásokat építhessenek. A láncon lévő adatok 4 nyerstáblába rendeződnek: `blocks` (blokkok), `transactions` (tranzakciók), `logs` (eseménynaplózás) és `traces` (meghívások nyomai). A népszerű szerződéseket és protokollokat dekódolják, és mindegyik rendelkezik a maga eseményeket és meghívásokat tartalmazó tábláival. Ezeket az esemény- és hívástáblákat tovább dolgozzák és absztrakciós táblákba szervezik a protokollok típusa szerint, mint amilyen a DEX, kölcsönzés, stabilérmék stb.
+A [Dune-elemzések](https://dune.com/) előre feldolgozzák a blokkláncadatokat relációs adatbázistáblákba (DuneSQL), hogy a felhasználók lekérdezhessék a blokklánc adatait SQL segítségével és ennek eredményéből további kimutatásokat építhessenek. A láncon lévő adatok 4 nyerstáblába rendeződnek: `blocks` (blokkok), `transactions` (tranzakciók), `logs` (eseménynaplózás) és `traces` (meghívások nyomai). A népszerű szerződéseket és protokollokat dekódolják, és mindegyik rendelkezik a maga eseményeket és meghívásokat tartalmazó tábláival. Ezeket az esemény- és hívástáblákat tovább dolgozzák és absztrakciós táblákba szervezik a protokollok típusa szerint, mint amilyen a DEX, kölcsönzés, stabilérmék stb.
 
 ## SubQuery hálózat {#subquery-network}
 
