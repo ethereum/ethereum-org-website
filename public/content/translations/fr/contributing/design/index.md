@@ -16,7 +16,7 @@ Finalement, c'est une excellente façon de construire un portfolio diversifié e
 
 Nous avons parfois besoin d'aide pour tester nos nouveautés. C'est une excellente manière de contribuer sans avoir de connaissances techniques.
 
-1. L'équipe de conception partagera une conception de maquette sur [Discord](https://discord.com/invite/CetY6Y4) et sur [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. L'équipe de conception partagera une maquette sur le [Discord](https://discord.com/invite/ethereum-org) et sur [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Vous serez guidé à travers les conceptions pour fournir des commentaires via la fonction de commentaires.
 3. Le résultat sera partagé dans une demande GitHub puis fermé par l'équipe.
 

@@ -61,7 +61,6 @@ import artblocks from "@/public/images/dapps/artblocks.png"
 import arweave from "@/public/images/dapps/arweave.png"
 import asyncart from "@/public/images/dapps/asyncart.png"
 import audius from "@/public/images/dapps/audius.png"
-import augur from "@/public/images/dapps/augur.png"
 import axie from "@/public/images/dapps/axie.png"
 import balancer from "@/public/images/dapps/balancer.png"
 import brave from "@/public/images/dapps/brave.png"
@@ -107,7 +106,6 @@ import requestFinance from "@/public/images/dapps/requestFinance.png"
 import rotki from "@/public/images/dapps/rotki.png"
 import rubic from "@/public/images/dapps/rubic.png"
 import sablier from "@/public/images/dapps/sablier.png"
-import set from "@/public/images/dapps/set.png"
 import spatial from "@/public/images/dapps/spatial.png"
 import spruce from "@/public/images/dapps/spruce.png"
 import status from "@/public/images/dapps/status.png"
@@ -782,13 +780,6 @@ const DappsPage = () => {
       alt: t("page-dapps-polymarket-logo-alt"),
     },
     {
-      title: "Augur",
-      description: t("page-dapps-dapp-description-augur"),
-      link: "https://augur.net",
-      image: augur,
-      alt: t("page-dapps-augur-logo-alt"),
-    },
-    {
       title: "Synthetix",
       description: t("page-dapps-dapp-description-synthetix"),
       link: "https://synthetix.io/",
@@ -825,13 +816,6 @@ const DappsPage = () => {
   ]
 
   const investments = [
-    {
-      title: "Token Sets",
-      description: t("page-dapps-dapp-description-token-sets"),
-      link: "https://www.tokensets.com/",
-      image: set,
-      alt: t("page-dapps-token-sets-logo-alt"),
-    },
     {
       title: "PoolTogether",
       description: t("page-dapps-dapp-description-pooltogether"),
@@ -1862,15 +1846,7 @@ const DappsPage = () => {
       </FullWidthContainer>
       <Content>
         <ImageContainer id="what-are-dapps">
-          <GhostCard
-            mt={2}
-            sx={{
-              ".ghost-card-base": {
-                display: "flex",
-                justifyContent: "center",
-              },
-            }}
-          >
+          <GhostCard className="mt-2 flex items-center">
             <Image
               bgSize="cover"
               bgRepeat="no-repeat"

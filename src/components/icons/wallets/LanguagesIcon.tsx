@@ -1,21 +1,15 @@
-/* eslint-disable react/jsx-key */
-import * as React from "react"
-import { createIcon } from "@chakra-ui/react"
+import { createIconBase } from "../icon-base"
+import { commonIconDefaultAttrs } from "../utils"
 
-import { commonIconDefaultProps } from "../utils"
-
-export const LanguagesIcon = createIcon({
+export const LanguagesIcon = createIconBase({
   displayName: "LanguagesIcon",
   viewBox: "0 0 24 25",
-  defaultProps: {
-    width: "24px",
-    height: "25px",
-    ...commonIconDefaultProps,
-  },
-  path: [
+  className: "w-[24px] h-auto",
+  ...commonIconDefaultAttrs,
+  children: (
     <path
       fill="#8C8C8C"
       d="M11.991 3.5C7.023 3.5 3 7.532 3 12.5s4.023 9 8.991 9c4.977 0 9.009-4.032 9.009-9s-4.032-9-9.009-9Zm6.237 5.4h-2.655a14.087 14.087 0 0 0-1.242-3.204A7.227 7.227 0 0 1 18.228 8.9ZM12 5.336A12.678 12.678 0 0 1 13.719 8.9h-3.438A12.678 12.678 0 0 1 12 5.336ZM5.034 14.3a7.418 7.418 0 0 1-.234-1.8c0-.621.09-1.224.234-1.8h3.042a14.864 14.864 0 0 0-.126 1.8c0 .612.054 1.206.126 1.8H5.034Zm.738 1.8h2.655a14.084 14.084 0 0 0 1.242 3.204A7.188 7.188 0 0 1 5.772 16.1Zm2.655-7.2H5.772a7.188 7.188 0 0 1 3.897-3.204A14.085 14.085 0 0 0 8.427 8.9ZM12 19.664a12.678 12.678 0 0 1-1.719-3.564h3.438A12.678 12.678 0 0 1 12 19.664Zm2.106-5.364H9.894a13.242 13.242 0 0 1-.144-1.8c0-.612.063-1.215.144-1.8h4.212c.081.585.144 1.188.144 1.8 0 .612-.063 1.206-.144 1.8Zm.225 5.004c.54-.999.954-2.079 1.242-3.204h2.655a7.227 7.227 0 0 1-3.897 3.204Zm1.593-5.004c.072-.594.126-1.188.126-1.8 0-.612-.054-1.206-.126-1.8h3.042c.144.576.234 1.179.234 1.8s-.09 1.224-.234 1.8h-3.042Z"
-    />,
-  ],
+    />
+  ),
 })

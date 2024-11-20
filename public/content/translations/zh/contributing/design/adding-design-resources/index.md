@@ -4,6 +4,8 @@ description: 确保 ethereum.org 上设计资料质量的准则和要求
 lang: zh
 ---
 
+# 添加设计资源 {#adding-design-resources}
+
 任何人可以在 [web3 页面的设计和用户体验区域](/developers/docs/design-and-ux/)推荐新的设计资料。
 
 请注意，本页面的重点是为有抱负的 web3 设计师提供用户价值。 该设计区域不是为了宣传你的服务、产品或平台。

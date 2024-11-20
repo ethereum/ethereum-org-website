@@ -20,12 +20,8 @@ import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import LeftNavBar from "@/components/LeftNavBar"
-import {
-  ContentContainer,
-  MobileButton,
-  MobileButtonDropdown,
-  Page,
-} from "@/components/MdComponents"
+import { ContentContainer, Page } from "@/components/MdComponents"
+import MobileButtonDropdown from "@/components/MobileButtonDropdown"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
@@ -38,9 +34,9 @@ import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -153,11 +149,17 @@ const fetchBeaconchainData = async (): Promise<StakingStatsData> => {
   return { totalEthStaked, validatorscount, apr }
 }
 
-const cachedFetchBeaconchainData = runOnlyOnce(fetchBeaconchainData)
-
 type Props = BasePageProps & {
   data: StakingStatsData
 }
+
+// In seconds
+const REVALIDATE_TIME = BASE_TIME_UNIT * 1
+
+const loadData = dataLoader(
+  [["stakingStatsData", fetchBeaconchainData]],
+  REVALIDATE_TIME * 1000
+)
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
@@ -170,7 +172,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
-  const data = await cachedFetchBeaconchainData()
+  const [data] = await loadData()
 
   return {
     props: {
@@ -179,8 +181,6 @@ export const getStaticProps = (async ({ locale }) => {
       data,
       lastDeployLocaleTimestamp,
     },
-    // Updated once a day
-    revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
@@ -632,9 +632,7 @@ const StakingPage = ({
             </div>
           </Flex>
         </ContentContainer>
-        <MobileButton>
-          <MobileButtonDropdown list={dropdownLinks} />
-        </MobileButton>
+        <MobileButtonDropdown list={dropdownLinks} />
       </Page>
     </PageContainer>
   )

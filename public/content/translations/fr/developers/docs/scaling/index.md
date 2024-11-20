@@ -9,7 +9,7 @@ sidebarDepth: 3
 
 Le nombre grandissant d'utilisateurs d'Ethereum révèle certaines limites de capacité de la blockchain. Cela a augmenté le coût de l'utilisation du réseau, impliquant le besoin de "solutions de mise à l'échelle". De nombreuses solutions ont été étudiées, testées et mises en œuvre qui adoptent différentes approches pour atteindre des objectifs similaires.
 
-L'objectif principal de la mise à l'échelle est d'augmenter la vitesse de transaction (finalisation plus rapide) et le débit des transactios (nombre élevé de transactions par seconde), sans sacrifier la décentralisation ou la sécurité (en savoir plus sur la [vision Ethereum](/roadmap/vision/)). Sur la blockchain Ethereum de la couche 1, une forte demande entraîne un ralentissement des transactions et des prix de [gaz](/developers/docs/gas/) non viables. L'augmentation de la capacité du réseau en termes de vitesse et de débit est fondamentale pour l'adoption significative et massive d'Ethereum.
+L'objectif principal de l'évolutivité est d'augmenter la vitesse des transactions (finalité plus rapide) et le débit des transactions (nombre plus élevé de transactions par seconde) sans compromettre la décentralisation ou la sécurité (plus d'informations sur la [vision d'Ethereum](/roadmap/vision/)). Sur la blockchain Ethereum de la couche 1, une forte demande entraîne un ralentissement des transactions et des prix de [gaz](/developers/docs/gas/) non viables. L'augmentation de la capacité du réseau en termes de vitesse et de débit est fondamentale pour l'adoption significative et massive d'Ethereum.
 
 Bien que la vitesse et le débit soient importants, il est essentiel que les solutions de mise à l'échelle permettent d'atteindre ces objectifs en restant décentralisées et sécurisées. Le maintien d'une faible barrière d'entrée pour les opérateurs de nœuds est essentiel pour empêcher une progression vers une puissance informatique centralisée et peu sûre.
 
@@ -109,5 +109,6 @@ _Notez que l’explication dans la vidéo utilise le terme « Couche 2 » pour
 - [Évolutivité de la blockchain ZK](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Pourquoi les rollups + les data shards sont les seules solutions durables pour une grande évolutivité](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [Quels types de couches 3 ont un sens ?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
+- [Disponibilité des données ou : Comment les Rollups ont appris à ne plus s'inquiéter et à aimer Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_

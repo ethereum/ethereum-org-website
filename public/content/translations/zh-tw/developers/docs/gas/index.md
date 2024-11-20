@@ -117,7 +117,7 @@ lang: zh-tw
 
 二層網路擴容為一項主要倡議，可大幅減低燃料費用並加強用戶體驗及可擴容性。 [更多二層網路擴容相關資訊](/developers/docs/scaling/#layer-2-scaling)。
 
-## 監控燃料費 {#moitoring-gas-fees}
+## 監控燃料費 {#monitoring-gas-fees}
 
 若你想要監控燃料價格，以便能以更低的費用發送以太幣，你可以使用許多不同的工具，例如：
 

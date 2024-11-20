@@ -56,12 +56,12 @@ import {
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { polishRSSList } from "@/lib/utils/rss"
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { breakpointAsNumber } from "@/lib/utils/screen"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -108,30 +108,51 @@ const Codeblock = lazy(() =>
 
 const StatsBoxGrid = lazy(() => import("@/components/StatsBoxGrid"))
 
-const cachedEthPrice = runOnlyOnce(fetchEthPrice)
-const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
-const cachedFetchTotalValueLocked = runOnlyOnce(fetchTotalValueLocked)
-const cachedXmlBlogFeeds = runOnlyOnce(async () => await fetchRSS(BLOG_FEEDS))
-const cachedAttestantBlog = runOnlyOnce(fetchAttestantPosts)
-const cachedGrowThePieData = runOnlyOnce(fetchGrowThePie)
-const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
+// API calls
+const fetchXmlBlogFeeds = async () => {
+  return await fetchRSS(BLOG_FEEDS)
+}
 
 type Props = BasePageProps & {
   metricResults: AllMetricData
   rssData: { rssItems: RSSItem[]; blogLinks: CommunityBlog[] }
 }
 
+// In seconds
+const REVALIDATE_TIME = BASE_TIME_UNIT * 1
+
+const loadData = dataLoader(
+  [
+    ["ethPrice", fetchEthPrice],
+    ["totalEthStaked", fetchTotalEthStaked],
+    ["totalValueLocked", fetchTotalValueLocked],
+    ["growThePieData", fetchGrowThePie],
+    ["communityEvents", fetchCommunityEvents],
+    ["attestantPosts", fetchAttestantPosts],
+    ["rssData", fetchXmlBlogFeeds],
+  ],
+  REVALIDATE_TIME * 1000
+)
+
 export const getStaticProps = (async ({ locale }) => {
-  const growThePieData = await cachedGrowThePieData()
+  const [
+    ethPrice,
+    totalEthStaked,
+    totalValueLocked,
+    growThePieData,
+    communityEvents,
+    attestantPosts,
+    xmlBlogs,
+  ] = await loadData()
+
   const metricResults: AllMetricData = {
-    ethPrice: await cachedEthPrice(),
-    totalEthStaked: await cachedFetchTotalEthStaked(),
-    totalValueLocked: await cachedFetchTotalValueLocked(),
+    ethPrice,
+    totalEthStaked,
+    totalValueLocked,
     txCount: growThePieData.txCount,
     txCostsMedianUsd: growThePieData.txCostsMedianUsd,
   }
 
-  const communityEvents = await cachedFetchCommunityEvents()
   const calendar = communityEvents.upcomingEventData
     .sort((a, b) => {
       const dateA = isValidDate(a.date) ? new Date(a.date).getTime() : -Infinity
@@ -153,10 +174,8 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
-  // load RSS feed items
-  const xmlBlogs = await cachedXmlBlogFeeds()
-  const attestantBlog = await cachedAttestantBlog()
-  const polishedRssItems = polishRSSList(attestantBlog, ...xmlBlogs)
+  // RSS feed items
+  const polishedRssItems = polishRSSList(attestantPosts, ...xmlBlogs)
   const rssItems = polishedRssItems.slice(0, RSS_DISPLAY_COUNT)
 
   const blogLinks = polishedRssItems.map(({ source, sourceUrl }) => ({
@@ -174,7 +193,6 @@ export const getStaticProps = (async ({ locale }) => {
       metricResults,
       rssData: { rssItems, blogLinks },
     },
-    revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
@@ -198,6 +216,7 @@ const HomePage = ({
     upcomingEvents,
     joinActions,
     bentoItems,
+    eventCategory,
   } = useHome()
 
   const { onCopy, hasCopied } = useClipboard()
@@ -225,7 +244,7 @@ const HomePage = ({
                   href={href}
                   label={label}
                   customEventOptions={{
-                    eventCategory: "Homepage",
+                    eventCategory,
                     eventAction: "Top 4 CTAs",
                     eventName: subHeroCTAs[idx].eventName,
                   }}
@@ -282,7 +301,7 @@ const HomePage = ({
               effect="cards"
               onSlideChange={({ activeIndex }) => {
                 trackCustomEvent({
-                  eventCategory: "Homepage",
+                  eventCategory,
                   eventAction: "mobile use cases",
                   eventName: `swipe to card ${activeIndex + 1}`,
                 })
@@ -295,6 +314,7 @@ const HomePage = ({
                     {...item}
                     className={cn(className, "bg-background text-body")}
                     imgWidth={undefined} // Intentionally last to override box
+                    eventCategory={eventCategory}
                   />
                 </SwiperSlide>
               ))}
@@ -307,6 +327,7 @@ const HomePage = ({
               key={item.title}
               {...item}
               className={cn(className, "max-lg:hidden")} // Desktop only
+              eventCategory={eventCategory}
             />
           ))}
         </Section>
@@ -357,21 +378,28 @@ const HomePage = ({
                   {t("page-index:page-index-popular-topics-header")}
                 </h3>
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
-                  {popularTopics.map(({ label, Svg, href, className }) => (
-                    <SvgButtonLink
-                      key={label}
-                      Svg={Svg}
-                      href={href}
-                      className={cn(
-                        "text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row",
-                        className
-                      )}
-                    >
-                      <p className="text-start text-xl font-bold text-body group-hover:underline">
-                        {label}
-                      </p>
-                    </SvgButtonLink>
-                  ))}
+                  {popularTopics.map(
+                    ({ label, Svg, href, eventName, className }) => (
+                      <SvgButtonLink
+                        key={label}
+                        Svg={Svg}
+                        href={href}
+                        className={cn(
+                          "text-accent-b hover:text-accent-b-hover [&>:first-child]:flex-row",
+                          className
+                        )}
+                        customEventOptions={{
+                          eventCategory,
+                          eventAction: "popular topics",
+                          eventName,
+                        }}
+                      >
+                        <p className="text-start text-xl font-bold text-body group-hover:underline">
+                          {label}
+                        </p>
+                      </SvgButtonLink>
+                    )
+                  )}
                 </div>
                 <div className="flex py-8 sm:justify-center">
                   <ButtonLink
@@ -381,7 +409,7 @@ const HomePage = ({
                     isSecondary
                     className="max-sm:self-start"
                     customEventOptions={{
-                      eventCategory: "Homepage",
+                      eventCategory,
                       eventAction: "learn",
                       eventName: "learn",
                     }}
@@ -418,7 +446,7 @@ const HomePage = ({
                 size="lg"
                 className="w-fit"
                 customEventOptions={{
-                  eventCategory: "Homepage",
+                  eventCategory,
                   eventAction: "builders",
                   eventName: "developers",
                 }}
@@ -433,7 +461,7 @@ const HomePage = ({
                 isSecondary
                 className="w-fit"
                 customEventOptions={{
-                  eventCategory: "Homepage",
+                  eventCategory,
                   eventAction: "builders",
                   eventName: "dev docs",
                 }}
@@ -459,7 +487,7 @@ const HomePage = ({
                     onClick={() => {
                       toggleCodeExample(idx)
                       trackCustomEvent({
-                        eventCategory: "Homepage",
+                        eventCategory,
                         eventAction: "Code Examples",
                         eventName,
                       })
@@ -490,7 +518,10 @@ const HomePage = ({
                             </p>
                           </div>
                         </AccordionTrigger>
-                        <AccordionContent className="relative border-t">
+                        <AccordionContent
+                          className="relative border-t"
+                          dir="ltr"
+                        >
                           <Suspense fallback={<SkeletonLines noOfLines={16} />}>
                             <div className="-m-2 max-h-[50vh] overflow-auto">
                               <Codeblock
@@ -522,7 +553,9 @@ const HomePage = ({
                   setIsOpen={setModalOpen}
                   title={codeExamples[activeCode].title}
                 >
-                  <Suspense fallback={<SkeletonLines noOfLines={16} />}>
+                  <Suspense
+                    fallback={<SkeletonLines noOfLines={16} dir="ltr" />}
+                  >
                     <Codeblock
                       codeLanguage={codeExamples[activeCode].codeLanguage}
                       allowCollapse={false}
@@ -563,7 +596,7 @@ const HomePage = ({
                 href="/community/"
                 size="lg"
                 customEventOptions={{
-                  eventCategory: "Homepage",
+                  eventCategory,
                   eventAction: "community",
                   eventName: "community",
                 }}
@@ -578,7 +611,7 @@ const HomePage = ({
                   isSecondary
                   hideArrow
                   customEventOptions={{
-                    eventCategory: "Homepage",
+                    eventCategory,
                     eventAction: "community",
                     eventName: "discord",
                   }}
@@ -592,7 +625,7 @@ const HomePage = ({
                   isSecondary
                   hideArrow
                   customEventOptions={{
-                    eventCategory: "Homepage",
+                    eventCategory,
                     eventAction: "community",
                     eventName: "github",
                   }}
@@ -609,7 +642,7 @@ const HomePage = ({
                 {calendar.length > 0 ? (
                   calendar.map(({ date, title, calendarLink }) => {
                     const customEventOptions = {
-                      eventCategory: "Homepage",
+                      eventCategory,
                       eventAction: "Community Events Widget",
                       eventName: "upcoming",
                     }
@@ -687,7 +720,7 @@ const HomePage = ({
                   <Card
                     href={link}
                     customEventOptions={{
-                      eventCategory: "Homepage",
+                      eventCategory,
                       eventAction: "blogs_posts",
                       eventName: source,
                     }}
@@ -724,7 +757,7 @@ const HomePage = ({
                   href={href}
                   key={name}
                   customEventOptions={{
-                    eventCategory: "Homepage",
+                    eventCategory,
                     eventAction: "blogs_read_more",
                     eventName: name!,
                   }}
@@ -764,7 +797,7 @@ const HomePage = ({
                       idx === 0 && "col-span-1 sm:col-span-2 md:col-span-1"
                     )}
                     customEventOptions={{
-                      eventCategory: "Homepage",
+                      eventCategory,
                       eventAction: "posts",
                       eventName: title,
                     }}
@@ -809,7 +842,7 @@ const HomePage = ({
               href="/community/events/"
               size="lg"
               customEventOptions={{
-                eventCategory: "Homepage",
+                eventCategory,
                 eventAction: "events",
                 eventName: "community events",
               }}
@@ -844,7 +877,7 @@ const HomePage = ({
                     className={cn("max-w-screen-sm", className)}
                     variant="row"
                     customEventOptions={{
-                      eventCategory: "Homepage",
+                      eventCategory,
                       eventAction: "join",
                       eventName,
                     }}
