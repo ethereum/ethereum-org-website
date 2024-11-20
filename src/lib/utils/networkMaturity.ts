@@ -65,7 +65,7 @@ export const networkMaturity = (l2beatData) => {
     return "maturing"
   }
 
-  if (maturityPoints >= 1 && l2beatData.stage === "Stage 0") {
+  if (maturityPoints >= 3) {
     return "developing"
   }
 
