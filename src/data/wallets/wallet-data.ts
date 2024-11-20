@@ -7,7 +7,7 @@ import AlphaWalletImage from "@/public/images/wallets/alpha.png"
 import AmbireImage from "@/public/images/wallets/ambire.png"
 import ArgentImage from "@/public/images/wallets/argent.png"
 import AuroxImage from "@/public/images/wallets/aurox.png"
-import BitkeepImage from "@/public/images/wallets/bitkeep.png"
+import BitgetImage from "@/public/images/wallets/bitget.png"
 import BlockWalletImage from "@/public/images/wallets/blockwallet.png"
 import BridgeWalletImage from "@/public/images/wallets/bridge.png"
 import ClearWallet from "@/public/images/wallets/clearwallet.png"
@@ -1486,7 +1486,7 @@ const walletsData = [
   {
     last_updated: "2024-11-20",
     name: "Bitget wallet",
-    image: BitkeepImage,
+    image: BitgetImage,
     twBackgroundColor: "bg-[#00F0FF]",
     twGradiantBrandColor: "from-[#ffffff]",
     url: "https://web3.bitget.com/",
