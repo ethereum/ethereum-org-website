@@ -383,7 +383,7 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
-    last_updated: "2023-01-25",
+    last_updated: "2024-11-06",
     name: "Safe",
     image: SafeImage,
     twBackgroundColor: "bg-[#12ff80]",
@@ -397,9 +397,9 @@ export const walletsData: WalletData[] = [
     telegram: "",
     ios: true,
     android: true,
-    linux: true,
-    windows: true,
-    macOS: true,
+    linux: false,
+    windows: false,
+    macOS: false,
     firefox: false,
     chromium: false,
     hardware: false,
