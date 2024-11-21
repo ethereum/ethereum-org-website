@@ -84,7 +84,7 @@
   "page-index-title": "Velkommen til Ethereum",
   "page-index-values-description": "Vær en del av den digitale revolusjonen",
   "page-index-values-header": "Internettet er i endring",
-  "page-index-values-tag": "Values",
+  "page-index-values-legacy": "Gammel",
   "page-index-values-ownership-legacy-label": "Begrenset eierskap",
   "page-index-values-ownership-legacy-content-0": "Med en vanlig bank eller plattform på sosiale medier er aktivaene og dataene dine administert av organisasjonen. Du er avhengig av dem for tilgang og kontroll.",
   "page-index-values-ownership-legacy-content-1": "Basert på retningslinjene deres, kan de bruke dataene dine på måter du kanskje ikke er enig med.",
@@ -115,6 +115,5 @@
   "page-index-values-open-legacy-label": "Lukket for de fleste",
   "page-index-values-open-legacy-content-0": "Selskaper beskytter sin immaterielle eiendom og deler ikke. Ingen utenfor selskapet kan se hvordan ting fungerer, fikse problemer eller gjøre forbedringer, som gjør det vanskelig for personer å opprette nye verktøy eller tilpasninger.",
   "page-index-values-open-ethereum-label": "Åpen for alle",
-  "page-index-values-legacy": "Gammel",
   "page-index-values-open-ethereum-content-0": "Ethereum er offentlig. Alle kan se, bruke og forbedre koden, noe som gjør Ethereum bedre for alle og enhver."
 }

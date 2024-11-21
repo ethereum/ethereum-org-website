@@ -91,6 +91,7 @@ La maggior parte dei team che costruiscono client di Ethereum hanno anche spazi 
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### Client di consenso {#consensus-clients}
 

@@ -1,16 +1,14 @@
-/* eslint-disable react/jsx-key */
-import { createIcon } from "@chakra-ui/react"
+import { createIconBase } from "../icon-base"
 
-export const CautionProductGlyphIcon = createIcon({
+export const CautionProductGlyphIcon = createIconBase({
   displayName: "CautionProductGlyphIcon",
   viewBox: "0 0 24 24",
-  defaultProps: {
-    width: "24px",
-    height: "24px",
-  },
-  path: [
-    <circle cx="12" cy="12" r="12" fill="#C19830" />,
-    <path d="M12 6L18 17H6L12 6Z" fill="white" />,
-    <path d="M12 6L18 17H6L12 6Z" fill="white" />,
-  ],
+  className: "size-[1em]",
+  children: (
+    <>
+      <circle cx="12" cy="12" r="12" fill="#C19830" />
+      <path d="M12 6L18 17H6L12 6Z" fill="white" />
+      <path d="M12 6L18 17H6L12 6Z" fill="white" />
+    </>
+  ),
 })

@@ -51,7 +51,7 @@
   "page-index-developers-code-example-title-3": "Açık ve izinsiz DNS",
   "page-index-developers-code-examples": "Kod örnekleri",
   "page-index-events-action": "Tüm etkinlikleri görün",
-  "page-index-events-header": "Etkinlikler",
+  "page-index-events-header": "Olaylar",
   "page-index-events-subtitle": "Ethereum toplulukları tüm yıl boyunca dünyanın dört bir yanında etkinliklere ev sahipliği yapar",
   "page-index-hero-image-alt": "Ethereum ekosistemini temsil eden fütüristik bir şehrin illüstrasyonu.",
   "page-index-join-action-contribute-description": "Ethereum.org'un büyümesine iyileştirilmesine yardımcı olabileceğiniz tüm farklı yöntemleri keşfedin.",
@@ -84,6 +84,7 @@
   "page-index-title": "Ethereum'a hoş geldiniz",
   "page-index-values-description": "Dijital devrimin bir parçası olun",
   "page-index-values-header": "İnternet değişiyor",
+  "page-index-values-legacy": "Eski",
   "page-index-values-tag": "Değerler",
   "page-index-values-ownership-legacy-label": "Kısıtlı sahiplik",
   "page-index-values-ownership-legacy-content-0": "Normal bir banka veya sosyal medya platformunda varlıklarınız ve verileriniz kuruluş tarafından yönetilir. Erişim ve kontrol için onlara güvenirsiniz.",
@@ -115,6 +116,5 @@
   "page-index-values-open-legacy-label": "Çoğu kişiye kapalı",
   "page-index-values-open-legacy-content-0": "Şirketler fikri mülkiyetlerini korur ve paylaşmaz. Şirket dışındaki hiç kimse işlerin nasıl yürüdüğünü göremez, sorunları çözemez veya iyileştirmeler yapamaz. İnsanların yeni araçlar yaratması veya özelleştirmesi zordur.",
   "page-index-values-open-ethereum-label": "Herkese açık",
-  "page-index-values-legacy": "Eski",
   "page-index-values-open-ethereum-content-0": "Ethereum herkese açıktır. Herkes kodu görebilir, kullanabilir ve geliştirebilir, böylece herkes için daha iyi hale getirebilir."
 }

@@ -242,15 +242,7 @@ _注意：有些衍生的代幣/行情指示器可能代表被質押的以太幣
 
 <InfoBanner emoji=":lock:">
   <div>
-    注意：使用簡訊型雙因素驗證，很容易發生
-    <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
-      SIM 卡挾持
-    </a>
-     ，也不安全。 為了獲得最佳安全性，請使用 {" "}
-    <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
-      Google Authenticator
-    </a>
-     或 <a href="https://authy.com/">Authy</a> 等服務。
+    注意：使用基於簡訊的雙因素驗證容易受到 <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM 卡交換攻擊</a>，因此並不安全。 為了獲得最佳安全性，請使用 <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> 或 <a href="https://authy.com/">Authy</a> 等服務。
   </div>
 </InfoBanner>
 

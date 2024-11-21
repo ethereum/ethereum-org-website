@@ -2,7 +2,6 @@ import type { GetStaticProps, InferGetStaticPropsType } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ReactNode } from "react"
-import { useBreakpointValue } from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
@@ -38,6 +37,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import uniswap from "@/public/images/dapps/uni.png"
 import dapps from "@/public/images/doge-computer.png"
 import oneinch from "@/public/images/exchanges/1inch.png"
@@ -104,6 +104,12 @@ const GetEthPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation("page-get-eth")
 
+  const walletImageWidth = useBreakpointValue({
+    base: "full",
+    sm: "60%",
+    md: "50%",
+  })
+
   const tokenSwaps: CardListItem[] = [
     {
       title: "Uniswap",
@@ -144,12 +150,6 @@ const GetEthPage = ({
     },
   ]
 
-  const walletImageWidth = useBreakpointValue({
-    base: "full",
-    sm: "60%",
-    md: "50%",
-  })
-
   return (
     <MainArticle>
       <Stack className="gap-16 p-8">
@@ -166,8 +166,8 @@ const GetEthPage = ({
             alt={t("page-get-eth-hero-image-alt")}
             priority
           />
-          <div className="mx-8 mb-8 mt-8 flex flex-col items-center text-center lg:mx-0 lg:mb-0 lg:mt-24">
-            <h1 className="my-8 text-4xl leading-6 md:text-5xl">
+          <div className="my-8 flex flex-col items-center text-center lg:mx-0 lg:mb-0 lg:mt-24">
+            <h1 className="my-8 text-4xl md:text-5xl">
               {t("page-get-eth-where-to-buy-title")}
             </h1>
             <p className="mb-0 max-w-[45ch] text-center text-xl leading-snug text-body-medium">

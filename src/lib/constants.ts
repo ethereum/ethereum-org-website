@@ -132,6 +132,24 @@ export const DEVELOPER_FEATURES = [
   "erc_20_support",
 ]
 
+// Chains
+export const CHAINID_NETWORK_ENDPOINT = "https://chainid.network/chains.json"
+
+export const TESTNETS = [
+  "goerli",
+  "holesky",
+  "kiln",
+  "kintsugi",
+  "ropsten",
+  "rinkeby",
+  "sepolia",
+  "zhejiang",
+]
+
+export const EXCLUDED_NAMES = ["deprecated", "testnet"]
+
+export const ETH = "ETH"
+
 /**
  * Navigation
  */
@@ -185,7 +203,7 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
   },
   {
     href: "https://ethstaker.cc/blog",
-    feed: "https://paragraph.xyz/api/blogs/rss/@ethstaker",
+    feed: "https://raw.githubusercontent.com/eth-educators/github-actions/refs/heads/main/_data/blog_data.xml",
   },
   {
     href: "https://0xparc.org/blog",

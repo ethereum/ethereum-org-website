@@ -6,11 +6,11 @@ lang: tr
 
 Maksimal çıkarılabilir değer (MEV), bir bloktaki işlemlerin sırasını dahil ederek, hariç tutarak ve değiştirerek standart blok ödülü ve gaz ücretlerini aşan blok üretiminden elde edilebilecek maksimum değeri ifade eder.
 
-## Madenci çıkarılabilir değeri {#miner-extractable-value}
+## Maksimum çıkarılabilir değer {#maximal-extractable-value}
 
 Maksimum çıkarılabilir değer, ilk olarak [iş ispatı](/developers/docs/consensus-mechanisms/pow/) bağlamında uygulandı ve başlangıçta "madenci çıkarılabilir değeri" olarak adlandırıldı. Bunun sebebi, iş ispatında katılım, çıkarım ve sıralamayı madencilerin kontrol etmesidir. Ancak, [Birleşim](/roadmap/merge) aracılığıyla hisse ispatına geçişten sonra bu rollerden doğrulayıcılar sorumlu olacak ve madencilik artık Ethereum protokolünün bir parçası olmayacaktır. Ancak değer çıkarım yöntemleri hala mevcuttur, yani artık bunun yerine "Maksimum çıkarılabilir değer" kullanılacaktır.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
 [İşlemler](/developers/docs/transactions/), [bloklar](/developers/docs/blocks/), [hisse ispatı](/developers/docs/consensus-mechanisms/pos) ve [gaz](/developers/docs/gas/) hakkında bilgi sahibi olduğunuzdan emin olun. [Merkeziyetsiz uygulamalar](/dapps/) ve [DeFi](/defi/) ile aşina olmak da faydalı olabilir.
 
@@ -28,11 +28,11 @@ Bu dinamik, "gaz golfü"nde iyi olmayı, yani işlemleri en az miktarda gaz kull
 
 Birkaç iyi bilinen gazlı golf tekniği: daha az depolama alanı (ve böylece gaz) harcadıkları için uzun bir sıfır dizisiyle başlayan adresler kullanmak (ör. [0x000000000C521824EaFf97Eac7B73B084ef9306](https://etherscan.io/address/0x0000000000c521824eaff97eac7b73b084ef9306)); bir depolama yuvası başlatmak (bakiye 0 olduğunda gerçekleşen durum), bir depolama yuvasını güncellemekten daha fazla gaza mal olduğu için sözleşmelerde ufak bir [ERC-20](/developers/docs/standards/tokens/erc-20/) token bakiyesi bırakmak. Gaz kullanımını azaltmak için daha fazla teknik bulmak, arayıcılar arasında aktif bir araştırma alanıdır.
 
-### Genelleştirilmiş öncüler (frontrunner) {#mev-extraction-generalized-frontrunners}
+### Genelleştirilmiş frontrunnerlar {#mev-extraction-generalized-frontrunners}
 
 Kârlı MEV fırsatlarını tespit etmek için karmaşık algoritmalar programlamaktansa, bazı arayıcılar genelleştirilmiş öncüler kullanırlar. Genelleştirilmiş öncüler, bellek havuzunu kârlı işlemleri tespit etmek için izleyen botlardır. Öncü, kâr potansiyeli olan işlemin kodunu kopyalar, adresleri öncü adresiyle değiştirir ve değiştirilmiş işlemin öncü adresine kâr olarak döndüğünü iki kez kontrol etmek için işlemi yerel olarak çalıştırır. İşlem gerçekten kârlıysa öncü, değiştirilmiş işlemi değiştirilmiş adresle ve daha yüksek bir gaz ücretiyle gönderecektir, yani orijinal işleme "öncülük" yapacak ve orijinal arayıcının MEV'ini alacaktır.
 
-### Flashbotlar {#mev-extraction-flashbots}
+### Flashbot'lar {#mev-extraction-flashbots}
 
 Flashbot'lar, yürütüm istemcilerini arama yapanların MEV işlemlerini genel bellek havuzuna açıklamadan doğrulayıcılara göndermelerine olanak tanıyan bir hizmetle genişleten bağımsız bir projedir. Bu, işlemlere genelleştirilmiş öncüler tarafından öncülük edilmesini önler.
 
@@ -40,7 +40,7 @@ Flashbot'lar, yürütüm istemcilerini arama yapanların MEV işlemlerini genel 
 
 MEV, blokzincirde birkaç şekilde ortaya çıkar.
 
-### DEX arbitrajı {#mev-examples-dex-arbitrage}
+### Merkeziyetsiz borsa arbitrajı {#mev-examples-dex-arbitrage}
 
 [Merkeziyetsiz borsa](/glossary/#dex) (DEX) arbitrajı, en basit ve yaygın MEV fırsatıdır. Bunun sonucu olarak ayrıca en rekabetçi olanıdır.
 
@@ -48,7 +48,7 @@ MEV, blokzincirde birkaç şekilde ortaya çıkar.
 
 [Burada](https://etherscan.io/tx/0x5e1657ef0e9be9bc72efefe59a2528d0d730d478cfc9e6cdd09af9f997bb3ef4) bir araştırmacının Uniswap ve Sushiswap'ta ETH/DAI çiftinin farklı fiyatlandırmasından yararlanarak 1.000 ETH'yi 1.045 ETH'ye çevirdiği kârlı bir arbitraj işlemi örneği verilmiştir.
 
-### Likidasyon {#mev-examples-liquidations}
+### Likidasyonlar {#mev-examples-liquidations}
 
 Borç protokolü likidasyonları başka bir yaygın MEV fırsatı sunar.
 
@@ -86,7 +86,7 @@ DEX arbitrajı, likidasyonlar ve sandviç ticareti çok iyi bilinen MEV fırsatl
 
 Yeni başlayan arayıcılar, bu uzun kuyrukta MEV'i arayarak daha fazla başarıya erişebilirler. Flashbotların [MEV iş ilanları](https://github.com/flashbots/mev-job-board), bazı yükselen fırsatları listeler.
 
-## MEV'in etkileri {#effects-of-mev}
+## MEV'nin etkileri {#effects-of-mev}
 
 MEV tamamen kötü değildir: Ethereum üzerinde MEV'in iyi ve kötü sonuçları bulunmaktadır.
 
@@ -122,7 +122,7 @@ Açıklandığı gibi, MEV genel kullanıcı deneyimi ve mutabakat katmanı güv
 
 Birleşim sonrası Ethereum'da, doğrulayıcılar (32 ETH'lik teminat yatırımları yapan) İşaret Zinciri'ne eklenen blokların doğruluğu hakkında mutabakata varır. 32 ETH çoğu kişinin erişebileceği bir şey olmadığı için [bir paydaşlık havuzuna katılmak](/staking/pools/) daha makul bir seçenek olabilir. Buna rağmen, [tekil paydaş](/staking/solo/)ların sağlıklı dağılımı idealdir, çünkü doğrulayıcıların merkezileşmesini hafifletir ve Ethereum'un güvenliğini geliştirir.
 
-Ancak, MEV çıkarımının doğrulayıcı merkezileşmesini hızlandırabilme kabiliyetine sahip olduğuna inanılmaktadır. Bunun nedeni kısmen şudur; doğrulayıcılar [blok önerdiklerinde madencilerin şu anda kazandığından daha az kazanacakları](/roadmap/merge/issuance/#how-the-merge-impacts-ETH-supply) için MEV çıkarımı, Birleşim sonrası [doğrulayıcı kazançlarını büyük ölçüde etkileyebilir](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb).
+Ancak, MEV çıkarımının doğrulayıcı merkezileşmesini hızlandırabilme kabiliyetine sahip olduğuna inanılmaktadır. Bunun nedeni kısmen şudur; doğrulayıcılar [blok önerdiklerinde madencilerin önceki kazandığından daha az kazanacakları](/roadmap/merge/issuance/#how-the-merge-impacts-ETH-supply) için MEV çıkarımı, Birleşim'den bu yana[ doğrulayıcı kazançlarını büyük ölçüde etkiler](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb).
 
 Daha büyük paydaşlık havuzları muhtemelen MEV fırsatlarını yakalamak için gerekli optimizasyonlara yatırım yapmak adına daha çok kaynağa sahip olacaktır. Bu havuzların çıkardığı MEV arttıkça, MEV çıkarım kabiliyetlerini geliştirmeleri (ve genel kazancı artırmak) için daha çok kaynağa sahip olacaklar ve sonucunda [ölçek ekonomileri](https://www.investopedia.com/terms/e/economiesofscale.asp#) ortaya çıkacaktır.
 
@@ -138,7 +138,7 @@ Sandviç ve genelleştirilmiş öncü (frontrunner) saldırılarına karşılık
 
 Birleşim sonrası Ethereum'da MEV ile ilgili bu problemlerle mücadele etmek, temel bir araştırma alanıdır. Bugüne kadar, MEV'nin Ethereum'un merkeziyetsizliği ve Birleşim sonrasında güvenliği üzerindeki olumsuz etkisini azaltmak için önerilen iki çözüm, **Önerici - İnşacı Ayrımı (PBS)** ve **İnşacı API**'dir.
 
-### Önerici-İnşacı Ayrımı {#proposer-builder-separation}
+### Teklifi Yapan-Oluşturucu Ayrımı {#proposer-builder-separation}
 
 Hem iş ispatı hem de hisse ispatında bir blok inşa eden düğüm, onu zincire eklenmesi için mutabakata katılan diğer düğümlere önerir. Yeni bir blok başka bir madenci onun üzerine inşa ettiğinde (PoW'da) veya doğrulayıcıların çoğunluğundan tasdik aldığında (PoS'ta) kanonik zincirin parçası olur.
 
@@ -160,7 +160,7 @@ Ancak bu, inşacılar bloklarının doğrulayıcılar tarafından kabul edilmesi
 
 Benzer şekilde, ödeme koşulsuz olduğu için doğrulayıcıların da inşacılara blok gövdelerini tutmamaları veya geçersiz bloklar yayımlamamaları için güvenmeye ihtiyaçları yoktur. Önerilen blok kullanılabilir olmasa veya diğer doğrulayıcılar tarafından geçersiz sayılsa bile doğrulayıcının ücreti işlenir. İkinci durumda, blok atılarak blok inşacısının tüm işlem ücretlerini ve MEV getirisini kaybetmesine yol açar.
 
-### İnşacı API {#builder-api}
+### Builder API'si {#builder-api}
 
 Önerici-inşacı ayrımı MEV'nin etkilerini azaltmayı vaat etse de, bunu uygulamak için mutabakat protokolünün değişmesi gerekir. Özellikle İşaret Zinciri'ndeki [çatallanma seçimi](/developers/docs/consensus-mechanisms/pos/#fork-choice) kuralının güncellenmesi gerekecektir. [İnşacı API](https://github.com/ethereum/builder-specs), daha yüksek güven varsayımlarıyla da olsa önerici-inşacı ayrımına çalışan bir uygulama sunmayı amaçlayan geçici bir çözümdür.
 
@@ -180,9 +180,9 @@ Benzer şekilde, ödeme koşulsuz olduğu için doğrulayıcıların da inşacı
 
 5. İnşacı API kullanan bir doğrulayıcının, blok önerisi ödüllerini kaçırmamak adına blok oluşturucunun hemen yanıt vermemesi durumunda yerel olarak bir blok oluşturması beklenir. Fakat doğrulayıcı, o anda açığa çıkarılan işlemleri veya başka bir kümeyi kullanarak yeni blok oluşturamaz. Çünkü bu durumda, kesme ile cezalandırabilecek bir suç olan _yanıltmaca_ (aynı yuva içinde iki bloğu imzalama) gerçekleşir.
 
-İnşacı API uygulamasının bir örneği, MEV'nin Ethereum üzerindeki olumsuz dışsallıklarını azaltmak için tasarlanan [Flashbotlar açık arttırma mekanizması](https://docs.flashbots.net/Flashbots-auction/overview/) olan [MEV Boost](https://github.com/flashbots/mev-boost)'tur. Flashbotlar açık artırması, iş ispatındaki madencilerin kar eden bloklar oluşturma işini **araştırmacılar** olarak adlandıran uzmanlaşmış taraflara yaptırabilmesini sağlar.
+İnşacı API uygulamasının bir örneği, MEV'nin Ethereum üzerindeki olumsuz dışsallıklarını azaltmak için tasarlanan [Flashbotlar açık arttırma mekanizması](https://docs.flashbots.net/Flashbots-auction/overview/) olan [MEV Boost](https://github.com/flashbots/mev-boost)'tur. Flashbot'lar açık artırması, hisse ispatındaki doğrulayıcıların kâr eden bloklar oluşturma işini **araştırmacılar** olarak adlandıran uzmanlaşmış taraflara yaptırabilmesini sağlar.
 
-Araştırmacılar, kazançlı MEV fırsatları arar ve madencilere bloğa dahil edilmek üzere işlem paketlerini [kapalı fiyat teklifi](https://en.wikipedia.org/wiki/First-price_sealed-bid_auction) ile birlikte gönderir. Go-ethereum (Geth) istemcisinin çatallı bir versiyonu olan mev-geth'i çalıştıran madencinin tek yapması gereken, en fazla kârı sağlayan paketi seçmek ve yeni bloğun bir parçası olacak şekilde madencilik yapmaktır. Madencileri istenmeyen mesaj ve geçersiz işlemlerden korumak için işlem paketleri madencilere ulaşmadan önce doğrulama için **aktarıcılardan** geçer.
+Araştırmacılar, kazançlı MEV fırsatları arar ve blok önericilere bloğa dahil edilmek üzere işlem paketlerini [kapalı fiyat teklifi](https://en.wikipedia.org/wiki/First-price_sealed-bid_auction) ile birlikte gönderir. Go-ethereum (Geth) istemcisinin çatallı bir versiyonu olan mev-geth'i çalıştıran doğrulayıcının tek yapması gereken, en fazla kârı sağlayan paketi seçmek ve yeni bloğun bir parçası olacak şekilde eklemektir. Blok önericilerini (doğrulayıcıları) istenmeyen mesaj ve geçersiz işlemlerden korumak için işlem paketleri önericiye ulaşmadan önce doğrulama için **aktarıcılardan** geçer.
 
 MEV Boost, Ethereum'un hisse ispatına geçişi için tasarlanmış yeni özellikleri olsa da, başlangıçtaki Flashbotlar açık artırmasıyla aynı işleyişi korur. Araştırmacılar hala bloklara eklemek üzere kazançlı MEV işlemleri bulmaktadır. Ancak **inşacılar** olarak adlandırılan yeni bir grup, işlemleri ve paketleri bloklara yerleştirmekten sorumludur. İnşacılar araştırmacıların kapalı fiyat tekliflerini kabul eder ve en kazançlı sıralamayı bulmak için optimizasyon yapar.
 
@@ -207,7 +207,7 @@ MEV Boost gibi bazı projeler, genelleştirilmiş öncü/sandviç saldırıları
 - [MEV-Explore](https://explore.flashbots.net/) _MEV işlemleri için gösterge paneli ve canlı işlem gezgini_
 - [mevboost.org](https://www.mevboost.org/)-_ MEV-Boost röle ve blok inşacıları için gerçek zamanlı istatistiklere sahip izleyici_
 
-## Daha fazla okuma {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [Madenci Çıkarılabilirlik Değeri (MEV) nedir?](https://blog.chain.link/what-is-miner-extractable-value-mev/)
 - [MEV ve Ben](https://www.paradigm.xyz/2021/02/mev-and-me)

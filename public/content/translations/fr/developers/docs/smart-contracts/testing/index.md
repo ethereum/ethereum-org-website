@@ -110,7 +110,7 @@ function auctionEnd() external {
 
 Il s'agit d'un simple contrat de vente aux enchères conçu pour recevoir des offres pendant la période d'enchère. Si le `highestBid` augmente, le précédent plus offrant reçoit son argent ; une fois la période d'enchères terminée, le `beneficiary` appelle le contrat pour récupérer son argent.
 
-Les tests unitaires pour un contrat comme celui-ci couvriraient différentes fonctions qu'un utilisateur peut appeler lorsqu'il interagit avec le contrat. Un exemple serait un test unitaire qui vérifie si un utilisateur peut placer une enchère pendant que l'enchère est en cours (c'est-à-dire que les appels à `bid()` réussissent) ou un test qui vérifie si un utilisateur peut placer une enchère plus élevée que le `highestBid` actuel.
+Les tests unitaires pour un contrat comme celui-ci couvriraient différentes fonctions qu'un utilisateur peut appeler lorsqu'il interagit avec le contrat. Il peut s'agir, par exemple, d'un test unitaire qui vérifie si un utilisateur peut placer une enchère pendant que l'enchère est en cours (c'est-à-dire que les appels à `bid()` réussissent) ou d'un test qui vérifie si un utilisateur peut placer une enchère plus élevée que le `highestBid` actuel.
 
 Comprendre le flux de travail opérationnel d'un contrat facilite également la rédaction de tests unitaires qui vérifient si l'exécution répond aux exigences. Par exemple, le contrat d'enchère spécifie que les utilisateurs ne peuvent pas placer d'enchères une fois l'enchère terminée (c'est-à-dire lorsque `auctionEndTime` est inférieur à `block.timestamp`). Ainsi, un développeur peut exécuter un test unitaire qui vérifie si les appels à la fonction `bid()` réussissent ou échouent lorsque la vente aux enchères est terminée (à savoir, quand `auctionEndTime` > `block.timestamp`).
 
@@ -144,6 +144,7 @@ Les frameworks de test unitaires pour les contrats intelligents Solidity sont di
 - **[Exécution de tests unitaires avec Remix](https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests)**
 - **[Exécution de tests unitaires avec Ape](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
 - **[Exécution de tests unitaires avec Hardhat](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
+- **[Exécution de tests unitaires avec Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
 ### Tests d'intégration {#integration-testing-for-smart-contracts}
 
@@ -188,9 +189,11 @@ L'exécution de tests basés sur les propriétés commence généralement par la
 Une fois configuré correctement, l'outil de test de propriété exécutera vos fonctions de contrats intelligents avec des entrées générées aléatoirement. S'il y a des violations d'assertion, vous devriez obtenir un rapport avec des données d'entrée concrètes qui enfreint la propriété en cours d'évaluation. Consultez certains des guides ci-dessous pour commencer avec des tests basés sur les propriétés en cours d'exécution avec différents outils :
 
 - **[Analyse statique des contrats intelligents avec Slither](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither#slither)**
+- **[Analyse statique des contrats intelligents avec Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**
 - **[Tests fondés sur les propriétés avec Brownie](https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html)**
 - **[Fuzzing des contrats avec Foundry](https://book.getfoundry.sh/forge/fuzz-testing)**
 - **[Fuzzing des contrats avec Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
+- **[Contrats de fuzzing avec Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Exécution symbolique de contrats intelligents avec Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[Exécution symbolique de contrats intelligents avec Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
@@ -262,6 +265,8 @@ La principale différence est que les programmes de primes aux bogues sont ouver
 
 - **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _framework de développement et de test basé sur Python pour les contrats intelligents ciblant la Machine virtuelle Ethereum._
 
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _Cadre basé sur Python pour les tests unitaires et le fuzzing avec de fortes capacités de débogage et la prise en charge des tests inter-chaînes, utilisant pytest et Anvil pour une meilleure expérience utilisateur et de meilleures performances._
+
 ### Outils de test fondés sur les propriétés {#property-based-testing-tools}
 
 #### Outils d'analyse statique {#static-analysis-tools}
@@ -269,6 +274,10 @@ La principale différence est que les programmes de primes aux bogues sont ouver
 - **[Slither](https://github.com/crytic/slither)** - _Python- Cadre d'analyse statique basé sur Solidity pour rechercher des vulnérabilités, améliorer la compréhension du code et rédiger des analyses personnalisées pour les contrats intelligents._
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter pour l'application du style et des meilleures pratiques de sécurité pour le langage de programmation du contrat intelligent Solidity._
+
+- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Analyseur statique basé sur Rust spécifiquement conçu pour la sécurité et le développement de contrats intelligents Web3._
+
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - *Cadre d'analyse statique basé sur Python comprenant des détecteurs de vulnérabilité et de qualité du code, des imprimeurs permettant d'extraire des informations utiles du code et un support pour l'écriture de sous-modules personnalisés.*
 
 #### Outils d'analyse dynamique {#dynamic-analysis-tools}
 
