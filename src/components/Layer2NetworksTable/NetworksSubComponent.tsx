@@ -81,7 +81,13 @@ const NetworkSubComponent = ({ network }) => {
                   </Tooltip>
                 </p>
               </div>
-              <p>TODO: stat</p>
+              <p>
+                <InlineLink
+                  href={`/wallets/find-wallet/?${network.chain_name}`}
+                >
+                  {network.walletsSupportedCount}
+                </InlineLink>
+              </p>
             </div>
           </div>
           <div className="flex flex-row gap-4">
