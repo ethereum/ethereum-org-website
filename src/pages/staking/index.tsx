@@ -40,6 +40,8 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { BASE_TIME_UNIT } from "@/lib/constants"
+
 import rhino from "@/public/images/upgrades/upgrade_rhino.png"
 
 type BenefitsType = {
@@ -180,8 +182,7 @@ export const getStaticProps = (async ({ locale }) => {
       lastDeployLocaleTimestamp,
     },
     // Updated once a day
-    // TODO: re-enable revalidation once we have a workaround for failing builds
-    // revalidate: BASE_TIME_UNIT * 24,
+    revalidate: REVALIDATE_TIME,
   }
 }) satisfies GetStaticProps<Props>
 
