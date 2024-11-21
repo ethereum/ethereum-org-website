@@ -25,7 +25,7 @@ const Layer2NetworksTable = ({
 
   const filteredData = useMemo(() => {
     return layer2Data.filter((network) => {
-      const maturityFilter = filters[0].items.find(
+      const maturityFilter = filters[1].items.find(
         (item) => item.filterKey === network.networkMaturity
       )
       return maturityFilter.inputState

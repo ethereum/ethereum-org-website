@@ -669,7 +669,7 @@ export type WalletData = {
   swaps: boolean
   multichain?: boolean
   layer_2: boolean
-  supported_chains?: (ChainName | NonEVMChainName)[]
+  supported_chains: (ChainName | NonEVMChainName)[]
   gas_fee_customization: boolean
   ens_support: boolean
   erc_20_support: boolean

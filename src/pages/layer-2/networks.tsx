@@ -19,6 +19,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { layer2Data } from "@/data/layer-2/layer-2"
+import { walletsData } from "@/data/wallets/wallet-data"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
@@ -68,6 +69,14 @@ export const getStaticProps = (async ({ locale }) => {
       blockspaceData: growThePieBlockspace[network.growthepieID] || null,
       launchDate:
         growThePieMaster.launchDates[network.growthepieID.replace(/_/g, "-")],
+      walletsSupported: walletsData.filter((wallet) =>
+        wallet.supported_chains.includes(network.chain_name)
+      ),
+      walletsSupportedCount: `${
+        walletsData.filter((wallet) =>
+          wallet.supported_chains.includes(network.chain_name)
+        ).length
+      }/${walletsData.length}`,
     }
   })
 

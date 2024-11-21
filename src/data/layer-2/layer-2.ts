@@ -1,5 +1,7 @@
 import { StaticImageData } from "next/image"
 
+import { ChainName, NonEVMChainName } from "@/lib/types"
+
 import ArbitrumLogo from "@/public/images/layer-2/arbitrum.png"
 import BaseLogo from "@/public/images/layer-2/base.png"
 import BlastImage from "@/public/images/layer-2/blast.png"
@@ -14,6 +16,7 @@ export interface Rollup {
   l2beatID: string
   growthepieID: string
   name: string
+  chain_name: ChainName | NonEVMChainName
   logo: StaticImageData
   networkType: "optimistic" | "zk"
   description: string
@@ -33,6 +36,7 @@ export const layer2Data: Rollups = [
     l2beatID: "arbitrum",
     growthepieID: "arbitrum",
     name: "Arbitrum One",
+    chain_name: "Arbitrum One",
     logo: ArbitrumLogo,
     networkType: "optimistic",
     description:
@@ -49,6 +53,7 @@ export const layer2Data: Rollups = [
     l2beatID: "base",
     growthepieID: "base",
     name: "Base",
+    chain_name: "Base",
     logo: BaseLogo,
     networkType: "optimistic",
     description:
@@ -65,6 +70,7 @@ export const layer2Data: Rollups = [
     l2beatID: "optimism",
     growthepieID: "optimism",
     name: "Optimism",
+    chain_name: "OP Mainnet",
     logo: OptimismLogo,
     networkType: "optimistic",
     description:
@@ -81,6 +87,7 @@ export const layer2Data: Rollups = [
     l2beatID: "blast",
     growthepieID: "blast",
     name: "Blast",
+    chain_name: "Blast",
     logo: BlastImage,
     networkType: "optimistic",
     description:
@@ -97,6 +104,7 @@ export const layer2Data: Rollups = [
     l2beatID: "zksync2",
     growthepieID: "zksync_era",
     name: "ZKSync Era",
+    chain_name: "zkSync Mainnet",
     logo: ZkSyncEraLogo,
     networkType: "zk",
     description:
@@ -113,6 +121,7 @@ export const layer2Data: Rollups = [
     l2beatID: "linea",
     growthepieID: "linea",
     name: "Linea",
+    chain_name: "Linea",
     logo: LineaLogo,
     networkType: "zk",
     description:
@@ -129,6 +138,7 @@ export const layer2Data: Rollups = [
     l2beatID: "scroll",
     growthepieID: "scroll",
     name: "Scroll",
+    chain_name: "Scroll",
     logo: ScrollLogo,
     networkType: "zk",
     description:
@@ -145,6 +155,7 @@ export const layer2Data: Rollups = [
     l2beatID: "starknet",
     growthepieID: "starknet",
     name: "Starknet",
+    chain_name: "Starknet",
     logo: StarknetLogo,
     networkType: "zk",
     description:
@@ -161,6 +172,7 @@ export const layer2Data: Rollups = [
     l2beatID: "mode",
     growthepieID: "mode",
     name: "Mode",
+    chain_name: "Mode",
     logo: ModeLogo,
     networkType: "optimistic",
     description:

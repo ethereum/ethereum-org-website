@@ -11,6 +11,27 @@ import SwitchFilterInput from "@/components/ProductTable/FilterInputs/SwitchFilt
 export const useNetworkFilters = (): FilterOption[] => {
   return [
     {
+      title: "Wallet support",
+      showFilterOption: true,
+      items: [
+        {
+          filterKey: "wallets_supported",
+          filterLabel: "",
+          description: "",
+          inputState: "",
+          ignoreFilterReset: false,
+          input: () => {
+            return (
+              <>
+                <p>TODO: Wallet Filter dropdown</p>
+              </>
+            )
+          },
+          options: [],
+        },
+      ],
+    },
+    {
       title: "Network maturity",
       showFilterOption: true,
       items: [

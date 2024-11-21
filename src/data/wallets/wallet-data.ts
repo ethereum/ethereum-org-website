@@ -2258,6 +2258,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://www.cypherock.com",
     documentation: "https://github.com/Cypherock/x1_wallet_firmware",
+    supported_chains: ["Ethereum Mainnet"],
   },
   {
     last_updated: "2024-10-31",
@@ -2302,6 +2303,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://clear-wallet.flashsoft.eu/",
     documentation: "https://clear-wallet.flashsoft.eu/docs/",
+    supported_chains: ["Ethereum Mainnet"],
   },
 ] as const satisfies Omit<WalletData, "new_to_crypto">[]
 
