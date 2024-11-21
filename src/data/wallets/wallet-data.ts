@@ -13,6 +13,7 @@ import BridgeWalletImage from "@/public/images/wallets/bridge.png"
 import ClearWallet from "@/public/images/wallets/clearwallet.png"
 import CoinbaseImage from "@/public/images/wallets/coinbase.png"
 import CoinWalletImage from "@/public/images/wallets/coinwallet.png"
+import CypherockX1Image from "@/public/images/wallets/cypherockx1.png"
 import CtrlWalletImage from "@/public/images/wallets/ctrl.png"
 import EnkryptImage from "@/public/images/wallets/enkrypt.png"
 import ExodusImage from "@/public/images/wallets/exodus.png"
@@ -2098,6 +2099,49 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
+    last_updated: "2024-08-24",
+    name: "Cypherock X1",
+    image: CypherockX1Image,
+    brand_color: "#e9b873",
+    url: "https://www.cypherock.com/",
+    active_development_team: true,
+    languages_supported: ["en", "de", "zh", "ar", "id"],
+    twitter: "https://twitter.com/CypherockWallet",
+    discord: "",
+    reddit: "",
+    telegram: "https://t.me/cypherock",
+    ios: false,
+    android: false,
+    linux: true,
+    windows: true,
+    macOS: true,
+    firefox: false,
+    chromium: false,
+    hardware: true,
+    open_source: true,
+    repo_url: "https://github.com/Cypherock/x1_wallet_firmware",
+    non_custodial: true,
+    security_audit: ["https://www.cypherock.com/keylabs"],
+    scam_protection: false,
+    hardware_support: true,
+    rpc_importing: false,
+    nft_support: true,
+    connect_to_dapps: true,
+    staking: false,
+    swaps: false,
+    multichain: true,
+    layer_2: true,
+    gas_fee_customization: true,
+    ens_support: false,
+    erc_20_support: false,
+    buy_crypto: false,
+    withdraw_crypto: false,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation: "https://www.cypherock.com",
+    documentation: "https://github.com/Cypherock/x1_wallet_firmware",
+   },
+   {
     last_updated: "2024-10-31",
     name: "Clear Wallet",
     image: ClearWallet,
@@ -2133,7 +2177,7 @@ export const walletsData: WalletData[] = [
     layer_2: true,
     gas_fee_customization: true,
     ens_support: false,
-    erc_20_support: true,
+    erc_20_support: true,        
     buy_crypto: false,
     withdraw_crypto: false,
     multisig: false,
