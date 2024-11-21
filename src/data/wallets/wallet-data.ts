@@ -7,7 +7,7 @@ import AlphaWalletImage from "@/public/images/wallets/alpha.png"
 import AmbireImage from "@/public/images/wallets/ambire.png"
 import ArgentImage from "@/public/images/wallets/argent.png"
 import AuroxImage from "@/public/images/wallets/aurox.png"
-import BitkeepImage from "@/public/images/wallets/bitkeep.png"
+import BitgetImage from "@/public/images/wallets/bitget.png"
 import BlockWalletImage from "@/public/images/wallets/blockwallet.png"
 import BridgeWalletImage from "@/public/images/wallets/bridge.png"
 import ClearWallet from "@/public/images/wallets/clearwallet.png"
@@ -1538,18 +1538,18 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
-    last_updated: "2023-01-24",
-    name: "Bitkeep",
-    image: BitkeepImage,
-    twBackgroundColor: "bg-[#ffffff]",
+    last_updated: "2024-11-20",
+    name: "Bitget wallet",
+    image: BitgetImage,
+    twBackgroundColor: "bg-[#00F0FF]",
     twGradiantBrandColor: "from-[#ffffff]",
-    url: "https://www.bitkeep.com/",
+    url: "https://web3.bitget.com/",
     active_development_team: true,
-    languages_supported: ["en"],
-    twitter: "https://twitter.com/BitKeepOS",
-    discord: "https://discord.com/invite/qYTatUzNjM",
+    languages_supported: ["en", "zh","zh-tw", "ko", "ja", "vi", "tr", "es", "id", "hi", "ar", "pt"],
+    twitter: "https://twitter.com/BitgetWallet",
+    discord: "https://discord.gg/bitget-wallet",
     reddit: "",
-    telegram: "https://t.me/bitkeep",
+    telegram: "http://t.me/Bitget_Wallet_Announcement",
     ios: true,
     android: true,
     linux: false,
@@ -1559,11 +1559,11 @@ export const walletsData: WalletData[] = [
     chromium: true,
     hardware: false,
     open_source: false,
-    repo_url: "",
+    repo_url: "https://github.com/bitgetwallet",
     non_custodial: true,
     security_audit: ["audit team"],
     scam_protection: false,
-    hardware_support: false,
+    hardware_support: true,
     rpc_importing: true,
     nft_support: true,
     connect_to_dapps: true,
@@ -1572,14 +1572,14 @@ export const walletsData: WalletData[] = [
     multichain: true,
     layer_2: true,
     gas_fee_customization: true,
-    ens_support: true,
+    ens_support: false,
     erc_20_support: true,
-    buy_crypto: false,
-    withdraw_crypto: false,
+    buy_crypto: true,
+    withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
-    onboard_documentation: "https://study.bitkeep.com/en/",
-    documentation: "https://docs.bitkeep.com/guide/",
+    onboard_documentation: "https://web3.bitget.com/en/academy",
+    documentation: "",
     supported_chains: ["Ethereum Mainnet"], // TODO: Add supported chains
   },
   {
