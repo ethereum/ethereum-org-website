@@ -63,19 +63,30 @@ sidebarDepth: 2
     - 带有 Request Explorer、Mempool Watcher 和 Composer 的仪表板
     - 集成了测试网水龙头访问权限
     - 拥有 1.8 万用户的活跃 Discord 构建者社区
+
 - [**All That Node**](https://allthatnode.com/)
   - [相关文档](https://docs.allthatnode.com/)
   - 功能
-    - 最大型免费套餐，每天可处理多达 150,000 个请求
-    - 访问超过 24 个区块链节点
-    - 远程过程调用、安全套接字层超文本传输协议和网络套接字安全端点
+    - 免费套餐每天 50,000 个请求
+    - 支持 40 多种协议
+    - 支持 JSON-RPC（EVM、Tendermint）、REST 和 Websocket API
     - 无限制访问归档数据
-    - 全天候支持以及超过 99.9% 的正常运行时间
+    - 全天候技术支持和 99.9% 的正常运行时间
     - 多链水龙头
-    - 使用不受数量限制的应用程序接口密钥无限次访问端点
-    - 追踪/调试可用的命名空间
+    - 使用无限数量的 API 密钥进行无限制的端点访问
+    - 支持追踪/调试 API
     - 自动更新
-    - 技术支持
+
+- [**Amazon Managed Blockchain**](https://aws.amazon.com/managed-blockchain/)
+  - [相关文档](https://aws.amazon.com/managed-blockchain/resources/)
+  - 特性
+    - 完全托管的以太坊节点
+    - 可在六个地区使用
+    - 基于 HTTP 的 JSON-RPC 和安全 WebSockets
+    - 支持 3 条链
+    - SLA、AWS 全天候支持
+    - Go-ethereum 和 Lighthouse
+
 - [**Ankr**](https://www.ankr.com/)
   - [相关文档](https://docs.ankr.com/)
   - 特性
@@ -86,8 +97,9 @@ sidebarDepth: 2
     - 随时扩容
     - 分析工具
     - 仪表板
-    - RPC 、 HTTPS 和 WSS 端点
+    - 远程过程调用、安全套接字层超文本传输协议和网络套接字安全端点
     - 直接支持
+
 - [**Blast**](https://blastapi.io/)
   - [相关文档](https://docs.blastapi.io/)
   - 特性
@@ -102,12 +114,14 @@ sidebarDepth: 2
     - 全天候监控和提醒
     - 整体服务等级协议 99.9%
     - 加密货币支付
+
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [相关文档](https://ubiquity.docs.blockdaemon.com/)
   - 好处
     - 管理面板
     - 基于每个节点
     - 分析
+
 - [**BlockPI**](https://blockpi.io/)
   - [相关文档](https://docs.blockpi.io/)
   - 特性
@@ -119,9 +133,19 @@ sidebarDepth: 2
     - 自定义计划和随用随付的付款方式
     - 加密货币支付
     - 直接支持与技术支持
+
+- [**Chainbase**](https://www.chainbase.com/)
+  - [相关文档](https://docs.chainbase.com)
+  - 特性
+    - 高可用性、高速和可扩展的远程过程调用服务
+    - 多链支持
+    - 不收费
+    - 用户友好的仪表板
+    - 提供远程过程调用之外的区块链数据服务
+
 - [**ChainStack**](https://chainstack.com/)
   - [相关文档](https://docs.chainstack.com/)
-  - 特性
+  - 功能
     - 免费共享节点
     - 共享归档节点
     - GraphQL 支持
@@ -131,8 +155,9 @@ sidebarDepth: 2
     - 使用自己的云服务
     - 按小时计费定价
     - 全天候直接支持
+
 - [**DataHub**](https://datahub.figment.io)
-  - [相关文档](https://docs.figment.io/)
+  - [文档](https://docs.figment.io/)
   - 特性
     - 每月 3 百万个请求的免费套餐选项
     - RPC 、 HTTPS 和 WSS 端点
@@ -143,23 +168,25 @@ sidebarDepth: 2
     - 仪表板
     - 全天候直接支持
     - 加密货币支付（企业）
-- [DRPC](https://drpc.org/)
+
+- [**DRPC**](https://drpc.org/)
   - [相关文档](https://docs.drpc.org/)
-  - 功能
+  - 特性
     - 去中心化远程过程调用节点
     - 超过 15 个节点提供商
     - 节点平衡
     - 免费套餐每月计算单元无限制
     - 数据验证
     - 自定义端点
-    - 超文本传输协议和网络套接字安全端点
+    - HTTP 和 WSS 端点
     - 无限密钥（免费和付费套餐）
     - 灵活的回退选项
     - [公共端点](https://eth.drpc.org)
     - 免费共享归档节点
+
 - [**GetBlock**](https://getblock.io/)
-  - [文档](https://getblock.io/docs/get-started/authentication-with-api-key/)
-  - 特性
+  - [相关文档](https://getblock.io/docs/get-started/authentication-with-api-key/)
+  - 功能
     - 访问超过 40 个区块链节点
     - 4 万个每日免费请求
     - 无限数量的应用程序接口密钥
@@ -168,8 +195,9 @@ sidebarDepth: 2
     - 高级分析
     - 自动更新
     - 技术支持
+
 - [**InfStones**](https://infstones.com/)
-  - 特性
+  - 功能
     - 免费套餐选项
     - 随时扩容
     - 分析
@@ -179,6 +207,7 @@ sidebarDepth: 2
     - 专用部署的快速同步时间
     - 全天候直接支持
     - 访问超过 50 个区块链节点
+
 - [**Infura**](https://infura.io/)
   - [相关文档](https://infura.io/docs)
   - 功能
@@ -187,6 +216,7 @@ sidebarDepth: 2
     - 付费归档数据
     - 直接支持
     - 仪表板
+
 - [**Kaleido**](https://kaleido.io/)
   - [相关文档](https://docs.kaleido.io/)
   - 功能
@@ -207,6 +237,7 @@ sidebarDepth: 2
     - 支持多云端、多区域及混合部署编排
     - 简单的基于质押即服务 (SaaS) 的每小时定价
     - 服务等级协议和全天候支持
+
 - [**Lava Network**](https://www.lavanet.xyz/)
   - [相关文档](https://docs.lavanet.xyz/)
   - 功能
@@ -218,6 +249,7 @@ sidebarDepth: 2
     - 直观的项目管理界面
     - 基于共识的数据完整性
     - 多链支持
+
 - [**Moralis**](https://moralis.io/)
   - [相关文档](https://docs.moralis.io/)
   - 功能
@@ -230,6 +262,7 @@ sidebarDepth: 2
     - 独特的以太坊软件开发工具包
     - 独有的应用程序接口端点
     - 直接技术支持
+
 - [**NodeReal MegaNode**](https://nodereal.io/)
   - [相关文档](https://docs.nodereal.io/nodereal/meganode/introduction)
   - 功能
@@ -237,8 +270,9 @@ sidebarDepth: 2
     - 面向 Web3 开发者的增强型应用程序接口
     - 多链支持
     - 免费试用
+
 - [**NOWNodes**](https://nownodes.io/)
-  - [相关文档](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
+  - [文档](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - 功能
     - 访问超过 50 个区块链节点
     - 免费应用程序接口密钥
@@ -247,8 +281,9 @@ sidebarDepth: 2
     - 全天候支持团队
     - 个人帐户经理
     - 共享、归档、备份和专用节点
+
 - [**Pocket Network**](https://www.pokt.network/)
-  - [相关文档](https://docs.pokt.network/home/)
+  - [文档](https://docs.pokt.network/home/)
   - 功能
     - 去中心化的远程过程调用协议和市场
     - 每天 100 万个请求的免费套餐（每个端点，最多 2 个）
@@ -267,6 +302,7 @@ sidebarDepth: 2
     - 最私密的抗审查选项
     - 开发者实战支持
     - [Pocket Portal](https://bit.ly/ETHorg_POKTportal) 仪表板和分析
+
 - [**QuickNode**](https://www.quicknode.com)
   - [文档](https://www.quicknode.com/docs/)
   - 功能
@@ -280,11 +316,13 @@ sidebarDepth: 2
     - 非同质化代币数据和分析应用程序接口
     - [已获 SOC2 认证](https://www.quicknode.com/security)
     - 适用于企业开发者
+
 - [**Rivet**](https://rivet.cloud/)
   - [文档](https://rivet.readthedocs.io/en/latest/)
   - 功能
     - 免费套餐选项
     - 随时扩容
+
 - [**SenseiNode**](https://senseinode.com)
   - [文档](https://docs.senseinode.com/)
   - 功能
@@ -292,9 +330,10 @@ sidebarDepth: 2
     - 仪表板
     - 在拉丁美洲不同地区的多个托管服务提供商上托管 AWS
     - Prysm 和 Lighthouse 客户端
+
 - [**SettleMint**](https://console.settlemint.com/)
   - [文档](https://docs.settlemint.com/)
-  - 功能
+  - 特性
     - 免费试用
     - 随时扩容
     - GraphQL 支持
@@ -305,20 +344,34 @@ sidebarDepth: 2
     - 仪表板
     - 按小时计费定价
     - 直接支持
+
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [文档](https://docs.tenderly.co/web3-gateway/web3-gateway)
-  - 功能
+  - 特性
     - 免费套餐包含每月 2500 万个 Tenderly 单位
     - 免费访问历史数据
     - 读取繁重型工作负载的速度最多提高 8 倍
     - 100% 一致的读取访问
-    - JSON 远程过程调用端点
+    - JSON-RPC 端点
     - 基于用户界面的远程过程调用请求构造器以及请求预览
     - 与 Tenderly 开发、调试和测试工具紧密集成
     - 模拟交易
     - 使用分析和过滤
     - 简单的访问密钥管理
     - 通过聊天、电邮和 Discord 提供专门的工程支持
+
+- [**Tokenview**](https://services.tokenview.io/)
+  - [文档](https://services.tokenview.io/docs?type=nodeService)
+  - 特性
+    - 全天候技术支持和开发者 Telegram 社区
+    - 多链支持（比特币、以太坊、Tron、BNB Smart Chain 和以太坊经典）
+    - RPC 和 WSS 端点均开放使用
+    - 无限制访问归档数据应用程序接口
+    - 带有请求浏览器和内存池监视器的仪表板
+    - 非同质化代币数据应用程序接口和网络钩子通知
+    - 加密货币支付
+    - 可满足更多行为需求的外部支持
+
 - [**Watchdata**](https://watchdata.io/)
   - [文档](https://docs.watchdata.io/)
   - 特性
@@ -330,6 +383,7 @@ sidebarDepth: 2
     - 支持各种节点
     - 资源扩容
     - 处理速度快
+
 - [**ZMOK**](https://zmok.io/)
   - [文档](https://docs.zmok.io/)
   - 特性
@@ -338,39 +392,18 @@ sidebarDepth: 2
     - 发送交易时，交易手续费和燃料均不受限制
     - 最快获取新区块和读取区块链
     - 每个应用程序接口调用的最优价格保证
-- [**Chainbase**](https://www.chainbase.com/)
-  - [文档](https://docs.chainbase.com)
+
+- [**Zeeve**](https://www.zeeve.io/)
+  - [文档](https://www.zeeve.io/docs/)
   - 特性
-    - 高可用性、高速和可扩展的远程过程调用服务
-    - 多链支持
-    - 不收费
-    - 用户友好的仪表板
-    - 提供远程过程调用之外的区块链数据服务
+    - 企业级无代码自动化平台，提供区块链节点和网络的部署、监控和管理
+    - 超过 30 种支持的协议与集成，种类还在增加
+    - 增值型 Web3 基础设施服务，如去中心化存储、去中心化身份和用于真实世界用例的区块链账本数据应用程序接口
+    - 全天候支持和主动监控始终确保节点的健康
+    - 远程过程调用端点提供对应用程序接口的验证访问，并通过直观的仪表板和分析实现无忧管理。
+    - 提供托管云和自带云选项，支持所有主要云服务提供商，例如 AWS、Azure、Google Cloud、Digital Ocean 和本地服务
+    - 我们每次都会通过智能路由接入到距离你的用户最近的节点
 
-[**Zeeve**](https://www.zeeve.io/)
-
-- [文档](https://www.zeeve.io/docs/)
-- 特性
-  - 企业级无代码自动化平台，提供区块链节点和网络的部署、监控和管理
-  - 超过 30 种支持的协议与集成，种类还在增加
-  - 增值型 Web3 基础设施服务，如去中心化存储、去中心化身份和用于真实世界用例的区块链账本数据应用程序接口
-  - 全天候支持和主动监控始终确保节点的健康
-  - 远程过程调用端点要求经过身份验证才能访问应用程序接口，并通过直观的仪表板和分析实现无忧管理
-  - 提供托管云和自带云选项，支持所有主要云服务提供商，例如 AWS、Azure、Google Cloud、Digital Ocean 和本地服务
-  - 我们每次都会通过智能路由接入到距离你的用户最近的节点
-
-[**Tokenview**](https://services.tokenview.io/)
-
-- [文档](https://services.tokeniew/docs?type=nodeService)
-- 特性
-  - 全天候技术支持和开发者 Telegram 社区
-  - 多链支持（比特币、以太坊、Tron、BNB Smart Chain 和以太坊经典）
-  - 远程过程调用和网络套接字安全端点均开放使用
-  - 无限制访问归档数据应用程序接口
-  - 带有请求浏览器和内存池监视器的仪表板
-  - 非同质化代币数据应用程序接口和网络钩子通知
-  - 加密货币支付
-  - 可满足更多行为需求的外部支持
 
 ## 延伸阅读 {#further-reading}
 
@@ -383,4 +416,4 @@ sidebarDepth: 2
 ## 相关教程 {#related-tutorials}
 
 - [使用 Alchemy 开始以太坊开发](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
-- [关于使用 Web3 和 Alchemy 发送交易的指南](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [使用 web3 和 Alchemy 发送交易指南](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

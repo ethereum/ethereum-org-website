@@ -1,15 +1,11 @@
 import React from "react"
-import {
-  Box,
-  Flex,
-  type FlexProps,
-  Text,
-  useBreakpointValue,
-} from "@chakra-ui/react"
+import { Box, Flex, type FlexProps, Text } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
 
 import type { NFT } from "./interfaces"
+
+import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 
 type NFTListProps = FlexProps & {
   nfts: Array<NFT>

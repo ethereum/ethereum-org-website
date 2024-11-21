@@ -28,16 +28,6 @@ Sie _könnten_ [einen Knoten betreiben](/developers/docs/nodes-and-clients/#runn
 
 **Hinweis**: Die meisten [Entwicklerframeworks](/developers/docs/frameworks/) enthalten ein integriertes Entwicklungsnetzwerk. Wir empfehlen Ihnen, mit einem Framework für die Einrichtung [Ihrer lokalen Entwicklungsumgebung](/developers/local-environment/) zu beginnen.
 
-### Ganache {#ganache}
-
-Führen Sie kurzerhand eine persönliche Ethereum-Blockchain aus, die Sie zum Ausführen von Tests und Befehlen und zur Prüfung des Status verwenden können, während Sie die Funktionsweise der Chain kontrollieren.
-
-Ganache bietet sowohl eine Desktop-Anwendung (Ganache UI), als auch ein Befehlszeilentool (`ganache-cli`). Es ist Teil der Truffel-Toolsuite.
-
-- [Website](https://www.trufflesuite.com/ganache)
-- [GitHub](https://github.com/trufflesuite/ganache)
-- [Dokumentation](https://www.trufflesuite.com/docs/ganache/overview)
-
 ### Hardhat Network {#hardhat-network}
 
 Ein lokales Ethereum-Netzwerk, das für die Entwicklung konzipiert ist. Die können darin Ihre Contracts bereitstellen, Tests durchführen und Ihren Code debuggen.
@@ -66,11 +56,11 @@ Es gibt auch zwei öffentliche Testimplementierungen von Ethereum: Goerli und Se
 
 Kurtosis ist ein Build-System für Multi-Container-Testumgebungen, das es Entwicklern ermöglicht, lokal reproduzierbare Instanzen von Blockchain-Netzwerken zu erstellen.
 
-Das Ethereum-Paket Kurtosis instanziiert lokal ein containerisiertes und parametrisierbares Ethereum-Testnetz mit Unterstützung für mehrere verschiedene Clients auf Ausführungsebene (EL) und Konsensebene (CL) und eine n-fache Anzahl von Knoten. Kurtosis verwaltet alle lokalen Port-Mappings und Service-Verbindungen für einfaches dApp- und Smart Contract-Prototyping bzw. -Testen.
+Das Ethereum-Kurtosis-Paket kann verwendet werden, um schnell ein parameterisierbares, hochskalierbares und privates Ethereum-Testnetz über Docker oder Kubernetes einzurichten. Das Paket unterstützt alle wichtigen Clients der Ausführungs- und Konsensebene. Kurtosis verwaltet gekonnt alle lokalen Portzuweisungen und Dienstverbindungen für ein repräsentatives Netzwerk, das in Validierungs- und Test-Workflows im Zusammenhang mit der Ethereum-Kerninfrastruktur verwendet wird.
 
-- [Ethereum Netzwerk-Paket](https://github.com/kurtosis-tech/eth-network-package)
+- [Ethereum Netzwerk-Paket](https://github.com/kurtosis-tech/ethereum-package)
 - [Website](https://www.kurtosis.com/)
-- [Github](https://github.com/kurtosis-tech/kurtosis)
+- [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Dokumentation](https://docs.kurtosis.com/)
 
 ## Weiterführende Informationen {#further-reading}

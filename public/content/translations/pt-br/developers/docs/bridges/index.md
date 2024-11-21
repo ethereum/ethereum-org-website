@@ -103,7 +103,7 @@ Se um dapp for integrar uma bridge ou um agregador, existem diferentes opções 
 
 ### Como implantar um dapp em múltiplas cadeias {#deploying-a-dapp-on-multiple-chains}
 
-Para implantar um dapp em várias cadeias, os desenvolvedores podem usar plataformas de desenvolvimento como [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Truffle](https://trufflesuite.com/), [Moralis](https://moralis.io/) etc. Normalmente, essas plataformas vêm com plugins compostos que podem habilitar dapps para cross-chain. Por exemplo, os desenvolvedores podem usar um proxy de implantação determinístico oferecido pelo [plugin hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
+Para implantar um dapp em várias cadeias, os desenvolvedores podem usar plataformas de desenvolvimento como [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/) etc. Normalmente, essas plataformas vêm com plugins compostos que podem habilitar dapps para cross-chain. Por exemplo, os desenvolvedores podem usar um proxy de implantação determinístico oferecido pelo [plugin hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
 
 #### Exemplos:
 

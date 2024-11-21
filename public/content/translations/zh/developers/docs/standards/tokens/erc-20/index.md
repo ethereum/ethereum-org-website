@@ -12,13 +12,12 @@ lang: zh
 
 - 在线平台中的信誉积分
 - 游戏中一个角色的技能
-- 彩票卷
 - 金融资产类似于公司股份的资产
 - 像美元一样的法定货币
 - 一盎司黄金
 - 及更多...
 
-以太坊的这种强大特点必须以强有力的标准来处理，对吗？ 这正是 ERC-20 发挥其作用的地方！ 此标准允许开发者构建可与其他产品和服务互相操作的代币应用程序。
+以太坊的这种强大特点必须以强有力的标准来处理，对吗？ 这正是 ERC-20 发挥其作用的地方！ 此标准允许开发者构建可与其他产品和服务互相操作的代币应用程序。 ERC-20 标准还被用于为[以太币](/glossary/#ether)提供附加功能。
 
 **什么是 ERC-20？**
 
@@ -141,9 +140,33 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
+## 已知问题 {#erc20-issues}
+
+### ERC-20 代币接收问题 {#reception-issue}
+
+当 ERC-20 代币被发送到并非为处理 ERC-20 代币而设计的智能合约时，这些代币可能会永久丢失。 出现这种情况的原因是，接收合约无法识别或回应所传入的代币，而且 ERC-20 标准中也没有通知接受合约所传入代币的机制。 导致这一问题的主要原因包括：
+
+1.  代币转移机制
+  - ERC-20 代币使用 transfer 或 transferFrom 函数进行转移
+    -   当用户使用这些函数将代币发送到合约地址时，无论接收合约是否是为处理它们而设计，代币都会被转移
+2.  缺乏通知
+    -   接收合约不会收到已向其发送代币的通知或回调
+    -   如果接收合约缺乏处理代币的机制（例如，回退函数或专门用于处理代币接收的函数），则代币实际上会卡在合约的地址中
+3.  无内置处理
+    -   ERC-20 标准不包含用于接收待实现合约的强制函数，导致许多合约无法正确管理传入的代币
+
+为了解决这些问题，出现了 [ERC-223](/developers/docs/standards/tokens/erc-223) 等替代标准。
+
 ## 延伸阅读 {#further-reading}
 
 - [EIP-20：ERC-20 代币标准](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - 代币](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - ERC-20 实施](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Solidity ERC20 代币指南](https://www.alchemy.com/overviews/erc20-solidity)
+
+
+## 其他同质化代币标准 {#fungible-token-standards}
+
+- [ERC-223](/developers/docs/standards/tokens/erc-223)
+- [ERC-777](/developers/docs/standards/tokens/erc-777)
+- [ERC-4626 - 代币化资金库](/developers/docs/standards/tokens/erc-4626)

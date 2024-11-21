@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss"
 import plugin from "tailwindcss/plugin"
 
+import { screens } from "./src/lib/utils/screen"
+
 const config = {
   // TODO: Move to "class" strategy after removing Chakra
   darkMode: ["selector", '[data-theme="dark"]'],
@@ -12,19 +14,14 @@ const config = {
   prefix: "",
   theme: {
     extend: {
-      screens: {
-        sm: "480px",
-        md: "768px",
-        lg: "992px",
-        xl: "1280px",
-        "2xl": "1536px",
-      },
+      screens,
       fontFamily: {
         heading: "var(--font-inter)",
         body: "var(--font-inter)",
         monospace: "var(--font-mono)",
       },
       fontSize: {
+        "7xl": ["4rem", "1.1"], // [7xl, 6xs]
         "6xl": ["3.75rem", "1.2"], // [6xl, 4xs]
         "5xl": ["3rem", "1.2"], // [5xl, 4xs]
         "4xl": ["2.25rem", "1.2"], // [4xl, 4xs]
@@ -64,117 +61,205 @@ const config = {
       },
       colors: {
         gray: {
-          100: "var(--gray-100)",
-          150: "var(--gray-150)",
-          200: "var(--gray-200)",
-          300: "var(--gray-300)",
-          400: "var(--gray-400)",
-          500: "var(--gray-500)",
-          600: "var(--gray-600)",
-          700: "var(--gray-700)",
-          800: "var(--gray-800)",
-          900: "var(--gray-900)",
+          100: "hsla(var(--gray-100))",
+          150: "hsla(var(--gray-150))",
+          200: "hsla(var(--gray-200))",
+          300: "hsla(var(--gray-300))",
+          400: "hsla(var(--gray-400))",
+          500: "hsla(var(--gray-500))",
+          600: "hsla(var(--gray-600))",
+          700: "hsla(var(--gray-700))",
+          800: "hsla(var(--gray-800))",
+          900: "hsla(var(--gray-900))",
+        },
+
+        purple: {
+          50: "hsla(var(--purple-50))",
+          100: "hsla(var(--purple-100))",
+          200: "hsla(var(--purple-200))",
+          300: "hsla(var(--purple-300))",
+          400: "hsla(var(--purple-400))",
+          500: "hsla(var(--purple-500))",
+          600: "hsla(var(--purple-600))",
+          700: "hsla(var(--purple-700))",
+          800: "hsla(var(--purple-800))",
+          900: "hsla(var(--purple-900))",
         },
 
         blue: {
-          50: "var(--blue-50)",
-          100: "var(--blue-100)",
-          200: "var(--blue-200)",
-          300: "var(--blue-300)",
-          400: "var(--blue-400)",
-          500: "var(--blue-500)",
-          600: "var(--blue-600)",
-          700: "var(--blue-700)",
-          800: "var(--blue-800)",
-          900: "var(--blue-900)",
+          50: "hsla(var(--blue-50))",
+          100: "hsla(var(--blue-100))",
+          200: "hsla(var(--blue-200))",
+          300: "hsla(var(--blue-300))",
+          400: "hsla(var(--blue-400))",
+          500: "hsla(var(--blue-500))",
+          600: "hsla(var(--blue-600))",
+          700: "hsla(var(--blue-700))",
+          800: "hsla(var(--blue-800))",
+          900: "hsla(var(--blue-900))",
+        },
+
+        pink: {
+          50: "hsla(var(--pink-50))",
+          100: "hsla(var(--pink-100))",
+          200: "hsla(var(--pink-200))",
+          300: "hsla(var(--pink-300))",
+          400: "hsla(var(--pink-400))",
+          500: "hsla(var(--pink-500))",
+          600: "hsla(var(--pink-600))",
+          700: "hsla(var(--pink-700))",
+          800: "hsla(var(--pink-800))",
+          900: "hsla(var(--pink-900))",
+        },
+
+        teal: {
+          50: "hsla(var(--teal-50))",
+          100: "hsla(var(--teal-100))",
+          200: "hsla(var(--teal-200))",
+          300: "hsla(var(--teal-300))",
+          400: "hsla(var(--teal-400))",
+          500: "hsla(var(--teal-500))",
+          600: "hsla(var(--teal-600))",
+          700: "hsla(var(--teal-700))",
+          800: "hsla(var(--teal-800))",
+          900: "hsla(var(--teal-900))",
         },
 
         orange: {
-          50: "var(--orange-50)",
-          100: "var(--orange-100)",
-          200: "var(--orange-200)",
-          300: "var(--orange-300)",
-          400: "var(--orange-400)",
-          500: "var(--orange-500)",
-          550: "var(--orange-550)",
-          600: "var(--orange-600)",
-          700: "var(--orange-700)",
-          800: "var(--orange-800)",
-          900: "var(--orange-900)",
+          100: "hsla(var(--orange-100))",
+          800: "hsla(var(--orange-800))",
+          900: "hsla(var(--orange-900))",
+        },
+
+        body: {
+          DEFAULT: "hsla(var(--body))",
+          medium: "hsla(var(--body-medium))",
+          light: "hsla(var(--body-light))",
+          inverse: "hsla(var(--body-inverse))",
+          menu: {
+            DEFAULT: "hsla(var(--body-menu))",
+            low: "hsla(var(--body-menu-low))",
+            medium: "hsla(var(--body-menu-medium))",
+            high: "hsla(var(--body-menu-high))",
+          },
+        },
+
+        disabled: "hsla(var(--disabled))",
+
+        background: {
+          DEFAULT: "hsla(var(--background))",
+          highlight: "hsla(var(--background-highlight))",
+          low: "hsla(var(--background-low))",
+          medium: "hsla(var(--background-medium))",
+          high: "hsla(var(--background-high))",
+        },
+
+        border: {
+          DEFAULT: "hsla(var(--border))",
+          "high-contrast": "hsla(var(--border-high-contrast))",
+          "low-contrast": "hsla(var(--border-low-contrast))",
+          hover: "hsla(var(--border-hover))",
         },
 
         primary: {
-          DEFAULT: "var(--primary)",
-          "high-contrast": "var(--primary-high-contrast)",
-          "low-contrast": "var(--primary-low-contrast)",
-          hover: "var(--primary-hover)",
-          visited: "var(--primary-visited)",
-          light: "var(--primary-light)",
-          dark: "var(--primary-dark)",
-          pressed: "var(--primary-pressed)",
+          DEFAULT: "hsla(var(--primary))",
+          "high-contrast": "hsla(var(--primary-high-contrast))",
+          "low-contrast": "hsla(var(--primary-low-contrast))",
+          hover: "hsla(var(--primary-hover))",
+          visited: "hsla(var(--primary-visited))",
+          action: "hsla(var(--primary-action))",
+          "action-hover": "hsla(var(--primary-action-hover))",
         },
-        body: {
-          DEFAULT: "var(--body)",
-          medium: "var(--body-medium)",
-          light: "var(--body-light)",
-          inverted: "var(--body-inverted)",
+
+        accent: {
+          a: {
+            DEFAULT: "hsla(var(--accent-a))",
+            hover: "hsla(var(--accent-a-hover))",
+          },
+          b: {
+            DEFAULT: "hsla(var(--accent-b))",
+            hover: "hsla(var(--accent-b-hover))",
+          },
+          c: {
+            DEFAULT: "hsla(var(--accent-c))",
+            hover: "hsla(var(--accent-c-hover))",
+          },
         },
-        background: {
-          DEFAULT: "var(--background)",
-          highlight: "var(--background-highlight)",
-        },
-        disabled: "var(--disabled)",
-        neutral: "var(--neutral)",
-        "tooltip-shadow": "var(--tooltip-shadow)",
-        "switch-background": "var(--switch-background)",
-        "hub-hero-content-bg": "var(--hub-hero-content-bg)",
-        "search-background": "var(--search-background)",
-        attention: {
-          DEFAULT: "var(--attention)",
-          light: "var(--attention-light)",
-          outline: "var(--attention-outline)",
-        },
-        error: {
-          DEFAULT: "var(--error)",
-          light: "var(--error-light)",
-          outline: "var(--error-outline)",
-          neutral: "var(--error-neutral)",
-        },
+
         success: {
-          DEFAULT: "var(--success)",
-          light: "var(--success-light)",
-          outline: "var(--success-outline)",
-          neutral: "var(--success-neutral)",
+          DEFAULT: "hsla(var(--success))",
+          light: "hsla(var(--success-light))",
+          dark: "hsla(var(--success-dark))",
+          border: "hsla(var(--success-border))",
         },
+
+        error: {
+          DEFAULT: "hsla(var(--error))",
+          light: "hsla(var(--error-light))",
+          dark: "hsla(var(--error-dark))",
+          border: "hsla(var(--error-border))",
+        },
+
+        warning: {
+          DEFAULT: "hsla(var(--warning))",
+          light: "hsla(var(--warning-light))",
+          dark: "hsla(var(--warning-dark))",
+          border: "hsla(var(--warning-border))",
+        },
+
+        /** @deprecated */
+        "switch-background": "hsla(var(--switch-background))", // TODO: Migrate
+        "tooltip-shadow": "var(--tooltip-shadow)",
+        "hub-hero-content": "var(--hub-hero-content)",
+        "search-background": "var(--search-background)",
       },
+
       backgroundImage: {
-        "main-gradient": "var(--main-gradient)",
+        "gradient-main": "var(--gradient-main)",
+        "gradient-banner": "var(--gradient-banner)",
+        "main-gradient": "var(--gradient-main)", // TODO: Duplicate; remove one
         "feedback-gradient": "var(--feedback-gradient)",
         "banner-grid-gradient": "var(--banner-grid-gradient)",
+        "radial-a": "var(--radial-a)",
+        "linear-bug-bounty-title": "var(--linear-bug-bounty-title)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
-        table:
-          "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",
+        table: `
+          0 14px 66px rgba(0,0,0,.07),
+          0 10px 17px rgba(0,0,0,.03),
+          0 4px 7px rgba(0,0,0,.05)`,
         drop: "0 4px 17px 0 rgba(0,0,0,0.08)",
         "table-box-hover": "0px 8px 17px rgba(0, 0, 0, 0.15)",
         "table-item-box": "var(--table-item-box-shadow)",
-        "table-item-box-hover": "0 0 1px var(--primary)",
+        "table-item-box-hover": "0 0 1px hsla(var(--primary))",
         "grid-yellow-box-shadow": "8px 8px 0px 0px #ffe78e",
         "grid-blue-box-shadow": "8px 8px 0px 0px #a7d0f4",
         // Part of new DS
-        "menu-accordion":
-          "0px 2px 2px 0px rgba(0, 0, 0, 0.12) inset, 0px -3px 2px 0px rgba(0, 0, 0, 0.14) inset",
-        // TODO: From current theme. Deprecate for 'button-hover'
-        primary: "4px 4px 0px 0px var(--primary)",
-        "button-hover": "4px 4px 0 0 var(--primary-low-contrast)",
+        "menu-accordion": `
+          0px 2px 2px 0px rgba(0, 0, 0, 0.12) inset,
+          0px -3px 2px 0px rgba(0, 0, 0, 0.14) inset`,
         tooltip: "0 0 16px var(--tooltip-shadow)",
+        "svg-button-link": `
+          var(--shadow-svg-button-link-1), var(--shadow-svg-button-link-2),
+          var(--shadow-svg-button-link-3), var(--shadow-svg-button-link-4)`,
+        "svg-button-link-hover": `
+          var(--shadow-svg-button-link-1-hover),
+          var(--shadow-svg-button-link-2-hover),
+          var(--shadow-svg-button-link-3-hover),
+          var(--shadow-svg-button-link-4-hover)`,
+        "card-hover": "var(--shadow-body-md), var(--shadow-body-lg)",
+        "window-box": `
+          var(--shadow-window-box-1), var(--shadow-window-box-2),
+          var(--shadow-window-box-3), var(--shadow-window-box-4),
+          var(--shadow-window-box-5)`,
       },
       spacing: {
         7.5: "1.875rem",
         10.5: "2.625rem",
         19: "4.75rem", // Nav height
         31: "7.75rem", // FeedbackWidget conditional bottom offset
+        128: "32rem",
       },
       keyframes: {
         "accordion-down": {
@@ -185,10 +270,28 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+
+        "scroll-left": {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        "scroll-right": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "scroll-left": "scroll-left 30s linear infinite",
+        "scroll-right": "scroll-right 30s linear infinite",
+      },
+      // Add custom border-radius tailwinds extension for "4xl" as "2rem"
+      borderRadius: {
+        "4xl": "2rem" /* 32px */,
+      },
+      gridTemplateColumns: {
+        bento: "2rem repeat(10, 1fr) 2rem",
       },
       textUnderlineOffset: {
         3: "3px",

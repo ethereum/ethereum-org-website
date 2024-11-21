@@ -12,7 +12,6 @@ import ChartDataLabels from "chartjs-plugin-datalabels"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Bar } from "react-chartjs-2"
-import { useBreakpointValue } from "@chakra-ui/react"
 
 import type { Lang } from "@/lib/types"
 
@@ -21,6 +20,7 @@ import { Center } from "@/components/ui/flex"
 import { wrapLabel } from "@/lib/utils/charts"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
+import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import useColorModeValue from "@/hooks/useColorModeValue"
 import { useIsClient } from "@/hooks/useIsClient"
 
@@ -212,9 +212,10 @@ const EnergyConsumptionChart = () => {
           font: {
             size: 10,
           },
-          autoSkip: false, // avoid long labels to be hidden
-          padding: 0, // removes default padding betwen x-labels and chart
-          maxRotation: 0, // turns off rotation
+          autoSkip: false,
+          padding: 0,
+          maxRotation: 0,
+          minRotation: 45,
         },
       },
     },

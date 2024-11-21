@@ -25,19 +25,19 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import AlchemyUniversityImage from "@/public/images/dev-tools/alchemyuniversity.png"
 import AtlasImage from "@/public/images/dev-tools/atlas.png"
 import BloomTechImage from "@/public/images/dev-tools/bloomtech.png"
-import BuildSpaceImage from "@/public/images/dev-tools/buildspace.png"
 import CaptureTheEtherImage from "@/public/images/dev-tools/capturetheether.png"
 import ChainIDEImage from "@/public/images/dev-tools/chainIDE.png"
 import ConsensysImage from "@/public/images/dev-tools/consensys.png"
 import CryptoZombieImage from "@/public/images/dev-tools/crypto-zombie.png"
+import CyfrinUpdraftImage from "@/public/images/dev-tools/cyfrin-updraft.png"
 import DappWorldImage from "@/public/images/dev-tools/dapp-world.png"
 import EthDotBuildImage from "@/public/images/dev-tools/eth-dot-build.png"
+import LearnWeb3Image from "@/public/images/dev-tools/learnweb3.png"
 import MetaschoolImage from "@/public/images/dev-tools/metaschool.png"
 import NFTSchoolImage from "@/public/images/dev-tools/nftschool.png"
 import NodeGuardiansImage from "@/public/images/dev-tools/node-guardians.jpg"
 import EthernautImage from "@/public/images/dev-tools/oz.png"
 import PlatziImage from "@/public/images/dev-tools/platzi.png"
-import PointerImage from "@/public/images/dev-tools/pointer.png"
 import QuestbookImage from "@/public/images/dev-tools/questbook.png"
 import RemixImage from "@/public/images/dev-tools/remix.png"
 import ReplitImage from "@/public/images/dev-tools/replit.png"
@@ -322,19 +322,6 @@ const LearningToolsPage = () => {
       subjects: ["Solidity", "web3"],
     },
     {
-      name: "_buildspace",
-      description: t(
-        "page-developers-learning-tools:page-learning-tools-buildspace-description"
-      ),
-      url: "https://buildspace.so",
-      image: BuildSpaceImage,
-      alt: t(
-        "page-developers-learning-tools:page-learning-tools-buildspace-logo-alt"
-      ),
-      background: "#f6f7f9",
-      subjects: ["Solidity", "web3"],
-    },
-    {
       name: "Questbook",
       description: t(
         "page-developers-learning-tools:page-learning-tools-questbook-description"
@@ -371,19 +358,6 @@ const LearningToolsPage = () => {
         "page-developers-learning-tools:page-learning-tools-nftschool-logo-alt"
       ),
       background: "#111f29",
-      subjects: ["Solidity", "web3"],
-    },
-    {
-      name: "Pointer",
-      description: t(
-        "page-developers-learning-tools:page-learning-tools-pointer-description"
-      ),
-      url: "https://pointer.gg/",
-      image: PointerImage,
-      alt: t(
-        "page-developers-learning-tools:page-learning-tools-pointer-logo-alt"
-      ),
-      background: "#171717",
       subjects: ["Solidity", "web3"],
     },
     {
@@ -426,6 +400,32 @@ const LearningToolsPage = () => {
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
     },
+    {
+      name: "LearnWeb3",
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-learnweb3-description"
+      ),
+      url: "https://www.learnweb3.io/",
+      image: LearnWeb3Image,
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-learnweb3-logo-alt"
+      ),
+      background: "#ffffff",
+      subjects: ["Solidity", "web3"],
+    },
+    {
+      name: "Cyfrin Updraft",
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-cyfrin-updraft-description"
+      ),
+      url: "https://updraft.cyfrin.io/",
+      image: CyfrinUpdraftImage,
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-cyfrin-updraft-logo-alt"
+      ),
+      background: "#000000",
+      subjects: ["Solidity", "web3"],
+    },
   ]
 
   return (
@@ -438,7 +438,7 @@ const LearningToolsPage = () => {
           "page-developers-learning-tools:page-learning-tools-meta-desc"
         )}
       />
-      <MainArticle w="full">
+      <MainArticle className="w-full">
         <Box w="full">
           <Header>
             <H1>
@@ -481,9 +481,7 @@ const LearningToolsPage = () => {
         </StackContainer>
         <ContentBox>
           <CalloutBanner
-            mx={4}
-            mt={24}
-            mb={40}
+            className="mx-4 mb-40 mt-24"
             image={EnterpriseEth}
             alt={t(
               "page-developers-learning-tools:page-index-tout-enterprise-image-alt"

@@ -14,8 +14,6 @@ import {
   Box,
   Button,
   type ButtonProps,
-  Divider as ChakraDivider,
-  type DividerProps,
   Flex,
   type FlexProps,
   Heading,
@@ -48,6 +46,7 @@ import ProductListComponent, {
   type ProductListProps,
 } from "@/components/ProductList"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -62,7 +61,6 @@ import artblocks from "@/public/images/dapps/artblocks.png"
 import arweave from "@/public/images/dapps/arweave.png"
 import asyncart from "@/public/images/dapps/asyncart.png"
 import audius from "@/public/images/dapps/audius.png"
-import augur from "@/public/images/dapps/augur.png"
 import axie from "@/public/images/dapps/axie.png"
 import balancer from "@/public/images/dapps/balancer.png"
 import brave from "@/public/images/dapps/brave.png"
@@ -108,7 +106,6 @@ import requestFinance from "@/public/images/dapps/requestFinance.png"
 import rotki from "@/public/images/dapps/rotki.png"
 import rubic from "@/public/images/dapps/rubic.png"
 import sablier from "@/public/images/dapps/sablier.png"
-import set from "@/public/images/dapps/set.png"
 import spatial from "@/public/images/dapps/spatial.png"
 import spruce from "@/public/images/dapps/spruce.png"
 import status from "@/public/images/dapps/status.png"
@@ -136,19 +133,6 @@ const Page = (props: ChildOnlyProp & FlexProps) => (
     {...props}
   />
 )
-
-const Divider = (props: DividerProps) => (
-  <ChakraDivider
-    opacity={1}
-    my={16}
-    w="10%"
-    borderBottomWidth="0.25rem"
-    borderColor="homeDivider"
-    {...props}
-  />
-)
-
-const CenterDivider = () => <Divider display="flex" justifyContent="center" />
 
 const Content = (props: ChildOnlyProp) => (
   <Box py={4} px={8} w="full" {...props} />
@@ -796,13 +780,6 @@ const DappsPage = () => {
       alt: t("page-dapps-polymarket-logo-alt"),
     },
     {
-      title: "Augur",
-      description: t("page-dapps-dapp-description-augur"),
-      link: "https://augur.net",
-      image: augur,
-      alt: t("page-dapps-augur-logo-alt"),
-    },
-    {
       title: "Synthetix",
       description: t("page-dapps-dapp-description-synthetix"),
       link: "https://synthetix.io/",
@@ -839,13 +816,6 @@ const DappsPage = () => {
   ]
 
   const investments = [
-    {
-      title: "Token Sets",
-      description: t("page-dapps-dapp-description-token-sets"),
-      link: "https://www.tokensets.com/",
-      image: set,
-      alt: t("page-dapps-token-sets-logo-alt"),
-    },
     {
       title: "PoolTogether",
       description: t("page-dapps-dapp-description-pooltogether"),
@@ -1343,7 +1313,7 @@ const DappsPage = () => {
       {
         content: t("page-dapps-what-are-dapps"),
         href: "#what-are-dapps",
-        variant: "outline",
+        variant: "outline" as const,
         matomo: {
           eventCategory: "dapp hero buttons",
           eventAction: "click",
@@ -1584,9 +1554,7 @@ const DappsPage = () => {
               </Text>
             </Box>
             <CalloutBanner
-              mt={32}
-              mx={0}
-              mb={{ base: 0, lg: 16 }}
+              className="m-0 mx-0 mt-32 lg:mb-16"
               titleKey={"page-dapps:page-dapps-wallet-callout-title"}
               descriptionKey={
                 "page-dapps:page-dapps-wallet-callout-description"
@@ -1828,7 +1796,7 @@ const DappsPage = () => {
         )}
         {/* General content for all categories */}
         <Content>
-          <CenterDivider />
+          <Divider />
           {categories[selectedCategory].benefits && (
             <Box mt={12}>
               <H2>
@@ -1878,15 +1846,7 @@ const DappsPage = () => {
       </FullWidthContainer>
       <Content>
         <ImageContainer id="what-are-dapps">
-          <GhostCard
-            mt={2}
-            sx={{
-              ".ghost-card-base": {
-                display: "flex",
-                justifyContent: "center",
-              },
-            }}
-          >
+          <GhostCard className="mt-2 flex items-center">
             <Image
               bgSize="cover"
               bgRepeat="no-repeat"

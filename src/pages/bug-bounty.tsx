@@ -5,7 +5,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   Center,
-  Heading,
   ListItem,
   UnorderedList,
   useColorModeValue,
@@ -29,6 +28,7 @@ import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -48,8 +48,10 @@ import nethermind from "@/public/images/upgrades/nethermind.png"
 import nimbus from "@/public/images/upgrades/nimbus-cloud.png"
 import prysm from "@/public/images/upgrades/prysm.png"
 import reth from "@/public/images/upgrades/reth.png"
+import solidity from "@/public/images/upgrades/solidity.png"
 import tekuDark from "@/public/images/upgrades/teku-dark.png"
 import tekuLight from "@/public/images/upgrades/teku-light.png"
+import vyper from "@/public/images/upgrades/vyper.png"
 
 const Page = (props: ChildOnlyProp) => (
   <Box
@@ -103,24 +105,13 @@ const Subtitle = (props: ChildOnlyProp) => (
   />
 )
 
-const SloganGradient = (props: ChildOnlyProp) => (
-  <Box
-    maxW="720px"
-    mt="4"
-    bgClip="text"
-    overflow="auto"
-    sx={{ WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
-    bg="upgradesGradient"
+const SloganGradient = ({ children }: ChildOnlyProp) => (
+  <div
+    className="mt-4 max-w-[720px] overflow-auto bg-linear-bug-bounty-title bg-clip-text"
+    style={{ WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
   >
-    <Heading
-      as="h1"
-      fontSize={{ base: "2.5rem", lg: "5xl" }}
-      fontWeight="800"
-      mb="1.45rem"
-    >
-      {props.children}
-    </Heading>
-  </Box>
+    <h1 className="mb-6 text-4xl font-bold lg:text-5xl">{children}</h1>
+  </div>
 )
 
 const Rules = (props: ChildOnlyProp) => (
@@ -177,10 +168,6 @@ const FullLeaderboardContainer = (props: ChildOnlyProp) => (
 )
 
 const On = () => <Box w="8px" h="8px" bg="success400" borderRadius="64px" />
-
-const Divider = () => (
-  <Box my="16" mx="0" w="10%" h="1" backgroundColor="homeDivider" />
-)
 
 const Contact = (props: ChildOnlyProp) => (
   <Box
@@ -325,6 +312,12 @@ type Spec = {
   link: string
 }
 
+type Language = {
+  title: string
+  link: string
+  image: ImageProps["src"]
+}
+
 const sortBountyHuntersFn = (a: BountyHuntersArg, b: BountyHuntersArg) => {
   if (!a.score || !b.score) return 0
   return b.score - a.score
@@ -457,6 +450,19 @@ const BugBountiesPage = () => {
     },
   ]
 
+  const languages: Language[] = [
+    {
+      title: "Solidity",
+      link: "https://soliditylang.org/",
+      image: solidity,
+    },
+    {
+      title: "Vyper",
+      link: "https://vyperlang.org/",
+      image: vyper,
+    },
+  ]
+
   const iconImageProps = {
     width: 60,
   }
@@ -470,7 +476,7 @@ const BugBountiesPage = () => {
       <Content>
         <HeroCard>
           <HeroContainer>
-            <Breadcrumbs slug={pathname} mb="8" />
+            <Breadcrumbs slug={pathname} className="mb-8" />
             <Row>
               <On />
               <Title>{t("page-upgrades-bug-bounty-title")}</Title>
@@ -662,9 +668,7 @@ const BugBountiesPage = () => {
                 >
                   {t("page-upgrades-bug-bounty-help-links")}
                 </OldHeading>
-                <InlineLink href="https://github.com/ethereum/solidity/blob/develop/SECURITY.md">
-                  SECURITY.md
-                </InlineLink>
+                <CardList items={languages} />
               </Box>
             </StyledCard>
             <StyledCard
