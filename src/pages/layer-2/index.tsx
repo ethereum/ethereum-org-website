@@ -85,21 +85,21 @@ const Layer2Hub = ({
     heroImg: HeroImage,
     buttons: [
       {
-        content: "Learn more",
-        href: "/layer-2/learn",
-        matomo: {
-          eventCategory: "l2_hub",
-          eventAction: "button_click",
-          eventName: "hero_get_started",
-        },
-      },
-      {
         content: "Choose network",
         href: "/layer-2/networks",
         matomo: {
           eventCategory: "l2_hub",
           eventAction: "button_click",
           eventName: "hero_choose_networks",
+        },
+      },
+      {
+        content: "Learn more",
+        href: "#layer-2-powered-by-ethereum",
+        matomo: {
+          eventCategory: "l2_hub",
+          eventAction: "button_click",
+          eventName: "hero_get_started",
         },
       },
     ],
