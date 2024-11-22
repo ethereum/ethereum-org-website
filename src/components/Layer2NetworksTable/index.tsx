@@ -18,18 +18,21 @@ const Layer2NetworksTable = ({
   layer2Data: Rollups
   locale: Lang
 }) => {
-  // const walletPersonas = useWalletPersonaPresets()
-  // TODO: Implement
   const networkFilterOptions = useNetworkFilters()
   const [filters, setFilters] = useState<FilterOption[]>(networkFilterOptions)
 
   const filteredData = useMemo(() => {
-    return layer2Data.filter((network) => {
-      const maturityFilter = filters[1].items.find(
-        (item) => item.filterKey === network.networkMaturity
-      )
-      return maturityFilter.inputState
-    })
+    return layer2Data
+      .filter((network) => {
+        const maturityFilter = filters[1].items.find(
+          (item) => item.filterKey === network.networkMaturity
+        )
+        return maturityFilter.inputState
+      })
+      .filter((network) => {
+        if (filters[0].items[0].inputState === "") return true
+        return network.walletsSupported.includes(filters[0].items[0].inputState)
+      })
   }, [layer2Data, filters])
 
   const resetFilters = () => {

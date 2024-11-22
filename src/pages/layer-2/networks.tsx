@@ -69,9 +69,11 @@ export const getStaticProps = (async ({ locale }) => {
       blockspaceData: growThePieBlockspace[network.growthepieID] || null,
       launchDate:
         growThePieMaster.launchDates[network.growthepieID.replace(/_/g, "-")],
-      walletsSupported: walletsData.filter((wallet) =>
-        wallet.supported_chains.includes(network.chain_name)
-      ),
+      walletsSupported: walletsData
+        .filter((wallet) =>
+          wallet.supported_chains.includes(network.chain_name)
+        )
+        .map((wallet) => wallet.name),
       walletsSupportedCount: `${
         walletsData.filter((wallet) =>
           wallet.supported_chains.includes(network.chain_name)
