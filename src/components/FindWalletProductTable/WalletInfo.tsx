@@ -11,6 +11,8 @@ import { Badge } from "@/components/ui/badge"
 
 import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"
 
+import { layer2Data } from "@/data/layer-2/layer-2"
+
 interface WalletInfoProps {
   wallet: Wallet
   isExpanded: boolean
@@ -51,6 +53,29 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
                   ))}
                 </div>
               )}
+              <div className="ml-2 mt-1 flex flex-row">
+                {wallet.supported_chains.map((chain) => {
+                  const chainData = layer2Data.find(
+                    (l2) => l2.chain_name === chain
+                  )
+                  return (
+                    <div
+                      key={chain}
+                      className="-ml-1.5 overflow-hidden rounded-full"
+                    >
+                      <TwImage
+                        src={chainData?.logo}
+                        alt=""
+                        style={{
+                          objectFit: "contain",
+                          width: "24px",
+                          height: "24px",
+                        }}
+                      />
+                    </div>
+                  )
+                })}
+              </div>
             </div>
           </div>
           <div className="flex flex-col gap-4 lg:hidden">
@@ -72,6 +97,29 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
                   ))}
                 </div>
               )}
+            </div>
+            <div className="ml-2 flex flex-row">
+              {wallet.supported_chains.map((chain) => {
+                const chainData = layer2Data.find(
+                  (l2) => l2.chain_name === chain
+                )
+                return (
+                  <div
+                    key={chain}
+                    className="-ml-1.5 overflow-hidden rounded-full"
+                  >
+                    <TwImage
+                      src={chainData?.logo}
+                      alt=""
+                      style={{
+                        objectFit: "contain",
+                        width: "24px",
+                        height: "24px",
+                      }}
+                    />
+                  </div>
+                )
+              })}
             </div>
           </div>
           <div className="flex flex-row gap-4">
