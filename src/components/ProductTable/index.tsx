@@ -9,12 +9,7 @@ import {
 import { useRouter } from "next/router"
 import { ColumnDef } from "@tanstack/react-table"
 
-import type {
-  FilterOption,
-  ProductTableColumnDefs,
-  ProductTableRow,
-  TPresetFilters,
-} from "@/lib/types"
+import type { FilterOption, TPresetFilters } from "@/lib/types"
 
 import Table from "@/components/DataTable"
 import Filters from "@/components/ProductTable/Filters"
@@ -23,20 +18,21 @@ import PresetFilters from "@/components/ProductTable/PresetFilters"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-interface ProductTableProps<TData, TValue> {
-  columns: ColumnDef<TData, TValue>[]
-  data: TData[]
+interface ProductTableProps<T> {
+  columns: ColumnDef<T>[]
+  data: T[]
   allDataLength: number
   filters: FilterOption[]
   presetFilters: TPresetFilters
   resetFilters: () => void
   setFilters: Dispatch<SetStateAction<FilterOption[]>>
-  subComponent?: FC<TData>
+  subComponent?: FC<T>
   noResultsComponent?: React.FC
   mobileFiltersLabel: string
+  meta?: Record<string, string | number | boolean>
 }
 
-const ProductTable = ({
+const ProductTable = <T,>({
   columns,
   data,
   allDataLength,
@@ -47,7 +43,8 @@ const ProductTable = ({
   subComponent,
   noResultsComponent,
   mobileFiltersLabel,
-}: ProductTableProps<ProductTableRow, ProductTableColumnDefs>) => {
+  meta,
+}: ProductTableProps<T>) => {
   const router = useRouter()
   const [activePresets, setActivePresets] = useState<number[]>([])
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
@@ -274,6 +271,7 @@ const ProductTable = ({
               allDataLength={allDataLength}
               setMobileFiltersOpen={setMobileFiltersOpen}
               activeFiltersCount={activeFiltersCount}
+              meta={meta}
             />
           </div>
         </div>

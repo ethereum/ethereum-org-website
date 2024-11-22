@@ -4,17 +4,16 @@ import { IoChevronDownSharp, IoChevronUpSharp } from "react-icons/io5"
 import { MdInfoOutline } from "react-icons/md"
 import { ColumnDef } from "@tanstack/react-table"
 
-import { Lang } from "@/lib/types"
+import { ExtendedRollup, Lang } from "@/lib/types"
 
+import { TableMeta } from "@/components/DataTable"
 import { TwImage } from "@/components/Image"
 import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
 import { Badge } from "@/components/ui/badge"
 import { TableCell, TableHead } from "@/components/ui/Table"
 
-import { Rollup } from "@/data/layer-2/layer-2"
-
-export const useNetworkColumns: ColumnDef<Rollup>[] = [
+export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
   {
     id: "l2Info",
     header: ({ table }) => {
@@ -27,12 +26,14 @@ export const useNetworkColumns: ColumnDef<Rollup>[] = [
       )
     },
     cell: ({ table, row }) => {
+      const meta = table.options.meta as TableMeta
       return (
         <TableCell className="flex flex-1 flex-row items-center justify-between">
           <div className="flex flex-col gap-3">
             <div className="flex flex-row items-center gap-4">
               <TwImage
                 src={row.original.logo}
+                alt={row.original.name}
                 className="h-[24px] w-[24px] lg:h-[40px] lg:w-[40px]"
               />
               <p className="text-xl font-bold">{row.original.name}</p>
@@ -49,19 +50,16 @@ export const useNetworkColumns: ColumnDef<Rollup>[] = [
                 <p className="text-xs text-body-medium">Avg. transaction fee</p>
                 <p>
                   $
-                  {row.original.txCosts.toLocaleString(
-                    table.options.meta.locale as Lang,
-                    {
-                      minimumFractionDigits: 2,
-                      maximumFractionDigits: 3,
-                    }
-                  )}
+                  {row.original.txCosts.toLocaleString(meta.locale as Lang, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 3,
+                  })}
                 </p>
               </div>
               <div>
                 <p className="text-xs text-body-medium">Market share</p>
                 <p>
-                  {new Intl.NumberFormat(table.options.meta.locale as Lang, {
+                  {new Intl.NumberFormat(meta.locale as Lang, {
                     style: "currency",
                     currency: "USD",
                     notation: "compact",
@@ -115,16 +113,15 @@ export const useNetworkColumns: ColumnDef<Rollup>[] = [
       </TableHead>
     ),
     cell: ({ table, row }) => {
+      const meta = table.options.meta as TableMeta
+
       return (
         <TableCell className="hidden w-[145px] px-0 text-end lg:table-cell">
           $
-          {row.original.txCosts.toLocaleString(
-            table.options.meta.locale as Lang,
-            {
-              minimumFractionDigits: 2,
-              maximumFractionDigits: 3,
-            }
-          )}
+          {row.original.txCosts.toLocaleString(meta.locale as Lang, {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 3,
+          })}
         </TableCell>
       )
     },
@@ -155,10 +152,11 @@ export const useNetworkColumns: ColumnDef<Rollup>[] = [
       </TableHead>
     ),
     cell: ({ table, row }) => {
+      const meta = table.options.meta as TableMeta
       return (
         <TableCell className="hidden w-[120px] px-0 text-end lg:table-cell">
           <p>
-            {new Intl.NumberFormat(table.options.meta.locale as Lang, {
+            {new Intl.NumberFormat(meta.locale as Lang, {
               style: "currency",
               currency: "USD",
               notation: "compact",

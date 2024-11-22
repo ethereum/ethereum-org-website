@@ -1,21 +1,19 @@
 import { useMemo, useState } from "react"
 
-import { FilterOption, Lang } from "@/lib/types"
+import { ExtendedRollup, FilterOption, Lang } from "@/lib/types"
 
 import { useNetworkColumns } from "@/components/Layer2NetworksTable/hooks/useNetworkColumns"
 import { useNetworkFilters } from "@/components/Layer2NetworksTable/hooks/useNetworkFilters"
-import NetworkSubComponent from "@/components/Layer2NetworksTable/NetworksSubcomponent"
+import NetworkSubComponent from "@/components/Layer2NetworksTable/NetworksSubComponent"
 import ProductTable from "@/components/ProductTable"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
-
-import type { Rollups } from "@/data/layer-2/layer-2"
 
 const Layer2NetworksTable = ({
   layer2Data,
   locale,
 }: {
-  layer2Data: Rollups
+  layer2Data: ExtendedRollup[]
   locale: Lang
 }) => {
   const networkFilterOptions = useNetworkFilters()
@@ -27,11 +25,13 @@ const Layer2NetworksTable = ({
         const maturityFilter = filters[1].items.find(
           (item) => item.filterKey === network.networkMaturity
         )
-        return maturityFilter.inputState
+        return maturityFilter!.inputState
       })
       .filter((network) => {
         if (filters[0].items[0].inputState === "") return true
-        return network.walletsSupported.includes(filters[0].items[0].inputState)
+        return network.walletsSupported.includes(
+          filters[0].items[0].inputState as string
+        )
       })
   }, [layer2Data, filters])
 

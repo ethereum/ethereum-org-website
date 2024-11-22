@@ -634,6 +634,19 @@ export type ChainName = (typeof chains)[number]["name"]
 
 export type NonEVMChainName = "Starknet"
 
+export type ExtendedRollup = Rollup & {
+  networkMaturity: "robust" | "maturing" | "developing" | "emerging"
+  txCosts: number
+  l2beatData: {
+    tvl: {
+      breakdown: {
+        total: number
+      }
+    }
+  }
+  walletsSupported: string[]
+}
+
 // Wallets
 export type WalletData = {
   last_updated: string

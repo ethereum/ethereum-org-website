@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef, useState } from "react"
+import { FC, Fragment, useEffect, useRef, useState } from "react"
 import {
   ColumnDef,
   flexRender,
@@ -19,12 +19,20 @@ import {
 type DataTableProps<TData, TValue> = TableProps & {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
-  subComponent?: React.FC<TData>
-  noResultsComponent?: React.FC
+  subComponent?: FC<TData>
+  noResultsComponent?: FC
   allDataLength: number
   setMobileFiltersOpen?: (open: boolean) => void
   activeFiltersCount: number
-  meta?: Record<string, string | number>
+  meta?: Record<string, string | number | boolean>
+}
+
+export type TableMeta = {
+  setMobileFiltersOpen: (open: boolean) => void
+  allDataLength: number
+  dataLength: number
+  activeFiltersCount: number
+  [key: string]: string | number | ((open: boolean) => void)
 }
 
 const DataTable = <TData, TValue>({
@@ -54,7 +62,7 @@ const DataTable = <TData, TValue>({
       dataLength: data.length,
       setMobileFiltersOpen,
       activeFiltersCount,
-    },
+    } as TableMeta,
   })
 
   useEffect(() => {

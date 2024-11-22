@@ -44,8 +44,12 @@ const loadData = dataLoader(
 )
 
 export const getStaticProps = (async ({ locale }) => {
-  const [growThePieData, growThePieBlockspace, growThePieMaster, l2beatData] =
-    await loadData()
+  const [
+    growThePieData,
+    growThePieBlockspaceData,
+    growThePieMasterData,
+    l2beatData,
+  ] = await loadData()
 
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
@@ -67,9 +71,12 @@ export const getStaticProps = (async ({ locale }) => {
           l2beatData.data.projects[network.l2beatID]
         ),
         activeAddresses: growThePieData.activeAddresses[network.growthepieID],
-        blockspaceData: growThePieBlockspace[network.growthepieID] || null,
+        blockspaceData:
+          (growThePieBlockspaceData || {})[network.growthepieID] || null,
         launchDate:
-          growThePieMaster.launchDates[network.growthepieID.replace(/_/g, "-")],
+          (growThePieMasterData?.launchDates || {})[
+            network.growthepieID.replace(/_/g, "-")
+          ] || null,
         walletsSupported: walletsData
           .filter((wallet) =>
             wallet.supported_chains.includes(network.chain_name)

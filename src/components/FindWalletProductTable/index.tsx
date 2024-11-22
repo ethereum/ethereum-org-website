@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react"
 import { useTranslation } from "next-i18next"
 
-import { FilterOption } from "@/lib/types"
+import { FilterOption, Lang, Wallet } from "@/lib/types"
 
 import { useWalletColumns } from "@/components/FindWalletProductTable/hooks/useWalletColumns"
 import { useWalletFilters } from "@/components/FindWalletProductTable/hooks/useWalletFilters"
@@ -13,7 +13,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import FindWalletsNoResults from "./FindWalletsNoResults"
 import WalletSubComponent from "./WalletSubComponent"
 
-const FindWalletProductTable = ({ wallets }) => {
+const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
   const { t } = useTranslation("page-wallets-find-wallet")
   const walletPersonas = useWalletPersonaPresets()
   const walletFilterOptions = useWalletFilters()
@@ -43,7 +43,7 @@ const FindWalletProductTable = ({ wallets }) => {
 
     return wallets
       .filter((item) => {
-        return item.languages_supported.includes(selectedLanguage)
+        return item.languages_supported.includes(selectedLanguage as Lang)
       })
       .filter((item) => {
         return activeFilterKeys.every((key) => item[key])
@@ -61,7 +61,7 @@ const FindWalletProductTable = ({ wallets }) => {
   }
 
   return (
-    <ProductTable
+    <ProductTable<Wallet>
       columns={useWalletColumns}
       data={filteredData}
       allDataLength={wallets.length}

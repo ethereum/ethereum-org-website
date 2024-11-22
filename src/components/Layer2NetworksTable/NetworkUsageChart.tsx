@@ -119,7 +119,9 @@ const NetworkUsageChart = ({ usageData }) => {
             fontSize={12}
           />
         </Bar>
-        <ChartLegend content={<CustomLegend chartConfig={chartConfig} />} />
+        <ChartLegend
+          content={<CustomLegend payload={[]} chartConfig={chartConfig} />}
+        />
       </BarChart>
     </ChartContainer>
   )
