@@ -71,7 +71,7 @@ const Layer2Hub = ({
   growThePieData: GrowThePieData
   locale: Lang
 }) => {
-  const randomL2s = layer2Data.sort(() => 0.5 - Math.random()).slice(0, 4)
+  const randomL2s = layer2Data.sort(() => 0.5 - Math.random()).slice(0, 8)
   const medianTxCost =
     "error" in growThePieData.txCostsMedianUsd
       ? { error: growThePieData.txCostsMedianUsd.error }
@@ -230,10 +230,20 @@ const Layer2Hub = ({
             {/* Outer ring */}
             <div className="absolute inset-0 rounded-full border border-dashed border-body-medium"></div>
             <div className="absolute inset-0 animate-spin-slow rounded-full">
+              {/* Top logo */}
               <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-slow rounded-full bg-primary">
                 <TwImage
                   src={randomL2s[0].logo}
-                  alt="Ethereum"
+                  alt={randomL2s[0].name}
+                  width={24}
+                  height={24}
+                />
+              </div>
+              {/* Bottom logo */}
+              <div className="absolute -bottom-[12px] left-1/2 h-6 w-6 -translate-x-1/2 translate-y-1/2 transform animate-counter-spin-slow rounded-full bg-primary">
+                <TwImage
+                  src={randomL2s[1].logo}
+                  alt={randomL2s[1].name}
                   width={24}
                   height={24}
                 />
@@ -243,10 +253,20 @@ const Layer2Hub = ({
             {/* Second ring */}
             <div className="absolute inset-[20px] rounded-full border border-dashed border-body-medium sm:inset-[36px]"></div>
             <div className="absolute inset-[20px] animate-spin-slow rounded-full sm:inset-[36px]">
+              {/* Right logo */}
               <div className="absolute -right-[12px] top-1/2 h-6 w-6 -translate-y-1/2 transform animate-counter-spin-slow rounded-full bg-primary">
                 <TwImage
-                  src={randomL2s[1].logo}
-                  alt="Ethereum"
+                  src={randomL2s[2].logo}
+                  alt={randomL2s[2].name}
+                  width={24}
+                  height={24}
+                />
+              </div>
+              {/* Left logo */}
+              <div className="absolute -left-[12px] top-1/2 h-6 w-6 -translate-y-1/2 transform animate-counter-spin-slow rounded-full bg-primary">
+                <TwImage
+                  src={randomL2s[3].logo}
+                  alt={randomL2s[3].name}
                   width={24}
                   height={24}
                 />
@@ -256,10 +276,20 @@ const Layer2Hub = ({
             {/* Third ring */}
             <div className="absolute inset-[40px] rounded-full border border-dashed border-body-medium sm:inset-[72px]"></div>
             <div className="absolute inset-[40px] animate-spin-slow rounded-full sm:inset-[72px]">
+              {/* Bottom logo */}
               <div className="absolute -bottom-[12px] left-1/2 h-6 w-6 -translate-x-1/2 transform animate-counter-spin-slow rounded-full bg-primary">
                 <TwImage
-                  src={randomL2s[2].logo}
-                  alt="Ethereum"
+                  src={randomL2s[4].logo}
+                  alt={randomL2s[4].name}
+                  width={24}
+                  height={24}
+                />
+              </div>
+              {/* Top logo */}
+              <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 transform animate-counter-spin-slow rounded-full bg-primary">
+                <TwImage
+                  src={randomL2s[5].logo}
+                  alt={randomL2s[5].name}
                   width={24}
                   height={24}
                 />
@@ -269,10 +299,20 @@ const Layer2Hub = ({
             {/* Fourth (innermost) ring */}
             <div className="absolute inset-[60px] rounded-full border border-dashed border-body-medium sm:inset-[108px]"></div>
             <div className="absolute inset-[60px] animate-spin-slow rounded-full sm:inset-[108px]">
+              {/* Left logo */}
               <div className="absolute -left-[12px] top-1/2 h-6 w-6 -translate-y-1/2 transform animate-counter-spin-slow rounded-full bg-primary">
                 <TwImage
-                  src={randomL2s[3].logo}
-                  alt="Ethereum"
+                  src={randomL2s[6].logo}
+                  alt={randomL2s[6].name}
+                  width={24}
+                  height={24}
+                />
+              </div>
+              {/* Right logo */}
+              <div className="absolute -right-[12px] top-1/2 h-6 w-6 -translate-y-1/2 transform animate-counter-spin-slow rounded-full bg-primary">
+                <TwImage
+                  src={randomL2s[7].logo}
+                  alt={randomL2s[7].name}
                   width={24}
                   height={24}
                 />
