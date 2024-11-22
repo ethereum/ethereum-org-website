@@ -289,8 +289,14 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "scroll-left": "scroll-left 30s linear infinite",
         "scroll-right": "scroll-right 30s linear infinite",
-        "spin-slow": "spin 10s linear infinite",
-        "counter-spin-slow": "spin 10s linear infinite reverse",
+        "spin-10": "spin 10s linear infinite",
+        "counter-spin-10": "spin 10s linear infinite reverse",
+        "spin-7": "spin 7s linear infinite",
+        "counter-spin-7": "spin 7s linear infinite reverse",
+        "spin-6": "spin 6s linear infinite",
+        "counter-spin-6": "spin 6s linear infinite reverse",
+        "spin-3": "spin 3s linear infinite",
+        "counter-spin-3": "spin 3s linear infinite reverse",
       },
       // Add custom border-radius tailwinds extension for "4xl" as "2rem"
       borderRadius: {
