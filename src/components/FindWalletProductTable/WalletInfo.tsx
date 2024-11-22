@@ -64,7 +64,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
                       className="-ml-1.5 overflow-hidden rounded-full"
                     >
                       <TwImage
-                        src={chainData?.logo}
+                        src={chainData?.logo || ""}
                         alt=""
                         style={{
                           objectFit: "contain",
@@ -109,7 +109,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
                     className="-ml-1.5 overflow-hidden rounded-full"
                   >
                     <TwImage
-                      src={chainData?.logo}
+                      src={chainData?.logo || ""}
                       alt=""
                       style={{
                         objectFit: "contain",
