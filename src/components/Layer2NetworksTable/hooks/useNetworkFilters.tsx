@@ -143,7 +143,7 @@ export const useNetworkFilters = (): FilterOption[] => {
                 description={
                   <>
                     A centralized operator runs the network. The data is
-                    publicly visible on Ethereum to verify whether the oeprator
+                    publicly visible on Ethereum to verify whether the operator
                     is being honest.
                   </>
                 }
