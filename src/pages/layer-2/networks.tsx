@@ -57,30 +57,51 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
-  const layer2DataCompiled = layer2Data.map((network) => {
-    return {
-      ...network,
-      txCosts: growThePieData.dailyTxCosts[network.growthepieID],
-      l2beatData: l2beatData.data.projects[network.l2beatID],
-      networkMaturity: networkMaturity(
-        l2beatData.data.projects[network.l2beatID]
-      ),
-      activeAddresses: growThePieData.activeAddresses[network.growthepieID],
-      blockspaceData: growThePieBlockspace[network.growthepieID] || null,
-      launchDate:
-        growThePieMaster.launchDates[network.growthepieID.replace(/_/g, "-")],
-      walletsSupported: walletsData
-        .filter((wallet) =>
-          wallet.supported_chains.includes(network.chain_name)
+  const layer2DataCompiled = layer2Data
+    .map((network) => {
+      return {
+        ...network,
+        txCosts: growThePieData.dailyTxCosts[network.growthepieID],
+        l2beatData: l2beatData.data.projects[network.l2beatID],
+        networkMaturity: networkMaturity(
+          l2beatData.data.projects[network.l2beatID]
+        ),
+        activeAddresses: growThePieData.activeAddresses[network.growthepieID],
+        blockspaceData: growThePieBlockspace[network.growthepieID] || null,
+        launchDate:
+          growThePieMaster.launchDates[network.growthepieID.replace(/_/g, "-")],
+        walletsSupported: walletsData
+          .filter((wallet) =>
+            wallet.supported_chains.includes(network.chain_name)
+          )
+          .map((wallet) => wallet.name),
+        walletsSupportedCount: `${
+          walletsData.filter((wallet) =>
+            wallet.supported_chains.includes(network.chain_name)
+          ).length
+        }/${walletsData.length}`,
+      }
+    })
+    .sort((a, b) => {
+      const maturityOrder = {
+        robust: 4,
+        maturing: 3,
+        developing: 2,
+        emerging: 1,
+      }
+
+      const maturityDiff =
+        maturityOrder[b.networkMaturity] - maturityOrder[a.networkMaturity]
+
+      if (maturityDiff === 0) {
+        return (
+          (b.l2beatData?.tvl?.breakdown?.total || 0) -
+          (a.l2beatData?.tvl?.breakdown?.total || 0)
         )
-        .map((wallet) => wallet.name),
-      walletsSupportedCount: `${
-        walletsData.filter((wallet) =>
-          wallet.supported_chains.includes(network.chain_name)
-        ).length
-      }/${walletsData.length}`,
-    }
-  })
+      }
+
+      return maturityDiff
+    })
 
   return {
     props: {
