@@ -6,6 +6,7 @@ import {
   MaturingIcon,
   RobustIcon,
 } from "@/components/icons/layer-2"
+import NetworksWalletSelectInput from "@/components/Layer2NetworksTable/NetworksWalletSelectInput"
 import SwitchFilterInput from "@/components/ProductTable/FilterInputs/SwitchFilterInput"
 
 export const useNetworkFilters = (): FilterOption[] => {
@@ -20,11 +21,14 @@ export const useNetworkFilters = (): FilterOption[] => {
           description: "",
           inputState: "",
           ignoreFilterReset: false,
-          input: () => {
+          input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
-              <>
-                <p>TODO: Wallet Filter dropdown</p>
-              </>
+              <NetworksWalletSelectInput
+                filterIndex={filterIndex}
+                itemIndex={itemIndex}
+                inputState={inputState}
+                updateFilterState={updateFilterState}
+              />
             )
           },
           options: [],
