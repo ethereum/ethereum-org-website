@@ -31,19 +31,19 @@ const Layer2SelectInput = ({
             label={network.name}
             filterIndex={filterIndex}
             itemIndex={itemIndex}
-            inputState={(inputState as string[])?.includes(network.name)}
+            inputState={(inputState as string[])?.includes(network.chain_name)}
             updateFilterState={(filterIndex, itemIndex, newInputState) => {
               if (newInputState) {
                 updateFilterState(filterIndex, itemIndex, [
                   ...(inputState as string[]),
-                  network.name,
+                  network.chain_name,
                 ])
               } else {
                 updateFilterState(
                   filterIndex,
                   itemIndex,
                   (inputState as string[]).filter(
-                    (name) => name !== network.name
+                    (name) => name !== network.chain_name
                   )
                 )
               }

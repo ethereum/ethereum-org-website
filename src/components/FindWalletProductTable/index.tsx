@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react"
 import { useTranslation } from "next-i18next"
 
-import { FilterOption, Lang, Wallet } from "@/lib/types"
+import { ChainName, FilterOption, Lang, Wallet } from "@/lib/types"
 
 import { useWalletColumns } from "@/components/FindWalletProductTable/hooks/useWalletColumns"
 import { useWalletFilters } from "@/components/FindWalletProductTable/hooks/useWalletFilters"
@@ -22,11 +22,14 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
   const filteredData = useMemo(() => {
     const activeFilterKeys: string[] = []
     let selectedLanguage: string
+    let selectedLayer2: ChainName[] = []
 
     filters.forEach((filter) => {
       filter.items.forEach((item) => {
         if (item.filterKey === "languages") {
           selectedLanguage = item.inputState as string
+        } else if (item.filterKey === "layer_2_support") {
+          selectedLayer2 = (item.inputState as ChainName[]) || []
         } else if (item.inputState === true && item.options.length === 0) {
           activeFilterKeys.push(item.filterKey)
         }
@@ -44,6 +47,12 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
     return wallets
       .filter((item) => {
         return item.languages_supported.includes(selectedLanguage as Lang)
+      })
+      .filter((item) => {
+        return (
+          selectedLayer2.length === 0 ||
+          selectedLayer2.every((chain) => item.supported_chains.includes(chain))
+        )
       })
       .filter((item) => {
         return activeFilterKeys.every((key) => item[key])

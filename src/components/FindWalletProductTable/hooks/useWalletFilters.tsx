@@ -441,7 +441,7 @@ export const useWalletFilters = (): FilterOption[] => {
       showFilterOption: true,
       items: [
         {
-          filterKey: "layer_2",
+          filterKey: "layer_2_support",
           filterLabel: "layer_2_support",
           description: "",
           inputState: [],
