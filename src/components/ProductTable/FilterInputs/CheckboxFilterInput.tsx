@@ -6,13 +6,13 @@ interface CheckboxFilterInputProps {
   label: string
   filterIndex: number
   itemIndex: number
-  optionIndex: number
+  optionIndex?: number
   inputState: FilterInputState
   updateFilterState: (
     filterIndex: number,
     itemIndex: number,
     newInputState: boolean,
-    optionIndex: number
+    optionIndex?: number
   ) => void
 }
 
@@ -29,7 +29,11 @@ const CheckboxFilterInput = ({
       <Checkbox
         checked={inputState as boolean}
         onCheckedChange={(e) => {
-          updateFilterState(filterIndex, itemIndex, e as boolean, optionIndex)
+          if (typeof optionIndex !== "undefined") {
+            updateFilterState(filterIndex, itemIndex, e as boolean, optionIndex)
+          } else {
+            updateFilterState(filterIndex, itemIndex, e as boolean)
+          }
         }}
       />
       <p>{label}</p>

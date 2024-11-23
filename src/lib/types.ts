@@ -708,7 +708,7 @@ export interface WalletFilterData {
   description: TranslationKey | ""
 }
 
-export type FilterInputState = boolean | Lang | string | null
+export type FilterInputState = boolean | Lang | string | string[] | null
 
 export type FilterOption = {
   title: string
