@@ -83,7 +83,7 @@ const NetworkSubComponent = ({ network }) => {
               </div>
               <p>
                 <InlineLink
-                  href={`/wallets/find-wallet/?${network.chain_name}`}
+                  href={`/wallets/find-wallet/?layer_2_support=["${network.chain_name}"]`}
                 >
                   {network.walletsSupportedCount}
                 </InlineLink>

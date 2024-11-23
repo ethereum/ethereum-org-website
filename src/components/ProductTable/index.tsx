@@ -49,6 +49,27 @@ const ProductTable = <T,>({
   const [activePresets, setActivePresets] = useState<number[]>([])
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
+  const parseQueryParams = (queryValue: unknown) => {
+    // Handle boolean values
+    if (queryValue === "true") return true
+    if (queryValue === "false") return false
+
+    // Handle array values
+    if (
+      typeof queryValue === "string" &&
+      queryValue.startsWith("[") &&
+      queryValue.endsWith("]")
+    ) {
+      try {
+        return JSON.parse(decodeURIComponent(queryValue))
+      } catch {
+        return undefined
+      }
+    }
+
+    return undefined
+  }
+
   // Update filters based on router query
   useEffect(() => {
     if (Object.keys(router.query).length > 0) {
@@ -56,14 +77,13 @@ const ProductTable = <T,>({
         ...filter,
         items: filter.items.map((item) => ({
           ...item,
-          inputState: Object.keys(router.query).includes(item.filterKey)
-            ? true
-            : item.inputState,
+          inputState:
+            parseQueryParams(router.query[item.filterKey]) || item.inputState,
           options: item.options.map((option) => ({
             ...option,
-            inputState: Object.keys(router.query).includes(option.filterKey)
-              ? true
-              : option.inputState,
+            inputState:
+              parseQueryParams(router.query[option.filterKey]) ||
+              option.inputState,
           })),
         })),
       }))
