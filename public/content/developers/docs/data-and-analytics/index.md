@@ -46,10 +46,9 @@ To start, visit the [Ethereum quick start guide](https://academy.subquery.networ
 [Blocknative](https://www.blocknative.com/) provides open access to its Ethereum historical [mempool data archive](https://www.ethernow.xyz/mempool-data-archive). This enables researchers and community good projects to explore the pre-chain layer of Ethereum Mainnet. The data set is actively maintained and represents the most comprehensive historical record of mempool transaction events within the Ethereum ecosystem. Learn more at [Ethernow](https://www.ethernow.xyz/). 
 
 ## Further Reading {#further-reading}
-
+- [Exploring Crypto Data I: Data Flow Architectures](https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Graph Network Overview](https://thegraph.com/docs/en/about/network/)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [API code examples on EtherScan](https://etherscan.io/apis#contracts)
 - [Beaconcha.in Beacon Chain explorer](https://beaconcha.in)
 - [Dune Basics](https://docs.dune.com/#dune-basics)
-- [SubQuery Ethereum Quick Start Guide](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
