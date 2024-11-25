@@ -120,7 +120,7 @@ export const getStaticProps = (async ({ locale }) => {
       mainnetData: {
         ...ethereumNetworkData,
         txCosts: growThePieData.dailyTxCosts.ethereum,
-        tvl: ethereumTVLData.value,
+        tvl: "value" in ethereumTVLData ? ethereumTVLData.value : 0,
       },
     },
   }
