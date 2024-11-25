@@ -1,16 +1,15 @@
 import { useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { Box, Flex } from "@chakra-ui/react"
-import { useColorModeValue } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
+
+import { Flex } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
 
 import { isMobile } from "../lib/utils/isMobile"
 
 import Emoji from "./Emoji"
-import InlineLink from "./Link"
-import OldHeading from "./OldHeading"
 
 // Represent string as 32-bit integer
 const hashCode = (string: string): number => {
@@ -25,12 +24,12 @@ const hashCode = (string: string): number => {
 
 // Theme variables from Theme.js
 const colors = [
-  "gridYellow",
-  "gridBlue",
-  "gridGreen",
-  "gridOrange",
-  "gridPink",
-  "gridPurple",
+  "bg-yellow-300",
+  "bg-blue-300",
+  "bg-green-300",
+  "bg-orange-100",
+  "bg-pink-300",
+  "bg-purple-300",
 ]
 
 interface ILink {
@@ -40,8 +39,6 @@ interface ILink {
 
 type GridItemProps = {
   description: string
-  columnNumber: number
-  rowNumber: number
   emoji: string
   index: number
   title: string
@@ -54,60 +51,29 @@ type GridItemProps = {
 }
 
 const OpenTitle = ({ title }: { title: string }) => {
-  return (
-    <OldHeading
-      as="h3"
-      fontSize={{ base: "2rem", sm: "2.5rem" }}
-      fontWeight={700}
-      marginTop={0}
-    >
-      {title}
-    </OldHeading>
-  )
+  return <h3 className="mb-8 mt-0 text-3xl font-bold sm:text-4xl">{title}</h3>
 }
 
 const Title = ({ title }: { title: string }) => {
-  return (
-    <OldHeading
-      as="h3"
-      fontSize={{ base: "2rem", sm: "2.5rem" }}
-      fontWeight={400}
-      marginTop={0}
-    >
-      {title}
-    </OldHeading>
-  )
+  return <h3 className="mb-8 mt-0 text-3xl font-normal sm:text-4xl">{title}</h3>
 }
 
 const Subtitle = ({ children }: ChildOnlyProp) => {
   return (
-    <OldHeading
-      as="h4"
-      fontSize={{ base: "2xl", sm: "2rem" }}
-      fontWeight={600}
-      marginTop={0}
-      padding={2}
-      paddingBottom={4}
-      borderBottom="1px solid"
-      borderColor="black300"
-    >
+    <h4 className="mb-8 mt-0 border-b border-body-medium p-2 pb-4 text-2xl font-semibold sm:text-3xl">
       {children}
-    </OldHeading>
+    </h4>
   )
 }
 
 const Body = ({ children }: ChildOnlyProp) => {
-  return (
-    <Box fontSize="xl" lineHeight="140%" color="black300">
-      {children}
-    </Box>
-  )
+  return <div className="text-xl text-gray-600">{children}</div>
 }
 
 const StyledEmoji = ({ emoji }: { emoji: string }) => {
   return (
     <Emoji
-      className="order-2 m-2 self-center text-8xl hover:rotate-12 hover:duration-500"
+      className="order-2 m-2 self-center text-8xl duration-500 hover:rotate-12"
       text={emoji}
     />
   )
@@ -115,24 +81,18 @@ const StyledEmoji = ({ emoji }: { emoji: string }) => {
 
 const Row = ({ children }: ChildOnlyProp) => {
   return (
-    <Flex
-      justify="space-between"
-      marginTop={8}
-      direction={{ base: "column", md: "row" }}
-    >
+    <Flex className="mt-8 flex-col justify-between md:flex-row">
       {children}
     </Flex>
   )
 }
 
 const Column = ({ children }: ChildOnlyProp) => {
-  return <Box width="100%">{children}</Box>
+  return <div className="w-full">{children}</div>
 }
 
 const GridItem = ({
   description,
-  columnNumber,
-  rowNumber,
   emoji,
   index,
   title,
@@ -146,38 +106,13 @@ const GridItem = ({
   const handleClick = (): void => {
     callback(index)
   }
-  const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
   const { t } = useTranslation("page-stablecoins")
 
   return (
     <Flex
       id={`type-${index}`}
       onClick={() => handleClick()}
-      gridRowStart={isOpen ? rowNumber : `auto`}
-      gridRowEnd={isOpen ? `span 3` : `auto`}
-      gridColumnStart={isOpen ? columnNumber : `auto`}
-      color={isOpen ? "black300" : "text"}
-      cursor={isOpen ? `auto` : `pointer`}
-      background={isOpen ? color : "background.base"}
-      direction={{
-        base: "column",
-        sm: `${isOpen ? "column" : "row"}`,
-        lg: "column",
-      }}
-      justify={{
-        base: `${isOpen ? "flex-start" : "space-between"}`,
-        lg: "flex-start",
-      }}
-      align={{ base: "center", lg: "flex-start" }}
-      border="1px solid"
-      borderColor="text"
-      padding={6}
-      _hover={{
-        background: isOpen ? color : "ednBackground",
-        transition: isOpen ? "auto" : "transform 0.5s",
-        transform: isOpen ? "auto" : "skewX(-5deg)",
-        boxShadow: shadow,
-      }}
+      className={`flex-col ${isOpen ? `${color} col-start-1 row-start-1 row-end-[span_3] cursor-auto justify-start text-gray-600 transition sm:flex-col` : "col-start-auto row-start-auto row-end-auto cursor-pointer justify-between bg-background transition-transform duration-500 hover:skew-x-[-5deg] hover:bg-background-highlight sm:flex-row"} items-center border border-body p-6 hover:shadow-table-box lg:flex-col lg:items-start lg:justify-start`}
     >
       {isOpen ? (
         <Emoji className="mb-8 text-8xl" text={emoji} />
@@ -228,10 +163,7 @@ const GridItem = ({
                       <InlineLink
                         key={idx}
                         href={link.url}
-                        color="black300"
-                        _hover={{
-                          color: "black",
-                        }}
+                        className="text-gray-600 hover:text-gray-900"
                       >
                         {link.text}
                       </InlineLink>
@@ -273,18 +205,8 @@ const StablecoinBoxGrid = ({ items }: StablecoinBoxGridProps) => {
   }
 
   return (
-    <Box
-      gridTemplateColumns="3fr 1fr"
-      gridTemplateRows="3fr 3fr"
-      borderRadius="sm"
-      my={16}
-      display={{ base: "flex", lg: "grid" }}
-      flexDirection="column"
-      maxW="100%"
-    >
+    <div className="my-16 flex max-w-full flex-col rounded-sm lg:grid lg:grid-cols-[3fr_1fr] lg:grid-rows-[3fr_3fr]">
       {items.map((item, idx) => {
-        const columnNumber = 1
-        const rowNumber = 1
         const colorIdx = hashCode(item.emoji) % colors.length
         const color = colors[colorIdx]
         return (
@@ -297,15 +219,13 @@ const StablecoinBoxGrid = ({ items }: StablecoinBoxGridProps) => {
             cons={item.cons}
             links={item.links}
             index={idx}
-            columnNumber={columnNumber}
-            rowNumber={rowNumber}
             isOpen={idx === indexOpen}
             callback={handleSelect}
             color={color}
           />
         )
       })}
-    </Box>
+    </div>
   )
 }
 
