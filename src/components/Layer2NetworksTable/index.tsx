@@ -12,15 +12,17 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 const Layer2NetworksTable = ({
   layer2Data,
   locale,
+  mainnetData,
 }: {
   layer2Data: ExtendedRollup[]
   locale: Lang
+  mainnetData: ExtendedRollup
 }) => {
   const networkFilterOptions = useNetworkFilters()
   const [filters, setFilters] = useState<FilterOption[]>(networkFilterOptions)
 
   const filteredData = useMemo(() => {
-    return layer2Data
+    const filteredData = layer2Data
       .filter((network) => {
         const maturityFilter = filters[1].items.find(
           (item) => item.filterKey === network.networkMaturity
@@ -33,7 +35,9 @@ const Layer2NetworksTable = ({
           filters[0].items[0].inputState as string
         )
       })
-  }, [layer2Data, filters])
+
+    return [mainnetData, ...filteredData]
+  }, [layer2Data, mainnetData, filters])
 
   const resetFilters = () => {
     setFilters(networkFilterOptions)

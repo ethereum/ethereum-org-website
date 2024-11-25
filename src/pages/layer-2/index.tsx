@@ -18,7 +18,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { layer2Data, Rollups } from "@/data/layer-2/layer-2"
+import { layer2Data, Rollups } from "@/data/networks/networks"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 

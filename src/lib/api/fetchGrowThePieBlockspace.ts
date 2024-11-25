@@ -1,4 +1,4 @@
-import { layer2Data } from "@/data/layer-2/layer-2"
+import { layer2Data } from "@/data/networks/networks"
 
 export const fetchGrowThePieBlockspace = async () => {
   const blockspaceData = {}

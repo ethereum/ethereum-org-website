@@ -53,7 +53,10 @@ const DataTable = <TData, TValue>({
   const table = useReactTable({
     data: currentData,
     columns,
-    getRowCanExpand: () => true,
+    getRowCanExpand: (row) => {
+      const rowData = row.original
+      return rowData.cantExpand !== undefined ? rowData.cantExpand : true
+    },
     getCoreRowModel: getCoreRowModel(),
     getExpandedRowModel: getExpandedRowModel(),
     meta: {

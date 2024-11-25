@@ -18,11 +18,12 @@ import { networkMaturity } from "@/lib/utils/networkMaturity"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { layer2Data } from "@/data/layer-2/layer-2"
+import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
 import { walletsData } from "@/data/wallets/wallet-data"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
+import { fetchEthereumTVL } from "@/lib/api/fetchEthereumTVL"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "@/lib/api/fetchGrowThePieBlockspace"
 import { fetchGrowThePieMaster } from "@/lib/api/fetchGrowThePieMaster"
@@ -35,6 +36,7 @@ const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader(
   [
+    ["ethereumTVLData", fetchEthereumTVL],
     ["growThePieData", fetchGrowThePie],
     ["growThePieBlockspaceData", fetchGrowThePieBlockspace],
     ["growThePieMasterData", fetchGrowThePieMaster],
@@ -45,6 +47,7 @@ const loadData = dataLoader(
 
 export const getStaticProps = (async ({ locale }) => {
   const [
+    ethereumTVLData,
     growThePieData,
     growThePieBlockspaceData,
     growThePieMasterData,
@@ -66,7 +69,7 @@ export const getStaticProps = (async ({ locale }) => {
       return {
         ...network,
         txCosts: growThePieData.dailyTxCosts[network.growthepieID],
-        l2beatData: l2beatData.data.projects[network.l2beatID],
+        tvl: l2beatData.data.projects[network.l2beatID].tvl.breakdown.total,
         networkMaturity: networkMaturity(
           l2beatData.data.projects[network.l2beatID]
         ),
@@ -101,10 +104,7 @@ export const getStaticProps = (async ({ locale }) => {
         maturityOrder[b.networkMaturity] - maturityOrder[a.networkMaturity]
 
       if (maturityDiff === 0) {
-        return (
-          (b.l2beatData?.tvl?.breakdown?.total || 0) -
-          (a.l2beatData?.tvl?.breakdown?.total || 0)
-        )
+        return (b.tvl || 0) - (a.tvl || 0)
       }
 
       return maturityDiff
@@ -117,11 +117,16 @@ export const getStaticProps = (async ({ locale }) => {
       lastDeployLocaleTimestamp,
       locale,
       layer2Data: layer2DataCompiled,
+      mainnetData: {
+        ...ethereumNetworkData,
+        txCosts: growThePieData.dailyTxCosts.ethereum,
+        tvl: ethereumTVLData.value,
+      },
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
 
-const Layer2Networks = ({ layer2Data, locale }) => {
+const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
   const { pathname } = useRouter()
 
   const heroProps: ContentHeroProps = {
@@ -143,7 +148,11 @@ const Layer2Networks = ({ layer2Data, locale }) => {
 
       <ContentHero {...heroProps} />
 
-      <Layer2NetworksTable layer2Data={layer2Data} locale={locale} />
+      <Layer2NetworksTable
+        layer2Data={layer2Data}
+        locale={locale}
+        mainnetData={mainnetData}
+      />
 
       <div id="more-advanced-cta" className="w-full px-8 py-9">
         <div className="flex flex-col gap-8 bg-main-gradient px-12 py-14">

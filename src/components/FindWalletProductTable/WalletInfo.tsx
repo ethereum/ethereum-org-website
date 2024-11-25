@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge"
 
 import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"
 
-import { layer2Data } from "@/data/layer-2/layer-2"
+import { layer2Data } from "@/data/networks/networks"
 
 interface WalletInfoProps {
   wallet: Wallet

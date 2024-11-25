@@ -2,7 +2,7 @@ import { FilterInputState } from "@/lib/types"
 
 import CheckboxFilterInput from "@/components/ProductTable/FilterInputs/CheckboxFilterInput"
 
-import { layer2Data } from "@/data/layer-2/layer-2"
+import { layer2Data } from "@/data/networks/networks"
 
 interface Layer2SelectInputProps {
   filterIndex: number

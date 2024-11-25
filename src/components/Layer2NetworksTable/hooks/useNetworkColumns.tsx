@@ -28,7 +28,9 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
     cell: ({ table, row }) => {
       const meta = table.options.meta as TableMeta
       return (
-        <TableCell className="flex flex-1 flex-row items-center justify-between">
+        <TableCell
+          className={`flex flex-1 flex-row items-center justify-between lg:table-cell ${row.original.cantExpand ? "border-b-4" : ""}`}
+        >
           <div className="flex flex-col gap-3">
             <div className="flex flex-row items-center gap-4">
               <TwImage
@@ -65,7 +67,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
                     notation: "compact",
                     minimumSignificantDigits: 3,
                     maximumSignificantDigits: 3,
-                  }).format(row.original.l2beatData.tvl.breakdown.total)}
+                  }).format(row.original.tvl)}
                 </p>
               </div>
             </div>
@@ -116,7 +118,9 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
       const meta = table.options.meta as TableMeta
 
       return (
-        <TableCell className="hidden w-[145px] px-0 text-end lg:table-cell">
+        <TableCell
+          className={`hidden w-[145px] px-0 text-end lg:table-cell ${row.original.cantExpand ? "border-b-4" : ""}`}
+        >
           $
           {row.original.txCosts.toLocaleString(meta.locale as Lang, {
             minimumFractionDigits: 2,
@@ -154,7 +158,9 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
     cell: ({ table, row }) => {
       const meta = table.options.meta as TableMeta
       return (
-        <TableCell className="hidden w-[120px] px-0 text-end lg:table-cell">
+        <TableCell
+          className={`hidden w-[120px] px-0 text-end lg:table-cell ${row.original.cantExpand ? "border-b-4" : ""}`}
+        >
           <p>
             {new Intl.NumberFormat(meta.locale as Lang, {
               style: "currency",
@@ -162,7 +168,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
               notation: "compact",
               minimumSignificantDigits: 3,
               maximumSignificantDigits: 3,
-            }).format(row.original.l2beatData.tvl.breakdown.total)}
+            }).format(row.original.tvl)}
           </p>
         </TableCell>
       )
@@ -198,7 +204,9 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
     ),
     cell: ({ row }) => {
       return (
-        <TableCell className="hidden w-[145px] px-0 text-end lg:table-cell">
+        <TableCell
+          className={`hidden w-[145px] px-0 text-center lg:table-cell ${row.original.cantExpand ? "border-b-4" : ""}`}
+        >
           <Badge variant={row.original.networkMaturity}>
             {row.original.networkMaturity.toUpperCase()}
           </Badge>
@@ -210,8 +218,17 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
     id: "dropdown",
     header: () => <TableHead className="hidden w-12 lg:table-cell" />,
     cell: ({ row }) => {
+      if (row.original.cantExpand)
+        return (
+          <TableCell
+            className={`hidden w-12 lg:table-cell ${row.original.cantExpand ? "border-b-4" : ""}`}
+          />
+        )
+
       return (
-        <TableCell className="hidden w-12 lg:table-cell">
+        <TableCell
+          className={`hidden w-12 lg:table-cell ${row.original.cantExpand ? "border-b-4" : ""}`}
+        >
           {row.getIsExpanded() ? <IoChevronUpSharp /> : <IoChevronDownSharp />}
         </TableCell>
       )

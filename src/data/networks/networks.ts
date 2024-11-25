@@ -5,6 +5,7 @@ import { ChainName, NonEVMChainName } from "@/lib/types"
 import ArbitrumLogo from "@/public/images/layer-2/arbitrum.png"
 import BaseLogo from "@/public/images/layer-2/base.png"
 import BlastImage from "@/public/images/layer-2/blast.png"
+import EthereumLogo from "@/public/images/layer-2/ethereum.png"
 import LineaLogo from "@/public/images/layer-2/linea.png"
 import ModeLogo from "@/public/images/layer-2/mode.png"
 import OptimismLogo from "@/public/images/layer-2/optimism.png"
@@ -17,6 +18,7 @@ export interface Rollup {
   growthepieID: string
   name: string
   chain_name: ChainName | NonEVMChainName
+  cantExpand?: boolean
   logo: StaticImageData
   networkType: "optimistic" | "zk"
   description: string
@@ -30,6 +32,15 @@ export interface Rollup {
 }
 
 export type Rollups = Rollup[]
+
+export const ethereumNetworkData = {
+  name: "Ethereum Mainnet",
+  chain_name: "Ethereum Mainnet",
+  growthepieID: "ethereum",
+  logo: EthereumLogo,
+  networkMaturity: "N/A",
+  cantExpand: true,
+}
 
 export const layer2Data: Rollups = [
   {

@@ -21,7 +21,7 @@ import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import type { SimulatorNav } from "@/components/Simulator/interfaces"
 
 import chains from "@/data/chains"
-import { Rollup, Rollups } from "@/data/layer-2/layer-2"
+import { Rollup, Rollups } from "@/data/networks/networks"
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
@@ -637,13 +637,7 @@ export type NonEVMChainName = "Starknet"
 export type ExtendedRollup = Rollup & {
   networkMaturity: "robust" | "maturing" | "developing" | "emerging"
   txCosts: number
-  l2beatData: {
-    tvl: {
-      breakdown: {
-        total: number
-      }
-    }
-  }
+  tvl: number
   walletsSupported: string[]
 }
 
