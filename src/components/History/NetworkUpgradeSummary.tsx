@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { Flex, Stack, Text } from "@chakra-ui/react"
 
 import type { Lang } from "@/lib/types"
+
+import { Flex, Stack } from "@/components/ui/flex"
 
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
@@ -48,7 +49,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
     return (
-      <Flex whiteSpace="pre-wrap">
+      <Flex className="whitespace-pre-wrap">
         <Emoji className="me-2 text-sm" text=":bricks:" />
         {t(translationKey)}:{" "}
         <InlineLink href={`${explorerUrl}${number}`}>
@@ -63,7 +64,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
       {dateTimeAsString && (
         <Flex>
           <Emoji className="me-2 text-sm" text=":calendar:" />
-          <Text fontFamily="monospace">{formattedUTC}</Text>
+          <p className="font-monospace">{formattedUTC}</p>
         </Flex>
       )}
       {blockNumber &&

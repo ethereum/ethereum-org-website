@@ -12,8 +12,6 @@ Ez az ábra a két Ethereum-kliens kapcsolatát mutatja. A két kliens a saját 
 
 ![](node-architecture-text-background.png)
 
-_Ez az illusztráció a geth.ethereum.org-ról származik, és a Geth logó jeleni a végrehajtási klienseket – emellett számos más végrehajtási kliens is létezik, mint például az Erigon, Nethermind és Besu_
-
 Ahhoz, hogy ez a két kliensből álló struktúra működni tudjon, a konszenzusos klienseknek tranzakciókötegeket kell átadni a végrehajtási kliensnek. Ahogy a kliens ezeket a tranzakciókat lokálisan végrehajtja, le tudja ellenőrizni, hogy nem sértenek-e semmilyen Ethereum szabályt, illetve a javasolt Ethereum státusz korrekt-e. Ehhez hasonlóan, amikor az adott csomópont válik a blokképítővé, akkor a konszenzusos kliensnek tranzakciókötegeket kell kérnie a Geth-től, hogy azokat az új blokkba betegye és végrehajtsa, hogy frissíteni tudja a globális státuszt. Ez a kliensek közötti kommunikáció egy helyi RPC-kapcsolaton keresztül megy végbe az [motor API-t](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) használva.
 
 ## Mit csinál a végrehajtási kliens? {#execution-client}

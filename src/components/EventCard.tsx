@@ -38,7 +38,7 @@ const EventCard: React.FC<EventCardProps> = ({
   return (
     <Card className={cn("flex h-full flex-col rounded-md border", className)}>
       <CardHeader className="flex flex-row items-center justify-center rounded-t-md border-b border-primary bg-[#FCFCFC] p-2 dark:bg-[#272627]">
-        <BsCalendar3 className="mr-2 h-6 w-6 text-primary" />
+        <BsCalendar3 className="me-2 h-6 w-6 text-primary" />
         <span className="!mt-0 text-right text-sm text-primary">
           {formatedDate}
         </span>
@@ -59,7 +59,9 @@ const EventCard: React.FC<EventCardProps> = ({
           <h3 className="text-xl font-bold md:text-2xl">{title}</h3>
           <span className="text-sm opacity-60">{location}</span>
         </div>
-        <p className="md:text-sm md:leading-[1.6rem]">{description}</p>
+        <p className="line-clamp-6 md:text-sm md:leading-[1.6rem]">
+          {description}
+        </p>
       </CardContent>
       <CardFooter className="p-4 pt-0">
         <ButtonLink href={href} variant="outline" className="w-full text-sm">
