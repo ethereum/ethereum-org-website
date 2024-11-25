@@ -1,12 +1,11 @@
 import { StaticImageData } from "next/image"
-import Image from "next/image"
-import Link from "next/link"
 import { useTranslation } from "next-i18next"
-import { RiExternalLinkLine } from "react-icons/ri"
 
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
-import { Button } from "./ui/button"
+import { Button } from "./ui/buttons/Button"
+import InlineLink from "./ui/Link"
+import { TwImage } from "./Image"
 
 export type Layer2ProductCardProps = {
   children?: React.ReactNode
@@ -38,12 +37,12 @@ const Layer2ProductCard = ({
   const { t } = useTranslation("page-layer-2")
 
   return (
-    <Card className="text-foreground flex flex-col justify-between rounded-md border-0 p-2 shadow-lg transition-transform duration-100 hover:scale-[1.02] dark:bg-background-medium">
+    <Card className="flex flex-col justify-between rounded-md border-0 p-2 shadow-lg transition-transform duration-100 hover:scale-[1.02] dark:bg-background-medium">
       <div
         className="mb-4 flex min-h-[200px] items-center justify-center border-b"
         style={{ backgroundColor: background }}
       >
-        <Image
+        <TwImage
           src={image}
           alt={alt}
           width={100}
@@ -72,30 +71,30 @@ const Layer2ProductCard = ({
 
         <div className="space-y-1">
           {bridge && (
-            <Link
+            <InlineLink
               href={bridge}
               className="block text-primary underline hover:text-primary/80"
             >
               {name} {t("layer-2-bridge")}
-            </Link>
+            </InlineLink>
           )}
 
           {ecosystemPortal && (
-            <Link
+            <InlineLink
               href={ecosystemPortal}
               className="block text-primary underline hover:text-primary/80"
             >
               {name} {t("layer-2-ecosystem-portal")}
-            </Link>
+            </InlineLink>
           )}
 
           {tokenLists && (
-            <Link
+            <InlineLink
               href={tokenLists}
               className="block text-primary underline hover:text-primary/80"
             >
               {name} {t("layer-2-token-lists")}
-            </Link>
+            </InlineLink>
           )}
         </div>
       </CardContent>
@@ -103,16 +102,15 @@ const Layer2ProductCard = ({
       <CardFooter className="mt-2 p-2">
         {url && (
           <Button
-            variant={"default"}
             asChild
             className="w-full rounded-sm hover:text-white hover:shadow-[4px_4px_4px_rgba(147,51,234,0.25)] dark:bg-primary-action dark:hover:bg-primary/90 dark:hover:shadow-[4px_4px_4px_rgba(0,0,0,0.9)]"
           >
-            <Link
+            <InlineLink
               href={url}
               className="flex items-center gap-0 text-lg text-white no-underline"
             >
-              {t("layer-2-explore")} {name} <RiExternalLinkLine />
-            </Link>
+              {t("layer-2-explore")} {name}
+            </InlineLink>
           </Button>
         )}
       </CardFooter>
