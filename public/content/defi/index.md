@@ -343,7 +343,7 @@ DeFi is an open-source movement. The DeFi protocols and applications are all ope
 
 ### DeFi articles {#defi-articles}
 
-- [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, January 6, 2020_
+- [A beginner's guide to DeFi](https://www.coinbase.com/blog/a-beginners-guide-to-decentralized-finance-defi) – _Sid Coelho-Prabhu, January 6, 2020_
 
 ### Videos {#videos}
 
