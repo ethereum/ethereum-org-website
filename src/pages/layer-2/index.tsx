@@ -229,8 +229,8 @@ const Layer2Hub = ({
           <div className="relative m-auto h-[275px] w-[275px] sm:h-[375px] sm:w-[375px]">
             {/* Outer ring */}
             <div className="absolute inset-0 rounded-full border border-dashed border-body-medium"></div>
-            <div className="absolute inset-0 animate-spin-10 rounded-full">
-              <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-10 rounded-full bg-primary">
+            <div className="absolute inset-0 animate-spin-30 rounded-full">
+              <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-30 rounded-full bg-primary">
                 <TwImage
                   src={randomL2s[0].logo}
                   alt={randomL2s[0].name}
@@ -239,7 +239,7 @@ const Layer2Hub = ({
                 />
               </div>
               {/* Bottom logo */}
-              <div className="absolute -bottom-[12px] left-1/2 h-6 w-6 -translate-x-1/2 translate-y-1/2 transform animate-counter-spin-10 rounded-full bg-primary">
+              <div className="absolute -bottom-[12px] left-1/2 h-6 w-6 -translate-x-1/2 translate-y-1/2 transform animate-counter-spin-30 rounded-full bg-primary">
                 <TwImage
                   src={randomL2s[1].logo}
                   alt={randomL2s[1].name}
@@ -251,8 +251,8 @@ const Layer2Hub = ({
 
             {/* Second ring */}
             <div className="absolute inset-[20px] rounded-full border border-dashed border-body-medium sm:inset-[36px]"></div>
-            <div className="absolute inset-[20px] animate-spin-7 rounded-full sm:inset-[36px]">
-              <div className="absolute -right-[12px] top-1/2 h-6 w-6 -translate-y-1/2 transform animate-counter-spin-7 rounded-full bg-primary">
+            <div className="absolute inset-[20px] animate-spin-21 rounded-full sm:inset-[36px]">
+              <div className="absolute -right-[12px] top-1/2 h-6 w-6 -translate-y-1/2 transform animate-counter-spin-21 rounded-full bg-primary">
                 <TwImage
                   src={randomL2s[2].logo}
                   alt={randomL2s[2].name}
@@ -261,7 +261,7 @@ const Layer2Hub = ({
                 />
               </div>
               {/* Left logo */}
-              <div className="absolute -left-[12px] top-1/2 h-6 w-6 -translate-y-1/2 transform animate-counter-spin-7 rounded-full bg-primary">
+              <div className="absolute -left-[12px] top-1/2 h-6 w-6 -translate-y-1/2 transform animate-counter-spin-21 rounded-full bg-primary">
                 <TwImage
                   src={randomL2s[3].logo}
                   alt={randomL2s[3].name}
@@ -273,8 +273,8 @@ const Layer2Hub = ({
 
             {/* Third ring */}
             <div className="absolute inset-[40px] rounded-full border border-dashed border-body-medium sm:inset-[72px]"></div>
-            <div className="absolute inset-[40px] animate-spin-6 rounded-full sm:inset-[72px]">
-              <div className="absolute -bottom-[12px] left-1/2 h-6 w-6 -translate-x-1/2 transform animate-counter-spin-6 rounded-full bg-primary">
+            <div className="absolute inset-[40px] animate-spin-18 rounded-full sm:inset-[72px]">
+              <div className="absolute -bottom-[12px] left-1/2 h-6 w-6 -translate-x-1/2 transform animate-counter-spin-18 rounded-full bg-primary">
                 <TwImage
                   src={randomL2s[4].logo}
                   alt={randomL2s[4].name}
@@ -283,7 +283,7 @@ const Layer2Hub = ({
                 />
               </div>
               {/* Top logo */}
-              <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 transform animate-counter-spin-6 rounded-full bg-primary">
+              <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 transform animate-counter-spin-18 rounded-full bg-primary">
                 <TwImage
                   src={randomL2s[5].logo}
                   alt={randomL2s[5].name}
@@ -295,8 +295,8 @@ const Layer2Hub = ({
 
             {/* Fourth (innermost) ring */}
             <div className="absolute inset-[60px] rounded-full border border-dashed border-body-medium sm:inset-[108px]"></div>
-            <div className="absolute inset-[60px] animate-spin-3 rounded-full sm:inset-[108px]">
-              <div className="absolute -left-[12px] top-1/2 h-6 w-6 -translate-y-1/2 transform animate-counter-spin-3 rounded-full bg-primary">
+            <div className="absolute inset-[60px] animate-spin-9 rounded-full sm:inset-[108px]">
+              <div className="absolute -left-[12px] top-1/2 h-6 w-6 -translate-y-1/2 transform animate-counter-spin-9 rounded-full bg-primary">
                 <TwImage
                   src={randomL2s[6].logo}
                   alt={randomL2s[6].name}
@@ -305,7 +305,7 @@ const Layer2Hub = ({
                 />
               </div>
               {/* Right logo */}
-              <div className="absolute -right-[12px] top-1/2 h-6 w-6 -translate-y-1/2 transform animate-counter-spin-3 rounded-full bg-primary">
+              <div className="absolute -right-[12px] top-1/2 h-6 w-6 -translate-y-1/2 transform animate-counter-spin-9 rounded-full bg-primary">
                 <TwImage
                   src={randomL2s[7].logo}
                   alt={randomL2s[7].name}
