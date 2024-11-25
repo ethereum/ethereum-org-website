@@ -73,7 +73,7 @@ Outre les messages de bienvenue, le protocole filaire peut également envoyer un
 
 #### Le protocole filaire {#wire-protocol}
 
-Une fois que les pairs sont connectés et qu'une session RLPx est entamée, le protocole filaire définit la façon dont les pairs communiquent. Initialement, le protocole filaire définissait trois tâches principales : synchronisation de chaînes, propagation de blocs et échange de transactions. Cependant, depuis qu'Ethereum est passé à la preuve d'enjeu, la propagation des blocs et la synchronisation des chaînes sont devenues partie intégrante de la couche de consensus. L'échange de transactions est toujours à la charge des clients d'exécution. L'échange de transactions fait référence à l'échange de transactions en attente entre les nœuds afin que les mineurs puissent sélectionner certains d'entre eux pour les inclure dans le bloc suivant. Des informations plus détaillées sur ces tâches sont disponibles [ici](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Les clients qui prennent en charge ces sous-protocoles les affichent via [JSON-RPC](/developers/docs/apis/json-rpc/).
+Une fois que les pairs sont connectés et qu'une session RLPx est entamée, le protocole filaire définit la façon dont les pairs communiquent. Initialement, le protocole filaire définissait trois tâches principales : synchronisation de chaînes, propagation de blocs et échange de transactions. Cependant, depuis qu'Ethereum est passé à la preuve d'enjeu, la propagation des blocs et la synchronisation des chaînes sont devenues partie intégrante de la couche de consensus. L'échange de transactions est toujours à la charge des clients d'exécution. L'échange de transactions fait référence à l'échange de transactions en attente entre les nœuds afin que les constructeurs de blocs puissent sélectionner certaines d'entre elles pour les inclure dans le bloc suivant. Des informations plus détaillées sur ces tâches sont disponibles [ici](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Les clients qui prennent en charge ces sous-protocoles les affichent via [JSON-RPC](/developers/docs/apis/json-rpc/).
 
 #### Les (sous-protocole ethereum léger) {#les}
 
@@ -125,7 +125,7 @@ Les clients de consensus et d'exécution fonctionnent en parallèle. Ils doivent
 
 Un résumé du flux de contrôle est affiché ci-dessous (la pile réseau pertinente apparaît entre parenthèses).
 
-### Lorsque le client de consensus n'est pas le producteur de bloc :
+### Lorsque le client du consensus n'est pas un producteur de blocs : {#when-consensus-client-is-not-block-producer}
 
 - Le client de consensus reçoit un bloc via le protocole de commutation (consensus p2p)
 - Le client de consensus prévalide le bloc, c'est-à-dire qu'il s'assure qu'il est arrivé d'un expéditeur valide avec des métadonnées correctes
@@ -134,7 +134,7 @@ Un résumé du flux de contrôle est affiché ci-dessous (la pile réseau pertin
 - La couche d'exécution transmet les données de validation à la couche de consensus, le bloc est maintenant considéré comme validé (connexion RPC locale)
 - La couche de consensus ajoute un bloc à la tête de sa propre blockchain et l'atteste, diffusant l'attestation sur le réseau (consensus p2p)
 
-### Lorsque le client de consensus est le producteur de bloc :
+### Lorsque le client du consensus est un producteur de blocs : {#when-consensus-client-is-block-producer}
 
 - Le client de consensus reçoit une note l'informant qu'il est le prochain producteur de blocs (consensus p2p)
 - La couche de consensus appelle la méthode `create block` dans le client d'exécution (RPC en local)

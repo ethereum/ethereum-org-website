@@ -19,10 +19,11 @@ Birçok Ethereum geliştirme standardı, jeton arayüzlerine odaklanır. Bu stan
 Bunlar Ethereum'daki en popüler token standartlarından bazılarıdır:
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - Oylama token'ları, stake etme token'ları veya sanal para birimleri gibi değiştirilebilir (birbirinin yerine geçebilir) token'lar için standart bir arayüz.
+
+### NFT standartları {#nft-standards}
+
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - Bir şarkı veya sanat eserinin telif hakkı gibi değiştirilemez token'lar için standart bir arayüz.
-- [ERC-777](/developers/docs/standards/tokens/erc-777/) - ERC-777, gelişmiş işlem gizliliği için bir mikser sözleşmesi veya özel anahtarlarınızı kaybederseniz sizi kurtarmak için bir acil durum kurtarma işlevi gibi token'ların üzerine ek işlevler oluşturmasına olanak tanır.
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - ERC-1155, daha verimli alım satımlara ve işlemlerin gruplandırılmasına olanak tanır: Böylece maliyetlerden tasarruf sağlar. Bu token standardı, hem yardımcı token'ların ($BNB veya $BAT gibi) hem de CryptoPunks gibi Değiştirilemez Token'ların oluşturulmasına izin verir.
-- [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - Verim taşıyan kasaların teknik parametrelerini optimize etmek ve birleştirmek için tasarlanmış, tokenize edilmiş bir kasa standardı.
+- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - ERC-1155, daha verimli alım satımlara ve işlemlerin gruplandırılmasına olanak tanır: Böylece maliyetlerden tasarruf sağlar. Bu jeton standardı, hem yardımcı jetonların ($BNB veya $BAT gibi) hem de CryptoPunks gibi Eşsiz Jetonların oluşturulmasına olanak tanır.
 
 [ERC](https://eips.ethereum.org/erc) önerilerinin tam listesi.
 

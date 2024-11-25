@@ -50,7 +50,7 @@ Düğümler, Ethereum ağına bağlı bilgisayarlardır. İstemciler, bilgisayar
 
 ## Hisse ispatı yeni bir fikir midir? {#is-pos-new}
 
-Hayır. Bir kullanıcı, BitcoinTalk [ forumunda 2011 yılında Bitcoin'e bir yükseltme olarak hisse ispatının](https://bitcointalk.org/index.php?topic=27787.0) temel fikrini önerdi. Bu, Ethereum Ana Ağı'na yerleştirmeye hazır olmasından 11 yıl önceydi. Bazı diğer zincirler hisse ispatını Ethereum'dan önce yerleştirdi ancak Ethereum'un özgül mekanizmasını (Gasper olarak bilinen) yerleştiremedi.
+Hayır. Bir kullanıcı, BitcoinTalk [forumunda 2011 yılında Bitcoin'e bir yükseltme olarak hisse ispatının](https://bitcointalk.org/index.php?topic=27787.0) temel fikrini önerdi. Bu, Ethereum Ana Ağı'na yerleştirmeye hazır olmasından 11 yıl önceydi. Bazı diğer zincirler hisse ispatını Ethereum'dan önce yerleştirdi ancak Ethereum'un özgül mekanizmasını (Gasper olarak bilinen) yerleştiremedi.
 
 ## Ethereum'un hisse ispatıyla ilgili özel olan nedir? {#why-is-ethereum-pos-special}
 
@@ -74,7 +74,7 @@ Doğrulayıcılar eğer kötü davranırlarsa kaybedecek bir şeyleri olsun diye
 
 ## Doğrulayıcılar nasıl seçilir? {#how-are-validators-selected}
 
-Her yuva için tek bir doğrulayıcı, her blok önerisini rastgele seçmek üzere RANDAO adlı bir algoritma kullanarak seçilir. Bu algoritma, blok önerisinde bulunan bir karma ile her blokta güncellenen bir tohumun karıştırılmasıyla çalışır. Bu değer, toplam doğrulayıcı kümesinden belirli bir doğrulayıcıyı seçmek için kullanılır. Doğrulayıcı seçimi önceden belirlenmiş dört dönemde yapılır.
+Her yuva için tek bir doğrulayıcı, her blok önerisini rastgele seçmek üzere RANDAO adlı bir algoritma kullanarak seçilir. Bu algoritma, blok önerisinde bulunan bir karma ile her blokta güncellenen bir tohumun karıştırılmasıyla çalışır. Bu değer, toplam doğrulayıcı kümesinden belirli bir doğrulayıcıyı seçmek için kullanılır. Doğrulayıcı seçimi, iki dönem öncesinden belirlenir.
 
 [Doğrulayıcı seçimi hakkında daha fazlası](/developers/docs/consensus-mechanisms/pos/block-proposal)
 

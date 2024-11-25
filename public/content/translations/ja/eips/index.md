@@ -54,9 +54,17 @@ EIP編集者は、提案がEIPになる準備ができているかを決定し�
 
 EIPの詳細についてご興味がある場合は、 [EIPウェブサイト](https://eips.ethereum.org/)や[EIP-1](https://eips.ethereum.org/EIPS/eip-1)をご覧ください。 下記は役立つ情報のリンクです。
 
-- [全EIPリスト](https://eips.ethereum.org/all)
+- [全EIPのリスト](https://eips.ethereum.org/all)
 - [全EIPタイプの説明](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [全EIPステータスの説明](https://eips.ethereum.org/EIPS/eip-1#eip-process)
+
+### コミュニティ教育プロジェクト {#community-projects}
+
+- [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) — *PEEPanEIPは、イーサリアム改善提案 (EIP) や、今後のアップグレードの主要機能について解説する教育ビデオシリーズです。*
+- [EIPs For Nerds](https://ethereum2077.substack.com/t/eip-research) — *EIPs For Nerdsは、さまざまなイーサリアム改善提案 (EIP) について、ELI5スタイルの概要を提供します。これには、コアEIPやアプリケーション/インフラストラクチャ層のEIP (ERC) を含み、読者の教育やイーサリアムプロトコルの変更に対するコンセンサス形成を目的としています。*
+- [EIPs.wtf](https://www.eips.wtf/) — *EIPs.wtfは、イーサリアム改善提案 (EIP) に関する追加情報を提供します。これには、EIPのステータス、実装の詳細、関連するプルリクエスト、およびコミュニティのフィードバックが含まれます。*
+- [EIP.Fun](https://eipfun.substack.com/) — *EIP.Funは、イーサリアム改善提案 (EIP) に関する最新ニュース、EIP会議のアップデートなどを提供します。*
+- [EIPs Insight](https://eipsinsight.com/) — *EIPs Insightは、さまざまなリソースから収集された情報に基づいて、イーサリアム改善提案 (EIP) のプロセス & 統計の現状を表しています。*
 
 ## EIPへの参加 {#participate}
 

@@ -12,13 +12,12 @@ Token'lar Ethereum'daki hemen hemen her şeyi temsil edebilir:
 
 - çevrimiçi bir platformdaki itibar puanları
 - bir oyundaki karakterin becerileri
-- çekiliş biletleri
 - şirket hissesi gibi finansal varlıklar
 - ABD Doları gibi itibari para birimi
 - ons altın
 - ve daha fazlası...
 
-Ethereum'un bu kadar güçlü bir özelliği güçlü bir standart tarafından idare edilmeli, değil mi? ERC-20 tam da bu noktada devreye giriyor! Bu standart, geliştiricilerin diğer ürün ve servislerle uyumlu token uygulamaları inşa etmesini sağlar.
+Ethereum'un bu kadar güçlü bir özelliği güçlü bir standart tarafından idare edilmeli, değil mi? ERC-20 tam da bu noktada devreye giriyor! Bu standart, geliştiricilerin diğer ürün ve servislerle uyumlu token uygulamaları inşa etmesini sağlar. ERC-20 standardı, [ether](/glossary/#ether)'e ek işlevsellik kazandırmak için de kullanılır.
 
 **ERC-20 nedir?**
 
@@ -141,9 +140,33 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
+## Bilinen sorunlar {#erc20-issues}
+
+### ERC-20 jeton alma sorunu {#reception-issue}
+
+ERC-20 jetonları, ERC-20 jetonlarını işlemek üzere tasarlanmamış bir akıllı sözleşmeye gönderildiğinde kalıcı olarak kaybolabilir. Bunun nedeni, alıcı sözleşmesinin gelen jetonları tanıma veya yanıtlama işlevine sahip olmaması ve ERC-20 standardında alıcı sözleşmesini gelen jetonlar hakkında bilgilendirmek için bir mekanizmanın bulunmamasıdır. Bu sorunun başlıca ortaya çıkma şekilleri şunlardır:
+
+1.  Jeton transfer mekanizması
+  - ERC-20 jetonları, transfer veya transferFrom fonksiyonları kullanılarak transfer edilir
+    -   Bir kullanıcı bu fonksiyonları kullanarak bir sözleşme adresine jeton gönderdiğinde, alıcı sözleşmesinin bunları işlemek üzere tasarlanmış olup olmadığına bakılmaksızın jetonlar aktarılır
+2.  Bildirim eksikliği
+    -   Alıcı sözleşmesi, kendisine jeton gönderildiğine dair bir bildirim veya geri arama almaz
+    -   Alıcı sözleşmesinde jetonları işlemek için bir mekanizma yoksa (örneğin, bir yedek fonksiyon veya jeton alımını yönetmek için özel bir fonksiyon), jetonlar sözleşme adresinde takılı kalır
+3.  Yerleşik işlemenin olmaması
+    -   ERC-20 standardının sözleşmelerin uygulanması için zorunlu bir fonksiyon barındırmaması, birçok sözleşmenin gelen jetonları düzgün bir şekilde yönetememesine yol açar
+
+Bu sorundan dolayı [ERC-223](/developers/docs/standards/tokens/erc-223) gibi bazı alternatif standartlar ortaya çıktı
+
 ## daha fazla okuma {#further-reading}
 
 - [EIP-20: ERC-20 Token Standardı](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Token'lar](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - ERC-20 Uygulaması](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Solidity ERC20 Jetonları için bir Rehber](https://www.alchemy.com/overviews/erc20-solidity)
+
+
+## Diğer değiştirilebilir jeton standartları {#fungible-token-standards}
+
+- [ERC-223](/developers/docs/standards/tokens/erc-223)
+- [ERC-777](/developers/docs/standards/tokens/erc-777)
+- [ERC-4626 - Jetonlaştırılmış kasalar](/developers/docs/standards/tokens/erc-4626)

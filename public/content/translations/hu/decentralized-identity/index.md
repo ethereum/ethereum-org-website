@@ -1,5 +1,5 @@
 ---
-title: Decentralizált identitás
+title: Nem központilag kibocsájtott identitás
 description: Mi az a nem központilag kibocsátott identitás, és miért fontos?
 lang: hu
 template: use-cases
@@ -73,7 +73,7 @@ A decentralizált identitás segít olyan online közösségek létrehozásában
 
 ### 4. Anti-Sybil védelem {#sybil-protection}
 
-A Sybil-támadás azt jelenti, hogy bizonyos egyének kijátsszák a rendszert, hogy az több embernek vegye őket, és így nagyobb befolyást tudjanak gyakorolni. A támogatást adó alkalmazások, melyek [kvadratikus szavazást](/glossary/#quadratic-voting) használnak, sebezhetők ezekkel a Sybil-támadásokkal szemben, mert a támogatás összege növekszik, ha több szavazat érkezik rá. Ez pedig arra ösztönzi a résztvevőket, hogy több identitással vegyenek részt a folyamatban. A decentralizált identitás megakadályozza ezt, mivel a résztvevők könnyedén igazolhatják, hogy valódi emberek, és nem kell hozzá specifikus, magán jellegű információkat feltárniuk magukról.
+A támogatást adó alkalmazások, melyek [kvadratikus szavazást](/glossary/#quadratic-voting) használnak, sebezhetők a [Sybil-támadásokkal](/glossary/#sybil-attack) szemben, mert a támogatás összege növekszik, ha több szavazat érkezik rá. Ez pedig arra ösztönzi a résztvevőket, hogy több identitással vegyenek részt a folyamatban. A decentralizált identitás megakadályozza ezt, mivel a résztvevők könnyedén igazolhatják, hogy valódi emberek, és nem kell hozzá specifikus, magán jellegű információkat feltárniuk magukról.
 
 ## Mi az a tanúsítás? {#what-are-attestations}
 
@@ -163,6 +163,7 @@ Számtalan ambiciózus projekt használja az Ethereumot a decentralizált identi
 - **[Proof of Humanity](https://www.proofofhumanity.id)** – _Az emberség igazolása (PoH) egy közösségi identitás igazolására készült rendszer, mely az Ethereumra épül._
 - **[BrightID](https://www.brightid.org/)** – _Egy decentralizált, nyílt forráskódú, közösségi identitási hálózat, amely új módot keres az azonosításra egy közösségi gráf megalkotásával és elemzésével._
 - **[walt.id](https://walt.id)** – _Nyílt forráskódú, decentralizált identitás- és tárcainfrastruktúra, amely lehetővé teszi a fejlesztőknek és szervezeteknek, hogy kihasználják a szuverén identitást, valamint az NFT-ket/SBT-ket._
+- **[Veramo](https://veramo.io/)** – _Egy JavaScript keretrendszer, amellyel bárki könnyedén tud kriptográfiailag ellenőrizhető adatot használni az alkalmazásaiban._
 
 ## További olvasnivaló {#further-reading}
 

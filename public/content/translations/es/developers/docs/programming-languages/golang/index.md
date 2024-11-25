@@ -64,6 +64,7 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps p
 - [Multi Geth](https://github.com/multi-geth/multi-geth): _Soporte para muchos tipos de redes Ethereum_
 - [Cliente Geth Light](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client): _Implementación Geth del subprotocolo Light Ethereum_
 - [Ethereum Golang SDK:](https://github.com/everFinance/goether) _Implementación simple de billetera Ethereum y utilidades en Golang_
+- [Covalent Golang SDK](https://github.com/covalenthq/covalent-api-sdk-go): _Acceso eficiente a datos de la cadena de bloques a través de Go SDK para más de 200 cadenas de bloques_
 
 ¿Buscas más recursos? Visite [ethereum.org/developers](/developers/).
 
