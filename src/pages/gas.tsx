@@ -298,8 +298,7 @@ const GasPage = () => {
                   key={benefit.emoji}
                   emoji={benefit.emoji}
                   description={benefit.description}
-                  emojiClassName="text-5xl"
-                  className="flex items-center py-2"
+                  className="flex items-center"
                 />
               </Box>
             ))}

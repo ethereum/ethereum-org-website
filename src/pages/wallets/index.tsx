@@ -363,7 +363,7 @@ const WalletsPage = () => {
                 emoji={type.emoji}
                 description={type.description}
                 className="my-0.5 w-[100%] items-center"
-                emojiClassName={"text-[2.5rem]"}
+                emojiClassName="text-[2.5rem]"
               />
             ))}
           </Box>
