@@ -12,7 +12,7 @@ const Switch = React.forwardRef<
   <SwitchPrimitives.Root
     className={cn(
       commonControlClasses,
-      "w-[26px] rounded-full bg-body-medium p-px hover:border-primary-hover hover:bg-primary-hover data-[state=unchecked]:disabled:bg-transparent data-[state=checked]:hover:not-disabled:border-primary-hover",
+      "data-[state=checked]:hover:not-disabled:border-primary-hover:bg-primary-hover w-[26px] rounded-full bg-body-medium p-px hover:border-primary-hover hover:bg-primary-hover data-[state=unchecked]:disabled:bg-transparent",
       className
     )}
     {...props}
