@@ -13,8 +13,8 @@ import BridgeWalletImage from "@/public/images/wallets/bridge.png"
 import ClearWallet from "@/public/images/wallets/clearwallet.png"
 import CoinbaseImage from "@/public/images/wallets/coinbase.png"
 import CoinWalletImage from "@/public/images/wallets/coinwallet.png"
-import CypherockX1Image from "@/public/images/wallets/cypherockx1.png"
 import CtrlWalletImage from "@/public/images/wallets/ctrl.png"
+import CypherockX1Image from "@/public/images/wallets/cypherockx1.png"
 import EnkryptImage from "@/public/images/wallets/enkrypt.png"
 import ExodusImage from "@/public/images/wallets/exodus.png"
 import FoxWalletImage from "@/public/images/wallets/foxwallet.png"
@@ -1546,7 +1546,20 @@ export const walletsData: WalletData[] = [
     twGradiantBrandColor: "from-[#ffffff]",
     url: "https://web3.bitget.com/",
     active_development_team: true,
-    languages_supported: ["en", "zh","zh-tw", "ko", "ja", "vi", "tr", "es", "id", "hi", "ar", "pt"],
+    languages_supported: [
+      "en",
+      "zh",
+      "zh-tw",
+      "ko",
+      "ja",
+      "vi",
+      "tr",
+      "es",
+      "id",
+      "hi",
+      "ar",
+      "pt",
+    ],
     twitter: "https://twitter.com/BitgetWallet",
     discord: "https://discord.gg/bitget-wallet",
     reddit: "",
@@ -2102,7 +2115,8 @@ export const walletsData: WalletData[] = [
     last_updated: "2024-08-24",
     name: "Cypherock X1",
     image: CypherockX1Image,
-    brand_color: "#e9b873",
+    twBackgroundColor: "bg-[#e9b873]",
+    twGradiantBrandColor: "from-[#e9b873]",
     url: "https://www.cypherock.com/",
     active_development_team: true,
     languages_supported: ["en", "de", "zh", "ar", "id"],
@@ -2140,8 +2154,8 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://www.cypherock.com",
     documentation: "https://github.com/Cypherock/x1_wallet_firmware",
-   },
-   {
+  },
+  {
     last_updated: "2024-10-31",
     name: "Clear Wallet",
     image: ClearWallet,
@@ -2177,7 +2191,7 @@ export const walletsData: WalletData[] = [
     layer_2: true,
     gas_fee_customization: true,
     ens_support: false,
-    erc_20_support: true,        
+    erc_20_support: true,
     buy_crypto: false,
     withdraw_crypto: false,
     multisig: false,
