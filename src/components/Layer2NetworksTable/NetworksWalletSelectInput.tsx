@@ -38,7 +38,12 @@ const NetworksWalletSelectInput = ({
         <SelectTrigger className="w-full">
           <SelectValue placeholder="Select wallet" />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent
+          position="popper"
+          collisionPadding={8}
+          className="max-h-[40vh] overflow-y-auto"
+          avoidCollisions={true}
+        >
           {walletsData.map((wallet, idx) => (
             <SelectItem key={idx} value={wallet.name}>
               {wallet.name}
