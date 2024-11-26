@@ -44,11 +44,15 @@ const NetworksWalletSelectInput = ({
           className="max-h-[40vh] overflow-y-auto"
           avoidCollisions={true}
         >
-          {walletsData.map((wallet, idx) => (
-            <SelectItem key={idx} value={wallet.name}>
-              {wallet.name}
-            </SelectItem>
-          ))}
+          {walletsData
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((wallet, idx) => {
+              return (
+                <SelectItem key={idx} value={wallet.name}>
+                  {wallet.name} ({wallet.supported_chains.length})
+                </SelectItem>
+              )
+            })}
         </SelectContent>
       </Select>
     </div>
