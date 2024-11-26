@@ -233,6 +233,7 @@ const Layer2Hub = ({
               {/* Top logo */}
               <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-30 rounded-full bg-primary">
                 <TwImage
+                  className="rounded-full"
                   src={randomL2s[0].logo}
                   alt={randomL2s[0].name}
                   width={24}
@@ -242,6 +243,7 @@ const Layer2Hub = ({
               {/* Bottom right logo */}
               <div className="absolute bottom-[17%] right-[8%] h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-30 rounded-full">
                 <TwImage
+                  className="rounded-full"
                   src={randomL2s[1].logo}
                   alt={randomL2s[1].name}
                   width={24}
@@ -251,6 +253,7 @@ const Layer2Hub = ({
               {/* Bottom left logo */}
               <div className="absolute bottom-[17%] left-[8%] h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-30 rounded-full">
                 <TwImage
+                  className="rounded-full"
                   src={randomL2s[2].logo}
                   alt={randomL2s[2].name}
                   width={24}
@@ -265,6 +268,7 @@ const Layer2Hub = ({
               {/* Top logo */}
               <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-21 rounded-full">
                 <TwImage
+                  className="rounded-full"
                   src={randomL2s[3].logo}
                   alt={randomL2s[3].name}
                   width={24}
@@ -274,6 +278,7 @@ const Layer2Hub = ({
               {/* Bottom right logo */}
               <div className="absolute bottom-[15%] right-[5%] h-6 w-6 transform animate-counter-spin-21 rounded-full">
                 <TwImage
+                  className="rounded-full"
                   src={randomL2s[4].logo}
                   alt={randomL2s[4].name}
                   width={24}
@@ -283,6 +288,7 @@ const Layer2Hub = ({
               {/* Bottom left logo */}
               <div className="absolute bottom-[15%] left-[5%] h-6 w-6 transform animate-counter-spin-21 rounded-full">
                 <TwImage
+                  className="rounded-full"
                   src={randomL2s[5].logo}
                   alt={randomL2s[5].name}
                   width={24}
@@ -297,6 +303,7 @@ const Layer2Hub = ({
               {/* Top logo */}
               <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-9 rounded-full">
                 <TwImage
+                  className="rounded-full"
                   src={randomL2s[6].logo}
                   alt={randomL2s[6].name}
                   width={24}
@@ -306,6 +313,7 @@ const Layer2Hub = ({
               {/* Bottom right logo */}
               <div className="absolute bottom-[15%] right-[5%] h-6 w-6 transform animate-counter-spin-9 rounded-full">
                 <TwImage
+                  className="rounded-full"
                   src={randomL2s[7].logo}
                   alt={randomL2s[7].name}
                   width={24}
@@ -315,6 +323,7 @@ const Layer2Hub = ({
               {/* Bottom left logo */}
               <div className="absolute bottom-[15%] left-[5%] h-6 w-6 transform animate-counter-spin-9 rounded-full">
                 <TwImage
+                  className="rounded-full"
                   src={randomL2s[8].logo}
                   alt={randomL2s[8].name}
                   width={24}
