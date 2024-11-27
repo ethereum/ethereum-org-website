@@ -209,7 +209,7 @@ const NetworkSubComponent = ({ network }) => {
         </div>
         <div className="flex flex-col gap-1">
           <p className="text-xs text-body-medium">Actions</p>
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-col gap-4 sm:flex-row">
             <ButtonLink href={network.bridgeLink}>
               Bridge to {network.name}
             </ButtonLink>
