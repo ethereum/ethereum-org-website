@@ -1,21 +1,13 @@
-import { Center, Flex } from "@chakra-ui/react"
-
 import { ButtonLink } from "@/components/Buttons"
-import { Image } from "@/components/Image"
+import { TwImage } from "@/components/Image"
+import { Center, Flex } from "@/components/ui/flex"
 
 import WalkingImage from "@/public/images/translatathon/walking.png"
 
 export const TranslationHubCallout = ({ children }) => {
   return (
-    <Flex
-      w="full"
-      align="stretch"
-      bg="background.highlight"
-      direction={{ base: "column", lg: "row" }}
-      p={8}
-      gap={8}
-    >
-      <Flex w="full" direction="column">
+    <Flex className="align-stretch w-full flex-col gap-8 bg-background-highlight p-8 lg:flex-row">
+      <Flex className="w-full flex-col">
         {children}
         <Flex>
           <ButtonLink href="/contributing/translation-program/translatathon/translatathon-hubs">
@@ -23,11 +15,11 @@ export const TranslationHubCallout = ({ children }) => {
           </ButtonLink>
         </Flex>
       </Flex>
-      <Center w="full">
-        <Image
+      <Center className="w-full">
+        <TwImage
           src={WalkingImage}
           alt=""
-          maxW={265}
+          width={265}
           style={{ objectFit: "contain" }}
         />
       </Center>
