@@ -247,10 +247,26 @@ export const useNav = () => {
           ],
         },
         {
-          label: t("layer-2"),
-          description: t("nav-layer-2-description"),
+          label: t("nav-ethereum-networks"),
+          description: t("nav-ethereum-networks-description"),
           icon: BsLayers,
-          href: "/layer-2/",
+          items: [
+            {
+              label: t("nav-networks-home-label"),
+              description: t("nav-networks-home-description"),
+              href: "/layer-2/",
+            },
+            {
+              label: t("nav-networks-learn-label"),
+              description: t("nav-networks-learn-description"),
+              href: "/layer-2/learn/",
+            },
+            {
+              label: t("nav-networks-find-label"),
+              description: t("nav-networks-find-description"),
+              href: "/layer-2/networks/",
+            },
+          ],
         },
       ],
     },
