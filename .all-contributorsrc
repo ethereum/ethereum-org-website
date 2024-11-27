@@ -12625,6 +12625,24 @@
       "contributions": [
         "design"
       ]
+    },
+    {
+      "login": "jkylling",
+      "name": "Jonas Irgens Kylling",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6781076?v=4",
+      "profile": "https://github.com/jkylling",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "CremaFR",
+      "name": "Thomas Brillard",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5360522?v=4",
+      "profile": "https://github.com/CremaFR",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

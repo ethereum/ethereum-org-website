@@ -93,7 +93,7 @@ Lílo ọ̀pọ̀lọpọ̀ àwọn iṣẹ́ orí ayélujára nílò àwọn è
 
 ### 1. Bọ́tìnì cryptography gbangba {#public-key-cryptography}
 
-Bọ́tìnì cryptography gbangba jẹ́ ìgbésẹ̀ ààbò àlàyé tí ó ṣe àgbéjáde [bọ́tìnì gbangba](/glossary/#public-key) àti [ bọ́tìnì ìkọ̀kọ̀](/glossary/#private-key) fún ẹ̀dá kan. Bọ́tìnì gbangba [ cryptography](/glossary/#cryptography) ni a nlo nínú àwọn nẹtiwọọki blockchain láti fi ìdánilójú ìdánimọ̀ àwọn olùmúlò hàn àti láti fi ẹ̀rí níní àwọn ohun-ìní oní-nóḿbà hàn.
+Bọ́tìnì cryptography gbangba jẹ́ ìgbésẹ̀ ààbò àlàyé tí ó ṣe àgbéjáde [bọ́tìnì gbangba](/glossary/#public-key) àti [bọ́tìnì ìkọ̀kọ̀](/glossary/#private-key) fún ẹ̀dá kan. Bọ́tìnì gbangba [cryptography](/glossary/#cryptography) ni a nlo nínú àwọn nẹtiwọọki blockchain láti fi ìdánilójú ìdánimọ̀ àwọn olùmúlò hàn àti láti fi ẹ̀rí níní àwọn ohun-ìní oní-nóḿbà hàn.
 
 Díẹ̀ nínú àwọn ìdánimọ̀ tí kò ní àkóso, gẹ́gẹ́bí àkọọ́lẹ̀ Ẹ̀tẹ́ríọ̀mù, ní àwọn bọ́tìnì gbangba àti ìkọ̀kọ̀. Bọ́tìnì gbangba ń ṣe ìdánimọ̀ olùdarí, nígbà tí àwọn àkọọ́lẹ̀ àdáni lè fọwọ́ sí àti tú àwọn ìfiránsẹ́ fún àkọọ́lẹ̀ yìí. Bọ́tìnì cryptography gbangba ṣe ẹ̀rí tí ó nílò láti ṣe ìjẹ́ẹ̀rísí àwọn àjọ àti dènà afinipeni lọ́nà èrú àti lílo ìdánimọ̀ ayédèrú, lílo [ìbuwọ́lù cryptographic](https://andersbrownworth.com/blockchain/public-private-keys/) láti ṣe ìjẹ́ẹ̀rísí àwọn ẹ̀tọ́.
 
