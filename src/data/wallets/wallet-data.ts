@@ -716,7 +716,7 @@ export const walletsData: WalletData[] = [
     name: "FoxWallet",
     image: FoxWalletImage,
     twBackgroundColor: "bg-[#000000]",
-    twGradiantBrandColor: "from-[#ffffff]",
+    twGradiantBrandColor: "from-[#000000]",
     url: "https://foxwallet.com/en",
     active_development_team: true,
     languages_supported: [
