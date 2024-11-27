@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge"
 
 import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"
 
-import { layer2Data } from "@/data/networks/networks"
+import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
 
 interface WalletInfoProps {
   wallet: Wallet
@@ -55,7 +55,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
               )}
               <div className="ml-2 mt-1 flex flex-row">
                 {wallet.supported_chains.map((chain) => {
-                  const chainData = layer2Data.find(
+                  const chainData = [ethereumNetworkData, ...layer2Data].find(
                     (l2) => l2.chain_name === chain
                   )
                   return (
@@ -100,7 +100,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
             </div>
             <div className="ml-2 flex flex-row">
               {wallet.supported_chains.map((chain) => {
-                const chainData = layer2Data.find(
+                const chainData = [ethereumNetworkData, ...layer2Data].find(
                   (l2) => l2.chain_name === chain
                 )
                 return (
