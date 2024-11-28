@@ -48,7 +48,11 @@ function tryMatchEvent(
   imported: CommunityConference,
   local: CommunityConference
 ) {
-  if (imported.title.toLocaleLowerCase() === local.title.toLocaleLowerCase())
+  if (
+    imported.title.toLocaleLowerCase() === local.title.toLocaleLowerCase() &&
+    local.startDate === imported.startDate &&
+    local.endDate === imported.endDate
+  )
     return true
 
   if (
@@ -56,7 +60,9 @@ function tryMatchEvent(
     URL.canParse(local.href) &&
     new URL(imported.href).hostname.replace("www.", "") ===
       new URL(local.href).hostname.replace("www.", "") &&
-    new URL(imported.href).pathname === new URL(local.href).pathname
+    new URL(imported.href).pathname === new URL(local.href).pathname &&
+    local.startDate === imported.startDate &&
+    local.endDate === imported.endDate
   ) {
     return true
   }
