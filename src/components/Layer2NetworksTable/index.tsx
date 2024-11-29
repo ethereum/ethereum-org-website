@@ -4,6 +4,7 @@ import { ExtendedRollup, FilterOption, Lang } from "@/lib/types"
 
 import { useNetworkColumns } from "@/components/Layer2NetworksTable/hooks/useNetworkColumns"
 import { useNetworkFilters } from "@/components/Layer2NetworksTable/hooks/useNetworkFilters"
+import NetworksNoResults from "@/components/Layer2NetworksTable/NetworksNoResults"
 import NetworkSubComponent from "@/components/Layer2NetworksTable/NetworksSubComponent"
 import ProductTable from "@/components/ProductTable"
 
@@ -63,7 +64,9 @@ const Layer2NetworksTable = ({
       subComponent={(network) => {
         return <NetworkSubComponent network={network} />
       }}
-      noResultsComponent={() => <></>}
+      noResultsComponent={() => (
+        <NetworksNoResults resetFilters={resetFilters} />
+      )}
       mobileFiltersLabel={"See networks"}
     />
   )
