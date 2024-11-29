@@ -1,6 +1,6 @@
 "use client"
 
-import { Bar, BarChart, CartesianGrid, LabelList, YAxis } from "recharts"
+import { Bar, BarChart, LabelList, YAxis } from "recharts"
 
 import { ChartConfig, ChartContainer, ChartLegend } from "@/components/ui/chart"
 
@@ -57,9 +57,15 @@ const NetworkUsageChart = ({ usageData }) => {
   return (
     <ChartContainer config={chartConfig} className="max-h-[180px] w-full">
       <BarChart accessibilityLayer data={chartData} barGap={"10%"}>
-        <CartesianGrid vertical={false} />
-        <YAxis domain={[0, 100]} hide />
-        <Bar dataKey="nft" radius={4} fill={chartConfig.nft.color} barSize={28}>
+        <YAxis
+          domain={[0, (dataMax) => dataMax + 10]}
+          axisLine={false}
+          tickLine={false}
+          fontSize={12}
+          tickFormatter={(value) => `${value}%`}
+          hide
+        />
+        <Bar dataKey="nft" radius={4} fill={chartConfig.nft.color} barSize={18}>
           <LabelList
             position="top"
             offset={12}
@@ -71,7 +77,7 @@ const NetworkUsageChart = ({ usageData }) => {
           dataKey="defi"
           radius={4}
           fill={chartConfig.defi.color}
-          barSize={28}
+          barSize={18}
         >
           <LabelList
             position="top"
@@ -84,7 +90,7 @@ const NetworkUsageChart = ({ usageData }) => {
           dataKey="social"
           radius={4}
           fill={chartConfig.social.color}
-          barSize={28}
+          barSize={18}
         >
           <LabelList
             position="top"
@@ -97,7 +103,7 @@ const NetworkUsageChart = ({ usageData }) => {
           dataKey="token_transfers"
           radius={4}
           fill={chartConfig.token_transfers.color}
-          barSize={28}
+          barSize={18}
         >
           <LabelList
             position="top"
@@ -110,7 +116,7 @@ const NetworkUsageChart = ({ usageData }) => {
           dataKey="unlabeled"
           radius={4}
           fill={chartConfig.unlabeled.color}
-          barSize={28}
+          barSize={18}
         >
           <LabelList
             position="top"
