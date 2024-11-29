@@ -229,7 +229,13 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
         <TableCell
           className={`hidden w-12 lg:table-cell ${row.original.cantExpand ? "border-b-4" : ""}`}
         >
-          {row.getIsExpanded() ? <IoChevronUpSharp /> : <IoChevronDownSharp />}
+          <button className="text-primary">
+            {row.getIsExpanded() ? (
+              <IoChevronUpSharp size={24} />
+            ) : (
+              <IoChevronDownSharp size={24} />
+            )}
+          </button>
         </TableCell>
       )
     },
