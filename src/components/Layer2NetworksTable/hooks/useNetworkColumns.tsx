@@ -8,9 +8,9 @@ import { ExtendedRollup, Lang } from "@/lib/types"
 
 import { TableMeta } from "@/components/DataTable"
 import { TwImage } from "@/components/Image"
+import NetworkMaturityTooltip from "@/components/Layer2NetworksTable/NetworkMaturityTooltip"
 import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
-import { Badge } from "@/components/ui/badge"
 import { TableCell, TableHead } from "@/components/ui/Table"
 
 export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
@@ -42,9 +42,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
             </div>
             <div className="flex flex-row gap-4 lg:hidden">
               <div className="w-[24px]" />
-              <Badge variant={row.original.networkMaturity}>
-                {row.original.networkMaturity.toUpperCase()}
-              </Badge>
+              <NetworkMaturityTooltip maturity={row.original.networkMaturity} />
             </div>
             <div className="flex flex-row gap-4 lg:hidden">
               <div className="w-[24px]" />
@@ -207,9 +205,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
         <TableCell
           className={`hidden w-[145px] px-0 text-center lg:table-cell ${row.original.cantExpand ? "border-b-4" : ""}`}
         >
-          <Badge variant={row.original.networkMaturity}>
-            {row.original.networkMaturity.toUpperCase()}
-          </Badge>
+          <NetworkMaturityTooltip maturity={row.original.networkMaturity} />
         </TableCell>
       )
     },

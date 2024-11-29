@@ -38,7 +38,7 @@ export const ethereumNetworkData = {
   chain_name: "Ethereum Mainnet",
   growthepieID: "ethereum",
   logo: EthereumLogo,
-  networkMaturity: "N/A",
+  networkMaturity: "robust",
   cantExpand: true,
 }
 

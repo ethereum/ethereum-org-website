@@ -635,7 +635,7 @@ export type ChainName = (typeof chains)[number]["name"]
 export type NonEVMChainName = "Starknet"
 
 export type ExtendedRollup = Rollup & {
-  networkMaturity: "robust" | "maturing" | "developing" | "emerging"
+  networkMaturity: MaturityLevel
   txCosts: number
   tvl: number
   walletsSupported: string[]
@@ -962,3 +962,10 @@ export type EventCardProps = {
 }
 
 export type BreakpointKey = keyof typeof screens
+
+export type MaturityLevel =
+  | "N/A"
+  | "robust"
+  | "maturing"
+  | "developing"
+  | "emerging"
