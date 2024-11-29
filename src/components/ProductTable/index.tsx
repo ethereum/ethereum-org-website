@@ -223,7 +223,6 @@ const ProductTable = <T,>({
 
   // Count active filters
   const activeFiltersCount = useMemo(() => {
-    console.log("filters", filters)
     return filters.reduce((count, filter) => {
       return (
         count +
