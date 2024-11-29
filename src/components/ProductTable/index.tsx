@@ -223,6 +223,7 @@ const ProductTable = <T,>({
 
   // Count active filters
   const activeFiltersCount = useMemo(() => {
+    console.log("filters", filters)
     return filters.reduce((count, filter) => {
       return (
         count +
@@ -235,6 +236,9 @@ const ProductTable = <T,>({
                   typeof option.inputState === "boolean" && option.inputState
               ).length
             )
+          }
+          if (Array.isArray(item.inputState) && item.inputState.length > 0) {
+            return itemCount + 1
           }
           return (
             itemCount +
