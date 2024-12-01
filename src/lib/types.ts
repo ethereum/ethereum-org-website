@@ -20,6 +20,7 @@ import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import type { SimulatorNav } from "@/components/Simulator/interfaces"
 
+import chains from "@/data/chains"
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
@@ -162,6 +163,12 @@ export type LoadingState<T> =
 /**
  * Quiz data types
  */
+export type QuestionTemplate = {
+  totalAnswers: 2 | 3 | 4
+  correctAnswer: 1 | 2 | 3 | 4
+}
+export type QuestionBankConfig = Record<string, QuestionTemplate[]>
+
 export type Answer = {
   id: string
   label: TranslationKey
@@ -579,8 +586,50 @@ export type CommunityConference = {
   imageUrl: string
 }
 
+// Chains
+export type ChainIdNetworkResponse = {
+  name: string
+  chain: string
+  title?: string
+  icon?: string
+  rpc: string[]
+  features?: { name: string }[]
+  faucets?: string[]
+  nativeCurrency: {
+    name: string
+    symbol: string
+    decimals: number
+  }
+  infoURL: string
+  shortName: string
+  chainId: number
+  networkId: number
+  redFlags?: string[]
+  slip44?: number
+  ens?: { registry: string }
+  explorers?: {
+    name: string
+    url: string
+    icon?: string
+    standard: string
+  }[]
+  status?: "deprecated" | "active" | "incubating"
+  parent?: {
+    type: "L2" | "shard"
+    chain: string
+    bridges?: { url: string }[]
+  }
+}
+
+export type Chain = Pick<
+  ChainIdNetworkResponse,
+  "name" | "infoURL" | "chainId" | "nativeCurrency" | "chain"
+>
+
+export type ChainName = (typeof chains)[number]["name"]
+
 // Wallets
-export interface WalletData {
+export type WalletData = {
   last_updated: string
   name: string
   image: StaticImageData
@@ -614,6 +663,7 @@ export interface WalletData {
   swaps: boolean
   multichain?: boolean
   layer_2: boolean
+  supported_chains?: ChainName[]
   gas_fee_customization: boolean
   ens_support: boolean
   erc_20_support: boolean

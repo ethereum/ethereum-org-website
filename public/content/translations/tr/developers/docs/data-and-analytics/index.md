@@ -34,7 +34,7 @@ Geliştiriciler, [GraphQL](https://graphql.org/)'u kullanarak, alt grafikler ola
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/), blok zincir verilerini ilişkisel veritabanı (PostgreSQL ve DatabricksSQL) tablolarına önceden işler, kullanıcıların SQL kullanarak blok zincir verilerini sorgulaması ve sorgu sonuçlarına dayalı panolar oluşturmasına olanak tanır. Zincir üzerindeki veriler 4 ham tablo halinde düzenlenmektedir: `bloklar`, `işlemler`, (olay/faaliyet) `günlükler` ve (çağrı) `izler`. Popüler sözleşmeler ve protokoller çözümlenmiş yani deşifre edilmiş ve her birinin kendi olay ve çağrı tablo seti bulunmaktadır. Bu olay ve çağrı tabloları daha fazla işlenmiş ve protokol türlerine göre soyutlama tabloları olarak organize edilmiştir; örneğin, dex, borç verme, sabit paralar vb.
+[Dune Analytics](https://dune.com/), blok zincir verilerini ilişkisel veritabanı (DuneSQL) tablolarına önceden işler, kullanıcıların SQL kullanarak blok zincir verilerini sorgulaması ve sorgu sonuçlarına dayalı panolar oluşturmasına olanak tanır. Zincir üzerindeki veriler 4 ham tablo halinde düzenlenmektedir: `bloklar`, `işlemler`, (olay/faaliyet) `günlükler` ve (çağrı) `izler`. Popüler sözleşmeler ve protokoller çözümlenmiş yani deşifre edilmiş ve her birinin kendi olay ve çağrı tablo seti bulunmaktadır. Bu olay ve çağrı tabloları daha fazla işlenmiş ve protokol türlerine göre soyutlama tabloları olarak organize edilmiştir; örneğin, dex, borç verme, sabit paralar vb.
 
 ## SubQuery Ağı {#subquery-network}
 

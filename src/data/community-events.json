@@ -178,7 +178,8 @@
     "location": "Barcelona, Spain",
     "description": "A chain-agnostic conference for the grassroots community. An event by Web3 Family, running in-person meetups and conference in Barcelona.",
     "startDate": "2024-04-17",
-    "endDate": "2024-04-19"
+    "endDate": "2024-04-19",
+    "imageUrl": "https://web3fc.xyz/wp-content/uploads/2024/04/Screenshot-2024-04-08-at-12.18.09.png"
   },
   {
     "title": "Road to DEVCON: Zero-Knowledge Proofs Unveiled",
@@ -254,7 +255,8 @@
     "endDate": "2024-05-23",
     "href": "https://www.dappcon.io/",
     "location": "Berlin, Germany",
-    "description": "A 3-day Developer Conference for Ethereum Infrastructure and dApps that would bring together over 900 builders together, hosted by Gnosis since 2018."
+    "description": "A 3-day Developer Conference for Ethereum Infrastructure and dApps that would bring together over 900 builders together, hosted by Gnosis since 2018.",
+    "imageUrl": "https://framerusercontent.com/assets/EwcloiP4dkmBNB8xV0UhgCy5jE.png"
   },
   {
     "title": "ETHBerlin04",
@@ -262,7 +264,8 @@
     "location": "Berlin, Germany",
     "description": "ETHBerlin is a hackathon, a cultural festival, an educational event, a platform for hacktivism, and a community initiative to push the decentralized ecosystem forward.",
     "startDate": "2024-05-24",
-    "endDate": "2024-05-26"
+    "endDate": "2024-05-26",
+    "imageUrl": "https://ethberlin.org/card.png?cache-break"
   },
   {
     "title": "BlockSplit",
@@ -655,8 +658,7 @@
     "location": "Riyadh, Saudi Arabia",
     "description": "ETH Riyadh 2024 unites Middle Eastern developers and blockchain enthusiasts to explore and advance Ethereum technology. Join us for an exciting event that fosters collaboration and innovation in the blockchain ecosystem.",
     "startDate": "2024-12-1",
-    "endDate": "2024-12-3",
-    "imageUrl": "https://ethriyadh.com/banner.jpg"
+    "endDate": "2024-12-3"
   },
   {
     "title": "ETH Pura Vida 2024",
@@ -675,5 +677,365 @@
     "startDate": "2024-12-6",
     "endDate": "2024-12-8",
     "imageUrl": "https://ethindia.co/assets/images/og-image.png"
+  },
+  {
+    "title": "Pragma Denver",
+    "startDate": "2024-02-28",
+    "endDate": "2024-02-28",
+    "href": "https://ethglobal.com/events/pragma-denver",
+    "location": "Denver, CO, USA",
+    "description": "Bringing developers onchain to build the future of the internet.",
+    "imageUrl": "https://ethglobal.b-cdn.net/events/pragma-denver/images/hegtr/default.jpg"
+  },
+  {
+    "title": "ETHVietnam",
+    "startDate": "2024-03-13",
+    "endDate": "2024-03-17",
+    "href": "https://eth-vietnam.com",
+    "location": "Hanoi, VNM",
+    "description": "",
+    "imageUrl": "http://static1.squarespace.com/static/629856e64f44db3799f8e3f6/t/65c04e1059e3477a33a1c105/1707101732532/COVER.png?format=1500w"
+  },
+  {
+    "title": "Pragma London",
+    "startDate": "2024-03-14",
+    "endDate": "2024-03-14",
+    "href": "https://ethglobal.com/events/pragma-london",
+    "location": "London, UK",
+    "description": "Bringing developers onchain to build the future of the internet.",
+    "imageUrl": "https://ethglobal.b-cdn.net/events/pragma-london/images/o17g6/default.jpg"
+  },
+  {
+    "title": "ETHGlobal London",
+    "startDate": "2024-03-15",
+    "endDate": "2024-03-17",
+    "href": "https://ethglobal.com/events/london2024",
+    "location": "London, UK",
+    "description": "Bringing developers onchain to build the future of the internet.",
+    "imageUrl": "https://ethglobal.com/og.png"
+  },
+  {
+    "title": "Pragma Sydney",
+    "startDate": "2024-05-02",
+    "endDate": "2024-05-02",
+    "href": "https://ethglobal.com/events/pragma-sydney",
+    "location": "Sydney, AUS",
+    "description": "Bringing developers onchain to build the future of the internet.",
+    "imageUrl": "https://ethglobal.b-cdn.net/events/pragma-sydney/images/vrahg/default.jpg"
+  },
+  {
+    "title": "ETHGlobal Sydney",
+    "startDate": "2024-05-03",
+    "endDate": "2024-05-05",
+    "href": "https://ethglobal.com/events/sydney",
+    "location": "Sydney, AUS",
+    "description": "Bringing developers onchain to build the future of the internet.",
+    "imageUrl": "https://ethglobal.b-cdn.net/events/sydney/images/rnkir/default.jpg"
+  },
+  {
+    "title": "Ethna",
+    "startDate": "2024-05-18",
+    "endDate": "2024-05-18",
+    "href": "",
+    "location": "Catania, ITA",
+    "description": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "EthWalk: Enroute to Ethereum Blockchain",
+    "startDate": "2024-05-24",
+    "endDate": "2024-05-26",
+    "href": "https://admission.kba.ai/devcon/",
+    "location": "India",
+    "description": "Kerala Blockchain Academy – Admin Dashboard Template ",
+    "imageUrl": ""
+  },
+  {
+    "title": "Ethereum Sensemaking Series",
+    "startDate": "2024-05-28",
+    "endDate": "2024-05-30",
+    "href": "https://lu.ma/pagoda",
+    "location": "Seoul, KR",
+    "description": "View and subscribe to events from Pagoda on Luma. An assembly of Asian visionaries within the Ethereum community dedicated to enhance regional contributions and foster global collaboration",
+    "imageUrl": "https://images.lumacdn.com/calendar-cover-images/1g/4dc8e649-ec5b-4114-bd77-5f276e30c51a"
+  },
+  {
+    "title": "ProtoLayers Conference",
+    "startDate": "2024-05-30",
+    "endDate": "2024-05-30",
+    "href": "https://lu.ma/protolayersprague",
+    "location": "Prague, CZ",
+    "description": "Join us for a  technical conference dedicated to exploring the edges of modular blockchain technology. This one-day event, held on May 30, 2024 brings together…",
+    "imageUrl": "https://social-images.lu.ma/cdn-cgi/image/format=auto,fit=cover,dpr=1,background=white,quality=75,width=800,height=419/api/event-one?calendar_avatar=https%3A%2F%2Fimages.lumacdn.com%2Fcalendars%2Fgb%2F04e6c14a-bef9-4690-a55e-58dbab9f8aca&amp;calendar_name=ProtoLayers%20Builder%20Conference&amp;color0=%23ffffff&amp;color1=%23010101&amp;color2=%238b8a8a&amp;color3=%23ff3503&amp;host_avatar=https%3A%2F%2Fimages.lumacdn.com%2Favatars%2Fwx%2Fd64d0bac-aec7-4589-840e-4d4111ce4988&amp;host_name=ProtoLayers&amp;img=https%3A%2F%2Fimages.lumacdn.com%2Fevent-covers%2Fr7%2Fa289e9d1-9744-4ccc-a812-e6ac947d09cf&amp;name=ProtoLayers%20Conference"
+  },
+  {
+    "title": "ZuBerlin",
+    "startDate": "2024-06-08",
+    "endDate": "2024-06-22",
+    "href": "https://zuberlin.city",
+    "location": "Berlin, DE",
+    "description": "Join our two-week residency in Berlin on June 8 to 22 right after ETHPrague and Berlin Blockchain Week connect with exceptional humans",
+    "imageUrl": "https://d1hcpjosrtcu4.cloudfront.net/Hero.jpg"
+  },
+  {
+    "title": "Web3 Saigon",
+    "startDate": "2024-06-09",
+    "endDate": "2024-06-09",
+    "href": "https://lu.ma/web3-saigon-2024",
+    "location": "Ho Chi Minh City, VNM",
+    "description": "",
+    "imageUrl": "https://social-images.lu.ma/cdn-cgi/image/format=auto,fit=cover,dpr=1,background=white,quality=75,width=800,height=419/api/event-one?calendar_avatar=https%3A%2F%2Fimages.lumacdn.com%2Fcalendars%2F43%2Fc7c77918-f402-420e-b3ca-8eab05e7085d&amp;calendar_name=Web3%20Saigon&amp;color0=%23000001&amp;color1=%23fdfdfd&amp;color2=%23a5a5a6&amp;color3=%234f4f50&amp;host_avatar=https%3A%2F%2Fimages.lumacdn.com%2Favatars%2F69%2Fcaafe58c-05e3-427c-bd76-dffc4b259183&amp;host_name=Web3%20Saigon&amp;img=https%3A%2F%2Fimages.lumacdn.com%2Fevent-covers%2Fvo%2F8f688632-3e5d-4f70-babd-2b4be57f0d59&amp;name=Web3%20Saigon%20Meetup%20-%20Road%20to%20Devcon"
+  },
+  {
+    "title": "ETHKyiv",
+    "startDate": "2024-06-21",
+    "endDate": "2024-06-23",
+    "href": "https://ethkyiv.org",
+    "location": "Kyiv, UKR",
+    "description": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "EthCC",
+    "startDate": "2024-07-08",
+    "endDate": "2024-07-11",
+    "href": "https://ethcc.io",
+    "location": "Brussels, BEL",
+    "description": "Ethereum Community Conference &amp; Workshops: June 30th to July 3rd, 2025 in Cannes",
+    "imageUrl": "https://ethcc.io/ethcc7.jpg"
+  },
+  {
+    "title": "Pragma Brussels",
+    "startDate": "2024-07-11",
+    "endDate": "2024-07-11",
+    "href": "https://ethglobal.com/events/pragma-brussels",
+    "location": "Brussels, BEL",
+    "description": "Bringing developers onchain to build the future of the internet.",
+    "imageUrl": "https://ethglobal.com/og.png"
+  },
+  {
+    "title": "ETHGlobal Brussels",
+    "startDate": "2024-07-12",
+    "endDate": "2024-07-14",
+    "href": "https://ethglobal.com/events/brussels",
+    "location": "Brussels, BEL",
+    "description": "Bringing developers onchain to build the future of the internet.",
+    "imageUrl": "https://ethglobal.b-cdn.net/events/brussels/images/ppuzr/default.jpg"
+  },
+  {
+    "title": "ETHBolivia Buildathon",
+    "startDate": "2024-08-09",
+    "endDate": "2024-08-11",
+    "href": "https://fabiola29298.github.io/ethBoliviaWebsite/",
+    "location": "Santa Cruz de la Sierra, BOL",
+    "description": "index,follow",
+    "imageUrl": ""
+  },
+  {
+    "title": "Ethereum Uruguay",
+    "startDate": "2024-08-15",
+    "endDate": "2024-08-17",
+    "href": "https://EthereumUruguay.org",
+    "location": "Montevideo, URY",
+    "description": "Ethereum Uruguay",
+    "imageUrl": ""
+  },
+  {
+    "title": "ethPondy",
+    "startDate": "2024-08-16",
+    "endDate": "2024-08-18",
+    "href": "https://ethpondy.xyz",
+    "location": "Pondicherry, IND",
+    "description": "Shaping the future of Blockchain",
+    "imageUrl": ""
+  },
+  {
+    "title": "ETH Cape Town",
+    "startDate": "2024-09-20",
+    "endDate": "2024-09-22",
+    "href": "https://ethcapetown.com",
+    "location": "Cape Town, SA",
+    "description": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "ETHGlobal Singapore",
+    "startDate": "2024-09-20",
+    "endDate": "2024-09-22",
+    "href": "https://ethglobal.com/events/singapore2024",
+    "location": "Singapore, SGP",
+    "description": "Bringing developers onchain to build the future of the internet.",
+    "imageUrl": "https://ethglobal.b-cdn.net/events/singapore2024/images/kc722/default.jpg"
+  },
+  {
+    "title": "ETHMilan",
+    "startDate": "2024-09-26",
+    "endDate": "2024-09-27",
+    "href": "https://ethmilan.xyz",
+    "location": "Milan, ITA",
+    "description": "ETHMilan 2024 – Italy&#x27;s Largest ETH &amp; Web3 Conference",
+    "imageUrl": ""
+  },
+  {
+    "title": "ETHKL2024",
+    "startDate": "2024-10-04",
+    "endDate": "2024-10-10",
+    "href": "https://2024.ethkl.org",
+    "location": "Kuala Lumpur, MY",
+    "description": "The largest blockchain conference and hackathon in Malaysia.",
+    "imageUrl": "https://framerusercontent.com/images/XiF4efXc2UzYVEdJlKmuywNnEE.png"
+  },
+  {
+    "title": "ETH Lisbon",
+    "startDate": "2024-10-17",
+    "endDate": "2024-10-19",
+    "href": "https://ethlisbon.org",
+    "location": "Lisbon, POR",
+    "description": "ETHLisbon brings the top builders and industry leaders to Portugal to tackle real-world challenges around themes like privacy, identity, and more.",
+    "imageUrl": "https://framerusercontent.com/assets/k3t9FtPBibQBemLXMzCGQo0.gif"
+  },
+  {
+    "title": "DeFi Security Summit",
+    "startDate": "2024-11-07",
+    "endDate": "2024-11-09",
+    "href": "https://defisecuritysummit.org/",
+    "location": "Bangkok, THA",
+    "description": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "ETHIndia 2024",
+    "startDate": "2024-12-06",
+    "endDate": "2024-12-08",
+    "href": "https://ethindia.co",
+    "location": "India",
+    "description": "Play the Infinite Game of Ethereum",
+    "imageUrl": "https://assets.devfolio.co/hackathons/d64ead180bfc42bda8cee408f6d39b80/assets/cover/316.png"
+  },
+  {
+    "title": "EthereumZuri.ch",
+    "startDate": "2025-01-29",
+    "endDate": "2025-02-02",
+    "href": "https://ethereumzuri.ch/",
+    "location": "Zurich, CHE",
+    "description": "",
+    "imageUrl": "https://ethereumzuri.ch/ez-soc.jpg"
+  },
+  {
+    "title": "ETHDenver",
+    "startDate": "2025-02-23",
+    "endDate": "2025-03-02",
+    "href": "https://www.ethdenver.com/",
+    "location": "Denver, USA",
+    "description": "ETHDenver 2025  #BUIDLathon + Community Innovation Festival",
+    "imageUrl": ""
+  },
+  {
+    "title": "ETH Bucharest",
+    "startDate": "2025-04-02",
+    "endDate": "2025-04-05",
+    "href": "https://www.ethbucharest.xyz/",
+    "location": "Bucharest, Romania",
+    "description": "Join ETH Bucharest in 25 - 27 March 2025 for a pivotal blockchain event in Eastern Europe. Engage in workshops, networking, and a hackathon to drive Ethereum innovation and adoption.",
+    "imageUrl": ""
+  },
+  {
+    "title": "ETH Seoul",
+    "startDate": "2025-04-06",
+    "endDate": "2025-04-13",
+    "href": "https://ethseoul.org",
+    "location": "Seoul",
+    "description": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "ETHDam",
+    "startDate": "2025-05-09",
+    "endDate": "2025-05-11",
+    "href": "https://www.ethdam.com",
+    "location": "Amsterdam, NL",
+    "description": "",
+    "imageUrl": "https://static.wixstatic.com/media/9830df_ceadad27c7ad469e968170753dccc507~mv2.png/v1/fill/w_2500,h_1762,al_c/9830df_ceadad27c7ad469e968170753dccc507~mv2.png"
+  },
+  {
+    "title": "ETHDublin 2025",
+    "startDate": "2025-05-23",
+    "endDate": "2025-05-25",
+    "href": "https://lu.ma/hkl5jcre",
+    "location": "Dublin, IRE",
+    "description": "",
+    "imageUrl": "https://social-images.lu.ma/cdn-cgi/image/format=auto,fit=cover,dpr=1,background=white,quality=75,width=800,height=419/api/event-one?calendar_avatar=https%3A%2F%2Fimages.lumacdn.com%2Fcalendars%2Fkx%2F61284be8-5aa6-4d0a-b57d-4df3ef8c59ea&amp;calendar_name=ETH%20Ireland&amp;color0=%23ffffff&amp;color1=%230b693b&amp;color2=%237bad94&amp;color3=%23ee9e61&amp;host_avatar=https%3A%2F%2Fimages.lumacdn.com%2Favatars%2Fsl%2Fdec7e3f9-9b6c-4b7c-a455-a96fc844eeb4&amp;host_name=Caol%C3%A1n%20Walsh&amp;img=https%3A%2F%2Fimages.lumacdn.com%2Fevent-covers%2F7x%2F6df8a419-4fa2-4ee7-81cb-76295cb6fa0c&amp;name=ETHDublin%202025"
+  },
+  {
+    "title": "ETH Belgrade",
+    "startDate": "2025-05-30",
+    "endDate": "2025-06-04",
+    "href": "https://ethbelgrade.rs/",
+    "location": "Belgrade, SRB",
+    "description": "The most welcoming ETH event in the heart of the Balkans. Part of Belgrade Blockchain Week. 30 May - 4 June 2025 - see you in Belgrade!",
+    "imageUrl": "https://ethbelgrade.rs/eth-belgrade-og-2025.jpg"
+  },
+  {
+    "title": "ETHPrague",
+    "startDate": "2025-06-06",
+    "endDate": "2025-06-08",
+    "href": "https://ethprague.com/",
+    "location": "Prague, CZE",
+    "description": "ETHPrague",
+    "imageUrl": "https://ethprague.com/ETHPrague_soc_share-2025.png"
+  },
+  {
+    "title": "ETHKyiv",
+    "startDate": "2025-06-13",
+    "endDate": "2025-06-15",
+    "href": "https://ethkyiv.com",
+    "location": "Kyiv, Ukraine",
+    "description": "Welcome to the 1st edition of ETHKyiv, hosted this June 21-23 and bringing together participants from diverse backgrounds, including developers, designers, entrepreneurs, and blockchain enthusiasts!",
+    "imageUrl": ""
+  },
+  {
+    "title": "DappCon",
+    "startDate": "2025-06-16",
+    "endDate": "2025-06-18",
+    "href": "https://dappcon.io",
+    "location": "Berlin",
+    "description": "The leading summit for applications &amp; infrastructure for an open internet",
+    "imageUrl": "https://framerusercontent.com/assets/EwcloiP4dkmBNB8xV0UhgCy5jE.png"
+  },
+  {
+    "title": "ETHCluj",
+    "startDate": "2025-06-19",
+    "endDate": "2025-06-21",
+    "href": "https://www.ethcluj.org/",
+    "location": "Cluj-Napoca, ROU",
+    "description": "ETHCluj 2025 - Ethereum for everyone conference ",
+    "imageUrl": "https://framerusercontent.com/images/rHUxnoTTgyhaJqvDh9ZbOPH2Dd0.jpg"
+  },
+  {
+    "title": "EthCC",
+    "startDate": "2025-06-30",
+    "endDate": "2025-07-03",
+    "href": "https://ethcc.io",
+    "location": "Cannes, FR",
+    "description": "Ethereum Community Conference &amp; Workshops: June 30th to July 3rd, 2025 in Cannes",
+    "imageUrl": "https://ethcc.io/ethcc7.jpg"
+  },
+  {
+    "title": "ETHSofia",
+    "startDate": "2025-09-23",
+    "endDate": "2025-09-25",
+    "href": "https://ethsofia.com",
+    "location": "Sofia, BGR",
+    "description": "The first major Ethereum community conference in Bulgaria. Bringing ETH enthusiasts, professionals, and developers to the IT heart of the Balkans. October 17-19, 2024.",
+    "imageUrl": "https://framerusercontent.com/assets/OHGIdIaZVjWGAwpmJhN1z6Yuh5g.png"
+  },
+  {
+    "title": "ProtoLayers Conference",
+    "startDate": "2025-10-11",
+    "endDate": "2025-10-11",
+    "href": "https://lu.ma/protolayersprague",
+    "location": "Prague, CZ",
+    "description": "Join us for a  technical conference dedicated to exploring the edges of modular blockchain technology. This one-day event, held on May 30, 2024 brings together…",
+    "imageUrl": "https://social-images.lu.ma/cdn-cgi/image/format=auto,fit=cover,dpr=1,background=white,quality=75,width=800,height=419/api/event-one?calendar_avatar=https%3A%2F%2Fimages.lumacdn.com%2Fcalendars%2Fgb%2F04e6c14a-bef9-4690-a55e-58dbab9f8aca&amp;calendar_name=ProtoLayers%20Builder%20Conference&amp;color0=%23ffffff&amp;color1=%23010101&amp;color2=%238b8a8a&amp;color3=%23ff3503&amp;host_avatar=https%3A%2F%2Fimages.lumacdn.com%2Favatars%2Fwx%2Fd64d0bac-aec7-4589-840e-4d4111ce4988&amp;host_name=ProtoLayers&amp;img=https%3A%2F%2Fimages.lumacdn.com%2Fevent-covers%2Fr7%2Fa289e9d1-9744-4ccc-a812-e6ac947d09cf&amp;name=ProtoLayers%20Conference"
   }
 ]
