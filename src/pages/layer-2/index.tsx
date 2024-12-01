@@ -116,7 +116,7 @@ const Layer2Hub = ({
     {
       title: "Near instant transactions",
       description:
-        "Whether you are making a quick payment or engaging in decentralized finance (DeFi), all transactions take only few seconds. ",
+        "Whether you are making a quick payment or engaging in decentralized finance (DeFi), all transactions take only a few seconds. ",
       emoji: ":closed_lock_with_key:",
     },
     {
