@@ -355,3 +355,7 @@ DeFi to ruch open-source. Protokoły i aplikacje DeFi są dla Ciebie otwarte: mo
 
 - [Serwer Discord DeFi Llama](https://discord.defillama.com/)
 - [Serwer Discord DeFi Pulse](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />
