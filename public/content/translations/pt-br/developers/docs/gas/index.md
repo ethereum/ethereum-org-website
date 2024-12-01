@@ -24,7 +24,7 @@ Taxas de gas tem que ser pagas na moeda nativa do Ethereum, ether (ETH). Preços
 
 Por exemplo, em vez de dizer que seu gás custa 0.000000001 Ether, pode-se dizer que ele custa 1 Gwei.
 
-A palavra 'gwei' é uma contração de 'giga-wei', significando 'bilhão de wei'. Um gwei é igual a um bilhão de wei. O próprio Wei (nomeado em homenagem a [Wei Dai](https://wikipedia.org/wiki/Wei Dai), criador do [B-Money](https://www.investopedia.com/terms/b/bmoney.asp)) é a menor unidade de ETH.
+A palavra 'gwei' é uma contração de 'giga-wei', significando 'bilhão de wei'. Um gwei é igual a um bilhão de wei. O próprio Wei (nomeado em homenagem a [Wei Dai](https://wikipedia.org/wiki/WeiDai), criador do [B-Money](https://www.investopedia.com/terms/b/bmoney.asp)) é a menor unidade de ETH.
 
 ## Como são calculadas as taxas de gás? {#how-are-gas-fees-calculated}
 
