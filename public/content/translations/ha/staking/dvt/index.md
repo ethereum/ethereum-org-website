@@ -1,7 +1,7 @@
 ---
 title: Fasaha na mai tabbartawa da aka rarraba
 description: Fasaha na mai tabbatarwa da aka rarraba yana ba da damar rarraba aiki na mai tabbatarwa Ethereum ta ɓangarorin da yawa.
-lang: ha
+lang: en
 ---
 
 # Fasaha na mai tabbartawa da aka rarraba {#distributed-validator-technology}
@@ -49,7 +49,7 @@ Mafita na DVT ya ƙunshi abubuwa masu zuwa:
 - **[Rabawa sirri na Shamir](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)** - Amfani na mai tabbatarwa [BLS mabudi](https://en.wikipedia.org/wiki/BLS_digital_signature). Mutum ɗaya BLS "muhimman kason" ("muhimman kason") ana iya haɗa shi zuwa makulli gudaɗaya (sa hannu). A cikin DVT, makulli keɓaɓɓen na mai tabbatarwa shine haɗewar sa hannun BLS na kowane mai aiki a cikin tari.
 - **[Tsarin sa hannu na iyaka](https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca)** - Na ƙayyade yawan muhimman kason na mutum guda wanda ake bukata don sanya hannun ayyuka, misali, 3 daga cikin 4.
 - **[Ƙirƙirar makulli ta hanyar rarrabawa (DKG)](https://medium.com/toruslabs/what-distributed-key-generation-is-866adc79620)** - Tsarin na ɓoye wanda ke haifar da muhimman kason kuma ana amfani da shi don rabba Hakkokin hannun jari wanda Da ake da shi ko sabon mabuli mai tabbatarwa ga cibiyar a cikin tari.
-- **[Lissafin Jam'iyyu da yawa (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - Ana haifar a sirri a cikakken makullin mai tabbatarwa ta amfani da Lissafin Jam'iyyu da yawa. Ba a taɓa sanin cikakken makulli ga kowane mai aiki ba - kawai sun taɓa sanin ɓangaren nasu ("hannun jari" nasu).
+- ** [Lissafin Jam'iyyu da yawa (MPC) ](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - Ana haifar a sirri a cikakken makullin mai tabbatarwa ta amfani da Lissafin Jam'iyyu da yawa. Ba a taɓa sanin cikakken makulli ga kowane mai aiki ba - kawai sun taɓa sanin ɓangaren nasu ("hannun jari" nasu).
 - **Ka'ida yarjejeniya** - Ka'ida yarjejeniya ta zaɓi cibiya ɗaya don zama mai ba da shawara na ɓangare. Suna raba ɓangare tare da sauran cibiyar dake cikin tari, waɗanda ke ƙara muhimman kason zuwa sa hannun jimlar. Lokacin da aka tara isassun jimlar muhimmai na kason, ana ba da shawarar ɓangare akan Ethereum.
 
 Rarraba masu tabbatarwa na da jurewan kuskure da aka gina ciki kuma suna iya ci gaba da aiki ko idan wasu daga cikin cibiyar ɗin sun rasa haɗi da intanet. Wannan yana nufin cewa tarin yana da juriya ko da wasu daga cikin cibiyar da ke cikinsa sun zama na damfara ko malalaci.
