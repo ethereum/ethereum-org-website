@@ -122,7 +122,7 @@ const Layer2Hub = ({
     {
       title: "Backed by Ethereum",
       description:
-        "Ethereum’s time proven and decentralized blockchain functions as the settlement layer for other newer networks.",
+        "Ethereum’s time-proven and decentralized blockchain functions as the settlement layer for other newer networks.",
       emoji: ":hammer_and_wrench:",
     },
   ]
