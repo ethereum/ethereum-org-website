@@ -33,7 +33,7 @@ lang: el
 - [Πρόγραμμα επιχορήγησης δικτύου SKALE](https://skale.space/developers#grants) - _[SKALE](https://skale.space/)δίκτυο οικοσυστήματος_
 - [Ίδρυμα Swarm πρόγραμμα χρηματοδοτήσεων](https://my.ethswarm.org/grants) - _Οικοσύστημα [Ιδρύματος Swarm](https://www.ethswarm.org/)_
 - [The Graph](https://thegraph.com/ecosystem/grants/) – _Οικοσύστημα [The Graph](https://thegraph.com/)_
-- [Πρόγραμμα χρηματοδοτήσεων Uniswap](https://www.uniswapfoundation.org/grants) – _Κοινότητα [Uniswap](https://uniswap.org/)_
+- [Πρόγραμμα χρηματοδοτήσεων Uniswap](https://www.uniswapfoundation.org/approach) – _Κοινότητα [Uniswap](https://uniswap.org/)_
 
 ## Τετραγωνική χρηματοδότηση {#quadratic-funding}
 

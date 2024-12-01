@@ -59,11 +59,11 @@ Meskipun fitur-fitur terbaik Web3 tidak terisolasi dan tidak sesuai dengan kateg
 
 Web3 memberikan Anda kepemilikan atas aset digital dengan cara yang belum pernah terjadi sebelumnya. Katakanlah misalnya Anda sedang bermain sebuah game web2. Jika Anda membeli sebuah barang in-game, itu dapat dihubungkan secara langsung ke akun Anda. Jika pembuat game menghapuskan akun Anda, Anda akan kehilangan barang-barang tersebut. Atau, jika Anda berhenti bermain game itu, Anda kehilangan nilai yang Anda investasikan barang in-game Anda.
 
-Web3 memperbolehkan kepemilikan langsung melalui [Token yang tidak dapat dipertukarkan (NFTs)](/nft/). Tidak ada satu pun, bahkan pembuat game, mempunyai kekuatan untuk mengambil kepemilikan Anda. Dan, jika Anda berhenti bermain, Anda dapat menjual atau memperdagangkan barang in-game di pasar terbuka dan menurunkan nilainya.
+Web3 memperbolehkan kepemilikan langsung melalui [Token yang tidak dapat dipertukarkan (NFTs)](/glossary/#nft). Tidak ada satu pun, bahkan pembuat game, mempunyai kekuatan untuk mengambil kepemilikan Anda. Dan, jika Anda berhenti bermain, Anda dapat menjual atau memperdagangkan barang in-game di pasar terbuka dan menurunkan nilainya.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Pelajari lebih lanjut tentang NFT</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     Selengkapnya tentang NFT
   </ButtonLink>
 </InfoBanner>
@@ -82,13 +82,13 @@ Web 2.0 mewajibkan kreator konten untuk memercayai platform untuk tidak mengubah
 
 Selain memiliki data Anda di Web3, Anda juga dapat memiliki platform ini secara kolektif, dengan menggunakan token yang berfungsi seperti saham di sebuah perusahaan. DAO memungkinkan Anda untuk mengoordinasikan kepemilikan terdesentralisasi dari sebuah platform dan membuat keputusan tentang masa depannya.
 
-DAO secara teknis didefinisikan sebagai kontrak pintar yang disepakati yang mengotomatisasi pengambilan keputusan yang terdesentralisasi atas kumpulan sumber daya (token). Pengguna dengan token memberikan suara tentang bagaimana sumber daya dihabiskan, dan kode secara otomatis melakukan hasil pemungutan suara.
+DAO didefinisikan secara teknis sebagai [kontrak pintar](/glossary/#smart-contract) yang disepakati bersama untuk mengotomatiskan pengambilan keputusan terdesentralisasi atas kumpulan sumber daya (token). Pengguna dengan token memberikan suara tentang bagaimana sumber daya dihabiskan, dan kode secara otomatis melakukan hasil pemungutan suara.
 
 Namun, orang-orang mendefinisikan banyak komunitas Web3 sebagai DAO. Semua komunitas-komunitas ini memiliki tingkat desentralisasi dan otomatisasi yang berbeda berdasarkan kode. Saat ini, kami sedang mengeksplorasi apa itu DAO dan bagaimana mereka dapat berkembang di masa depan.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Pelajari lebih lanjut tentang DAO</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     Pelajari lebih lanjut tentang DAO
   </ButtonLink>
 </InfoBanner>
@@ -97,17 +97,13 @@ Namun, orang-orang mendefinisikan banyak komunitas Web3 sebagai DAO. Semua komun
 
 Biasanya, Anda dapat membuat akun untuk setiap platform yang Anda gunakan. Sebagai contoh, Anda mungkin memiliki akun Twitter, akun YouTube, dan akun Reddit. Ingin mengubah nama tampilan atau gambar profil Anda? Anda harus melakukannya di setiap akun. Anda dapat menggunakan proses masuk jejaring sosial dalam beberapa kasus, tetapi hal ini menghadirkan masalah yang sudah tidak asing lagi—sensor. Dengan sekali klik, platform-platform ini dapat mengunci Anda dari seluruh kehidupan daring Anda. Lebih buruk lagi, banyak platform mengharuskan Anda untuk memercayai mereka dengan informasi identitas pribadi untuk membuat akun.
 
-Web3 memecahkan masalah-masalah ini dengan memungkinkan Anda untuk mengontrol identitas digital Anda dengan alamat Ethereum dan profil ENS. Menggunakan alamat Ethereum menyediakan login tunggal di seluruh platform yang aman, tahan sensor, dan anonim.
-
-<ButtonLink to="https://login.xyz/">
-  Masuk dengan Ethereum
-</ButtonLink>
+Web3 menyelesaikan masalah ini dengan memungkinkan Anda mengontrol identitas digital Anda melalui alamat Ethereum dan profil [Layanan Nama Ethereum (ENS)](/glossary/#ens). Menggunakan alamat Ethereum menyediakan login tunggal di seluruh platform yang aman, tahan sensor, dan anonim.
 
 ### Pembayaran asli {#native-payments}
 
-Infrastruktur pembayaran Web2 bergantung pada bank dan pemroses pembayaran, tidak termasuk orang tanpa rekening bank atau mereka yang kebetulan tinggal di perbatasan negara yang salah. Web3 menggunakan token seperti [ETH](/eth/) untuk kirim uang secara langsung di browser dan tidak memerlukan pihak ketiga yang tepercaya.
+Infrastruktur pembayaran Web2 bergantung pada bank dan pemroses pembayaran, tidak termasuk orang tanpa rekening bank atau mereka yang kebetulan tinggal di perbatasan negara yang salah. Web3 menggunakan token seperti [ETH](/glossary/#ether) untuk mengirim uang secara langsung di browser dan tidak memerlukan pihak ketiga yang tepercaya.
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   Selengkapnya tentang ETH
 </ButtonLink>
 
@@ -117,7 +113,7 @@ Meskipun ada beberapa keuntungan Web3 pada bentuk saat ini, masih ada banyak ket
 
 ### Aksesibilitas {#accessibility}
 
-Fitur-fitur penting Web3, seperti Masuk dengan Ethereum, sudah tersedia bagi siapa saja untuk digunakan dengan biaya nol. Tetapi, biaya transaksi relatif masih menjadi penghalang bagi banyak orang. Web3 cenderung tidak digunakan di negara-negara berkembang yang kurang makmur karena biaya transaksi yang tinggi. Di Ethereum, tantangan-tantangan ini sedang diselesaikan melalui [peta perjalanan](/roadmap/) dan [solusi penskalaan lapisan ke-2](/developers/docs/scaling/). Teknologinya sudah siap, tetapi kami membutuhkan tingkat adopsi yang lebih tinggi pada lapisan ke-2 untuk membuat Web3 dapat diakses oleh semua orang.
+Fitur-fitur penting Web3, seperti Masuk dengan Ethereum, sudah tersedia bagi siapa saja untuk digunakan dengan biaya nol. Tetapi, biaya transaksi relatif masih menjadi penghalang bagi banyak orang. Web3 cenderung tidak digunakan di negara-negara berkembang yang kurang makmur karena biaya transaksi yang tinggi. Di Ethereum, tantangan-tantangan ini sedang diselesaikan melalui [peta perjalanan](/roadmap/) dan [solusi penskalaan lapisan ke-2](/glossary/#layer-2). Teknologinya sudah siap, tetapi kami membutuhkan tingkat adopsi yang lebih tinggi pada lapisan ke-2 untuk membuat Web3 dapat diakses oleh semua orang.
 
 ### Pengalaman Pengguna {#user-experience}
 

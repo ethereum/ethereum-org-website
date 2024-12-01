@@ -150,7 +150,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 - [阅读天鹰座升级规范](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />有趣的事实！ {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} className="me-2" />有趣的事实！ {#altair-fun-fact}
 
 天鹰座升级是第一个有确切发布时间的重大网络升级。 之前的每一次升级均基于一个已经在工作量证明链上申报过的区块编号，而该链上的区块时间各不相同。 信标链不需要解析工作量证明，而是在一个基于时间、由 32 个 12 秒“时隙”组成的时段系统上运作。在这个系统上，验证者可以提出区块。 这就是为什么我们能准确知晓达到时段 74,240 以及天鹰座升级启动的时间！
 
@@ -220,7 +220,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   信标链
 </DocLink>
 
@@ -236,7 +236,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   质押
 </DocLink>
 
@@ -505,6 +505,6 @@ Gavin Wood 博士撰写的黄皮书，关于以太坊协议的技术定义。
 
 以太坊项目在 2015 年启动。但早在 2013 年，以太坊创始人 Vitalik Buterin 就发表了这一介绍性文章。
 
-<DocLink to="/whitepaper/">
+<DocLink href="/whitepaper/">
   白皮书
 </DocLink>

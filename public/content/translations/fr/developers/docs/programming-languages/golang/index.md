@@ -23,7 +23,6 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 
 ## Articles et livres pour les débutants {#beginner-articles-and-books}
 
-- [Choisir un client Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Commencer avec Geth](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
 - [Utiliser Golang pour se connecter à Ethereum](https://www.youtube.com/watch?v=-7uChuO_VzM)
 - [Déployer des contrats intelligents Ethereum en utilisant Golang](https://www.youtube.com/watch?v=pytGqQmDslE)
@@ -65,6 +64,7 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _Support pour de nombreux types de réseaux Ethereum_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Implémentation Geth du LES (Light Client Subprotocol) Ethereum_
 - [Ethereum Golang SDK](https://github.com/everFinance/goether) - _Une simple implémentation et des utilitaires pour les portefeuilles Ethereum dans Golang_
+- [SDK Golang Covalent](https://github.com/covalenthq/covalent-api-sdk-go) - _Accès efficace aux données blockchain via Go SDK pour plus de 200 blockchains_
 
 Vous cherchez davantage de ressources ? Consultez [ethereum.org/developers.](/developers/)
 

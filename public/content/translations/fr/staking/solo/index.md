@@ -190,7 +190,7 @@ Une fois que les identifiants de retrait sont définis, les paiements de récomp
 
 Pour déverrouiller et recevoir la totalité de votre solde, vous devez également terminer le processus de sortie de votre validateur.
 
-<ButtonLink to="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink>
 </ExpandableCard>
 
 ## Complément d'information {#further-reading}

@@ -1,16 +1,13 @@
-import { createIcon } from "@chakra-ui/react"
+import { commonIconDefaultAttrs } from "@/components/icons/utils"
 
-import { commonIconDefaultProps } from "@/components/icons/utils"
+import { createIconBase } from "../icon-base"
 
-export const BedrockGlyphIcon = createIcon({
+export const BedrockGlyphIcon = createIconBase({
   displayName: "BedrockGlyphIcon",
   viewBox: "0 0 33 32",
-  defaultProps: {
-    width: "33px",
-    height: "32px",
-    ...commonIconDefaultProps,
-  },
-  path: (
+  className: "size-[1em]",
+  ...commonIconDefaultAttrs,
+  children: (
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"

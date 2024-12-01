@@ -12,11 +12,11 @@ Stai cercando il supporto ufficiale di Ethereum? La prima cosa che dovresti sape
 
 Comprendere la natura decentralizzata di Ethereum è fondamentale perché chiunque affermi di essere il supporto ufficiale di Ethereum probabilmente sta cercando di truffarti! La migliore protezione contro i truffatori sta nell'educare sé stessi prendendo sul serio la sicurezza.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Sicurezza di Ethereum e prevenzione delle truffe
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Impara i fondamenti di Ethereum
 </DocLink>
 
@@ -73,7 +73,6 @@ Ecco alcuni esempi più diffusi:
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 
@@ -92,6 +91,7 @@ La maggior parte dei team che costruiscono client di Ethereum hanno anche spazi 
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### Client di consenso {#consensus-clients}
 

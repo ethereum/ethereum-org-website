@@ -1,16 +1,21 @@
-import { Box, HStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import Select from "."
+import { HStack } from "../ui/flex"
+
+import Select from "./"
 
 const meta = {
   title: "Atoms / Form / Dropdown",
   component: Select,
+  parameters: {
+    // TODO: Remove this when this story file becomes the primary one
+    chromatic: { disableSnapshot: true },
+  },
   decorators: [
     (Story) => (
-      <Box w="lg">
+      <div className="w-[32rem]">
         <Story />
-      </Box>
+      </div>
     ),
   ],
 } satisfies Meta<typeof Select>
@@ -40,7 +45,7 @@ export const Dropdown: Story = {
     ],
   },
   render: (args) => (
-    <HStack spacing={4}>
+    <HStack className="gap-4">
       <Select {...args} />
       <Select {...args} variant="outline" />
     </HStack>

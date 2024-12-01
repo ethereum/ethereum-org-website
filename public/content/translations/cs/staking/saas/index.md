@@ -47,7 +47,7 @@ Níže uvádíme několik dostupných poskytovatelů SaaS. Pomocí výše uveden
 
 <StakingProductsCardGrid category="saas" />
 
-Vezměte prosím na vědomí, že je důležité podporovat [rozmanitost klientů](/developers/docs/nodes-and-clients/client-diversity/), protože zlepšuje zabezpečení sítě a omezuje vaše riziko. Služby, které prokazatelně omezují většinové klientské používání, jsou označeny <em style={{ textTransform: "uppercase" }}>„rozmanitost realizačního klienta“</em> a <em style={{ textTransform: "uppercase" }}>„rozmanitost klientů konsensu“.</em>
+Vezměte prosím na vědomí, že je důležité podporovat [rozmanitost klientů](/developers/docs/nodes-and-clients/client-diversity/), protože zlepšuje zabezpečení sítě a omezuje vaše riziko. Služby, které prokazatelně omezují většinové klientské používání, jsou označeny <em style={{ textTransform: "uppercase" }}>„rozmanitost exekučního klienta“</em> a <em style={{ textTransform: "uppercase" }}>„rozmanitost konsenzus klienta“.</em>
 
 ### Generátory klíčů
 
@@ -55,7 +55,7 @@ Vezměte prosím na vědomí, že je důležité podporovat [rozmanitost klient�
 
 Máte návrh na poskytovatele vkladu jako služby, kterého jsme vynechali? Podívejte se na naše [zásady pro záznam produktů](/contributing/adding-staking-products/), abyste zjistili, zda by se hodily, a odešlete je ke kontrole.
 
-## Často kladené otázky {#faq}
+## Často kladené dotazy {#faq}
 
 <ExpandableCard title="Kdo drží moje klíče?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 Ujednání se budou u jednotlivých poskytovatelů lišit, ale obvykle vás provedeme nastavením všech potřebných podpisových klíčů (jeden na 32 ETH) a jejich nahráním poskytovateli, aby je mohl ověřit vaším jménem. Samotné podpisové klíče nedávají žádnou možnost vybrat, převést nebo utratit vaše prostředky. Poskytují však možnost odevzdat hlasy směrem ke konsenzu, což, pokud není provedeno správně, může mít za následek offline penalizaci nebo trest.
@@ -78,7 +78,7 @@ Výběry vkladů byly provedeny v rámci aktualizace Šanghaj/Capella v dubnu 20
 
 Validátoři mohou také plně odejít jako validátor, který odemkne jejich zbývající ETH zůstatek pro výběr. Účty, které uvedly adresu pro provedení výběru a dokončily proces ukončení, obdrží celý zůstatek na adresu pro výběr uvedenou během příštího ověřovacího testu.
 
-<ButtonLink to="/staking/withdrawals/">Více o výběru vkladů</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Více o výběru vkladů</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Co se stane, když dostanu trest?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

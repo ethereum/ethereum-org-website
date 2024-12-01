@@ -17,7 +17,7 @@ The challenge facing Ethereum developers is that the current [proof-of-stake](/g
 
 The [“KZG” commitment schemes](/roadmap/danksharding/#what-is-kzg) used in several places across Ethereum to generate cryptographic secrets are known to be quantum-vulnerable. Currently, this is circumvented using “trusted setups” where many users generate randomness that cannot be reverse-engineered by a quantum computer. However, the ideal solution would simply be to incorporate quantum safe cryptography instead. There are two leading approaches that could become efficient replacements for the BLS scheme: [STARK-based](https://hackmd.io/@vbuterin/stark_aggregation) and [lattice-based](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175) signing. **These are still being researched and prototyped**.
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Read about KZG and trusted setups</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> Read about KZG and trusted setups</ButtonLink>
 
 ## Simpler and more efficient Ethereum {#simpler-more-efficient-ethereum}
 
@@ -29,7 +29,7 @@ Similarly, there are updates that can be made to other parts of present-day Ethe
 
 ## Current progress {#current-progress}
 
-Most of the upgrades required for future-proofing Ethereum are **still in the research phase and may be several years away** from being implemented. Upgrades such as removing SELF-DESTRUCT and harmonizing the compression scheme used in the execution and consensus clients are likely to come sooner than quantum resistant cryptography.
+Most of the upgrades required for future-proofing Ethereum are **still in the research phase and may be several years away** from being implemented. Upgrades such as removing SELFDESTRUCT and harmonizing the compression scheme used in the execution and consensus clients are likely to come sooner than quantum resistant cryptography.
 
 **Further reading**
 

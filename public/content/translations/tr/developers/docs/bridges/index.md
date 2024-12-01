@@ -30,7 +30,7 @@ Köprüler, geliştiriciler için aşağıdakileri mümkün kılar:
 
 ## Köprüler nasıl çalışır? {#how-do-bridges-work}
 
-Çeşitli [köprü tasarım türleri](https://blog.li.fi/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) mevcut olsa da, varlıkların zincirler arası transferini kolaylaştırma konusunda öne çıkan üç yöntem vardır:
+Çeşitli [köprü tasarım türleri](https://li.fi/knowledge-hub/blockchain-bridges-and-classification/) mevcut olsa da, varlıkların zincirler arası transferini kolaylaştırma konusunda öne çıkan üç yöntem vardır:
 
 - **Kilitle ve bas: –** Kaynak zincirdeki varlıkları kilitleyip hedef zincirde yeni varlıklar basmak.
 - **Yak ve Bas: –** Kaynak zincirdeki varlıkları yakıp hedef zincirde yeni varlıklar basmak.
@@ -42,7 +42,7 @@ Köprüler genellikle aşağıdaki kategorilerden birine girer:
 
 - **Doğal köprüler: –** Bu tür köprüler genellikle belirli bir blokzincirde likiditeyi önyüklemek amacıyla inşa edilir ve kullanıcıların fonları ekosisteme taşımasını kolaylaştırır. Örneğin, [Arbitrum Köprüsü](https://bridge.arbitrum.io/), kullanıcılar için Ethereum Ana Ağı'ndan Arbitrum'a köprü kurmayı kolay hale getirmek için inşa edilmiştir. Diğer köprü örnekleri arasında Polygon PoS Köprüsü, [Optimism Geçidi](https://app.optimism.io/bridge) vb. sayılabilir.
 - **Doğrulayıcı veya kâhin tabanlı köprüler –** Bu tür köprüler, zincirler arası transferleri doğrulamak için harici bir doğrulayıcı kümesine veya kâhinlere dayanır. Örnekler: Multichain ve Across.
-- **Genelleştirilmiş mesaj iletim köprüleri –** Bu köprüler, varlıkları, mesajları ve keyfi verileri zincirler arasında transfer edebilir. Örnekler: Nomad ve LayerZero.
+- **Genelleştirilmiş mesaj iletim köprüleri –** Bu köprüler, varlıkları, mesajları ve keyfi verileri zincirler arasında transfer edebilir. Örnekler: Axelar, LayerZero ve Nomad.
 - **Likidite ağları –** Bu köprüler, ağırlıklı olarak atomik takaslar aracılığıyla bir zincirden diğerine varlık transferine odaklanır. Genellikle zincirler arası mesaj iletimini desteklemezler. Örnekler: Connext ve Hop.
 
 ## Dikkate alınması gereken ödünleşmeler {#trade-offs}
@@ -91,7 +91,7 @@ Geliştiriciler için köprüleri destek eklemenin birçok yolu bulunmaktadır:
    - Köprülerin değerlendirilmesi ve sürdürülmesi zor ve zaman alıcıdır.
    - Bir köprü seçmek, tek hata noktası ve bağımlılık oluşturur.
    - Merkeziyetsiz uygulamalar, köprülerin yetenekleriyle kısıtlıdır.
-   - Sadece köprüler yeterli olmayabilir. Merkeziyetsiz uygulamalar, zincirler arası takaslar gibi daha fazla işlevsellik sunmak için merkeziyetsiz borsalardan faydalanabilirler.
+   - Sadece köprüler yeterli olmayabilir. Merkeziyetsiz uygulamalar, zincirler arası takaslar gibi daha fazla işlevsellik sunmak için merkeziyetsiz borsalardan faydalanabilir.
 
 4. **Birden fazla köprüyü entegre etme –** Bu çözüm, tek bir köprüyü entegre etmenin getirdiği birçok sorunu çözer. Ancak, birden fazla köprüyü entegre etmek kaynak tüketen bir süreç olduğundan ve geliştiriciler için kripto alanının en nadir kaynağı olan teknik açıdan ve iletişim bağlamında yük oluşturduğundan kısıtlamalara tabidir.
 
@@ -103,7 +103,7 @@ Bir merkeziyetsiz uygulama, bir köprü veya birleştirici entegrasyonu yolunu s
 
 ### Bir merkeziyetsiz uygulamayı birden fazla zincire dağıtma {#deploying-a-dapp-on-multiple-chains}
 
-Geliştiriciler, bir merkeziyetsiz uygulamayı birden fazla zincire dağıtmak için [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Truffle](https://trufflesuite.com/), [Moralis](https://moralis.io/) gibi geliştirme platformlarından yararlanabilir. Genellikle bu platformlar, merkeziyetsiz uygulamaların zincirler arası işlem yapmasını sağlayabilecek birleştirilebilir eklentilere sahiptir. Örneğin, geliştiriciler [hardhat-dağıtım eklentisi](https://github.com/wighawag/hardhat-deploy) tarafından sunulan belirleyici dağıtım vekilini kullanabilir.
+To deploy a dapp on multiple chains, developers can use development platforms like [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/), etc. Genellikle bu platformlar, merkeziyetsiz uygulamaların zincirler arası işlem yapmasını sağlayabilecek birleştirilebilir eklentilere sahiptir. Örneğin, geliştiriciler [hardhat-dağıtım eklentisi](https://github.com/wighawag/hardhat-deploy) tarafından sunulan belirleyici dağıtım vekilini kullanabilir.
 
 #### Örnekler:
 

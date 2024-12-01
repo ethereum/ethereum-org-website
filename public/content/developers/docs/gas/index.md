@@ -119,11 +119,12 @@ The Ethereum [scalability upgrades](/roadmap/) should ultimately address some of
 
 Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. [More on layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).
 
-## Monitoring gas fees {#moitoring-gas-fees}
+## Monitoring gas fees {#monitoring-gas-fees}
 
 If you want to monitor gas prices, so you can send your ETH for less, you can use many different tools such as:
 
 - [Etherscan](https://etherscan.io/gastracker) _Transaction gas price estimator_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Monitor and track the Ethereum, and L2 gas prices to reduce transaction fees and save money_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Gas estimating Chrome extension supporting both Type 0 legacy transactions and Type 2 EIP-1559 transactions._
 - [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Calculate gas fees in your local currency for different transaction types on Mainnet, Arbitrum, and Polygon._
 

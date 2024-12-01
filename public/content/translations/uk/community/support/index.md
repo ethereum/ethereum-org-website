@@ -12,11 +12,11 @@ lang: uk
 
 Розуміння децентралізованої природи Ethereum є життєво важливим, оскільки будь-хто, хто стверджує, що є офіційною підтримкою Ethereum, імовірно, є шахраєм! Найкращий захист від шахраїв — це самоосвіта й серйозне ставлення до безпеки.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Система безпеки Ethereum і запобігання шахрайству
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Вивчайте основи Ethereum
 </DocLink>
 
@@ -56,7 +56,6 @@ _Це не вичерпний список. Потрібна допомога в
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 

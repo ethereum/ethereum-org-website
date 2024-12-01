@@ -15,15 +15,17 @@ lang: zh
 - 访问 [ethereum.org/developers/](/developers/)，了解和尝试使用以太坊
 - 参加你附近的一个 [ETHGlobal](http://ethglobal.co/) 黑客马拉松活动！
 - 查看[与你的专业领域或所选编程语言相关的项目](/developers/docs/programming-languages/)
-- 观看或参与[核心开发人员电话会议](https://www.youtube.com/@EthereumProtocol)
+- 观看或参与[共识层和执行层会议](https://www.youtube.com/@EthereumProtocol/streams)
 - [生态系统支持计划的愿望清单](https://esp.ethereum.foundation/wishlist/) - 适用于工具、文档和基础设施领域，以太坊生态系统支持计划正在积极寻求这些领域的资助申请
 - [Web3Bridge](https://www.web3bridge.com/) - 加入有抱负的 web3 社区，一起积极寻找、培训和支持整个非洲的数百名开发人员和社区成员
+- 加入[以太币研发 Discord](https://discord.com/invite/VmG7Uxc)
 - 加入[以太坊猫牧人组织 Discord](https://discord.com/invite/Nz6rtfJ8Cu)
 
 ## 研究人员 & 学者 <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
 你是否有数学、密码学或经济学方面的背景？ 你可能会对以太坊生态系统中正在进行的一些前沿工作感兴趣：
 
+- 加入[以太币研发 Discord](https://discord.com/invite/VmG7Uxc)
 - 撰写或审查以太坊改进提案
   - 撰写以太坊改进提案
     1. 在[以太坊魔术师](https://ethereum-magicians.org)论坛上提交你的创想
@@ -38,6 +40,7 @@ lang: zh
 - [Ethresear.ch](https://ethresear.ch) - 以太坊的主要研究论坛，也是世界上最具影响力的加密经济学论坛
 - [以太坊基金会研究团队 AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - 正在进行中的研究人员问答系列。 下一部分开放时，任何人都可以提出问题。
 - [生态系统支持计划愿望清单](https://esp.ethereum.foundation/wishlist/) - 介绍以太坊生态系统支持计划正在积极征询资助申请的研究领域
+- [AllWalletDevs](https://allwallet.dev) - 供以太坊开发者、设计人员和感兴趣的用户定期聚会和讨论钱包的论坛
 
 [探索更多活跃研究领域](/community/research/)。
 
@@ -89,7 +92,7 @@ lang: zh
 
 ## 产品经理 <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
 
-- 以太坊生态系统需要有才之士！ 许多公司正在招聘产品经理。 如果你想从为开源项目做贡献开始，请联系 [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) 或 [RaidGuild](https://www.raidguild.org/)
+- 以太坊生态系统需要有才之士！ 许多公司正在招聘产品经理。 如果你想从为开源项目做贡献开始，请联系[以太坊牧猫人组织](https://discord.com/invite/Nz6rtfJ8Cu)或 [RaidGuild](https://www.raidguild.org/)
 
 ## 市场营销 <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 
@@ -104,11 +107,9 @@ lang: zh
 - [以太坊基金会职位公告栏 (BambooHR)](https://ethereum.bamboohr.com/jobs/)
 - [JobStash](https://jobstash.xyz)
 - [Cryptocurrency 招聘职位](https://cryptocurrencyjobs.co/ethereum/)
-- [Crypto.jobs](https://crypto.jobs/)
 - [ConsenSys 职业机会](https://consensys.net/careers/)
 - [Crypto 招聘职位列表](https://cryptojobslist.com/ethereum-jobs)
 - [Bankless 职位公告栏](https://pallet.xyz/list/bankless/jobs)
-- [useWeb3 招聘职位](https://www.useweb3.xyz/jobs)
 - [Web3 招聘职位](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley 招聘职位](https://cryptovalley.jobs/)
@@ -119,13 +120,12 @@ lang: zh
 
 “DAO”是指去中心化自治组织。 这些团队利用以太坊技术促进组织和协作。 例如，用于成员资格管理、提案投票或联合资产管理。 虽然去中心化自治组织仍处于试验阶段，但它们提供了机会，让你找到自己认同的团队，找到合作者并且扩大自己对以太坊社区的影响。 [更多关于去中心化自治组织的信息](/dao/)
 
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _在非技术领域推广去中心化自治组织这一概念，帮助人们通过去中心化自治组织创造价值_
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) - _在非技术领域推广去中心化自治组织这一概念，帮助人们通过去中心化自治组织创造价值_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _由相信互联网为集体所有的构建者组成的社区_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _以去中心化自治组织形式运行的自由职业者 Web3 开发团队_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhaus 社区治理_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _法律工程_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _艺术社区_
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _去中心化自治组织培养基地_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _为种子阶段前的加密项目提供风险投资_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _面向现实世界的 MMORPG 游戏机制_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _数字化实体服装品牌_

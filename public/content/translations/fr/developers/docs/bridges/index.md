@@ -42,7 +42,7 @@ Les ponts peuvent généralement être classés dans l'un des compartiments suiv
 
 - **Ponts natifs -** Ces ponts sont généralement construits pour amorcer la liquidité sur une blockchain particulière, ce qui permet aux utilisateurs de transférer plus facilement des fonds vers l'écosystème. Par exemple, l'[Arbitrum Bridge](https://bridge.arbitrum.io/) est conçu pour permettre aux utilisateurs de passer facilement du réseau principal Ethereum à Arbitrum. Parmi les autres ponts de ce type, citons le pont PoS Polygon, [Optimism Gateway](https://app.optimism.io/bridge), etc.
 - **Ponts basés sur des validateurs ou des oracles -** Ces ponts s'appuient sur un ensemble de validateurs ou d'oracles externes pour valider les transferts inter-chaînes. Exemples : Multichain et Across.
-- **Passerelles généralisées de passage de messages -** Ces passerelles peuvent transférer des actifs, ainsi que des messages et des données arbitraires à travers les chaînes. Exemples : Nomad et LayerZero.
+- **Passerelles généralisées de passage de messages -** Ces passerelles peuvent transférer des actifs, ainsi que des messages et des données arbitraires à travers les chaînes. Exemples : Axelar, LayerZero, et Nomad.
 - **Réseaux de liquidité -** Ces ponts se concentrent principalement sur le transfert d'actifs d'une chaîne à une autre via des swaps atomiques. En général, ils ne prennent pas en charge le passage de messages inter-chaînes. Exemples : Connext et Hop.
 
 ## Les compromis à prendre en compte {#trade-offs}
@@ -103,7 +103,7 @@ Si une dapp emprunte la voie de l'intégration d'un pont ou d'un agrégateur, il
 
 ### Déploiement d'une dApp sur plusieurs chaînes {#deploying-a-dapp-on-multiple-chains}
 
-Pour déployer une dApp sur plusieurs chaînes, les développeurs peuvent utiliser des plateformes de développement telles que [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Truffle](https://trufflesuite.com/), [Moralis](https://moralis.io/), etc. En général, ces plateformes sont fournies avec des plugins composables qui permettent aux dApps de passer d'une chaîne à l'autre. Par exemple, les développeurs peuvent utiliser un proxy de déploiement déterministe proposé par le plugin [hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
+Pour déployer une dApp sur plusieurs chaînes, les développeurs peuvent utiliser des plateformes de développement telles que [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/), etc. En général, ces plateformes sont fournies avec des plugins composables qui permettent aux dApps de passer d'une chaîne à l'autre. Par exemple, les développeurs peuvent utiliser un proxy de déploiement déterministe proposé par le plugin [hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
 
 #### Exemples :
 

@@ -29,7 +29,7 @@ Cerințe minime:
 - Toate codurile să fie stocate într-un sistem de control al versiunii, cum ar fi Git
 - Toate modificările de cod să fie efectuate prin Pull Request-uri
 - Toate Solicitările Pull să aibă cel puțin un examinator. _Dacă aveţi un proiect solo, gândiţi-vă să găsiţi un alt autor solo și negociaţi cu el recenzii de coduri!_
-- Să existe o singură comandă care să compileze, să implementeze și să rulează o suită de teste cu codul dvs. utilizând un mediu Ethereum de dezvoltare (vedeţi: Truffle)
+- Să existe o singură comandă care să compileze, să implementeze și să rulează o suită de teste cu codul dvs. utilizând un mediu Ethereum de dezvoltare
 - Să rulaţi codul prin instrumente de analiză a codului de bază, cum ar fi Mythril și Slither, în mod ideal înainte ca fiecare Pull Request să fie acceptat, comparând diferențele rezultatelor
 - Solidity să nu emită NICIUN avertisment al compilatorului
 - Codul dvs. să fie bine documentat

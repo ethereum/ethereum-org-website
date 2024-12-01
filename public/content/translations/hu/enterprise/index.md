@@ -13,29 +13,8 @@ Az Ethereum sokféle vállalkozásnak segíthet, beleértve a nagyvállalatokat 
 - Új üzleti modelleket és értékteremtő lehetőségeket kifejleszteni
 - Versenyképesen jövőbiztossá tenni a szervezeteiket
 
-A vállalati blokkláncalkalmazások fejleszthetőek a nyilvános, engedély nélküli Ethereum [főhálózatra](/glossary/#mainnet) vagy privát blokkláncokra, melyek az Ethereum technológiáján alapulnak. Tudjon meg többet a [privát vállalati Ethereum láncokról](/enterprise/private-ethereum/).
+A korai években számos vállalati blokklánc-alkalmazást építettek privát, engedélyköteles, Ethereum-kompatibilis blokkláncokra vagy konzorciumláncokra. Manapság a technológiai fejlődésnek köszönhetően, mely nagyobb tranzakcióátvitelt, alacsonyabb tranzakciós költségeket és adatvédelmet tesz lehetővé, a legtöbb vállalati alkalmazás, mely Ethereum-technológiát használ, a publikus Ethereum főhálózatra vagy [L2](/layer-2) láncokra épül.
 
-## Nyilvános versus privát Ethereum {#private-vs-public}
-
-Csak egy nyilvános Ethereum főhálózat létezik. A főhálózatra épült alkalmazások integrálódhatnak egymással, hasonlóan ahogy az internetre épített alkalmazások egymáshoz kapcsolódhatnak, kihasználva ezzel a decentralizált blokklánc teljes potenciálját.
-
-Számos vállalkozás és konzorcium telepített az Ethereum technológián alapuló privát, engedélyköteles blokkláncokat meghatározott alkalmazásokhoz.
-
-### Legfontosabb különbségek {#key-differences}
-
-- Blokklánc biztonság/megváltoztathatóság - A blokklánc ellenállását az adatmódosítás ellen a konszenzus algoritmusa határozza meg. Az Ethereum főhálózatot több ezer független csomópont együttműködése biztosítja, amelyeket egyének és bányászok vezetnek szerte a világon. A privát láncoknak általában kevés csomópontja van, amelyeket egy vagy több szervezet irányít; ezeket a csomópontokat szigorúan lehet ellenőrizni, de elég néhány felett átvenni az irányítást a lánc átírása vagy hamis tranzakciók végrehajtása érdekében.
-- Teljesítmény - Mivel a vállalatok privát Ethereum láncai nagy teljesítményű csomópontokat használhatnak, speciális hardverkövetelményekkel és különböző konszenzusalgoritmusokkal, például a jogosítványigazolással (proof-of-authority), így magasabb tranzakciós átvitelt érhetnek el az első blokkláncrétegen (L1). Az Ethereum főhálózatán nagy tranzakcióátviteli teljesítmény érhető el a [második blokkláncréteg (L2) skálázási megoldásaival](/layer-2).
-- Költség - A privát lánc működtetésének költségei elsősorban a lánc felállításához és kezeléséhez szükséges munkában, valamint a szerverek futtatásában mutatkoznak meg. Bár annak nincs költsége, hogy az Ethereum főhálózathoz csatlakozzon, minden tranzakció gázköltséget von maga után, amelyet etherben kell kifizetni. A metatranzakció-közvetítők kiküszöbölhetik, hogy a végfelhasználóknak vagy akár a vállalatoknak közvetlenül kelljen ethert tartaniuk és használniuk a tranzakcióikban. Egyes [elemzések](https://theblockchaintest.com/uploads/resources/EY%20-%20Total%20cost%20of%20ownership%20for%20blockchain%20solutions%20-%202019%20-%20Apr.pdf) kimutatták, hogy egy alkalmazás üzemeltetésének összköltsége alacsonyabb lehet a főhálózaton, mint egy privát lánc működtetése.
-- Csomóponti engedélyezés - Csak felhatalmazott csomópontok csatlakozhatnak a privát láncokhoz. Bárki felállíthat egy csomópontot az Ethereum főhálózatán.
-- Adatvédelem - A privát láncok adataihoz való hozzáférést elsősorban a hálózati hozzáférés korlátozásával lehet szabályozni, kifinomultabb szinten a hozzáférés-szabályozással és privát tranzakciókkal. A főhálózat L1 rétegére írt minden adat bárki számára hozzáférhető, így az érzékeny információkat láncon kívül kell tárolni és továbbítani, vagy titkosítani kell azokat. Az ilyen dizájnminták elterjedőben vannak (például Baseline, Nightfall), csakúgy mint az L2-es megoldások, melyek szétválasztják és az L1-en kívül kezelik az adatot.
-
-### Miért építsünk az Ethereum főhálózaton {#why-build-on-ethereum-mainnet}
-
-A nyilvános blokkláncok egyik legfontosabb előnye a vállalkozások számára a monopóliummal szembeni ellenállás. Ha az Ethereum főhálózatot semleges játékvezetőként használja az üzleti tranzakciók koordinálására, nem kell megbíznia a másik vállalatban, amely felett a versenytársai irányítást vagy befolyást szerezhetnek, és így hátrányos helyzetbe hozhatják Önt. Egy nyílt, engedély nélküli és decentralizált platformon, amelyhez bárki csatlakozhat, használhat és hozzájárulhat, nincs olyan központi hatóság, amely a hatalmát arra használná, hogy előnyre tegyen szert Önnel szemben.
-
-A vállalkozások 2016 óta kísérleteztek a blokklánctechnológiával, amikor elindították a Hyperledger, a Quorum és a Corda projekteket. Kezdetben a hangsúly főleg a privát, engedélyköteles, vállalati blokkláncokon volt, de 2019-től kezdődően elmozdult a gondolkodás a privát irányából a nyilvános blokkláncok felé az üzleti alkalmazások esetében. Paul Brody az Ernst & Youngtól [beszélt](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668) a nyilvános blokkláncokra történő fejlesztés előnyeiről, mely (az alkalmazástól függően) magasabb szintű biztonságot/megváltoztathatatlanságot, átláthatóságot, alacsonyabb birtoklási költséget, és a főhálózaton lévő többi alkalmazással történő interoperabilitási képességét nyújthatja (hálózati hatások). A közös referenciakeret megosztása a vállalkozások között elkerülhetővé teszi a szegregált rendszerek felesleges létrehozását, amelyek nem képesek kommunikálni, megosztani vagy szinkronizálni az információkat egymással.
-
-Egy másik fejlesztés, mely a nyilvános blokkláncokra tereli a figyelmet a [második blokkláncréteg (L2)](/layer-2) elérhetősége. Az L2 elsősorban egy skálázási technológia, mely magas átvitelű alkalmazásokat tesz lehetővé a nyilvános blokkláncokon. De az L2 megoldások egy [másik kihívásokra is megoldást nyújthatnak, melyek a vállalati fejlesztőket korábban a privát láncok választására kényszerítették](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
 
 ## Források {#enterprise-resources}
 
@@ -43,6 +22,7 @@ Egy másik fejlesztés, mely a nyilvános blokkláncokra tereli a figyelmet a [m
 
 Nem technikai információs anyagok annak megértéséhez, hogy a vállalkozások hogyan profitálhatnak az Ethereumból
 
+- [Miért hasznosak a blokkláncok az üzletben?](https://entethalliance.org/why-are-blockchains-useful-for-business/) - _A blokkláncok értékének megvitatása a kiszámíthatóság lencséjén keresztül_
 - [Enterprise Ethereum Alliance 2023 Business Readiness Report](https://entethalliance.org/eea-ethereum-business-readiness-report-2023/) - _felméri a nyilvános Ethereumban és a szélesebb Ethereum ökoszisztémában rejlő lehetőségeket és képességeket a vállalkozások számára_
 - [_Ethereum for Business_, írta Paul Brody](https://www.uapress.com/product/ethereum-for-business/) - _Egy közérthető útmutató azokról a felhasználási esetekről, amelyek a vagyonkezeléstől a fizetésen át az ellátási láncokig megtérülést hoznak_
 
@@ -64,12 +44,14 @@ Különféle szervezetek számtalan együttműködésen alapuló erőfeszítést
 - [Blockapps](https://blockapps.net/) - _a vállalati Ethereum-protokoll, az eszközkészlet és az API-ok implementációja, melyek a STRATO platformot alkotják_
 - [Chainstack](https://chainstack.com/) - _az Ethereum főhálózatára és teszthálózataira biztosít infrastruktúrát, amelyet nyilvános és elkülönített vevői felhőkben hosztol_
 - [ConsenSys](https://consensys.io/) - _számos terméket és eszközt kínál az Ethereum fejlesztésére, valamint tanácsadási és egyedi fejlesztési szolgáltatásokat nyújt_
+- [Crossmint](http://crossmint.com/) – _Vállalati szintű web3-fejlesztési platform okosszerződések telepítéséhez, hitelkártyás és láncok közötti fizetések lehetővé tételéhez, valamint API-ok használatára NFT-k létrehozása, terjesztése, értékesítése, tárolása és szerkesztése érdekében._
 - [Envision Blockchain](https://envisionblockchain.com/) - _az Ethereum főhálózatra szakosodott, vállalati fókuszú, tanácsadási és fejlesztési szolgáltatásokat nyújt_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) - _beszerzési munkafolyamatot biztosít, melynek során ajánlatbekéréseket (RFQ), szerződéseket, rendeléseket és számlákat bocsát ki az Ön megbízható üzleti partnereiből álló hálózatán keresztül_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _egy vállalati fókuszú, nyílt forráskódú Ethereum-kliens Apache 2.0 licensszel fejlesztve és Java nyelven írva_
 - [Infura](https://infura.io/) - _skálázható API-hozzáférés az Ethereumhoz és az IPFS hálózatokhoz_
 - [Kaleido](https://kaleido.io/) - _egy vállalati fókuszú fejlesztési platform, amely egyszerűsített blokklánc- és digitáliseszköz-alkalmazásokat kínál_
 - [NodeReal](https://nodereal.io/) - _skálázható blokklánc-infrastruktúrát és API-szolgáltatókat biztosít a web3 ökoszisztémának_
+- [Moralis](http://moralis.io/) - _vállalati szintű API-ok és csomópontok egy SOC2 2-es típusú tanúsítással_
 - [Provide](https://provide.services/) - _vállalati zero-knowledge middleware_
 - [QuickNode](https://www.quicknode.com/) - _megbízható és gyors csomópontokat biztosít magas szintű API-okkal, mint amilyen az NFT API, Token API stb., miközben egy egységes termékcsomagot és vállalati szintű megoldásokat szállít_
 - [Tenderly](https://tenderly.co) - _egy web3-fejlesztői platform, amely okosszerződés-fejlesztéshez, -teszteléshez, -monitorozáshoz és -működtetéshez biztosít hibakeresési, megfigyelhetőségi és infrastruktúrához kapcsolódó építőelemeket_
@@ -81,70 +63,99 @@ Különféle szervezetek számtalan együttműködésen alapuló erőfeszítést
 - [Baseline Project](https://www.baseline-protocol.org/) - _A Baseline Protocol egy olyan eszköz- és könyvtárkészlet, amely segít a vállalatoknak az összetett, többszereplős üzleti folyamatok és munkafolyamatok adatvédelmi szempontból történő koordinálásában, miközben az adatok a megfelelő nyilvántartási rendszerekben maradnak. A szabvány lehetővé teszi, hogy két vagy több állapotgép elérje és fenntartsa az adatok konzisztenciáját és a munkafolyamatok folytonosságát a hálózat közös referenciakeretként való használatával._
 - [Chainlens](https://www.chainlens.com/) - _SaaS és on-prem blokklánc adat- és elemzési platform a Web3 Labs-től_
 - [Ernst & Young 'Nightfall'](https://github.com/EYBlockchain/nightfall_3) - _egy alkalmazás az ERC-20, ERC-721 és ERC-1155 alkalmazások átvitelére zero-knowledge módon, optimista összesítés használatával_
-- [Truffle Suite](https://trufflesuite.com) - _blokkláncfejlesztési csomag (Truffle, Ganache, Drizzle)_
 
 ### Skálázási megoldások {#scalability-solutions}
 
-A [második blokkláncréteget (L2)](/layer-2) olyan technológiák vagy rendszerek alkotják, melyek az Ethereumon (L1) futnak, öröklik a biztonsági tulajdonságait az L1-től és nagyobb tranzakciófeldolgozási kapacitást (átvitelt) biztosítanak, alacsonyabb tranzakciós illetékkel (működési költség) és gyorsabb tranzakciómegerősítéssel, mint az L1 esetében. A 2. rétegű skálázási megoldások biztonságát az 1. réteg szolgáltatja, de a blokklánc alkalmazások számára elérhetővé teszik, hogy több felhasználót, tevékenységet vagy adatot kezeljenek, mint amire az 1. réteg képes lenne. A legtöbbjük a kriptográfiában és a zéró-tudású (ZK) bizonyíték kapcsán elért fejlődési eredményeket használja, hogy növelje a teljesítményt és a biztonságot.
-
-Amennyiben Ön az alkalmazását egy L2 skálázási megoldásra építi, az [megoldhat több olyan problémát, mely korábban a cégeket arra késztette, hogy egy privát blokkláncon fejlesszenek](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), mégis megtartja a főhálózat előnyeit.
+A legtöbb új blokklánc-alkalmazás az [L2](/layer-2) láncokra épül. A második blokkláncréteget (L2) olyan technológiák vagy rendszerek alkotják, melyek az Ethereumon (L1) futnak, öröklik a biztonsági tulajdonságait az L1-től és nagyobb tranzakciófeldolgozási kapacitást (átvitelt) biztosítanak, alacsonyabb tranzakciós illetékkel (működési költség) és gyorsabb tranzakciómegerősítéssel, mint az L1 esetében. A 2. rétegű skálázási megoldások biztonságát az 1. réteg szolgáltatja, de a blokklánc alkalmazások számára elérhetővé teszik, hogy több felhasználót, tevékenységet vagy adatot kezeljenek, mint amire az 1. réteg képes lenne. A legtöbbjük a kriptográfiában és a zéró-tudású (ZK) bizonyíték kapcsán elért fejlődési eredményeket használja, hogy növelje a teljesítményt és a biztonságot, és néhányuk az adatvédelem újabb szintjét kínálja.
 
 ## Vállalati alkalmazások a főhálózaton {#enterprise-live-on-mainnet}
 
-Az alábbiakban néhány olyan vállalati alkalmazást talál, amelyeket a nyilvános Ethereum főhálózatra telepítettek
+Íme néhány olyan vállalati alkalmazás, amelyet hagyományos, nem blokklánc alapú vállalatok építettek a nyilvános Ethereum főhálózatra és L2-re.
 
 ### Fizetések {#payments}
 
-- A [Brave Browser](https://basicattentiontoken.org/) _a felhasználóknak fizet, hogy hirdetéseket nézzenek, a felhasználók pedig fizetéssel támogathatják a kiadókat a Basic Attention Token segítségével._
-- [hCaptcha](https://www.hcaptcha.com/) _Botkizáró CAPTCHA rendszer, amely fizet a weboldal működtetőinek a felhasználók által végzett munkáért, akik a gépi tanulás számára jelölik az adatokat. Már telepítve van a Cloudflare-en is._
-- Az [EthereumAds](https://ethereumads.com/) _lehetővé teszi a weboldal működtetőinek, hogy reklámhelyeket értékesítsenek és az Ethereum keresztül kapjanak érte pénzt_
+- A [Brave Browser](https://basicattentiontoken.org/) - _a felhasználóknak fizet, hogy hirdetéseket nézzenek, a felhasználók pedig fizetéssel támogathatják a kiadókat a Basic Attention Token segítségével._
+- [Lugano városa Svájcban](https://bitcoinsuisse.com/news/city-of-lugano-accepts-crypto-payments) - _adófizetés és egyéb önkormányzati szolgáltatások_
+- Az [EthereumAds](https://ethereumads.com/) - _lehetővé teszi a weboldal működtetőinek, hogy reklámhelyeket értékesítsenek és az Ethereumon keresztül kapjanak érte pénzt_
+- [hCaptcha](https://www.hcaptcha.com/) - _Botkizáró CAPTCHA rendszer, amely fizet a weboldal működtetőinek a felhasználók által végzett munkáért, akik a gépi tanulás számára jelölik az adatokat. Már telepítve van a Cloudflare-en is._
+- [Opera MiniPay](https://www.opera.com/products/minipay) - _megkönnyíti és biztonságosabbá teszi a mobilfizetést az Afrikában élők számára, akiknek egy saját felügyeletű tárcával és telefonszámokkal egyszerűbbé teszi a tranzakciókat_
+- [Roxpay](https://www.roxpay.ch/) - _automatizálja a használat alapú eszközszámlázást és fizetést_
+- [SAP Digital Currency Hub](https://community.sap.com/t5/technology-blogs-by-sap/cross-border-payments-made-easy-with-digital-money-experience-the-future/ba-p/13560384) - _határokon átnyúló fizetések stabil érmékkel_
+- [Toku](https://www.toku.com/) - _bérszámfejtés, tokenalapú ösztöndíjak adminisztrációja, adózás, helyi alkalmazás, jövedelmezés és elosztott HR-megoldások_
+- [Xerof](https://www.xerof.com/) - _gyors és alacsony költségű nemzetközi (határokon átívelő) vállalatok közötti (B2B) fizetések intézése_
 
 ### Pénzügy {#finance}
 
-- [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _kötvénykibocsátás és elszámolás_
-- [Societe Generale](https://www.generali-investments.com/it/en/institutional/article/generali-investments-and-generali-iard-carry-out-first-market-transaction-based-on-blockchain-infrastructure) _kötványkibocsátás_
-- [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _kötvényajánlat és FAT Brand-ek tokenizálása_
-- [Sila](https://silamoney.com/) _bankolásra és ACH-fizetésre szolgáló infrastruktúra mint szolgáltatás egy stabil érmét használva_
-- [Taurus](https://www.taurushq.com/) _tokenizált részvények kibocsátása_
+- [ABN AMRO](https://tokeny.com/tokeny-fuels-abn-amro-bank-in-tokenizing-green-bonds-on-polygon/) - _a Tokeny révén tokenizált, zöld kötvények_
+- [Crowdz](https://crowdz.io/) - _platform számlák/követelések pénzügyi kezelésére és faktoringjára_
+- [Mata Capital](https://consensys.io/blockchain-use-cases/finance/mata-capital) - _ingatlanbefektetések tokenizálása_
+- [Obligate](https://www.obligate.com/) - _szabályozott és ellenőrzött (KYC) láncon belüli kötvények és kereskedelmi papírok_
+- [Siemens](https://press.siemens.com/global/en/pressrelease/siemens-issues-first-digital-bond-blockchain) - _kötvénykibocsátás_
+- [Sila](https://silamoney.com/) - _bankolásra és ACH-fizetésre szolgáló infrastruktúra mint szolgáltatás egy stabil érmét használva_
+- [Societe Generale FORGE](https://www.sgforge.com/product/bonds/) - _kötvénykibocsátás_
+- [Taurus](https://www.taurushq.com/) - _tokenizált részvények kibocsátása_
 
 ### Eszköztokenizálás {#tokenization}
 
-- A [Tinlake](https://tinlake.centrifuge.io/) _követelések finanszírozását végzi tokenizált valós eszközökön keresztül, mint például a számlák, jelzálogok vagy műsorszolgáltatási jogdíjak_
-- A [RealT](https://realt.co/) _révén a befektetők a világ minden részéről vásárolhatnak az amerikai ingatlanpiacon a szabályozásnak megfelelő, tokenizált résztulajdont._
-- Az [AgroToken](https://agrotoken.io/en/home) _mezőgazdasági anyagokat tokenizál és kereskedik velük_
-- A [Fasset](https://www.fasset.com/) _egy platform a fenntartható infrastruktúráért_
+- Az [AgroToken](https://agrotoken.io/en/) - _mezőgazdasági anyagokat tokenizál és kereskedik velük_
+- [Bitbond](https://www.bitbond.com/) - _tokenizálással javítja a pénzügyi eszközök kibocsátását, rendezését és őrzését_
+- [Blocksquare](https://blocksquare.io/) - _tokenizálási infrastruktúra ingatlanokhoz_
+- [Centrifuge](https://centrifuge.io/) - _tokenizált követelések finanszírozása, tartozások és eszközök kezelése_
+- [Clearmatics](https://www.clearmatics.com) - _decentralizált hálózati platformok építése a tokenizált értékek társközi (peer-to-peer) átváltásához_
+- [dClimate](https://www.dclimate.net/) - _decentralizált klímainformációs ökoszisztéma_
+- [Fabrica](https://www.fabrica.land/) - _platform az ingatlanok digitalizálására, beleértve a DeFi kölcsönzést és az ingatlanokkal való kereskedelmet_
+- A [Fasset](https://www.fasset.com/) - _egy platform a fenntartható infrastruktúráért_
+- [Nori](https://nori.com/) - _nyílt forráskódú piaci infrastruktúra a karboncsökkentési projektek számára, hogy mérhessék és monetizálhassák tevékenységüket_
+- [Propy](https://propy.com/) - _platform a lakossági ingatlanügyletek automatizálására okosszerződésekkel_
+- A [RealT](https://realt.co/) - _révén a befektetők a világ minden részéről vásárolhatnak az amerikai ingatlanpiacon a szabályozásnak megfelelő, tokenizált résztulajdont_
+- [Rubey](https://www.rubey.be/) - _platform a felsőfokú művészet tokenizálásához, hogy azok elérhetők legyenek a kiskereskedelmi befektetőknek_
+- [Swarm](https://swarm.com/) - _platform a fizikai eszközök digitalizálására és a szabályozásnak megfelelő kereskedelmére _
+- [Thallo](https://www.thallo.io/) - _platform a digitális karbon kreditek üzleti tranzakciókba való integrálására_
+- [Tokenchampions](https://tokenchampions.com/) - _tokenizálja az európai focijátékosok képeinek jogait_
 
 ### Adatok notarizációja {#notarization-of-data}
 
-- [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _a véglegesített hitelek adatait hash-elik és a főhálózaton rögzítik_
-- [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _Olaszország legnagyobb hírügynöksége az álhírek ellen küzd, és lehetővé teszi az olvasók számára, hogy a hírek eredetét a főhálózaton történő rögzítéssel ellenőrizzék_
-- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _Naplózza a sajtóközleményeket az Ethereumon a vállalati elszámoltathatóság és bizalom biztosítása érdekében_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _az órák származását és javítási történetét rögzíti az Ethereumon_
-- [EthSign](https://ethsign.xyz/) _feljegyezi az Ethereum-blokkláncra az aláírt elektronikus dokumentumokat_
+- [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html) - _Olasz hírügynökség, mely az álhírek ellen küzd, és lehetővé teszi az olvasók számára, hogy a hírek eredetét a főhálózaton történő rögzítéssel ellenőrizzék_
+- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) - _az órák származását és javítási történetét rögzíti az Ethereumon_
+- [BRØK](https://www.xn--brk-1na.no/) - _platform a tőzsdén nem jegyzett társaságoknak, melyet a norvég kormány biztosít_
+- [Certifaction](https://certifaction.com/) - _legálisan érvényes elektronikus aláírások, melynek eleve része az adatvédelem_
+- [EthSign](https://ethsign.xyz/) - _feljegyezi az Ethereum-blokkláncra az aláírt elektronikus dokumentumokat_
+- [Stacktical](https://stacktical.com/) - _szoftverfejlesztés, szolgáltatásiszint-megegyezés (SLA) digitális biztosítása és aláírása natív letétbe helyezési képességekkel_
+- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) - _Naplózza a sajtóközleményeket az Ethereumon a vállalati elszámoltathatóság és bizalom biztosítása érdekében_
+- [WolfTown](https://www.mef.net/edge-view-blog/automated-secure-timely-sla-reporting-is-finally-a-reality/) - _MEF és Sage Management által automatizált szolgáltatásiszint-megegyezés (SLA) riportálása a távközlési szolgáltatók között_
 
 ### Ellátási lánc {#supply-chain}
 
-- A [Morpheus.network](https://morpheus.network/) _egy ellátásilánc-automatizálási platform, amely egy privát láncokból és a notarizált adatokat tartalmazó Ethereum főhálózatból álló hibridet vezetett be, és olyan cégek használják, mint a kanadai élelmiszer-, olaj- és gázelosztó Federated Co-op Ltd. vagy az argentin kisállateledel-gyártó Vitalcan_
-- [Minespider](https://www.minespider.com/) _ellátási lánc nyomon követése_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _egy beszerzési munkafolyamatot biztosít a cégek számára, melynek során ajánlatbekéréseket (RFQ), szerződéseket, rendeléseket és számlákat bocsát ki az Ön megbízható üzleti partnereiből álló hálózatán keresztül_
-- [Treum](https://treum.io/) _átláthatóságot, nyomonkövethetőséget és kereskedési lehetőséget biztosít ellátási láncoknak blokklánc-technológia használatával_
-- [TradeTrust](https://www.tradetrust.io/) _az elektronikus fuvarleveleket (eBLs) ellenőrzi a nemzetközi szállításban_
+- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _NFT-ket készít minden egyes új tétel sörhöz, ami nagyobb átláthatóságot és hatékonyságot tesz lehetővé az ellátási láncban_
+- [CargoX](https://cargox.io/) - _Elektronikus fuvarlevél- és okmánytovábbítási szolgáltató szállításhoz_
+- [Circularize](https://www.circularise.com/) - _elejétől a végéig lekövethető megoldás arra, ahogy a nyersanyagokból késztermékek lesznek_
+- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) - _egy beszerzési munkafolyamatot biztosít a cégek számára, melynek során ajánlatbekéréseket (RFQ), szerződéseket, rendeléseket és számlákat bocsát ki az üzleti partnereiből álló hálózatán keresztül_
+- [Minespider](https://www.minespider.com/) - _ellátási lánc, eredet és Co2 kibocsátás nyomon követése_
+- [Morpheus.network](https://morpheus.network/) - _platform az ellátási lánc automatizálására_
+- [StaTwig](https://statwig.com/) - _ellátási lánc működtetése_
+- [TradeTrust](https://www.tradetrust.io/) - _az elektronikus fuvarleveleket (eBLs) ellenőrzi a nemzetközi szállításban_
+- [Transmute](https://transmute.industries/) - _adatcsereplatform a globális kereskedelem számára, amely támogatja az Ethereumon a decentralizált identitással való tranzakciókat_
 
 ### Biztosítás {#insurance}
 
-- [Arbol](https://www.arbolmarket.com/) _egy parametrikus biztosítás az időjárásból eredő kockázatok fedezésére_
-- [Etherisc](https://etherisc.com/) _decentralizált biztosítás különféle kockázatokra_
+- [Arbol](https://www.arbolmarket.com/) - _egy parametrikus biztosítás az időjárásból eredő kockázatok fedezésére_
+- [Etherisc](https://etherisc.com/) - _decentralizált biztosítás különféle kockázatokra_
+- [Nayms](https://www.nayms.com/) - _az AON-nal együtt épített digitális tér arra, hogy biztosítási programokat hozzanak létre, tőkét gyűjtsenek és helyezzenek ki, kockázatot írjanak le, valamint díj- és kárigény-tranzakciók fizetését intézzék_
 
-### Hitelesítő adatok és tanúsítványok {#credentials}
+### Identitás, hitelesítőadatok és tanúsítványok {#credentials}
 
-- [Két olasz középiskola](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _az Ethereum főhálozaton kiállított digitális diplomákat használ_
-- [Szt. Galleni Egyetem](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _Kísérleti projekt a svájci egyetemek diplomáinak ellenőrzésére_
-- [Hyland Credentials](https://www.hylandcredentials.com) _digitális diplomákat és más oktatási igazolványokat, engedélyeket és bizonyítványokat bocsát ki_
-- [OpenCerts](https://opencerts.io/faq) _blokkláncoktatási bizonyítványokat ad ki Szingapúrban_
-- [BlockCerts](https://www.blockcerts.org/) _egy nyílt szabványt fejlesztett a blokklánc-hitelesítőknek _
+- [BCdiploma](https://www.bcdiploma.com/) - _digitalizálja és ellenőrzi az okiratokat, tanúsítványokat és a mikro hitelesítési adatokat_
+- [Hyland Credentials](https://www.hylandcredentials.com) - _digitális diplomákat és más oktatási igazolványokat, engedélyeket és bizonyítványokat bocsát ki_
+- [Palau Digital Residency Program](https://rns.id/) - _a világpolgárok részére lehetővé teszi egy legális, a Palau kormány által kiadott igazolvány megszerzését_
+- [Spherity](https://www.spherity.com/) - _digitális identitáskezelési megoldásokat kínál, hogy az ökoszisztémában megalapozza a digitális bizalmat, fókuszálva a decentralizált identitásra és az ellenőrizhető hitelesítő adatokra_
+- [Zug Digital ID](https://ezug.ch/en/) - _egy blokkláncalapú identitásrendszer Svájcban, amely digitális hozzáférést biztosít a kormány által nyújtott szolgáltatásokhoz, és olyan a funkciókat is támogat, mint az online biciklikölcsönzés és a helyhatósági szavazás_
 
-### Eszközök {#utilities}
+### Szórakozás, NFT-k és hűségprogramok
 
-- [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _Áramdíjfizetés_
+- [Adidas Virtual Gear](https://www.adidas.com/metaverse) - _virtuális felszerelések NFT-gyűjteménye_
+- [The British Museum's Sandbox](https://decrypt.co/150405/british-museum-enter-metaverse-via-sandbox) - _egy NFT-gyűjtemény_
+- [Fruitlab](https://fruitlab.com/) - _platform a játékosoknak, hogy az online játékok megtekintése, megosztása és használata során jövedelemhez jussanak_
+- [Nike Swoosh](https://www.swoosh.nike/) - _egy NFT-platform_
+- [Sothbebys Metaverse](https://metaverse.sothebys.com/) - _egy digitális művészeti NFT-piactér a Sothebys által_
 
 Ha szeretne valamit hozzáadni a listához, akkor tekintse át a [közreműködésre vonatkozó instrukciókat](/contributing/).

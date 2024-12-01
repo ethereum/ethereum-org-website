@@ -4,7 +4,7 @@ description: Базовые стандарты, которых мы старае
 lang: ru
 ---
 
-# Нормы поведения {#conduct-intro}
+# Нормы поведения {#code-of-conduct}
 
 ## Цель {#mission}
 

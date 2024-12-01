@@ -16,11 +16,11 @@ L'intérêt grandissant pour la cryptomonnaie amène avec lui un risque croissan
 
 Une mauvaise compréhension de la façon dont fonctionnent les cryptomonnaies peut amener à des erreurs coûteuses. Par exemple, si quelqu'un prétend être un agent d'un service client qui peut vous rendre vos ETH perdus en échange de vos clés privées, ils s'attaquent aux personnes ne comprenant pas qu'Ethereum est un réseau décentralisé manquant de ce genre de fonctionnalité. S'informer sur le fonctionnement d'Ethereum est un investissement qui en vaut la peine.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Qu'est-ce qu'Ethereum&nbsp;?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Qu'est-ce-que l'ether ?
 </DocLink>
 <Divider />
@@ -33,7 +33,7 @@ Une mauvaise compréhension de la façon dont fonctionnent les cryptomonnaies pe
 
 La clé privée de votre portefeuille fait office de mot de passe pour votre portefeuille Ethereum. Il s'agit de la seule chose qui empêche quelqu'un qui connaît l'adresse de votre portefeuille de vider votre compte de ses actifs !
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Qu'est-ce qu'un portefeuille Ethereum ?
 </DocLink>
 
@@ -242,8 +242,7 @@ Utilisez **l'authentification à deux facteurs (2FA)** fournit un *facteur de s�
 
 <InfoBanner emoji=":lock:">
   <div>
-    Note : Utiliser l'envoi d'un code SMS comme 2FA n'est pas une méthode sûre 
-à cause des possibilités de <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">piratage de la SIM </a>. Pour une sécurité maximale, utilisez un service comme  <a href="https://mashable.com/article/how-to-set-up-google-authenticator"> Google Authentificator</a> ou <a href="https://authy.com/">Authy</a>.
+    Note : Utiliser l'envoi d'un code SMS comme 2FA n'est pas une méthode sûre à cause des possibilités de <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">piratage de la SIM </a>. Pour une sécurité maximale, utilisez un service comme <a href="https://mashable.com/article/how-to-set-up-google-authenticator"> Google Authenticator</a> ou <a href="https://authy.com/">Authy</a>.
   </div>
 </InfoBanner>
 

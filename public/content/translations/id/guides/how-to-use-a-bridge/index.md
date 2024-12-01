@@ -54,7 +54,7 @@ Anda dapat menggunakan [chainlist.org](http://chainlist.org) untuk menemukan det
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Ingin mempelajari selengkapnya?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Lihat panduan lainnya
   </ButtonLink>
 </InfoBanner>

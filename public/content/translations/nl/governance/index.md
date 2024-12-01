@@ -20,11 +20,11 @@ Niemand bezit of beheert het Ethereum-protocol. Er moeten echter nog steeds besl
 
 ## Ethereum governance {#ethereum-governance}
 
-Ethereum governance is het proces waarmee protocolwijzigingen worden aangebracht. Het is belangrijk om erop te wijzen dat dit proces niet gerelateerd is aan de manier waarop mensen en applicaties het protocol gebruiken - Ethereum is permissieloos. Iedereen van overal ter wereld kan deelnemen aan on-chain activiteiten. Er zijn geen regels ingesteld voor wie wel of niet een toepassing kan bouwen of een transactie kan verzenden. Er is echter een proces aan de gang om wijzigingen voor te stellen in het kernprotocol, waar deze applicaties bovenop draaien. Omdat zoveel mensen afhankelijk zijn van de stabiliteit van Ethereum, is er een zeer hoge coördinatiedrempel voor kernveranderingen, inclusief sociale en technische processen, om ervoor te zorgen dat eventuele wijzigingen aan Ethereum veilig zijn en gesteund worden door de gemeenschap.
+Ethereum governance is het proces waarmee protocolwijzigingen worden aangebracht. Het is belangrijk om erop te wijzen dat dit proces niet gerelateerd is aan de manier waarop mensen en applicaties het protocol gebruiken - Ethereum is permissieloos. Iedereen van overal ter wereld kan deelnemen aan on-chain activiteiten. Er zijn geen regels ingesteld voor wie wel of niet een toepassing kan bouwen of een transactie kan verzenden. Er is echter een proces om wijzigingen aan het kernprotocol voor te stellen, waar gedecentraliseerde applicaties bovenop draaien. Omdat zoveel mensen afhankelijk zijn van de stabiliteit van Ethereum, is er een zeer hoge coördinatiedrempel voor kernveranderingen, inclusief sociale en technische processen, om ervoor te zorgen dat eventuele wijzigingen aan Ethereum veilig zijn en gesteund worden door de gemeenschap.
 
 ### On-chain vs off-chain governance {#on-chain-vs-off-chain}
 
-Blockchain-technologie maakt nieuwe governance-capaciteiten mogelijk, bekend als on-chain governance. On-chain governance is wanneer de voorgestelde wijzigingen in het protocol worden besloten door een stemming van belanghebbenden, meestal door houders van een governance token. Het stemmen vindt plaats op de blockchain. Bij sommige vormen van on-chain governance zijn de voorgestelde protocolwijzigingen al in code geformuleerd en worden automatisch geïmplementeerd als de belanghebbenden de wijzigingen goedkeuren.
+Blockchain-technologie maakt nieuwe governance-capaciteiten mogelijk, bekend als on-chain governance. On-chain governance is wanneer de voorgestelde wijzigingen in het protocol worden besloten door een stemming van belanghebbenden, meestal door houders van een governance token. Het stemmen vindt plaats op de blockchain. Bij sommige vormen van on-chain governance zijn de voorgestelde protocolwijzigingen al in code geformuleerd en worden deze automatisch geïmplementeerd als de belanghebbenden de wijzigingen goedkeuren.
 
 De tegenovergestelde benadering, off-chain governance, is het proces waarbij beslissingen over protocolwijzigen plaatsvinden via een informeel proces van maatschappelijke discussie, die, als ze worden goedgekeurd, in code zouden worden omgezet.
 
@@ -32,7 +32,7 @@ De tegenovergestelde benadering, off-chain governance, is het proces waarbij bes
 
 _Terwijl governance bij Ethereum op protocolniveau off-chain is, gebruiken veel use-cases die zijn gebouwd bovenop Ethereum, zoals DAO's, on-chain governance._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Meer over DAO's
 </ButtonLink>
 
@@ -47,8 +47,8 @@ Er zijn verschillende belanghebbenden in de [Ethereum-gemeenschap](/community/),
 - **Applicatie-/gereedschapsontwikkelaars**: deze mensen schrijven applicaties die worden uitgevoerd op de Ethereum-blockchain (bijv. DeFi, NFT's, enz.) of bouwen gereedschap om te communiceren met Ethereum (bijv. portemonnees, testsuites, enz.). [Meer over dapps](/dapps/).
 - **Nodebeheerders**: deze mensen voeren nodes uit die blokken en transacties propageren, waarbij ze elke ongeldige transactie of blok die ze tegenkomen verwerpen. [Meer over nodes](/developers/docs/nodes-and-clients/).
 - **EIP-auteurs**: deze mensen stellen wijzigingen voor aan het Ethereum-protocol, in de vorm van Ethereum-verbeteringsvoorstellen (EIPs). [Meer over EIPs](/eips/).
-- **Miners/Validators**: deze mensen voeren nodes uit die nieuwe blokken kunnen toevoegen aan de Ethereum-blockchain.
-- **Protocolontwikkelaars** (oftewel "kernontwikkelaars" ): deze mensen onderhouden de verschillende Ethereum-implementaties (bijv. go-ethereum, Nethermind, Besu, Erigon in de executielaag of Prysm, Lighthouse, Nimbus, Teku, Lodestar in de consensuslaag). [Meer over Ethereum clients](/developers/docs/nodes-and-clients/).
+- **Validators**: deze mensen draaien nodes die nieuwe blokken kunnen toevoegen aan de Ethereum-blockchain.
+- **Protocolontwikkelaars** (oftewel "Kernontwikkelaars" ): deze mensen onderhouden de verschillende Ethereum-implementaties (bijv. go-ethereum, Nethermind, Besu, Erigon in de uitvoeringslaag of Prysm, Lighthouse, Nimbus, Teku, Lodestar in de consensuslaag). [Meer over Ethereum clients](/developers/docs/nodes-and-clients/).
 
 _Opmerking: elk individu kan deel uitmaken van meerdere van deze groepen (bijv. een protocolontwikkelaar kan een EIP steunen en een Beacon Chain-validator uitvoeren en DeFi-applicaties gebruiken). Voor conceptuele duidelijkheid is het echter het gemakkelijkst om ze te onderscheiden._
 
@@ -56,9 +56,9 @@ _Opmerking: elk individu kan deel uitmaken van meerdere van deze groepen (bijv. 
 
 ## Wat is een EIP? {#what-is-an-eip}
 
-Een belangrijk proces dat wordt gebruikt in Ethereum governance is het voorstel van **Ethereum Improvement Proposals (EIPs)**. EIP's zijn standaarden die potentiële nieuwe functies of processen voor Ethereum specificeren. Iedereen binnen de Ethereum-gemeenschap kan een EIP maken. Zo heeft bijvoorbeeld geen van de auteurs van EIP-721, het EIP dat NFT's gestandaardiseerd heeft, direct aan de ontwikkeling van het protocol van Ethereum gewerkt.
+Een belangrijk proces dat wordt gebruikt in Ethereum governance is het voorstel van **Ethereum Improvement Proposals (EIPs)**. EIP's zijn standaarden die potentiële nieuwe functies of processen voor Ethereum specificeren. Iedereen binnen de Ethereum-gemeenschap kan een EIP maken. Als je geïnteresseerd bent in het schrijven van een EIP of wilt deelnemen aan collegiale toetsing en/of bestuur, kijk dan op:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Meer over EIP's
 </ButtonLink>
 
@@ -90,7 +90,7 @@ Deze stroom, hoewel zeer vereenvoudigd, geeft een overzicht van de belangrijke f
 
 ### Voorafgaand werk begrijpen {#prior-work}
 
-EIP Champions zouden zich vertrouwd moeten maken met eerder werk en voorstellen alvorens een EIP te creëren die serieus overwogen kan worden om in het Ethereum Mainnet te worden ingezet. Op deze manier brengt het EIP hopelijk iets nieuws mee dat eerder niet is verworpen. De drie belangrijkste plaatsen om dit te onderzoeken zijn de [EIP repository](https://github.com/ethereum/eips), [Ethereum Magicians](https://ethereum-magicians.org/) en [ethresear.ch](https://ethresear.ch/).
+EIP Champions zouden zich vertrouwd moeten maken met eerder werk en voorstellen alvorens een EIP te creëren die serieus overwogen kan worden om in het Ethereum Mainnet te worden ingezet. Op deze manier brengt het EIP hopelijk iets nieuws mee dat eerder niet is verworpen. De drie belangrijkste plaatsen om dit te onderzoeken zijn de [EIP repository](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) en [ethresear.ch](https://ethresear.ch/).
 
 ### Werkgroepen {#working-groups}
 
@@ -98,9 +98,9 @@ Het is onwaarschijnlijk dat de eerste versie van een EIP zonder bewerkingen of v
 
 ### Gemeenschapsconsensus {#community-consensus}
 
-Hoewel enkele EIP's eenvoudige technische verbeteringen zijn met minimale nuance, zijn sommige complexer en inherent een tradeoff die verschillende belanghebbenden op verschillende manieren zullen treffen. Dit betekent dat sommige EIP's binnen de gemeenschap controversiëler zijn dan andere.
+Hoewel sommige EIP's eenvoudige technische verbeteringen zijn met minimale nuance, zijn sommige complexer en komen met afwegingen die verschillende belanghebbenden op verschillende manieren zullen treffen. Dit betekent dat sommige EIP's binnen de community controversiëler zijn dan andere.
 
-Er is geen duidelijk draaiboek over hoe omgegaan moet worden met controversiële voorstellen. Daar protocolontwikkelaars geen enkele manier hebben om mensen te dwingen om netwerkupgrades te accepteren, zullen ze het over het algemeen vermijden om EIP's uit te voeren wanneer de betwistbaarheid ervan zwaarder weegt dan de voordelen voor de bredere gemeenschap.
+Er is geen duidelijk draaiboek over hoe omgegaan moet worden met controversiële voorstellen. Dit is het resultaat van het gedecentraliseerde ontwerp van Ethereum, waarbij geen enkele groep belanghebbenden de andere kan dwingen door middel van brute kracht: protocolontwikkelaars kunnen ervoor kiezen om geen codewijzigingen door te voeren; nodebeheerders kunnen ervoor kiezen om niet de nieuwste Ethereum-client te draaien; applicatieteams en gebruikers kunnen ervoor kiezen om geen transacties te doen op de chain. Aangezien protocolontwikkelaars geen enkele manier hebben om mensen te dwingen om netwerkupgrades te accepteren, zullen ze het over het algemeen vermijden om EIP's te implementeren wanneer de betwistbaarheid ervan zwaarder weegt dan de voordelen voor de bredere gemeenschap.
 
 Van de EIP-Champions wordt verwacht dat ze om feedback vragen van alle relevante belanghebbenden. Als uzelf de Champion bent van een omstreden EIP, moet u proberen om de bezwaren aan te pakken om consensus te creëren rond uw EIP. Gezien de grootte en diversiteit van de Ethereum-gemeenschap is er geen enkele statistiek (bijv. een muntstemming) die gebruikt kan worden om de consensus van de gemeenschap te meten, en van de EIP Champions wordt verwacht dat ze zich aanpassen aan de omstandigheden van hun voorstel.
 
@@ -120,7 +120,7 @@ Forks zijn de momenten waarop grote technische verbeteringen of veranderingen in
 
 De DAO-fork was een reactie op de [DAO-aanval van 2016](https://www.coindesk.com/understanding-dao-hack-journalists) waarbij een onveilig [DAO](/glossary/#dao)-contract meer dan dan 3,6 miljoen ETH verloor in een hack. De fork verplaatste de fondsen van het foutieve contract naar een nieuw contract, waardoor iedereen die in de hack geld had verloren dit kon terugvorderen.
 
-Deze handelswijze werd via een stemming door de Ethereum-gemeenschap goedgekeurd. Elke ETH-houder kon stemmen via een transactie op [een stemplatform](http://v1.carbonvote.com/). Het besluit om te forken behaalde meer dan 85 procent van de stemmen.
+Deze handelswijze werd via een stemming door de Ethereum-gemeenschap goedgekeurd. Elke ETH-houder kon stemmen via een transactie op [een stemplatform](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Het besluit om te forken behaalde meer dan 85 procent van de stemmen.
 
 Het is belangrijk om op te merken dat, hoewel het protocol een fork uitvoerde om de hack terug te draaien, het belang dat de stemming over de beslissing om te forken discutabel is om een paar redenen:
 
@@ -146,15 +146,15 @@ De mogelijkheid om te forken ten aanzien van aanzienlijke politieke, filosofisch
 
 <Divider />
 
-## Beacon Chain-ontwikkeling {#beacon-chain}
+## Beacon Chain governance {#beacon-chain}
 
 Het governance-proces van Ethereum weegt vaak snelheid en efficiëntie af tegen openheid en inclusiviteit. Om de ontwikkeling van de Beacon Chain te versnellen, werd het losgekoppeld van het proof-of-work Ethereum-netwerk en heeft het zijn eigen bestuurspraktijken gevolgd.
 
-Hoewel de ontwikkeling van specificaties en implementaties altijd volledig open source is geweest, werden de formele processen die werden gebruikt om de hierboven beschreven updates voor te stellen niet gebruikt. Hierdoor konden onderzoekers en uitvoerders sneller wijzigingen doorvoeren en hierover overeenstemming bereiken.
+Hoewel de specificatie en de ontwikkelingsimplementaties altijd volledig open-source zijn geweest, werden de formele processen om updates voor te stellen zoals hierboven beschreven niet gebruikt. Hierdoor konden onderzoekers en uitvoerders sneller wijzigingen doorvoeren en hierover overeenstemming bereiken.
 
-Wanneer de Beacon Chain samenvalt met de uitvoeringslaag van Ethereum, zal het governance-proces om wijzigingen voor te stellen worden geharmoniseerd. Dit proces om de merge te implementeren is [al gaande](https://eips.ethereum.org/EIPS/eip-3675).
+Toen de Beacon Chain fuseerde met de Ethereum-uitvoeringslaag op 15 september 2022, was The Merge voltooid als onderdeel van de [netwerkupgrade van Parijs](/geschiedenis/#paris). Het voorstel [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) werd gewijzigd van 'Laatste oproep' naar 'Definitief', waarmee de overgang naar proof-of-stake werd voltooid.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Meer over de merge
 </ButtonLink>
 
@@ -178,5 +178,5 @@ Governance in Ethereum is niet strikt gedefinieerd. Verschillende deelnemers van
 - [How does Ethereum Governance work?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [How Ethereum governance works](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [What is an Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [Governance, Deel 2: Plutocratie is nog steeds Bad](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [Opmerkingen over Blockchain Governance](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [Governance, Part 2: Plutocracy Is Still Bad](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [Moving beyond coin voting governance](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_

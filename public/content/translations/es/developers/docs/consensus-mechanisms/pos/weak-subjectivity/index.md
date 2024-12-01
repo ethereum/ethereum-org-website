@@ -1,12 +1,12 @@
 ---
-title: Subjetividad débil
+title: Subjetividad debil
 description: Una explicacion de la subjetividad debil y su función en PoS Ethereum.
 lang: es
 ---
 
 La subjetividad en la cadena de bloques hace referencia a la confianza social en la información para acordar el estado actual. Puede haber múltiples bifurcaciones válidas que se elijan de acuerdo a la información recopilada de otros pares de la red. La conversión es la objetividad que se refiere a las cadenas en las que sólo existe una cadena válida posible sobre la que todos los nodos necesariamente estarán de acuerdo aplicando sus reglas codificadas. También existe un tercer estado, conocido como subjetividad débil. Esto se refiere a una cadena que puede progresar objetivamente después de que alguna semilla inicial de información se recupere socialmente.
 
-## Requisitos previos {#prerequisites}
+## Pre requisitos {#prerequisites}
 
 Para entender esta página, es necesario primero familiarizarse con los fundamentos de la [Prueba de participación](/developers/docs/consensus-mechanisms/pos/).
 

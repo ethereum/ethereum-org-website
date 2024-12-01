@@ -32,7 +32,7 @@ Der gegenteilige Ansatz ist die Off-Chain-Governance. Dabei werden Entscheidunge
 
 _Governance auf Protokollebene erfolgt bei Ethereum off-chain, doch bei Anwendungsfällen, die auf Ethereum aufbauen, wie zum Beispiel DAOs, greift das System der on-chain Governance._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Mehr zu DAOs
 </ButtonLink>
 
@@ -48,7 +48,7 @@ Es gibt verschiedene Interessensvertreter in der [Ethereum-Community](/community
 - **Node-Betreiber**: Diese Personen betreiben Nodes (Knotenpunkte), die Blöcke und Transaktionen propagieren, indem sie ungültige Transaktionen, auf die sie stoßen, ablehnen oder blockieren. [Mehr zu Nodes](/developers/docs/nodes-and-clients/).
 - **EIP-Autoren**: Diese Personen schlagen Änderungen am Ethereum-Protokoll in Form von Ethereum-Verbesserungsvorschlägen (Ethereum Improvement Proposal, EIP) vor. [Mehr zu EIPs](/eips/).
 - **Validatoren**: Diese Personen betreiben Nodes, die neue Blöcke zur Ethereum-Blockchain hinzufügen können.
-- **Protokollentwickler** (sogenannte „Core Developer“): Diese Personen pflegen die verschiedenen Ethereum-Implementierungen (z. B. go-ethereum, Nethermind, Besu, Erigon auf dem Ausführungslayer oder Prysm, Lighthouse, Nimbus, Teku, Lodestar auf dem Konsensuslayer). [Mehr zu Ethereum-Clients](/developers/docs/nodes-and-clients/).
+- **Protokollentwickler** (sogenannte „Core-Entwickler“): Diese Personen pflegen die verschiedenen Ethereum-Implementierungen (z.B. go-ethereum, Nethermind, Besu, Erigon, Reth auf der Ausführungsebene oder Prysm, Lighthouse, Nimbus, Teku, Lodestar auf der Konsensebene). [Mehr zu Ethereum-Clients](/developers/docs/nodes-and-clients/).
 
 _Hinweis: Jede Person kann Teil von mehreren dieser Gruppen sein (z. B. ein Protokollentwickler kann sich für einen EIP einsetzen und einen Validator für die Beacon Chain ausführen und zudem auch DeFi-Anwendungen nutzen). Doch um das Konzept wirklich zu verstehen, sollte zwischen den einzelnen Gruppen unterschieden werden._
 
@@ -58,7 +58,7 @@ _Hinweis: Jede Person kann Teil von mehreren dieser Gruppen sein (z. B. ein Prot
 
 Ein wichtiger Prozess, der für die Ethereum-Governance zum Tragen kommt, ist die Anregung von **Ethereum-Verbesserungsvorschlägen (EIPs)**. EIPs sind Standards, über die potenzielle neue Funktionen oder Prozesse für Ethereum spezifiziert werden. Alle Personen in der Ethereum-Community haben die Möglichkeit, einen EIP zu erstellen. Wenn Sie daran interessiert sind, eine EIP zu verfassen oder an Peer-Reviews und/oder Governance teilzunehmen, lesen Sie bitte weiter:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Mehr zu EIPs
 </ButtonLink>
 
@@ -120,7 +120,7 @@ Von einem Fork spricht man, wenn größere technische Upgrades oder Änderungen 
 
 Der DAO-Fork erfolgte als Reaktion auf den [2016 DAO-Angriff](https://www.coindesk.com/understanding-dao-hack-journalists), bei dem einem unsicheren [DAO](/glossary/#dao)-Vertrag über 3,6 Millionen ETH durch einen Hack entzogen wurden. Durch den Fork wurden die Gelder aus dem fehlerhaften Vertrag in einen neuen Vertrag übertragen, so dass jeder, der durch den Hack Geld verloren hatte, dieses zurückerhalten konnte.
 
-Die Ethereum-Community hatte über diese Vorgehensweise abgestimmt. Jeder ETH-Inhaber konnte per Transaktion auf [einer Abstimmungsplattform](http://v1.carbonvote.com/) abstimmen. Der Fork wurde mit mehr als 85 % der Stimmen beschlossen.
+Die Ethereum-Community hatte über diese Vorgehensweise abgestimmt. Jeder ETH-Inhaber konnte über eine Transaktion auf [, einer Abstimmungsplattform,](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/) abstimmen. Der Fork wurde mit mehr als 85 % der Stimmen beschlossen.
 
 Es ist wichtig anzumerken, dass sich das Protokoll zwar geteilt hat, um den Hack rückgängig zu machen, doch die Gesamtwirkungskraft der Entscheidung, sich zu teilen, ist aus mehreren Gründen fragwürdig:
 
@@ -154,7 +154,7 @@ Während die Entwicklung der Spezifikation und Implementierungen immer vollstän
 
 Am 15. September 2022 wurde die Fusion der Beacon Chain mit der Ethereum-Ausführungsschicht im Rahmen des [Paris-Netzwerk-Updates](/history/#paris) abgeschlossen. Der Vorschlag [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) wurde von "Last Call" auf "Final" geändert, womit der Übergang zum Proof-of-Stake-Verfahren vollständig abgeschlossen wurde.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Mehr zum Zusammenschluss
 </ButtonLink>
 

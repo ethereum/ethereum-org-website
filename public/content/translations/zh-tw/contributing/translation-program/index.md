@@ -22,7 +22,7 @@ ethereum.org 翻譯計劃是開放的，所有人都可以參與其中！
 
 _加入 [ethereum.org Discord](/discord/) 合作翻譯、提出問題、分享回饋和想法，或加入翻譯小組。_
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   開始翻譯
 </ButtonLink>
 

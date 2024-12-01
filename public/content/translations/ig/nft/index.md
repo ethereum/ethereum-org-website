@@ -77,7 +77,7 @@ Nchekwa Ethereum na-esi n'ihe akaebe-nke-itinye ego abịa. E mere sistemụ a k
 
 Okwu nchekwa metụtara NFT na-abukari ihe gbasara ozi maka iji aghụghọ nara mmadụ ihe, wepụta ngwa kọmputa maọbụ njehie onye ojiji (dị ka iwepụta igodo nkeonwe), na-eme ezigbo nchekwa akap ego ịntanetị taa akpụ nyere ndị nwe NFT.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Ihe ndị i ọzọ na nchekwa
 </ButtonLink>
 

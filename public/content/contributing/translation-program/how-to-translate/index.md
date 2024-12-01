@@ -18,7 +18,7 @@ For more visual learners, watch Luka walk through getting set up with Crowdin. A
 
 You will need to log in to your Crowdin account or sign up if you don’t already have one. All that is required to sign up is an e-mail account and password.
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Join project
 </ButtonLink>
 

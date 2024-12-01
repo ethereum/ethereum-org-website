@@ -56,7 +56,7 @@ summaryPoint3: Υποστηρίζονται από έξυπνα συμβόλαι
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Εξερευνήστε, αγοράστε ή δημιουργήστε το δικό σας NFT τέχνη/συλλεκτικά...</div>
-  <ButtonLink to="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/dapps/?category=collectibles#explore">
     Εξερευνήστε NFT τέχνης
   </ButtonLink>
 </InfoBanner>
@@ -93,7 +93,7 @@ summaryPoint3: Υποστηρίζονται από έξυπνα συμβόλαι
 
 Τα ζητήματα ασφαλείας που σχετίζονται με τα NFT συχνά σχετίζονται με απάτες, με τρωτά σημεία των έξυπνων συμβολαίων ή σφάλματα χρήστη (όπως ακούσια έκθεση των ιδιωτικών κλειδιών), καθιστώντας την καλή ασφάλεια του πορτοφολιού κρίσιμη για τους ιδιοκτήτες NFT.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Περισσότερα για την ασφάλεια
 </ButtonLink>
 

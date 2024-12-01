@@ -4,7 +4,7 @@ description: 如何開始單獨質押你的以太幣概覽
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-withdrawal.png
 alt: 萊斯利犀牛在她自己的電腦晶片上。
 sidebarDepth: 2
 summaryPoints:
@@ -190,7 +190,7 @@ summaryPoints:
 
 要解鎖並拿回全部餘額，你還必須完成退出驗證者的過程。
 
-<ButtonLink to="/staking/withdrawals/">更多關於提取質押代幣的資訊</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">更多關於提取質押代幣的資訊</ButtonLink>
 </ExpandableCard>
 
 ## 延伸閱讀 {#further-reading}

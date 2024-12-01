@@ -1,5 +1,4 @@
 import { Accordion } from "./Accordion"
-import { Alert } from "./Alert"
 import { Avatar } from "./Avatar"
 import { Badge } from "./Badge"
 import { Breadcrumb } from "./Breadcrumb"
@@ -8,7 +7,6 @@ import { Checkbox } from "./Checkbox"
 import {
   closeButtonDefaultTheme,
   codeDefaultTheme,
-  dividerDefaultTheme,
   drawerDefaultTheme,
   formDefaultTheme,
   formLabelDefaultTheme,
@@ -22,7 +20,6 @@ import { Modal } from "./Modal"
 import { Popover } from "./Popover"
 import { Progress } from "./Progress"
 import { Radio } from "./Radio"
-import { ReactSelect } from "./ReactSelect"
 import { Switch } from "./Switch"
 import { Table } from "./Table"
 import { Tabs } from "./Tabs"
@@ -32,7 +29,6 @@ import { Text } from "./Text"
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   Accordion,
-  Alert,
   Avatar,
   Badge,
   Breadcrumb,
@@ -40,7 +36,6 @@ export default {
   Checkbox,
   CloseButton: closeButtonDefaultTheme,
   Code: codeDefaultTheme,
-  Divider: dividerDefaultTheme,
   Drawer: drawerDefaultTheme,
   Form: formDefaultTheme,
   FormLabel: formLabelDefaultTheme,
@@ -52,7 +47,6 @@ export default {
   Popover,
   Progress,
   Radio,
-  ReactSelect,
   Spinner: spinnerDefaultTheme,
   Switch,
   Table,

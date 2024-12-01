@@ -39,7 +39,7 @@ Attributindikatoren werden unten verwendet, um nennenswerte Stärken oder Schwä
 
 ## Erkunden Sie die Staking-Dienstleister {#saas-providers}
 
-Nachfolgend finden Sie einige verfügbare SaaS-Anbieter. Verwenden Sie die obigen Indikatoren für die Beurteilung dieser Dienste
+Hier sind einige verfügbare SaaS-Anbieter. Verwenden Sie die obigen Indikatoren für die Beurteilung dieser Dienste
 
 <ProductDisclaimer />
 
@@ -78,7 +78,7 @@ Staking Auszahlungen wurden mit der Shanghai/Capella Aktualisierung im April 202
 
 Validatoren haben auch die Möglichkeit, ihre Tätigkeit als Validator zu beenden. Das ermöglicht die Auszahlung ihres restlichen ETH-Guthabens. Konten, die eine Auszahlungsadresse angegeben und den Austrittsprozess abgeschlossen haben, erhalten ihr gesamtes Guthaben bei der nächsten Validatorendurchsicht auf die angegebene Auszahlungsadresse.
 
-<ButtonLink to="/staking/withdrawals/">Mehr zu Staking-Abhebungen</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Mehr zu Staking-Abhebungen</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Was passiert, wenn ich geslashed werde?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

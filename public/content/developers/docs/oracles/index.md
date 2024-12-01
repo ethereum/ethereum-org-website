@@ -388,6 +388,8 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Chainlink](https://chain.link/)** - _Chainlink decentralized oracle networks provide tamper-proof inputs, outputs, and computations to support advanced smart contracts on any blockchain._
 
+**[Chronicle](https://chroniclelabs.org/)** - _Chronicle overcomes the current limitations of transferring data on-chain by developing truly scalable, cost-efficient, decentralized, and verifiable oracles._
+
 **[Witnet](https://witnet.io/)** - _Witnet is a permissionless, decentralized, and censorship-resistant oracle helping smart contracts to react to real world events with strong crypto-economic guarantees._
 
 **[UMA Oracle](https://uma.xyz)** - _UMA's optimistic oracle allows smart contracts to quickly and receive any kind of data for different applications, including insurance, financial derivatives, and prediction markets._
@@ -424,6 +426,7 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 **Tutorials**
 
 - [How to Fetch the Current Price of Ethereum in Solidity](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) — _Chainlink_
+- [Consuming Oracle Data](https://docs.chroniclelabs.org/Developers/tutorials/Remix) — _Chronicle_ 
 
 **Example projects**
 

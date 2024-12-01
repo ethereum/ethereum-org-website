@@ -49,7 +49,7 @@ Aconselhamos que você atualize a ferramenta de revogação após alguns minutos
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Quer saber mais?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Veja nossos outros guias
   </ButtonLink>
 </InfoBanner>

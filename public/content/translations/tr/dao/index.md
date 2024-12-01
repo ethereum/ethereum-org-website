@@ -50,7 +50,7 @@ Bir DAO'nun bel kemiği, organizasyonun kurallarını tanımlayan ve grubun hazi
 
 Bu, akıllı sözleşmelerin Ethereum'da yayınlandıktan sonra kurcalanamaz olmaları sayesinde mümkündür. İnsanlar fark etmeden kodu (yani DAO'ların kurallarını) değiştiremezsiniz çünkü her şey halka açıktır.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Akıllı kontratlar hakkında daha fazla bilgi
 </DocLink>
 

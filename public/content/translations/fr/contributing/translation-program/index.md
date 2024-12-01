@@ -22,7 +22,7 @@ Le programme de traduction d'ethereum.org est ouvert et n'importe qui peut y con
 
 _Rejoignez [ethereum.org Discord](/discord/) pour collaborer aux traductions, poser des questions, partager des commentaires et des idées, ou rejoindre un groupe de traduction._
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Commencez à traduire
 </ButtonLink>
 
@@ -36,9 +36,9 @@ En savoir plus sur [la mission et la vision](/contributing/translation-program/m
 
 ### Les progrès réalisés jusqu'à présent {#our-progress}
 
-- [**5 600+** traducteurs](/contributing/translation-program/contributors/)
+- [**Plus de 6 000** traducteurs](/contributing/translation-program/contributors/)
 - **62** langues en direct sur le site
-- [**3 millions** de mots traduits en 2022](/contributing/translation-program/acknowledgements/)
+- [**3 millions** de mots traduits en 2023](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
@@ -50,9 +50,9 @@ Ethereum.org est traduit par des milliers de membres de la communauté qui sont 
 
 Si vous avez contribué au Programme de traduction et qu'au moins 5 000 des mots que vous avez traduits ont été approuvés, vous avez droit à l'obtention d'un certificat de traducteur ethereum.org. [En savoir plus sur les certificats](/contributing/translation-program/acknowledgements/#certificate)
 
-#### POAP {#poaps}
+#### OAT {#oats}
 
-Tous nos traducteurs peuvent obtenir un POAP (Protocole de Preuve de Présence) : un jeton NFT qui prouve leur contribution au Programme de traduction d'ethereum.org. [En savoir plus sur les POAP](/contributing/translation-program/acknowledgements/#poap)
+Les contributeurs au Programme de traduction sont éligibles à différents OAT (onchain achievement tokens) en fonction du nombre de mots traduits en 2024. Les OAT sont des NFT qui prouvent votre contribution au Programme de traduction d'ethereum.org. [En savoir plus sur les OAT](/contributing/translation-program/acknowledgements/#oats)
 
 #### Traducteurs mis à l'honneur {#translator-acknowledgements}
 

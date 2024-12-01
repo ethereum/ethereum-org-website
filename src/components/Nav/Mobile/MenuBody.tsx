@@ -1,14 +1,7 @@
+import { useState } from "react"
 import { useRouter } from "next/router"
-import {
-  Accordion,
-  AccordionButton,
-  AccordionItem,
-  AccordionPanel,
-  Box,
-  DrawerBody,
-  Heading,
-} from "@chakra-ui/react"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { SECTION_LABELS } from "@/lib/constants"
@@ -17,8 +10,12 @@ import type { Level, NavSections } from "../types"
 
 import ExpandIcon from "./ExpandIcon"
 import LvlAccordion from "./LvlAccordion"
-
-import { useNavMenuColors } from "@/hooks/useNavMenuColors"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./MenuAccordion"
 
 type MenuBodyProps = {
   onToggle: () => void
@@ -27,82 +24,62 @@ type MenuBodyProps = {
 
 const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
   const { locale } = useRouter()
-  const menuColors = useNavMenuColors()
+  const [value, setValue] = useState("")
 
   return (
-    <DrawerBody as="nav" p="0">
-      <Accordion allowToggle>
+    <nav className="p-0">
+      <Accordion
+        type="single"
+        collapsible
+        value={value}
+        onValueChange={setValue}
+      >
         {SECTION_LABELS.map((key) => {
           const { label, items } = linkSections[key]
+          const isExpanded = value === key
+
           return (
             <AccordionItem
-              key={label}
-              borderTop="1px"
-              borderColor="inherit"
-              _last={{ borderBottomWidth: "1px" }}
+              key={key}
+              value={key}
+              className="border-b border-body-light first:border-t"
             >
-              {({ isExpanded }) => (
-                <>
-                  <Heading
-                    as="h2"
-                    color={menuColors.body}
-                    py="0"
-                    bg={
-                      isExpanded
-                        ? menuColors.lvl[1].background
-                        : "background.base"
-                    }
-                    borderBottom={isExpanded ? "1px" : "none"}
-                    borderColor="disabled"
-                    onClick={() => {
-                      trackCustomEvent({
-                        eventCategory: "Mobile navigation menu",
-                        eventAction: "Section changed",
-                        eventName: `${
-                          isExpanded ? "Close" : "Open"
-                        } section: ${locale} - ${key}`,
-                      })
-                    }}
-                  >
-                    <AccordionButton
-                      justifyContent="start"
-                      gap="2"
-                      _hover={{ bg: "none" }}
-                      px="4"
-                      py="4"
-                    >
-                      <ExpandIcon isOpen={isExpanded} />
-                      <Box
-                        as="span"
-                        flex="1"
-                        textAlign="start"
-                        fontWeight="bold"
-                        fontSize="lg"
-                      >
-                        {label}
-                      </Box>
-                    </AccordionButton>
-                  </Heading>
+              <AccordionTrigger
+                className="text-body"
+                onClick={() => {
+                  trackCustomEvent({
+                    eventCategory: "Mobile navigation menu",
+                    eventAction: "Section changed",
+                    eventName: `${
+                      isExpanded ? "Close" : "Open"
+                    } section: ${locale} - ${key}`,
+                  })
+                }}
+              >
+                <ExpandIcon isOpen={isExpanded} />
+                <span className="flex-1 text-start text-lg font-bold leading-none">
+                  {label}
+                </span>
+              </AccordionTrigger>
 
-                  <AccordionPanel
-                    p="0"
-                    mt="0"
-                    bg={menuColors.lvl[2].background}
-                  >
-                    <LvlAccordion
-                      lvl={2 as Level}
-                      items={items}
-                      activeSection={key}
-                      onToggle={onToggle}
-                    />
-                  </AccordionPanel>
-                </>
-              )}
+              <AccordionContent
+                className={cn(
+                  "mt-0 bg-background-low p-0",
+                  isExpanded && "border-t border-disabled"
+                )}
+              >
+                <LvlAccordion
+                  lvl={2 as Level}
+                  items={items}
+                  activeSection={key}
+                  onToggle={onToggle}
+                />
+              </AccordionContent>
             </AccordionItem>
           )
         })}
       </Accordion>
-    </DrawerBody>
+    </nav>
   )
 }
 

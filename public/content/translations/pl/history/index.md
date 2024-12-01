@@ -90,7 +90,7 @@ Uaktualnienie Berlin optymalizuje koszt gazu przy pewnych działaniach EVM oraz 
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   Łańcuch śledzący
 </DocLink>
 
@@ -106,7 +106,7 @@ Do ekosystemu Ethereum został wprowadzony kontrakt depozytu na staking Choć by
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Staking
 </DocLink>
 
@@ -360,6 +360,6 @@ Dokumentacja Yellow Paper autorstwa dr Gavina Wood, jest techniczną definicją 
 
 Artykuł wprowadzający, opublikowany w 2013 roku przez Vitalika Buterina, założyciela Ethereum, przed uruchomieniem projektu w 2015 roku.
 
-<DocLink to="/whitepaper/">
+<DocLink href="/whitepaper/">
   Dokumentacja
 </DocLink>

@@ -32,7 +32,7 @@ L'approche opposée, la gouvernance hors chaîne, est celle où toute décision 
 
 _Bien qu'au niveau du protocole, la gouvernance d'Ethereum est hors chaîne, de nombreux cas d'utilisation basés sur Ethereum, tels que les DAO, utilisent la gouvernance sur la blockchain._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   En savoir plus sur les DAO
 </ButtonLink>
 
@@ -48,7 +48,7 @@ Il y a différentes parties prenantes dans la communauté [Ethereum](/community/
 - **Opérateurs de nœud** : ces personnes exécutent des nœuds qui propagent des blocs et des transactions, rejetant toute transaction invalide ou bloc qu'ils croisent. [Plus d'infos sur les noeud](/developers/docs/nodes-and-clients/).
 - **Auteurs des EIPs** : ces personnes proposent des modifications au protocole Ethereum, sous la forme de Propositions d'Amélioration Ethereum (dites EIP). [Plus d'infos sur les EIP](/eips/).
 - **Validateurs** : ces personnes exécutent des nœuds qui peuvent ajouter de nouveaux blocs à la blockchain Ethereum.
-- **Développeurs de protocole** (a.k.a. « les développeurs principaux » : ces personnes maintiennent les différentes implémentations d'Ethereum (ex. go-ethereum, Nethermind, Besu, Erigon pour la couche d'exécution ou Prysm, Lighthouse, Nimbus, Teku, Lodestar pour la couche de consensus). [Plus de détails sur les clients Ethereum](/developers/docs/nodes-and-clients/).
+- **Développeurs de protocole** (a.k.a. « les développeurs principaux » ): ces personnes maintiennent les différentes implémentations d'Ethereum (ex. go-ethereum, Nethermind, Besu, Erigon, Reth pour la couche d'exécution ou Prysm, Lighthouse, Nimbus, Teku, Lodestar pour la couche de consensus). [Plus de détails sur les clients Ethereum](/developers/docs/nodes-and-clients/).
 
 _Note : Toute personne peut faire partie de plusieurs de ces groupes (par exemple un développeur de protocole peut défendre une EIP, exécuter un validateur de la chaîne phare, et utiliser des applications DeFi). Pour mieux comprendre, il est toutefois plus facile de les distinguer._
 
@@ -58,7 +58,7 @@ _Note : Toute personne peut faire partie de plusieurs de ces groupes (par exempl
 
 Un processus important utilisé dans la gouvernance Ethereum est la proposition de **Propositions d'amélioration Ethereum (EIP)**. Les EIP sont des normes qui spécifient de nouvelles fonctionnalités ou processus potentiels pour Ethereum. N'importe qui au sein de la communauté Ethereum peut créer une EIP. Si vous souhaitez écrire une EIP ou participer à une revue par les pairs, et/ou la gouvernance, voir :
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Plus d'infos les EIP
 </ButtonLink>
 
@@ -154,7 +154,7 @@ Bien que le développement des spécifications et des implémentations ait toujo
 
 Lorsque la Chaîne Phare a fusionné avec la couche d'exécution Ethereum le 15 septembre 2022, La Fusion s'est achevée à travers [la mise à jour Paris](/history/#paris). La proposition [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) est passée de 'Dernier appel' à 'Final', achevant ainsi la transition vers la preuve d'enjeu.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Plus d'infos sur la fusion
 </ButtonLink>
 

@@ -1,5 +1,4 @@
 import React from "react"
-import { Grid } from "@chakra-ui/react"
 
 import { LearningToolsCardGridProps } from "@/lib/types"
 
@@ -8,11 +7,7 @@ import Translation from "./Translation"
 
 const LearningToolsCardGrid = ({ category }: LearningToolsCardGridProps) => {
   return (
-    <Grid
-      templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
-      gap={8}
-      mb={8}
-    >
+    <div className="mb-8 grid grid-cols-[repeat(auto-fill,minmax(min(100%,280px),1fr))] gap-8">
       {category
         .sort(({ locales }) => (locales?.length ? -1 : 0))
         .map(({ name, description, background, url, alt, image, subjects }) => (
@@ -28,7 +23,7 @@ const LearningToolsCardGrid = ({ category }: LearningToolsCardGridProps) => {
             <Translation id={description} />
           </ProductCard>
         ))}
-    </Grid>
+    </div>
   )
 }
 

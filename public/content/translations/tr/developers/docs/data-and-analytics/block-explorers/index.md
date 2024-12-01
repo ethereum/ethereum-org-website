@@ -5,7 +5,7 @@ lang: tr
 sidebarDepth: 3
 ---
 
-Blok arayıcıları, Ethereum'un verilerine açılan portalınızdır. Bunları; bloklar, işlemler, madenciler, hesaplar ve diğer zincir üstü olaylarla ilgili gerçek zamanlı verileri görmek için kullanabilirsiniz.
+Blok arayıcıları, Ethereum'un verilerine açılan portalınızdır. Bunları; bloklar, işlemler, doğrulayıcılar, hesaplar ve diğer zincir üstü olaylarla ilgili gerçek zamanlı verileri görmek için kullanabilirsiniz.
 
 ## Ön Koşullar {#prerequisites}
 
@@ -14,17 +14,23 @@ Bir blok arayıcısının size verdiği verileri anlamlandırabilmeniz için Eth
 ## Hizmetler {#services}
 
 - [Etherscan](https://etherscan.io/) -_Ayrıca Çince, Korece, Rusça ve Japonca dillerinde de mevcut_
+- [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) -_Ayrıca İspanyolca, Fransızca, İtalyanca, Danca, Portekizce, Rusça, Çince ve Farsça olarak da mevcut_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Blok Arayıcısı](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
+- [Ethernow](https://www.ethernow.xyz/)
 - [Ethplorer](https://ethplorer.io/) -_Ayrıca Çince, İspanyolca, Fransızca, Türkçe, Rusça, Korece ve Vietnamca dillerinde de mevcut_
 - [EthVM](https://www.ethvm.com/)
 - [Oklink](https://www.oklink.com/eth)
-- [Otterscan](https://otterscan.io/)
 - [Rantom](https://rantom.app/)
+
+## Açık kaynaklı araçlar {#open-source-tools}
+
+- [Otterscan](https://otterscan.io/)
+- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 
 ## Veri {#data}
 
@@ -48,7 +54,7 @@ Her 12 saniyede bir Ethereum'a yeni bloklar eklenir (eğer ki bir blok önericis
 - Gaz limiti - Bloktaki işlemler tarafından belirlenen toplam gaz limitleri
 - Gaz başına ana ücret - Bir işlemin bir bloka dahil edilmesi için gereken minimum katsayı
 - Yakılmış ücretler - Blokta yakılan ETH miktarı
-- Ekstra veri - Madencinin bloka dahil ettiği herhangi bir ekstra veri
+- Ekstra veri - Geliştiricinin bloğa dahil ettiği herhangi bir ekstra veri
 
 **Gelişmiş veriler**
 
@@ -76,12 +82,12 @@ Blok arayıcıları, insanların işlemlerinin ilerlemesini takip etmeleri için
 - İşlem karması - İşlem gönderildiğinde oluşturulan karma
 - Durum - İşlemin beklemede mi, başarısız mı yoksa başarılı mı olduğunun bir göstergesi
 - Blok - İşlemin dahil edildiği blok
-- Zaman damgası - bir madencinin işlemi kazdığı zaman
+- Timestamp - Bir işlemin doğrulayıcı tarafından önerilen bir bloğa dahil edildiği zaman
 - Gönderen - İşlemi gönderen hesabın adresi
 - Alıcı - İşlemin etkileşimde bulunduğu alıcının veya akıllı sözleşmenin adresi
 - Transfer edilen token'lar - İşlemin bir parçası olarak transfer edilen token'ların listesi
 - Değer - Transfer edilen toplam ETH değeri
-- İşlem ücreti - İşlemi gerçekleştirmek için madenciye ödenen miktar (gaz fiyatı\*kullanılan gaz ile hesaplanır)
+- İşlem ücreti - İşlemi gerçekleştirmek için doğrulayıcıya ödenen miktar (gaz fiyatı\*kullanılan gaz ile hesaplanır)
 
 **Gelişmiş veriler**
 
@@ -232,11 +238,13 @@ Fikir birliği katmanı üst düzey verileri şunları içerir:
 ## Blok arayıcıları {#block-explorers}
 
 - [Etherscan](https://etherscan.io/) - Ethereum Ana Ağı ve Goerli Test Ağı'ndan veri çekmek için kullanabileceğiniz bir blok arayıcısı
+- [3xpl](https://3xpl.com/ethereum) - veri kümelerini indirmeye izin veren reklamsız, açık kaynaklı bir Ethereum arayıcısı
 - [Beaconcha.in](https://beaconcha.in/) - Ethereum Ana Ağı ve Goerli Test Ağı için açık kaynaklı bir blok arayıcısı
 - [Blockchair](https://blockchair.com/ethereum) - en özel Ethereum arayıcısı. Ayrıca (bellek havuzu) verileri sıralamak ve filtrelemek için kullanılır
 - [Etherchain](https://www.etherchain.org/) - Ethereum Ana Ağı için bir blok arayıcısı
 - [Ethplorer](https://ethplorer.io/) - Ethereum Ana Ağı ve Kovan test ağı için token'lar üzerine odaklı bir blok arayıcısı
 - [Rantom](https://rantom.app/) - Detaylı anlayış için kullanıcı dostu açık kaynaklı bir DeFi & NFT işlem görüntüleyicisi
+- [Ethernow](https://www.ethernow.xyz/) - Ethereum ana ağı ön zincir katmanını görmenizi sağlayan gerçek zamanlı bir işlem kâşifi
 
 ## Daha fazla bilgi {#further-reading}
 

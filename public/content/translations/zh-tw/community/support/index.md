@@ -12,11 +12,11 @@ lang: zh-tw
 
 明白以太坊的去中心化本質十分重要，因為任何聲稱是以太坊官方支援的人都可能正試圖欺詐你！ 預防騙徒的最佳保護措施是自我教育，並認真看待網路安全。
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   以太坊安全及詐騙預防
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   學習以太坊基礎知識
 </DocLink>
 
@@ -73,7 +73,6 @@ lang: zh-tw
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [安全帽](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 
@@ -92,6 +91,7 @@ lang: zh-tw
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### 共識用戶端 {#consensus-clients}
 

@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { useTheme } from "next-themes"
 import {
@@ -19,25 +18,18 @@ import {
   BsUiChecksGrid,
 } from "react-icons/bs"
 import { PiFlask, PiUsersFourLight } from "react-icons/pi"
-import { useDisclosure } from "@chakra-ui/react"
+import { useColorMode } from "@chakra-ui/react"
 
-import { EthereumIcon } from "@/components/icons/EthereumIcon"
+import EthereumIcon from "@/components/icons/ethereum-icon.svg"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { FROM_QUERY } from "@/lib/constants"
-
 import type { NavSections } from "./types"
 
-import useColorModeValue from "@/hooks/useColorModeValue"
-
 export const useNav = () => {
-  const { asPath } = useRouter()
-  const { isOpen, onToggle } = useDisclosure()
   const { t } = useTranslation("common")
-  const { theme, setTheme } = useTheme()
-
-  const colorToggleEvent = useColorModeValue("dark mode", "light mode") // This will be inverted as the state is changing
+  const { setTheme, resolvedTheme } = useTheme()
+  const { setColorMode } = useColorMode()
 
   const linkSections: NavSections = {
     learn: {
@@ -328,20 +320,9 @@ export const useNav = () => {
         },
         {
           label: t("enterprise"),
-          description: t("nav-enterprise-description"),
+          description: t("nav-mainnet-description"),
           icon: BsBuildings,
-          items: [
-            {
-              label: t("mainnet-ethereum"),
-              description: t("nav-mainnet-description"),
-              href: "/enterprise/",
-            },
-            {
-              label: t("private-ethereum"),
-              description: t("nav-private-description"),
-              href: "/enterprise/private-ethereum/",
-            },
-          ],
+          href: "/enterprise/",
         },
       ],
     },
@@ -469,32 +450,21 @@ export const useNav = () => {
     },
   }
 
-  const splitPath = asPath.split("/")
-  const fromPageParameter =
-    splitPath.length > 1 && splitPath[1] !== "languages"
-      ? `?${FROM_QUERY}=/${splitPath.slice(1).join("/")}`
-      : ""
-
   const toggleColorMode = () => {
-    setTheme(theme === "dark" ? "light" : "dark")
+    const targetTheme = resolvedTheme === "dark" ? "light" : "dark"
+
+    setTheme(targetTheme)
+    setColorMode(targetTheme)
+
     trackCustomEvent({
       eventCategory: "nav bar",
       eventAction: "click",
-      eventName: colorToggleEvent,
+      eventName: `${targetTheme} mode`,
     })
   }
 
-  const mobileNavProps = {
-    fromPageParameter,
-    isOpen,
-    toggleColorMode,
-    onToggle,
-  }
-
   return {
-    fromPageParameter,
     linkSections,
-    mobileNavProps,
     toggleColorMode,
   }
 }

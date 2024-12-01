@@ -22,7 +22,7 @@ Ethereum.org 翻译计划是开放的，所有人都可以参与！
 
 _加入 [ethereum.org Discord](/discord/) 合作翻译、提问、分享反馈和想法，或加入翻译组。_
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   开始翻译
 </ButtonLink>
 
@@ -36,9 +36,9 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 
 ### 我们迄今取得的进展 {#our-progress}
 
-- [**超过 5,600 **位翻译人员](/contributing/translation-program/contributors/)
+- [**超过 6,000 **位翻译人员](/contributing/translation-program/contributors/)
 - 网站支持 **62** 种语言
-- [2022 年翻译了** 300 万**字](/contributing/translation-program/acknowledgements/)
+- [2023 年翻译了** 300 万**字](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
@@ -50,9 +50,9 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 
 如果你参与了翻译计划，并且至少有 5000 个翻译的字词获得批准，就有资格获得 Ethereum.org 翻译人员证书。 [更多关于证书的信息](/contributing/translation-program/acknowledgements/#certificate)
 
-#### POAP 徽章 {#poaps}
+#### OAT {#oats}
 
-我们所有的翻译人员都有资格获得 POAP（出席证明协议）徽章 — 一种证明他们对 Ethereum.org 翻译计划做出贡献的非同质化代币。 [关于 POAP 徽章的更多信息](/contributing/translation-program/acknowledgements/#poap)
+翻译计划的贡献者有资格根据 2024 年翻译的字数获得不同的 OAT（链上成就代币）。 链上成就代币是非同质化代币，可证明你对 ethereum.org 翻译计划的贡献。 [有关链上成就代币的更多信息](/contributing/translation-program/acknowledgements/#oats)
 
 #### 致谢翻译人员 {#translator-acknowledgements}
 

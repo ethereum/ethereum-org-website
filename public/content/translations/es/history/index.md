@@ -150,7 +150,7 @@ La actualización Altair fue la primera programada para la [cadena de baliza](/r
 
 - [Lea las especificaciones de actualización Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />¡Dato curioso! {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} className="me-2" />¡Dato curioso! {#altair-fun-fact}
 
 Altair fue la primera gran actualización de red que ha tenido un periodo de implementación preciso. Cada una de las actualizaciones anteriores se habían basado en un número de bloques declarados en la cadena de prueba de trabajo, donde los tiempos de bloque varían. La cadena de baliza no requiere resolución para la prueba de trabajo y, en lugar de ello, funciona en un sistema épocas basado en el tiempo, que consiste en «ranuras» de tiempo de doce segundos durante los cuales los validadores pueden proponer bloques. Por esta razón sabíamos exactamente cuándo alcanzaríamos la época 74.240 y Altair vería la luz.
 
@@ -220,7 +220,7 @@ La [cadena de baliza](/roadmap/beacon-chain/) necesita 16.384 depósitos de 32 E
 
 [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   La cadena de baliza
 </DocLink>
 
@@ -236,7 +236,7 @@ El contrato de depósito de participación introdujo la [participación](/glossa
 
 [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Staking (apostar)
 </DocLink>
 
@@ -505,6 +505,6 @@ El protocolo, escrito por el Dr. Gavin Wood, es una definición técnica del pro
 
 Documento introductorio, publicado en el 2013 por Vitalik Buterin, fundador de Ethereum, antes del lanzamiento del proyecto en 2015.
 
-<DocLink to="/whitepaper/">
+<DocLink href="/whitepaper/">
   Informe
 </DocLink>

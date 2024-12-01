@@ -59,11 +59,11 @@ Embora os recursos matadores do Web3 não sejam isolados e não se encaixem em c
 
 a Web3 dá-lhe posse dos seus ativos digitais de uma forma sem precedentes. Por exemplo, digamos que você está jogando um jogo web2. Se você comprar um item no jogo, ele ficará vinculado diretamente à sua conta. Se os criadores do jogo apagarem sua conta, você perderá esses itens. Ou, se você parar de jogar o jogo, você perde o valor que investiu nos seus itens no jogo.
 
-A Web3 permite a propriedade direta por meio de [tokens não fungíveis (NFTs)](/nft/). Ninguém, nem mesmo os criadores do jogo, consegue tirar sua propriedade. E, se você parar de jogar, pode vender ou trocar seus itens no jogo em mercados abertos e recuperar o seu valor.
+A Web3 permite a propriedade direta por meio de [tokens não fungíveis (NFTs)](/glossary/#nft). Ninguém, nem mesmo os criadores do jogo, consegue tirar sua propriedade. E, se você parar de jogar, pode vender ou trocar seus itens no jogo em mercados abertos e recuperar o seu valor.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Saiba mais sobre NFTs</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     Mais sobre NFTs
   </ButtonLink>
 </InfoBanner>
@@ -82,13 +82,13 @@ A Web 2.0 exige que os criadores de conteúdo confiem nas plataformas para não 
 
 Além de possuir seus dados na Web3, você pode possuir a plataforma como um coletivo, utilizando tokens que atuam como ações em uma empresa. As DAOs permitem que você coordene a propriedade descentralizada de uma plataforma e tome decisões sobre seu futuro.
 
-DAOs são definidas tecnicamente como contratos inteligentes acordados que automatizam a tomada de decisão descentralizada sobre um conjunto de recursos (tokens). Os usuários com tokens votam sobre como os recursos são gastos e o código executa automaticamente o resultado da votação.
+DAOs são definidos tecnicamente como [contratos inteligentes](/glossary/#smart-contract) acordados que automatizam a tomada de decisões descentralizada sobre um conjunto de recursos (tokens). Os usuários com tokens votam sobre como os recursos são gastos e o código executa automaticamente o resultado da votação.
 
 No entanto, as pessoas definem muitas comunidades Web3 como DAOs. Todas essas comunidades têm diferentes níveis de descentralização e automação por código. Atualmente, estamos explorando o que são DAOs e como elas podem evoluir no futuro.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Saiba mais sobre DAOs</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     Mais sobre DAOs
   </ButtonLink>
 </InfoBanner>
@@ -97,17 +97,13 @@ No entanto, as pessoas definem muitas comunidades Web3 como DAOs. Todas essas co
 
 Geralmente, você cria uma conta para cada plataforma que usa. Por exemplo, você pode ter uma conta no Twitter, uma no YouTube e uma no Reddit. Deseja mudar o seu nome de exibição ou foto de perfil? Você tem que fazer isso em cada conta. Você pode usar logins sociais em alguns casos, mas isso apresenta um problema familiar: a censura. Em um único clique, estas plataformas podem bloquear você de toda sua vida on-line. Pior ainda, muitas plataformas exigem que você confie nelas informações de identificação pessoal para criar uma conta.
 
-A Web3 resolve esses problemas, permitindo que você controle sua identidade digital com um endereço Ethereum e um perfil ENS. O uso de um endereço Ethereum fornece um único login entre plataformas seguras, resistentes à censura e anônimas.
-
-<ButtonLink to="https://login.xyz/">
-  Entrar com Ethereum
-</ButtonLink>
+A Web3 resolve esses problemas permitindo que você controle sua identidade digital com um endereço Ethereum e um perfil de [Serviço de Nomes Ethereum(ENS)](/glossary/#ens). O uso de um endereço Ethereum fornece um único login entre plataformas seguras, resistentes à censura e anônimas.
 
 ### Pagamentos nativos {#native-payments}
 
-A infraestrutura de pagamento da Web2 depende de bancos e processadores de pagamento, excluindo pessoas sem contas bancárias ou aquelas que vivem dentro das fronteiras do país errado. A Web3 usa tokens como [ETH](/eth/) para enviar dinheiro diretamente no navegador e não requer terceiros confiáveis.
+A infraestrutura de pagamento da Web2 depende de bancos e processadores de pagamento, excluindo pessoas sem contas bancárias ou aquelas que vivem dentro das fronteiras do país errado. A Web3 usa tokens como [ETH](/glossary/#ether) para enviar dinheiro diretamente no navegador e não requer terceiros confiáveis.
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   Mais sobre ETH
 </ButtonLink>
 
@@ -117,7 +113,7 @@ Apesar dos inúmeros benefícios da Web3 em sua forma atual, ainda existem muita
 
 ### Acessibilidade {#accessibility}
 
-Recursos importantes da Web3, como Entrar com Ethereum, ou seja, fazer login com o Ethereum, já estão disponíveis para qualquer pessoa usar a custo zero. Mas, o custo relativo das transações ainda é proibitivo para muitos. É menos provável que a Web3 seja utilizada em países menos ricos e em desenvolvimento devido às altas taxas de transação. No Ethereum, esses desafios estão sendo resolvidos por meio do [roteiro](/roadmap/) e das [soluções de dimensionamento da camada 2](/developers/docs/scaling/). A tecnologia está pronta, mas precisamos de níveis mais altos de adoção na camada 2 para tornar a Web3 acessível a todos.
+Recursos importantes da Web3, como Entrar com Ethereum, ou seja, fazer login com o Ethereum, já estão disponíveis para qualquer pessoa usar a custo zero. Mas, o custo relativo das transações ainda é proibitivo para muitos. É menos provável que a Web3 seja utilizada em países menos ricos e em desenvolvimento devido às altas taxas de transação. No Ethereum, esses desafios estão sendo resolvidos por meio do [roteiro](/roadmap/) e das [soluções de dimensionamento da camada 2](/glossary/#layer-2). A tecnologia está pronta, mas precisamos de níveis mais altos de adoção na camada 2 para tornar a Web3 acessível a todos.
 
 ### Experiência do usuário {#user-experience}
 

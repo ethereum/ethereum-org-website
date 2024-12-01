@@ -14,7 +14,7 @@ N'adịghị ka imepe akaụntụ ọhụrụ n'ụlọ ọrụ, imepe akaụnt�
 
 Akpa ego ịtanetị bụ akụrụngwa na-enyere gị aka ijikwa akaụntụ Ethereum gị. Ọ na-eji igodo gị na-ezipu ma na-anata azụmahịa wee na-abanye na ngwa. E nwere ọtụtụ akpa ego ịntanetị dị iche iche e nwere ike si na ya mee nhọrọ - mkpanaka, desktọpụ, maọbụ ọbụnadị ngwa nchọgharị pụrụ iche.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Chọta obere akpa
 </ButtonLink>
 
@@ -42,7 +42,7 @@ Ozugbo i chekwachara mkpụrụ nkebi ahịrịokwu gị, ị ga-ahụ dashbọ�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Chọrọ ịmụtakwu?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Hụ ntuziaka anyị ndị ọzọ
   </ButtonLink>
 </InfoBanner>

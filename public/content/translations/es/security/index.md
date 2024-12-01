@@ -6,101 +6,7 @@ lang: es
 
 # Seguridad en Ethereum y la prevención de fraude {#introduction}
 
-Con el creciente interés en las criptomonedas, es esencial aplicar las mejores prácticas al usar criptomonedas. Las criptomonedas pueden ser divertidas y emocionantes, aunque también entrañan serios riesgos. Si actúa con precaución y allana antes el terreno, puede mitigar estos riesgos.
-
-<Divider />
-
-## Seguridad en la Web 101 {#web-security}
-
-### Utilice contraseñas seguras {#use-strong-passwords}
-
-[Más del 80% de los ataques a cuentas se producen a causa de contraseñas débiles o robadas](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Para mantener sus cuentas seguras es aconsejable usar una larga combinación de caracteres, números y símbolos.
-
-Un error común que cometen los individuos es usar una combinación de dos a tres palabras comunes del diccionario relacionadas. Contraseñas como esta son inseguras, porque son propensas a una simple técnica de ataque informático conocida como un [diccionario de ataque](https://wikipedia.org/wiki/Dictionary_attack).
-
-```md
-Ejemplo de una contraseña débil: CuteFluffyKittens!
-
-Ejemplo de una contraseña fuerte: ymv\*azu.EAC8eyp8umf
-```
-
-Otro error común es el uso de contraseñas que se pueden adivinar fácilmente o descubrir a través de [ingeniería social](https://wikipedia.org/wiki/Social_engineering_(security)). Incluir el nombre de soltera de su madre, los nombres de tus hijos o mascotas, o fechas de nacimiento en su contraseña no es seguro y aumentará el riesgo de que su contraseña sea pirateada.
-
-#### Buenas prácticas de contraseña: {#good-password-practices}
-
-- Crear las contraseñas más largas que permita su generador de contraseñas o el formulario que está rellenando.
-- Usar una mezcla de mayúsculas, minúsculas, números y símbolos.
-- No utilizar datos personales, tales como apellidos, en su contraseña.
-- Evitar palabras comunes del diccionario.
-
-[Más información sobre la creación de contraseñas fuertes.](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
-
-### Use contraseñas únicas para todo {#use-unique-passwords}
-
-Una contraseña segura no proporciona tanta protección si la contraseña se descubre en en una filtración de datos. El sitio web [Have I been Pwned](https://haveibeenpwned.com) le permite comprobar si sus cuentas están almacenadas en su base de datos a consecuencia de una filtración de datos. Si lo están,**debería cambiar las contraseñas descubiertas inmediatamente**. El uso de contraseñas únicas para cada cuenta reduce el riesgo de que los hackers obtengan acceso a todas sus cuentas cuando una de sus contraseñas se vea comprometida.
-
-### Use un gestor de contraseñas {#use-password-manager}
-
-<InfoBanner emoji=":bulb:">
-  <div>
-    Un gestor de contraseñas se encarga de crear contraseñas seguras, únicas y recordarlas. Le <strong>aconsejamos vivamente</strong> que utilice uno, ¡y la mayoría de ellos son gratis!
-  </div>
-</InfoBanner>
-
-Recordar contraseñas seguras y únicas para cada cuenta que tenga no es la solución perfecta. Un gestor de contraseñas ofrece un espacio seguro y cifrado para todas sus contraseñas, a las que puede acceder a través de una contraseña maestra segura. También le sugiere contraseñas seguras al registrarse en un nuevo servicio, por lo que no tiene que crear sus propias contraseñas. Muchos administradores de contraseñas también le dirán si sus datos han sido filtrados, permitiéndole cambiar las contraseñas antes de cualquier ataque malicioso.
-
-![Ejemplo de uso de un gestor de contraseñas](./passwordManager.png)
-
-#### Pruebe a usar un gestor de contraseñas: {#try-password-manager}
-
-- [Bitwarden](https://bitwarden.com/)
-- [KeePass](https://keepass.info/)
-- [1Password](https://1password.com/)
-- O revise otros [gestores de contraseñas recomendados](https://www.privacytools.io/secure-password-manager)
-
-### Use la autenticación de dos factores {#two-factor-authentication}
-
-Para demostrar que es realmente usted el usuario, hay diferentes pruebas únicas que se pueden utilizar para la autenticación. Se les denomina **factores** y los tres principales son:
-
-- Algo que usted sepa (como una contraseña o una pregunta de seguridad).
-- Algún rasgo distintivo suyo (como una huella dactilar o un escáner de iris/facial).
-- Algo que tenga (una clave de seguridad o una aplicación de autenticación en su teléfono).
-
-Utilizando **la autenticación de dos factores (2FA)** proporciona un *factor de seguridad adicional* para sus cuentas en línea, de modo que conocer solo su contraseña (algo que usted sepa) no sea suficiente para acceder a una cuenta. Lo más común es que el segundo factor sea un código aleatorio de 6 dígitos, conocido como una **contraseña de una sola vez basada en (TOTP)**, que puede acceder a través de una aplicación de autenticación, como Google Authenticator o Authy. Estos funcionan como un factor de «algo que usted posee», porque la semilla que genera el código temporizado se almacena en su dispositivo.
-
-<InfoBanner emoji=":lock:">
-  <div>
-    Nota: el uso de 2FA basado en SMS es susceptible al
-    <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
-      jack de SIM
-    </a>
-    y no es seguro. Para tener la mejor seguridad, use un servicio como{" "}
-    <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
-      Google Authenticator
-    </a>
-    o <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
-
-#### Herramientas de seguridad {#security-keys}
-
-Para aquellos que quieran dar el siguiente paso en 2FA, considere usar una clave de seguridad. Las claves de seguridad son dispositivos físicos de autenticación de hardware que funcionan de la misma manera que las aplicaciones de autenticación. Usar una clave de seguridad es la manera más segura de llegar a 2FA. Muchas de estas claves utilizan el estándar universal de segundo factor U2F. [Más información sobre FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/).
-
-Ver más en el 2FA:
-
-<YouTube id="m8jlnZuV1i4" start="3479" />
-
-### Desinstale extensiones del navegador {#uninstall-browser-extensions}
-
-Las extensiones del navegador como las extensiones Chrome o los complementos para Firefox pueden aumentar la funcionalidad útil del navegador y mejorar la experiencia del usuario, pero no están exentas de riesgos. De forma predeterminada, la mayoría de las extensiones del navegador piden acceso a «leer y cambiar datos del sitio», permitiéndoles hacer casi cualquier cosa con sus datos. Las extensiones de Chrome siempre se actualizan automáticamente, por lo que una extensión previamente segura puede actualizarse más tarde e incluir código malicioso. La mayoría de las extensiones del navegador no intentan robar sus datos, no obstante debe ser consciente de que pueden hacerlo.
-
-#### Haga lo siguiente para mantenerse seguro: {#browser-extension-safety}
-
-- Instale solo las extensiones del navegador desde fuentes de confianza.
-- Elimine extensiones no utilizadas del navegador.
-- Instale las extensiones de Chrome localmente para detener la actualización automática (avanzado).
-
-[Más sobre los riesgos de las extensiones del navegador](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
+El creciente interés en criptomonedas trae consigo un aumento de riesgo a causa de estafadores y hackers. Este artículo establece algunas de las mejores prácticas para mitigar estos riesgos.
 
 <Divider />
 
@@ -108,13 +14,13 @@ Las extensiones del navegador como las extensiones Chrome o los complementos par
 
 ### Amplíe sus conocimientos {#level-up-your-knowledge}
 
-Una de las razones más importantes por las que se sufren estafas con las criptomonedas suele ser la falta de conocimientos. Por ejemplo, si no entiende que la red Ethereum está descentralizada y no es propiedad de nadie, entonces es fácil ser víctima de alguien que pretende ser un operador de Atención al cliente que promete devolverle su ETH perdido a cambio de sus claves privadas. Vale la pena dedicar tiempo a conocer el funcionamiento de Ethereum.
+Los malentendidos sobre cómo funcionan las criptomonedas pueden conducir a errores muy costosos. Por ejemplo, si alguien pretende ser un agente de servicio al cliente que ofrece recuperar ETH perdido a cambio de sus claves privadas, está pretendiendo aprovecharse de gente que no entiende que Ethereum es una red descentralizada carente de este tipo de funcionalidad. Vale la pena dedicar tiempo a conocer el funcionamiento de Ethereum.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   ¿Qué es Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   ¿Qué es el ether?
 </DocLink>
 <Divider />
@@ -123,17 +29,17 @@ Una de las razones más importantes por las que se sufren estafas con las cripto
 
 ### No entregue sus claves privadas {#protect-private-keys}
 
-**Bajo ninguna razón, comparta nunca sus claves privadas.**
+**¡Nunca, por ningún motivo, comparta sus claves privadas!**
 
-La clave privada de su billetera actúa como una contraseña para su billetera de Ethereum. ¡Es lo único que impide que alguien que conozca la dirección de su billetera saque todos los activos de su cuenta!
+La clave privada de su billetera digital es la contraseña para acceder a su billetera de Ethereum. ¡Es lo único que impide que alguien que conozca la dirección de su billetera saque todos los activos de su cuenta!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   ¿Qué es una cartera de Ethereum?
 </DocLink>
 
 #### No tome capturas de pantalla de sus frases semilla/claves privadas {#screenshot-private-keys}
 
-Al hacer una captura de pantalla de sus frases semilla o claves privadas, se arriesga a sincronizarlas en la nube y hacerlas potencialmente accesibles a los hackers. Obtener claves privadas de la nube es un vector de ataque común para los hackers.
+Hacer capturas de pantalla de sus frases semilla o claves privadas podría sincronizarlas con un proveedor de datos en la nube, lo cual podría hacerlas accesibles a los hackers. Obtener claves privadas de la nube es un vector de ataque común para los hackers.
 
 ### Use una billetera de hardware {#use-hardware-wallet}
 
@@ -148,9 +54,9 @@ Mantener las claves privadas sin conexión reduce altamente el riesgo de se pira
 
 ### Compruebe las transacciones antes de enviarlas {#double-check-transactions}
 
-El envío accidental de criptomonedas a una dirección de cartera errónea suele ocurrir frecuentemente. **Una transacción enviada en Ethereum es irreversible.** A menos que conozca al propietario de la dirección y pueda convencerle de que le devuelva sus fondos, no habrá forma de recuperarlos.
+El envío accidental de criptomonedas a una dirección de cartera errónea suele ocurrir frecuentemente. **Una transacción enviada en Ethereum es irreversible.** A menos que conozca al propietario de la dirección y pueda convencerlo de regresarle sus fondos, no le será posible recuperarlos.
 
-Asegúrese siempre de que la dirección a la que está enviando los fondos sea exactamente igual que la dirección deseada del destinatario antes de enviar una transacción. También se recomienda que cuando vaya a firmar un contrato inteligente, lea el mensaje de transacción antes de firmar.
+Asegúrese siempre de que la dirección a la que está enviando los fondos sea exactamente igual que la dirección deseada del destinatario antes de enviar una transacción. Es una buena práctica cuando interactúa con un contrato inteligente leer el mensaje de la transacción antes de firmarla.
 
 ### Establezca límites de gasto de contratos inteligentes {#spend-limits}
 
@@ -164,25 +70,35 @@ Muchas carteras de Ethereum ofrecen una protección de límites para evitar que 
 
 ## Estafas comunes {#common-scams}
 
-Los estafadores siempre están buscando maneras de quitarle sus fondos. Aunque es imposible detener completamente a los estafadores, sí podemos mermar sus intentos intentando conocer la mayoría de las técnicas utilizadas. Estas estafas se presentan de muchas formas, pero suelen seguir los mismos patrones a grandes rasgos. Si no puede hacer más, tenga esto presente:
+Es imposible parar a los estafadores completamente, pero podemos hacerlos menos efectivos siendo conscientes de sus técnicas más usadas. Estas estafas se presentan de muchas formas, pero suelen seguir los mismos patrones a grandes rasgos. Si no puede hacer más, tenga esto presente:
 
 - actúe siempre con escepticismo,
 - nadie le va a dar ETH gratis o con descuento
 - nadie necesita tener acceso a sus claves privadas o su información personal.
 
+### Phising publicitario en Twitter {#ad-phishing}
+
+![Phishing mediante enlace de Twitter](./twitterPhishingScam.png)
+
+Existe un método para falsificar la función de vista previa de enlaces (desplegable) de Twitter (también conocida como X) para potencialmente engañar a los usuarios haciéndoles creer que están visitando un sitio web legítimo. Esta técnica explota el mecanismo de Twitter para generar vistas previas de URL compartidas en los tuits y muestra _de ethereum.org_ por ejemplo (mostrado arriba), cuando en realidad están siendo redirigidos a un sitio malicioso.
+
+Verifique siempre que está en el dominio correcto, especialmente después de hacer clic en un enlace.
+
+[Más información aquí](https://harrydenley.com/faking-twitter-unfurling).
+
 ### La estafa de los regalos {#giveaway}
 
-Una de las estafas más comunes en torno a las criptomonedas es la de ofrecer regalos. La estafa de ofrecer regalos puede manifestarse de múltiples maneras, pero la premisa común es prometerle que, si envía ETH a la dirección de la billetera proporcionada, recibirá el doble de ETH enviado. *Por esta razón, también se la conoce como estafa del 2 por 1.*
+Una de las estafas más comunes en torno a las criptomonedas es la de ofrecer regalos. La estafa de los regalos engañosos puede tomar muchas formas, pero la idea general es que, si usted envía ETH a la dirección de la billetera digital proporcionada, recibirá su ETH de vuelta pero duplicado. *Por esta razón, también se la conoce como estafa del 2 por 1.*
 
-Estas estafas suelen estipular un tiempo limitado para aprovechar la oportunidad de reclamar su regalo con el fin de apresurar la toma de una decisión equívoca y crear una sensación de falsa urgencia.
+Estas estafas usualmente estipulan un límite de tiempo de oportunidad para reclamar el regalo para crear una falsa sensación de urgencia.
 
-#### Hackeos en redes sociales {#social-media-hacks}
+### Hackeos en redes sociales {#social-media-hacks}
 
 Un ejemplo concreto de esto a gran escala ocurrió en julio de 2020 cuando cuentas de Twitter de celebridades y organizaciones destacadas fueron hackeadas. El hacker publicó simultáneamente una oferta de regalar Bitcoin en las diferentes cuentas hackeadas. Aunque los tweets engañosos se detectaron y eliminaron rápidamente, los hackers lograron igualmente hacerse con 11 bitcoins (o $500.000 en septiembre de 2021).
 
 ![Estafa en Twitter](./appleTwitterScam.png)
 
-#### Regalo de celebridades {#celebrity-giveaway}
+### Regalo de celebridades {#celebrity-giveaway}
 
 Que las celebridades hagan un regalo suele ser otra estafa común. Los estafadores toman una entrevista de video grabada o charla de una conferencia que haya realizado alguien famoso y la retransmiten en directo en YouTube, haciendo que aparezca como si la persona famosa estuviera haciendo una entrevista de video en directo apoyando una oferta de criptomonedas como regalo.
 
@@ -236,9 +152,9 @@ Si recibe un correo electrónico de un remitente desconocido, recuerde:
 
 ### Estafas de brokers de trading de criptomonedas {#broker-scams}
 
-Los brokers de trading de criptomonedas afirman ser agentes especializados que se ofrecerán a que usted le confíe su dinero y ellos lo inviertan en su nombre. Esta oferta suele ir acompañada de promesas de conseguir rendimientos poco realistas. Después de que el estafador recibe sus fondos, podría inducirlo a que envíe más para que no se pierda más posibles ganancias o desaparecer por completo.
+Los operadores del mercado de criptomonedas estafadores pretenden ser intermediarios especialistas que ofrecen tomar su dinero e invertirlo en su nombre. Después de que el estafador recibe sus fondos, podría inducirlo a que envíe más para que no se pierda más posibles ganancias o desaparecer por completo.
 
-Estos brokers estafadores encuentran a sus víctimas usando cuentas falsas en YouTube para iniciar conversaciones aparentemente naturales sobre el servicio. Las conversaciones a menudo suelen contar con gente que los apoya, pero los votos de confianza son de cuentas bot.
+Estos estafadores a menudo buscan sus objetivos usando cuentas falsas en YouTube para comenzar una conversacion aparentemente natural sobre el broker. Las conversaciones a menudo suelen contar con gente que los apoya, pero los votos de confianza son de cuentas bot.
 
 **No confíe en extraños de Internet para que inviertan en su nombre. Perderá sus criptomonedas.**
 
@@ -246,9 +162,9 @@ Estos brokers estafadores encuentran a sus víctimas usando cuentas falsas en Yo
 
 ### Estafas de fondos de minado de criptomonedas {#mining-pool-scams}
 
-Desde septiembre de 2022, el minado en Ethereum ya no es posible. Sin embargo, las estafas basadas en fondos de minado siguen existiendo. Las estafas de fondos de minado de criptomonedas implican a personas que se ponen en contacto con usted sin haberlo solicitado y que afirman que podría obtener grandes beneficios si se une a un fondo de Ethereum. El estafador le pedirá dinero y permanecerá en contacto con usted todo el tiempo que sea necesario. Esencialmente, el estafador intentará convencerlo de que, cuando se una a un fondo de minado de Ethereum, sus criptomonedas se utilizarán para crear ETH y se le pagarán dividendos en forma de ETH. Lo que acabará sucediendo es que usted notará que sus criptomonedas van produciendo pequeños rendimientos. Esto es simplemente un anzuelo para que invierta más. Eventualmente, todos sus fondos serán enviados a una dirección desconocida, y el estafador desaparecerá o, en algunos casos, seguirá en contacto como ha ocurrido en un caso reciente.
+Desde septiembre de 2022, el minado en Ethereum ya no es posible. Sin embargo, las estafas basadas en fondos de minado siguen existiendo. Las estafas de fondos de minado de criptomonedas implican a personas que se ponen en contacto con usted sin haberlo solicitado y que afirman que podría obtener grandes beneficios si se une a un fondo de Ethereum. El estafador le pedirá dinero y permanecerá en contacto con usted todo el tiempo que sea necesario. Esencialmete, el estafador tratará de convencerlo de que, cuando se una a un grupo o fondo de minado, sus criptomonedas se usarán para crear ETH y así se le pagarán dividendos en forma de ETH. Luego usted verá que sus criptomonedas están generando pequeños retornos. Esto es simplemente un anzuelo para que invierta más. Eventualmente, todos sus fondos serán enviados a una dirección desconocida, y el estafador desaparecerá o, en algunos casos, seguirá en contacto como ha ocurrido en un caso reciente.
 
-La moraleja de estos consejos es que tenga cuidado con las personas que se pongan en contacto con usted a través de las redes sociales para invitarlo a que forma parte de un fondo de minado. Una vez que pierda sus criptomonedas, ¡se acabó!
+En conclusión: tenga cuidado de gente que lo contacta pidiendo ser parte de un grupo o pozo de minado. Una vez que pierda sus criptomonedas, ¡se acabó!
 
 He aquí un compendio de puntos para recordar:
 
@@ -260,9 +176,95 @@ He aquí un compendio de puntos para recordar:
 
 ### Estafas de distribución de criptomonedas (airdropping) {#airdrop-scams}
 
-Las estafas de distribución de criptomonedas, o airdropping, implican una tentativa de estafa en el que un proyecto falso distribuye un activo (NFT, token) en su billetera para lo cual deben enviarlo a un sitio web fraudulento a fin de reclamar el activo. Se le pedirá que inicie sesión con su billetera de Ethereum y que "apruebe" una transacción al intentar reclamar el activo. Esta transacción compromete su cuenta enviando sus claves públicas y privadas al estafador. Otra forma de esta estafa consiste en pedirle que confirme una transacción en la que se envían fondos a la cuenta del estafador.
+Las estafas de distribución de criptomonedas, o airdropping, implican una tentativa de estafa en el que un proyecto falso distribuye un activo (NFT, token) en su billetera para lo cual deben enviarlo a un un sitio web fraudulento a fin de reclamar el activo distribuido. Se le pedirá que inicie sesión con su billetera de Ethereum y que "apruebe" una transacción al intentar reclamar el activo. Esta transacción compromete su cuenta enviando sus claves públicas y privadas al estafador. Otra forma de esta estafa consiste en pedirle que confirme una transacción en la que se envían fondos a la cuenta del estafador.
 
 [Más información sobre las estafas de airdropping](https://www.youtube.com/watch?v=LLL_nQp1lGk)
+
+<Divider />
+
+## Seguridad en la Web 101 {#web-security}
+
+### Utilice contraseñas seguras {#use-strong-passwords}
+
+[Más del 80% de los ataques a cuentas se producen a causa de contraseñas débiles o robadas](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Una gran combinacion de carácteres, números y símbolos ayudará a mantener sus cuentas seguras.
+
+Un error común es usar una combinación de palabras comunmente ralcionadas. Contraseñas como estas son inseguras, ya que son propensas a una técnida de hackeo llamada ataque de diccionario.
+
+```md
+Ejemplo de una contraseña débil: CuteFluffyKittens!
+
+Ejemplo de una contraseña fuerte: ymv\*azu.EAC8eyp8umf
+```
+
+Otro error común es el uso de contraseñas que se pueden adivinar fácilmente o descubrir a través de [ingeniería social](https://wikipedia.org/wiki/Social_engineering_(security)). Incluir el nombre de soltera de su madre, los nombres de sus hijos o mascotas, o fechas de cumpleaños en su contraseña incrementará el riesgo de ser hackeada.
+
+#### Buenas prácticas de contraseña: {#good-password-practices}
+
+- Crear las contraseñas más largas que permita su generador de contraseñas o el formulario que está rellenando.
+- Usar una mezcla de mayúsculas, minúsculas, números y símbolos.
+- No utilizar datos personales, tales como apellidos, en su contraseña.
+- Evitar palabras comunes.
+
+[Más información sobre la creación de contraseñas fuertes.](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
+
+### Use contraseñas únicas para todo {#use-unique-passwords}
+
+Una contraseña segura que ha sido revelada en una violación de datos deja de ser una contraseña segura. La página web [Have I Been Pwned](https://haveibeenpwned.com) le permite revisar si sus cuentas se han visto involucradas en alguna filtración de datos pública. Si lo han sido, **cambie esas contraseñas inmediatamente**. Usar contraseñas únicas para cada cuenta disminuye el riesgo de que los hackers accedan a todas sus cuentas si una de sus contraseñas ya está comprometida.
+
+### Use un gestor de contraseñas {#use-password-manager}
+
+<InfoBanner emoji=":bulb:">
+  <div>
+    Un gestor de contraseñas se encarga de crear contraseñas seguras, únicas y recordarlas. Le <strong>aconsejamos vivamente</strong> que utilice uno, ¡y la mayoría de ellos son gratis!
+  </div>
+</InfoBanner>
+
+Recordar contraseñas seguras y únicas para cada cuenta que tenga no es la solución perfecta. Un gestor de contraseñas ofrece un espacio seguro y cifrado para todas sus contraseñas, a las que puede acceder a través de una contraseña maestra segura. También le sugiere contraseñas seguras al registrarse en un nuevo servicio, por lo que no tiene que crear sus propias contraseñas. Muchos administradores de contraseñas también le dirán si sus datos han sido filtrados, permitiéndole cambiar las contraseñas antes de cualquier ataque malicioso.
+
+![Ejemplo de uso de un gestor de contraseñas](./passwordManager.png)
+
+#### Pruebe a usar un gestor de contraseñas: {#try-password-manager}
+
+- [Bitwarden](https://bitwarden.com/)
+- [KeePass](https://keepass.info/)
+- [1Password](https://1password.com/)
+- O revise otros [gestores de contraseñas recomendados](https://www.privacytools.io/secure-password-manager)
+
+### Use la autenticación de dos factores {#two-factor-authentication}
+
+En ocasiones le pueden pedir que autentifique su identidad a través de pruebas únicas. Estas son conocidas como **factores**. Los tres factores principales son:
+
+- Algo que usted sepa (como una contraseña o una pregunta de seguridad).
+- Algún rasgo distintivo suyo (como una huella dactilar o un escáner de iris/facial).
+- Algo que tenga (una clave de seguridad o una aplicación de autenticación en su teléfono).
+
+Usar un **Factor de Doble Autenticación (2FA)** provee un *factor de seguridad* adicional para sus cuentas en línea. 2FA asegura que no sea posible acceder a su cuenta con solo tener su contraseña. Lo más común es que el segundo factor sea un código aleatorio de 6 dígitos, conocido como una **contraseña de una sola vez basada en (TOTP)**, que puede acceder a través de una aplicación de autenticación, como Google Authenticator o Authy. Estos funcionan como un factor de «algo que usted posee», porque la semilla que genera el código temporizado se almacena en su dispositivo.
+
+<InfoBanner emoji=":lock:">
+  <div>
+    Nota: El uso de 2FA basado en SMS es susceptible a <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> y no es seguro. Para lograr mayor seguridad, utilice un servicio como <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> o <a href="https://authy.com/">Authy</a>.
+  </div>
+</InfoBanner>
+
+#### Herramientas de seguridad {#security-keys}
+
+Una llave de seguridad es un tipo más avanzado y seguro de 2FA. Las llaves de seguridad son dispositivos físicos de autenticación de hardware que funcionan de la misma manera que las aplicaciones de autenticación. Usar una clave de seguridad es la manera más segura de llegar a 2FA. Muchas de estas claves utilizan el estándar universal de segundo factor U2F. [Más información sobre FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/).
+
+Ver más sobre 2FA:
+
+<YouTube id="m8jlnZuV1i4" start="3479" />
+
+### Desinstale extensiones del navegador {#uninstall-browser-extensions}
+
+Las extensiones del navegador, como las extensiones de Chrome o los complementos para Firefox, pueden mejorar la funcionalidad del navegador y la experiencia del usuario, pero no están exentas de riesgos. De forma predeterminada, la mayoría de las extensiones del navegador piden acceso a «leer y cambiar datos del sitio», permitiéndoles hacer casi cualquier cosa con sus datos. Las extensiones de Chrome siempre se actualizan automáticamente, por lo que una extensión previamente segura puede actualizarse más tarde e incluir código malicioso. La mayoría de las extensiones del navegador no intentan robar sus datos, no obstante debe ser consciente de que pueden hacerlo.
+
+#### Haga lo siguiente para mantenerse seguro: {#browser-extension-safety}
+
+- Instale solo las extensiones del navegador desde fuentes de confianza.
+- Elimine extensiones no utilizadas del navegador.
+- Instale las extensiones de Chrome localmente para detener la actualización automática (avanzado).
+
+[Más sobre los riesgos de las extensiones del navegador](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 <Divider />
 

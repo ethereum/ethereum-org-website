@@ -50,7 +50,7 @@ Podstawą DAO jest inteligentny kontrakt, który określa zasady organizacji i k
 
 Jest to możliwe, ponieważ inteligentne kontrakty są zabezpieczone przed ingerencją osób niepowołanych po ich wdrożeniu na Ethereum. Nie możesz po prostu edytować kodu (zasad DAO) niepostrzeżenie, ponieważ wszystko jest publiczne.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Więcej na temat inteligentnych kontraktów
 </DocLink>
 

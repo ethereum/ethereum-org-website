@@ -50,6 +50,7 @@ lang: ru
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Краны
 
@@ -60,6 +61,7 @@ lang: ru
 - [Кран Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Кран Infura Sepolia](https://www.infura.io/faucet)
 - [Кран Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [Кран Ethereum Ecosystem](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli _(долгосрочная поддержка)_ {#goerli}
 
@@ -76,6 +78,7 @@ Goerli — тестовая сеть для проверки валидации 
 - [Сайт](https://goerli.net/)
 - [GitHub](https://github.com/eth-clients/goerli)
 - [Etherscan](https://goerli.etherscan.io)
+- [Blockscout](https://eth-goerli.blockscout.com/)
 
 ##### Краны
 
@@ -88,7 +91,7 @@ Goerli — тестовая сеть для проверки валидации 
 - [Кран Coinbase Wallet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Кран Goerli от Chainstack](https://faucet.chainstack.com/goerli-faucet)
 
-Чтобы стать валидатором в тестовой сети Goerli, используйте [панель запуска cheap goerli validator](https://goerli.launchpad.ethstaker.cc/en/) от EthStaker.
+Чтобы стать валидатором в тестовой сети Goerli, используйте [панель запуска cheap goerli validator](https://holesky.launchpad.ethstaker.cc/en/) от EthStaker.
 
 ### Тестовые сети уровня 2 {#layer-2-testnets}
 

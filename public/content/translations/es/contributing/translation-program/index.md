@@ -22,7 +22,7 @@ El programa de traducción es un esfuerzo colaborativo para traducir ethereum.or
 
 _Únase a [ethereum.org Discord](/discord/) para colaborar en traducciones, hacer preguntas, compartir comentarios e ideas o unirse a un grupo de traducción._
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Empezar a traducir
 </ButtonLink>
 
@@ -36,9 +36,9 @@ Conozca más detalles sobre la [misión y visión](/contributing/translation-pro
 
 ### Nuestra evolución hasta la fecha {#our-progress}
 
-- [**+ 5.100** traductores](/contributing/translation-program/contributors/)
-- **54** idiomas disponibles en el sitio
-- [3 millones de palabras traducidas en 2022](/contributing/translation-program/acknowledgements/)
+- [**6000+** traductores](/contributing/translation-program/contributors/)
+- **62** idiomas en vivo en el lugar
+- [**3 millones** de palabras traducidas en 2023](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
@@ -50,9 +50,9 @@ Miles de miembros de la comunidad traducen ethereum. org y ellos son la pieza cl
 
 Si ha contribuido al Programa de traduccion y se han aprobado al menos 5.000 de las palabras que haya traducido, puede recibir un Certificado de traductor de ethereum.org. [ Más información sobre los certificados](/contributing/translation-program/acknowledgements/#certificate)
 
-#### POAP {#poaps}
+#### OAT {#oats}
 
-Todos nuestros traductores pueden optar a una POAP (siglas en inglés de prueba de protocolo de asistencia), es decir, un NFT que certifica su aportación al Programa de traduccion de ethereum.org. [ Más información sobre POAP](/contributing/translation-program/acknowledgements/#poap)
+Los colaboradores del Programa de Traducción son elegibles para diferentes OAT (tokens de logro en cadena, On-Chain Achievement Token) según el número de palabras traducidas en 2024. Los OAT son NFT que prueban su contribución al Programa de Traducción de ethereum.org. [Más sobre los OAT](/contributing/translation-program/acknowledgements/#oats)
 
 #### Reconocimientos a los traductores {#translator-acknowledgements}
 
@@ -77,7 +77,7 @@ Si desea informarse sobre herramientas de traducción útiles, comunidades de tr
 
 ## Contáctenos {#get-in-touch}
 
-¿Tiene alguna pregunta? ¿O quiere colaborar con nuestro equipo y otros traductores? Envíe un mensaje al canal #translations de nuestro [servidor Discord de ethereum.org](https://discord.gg/6WX7E97)
+¿Tiene alguna pregunta? ¿O quiere colaborar con nuestro equipo y otros traductores? Publique en el canal #translations de nuestro [servidor de Discord de ethereum.org](https://discord.gg/ethereum-org).
 
 También puede contactarnos a través de nuestro correo electrónico translations@ethereum.org.
 

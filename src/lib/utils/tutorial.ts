@@ -12,7 +12,7 @@ export const filterTutorialsByLang = (
 ): Array<ITutorial> => {
   const internalTutorialsMap = internalTutorials.map((tutorial) => {
     return {
-      to: tutorial.to || "",
+      href: tutorial.href || "",
       title: tutorial?.title || "",
       description: tutorial?.description || "",
       author: tutorial?.author || "",
@@ -27,7 +27,7 @@ export const filterTutorialsByLang = (
 
   const externalTutorialsMap = externalTutorials.map<ITutorial>(
     (tutorial: IExternalTutorial) => ({
-      to: tutorial.url,
+      href: tutorial.url,
       title: tutorial.title,
       description: tutorial.description,
       author: tutorial.author,

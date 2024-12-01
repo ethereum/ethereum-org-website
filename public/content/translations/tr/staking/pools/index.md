@@ -26,7 +26,7 @@ Bazı havuzlar, fonların bir sözleşmeye yatırılabileceği, bahis tutarını
 <CardGrid>
   <Card title="Düşük giriş engeli" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
   <Card title="Hemen hisseleyin" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="hisseleme token'ları" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
+  <Card title="Jetonları hisseleme" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -53,22 +53,22 @@ Kurulumunuzda size yardımcı olacak çeşitli seçenekler mevcuttur. Aşağıda
 
 <StakingProductsCardGrid category="pools" />
 
-Ağ güvenliğini iyileştirdiği ve riskinizi sınırladığı için [istemci çeşitliliğini](/developers/docs/nodes-and-clients/client-diversity/) ciddiye alan bir hizmet seçmenin önemini lütfen unutmayın. Çoğunluk istemcisi kullanımı sınırladığına dair kanıtları olan hizmetler;<em style={{ textTransform: "uppercase" }}>"yürütme istemcisi çeşitliliği"</em> ve <em style={{ textTransform: "uppercase" }}>"fikir birliği istemcisi çeşitliliği" ile belirtilir.</em>
+Ağ güvenliğini iyileştirdiği ve riskinizi sınırladığı için [istemci çeşitliliğini](/developers/docs/nodes-and-clients/client-diversity/) ciddiye alan bir hizmet seçmenin önemini lütfen unutmayın. Çoğunluk istemcisi kullanımının sınırlandığına dair kanıtları olan hizmetler, <em style={{ textTransform: "uppercase" }}>"yürütüm istemcisi çeşitliliği"</em> ve <em style={{ textTransform: "uppercase" }}>"fikir birliği istemcisi çeşitliliği"</em> ile gösterilir.
 
 Kaçırdığımız bir hisseleme aracı için öneriniz mi var mı? Uygun olup olmadığını görmek ve incelemeye göndermek için [ürün listeleme politikamıza](/contributing/adding-staking-products/) göz atın.
 
 ## Sıkça sorulan sorular {#faq}
 
 <ExpandableCard title="Nasıl ödül kazanabilirim?">
-Tipik olarak ERC-20 hisseleme token'ları, hisselenen ETH artı ödüllerinin değerini temsil eden paydaşlara verilir. Farklı havuzların, kullanıcılarına biraz farklı yöntemlerle hisseleme ödüllerini dağıtacağını aklınızda tutun, ancak bu ortak temadır.
+ERC-20 hisseleme jetonları, genel olarak paydaşlara verilir ve bu kişilerin hisselenen ETH ve ödüllerinin değerini temsil eder. Farklı havuzların, kullanıcılarına biraz farklı yöntemlerle hisseleme ödüllerini dağıtacağını aklınızda tutun, ancak bu ortak temadır.
 </ExpandableCard>
 
 <ExpandableCard title="Stake ettiğim tutarı ne zaman geri çekebilirim?">
-Hemen şimdi! Şangay/Capella ağ yükseltmesi Nisan 2023'te gerçekleşti, hisseleme para çekim işlemlerini başlattı. Hisseleme havuzlarını destekleyen doğrulayıcı hesaplar artık çıkış ve ayarladıkları çekim adresine ETH çekim yeteneğine sahipler. Bu hisse miktarını arkaplandaki ETH için kullanma yeteneğini aktif eder. Bu işlevselliği ne şekilde desteklediklerini görmek için sağlayıcınıza danışın.
+Hemen şimdi! Şangay/Capella ağ yükseltmesi Nisan 2023'te gerçekleşti, hisseleme para çekme işlemlerini başlattı. Hisseleme havuzlarını destekleyen doğrulayıcı hesaplar artık çıkış ve ayarladıkları çekim adresine ETH çekme yeteneğine sahipler. Bu hisse miktarını arkaplandaki ETH için kullanma yeteneğini aktif eder. Bu işlevselliği ne şekilde desteklediklerini görmek için sağlayıcınıza danışın.
 
 Alternatif olarak, bir ERC-20 likidite token'ı kullanan havuzlar, kullanıcıların bu token'ın açık pazarda ticaretini yapmalarına izin vererek hisseleme pozisyonunuzu satmanıza, ETH'yi hisseleme sözleşmesinden fiilen çıkarmadan etkin bir şekilde "çekmenize" olanak tanır.
 
-<ButtonLink to="/staking/withdrawals/">Hisseleme para çekmeleri hakkında daha fazlası</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Hisseleme para çekme işlemleri hakkında daha fazlası</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Bu benim borsamla stake yapmaktan farklı mı?">
@@ -81,5 +81,6 @@ Arkalarındaki düğümler söz konusu olduğunda bazı havuzlar diğerlerinden 
 
 ## Daha fazla bilgi {#further-reading}
 
+- [Ethereum Hisseleme Dizini](https://www.staking.directory/) - _Eridian ve Spacesider_
 - [Roket Havuzuyla Staking - Staking'e Genel Bakış](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPool belgeleri_
 - [Lido ile Ethereum stake et](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Lido yardımcı dökümanları_

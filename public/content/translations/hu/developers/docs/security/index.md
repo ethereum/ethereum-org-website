@@ -29,7 +29,7 @@ Minimum:
 - Az összes kódot egy verzió követő rendszer tárolja, mint a git
 - Minden kódmódosítást pull requesteken keresztül kell végezni
 - Minden pull requestet át kell néznie legalább egy valakinek. _Ha egyedül vagy a projekten, akkor keress valakit aki szintén egyedül van és cseréljetek kód review-kat._
-- Egy egyedüli parancs fordítja, telepíti és futtatja a tesztek sorozatát a kódodra egy Ethereum fejlesztői környezet használatával (lásd Truffle)
+- Egy egyedüli parancs fordítja, telepíti és futtatja a tesztek sorozatát a kódodra egy Ethereum fejlesztői környezet használatával
 - Végig futtatod a kódodat valamilyen alapszintű kód analitikai eszközzel, mint a Mythril vagy a Slither, ideálisan mielőtt az egyes pull requesteket mergeled, így össze tudod hasonlítani a végeredményeket
 - A Solidity nem fog SEMMILYEN fordítói hibát visszaadni
 - A kódot megfelelően dokumentációval kell ellátni

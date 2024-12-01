@@ -16,11 +16,11 @@ lang: zh-tw
 
 不了解加密貨幣的運作方式，可能導致代價可觀的錯誤。 舉例來說，若是不了解以太坊是去中心化網路且未提供客服功能，當有人偽裝成客服人員，謊稱返還遺失的以太幣以藉機索取你的私密金鑰，便很容易落入圈套。 增加對以太坊運作方式的知識，是一項很值得的投資。
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   什麼是 Ethereum？
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   甚麼是以太(以太幣)？
 </DocLink>
 <Divider />
@@ -33,7 +33,7 @@ lang: zh-tw
 
 錢包的私密金鑰，就如同開啟以太坊錢包的密碼。 這是唯一阻止別人從你的錢包地址提領所有帳戶資產的方法！
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   什麼是以太坊錢包?
 </DocLink>
 
@@ -242,15 +242,7 @@ _注意：有些衍生的代幣/行情指示器可能代表被質押的以太幣
 
 <InfoBanner emoji=":lock:">
   <div>
-    注意：使用簡訊型雙因素驗證，很容易發生
-    <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
-      SIM 卡挾持
-    </a>
-     ，也不安全。 為了獲得最佳安全性，請使用 {" "}
-    <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
-      Google Authenticator
-    </a>
-     或 <a href="https://authy.com/">Authy</a> 等服務。
+    注意：使用基於簡訊的雙因素驗證容易受到 <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM 卡交換攻擊</a>，因此並不安全。 為了獲得最佳安全性，請使用 <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> 或 <a href="https://authy.com/">Authy</a> 等服務。
   </div>
 </InfoBanner>
 

@@ -26,12 +26,10 @@
   "page-local-environment-setup-meta-desc": "Vodič za odabir vašeg softverskog skladišta za razvoj Ethereum-a.",
   "page-local-environment-setup-meta-title": "Ethereum-ova postavka za lokalno razvijanje",
   "page-local-environment-setup-subtitle": "Ako ste spremni da počnete sa razvijanjem, vreme je da izaberete Vašu opciju.",
-  "page-local-environment-setup-subtitle-2": "Ovde se nalaze alati i okviri koji Vam mogu pomoći u razvijanju Vaše Etereum aplikacije.",
+  "page-local-environment-setup-subtitle-2": "Ovde se nalaze alati i okviri koji Vam mogu pomoći u razvijanju Vaše Ethereum aplikacije.",
   "page-local-environment-setup-title": "Postavite svoje lokalno razvojno okruženje",
   "page-local-environment-solidity-template-desc": "GitHub-ov šablon za unapred izgrađenu postavku za Vaše Solidity pametne ugovore. Uključuje Hardhat lokalnu mrežu, Waffle za testiranje, Ethers za implementaciju novčanika, i mnogo toga.",
   "page-local-environment-solidity-template-logo-alt": "Solidity probni logo",
-  "page-local-environment-truffle-desc": "Truffle Suite pomaže programerima da svoju ideju pretvore u dapp što je komfornije moguće.",
-  "page-local-environment-truffle-logo-alt": "Truffle-ov logo",
   "page-local-environment-waffle-desc": "Najnaprednija biblioteka za testiranje pametnih ugovora. Koristite je samostalno ili sa Scaffold-eth-om ili Hardhat-om.",
   "page-local-environment-waffle-logo-alt": "Waffle-ov logo"
 }

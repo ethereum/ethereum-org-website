@@ -35,6 +35,6 @@ lang: zh
 
 如果你想向 ethereum.org 添加交易所，请在 GitHub 上创建提议。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
   创建一个提议
 </ButtonLink>

@@ -1,6 +1,5 @@
 import { useState } from "react"
 import type { MotionProps } from "framer-motion"
-import { useEventListener } from "@chakra-ui/react"
 
 import { isModified } from "@/lib/utils/keyboard"
 
@@ -8,17 +7,16 @@ import { MAIN_NAV_ID, SECTION_LABELS } from "@/lib/constants"
 
 import type { NavSectionKey, NavSections } from "../types"
 
-import { useNavMenuColors } from "@/hooks/useNavMenuColors"
+import { useEventListener } from "@/hooks/useEventListener"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export const useNavMenu = (sections: NavSections) => {
   const { direction } = useRtlFlip()
-  const menuColors = useNavMenuColors()
   const [activeSection, setActiveSection] = useState<NavSectionKey | null>(null)
 
   // Focus corresponding nav section when number keys pressed
   useEventListener("keydown", (event) => {
-    if (!document || !event.key.match(/[1-9]/) || isModified(event)) return
+    if (!document || !event.key.match(/^[1-9]$/) || isModified(event)) return
     if (event.target instanceof HTMLInputElement) return
     if (event.target instanceof HTMLTextAreaElement) return
     if (event.target instanceof HTMLSelectElement) return
@@ -72,7 +70,6 @@ export const useNavMenu = (sections: NavSections) => {
     direction,
     handleSectionChange,
     isOpen,
-    menuColors,
     onClose,
   }
 }

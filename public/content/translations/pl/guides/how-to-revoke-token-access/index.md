@@ -6,11 +6,11 @@ lang: pl
 
 # Jak unieważnić dostęp inteligentnych kontraktów do środków kryptowaluty
 
-W tym przewodniku dowiesz się, jak wyświetlić listę wszystkich inteligentnych kontraktów, którym zezwoliłeś na dostęp do swoich środków i jak je anulować.
+W tym przewodniku dowiesz się, jak wyświetlić listę wszystkich [inteligentnych kontraktów](/glossary/#smart-contract) mających za Twoją zgodą dostęp do Twoich środków i jak je anulować.
 
-Czasami złośliwi programiści tworzą backdoory w inteligentnych kontraktach, które umożliwiają dostęp do funduszy nieświadomych użytkowników, którzy wchodzą w interakcję z inteligentnym kontraktem. Często zdarza się, że takie platformy proszą użytkownika o zgodę na wydanie **nieograniczonej liczby tokenów** w celu zaoszczędzenia niewielkich ilości gazu w przyszłości, ale wiąże się to ze zwiększonym ryzykiem.
+Czasami złośliwi programiści tworzą backdoory w inteligentnych kontraktach, które umożliwiają dostęp do funduszy nieświadomych użytkowników, którzy wchodzą w interakcję z inteligentnym kontraktem. Często zdarza się, że takie platformy proszą użytkownika o zgodę na wydanie **nieograniczonej liczby tokenów** w celu zaoszczędzenia niewielkich ilości [gazu](/glossary/#gas) w przyszłości, ale wiąże się to ze zwiększonym ryzykiem.
 
-Gdy platforma ma nieograniczone prawa dostępu do tokena w portfelu użytkownika, może wydać wszystkie te tokeny, nawet jeśli użytkownik wycofał swoje środki z ich platformy do portfela. Złośliwi użytkownicy mogą nadal uzyskiwać dostęp do twoich środków i wypłacać je do swoich portfeli bez możliwości ich odzyskania.
+Gdy platforma ma nieograniczone prawa dostępu do tokena w [portfelu](/glossary/#wallet) użytkownika, może wydać wszystkie te tokeny, nawet jeśli użytkownik wycofał swoje środki z ich platformy do portfela. Złośliwi użytkownicy mogą nadal uzyskiwać dostęp do twoich środków i wypłacać je do swoich portfeli bez możliwości ich odzyskania.
 
 Jedynym zabezpieczeniem jest powstrzymanie się od korzystania z niesprawdzonych nowych projektów, zatwierdzanie tylko tych, które są potrzebne, lub regularne cofanie dostępu. Jak więc to zrobić?
 
@@ -49,7 +49,7 @@ Zalecamy odświeżenie narzędzia do unieważniania po kilku minutach i ponowne 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Chcesz dowiedzieć się więcej?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Zobacz nasze inne przewodniki
   </ButtonLink>
 </InfoBanner>
@@ -58,7 +58,7 @@ Zalecamy odświeżenie narzędzia do unieważniania po kilku minutach i ponowne 
 
 ### Czy unieważnienie dostępu do tokenów powoduje również zakończenie stakowania, poolingu, pożyczek itp?
 
-Nie, nie wpłynie to na żadną z twoich strategii DeFi. Twoje pozycje pozostają niezmienione i nadal będziesz otrzymywać nagrody itp.
+Nie, nie wpłynie to na żadną z Twoich strategii [DeFi](/glossary/#defi). Twoje pozycje pozostają niezmienione i nadal będziesz otrzymywać nagrody itp.
 
 ### Czy odłączenie portfela od projektu jest równoznaczne z usunięciem uprawnień na korzystanie z moich środków?
 

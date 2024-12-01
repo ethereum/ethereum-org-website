@@ -55,7 +55,7 @@ Os benefícios deste desenho de rede são:
 - reduzir a dependência em fornecedores centralizados
 - reduzir o uso de banda de internet
 - minimizar ou zerar a sincronia
-- ser acessível a dispositivos com restrição de recursos (<1GB RAM, <100MB de disco, 1CPU)
+- Acessível a dispositivos com recursos limitados (<1 GB de RAM, <100 MB de espaço em disco, 1 CPU)
 
 O diagrama abaixo mostra as funções dos clientes existentes que podem ser entregues pela Rede Portal, habilitando ao usuários acessar estas funções em dispositivos com muito poucos recursos.
 
@@ -70,6 +70,7 @@ Os clientes da Rede Portal são:
 - [Trin](https://github.com/ethereum/trin): escrito em Rust
 - [Fluffy](https://nimbus.team/docs/fluffy.html): escrito em Nim
 - [Ultralight](https://github.com/ethereumjs/ultralight): escrito em Typescript
+- [Shisui](https://github.com/GrapeBaBa/shisui): escrito em Go
 
 Ter várias implementações de clientes independentes melhora a resiliência e descentralização da rede Ethereum.
 

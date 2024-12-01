@@ -1,58 +1,46 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { Box, Center, Flex } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 
 import CardList from "@/components/CardList"
 import Emoji from "@/components/Emoji"
-import InlineLink from "@/components/Link"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
-import Select from "@/components/Select"
+import InlineLink from "@/components/ui/Link"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { WEBSITE_EMAIL } from "@/lib/constants"
 
+import Select from "../Select"
+
 import { useCentralizedExchanges } from "@/hooks/useCentralizedExchanges"
 
 const ListContainer = (props: ChildOnlyProp) => (
-  <Box mt={16} flex={{ base: "1 1 100%", md: "1 1 50%" }} {...props} />
+  <div className="mt-16 flex flex-col gap-4" {...props} />
 )
 
 const ResultsContainer = (props: ChildOnlyProp) => (
-  <Flex
-    justify="center"
-    w="full"
-    maxWidth="876px"
-    flexWrap={{ base: "wrap", md: "initial" }}
-    sx={{
-      "& > *": {
-        _first: {
-          me: { base: 0, md: 6 },
-        },
-      },
-    }}
+  <div
+    className="flex w-full max-w-screen-md flex-wrap justify-center md:flex-nowrap first:md:me-6"
     {...props}
   />
 )
 
 const EmptyStateContainer = (props: ChildOnlyProp) => (
-  <Center flexDir="column" mt={16} {...props} />
+  <div className="mt-16 flex flex-col items-center justify-center" {...props} />
 )
 
 const SuccessContainer = (props: ChildOnlyProp) => (
-  <Flex flexDir="column" mt={4} {...props} />
+  <div className="flex flex-col gap-4" {...props} />
 )
 
 const EmptyStateText = (props: ChildOnlyProp) => (
-  <Text m={8} fontSize="xl" maxW="450px" textAlign="center" {...props} />
+  <p className="m-8 max-w-[450px] text-center text-xl" {...props} />
 )
 
 const NoResults = ({ children }) => (
   <EmptyStateContainer>
-    <Emoji text=":crying_face:" fontSize="80px" />
+    <Emoji text=":crying_face:" className="text-[80px]" />
     <EmptyStateText>
       {/* TODO: Fix `children` structure to include email link within i18n string */}
       {children}{" "}
@@ -62,14 +50,14 @@ const NoResults = ({ children }) => (
 )
 
 const NoResultsSingle = ({ children }) => (
-  <Center flexDir="column" mt={6}>
-    <Text maxW="450px" mb={16}>
+  <div className="mt-6 flex flex-col items-center justify-center">
+    <p className="mb-16 max-w-[450px]">
       {/* TODO: Fix `children` structure to include email link within i18n string */}
       {children}{" "}
       <InlineLink href={`mailto:${WEBSITE_EMAIL}`}>{WEBSITE_EMAIL}</InlineLink>.
-    </Text>
-    <Emoji text=":crying_face:" fontSize="80px" />
-  </Center>
+    </p>
+    <Emoji text=":crying_face:" className="text-[80px]" />
+  </div>
 )
 
 type CentralizedExchangesProps = { lastDataUpdateDate: string }
@@ -91,18 +79,12 @@ const CentralizedExchanges = ({
   const lastUpdated = getLocaleTimestamp(locale as Lang, lastDataUpdateDate)
 
   return (
-    <Flex flexDir="column" align="center" w="full">
-      <OldHeading
-        fontSize={{ base: "2xl", md: "2rem" }}
-        fontWeight={600}
-        lineHeight={1.4}
-      >
-        {t("page-get-eth-exchanges-header")}
-      </OldHeading>
-      <Text maxW="container.sm" mb={8} lineHeight={1.4} textAlign="center">
+    <div className="flex flex-col items-center">
+      <h2 className="mb-4">{t("page-get-eth-exchanges-header")}</h2>
+      <p className="mb-8 max-w-screen-md text-center">
         {t("page-get-eth-exchanges-intro")}
-      </Text>
-      <Box w="full" maxW="container.sm">
+      </p>
+      <div className="w-full max-w-screen-sm">
         <Select
           instanceId="eth-exchange-region"
           aria-label={t("page-get-eth-exchanges-header")}
@@ -112,10 +94,10 @@ const CentralizedExchanges = ({
           isSearchable
           variant="outline"
         />
-      </Box>
+      </div>
       {!hasSelectedCountry && (
         <EmptyStateContainer>
-          <Emoji text=":world_map:" fontSize="80px" />
+          <Emoji text=":world_map:" className="text-[80px]" />
           <EmptyStateText>
             {t("page-get-eth-exchanges-empty-state-text")}
           </EmptyStateText>
@@ -134,17 +116,12 @@ const CentralizedExchanges = ({
         <>
           <ResultsContainer>
             <ListContainer>
-              <OldHeading
-                as="h3"
-                fontSize={{ base: "xl", md: "2xl" }}
-                fontWeight={600}
-                lineHeight={1.4}
-              >
+              <h3 className="text-xl font-semibold md:text-2xl">
                 {t("page-get-eth-exchanges-header-exchanges")}
-              </OldHeading>
+              </h3>
               {hasExchangeResults && (
                 <SuccessContainer>
-                  <Text>{t("page-get-eth-exchanges-success-exchange")}</Text>
+                  <p>{t("page-get-eth-exchanges-success-exchange")}</p>
                   <CardList items={filteredExchanges} />
                 </SuccessContainer>
               )}
@@ -155,17 +132,17 @@ const CentralizedExchanges = ({
               )}
             </ListContainer>
           </ResultsContainer>
-          <Text w="full" maxW="876px" mt={16} mb={0}>
+          <p className="mt-16 max-w-screen-lg">
             {t("page-get-eth-exchanges-disclaimer")}{" "}
             <InlineLink href={`mailto:${WEBSITE_EMAIL}`}>
               {WEBSITE_EMAIL}
             </InlineLink>
             . {t("page-find-wallet-last-updated")}{" "}
             <strong>{lastUpdated}</strong>
-          </Text>
+          </p>
         </>
       )}
-    </Flex>
+    </div>
   )
 }
 

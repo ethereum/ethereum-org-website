@@ -190,7 +190,7 @@ Sau khi thiết lập thông tin xác thực rút tiền, các khoản thanh to�
 
 Để mở khóa và nhận lại toàn bộ số tiền của bạn, bạn cũng phải hoàn tất quá trình thoát nút xác thực.
 
-<ButtonLink to="/staking/withdrawals/">Thông tin thêm về rút tiền đặt cọc</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Thông tin thêm về rút tiền đặt cọc</ButtonLink>
 </ExpandableCard>
 
 ## Đọc thêm {#further-reading}

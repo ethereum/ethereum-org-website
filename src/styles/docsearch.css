@@ -1,0 +1,158 @@
+/**
+  * Custom styles for the DocSearch Button
+  * https://docsearch.algolia.com/docs/styling
+  */
+.DocSearch-Button-Container {
+  @apply hidden lg:flex;
+}
+
+.DocSearch-Button-Container svg {
+  @apply size-3.5 transition-transform duration-500 group-hover:rotate-12 group-hover:transition-transform group-hover:duration-500;
+}
+
+.DocSearch-Search-Icon,
+.DocSearch-Button-Placeholder {
+  @apply text-body group-hover:text-primary-hover;
+}
+
+.DocSearch-Button-Placeholder {
+  @apply font-normal lowercase;
+}
+
+.DocSearch-Button-Keys {
+  @apply mt-0.5 flex h-full min-w-max items-center gap-1 p-0;
+}
+
+.DocSearch-Button-Key {
+  @apply m-0 size-5 border border-solid border-disabled bg-none p-0.5 text-sm lowercase text-disabled shadow-none first:pt-1 first:text-md;
+}
+
+/**
+  * Custom styles for the DocSearch Modal
+  */
+
+:root {
+  --docsearch-modal-background: theme(backgroundColor.background.DEFAULT);
+  --docsearch-searchbox-height: fit-content;
+  --docsearch-highlight-color: theme(colors.primary.hover);
+  --docsearch-modal-width: 650px;
+  --docsearch-hit-height: fit-content;
+}
+
+[data-theme="dark"] {
+  --docsearch-modal-background: theme(backgroundColor.background.DEFAULT);
+  --docsearch-highlight-color: theme(colors.primary.hover);
+}
+
+/* .DocSearch-Modal {
+  @apply bg-background;
+} */
+
+.DocSearch.DocSearch-Container {
+  @apply fixed inset-0;
+}
+
+.DocSearch-SearchBar {
+  @apply p-4 pb-4 md:p-8;
+}
+.DocSearch-SearchBar form {
+  --docsearch-searchbox-shadow: inset 0 0 0 1px
+    theme(colors.primary.high-contrast);
+  @apply bg-body-inverse py-3;
+}
+.DocSearch-SearchBar label,
+.DocSearch-SearchBar input {
+  @apply text-primary-high-contrast;
+}
+.DocSearch-SearchBar label {
+  @apply h-4 w-4;
+}
+.DocSearch-SearchBar input {
+  @apply p-0 ps-2 text-md md:text-xl;
+}
+
+.DocSearch-Cancel {
+  @apply text-primary hover:text-primary md:text-primary-high-contrast;
+}
+
+.DocSearch-Container.DocSearch[aria-expanded="true"] {
+  @apply z-modal;
+}
+
+.DocSearch-Container--Stalled .DocSearch-MagnifierLabel,
+.DocSearch-Container--Stalled .DocSearch-LoadingIndicator {
+  @apply text-primary-high-contrast;
+}
+
+.DocSearch-Dropdown {
+  @apply max-h-[calc(100vh-75px-var(--docsearch-footer-height)-2*var(--inset))] overflow-y-scroll pe-2 ps-4 md:max-h-[calc(100vh-16rem)] md:overflow-y-auto md:pe-4 md:ps-8;
+}
+
+.DocSearch-Hit-source {
+  @apply pb-0.5 leading-6 text-body;
+}
+
+.DocSearch-Hit {
+  @apply pb-0;
+}
+.DocSearch-Hit a {
+  --docsearch-hit-shadow: none;
+  @apply rounded-none border-b border-solid border-disabled bg-transparent py-3;
+}
+.DocSearch-Hit[aria-selected="true"] a {
+  --docsearch-hit-active-color: theme(backgroundColor.background.DEFAULT);
+  @apply border-transparent bg-primary-hover shadow-[4px_4px_0_0_var(--primary-visited)];
+}
+
+.DocSearch-Hit-content-wrapper {
+  @apply whitespace-normal;
+}
+
+.DocSearch-Hit-icon {
+  @apply text-body;
+}
+
+.DocSearch-Footer {
+  --docsearch-footer-height: theme(spacing.10);
+  --docsearch-logo-color: theme(textColor.body.light);
+  --docsearch-footer-shadow: none;
+  @apply border-t-2 border-primary bg-primary-low-contrast;
+}
+
+.DocSearch-Commands {
+  @apply gap-4;
+}
+.DocSearch-Commands li {
+  @apply !m-0;
+}
+
+.DocSearch-Label {
+  @apply lowercase text-body;
+}
+
+.DocSearch-Commands-Key {
+  @apply me-1.5 grid h-4 w-4 place-items-center rounded border border-solid border-primary bg-background bg-none p-0 text-primary shadow-none;
+}
+
+.DocSearch-Commands-Key svg {
+  @apply bg-transparent;
+}
+
+.DocSearch-Logo .DocSearch-Label {
+  @apply uppercase text-body-medium;
+}
+
+svg[aria-label="Algolia"] {
+  @apply ml-0 ms-2;
+}
+
+svg[aria-label="Algolia"] * {
+  @apply fill-body-medium;
+}
+
+@media (max-width: 768px) {
+  .DocSearch-Modal {
+    --inset: theme(space.4);
+    @apply fixed inset-[var(--inset)] max-h-[calc(100vh-2*var(--inset))] max-w-[calc(100vw-2*var(--inset))] overflow-hidden rounded;
+  }
+}

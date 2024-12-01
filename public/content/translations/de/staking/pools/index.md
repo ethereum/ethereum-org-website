@@ -68,7 +68,7 @@ Sofort! Die Aktualisierung des Netzwerks auf Shanghai/Capella erfolgte im April 
 
 Alternativ dazu ermöglichen Pools, die einen ERC-20 Staking-Token verwenden, den Handel mit diesem Token auf dem freien Markt, so dass Sie Ihre Staking-Position verkaufen können, ohne tatsächlich ETH aus dem Staking-Vertrag zu entnehmen.
 
-<ButtonLink to="/staking/withdrawals/">Mehr zum Abheben von Staking</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Mehr zum Abheben von Staking</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Ist dies anders als Staking auf meiner Börse?">
