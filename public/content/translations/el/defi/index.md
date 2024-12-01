@@ -355,7 +355,3 @@ H DeFi είναι ένας γενικός όρος για οικονομικά �
 
 - [DeFi Llama διακομιστής Discord](https://discord.defillama.com/)
 - [DeFi Pulse διακομιστής Discord](https://discord.gg/Gx4TCTk)
-
-<Divider />
-
-<QuizWidget quizKey="defi" />
