@@ -494,7 +494,6 @@ const Layer2Hub = ({
             eventCategory="l2_hub"
             eventAction="expand"
             eventName="how do i know if a network is part of ethereum"
-            visible={true}
           >
             <div className="flex flex-col gap-8">
               <p>
@@ -520,7 +519,6 @@ const Layer2Hub = ({
             eventCategory="l2_hub"
             eventAction="expand"
             eventName="are all these networks safe"
-            visible={true}
           >
             <div className="flex flex-col gap-8">
               <p>
@@ -542,7 +540,6 @@ const Layer2Hub = ({
             eventCategory="l2_hub"
             eventAction="expand"
             eventName="why can't ethereum scale its own chain instead of relying on these networks"
-            visible={true}
           >
             <p>
               Ethereum can&apos;t easily scale its own main chain because it
@@ -559,7 +556,6 @@ const Layer2Hub = ({
             eventCategory="l2_hub"
             eventAction="expand"
             eventName="why is there no official ethereum networks"
-            visible={true}
           >
             <p>
               Just as there is no &apos;official&apos; Ethereum client, there is
@@ -579,7 +575,7 @@ const Layer2Hub = ({
       {/* TODO: Setup for translation */}
       <div
         id="layer-2-callout-cards"
-        className="flex w-full flex-col gap-16 px-8 py-8 md:flex-row"
+        className="flex w-full flex-col px-8 py-8 md:flex-row"
       >
         <Callout
           image={ExploreImage}

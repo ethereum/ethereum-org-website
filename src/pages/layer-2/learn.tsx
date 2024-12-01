@@ -302,11 +302,10 @@ const Layer2Learn = () => {
             </p>
           </div>
         </div>
+      </div>
 
-        <div
-          id="callout-cards"
-          className="flex w-full flex-col lg:flex-row lg:gap-16"
-        >
+      <div id="callout-cards" className="px-8 py-9">
+        <div className="flex w-full flex-col lg:flex-row">
           <Callout
             image={Callout1Image}
             title={t("page-layer-2-learn-callout-1-title")}
