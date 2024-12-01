@@ -425,9 +425,9 @@ C50: (run one step of a program and record the change in storage)
 - 1：wei
 - 10<sup>12</sup>：szabo
 - 10<sup>15</sup>：finney
-- 10<sup>18</sup>：ether
+- 10<sup>18</sup>：ehter
 
-這應該被視為「美元」和「美分」或「BTC」和「satoshi」概念的擴展版本。 在不久將來，我們期望「ether」用於普通交易，「finney」用於微型交易，「szabo」和「wei」可以在圍繞費用和協定實作的技術討論中使用；其餘的面額可能會在以後變得有用，但目前不應包含在用戶端中。
+這應該被視為「美元」和「美分」或「BTC」和「satoshi」概念的擴展版本。 在不久將來，我們期望「ehter」用於普通交易，「finney」用於微型交易，「szabo」和「wei」可以在圍繞費用和協定實作的技術討論中使用；其餘的面額可能會在以後變得有用，但目前不應包含在用戶端中。
 
 發行模式如下:
 
