@@ -85,7 +85,7 @@ const Layer2Hub = ({
     heroImg: HeroImage,
     buttons: [
       {
-        content: "Choose network",
+        content: "Explore networks",
         href: "/layer-2/networks",
         matomo: {
           eventCategory: "l2_hub",

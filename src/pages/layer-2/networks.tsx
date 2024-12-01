@@ -133,7 +133,7 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
     breadcrumbs: { slug: pathname, startDepth: 1 },
     heroImg: "/images/layer-2/learn-hero.png",
     blurDataURL: "/images/layer-2/learn-hero.png",
-    title: "Choose network",
+    title: "Explore networks",
     description:
       "Using Ethereum today means interacting with hundreds of different networks and apps. All backed by Ethereum as the foundational backbone.",
   }
@@ -141,7 +141,7 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
   return (
     <MainArticle className="relative flex flex-col">
       <PageMetadata
-        title="Choose network"
+        title="Explore networks"
         description="Using Ethereum today means interacting with hundreds of different networks and apps. All backed by Ethereum as the foundational backbone."
         image="/images/layer-2/learn-hero.png"
       />
