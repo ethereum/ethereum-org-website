@@ -355,3 +355,7 @@ DeFi es un proyecto de código abierto. Puede inspeccionar, copiar e innovar tod
 
 - [Servidor Discord de DeFi Llama](https://discord.defillama.com/)
 - [Servidor Discord de DeFi Pulse](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

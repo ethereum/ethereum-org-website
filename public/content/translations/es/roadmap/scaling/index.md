@@ -7,7 +7,7 @@ alt: "Hoja de ruta de Ethereum"
 template: roadmap
 ---
 
-Ethereum escala utilizando las [capas 2](/layer-2/#rollups) (también conocidas como acumulaciones o «rollups»), que agrupan transacciones y envían el resultado a Ethereum. Aunque las acumulaciones son hasta ocho veces más baratas que la red principal de Ethereum, es posible optimizarlas aún más para reducir costes para los usuarios finales. Las acumulaciones dependen de algunos componentes centralizados que los desarrolladores podrán eliminar en la medida en que dichas acumulaciones maduren.
+Ethereum escala utilizando las [capas 2 ](/layer-2/#rollups)(también conocidas como acumulaciones o «rollups»), que agrupan transacciones y envían el resultado a Ethereum. Aunque las acumulaciones son hasta ocho veces más baratas que la red principal de Ethereum, es posible optimizarlas aún más para reducir costes para los usuarios finales. Las acumulaciones dependen de algunos componentes centralizados que los desarrolladores podrán eliminar en la medida en que dichas acumulaciones maduren.
 
 <InfoBanner mb={8} title="Costos de transacción">
   <ul style={{ marginBottom: 0 }}>
