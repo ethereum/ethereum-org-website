@@ -33,11 +33,13 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
         >
           <div className="flex flex-col gap-3">
             <div className="flex flex-row items-center gap-4">
-              <TwImage
-                src={row.original.logo}
-                alt={row.original.name}
-                className="h-[24px] w-[24px] lg:h-[40px] lg:w-[40px]"
-              />
+              <div className="rounded-full">
+                <TwImage
+                  src={row.original.logo}
+                  alt={row.original.name}
+                  className="h-[24px] w-[24px] rounded-full p-1 lg:h-[40px] lg:w-[40px]"
+                />
+              </div>
               <p className="text-xl font-bold">{row.original.name}</p>
             </div>
             <div className="flex flex-row gap-4 lg:hidden">

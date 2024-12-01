@@ -2,7 +2,7 @@ import { StaticImageData } from "next/image"
 
 import { ChainName, NonEVMChainName } from "@/lib/types"
 
-import ArbitrumLogo from "@/public/images/layer-2/arbitrum.png"
+import ArbitrumLogo from "@/public/images/layer-2/arbitrum.jpg"
 import BaseLogo from "@/public/images/layer-2/base.png"
 import BlastImage from "@/public/images/layer-2/blast.png"
 import EthereumLogo from "@/public/images/layer-2/ethereum.png"
