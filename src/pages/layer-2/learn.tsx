@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import type { BasePageProps, Lang } from "@/lib/types"
 

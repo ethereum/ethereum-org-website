@@ -23,7 +23,7 @@ import { walletsData } from "@/data/wallets/wallet-data"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
-import { fetchEthereumTVL } from "@/lib/api/fetchEthereumTVL"
+import { fetchEthereumMarketcap } from "@/lib/api/fetchEthereumMarketcap"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "@/lib/api/fetchGrowThePieBlockspace"
 import { fetchGrowThePieMaster } from "@/lib/api/fetchGrowThePieMaster"
@@ -36,7 +36,7 @@ const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader(
   [
-    ["ethereumTVLData", fetchEthereumTVL],
+    ["ethereumMarketcapData", fetchEthereumMarketcap],
     ["growThePieData", fetchGrowThePie],
     ["growThePieBlockspaceData", fetchGrowThePieBlockspace],
     ["growThePieMasterData", fetchGrowThePieMaster],
@@ -47,7 +47,7 @@ const loadData = dataLoader(
 
 export const getStaticProps = (async ({ locale }) => {
   const [
-    ethereumTVLData,
+    ethereumMarketcapData,
     growThePieData,
     growThePieBlockspaceData,
     growThePieMasterData,
@@ -82,12 +82,12 @@ export const getStaticProps = (async ({ locale }) => {
           ] || null,
         walletsSupported: walletsData
           .filter((wallet) =>
-            wallet.supported_chains.includes(network.chain_name)
+            wallet.supported_chains.includes(network.chainName)
           )
           .map((wallet) => wallet.name),
         walletsSupportedCount: `${
           walletsData.filter((wallet) =>
-            wallet.supported_chains.includes(network.chain_name)
+            wallet.supported_chains.includes(network.chainName)
           ).length
         }/${walletsData.length}`,
       }
@@ -120,7 +120,7 @@ export const getStaticProps = (async ({ locale }) => {
       mainnetData: {
         ...ethereumNetworkData,
         txCosts: growThePieData.dailyTxCosts.ethereum,
-        tvl: "value" in ethereumTVLData ? ethereumTVLData.value : 0,
+        tvl: "value" in ethereumMarketcapData ? ethereumMarketcapData.value : 0,
       },
     },
   }

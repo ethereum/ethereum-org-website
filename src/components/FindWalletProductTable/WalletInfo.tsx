@@ -56,7 +56,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
               <div className="ml-2 mt-1 flex flex-row">
                 {wallet.supported_chains.map((chain) => {
                   const chainData = [ethereumNetworkData, ...layer2Data].find(
-                    (l2) => l2.chain_name === chain
+                    (l2) => l2.chainName === chain
                   )
                   return (
                     <div
@@ -101,7 +101,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
             <div className="ml-2 flex flex-row">
               {wallet.supported_chains.map((chain) => {
                 const chainData = [ethereumNetworkData, ...layer2Data].find(
-                  (l2) => l2.chain_name === chain
+                  (l2) => l2.chainName === chain
                 )
                 return (
                   <div
