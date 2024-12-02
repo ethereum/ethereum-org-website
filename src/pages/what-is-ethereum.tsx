@@ -354,7 +354,20 @@ const WhatIsEthereumPage = ({
                       <Stack className="gap-6">
                         <p>{t("page-what-is-ethereum-summary-desc-1")}</p>
                         <p>{t("page-what-is-ethereum-summary-desc-2")}</p>
-                        <p>{t("page-what-is-ethereum-summary-desc-3")}</p>
+                        <ul>
+                          <li>
+                            <Translation id="page-what-is-ethereum:page-what-is-ethereum-summary-bullet-1" />
+                          </li>
+                          <li>
+                            <Translation id="page-what-is-ethereum:page-what-is-ethereum-summary-bullet-2" />
+                          </li>
+                          <li>
+                            <Translation id="page-what-is-ethereum:page-what-is-ethereum-summary-bullet-3" />
+                          </li>
+                          <li>
+                            <Translation id="page-what-is-ethereum:page-what-is-ethereum-summary-bullet-4" />
+                          </li>
+                        </ul>
                       </Stack>
                     </Stack>
                   </Summary>
