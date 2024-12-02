@@ -22,7 +22,7 @@ const NetworkUsageChart = ({ usageData }) => {
   const chartData = (() => {
     // Calculate the sum of all values to normalize the data
     const total = Object.values(usageData).reduce(
-      (sum, value) => sum + value,
+      (sum: number, value: unknown) => sum + (value as number),
       0
     )
 
