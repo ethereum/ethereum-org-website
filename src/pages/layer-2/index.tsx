@@ -50,10 +50,12 @@ export const getStaticProps = (async ({ locale }) => {
 
   const [growThePieData] = await loadData()
 
+  const randomL2s = layer2Data.sort(() => 0.5 - Math.random()).slice(0, 9)
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
-      layer2Data,
+      randomL2s,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
       locale,
@@ -63,15 +65,14 @@ export const getStaticProps = (async ({ locale }) => {
 }) satisfies GetStaticProps<BasePageProps>
 
 const Layer2Hub = ({
-  layer2Data,
+  randomL2s,
   growThePieData,
   locale,
 }: {
-  layer2Data: Rollups
+  randomL2s: Rollups
   growThePieData: GrowThePieData
   locale: Lang
 }) => {
-  const randomL2s = layer2Data.sort(() => 0.5 - Math.random()).slice(0, 9)
   const medianTxCost =
     "error" in growThePieData.txCostsMedianUsd
       ? { error: growThePieData.txCostsMedianUsd.error }
