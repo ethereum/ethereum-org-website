@@ -125,7 +125,10 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
 
       return (
         <TableCell
-          className={`hidden w-[145px] px-0 text-end lg:table-cell ${row.original.cantExpand ? "border-b-4" : ""}`}
+          className={cn(
+            "hidden w-[145px] px-0 text-end lg:table-cell",
+            row.original.cantExpand && "border-b-4"
+          )}
         >
           $
           {row.original.txCosts.toLocaleString(meta.locale as Lang, {
