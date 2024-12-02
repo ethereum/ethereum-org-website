@@ -18,7 +18,7 @@ export interface Rollup {
   growthepieID: string
   name: string
   chainName: ChainName | NonEVMChainName
-  cantExpand?: boolean
+  canExpand?: boolean
   logo: StaticImageData
   networkType: "optimistic" | "zk"
   description: string
@@ -39,7 +39,7 @@ export const ethereumNetworkData = {
   growthepieID: "ethereum",
   logo: EthereumLogo,
   networkMaturity: "robust",
-  cantExpand: true,
+  canExpand: false,
 }
 
 export const layer2Data: Rollups = [

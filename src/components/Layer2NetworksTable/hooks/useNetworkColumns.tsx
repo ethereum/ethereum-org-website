@@ -33,7 +33,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
         <TableCell
           className={cn(
             "flex flex-1 flex-row items-center justify-between lg:table-cell",
-            row.original.cantExpand && "border-b-4"
+            row.original.canExpand === false && "border-b-4"
           )}
         >
           <div className="flex flex-col gap-3">
@@ -126,7 +126,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
         <TableCell
           className={cn(
             "hidden w-[145px] px-0 text-end lg:table-cell",
-            row.original.cantExpand && "border-b-4"
+            row.original.canExpand === false && "border-b-4"
           )}
         >
           $
@@ -169,7 +169,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
         <TableCell
           className={cn(
             "hidden w-[120px] px-0 text-end lg:table-cell",
-            row.original.cantExpand && "border-b-4"
+            row.original.canExpand === false && "border-b-4"
           )}
         >
           <p>
@@ -218,7 +218,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
         <TableCell
           className={cn(
             "hidden w-[145px] px-0 text-center lg:table-cell",
-            row.original.cantExpand && "border-b-4"
+            row.original.canExpand === false && "border-b-4"
           )}
         >
           <NetworkMaturityTooltip maturity={row.original.networkMaturity} />
@@ -230,23 +230,18 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
     id: "dropdown",
     header: () => <TableHead className="hidden w-12 lg:table-cell" />,
     cell: ({ row }) => {
-      if (row.original.cantExpand)
+      if (row.original.canExpand === false)
         return (
           <TableCell
             className={cn(
               "hidden w-12 lg:table-cell",
-              row.original.cantExpand ? "border-b-4" : ""
+              row.original.canExpand === false ? "border-b-4" : ""
             )}
           />
         )
 
       return (
-        <TableCell
-          className={cn(
-            "hidden w-12 lg:table-cell",
-            row.original.cantExpand ? "border-b-4" : ""
-          )}
-        >
+        <TableCell className={cn("hidden w-12 lg:table-cell")}>
           <button className="text-primary">
             {row.getIsExpanded() ? (
               <IoChevronUpSharp size={24} />

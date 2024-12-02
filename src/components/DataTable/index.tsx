@@ -54,8 +54,8 @@ const DataTable = <TData, TValue>({
     data: currentData,
     columns,
     getRowCanExpand: (row) => {
-      const rowData = row.original as { cantExpand?: boolean }
-      return rowData.cantExpand !== undefined ? rowData.cantExpand : true
+      const rowData = row.original as { canExpand?: boolean }
+      return rowData.canExpand !== undefined ? rowData.canExpand : true
     },
     getCoreRowModel: getCoreRowModel(),
     getExpandedRowModel: getExpandedRowModel(),
