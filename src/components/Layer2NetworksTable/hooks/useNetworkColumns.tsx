@@ -29,7 +29,10 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
       const meta = table.options.meta as TableMeta
       return (
         <TableCell
-          className={`flex flex-1 flex-row items-center justify-between lg:table-cell ${row.original.cantExpand ? "border-b-4" : ""}`}
+          className={cn(
+            "flex flex-1 flex-row items-center justify-between lg:table-cell",
+            row.original.cantExpand && "border-b-4"
+          )}
         >
           <div className="flex flex-col gap-3">
             <div className="flex flex-row items-center gap-4">
