@@ -13,6 +13,9 @@ import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
 import { TableCell, TableHead } from "@/components/ui/Table"
 
+
+import { cn } from "@/lib/utils/cn"
+
 export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
   {
     id: "l2Info",
