@@ -487,7 +487,10 @@ const Layer2Hub = ({
       </div>
 
       {/* TODO: Setup for translation */}
-      <div id="layer-2-faq" className="flex w-full flex-col gap-12 px-8 py-9">
+      <div
+        id="layer-2-faq"
+        className="flex w-full max-w-[832px] flex-col gap-12 px-8 py-9"
+      >
         <h2>Frequently asked questions</h2>
         <div>
           <ExpandableCard
