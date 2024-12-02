@@ -1,4 +1,3 @@
-
 import { Bar, BarChart, LabelList, YAxis } from "recharts"
 
 import { ChartConfig, ChartContainer, ChartLegend } from "@/components/ui/chart"
@@ -20,15 +19,23 @@ const CustomLegend = ({ payload, chartConfig }) => {
 }
 
 const NetworkUsageChart = ({ usageData }) => {
-  const chartData = [
-    {
-      nft: (usageData.nft * 100).toFixed(2),
-      defi: (usageData.defi * 100).toFixed(2),
-      social: (usageData.social * 100).toFixed(2),
-      token_transfers: (usageData.token_transfers * 100).toFixed(2),
-      unlabeled: (usageData.unlabeled * 100).toFixed(2),
-    },
-  ]
+  const chartData = (() => {
+    // Calculate the sum of all values to normalize the data
+    const total = Object.values(usageData).reduce(
+      (sum, value) => sum + value,
+      0
+    )
+
+    return [
+      {
+        nft: Math.round((usageData.nft / total) * 100),
+        defi: Math.round((usageData.defi / total) * 100),
+        social: Math.round((usageData.social / total) * 100),
+        token_transfers: Math.round((usageData.token_transfers / total) * 100),
+        unlabeled: Math.round((usageData.unlabeled / total) * 100),
+      },
+    ]
+  })()
 
   const chartConfig = {
     nft: {
@@ -54,10 +61,13 @@ const NetworkUsageChart = ({ usageData }) => {
   } satisfies ChartConfig
 
   return (
-    <ChartContainer config={chartConfig} className="max-h-[180px] w-full">
+    <ChartContainer
+      config={chartConfig}
+      className="h-[200px] max-w-[250px] sm:max-w-full"
+    >
       <BarChart accessibilityLayer data={chartData} barGap={"10%"}>
         <YAxis
-          domain={[0, (dataMax) => dataMax + 10]}
+          domain={[0, (dataMax) => dataMax + 15]}
           axisLine={false}
           tickLine={false}
           fontSize={12}
@@ -70,6 +80,7 @@ const NetworkUsageChart = ({ usageData }) => {
             offset={12}
             fill="currentColor"
             fontSize={12}
+            formatter={(value) => `${value}%`}
           />
         </Bar>
         <Bar
@@ -83,6 +94,7 @@ const NetworkUsageChart = ({ usageData }) => {
             offset={12}
             fill="currentColor"
             fontSize={12}
+            formatter={(value) => `${value}%`}
           />
         </Bar>
         <Bar
@@ -96,6 +108,7 @@ const NetworkUsageChart = ({ usageData }) => {
             offset={12}
             fill="currentColor"
             fontSize={12}
+            formatter={(value) => `${value}%`}
           />
         </Bar>
         <Bar
@@ -109,6 +122,7 @@ const NetworkUsageChart = ({ usageData }) => {
             offset={12}
             fill="currentColor"
             fontSize={12}
+            formatter={(value) => `${value}%`}
           />
         </Bar>
         <Bar
@@ -122,6 +136,7 @@ const NetworkUsageChart = ({ usageData }) => {
             offset={12}
             fill="currentColor"
             fontSize={12}
+            formatter={(value) => `${value}%`}
           />
         </Bar>
         <ChartLegend
