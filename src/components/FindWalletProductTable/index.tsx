@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { useTranslation } from "next-i18next"
 
 import { ChainName, FilterOption, Lang, Wallet } from "@/lib/types"
@@ -18,10 +18,35 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
   const walletPersonas = useWalletPersonaPresets()
   const walletFilterOptions = useWalletFilters()
   const [filters, setFilters] = useState<FilterOption[]>(walletFilterOptions)
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  const activeFilterKeys = useMemo(() => {
+    const keys: string[] = []
+    filters.forEach((filter) => {
+      filter.items.forEach((item) => {
+        if (item.inputState === true && item.options.length === 0) {
+          keys.push(item.filterKey)
+        }
+        if (item.options?.length > 0) {
+          item.options.forEach((option) => {
+            if (option.inputState === true) {
+              keys.push(option.filterKey)
+            }
+          })
+        }
+      })
+    })
+    return keys
+  }, [filters])
 
   const filteredData = useMemo(() => {
-    const activeFilterKeys: string[] = []
-    let selectedLanguage: string
+    if (!Array.isArray(wallets)) return []
+
+    let selectedLanguage: string = ""
     let selectedLayer2: ChainName[] = []
 
     filters.forEach((filter) => {
@@ -30,16 +55,6 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
           selectedLanguage = item.inputState as string
         } else if (item.filterKey === "layer_2_support") {
           selectedLayer2 = (item.inputState as ChainName[]) || []
-        } else if (item.inputState === true && item.options.length === 0) {
-          activeFilterKeys.push(item.filterKey)
-        }
-
-        if (item.options && item.options.length > 0) {
-          item.options.forEach((option) => {
-            if (option.inputState === true) {
-              activeFilterKeys.push(option.filterKey)
-            }
-          })
         }
       })
     })
@@ -57,7 +72,7 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
       .filter((item) => {
         return activeFilterKeys.every((key) => item[key])
       })
-  }, [wallets, filters])
+  }, [wallets, filters, activeFilterKeys])
 
   // Reset filters
   const resetFilters = () => {
@@ -67,6 +82,14 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
       eventAction: "Reset button",
       eventName: "reset_click",
     })
+  }
+
+  if (!isClient) {
+    return null
+  }
+
+  if (!Array.isArray(wallets)) {
+    return <div>Error loading wallets</div>
   }
 
   return (
