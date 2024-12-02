@@ -168,7 +168,10 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
       const meta = table.options.meta as TableMeta
       return (
         <TableCell
-          className={`hidden w-[120px] px-0 text-end lg:table-cell ${row.original.cantExpand ? "border-b-4" : ""}`}
+          className={cn(
+            "hidden w-[120px] px-0 text-end lg:table-cell",
+            row.original.cantExpand && "border-b-4"
+          )}
         >
           <p>
             {new Intl.NumberFormat(meta.locale as Lang, {
