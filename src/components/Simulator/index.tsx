@@ -44,7 +44,6 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
 
   // When simulator closed: log event, clear URL params and close modal
   const onClose: ModalProps["onOpenChange"] = (open) => {
-    console.log("🚀 ~ Simulator ~ open:", open)
     if (!open) {
       trackCustomEvent({
         eventCategory: "simulator",
