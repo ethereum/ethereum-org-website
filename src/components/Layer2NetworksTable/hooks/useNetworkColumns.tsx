@@ -13,7 +13,6 @@ import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
 import { TableCell, TableHead } from "@/components/ui/Table"
 
-
 import { cn } from "@/lib/utils/cn"
 
 export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
@@ -236,7 +235,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
           <TableCell
             className={cn(
               "hidden w-12 lg:table-cell",
-              row.original.cantExpand ? "border-b-4" : "",
+              row.original.cantExpand ? "border-b-4" : ""
             )}
           />
         )
@@ -245,7 +244,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
         <TableCell
           className={cn(
             "hidden w-12 lg:table-cell",
-            row.original.cantExpand ? "border-b-4" : "",
+            row.original.cantExpand ? "border-b-4" : ""
           )}
         >
           <button className="text-primary">
