@@ -4,7 +4,7 @@ description: 介绍以太坊虚拟机及其与状态、交易和智能合约的�
 lang: zh
 ---
 
-以太坊虚拟机 (EVM) 是一个去中心化虚拟环境，它在所有以太坊节点上一种安全一致地方式执行代码。 节点运行以太坊虚拟机，以执行智能合约，利用“[燃料](/gas/)”度量执行[操作](/developers/docs/evm/opcodes/)所需的计算工作，从而确保高效的资源分配和网络安全性。
+以太坊虚拟机 (EVM) 是一个去中心化虚拟环境，它在所有以太坊节点上以一种安全一致的方式执行代码。 节点运行以太坊虚拟机，以执行智能合约，利用“[燃料](/gas/)”度量执行[操作](/developers/docs/evm/opcodes/)所需的计算工作，从而确保高效的资源分配和网络安全性。
 
 ## 前提条件 {#prerequisites}
 
@@ -26,11 +26,11 @@ EVM 的行为就像一个数学函数：在给定输入的情况下，它会产�
 Y(S, T)= S'
 ```
 
-给定一个旧的有效状态 `（S）`> 和一组新的有效交易 `（T）`，以太坊状态转换函数 ` Y（S，T）` 产生新的有效输出状态` S'`
+给定一个旧的有效状态 `（S）` 和一组新的有效交易 `（T）`，以太坊状态转换函数 ` Y（S，T）` 产生新的有效输出状态` S'`
 
 ### 状态 {#state}
 
-在以太坊环境中，状态是一种称为[改进版默克尔帕特里夏树](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)的巨大数据结构，它保存所有通过哈希关联在一起的[帐户](/developers/docs/accounts/)并可回溯到存储在区块链上的单个根哈希。
+在以太坊环境中，状态是一种称为[改进版默克尔帕特里夏树(Modified Merkle Patricia Trie)](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)的巨大数据结构，它保存所有通过哈希关联在一起的[帐户](/developers/docs/accounts/)并可回溯到存储在区块链上的单个根哈希。
 
 ### 交易 {#transactions}
 
