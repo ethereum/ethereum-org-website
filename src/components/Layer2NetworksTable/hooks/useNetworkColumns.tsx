@@ -217,7 +217,10 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
     cell: ({ row }) => {
       return (
         <TableCell
-          className={`hidden w-[145px] px-0 text-center lg:table-cell ${row.original.cantExpand ? "border-b-4" : ""}`}
+          className={cn(
+            "hidden w-[145px] px-0 text-center lg:table-cell",
+            row.original.cantExpand && "border-b-4"
+          )}
         >
           <NetworkMaturityTooltip maturity={row.original.networkMaturity} />
         </TableCell>
