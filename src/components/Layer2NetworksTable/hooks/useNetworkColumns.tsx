@@ -234,7 +234,10 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
       if (row.original.cantExpand)
         return (
           <TableCell
-            className={`hidden w-12 lg:table-cell ${row.original.cantExpand ? "border-b-4" : ""}`}
+            className={cn(
+              "hidden w-12 lg:table-cell",
+              row.original.cantExpand ? "border-b-4" : "",
+            )}
           />
         )
 
