@@ -24,9 +24,14 @@ Developers can then process and transform this data to give their users unique i
 
 ## The Graph {#the-graph}
 
-The [Graph Network](https://thegraph.com/) is a decentralized indexing protocol for organizing blockchain data. Instead of building and managing off-chain and centralized data stores to aggregate on-chain data, with The Graph, developers can build serverless applications that run entirely on public infrastructure. Follow this [quick-start guide](https://thegraph.com/docs/en/quick-start/) to create, deploy and query a subgraph within 5 minutes.
+[The Graph](https://thegraph.com/) is an indexing protocol that provides an easy way to query blockchain data through open APIs known as subgraphs. 
 
-Using [GraphQL](https://graphql.org/), developers can query any of the curated open APIs, known as subgraphs, to acquire the necessary information they need to drive their dapp. By querying these indexed subgraphs, Reports and dapps not only get performance and scalability benefits but also the built in accuracy provided by network consensus. 
+With The Graph, developers can benefit from:
+ - Decentralized Indexing: Enables indexing blockchain data through multiple indexers, thus eliminating any single point of failure
+ - GraphQL Queries: Provides a powerful GraphQL interface for querying indexed data, making data retrieval super simple.
+ - Customization: Define your own logic for transforming & storing blockchain data. Reuse subgraphs published by other developers on The Graph Network.
+
+Follow this [quick-start](https://thegraph.com/docs/en/quick-start/) guide to create, deploy, and query a subgraph within 5 minutes.
 
 ## Client diversity
 
