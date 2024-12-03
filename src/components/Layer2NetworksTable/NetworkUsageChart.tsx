@@ -28,11 +28,14 @@ const NetworkUsageChart = ({ usageData }) => {
 
     return [
       {
-        nft: Math.round((usageData.nft / total) * 100),
-        defi: Math.round((usageData.defi / total) * 100),
-        social: Math.round((usageData.social / total) * 100),
-        token_transfers: Math.round((usageData.token_transfers / total) * 100),
-        unlabeled: Math.round((usageData.unlabeled / total) * 100),
+        nft: Math.max(1, Math.round((usageData.nft / total) * 100)),
+        defi: Math.max(1, Math.round((usageData.defi / total) * 100)),
+        social: Math.max(1, Math.round((usageData.social / total) * 100)),
+        token_transfers: Math.max(
+          1,
+          Math.round((usageData.token_transfers / total) * 100)
+        ),
+        unlabeled: Math.max(1, Math.round((usageData.unlabeled / total) * 100)),
       },
     ]
   })()
