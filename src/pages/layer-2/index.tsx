@@ -11,6 +11,7 @@ import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import InlineLink from "@/components/ui/Link"
 
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -509,7 +510,11 @@ const Layer2Hub = ({
                 permissionless vision. Such projects are often called “rollups”.
                 If data is stored somewhere else, then the project is not a
                 direct Ethereum extension and is rather independent. Check out
-                some of the most popular <a href="">Ethereum networks</a>.
+                some of the most popular{" "}
+                <InlineLink href="/layer-2/networks">
+                  Ethereum networks
+                </InlineLink>
+                .
               </p>
               <p>
                 Some specific industries might not require such direct close
@@ -528,7 +533,11 @@ const Layer2Hub = ({
               <p>
                 While generally designed with robust security features, their
                 safety depends on the underlying technology, smart contract
-                security, and <a href="">maturity of the network</a>.
+                security, and{" "}
+                <InlineLink href="/layer-2/networks">
+                  maturity of the network
+                </InlineLink>
+                .
               </p>
               <p>
                 Users should perform due diligence, starting with small
