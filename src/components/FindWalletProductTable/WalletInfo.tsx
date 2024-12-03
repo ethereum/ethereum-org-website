@@ -7,6 +7,7 @@ import { ButtonLink } from "@/components/Buttons"
 import { SupportedLanguagesTooltip } from "@/components/FindWalletProductTable/SupportedLanguagesTooltip"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { TwImage } from "@/components/Image"
+import Tooltip from "@/components/Tooltip"
 import { Badge } from "@/components/ui/badge"
 
 import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"
@@ -67,15 +68,18 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
                       key={chain}
                       className="-ml-1.5 overflow-hidden rounded-full"
                     >
-                      <TwImage
-                        src={chainData?.logo || ""}
-                        alt=""
-                        style={{
-                          objectFit: "contain",
-                          width: "24px",
-                          height: "24px",
-                        }}
-                      />
+                      <Tooltip content={chainData?.name || ""}>
+                        <TwImage
+                          src={chainData?.logo || ""}
+                          alt=""
+                          className="rounded-full"
+                          style={{
+                            objectFit: "contain",
+                            width: "24px",
+                            height: "24px",
+                          }}
+                        />
+                      </Tooltip>
                     </div>
                   )
                 })}
@@ -116,15 +120,18 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
                     key={chain}
                     className="-ml-1.5 overflow-hidden rounded-full"
                   >
-                    <TwImage
-                      src={chainData?.logo || ""}
-                      alt=""
-                      style={{
-                        objectFit: "contain",
-                        width: "24px",
-                        height: "24px",
-                      }}
-                    />
+                    <Tooltip content={chainData?.name || ""}>
+                      <TwImage
+                        src={chainData?.logo || ""}
+                        alt=""
+                        className="rounded-full"
+                        style={{
+                          objectFit: "contain",
+                          width: "24px",
+                          height: "24px",
+                        }}
+                      />
+                    </Tooltip>
                   </div>
                 )
               })}
