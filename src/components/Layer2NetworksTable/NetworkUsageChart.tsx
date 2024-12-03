@@ -26,16 +26,20 @@ const NetworkUsageChart = ({ usageData }) => {
       0
     )
 
+    const formatValue = (value: number) => {
+      const percentage = (value / total) * 100
+      return percentage < 1
+        ? Number(percentage.toFixed(1))
+        : Math.round(percentage)
+    }
+
     return [
       {
-        nft: Math.max(1, Math.round((usageData.nft / total) * 100)),
-        defi: Math.max(1, Math.round((usageData.defi / total) * 100)),
-        social: Math.max(1, Math.round((usageData.social / total) * 100)),
-        token_transfers: Math.max(
-          1,
-          Math.round((usageData.token_transfers / total) * 100)
-        ),
-        unlabeled: Math.max(1, Math.round((usageData.unlabeled / total) * 100)),
+        nft: formatValue(usageData.nft),
+        defi: formatValue(usageData.defi),
+        social: formatValue(usageData.social),
+        token_transfers: formatValue(usageData.token_transfers),
+        unlabeled: formatValue(usageData.unlabeled),
       },
     ]
   })()
