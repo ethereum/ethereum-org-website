@@ -57,7 +57,7 @@ export const layer2Data: Rollups = [
     blockExplorerLink: "https://arbiscan.io/",
     bridgeLink: "https://bridge.arbitrum.io/",
     l2BeatLink: "https://l2beat.com/scaling/projects/arbitrum",
-    growThePieLink: "https://www.growthepie.com/chains/arbitrum",
+    growThePieLink: "https://www.growthepie.xyz/chains/arbitrum",
     feeToken: ["ETH"],
   },
   {
@@ -74,7 +74,7 @@ export const layer2Data: Rollups = [
     blockExplorerLink: "https://basescan.org/",
     bridgeLink: "https://bridge.base.org/deposit",
     l2BeatLink: "https://l2beat.com/scaling/projects/base",
-    growThePieLink: "https://www.growthepie.com/chains/base",
+    growThePieLink: "https://www.growthepie.xyz/chains/base",
     feeToken: ["ETH"],
   },
   {
@@ -91,7 +91,7 @@ export const layer2Data: Rollups = [
     blockExplorerLink: "https://optimistic.etherscan.io/",
     bridgeLink: "https://app.optimism.io/",
     l2BeatLink: "https://l2beat.com/scaling/projects/optimism",
-    growThePieLink: "https://www.growthepie.com/chains/optimism",
+    growThePieLink: "https://www.growthepie.xyz/chains/optimism",
     feeToken: ["ETH"],
   },
   {
