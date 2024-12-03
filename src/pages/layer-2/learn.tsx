@@ -280,7 +280,14 @@ const Layer2Learn = () => {
             <p>{t("page-layer-2-learn-dyor-2")}</p>
           </div>
           <div>
-            <ButtonLink href="https://l2beat.com">
+            <ButtonLink
+              href="https://l2beat.com"
+              customEventOptions={{
+                eventCategory: "l2_learn",
+                eventAction: "button_click",
+                eventName: "l2beat_link",
+              }}
+            >
               {t("page-layer-2-learn-dyor-link")}
             </ButtonLink>
           </div>
@@ -312,7 +319,14 @@ const Layer2Learn = () => {
             description={t("page-layer-2-learn-callout-1-description")}
           >
             <div>
-              <ButtonLink href="/layer-2">
+              <ButtonLink
+                href="/layer-2"
+                customEventOptions={{
+                  eventCategory: "l2_learn",
+                  eventAction: "button_click",
+                  eventName: "learn_more",
+                }}
+              >
                 {t("page-layer-2-learn-learn-more")}
               </ButtonLink>
             </div>
@@ -323,7 +337,14 @@ const Layer2Learn = () => {
             description={t("page-layer-2-learn-callout-2-description")}
           >
             <div>
-              <ButtonLink href="/layer-2/networks">
+              <ButtonLink
+                href="/layer-2/networks"
+                customEventOptions={{
+                  eventCategory: "l2_learn",
+                  eventAction: "button_click",
+                  eventName: "explore_networks",
+                }}
+              >
                 {t("page-layer-2-learn-explore-networks")}
               </ButtonLink>
             </div>
