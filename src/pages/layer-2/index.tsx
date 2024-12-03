@@ -92,7 +92,7 @@ const Layer2Hub = ({
         matomo: {
           eventCategory: "l2_hub",
           eventAction: "button_click",
-          eventName: "hero_choose_networks",
+          eventName: "hero_explore_networks",
         },
       },
       {
@@ -377,7 +377,7 @@ const Layer2Hub = ({
               customEventOptions={{
                 eventCategory: "l2_hub",
                 eventAction: "button_click",
-                eventName: "mid_choose_networks",
+                eventName: "mid_explore_networks",
               }}
             >
               Explore networks
@@ -603,7 +603,7 @@ const Layer2Hub = ({
               customEventOptions={{
                 eventCategory: "l2_hub",
                 eventAction: "button_click",
-                eventName: "bottom_choose_networks",
+                eventName: "bottom_explore_networks",
               }}
             >
               Explore networks
