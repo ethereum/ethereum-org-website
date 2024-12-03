@@ -25,7 +25,7 @@ const CheckboxFilterInput = ({
   updateFilterState,
 }: CheckboxFilterInputProps) => {
   return (
-    <div className="flex flex-row items-center gap-2">
+    <label className="flex cursor-pointer flex-row items-center gap-2">
       <Checkbox
         checked={inputState as boolean}
         onCheckedChange={(e) => {
@@ -36,8 +36,8 @@ const CheckboxFilterInput = ({
           }
         }}
       />
-      <p>{label}</p>
-    </div>
+      <span className="select-none">{label}</span>
+    </label>
   )
 }
 

@@ -53,7 +53,11 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
                   ))}
                 </div>
               )}
-              <div className="ml-2 mt-1 flex flex-row">
+              <div
+                className={`ml-2 mt-1 flex flex-row ${
+                  walletPersonas.length === 0 ? "mb-4" : ""
+                }`}
+              >
                 {wallet.supported_chains.map((chain) => {
                   const chainData = [ethereumNetworkData, ...layer2Data].find(
                     (l2) => l2.chainName === chain
@@ -98,7 +102,11 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
                 </div>
               )}
             </div>
-            <div className="ml-2 flex flex-row">
+            <div
+              className={`ml-2 flex flex-row ${
+                walletPersonas.length === 0 ? "mb-4" : ""
+              }`}
+            >
               {wallet.supported_chains.map((chain) => {
                 const chainData = [ethereumNetworkData, ...layer2Data].find(
                   (l2) => l2.chainName === chain
@@ -123,7 +131,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
             </div>
           </div>
           <div className="flex flex-row gap-4">
-            <div className="relative hidden w-14 md:block">
+            <div className="relative hidden w-14 lg:block">
               <div
                 className={`${isExpanded ? "block" : "hidden"} absolute -bottom-9 -top-0 left-1/2 w-1 -translate-x-1/2 transform ${wallet.twBackgroundColor}`}
               />
@@ -160,7 +168,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
         </div>
       </div>
       <div className="flex flex-row gap-4">
-        <div className="relative hidden w-14 md:block">
+        <div className="relative hidden w-14 lg:block">
           <div
             className={`${isExpanded ? "block" : "hidden"} absolute -bottom-9 -top-0 left-1/2 w-1 -translate-x-1/2 transform ${wallet.twBackgroundColor}`}
           />
