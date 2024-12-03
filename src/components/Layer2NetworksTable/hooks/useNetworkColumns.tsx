@@ -78,10 +78,16 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
             </div>
           </div>
           <div className="lg:hidden">
-            {row.getIsExpanded() ? (
-              <IoChevronUpSharp />
+            {row.original.canExpand === false ? (
+              <div className="w-[24px]" />
             ) : (
-              <IoChevronDownSharp />
+              <button className="text-primary">
+                {row.getIsExpanded() ? (
+                  <IoChevronUpSharp size={24} />
+                ) : (
+                  <IoChevronDownSharp size={24} />
+                )}
+              </button>
             )}
           </div>
         </TableCell>
