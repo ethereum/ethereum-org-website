@@ -1,5 +1,6 @@
 ---
 title: Non-fungible tokens (NFT)
+metaTitle: What are NFTs? | Benefits and use
 description: An overview of NFTs on Ethereum
 lang: en
 template: use-cases
