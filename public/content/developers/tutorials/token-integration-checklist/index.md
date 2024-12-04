@@ -41,7 +41,7 @@ Slither includes a utility, [slither-check-erc](https://github.com/crytic/slithe
 
 - **Transfer and transferFrom return a boolean.** Several tokens do not return a boolean on these functions. As a result, their calls in the contract might fail.
 - **The name, decimals, and symbol functions are present if used.** These functions are optional in the ERC20 standard and might not be present.
-- **Decimals returns a uint8.** Several tokens incorrectly return an uint256. If this is the case, ensure the value returned is below 255.
+- **Decimals returns an uint8.** Several tokens incorrectly return an uint256. If this is the case, ensure the value returned is below 255.
 - **The token mitigates the known [ERC20 race condition](https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729).** The ERC20 standard has a known ERC20 race condition that must be mitigated to prevent attackers from stealing tokens.
 - **The token is not an ERC777 token and has no external function call in transfer and transferFrom.** External calls in the transfer functions can lead to reentrancies.
 
