@@ -185,7 +185,7 @@ Here Manticore founds 7 test cases, which correspond to (the filename order may 
 
 _Exploration summary f(!=65) denotes f called with any value different than 65._
 
-As you can notice, Manticore generates an unique test case for every successful or reverted transaction.
+As you can notice, Manticore generates a unique test case for every successful or reverted transaction.
 
 Use the `--quick-mode` flag if you want fast code exploration (it disable bug detectors, gas computation, ...)
 
