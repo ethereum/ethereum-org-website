@@ -120,7 +120,7 @@ class HasAddition(ExpressionVisitor):
             self._result = True
 
 visitor = HasAddition(expression) # expression is the expression to be tested
-print(f'The expression {expression} has a addition: {visitor.result()}')
+print(f'The expression {expression} has an addition: {visitor.result()}')
 ```
 
 ### Control Flow Graph (CFG) {#control-flow-graph-cfg}
