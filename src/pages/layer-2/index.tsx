@@ -146,7 +146,7 @@ const Layer2Hub = ({
         id="layer-2-powered-by-ethereum"
         className="flex w-full flex-col gap-8 px-8 py-9"
       >
-        <div className="flex flex-col-reverse gap-16 md:flex-row">
+        <div className="flex flex-col gap-16 md:flex-row">
           <div className="flex flex-1 flex-col gap-8">
             <h2>Powered by Ethereum</h2>
             <p>
