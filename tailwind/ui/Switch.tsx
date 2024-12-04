@@ -8,23 +8,34 @@ import { commonControlClasses } from "./Checkbox"
 const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
->(({ className, ...props }, ref) => (
-  <SwitchPrimitives.Root
-    className={cn(
-      commonControlClasses,
-      "data-[state=checked]:hover:not-disabled:border-primary-hover:bg-primary-hover w-[26px] rounded-full bg-body-medium p-px hover:border-primary-hover hover:bg-primary-hover data-[state=unchecked]:disabled:bg-transparent",
-      className
-    )}
-    {...props}
-    ref={ref}
-  >
-    <SwitchPrimitives.Thumb
+>(({ className, ...props }, ref) => {
+  React.useEffect(() => {
+    const mql = window.matchMedia("(hover: hover)")
+    console.log("Device supports hover:", mql.matches)
+
+    const touch = window.matchMedia("(pointer: coarse)")
+    console.log("Device is touch-based:", touch.matches)
+  }, [])
+
+  return (
+    <SwitchPrimitives.Root
       className={cn(
-        "pointer-events-none block size-3 rounded-full bg-background transition-transform data-[state=checked]:translate-x-2.5 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:data-[disabled]:border data-[state=unchecked]:data-[disabled]:border-disabled"
+        commonControlClasses,
+        "w-[26px] rounded-full bg-body-medium p-px data-[state=unchecked]:disabled:bg-transparent",
+        "hover:[@media(hover:hover)_and_(pointer:fine)]:border-primary-hover hover:[@media(hover:hover)_and_(pointer:fine)]:bg-primary-hover",
+        className
       )}
-    />
-  </SwitchPrimitives.Root>
-))
+      {...props}
+      ref={ref}
+    >
+      <SwitchPrimitives.Thumb
+        className={cn(
+          "pointer-events-none block size-3 rounded-full bg-background transition-transform data-[state=checked]:translate-x-2.5 data-[state=unchecked]:translate-x-0 data-[state=unchecked]:data-[disabled]:border data-[state=unchecked]:data-[disabled]:border-disabled"
+        )}
+      />
+    </SwitchPrimitives.Root>
+  )
+})
 Switch.displayName = SwitchPrimitives.Root.displayName
 
 export default Switch
