@@ -37,7 +37,7 @@ const Callout = ({
   return (
     <aside
       className={cn(
-        "m-4 mb-16 mt-32 flex flex-1 flex-col rounded bg-gradient-to-br from-[rgba(127,127,213,0.2)] via-[rgba(134,168,231,0.2)] to-[rgba(145,234,228,0.2)] p-12 lg:mb-4",
+        "m-4 mb-16 mt-32 flex flex-1 flex-col rounded bg-gradient-to-br from-[rgba(127,127,213,0.2)] via-[rgba(134,168,231,0.2)] to-[rgba(145,234,228,0.2)] p-6 sm:p-12 lg:mb-4",
         className
       )}
     >
