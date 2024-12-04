@@ -9,14 +9,6 @@ const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
 >(({ className, ...props }, ref) => {
-  React.useEffect(() => {
-    const mql = window.matchMedia("(hover: hover)")
-    console.log("Device supports hover:", mql.matches)
-
-    const touch = window.matchMedia("(pointer: coarse)")
-    console.log("Device is touch-based:", touch.matches)
-  }, [])
-
   return (
     <SwitchPrimitives.Root
       className={cn(

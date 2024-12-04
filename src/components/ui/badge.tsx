@@ -25,6 +25,7 @@ const badgeVariants = cva(
         developing: "bg-blue-400 text-white border-none",
         maturing: "bg-blue-200 text-black border-none",
         robust: "bg-blue-100 text-black border-none",
+        "n/a": "hidden lg:block",
       },
     },
     defaultVariants: {

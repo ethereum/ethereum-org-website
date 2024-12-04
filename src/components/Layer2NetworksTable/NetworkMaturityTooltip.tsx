@@ -5,6 +5,10 @@ import { Badge, BadgeProps } from "@/components/ui/badge"
 
 const NetworkMaturityTooltip = ({ maturity }: { maturity: MaturityLevel }) => {
   const maturityDescription = {
+    "n/a": {
+      label: "N/A",
+      description: "Not applicable to Ethereum mainnet.",
+    },
     robust: {
       label: "Robust",
       description:
