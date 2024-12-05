@@ -73,6 +73,7 @@ const DataTable = <TData, TValue>({
       setIsVisible(false)
       const timer = setTimeout(() => {
         setCurrentData(data)
+        table.resetExpanded()
         setIsVisible(true)
         previousDataRef.current = data
       }, 25) // Adjust this value to match your CSS transition duration
