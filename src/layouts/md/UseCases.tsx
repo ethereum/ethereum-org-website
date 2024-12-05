@@ -71,6 +71,15 @@ export const UseCasesLayout = ({
         },
       },
       {
+        text: t("template-usecase:template-usecase-dropdown-payments"),
+        href: "/payments/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "payments",
+        },
+      },
+      {
         text: t("template-usecase:template-usecase-dropdown-social-networks"),
         href: "/social-networks/",
         matomo: {
