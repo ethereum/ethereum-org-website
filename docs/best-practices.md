@@ -137,7 +137,7 @@ Center things using the `<Center />` component
 
 - Breakpoints
 
-Use [the Chakra default breakpoints](https://chakra-ui.com/docs/styled-system/theme#breakpoints).
+Use [the Chakra default breakpoints](https://www.chakra-ui.com/docs/theming/customization/breakpoints).
 
 ```tsx
 <Container display={{ base: "block", sm: "flex" }} />
@@ -167,7 +167,7 @@ import Emoji from "./Emoji"
 ```
 
 - **Icons**: We use [React Icons](https://react-icons.github.io/react-icons/)
-  with [Chakra UI Icon component](https://chakra-ui.com/docs/components/icon/usage)
+  with [Chakra UI Icon component](https://www.chakra-ui.com/docs/components/concepts/overview)
 
 ```tsx
 import { Icon } from "@chakra-ui/react"
