@@ -29,6 +29,7 @@ interface ProductTableProps<T> {
   subComponent?: FC<T>
   noResultsComponent?: React.FC
   mobileFiltersLabel: string
+  matomoEventCategory: string
   meta?: Record<string, string | number | boolean>
 }
 
@@ -43,6 +44,7 @@ const ProductTable = <T,>({
   subComponent,
   noResultsComponent,
   mobileFiltersLabel,
+  matomoEventCategory,
   meta,
 }: ProductTableProps<T>) => {
   const router = useRouter()
@@ -303,6 +305,7 @@ const ProductTable = <T,>({
               setMobileFiltersOpen={setMobileFiltersOpen}
               activeFiltersCount={activeFiltersCount}
               meta={meta}
+              matomoEventCategory={matomoEventCategory}
             />
           </div>
         </div>

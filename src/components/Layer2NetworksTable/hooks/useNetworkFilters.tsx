@@ -9,6 +9,8 @@ import {
 import NetworksWalletSelectInput from "@/components/Layer2NetworksTable/NetworksWalletSelectInput"
 import SwitchFilterInput from "@/components/ProductTable/FilterInputs/SwitchFilterInput"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 export const useNetworkFilters = (): FilterOption[] => {
   return [
     {
@@ -17,7 +19,7 @@ export const useNetworkFilters = (): FilterOption[] => {
       items: [
         {
           filterKey: "wallets_supported",
-          filterLabel: "",
+          filterLabel: "wallets_supported",
           description: "",
           inputState: "",
           ignoreFilterReset: false,
@@ -27,7 +29,14 @@ export const useNetworkFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "l2_networks",
+                    eventAction: "wallet",
+                    eventName: newInputState as string,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },
@@ -65,6 +74,11 @@ export const useNetworkFilters = (): FilterOption[] => {
                 itemIndex={itemIndex}
                 inputState={inputState}
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "l2_networks",
+                    eventAction: "filter",
+                    eventName: `robust ${newInputState}`,
+                  })
                   updateFilterState(filterIndex, itemIndex, newInputState)
                 }}
               />
@@ -94,6 +108,11 @@ export const useNetworkFilters = (): FilterOption[] => {
                 itemIndex={itemIndex}
                 inputState={inputState}
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "l2_networks",
+                    eventAction: "filter",
+                    eventName: `maturing ${newInputState}`,
+                  })
                   updateFilterState(filterIndex, itemIndex, newInputState)
                 }}
               />
@@ -122,6 +141,11 @@ export const useNetworkFilters = (): FilterOption[] => {
                 itemIndex={itemIndex}
                 inputState={inputState}
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "l2_networks",
+                    eventAction: "filter",
+                    eventName: `developing ${newInputState}`,
+                  })
                   updateFilterState(filterIndex, itemIndex, newInputState)
                 }}
               />
@@ -151,6 +175,11 @@ export const useNetworkFilters = (): FilterOption[] => {
                 itemIndex={itemIndex}
                 inputState={inputState}
                 updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "l2_networks",
+                    eventAction: "filter",
+                    eventName: `emerging ${newInputState}`,
+                  })
                   updateFilterState(filterIndex, itemIndex, newInputState)
                 }}
               />

@@ -42,6 +42,11 @@ const NetworkSubComponent = ({ network }) => {
                         </p>
                       </div>
                     }
+                    customMatomoEvent={{
+                      eventCategory: "l2_networks",
+                      eventAction: "tooltip",
+                      eventName: "age",
+                    }}
                   >
                     <MdInfoOutline className="translate-y-0.5" />
                   </Tooltip>
@@ -76,6 +81,11 @@ const NetworkSubComponent = ({ network }) => {
                         </p>
                       </div>
                     }
+                    customMatomoEvent={{
+                      eventCategory: "l2_networks",
+                      eventAction: "tooltip",
+                      eventName: "wallet_support",
+                    }}
                   >
                     <MdInfoOutline className="translate-y-0.5" />
                   </Tooltip>
@@ -114,6 +124,11 @@ const NetworkSubComponent = ({ network }) => {
                         </p>
                       </div>
                     }
+                    customMatomoEvent={{
+                      eventCategory: "l2_networks",
+                      eventAction: "tooltip",
+                      eventName: "active_addresses",
+                    }}
                   >
                     <MdInfoOutline className="translate-y-0.5" />
                   </Tooltip>
@@ -135,6 +150,11 @@ const NetworkSubComponent = ({ network }) => {
                         </p>
                       </div>
                     }
+                    customMatomoEvent={{
+                      eventCategory: "l2_networks",
+                      eventAction: "tooltip",
+                      eventName: "fee_token",
+                    }}
                   >
                     <MdInfoOutline className="translate-y-0.5" />
                   </Tooltip>
@@ -187,17 +207,42 @@ const NetworkSubComponent = ({ network }) => {
           <p className="text-xs text-body-medium">Links</p>
           <div className="flex flex-col gap-4">
             <div>
-              <InlineLink href={network.website}>Official website</InlineLink>
+              <InlineLink
+                href={network.website}
+                customEventOptions={{
+                  eventCategory: "l2_networks",
+                  eventAction: "networks_website",
+                  eventName: network.name,
+                }}
+              >
+                Official website
+              </InlineLink>
             </div>
             <div className="flex flex-col gap-0.5">
               <div>
-                <InlineLink href={network.l2BeatLink}>Risk analysis</InlineLink>
+                <InlineLink
+                  href={network.l2BeatLink}
+                  customEventOptions={{
+                    eventCategory: "l2_networks",
+                    eventAction: "l2beat_profiles",
+                    eventName: network.name,
+                  }}
+                >
+                  Risk analysis
+                </InlineLink>
               </div>
               <p className="text-xs text-body-medium">Assessment by L2BEAT</p>
             </div>
             <div className="flex flex-col gap-0.5">
               <div>
-                <InlineLink href={network.growThePieLink}>
+                <InlineLink
+                  href={network.growThePieLink}
+                  customEventOptions={{
+                    eventCategory: "l2_networks",
+                    eventAction: "analytics_profiles",
+                    eventName: network.name,
+                  }}
+                >
                   Detailed analytics
                 </InlineLink>
               </div>
@@ -210,10 +255,25 @@ const NetworkSubComponent = ({ network }) => {
         <div className="flex flex-col gap-1">
           <p className="text-xs text-body-medium">Actions</p>
           <div className="flex flex-col gap-4 sm:flex-row">
-            <ButtonLink href={network.bridgeLink}>
+            <ButtonLink
+              href={network.bridgeLink}
+              customEventOptions={{
+                eventCategory: "l2_networks",
+                eventAction: "bridge",
+                eventName: network.name,
+              }}
+            >
               Bridge to {network.name}
             </ButtonLink>
-            <ButtonLink href={network.applicationsLink} variant="outline">
+            <ButtonLink
+              href={network.applicationsLink}
+              variant="outline"
+              customEventOptions={{
+                eventCategory: "l2_networks",
+                eventAction: "view_apps",
+                eventName: network.name,
+              }}
+            >
               View apps
             </ButtonLink>
           </div>

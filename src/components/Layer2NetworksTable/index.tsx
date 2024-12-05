@@ -61,6 +61,7 @@ const Layer2NetworksTable = ({
       columns={useNetworkColumns}
       data={filteredData}
       allDataLength={layer2Data.length}
+      matomoEventCategory="l2_networks"
       filters={filters}
       presetFilters={[]}
       resetFilters={resetFilters}

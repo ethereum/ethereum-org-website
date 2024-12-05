@@ -97,6 +97,7 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
       columns={useWalletColumns}
       data={filteredData}
       allDataLength={wallets.length}
+      matomoEventCategory="find-wallet"
       filters={filters}
       presetFilters={walletPersonas}
       resetFilters={resetFilters}

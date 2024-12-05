@@ -195,7 +195,16 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
           }
         >
           <div>
-            <ButtonLink href="/layer-2/">Learn more</ButtonLink>
+            <ButtonLink
+              href="/layer-2/"
+              customEventOptions={{
+                eventCategory: "l2_networks",
+                eventAction: "button_click",
+                eventName: "bottom_hub",
+              }}
+            >
+              Learn more
+            </ButtonLink>
           </div>
         </Callout>
         <Callout
@@ -206,7 +215,16 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
           }
         >
           <div>
-            <ButtonLink href="/layer-2/learn/">Learn more</ButtonLink>
+            <ButtonLink
+              href="/layer-2/learn/"
+              customEventOptions={{
+                eventCategory: "l2_networks",
+                eventAction: "button_click",
+                eventName: "bottom_learn",
+              }}
+            >
+              Learn more
+            </ButtonLink>
           </div>
         </Callout>
       </div>

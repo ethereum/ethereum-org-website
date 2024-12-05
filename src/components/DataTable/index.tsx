@@ -16,6 +16,8 @@ import {
   TableRow,
 } from "@/components/ui/Table"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 type DataTableProps<TData, TValue> = TableProps & {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
@@ -25,6 +27,7 @@ type DataTableProps<TData, TValue> = TableProps & {
   setMobileFiltersOpen?: (open: boolean) => void
   activeFiltersCount: number
   meta?: Record<string, string | number | boolean>
+  matomoEventCategory: string
 }
 
 export type TableMeta = {
@@ -44,15 +47,22 @@ const DataTable = <TData, TValue>({
   setMobileFiltersOpen,
   activeFiltersCount,
   meta,
+  matomoEventCategory,
   ...props
 }: DataTableProps<TData, TValue>) => {
   const [isVisible, setIsVisible] = useState(true)
   const [currentData, setCurrentData] = useState(data)
+  const [expanded, setExpanded] = useState({})
+  const previousExpandedRef = useRef({})
   const previousDataRef = useRef(data)
 
   const table = useReactTable({
     data: currentData,
     columns,
+    state: {
+      expanded,
+    },
+    onExpandedChange: setExpanded,
     getRowCanExpand: (row) => {
       const rowData = row.original as { canExpand?: boolean }
       return rowData.canExpand !== undefined ? rowData.canExpand : true
@@ -67,6 +77,27 @@ const DataTable = <TData, TValue>({
       activeFiltersCount,
     } as TableMeta,
   })
+
+  useEffect(() => {
+    const prev = previousExpandedRef.current
+    const current = expanded
+
+    // Find newly expanded rows
+    const newlyExpanded = Object.entries(current)
+      .filter(([key, value]) => value === true && prev[key] !== true)
+      .map(([key]) => key)
+
+    if (newlyExpanded.length > 0) {
+      const row = table.getRowModel().rowsById[newlyExpanded[0]]
+      trackCustomEvent({
+        eventCategory: matomoEventCategory,
+        eventAction: "expanded",
+        eventName: row.original.name,
+      })
+    }
+
+    previousExpandedRef.current = expanded
+  }, [expanded])
 
   useEffect(() => {
     if (JSON.stringify(data) !== JSON.stringify(previousDataRef.current)) {
