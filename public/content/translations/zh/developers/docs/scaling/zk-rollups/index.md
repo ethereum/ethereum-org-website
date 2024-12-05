@@ -222,12 +222,6 @@ ZK-STARK 对于量子计算机也是安全的，而 ZK-SNARK 中使用的椭圆�
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-### 使用零知识卷叠 {#use-zk-rollups}
-
-零知识卷叠有多种实现方式，你可以将其整合到自己的去中心化应用程序中：
-
-<RollupProductDevDoc rollupType="zk" />
-
 ## 零知识以太坊虚拟机上有哪些项目？ {#zkevm-projects}
 
 零知识以太坊虚拟机上运行的项目包括：

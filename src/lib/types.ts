@@ -21,6 +21,7 @@ import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import type { SimulatorNav } from "@/components/Simulator/interfaces"
 
 import chains from "@/data/chains"
+import { Rollup, Rollups } from "@/data/networks/networks"
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
@@ -551,7 +552,10 @@ export type StatsBoxState = ValueOrError<string>
 
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
-export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData>
+export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
+  dailyTxCosts: Record<string, number>
+  activeAddresses: Record<string, number>
+}
 
 export type MetricName =
   | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
@@ -628,6 +632,15 @@ export type Chain = Pick<
 
 export type ChainName = (typeof chains)[number]["name"]
 
+export type NonEVMChainName = "Starknet"
+
+export type ExtendedRollup = Rollup & {
+  networkMaturity: MaturityLevel
+  txCosts: number
+  tvl: number
+  walletsSupported: string[]
+}
+
 // Wallets
 export type WalletData = {
   last_updated: string
@@ -663,7 +676,7 @@ export type WalletData = {
   swaps: boolean
   multichain?: boolean
   layer_2: boolean
-  supported_chains?: ChainName[]
+  supported_chains: (ChainName | NonEVMChainName)[]
   gas_fee_customization: boolean
   ens_support: boolean
   erc_20_support: boolean
@@ -689,7 +702,7 @@ export interface WalletFilterData {
   description: TranslationKey | ""
 }
 
-export type FilterInputState = boolean | Lang | string | null
+export type FilterInputState = boolean | Lang | string | string[] | null
 
 export type FilterOption = {
   title: string
@@ -774,9 +787,9 @@ export type TPresetFilters = WalletPersonas[]
 
 export type ProductTablePresetFilters = WalletPersonas[]
 
-export type ProductTableColumnDefs = ColumnDef<Wallet>
+export type ProductTableColumnDefs = ColumnDef<Wallet | Rollups>
 
-export type ProductTableRow = Wallet
+export type ProductTableRow = Wallet | Rollup
 
 export interface DropdownOption {
   label: string
@@ -949,3 +962,10 @@ export type EventCardProps = {
 }
 
 export type BreakpointKey = keyof typeof screens
+
+export type MaturityLevel =
+  | "N/A"
+  | "robust"
+  | "maturing"
+  | "developing"
+  | "emerging"
