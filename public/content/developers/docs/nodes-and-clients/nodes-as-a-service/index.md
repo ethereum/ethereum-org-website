@@ -73,7 +73,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Unlimited access to archive date
     - 24/7 technical support and 99.9% over uptime
     - Faucet available on multi chains
-    - Unlimited endpoint access with an limitless number of API keys
+    - Unlimited endpoint access with a limitless number of API keys
     - Trace/Debug API supported
     - Automated updates
 
